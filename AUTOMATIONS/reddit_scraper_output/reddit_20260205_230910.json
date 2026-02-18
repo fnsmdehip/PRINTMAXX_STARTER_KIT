@@ -1,0 +1,502 @@
+[
+  {
+    "post_id": "1qv9yi5",
+    "title": "I built an offline survival AI [Update]",
+    "selftext": "14k users in the app store, and we're the world's #1 rated survival AI\n\nNow, we're opening early reservations to help fund production of the physical device.\n\nIt's...  \n\\- Waterproof (IP68 rating when closed)  \n\\- Portable (<1ft wide, 3lbs)  \n\\- Rugged (you can run it over with a car)\n\nThe AI can provide sources for its answers (even while offline), referencing the exact page of the study guide stored on-device.\n\nIt can do so much like offline maps or even texting, but basically it ensures you're prepared for any emergency- lost in the wild, natural disasters, nuclear warfare, etc.\n\nHere's the mobile app: [https://apps.apple.com/us/app/survival-ai-the-ark/id6746391165](https://apps.apple.com/us/app/survival-ai-the-ark/id6746391165)  \nTo reserve a physical device: [https://www.scorpiodevices.com/store/p/theark-handheld-offline-survival-ai-pc](https://www.scorpiodevices.com/store/p/theark-handheld-offline-survival-ai-pc)",
+    "url": "https://reddit.com/r/SideProject/comments/1qv9yi5/i_built_an_offline_survival_ai_update/",
+    "external_url": "https://v.redd.it/7mtivdp5hdhg1",
+    "score": 925,
+    "upvote_ratio": 0.97,
+    "num_comments": 159,
+    "created_utc": 1770166292.0,
+    "author": "scorpioDevices",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "user_counts": [
+        "14k users"
+      ]
+    }
+  },
+  {
+    "post_id": "1qt51ww",
+    "title": "PSA: If you post your side project here, prepare for war",
+    "selftext": "posted my AI side project here about a week ago. got some great feedback.\n\nalso got:\n\n* 10+ new accounts per minute, all bots\n* all of them spamming the AI chat with the same prompts trying to extract system prompts and API keys\n* hundreds of requests to /.env, /config, /.git\n* puppeteer scripts hammering the site\n* python bots doing god knows what\n\nwe hadn't hardened security yet because it's a side project with like 12 users. that changed real fast.\n\nsome things that helped:\n\n* rate limiting (should've had this day 1)\n* blocking obvious bot patterns\n* making sure no secrets were exposed in obvious places\n\nanyway, consider this your warning. the moment you post here, assume someone is already trying to break in.\n\nweirdly a badge of honor though? like thanks for thinking my project was worth hacking i guess.\n\nif anyone's curious about what i'm building, happy to drop the link in comments. just didn't want this to be a promo post.\n\nstay safe out there.",
+    "url": "https://reddit.com/r/SideProject/comments/1qt51ww/psa_if_you_post_your_side_project_here_prepare/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qt51ww/psa_if_you_post_your_side_project_here_prepare/",
+    "score": 432,
+    "upvote_ratio": 0.9,
+    "num_comments": 125,
+    "created_utc": 1769967755.0,
+    "author": "TheHol1day",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "user_counts": [
+        "12 users"
+      ]
+    }
+  },
+  {
+    "post_id": "1qt6qvi",
+    "title": "I built a pixel office that animates in real-time based on your Claude Code sessions \u2014 100k views and 450+ beta users in 48 hours",
+    "selftext": "",
+    "url": "https://reddit.com/r/SideProject/comments/1qt6qvi/i_built_a_pixel_office_that_animates_in_realtime/",
+    "external_url": "https://v.redd.it/02v9spe9hxgg1",
+    "score": 267,
+    "upvote_ratio": 0.97,
+    "num_comments": 61,
+    "created_utc": 1769971292.0,
+    "author": "Waynedevvv",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "time_frames": [
+        "48 hours"
+      ]
+    }
+  },
+  {
+    "post_id": "1qvk24a",
+    "title": "I made a library of 1,000+ deep research stock reports",
+    "selftext": "A while back I [posted here](https://www.reddit.com/r/SideProject/comments/1phax7w/this_community_encouraged_me_to_build_deep/) about a deep research tool I built that synthesizes SEC filings and industry-specific publications into structured stock reports. The response was amazing, and the tool now generates thousands of reports a month.  \n  \nSo I felt the natural next step was to aggregate all these reports into a browsable library that lets you:\n\n* Access thousands of research reports in one place\n* Filter by industry, market cap, or judgment (Buy / Hold / Sell, etc.)\n* Unlock any report that interests you to save it to your dashboard\n\nAs an example of utility, here are the reports of mid cap energy stocks the tool marked as \u201cpotential buy\u201d in the past few weeks:\n\n* [CHRD](https://app.deepvalue.tech/report-share/Whae4VrQVx9i) \n* [MTDR](https://app.deepvalue.tech/report-share/cfAYKxihtPiJ) \n* [AM](https://app.deepvalue.tech/report-share/gGGxppCXATbm) \n* [SM](https://app.deepvalue.tech/report-share/n7B8CD7go1VD)\n\nYou can access the library [here](https://app.deepvalue.tech/discover). Would love to hear if this discovery format helps your workflow or if there are specific filters (like P/E ratios, debt levels, insider activity, etc.) you'd want to see added.",
+    "url": "https://reddit.com/r/SideProject/comments/1qvk24a/i_made_a_library_of_1000_deep_research_stock/",
+    "external_url": "https://v.redd.it/grrppmzr3ghg1",
+    "score": 189,
+    "upvote_ratio": 0.95,
+    "num_comments": 18,
+    "created_utc": 1770197244.0,
+    "author": "Significant-Pair-275",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qr6qna",
+    "title": "I built a visual Python tool that turns AI generated code into reusable blocks",
+    "selftext": "Hey everyone,\n\nDuring my work in various small technical teams building internal data tools, I noticed the same pattern: every project meant rewriting similar code, API calls, database queries, the usual stuff...and even when using AI, a different problem emerged: I'd get code that worked, but I couldn't easily reuse it later, hard to \"own it\"...each time felt like starting from scratch.\n\nSo I made **CODED FLOWS** ([codedflows.com](https://codedflows.com)), it's a visual Python workflow builder where you drag and drop reusable blocks and when you need something new, AI generates it. The difference is those generated blocks stay in your library as a \"business logic\" block instead of a bloated script.\n\nI made it visual mostly because connecting blocks is more satisfying than digging through old scripts for that validation function I wrote six months ago.\n\nI also included some starter packages (in-memory Machine Learning, database queries, data prep) and built a server where people can share domain specific packages. So if someone already solved your problem, you just install their package instead of rebuilding it.\n\nThe whole thing exports to Python scripts, so you can run workflows in the app or use them in your own infrastructure.\n\nWould love to hear if this resonates with anyone or if you've found better solutions.",
+    "url": "https://reddit.com/r/SideProject/comments/1qr6qna/i_built_a_visual_python_tool_that_turns_ai/",
+    "external_url": "https://v.redd.it/paot2zxxwhgg1",
+    "score": 185,
+    "upvote_ratio": 0.97,
+    "num_comments": 48,
+    "created_utc": 1769782849.0,
+    "author": "lem_of_noland",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qvojp2",
+    "title": "Needed to watch videos privately in a nosy house, so I built this Bible vault app with a real-time panic mode",
+    "selftext": "Hi, humans of\u00a0r/sideproject!\n\nI'm currently in a house where's there's almost no privacy. Phones can be searched at anytime. People can walk in on you watching something you'd really prefer to keep to yourself.\n\nSo, I made\u00a0[Sanctum Bible Vault](https://apps.apple.com/us/app/sanctum-bible-vault/id6756982875), an iOS app to hide videos inside a bible and watch them with real-time stealth: reflexes can be triggered to instantly switch back to bible mode if you panic, maybe if someone walks in on you.\n\nIt works like this:\n\n* It's a totally normal KJV bible\n* You triple tap on a configured passage and it reveals a vault entrance\n* You enter your password and you're in\n* **The main thing**: someone catches you off guard? dip the phone face down (or other quick actions) -> Instantly switches back to bible mode.\n\nIt's been working well for me so far, but I'm scared about a few things:\n\n* Am I the only one paranoid enough to need this? (fingers crossed, not...)\n* How the heck can I market this? How will you go about bringing your App Store downloads up from ZERO?\n* I've thought of being edgy for marketing, but I'm scared that that will get me kicked off the App Store.\n\nLove to hear some thoughts.\n\nAnd if this sounds useful or interesting, please give\u00a0[Sanctum Bible Vault](https://apps.apple.com/us/app/sanctum-bible-vault/id6756982875)\u00a0a try!\n\n  \nEDIT: the dip to trigger the switch doesn't actually have to be that much or quick, the reflex is sensitive and can detect slighter, more subtle tilts. I just did it that way in the video so that viewers will get the point.  \nAlso, pressing the power button (locking the screen), or leaving the app also triggers the switch.",
+    "url": "https://reddit.com/r/SideProject/comments/1qvojp2/needed_to_watch_videos_privately_in_a_nosy_house/",
+    "external_url": "https://v.redd.it/1jhantmybhhg1",
+    "score": 140,
+    "upvote_ratio": 0.87,
+    "num_comments": 48,
+    "created_utc": 1770211680.0,
+    "author": "d-sonuga",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qv7cu9",
+    "title": "I tracked my first 90 days as a non-technical founder. Here's what actually worked.",
+    "selftext": "**TL;DR: You don't need a technical co-founder anymore. You need to start.**\n\nFor years, I told myself I couldn't start a company because I wasn't a \"builder.\"\n\nI had ideas. I had domain expertise. But I couldn't code. And every startup playbook said: \"Find a technical co-founder or give up.\"\n\nSo I did what desperate wannabe founders do: I joined an accelerator program, surrounded myself with \"founder energy,\" and spent a year watching technical founders build while I... networked?\n\nOne year later, I felt like shit. I was 35. Still no company. Still waiting for permission.\n\n**Then something clicked.**\n\nI realized the game had changed. In 2025, you don't need to write code to build a company. You need to validate demand and execute fast.\n\nSo I gave myself 90 days to prove I could build a real B2B business without writing a single line of code.\n\n**The Stack That Replaced a Technical Co-Founder**\n\nHere's what I actually used:\n\n**1. Cursor (for building)**\n\n* I'm not a developer, but Cursor + Claude let me ship a functional MVP in 3 weeks\n*  Just me and AI pair programming.\n* Finish my platform in 3 months.\n\n**2. Loom (for recording)**\n\n* Forget fancy demos. I recorded 2-minute Loom videos showing the problem + solution\n* Sent 47 personalized videos in week 1. Got 8 calls booked.\n\n**3. Starnus (for selling)**\n\n* Needed a way to find and reach potential customers without spending all day on LinkedIn\n* Set up my ICP criteria, it finds matching leads and automates the outreach part\n* Went from 15 hours/week manual prospecting to maybe 2 hours checking responses\n\n**4. Notion (for everything else)**\n\n* Roadmap, customer feedback, sales pipeline, content calendar\n* One workspace. No complexity.\n\n**The Results (90 Days)**\n\n* **Week 1-2:** Validated idea with 23 customer conversations (all inbound from targeted outreach)\n* **Week 3-4:** Built MVP with Cursor\n* **Week 5-8:** Sent 200+ personalized outreach messages via Starnus\n* **Week 9-12:** 37 demo calls, 4 paying customers, ",
+    "url": "https://reddit.com/r/SideProject/comments/1qv7cu9/i_tracked_my_first_90_days_as_a_nontechnical/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qv7cu9/i_tracked_my_first_90_days_as_a_nontechnical/",
+    "score": 136,
+    "upvote_ratio": 0.93,
+    "num_comments": 32,
+    "created_utc": 1770159850.0,
+    "author": "DistributionSmall596",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "time_frames": [
+        "90 days",
+        "90 days",
+        "3 weeks",
+        "3 months",
+        "15 hours",
+        "2 hours",
+        "90 Days"
+      ]
+    }
+  },
+  {
+    "post_id": "1qut7gv",
+    "title": "I made a better time zone meeting planner",
+    "selftext": "The idea started when I needed to plan a call between time zones, but didn\u2019t like the available options. A lot had issues with mobile devices, or had strange layouts, so I decided to make a better option. It has a clear layout to see the best meeting times, works on all devices, and can easily be shared. It also auto sorts the timezones based on utc offset.\n\nI am working on updates so any feedback or suggestions would be greatly appreciated. \n\nHere is the link if you want to try it out: https://nyjournal.com/tools/timezone-meeting-planner",
+    "url": "https://reddit.com/r/SideProject/comments/1qut7gv/i_made_a_better_time_zone_meeting_planner/",
+    "external_url": "https://v.redd.it/kwczpxlvgahg1",
+    "score": 123,
+    "upvote_ratio": 0.98,
+    "num_comments": 63,
+    "created_utc": 1770128514.0,
+    "author": "Ok_Affect_1571",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qt6d2g",
+    "title": "Scaled my B2B lead gen agency to 20 concurrent clients. Share what made It possible",
+    "selftext": "Running a LinkedIn lead gen agency solo for 3 years, and couldn't get more than 5 clients without hiring. But margins were too tight to bring on staff. That's why I spent 12-hour days just doing repetitive connection requests and follow-ups across different accounts.\n\nHate that feeling, like I was choosing between keeping my agency (and check) small forever or sacrificing quality to grow. So I took a risk last year and went on automation for all this copying and pasting, and focused on the strategy. I didn't expect that but my response rates went up, I hired a sales person and we managed to get 20 clients. And actually they don't care that most of the initial outreach is automated, they just see qualified conversations in their inbox.\n\nSo if are in doubt just as I did, go for it and try to integrate tools or AI models and agents or whatever to make your work faster and focus on optimization and strategy as a CEO.\n\nAnyone else struggled with this mental block around automating client work? How did you get past it?\n\n",
+    "url": "https://reddit.com/r/SideProject/comments/1qt6d2g/scaled_my_b2b_lead_gen_agency_to_20_concurrent/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qt6d2g/scaled_my_b2b_lead_gen_agency_to_20_concurrent/",
+    "score": 101,
+    "upvote_ratio": 1.0,
+    "num_comments": 18,
+    "created_utc": 1769970495.0,
+    "author": "breakyouridea",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qrvkna",
+    "title": "Turned my job rejections into a small interactive data viz site",
+    "selftext": "Each bubble is an impact on my psyche\u2026 but hey, at least they look cool.\n\nTry it out here: [https://adityasharma6356.github.io/rejection\\_pool/](https://adityasharma6356.github.io/rejection_pool/)",
+    "url": "https://reddit.com/r/SideProject/comments/1qrvkna/turned_my_job_rejections_into_a_small_interactive/",
+    "external_url": "https://v.redd.it/mlprrt86wmgg1",
+    "score": 98,
+    "upvote_ratio": 0.95,
+    "num_comments": 21,
+    "created_utc": 1769843243.0,
+    "author": "Capital_Pain_8718",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qu02wz",
+    "title": "I spent a year building a U.S. political news app that aggregates policy, news, and social feeds into one place",
+    "selftext": "I wanted political news that's actually grounded in what the government is doing, not just headlines and hot takes. So I spent the past year building Govbase.\n\nIt pulls in federal policies and simplifies them into key points with an impact analysis and the original source. It also aggregates political news and politician/agency social feeds from X, Bluesky, and Truth Social. You can follow accounts and news sources by bias, party, or individually.\n\nWhere I'm taking it next: tying everything together so you can see the full lineage of a political story. Trump posts on Truth Social, news reacts, an executive order drops, news reacts again, and Govbase shows you the whole picture. I also want to build in civic action tools like how to respond to your representatives, key election dates, etc.\n\n [govbase.io](http://govbase.io)  | [iOS](https://apps.apple.com/app/govbase/id6749645332) | [Google Play](https://play.google.com/store/apps/details?id=com.govbase.govbase)\n\nPlease let me know what you think so far.",
+    "url": "https://reddit.com/r/SideProject/comments/1qu02wz/i_spent_a_year_building_a_us_political_news_app/",
+    "external_url": "https://govbase.io",
+    "score": 89,
+    "upvote_ratio": 0.96,
+    "num_comments": 17,
+    "created_utc": 1770050405.0,
+    "author": "ipromiseimcool",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qwj6vs",
+    "title": "I'll fix your launch strategy in one comment. Hold my beer.",
+    "selftext": "I've done more launches than I can count (on X, Reddit, Product Hunt,Search Engines, Facebook, LinkedIn, TikTok and other places).\n\nHere I am in stealth to make people do less mistakes and make it easier for good products to shine.\n\n  \nHere are some cool points I frequently make **(a.k.a. THE LAUNCH TRIFECTA) :**\n\n1. **Timing** \\- when you launch/post matters more than what you post. Kinda.\n   * Wrong: Do exactly what everybody else is doing. Launch another website builder :D\n   * Right: Think what is at the overlap between what you like to get absurdly deep into, now can be done diffrenetly than a few years ago, people actively talk that they need it. Yup, it's hard, nobody said it wouldn't be.\n2. **Hook** \\- you have 2 seconds to stop the scroll\n   * Wrong: \"Check out my new app!\"\n   * Right: Value. Come on, help others, nobody will help you if you don't help others. Sorry folks, I'm one of the guys that think mentioning your product name is 100% ok, but just try to deliver value. Make it free for one day for you audience, make the post funny, tell something truly useful worth remembering and unique. Again, nobody said that founding projects is easy.\n3. **Landing** \\- where you send traffic\n   * Wrong: \"We revolutionize the world one step at a time\"\n   * Right: Combat your need for aesthetics (here's where I sometimes fall myself) or perfection. Just make the value is as clear as possible. Better to make it clear but small than grand but not clear. I've had websites that had spelling mistakes do well because there was a clear USP and clear job that the product does. The other way around (pretty website, \"world anew\" claim) rarely works.\n\n\\---------\n\n\n\nDrop your project below with:\n\n* Link\n* One-line description\n* Where you're planning to launch \n\n  \nI'll do quick teardowns for first 10 or so (an eventful day for me today, so be patient, I should be able to reply to everybody within usually like 1-2hrs tops). No selling, just genuinely want to help. Seeing too many",
+    "url": "https://reddit.com/r/SideProject/comments/1qwj6vs/ill_fix_your_launch_strategy_in_one_comment_hold/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qwj6vs/ill_fix_your_launch_strategy_in_one_comment_hold/",
+    "score": 87,
+    "upvote_ratio": 0.96,
+    "num_comments": 70,
+    "created_utc": 1770292084.0,
+    "author": "Cold_Emphasis57",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "percentages": [
+        "100%"
+      ]
+    }
+  },
+  {
+    "post_id": "1qtx2oc",
+    "title": "I built a tiny clipboard manager that lives where your cursor is",
+    "selftext": "Hey! \ud83d\udc4b\n\nI've been working on [Maus](http://mausformac.com), a tiny clipboard manager for Mac.\n\nAs a Product Manager, I copy-paste a lot and hated the clipboard managers I tried (giant windows that pull you out of context).\n\nSo I built one that shows up right where your cursor is (\u2318\u21e7V or double-tap \u2318).\n\nI've been using it daily for a couple of weeks and sharing it with friends, polishing details based on their feedback. Now I'd love to hear from a wider audience\n\nA few things it does:\n\n* Saves everything you copy (text, images, files, colors, links)\n* **\"Take me there\"**: jump to where you copied something (useful when copying from ChatGPT/Claude and forgetting which conversation it was)\n* **Advanced search** by where you copied it. \"@slack\" finds anything copied from Slack app, or \"@gpt\" finds anything copied from chatgpt.com. Or by type: #image, #color, #file...\n* **Reveal**\u00a0files in Finder\n* **Pin**\u00a0favorites\n* **Multipaste**\u00a0**queues**\u00a0for filling forms\n* **Split**\u00a0text by tabs, lines or any delimiter\n\nEverything works with keyboard\u00a0**shortcuts**\u00a0and trackpad.\n\nYou can\u00a0**customize**\u00a0it from the menu bar: disable features you don't need (double-tap \u2318 \"off\" by default).\n\nBuilt in Swift, 3MB, 100% private, nothing leaves your Mac.\n\n**It's free with all features and 24h history**\u00a0(Pro for unlimited history coming soon).\n\nWould love feedback,\n\n* what's missing?\n* What's confusing?\n* Found a bug?\n\nLink:\u00a0[https://mausformac.com](https://mausformac.com/)\n\n\\-----\n\n**\\[UPDATES\\]**\n\n**Maus 1.2.0 is out**\n\n**What's new**\n\n* Configure how you want to open Maus: custom shortcut, custom double tap, or key + click.\n\n~~Maus 1.1.1 is out~~  \n~~What's new:~~  \n**~~Cmd+Click~~** ~~to open Maus instantly (enable in Menu Bar \u2192 Features), thanks jss1977~~  \n**~~ESC fix~~** ~~\u2014 now closes the window properly, thanks busuta~~\n\n\u26a0\ufe0f (Ignore this if you downloaded Maus 1.1.1 or later) **One-time manual update required if you downloaded 1.0.0**\n\n1. download again from [mausformac.com](http://",
+    "url": "https://reddit.com/r/SideProject/comments/1qtx2oc/i_built_a_tiny_clipboard_manager_that_lives_where/",
+    "external_url": "https://v.redd.it/fsvfng23h3hg1",
+    "score": 85,
+    "upvote_ratio": 0.99,
+    "num_comments": 51,
+    "created_utc": 1770043844.0,
+    "author": "International_Page93",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "percentages": [
+        "100%"
+      ]
+    }
+  },
+  {
+    "post_id": "1qvy7r5",
+    "title": "I built a website where you read one anonymous note from the person before you, then leave one for the person after you.",
+    "selftext": "Hi everyone,\n\nI wanted to build something that felt\u00a0like the opposite of modern social media. No infinite feeds, no likes, no\u00a0profiles, and definitely no doomscrolling.\n\nSo I built\u00a0[Daylettr](https://www.daylettr.com/). It\u00a0works like a digital message in a bottle chain:\n\n1. **Read:**\u00a0You open the site and receive exactly one anonymous note from the person who visited\u00a0before you.\n2. **Write:**\u00a0You leave a thought, a confession, or a word of encouragement for the person who comes after you.\n3. **Leave:**\u00a0Once you\u2019ve sent your note, you are locked out of the daily\u00a0exchange until tomorrow.\n\nIt\u2019s designed to be a quiet, meaningful moment in\u00a0your day rather than a distraction.\n\nI\u2019d love for you to leave a\u00a0note for the next stranger. You never know who might need to read it.",
+    "url": "https://reddit.com/r/SideProject/comments/1qvy7r5/i_built_a_website_where_you_read_one_anonymous/",
+    "external_url": "https://v.redd.it/iwsdhbfs3jhg1",
+    "score": 76,
+    "upvote_ratio": 0.95,
+    "num_comments": 62,
+    "created_utc": 1770233222.0,
+    "author": "TheHonestRedditer",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qs3rf5",
+    "title": "Everyone's posting 10k MRR screenshots. I made 24. Here's what 30 days actually looks like.",
+    "selftext": "30 days ago I had never written a line of code. Today I have 2 apps live on the App Store, 2 apps scrapped, 2 landing pages, and another idea in the works. 52 downloads. $24 in revenue.\n\nI'm posting about it anyway because every AI thread is \"built this SaaS in 3 prompts\" and I sat reading all of it thinking maybe I'm just not cut for this.\n\nHere's the real timeline:\n\n**Days 1-3:** Copied a proven concept (photo cleaner app), used VibeCode to build it, submitted to App Store. Got rejected. Three times. Took 2 weeks to figure out the submission process. Nobody posts about that part.\n\n**Week 2:** Realized you don't use one AI tool\u2014you use five. VibeCode, Windsurf, Claude, Nano Banana, [Aura.build](http://Aura.build), Expo. My monthly bill skyrocketed. Each tool does different things. Trying to use one for everything doesn't work.\n\n**Week 3:** Hit real bugs. State management issues. Gesture conflicts. A fullscreen viewer showing black screens. Spent hours learning why. AI can't debug what you can't explain.\n\n**Week 4:** Remotion came out. Everyone posting \"did this in 5 prompts.\" I spent 3.5 days struggling to understand motion effects and video composition. Still don't understand half of it.\n\nThen marketing. Posted on Reddit. r/iosapps went well. r/digitalminimalism? Permabanned. r/AppHookup? Removed. r/iphone? Blocked.\n\n**The numbers:**\n\n* 2 apps live, 2 scrapped\n* 52 downloads, $24 revenue\n* 1 permaban\n* 3 App Store rejections\n* 0 lines of code I could write from scratch\n\n**What I learned:**\n\nVibe coding is real but limited. The moment something breaks, you need to understand it. Marketing is harder than building\u2014maybe 70% of the work. And $24 is not failure. 52 strangers downloaded something I made.\n\nI'm not quitting my job. I'm not posting \"quit your 9-5\" content. Just going to keep building and see if I can get to $100, then $1,000.\n\nIf you're thinking about starting: don't wait until you know enough. Ship something ugly. Get rejected. Make $24. It's a real start",
+    "url": "https://reddit.com/r/SideProject/comments/1qs3rf5/everyones_posting_10k_mrr_screenshots_i_made_24/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qs3rf5/everyones_posting_10k_mrr_screenshots_i_made_24/",
+    "score": 68,
+    "upvote_ratio": 0.91,
+    "num_comments": 75,
+    "created_utc": 1769869697.0,
+    "author": "Ryland990",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "dollar_amounts": [
+        "$24",
+        "$24",
+        "$24",
+        "$100,",
+        "$1,000",
+        "$24"
+      ],
+      "percentages": [
+        "70%"
+      ],
+      "user_counts": [
+        "52 downloads",
+        "52 downloads"
+      ],
+      "time_frames": [
+        "30 days",
+        "30 days",
+        "2 weeks",
+        "5 days"
+      ]
+    }
+  },
+  {
+    "post_id": "1qtuqns",
+    "title": "Launched 4 side projects in 18 months. All solved real problems. Only 1 made money.",
+    "selftext": "Built 4 different side projects between 2024-2025. All solved genuine problems I validated through interviews. All had paying customers willing to buy. But only 1 actually made consistent money. Took me 18 months to realize the difference wasn't product quality or problem validity. It was whether I could organically reach enough customers without paid ads. First project was CRM for real estate agents. Great product, agents loved it, charged $49/month. Problem was I couldn't reach real estate agents organically. They weren't on Reddit. No searchable keywords brought them. Needed LinkedIn ads or cold calling. Died at $340 MRR after 6 months because I couldn't afford customer acquisition.\n\nSecond project was analytics dashboard for Shopify stores. Solid tool, store owners wanted it. But Shopify app store was saturated. Getting discovered required paid ads competing against funded companies. Made $180 total before quitting. Distribution was impossible without budget.\u200b Third project was scheduling tool for healthcare clinics. Clinics needed it desperately. But healthcare sales cycle was 3-6 months, required demos, compliance questions, multiple stakeholders. As solo founder working nights, I couldn't handle that sales process. Gave up at 2 customers.\u200b\n\nFourth project was content calendar for newsletter creators. Finally got distribution right. Newsletter creators gathered in 8 active subreddits, 5 Facebook groups, and searched specific keywords on Google. I could reach 10,000+ potential customers organically. Built tool in 5 weeks, launched everywhere they gathered, hit $6,400 MRR in 6 months. [Studied pattern in Founders database comparing side projects that succeeded versus failed](http://foundertoolkit.org). Successful ones had organic distribution channels accessible to solo founders. Failed ones required paid ads, long sales cycles, or access to audiences solo founders couldn't reach. Distribution feasibility mattered more than product-market fit.\u200b\n\nThe framework I ",
+    "url": "https://reddit.com/r/SideProject/comments/1qtuqns/launched_4_side_projects_in_18_months_all_solved/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qtuqns/launched_4_side_projects_in_18_months_all_solved/",
+    "score": 62,
+    "upvote_ratio": 0.82,
+    "num_comments": 46,
+    "created_utc": 1770038149.0,
+    "author": "ProfessionalLast4311",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "dollar_amounts": [
+        "$49",
+        "$340",
+        "$180",
+        "$6,400"
+      ],
+      "user_counts": [
+        "2 customers"
+      ],
+      "time_frames": [
+        "18 months",
+        "18 months",
+        "6 months",
+        "6 months",
+        "5 weeks",
+        "6 months"
+      ]
+    }
+  },
+  {
+    "post_id": "1qwfkbh",
+    "title": "I made a local and powerful file converter that respects your privacy!",
+    "selftext": "",
+    "url": "https://reddit.com/r/SideProject/comments/1qwfkbh/i_made_a_local_and_powerful_file_converter_that/",
+    "external_url": "https://v.redd.it/vigctmhgwmhg1",
+    "score": 57,
+    "upvote_ratio": 0.97,
+    "num_comments": 46,
+    "created_utc": 1770279055.0,
+    "author": "Vegetable_Lunch554",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qqz18w",
+    "title": "Meet Klipy by Tenor GIF Keyboard Team",
+    "selftext": "Hello everyone, I\u2019m from KLIPY and I\u2019d like to introduce our project.[ KLIPY](https://klipy.com) is co-founded and led by former[ Tenor](http://tenor.com) (Ex-Google) team members, including the ex-founder, CTO, Head of Content, Content Strategy, Search Ranking engineering team and others.\n\n* If you\u2019re a developer, you can migrate to KLIPY in under 10 minutes, often with a simple base URL swap:[ https://klipy.com/migrate](https://klipy.com/migrate)\n* If you\u2019re a creator, we can help you migrate and claim your Tenor profile by filling out this form:[ https://forms.gle/Z6N2fZwRLdw9N8WaA](https://forms.gle/Z6N2fZwRLdw9N8WaA)\n\nWe recently crossed 1500+ API key signups and we\u2019re excited to support you. If you have any questions about migration, compatibility, search, or anything else, drop them here.\n\nYou can see more information about this in our subreddit r/klipycom",
+    "url": "https://reddit.com/r/SideProject/comments/1qqz18w/meet_klipy_by_tenor_gif_keyboard_team/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qqz18w/meet_klipy_by_tenor_gif_keyboard_team/",
+    "score": 50,
+    "upvote_ratio": 0.98,
+    "num_comments": 1,
+    "created_utc": 1769758656.0,
+    "author": "ProjectFluffy6065",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qvm1j9",
+    "title": "I built an AI scheduling assistant that reorganizes your calendar through chat - would love feedback",
+    "selftext": "Hey everyone,\n\nI've been working on a Chrome extension called\u00a0**AI Schedule Maker**\u00a0and wanted to share it here since this seems like a good place for honest feedback.\n\nThe basic idea: instead of dragging events around your calendar manually, you just type what you need in plain language. Things like \"find me a free slot after 4pm today,\" \"move tomorrow's standup to Wednesday,\" or \"shift all my Friday meetings by 30 minutes.\"\u00a0**The AI figures out what to move, checks for conflicts, and shows you the changes before anything gets applied.**\n\n**What it actually does:**\n\n* Finds free time slots across your schedule\n* Reschedules events and handles conflicts (suggests alternatives if a slot is taken)\n* Bulk edits \u2014 rename, shift, or move groups of events at once\n* Protects focus blocks so you don't end up with back-to-back meetings all day\n\nThe thing that bugged me about calendar management is that it's death by a thousand clicks, especially when plans change mid-week and you need to reorganize half your day. This tries to turn that into a quick conversation instead.\n\nNothing gets changed without your confirmation \u2014 it shows suggested edits first, you review, then apply.\n\nIt's free, no data collection, works with 18 languages.\n\nChrome Web Store link:\u00a0[https://chromewebstore.google.com/detail/ai-schedule-maker-smart-s/logfdloikoklikbmcffcfmfpgpedfkfi](https://chromewebstore.google.com/detail/ai-schedule-maker-smart-s/logfdloikoklikbmcffcfmfpgpedfkfi)\n\nWould genuinely appreciate any feedback \u2014 on the UX, what's missing, what feels off. Still early (v1.0.3) so very open to suggestions.\n\nI am working on adding more clever agent cycle now.",
+    "url": "https://reddit.com/r/SideProject/comments/1qvm1j9/i_built_an_ai_scheduling_assistant_that/",
+    "external_url": "https://v.redd.it/b38af5vcqghg1",
+    "score": 46,
+    "upvote_ratio": 0.91,
+    "num_comments": 11,
+    "created_utc": 1770204347.0,
+    "author": "reart_ai",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qtg0w5",
+    "title": "I built a tool that lets you create n8n/Clay-style workflows in minutes\n   \u2014 looking for beta testers",
+    "selftext": "\u00a0 Hey everyone,\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 I've been building [**Arnies.ai**](http://Arnies.ai) \u2014 a workflow automation tool where you describe \u00a0\n\n\u00a0 what you want and it builds the workflow for you.\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 Instead of dragging nodes around and debugging connections for hours, you just\n\n\u00a0\u00a0 tell it what you need and it puts the whole thing together. \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 **What it does:**\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 \\- Creates full automation workflows from a description \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 \\- Connects to 2500+ apps (CRMs, enrichment tools, databases, etc.) \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 \\- Handles the logic, data mapping, and API connections for you \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 \\- What takes hours in n8n or Clay takes minutes here \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 **Looking for beta testers who:**\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 \\- Currently use Clay, n8n, Make, or Zapier \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 \\- Run outbound/sales ops, lead enrichment, or data workflows \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 \\- Want to break things and give honest feedback\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\n\u00a0 If you're interested, drop a comment or DM me and I'll get you early access. \u00a0\n\n\u00a0 Happy to answer any questions about how it works under the hood.\u00a0 \u00a0 \u00a0 \u00a0 \u00a0\n\nHere's a short video showing how it works: [https://youtu.be/orkt3Jwpxs4](https://youtu.be/orkt3Jwpxs4)",
+    "url": "https://reddit.com/r/SideProject/comments/1qtg0w5/i_built_a_tool_that_lets_you_create_n8nclaystyle/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qtg0w5/i_built_a_tool_that_lets_you_create_n8nclaystyle/",
+    "score": 46,
+    "upvote_ratio": 0.89,
+    "num_comments": 21,
+    "created_utc": 1769992489.0,
+    "author": "TheHealthlover101",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qvmv09",
+    "title": "Got my first 340 customers from Reddit without spending on ads.",
+    "selftext": "Everyone says Reddit marketing is dead or too hard. Spent 4 months testing Reddit as primary distribution channel for my micro SaaS. Got 340 paying customers at $89/year generating $30,260 in revenue. Zero dollars spent on ads. Just genuine engagement and providing value first. Here's the exact [playbook from FounderToolkit](http://foundertoolkit.org) that worked. Reddit culture punishes self-promotion hard. Post \"check out my product\" and you're banned in minutes. The strategy that worked was 95% value, 5% promotion. Spent first month just commenting and helping people in 8 target subreddits without mentioning my product once. Built 400+ comment karma and established credibility as someone who actually helps.\u200b\n\nIdentified 12 subreddits where my target customers gathered. Used RedditList and manually searched keywords related to my niche. Read sidebar rules for each subreddit obsessively. Some allow promotion on specific days, others never, some require certain karma minimums. Breaking rules gets you banned permanently.\u200b The content formula that worked was storytelling, not pitching. Instead of \"I built X tool,\" I posted \"I wasted 8 hours weekly doing Y manually until I automated it. Here's what I learned.\" Shared genuine lessons, struggles, and insights. Added my product link in final paragraph as \"if anyone faces similar problem, I built a tool that helps.\" Natural, not spammy.\n\nBest time to post was 5-10 PM CET on Mondays and Wednesdays based on data from analyzing top posts. Posted at these times and engagement was 3x higher than random posting. Studied top posts from past month in each subreddit before writing. Mimicked their title structure and content format.\u200b Engaged with every single comment on my posts within first 2 hours. Reddit algorithm rewards early engagement. Replied thoughtfully to questions, thanked people for feedback, continued conversations. This pushed posts higher and brought more visibility. Spent 90 minutes daily just engaging.\u200b\n\nSubmitted ",
+    "url": "https://reddit.com/r/SideProject/comments/1qvmv09/got_my_first_340_customers_from_reddit_without/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qvmv09/got_my_first_340_customers_from_reddit_without/",
+    "score": 45,
+    "upvote_ratio": 0.74,
+    "num_comments": 41,
+    "created_utc": 1770206954.0,
+    "author": "Top-Statement-9423",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "dollar_amounts": [
+        "$89",
+        "$30,260"
+      ],
+      "percentages": [
+        "95%",
+        "5%"
+      ],
+      "multipliers": [
+        "3x"
+      ],
+      "user_counts": [
+        "340 customers"
+      ],
+      "time_frames": [
+        "4 months",
+        "8 hours",
+        "2 hours"
+      ]
+    }
+  },
+  {
+    "post_id": "1qupjec",
+    "title": "I made a better Duolingo",
+    "selftext": "Hey guys, I've always struggled to learn languages, especially because apps like Duolingo don't work, they make you write or choose some options instead of actually speak, so I started building something focused only on real conversation.\n\nIt\u2019s basically Duolingo if the entire app revolved around talking instead of translating sentences and collecting streaks.\n\nThe idea is simple: you open it and immediately start speaking with an AI tutor that listens in real time, corrects you while you talk, and adapts to your level, just conversation.\n\nSome of the things we\u2019ve been building into it:\n\n* real-time pronunciation and phrasing feedback while you speak\n* conversation scenarios (travel, work, casual chat, restaurants\u2026.)\n* adaptive difficulty depending on how you respond\n* corrections that explain why something sounds unnatural\n* memory system that brings back words you keep messing up\n* natural pacing so it feels like an actual human exchange\n* hands free mode so you can practice while walking or driving\n\nIt\u2019s currently in beta access and right now it\u2019s just a waiting list, but the site explains everything in detail if you\u2019re curious. Take a look at it [here](https://www.orali.ai/)!\n\nWould love feedback from people who\u2019ve tried learning languages seriously, what do you feel apps are still missing?",
+    "url": "https://reddit.com/r/SideProject/comments/1qupjec/i_made_a_better_duolingo/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qupjec/i_made_a_better_duolingo/",
+    "score": 43,
+    "upvote_ratio": 0.73,
+    "num_comments": 25,
+    "created_utc": 1770118275.0,
+    "author": "ImpossibleAgent3833",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qum5xp",
+    "title": "I vibe coded a SaaS to 585+ users in 60 days. Finally killed the \"zero-signup\" days",
+    "selftext": "I spent about a week in a total flow state vibe-coding my latest project, Solo Launches. Using Cursor and AI agents makes shipping feel like a superpower, so I got the MVP out in about half a week. I felt great about it... and then there is absolute silence.\n\nI realized pretty quickly that shipping speed is irrelevant if your domain authority is a flat zero. Google has no reason to crawl a brand new domain without some kind of external trust signals, so my feature pages were essentially invisible.\n\nWhat I actually did to fix it is I forced myself to stop coding for 5 days and focused entirely on the boring part of the foundation. I researched and manually submitted my website to 50 handpicked directories (10 in a day) just to build an initial crawl path. It was time-consuming, non-technical, and it totally broke my 'builder' momentum, but it worked for me.\n\nThe results I got after 60 days are:  \n\\-> Signups: 585 total and still increasing.  \n\\-> Consistency: I haven't had a single \"zero signup\" day in over a month now.  \n\\-> Authority: Domain Ranking moved to 28.\n\n(Community isn't allowing me to attach the dashboard image)\n\nThe 30+ hours of manual data entry was easily the most painful part of this whole experiment. Most founders skip this because it\u2019s a boring grind, but it\u2019s the only thing that actually built an authority floor for my pages to start ranking.\n\nI\u2019ve got my tracked spreadsheet of the 50 directories that actually moved the needle for my website. Since I\u2019ve already done the 30+ hours of research and manual work, I\u2019m happy to share the workflow I used if anyone wants to skip that research grind and stay in their flow state.\n\nIf you're stuck at 0 users, let's talk on DM and I\u2019ll help you out.",
+    "url": "https://reddit.com/r/SideProject/comments/1qum5xp/i_vibe_coded_a_saas_to_585_users_in_60_days/",
+    "external_url": "https://www.reddit.com/r/SideProject/comments/1qum5xp/i_vibe_coded_a_saas_to_585_users_in_60_days/",
+    "score": 40,
+    "upvote_ratio": 0.68,
+    "num_comments": 66,
+    "created_utc": 1770105798.0,
+    "author": "GeneralDare6933",
+    "subreddit": "SideProject",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "user_counts": [
+        "585+ users",
+        "0 users"
+      ],
+      "time_frames": [
+        "60 days",
+        "5 days",
+        "60 days"
+      ]
+    }
+  },
+  {
+    "post_id": "1qt13zj",
+    "title": "A different take on LLM context management inside Obsidian",
+    "selftext": "A couple of weeks ago I posted here about a research OS I'm building - with a visual browser where you can save web pages onto a canvas and not lose the context between navigations.\n\nOriginally, I was thinking about turning it into an Obsidian plugin and asked if people need this.\n\nIn the comments, some people said they'd be interested in this, even though Obsidian already has a native Canvas that can open web pages. But the UX there isn't great - especially when it comes to preserving scroll positions, navigation history, and actual research flow.\n\nAt the same time, there were other use cases people mentioned that really stuck with me - and they pushed me in a slightly different direction.\n\nSo instead, I started working on something else:\n\n**\ud83d\udc49 an LLM context manager for Obsidian, with branching between chats.**\n\nA lot of people want an easy way to:\n\nquickly add notes, web pages, and fragments into LLM context\n\nkeep track of where each conversation came from\n\nbranch conversations without losing the original reasoning path\n\nThat's how Rabbitmap for Obsidian was born.\n\nI've already submitted the pull request and I'm currently waiting for Obsidian's moderation.\n\nIf you're interested in following the development - or want to be part of shaping it - I'd be happy to see you here:\n\nSubreddit:\u00a0[https://www.reddit.com/r/rabbitmap/](https://www.reddit.com/r/rabbitmap/)\n\nDiscord:\u00a0[https://discord.gg/UeUBkmxEcV](https://discord.gg/UeUBkmxEcV)\n\nIf you want to try it right now, the plugin is already open source:\n\n[https://github.com/bayradion/rabbitmap](https://github.com/bayradion/rabbitmap)\n\nAnd the main project itself - completely free for browsing and saving boards - lives here:\n\n[https://rabbitmap.com/](https://rabbitmap.com/)\n\nI genuinely enjoy building this project, so any feedback is very welcome \ud83d\ude4c",
+    "url": "https://reddit.com/r/SideProject/comments/1qt13zj/a_different_take_on_llm_context_management_inside/",
+    "external_url": "https://v.redd.it/5syebmjwgwgg1",
+    "score": 36,
+    "upvote_ratio": 0.75,
+    "num_comments": 6,
+    "created_utc": 1769959056.0,
+    "author": "reart_ai",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  },
+  {
+    "post_id": "1qssfdf",
+    "title": "I am working on a dimension shifting puzzle game!",
+    "selftext": "Currently I am working on a game where you can switch between 2D and 3D. Still a lot todo, but at least you can alreaddy place a 3D Ball in a 2D cubby!  \nYou can checkout the game on [Steam](https://store.steampowered.com/app/4174520/Perspective_Protocol/?utm_source=reddit&utm_medium=social&utm_campaign=sideproject&utm_content=ball_cubby)! \ud83d\ude04\u00a0[](https://emojipedia.org/happy)",
+    "url": "https://reddit.com/r/SideProject/comments/1qssfdf/i_am_working_on_a_dimension_shifting_puzzle_game/",
+    "external_url": "https://v.redd.it/w1w0y2ux9ugg1",
+    "score": 38,
+    "upvote_ratio": 0.95,
+    "num_comments": 23,
+    "created_utc": 1769932704.0,
+    "author": "hasenbauer",
+    "subreddit": "SideProject",
+    "is_self": false,
+    "link_flair_text": null,
+    "extracted_numbers": {}
+  }
+]

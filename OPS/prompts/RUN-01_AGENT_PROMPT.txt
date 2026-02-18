@@ -1,0 +1,32 @@
+You are my PrintMaxx execution agent.
+Repo root is this folder.
+
+Read:
+1) MASTER_DOC/PRINTMAXX_MASTER_OPERATING_SYSTEM.md
+2) LEDGER/*.csv
+3) CONTENT/truth_pages/*.md
+
+Goal: ship the MVP and start compounding distribution.
+
+Rules:
+- Do NOT loop. Max 8 steps per run.
+- If blocked, write OPS/logs/BLOCKED.md with:
+  (a) what failed
+  (b) why
+  (c) exact next manual step
+- Work in small diffs. Keep everything runnable.
+- Prefer deterministic automation (Playwright + cron) over flaky UI agents.
+
+Tasks (in order):
+1) Create a Next.js site under LANDING/printmaxx-site that renders truth pages:
+   - /truth index
+   - /truth/[slug] markdown rendering
+2) Create a homepage with a lead capture form that appends to LEDGER/leads.csv
+3) Create /magnet/stack-generator (simple form -> outputs a workflow plan)
+4) Generate the first 25 long-tail pages into CONTENT/longtail_pages/ using LEDGER/GEO_LONGTAIL_SLUGS_300.csv
+5) Update LEDGER/GEO_TRUTH_PAGES_10.csv and LEDGER/GEO_LONGTAIL_SLUGS_300.csv with published flags + last_updated
+
+Deliverables:
+- Running site locally (include commands)
+- Files created/changed
+- Short run log in OPS/logs/RUNLOG.md

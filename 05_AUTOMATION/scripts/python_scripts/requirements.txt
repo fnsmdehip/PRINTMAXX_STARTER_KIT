@@ -1,0 +1,32 @@
+# PRINTMAXX Automation Scripts - Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+requests>=2.31.0          # HTTP requests for APIs
+anthropic>=0.18.0         # Claude API client
+
+# Browser automation
+playwright>=1.40.0        # Browser automation for scraping
+# After pip install, run: playwright install
+
+# DNS/Email validation
+dnspython>=2.4.0          # DNS lookups for email validation
+
+# Timezone handling (Python 3.9+ has zoneinfo built-in)
+# For Python 3.8, uncomment:
+# backports.zoneinfo>=0.2.1
+
+# Optional: Enhanced CSV handling
+# pandas>=2.0.0           # Uncomment for advanced CSV operations
+
+# Optional: Rate limiting
+# ratelimit>=2.2.1        # Uncomment for API rate limiting
+
+# Optional: Async HTTP
+# aiohttp>=3.9.0          # Uncomment for async HTTP requests
+# httpx>=0.26.0           # Uncomment for modern async HTTP
+
+# Development dependencies (optional)
+# pytest>=7.4.0           # Testing
+# black>=23.0.0           # Code formatting
+# flake8>=6.1.0           # Linting

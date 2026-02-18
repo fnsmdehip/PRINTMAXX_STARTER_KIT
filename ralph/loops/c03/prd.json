@@ -1,0 +1,88 @@
+{
+  "op_id": "C03",
+  "op_name": "YouTube Faceless Channels",
+  "category": "CONTENT",
+  "created": "2026-02-12T07:52:15.034609",
+  "stories": [
+    {
+      "id": "C03-T01",
+      "description": "Research profitable niches",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C03-T02",
+      "description": "Write video scripts",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C03-T03",
+      "description": "Create thumbnail concepts",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C03-T04",
+      "description": "Build seo titles/descriptions",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C03-T05",
+      "description": "Plan content calendar",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C03-T06",
+      "description": "Optimize for shorts algorithm",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C03-T07",
+      "description": "Monetization setup guide",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C03-T08",
+      "description": "Affiliate link integration",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

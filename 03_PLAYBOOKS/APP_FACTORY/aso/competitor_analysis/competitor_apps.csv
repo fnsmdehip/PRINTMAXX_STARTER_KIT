@@ -1,0 +1,21 @@
+niche,app_name,developer,app_store_url,rating,reviews_count,estimated_downloads,pricing_model,price_usd,key_features,primary_keywords,weaknesses
+faith,Hallow,Hallow Inc,apps.apple.com/app/hallow,4.9,180000,5000000,subscription,9.99/mo,"prayers,meditations,bible stories,sleep content",prayer app meditation christian,complex onboarding crowded features
+faith,Pray.com,Pray.com,apps.apple.com/app/pray-com,4.8,95000,2000000,subscription,9.99/mo,"daily prayers,community,sleep stories",prayer community daily devotional,too much content overwhelming
+faith,YouVersion Bible,Life.Church,apps.apple.com/app/bible,4.9,1200000,100000000,free,0,"bible reading,plans,community,verse images",bible app verse of day,no phone blocking feature
+faith,Glorify,Glorify Ltd,apps.apple.com/app/glorify,4.8,45000,1000000,subscription,11.99/mo,"devotionals,gratitude,bible study",christian devotional daily,expensive limited free tier
+faith,Abide,Carpenters Code,apps.apple.com/app/abide,4.8,52000,1000000,subscription,9.99/mo,"meditations,sleep stories,stress relief",christian meditation sleep,narrow focus meditation only
+fitness,Opal,Opal Camera Inc,apps.apple.com/app/opal,4.5,25000,500000,subscription,9.99/mo,"screen blocking,focus sessions,usage stats",phone blocker focus,no fitness integration
+fitness,One Sec,One Sec,apps.apple.com/app/one-sec,4.6,18000,400000,subscription,4.99/mo,"friction timer,app blocking,awareness",screen time blocker,simple no goals
+fitness,StepSetGo,StepSetGo,apps.apple.com/app/stepsetgo,4.4,12000,200000,freemium,0,"step rewards,challenges,marketplace",step counter rewards,rewards focus not blocking
+fitness,Sweatcoin,Sweatcoin,apps.apple.com/app/sweatcoin,4.5,85000,3000000,freemium,0,"step tracking,crypto rewards,marketplace",walking app rewards,no phone blocking
+fitness,MyFitnessPal,Under Armour,apps.apple.com/app/myfitnesspal,4.6,450000,50000000,freemium,19.99/mo,"calorie tracking,food database,macros",calorie tracker fitness,no blocking feature
+ai,PromptBase,PromptBase,promptbase.com,na,na,na,marketplace,varies,"prompt marketplace,seller platform",ai prompts chatgpt,web only no app
+ai,Awesome ChatGPT Prompts,GitHub,github.com/awesome-chatgpt,na,na,na,free,0,"open source prompts,community",chatgpt prompts free,no organization no app
+ai,AIPRM,AIPRM Corp,aiprm.com,na,na,na,freemium,9/mo,"chrome extension,curated prompts",chatgpt chrome extension,chrome only not mobile
+ai,FlowGPT,FlowGPT,flowgpt.com,na,na,na,freemium,0,"prompt sharing,community,personas",ai prompts community,web focused complex
+ai,TypingMind,TypingMind,typingmind.com,na,na,na,one-time,39,"better chatgpt ui,prompt library",chatgpt interface,desktop focused
+fitness,Nike Training,Nike Inc,apps.apple.com/app/nike-training,4.8,250000,10000000,freemium,0,"guided workouts,plans,video",workout app home fitness,no phone blocking
+fitness,Fitbit,Google,apps.apple.com/app/fitbit,4.5,320000,50000000,freemium,9.99/mo,"activity tracking,sleep,health metrics",fitness tracker steps,requires device
+fitness,Strava,Strava Inc,apps.apple.com/app/strava,4.7,180000,10000000,freemium,11.99/mo,"run tracking,cycling,social",running app cycling,no blocking gamification
+fitness,Peloton,Peloton Interactive,apps.apple.com/app/peloton,4.8,95000,5000000,subscription,44/mo,"classes,community,equipment",home workout classes,expensive equipment focus
+fitness,Calm,Calm,apps.apple.com/app/calm,4.8,350000,20000000,subscription,14.99/mo,"meditation,sleep,relaxation",meditation sleep app,no fitness focus

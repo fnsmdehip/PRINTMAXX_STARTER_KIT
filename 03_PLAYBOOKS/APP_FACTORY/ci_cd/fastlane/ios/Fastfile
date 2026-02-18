@@ -1,0 +1,330 @@
+# iOS Fastfile - iOS-specific lane definitions
+# Import this file from the main Fastfile
+
+default_platform(:ios)
+
+platform :ios do
+  # ==========================================
+  # Configuration
+  # ==========================================
+
+  SCHEME = ENV["SCHEME"] || "App"
+  WORKSPACE = ENV["WORKSPACE"] || "App.xcworkspace"
+  PROJECT = ENV["PROJECT"] || "App.xcodeproj"
+  OUTPUT_DIR = "build"
+
+  before_all do
+    # Ensure output directory exists
+    FileUtils.mkdir_p(OUTPUT_DIR)
+  end
+
+  # ==========================================
+  # Build Lanes
+  # ==========================================
+
+  desc "Build debug version"
+  lane :build_debug do
+    cocoapods(
+      clean_install: true,
+      repo_update: true
+    ) if File.exist?("Podfile")
+
+    gym(
+      scheme: SCHEME,
+      workspace: File.exist?(WORKSPACE) ? WORKSPACE : nil,
+      project: File.exist?(WORKSPACE) ? nil : PROJECT,
+      configuration: "Debug",
+      export_method: "development",
+      output_directory: OUTPUT_DIR,
+      output_name: "App-Debug.ipa",
+      skip_codesigning: true,
+      skip_archive: false,
+      clean: true,
+      destination: "generic/platform=iOS Simulator"
+    )
+  end
+
+  desc "Build release version for App Store"
+  lane :build_release do |options|
+    # Install pods if Podfile exists
+    cocoapods(
+      clean_install: false,
+      repo_update: false
+    ) if File.exist?("Podfile")
+
+    # Sync certificates
+    sync_code_signing(type: "appstore")
+
+    # Build
+    gym(
+      scheme: SCHEME,
+      workspace: File.exist?(WORKSPACE) ? WORKSPACE : nil,
+      project: File.exist?(WORKSPACE) ? nil : PROJECT,
+      configuration: "Release",
+      export_method: "app-store",
+      output_directory: OUTPUT_DIR,
+      output_name: "App-Release.ipa",
+      include_bitcode: false,
+      include_symbols: true,
+      clean: true,
+      xcargs: "-allowProvisioningUpdates"
+    )
+  end
+
+  # ==========================================
+  # Test Lanes
+  # ==========================================
+
+  desc "Run unit tests"
+  lane :ios_test do
+    cocoapods if File.exist?("Podfile")
+
+    scan(
+      scheme: SCHEME,
+      workspace: File.exist?(WORKSPACE) ? WORKSPACE : nil,
+      project: File.exist?(WORKSPACE) ? nil : PROJECT,
+      device: "iPhone 15",
+      clean: true,
+      code_coverage: true,
+      output_directory: "#{OUTPUT_DIR}/test_results",
+      output_types: "html,junit"
+    )
+  end
+
+  desc "Run UI tests"
+  lane :ui_test do
+    cocoapods if File.exist?("Podfile")
+
+    scan(
+      scheme: "#{SCHEME}UITests",
+      workspace: File.exist?(WORKSPACE) ? WORKSPACE : nil,
+      project: File.exist?(WORKSPACE) ? nil : PROJECT,
+      device: "iPhone 15",
+      clean: false,
+      output_directory: "#{OUTPUT_DIR}/ui_test_results",
+      output_types: "html,junit"
+    )
+  end
+
+  # ==========================================
+  # Code Signing Lanes
+  # ==========================================
+
+  desc "Sync code signing certificates"
+  lane :sync_code_signing do |options|
+    type = options[:type] || "appstore"
+
+    match(
+      type: type,
+      readonly: is_ci?,
+      app_identifier: ENV["APP_IDENTIFIER"],
+      team_id: ENV["APPLE_TEAM_ID"]
+    )
+  end
+
+  desc "Register new devices"
+  lane :register_device do |options|
+    device_name = options[:name]
+    device_udid = options[:udid]
+
+    unless device_name && device_udid
+      UI.user_error!("Usage: fastlane register_device name:'Device Name' udid:'UDID'")
+    end
+
+    register_devices(
+      devices: {
+        device_name => device_udid
+      }
+    )
+
+    # Refresh provisioning profiles
+    match(
+      type: "development",
+      force_for_new_devices: true
+    )
+  end
+
+  # ==========================================
+  # Deployment Lanes
+  # ==========================================
+
+  desc "Deploy to TestFlight"
+  lane :deploy_testflight do |options|
+    # Build if no IPA exists
+    build_release unless File.exist?("#{OUTPUT_DIR}/App-Release.ipa")
+
+    changelog = options[:changelog] || read_changelog
+
+    # Upload to TestFlight
+    pilot(
+      ipa: "#{OUTPUT_DIR}/App-Release.ipa",
+      skip_waiting_for_build_processing: true,
+      distribute_external: false,
+      changelog: changelog,
+      demo_account_required: false,
+      notify_external_testers: false
+    )
+
+    UI.success("Successfully uploaded to TestFlight!")
+  end
+
+  desc "Upload to TestFlight"
+  lane :upload_testflight do |options|
+    changelog = options[:changelog] || "Bug fixes and improvements"
+
+    pilot(
+      ipa: "#{OUTPUT_DIR}/App-Release.ipa",
+      skip_waiting_for_build_processing: options[:wait] != true,
+      distribute_external: false,
+      changelog: changelog
+    )
+  end
+
+  desc "Deploy to App Store (submit for review)"
+  lane :deploy_app_store do |options|
+    # Build if needed
+    build_release unless File.exist?("#{OUTPUT_DIR}/App-Release.ipa")
+
+    # Upload to App Store Connect
+    deliver(
+      ipa: "#{OUTPUT_DIR}/App-Release.ipa",
+      submit_for_review: options[:submit] || false,
+      automatic_release: false,
+      force: true,
+      skip_screenshots: true,
+      skip_metadata: options[:skip_metadata] || false,
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        add_id_info_uses_idfa: false,
+        export_compliance_uses_encryption: false
+      }
+    )
+
+    UI.success("Successfully uploaded to App Store Connect!")
+  end
+
+  # ==========================================
+  # Version Management
+  # ==========================================
+
+  desc "Bump version number"
+  lane :bump_version do |options|
+    type = options[:type] || "patch"
+
+    # Bump version
+    case type
+    when "major"
+      increment_version_number(bump_type: "major")
+    when "minor"
+      increment_version_number(bump_type: "minor")
+    when "patch"
+      increment_version_number(bump_type: "patch")
+    else
+      increment_version_number(version_number: type)
+    end
+
+    # Always increment build number
+    increment_build_number
+
+    version = get_version_number
+    build = get_build_number
+
+    UI.success("Version bumped to #{version} (#{build})")
+  end
+
+  desc "Set specific version"
+  lane :set_version do |options|
+    version = options[:version]
+    build = options[:build]
+
+    UI.user_error!("Version required") unless version
+
+    increment_version_number(version_number: version)
+    increment_build_number(build_number: build) if build
+
+    UI.success("Version set to #{version}")
+  end
+
+  desc "Get current version info"
+  lane :version_info do
+    version = get_version_number
+    build = get_build_number
+
+    puts "Version: #{version}"
+    puts "Build: #{build}"
+
+    { version: version, build: build }
+  end
+
+  # ==========================================
+  # Screenshot Lanes
+  # ==========================================
+
+  desc "Capture screenshots"
+  lane :screenshots do
+    capture_screenshots(
+      scheme: "#{SCHEME}UITests",
+      output_directory: "#{OUTPUT_DIR}/screenshots",
+      clear_previous_screenshots: true,
+      devices: [
+        "iPhone 15 Pro Max",
+        "iPhone 15 Pro",
+        "iPhone SE (3rd generation)",
+        "iPad Pro (12.9-inch) (6th generation)"
+      ],
+      languages: ["en-US"]
+    )
+  end
+
+  desc "Upload screenshots to App Store Connect"
+  lane :upload_screenshots do
+    deliver(
+      skip_binary_upload: true,
+      skip_metadata: true,
+      screenshots_path: "#{OUTPUT_DIR}/screenshots",
+      overwrite_screenshots: true
+    )
+  end
+
+  # ==========================================
+  # Utility Lanes
+  # ==========================================
+
+  desc "Run SwiftLint"
+  lane :lint do
+    swiftlint(
+      mode: :lint,
+      config_file: ".swiftlint.yml",
+      strict: true,
+      raise_if_swiftlint_error: true
+    )
+  end
+
+  desc "Format code with SwiftFormat"
+  lane :format do
+    sh("swiftformat .")
+  end
+
+  desc "Clean build artifacts"
+  lane :clean do
+    clear_derived_data
+    FileUtils.rm_rf(OUTPUT_DIR)
+    FileUtils.rm_rf("DerivedData")
+  end
+
+  # ==========================================
+  # Helper Methods
+  # ==========================================
+
+  def read_changelog
+    changelog_file = "../CHANGELOG.md"
+    if File.exist?(changelog_file)
+      # Read first section of changelog
+      content = File.read(changelog_file)
+      # Extract first version section
+      match = content.match(/## \[.*?\](.*?)(?=## \[|$)/m)
+      return match[1].strip if match
+    end
+    "Bug fixes and improvements"
+  end
+end

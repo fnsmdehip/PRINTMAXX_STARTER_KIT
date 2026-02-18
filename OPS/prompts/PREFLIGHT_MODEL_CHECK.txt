@@ -1,0 +1,8 @@
+# AGENT PREFLIGHT (copy/paste at start of any run)
+
+Before you do anything:
+1) Read `OPS/MODEL_ROUTING_POLICY.md`
+2) Confirm you are the correct model for the assigned task.
+3) If not, STOP and output the “STOP CHECK” mismatch report.
+
+Then proceed with the task.

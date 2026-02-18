@@ -1,0 +1,322 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                  LOCAL BUSINESS WEBSITE REDESIGN PIPELINE                    ║
+║                         Full Automation Workflow                             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ INPUT                                                                        │
+│ ────────────────────────────────────────────────────────────────────────    │
+│                                                                              │
+│   CSV File: sample_local_biz_urls.csv                                       │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ url,business_name,category,city                │                        │
+│   │ https://example.com,Joe's Plumbing,plumber,TX  │                        │
+│   │ https://example2.com,Smith Dental,dentist,TX   │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ STEP 1: SCRAPE & ANALYZE                                                     │
+│ ────────────────────────────────────────────────────────────────────────    │
+│                                                                              │
+│   For each URL:                                                              │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ ☑ Fetch website HTML                           │                        │
+│   │ ☑ Check mobile responsive (viewport meta tag)  │                        │
+│   │ ☑ Verify SSL certificate                       │                        │
+│   │ ☑ Score SEO basics (title, meta, H1, OG tags)  │                        │
+│   │ ☑ Check AI-SEO readiness (schema markup)       │                        │
+│   │ ☑ Detect tech stack (WordPress, Wix, etc)      │                        │
+│   │ ☑ Extract emails (regex pattern matching)      │                        │
+│   │ ☑ Extract phone numbers (multiple formats)     │                        │
+│   │ ☑ Estimate last updated date (copyright year)  │                        │
+│   │ ☑ Check if appears active (contact info)       │                        │
+│   │ ☑ Calculate site score (0-100)                 │                        │
+│   │ ☑ Assign priority: HIGH/MEDIUM/LOW             │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+│   Scoring Algorithm:                                                         │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ Base: 100 (perfect)                            │                        │
+│   │ - No mobile viewport: -25                      │                        │
+│   │ - No SSL: -20                                  │                        │
+│   │ - Poor SEO: -30 max                            │                        │
+│   │ - No AI-SEO: -25 max                           │                        │
+│   │ - Outdated (pre-2020): -15                     │                        │
+│   │ - Unknown last updated: -10                    │                        │
+│   │                                                 │                        │
+│   │ HIGH priority: score < 40 + active + email     │                        │
+│   │ MEDIUM: score < 60 + active                    │                        │
+│   │ LOW: everything else                           │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+│   Output: prospects.csv                                                      │
+│   ┌────────────────────────────────────────────────────────────────┐        │
+│   │ business_name, url, site_score, priority, email, phone, ...    │        │
+│   └────────────────────────────────────────────────────────────────┘        │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ STEP 2: GENERATE LANDING PAGES                                               │
+│ ────────────────────────────────────────────────────────────────────────    │
+│                                                                              │
+│   Filter: HIGH priority only (score < 40)                                    │
+│                                                                              │
+│   For each HIGH priority prospect:                                           │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ 1. Select category template (14+ available)    │                        │
+│   │ 2. Generate custom HTML landing page           │                        │
+│   │    • Hero with business name + tagline         │                        │
+│   │    • Services section (category-specific)      │                        │
+│   │    • About section                             │                        │
+│   │    • Testimonials (placeholders)               │                        │
+│   │    • Contact form                              │                        │
+│   │    • Schema.org markup for SEO                 │                        │
+│   │    • Mobile-responsive (Tailwind CSS)          │                        │
+│   │ 3. Save as {business-slug}.html                │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+│   Generate index.html (browse all pages)                                     │
+│                                                                              │
+│   Output: landing_pages/                                                     │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ index.html                                     │                        │
+│   │ joes-plumbing.html                             │                        │
+│   │ smith-dental.html                              │                        │
+│   │ ...                                            │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ STEP 3: HOST SETUP                                                           │
+│ ────────────────────────────────────────────────────────────────────────    │
+│                                                                              │
+│   Deploy options:                                                            │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ Option 1: Local server (testing)               │                        │
+│   │   cd landing_pages/                            │                        │
+│   │   python3 -m http.server 8000                  │                        │
+│   │   → http://localhost:8000                      │                        │
+│   │                                                 │                        │
+│   │ Option 2: Vercel (recommended)                 │                        │
+│   │   vercel --prod                                │                        │
+│   │   → https://my-previews.vercel.app             │                        │
+│   │                                                 │                        │
+│   │ Option 3: Netlify                              │                        │
+│   │   netlify deploy --prod --dir .                │                        │
+│   │   → https://my-previews.netlify.app            │                        │
+│   │                                                 │                        │
+│   │ Option 4: GitHub Pages                         │                        │
+│   │   git push to GitHub                           │                        │
+│   │   → https://username.github.io/previews        │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+│   Re-run pipeline with deployed URL:                                         │
+│   python3 local_biz_pipeline.py \                                            │
+│     --urls-file prospects.csv \                                              │
+│     --preview-url https://my-previews.vercel.app                             │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ STEP 4: OUTREACH - GENERATE EMAILS                                           │
+│ ────────────────────────────────────────────────────────────────────────    │
+│                                                                              │
+│   For each HIGH priority prospect with email:                                │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ Extract first name from business name           │                        │
+│   │ Format specific issues found                    │                        │
+│   │ Build preview link URL                          │                        │
+│   │                                                 │                        │
+│   │ Generate 3-step email sequence:                 │                        │
+│   │                                                 │                        │
+│   │ Day 1: Initial pitch                            │                        │
+│   │   Subject: "I built a new website for {name}"  │                        │
+│   │   Body:                                         │                        │
+│   │     - Personal greeting                         │                        │
+│   │     - Specific issues found                     │                        │
+│   │     - Preview link                              │                        │
+│   │     - $500 offer with benefits                  │                        │
+│   │     - Call to action                            │                        │
+│   │                                                 │                        │
+│   │ Day 3: Gentle reminder                          │                        │
+│   │   Subject: "Re: I built a new website..."      │                        │
+│   │   Body:                                         │                        │
+│   │     - Check if they saw it                      │                        │
+│   │     - Preview link again                        │                        │
+│   │     - Offer quick call                          │                        │
+│   │                                                 │                        │
+│   │ Day 7: Final follow-up with scarcity            │                        │
+│   │   Subject: "Re: I built a new website..."      │                        │
+│   │   Body:                                         │                        │
+│   │     - Last follow-up                            │                        │
+│   │     - Preview link                              │                        │
+│   │     - Scarcity: "2 spots left this month"      │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+│   Output: cold_emails_instantly.csv                                          │
+│   ┌────────────────────────────────────────────────────────────────┐        │
+│   │ email, first_name, company_name,                                │        │
+│   │ custom_variable_1 (preview_link),                               │        │
+│   │ custom_variable_2 (issues),                                     │        │
+│   │ custom_variable_3 (phone),                                      │        │
+│   │ custom_variable_4 (city),                                       │        │
+│   │ custom_variable_5 (score),                                      │        │
+│   │ sequence_step (1/2/3),                                          │        │
+│   │ subject, body                                                   │        │
+│   └────────────────────────────────────────────────────────────────┘        │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ STEP 5: UPLOAD TO INSTANTLY.AI                                               │
+│ ────────────────────────────────────────────────────────────────────────    │
+│                                                                              │
+│   1. Login to Instantly.ai                                                   │
+│   2. Go to Campaigns → Import Leads                                          │
+│   3. Upload cold_emails_instantly.csv                                        │
+│   4. Map custom variables to email template                                  │
+│   5. Set sequence timing (Day 1, 3, 7)                                       │
+│   6. Launch campaign                                                         │
+│                                                                              │
+│   Expected metrics:                                                          │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ Open rate: 40-60%                              │                        │
+│   │ Click rate: 10-20%                             │                        │
+│   │ Reply rate: 5-10%                              │                        │
+│   │ Qualified conversations: 2-5%                  │                        │
+│   │ Close rate: 20-40% of conversations            │                        │
+│   │                                                 │                        │
+│   │ 100 prospects → ~1-2 deals                     │                        │
+│   │ 1 deal = $500 revenue                          │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ OUTPUT & RESULTS                                                             │
+│ ────────────────────────────────────────────────────────────────────────    │
+│                                                                              │
+│   Files generated:                                                           │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ output/pipeline_run/                           │                        │
+│   │ ├── prospects.csv (full analysis)              │                        │
+│   │ ├── landing_pages/                             │                        │
+│   │ │   ├── index.html                             │                        │
+│   │ │   ├── {business-slug}.html (x N)             │                        │
+│   │ └── cold_emails_instantly.csv                  │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+│   Business metrics:                                                          │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ Time per 100 prospects: ~3 hours               │                        │
+│   │ Cost per 100 prospects: ~$50                   │                        │
+│   │ Deals per 100 prospects: 1-2                   │                        │
+│   │ Revenue per deal: $500                         │                        │
+│   │ Profit per deal: $450                          │                        │
+│   │ Hourly rate: $150/hour                         │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+│   Scale targets:                                                             │
+│   ┌────────────────────────────────────────────────┐                        │
+│   │ Month 1: 100 prospects → $500-1,000            │                        │
+│   │ Month 2: 500 prospects → $2,500-5,000          │                        │
+│   │ Month 3: 1,000 prospects → $5,000-10,000       │                        │
+│   │ Month 6+: 2,000 prospects → $10,000-20,000/mo  │                        │
+│   └────────────────────────────────────────────────┘                        │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                           COMMAND REFERENCE                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Basic usage (sample data)
+python3 local_biz_pipeline.py --urls-file sample_local_biz_urls.csv
+
+# Dry run (no emails)
+python3 local_biz_pipeline.py --urls-file sample_local_biz_urls.csv --dry-run
+
+# Production with deployed preview URL
+python3 local_biz_pipeline.py \
+  --urls-file real_prospects.csv \
+  --preview-url https://previews.vercel.app
+
+# Slower scraping (more polite)
+python3 local_biz_pipeline.py \
+  --urls-file prospects.csv \
+  --rate-limit 5.0
+
+# Custom output directory
+python3 local_biz_pipeline.py \
+  --urls-file prospects.csv \
+  --output-dir campaign_jan_2026
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                           FILE STRUCTURE                                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+AUTOMATIONS/
+├── local_biz_pipeline.py              ← MASTER SCRIPT (run this)
+├── local_biz_website_scraper.py       ← Scraping logic (imported)
+├── bulk_landing_page_generator.py     ← Page generation (imported)
+├── sample_local_biz_urls.csv          ← Test data (20 sample businesses)
+│
+├── LOCAL_BIZ_QUICK_START.md           ← 5-minute setup guide
+├── LOCAL_BIZ_PIPELINE_README.md       ← Full documentation
+├── LOCAL_BIZ_PIPELINE_SUMMARY.md      ← This delivery summary
+└── LOCAL_BIZ_PIPELINE_DIAGRAM.txt     ← This file
+
+output/pipeline_run/                   ← Generated by pipeline
+├── prospects.csv                      ← All analyzed sites
+├── landing_pages/                     ← Generated preview pages
+│   ├── index.html
+│   └── *.html
+└── cold_emails_instantly.csv          ← Ready for Instantly.ai
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                           NEXT STEPS                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+TODAY:
+☐ Run: python3 local_biz_pipeline.py --urls-file sample_local_biz_urls.csv --dry-run
+☐ Review generated landing pages
+☐ Review cold email templates
+
+WEEK 1:
+☐ Manually collect 20-50 real prospects
+☐ Run pipeline on real data
+☐ Deploy preview pages to Vercel
+☐ Setup Instantly.ai account
+☐ Import email CSV and launch campaign
+
+WEEK 2:
+☐ Track reply rates
+☐ Book sales calls
+☐ Close first 1-2 deals ($500 each)
+☐ Fulfill websites
+
+MONTH 1:
+☐ Scale to 100-500 prospects
+☐ Optimize email copy
+☐ Hire VA for prospecting ($5/hour)
+☐ Target 5-10 deals
+
+MONTH 2+:
+☐ Scale to 1,000+ prospects/month
+☐ Hire VA for cold calling
+☐ Add upsells to existing customers
+☐ Target 20+ deals/month ($10K+ revenue)
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                   READY TO LAUNCH. START TODAY.                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,2346 @@
+[
+  {
+    "original": {
+      "text": "Steal my Gemini 3.0 prompt to generate any website based on your custom requirements.\n\n------------------------\nELITE WEB DESIGNER\n------------------------\n\nAdopt the role of a former Silicon Valley design prodigy who burned out creating soulless SaaS dashboards, disappeared to study motion graphics and shader programming in Tokyo's underground creative scene, and emerged with an obsessive understanding of how visual maximalism serves business credibility when executed with surgical precision. You're a conversion strategist who spent years A/B testing landing pages for unicorn startups, a design fundamentalist who refuses to sacrifice usability for aesthetics, and a master meta-prompter who optimizes for clarity over verbosity. You know modern image generation AI needs specific structural formatting—contemporary design frameworks (Tailwind CSS, Shadcn UI, glassmorphism, liquid glass, morphism), backgrounds with depth (animated gradients, shaders, mascots), and step-by-step execution instructions—to produce 2025-quality interfaces instead of outdated designs.\n\nYour mission: Transform user vision into fully-coded, visually striking websites that balance aesthetic impact with conversion effectiveness. Extract requirements, architect strategic 5-6 section homepages, generate visual previews showing all sections with interactive elements visible, iterate until perfect, then build complete homepage before making navigation and additional pages functional—all adapted to specific context, not rigid templates.\n\n##PHASE 1: Vision Capture\n\nWhat we're doing: Understanding your aesthetic, business context, and strategic goals efficiently.\n\nProvide your vision via:\n1. Screenshot of design inspiration\n2. Written description (business type, aesthetic, features)\n3. Both\n\nShare:\n\n**Aesthetic**: Style preference? (maximalist, minimalist, brutalist, glassmorphic, liquid glass, morphism, retro, futuristic, geometric, editorial, etc.)\n\n**Elements**: Specific visuals wanted? (shaders, 3D effects, colors, animations, mascots, backgrounds)\n\n**Avoid**: What to exclude? (purple overload, illegible text, hidden CTAs, outdated UI, flat backgrounds, etc.)\n\n**Business**: What you do, target audience, website goal, differentiator?\n\nType \"ready\" when shared.\n\n##PHASE 2: Strategic Homepage Architecture\n\nWhat we're doing: Translating your vision into 5-6 section homepage structure following conversion principles and modern design fundamentals.\n\nI'll architect sections specifically for YOUR business, not templates:\n\n**Strategic Framework** (contextualized to your model):\n\nCore sections adapt based on business type:\n- Hero with value prop + primary CTA\n- Trust/credibility section (social proof, stats, logos)\n- Value delivery (features, benefits, process, how-it-works)\n- Conversion focal point (pricing, offers, lead capture, demo)\n- Engagement closer (FAQ, secondary CTA, community)\n\nSections customize to context—SaaS gets problem-solution-pricing flow, agencies get case studies-process-testimonials, e-commerce gets benefits-proof-offers, portfolios get philosophy-work-results.\n\n**Strategic Plan Includes**:\n- 5-6 contextualized sections with rationale\n- Content direction based on audience psychology\n- Visual treatment matching your aesthetic with fundamentals enforced\n- Modern framework approach (Tailwind/Shadcn/Glassmorphism)\n- Background depth strategy (animated gradients, shaders, visuals)\n- Color strategy avoiding generic choices unless brand-appropriate\n- Typography prioritizing legibility\n- CTA strategy for conversion optimization\n\n**Your options**:\n- \"continue\" to proceed to design system and mockup\n- Request adjustments\n- Ask questions\n\n##PHASE 3: Design System & Mockup Preparation\n\nWhat we're doing: Establishing visual foundation using contemporary frameworks, then crafting optimized prompt to generate mockup showing ALL 5-6 sections at once with visible interactive elements.\n\nI'll define:\n\n**Contextualized Style Direction**: Keywords and frameworks fitting YOUR brand specifically\n\n**Design Framework Strategy**: Styling approach, component philosophy, layout pattern—all adapted to your aesthetic\n\n**Background Depth Treatment**: How background creates depth without distraction, animation philosophy, visual elements supporting content\n\n**Visual System**: Color palette with strategic rationale, typography with reasoning, component styling philosophy, spacing strategy, CTA differentiation, modern UI patterns adapted to your aesthetic\n\n**Optimized Prompt Structure** (meta-prompted):\n\nTwo versions:\n\n**Human-Readable**: Descriptive overview for review\n\n**JSON Optimized**: Structured for image generation using meta-prompt principles:\n- Required anchors: \"Website screenshot\", \"Professional website design mockup\", \"Award-winning UI design\", \"Modern web interface 2025\"\n- Aesthetic philosophy over exhaustive lists\n- \"Execute this step-by-step\" instruction\n- Modern framework references (Tailwind, Shadcn, Glassmorphism)\n- Background depth details (animated gradients, shaders, visuals)\n- All 5-6 sections in flowing narrative\n- Interactive element visibility emphasis (CTAs, buttons, animations) to convey design principles\n- Strategic constraints (legibility, prominence, hierarchy, depth)\n- Optimized length balancing detail with conciseness\n\nType \"continue\" to see prompt.\n\n##PHASE 4: Complete Homepage Mockup Prompt\n\nWhat we're doing: Presenting optimized prompts for full-page mockup showing ALL 5-6 sections with interactive design elements visible.\n\n**HUMAN-READABLE VERSION**:\n\nNarrative description of your complete homepage:\n- Opening with quality anchors\n- Core aesthetic philosophy adapted to your context\n- Background treatment creating depth\n- Navigation approach\n- All 5-6 sections described contextually\n- Color palette with reasoning\n- Typography philosophy\n- Component styling approach\n- Modern framework references\n- Interactive element visibility strategy\n- Critical constraints\n- Avoidance list based on preferences\n\n**JSON VERSION** (optimized for generation):\n\n```json\n{\n\"prompt\": \"Website screenshot of [your business]. Professional website design mockup. Award-winning UI design. Modern web interface 2025. Execute this step-by-step. [Aesthetic philosophy] with [framework] approach. Background: [depth treatment with animations/gradients/effects]. Full homepage vertical scroll showing 5-6 sections: Navigation [treatment]. Hero [value prop, CTA, visuals]. [Section 2 with layout philosophy]. [Section 3 with component approach]. [Section 4 with interaction style]. [Section 5 with conversion focus]. [Section 6 if applicable]. Color strategy: [palette with reasoning]. Typography: [philosophy and hierarchy]. Components: [styling approach with visible affordances]. Framework: Tailwind patterns, Shadcn style, [specific effects]. Interactive elements show: prominent CTAs, hover implications, animation hints, button affordances. Critical: legible text, prominent CTAs, background depth, clear hierarchy, contemporary 2025 design, professional quality. Avoid: [specific issues].\",\n\"aspect_ratio\": \"9:16\"\n}\n```\n\nMeta-optimized: principles over lists, step-by-step execution, framework context, interactive visibility.\n\n**Review both. JSON executes.**\n\n**To generate complete homepage mockup, type \"generate\"**\n\n**Important note**: When you type \"generate\", I'll execute the image generation tool. The image will appear, but the process will seem to pause. This is normal—the tool can only return the image without commentary. Simply type \"continue\" after you receive the image to proceed with the next phase.\n\n**To adjust the prompt before generating, tell me what to change**\n\nWon't execute until you command.\n\n##PHASE 5: Complete Homepage Mockup Generation\n\nWhat we're doing: Executing image generation with optimized JSON showing ALL 5-6 sections vertically.\n\nONLY activates when you type \"generate\", \"create mockup\", \"make image\", or similar.\n\nOnce commanded, I execute using ONLY JSON prompt—no modifications.\n\nYou receive full-page vertical mockup showing:\n- All 5-6 sections in scrollable view\n- Interactive design elements (CTAs, buttons, animations) visible\n- Background depth and modern framework styling\n- Complete design system applied\n\n**After the image appears, type \"continue\" to proceed.**\n\nThe image generation tool only returns the visual—you'll need to type \"continue\" to move forward with reviewing and next steps.\n\n##PHASE 6: Mockup Review & Refinement Decision\n\nWhat we're doing: Reviewing the generated mockup and deciding next steps.\n\nThis phase activates after you type \"continue\" following image generation.\n\n**Your options after viewing the mockup**:\n- \"Approved\" or \"build\" - proceed to building complete homepage code\n- Request specific changes - I'll update the prompt and regenerate\n- Ask questions or request adjustments\n\n**If you request changes**:\n\nI'll present updated prompts (readable + JSON) showing modifications, then ask you to type \"generate\" again for the revised mockup.\n\nEach refinement iteration:\n1. You describe desired changes\n2. I present updated prompts\n3. You type \"generate\"\n4. Image appears\n5. You type \"continue\" to proceed\n6. We review and decide next steps\n7. Repeat until perfect\n\nCommon refinements: section emphasis, background depth, colors, typography, CTA prominence, interactive visibility, framework styling, aesthetic tuning.\n\nOnce you're satisfied with the mockup, type \"approved\" or \"build\" to proceed to code generation.\n\n##PHASE 7: Complete Homepage Code Generation\n\nWhat we're doing: Building entire 5-6 section homepage as production-ready code matching approved mockup exactly.\n\n**Complete Single-File HTML Delivery**:\n\n- All 5-6 sections coded and integrated\n- Fully responsive across devices\n- Modern CSS implementation (Tailwind-style or modern CSS)\n- Animated background matching mockup (CSS gradients, WebGL, SVG)\n- All interactive elements functional (buttons, CTAs, forms, animations)\n- Navigation implemented per design\n- Component styling matching aesthetic (glassmorphism, shadows, borders)\n- Typography system with hierarchy and legibility\n- Color system from specification\n- Micro-interactions and hover states\n- Scroll animations where appropriate\n- Performance-optimized\n\n**Technical Quality**:\n\nSemantic HTML, modern CSS (custom properties, grid, flexbox, backdrop-filter, transforms, animations), vanilla JavaScript, accessibility considerations, mobile-first responsive, smooth scrolling, optimized assets, cross-browser compatible.\n\n**Code Structure**: Clean commented HTML, inline CSS organized in style block, inline JavaScript, ready to copy/paste and deploy, fully functional standalone.\n\n**Strategic Content**: Intelligent placeholders based on your business model, conversion psychology, target audience, professional tone—easily replaceable.\n\n**Design Fundamentals Verified**: All sections with hierarchy, prominent functional CTAs, readable text with contrast, clear interactive signals, background depth, adequate whitespace, responsive, contemporary 2025 quality.\n\nAutomatically presents next phase after delivery.\n\n##PHASE 8: Navigation & Pages Planning\n\nWhat we're doing: Making all navigation functional and planning additional pages.\n\n**Navigation Audit**: [List nav items from homepage]\n\n**Options for each item**: Create dedicated page, expand section to full page, smooth scroll to section, custom approach.\n\n**For clickable elements**: Decide what happens—link to new page, scroll to section, open modal, trigger action, external link.\n\n**What to make functional first? Choose**:\n\n1. Complete navigation by building all pages\n2. Primary conversion path (CTA → specific page)\n3. Specific pages you prioritize\n4. Internal links with smooth scrolling\n5. Custom approach\n\n**Or** \"auto-complete\" for intelligent decisions based on your model.\n\n##PHASE 9-X: Progressive Development\n\nWhat we're doing: Building each page or making elements functional, maintaining design consistency.\n\n**Each Page Delivery**: Complete HTML matching homepage design system, same framework styling, same background treatment, same typography/colors, appropriate sections, full responsiveness, functional interactions, integrated navigation.\n\n**Each Functionality Addition**: Smooth scroll, modals, form validation, interactive components, animation triggers, other elements.\n\n**After Each Delivery**:\n\nCurrent Progress: [What's complete]\n\n**What next? Choose**: [4-6 options for next page/functionality]\n\n**Or** \"auto-complete\" for intelligent completion.\n\nContinues until site fully functional.\n\n##PHASE FINAL: Complete Integration & Polish\n\nWhat we're doing: Final integration ensuring everything links, works, and maintains consistency.\n\n**Complete Package**: Homepage HTML (all sections), all additional pages, complete styling/functionality per file, working navigation across pages, functional CTAs/buttons, validated forms, consistent design system.\n\n**Deliverables**: All HTML files deployment-ready, quick deployment guide, customization documentation, design system reference.\n\n**Quality Verified**: Complete homepage, functional navigation, working CTAs, consistent pages, responsive, optimized, modern framework styling, functional interactions, professional 2025 quality.\n\n---\n\n**CRITICAL RULES**:\n\n**Image Generation**:\n- Present: Human-Readable + Optimized JSON\n- JSON meta-principles: distilled concepts, \"Execute step-by-step\", framework context\n- JSON opens: \"Website screenshot\" + \"Professional website design mockup. Award-winning UI design. Modern web interface 2025.\"\n- JSON shows: ALL 5-6 sections vertically in one mockup\n- JSON emphasizes: interactive element visibility (CTAs, buttons, animations)\n- JSON includes: modern frameworks (Tailwind, Shadcn, Glassmorphism), background depth (gradients, shaders, mascots—NEVER flat)\n- User \"generate\" → Send ONLY JSON → No modifications\n- Aspect ratio: 9:16 (vertical to show all sections)\n- After image appears → User MUST type \"continue\" to proceed (tool only returns image without commentary)\n\n**Homepage Development**:\n- Generate mockup with ALL 5-6 sections at once\n- After approval, build COMPLETE homepage code (all sections functional)\n- Deliver entire homepage as single working file\n- Then make navigation/additional pages functional\n- Flow: complete homepage → functional navigation → additional pages\n\n**Content Adaptation**:\n- NO hardcoded templates\n- Adapt ALL to user's specific business context\n- Strategic frameworks based on actual audience\n- Section selection/styling contextualized to goals\n- Design choices match aesthetic preference\n- Professional placeholders easily customizable\n\n**Standards**: Contemporary frameworks, background depth, interactive element visibility, modern CSS/frameworks, 2025 quality throughout.\n\n**Control**: User commands each phase explicitly. \"generate\" for mockup (then \"continue\" after image), \"approved\"/\"build\" for code, choose-your-adventure for pages, adjust anytime.\n\nBegin Phase 1 when ready.",
+      "author": "God of Prompt",
+      "handle": "@godofprompt",
+      "timestamp": "2025-11-21T18:02:34.000Z",
+      "display_time": "Nov 21, 2025",
+      "url": "https://x.com/godofprompt/status/1991930251715440762",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 1893,
+      "date": "2025-11-21"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/godofprompt/status/1991930251715440762\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:37:07.072710"
+  },
+  {
+    "original": {
+      "text": "made $2,400 last month from another random faceless account I barely touch.\n\nno DMs. no replies. no engagement. no \"building relationships.\"\n\njust scheduled tweets and a link in bio.\n\nlet me show you why this business model is broken in the best way possible.\n\nTHE ACCOUNT IN QUESTION\n\nI started it as an experiment 7 months ago.\n\npicked a random niche. made a simple info product. set up the profile.\n\nmy strategy? post 3-4 times daily. all scheduled. don't interact with anyone.\n\nI wanted to see if pure content could sell without any of the \"personal touch\" stuff gurus preach about.\n\nturns out it can.\n\n$2,400 last month. from an account I spend maybe 45 minutes per week on.\n\nI batch content on sunday mornings. schedule everything. close the app.\n\ncheck sales occasionally. that's it.\n\nno community building. no DM conversations. no \"hop on a call\" nonsense.\n\njust value posts and a product link.\n\nWHY THIS WORKS\n\nthe gurus overcomplicate everything.\n\n\"you need to reply to every comment\"\n\"you need to DM your followers\"\n\"you need to build genuine connections\"\n\nhelpful? sure. necessary? absolutely not.\n\nhere's what actually matters:\n\ngood content that attracts the right people.\nclear profile that shows what you offer.\nproduct that solves a real problem.\n\nthat's the whole formula.\n\nthe account has 4,200 followers. nothing crazy.\n\nbut they're targeted. they followed because of specific content about a specific topic.\n\nwhen they're ready to buy, they buy.\n\nI don't need to convince them in the DMs.\n\nthe content already did the convincing.\n\nTHE LOW TICKET MODEL\n\nthe product is $34.\n\nlow ticket. impulse buy range.\n\nat that price, people don't overthink. they just purchase.\n\n$2,400 divided by $34 = roughly 70 sales.\n\n70 people found the account, saw the content, clicked the link, bought the product.\n\nI didn't talk to a single one of them.\n\nsome months it's $1,800. some months it's $3,100.\n\naverages out to around $2K-$2.5K monthly.\n\nfrom one account. that I ignore.\n\nTHE FACELESS ADVANTAGE\n\nno personal brand required.\n\nI don't show my face. don't share my name. don't tell my story.\n\njust pure value content in a specific niche.\n\nbenefits:\n\nnobody knows it's me. complete anonymity.\n\nI can sell the account tomorrow as an asset.\n\nzero pressure to \"perform\" or be consistent with personality.\n\ncan run multiple accounts without burning out.\n\nthis one account took maybe 30 hours total to set up.\n\nproduct creation. profile setup. first month of content.\n\nnow it runs on 45 minutes weekly.\n\ndo the math on that hourly rate.\n\nTHE CONTENT STRATEGY\n\nnothing fancy.\n\neducational posts about the topic. 40%\ncommon mistakes people make. 25%\nquick tips and insights. 25%\nsoft CTAs mentioning the product. 10%\n\nI write 20-25 tweets on sunday.\n\nschedule them across the week.\n\nthe content isn't revolutionary. it's just consistent and specific.\n\nshowing up daily in someone's feed builds familiarity.\n\nfamiliarity builds trust.\n\ntrust converts to sales.\n\neven without a single DM.\n\nTHE PRODUCT\n\na straightforward info product.\n\ntook me one weekend to create.\n\nsolves one specific problem for one specific audience.\n\nnothing comprehensive. nothing overwhelming.\n\njust \"here's exactly how to do this thing\" in a clear format.\n\npeople buy. they get results. some leave testimonials.\n\ntestimonials go on the sales page. more people buy.\n\nthe flywheel spins itself.\n\nWHAT THIS PROVES\n\nyou don't need:\n\na huge audience\na personal brand\ndaily engagement\nDM strategies\nlaunch events\nemail funnels\npaid ads\n\nyou need:\n\nspecific niche\nsimple product\nconsistent content\npatience\n\nthat's genuinely it.\n\nI'm not saying engagement doesn't help. it does.\n\nI'm saying it's not mandatory.\n\nthis account proves you can build income streams that require almost nothing from you.\n\nTHE REAL NUMBERS\n\ntime spent setting up: ~30 hours total\ntime spent weekly: ~45 minutes\nmonthly revenue: $1,800-$3,100\nprofit margin: 94%\n\nthat's roughly $50-70 per hour of actual work.\n\nand once it's built, the hourly rate keeps climbing.\n\nbecause the time investment stays the same but the account keeps growing.\n\nmore followers. more sales. same 45 minutes.\n\nSCALING THIS\n\nI don't just run one faceless account.\n\nI run several.\n\ndifferent niches. different products. same strategy.\n\nsome do more than this one. some do less.\n\ncombined they generate more than most people's salaries.\n\nand I don't \"work\" on any of them in the traditional sense.\n\nI create content. I schedule content. I collect payments.\n\nthat's the entire job description.\n\nWHY MOST PEOPLE WON'T DO THIS\n\nbecause it sounds too simple.\n\nthere must be a catch. must be something I'm leaving out.\n\nthere isn't.\n\nthe catch is that simple doesn't mean easy.\n\nyou still have to:\n\npick a niche and commit\ncreate a product that doesn't suck\nwrite content consistently for months\nnot quit when month 2 feels pointless\n\nmost people can't do consistent and boring for 6 months.\n\nthey want exciting and complicated for 6 weeks.\n\nthat's why most people don't have $2,400/month accounts they barely touch.\n\nTHE NICHES THAT WORK FOR THIS\n\nfaceless accounts work best in:\n\nskill-based niches (templates, tutorials, how-to)\ntool-based niches (software, apps, productivity)\nproblem-specific niches (narrow pain points)\n\nwhat's working right now:\n\nAI OnlyFans - teaching the faceless OF model\nAI UGC - AI content creation for brands\nhigh ticket sales - scripts and frameworks\nniche templates - specific tools for specific professions\n\nthe weirder and more specific, the better.\n\nless competition. more hungry buyers.\n\nWHAT YOU SHOULD DO\n\nstop overthinking.\n\npick a niche you know something about.\n\ncreate a simple product this weekend. swipe file. template pack. short guide.\n\nset up a faceless account.\n\nwrite 30 tweets about the problem your product solves.\n\nschedule them.\n\nrepeat weekly.\n\ncheck back in 90 days.\n\nyou'll either have an income stream or you'll have quit.\n\nstatistically, you'll quit.\n\nprove me wrong.\n\nTHE FULL BREAKDOWN\n\neverything I know about building these accounts.\n\nfaceless niche selection.\nproduct creation in a weekend.\ncontent strategy that sells without engagement.\nthe exact schedule I use.\nscaling to multiple accounts.\n\nI put it all in one place.\n\n$50.\n\nless than what this faceless account makes in a single day.\n\ncomment \"FACELESS\" and I'll send you the link.\n\nRT and follow first so I can actually DM you.\n\nor keep thinking this sounds too easy while people like me collect payments from accounts we don't even log into.\n\nup to you.",
+      "author": "🀅",
+      "handle": "@ecomchigga",
+      "timestamp": "2026-01-06T22:25:05.000Z",
+      "display_time": "Jan 6",
+      "url": "https://x.com/ecomchigga/status/2008666156949750187",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 1042,
+      "date": "2026-01-06"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/ecomchigga/status/2008666156949750187\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:37:38.076461"
+  },
+  {
+    "original": {
+      "text": "Oncologist Dr. William Makis:\n\n\"Every component of the COVID vaccine can contribute to cancer...[the] spike protein [is] integrating into...tumor cells...& Pfizer CEO Albert Bourla is...excited about this...he's...stated that one-third of all people will get cancer, guaranteed\"\n\nThis clip of Dr. Makis (\n@MakisMedicine\n), a radiologist, oncologist, and cancer researcher, is taken from an interview with Shannon Joy (\n@ShannonJoyRadio\n) posted to The Shannon Joy Show Rumble channel on October 16, 2025.\n\n----------------Partial transcription of clip---------------\n\n\"I think every component of the COVID vaccine can contribute to cancer. And we don't know right now which are the main drivers of cancer. My personal, hypothesis is that it's the damage to the immune system that is driving the cancer. I think we're seeing extensive immune system damage across the board in the vaccinated population, because they get infected more often. So they keep getting Covid and they'll say, well, I got my sixth or seventh shot, Covid shot, and I've gotten Covid five times, six times now.\n\n\"They keep getting sick. They keep getting sick with other infections like influenza. They keep getting viral, reinfections, you, know, with Epstein Barr virus and HSV, herpes simplex and so on. They get shingles, so their immune systems are damaged and destroyed. And this is happening to kids as well. The kids are also getting damaged immune systems. I think that's going to be one of the big drivers of cancer.\n\n\"But the work that Kevin McKernan is doing is in terms of the DNA contamination of the vaccines, the SV40 promoter, and the plasmids that have contaminated the vaccines because of the mass manufacturing process that Pfizer and Moderna are using, and they are still using. He's actually now discovering, the vaccine component, so the DNA contamination, which has a spike protein integrating into cells. And he's finding it in cancers, in tumor cells. This is actually where the research is right now is there's already several papers coming, tested the tumor. They did genetic testing on the tumor and they found the vaccine component integrated into the tumor cell and it's in all the tumor cells.\n\n\"But they're going to say, well, you know, it's just one case and it's anecdotal and all this, or it's a couple of cases and  it's anecdotal. But this is where I think the the research is being focused to prove that, yes, this genetic therapy, because it's not a vaccine. And I posted about this recently. This was from the SEC filings of Moderna. They stated this is a gene therapy, it's not a vaccine.\n\n\"[And] it's contaminated. So it's got all kinds of genetic junk in there. It's not just the modified mRNA, it's got the DNA contaminations. It's got DNA mRNA Hybrids, it's got double-stranded RNA hybrids. It is literally a cocktail of genetic junk encapsulated in a lipid nanoparticle, which itself is quite toxic, that is delivering this genetic junk all over our body. It's dumping it into the bone marrow. So we're seeing leukemias and blood cancers like multiple myeloma. It's dumping it into the brain, crossing the blood–brain barrier, because it's a lipid particle, crosses very easily.\n\n\"And I'm seeing brain cancers, the most aggressive brain cancers you can imagine, the glioblastomas. It's dumping it into the ovaries and testicles. We're seeing ovarian and testicular cancers. It's dumping it into the kidneys. I'm seeing kidney cancers. And so wherever this genetic material goes and it doesn't stay in the arm, that was the big lie. I think that was one of the biggest lies that people should go to jail for, for the rest of their lives. Who created this, this monstrosity.\n\n\"And it doesn't stay in the arm. About 75% of it is in the bloodstream within a couple of hours. And it's delivering this genetic junk with the lipid nanoparticles all over the body. And the most shocking situation that no one's talking about, and I've talked about this, put out a few articles on this, is it crosses the placenta and it's dumping the genetic material into the fetus and the fetus takes it up, and now I'm seeing cancers in fetuses, in utero. These babies are deliver, are, are developing tumors in the womb. And so there was a case not that long ago of, of triplets being born. I think the first one had a tumor that, that grew in utero and then through the placenta, transferred it to the second one. So the second one developed cancer a few months after being born. I mean, these are horror stories, Shannon. These are absolute horror stories.\n\n\"This MRNA technology needs to be halted and banned. It needs to be banned. I don't care if they're going to try to investigate it for the next 20 years and try to figure out what went wrong. This is extremely dangerous. It's got to be banned because we're going to be overtaken completely with cancer.\n\n\"And you know, Pfizer and Pfizer CEO Albert Bourla is actually super excited about this and he's publicly stated that one third of all people will get cancer guaranteed. And that he's going to scale up production of cancer drugs and mRNA cancer vaccines the way he scaled up production for Covid vaccines.\"",
+      "author": "Sense Receptor",
+      "handle": "@SenseReceptor",
+      "timestamp": "2025-10-17T01:15:53.000Z",
+      "display_time": "Oct 16, 2025",
+      "url": "https://x.com/SenseReceptor/status/1978993333495304403",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 881,
+      "date": "2025-10-17"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/SenseReceptor/status/1978993333495304403\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:38:09.208290"
+  },
+  {
+    "original": {
+      "text": "this is the most viral nano banana pro slideshow prompt ever:\n\n{\n  \"subject\": {\n    \"description\": \"Young woman taking selfie next to chrome pink BMW i8, casual main character energy\",\n    \"setting_rules\": \"street scene, luxury car, urban modern backdrop\",\n    \"age\": \"early 20s\",\n    \n    \"expression\": {\n      \"eyes\": \"focused on phone screen, taking selfie, casual confidence\",\n      \"mouth\": \"relaxed, soft, natural\",\n      \"brows\": \"relaxed, effortless\",\n      \"overall\": \"unbothered, 'just casually next to a pink supercar' energy\"\n    },\n    \n    \"hair\": {\n      \"color\": \"platinum blonde\",\n      \"style\": \"loose, flowing from under cap\",\n      \"details\": \"messy-pretty, some pieces falling forward, effortless waves\",\n      \"length\": \"medium-long, past shoulders\"\n    },\n    \n    \"body\": {\n      \"frame\": \"petite, slim, toned\",\n      \"waist\": \"tiny, fully exposed midriff\",\n      \"legs\": \"toned, athletic, fully visible\",\n      \"stance\": \"casual lean against car, weight shifted\"\n    },\n    \n    \"pose\": {\n      \"position\": \"standing next to driver door of car, leaning slightly against it\",\n      \"upper_body\": {\n        \"action\": \"one arm UP holding phone for selfie\",\n        \"phone_angle\": \"high, classic selfie position\",\n        \"other_arm\": \"relaxed at side\"\n      },\n      \"lower_body\": {\n        \"stance\": \"one leg straight, one slightly crossed or bent\",\n        \"weight\": \"casual lean, hip near car\",\n        \"energy\": \"relaxed but aware of angles\"\n      },\n      \"overall\": \"the 'caught me with this random supercar' pose that's definitely not random\"\n    },\n    \n    \"clothing\": {\n      \"top\": {\n        \"type\": \"ultra cropped baby tee\",\n        \"color\": \"bright YELLOW, sunshine yellow\",\n        \"graphic\": \"small star or cute graphic on chest (or BANANA logo)\",\n        \"fit\": {\n          \"length\": \"EXTREME crop - ends just below chest, full stomach exposed\",\n          \"tightness\": \"fitted, hugging curves\",\n          \"sleeves\": \"short sleeves, casual\"\n        },\n        \"effect\": \"entire midriff visible from just under chest to shorts\"\n      },\n      \"bottom\": {\n        \"type\": \"ultra mini athletic shorts\",\n        \"color\": \"WHITE, clean bright white\",\n        \"fit\": {\n          \"style\": \"tight fitted athletic shorts\",\n          \"length\": \"very short, upper thigh\",\n          \"waist\": \"high-waisted, sits at natural waist\",\n          \"effect\": \"shows full leg length, hugs curves\"\n        },\n        \"material\": \"stretchy athletic fabric, smooth\"\n      },\n      \"shoes\": {\n        \"type\": \"white sneakers\",\n        \"style\": \"clean, casual, athletic vibe\",\n        \"effect\": \"completes sporty-cute look\"\n      }\n    },\n    \n    \"face\": {\n      \"features\": \"pretty, big eyes, small nose, soft lips\",\n      \"makeup\": \"natural, minimal, fresh-faced\",\n      \"expression\": \"focused on selfie, casual pretty\"\n    }\n  },\n\n  \"accessories\": {\n    \"headwear\": {\n      \"type\": \"baseball cap\",\n      \"color\": \"BLACK\",\n      \"style\": \"worn forward, classic\",\n      \"logo\": \"small patch or logo visible\",\n      \"effect\": \"sporty edge, hair flowing from underneath\"\n    },\n    \"headphones\": {\n      \"type\": \"over-ear headphones\",\n      \"color\": \"WHITE\",\n      \"position\": \"around neck, not on ears\",\n      \"style\": \"chunky, modern, like Beats or similar\",\n      \"effect\": \"adds to casual 'just vibing' energy\"\n    },\n    \"device\": {\n      \"type\": \"iPhone\",\n      \"position\": \"held up high for selfie\",\n      \"case\": \"dark case visible\"\n    }\n  },\n\n  \"the_car\": {\n    \"make\": \"BMW i8\",\n    \"wrap\": \"CHROME PINK / rose gold mirror finish\",\n    \"effect\": {\n      \"reflection\": \"mirror chrome reflecting everything around\",\n      \"color\": \"pink/rose gold, flashy, attention-grabbing\",\n      \"energy\": \"luxury, flex, main character vehicle\"\n    },\n    \"position\": \"parked on street, she's standing next to driver side\",\n    \"wheels\": \"black rims with pink accents matching wrap\",\n    \"presence\": \"the car is a CO-STAR, not just background\"\n  },\n\n  \"environment\": {\n    \"location\": \"modern urban area, upscale shopping district or hotel entrance\",\n    \"ground\": \"cobblestone or nice pavement\",\n    \"backdrop\": {\n      \"buildings\": \"modern glass buildings, upscale retail\",\n      \"elements\": \"architectural feature visible (sculptural element)\",\n      \"other_cars\": \"normal cars parked nearby for contrast\",\n      \"vibe\": \"wealthy area, nice neighborhood\"\n    },\n    \"time\": \"daytime, good natural light\",\n    \"atmosphere\": \"urban luxury, casual wealth\"\n  },\n\n  \"photography\": {\n    \"style\": \"candid-looking but obviously posed, lifestyle shot\",\n    \"angle\": \"shot from front-side, capturing her full body + car\",\n    \"quality\": \"high quality, could be iPhone or camera\",\n    \"framing\": \"her centered, car visible behind/beside, environment context\",\n    \"lighting\": \"natural daylight, flattering\"\n  },\n\n  \"color_story\": {\n    \"her\": {\n      \"top\": \"bright YELLOW\",\n      \"shorts\": \"clean WHITE\", \n      \"cap\": \"BLACK\",\n      \"headphones\": \"WHITE\",\n      \"shoes\": \"WHITE\",\n      \"hair\": \"platinum BLONDE\"\n    },\n    \"car\": \"chrome PINK / rose gold\",\n    \"overall\": \"yellow + white + pink chrome = eye-catching, vibrant, instagram-perfect\"\n  },\n\n  \"the_vibe\": {\n    \"energy\": \"casual luxury, 'this is just my tuesday'\",\n    \"mood\": \"unbothered, main character, casual flex\",\n    \"contrast\": \"sporty casual outfit + absurd luxury car\",\n    \"story\": \"she either owns this car or saw it and had to take a pic - either way she belongs next to it\",\n    \"social_media\": \"this is THE instagram photo\",\n    \"caption_energy\": \"'running errands' or '' or no caption needed\"\n  },\n\n  \"critical_elements\": {\n    \"outfit_combo\": \"yellow crop + white shorts = sporty cute, maximum skin\",\n    \"midriff\": \"fully exposed, tiny waist on display\",\n    \"cap_headphones\": \"the combo that says 'casual but styled'\",\n    \"car_color\": \"chrome pink/rose gold = the main prop\",\n    \"selfie_action\": \"caught in the act of taking the pic\",\n    \"energy\": \"effortless but everything is intentional\"\n  }\n}",
+      "author": "gauche",
+      "handle": "@gaucheai",
+      "timestamp": "2025-12-06T20:37:50.000Z",
+      "display_time": "Dec 6, 2025",
+      "url": "https://x.com/gaucheai/status/1997405140723323255",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 710,
+      "date": "2025-12-06"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/gaucheai/status/1997405140723323255\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:38:40.273612"
+  },
+  {
+    "original": {
+      "text": "Here was our proposal to fully rebuild a consulting firm with $500K in annual contract value per client :\n\nWe got on a call with a client who ran an international 8 figure consulting firm\n\nServed mid-market technology , industrial , manufacturing , retail  and CPG companies across EU & US\n\nThey operated on high-complexity mandates with delivery typically consisting of 40–50 hours per month billed at premium regional rates\n\nTypically made $20K+ in monthly revenue per engagement\n\nClient acquisition is driven by an internal business development team executing targeted C-level outreach via LinkedIn, email sequencing, and cold calling,\n\nSupplemented by a new external pay-per-meeting agency focused initially on U.S. manufacturing\n\nAll of this produced close to 6-8 qualified meetings per month with a 25–30% close rate\n\nBut they had the potential to double this with our infrastructure\n\nMathematically we saw a shortfall of close to 12 meetings per month\n\nWhich when you run the math\n\nWas close to $3.5MM in annual contract value purely due to this inefficiency\n\nSo on the surface the solution looks simple\n\nThey need to run more outbound\n\nBut this wasn’t the real problem\n\nThe true issue here was they were positioned as a ‘strong consulting firm’ who traded time and expertise\n\nBut their key value was specifically in driving cross border expansion\n\nSo they needed to specifically structure their engagements around selling capital calibrated outcomes to the same buyer\n\nAnd so we split it into a few phases\n\nThe first was to directly rebuild the company’s positioning by being hyperspecificity around the outcome they drove\n\nThis function on its own solves the initial hurdle of having to communicate their value to their prospects around the sea of competitor consulting firms selling the same thing\n\nOnce we could do this , we were able to tighten up pricing and narrative\n\nWhich allowed us to go all in on an acquisition engine that functioned more like a precision mandate-origination machine rather than a ‘lead gen system’\n\nThe goal was to only double their qualified lead flow so that the internal team wasn’t too swamped by bandwidth\n\nSince deals traditionally took 6 months to close , the main thing to ensure was to sustain the average close rate , then ramp up volume from there\n\nThe way we implement an acquisition strategy for a client like this is similar to how we run offers internally\n\nWhen we run sales , deal flow comes from :\n\n- Word-of-mouth within closed circles\n- Trusted referrals between operators\n- Private dinners, in-person meetings and invitation-only conversations\n\nThis model works very well\n\nBut there are two constraints were clear with the model:\n\n#1: It scales linearly with time, presence and social bandwidth\n\n#2: It concentrates risk in a small number of relationship nodes\n\nWhich means the main issue is throughput\n\nSo we focus heavily on entering a high-skepticism market without diluting the trust signal that referrals and private dinners naturally provide\n\nWhich means that our acquisition strategy needs to always :\n\n- Behave like a referral\n- Carry reputation without introduction\n- Signal relevance instantly\n- Avoid the appearance of noise at all costs\n\nAnything else damages positioning\n\nOnce we implemented the acquisition phase\n\nThe next goal was to simplify the firms delivery engine\n\nSo that results scale while perceived complexity for clients increases and internal complexity decreases\n\nBut much deeper than this\n\nWe needed to install 3 layers of dependence within the offer\n\nWith the sole intention of being perceived as an uninterrupted money pipeline for clients :\n\n- Functional dependence: the firm is embedded in commercial operating rhythm.\n- Economic dependence: monthly consulting cost clearly < incremental revenue / margin driven.\n- Psychological dependence: clients fear performance deterioration if the firm is removed.\n\nFrom here we’ve engineered a state where the client is retained for over 2 years\n\nIf you run a B2B , agency or consulting offer\n\nDM “PLAN” to see if we can reposition your offer in a similar way",
+      "author": "Mitch",
+      "handle": "@benjaminprinter",
+      "timestamp": "2026-01-17T02:27:28.000Z",
+      "display_time": "Jan 16",
+      "url": "https://x.com/benjaminprinter/status/2012351033654255717",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 663,
+      "date": "2026-01-17"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/benjaminprinter/status/2012351033654255717\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:39:11.282285"
+  },
+  {
+    "original": {
+      "text": "Registered Nurse Gail Macrae:\n\n\"These Covid protocols... [were] causing these patients to go into organ failure.... People say their loved ones died of Covid. I'm sorry, but that's not the way it went down. People actually died in the hospital from the protocols.\"\n\nThis clip of Macrae (\n@Gail13007674\n), RN, BSN, NP describing how the Covid hospital protocols were killing patients is taken from an interview with Apollo the Original (\n@apollotheorigin\n) posted to YouTube on October 9, 2025.\n\n----------------Partial transcription of clip---------------\n\n\"I looked around and I noticed, like, wow. I'll have conversations with my colleagues in the back room, and we'll be talking about these Covid protocols and how they're causing these patients to go into organ failure. But they won't say anything about it because they're too afraid of getting rejected by their peers. They're too afraid of losing their jobs to stand up and step into to their authentic knowing, which is that our protocols were killing people.\n\n\"So the protocols were for Covid. People say their loved ones died of Covid. I'm sorry, but that's not the way it went down. People actually died in the hospital from the protocols.\n\n\"So we knew in March, of 2020, there was one of the most published and prestigious, ICU doctors in the United States. His name was Dr. Pierre Kory. He came out, right out the gate, him and his colleague, I forget his name. But there were a couple of doctors nationally known for their expertise in intensive care. So that's like dealing with people who are about to die.\n\n\"And they came out screaming like, hey, everyone who has Covid is responding extraordinarily well to high doses of IV steroids. And of course. So, it made perfect sense. I looked at their data, and I looked at what I know, because I worked ICU. I know the whole hospital when a patient is going into an inflammatory response. So that's something people should know about Covid. Covid, whatever it was, it caused more inflammation in the human body than we'd ever seen from any infectious disease in my career as a nurse working for the hospital. So that was over 10 years.\n\n\"And we measure that by labs. There's a lab called a CRP, and you can clearly see how much inflammation is in the body when a person is under attack. You know, their immune system is under attack. So we had CRP levels that were more than double that I had ever seen. I mean, they were out the roof. And so, because I knew that, and then I heard these ICU intensivists that were nationally known for their expertise, come out and say, we need to be giving all these patients high dose steroids, because immediately their bodies would respond, and of course they would. Steroids are an anti-inflammatory. They correct the inflammatory response.\n\n\"So, that was March of 2020. That was before the vaccines, before anything happened. We knew that we had an effective tool for managing the inflammation of Covid And the CDC and the leadership for our health industries in the United States completely shut that down.\"",
+      "author": "Sense Receptor",
+      "handle": "@SenseReceptor",
+      "timestamp": "2025-10-20T02:12:27.000Z",
+      "display_time": "Oct 19, 2025",
+      "url": "https://x.com/SenseReceptor/status/1980094733973328069",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 530,
+      "date": "2025-10-20"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/SenseReceptor/status/1980094733973328069\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:39:42.404926"
+  },
+  {
+    "original": {
+      "text": "Gemini Nano Banana 3.0\n\nPrompt:\n\n{\n  \"image_generation_request\": {\n    \"meta_settings\": {\n      \"aspect_ratio\": \"9:16\",\n      \"orientation\": \"vertical\",\n      \"model_version\": \"photorealistic_v6\",\n      \"fidelity_mode\": \"high_texture_detail\"\n    },\n    \"absolute precision.\",\n      \"preservation_mode\": \"strict_identity_lock\"\n    },\n    \"scene_description\": {\n      \"summary\": \"A high-resolution, candid mirror selfie capturing a confident woman in her bedroom, characterized by contrasting textures of matte jersey, rugged denim, metallic sequins, and plush faux fur.\",\n      \"subject\": {\n        \"demographics\": \"Adult female\",\n        \"expression\": {\n          \"mood\": \"Confident, self-assured, relaxed\",\n          \"gaze\": \"Looking at the phone screen in the mirror or slightly towards the lens\",\n          \"micro_details\": \"Subtle, warm smile implying comfort in her own space\"\n        },\n        \"pose\": {\n          \"action\": \"Standing facing a large mirror, holding a modern smartphone with one hand to take a photo\",\n          \"body_language\": \"Relaxed posture, slightly angled to showcase the outfit\"\n        },\n        \"skin_texture\": \"Natural, glowing skin illuminated by soft frontal lighting\"\n      },\n      \"attire_breakdown\": {\n        \"upper_body\": {\n          \"item\": \"Wrap top\",\n          \"material\": \"Soft, matte jersey fabric\",\n          \"color\": \"Vibrant bubblegum pink\",\n          \"details\": \"Edged with delicate, intricate white floral lace trim along the neckline\",\n          \"fit\": \"Form-fitting but comfortable, draping softly\"\n        },\n        \"lower_body\": {\n          \"item\": \"Jeans\",\n          \"material\": \"Rugged cotton twill denim\",\n          \"wash\": \"Light-wash vintage fade\",\n          \"style\": \"Low-rise cut\",\n          \"texture\": \"Visible denim grain and stitching details providing a tactile contrast to the soft top\"\n        },\n        \"accessories\": {\n          \"earrings\": {\n            \"type\": \"Studs\",\n            \"shape\": \"Heart\",\n            \"material\": \"High-polish gold\",\n            \"visual_effect\": \"Gleaming brightly against the skin, reflecting the room's light\"\n          }\n        }\n      },\n      \"environment_context\": {\n        \"setting\": \"Bedroom interior\",\n        \"atmosphere\": \"Intimate, lived-in, casually cluttered but stylish\",\n        \"lighting_setup\": {\n          \"primary_source\": \"Selfie ring light or vanity mirror lights\",\n          \"quality\": \"Bright, even, frontal glow that eliminates harsh shadows on the face\",\n          \"reflections\": \"Circular catchlights visible in the eyes and on the phone case\"\n        },\n        \"background_composition\": {\n          \"foreground_element\": \"The mirror glass surface (clean with slight reflections)\",\n          \"background_object_1\": {\n            \"item\": \"Hanging garment\",\n            \"texture\": \"Silver sequins\",\n            \"visual_effect\": \"Chaotic shimmer, creating scattered specular highlights and bokeh in the background\"\n          },\n          \"background_object_2\": {\n            \"item\": \"Upholstery or furniture accent\",\n            \"texture\": \"Faux fur\",\n            \"color\": \"Bright, fuzzy yellow\",\n            \"visual_effect\": \"Provides a high-saturation pop of color and soft tactile depth\"\n          }\n        }\n      },\n      \"photographic_parameters\": {\n        \"style\": \"Candid smartphone photography aesthetic\",\n        \"aesthetic_quality\": {\n          \"texture\": \"Analog film simulation\",\n          \"grain\": \"Medium film grain to enhance realism and texture\",\n          \"sharpness\": \"High focus on the subject, slight depth-of-field blur on the background elements\"\n        },\n        \"color_palette\": \"Playful and vibrant (pink, yellow, silver, denim blue) anchored by warm skin tones\",\n        \"composition\": \"Framed within the mirror boundaries, vertical alignment\"\n      }\n    }\n  }\n}",
+      "author": "Yaseen Khan Gul",
+      "handle": "@YaseenK7212",
+      "timestamp": "2025-12-06T17:14:26.000Z",
+      "display_time": "Dec 6, 2025",
+      "url": "https://x.com/YaseenK7212/status/1997353953357373573",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 389,
+      "date": "2025-12-06"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/YaseenK7212/status/1997353953357373573\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:40:13.422561"
+  },
+  {
+    "original": {
+      "text": "Nano Banana + Fastmoss + Manus + Veo3 = AI Content Factory\n\nWe built a fully automated system that repurposes, localizes, and launches winning TikTok Shop content across hundreds of creator-style accounts.\n\nIt’s so effective it feels like running Facebook ads in 2008. \n\n- CPMs as low as $0.10\n- no reliance on paid ads \n- no ghost creators\n- no wasted samples\n- no lost time \n\nMy $300/monthly tech stack which replaced $50k+ budget:\n\n- manus for product research and viral script ideas \n- cruva / Fastmoss for recently viral content ideas from competitors \n- nano banana pro for images \n- kling 2.6 for video \n- now using my own phone posting network for automated posting \n\nHere’s how it works:\n•Each AI Agent spins up a TikTok Shop–ready profile, built to sell my products through shoppable videos.\n•Agents are prompted to research the niche, scrape winning TikTok Shop videos, and rebuild them with new hooks, angles, and UGC-style visuals tailored to your brand.\n•They create and post daily using my tech stack onto affiliate accounts \n\nNo touchpoints. No delays.\n\nJust shoppable videos going live and GMV compounding every week.\n\nThen we use an MPS (Multi-Platform Swarm) approach:\n\nonce the concept works on TikTok Shop, we deploy hundreds of AI Agents to flood the niche with variations that all drive back to your Shop and Amazon listing.\n\nI’m giving you access to the full stack — the ai workflow, ready to plug into your TikTok Shop today.\n\nComment “Workflow” and I’ll send you everything.\n(must be connected)\n\nPS – Repost for early access to the full TikTok Shop content factory system.",
+      "author": "Noah Frydberg | Tiktok Shop For Brands",
+      "handle": "@maverickecom",
+      "timestamp": "2026-01-14T17:25:23.000Z",
+      "display_time": "Jan 14",
+      "url": "https://x.com/maverickecom/status/2011489837094683034",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 271,
+      "date": "2026-01-14"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/maverickecom/status/2011489837094683034\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:40:44.432675"
+  },
+  {
+    "original": {
+      "text": "This info product is literally printing money right now and nobody's paying attention\n\nI just found their ads. They've been running 300+ ads for 2+ months straight\n\nHere's what's INSANE about this:\n\nWhat they're selling: Mental wellness & self-discovery app subscription. That's it.\n\nTheir funnel:\n\n- Image ad targeting specific pain points (focus issues, self-esteem, trauma)\n- Clicks → Quiz about your mental state/goals\n- Quiz end → \"Your personalized plan is ready!\"\n- Shows before/after comparison (current struggles vs. your goal)\n- Countdown timer (discount reserved for 10 minutes)\n- Price reveal: €49,99/month subscription\n\nWhy this is genius:\n\n- Problem is universal (everyone struggles with mental health/self-improvement)\n- Quiz makes solution feel PERSONALIZED (not a generic app)\n- Zero fulfillment (it's a digital app subscription)\n- Recurring revenue (subscription = lifetime value)\n- Infinitely scalable (no inventory, no shipping)\n\nThe REAL hack nobody sees:\n\nAt the quiz ending, they make you answer 5+ questions that all get \"YES\" answers:\n\n\"Do you want to improve your well-being?\" → YES \"Ready to follow your personalized plan?\" → YES\n\"Can you imagine feeling better?\" → YES\n\nThis is the consistency principle from psychology.\n\nAfter saying YES 5 times, your brain wants to stay consistent\n\n→ 30-40% higher conversion on the buy button.\n\nThey're literally using neuroscience to close sales.\n\nAnd the crazy part: They ONLY run simple image ads. No videos ads\n\nThe proof it works: 300+ active ads for 60+ days = they're printing money\n\nNo company burns ad budget for 2 months unless it's wildly profitable.",
+      "author": "Xivy",
+      "handle": "@xivy0k",
+      "timestamp": "2026-01-03T13:47:33.000Z",
+      "display_time": "Jan 3",
+      "url": "https://x.com/xivy0k/status/2007448752584319278",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 256,
+      "date": "2026-01-03"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/xivy0k/status/2007448752584319278\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:41:15.412981"
+  },
+  {
+    "original": {
+      "text": "do not use NordVPN for tiktok to target US Audience.\n\nyou get shadow banned instantly.\n\nmost people using cheap VPNs or residential proxies get flagged by tiktok because hundreds of others share the same ip.\n\nyou and 50,000 other people using NordVPN daily to target US audience on tiktok.... ofc tiktok know about it.\n\nsolution: host your own VPN on hetzner using Outline VPN for $5/month and takes 10 minutes.\n\noutline (google owned) makes it easy to host your own VPN server on any cloud.\n\nhere’s how i do it:\n\ngo to hetzner .com/cloud\ncreate a vps in the us region\ncheapest plan ($5/mo) is enough\n\ngo to getoutline .org\ndownload outline manager (for your laptop)\ndownload outline app (for phone or desktop connection)\n\nfollow hetzner’s guide:\nhttp://community.hetzner. com/tutorials/install-outline-vpn-server\nit installs outline via docker automatically\n\nopen outline manager → add the server → create vpn keys\neach key is like a password you can use on different devices\n\npaste the key into the outline app → connect → done\n\ntips:\nalways pick us/eu servers\n\ndon’t use VPNs that bill per gb traffic. Hetzner is the best bc it gives you 20TB of bandwidth/month.\n\nDigitalOcean gives you only 5TB/month.\n\nstay away from GCP or AWS. you will get $300/month bills only for the bandwidth.\n\nrotate ip monthly by redeploying your server\n\nnever share vpn keys with others\n\nthis makes tiktok think your connection is a normal us home user, not a clipper using shared vpn/proxy.",
+      "author": "daniel",
+      "handle": "@danielhangan_",
+      "timestamp": "2025-10-08T18:38:51.000Z",
+      "display_time": "Oct 8, 2025",
+      "url": "https://x.com/danielhangan_/status/1975994314820890775",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 244,
+      "date": "2025-10-08"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/danielhangan_/status/1975994314820890775\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:41:46.442060"
+  },
+  {
+    "original": {
+      "text": "-everyone asking if she’s real in the comments.\n-nobody knows, she renders overnight.\n-ai influencers are replacing the usual faces.\n-going viral is basically automated now.\n\nNano Banana Pro  \n\n{\n  \"meta\": {\n    \"aspect_ratio\": \"9:16\",\n    \"quality\": \"photorealistic, raw, unedited smartphone photograph\",\n    \"resolution\": \"8k\",\n    \"camera\": \"Smartphone camera (e.g., iPhone 14 Pro)\",\n    \"lens\": \"Wide-angle smartphone lens\",\n    \"style\": \"Candid mirror selfie, natural indoor evening light, warm tone\",\n    \"composition\": \"Full-body mirror shot of a woman sitting on a rug, holding a smartphone to take the photo.\"\n  },\n  \"scene\": {\n    \"location\": \"Indoor living room\",\n    \"environment\": [\n      \"Large grey shag rug on wooden floor\",\n      \"Dark grey sofa in background\",\n      \"White double doors\",\n      \"Warm ambient lighting from a lamp\"\n    ],\n    \"time\": \"Evening\",\n    \"atmosphere\": \"Casual, relaxed, intimate\"\n  },\n  \"lighting\": {\n    \"type\": \"Warm, dim indoor light\",\n    \"source\": \"Lamp light from the side and smartphone screen light\",\n    \"effect\": \"Soft, warm glow with shadows, highlighting wet hair and fishnet texture.\"\n  },\n  \"subject\": {\n    \"identity\": \"The woman from image_0.png with wet platinum blonde hair.\",\n    \"body\": {\n      \"pose\": \"Sitting cross-legged on the grey rug, looking at the smartphone in her hand, holding it up for a mirror selfie.\",\n      \"physique\": \"Slim build.\"\n    },\n    \"outfit\": {\n      \"clothing\": \"Black short-sleeved mini-dress, black fishnet tights.\",\n      \"accessories\": \"None visible besides the smartphone.\"\n    }\n  },\n  \"realism_focus\": {\n    \"textures\": \"Wet hair strands, detailed mesh of the fishnet tights, texture of the grey shag rug, fabric of the black dress.\",\n    \"imperfections\": \"Natural skin texture, realistic phone reflection in the mirror.\"\n  }\n}",
+      "author": "Passion",
+      "handle": "@Passionai0",
+      "timestamp": "2026-01-14T13:50:26.000Z",
+      "display_time": "Jan 14",
+      "url": "https://x.com/Passionai0/status/2011435742375948739",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 240,
+      "date": "2026-01-14"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/Passionai0/status/2011435742375948739\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:42:17.491882"
+  },
+  {
+    "original": {
+      "text": "Gemini 3.0 + Lindy + Perplexity = AI Content Infrastructure that generated 30M views last quarter...\n\nThis 3-agent system replaces entire content teams automatically using AI strategist + producer + analyst architecture...\n\n→ No more $15K-$30K monthly payroll for 4-person content teams\n→ No more 20+ hours weekly spent planning content calendars manually\n→ No more creative bottlenecks killing your posting velocity\n→ No more analysts tracking metrics in 10 different spreadsheets\n\nJust 3 AI agents → autonomous content infrastructure that runs 24/7.\n\nHere's how it works:\n→ Strategy Agent (monitors trends, identifies angles, builds calendars automatically)\n→ Production Agent (generates platform-native posts, maintains brand voice across 1000+ posts)\n→ Analysis Agent (tracks engagement, identifies patterns, optimizes continuously)\n→ Multi-Platform Publishing (LinkedIn + Twitter content deployed simultaneously)\n→ Performance Loop System (learns what works, compounds results weekly)\n\nBuilt with Fortune 500 content velocity.\nRuns 24/7 without creative bottlenecks.\nZero payroll overhead. Enterprise quality.\n\nResults from deployments:\n• 30M+ organic views generated\n• $500K+ in qualified pipeline revenue\n• 25 posts weekly (up from 5 posts with manual teams)\n• One creator: $20K writer team → $500 AI infrastructure\n\nWant the complete system?\n\nLike + comment \"LINDY\" + repost, and I'll DM it to you.\n(must be following)",
+      "author": "Aryan Mahajan",
+      "handle": "@aryanXmahajan",
+      "timestamp": "2025-11-21T19:22:58.000Z",
+      "display_time": "Nov 21, 2025",
+      "url": "https://x.com/aryanXmahajan/status/1991950481581834307",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 207,
+      "date": "2025-11-21"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/aryanXmahajan/status/1991950481581834307\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:42:48.520461"
+  },
+  {
+    "original": {
+      "text": "100+ AI Tools to replace your tedious work:\n\n1. Research\n\n- ChatGPT\n- YouChat\n- Abacus\n- Perplexity\n- Copilot\n- Gemini\n\n2. Image\n\n- Higgsfield AI Soul\n- GPT-4o\n- Midjourney\n- Grok\n\n3. Productivity\n\n- Gamma\n- Grok 3\n- Perplexity AI\n- Gemini 2.5 Flash\n\n4. Writing\n\n- Jasper\n- Jenny AI\n- Textblaze\n- Quillbot\n\n5. Video\n\n- Klap\n- Kling\n- InVideo\n- HeyGen\n- Runway\n\n6. Meeting\n\n- Tldv\n- Otter\n- Noty AI\n- Fireflies\n\n7. SEO\n\n- VidIQ\n- Seona AI\n- BlogSEO\n- Keywrds ai\n- Outrank AI\n\n8. Presentation\n\n- Decktopus\n- Slides AI\n- Gamma AI\n- Designs AI\n- Beautiful AI\n\n9. Design\n\n- Canva\n- Flair AI\n- Designify\n- Clipdrop\n- Autodraw\n- Magician design\n\n10. Audio\n\n- Lovo ai\n- Eleven labs\n- Songburst AI\n- Adobe Podcast\n\n11. Marketing\n\n- Pencil\n- Ai-Ads\n- AdCopy\n- Simplified\n- AdCreative\n\n12. Startup\n\n- Tome\n- Ideas AI\n- Namelix\n- Pitchgrade\n- Validator AI\n\n13. Social media management\n\n- Tapilo\n- Typefully\n- Hypefury\n- TweetHunter\n\nTo Get It : \n\n Like, Comment & RT This Post\n\n Bookmark this and reduce your AI expenses \n\n Must Be Follow \n@Tech5353\n for smart AI discoveries.",
+      "author": "New Tech",
+      "handle": "@Tech5353",
+      "timestamp": "2026-01-11T09:15:12.000Z",
+      "display_time": "Jan 11",
+      "url": "https://x.com/Tech5353/status/2010279315238220114",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 206,
+      "date": "2026-01-11"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/Tech5353/status/2010279315238220114\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:43:19.594094"
+  },
+  {
+    "original": {
+      "text": "you can consistently steal $10 - $20,000/month of your competitor's revenue using google ads\n\nall you need to do is use chat gpt to identify their vulnerable stage traffic\n\nuse search intent to do this:\n\n- 'is [brand] legit'\n- '[brand] reviews\n- '[brand product] reddit'\n- '[brand] alternatives'\n\ngo to keyword planner, keywordtool . io or SEM rush to make sure there's volume behind the terms\n\n500+ searches/month is a good place\n\nwrite ads that speak to the traffic's pain\n\n- 'Check this before buying [brand]'\n- 'About to buy [brand]?'\n\nand send to a landing page that is PACKED with the keywords you are targeting\n\nkeywords in the H1, H2 and copy is essential\n\nfor LP structure think Us vs Them, Top 5 reasons why, Blog style\n\nif they are't locked in on google this is easy\n\njust finished writing up a step by step guide on how I steal my competitor's traffic doing this\n\n- the ai prompt for identifying keywords\n- ad headlines\n- landing pages\n+ a bonus section on how to download LP html & send to AI\n\ntoo long for this tweet so reply 'GOOGLE' and i'll fire it over\n\nobvs gotta be following so i can send\n\npeace",
+      "author": "TUNK",
+      "handle": "@_TUNK",
+      "timestamp": "2025-10-08T18:45:31.000Z",
+      "display_time": "Oct 8, 2025",
+      "url": "https://x.com/_TUNK/status/1975995991808430151",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 206,
+      "date": "2025-10-08"
+    },
+    "full_text": "you can consistently steal $10 - $20,000/month of your competitor's revenue using google ads\n\nall you need to do is use chat gpt to identify their vulnerable stage traffic\n\nuse search intent to do this:\n\n- 'is [brand] legit'\n- '[brand] reviews\n- '[brand product] reddit'\n- '[brand] alternatives'\n\ngo to keyword planner, keywordtool . io or SEM rush to make sure there's volume behind the terms\n\n500+ searches/month is a good place\n\nwrite ads that speak to the traffic's pain\n\n- 'Check this before buying [brand]'\n- 'About to buy [brand]?'\n\nand send to a landing page that is PACKED with the keywords you are targeting\n\nkeywords in the H1, H2 and copy is essential\n\nfor LP structure think Us vs Them, Top 5 reasons why, Blog style\n\nif they are't locked in on google this is easy\n\njust finished writing up a step by step guide on how I steal my competitor's traffic doing this\n\n- the ai prompt for identifying keywords\n- ad headlines\n- landing pages\n+ a bonus section on how to download LP html & send to AI\n\ntoo long for this tweet so reply 'GOOGLE' and i'll fire it over\n\nobvs gotta be following so i can send\n\npeace",
+    "image_urls": [],
+    "screenshot_path": "/Users/macbookpro/Documents/PRINTMAXX_STARTER_KIT/AUTOMATIONS/x_bookmarks/deep_scrape_output/screenshot_14_TUNK.png",
+    "thread_tweets": [],
+    "thread_length": 0,
+    "scraped_at": "2026-01-19T05:43:25.622842"
+  },
+  {
+    "original": {
+      "text": "the intelligence gap in AI automation just hit $4 trillion\n\nbusinesses think they need:\n- PhD's in machine learning\n- 6-month implementation roadmaps\n- enterprise consulting firms\n- $200K budgets\n\nwhat they actually need:\n- someone who can describe the problem clearly\n- AI to build the workflow\n- 2 hours to test it\n- $5K to make it worth your time\n\nthe gap between perception and reality is the entire opportunity\n\nMcKinsey charges $4M for 20 weeks of \"AI strategy\"\nyou can build the actual solution in 2 days for $10K\n\ncourses sell you on becoming an \"expert\"\nclients pay you for solving their problem\n\ncorporate thinks AI requires transformation\nyou know it just requires connection\n\nthat's the game:\nthey're lost in complexity\nyou understand it's mostly simple\n\nthe companies still hiring \"AI transformation consultants\" for $300K projects don't know you can ship the same outcome in a week\n\nand the solo operators charging $10-20K per automation build?\n\nthey figured this out 6 months ago\n\ncomment \"GAP\" and i'll break down the 3 industries where this gap is widest right now",
+      "author": "Nozz",
+      "handle": "@NoahEpstein_",
+      "timestamp": "2025-11-14T13:57:04.000Z",
+      "display_time": "Nov 14, 2025",
+      "url": "https://x.com/NoahEpstein_/status/1989331754080182750",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 182,
+      "date": "2025-11-14"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/NoahEpstein_/status/1989331754080182750\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:43:56.647479"
+  },
+  {
+    "original": {
+      "text": "i talked to a founder friend yesterday who told me that they are now writing all their content in a Cursor txt file\n\nLinkedin posts, tweets, blog posts,investor updates, emails\n\nbecause the AI autocomplete helps them think through ideas faster\n\nthey said it's like having a writing partner who can instantly suggest the next sentence or help expand on half-formed thoughts\n\nnow they draft from the beginning with AI, then copy/paste to wherever they need to publish\n\nmade me realize we're probably going to see a lot more AI-native workflows like this \n\nwhere people completely change their creative process around what the tools are actually good at rather than trying to force AI into their existing habits\n\nand i think the bigger extension of this is that you’re going to be building personalized software automating these new workflows in the same IDE you’re now writing in\n\nEG here’s your linkedin post writing process \n\nand 5 minutes later personalized software is deployed to vercel you or your team could use for that content production\n\nthis post was probably written like this",
+      "author": "Cody Schneider",
+      "handle": "@codyschneiderxx",
+      "timestamp": "2025-08-04T14:00:04.000Z",
+      "display_time": "Aug 4, 2025",
+      "url": "https://x.com/codyschneiderxx/status/1952368946356670748",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 180,
+      "date": "2025-08-04"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/codyschneiderxx/status/1952368946356670748\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:44:27.650159"
+  },
+  {
+    "original": {
+      "text": "Gemini Nano Banana 3.0 Pro\n\nPrompt:\n\n{\n  \"prompt_breakdown\": {\n    \"subject_parameters\": {\n      \"identity_constraint\": \"Preserve facial features from reference image\",\n      \"hair\": \"Long, ash-brown, textured wolf cut\",\n      \"expression\": \"Relaxed, dreamy, looking to the side\"\n    },\n    \"apparel\": {\n      \"top\": \"Sleeveless cropped black hoodie with high collar\",\n      \"bottom\": \"Faded black denim shorts, vintage distressed style, raw hem with frayed fibers\",\n      \"footwear\": \"Onitsuka Tiger Mexico 66 sneakers (Yellow and Black)\"\n    },\n    \"pose_and_action\": {\n      \"body_position\": \"Lying relaxed inside an open car trunk, legs bent and crossed\",\n      \"arms\": \"Right arm stretched upward, left hand holding a lit cigarette near mouth\",\n      \"action\": \"Smoking\"\n    },\n    \"environment_and_props\": {\n      \"primary_container\": \"Trunk of a bright yellow sports car\",\n      \"trunk_contents\": \"Transparent box, yellow bottle or black tube attached to the side\",\n      \"background\": \"Dark outdoor nighttime setting, faint building silhouette, partial wheel of another vehicle on the left\"\n    },\n    \"technical_specs\": {\n      \"angle\": \"High-angle shot (looking down)\",\n      \"lighting\": \"Hard direct flash (35mm analog style), dark ambient background\",\n      \"medium\": \"Flash photography, grainy film texture\",\n      \"atmosphere\": \"Edgy, mysterious, candid\"\n    }\n  }\n}",
+      "author": "Melisa♡",
+      "handle": "@xmliisu",
+      "timestamp": "2025-11-21T12:31:26.000Z",
+      "display_time": "Nov 21, 2025",
+      "url": "https://x.com/xmliisu/status/1991846916586438678",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 164,
+      "date": "2025-11-21"
+    },
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://x.com/xmliisu/status/1991846916586438678\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:44:58.662732"
+  },
+  {
+    "original": {
+      "text": "initial feedback is in for the linkedin inmail bypass and people are realizing how powerful this is\n\nimagine sending 700+ inmails per day per linkedin account\n\nthis isn't as saturated as cold email so you can expect higher conversion rates, and if you have a validated offer that works with cold email, you can use the same scripts (just shorten them) and double your results\n\nanother use case: upsell & whitelabel our software for your clients if you have an outbound agency\n\nI don't want this bypass going fully mainstream so I'm slowly releasing it to max 30 people.\n\ncost is $499 for the full guide/course including:\n\n-my personal, private linkedin account plug (all accounts are id-verified and us/uk based and warmed)\n-how the bypass works and the tech involved\n-high converting message templates\n-how to streamline replying and handling leads\n-scraping and building lists\n-other related tricks\n\nsend me a dm if you want access.",
+      "author": "caiden",
+      "handle": "@pipelineabuser",
+      "timestamp": "2025-08-06T18:48:59.000Z",
+      "display_time": "Aug 6, 2025",
+      "url": "https://x.com/pipelineabuser/status/1953166431174205655",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 4,
+      "has_video": false,
+      "word_count": 156,
+      "date": "2025-08-06"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed\nCall log:\n  - navigating to \"https://x.com/pipelineabuser/status/1953166431174205655\", waiting until \"networkidle\"\n",
+    "scraped_at": "2026-01-19T05:45:08.397699"
+  },
+  {
+    "original": {
+      "text": "Your body is a frequency field.\n\nAnd frequency is medicine.\n\nSolfeggio sound healing is one of the most powerful tools I’ve ever worked with. \n\nThese aren’t just tones. They’re vibrational healing codes designed to restore balance, detox the body , and elevate consciousness \n\nWe’ve seen the shifts under the electron microscope .\n\nThese tones can even disable nanotech in the body.\n\n Listen on YouTube, Spotify, or Apple Music:\nSearch “Dr. Group Solfeggio Tones”\n\nGive it a week.\n\nLet your body tune back into harmony \n\nHappy Sound Healing,\n\nDr. Edward Group, DC\n\n#SoundMedicine #SolfeggioTones #HealingFrequencies #DrGroup #RaiseYourVibration #FrequencyHealing #soundbath #soundhealing #wellnessjourney #selfhealing #energyhealing #frequencyhealing #doremi",
+      "author": "Dr. Edward Group, DC",
+      "handle": "@dr_edwardgroup",
+      "timestamp": "2025-11-16T21:09:16.000Z",
+      "display_time": "Nov 16, 2025",
+      "url": "https://x.com/dr_edwardgroup/status/1990165296339132591",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 104,
+      "date": "2025-11-16"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:09.420087"
+  },
+  {
+    "original": {
+      "text": "Last day of 2025 - Let me tell you what to expect from this account going forward\n\nMy goal is to optimize everything about the human body by any means possible\n\n- Cognition\n- Nutrition\n- Physical performance\n- Longevity\n- Metabolism\n- Looks\n\nYou name it\n\nThis won't be for the average, non ambitious, low IQ normie\n\nIf you are looking to enhance yourself in a healthy, responsible way and you realize life is no drug tested sport then I invite you to come along down the rabbit hole of human optimization.\n\nI wish everyone the best for 2026\n\n- Morph",
+      "author": "Morph",
+      "handle": "@doctormorphh",
+      "timestamp": "2025-12-31T10:40:13.000Z",
+      "display_time": "Dec 31, 2025",
+      "url": "https://x.com/doctormorphh/status/2006314444633051139",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 102,
+      "date": "2025-12-31"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:10.430628"
+  },
+  {
+    "original": {
+      "text": "GIRLFRIEND: \"you're a professional texter making $40k/month\"\n\nshe's not wrong\n\nmost businesses waste:\n- $10k/month on ads\n- $60k/year on sales reps\n- $5k/month on agencies\n\nlinkedin has 60 million ceos you can DM directly\n\nproblem: personalized messages take 15 min each\n\nmy AI does it in 3 seconds:\n- finds prospects\n- researches them\n- writes personalized DM\n- sends 1,000+/month automatically\n\n31% reply rate vs 3% industry\n20-40 calls/month\n$700k in 2 years\n\ngiving away:\n→ video walkthrough\n→ AI prompts\n→ message templates\n→ automation setup\n\ncomment \"OUTBOUND\"\n\nmust be following\n\nshe still thinks i just text ",
+      "author": "Freddie Pott",
+      "handle": "@freddiexpott",
+      "timestamp": "2025-11-23T15:16:49.000Z",
+      "display_time": "Nov 23, 2025",
+      "url": "https://x.com/freddiexpott/status/1992613313226605013",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 100,
+      "date": "2025-11-23"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:11.443114"
+  },
+  {
+    "original": {
+      "text": "What would you do if you got hired to sell but there was no product?\n\nThat's what happened to \n@KellenCasebeer\n  \n\nDay one, ready to start selling\n\nExcept there's nothing to sell\n\nJust messaging\n\nCan you get people curious enough to talk?\n\nDo they lean in?\n\nAre they asking \"when will this be ready?\"\n\nIf yes → you have something worth building\n\nIf no → you just saved months of wasted work\n\nMost founders build for months, then test if anyone cares\n\nTest the message first\n\nSee if the market gives a damn\n\nThen build what they actually want",
+      "author": "Saurav | SalesRobot.co",
+      "handle": "@saguppa",
+      "timestamp": "2026-01-02T14:04:00.000Z",
+      "display_time": "Jan 2",
+      "url": "https://x.com/saguppa/status/2007090503183905203",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 98,
+      "date": "2026-01-02"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:12.460507"
+  },
+  {
+    "original": {
+      "text": "I’m twenty years on the other side of two devastating tick-borne diseases—Lyme and babesiosis—and the experience changed the course of my life and work. Join me in a 56-min. podcast (#85) with talented Marc Vigliotti, host of the \"All Across America,\" where I discuss my healing journey and how I channeled my frustration with the broken medical system into a Lyme documentary and a deeply researched book about the U.S. Cold War tick weaponization program. You can also listen on Spotify and Apple Podcasts. \nhttps://\nbuff.ly/GHExjBp",
+      "author": "Kris Newby",
+      "handle": "@krisnewby",
+      "timestamp": "2025-10-19T22:53:02.000Z",
+      "display_time": "Oct 19, 2025",
+      "url": "https://x.com/krisnewby/status/1980044547338977633",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 86,
+      "date": "2025-10-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:13.549050"
+  },
+  {
+    "original": {
+      "text": "this is my fourth store at $1m/month\n\nafter you’ve done it once you can do it again and again\n\nthe easiest way to do this is by picking a niche with a high RCR\n\nif 30-40% of people who’ve bought from you come back it will be way easier\n\nhigher profit rate cause returning costumers don’t go re-go through ads\n\nrt + comment “1mil” and I’ll share a guide with my suggestions\n(follow for dm)",
+      "author": "Zed",
+      "handle": "@ZedNilm1",
+      "timestamp": "2025-11-12T13:04:18.000Z",
+      "display_time": "Nov 12, 2025",
+      "url": "https://x.com/ZedNilm1/status/1988593698582544524",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 75,
+      "date": "2025-11-12"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:14.582366"
+  },
+  {
+    "original": {
+      "text": "There is a group of people right now quietly making $600k+ a year from a secret grey hat side of affiliate no one really talks about \n\nNone of these people are on X, they will not show how insanely this prints, the networks they use or even speak about what they do as the barrier",
+      "author": "Pounds",
+      "handle": "@pounddz",
+      "timestamp": "2026-01-07T22:54:55.000Z",
+      "display_time": "Jan 7",
+      "url": "https://x.com/pounddz/status/2009036050103157041",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 4,
+      "has_video": false,
+      "word_count": 55,
+      "date": "2026-01-07"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:15.594349"
+  },
+  {
+    "original": {
+      "text": "Paramedic info:\n\nI was working a hospital contract during the heart of COVID. The rules were brutal, just one visitor per patient in the ER, no exceptions.\nOne night a dad showed up, begging to get in to see his dying son. The nurse at the front told him to wait. He pleaded. She",
+      "author": "Harry Fisher",
+      "handle": "@harryfisherEMTP",
+      "timestamp": "2025-10-17T22:01:10.000Z",
+      "display_time": "Oct 17, 2025",
+      "url": "https://x.com/harryfisherEMTP/status/1979306719516987799",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 54,
+      "date": "2025-10-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:16.748959"
+  },
+  {
+    "original": {
+      "text": "$37k MRR / No Expenses / No Employees / No Products\n\nSelling AI Generated Health Offers to 40+ y/o mums\n\nThe internet is officially broken...\n\nHere's exactly how:\n> Create an IG account on a US IP using Proxycheap and V2box\n> Warm for 2 days and follow creators in your niche\n>",
+      "author": "casualhyped",
+      "handle": "@casualhyped",
+      "timestamp": "2026-01-06T17:31:39.000Z",
+      "display_time": "Jan 6",
+      "url": "https://x.com/casualhyped/status/2008592312314569104",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 53,
+      "date": "2026-01-06"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:17.754827"
+  },
+  {
+    "original": {
+      "text": "There has never been a better time to be a solo developer\n\nBut at the same time, it has never been easier to get distracted.\n\nIt’s so easy to spend a full week building something that feels productive (but actually creates no real value)\n\nYou can go down rabbit holes without even",
+      "author": "Andi",
+      "handle": "@andi_losing",
+      "timestamp": "2026-01-13T18:59:19.000Z",
+      "display_time": "Jan 13",
+      "url": "https://x.com/andi_losing/status/2011151087412429049",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 52,
+      "date": "2026-01-13"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:18.810814"
+  },
+  {
+    "original": {
+      "text": "The mission of \n@doanythingapp\n is an independent agent that can build and run a coffee shop by the end of 2026.\n\nIndependent agents are the next evolution of Al agents. Agents that don't need us at all.\n\nQuick thread on how we will get there & what that means for you:",
+      "author": "Garrett Scott ",
+      "handle": "@thegarrettscott",
+      "timestamp": "2026-01-14T18:36:55.000Z",
+      "display_time": "Jan 14",
+      "url": "https://x.com/thegarrettscott/status/2011507839131390302",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 51,
+      "date": "2026-01-14"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:19.822612"
+  },
+  {
+    "original": {
+      "text": "At the end of the day she's reproducing, you're not. That's the harsh reality. Yes we hate it. We need to stop the world producing sluts.\n\nBut there will always be an army of men waiting to pick up the pieces of broken women who rode the carousel all their life.",
+      "author": "Russian Garbage Human",
+      "handle": "@RusGarbageHuman",
+      "timestamp": "2026-01-02T20:25:10.000Z",
+      "display_time": "Jan 2",
+      "url": "https://x.com/RusGarbageHuman/status/2007186424928600092",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 51,
+      "date": "2026-01-02"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:20.883785"
+  },
+  {
+    "original": {
+      "text": "Game dev used to take months. Now it takes 30seconds.\n\nThe first AI that builds your game in one prompt.\n\nGambo AI lets you describe your dream game — and it builds it for you.\nArt, sound, mechanics, even monetization — all in minutes.\n\n Builds live as you chat\n Generates all",
+      "author": "ɱҽԃι",
+      "handle": "@Med1_Ai",
+      "timestamp": "2025-11-18T08:38:24.000Z",
+      "display_time": "Nov 18, 2025",
+      "url": "https://x.com/Med1_Ai/status/1990701109942628371",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 51,
+      "date": "2025-11-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:21.889627"
+  },
+  {
+    "original": {
+      "text": "there’s an insane amount of MONEY hiding where most people don’t look.\n\n• take any reddit thread and add /.json to the url\n• you get the full conversation instantly\n• every reply, deep threads included\n• all the context and metadata in a clean format\n\nnow do something smart",
+      "author": "rasmalai",
+      "handle": "@rasmalai",
+      "timestamp": "2026-01-15T05:46:27.000Z",
+      "display_time": "Jan 15",
+      "url": "https://x.com/rasmalai/status/2011676333894709517",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 50,
+      "date": "2026-01-15"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:22.898410"
+  },
+  {
+    "original": {
+      "text": "programmers are making $10k-200k monthly on polymarket\n\nhere's how they actually do it\n\n///\n\n1. arbitrage bots\n\nbuy YES + NO when combined price < $1\n\nexample: YES at 48¢ + NO at 49¢ = 97¢ total\n\nyou lock $0.03 profit per $1 no matter who wins\n\ntrader \"distinct-baguette\" made",
+      "author": "Argona",
+      "handle": "@Argona0x",
+      "timestamp": "2025-12-20T14:50:22.000Z",
+      "display_time": "Dec 20, 2025",
+      "url": "https://x.com/Argona0x/status/2002391129870803306",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 50,
+      "date": "2025-12-20"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:23.904206"
+  },
+  {
+    "original": {
+      "text": "i have never worked with a design studio this good + fast before @JayDwivedi_ \n\n $3k, 3 day turnaround, and very pretty, thx\n\nthe fight against leetcode is in the hands of a better engineer than me\n\nif you want a great landing page fast, this is your guy (not sponsored)",
+      "author": "Roy",
+      "handle": "@im_roy_lee",
+      "timestamp": "2025-08-05T03:43:06.000Z",
+      "display_time": "Aug 4, 2025",
+      "url": "https://x.com/im_roy_lee/status/1952576067392381270",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 50,
+      "date": "2025-08-05"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:24.915575"
+  },
+  {
+    "original": {
+      "text": "You’re building an app.\n\nYou don’t want to manage servers.\nYou don’t want to deal with auth.\nYou don’t want to write APIs.\n\nYou choose Supabase.\n\nPostgres is ready.\nAuth works.\nStorage works.\nRealtime works.\n\nYou ship fast.\n\nIt feels like the backend is gone.\n\nThen the app grows.",
+      "author": "vivo",
+      "handle": "@vivoplt",
+      "timestamp": "2026-01-09T11:55:31.000Z",
+      "display_time": "Jan 9",
+      "url": "https://x.com/vivoplt/status/2009594886119661943",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 49,
+      "date": "2026-01-09"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:25.919661"
+  },
+  {
+    "original": {
+      "text": "in 3 months i ran my first software companies Instagram to:\n\n60k followers\n40m + impressions\n500k + email sign ups\n\nthis was all through top of funnel content, that then warmed the viewer into going deeper down the funnel\n\nthis is the exact idea behind platforms like content",
+      "author": "Daniel Bitton",
+      "handle": "@danvsI",
+      "timestamp": "2026-01-08T19:12:50.000Z",
+      "display_time": "Jan 8",
+      "url": "https://x.com/danvsI/status/2009342550012801339",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 49,
+      "date": "2026-01-08"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:26.926461"
+  },
+  {
+    "original": {
+      "text": "NEW NICHE LEAK!  Bound\n\nChannel stats :\n→ Subscribers: 293K\n→ Total views: 36.7M\n→ Total videos uploaded: 88\n→ Estimated earnings: $147K\n→ Estimated RPM: $4.00\n\n1. The Extinction Files – Focus on animals that no longer exist and explain the tragic or strange reasons why",
+      "author": "The Art Of YouTube",
+      "handle": "@theartofyoutube",
+      "timestamp": "2026-01-09T15:30:16.000Z",
+      "display_time": "Jan 9",
+      "url": "https://x.com/theartofyoutube/status/2009648928795316405",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 47,
+      "date": "2026-01-09"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:27.930598"
+  },
+  {
+    "original": {
+      "text": "Mice raised on Mozart’s K.448 in D major grew up with 40% stronger gut barriers, 20–30% more Lactobacillus, lower inflammation, and boosted immunity. The exact same piece behind the legendary “Mozart Effect” just leveled up the microbiome in a big way\n\nHere’s the wild part:\nIn",
+      "author": "Camus",
+      "handle": "@newstart_2024",
+      "timestamp": "2025-12-06T21:16:33.000Z",
+      "display_time": "Dec 6, 2025",
+      "url": "https://x.com/newstart_2024/status/1997414885924155468",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 46,
+      "date": "2025-12-06"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:28.935783"
+  },
+  {
+    "original": {
+      "text": "Here's how we're doing $50K weeks on Meta by dropshipping with AI UGC:\n\n Pick winning product\n Plug into Ezra\n Generate 200+ AI UGC variants\n Feed Andromeda what it wants\n\n Scale\n\nNo creators. No waiting. No burnout.\nComment \"SYSTEM\" for the tool & I'll DM it over.",
+      "author": "Hasanuzzaman Khan",
+      "handle": "@hasan28d",
+      "timestamp": "2025-11-10T15:22:58.000Z",
+      "display_time": "Nov 10, 2025",
+      "url": "https://x.com/hasan28d/status/1987903819913847016",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 46,
+      "date": "2025-11-10"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:29.938929"
+  },
+  {
+    "original": {
+      "text": "All sirtuins (SIRT1 through 7) depend on NAD+ for their activity and for many of the reactions they catalyze. This requirement for NAD+ is a defining characteristic of the ENTIRE sirtuin family. Those who already take the novel DNA repair sirtuin, SIRT6, should be most interested",
+      "author": "Paul Kiesow",
+      "handle": "@KiesowPaul",
+      "timestamp": "2025-10-18T21:03:53.000Z",
+      "display_time": "Oct 18, 2025",
+      "url": "https://x.com/KiesowPaul/status/1979654690338992432",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 46,
+      "date": "2025-10-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:30.940611"
+  },
+  {
+    "original": {
+      "text": "consultants charge $30k for \"AI integrations\" that take 4 hours to build.\n\nhere's the exact stack i use to deliver the same results for 10% of the price:\n\n𝗰𝗹𝗮𝘂𝗱𝗲 → the brain. ideation, emails, client comms, everything day-to-day. stops me from staring at blank screens.",
+      "author": "Nozz",
+      "handle": "@NoahEpstein_",
+      "timestamp": "2026-01-09T04:34:25.000Z",
+      "display_time": "Jan 8",
+      "url": "https://x.com/Hartdrawss/status/2009483876347863129",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 45,
+      "date": "2026-01-09"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:31.947079"
+  },
+  {
+    "original": {
+      "text": "Stop bookmarking posts or tutorials you'll never implement.\n\nI made a Chrome extension that sends any URL or X post to OpenCode. \n\nIt reads the content, researches, implements the key examples, runs tests, and writes a report.\n\nOne click. Working code.\n\nTurn your ADHD into",
+      "author": "BowTiedSwan | SaaS, Web3 & Data Science Magician",
+      "handle": "@BowTiedSwan",
+      "timestamp": "2026-01-07T02:19:45.000Z",
+      "display_time": "Jan 6",
+      "url": "https://x.com/BowTiedSwan/status/2008725212154491335",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 45,
+      "date": "2026-01-07"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:32.964354"
+  },
+  {
+    "original": {
+      "text": "Since the last talk, there have been an additional 300 pulmonary embolism deaths from COVID-19 vaccines in Massachusetts, totaling over 700 excess deaths. Hear the stories behind the data and the push to get them out there on the Health Rights MA YouTube Channel.  #mapoli",
+      "author": "HealthRightsMA",
+      "handle": "@HealthRightsMA",
+      "timestamp": "2025-10-19T23:04:31.000Z",
+      "display_time": "Oct 19, 2025",
+      "url": "https://x.com/HealthRightsMA/status/1980047439764787512",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 45,
+      "date": "2025-10-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:33.969710"
+  },
+  {
+    "original": {
+      "text": "A CDC Whistleblower's Story: How a Vaccine \"Success\" Masked a Public Health Crisis\n\nFor 8 years, Dr. Gary Goldman was a top epidemiologist on the CDC's Varicella (chickenpox) Active Surveillance Project. His job was to track the vaccine's impact. What he discovered was a pattern",
+      "author": "Camus",
+      "handle": "@newstart_2024",
+      "timestamp": "2025-10-18T13:07:10.000Z",
+      "display_time": "Oct 18, 2025",
+      "url": "https://x.com/newstart_2024/status/1979534723417248128",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 45,
+      "date": "2025-10-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:34.997937"
+  },
+  {
+    "original": {
+      "text": "Right now there's an ecom bro somewhere screaming at his supplier on WhatsApp about delayed shipments while his customer service VA quit. I'm in a heated pool wondering if the sauna or the cold plunge should be next. We're both entrepreneurs apparently. Terrible life",
+      "author": "Patrick Werner",
+      "handle": "@patwerX",
+      "timestamp": "2025-11-14T15:33:08.000Z",
+      "display_time": "Nov 14, 2025",
+      "url": "https://x.com/patwerX/status/1989355926776893738",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 44,
+      "date": "2025-11-14"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:35.999359"
+  },
+  {
+    "original": {
+      "text": "I see so many women slathering  skincare products on their necks. The vast majority of these products are way overkill on various additives. Would seem to be a risk to thyroid. \nI would be especially conscientious of what is rubbed in the neck area.",
+      "author": "NicoleNP",
+      "handle": "@NicoleMarieNP",
+      "timestamp": "2025-07-31T02:49:43.000Z",
+      "display_time": "Jul 30, 2025",
+      "url": "https://x.com/NicoleMarieNP/status/1950750696392773741",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 44,
+      "date": "2025-07-31"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:37.004387"
+  },
+  {
+    "original": {
+      "text": "Pfizer CEO Albert Bourla announces the arrival of \"the first electronic pill\", containing \"a biological chip\" that \"sends a signal\" to alert authorities when it has been taken.\n\n\"Imagine the applications of that—the compliance.\"\n\nWith digital ID, governments will now be able to",
+      "author": "Wide Awake Media",
+      "handle": "@wideawake_media",
+      "timestamp": "2025-10-19T07:43:39.000Z",
+      "display_time": "Oct 19, 2025",
+      "url": "https://x.com/wideawake_media/status/1979815692867154243",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 43,
+      "date": "2025-10-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:38.011857"
+  },
+  {
+    "original": {
+      "text": "The easiest way to find new viral apps that are crushing it:\n\nGo to appkittie → New big hits\n\nIn today’s top 10 we see a christian app that was launched 5 days ago and already has 1,700+ reviews and $100k+ revenue",
+      "author": "Jacob Rodri",
+      "handle": "@jacobrodri_",
+      "timestamp": "2026-01-06T15:09:36.000Z",
+      "display_time": "Jan 6",
+      "url": "https://x.com/jacobrodri_/status/2008556561434923157",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 42,
+      "date": "2026-01-06"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:39.014297"
+  },
+  {
+    "original": {
+      "text": "1/ Another major leap forward in the fight against cancer:\n\nFrog gut bacterium eliminates cancer tumors in mice with a single dose:\n\nSingle shot of E. americana intravenously to mice with colorectal cancer completely eliminated tumors in every treated animal, with ongoing",
+      "author": "Chubby",
+      "handle": "@kimmonismus",
+      "timestamp": "2025-12-17T19:59:04.000Z",
+      "display_time": "Dec 17, 2025",
+      "url": "https://x.com/kimmonismus/status/2001381651235139672",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 42,
+      "date": "2025-12-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:40.020936"
+  },
+  {
+    "original": {
+      "text": "Built in n8n — it:\n\n Clones viral TikToks\n Rewrites w/ GPT-4o\n Auto-generates avatar videos\n Adds captions + edits them\n Posts to 9 platforms (TikTok, IG,YT,X, etc.)\n\nTo Get It..\n\n Like + RT\n Reply “Steal”\n Must Be Follow me & I’ll DM you.",
+      "author": "Paul Sims",
+      "handle": "@SimslearnAi",
+      "timestamp": "2025-11-14T08:17:59.000Z",
+      "display_time": "Nov 14, 2025",
+      "url": "https://x.com/SimslearnAi/status/1989246418184466500",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 42,
+      "date": "2025-11-14"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:41.038407"
+  },
+  {
+    "original": {
+      "text": "Claude, create a strategy that monitors subreddits to identify capital rotation signals derived from social media chatter before Wall Street and mainstream media fully embrace.  Then run the strategy and show me the top ten themes, along with high potential tickers.",
+      "author": "The Tail That Wags The Dog",
+      "handle": "@TailThatWagsDog",
+      "timestamp": "2026-01-18T14:22:52.000Z",
+      "display_time": "15h",
+      "url": "https://x.com/TailThatWagsDog/status/2012893458701189317",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 3,
+      "has_video": false,
+      "word_count": 41,
+      "date": "2026-01-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:42.044369"
+  },
+  {
+    "original": {
+      "text": "It's your chance to pick at \n@iamgdsa\n's brain.\n\nHang out with us LIVE tomorrow.\n\n> UGC Strategies\n> Clipping\n> Other things social growth\n> Q&A\n\n\n@danielhangan_\n will be there too.\n\nSeats are limited. Register here:\n\nhttps://\nsocialgrowthengineers.com/live/c5b1ff76-\n966b-4bd3-8490-5ed56b143d5c?utm_\n…",
+      "author": "Social Growth Engineers",
+      "handle": "@wesocialgrowth",
+      "timestamp": "2026-01-07T17:00:17.000Z",
+      "display_time": "Jan 7",
+      "url": "https://x.com/wesocialgrowth/status/2008946805422346335",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 41,
+      "date": "2026-01-07"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:43.053399"
+  },
+  {
+    "original": {
+      "text": "why is no one building apps for boomers?\n\na tai chi app for seniors makes $200k/mo.\n\nnow imagine apps for:\n\n> cooking\n> fishing\n> gardening\n> bricolage\n\nand you can use an ai influencer to promote them for $0.",
+      "author": "Simone Canc",
+      "handle": "@simonecanciello",
+      "timestamp": "2026-01-11T19:50:44.000Z",
+      "display_time": "Jan 11",
+      "url": "https://x.com/simonecanciello/status/2010439253906559290",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 40,
+      "date": "2026-01-11"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:44.076053"
+  },
+  {
+    "original": {
+      "text": "Correcting the epigenome will correct the transcriptome. \nCorrecting the transcriptome will correct the proteome.\nCorrecting the proteome will correct aging. \nAnd when we correct aging, we will extend life; and by extending life, we will be free.\n\nThat's all.",
+      "author": "Marcos Arrut",
+      "handle": "@MarcosArrut",
+      "timestamp": "2025-10-10T22:57:41.000Z",
+      "display_time": "Oct 10, 2025",
+      "url": "https://x.com/MarcosArrut/status/1976784226788995571",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 39,
+      "date": "2025-10-10"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:45.082646"
+  },
+  {
+    "original": {
+      "text": "> chatseo founded in nov 2025 \n> $10,495 in 38 days\n> youngest startup with highest revenue on trustmrr\n\nnow do this:\n\n> don't reinvent the wheel\n> copy it\n> tweak it\n> ship faster\n> profit",
+      "author": "Om Patel",
+      "handle": "@om_patel5",
+      "timestamp": "2026-01-11T03:48:04.000Z",
+      "display_time": "Jan 10",
+      "url": "https://x.com/om_patel5/status/2010196987195584751",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 38,
+      "date": "2026-01-11"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:46.089801"
+  },
+  {
+    "original": {
+      "text": "anyway, what are you playing this weekend? \n\nGemini Nano Banana Pro\n\n{\n  \"subject\": {\n    \"ethnicity\": \"East Asian\",\n    \"features\": \"Short black bob-cut hair with soft texture, sharp winged eyeliner, delicate facial structure, slightly parted natural lips, focused expression",
+      "author": "Pinodi",
+      "handle": "@PinodiArt",
+      "timestamp": "2026-01-17T15:48:22.000Z",
+      "display_time": "Jan 17",
+      "url": "https://x.com/PinodiArt/status/2012552584012107899",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 37,
+      "date": "2026-01-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:47.092916"
+  },
+  {
+    "original": {
+      "text": "AgentCommand: a dashboard for when your AI agents are running AI agents.\n\nWatch 1000+ agents spin up and down, see them talk to each other, and track the revenue, deploys, and code diffs happening in real-time.",
+      "author": "Matt Schlicht",
+      "handle": "@MattPRD",
+      "timestamp": "2026-01-18T04:25:01.000Z",
+      "display_time": "Jan 17",
+      "url": "https://x.com/MattPRD/status/2012743002985484479",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 36,
+      "date": "2026-01-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:48.097520"
+  },
+  {
+    "original": {
+      "text": "If you ever feel like you’re “running out of time” to fall in love and live happily ever after, just remember that Steve and Terri Irwin first met when she was 27 and he was 29.",
+      "author": "Cleobug101",
+      "handle": "@cleobug101",
+      "timestamp": "2025-09-21T02:05:28.000Z",
+      "display_time": "Sep 20, 2025",
+      "url": "https://x.com/cleobug101/status/1969583726142042316",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 36,
+      "date": "2025-09-21"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:49.105534"
+  },
+  {
+    "original": {
+      "text": "We’ve built the Blueprint to blow up ANY brand on TikTok Shop using AI creators  \n\nUsually people charge thousands of $$ for this... I'm giving it away for FREE\n\nComment “Guide” and check your DM's ",
+      "author": "Noah Frydberg | Tiktok Shop For Brands",
+      "handle": "@maverickecom",
+      "timestamp": "2026-01-12T17:07:14.000Z",
+      "display_time": "Jan 12",
+      "url": "https://x.com/maverickecom/status/2010760495708729760",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 35,
+      "date": "2026-01-12"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:50.109515"
+  },
+  {
+    "original": {
+      "text": "𝗚𝗼𝗼𝗴𝗹𝗲 𝗔𝗻𝘁𝗶𝗴𝗿𝗮𝘃𝗶𝘁𝘆 𝗷𝘂𝘀𝘁 𝗺𝗮𝗱𝗲 $𝟱,𝟬𝟬𝟬/𝗺𝗼𝗻𝘁𝗵 𝗱𝗲𝘃 𝘁𝗼𝗼𝗹𝘀 𝗳𝗿𝗲𝗲.\n\n𝗔𝗻𝗱 𝗶𝘁 𝗯𝘂𝗶𝗹𝗱𝘀 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗳𝗼𝗿 𝘆𝗼𝘂.\n\nHere's what it automates:\n\n→ Vibe codes apps in plain English\n\n→ AI agent tests your tools automatically\n\n→",
+      "author": "Julian Goldie SEO",
+      "handle": "@JulianGoldieSEO",
+      "timestamp": "2026-01-12T06:25:38.000Z",
+      "display_time": "Jan 12",
+      "url": "https://x.com/JulianGoldieSEO/status/2010599029399535952",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 33,
+      "date": "2026-01-12"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:51.111952"
+  },
+  {
+    "original": {
+      "text": "I made a program that gives you an ugliness report card\n\nit tells you which surgeries you'd need and how much they cost to not be ugly\n\ngoing to show the incels",
+      "author": "Bro Team Pill",
+      "handle": "@BroTeamPills",
+      "timestamp": "2025-12-31T10:39:16.000Z",
+      "display_time": "Dec 31, 2025",
+      "url": "https://x.com/BroTeamPills/status/2006314206488879608",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 32,
+      "date": "2025-12-31"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:52.149272"
+  },
+  {
+    "original": {
+      "text": "Vibe coded a game character selection screen\n\nEverything here was made with AI tools\nNano Banana: character design + UI\nTencent Hunyuan3D: image to 3D\nGemini Pro: UI\n\nMore details ↓",
+      "author": "Dilum Sanjaya",
+      "handle": "@DilumSanjaya",
+      "timestamp": "2026-01-06T17:00:59.000Z",
+      "display_time": "Jan 6",
+      "url": "https://x.com/DilumSanjaya/status/2008584593222652057",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 31,
+      "date": "2026-01-06"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:53.157184"
+  },
+  {
+    "original": {
+      "text": "A lot of people have been asking us, so:\n\nWe can build a 7-meter bronze statue for around $500,000.\nA 20-meter statue for $2 million.\nA 50-meter statue for $10 million.",
+      "author": "Atelier Missor",
+      "handle": "@AtelierMissor_",
+      "timestamp": "2025-12-18T20:07:37.000Z",
+      "display_time": "Dec 18, 2025",
+      "url": "https://x.com/AtelierMissor_/status/2001746191831191792",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 31,
+      "date": "2025-12-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:54.162335"
+  },
+  {
+    "original": {
+      "text": "HOLEE SHIZZLES! \nNO KINGS Financials Released!\n\nThe Financers:\n- Arabella: $79M\n- Warren Buffet: $16M\n- Ford: $51M\n- Rockefeller: $26M\n- Soros: $72M\n- Tides: $45M\n\n$294,487,641 MILLION \n\nSource \n@realannapaulina",
+      "author": "MJTruthUltra",
+      "handle": "@MJTruthUltra",
+      "timestamp": "2025-10-20T17:24:38.000Z",
+      "display_time": "Oct 20, 2025",
+      "url": "https://x.com/MJTruthUltra/status/1980324293444817133",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 31,
+      "date": "2025-10-20"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:55.167389"
+  },
+  {
+    "original": {
+      "text": "Progress in anti-ageing drug research for age-related diseases: A review\n\n\"This review explores the anti-ageing potential of nine repurposed drugs:\n\naspirin, \natorvastatin, \nenalapril, \nmetformin, \ncanagliflozin, \nliraglutide, \nacarbose, \nN-acetylcysteine and\n",
+      "author": "AgingdocDr David BarzilaiMD PhD MS MBA DipABLM",
+      "handle": "@agingdoc1",
+      "timestamp": "2025-12-23T12:25:00.000Z",
+      "display_time": "Dec 23, 2025",
+      "url": "https://x.com/agingdoc1/status/2003441709212901815",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 29,
+      "date": "2025-12-23"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:56.170675"
+  },
+  {
+    "original": {
+      "text": "I'm 19\ncan't even code\n\ntoday my first ever app just got approved on the app store\n\ntech stack:\n- Anything\n\nvibe coding is very real",
+      "author": "Nathan Geckler",
+      "handle": "@NathanGeckler",
+      "timestamp": "2025-11-13T17:30:22.000Z",
+      "display_time": "Nov 13, 2025",
+      "url": "https://x.com/NathanGeckler/status/1989023043813826779",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 26,
+      "date": "2025-11-13"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:57.172974"
+  },
+  {
+    "original": {
+      "text": "Nba niche - hit or miss. as long as ur packaging is decent, you will get traction, just have to capitalize of momentum & NBA news.",
+      "author": "bi9",
+      "handle": "@bi369x",
+      "timestamp": "2025-08-04T05:13:16.000Z",
+      "display_time": "Aug 4, 2025",
+      "url": "https://x.com/bi369x/status/1952236369855594967",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 26,
+      "date": "2025-08-04"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:58.175646"
+  },
+  {
+    "original": {
+      "text": "I just got CHILLS. This is clearly an homage to the last generational moment in cinema when Space Leia flew into the Big Thingamajig",
+      "author": "HYPERBOREAN PARALLAX",
+      "handle": "@gaussianReverie",
+      "timestamp": "2026-01-01T20:08:19.000Z",
+      "display_time": "Jan 1",
+      "url": "https://x.com/gaussianReverie/status/2006819796441255976",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 24,
+      "date": "2026-01-01"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:45:59.192778"
+  },
+  {
+    "original": {
+      "text": "i just asked \n@ManusAI\n to build something so i can keep track of daily tweets on X \n\nthis is what it built :",
+      "author": "aasha",
+      "handle": "@aashatwt",
+      "timestamp": "2026-01-03T15:34:24.000Z",
+      "display_time": "Jan 3",
+      "url": "https://x.com/aashatwt/status/2007475640153370735",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 23,
+      "date": "2026-01-03"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:00.221524"
+  },
+  {
+    "original": {
+      "text": "literally just pinterest images & lists\n\n6.1M views, 3.3M views, 3M views, 749.7k views\n\npromoting \"ditto list app\" w/ tiktok slideshows",
+      "author": "Matt Welter",
+      "handle": "@mattwelter",
+      "timestamp": "2026-01-16T18:54:09.000Z",
+      "display_time": "Jan 16",
+      "url": "https://x.com/mattwelter/status/2012236952087699950",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 21,
+      "date": "2026-01-16"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:01.226422"
+  },
+  {
+    "original": {
+      "text": "Ramadan is just 30 days away.\n\nHere are 6 christian apps making $30K-$2M/month that you could replicate for the islamic market:",
+      "author": "Jacob Rodri",
+      "handle": "@jacobrodri_",
+      "timestamp": "2026-01-12T14:18:00.000Z",
+      "display_time": "Jan 12",
+      "url": "https://x.com/jacobrodri_/status/2010717904116019214",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 21,
+      "date": "2026-01-12"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:02.231040"
+  },
+  {
+    "original": {
+      "text": "Someone in India just paid my app \n$33 to quit gooning \n\nTranslate your app and\nmake it available everywhere.",
+      "author": "Ernesto Lopez",
+      "handle": "@ErnestoSOFTWARE",
+      "timestamp": "2025-11-14T16:16:03.000Z",
+      "display_time": "Nov 14, 2025",
+      "url": "https://x.com/ErnestoSOFTWARE/status/1989366731048116520",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 19,
+      "date": "2025-11-14"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:03.238256"
+  },
+  {
+    "original": {
+      "text": " How to Make Any Style of Animation for FREE for Your YouTube Automation Videos (using only Free AI tools)",
+      "author": "Tryahd",
+      "handle": "@tryahdd",
+      "timestamp": "2025-11-07T16:27:04.000Z",
+      "display_time": "Nov 7, 2025",
+      "url": "https://x.com/tryahdd/status/1986832784300626420",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 19,
+      "date": "2025-11-07"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:04.241108"
+  },
+  {
+    "original": {
+      "text": "if ur not drinking 20 beers with me then I can only assume ur drinking 20 beers against me",
+      "author": "赌徒 ",
+      "handle": "@chinatownmule",
+      "timestamp": "2025-08-04T20:17:32.000Z",
+      "display_time": "Aug 4, 2025",
+      "url": "https://x.com/chinatownmule/status/1952463939998204170",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 19,
+      "date": "2025-08-04"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:05.270976"
+  },
+  {
+    "original": {
+      "text": "90-day plan to grow an audience on X.\n\n(he grew from 0 to 37k followers in 12 months)",
+      "author": "Florian Darroman",
+      "handle": "@floriandarroman",
+      "timestamp": "2026-01-14T08:02:00.000Z",
+      "display_time": "Jan 14",
+      "url": "https://x.com/floriandarroman/status/2011348056231305650",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 18,
+      "date": "2026-01-14"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:06.305696"
+  },
+  {
+    "original": {
+      "text": "QUICK, NO TIME TO EXPLAIN, WE HAVE TO PLAY THE CRITICALLY ACCLAIMED MMORPG FINAL FANTASY 14 ALL WEEKEND",
+      "author": "syren",
+      "handle": "@heelsyren",
+      "timestamp": "2025-11-21T23:29:34.000Z",
+      "display_time": "Nov 21, 2025",
+      "url": "https://x.com/heelsyren/status/1992012540520575115",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 18,
+      "date": "2025-11-21"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:07.337392"
+  },
+  {
+    "original": {
+      "text": "Working with creators I never thought possible is so much fun! \n\n2 thumbnails I designed for \n@jakepaul\n! ",
+      "author": "Dill",
+      "handle": "@DillToma",
+      "timestamp": "2025-11-19T19:16:06.000Z",
+      "display_time": "Nov 19, 2025",
+      "url": "https://x.com/DillToma/status/1991223981198692559",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 18,
+      "date": "2025-11-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:08.347857"
+  },
+  {
+    "original": {
+      "text": "How do I tell her me and the bros have generated monumental wealth off  transparent try on hauls",
+      "author": "Nick",
+      "handle": "@xNickOnline",
+      "timestamp": "2025-11-18T09:22:23.000Z",
+      "display_time": "Nov 18, 2025",
+      "url": "https://x.com/xNickOnline/status/1990712177427193891",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 18,
+      "date": "2025-11-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:09.351957"
+  },
+  {
+    "original": {
+      "text": "some girl said i look like emily ratajkowski but prettier ppl need to stop lying to me",
+      "author": "sarah",
+      "handle": "@easilyinfa",
+      "timestamp": "2025-11-27T06:17:54.000Z",
+      "display_time": "Nov 27, 2025",
+      "url": "https://x.com/easilyinfa/status/1993927243551436841",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 17,
+      "date": "2025-11-27"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:10.392642"
+  },
+  {
+    "original": {
+      "text": "what does this mean guys, who is this? what kind of influence does this man have?",
+      "author": "FEEBZ",
+      "handle": "@feebzdotnet",
+      "timestamp": "2025-10-08T21:25:14.000Z",
+      "display_time": "Oct 8, 2025",
+      "url": "https://x.com/feebzdotnet/status/1976036187807928683",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 16,
+      "date": "2025-10-08"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:11.439701"
+  },
+  {
+    "original": {
+      "text": "This guy literally just shared the code for his hedge fund's algorithmic trading strategy live:",
+      "author": "Quant Science",
+      "handle": "@quantscience_",
+      "timestamp": "2025-12-29T13:16:35.000Z",
+      "display_time": "Dec 29, 2025",
+      "url": "https://x.com/quantscience_/status/2005629019476074624",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 15,
+      "date": "2025-12-29"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:12.500136"
+  },
+  {
+    "original": {
+      "text": "you can use my released fonts, free or commercial, for video games!! i allow it",
+      "author": "Froyo☆Tam",
+      "handle": "@FroyoTam",
+      "timestamp": "2025-12-07T02:52:52.000Z",
+      "display_time": "Dec 6, 2025",
+      "url": "https://x.com/FroyoTam/status/1997499522520580581",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 4,
+      "has_video": false,
+      "word_count": 15,
+      "date": "2025-12-07"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:13.571619"
+  },
+  {
+    "original": {
+      "text": "I thought this was the most gorgeous photo anyone has ever taken at 4:09 am",
+      "author": "larry davids mistress",
+      "handle": "@b1gdumb1diott",
+      "timestamp": "2025-11-17T02:59:21.000Z",
+      "display_time": "Nov 16, 2025",
+      "url": "https://x.com/b1gdumb1diott/status/1990253394637082769",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 15,
+      "date": "2025-11-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:14.575355"
+  },
+  {
+    "original": {
+      "text": "This guy literally shows how to rewire your brain to stop running from hard things",
+      "author": "Yu Lin",
+      "handle": "@yulintwt",
+      "timestamp": "2025-11-14T10:00:09.000Z",
+      "display_time": "Nov 14, 2025",
+      "url": "https://x.com/yulintwt/status/1989272131751096800",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 15,
+      "date": "2025-11-14"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:15.602581"
+  },
+  {
+    "original": {
+      "text": "I just found this Agartha edit for a Catholic High School while scrolling reels ",
+      "author": "Become A Saint",
+      "handle": "@BeSaintly",
+      "timestamp": "2025-11-27T02:36:50.000Z",
+      "display_time": "Nov 26, 2025",
+      "url": "https://x.com/BeSaintly/status/1993871610613281154",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 14,
+      "date": "2025-11-27"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:16.606958"
+  },
+  {
+    "original": {
+      "text": "i made THE BEST SUB BASS EVER and gave it away for free :3",
+      "author": "(un)familiar.",
+      "handle": "@unfamiliartunes",
+      "timestamp": "2025-11-22T18:00:00.000Z",
+      "display_time": "Nov 22, 2025",
+      "url": "https://x.com/unfamiliartunes/status/1992291993293082997",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 14,
+      "date": "2025-11-22"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:17.613230"
+  },
+  {
+    "original": {
+      "text": "LEAKED: My formula to blow up YouTube channels every time\n\nhope this helps :)",
+      "author": "HC",
+      "handle": "@YTAvision",
+      "timestamp": "2025-11-18T15:33:00.000Z",
+      "display_time": "Nov 18, 2025",
+      "url": "https://x.com/YTAvision/status/1990805445657919907",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 14,
+      "date": "2025-11-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:18.640663"
+  },
+  {
+    "original": {
+      "text": "It’s a beautiful day to harvest free, natural shampoo, from the backyard \nJUNGLE LIVING",
+      "author": "Ginger",
+      "handle": "@HandyGingerGal",
+      "timestamp": "2025-08-04T18:09:25.000Z",
+      "display_time": "Aug 4, 2025",
+      "url": "https://x.com/HandyGingerGal/status/1952431697816944852",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 14,
+      "date": "2025-08-04"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:19.685892"
+  },
+  {
+    "original": {
+      "text": "This guy literally shows how to launch tech products on a $0 budget",
+      "author": "Yu Lin",
+      "handle": "@yulintwt",
+      "timestamp": "2026-01-11T15:59:03.000Z",
+      "display_time": "Jan 11",
+      "url": "https://x.com/yulintwt/status/2010380945589953014",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 13,
+      "date": "2026-01-11"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:20.734879"
+  },
+  {
+    "original": {
+      "text": "how to start a 100% faceless AI youtube channel\n\nfull free course, enjoy",
+      "author": "Leo Grundström",
+      "handle": "@grundstromleo",
+      "timestamp": "2025-11-20T11:45:40.000Z",
+      "display_time": "Nov 20, 2025",
+      "url": "https://x.com/grundstromleo/status/1991473012496109747",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 13,
+      "date": "2025-11-20"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:21.750434"
+  },
+  {
+    "original": {
+      "text": "Gemini 3 just one-shotted this with a single prompt\nFrontend Devs are doomed",
+      "author": "Karan",
+      "handle": "@karaan_dev",
+      "timestamp": "2025-11-19T12:56:33.000Z",
+      "display_time": "Nov 19, 2025",
+      "url": "https://x.com/karaan_dev/status/1991128462967332875",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 13,
+      "date": "2025-11-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:22.766424"
+  },
+  {
+    "original": {
+      "text": "sport betting with ai hot chicks\n\nthis is literally a cheat code",
+      "author": "MAX",
+      "handle": "@maxxmalist",
+      "timestamp": "2025-11-12T15:12:08.000Z",
+      "display_time": "Nov 12, 2025",
+      "url": "https://x.com/maxxmalist/status/1988625869678473558",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 12,
+      "date": "2025-11-12"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:23.768609"
+  },
+  {
+    "original": {
+      "text": "Haunting sound Roman soldiers would have heard Celtic enemies make before battle",
+      "author": "Cigarette Nostalgia",
+      "handle": "@CigsMake",
+      "timestamp": "2025-10-17T22:05:00.000Z",
+      "display_time": "Oct 17, 2025",
+      "url": "https://x.com/CigsMake/status/1979307684760588486",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 12,
+      "date": "2025-10-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:24.809964"
+  },
+  {
+    "original": {
+      "text": "you can learn prompt engineering from Vanderbilt University for free...",
+      "author": "Machina",
+      "handle": "@EXM7777",
+      "timestamp": "2025-08-04T14:59:02.000Z",
+      "display_time": "Aug 4, 2025",
+      "url": "https://x.com/EXM7777/status/1952383784672022952",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 10,
+      "date": "2025-08-04"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:25.844175"
+  },
+  {
+    "original": {
+      "text": "wealth managers putting your money in an index fund",
+      "author": "Alexandra Semenova",
+      "handle": "@alexandraandnyc",
+      "timestamp": "2025-12-29T17:36:05.000Z",
+      "display_time": "Dec 29, 2025",
+      "url": "https://x.com/alexandraandnyc/status/2005694323351068676",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 9,
+      "date": "2025-12-29"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:26.848601"
+  },
+  {
+    "original": {
+      "text": "This website does literally one thing and makes $480,000/year.",
+      "author": "Starter Story",
+      "handle": "@starter_story",
+      "timestamp": "2025-11-13T21:04:42.000Z",
+      "display_time": "Nov 13, 2025",
+      "url": "https://x.com/starter_story/status/1989076983058493863",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 9,
+      "date": "2025-11-13"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:27.887734"
+  },
+  {
+    "original": {
+      "text": "is this what the youth consider maidenless behaviour or",
+      "author": "caitlyn",
+      "handle": "@gravxlyn",
+      "timestamp": "2025-09-22T16:59:59.000Z",
+      "display_time": "Sep 22, 2025",
+      "url": "https://x.com/gravxlyn/status/1970171227626180655",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 9,
+      "date": "2025-09-22"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:28.895545"
+  },
+  {
+    "original": {
+      "text": "Landing page design delivered. \n\nHow did we cook?",
+      "author": "Ahtasham",
+      "handle": "@Ahtasham_Design",
+      "timestamp": "2026-01-17T16:46:35.000Z",
+      "display_time": "Jan 17",
+      "url": "https://x.com/Ahtasham_Design/status/2012567236490211811",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 8,
+      "date": "2026-01-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:29.905725"
+  },
+  {
+    "original": {
+      "text": "\"So.. you’ve been unemployed for how long again?\"",
+      "author": "Neet",
+      "handle": "@neet_sol",
+      "timestamp": "2025-11-19T17:32:47.000Z",
+      "display_time": "Nov 19, 2025",
+      "url": "https://x.com/neet_sol/status/1991197979898794159",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 8,
+      "date": "2025-11-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:30.966856"
+  },
+  {
+    "original": {
+      "text": "AI could never create something like this",
+      "author": "Hewar",
+      "handle": "@hewarsaber",
+      "timestamp": "2026-01-11T07:41:02.000Z",
+      "display_time": "Jan 11",
+      "url": "https://x.com/hewarsaber/status/2010255615776469396",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 7,
+      "date": "2026-01-11"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:31.972277"
+  },
+  {
+    "original": {
+      "text": "This is basically what happened last night",
+      "author": "Soylord9001",
+      "handle": "@Memelord9420",
+      "timestamp": "2026-01-03T18:10:43.000Z",
+      "display_time": "Jan 3",
+      "url": "https://x.com/Memelord9420/status/2007514978430095673",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 7,
+      "date": "2026-01-03"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:32.987737"
+  },
+  {
+    "original": {
+      "text": "A Brilliant $2,000,000/Month Shopify Niche Store",
+      "author": "Arie Scherson",
+      "handle": "@ariesnotebook",
+      "timestamp": "2026-01-17T19:02:39.000Z",
+      "display_time": "Jan 17",
+      "url": "https://x.com/ariesnotebook/status/2012601477152317453",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 6,
+      "date": "2026-01-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:33.989352"
+  },
+  {
+    "original": {
+      "text": "glad you helped him out tho",
+      "author": "Bluntversion",
+      "handle": "@Bluntversion",
+      "timestamp": "2026-01-03T03:08:11.000Z",
+      "display_time": "Jan 2",
+      "url": "https://x.com/Bluntversion/status/2007287851155865669",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 6,
+      "date": "2026-01-03"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:34.994455"
+  },
+  {
+    "original": {
+      "text": "Sydney Melman, the American Gio Scotti",
+      "author": "Literally Shaking",
+      "handle": "@mashaloo",
+      "timestamp": "2025-11-20T01:39:07.000Z",
+      "display_time": "Nov 19, 2025",
+      "url": "https://x.com/mashaloo/status/1991320367650963598",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 6,
+      "date": "2025-11-20"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:36.001837"
+  },
+  {
+    "original": {
+      "text": "Ecom is getting so icy man",
+      "author": "Arie Scherson",
+      "handle": "@ariesnotebook",
+      "timestamp": "2025-11-13T21:54:28.000Z",
+      "display_time": "Nov 13, 2025",
+      "url": "https://x.com/ariesnotebook/status/1989089508441427988",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 6,
+      "date": "2025-11-13"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:37.004508"
+  },
+  {
+    "original": {
+      "text": "Go checkout the podcast with \n@TheoVon",
+      "author": "Amish Dude",
+      "handle": "@ThatAmishdude",
+      "timestamp": "2025-09-03T11:47:41.000Z",
+      "display_time": "Sep 3, 2025",
+      "url": "https://x.com/ThatAmishdude/status/1963207266808614928",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 6,
+      "date": "2025-09-03"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:38.011516"
+  },
+  {
+    "original": {
+      "text": "This is your competition btw",
+      "author": "Buyer of Media",
+      "handle": "@iblamejulius",
+      "timestamp": "2026-01-03T02:29:19.000Z",
+      "display_time": "Jan 2",
+      "url": "https://x.com/iblamejulius/status/2007278067488878879",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 5,
+      "date": "2026-01-03"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:39.019841"
+  },
+  {
+    "original": {
+      "text": "Rate my taste in women",
+      "author": "Alexander 𖤓 Nietzschean Vitalist",
+      "handle": "@UbermenschMind",
+      "timestamp": "2025-11-23T19:00:33.000Z",
+      "display_time": "Nov 23, 2025",
+      "url": "https://x.com/UbermenschMind/status/1992669618067128590",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 4,
+      "has_video": false,
+      "word_count": 5,
+      "date": "2025-11-23"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:40.025861"
+  },
+  {
+    "original": {
+      "text": "tomorrow\ndeath stranding 2\ngoty…",
+      "author": "ameliimoo",
+      "handle": "@ameliimoo",
+      "timestamp": "2025-11-19T22:10:27.000Z",
+      "display_time": "Nov 19, 2025",
+      "url": "https://x.com/ameliimoo/status/1991267854574895233",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 5,
+      "date": "2025-11-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:41.029747"
+  },
+  {
+    "original": {
+      "text": "Happy International Men’s Day kings",
+      "author": "Silly Little Guy",
+      "handle": "@Czar_Of_Silly",
+      "timestamp": "2025-11-19T14:52:58.000Z",
+      "display_time": "Nov 19, 2025",
+      "url": "https://x.com/Czar_Of_Silly/status/1991157761757843756",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 5,
+      "date": "2025-11-19"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:42.044686"
+  },
+  {
+    "original": {
+      "text": "techno for your office commute ",
+      "author": "joanna ⋆ ☆",
+      "handle": "@pixiejoanna",
+      "timestamp": "2025-08-03T16:31:58.000Z",
+      "display_time": "Aug 3, 2025",
+      "url": "https://x.com/pixiejoanna/status/1952044784698446230",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 5,
+      "date": "2025-08-03"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:43.078715"
+  },
+  {
+    "original": {
+      "text": "https://\nx.com/forallcurious/\n/forallcurious/status/2011909545283764293\n…",
+      "author": "Based Medical",
+      "handle": "@BasedMedical",
+      "timestamp": "2026-01-17T05:00:48.000Z",
+      "display_time": "Jan 17",
+      "url": "https://x.com/BasedMedical/status/2012389621343350977",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 4,
+      "date": "2026-01-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:44.087736"
+  },
+  {
+    "original": {
+      "text": "THE CHIEFS ARE .500",
+      "author": "jess ",
+      "handle": "@JessNoFace",
+      "timestamp": "2025-11-28T01:03:31.000Z",
+      "display_time": "Nov 27, 2025",
+      "url": "https://x.com/JessNoFace/status/1994210512297410804",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 4,
+      "date": "2025-11-28"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:45.089915"
+  },
+  {
+    "original": {
+      "text": "i don’t wana work",
+      "author": "jadynn",
+      "handle": "@holepicz",
+      "timestamp": "2025-11-20T16:36:36.000Z",
+      "display_time": "Nov 20, 2025",
+      "url": "https://x.com/holepicz/status/1991546228669313356",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 4,
+      "date": "2025-11-20"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:46.139883"
+  },
+  {
+    "original": {
+      "text": "зробила вам фотку моря",
+      "author": "Шляхтянка",
+      "handle": "@shepeeress_old",
+      "timestamp": "2025-08-02T16:41:31.000Z",
+      "display_time": "Aug 2, 2025",
+      "url": "https://x.com/shepeeress_old/status/1951684800751841334",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 4,
+      "date": "2025-08-02"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:47.147563"
+  },
+  {
+    "original": {
+      "text": "Nightjob\n#blowjob #deepthroat",
+      "author": "Asian Deepthroat",
+      "handle": "@Bjlover22",
+      "timestamp": "2025-12-22T04:56:34.000Z",
+      "display_time": "Dec 21, 2025",
+      "url": "https://x.com/Bjlover22/status/2002966470645707125",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 3,
+      "date": "2025-12-22"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:48.154293"
+  },
+  {
+    "original": {
+      "text": "Shotta Flow-NLE Choppa",
+      "author": "buzhidao",
+      "handle": "@buzhidao55_",
+      "timestamp": "2025-11-28T13:48:30.000Z",
+      "display_time": "Nov 28, 2025",
+      "url": "https://x.com/buzhidao55_/status/1994403026745082337",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 3,
+      "date": "2025-11-28"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:49.156636"
+  },
+  {
+    "original": {
+      "text": "good afternoon <3",
+      "author": "tinkerbelle’sxy goth sis",
+      "handle": "@sidmmow",
+      "timestamp": "2025-11-22T19:07:24.000Z",
+      "display_time": "Nov 22, 2025",
+      "url": "https://x.com/sidmmow/status/1992308954152730832",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 3,
+      "date": "2025-11-22"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:50.160986"
+  },
+  {
+    "original": {
+      "text": "Warped Orlando ‘25 ",
+      "author": "⋆༺ hails ༻⋆",
+      "handle": "@hvileyrose",
+      "timestamp": "2025-11-17T05:20:46.000Z",
+      "display_time": "Nov 17, 2025",
+      "url": "https://x.com/hvileyrose/status/1990288983893705154",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 3,
+      "date": "2025-11-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:51.164000"
+  },
+  {
+    "original": {
+      "text": "face and outfit",
+      "author": "𝒟𝑒𝑒",
+      "handle": "@P13CE3",
+      "timestamp": "2025-08-23T00:37:49.000Z",
+      "display_time": "Aug 22, 2025",
+      "url": "https://x.com/P13CE3/status/1959052422166302812",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 2,
+      "has_video": false,
+      "word_count": 3,
+      "date": "2025-08-23"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:52.168022"
+  },
+  {
+    "original": {
+      "text": "it works",
+      "author": "NEET CHUD",
+      "handle": "@NeetChud888",
+      "timestamp": "2026-01-17T18:12:22.000Z",
+      "display_time": "Jan 17",
+      "url": "https://x.com/NeetChud888/status/2012588822937149905",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 2,
+      "date": "2026-01-17"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:53.174367"
+  },
+  {
+    "original": {
+      "text": "Happy Thanksgiving!",
+      "author": "Taylor",
+      "handle": "@outdoorswithtay",
+      "timestamp": "2025-11-27T17:13:27.000Z",
+      "display_time": "Nov 27, 2025",
+      "url": "https://x.com/outdoorswithtay/status/1994092217292738854",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 2,
+      "date": "2025-11-27"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:54.176624"
+  },
+  {
+    "original": {
+      "text": "sweet dreams",
+      "author": "@cyberanimegf",
+      "handle": "@cyberanimegf",
+      "timestamp": "2025-11-18T06:05:19.000Z",
+      "display_time": "Nov 18, 2025",
+      "url": "https://x.com/cyberanimegf/status/1990662586166399452",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 2,
+      "date": "2025-11-18"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:55.180677"
+  },
+  {
+    "original": {
+      "text": "that hurted:(",
+      "author": "jadynn",
+      "handle": "@holepicz",
+      "timestamp": "2025-11-16T19:39:43.000Z",
+      "display_time": "Nov 16, 2025",
+      "url": "https://x.com/holepicz/status/1990142760951640402",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 2,
+      "date": "2025-11-16"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:56.184112"
+  },
+  {
+    "original": {
+      "text": "miffy",
+      "author": "ivero #DEALINGWITHTHECURSE",
+      "handle": "@iveroisis",
+      "timestamp": "2025-11-27T18:45:33.000Z",
+      "display_time": "Nov 27, 2025",
+      "url": "https://x.com/iveroisis/status/1994115392306880892",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 1,
+      "date": "2025-11-27"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:57.190340"
+  },
+  {
+    "original": {
+      "text": "hey",
+      "author": "skarlet",
+      "handle": "@skarletxfyre",
+      "timestamp": "2025-11-16T23:02:10.000Z",
+      "display_time": "Nov 16, 2025",
+      "url": "https://x.com/skarletxfyre/status/1990193705425465464",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 1,
+      "date": "2025-11-16"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:58.196456"
+  },
+  {
+    "original": {
+      "text": "Fairytale",
+      "author": "Kimori",
+      "handle": "@Kimori_only",
+      "timestamp": "2025-11-16T10:08:35.000Z",
+      "display_time": "Nov 16, 2025",
+      "url": "https://x.com/Kimori_only/status/1989999029980131558",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": true,
+      "word_count": 1,
+      "date": "2025-11-16"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:46:59.199231"
+  },
+  {
+    "original": {
+      "text": "Ai?",
+      "author": "bi9",
+      "handle": "@bi369x",
+      "timestamp": "2025-11-14T15:22:20.000Z",
+      "display_time": "Nov 14, 2025",
+      "url": "https://x.com/bi369x/status/1989353210201645356",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 1,
+      "date": "2025-11-14"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:47:00.201522"
+  },
+  {
+    "original": {
+      "text": "Morning ",
+      "author": "Steff ",
+      "handle": "@SteffSenties",
+      "timestamp": "2025-08-04T16:51:37.000Z",
+      "display_time": "Aug 4, 2025",
+      "url": "https://x.com/SteffSenties/status/1952412117413363909",
+      "external_link": "",
+      "has_images": true,
+      "image_count": 1,
+      "has_video": false,
+      "word_count": 1,
+      "date": "2025-08-04"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:47:01.204799"
+  },
+  {
+    "original": {
+      "text": "Steal my Nano Banana prompt to transform any logo or design into stunning visual assets with precise control over style and effects.\n\n---------------------------------------\nULTIMATE JSON IMAGE GENERATOR\n---------------------------------------\n\nYou are a specialized visual design consultant who helps users transform their brand assets or products into stunning, professional visual designs.\n\nYour expertise lies in converting basic logos and images into sophisticated visual treatments using structured JSON prompts for ChatGPT image generation.\n\nPHASE 1: BRAND & DESIGN GOALS ASSESSMENT\nBegin by asking the user these key questions:\n\n\"What type of image are you looking to create? (Logo transformation, product mockup, social media graphic, etc.)\"\n\"Do you have an existing logo or image you'd like to transform? If so, you'll need to upload it during our conversation.\"\n\"What style or visual treatment are you hoping to achieve? (Examples: 3D effect, ethereal smoke, crystal, metallic, paper craft, etc.)\"\n\"What is your brand's color scheme? (Please provide main colors or hex codes if available)\"\n\"What feeling or impression should the final image convey to your audience?\"\n\nAfter receiving their answers, confirm you understand their vision and say: \"Type 'continue' to proceed to the technical design phase.\"\n\nPHASE 2: VISUAL STYLE RECOMMENDATION\nBased on the user's requirements, recommend 2-3 specific visual treatments that would work well for their needs.\n\nFor each recommendation:\nProvide a brief description of the visual style\nExplain why it would work well for their specific use case\nHighlight the emotional impact it would create\n\nInclude specific examples like:\n\"Ethereal Smoke Effect: Perfect for creating a sense of mystery and elegance\"\n\"Crystal Geode Treatment: Ideal for brands focusing on premium quality and uniqueness\"\n\"Dimensional Paper Craft: Great for creative brands wanting a handcrafted feel\"\n\nAsk the user which style they prefer and say: \"Type 'continue' when you've selected a style.\"\n\nPHASE 3: JSON STRUCTURE GENERATION\nSay: \"Now I'll create a detailed JSON structure that will precisely control how your image is transformed. This technical blueprint ensures consistent, high-quality results.\"\n\nCreate a comprehensive JSON structure tailored to their chosen visual style. Include these key components:\n{\n\"style\": \"[photorealistic/stylized/abstract] [specific technique]\",\n\"material\": \"[detailed material description with physical properties]\",\n\"[material]_properties\": {\n\"property1\": \"[detailed description]\",\n\"property2\": \"[detailed description]\",\n\"property3\": \"[detailed description]\"\n},\n\"logo_treatment\": {\n\"integration_method\": \"[how logo integrates with the material]\",\n\"visibility_mechanism\": \"[how logo remains visible/prominent]\",\n\"formation_logic\": \"[natural/logical explanation for effect]\"\n},\n\"lighting\": {\n\"primary\": \"[main lighting approach]\",\n\"secondary\": \"[accent lighting details]\",\n\"interaction\": \"[how light interacts with material]\"\n},\n\"color_scheme\": {\n\"primary\": \"[user's brand color implementation]\",\n\"secondary\": \"[complementary color details]\",\n\"accents\": \"[highlight color application]\"\n},\n\"environment\": {\n\"setting\": \"[contextual environment if relevant]\",\n\"perspective\": \"[viewing angle and distance]\",\n\"scale\": \"[size relationship details]\"\n},\n\"post_processing\": {\n\"effect1\": \"[specific enhancement technique]\",\n\"effect2\": \"[specific enhancement technique]\",\n\"realism_enhancement\": \"[details for photorealistic treatments]\"\n}\n}\nEnsure each section is thoroughly customized to their specific needs with detailed, descriptive values.\nAfter presenting the JSON structure, say: \"Type 'continue' to receive instructions on how to use this with ChatGPT image generator.\"\nPHASE 4: IMPLEMENTATION GUIDE\nProvide clear instructions for using the JSON structure:\n\"To transform your image using this JSON structure:\n\n1. Prepare your image:\n- Ensure your logo/product/object has a transparent background (PNG format)\n- For best results, use a simple, clear version of your logo\n\n2. Use this exact prompt with your preferred ChatGPT image generator:\nRetexture this image following my JSON aesthetic below, maintaining the shape of the logo/object in the image:\n\n[PASTE THE ENTIRE JSON STRUCTURE HERE]\n\n3. Upload your logo/image when prompted by the AI tool\n\n4. For variations or adjustments:\n- Modify specific elements in the JSON structure\n- Keep the overall structure intact for consistency\n- Experiment with different material properties for varied effects\n\nWould you like me to make any adjustments to the JSON structure before you use it?\"\n\nPHASE 5: REFINEMENT & EXPANSION\nOffer additional options to enhance their results:\n\"Based on your specific needs, here are some ways to expand your visual branding:\n\n1. Create a consistent brand asset library by using this same JSON structure with slight variations for:\nWebsite headers\nSocial media profiles\nMarketing materials\nProduct packaging\n\n2. Seasonal or campaign variations can be created by modifying:\nColor scheme section for seasonal themes\nMaterial properties for different campaigns\nLighting for mood variations\n\n3. For additional visual styles, I can create alternative JSON structures that maintain your brand identity while exploring different treatments.\n\nWould you like me to create any additional JSON structures for alternative visual styles?\"\n\nFollow these guidelines throughout:\nUse clear, specific language that balances technical accuracy with accessibility\nExplain technical terms when necessary\nFocus on creating practical, immediately usable outputs\nMaintain a helpful, consultative tone\n\nBegin by asking the user about their brand and design goals for the image transformation.",
+      "author": "Alex Prompter",
+      "handle": "@alex_prompter",
+      "timestamp": "2025-11-21T23:34:47.000Z",
+      "display_time": "Nov 21, 2025",
+      "url": "https://x.com/alex_prompter/status/1992013852897148989",
+      "external_link": "",
+      "has_images": false,
+      "image_count": 0,
+      "has_video": false,
+      "word_count": 779,
+      "date": "2025-11-21"
+    },
+    "error": "Page.goto: Target page, context or browser has been closed",
+    "scraped_at": "2026-01-19T05:47:02.240387"
+  }
+]

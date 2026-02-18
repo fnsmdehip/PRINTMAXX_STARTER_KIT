@@ -1,0 +1,56 @@
+[
+  {
+    "op": "AI Agent-as-a-Service",
+    "thesis": "Businesses need AI agents but cant build them. Sell pre-built agents for specific verticals (real estate, legal, medical intake).",
+    "edge": "Claude Code builds agent in 2-4 hours. Charge $500-5K per agent + $50-200/mo maintenance.",
+    "viability": "HIGH - $7.6B market growing 30% CAGR. Demand >> Supply in 2026.",
+    "gtm": "Cold email to businesses in target vertical. Offer free 7-day trial. Convert to monthly.",
+    "validation": "Check if competitors exist. If yes = market validated. If few = opportunity.",
+    "status": "NEW - NOT IN CURRENT OPS"
+  },
+  {
+    "op": "AI Data Analysis Service",
+    "thesis": "Small businesses have data but no analysts. Offer automated data analysis reports via Claude Code.",
+    "edge": "Claude Code analyzes CSVs/databases in minutes. Charge $200-1K per report.",
+    "viability": "HIGH - Every business has data. Few have analysts. Clear pain point.",
+    "gtm": "Target Shopify stores, SaaS companies. Offer free sample report as lead magnet.",
+    "validation": "Fiverr \"data analysis\" category growing. Check pricing and demand.",
+    "status": "NEW - NOT IN CURRENT OPS"
+  },
+  {
+    "op": "AI-Powered Outreach Orchestrator",
+    "thesis": "Combine Bland AI (voice) + Instantly (email) + LinkedIn automation into unified outreach system. Sell as service.",
+    "edge": "Multi-channel outreach = 3-5x response rate vs single channel. Orchestrate all three.",
+    "viability": "HIGH - B2B lead gen = massive market. Multi-channel is the future but complex to setup.",
+    "gtm": "Use the system to sell itself. Generate leads via the multi-channel system, then sell the system.",
+    "validation": "Check Clay, Apollo pricing. If they charge $149+/mo, our orchestrated service has room.",
+    "status": "NEW - COMBINES EXISTING TOOLS"
+  },
+  {
+    "op": "Programmatic Blog Network",
+    "thesis": "50+ niche blogs, each targeting 100+ long-tail keywords. AI generates all content. Monetize via affiliate + display ads.",
+    "edge": "Claude Code generates entire blog (10-50 posts) in 1-2 hours. Deploy on Cloudflare Pages (free, unlimited bandwidth).",
+    "viability": "MEDIUM - SEO is slow (3-6 months) but compounds. Programmatic = scale advantage.",
+    "gtm": "Target underserved niches with high affiliate commissions. Finance, health, legal.",
+    "validation": "Check Ahrefs/SEMrush for keyword difficulty. Target KD <20 keywords.",
+    "status": "NEW - LEVERAGES EXISTING INFRA (longtail_pages + Cloudflare)"
+  },
+  {
+    "op": "AI Translation Service",
+    "thesis": "Translate existing content (courses, docs, websites) into 10+ languages via Claude. Sell as service.",
+    "edge": "Claude translates at near-human quality. Charge $0.10/word. Automated = 99% margin.",
+    "viability": "HIGH - Translation market $26B. AI disrupting but quality still varies.",
+    "gtm": "List on Fiverr/Upwork. Target course creators, SaaS companies, ecom stores.",
+    "validation": "Check Fiverr translation prices. If $0.05-0.15/word = competitive.",
+    "status": "NEW - PURE CLAUDE CODE ARBITRAGE"
+  },
+  {
+    "op": "AI Meeting Notes Service",
+    "thesis": "Process meeting recordings into structured action items, decisions, and follow-ups.",
+    "edge": "Upload recording \u2192 Claude transcribes + structures \u2192 deliver in 5 min. Charge $10-50/meeting.",
+    "viability": "MEDIUM - Otter.ai exists but expensive. Niche: small teams who dont want subscription.",
+    "gtm": "Target small businesses, freelancers, consultants on LinkedIn.",
+    "validation": "Check Otter.ai pricing ($16.67/mo). Our per-meeting model may appeal to occasional users.",
+    "status": "NEW - EASY TO BUILD AND TEST"
+  }
+]

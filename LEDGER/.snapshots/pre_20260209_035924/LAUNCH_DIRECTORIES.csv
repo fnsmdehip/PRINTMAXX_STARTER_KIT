@@ -1,0 +1,65 @@
+directory_id,directory_name,url,category,traffic_tier,submission_cost,approval_time,submission_difficulty,da_score,traffic_estimate,conversion_potential,notes,status
+LD001,Product Hunt,producthunt.com,MAJOR_LAUNCH,S_TIER,FREE,24-48h,MEDIUM,91,500K+,HIGH,"#1 launch platform, essential for any product",VERIFIED
+LD002,Hacker News,news.ycombinator.com,MAJOR_LAUNCH,S_TIER,FREE,INSTANT,HIGH,93,1M+,MEDIUM,"Show HN posts, brutal audience but huge traffic if trending",VERIFIED
+LD003,Reddit r/SideProject,reddit.com/r/SideProject,REDDIT,A_TIER,FREE,INSTANT,LOW,91,430K members,HIGH,"Most launch-friendly subreddit, high conversion",VERIFIED
+LD004,BetaList,betalist.com,MAJOR_LAUNCH,B_TIER,FREE,3-7d,LOW,68,50K+,MEDIUM,"Pre-launch signups, good for waitlist building",VERIFIED
+LD005,DevHunt,devhunt.org,MAJOR_LAUNCH,B_TIER,FREE,24-48h,LOW,45,10K+,MEDIUM,"Dev-focused Product Hunt alternative",VERIFIED
+LD006,PeerList,peerlist.io,MAJOR_LAUNCH,C_TIER,FREE,24h,LOW,52,5K+,LOW,"Dev community, lower traffic than PH",VERIFIED
+LD007,Stacker News,stacker.news,MAJOR_LAUNCH,C_TIER,FREE,INSTANT,MEDIUM,48,2K+,LOW,"Bitcoin/crypto audience, niche",VERIFIED
+LD008,AppSumo,appsumo.com,REVENUE,A_TIER,$$$,30-60d,VERY_HIGH,79,2M+,VERY_HIGH,"Lifetime deals, immediate cash flow $5K-50K",VERIFIED
+LD009,IndieHackers,indiehackers.com,FOUNDERS,A_TIER,FREE,INSTANT,LOW,80,91K members,MEDIUM,"Share milestones, not primary launch",VERIFIED
+LD010,Reddit r/Entrepreneur,reddit.com/r/Entrepreneur,REDDIT,B_TIER,FREE,INSTANT,MEDIUM,91,4.8M members,MEDIUM,"Lower launch tolerance than SideProject",VERIFIED
+LD011,Reddit r/startups,reddit.com/r/startups,REDDIT,B_TIER,FREE,INSTANT,MEDIUM,88,1.8M members,MEDIUM,"Strict rules, feedback focus",VERIFIED
+LD012,Reddit r/indiehackers,reddit.com/r/indiehackers,REDDIT,A_TIER,FREE,INSTANT,LOW,75,91K members,HIGH,"Highly engaged indie community",VERIFIED
+LD013,Indie Deals,indiedeals.co,FOUNDERS,C_TIER,FREE,7-14d,LOW,35,<5K,LOW,"Small directory, questionable traffic",UNVERIFIED
+LD014,TinyLaunch,tinylaunch.co,FOUNDERS,C_TIER,FREE,3-7d,LOW,28,<5K,LOW,"Newer directory, building audience",UNVERIFIED
+LD015,TwelveTools,twelvetools.com,FOUNDERS,C_TIER,FREE,7d,LOW,32,<5K,LOW,"Small niche directory",UNVERIFIED
+LD016,ToolFame,toolfame.com,FOUNDERS,C_TIER,FREE,7d,LOW,30,<5K,LOW,"Similar to other small directories",UNVERIFIED
+LD017,SaaSFame,saasfame.com,FOUNDERS,C_TIER,FREE,7-14d,LOW,25,<5K,LOW,"SaaS-specific small directory",UNVERIFIED
+LD018,DirectoryHunt,directoryhunt.com,FOUNDERS,C_TIER,FREE,7d,LOW,22,<5K,LOW,"Meta-directory, low value",UNVERIFIED
+LD019,Fazier,fazier.com,FOUNDERS,C_TIER,FREE,3-7d,LOW,38,<10K,LOW,"Newer directory",UNVERIFIED
+LD020,Firsto,firsto.io,FOUNDERS,C_TIER,FREE,3-7d,LOW,28,<5K,LOW,"First adopters focus",UNVERIFIED
+LD021,IndieTools,indietools.io,FOUNDERS,C_TIER,FREE,7d,LOW,31,<5K,LOW,"Small directory",UNVERIFIED
+LD022,Orynth,orynth.com,FOUNDERS,D_TIER,FREE,7d,LOW,18,<2K,VERY_LOW,"Very small, questionable value",UNVERIFIED
+LD023,Proofy,proofy.io,FOUNDERS,C_TIER,FREE,7d,LOW,26,<5K,LOW,"Newer directory",UNVERIFIED
+LD024,ShipYard HQ,shipyard.live,FOUNDERS,C_TIER,FREE,3-7d,LOW,29,<5K,LOW,"Ship in public focus",UNVERIFIED
+LD025,Shipsquad,shipsquad.com,FOUNDERS,C_TIER,FREE,3-7d,LOW,24,<5K,LOW,"Similar to ShipYard",UNVERIFIED
+LD026,Slocco,slocco.com,FOUNDERS,C_TIER,FREE,7d,LOW,20,<5K,LOW,"Small directory",UNVERIFIED
+LD027,tinystartups,tinystartups.com,FOUNDERS,C_TIER,FREE,7d,LOW,33,<10K,LOW,"Bootstrap/indie focus",UNVERIFIED
+LD028,Toolfolio,toolfolio.io,FOUNDERS,C_TIER,FREE,7d,LOW,27,<5K,LOW,"Tool showcase",UNVERIFIED
+LD029,TryLaunch,trylaunch.com,FOUNDERS,C_TIER,FREE,7d,LOW,21,<5K,LOW,"Newer directory",UNVERIFIED
+LD030,BuiltByMe,builtbyme.co,FOUNDERS,C_TIER,FREE,7d,LOW,23,<5K,LOW,"Maker showcase",UNVERIFIED
+LD031,Garage dev,garage.dev,FOUNDERS,C_TIER,FREE,7d,LOW,34,<10K,LOW,"Dev-focused small directory",UNVERIFIED
+LD032,theresanaifortha,theresanaiforthat.com,AI_NICHE,B_TIER,FREE,3-7d,LOW,55,50K+,MEDIUM,"#1 AI directory, worth it for AI products",VERIFIED
+LD033,ShowMeBestAI,showmebestai.com,AI_NICHE,C_TIER,FREE,7d,LOW,28,<10K,LOW,"Smaller AI directory",UNVERIFIED
+LD034,neeed directory,neeed.to,AI_NICHE,C_TIER,FREE,7d,LOW,31,<10K,LOW,"Need-based AI discovery",UNVERIFIED
+LD035,turbo0,turbo0.com,AI_NICHE,C_TIER,FREE,7d,LOW,25,<5K,LOW,"AI tools directory",UNVERIFIED
+LD036,Directoriesfreetoolnow,directoriesfreetoolnow.com,GLOBAL,D_TIER,FREE,7d,LOW,12,<2K,VERY_LOW,"Likely spam/low quality",UNVERIFIED
+LD037,launchdubai,launchdubai.com,GLOBAL,C_TIER,FREE,7-14d,LOW,22,<5K,LOW,"Dubai-focused, niche geo",UNVERIFIED
+LD038,launchurapp,launchurapp.com,GLOBAL,C_TIER,FREE,7d,LOW,19,<5K,LOW,"Generic directory",UNVERIFIED
+LD039,LaunchBoard,launchboard.io,GLOBAL,C_TIER,FREE,7d,LOW,28,<10K,LOW,"Newer platform",UNVERIFIED
+LD040,ProductClank,productclank.com,GLOBAL,C_TIER,FREE,7d,LOW,24,<5K,LOW,"Small directory",UNVERIFIED
+LD041,RankInPublic,rankinpublic.com,GLOBAL,C_TIER,FREE,7d,LOW,26,<5K,LOW,"Build in public focus",UNVERIFIED
+LD042,SaaSCity,saascity.com,GLOBAL,C_TIER,FREE,7d,LOW,30,<10K,LOW,"SaaS directory",UNVERIFIED
+LD043,TrustMRR,trustmrr.com,GLOBAL,C_TIER,FREE,7d,LOW,23,<5K,LOW,"MRR-focused",UNVERIFIED
+LD044,webdirectorycenter,webdirectorycenter.com,GLOBAL,D_TIER,FREE,7d,LOW,15,<2K,VERY_LOW,"Low quality directory",UNVERIFIED
+LD045,Reddit r/AppIdeas,reddit.com/r/AppIdeas,REDDIT,C_TIER,FREE,INSTANT,LOW,58,110K members,LOW,"Idea validation, not launch",VERIFIED
+LD046,Reddit r/buildinpublic,reddit.com/r/buildinpublic,REDDIT,B_TIER,FREE,INSTANT,LOW,45,60K members,MEDIUM,"Progress updates welcome",VERIFIED
+LD047,Reddit r/business,reddit.com/r/business,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,88,3.2M members,LOW,"News focus, hard to launch",VERIFIED
+LD048,Reddit r/Business_Ideas,reddit.com/r/Business_Ideas,REDDIT,C_TIER,FREE,INSTANT,LOW,52,450K members,LOW,"Idea validation",VERIFIED
+LD049,Reddit r/Entrepreneurs,reddit.com/r/Entrepreneurs,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,65,180K members,LOW,"Lower quality than r/Entrepreneur",VERIFIED
+LD050,Reddit r/EntrepreneurRideAlong,reddit.com/r/EntrepreneurRideAlong,REDDIT,B_TIER,FREE,INSTANT,LOW,68,420K members,MEDIUM,"Case study focus",VERIFIED
+LD051,Reddit r/GrowthHacking,reddit.com/r/GrowthHacking,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,63,230K members,LOW,"Growth tactics, not launches",VERIFIED
+LD052,Reddit r/indiebiz,reddit.com/r/indiebiz,REDDIT,C_TIER,FREE,INSTANT,LOW,42,45K members,MEDIUM,"Smaller but engaged",VERIFIED
+LD053,Reddit r/InternetIsBeautiful,reddit.com/r/InternetIsBeautiful,REDDIT,A_TIER,FREE,INSTANT,VERY_HIGH,91,17M members,HIGH,"Huge traffic but very selective",VERIFIED
+LD054,Reddit r/juststart,reddit.com/r/juststart,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,72,180K members,LOW,"Affiliate/SEO focus",VERIFIED
+LD055,Reddit r/passive_income,reddit.com/r/passive_income,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,68,650K members,LOW,"Product fit uncertain",VERIFIED
+LD056,Reddit r/productivity,reddit.com/r/productivity,REDDIT,B_TIER,FREE,INSTANT,MEDIUM,80,2.8M members,MEDIUM,"Good for productivity apps",VERIFIED
+LD057,Reddit r/SaaS,reddit.com/r/SaaS,REDDIT,A_TIER,FREE,INSTANT,MEDIUM,73,180K members,HIGH,"Best for SaaS launches",VERIFIED
+LD058,Reddit r/scaleinpublic,reddit.com/r/scaleinpublic,REDDIT,C_TIER,FREE,INSTANT,LOW,32,12K members,MEDIUM,"Small but engaged",VERIFIED
+LD059,Reddit r/smallbusiness,reddit.com/r/smallbusiness,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,82,1.8M members,LOW,"Service business focus",VERIFIED
+LD060,Reddit r/Solopreneur,reddit.com/r/Solopreneur,REDDIT,B_TIER,FREE,INSTANT,LOW,58,280K members,MEDIUM,"Solo founder focus",VERIFIED
+LD061,Reddit r/startup,reddit.com/r/startup,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,65,85K members,LOW,"Smaller than r/startups",VERIFIED
+LD062,Reddit r/startup_resources,reddit.com/r/startup_resources,REDDIT,C_TIER,FREE,INSTANT,LOW,42,38K members,LOW,"Resource sharing",VERIFIED
+LD063,Reddit r/vibecoding,reddit.com/r/vibecoding,REDDIT,C_TIER,FREE,INSTANT,LOW,35,15K members,LOW,"Niche dev community",VERIFIED
+LD064,Reddit r/ycombinator,reddit.com/r/ycombinator,REDDIT,C_TIER,FREE,INSTANT,MEDIUM,68,95K members,LOW,"YC applicant focus",VERIFIED

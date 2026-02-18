@@ -1,0 +1,90 @@
+[
+  {
+    "id": "H001",
+    "hypothesis": "Animated paywalls convert 2.9x better than static paywalls",
+    "test": "Deploy animated paywall on PrayerLock/Scripture Streak. Measure conversion vs current.",
+    "metric": "paywall_conversion_rate",
+    "baseline": "current_conversion (measure first)",
+    "target": "2.9x improvement",
+    "effort": "LOW (2-3 hours)",
+    "status": "NOT STARTED",
+    "source": "LEDGER/AB_TESTS_MASTER.csv + paywall optimization playbook"
+  },
+  {
+    "id": "H002",
+    "hypothesis": "Findom content on X/Twitter with #findom #paypig hashtags converts 5x better than general adult hashtags",
+    "test": "Post 20 findom tweets with niche hashtags vs 20 with general hashtags. Track link clicks and conversions.",
+    "metric": "clicks_per_impression",
+    "baseline": "TBD",
+    "target": "5x CTR improvement",
+    "effort": "LOW (1-2 hours)",
+    "status": "NOT STARTED",
+    "source": "findom_tweets_50.csv"
+  },
+  {
+    "id": "H003",
+    "hypothesis": "Cold emails with timeline-based hooks get 10% reply rate vs 4.4% for problem-statement hooks",
+    "test": "Split test 200 cold emails: 100 with timeline hook, 100 with problem hook. Track replies.",
+    "metric": "reply_rate",
+    "baseline": "3.4% (industry avg)",
+    "target": "10%+ reply rate",
+    "effort": "MEDIUM (4-6 hours setup + 1 week measurement)",
+    "status": "NOT STARTED",
+    "source": "Instantly.ai benchmark report 2026"
+  },
+  {
+    "id": "H004",
+    "hypothesis": "Gumroad products with video demos convert 3x better than text-only listings",
+    "test": "Add Kling-generated demo videos to top 3 Gumroad products. Measure conversion change.",
+    "metric": "sales_conversion_rate",
+    "baseline": "current_conversion",
+    "target": "3x improvement",
+    "effort": "MEDIUM (3-4 hours)",
+    "status": "NOT STARTED",
+    "source": "First principles + UGC research"
+  },
+  {
+    "id": "H005",
+    "hypothesis": "Local biz cold emails with attached mockup landing page get 5x more responses than generic offers",
+    "test": "Send 100 emails with mockup attached vs 100 generic. Track response + close rate.",
+    "metric": "response_rate + close_rate",
+    "baseline": "3-5% reply rate",
+    "target": "15%+ reply rate with mockup",
+    "effort": "LOW (pipeline already built)",
+    "status": "NOT STARTED",
+    "source": "local_biz_pipeline.py already generates mockups"
+  },
+  {
+    "id": "H006",
+    "hypothesis": "Bland AI cold calls to recently funded companies (Crunchbase) convert at 6-10% vs 2-3% for cold lists",
+    "test": "Use Bland AI free tier (100 calls/day) to call 200 recently funded cos vs 200 cold list. Track bookings.",
+    "metric": "call_to_meeting_rate",
+    "baseline": "2-3% cold call avg",
+    "target": "6-10% with warm signal",
+    "effort": "MEDIUM (setup Bland AI + Crunchbase scraper)",
+    "status": "NOT STARTED",
+    "source": "Research: funded companies have budget and urgency"
+  },
+  {
+    "id": "H007",
+    "hypothesis": "AI persona accounts that post 3x/day grow 5x faster than 1x/day",
+    "test": "Run 2 identical persona accounts: one posts 1x/day, one posts 3x/day for 30 days. Track follower growth.",
+    "metric": "follower_growth_rate",
+    "baseline": "TBD",
+    "target": "5x faster growth at 3x posting frequency",
+    "effort": "MEDIUM (need 2 accounts, 30 days)",
+    "status": "NOT STARTED",
+    "source": "Platform algorithm research"
+  },
+  {
+    "id": "H008",
+    "hypothesis": "Sending cold emails at 6-8 AM local time gets 42% higher open rate than afternoon sends",
+    "test": "Split 200 identical cold emails: 100 sent at 7 AM, 100 sent at 2 PM. Track opens and replies.",
+    "metric": "open_rate + reply_rate",
+    "baseline": "current open rate",
+    "target": "42% improvement in opens",
+    "effort": "LOW (just change send time in Instantly)",
+    "status": "NOT STARTED",
+    "source": "Instantly.ai benchmark data"
+  }
+]

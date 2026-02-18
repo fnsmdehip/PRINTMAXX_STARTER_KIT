@@ -1,0 +1,43 @@
+id,original_app,revenue_estimate,core_mechanic,niche_angle,mascot_idea,mit_repo,repo_url,build_estimate,priority,status,notes
+1,Opal,600k/mo,screen blocker,faith (PrayerLock),praying angel character,check,TBD,2 weeks,HIGH,RESEARCHING,Already in APP_FACTORY
+2,Opal,600k/mo,screen blocker,fitness (WalkToUnlock),running dog mascot,check,TBD,2 weeks,HIGH,RESEARCHING,Steps to unlock phone
+3,BePresent,300k/mo,app blocker,students (StudyLock),owl mascot,check,TBD,2 weeks,MEDIUM,IDEA,Study mode blocker
+4,Loop Habit Tracker,open source,habit tracking,faith (DailyDevotion),dove mascot,YES,github.com/iSoron/uhabits,1 week,HIGH,HAS_REPO,MIT licensed fork opportunity
+5,Headspace,subscription,meditation,faith (PrayerSpace),angel mascot,check,TBD,3 weeks,MEDIUM,IDEA,Christian meditation/prayer
+6,Strong,subscription,workout tracking,women (FemFit),cat mascot,check,TBD,3 weeks,MEDIUM,IDEA,Women-focused gym tracker
+7,Zero Fasting,200k/mo,fasting timer,longevity (BioMaxx),none,check,TBD,2 weeks,HIGH,BUILT,Multi-protocol biohacking tracker
+8,UMAX,500k/mo,AI face rating,debloat/habits (GlowMaxx),none,check,TBD,2 weeks,HIGH,BUILT,Habit tracker vs AI rating
+9,Biohackr,new,protocol tracker,longevity,none,check,TBD,2 weeks,HIGH,COMPETITOR,Direct competitor to BioMaxx
+10,Cal AI,top grossing,AI calorie tracker,women (CalorieCutie),cat counting calories,check,TBD,2 weeks,HIGHEST,NEW,#1 Health & Fitness - AI photo food logging
+11,Finch Self-Care Pet,high revenue,habit tracking + pet,faith (HolyHabits),dove companion,check,TBD,2 weeks,HIGHEST,NEW,Proven mascot strategy - self-care pet that grows with habits
+12,Yuka,top grossing,food scanner,women (CleanScan),butterfly mascot,check,TBD,2 weeks,HIGH,NEW,#2 Health & Fitness - scan food for health ratings
+13,Flo Cycle,300k+/mo,period tracker,women (FlowFemme),flower mascot,YES,github.com/getify/youperiod.app,2 weeks,HIGHEST,NEW,#4 Health & Fitness - has MIT period tracker repo
+14,Motivation Quotes,established,daily quotes,faith (DailyWord),angel mascot,check,TBD,1 week,MEDIUM,NEW,#13 Health & Fitness - simple quotes app
+15,Strava,500k+/mo,fitness tracking,fitness (StreakRun),running dog,YES,github.com/kilohealth/rn-fitness-tracker,2 weeks,HIGH,NEW,MIT React Native fitness tracker - 123 stars
+16,Calm/Headspace,subscription,meditation timer,faith (PrayerCalm),praying hands,YES,github.com/bhattaraijay05/meditation,2 weeks,HIGH,NEW,MIT meditation app - 61 stars
+17,Muslim Pro,200k+/mo,Islamic prayer times,faith (ChristianPro),cross mascot,YES,github.com/muhammadtalhasultan/Sirat-E-Mustaqeem,2 weeks,HIGH,NEW,Islamic app with 348 stars - adapt for Christian prayers
+18,Planet Fitness,app engagement,gym check-in,fitness (GymBuddy),dog mascot,check,TBD,2 weeks,MEDIUM,NEW,#3 Health & Fitness - gym tracking and community
+19,Oura,wearable data,health tracking,longevity (BioRing),none,check,TBD,3 weeks,MEDIUM,NEW,#9 Health & Fitness - integrate wearable data
+20,BetterMe,coaching,health coaching,women (GlowCoach),butterfly mascot,check,TBD,3 weeks,HIGH,NEW,#17 Health & Fitness - personalized coaching
+21,FitFusion,unknown,AI fitness monitoring,fitness (AICoach),robot dog mascot,YES,github.com/mithilgirish/FitFusion,2 weeks,HIGH,NEW,AI-powered fitness + health monitoring with Bluetooth tracker connectivity
+22,Izzy Samuel Pilates,viral trend,workout challenge,women (PilatesFlow),butterfly mascot,check,TBD,2 weeks,HIGHEST,NEW,25-day Pilates challenge viral on TikTok Jan 2026 - dominant New Year trend
+23,Analog Bag,viral trend,screen time reduction,wellness (ScreenDetox),owl mascot,check,TBD,1 week,HIGH,NEW,Replace phone with books/art/puzzles - viral TikTok trend Jan 2026
+24,75 Medium,challenge tracker,habit tracking,wellness (SoftReset),dove mascot,check,TBD,2 weeks,HIGH,NEW,Softer alternative to 75 Hard - mental health/journaling focus - trending Jan 2026
+25,NativePHP Mobile,50k/mo,developer tools,developer (CodeCompanion),code mascot,check,TBD,3 weeks,MEDIUM,NEW,$100k in first 3 months - PHP desktop/mobile apps - indie hacker success 2025
+26,Reset Meal Planner,unknown,meal prep,wellness (MealReset),chef mascot,check,TBD,2 weeks,MEDIUM,NEW,Post-holiday recovery meal prep - viral TikTok content Jan 2026
+27,Vision Board App,unknown,goal setting,productivity (DreamBoard),star mascot,check,TBD,1 week,HIGH,NEW,Daily check-ins + vision boards - accountability trend Jan 2026
+28,365 Buttons,unknown,habit tracking,productivity (YearButtons),button mascot,check,TBD,1 week,HIGHEST,NEW,One button per day for 365 days - systems not outcomes - viral Jan 2026
+29,Ginger Tea Tracker,unknown,TCM wellness,wellness (TeaTime),tea leaf mascot,check,TBD,1 week,MEDIUM,NEW,Traditional Chinese Medicine tracker - warm ginger tea trend Jan 2026
+30,Reali-TEA Journal,unknown,authentic journaling,wellness (RealJournal),tea cup mascot,check,TBD,2 weeks,HIGH,NEW,Honest grounded journaling vs polished perfection - TikTok shift 2026
+31,Routine Documentary,unknown,transformation tracking,productivity (DayByDay),calendar mascot,check,TBD,2 weeks,HIGH,NEW,Document real transformation year-long - TikTok introspection trend Jan 2026
+32,FitFusion Health Kit,module,HealthKit integration,developer (HealthBridge),health icon,YES,github.com/kilohealth/rn-fitness-tracker,1 week,HIGH,NEW,React Native module Google Fit + Apple HealthKit - 123+ stars MIT license
+33,Workout Builder,unknown,gym tracker,fitness (GymFlow),dumbbell mascot,YES,github.com/kamlnskll/workout-tracker,2 weeks,MEDIUM,NEW,React Native + Expo + Firebase workout builder - sets/reps tracking
+34,One Sec,3-5M ARR,breathing intervention,faith (PrayerSec),praying hands,check,TBD,2 weeks,HIGHEST,NEW,Scripture intervention instead of breathing - unique differentiator from One Sec
+35,Noom,400M+ ARR,psychology quiz,wellness (MindReset),brain mascot,check,TBD,3 weeks,HIGH,NEW,Quiz-based onboarding creates commitment - 15min quiz for behavior change positioning
+36,Sweatcoin,30-50M ARR,walking rewards,faith (PrayerSteps),praying feet,check,TBD,2 weeks,HIGH,NEW,Prayer points for walking - combines Sweatcoin mechanics with faith angle
+37,Freedom,15-20M ARR,cross-platform blocking,family (FamilyFocus),family icon,check,TBD,3 weeks,MEDIUM,NEW,Family screen time manager - parental controls + self-control combo for whole family
+38,Abide,15-25M ARR,scripture meditation,sleep (BibleSleep),moon/stars mascot,check,TBD,2 weeks,HIGH,NEW,Sleep-focused Bible audio - niche positioning for bedtime scripture
+39,StepBet,10-15M ARR,money stakes,fitness (StakeWalk),dollar dog,check,TBD,3 weeks,MEDIUM,NEW,Bet money on step goals - real stakes walking app for accountability
+40,Charity Miles,3-5M ARR,charity walking,faith (PrayerMiles),heart mascot,check,TBD,2 weeks,MEDIUM,NEW,Walk and donate to Christian charities - altruistic motivation for faith audience
+41,ScreenZen,unknown,mindful phone use,couples (CoupleDetox),heart mascot,check,TBD,2 weeks,HIGH,NEW,Couples screen time manager - accountability between partners for phone-free time
+42,Focus Score,Opal feature,gamified metric,students (StudyScore),owl mascot,check,TBD,1 week,HIGH,NEW,Simple focus score for students - gamified study tracking without full app blocker

@@ -1,0 +1,175 @@
+{
+  "achievements": [
+    {
+      "id": "first_steps",
+      "title": "First Steps",
+      "description": "Complete your first unlock",
+      "icon": "shoe-prints",
+      "requirement": 1,
+      "type": "unlock",
+      "tier": "bronze"
+    },
+    {
+      "id": "morning_walker",
+      "title": "Morning Walker",
+      "description": "Unlock 5 times",
+      "icon": "sun",
+      "requirement": 5,
+      "type": "unlock",
+      "tier": "bronze"
+    },
+    {
+      "id": "dedicated_walker",
+      "title": "Dedicated Walker",
+      "description": "Unlock 25 times",
+      "icon": "walking",
+      "requirement": 25,
+      "type": "unlock",
+      "tier": "silver"
+    },
+    {
+      "id": "unlock_master",
+      "title": "Unlock Master",
+      "description": "Unlock 100 times",
+      "icon": "crown",
+      "requirement": 100,
+      "type": "unlock",
+      "tier": "gold"
+    },
+    {
+      "id": "streak_starter",
+      "title": "Streak Starter",
+      "description": "Maintain a 3-day streak",
+      "icon": "fire",
+      "requirement": 3,
+      "type": "streak",
+      "tier": "bronze"
+    },
+    {
+      "id": "week_warrior",
+      "title": "Week Warrior",
+      "description": "Maintain a 7-day streak",
+      "icon": "fire-alt",
+      "requirement": 7,
+      "type": "streak",
+      "tier": "silver"
+    },
+    {
+      "id": "two_week_titan",
+      "title": "Two Week Titan",
+      "description": "Maintain a 14-day streak",
+      "icon": "medal",
+      "requirement": 14,
+      "type": "streak",
+      "tier": "silver"
+    },
+    {
+      "id": "month_master",
+      "title": "Month Master",
+      "description": "Maintain a 30-day streak",
+      "icon": "trophy",
+      "requirement": 30,
+      "type": "streak",
+      "tier": "gold"
+    },
+    {
+      "id": "century_streak",
+      "title": "Century Streak",
+      "description": "Maintain a 100-day streak",
+      "icon": "gem",
+      "requirement": 100,
+      "type": "streak",
+      "tier": "gold"
+    },
+    {
+      "id": "step_500",
+      "title": "500 Club",
+      "description": "Walk 500 steps in one session",
+      "icon": "shoe-prints",
+      "requirement": 500,
+      "type": "steps",
+      "tier": "bronze"
+    },
+    {
+      "id": "step_1000",
+      "title": "1K Walker",
+      "description": "Walk 1,000 steps in one session",
+      "icon": "running",
+      "requirement": 1000,
+      "type": "steps",
+      "tier": "bronze"
+    },
+    {
+      "id": "step_2500",
+      "title": "Power Walker",
+      "description": "Walk 2,500 steps in one session",
+      "icon": "bolt",
+      "requirement": 2500,
+      "type": "steps",
+      "tier": "silver"
+    },
+    {
+      "id": "step_5000",
+      "title": "5K Champion",
+      "description": "Walk 5,000 steps in one session",
+      "icon": "star",
+      "requirement": 5000,
+      "type": "steps",
+      "tier": "silver"
+    },
+    {
+      "id": "step_10000",
+      "title": "10K Legend",
+      "description": "Walk 10,000 steps in one session",
+      "icon": "crown",
+      "requirement": 10000,
+      "type": "steps",
+      "tier": "gold"
+    },
+    {
+      "id": "total_10k",
+      "title": "First 10K",
+      "description": "Walk 10,000 total steps",
+      "icon": "chart-line",
+      "requirement": 10000,
+      "type": "total",
+      "tier": "bronze"
+    },
+    {
+      "id": "total_50k",
+      "title": "50K Milestone",
+      "description": "Walk 50,000 total steps",
+      "icon": "mountain",
+      "requirement": 50000,
+      "type": "total",
+      "tier": "silver"
+    },
+    {
+      "id": "total_100k",
+      "title": "100K Hero",
+      "description": "Walk 100,000 total steps",
+      "icon": "award",
+      "requirement": 100000,
+      "type": "total",
+      "tier": "silver"
+    },
+    {
+      "id": "total_500k",
+      "title": "Half Million",
+      "description": "Walk 500,000 total steps",
+      "icon": "globe",
+      "requirement": 500000,
+      "type": "total",
+      "tier": "gold"
+    },
+    {
+      "id": "total_1m",
+      "title": "Million Stepper",
+      "description": "Walk 1,000,000 total steps",
+      "icon": "infinity",
+      "requirement": 1000000,
+      "type": "total",
+      "tier": "gold"
+    }
+  ]
+}

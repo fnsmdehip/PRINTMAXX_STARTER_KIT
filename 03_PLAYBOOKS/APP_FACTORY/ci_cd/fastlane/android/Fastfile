@@ -1,0 +1,313 @@
+# Android Fastfile - Android-specific lane definitions
+# Import this file from the main Fastfile
+
+default_platform(:android)
+
+platform :android do
+  # ==========================================
+  # Configuration
+  # ==========================================
+
+  OUTPUT_DIR = "app/build/outputs"
+  APK_OUTPUT = "#{OUTPUT_DIR}/apk"
+  AAB_OUTPUT = "#{OUTPUT_DIR}/bundle"
+
+  before_all do
+    # Ensure gradle wrapper is executable
+    sh("chmod +x ../gradlew") if File.exist?("../gradlew")
+  end
+
+  # ==========================================
+  # Build Lanes
+  # ==========================================
+
+  desc "Build debug APK"
+  lane :build_debug do
+    gradle(
+      task: "assembleDebug",
+      print_command: true,
+      print_command_output: true
+    )
+
+    APK.build_output_path = lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]
+  end
+
+  desc "Build release APK"
+  lane :build_release_apk do |options|
+    gradle(
+      task: "assembleRelease",
+      print_command: true,
+      properties: signing_properties
+    )
+  end
+
+  desc "Build release AAB (for Play Store)"
+  lane :build_release do |options|
+    gradle(
+      task: "bundleRelease",
+      print_command: true,
+      properties: signing_properties
+    )
+  end
+
+  # ==========================================
+  # Test Lanes
+  # ==========================================
+
+  desc "Run unit tests"
+  lane :android_test do
+    gradle(
+      task: "testDebugUnitTest",
+      print_command: true
+    )
+  end
+
+  desc "Run instrumented tests"
+  lane :instrumented_test do
+    gradle(
+      task: "connectedDebugAndroidTest",
+      print_command: true
+    )
+  end
+
+  desc "Run all tests"
+  lane :test_all do
+    android_test
+    instrumented_test
+  end
+
+  # ==========================================
+  # Deployment Lanes
+  # ==========================================
+
+  desc "Deploy to Play Store"
+  lane :deploy_play_store do |options|
+    track = options[:track] || "internal"
+    changelog = options[:changelog] || "Bug fixes and improvements"
+
+    # Build if AAB doesn't exist
+    build_release unless aab_exists?
+
+    # Upload to Play Store
+    supply(
+      track: track,
+      aab: find_aab,
+      release_status: "completed",
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      json_key: ENV["SUPPLY_JSON_KEY"] || "fastlane/play-store-key.json"
+    )
+
+    # Upload changelog
+    supply(
+      track: track,
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      track_promote_release_status: "completed",
+      version_code: get_version_code,
+      json_key: ENV["SUPPLY_JSON_KEY"] || "fastlane/play-store-key.json"
+    )
+
+    UI.success("Successfully uploaded to Play Store (#{track} track)!")
+  end
+
+  desc "Upload to Play Store"
+  lane :upload_play_store do |options|
+    track = options[:track] || "internal"
+
+    supply(
+      track: track,
+      aab: find_aab,
+      release_status: "completed",
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      json_key: ENV["SUPPLY_JSON_KEY"] || "fastlane/play-store-key.json"
+    )
+  end
+
+  desc "Promote release to next track"
+  lane :promote do |options|
+    from_track = options[:from] || "internal"
+    to_track = options[:to] || "beta"
+
+    supply(
+      track: from_track,
+      track_promote_to: to_track,
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      json_key: ENV["SUPPLY_JSON_KEY"] || "fastlane/play-store-key.json"
+    )
+
+    UI.success("Promoted from #{from_track} to #{to_track}!")
+  end
+
+  # ==========================================
+  # Version Management
+  # ==========================================
+
+  desc "Bump version"
+  lane :bump_version do |options|
+    type = options[:type] || "patch"
+
+    current_version = get_version_name
+    current_code = get_version_code
+
+    # Parse version
+    major, minor, patch = current_version.split('.').map(&:to_i)
+
+    # Bump version
+    case type
+    when "major"
+      major += 1
+      minor = 0
+      patch = 0
+    when "minor"
+      minor += 1
+      patch = 0
+    when "patch"
+      patch += 1
+    end
+
+    new_version = "#{major}.#{minor}.#{patch}"
+    new_code = current_code + 1
+
+    # Update build.gradle
+    update_version(version: new_version, code: new_code)
+
+    UI.success("Version bumped to #{new_version} (#{new_code})")
+  end
+
+  desc "Set specific version"
+  lane :set_version do |options|
+    version = options[:version]
+    code = options[:code]
+
+    UI.user_error!("Version required") unless version
+
+    update_version(version: version, code: code)
+
+    UI.success("Version set to #{version}")
+  end
+
+  desc "Get version info"
+  lane :version_info do
+    version = get_version_name
+    code = get_version_code
+
+    puts "Version: #{version}"
+    puts "Code: #{code}"
+
+    { version: version, code: code }
+  end
+
+  # ==========================================
+  # Utility Lanes
+  # ==========================================
+
+  desc "Run lint"
+  lane :lint do
+    gradle(task: "lintDebug")
+  end
+
+  desc "Run ktlint"
+  lane :ktlint do
+    sh("ktlint --reporter=plain '**/*.kt' '**/*.kts'")
+  end
+
+  desc "Format with ktlint"
+  lane :format do
+    sh("ktlint --format '**/*.kt' '**/*.kts'")
+  end
+
+  desc "Clean build"
+  lane :clean do
+    gradle(task: "clean")
+  end
+
+  desc "Fetch Play Store version info"
+  lane :playstore_info do
+    version_codes = google_play_track_version_codes(
+      track: "production",
+      json_key: ENV["SUPPLY_JSON_KEY"] || "fastlane/play-store-key.json"
+    )
+
+    puts "Production version codes: #{version_codes}"
+  end
+
+  # ==========================================
+  # Screenshot Lanes
+  # ==========================================
+
+  desc "Capture screenshots"
+  lane :screenshots do
+    capture_android_screenshots(
+      locales: ["en-US"],
+      clear_previous_screenshots: true,
+      app_apk_path: "#{APK_OUTPUT}/debug/app-debug.apk",
+      tests_apk_path: "#{APK_OUTPUT}/androidTest/debug/app-debug-androidTest.apk",
+      output_directory: "fastlane/screenshots"
+    )
+  end
+
+  # ==========================================
+  # Helper Methods
+  # ==========================================
+
+  def signing_properties
+    {
+      "android.injected.signing.store.file" => ENV["KEYSTORE_FILE"] || "release-keystore.jks",
+      "android.injected.signing.store.password" => ENV["KEYSTORE_PASSWORD"],
+      "android.injected.signing.key.alias" => ENV["KEY_ALIAS"],
+      "android.injected.signing.key.password" => ENV["KEY_PASSWORD"]
+    }
+  end
+
+  def find_aab
+    aab_files = Dir.glob("#{AAB_OUTPUT}/release/*.aab")
+    UI.user_error!("No AAB found. Run build_release first.") if aab_files.empty?
+    aab_files.first
+  end
+
+  def aab_exists?
+    !Dir.glob("#{AAB_OUTPUT}/release/*.aab").empty?
+  end
+
+  def get_version_name
+    gradle_file = "app/build.gradle"
+    content = File.read(gradle_file)
+    match = content.match(/versionName\s+["'](.+?)["']/)
+    match ? match[1] : "1.0.0"
+  end
+
+  def get_version_code
+    gradle_file = "app/build.gradle"
+    content = File.read(gradle_file)
+    match = content.match(/versionCode\s+(\d+)/)
+    match ? match[1].to_i : 1
+  end
+
+  def update_version(version: nil, code: nil)
+    gradle_file = "app/build.gradle"
+    content = File.read(gradle_file)
+
+    if version
+      content.gsub!(/versionName\s+["'].+?["']/, "versionName \"#{version}\"")
+    end
+
+    if code
+      content.gsub!(/versionCode\s+\d+/, "versionCode #{code}")
+    end
+
+    File.write(gradle_file, content)
+  end
+end

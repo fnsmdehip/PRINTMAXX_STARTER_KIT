@@ -1,0 +1,88 @@
+{
+  "op_id": "A07",
+  "op_name": "NoFap/KarmaMaxx Discipline App",
+  "category": "APP",
+  "created": "2026-02-12T07:47:15.577656",
+  "stories": [
+    {
+      "id": "A07-T01",
+      "description": "Build core tracking",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A07-T02",
+      "description": "Implement accountability",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A07-T03",
+      "description": "Add community features",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A07-T04",
+      "description": "Create challenge system",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A07-T05",
+      "description": "Build paywall",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A07-T06",
+      "description": "Test with target users",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A07-T07",
+      "description": "Aso for discipline niche",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A07-T08",
+      "description": "Launch strategy",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

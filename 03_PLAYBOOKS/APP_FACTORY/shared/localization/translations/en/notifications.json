@@ -1,0 +1,206 @@
+{
+  "permissions": {
+    "title": "Enable Notifications",
+    "subtitle": "Stay on track with helpful reminders",
+    "description": "We'll send you important updates and gentle reminders. You can customize these anytime in settings.",
+    "allow": "Allow Notifications",
+    "notNow": "Not Now",
+    "denied": {
+      "title": "Notifications Disabled",
+      "description": "Enable notifications in Settings to receive reminders and updates.",
+      "openSettings": "Open Settings"
+    }
+  },
+  "reminders": {
+    "daily": {
+      "title": "Time to Check In",
+      "body": "Take a moment to track your progress today.",
+      "bodyAlt": "How are you doing? Let's see your progress."
+    },
+    "morning": {
+      "title": "Good Morning!",
+      "body": "Ready to start your day? Let's set your intentions.",
+      "bodyAlt": "A new day, a new opportunity. What's your focus today?"
+    },
+    "evening": {
+      "title": "Daily Wrap-Up",
+      "body": "How did today go? Take a minute to reflect.",
+      "bodyAlt": "End your day on a good note. Review your progress."
+    },
+    "streak": {
+      "title": "Keep Your Streak Going!",
+      "body": "You're on a {{count}}-day streak. Don't break it now!",
+      "bodyAlt": "Your streak is at risk! Check in to keep it alive."
+    },
+    "streakAtRisk": {
+      "title": "Streak Alert!",
+      "body": "Your {{count}}-day streak ends in {{hours}} hours. Check in now!",
+      "bodyAlt": "Don't lose your progress! You're so close to keeping your streak."
+    },
+    "inactive": {
+      "title": "We Miss You!",
+      "body": "It's been a while. Ready to get back on track?",
+      "bodyAlt": "Your goals are waiting. Let's pick up where you left off."
+    },
+    "goal": {
+      "title": "Goal Reminder",
+      "body": "Don't forget about \"{{goalName}}\".",
+      "bodyAlt": "Time to work on \"{{goalName}}\"."
+    },
+    "habit": {
+      "title": "Habit Reminder",
+      "body": "Time for \"{{habitName}}\".",
+      "bodyAlt": "Don't forget: {{habitName}}."
+    },
+    "custom": {
+      "title": "Reminder",
+      "body": "{{message}}"
+    }
+  },
+  "progress": {
+    "weeklyReport": {
+      "title": "Your Weekly Progress",
+      "body": "See how you did this week. Tap to view your report."
+    },
+    "milestoneReached": {
+      "title": "Milestone Reached!",
+      "body": "Congratulations! You've hit a new milestone."
+    },
+    "goalCompleted": {
+      "title": "Goal Completed!",
+      "body": "You did it! \"{{goalName}}\" is complete.",
+      "bodyAlt": "Amazing work! You've completed \"{{goalName}}\"."
+    },
+    "streakMilestone": {
+      "title": "{{count}}-Day Streak!",
+      "body": "Incredible consistency! You're on a {{count}}-day streak.",
+      "bodyAlt": "{{count}} days strong! Keep up the amazing work."
+    },
+    "levelUp": {
+      "title": "Level Up!",
+      "body": "You've reached Level {{level}}. New features unlocked!"
+    },
+    "newInsight": {
+      "title": "New Insight Available",
+      "body": "We've got new tips based on your progress. Tap to see."
+    }
+  },
+  "engagement": {
+    "welcome": {
+      "title": "Welcome to {{appName}}!",
+      "body": "Let's get started on your journey together."
+    },
+    "firstDay": {
+      "title": "Great First Day!",
+      "body": "You're off to a great start. Keep it up tomorrow!"
+    },
+    "comeback": {
+      "title": "Welcome Back!",
+      "body": "Good to see you again. Let's get back on track."
+    },
+    "newFeature": {
+      "title": "New Feature Alert",
+      "body": "Check out what's new in {{appName}}!"
+    },
+    "tip": {
+      "title": "Pro Tip",
+      "body": "{{tipContent}}"
+    },
+    "motivation": {
+      "title": "You've Got This!",
+      "body": "{{quote}}"
+    }
+  },
+  "subscription": {
+    "trialEnding": {
+      "title": "Trial Ending Soon",
+      "body": "Your free trial ends in {{days}} days. Upgrade to keep Pro features.",
+      "bodyOneDayLeft": "Your free trial ends tomorrow. Don't lose your Pro access!"
+    },
+    "trialExpired": {
+      "title": "Trial Ended",
+      "body": "Your free trial has ended. Upgrade to continue with Pro features."
+    },
+    "subscriptionRenewal": {
+      "title": "Subscription Renewing",
+      "body": "Your subscription will renew on {{date}}."
+    },
+    "subscriptionExpiring": {
+      "title": "Subscription Expiring",
+      "body": "Your Pro subscription expires in {{days}} days."
+    },
+    "paymentFailed": {
+      "title": "Payment Issue",
+      "body": "We couldn't process your payment. Update your payment method to keep Pro access."
+    },
+    "specialOffer": {
+      "title": "Special Offer Just for You",
+      "body": "Get {{discount}}% off Pro. Limited time only!"
+    }
+  },
+  "system": {
+    "updateAvailable": {
+      "title": "Update Available",
+      "body": "A new version of {{appName}} is available. Update for the latest features."
+    },
+    "maintenanceComplete": {
+      "title": "We're Back!",
+      "body": "Maintenance is complete. Thanks for your patience."
+    },
+    "syncComplete": {
+      "title": "Sync Complete",
+      "body": "Your data is now synced across all devices."
+    },
+    "backupComplete": {
+      "title": "Backup Complete",
+      "body": "Your data has been backed up successfully."
+    },
+    "exportReady": {
+      "title": "Export Ready",
+      "body": "Your data export is ready to download."
+    }
+  },
+  "social": {
+    "friendJoined": {
+      "title": "Friend Joined!",
+      "body": "{{name}} just joined {{appName}}. Say hi!"
+    },
+    "friendActivity": {
+      "title": "{{name}} Made Progress",
+      "body": "Your friend just completed a goal. Check it out!"
+    },
+    "challenge": {
+      "title": "New Challenge!",
+      "body": "{{name}} challenged you. Ready to accept?"
+    },
+    "challengeComplete": {
+      "title": "Challenge Complete!",
+      "body": "You beat {{name}} in the challenge. Nice work!"
+    }
+  },
+  "actions": {
+    "open": "Open",
+    "dismiss": "Dismiss",
+    "snooze": "Snooze",
+    "reply": "Reply",
+    "viewDetails": "View Details",
+    "checkIn": "Check In",
+    "logProgress": "Log Progress",
+    "startNow": "Start Now",
+    "upgrade": "Upgrade",
+    "settings": "Settings"
+  },
+  "categories": {
+    "reminders": "Reminders",
+    "progress": "Progress Updates",
+    "social": "Social",
+    "marketing": "Offers & News",
+    "system": "System"
+  },
+  "scheduling": {
+    "morning": "Morning (8 AM)",
+    "midday": "Midday (12 PM)",
+    "evening": "Evening (7 PM)",
+    "custom": "Custom Time"
+  }
+}

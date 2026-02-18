@@ -1,0 +1,440 @@
+# Affiliate Launch Checklist
+
+**Created:** 2026-02-10
+**Status:** NOT_STARTED
+**Goal:** Join 20 affiliate programs, embed links in all digital products and content, generate $200-1,000/mo passive affiliate income within 60 days.
+
+---
+
+## TIER 1: Highest Commission, Easiest Approval (Join This Week)
+
+### 1. Beehiiv Affiliate Program
+- **Signup:** https://www.beehiiv.com/partners
+- **Commission:** $42 per referral (one-time)
+- **Cookie duration:** 30 days
+- **Approval:** Instant (self-serve signup)
+- **Payout:** Monthly via PayPal or Stripe, $50 minimum
+- **What to promote with:** Newsletter Growth Playbook, Solopreneur Tech Stack Guide, Content Farm Blueprint, any content mentioning newsletters
+- **Estimated monthly:** $84-420/mo (2-10 referrals/mo)
+- **Action:** Sign up -> grab link -> embed in Cold Email Playbook ($27), Solopreneur Tech Stack ($17), Content Farm Blueprint ($47), all newsletter-related content
+
+### 2. DigitalOcean Referral Program
+- **Signup:** https://www.digitalocean.com/referrals
+- **Commission:** $200 per referral who spends $25+
+- **Cookie duration:** None (uses unique link)
+- **Approval:** Instant (any account holder)
+- **Payout:** Account credit or PayPal, $25 minimum
+- **What to promote with:** Vibe Coding Playbook ($47), AI Automation Toolkit ($47), any dev/hosting content
+- **Estimated monthly:** $200-600/mo (1-3 referrals/mo from dev audience)
+- **Action:** Sign up -> get referral link -> embed in all coding/deployment tutorials
+
+### 3. Webflow Affiliate Program
+- **Signup:** https://webflow.com/affiliates
+- **Commission:** 50% of first payment (up to $63 on annual plan)
+- **Cookie duration:** 90 days
+- **Approval:** 1-3 days via Impact
+- **Payout:** Monthly via Impact, $50 minimum
+- **What to promote with:** Local Biz Client Machine ($97), any website redesign content, cold email sequences for web design clients
+- **Estimated monthly:** $126-315/mo (2-5 referrals)
+- **Action:** Apply via Impact -> embed in all website-related products and cold email follow-up materials
+
+### 4. Notion Affiliate Program
+- **Signup:** https://www.notion.so/affiliates (via PartnerStack)
+- **Commission:** $10 per paid referral
+- **Cookie duration:** 90 days
+- **Approval:** 1-3 days
+- **Payout:** Monthly via PartnerStack
+- **What to promote with:** Every Notion template you sell, Solopreneur Tech Stack Guide, productivity content
+- **Estimated monthly:** $50-200/mo (5-20 referrals if selling Notion templates on Etsy/Gumroad)
+- **Action:** Apply -> embed referral link in ALL Notion template product descriptions ("Get Notion free here" link)
+
+### 5. ClickBank (as Affiliate)
+- **Signup:** https://accounts.clickbank.com/signup/
+- **Commission:** 50-75% per sale (digital products)
+- **Cookie duration:** 60 days (standard, varies by vendor)
+- **Approval:** Instant
+- **Payout:** Weekly or bi-weekly, $10 minimum, check/direct deposit/wire
+- **What to promote with:** Embed relevant ClickBank offers inside your own digital products as "recommended tools." Health offers in fitness content, biz opp offers in entrepreneur content.
+- **Estimated monthly:** $100-500/mo (depends on product selection and traffic)
+- **Action:** Sign up -> browse marketplace -> select 3-5 high-gravity offers in health, biz opp, self-help -> create bridge pages or embed in email sequences
+
+### 6. ShareASale (as Affiliate)
+- **Signup:** https://www.shareasale.com/newsaffiliate.cfm
+- **Commission:** Varies by merchant (5-30% typical)
+- **Cookie duration:** Varies (30-90 days typical)
+- **Approval:** 1-3 days (easy, just need a website or social profile)
+- **Payout:** Monthly, $50 minimum, direct deposit or check
+- **What to promote with:** Huge network. Find merchants that match each niche: web hosting (Bluehost, WP Engine), email tools (ConvertKit, AWeber), design tools (Canva).
+- **Estimated monthly:** $100-300/mo across multiple merchants
+- **Key merchants to apply for immediately:**
+  - WP Engine (web hosting) - $200/referral
+  - ConvertKit (email) - 30% recurring
+  - Tailwind (social scheduling) - 15% recurring
+  - OptinMonster (lead gen) - 20% recurring
+- **Action:** Sign up -> apply to 10 merchants in first session -> embed links in relevant products
+
+### 7. Impact (as Affiliate)
+- **Signup:** https://impact.com/ (create publisher account)
+- **Commission:** Varies by brand (5-30%)
+- **Cookie duration:** Varies
+- **Approval:** 1-3 days for account, then apply per brand
+- **Payout:** Monthly, $25 minimum
+- **What to promote with:** Enterprise brands: Shopify, Canva, Grammarly, Semrush, Hostinger
+- **Estimated monthly:** $100-500/mo
+- **Key brands to apply for:**
+  - Shopify - up to $150 per referral
+  - Canva - 15-80% commission depending on plan
+  - Semrush - $200 per subscription sale
+  - Hostinger - up to 60% per sale
+- **Action:** Create account -> apply to top 10 brands -> embed in relevant content
+
+### 8. Amazon Associates
+- **Signup:** https://affiliate-program.amazon.com/
+- **Commission:** 1-10% depending on category (most 3-4%)
+- **Cookie duration:** 24 hours (short, but high conversion rate)
+- **Approval:** Instant (but must make 3 sales in first 180 days or account closes)
+- **Payout:** Monthly, $10 minimum, direct deposit or gift card
+- **What to promote with:** Book recommendations in every digital product, equipment lists in fitness content, tech gear in coding content, supplies in POD/KDP content
+- **Estimated monthly:** $50-200/mo (volume play, not high commission)
+- **Action:** Sign up -> create affiliate links for books and tools referenced in all 10 Gumroad products -> embed in product content
+
+### 9. PartnerStack (SaaS Affiliates)
+- **Signup:** https://partnerstack.com/ (join as partner)
+- **Commission:** 15-30% recurring (monthly residuals)
+- **Cookie duration:** Varies (30-90 days)
+- **Approval:** Instant for some programs, 1-5 days for others
+- **Payout:** Monthly, $25 minimum, PayPal or Stripe
+- **What to promote with:** SaaS tool recommendations in all products. This is the RECURRING REVENUE play.
+- **Key programs:**
+  - Notion - $10/referral
+  - Monday.com - 20% recurring
+  - Freshworks - 15-20% recurring
+  - Close CRM - 10% recurring
+- **Estimated monthly:** $100-500/mo (recurring, compounds over time)
+- **Action:** Sign up -> join 5 SaaS programs -> embed in Solopreneur Tech Stack and all tool-recommendation content
+
+### 10. Gumroad Affiliate Program (Selling Others' Products)
+- **Signup:** Already on Gumroad. Enable "Discover" and browse other creators' products.
+- **Commission:** Set by each creator (typically 30%)
+- **Cookie duration:** 30 days
+- **Approval:** Instant (if creator enables affiliates)
+- **Payout:** Through Gumroad, same as your regular payouts
+- **What to promote with:** Recommend complementary products from other Gumroad creators. "I recommend [X]'s template for this step" inside your own products.
+- **Estimated monthly:** $50-150/mo (cross-promotion with other creators)
+- **Action:** Browse Gumroad discover -> find 5-10 complementary products with affiliate programs -> embed links in your products
+
+---
+
+## TIER 2: Niche-Specific Affiliate Programs
+
+### Faith Niche
+
+| Program | Signup URL | Commission | What to Promote With |
+|---------|-----------|------------|---------------------|
+| **Faithlife / Logos Bible Software** | https://partners.faithlife.com/ | 10-20% per sale ($10-200+) | PrayerLock app content, prayer journal posts, faith tweets |
+| **Crossway (ESV Bible publisher)** | https://www.crossway.org/affiliates/ | 8% per sale | Bible reading plans, devotional content |
+| **DaySpring (Hallmark faith)** | Via ShareASale | 6-10% | Gift guides, faith lifestyle posts |
+| **ChristianBook.com** | https://www.christianbook.com/page/affiliates | 5-8% per sale | Book recommendations in faith content |
+| **Pray.com** | Direct outreach or Impact | 15-20% (subscription app) | PrayerLock cross-promotion, prayer app comparison posts |
+| **Christian Mingle** | Via CJ Affiliate | $2-6 per lead | Faith dating content (careful: FTC disclosure required) |
+
+**Monthly potential (faith niche):** $50-300/mo
+**Best content to drive this:** PrayerLock blog posts, prayer journal tweets, faith account content from the 1,278 post library
+
+### Fitness Niche
+
+| Program | Signup URL | Commission | What to Promote With |
+|---------|-----------|------------|---------------------|
+| **Transparent Labs** | https://www.transparentlabs.com/pages/affiliate | 15% per sale | Fitness tweets, workout content, WalkToUnlock posts |
+| **Optimum Nutrition** | Via CJ Affiliate or Impact | 5-10% | Supplement recommendations in fitness content |
+| **Bodybuilding.com** | Via CJ Affiliate | 5-15% | Supplement and equipment links |
+| **Myprotein** | https://www.myprotein.com/affiliate-programme.list | 8-12% per sale | Protein/supplement posts |
+| **Gym Shark** | Via Awin | 6% per sale | Fitness apparel posts |
+| **Peloton** | Via Impact | $50-100 per sale | Home fitness content |
+| **Whoop** | https://www.whoop.com/thelocker/ | $30 per referral | Health tracking, sleep content |
+| **Apple Watch (Amazon)** | Via Amazon Associates | 3-4% | Fitness tracker comparison posts |
+
+**Monthly potential (fitness niche):** $100-500/mo
+**Best content to drive this:** WalkToUnlock promotion content, fitness POD designs (link to supplements in bio), fitness tweets from the post library
+
+### Sleep Niche
+
+| Program | Signup URL | Commission | What to Promote With |
+|---------|-----------|------------|---------------------|
+| **Casper** | Via CJ Affiliate | $50-75 per mattress sale | Sleep YouTube videos, sleep hygiene blog posts |
+| **Helix Sleep** | Via ShareASale | $100-150 per sale | Mattress review content |
+| **Purple Mattress** | Via CJ Affiliate | $50-125 per sale | Mattress comparison posts |
+| **Calm** | Via Impact | 15-40% per subscription | Sleep meditation content, sleep YouTube channel |
+| **Sleep Number** | Via CJ Affiliate | $30-50 per qualified lead | Sleep improvement posts |
+| **Oura Ring** | https://ouraring.com/partners | $20-40 per sale | Sleep tracking content, health optimization posts |
+| **Eight Sleep** | Direct (reach out) | $50-100 per sale | Smart mattress/sleep tech content |
+| **Pillow Cube** | Via ShareASale | 10% per sale | Pillow recommendation content |
+
+**Monthly potential (sleep niche):** $200-800/mo (mattress commissions are high)
+**Best content to drive this:** Sleep YouTube Starter Kit ($17) product buyers, sleep YouTube channel content, sleep hygiene blog posts on Medium/Substack
+
+### Tech/SaaS Niche
+
+| Program | Signup URL | Commission | What to Promote With |
+|---------|-----------|------------|---------------------|
+| **Cursor** | https://www.cursor.com/affiliate (if available, else embed naturally) | TBD | Vibe Coding Playbook |
+| **Vercel** | Via PartnerStack | 15-25% | Deployment tutorials, coding content |
+| **Supabase** | https://supabase.com/partners | 10-15% | Backend tutorials |
+| **Railway** | Direct | 15-25% | Deployment content |
+| **Instantly.ai** | https://instantly.ai/partners | 20-30% recurring | Cold Email Playbook ($27), all outbound content |
+| **Apollo.io** | https://www.apollo.io/partners | 20% recurring | Lead sourcing content |
+| **Buffer** | https://buffer.com/affiliates | 20% recurring | Content Farm Blueprint, social media content |
+| **Repurpose.io** | Via their site | 20% recurring | Content repurposing tutorials |
+| **HeyGen** | https://www.heygen.com/affiliate | 20% per sale | AI video content, UGC playbook |
+| **ElevenLabs** | https://elevenlabs.io/affiliate | 20% per sale | AI voice content, Sleep YouTube Kit |
+
+**Monthly potential (tech niche):** $200-1,000/mo (recurring SaaS commissions compound)
+**Best content to drive this:** All 10 Gumroad products have tool recommendations. Embed affiliate links in every mention.
+
+---
+
+## IMPLEMENTATION PLAN
+
+### Day 1: Sign Up for All Tier 1 Networks (2 hours)
+
+```
+Step-by-step:
+1. Open 10 browser tabs
+2. Sign up for each program in order:
+   [ ] Amazon Associates - https://affiliate-program.amazon.com/
+   [ ] ClickBank - https://accounts.clickbank.com/signup/
+   [ ] ShareASale - https://www.shareasale.com/newsaffiliate.cfm
+   [ ] Impact - https://impact.com/
+   [ ] PartnerStack - https://partnerstack.com/
+   [ ] Beehiiv - https://www.beehiiv.com/partners
+   [ ] DigitalOcean - https://www.digitalocean.com/referrals
+   [ ] Webflow - https://webflow.com/affiliates
+   [ ] Notion - https://www.notion.so/affiliates
+   [ ] Gumroad (enable affiliate on your products)
+3. Use same email for all: [your primary email]
+4. Save all affiliate IDs and links in a password manager
+5. Create spreadsheet: Network | Program | Affiliate Link | Commission | Status
+```
+
+### Day 2: Sign Up for Niche Programs (1 hour)
+
+```
+Priority order:
+[ ] Instantly.ai (directly relevant to Cold Email Playbook)
+[ ] Buffer (directly relevant to Content Farm Blueprint)
+[ ] Apollo.io (directly relevant to outbound content)
+[ ] ElevenLabs (relevant to Sleep YouTube Kit)
+[ ] HeyGen (relevant to AI video content)
+[ ] Whoop (relevant to fitness/sleep content)
+[ ] Calm (relevant to sleep content)
+[ ] Transparent Labs (relevant to fitness content)
+[ ] Helix Sleep (relevant to sleep YouTube content)
+[ ] ChristianBook.com (relevant to faith content)
+```
+
+### Day 3: Embed Links in All Gumroad Products (3 hours)
+
+For EACH of the 10 Gumroad products, add affiliate links where tools are mentioned:
+
+| Product | Affiliate Links to Embed |
+|---------|------------------------|
+| Local Biz Client Machine ($97) | Webflow, Hostinger, Semrush, Apollo.io |
+| AI Automation Toolkit ($47) | HeyGen, ElevenLabs, Cursor, Vercel |
+| Vibe Coding Playbook ($47) | Cursor, Vercel, Supabase, DigitalOcean, Railway |
+| AI Content Farm Blueprint ($47) | Buffer, Repurpose.io, HeyGen, Canva |
+| Cold Email Playbook ($27) | Instantly.ai, Apollo.io, Beehiiv, Calendly |
+| Twitter/X Growth Playbook ($27) | Buffer, Canva, Notion |
+| Solopreneur Tech Stack Guide ($17) | ALL SaaS tools (10+ affiliate links) |
+| Sleep YouTube Starter Kit ($17) | ElevenLabs, Canva, Calm, Oura, mattress affiliates |
+| Funnel Teardown Guide ($7) | Webflow, ConvertKit, OptinMonster |
+| Free AI Prompts (lead magnet) | Amazon book links, Notion affiliate |
+
+**Double monetization:** Every product sale ALSO drives affiliate revenue from embedded tool links. A $27 Cold Email Playbook sale can generate an additional $20-97 in affiliate commissions when the buyer signs up for Instantly.ai through your link.
+
+### Day 4-5: Embed in Existing Content (2 hours)
+
+Go through all 1,278 posts in the content library. Any post mentioning a tool gets an affiliate link:
+
+```
+Search content folders for tool mentions:
+- CONTENT/social/faith/ -> Add ChristianBook, Pray.com links
+- CONTENT/social/fitness/ -> Add supplement, Whoop links
+- CONTENT/social/ai/ -> Add Cursor, Vercel, Claude links
+- CONTENT/medium_articles/ -> Add inline affiliate links
+- CONTENT/substack_posts/ -> Add affiliate links in recommendations
+- CONTENT/email_sequences/ -> Add affiliate links in resource sections
+```
+
+### Ongoing: Monthly Affiliate Revenue Optimization
+
+```
+Weekly (15 min):
+- Check affiliate dashboards for clicks/conversions
+- Identify which links convert best
+- Double down on content promoting high-converting affiliates
+
+Monthly (1 hour):
+- Apply for 2-3 new relevant programs
+- Update product content with new affiliate links
+- Create 5 new social posts specifically promoting affiliate products
+- Write 1 Medium/Substack article with affiliate product review
+```
+
+---
+
+## REVENUE PROJECTIONS
+
+### Month 1 (Setup + Early Traction)
+| Source | Bear | Base | Bull |
+|--------|------|------|------|
+| Embedded in Gumroad products | $10 | $50 | $200 |
+| Direct affiliate promotions | $20 | $100 | $400 |
+| Newsletter/blog affiliate links | $5 | $30 | $150 |
+| **Total** | **$35** | **$180** | **$750** |
+
+### Month 3 (Compounding)
+| Source | Bear | Base | Bull |
+|--------|------|------|------|
+| Embedded in products (more sales) | $50 | $200 | $800 |
+| Recurring SaaS commissions | $30 | $150 | $500 |
+| Content affiliate revenue | $20 | $100 | $400 |
+| Sleep niche (mattresses) | $50 | $200 | $500 |
+| **Total** | **$150** | **$650** | **$2,200** |
+
+### Month 6 (Scaled)
+| Source | Bear | Base | Bull |
+|--------|------|------|------|
+| All product-embedded | $200 | $500 | $2,000 |
+| Recurring SaaS (compounded) | $100 | $400 | $1,500 |
+| Content + SEO affiliate | $100 | $300 | $1,000 |
+| Niche-specific (sleep, fitness, faith) | $100 | $300 | $1,000 |
+| **Total** | **$500** | **$1,500** | **$5,500** |
+
+---
+
+## COMPLIANCE REQUIREMENTS
+
+1. **FTC disclosure required on ALL affiliate content.** Every blog post, social post, email, and product that contains affiliate links MUST disclose: "This post contains affiliate links. I may earn a commission if you purchase through these links, at no extra cost to you."
+2. **Gumroad products:** Add disclaimer on the last page or in the introduction: "Some tools recommended in this guide include affiliate links."
+3. **Social posts:** Add "#ad" or "#affiliate" to any post with affiliate links.
+4. **Email sequences:** Include disclosure at bottom of any email with affiliate links.
+5. **Do NOT make unsubstantiated claims** about affiliate products ("This tool will 10x your revenue" without proof).
+
+---
+
+## TRACKING
+
+All affiliate revenue tracked in:
+- `LEDGER/REVENUE_STREAMS_TRACKER.csv` (platform-level)
+- `FINANCIALS/REVENUE_TRACKER.csv` (transaction-level)
+- Individual affiliate network dashboards (check weekly)
+
+---
+
+**Status:** NOT_STARTED. Execute Day 1 immediately. Total time investment: 8-10 hours across 5 days. $0 cost. Pure upside.
+
+
+    ---
+
+    ## Pending Enhancement (ALPHA1214, Score: 30)
+
+    **Source:** 2026-02-13 | **URL:** @knoxtwts
+    **Added:** 2026-02-18T06:49:18-05:00
+
+    been watching people celebrate their amazon affiliate wins lately and it's genuinely confusing to me...
+
+"i made $47 this month from my niche site"
+
+congrats?!? you're getting 3% on kitchen gadgets that people return half the time anyway.
+
+meanwhile there's this kid (lives in
+
+
+
+    ---
+
+    ## Pending Enhancement (ALPHA1537, Score: 30)
+
+    **Source:** 2026-02-13 | **URL:** r/juststart
+    **Added:** 2026-02-18T06:49:18-05:00
+
+    I spent 3 weeks building an affiliate program directory with 2,600+ vetted programs. Here's what I learned For the past few weeks, I've been working on something I wish existed when I started with affiliate marketing: a proper directory of affiliate programs.
+
+**The problem I was solving:**
+
+Every time I wanted to find affiliate programs for my niche, I'd spend hours Googling, clicking through out
+
+
+
+    ---
+
+    ## Pending Enhancement (ALPHA1551, Score: 29)
+
+    **Source:** 2026-02-13 | **URL:** r/affiliatemarketing
+    **Added:** 2026-02-18T06:49:18-05:00
+
+    High paying affiliate programs I wish I knew about earlier I recently started digging into affiliate marketing and quickly realized most people promote the same low-paying programs without ever mentioning better options.
+
+So I spent some time researching affiliate programs that pay above-average commissions, especially ones that are fairly easy to join and do not require anything fancy beyond havi
+
+
+
+---
+
+## Pending Enhancement (ALPHA6798, Score: 30)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=46991591
+**Added:** 2026-02-18T07:12:19-05:00
+
+[ACQUISITION] Launch HN: Omnara (YC S25) – Run Claude Code and Codex from anywhere
+
+
+
+---
+
+## Pending Enhancement (ALPHA7941, Score: 24)
+
+**Source:** HackerNews | **URL:** https://sonarly.com/
+**Added:** 2026-02-18T07:12:19-05:00
+
+[ACQUISITION] Launch HN: Sonarly (YC W26) – AI agent to triage and fix your production alerts
+
+
+
+---
+
+## Pending Enhancement (ALPHA8126, Score: 30)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1r81oo6/why_everyone_is_building_launch_your_app_platform/
+**Added:** 2026-02-18T08:39:23-05:00
+
+[ACQUISITION] Why everyone is building launch your app platform
+
+
+
+---
+
+## Pending Enhancement (ALPHA8129, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1r80rf4/2026_saas_vibe_check/
+**Added:** 2026-02-18T08:39:23-05:00
+
+[ACQUISITION] 2026 SaaS vibe check
+
+
+
+---
+
+## Pending Enhancement (ALPHA8201, Score: 40)
+
+**Source:** @ecomchigga (high-signal-accounts) | **URL:** https://x.com/mike_revenue/status/2023561089137733642
+**Added:** 2026-02-18T08:54:28-05:00
+
+There are only two businesses I'd recommend anyone who is just starting do rn:
+
+1. Sell OpenClaw installations and agent management infra B2B
+
+2. Make AI ugc vids and drive millions of views to affiliate products on organic (this can be fully automated btw)
+
+no noise no bs. these
+

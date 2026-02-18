@@ -1,0 +1,88 @@
+{
+  "op_id": "A08",
+  "op_name": "App Discovery + Clone Pipeline",
+  "category": "APP",
+  "created": "2026-02-12T07:47:15.578428",
+  "stories": [
+    {
+      "id": "A08-T01",
+      "description": "Scan app store trending",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A08-T02",
+      "description": "Analyze revenue signals",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A08-T03",
+      "description": "Find mit repos to fork",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A08-T04",
+      "description": "Identify arb opportunities",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A08-T05",
+      "description": "Build clone template",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A08-T06",
+      "description": "Rebrand for new market",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A08-T07",
+      "description": "Test in multiple regions",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "A08-T08",
+      "description": "Measure download velocity",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+{
+  "timestamp": "2026-02-10T03:00:34.835928",
+  "date": "2026-02-10",
+  "ops_tested": 15,
+  "summary": {
+    "green": 1,
+    "yellow": 13,
+    "red": 1,
+    "average_score": 61.2
+  },
+  "results": [
+    {
+      "op_id": "MM007_COLD_OUTBOUND",
+      "display": "MM007_COLD_OUTBOUND",
+      "description": "Cold email outreach pipeline",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 15,
+        "revenue": 25,
+        "freshness": 25,
+        "total": 90
+      },
+      "status": "GREEN",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "1 account(s) found but not ACTIVE"
+        ],
+        "revenue": [
+          "1 revenue entries, $398.00 total"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-06)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_DIGITAL_PRODUCTS",
+      "display": "MM_DIGITAL_PRODUCTS",
+      "description": "Gumroad / Whop digital products",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 8,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 63
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: Whop",
+          "1 account(s) found but not ACTIVE"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 0 days old (2026-02-10)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_FREELANCE_ARB",
+      "display": "MM_FREELANCE_ARB",
+      "description": "Fiverr/Upwork freelance arbitrage",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 15,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 70
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "2 account(s) found but not ACTIVE"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 0 days old (2026-02-09)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_AI_FINDOM",
+      "display": "MM_AI_FINDOM",
+      "description": "AI NSFW findom persona network",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 15,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 70
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "3 account(s) found but not ACTIVE"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-05)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_LOCAL_BIZ",
+      "display": "MM_LOCAL_BIZ",
+      "description": "Local business website redesign service",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 15,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 70
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "1 account(s) found but not ACTIVE"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-06)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_CONTENT_FARM",
+      "display": "MM_CONTENT_FARM",
+      "description": "Multi-niche content farm accounts",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 15,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 70
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "2 account(s) found but not ACTIVE"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 1 days old (2026-02-08)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_AFFILIATE",
+      "display": "MM_AFFILIATE",
+      "description": "Affiliate marketing sites and content",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 55
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: Amazon Associates, ShareASale, Impact"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-06)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_SEO",
+      "display": "MM_SEO",
+      "description": "SEO / programmatic landing pages",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 55
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: Vercel, Google Search Console"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 3 days old (2026-02-06)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_APP_FACTORY",
+      "display": "MM_APP_FACTORY",
+      "description": "iOS/web app builds and submissions",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 55
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: Apple Developer, Google Play"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 2 days old (2026-02-07)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_NEWSLETTER",
+      "display": "MM_NEWSLETTER",
+      "description": "Beehiiv newsletters (faith, fitness, tech)",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 15,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 70
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "1 account(s) found but not ACTIVE"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 3 days old (2026-02-06)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_POD",
+      "display": "MM_POD",
+      "description": "Print-on-demand via TikTok/Etsy",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 55
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: Printful, Printify, Etsy"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-05)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_AI_UGC",
+      "display": "MM_AI_UGC",
+      "description": "AI-generated UGC factory",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 55
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: HeyGen, Synthesia"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-06)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_PAID_ADS",
+      "display": "MM_PAID_ADS",
+      "description": "Paid ads testing (Meta + TikTok)",
+      "scores": {
+        "infrastructure": 15,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 10,
+        "total": 30
+      },
+      "status": "RED",
+      "notes": {
+        "infrastructure": [
+          "No infra requirements defined (partial credit)"
+        ],
+        "accounts": [
+          "MISSING ACCOUNTS: Meta Ads, TikTok Ads"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "No files to check freshness"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_TIKTOK_SHOP",
+      "display": "MM_TIKTOK_SHOP",
+      "description": "TikTok Shop affiliate / dropship",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 55
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: TikTok Shop"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-05)"
+        ]
+      }
+    },
+    {
+      "op_id": "MM_ROBLOX",
+      "display": "MM_ROBLOX",
+      "description": "Roblox tycoon game monetization",
+      "scores": {
+        "infrastructure": 25,
+        "accounts": 0,
+        "revenue": 5,
+        "freshness": 25,
+        "total": 55
+      },
+      "status": "YELLOW",
+      "notes": {
+        "infrastructure": [],
+        "accounts": [
+          "MISSING ACCOUNTS: Roblox Developer"
+        ],
+        "revenue": [
+          "No revenue entries yet (new op)"
+        ],
+        "freshness": [
+          "Newest file: 4 days old (2026-02-06)"
+        ]
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "blocker": "Whop",
+      "blocked_ops": [
+        "MM_DIGITAL_PRODUCTS"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Amazon Associates",
+      "blocked_ops": [
+        "MM_AFFILIATE"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "ShareASale",
+      "blocked_ops": [
+        "MM_AFFILIATE"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Impact",
+      "blocked_ops": [
+        "MM_AFFILIATE"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Vercel",
+      "blocked_ops": [
+        "MM_SEO"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Google Search Console",
+      "blocked_ops": [
+        "MM_SEO"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Apple Developer",
+      "blocked_ops": [
+        "MM_APP_FACTORY"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Google Play",
+      "blocked_ops": [
+        "MM_APP_FACTORY"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Printful",
+      "blocked_ops": [
+        "MM_POD"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Printify",
+      "blocked_ops": [
+        "MM_POD"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Etsy",
+      "blocked_ops": [
+        "MM_POD"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "HeyGen",
+      "blocked_ops": [
+        "MM_AI_UGC"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Synthesia",
+      "blocked_ops": [
+        "MM_AI_UGC"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Meta Ads",
+      "blocked_ops": [
+        "MM_PAID_ADS"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "TikTok Ads",
+      "blocked_ops": [
+        "MM_PAID_ADS"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "TikTok Shop",
+      "blocked_ops": [
+        "MM_TIKTOK_SHOP"
+      ],
+      "count": 1
+    },
+    {
+      "blocker": "Roblox Developer",
+      "blocked_ops": [
+        "MM_ROBLOX"
+      ],
+      "count": 1
+    }
+  ],
+  "recommendations": [
+    "1. Create Whop account (unblocks 1 op: MM_DIGITAL_PRODUCTS)",
+    "2. Create Amazon Associates account (unblocks 1 op: MM_AFFILIATE)",
+    "3. Create ShareASale account (unblocks 1 op: MM_AFFILIATE)",
+    "4. Create Impact account (unblocks 1 op: MM_AFFILIATE)",
+    "5. Create Vercel account (unblocks 1 op: MM_SEO)",
+    "6. Create Google Search Console account (unblocks 1 op: MM_SEO)",
+    "7. Create Apple Developer account (unblocks 1 op: MM_APP_FACTORY)",
+    "8. Create Google Play account (unblocks 1 op: MM_APP_FACTORY)",
+    "9. Create Printful account (unblocks 1 op: MM_POD)",
+    "10. Create Printify account (unblocks 1 op: MM_POD)"
+  ]
+}

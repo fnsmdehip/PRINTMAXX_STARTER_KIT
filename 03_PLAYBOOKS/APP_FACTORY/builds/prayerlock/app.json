@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "PrayerLock",
+    "slug": "prayerlock",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A237E"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.prayerlock.app",
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "PrayerLock uses notifications to remind you of your prayer and salah times.",
+        "NSLocationWhenInUseUsageDescription": "PrayerLock uses your location to calculate accurate prayer times for your area."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A237E"
+      },
+      "package": "com.prayerlock.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-notifications",
+      "expo-asset",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "PrayerLock uses your location to calculate accurate prayer times for your area."
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "carousels": [
+    {
+      "topic": "5 apps you can build this weekend",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "5 apps you can clone in 48 hours",
+          "body": "Each making $5k-$50k/month. MIT repos included."
+        },
+        {
+          "slide_num": 2,
+          "headline": "1. Focus timer app",
+          "body": "PrayerLock does $12k/month. Build: Expo + RevenueCat. Niche: Faith, fitness, study. Time: 6 hours."
+        },
+        {
+          "slide_num": 3,
+          "headline": "2. Habit tracker",
+          "body": "Streaks makes $50k/month. Build: React Native + local storage. Add: Cute mascot (boosts retention 34%). Time: 8 hours."
+        },
+        {
+          "slide_num": 4,
+          "headline": "3. Screen time blocker",
+          "body": "One Sec makes $40k/month. Build: Native module + subscription. Hook: Shame users with stats. Time: 12 hours."
+        },
+        {
+          "slide_num": 5,
+          "headline": "4. Walking challenge app",
+          "body": "StepBet model but simpler. Build: HealthKit integration + leaderboard. Monetize: Affiliate protein/shoes. Time: 10 hours."
+        },
+        {
+          "slide_num": 6,
+          "headline": "5. AI journaling app",
+          "body": "Rosebud does $15k/month. Build: Text input + GPT-4 prompts. Niche: Therapy, gratitude, prayer. Time: 8 hours."
+        },
+        {
+          "slide_num": 7,
+          "headline": "The playbook",
+          "body": "Find app making $10k+/month. Search GitHub for MIT clone. Add niche angle. Ship to App Store. Track in simulator first."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get the full clone list",
+          "body": "67 profitable apps with MIT repos. App Store optimization checklists. Monetization breakdowns. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "Cold email framework that books calls",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "This cold email books 23% of replies",
+          "body": "Tested on 2,400 sends. 8% reply rate. Here's the exact framework."
+        },
+        {
+          "slide_num": 2,
+          "headline": "Subject line rules",
+          "body": "3-5 words max. Question format works best. Example: 'Quick question about [their company]'. Avoid: Sales words, emojis, all caps."
+        },
+        {
+          "slide_num": 3,
+          "headline": "Line 1: Specific compliment",
+          "body": "Reference real work they did. Example: 'Saw your post about scaling to $50k MRR without ads.' NOT: 'I love your company!'"
+        },
+        {
+          "slide_num": 4,
+          "headline": "Line 2: Why you",
+          "body": "One sentence credibility. Example: 'Built same system for 12 SaaS companies.' Include number that proves competence."
+        },
+        {
+          "slide_num": 5,
+          "headline": "Line 3: The offer",
+          "body": "Specific value in one sentence. Example: 'Can show you how we got 340 trial signups last month for $1,200 ad spend.'"
+        },
+        {
+          "slide_num": 6,
+          "headline": "Line 4: Low-friction ask",
+          "body": "NOT: 'Book a call'. YES: 'Worth a 10-min call Tuesday?' Time-bound. Low commitment. Question format."
+        },
+        {
+          "slide_num": 7,
+          "headline": "The template",
+          "body": "Subject: Quick question about [company]\n\nSaw your [specific thing].\n\nBuilt [result] for [number] companies.\n\nCan show you [specific outcome].\n\nWorth a 10-min call [day]?"
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get 47 subject lines that work",
+          "body": "Tested on 50,000+ sends. Industry-specific variations. Deliverability checklist. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "Content multiplication (1→20)",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "Turn 1 video into 20 pieces of content",
+          "body": "Same effort. 20x distribution. Here's the exact workflow."
+        },
+        {
+          "slide_num": 2,
+          "headline": "Step 1: Record 1 long video",
+          "body": "8-12 minutes. Answer one question thoroughly. Example: 'How I built my first app'. Don't overthink it."
+        },
+        {
+          "slide_num": 3,
+          "headline": "Step 2: Extract 6 short clips",
+          "body": "15-60 seconds each. Each clip = one insight. Post to: TikTok, Reels, Shorts, LinkedIn, Twitter. That's 30 posts already."
+        },
+        {
+          "slide_num": 4,
+          "headline": "Step 3: Transcribe to text",
+          "body": "Run through Whisper API (free). Clean up with Claude. Now you have: Blog post, Twitter thread, LinkedIn article, newsletter."
+        },
+        {
+          "slide_num": 5,
+          "headline": "Step 4: Pull quotes",
+          "body": "Find 10 quotable lines. Create: Quote graphics (Canva). Text posts (Twitter/LinkedIn). Story slides (Instagram). Email subject lines."
+        },
+        {
+          "slide_num": 6,
+          "headline": "Step 5: Repurpose by format",
+          "body": "Carousel: Key points with visuals. Podcast: Audio only version. Email: Summary with CTA. Reddit: Text version with proof."
+        },
+        {
+          "slide_num": 7,
+          "headline": "The math",
+          "body": "1 video (30 min to make) = 6 short clips × 5 platforms = 30 posts + 1 blog + 1 thread + 1 newsletter + 10 quote graphics = 43 total pieces."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get the automation workflow",
+          "body": "Playwright scripts for multi-platform posting. Transcription setup guide. Content calendar template. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "AI tools replacing $50k jobs",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "5 AI tools doing $50k/year jobs for $20/month",
+          "body": "Tested all 5. Here's what actually works and what's hype."
+        },
+        {
+          "slide_num": 2,
+          "headline": "1. Copywriter: Claude",
+          "body": "Replaced: $3k/month copywriter. Does: Landing pages, emails, ad copy. Cost: $20/month. Catches: Still needs human editing for voice."
+        },
+        {
+          "slide_num": 3,
+          "headline": "2. Video editor: Descript",
+          "body": "Replaced: $2k/month editor. Does: Cuts, captions, b-roll. Cost: $24/month. Catches: Complex animations still need human."
+        },
+        {
+          "slide_num": 4,
+          "headline": "3. Graphic designer: Midjourney + Canva",
+          "body": "Replaced: $2.5k/month designer. Does: Social graphics, ads, thumbnails. Cost: $30/month combined. Catches: Brand consistency needs templates."
+        },
+        {
+          "slide_num": 5,
+          "headline": "4. Research assistant: Perplexity Pro",
+          "body": "Replaced: $2k/month VA. Does: Market research, competitor analysis, sourcing. Cost: $20/month. Catches: Can't make judgment calls."
+        },
+        {
+          "slide_num": 6,
+          "headline": "5. Customer support: Intercom AI",
+          "body": "Replaced: $3k/month support agent. Does: FAQs, basic troubleshooting. Cost: $74/month. Catches: Escalation path needed for complex issues."
+        },
+        {
+          "slide_num": 7,
+          "headline": "What you actually save",
+          "body": "Total replaced: $12.5k/month in salaries. AI tool cost: $168/month. Savings: $12,332/month. Your time: 5 hours/week managing tools."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get the full AI stack setup",
+          "body": "Tool comparison spreadsheet. Prompt libraries for each tool. Integration workflows. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "App Store optimization checklist",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "My app went from 12 downloads/day to 340",
+          "body": "Changed 7 things. Conversion rate jumped 4.2x. Here's the exact checklist."
+        },
+        {
+          "slide_num": 2,
+          "headline": "1. Title (30 characters)",
+          "body": "Before: 'PrayerLock - Faith App'. After: 'PrayerLock - Focus Timer'. Put PRIMARY keyword first. Downloads jumped 180%."
+        },
+        {
+          "slide_num": 3,
+          "headline": "2. First 2 screenshots",
+          "body": "Show app in use. NOT splash screens. Add text overlay with benefit. Example: 'Block distractions for 30 min'. These get 80% of views."
+        },
+        {
+          "slide_num": 4,
+          "headline": "3. Keyword field (100 chars)",
+          "body": "No spaces. Comma-separated. Don't repeat title words. Example: 'productivity,timer,habit,focus,pomodoro'. Test with App Radar."
+        },
+        {
+          "slide_num": 5,
+          "headline": "4. Description first 3 lines",
+          "body": "Only lines visible before 'more' tap. Lead with problem + solution. Example: 'Can't focus? PrayerLock blocks apps until timer ends.'"
+        },
+        {
+          "slide_num": 6,
+          "headline": "5. App preview video",
+          "body": "15-30 seconds max. Show core feature in first 3 seconds. Portrait mode. No talking needed. Conversion boost: 23%."
+        },
+        {
+          "slide_num": 7,
+          "headline": "6. Review responses",
+          "body": "Reply to ALL reviews within 24 hours. Especially 1-3 stars. Boosts ranking algorithm. Takes 10 min/day."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get the full ASO playbook",
+          "body": "Screenshot templates. Keyword research process. A/B testing framework. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "Growth hacks that cost $0",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "7 growth tactics that cost nothing",
+          "body": "Got 14,000 users in 6 weeks. Spent $0 on ads. Here's what worked."
+        },
+        {
+          "slide_num": 2,
+          "headline": "1. Reddit value-first posting",
+          "body": "Find subreddits with your audience. Answer questions thoroughly. Link to your tool in P.S. Example: r/productivity, 2,400 signups from 8 posts."
+        },
+        {
+          "slide_num": 3,
+          "headline": "2. Product Hunt launch",
+          "body": "Post on Tuesday-Thursday. Prep 20 friends to upvote in first hour. Respond to all comments. Result: 1,200 signups in 24 hours."
+        },
+        {
+          "slide_num": 4,
+          "headline": "3. LinkedIn founder content",
+          "body": "Post build-in-public updates daily. Share revenue numbers. Show behind-the-scenes. Example: '$ 3k MRR post' got 340 demo requests."
+        },
+        {
+          "slide_num": 5,
+          "headline": "4. Comparison pages",
+          "body": "Create '[Competitor] vs [Your Tool]' landing pages. Rank for competitor keywords. Example: 'Notion alternative' page gets 2,100 monthly visitors."
+        },
+        {
+          "slide_num": 6,
+          "headline": "5. Twitter reply strategy",
+          "body": "Find viral tweets in your niche. Add value in replies. Link to related content. Example: 40 replies/day = 600 profile visits = 80 signups/week."
+        },
+        {
+          "slide_num": 7,
+          "headline": "6. Integration directories",
+          "body": "List your tool on Zapier, Make, n8n directories. Free exposure to active users. Example: Zapier listing = 180 signups/month."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get 23 more zero-cost tactics",
+          "body": "Step-by-step playbooks. Real examples with numbers. Community access. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "Side project validation in 48 hours",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "Validate any idea in one weekend",
+          "body": "No code needed. Spent 8 hours. Got proof before building. Here's the framework."
+        },
+        {
+          "slide_num": 2,
+          "headline": "Friday night: Landing page (2 hours)",
+          "body": "Use Carrd or Webflow. Write headline that promises outcome. Add email capture. Example: 'Get 100 leads/week without ads. Join waitlist.'"
+        },
+        {
+          "slide_num": 3,
+          "headline": "Saturday morning: Reddit test (1 hour)",
+          "body": "Post in 3 relevant subreddits. Frame as question: 'Would you use X that does Y?' Link to landing page. Target: 50+ upvotes or 10+ signups."
+        },
+        {
+          "slide_num": 4,
+          "headline": "Saturday afternoon: Cold outreach (3 hours)",
+          "body": "Find 50 people with the problem. Email them directly. Example: 'Building X for Y. Would you pay $20/month for this?' Target: 5+ positive replies."
+        },
+        {
+          "slide_num": 5,
+          "headline": "Saturday night: Twitter poll (30 min)",
+          "body": "Post poll asking if they'd pay. Share in relevant communities. Example: 'Would you pay $15/month for automated content posting?' Target: 40%+ yes votes."
+        },
+        {
+          "slide_num": 6,
+          "headline": "Sunday: Analyze results (1 hour)",
+          "body": "Green flags: 25+ email signups, 10+ willing to pay, 40%+ poll yes. Red flags: No signups, vague interest, feature requests only."
+        },
+        {
+          "slide_num": 7,
+          "headline": "The decision matrix",
+          "body": "Build it: 30+ signups + 5+ payment commitments. Pivot: Interest but wrong angle, test new positioning. Kill it: <10 signups, no payment intent."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get the validation templates",
+          "body": "Landing page copy formulas. Cold email scripts. Subreddit lists by niche. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "Multi-platform distribution",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "Post to 9 platforms in 15 minutes",
+          "body": "Same content. Zero copy-paste. Fully automated. Here's the system."
+        },
+        {
+          "slide_num": 2,
+          "headline": "The platform stack",
+          "body": "Short video: TikTok, Reels, Shorts, LinkedIn. Text: Twitter, LinkedIn, Reddit. Image: Instagram, Pinterest. One source file feeds all."
+        },
+        {
+          "slide_num": 3,
+          "headline": "Step 1: Create master content",
+          "body": "Record one 60-second video vertical. OR write one 200-word post. This is your source. Everything else auto-generates from this."
+        },
+        {
+          "slide_num": 4,
+          "headline": "Step 2: Format variations",
+          "body": "Video: 9:16 for TikTok/Reels, 1:1 for feed posts. Text: Thread for Twitter, paragraph for LinkedIn, story for Reddit. Playwright handles this."
+        },
+        {
+          "slide_num": 5,
+          "headline": "Step 3: Platform-specific hooks",
+          "body": "TikTok: Question in first 2 seconds. LinkedIn: Professional angle. Reddit: Community-specific framing. Twitter: Hot take version. Same core content."
+        },
+        {
+          "slide_num": 6,
+          "headline": "Step 4: Schedule distribution",
+          "body": "Best times per platform: TikTok 7-9pm, LinkedIn 8am, Twitter 11am, Reddit 9am. Queue all in one sitting. Playwright posts automatically."
+        },
+        {
+          "slide_num": 7,
+          "headline": "The results",
+          "body": "Time investment: 30 min create + 15 min schedule = 45 min total. Output: 9 platforms × 1 post = 9 posts. Reach: 34,000 combined impressions."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get the automation scripts",
+          "body": "Playwright multi-poster code. Platform timing cheatsheet. Content adaptation templates. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "Email list building tactics",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "Grew email list from 0 to 8,400 in 90 days",
+          "body": "No ads. No giveaways. Just 5 lead magnets. Here's what worked."
+        },
+        {
+          "slide_num": 2,
+          "headline": "Lead magnet 1: ROI calculator",
+          "body": "Interactive tool. Example: 'Calculate your SaaS pricing'. Collects email for results. Conversion rate: 34%. Signups: 2,100."
+        },
+        {
+          "slide_num": 3,
+          "headline": "Lead magnet 2: Swipe file",
+          "body": "Collection of proven examples. Example: '47 cold email subject lines that book calls'. PDF delivery. Conversion rate: 28%. Signups: 1,800."
+        },
+        {
+          "slide_num": 4,
+          "headline": "Lead magnet 3: Checklist",
+          "body": "Actionable step-by-step list. Example: 'Pre-launch checklist for apps'. One-page PDF. Conversion rate: 31%. Signups: 1,600."
+        },
+        {
+          "slide_num": 5,
+          "headline": "Lead magnet 4: Template pack",
+          "body": "Ready-to-use files. Example: 'Notion dashboard templates'. Immediate download. Conversion rate: 41%. Signups: 2,200."
+        },
+        {
+          "slide_num": 6,
+          "headline": "Lead magnet 5: Video training",
+          "body": "12-minute walkthrough. Example: 'How to validate ideas in 48 hours'. Email required for access. Conversion rate: 22%. Signups: 700."
+        },
+        {
+          "slide_num": 7,
+          "headline": "Distribution strategy",
+          "body": "Reddit posts: 2,400 signups. Twitter thread CTAs: 1,800 signups. LinkedIn articles: 1,600 signups. Blog post upgrades: 2,200 signups. YouTube descriptions: 400 signups."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get all 5 lead magnet templates",
+          "body": "Copy-paste ready. Conversion-optimized landing pages. Email sequences included. Link in bio."
+        }
+      ]
+    },
+    {
+      "topic": "Revenue diversification for creators",
+      "slides": [
+        {
+          "slide_num": 1,
+          "headline": "Went from $2k/month (1 stream) to $18k/month (7 streams)",
+          "body": "Same audience. Same effort. Here's the exact revenue breakdown."
+        },
+        {
+          "slide_num": 2,
+          "headline": "Stream 1: Digital products ($4,200/month)",
+          "body": "Templates, checklists, swipe files. Example: Notion templates at $29 each. Sales: 145/month. Low maintenance once created."
+        },
+        {
+          "slide_num": 3,
+          "headline": "Stream 2: Course/cohort ($3,800/month)",
+          "body": "One course, run twice/month. Price: $199. Students: 19/month average. Time: 4 hours/week. High margin."
+        },
+        {
+          "slide_num": 4,
+          "headline": "Stream 3: Affiliate commissions ($2,600/month)",
+          "body": "Tools you actually use. Example: ConvertKit, Notion, Riverside. Average: 8-12 signups/week. Commission: $50-200 per signup."
+        },
+        {
+          "slide_num": 5,
+          "headline": "Stream 4: Sponsorships ($3,200/month)",
+          "body": "2 sponsors/month at $1,600 each. Newsletter + Twitter thread + video mention. Audience: 12,000 email, 18,000 Twitter."
+        },
+        {
+          "slide_num": 6,
+          "headline": "Stream 5: Consulting ($2,400/month)",
+          "body": "4 hours/month at $600/hour. Only take projects that become content. Example: Client app audit = case study post."
+        },
+        {
+          "slide_num": 7,
+          "headline": "Stream 6: App revenue ($1,200/month)",
+          "body": "2 small apps with subscriptions. Example: Focus timer app at $3/month. 400 active subscribers combined. Passive income."
+        },
+        {
+          "slide_num": 8,
+          "headline": "Get the revenue stack blueprint",
+          "body": "Product pricing calculator. Sponsor pitch templates. Affiliate program list. Link in bio."
+        }
+      ]
+    }
+  ]
+}

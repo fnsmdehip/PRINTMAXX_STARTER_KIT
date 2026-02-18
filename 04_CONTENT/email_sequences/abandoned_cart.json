@@ -1,0 +1,31 @@
+{
+  "sequence_name": "abandoned_cart",
+  "description": "3-email sequence for cart abandonment recovery",
+  "trigger": "cart_abandoned",
+  "emails": [
+    {
+      "id": "cart_01",
+      "delay_hours": 1,
+      "subject": "You left something behind",
+      "preview_text": "Your cart is still waiting",
+      "body": "Noticed you didn't finish checkout.\n\nNo pressure. But your cart is still saved:\n\n[CART CONTENTS]\n\n[COMPLETE PURCHASE BUTTON]\n\nIf something went wrong with the checkout, reply and let me know. I'll fix it.\n\n[Name]",
+      "cta": "complete_purchase"
+    },
+    {
+      "id": "cart_02",
+      "delay_hours": 24,
+      "subject": "Quick question about your order",
+      "preview_text": "Was there an issue?",
+      "body": "Hey,\n\nYou started to grab [PRODUCT NAME] yesterday but didn't finish.\n\nI'm curious: what stopped you?\n\n- Price too high?\n- Need more info about what's included?\n- Technical issue with checkout?\n- Just not the right time?\n\nReply and let me know. Happy to answer any questions.\n\nIf you're ready to continue:\n[COMPLETE PURCHASE BUTTON]\n\n[Name]",
+      "cta": "reply_or_purchase"
+    },
+    {
+      "id": "cart_03",
+      "delay_hours": 72,
+      "subject": "Last call: [PRODUCT NAME]",
+      "preview_text": "Your cart expires soon",
+      "body": "Final reminder about your cart.\n\n[PRODUCT NAME] is still waiting, but I'm clearing abandoned carts tomorrow.\n\nIf you want it:\n[COMPLETE PURCHASE BUTTON]\n\nIf not, no hard feelings. I'll remove it from your cart and you won't hear about this again.\n\nEither way, thanks for checking it out.\n\n[Name]\n\nP.S. If you had questions that stopped you from buying, now's the time to ask. Reply and I'll answer before the cart clears.",
+      "cta": "complete_purchase"
+    }
+  ]
+}

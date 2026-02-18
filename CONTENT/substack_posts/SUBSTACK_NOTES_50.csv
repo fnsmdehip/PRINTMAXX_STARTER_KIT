@@ -1,0 +1,51 @@
+text,category,source_alpha_id
+"disabled tracking pixels in cold email. gmail now warns recipients about them. reply rate went up. counterintuitive but the data is clear.",tool_recommendation,ALPHA276
+"58% of all cold email replies come from the first email. not the follow-ups. stop writing 7-step sequences and make email 1 perfect.",alpha_tease,ALPHA278
+"first name tokens in cold emails now trigger spam filters. the exact thing everyone does to personalize is what gets you flagged. use business context instead.",alpha_tease,ALPHA280
+"polished emails get flagged as AI-generated. casual tone wins. the worse your grammar the better your deliverability. wild times.",build_in_public,ALPHA281
+"cold email sweet spot: 4-6 lines. that is it. every line over 6 drops reply rate. brevity is not laziness. brevity is respect.",alpha_tease,ALPHA286
+"visualping.io monitors 200+ competitor pages for me. they change a price or update a landing page and i know in 30 seconds. $5/mo.",tool_recommendation,ALPHA319
+"self-reply on your own tweets gets 3-5x more clicks than a bio link. algorithm shows your reply first. free distribution hack.",alpha_tease,ALPHA334
+"tiktok changed the algo again. completion rate threshold increased. your 15-second videos need to loop or they are dead on arrival.",alpha_tease,ALPHA263
+"first hour after posting on tiktok determines everything. the algorithm tests your video with followers first now. build a base or die.",alpha_tease,ALPHA264
+"youtube shorts sweet spot is 50-60 seconds. not 15. not 90. and trending audio in the first 5 seconds matters more than the title.",tool_recommendation,ALPHA266
+"18-22 shorts per month is the optimal posting frequency. not daily. not weekly. that specific range outperforms everything else.",alpha_tease,ALPHA267
+"instagram now tracks DM shares as a priority metric. content people share privately ranks higher than content they just like.",alpha_tease,ALPHA268
+"instagram has an originality score now. cross-post from tiktok with a watermark and your reach gets crushed. post native or die.",alpha_tease,ALPHA269
+"one piece of content becomes 20 outputs. blog post to tweet thread to short to reel to newsletter section to gumroad product. zero waste.",build_in_public,ALPHA271
+"tiktok is becoming a search engine. text overlays with keywords boost discoverability. tutorials outperform entertainment. adapt or get buried.",alpha_tease,ALPHA273
+"nano banana reduces UGC video production cost from $500+ to $0.10 per video. 38% conversion boost. i am listing this as a fiverr service.",tool_recommendation,ALPHA324
+"micro-influencers get 3-5x the engagement of mega-influencers. $100-500 per post vs $10K+. findmecreators.com for discovery.",tool_recommendation,ALPHA339
+"pricing optimization is 2-4x more impactful than customer acquisition. most people obsess over traffic when they should obsess over pricing.",alpha_tease,ALPHA307
+"animated paywalls convert 2.9x better than static ones. added animation to the upgrade screen and trial conversion jumped to 22%.",build_in_public,ALPHA310
+"contextual upgrade prompts at friction points beat random popups every time. show the paywall when they hit the limit not when they open the app.",alpha_tease,ALPHA312
+"96% of users watch explainer videos during onboarding. if you do not have one you are leaving retention on the table.",alpha_tease,ALPHA316
+"usage-based pricing grew 126% year over year. per-seat pricing is dying. credits and consumption models win in 2026.",alpha_tease,ALPHA308
+"$29-39 is the impulse buy zone for digital products. not $9 not $99. pack 60-80 proven examples into a notion doc. 1-2 hours to build.",alpha_tease,ALPHA_MICRO_INFO_001
+"revenue-based financing unlocks at $15K MRR. non-dilutive. 7 providers competing for your business. no equity given up.",alpha_tease,ALPHA346
+"GEO is the new SEO. content with tables citations and specific statistics gets 30-40% more visibility in AI search results. princeton confirmed.",alpha_tease,ALPHA300
+"680 million citation analysis: reddit content is gold for perplexity rankings. chatgpt prefers structured data. google AI likes authority.",alpha_tease,ALPHA299
+"50% of consumers now use AI for product discovery. if your content is not optimized for AI citation you are invisible to half your audience.",alpha_tease,ALPHA306
+"70 custom app store product pages gives you 2x keyword targeting. most devs have 1. apple literally gives you 70 slots. use them.",tool_recommendation,ALPHA301
+"creative testing beats keyword optimization for app store conversion. screenshots matter more than metadata. test 5 variants minimum.",alpha_tease,ALPHA302
+"MCP servers cut my agent context usage by 46.9%. one config change. if you run AI agents and are not using MCP you are burning tokens.",tool_recommendation,ALPHA248
+"n8n has 160K github stars and is self-hostable. AI-native workflow automation. replaced 4 paid tools for me. $0/month.",tool_recommendation,ALPHA255
+"vercel labs released agent-browser. authenticated scraping with your actual browser profile. no more re-login headaches. game over for puppeteer.",tool_recommendation,ALPHA360
+"karpathy coined vibe coding. 31K likes 5.3M views. build apps by describing what you want. the risk is code quality. mitigation: tests.",alpha_tease,ALPHA349
+"built a SaaS MVP in 4 days with vibe coding. gemini flash stack. stripe integration on day 1. first paying user on day 4.",build_in_public,ALPHA343
+"15-30 second app promo formula: problem statement then solution then screen recording then CTA. screen recordings beat talking heads every time.",alpha_tease,ALPHA326
+"spent 3 hours building an email warmup system. turns out warmup now takes 14-21 days in 2026 not 7-14. the providers changed the rules.",honest_failure,ALPHA282
+"bought pre-warmed inboxes for $49 each. skipped the 21-day warmup period entirely. traded money for time. worth it at this stage.",build_in_public,ALPHA336
+"cold email volume consistency matters more than volume size. sending 50/day every day beats 500 on monday and nothing until friday.",alpha_tease,ALPHA284
+"subdomains for cold email are non-negotiable. protect your main domain reputation. learned this the hard way. $10/year insurance.",honest_failure,ALPHA285
+"AI for research. human for strategy. that is the 80/20 split for cold outbound in 2026. the human writes the angle. AI finds the prospects.",alpha_tease,ALPHA279
+"intent-based timing on cold emails gets 2-4x reply rates. send when they are actively researching not when your sequence says to.",alpha_tease,ALPHA275
+"clay.com for intent data enrichment. target prospects actively researching your category. reply rates are night and day vs cold lists.",tool_recommendation,ALPHA288
+"on-chain whale tracking: when exchanges see large inflows it means sell pressure. when VCs have token unlocks scheduled you already know the direction.",alpha_tease,ALPHA331
+"89 approved alpha entries sitting in a CSV. near zero converted to actual revenue. built a daily churn process: 3 entries per day into execution.",honest_failure,ALPHA_GOV_002
+"169 engagement bait entries producing zero content. each one can generate 3+ social posts. that is 507 ready posts from data we already have.",honest_failure,ALPHA_GOV_003
+"AI influencer stack costs $40/month to start. heygen for video. elevenlabs for voice. leonardo for visual consistency. that is the whole stack.",tool_recommendation,ALPHA231
+"transparency about being AI-generated builds trust faster than hiding it. counterintuitive. the audience already knows. just own it.",alpha_tease,ALPHA227
+"fanvue allows AI creators explicitly. onlyfans does not. platform selection is the difference between building a business and getting banned.",alpha_tease,ALPHA292
+"faceless youtube channels: stack ads plus sponsors plus affiliates on every video. CPM varies from $1 to $9 by niche. finance and tech pay most.",alpha_tease,ALPHA272
+"tiktok creator rewards pays 10x the old creator fund. sponsorships still pay more than any platform fund. stack both.",alpha_tease,ALPHA270

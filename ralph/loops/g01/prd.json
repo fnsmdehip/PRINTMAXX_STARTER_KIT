@@ -1,0 +1,88 @@
+{
+  "op_id": "G01",
+  "op_name": "Account Creation + Warmup",
+  "category": "GROWTH",
+  "created": "2026-02-12T07:47:24.933947",
+  "stories": [
+    {
+      "id": "G01-T01",
+      "description": "Create platform accounts",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "G01-T02",
+      "description": "Set up anti-detect browser",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "G01-T03",
+      "description": "Configure proxies",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "G01-T04",
+      "description": "Follow warmup schedules",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "G01-T05",
+      "description": "Track account health",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "G01-T06",
+      "description": "Manage credentials",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "G01-T07",
+      "description": "Automate engagement",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "G01-T08",
+      "description": "Prevent bans",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

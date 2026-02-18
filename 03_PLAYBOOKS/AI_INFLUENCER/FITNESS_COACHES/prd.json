@@ -1,0 +1,211 @@
+{
+  "persona_type": "Fitness Coach",
+  "persona_id": "AI005",
+  "tagline": "AI fitness persona that builds community and sells programs",
+  "overview": "An AI-generated fitness personality that posts workout tips, transformation content, and motivation. Monetizes through workout programs, supplement affiliates, and coaching. High engagement niche with strong purchase intent.",
+  "revenue_model": {
+    "primary": "Workout programs and meal plans",
+    "secondary": ["Supplement affiliates (30-50% commission)", "Fitness app affiliates", "Apparel partnerships", "1:1 coaching"],
+    "monthly_potential": {
+      "10k_followers": "$1,000-3,000",
+      "50k_followers": "$5,000-15,000",
+      "100k_followers": "$15,000-50,000"
+    }
+  },
+  "persona_creation": {
+    "visual": {
+      "generation": "MidJourney/Flux for consistent athletic physique",
+      "style": "Fit but attainable (not bodybuilder extreme)",
+      "age_range": "25-35",
+      "variations": "Gym shots, meal prep, outdoor training, lifestyle",
+      "tools": ["MidJourney --cref for consistency", "Gemini for variations"]
+    },
+    "voice": {
+      "tone": "Motivating but no-nonsense, science-backed",
+      "content_style": "Quick tips, form checks, myth-busting",
+      "catchphrases": ["No shortcuts, just consistency", "Form over ego"],
+      "tools": ["ElevenLabs energetic voice", "HeyGen for form videos"]
+    },
+    "backstory": {
+      "template": "[Name] transformed [their body/life] in [timeframe]. Now helps others do the same.",
+      "example": "Jordan lost 50 lbs in 8 months after years of yo-yo dieting. Now teaches sustainable fitness."
+    }
+  },
+  "content_strategy": {
+    "platforms": {
+      "primary": "Instagram (fitness visual platform)",
+      "secondary": ["TikTok (younger demo, viral potential)", "YouTube Shorts", "Twitter (for fitness threads)"]
+    },
+    "content_types": [
+      {
+        "type": "Workout demo",
+        "frequency": "Daily",
+        "format": "15-30 second exercise with form tips",
+        "example": "The pushup mistake killing your gains (AI avatar demo)"
+      },
+      {
+        "type": "Transformation posts",
+        "frequency": "2-3 per week",
+        "format": "Before/after with story",
+        "example": "6 months of consistency. No fancy supplements."
+      },
+      {
+        "type": "Meal prep",
+        "frequency": "2-3 per week",
+        "format": "High protein meal ideas with macros",
+        "example": "1500 calorie day that keeps you full"
+      },
+      {
+        "type": "Myth-busting",
+        "frequency": "1-2 per week",
+        "format": "Hot take that drives engagement",
+        "example": "Cardio is NOT the best way to lose fat"
+      },
+      {
+        "type": "Motivational",
+        "frequency": "Daily",
+        "format": "Quote/reminder posts",
+        "example": "The gym will always take you back"
+      }
+    ]
+  },
+  "monetization_funnel": {
+    "awareness": {
+      "content": "Free workout tips, form videos",
+      "goal": "Build following"
+    },
+    "consideration": {
+      "content": "Free 7-day workout plan (lead magnet)",
+      "goal": "Capture email",
+      "delivery": "Beehiiv or direct PDF"
+    },
+    "conversion": {
+      "products": [
+        {"name": "12-Week Transformation Program", "price": "$49-99", "format": "PDF + video"},
+        {"name": "Meal Plan Bundle", "price": "$29-49", "format": "PDF with recipes"},
+        {"name": "Home Workout Program", "price": "$39-79", "format": "No equipment needed"},
+        {"name": "Coaching Calls", "price": "$99-299/session", "format": "Video call"}
+      ]
+    }
+  },
+  "affiliate_opportunities": [
+    {
+      "category": "Supplements",
+      "brands": ["Transparent Labs", "Legion Athletics", "Kaged"],
+      "commission": "30-50%",
+      "strategy": "Product reviews, stack recommendations"
+    },
+    {
+      "category": "Fitness apps",
+      "brands": ["MyFitnessPal", "Caliber", "MacroFactor"],
+      "commission": "20-40% or CPA",
+      "strategy": "Tool recommendations in content"
+    },
+    {
+      "category": "Equipment",
+      "brands": ["Amazon (home gym)", "Rogue", "REP Fitness"],
+      "commission": "3-10%",
+      "strategy": "Home gym setup guides"
+    },
+    {
+      "category": "Apparel",
+      "brands": ["Gymshark affiliate", "Alphalete", "YoungLA"],
+      "commission": "5-15%",
+      "strategy": "What I wear to the gym posts"
+    }
+  ],
+  "production_stack": {
+    "image_gen": ["MidJourney for gym photos", "Gemini for variations"],
+    "video_gen": ["HeyGen for talking head", "Runway for motion"],
+    "editing": ["CapCut for quick edits", "Premiere for longer content"],
+    "graphics": ["Canva for meal plans", "Figma for program PDFs"],
+    "scheduling": ["Later", "Planoly"],
+    "email": ["Beehiiv", "ConvertKit"],
+    "products": ["Gumroad", "Stan Store", "Teachable"]
+  },
+  "growth_timeline": {
+    "month_1": {
+      "focus": "Establish persona, post 2x daily",
+      "target": "2,000-5,000 followers",
+      "tactics": "Hashtag strategy, engagement pods"
+    },
+    "month_2-3": {
+      "focus": "Launch lead magnet, scale content",
+      "target": "10,000-20,000 followers",
+      "tactics": "Collab with micro-influencers, giveaways"
+    },
+    "month_4-6": {
+      "focus": "Launch first paid program",
+      "target": "30,000+ followers, $2k-5k revenue",
+      "tactics": "Launch sequence, testimonial collection"
+    },
+    "month_6-12": {
+      "focus": "Scale products and affiliates",
+      "target": "50,000+ followers, $5k-20k/mo",
+      "tactics": "Higher ticket coaching, brand deals"
+    }
+  },
+  "niche_variations": [
+    {
+      "sub_niche": "Women's fitness",
+      "focus": "Strength training for women, body positivity",
+      "products": "Glute programs, hormone-friendly training"
+    },
+    {
+      "sub_niche": "Over 40 fitness",
+      "focus": "Joint-friendly, sustainable",
+      "products": "Low-impact programs, mobility work"
+    },
+    {
+      "sub_niche": "Home workouts",
+      "focus": "No equipment needed",
+      "products": "Bodyweight programs, resistance band workouts"
+    },
+    {
+      "sub_niche": "Busy professionals",
+      "focus": "30-minute workouts, meal prep",
+      "products": "Time-efficient programs, quick meal guides"
+    }
+  ],
+  "risks": [
+    {
+      "risk": "Fitness advice liability",
+      "mitigation": "Disclaimers on all content, 'consult a doctor' language"
+    },
+    {
+      "risk": "AI detection",
+      "mitigation": "Focus on value, not deception. Many AI fitness accounts thrive."
+    },
+    {
+      "risk": "Supplement affiliate reputation",
+      "mitigation": "Only promote tested, reputable brands"
+    }
+  ],
+  "success_metrics": {
+    "engagement_rate": ">5% (fitness has high engagement)",
+    "follower_growth": "15-25% monthly",
+    "lead_magnet_conversion": "8-15% of followers",
+    "product_conversion": "3-8% of email list"
+  },
+  "examples_to_study": [
+    {
+      "account": "@jeffnippard",
+      "followers": "4M+",
+      "style": "Science-based, detailed breakdowns"
+    },
+    {
+      "account": "@whitney.simmons",
+      "followers": "5M+",
+      "style": "Lifestyle + workouts, high production"
+    },
+    {
+      "account": "@soheefit",
+      "followers": "1M+",
+      "style": "Evidence-based, myth-busting"
+    }
+  ],
+  "cross_pollination": {
+    "stack_with": ["MM001 (Fitness app)", "MM002 (Workout ebook)", "CF007 (Motivation channel)"],
+    "synergy": "Fitness persona promotes app, sells programs, drives traffic to motivation content"
+  }
+}

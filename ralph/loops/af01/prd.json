@@ -1,0 +1,88 @@
+{
+  "op_id": "AF01",
+  "op_name": "Affiliate Program Stack",
+  "category": "AFFILIATE",
+  "created": "2026-02-12T07:47:24.981164",
+  "stories": [
+    {
+      "id": "AF01-T01",
+      "description": "Sign up for programs",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF01-T02",
+      "description": "Create content around products",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF01-T03",
+      "description": "Build comparison pages",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF01-T04",
+      "description": "Set up tracking links",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF01-T05",
+      "description": "Integrate into apps",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF01-T06",
+      "description": "Track conversions",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF01-T07",
+      "description": "Optimize placement",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF01-T08",
+      "description": "Scale top earners",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

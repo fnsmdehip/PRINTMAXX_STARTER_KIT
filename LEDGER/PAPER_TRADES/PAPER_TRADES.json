@@ -1,0 +1,207 @@
+[
+  {
+    "trade_id": "PAPER_TRADE_001",
+    "method_id": "MM007_COLD_OUTBOUND",
+    "alpha_id": "ALPHA930",
+    "budget": 50.0,
+    "duration_days": 14,
+    "start_date": "2026-02-04T20:56:17.669282",
+    "end_date": "2026-02-18T20:56:17.669290",
+    "status": "SCALED",
+    "expected_revenue_per_hour": 20.0,
+    "scalability_score": 5,
+    "platform_risk": 5,
+    "decision": "SCALE",
+    "decision_confidence": 0.8,
+    "kelly_fraction": 0.0,
+    "recommended_position_size": 0.0,
+    "alerts": [
+      "Revenue/hour 4.9\u03c3 above expected ($22.92 vs $20.00)",
+      "Revenue/hour 2.8\u03c3 above expected ($23.61 vs $20.00)"
+    ],
+    "notes": "",
+    "data_points": [
+      {
+        "timestamp": "2026-02-04T20:56:25.476711",
+        "revenue": 35.0,
+        "hours": 1.5,
+        "leads": 5,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:29.676925",
+        "revenue": 45.0,
+        "hours": 2.0,
+        "leads": 8,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:29.744207",
+        "revenue": 25.0,
+        "hours": 1.0,
+        "leads": 3,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:29.814946",
+        "revenue": 50.0,
+        "hours": 2.5,
+        "leads": 7,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:34.805718",
+        "revenue": 30.0,
+        "hours": 1.5,
+        "leads": 4,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:34.871659",
+        "revenue": 55.0,
+        "hours": 2.0,
+        "leads": 9,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:34.934621",
+        "revenue": 40.0,
+        "hours": 1.5,
+        "leads": 6,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:34.996821",
+        "revenue": 28.0,
+        "hours": 1.2,
+        "leads": 4,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:35.063970",
+        "revenue": 48.0,
+        "hours": 2.0,
+        "leads": 7,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:56:35.200747",
+        "revenue": 42.0,
+        "hours": 1.8,
+        "leads": 6,
+        "conversion_rate": 0,
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "trade_id": "PAPER_TRADE_002",
+    "method_id": "MM010_DROPSHIP",
+    "alpha_id": "ALPHA555",
+    "budget": 75.0,
+    "duration_days": 7,
+    "start_date": "2026-02-04T20:57:16.065739",
+    "end_date": "2026-02-11T20:57:16.065749",
+    "status": "KILLED",
+    "expected_revenue_per_hour": 20.0,
+    "scalability_score": 5,
+    "platform_risk": 5,
+    "decision": "KILL",
+    "decision_confidence": 0.8,
+    "kelly_fraction": 0.0,
+    "recommended_position_size": 0.0,
+    "alerts": [],
+    "notes": "",
+    "data_points": [
+      {
+        "timestamp": "2026-02-04T20:59:07.183824",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:07.612613",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:07.807974",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:07.982147",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:08.226541",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:08.296547",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:08.449313",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:09.043398",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:09.295030",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      },
+      {
+        "timestamp": "2026-02-04T20:59:09.441174",
+        "revenue": 8.0,
+        "hours": 1.0,
+        "leads": 1,
+        "conversion_rate": 0,
+        "notes": ""
+      }
+    ]
+  }
+]

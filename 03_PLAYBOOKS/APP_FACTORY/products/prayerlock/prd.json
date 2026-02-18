@@ -1,0 +1,314 @@
+{
+  "product_name": "PrayerLock",
+  "tagline": "Lock your phone until you pray",
+  "problem_statement": "Christians want to start their day with prayer but check their phone first. The average person checks their phone within 3 minutes of waking. PrayerLock forces the prayer habit by blocking distracting apps until devotional is complete.",
+  "target_audience": {
+    "primary": "Christian adults 25-45 who want to build a prayer habit",
+    "secondary": "Youth group leaders, pastors recommending to congregation",
+    "demographics": {
+      "age": "25-45",
+      "religion": "Christian (Protestant, Catholic, Non-denominational)",
+      "tech_comfort": "Medium-high",
+      "pain_points": ["Phone addiction", "Inconsistent prayer life", "Morning rush"]
+    }
+  },
+  "market_size": {
+    "tam": "$2B faith apps market",
+    "sam": "$500M prayer/devotional apps",
+    "som": "$10M screen blocking + faith intersection"
+  },
+  "competitors": [
+    {
+      "name": "Opal",
+      "mrr": "$600,000",
+      "positioning": "Screen time management",
+      "gap": "No faith integration"
+    },
+    {
+      "name": "BePresent",
+      "mrr": "$300,000",
+      "positioning": "Mindful phone usage",
+      "gap": "Secular mindfulness only"
+    },
+    {
+      "name": "Hallow",
+      "mrr": "$4,000,000+",
+      "positioning": "Catholic prayer and meditation",
+      "gap": "No screen blocking"
+    },
+    {
+      "name": "Pray.com",
+      "mrr": "$1,250,000",
+      "positioning": "Christian audio content",
+      "gap": "No accountability/blocking"
+    }
+  ],
+  "unique_value_proposition": "Only app that combines screen blocking with Christian devotional content. They block your phone. We help you pray.",
+  "tech_stack": {
+    "frontend": "React Native (Expo)",
+    "state": "Zustand",
+    "storage": "MMKV",
+    "ios_native": "Swift (FamilyControls/Screen Time API)",
+    "android_native": "Kotlin (UsageStatsManager)",
+    "payments": "RevenueCat",
+    "analytics": "Mixpanel",
+    "bible_api": "bible-api.com (free)"
+  },
+  "monetization": {
+    "model": "Freemium with hard paywall after trial",
+    "trial": "3 days free",
+    "pricing": {
+      "monthly": {
+        "price": 9.99,
+        "product_id": "prayerlock_monthly",
+        "enabled": true
+      },
+      "annual": {
+        "price": 49.99,
+        "product_id": "prayerlock_annual",
+        "enabled": true,
+        "note": "Highlight as BEST VALUE (58% savings)"
+      },
+      "lifetime": {
+        "price": 99.99,
+        "product_id": "prayerlock_lifetime",
+        "enabled": false,
+        "note": "Enable after validating monthly/annual conversion"
+      }
+    },
+    "entitlements": ["pro"],
+    "rationale": "Screen blockers like Opal ($600k MRR) and BePresent ($300k MRR) prove hard paywall works."
+  },
+  "core_features": [
+    {
+      "id": "F001",
+      "name": "App Blocking",
+      "description": "Select which apps get blocked until devotional complete",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "F002",
+      "name": "Prayer Timer",
+      "description": "Configurable timer (5-60 min) that must complete before unlock",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "F003",
+      "name": "Scripture Reading",
+      "description": "Daily Bible passage that must be read/scrolled to complete",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "F004",
+      "name": "Streak Tracking",
+      "description": "Current streak, longest streak, calendar view",
+      "priority": "P1",
+      "mvp": true
+    },
+    {
+      "id": "F005",
+      "name": "Hard Paywall",
+      "description": "3-day trial, then paywall with monthly/annual options",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "F006",
+      "name": "Emergency Unlock",
+      "description": "Hidden option requiring typed phrase to bypass",
+      "priority": "P1",
+      "mvp": true
+    }
+  ],
+  "success_metrics": {
+    "trial_to_paid": "15%",
+    "day_7_retention": "40%",
+    "monthly_churn": "<8%",
+    "average_streak": "7+ days",
+    "app_store_rating": "4.5+ stars",
+    "month_1_mrr": "$2,000",
+    "month_3_mrr": "$10,000"
+  },
+  "stories": [
+    {
+      "id": "PL-001",
+      "title": "Project setup with Expo and TypeScript",
+      "category": "infrastructure",
+      "priority": 1,
+      "acceptance": [
+        "Expo project initialized with TypeScript",
+        "Zustand configured for state management",
+        "MMKV configured for fast local storage",
+        "Navigation structure set up",
+        "Folder structure matches TECH_SPEC.md"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-002",
+      "title": "Onboarding flow with value proposition",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "3-5 onboarding screens explaining value",
+        "Clean illustrations",
+        "Ends with app selection and timer setup"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-003",
+      "title": "App blocking selection screen",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Lists installed apps with icons",
+        "Multi-select with checkboxes",
+        "Common distractions pre-selected",
+        "Persists to local storage"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-004",
+      "title": "iOS Screen Time API native module",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "Swift native module for FamilyControls",
+        "Request authorization for Screen Time",
+        "Apply/remove app shields",
+        "React Native bridge working"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-005",
+      "title": "Android UsageStats native module",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "Kotlin native module for UsageStatsManager",
+        "Permission request flow",
+        "Overlay display when blocked app opened",
+        "React Native bridge working"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-006",
+      "title": "Prayer timer screen with countdown",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Full-screen timer display",
+        "Circular progress indicator",
+        "Cannot exit until complete",
+        "Haptic on completion"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-007",
+      "title": "Scripture reading screen",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Fetches daily passage from bible-api.com",
+        "Scroll tracking (must reach bottom)",
+        "60-second minimum engagement",
+        "Mark complete button appears after threshold"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-008",
+      "title": "Bible API service integration",
+      "category": "services",
+      "priority": 1,
+      "acceptance": [
+        "365-passage reading plan",
+        "Local caching",
+        "Offline fallback"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-009",
+      "title": "Home screen with status and streak",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Shows locked/unlocked status",
+        "Displays current streak",
+        "Calendar preview",
+        "Start devotional button"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-010",
+      "title": "RevenueCat subscription integration",
+      "category": "services",
+      "priority": 1,
+      "acceptance": [
+        "RevenueCat SDK configured",
+        "Products: monthly, annual",
+        "Trial tracking",
+        "Restore purchases"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-011",
+      "title": "Paywall screen with pricing",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Clean paywall design",
+        "Both pricing options",
+        "Social proof elements",
+        "Restore purchases link"
+      ],
+      "passes": false
+    },
+    {
+      "id": "PL-012",
+      "title": "Settings screen with emergency unlock",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Timer duration setting",
+        "Daily reset time",
+        "Hidden emergency unlock",
+        "Subscription management"
+      ],
+      "passes": false
+    }
+  ],
+  "risks": [
+    {
+      "risk": "Apple rejects Screen Time API usage",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Follow Apple guidelines exactly, prepare appeal"
+    },
+    {
+      "risk": "Low trial conversion",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "A/B test paywall, add urgency"
+    },
+    {
+      "risk": "Copycat apps",
+      "likelihood": "high",
+      "impact": "low",
+      "mitigation": "Build church partnership moat"
+    }
+  ],
+  "guardrails": ".ralph/guardrails.md",
+  "progress_log": ".ralph/progress.md"
+}

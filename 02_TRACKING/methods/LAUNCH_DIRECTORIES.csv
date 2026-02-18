@@ -1,0 +1,43 @@
+directory_id,directory_name,url,category,cost,da_estimate,do_follow,turnaround_days,best_for,notes,status,reviewer_notes
+LD001,Product Hunt,https://producthunt.com,LAUNCH_PLATFORM,$0,92,YES,1,"Apps SaaS tools","Top tier. prepare 2 weeks before launch. get hunters. schedule for Tuesday 12:01am PT.",PENDING_REVIEW,Must-do for any product launch
+LD002,Hacker News (Show HN),https://news.ycombinator.com,LAUNCH_PLATFORM,$0,92,YES,1,"Dev tools SaaS open source","Show HN post. technical audience. avoid marketing speak. be honest about what it does.",PENDING_REVIEW,High traffic but brutal feedback
+LD003,BetaList,https://betalist.com,STARTUP_DIRECTORY,$0-$129,74,YES,3-7,"Early stage startups SaaS","Free for basic listing. paid for featured. good for pre-launch email collection.",PENDING_REVIEW,Good for collecting early adopters
+LD004,Launching Next,https://launchingnext.com,STARTUP_DIRECTORY,$0,50,YES,1-3,"Startups apps SaaS","Submit and get listed. lower traffic than PH but still worth it.",PENDING_REVIEW,Quick submission
+LD005,SaaSHub,https://saashub.com,SAAS_DIRECTORY,$0,62,YES,3-7,"SaaS tools","Compare with alternatives. good for SEO. claim your listing.",PENDING_REVIEW,Good for SaaS comparison traffic
+LD006,AlternativeTo,https://alternativeto.net,SOFTWARE_DIRECTORY,$0,82,YES,1-3,"Any software or app","User-suggested alternatives. high DA. add your product as alternative to competitors.",PENDING_REVIEW,High DA backlink. Must add as alternative to known product.
+LD007,G2,https://g2.com,REVIEW_PLATFORM,$0,92,YES,7-14,"B2B SaaS","Claim profile. collect reviews. critical for enterprise sales. G2 badges = social proof.",PENDING_REVIEW,Enterprise social proof. Get 10 reviews fast.
+LD008,Capterra,https://capterra.com,REVIEW_PLATFORM,$0,93,YES,7-14,"B2B SaaS","Free listing. paid for promoted placement. high DA backlink.",PENDING_REVIEW,Huge DA. Free listing worth it alone.
+LD009,AppSumo,https://appsumo.com,DEAL_PLATFORM,$0 (rev share),89,YES,14-30,"SaaS tools digital products","Lifetime deal model. high volume but low per-unit revenue. good for launch momentum.",PENDING_REVIEW,Volume play. Careful with LTD pricing.
+LD010,Indie Hackers,https://indiehackers.com,COMMUNITY,$0,74,YES,1,"Indie products SaaS","Post in products section. engage in community. be transparent about revenue.",PENDING_REVIEW,Community engagement required
+LD011,There's An AI For That,https://theresanaiforthat.com,AI_DIRECTORY,$0-$149,72,YES,1-7,"AI tools AI apps","Biggest AI tool directory. must-list for any AI product.",PENDING_REVIEW,Must-do for AI products
+LD012,Futurepedia,https://futurepedia.io,AI_DIRECTORY,$0-$99,65,YES,3-7,"AI tools","Growing AI directory. good backlink.",PENDING_REVIEW,Second tier AI directory
+LD013,ToolPilot.ai,https://toolpilot.ai,AI_DIRECTORY,$0,55,YES,1-3,"AI tools","Free AI tool listing.",PENDING_REVIEW,Free. Quick submission.
+LD014,Ben's Bites Directory,https://bensbites.com,AI_DIRECTORY,$0,60,YES,3-7,"AI tools startups","Ben's Bites newsletter has a directory. high-signal AI audience.",PENDING_REVIEW,High-signal audience
+LD015,Uneed,https://uneed.best,STARTUP_DIRECTORY,$0,45,YES,1-3,"Startups SaaS tools","Simple submission. quick turnaround.",PENDING_REVIEW,Quick and easy
+LD016,Microlaunch,https://microlaunch.net,STARTUP_DIRECTORY,$0,40,YES,1,"Micro SaaS indie products","Focused on small/indie products. less competition than PH.",PENDING_REVIEW,Good for micro SaaS
+LD017,StartupBase,https://startupbase.io,STARTUP_DIRECTORY,$0,42,YES,3-7,"Startups","Brazilian startup directory. good for LATAM expansion.",PENDING_REVIEW,LATAM market
+LD018,Startup Stash,https://startupstash.com,STARTUP_DIRECTORY,$0-$49,55,YES,3-7,"Startups tools","Curated directory. paid for featured.",PENDING_REVIEW,Curated quality
+LD019,StackShare,https://stackshare.io,DEV_TOOLS,$0,80,YES,1-3,"Dev tools infrastructure","Tech stack sharing. good for developer-focused products.",PENDING_REVIEW,High DA. Dev audience.
+LD020,DevHunt,https://devhunt.org,DEV_TOOLS,$0,40,YES,1,"Dev tools open source","Product Hunt for developers. GitHub-connected.",PENDING_REVIEW,Dev-focused PH alternative
+LD021,Peerlist,https://peerlist.io,PROFESSIONAL,$0,50,YES,1-3,"Professional tools career","Professional networking + product showcase.",PENDING_REVIEW,Growing platform
+LD022,MakerLog,https://getmakerlog.com,MAKER_COMMUNITY,$0,35,YES,1,"Side projects maker tools","Build-in-public community. daily task logging.",PENDING_REVIEW,Build in public audience
+LD023,Crunchbase,https://crunchbase.com,BUSINESS_DIRECTORY,$0,91,YES,7-14,"Startups B2B","Claim your company profile. high DA. good for credibility.",PENDING_REVIEW,High DA credibility signal
+LD024,AngelList / Wellfound,https://wellfound.com,STARTUP_DIRECTORY,$0,91,YES,3-7,"Startups","Company profile + job listings. high DA backlink.",PENDING_REVIEW,High DA. Claim profile.
+LD025,Trustpilot,https://trustpilot.com,REVIEW_PLATFORM,$0,93,YES,3-7,"Any product or service","Claim profile. collect reviews. huge DA.",PENDING_REVIEW,Massive DA. Must claim.
+LD026,TrustRadius,https://trustradius.com,REVIEW_PLATFORM,$0,78,YES,7-14,"B2B software","In-depth reviews. good for enterprise credibility.",PENDING_REVIEW,Enterprise credibility
+LD027,SourceForge,https://sourceforge.net,SOFTWARE_DIRECTORY,$0,92,YES,3-7,"Open source software tools","Legacy but huge DA. worth listing for backlink alone.",PENDING_REVIEW,Massive DA. Easy listing.
+LD028,Slant,https://slant.co,COMPARISON,$0,64,YES,1-3,"Any product","Comparison and recommendation platform.",PENDING_REVIEW,Good for comparison queries
+LD029,Remote Tools,https://remotetools.club,NICHE_DIRECTORY,$0,40,YES,3-7,"Remote work tools","Remote work focused directory.",PENDING_REVIEW,Niche but relevant
+LD030,SideProjectors,https://sideprojectors.com,SIDE_PROJECT,$0,45,YES,1-3,"Side projects","Buy sell and showcase side projects.",PENDING_REVIEW,Side project audience
+LD031,MCP Apps,https://mcpapps.com,MCP_DIRECTORY,$0,NEW,UNKNOWN,1-3,"MCP servers AI tools","NEW directory (launched Jan 26 2026). first-mover window. submit MCP tools here.",PENDING_REVIEW,CRITICAL: First-mover window. Submit immediately.
+LD032,Dang.ai,https://dang.ai,AI_DIRECTORY,$0,50,YES,1-3,"AI tools","Growing AI directory with reviews.",PENDING_REVIEW,Free AI listing
+LD033,TopAI.tools,https://topai.tools,AI_DIRECTORY,$0,48,YES,1-7,"AI tools","AI tools directory with categories.",PENDING_REVIEW,Category-specific listing
+LD034,AI Tool Guru,https://aitoolguru.com,AI_DIRECTORY,$0,35,YES,1-7,"AI tools","Smaller AI directory. easy listing.",PENDING_REVIEW,Quick free listing
+LD035,Toolify.ai,https://toolify.ai,AI_DIRECTORY,$0,55,YES,1-7,"AI tools","AI tools directory with traffic.",PENDING_REVIEW,Growing AI directory
+LD036,NextPedia,https://nextpedia.io,AI_DIRECTORY,$0,30,YES,1-3,"AI tools","Newer AI directory.",PENDING_REVIEW,New but free
+LD037,Killer Startups,https://killerstartups.com,STARTUP_DIRECTORY,$0-$299,58,YES,7-14,"Startups","Featured review option. good exposure.",PENDING_REVIEW,Paid featured option
+LD038,All Top Startups,https://alltopstartups.com,STARTUP_DIRECTORY,$0,52,YES,3-7,"Startups","Blog + directory. may get editorial coverage.",PENDING_REVIEW,Potential editorial coverage
+LD039,1000 Tools,https://1000.tools,TOOL_DIRECTORY,$0,40,YES,1-3,"Tools productivity","Curated tool collection.",PENDING_REVIEW,Quick listing
+LD040,Awesome Indie,https://awesomeindie.com,INDIE_DIRECTORY,$0,30,YES,1-3,"Indie products bootstrapped","Directory of indie/bootstrapped products.",PENDING_REVIEW,Indie audience
+LD041,Pitchwall,https://pitchwall.co,STARTUP_DIRECTORY,$0,35,YES,1-3,"Startups","Startup pitch page directory.",PENDING_REVIEW,Free pitch page
+LD042,The Startup Pitch,https://thestartuppitch.com,STARTUP_DIRECTORY,$0,32,YES,3-7,"Startups","Video pitch platform.",PENDING_REVIEW,Video format

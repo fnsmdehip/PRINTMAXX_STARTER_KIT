@@ -1,0 +1,90 @@
+# Appfile - App Store and Play Store identifiers
+# This file defines the app identifiers for code signing and deployment
+#
+# Environment variables override these values in CI
+
+# ==========================================
+# iOS Configuration
+# ==========================================
+
+# App Store Connect Team ID
+# Your 10-digit Team ID from https://developer.apple.com/account
+team_id(ENV["APPLE_TEAM_ID"] || "XXXXXXXXXX")
+
+# App Store Connect Issuer ID (for API key authentication)
+# Found in App Store Connect > Users and Access > Keys
+app_store_connect_api_key(
+  key_id: ENV["APP_STORE_CONNECT_API_KEY_ID"],
+  issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+  key_filepath: ENV["APP_STORE_CONNECT_API_KEY_PATH"],
+  in_house: false
+) if ENV["APP_STORE_CONNECT_API_KEY_ID"]
+
+# ==========================================
+# Per-App Configuration
+# ==========================================
+
+# Default app identifier
+app_identifier(ENV["APP_IDENTIFIER"] || "com.yourcompany.app")
+
+# Apple ID (email) for App Store Connect
+apple_id(ENV["APPLE_ID"] || "developer@yourcompany.com")
+
+# iTunes Connect Team ID (if different from developer team)
+# itc_team_id(ENV["ITC_TEAM_ID"] || "XXXXXXXXXX")
+
+# ==========================================
+# Platform-Specific Overrides
+# ==========================================
+
+# iOS-specific configuration
+for_platform :ios do
+  app_identifier(ENV["IOS_APP_IDENTIFIER"] || ENV["APP_IDENTIFIER"] || "com.yourcompany.app")
+
+  # Use a different team for enterprise builds
+  # team_id(ENV["IOS_ENTERPRISE_TEAM_ID"]) if ENV["ENTERPRISE_BUILD"]
+end
+
+# Android-specific configuration
+for_platform :android do
+  # Android uses package name instead of app identifier
+  package_name(ENV["ANDROID_PACKAGE_NAME"] || ENV["APP_IDENTIFIER"] || "com.yourcompany.app")
+
+  # JSON key file for Google Play API
+  json_key_file(ENV["SUPPLY_JSON_KEY"] || "fastlane/play-store-key.json")
+end
+
+# ==========================================
+# Per-Lane Overrides
+# ==========================================
+
+# Override for specific lanes
+for_lane :beta do
+  app_identifier(ENV["BETA_APP_IDENTIFIER"] || "#{ENV['APP_IDENTIFIER']}.beta")
+end
+
+for_lane :staging do
+  app_identifier(ENV["STAGING_APP_IDENTIFIER"] || "#{ENV['APP_IDENTIFIER']}.staging")
+end
+
+# ==========================================
+# Multiple Apps Configuration
+# ==========================================
+# If you have multiple apps, you can define them here
+# and reference them in your Fastfile
+
+# Example for multiple apps:
+#
+# APPS = {
+#   main: {
+#     identifier: "com.yourcompany.mainapp",
+#     team_id: "XXXXXXXXXX"
+#   },
+#   lite: {
+#     identifier: "com.yourcompany.mainapp.lite",
+#     team_id: "XXXXXXXXXX"
+#   }
+# }
+#
+# Then in Fastfile:
+# app_identifier(APPS[:main][:identifier])

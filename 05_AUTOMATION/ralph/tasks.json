@@ -1,0 +1,85 @@
+{
+  "project": "PRINTMAXX_APP_FACTORY",
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "id": "001",
+      "name": "Generate app icons for all apps",
+      "status": "completed",
+      "priority": 1,
+      "description": "Generate 1024x1024 icons for all 9 apps using Gemini browser",
+      "completed_at": "2025-01-21T22:00:00Z"
+    },
+    {
+      "id": "002",
+      "name": "Render Remotion intro videos",
+      "status": "completed",
+      "priority": 2,
+      "description": "Render intro videos for all apps",
+      "completed_at": "2025-01-21T22:05:00Z"
+    },
+    {
+      "id": "003",
+      "name": "Render Remotion promo videos with icons",
+      "status": "completed",
+      "priority": 3,
+      "description": "Render promo videos with actual app icons for marketing",
+      "completed_at": "2025-01-21T22:49:00Z"
+    },
+    {
+      "id": "004",
+      "name": "Fix iOS Simulator EMFILE error",
+      "status": "blocked",
+      "priority": 4,
+      "description": "System file descriptor limit issue. Requires: close browser tabs, restart laptop, or increase system limits",
+      "blocker": "EMFILE: too many open files - system level fix needed"
+    },
+    {
+      "id": "005",
+      "name": "Update Expo Go in iOS Simulator",
+      "status": "pending",
+      "priority": 5,
+      "description": "Install Expo Go 2.31.6 for SDK 51 compatibility",
+      "depends_on": ["004"]
+    },
+    {
+      "id": "006",
+      "name": "Visual audit all apps in iOS Simulator",
+      "status": "pending",
+      "priority": 6,
+      "description": "Launch each app, take screenshots, verify UI looks correct",
+      "depends_on": ["005"]
+    },
+    {
+      "id": "007",
+      "name": "Create App Store screenshots",
+      "status": "pending",
+      "priority": 7,
+      "description": "Generate 6.5\" and 5.5\" screenshots for App Store submission",
+      "depends_on": ["006"]
+    },
+    {
+      "id": "008",
+      "name": "Configure RevenueCat for all apps",
+      "status": "pending",
+      "priority": 8,
+      "description": "Set up subscription tiers, paywalls, and purchase flows"
+    },
+    {
+      "id": "009",
+      "name": "Create App Store Connect entries",
+      "status": "pending",
+      "priority": 9,
+      "description": "Create app entries, fill metadata, upload screenshots",
+      "requires_human": true
+    },
+    {
+      "id": "010",
+      "name": "Generate TikTok marketing content",
+      "status": "pending",
+      "priority": 10,
+      "description": "Create hook videos and promo clips for TikTok/Reels"
+    }
+  ],
+  "last_updated": "2025-01-21T22:50:00Z"
+}

@@ -1,0 +1,89 @@
+{
+  "generated_date": "2026-01-23",
+  "niche": "faith",
+  "meta_week": "2026-01-20_to_2026-01-26",
+  "posts": [
+    {
+      "id": "FAITH001",
+      "type": "reply_bait",
+      "content": "Morning prayer or night prayer person?\n\nDrop your routine below.",
+      "notes": "Simple engagement. Forces comments about habits.",
+      "best_time": "6:00 AM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "FAITH002",
+      "type": "reply_bait",
+      "content": "One verse that changed your life.\n\nGo.",
+      "notes": "Classic engagement format. Easy to respond to.",
+      "best_time": "7:00 AM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "FAITH003",
+      "type": "a_b_contrarian",
+      "version_a": "phone first thing in the morning",
+      "version_b": "prayer first thing in the morning",
+      "notes": "Vertical text format. Obviously prayer wins but drives discussion.",
+      "best_time": "6:00 AM / 8:00 AM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "FAITH004",
+      "type": "current_meta",
+      "content": "Ramadan is 30 days away.\n\nMuslim app developers:\n\nThis is your window.\n\nPrayer reminders. Quran apps. Fasting trackers.\n\nThe market is wide open.",
+      "notes": "TIME-SENSITIVE. Ramadan opportunity post.",
+      "best_time": "12:00 PM",
+      "expected_engagement": "MEDIUM"
+    },
+    {
+      "id": "FAITH005",
+      "type": "value_post",
+      "content": "6 Christian apps making $30k-$2M/month:\n\n1. Hallow - $2M+/mo\n2. Pray.com - $1.5M/mo\n3. Glorify - $500k/mo\n4. Abide - $300k/mo\n5. Bible App - Freemium model\n6. Click to Pray - $100k/mo\n\nThe Islamic market has maybe 2 apps in this space.\n\nMassive opportunity.",
+      "notes": "Data-driven post. Drives discussion about Muslim app market.",
+      "best_time": "11:00 AM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "FAITH006",
+      "type": "reply_bait",
+      "content": "Rate my prayer routine 1-10:\n\n5:30 AM - Wake up\n5:35 AM - Phone stays off\n5:40 AM - Prayer\n6:00 AM - Scripture\n6:20 AM - Journaling\n6:30 AM - Phone on",
+      "notes": "Humble routine that invites sharing.",
+      "best_time": "5:30 AM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "FAITH007",
+      "type": "engagement_bait",
+      "content": "Comment \"PRAY\" if you want to join our morning prayer accountability group.",
+      "notes": "DM funnel trigger. Community building.",
+      "best_time": "9:00 PM",
+      "expected_engagement": "MEDIUM"
+    },
+    {
+      "id": "FAITH008",
+      "type": "inspiration",
+      "content": "Your phone has:\n\n- Social media to distract you\n- News to scare you\n- Email to stress you\n\nBut also:\n\n- Apps to pray with you\n- Scripture at your fingertips\n- Community to lift you up\n\nThe tool is neutral. Your choice isn't.",
+      "notes": "Faith-tech crossover content.",
+      "best_time": "6:00 PM",
+      "expected_engagement": "HIGH"
+    },
+    {
+      "id": "FAITH009",
+      "type": "a_b_contrarian",
+      "version_a": "quiet prayer",
+      "version_b": "worship music prayer",
+      "notes": "Style preference debate. Both have advocates.",
+      "best_time": "7:00 PM",
+      "expected_engagement": "MEDIUM"
+    },
+    {
+      "id": "FAITH010",
+      "type": "reply_bait",
+      "content": "Church in person or church online?\n\nWhere do you stand?",
+      "notes": "Controversial but not divisive. Good engagement.",
+      "best_time": "10:00 AM (Sunday)",
+      "expected_engagement": "HIGH"
+    }
+  ]
+}

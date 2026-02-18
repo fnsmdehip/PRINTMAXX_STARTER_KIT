@@ -1,0 +1,12 @@
+# Asset Placeholders
+# Replace these with actual assets before building
+
+## Required files:
+# - icon.png (1024x1024) - App icon
+# - splash.png (1284x2778 or similar) - Splash screen
+# - adaptive-icon.png (1024x1024) - Android adaptive icon foreground
+# - favicon.png (48x48) - Web favicon
+
+## Generate placeholder icons:
+# npx expo-icons generate --icon ./icon.png
+# Or use services like https://appicon.co

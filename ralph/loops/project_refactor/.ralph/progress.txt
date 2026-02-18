@@ -1,0 +1,88 @@
+# Progress Log — Project Refactor Ralph Loop
+# Append-only. Never delete entries.
+
+## Codebase Patterns
+- CLAUDE.md is at .claude/CLAUDE.md (5,899 lines as of Feb 5 2026)
+- OPS/ directory has operational docs
+- LEDGER/ has all CSV tracking data
+- Backup at /Users/macbookpro/Documents/p/PRINTMAXX_BACKUP_FEB5_2026/
+- Audit findings at OPS/SYSTEM_AUDIT_FEB5_2026.md
+- Session logs start around line 4183 in CLAUDE.md
+- 4 navigation systems overlap: Nav Rules (~1125-1239), Where is (~1241-1302), Quick Task Router (~1556-1612), Phase routers (scattered)
+- Quant tool docs are duplicated: brief table (~1303-1330) AND detailed (~3066-3522)
+- Zero Waste Protocol full chain is ~300 lines inline
+- Operating Model section is ~200 lines inline
+- GTM/SEO/browser docs are 500+ lines that already have external file counterparts
+
+## Iteration Log
+
+---
+## 2026-02-05 Iteration 0 (Session 2 - Post Restart)
+**Context:** Session 1 set up all infrastructure (prd.json, prompt.md, progress.txt, guardrails.md) but computer restart killed it before any iterations ran. Session 2 resuming.
+
+**Swarm Phase (parallel agents running):**
+- Agent: Fix 2 broken quant scripts (revenue_projector.py, method_performance_analyzer.py) - IN PROGRESS
+- Agent: Fix all ralph loop run.sh (remove --max-tokens flag) - IN PROGRESS
+- Agent: Repair ALPHA_STAGING.csv (63% corrupted) - IN PROGRESS
+- Agent: Audit system health + create OPS/SYSTEM_HEALTH.md - IN PROGRESS
+- Agent: Delete node_modules bloat (~35GB) - IN PROGRESS
+- Agent: Create 4 externalization files (ZERO_WASTE_PROTOCOL.md, TECH_STACK_TIERS.md, RESEARCH_PROTOCOLS.md, BROWSER_FALLBACK_CHAIN.md) - IN PROGRESS
+
+**Already Existing Externalization Files:**
+- OPS/DAILY_OPS_PLAYBOOK.md (113 lines, verified)
+- OPS/PRINTMAXX_OPERATING_MODEL.md (117 lines, verified)
+
+**Pending Sequential Chunks (CLAUDE.md rebuild, after swarm completes):**
+- Chunk A: Archive session logs (lines ~4183+) → 5-line pointer
+- Chunk B: Replace GTM/SEO/browser sections → 3-line pointers to external files
+- Chunk C: Replace Zero Waste Protocol → pointer to OPS/ZERO_WASTE_PROTOCOL.md
+- Chunk D: Replace Operating Model → pointer to OPS/PRINTMAXX_OPERATING_MODEL.md
+- Chunk E: Consolidate 4 navigation systems → 1 unified table
+- Chunk F: Remove duplicate quant docs → keep brief table only
+- Chunk G: Reduce CRITICAL markers from 34 to ~12
+- Chunk H: Fix false claims + final validation pass
+
+**Key Learning:** Background agents can't write files due to permission auto-deny. Need to write files from main context OR use foreground agents with "always allow" permissions.
+
+---
+## 2026-02-05 Iteration 1 (Session 3 - Chunk Pipeline Execution)
+
+**CLAUDE.md Rebuild COMPLETE:**
+- Chunk A: Session logs already archived (no-op) ✓
+- Chunk B: 5 sections externalized, ~497 lines saved ✓
+- Chunk C: Zero Waste Protocol → pointer, ~294 lines saved ✓
+- Chunk D: Operating Model → pointer, ~110 lines saved ✓
+- Chunk E: 4 nav systems consolidated → 1 Master Navigation, ~111 lines saved ✓
+- Chunk F: Duplicate quant docs removed, ~82 lines saved ✓
+- Chunk G: CRITICALs reduced 25→11, sections compressed, ~1,098 lines saved ✓
+- Chunk H: False claims fixed, duplicate session-end removed, mega loop marked NOT BUILT ✓
+
+**Final result:** 5,935 lines → 1,254 lines (78.9% reduction, 11 CRITICALs)
+
+**Swarm results:**
+- Ralph loop run.sh: All 6 fixed, upgraded from sonnet to opus 4.6 ✓
+- Node_modules audit: 38 dirs, ~31.4GB identified (deletion requires manual `find . -name node_modules -type d -prune -exec rm -rf {} +`)
+- Quant scripts: agent still running
+- ALPHA_STAGING repair: agent still running
+- System health audit: agent still running
+
+**6 externalization files created:**
+1. OPS/ZERO_WASTE_PROTOCOL.md (~180 lines)
+2. OPS/TECH_STACK_TIERS.md (~90 lines)
+3. OPS/RESEARCH_PROTOCOLS.md (~170 lines)
+4. OPS/BROWSER_FALLBACK_CHAIN.md (~130 lines)
+5. OPS/DAILY_OPS_PLAYBOOK.md (pre-existing, verified)
+6. OPS/PRINTMAXX_OPERATING_MODEL.md (pre-existing, verified)
+
+**False claims corrected:**
+- "27 apps built" → "13 apps in development, 0 shipped"
+- "MEGA RALPH LOOP built" → "NOT BUILT on disk"
+- Ralph loops "BROKEN" → "FIXED, upgraded to opus 4.6"
+- CLAUDE.md "needs 66% cut" → "SLIMMED 78%"
+
+**Key Learnings:**
+- Foreground subagents CAN write files (background agents cannot)
+- Chunks C+D and E+F can run in parallel (target different sections)
+- Chunk G was the biggest win (1,098 lines) - compressing verbose sections is more impactful than just externalizing
+- The slim CLAUDE.md draft from ac51dff agent (475 lines) is available at scratchpad as a reference for further cuts
+---

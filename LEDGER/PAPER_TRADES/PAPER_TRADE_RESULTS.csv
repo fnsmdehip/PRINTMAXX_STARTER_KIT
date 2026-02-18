@@ -1,0 +1,3 @@
+trade_id,method_id,alpha_id,decision,decision_confidence,n_observations,mean_revenue_per_hour,std_revenue_per_hour,ci_lower,ci_upper,sharpe_ratio,max_drawdown_percent,total_revenue,total_hours,total_leads,kelly_fraction,recommended_position_size,scalability_score,platform_risk,budget,duration_days,completed_date
+PAPER_TRADE_001,MM007_COLD_OUTBOUND,ALPHA930,SCALE,0.8,10,23.57,2.45,21.58,25.55,9.62,0.0,398.0,17.0,59,0.0,0.0,5,5,50.0,14,2026-02-04T20:56:43.909127
+PAPER_TRADE_002,MM010_DROPSHIP,ALPHA555,KILL,0.8,10,8.0,0.0,8.0,8.0,10.0,0.0,80.0,10.0,10,0.0,0.0,5,5,75.0,7,2026-02-04T20:59:13.146838

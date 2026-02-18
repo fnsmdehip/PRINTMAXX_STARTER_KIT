@@ -1,0 +1,74 @@
+opportunity_id,category,product_name,source_platform,source_price,sell_platform,sell_price,margin_estimate,demand_proof,source_url,notes,date_found,status
+ECOM001,TIKTOK_MADE_ME_BUY,LED Face Mask 7-in-1,Temu,$30,Amazon,$79.99,62%,600M+ posts #PerfumeTok viral beauty tech,temu.com/led-face-mask,TikTok viral beauty device - lightweight shipping,2026-01-24,NEW
+ECOM002,TIKTOK_MADE_ME_BUY,Biodance Bio-Collagen Deep Mask,AliExpress,$8,Amazon,$24.99,68%,TikTok blowing up - glass skin glow,aliexpress.com/biodance-mask,Single-use masks - high repeat purchase,2026-01-24,NEW
+ECOM003,TIKTOK_MADE_ME_BUY,Mini Projector Portable,Temu,$42,Amazon,$89.99,53%,Mini projectors trending 2026 bedroom aesthetic,temu.com/mini-projectors,WiFi + Bluetooth models preferred,2026-01-24,NEW
+ECOM004,TIKTOK_MADE_ME_BUY,LED Strip Lights 10m,Temu,$4,Amazon,$18.99,79%,312M views #thepinkstuff cleaning viral,temu.com/led-strip-lights,Gen Z bedroom + dorm aesthetic,2026-01-24,NEW
+ECOM005,TIKTOK_MADE_ME_BUY,Phone Cases Custom,AliExpress,$2,Amazon,$12.99,85%,Daily visibility in what's on my phone videos,aliexpress.com/phone-cases,Personalization drives conversion,2026-01-24,NEW
+ECOM006,ALIEXPRESS_WINNERS,Yoga Mat Premium,AliExpress,$5,Amazon,$20.43,76%,10K+ units sold past month,aliexpress.com/yoga-mat,Fitness niche - high demand,2026-01-24,NEW
+ECOM007,ALIEXPRESS_WINNERS,Resistance Bands Set,AliExpress,$2,Amazon,$9.95,80%,40K+ units sold past month,aliexpress.com/resistance-bands,Home fitness trend continues,2026-01-24,NEW
+ECOM008,ALIEXPRESS_WINNERS,Magnetic Car Phone Holder,AliExpress,$3,Amazon,$15.99,81%,High daily use visibility,aliexpress.com/magnetic-holder,6-magnet models sell best,2026-01-24,NEW
+ECOM009,ALIEXPRESS_WINNERS,Ice Roller Face Tool,Temu,$5,Amazon,$14.99,67%,40% avg savings vs Amazon beauty tools,temu.com/ice-roller,Self-care + de-puffing trend,2026-01-24,NEW
+ECOM010,ALIEXPRESS_WINNERS,Bird Feeder Outdoor,AliExpress,$9.94,Amazon,$15,34%,Steady demand - pet/outdoor niche,aliexpress.com/bird-feeder,Low competition pet adjacent,2026-01-24,NEW
+ECOM011,PRINT_ON_DEMAND_DESIGNS,Custom T-Shirt POD,Printify,$7.50,Etsy,$25,70%,25% avg margin - bestselling Etsy category,printify.com,Hyper-personalization wins 2026,2026-01-24,NEW
+ECOM012,PRINT_ON_DEMAND_DESIGNS,Couple Matching Tees,Printify,$15,Etsy,$45,67%,Valentine's trending - customizable names,printify.com,Valentine + anniversary market,2026-01-24,NEW
+ECOM013,PRINT_ON_DEMAND_DESIGNS,Pet Portrait Custom,Printful,$12,Etsy,$35,66%,Pet appreciation rapidly growing niche,printful.com,Galentine's Day + self-love expansion,2026-01-24,NEW
+ECOM014,SEASONAL_UPCOMING,Valentine Phone Charms,AliExpress,$1.50,Etsy,$8.99,83%,$27.5B Valentine market 2025 record,aliexpress.com/phone-charms,Trendy accessories - perceived value,2026-01-24,NEW
+ECOM015,SEASONAL_UPCOMING,Scrunchie Sets Valentine,AliExpress,$2,Etsy,$12.99,85%,Cute + functional - soft fabrics,aliexpress.com/scrunchies,Bundle 4-pack for higher AOV,2026-01-24,NEW
+ECOM016,SEASONAL_UPCOMING,Self-Care Gift Set,AliExpress,$8,Etsy,$29.99,73%,Curated bundles increase perceived value,aliexpress.com/gift-sets,Bath bombs + candles + soap,2026-01-24,NEW
+ECOM017,ETSY_TRENDING,Personalized Jewelry POD,Printify,$8,Etsy,$28,71%,Affordable luxury trend - custom pendants,printify.com,Names + dates drive highest conversion,2026-01-24,NEW
+ECOM018,ETSY_TRENDING,Pet ID Tags Custom,AliExpress,$1.20,Etsy,$9.99,88%,Pet products expanding Valentine market,aliexpress.com/pet-tags,Matching owner-pet accessories,2026-01-24,NEW
+ECOM019,AMAZON_BSR_GAPS,MaryRuth Liquid Multivitamin Dupe,AliExpress,$6,Amazon,$24.99,76%,500K+ units sold on TikTok Shop,aliexpress.com/multivitamin,Hair growth + wrinkle claims viral,2026-01-24,NEW
+ECOM020,TEMU_GOLDMINES,Vacuum Sealer Kitchen,Temu,$12,Amazon,$34.99,66%,Kitchen gadget TikTok trend,temu.com/vacuum-sealer,Multifunctional trending 2026,2026-01-24,NEW
+ECOM021,EBAY_ARBITRAGE,FocusFlow Year Planner,Walmart,$1.99,eBay,$29.95,93%,January momentum trend - goal setters,walmart.com/clearance,Perfect timing for January launches,2026-01-24,NEW
+ECOM022,EBAY_ARBITRAGE,Dino Flannel Shirt,Target,$5.02,eBay,$39.95,87%,Post-holiday cozy comfort trend,target.com/clearance,Unique + comfort = high perceived value,2026-01-24,NEW
+ECOM023,EBAY_ARBITRAGE,Nike Sneakers Limited,Walmart,$35,eBay,$70,50%,Walmart clearance day deal - branded footwear,walmart.com/clearance,Quick flip - high demand brand,2026-01-24,NEW
+ECOM024,EBAY_ARBITRAGE,Power Bank Portable,Clearance,$8,eBay,$24.99,68%,#1 eBay best seller - mobile device growth,clearance-stores,Growing mobile usage drives demand,2026-01-24,NEW
+ECOM025,EBAY_ARBITRAGE,Camera Vintage Equipment,Thrift,$25,eBay,$125,80%,3794% sell-through rate $399K/30 days,thrift-stores,Vintage gear + modern equipment boom,2026-01-24,NEW
+ECOM026,EBAY_ARBITRAGE,Designer Handbag Resale,Clearance,$50,eBay,$150,67%,Luxury items highest profit margins,clearance/liquidation,Authentication critical for trust,2026-01-24,NEW
+ECOM027,EBAY_ARBITRAGE,PlayStation 5 Console,Retail,$449,eBay,$549,22%,Continued high demand for PS5,retail-arbitrage,Quick flip but lower margin,2026-01-24,NEW
+ECOM028,EBAY_ARBITRAGE,Video Game Collector's Edition,Clearance,$30,eBay,$89.99,67%,Discontinued titles command premium,game-stores,Collector's editions + limited runs,2026-01-24,NEW
+ECOM029,EBAY_ARBITRAGE,Mobile Phone Accessories,Wholesale,$3,eBay,$14.99,80%,$283B market growing to $370B by 2032,wholesale-suppliers,Most profitable category on eBay,2026-01-24,NEW
+ECOM030,EBAY_ARBITRAGE,Vintage Clothing Thrift,Thrift,$5,eBay,$35,86%,100%+ margins common - unique pieces,thrift-stores,Thrifting thrill drives demand,2026-01-24,NEW
+ECOM031,TIKTOK_MADE_ME_BUY,Gua Sha Facial Tool Set,Temu,$3,Amazon,$16.99,82%,#GuaSha 2.1B TikTok views - skincare essential,temu.com/gua-sha,Rose quartz + jade sets most popular,2026-01-25,NEW
+ECOM032,TIKTOK_MADE_ME_BUY,Cloud Slides Slippers,Temu,$6,Amazon,$24.99,76%,TikTok viral comfort footwear - Gen Z staple,temu.com/cloud-slides,Multiple colors drive repeat purchases,2026-01-25,NEW
+ECOM033,TIKTOK_MADE_ME_BUY,Sunset Lamp Projector,AliExpress,$8,Amazon,$29.99,73%,#SunsetLamp 500M+ views - room aesthetic,aliexpress.com/sunset-lamp,Instagram-worthy content driver,2026-01-25,NEW
+ECOM034,TIKTOK_MADE_ME_BUY,Scalp Massager Shampoo Brush,Temu,$2,Amazon,$11.99,83%,Hair growth trend viral on TikTok,temu.com/scalp-massager,Low weight = cheap shipping,2026-01-25,NEW
+ECOM035,TIKTOK_MADE_ME_BUY,Mini Waffle Maker,Temu,$12,Amazon,$34.99,66%,#WaffleTok trending - breakfast content,temu.com/waffle-maker,Compact kitchen gadgets dominating,2026-01-25,NEW
+ECOM036,ETSY_TRENDING,Birth Flower Jewelry,AliExpress,$3,Etsy,$24.99,88%,Personalization mega-trend 2026,aliexpress.com/birth-flower,12 months = 12 SKUs per design,2026-01-25,NEW
+ECOM037,ETSY_TRENDING,Zodiac Necklace Custom,AliExpress,$2.50,Etsy,$19.99,87%,Astrology content drives conversions,aliexpress.com/zodiac-jewelry,Constellation + birthstone combos,2026-01-25,NEW
+ECOM038,ETSY_TRENDING,Custom Pet Socks,Printful,$8,Etsy,$24.99,68%,Pet parent market $136B by 2027,printful.com/pet-socks,Photo upload = viral user content,2026-01-25,NEW
+ECOM039,ETSY_TRENDING,Dried Flower Bouquet,AliExpress,$5,Etsy,$29.99,83%,Sustainable decor trend - lasts years,aliexpress.com/dried-flowers,Wedding + home decor crossover,2026-01-25,NEW
+ECOM040,SEASONAL_UPCOMING,Heart-Shaped Jewelry Box,AliExpress,$4,Etsy,$22.99,83%,Valentine's gifting - reusable item,aliexpress.com/jewelry-box,Order NOW for Feb 14 delivery,2026-01-25,NEW
+ECOM041,SEASONAL_UPCOMING,Love Letter Writing Set,AliExpress,$3,Etsy,$18.99,84%,Romantic stationery trending 2026,aliexpress.com/writing-set,Vintage aesthetic sells,2026-01-25,NEW
+ECOM042,SEASONAL_UPCOMING,Galentine's Matching Pajamas,Temu,$15,Amazon,$44.99,67%,Feb 13 Galentine's Day growing market,temu.com/matching-pjs,Friend group sets = higher AOV,2026-01-25,NEW
+ECOM043,SEASONAL_UPCOMING,Spring Garden Planters,AliExpress,$4,Amazon,$18.99,79%,Spring season prep starts February,aliexpress.com/planters,Ceramic + terracotta best sellers,2026-01-25,NEW
+ECOM044,AMAZON_BSR_GAPS,Posture Corrector Brace,AliExpress,$5,Amazon,$22.99,78%,WFH posture issues driving demand,aliexpress.com/posture,Office worker niche - recurring,2026-01-25,NEW
+ECOM045,AMAZON_BSR_GAPS,Blue Light Blocking Glasses,Temu,$3,Amazon,$14.99,80%,Screen time awareness growing,temu.com/blue-light,Style variety drives multi-purchase,2026-01-25,NEW
+ECOM046,AMAZON_BSR_GAPS,Cable Management Kit,AliExpress,$4,Amazon,$16.99,76%,Home office organization trend,aliexpress.com/cable-kit,Desk setup content fuels demand,2026-01-25,NEW
+ECOM047,PRINT_ON_DEMAND_DESIGNS,Faith-Based Mugs,Printify,$6,Etsy,$22.99,74%,Christian market $5.4B - underserved,printify.com/mugs,Bible verse designs high demand,2026-01-25,NEW
+ECOM048,PRINT_ON_DEMAND_DESIGNS,Dog Mom/Dad Sweatshirts,Printful,$18,Etsy,$49.99,64%,Pet parent identity merchandise,printful.com/sweatshirts,Breed-specific variants multiply SKUs,2026-01-25,NEW
+ECOM049,PRINT_ON_DEMAND_DESIGNS,Motivational Poster Set,Printify,$8,Etsy,$34.99,77%,Home gym + office decor trend,printify.com/posters,Sets of 3-4 increase AOV,2026-01-25,NEW
+ECOM050,TEMU_GOLDMINES,Electric Milk Frother,Temu,$5,Amazon,$19.99,75%,Coffee culture + home barista trend,temu.com/milk-frother,Rechargeable models preferred,2026-01-25,NEW
+ECOM051,TEMU_GOLDMINES,Portable Blender USB,Temu,$8,Amazon,$29.99,73%,Fitness smoothie on-the-go trend,temu.com/portable-blender,350ml single-serve most popular,2026-01-25,NEW
+ECOM052,TEMU_GOLDMINES,Ring Light 10-inch,Temu,$10,Amazon,$34.99,71%,Content creator essential - steady demand,temu.com/ring-light,Tripod stand bundles sell better,2026-01-25,NEW
+ECOM053,ALIEXPRESS_WINNERS,Wireless Earbuds TWS,AliExpress,$8,Amazon,$29.99,73%,100K+ orders - AirPods alternative,aliexpress.com/tws-earbuds,Touch control models trending,2026-01-25,NEW
+ECOM054,ALIEXPRESS_WINNERS,Smart Watch Fitness Band,AliExpress,$12,Amazon,$39.99,70%,Health tracking demand growing,aliexpress.com/smart-watch,Heart rate + sleep tracking must-have,2026-01-25,NEW
+ECOM055,ALIEXPRESS_WINNERS,Makeup Brush Set 12pc,AliExpress,$4,Amazon,$18.99,79%,Beauty essentials - repeat purchase,aliexpress.com/makeup-brushes,Rose gold handles most popular,2026-01-25,NEW
+ECOM056,EBAY_ARBITRAGE,LEGO Sets Retired,Retail,$50,eBay,$120,58%,Collector market - retired sets appreciate,retail-clearance,Check Walmart/Target clearance weekly,2026-01-25,NEW
+ECOM057,EBAY_ARBITRAGE,Funko Pop Exclusives,Retail,$12,eBay,$35,66%,Store exclusives command premium,target/walmart-exclusive,Chase variants 3-5x retail,2026-01-25,NEW
+ECOM058,EBAY_ARBITRAGE,Tool Sets Clearance,Home Depot,$30,eBay,$65,54%,DIY market steady - branded tools,homedepot-clearance,DeWalt/Milwaukee most profitable,2026-01-25,NEW
+ECOM059,Jewelry/Accessories,Customizable Fashion Rings,AliExpress,$1.00,TikTok Shop/Etsy,$10.00-20.00,80-90%,Competition: MEDIUM. Trend: RISING,,Low cost high margin. Impulse buy nature. Visual content friendly.,2026-01,NEW
+ECOM060,Fitness Gadgets,Hand Muscle Trainer/Grip Strengthener,Temu/AliExpress,$3.00,TikTok Shop/Amazon,$20.00,70%+,Competition: LOW. Trend: RISING,,Strong margins for advertising. Fitness niche crossover.,2026-01,NEW
+ECOM061,Beauty,Skincare Tools (Gua Sha/Rollers),Temu,$2.00-5.00,TikTok Shop,$15.00-30.00,60-80%,Competition: HIGH. Trend: STABLE,,Before-and-after content performs. Repeat purchase potential.,2026-01,NEW
+ECOM062,Beauty,Matte Lipstick/Lip Gloss,AliExpress/Private Label,$3.00-8.00,TikTok Shop,$15.00-25.00,50-70%,Competition: HIGH. Trend: STABLE,,Top TikTok Shop category. GRWM video format drives sales. The Lip Bar sold 47200 units on TikTok Shop.,2026-01,NEW
+ECOM063,Home/Kitchen,Magnetic Vacuum Sealer Bags,Temu,$5.00-8.00,TikTok Shop/Amazon,$20.00-35.00,60-70%,Competition: LOW. Trend: RISING,,Multifunctional gadget. Visual satisfaction content. Low competition.,2026-01,NEW
+ECOM064,Home/Kitchen,Eco-Friendly Baking Supplies (Silicone Mats/Bamboo Tools),AliExpress,$3.00-5.00,Amazon FBA/Etsy,$18.00-25.00,45-55%,Competition: LOW. Trend: RISING,,Zero-waste trend. 8000 monthly searches. Top listings only 150-250 reviews.,2026-01,NEW
+ECOM065,Seasonal/Decor,Year of the Horse Products,AliExpress/POD,$2.00-10.00,Etsy/TikTok Shop,$15.00-40.00,50-75%,Competition: LOW. Trend: RISING,,YoY horse searches on Etsy up 187%. Chinese New Year Feb 17 2026. Fire Horse year = rare.,2026-01,NEW
+ECOM066,Pet Health,Senior Dog Mobility Products (Joint Health Treats),Private Label,$5.00-8.00,Amazon FBA,$20.00-35.00,50-65%,Competition: LOW. Trend: RISING,,Pet spending projected $261B by 2030. Low reviews (100-200). Specialized formulas = barrier to entry.,2026-01,NEW
+ECOM067,Home Office,Cable Management Accessories,AliExpress/Temu,$1.80,Amazon FBA,$12.00,51%+,Competition: LOW. Trend: STABLE,,Only 70-170 reviews on top listings. 4500 monthly searches. 210 units/month potential.,2026-01,NEW
+ECOM068,Home/Pet,Small Bulky Items (Brass Hardware/Weighted Pet Blankets),Private Label,$8.00-15.00,Amazon FBA,$30.00-60.00,40-55%,Competition: LOW. Trend: RISING,,Amazon 2026 fee structure gives $2.10 advantage on small bulky. Chinese dropshippers can't compete on shipping weight.,2026-01,NEW
+ECOM069,Crafts/Digital,Crochet Patterns (Digital),Self-created,$0.00,Etsy,$5.00-15.00,95%+,Competition: MEDIUM. Trend: RISING,,18 crochet searches in Etsy Dec Top 1000 (up from 5 last year). Digital = zero COGS.,2026-01,NEW
+ECOM070,Beauty,Perfumes/Fragrance Sets,AliExpress/Private Label,$5.00-15.00,TikTok Shop,$25.00-50.00,50-70%,Competition: MEDIUM. Trend: STABLE,,Go viral through storytelling without smell. Date-night scents and layering routines trend.,2026-01,NEW
+ECOM071,Apparel/POD,POD T-Shirts (3D/Gradient/Retro Designs),Printify/Printful,$7.00-10.00,Etsy/TikTok Shop,$25.00-35.00,40-50%,Competition: HIGH. Trend: STABLE,,POD market $12.96B growing 26% CAGR. Apparel 39.45% revenue share. Personalization drives conversion.,2026-01,NEW
+ECOM072,Apparel/POD,All-Over-Print Hoodies,Printful,$25.00-35.00,Etsy/Shopify,$55.00-85.00,35-50%,Competition: MEDIUM. Trend: RISING,,Complex production justifies higher price. Bespoke patterns. Premium positioning.,2026-01,NEW
+ECOM073,Home Decor/POD,Home Decor (Patina Blue/Washed Linen Theme),Printify/Private Label,$5.00-15.00,Etsy,$20.00-50.00,50-70%,Competition: MEDIUM. Trend: RISING,,Etsy 2026 Color of Year: Patina Blue. Texture of Year: Washed Linen. Ride the trend early.,2026-01,NEW

@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "StepUnlock",
+    "slug": "stepunlock",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "stepunlock",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#4CAF50"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stepunlock.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "StepUnlock needs access to your step count to track your daily walking progress and unlock apps when you reach your goal.",
+        "NSHealthUpdateUsageDescription": "StepUnlock needs access to update your health data.",
+        "UIBackgroundModes": [
+          "fetch",
+          "processing"
+        ]
+      },
+      "entitlements": {
+        "com.apple.developer.healthkit": true,
+        "com.apple.developer.healthkit.access": []
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#4CAF50"
+      },
+      "package": "com.stepunlock.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.ACTIVITY_RECOGNITION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BODY_SENSORS"
+      ],
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": []
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID"
+      }
+    }
+  }
+}

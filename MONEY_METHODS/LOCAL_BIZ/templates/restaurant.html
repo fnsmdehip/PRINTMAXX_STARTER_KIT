@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Oak Table — Italian Restaurant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#fdf8f0',100:'#faecd5',200:'#f5d6a8',300:'#edb86e',400:'#e5993a',500:'#d97706',600:'#b45309',700:'#92400e',800:'#6d3010',900:'#3d1c0a' },
+            dark: { 800:'#1a1a1a',900:'#0d0d0d' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg { background: linear-gradient(to bottom, rgba(13,13,13,0.7), rgba(13,13,13,0.85)), url('') center/cover no-repeat; background-color: #1a1a1a; }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+    .demo-banner { background: linear-gradient(90deg, #d97706, #b45309); }
+    .menu-card { background: linear-gradient(135deg, #1a1a1a, #2a2a2a); }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner text-white text-center py-2 px-4 text-sm font-medium tracking-wide">
+    DEMO — Custom design for restaurants & cafes. Contact <a href="mailto:printmaxxer@protonmail.com" class="underline font-bold">printmaxxer@protonmail.com</a> for yours.
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="bg-dark-900/95 backdrop-blur-sm fixed w-full z-50 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-2">
+          <span class="font-display text-2xl font-bold text-white">The Oak Table</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#menu" class="text-gray-300 hover:text-brand-400 font-medium transition text-sm tracking-wide uppercase">Menu</a>
+          <a href="#about" class="text-gray-300 hover:text-brand-400 font-medium transition text-sm tracking-wide uppercase">About</a>
+          <a href="#reviews" class="text-gray-300 hover:text-brand-400 font-medium transition text-sm tracking-wide uppercase">Reviews</a>
+          <a href="#contact" class="text-gray-300 hover:text-brand-400 font-medium transition text-sm tracking-wide uppercase">Contact</a>
+          <a href="#contact" class="bg-brand-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-brand-600 transition text-sm">Reserve a Table</a>
+        </div>
+        <button class="md:hidden p-2 text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+        <a href="#menu" class="block px-3 py-2 text-gray-300 hover:bg-white/5 rounded-lg">Menu</a>
+        <a href="#about" class="block px-3 py-2 text-gray-300 hover:bg-white/5 rounded-lg">About</a>
+        <a href="#reviews" class="block px-3 py-2 text-gray-300 hover:bg-white/5 rounded-lg">Reviews</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-300 hover:bg-white/5 rounded-lg">Contact</a>
+        <a href="#contact" class="block bg-brand-500 text-white text-center px-3 py-2 rounded-lg font-semibold">Reserve a Table</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <div class="inline-flex items-center bg-brand-500/20 backdrop-blur-sm text-brand-300 px-4 py-1.5 rounded-full text-sm font-medium mb-8 border border-brand-500/30">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        4.8 stars &mdash; 350+ reviews on Google & Yelp
+      </div>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
+        Where Every Meal<br>Becomes a Memory
+      </h1>
+      <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+        Authentic flavors, locally sourced ingredients, and an atmosphere that makes every visit special. Since 2010.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-brand-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-600 transition shadow-lg shadow-brand-500/30">
+          Reserve a Table
+        </a>
+        <a href="#menu" class="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">
+          View Menu
+        </a>
+      </div>
+      <div class="mt-12 flex items-center justify-center space-x-8 text-gray-400 text-sm">
+        <span>Italian Cuisine</span>
+        <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+        <span>$$-$$$</span>
+        <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+        <span>Dine-in, Patio, Takeout</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED / HIGHLIGHTS -->
+  <section class="bg-dark-900 py-16 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl font-bold text-brand-400 font-display">14+</div>
+          <div class="text-sm text-gray-400 mt-1">Years Serving</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-brand-400 font-display">60+</div>
+          <div class="text-sm text-gray-400 mt-1">Menu Items</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-brand-400 font-display">4.8</div>
+          <div class="text-sm text-gray-400 mt-1">Average Rating</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-brand-400 font-display">50K+</div>
+          <div class="text-sm text-gray-400 mt-1">Happy Guests</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section id="menu" class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand-400 font-semibold text-sm tracking-wider uppercase">Our Menu</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold text-white mt-2">Chef's Favorites</h2>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Handcrafted dishes made with the freshest seasonal ingredients.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Dish 1 -->
+        <div class="menu-card rounded-xl overflow-hidden card-hover border border-white/5">
+          <div class="bg-gradient-to-br from-brand-900/50 to-dark-900 h-48 flex items-center justify-center">
+            <svg class="w-16 h-16 text-brand-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-white">Pan-Seared Salmon</h3>
+              <span class="text-brand-400 font-bold">$28</span>
+            </div>
+            <p class="text-gray-400 text-sm">Wild-caught salmon with lemon butter sauce, seasonal vegetables, and herb-roasted fingerling potatoes.</p>
+          </div>
+        </div>
+        <!-- Dish 2 -->
+        <div class="menu-card rounded-xl overflow-hidden card-hover border border-white/5">
+          <div class="bg-gradient-to-br from-brand-900/50 to-dark-900 h-48 flex items-center justify-center">
+            <svg class="w-16 h-16 text-brand-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-white">Handmade Ravioli</h3>
+              <span class="text-brand-400 font-bold">$24</span>
+            </div>
+            <p class="text-gray-400 text-sm">Ricotta and spinach ravioli in a sage brown butter sauce with toasted pine nuts and parmesan.</p>
+          </div>
+        </div>
+        <!-- Dish 3 -->
+        <div class="menu-card rounded-xl overflow-hidden card-hover border border-white/5">
+          <div class="bg-gradient-to-br from-brand-900/50 to-dark-900 h-48 flex items-center justify-center">
+            <svg class="w-16 h-16 text-brand-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-white">Filet Mignon</h3>
+              <span class="text-brand-400 font-bold">$42</span>
+            </div>
+            <p class="text-gray-400 text-sm">8oz center-cut filet with red wine reduction, truffle mashed potatoes, and grilled asparagus.</p>
+          </div>
+        </div>
+        <!-- Dish 4 -->
+        <div class="menu-card rounded-xl overflow-hidden card-hover border border-white/5">
+          <div class="bg-gradient-to-br from-brand-900/50 to-dark-900 h-48 flex items-center justify-center">
+            <svg class="w-16 h-16 text-brand-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-white">Wood-Fired Margherita</h3>
+              <span class="text-brand-400 font-bold">$18</span>
+            </div>
+            <p class="text-gray-400 text-sm">San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil on our house-made dough.</p>
+          </div>
+        </div>
+        <!-- Dish 5 -->
+        <div class="menu-card rounded-xl overflow-hidden card-hover border border-white/5">
+          <div class="bg-gradient-to-br from-brand-900/50 to-dark-900 h-48 flex items-center justify-center">
+            <svg class="w-16 h-16 text-brand-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-white">Seafood Risotto</h3>
+              <span class="text-brand-400 font-bold">$32</span>
+            </div>
+            <p class="text-gray-400 text-sm">Arborio rice with shrimp, mussels, and calamari in a saffron white wine broth topped with fresh herbs.</p>
+          </div>
+        </div>
+        <!-- Dish 6 -->
+        <div class="menu-card rounded-xl overflow-hidden card-hover border border-white/5">
+          <div class="bg-gradient-to-br from-brand-900/50 to-dark-900 h-48 flex items-center justify-center">
+            <svg class="w-16 h-16 text-brand-700/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-white">Tiramisu</h3>
+              <span class="text-brand-400 font-bold">$14</span>
+            </div>
+            <p class="text-gray-400 text-sm">Classic Italian dessert with espresso-soaked ladyfingers, mascarpone cream, and cocoa dusting.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="#" class="inline-flex items-center text-brand-400 hover:text-brand-300 font-semibold transition">
+          View Full Menu
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-dark-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-brand-400 font-semibold text-sm tracking-wider uppercase">Our Story</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-2 mb-6">A Passion for Authentic Flavors</h2>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            What started as a family dream has grown into one of the most beloved dining destinations in the area. Our chef brings over 20 years of culinary expertise, combining traditional techniques with modern creativity. Every dish tells a story, and every meal is an experience.
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            We source our ingredients from local farms and purveyors, ensuring every plate features the freshest seasonal produce. Our wine list is carefully curated to complement our menu, with selections from both celebrated vineyards and hidden gems.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+              <div class="text-brand-400 font-bold text-lg">Locally Sourced</div>
+              <p class="text-gray-400 text-sm">Farm-to-table ingredients from local purveyors</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+              <div class="text-brand-400 font-bold text-lg">Award Winning</div>
+              <p class="text-gray-400 text-sm">Best of City 2024, OpenTable Diners' Choice</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-gradient-to-br from-brand-900/30 to-dark-800 rounded-xl h-48 flex items-center justify-center border border-white/5">
+            <p class="text-gray-500 text-sm">Interior Photo</p>
+          </div>
+          <div class="bg-gradient-to-br from-brand-900/30 to-dark-800 rounded-xl h-48 flex items-center justify-center border border-white/5 mt-8">
+            <p class="text-gray-500 text-sm">Chef Photo</p>
+          </div>
+          <div class="bg-gradient-to-br from-brand-900/30 to-dark-800 rounded-xl h-48 flex items-center justify-center border border-white/5 -mt-4">
+            <p class="text-gray-500 text-sm">Dish Photo</p>
+          </div>
+          <div class="bg-gradient-to-br from-brand-900/30 to-dark-800 rounded-xl h-48 flex items-center justify-center border border-white/5 mt-4">
+            <p class="text-gray-500 text-sm">Patio Photo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand-400 font-semibold text-sm tracking-wider uppercase">Reviews</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-2">What Our Guests Say</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-dark-900 rounded-xl p-8 border border-white/5">
+          <div class="flex text-brand-400 mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">"Absolutely incredible dining experience. The salmon was cooked to perfection and the ambiance is unmatched. This is our new go-to for date night."</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-brand-900/50 rounded-full flex items-center justify-center">
+              <span class="text-brand-400 font-bold text-sm">AC</span>
+            </div>
+            <div class="ml-3">
+              <p class="font-semibold text-sm text-white">Amanda C.</p>
+              <p class="text-xs text-gray-500">Yelp Review</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-900 rounded-xl p-8 border border-white/5">
+          <div class="flex text-brand-400 mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">"We hosted our anniversary dinner here and it was flawless. The staff went above and beyond, the wine pairing was perfect, and every course was outstanding."</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-brand-900/50 rounded-full flex items-center justify-center">
+              <span class="text-brand-400 font-bold text-sm">DP</span>
+            </div>
+            <div class="ml-3">
+              <p class="font-semibold text-sm text-white">David P.</p>
+              <p class="text-xs text-gray-500">Google Review</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-900 rounded-xl p-8 border border-white/5">
+          <div class="flex text-brand-400 mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">"Best Italian food outside of Italy. The homemade pasta is incredible and the tiramisu alone is worth the trip. We drive 30 minutes just to eat here."</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-brand-900/50 rounded-full flex items-center justify-center">
+              <span class="text-brand-400 font-bold text-sm">LM</span>
+            </div>
+            <div class="ml-3">
+              <p class="font-semibold text-sm text-white">Lisa M.</p>
+              <p class="text-xs text-gray-500">Google Review</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / RESERVATION -->
+  <section id="contact" class="py-20 bg-dark-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16">
+        <div>
+          <span class="text-brand-400 font-semibold text-sm tracking-wider uppercase">Reservations</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-2 mb-6">Join Us for Dinner</h2>
+          <p class="text-gray-400 mb-8">Reserve your table or contact us for private events and catering inquiries.</p>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 border border-white/5">
+                <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Address</h4>
+                <p class="text-gray-400 text-sm">415 Congress Ave, Austin, TX 78701</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 border border-white/5">
+                <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Phone</h4>
+                <p class="text-gray-400 text-sm">(512) 555-0198</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 border border-white/5">
+                <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Hours</h4>
+                <p class="text-gray-400 text-sm">Tue-Thu: 5pm-10pm | Fri-Sat: 5pm-11pm | Sun: 4pm-9pm | Mon: Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 class="font-display text-xl font-bold text-white mb-6">Make a Reservation</h3>
+            <div class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                  <input type="text" placeholder="Your name" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-1">Phone</label>
+                  <input type="tel" placeholder="(555) 123-4567" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-1">Date</label>
+                  <input type="date" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-1">Time</label>
+                  <select class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-gray-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                    <option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option>
+                    <option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option>
+                    <option>9:00 PM</option><option>9:30 PM</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-1">Party Size</label>
+                <select class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-gray-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                  <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option>
+                  <option>5 Guests</option><option>6 Guests</option><option>7+ Guests (call for large parties)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-1">Special Requests</label>
+                <textarea rows="3" placeholder="Allergies, celebrations, seating preferences..." class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-brand-500 text-white py-3.5 rounded-lg font-bold text-lg hover:bg-brand-600 transition shadow-lg shadow-brand-500/30">
+                Reserve Table
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section>
+    <div class="bg-dark-800 h-64 flex items-center justify-center border-t border-white/5">
+      <div class="text-center">
+        <svg class="w-12 h-12 text-gray-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <p class="text-gray-500 font-medium">Google Maps Embed: 415 Congress Ave, Austin, TX 78701</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-900 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <span class="font-display text-2xl font-bold text-white">The Oak Table</span>
+          <p class="text-gray-400 text-sm mt-4">Serving authentic cuisine with passion and pride. Every plate tells a story.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#menu" class="text-gray-400 hover:text-brand-400 transition">Menu</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-brand-400 transition">Our Story</a></li>
+            <li><a href="#reviews" class="text-gray-400 hover:text-brand-400 transition">Reviews</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-brand-400 transition">Reservations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>(512) 555-0198</li>
+            <li>hello@theoaktable.com</li>
+            <li>415 Congress Ave, Austin, TX 78701</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 mt-8 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; 2026 The Oak Table. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

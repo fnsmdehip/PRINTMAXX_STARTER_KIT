@@ -1,0 +1,308 @@
+{
+  "channel_id": "CF009",
+  "channel_name": "STREAMER_CLIPS",
+  "category": "CONTENT_FARM",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "Clip viral moments from Twitch/YouTube streamers for short-form platforms. Target gaming and Just Chatting content.",
+    "value_proposition": "24/7 streams have constant viral moments. Most viewers miss them. Clip channels capture and distribute.",
+    "content_pillars": [
+      "Rage/Fail clips (30%)",
+      "Skill plays (20%)",
+      "Funny moments (25%)",
+      "Drama/Beef (10%)",
+      "Wholesome moments (10%)",
+      "Collabs/Events (5%)"
+    ],
+    "differentiation": "Speed to market, niche streamer focus, consistent editing style"
+  },
+
+  "target_audience": {
+    "primary_demographics": {
+      "age_range": "16-34",
+      "gender_split": "70% male, 30% female",
+      "geography": "Global (English-speaking)",
+      "interests": ["Gaming", "Twitch culture", "Esports", "Internet drama"]
+    },
+    "psychographics": {
+      "behavior": "Can't watch live but want highlights, addicted to drama, follow multiple streamers",
+      "pain_points": [
+        "Miss streams due to schedule",
+        "FOMO on viral moments",
+        "Too many streamers to follow"
+      ]
+    }
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "TikTok",
+      "priority": 1,
+      "content_types": ["15-60 second clips"],
+      "posting_frequency": "4-6 clips/day",
+      "growth_targets": {
+        "month_1": 10000,
+        "month_3": 50000,
+        "month_6": 200000,
+        "month_12": 750000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "YouTube Shorts",
+        "priority": 2,
+        "posting_frequency": "4-6 clips/day",
+        "notes": "Higher CPM potential"
+      },
+      {
+        "platform": "X (Twitter)",
+        "priority": 3,
+        "posting_frequency": "10-20 clips/day",
+        "notes": "Speed is everything, drama spreads here"
+      },
+      {
+        "platform": "Instagram Reels",
+        "priority": 4,
+        "posting_frequency": "2-3 clips/day",
+        "notes": "Gaming audience growing"
+      }
+    ]
+  },
+
+  "streamer_tiers": {
+    "tier_1_mega": {
+      "description": "50K+ average viewers, highest clip potential",
+      "examples": [
+        "xQc", "Kai Cenat", "Asmongold", "HasanAbi",
+        "Ludwig", "Pokimane", "Shroud", "TenZ"
+      ],
+      "permission": "GREEN - Clip-friendly"
+    },
+    "tier_2_rising": {
+      "description": "10K-50K viewers, high growth potential",
+      "examples": [
+        "Jynxzi", "Caseoh", "IShowSpeed",
+        "Mizkif", "Nmplol", "QTCinderella"
+      ],
+      "permission": "GREEN"
+    },
+    "tier_3_niche": {
+      "description": "1K-10K viewers, dedicated audiences",
+      "examples": [
+        "VTubers (ironmouse, etc.)",
+        "Speedrunners",
+        "IRL streamers"
+      ],
+      "permission": "CHECK - Varies by streamer"
+    },
+    "avoid_list": {
+      "description": "Aggressive DMCA, official clip channels",
+      "examples": [
+        "Streamers with official clip operations",
+        "Those who have DMCA'd fan channels"
+      ]
+    }
+  },
+
+  "clip_types": {
+    "rage_fails": {
+      "percentage": 30,
+      "signals": ["Volume spike", "Desk slam", "Controller throw", "Rage quit"],
+      "best_streamers": ["xQc", "Jynxzi", "Tyler1", "Caseoh"]
+    },
+    "skill_plays": {
+      "percentage": 20,
+      "signals": ["1vX clutch", "No-scope", "World record", "Perfect combo"],
+      "best_streamers": ["TenZ", "Shroud", "Aceu", "s1mple"]
+    },
+    "funny_moments": {
+      "percentage": 25,
+      "signals": ["Chat trolls", "Accidental jokes", "Physical comedy", "Timing"],
+      "best_streamers": ["Kai Cenat", "Caseoh", "Mizkif", "Ludwig"]
+    },
+    "drama_beef": {
+      "percentage": 10,
+      "signals": ["Callouts", "Hot takes", "Leaked DMs", "Apologies"],
+      "best_streamers": ["HasanAbi", "Destiny", "Asmongold"]
+    },
+    "wholesome": {
+      "percentage": 10,
+      "signals": ["Donations", "Helping viewers", "Pet appearances", "Milestones"],
+      "best_streamers": ["Pokimane", "LilyPichu", "Ludwig"]
+    }
+  },
+
+  "editing_guidelines": {
+    "video_specs": {
+      "aspect_ratio": "9:16",
+      "resolution": "1080x1920",
+      "format": "MP4",
+      "framerate": 30
+    },
+    "caption_styles": {
+      "bold_center": {
+        "font": "Impact or Bebas Neue",
+        "size": "60-80pt",
+        "color": "White with black stroke (3-4px)",
+        "use_for": "Rage clips, dramatic moments"
+      },
+      "dynamic_tiktok": {
+        "font": "Various, mixed sizes",
+        "animation": "Bounce, shake on key words",
+        "use_for": "Funny clips, high energy"
+      }
+    },
+    "enhancements": {
+      "face_zoom": "1.2-1.5x on reactions",
+      "game_zoom": "Quick zoom on kill feed/health",
+      "screen_shake": "3-5 pixel shake for impacts",
+      "slow_motion": "50% speed on key moment"
+    },
+    "optimal_lengths": {
+      "rage": "20-40 seconds",
+      "skill": "15-30 seconds",
+      "funny": "15-30 seconds",
+      "drama": "30-60 seconds",
+      "wholesome": "20-40 seconds"
+    }
+  },
+
+  "revenue_model": {
+    "streams": {
+      "tiktok_creator_fund": {
+        "timeline": "Month 2+",
+        "estimated": "$0.02-0.04 per 1K views"
+      },
+      "youtube_partner": {
+        "timeline": "Month 3+",
+        "estimated": "$0.02-0.05 per 1K Shorts views",
+        "notes": "Gaming CPM: $2-5 on long-form"
+      },
+      "youtube_longform": {
+        "timeline": "Month 6+",
+        "content": "5-15 min compilations",
+        "estimated": "$2-5 CPM"
+      },
+      "sponsorships": {
+        "timeline": "Month 6+",
+        "categories": ["Gaming peripherals", "Energy drinks", "VPNs", "Games"],
+        "rates": {
+          "100k_followers": "$300-800/post",
+          "500k_followers": "$1500-4000/post"
+        }
+      }
+    },
+    "projections": {
+      "month_3": "$200-800",
+      "month_6": "$1000-3000",
+      "month_12": "$5000-15000"
+    }
+  },
+
+  "production_workflow": {
+    "daily_clip_hunting": {
+      "morning": {
+        "time": "30 min",
+        "tasks": [
+          "Check overnight VODs from top 5 streamers",
+          "Review TwitchTracker for viewer spikes",
+          "Scan r/LivestreamFail hot posts"
+        ]
+      },
+      "afternoon": {
+        "time": "30 min",
+        "tasks": [
+          "Watch live streams during lunch",
+          "Quick scan trending on Twitch",
+          "Check YouTube trending gaming"
+        ]
+      },
+      "evening": {
+        "time": "30 min",
+        "tasks": [
+          "Prime time live monitoring",
+          "Real-time clipping if big moments",
+          "Queue tomorrow's posts"
+        ]
+      }
+    },
+    "batch_editing": {
+      "time": "2-4 hours",
+      "output": "15-25 clips",
+      "tools": ["CapCut", "DaVinci Resolve", "Descript"]
+    },
+    "speed_to_market": {
+      "drama_clips": "< 2 hours",
+      "viral_moments": "< 6 hours",
+      "evergreen": "Anytime"
+    }
+  },
+
+  "competitors_analyzed": [
+    {
+      "channel": "xQcOW Clips",
+      "platform": "YouTube",
+      "subscribers": "2.1M",
+      "strategy": "Long-form compilations, 5-10 videos/day"
+    },
+    {
+      "channel": "@twitchclipss",
+      "platform": "TikTok",
+      "followers": "4.2M",
+      "strategy": "Pure viral moments, minimal editing, 4-6/day"
+    },
+    {
+      "channel": "@streamerfails",
+      "platform": "TikTok",
+      "followers": "2.8M",
+      "strategy": "Fail-focused, high energy editing, sound effects"
+    },
+    {
+      "channel": "LSF Clips",
+      "platform": "YouTube",
+      "subscribers": "450K",
+      "strategy": "Reddit-curated, quick turnaround, drama-focused"
+    }
+  ],
+
+  "legal_compliance": {
+    "fair_use_factors": [
+      "Transformative editing",
+      "Commentary/reaction element",
+      "Short clips of longer streams",
+      "Not replacing original content"
+    ],
+    "risk_mitigation": [
+      "Stick to clip-friendly streamers",
+      "Keep clips under 60 seconds",
+      "Add transformative elements",
+      "Credit source in every post",
+      "Monitor for DMCA",
+      "Maintain backup accounts"
+    ]
+  },
+
+  "success_metrics": {
+    "growth_kpis": {
+      "follower_growth": "20-30% MoM",
+      "engagement_rate": "5-10%",
+      "viral_hit_rate": "1 in 15 clips hits 100K+ views"
+    },
+    "content_kpis": {
+      "clips_per_day": "15-25 across platforms",
+      "time_to_post": "Drama < 2 hours, viral < 6 hours"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "CF004", "method_name": "MEME_CHANNELS", "synergy_score": 85},
+      {"method_id": "AI006", "method_name": "GAMING_PERSONAS", "synergy_score": 80},
+      {"method_id": "CF005", "method_name": "CLIP_CHANNELS", "synergy_score": 95}
+    ],
+    "stack_strategy": "Streamer clips build gaming audience -> Meme account extends reach -> Gaming persona for original content"
+  }
+}

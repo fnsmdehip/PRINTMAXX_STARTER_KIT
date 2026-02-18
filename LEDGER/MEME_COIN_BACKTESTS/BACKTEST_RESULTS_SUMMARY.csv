@@ -1,0 +1,4 @@
+coin_name,pattern_type,launch_date,platform,viral_trigger,launch_price,ath_price,ath_date,time_to_ath_hours,peak_roi_percent,signal_a_avg_roi,signal_b_avg_roi,signal_c_avg_roi,signal_c_median_2x_hours,best_exit_strategy,best_exit_roi,win_rate_signal_c,market_cap_peak,trading_volume_24h,longevity_days,verdict,recommended
+MOLT,AI_Agent_Product,2026-01-30,Base,Moltbook AI social network launch,$0.0000063362,$0.001150,2026-01-30,24,18052%,5081%,2266%,7799%,2,Peak-20%,14422%,100%,$94M,$32M,2,VERY_HIGH,YES
+GHIBLI,Viral_Cultural_Trend,2025-03-26,Solana,OpenAI ChatGPT-4o Ghibli art,$0.0263,$0.0405,2025-03-28,60,54%,-6.4%,-14.6%,-6.3%,N/A,Fixed_48h,51%,62.5%,$21.1M,$70M,7,MODERATE,CONDITIONAL
+SARATOGA,Brand_Virality,2025-03-20,Solana,Ashton Hall viral routine (667M views),$0.00001,$0.003,2025-03-23,72,30000%,5662%,2480%,9937%,3,Fixed_48h,24900%,100%,$3M,Not_Available,7,VERY_HIGH,YES

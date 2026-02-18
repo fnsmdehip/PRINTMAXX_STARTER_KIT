@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://vercel.com/pricing",
+    "name": "Vercel Pricing",
+    "category": "hosting"
+  },
+  {
+    "url": "https://render.com/pricing",
+    "name": "Render Pricing",
+    "category": "hosting"
+  },
+  {
+    "url": "https://railway.app/pricing",
+    "name": "Railway Pricing",
+    "category": "hosting"
+  },
+  {
+    "url": "https://supabase.com/pricing",
+    "name": "Supabase Pricing",
+    "category": "database"
+  },
+  {
+    "url": "https://planetscale.com/pricing",
+    "name": "PlanetScale Pricing",
+    "category": "database"
+  },
+  {
+    "url": "https://webflow.com/pricing",
+    "name": "Webflow Pricing",
+    "category": "website_builder"
+  },
+  {
+    "url": "https://carrd.co/#pricing",
+    "name": "Carrd Pricing",
+    "category": "website_builder"
+  },
+  {
+    "url": "https://www.producthunt.com/topics/ai",
+    "name": "PH AI Topics",
+    "category": "trends"
+  },
+  {
+    "url": "https://github.com/trending",
+    "name": "GitHub Trending",
+    "category": "trends"
+  }
+]

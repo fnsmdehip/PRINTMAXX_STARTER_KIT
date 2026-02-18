@@ -1,0 +1,293 @@
+{
+  "channel_id": "AI004",
+  "channel_name": "ASMR",
+  "category": "AI_INFLUENCER",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "AI-generated ASMR content using synthesized whisper voices, binaural audio, and consistent virtual avatar for relaxation and sleep content",
+    "value_proposition": "24/7 consistent ASMR content without creator burnout. Perfect whisper consistency, scalable production.",
+    "content_pillars": [
+      "Whisper content (talking ASMR)",
+      "Trigger compilations (tapping, scratching, crinkling)",
+      "Roleplay ASMR (spa, librarian, sleep clinic)",
+      "Sleep and ambient (long-form, 3-10 hours)",
+      "Trigger exploration and reviews"
+    ],
+    "differentiation": "AI voice consistency, high production volume, multi-language potential, no creator fatigue"
+  },
+
+  "target_audience": {
+    "primary_demographics": {
+      "age_range": "18-35",
+      "gender_split": "60% female, 40% male",
+      "geography": "Global (US, UK, Canada, Australia, Europe primary)",
+      "income_level": "Varies - mass market"
+    },
+    "psychographics": {
+      "interests": [
+        "Sleep improvement",
+        "Anxiety relief",
+        "Relaxation",
+        "Study focus",
+        "Meditation"
+      ],
+      "pain_points": [
+        "Insomnia or trouble sleeping",
+        "Anxiety and stress",
+        "Need background for focus",
+        "Favorite creators inconsistent"
+      ],
+      "content_consumption_habits": "Watch before sleep (65%), for relaxation (50%), for focus/study (30%), use headphones (80%)"
+    },
+    "audience_personas": [
+      {
+        "name": "The Sleeper",
+        "age": 28,
+        "description": "Uses ASMR every night to fall asleep. Plays long-form content on loop."
+      },
+      {
+        "name": "The Student",
+        "age": 21,
+        "description": "Uses ASMR for study focus. Prefers no-talking trigger content."
+      },
+      {
+        "name": "The Anxious Professional",
+        "age": 32,
+        "description": "Uses ASMR for anxiety relief after work. Prefers personal attention roleplays."
+      }
+    ]
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "YouTube",
+      "content_types": {
+        "standard_asmr": 40,
+        "long_form_sleep": 25,
+        "trigger_compilations": 20,
+        "shorts": 15
+      },
+      "posting_frequency": "3-5 videos/week + daily shorts",
+      "video_lengths": {
+        "standard": "20-45 minutes",
+        "sleep_content": "3-10 hours",
+        "shorts": "15-60 seconds"
+      },
+      "growth_targets": {
+        "month_1": 1000,
+        "month_3": 10000,
+        "month_6": 50000,
+        "month_12": 150000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "TikTok",
+        "content_types": ["Quick triggers", "Trend participation", "Teaser clips"],
+        "posting_frequency": "1-2 videos/day",
+        "growth_targets": {
+          "month_1": 5000,
+          "month_3": 30000,
+          "month_6": 100000
+        }
+      },
+      {
+        "platform": "Spotify/Apple Podcasts",
+        "content_types": ["Audio-only ASMR tracks"],
+        "posting_frequency": "2-3 tracks/week",
+        "notes": "Passive income stream, evergreen content"
+      }
+    ]
+  },
+
+  "content_formats": {
+    "whisper_asmr": {
+      "description": "Soft spoken or whispered narration with trigger sounds",
+      "length": "20-45 minutes",
+      "structure": ["Soft intro", "Main content with varied triggers", "Sleep outro"],
+      "voice_requirements": "Soft, breathy, consistent whisper quality"
+    },
+    "roleplay_asmr": {
+      "description": "Scenario-based personal attention ASMR",
+      "length": "25-40 minutes",
+      "popular_scenarios": [
+        "Spa treatment",
+        "Sleep clinic",
+        "Library assistant",
+        "Makeup application",
+        "Doctor checkup",
+        "Friend comforting you"
+      ]
+    },
+    "trigger_compilation": {
+      "description": "Collection of different ASMR triggers",
+      "length": "15-30 minutes",
+      "triggers_to_include": [
+        "Tapping (wood, plastic, glass)",
+        "Scratching (textured surfaces)",
+        "Crinkling (paper, plastic)",
+        "Brushing sounds",
+        "Water and liquid sounds",
+        "Writing and typing"
+      ]
+    },
+    "sleep_ambient": {
+      "description": "Extended content for overnight playback",
+      "length": "3-10 hours",
+      "formats": ["Looped triggers", "Rain/nature + whispers", "Pure ambience"],
+      "notes": "High ad revenue potential (multiple mid-rolls)"
+    }
+  },
+
+  "technical_requirements": {
+    "audio": {
+      "sample_rate": "48kHz minimum",
+      "bit_depth": "24-bit",
+      "recording": "Binaural preferred (dual mic, dummy head)",
+      "noise_floor": "Below -60dB",
+      "recommended_mics": ["Blue Yeti ($130)", "Rode NT1-A ($230)", "3Dio Free Space ($600)"]
+    },
+    "voice_synthesis": {
+      "primary_tool": "ElevenLabs",
+      "plan": "Creator ($22/mo) or higher",
+      "whisper_settings": {
+        "stability": "60-70%",
+        "clarity": "50-60%",
+        "style_exaggeration": "Low"
+      },
+      "backup_tools": ["PlayHT", "Resemble.ai", "Murf.ai"]
+    },
+    "visual": {
+      "avatar_options": [
+        "Static AI-generated image (simplest)",
+        "Animated avatar via HeyGen/D-ID (intermediate)",
+        "Hands-only video (traditional ASMR format)"
+      ],
+      "background": "Soft, blurred bedroom or studio",
+      "color_palette": "Blues, purples, pinks (calming)"
+    }
+  },
+
+  "revenue_model": {
+    "primary_streams": [
+      {
+        "stream": "YouTube AdSense",
+        "timeline": "Month 1+ (after monetization)",
+        "cpm_range": "$2-10 (wellness advertisers)",
+        "notes": "Long-form sleep content = multiple mid-rolls",
+        "estimated_monthly": "$500-5,000 at scale"
+      },
+      {
+        "stream": "Patreon/Memberships",
+        "timeline": "Month 2+",
+        "tiers": [
+          {"name": "Dreamer", "price": 5, "perks": ["Early access", "Polls", "Discord"]},
+          {"name": "Relaxer", "price": 10, "perks": ["Monthly exclusive ASMR", "Behind scenes"]},
+          {"name": "Comfort", "price": 25, "perks": ["Custom trigger requests", "Name mention"]}
+        ],
+        "conversion_rate": "1-2% of subscribers",
+        "estimated_monthly": "$500-5,000 at scale"
+      },
+      {
+        "stream": "Brand Sponsorships",
+        "timeline": "Month 6+",
+        "categories": ["Sleep products (Casper, Purple)", "Wellness apps (Calm, Headspace)", "Headphones"],
+        "rates": {
+          "10k_subs": "$300-500/video",
+          "50k_subs": "$1,000-2,000/video",
+          "100k_subs": "$3,000-5,000/video"
+        },
+        "estimated_monthly": "$1,000-10,000 at scale"
+      },
+      {
+        "stream": "Affiliate Marketing",
+        "timeline": "Month 1+",
+        "programs": ["Amazon Associates (mics, sleep products)", "Casper", "Calm app", "Audible"],
+        "estimated_monthly": "$100-1,000"
+      }
+    ],
+    "revenue_projections": {
+      "month_3": "$200-500",
+      "month_6": "$500-3,000",
+      "month_12": "$3,000-15,000"
+    }
+  },
+
+  "production_workflow": {
+    "standard_video": {
+      "total_time": "2-4 hours",
+      "steps": [
+        {"step": "Script", "time": "30 min", "notes": "Write whisper script with prompts"},
+        {"step": "Voice generation", "time": "30 min", "notes": "Generate in ElevenLabs, review"},
+        {"step": "Audio layering", "time": "45 min", "notes": "Add triggers, binaural panning"},
+        {"step": "Visual creation", "time": "30-60 min", "notes": "Avatar or hands-only video"},
+        {"step": "Assembly", "time": "30 min", "notes": "Combine, add intro/outro"},
+        {"step": "Upload", "time": "15 min", "notes": "Optimize title/description/thumbnail"}
+      ]
+    },
+    "long_form_sleep": {
+      "approach": "Create 30-60 min base, loop with variations, add ambient bed",
+      "export_time": "Overnight for 8+ hour videos"
+    }
+  },
+
+  "competitors_analyzed": [
+    {
+      "channel": "Gibi ASMR",
+      "subscribers": "4.5M",
+      "strategy": "Heavy roleplay, strong personality, high production"
+    },
+    {
+      "channel": "SAS-ASMR",
+      "subscribers": "9.5M",
+      "strategy": "Mukbang/eating ASMR, no talking, daily uploads, global reach"
+    },
+    {
+      "channel": "Gentle Whispering ASMR",
+      "subscribers": "2.2M",
+      "strategy": "Classic ASMR, authentic warmth, OG creator"
+    },
+    {
+      "channel": "ASMR PPOMO",
+      "subscribers": "4.2M",
+      "strategy": "Korean creator, no talking, trigger focused"
+    }
+  ],
+
+  "success_metrics": {
+    "growth_kpis": {
+      "subscriber_growth": "10-20% MoM in first 6 months",
+      "watch_time": "60%+ average view duration",
+      "patreon_conversion": "1-2% of subscribers"
+    },
+    "content_kpis": {
+      "videos_per_week": "3-5 standard + daily shorts",
+      "audio_quality": "Pass headphone test, no clipping"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "CF001", "method_name": "RELAX_CHANNELS", "synergy_score": 95},
+      {"method_id": "CF002", "method_name": "SLEEP_TIMER_ALARM", "synergy_score": 90},
+      {"method_id": "MM001", "method_name": "APP_FACTORY", "synergy_score": 70}
+    ],
+    "stack_strategy": "ASMR channel builds sleep audience -> Cross-promote sleep app -> Relax channels for variety"
+  },
+
+  "compliance": {
+    "ai_disclosure": {
+      "required": true,
+      "locations": ["Bio", "Video descriptions", "Periodic in-video"],
+      "template": "I'm an AI-generated ASMR creator. My voice and avatar are AI-created with human oversight."
+    },
+    "content_safety": [
+      "No inappropriate content",
+      "No misuse of sounds/effects",
+      "Platform-appropriate only"
+    ]
+  }
+}

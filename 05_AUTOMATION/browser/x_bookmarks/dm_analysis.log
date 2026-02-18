@@ -1,0 +1,13 @@
+🚀 X DM Funnel Analyzer
+================================================================================
+Analyzing your DMs for working funnel strategies
+SAFE MODE: Only reading, never clicking links
+
+🔌 Connecting to Brave...
+❌ Connection failed: BrowserType.connect_over_cdp: Timeout 30000ms exceeded.
+Call log:
+  - <ws preparing> retrieving websocket url from http://localhost:9222
+  -   - <ws connecting> ws://localhost:9222/devtools/browser/7cce5abd-b8e6-4a6d-987a-08d1e6febe4d
+  -   - <ws connected> ws://localhost:9222/devtools/browser/7cce5abd-b8e6-4a6d-987a-08d1e6febe4d
+
+Start Brave with: /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser --remote-debugging-port=9222

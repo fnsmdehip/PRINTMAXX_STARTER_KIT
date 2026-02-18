@@ -1,0 +1,264 @@
+{
+  "channel_id": "CF003",
+  "channel_name": "NEWS_AGGREGATION",
+  "category": "CONTENT_FARM",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "Curated news channels that break, contextualize, and distribute news faster than traditional media in specific niches",
+    "value_proposition": "First to know, easiest to understand. Breaking news with context your audience needs.",
+    "niche_options": [
+      {
+        "niche": "Tech/AI News",
+        "audience": "Developers, founders, tech workers",
+        "monetization_potential": "Very high (SaaS, dev tools)",
+        "competition": "Medium"
+      },
+      {
+        "niche": "Finance/Markets",
+        "audience": "Traders, investors, finance professionals",
+        "monetization_potential": "Very high (fintech, brokers)",
+        "competition": "High"
+      },
+      {
+        "niche": "Crypto/Web3",
+        "audience": "Crypto traders, DeFi users, Web3 builders",
+        "monetization_potential": "High (exchanges, projects)",
+        "competition": "Medium"
+      },
+      {
+        "niche": "General Breaking News",
+        "audience": "News junkies, general public",
+        "monetization_potential": "Medium",
+        "competition": "High"
+      }
+    ],
+    "differentiation": "Speed + context. Not just what happened, but why it matters."
+  },
+
+  "content_workflow": {
+    "daily_workflow": {
+      "morning_block": {
+        "duration": "30-45 min",
+        "tasks": [
+          "Review overnight news",
+          "Check RSS feeds and alerts",
+          "Post 2-3 recap items",
+          "Schedule any evergreen content"
+        ]
+      },
+      "monitoring_block": {
+        "duration": "Throughout day",
+        "tasks": [
+          "Monitor TweetDeck/Hootsuite",
+          "Check alerts as they come",
+          "React to breaking news within 15 min"
+        ]
+      },
+      "evening_block": {
+        "duration": "30-45 min",
+        "tasks": [
+          "Daily recap post/thread",
+          "Schedule next day's evergreen",
+          "Engage with comments",
+          "Review analytics"
+        ]
+      }
+    },
+    "breaking_news_protocol": {
+      "step_1": "Verify source (minimum 2 sources for unverified claims)",
+      "step_2": "Draft hook and key facts",
+      "step_3": "Post within 15 minutes of verification",
+      "step_4": "Follow up with context thread if needed",
+      "step_5": "Monitor for corrections"
+    },
+    "verification_checklist": [
+      "Is source credible?",
+      "Can I find corroboration?",
+      "What's the original source?",
+      "Are quotes accurate?",
+      "Any obvious red flags?"
+    ]
+  },
+
+  "source_tiers": {
+    "tier_1_trust_immediately": [
+      "Wire services (Reuters, AP, AFP)",
+      "Official company statements",
+      "SEC filings",
+      "Government press releases"
+    ],
+    "tier_2_verify_then_trust": [
+      "Major publications (WSJ, NYT, Bloomberg)",
+      "Industry publications (TechCrunch, The Verge)",
+      "Verified journalist accounts"
+    ],
+    "tier_3_heavy_verification": [
+      "Regional/local publications",
+      "Industry blogs",
+      "Newsletter writers",
+      "Anonymous sources"
+    ],
+    "tier_4_use_with_caveats": [
+      "Social media posts",
+      "Forum discussions",
+      "Leaked documents",
+      "Single-source stories"
+    ]
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "X (Twitter)",
+      "account_type": "Standard",
+      "content_types": {
+        "breaking_tweets": 40,
+        "context_threads": 20,
+        "daily_recaps": 15,
+        "curated_links": 15,
+        "original_analysis": 10
+      },
+      "posting_frequency": "15-30 posts/day",
+      "growth_targets": {
+        "month_1": 5000,
+        "month_3": 25000,
+        "month_6": 100000,
+        "month_12": 300000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "TikTok",
+        "content_types": ["News summaries", "Hot takes", "Explainers"],
+        "posting_frequency": "3-5 videos/day",
+        "growth_targets": {
+          "month_1": 10000,
+          "month_3": 50000,
+          "month_6": 200000
+        }
+      }
+    ]
+  },
+
+  "content_templates": {
+    "breaking_news": {
+      "format": "BREAKING: [Headline]\n\n- [Key fact 1]\n- [Key fact 2]\n- [Key fact 3]\n\nSource: [publication]"
+    },
+    "developing_story": {
+      "format": "DEVELOPING: [Headline]\n\nWhat we know so far:\n- [Fact 1]\n- [Fact 2]\n\nMore details coming. Follow for updates."
+    },
+    "context_thread": {
+      "format": "1/ [Company/Person] just [action].\n\nHere's why it matters for [audience]:\n\n2/ First, some background:\n[Context]\n\n3/ What actually happened:\n[Details]\n\n4/ Why this matters:\n[Implications]"
+    },
+    "daily_recap": {
+      "format": "[Niche] news you missed today:\n\n1. [Story 1]\n2. [Story 2]\n3. [Story 3]\n4. [Story 4]\n5. [Story 5]\n\nWhich story matters most? Reply below."
+    }
+  },
+
+  "revenue_model": {
+    "primary_streams": [
+      {
+        "stream": "Platform Revenue (X Premium)",
+        "timeline": "Month 3+",
+        "requirements": "500+ followers, 5M+ impressions/3 months",
+        "estimated_monthly": "$100-1,000"
+      },
+      {
+        "stream": "Newsletter Sponsorships",
+        "timeline": "Month 6+",
+        "requirements": "5,000+ subscribers",
+        "estimated_monthly": "$1,000-5,000"
+      },
+      {
+        "stream": "Affiliate Links",
+        "timeline": "Month 1+",
+        "products": ["News apps", "Trading platforms", "SaaS tools"],
+        "estimated_monthly": "$500-2,000"
+      },
+      {
+        "stream": "Sponsored Posts",
+        "timeline": "Month 6+",
+        "rate": "$0.01-0.05 per follower",
+        "estimated_monthly": "$2,000-10,000"
+      }
+    ],
+    "revenue_projections": {
+      "month_6": "$1,000-3,000",
+      "month_12": "$5,000-15,000"
+    }
+  },
+
+  "legal_compliance": {
+    "attribution_requirements": [
+      "Always cite original publication",
+      "Credit photographers/agencies when known",
+      "Use quotation marks for direct quotes"
+    ],
+    "fair_use_guidelines": [
+      "Summarize in your own words (don't copy)",
+      "Quote only short passages",
+      "Add your own analysis/commentary",
+      "Link to original sources"
+    ],
+    "defamation_avoidance": [
+      "Stick to facts",
+      "Use qualifiers when uncertain (reportedly, allegedly)",
+      "Distinguish fact from opinion",
+      "Avoid accusations without proof"
+    ],
+    "correction_protocol": {
+      "step_1": "Delete original if possible (within 5 minutes)",
+      "step_2": "Post correction with CORRECTION: prefix",
+      "step_3": "Never pretend it didn't happen",
+      "step_4": "Apologize briefly, move on"
+    }
+  },
+
+  "competitors_analyzed": [
+    {
+      "account": "@unusual_whales",
+      "followers": "1.8M",
+      "strategy": "Options flow data, breaking market news, premium subscription"
+    },
+    {
+      "account": "@WatcherGuru",
+      "followers": "1.2M",
+      "strategy": "Crypto breaking news, 24/7 coverage, sponsored posts"
+    },
+    {
+      "account": "@rowancheung",
+      "followers": "450K",
+      "strategy": "AI news threads, newsletter monetization"
+    },
+    {
+      "account": "@spectatorindex",
+      "followers": "2.1M",
+      "strategy": "Global breaking news, wire-service style"
+    }
+  ],
+
+  "success_metrics": {
+    "growth_kpis": {
+      "follower_growth_rate": "15-25% MoM in first 6 months",
+      "engagement_rate": "2-5%",
+      "breaking_news_response_time": "<15 minutes"
+    },
+    "milestones": {
+      "month_1": "1,000 followers, consistent posting rhythm",
+      "month_3": "10,000 followers, first monetization",
+      "month_6": "50,000 followers, $2,000+/month",
+      "month_12": "100,000+ followers, multiple revenue streams"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "AI001", "method_name": "NICHE_EXPERTS", "synergy_score": 85},
+      {"method_id": "MM002", "method_name": "INFO_PRODUCTS", "synergy_score": 70},
+      {"method_id": "CF007", "method_name": "MOTIVATION_QUOTES", "synergy_score": 40}
+    ],
+    "stack_strategy": "News channel builds authority -> Expert persona adds commentary -> Info products for deep dives"
+  }
+}

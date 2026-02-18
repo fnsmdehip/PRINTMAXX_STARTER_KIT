@@ -1,0 +1,43 @@
+{
+  "name": "APP FACTORY — BUILD PWAs AT SCALE",
+  "description": "Build complete, deployable PWA apps. Each task = 1 app with full GTM package.",
+  "tasks": [
+    {
+      "id": "APP1",
+      "name": "SleepMaxx — Sleep Tracker PWA",
+      "description": "Sleep timer, quality rating, weekly chart, bedtime checklist, streak tracker, sleep tips, dark mode default. Affiliate: mattress + supplement links. Output: output/sleepmaxx-web/",
+      "agents": 3,
+      "passes": false
+    },
+    {
+      "id": "APP2",
+      "name": "WalkToUnlock — Step Counter PWA",
+      "description": "Step counter (accelerometer), daily goal ring, weekly chart, unlockable rewards at milestones, streak tracker, share card. Affiliate: fitness gear. Output: output/walktounlock-web/",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "APP3",
+      "name": "FocusLock — Pomodoro Timer PWA",
+      "description": "Pomodoro timer (25/5), session counter, productivity chart, task list, ambient sounds, wake lock, streak tracker. Affiliate: productivity tools. Output: output/focuslock-web/",
+      "agents": 3,
+      "passes": false
+    },
+    {
+      "id": "APP4",
+      "name": "MealMaxx — Meal Prep Planner PWA",
+      "description": "Weekly meal planner, grocery list generator, calorie tracker, recipe library (10 preloaded), macro calculator. Affiliate: kitchen gadgets + supplements. Output: output/mealmaxx-web/",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "APP5",
+      "name": "HabitForge — Habit Tracker PWA",
+      "description": "Add unlimited habits, daily check-in, streak counter per habit, GitHub-style contribution graph, weekly report, habit suggestions. Affiliate: self-improvement books + courses. Output: output/habitforge-web/",
+      "agents": 3,
+      "passes": false
+    }
+  ],
+  "total_agent_spawns": 15,
+  "pattern": "ralph_wiggum_loop_with_embedded_agent_swarms"
+}

@@ -1,0 +1,278 @@
+{
+  "product_name": "WalkToUnlock",
+  "tagline": "Walk your way to screen freedom",
+  "problem_statement": "Average American walks 3,000-4,000 steps daily, below the 7,500 recommended. Phone addiction keeps people sedentary. WalkToUnlock forces movement by blocking apps until step goal is met.",
+  "target_audience": {
+    "primary": "Health-conscious adults 25-45 who want to move more",
+    "secondary": "Fitness coaches recommending to clients, HR wellness programs",
+    "demographics": {
+      "age": "25-45",
+      "interests": ["Fitness", "Health", "Weight loss", "Productivity"],
+      "tech_comfort": "Medium-high",
+      "pain_points": ["Sedentary lifestyle", "Phone addiction", "Lack of motivation"]
+    }
+  },
+  "market_size": {
+    "tam": "$5B fitness apps market",
+    "sam": "$1B step tracking/gamification",
+    "som": "$15M screen blocking + fitness intersection"
+  },
+  "competitors": [
+    {
+      "name": "Opal",
+      "mrr": "$600,000",
+      "positioning": "Screen time management",
+      "gap": "No fitness integration"
+    },
+    {
+      "name": "StepBet",
+      "mrr": "$400,000",
+      "positioning": "Step challenges with money",
+      "gap": "No screen blocking"
+    },
+    {
+      "name": "Steppp",
+      "mrr": "$150,000",
+      "positioning": "Step tracking widget",
+      "gap": "No accountability"
+    },
+    {
+      "name": "Sweatcoin",
+      "mrr": "$2,000,000",
+      "positioning": "Steps to rewards",
+      "gap": "No blocking mechanism"
+    }
+  ],
+  "unique_value_proposition": "Only app that locks your distracting apps until you hit your step goal. Your phone becomes a fitness coach.",
+  "tech_stack": {
+    "frontend": "React Native (Expo)",
+    "state": "Zustand",
+    "storage": "MMKV",
+    "ios_native": "Swift (FamilyControls, HealthKit)",
+    "android_native": "Kotlin (UsageStatsManager, Google Fit)",
+    "payments": "RevenueCat",
+    "analytics": "Mixpanel",
+    "health_apis": ["HealthKit (iOS)", "Google Fit (Android)"]
+  },
+  "monetization": {
+    "model": "Freemium with hard paywall",
+    "trial": "3 days free",
+    "pricing": {
+      "monthly": {
+        "price": 7.99,
+        "product_id": "walktounlock_monthly",
+        "enabled": true
+      },
+      "annual": {
+        "price": 39.99,
+        "product_id": "walktounlock_annual",
+        "enabled": true,
+        "note": "BEST VALUE (58% savings)"
+      },
+      "lifetime": {
+        "price": 79.99,
+        "product_id": "walktounlock_lifetime",
+        "enabled": false
+      }
+    },
+    "entitlements": ["pro"],
+    "rationale": "Lower price than PrayerLock due to broader audience, easier conversion."
+  },
+  "core_features": [
+    {
+      "id": "WU-F001",
+      "name": "Step Tracking Integration",
+      "description": "Connect to HealthKit/Google Fit for real-time step count",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "WU-F002",
+      "name": "App Blocking",
+      "description": "Select which apps get blocked until step goal met",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "WU-F003",
+      "name": "Daily Step Goal",
+      "description": "Configurable goal (1,000-20,000 steps)",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "WU-F004",
+      "name": "Progress Widget",
+      "description": "Home screen widget showing steps and unlock status",
+      "priority": "P1",
+      "mvp": true
+    },
+    {
+      "id": "WU-F005",
+      "name": "Streak Tracking",
+      "description": "Current streak, longest streak, calendar view",
+      "priority": "P1",
+      "mvp": true
+    },
+    {
+      "id": "WU-F006",
+      "name": "Emergency Unlock",
+      "description": "Hidden option with streak penalty",
+      "priority": "P2",
+      "mvp": true
+    }
+  ],
+  "success_metrics": {
+    "trial_to_paid": "12%",
+    "day_7_retention": "45%",
+    "monthly_churn": "<10%",
+    "average_streak": "5+ days",
+    "app_store_rating": "4.5+ stars",
+    "month_1_mrr": "$1,500",
+    "month_3_mrr": "$8,000"
+  },
+  "stories": [
+    {
+      "id": "WU-001",
+      "title": "Project setup with Expo and TypeScript",
+      "category": "infrastructure",
+      "priority": 1,
+      "acceptance": [
+        "Expo project initialized",
+        "Zustand + MMKV configured",
+        "Navigation structure set up"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-002",
+      "title": "HealthKit integration (iOS)",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "Request HealthKit authorization",
+        "Read step count in real-time",
+        "Background step updates"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-003",
+      "title": "Google Fit integration (Android)",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "OAuth flow for Google Fit",
+        "Read step count",
+        "Background sync"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-004",
+      "title": "iOS Screen Time API native module",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "FamilyControls authorization",
+        "Apply/remove shields based on steps",
+        "React Native bridge"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-005",
+      "title": "Android app blocking overlay",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "UsageStatsManager permission",
+        "Display overlay on blocked apps",
+        "React Native bridge"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-006",
+      "title": "Home screen with step progress",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Circular progress showing steps",
+        "Locked/unlocked status",
+        "Step goal display"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-007",
+      "title": "App selection screen",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "List installed apps",
+        "Multi-select interface",
+        "Persist selections"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-008",
+      "title": "Settings with goal configuration",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Step goal slider (1k-20k)",
+        "Reset time configuration",
+        "Emergency unlock option"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-009",
+      "title": "RevenueCat paywall",
+      "category": "services",
+      "priority": 1,
+      "acceptance": [
+        "SDK configured",
+        "Monthly/annual products",
+        "Trial tracking"
+      ],
+      "passes": false
+    },
+    {
+      "id": "WU-010",
+      "title": "Home screen widget",
+      "category": "native",
+      "priority": 2,
+      "acceptance": [
+        "iOS WidgetKit implementation",
+        "Android widget",
+        "Real-time step display"
+      ],
+      "passes": false
+    }
+  ],
+  "risks": [
+    {
+      "risk": "HealthKit access restrictions",
+      "likelihood": "low",
+      "impact": "high",
+      "mitigation": "Follow Apple guidelines, clear privacy explanation"
+    },
+    {
+      "risk": "Users find step goal too hard",
+      "likelihood": "medium",
+      "impact": "medium",
+      "mitigation": "Start with low default (3000), progressive increase"
+    },
+    {
+      "risk": "Battery drain from step tracking",
+      "likelihood": "medium",
+      "impact": "medium",
+      "mitigation": "Use native APIs efficiently, batch updates"
+    }
+  ],
+  "guardrails": ".ralph/guardrails.md",
+  "progress_log": ".ralph/progress.md"
+}

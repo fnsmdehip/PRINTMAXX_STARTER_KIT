@@ -1,0 +1,71 @@
+tool_id,category,tool_name,primary_use,monthly_cost_low,monthly_cost_high,one_time_cost,free_tier,api_available,setup_difficulty,printmaxx_priority,current_status,alternative_tools,best_for_channel,notes,url
+T001,Cold Email Platform,Instantly,Cold email sending,$30,$100,$0,No,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Smartlead,EmailBison,Lemlist",CH001,"Best starter. Good deliverability.",https://instantly.ai
+T002,Cold Email Platform,Smartlead,Cold email + unlimited inboxes,$39,$94,$0,No,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Instantly,EmailBison",CH001,"Unlimited inbox connections.",https://smartlead.ai
+T003,Cold Email Platform,EmailBison,Cold email + Claude integration,$49,$149,$0,No,Yes,MEDIUM,MEDIUM,NOT_SUBSCRIBED,"Instantly,Smartlead",CH001,"Good API for agent integration.",https://emailbison.com
+T004,Inbox Provider,DeliverOn,Pre-warmed inboxes,$49,$99,$0,No,No,LOW,MEDIUM,NOT_SUBSCRIBED,"Mailforge,Mailscale",CH001,"Skip DIY warmup. Pre-built.",https://deliveron.org
+T005,Inbox Provider,Mailforge,Bulk warm inboxes,$3/inbox,$3/inbox,$0,No,No,MEDIUM,MEDIUM,NOT_SUBSCRIBED,"DeliverOn,DIY",CH001,"$3/inbox. Good for scale.",https://mailforge.ai
+T006,Email Warmup,Warmbox,Warm existing inboxes,$15,$69,$0,Yes,No,LOW,LOW,NOT_SUBSCRIBED,"Lemwarm,Mailwarm",CH001,"Use for DIY domain warmup.",https://warmbox.ai
+T007,Lead Data,Apollo.io,B2B lead database + email finder,$0,$49,$0,Yes,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Hunter,RocketReach,ZoomInfo",CH001,"Best free tier. Start here.",https://apollo.io
+T008,Lead Data,Hunter.io,Email finder,$0,$49,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Apollo,RocketReach",CH001,"Good for one-off lookups.",https://hunter.io
+T009,Lead Data,LinkedIn Sales Navigator,Premium B2B leads,$80,$135,$0,No,No,LOW,HIGH,NOT_SUBSCRIBED,"Apollo,ZoomInfo",CH002,"Highest quality leads.",https://linkedin.com/sales
+T010,Lead Data,Crunchbase,Funding alerts + company data,$0,$49,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"PitchBook,CB Insights",CH021,"Free tier for funding triggers.",https://crunchbase.com
+T011,Email Verification,NeverBounce,Email list cleaning,$0.003/email,$0.008/email,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"ZeroBounce,Clearout",CH001,"Clean lists before sending.",https://neverbounce.com
+T012,LinkedIn Automation,Dux-Soup,LinkedIn automation,$15,$55,$0,Yes,No,LOW,MEDIUM,NOT_SUBSCRIBED,"Expandi,Waalaxy",CH002,"Simple and safe. Start here.",https://dux-soup.com
+T013,LinkedIn Automation,Expandi,Cloud LinkedIn automation,$99,$199,$0,No,Yes,MEDIUM,MEDIUM,NOT_SUBSCRIBED,"Dux-Soup,Waalaxy",CH002,"Cloud-based. Safer.",https://expandi.io
+T014,LinkedIn Automation,Waalaxy,LinkedIn + email combo,$0,$80,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Dux-Soup,Expandi",CH002,"Good free tier.",https://waalaxy.com
+T015,Scraping,Phantombuster,Multi-platform scraping,$30,$100,$0,Yes,Yes,MEDIUM,MEDIUM,NOT_SUBSCRIBED,"Apify,Octoparse",CH002,"LinkedIn + social scraping.",https://phantombuster.com
+T016,Scraping,Apify,Web scraping platform,$0,$49,$0,Yes,Yes,MEDIUM,LOW,NOT_SUBSCRIBED,"Phantombuster,Octoparse",CH022,"Free tier good for basics.",https://apify.com
+T017,AI Caller,Bland.ai,AI voice calling,$0.09/min,$0.09/min,$0,Yes,Yes,MEDIUM,MEDIUM,NOT_SUBSCRIBED,"Synthflow,Vapi,Retell",CH003,"Best quality AI calls.",https://bland.ai
+T018,AI Caller,Synthflow,AI calling platform,$30,$100,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Bland,Vapi",CH003,"Simpler setup.",https://synthflow.ai
+T019,AI Caller,Vapi.ai,Developer AI calling,$0.05/min,$0.05/min,$0,Yes,Yes,HIGH,LOW,NOT_SUBSCRIBED,"Bland,Synthflow",CH003,"Cheapest per minute.",https://vapi.ai
+T020,VoIP,OpenPhone,Business phone lines,$15,$25,$0,No,Yes,LOW,LOW,NOT_SUBSCRIBED,"Google Voice,Dialpad",CH004,"Multiple numbers. Good for VAs.",https://openphone.com
+T021,Power Dialer,PhoneBurner,Power dialing,$149,$179,$0,No,Yes,MEDIUM,LOW,NOT_SUBSCRIBED,"Mojo,Kixie",CH004,"For human cold callers.",https://phoneburner.com
+T022,IG Automation,ManyChat,Instagram DM automation,$15,$45,$0,Yes,Yes,LOW,LOW,NOT_SUBSCRIBED,"IGdm,Chatfuel",CH005,"Comment-to-DM flows.",https://manychat.com
+T023,Anti-detect Browser,GoLogin,Browser profile management,$0,$99,$0,Yes,No,MEDIUM,HIGH,SUBSCRIBED_FREE,"Multilogin,Incogniton",CH006,"Start with free tier.",https://gologin.com
+T024,Anti-detect Browser,Multilogin,Enterprise anti-detect,$99,$199,$0,No,No,MEDIUM,LOW,NOT_SUBSCRIBED,"GoLogin,Incogniton",CH006,"Only if GoLogin fails.",https://multilogin.com
+T025,Residential Proxy,Decodo,Residential IPs,$50,$200,$0,No,Yes,MEDIUM,HIGH,NOT_SUBSCRIBED,"SOAX,Oxylabs,BrightData",CH006,"Start 1GB plan.",https://app.decodo.com
+T026,Residential Proxy,SOAX,Residential IPs,$50,$200,$0,No,Yes,MEDIUM,MEDIUM,NOT_SUBSCRIBED,"Decodo,Oxylabs",CH006,"Alternative if Decodo fails.",https://soax.com
+T027,Phone Verification,SMSPool,Virtual phone numbers,$0.10/sms,$0.50/sms,$0,Yes,Yes,LOW,HIGH,NOT_SUBSCRIBED,"TextVerified,5sim",CH006,"Cheap verification numbers.",https://smspool.net
+T028,AI Model,Claude Max,Primary AI brain,$100,$200,$0,No,Yes,LOW,CRITICAL,SUBSCRIBED,"ChatGPT,Gemini",ALL,"Non-negotiable. Agent swarm runtime.",https://claude.ai
+T029,Video Editing,CapCut,Short-form video editing,$0,$0,$0,Yes,No,LOW,HIGH,USING,"DaVinci,Premiere",CH007,"Best free editor for shorts.",https://capcut.com
+T030,AI Images,Leonardo.ai,AI image generation,$0,$24,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Midjourney,Ideogram,DALL-E",CH023,"Best quality free tier.",https://leonardo.ai
+T031,AI Images,Ideogram,Text-in-image AI,$0,$20,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Leonardo,Midjourney",CH023,"Best for text on images.",https://ideogram.ai
+T032,AI Avatar,HeyGen,AI video avatars,$24,$120,$0,No,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Synthesia,D-ID",CH023,"Talking head videos.",https://heygen.com
+T033,AI Avatar,Synthesia,Professional AI presenters,$30,$90,$0,No,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"HeyGen,D-ID",CH023,"More professional look.",https://synthesia.io
+T034,AI Voice,ElevenLabs,Voice cloning + TTS + MCP integration,$0,$22,$0,Yes,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Play.ht,Murf",CH013,"Best voice quality. MCP server available for Claude Code integration. See OPS/ELEVENLABS_MCP_INTEGRATION.md",https://elevenlabs.io
+T035,Design,Canva,Graphics + design,$0,$13,$0,Yes,No,LOW,MEDIUM,USING,"Figma,Adobe",ALL,"Product covers + social graphics.",https://canva.com
+T036,Automation,n8n (self-hosted),Workflow automation,$0,$0,$0,Yes,Yes,MEDIUM,MEDIUM,NOT_SETUP,"Make,Zapier",ALL,"Self-host on Hetzner.",https://n8n.io
+T037,Automation,Make,Visual workflow automation,$9,$16,$0,Yes,Yes,LOW,LOW,NOT_SUBSCRIBED,"n8n,Zapier",ALL,"Easier than n8n.",https://make.com
+T038,Automation,Zapier,No-code automation,$0,$20,$0,Yes,Yes,LOW,LOW,NOT_SUBSCRIBED,"Make,n8n",ALL,"Easiest but expensive at scale.",https://zapier.com
+T039,VPS Hosting,Hetzner,VPS for n8n,$5,$10,$0,No,Yes,MEDIUM,MEDIUM,NOT_SUBSCRIBED,"DigitalOcean,Vultr",ALL,"Cheapest VPS. EU-based.",https://hetzner.com
+T040,Browser Automation,Playwright,Bulk browser automation,$0,$0,$0,Yes,Yes,HIGH,CRITICAL,INSTALLED,"Puppeteer,Selenium",ALL,"Non-negotiable bulk engine.",https://playwright.dev
+T041,Sales Platform,Gumroad,Digital product sales,$0,$10,$0,Yes,Yes,LOW,HIGH,NOT_SETUP,"Lemon Squeezy,Paddle",ALL,"Simple digital sales.",https://gumroad.com
+T042,Link Aggregator,Linktree,Bio link page,$0,$6,$0,Yes,No,LOW,MEDIUM,NOT_SETUP,"Beacons,Stan",ALL,"Bio funnel page.",https://linktr.ee
+T043,Newsletter,Substack,Email newsletter,$0,$0,$0,Yes,Yes,LOW,MEDIUM,NOT_SETUP,"ConvertKit,Beehiiv",CH012,"Free email list building.",https://substack.com
+T044,Podcast,Anchor,Free podcast hosting,$0,$0,$0,Yes,No,LOW,LOW,NOT_SETUP,"Riverside,Buzzsprout",CH013,"Free hosting + distribution.",https://anchor.fm
+T045,ASO,AppTweak,App store optimization,$69,$299,$0,Yes,Yes,MEDIUM,LOW,NOT_SUBSCRIBED,"Sensor Tower,data.ai",APP,"Only for app strategy.",https://apptweak.com
+T046,IDE,Cursor Pro,Code editor + AI,$20,$40,$0,Yes,No,LOW,OPTIONAL,NOT_SUBSCRIBED,"VS Code,Claude Code",ALL,"Nice-to-have. Not required.",https://cursor.sh
+T047,AI,ChatGPT Plus,Alternative AI,$20,$200,$0,No,Yes,LOW,OPTIONAL,NOT_SUBSCRIBED,"Claude,Gemini",ALL,"Most cuttable subscription.",https://chat.openai.com
+T048,Community,Whop,Community + bounties,$0,$10,$0,Yes,Yes,LOW,LOW,NOT_SUBSCRIBED,"Skool,Discord",ALL,"Later phase only.",https://whop.com
+T049,Agent Framework,Ralph,Autonomous overnight agent loops,$0,$0,$0,Yes,No,HIGH,HIGH,NOT_SETUP,"CrewAI,LangChain,AutoGen",ALL,"Amp-based. Fresh context each cycle. Good for batch builds.",https://github.com/snarktank/ralph
+T050,Agent Framework,CrewAI,Multi-agent coordination,$0,$0,$0,Yes,Yes,HIGH,MEDIUM,NOT_SETUP,"Ralph,LangChain,AutoGen",ALL,"Python-based. Good for complex agent workflows.",https://crewai.com
+T051,Self-Hosting,Dokploy,One-click n8n deploy,$0,$0,$0,Yes,No,MEDIUM,MEDIUM,NOT_SETUP,"Coolify,manual",ALL,"Hetzner + Dokploy = gold stack.",https://dokploy.com
+T052,Self-Hosting,Coolify,Self-hosted Vercel/Netlify,$0,$0,$0,Yes,No,MEDIUM,MEDIUM,NOT_SETUP,"Dokploy,Vercel",ALL,"Alternative to Dokploy.",https://coolify.io
+T053,AI Influencer,Fansly,Adult creator platform,$0,$0,$0,Yes,No,LOW,LOW,NOT_SETUP,"OnlyFans,Patreon",CH024,"Less restrictive than OF.",https://fansly.com
+T054,AI Influencer,Character.AI,Virtual character platform,$0,$10,$0,Yes,Yes,LOW,LOW,NOT_SETUP,"Replika,Janitor.ai",CH024,"Build disclosed AI waifus.",https://character.ai
+T055,AI Video,Veo (Google),AI video generation,$0,$20,$0,Yes,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Kling,Runway,Pika",CH032,"Google's AI video. Best quality for shorts.",https://deepmind.google/veo
+T056,AI Video,Kling,AI video generation,$0,$30,$0,Yes,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Veo,Runway,Pika",CH032,"Chinese AI video. Good for longer clips.",https://klingai.com
+T057,AI Video,Runway,AI video generation,$15,$95,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Veo,Kling,Pika",CH032,"Established player. Gen-3 Alpha.",https://runwayml.com
+T058,AI Video,Pika,AI video generation,$0,$35,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Veo,Kling,Runway",CH032,"Good for stylized video content.",https://pika.art
+T059,AI Video,Luma Dream Machine,AI video generation,$0,$30,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Veo,Kling",CH032,"Fast generation. Good for concepts.",https://lumalabs.ai
+T060,Faceless Content,InVideo AI,AI faceless video creation,$25,$60,$0,Yes,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Pictory,Fliki",CH032,"Full faceless video from prompt.",https://invideo.io
+T061,Faceless Content,Pictory,Video from scripts,$23,$47,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"InVideo,Fliki",CH032,"Turn blog posts into videos.",https://pictory.ai
+T062,Faceless Content,Fliki,AI video + voiceover,$28,$88,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"InVideo,Pictory",CH032,"Best for quick faceless shorts.",https://fliki.ai
+T063,Influencer Discovery,Heepsy,Micro-influencer search,$0,$69,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Modash,Ainfluencer",CH017,"Free tier: 360 searches/mo. Good for basic discovery.",https://heepsy.com
+T064,Influencer Discovery,Modash,350M+ creator database,$99,$199,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Heepsy,Ainfluencer",CH017,"Best fraud detection. Shopify integration.",https://modash.io
+T065,Influencer Marketplace,Ainfluencer,Free brand marketplace,$0,$0,$0,Yes,Yes,LOW,HIGH,NOT_SUBSCRIBED,"Heepsy,Modash",CH017,"FREE for brands. AI matching. Start here.",https://ainfluencer.com
+T066,UGC Marketplace,Billo,Creator job marketplace,$0,$0,$0,Yes,No,LOW,MEDIUM,NOT_SUBSCRIBED,"Ainfluencer,Insense",CH017,"Free to use. Pay per task.",https://billo.app
+T067,Influencer Analytics,Shortimize,Creator campaign tracking,$0,$50,$0,Yes,Yes,MEDIUM,LOW,NOT_SUBSCRIBED,"Native analytics",CH017,"From @iamgdsa. Campaign performance tracking.",https://shortimize.com
+T068,App Virality,FindMeCreators,Creator network for apps,$15000,$62500,$0,No,No,HIGH,LOW,NOT_SUBSCRIBED,"DIY outreach",CH017,"NOT bootstrap. Study their playbook instead.",https://findmecreators.com
+T069,Influencer Discovery,IZEA,Creator marketplace,$6,$100,$0,Yes,Yes,LOW,MEDIUM,NOT_SUBSCRIBED,"Ainfluencer,Heepsy",CH017,"Low entry point $6/mo tier.",https://izea.com
+T070,Influencer Discovery,Kitly Business,Campaign reporting,$99,$199,$0,Yes,Yes,LOW,LOW,NOT_SUBSCRIBED,"Modash,Heepsy",CH017,"14-day free trial. Good for tracking.",https://kitly.io

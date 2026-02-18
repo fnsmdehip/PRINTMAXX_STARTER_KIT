@@ -1,0 +1,18 @@
+{
+  "thread_id": "THREAD005",
+  "topic": "Overnight autonomous build pattern (ralph loops)",
+  "hook": "I go to sleep.\n\nClaude keeps building.\n\nWake up to 47 files changed, 3 features shipped, bugs fixed.\n\nThe overnight autonomous build pattern. Here's how it works:",
+  "tweets": [
+    "The concept is simple:\n\nGive Claude Code a structured task list before bed.\n\nLet it run overnight.\n\nWake up to progress.\n\nI call them \"ralph loops\" (named after a friend who suggested it).",
+    "Why this works:\n\n1. Claude Code can run for hours unsupervised\n2. It saves context between commands\n3. It can read files, write files, run tests\n4. It follows instructions literally\n\nPerfect for repetitive or time-consuming tasks.",
+    "What I give Claude before bed:\n\n1. A prd.json file with specific tasks\n2. Guardrails (what NOT to do)\n3. A progress.md file to append to\n4. Clear success criteria\n\nThe more specific, the better results.",
+    "Example overnight task:\n\n\"Generate 25 longtail blog posts from this CSV of keywords. Each post should be 800 words, include FAQ schema, follow the template in /templates/blog.md. Append each filename to progress.md when done.\"\n\nWake up: 25 posts written.",
+    "What works well overnight:\n\n- Bulk content generation\n- Code refactoring (rename variables, update imports)\n- Test writing\n- Documentation\n- Data processing\n- Scraping and parsing\n\nRepetitive stuff. Not creative decisions.",
+    "What doesn't work overnight:\n\n- Anything requiring human judgment\n- Deploying to production\n- Sending emails or messages\n- Financial transactions\n- Deleting things\n\nSet guardrails. Be explicit about what's off-limits.",
+    "The guardrails file:\n\nI keep a guardrails.md that says:\n- Never delete files\n- Never push to main\n- Never run commands with --force\n- Stop and document if you hit an error twice\n\nClaude follows these. It's remarkably disciplined.",
+    "My overnight stack:\n\n1. Claude Code (Claude Max subscription)\n2. Task file: ralph_tasks/current.md\n3. Progress log: .ralph/progress.md\n4. Guardrails: .ralph/guardrails.md\n\nRun: claude --continue\n\nThat's it."
+  ],
+  "cta": "Shipped 3 apps this way in the last 6 weeks.\n\nThe overnight build multiplies your output by 2-3x.\n\nFollow @PRINTMAXXER for more automation patterns.",
+  "estimated_engagement": "HIGH",
+  "best_time": "10:00 PM EST Sunday"
+}

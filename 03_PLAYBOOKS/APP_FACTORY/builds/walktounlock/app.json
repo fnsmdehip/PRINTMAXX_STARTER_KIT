@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "WalkToUnlock",
+    "slug": "walktounlock",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1A1A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.printmaxx.walktounlock",
+      "infoPlist": {
+        "NSMotionUsageDescription": "WalkToUnlock needs access to motion data to count your steps and unlock your phone."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A1A1A"
+      },
+      "package": "com.printmaxx.walktounlock",
+      "permissions": [
+        "android.permission.ACTIVITY_RECOGNITION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Allow WalkToUnlock to access your device motion to count steps."
+        }
+      ],
+      "expo-notifications"
+    ]
+  }
+}

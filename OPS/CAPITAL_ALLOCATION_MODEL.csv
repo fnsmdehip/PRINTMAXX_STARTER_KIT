@@ -1,0 +1,20 @@
+method_id,method_name,position_rank,sharpe_proxy,kelly_optimal_pct,success_probability,capital_allocation_200,capital_allocation_1000,capital_allocation_10000,time_allocation_pct,monthly_ev_low_90day,monthly_ev_high_90day,probability_weighted_ev_low,probability_weighted_ev_high,time_to_first_dollar_days,platform_risk,scalability,revenue_multiplier_with_stack,capital_required,implementation_phase,dependencies,kill_criteria
+MM046+MM025+MM002,Digital Products Barrage,1,2.8,40.0,0.60,0,0,0,20,100,2000,60,1200,1,LOW,7,2.0x,0,Phase1,Gumroad/Whop accounts,"<$50/mo after 60 days"
+MM001+SYN009+SYN012+SYN013,Lock App Portfolio + Hard Paywall,2,2.1,32.5,0.40,99+25=124,124,2000,25,500,5000,200,2000,30,MEDIUM,9,25.6x,124,Phase1,Apple Dev + Google Play + RevenueCat,"<100 downloads after 60 days"
+SYN002+SYN005,Content Cascade Repurposing,3,2.3,37.5,0.70,0,0,0,15,100,1000,70,700,7,LOW,8,18.8x,0,Phase1,Medium Partner Program + Substack + YouTube,"Never kill - optimize only"
+SYN008+SYN018+SYN019,Reddit GEO Distribution,4,2.0,20.0,0.40,0,0,0,5,50,500,20,200,30,LOW,7,cascade,0,Phase1,3 Reddit accounts + 14-day warmup,"Never kill - zero cost"
+MM015+MM032,Newsletter Growth Engine,5,1.9,15.0,0.35,0,0,0,10,50,500,17.5,175,30,LOW,9,2.4x,0,Phase1,Beehiiv free account,"<100 subs after 90 days"
+MM021,Personal Brand / Build-in-Public,6,1.7,10.0,0.30,0,0,0,10,0,200,0,60,60,MEDIUM,10,2.5x,0,Phase1,X/Twitter account,"Never kill - zero cost"
+SYN005_FB,Facebook Reels Arbitrage,7,1.6,8.0,0.40,0,0,0,5,50,500,20,200,7,LOW,8,4-440x,0,Phase1,Facebook creator program,"Never while RPM advantage exists"
+MM020,X Launch Viral,8,1.4,5.0,0.20,0,0,0,5,0,1000,0,200,60,MEDIUM,8,2.4x,0,Phase2,2K+ X followers (Position 6),"Skip until 2K+ followers"
+SYN027,Multi-Faith PrayerLock Expansion,9,1.3,3.0,0.25,0,0,0,0,0,0,0,0,90,MEDIUM,10,5.0x,0,Phase3,PrayerLock Christian revenue proof,"Only after Christian version revenue"
+MM007+SYN010,Cold Outbound Services,10,1.5,7.0,0.30,0,200-600,600,5,500,5000,150,1500,45,LOW,7,2.1x,200-600,Phase2,Warmed domains + inboxes + SPF/DKIM,"<3% reply after 500 emails"
+PORTFOLIO_TOTAL,All 10 Positions,N/A,N/A,100.0,N/A,124,324-724,2724,100,1350,15700,537.5,6235,1,N/A,N/A,N/A,124-724,N/A,N/A,N/A
+SCENARIO_A,Minimum Viable ($200),N/A,N/A,N/A,0.42,200,N/A,N/A,100,350,3000,147,1260,1,N/A,N/A,N/A,200,Phase1,"Dev accounts + digital products","Break-even: 30-60 days"
+SCENARIO_B,Optimal Barbell ($1000),N/A,N/A,N/A,0.38,N/A,1000,N/A,100,980,10000,372,3800,1,N/A,N/A,N/A,1000,Phase1,"Scenario A + AI tools + proxies + reserve","Break-even: 14-30 days"
+SCENARIO_C,Full Deployment ($10000),N/A,N/A,N/A,0.33,N/A,N/A,10000,100,5800,59000,1914,19470,1,N/A,N/A,N/A,10000,Phase1-2,"All infrastructure + paid ads + VA + reserve","Break-even: 7-21 days"
+MONTHLY_BURN,Current Burn Rate,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,-134.23,-134.23,-134.23,-134.23,N/A,N/A,N/A,N/A,134.23/mo,N/A,"Claude Max $100 + Leonardo $12 + ElevenLabs $5 + D-ID $5.90 + Apple $8.25/mo + Google $2.08/mo + Domain $1/mo","Break-even MRR: $135"
+KELLY_OPTIMAL,Kelly Criterion Summary,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,"Kelly says: 40% digital products + 32.5% Lock Apps + 27.5% everything else",N/A
+BARBELL_LEFT,Safe Immediate Revenue (60%),N/A,N/A,60.0,0.55,0,0,0,60,250,3500,137.5,1925,1,LOW,N/A,N/A,0,Phase1,"Digital Products + Content Cascade + Newsletter",N/A
+BARBELL_RIGHT,Asymmetric Upside (30%),N/A,N/A,30.0,0.33,124,124,2000,30,500,6000,165,1980,30,MEDIUM,N/A,N/A,124,Phase1,"Lock Apps + X Launch Viral",N/A
+BARBELL_BACKGROUND,Zero-Cost Compounding (10%),N/A,N/A,10.0,0.37,0,0,0,10,50,1200,18.5,444,7,LOW,N/A,N/A,0,Phase1,"Reddit GEO + Personal Brand + FB Reels",N/A

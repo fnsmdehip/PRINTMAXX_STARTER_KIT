@@ -1,0 +1,254 @@
+# Fastfile - Main lane definitions
+# This file contains shared lanes used by both iOS and Android
+# Platform-specific lanes are in ios/Fastfile and android/Fastfile
+
+# Require platform-specific Fastfiles
+import "../ios/Fastfile" if File.exist?("../ios/Fastfile")
+import "../android/Fastfile" if File.exist?("../android/Fastfile")
+
+# ==========================================
+# Configuration
+# ==========================================
+
+default_platform(:ios)
+
+before_all do |lane, options|
+  # Ensure we're on a clean git state (optional, can be disabled)
+  # ensure_git_status_clean unless options[:skip_git_check]
+
+  # Set up environment
+  ENV["FASTLANE_SKIP_UPDATE_CHECK"] = "1"
+  ENV["FASTLANE_HIDE_CHANGELOG"] = "1"
+end
+
+after_all do |lane, options|
+  # Clean up any temporary files
+  clean_build_artifacts
+end
+
+error do |lane, exception, options|
+  # Notify on error
+  if ENV["SLACK_WEBHOOK_URL"]
+    slack(
+      message: "Build failed: #{exception.message}",
+      success: false,
+      slack_url: ENV["SLACK_WEBHOOK_URL"],
+      default_payloads: [:lane, :git_branch, :git_author]
+    )
+  end
+end
+
+# ==========================================
+# Shared Lanes
+# ==========================================
+
+desc "Run all tests"
+lane :test_all do
+  ios_test if is_ci? || File.exist?("../ios")
+  android_test if is_ci? || File.exist?("../android")
+end
+
+desc "Increment version across all platforms"
+lane :bump_all do |options|
+  type = options[:type] || "patch"
+
+  # Bump iOS
+  if File.exist?("../ios")
+    Dir.chdir("../ios") do
+      bump_version(type: type)
+    end
+  end
+
+  # Bump Android
+  if File.exist?("../android")
+    Dir.chdir("../android") do
+      bump_version(type: type)
+    end
+  end
+
+  # Commit version bump
+  if options[:commit]
+    git_commit(
+      path: ["ios/", "android/"],
+      message: "Bump version (#{type})"
+    )
+  end
+end
+
+desc "Deploy to all platforms"
+lane :deploy_all do |options|
+  # Deploy iOS to TestFlight
+  if File.exist?("../ios")
+    Dir.chdir("../ios") do
+      deploy_testflight(
+        changelog: options[:changelog]
+      )
+    end
+  end
+
+  # Deploy Android to Play Store
+  if File.exist?("../android")
+    Dir.chdir("../android") do
+      deploy_play_store(
+        track: options[:track] || "internal",
+        changelog: options[:changelog]
+      )
+    end
+  end
+end
+
+# ==========================================
+# Utility Lanes
+# ==========================================
+
+desc "Print environment information"
+lane :env_info do
+  puts "=" * 50
+  puts "Environment Information"
+  puts "=" * 50
+  puts "Fastlane version: #{Fastlane::VERSION}"
+  puts "Ruby version: #{RUBY_VERSION}"
+  puts "Platform: #{RUBY_PLATFORM}"
+  puts "CI: #{is_ci?}"
+  puts "=" * 50
+end
+
+desc "Setup code signing (Match)"
+lane :setup_signing do
+  # iOS code signing
+  if File.exist?("../ios")
+    Dir.chdir("../ios") do
+      match(type: "appstore")
+      match(type: "development")
+    end
+  end
+end
+
+desc "Sync certificates with Match"
+lane :sync_certs do |options|
+  if File.exist?("../ios")
+    Dir.chdir("../ios") do
+      match(
+        type: options[:type] || "appstore",
+        readonly: options[:readonly] || is_ci?
+      )
+    end
+  end
+end
+
+desc "Clean build artifacts"
+lane :clean do
+  clean_build_artifacts
+
+  if File.exist?("../ios")
+    Dir.chdir("../ios") do
+      sh("rm -rf build/")
+      sh("rm -rf DerivedData/")
+    end
+  end
+
+  if File.exist?("../android")
+    Dir.chdir("../android") do
+      gradle(task: "clean")
+    end
+  end
+end
+
+desc "Create a new release branch"
+lane :create_release do |options|
+  version = options[:version]
+
+  unless version
+    UI.user_error!("Version is required. Use: fastlane create_release version:1.2.3")
+  end
+
+  # Create release branch
+  sh("git checkout -b release/#{version}")
+
+  # Bump version
+  bump_all(type: "patch", commit: false)
+
+  # Commit
+  git_commit(
+    path: ".",
+    message: "Prepare release #{version}"
+  )
+
+  UI.success("Created release branch: release/#{version}")
+end
+
+desc "Tag and push release"
+lane :tag_release do |options|
+  version = options[:version]
+
+  unless version
+    UI.user_error!("Version is required. Use: fastlane tag_release version:1.2.3")
+  end
+
+  # Create tag
+  add_git_tag(tag: "v#{version}")
+
+  # Push
+  push_to_git_remote(tags: true)
+
+  UI.success("Tagged and pushed: v#{version}")
+end
+
+# ==========================================
+# CI/CD Integration
+# ==========================================
+
+desc "CI build lane"
+lane :ci_build do
+  if is_ci?
+    # Set up CI-specific configurations
+    setup_ci
+
+    # Determine what to build based on changed files
+    # This is a simplified version; real implementation would check git diff
+
+    test_all
+
+    UI.success("CI build completed successfully")
+  else
+    UI.user_error!("This lane is only for CI environments")
+  end
+end
+
+desc "CI deploy lane"
+lane :ci_deploy do |options|
+  if is_ci?
+    setup_ci
+
+    platform = options[:platform] || "all"
+
+    case platform
+    when "ios"
+      Dir.chdir("../ios") { deploy_testflight }
+    when "android"
+      Dir.chdir("../android") { deploy_play_store(track: "internal") }
+    when "all"
+      deploy_all(track: "internal")
+    end
+
+    UI.success("CI deploy completed successfully")
+  else
+    UI.user_error!("This lane is only for CI environments")
+  end
+end
+
+# ==========================================
+# Helper Methods
+# ==========================================
+
+def setup_ci
+  # Configure Fastlane for CI environment
+  ENV["FASTLANE_SKIP_UPDATE_CHECK"] = "1"
+  ENV["FASTLANE_HIDE_CHANGELOG"] = "1"
+
+  # Suppress verbose output
+  ENV["FL_OUTPUT_DIR"] = "./fastlane/output"
+
+  # Create output directory
+  FileUtils.mkdir_p("./fastlane/output")
+end

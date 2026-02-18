@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#022c22">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="WalkToUnlock">
+<meta name="description" content="Count your steps, hit goals, unlock rewards. Free step counter PWA that motivates you to walk more.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23022c22' width='100' height='100' rx='20'/><text y='70' x='50' text-anchor='middle' font-size='55'>👟</text></svg>">
+<title>WalkToUnlock - Every Step Counts</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        forest: { 800: '#022c22', 900: '#01201a', 950: '#011510' },
+        mint: { 300: '#6ee7b7', 400: '#34d399', 500: '#10b981' },
+        lime: { 300: '#bef264', 400: '#a3e635', 500: '#84cc16' },
+        energy: { orange: '#f97316', yellow: '#eab308', green: '#22c55e' }
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-behavior: none; background: #022c22; color: #e2e8f0; }
+
+.nature-bg {
+  background: #022c22;
+  background-image:
+    radial-gradient(ellipse at 20% 80%, rgba(16,185,129,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(132,204,22,0.04) 0%, transparent 50%);
+}
+
+.glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); }
+.glass-hover:hover { background: rgba(255,255,255,0.07); }
+
+.tab-active { border-bottom: 2px solid #10b981; color: #6ee7b7; }
+.tab-inactive { border-bottom: 2px solid transparent; color: #64748b; }
+
+.ring-progress { transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+.ring-bg { stroke: rgba(16,185,129,0.12); }
+.ring-fill { stroke: url(#progressGrad); }
+
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.step-bounce { animation: stepBounce 0.3s ease; }
+@keyframes stepBounce { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+.unlock-glow { animation: unlockGlow 1.5s ease-in-out infinite; }
+@keyframes unlockGlow { 0%, 100% { box-shadow: 0 0 15px rgba(16,185,129,0.2); } 50% { box-shadow: 0 0 30px rgba(16,185,129,0.5); } }
+
+.reward-locked { filter: grayscale(1) brightness(0.4); }
+.reward-unlocked { animation: rewardPop 0.5s ease; }
+@keyframes rewardPop { 0% { transform: scale(0.8); opacity: 0; } 50% { transform: scale(1.1); } 100% { transform: scale(1); opacity: 1; } }
+
+.bar-grow { animation: barGrow 0.6s ease-out; }
+@keyframes barGrow { from { height: 0; } }
+
+.streak-fire { animation: firePulse 1.5s ease-in-out infinite; }
+@keyframes firePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+
+.pulse-ring { animation: pulseRing 2s ease-out infinite; }
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.share-card {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%);
+  border: 1px solid rgba(16,185,129,0.3);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(16,185,129,0.3); border-radius: 2px; }
+</style>
+</head>
+<body class="nature-bg min-h-screen">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 glass px-4 py-3">
+  <div class="max-w-lg mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">👟</span>
+      <h1 class="text-lg font-bold bg-gradient-to-r from-mint-300 to-lime-400 bg-clip-text text-transparent">WalkToUnlock</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <span id="streakBadge" class="text-sm font-semibold px-2 py-1 rounded-full glass hidden">
+        <span class="streak-fire inline-block">🔥</span> <span id="streakCount">0</span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav class="sticky top-[52px] z-40 glass">
+  <div class="max-w-lg mx-auto flex">
+    <button onclick="switchTab('steps')" id="tab-steps" class="flex-1 py-3 text-sm font-medium text-center tab-active transition-all">Steps</button>
+    <button onclick="switchTab('rewards')" id="tab-rewards" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Rewards</button>
+    <button onclick="switchTab('stats')" id="tab-stats" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Stats</button>
+    <button onclick="switchTab('share')" id="tab-share" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Share</button>
+    <button onclick="switchTab('gear')" id="tab-gear" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Gear</button>
+  </div>
+</nav>
+
+<main class="max-w-lg mx-auto px-4 pb-8">
+
+  <!-- STEPS TAB -->
+  <section id="panel-steps" class="py-6 fade-in">
+    <!-- Progress Ring -->
+    <div class="flex flex-col items-center mb-8">
+      <div class="relative w-72 h-72 mb-4">
+        <!-- Pulse ring behind -->
+        <div id="pulseRingEl" class="absolute inset-4 rounded-full border-2 border-mint-500/20 pulse-ring hidden"></div>
+        <svg class="w-full h-full -rotate-90" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#10b981"/>
+              <stop offset="50%" stop-color="#34d399"/>
+              <stop offset="100%" stop-color="#a3e635"/>
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="88" fill="none" stroke-width="8" class="ring-bg"/>
+          <circle id="progressRing" cx="100" cy="100" r="88" fill="none" stroke-width="8" class="ring-fill"
+            stroke-linecap="round" stroke-dasharray="553" stroke-dashoffset="553"/>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <div id="stepCount" class="text-6xl font-black tracking-tight text-white step-bounce">0</div>
+          <div class="text-sm text-slate-400 mt-1">steps today</div>
+          <div id="goalPercent" class="text-lg font-bold text-mint-400 mt-1">0%</div>
+        </div>
+      </div>
+
+      <!-- Control Buttons -->
+      <div class="flex gap-3">
+        <button id="trackBtn" onclick="toggleTracking()"
+          class="px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 bg-gradient-to-r from-mint-500 to-lime-500 text-forest-900 active:scale-95 unlock-glow">
+          Start Walking
+        </button>
+      </div>
+      <p id="trackStatus" class="text-xs text-slate-500 mt-3">Tap to begin counting steps</p>
+    </div>
+
+    <!-- Goal Setting -->
+    <div class="glass rounded-2xl p-5 mb-4">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-semibold text-mint-300">Daily goal</h3>
+        <span class="text-sm text-slate-400" id="goalDisplay">10,000 steps</span>
+      </div>
+      <input type="range" id="goalSlider" min="1000" max="25000" step="500" value="10000" oninput="updateGoal()"
+        class="w-full h-2 rounded-lg appearance-none cursor-pointer bg-forest-900 accent-mint-500">
+      <div class="flex justify-between text-xs text-slate-500 mt-1">
+        <span>1,000</span>
+        <span>25,000</span>
+      </div>
+    </div>
+
+    <!-- Daily Stats Grid -->
+    <div class="grid grid-cols-3 gap-3">
+      <div class="glass rounded-xl p-3 text-center">
+        <div class="text-2xl font-bold text-mint-400" id="distanceDisplay">0.0</div>
+        <div class="text-xs text-slate-500">km walked</div>
+      </div>
+      <div class="glass rounded-xl p-3 text-center">
+        <div class="text-2xl font-bold text-lime-400" id="caloriesDisplay">0</div>
+        <div class="text-xs text-slate-500">calories</div>
+      </div>
+      <div class="glass rounded-xl p-3 text-center">
+        <div class="text-2xl font-bold text-energy-orange" id="timeDisplay">0m</div>
+        <div class="text-xs text-slate-500">active</div>
+      </div>
+    </div>
+
+    <!-- Quick Add -->
+    <div class="glass rounded-2xl p-5 mt-4">
+      <h3 class="font-semibold text-mint-300 mb-3">Quick add steps</h3>
+      <div class="flex gap-2 flex-wrap">
+        <button onclick="addSteps(500)" class="px-4 py-2 rounded-xl bg-mint-500/10 text-mint-300 text-sm font-medium hover:bg-mint-500/20 transition-all active:scale-95">+500</button>
+        <button onclick="addSteps(1000)" class="px-4 py-2 rounded-xl bg-mint-500/10 text-mint-300 text-sm font-medium hover:bg-mint-500/20 transition-all active:scale-95">+1,000</button>
+        <button onclick="addSteps(2500)" class="px-4 py-2 rounded-xl bg-mint-500/10 text-mint-300 text-sm font-medium hover:bg-mint-500/20 transition-all active:scale-95">+2,500</button>
+        <button onclick="addSteps(5000)" class="px-4 py-2 rounded-xl bg-mint-500/10 text-mint-300 text-sm font-medium hover:bg-mint-500/20 transition-all active:scale-95">+5,000</button>
+      </div>
+      <p class="text-xs text-slate-500 mt-2">For walks where you forgot to track</p>
+    </div>
+  </section>
+
+  <!-- REWARDS TAB -->
+  <section id="panel-rewards" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-2 text-mint-300">Locked Rewards</h2>
+    <p class="text-sm text-slate-400 mb-6">Hit step milestones to unlock motivational rewards.</p>
+
+    <div class="space-y-3" id="rewardsList">
+      <!-- Rendered by JS -->
+    </div>
+  </section>
+
+  <!-- STATS TAB -->
+  <section id="panel-stats" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-mint-300">Weekly Stats</h2>
+
+    <!-- Weekly Chart -->
+    <div class="glass rounded-2xl p-5 mb-6">
+      <h3 class="font-semibold mb-4 text-white">This week</h3>
+      <div class="flex items-end justify-between gap-2" style="height: 160px;" id="weeklyChart"></div>
+      <div class="flex justify-between mt-2 text-xs text-slate-500" id="weeklyLabels"></div>
+    </div>
+
+    <!-- Totals -->
+    <div class="grid grid-cols-2 gap-3 mb-6">
+      <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-mint-400" id="weekTotal">0</div>
+        <div class="text-xs text-slate-500">Steps this week</div>
+      </div>
+      <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-lime-400" id="weekAvg">0</div>
+        <div class="text-xs text-slate-500">Daily average</div>
+      </div>
+    </div>
+
+    <!-- Streak -->
+    <div class="glass rounded-2xl p-5">
+      <h3 class="font-semibold mb-3 text-white">Streak tracker</h3>
+      <div class="flex items-center gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-mint-400" id="statsCurrentStreak">0</div>
+          <div class="text-xs text-slate-500">Current</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-lime-400" id="statsBestStreak">0</div>
+          <div class="text-xs text-slate-500">Best ever</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-energy-orange" id="statsTotalDays">0</div>
+          <div class="text-xs text-slate-500">Days tracked</div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">Streak counts consecutive days hitting your step goal</p>
+    </div>
+  </section>
+
+  <!-- SHARE TAB -->
+  <section id="panel-share" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-mint-300">Share Your Progress</h2>
+
+    <!-- Stats Card -->
+    <div class="share-card rounded-2xl p-6 mb-6">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-xl">👟</span>
+        <span class="font-bold text-mint-300">WalkToUnlock</span>
+      </div>
+      <div class="text-center mb-4">
+        <div class="text-5xl font-black text-white" id="shareSteps">0</div>
+        <div class="text-sm text-slate-400">steps today</div>
+      </div>
+      <div class="grid grid-cols-3 gap-3 text-center">
+        <div>
+          <div class="text-lg font-bold text-mint-400" id="shareDist">0.0 km</div>
+          <div class="text-xs text-slate-500">Distance</div>
+        </div>
+        <div>
+          <div class="text-lg font-bold text-lime-400" id="shareCal">0 cal</div>
+          <div class="text-xs text-slate-500">Calories</div>
+        </div>
+        <div>
+          <div class="text-lg font-bold text-energy-orange" id="shareStrk">0 days</div>
+          <div class="text-xs text-slate-500">Streak</div>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="shareStats()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-mint-500 to-lime-500 text-forest-900 font-semibold text-lg transition-all active:scale-[0.98]">
+      Share Stats
+    </button>
+    <p class="text-xs text-slate-500 text-center mt-3">Uses native share or copies to clipboard</p>
+  </section>
+
+  <!-- GEAR TAB -->
+  <section id="panel-gear" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-2 text-mint-300">Recommended Gear</h2>
+    <p class="text-sm text-slate-400 mb-6">Walking and fitness gear we actually recommend.</p>
+
+    <div class="space-y-4">
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-mint-500/20 flex items-center justify-center text-2xl shrink-0">👟</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Walking Shoes (Hoka Bondi)</h3>
+          <p class="text-xs text-slate-400">Max cushion, wide toe box, perfect for daily walks</p>
+          <span class="text-xs text-mint-400 font-medium">$164.95 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-lime-500/20 flex items-center justify-center text-2xl shrink-0">⌚</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Fitness Tracker Band</h3>
+          <p class="text-xs text-slate-400">Heart rate, steps, sleep tracking, 7-day battery</p>
+          <span class="text-xs text-mint-400 font-medium">$39.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-energy-orange/20 flex items-center justify-center text-2xl shrink-0">🎧</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Bone Conduction Headphones</h3>
+          <p class="text-xs text-slate-400">Open-ear design, hear traffic, sweat-proof, 8hr battery</p>
+          <span class="text-xs text-mint-400 font-medium">$79.95 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-mint-500/20 flex items-center justify-center text-2xl shrink-0">💧</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Insulated Water Bottle</h3>
+          <p class="text-xs text-slate-400">32oz, stays cold 24hrs, leak-proof flip cap</p>
+          <span class="text-xs text-mint-400 font-medium">$24.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-lime-500/20 flex items-center justify-center text-2xl shrink-0">🧢</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Running Cap with UV Protection</h3>
+          <p class="text-xs text-slate-400">UPF 50+, moisture-wicking, reflective accents</p>
+          <span class="text-xs text-mint-400 font-medium">$19.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <p class="text-xs text-slate-500 text-center mt-6">Links may include affiliate partnerships. We only recommend gear we trust.</p>
+  </section>
+
+</main>
+
+<script>
+// ==================== STATE ====================
+const STORAGE_KEY = 'walktounlock_data';
+let state = loadState();
+let isTracking = false;
+let lastAccel = { x: 0, y: 0, z: 0 };
+let stepThreshold = 1.2;
+let lastStepTime = 0;
+
+function defaultState() {
+  return {
+    days: {},
+    goal: 10000,
+    bestStreak: 0,
+    unlockedRewards: []
+  };
+}
+
+function loadState() {
+  try {
+    const s = localStorage.getItem(STORAGE_KEY);
+    if (s) return { ...defaultState(), ...JSON.parse(s) };
+  } catch(e) {}
+  return defaultState();
+}
+
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function today() { return new Date().toISOString().split('T')[0]; }
+
+function getTodayData() {
+  if (!state.days[today()]) state.days[today()] = { steps: 0, activeMinutes: 0, startTime: null };
+  return state.days[today()];
+}
+
+// ==================== TABS ====================
+function switchTab(tab) {
+  const tabs = ['steps', 'rewards', 'stats', 'share', 'gear'];
+  tabs.forEach(t => {
+    document.getElementById('panel-' + t).classList.toggle('hidden', t !== tab);
+    document.getElementById('tab-' + t).className = t === tab
+      ? 'flex-1 py-3 text-sm font-medium text-center tab-active transition-all'
+      : 'flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all';
+  });
+  if (tab === 'stats') renderStats();
+  if (tab === 'rewards') renderRewards();
+  if (tab === 'share') updateShareCard();
+}
+
+// ==================== STEP COUNTER ====================
+function toggleTracking() {
+  if (isTracking) {
+    stopTracking();
+  } else {
+    startTracking();
+  }
+}
+
+function startTracking() {
+  if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
+    DeviceMotionEvent.requestPermission().then(response => {
+      if (response === 'granted') {
+        beginMotionTracking();
+      } else {
+        showTrackingFallback();
+      }
+    }).catch(() => showTrackingFallback());
+  } else if ('DeviceMotionEvent' in window) {
+    beginMotionTracking();
+  } else {
+    showTrackingFallback();
+  }
+}
+
+function beginMotionTracking() {
+  isTracking = true;
+  const d = getTodayData();
+  if (!d.startTime) d.startTime = Date.now();
+  saveState();
+  window.addEventListener('devicemotion', handleMotion);
+  updateTrackingUI();
+}
+
+function showTrackingFallback() {
+  isTracking = true;
+  const d = getTodayData();
+  if (!d.startTime) d.startTime = Date.now();
+  saveState();
+  document.getElementById('trackStatus').textContent = 'Accelerometer not available. Use quick-add buttons below.';
+  updateTrackingUI();
+}
+
+function stopTracking() {
+  isTracking = false;
+  window.removeEventListener('devicemotion', handleMotion);
+  updateTrackingUI();
+}
+
+function handleMotion(event) {
+  const a = event.accelerationIncludingGravity;
+  if (!a || a.x === null) return;
+
+  const dx = a.x - lastAccel.x;
+  const dy = a.y - lastAccel.y;
+  const dz = a.z - lastAccel.z;
+  const magnitude = Math.sqrt(dx*dx + dy*dy + dz*dz);
+
+  lastAccel = { x: a.x, y: a.y, z: a.z };
+
+  const now = Date.now();
+  if (magnitude > stepThreshold && (now - lastStepTime) > 300) {
+    lastStepTime = now;
+    addSteps(1);
+  }
+}
+
+function addSteps(count) {
+  const d = getTodayData();
+  d.steps += count;
+  if (d.startTime) {
+    d.activeMinutes = Math.round((Date.now() - d.startTime) / 60000);
+  }
+  saveState();
+  updateDisplay();
+  checkRewards();
+}
+
+function updateTrackingUI() {
+  const btn = document.getElementById('trackBtn');
+  const status = document.getElementById('trackStatus');
+  const pulse = document.getElementById('pulseRingEl');
+
+  if (isTracking) {
+    btn.textContent = 'Stop';
+    btn.classList.remove('from-mint-500', 'to-lime-500');
+    btn.classList.add('from-red-500', 'to-orange-500');
+    status.textContent = 'Counting steps...';
+    pulse.classList.remove('hidden');
+  } else {
+    btn.textContent = 'Start Walking';
+    btn.classList.remove('from-red-500', 'to-orange-500');
+    btn.classList.add('from-mint-500', 'to-lime-500');
+    status.textContent = 'Tap to begin counting steps';
+    pulse.classList.add('hidden');
+  }
+}
+
+// ==================== DISPLAY UPDATE ====================
+function updateDisplay() {
+  const d = getTodayData();
+  const steps = d.steps;
+  const pct = Math.min((steps / state.goal) * 100, 100);
+
+  document.getElementById('stepCount').textContent = steps.toLocaleString();
+  document.getElementById('goalPercent').textContent = Math.round(pct) + '%';
+
+  const offset = 553 - (553 * (pct / 100));
+  document.getElementById('progressRing').style.strokeDashoffset = offset;
+
+  const distance = (steps * 0.000762).toFixed(1);
+  const calories = Math.round(steps * 0.04);
+  const minutes = d.activeMinutes || 0;
+
+  document.getElementById('distanceDisplay').textContent = distance;
+  document.getElementById('caloriesDisplay').textContent = calories;
+  document.getElementById('timeDisplay').textContent = minutes > 60 ? Math.floor(minutes/60) + 'h' + (minutes%60) + 'm' : minutes + 'm';
+
+  updateStreakBadge();
+}
+
+// ==================== GOAL ====================
+function updateGoal() {
+  const val = parseInt(document.getElementById('goalSlider').value);
+  state.goal = val;
+  document.getElementById('goalDisplay').textContent = val.toLocaleString() + ' steps';
+  saveState();
+  updateDisplay();
+}
+
+// ==================== REWARDS ====================
+const rewards = [
+  { steps: 1000, emoji: '🌱', title: 'First Steps', quote: 'A journey of a thousand miles begins with a single step. - Lao Tzu' },
+  { steps: 2500, emoji: '🌿', title: 'Getting Moving', quote: 'The secret of getting ahead is getting started. - Mark Twain' },
+  { steps: 5000, emoji: '🌳', title: 'Half Way There', quote: 'It does not matter how slowly you go as long as you do not stop. - Confucius' },
+  { steps: 7500, emoji: '🏃', title: 'Runner\'s High', quote: 'The body achieves what the mind believes. - Napoleon Hill' },
+  { steps: 10000, emoji: '🏆', title: 'Goal Crusher', quote: 'Success is not final, failure is not fatal. It is the courage to continue that counts. - Churchill' },
+  { steps: 12500, emoji: '⭐', title: 'Overachiever', quote: 'Push yourself because no one else is going to do it for you.' },
+  { steps: 15000, emoji: '🔥', title: 'On Fire', quote: 'The only bad workout is the one that didn\'t happen.' },
+  { steps: 20000, emoji: '🦁', title: 'Beast Mode', quote: 'Don\'t limit your challenges. Challenge your limits.' },
+  { steps: 25000, emoji: '👑', title: 'Walking Royalty', quote: 'Champions keep playing until they get it right. - Billie Jean King' },
+  { steps: 50000, emoji: '🌟', title: 'Legend', quote: 'The pain you feel today will be the strength you feel tomorrow.' },
+];
+
+function checkRewards() {
+  const d = getTodayData();
+  rewards.forEach(r => {
+    if (d.steps >= r.steps && !state.unlockedRewards.includes(r.steps)) {
+      state.unlockedRewards.push(r.steps);
+      saveState();
+    }
+  });
+}
+
+function renderRewards() {
+  const d = getTodayData();
+  const list = document.getElementById('rewardsList');
+  list.innerHTML = rewards.map(r => {
+    const unlocked = d.steps >= r.steps;
+    return `
+      <div class="glass rounded-2xl p-5 ${unlocked ? 'reward-unlocked' : ''}">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl ${unlocked ? 'bg-mint-500/20' : 'bg-white/5'} flex items-center justify-center text-2xl ${unlocked ? '' : 'reward-locked'}">
+            ${unlocked ? r.emoji : '🔒'}
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-sm ${unlocked ? 'text-white' : 'text-slate-500'}">${r.title}</h3>
+              <span class="text-xs ${unlocked ? 'text-mint-400' : 'text-slate-600'}">${r.steps.toLocaleString()} steps</span>
+            </div>
+            <p class="text-xs ${unlocked ? 'text-slate-300' : 'text-slate-600'} mt-1 italic">${unlocked ? '"' + r.quote + '"' : 'Keep walking to unlock...'}</p>
+          </div>
+        </div>
+        ${!unlocked ? `<div class="mt-3 w-full bg-forest-900 rounded-full h-1.5">
+          <div class="bg-mint-500/40 h-1.5 rounded-full" style="width: ${Math.min((d.steps / r.steps) * 100, 100)}%"></div>
+        </div>` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+// ==================== STATS ====================
+function renderStats() {
+  renderWeeklyChart();
+  const streak = calculateStreak();
+  if (streak > state.bestStreak) { state.bestStreak = streak; saveState(); }
+  document.getElementById('statsCurrentStreak').textContent = streak;
+  document.getElementById('statsBestStreak').textContent = state.bestStreak;
+  document.getElementById('statsTotalDays').textContent = Object.keys(state.days).length;
+
+  const weekDays = getLast7Days();
+  const weekSteps = weekDays.reduce((s, d) => s + (state.days[d] ? state.days[d].steps : 0), 0);
+  document.getElementById('weekTotal').textContent = weekSteps.toLocaleString();
+  document.getElementById('weekAvg').textContent = Math.round(weekSteps / 7).toLocaleString();
+}
+
+function renderWeeklyChart() {
+  const chart = document.getElementById('weeklyChart');
+  const labels = document.getElementById('weeklyLabels');
+  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const days = getLast7Days();
+  const maxSteps = Math.max(...days.map(d => state.days[d] ? state.days[d].steps : 0), state.goal);
+
+  let barsHtml = '';
+  let labelsHtml = '';
+  days.forEach(d => {
+    const steps = state.days[d] ? state.days[d].steps : 0;
+    const pct = Math.max((steps / maxSteps) * 100, 4);
+    const hitGoal = steps >= state.goal;
+    const color = steps === 0 ? 'bg-white/5' : hitGoal ? 'bg-gradient-to-t from-mint-500 to-lime-400' : 'bg-gradient-to-t from-emerald-700 to-emerald-500';
+    const dt = new Date(d);
+    barsHtml += `<div class="flex-1 flex flex-col items-center justify-end h-full">
+      <span class="text-xs font-medium mb-1 ${steps === 0 ? 'text-slate-600' : 'text-slate-300'}">${steps > 0 ? (steps/1000).toFixed(1) + 'k' : ''}</span>
+      <div class="w-full max-w-[32px] rounded-t-md ${color} bar-grow" style="height: ${pct}%"></div>
+    </div>`;
+    labelsHtml += `<span class="flex-1 text-center">${dayNames[dt.getDay()]}</span>`;
+  });
+  chart.innerHTML = barsHtml;
+  labels.innerHTML = labelsHtml;
+}
+
+function getLast7Days() {
+  const days = [];
+  const t = new Date();
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(t);
+    d.setDate(d.getDate() - i);
+    days.push(d.toISOString().split('T')[0]);
+  }
+  return days;
+}
+
+// ==================== STREAKS ====================
+function calculateStreak() {
+  let streak = 0;
+  const t = new Date();
+  for (let i = 0; i < 365; i++) {
+    const d = new Date(t);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    const dayData = state.days[dateStr];
+    if (dayData && dayData.steps >= state.goal) {
+      streak++;
+    } else {
+      if (i === 0) continue;
+      break;
+    }
+  }
+  return streak;
+}
+
+function updateStreakBadge() {
+  const streak = calculateStreak();
+  document.getElementById('streakCount').textContent = streak;
+  document.getElementById('streakBadge').classList.toggle('hidden', streak === 0);
+}
+
+// ==================== SHARE ====================
+function updateShareCard() {
+  const d = getTodayData();
+  document.getElementById('shareSteps').textContent = d.steps.toLocaleString();
+  document.getElementById('shareDist').textContent = (d.steps * 0.000762).toFixed(1) + ' km';
+  document.getElementById('shareCal').textContent = Math.round(d.steps * 0.04) + ' cal';
+  document.getElementById('shareStrk').textContent = calculateStreak() + ' days';
+}
+
+function shareStats() {
+  const d = getTodayData();
+  const text = `I walked ${d.steps.toLocaleString()} steps today (${(d.steps * 0.000762).toFixed(1)} km) with WalkToUnlock! ${calculateStreak()} day streak going strong. 👟🔥`;
+
+  if (navigator.share) {
+    navigator.share({ title: 'WalkToUnlock Stats', text }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = event.target;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = 'Share Stats'; }, 2000);
+    });
+  }
+}
+
+// ==================== INIT ====================
+function init() {
+  document.getElementById('goalSlider').value = state.goal;
+  document.getElementById('goalDisplay').textContent = state.goal.toLocaleString() + ' steps';
+  updateDisplay();
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+
+init();
+</script>
+</body>
+</html>

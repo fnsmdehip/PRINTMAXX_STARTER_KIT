@@ -1,0 +1,294 @@
+{
+  "channel_id": "AI007",
+  "channel_name": "LIFESTYLE_CURATORS",
+  "category": "AI_INFLUENCER",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "AI lifestyle curator persona delivering aesthetic organization, morning routines, and productivity content for the aspirational professional woman",
+    "value_proposition": "The systems behind the aesthetic. Teaching maintainability, not just one-time organization.",
+    "content_pillars": [
+      "Morning/Evening Routines (25%)",
+      "Productivity Setups (20%)",
+      "Aesthetic Organization (25%)",
+      "Self-Care Content (15%)",
+      "Product Recommendations (15%)"
+    ],
+    "differentiation": "Systems-focused content. Mid-tier positioning (achievable, not luxury). Pinterest-first strategy."
+  },
+
+  "target_audience": {
+    "primary_demographics": {
+      "age_range": "25-40",
+      "gender_split": "75% female, 25% male",
+      "geography": "US, UK, Canada, Australia",
+      "income_level": "$50k-120k (professionals)"
+    },
+    "psychographics": {
+      "interests": [
+        "Home organization",
+        "Productivity",
+        "Skincare and wellness",
+        "Aesthetic living",
+        "Self-improvement"
+      ],
+      "pain_points": [
+        "Feel chaotic/disorganized",
+        "Want calm, aesthetic space",
+        "Struggle with routines",
+        "Overwhelmed by options",
+        "Need maintainable systems"
+      ],
+      "content_consumption": "Visual learners. Save posts. Watch while doing household tasks."
+    },
+    "audience_personas": [
+      {
+        "name": "The Working Professional",
+        "age": 32,
+        "description": "WFH professional. Wants aesthetic, organized home office. Follows for productivity tips."
+      },
+      {
+        "name": "The New Homeowner",
+        "age": 29,
+        "description": "First apartment/home. Building aesthetic on budget. Saves organization content."
+      },
+      {
+        "name": "The Overwhelmed Mom",
+        "age": 36,
+        "description": "Wants calm home environment. Follows for organization and routine tips."
+      }
+    ]
+  },
+
+  "persona_guidelines": {
+    "archetype": "Organized older sister / Life admin expert",
+    "voice_profile": {
+      "tone": "Calm, collected, organized",
+      "energy": "Helpful older sister energy",
+      "avoid": "Preachy, perfectionist",
+      "authenticity": "Admits when things get messy"
+    },
+    "aesthetic_direction": {
+      "visual_style": "Clean, minimal backgrounds (white, beige, soft neutrals)",
+      "lighting": "Natural lighting, warm undertones",
+      "color_palette": {
+        "primary": ["Warm white (#FAF8F5)", "Soft beige (#E8DFD5)", "Sage green (#9CAF88)"],
+        "accents": ["Terracotta (#C4836B)", "Dusty rose (#D4A5A5)", "Soft gold (#C9B37D)"]
+      }
+    },
+    "positioning": {
+      "aesthetic_level": "Upper-middle (nice but not ostentatious)",
+      "product_price_points": {
+        "skincare": "$25-80 per product",
+        "home_items": "$15-100",
+        "tech": "Mid-range (Apple tier)"
+      }
+    }
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "Instagram",
+      "priority": 1,
+      "content_types": {
+        "reels": 50,
+        "carousels": 30,
+        "static_posts": 10,
+        "stories": 10
+      },
+      "posting_frequency": "1-2 feed posts/day, 5-10 stories/day",
+      "growth_targets": {
+        "month_1": 3000,
+        "month_3": 15000,
+        "month_6": 60000,
+        "month_12": 150000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "Pinterest",
+        "priority": 2,
+        "purpose": "SEO-driven discovery, evergreen traffic",
+        "content_types": ["Long pins (2:3)", "Idea pins", "Before/after pins"],
+        "posting_frequency": "10-15 pins/day",
+        "growth_targets": {
+          "month_1": 1000,
+          "month_3": 10000,
+          "month_6": 50000
+        }
+      },
+      {
+        "platform": "TikTok",
+        "priority": 3,
+        "content_types": ["Routine videos", "Organization reveals", "Product recommendations"],
+        "posting_frequency": "1-2 videos/day",
+        "growth_targets": {
+          "month_1": 5000,
+          "month_3": 25000,
+          "month_6": 100000
+        }
+      },
+      {
+        "platform": "YouTube",
+        "priority": 4,
+        "content_types": ["Long-form routines (10-15 min)", "Organization projects", "Shorts"],
+        "posting_frequency": "1-2 long-form/week, daily shorts",
+        "growth_targets": {
+          "month_1": 500,
+          "month_3": 5000,
+          "month_6": 25000
+        }
+      }
+    ]
+  },
+
+  "content_formats": {
+    "routine_videos": {
+      "types": ["5AM morning routine", "Sunday reset", "Evening wind-down", "Work from home morning"],
+      "length": "60-90 seconds (Reels), 8-15 minutes (YouTube)",
+      "structure": ["Hook (result teaser)", "Step-by-step routine", "Products used", "CTA"]
+    },
+    "organization_content": {
+      "types": ["Closet organization", "Pantry makeover", "Desk setup", "Bathroom cabinet"],
+      "format": "Before/after transformation",
+      "engagement": "High save rate, satisfying"
+    },
+    "product_roundups": {
+      "types": ["Amazon finds", "Target haul", "Skincare must-haves", "Desk essentials"],
+      "format": "Multi-product carousel or Reel",
+      "notes": "Primary affiliate opportunity"
+    },
+    "carousels": {
+      "types": ["10 organization tips", "My morning routine breakdown", "Products that changed my life"],
+      "slides": "7-10 optimal",
+      "engagement": "High save rate"
+    }
+  },
+
+  "revenue_model": {
+    "primary_streams": [
+      {
+        "stream": "Affiliate Marketing",
+        "timeline": "Month 1+",
+        "programs": ["Amazon Associates", "LTK (LikeToKnow.it)", "ShareASale", "Target Affiliate"],
+        "product_categories": ["Home organization", "Skincare", "Productivity tools", "Kitchen items"],
+        "estimated_monthly": "$500-7,000 at scale"
+      },
+      {
+        "stream": "Brand Sponsorships",
+        "timeline": "Month 6+",
+        "categories": ["Home goods brands", "Skincare brands", "Productivity apps", "Organization products"],
+        "rates": {
+          "25k_followers": "$500-1,000/post",
+          "50k_followers": "$1,000-2,500/post",
+          "100k_followers": "$2,500-5,000/post"
+        },
+        "estimated_monthly": "$2,000-15,000 at scale"
+      },
+      {
+        "stream": "Digital Products",
+        "timeline": "Month 3+",
+        "products": [
+          {"name": "Notion Templates", "price": "$9-15"},
+          {"name": "Lightroom Presets", "price": "$15-30"},
+          {"name": "Organization Checklist Bundle", "price": "$19"},
+          {"name": "Routine Planner", "price": "$29"}
+        ],
+        "estimated_monthly": "$1,000-5,000 at scale"
+      },
+      {
+        "stream": "YouTube AdSense",
+        "timeline": "Month 3+",
+        "cpm_range": "$3-8 (lifestyle/home niche)",
+        "estimated_monthly": "$500-3,000 at scale"
+      }
+    ],
+    "revenue_projections": {
+      "month_3": "$200-800",
+      "month_6": "$1,000-4,000",
+      "month_12": "$5,000-20,000"
+    }
+  },
+
+  "affiliate_opportunities": {
+    "tier_1_priority": [
+      {"program": "Amazon Associates", "commission": "1-10%", "products": "Everything"},
+      {"program": "LTK", "commission": "10-25%", "products": "Fashion, home, beauty"},
+      {"program": "ShareASale", "commission": "5-30%", "products": "Home brands"}
+    ],
+    "home_organization": [
+      {"brand": "The Container Store", "commission": "5%"},
+      {"brand": "Wayfair", "commission": "7%"},
+      {"brand": "Target", "commission": "1-8%"}
+    ],
+    "skincare_wellness": [
+      {"brand": "Sephora", "commission": "5%"},
+      {"brand": "Dermstore", "commission": "5%"},
+      {"brand": "Ritual vitamins", "commission": "15%"}
+    ],
+    "productivity": [
+      {"brand": "Notion", "commission": "50% first year"},
+      {"brand": "Logitech", "commission": "4%"},
+      {"brand": "Autonomous (desks)", "commission": "7%"}
+    ]
+  },
+
+  "competitors_analyzed": [
+    {
+      "account": "@matildadjerf",
+      "followers": "3M+",
+      "strategy": "Scandinavian aesthetic, fashion-forward, own brand"
+    },
+    {
+      "account": "@chrisellelim",
+      "followers": "1.5M+",
+      "strategy": "Clean luxury lifestyle, home tours, motherhood"
+    },
+    {
+      "account": "@thehomeorg",
+      "followers": "600K+",
+      "strategy": "Professional organization, before/after, services"
+    },
+    {
+      "account": "@theannaedit",
+      "followers": "450K+",
+      "strategy": "British lifestyle, sustainable, thoughtful"
+    }
+  ],
+
+  "success_metrics": {
+    "growth_kpis": {
+      "follower_growth": "10-15% MoM",
+      "engagement_rate": "3-6%",
+      "save_rate": "5%+ (educational signal)"
+    },
+    "content_kpis": {
+      "posts_per_week": "7-10 feed + daily stories",
+      "pinterest_monthly_views": "100K+ by month 6"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "CF007", "method_name": "MOTIVATION_QUOTES", "synergy_score": 80},
+      {"method_id": "MM002", "method_name": "INFO_PRODUCTS", "synergy_score": 85},
+      {"method_id": "MM006", "method_name": "AFFILIATE_SITES", "synergy_score": 75}
+    ],
+    "stack_strategy": "Lifestyle curator builds audience -> Digital products for monetization -> Affiliate drives passive income"
+  },
+
+  "compliance": {
+    "ai_disclosure": {
+      "required": true,
+      "locations": ["Bio", "About page", "Periodic content"],
+      "template": "AI-generated lifestyle curator. Avatar and content created with AI tools. Human oversight."
+    },
+    "affiliate_disclosure": {
+      "required": true,
+      "format": "This post contains affiliate links. I earn commission on purchases.",
+      "platforms": "LTK auto-adds disclosure"
+    }
+  }
+}

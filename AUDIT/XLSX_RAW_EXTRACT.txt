@@ -1,0 +1,463 @@
+================================================================================
+FILE: PRINTMAXX_BRAND_NAMES.xlsx
+SHEETS: ['ALL 38 NICHES', 'CONTENT FARMS', 'AI PERSONAS', 'MONEY METHODS', 'CROSS-PLATFORM', 'NAMING RULES']
+
+--- SHEET: ALL 38 NICHES | Max Row: 399 | Max Col: 10 ---
+  ROW 0: (None, None, None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'ALL 38 NICHES — SOCIAL ACCOUNT NAMES', None, None, None, None, None, None, None, None)
+  ROW 2: (None, 'Inside-baseball handles for every niche. 4 options each. 152 names total.', None, None, None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'ID', 'NICHE', 'PH', 'TARGET', 'TOP PICK', 'WHY IT WORKS', 'ALT PICK', 'ALT REASONING', None)
+  TOTAL ROWS: 399
+
+--- SHEET: CONTENT FARMS | Max Row: 29 | Max Col: 6 ---
+  ROW 0: (None, None, None, None, None, None)
+  ROW 1: (None, 'CONTENT FARM ACCOUNTS — CF001-CF013', None, None, None, None)
+  ROW 2: (None, 'Faceless niche page names across 13 content verticals.', None, None, None, None)
+  ROW 3: (None, None, None, None, None, None)
+  ROW 4: (None, 'ID', 'CONTENT TYPE', 'HANDLE', 'WHY IT WORKS', None)
+  TOTAL ROWS: 29
+
+--- SHEET: AI PERSONAS | Max Row: 24 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'AI INFLUENCER PERSONAS — AI001-AI008', None, None, None, None, None, None)
+  ROW 2: (None, 'Names that pass as real people. Not obviously AI.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'ID', 'PERSONA TYPE', 'TOP NAME', 'REASONING', 'ALT NAME', 'ALT REASONING', None)
+  TOTAL ROWS: 24
+
+--- SHEET: MONEY METHODS | Max Row: 34 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'MONEY METHOD BRANDS — MM001-MM070', None, None, None, None, None, None)
+  ROW 2: (None, 'Business/product names for each monetization method.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'ID', 'METHOD', 'TOP NAME', 'REASONING', 'ALT NAME', 'ALT REASONING', None)
+  TOTAL ROWS: 34
+
+--- SHEET: CROSS-PLATFORM | Max Row: 79 | Max Col: 9 ---
+  ROW 0: (None, None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'CROSS-PLATFORM HANDLE MAPPING', None, None, None, None, None, None, None)
+  ROW 2: (None, 'Every top pick mapped across X, TikTok, YouTube, Instagram, Email.', None, None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'ID', 'NICHE', 'X / TWITTER', 'TIKTOK', 'YOUTUBE', 'INSTAGRAM', 'EMAIL', None)
+  TOTAL ROWS: 79
+
+--- SHEET: NAMING RULES | Max Row: 49 | Max Col: 5 ---
+  ROW 0: (None, None, None, None, None)
+  ROW 1: (None, 'ANTI-CRINGE NAMING RULES', None, None, None)
+  ROW 2: (None, 'Patterns from 145+ scraped accounts that actually work', None, None, None)
+  ROW 3: (None, None, None, None, None)
+  ROW 4: (None, 'RULE', 'DO THIS', 'NOT THIS', None)
+  TOTAL ROWS: 49
+
+================================================================================
+FILE: PRINTMAXX_FREELANCE_ARB.xlsx
+SHEETS: ['SERVICE CATALOG', 'PLATFORM STRATEGY', 'PRICING + CONVERSION', 'AUTOMATION PIPELINE', 'DEMAND HEATMAP', '30-DAY LAUNCH', 'WHY THIS PRINTS', 'DAILY BRIEFING SPEC']
+
+--- SHEET: SERVICE CATALOG | Max Row: 41 | Max Col: 10 ---
+  ROW 0: (None, None, None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'PRINTMAXX FREELANCE ARBITRAGE — CLAUDE CODE MAX SERVICES', None, None, None, None, None, None, None, None)
+  ROW 2: (None, 'Near-infinite Claude Code usage = every gig is pure margin. 5-min delivery on $50-500 services.', None, None, None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None, None, None)
+  ROW 4: ('SVC ID', 'SERVICE NAME', 'CATEGORY', 'FIVERR PRICE', 'UPWORK RATE', 'DELIVERY TIME', 'CLAUDE CODE TIME', 'MARGIN %', 'DEMAND LEVEL', 'GIG DESCRIPTION (TEMPLATE)')
+  TOTAL ROWS: 41
+
+--- SHEET: PLATFORM STRATEGY | Max Row: 15 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'FREELANCE PLATFORM DEPLOYMENT MAP', None, None, None, None, None, None)
+  ROW 2: (None, 'List on ALL platforms simultaneously. Each platform = new deal flow channel.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: ('PLATFORM', 'MONTHLY FEE', 'COMMISSION', 'BEST FOR', 'ACCOUNT STRATEGY', 'LISTING PRIORITY', 'CONVERSION TIPS', 'AUTOMATION POTENTIAL')
+  TOTAL ROWS: 15
+
+--- SHEET: PRICING + CONVERSION | Max Row: 27 | Max Col: 7 ---
+  ROW 0: (None, None, None, None, None, None, None)
+  ROW 1: (None, 'PRICING STRATEGY — NOT CHEAPEST, NOT EXPENSIVE', None, None, None, None, None)
+  ROW 2: (None, 'Sweet spot: 25th-40th percentile pricing. Compete on SPEED + QUALITY, not price. Too cheap = suspicious.', None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None)
+  ROW 4: ('STRATEGY', 'DETAILS', None, None, None, None, None)
+  TOTAL ROWS: 27
+
+--- SHEET: AUTOMATION PIPELINE | Max Row: 26 | Max Col: 6 ---
+  ROW 0: (None, None, None, None, None, None)
+  ROW 1: (None, 'FREELANCE FULFILLMENT AUTOMATION — LLM-IN-THE-LOOP', None, None, None, None)
+  ROW 2: (None, 'Goal: human touches each gig for <5 minutes. Claude Code does 95%+ of the work.', None, None, None, None)
+  ROW 3: (None, None, None, None, None, None)
+  ROW 4: ('PHASE', 'STEP', 'WHO DOES IT', 'TIME', 'DETAILS', None)
+  TOTAL ROWS: 26
+
+--- SHEET: DEMAND HEATMAP | Max Row: 20 | Max Col: 7 ---
+  ROW 0: (None, None, None, None, None, None, None)
+  ROW 1: (None, 'DEMAND HEATMAP — PET PROJECT / BOOTSTRAP BUSINESSES BUYING', None, None, None, None, None)
+  ROW 2: (None, "These people don't know Claude Code exists. They're paying $200-500 for what takes us 15 minutes.", None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None)
+  ROW 4: ('BUYER PERSONA', 'WHAT THEY NEED', 'WHAT THEY PAY', 'OUR COST', 'SEARCH VOLUME', 'NOTES', None)
+  TOTAL ROWS: 20
+
+--- SHEET: 30-DAY LAUNCH | Max Row: 29 | Max Col: 6 ---
+  ROW 0: (None, None, None, None, None, None)
+  ROW 1: (None, '30-DAY FREELANCE ARBITRAGE LAUNCH SEQUENCE', None, None, None, None)
+  ROW 2: (None, None, None, None, None, None)
+  ROW 3: ('DAY', 'TASK', 'PLATFORM', 'TIME REQ', 'OUTCOME', None)
+  ROW 4: ('WEEK 1: FOUNDATION', None, None, None, None, None)
+  TOTAL ROWS: 29
+
+--- SHEET: WHY THIS PRINTS | Max Row: 24 | Max Col: 3 ---
+  ROW 0: (None, None, None)
+  ROW 1: (None, 'THE FREELANCE ARB ALPHA THESIS', None)
+  ROW 2: (None, None, None)
+  ROW 3: ('THE EDGE', None, None)
+  ROW 4: ('Claude Code Max = ~unlimited usage', 'Flat monthly cost, no per-token billing. Every gig is pure margin. The more gigs you do, the lower your effective cost approaches $0.', None)
+  TOTAL ROWS: 24
+
+--- SHEET: DAILY BRIEFING SPEC | Max Row: 20 | Max Col: 4 ---
+  ROW 0: (None, None, None, None)
+  ROW 1: (None, 'DAILY MORNING BRIEFING — HUMAN-IN-LOOP REQUIRED ACTIONS', None, None)
+  ROW 2: (None, 'Auto-generated every morning at 5:00 AM. Consults all ledgers, ops, logs, and monitoring.', None, None)
+  ROW 3: (None, None, None, None)
+  ROW 4: ('COMPONENT', 'DATA SOURCE', 'WHAT IT CHECKS', 'OUTPUT')
+  TOTAL ROWS: 20
+
+================================================================================
+FILE: PRINTMAXX_INFRA_ASSIGNMENTS.xlsx
+SHEETS: ['VENTURE ASSIGNMENTS', 'DOLPHIN PROFILES', 'PROXY MAP', 'SCHEDULER MAP', 'TOOL MATRIX']
+
+--- SHEET: VENTURE ASSIGNMENTS | Max Row: 249 | Max Col: 10 ---
+  ROW 0: (None, None, None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'VENTURE → INFRASTRUCTURE ASSIGNMENTS', None, None, None, None, None, None, None, None)
+  ROW 2: (None, '5 ventures × 10 Dolphin profiles × 5 proxies × 21 social accounts × exact tool pairings', None, None, None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'V1: PRINTMAXX META BRAND', None, None, None, None, None, None, None, None)
+  TOTAL ROWS: 249
+
+--- SHEET: DOLPHIN PROFILES | Max Row: 29 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'DOLPHIN ANTY — 10 PROFILE ALLOCATION', None, None, None, None, None, None)
+  ROW 2: (None, '10 free profiles. 5 ventures × 2 each (main + backup). Zero profiles wasted.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'PROFILE #', 'ASSIGNED TO', 'ROLE', 'PROXY PAIRED', 'PLATFORMS', 'STATUS', None)
+  TOTAL ROWS: 29
+
+--- SHEET: PROXY MAP | Max Row: 24 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'PROXY → VENTURE ASSIGNMENT MAP', None, None, None, None, None, None)
+  ROW 2: (None, '5 residential proxies. 1 per venture. Strict isolation.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'PROXY ID', 'VENTURE', 'TYPE', 'REGION', 'DOLPHIN PROFILES', 'SOCIAL ACCOUNTS', None)
+  TOTAL ROWS: 24
+
+--- SHEET: SCHEDULER MAP | Max Row: 39 | Max Col: 7 ---
+  ROW 0: (None, None, None, None, None, None, None)
+  ROW 1: (None, 'BUFFER + TWEETLIO CHANNEL ALLOCATION', None, None, None, None, None)
+  ROW 2: (None, 'Buffer: 3 free channels. Tweetlio: unlimited X. Manual: YouTube. Total: 21 accounts covered.', None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None)
+  ROW 4: (None, 'BUFFER (3 FREE CHANNELS) — HIGH-VALUE SLOTS', None, None, None, None, None)
+  TOTAL ROWS: 39
+
+--- SHEET: TOOL MATRIX | Max Row: 79 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'TOOL → VENTURE USAGE MATRIX', None, None, None, None, None, None)
+  ROW 2: (None, 'Which tools each venture uses. Checkmarks = active assignment.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'TOOL', 'V1 META', 'V2 AI', 'V3 FAITH', 'V4 FIT', 'V5 MEME', None)
+  TOTAL ROWS: 79
+
+================================================================================
+FILE: PRINTMAXX_INFRA_STACKS.xlsx
+SHEETS: ['DASHBOARD', 'FREE ($0)', 'GROWTH ($50)', 'SCALE ($150)', 'ENTERPRISE ($500)', 'VENTURE STACKS', 'UPGRADE PATH', 'FULL MASTER']
+
+--- SHEET: DASHBOARD | Max Row: 49 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'PRINTMAXX INFRASTRUCTURE STACKS', None, None, None, None, None, None)
+  ROW 2: (None, 'From $0 to Scale — Every Tool You Need at Every Stage', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 84, 47, 11, 18, 8, None, None)
+  TOTAL ROWS: 49
+
+--- SHEET: FREE ($0) | Max Row: 119 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'FREE STACK — $0/mo', None, None, None, None, None, None)
+  ROW 2: (None, 'The ultimate zero-cost setup. 47 tools, every category covered. Launch with nothing.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, '47 tools', 'at $0/mo', None, None, None, None, None)
+  TOTAL ROWS: 119
+
+--- SHEET: GROWTH ($50) | Max Row: 119 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'GROWTH STACK — ~$50/mo', None, None, None, None, None, None)
+  ROW 2: (None, 'First revenue unlocked. Mobile proxies, account farming, dev accounts. +11 tools.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, '58 tools', 'at ~$50/mo', None, '+11 new tools at this tier', None, None, None)
+  TOTAL ROWS: 119
+
+--- SHEET: SCALE ($150) | Max Row: 132 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'SCALE STACK — ~$150/mo', None, None, None, None, None, None)
+  ROW 2: (None, 'Outbound sales engine + premium content. Cold email, Google Workspace, AI avatars. +18 tools.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, '76 tools', 'at ~$150/mo', None, '+18 new tools at this tier', None, None, None)
+  TOTAL ROWS: 132
+
+--- SHEET: ENTERPRISE ($500) | Max Row: 149 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'ENTERPRISE STACK — ~$500/mo', None, None, None, None, None, None)
+  ROW 2: (None, 'Full operation. Paid ads, enterprise anti-detect, LinkedIn automation, lead enrichment. +8 tools.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, '84 tools', 'at ~$500/mo', None, '+8 new tools at this tier', None, None, None)
+  TOTAL ROWS: 149
+
+--- SHEET: VENTURE STACKS | Max Row: 291 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'VENTURE-SPECIFIC STACKS', None, None, None, None, None, None)
+  ROW 2: (None, 'Curated tool stacks for each venture type. Tools marked ALL appear in every stack.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'COLD OUTBOUND / B2B SALES', None, None, None, None, None, None)
+  TOTAL ROWS: 291
+
+--- SHEET: UPGRADE PATH | Max Row: 29 | Max Col: 7 ---
+  ROW 0: (None, None, None, None, None, None, None)
+  ROW 1: (None, 'WHEN TO UPGRADE — DECISION MATRIX', None, None, None, None, None)
+  ROW 2: (None, 'Revenue milestones that trigger each tier upgrade', None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None)
+  ROW 4: (None, 'MILESTONE', 'UPGRADE TO', 'WHAT YOU UNLOCK', 'WHY IT MATTERS', 'ROI TRIGGER', None)
+  TOTAL ROWS: 29
+
+--- SHEET: FULL MASTER | Max Row: 85 | Max Col: 13 ---
+  ROW 0: ('ID', 'TOOL', 'CATEGORY', 'SUB-CATEGORY', 'FREE?', 'FREE DETAIL', 'PAID FROM', 'STATUS', 'PRIORITY', 'TIER', 'VENTURE FIT', 'URL', 'NOTES')
+  ROW 1: ('T001', 'Dolphin{anty}', 'anti_detect', 'browser', 'YES', '10 profiles forever', '$89/mo', 'ACTIVE', 'HIGHEST', '$0', 'ALL', 'dolphin-anty.com', 'Tier 0 default. 3.3x more free profiles than GoLogin.')
+  ROW 2: ('T002', 'Incogniton', 'anti_detect', 'browser', 'YES', '10 profiles forever', '$30/mo', 'AVAILABLE', 'HIGH', '$0', 'ALL', 'incogniton.com', 'Same free profiles as Dolphin. Cheaper paid tier.')
+  ROW 3: ('T003', 'GoLogin', 'anti_detect', 'browser', 'YES', '3 profiles forever', '$49/mo', 'AVAILABLE', 'MEDIUM', '$0', 'ALL', 'gologin.com', 'Better UX but fewer free profiles. Demoted from Tier 0.')
+  ROW 4: ('T004', 'Multilogin', 'anti_detect', 'browser', 'NO', 'None', '$99/mo', 'AVAILABLE', 'LOW', '$500', 'ALL', 'multilogin.com', 'Enterprise only. $10K+ MRR.')
+  TOTAL ROWS: 85
+
+================================================================================
+FILE: PRINTMAXX_MASTER_OPS.xlsx
+SHEETS: ['ALL OPS MASTER', 'VIDEO & MEDIA STACK', 'HOSTING & DEPLOY', 'LEAD GEN STACK', 'NSFW COMPLIANCE', 'RBI SYSTEM', 'EXISTING INFRA', 'PRIORITY LAUNCH', 'BROWSER & PROXY STACK', 'DEEP PLAYBOOK', 'LLM ALPHA THESIS', 'SYNERGY STACKS']
+
+--- SHEET: ALL OPS MASTER | Max Row: 182 | Max Col: 17 ---
+  ROW 0: ('OP_ID', 'CATEGORY', 'OP_NAME', 'DESCRIPTION', 'REVENUE_RANGE', 'AUTOMATION_LEVEL', 'VIDEO_STACK', 'HOSTING', 'COST', 'EXISTS_IN_SYSTEM', 'SOURCE_FILE', 'METHOD_IDS', 'LLM_ALPHA_THESIS', 'PRIORITY', 'STATUS', 'PLATFORMS', 'COMPLIANCE_NOTES')
+  ROW 1: ('C01', 'CONTENT', 'TikTok Content Farm', 'Multi-account TikTok content factory across niches. Viral hooks + trending audio + batch posting.', '$500-10K/mo', 'High', 'Kling + CapCut + Remotion', 'N/A', '$0-20/mo', 'YES', 'MONEY_METHODS/CONTENT_FARM/', 'MM006,CF001-CF013', 'TikTok algo rewards consistency. 3-5 accounts × 3 posts/day = 450 posts/mo. Creator Fund + affiliate + sponsorship.', 'P0', 'Active', 'TikTok', 'Follow TikTok Community Guidelines')
+  ROW 2: ('C02', 'CONTENT', 'YouTube Automation (Faceless)', 'AI-narrated faceless YouTube channels. Niche: finance, motivation, history, horror.', '$1K-20K/mo', 'High', 'Remotion + ElevenLabs + Leonardo.ai', 'YouTube', '$40/mo', 'YES', '03_PLAYBOOKS/FACELESS_YOUTUBE/', 'MM039,MM014', 'Faceless channels = no identity risk. AI narration + stock footage. Revenue: AdSense + affiliate. 8-12 min videos rank well.', 'P1', 'Planning', 'YouTube', 'Disclose AI narration if required')
+  ROW 3: ('C03', 'CONTENT', 'Instagram Content Network', 'Multi-account Instagram strategy. Reels, carousels, stories across niches.', '$500-5K/mo', 'High', 'Kling + Canva + Leonardo.ai', 'N/A', '$0-10/mo', 'YES', 'MONEY_METHODS/CONTENT_FARM/', 'MM006,CF002', 'Instagram Reels monetization + affiliate links in bio. Carousel posts for engagement. 5 accounts × 2 posts/day.', 'P1', 'Planning', 'Instagram', 'Follow Instagram monetization policies')
+  ROW 4: ('C04', 'CONTENT', 'X/Twitter Growth Engine', 'Build-in-public + thread game + viral hooks. Monetize via premium, tips, affiliate.', '$0-5K/mo', 'Medium', 'N/A', 'N/A', '$0', 'YES', '03_PLAYBOOKS/X_LAUNCH_VIRAL/', 'MM020,MM040', 'X monetization: Premium revenue share ($0.50-2 per 1K impressions), tips, affiliate. Thread virality = follower growth engine.', 'P0', 'Active', 'X/Twitter', 'No engagement bait that violates TOS')
+  TOTAL ROWS: 182
+
+--- SHEET: VIDEO & MEDIA STACK | Max Row: 28 | Max Col: 8 ---
+  ROW 0: ('TOOL', 'TYPE', 'FREE_TIER', 'PAID_TIER', 'BEST_FOR', 'QUALITY', 'INTEGRATION_WITH_OPS', 'NOTES')
+  ROW 1: ('Kling AI', 'Video Gen', '66 free credits/day', '$5.99/mo', 'Product videos, persona content, UGC-style, short clips', 'HIGH', 'C01,C15,E01,P01-P12', 'Best free video gen. 66 credits/day = ~20 videos. Character consistency via prompt engineering.')
+  ROW 2: ('Google Veo 3.1', 'Video Gen', 'Via AI Studio limited free', '$0.15-$0.40/sec', 'High-quality long-form video, cinematic content', 'HIGHEST', 'C02,C14,E07', 'Upgraded to Veo 3.1: 4K resolution + audio sync + cinematic quality. Available via AI Studio and Vertex AI. Highest output quality from Google.')
+  ROW 3: ('Remotion', 'Programmatic Video', 'FREE (<3 people)', '$15/mo+', 'Branded video at scale, data-driven video, batch production', 'HIGH', 'C09,C14,C15,C20', 'CODE-DRIVEN VIDEO. Claude Code writes React → Remotion renders. Batch 100s of videos. Zero per-video cost for <3 people.')
+  ROW 4: ('Nano Banana', 'Character Consistency', '2 free/day', '$9.99/mo', 'AI persona consistency across scenes/environments', 'HIGH', 'P01-P12,C15', 'KEY for personas. Same character in different environments. Essential for AI influencer authenticity.')
+  TOTAL ROWS: 28
+
+--- SHEET: HOSTING & DEPLOY | Max Row: 14 | Max Col: 8 ---
+  ROW 0: ('PLATFORM', 'FREE_TIER', 'COMMERCIAL_USE', 'BANDWIDTH', 'CUSTOM_DOMAIN', 'BEST_FOR', 'OPS_USING', 'NOTES')
+  ROW 1: ('Netlify', '100GB bandwidth, 300 build min/mo', 'YES - ALLOWED', '100GB/mo free', 'YES (free)', 'Landing pages, client mockups, directory sites, persona sites', 'S02,S17,C11,C13,P12,D09', 'BEST for commercial. Free SSL + forms + functions. Client sites allowed.')
+  ROW 2: ('Cloudflare Pages', 'Unlimited bandwidth', 'YES - ALLOWED', 'UNLIMITED', 'YES (free)', 'High-traffic sites, CDN-first, static sites', 'C11,F01,F02,F05', 'UNLIMITED bandwidth = best for high-traffic affiliate/content sites. Free.')
+  ROW 3: ('Vercel', '100GB bandwidth, 100 deploys/day', 'HOBBY ONLY - NO COMMERCIAL', '100GB/mo free', 'YES (free)', 'Personal projects, Next.js apps, dev/staging', 'A02 (dev only)', 'WARNING: Hobby tier = NO commercial use. Use for dev/staging only. Pro = $20/mo.')
+  ROW 4: ('GitHub Pages', '1GB storage, 100GB/mo bandwidth', 'YES (public repos)', '100GB/mo', 'YES (free)', 'Documentation, open-source projects, simple sites', 'D12', 'Limited but free. Good for docs + open-source project sites.')
+  TOTAL ROWS: 14
+
+--- SHEET: LEAD GEN STACK | Max Row: 33 | Max Col: 8 ---
+  ROW 0: ('TOOL', 'TYPE', 'FREE_TIER', 'COST', 'USE_CASE', 'OPS_USING', 'AUTOMATION_LEVEL', 'NOTES')
+  ROW 1: ('Bland AI', 'AI Voice Calls', '100 FREE calls/day', '$0.09/min after', 'Automated sales calls, appointment setting, lead qualification', 'S05,S02', 'HIGH', '100 FREE calls/day = 3000/mo. AI voice makes calls, qualifies leads, warm transfers. GAME CHANGER.')
+  ROW 2: ('Instantly.ai', 'Cold Email', 'N/A', '$30/mo', 'Unlimited cold email sending, warmup, sequences', 'S08,S02,S06,S07', 'HIGH', '$30/mo = unlimited sending accounts. Email warmup included. AI personalization.')
+  ROW 3: ('Clay', 'Data Enrichment', 'Free tier', '$149/mo', 'Lead research, enrichment, waterfall search', 'S06,S07,S08', 'HIGH', 'Enriches leads with 50+ data points. Integrates with everything.')
+  ROW 4: ('Apollo.io', 'Lead Database', '50 credits/mo free', '$49/mo', 'B2B lead database, email finding, sequences', 'S06,S08', 'HIGH', '275M+ contact database. 50 free credits/mo. Find decision-makers.')
+  TOTAL ROWS: 33
+
+--- SHEET: NSFW COMPLIANCE | Max Row: 13 | Max Col: 6 ---
+  ROW 0: ('REQUIREMENT', 'DETAIL', 'PLATFORM', 'OPS_AFFECTED', 'RISK_LEVEL', 'STATUS')
+  ROW 1: ('AI Content Disclosure', 'MUST disclose content is AI-generated. Both in bio AND on each post. NY law June 2026 requires double disclosure.', 'ALL', 'P01-P12', 'CRITICAL', 'Documented')
+  ROW 2: ('Platform Selection', 'Use Fanvue and Fansly (explicitly allow AI content). AVOID OnlyFans (ambiguous AI policy).', 'Fanvue, Fansly', 'P02-P05', 'HIGH', 'Documented')
+  ROW 3: ('Age Verification', 'All adult content accounts must have age verification (18+). Platform-enforced + self-enforced.', 'ALL adult', 'P02-P05', 'CRITICAL', 'Required')
+  ROW 4: ('Consent Documentation', 'Document that all financial interactions (tributes, etc.) are consensual. Keep records.', 'Findom ops', 'P02,P05', 'HIGH', 'Documented')
+  TOTAL ROWS: 13
+
+--- SHEET: RBI SYSTEM | Max Row: 19 | Max Col: 6 ---
+  ROW 0: ('FREQUENCY', 'AUDIT_TYPE', 'DESCRIPTION', 'TOOL/SCRIPT', 'AUTOMATION_LEVEL', 'OUTPUT')
+  ROW 1: ('DAILY', 'Alpha Pipeline Health', 'Check pending review count, ROI distribution, category balance, stale entries', 'scripts/rbi_audit.py daily', 'Automated', 'LEDGER/RBI_AUDITS/')
+  ROW 2: ('DAILY', 'Money Method Status', 'Active vs planning vs new. Revenue tracking. Method health check.', 'scripts/rbi_audit.py daily', 'Automated', 'LEDGER/RBI_AUDITS/')
+  ROW 3: ('DAILY', 'Content Pipeline', 'Queued vs posted vs draft. Platform distribution. Posting velocity.', 'scripts/rbi_audit.py daily', 'Automated', 'LEDGER/RBI_AUDITS/')
+  ROW 4: ('DAILY', 'System Activity', 'Files modified in last 24h across all directories. Dead zones flagged.', 'scripts/rbi_audit.py daily', 'Automated', 'LEDGER/RBI_AUDITS/')
+  TOTAL ROWS: 19
+
+--- SHEET: EXISTING INFRA | Max Row: 60 | Max Col: 6 ---
+  ROW 0: ('CATEGORY', 'ITEM', 'FILE/LOCATION', 'STATUS', 'LINES/SIZE', 'NOTES')
+  ROW 1: ('SCRAPER', 'Twitter Alpha Scraper', 'AUTOMATIONS/twitter_alpha_scraper.py', 'Built', '92 accounts', 'Extracts alpha from Twitter bookmarks + accounts')
+  ROW 2: ('SCRAPER', 'Reddit Deep Scraper', 'AUTOMATIONS/reddit_deep_scraper.py', 'Built', '41 subreddits', 'Institutional-grade Reddit alpha extraction')
+  ROW 3: ('SCRAPER', 'Background Reddit Scraper', 'AUTOMATIONS/background_reddit_scraper.py', 'Built', 'Headless', 'Runs in background without browser window')
+  ROW 4: ('SCRAPER', 'Background Twitter Scraper', 'AUTOMATIONS/background_twitter_scraper.py', 'Built', 'Headless', 'Cookie injection for auth')
+  TOTAL ROWS: 60
+
+--- SHEET: PRIORITY LAUNCH | Max Row: 18 | Max Col: 8 ---
+  ROW 0: ('RANK', 'OP_ID', 'OP_NAME', 'WHY_NOW', 'EFFORT', 'REVENUE_POTENTIAL', 'FIRST_STEP', 'TIME_TO_FIRST_$')
+  ROW 1: (0.5, 'N68', 'Ramadan Fasting Tracker PWA', 'Ramadan 2026 starts Feb 28 (18 DAYS). Zero Fasting Tracker (445K reviews) has NO Arabic version. 1.8B Muslims worldwide. Arabic-first = literally 0 competition. TIME SENSITIVE. Every day we delay = lost market window.', 'Low (PWA built)', '$1K-10K/mo first month', 'Deploy to Vercel + submit PWA wrapper to App Store + Islamic community marketing blitz + Arabic ASO + TikTok/IG Reels "Ramadan prep" content', '3-7 days')
+  ROW 2: (1, 'N61', 'Nationwide Local Biz Website Redesign', 'Full pipeline built and tested. savvy_lead_scraper.py (1,656 lines) + nationwide_scraper.py (880 lines) + mass_outreach.py (732 lines) + 6 static templates + 3 motion templates + 4-email cold sequence + AI call scripts. Just need to run scraper and send emails.', 'Low (tools built)', '$5K-20K/mo', 'python3 nationwide_scraper.py --cities cities_top200.csv --industries "dentist" && python3 mass_outreach.py --leads output/leads.csv && warmup Instantly.ai inboxes', '14 days')
+  ROW 3: (3, 'D01', 'Gumroad Product Portfolio', '9 products ALREADY BUILT. Just need to publish listings.', '1 hour', '$500-10K/mo', 'Go to Gumroad → create listings → publish all 9 products', '24-48 hours')
+  ROW 4: (4, 'S01', 'Claude Code Freelance Arbitrage', 'Claude Code Max = unlimited labor. List services NOW.', '2-3 hours', '$2K-15K/mo', 'Create Fiverr + Upwork profiles → list 10 services each', '48-72 hours')
+  TOTAL ROWS: 18
+
+--- SHEET: BROWSER & PROXY STACK | Max Row: 60 | Max Col: 8 ---
+  ROW 0: ('BROWSER AUTOMATION TOOLS (Fallback Chain Priority Order)', None, None, None, None, None, None, None)
+  ROW 1: ('PRIORITY', 'TOOL', 'BEST_FOR', 'INSTALL', 'ANTI_BOT', 'STEALTH_LEVEL', 'OPS_USING', 'INTEGRATION_NOTES')
+  ROW 2: (1, 'Chrome MCP', 'Simple tasks, logged-in sessions, screenshots', 'Pre-installed in Claude Desktop', 'NO', 'LOW', 'C07,S06,S07,G05', "Default first try. Uses user's real Chrome with cookies. Fails on JS-heavy + anti-bot sites.")
+  ROW 3: (2, 'agent-browser (Vercel Labs)', 'AI-optimized automation, anti-bot bypass, persistent auth', 'npm install -g agent-browser && agent-browser install', 'YES', 'HIGH', 'P01-P12,C01,C04,G01,S08', 'Best for Twitter/X, TikTok, LinkedIn. Snapshot refs (@e1, @e2) for AI targeting. --profile flag for auth sessions.')
+  ROW 4: (3, 'Playwriter MCP', 'Control YOUR Chrome, complex multi-step flows, real user context', 'Chrome extension + MCP config (github.com/remorses/playwriter)', 'PARTIAL', 'MEDIUM', 'S02,S06,G04', "Controls user's actual Chrome. Sees logged-in sessions. 2.5K stars. Good for multi-step flows that need real cookies.")
+  TOTAL ROWS: 60
+
+--- SHEET: DEEP PLAYBOOK | Max Row: 2999 | Max Col: 4 ---
+  ROW 0: (None, None, None, None)
+  ROW 1: (None, 'DEEP OPS PLAYBOOK — FULL INSTRUCTIONS (37 OPS)', None, None)
+  ROW 2: (None, 'Setup → Algorithm Guide → Shadowban Avoidance → LLM Loop → Manual First → Auto After', None, None)
+  ROW 3: (None, None, None, None)
+  ROW 4: (None, 'OP01: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale', None, None)
+  TOTAL ROWS: 2999
+
+--- SHEET: LLM ALPHA THESIS | Max Row: 79 | Max Col: 5 ---
+  ROW 0: (None, None, None, None, None)
+  ROW 1: (None, 'LLM AUTOMATION ALPHA — WHY THIS EDGE EXISTS', None, None, None)
+  ROW 2: (None, 'Alpha = advantage from LLM automation that disappears once mass adoption occurs.', None, None, None)
+  ROW 3: (None, None, None, None, None)
+  ROW 4: (None, 'ALPHA OPPORTUNITIES RANKED BY EDGE DURATION', None, None, None)
+  TOTAL ROWS: 79
+
+--- SHEET: SYNERGY STACKS | Max Row: 26 | Max Col: 6 ---
+  ROW 0: ('PACKAGE_ID', 'NAME', 'SYNERGY_SCORE', 'METHODS_COMBINED', 'REVENUE_MULTIPLIER', 'DESCRIPTION')
+  ROW 1: ('SYN351', 'Voice AI + Vertical SaaS', 97, 'A04+S04+S09', '4.5x', 'AI chatbot + vertical SaaS + automation agency. Stack AI wrapper apps with done-for-you automation services. Clients pay for both the tool and the setup.')
+  ROW 2: ('SYN352', 'Clipper + TikTok Double Monetization', 96, 'N04+E01+C01', '6.5x', 'TikTok Rewards + TikTok Shop on same video. Clippers drive views (Rewards payout) AND affiliate sales (Shop commission). Double revenue per view.')
+  ROW 3: ('SYN353', 'Content Farm + TikTok + FB Reels Arb', 96, 'C01+C16+C09', '6.2x', 'Same content, 3 platforms, stacked revenue. TikTok Creator Fund + FB Reels bonus ($4.40 CPM) + YouTube Shorts. Platform arbitrage on identical content.')
+  ROW 4: ('SYN354', 'Portfolio Apps + Paywall Optimization', 95, 'A01+S03', '8.7x', 'Build 30 apps + optimize all paywalls at once. 44 A/B tests across portfolio. Animated paywalls = 2.9x conversion. RevenueCat for unified paywall management.')
+  TOTAL ROWS: 26
+
+================================================================================
+FILE: PRINTMAXX_OPS_PLAYBOOK.xlsx
+SHEETS: ['ALL OPS', 'DEEP PLAYBOOK', 'LLM ALPHA THESIS']
+
+--- SHEET: ALL OPS | Max Row: 255 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'PRINTMAXX PARALLEL OPS — LLM-IN-THE-LOOP AUTOMATION', None, None, None, None, None, None)
+  ROW 2: (None, '22 ops running 24/7. Alpha exists because most people arent automating with LLMs yet.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'OP ID', 'OPERATION', 'CATEGORY', 'REVENUE', 'AUTOMATION LVL', 'LLM ALPHA (WHY THIS PRINTS)', None)
+  TOTAL ROWS: 255
+
+--- SHEET: DEEP PLAYBOOK | Max Row: 2012 | Max Col: 4 ---
+  ROW 0: (None, None, None, None)
+  ROW 1: (None, 'DEEP OPS PLAYBOOK — FULL INSTRUCTIONS', None, None)
+  ROW 2: (None, 'Setup → Algorithm Guide → Shadowban Avoidance → LLM Loop → Manual First → Auto After', None, None)
+  ROW 3: (None, None, None, None)
+  ROW 4: (None, 'OP01: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale', None, None)
+  TOTAL ROWS: 2012
+
+--- SHEET: LLM ALPHA THESIS | Max Row: 65 | Max Col: 5 ---
+  ROW 0: (None, None, None, None, None)
+  ROW 1: (None, 'LLM AUTOMATION ALPHA — WHY THIS EDGE EXISTS', None, None, None)
+  ROW 2: (None, 'Alpha = advantage from LLM automation that disappears once mass adoption occurs.', None, None, None)
+  ROW 3: (None, None, None, None, None)
+  ROW 4: (None, 'ALPHA OPPORTUNITIES RANKED BY EDGE DURATION', None, None, None)
+  TOTAL ROWS: 65
+
+================================================================================
+FILE: PRINTMAXX_STRATEGIC_RBI.xlsx
+SHEETS: ['VIABILITY MATRIX', 'BOTTLENECKS', 'HYPOTHESES', 'GTM + EDGE', 'NEW OPS DISCOVERED', 'SELF-TEST PROTOCOL', 'MARKET REALITY']
+
+--- SHEET: VIABILITY MATRIX | Max Row: 13 | Max Col: 10 ---
+  ROW 0: ('OP_TYPE', 'SUCCESS_RATE', 'TIME_TO_$1K', 'AUTOMATION_%', 'SATURATION', 'REAL_REVENUE_RANGE', 'KEY_FAILURE_MODE', 'HUMAN_INPUT_REQUIRED', 'VIABILITY_SCORE', 'VERDICT')
+  ROW 1: ('AI NSFW/Findom', '30%', '2-4 weeks', '40%', 'LOW', '$500-30K/mo', 'Audience building takes 3-6mo. Daily engagement 2-4hrs. Community management.', 'Character development, audience engagement, DM responses, content strategy', '9/10', 'ACTIVATE NOW')
+  ROW 2: ('Local Biz Service', '25%', '2-4 weeks', '60%', 'LOW', '$2-15K/mo', 'Cold email reply rate 3-5%. Need 500+ sends for results.', 'Cold email personalization, client calls, mockup review, proposal writing', '9/10', 'ACTIVATE NOW')
+  ROW 3: ('Cold Email Lead Gen', '20%', '1-2 months', '50%', 'MEDIUM', '$2-8K/mo', 'Deliverability issues. Need SPF/DKIM/DMARC setup. 14-day warmup.', 'List building, personalization, follow-up management, sales calls', '8/10', 'ACTIVATE NOW')
+  ROW 4: ('AI UGC Factory', '20%', '2-3 months', '70%', 'MEDIUM', '$1.2-10K/mo', 'Commoditizing. Brands want authentic human UGC. AI detection improving.', 'Client communication, brief analysis, quality control, revision handling', '7/10', 'ACTIVATE')
+  TOTAL ROWS: 13
+
+--- SHEET: BOTTLENECKS | Max Row: 11 | Max Col: 8 ---
+  ROW 0: ('SEVERITY', 'AREA', 'ISSUE', 'IMPACT', 'FIX', 'AUTOMATION_POSSIBLE', 'EFFORT', 'DEADLINE')
+  ROW 1: ('CRITICAL', 'Revenue Tracking', 'ZERO revenue entries tracked. Flying blind.', 'Cannot optimize what you dont measure. All decisions are guesses.', 'Track EVERY dollar: source, method, amount, date, channel. Even $1 matters.', 'YES - build intake script', '1 hour', 'TODAY')
+  ROW 2: ('CRITICAL', 'Alpha Pipeline', '85 entries stuck in PENDING_REVIEW', 'New tactics and opportunities not being implemented. Stale alpha = dead alpha.', 'Schedule 30-min daily review. Process 10-20 per session. Reject ruthlessly.', 'PARTIAL - auto-score + human review', '30 min/day', 'THIS WEEK')
+  ROW 3: ('CRITICAL', 'A/B Testing', '42 tests DESIGNED but ZERO running', 'No learning happening. Flying blind on conversion. Optimizing nothing.', 'Launch 3 tests THIS WEEK: 1 pricing, 1 content format, 1 CTA.', 'YES - build test runner', '2-3 hours', 'THIS WEEK')
+  ROW 4: ('CRITICAL', 'Account Creation', 'Key platform accounts NOT CREATED (Fiverr, Upwork, Gumroad, Fanvue, Fansly, TikTok)', 'Cannot run ops without accounts. Every op is BLOCKED by this.', 'Create accounts TODAY. Use GoLogin for anti-detection. 2 accounts/day max.', 'NO - must be manual', '3-4 hours', 'TODAY')
+  TOTAL ROWS: 11
+
+--- SHEET: HYPOTHESES | Max Row: 9 | Max Col: 9 ---
+  ROW 0: ('ID', 'HYPOTHESIS', 'TEST_METHOD', 'METRIC', 'BASELINE', 'TARGET', 'EFFORT', 'EXPECTED_IMPACT', 'STATUS')
+  ROW 1: ('H001', 'Animated paywalls convert 2.9x better than static', 'Deploy animated paywall on PrayerLock. A/B test vs current.', 'paywall_conversion', 'current (measure)', '2.9x improvement', 'LOW (2-3 hrs)', '$500-2K/mo increase', 'NOT STARTED')
+  ROW 2: ('H002', 'Findom #findom #paypig hashtags convert 5x vs general', 'Post 20 findom tweets with niche tags vs 20 general. Track clicks.', 'clicks_per_impression', 'TBD', '5x CTR', 'LOW (1-2 hrs)', '5x follower growth', 'NOT STARTED')
+  ROW 3: ('H003', 'Timeline-based cold email hooks get 10% reply rate', 'Split test 200 emails: timeline vs problem-statement hooks.', 'reply_rate', '3.4% (avg)', '10%+ replies', 'MED (4-6 hrs)', '3x more leads', 'NOT STARTED')
+  ROW 4: ('H004', 'Video demos on Gumroad = 3x conversion', 'Add Kling demo videos to top 3 products. Measure conversion delta.', 'sales_conversion', 'current', '3x conversion', 'MED (3-4 hrs)', '$300-1K/mo increase', 'NOT STARTED')
+  TOTAL ROWS: 9
+
+--- SHEET: GTM + EDGE | Max Row: 33 | Max Col: 6 ---
+  ROW 0: ('CATEGORY', 'TACTIC', 'DETAIL', 'RISK_LEVEL', 'WORKS_UNTIL', 'EXPECTED_IMPACT')
+  ROW 1: ('ALGO GAMING', 'TikTok first 3-second hook', 'Pattern interrupt: zoom, text flash, reaction face. Hook or die in first 3 sec.', 'LEGAL', 'Evergreen', '2-5x view retention')
+  ROW 2: ('ALGO GAMING', 'TikTok comment reply videos', 'Reply to comments with new videos. Algo treats as engagement signal, boosts reach.', 'LEGAL', 'Evergreen', '3x reach boost')
+  ROW 3: ('ALGO GAMING', 'YouTube Shorts cross-post', 'Same TikTok content → YouTube Shorts. Zero extra production, new audience.', 'LEGAL', 'Evergreen', '2x total reach')
+  ROW 4: ('ALGO GAMING', 'Instagram Collab feature', 'Use Collab feature to co-post with bigger accounts. Instant audience share.', 'LEGAL', 'Evergreen', '10x post reach')
+  TOTAL ROWS: 33
+
+--- SHEET: NEW OPS DISCOVERED | Max Row: 9 | Max Col: 8 ---
+  ROW 0: ('OP_NAME', 'THESIS', 'EDGE', 'VIABILITY', 'GTM', 'VALIDATION_METHOD', 'EFFORT', 'STATUS')
+  ROW 1: ('AI Agent-as-a-Service', 'Businesses need AI agents but cant build them. Sell pre-built agents for verticals.', 'Claude Code builds agent in 2-4 hrs. $500-5K per agent + $50-200/mo maintenance.', 'HIGH', 'Cold email to target vertical. Free 7-day trial → convert to monthly.', 'Check if competitors exist (market validated) or few (opportunity).', 'MED (2-4 hrs/agent)', 'NEW')
+  ROW 2: ('AI Data Analysis Service', 'Small biz have data but no analysts. Automated analysis reports via Claude Code.', 'Claude Code analyzes CSVs/databases in minutes. $200-1K per report.', 'HIGH', 'Target Shopify stores, SaaS companies. Free sample report as lead magnet.', 'Fiverr "data analysis" growing. Check pricing ($50-200/report).', 'LOW (30 min/report)', 'NEW')
+  ROW 3: ('Multi-Channel Outreach Orchestrator', 'Combine Bland AI + Instantly + LinkedIn into unified system. Sell as service.', 'Multi-channel = 3-5x response rate. Orchestrate voice + email + social.', 'HIGH', 'Use the system to sell itself. Generate leads via multi-channel, sell the system.', 'Clay/Apollo charge $149+/mo. Our orchestrated service has room.', 'HIGH (build system)', 'NEW')
+  ROW 4: ('Programmatic Blog Network', '50+ niche blogs × 100+ long-tail keywords. AI generates all content.', 'Claude Code generates entire blog in 1-2 hrs. Cloudflare Pages = free unlimited bandwidth.', 'MEDIUM', 'Target underserved niches with high affiliate commissions.', 'Check keyword difficulty. Target KD <20. 3-6 month SEO timeline.', 'MED (2 hrs/blog)', 'NEW')
+  TOTAL ROWS: 9
+
+--- SHEET: SELF-TEST PROTOCOL | Max Row: 9 | Max Col: 8 ---
+  ROW 0: ('OP_ID', 'OP_NAME', 'TEST_COMMAND', 'SUCCESS_CRITERIA', 'FREQUENCY', 'LAST_RUN', 'SCORE', 'RECOMMENDATION')
+  ROW 1: ('S02', 'Local Biz Pipeline', 'python3 AUTOMATIONS/local_biz_pipeline.py --dry-run', 'Scraper returns 5+ businesses. Landing page valid HTML. Email passes spam check.', 'WEEKLY', 'NEVER', 'TBD', 'TEST NOW')
+  ROW 2: ('D01', 'Gumroad Products', 'ls -la DIGITAL_PRODUCTS/ && wc -c DIGITAL_PRODUCTS/*', '9+ products exist. Each >1KB. Descriptions coherent.', 'MONTHLY', 'NEVER', 'TBD', 'TEST NOW')
+  ROW 3: ('G04', 'Alpha Extraction', 'python3 scripts/extract_source_csvs_from_mega_sheet.py', 'Completes without errors. 50+ entries. No duplicate URLs.', 'DAILY', 'NEVER', 'TBD', 'TEST NOW')
+  ROW 4: ('C01', 'TikTok Content', 'ls 04_CONTENT/social/ && check content quality', 'Content ready for posting. Platform-appropriate. No policy violations.', 'WEEKLY', 'NEVER', 'TBD', 'NEEDS ACCOUNTS')
+  TOTAL ROWS: 9
+
+--- SHEET: MARKET REALITY | Max Row: 13 | Max Col: 6 ---
+  ROW 0: ('CHANNEL', 'REAL_EARNINGS_DATA', 'SUCCESS_RATE', 'TIME_TO_PROFITABILITY', 'SATURATION_2026', 'KEY_SOURCE')
+  ROW 1: ('Fanvue (AI creators)', 'Top: $50K/mo (Amibnw). Aitana: $30K/mo. Mid: $2.5-4K/mo. Most: $500-3K after 3-6mo. Platform grew 150% YoY to $100M ARR.', '30%', '3-6 months', 'GROWING', 'finance.yahoo.com/news/ai-influencers, fanvuemodels.com/blog/top-earners')
+  ROW 2: ('Fiverr AI Services', 'Category grew 83.8% YoY to $34M. Total Fiverr revenue $108.6M Q2 2025. AI agents and workflow automation trending.', '10%', '4-6 weeks', 'GROWING', 'investors.fiverr.com Q2 2025 results')
+  ROW 3: ('YouTube Faceless', 'Top: $500K-1.3M/mo (DaFuq Boom). Science channels avg $43K/mo. RPM $3-20. 70% make under $1K/mo.', '10%', '3-4 months', 'HIGH', 'nexlev.io/faceless-youtube, awisee.com faceless channels')
+  ROW 4: ('TikTok Creator Rewards', '$0.40-1.00/1K views (20x old Creator Fund). Creators earned $4.1B in 2024. Micro-influencers: $700-1.2K/mo.', '5%', '2-3 months', 'HIGH', 'bluehost.com/blog/tiktok-pay, wealthinsightwatch.com')
+  TOTAL ROWS: 13
+
+================================================================================
+FILE: PRINTMAXX_ZERO_COST_DEPLOYMENT.xlsx
+SHEETS: ['$0 DEPLOYMENT', 'BOTTLENECK MAP', '30-DAY LAUNCH', 'PLATFORM LIMITS', 'REVENUE MILESTONES']
+
+--- SHEET: $0 DEPLOYMENT | Max Row: 99 | Max Col: 9 ---
+  ROW 0: (None, None, None, None, None, None, None, None, None)
+  ROW 1: (None, '$0 PRINTMAXX DEPLOYMENT — MAXXED FREE TIERS', None, None, None, None, None, None, None)
+  ROW 2: (None, 'Every free tier squeezed to the limit. Zero monthly recurring cost.', None, None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None, None)
+  ROW 4: (None, '$0/mo', '47', '12', '3', 'UNLIMITED', '7,500', '3,000', None)
+  TOTAL ROWS: 99
+
+--- SHEET: BOTTLENECK MAP | Max Row: 49 | Max Col: 8 ---
+  ROW 0: (None, None, None, None, None, None, None, None)
+  ROW 1: (None, 'BOTTLENECK MAP — WHERE FREE TIERS HIT LIMITS', None, None, None, None, None, None)
+  ROW 2: (None, 'Green = unlimited. Gold = generous but limited. Red = hard limit.', None, None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None, None)
+  ROW 4: (None, 'TIER 1: UNLIMITED FOREVER ($0)', None, None, None, None, None, None)
+  TOTAL ROWS: 49
+
+--- SHEET: 30-DAY LAUNCH | Max Row: 79 | Max Col: 7 ---
+  ROW 0: (None, None, None, None, None, None, None)
+  ROW 1: (None, '30-DAY $0 LAUNCH SEQUENCE', None, None, None, None, None)
+  ROW 2: (None, 'Day-by-day deployment. Everything bootstrapped. Zero cost.', None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None)
+  ROW 4: (None, 'DAY', 'CATEGORY', 'TASK', 'TOOL', 'COST', None)
+  TOTAL ROWS: 79
+
+--- SHEET: PLATFORM LIMITS | Max Row: 49 | Max Col: 7 ---
+  ROW 0: (None, None, None, None, None, None, None)
+  ROW 1: (None, 'SOCIAL PLATFORM RATE LIMITS', None, None, None, None, None)
+  ROW 2: (None, 'Stay under these limits to avoid bans. Per-account daily maximums.', None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None)
+  ROW 4: (None, 'PLATFORM', 'SAFE DAILY ACTIONS', 'POSTING LIMIT', 'FOLLOW/LIKE LIMIT', 'BAN TRIGGERS', None)
+  TOTAL ROWS: 49
+
+--- SHEET: REVENUE MILESTONES | Max Row: 29 | Max Col: 7 ---
+  ROW 0: (None, None, None, None, None, None, None)
+  ROW 1: (None, 'REVENUE MILESTONES — WHEN TO UPGRADE', None, None, None, None, None)
+  ROW 2: (None, 'Only spend money when revenue justifies it. Never upgrade speculatively.', None, None, None, None, None)
+  ROW 3: (None, None, None, None, None, None, None)
+  ROW 4: (None, 'MILESTONE', 'TRIGGERED BY', 'WHAT TO UPGRADE', 'COST', 'EXPECTED ROI', None)
+  TOTAL ROWS: 29

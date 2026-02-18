@@ -1,0 +1,67 @@
+{
+  "carousel_id": "CAROUSEL002",
+  "title": "The overnight build pattern that shipped my app",
+  "platform": "both",
+  "slides": [
+    {
+      "slide_num": 1,
+      "headline": "I shipped an app while sleeping",
+      "body": "The overnight build pattern",
+      "visual_note": "Moon/night sky background, laptop with code on screen"
+    },
+    {
+      "slide_num": 2,
+      "headline": "The problem with building apps",
+      "body": "You sit down. 4 hours pass. You've built 20% of one feature. Repeat for weeks.",
+      "visual_note": "Clock showing time passing, frustrated developer silhouette"
+    },
+    {
+      "slide_num": 3,
+      "headline": "The overnight build pattern",
+      "body": "Write a detailed spec (PRD). Hand it to Claude Code. Go to sleep. Wake up to a working app.",
+      "visual_note": "3-step flow diagram: Write > Sleep > Ship"
+    },
+    {
+      "slide_num": 4,
+      "headline": "Step 1: Write the PRD",
+      "body": "App name. Core feature (ONE). User flow (5 screens max). Tech stack. Monetization. 30 minutes max.",
+      "visual_note": "PRD document mockup with bullet points"
+    },
+    {
+      "slide_num": 5,
+      "headline": "Step 2: Set guardrails",
+      "body": "Tell the AI: No commits to main without tests. Stop if you hit a blocker twice. Log all decisions.",
+      "visual_note": "Code block showing guardrail rules"
+    },
+    {
+      "slide_num": 6,
+      "headline": "Step 3: Launch the loop",
+      "body": "Run: claude --continue. Check progress.md in the morning. Fix blockers. Repeat.",
+      "visual_note": "Terminal window with command running"
+    },
+    {
+      "slide_num": 7,
+      "headline": "What I shipped overnight",
+      "body": "PrayerLock: Focus timer for Muslims. WalkToUnlock: Walk to dismiss alarms. StudyLock: Block apps until quiz complete.",
+      "visual_note": "3 app icons in a row"
+    },
+    {
+      "slide_num": 8,
+      "headline": "The math",
+      "body": "Traditional: 40 hours over 2 weeks. Overnight pattern: 2 hours setup + 8 hours sleep. Ships 10x faster.",
+      "visual_note": "Side by side comparison chart"
+    },
+    {
+      "slide_num": 9,
+      "headline": "This only works if",
+      "body": "Your PRD is specific. Your scope is small. You use guardrails. You check the logs before pushing live.",
+      "visual_note": "Checklist with checkmarks"
+    }
+  ],
+  "cta_slide": {
+    "headline": "I share every overnight build in real time",
+    "action": "Follow for the next one"
+  },
+  "hashtags": ["buildinpublic", "claudecode", "indiedev", "automation", "solofounder", "appdevelopment", "shipfast"],
+  "estimated_engagement": "HIGH"
+}

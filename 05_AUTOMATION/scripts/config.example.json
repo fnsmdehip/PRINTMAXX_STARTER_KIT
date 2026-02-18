@@ -1,0 +1,56 @@
+{
+  "project_dir": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt",
+  "posting_times": {
+    "X": [8, 12, 17, 20],
+    "Instagram": [9, 12, 15, 19],
+    "LinkedIn": [7, 10, 12, 17],
+    "TikTok": [7, 10, 14, 19],
+    "YouTube": [9, 14, 17],
+    "Facebook": [9, 13, 16],
+    "Pinterest": [14, 20, 21],
+    "Medium": [10, 14],
+    "Substack": [10, 14],
+    "Threads": [9, 13, 18]
+  },
+  "thresholds": {
+    "scale_rev_per_hour": 50,
+    "min_rev_per_hour": 15,
+    "max_concentration": 0.40,
+    "min_days_before_kill": 30,
+    "alpha_auto_approve_score": 70,
+    "backtest_deploy_score": 70,
+    "backtest_paper_trade_score": 50
+  },
+  "platforms": {
+    "gumroad_fee_rate": 0.10,
+    "stripe_fee_rate": 0.029,
+    "app_store_fee_rate": 0.30,
+    "whop_fee_rate": 0.057
+  },
+  "backup": {
+    "targets": ["ledger", "financials", "config", "ops"],
+    "keep_count": 10,
+    "auto_backup_on_session_start": true
+  },
+  "content": {
+    "default_niche": "ai",
+    "niches": ["faith", "fitness", "ai", "tech", "business"],
+    "branding": "PRINTMAXX",
+    "voice_tier_weights": {
+      "S": 0.50,
+      "A": 0.25,
+      "B": 0.15,
+      "C": 0.10
+    }
+  },
+  "email": {
+    "disposable_domains_file": null,
+    "max_sends_per_day": 50,
+    "warmup_days": 14
+  },
+  "research": {
+    "auto_monitor_only": true,
+    "max_sources_per_run": 20,
+    "dedup_enabled": true
+  }
+}

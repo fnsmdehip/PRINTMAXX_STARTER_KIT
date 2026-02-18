@@ -1,0 +1,19 @@
+ops_id,ops_name,frequency,duration_min,tool_required,tool_cost,last_run,next_run,status,output_file,notes
+DOP001,competitor_monitoring,continuous,5,visualping.io,13,2026-02-09,,ACTIVE,LEDGER/COMPETITOR_CHANGES.csv,Set up 50-100 competitor pages to monitor [Activated by automation system 2026-02-09]
+DOP002,cold_lead_research,daily,30,Clay + Apollo,248,2026-02-09,,ACTIVE,LEDGER/OUTREACH_DAILY.csv,Morning routine - 20-50 leads per day [Activated by automation system 2026-02-09]
+DOP003,platform_algo_detection,daily,20,RSS + manual,0,2026-02-09,,NOT_STARTED,LEDGER/PLATFORM_CHANGES.csv,Check Meta/TikTok/Google official sources [Activated by automation system 2026-02-09]
+DOP004,revenue_dashboard_check,daily,10,RevenueCat + Stripe,0,2026-02-09,,ACTIVE,FINANCIALS/DAILY_METRICS.csv,Morning check for anomalies [Activated by automation system 2026-02-09]
+DOP005,reddit_revenue_extraction,daily,15,Enhanced scraper,0,,,ACTIVE,LEDGER/ALPHA_STAGING.csv,Scan r/SideProject r/EntrepreneurRideAlong r/indiehackers
+DOP006,github_trending_scan,daily,15,GitHub + Trendshift,0,,,ACTIVE,LEDGER/GITHUB_TRENDING_DAILY.csv,MIT-licensed repos with 100+ stars
+DOP007,mcp_ecosystem_scan,daily,10,GitHub search,0,,,ACTIVE,LEDGER/MCP_OPPORTUNITIES.csv,First-mover window closing
+DOP008,viral_content_detection,daily,15,TikTok + IG manual,0,2026-02-09,,ACTIVE,LEDGER/VIRAL_CONTENT_TRACKER.csv,Identify formats to adapt [Activated by automation system 2026-02-09]
+DOP009,hashtag_audio_tracking,daily,10,TikTok Creative Center,0,,,NOT_STARTED,LEDGER/TRENDING_AUDIO_HASHTAGS.csv,Before content creation
+DOP010,platform_rpm_tracking,weekly,30,Analytics dashboards,0,,,NOT_STARTED,LEDGER/PLATFORM_RPM_TRACKER.csv,Monday morning - route content to highest RPM
+DOP011,creator_program_monitoring,weekly,20,Official blogs + Reddit,0,,,NOT_STARTED,LEDGER/CREATOR_PROGRAMS.csv,Catch payout structure changes
+DOP012,aso_keyword_research,weekly,45,App Radar + Apple,0,,,NOT_STARTED,LEDGER/ASO_KEYWORD_TRACKER.csv,Find keyword gaps for new apps
+DOP013,competitor_app_monitoring,weekly,30,App Store manual,0,,,NOT_STARTED,LEDGER/COMPETITOR_APPS.csv,Price/feature/rating changes
+DOP014,indie_hacker_tracking,weekly,20,Twitter + IH,0,,,NOT_STARTED,LEDGER/INDIE_HACKER_TRACKER.csv,Track verified revenue accounts
+DOP015,tool_detection,weekly,30,Product Hunt + Reddit,0,,,NOT_STARTED,LEDGER/TOOLS_SERVICES_MASTER.csv,New tools that save time or unlock capability
+DOP016,cold_email_deliverability,weekly,30,r/coldemail + blogs,0,,,NOT_STARTED,LEDGER/COLD_EMAIL_META.csv,ESP changes and warmup best practices
+DOP017,reddit_geo_scan,weekly,30,Google + Perplexity,0,,,NOT_STARTED,LEDGER/REDDIT_GEO_TRACKER.csv,Find threads to get cited in AI search
+DOP018,revenuecat_report_analysis,monthly,60,RevenueCat blog,0,,,NOT_STARTED,APP_FACTORY/BENCHMARKS.csv,When new reports released

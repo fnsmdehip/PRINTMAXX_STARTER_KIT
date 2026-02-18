@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "generated_at": "2026-02-15",
+  "notes": "Seed catalog for fully-automated (API) Gumroad listing. Keep copy compliant: avoid earnings/income claims unless explicitly disclosed + approved.",
+  "items": [
+    {
+      "sku": "cold_email_subject_lines_73",
+      "name": "73 Cold Email Subject Lines (PDF)",
+      "price_cents": 700,
+      "description_md": "73 subject lines you can copy/paste for cold outreach.\n\nIncludes:\n- 73 subject lines grouped by intent (curiosity, pain, social proof, quick question)\n- Short guidance on when to use each\n\nNo earnings claims. Results vary by offer, list quality, and deliverability.",
+      "tags": [
+        "cold email",
+        "subject lines",
+        "outreach",
+        "sales"
+      ],
+      "file_relpath": "DIGITAL_PRODUCTS/ready_to_sell/pdfs/01_73_COLD_EMAIL_SUBJECT_LINES.pdf",
+      "publish": true
+    },
+    {
+      "sku": "funnel_teardown_pack",
+      "name": "Funnel Teardown Pack (PDF)",
+      "price_cents": 700,
+      "description_md": "A concise teardown of 5 creator funnels (structure, pages, offer ladder, and what to test).\n\nNo earnings claims. Results vary by niche, execution, and traffic.",
+      "tags": [
+        "funnels",
+        "marketing",
+        "conversion"
+      ],
+      "file_relpath": "DIGITAL_PRODUCTS/ready_to_sell/pdfs/02_FUNNEL_TEARDOWN_PACK.pdf",
+      "publish": true
+    },
+    {
+      "sku": "ai_automation_blueprint",
+      "name": "AI Automation Blueprint (PDF)",
+      "price_cents": 1900,
+      "description_md": "A practical blueprint for building small automations that save time.\n\nIncludes:\n- Workflow selection rubric\n- Common patterns (scrape -> normalize -> enrich -> notify)\n- Checklists for reliability and safety",
+      "tags": [
+        "automation",
+        "ai",
+        "python"
+      ],
+      "file_relpath": "DIGITAL_PRODUCTS/ready_to_sell/pdfs/03_AI_AUTOMATION_BLUEPRINT.pdf",
+      "publish": true
+    },
+    {
+      "sku": "solopreneur_ops_system",
+      "name": "Solopreneur Ops System (PDF)",
+      "price_cents": 3700,
+      "description_md": "A lightweight operating system for running a solo business (tracking, execution cadence, and decision loops).\n\nNo earnings claims. This is an organizational system.",
+      "tags": [
+        "operations",
+        "solopreneur",
+        "systems"
+      ],
+      "file_relpath": "DIGITAL_PRODUCTS/ready_to_sell/pdfs/04_SOLOPRENEUR_OPS_SYSTEM.pdf",
+      "publish": true
+    },
+    {
+      "sku": "cold_email_playbook",
+      "name": "Cold Email Playbook (PDF)",
+      "price_cents": 1900,
+      "description_md": "A cold email playbook: structure, sequencing, and practical examples.\n\nNo earnings claims. Results vary and depend on your offer, list quality, and sending reputation.",
+      "tags": [
+        "cold email",
+        "b2b",
+        "sales",
+        "lead gen"
+      ],
+      "file_relpath": "DIGITAL_PRODUCTS/ready_to_sell/pdfs/05_COLD_EMAIL_PLAYBOOK.pdf",
+      "publish": true
+    }
+  ]
+}
+

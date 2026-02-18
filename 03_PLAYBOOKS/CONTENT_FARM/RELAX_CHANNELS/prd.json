@@ -1,0 +1,148 @@
+{
+  "channel_name": "Relax/Sleep Channels",
+  "channel_id": "CF001",
+  "tagline": "Ambient content that runs 24/7",
+  "overview": "Faceless channels that post looping ambient content: rain sounds, fireplace, lo-fi beats, nature scenes. Extremely low effort to maintain, monetizes through YouTube ad revenue and affiliate links to sleep products.",
+  "revenue_model": {
+    "primary": "YouTube AdSense",
+    "secondary": ["Affiliate links (mattresses, sleep apps, white noise machines)", "Sponsorships from sleep brands"],
+    "estimated_rpm": "$2-5 (relaxation niche)",
+    "monthly_potential": {
+      "10k_views": "$20-50",
+      "100k_views": "$200-500",
+      "1m_views": "$2,000-5,000"
+    }
+  },
+  "content_types": [
+    {
+      "type": "Rain sounds",
+      "duration": "8-10 hours",
+      "production": "Stock footage + royalty-free audio loop",
+      "example_titles": ["Rain Sounds for Sleeping - 10 Hours", "Heavy Rain on Window - Deep Sleep"]
+    },
+    {
+      "type": "Fireplace",
+      "duration": "4-8 hours",
+      "production": "4K fireplace footage loop + crackling audio",
+      "example_titles": ["Cozy Fireplace 4K - 8 Hours", "Crackling Fire for Sleep"]
+    },
+    {
+      "type": "Lo-fi beats",
+      "duration": "1-3 hours",
+      "production": "Animated loop + royalty-free lo-fi playlist",
+      "example_titles": ["Lo-fi Beats to Study/Relax To", "Chill Beats - 3 Hour Mix"]
+    },
+    {
+      "type": "Nature scenes",
+      "duration": "4-10 hours",
+      "production": "Nature footage + ambient sounds",
+      "example_titles": ["Forest Stream - 8 Hours", "Ocean Waves for Deep Sleep"]
+    },
+    {
+      "type": "ASMR compilations",
+      "duration": "1-2 hours",
+      "production": "Curated ASMR clips (with permission) or AI-generated",
+      "example_titles": ["ASMR for Sleep - No Talking", "Gentle Triggers Compilation"]
+    }
+  ],
+  "production_stack": {
+    "video": ["Pexels (free stock)", "Artgrid ($25/mo)", "Storyblocks ($15/mo)"],
+    "audio": ["Epidemic Sound ($15/mo)", "Artlist ($17/mo)", "YouTube Audio Library (free)"],
+    "editing": ["DaVinci Resolve (free)", "Remotion (for animated loops)"],
+    "thumbnails": ["Canva", "Gemini for generation"],
+    "scheduling": ["TubeBuddy", "VidIQ"]
+  },
+  "posting_strategy": {
+    "frequency": "3-5 videos per week initially",
+    "best_times": "Evening (7-10pm local time)",
+    "premiere_strategy": "Use YouTube Premiere for initial engagement boost",
+    "shorts_complement": "Post 15-60 second clips as Shorts for discovery"
+  },
+  "growth_tactics": [
+    "Target long-tail keywords (rain sounds 10 hours, fireplace no music)",
+    "Create playlists for autoplay retention",
+    "End screens pointing to longer videos",
+    "Community posts with sleep tips",
+    "Collaborate with sleep app affiliate programs"
+  ],
+  "monetization_timeline": {
+    "month_1": "Post 20 videos, build library",
+    "month_2-3": "Reach 1,000 subs, 4,000 watch hours for monetization",
+    "month_4-6": "Apply for YPP, add affiliate links",
+    "month_6+": "Sponsorship outreach to sleep brands"
+  },
+  "affiliate_opportunities": [
+    {
+      "product": "Sleep apps (Calm, Headspace)",
+      "commission": "30-50% recurring",
+      "placement": "Video description, pinned comment"
+    },
+    {
+      "product": "White noise machines",
+      "commission": "5-10% Amazon",
+      "placement": "Description links"
+    },
+    {
+      "product": "Mattresses (Casper, Purple)",
+      "commission": "$50-100 per sale",
+      "placement": "Sponsored integration or description"
+    },
+    {
+      "product": "Blue light glasses",
+      "commission": "10-20%",
+      "placement": "Related content for study channels"
+    }
+  ],
+  "success_metrics": {
+    "month_3": {
+      "subscribers": "500-1,000",
+      "monthly_views": "50,000",
+      "watch_time_hours": "4,000+"
+    },
+    "month_6": {
+      "subscribers": "5,000-10,000",
+      "monthly_views": "200,000",
+      "monthly_revenue": "$400-1,000"
+    },
+    "month_12": {
+      "subscribers": "25,000-50,000",
+      "monthly_views": "500,000+",
+      "monthly_revenue": "$1,000-3,000"
+    }
+  },
+  "risks": [
+    {
+      "risk": "Copyright claims on audio",
+      "mitigation": "Use only verified royalty-free sources, keep licenses"
+    },
+    {
+      "risk": "Low RPM in relaxation niche",
+      "mitigation": "Supplement with affiliate revenue"
+    },
+    {
+      "risk": "Algorithm changes",
+      "mitigation": "Build email list, cross-post to Spotify"
+    }
+  ],
+  "examples_to_study": [
+    {
+      "channel": "Relaxing White Noise",
+      "subscribers": "2.1M",
+      "strategy": "Long-form ambient, daily uploads"
+    },
+    {
+      "channel": "The Relaxed Guy",
+      "subscribers": "1.5M",
+      "strategy": "Fireplace and nature focus"
+    },
+    {
+      "channel": "Lofi Girl",
+      "subscribers": "14M",
+      "strategy": "24/7 livestream, community building"
+    }
+  ],
+  "cross_pollination": {
+    "stack_with": ["CF002 (Sleep Timer Alarm)", "AI004 (ASMR Creator)"],
+    "synergy": "Relax content drives traffic to sleep app, ASMR persona cross-promotes"
+  }
+}

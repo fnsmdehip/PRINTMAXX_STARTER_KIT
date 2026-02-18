@@ -1,0 +1,21 @@
+item_id,category,item_name,dose,frequency,time_of_day,started_date,status,cost_monthly,supplier,notes,subjective_rating
+H001,Supplement,Hyperimmune Egg (PL-100),4.5g-9g,Daily,Morning,2026-02-01,ACTIVE,45,BeyondIgY,IgY antibodies targeting 16 pathogens. Anti-fungal (3x Candida). Immune offloading. Dr. Greenblatt formula.,9
+H002,Fermented,Kefir,1 cup,Daily,Morning,2025-01-01,ACTIVE,15,Local,Probiotic. Lactobacillus dominant. Good baseline gut support.,7
+H003,Fermented,Kombucha,12oz,Daily,Afternoon,2025-01-01,ACTIVE,20,Local,SCOBY ferment. Organic acids + beneficial yeasts.,6
+H004,Supplement,Magnesium Glycinate,400mg,Daily,Evening,,QUEUED,0,,Sleep + recovery. Most bioavailable form.,
+H005,Supplement,Vitamin D3+K2,5000IU D3 + 100mcg K2,Daily,Morning,,QUEUED,0,,Immune + bone. Take with fat.,
+H006,Supplement,Omega-3 (Fish Oil),2g EPA+DHA,Daily,Morning,,QUEUED,0,,Anti-inflammatory. High EPA ratio preferred.,
+H007,Supplement,Creatine Monohydrate,5g,Daily,Any,,QUEUED,0,,Cognitive + muscle. Most studied supplement.,
+H008,Supplement,NAC,600mg,Daily,Morning,,QUEUED,0,,Glutathione precursor. Liver + lungs + antioxidant.,
+H009,Protocol,Cold Exposure,2-5min cold,3x/week,Morning,,QUEUED,0,,Dopamine + norepinephrine + brown fat.,
+H010,Protocol,Zone 2 Cardio,30-45min,4x/week,Any,,QUEUED,0,,Mitochondrial biogenesis. 60-70% max HR.,
+H011,Protocol,Resistance Training,45-60min,3x/week,Any,,QUEUED,0,,Progressive overload. Compound lifts.,
+H012,Protocol,Sleep Optimization,7-9hrs,Daily,Night,,QUEUED,0,,Cool room. No screens 1hr before. Consistent wake time.,
+H013,Biomarker,Fasting Glucose,,Quarterly,Morning,,TRACK,0,,Target: 70-90 mg/dL,
+H014,Biomarker,HbA1c,,Quarterly,,,TRACK,0,,Target: <5.4%,
+H015,Biomarker,hsCRP,,Quarterly,,,TRACK,0,,Target: <1.0 mg/L. Systemic inflammation.,
+H016,Biomarker,Vitamin D (25-OH),,Quarterly,,,TRACK,0,,Target: 50-80 ng/mL,
+H017,Biomarker,Testosterone (Total + Free),,Quarterly,Morning,,TRACK,0,,Fasted AM draw.,
+H018,Biomarker,Lipid Panel (ApoB),,Quarterly,,,TRACK,0,,ApoB more predictive than LDL. Target: <80 mg/dL,
+H019,Diet,Whole Foods Base,80/20,Daily,All meals,,ACTIVE,0,,Real food majority. Minimize seed oils + sugar.,
+H020,Diet,Protein Target,1g per lb lean mass,Daily,All meals,,ACTIVE,0,,30-40g per sitting minimum. Split across 3-4 meals.,

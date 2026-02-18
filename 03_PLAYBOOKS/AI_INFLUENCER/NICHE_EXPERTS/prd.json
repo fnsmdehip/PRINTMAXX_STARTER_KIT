@@ -1,0 +1,198 @@
+{
+  "persona_type": "Niche Expert",
+  "persona_id": "AI001",
+  "tagline": "AI-generated thought leader for any vertical",
+  "overview": "An AI persona that positions as an expert in a specific niche (productivity, finance, fitness, parenting, etc.). Posts educational content, builds authority, monetizes through info products, affiliates, and sponsorships.",
+  "revenue_model": {
+    "primary": "Info products (courses, ebooks, templates)",
+    "secondary": ["Affiliate marketing", "Sponsorships", "Coaching/consulting", "Paid community"],
+    "monthly_potential": {
+      "10k_followers": "$500-2,000",
+      "50k_followers": "$3,000-10,000",
+      "100k_followers": "$10,000-30,000"
+    }
+  },
+  "persona_creation": {
+    "visual": {
+      "generation": "MidJourney/Gemini for consistent face",
+      "style": "Professional but approachable, age 28-45",
+      "consistency": "Same face, varying backgrounds and outfits",
+      "tools": ["Gemini Image Gen", "MidJourney --cref", "HeyGen for video"]
+    },
+    "voice": {
+      "tone": "Confident, helpful, slightly contrarian",
+      "content_style": "Short, actionable tips with specific numbers",
+      "posting_voice": "First person, shares 'personal' experiences",
+      "tools": ["ElevenLabs for voice", "HeyGen for lip sync"]
+    },
+    "backstory": {
+      "template": "[Name] built [achievement] in [timeframe]. Now shares what worked.",
+      "example": "Alex Chen grew a $50k/mo newsletter in 18 months. Now shares growth tactics.",
+      "authenticity": "Based on real tactics, attributed to AI persona"
+    }
+  },
+  "content_strategy": {
+    "platforms": {
+      "primary": "X/Twitter (thread-first)",
+      "secondary": ["LinkedIn (professional niches)", "Instagram (lifestyle niches)", "TikTok (younger demos)"]
+    },
+    "content_types": [
+      {
+        "type": "Thread",
+        "frequency": "3-5 per week",
+        "format": "10 [thing] that [outcome]. Thread:",
+        "example": "10 cold email tactics that got me 47% reply rate. Thread:"
+      },
+      {
+        "type": "Carousel",
+        "frequency": "2-3 per week",
+        "format": "Swipeable tips with branded design",
+        "example": "5 morning routines of successful founders"
+      },
+      {
+        "type": "Video (talking head)",
+        "frequency": "1-2 per week",
+        "format": "30-60 second tips via HeyGen",
+        "example": "The 5am routine everyone gets wrong"
+      },
+      {
+        "type": "Quote graphics",
+        "frequency": "Daily",
+        "format": "Motivational/tactical quotes with face",
+        "example": "Your network is your net worth - here's how I built mine"
+      }
+    ],
+    "engagement_tactics": [
+      "Reply to industry leaders (get retweet exposure)",
+      "Ask questions to drive comments",
+      "DM strategy for high-value followers",
+      "Repost user success stories"
+    ]
+  },
+  "monetization_funnel": {
+    "top": {
+      "content": "Free tips and threads",
+      "goal": "Build following and trust"
+    },
+    "middle": {
+      "content": "Free lead magnet (template, checklist)",
+      "goal": "Capture email",
+      "tools": ["Beehiiv newsletter", "Gumroad free download"]
+    },
+    "bottom": {
+      "content": "Paid products",
+      "options": [
+        {"product": "Ebook", "price": "$19-49", "effort": "Low"},
+        {"product": "Template pack", "price": "$29-99", "effort": "Low"},
+        {"product": "Course", "price": "$99-499", "effort": "Medium"},
+        {"product": "Cohort/coaching", "price": "$500-2000", "effort": "High"},
+        {"product": "Community", "price": "$29-99/mo", "effort": "Medium"}
+      ]
+    }
+  },
+  "niche_recommendations": [
+    {
+      "niche": "Productivity/Notion",
+      "audience": "Knowledge workers, students",
+      "product_fit": "Templates, courses",
+      "competition": "High but large market"
+    },
+    {
+      "niche": "Cold email/Sales",
+      "audience": "B2B salespeople, founders",
+      "product_fit": "Scripts, courses, coaching",
+      "competition": "Medium"
+    },
+    {
+      "niche": "AI tools for business",
+      "audience": "Solopreneurs, small teams",
+      "product_fit": "Tutorials, prompt packs",
+      "competition": "Growing fast"
+    },
+    {
+      "niche": "Personal finance",
+      "audience": "Young professionals",
+      "product_fit": "Budgeting templates, courses",
+      "competition": "High but evergreen"
+    },
+    {
+      "niche": "Parenting/Family",
+      "audience": "Parents 25-45",
+      "product_fit": "Guides, planners, community",
+      "competition": "Lower in AI space"
+    }
+  ],
+  "production_stack": {
+    "image_gen": ["Gemini API", "MidJourney"],
+    "video_gen": ["HeyGen", "Synthesia", "D-ID"],
+    "voice_gen": ["ElevenLabs", "Play.ht"],
+    "writing": ["Claude", "GPT-4"],
+    "scheduling": ["Hypefury", "Typefully", "Buffer"],
+    "email": ["Beehiiv", "ConvertKit"],
+    "products": ["Gumroad", "Teachable", "Podia"]
+  },
+  "growth_timeline": {
+    "month_1": {
+      "focus": "Establish persona, post daily",
+      "target": "1,000 followers",
+      "tactics": "Reply strategy, 2 threads/week"
+    },
+    "month_2-3": {
+      "focus": "Scale content, launch lead magnet",
+      "target": "5,000-10,000 followers",
+      "tactics": "Collab with similar accounts, run giveaway"
+    },
+    "month_4-6": {
+      "focus": "Launch paid product",
+      "target": "25,000 followers, $1k-5k revenue",
+      "tactics": "Product launch sequence, affiliate program"
+    },
+    "month_6-12": {
+      "focus": "Scale and automate",
+      "target": "50,000+ followers, $5k-20k/mo",
+      "tactics": "Higher ticket offers, team/VA support"
+    }
+  },
+  "risks": [
+    {
+      "risk": "Audience discovers AI persona",
+      "mitigation": "Never claim to be human. Position as 'AI-powered' or stay ambiguous.",
+      "note": "Many successful accounts are clearly AI and still monetize"
+    },
+    {
+      "risk": "Platform bans AI accounts",
+      "mitigation": "Focus on value, not deception. Build email list as backup."
+    },
+    {
+      "risk": "Content quality inconsistency",
+      "mitigation": "Use templates, review before posting, maintain style guide"
+    }
+  ],
+  "success_metrics": {
+    "engagement_rate": ">3% (likes + comments / followers)",
+    "follower_growth": "10-20% monthly",
+    "email_conversion": "5-10% of followers join list",
+    "product_conversion": "2-5% of email list buys"
+  },
+  "examples_to_study": [
+    {
+      "account": "@levelsio",
+      "followers": "500k+",
+      "style": "Real person, but content model works for AI"
+    },
+    {
+      "account": "@tabortigers (AI)",
+      "followers": "50k+",
+      "style": "Openly AI, still monetizes"
+    },
+    {
+      "account": "@wealth",
+      "followers": "2M+",
+      "style": "Faceless quote account, high engagement"
+    }
+  ],
+  "cross_pollination": {
+    "stack_with": ["MM002 (Info Products)", "CF007 (Motivation Quotes)"],
+    "synergy": "Expert persona sells courses, quote channel drives traffic"
+  }
+}

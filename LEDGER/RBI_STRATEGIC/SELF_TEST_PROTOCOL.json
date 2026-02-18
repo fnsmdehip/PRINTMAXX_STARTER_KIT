@@ -1,0 +1,42 @@
+[
+  {
+    "op": "S02",
+    "name": "Local Biz Pipeline",
+    "test_commands": [
+      "python3 AUTOMATIONS/local_biz_pipeline.py --dry-run --category=plumbers --city=austin",
+      "python3 AUTOMATIONS/bulk_landing_page_generator.py --dry-run --count=1"
+    ],
+    "success_criteria": [
+      "Scraper returns 5+ businesses",
+      "Landing page is valid HTML",
+      "Cold email draft passes spam check",
+      "Total runtime < 60 seconds"
+    ]
+  },
+  {
+    "op": "D01",
+    "name": "Gumroad Products",
+    "test_commands": [
+      "ls -la DIGITAL_PRODUCTS/",
+      "wc -c DIGITAL_PRODUCTS/*"
+    ],
+    "success_criteria": [
+      "9+ product files exist",
+      "Each file > 1KB (not empty)",
+      "Product descriptions are coherent (manual review)"
+    ]
+  },
+  {
+    "op": "G04",
+    "name": "Alpha Extraction",
+    "test_commands": [
+      "python3 scripts/extract_source_csvs_from_mega_sheet.py",
+      "wc -l LEDGER/ALPHA_STAGING.csv"
+    ],
+    "success_criteria": [
+      "Extraction completes without errors",
+      "Alpha staging has 50+ entries",
+      "No duplicate URLs in staging"
+    ]
+  }
+]

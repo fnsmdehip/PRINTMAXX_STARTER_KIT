@@ -1,0 +1,160 @@
+{
+  "channel_name": "Clips/Highlights Channels",
+  "channel_id": "CF003",
+  "tagline": "Curate viral moments, build audience",
+  "overview": "Faceless channels that compile clips from streamers, podcasts, sports, or viral moments. Low production cost, high virality potential. Requires understanding of fair use and building relationships with content creators.",
+  "revenue_model": {
+    "primary": "YouTube AdSense + TikTok Creator Fund",
+    "secondary": ["Sponsorships", "Affiliate links", "Merch partnerships with featured creators"],
+    "estimated_rpm": "$3-8 (entertainment niche)",
+    "monthly_potential": {
+      "100k_views": "$300-800",
+      "1m_views": "$3,000-8,000",
+      "10m_views": "$30,000-80,000"
+    }
+  },
+  "content_types": [
+    {
+      "type": "Streamer highlights",
+      "duration": "8-15 minutes (YouTube), 30-60 seconds (Shorts/TikTok)",
+      "production": "Clip extraction, captions, transitions",
+      "example_titles": ["XQC FUNNIEST MOMENTS 2026", "Kai Cenat Best Clips This Week"]
+    },
+    {
+      "type": "Podcast clips",
+      "duration": "2-10 minutes",
+      "production": "Key moments with captions, sometimes face tracking",
+      "example_titles": ["Joe Rogan SHOCKED by...", "Lex Fridman on AI Consciousness"]
+    },
+    {
+      "type": "Sports highlights",
+      "duration": "5-15 minutes",
+      "production": "Game footage compilation with commentary",
+      "example_titles": ["NBA Best Dunks January 2026", "Patrick Mahomes Insane Plays"]
+    },
+    {
+      "type": "Viral compilations",
+      "duration": "10-20 minutes",
+      "production": "Curated TikToks/Reels with theme",
+      "example_titles": ["TikToks That Made Me Laugh", "Try Not To Laugh Challenge"]
+    }
+  ],
+  "production_stack": {
+    "clipping": ["Opus Clip ($20/mo)", "Vizard.ai", "Manual with Premiere"],
+    "captions": ["CapCut (free)", "Descript ($15/mo)", "Kapwing"],
+    "editing": ["CapCut", "DaVinci Resolve", "Premiere Pro"],
+    "thumbnails": ["Photoshop", "Canva", "MidJourney for custom art"],
+    "scheduling": ["TubeBuddy", "Later", "Hootsuite"]
+  },
+  "legal_considerations": {
+    "fair_use": "Commentary, criticism, education are protected. Pure compilation is risky.",
+    "best_practices": [
+      "Add commentary or reaction to clips",
+      "Credit original creators",
+      "Build relationships with streamers (many want clip channels)",
+      "Respond to takedowns immediately",
+      "Join MCN for legal protection"
+    ],
+    "creator_partnerships": "Many streamers actively want clip channels. Reach out offering revenue share or promotion."
+  },
+  "posting_strategy": {
+    "youtube_long": "2-3 compilations per week",
+    "youtube_shorts": "1-2 per day",
+    "tiktok": "3-5 per day",
+    "instagram_reels": "2-3 per day",
+    "best_times": "4pm-9pm EST for gaming, varies by niche"
+  },
+  "growth_tactics": [
+    "Clip trending streamers within hours of live",
+    "Use streamer name + BEST MOMENTS in title",
+    "Tag original creator (they often repost)",
+    "Create consistent thumbnail style (brand recognition)",
+    "Build Discord for clip submissions",
+    "Partner with streamers for exclusive clips"
+  ],
+  "monetization_timeline": {
+    "month_1": "Post 50+ Shorts/TikToks, find viral patterns",
+    "month_2": "Scale to 100+ posts, start YouTube long-form",
+    "month_3": "Apply for YPP (1k subs, 4k hours or 10M Shorts views)",
+    "month_4-6": "Sponsorship outreach, affiliate integration",
+    "month_6+": "Creator partnerships, merch collaborations"
+  },
+  "success_metrics": {
+    "month_1": {
+      "tiktok_followers": "5,000-20,000",
+      "youtube_subs": "500-2,000",
+      "monthly_views": "500,000+"
+    },
+    "month_3": {
+      "tiktok_followers": "50,000-100,000",
+      "youtube_subs": "10,000-25,000",
+      "monthly_revenue": "$500-2,000"
+    },
+    "month_6": {
+      "tiktok_followers": "200,000+",
+      "youtube_subs": "50,000-100,000",
+      "monthly_revenue": "$3,000-10,000"
+    }
+  },
+  "niches_to_target": [
+    {
+      "niche": "Gaming streamers",
+      "competition": "High",
+      "potential": "Very high",
+      "key_creators": ["xQc", "Kai Cenat", "IShowSpeed", "Pokimane"]
+    },
+    {
+      "niche": "Podcast clips",
+      "competition": "Medium",
+      "potential": "High",
+      "key_shows": ["JRE", "Lex Fridman", "Flagrant", "IMPAULSIVE"]
+    },
+    {
+      "niche": "Sports highlights",
+      "competition": "High (copyright risk)",
+      "potential": "Very high",
+      "notes": "Need licensing or fair use commentary"
+    },
+    {
+      "niche": "Reality TV moments",
+      "competition": "Medium",
+      "potential": "Medium-high",
+      "key_shows": ["Love Island", "Selling Sunset", "Real Housewives"]
+    }
+  ],
+  "risks": [
+    {
+      "risk": "Copyright strikes",
+      "mitigation": "Add commentary, build creator relationships, join MCN"
+    },
+    {
+      "risk": "Platform algorithm changes",
+      "mitigation": "Diversify across YouTube, TikTok, Instagram"
+    },
+    {
+      "risk": "Creator asks for takedown",
+      "mitigation": "Comply immediately, build partnerships proactively"
+    }
+  ],
+  "examples_to_study": [
+    {
+      "channel": "JRE Clips",
+      "subscribers": "7M+",
+      "strategy": "Official channel, but model the format"
+    },
+    {
+      "channel": "Daily Dose of Internet",
+      "subscribers": "18M",
+      "strategy": "Curated viral clips with narration"
+    },
+    {
+      "channel": "Stream Highlights",
+      "subscribers": "500k+",
+      "strategy": "Multi-streamer compilations"
+    }
+  ],
+  "cross_pollination": {
+    "stack_with": ["CF010 (Streamer Clips)", "MM003 (AI Influencer for reactions)"],
+    "synergy": "Clip channel builds audience, AI persona does reaction content"
+  }
+}

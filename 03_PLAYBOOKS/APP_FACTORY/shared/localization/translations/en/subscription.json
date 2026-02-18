@@ -1,0 +1,185 @@
+{
+  "paywall": {
+    "title": "Unlock Full Access",
+    "subtitle": "Get the most out of {{appName}} with Pro",
+    "limitReached": {
+      "title": "You've Hit the Limit",
+      "subtitle": "Upgrade to continue without restrictions"
+    },
+    "softPaywall": {
+      "title": "Want More Features?",
+      "subtitle": "Unlock everything with Pro"
+    }
+  },
+  "plans": {
+    "free": {
+      "name": "Free",
+      "description": "Basic features",
+      "price": "Free forever"
+    },
+    "weekly": {
+      "name": "Weekly",
+      "description": "Full access, billed weekly",
+      "price": "{{price}}/week",
+      "savings": ""
+    },
+    "monthly": {
+      "name": "Monthly",
+      "description": "Full access, billed monthly",
+      "price": "{{price}}/month",
+      "savings": "Save {{percent}}%",
+      "perWeek": "Just {{price}}/week"
+    },
+    "yearly": {
+      "name": "Yearly",
+      "description": "Full access, billed annually",
+      "price": "{{price}}/year",
+      "savings": "Save {{percent}}%",
+      "perMonth": "Just {{price}}/month",
+      "bestValue": "Best Value",
+      "popular": "Most Popular"
+    },
+    "lifetime": {
+      "name": "Lifetime",
+      "description": "One-time purchase, forever access",
+      "price": "{{price}} once",
+      "savings": "Pay once, own forever"
+    }
+  },
+  "features": {
+    "title": "What's Included",
+    "unlimited": {
+      "title": "Unlimited Access",
+      "description": "No limits on usage"
+    },
+    "noAds": {
+      "title": "Ad-Free Experience",
+      "description": "Enjoy without interruptions"
+    },
+    "premium": {
+      "title": "Premium Features",
+      "description": "Access all advanced tools"
+    },
+    "support": {
+      "title": "Priority Support",
+      "description": "Get help when you need it"
+    },
+    "sync": {
+      "title": "Cloud Sync",
+      "description": "Access on all your devices"
+    },
+    "export": {
+      "title": "Export Data",
+      "description": "Download your data anytime"
+    },
+    "insights": {
+      "title": "Advanced Insights",
+      "description": "Detailed analytics and reports"
+    },
+    "themes": {
+      "title": "Exclusive Themes",
+      "description": "Customize your experience"
+    }
+  },
+  "comparison": {
+    "title": "Free vs Pro",
+    "free": "Free",
+    "pro": "Pro",
+    "features": {
+      "basicFeatures": "Basic Features",
+      "limitedUsage": "Limited ({{limit}}/day)",
+      "unlimitedUsage": "Unlimited",
+      "adsIncluded": "With Ads",
+      "noAds": "No Ads",
+      "basicSupport": "Email Support",
+      "prioritySupport": "Priority Support",
+      "noSync": "Single Device",
+      "cloudSync": "Cloud Sync",
+      "basicExport": "Basic Export",
+      "fullExport": "Full Export"
+    }
+  },
+  "trial": {
+    "title": "Start Your Free Trial",
+    "subtitle": "{{days}} days free, then {{price}}/{{period}}",
+    "badge": "{{days}}-Day Free Trial",
+    "startTrial": "Start Free Trial",
+    "noCharge": "You won't be charged today",
+    "reminder": "We'll remind you {{days}} days before your trial ends",
+    "cancel": "Cancel anytime during the trial"
+  },
+  "cta": {
+    "subscribe": "Subscribe Now",
+    "startTrial": "Start Free Trial",
+    "continue": "Continue",
+    "upgrade": "Upgrade to Pro",
+    "restore": "Restore Purchases",
+    "maybeLater": "Maybe Later",
+    "notNow": "Not Now",
+    "learnMore": "Learn More"
+  },
+  "legal": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "autoRenewal": "Subscription automatically renews unless canceled at least 24 hours before the end of the current period.",
+    "managementInfo": "You can manage your subscription in your device settings.",
+    "trialInfo": "Free trial converts to paid subscription unless canceled.",
+    "priceDisclaimer": "Prices shown are in {{currency}}. Actual charge may vary based on your location."
+  },
+  "success": {
+    "title": "Welcome to Pro!",
+    "subtitle": "You now have full access to all features.",
+    "message": "Thank you for your support. Let's make great things happen!",
+    "cta": "Let's Go"
+  },
+  "cancel": {
+    "title": "We're Sorry to See You Go",
+    "subtitle": "Is there anything we can do to help?",
+    "reasons": {
+      "tooExpensive": "Too expensive",
+      "notUseful": "Not useful enough",
+      "foundAlternative": "Found an alternative",
+      "technicalIssues": "Technical issues",
+      "other": "Other reason"
+    },
+    "feedback": "Tell us more (optional)",
+    "confirmCancel": "Cancel Subscription",
+    "keepSubscription": "Keep My Subscription",
+    "offer": {
+      "title": "Wait! Here's a Special Offer",
+      "subtitle": "Stay with us at {{discount}}% off for {{duration}}",
+      "accept": "Accept Offer",
+      "decline": "No Thanks"
+    }
+  },
+  "expired": {
+    "title": "Your Subscription Has Expired",
+    "subtitle": "Renew to continue enjoying Pro features.",
+    "cta": "Renew Now"
+  },
+  "errors": {
+    "purchaseFailed": "Purchase failed. Please try again.",
+    "restoreFailed": "Could not restore purchases. Please try again.",
+    "alreadySubscribed": "You already have an active subscription.",
+    "notEligible": "This offer is not available for your account.",
+    "networkError": "Network error. Please check your connection.",
+    "unknown": "Something went wrong. Please try again."
+  },
+  "badges": {
+    "bestValue": "Best Value",
+    "popular": "Popular",
+    "recommended": "Recommended",
+    "limitedOffer": "Limited Offer",
+    "savePercent": "Save {{percent}}%",
+    "freeTrial": "Free Trial"
+  },
+  "pricing": {
+    "perWeek": "{{price}}/week",
+    "perMonth": "{{price}}/month",
+    "perYear": "{{price}}/year",
+    "oneTime": "{{price}} one-time",
+    "free": "Free",
+    "then": "then {{price}}/{{period}}",
+    "startingAt": "Starting at {{price}}"
+  }
+}

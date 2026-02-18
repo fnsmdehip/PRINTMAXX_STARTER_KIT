@@ -1,0 +1,88 @@
+{
+  "op_id": "C09",
+  "op_name": "Content Repurposing Engine",
+  "category": "CONTENT",
+  "created": "2026-02-12T07:52:15.039970",
+  "stories": [
+    {
+      "id": "C09-T01",
+      "description": "Build 1-to-20 repurposing pipeline",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C09-T02",
+      "description": "Create format adapters per platform",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C09-T03",
+      "description": "Automate caption generation",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C09-T04",
+      "description": "Build scheduling workflow",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C09-T05",
+      "description": "Track cross-platform performance",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C09-T06",
+      "description": "Optimize adaptation quality",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C09-T07",
+      "description": "Build template library",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "C09-T08",
+      "description": "Measure distribution roi",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+# Twitter/X Alpha Scraper - Quick Reference
+
+## Installation (One-Time)
+pip install playwright requests beautifulsoup4 tenacity
+playwright install chromium
+
+## Validate Setup
+python3 AUTOMATIONS/scripts/test_twitter_setup.py
+
+## Daily Timeline Scraping
+
+# Test run (preview only)
+python3 AUTOMATIONS/scripts/daily_timeline_scraper.py --dry-run
+
+# First real scrape
+python3 AUTOMATIONS/scripts/daily_timeline_scraper.py
+
+# Watch browser (debugging)
+python3 AUTOMATIONS/scripts/daily_timeline_scraper.py --visible
+
+# Scrape HIGH-tier instead of HIGHEST
+python3 AUTOMATIONS/scripts/daily_timeline_scraper.py --tier HIGH
+
+## Bookmark Scraping
+
+# 1. Export bookmarks in browser console (see TWITTER_ALPHA_README.md)
+# 2. Process latest bookmark file
+python3 AUTOMATIONS/x_bookmarks/extract_alpha_from_bookmarks.py --latest
+
+## Review Findings
+open LEDGER/ALPHA_STAGING.csv
+# Review entries with status=PENDING_REVIEW
+# Change to APPROVED or REJECTED
+# Add reviewer_notes
+
+## Check Logs
+tail -50 AUTOMATIONS/logs/daily_scraper.log
+cat AUTOMATIONS/logs/scraper_metrics.json
+
+## Automate Daily (Cron)
+crontab -e
+# Add this line:
+0 9 * * * cd /Users/macbookpro/Documents/PRINTMAXX_STARTER_KIT && /usr/bin/python3 AUTOMATIONS/scripts/daily_timeline_scraper.py >> AUTOMATIONS/logs/daily_scraper.log 2>&1
+
+## Proxy Setup (Optional but Recommended)
+# Add to .env file:
+SOAX_USERNAME=your_username
+SOAX_PASSWORD=your_password
+# or
+SMARTPROXY_USERNAME=your_username
+SMARTPROXY_PASSWORD=your_password
+
+## Files
+Strategy: AUTOMATIONS/twitter_alpha_scraper.md
+Guide: AUTOMATIONS/TWITTER_ALPHA_README.md
+Summary: AUTOMATIONS/TWITTER_ALPHA_SUMMARY.md
+Sources: LEDGER/HIGH_SIGNAL_SOURCES.csv
+Findings: LEDGER/ALPHA_STAGING.csv
+Logs: AUTOMATIONS/logs/daily_scraper.log
+
+## Support
+See TWITTER_ALPHA_README.md for troubleshooting

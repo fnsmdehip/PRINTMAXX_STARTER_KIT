@@ -1,0 +1,85 @@
+# Claude Code local preferences
+CLAUDE.local.md
+.claude/CLAUDE.local.md
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build artifacts
+.next/
+out/
+dist/
+build/
+
+# Dependencies
+node_modules/
+.venv-qwen3-tts/
+.uv-cache/
+.hf-cache/
+
+# OS files
+.DS_Store
+*.local
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.pem
+*.p8
+*.p12
+*.mobileprovision
+*.jks
+*.keystore
+*keystore*
+.vercel
+.env
+
+# Secrets (credentials, payment info, API keys)
+SECRETS/
+.guardrails/
+
+# Runtime outputs and sensitive data
+output/
+cal ai/
+logs/
+models/Qwen3-TTS-12Hz-1.7B-CustomVoice/
+
+# PII-heavy operational data (do not commit)
+AUTOMATIONS/leads/
+AUTOMATIONS/outreach/
+AUTOMATIONS/logs/
+AUTOMATIONS/freelance_leads/
+
+# Large audit/context dumps (too big for git)
+AUDIT/FULL_CONTEXT_*/
+AUDIT/META_VISION_*_FILE_INVENTORY.csv
+
+# Large model/data files
+*.gguf
+*.bin
+*.safetensors
+*.pkl
+
+# Python cache
+__pycache__/
+*.pyc

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX Command Center</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-panel: #161621;
+    --bg-panel-header: #1a1a2e;
+    --border: #2a2a3e;
+    --border-glow: #3a3a5e;
+    --text-primary: #e8e8f0;
+    --text-secondary: #8888a8;
+    --text-muted: #5a5a78;
+    --green: #22c55e;
+    --green-dim: rgba(34,197,94,0.15);
+    --amber: #f59e0b;
+    --amber-dim: rgba(245,158,11,0.15);
+    --red: #ef4444;
+    --red-dim: rgba(239,68,68,0.15);
+    --blue: #3b82f6;
+    --blue-dim: rgba(59,130,246,0.15);
+    --purple: #a855f7;
+    --purple-dim: rgba(168,85,247,0.15);
+    --cyan: #06b6d4;
+    --cyan-dim: rgba(6,182,212,0.15);
+  }
+
+  body {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  .header {
+    background: linear-gradient(180deg, #1a1a2e 0%, var(--bg-primary) 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--green), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+    display: inline-block;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 16px;
+    padding: 20px 24px;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .panel:hover {
+    border-color: var(--border-glow);
+  }
+
+  .panel-header {
+    background: var(--bg-panel-header);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .panel-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  .panel-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .badge-green { background: var(--green-dim); color: var(--green); }
+  .badge-amber { background: var(--amber-dim); color: var(--amber); }
+  .badge-red { background: var(--red-dim); color: var(--red); }
+  .badge-blue { background: var(--blue-dim); color: var(--blue); }
+  .badge-purple { background: var(--purple-dim); color: var(--purple); }
+
+  .panel-body {
+    padding: 16px;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1.2;
+  }
+
+  .stat-value.amber { color: var(--amber); }
+  .stat-value.red { color: var(--red); }
+  .stat-value.blue { color: var(--blue); }
+  .stat-value.purple { color: var(--purple); }
+  .stat-value.cyan { color: var(--cyan); }
+
+  .stat-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .health-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(42,42,62,0.5);
+    font-size: 12px;
+  }
+
+  .health-row:last-child { border-bottom: none; }
+
+  .health-name { color: var(--text-secondary); flex: 1; }
+  .health-time { color: var(--text-muted); font-size: 11px; margin-right: 12px; }
+
+  .health-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  .health-status {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    min-width: 50px;
+    text-align: right;
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .bar-label {
+    width: 140px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 18px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 8px;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+    min-width: 2px;
+  }
+
+  .bar-count {
+    min-width: 40px;
+    text-align: right;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+  }
+
+  .site-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .site-card:hover {
+    border-color: var(--green);
+    background: var(--green-dim);
+  }
+
+  .site-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .site-name {
+    color: var(--text-secondary);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .site-desc {
+    color: var(--text-muted);
+    font-size: 10px;
+  }
+
+  .chart-container {
+    position: relative;
+    height: 200px;
+    margin-top: 12px;
+  }
+
+  .kpi-strip {
+    display: flex;
+    gap: 12px;
+    padding: 10px 24px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+  }
+
+  .kpi-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .kpi-label { color: var(--text-muted); }
+  .kpi-value { color: var(--text-primary); font-weight: 600; }
+  .kpi-value.up { color: var(--green); }
+  .kpi-value.down { color: var(--red); }
+
+  .divider { width: 1px; background: var(--border); margin: 0 4px; }
+
+  .panel-wide {
+    grid-column: span 2;
+  }
+
+  .pipeline-stages {
+    display: flex;
+    gap: 2px;
+    margin-top: 12px;
+    align-items: flex-end;
+  }
+
+  .stage {
+    flex: 1;
+    text-align: center;
+  }
+
+  .stage-bar {
+    background: var(--green);
+    border-radius: 3px 3px 0 0;
+    margin: 0 4px;
+    min-height: 4px;
+    transition: height 0.5s;
+  }
+
+  .stage-label {
+    font-size: 9px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .stage-count {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2px;
+  }
+
+  .mini-table {
+    width: 100%;
+    font-size: 11px;
+    margin-top: 8px;
+  }
+
+  .mini-table td {
+    padding: 4px 6px;
+    border-bottom: 1px solid rgba(42,42,62,0.3);
+  }
+
+  .mini-table td:first-child { color: var(--text-secondary); }
+  .mini-table td:last-child { text-align: right; font-weight: 500; }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .panel-wide {
+      grid-column: span 1;
+    }
+    .header {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .kpi-strip {
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-primary); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--border-glow); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div>
+      <div class="logo">PRINTMAXX</div>
+      <div class="logo-sub">command center</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span><span class="pulse-dot"></span> SYSTEMS ONLINE</span>
+    <span id="clock">2026-02-13 20:37:08</span>
+    <span style="color:var(--text-muted)">Generated: Feb 13 20:37</span>
+  </div>
+</div>
+
+<!-- KPI STRIP -->
+<div class="kpi-strip">
+  <div class="kpi-item">
+    <span class="kpi-label">ALPHA</span>
+    <span class="kpi-value up">2,987</span>
+  </div>
+  <div class="divider"></div>
+  <div class="kpi-item">
+    <span class="kpi-label">AUTO-OPS</span>
+    <span class="kpi-value up">337</span>
+  </div>
+  <div class="divider"></div>
+  <div class="kpi-item">
+    <span class="kpi-label">LEADS</span>
+    <span class="kpi-value">1,035</span>
+  </div>
+  <div class="divider"></div>
+  <div class="kpi-item">
+    <span class="kpi-label">HOT LEADS</span>
+    <span class="kpi-value up">5</span>
+  </div>
+  <div class="divider"></div>
+  <div class="kpi-item">
+    <span class="kpi-label">PIPELINE</span>
+    <span class="kpi-value">67,889</span>
+  </div>
+  <div class="divider"></div>
+  <div class="kpi-item">
+    <span class="kpi-label">SITES LIVE</span>
+    <span class="kpi-value up">19</span>
+  </div>
+  <div class="divider"></div>
+  <div class="kpi-item">
+    <span class="kpi-label">REVENUE</span>
+    <span class="kpi-value up">$353</span>
+  </div>
+  <div class="divider"></div>
+  <div class="kpi-item">
+    <span class="kpi-label">CONTENT</span>
+    <span class="kpi-value">54</span>
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="grid">
+
+  <!-- Panel 1: Pipeline Status -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Research Pipeline</span>
+      <span class="panel-badge badge-green">ACTIVE</span>
+    </div>
+    <div class="panel-body">
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-value">1,378</div>
+          <div class="stat-label">Total Alpha (Lifetime)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value cyan">54</div>
+          <div class="stat-label">Content Generated</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value amber">1,378</div>
+          <div class="stat-label">Alpha Today</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value purple">54</div>
+          <div class="stat-label">Content Today</div>
+        </div>
+      </div>
+      <table class="mini-table" style="margin-top:12px">
+        <tr><td>Last Run</td><td>2026-02-13T19:19:57</td></tr>
+        <tr><td>Pipeline Runs (Session)</td><td>3</td></tr>
+        <tr><td>Avg Alpha/Run</td><td>459</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Panel 2: Alpha Funnel -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Alpha Funnel</span>
+      <span class="panel-badge badge-purple">2,987 ENTRIES</span>
+    </div>
+    <div class="panel-body">
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-value">440</div>
+          <div class="stat-label">Approved</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value amber">391</div>
+          <div class="stat-label">Pending Review</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value blue">1,142</div>
+          <div class="stat-label">Engagement Bait</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value red">0</div>
+          <div class="stat-label">Rejected</div>
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:11px;color:var(--text-muted);margin-bottom:6px;">TOP CATEGORIES</div>
+      <div class="bar-row">
+        <div class="bar-label">GENERAL</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--green);opacity:1.0;"></div></div>
+        <div class="bar-count">432</div>
+      </div><div class="bar-row">
+        <div class="bar-label">TOOL_ALPHA</div>
+        <div class="bar-track"><div class="bar-fill" style="width:64%;background:var(--green);opacity:0.9400000000000001;"></div></div>
+        <div class="bar-count">275</div>
+      </div><div class="bar-row">
+        <div class="bar-label">CONTENT_FORMAT</div>
+        <div class="bar-track"><div class="bar-fill" style="width:34%;background:var(--green);opacity:0.88;"></div></div>
+        <div class="bar-count">147</div>
+      </div><div class="bar-row">
+        <div class="bar-label">GROWTH_HACK</div>
+        <div class="bar-track"><div class="bar-fill" style="width:29%;background:var(--green);opacity:0.8200000000000001;"></div></div>
+        <div class="bar-count">125</div>
+      </div><div class="bar-row">
+        <div class="bar-label">AI_ALPHA</div>
+        <div class="bar-track"><div class="bar-fill" style="width:25%;background:var(--green);opacity:0.76;"></div></div>
+        <div class="bar-count">108</div>
+      </div><div class="bar-row">
+        <div class="bar-label">OUTBOUND</div>
+        <div class="bar-track"><div class="bar-fill" style="width:24%;background:var(--green);opacity:0.7;"></div></div>
+        <div class="bar-count">105</div>
+      </div><div class="bar-row">
+        <div class="bar-label">APP_FACTORY</div>
+        <div class="bar-track"><div class="bar-fill" style="width:22%;background:var(--green);opacity:0.64;"></div></div>
+        <div class="bar-count">97</div>
+      </div><div class="bar-row">
+        <div class="bar-label">MONETIZATION</div>
+        <div class="bar-track"><div class="bar-fill" style="width:21%;background:var(--green);opacity:0.5800000000000001;"></div></div>
+        <div class="bar-count">90</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 3: Auto-Ops Tracker -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Auto-Ops Tracker</span>
+      <span class="panel-badge badge-blue">337 OPS</span>
+    </div>
+    <div class="panel-body">
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-value">337</div>
+          <div class="stat-label">Total Generated</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value cyan">433</div>
+          <div class="stat-label">Alpha w/ Ops</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--text-muted);margin-bottom:6px;">BY STATUS</div>
+      <div class="bar-row">
+        <div class="bar-label">GENERATED</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--amber);"></div></div>
+        <div class="bar-count">337</div>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:var(--text-muted);margin-bottom:6px;">BY PRIORITY</div>
+      <div class="bar-row">
+        <div class="bar-label">LOW</div>
+        <div class="bar-track"><div class="bar-fill" style="width:67%;background:var(--green);"></div></div>
+        <div class="bar-count">225</div>
+      </div><div class="bar-row">
+        <div class="bar-label">HIGH</div>
+        <div class="bar-track"><div class="bar-fill" style="width:31%;background:var(--red);"></div></div>
+        <div class="bar-count">105</div>
+      </div><div class="bar-row">
+        <div class="bar-label">MEDIUM</div>
+        <div class="bar-track"><div class="bar-fill" style="width:2%;background:var(--amber);"></div></div>
+        <div class="bar-count">7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 4: System Health -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">System Health</span>
+      <span class="panel-badge badge-amber">6/14 LIVE</span>
+    </div>
+    <div class="panel-body">
+      <div class="health-row">
+        <span class="health-dot" style="background:#ef4444"></span>
+        <span class="health-name">Twitter Scraper</span>
+        <span class="health-time">N/A</span>
+        <span class="health-status" style="color:#ef4444">MISSING</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#ef4444"></span>
+        <span class="health-name">Reddit Scraper</span>
+        <span class="health-time">N/A</span>
+        <span class="health-status" style="color:#ef4444">MISSING</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#22c55e"></span>
+        <span class="health-name">Research Pipeline</span>
+        <span class="health-time">2026-02-13 19:19</span>
+        <span class="health-status" style="color:#22c55e">LIVE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#22c55e"></span>
+        <span class="health-name">Alpha Screener</span>
+        <span class="health-time">2026-02-13 18:30</span>
+        <span class="health-status" style="color:#22c55e">LIVE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#22c55e"></span>
+        <span class="health-name">Ecom Arb Engine</span>
+        <span class="health-time">2026-02-13 20:34</span>
+        <span class="health-status" style="color:#22c55e">LIVE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#22c55e"></span>
+        <span class="health-name">Freelance Scanner</span>
+        <span class="health-time">2026-02-13 20:00</span>
+        <span class="health-status" style="color:#22c55e">LIVE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#f59e0b"></span>
+        <span class="health-name">Trend Aggregator</span>
+        <span class="health-time">2026-02-13 03:08</span>
+        <span class="health-status" style="color:#f59e0b">STALE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#f59e0b"></span>
+        <span class="health-name">Closed Loop</span>
+        <span class="health-time">2026-02-13 03:33</span>
+        <span class="health-status" style="color:#f59e0b">STALE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#f59e0b"></span>
+        <span class="health-name">Morning Brain</span>
+        <span class="health-time">2026-02-13 05:30</span>
+        <span class="health-status" style="color:#f59e0b">STALE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#22c55e"></span>
+        <span class="health-name">Evening Brain</span>
+        <span class="health-time">2026-02-13 18:30</span>
+        <span class="health-status" style="color:#22c55e">LIVE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#22c55e"></span>
+        <span class="health-name">Venture Tracker</span>
+        <span class="health-time">2026-02-13 20:00</span>
+        <span class="health-status" style="color:#22c55e">LIVE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#f59e0b"></span>
+        <span class="health-name">Auto-Resume</span>
+        <span class="health-time">2026-02-13 08:30</span>
+        <span class="health-status" style="color:#f59e0b">STALE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#f59e0b"></span>
+        <span class="health-name">Overnight Cron</span>
+        <span class="health-time">2026-02-13 02:38</span>
+        <span class="health-status" style="color:#f59e0b">STALE</span>
+      </div><div class="health-row">
+        <span class="health-dot" style="background:#f59e0b"></span>
+        <span class="health-name">Algo Detection</span>
+        <span class="health-time">2026-02-13 07:00</span>
+        <span class="health-status" style="color:#f59e0b">STALE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 5: Live Sites -->
+  <div class="panel panel-wide">
+    <div class="panel-header">
+      <span class="panel-title">Live Sites</span>
+      <span class="panel-badge badge-green">19 DEPLOYED</span>
+    </div>
+    <div class="panel-body">
+      <div class="sites-grid">
+        <a href="https://printmaxx-seo.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-0">
+            <span class="site-dot" id="dot-0" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">printmaxx-seo</div>
+              <div class="site-desc">601 SEO Pages</div>
+            </div>
+          </div>
+        </a><a href="https://ramadan-tracker.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-1">
+            <span class="site-dot" id="dot-1" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">ramadan-tracker</div>
+              <div class="site-desc">Ramadan PWA</div>
+            </div>
+          </div>
+        </a><a href="https://focuslock-app.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-2">
+            <span class="site-dot" id="dot-2" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">focuslock-app</div>
+              <div class="site-desc">FocusLock App</div>
+            </div>
+          </div>
+        </a><a href="https://habitforge-app.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-3">
+            <span class="site-dot" id="dot-3" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">habitforge-app</div>
+              <div class="site-desc">HabitForge App</div>
+            </div>
+          </div>
+        </a><a href="https://mealmaxx-app.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-4">
+            <span class="site-dot" id="dot-4" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">mealmaxx-app</div>
+              <div class="site-desc">MealMaxx App</div>
+            </div>
+          </div>
+        </a><a href="https://sleepmaxx-app.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-5">
+            <span class="site-dot" id="dot-5" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">sleepmaxx-app</div>
+              <div class="site-desc">SleepMaxx App</div>
+            </div>
+          </div>
+        </a><a href="https://walktounlock-app.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-6">
+            <span class="site-dot" id="dot-6" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">walktounlock-app</div>
+              <div class="site-desc">WalkToUnlock App</div>
+            </div>
+          </div>
+        </a><a href="https://printmaxx-portfolio.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-7">
+            <span class="site-dot" id="dot-7" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">printmaxx-portfolio</div>
+              <div class="site-desc">Portfolio</div>
+            </div>
+          </div>
+        </a><a href="https://printmaxx-analyzer.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-8">
+            <span class="site-dot" id="dot-8" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">printmaxx-analyzer</div>
+              <div class="site-desc">Analyzer</div>
+            </div>
+          </div>
+        </a><a href="https://printmaxx-dashboard.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-9">
+            <span class="site-dot" id="dot-9" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">printmaxx-dashboard</div>
+              <div class="site-desc">Dashboard</div>
+            </div>
+          </div>
+        </a><a href="https://dental-demo.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-10">
+            <span class="site-dot" id="dot-10" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">dental-demo</div>
+              <div class="site-desc">Dental Demo</div>
+            </div>
+          </div>
+        </a><a href="https://restaurant-site-demo.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-11">
+            <span class="site-dot" id="dot-11" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">restaurant-site-demo</div>
+              <div class="site-desc">Restaurant Demo</div>
+            </div>
+          </div>
+        </a><a href="https://fitness-demo.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-12">
+            <span class="site-dot" id="dot-12" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">fitness-demo</div>
+              <div class="site-desc">Fitness Demo</div>
+            </div>
+          </div>
+        </a><a href="https://legal-demo.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-13">
+            <span class="site-dot" id="dot-13" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">legal-demo</div>
+              <div class="site-desc">Legal Demo</div>
+            </div>
+          </div>
+        </a><a href="https://plumber-demo.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-14">
+            <span class="site-dot" id="dot-14" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">plumber-demo</div>
+              <div class="site-desc">Plumber Demo</div>
+            </div>
+          </div>
+        </a><a href="https://realtor-demo.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-15">
+            <span class="site-dot" id="dot-15" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">realtor-demo</div>
+              <div class="site-desc">Realtor Demo</div>
+            </div>
+          </div>
+        </a><a href="https://dental-motion.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-16">
+            <span class="site-dot" id="dot-16" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">dental-motion</div>
+              <div class="site-desc">Dental Motion</div>
+            </div>
+          </div>
+        </a><a href="https://realtor-motion.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-17">
+            <span class="site-dot" id="dot-17" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">realtor-motion</div>
+              <div class="site-desc">Realtor Motion</div>
+            </div>
+          </div>
+        </a><a href="https://restaurant-motion.surge.sh" target="_blank" style="text-decoration:none;">
+          <div class="site-card" id="site-18">
+            <span class="site-dot" id="dot-18" style="background:var(--text-muted)"></span>
+            <div>
+              <div class="site-name">restaurant-motion</div>
+              <div class="site-desc">Restaurant Motion</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 6: Content Pipeline -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Content Pipeline</span>
+      <span class="panel-badge badge-cyan" style="background:var(--cyan-dim);color:var(--cyan);">GENERATING</span>
+    </div>
+    <div class="panel-body">
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-value cyan">2</div>
+          <div class="stat-label">Auto-Generated</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">10</div>
+          <div class="stat-label">Buffer CSVs</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value purple">27</div>
+          <div class="stat-label">Social Content Files</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value amber">54</div>
+          <div class="stat-label">Pipeline Content</div>
+        </div>
+      </div>
+      <table class="mini-table" style="margin-top:12px">
+        <tr><td>Auto-Gen Latest</td><td>2026-02-13 19:19</td></tr>
+        <tr><td>Ops Content Deployed</td><td>0</td></tr>
+        <tr><td>Ops Content Generated</td><td>337</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Panel 7: Lead Pipeline -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Lead Pipeline</span>
+      <span class="panel-badge badge-amber">67,889 IN PIPE</span>
+    </div>
+    <div class="panel-body">
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-value">1,035</div>
+          <div class="stat-label">Total Leads</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value amber">5</div>
+          <div class="stat-label">Hot Leads</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value blue">36</div>
+          <div class="stat-label">Outreach Files</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value purple">67,889</div>
+          <div class="stat-label">Pipeline Total</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--text-muted);margin-bottom:6px;">PIPELINE BY STATUS</div>
+      <div class="bar-row">
+        <div class="bar-label">FALSE</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--blue);"></div></div>
+        <div class="bar-count">67,802</div>
+      </div><div class="bar-row">
+        <div class="bar-label">READY</div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--amber);"></div></div>
+        <div class="bar-count">87</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 8: Revenue & Ventures -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Revenue & Ventures</span>
+      <span class="panel-badge badge-green">$353 P&L</span>
+    </div>
+    <div class="panel-body">
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-value up" style="color:var(--green)">$478</div>
+          <div class="stat-label">Total Revenue</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value red">$125</div>
+          <div class="stat-label">Total Expenses</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value" style="color:var(--green)">$353</div>
+          <div class="stat-label">Net Profit</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value blue">2</div>
+          <div class="stat-label">Tracked Methods</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--text-muted);margin-bottom:6px;">TOP METHODS BY PROFIT</div>
+      <div class="bar-row">
+        <div class="bar-label">MM007_COLD_OUTBOUN</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--green);"></div></div>
+        <div class="bar-count" style="color:var(--green)">$348</div>
+      </div><div class="bar-row">
+        <div class="bar-label">MM010_DROPSHIP</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--green);"></div></div>
+        <div class="bar-count" style="color:var(--green)">$5</div>
+      </div>
+      <table class="mini-table" style="margin-top:8px">
+        <tr><td>Paper Trades Active</td><td>2</td></tr>
+        <tr><td>Revenue Sources</td><td>2</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Panel 9: Alpha Category Breakdown (Chart) -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Alpha by Category</span>
+      <span class="panel-badge badge-purple">1432 CATEGORIES</span>
+    </div>
+    <div class="panel-body">
+      <div class="chart-container">
+        <canvas id="alphaCategoryChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 10: Ops Category Breakdown (Chart) -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Auto-Ops by Category</span>
+      <span class="panel-badge badge-blue">14 TYPES</span>
+    </div>
+    <div class="panel-body">
+      <div class="chart-container">
+        <canvas id="opsCategoryChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  PRINTMAXX COMMAND CENTER v1.0 | Generated 2026-02-13 20:37:08 |
+  Regenerate: <code style="color:var(--cyan)">python3 builds/master_dashboard/generate_dashboard.py</code> |
+  Auto-refresh: 60s
+</div>
+
+<script>
+// Live clock
+setInterval(() => {
+  const el = document.getElementById('clock');
+  if (el) el.textContent = new Date().toLocaleString('sv-SE').replace(',','');
+}, 1000);
+
+// Auto-refresh every 60s (reloads page)
+setTimeout(() => location.reload(), 60000);
+
+// Site health checks (ping via Image trick - not perfect but gives visual feedback)
+const sites = ["printmaxx-seo.surge.sh", "ramadan-tracker.surge.sh", "focuslock-app.surge.sh", "habitforge-app.surge.sh", "mealmaxx-app.surge.sh", "sleepmaxx-app.surge.sh", "walktounlock-app.surge.sh", "printmaxx-portfolio.surge.sh", "printmaxx-analyzer.surge.sh", "printmaxx-dashboard.surge.sh", "dental-demo.surge.sh", "restaurant-site-demo.surge.sh", "fitness-demo.surge.sh", "legal-demo.surge.sh", "plumber-demo.surge.sh", "realtor-demo.surge.sh", "dental-motion.surge.sh", "realtor-motion.surge.sh", "restaurant-motion.surge.sh"];
+sites.forEach((site, i) => {
+  const dot = document.getElementById('dot-' + i);
+  fetch('https://' + site, { mode: 'no-cors', cache: 'no-cache' })
+    .then(() => {
+      if (dot) dot.style.background = 'var(--green)';
+    })
+    .catch(() => {
+      if (dot) dot.style.background = 'var(--red)';
+    });
+});
+
+// Charts
+const chartColors = [
+  '#22c55e', '#3b82f6', '#a855f7', '#f59e0b', '#ef4444',
+  '#06b6d4', '#ec4899', '#14b8a6', '#f97316', '#8b5cf6',
+  '#10b981', '#6366f1', '#e11d48'
+];
+
+// Alpha category pie chart
+const alphaCtx = document.getElementById('alphaCategoryChart');
+if (alphaCtx) {
+  const alphaData = [{"label": "GENERAL", "value": 432}, {"label": "TOOL_ALPHA", "value": 275}, {"label": "CONTENT_FORMAT", "value": 147}, {"label": "GROWTH_HACK", "value": 125}, {"label": "AI_ALPHA", "value": 108}, {"label": "OUTBOUND", "value": 105}, {"label": "APP_FACTORY", "value": 97}, {"label": "MONETIZATION", "value": 90}, {"label": "FREELANCE", "value": 58}, {"label": "ECOM", "value": 31}];
+  new Chart(alphaCtx, {
+    type: 'doughnut',
+    data: {
+      labels: alphaData.map(d => d.label),
+      datasets: [{
+        data: alphaData.map(d => d.value),
+        backgroundColor: chartColors.slice(0, alphaData.length),
+        borderColor: '#161621',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: {
+            color: '#8888a8',
+            font: { family: "'JetBrains Mono', monospace", size: 10 },
+            boxWidth: 12,
+            padding: 8
+          }
+        }
+      }
+    }
+  });
+}
+
+// Ops category pie chart
+const opsCtx = document.getElementById('opsCategoryChart');
+if (opsCtx) {
+  const opsData = [{"label": "TOOL_ALPHA", "value": 83}, {"label": "OUTBOUND", "value": 44}, {"label": "GROWTH_HACK", "value": 38}, {"label": "APP_FACTORY", "value": 36}, {"label": "CONTENT_FORMAT", "value": 30}, {"label": "MONETIZATION", "value": 27}, {"label": "AI_INFLUENCER", "value": 21}, {"label": "GENERAL", "value": 20}, {"label": "CONTENT_FARM", "value": 13}, {"label": "SEO_GEO_ASO", "value": 9}];
+  new Chart(opsCtx, {
+    type: 'doughnut',
+    data: {
+      labels: opsData.map(d => d.label),
+      datasets: [{
+        data: opsData.map(d => d.value),
+        backgroundColor: chartColors.slice(0, opsData.length),
+        borderColor: '#161621',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: {
+            color: '#8888a8',
+            font: { family: "'JetBrains Mono', monospace", size: 10 },
+            boxWidth: 12,
+            padding: 8
+          }
+        }
+      }
+    }
+  });
+}
+</script>
+
+
+<footer style="padding:18px 12px; border-top:1px solid rgba(0,0,0,0.08);"><!-- PRINTMAXX LEGAL LINKS -->
+<div style="margin-top:12px; font-size:12px; opacity:0.85; text-align:center;">
+  <a href="marketing-disclosure.html">Marketing Disclosure</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="privacy.html">Privacy</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="terms.html">Terms</a>
+</div>
+</footer>
+</body>
+</html>

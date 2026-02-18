@@ -1,0 +1,732 @@
+rank,alpha_id,backtest_score,decision,category,source,action_required
+1,ALPHA465,75,SCALE,APP_FACTORY,RevenueCat + Superwall + Apphud 2025 Data,Deploy to EXECUTION phase immediately
+2,ALPHA550,75,SCALE,DEPIN_PASSIVE,GPU Rental Vast.ai: $2-$5/GPU/Day Passive Income,Deploy to EXECUTION phase immediately
+3,ALPHA391,75,SCALE,EMERGING_PLATFORMS,Substack growth research + EscapeTheCubicle + AI Maker,Deploy to EXECUTION phase immediately
+4,ALPHA972913,75,SCALE,MONETIZATION,Reddit r/passive_income + Whop Blog,Deploy to EXECUTION phase immediately
+5,ALPHA325,70,SCALE,ECOM_ARB,@maverickecom TikTok Shop Strategy,Deploy to EXECUTION phase immediately
+6,ALPHA561,70,SCALE,ECOM_ARB,Web Research,Deploy to EXECUTION phase immediately
+7,ALPHA562,70,SCALE,ECOM_ARB,Web Research,Deploy to EXECUTION phase immediately
+8,ALPHA010,70,SCALE,MONETIZATION,@knoxtwts,Deploy to EXECUTION phase immediately
+9,ALPHA36DCFA,70,SCALE,MONETIZATION,KNOX,Deploy to EXECUTION phase immediately
+10,ALPHA362,70,SCALE,MONETIZATION,FTC + NY State Legislature + Platform Enforcement,Deploy to EXECUTION phase immediately
+11,ALPHA310,65,PAPER_TRADE,MONETIZATION,Dev.to Paywall Study,"Start paper trade with $50-100 budget, 14 days"
+12,ALPHA492,65,PAPER_TRADE,CONTENT_FARM,Web research (Traackr + MickyWeis + Affiverse + ContentGrip + OpusClip),"Start paper trade with $50-100 budget, 14 days"
+13,ALPHA495,65,PAPER_TRADE,MONETIZATION,Web research (TheStreet + InfluencerMarketingHub + PPC.Land + Shopify),"Start paper trade with $50-100 budget, 14 days"
+14,ALPHA020,65,PAPER_TRADE,MONETIZATION,@gregisenberg,"Start paper trade with $50-100 budget, 14 days"
+15,ALPHA139,65,PAPER_TRADE,ASO,Research,"Start paper trade with $50-100 budget, 14 days"
+16,ALPHA158,65,PAPER_TRADE,ASO,Research,"Start paper trade with $50-100 budget, 14 days"
+17,ALPHA342,65,PAPER_TRADE,OUTBOUND,@yegormethod Live Contract Edit Close,"Start paper trade with $50-100 budget, 14 days"
+18,ALPHA363,65,PAPER_TRADE,AI_INFLUENCER,FTC Health Claims Enforcement + AI UGC Community,"Start paper trade with $50-100 budget, 14 days"
+19,ALPHA401,65,PAPER_TRADE,OUTBOUND,Cold email multi-channel research (Rev-Empire + Cleverly),"Start paper trade with $50-100 budget, 14 days"
+20,ALPHA409,65,PAPER_TRADE,OUTBOUND,Cleverly + MarketingProfs cold email data,"Start paper trade with $50-100 budget, 14 days"
+21,ALPHA292,60,PAPER_TRADE,AI_INFLUENCER,Fanvue Platform Data,"Start paper trade with $50-100 budget, 14 days"
+22,ALPHA339,60,PAPER_TRADE,CONTENT_FARM,@iamgdsa FindMeCreators Micro-Influencer,"Start paper trade with $50-100 budget, 14 days"
+23,ALPHA419,60,PAPER_TRADE,APP_FACTORY,WebSearch,"Start paper trade with $50-100 budget, 14 days"
+24,ALPHA424,60,PAPER_TRADE,MONETIZATION,WebSearch,"Start paper trade with $50-100 budget, 14 days"
+25,ALPHA502,60,PAPER_TRADE,APP_FACTORY,Web research (Zion Market Research + Newsweek + Brightn.app + SQ Magazine),"Start paper trade with $50-100 budget, 14 days"
+26,ALPHA529,60,PAPER_TRADE,MONETIZATION,"Skool Communities: $300K+/mo Top Creators, 174K+ Communities, $9/mo Starter","Start paper trade with $50-100 budget, 14 days"
+27,ALPHA530,60,PAPER_TRADE,CONTENT_FARM,TikTok Creator Rewards: 10-20x Payout Increase to $0.40-$1.00/1K Views,"Start paper trade with $50-100 budget, 14 days"
+28,ALPHA535,60,PAPER_TRADE,TOOL_ALPHA,"Micro-SaaS Reality: 70% Earn Less Than Barista, AI-Integrated Grow 2x","Start paper trade with $50-100 budget, 14 days"
+29,ALPHA529,60,PAPER_TRADE,MONETIZATION,"Skool Communities: $300K+/mo Top Creators, 174K+ Communities, $9/mo Starter","Start paper trade with $50-100 budget, 14 days"
+30,ALPHA530,60,PAPER_TRADE,CONTENT_FARM,TikTok Creator Rewards: 10-20x Payout Increase to $0.40-$1.00/1K Views,"Start paper trade with $50-100 budget, 14 days"
+31,ALPHA529,60,PAPER_TRADE,MONETIZATION,"Skool Communities: $300K+/mo Top Creators, 174K+ Communities, $9/mo Starter","Start paper trade with $50-100 budget, 14 days"
+32,ALPHA530,60,PAPER_TRADE,CONTENT_FARM,TikTok Creator Rewards: 10-20x Payout Increase to $0.40-$1.00/1K Views,"Start paper trade with $50-100 budget, 14 days"
+33,ALPHA529,60,PAPER_TRADE,MONETIZATION,"Skool Communities: $300K+/mo Top Creators, 174K+ Communities, $9/mo Starter","Start paper trade with $50-100 budget, 14 days"
+34,ALPHA530,60,PAPER_TRADE,CONTENT_FARM,TikTok Creator Rewards: 10-20x Payout Increase to $0.40-$1.00/1K Views,"Start paper trade with $50-100 budget, 14 days"
+35,ALPHA535,60,PAPER_TRADE,TOOL_ALPHA,"Micro-SaaS Reality: 70% Earn Less Than Barista, AI-Integrated Grow 2x","Start paper trade with $50-100 budget, 14 days"
+36,ALPHA080,60,PAPER_TRADE,GROWTH_HACK,@lottsnomad,"Start paper trade with $50-100 budget, 14 days"
+37,ALPHA123,60,PAPER_TRADE,INFO_PRODUCTS,@xivy0k,"Start paper trade with $50-100 budget, 14 days"
+38,ALPHA355,60,PAPER_TRADE,TOOL_ALPHA,@Argona0x Vibe Coding Alpha Guide,"Start paper trade with $50-100 budget, 14 days"
+39,ALPHA378,60,PAPER_TRADE,APP_FACTORY,Adapty case study (Wave AI),"Start paper trade with $50-100 budget, 14 days"
+40,ALPHA389,60,PAPER_TRADE,EMERGING_PLATFORMS,Backlinko + Business of Apps + Bluesky Blog,"Start paper trade with $50-100 budget, 14 days"
+41,ALPHA392,60,PAPER_TRADE,OUTBOUND,LinkedIn limits research (LeadLoft + Evaboot + LinkedFusion),"Start paper trade with $50-100 budget, 14 days"
+42,ALPHA403,60,PAPER_TRADE,APP_FACTORY,Micro-SaaS research (Lovable + Microns.io + DEV),"Start paper trade with $50-100 budget, 14 days"
+43,ALPHA407,60,PAPER_TRADE,TOOL_ALPHA,Beehiiv vs Substack research (EmailToolTester + Beehiiv blog),"Start paper trade with $50-100 budget, 14 days"
+44,ALPHA411,60,PAPER_TRADE,ECOM_ARBITRAGE,TikTok Shop product category research (Awisee + DarkRoom + LitCommerce),"Start paper trade with $50-100 budget, 14 days"
+45,ALPHA972896,60,PAPER_TRADE,MONETIZATION,Indie Hackers,"Start paper trade with $50-100 budget, 14 days"
+46,ALPHA972915,60,PAPER_TRADE,MONETIZATION,Medium + Dev.to + Reddit,"Start paper trade with $50-100 budget, 14 days"
+47,ALPHA296,55,PAPER_TRADE,AI_INFLUENCER,Nano Banana UGC Automation,"Start paper trade with $50-100 budget, 14 days"
+48,ALPHA324,55,PAPER_TRADE,CONTENT_FARM,@maverickecom Nano Banana UGC Factory,"Start paper trade with $50-100 budget, 14 days"
+49,ALPHA367,55,PAPER_TRADE,CONTENT_FORMAT,Web Research (MEGA LOOP),"Start paper trade with $50-100 budget, 14 days"
+50,ALPHA371,55,PAPER_TRADE,MONETIZATION,Web Research (MEGA LOOP),"Start paper trade with $50-100 budget, 14 days"
+51,ALPHA377,55,PAPER_TRADE,OUTBOUND,Web Research (MEGA LOOP),"Start paper trade with $50-100 budget, 14 days"
+52,ALPHA413,55,PAPER_TRADE,TOOL_ALPHA,Simon Willison + Fortune,"Start paper trade with $50-100 budget, 14 days"
+53,ALPHA426,55,PAPER_TRADE,ECOM_ARB,WebSearch,"Start paper trade with $50-100 budget, 14 days"
+54,ALPHA430,55,PAPER_TRADE,APP_FACTORY,Indie Hackers,"Start paper trade with $50-100 budget, 14 days"
+55,ALPHA433,55,PAPER_TRADE,APP_FACTORY,Indie Hackers + Starter Story,"Start paper trade with $50-100 budget, 14 days"
+56,ALPHA470,55,PAPER_TRADE,APP_FACTORY,ChurnFree + 42DM + SaaS Capital,"Start paper trade with $50-100 budget, 14 days"
+57,ALPHA477,55,PAPER_TRADE,COMPETITIVE_INTEL,Grand View Research + Report Cubes + GM Insights,"Start paper trade with $50-100 budget, 14 days"
+58,ALPHA484,55,PAPER_TRADE,MONETIZATION,Beehiiv State of Newsletters 2026,"Start paper trade with $50-100 budget, 14 days"
+59,ALPHA485,55,PAPER_TRADE,GROWTH_HACK,Web research (WebProNews + Indie Hackers),"Start paper trade with $50-100 budget, 14 days"
+60,ALPHA488,55,PAPER_TRADE,TOOL_ALPHA,Web research (Nucamp + Knack + Verdict + Collins),"Start paper trade with $50-100 budget, 14 days"
+61,ALPHA489,55,PAPER_TRADE,APP_FACTORY,Web research (Indie Hackers + Starter Story),"Start paper trade with $50-100 budget, 14 days"
+62,ALPHA537,55,PAPER_TRADE,MONETIZATION,SaaS Affiliate Programs: 30% Average Recurring Commission,"Start paper trade with $50-100 budget, 14 days"
+63,ALPHA009,55,PAPER_TRADE,MONETIZATION,@knoxtwts,"Start paper trade with $50-100 budget, 14 days"
+64,ALPHA068,55,PAPER_TRADE,TOOL_ALPHA,@iamgdsa,"Start paper trade with $50-100 budget, 14 days"
+65,ALPHA081,55,PAPER_TRADE,APP_FACTORY,@alexcooldev,"Start paper trade with $50-100 budget, 14 days"
+66,ALPHA085,55,PAPER_TRADE,APP_FACTORY,@CEOLandshark,"Start paper trade with $50-100 budget, 14 days"
+67,ALPHA9CA482,55,PAPER_TRADE,MONETIZATION,Jacob Rodri,"Start paper trade with $50-100 budget, 14 days"
+68,ALPHA337299,55,PAPER_TRADE,MONETIZATION,Nozz,"Start paper trade with $50-100 budget, 14 days"
+69,ALPHA418F37,55,PAPER_TRADE,MONETIZATION,Zed,"Start paper trade with $50-100 budget, 14 days"
+70,ALPHAA30DB3,55,PAPER_TRADE,MONETIZATION,James Ebringer,"Start paper trade with $50-100 budget, 14 days"
+71,ALPHA50306A,55,PAPER_TRADE,MONETIZATION,Cody Schneider,"Start paper trade with $50-100 budget, 14 days"
+72,ALPHA602183,55,PAPER_TRADE,APP_FACTORY,Antonio Escudero,"Start paper trade with $50-100 budget, 14 days"
+73,ALPHA309,55,PAPER_TRADE,MONETIZATION,Monetizely 100M ARR Study,"Start paper trade with $50-100 budget, 14 days"
+74,ALPHA350,55,PAPER_TRADE,MONETIZATION,@robj3d3 $0 to $18K MRR Journey,"Start paper trade with $50-100 budget, 14 days"
+75,ALPHA380,55,PAPER_TRADE,ECOM_ARBITRAGE,TikTok Shop data + Shopify research,"Start paper trade with $50-100 budget, 14 days"
+76,ALPHA388,55,PAPER_TRADE,MONETIZATION,First Page Sage + The Good + Ghost.io research,"Start paper trade with $50-100 budget, 14 days"
+77,ALPHA400,55,PAPER_TRADE,APP_FACTORY,Mobile fitness + AI health apps revenue data,"Start paper trade with $50-100 budget, 14 days"
+78,ALPHA405,55,PAPER_TRADE,MONETIZATION,Substack monetization deep dive (EscapeTheCubicle + WriteBuildScale),"Start paper trade with $50-100 budget, 14 days"
+79,ALPHA972869,55,PAPER_TRADE,APP_FACTORY,RevenueCat,"Start paper trade with $50-100 budget, 14 days"
+80,ALPHA972918,55,PAPER_TRADE,GROWTH_HACK,Reddit r/SaaS + SaaSGaps,"Start paper trade with $50-100 budget, 14 days"
+81,ALPHA267,50,PAPER_TRADE,CONTENT_FARM,YouTube Shorts Algorithm,"Start paper trade with $50-100 budget, 14 days"
+82,ALPHA268,50,PAPER_TRADE,CONTENT_FARM,Instagram Reels Algorithm,"Start paper trade with $50-100 budget, 14 days"
+83,ALPHA270,50,PAPER_TRADE,CONTENT_FARM,Faceless YouTube Revenue,"Start paper trade with $50-100 budget, 14 days"
+84,ALPHA290,50,PAPER_TRADE,AI_INFLUENCER,BlackHatWorld Case Study,"Start paper trade with $50-100 budget, 14 days"
+85,ALPHA347,50,PAPER_TRADE,MONETIZATION,@lottsnomad (YC W26),"Start paper trade with $50-100 budget, 14 days"
+86,ALPHA428,50,PAPER_TRADE,MONETIZATION,@levelsio (X),"Start paper trade with $50-100 budget, 14 days"
+87,ALPHA431,50,PAPER_TRADE,TOOL_ALPHA,Yahoo Finance + Sherwood News,"Start paper trade with $50-100 budget, 14 days"
+88,ALPHA463,50,PAPER_TRADE,SEO_GEO_ASO,SEOtwix + Koanthic + SaaSTorm,"Start paper trade with $50-100 budget, 14 days"
+89,ALPHA482,50,PAPER_TRADE,COMPETITIVE_INTEL,Forest App + App Store,"Start paper trade with $50-100 budget, 14 days"
+90,ALPHA483,50,PAPER_TRADE,SEO_GEO_ASO,Web research (Wellows + Averi AI + Koanthic),"Start paper trade with $50-100 budget, 14 days"
+91,ALPHA494,50,PAPER_TRADE,CONTENT_FARM,Web research (Buffer + Hootsuite + Clixie + RecurPost),"Start paper trade with $50-100 budget, 14 days"
+92,ALPHA520,50,PAPER_TRADE,TOOL_ALPHA,GPT Store ~$0.02/User/Month - NOT Viable for Revenue,"Start paper trade with $50-100 budget, 14 days"
+93,ALPHA540,50,PAPER_TRADE,COMPLIANCE,"FTC Fake Review Rule: $53,088/Violation for AI-Generated Testimonials","Start paper trade with $50-100 budget, 14 days"
+94,ALPHA563,50,PAPER_TRADE,ECOM_ARB,Web Research,"Start paper trade with $50-100 budget, 14 days"
+95,ALPHA520,50,PAPER_TRADE,TOOL_ALPHA,GPT Store ~$0.02/User/Month - NOT Viable for Revenue,"Start paper trade with $50-100 budget, 14 days"
+96,ALPHA019,50,PAPER_TRADE,APP_FACTORY,@matteo_spada,"Start paper trade with $50-100 budget, 14 days"
+97,ALPHA032,50,PAPER_TRADE,paywall_conversion,RevenueCat/Business of Apps,"Start paper trade with $50-100 budget, 14 days"
+98,ALPHA034,50,PAPER_TRADE,paywall_conversion,RevenueCat,"Start paper trade with $50-100 budget, 14 days"
+99,ALPHA035,50,PAPER_TRADE,paywall_conversion,Nami ML,"Start paper trade with $50-100 budget, 14 days"
+100,ALPHA036,50,PAPER_TRADE,paywall_conversion,SingleGrain,"Start paper trade with $50-100 budget, 14 days"
+101,ALPHA037,50,PAPER_TRADE,app_onboarding,VWO/Appcues,"Start paper trade with $50-100 budget, 14 days"
+102,ALPHA040,50,PAPER_TRADE,app_store_optimization,AppTweak,"Start paper trade with $50-100 budget, 14 days"
+103,ALPHA066,50,PAPER_TRADE,OUTBOUND,@alexberman,"Start paper trade with $50-100 budget, 14 days"
+104,ALPHA071,50,PAPER_TRADE,MONETIZATION,Research,"Start paper trade with $50-100 budget, 14 days"
+105,ALPHAB59EC8,50,PAPER_TRADE,MONETIZATION,Cody Schneider,"Start paper trade with $50-100 budget, 14 days"
+106,ALPHA3405F7,50,PAPER_TRADE,MONETIZATION,🀅,"Start paper trade with $50-100 budget, 14 days"
+107,ALPHA0D8326,50,PAPER_TRADE,MONETIZATION,Eric Cole,"Start paper trade with $50-100 budget, 14 days"
+108,ALPHAF9559F,50,PAPER_TRADE,MONETIZATION,Argona,"Start paper trade with $50-100 budget, 14 days"
+109,ALPHA4C4310,50,PAPER_TRADE,MONETIZATION,Namya @ Supafast,"Start paper trade with $50-100 budget, 14 days"
+110,ALPHAAB337E,50,PAPER_TRADE,MONETIZATION,Hridoy Rehman,"Start paper trade with $50-100 budget, 14 days"
+111,ALPHAB4B410,50,PAPER_TRADE,MONETIZATION,Just Building,"Start paper trade with $50-100 budget, 14 days"
+112,ALPHA095,50,PAPER_TRADE,TOOL_ALPHA,daily_research_scan,"Start paper trade with $50-100 budget, 14 days"
+113,ALPHA097,50,PAPER_TRADE,OUTBOUND,daily_research_scan,"Start paper trade with $50-100 budget, 14 days"
+114,ALPHA100,50,PAPER_TRADE,APP_FACTORY,daily_research_scan,"Start paper trade with $50-100 budget, 14 days"
+115,ALPHA101,50,PAPER_TRADE,ASO,daily_research_scan,"Start paper trade with $50-100 budget, 14 days"
+116,ALPHA124,50,PAPER_TRADE,LOCAL_SERVICE,@pooldemo,"Start paper trade with $50-100 budget, 14 days"
+117,ALPHA126,50,PAPER_TRADE,GAME_DEV,@kai_xbt,"Start paper trade with $50-100 budget, 14 days"
+118,ALPHA135,50,PAPER_TRADE,ASO,Research,"Start paper trade with $50-100 budget, 14 days"
+119,ALPHA146,50,PAPER_TRADE,ASO,Research,"Start paper trade with $50-100 budget, 14 days"
+120,ALPHA190,50,PAPER_TRADE,MONETIZATION,@pooldemo,"Start paper trade with $50-100 budget, 14 days"
+121,ALPHA210,50,PAPER_TRADE,OUTBOUND,@pipelineabuser,"Start paper trade with $50-100 budget, 14 days"
+122,ALPHA240,50,PAPER_TRADE,ALPHA_HUNTER,Minds,"Start paper trade with $50-100 budget, 14 days"
+123,ALPHA256,50,PAPER_TRADE,ALPHA_HUNTER,Amazon Ads,"Start paper trade with $50-100 budget, 14 days"
+124,ALPHA291,50,PAPER_TRADE,AI_INFLUENCER,AI ASMR Viral Views,"Start paper trade with $50-100 budget, 14 days"
+125,ALPHA311,50,PAPER_TRADE,MONETIZATION,First Page Sage Freemium Report,"Start paper trade with $50-100 budget, 14 days"
+126,ALPHA317,50,PAPER_TRADE,APP_FACTORY,@levelsio Portfolio,"Start paper trade with $50-100 budget, 14 days"
+127,ALPHA318,50,PAPER_TRADE,APP_FACTORY,@levelsio PhotoAI Model,"Start paper trade with $50-100 budget, 14 days"
+128,ALPHA382,50,PAPER_TRADE,OUTBOUND,Instantly.ai Benchmark Report + Saleshandy + MarketingProfs,"Start paper trade with $50-100 budget, 14 days"
+129,ALPHA390,50,PAPER_TRADE,EMERGING_PLATFORMS,Social Media Today + PPC Land + Threads monetization sources,"Start paper trade with $50-100 budget, 14 days"
+130,ALPHA408,50,PAPER_TRADE,TOOL_ALPHA,Claude Code docs + awesome-claude-code GitHub,"Start paper trade with $50-100 budget, 14 days"
+131,ALPHA410,50,PAPER_TRADE,CONTENT_FARM,Content farm + TikTok January 2026 trends (Pepper Agency + NewEngen),"Start paper trade with $50-100 budget, 14 days"
+132,ALPHA444,50,PAPER_TRADE,PRICING_PSYCHOLOGY,SaaS Pricing Research,"Start paper trade with $50-100 budget, 14 days"
+133,ALPHA972867,50,PAPER_TRADE,GROWTH_HACK,inBeat Agency,"Start paper trade with $50-100 budget, 14 days"
+134,ALPHA972873,50,PAPER_TRADE,APP_FACTORY,Multiple Solo Founders,"Start paper trade with $50-100 budget, 14 days"
+135,ALPHA972897,50,PAPER_TRADE,EMERGING_NICHE,Newsweek + ExpressVPN + Multiple,"Start paper trade with $50-100 budget, 14 days"
+136,ALPHA972908,50,PAPER_TRADE,MONETIZATION,@maverickecom + Multiple,"Start paper trade with $50-100 budget, 14 days"
+137,ALPHA972916,50,PAPER_TRADE,ECOM_ARB,TikTok Shop + Grail Talent + Multiple,"Start paper trade with $50-100 budget, 14 days"
+138,ALPHA264,45,KILL,CONTENT_FARM,TikTok Algorithm Research,Deprioritize in priorities.md
+139,ALPHA288,45,KILL,OUTBOUND,Clay Blog,Deprioritize in priorities.md
+140,ALPHA320,45,KILL,OUTBOUND,@pipelineabuser Cold Email Framework,Deprioritize in priorities.md
+141,ALPHA335,45,KILL,GROWTH_HACK,Quote Tweet Funnel Strategy,Deprioritize in priorities.md
+142,ALPHA369,45,KILL,CONTENT_FORMAT,Web Research (MEGA LOOP),Deprioritize in priorities.md
+143,ALPHA375,45,KILL,APP_FACTORY,Web Research (MEGA LOOP),Deprioritize in priorities.md
+144,ALPHA376,45,KILL,GROWTH_HACK,Web Research (MEGA LOOP),Deprioritize in priorities.md
+145,ALPHA429,45,KILL,OUTBOUND,Instantly.ai Benchmark Report + Mailbird + Allegrow,Deprioritize in priorities.md
+146,ALPHA437,45,KILL,MONETIZATION,X Platform + TheStreet + industry reports,Deprioritize in priorities.md
+147,ALPHA461,45,KILL,OUTBOUND,Instantly + Breakcold + Mailshake 2026 Benchmarks,Deprioritize in priorities.md
+148,ALPHA466,45,KILL,APP_FACTORY,Adjoe + Plotline + Publift + Adapty,Deprioritize in priorities.md
+149,ALPHA472,45,KILL,MONETIZATION,Affiverse + Shopify + Technology.org,Deprioritize in priorities.md
+150,ALPHA481,45,KILL,COMPETITIVE_INTEL,App Store listings,Deprioritize in priorities.md
+151,ALPHA486,45,KILL,GROWTH_HACK,Web research (Karmic + SubredditSignals + Zapier),Deprioritize in priorities.md
+152,ALPHA493,45,KILL,CONTENT_FARM,Web research (Shopify + InfluencerMarketingHub + NexLev + StanStore),Deprioritize in priorities.md
+153,ALPHA496,45,KILL,COLD_OUTBOUND,Web research (Agorapulse + RiverBlog + SocialBee + GrowLeads + LinkBoost),Deprioritize in priorities.md
+154,ALPHA510,45,KILL,OUTBOUND,Mailbird + MailForge + EmailBison,Deprioritize in priorities.md
+155,ALPHA510,45,KILL,OUTBOUND,Mailbird + MailForge + EmailBison,Deprioritize in priorities.md
+156,ALPHA516,45,KILL,GROWTH_HACK,WebSearch,Deprioritize in priorities.md
+157,ALPHA525,45,KILL,GROWTH_HACK,Bluesky: 40M Users + ZERO Link Penalty - Pre-Monetization Land Grab,Deprioritize in priorities.md
+158,ALPHA531,45,KILL,ECOM_ARB,"TikTok Shop $66.2B GMV 2025: 100% YoY Growth, 13% Affiliate Commission",Deprioritize in priorities.md
+159,ALPHA542,45,KILL,COMPLIANCE,"Gmail Spam Ceiling: 0.3% Hard Max, Permanent Delivery Loss",Deprioritize in priorities.md
+160,ALPHA510,45,KILL,OUTBOUND,Mailbird + MailForge + EmailBison,Deprioritize in priorities.md
+161,ALPHA516,45,KILL,GROWTH_HACK,WebSearch,Deprioritize in priorities.md
+162,ALPHA564,45,KILL,ECOM_ARB,Web Research,Deprioritize in priorities.md
+163,ALPHA525,45,KILL,GROWTH_HACK,Bluesky: 40M Users + ZERO Link Penalty - Pre-Monetization Land Grab,Deprioritize in priorities.md
+164,ALPHA531,45,KILL,ECOM_ARB,"TikTok Shop $66.2B GMV 2025: 100% YoY Growth, 13% Affiliate Commission",Deprioritize in priorities.md
+165,ALPHA525,45,KILL,GROWTH_HACK,Bluesky: 40M Users + ZERO Link Penalty - Pre-Monetization Land Grab,Deprioritize in priorities.md
+166,ALPHA531,45,KILL,ECOM_ARB,"TikTok Shop $66.2B GMV 2025: 100% YoY Growth, 13% Affiliate Commission",Deprioritize in priorities.md
+167,ALPHA025,45,KILL,APP_FACTORY,@startup_lessons,Deprioritize in priorities.md
+168,ALPHA028,45,KILL,MONETIZATION,@startup_lessons,Deprioritize in priorities.md
+169,ALPHA033,45,KILL,paywall_conversion,RevenueCat,Deprioritize in priorities.md
+170,ALPHA039,45,KILL,app_onboarding,Business of Apps,Deprioritize in priorities.md
+171,ALPHA074,45,KILL,OUTBOUND,@seanb2b,Deprioritize in priorities.md
+172,ALPHA082,45,KILL,OUTBOUND,Research,Deprioritize in priorities.md
+173,ALPHA083,45,KILL,CONTENT_FORMAT,@jasoncfox,Deprioritize in priorities.md
+174,ALPHABF3EDF,45,KILL,TOOL_ALPHA,Param,Deprioritize in priorities.md
+175,ALPHAAF09C4,45,KILL,MONETIZATION,Xivy,Deprioritize in priorities.md
+176,ALPHA9665D5,45,KILL,APP_FACTORY,Saurav | SalesRobot.co,Deprioritize in priorities.md
+177,ALPHAD70825,45,KILL,MONETIZATION,(fan) Centerdevils..,Deprioritize in priorities.md
+178,ALPHA104,45,KILL,ASO,daily_research_scan,Deprioritize in priorities.md
+179,ALPHA143,45,KILL,SEO_GEO_ASO,@lilyraynyc,Deprioritize in priorities.md
+180,ALPHA148,45,KILL,ASO,Research,Deprioritize in priorities.md
+181,ALPHA149,45,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+182,ALPHA160,45,KILL,ASO,Research,Deprioritize in priorities.md
+183,ALPHA161,45,KILL,GEO,@cyborginstein,Deprioritize in priorities.md
+184,ALPHA170,45,KILL,APP_FACTORY,@paoloanzn,Deprioritize in priorities.md
+185,ALPHA175,45,KILL,OUTBOUND,@seanb2b,Deprioritize in priorities.md
+186,ALPHA184,45,KILL,CONTENT_FORMAT,@IdrisEcom_email,Deprioritize in priorities.md
+187,ALPHA199,45,KILL,APP_FACTORY,@steven_cravotta,Deprioritize in priorities.md
+188,ALPHA203,45,KILL,MONETIZATION,@steven_cravotta,Deprioritize in priorities.md
+189,ALPHA206,45,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+190,ALPHA211,45,KILL,OUTBOUND,LinkedIn Research,Deprioritize in priorities.md
+191,ALPHA236,45,KILL,ALPHA_HUNTER,McKinsey RPA,Deprioritize in priorities.md
+192,ALPHA258,45,KILL,ALPHA_HUNTER,Starbucks Case Study,Deprioritize in priorities.md
+193,ALPHA332,45,KILL,ALGO_TRADING,@zephyr_z9 Semiconductor Analysis,Deprioritize in priorities.md
+194,ALPHA341,45,KILL,GROWTH_HACK,Engagement Pod Strategy,Deprioritize in priorities.md
+195,ALPHA354,45,KILL,PAID_ADS,@advertising_jan,Deprioritize in priorities.md
+196,ALPHA385,45,KILL,SEO_GEO_ASO,Multiple ASO sources (Udonis + AppTweak + Moburst),Deprioritize in priorities.md
+197,ALPHA458,45,KILL,PHYSICAL_DIGITAL_BRIDGES,BOPIS Strategy,Deprioritize in priorities.md
+198,ALPHA972866,45,KILL,MONETIZATION,WeAreFounders,Deprioritize in priorities.md
+199,ALPHA972877,45,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+200,ALPHA972902,45,KILL,OUTBOUND,Instantly.ai,Deprioritize in priorities.md
+201,ALPHA972905,45,KILL,GROWTH_HACK,@codyschneiderxx,Deprioritize in priorities.md
+202,ALPHA972907,45,KILL,TOOL_ALPHA,Replit,Deprioritize in priorities.md
+203,ALPHA972910,45,KILL,GROWTH_HACK,@codyschneiderxx,Deprioritize in priorities.md
+204,ALPHA972920,45,KILL,OUTBOUND,Smartlead + Festi + Multiple,Deprioritize in priorities.md
+205,ALPHA298,40,KILL,SEO_GEO_ASO,Medium GEO Report,Deprioritize in priorities.md
+206,ALPHA304,40,KILL,SEO_GEO_ASO,SEO.com GEO Blog,Deprioritize in priorities.md
+207,ALPHA307,40,KILL,MONETIZATION,Monetizely Advanced Pricing,Deprioritize in priorities.md
+208,ALPHA308,40,KILL,MONETIZATION,Monetizely 2026 Outlook,Deprioritize in priorities.md
+209,ALPHA343,40,KILL,APP_FACTORY,@AntonioEscudero 4-Day SaaS Build,Deprioritize in priorities.md
+210,ALPHA352,40,KILL,CONTENT_FORMAT,@anothercohen,Deprioritize in priorities.md
+211,ALPHA359,40,KILL,MONETIZATION,@thomasunise + @robj3d3,Deprioritize in priorities.md
+212,ALPHA372,40,KILL,MONETIZATION,Web Research (MEGA LOOP),Deprioritize in priorities.md
+213,ALPHA373,40,KILL,MONETIZATION,Web Research (MEGA LOOP),Deprioritize in priorities.md
+214,ALPHA374,40,KILL,TOOL_ALPHA,Web Research (MEGA LOOP),Deprioritize in priorities.md
+215,ALPHA420,40,KILL,APP_FACTORY,WebSearch,Deprioritize in priorities.md
+216,ALPHA432,40,KILL,GROWTH_HACK,@gregisenberg (X),Deprioritize in priorities.md
+217,ALPHA434,40,KILL,APP_FACTORY,Indie Hackers + Sleek.design,Deprioritize in priorities.md
+218,ALPHA435,40,KILL,CONTENT_FARM,Emarketer + TikTok Ads Guide 2026 + UGC Pricing Study,Deprioritize in priorities.md
+219,ALPHA467,40,KILL,ECOM_ARB,eRank + Printify + SellerApp + EverBee,Deprioritize in priorities.md
+220,ALPHA469,40,KILL,MONETIZATION,Entrepreneur + Inc + Moneywise,Deprioritize in priorities.md
+221,ALPHA474,40,KILL,SEO_GEO_ASO,Superprompt + Kevin Indig Growth Memo + Semrush,Deprioritize in priorities.md
+222,ALPHA479,40,KILL,COMPETITIVE_INTEL,Business of Apps + CoinMarketCap + Side Hustle Nation,Deprioritize in priorities.md
+223,ALPHA491,40,KILL,APP_FACTORY,Web research (BuildFire + Credencys + PardyPanda),Deprioritize in priorities.md
+224,ALPHA499,40,KILL,TOOL_ALPHA,Web research (Cognition Devin + StackOverflow survey + Collins Dictionary),Deprioritize in priorities.md
+225,ALPHA501,40,KILL,TOOL_ALPHA,Web research (AI agent interoperability + self-verification trends),Deprioritize in priorities.md
+226,ALPHA503,40,KILL,APP_FACTORY,Web research (Grand View Research + GM Insights + MoneyInc + ChristianTechJobs),Deprioritize in priorities.md
+227,ALPHA504,40,KILL,APP_FACTORY,Web research (Business of Apps + Attract Group + Tesseract + Exercise.com),Deprioritize in priorities.md
+228,ALPHA505,40,KILL,TOOL_ALPHA,Web research (Market Clarity + Entrepreneur + Medium + AccountabilityNow),Deprioritize in priorities.md
+229,ALPHA506,40,KILL,APP_FACTORY,Synthesis of DR-05 research + Day 2 competitive intel,Deprioritize in priorities.md
+230,ALPHA508,40,KILL,CONTENT_FARM,Demirdjian Twins,Deprioritize in priorities.md
+231,ALPHA512,40,KILL,TOOL_ALPHA,Fireship + Developer Trends 2026,Deprioritize in priorities.md
+232,ALPHA508,40,KILL,CONTENT_FARM,Demirdjian Twins,Deprioritize in priorities.md
+233,ALPHA512,40,KILL,TOOL_ALPHA,Fireship + Developer Trends 2026,Deprioritize in priorities.md
+234,ALPHA512,40,KILL,TOOL_ALPHA,Fireship + Developer Trends 2026,Deprioritize in priorities.md
+235,ALPHA518,40,KILL,MCP_SERVERS,MCP Ecosystem: 7800+ Servers + Stripe Monetization + FastMCP 15min Build,Deprioritize in priorities.md
+236,ALPHA519,40,KILL,APP_FACTORY,"AI Wrapper Power Law: 60-70% Zero Revenue, Chatbase $5M ARR Solo",Deprioritize in priorities.md
+237,ALPHA521,40,KILL,MONETIZATION,AAA Model: $399/mo x 35 Clients = $166K ARR at 85% Margins,Deprioritize in priorities.md
+238,ALPHA523,40,KILL,APP_FACTORY,AI Tutoring Market: $1.63B -> $6.45-21.6B by 2030-2035,Deprioritize in priorities.md
+239,ALPHA524,40,KILL,CONTENT_FARM,Facebook Reels: $4.40/1K Views - 4-17x Higher Than TikTok/YouTube,Deprioritize in priorities.md
+240,ALPHA526,40,KILL,DIGITAL_PRODUCTS,"Whop: $845M+ Creator Payouts, ELIMINATED 30% Marketplace Fee",Deprioritize in priorities.md
+241,ALPHA527,40,KILL,APP_FACTORY,"MENA Islamic App Market: $1B+/yr, 320M Users by 2030, Wearable Gap",Deprioritize in priorities.md
+242,ALPHA528,40,KILL,MCP_SERVERS,"AI Agent Market: $10.9B 2026 -> $183B 2033, ~50% of YC W26",Deprioritize in priorities.md
+243,ALPHA532,40,KILL,MONETIZATION,"Whop vs Gumroad: 5x Fee Difference ($270 vs $1,350 per $10K Sales)",Deprioritize in priorities.md
+244,ALPHA533,40,KILL,ECOM_ARB,Printify Premium: 61.84% POD Margins (Best in Class),Deprioritize in priorities.md
+245,ALPHA534,40,KILL,ECOM_ARB,Etsy Digital Downloads: 80-90% Profit Margins on $3.45B Market,Deprioritize in priorities.md
+246,ALPHA536,40,KILL,MONETIZATION,Cohort Courses: 85-90% Completion vs Self-Paced 10-15%,Deprioritize in priorities.md
+247,ALPHA538,40,KILL,ECOM_ARB,"Subscription Box Market: $37.5B Growing to $116.2B, Curation CAGR 18.53%",Deprioritize in priorities.md
+248,ALPHA545,40,KILL,AI_MUSIC,Suno Pro $10/mo + DistroKid $22.99/yr = Full AI Music Pipeline,Deprioritize in priorities.md
+249,ALPHA548,40,KILL,MONETIZATION,"AI Compliance Services: $5K-$50K/Audit, Near-Zero Competition",Deprioritize in priorities.md
+250,ALPHA549,40,KILL,COMMUNITY_COMMERCE,"Skool Communities: $300K+/mo Top Creators, 174K+ Communities Active",Deprioritize in priorities.md
+251,ALPHA508,40,KILL,CONTENT_FARM,Demirdjian Twins,Deprioritize in priorities.md
+252,ALPHA512,40,KILL,TOOL_ALPHA,Fireship + Developer Trends 2026,Deprioritize in priorities.md
+253,ALPHA560,40,KILL,ECOM_ARB,Web Research,Deprioritize in priorities.md
+254,ALPHA565,40,KILL,MONETIZATION,Web Research,Deprioritize in priorities.md
+255,ALPHA518,40,KILL,MCP_SERVERS,MCP Ecosystem: 7800+ Servers + Stripe Monetization + FastMCP 15min Build,Deprioritize in priorities.md
+256,ALPHA519,40,KILL,APP_FACTORY,"AI Wrapper Power Law: 60-70% Zero Revenue, Chatbase $5M ARR Solo",Deprioritize in priorities.md
+257,ALPHA521,40,KILL,MONETIZATION,AAA Model: $399/mo x 35 Clients = $166K ARR at 85% Margins,Deprioritize in priorities.md
+258,ALPHA523,40,KILL,APP_FACTORY,AI Tutoring Market: $1.63B -> $6.45-21.6B by 2030-2035,Deprioritize in priorities.md
+259,ALPHA524,40,KILL,CONTENT_FARM,Facebook Reels: $4.40/1K Views - 4-17x Higher Than TikTok/YouTube,Deprioritize in priorities.md
+260,ALPHA526,40,KILL,DIGITAL_PRODUCTS,"Whop: $845M+ Creator Payouts, ELIMINATED 30% Marketplace Fee",Deprioritize in priorities.md
+261,ALPHA527,40,KILL,APP_FACTORY,"MENA Islamic App Market: $1B+/yr, 320M Users by 2030, Wearable Gap",Deprioritize in priorities.md
+262,ALPHA528,40,KILL,MCP_SERVERS,"AI Agent Market: $10.9B 2026 -> $183B 2033, ~50% of YC W26",Deprioritize in priorities.md
+263,ALPHA532,40,KILL,MONETIZATION,"Whop vs Gumroad: 5x Fee Difference ($270 vs $1,350 per $10K Sales)",Deprioritize in priorities.md
+264,ALPHA524,40,KILL,CONTENT_FARM,Facebook Reels: $4.40/1K Views - 4-17x Higher Than TikTok/YouTube,Deprioritize in priorities.md
+265,ALPHA526,40,KILL,DIGITAL_PRODUCTS,"Whop: $845M+ Creator Payouts, ELIMINATED 30% Marketplace Fee",Deprioritize in priorities.md
+266,ALPHA527,40,KILL,APP_FACTORY,"MENA Islamic App Market: $1B+/yr, 320M Users by 2030, Wearable Gap",Deprioritize in priorities.md
+267,ALPHA528,40,KILL,MCP_SERVERS,"AI Agent Market: $10.9B 2026 -> $183B 2033, ~50% of YC W26",Deprioritize in priorities.md
+268,ALPHA532,40,KILL,MONETIZATION,"Whop vs Gumroad: 5x Fee Difference ($270 vs $1,350 per $10K Sales)",Deprioritize in priorities.md
+269,ALPHA533,40,KILL,ECOM_ARB,Printify Premium: 61.84% POD Margins (Best in Class),Deprioritize in priorities.md
+270,ALPHA534,40,KILL,ECOM_ARB,Etsy Digital Downloads: 80-90% Profit Margins on $3.45B Market,Deprioritize in priorities.md
+271,ALPHA536,40,KILL,MONETIZATION,Cohort Courses: 85-90% Completion vs Self-Paced 10-15%,Deprioritize in priorities.md
+272,ALPHA051,40,KILL,app_store_optimization,Indie Hackers,Deprioritize in priorities.md
+273,ALPHA3E3D44,40,KILL,MONETIZATION,Om Patel,Deprioritize in priorities.md
+274,ALPHAC7037A,40,KILL,MONETIZATION,Jacob Rodri,Deprioritize in priorities.md
+275,ALPHAA8C4B8,40,KILL,MONETIZATION,Hasanuzzaman Khan,Deprioritize in priorities.md
+276,ALPHA051,40,KILL,app_store_optimization,Indie Hackers,Deprioritize in priorities.md
+277,ALPHA091,40,KILL,OUTBOUND,daily_research_scan,Deprioritize in priorities.md
+278,ALPHA096,40,KILL,GROWTH_HACK,daily_research_scan,Deprioritize in priorities.md
+279,ALPHA113,40,KILL,SEO_GEO_ASO,daily_research_scan,Deprioritize in priorities.md
+280,ALPHA125,40,KILL,MINDSET,@codyschneidrxx,Deprioritize in priorities.md
+281,ALPHA179,40,KILL,CONTENT_FORMAT,@alexolim_,Deprioritize in priorities.md
+282,ALPHA183,40,KILL,TOOL_ALPHA,@Remotion,Deprioritize in priorities.md
+283,ALPHA186,40,KILL,TOOL_ALPHA,@ryanvogel,Deprioritize in priorities.md
+284,ALPHA191,40,KILL,MONETIZATION,@codyschneiderxx,Deprioritize in priorities.md
+285,ALPHA193,40,KILL,TOOL_ALPHA,@cnakazawa,Deprioritize in priorities.md
+286,ALPHA216,40,KILL,OUTBOUND,Cold Email Research,Deprioritize in priorities.md
+287,ALPHA217,40,KILL,OUTBOUND,@codyschneiderxx,Deprioritize in priorities.md
+288,ALPHA241,40,KILL,ALPHA_HUNTER,eMarketer,Deprioritize in priorities.md
+289,ALPHA246,40,KILL,ALPHA_HUNTER,Social Pilot,Deprioritize in priorities.md
+290,ALPHA293,40,KILL,AI_INFLUENCER,IAB Digital Video Ad Report,Deprioritize in priorities.md
+291,ALPHA295,40,KILL,AI_INFLUENCER,Affiliate Marketing for AI Influencers,Deprioritize in priorities.md
+292,ALPHA315,40,KILL,MONETIZATION,Recurly Churn Reduction,Deprioritize in priorities.md
+293,ALPHA345,40,KILL,MONETIZATION,Credit-Based Pricing Model,Deprioritize in priorities.md
+294,ALPHA345,40,KILL,MONETIZATION,Credit-Based Pricing Model,Deprioritize in priorities.md
+295,ALPHA351,40,KILL,MONETIZATION,Lighter Capital $15K MRR Threshold Unlocks Financing,Deprioritize in priorities.md
+296,ALPHA357,40,KILL,PAID_ADS,@advertising_jan,Deprioritize in priorities.md
+297,ALPHA379,40,KILL,APP_FACTORY,Indie Hackers + Starter Story (Formula Bot),Deprioritize in priorities.md
+298,ALPHA381,40,KILL,CONTENT_FARM,NexLev + Shortvids + YouTube research,Deprioritize in priorities.md
+299,ALPHA393,40,KILL,AI_INFLUENCER,TikTok AI content guidelines (Napolify + Almcorp),Deprioritize in priorities.md
+300,ALPHA394,40,KILL,MCP_SERVERS,Google MCP + Forrester + Hakuna Matata Tech,Deprioritize in priorities.md
+301,ALPHA396,40,KILL,MONETIZATION,SaaS pricing research (Chargebee + cobloom + Ghost.io),Deprioritize in priorities.md
+302,ALPHA397,40,KILL,ECOM_ARBITRAGE,Etsy + POD research (Printify + Everbee + Merchize),Deprioritize in priorities.md
+303,ALPHA398,40,KILL,EMERGING_PLATFORMS,Creator economy research + Kick + Planoly forecasts,Deprioritize in priorities.md
+304,ALPHA399,40,KILL,MCP_SERVERS,AI automation agency research (Hakuna Matata + Almcorp),Deprioritize in priorities.md
+305,ALPHA402,40,KILL,AI_INFLUENCER,AI UGC enforcement data (Napolify + creator research),Deprioritize in priorities.md
+306,ALPHA406,40,KILL,DIGITAL_PRODUCTS,Gumroad + Gridfiti + Notion creator research,Deprioritize in priorities.md
+307,ALPHA446,40,KILL,PRICING_PSYCHOLOGY,SaaS Trends,Deprioritize in priorities.md
+308,ALPHA448,40,KILL,DEMOGRAPHIC_SHIFTS,Gen Z Stats,Deprioritize in priorities.md
+309,ALPHA450,40,KILL,TALENT_ARBITRAGE,Remote Work Trends,Deprioritize in priorities.md
+310,ALPHA972864,40,KILL,APP_FACTORY,@levelsio,Deprioritize in priorities.md
+311,ALPHA972898,40,KILL,PLATFORM_UPDATE,Facebook Official + Multiple,Deprioritize in priorities.md
+312,ALPHA972903,40,KILL,MONETIZATION,@levelsio,Deprioritize in priorities.md
+313,ALPHA972906,40,KILL,EMERGING_NICHE,Multiple Sources,Deprioritize in priorities.md
+314,ALPHA972914,40,KILL,APP_FACTORY,Indie Hackers + Community,Deprioritize in priorities.md
+315,ALPHA972919,40,KILL,MONETIZATION,OpenAlternative + Indie Hackers,Deprioritize in priorities.md
+316,ALPHA248,35,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+317,ALPHA253,35,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+318,ALPHA263,35,KILL,CONTENT_FARM,TikTok Algorithm Research,Deprioritize in priorities.md
+319,ALPHA266,35,KILL,CONTENT_FARM,YouTube Shorts Algorithm,Deprioritize in priorities.md
+320,ALPHA272,35,KILL,CONTENT_FARM,Faceless YouTube Niches,Deprioritize in priorities.md
+321,ALPHA277,35,KILL,OUTBOUND,Instantly.ai,Deprioritize in priorities.md
+322,ALPHA278,35,KILL,OUTBOUND,Mailshake,Deprioritize in priorities.md
+323,ALPHA279,35,KILL,OUTBOUND,Saleshandy,Deprioritize in priorities.md
+324,ALPHA294,35,KILL,AI_INFLUENCER,Consumer Skepticism Data,Deprioritize in priorities.md
+325,ALPHA299,35,KILL,SEO_GEO_ASO,Averi AI Report,Deprioritize in priorities.md
+326,ALPHA300,35,KILL,SEO_GEO_ASO,Princeton Research via eMarketer,Deprioritize in priorities.md
+327,ALPHA302,35,KILL,SEO_GEO_ASO,AppInstitute ASO Guide,Deprioritize in priorities.md
+328,ALPHA314,35,KILL,MONETIZATION,Metronome Pricing Trends,Deprioritize in priorities.md
+329,ALPHA316,35,KILL,MONETIZATION,Agency Handy Retention Strategies,Deprioritize in priorities.md
+330,ALPHA322,35,KILL,OUTBOUND,@codyschneiderxx Sorority BDR Hack,Deprioritize in priorities.md
+331,ALPHA323,35,KILL,OUTBOUND,@codyschneiderxx LinkedIn AI Cold Outreach,Deprioritize in priorities.md
+332,ALPHA336,35,KILL,OUTBOUND,DeliverOn Pre-Warmed Inboxes,Deprioritize in priorities.md
+333,ALPHA337,35,KILL,OUTBOUND,MailForge Bulk Warmup,Deprioritize in priorities.md
+334,ALPHA340,35,KILL,SEO_GEO_ASO,@Hightrafficsite SEO Arbitrage,Deprioritize in priorities.md
+335,ALPHA346,35,KILL,SEO_GEO_ASO,Reddit GEO Optimization,Deprioritize in priorities.md
+336,ALPHA346,35,KILL,SEO_GEO_ASO,Reddit GEO Optimization,Deprioritize in priorities.md
+337,ALPHA348,35,KILL,AI_INFLUENCER,@mhdfaran Higgsfield AI Influencer Platform,Deprioritize in priorities.md
+338,ALPHA349,35,KILL,MONETIZATION,@thomasunise MRR Milestone,Deprioritize in priorities.md
+339,ALPHA366,35,KILL,CONTENT_FORMAT,Web Research (MEGA LOOP),Deprioritize in priorities.md
+340,ALPHA368,35,KILL,GROWTH_HACK,Web Research (MEGA LOOP),Deprioritize in priorities.md
+341,ALPHA414,35,KILL,AI_INFLUENCER,Moltbook + TechCrunch,Deprioritize in priorities.md
+342,ALPHA415,35,KILL,COMPLIANCE,Axios + TechCrunch,Deprioritize in priorities.md
+343,ALPHA417,35,KILL,MONETIZATION,WebSearch,Deprioritize in priorities.md
+344,ALPHA421,35,KILL,EMERGING_PLATFORMS,WebSearch,Deprioritize in priorities.md
+345,ALPHA422,35,KILL,OUTBOUND,WebSearch,Deprioritize in priorities.md
+346,ALPHA425,35,KILL,MONETIZATION,WebSearch,Deprioritize in priorities.md
+347,ALPHA427,35,KILL,APP_FACTORY,WebSearch,Deprioritize in priorities.md
+348,ALPHA462,35,KILL,SEO_GEO_ASO,ClickRank + ALM Corp + Superprompt + SEJ,Deprioritize in priorities.md
+349,ALPHA464,35,KILL,APP_FACTORY,Indie Hackers - Leadmore AI,Deprioritize in priorities.md
+350,ALPHA468,35,KILL,OUTBOUND,Breakcold + Expandi + SalesHandy,Deprioritize in priorities.md
+351,ALPHA471,35,KILL,SEO_GEO_ASO,Rank Math + Semrush + Position Digital,Deprioritize in priorities.md
+352,ALPHA475,35,KILL,SEO_GEO_ASO,Koanthic + SaaStorm + Editoria Agency + Profound Data,Deprioritize in priorities.md
+353,ALPHA476,35,KILL,SEO_GEO_ASO,Digital Authority + Oomph + Digital Applied + Firebrand,Deprioritize in priorities.md
+354,ALPHA478,35,KILL,COMPETITIVE_INTEL,Contrary Research + Tracxn + Sensor Tower,Deprioritize in priorities.md
+355,ALPHA480,35,KILL,COMPETITIVE_INTEL,App Store + Sensor Tower + Getlatka,Deprioritize in priorities.md
+356,ALPHA487,35,KILL,SEO_GEO_ASO,Web research (Averi AI + TryProfound),Deprioritize in priorities.md
+357,ALPHA490,35,KILL,TOOL_ALPHA,Web research (Appwrite + Emergent + Manus + Nucamp),Deprioritize in priorities.md
+358,ALPHA500,35,KILL,TOOL_ALPHA,Web research (HeyGen + AI video benchmarks),Deprioritize in priorities.md
+359,ALPHA507,35,KILL,CONTENT_FARM,@maverickecom (Noah Frydberg),Deprioritize in priorities.md
+360,ALPHA509,35,KILL,OUTBOUND,Cold Email Benchmark Report 2026 (Instantly.ai),Deprioritize in priorities.md
+361,ALPHA513,35,KILL,CONTENT_FARM,Dan's UGC Models,Deprioritize in priorities.md
+362,ALPHA515,35,KILL,MONETIZATION,Multiple + SaaS Trends 2026,Deprioritize in priorities.md
+363,ALPHA507,35,KILL,CONTENT_FARM,@maverickecom (Noah Frydberg),Deprioritize in priorities.md
+364,ALPHA509,35,KILL,OUTBOUND,Cold Email Benchmark Report 2026 (Instantly.ai),Deprioritize in priorities.md
+365,ALPHA513,35,KILL,CONTENT_FARM,Dan's UGC Models,Deprioritize in priorities.md
+366,ALPHA515,35,KILL,MONETIZATION,Multiple + SaaS Trends 2026,Deprioritize in priorities.md
+367,ALPHA517,35,KILL,TOOL_ALPHA,WebSearch,Deprioritize in priorities.md
+368,ALPHA522,35,KILL,DIGITAL_PRODUCTS,"Notion Templates: Thomas Frank $120K/mo, Fastest Revenue Path",Deprioritize in priorities.md
+369,ALPHA539,35,KILL,COMPLIANCE,"FTC Affiliate Disclosure: $51,744/Violation, 150+ Actions in 2025",Deprioritize in priorities.md
+370,ALPHA543,35,KILL,COMPLIANCE,"NY Synthetic Performer Law: June 9, 2026 - First State AI Disclosure",Deprioritize in priorities.md
+371,ALPHA544,35,KILL,COMPLIANCE,SEC Dropped Crypto from 2026 Enforcement Priorities (Positive Shift),Deprioritize in priorities.md
+372,ALPHA546,35,KILL,AI_INFLUENCER,AI Twitch Streaming: Neuro-sama $400K+/mo Proves Model Works,Deprioritize in priorities.md
+373,ALPHA547,35,KILL,AI_MUSIC,YouTube Content ID for AI Music = Passive Revenue $0.50-$2/1K Views,Deprioritize in priorities.md
+374,ALPHA552,35,KILL,COMPLIANCE,AI Music Copyright: Human Direction = Copyrightable (Document Everything),Deprioritize in priorities.md
+375,ALPHA507,35,KILL,CONTENT_FARM,@maverickecom (Noah Frydberg),Deprioritize in priorities.md
+376,ALPHA509,35,KILL,OUTBOUND,Cold Email Benchmark Report 2026 (Instantly.ai),Deprioritize in priorities.md
+377,ALPHA513,35,KILL,CONTENT_FARM,Dan's UGC Models,Deprioritize in priorities.md
+378,ALPHA515,35,KILL,MONETIZATION,Multiple + SaaS Trends 2026,Deprioritize in priorities.md
+379,ALPHA517,35,KILL,TOOL_ALPHA,WebSearch,Deprioritize in priorities.md
+380,ALPHA522,35,KILL,DIGITAL_PRODUCTS,"Notion Templates: Thomas Frank $120K/mo, Fastest Revenue Path",Deprioritize in priorities.md
+381,ALPHA003,35,KILL,OUTBOUND,Search Result,Deprioritize in priorities.md
+382,ALPHA008,35,KILL,GROWTH_HACK,@tatealax,Deprioritize in priorities.md
+383,ALPHA011,35,KILL,APP_FACTORY,@Jahjiren,Deprioritize in priorities.md
+384,ALPHA016,35,KILL,ENGAGEMENT_FARM,@CEOLandshark,Deprioritize in priorities.md
+385,ALPHA020b,35,KILL,GROWTH_HACK,@startup_lessons,Deprioritize in priorities.md
+386,ALPHA038,35,KILL,app_onboarding,Duolingo Case Study,Deprioritize in priorities.md
+387,ALPHA042,35,KILL,retention_tactics,Growth-onomics,Deprioritize in priorities.md
+388,ALPHA043,35,KILL,retention_tactics,Userpilot,Deprioritize in priorities.md
+389,ALPHA045,35,KILL,APP_FACTORY,Indie Hackers,Deprioritize in priorities.md
+390,ALPHA046,35,KILL,APP_FACTORY,Indie Hackers,Deprioritize in priorities.md
+391,ALPHA047,35,KILL,GROWTH_HACK,Indie Hackers,Deprioritize in priorities.md
+392,ALPHA048,35,KILL,paywall_conversion,Adapty,Deprioritize in priorities.md
+393,ALPHA049,35,KILL,GROWTH_HACK,Indie Hackers,Deprioritize in priorities.md
+394,ALPHA050,35,KILL,APP_FACTORY,levelsio,Deprioritize in priorities.md
+395,ALPHA059,35,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+396,ALPHA070,35,KILL,TOOL_ALPHA,@WorkflowWhisper,Deprioritize in priorities.md
+397,ALPHA072,35,KILL,MONETIZATION,Research,Deprioritize in priorities.md
+398,ALPHA073,35,KILL,APP_FACTORY,@simonecanciello,Deprioritize in priorities.md
+399,ALPHA075,35,KILL,MONETIZATION,@joelhooks,Deprioritize in priorities.md
+400,ALPHA077,35,KILL,GROWTH_HACK,@mattwelter,Deprioritize in priorities.md
+401,ALPHA12145E,35,KILL,MONETIZATION,Matt Schlicht,Deprioritize in priorities.md
+402,ALPHAAB6030,35,KILL,MONETIZATION,Nikita Logvinenko,Deprioritize in priorities.md
+403,ALPHA56148D,35,KILL,MONETIZATION,Ernesto Lopez,Deprioritize in priorities.md
+404,ALPHAD85FAB,35,KILL,MONETIZATION,Noah Frydberg | Tiktok Shop For Brands,Deprioritize in priorities.md
+405,ALPHAD9B288,35,KILL,MONETIZATION,Julian Goldie SEO,Deprioritize in priorities.md
+406,ALPHA2C29A7,35,KILL,MONETIZATION,Simone Canc,Deprioritize in priorities.md
+407,ALPHA1E91A8,35,KILL,MONETIZATION,Yu Lin,Deprioritize in priorities.md
+408,ALPHA762E85,35,KILL,MONETIZATION,Alton Syn,Deprioritize in priorities.md
+409,ALPHAB9AE72,35,KILL,MONETIZATION,Pounds,Deprioritize in priorities.md
+410,ALPHAAA87E4,35,KILL,MONETIZATION,🀅,Deprioritize in priorities.md
+411,ALPHAEE225B,35,KILL,MONETIZATION,Atelier Missor,Deprioritize in priorities.md
+412,ALPHAEAB1D7,35,KILL,MONETIZATION,Dimitar Angelov,Deprioritize in priorities.md
+413,ALPHA1E8576,35,KILL,MONETIZATION,Ernesto Lopez,Deprioritize in priorities.md
+414,ALPHA357F18,35,KILL,MONETIZATION,Starter Story,Deprioritize in priorities.md
+415,ALPHA972863,35,KILL,MONETIZATION,daniel,Deprioritize in priorities.md
+416,ALPHA04EF22,35,KILL,MONETIZATION,Cody Schneider,Deprioritize in priorities.md
+417,ALPHAA3D365,35,KILL,MONETIZATION,Roy,Deprioritize in priorities.md
+418,ALPHA106050,35,KILL,MONETIZATION,Simone Canc,Deprioritize in priorities.md
+419,ALPHA3F1133,35,KILL,APP_FACTORY,Yegor,Deprioritize in priorities.md
+420,ALPHA049,35,KILL,GROWTH_HACK,Indie Hackers,Deprioritize in priorities.md
+421,ALPHA050,35,KILL,APP_FACTORY,levelsio,Deprioritize in priorities.md
+422,ALPHA089,35,KILL,GROWTH_HACK,daily_research_scan,Deprioritize in priorities.md
+423,ALPHA090,35,KILL,APP_FACTORY,daily_research_scan,Deprioritize in priorities.md
+424,ALPHA092,35,KILL,MONETIZATION,daily_research_scan,Deprioritize in priorities.md
+425,ALPHA094,35,KILL,APP_FACTORY,daily_research_scan,Deprioritize in priorities.md
+426,ALPHA098,35,KILL,MONETIZATION,daily_research_scan,Deprioritize in priorities.md
+427,ALPHA105,35,KILL,GEO,daily_research_scan,Deprioritize in priorities.md
+428,ALPHA107,35,KILL,GEO,daily_research_scan,Deprioritize in priorities.md
+429,ALPHA108,35,KILL,GEO,daily_research_scan,Deprioritize in priorities.md
+430,ALPHA109,35,KILL,PROGRAMMATIC_SEO,daily_research_scan,Deprioritize in priorities.md
+431,ALPHA112,35,KILL,PROGRAMMATIC_SEO,daily_research_scan,Deprioritize in priorities.md
+432,ALPHA114,35,KILL,SEO_GEO_ASO,daily_research_scan,Deprioritize in priorities.md
+433,ALPHA115,35,KILL,OUTBOUND,@MitchellKeller_,Deprioritize in priorities.md
+434,ALPHA130,35,KILL,CONTENT_FARM,@publisherinabox,Deprioritize in priorities.md
+435,ALPHA132,35,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+436,ALPHA133,35,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+437,ALPHA136,35,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+438,ALPHA137,35,KILL,GEO,Research,Deprioritize in priorities.md
+439,ALPHA140,35,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+440,ALPHA147,35,KILL,GEO,Research,Deprioritize in priorities.md
+441,ALPHA150,35,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+442,ALPHA152,35,KILL,ASO,Research,Deprioritize in priorities.md
+443,ALPHA155,35,KILL,ASO,Research,Deprioritize in priorities.md
+444,ALPHA159,35,KILL,GEO,Research,Deprioritize in priorities.md
+445,ALPHA162,35,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+446,ALPHA164,35,KILL,OUTBOUND,@codyschneiderxx,Deprioritize in priorities.md
+447,ALPHA166,35,KILL,CONTENT_FORMAT,@maverickecom,Deprioritize in priorities.md
+448,ALPHA168,35,KILL,APP_FACTORY,@simonecanciello,Deprioritize in priorities.md
+449,ALPHA169,35,KILL,MONETIZATION,@yegormethod,Deprioritize in priorities.md
+450,ALPHA174,35,KILL,CONTENT_FORMAT,@nicktheriot_,Deprioritize in priorities.md
+451,ALPHA180,35,KILL,MONETIZATION,@pounddz,Deprioritize in priorities.md
+452,ALPHA182,35,KILL,APP_FACTORY,@anulagarwal,Deprioritize in priorities.md
+453,ALPHA185,35,KILL,TOOL_ALPHA,@0xzak,Deprioritize in priorities.md
+454,ALPHA202,35,KILL,MONETIZATION,@steven_cravotta,Deprioritize in priorities.md
+455,ALPHA209,35,KILL,OUTBOUND,Instantly Research,Deprioritize in priorities.md
+456,ALPHA213,35,KILL,OUTBOUND,DeliverOn Research,Deprioritize in priorities.md
+457,ALPHA228,35,KILL,ALPHA_HUNTER,Pump.fun,Deprioritize in priorities.md
+458,ALPHA232,35,KILL,ALPHA_HUNTER,Google,Deprioritize in priorities.md
+459,ALPHA234,35,KILL,ALPHA_HUNTER,Skool vs Patreon,Deprioritize in priorities.md
+460,ALPHA235,35,KILL,ALPHA_HUNTER,RPA Market,Deprioritize in priorities.md
+461,ALPHA238,35,KILL,ALPHA_HUNTER,Failory,Deprioritize in priorities.md
+462,ALPHA243,35,KILL,ALPHA_HUNTER,Accessibility Works,Deprioritize in priorities.md
+463,ALPHA247,35,KILL,ALPHA_HUNTER,Forbes via Adobe,Deprioritize in priorities.md
+464,ALPHA261,35,KILL,ALPHA_HUNTER,SoftExpert,Deprioritize in priorities.md
+465,ALPHA313,35,KILL,MONETIZATION,Lago Usage-Based Pricing,Deprioritize in priorities.md
+466,ALPHA329,35,KILL,APP_FACTORY,@purpdevvv Mascot Retention Boost,Deprioritize in priorities.md
+467,ALPHA330,35,KILL,ALGO_TRADING,@unusual_whales Options Flow Signals,Deprioritize in priorities.md
+468,ALPHA353,35,KILL,ALGO_TRADING,Twitter Alpha,Deprioritize in priorities.md
+469,ALPHA361,35,KILL,AI_INFLUENCER,@maverickecom + Twitter AI UGC community,Deprioritize in priorities.md
+470,ALPHA364,35,KILL,GROWTH_HACK,Internal Strategy (PRINTMAXX meta-strategy),Deprioritize in priorities.md
+471,ALPHA383,35,KILL,SEO_GEO_ASO,Quantifimedia + SEO Roundtable + Lumar,Deprioritize in priorities.md
+472,ALPHA384,35,KILL,SEO_GEO_ASO,Averi.ai + Firebrand + Conductor benchmarks,Deprioritize in priorities.md
+473,ALPHA387,35,KILL,TOOL_ALPHA,A16Z + DEV Community + Claude Code updates,Deprioritize in priorities.md
+474,ALPHA404,35,KILL,ECOM_ARBITRAGE,Etsy POD personalization trends (Teeinblue + Printify),Deprioritize in priorities.md
+475,ALPHA412,35,KILL,APP_FACTORY,Samuel Rondot Indie Hackers portfolio case study,Deprioritize in priorities.md
+476,ALPHA443,35,KILL,CONTENT_FORMAT_EDGE,Social Search Trends,Deprioritize in priorities.md
+477,ALPHA445,35,KILL,PRICING_PSYCHOLOGY,Monetization Outlook,Deprioritize in priorities.md
+478,ALPHA447,35,KILL,DEMOGRAPHIC_SHIFTS,Gen Z Research,Deprioritize in priorities.md
+479,ALPHA451,35,KILL,TALENT_ARBITRAGE,Skills Shortage Data,Deprioritize in priorities.md
+480,ALPHA452,35,KILL,DATA_PRODUCTS,Data Product Research,Deprioritize in priorities.md
+481,ALPHA457,35,KILL,PHYSICAL_DIGITAL_BRIDGES,Phygital Retail Research,Deprioritize in priorities.md
+482,ALPHA459,35,KILL,PHYSICAL_DIGITAL_BRIDGES,On-Demand Services,Deprioritize in priorities.md
+483,ALPHA972868,35,KILL,TOOL_ALPHA,BusinessOfApps,Deprioritize in priorities.md
+484,ALPHA972874,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+485,ALPHA972880,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+486,ALPHA972881,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+487,ALPHA972882,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+488,ALPHA972883,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+489,ALPHA972884,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+490,ALPHA972885,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+491,ALPHA972888,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+492,ALPHA972889,35,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+493,ALPHA972892,35,KILL,TOOL_ALPHA,GitHub Trending,Deprioritize in priorities.md
+494,ALPHA972895,35,KILL,PLATFORM_UPDATE,TikTok + HeyOrca + OpusClip,Deprioritize in priorities.md
+495,ALPHA972901,35,KILL,MONETIZATION,@codyschneiderxx,Deprioritize in priorities.md
+496,ALPHA972909,35,KILL,CONTENT_FORMAT,@eptwts,Deprioritize in priorities.md
+497,ALPHA972911,35,KILL,OUTBOUND,Instantly Benchmark Report 2026,Deprioritize in priorities.md
+498,ALPHA972912,35,KILL,MONETIZATION,Adapty + Yield Solutions + Reddit Analysis,Deprioritize in priorities.md
+499,ALPHA004,30,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+500,ALPHA249,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+501,ALPHA250,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+502,ALPHA251,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+503,ALPHA252,30,KILL,TOOL_ALPHA,Chrome Extension,Deprioritize in priorities.md
+504,ALPHA254,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+505,ALPHA255,30,KILL,TOOL_ALPHA,n8n,Deprioritize in priorities.md
+506,ALPHA265,30,KILL,CONTENT_FARM,TikTok Trends Jan 2026,Deprioritize in priorities.md
+507,ALPHA269,30,KILL,CONTENT_FARM,Instagram Reels Algorithm,Deprioritize in priorities.md
+508,ALPHA271,30,KILL,CONTENT_FARM,Content Repurposing,Deprioritize in priorities.md
+509,ALPHA273,30,KILL,CONTENT_FARM,TikTok Search Optimization,Deprioritize in priorities.md
+510,ALPHA274,30,KILL,OUTBOUND,Instantly.ai,Deprioritize in priorities.md
+511,ALPHA275,30,KILL,OUTBOUND,Saleshandy,Deprioritize in priorities.md
+512,ALPHA276,30,KILL,OUTBOUND,Mailshake,Deprioritize in priorities.md
+513,ALPHA280,30,KILL,OUTBOUND,Saleshandy,Deprioritize in priorities.md
+514,ALPHA281,30,KILL,OUTBOUND,Smartlead,Deprioritize in priorities.md
+515,ALPHA282,30,KILL,OUTBOUND,MailReach,Deprioritize in priorities.md
+516,ALPHA283,30,KILL,OUTBOUND,Warmup Inbox,Deprioritize in priorities.md
+517,ALPHA284,30,KILL,OUTBOUND,TrulyInbox,Deprioritize in priorities.md
+518,ALPHA285,30,KILL,OUTBOUND,Saleshandy,Deprioritize in priorities.md
+519,ALPHA286,30,KILL,OUTBOUND,EmailChaser,Deprioritize in priorities.md
+520,ALPHA287,30,KILL,OUTBOUND,Saleshandy,Deprioritize in priorities.md
+521,ALPHA273,30,KILL,CONTENT_FARM,TikTok Search Optimization,Deprioritize in priorities.md
+522,ALPHA297,30,KILL,SEO_GEO_ASO,Medium SEO Analysis,Deprioritize in priorities.md
+523,ALPHA301,30,KILL,SEO_GEO_ASO,AppTweak ASO Blog,Deprioritize in priorities.md
+524,ALPHA306,30,KILL,SEO_GEO_ASO,Yotpo GEO Guide,Deprioritize in priorities.md
+525,ALPHA312,30,KILL,MONETIZATION,UserPilot Conversion Tactics,Deprioritize in priorities.md
+526,ALPHA319,30,KILL,OUTBOUND,@pipelineabuser Visualping Competitor Intel,Deprioritize in priorities.md
+527,ALPHA321,30,KILL,OUTBOUND,@pipelineabuser Multi-Inbox Scale,Deprioritize in priorities.md
+528,ALPHA326,30,KILL,APP_FACTORY,@knoxtwts App Marketing Content Framework,Deprioritize in priorities.md
+529,ALPHA327,30,KILL,GROWTH_HACK,@knoxtwts Reply Bait Strategy,Deprioritize in priorities.md
+530,ALPHA331,30,KILL,ALGO_TRADING,@lookonchain On-Chain Whale Tracking,Deprioritize in priorities.md
+531,ALPHA334,30,KILL,GROWTH_HACK,Self-Reply Funnel Strategy,Deprioritize in priorities.md
+532,ALPHA358,30,KILL,TOOL_ALPHA,Moon Dev Twitter Space,Deprioritize in priorities.md
+533,ALPHA356,30,KILL,APP_FACTORY,@itsolelehmann + @lukeharries,Deprioritize in priorities.md
+534,ALPHA360,30,KILL,TOOL_ALPHA,@shawn_pana + vercel-labs,Deprioritize in priorities.md
+535,ALPHA365,30,KILL,CONTENT_FORMAT,Web Research (MEGA LOOP),Deprioritize in priorities.md
+536,ALPHA370,30,KILL,GROWTH_HACK,Web Research (MEGA LOOP),Deprioritize in priorities.md
+537,ALPHA416,30,KILL,PLATFORM_UPDATE,WebSearch,Deprioritize in priorities.md
+538,ALPHA418,30,KILL,TOOL_ALPHA,WebSearch,Deprioritize in priorities.md
+539,ALPHA423,30,KILL,TOOL_ALPHA,WebSearch,Deprioritize in priorities.md
+540,ALPHA436,30,KILL,OUTBOUND,Will Allred + Smartlead + Mailshake,Deprioritize in priorities.md
+541,ALPHA473,30,KILL,SEO_GEO_ASO,Search Engine Journal + Veza Digital + Sitebulb,Deprioritize in priorities.md
+542,ALPHA497,30,KILL,TOOL_ALPHA,Web research (Anthropic MCP docs + Linux Foundation AAIF + W3C),Deprioritize in priorities.md
+543,ALPHA498,30,KILL,TOOL_ALPHA,Web research (n8n GitHub + n8n docs + MCP integration),Deprioritize in priorities.md
+544,ALPHA511,30,KILL,TOOL_ALPHA,@iamgdsa (Guillaume & Jean),Deprioritize in priorities.md
+545,ALPHA514,30,KILL,SEO_GEO_ASO,@Hightrafficsite + SEO 2026 trends,Deprioritize in priorities.md
+546,ALPHA511,30,KILL,TOOL_ALPHA,@iamgdsa (Guillaume & Jean),Deprioritize in priorities.md
+547,ALPHA514,30,KILL,SEO_GEO_ASO,@Hightrafficsite + SEO 2026 trends,Deprioritize in priorities.md
+548,ALPHA541,30,KILL,COMPLIANCE,Apple/Google App Store Deadlines: Age Ratings + External Links PAST DUE,Deprioritize in priorities.md
+549,ALPHA511,30,KILL,TOOL_ALPHA,@iamgdsa (Guillaume & Jean),Deprioritize in priorities.md
+550,ALPHA514,30,KILL,SEO_GEO_ASO,@Hightrafficsite + SEO 2026 trends,Deprioritize in priorities.md
+551,ALPHA001,30,KILL,APP_FACTORY,@gregisenberg,Deprioritize in priorities.md
+552,ALPHA002,30,KILL,COMPLIANCE,FTC Research,Deprioritize in priorities.md
+553,ALPHA005,30,KILL,APP_FACTORY,@knoxtwts,Deprioritize in priorities.md
+554,ALPHA006,30,KILL,COMPLIANCE,Cluely Study,Deprioritize in priorities.md
+555,ALPHA007,30,KILL,APP_FACTORY,@purpdevvv,Deprioritize in priorities.md
+556,ALPHA012,30,KILL,CONTENT_FORMAT,@wesocialgrowth,Deprioritize in priorities.md
+557,ALPHA013,30,KILL,CONTENT_FORMAT,@mattwelter,Deprioritize in priorities.md
+558,ALPHA014,30,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+559,ALPHA015,30,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+560,ALPHA017,30,KILL,ENGAGEMENT_FARM,@wannercashcow,Deprioritize in priorities.md
+561,ALPHA018,30,KILL,TOOL_ALPHA,@xivy0k,Deprioritize in priorities.md
+562,ALPHA021,30,KILL,OUTBOUND,@startup_lessons,Deprioritize in priorities.md
+563,ALPHA022,30,KILL,GROWTH_HACK,@startup_lessons,Deprioritize in priorities.md
+564,ALPHA023,30,KILL,MONETIZATION,@startup_lessons,Deprioritize in priorities.md
+565,ALPHA024,30,KILL,APP_FACTORY,@startup_lessons,Deprioritize in priorities.md
+566,ALPHA026,30,KILL,APP_FACTORY,@startup_lessons,Deprioritize in priorities.md
+567,ALPHA027,30,KILL,APP_FACTORY,@startup_lessons,Deprioritize in priorities.md
+568,ALPHA029,30,KILL,GROWTH_HACK,@startup_lessons,Deprioritize in priorities.md
+569,ALPHA030,30,KILL,MONETIZATION,@startup_lessons,Deprioritize in priorities.md
+570,ALPHA031,30,KILL,APP_FACTORY,@startup_lessons,Deprioritize in priorities.md
+571,ALPHA041,30,KILL,app_store_optimization,AppTweak,Deprioritize in priorities.md
+572,ALPHA044,30,KILL,retention_tactics,Userpilot,Deprioritize in priorities.md
+573,ALPHA052,30,KILL,CONTENT_FORMAT,Screenshot/AI Video Method,Deprioritize in priorities.md
+574,ALPHA053,30,KILL,TOOL_ALPHA,Screenshot/AI Video Method,Deprioritize in priorities.md
+575,ALPHA054,30,KILL,TOOL_ALPHA,Screenshot/AI Video Method,Deprioritize in priorities.md
+576,ALPHA055,30,KILL,TOOL_ALPHA,Screenshot/AI Video Method,Deprioritize in priorities.md
+577,ALPHA056,30,KILL,TOOL_ALPHA,Screenshot/AI Video Method,Deprioritize in priorities.md
+578,ALPHA057,30,KILL,TOOL_ALPHA,ChatGPT/DALL-E,Deprioritize in priorities.md
+579,ALPHA058,30,KILL,TOOL_ALPHA,Google AI Studio,Deprioritize in priorities.md
+580,ALPHA060,30,KILL,OUTBOUND,@caiden_cole,Deprioritize in priorities.md
+581,ALPHA061,30,KILL,APP_FACTORY,@knoxtwts,Deprioritize in priorities.md
+582,ALPHA062,30,KILL,APP_FACTORY,@purpdevvv,Deprioritize in priorities.md
+583,ALPHA063,30,KILL,CONTENT_FORMAT,@gregisenberg,Deprioritize in priorities.md
+584,ALPHA064,30,KILL,GROWTH_HACK,Research,Deprioritize in priorities.md
+585,ALPHA065,30,KILL,CONTENT_FORMAT,@dickiebush,Deprioritize in priorities.md
+586,ALPHA067,30,KILL,GROWTH_HACK,@tatealax,Deprioritize in priorities.md
+587,ALPHA069,30,KILL,CONTENT_FORMAT,@Hightrafficsite,Deprioritize in priorities.md
+588,ALPHA076,30,KILL,CONTENT_FORMAT,Research,Deprioritize in priorities.md
+589,ALPHA078,30,KILL,TOOL_ALPHA,@godofprompt,Deprioritize in priorities.md
+590,ALPHA079,30,KILL,APP_FACTORY,Research,Deprioritize in priorities.md
+591,ALPHA084,30,KILL,MONETIZATION,Research,Deprioritize in priorities.md
+592,ALPHAE802E4,30,KILL,APP_FACTORY,Garrett Scott ,Deprioritize in priorities.md
+593,ALPHA6A646F,30,KILL,MONETIZATION,Hasanuzzaman Khan,Deprioritize in priorities.md
+594,ALPHA613186,30,KILL,APP_FACTORY,vivo,Deprioritize in priorities.md
+595,ALPHAC1877D,30,KILL,OUTBOUND,caiden,Deprioritize in priorities.md
+596,ALPHAC4345C,30,KILL,GROWTH_HACK,Quant Science,Deprioritize in priorities.md
+597,ALPHA058FA9,30,KILL,APP_FACTORY,Nathan Geckler,Deprioritize in priorities.md
+598,ALPHA7EA4A5,30,KILL,TOOL_ALPHA,Hridoy Rehman,Deprioritize in priorities.md
+599,ALPHAED36F7,30,KILL,TOOL_ALPHA,Tryahd,Deprioritize in priorities.md
+600,ALPHA794432,30,KILL,TOOL_ALPHA,Sense Receptor,Deprioritize in priorities.md
+601,ALPHA321C42,30,KILL,APP_FACTORY,Alex Finn,Deprioritize in priorities.md
+602,ALPHA5C833A,30,KILL,GROWTH_HACK,Qasim,Deprioritize in priorities.md
+603,ALPHA7285E2,30,KILL,GROWTH_HACK,Jonny Vandel,Deprioritize in priorities.md
+604,ALPHA453764,30,KILL,CONTENT_FORMAT,Penelope Lopez,Deprioritize in priorities.md
+605,ALPHABBBDCD,30,KILL,MONETIZATION,Prajwal Tomar,Deprioritize in priorities.md
+606,ALPHA052,30,KILL,CONTENT_FORMAT,Screenshot/AI Video Method,Deprioritize in priorities.md
+607,ALPHA053,30,KILL,TOOL_ALPHA,Screenshot/AI Video Method,Deprioritize in priorities.md
+608,ALPHA054,30,KILL,TOOL_ALPHA,Screenshot/AI Video Method,Deprioritize in priorities.md
+609,ALPHA055,30,KILL,TOOL_ALPHA,Screenshot/AI Video Method,Deprioritize in priorities.md
+610,ALPHA086,30,KILL,APP_FACTORY,daily_research_scan,Deprioritize in priorities.md
+611,ALPHA087,30,KILL,APP_FACTORY,daily_research_scan,Deprioritize in priorities.md
+612,ALPHA088,30,KILL,CONTENT_FORMAT,daily_research_scan,Deprioritize in priorities.md
+613,ALPHA093,30,KILL,APP_FACTORY,daily_research_scan,Deprioritize in priorities.md
+614,ALPHA099,30,KILL,MONETIZATION,daily_research_scan,Deprioritize in priorities.md
+615,ALPHA102,30,KILL,ASO,daily_research_scan,Deprioritize in priorities.md
+616,ALPHA103,30,KILL,ASO,daily_research_scan,Deprioritize in priorities.md
+617,ALPHA106,30,KILL,GEO,daily_research_scan,Deprioritize in priorities.md
+618,ALPHA110,30,KILL,PROGRAMMATIC_SEO,daily_research_scan,Deprioritize in priorities.md
+619,ALPHA111,30,KILL,PROGRAMMATIC_SEO,daily_research_scan,Deprioritize in priorities.md
+620,ALPHA116,30,KILL,AUTOMATION,@codyschneiderxx,Deprioritize in priorities.md
+621,ALPHA117,30,KILL,UGC_ARBITRAGE,@Jibran_05,Deprioritize in priorities.md
+622,ALPHA118,30,KILL,CONTENT_FORMAT,@wannercashcow,Deprioritize in priorities.md
+623,ALPHA119,30,KILL,APP_FACTORY,@VadimNotJustDev,Deprioritize in priorities.md
+624,ALPHA120,30,KILL,AUTOMATION,@d4m1n,Deprioritize in priorities.md
+625,ALPHA121,30,KILL,APP_FACTORY,@MugoScales,Deprioritize in priorities.md
+626,ALPHA122,30,KILL,TOOL_ALPHA,@aiedge_,Deprioritize in priorities.md
+627,ALPHA127,30,KILL,B2B_SALES,@vasuman,Deprioritize in priorities.md
+628,ALPHA128,30,KILL,TOOL_ALPHA,@cnakazawa,Deprioritize in priorities.md
+629,ALPHA129,30,KILL,CONTENT_FORMAT,@wannercashcow,Deprioritize in priorities.md
+630,ALPHA131,30,KILL,TIKTOK_SHOP,@maverickecom,Deprioritize in priorities.md
+631,ALPHA134,30,KILL,ASO,Research,Deprioritize in priorities.md
+632,ALPHA138,30,KILL,GEO,Research,Deprioritize in priorities.md
+633,ALPHA141,30,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+634,ALPHA142,30,KILL,GEO,Research,Deprioritize in priorities.md
+635,ALPHA144,30,KILL,SEO_GEO_ASO,@aleyda,Deprioritize in priorities.md
+636,ALPHA145,30,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+637,ALPHA151,30,KILL,SEO_GEO_ASO,@JohnMu,Deprioritize in priorities.md
+638,ALPHA153,30,KILL,GEO,Research,Deprioritize in priorities.md
+639,ALPHA154,30,KILL,GEO,Research,Deprioritize in priorities.md
+640,ALPHA156,30,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+641,ALPHA157,30,KILL,SEO_GEO_ASO,Research,Deprioritize in priorities.md
+642,ALPHA163,30,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+643,ALPHA165,30,KILL,CONTENT_FORMAT,@maverickecom,Deprioritize in priorities.md
+644,ALPHA167,30,KILL,MONETIZATION,@knoxtwts,Deprioritize in priorities.md
+645,ALPHA171,30,KILL,CONTENT_FORMAT,@Jonnyvandel,Deprioritize in priorities.md
+646,ALPHA172,30,KILL,APP_FACTORY,@PrajwalTomar_,Deprioritize in priorities.md
+647,ALPHA173,30,KILL,TOOL_ALPHA,@AntonioEscudero,Deprioritize in priorities.md
+648,ALPHA176,30,KILL,CONTENT_FORMAT,Bookmark,Deprioritize in priorities.md
+649,ALPHA177,30,KILL,TOOL_ALPHA,@PinodiArt,Deprioritize in priorities.md
+650,ALPHA178,30,KILL,TOOL_ALPHA,@KeorUnreal,Deprioritize in priorities.md
+651,ALPHA181,30,KILL,AI_INFLUENCER,@iamgdsa,Deprioritize in priorities.md
+652,ALPHA187,30,KILL,TOOL_ALPHA,@camhahu,Deprioritize in priorities.md
+653,ALPHA188,30,KILL,SEO_GEO_ASO,@nicktheriot_,Deprioritize in priorities.md
+654,ALPHA189,30,KILL,TOOL_ALPHA,@steveruizok,Deprioritize in priorities.md
+655,ALPHA192,30,KILL,OUTBOUND,@vasuman,Deprioritize in priorities.md
+656,ALPHA194,30,KILL,TOOL_ALPHA,@ryanvogel,Deprioritize in priorities.md
+657,ALPHA195,30,KILL,TOOL_ALPHA,@kyeburchard,Deprioritize in priorities.md
+658,ALPHA196,30,KILL,TOOL_ALPHA,@kylejeong,Deprioritize in priorities.md
+659,ALPHA197,30,KILL,TOOL_ALPHA,Roblox Official,Deprioritize in priorities.md
+660,ALPHA198,30,KILL,APP_FACTORY,@steven_cravotta,Deprioritize in priorities.md
+661,ALPHA200,30,KILL,CONTENT_FORMAT,@steven_cravotta,Deprioritize in priorities.md
+662,ALPHA201,30,KILL,GROWTH_HACK,@steven_cravotta,Deprioritize in priorities.md
+663,ALPHA204,30,KILL,MONETIZATION,user_insight,Deprioritize in priorities.md
+664,ALPHA205,30,KILL,GROWTH_HACK,user_insight,Deprioritize in priorities.md
+665,ALPHA207,30,KILL,OUTBOUND,Cold Email Research,Deprioritize in priorities.md
+666,ALPHA208,30,KILL,OUTBOUND,@caiden_cole,Deprioritize in priorities.md
+667,ALPHA212,30,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+668,ALPHA214,30,KILL,OUTBOUND,Smartlead Research,Deprioritize in priorities.md
+669,ALPHA215,30,KILL,OUTBOUND,@pipelineabuser,Deprioritize in priorities.md
+670,ALPHA218,30,KILL,OUTBOUND,LinkedIn Research,Deprioritize in priorities.md
+671,ALPHA219,30,KILL,OUTBOUND,Expandi Research,Deprioritize in priorities.md
+672,ALPHA220,30,KILL,TOOL_ALPHA,GitHub Trending,Deprioritize in priorities.md
+673,ALPHA221,30,KILL,TOOL_ALPHA,GitHub Trending,Deprioritize in priorities.md
+674,ALPHA222,30,KILL,TOOL_ALPHA,GitHub Trending,Deprioritize in priorities.md
+675,ALPHA223,30,KILL,TOOL_ALPHA,GitHub Trending,Deprioritize in priorities.md
+676,ALPHA224,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+677,ALPHA225,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+678,ALPHA226,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+679,ALPHA227,30,KILL,TOOL_ALPHA,GitHub,Deprioritize in priorities.md
+680,ALPHA229,30,KILL,ALPHA_HUNTER,Multiple APIs,Deprioritize in priorities.md
+681,ALPHA230,30,KILL,ALPHA_HUNTER,Anthropic/OpenAI,Deprioritize in priorities.md
+682,ALPHA231,30,KILL,ALPHA_HUNTER,OpenAI,Deprioritize in priorities.md
+683,ALPHA233,30,KILL,ALPHA_HUNTER,Skool.com,Deprioritize in priorities.md
+684,ALPHA237,30,KILL,ALPHA_HUNTER,Backlinko,Deprioritize in priorities.md
+685,ALPHA239,30,KILL,ALPHA_HUNTER,Bluesky,Deprioritize in priorities.md
+686,ALPHA242,30,KILL,ALPHA_HUNTER,Numerator,Deprioritize in priorities.md
+687,ALPHA244,30,KILL,ALPHA_HUNTER,Adobe,Deprioritize in priorities.md
+688,ALPHA245,30,KILL,ALPHA_HUNTER,Metricool,Deprioritize in priorities.md
+689,ALPHA257,30,KILL,ALPHA_HUNTER,Futuramo,Deprioritize in priorities.md
+690,ALPHA259,30,KILL,ALPHA_HUNTER,White & Case,Deprioritize in priorities.md
+691,ALPHA260,30,KILL,ALPHA_HUNTER,Sidley,Deprioritize in priorities.md
+692,ALPHA262,30,KILL,ALPHA_HUNTER,EU CSRD,Deprioritize in priorities.md
+693,ALPHA303,30,KILL,SEO_GEO_ASO,Digital Authority GEO Trends,Deprioritize in priorities.md
+694,ALPHA305,30,KILL,SEO_GEO_ASO,Topify GEO Strategy,Deprioritize in priorities.md
+695,ALPHA328,30,KILL,APP_FACTORY,@purpdevvv App Niche Adaptation,Deprioritize in priorities.md
+696,ALPHA333,30,KILL,ALGO_TRADING,@GlassNode HODL Waves Analysis,Deprioritize in priorities.md
+697,ALPHA338,30,KILL,CONTENT_FARM,@Jonnyvandel Mass Content Automation,Deprioritize in priorities.md
+698,ALPHA344,30,KILL,APP_FACTORY,@paoloanzn Old Forum Idea Mining,Deprioritize in priorities.md
+699,ALPHA344,30,KILL,APP_FACTORY,@paoloanzn Old Forum Idea Mining,Deprioritize in priorities.md
+700,ALPHA386,30,KILL,TOOL_ALPHA,GitHub Trending + Medium analysis,Deprioritize in priorities.md
+701,ALPHA395,30,KILL,TOOL_ALPHA,DataCamp + GitHub MCP Server + n8n-MCP,Deprioritize in priorities.md
+702,ALPHA438,30,KILL,EMERGING_PLATFORMS,Platform Research,Deprioritize in priorities.md
+703,ALPHA439,30,KILL,EMERGING_PLATFORMS,Platform Analysis,Deprioritize in priorities.md
+704,ALPHA440,30,KILL,EMERGING_PLATFORMS,Bluesky Analysis,Deprioritize in priorities.md
+705,ALPHA441,30,KILL,CONTENT_FORMAT_EDGE,Content Format Research,Deprioritize in priorities.md
+706,ALPHA442,30,KILL,CONTENT_FORMAT_EDGE,Instagram Trends,Deprioritize in priorities.md
+707,ALPHA449,30,KILL,DEMOGRAPHIC_SHIFTS,Underserved Markets,Deprioritize in priorities.md
+708,ALPHA453,30,KILL,DATA_PRODUCTS,E-commerce Data,Deprioritize in priorities.md
+709,ALPHA454,30,KILL,REGULATORY_ARBITRAGE,Crypto Regulatory Analysis,Deprioritize in priorities.md
+710,ALPHA455,30,KILL,REGULATORY_ARBITRAGE,Cross-Border Payments,Deprioritize in priorities.md
+711,ALPHA456,30,KILL,REGULATORY_ARBITRAGE,Compliance SaaS,Deprioritize in priorities.md
+712,ALPHA460,30,KILL,PHYSICAL_DIGITAL_BRIDGES,Offline-First Apps,Deprioritize in priorities.md
+713,ALPHA972865,30,KILL,TOOL_ALPHA,Anthropic + GitHub,Deprioritize in priorities.md
+714,ALPHA972870,30,KILL,TOOL_ALPHA,GitHub Trending,Deprioritize in priorities.md
+715,ALPHA972871,30,KILL,CONTENT_FARM,Multiple,Deprioritize in priorities.md
+716,ALPHA972872,30,KILL,OUTBOUND,Amplemarket,Deprioritize in priorities.md
+717,ALPHA972875,30,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+718,ALPHA972876,30,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+719,ALPHA972878,30,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+720,ALPHA972879,30,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+721,ALPHA972886,30,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+722,ALPHA972887,30,KILL,OUTBOUND,Twitter Intel,Deprioritize in priorities.md
+723,ALPHA972890,30,KILL,GROWTH_HACK,Twitter Intel,Deprioritize in priorities.md
+724,ALPHA972891,30,KILL,TOOL_ALPHA,GitHub Trending,Deprioritize in priorities.md
+725,ALPHA972894,30,KILL,TOOL_ALPHA,Product Hunt + Anthropic,Deprioritize in priorities.md
+726,ALPHA972899,30,KILL,TOOL_ALPHA,GitHub + Anthropic,Deprioritize in priorities.md
+727,ALPHA972900,30,KILL,TOOL_ALPHA,GitHub + Browser-Use,Deprioritize in priorities.md
+728,ALPHA972904,30,KILL,EMERGING_NICHE,@gregisenberg,Deprioritize in priorities.md
+729,ALPHA972917,30,KILL,EMERGING_NICHE,Reddit Analysis + nomusica.com,Deprioritize in priorities.md
+730,ALPHA551,25,KILL,PLATFORM_ARBITRAGE,Bluesky 40M Users: Pre-Monetization Land Grab with Zero Link Penalty,Deprioritize in priorities.md
+731,ALPHA972893,15,KILL,COMPLIANCE,The Hacker News + JFrog,Deprioritize in priorities.md

@@ -1,0 +1,55 @@
+{
+  "loop": "master_ops",
+  "description": "Master Ops Maintenance - keeps PRINTMAXX_MASTER_OPS.xlsx and operational tracking current",
+  "created": "2026-02-10",
+  "tasks": [
+    {
+      "id": "T1",
+      "name": "Regenerate XLSX",
+      "description": "Run build_master_ops_v2.py to rebuild PRINTMAXX_MASTER_OPS.xlsx",
+      "passes": false
+    },
+    {
+      "id": "T2",
+      "name": "Sync alpha staging to ops",
+      "description": "Scan LEDGER/ALPHA_STAGING.csv for APPROVED entries, map to ops",
+      "passes": false
+    },
+    {
+      "id": "T3",
+      "name": "Sync accounts to browser stack",
+      "description": "Scan LEDGER/ACCOUNTS.csv, update browser/proxy inventory",
+      "passes": false
+    },
+    {
+      "id": "T4",
+      "name": "Cross-pollination matrix update",
+      "description": "Check CROSS_POLLINATION_MATRIX.csv for missing methods and high-synergy pairs",
+      "passes": false
+    },
+    {
+      "id": "T5",
+      "name": "Revenue tracker sync",
+      "description": "Sync FINANCIALS/REVENUE_TRACKER.csv, calculate P&L summary",
+      "passes": false
+    },
+    {
+      "id": "T6",
+      "name": "Self-test priority rerank",
+      "description": "Run scripts/self_test.py, rerank ops by launch readiness score",
+      "passes": false
+    },
+    {
+      "id": "T7",
+      "name": "Infra inventory refresh",
+      "description": "Scan MEGA_SHEET TAB4+TAB7 for tools, channels, MCP servers",
+      "passes": false
+    },
+    {
+      "id": "T8",
+      "name": "Zero waste content generation",
+      "description": "Generate content from T1-T7 findings per Zero Waste Protocol",
+      "passes": false
+    }
+  ]
+}

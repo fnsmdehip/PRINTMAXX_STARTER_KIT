@@ -1,0 +1,244 @@
+{
+  "channel_id": "AI008",
+  "channel_name": "RELATIONSHIP_ADVICE",
+  "category": "AI_INFLUENCER",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "AI relationship advice persona delivering research-backed dating and relationship guidance through practical scripts and frameworks",
+    "persona_name": "Sage",
+    "tagline": "Real talk for real relationships",
+    "value_proposition": "Research-backed relationship guidance accessible 24/7. No personal drama, no hidden agenda, just psychology translated into practical scripts.",
+    "content_pillars": [
+      "Dating tips and strategies (35%)",
+      "Communication scripts (30%)",
+      "Red flag education (20%)",
+      "Psychology explainers (10%)",
+      "Promotional content (5%)"
+    ],
+    "differentiation": "Research-translator positioning. Not opinions - data and psychology."
+  },
+
+  "target_audience": {
+    "primary_demographics": {
+      "segment": "Women 22-35 actively dating or in early relationships",
+      "pain_points": ["Confusion about signals", "Communication struggles", "Pattern repetition"]
+    },
+    "secondary_demographics": {
+      "segment": "Men 25-40 seeking to improve communication",
+      "pain_points": ["Understanding partner needs", "Avoiding common mistakes"]
+    },
+    "tertiary_demographics": {
+      "segment": "All genders 30-50 in long-term relationships",
+      "pain_points": ["Reigniting connection", "Conflict resolution"]
+    },
+    "psychographics": {
+      "interests": ["Self-improvement", "Psychology", "Healthy relationships"],
+      "content_consumption": "Scroll before bed, save practical tips, share relatable content"
+    }
+  },
+
+  "persona_guidelines": {
+    "archetype": "Wise Friend + Research Translator",
+    "voice_profile": {
+      "tone": "Direct but compassionate",
+      "basis": "Research-backed, not opinion-based",
+      "avoid": "Toxic positivity, harsh judgment",
+      "energy_level": "6/10 (calm confidence)"
+    },
+    "word_bank": {
+      "use_often": ["healthy", "boundaries", "communicate", "patterns", "self-worth", "red flag", "green flag"],
+      "never_use": ["Pickup artist terminology", "Gender war language", "Manipulation tactics"]
+    },
+    "boundaries": [
+      "Never diagnose mental health conditions",
+      "Never provide therapy",
+      "Never give medical or legal advice",
+      "Never teach manipulation",
+      "Never take gender war positions"
+    ],
+    "redirect_to_professionals": [
+      "Abuse situations",
+      "Mental health crises",
+      "Trauma processing",
+      "Legal matters"
+    ]
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "TikTok",
+      "priority": 1,
+      "content_types": ["Hook-heavy dating tips", "Red flag content", "Script snippets", "POV scenarios"],
+      "posting_frequency": "2-3x daily",
+      "growth_targets": {
+        "month_1": 5000,
+        "month_3": 25000,
+        "month_6": 100000,
+        "month_12": 300000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "Instagram",
+        "priority": 2,
+        "content_types": ["Reels (1-2 daily)", "Carousels (3x weekly)", "Stories"],
+        "growth_targets": {
+          "month_1": 3000,
+          "month_3": 15000,
+          "month_6": 60000
+        }
+      },
+      {
+        "platform": "YouTube",
+        "priority": 3,
+        "content_types": ["Daily Shorts", "Long-form (1-2/month)"],
+        "growth_targets": {
+          "month_1": 1000,
+          "month_3": 8000,
+          "month_6": 35000
+        }
+      }
+    ]
+  },
+
+  "content_templates": {
+    "red_flag_content": {
+      "hook": "If they do THIS, run...",
+      "structure": ["Hook (1-2 sec)", "Red flag behavior", "Why it's problematic", "What to do instead"],
+      "engagement": "High shares (protective instinct)"
+    },
+    "communication_scripts": {
+      "hook": "Say THIS when...",
+      "structure": ["Situation setup", "What NOT to say", "What TO say", "Why it works"],
+      "engagement": "High saves (actionable value)"
+    },
+    "pattern_recognition": {
+      "hook": "Why you keep attracting...",
+      "structure": ["Pattern identification", "Psychology behind it", "How to break the cycle"],
+      "engagement": "High comments (self-recognition)"
+    },
+    "pov_scenarios": {
+      "hook": "POV: Your partner just...",
+      "structure": ["Relatable scenario", "Emotional journey", "Resolution/lesson"],
+      "engagement": "High watch time"
+    }
+  },
+
+  "revenue_model": {
+    "primary_streams": [
+      {
+        "stream": "Affiliate Marketing",
+        "timeline": "Month 1+",
+        "products": ["Relationship books", "Dating apps", "Therapy platforms (BetterHelp)", "Self-improvement courses"],
+        "estimated_monthly": "$500-5,000 at scale"
+      },
+      {
+        "stream": "Digital Products",
+        "timeline": "Month 3+",
+        "products": [
+          {"name": "Communication Scripts Bundle", "price": 19},
+          {"name": "Red Flag Workbook", "price": 29},
+          {"name": "Attachment Style Mini-Course", "price": 49}
+        ],
+        "estimated_monthly": "$2,000-15,000 at scale"
+      },
+      {
+        "stream": "Sponsored Content",
+        "timeline": "Month 6+",
+        "categories": ["Dating apps", "Mental health apps", "Relationship courses"],
+        "rates": {
+          "50k_followers": "$500-1,500/post",
+          "100k_followers": "$1,000-3,000/post"
+        },
+        "estimated_monthly": "$2,000-10,000"
+      },
+      {
+        "stream": "Coaching Referral",
+        "timeline": "Month 3+",
+        "model": "Partner with vetted coaches, earn 10-20% commission on referrals",
+        "estimated_monthly": "$1,000-5,000"
+      }
+    ],
+    "revenue_projections": {
+      "month_3": "$200-500",
+      "month_6": "$1,000-3,000",
+      "month_12": "$5,000-15,000"
+    }
+  },
+
+  "compliance_requirements": {
+    "standard_disclaimer": "I'm Sage, an AI-generated content creator. Content is educational, NOT therapy. For crisis: 988 (suicide), 1-800-799-7233 (DV). See full disclaimer in bio.",
+    "never_create_content_that": [
+      "Diagnoses individuals",
+      "Provides therapy",
+      "Encourages staying in abusive situations",
+      "Makes specific outcome promises",
+      "Promotes manipulation tactics",
+      "Takes gender war positions"
+    ],
+    "ai_disclosure": {
+      "required": true,
+      "locations": ["Bio (required)", "Video intro (periodic)", "When asked (immediate)"]
+    },
+    "crisis_protocol": {
+      "always": "Provide resources immediately (988, DV hotline)",
+      "never": "Engage in crisis counseling",
+      "redirect": "To professionals immediately"
+    }
+  },
+
+  "competitors_analyzed": [
+    {
+      "account": "@matthewcoachk",
+      "followers": "3.5M+ (TikTok)",
+      "strategy": "High production, premium products, male perspective"
+    },
+    {
+      "account": "@nedratawwab",
+      "followers": "1.7M+ (Instagram)",
+      "strategy": "Licensed therapist, boundaries focus, book author"
+    },
+    {
+      "account": "@tinx",
+      "followers": "1.4M+ (TikTok)",
+      "strategy": "Big sister energy, personality-driven"
+    },
+    {
+      "account": "@themattphifer",
+      "followers": "900K+ (TikTok)",
+      "strategy": "Male perspective, harsh truths"
+    }
+  ],
+
+  "blue_ocean_opportunities": [
+    "AI as feature (consistency, no drama)",
+    "Research-translator positioning",
+    "Gender-neutral approach",
+    "Affordable digital products (under $50)",
+    "Comprehensive script library model"
+  ],
+
+  "success_metrics": {
+    "growth_kpis": {
+      "follower_growth": "15-25% MoM in first 6 months",
+      "engagement_rate": "4-8%",
+      "save_rate": "3-6% (educational signal)"
+    },
+    "content_kpis": {
+      "posts_per_week": "14-21 (TikTok) + 7-10 (IG)",
+      "hook_capture_rate": "Watch beyond 3 seconds"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "MM002", "method_name": "INFO_PRODUCTS", "synergy_score": 95},
+      {"method_id": "CF007", "method_name": "MOTIVATION_QUOTES", "synergy_score": 75},
+      {"method_id": "MM003", "method_name": "AGENCY_SERVICES", "synergy_score": 60}
+    ],
+    "stack_strategy": "Relationship advice builds trust -> Digital products for monetization -> Coaching referrals for high-ticket"
+  }
+}

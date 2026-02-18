@@ -1,0 +1,372 @@
+industry,email_number,subject,body,delay_days
+dental,1,"I checked {{BUSINESS_NAME}} on my phone","{{FIRST_NAME}},
+
+I pulled up {{BUSINESS_NAME}} on my phone just now. Took {{LOAD_TIME}} seconds to load. No online booking. No click-to-call.
+
+Every second of load time costs you ~7% in conversions. For a dental practice averaging $800/patient, that adds up fast.
+
+I built a free website audit for you: {{AUDIT_URL}}
+
+Shows exactly where you're losing patients to competitors who load faster.
+
+Takes 30 seconds to review. No strings.
+
+{{MY_NAME}}
+{{MY_PHONE}}
+
+P.S. If you want me to stop emailing, just reply 'remove' and I will.",0
+dental,2,"{{BUSINESS_NAME}} is losing ~$4,200/mo to slower competitors","{{FIRST_NAME}},
+
+Quick math on your practice:
+
+- Average new patient value: $800-1,200
+- Your site load time: {{LOAD_TIME}}s (industry avg: 2.1s)
+- Estimated lost patients/mo from slow site: 3-5
+- That's $2,400-6,000/mo walking to the dentist down the street
+
+I built a replacement: {{DEMO_URL}}
+
+Loads in 1.8s. Online booking. Click-to-call. Insurance info front and center.
+
+$500 to launch. $50/mo to maintain. ROI positive after 1 new patient.
+
+Worth a 5-minute call? {{CALENDLY_URL}}
+
+{{MY_NAME}}",3
+dental,3,"3 dental practices in {{CITY}} switched this month","{{FIRST_NAME}},
+
+I've helped 3 dental practices in {{CITY}} upgrade their websites this quarter. Average results after 60 days:
+
+- 40% more online booking requests
+- 2.1s → 1.6s load time
+- Click-to-call usage up 3x
+
+Your demo is still live: {{DEMO_URL}}
+
+Same setup. Same results. $500 one-time + $50/mo.
+
+If you want to see it live on your domain, reply to this email or grab a slot: {{CALENDLY_URL}}
+
+{{MY_NAME}}
+{{MY_PHONE}}",7
+dental,4,"Last note about {{BUSINESS_NAME}}","{{FIRST_NAME}},
+
+I'll keep this short. I built a website for your practice: {{DEMO_URL}}
+
+It's still live for 48 more hours. After that I'll take it down and offer it to another dentist in {{CITY}}.
+
+No hard feelings either way. If the timing isn't right, it isn't right.
+
+But if you want a site that books patients while you sleep: reply 'interested' and I'll handle everything.
+
+{{MY_NAME}}
+
+P.S. Free tool for you regardless: {{AUDIT_URL}} — shows your current site speed vs top 3 competitors in {{CITY}}.",14
+restaurant,1,"I tried to order from {{BUSINESS_NAME}} online","{{FIRST_NAME}},
+
+I tried to find {{BUSINESS_NAME}}'s menu online last night. Couldn't find it. Tried to order — no option.
+
+63% of diners check a restaurant's website before visiting. If they can't find your menu in 3 seconds, they go to the next result.
+
+I ran a free visibility audit on your restaurant: {{AUDIT_URL}}
+
+Shows where you rank vs competitors in {{CITY}} and what's costing you covers.
+
+30 seconds to review. Zero cost.
+
+{{MY_NAME}}
+{{MY_PHONE}}
+
+Reply 'remove' to unsubscribe.",0
+restaurant,2,"Your competitors in {{CITY}} get 200+ online orders/mo","{{FIRST_NAME}},
+
+Restaurants in {{CITY}} with online ordering average 200+ orders/month through their website. That's $3,000-8,000/mo in revenue you're sending to DoorDash (who takes 30%).
+
+I built a site for {{BUSINESS_NAME}}: {{DEMO_URL}}
+
+- Full menu with photos
+- Online ordering (no commission fees)
+- Reservation widget
+- Google Maps + click-to-call
+- Mobile-first (loads in 1.9s)
+
+$500 setup. $50/mo. Pays for itself after 7 online orders.
+
+5 minutes to review: {{CALENDLY_URL}}
+
+{{MY_NAME}}",3
+restaurant,3,"How {{SIMILAR_RESTAURANT}} increased covers 35%","{{FIRST_NAME}},
+
+A restaurant similar to yours in {{CITY}} launched their new site 60 days ago. Results:
+
+- Online orders: 0 → 180/month
+- Google searches: up 45%
+- Weekend reservations: up 35%
+- They stopped paying DoorDash 30% on every order
+
+Your version is ready: {{DEMO_URL}}
+
+Same playbook. $500 to launch. $50/mo after.
+
+Reply or call me: {{MY_PHONE}}
+
+{{MY_NAME}}",7
+restaurant,4,"Taking down the {{BUSINESS_NAME}} demo Friday","{{FIRST_NAME}},
+
+The website I built for {{BUSINESS_NAME}} comes down Friday: {{DEMO_URL}}
+
+If you want it on your own domain, reply 'yes' and I'll handle domain setup, menu upload, and Google Business optimization. Live within 48 hours.
+
+If not, no worries. I'll offer the template to another restaurant in {{CITY}}.
+
+Either way — the free audit is yours to keep: {{AUDIT_URL}}
+
+{{MY_NAME}}",14
+fitness,1,"I tried to book a class at {{BUSINESS_NAME}}","{{FIRST_NAME}},
+
+I went to {{BUSINESS_NAME}}'s website to book a class. Couldn't find the schedule. No online booking. Had to call.
+
+73% of gym members say they'd switch to a gym with easier online booking. Your competitors in {{CITY}} already have it.
+
+I ran a free audit on your online presence: {{AUDIT_URL}}
+
+Shows exactly where prospects drop off before signing up.
+
+Takes 30 seconds. Free.
+
+{{MY_NAME}}
+{{MY_PHONE}}
+
+Reply 'remove' to unsubscribe.",0
+fitness,2,"{{BUSINESS_NAME}} is losing ~12 signups/mo to this","{{FIRST_NAME}},
+
+Here's what I found checking fitness businesses in {{CITY}}:
+
+- Gyms with online class booking get 40% more trial signups
+- Average member lifetime value: $600-1,200
+- 12 lost signups/mo = $7,200-14,400/year walking out the door
+
+I built {{BUSINESS_NAME}} a site that fixes this: {{DEMO_URL}}
+
+Class schedule with 1-click booking. Membership tiers. Transformation gallery. Click-to-call. Loads in 1.7s on mobile.
+
+$500 setup. $50/mo. ROI positive after 1 new member.
+
+Quick call? {{CALENDLY_URL}}
+
+{{MY_NAME}}",3
+fitness,3,"2 gyms in {{CITY}} launched new sites this month","{{FIRST_NAME}},
+
+Two fitness businesses in {{CITY}} upgraded their websites recently. Here's what changed in 45 days:
+
+- Trial class bookings up 50%
+- Google 'gym near me' rankings improved 2-4 positions
+- Member check-ins through website up 3x
+
+Your site is ready: {{DEMO_URL}}
+
+Same system. $500 one-time + $50/mo.
+
+Reply to this email or grab a time: {{CALENDLY_URL}}
+
+{{MY_NAME}}
+{{MY_PHONE}}",7
+fitness,4,"Final note about the {{BUSINESS_NAME}} website","{{FIRST_NAME}},
+
+The demo I built for {{BUSINESS_NAME}} stays live until Friday: {{DEMO_URL}}
+
+After that I'm offering the slot to another fitness business in {{CITY}}.
+
+If you want it — reply 'interested.' I handle everything: domain, setup, class schedule integration. Live in 48 hours.
+
+Free regardless: {{AUDIT_URL}} shows how your site compares to the top 3 gyms in {{CITY}}.
+
+{{MY_NAME}}",14
+legal,1,"I searched '{{PRACTICE_AREA}} lawyer {{CITY}}'","{{FIRST_NAME}},
+
+I Googled '{{PRACTICE_AREA}} lawyer in {{CITY}}' yesterday. {{BUSINESS_NAME}} didn't show up in the top 5.
+
+Your competitors did. They're getting the calls.
+
+The average {{PRACTICE_AREA}} case is worth $3,000-15,000. Every missed call is real money.
+
+I ran a free search visibility audit: {{AUDIT_URL}}
+
+Shows exactly where you rank, who's outranking you, and what they're doing differently.
+
+30 seconds. No cost. No strings.
+
+{{MY_NAME}}
+{{MY_PHONE}}
+
+Reply 'remove' to unsubscribe.",0
+legal,2,"One case pays for this 10x over","{{FIRST_NAME}},
+
+Quick ROI math for {{BUSINESS_NAME}}:
+
+- Average {{PRACTICE_AREA}} case value: $5,000-15,000
+- Cost of a modern website that ranks: $500 setup + $50/mo
+- Break-even: 1 client. One.
+
+I built your new site: {{DEMO_URL}}
+
+Practice area pages optimized for '{{PRACTICE_AREA}} lawyer {{CITY}}.' Client intake form. Click-to-call. Case results section. Loads in 1.6s.
+
+One new client from Google and this pays for itself 10x.
+
+5 minutes: {{CALENDLY_URL}}
+
+{{MY_NAME}}",3
+legal,3,"How a {{PRACTICE_AREA}} firm in {{CITY}} doubled intake","{{FIRST_NAME}},
+
+A {{PRACTICE_AREA}} firm similar to yours launched a new site 90 days ago:
+
+- Intake form submissions: up 65%
+- Google ranking for '{{PRACTICE_AREA}} attorney {{CITY}}': page 1
+- New client calls per week: 3 → 7
+
+Your version is live: {{DEMO_URL}}
+
+Same approach. Practice area pages, intake forms, Google optimization. $500 + $50/mo.
+
+Reply or call: {{MY_PHONE}}
+
+{{MY_NAME}}",7
+legal,4,"Last call on the {{BUSINESS_NAME}} site","{{FIRST_NAME}},
+
+The demo I built for {{BUSINESS_NAME}} goes offline Friday: {{DEMO_URL}}
+
+If you want it on your domain, reply 'yes.' I'll handle everything: domain transfer, content, intake form setup, Google Business optimization.
+
+If not — the free visibility audit is yours regardless: {{AUDIT_URL}}
+
+One {{PRACTICE_AREA}} case covers 2+ years of this service.
+
+{{MY_NAME}}",14
+plumber,1,"I searched 'emergency plumber {{CITY}}'","{{FIRST_NAME}},
+
+I Googled 'emergency plumber in {{CITY}}' at 2am last night. {{BUSINESS_NAME}} wasn't in the top results.
+
+The plumber who WAS there got my call. That's a $150-500 service call that went to your competitor.
+
+I ran a free audit on your Google presence: {{AUDIT_URL}}
+
+Shows where you rank for the 10 most profitable plumbing searches in {{CITY}}.
+
+30 seconds. Free.
+
+{{MY_NAME}}
+{{MY_PHONE}}
+
+Reply 'remove' to unsubscribe.",0
+plumber,2,"$3,200/mo in calls going to other plumbers in {{CITY}}","{{FIRST_NAME}},
+
+Here's what the data says about plumbing searches in {{CITY}}:
+
+- 'Emergency plumber {{CITY}}': 800+ searches/mo
+- 'Plumber near me': 1,200+ searches/mo
+- Average service call: $200-400
+- Top-ranking plumber gets ~40% of calls
+
+Without a fast, mobile-first website, those calls go to whoever ranks higher.
+
+I built one for you: {{DEMO_URL}}
+
+Emergency click-to-call button. Service area map. 5-star review section. Loads in 1.5s on any phone.
+
+$500 setup. $50/mo. One emergency call pays for 3 months.
+
+{{CALENDLY_URL}}
+
+{{MY_NAME}}",3
+plumber,3,"A plumber in {{CITY}} gets 15 more calls/week now","{{FIRST_NAME}},
+
+A plumbing company in {{CITY}} launched their new site 45 days ago:
+
+- Emergency calls: up 40%
+- 'Plumber near me' ranking: page 2 → page 1
+- Average 15 additional calls per week
+- Google reviews went from 12 to 34 (we added a review request button)
+
+Your site is ready: {{DEMO_URL}}
+
+Same setup. Same results. $500 + $50/mo.
+
+Reply or call me direct: {{MY_PHONE}}
+
+{{MY_NAME}}",7
+plumber,4,"Pulling the {{BUSINESS_NAME}} demo down Friday","{{FIRST_NAME}},
+
+Quick final note. The website I built for {{BUSINESS_NAME}} comes down Friday: {{DEMO_URL}}
+
+After that I'll offer it to another plumber in {{CITY}}.
+
+If you want it live on your domain — reply 'yes.' I handle everything. Live in 48 hours.
+
+Your free audit stays up regardless: {{AUDIT_URL}}
+
+One emergency call pays for this 6x over.
+
+{{MY_NAME}}",14
+realtor,1,"I searched '{{CITY}} real estate agent'","{{FIRST_NAME}},
+
+I Googled '{{CITY}} real estate agent' this morning. {{BUSINESS_NAME}} wasn't on page 1.
+
+The agents who were — they're getting the calls. In a market where the average commission is $8,000-15,000, every missed lead is expensive.
+
+I ran a free search visibility audit for your name: {{AUDIT_URL}}
+
+Shows exactly how you rank vs the top 5 agents in {{CITY}} and what they're doing online that you're not.
+
+30 seconds to review. Free.
+
+{{MY_NAME}}
+{{MY_PHONE}}
+
+Reply 'remove' to unsubscribe.",0
+realtor,2,"One closing covers 5 years of this","{{FIRST_NAME}},
+
+ROI math for {{BUSINESS_NAME}}:
+
+- Average commission in {{CITY}}: $8,000-15,000
+- Cost of a professional agent website: $500 + $50/mo
+- Break-even: 1 closing. In 5 years.
+
+I built your new site: {{DEMO_URL}}
+
+Featured listings section. Neighborhood guides for {{CITY}}. Client testimonial carousel. Seller/buyer lead capture forms. Loads in 1.8s on mobile.
+
+Every serious buyer checks an agent's website before calling. Make sure yours converts.
+
+5 minutes: {{CALENDLY_URL}}
+
+{{MY_NAME}}",3
+realtor,3,"How an agent in {{CITY}} added 8 leads/month","{{FIRST_NAME}},
+
+A realtor in {{CITY}} launched their new site 60 days ago:
+
+- Buyer inquiry forms: 0 → 8/month
+- Seller valuation requests: 0 → 5/month
+- Google ranking for '{{CITY}} homes for sale': top 10
+- Closed 2 deals directly from website leads ($24K in commission)
+
+Your version: {{DEMO_URL}}
+
+Same playbook. Listings, neighborhood pages, lead capture. $500 + $50/mo.
+
+One deal pays for a decade of this service.
+
+{{MY_NAME}}
+{{MY_PHONE}}",7
+realtor,4,"Last note about the {{BUSINESS_NAME}} website","{{FIRST_NAME}},
+
+The custom site I built for {{BUSINESS_NAME}} comes down Friday: {{DEMO_URL}}
+
+If you want it live on your domain — reply 'interested.' I handle domain setup, listing integration, and lead capture forms. Live in 48 hours.
+
+If the timing isn't right, no pressure. The free audit is yours to keep: {{AUDIT_URL}}
+
+One closing = 10 years of this service paid in full.
+
+{{MY_NAME}}",14
+# INCOME DISCLAIMER: Results not typical. Individual results vary based on effort, market conditions, and other factors.

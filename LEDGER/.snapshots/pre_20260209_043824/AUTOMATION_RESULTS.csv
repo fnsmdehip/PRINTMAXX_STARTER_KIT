@@ -1,0 +1,2 @@
+run_id,timestamp,command,duration_secs,exit_code,alpha_extracted,alpha_repaired,content_generated,buffer_csvs,projections_generated,revenue_projected_30d,revenue_projected_annual,ops_updated,files_created,files_modified,csv_rows_changed,errors,watchdog_verdict,notes
+morning_20260209_043752,2026-02-09T04:37:53+00:00,morning,1,0,95,0,0,0,1,"$2,486.12","$86,743.94",3,0,0,-10,1,**SAFE**,"alpha:85 rev30d:$2,486.12 repaired:0"

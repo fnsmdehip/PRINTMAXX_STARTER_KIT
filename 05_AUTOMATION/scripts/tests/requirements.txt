@@ -1,0 +1,36 @@
+# PRINTMAXX Test Suite Requirements
+# Install with: pip install -r requirements.txt
+
+# Core testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.21.0
+pytest-timeout>=2.2.0
+
+# Browser automation
+playwright>=1.40.0
+
+# HTTP requests
+requests>=2.31.0
+
+# Data processing
+pandas>=2.0.0
+
+# Async support
+aiohttp>=3.9.0
+asyncio>=3.4.3
+
+# Mocking
+responses>=0.24.0
+
+# Type checking (optional)
+mypy>=1.7.0
+
+# Linting (optional)
+flake8>=6.1.0
+black>=23.12.0
+isort>=5.13.0
+
+# Security scanning (optional)
+bandit>=1.7.0
+safety>=2.3.0

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    DailyDevotion Color Palette
+
+    Design principles:
+    - Calming, spiritual feel
+    - Purple = royalty, spirituality, devotion
+    - Gold = divinity, glory, achievement
+    - Sage green = peace, growth, rest
+    - Blue = scripture, truth, depth
+
+    Accessibility: All colors meet WCAG 2.1 AA contrast requirements
+    -->
+
+    <!-- Primary Colors (Purple family) -->
+    <color name="primary">#5E4B8B</color>              <!-- Deep purple - main brand -->
+    <color name="primary_dark">#3E2C5B</color>         <!-- Darker purple - status bar -->
+    <color name="primary_light">#8B7BB5</color>        <!-- Lighter purple - highlights -->
+    <color name="primary_variant">#7B6AAA</color>      <!-- Medium purple - buttons -->
+
+    <!-- Accent Colors (Gold) -->
+    <color name="accent">#D4AF37</color>               <!-- Gold - achievements, CTAs -->
+    <color name="accent_dark">#B8952F</color>          <!-- Darker gold -->
+    <color name="accent_light">#E8C95D</color>         <!-- Lighter gold -->
+    <color name="streak_gold">#D4AF37</color>          <!-- Streak indicator -->
+
+    <!-- Secondary Colors (Sage/Green) -->
+    <color name="secondary">#7B9E89</color>            <!-- Sage green - peace, growth -->
+    <color name="secondary_dark">#5C7A68</color>       <!-- Darker sage -->
+    <color name="secondary_light">#A5C4B1</color>      <!-- Lighter sage -->
+    <color name="secondary_sage">#7B9E89</color>       <!-- Alias -->
+
+    <!-- Habit Category Colors -->
+    <color name="prayer_purple">#8B7BB5</color>        <!-- Prayer habits -->
+    <color name="prayer_purple_dark">#6B5B95</color>   <!-- Evening prayer -->
+    <color name="prayer_purple_light">#A99BC9</color>  <!-- Meditation -->
+
+    <color name="scripture_blue">#5B7C99</color>       <!-- Scripture reading -->
+    <color name="scripture_blue_dark">#3D5A73</color>  <!-- Scripture memory -->
+    <color name="scripture_blue_light">#7E9DB5</color> <!-- Bible study -->
+
+    <color name="gratitude_green">#7B9E89</color>      <!-- Gratitude journaling -->
+    <color name="worship_gold">#D4AF37</color>         <!-- Church, worship -->
+    <color name="rest_lavender">#B5A7C9</color>        <!-- Sabbath, rest -->
+    <color name="service_teal">#6B9B9B</color>         <!-- Service habits -->
+    <color name="generosity_amber">#DAA520</color>     <!-- Giving, tithe -->
+
+    <!-- Background Colors -->
+    <color name="background">#F8F6FA</color>           <!-- Soft lavender white -->
+    <color name="background_card">#FFFFFF</color>      <!-- Card backgrounds -->
+    <color name="background_elevated">#FFFFFF</color>  <!-- Elevated surfaces -->
+    <color name="surface">#FFFFFF</color>              <!-- Main surface -->
+    <color name="surface_variant">#F0EDF5</color>      <!-- Secondary surfaces -->
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1A1A2E</color>         <!-- Primary text -->
+    <color name="text_secondary">#4A4A5A</color>       <!-- Secondary text -->
+    <color name="text_disabled">#9A9AA8</color>        <!-- Disabled text -->
+    <color name="text_on_primary">#FFFFFF</color>      <!-- Text on primary color -->
+    <color name="text_on_accent">#1A1A2E</color>       <!-- Text on gold -->
+
+    <!-- UI Element Colors -->
+    <color name="divider">#E0E0E8</color>              <!-- Divider lines -->
+    <color name="ripple">#205E4B8B</color>             <!-- Touch ripple (20% alpha) -->
+    <color name="shadow">#10000000</color>             <!-- Shadows (10% black) -->
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>              <!-- Success, completed -->
+    <color name="warning">#FF9800</color>              <!-- Warning -->
+    <color name="error">#E53935</color>                <!-- Error -->
+    <color name="info">#2196F3</color>                 <!-- Information -->
+
+    <!-- Habit Completion States -->
+    <color name="habit_completed">#4CAF50</color>      <!-- Checkmark completed -->
+    <color name="habit_incomplete">#BDBDBD</color>     <!-- Not done yet -->
+    <color name="habit_skipped">#9E9E9E</color>        <!-- Intentionally skipped -->
+
+    <!-- Chart/Stats Colors -->
+    <color name="chart_primary">#5E4B8B</color>
+    <color name="chart_secondary">#D4AF37</color>
+    <color name="chart_tertiary">#7B9E89</color>
+    <color name="chart_background">#F5F3F8</color>
+    <color name="chart_grid">#E5E3E8</color>
+
+    <!-- Widget Colors -->
+    <color name="widget_background">#FFFFFFFF</color>
+    <color name="widget_text">#1A1A2E</color>
+    <color name="widget_accent">#D4AF37</color>
+
+    <!-- Notification Colors -->
+    <color name="notification_accent">#5E4B8B</color>
+
+    <!-- Legacy/Compatibility (from Loop) -->
+    <color name="colorPrimary">@color/primary</color>
+    <color name="colorPrimaryDark">@color/primary_dark</color>
+    <color name="colorAccent">@color/accent</color>
+</resources>

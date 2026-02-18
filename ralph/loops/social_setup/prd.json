@@ -1,0 +1,64 @@
+{
+  "name": "SOCIAL MEDIA PROFILE SETUP — 5 NICHES x ALL PLATFORMS",
+  "description": "Build complete setup packages for 5 social media profiles across all relevant platforms. Each task spawns parallel agents via TeamCreate. Human just creates accounts and uploads.",
+  "tasks": [
+    {
+      "id": "T1",
+      "name": "Bio & handle generator (5 profiles x all platforms)",
+      "description": "Optimized bios for all 5 profiles respecting per-platform char limits. 5 agents (1 per profile).",
+      "agents": 5,
+      "passes": true
+    },
+    {
+      "id": "T2",
+      "name": "Profile photo & banner AI prompts",
+      "description": "Midjourney/Leonardo/DALL-E prompts for profile photos + banners for all 5 profiles. 3 agents.",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "T3",
+      "name": "Sleep/Wellness content batch (gap fill)",
+      "description": "50 tweets + 50 short-form + 30-day calendar + 10 article outlines for @SleepMaxx. 4 agents.",
+      "agents": 4,
+      "passes": true
+    },
+    {
+      "id": "T4",
+      "name": "Content distribution scripts",
+      "description": "Python scripts: calendar -> Buffer CSV, Later CSV, Medium markdown, Substack markdown, Beehiiv HTML. 5 agents.",
+      "agents": 5,
+      "passes": true
+    },
+    {
+      "id": "T5",
+      "name": "Warmup schedule generator",
+      "description": "28-day warmup plan per platform per account. CSV + printable checklist. 3 agents.",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "T6",
+      "name": "Newsletter setup package",
+      "description": "Beehiiv/Substack configs, welcome sequence HTML, lead magnet specs, signup form copy. 3 agents.",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "T7",
+      "name": "Human account creation master checklist",
+      "description": "Single unified doc: ~40 accounts, step-by-step with URLs, settings. Updates ACCOUNTS.csv. 4 agents.",
+      "agents": 4,
+      "passes": true
+    },
+    {
+      "id": "T8",
+      "name": "Scheduling + cross-promotion map + session handoff",
+      "description": "Posting times per platform, cross-promo strategy, Linktree configs, handoff doc. 3 agents.",
+      "agents": 3,
+      "passes": true
+    }
+  ],
+  "total_agent_spawns": 30,
+  "pattern": "ralph_wiggum_loop_with_embedded_agent_swarms"
+}

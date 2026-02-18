@@ -1,0 +1,67 @@
+{
+  "carousel_id": "CAROUSEL003",
+  "title": "Cold email is dead. Here's what replaced it.",
+  "platform": "linkedin",
+  "slides": [
+    {
+      "slide_num": 1,
+      "headline": "Cold email is dead",
+      "body": "Here's what actually works in 2026",
+      "visual_note": "Email icon with X through it, red background"
+    },
+    {
+      "slide_num": 2,
+      "headline": "The data",
+      "body": "Average cold email open rate: 17%. Reply rate: 1-2%. That's 98% of your effort wasted.",
+      "visual_note": "Bar chart showing declining rates"
+    },
+    {
+      "slide_num": 3,
+      "headline": "Why it died",
+      "body": "AI spam tools flooded inboxes. Gmail/Outlook got smarter. Everyone sends the same templates. Buyers are numb.",
+      "visual_note": "Spam folder overflowing visual"
+    },
+    {
+      "slide_num": 4,
+      "headline": "What replaced it: Signal-based outreach",
+      "body": "Stop blasting lists. Start monitoring buying signals. Job changes. Funding rounds. Tech stack changes. Product launches.",
+      "visual_note": "Radar/signal detection visual"
+    },
+    {
+      "slide_num": 5,
+      "headline": "The new stack",
+      "body": "Clay for signal monitoring. LinkedIn Sales Nav for filtering. Loom for video replies. No mass email tools.",
+      "visual_note": "Tool logos in a flow diagram"
+    },
+    {
+      "slide_num": 6,
+      "headline": "The pattern that works",
+      "body": "1. They post about a problem. 2. You reply with genuine insight. 3. They check your profile. 4. They DM you.",
+      "visual_note": "4-step flow with arrows"
+    },
+    {
+      "slide_num": 7,
+      "headline": "Real numbers",
+      "body": "Cold email: 2% reply rate. Signal-based DM: 34% reply rate. Same effort. 17x better results.",
+      "visual_note": "Comparison bar chart, green vs red"
+    },
+    {
+      "slide_num": 8,
+      "headline": "Where to find signals",
+      "body": "LinkedIn: job changes, promotions, posts about struggles. Twitter/X: complaints, tool recommendations. ProductHunt: launch days.",
+      "visual_note": "Platform icons with signal indicators"
+    },
+    {
+      "slide_num": 9,
+      "headline": "The shift",
+      "body": "Cold email = spray and pray. Signal outreach = sniper approach. Less volume. Higher quality. Better close rate.",
+      "visual_note": "Spray can vs sniper scope icons"
+    }
+  ],
+  "cta_slide": {
+    "headline": "I break down my outreach systems weekly",
+    "action": "Follow for the playbooks"
+  },
+  "hashtags": ["b2bsales", "coldoutreach", "salesstrategy", "leadgeneration", "growthhacking", "startups", "saas"],
+  "estimated_engagement": "HIGH"
+}
