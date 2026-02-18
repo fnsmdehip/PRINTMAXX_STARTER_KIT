@@ -1,0 +1,190 @@
+{
+  "project": "PRINTMAXX Content Farm Automation",
+  "version": "1.0",
+  "stories": [
+    {
+      "id": "SCRAPE-001",
+      "title": "Build Twitter scraper for source accounts",
+      "category": "infrastructure",
+      "priority": 1,
+      "acceptance": [
+        "Playwright script scrapes tweets from given account",
+        "Extracts: text, media URLs, engagement metrics",
+        "Saves to CSV with metadata",
+        "Handles rate limits gracefully",
+        "Proxy support included"
+      ],
+      "output_path": "AUTOMATIONS/scripts/scrape_twitter_account.py",
+      "passes": false
+    },
+    {
+      "id": "SCRAPE-002",
+      "title": "Build content database schema",
+      "category": "infrastructure",
+      "priority": 1,
+      "acceptance": [
+        "SQLite database with content table",
+        "Fields: id, source, platform, text, media_url, likes, rts, views, scraped_at",
+        "Index on source and scraped_at",
+        "Python helper functions for CRUD",
+        "CLI for manual queries"
+      ],
+      "output_path": "AUTOMATIONS/scripts/content_database.py",
+      "passes": false
+    },
+    {
+      "id": "CONTENT-001",
+      "title": "Generate 50 meme posts for X",
+      "category": "content",
+      "priority": 2,
+      "acceptance": [
+        "50 posts written to CONTENT/social/memes/",
+        "Each post < 280 characters",
+        "No em dashes",
+        "No banned AI vocabulary",
+        "Mix of formats: text, question, hot take",
+        "Each file has frontmatter metadata"
+      ],
+      "output_path": "CONTENT/social/memes/",
+      "passes": false
+    },
+    {
+      "id": "CONTENT-002",
+      "title": "Generate 30 news format posts",
+      "category": "content",
+      "priority": 2,
+      "acceptance": [
+        "30 posts in news format",
+        "BREAKING: format for urgent",
+        "Thread format for analysis",
+        "Sources cited where applicable",
+        "No promotional language"
+      ],
+      "output_path": "CONTENT/social/news/",
+      "passes": false
+    },
+    {
+      "id": "CONTENT-003",
+      "title": "Generate AI influencer content batch",
+      "category": "content",
+      "priority": 2,
+      "acceptance": [
+        "20 posts per persona (niche expert, fitness, tech)",
+        "Consistent voice per persona",
+        "Mix of value posts and engagement posts",
+        "CTAs where appropriate",
+        "Bio + pinned post for each persona"
+      ],
+      "output_path": "CONTENT/social/ai_influencer/",
+      "passes": false
+    },
+    {
+      "id": "CAPTION-001",
+      "title": "Build caption variation generator",
+      "category": "infrastructure",
+      "priority": 2,
+      "acceptance": [
+        "Takes original caption as input",
+        "Generates 3-5 variations",
+        "Maintains meaning, changes phrasing",
+        "Removes AI tells",
+        "CLI and function interface"
+      ],
+      "output_path": "AUTOMATIONS/scripts/caption_modifier.py",
+      "passes": false
+    },
+    {
+      "id": "CLIP-001",
+      "title": "Build transcript analyzer for clips",
+      "category": "infrastructure",
+      "priority": 3,
+      "acceptance": [
+        "Takes YouTube URL or transcript file",
+        "Identifies high-engagement moments",
+        "Outputs timestamps with reason",
+        "Categories: funny, skill, drama, emotional",
+        "Configurable threshold"
+      ],
+      "output_path": "AUTOMATIONS/scripts/transcript_analyzer.py",
+      "passes": false
+    },
+    {
+      "id": "CLIP-002",
+      "title": "Build video clipper script",
+      "category": "infrastructure",
+      "priority": 3,
+      "acceptance": [
+        "Takes video + timestamp list",
+        "Extracts clips with FFmpeg",
+        "Adds auto-captions via Whisper",
+        "Formats for vertical (9:16)",
+        "Batch processing support"
+      ],
+      "output_path": "AUTOMATIONS/scripts/video_clipper.py",
+      "passes": false
+    },
+    {
+      "id": "POST-001",
+      "title": "Build X posting script with proxy",
+      "category": "automation",
+      "priority": 3,
+      "acceptance": [
+        "Posts to X via Playwright",
+        "Proxy configuration per account",
+        "Human-like delays",
+        "Handles media upload",
+        "Logs success/failure",
+        "Rate limit aware"
+      ],
+      "output_path": "AUTOMATIONS/scripts/x_poster.py",
+      "passes": false
+    },
+    {
+      "id": "POST-002",
+      "title": "Build TikTok uploader",
+      "category": "automation",
+      "priority": 3,
+      "acceptance": [
+        "Uploads video to TikTok",
+        "Adds caption and hashtags",
+        "Mobile proxy support",
+        "Handles verification challenges",
+        "Logs upload status"
+      ],
+      "output_path": "AUTOMATIONS/scripts/tiktok_uploader.py",
+      "passes": false
+    },
+    {
+      "id": "SCHEDULE-001",
+      "title": "Build multi-account scheduler",
+      "category": "automation",
+      "priority": 3,
+      "acceptance": [
+        "Manages posting queue across accounts",
+        "Random timing within windows",
+        "Tracks what was posted where",
+        "Prevents duplicate content on same account",
+        "CLI for queue management"
+      ],
+      "output_path": "AUTOMATIONS/scripts/multi_account_scheduler.py",
+      "passes": false
+    },
+    {
+      "id": "RESEARCH-001",
+      "title": "Daily alpha research task",
+      "category": "research",
+      "priority": 1,
+      "acceptance": [
+        "Scans HIGH_SIGNAL_SOURCES.csv accounts",
+        "Identifies new tactics with engagement",
+        "Logs to ALPHA_STAGING.csv",
+        "No duplicate entries",
+        "Categories assigned"
+      ],
+      "output_path": "LEDGER/ALPHA_STAGING.csv",
+      "passes": false
+    }
+  ],
+  "guardrails": ".ralph/guardrails.md",
+  "progress_log": ".ralph/progress.md"
+}

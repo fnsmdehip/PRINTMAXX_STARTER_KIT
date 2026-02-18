@@ -1,0 +1,48 @@
+# Tool Evaluation: ALPHA2486
+## source: 2026-02-13
+## url: r/growthhacking
+## generated: 2026-02-13 20:20:45
+## roi_potential: https://reddit.com/r/GrowthHacking/comments/1qrshyq/i_almost_killed_my_saas_by_listening_to_one_power/
+
+## what it is
+I almost killed my SaaS by listening to one power user Six months ago, my SaaS finally hit $2,500 MRR and I thought I had finally made it. Then I met a power user from a big agency who paid for the yearly enterprise tier upfront.
+
+He started emailing me every single morning with these "essential" feature requests that sounded smart at the time.
+
+I felt so much pressure to keep him happy since he was my biggest check, so I stayed up until 4 AM coding his specific demands.
+
+I spent three weeks bui
+
+## pricing
+- [ ] free tier available?
+- [ ] free tier limits?
+- [ ] paid tier starting price?
+- [ ] annual discount?
+- research actual pricing at: r/growthhacking
+
+## use case for PRINTMAXX
+- how does this fit our stack?
+- what does it replace or augment?
+- which money methods benefit most?
+
+## integration points
+1. quant terminal integration (AUTOMATIONS/printmaxx_quant_terminal.py)
+2. ralph loop automation (can this be automated overnight?)
+3. content pipeline (does this help generate or distribute content?)
+4. lead gen (does this help find or qualify leads?)
+5. app factory (does this help build or ship apps faster?)
+
+## ROI estimate
+- time saved per week: [estimate]
+- cost per month: [from pricing research]
+- breakeven: [time saved value > cost]
+- at our current stage ($0 revenue), only adopt if free tier covers our needs
+
+## verdict
+- [ ] ADOPT NOW (free tier, immediate ROI)
+- [ ] ADOPT LATER (need revenue first)
+- [ ] MONITOR (not ready yet, check back in 30 days)
+- [ ] SKIP (doesn't fit our stack)
+
+## next action
+sign up for free tier and test for 1 week. log results.

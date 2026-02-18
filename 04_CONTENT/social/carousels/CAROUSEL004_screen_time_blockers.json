@@ -1,0 +1,67 @@
+{
+  "carousel_id": "CAROUSEL004",
+  "title": "Screen time blocker apps: the new goldmine",
+  "platform": "both",
+  "slides": [
+    {
+      "slide_num": 1,
+      "headline": "Screen time blockers are printing money",
+      "body": "Why this category is exploding",
+      "visual_note": "Phone with lock icon, money bills floating around"
+    },
+    {
+      "slide_num": 2,
+      "headline": "The market size",
+      "body": "Digital wellness apps: $1.2B in 2025. Growing 15% annually. Parents, students, and remote workers all buying.",
+      "visual_note": "Growth chart trending up"
+    },
+    {
+      "slide_num": 3,
+      "headline": "Why people pay for this",
+      "body": "Average person spends 7 hours/day on screens. They know it's a problem. They'll pay $50-100/year to fix it.",
+      "visual_note": "Clock showing 7 hours, stressed person icon"
+    },
+    {
+      "slide_num": 4,
+      "headline": "The top earners",
+      "body": "Forest: $400k/month. Opal: $200k/month. One Sec: $150k/month. All solo or small teams.",
+      "visual_note": "App icons with revenue numbers"
+    },
+    {
+      "slide_num": 5,
+      "headline": "The winning formula",
+      "body": "Pick a niche (students, parents, faith). Add gamification (streaks, rewards). Make it pretty (cute mascots win). Charge $29-69/year.",
+      "visual_note": "Formula equation style visual"
+    },
+    {
+      "slide_num": 6,
+      "headline": "Untapped niches",
+      "body": "Muslim focus timer (pray instead of scroll). Christian devotional blocker. Fitness unlock (walk to use phone). Study quiz gatekeeper.",
+      "visual_note": "4 niche icons in quadrants"
+    },
+    {
+      "slide_num": 7,
+      "headline": "Tech stack to build one",
+      "body": "React Native + Expo. Screen Time API (iOS) / UsageStats (Android). RevenueCat for subs. 2-4 weeks to MVP.",
+      "visual_note": "Tech logos in a stack diagram"
+    },
+    {
+      "slide_num": 8,
+      "headline": "Marketing that works",
+      "body": "TikTok before/after videos. Student study accounts. Parenting Facebook groups. Reddit r/nosurf community.",
+      "visual_note": "Social platform icons with arrows pointing to app"
+    },
+    {
+      "slide_num": 9,
+      "headline": "Why now",
+      "body": "Apple and Google added native screen time. But they suck. People want better UX and actual accountability.",
+      "visual_note": "Native iOS/Android icons with X, custom app with checkmark"
+    }
+  ],
+  "cta_slide": {
+    "headline": "Building a focus app this month",
+    "action": "Follow for the build log"
+  },
+  "hashtags": ["appdev", "screentime", "digitalwellness", "focusapp", "indiedev", "mobileapps", "passiveincome"],
+  "estimated_engagement": "HIGH"
+}

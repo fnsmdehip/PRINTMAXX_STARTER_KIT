@@ -1,0 +1,17 @@
+# App Rebuild Monitoring System - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+pandas>=2.1.0
+
+# Optional (for advanced scraping)
+playwright>=1.40.0
+lxml>=4.9.0
+
+# Optional (for API integrations)
+python-dotenv>=1.0.0
+
+# Optional (for notifications)
+sendgrid>=6.11.0

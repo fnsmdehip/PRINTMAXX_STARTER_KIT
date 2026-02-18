@@ -1,0 +1,37 @@
+asset_id,asset_type,asset_location,content_count,monetization_path,revenue_model,price_point,priority,status,notes
+CR001,pdf_product,OPS/TREND_INTEL/analyses/CLAVVICULAR_FUNNEL_BREAKDOWN.md,1,compile_to_pdf->gumroad,one_time_sale,$7,P0_IMMEDIATE,SPEC_COMPLETE,584 lines ready. 2-3 hrs to format. Listing copy done.
+CR002,pdf_product,APP_FACTORY/PAYWALL_PSYCHOLOGY_AB_PLAYBOOK.md + medium article + implementation spec,3,compile_to_pdf->gumroad,one_time_sale,$27,P0_IMMEDIATE,SPEC_COMPLETE,1500+ lines combined. 3-4 hrs to compile. Full Gumroad spec exists.
+CR003,pdf_product,COLD_OUTBOUND/EMAIL_SEQUENCES.md + 7 vertical sequences,8,compile_to_pdf->gumroad,one_time_sale,$27,P0_IMMEDIATE,CONTENT_READY,698 lines + 7 niche sequences. 2-3 hrs to compile.
+CR004,pdf_product,STREAMER_CLIPS/CLIPPING_BUSINESS_PLAYBOOK.md + info product spec,2,compile_to_pdf->gumroad,one_time_sale,$37,P0_IMMEDIATE,CONTENT_READY,667 lines + product ladder spec. 2-3 hrs to compile.
+CR005,notion_template,DIGITAL_PRODUCTS/NOTION_TEMPLATES/TEMPLATE_SPECS.md - Template 5,1,build_in_notion->gumroad,one_time_sale,$7,P1_WEEK1,SPEC_COMPLETE,Morning Grace 7-Day Challenge. 2-3 hrs to build.
+CR006,notion_template,DIGITAL_PRODUCTS/NOTION_TEMPLATES/TEMPLATE_SPECS.md - Template 3,1,build_in_notion->gumroad,one_time_sale,$12,P1_WEEK1,SPEC_COMPLETE,AI Tool Stack Dashboard. 3-4 hrs to build.
+CR007,notion_template,DIGITAL_PRODUCTS/NOTION_TEMPLATES/TEMPLATE_SPECS.md - Template 1,1,build_in_notion->gumroad,one_time_sale,$9,P1_WEEK1,SPEC_COMPLETE,Prayer Warrior Tracker. 3-4 hrs to build.
+CR008,notion_template,DIGITAL_PRODUCTS/NOTION_TEMPLATES/TEMPLATE_SPECS.md - Template 2,1,build_in_notion->gumroad,one_time_sale,$17,P2_WEEK2,SPEC_COMPLETE,12-Week Body Recomp. 4-5 hrs to build.
+CR009,notion_template,DIGITAL_PRODUCTS/NOTION_TEMPLATES/TEMPLATE_SPECS.md - Template 4,1,build_in_notion->gumroad,one_time_sale,$27,P2_WEEK2,SPEC_COMPLETE,Content Creator Command Center. 4-5 hrs to build.
+CR010,pdf_product,OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md,1,compile_to_pdf->gumroad,one_time_sale,$19,P2_WEEK2,CONTENT_READY,609 lines. 2 hrs to compile.
+CR011,pdf_product,WEB_TO_APP_FUNNEL/WEB_TO_APP_FUNNEL_PLAYBOOK.md,1,compile_to_pdf->gumroad,one_time_sale,$37,P2_WEEK2,CONTENT_READY,674 lines. 2-3 hrs to compile.
+CR012,pdf_product,OPS/QUANT_INFRASTRUCTURE_GUIDE.md + Python scripts,2,compile_to_pdf->gumroad,one_time_sale,$47,P2_WEEK2,CONTENT_READY,800+ lines + code. 3-4 hrs to compile.
+CR013,bundle,CR001+CR002,2,gumroad_bundle,one_time_sale,$29,P1_WEEK1,SPEC_COMPLETE,Monetization Stack bundle. Funnel Teardown + Paywall Playbook.
+CR014,bundle,CR005+CR007,2,gumroad_bundle,one_time_sale,$14,P2_WEEK2,SPEC_COMPLETE,Faith Bundle. Morning Grace + Prayer Warrior.
+CR015,bundle,CR006+CR009,2,gumroad_bundle,one_time_sale,$35,P2_WEEK2,SPEC_COMPLETE,Productivity Bundle. AI Stack + Command Center.
+CR016,bundle,CR005+CR006+CR007+CR008+CR009,5,gumroad_bundle,one_time_sale,$47,P2_WEEK2,SPEC_COMPLETE,Complete Template Bundle. All 5 templates.
+CR017,medium_article,CONTENT/medium_articles/why-hard-paywalls-generate-8x-more-app-revenue.md,1,publish->partner_program+gumroad_cta,recurring_passive,$0.05-0.50/view,P0_IMMEDIATE,CONTENT_READY,Drives traffic to Paywall Playbook.
+CR018,medium_article,CONTENT/medium_articles/how-a-22-year-old-built-70k-month-community-funnel.md,1,publish->partner_program+gumroad_cta,recurring_passive,$0.05-0.50/view,P0_IMMEDIATE,CONTENT_READY,Drives traffic to Funnel Teardown.
+CR019,substack_post,CONTENT/substack_posts/the-freemium-trap-is-costing-you-8x-revenue.md,1,publish->subscriber_growth+gumroad_cta,subscriber_funnel,$0,P1_WEEK1,CONTENT_READY,Drives Paywall Playbook sales.
+CR020,substack_post,CONTENT/substack_posts/funnel-teardown-clipping-army-distribution.md,1,publish->subscriber_growth+gumroad_cta,subscriber_funnel,$0,P1_WEEK1,CONTENT_READY,Drives Funnel Teardown + Clipping Playbook sales.
+CR021,social_posts,CONTENT/social/faith/,105,manual_post->bio_link->gumroad,audience_building,$0,P0_IMMEDIATE,CONTENT_READY,105+ faith posts. Post 3-5/day.
+CR022,social_posts,CONTENT/social/fitness/,95,manual_post->bio_link->gumroad,audience_building,$0,P0_IMMEDIATE,CONTENT_READY,95+ fitness posts. Post 3-5/day.
+CR023,social_posts,CONTENT/social/ai/ + ai_productivity/,95,manual_post->bio_link->gumroad,audience_building,$0,P0_IMMEDIATE,CONTENT_READY,95+ AI/productivity posts. Post 3-5/day.
+CR024,threads,CONTENT/threads/,24,post_thread->self_reply_cta->gumroad,audience_building+direct_sales,$0,P0_IMMEDIATE,CONTENT_READY,24 threads. 1 per day for engagement spikes.
+CR025,video_scripts,CONTENT/video_scripts/,21,tiktok_reels->bio_link->gumroad,audience_building,$0,P2_WEEK2,CONTENT_READY,21 scripts. Need recording/editing.
+CR026,promo_posts,DIGITAL_PRODUCTS/NOTION_TEMPLATES/SOCIAL_PROMO_POSTS.md,15,manual_post->gumroad,direct_product_sales,$0,P1_WEEK1,CONTENT_READY,15 product-specific promo posts.
+CR027,cold_email_sequences,CONTENT/email_sequences/cold/,7,direct_outreach->service_sales,service_revenue,$1000-2000/client,P3_MONTH1,CONTENT_READY,7 vertical sequences. Need email infra.
+CR028,email_sequences,CONTENT/email_sequences/welcome_*.md + nurture_*.md,6,post_purchase_nurture->cross_sell,cross_sell_revenue,$0,P2_WEEK2,CONTENT_READY,Welcome + nurture sequences for Gumroad buyers.
+CR029,truth_pages,CONTENT/truth_pages/,10,seo->lead_capture->email_nurture->product_sales,seo_traffic,$0,P3_MONTH1,CONTENT_READY,10 pillar pages. Need site deployed.
+CR030,longtail_pages,CONTENT/longtail_pages/,113,seo->organic_traffic->gumroad,seo_traffic,$0,P3_MONTH1,CONTENT_READY,113 SEO pages. Need site deployed.
+CR031,service,SERVICE_OFFERING_PACKAGES.md,8,pdf_upsell->calendly->stripe,service_revenue,$300-1500/call,P1_WEEK1,SPEC_COMPLETE,8 service offerings. PDF last page is funnel entry.
+CR032,lead_magnet,5 AI Prompts (to be created),1,gumroad_free->email_capture->paid_upsell,email_list,$0,P1_WEEK1,TODO,Free Notion template. 1 hr to build. Captures emails.
+CR033,affiliate_program,Gumroad affiliate feature,1,enable->recruit_affiliates->passive_sales,affiliate_revenue,30% commission,P1_WEEK1,TODO,Enable on all products. Recruit 5 affiliates week 1.
+CR034,reddit_posts,CONTENT/reddit/ + new posts,6,value_post->comment_link->gumroad,targeted_traffic,$0,P1_WEEK1,PARTIAL,6 existing posts + new ones. r/SideProject r/iOSProgramming r/Entrepreneur.
+CR035,app,APP_FACTORY/builds/biomaxx-sdk54/,1,app_store->subscription,subscription_revenue,$9.99/mo,P4_MONTH2,BUILD_READY,Needs Apple Dev ($99) + Google Play ($25).
+CR036,pinterest_pins,CONTENT/pinterest_pins/,0,pin->gumroad_link,evergreen_traffic,$0,P3_MONTH1,TODO,Create pins from PDF cover images. Canva.

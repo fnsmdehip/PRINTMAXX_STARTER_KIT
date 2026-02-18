@@ -1,0 +1,238 @@
+{
+  "title": "Settings",
+  "sections": {
+    "account": "Account",
+    "preferences": "Preferences",
+    "notifications": "Notifications",
+    "appearance": "Appearance",
+    "privacy": "Privacy & Security",
+    "support": "Support",
+    "about": "About",
+    "danger": "Danger Zone"
+  },
+  "account": {
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Manage your personal information",
+      "name": "Name",
+      "email": "Email",
+      "photo": "Profile Photo",
+      "changePhoto": "Change Photo",
+      "removePhoto": "Remove Photo"
+    },
+    "subscription": {
+      "title": "Subscription",
+      "subtitle": "Manage your plan and billing",
+      "currentPlan": "Current Plan",
+      "freePlan": "Free",
+      "proPlan": "Pro",
+      "premiumPlan": "Premium",
+      "renewsOn": "Renews {{date}}",
+      "expiresOn": "Expires {{date}}",
+      "manage": "Manage Subscription",
+      "upgrade": "Upgrade to Pro"
+    },
+    "signOut": {
+      "title": "Sign Out",
+      "subtitle": "Sign out of your account",
+      "confirm": "Are you sure you want to sign out?"
+    }
+  },
+  "preferences": {
+    "language": {
+      "title": "Language",
+      "subtitle": "Choose your preferred language"
+    },
+    "units": {
+      "title": "Units",
+      "subtitle": "Measurement preferences",
+      "metric": "Metric",
+      "imperial": "Imperial"
+    },
+    "startOfWeek": {
+      "title": "Start of Week",
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "saturday": "Saturday"
+    },
+    "timeFormat": {
+      "title": "Time Format",
+      "12hour": "12-hour",
+      "24hour": "24-hour"
+    },
+    "dateFormat": {
+      "title": "Date Format"
+    },
+    "currency": {
+      "title": "Currency",
+      "subtitle": "Display currency"
+    }
+  },
+  "notifications": {
+    "pushNotifications": {
+      "title": "Push Notifications",
+      "subtitle": "Receive notifications on your device"
+    },
+    "reminders": {
+      "title": "Daily Reminders",
+      "subtitle": "Get reminded to check in",
+      "time": "Reminder Time"
+    },
+    "progress": {
+      "title": "Progress Updates",
+      "subtitle": "Weekly progress summaries"
+    },
+    "tips": {
+      "title": "Tips & Insights",
+      "subtitle": "Helpful suggestions based on your usage"
+    },
+    "marketing": {
+      "title": "Product Updates",
+      "subtitle": "News about new features and improvements"
+    },
+    "sound": {
+      "title": "Sound",
+      "subtitle": "Play sound with notifications"
+    },
+    "vibration": {
+      "title": "Vibration",
+      "subtitle": "Vibrate with notifications"
+    },
+    "quietHours": {
+      "title": "Quiet Hours",
+      "subtitle": "Pause notifications during specific times",
+      "from": "From",
+      "to": "To"
+    }
+  },
+  "appearance": {
+    "theme": {
+      "title": "Theme",
+      "subtitle": "Choose light or dark mode",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "appIcon": {
+      "title": "App Icon",
+      "subtitle": "Choose your preferred app icon",
+      "default": "Default",
+      "dark": "Dark",
+      "light": "Light",
+      "pro": "Pro"
+    },
+    "fontSize": {
+      "title": "Text Size",
+      "subtitle": "Adjust text size for readability",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    },
+    "reducedMotion": {
+      "title": "Reduced Motion",
+      "subtitle": "Minimize animations"
+    },
+    "haptics": {
+      "title": "Haptic Feedback",
+      "subtitle": "Feel subtle vibrations when interacting"
+    }
+  },
+  "privacy": {
+    "biometrics": {
+      "title": "Face ID / Touch ID",
+      "subtitle": "Use biometrics to unlock the app"
+    },
+    "passcode": {
+      "title": "App Passcode",
+      "subtitle": "Require passcode to open the app",
+      "set": "Set Passcode",
+      "change": "Change Passcode",
+      "remove": "Remove Passcode"
+    },
+    "dataSharing": {
+      "title": "Analytics",
+      "subtitle": "Help improve the app by sharing usage data"
+    },
+    "crashReports": {
+      "title": "Crash Reports",
+      "subtitle": "Automatically send crash reports"
+    },
+    "exportData": {
+      "title": "Export My Data",
+      "subtitle": "Download a copy of your data"
+    },
+    "deleteData": {
+      "title": "Delete My Data",
+      "subtitle": "Permanently delete all your data"
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "subtitle": "Read our privacy policy"
+    }
+  },
+  "support": {
+    "helpCenter": {
+      "title": "Help Center",
+      "subtitle": "Find answers to common questions"
+    },
+    "contactUs": {
+      "title": "Contact Us",
+      "subtitle": "Get help from our team"
+    },
+    "feedback": {
+      "title": "Send Feedback",
+      "subtitle": "Share your thoughts with us"
+    },
+    "rateApp": {
+      "title": "Rate the App",
+      "subtitle": "Love the app? Leave us a review!"
+    },
+    "shareApp": {
+      "title": "Share with Friends",
+      "subtitle": "Help others discover the app"
+    }
+  },
+  "about": {
+    "version": {
+      "title": "Version",
+      "subtitle": "{{version}} ({{build}})"
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "subtitle": "Read our terms"
+    },
+    "licenses": {
+      "title": "Open Source Licenses",
+      "subtitle": "Third-party software we use"
+    },
+    "website": {
+      "title": "Visit Our Website",
+      "subtitle": "Learn more about us"
+    },
+    "social": {
+      "title": "Follow Us",
+      "subtitle": "Stay updated on social media"
+    }
+  },
+  "danger": {
+    "resetApp": {
+      "title": "Reset App",
+      "subtitle": "Clear all data and start fresh",
+      "confirm": "This will delete all your data and cannot be undone. Are you sure?",
+      "button": "Reset Everything"
+    },
+    "deleteAccount": {
+      "title": "Delete Account",
+      "subtitle": "Permanently delete your account and all data",
+      "confirm": "This will permanently delete your account and all associated data. This action cannot be undone.",
+      "button": "Delete My Account"
+    }
+  },
+  "restore": {
+    "title": "Restore Purchases",
+    "subtitle": "Restore your previous purchases",
+    "success": "Purchases restored successfully!",
+    "noPurchases": "No previous purchases found.",
+    "error": "Failed to restore purchases. Please try again."
+  }
+}

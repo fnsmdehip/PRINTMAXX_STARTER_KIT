@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Template List Item
+
+    Individual faith habit template in the picker grid.
+    Shows icon, name, category, and premium badge if applicable.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardBackgroundColor="@color/background_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Category Color Bar (left edge indicator) -->
+        <View
+            android:id="@+id/viewCategoryIndicator"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="@color/prayer_purple"
+            app:layout_constraintTop_toTopOf="@id/iconTemplate"
+            app:layout_constraintBottom_toBottomOf="@id/textDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:background="@color/prayer_purple" />
+
+        <!-- Template Icon -->
+        <ImageView
+            android:id="@+id/iconTemplate"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="12dp"
+            android:padding="8dp"
+            android:background="@drawable/bg_icon_circle"
+            app:tint="@color/primary"
+            tools:src="@drawable/ic_prayer_hands"
+            app:layout_constraintStart_toEndOf="@id/viewCategoryIndicator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Premium Badge -->
+        <ImageView
+            android:id="@+id/badgePremium"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_premium_badge"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Template Name -->
+        <TextView
+            android:id="@+id/textTemplateName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.DailyDevotion.HabitName"
+            tools:text="Morning Prayer"
+            app:layout_constraintEnd_toStartOf="@id/badgePremium"
+            app:layout_constraintStart_toEndOf="@id/iconTemplate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.DailyDevotion.HabitDescription"
+            tools:text="Start your day with God"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconTemplate"
+            app:layout_constraintTop_toBottomOf="@id/textTemplateName" />
+
+        <!-- Frequency Chip -->
+        <TextView
+            android:id="@+id/textFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_chip_small"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            tools:text="Daily"
+            app:layout_constraintStart_toEndOf="@id/iconTemplate"
+            app:layout_constraintTop_toBottomOf="@id/textDescription" />
+
+        <!-- Target (if numeric) -->
+        <TextView
+            android:id="@+id/textTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_chip_small"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="15 min"
+            app:layout_constraintStart_toEndOf="@id/textFrequency"
+            app:layout_constraintTop_toBottomOf="@id/textDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

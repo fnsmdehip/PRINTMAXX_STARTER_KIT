@@ -1,0 +1,117 @@
+# Matchfile - Code Signing Configuration
+# Match syncs certificates and provisioning profiles across team members
+# https://docs.fastlane.tools/actions/match/
+
+# ==========================================
+# Repository Configuration
+# ==========================================
+
+# Git repository to store certificates and profiles
+# Use a private repo for security
+git_url(ENV["MATCH_GIT_URL"] || "git@github.com:yourcompany/certificates.git")
+
+# Branch to use (default: master)
+git_branch(ENV["MATCH_GIT_BRANCH"] || "main")
+
+# Storage mode: git, google_cloud, s3, or gitlab_secure_files
+storage_mode("git")
+
+# ==========================================
+# App Configuration
+# ==========================================
+
+# App identifier(s) - can be a string or array
+app_identifier([
+  ENV["APP_IDENTIFIER"] || "com.yourcompany.app"
+  # Add additional bundle IDs for extensions:
+  # "com.yourcompany.app.widget",
+  # "com.yourcompany.app.share-extension"
+])
+
+# Apple Developer Team ID
+team_id(ENV["APPLE_TEAM_ID"] || "XXXXXXXXXX")
+
+# Username (Apple ID email)
+username(ENV["APPLE_ID"] || "developer@yourcompany.com")
+
+# ==========================================
+# Profile Types
+# ==========================================
+
+# Certificate types to manage
+# Options: appstore, adhoc, development, enterprise
+type("appstore")
+
+# ==========================================
+# Security Configuration
+# ==========================================
+
+# Keychain name (CI creates a temporary keychain)
+keychain_name(ENV["MATCH_KEYCHAIN_NAME"] || "fastlane_keychain")
+
+# Keychain password (for CI)
+keychain_password(ENV["MATCH_KEYCHAIN_PASSWORD"] || ENV["MATCH_PASSWORD"])
+
+# Clone using SSH (recommended for CI)
+shallow_clone(true)
+clone_branch_directly(true)
+
+# ==========================================
+# CI Configuration
+# ==========================================
+
+# Read-only mode for CI (prevents accidental modifications)
+readonly(is_ci)
+
+# Force overwrite existing profiles
+force(false)
+
+# Generate Apple keys from portal
+generate_apple_certs(true)
+
+# ==========================================
+# Additional Options
+# ==========================================
+
+# Skip confirmation prompts
+skip_confirmation(true)
+
+# Verbose output for debugging
+verbose(ENV["MATCH_VERBOSE"] == "true")
+
+# Platform (ios, macos, catalyst)
+platform("ios")
+
+# Profile name template
+# profile_name lambda { |options| "#{options[:type]}_#{options[:platform]}_#{options[:bundle_id]}" }
+
+# ==========================================
+# Google Cloud Storage (Alternative)
+# ==========================================
+# Uncomment to use Google Cloud instead of Git
+#
+# storage_mode("google_cloud")
+# google_cloud_bucket_name("your-bucket-name")
+# google_cloud_keys_file("path/to/gc_keys.json")
+# google_cloud_project_id("your-project-id")
+
+# ==========================================
+# S3 Storage (Alternative)
+# ==========================================
+# Uncomment to use S3 instead of Git
+#
+# storage_mode("s3")
+# s3_region("us-east-1")
+# s3_bucket("your-bucket-name")
+# s3_access_key(ENV["AWS_ACCESS_KEY_ID"])
+# s3_secret_access_key(ENV["AWS_SECRET_ACCESS_KEY"])
+
+# ==========================================
+# Multiple App Configurations
+# ==========================================
+# For projects with multiple apps, you can create separate Matchfiles
+# or use environment variables to switch configurations
+#
+# Example:
+# app_identifier(ENV["CURRENT_APP_IDENTIFIER"])
+# team_id(ENV["CURRENT_TEAM_ID"])

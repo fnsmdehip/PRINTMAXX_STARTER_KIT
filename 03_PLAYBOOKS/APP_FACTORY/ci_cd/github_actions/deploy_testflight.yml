@@ -1,0 +1,249 @@
+# Deploy to TestFlight Workflow
+# Builds signed iOS app and uploads to TestFlight
+# Triggered manually or on release tags
+
+name: Deploy to TestFlight
+
+on:
+  push:
+    tags:
+      - 'v*-ios'
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+      skip_tests:
+        description: 'Skip tests (not recommended)'
+        required: false
+        default: false
+        type: boolean
+      release_notes:
+        description: 'Release notes for TestFlight'
+        required: false
+        type: string
+
+env:
+  XCODE_VERSION: '15.2'
+  SCHEME: 'App'
+  PROJECT_PATH: 'ios/App.xcworkspace'
+  APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+  APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+
+jobs:
+  # Run tests first unless skipped
+  test:
+    name: Run Tests
+    runs-on: macos-14
+    if: github.event.inputs.skip_tests != 'true'
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+
+      - name: Cache CocoaPods
+        uses: actions/cache@v4
+        with:
+          path: ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('ios/Podfile.lock') }}
+
+      - name: Install CocoaPods
+        run: |
+          cd ios
+          pod install
+
+      - name: Run tests
+        run: |
+          xcodebuild test \
+            -workspace ${{ env.PROJECT_PATH }} \
+            -scheme ${{ env.SCHEME }} \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            CODE_SIGNING_ALLOWED=NO \
+            | xcpretty --color
+
+  # Build and deploy
+  deploy:
+    name: Build & Deploy to TestFlight
+    runs-on: macos-14
+    needs: [test]
+    if: always() && (needs.test.result == 'success' || needs.test.result == 'skipped')
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Select Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+          working-directory: ios
+
+      - name: Install Fastlane
+        run: |
+          cd ios
+          bundle install
+
+      - name: Cache CocoaPods
+        uses: actions/cache@v4
+        with:
+          path: ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('ios/Podfile.lock') }}
+
+      - name: Install CocoaPods
+        run: |
+          cd ios
+          pod install
+
+      # Setup code signing with Match
+      - name: Setup SSH for Match
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.MATCH_DEPLOY_KEY }}
+
+      - name: Setup App Store Connect API Key
+        run: |
+          mkdir -p ~/private_keys
+          echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" | base64 --decode > ~/private_keys/AuthKey_${{ env.APP_STORE_CONNECT_API_KEY_ID }}.p8
+
+      - name: Sync certificates with Match
+        run: |
+          cd ios
+          bundle exec fastlane match appstore --readonly
+        env:
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
+
+      # Version bump if manually triggered
+      - name: Bump version
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          cd ios
+          bundle exec fastlane bump_version type:${{ github.event.inputs.version_bump }}
+
+      # Build the app
+      - name: Build for App Store
+        run: |
+          cd ios
+          bundle exec fastlane build_release
+        env:
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+
+      # Upload to TestFlight
+      - name: Upload to TestFlight
+        run: |
+          cd ios
+          bundle exec fastlane upload_testflight \
+            changelog:"${{ github.event.inputs.release_notes || 'Bug fixes and improvements' }}"
+        env:
+          APP_STORE_CONNECT_API_KEY_PATH: ~/private_keys/AuthKey_${{ env.APP_STORE_CONNECT_API_KEY_ID }}.p8
+
+      # Upload artifacts
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-${{ github.sha }}
+          path: ios/build/*.ipa
+          retention-days: 30
+
+      - name: Upload dSYM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dsym-${{ github.sha }}
+          path: ios/build/*.dSYM.zip
+          retention-days: 90
+
+  # Notify on completion
+  notify:
+    name: Notify
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: always()
+
+    steps:
+      - name: Get version
+        id: version
+        run: echo "version=$(cat ios/App/Info.plist | grep -A1 CFBundleShortVersionString | tail -1 | sed 's/[^0-9.]*//g')" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Send success notification
+        if: needs.deploy.result == 'success'
+        uses: 8398a7/action-slack@v3
+        with:
+          status: custom
+          custom_payload: |
+            {
+              "channel": "#releases",
+              "attachments": [
+                {
+                  "color": "good",
+                  "title": "iOS Build Uploaded to TestFlight",
+                  "fields": [
+                    {
+                      "title": "Repository",
+                      "value": "${{ github.repository }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Branch",
+                      "value": "${{ github.ref_name }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Commit",
+                      "value": "${{ github.sha }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Author",
+                      "value": "${{ github.actor }}",
+                      "short": true
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Send failure notification
+        if: needs.deploy.result == 'failure'
+        uses: 8398a7/action-slack@v3
+        with:
+          status: failure
+          channel: '#ci-alerts'
+          fields: repo,message,commit,author,action,eventName,ref,workflow
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  # Cleanup old builds
+  cleanup:
+    name: Cleanup Old Builds
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: success()
+
+    steps:
+      - name: Delete old artifacts
+        uses: c-hive/gha-remove-artifacts@v1
+        with:
+          age: '30 days'
+          skip-tags: true
+          skip-recent: 5

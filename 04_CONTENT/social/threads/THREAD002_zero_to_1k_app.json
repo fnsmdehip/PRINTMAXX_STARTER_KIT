@@ -1,0 +1,19 @@
+{
+  "thread_id": "THREAD002",
+  "topic": "Zero to $1k/mo app playbook",
+  "hook": "The $0 to $1k/mo app playbook nobody talks about:\n\nNo coding bootcamp.\nNo $50k in VC funding.\nNo team.\n\nJust one person with Claude and 14 days.",
+  "tweets": [
+    "Step 1: Find a proven app.\n\nGo to AppFigures or Sensor Tower.\n\nFilter: $50k-$200k/month revenue, <1000 reviews.\n\nThese apps print money but have weak marketing. They're clonable.",
+    "Step 2: Pick a niche angle.\n\nDon't clone exactly. Find an underserved audience.\n\nExample: Habit tracker app doing $100k/mo.\n\nYour version: Habit tracker for Muslim prayer times.\nOr: Habit tracker for gym bros.\nOr: Habit tracker for new moms.",
+    "Step 3: Find MIT-licensed repos.\n\nGitHub search: \"habit tracker\" license:mit stars:>100\n\nYou'll find 50+ open source versions.\n\nFork one. Customize the UI. Add your niche features.\n\nLegal. Free. Fast.",
+    "Step 4: Build in 14 days max.\n\nWeek 1: Core functionality working\nWeek 2: Polish UI, add paywall\n\nUse Expo + React Native.\nRevenueCat for subscriptions.\nShip to TestFlight by day 10.",
+    "Step 5: The $4.99/week paywall trick.\n\nPrice at $4.99/week with 3-day trial.\n\nThat's $20/month effective price.\n\n50 subscribers = $1,000/month.\n\nMost apps price too low. Don't.",
+    "Step 6: Screenshots matter more than features.\n\nSpend 2 hours on App Store screenshots.\n\nShow the app solving a problem. Text overlay with the benefit.\n\nFirst 2 screenshots = 80% of conversion.",
+    "Step 7: Launch and iterate.\n\nWeek 3: Submit to App Store\nWeek 4: Post on Reddit (niche subreddit), ProductHunt, X\n\nFirst 100 users = feedback goldmine.\n\nFix what they complain about. Double down on what they love.",
+    "Real numbers from my last app:\n\nDay 1-7: 23 downloads\nDay 8-14: 89 downloads (Reddit post hit)\nDay 15-30: 340 downloads\n\nMonth 1 revenue: $847\nMonth 2 revenue: $1,240\nMonth 3 revenue: $1,890",
+    "The unsexy truth: most apps fail.\n\nBut apps fail because people spend 6 months building and 0 days marketing.\n\nFlip it. 14 days building. Then 14 days marketing.\n\nShip fast. Learn what works. Iterate."
+  ],
+  "cta": "I'm building 3 apps this quarter using this exact playbook.\n\nFollowing along? Drop a comment.\n\nDM \"APP\" for my App Store screenshot templates.",
+  "estimated_engagement": "HIGH",
+  "best_time": "8:00 AM EST Wednesday"
+}

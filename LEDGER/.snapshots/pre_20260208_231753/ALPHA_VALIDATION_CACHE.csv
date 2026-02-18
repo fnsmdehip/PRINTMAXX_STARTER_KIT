@@ -1,0 +1,18 @@
+cache_key,alpha_id,source_url,url_exists,freshness_score,decay_factor,alive_signals,dead_signals,last_validated,validation_notes
+d14255530bfe4895,ALPHA001,https://x.com/levelsio/status/123,True,63,0.926,0,0,2026-02-04T20:57:08.838541,URL exists (status 200); Decay factor: 0.926 (APP_FACTORY half-life)
+f5807bed329e5167,ALPHA774,https://superprofile.bio/blog/whop-vs-gumroad,True,65,0.996,0,0,2026-02-04T20:57:15.781398,URL exists (status 200); Decay factor: 0.996 (MONETIZATION half-life)
+b215fe27d17819e9,ALPHA775,https://www.blackhatworld.com/tags/email-deliverability/,True,75,0.992,2,0,2026-02-04T20:57:16.488772,URL exists (status 403); Decay factor: 0.992 (OUTBOUND half-life); Recent: mentions 2026
+87bb1d7f94a9a0f6,ALPHA781,https://github.com/jeremylongshore/claude-code-plugins-plus-skills,True,75,0.989,2,0,2026-02-04T20:57:17.514792,URL exists (status 200); Decay factor: 0.989 (NEW_METHOD half-life); Recent: mentions 2026
+4b9b9f243900de2a,ALPHA785,https://www.producthunt.com/products/molthunt,True,75,0.989,2,0,2026-02-04T20:57:18.187905,URL exists (status 403); Decay factor: 0.989 (NEW_METHOD half-life); Recent: mentions 2026
+2fdb98ff12ba37f7,ALPHA796,https://www.shopify.com/blog/tiktok-affiliate-marketing,True,65,0.996,0,0,2026-02-04T21:02:35.256825,URL exists (status 200); Decay factor: 0.996 (MONETIZATION half-life)
+35f3623167d61f44,ALPHA776,https://www.disco.co/blog/best-ai-learning-content-repurposing-tools-2026,True,75,0.992,2,0,2026-02-04T20:59:59.594819,URL exists (status 200); Decay factor: 0.992 (TOOL_ALPHA half-life); Recent: mentions 2026
+414026dc69301dc0,ALPHA777,https://appinstitute.com/app-store-optimization-aso-in-2026/,True,65,0.994,0,0,2026-02-04T21:00:00.301175,URL exists (status 200); Decay factor: 0.994 (SEO_GEO_ASO half-life)
+6f9e8f57bde7dcfb,ALPHA778,https://www.wildnetedge.com/blogs/app-store-optimization-aso-best-practices,True,65,0.994,0,0,2026-02-04T21:00:00.965838,URL exists (status 200); Decay factor: 0.994 (SEO_GEO_ASO half-life)
+1e27a73c0e353d06,ALPHA779,https://www.mobiloud.com/blog/app-store-optimization,True,65,0.994,0,0,2026-02-04T21:00:01.519122,URL exists (status 200); Decay factor: 0.994 (SEO_GEO_ASO half-life)
+bcaca5a4af5d24e1,ALPHA780,https://koanthic.com/en/content-repurposing-ai-complete-multi-channel-guide-2026/,True,65,0.992,0,0,2026-02-04T21:00:02.549854,URL exists (status 200); Decay factor: 0.992 (TOOL_ALPHA half-life)
+cfd1a5691107de7f,ALPHA782,https://n8n.io/pricing,True,70,0.996,1,0,2026-02-04T21:00:03.671507,URL exists (status 200); Decay factor: 0.996 (MONETIZATION half-life); Somewhat recent: mentions 2025
+76801769c2bb0c34,ALPHA783,https://blog.localstack.cloud/the-road-ahead-for-localstack/,True,75,0.977,2,0,2026-02-04T21:00:04.164527,URL exists (status 200); Decay factor: 0.977 (PLATFORM_ARBITRAGE half-life); Recent: mentions 2026
+a11f7d8140022290,ALPHA002,https://x.com/tdinh_me/status/124,True,63,0.926,0,0,2026-02-04T21:00:44.623228,URL exists (status 200); Decay factor: 0.926 (MONETIZATION half-life)
+6012202c097e415a,ALPHA003,https://x.com/dannypostmaa/status/125,True,62,0.891,0,0,2026-02-04T21:00:45.123597,URL exists (status 200); Decay factor: 0.891 (CONTENT_FORMAT half-life)
+ffe4ecdf08e84bb8,ALPHA004,https://x.com/marc_louvion/status/126,True,62,0.891,0,0,2026-02-04T21:00:45.628906,URL exists (status 200); Decay factor: 0.891 (SEO_GEO_ASO half-life)
+d75e0f4e26fd923b,ALPHA005,https://reddit.com/r/SaaS/comments/abc,True,73,0.746,3,0,2026-02-04T21:00:47.521383,URL exists (status 200); Decay factor: 0.746 (GROWTH_HACK half-life); ALIVE_SIGNAL: 'still works'; Recent: mentions 2026

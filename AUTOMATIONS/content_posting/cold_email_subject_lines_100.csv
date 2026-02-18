@@ -1,0 +1,103 @@
+id,industry,subject_line,email_stage,variant,notes
+SL001,dental,"I checked {{BUSINESS_NAME}} on my phone",email_1,A,direct audit hook
+SL002,dental,"Your dental website is costing you patients",email_1,B,problem-first
+SL003,dental,"{{FIRST_NAME}} — your competitors load 3x faster",email_1,C,comparison hook
+SL004,dental,"I built this for {{BUSINESS_NAME}}",email_1,D,demo-first (proven high open rate)
+SL005,dental,"Quick question about {{BUSINESS_NAME}}",email_1,E,curiosity gap
+SL006,dental,"{{BUSINESS_NAME}} is losing ~$4,200/mo to slower competitors",email_2,A,specific dollar amount
+SL007,dental,"The math on your practice's website",email_2,B,roi angle
+SL008,dental,"3 patients/mo are choosing the dentist down the street",email_2,C,competitor fear
+SL009,dental,"3 dental practices in {{CITY}} switched this month",email_3,A,social proof
+SL010,dental,"What happened after 3 dentists in {{CITY}} upgraded their sites",email_3,B,story hook
+SL011,dental,"40% more bookings — here's how",email_3,C,result-first
+SL012,dental,"Last note about {{BUSINESS_NAME}}",email_4,A,breakup soft
+SL013,dental,"Taking down the {{BUSINESS_NAME}} demo Friday",email_4,B,urgency/scarcity
+SL014,dental,"{{FIRST_NAME}} — closing the loop",email_4,C,professional breakup
+SL015,dental,"Free tool for {{BUSINESS_NAME}} (keeping it live either way)",email_4,D,value regardless
+SL016,dental,"{{BUSINESS_NAME}} vs top 3 dentists in {{CITY}}",email_1,F,competitive comparison
+SL017,dental,"8 seconds — that's how long your site takes to load",email_1,G,specific problem metric
+SL018,restaurant,"I tried to order from {{BUSINESS_NAME}} online",email_1,A,personal experience
+SL019,restaurant,"{{BUSINESS_NAME}} doesn't show up when I search '{{CITY}} restaurants'",email_1,B,search visibility
+SL020,restaurant,"Your menu isn't online — that's costing you covers",email_1,C,direct problem
+SL021,restaurant,"I built a website for {{BUSINESS_NAME}}",email_1,D,demo-first
+SL022,restaurant,"{{FIRST_NAME}} — quick question about online ordering",email_1,E,curiosity
+SL023,restaurant,"Your competitors in {{CITY}} get 200+ online orders/mo",email_2,A,competitor benchmark
+SL024,restaurant,"DoorDash takes 30%. Your own site takes 0%.",email_2,B,cost savings angle
+SL025,restaurant,"The real cost of not having online ordering",email_2,C,loss aversion
+SL026,restaurant,"How {{SIMILAR_RESTAURANT}} increased covers 35%",email_3,A,social proof with result
+SL027,restaurant,"3 restaurants in {{CITY}} stopped paying DoorDash 30%",email_3,B,trend social proof
+SL028,restaurant,"Online orders went from 0 to 180/month",email_3,C,specific result
+SL029,restaurant,"Taking down the {{BUSINESS_NAME}} demo Friday",email_4,A,urgency
+SL030,restaurant,"Last note about your restaurant's website",email_4,B,soft breakup
+SL031,restaurant,"Offering the slot to another restaurant in {{CITY}}",email_4,C,scarcity
+SL032,restaurant,"63% of diners check your website first",email_1,F,stat hook
+SL033,fitness,"I tried to book a class at {{BUSINESS_NAME}}",email_1,A,personal experience
+SL034,fitness,"{{BUSINESS_NAME}} doesn't have online class booking",email_1,B,direct problem
+SL035,fitness,"Your gym's website is losing you members",email_1,C,consequence-first
+SL036,fitness,"I built a website for {{BUSINESS_NAME}}",email_1,D,demo-first
+SL037,fitness,"{{FIRST_NAME}} — 73% of members want this feature",email_1,E,stat hook
+SL038,fitness,"{{BUSINESS_NAME}} is losing ~12 signups/mo to this",email_2,A,specific loss number
+SL039,fitness,"The #1 reason prospects don't sign up at your gym",email_2,B,curiosity gap
+SL040,fitness,"12 members/mo = $14,400/year walking out the door",email_2,C,annual impact
+SL041,fitness,"2 gyms in {{CITY}} launched new sites this month",email_3,A,local social proof
+SL042,fitness,"Trial bookings up 50% — here's what changed",email_3,B,result hook
+SL043,fitness,"What 2 fitness businesses in {{CITY}} did differently",email_3,C,story angle
+SL044,fitness,"Final note about the {{BUSINESS_NAME}} website",email_4,A,soft breakup
+SL045,fitness,"Offering this to another gym in {{CITY}} Friday",email_4,B,scarcity
+SL046,fitness,"Free audit for {{BUSINESS_NAME}} (yours to keep)",email_4,C,value regardless
+SL047,fitness,"Your class schedule isn't online — fix takes 48 hours",email_1,F,problem + quick fix
+SL048,legal,"I searched '{{PRACTICE_AREA}} lawyer {{CITY}}'",email_1,A,search test
+SL049,legal,"{{BUSINESS_NAME}} isn't showing up on Google",email_1,B,visibility problem
+SL050,legal,"Your competitors are getting your calls",email_1,C,competitor fear
+SL051,legal,"I built a website for {{BUSINESS_NAME}}",email_1,D,demo-first
+SL052,legal,"{{FIRST_NAME}} — one missed case costs more than this",email_1,E,roi framing
+SL053,legal,"One case pays for this 10x over",email_2,A,roi math
+SL054,legal,"$5,000-15,000 per case. $500 for the site that brings them in.",email_2,B,contrast pricing
+SL055,legal,"The ROI math on {{BUSINESS_NAME}}'s website",email_2,C,analytical angle
+SL056,legal,"How a {{PRACTICE_AREA}} firm in {{CITY}} doubled intake",email_3,A,result social proof
+SL057,legal,"Intake form submissions up 65%",email_3,B,specific metric
+SL058,legal,"A firm like yours went from 3 to 7 new clients/week",email_3,C,before/after
+SL059,legal,"Last call on the {{BUSINESS_NAME}} site",email_4,A,urgency
+SL060,legal,"Demo goes offline Friday",email_4,B,scarcity
+SL061,legal,"{{FIRST_NAME}} — closing the loop on your website",email_4,C,professional breakup
+SL062,legal,"Every day without this site is cases going to competitors",email_2,D,daily loss framing
+SL063,legal,"Page 1 vs page 2 — $50K/year difference for law firms",email_1,F,ranking value
+SL064,plumber,"I searched 'emergency plumber {{CITY}}'",email_1,A,search test
+SL065,plumber,"{{BUSINESS_NAME}} isn't showing up for emergency searches",email_1,B,specific problem
+SL066,plumber,"A $400 service call just went to your competitor",email_1,C,money lost
+SL067,plumber,"I built a website for {{BUSINESS_NAME}}",email_1,D,demo-first
+SL068,plumber,"{{FIRST_NAME}} — where do your emergency calls go at 2am?",email_1,E,scenario hook
+SL069,plumber,"$3,200/mo in calls going to other plumbers in {{CITY}}",email_2,A,monthly loss
+SL070,plumber,"800 people search 'emergency plumber {{CITY}}' monthly",email_2,B,search volume
+SL071,plumber,"One emergency call pays for 3 months of this",email_2,C,roi math
+SL072,plumber,"A plumber in {{CITY}} gets 15 more calls/week now",email_3,A,result proof
+SL073,plumber,"Emergency calls up 40% — here's what changed",email_3,B,result hook
+SL074,plumber,"From page 2 to page 1 in 45 days",email_3,C,ranking result
+SL075,plumber,"Pulling the {{BUSINESS_NAME}} demo down Friday",email_4,A,urgency
+SL076,plumber,"Last note — one emergency call covers 6 months",email_4,B,roi reminder
+SL077,plumber,"Offering this to another plumber in {{CITY}}",email_4,C,scarcity
+SL078,plumber,"Your emergency button doesn't work on mobile",email_1,F,specific broken element
+SL079,plumber,"{{CITY}} homeowners searched 'plumber near me' 1,200 times last month",email_2,D,local search data
+SL080,realtor,"I searched '{{CITY}} real estate agent'",email_1,A,search test
+SL081,realtor,"{{FIRST_NAME}} — you're not on page 1 for {{CITY}} real estate",email_1,B,ranking problem
+SL082,realtor,"Your competitors are getting your listing leads",email_1,C,competitor fear
+SL083,realtor,"I built a website for {{BUSINESS_NAME}}",email_1,D,demo-first
+SL084,realtor,"Quick question about your online presence",email_1,E,curiosity
+SL085,realtor,"One closing covers 5 years of this",email_2,A,roi math
+SL086,realtor,"$12,000 commission. $500 website. Do the math.",email_2,B,blunt contrast
+SL087,realtor,"Every buyer checks your website before calling",email_2,C,behavior insight
+SL088,realtor,"How an agent in {{CITY}} added 8 leads/month",email_3,A,result proof
+SL089,realtor,"2 deals closed from website leads ($24K commission)",email_3,B,specific result
+SL090,realtor,"Buyer inquiries went from 0 to 8/month",email_3,C,before/after metric
+SL091,realtor,"Last note about the {{BUSINESS_NAME}} website",email_4,A,soft breakup
+SL092,realtor,"Demo comes down Friday — last chance",email_4,B,urgency
+SL093,realtor,"One deal = 10 years of this service",email_4,C,long-term roi
+SL094,realtor,"{{FIRST_NAME}} — your listing pages could be converting 3x more",email_1,F,conversion angle
+SL095,realtor,"Zillow gets your leads. Your site should.",email_2,D,platform comparison
+SL096,dental,"I found 4 problems on {{BUSINESS_NAME}}'s website",email_1,H,specific number
+SL097,restaurant,"Yelp is taking your customers. Your site should be.",email_1,G,platform comparison
+SL098,fitness,"I tried to sign up at {{BUSINESS_NAME}} from my phone",email_1,G,mobile experience
+SL099,plumber,"No one can find {{BUSINESS_NAME}} after 5pm",email_1,G,time-specific problem
+SL100,legal,"I asked AI to find a {{PRACTICE_AREA}} lawyer in {{CITY}}",email_1,G,AI/GEO search angle
+# CAN-SPAM: All emails must include unsubscribe link and physical address.
+# INCOME DISCLAIMER: Results not typical. Individual results vary based on effort, market conditions, and other factors.

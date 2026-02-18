@@ -1,0 +1,59 @@
+============================================
+MEGA RALPH LOOP - Launching
+============================================
+
+  Days:             7
+  Iterations/day:   21
+  Total iterations: 147
+  Sleep between:    10s
+  Model:            opus (maximum quality)
+  Mode:             AUTONOMOUS (no human approval needed)
+  Safety:           No Bash, No delete, Project folder only
+  Scraping:         Chrome MCP only
+
+  Day Cycle:
+    1-3:   DAILY_RESEARCH
+    4:     REFLECTION
+    5-10:  CONTENT_GENERATION
+    11-15: EXECUTION
+    16-20: INTELLIGENCE
+    21:    CHECKPOINT
+
+  Log: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/logs/mega_2026-02-01_0546.log
+
+============================================
+
+Launched! PID: 13497
+
+--- Monitor ---
+
+  Live log:
+    tail -f /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/logs/mega_2026-02-01_0546.log
+
+  Progress file:
+    cat /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/loops/mega/.ralph/progress.md
+
+  Activity log:
+    tail -100 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/loops/mega/.ralph/activity.log
+
+  Errors:
+    cat /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/loops/mega/.ralph/errors.log
+
+  Tracker:
+    head -50 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/MEGA_RALPH_TRACKER.csv
+
+  Checkpoints (human review):
+    ls /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/loops/mega/checkpoints/
+
+  Output:
+    ls /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/loops/mega/output/
+
+--- Control ---
+
+  Stop:
+    kill 13497
+
+  Check if running:
+    ps -p 13497
+
+  PID saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/ralph/loops/mega/.ralph/mega.pid

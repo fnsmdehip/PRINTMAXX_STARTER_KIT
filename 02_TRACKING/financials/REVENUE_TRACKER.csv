@@ -1,0 +1,7 @@
+date,method_id,method_name,source_platform,transaction_type,amount,currency,fees,net_amount,customer_id,product_name,recurring,notes
+2026-01-27,MM001,APP_FACTORY,app_store_ios,subscription,0.00,USD,0.00,0.00,EXAMPLE,PrayerLock Pro Monthly,TRUE,EXAMPLE ROW - delete when real data added
+2026-01-27,MM002,INFO_PRODUCTS,gumroad,one_time,0.00,USD,0.00,0.00,EXAMPLE,AI Clarity Stack,FALSE,EXAMPLE ROW - delete when real data added
+2026-01-27,MM006,CONTENT_FARM,youtube,ad_revenue,0.00,USD,0.00,0.00,EXAMPLE,RelaxChannel AdSense,FALSE,EXAMPLE ROW - delete when real data added
+2026-01-27,MM003,AFFILIATE_SITES,amazon_associates,commission,0.00,USD,0.00,0.00,EXAMPLE,Affiliate Click,FALSE,EXAMPLE ROW - delete when real data added
+2026-01-27,MM009,AI_INFLUENCER,instagram,sponsorship,0.00,USD,0.00,0.00,EXAMPLE,Brand Deal,FALSE,EXAMPLE ROW - delete when real data added
+2026-02-02,MM007,MM007_COLD_OUTBOUND,paper_trade,paper_trade_revenue,125.0,USD,0,125.0,PAPER_TRADE_001,Paper Trade PAPER_TRADE_001,FALSE,Paper trade validation revenue. Decision: SCALE

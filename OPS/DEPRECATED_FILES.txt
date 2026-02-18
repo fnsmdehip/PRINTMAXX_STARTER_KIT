@@ -1,0 +1,247 @@
+# DEPRECATED FILES - Candidates for Archival
+#
+# Generated: 2026-02-02
+# Source: OPS_AUDIT_REPORT_FEB_2026.md
+#
+# WARNING: These files are recommended for ARCHIVAL, not deletion.
+# Move to an archive/ subdirectory so they can be recovered if needed.
+# Human approval required before any file moves.
+#
+# Confidence levels:
+#   HIGH   = Safe to archive immediately. Superseded or duplicate.
+#   MEDIUM = Likely safe. Not referenced anywhere but may have niche value.
+#   LOW    = Might still be useful. Archive only after confirming no dependency.
+#
+# Format: CONFIDENCE | PATH | REASON | SUPERSEDED_BY
+#
+
+# ============================================================
+# CLUSTER 1: Setup/Manual Checklists (12 files -> setup/archive/)
+# These all cover the same content: Apple Dev, Google Play, domains, Cloudflare.
+# CANONICAL: setup/RETARDMAXX_MANUAL_TODO.md + setup/HUMAN_INFRA_CHECKLIST.md
+# DEEP REFERENCE: setup/ULTIMATE_STACK_GUIDE.md + setup/COMPREHENSIVE_STACK_COMPARISON.md
+# ============================================================
+
+HIGH | OPS/setup/MANUAL_SETUP_CHECKLIST.md | Earlier version of RETARDMAXX_MANUAL_TODO | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/MANUAL_SETUP_TASKS.md | Another version with RevenueCat steps | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/MASTER_MANUAL_SETUP.md | Tiered approach, same items | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/SETUP_CHECKLIST.md | Oldest version, references Decodo (now SOAX) | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/ACCOUNT_CREATION_CHECKLIST.md | Subset of setup tasks (accounts only) | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/BOOTSTRAP_STACK_CHECKLIST.md | Same setup items in "tell Claude when done" format | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/COMPLETE_BOOTSTRAP_STACK.md | Phased approach, more tools, same core | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/MANUAL_FOUNDATIONAL_STACK.md | Monthly cost breakdown version | setup/RETARDMAXX_MANUAL_TODO.md
+HIGH | OPS/setup/TECH_STACK_FOUNDATION.md | CONFLICTING info (says Apple Dev active). Wrong. | setup/HUMAN_INFRA_CHECKLIST.md
+HIGH | OPS/setup/HANDOFF.md | Session handoff (obsolete, 22KB) | OPS/SESSION_HANDOFF.md
+HIGH | OPS/setup/SESSION_HANDOFF.md | Another handoff file in setup/ | OPS/SESSION_HANDOFF.md
+HIGH | OPS/setup/HANDOFF_RETARDMAXX_SETUP.md | Setup-specific handoff with old path | OPS/SESSION_HANDOFF.md
+
+# ============================================================
+# CLUSTER 2: SEO/GEO Overlap (5 files)
+# CANONICAL: OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md
+# ============================================================
+
+HIGH | OPS/SEO_AGENT_READABILITY_GUIDE.md | Content merged into canonical SEO playbook | OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md
+HIGH | OPS/GEO_RESEARCH_2025.md | 2025-dated research, stats conflict with canonical | OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md
+HIGH | OPS/growth/SEO_GEO_ASO_RESEARCH_SUMMARY_2026.md | Research summary, content in canonical | OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md
+MEDIUM | OPS/GEO_OPTIMIZATION_PLAYBOOK.md | Merge unique tactics into canonical first | OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md
+MEDIUM | OPS/growth/SEO_GEO_ASO_ACTION_PLAN_2026.md | Merge key actions into canonical first | OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md
+MEDIUM | OPS/growth/SEO_GEO_ASO_TACTICS_2026.md | Overlaps heavily with canonical. Check for unique tactics before archiving. | OPS/ENTITY_SEO_AGENT_READINESS_PLAYBOOK.md
+
+# ============================================================
+# CLUSTER 3: Content Repurposing (2 files -> merge into 1)
+# CANONICAL after merge: OPS/content/CONTENT_REPURPOSING_AUTOMATION.md
+# ============================================================
+
+MEDIUM | OPS/content/CONTENT_REPURPOSING_GUIDE.md | 1:20 principle, merge unique content into AUTOMATION file first | content/CONTENT_REPURPOSING_AUTOMATION.md
+MEDIUM | OPS/content/CONTENT_REPURPOSING_PIPELINE.md | 7-stage process, merge unique content into AUTOMATION file first | content/CONTENT_REPURPOSING_AUTOMATION.md
+
+# ============================================================
+# CLUSTER 4: Strategic Plan Superseded
+# CANONICAL: OPS/CAPITAL_GENESIS_REPRIORITIZED_EXECUTION.md
+# ============================================================
+
+HIGH | OPS/SURGICAL_EXECUTION_PLAN.md | Superseded by REPRIORITIZED (marked v2, same date) | OPS/CAPITAL_GENESIS_REPRIORITIZED_EXECUTION.md
+
+# ============================================================
+# HIGH CONFIDENCE ORPHANS
+# Not referenced in CLAUDE.md, mega ralph prompt, or any canonical file.
+# Safe to archive immediately.
+# ============================================================
+
+HIGH | OPS/FRESH_CHAT_PROMPT.md | Old project path, superseded by CLAUDE.md | .claude/CLAUDE.md
+HIGH | OPS/DECISION_REQUEST_TEMPLATE.md | Empty template (159 bytes), never used | N/A
+HIGH | OPS/NEXT_ACTIONS_TEMPLATE.md | Empty template (316 bytes), never used | N/A
+HIGH | OPS/MANAGER_RUNBOOK.md | Superseded by mega ralph loop | ralph/loops/mega/prompt.md
+HIGH | OPS/MODEL_ROUTING_POLICY.md | Irrelevant: user has Claude Max plan, always Opus | N/A
+HIGH | OPS/TOKEN_COST_CHECKPOINTS.md | Irrelevant: user has unlimited Max plan | N/A
+HIGH | OPS/DAILY_RESEARCH_REPORT_TEMPLATE.md | Superseded by /daily-research skill | .claude/commands/daily-research.md
+HIGH | OPS/operations/SIMPLE_TASK_LIST.md | Superseded by CAPITAL_GENESIS_DASHBOARD | OPS/CAPITAL_GENESIS_DASHBOARD.md
+HIGH | OPS/operations/MASTER_ACTION_PLAN.md | Jan 21, superseded by Capital Genesis plans | OPS/CAPITAL_GENESIS_REPRIORITIZED_EXECUTION.md
+HIGH | OPS/OPPORTUNITY_WINDOWS_ANALYSIS.md | Jan 23, superseded by DIRECTIONAL_SIGNALS_2026 | OPS/DIRECTIONAL_SIGNALS_2026.md
+HIGH | OPS/YOUTUBE_SHORTS_RESEARCH_2025.md | 2025-dated, outdated | OPS/YOUTUBE_2026_TACTICS_AND_COMPLIANCE.md
+HIGH | OPS/AI_VOICE_TOOLS_COMPARISON_2025.md | 2025-dated, outdated | N/A
+HIGH | OPS/METRICS_DASHBOARD_SPEC.md | Spec for dashboard that was built differently | AUTOMATIONS/quant_dashboard.py
+
+# ============================================================
+# MODERATE CONFIDENCE ORPHANS
+# Not referenced anywhere. Likely safe but may have edge-case value.
+# Review before archiving.
+# ============================================================
+
+MEDIUM | OPS/DISCORD_COMMUNITIES_ALL_NICHES.md | 105KB. Largest OPS file. Never referenced. No Discord community exists. | N/A
+MEDIUM | OPS/TELEGRAM_COMMUNITIES_ALL_NICHES.md | 94KB. Second largest. Never referenced. No Telegram community exists. | N/A
+MEDIUM | OPS/TELEGRAM_COMMUNITY_GUIDE.md | Not referenced in CLAUDE.md or mega ralph | N/A
+MEDIUM | OPS/COMMUNITY_BUILDING_RESEARCH.md | Not cross-referenced | N/A
+MEDIUM | OPS/NEWSLETTER_MONETIZATION_RESEARCH.md | Not cross-referenced | N/A
+MEDIUM | OPS/HASHTAG_STRATEGY_GUIDE.md | Not referenced. May overlap with content strategy. | N/A
+MEDIUM | OPS/ELEVENLABS_MCP_INTEGRATION.md | Not currently used. Keep if ElevenLabs MCP planned. | N/A
+
+# ============================================================
+# PREMATURE FILES (Built Before Need)
+# These document systems that do not yet exist.
+# Archive now, unarchive when the system is actually needed.
+# ============================================================
+
+MEDIUM | OPS/CUSTOMER_SUPPORT_GUIDE.md | No customers yet. 22KB of premature docs. | N/A
+MEDIUM | OPS/CRISIS_RESPONSE_PLAYBOOK.md | No public presence yet. 14KB premature. | N/A
+MEDIUM | OPS/SWARM_PROMOTION_PLAYBOOK.md | No social accounts exist yet. 8KB premature. | N/A
+MEDIUM | OPS/operations/NOTIFICATION_STRATEGY_GUIDE.md | Apps not shipped yet. 10KB premature. | N/A
+MEDIUM | OPS/operations/DATABASE_BACKEND_GUIDE.md | Using CSVs not databases. 28KB premature. | N/A
+
+# ============================================================
+# PREMATURE: SUPPORT/ Directory (18 files)
+# Canned responses and troubleshooting for products that do not exist yet.
+# Archive entire directory.
+# ============================================================
+
+MEDIUM | OPS/SUPPORT/SUPPORT_PLAYBOOK.md | No products shipped, no customers | N/A
+MEDIUM | OPS/SUPPORT/FAQ_MASTER.md | No products shipped | N/A
+MEDIUM | OPS/SUPPORT/escalation_matrix.md | No support team exists | N/A
+MEDIUM | OPS/SUPPORT/support_metrics.md | No support data exists | N/A
+MEDIUM | OPS/SUPPORT/canned_responses/billing_issues.md | No billing system active | N/A
+MEDIUM | OPS/SUPPORT/canned_responses/technical_issues.md | No products shipped | N/A
+MEDIUM | OPS/SUPPORT/canned_responses/feature_requests.md | No products shipped | N/A
+MEDIUM | OPS/SUPPORT/canned_responses/cancellation_retention.md | No subscribers exist | N/A
+MEDIUM | OPS/SUPPORT/canned_responses/app_store_review_responses.md | No apps in store yet | N/A
+MEDIUM | OPS/SUPPORT/troubleshooting_guides/subscription_not_working.md | No subscriptions active | N/A
+MEDIUM | OPS/SUPPORT/troubleshooting_guides/app_crashing.md | No apps shipped | N/A
+MEDIUM | OPS/SUPPORT/troubleshooting_guides/sync_issues.md | No sync feature exists | N/A
+MEDIUM | OPS/SUPPORT/troubleshooting_guides/notification_issues.md | No notifications implemented | N/A
+MEDIUM | OPS/SUPPORT/troubleshooting_guides/payment_failed.md | No payment system active | N/A
+MEDIUM | OPS/SUPPORT/SUPPORT_EMAIL_TEMPLATES/first_response.md | No support inbox exists | N/A
+MEDIUM | OPS/SUPPORT/SUPPORT_EMAIL_TEMPLATES/resolution_followup.md | No support inbox exists | N/A
+MEDIUM | OPS/SUPPORT/SUPPORT_EMAIL_TEMPLATES/satisfaction_survey.md | No customers to survey | N/A
+MEDIUM | OPS/SUPPORT/SUPPORT_EMAIL_TEMPLATES/feedback_request.md | No customers for feedback | N/A
+
+# ============================================================
+# OPERATIONS/ SUBDIRECTORY - Partial Deprecation
+# Some files are still useful, others are superseded.
+# ============================================================
+
+HIGH | OPS/operations/MASTER_ACTION_PLAN.md | Jan 21, superseded | OPS/CAPITAL_GENESIS_REPRIORITIZED_EXECUTION.md
+HIGH | OPS/operations/SIMPLE_TASK_LIST.md | Superseded | OPS/CAPITAL_GENESIS_DASHBOARD.md
+MEDIUM | OPS/operations/DATABASE_BACKEND_GUIDE.md | Premature, using CSVs | N/A
+MEDIUM | OPS/operations/NOTIFICATION_STRATEGY_GUIDE.md | Apps not shipped | N/A
+LOW | OPS/operations/TOOL_STACK.md | May overlap with setup/ULTIMATE_STACK_GUIDE.md. Check. | setup/ULTIMATE_STACK_GUIDE.md
+LOW | OPS/operations/QUICK_STACK_REFERENCE.md | May overlap with setup/COMPREHENSIVE_STACK_COMPARISON.md. Check. | setup/COMPREHENSIVE_STACK_COMPARISON.md
+LOW | OPS/operations/DEPLOYMENT_HOSTING_GUIDE.md | May still be useful when deploying | N/A
+
+# KEEP in operations/:
+# - EMAIL_DELIVERABILITY_GUIDE.md (referenced in CRITICAL_PATH_DOCS.md)
+# - LEGAL_COMPLIANCE_GUIDE.md (referenced in CRITICAL_PATH_DOCS.md)
+# - MONETIZATION_PLAYBOOK.md (active reference)
+# - DAILY_OPERATIONS_CHECKLIST.md (may be useful)
+# - AFFILIATE_PROGRAMS_DATABASE.md (active reference)
+# - USER_PERSONAS.md (useful for content generation)
+# - EMAIL_MARKETING_GUIDE.md (useful for newsletter setup)
+
+# ============================================================
+# GROWTH/ SUBDIRECTORY - Partial Deprecation
+# Algorithm research files from 2025 are outdated.
+# 2026 playbooks have absorbed the useful content.
+# ============================================================
+
+MEDIUM | OPS/growth/X_TWITTER_ALGORITHM_RESEARCH_2025.md | Covered by TWITTER_GROWTH_PLAYBOOK_2026 | OPS/growth/TWITTER_GROWTH_PLAYBOOK_2026.md
+MEDIUM | OPS/growth/INSTAGRAM_ALGORITHM_RESEARCH_2025.md | 2025-dated algorithm research | N/A
+MEDIUM | OPS/growth/TIKTOK_ALGORITHM_RESEARCH_2025.md | 2025-dated algorithm research | N/A
+MEDIUM | OPS/growth/LINKEDIN_ALGORITHM_RESEARCH_2025.md | 2025-dated algorithm research | OPS/growth/LINKEDIN_GROWTH_PLAYBOOK_2026.md
+MEDIUM | OPS/growth/PINTEREST_ALGORITHM_RESEARCH_2025.md | 2025-dated algorithm research | N/A
+LOW | OPS/growth/PUSH_NOTIFICATION_STRATEGY.md | Apps not shipped yet. Keep when apps launch. | N/A
+LOW | OPS/growth/REFERRAL_PROGRAM_TEMPLATES.md | Premature. No products with referral programs. | N/A
+LOW | OPS/growth/GROWTH_EXPERIMENTS_FRAMEWORK.md | Generic framework. May still be useful. | N/A
+
+# KEEP in growth/:
+# - TWITTER_GROWTH_PLAYBOOK_2026.md (CANONICAL for X/Twitter)
+# - LINKEDIN_GROWTH_PLAYBOOK_2026.md (CANONICAL for LinkedIn)
+# - EDGE_GROWTH_TACTICS.md (actively referenced)
+# - PLATFORM_AUTOMATION_LIMITS_2026.md (actively referenced)
+# - ENGAGEMENT_FARMING_TACTICS.md (actively referenced)
+# - NICHE_POSTING_STRATEGY.md (actively referenced)
+# - DM_FUNNEL_PLAYBOOK.md (actively referenced)
+# - SEO_KEYWORD_RESEARCH_GUIDE.md (actively referenced)
+# - GTM_OPTIMIZATION_CHECKLIST.md (actively referenced)
+# - TWITTER_META_JANUARY_2026.md (companion to playbook, add header)
+# - X_ALGORITHM_OPTIMIZATION.md (companion to playbook, add header)
+# - LANDING_PAGE_OPTIMIZATION_GUIDE.md (useful for launches)
+# - PLATFORM_UPDATES_JAN_2026.md (useful reference)
+# - GREY_HAT_UPDATE_JAN_2026.md (useful reference)
+# - PARTNERSHIP_OPPORTUNITIES.md (useful reference)
+
+# ============================================================
+# CONTENT/ SUBDIRECTORY - Partial Deprecation
+# Large niche-specific files that are reference-only.
+# ============================================================
+
+# No files deprecated from content/ (all are either canonical or reference).
+# Note: CONTENT_REPURPOSING_GUIDE.md and CONTENT_REPURPOSING_PIPELINE.md
+# are listed above in CLUSTER 3 for merge into CONTENT_REPURPOSING_AUTOMATION.md.
+
+# ============================================================
+# LEDGER/ BATCH FILES (should be merged, not archived)
+# These are not truly deprecated - they contain data that should be
+# consolidated into the canonical CSV, then the batch file deleted.
+# ============================================================
+
+HIGH | LEDGER/ALPHA_STAGING_NEW.csv | Unmerged batch. Merge into ALPHA_STAGING.csv then delete. | LEDGER/ALPHA_STAGING.csv
+HIGH | LEDGER/ALPHA_STAGING_NEW_BATCH.csv | Unmerged batch. Merge then delete. | LEDGER/ALPHA_STAGING.csv
+HIGH | LEDGER/ALPHA_STAGING_NEW_ENTRIES.csv | Unmerged batch. Merge then delete. | LEDGER/ALPHA_STAGING.csv
+HIGH | LEDGER/ALPHA_STAGING_NEW_ENTRIES_2026-02-02.csv | Date-specific batch. Merge then delete. | LEDGER/ALPHA_STAGING.csv
+MEDIUM | LEDGER/CROSS_POLLINATION_MATRIX_UPDATED.csv | Should replace canonical. Verify then rename. | LEDGER/CROSS_POLLINATION_MATRIX.csv
+MEDIUM | LEDGER/ECOM_OPPORTUNITIES_JAN_2026.csv | May have unique entries. Merge into ECOM_ARB_OPPORTUNITIES.csv. | LEDGER/ECOM_ARB_OPPORTUNITIES.csv
+
+# ============================================================
+# EMPTY DIRECTORIES (delete, not archive)
+# ============================================================
+
+HIGH | OPS/NICHE_RESEARCH/ | Empty directory. Delete. | N/A
+HIGH | OPS/reports/ | Empty directory. Delete. | N/A
+HIGH | OPS/research/ | Empty directory. Delete. | N/A
+
+# KEEP: OPS/CONTENT_QA_QUEUE/ (empty but part of content pipeline infrastructure)
+
+# ============================================================
+# SUMMARY
+# ============================================================
+#
+# HIGH confidence archival: 36 files
+# MEDIUM confidence archival: 38 files
+# LOW confidence archival: 5 files
+# LEDGER batch merges: 6 files
+# Empty directory deletions: 3 directories
+#
+# Total files recommended for archival: 79
+# Total LEDGER files to merge-then-delete: 6
+# Estimated size freed from active context: ~780KB
+# Estimated token savings per session: 50-95K
+#
+# IMPLEMENTATION:
+# 1. Create OPS/setup/archive/ directory
+# 2. Move HIGH confidence setup files first (12 files)
+# 3. Create OPS/archive/ directory for root-level orphans
+# 4. Move HIGH confidence orphans (13 files)
+# 5. Merge LEDGER batch files into canonical CSVs, then delete batches
+# 6. Review MEDIUM confidence files before moving
+# 7. Leave LOW confidence files until confirmed no dependency
+# 8. Delete empty directories last
+#
+# After archival, update CLAUDE.md to remove references to archived files.

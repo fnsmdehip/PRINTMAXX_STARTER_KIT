@@ -1,0 +1,60 @@
+[
+  {
+    "post_id": "1qw1kuw",
+    "title": "My forgotten side project outranks Zillow for dozens of searches. Here's the accidental playbook",
+    "selftext": "**Note**: *Not promoting this side project - its not relevant for people, only the lessons are. I blurred the name and details out for this reason.*\n\n\\---\n\n3 years ago I built a simple site for college students looking for off-campus housing for a specific area. Put it up, ported the data from an old Excel sheet the students used, sent an email blast to the landlords on the Excel doc, and largely stopped working on it after 1 month. It currently makes about $1k/year from subscriptions, and I'm going to be adding minimal ads soon. I check on it maybe once a quarter or when someone emails me.\n\nWell, I get weekly emails from Google Search Console, and the stats, impressions, etc. just keep climbing. And now? **I'm ranking above Zillow for hundreds of specific address searches.**\n\nNot \"apartments for rent\" or \"houses in Connecticut\", but for queries like \"123 Example Road\" - where students, summer renters, buyers, etc. are googling specific houses near campus or in that area.\n\n# The numbers (last 3 months)\n\n|Metric|Value|\n|:-|:-|\n|Clicks from Google|1,387|\n|Impressions|17,879|\n|Average position|5.5|\n|Indexed pages|23 (going to add more)|\n\nFor address-specific searches, I'm often **position 2-4**. Zillow is below me. Sometimes I even beat [Realtor.com](http://Realtor.com) too.\n\nOne query specifically: \"919 <REDACTED> road\" - I rank #3, Zillow ranks #4. My CTR on that term is 24%.\n\n# Why does a tiny site beat a $7B company?\n\nZillow optimizes for \"apartments for rent in \\[city\\].\" They care about volume.\n\nI accidentally optimized for \"919 <REDACTED> Road\" - the exact thing a college junior types when they're deciding between two houses for senior year.\n\n**Giants optimize for scale. Niches get ignored.**\n\n# The playbook I stumbled into\n\n**1. Hyper-specific pages**\n\nI have a dedicated page for each paid listing with the exact address in the URL, title, and H1. Zillow buries the same info 2-3 clicks deep in a generic template.  Side note: The SEO alone is nearly worth the sub",
+    "url": "https://reddit.com/r/juststart/comments/1qw1kuw/my_forgotten_side_project_outranks_zillow_for/",
+    "external_url": "https://www.reddit.com/r/juststart/comments/1qw1kuw/my_forgotten_side_project_outranks_zillow_for/",
+    "score": 17,
+    "upvote_ratio": 0.85,
+    "num_comments": 13,
+    "created_utc": 1770240501.0,
+    "author": "Perfect_Honey7501",
+    "subreddit": "juststart",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "dollar_amounts": [
+        "$1k",
+        "$7"
+      ],
+      "percentages": [
+        "24%"
+      ],
+      "time_frames": [
+        "1 month",
+        "3 months"
+      ]
+    }
+  },
+  {
+    "post_id": "1qrega5",
+    "title": "Traffic stuck around 2.8k for two months, not sure what I'm doing wrong",
+    "selftext": "Started this affiliate site back in June, productivity software niche, mostly high-ticket SaaS stuff. Been about 7-8 months now.\n\nFirst few months sucked. Maybe 50 visitors a month, barely any sales. Was targeting comparison keywords like \"Tool A vs Tool B\" because I figured people searching that are closer to buying than people searching \"best productivity tools\" or whatever.\n\nAround September October things started picking up. Traffic went from nothing to like 1,500 then 2,200 then by December I was getting close to 3k visitors. Revenue hit around $4,800 in December which felt insane compared to where I started.\n\nNow it's just stuck. Been at roughly 2,700-2,900 visitors for the past two months. Some days it's 2,500, some days 3,000, but it's not actually growing. Revenue's around $4,200 now, dropped a bit because one of my affiliate programs cut their commission rates in December.\n\nI'm still publishing, got 47 posts up now, but new stuff isn't ranking like before. My best post makes close to $900 a month by itself, ranks number 2 for some high intent keyword. But I can't figure out how to replicate that. Other posts I write just sit on page 3 or 4 going nowhere.\n\nConversion rate's decent, around 4%. I see people here with way more traffic but converting at 1% so I guess that's something. Most of my sales come from the comparison posts where I actually use both tools and show screenshots and stuff. Takes longer to write but people can tell when you've actually used something.\n\nStarted doing screen recordings in my posts too, just showing how the software works. Time on page went way up after that, from under a minute to like 3 minutes. Probably helped with rankings.\n\nGot an email list going, around 850 people now. Growing maybe 30-40 a week. When I send out new posts I get a spike in traffic and sales. Probably 20-25% of revenue comes from email but hard to track exactly.\n\nTried a bunch of stuff that didn't work. Did some guest posting, got a few backlinks, saw zer",
+    "url": "https://reddit.com/r/juststart/comments/1qrega5/traffic_stuck_around_28k_for_two_months_not_sure/",
+    "external_url": "https://www.reddit.com/r/juststart/comments/1qrega5/traffic_stuck_around_28k_for_two_months_not_sure/",
+    "score": 9,
+    "upvote_ratio": 1.0,
+    "num_comments": 15,
+    "created_utc": 1769799369.0,
+    "author": "Important_Exit_8172",
+    "subreddit": "juststart",
+    "is_self": true,
+    "link_flair_text": null,
+    "extracted_numbers": {
+      "dollar_amounts": [
+        "$4,800",
+        "$4,200",
+        "$900"
+      ],
+      "percentages": [
+        "4%",
+        "1%",
+        "25%"
+      ],
+      "time_frames": [
+        "8 months"
+      ]
+    }
+  }
+]

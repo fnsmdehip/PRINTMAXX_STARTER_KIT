@@ -1,0 +1,60 @@
+{
+  "version": "2026-02-16",
+  "enabled": true,
+  "budget": {
+    "monthly_cap_usd": 20.0,
+    "soft_cap_usd": 15.0,
+    "hard_stop_usd": 18.0,
+    "per_run_cap_usd": 1.0,
+    "cost_per_eval_usd": 0.012
+  },
+  "sampling": {
+    "max_total_tasks_per_run": 30,
+    "max_tasks_per_lane": 12
+  },
+  "lanes": {
+    "freelance_arbitrage": {
+      "priority": 100,
+      "source": "output/freelance/manifest.json",
+      "queue_field": "draft_count",
+      "win_rate": 0.08,
+      "value_per_win_usd": 225.0,
+      "quality_factor": 0.75,
+      "human_blocker": "FIVERR_UPWORK_ACCOUNT"
+    },
+    "gumroad_listings": {
+      "priority": 95,
+      "source": "output/ecom_autolist/manifest.json",
+      "queue_field": "pending_count",
+      "win_rate": 0.22,
+      "value_per_win_usd": 19.0,
+      "quality_factor": 0.9,
+      "human_blocker": "GUMROAD_ACCOUNT"
+    },
+    "cold_outreach_warmup": {
+      "priority": 90,
+      "source": "output/cold_emails/cold_emails_ready.csv",
+      "queue_field": "csv_rows",
+      "win_rate": 0.02,
+      "value_per_win_usd": 300.0,
+      "quality_factor": 0.7,
+      "human_blocker": "EMAIL_INFRA"
+    },
+    "rbi_intent_sniping": {
+      "priority": 80,
+      "source": "output/clawdbot/manifest.json",
+      "queue_field": "counts.intent_rows",
+      "win_rate": 0.03,
+      "value_per_win_usd": 180.0,
+      "quality_factor": 0.7,
+      "human_blocker": "X_MULTI_ACCOUNT_STACK"
+    }
+  },
+  "external_runner": {
+    "enabled": false,
+    "clawwork_home": "",
+    "command": "bash run_test_agent.sh",
+    "timeout_sec": 1800,
+    "estimated_cost_usd": 0.5
+  }
+}

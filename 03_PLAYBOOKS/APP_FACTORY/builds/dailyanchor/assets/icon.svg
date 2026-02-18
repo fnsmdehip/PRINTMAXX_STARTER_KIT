@@ -1,0 +1,19 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="224" fill="#6366F1"/>
+
+  <!-- Anchor shape -->
+  <path d="M512 200C512 200 400 350 400 450C400 550 450 600 512 650C574 600 624 550 624 450C624 350 512 200 512 200Z" fill="white" fill-opacity="0.9"/>
+
+  <!-- Cross on anchor -->
+  <rect x="490" y="250" width="44" height="200" fill="#6366F1"/>
+  <rect x="440" y="300" width="144" height="44" fill="#6366F1"/>
+
+  <!-- Anchor bottom -->
+  <path d="M512 650L512 750" stroke="white" stroke-width="44" stroke-linecap="round"/>
+  <path d="M350 750C350 750 430 800 512 800C594 800 674 750 674 750" stroke="white" stroke-width="44" stroke-linecap="round"/>
+
+  <!-- Small decorative dots -->
+  <circle cx="350" cy="750" r="30" fill="white"/>
+  <circle cx="674" cy="750" r="30" fill="white"/>
+</svg>

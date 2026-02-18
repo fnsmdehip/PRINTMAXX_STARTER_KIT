@@ -1,0 +1,37 @@
+tool_name,category,pricing_tier,price_monthly,inboxes_included,leads_limit,warmup_included,warmup_network_size,ab_testing,api_access,inbox_rotation,unified_inbox,analytics_quality,best_for,pros,cons,website
+Instantly.ai,sending_platform,Growth,37,unlimited,1000,yes,200000+,yes,no,yes,yes,good,beginners,cleanest UI; best warmup network; unlimited inboxes; great docs,lead limits; some features locked,instantly.ai
+Instantly.ai,sending_platform,Hypergrowth,97,unlimited,25000,yes,200000+,yes,yes,yes,yes,good,scaling teams,lead finder; AI writer; everything in Growth,expensive for small teams,instantly.ai
+Instantly.ai,sending_platform,Light Speed,358,unlimited,100000,yes,200000+,yes,yes,yes,yes,excellent,enterprise,advanced analytics; full features,overkill for most,instantly.ai
+Smartlead,sending_platform,Basic,39,2,2000,yes,100000+,yes,no,yes,yes,excellent,testing,good warmup; analytics,only 2 inboxes; limited,smartlead.ai
+Smartlead,sending_platform,Pro,94,30,30000,yes,100000+,yes,yes,yes,yes,excellent,agencies,best analytics; white-label,UI clunkier than Instantly,smartlead.ai
+Smartlead,sending_platform,Custom,174,unlimited,100000,yes,100000+,yes,yes,yes,yes,excellent,high volume,unlimited scale; full features,steep learning curve,smartlead.ai
+Lemlist,sending_platform,Email Starter,39,1,unlimited,no,0,yes,no,yes,yes,good,solo users,simple start,no warmup; 1 inbox only,lemlist.com
+Lemlist,sending_platform,Email Pro,69,3,unlimited,yes,lemwarm,yes,yes,yes,yes,good,personalization,warmup included; good templates,expensive per inbox,lemlist.com
+Lemlist,sending_platform,Multichannel Expert,99,unlimited,unlimited,yes,lemwarm,yes,yes,yes,yes,good,multi-channel,LinkedIn; calls; unlimited,pricey for email only,lemlist.com
+EmailBison,sending_platform,Starter,29,5,unlimited,yes,50000+,limited,yes,yes,yes,basic,budget,cheapest; API access,smaller warmup; fewer features,emailbison.com
+EmailBison,sending_platform,Pro,59,15,unlimited,yes,50000+,yes,yes,yes,yes,basic,growing teams,good value,less polished,emailbison.com
+EmailBison,sending_platform,Agency,99,50,unlimited,yes,50000+,yes,yes,yes,yes,good,agencies,scale pricing,smaller community,emailbison.com
+Apollo.io,data_plus_sending,Free,0,0,10000,no,0,basic,no,no,yes,basic,testing,huge database; free tier,no warmup; limited,apollo.io
+Apollo.io,data_plus_sending,Basic,49,limited,900,no,0,basic,no,no,yes,basic,small campaigns,275M contacts; good value,need separate warmup,apollo.io
+Apollo.io,data_plus_sending,Professional,79,limited,1200,no,0,yes,yes,no,yes,good,regular outbound,intent data; LinkedIn,email accuracy 92-95%,apollo.io
+Apollo.io,data_plus_sending,Organization,119,limited,2400,no,0,yes,yes,no,yes,good,high volume,max credits; all features,still need verification,apollo.io
+Warmbox.ai,warmup,Standard,15,1,na,yes,35000+,na,no,na,na,good,supplementing,affordable; good network,standalone only,warmbox.ai
+Warmbox.ai,warmup,Premium,25,1,na,yes,35000+,na,yes,na,na,excellent,monitoring,deliverability reports,more expensive,warmbox.ai
+Warmup Inbox,warmup,Standard,15,1,na,yes,30000+,na,no,na,na,good,large network,largest network; fast,mid-tier pricing,warmupinbox.com
+Mailreach,warmup,Standard,25,1,na,yes,25000+,na,yes,na,na,excellent,monitoring,spam testing; DNS checks,most expensive,mailreach.co
+Warmforge,warmup,Standard,9,1,na,yes,30000+,na,no,na,na,good,budget,cheapest; AI patterns,newer platform,warmforge.ai
+Mailforge,bulk_inboxes,Volume,3,1,na,no,0,na,yes,na,na,na,high volume,automated DNS; scale,shared infrastructure,mailforge.ai
+Mailscale,bulk_inboxes,Standard,5,1,na,no,0,na,no,na,na,na,mid volume,bulk creation,less features,mailscale.com
+DeliverOn,deliverability,Standard,39,na,na,yes,pre-warmed,na,no,na,na,excellent,monitoring,inbox placement testing; blacklist,monitoring only,deliveron.co
+GlockApps,deliverability,Standard,59,na,na,no,0,na,yes,na,na,excellent,testing,spam filter analysis; DMARC,expensive for solo,glockapps.com
+ZeroBounce,verification,Pay-as-you-go,0.008,na,per_email,na,na,na,yes,na,na,na,all users,99%+ accuracy; fast,per-email cost,zerobounce.net
+NeverBounce,verification,Pay-as-you-go,0.008,na,per_email,na,na,na,yes,na,na,na,all users,98%+ accuracy; fast,per-email cost,neverbounce.com
+Clearout,verification,Pay-as-you-go,0.007,na,per_email,na,na,na,yes,na,na,na,budget,cheapest; good accuracy,slower at scale,clearout.io
+Emailable,verification,Pay-as-you-go,0.008,na,per_email,na,na,na,yes,na,na,na,all users,98% accuracy; fast,standard pricing,emailable.com
+MillionVerifier,verification,Bulk,0.0003,na,per_email,na,na,na,no,na,na,na,bulk only,cheapest bulk,slower; bulk only,millionverifier.com
+Hunter.io,data_enrichment,Starter,49,na,500,na,na,na,yes,na,na,na,email finding,domain search; Chrome ext,limited credits,hunter.io
+Lusha,data_enrichment,Pro,36,na,480,na,na,na,yes,na,na,na,quick lookups,easy to use; accurate,expensive per lead,lusha.com
+RocketReach,data_enrichment,Essentials,53,na,1200,na,na,na,yes,na,na,na,large database,700M+ contacts,accuracy varies,rocketreach.co
+Snov.io,data_enrichment,Starter,39,na,1000,na,na,na,yes,na,na,na,budget,email finder; sequences,smaller database,snov.io
+Google Workspace,email_provider,Business Starter,7.2,1,na,na,na,na,na,na,na,na,primary sending,best deliverability to Gmail,expensive at scale,workspace.google.com
+Microsoft 365,email_provider,Business Basic,6,1,na,na,na,na,na,na,na,na,corporate targets,more lenient; cheaper,lower Gmail deliverability,microsoft.com/microsoft-365

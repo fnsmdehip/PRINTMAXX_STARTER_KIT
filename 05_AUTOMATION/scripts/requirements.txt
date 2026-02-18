@@ -1,0 +1,29 @@
+# PRINTMAXX Automation Script Library - Dependencies
+# Install: pip install -r requirements.txt
+
+# Core (used by most scripts - stdlib only)
+# csv, json, logging, argparse, pathlib, datetime, re - all stdlib
+
+# Image generation (optional - image_generator.py)
+Pillow>=10.0.0
+
+# Dashboard (optional - quant_dashboard.py)
+textual>=0.47.0
+rich>=13.0.0
+
+# Web scraping (optional - twitter_alpha_scraper.py, source_scraper.py)
+playwright>=1.40.0
+requests>=2.31.0
+
+# Data analysis (optional - trend_detector.py, profit_analyzer.py)
+# No external deps needed - uses stdlib Counter, defaultdict
+
+# Fuzzy matching (optional - duplicate_remover.py)
+# Uses stdlib difflib - no external deps
+
+# Note: Most scripts use only Python stdlib and work without any pip installs.
+# Optional dependencies are only needed for specific features:
+#   - Pillow: image_generator.py (PNG generation, falls back to spec files without it)
+#   - textual/rich: quant_dashboard.py (terminal dashboard)
+#   - playwright: twitter_alpha_scraper.py (browser automation)
+#   - requests: source_scraper.py (HTTP requests for web scraping)

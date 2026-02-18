@@ -1,0 +1,37 @@
+---
+platform: reddit
+content_type: post
+niche: general
+source_file: CONTENT/reddit/faith_r_christianity_prayer_consistency.md
+suggested_time: 09:00 EST
+status: PENDING_REVIEW
+routed_date: 2026-02-02 10:59
+style_check_passed: True
+---
+
+# QA Review: faith_r_christianity_prayer_consistency.md
+
+**Platform:** reddit
+**Content Type:** post
+**Niche:** general
+**Source File:** `CONTENT/reddit/faith_r_christianity_prayer_consistency.md`
+**Suggested Post Time:** 09:00 EST
+**Status:** PENDING_REVIEW
+
+## Review Checklist
+- [ ] Content matches PRINTMAXXER voice (@pipelineabuser energy)
+- [ ] No AI vocabulary (leverage, utilize, delve, etc.)
+- [ ] No em dashes
+- [ ] Consequence-first hook
+- [ ] Specific numbers included
+- [ ] Would @pipelineabuser actually post this?
+- [ ] FTC compliant (disclosures if needed)
+
+## Actions
+- **APPROVED**: Move to posting queue
+- **NEEDS_EDIT**: Note edits needed below
+- **REJECTED**: Note reason below
+
+## Notes
+(Human reviewer: add notes here)
+

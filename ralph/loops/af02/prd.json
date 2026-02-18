@@ -1,0 +1,88 @@
+{
+  "op_id": "AF02",
+  "op_name": "Programmatic SEO Affiliate",
+  "category": "AFFILIATE",
+  "created": "2026-02-12T07:47:24.984082",
+  "stories": [
+    {
+      "id": "AF02-T01",
+      "description": "Generate city/service pages",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF02-T02",
+      "description": "Deploy to cdn",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF02-T03",
+      "description": "Submit to search engines",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF02-T04",
+      "description": "Track indexing",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF02-T05",
+      "description": "Optimize templates",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF02-T06",
+      "description": "Add affiliate links",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF02-T07",
+      "description": "Monitor rankings",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "AF02-T08",
+      "description": "Scale page count",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+signal_id,date_detected,signal_type,company,trigger_description,source,contact_info,outreach_status,outreach_date,notes
+IS001,2026-02-04,leadership_change,,,theorg.com,,NOT_STARTED,,Template row - fill with actual signals
+IS002,2026-02-04,job_posting_removed,,,linkedin.com,,NOT_STARTED,,Track: role removed = they hired = need tools
+IS003,2026-02-04,glassdoor_spike,,,glassdoor.com,,NOT_STARTED,,Track: rating drop >0.5 in 30 days = internal chaos
+IS004,2026-02-04,competitor_layoff,,,linkedin.com,,NOT_STARTED,,Track: competitor weakness = opportunity for target
+IS005,2026-02-04,10k_filing_change,,,sec.gov,,NOT_STARTED,,Track: new risks in filing = budget allocated

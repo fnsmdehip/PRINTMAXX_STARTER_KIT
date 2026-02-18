@@ -1,0 +1,35 @@
+{
+  "version": "2026-02-18",
+  "base_url": "https://openrouter.ai/api/v1",
+  "admin_key_env": "OPENROUTER_ADMIN_API_KEY",
+  "monthly_budget_usd": 100.0,
+  "daily_divisor_days": 30,
+  "keys": [
+    {
+      "name": "printmaxx-worker-runtime",
+      "label": "PRINTMAXX Worker Runtime",
+      "create_if_missing": true,
+      "limit_mode": "daily_from_monthly",
+      "budget_share": 1.0,
+      "limit_reset": "daily",
+      "disabled": false,
+      "tags": [
+        "worker",
+        "openclaw",
+        "ship-captain"
+      ]
+    },
+    {
+      "name": "printmaxx-control-manual",
+      "label": "PRINTMAXX Control Manual",
+      "create_if_missing": true,
+      "limit_usd": 1.5,
+      "limit_reset": "daily",
+      "disabled": false,
+      "tags": [
+        "control",
+        "manual"
+      ]
+    }
+  ]
+}

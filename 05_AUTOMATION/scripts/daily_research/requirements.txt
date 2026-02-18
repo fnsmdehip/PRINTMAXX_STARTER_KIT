@@ -1,0 +1,18 @@
+# PRINTMAXX Daily Research Scanner Requirements
+# Install with: pip install -r requirements.txt
+
+# Core HTTP library
+requests>=2.28.0
+
+# HTML parsing (for web scraping fallbacks)
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+
+# Optional: Reddit API (better than JSON API)
+praw>=7.7.0
+
+# Optional: Rate limiting helpers
+ratelimit>=2.2.1
+
+# Data handling
+python-dateutil>=2.8.0

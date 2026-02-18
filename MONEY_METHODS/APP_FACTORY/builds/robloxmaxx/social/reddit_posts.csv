@@ -1,0 +1,250 @@
+id,subreddit,title,body,flair,status
+R01,r/robloxgamedev,"I built a tool that generates complete Roblox games from natural language. here's 5 games I made in one sitting.","wanted to test how fast AI can generate complete Roblox games. not snippets. full games with monetization and DataStore.
+
+results:
+- pizza tycoon: 47 seconds, 15 scripts
+- ninja obby (20 stages): 52 seconds, 11 scripts
+- pet simulator (15 pets, hatching, trading): 61 seconds, 18 scripts
+- zombie survival (waves, 5 weapons, co-op): 58 seconds, 20 scripts
+- racing (5 tracks, garage, nitro): 73 seconds, 22 scripts
+
+total: 4 minutes 51 seconds. 86 scripts. all playable.
+
+code quality: modern Luau with type annotations. task.spawn instead of deprecated spawn. UpdateAsync for DataStore. server-authoritative architecture.
+
+the tool is called RobloxMaxx. free tier gives you 300 actions/month (enough for 6+ games). link in comments if anyone wants to try it.
+
+what it doesn't do: 3D assets, complex physics tuning, UI polish. it generates the code architecture. the creative work is still on you.
+
+happy to answer questions about the code quality or how the generation works.",Resources,READY
+R02,r/roblox,"Free tool for Roblox devs: generates complete games from plain English descriptions","made a tool called RobloxMaxx that generates full Roblox games from natural language.
+
+you type something like 'pizza tycoon with 8 stations and gamepasses' and get 15+ Luau scripts. ServerScriptService, ReplicatedStorage, StarterGui, everything connected.
+
+it's not just code completion. it generates the whole game architecture. monetization, DataStore persistence, server-authoritative logic.
+
+free tier: 300 actions/month. no credit card. enough to build 6+ complete games.
+
+8 genres: tycoon, obby, simulator, RPG, horror, racing, tower defense, fighting.
+
+built it because I was tired of writing the same DataStore boilerplate for every game. figured other devs might feel the same.
+
+link in comments. roast it if you want, I'd rather hear honest feedback than polite silence.",Discussion,READY
+R03,r/gamedev,"Built an AI tool that generates complete Roblox (Luau) games from plain English. looking for feedback from experienced devs.","I built RobloxMaxx, an AI code generation tool specifically for Roblox development.
+
+what it does:
+- takes a natural language game description
+- generates complete Luau script architecture (15-25 scripts per game)
+- handles ServerScriptService, ReplicatedStorage, StarterGui, StarterPlayerScripts
+- includes monetization hooks (gamepasses, dev products)
+- DataStore persistence with proper UpdateAsync patterns
+- server-authoritative by default
+
+what it doesn't do:
+- no 3D assets
+- no level design
+- UI is functional but minimal
+- complex physics need hand-tuning
+
+the differentiator vs ChatGPT/Copilot: genre-specific prompts that understand Roblox architecture. ChatGPT still outputs Lua 5.1 patterns and doesn't understand Roblox service hierarchy. This generates modern Luau with proper type annotations and Roblox-specific patterns.
+
+8 templates: tycoon, obby, simulator, RPG, horror, racing, tower defense, fighting.
+
+free tier: 300 actions/month. paid: $19/mo or BYOK (bring your own API key).
+
+looking for feedback from experienced game devs on:
+1. code quality concerns
+2. missing features
+3. whether this kind of tool is actually useful or just a novelty
+
+link in comments.",Show & Tell,READY
+R04,r/SideProject,"Built a SaaS that generates complete Roblox games from natural language. $0 to launch. here's the stack.","the product: RobloxMaxx. type a game description in plain English, get a complete Roblox game with 15-25 Luau scripts.
+
+the stack:
+- Next.js frontend + API routes
+- Claude API for code generation (genre-specific system prompts)
+- SQLite for user data and usage tracking
+- Roblox Studio plugin (Luau) for IDE integration
+- Stripe for billing
+- Vercel for hosting
+
+cost to build: $0 (API costs during dev covered by free tier credits)
+time to build: built the MVP in one session with Claude agent teams
+
+pricing model:
+- free: 300 actions/month
+- pro: $19/mo, 2500 actions
+- studio: $49/mo, 10000 actions + team seats
+- BYOK: bring your own API key, pay per token
+
+what makes it different from just using ChatGPT:
+- genre-specific prompts (tycoon, obby, simulator, RPG, horror, racing, tower defense, fighting)
+- generates full game architecture, not just individual scripts
+- Roblox Studio plugin for in-IDE generation
+- modern Luau output (not Lua 5.1)
+- monetization hooks built into every template
+
+target market: 2.5M+ active Roblox developers. most are teens/young adults who already use AI tools. low barrier to try.
+
+happy to share more details about the tech, the prompts, or the go-to-market. link in comments.",Launch,READY
+R05,r/robloxgamedev,"Roblox devs - what features would you want in an AI code generation tool? building one and want real feedback.","I'm building an AI tool for Roblox devs (RobloxMaxx). generates complete games from plain English.
+
+before I build more features, I want to know what would actually be useful vs what sounds cool but nobody would use.
+
+current features:
+- scaffold mode: generate complete game from one prompt
+- code mode: modify existing game (reads your scripts, makes changes)
+- ask mode: ask questions about your codebase
+- 8 genre templates
+- Roblox Studio plugin
+- DataStore, monetization, server-auth all built-in
+
+what I'm considering adding:
+1. multiplayer templates (party system, matchmaking)
+2. version history (undo AI changes)
+3. team collaboration (shared generation sessions)
+4. custom AI training on your code style
+5. 3D asset suggestions (pair generated code with compatible free models)
+6. testing scripts (auto-generate test cases for your game logic)
+
+which of these would you actually use? what am I missing?
+
+and honestly, if you think AI code gen is useless for Roblox dev, tell me why. I'd rather pivot early than build something nobody wants.",Discussion,READY
+R06,r/roblox,"I made 5 Roblox games in under 5 minutes using AI. here's the honest review.","tested RobloxMaxx (AI game generator) to see if it actually works or if it's just hype.
+
+TL;DR: it works for boilerplate. it doesn't replace actual game design.
+
+the 5 games:
+1. pizza tycoon (47 sec) - works. stations unlock, upgrades work, gamepasses work. code is clean.
+2. ninja obby (52 sec) - works. 20 stages, checkpoints, leaderboard. basic but functional.
+3. pet simulator (61 sec) - works. hatching, rarities, leveling. trading system is basic but functional.
+4. zombie survival (58 sec) - works. waves, weapons, shop. AI pathfinding is simple but enemies do chase you.
+5. racing game (73 sec) - works but weakest. vehicle physics are basic. needs manual tuning.
+
+what's good: code quality is better than most free models. modern Luau. proper patterns. no deprecated API. monetization built-in.
+
+what's mid: UI is functional but ugly. you'll redesign everything. physics need work for anything beyond basic.
+
+what's bad: no 3D assets. you still need to build or import all the visual stuff. the code handles logic, not aesthetics.
+
+verdict: useful for prototyping and boilerplate elimination. not a replacement for knowing how to build games. more like a really fast starting point.
+
+free tier: 300 actions/month. enough to try it yourself and form your own opinion.",Discussion,READY
+R07,r/learnprogramming,"Built an AI tool that generates Luau code for Roblox. useful for beginners learning game dev concepts.","not a 'learn to code' tool exactly, but something I've seen beginners use effectively for learning.
+
+RobloxMaxx generates complete Roblox games from plain English descriptions. the interesting part for learners: you can read the generated code to understand how game systems work.
+
+example: type 'tycoon with upgrades and data saving' and get 15 scripts. then read through them to understand:
+- how RemoteEvents connect client and server
+- how DataStore persistence works
+- how to structure a game with multiple scripts that talk to each other
+- how to handle in-app purchases properly
+
+it's like having a senior dev write a complete example project for you to study. except it takes 47 seconds.
+
+not saying it replaces learning to code. but reading well-structured code is one of the best ways to learn patterns. and this generates readable, commented Luau with type annotations.
+
+free tier: 300 actions/month. robloxmaxx.com. no credit card.
+
+if you're learning Roblox development and want to see how a complete game is structured, might be worth generating a few examples and reading through them.",Resources,READY
+R08,r/robloxgamedev,"Generated 10 complete Roblox games in one weekend using AI. here's every game with code breakdowns.","weekend project: generate as many Roblox games as possible with RobloxMaxx and see what's publishable.
+
+10 games. total generation time: about 12 minutes. total setup/polish time: about 4 hours. published 7 of them.
+
+breakdown:
+
+| Game | Genre | Gen Time | Scripts | Published? | Notes |
+|------|-------|----------|---------|-----------|-------|
+| Pizza Empire | Tycoon | 47s | 15 | Yes | solid out of box |
+| Sky Obby | Obby | 52s | 11 | Yes | added custom parts |
+| Pet World | Simulator | 61s | 18 | Yes | polished UI |
+| Zombie Night | Survival | 58s | 20 | Yes | added custom zombies |
+| Speed Racers | Racing | 73s | 22 | No | physics too basic |
+| Dark Halls | Horror | 65s | 16 | Yes | added custom map |
+| Tower Siege | Tower Defense | 70s | 21 | Yes | good enemy pathfinding |
+| Arena Clash | Fighting | 55s | 14 | No | combat needs work |
+| Miner's Fortune | Tycoon v2 | 49s | 15 | Yes | mining theme |
+| Dragon Quest | RPG | 82s | 24 | No | too complex for quick polish |
+
+the 3 I didn't publish needed more polish than a weekend allows. racing physics, fighting combat, and RPG depth all need manual work.
+
+the 7 published ones work. actual players are joining. the tycoons and simulator got the most traction.
+
+key insight: AI is great for the 80% (boilerplate, architecture, monetization, DataStore). the 20% (art, level design, polish, game feel) is still 100% human work. but that 80% time savings is massive.
+
+code examples and links in comments if anyone wants to see the actual generated output.",Showcase,READY
+R09,r/gamedev,"AI-generated game code quality - I tested it against handwritten Roblox code. here's an honest comparison.","I write Roblox games professionally. I also built an AI code generation tool (RobloxMaxx). wanted to do an honest comparison.
+
+I built the same tycoon game twice: once by hand, once with AI.
+
+**handwritten (3.5 hours):**
+- 14 scripts, ~1100 lines total
+- my usual patterns, some shortcuts
+- tested and debugged manually
+- code works, passes my review
+
+**AI generated (47 seconds + 20 min review):**
+- 15 scripts, ~1400 lines total
+- more verbose (explicit type annotations everywhere)
+- more error handling than I'd usually write
+- used UpdateAsync where I used SetAsync (AI was right, I was lazy)
+
+**specific differences:**
+
+DataStore: AI version uses UpdateAsync with retry logic. my version used SetAsync because 'it's fine for a tycoon.' technically the AI version is more correct.
+
+RemoteEvents: AI generated explicit type checking on every RemoteEvent handler. I skipped it on internal events because 'nobody's going to exploit a tycoon.' AI is more paranoid. probably right.
+
+cleanup: AI disconnects every RBXScriptConnection on player leave. I forget to do this consistently. AI never forgets.
+
+code style: AI is more verbose but more readable. longer variable names. more comments. I write terser code because I know what it does. a new dev would understand the AI code faster.
+
+**where I won:**
+- game feel. my version had small polish details (particle effects on purchase, sound timing, camera shake on upgrade)
+- performance optimization. I knew which loops to optimize. AI generated clean but not optimized code
+- 3D layout. AI generates code, not physical game design. my spatial layout was better because I thought about player flow
+
+**verdict:**
+AI generates better boilerplate code than I write by hand. I generate better game design and polish than AI. the combo is stronger than either alone.
+
+link to tool in comments if anyone wants to try the comparison themselves.",Discussion,READY
+R10,r/SideProject,"Month 1 update on my Roblox AI SaaS. signups, revenue, what worked, what didn't.","*replace [numbers] with actuals before posting*
+
+month 1 of RobloxMaxx (AI game generator for Roblox devs).
+
+**numbers:**
+- signups: [X]
+- paid conversions: [X]
+- MRR: $[X]
+- games generated: [X]
+- total Luau lines written by AI: [X]
+- churn: [X]%
+
+**what worked:**
+- DevForum posts. highest conversion source. devs there are looking for tools.
+- TikTok 'build a game in 60 seconds' video. [X] views. drove [X] signups.
+- free tier at 300 actions/month. enough to get hooked. upgrade at the limit.
+- specific game genre demos (tycoon, horror) outperformed generic 'AI coding' content 3-4x
+
+**what didn't work:**
+- Reddit r/roblox post. got downvoted initially. recovered after genuine feedback in comments.
+- generic 'AI is the future' content. nobody cared. specific demos converted.
+- Twitter cold DMs to Roblox devs. 2% response rate. not worth the time.
+
+**biggest learning:**
+show the output, not the process. nobody cares about the AI. they care about the tycoon it generates in 47 seconds.
+
+**month 2 plan:**
+- YouTube tutorials (longer form, SEO play)
+- Roblox Creator Store plugin listing
+- referral program (give 500 actions, get 500)
+- partner with 3 Roblox YouTubers
+
+**costs:**
+- hosting: $0 (Vercel free tier)
+- API costs: $[X] (Claude API)
+- marketing: $[X] (TikTok ads)
+- total: $[X]
+- profit: $[X]
+
+ask me anything about the tech, marketing, or numbers.",Update,READY

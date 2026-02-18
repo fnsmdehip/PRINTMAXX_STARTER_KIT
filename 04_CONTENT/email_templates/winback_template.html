@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Come back to {{app_name}}</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style type="text/css">
+    body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+    .cta-button {background-color: #2563eb !important;}
+  </style>
+  <![endif]-->
+</head>
+<!--
+PLAIN TEXT VERSION:
+Hey {{first_name}},
+
+It's been {{days_since_active}} days since you last used {{app_name}}.
+
+We've added some things you might like:
+- {{new_feature_1}}
+- {{new_feature_2}}
+- {{new_feature_3}}
+
+Special offer: {{offer_description}}
+Use code {{promo_code}} for {{discount_amount}} off.
+
+Offer expires {{offer_expiry}}.
+
+Reactivate your account: {{reactivate_url}}
+
+Not interested anymore? No worries. Unsubscribe here: {{unsubscribe_url}}
+
+{{sender_name}}
+{{company_name}}
+-->
+<body style="margin: 0; padding: 0; background-color: #f0f0f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <!-- Preheader text -->
+  <div style="display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0; max-height: 0; max-width: 0; overflow: hidden; mso-hide: all;">{{preheader_text}} &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;</div>
+
+  <!-- Email wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0f0f0;">
+    <tr>
+      <td align="center" style="padding: 24px 16px;">
+
+        <!-- Email container -->
+        <!--[if mso]>
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 600px;">
+        <tr>
+        <td>
+        <![endif]-->
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; overflow: hidden;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 24px; text-align: center; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
+              <p style="color: #ffffff; font-size: 24px; font-weight: 700; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{app_name}}</p>
+            </td>
+          </tr>
+
+          <!-- Body content -->
+          <tr>
+            <td style="padding: 32px 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a;">
+
+              <p style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin: 0 0 24px 0; text-align: center;">We noticed you've been away</p>
+
+              <p style="margin: 0 0 16px 0;">Hey {{first_name}},</p>
+
+              <p style="margin: 0 0 16px 0;">It's been {{days_since_active}} days since you last used {{app_name}}.</p>
+
+              <p style="margin: 0 0 24px 0;">{{personalized_message}}</p>
+
+              <!-- What's new section -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0f9ff; border-radius: 8px; margin: 24px 0;">
+                <tr>
+                  <td style="padding: 24px;">
+                    <p style="font-size: 16px; font-weight: 600; color: #0369a1; margin: 0 0 16px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">What's new since you left:</p>
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="padding: 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; color: #0c4a6e;">
+                          <span style="color: #0369a1; font-weight: bold; margin-right: 8px;">&#10003;</span> {{new_feature_1}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; color: #0c4a6e;">
+                          <span style="color: #0369a1; font-weight: bold; margin-right: 8px;">&#10003;</span> {{new_feature_2}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; color: #0c4a6e;">
+                          <span style="color: #0369a1; font-weight: bold; margin-right: 8px;">&#10003;</span> {{new_feature_3}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Special offer box -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 8px; margin: 24px 0;">
+                <tr>
+                  <td style="padding: 24px; text-align: center;">
+                    <p style="color: #e0e7ff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Welcome back offer</p>
+                    <p style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0 0 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{discount_amount}} off</p>
+                    <p style="color: #e0e7ff; font-size: 14px; margin: 0 0 16px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{offer_description}}</p>
+
+                    <!-- Promo code box -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tr>
+                        <td style="background-color: rgba(255,255,255,0.2); border: 2px dashed rgba(255,255,255,0.5); border-radius: 6px; padding: 12px 24px;">
+                          <p style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0; font-family: 'Courier New', monospace; letter-spacing: 2px;">{{promo_code}}</p>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <p style="color: #e0e7ff; font-size: 13px; margin: 16px 0 0 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Expires {{offer_expiry}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA Button -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center" style="padding: 16px 0;">
+                    <!--[if mso]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{reactivate_url}}" style="height:52px;v-text-anchor:middle;width:280px;" arcsize="12%" strokecolor="#6366f1" fillcolor="#6366f1">
+                    <w:anchorlock/>
+                    <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Reactivate my account</center>
+                    </v:roundrect>
+                    <![endif]-->
+                    <!--[if !mso]><!-->
+                    <a href="{{reactivate_url}}" style="display: inline-block; background-color: #6366f1; color: #ffffff; padding: 16px 48px; border-radius: 6px; font-weight: 600; font-size: 16px; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Reactivate my account</a>
+                    <!--<![endif]-->
+                  </td>
+                </tr>
+              </table>
+
+              <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 24px 0;">
+
+              <p style="margin: 0 0 16px 0;">If you have feedback on why you stopped using {{app_name}}, I'd like to hear it. Just reply to this email.</p>
+
+              <p style="margin: 0;">{{sender_name}}</p>
+
+              <div style="font-size: 14px; color: #666666; margin-top: 24px; padding-top: 16px; border-top: 1px solid #e5e5e5;">
+                <p style="margin: 0;">P.S. {{ps_text}}</p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Easy unsubscribe section -->
+          <tr>
+            <td style="padding: 24px; background-color: #fafafa; border-top: 1px solid #e5e5e5;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <p style="font-size: 14px; color: #666666; margin: 0 0 12px 0;">Not interested anymore? No problem.</p>
+                    <a href="{{unsubscribe_url}}" style="display: inline-block; background-color: #ffffff; color: #666666; padding: 12px 24px; border-radius: 6px; border: 1px solid #e5e5e5; font-size: 14px; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Unsubscribe from all emails</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f5f5f5; padding: 24px; text-align: center; font-size: 13px; color: #666666; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+              <!-- Social icons -->
+              <div style="margin: 0 0 16px 0;">
+                <a href="{{twitter_url}}" aria-label="Twitter" style="display: inline-block; margin: 0 8px;">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="Twitter" width="24" height="24" style="filter: invert(40%); border: 0;">
+                </a>
+                <a href="{{instagram_url}}" aria-label="Instagram" style="display: inline-block; margin: 0 8px;">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="24" height="24" style="filter: invert(40%); border: 0;">
+                </a>
+                <a href="{{youtube_url}}" aria-label="YouTube" style="display: inline-block; margin: 0 8px;">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" width="24" height="24" style="filter: invert(40%); border: 0;">
+                </a>
+              </div>
+
+              <p style="margin: 0 0 8px 0;">
+                {{company_name}}<br>
+                {{company_address}}
+              </p>
+
+              <p style="margin: 8px 0;">
+                <a href="{{preferences_url}}" style="color: #666666; text-decoration: none;">Email preferences</a>
+              </p>
+
+              <p style="margin: 8px 0; font-size: 11px; color: #999999;">
+                You received this because you previously had an account with {{app_name}}.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!--[if mso]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

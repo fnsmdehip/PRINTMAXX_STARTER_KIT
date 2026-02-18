@@ -1,0 +1,52 @@
+category,item,type,frequency,estimated_cost,actual_cost,estimated_revenue,actual_revenue,roi_percent,status,priority,notes,date_added
+INFRASTRUCTURE,Apple Developer Account,one-time,yearly,$99,$99,$0,$0,0,NEEDED,CRITICAL,Required for iOS apps,2026-02-04
+INFRASTRUCTURE,Google Play Console,one-time,yearly,$25,$25,$0,$0,0,NEEDED,CRITICAL,Required for Android apps,2026-02-04
+INFRASTRUCTURE,GoLogin (Anti-detect browser),subscription,monthly,$0,$0,$0,$0,0,ACTIVE,HIGH,Free tier 3 profiles,2026-02-04
+INFRASTRUCTURE,GoLogin Pro,subscription,monthly,$49,$0,$0,$0,0,TIER1,MEDIUM,Upgrade at $500/mo revenue,2026-02-04
+INFRASTRUCTURE,SOAX Mobile Proxies,subscription,monthly,$50,$0,$0,$0,0,NEEDED,HIGH,Required for IG/TikTok safety,2026-02-04
+INFRASTRUCTURE,Multilogin,subscription,monthly,$99,$0,$0,$0,0,TIER3,LOW,Upgrade at $10K/mo,2026-02-04
+AI_TOOLS,Leonardo.ai,subscription,monthly,$12,$0,$0,$0,0,NEEDED,HIGH,Persona visuals icons,2026-02-04
+AI_TOOLS,ElevenLabs Starter,subscription,monthly,$5,$0,$0,$0,0,NEEDED,HIGH,Voice cloning basic,2026-02-04
+AI_TOOLS,ElevenLabs Scale,subscription,monthly,$22,$0,$0,$0,0,TIER1,MEDIUM,Upgrade at $500/mo,2026-02-04
+AI_TOOLS,D-ID Lite,subscription,monthly,$6,$0,$0,$0,0,NEEDED,HIGH,Talking head UGC,2026-02-04
+AI_TOOLS,HeyGen,subscription,monthly,$24,$0,$0,$0,0,TIER1,HIGH,Better UGC at $500/mo,2026-02-04
+AI_TOOLS,HeyGen Business,subscription,monthly,$48,$0,$0,$0,0,TIER2,MEDIUM,Scale at $2K/mo,2026-02-04
+AI_TOOLS,Kling AI Free,subscription,monthly,$0,$0,$0,$0,0,ACTIVE,HIGH,5-sec clips free,2026-02-04
+AI_TOOLS,Kling AI Pro,subscription,monthly,$8,$0,$0,$0,0,TIER1,MEDIUM,Longer clips at $500/mo,2026-02-04
+AI_TOOLS,Suno Free,subscription,monthly,$0,$0,$0,$0,0,ACTIVE,MEDIUM,AI music 10 songs/day,2026-02-04
+AI_TOOLS,Suno Pro,subscription,monthly,$10,$0,$0,$0,0,TIER2,LOW,Unlimited at $2K/mo,2026-02-04
+MONETIZATION,Gumroad,platform,per-sale,$0,$0,$0,$0,0,NEEDED,CRITICAL,13-14% fee per sale,2026-02-04
+MONETIZATION,Whop,platform,per-sale,$0,$0,$0,$0,0,RECOMMENDED,HIGH,5.7% fee BETTER than Gumroad,2026-02-04
+MONETIZATION,Stripe,platform,per-sale,$0,$0,$0,$0,0,NEEDED,CRITICAL,2.9% + $0.30 per txn,2026-02-04
+MONETIZATION,RevenueCat,platform,per-sale,$0,$0,$0,$0,0,NEEDED,CRITICAL,Free until $2.5K MTR,2026-02-04
+MONETIZATION,Beehiiv Free,platform,monthly,$0,$0,$0,$0,0,ACTIVE,HIGH,Up to 2500 subs,2026-02-04
+MONETIZATION,Beehiiv Scale,platform,monthly,$99,$0,$0,$0,0,TIER3,MEDIUM,At scale,2026-02-04
+COLD_EMAIL,Free SMTP,infrastructure,monthly,$0,$0,$0,$0,0,ACTIVE,LOW,Manual warmup 2 weeks,2026-02-04
+COLD_EMAIL,DeliverOn/EmailBison,infrastructure,monthly,$50,$0,$0,$0,0,TIER1,HIGH,Pre-warmed inboxes,2026-02-04
+COLD_EMAIL,Instantly.ai,subscription,monthly,$30,$0,$0,$0,0,TIER2,MEDIUM,Scale 200+ sends/day,2026-02-04
+COLD_EMAIL,Clay,subscription,monthly,$149,$0,$0,$0,0,TIER3,LOW,AI personalization,2026-02-04
+SOCIAL,Buffer Free,subscription,monthly,$0,$0,$0,$0,0,ACTIVE,HIGH,3 channels 10 posts,2026-02-04
+SOCIAL,Publer,subscription,monthly,$12,$0,$0,$0,0,TIER1,MEDIUM,More channels,2026-02-04
+SOCIAL,Warmed X Account x3,one-time,once,$60,$0,$0,$0,0,NEEDED,HIGH,1 per niche,2026-02-04
+SOCIAL,Warmed TikTok Account x3,one-time,once,$60,$0,$0,$0,0,TIER1,MEDIUM,Platform coverage,2026-02-04
+SOCIAL,Warmed IG Account x3,one-time,once,$60,$0,$0,$0,0,TIER1,MEDIUM,Platform coverage,2026-02-04
+PAID_ADS,Meta Ads Test,advertising,monthly,$100,$0,$0,$0,0,TIER1,HIGH,Initial test budget,2026-02-04
+PAID_ADS,TikTok Ads Test,advertising,monthly,$100,$0,$0,$0,0,TIER1,HIGH,Initial test budget,2026-02-04
+PAID_ADS,Meta Ads Scale,advertising,monthly,$500,$0,$0,$0,0,TIER2,MEDIUM,Proven winners,2026-02-04
+PAID_ADS,TikTok Ads Scale,advertising,monthly,$500,$0,$0,$0,0,TIER2,MEDIUM,Proven winners,2026-02-04
+VA,Fiverr/OnlineJobs VA,labor,monthly,$300,$0,$0,$0,0,TIER2,MEDIUM,Cold calling + outreach,2026-02-04
+VA,Content VA,labor,monthly,$200,$0,$0,$0,0,TIER2,LOW,Posting + engagement,2026-02-04
+MUSIC,DistroKid,subscription,yearly,$22,$0,$0,$0,0,TIER2,LOW,Music distribution,2026-02-04
+POD,Printful Account,platform,per-sale,$0,$0,$0,$0,0,ACTIVE,HIGH,Free to use POD,2026-02-04
+POD,Printify Account,platform,per-sale,$0,$0,$0,$0,0,ACTIVE,HIGH,Free to use POD,2026-02-04
+ECOM,TikTok Shop Seller,platform,per-sale,$0,$0,$0,$0,0,NEEDED,HIGH,8% referral fee,2026-02-04
+ECOM,Etsy Shop,platform,per-sale,$0,$0,$0,$0,0,NEEDED,HIGH,$0.20 listing + 6.5% fee,2026-02-04
+REVENUE,APP_FACTORY_IAP,revenue,monthly,$0,$0,$500,$0,0,PROJECTED,CRITICAL,biomaxx + PrayerLock + WalkToUnlock,2026-02-04
+REVENUE,GUMROAD_PDFS,revenue,monthly,$0,$0,$200,$0,0,PROJECTED,HIGH,4 PDFs from existing playbooks,2026-02-04
+REVENUE,CONTENT_FARM_CREATOR_FUND,revenue,monthly,$0,$0,$300,$0,0,PROJECTED,HIGH,FB Reels $4.40/1K + TikTok,2026-02-04
+REVENUE,NEWSLETTER_SPONSORS,revenue,monthly,$0,$0,$100,$0,0,PROJECTED,MEDIUM,3 Beehiiv newsletters,2026-02-04
+REVENUE,TIKTOK_SHOP_AFFILIATE,revenue,monthly,$0,$0,$200,$0,0,PROJECTED,HIGH,Beauty/skincare 15-20% commission,2026-02-04
+REVENUE,POD_SALES,revenue,monthly,$0,$0,$150,$0,0,PROJECTED,MEDIUM,Trending meme shirts,2026-02-04
+REVENUE,COLD_OUTBOUND_LEADS,revenue,monthly,$0,$0,$500,$0,0,PROJECTED,MEDIUM,Per-lead pricing,2026-02-04
+REVENUE,AI_UGC_VIDEOS,revenue,monthly,$0,$0,$300,$0,0,PROJECTED,MEDIUM,$50-100 per video,2026-02-04
+REVENUE,SERVICES,revenue,monthly,$0,$0,$1000,$0,0,PROJECTED,LOW,Done-for-you packages,2026-02-04

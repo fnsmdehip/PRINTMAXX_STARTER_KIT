@@ -1,0 +1,23 @@
+{"timestamp": "2026-02-12T07:44:01.409578", "type": "morning_briefing", "cron_success_rate": 0}
+{"timestamp": "2026-02-12T07:51:11.632479", "type": "pulse", "subsystems": 8, "cron_success_rate": 0}
+{"timestamp": "2026-02-12T07:51:11.862826", "type": "morning_briefing", "cron_success_rate": 0}
+{"timestamp": "2026-02-12T07:51:12.006298", "type": "fuse", "total_opportunities": 113, "cross_confirmed": 0}
+{"timestamp": "2026-02-12T07:51:12.008121", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 0}
+{"timestamp": "2026-02-12T07:51:41.767057", "type": "learning", "text": "Built 5-script brain system (4758 lines): ops_orchestrator, ralph_loop_factory, signal_aggregator, performance_optimizer, printmaxx_brain. All 8 subsystems READY. 35 Ralph loops created across 8 categories. Kelly allocation running. Signal fusion detecting 33 IMMEDIATE_ACTION signals from 456 raw inputs. Health score 86/100. Fixed overnight runner lead timeout 120s->300s. Added brain integration phase to overnight runner."}
+{"timestamp": "2026-02-12T07:52:27.853098", "type": "pulse", "subsystems": 8, "cron_success_rate": 0}
+{"timestamp": "2026-02-13T01:30:01.106086", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-13T02:38:27.568577", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-13T05:30:01.449648", "type": "morning_briefing", "cron_success_rate": 0}
+{"timestamp": "2026-02-14T01:30:00.675234", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-14T02:39:33.417321", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-14T05:30:01.547785", "type": "morning_briefing", "cron_success_rate": 0}
+{"timestamp": "2026-02-15T01:30:01.657809", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-15T02:40:07.512415", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-16T01:30:00.551466", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-16T02:40:19.318511", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-16T05:30:01.397085", "type": "morning_briefing", "cron_success_rate": 0}
+{"timestamp": "2026-02-17T01:30:00.375558", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-17T02:40:31.344474", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-17T05:30:02.878130", "type": "morning_briefing", "cron_success_rate": 0}
+{"timestamp": "2026-02-18T01:30:00.763417", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 2}
+{"timestamp": "2026-02-18T02:40:45.663479", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 2}

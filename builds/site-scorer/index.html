@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteScore - Free Website Performance Analyzer</title>
+    <meta name="description" content="Analyze your website's performance, SEO, mobile-friendliness, and security in seconds. Free instant report. Professional monitoring from $9/mo.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">SiteScore</span>
+            </a>
+            <div class="nav-links">
+                <a href="#how-it-works">How it works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-badge">Free instant analysis</div>
+        <h1>Know your website's real score.</h1>
+        <p class="hero-sub">Performance. SEO. Security. Mobile. One scan, 30 seconds, zero fluff.</p>
+        <form id="scan-form" class="scan-form">
+            <input type="url" id="url-input" placeholder="https://yoursite.com" required autocomplete="url">
+            <button type="submit" id="scan-btn">
+                <span class="btn-text">Scan now</span>
+                <span class="btn-loading" style="display:none;">
+                    <span class="spinner"></span> Analyzing...
+                </span>
+            </button>
+        </form>
+        <p class="hero-note">No signup needed. Results in ~30 seconds.</p>
+    </header>
+
+    <section id="results" class="results" style="display:none;">
+        <div class="results-header">
+            <h2>Results for <span id="result-url"></span></h2>
+            <p class="scan-time">Scanned <span id="scan-time"></span></p>
+        </div>
+
+        <div class="score-hero">
+            <div class="overall-score">
+                <svg class="score-ring" viewBox="0 0 120 120">
+                    <circle class="score-ring-bg" cx="60" cy="60" r="54" />
+                    <circle class="score-ring-fill" id="score-ring-fill" cx="60" cy="60" r="54" />
+                </svg>
+                <div class="score-number" id="overall-score">--</div>
+                <div class="score-label">Overall Score</div>
+            </div>
+            <div class="score-verdict" id="score-verdict"></div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card" id="perf-card">
+                <div class="metric-icon">&#9889;</div>
+                <div class="metric-score" id="perf-score">--</div>
+                <div class="metric-label">Performance</div>
+                <div class="metric-detail" id="perf-detail"></div>
+            </div>
+            <div class="metric-card" id="seo-card">
+                <div class="metric-icon">&#128270;</div>
+                <div class="metric-score" id="seo-score">--</div>
+                <div class="metric-label">SEO</div>
+                <div class="metric-detail" id="seo-detail"></div>
+            </div>
+            <div class="metric-card" id="mobile-card">
+                <div class="metric-icon">&#128241;</div>
+                <div class="metric-score" id="mobile-score">--</div>
+                <div class="metric-label">Mobile</div>
+                <div class="metric-detail" id="mobile-detail"></div>
+            </div>
+            <div class="metric-card" id="security-card">
+                <div class="metric-icon">&#128274;</div>
+                <div class="metric-score" id="security-score">--</div>
+                <div class="metric-label">Security</div>
+                <div class="metric-detail" id="security-detail"></div>
+            </div>
+        </div>
+
+        <div class="details-section">
+            <h3>Detailed breakdown</h3>
+            <div class="detail-grid" id="detail-grid"></div>
+        </div>
+
+        <div class="cta-section" id="cta-section">
+            <div class="cta-card">
+                <div class="cta-badge">Limited spots</div>
+                <h3>Get weekly monitoring + full reports</h3>
+                <p>Your site scored <span id="cta-score"></span>/100. We'll track it weekly and alert you when anything drops.</p>
+                <ul class="cta-features">
+                    <li>Weekly automated scans</li>
+                    <li>Performance trend charts</li>
+                    <li>Downtime alerts (email + SMS)</li>
+                    <li>Competitor comparison (up to 3 sites)</li>
+                    <li>SEO change detection</li>
+                    <li>PDF reports for clients</li>
+                </ul>
+                <form class="cta-form" action="https://formspree.io/f/xpwzgkvl" method="POST" id="cta-email-form">
+                    <input type="hidden" name="scanned_url" id="cta-url-field">
+                    <input type="hidden" name="score" id="cta-score-field">
+                    <input type="email" name="email" placeholder="you@company.com" required>
+                    <button type="submit">Start monitoring - $9/mo</button>
+                </form>
+                <p class="cta-note">Cancel anytime. No contracts. First report within 24 hours.</p>
+            </div>
+        </div>
+
+        <div class="rescan">
+            <button id="rescan-btn" class="rescan-btn">Scan another site</button>
+        </div>
+    </section>
+
+    <section id="error-section" class="error-section" style="display:none;">
+        <div class="error-card">
+            <div class="error-icon">&#9888;</div>
+            <h3 id="error-title">Scan failed</h3>
+            <p id="error-msg"></p>
+            <button id="error-retry" class="rescan-btn">Try again</button>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-section">
+        <h2>How it works</h2>
+        <div class="how-grid">
+            <div class="how-card">
+                <div class="how-number">1</div>
+                <h4>Enter your URL</h4>
+                <p>Paste any website address. We handle the rest.</p>
+            </div>
+            <div class="how-card">
+                <div class="how-number">2</div>
+                <h4>We run 15+ checks</h4>
+                <p>Performance, SEO, mobile, security, accessibility. Real data from Google's infrastructure.</p>
+            </div>
+            <div class="how-card">
+                <div class="how-number">3</div>
+                <h4>Get your score</h4>
+                <p>Clear 0-100 score with specific issues to fix. No jargon.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="trust-logos">
+            <span>Powered by</span>
+            <span class="trust-item">Google PageSpeed Insights</span>
+            <span class="trust-sep">&middot;</span>
+            <span class="trust-item">Lighthouse</span>
+            <span class="trust-sep">&middot;</span>
+            <span class="trust-item">Chrome UX Report</span>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <h2>Simple pricing</h2>
+        <p class="pricing-sub">One-time scan is always free. Monitoring starts at $9.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-name">Free</div>
+                <div class="pricing-price">$0</div>
+                <div class="pricing-period">forever</div>
+                <ul>
+                    <li>Unlimited one-time scans</li>
+                    <li>Performance score</li>
+                    <li>SEO basics</li>
+                    <li>Mobile check</li>
+                    <li>SSL status</li>
+                </ul>
+                <a href="#" class="pricing-btn" onclick="document.getElementById('url-input').focus();return false;">Scan now</a>
+            </div>
+            <div class="pricing-card pricing-card-pop">
+                <div class="pricing-popular">Most popular</div>
+                <div class="pricing-name">Pro</div>
+                <div class="pricing-price">$9</div>
+                <div class="pricing-period">/month</div>
+                <ul>
+                    <li>Everything in Free</li>
+                    <li>Weekly automated scans</li>
+                    <li>Performance trends</li>
+                    <li>Downtime alerts</li>
+                    <li>Email reports</li>
+                    <li>1 competitor tracked</li>
+                </ul>
+                <a href="#cta-section" class="pricing-btn pricing-btn-pop">Start monitoring</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-name">Agency</div>
+                <div class="pricing-price">$29</div>
+                <div class="pricing-period">/month</div>
+                <ul>
+                    <li>Everything in Pro</li>
+                    <li>Up to 10 sites</li>
+                    <li>3 competitors per site</li>
+                    <li>White-label PDF reports</li>
+                    <li>SMS alerts</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#cta-section" class="pricing-btn">Start monitoring</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <h2>Questions</h2>
+        <div class="faq-grid">
+            <details class="faq-item">
+                <summary>How accurate is the score?</summary>
+                <p>We use Google's own PageSpeed Insights API and Lighthouse engine. The same tools Google uses to evaluate your site for search rankings. The data is real, not estimated.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need to install anything?</summary>
+                <p>No. We scan your site externally, the same way Google does. No code changes, no plugins, no scripts to add.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What does monitoring include?</summary>
+                <p>We run the full scan automatically every week and track your scores over time. If anything drops significantly, you get an email alert. Pro users also get a competitor comparison.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can I cancel anytime?</summary>
+                <p>Yes. No contracts, no commitments. Cancel from your dashboard or just email us.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Who is this for?</summary>
+                <p>Anyone with a website. Small business owners, freelancers, agencies managing client sites, developers who want automated monitoring. If your site matters to your business, you should know when it breaks.</p>
+            </details>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">SiteScore</span>
+            </div>
+            <p class="footer-copy">Built for people who care about their website's performance.</p>
+            <div class="footer-links">
+                <a href="mailto:hello@sitescore.app">Contact</a>
+                <span>&middot;</span>
+                <a href="#pricing">Pricing</a>
+                <span>&middot;</span>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    <!-- PRINTMAXX LEGAL LINKS -->
+<div style="margin-top:12px; font-size:12px; opacity:0.85; text-align:center;">
+  <a href="marketing-disclosure.html">Marketing Disclosure</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="privacy.html">Privacy</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="terms.html">Terms</a>
+</div>
+
+</footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

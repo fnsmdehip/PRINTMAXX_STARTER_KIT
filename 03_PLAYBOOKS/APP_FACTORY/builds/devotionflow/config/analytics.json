@@ -1,0 +1,255 @@
+{
+  "app_name": "DailyDevotion",
+  "provider": "mixpanel",
+  "api_key": "REPLACE_WITH_MIXPANEL_TOKEN",
+
+  "events": {
+    "app_lifecycle": {
+      "app_opened": {
+        "description": "User opens the app",
+        "properties": ["source", "is_first_launch"]
+      },
+      "app_backgrounded": {
+        "description": "App goes to background",
+        "properties": ["session_duration_seconds"]
+      },
+      "onboarding_started": {
+        "description": "User begins onboarding",
+        "properties": []
+      },
+      "onboarding_completed": {
+        "description": "User finishes onboarding",
+        "properties": ["templates_selected_count"]
+      },
+      "onboarding_skipped": {
+        "description": "User skips onboarding",
+        "properties": ["screen_skipped_from"]
+      }
+    },
+
+    "habits": {
+      "habit_created": {
+        "description": "New habit created",
+        "properties": ["habit_category", "from_template", "template_id", "frequency", "has_reminder"]
+      },
+      "habit_completed": {
+        "description": "Habit marked complete",
+        "properties": ["habit_id", "habit_category", "current_streak", "completion_time"]
+      },
+      "habit_uncompleted": {
+        "description": "Habit unmarked",
+        "properties": ["habit_id", "habit_category"]
+      },
+      "habit_edited": {
+        "description": "Habit settings changed",
+        "properties": ["habit_id", "fields_changed"]
+      },
+      "habit_deleted": {
+        "description": "Habit removed",
+        "properties": ["habit_id", "habit_category", "total_completions", "reason"]
+      },
+      "habit_limit_reached": {
+        "description": "User hits free tier habit limit",
+        "properties": ["current_habit_count"]
+      }
+    },
+
+    "templates": {
+      "template_picker_opened": {
+        "description": "User opens template selection",
+        "properties": []
+      },
+      "template_viewed": {
+        "description": "User views template details",
+        "properties": ["template_id", "is_premium"]
+      },
+      "template_selected": {
+        "description": "User selects a template",
+        "properties": ["template_id", "template_category"]
+      },
+      "premium_template_blocked": {
+        "description": "User taps locked premium template",
+        "properties": ["template_id"]
+      }
+    },
+
+    "verse": {
+      "verse_viewed": {
+        "description": "User sees daily verse",
+        "properties": ["verse_reference", "translation"]
+      },
+      "verse_shared": {
+        "description": "User shares verse",
+        "properties": ["verse_reference", "share_destination"]
+      },
+      "verse_refreshed": {
+        "description": "User manually refreshes verse",
+        "properties": []
+      }
+    },
+
+    "streaks": {
+      "streak_milestone_reached": {
+        "description": "User hits streak milestone",
+        "properties": ["milestone_days", "habit_id"]
+      },
+      "streak_broken": {
+        "description": "User breaks a streak",
+        "properties": ["previous_streak_days", "habit_id"]
+      }
+    },
+
+    "premium": {
+      "paywall_viewed": {
+        "description": "User sees paywall",
+        "properties": ["source", "trigger"]
+      },
+      "paywall_dismissed": {
+        "description": "User closes paywall without action",
+        "properties": ["time_on_paywall_seconds"]
+      },
+      "subscription_started": {
+        "description": "User subscribes",
+        "properties": ["product_id", "price", "duration", "has_trial"]
+      },
+      "trial_started": {
+        "description": "User starts free trial",
+        "properties": ["product_id", "trial_duration"]
+      },
+      "subscription_renewed": {
+        "description": "Subscription auto-renews",
+        "properties": ["product_id"]
+      },
+      "subscription_cancelled": {
+        "description": "User cancels subscription",
+        "properties": ["product_id", "days_subscribed", "reason"]
+      },
+      "restore_purchases_tapped": {
+        "description": "User taps restore",
+        "properties": []
+      },
+      "restore_purchases_success": {
+        "description": "Purchases restored successfully",
+        "properties": ["products_restored"]
+      },
+      "restore_purchases_failed": {
+        "description": "Restore failed",
+        "properties": ["error"]
+      }
+    },
+
+    "notifications": {
+      "notification_scheduled": {
+        "description": "Reminder notification set",
+        "properties": ["habit_id", "time"]
+      },
+      "notification_received": {
+        "description": "User receives notification",
+        "properties": ["notification_type", "habit_id"]
+      },
+      "notification_tapped": {
+        "description": "User opens app from notification",
+        "properties": ["notification_type", "habit_id"]
+      },
+      "notification_dismissed": {
+        "description": "User dismisses notification",
+        "properties": ["notification_type"]
+      }
+    },
+
+    "settings": {
+      "settings_opened": {
+        "description": "User opens settings",
+        "properties": []
+      },
+      "dark_mode_toggled": {
+        "description": "User changes theme",
+        "properties": ["enabled"]
+      },
+      "translation_changed": {
+        "description": "User changes Bible translation",
+        "properties": ["new_translation", "old_translation"]
+      },
+      "notifications_toggled": {
+        "description": "User enables/disables notifications",
+        "properties": ["enabled", "notification_type"]
+      },
+      "data_exported": {
+        "description": "User exports habit data",
+        "properties": ["format", "habits_count"]
+      }
+    },
+
+    "errors": {
+      "api_error": {
+        "description": "API request failed",
+        "properties": ["endpoint", "error_code", "error_message"]
+      },
+      "purchase_error": {
+        "description": "Purchase failed",
+        "properties": ["product_id", "error_code", "error_message"]
+      }
+    }
+  },
+
+  "user_properties": {
+    "is_premium": "boolean",
+    "subscription_type": "string",
+    "total_habits_count": "number",
+    "total_completions_count": "number",
+    "longest_streak": "number",
+    "days_since_install": "number",
+    "preferred_translation": "string",
+    "dark_mode_enabled": "boolean",
+    "notifications_enabled": "boolean"
+  },
+
+  "funnels": {
+    "onboarding_to_habit": [
+      "app_opened",
+      "onboarding_started",
+      "onboarding_completed",
+      "template_selected",
+      "habit_created"
+    ],
+    "free_to_paid": [
+      "paywall_viewed",
+      "subscription_started"
+    ],
+    "habit_engagement": [
+      "habit_created",
+      "habit_completed",
+      "streak_milestone_reached"
+    ]
+  },
+
+  "cohorts": {
+    "power_users": {
+      "description": "Users with 7+ day streaks",
+      "criteria": "longest_streak >= 7"
+    },
+    "at_risk": {
+      "description": "Users inactive for 3+ days",
+      "criteria": "days_since_last_open >= 3"
+    },
+    "premium_candidates": {
+      "description": "Active free users near habit limit",
+      "criteria": "is_premium == false AND total_habits_count >= 4"
+    }
+  },
+
+  "notes": {
+    "setup": [
+      "1. Create Mixpanel account (free tier available)",
+      "2. Create new project: DailyDevotion",
+      "3. Get project token from settings",
+      "4. Replace REPLACE_WITH_MIXPANEL_TOKEN above",
+      "5. Add Mixpanel SDK to app dependencies"
+    ],
+    "privacy": [
+      "Do not track PII (names, emails) without consent",
+      "Respect opt-out settings",
+      "Anonymize user IDs if possible"
+    ]
+  }
+}

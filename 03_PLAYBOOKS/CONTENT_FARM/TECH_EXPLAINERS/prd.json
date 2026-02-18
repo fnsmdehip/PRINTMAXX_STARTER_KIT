@@ -1,0 +1,325 @@
+{
+  "channel_id": "CF010",
+  "channel_name": "TECH_EXPLAINERS",
+  "category": "CONTENT_FARM",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "Explaining complex technology concepts in simple, visual, engaging formats for tech-curious non-experts",
+    "value_proposition": "Finally understand how technology works. No jargon. Just clarity.",
+    "content_pillars": [
+      "How [technology] actually works",
+      "Tech news explained simply",
+      "AI/ML concepts for beginners",
+      "Cybersecurity basics everyone should know",
+      "Future tech predictions and analysis"
+    ],
+    "differentiation": "Make complex simple. Visual-first explanations. No assumption of prior knowledge."
+  },
+
+  "target_audience": {
+    "primary_demographics": {
+      "age_range": "25-45",
+      "gender_split": "60% male, 40% female",
+      "geography": "Global (English-speaking)",
+      "income_level": "$40k-150k (knowledge workers, professionals)"
+    },
+    "psychographics": {
+      "interests": [
+        "Technology news",
+        "Gadgets and apps",
+        "Career development",
+        "Staying informed",
+        "Understanding AI/automation impact"
+      ],
+      "pain_points": [
+        "Feel left behind by tech advances",
+        "Jargon-heavy explanations frustrating",
+        "Want to understand before using/buying",
+        "Need to appear tech-savvy at work"
+      ],
+      "content_consumption_habits": "Visual learners. Watch explainer videos. Save educational content. Share to colleagues."
+    },
+    "audience_personas": [
+      {
+        "name": "The Curious Professional",
+        "age": 35,
+        "description": "Works in non-tech role but needs to understand tech for their job. Wants quick, clear explanations."
+      },
+      {
+        "name": "The Tech-Curious Parent",
+        "age": 42,
+        "description": "Wants to understand what their kids are using. Concerned about AI, privacy, security."
+      },
+      {
+        "name": "The Career Switcher",
+        "age": 28,
+        "description": "Considering tech career. Consuming content to understand the landscape."
+      }
+    ]
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "TikTok",
+      "content_types": {
+        "explainer_videos": 50,
+        "tech_news_breakdowns": 25,
+        "myth_busting": 15,
+        "predictions_opinions": 10
+      },
+      "posting_frequency": "2-3 videos/day",
+      "growth_targets": {
+        "month_1": 15000,
+        "month_3": 75000,
+        "month_6": 300000,
+        "month_12": 750000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "YouTube",
+        "content_types": ["Long-form explainers (5-15 min)", "Shorts from TikTok"],
+        "posting_frequency": "2 long-form/week, 5 shorts/week",
+        "growth_targets": {
+          "month_1": 2000,
+          "month_3": 15000,
+          "month_6": 75000,
+          "month_12": 200000
+        }
+      },
+      {
+        "platform": "Instagram",
+        "content_types": ["Reels", "Carousels (infographics)", "Stories"],
+        "posting_frequency": "2-3 posts/day",
+        "growth_targets": {
+          "month_1": 5000,
+          "month_3": 30000,
+          "month_6": 125000
+        }
+      },
+      {
+        "platform": "LinkedIn",
+        "content_types": ["Text posts with insights", "Carousel explainers", "Video clips"],
+        "posting_frequency": "1-2 posts/day",
+        "growth_targets": {
+          "month_1": 2000,
+          "month_3": 10000,
+          "month_6": 50000
+        }
+      }
+    ]
+  },
+
+  "content_formats": {
+    "tiktok_explainer": {
+      "structure": [
+        "Hook (0-3 sec): Question or surprising statement",
+        "Setup (3-10 sec): Why this matters",
+        "Explanation (10-45 sec): Simple breakdown with visuals",
+        "Takeaway (45-60 sec): What you should remember/do"
+      ],
+      "duration": "45-90 seconds",
+      "visual_style": "Screen recordings, simple animations, whiteboard-style graphics"
+    },
+    "carousel_explainer": {
+      "structure": [
+        "Slide 1: Hook question/statement",
+        "Slides 2-8: Step-by-step explanation with visuals",
+        "Slide 9: Summary/key points",
+        "Slide 10: CTA (follow, save, share)"
+      ],
+      "design": "Clean, consistent template. High contrast. Large text. Icons over photos."
+    },
+    "youtube_longform": {
+      "structure": [
+        "Hook (0-30 sec): What you'll learn",
+        "Why it matters (30-60 sec): Real-world impact",
+        "Main explanation (2-10 min): Detailed breakdown",
+        "Examples (1-2 min): Real applications",
+        "Summary (30 sec): Key takeaways",
+        "CTA (15 sec): Subscribe, comment, etc."
+      ],
+      "duration": "5-15 minutes"
+    }
+  },
+
+  "content_topics": {
+    "evergreen_topics": [
+      "How does WiFi actually work?",
+      "What is the cloud? (Really)",
+      "How does GPS know where you are?",
+      "What happens when you Google something?",
+      "How do passwords get hacked?",
+      "What is encryption (and why you should care)?",
+      "How does your phone know to show you those ads?",
+      "What actually is an algorithm?",
+      "How does facial recognition work?",
+      "What is machine learning vs AI?"
+    ],
+    "trending_topics": [
+      "New AI tool breakdowns (ChatGPT, Claude, etc.)",
+      "Tech company news explained",
+      "Privacy/security news impact",
+      "New product launches explained",
+      "Viral tech drama context"
+    ],
+    "myth_busting": [
+      "Is your phone listening to you? (The real answer)",
+      "Does closing apps save battery?",
+      "Is private browsing actually private?",
+      "Can hackers really see through your webcam?",
+      "Does more megapixels mean better photos?"
+    ]
+  },
+
+  "production_workflow": {
+    "research_phase": {
+      "time": "30-60 minutes per topic",
+      "sources": ["Official documentation", "Academic papers", "Trusted tech publications", "Expert interviews/podcasts"],
+      "output": "Simplified outline with key points"
+    },
+    "script_phase": {
+      "time": "30-45 minutes",
+      "approach": "Write for 5th grade reading level. Use analogies. Avoid jargon.",
+      "tools": ["Hemingway Editor for simplicity check", "Claude for analogy generation"]
+    },
+    "production_phase": {
+      "time": "1-2 hours for short-form, 4-8 hours for long-form",
+      "tools": [
+        "CapCut/Premiere Pro for editing",
+        "Canva for graphics",
+        "Screen Studio for screen recordings",
+        "Descript for transcription and editing"
+      ]
+    }
+  },
+
+  "revenue_model": {
+    "primary_streams": [
+      {
+        "stream": "YouTube AdSense",
+        "timeline": "Month 3+ (1K subs, 4K hours)",
+        "rate": "$3-8 CPM for tech content",
+        "estimated_monthly": "$500-5,000"
+      },
+      {
+        "stream": "TikTok Creator Fund",
+        "timeline": "Month 2+",
+        "rate": "$0.02-0.04 per 1K views",
+        "estimated_monthly": "$200-1,000"
+      },
+      {
+        "stream": "Affiliate - Tech Products",
+        "timeline": "Month 1+",
+        "partners": ["Amazon Associates", "Best Buy", "B&H Photo"],
+        "commission": "3-8% per sale",
+        "estimated_monthly": "$500-2,000"
+      },
+      {
+        "stream": "Affiliate - Software/Apps",
+        "timeline": "Month 1+",
+        "partners": ["VPNs (NordVPN, ExpressVPN)", "Password managers", "Productivity tools"],
+        "commission": "20-50% recurring",
+        "estimated_monthly": "$1,000-5,000"
+      },
+      {
+        "stream": "Brand Sponsorships",
+        "timeline": "Month 6+",
+        "types": ["Tech companies", "Cybersecurity products", "Education platforms"],
+        "estimated_monthly": "$2,000-15,000"
+      },
+      {
+        "stream": "Digital Products",
+        "timeline": "Month 6+",
+        "products": [
+          {"name": "Tech Literacy Course", "price": "$49-199"},
+          {"name": "Cybersecurity Basics Guide", "price": "$19-49"}
+        ],
+        "estimated_monthly": "$1,000-5,000"
+      }
+    ],
+    "revenue_projections": {
+      "month_6": "$2,000-6,000",
+      "month_12": "$8,000-25,000"
+    }
+  },
+
+  "growth_playbook": {
+    "phase_1_launch": {
+      "duration": "Month 1",
+      "focus": [
+        "Create 20 evergreen explainer videos",
+        "Post 2-3x daily on TikTok",
+        "Cross-post to Instagram Reels",
+        "Engage with tech education community"
+      ],
+      "target": "15,000 followers"
+    },
+    "phase_2_authority": {
+      "duration": "Months 2-3",
+      "focus": [
+        "Start YouTube channel",
+        "Cover trending tech news",
+        "Build content library depth",
+        "Start affiliate integrations"
+      ],
+      "target": "75,000 followers"
+    },
+    "phase_3_scale": {
+      "duration": "Months 4-6",
+      "focus": [
+        "Expand to LinkedIn for B2B reach",
+        "Pitch brand sponsorships",
+        "Create signature series",
+        "Build email list for direct audience"
+      ],
+      "target": "300,000 followers"
+    }
+  },
+
+  "competitors_analyzed": [
+    {
+      "account": "@fireship (YouTube)",
+      "followers": "2.5M",
+      "strategy": "Developer-focused, fast-paced, humorous, 100-second explainers"
+    },
+    {
+      "account": "@techlinked",
+      "followers": "1M+",
+      "strategy": "Tech news with personality, LMG network"
+    },
+    {
+      "account": "@mkbhd",
+      "followers": "18M+",
+      "strategy": "Premium production, product-focused, tech reviews"
+    },
+    {
+      "account": "@veritasium",
+      "followers": "14M+",
+      "strategy": "Science/tech deep dives, high production, educational"
+    }
+  ],
+
+  "success_metrics": {
+    "engagement_targets": {
+      "watch_time": "60%+ average view duration",
+      "save_rate": "5%+ (educational signal)",
+      "share_rate": "2%+ (utility signal)"
+    },
+    "growth_targets": {
+      "follower_growth": "15-25% MoM in first 6 months"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "AI001", "method_name": "NICHE_EXPERTS", "synergy_score": 90},
+      {"method_id": "MM002", "method_name": "INFO_PRODUCTS", "synergy_score": 85},
+      {"method_id": "CF003", "method_name": "NEWS_AGGREGATION", "synergy_score": 75}
+    ],
+    "stack_strategy": "Tech explainer content builds authority -> Personal brand as tech expert -> Info products (courses, guides) for monetization"
+  }
+}

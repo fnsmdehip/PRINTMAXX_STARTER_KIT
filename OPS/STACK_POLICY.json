@@ -1,0 +1,52 @@
+{
+  "version": "2026-02-15",
+  "objective": "24/7 printmaxx with budget-first routing and strict human gates on high-risk actions",
+  "budget": {
+    "monthly_cap_usd": 200,
+    "soft_cap_usd": 150,
+    "hard_pause_cap_usd": 190,
+    "daily_target_usd": 6.5,
+    "premium_token_share_max_percent": 15
+  },
+  "model_defaults": {
+    "local_preferred": [
+      "qwen2.5:7b",
+      "llama3.1:8b",
+      "phi4"
+    ],
+    "openrouter_cheap": "moonshotai/kimi-k2-0905",
+    "openai_mini": "gpt-5-mini",
+    "anthropic_fast": "claude-sonnet-4-5",
+    "premium_code": "gpt-5.2"
+  },
+  "task_routes": {
+    "low_risk_bulk": [
+      "local",
+      "openrouter_cheap",
+      "openai_mini"
+    ],
+    "medium_risk_content": [
+      "openrouter_cheap",
+      "openai_mini",
+      "anthropic_fast",
+      "local"
+    ],
+    "high_risk_reasoning": [
+      "anthropic_fast",
+      "premium_code",
+      "openai_mini",
+      "local"
+    ],
+    "code_generation": [
+      "premium_code",
+      "anthropic_fast",
+      "openai_mini",
+      "local"
+    ]
+  },
+  "risk": {
+    "high_compliance_critical_threshold": 1,
+    "required_approval_key": "COMPLIANCE_HIGH_RISK",
+    "payment_required_approval_key": "PAYMENT_RISK_APPROVED"
+  }
+}

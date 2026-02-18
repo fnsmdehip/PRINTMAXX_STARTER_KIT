@@ -1,0 +1,301 @@
+{
+  "channel_id": "CF008",
+  "channel_name": "PODCAST_CLIPS",
+  "category": "CONTENT_FARM",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "Clip viral moments from popular podcasts for short-form platforms. Zero original content creation, pure curation and editing.",
+    "value_proposition": "Attention arbitrage: Long podcasts have buried viral moments. Extract and distribute to short-form hungry audiences.",
+    "content_pillars": [
+      "Hot takes/Controversial statements (30%)",
+      "Motivational/Wisdom moments (25%)",
+      "Funny/Unexpected moments (20%)",
+      "Business tactics/Actionable advice (15%)",
+      "Celebrity/Guest revelations (10%)"
+    ],
+    "differentiation": "Speed to market + quality curation + platform-native editing"
+  },
+
+  "target_audience": {
+    "primary_demographics": {
+      "age_range": "18-45",
+      "gender_split": "65% male, 35% female",
+      "geography": "US, UK, Canada, Australia (English)",
+      "interests": ["Self-improvement", "Business", "Comedy", "Current events"]
+    },
+    "psychographics": {
+      "behavior": "Short attention span, scroll addicts, don't have time for 3-hour podcasts",
+      "pain_points": [
+        "FOMO on podcast content",
+        "No time for full episodes",
+        "Want the highlights only"
+      ]
+    }
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "TikTok",
+      "priority": 1,
+      "content_types": ["15-60 second clips"],
+      "posting_frequency": "3-5 clips/day",
+      "growth_targets": {
+        "month_1": 5000,
+        "month_3": 25000,
+        "month_6": 100000,
+        "month_12": 500000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "YouTube Shorts",
+        "priority": 2,
+        "posting_frequency": "3-5 clips/day",
+        "notes": "Same content, YouTube hashtags"
+      },
+      {
+        "platform": "Instagram Reels",
+        "priority": 3,
+        "posting_frequency": "2-3 clips/day",
+        "notes": "More polished aesthetic"
+      },
+      {
+        "platform": "X (Twitter)",
+        "priority": 4,
+        "posting_frequency": "5-10 clips/day",
+        "notes": "Speed matters most here"
+      }
+    ]
+  },
+
+  "content_sources": {
+    "tier_a_podcasts": {
+      "description": "Explicitly allow clips, high engagement",
+      "examples": [
+        "The Joe Rogan Experience",
+        "Lex Fridman Podcast",
+        "Huberman Lab",
+        "My First Million",
+        "All-In Podcast",
+        "The Diary of a CEO"
+      ]
+    },
+    "tier_b_podcasts": {
+      "description": "Generally safe, monitor for policy changes",
+      "examples": [
+        "How I Built This",
+        "Tim Ferriss Show",
+        "Chris Williamson",
+        "Flagrant",
+        "Call Her Daddy"
+      ]
+    },
+    "tier_c_avoid": {
+      "description": "Aggressive DMCA, official clip channels exist",
+      "examples": [
+        "Channels with official clip operations",
+        "Podcast networks with strict policies"
+      ]
+    }
+  },
+
+  "clip_selection_framework": {
+    "viral_framework": {
+      "V": "Value - Does it teach something?",
+      "I": "Interest - Does it hook in 3 seconds?",
+      "R": "Relatability - Can anyone understand it?",
+      "A": "Arc - Does it have a complete thought?",
+      "L": "Length - Is it the right duration?"
+    },
+    "clip_types": {
+      "hot_takes": {
+        "percentage": 30,
+        "examples": ["Controversial opinions", "Industry callouts", "Bold predictions"]
+      },
+      "wisdom_drops": {
+        "percentage": 25,
+        "examples": ["Life advice", "Mindset shifts", "Success principles"]
+      },
+      "funny_moments": {
+        "percentage": 20,
+        "examples": ["Unexpected jokes", "Host reactions", "Guest stories"]
+      },
+      "actionable_tactics": {
+        "percentage": 15,
+        "examples": ["How-to moments", "Framework explanations", "Quick tips"]
+      },
+      "celebrity_revelations": {
+        "percentage": 10,
+        "examples": ["Personal stories", "Behind-scenes info", "Relationship drama"]
+      }
+    },
+    "scoring": {
+      "minimum_score": 3.5,
+      "factors": {
+        "emotional_impact": 0.30,
+        "shareability": 0.25,
+        "context_independence": 0.20,
+        "visual_quality": 0.15,
+        "timeliness": 0.10
+      }
+    }
+  },
+
+  "editing_guidelines": {
+    "video_specs": {
+      "aspect_ratio": "9:16",
+      "resolution": "1080x1920",
+      "format": "MP4",
+      "framerate": 30
+    },
+    "caption_styles": {
+      "hormozi_style": {
+        "font": "Montserrat Bold or Impact",
+        "size": "80-120pt",
+        "color": "White with black stroke",
+        "animation": "Word-by-word pop-in",
+        "use_for": "High energy, business content"
+      },
+      "minimal_clean": {
+        "font": "Inter or Helvetica",
+        "size": "48-64pt",
+        "color": "White, no effects",
+        "animation": "Fade by phrase",
+        "use_for": "Thoughtful, philosophical content"
+      }
+    },
+    "optimal_lengths": {
+      "tiktok": "30-45 seconds",
+      "youtube_shorts": "30-50 seconds",
+      "instagram_reels": "15-30 seconds",
+      "twitter": "30-60 seconds"
+    },
+    "required_elements": [
+      "Captions (85% watch muted)",
+      "Progress bar (increases completion 15-20%)",
+      "Source credit in caption"
+    ]
+  },
+
+  "revenue_model": {
+    "streams": {
+      "tiktok_creator_fund": {
+        "timeline": "Month 2+",
+        "estimated": "$0.02-0.04 per 1K views",
+        "notes": "Low per-view but scales with volume"
+      },
+      "youtube_partner": {
+        "timeline": "Month 3+",
+        "estimated": "$0.01-0.05 per 1K Shorts views",
+        "notes": "Need 1K subs + 10M Shorts views in 90 days"
+      },
+      "sponsorships": {
+        "timeline": "Month 6+",
+        "rates": {
+          "50k_followers": "$200-500/post",
+          "100k_followers": "$500-1500/post",
+          "500k_followers": "$2000-5000/post"
+        }
+      },
+      "affiliate": {
+        "timeline": "Month 1+",
+        "programs": ["Audible", "Masterclass", "Skillshare", "Books"],
+        "estimated": "$100-500/month"
+      }
+    },
+    "projections": {
+      "month_3": "$100-500",
+      "month_6": "$500-2000",
+      "month_12": "$3000-8000"
+    }
+  },
+
+  "production_workflow": {
+    "daily_sourcing": {
+      "time": "30-45 min",
+      "steps": [
+        "Check overnight VODs from top 5 podcasts",
+        "Review TwitchTracker/YouTube for viewer spikes",
+        "Scan r/podcasts, r/JoeRogan for highlights",
+        "Check Twitter for quote tweets"
+      ]
+    },
+    "batch_editing": {
+      "time": "2-3 hours",
+      "output": "10-15 clips",
+      "tools": ["CapCut (free)", "DaVinci Resolve", "Descript"]
+    },
+    "posting_schedule": {
+      "tiktok": "3 posts/day (8AM, 2PM, 8PM)",
+      "youtube": "3 posts/day (staggered 1 hour)",
+      "instagram": "2 posts/day (11AM, 7PM)",
+      "twitter": "5-10 posts/day"
+    }
+  },
+
+  "competitors_analyzed": [
+    {
+      "channel": "JRE Clips (Official)",
+      "platform": "YouTube",
+      "followers": "7.2M",
+      "strategy": "5-10 clips/day, 3-10 min, algorithm-optimized titles"
+    },
+    {
+      "channel": "Wisdom Drops",
+      "platform": "TikTok",
+      "followers": "850K",
+      "strategy": "Motivational clips only, heavy caption styling"
+    },
+    {
+      "channel": "Business Talks",
+      "platform": "YouTube/TikTok",
+      "followers": "620K/340K",
+      "strategy": "Business/entrepreneur clips, money hooks"
+    }
+  ],
+
+  "legal_compliance": {
+    "fair_use_factors": [
+      "Transformative (added captions, editing)",
+      "Educational commentary",
+      "Short clips of longer works",
+      "Not replacing original"
+    ],
+    "risk_mitigation": [
+      "Only clip podcasts that allow clips",
+      "Keep clips under 60 seconds",
+      "Add transformative elements",
+      "Credit source in every post",
+      "Monitor for DMCA and respond quickly",
+      "Have backup accounts ready"
+    ],
+    "ai_disclosure": {
+      "required": false,
+      "notes": "Not AI-generated, human-curated clips"
+    }
+  },
+
+  "success_metrics": {
+    "growth_kpis": {
+      "follower_growth": "15-20% MoM",
+      "engagement_rate": "4-8%",
+      "completion_rate": "40%+"
+    },
+    "content_kpis": {
+      "clips_per_day": "10-15 across platforms",
+      "viral_hit_rate": "1 in 20 clips hits 100K+ views"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "CF007", "method_name": "MOTIVATION_QUOTES", "synergy_score": 85},
+      {"method_id": "CF005", "method_name": "CLIP_CHANNELS", "synergy_score": 90},
+      {"method_id": "AI001", "method_name": "NICHE_EXPERTS", "synergy_score": 70}
+    ],
+    "stack_strategy": "Podcast clips build audience -> Cross-promote motivation accounts -> Niche expert positioning"
+  }
+}

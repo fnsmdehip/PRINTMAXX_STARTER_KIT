@@ -1,0 +1,15 @@
+date,category,description,amount,deduction_type,irs_category,receipt_saved,notes
+2026-01-01,software_subscriptions,Claude Max (Anthropic) - AI development tool,100.00,business_expense,Software & Subscriptions,TRUE,Monthly recurring. Used for all money methods.
+2026-01-01,software_subscriptions,Leonardo.ai - AI image generation,12.00,business_expense,Software & Subscriptions,TRUE,Monthly recurring. App icons and marketing.
+2026-01-01,software_subscriptions,ElevenLabs - AI voice synthesis,5.00,business_expense,Software & Subscriptions,TRUE,Monthly recurring. AI influencer content.
+2026-01-01,software_subscriptions,D-ID - AI video generation,5.90,business_expense,Software & Subscriptions,TRUE,Monthly recurring. AI avatar videos.
+2026-01-01,domain_hosting,Domain registration - printmaxx.com,12.00,business_expense,Internet & Hosting,TRUE,Annual. Pro-rate monthly for tracking.
+2026-01-01,domain_hosting,Vercel hosting (free tier),0.00,business_expense,Internet & Hosting,FALSE,Free tier. Log when upgrading.
+2026-01-01,equipment,Apple Developer Program - annual,99.00,business_expense,Professional Services,TRUE,Annual fee for iOS app publishing.
+2026-01-01,equipment,Google Play Developer - one time,25.00,business_expense,Professional Services,TRUE,One-time fee for Android publishing.
+2026-01-27,home_office,Home office deduction (simplified method),0.00,home_office,Home Office,FALSE,EXAMPLE - $5/sq ft up to 300 sq ft = max $1500. Calculate at year end.
+2026-01-27,phone_internet,Internet service (business %),0.00,business_expense,Utilities,FALSE,EXAMPLE - Track business use percentage of monthly internet bill.
+2026-01-27,phone_internet,Phone service (business %),0.00,business_expense,Utilities,FALSE,EXAMPLE - Track business use percentage of phone bill.
+2026-01-27,education,Online course or book for business,0.00,business_expense,Education & Training,FALSE,EXAMPLE ROW - Log courses books conferences.
+2026-01-27,advertising,Facebook/Google ads spend,0.00,business_expense,Advertising,FALSE,EXAMPLE ROW - All ad spend is deductible.
+2026-01-27,contractor_payments,Freelancer payment via Fiverr/Upwork,0.00,business_expense,Contract Labor,FALSE,EXAMPLE ROW - 1099 required if $600+ to single contractor.

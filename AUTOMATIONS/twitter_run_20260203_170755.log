@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/daily_twitter_scraper.py", line 13, in <module>
+    from playwright.async_api import async_playwright
+ModuleNotFoundError: No module named 'playwright'

@@ -1,0 +1,88 @@
+{
+  "op_id": "S01",
+  "op_name": "Claude Code Freelance Arbitrage",
+  "category": "SERVICE",
+  "created": "2026-02-12T07:46:08.649244",
+  "stories": [
+    {
+      "id": "S01-T01",
+      "description": "Create fiverr gig listings",
+      "passes": false,
+      "priority": 1,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "S01-T02",
+      "description": "Write upwork proposals",
+      "passes": false,
+      "priority": 2,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "S01-T03",
+      "description": "Build portfolio samples",
+      "passes": false,
+      "priority": 3,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "S01-T04",
+      "description": "Create service packages",
+      "passes": false,
+      "priority": 4,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "S01-T05",
+      "description": "Set up pricing tiers",
+      "passes": false,
+      "priority": 5,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "S01-T06",
+      "description": "Build proposal templates",
+      "passes": false,
+      "priority": 6,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "S01-T07",
+      "description": "Create delivery workflows",
+      "passes": false,
+      "priority": 7,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    },
+    {
+      "id": "S01-T08",
+      "description": "Track client pipeline",
+      "passes": false,
+      "priority": 8,
+      "dependencies": [],
+      "estimated_iterations": 1,
+      "output_files": [],
+      "notes": ""
+    }
+  ]
+}

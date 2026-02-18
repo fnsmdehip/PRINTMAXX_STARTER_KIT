@@ -1,0 +1,42 @@
+flag_name,type,default_value,description,owner,created_date,expiry_date,status,jira_ticket
+show_new_paywall,boolean,false,Show redesigned paywall with social proof,product,2024-01-15,2024-03-15,active,PROD-123
+enable_streak_sharing,boolean,false,Allow users to share their streak to social media,growth,2024-01-20,,active,GROW-45
+trial_length_days,number,7,Number of days for free trial period,monetization,2024-01-01,,active,MON-12
+show_annual_option,boolean,true,Show annual subscription option on paywall,monetization,2024-01-01,,active,MON-10
+enable_dark_mode,boolean,true,Enable dark mode toggle in settings,product,2024-01-05,,active,PROD-100
+show_onboarding_v2,boolean,false,Show new onboarding flow with personalization,product,2024-01-25,2024-04-01,active,PROD-150
+enable_push_notifications,boolean,true,Enable push notification opt-in,engagement,2024-01-01,,active,ENG-20
+show_referral_program,boolean,false,Show referral program in app,growth,2024-02-01,2024-04-15,active,GROW-60
+enable_offline_mode,boolean,false,Enable offline content access,product,2024-02-10,,active,PROD-175
+show_rating_prompt,boolean,true,Show app store rating prompt,engagement,2024-01-01,,active,ENG-15
+enable_haptic_feedback,boolean,true,Enable haptic feedback on interactions,product,2024-01-01,,active,PROD-80
+show_premium_features,boolean,true,Show premium feature previews to free users,monetization,2024-01-10,,active,MON-25
+enable_analytics_debug,boolean,false,Enable analytics debug logging,engineering,2024-01-01,,active,ENG-01
+show_beta_features,boolean,false,Show beta features to beta testers,product,2024-01-01,,active,PROD-50
+enable_crash_reporting,boolean,true,Enable crash reporting,engineering,2024-01-01,,active,ENG-02
+maintenance_mode,boolean,false,Show maintenance screen globally,engineering,2024-01-01,,active,ENG-00
+max_free_uses,number,3,Maximum free uses before paywall,monetization,2024-01-15,,active,MON-30
+paywall_delay_seconds,number,0,Delay before showing paywall on feature gate,monetization,2024-01-20,,active,MON-35
+session_timeout_minutes,number,30,Session timeout in minutes,engineering,2024-01-01,,active,ENG-10
+min_version_required,number,1,Minimum app version required,engineering,2024-01-01,,active,ENG-05
+rating_prompt_threshold,number,5,Sessions before showing rating prompt,engagement,2024-01-01,,active,ENG-18
+cache_ttl_minutes,number,60,Cache time-to-live in minutes,engineering,2024-01-01,,active,ENG-12
+api_timeout_seconds,number,30,API request timeout in seconds,engineering,2024-01-01,,active,ENG-11
+max_retry_attempts,number,3,Maximum API retry attempts,engineering,2024-01-01,,active,ENG-13
+notification_cooldown_hours,number,24,Hours between notification types,engagement,2024-01-01,,active,ENG-22
+default_currency,string,USD,Default currency for pricing,monetization,2024-01-01,,active,MON-01
+support_email,string,support@example.com,Support email address,support,2024-01-01,,active,SUP-01
+paywall_variant,string,default,Active paywall variant,monetization,2024-01-01,,active,MON-40
+onboarding_flow,string,standard,Active onboarding flow variant,product,2024-01-01,,active,PROD-60
+pricing_model,string,subscription,Pricing model type,monetization,2024-01-01,,active,MON-02
+api_base_url,string,https://api.example.com,API base URL,engineering,2024-01-01,,active,ENG-03
+cdn_base_url,string,https://cdn.example.com,CDN base URL,engineering,2024-01-01,,active,ENG-04
+feature_announcement,string,,Feature announcement banner text,product,2024-01-01,,active,PROD-70
+promo_code,string,,Active promo code,marketing,2024-01-01,,active,MKT-10
+ab_test_group,string,control,Default A/B test group,product,2024-01-01,,active,PROD-01
+paywall_config,json,{},Paywall configuration object,monetization,2024-01-15,,active,MON-50
+onboarding_screens,json,[],Onboarding screen configuration,product,2024-01-20,,active,PROD-155
+feature_gates,json,[],Feature gate definitions,product,2024-01-01,,active,PROD-02
+pricing_tiers,json,[],Pricing tier configuration,monetization,2024-01-01,,active,MON-03
+notification_config,json,{},Notification configuration,engagement,2024-01-01,,active,ENG-25
+experiment_config,json,{},A/B experiment configuration,product,2024-01-01,,active,PROD-03

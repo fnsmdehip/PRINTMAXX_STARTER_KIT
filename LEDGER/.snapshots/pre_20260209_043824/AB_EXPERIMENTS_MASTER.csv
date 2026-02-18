@@ -1,0 +1,16 @@
+experiment_id,channel,lane,hypothesis,variable_tested,variant_a,variant_b,variant_c,variant_d,metric,sample_size_target,sample_size_actual,start_date,end_date,winner,lift_percent,status,notes
+EXP001,Cold Email,Lane A vs B,API platform affects deliverability,Platform,Instantly,Smartlead,,,Open rate,100,0,,,PENDING,0,NOT_STARTED,Compare open rates across platforms
+EXP002,Cold Email,Lane A vs C,Pre-warmed vs DIY inbox,Inbox type,DeliverOn pre-warmed,DIY domain warmed,,,Reply rate,100,0,,,PENDING,0,NOT_STARTED,Compare reply rates
+EXP003,Cold Email,Lane D,Gmail method for high-value targets,Inbox type,Gmail manual,Instantly,,,Reply rate,50,0,,,PENDING,0,NOT_STARTED,Test Gmail for enterprise targets
+EXP004,Cold Email,Copy,Subject line personalization,Subject,Quick question about {Company},Saw your {tech stack},Idea for {pain point},,Open rate,100,0,,,PENDING,0,NOT_STARTED,Test 3 subject formulas
+EXP005,Cold Email,Copy,Body length,Copy length,3-line pitch,5-line pitch,,,Reply rate,100,0,,,PENDING,0,NOT_STARTED,Shorter vs longer
+EXP006,Social Account,Lane A vs B,Device type affects reach,Device,Real iPhone,Desktop GoLogin,,,views_24h,10 posts,0,,,PENDING,0,NOT_STARTED,Compare reach by device
+EXP007,Social Account,Lane B vs C,Proxy impact on account health,Infrastructure,GoLogin no proxy,GoLogin + Decodo,,,flags_count,7 days,0,,,PENDING,0,NOT_STARTED,Does proxy help or hurt
+EXP008,Content,Hook,Hook formula comparison,Hook type,Stop doing X,I made $X,3 tools free,,engagement_rate,10 posts each,0,,,PENDING,0,NOT_STARTED,Which hook drives engagement
+EXP009,Content,CTA,CTA type comparison,CTA,Comment word,Link in bio,DM me,,conversion,10 posts each,0,,,PENDING,0,NOT_STARTED,Which CTA converts
+EXP010,Content,Time,Posting time optimization,Send time,8am,12pm,6pm,,views_24h,10 posts each,0,,,PENDING,0,NOT_STARTED,When does content perform best
+EXP011,LinkedIn,Lane A vs B,Manual vs semi-automated,Method,Manual connections,Dux-Soup,,,accept_rate,50 requests,0,,,PENDING,0,NOT_STARTED,Does automation hurt accept rate
+EXP012,LinkedIn,Copy,Connection request copy,Copy,"Saw your work on X","Building similar thing","Quick question",,accept_rate,50 each,0,,,PENDING,0,NOT_STARTED,Which opener works
+EXP013,Paid Ads,Creative,UGC vs static,Creative type,UGC video,Static image,Carousel,,CPA,50 spend each,0,,,PENDING,0,NOT_STARTED,Which creative type wins
+EXP014,Paid Ads,Audience,Broad vs targeted,Targeting,Broad interests,Lookalike,Retargeting,,ROAS,50 spend each,0,,,PENDING,0,NOT_STARTED,Which audience converts
+EXP015,UGC,Source,AI vs human UGC,Creator,HeyGen AI,Eastern EU human,,,engagement_rate,5 posts each,0,,,PENDING,0,NOT_STARTED,Does human UGC outperform AI

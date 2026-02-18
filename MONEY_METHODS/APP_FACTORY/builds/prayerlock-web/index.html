@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1a1a2e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PrayerLock">
+<meta name="description" content="Beautiful prayer timer, streak tracker, Qibla compass, and tasbih counter. Build your prayer habit.">
+<meta property="og:title" content="PrayerLock - Prayer Habit Tracker PWA">
+<meta property="og:description" content="Beautiful prayer timer, streak tracker, Qibla compass, and tasbih counter. Build your prayer habit. Free PWA.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PrayerLock - Prayer Habit Tracker">
+<meta name="twitter:description" content="Prayer timer, streak tracker, Qibla compass, tasbih counter. Build your prayer habit. Free PWA.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a1a2e' width='100' height='100' rx='20'/><text y='70' x='50' text-anchor='middle' font-size='60'>🕌</text></svg>">
+<title>PrayerLock - Build Your Prayer Habit</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        teal: { 500: '#0d9488', 600: '#0a7a70', 700: '#086b62' },
+        gold: { 400: '#e0b87a', 500: '#d4a574', 600: '#c4925e' },
+        dark: { 800: '#1a1a2e', 900: '#12121f', 950: '#0a0a16' }
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-behavior: none; }
+
+/* Islamic geometric pattern background */
+.geo-pattern {
+  background-color: #1a1a2e;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d9488' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.geo-pattern-light {
+  background-color: #f8fafb;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d9488' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Circular timer */
+.timer-ring { transition: stroke-dashoffset 0.5s ease; }
+
+/* Streak calendar */
+.streak-cell { width: 12px; height: 12px; border-radius: 2px; }
+
+/* Qibla compass */
+.compass-needle { transition: transform 0.3s ease-out; }
+
+/* Tab transitions */
+.tab-content { animation: fadeIn 0.2s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Pulse animation for timer */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(13, 148, 136, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(13, 148, 136, 0.6); }
+}
+.timer-active { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* Tasbih tap ripple */
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.5; }
+  100% { transform: scale(4); opacity: 0; }
+}
+.ripple-effect {
+  position: absolute; border-radius: 50%; width: 50px; height: 50px;
+  background: rgba(13, 148, 136, 0.3); animation: ripple 0.6s ease-out;
+  pointer-events: none;
+}
+
+/* Milestone pop */
+@keyframes milestone-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.milestone-anim { animation: milestone-pop 0.5s ease-out; }
+
+/* Smooth scroll for tabs */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Safe area for notch phones */
+.safe-top { padding-top: max(env(safe-area-inset-top), 12px); }
+.safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 80px); }
+
+/* Light mode overrides */
+.light-mode { --bg-primary: #f8fafb; --bg-card: #ffffff; --text-primary: #1a1a2e; --text-secondary: #64748b; --border: #e2e8f0; }
+.dark-mode { --bg-primary: #1a1a2e; --bg-card: #22223a; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #2d2d4a; }
+</style>
+</head>
+<body class="dark-mode geo-pattern min-h-screen text-gray-100 safe-top safe-bottom select-none overflow-x-hidden">
+
+<!-- Splash / Loading -->
+<div id="splash" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-dark-900 transition-opacity duration-500">
+  <div class="text-6xl mb-4">🕌</div>
+  <h1 class="text-2xl font-bold text-teal-500">PrayerLock</h1>
+  <p class="text-sm text-gray-400 mt-2">Build your prayer habit</p>
+</div>
+
+<!-- Main App -->
+<div id="app" class="max-w-md mx-auto px-4 pb-24 pt-2 opacity-0 transition-opacity duration-500">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between py-3">
+    <div>
+      <h1 class="text-lg font-bold text-teal-500 flex items-center gap-2">
+        <span class="text-xl">🕌</span> PrayerLock
+      </h1>
+    </div>
+    <button onclick="showTab('settings')" class="p-2 rounded-full hover:bg-white/10 transition" aria-label="Settings">
+      <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+    </button>
+  </header>
+
+  <!-- Daily Verse Banner -->
+  <div id="verse-banner" class="mb-4 p-4 rounded-2xl bg-gradient-to-r from-teal-500/20 to-gold-500/20 border border-teal-500/20">
+    <p id="verse-text" class="text-sm leading-relaxed text-gray-200 italic"></p>
+    <div class="flex items-center justify-between mt-2">
+      <span id="verse-source" class="text-xs text-gold-500 font-medium"></span>
+      <button onclick="shareVerse()" class="text-xs text-teal-500 flex items-center gap-1 hover:text-teal-400 transition">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+        Share
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="tab-timer" class="tab-content">
+    <!-- Timer Screen -->
+    <div id="timer-setup" class="flex flex-col items-center">
+      <h2 class="text-lg font-semibold mb-6 text-gray-200">Set Prayer Time</h2>
+
+      <!-- Duration selector -->
+      <div class="flex flex-wrap justify-center gap-2 mb-8">
+        <button onclick="selectDuration(5)" data-dur="5" class="dur-btn px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30 text-teal-500 hover:bg-teal-500/20 transition">5 min</button>
+        <button onclick="selectDuration(10)" data-dur="10" class="dur-btn px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30 text-teal-500 hover:bg-teal-500/20 transition">10 min</button>
+        <button onclick="selectDuration(15)" data-dur="15" class="dur-btn px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30 text-teal-500 hover:bg-teal-500/20 transition">15 min</button>
+        <button onclick="selectDuration(20)" data-dur="20" class="dur-btn px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30 text-teal-500 hover:bg-teal-500/20 transition">20 min</button>
+        <button onclick="selectDuration(30)" data-dur="30" class="dur-btn px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30 text-teal-500 hover:bg-teal-500/20 transition">30 min</button>
+        <button onclick="selectDuration(45)" data-dur="45" class="dur-btn px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30 text-teal-500 hover:bg-teal-500/20 transition">45 min</button>
+        <button onclick="selectDuration(60)" data-dur="60" class="dur-btn px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30 text-teal-500 hover:bg-teal-500/20 transition">60 min</button>
+      </div>
+
+      <!-- Background sound -->
+      <div class="w-full mb-8">
+        <label class="text-xs text-gray-400 uppercase tracking-wide mb-2 block">Background Sound</label>
+        <div class="flex gap-2">
+          <button onclick="selectSound('silence')" data-sound="silence" class="sound-btn flex-1 py-2 rounded-xl text-xs font-medium border border-white/10 text-gray-300 hover:bg-white/5 transition">Silence</button>
+          <button onclick="selectSound('nature')" data-sound="nature" class="sound-btn flex-1 py-2 rounded-xl text-xs font-medium border border-white/10 text-gray-300 hover:bg-white/5 transition">Nature</button>
+          <button onclick="selectSound('rain')" data-sound="rain" class="sound-btn flex-1 py-2 rounded-xl text-xs font-medium border border-white/10 text-gray-300 hover:bg-white/5 transition">Rain</button>
+        </div>
+      </div>
+
+      <!-- Start button -->
+      <button onclick="startTimer()" class="w-full py-4 rounded-2xl bg-teal-500 text-white font-semibold text-lg hover:bg-teal-600 active:scale-[0.98] transition-all shadow-lg shadow-teal-500/30">
+        Begin Prayer
+      </button>
+    </div>
+
+    <!-- Active Timer -->
+    <div id="timer-active" class="hidden flex flex-col items-center">
+      <div class="relative w-64 h-64 mb-6">
+        <svg class="w-full h-full -rotate-90" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(13,148,136,0.15)" stroke-width="8"/>
+          <circle id="timer-progress" cx="100" cy="100" r="90" fill="none" stroke="#0d9488"
+            stroke-width="8" stroke-linecap="round" stroke-dasharray="565.49" stroke-dashoffset="0"
+            class="timer-ring"/>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <div id="timer-display" class="text-5xl font-light text-white tabular-nums">00:00</div>
+          <div id="timer-label" class="text-sm text-gray-400 mt-1">remaining</div>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <button onclick="pauseTimer()" id="btn-pause" class="px-8 py-3 rounded-2xl bg-white/10 text-white font-medium hover:bg-white/20 transition">
+          Pause
+        </button>
+        <button onclick="stopTimer()" class="px-8 py-3 rounded-2xl bg-red-500/20 text-red-400 font-medium hover:bg-red-500/30 transition">
+          End
+        </button>
+      </div>
+    </div>
+
+    <!-- Timer Complete -->
+    <div id="timer-complete" class="hidden flex flex-col items-center text-center">
+      <div class="text-6xl mb-4">&#10024;</div>
+      <h2 class="text-2xl font-bold text-teal-500 mb-2">Prayer Complete</h2>
+      <p id="complete-msg" class="text-gray-400 mb-2">Beautiful. You prayed for 15 minutes.</p>
+      <p id="streak-msg" class="text-gold-500 font-medium mb-8"></p>
+      <button onclick="resetTimer()" class="w-full py-4 rounded-2xl bg-teal-500 text-white font-semibold hover:bg-teal-600 transition">
+        Done
+      </button>
+    </div>
+  </div>
+
+  <!-- Streak Tab -->
+  <div id="tab-streak" class="tab-content hidden">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-semibold text-gray-200">Prayer Streak</h2>
+      <div class="text-right">
+        <div id="streak-count" class="text-3xl font-bold text-teal-500">0</div>
+        <div class="text-xs text-gray-400">day streak</div>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-3 gap-3 mb-6">
+      <div class="bg-white/5 rounded-xl p-3 text-center">
+        <div id="stat-total" class="text-xl font-bold text-white">0</div>
+        <div class="text-xs text-gray-400">total days</div>
+      </div>
+      <div class="bg-white/5 rounded-xl p-3 text-center">
+        <div id="stat-longest" class="text-xl font-bold text-gold-500">0</div>
+        <div class="text-xs text-gray-400">longest streak</div>
+      </div>
+      <div class="bg-white/5 rounded-xl p-3 text-center">
+        <div id="stat-minutes" class="text-xl font-bold text-teal-500">0</div>
+        <div class="text-xs text-gray-400">total minutes</div>
+      </div>
+    </div>
+
+    <!-- Milestones -->
+    <div id="milestones" class="mb-6">
+      <h3 class="text-sm font-medium text-gray-400 mb-3">Milestones</h3>
+      <div class="flex flex-wrap gap-2" id="milestone-badges"></div>
+    </div>
+
+    <!-- Contribution graph -->
+    <div class="mb-4">
+      <h3 class="text-sm font-medium text-gray-400 mb-3">Last 12 weeks</h3>
+      <div id="streak-grid" class="flex gap-1 overflow-x-auto hide-scrollbar pb-2"></div>
+      <div class="flex items-center gap-2 mt-2 text-xs text-gray-500">
+        <span>Less</span>
+        <div class="streak-cell bg-white/5"></div>
+        <div class="streak-cell bg-teal-500/30"></div>
+        <div class="streak-cell bg-teal-500/60"></div>
+        <div class="streak-cell bg-teal-500"></div>
+        <span>More</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Qibla Tab -->
+  <div id="tab-qibla" class="tab-content hidden">
+    <h2 class="text-lg font-semibold text-gray-200 mb-2 text-center">Qibla Direction</h2>
+    <p class="text-sm text-gray-400 text-center mb-6">Point your phone toward the arrow</p>
+
+    <div class="flex flex-col items-center">
+      <!-- Compass -->
+      <div class="relative w-72 h-72 mb-6">
+        <svg class="w-full h-full" viewBox="0 0 300 300">
+          <!-- Outer ring -->
+          <circle cx="150" cy="150" r="140" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="2"/>
+          <circle cx="150" cy="150" r="130" fill="none" stroke="rgba(13,148,136,0.1)" stroke-width="1"/>
+
+          <!-- Cardinal directions -->
+          <text x="150" y="30" text-anchor="middle" fill="#94a3b8" font-size="14" font-weight="600">N</text>
+          <text x="275" y="155" text-anchor="middle" fill="#64748b" font-size="12">E</text>
+          <text x="150" y="280" text-anchor="middle" fill="#64748b" font-size="12">S</text>
+          <text x="25" y="155" text-anchor="middle" fill="#64748b" font-size="12">W</text>
+
+          <!-- Tick marks -->
+          <g stroke="#334155" stroke-width="1">
+            <line x1="150" y1="15" x2="150" y2="25"/>
+            <line x1="150" y1="275" x2="150" y2="285"/>
+            <line x1="15" y1="150" x2="25" y2="150"/>
+            <line x1="275" y1="150" x2="285" y2="150"/>
+          </g>
+
+          <!-- Qibla arrow -->
+          <g id="qibla-arrow" class="compass-needle" transform="rotate(0, 150, 150)">
+            <line x1="150" y1="150" x2="150" y2="45" stroke="#0d9488" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="150,35 143,55 157,55" fill="#0d9488"/>
+            <circle cx="150" cy="150" r="8" fill="#0d9488"/>
+            <circle cx="150" cy="150" r="4" fill="#1a1a2e"/>
+          </g>
+
+          <!-- Kaaba icon at arrow tip -->
+          <g id="qibla-icon" class="compass-needle" transform="rotate(0, 150, 150)">
+            <text x="150" y="30" text-anchor="middle" font-size="18">&#128331;</text>
+          </g>
+        </svg>
+      </div>
+
+      <div id="qibla-status" class="text-center">
+        <p class="text-sm text-gray-400 mb-4">Tap below to find Qibla direction</p>
+        <button onclick="startQibla()" id="qibla-btn" class="px-6 py-3 rounded-2xl bg-teal-500 text-white font-medium hover:bg-teal-600 transition">
+          Enable Compass
+        </button>
+      </div>
+      <div id="qibla-bearing" class="hidden text-center mt-4">
+        <span class="text-2xl font-bold text-teal-500" id="bearing-degrees">0</span>
+        <span class="text-gray-400 text-lg">&deg;</span>
+        <p class="text-xs text-gray-500 mt-1">from North</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tasbih Tab -->
+  <div id="tab-tasbih" class="tab-content hidden">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-semibold text-gray-200">Tasbih Counter</h2>
+      <button onclick="resetTasbih()" class="text-xs text-gray-400 hover:text-red-400 transition px-3 py-1 rounded-full border border-white/10">Reset</button>
+    </div>
+
+    <!-- Target selector -->
+    <div class="flex gap-2 mb-6">
+      <button onclick="setTasbihTarget(33)" data-target="33" class="target-btn flex-1 py-2 rounded-xl text-sm font-medium border border-white/10 text-gray-300 hover:bg-white/5 transition">33</button>
+      <button onclick="setTasbihTarget(99)" data-target="99" class="target-btn flex-1 py-2 rounded-xl text-sm font-medium border border-white/10 text-gray-300 hover:bg-white/5 transition">99</button>
+      <button onclick="setTasbihTarget(100)" data-target="100" class="target-btn flex-1 py-2 rounded-xl text-sm font-medium border border-white/10 text-gray-300 hover:bg-white/5 transition">100</button>
+      <button onclick="promptCustomTarget()" class="target-btn flex-1 py-2 rounded-xl text-sm font-medium border border-white/10 text-gray-300 hover:bg-white/5 transition">Custom</button>
+    </div>
+
+    <!-- Counter display -->
+    <div id="tasbih-tap-area" onclick="incrementTasbih(event)" class="relative flex flex-col items-center justify-center rounded-3xl bg-gradient-to-b from-teal-500/10 to-transparent border border-teal-500/20 py-16 mb-6 cursor-pointer active:scale-[0.98] transition-transform overflow-hidden">
+      <div id="tasbih-count" class="text-7xl font-bold text-white tabular-nums mb-2">0</div>
+      <div class="text-sm text-gray-400">
+        of <span id="tasbih-target-display">33</span>
+      </div>
+      <!-- Progress bar -->
+      <div class="absolute bottom-0 left-0 right-0 h-1 bg-white/5">
+        <div id="tasbih-progress" class="h-full bg-teal-500 transition-all duration-200" style="width:0%"></div>
+      </div>
+      <p class="text-xs text-gray-500 mt-4">Tap anywhere to count</p>
+    </div>
+
+    <!-- Tasbih suggestions -->
+    <div class="space-y-2">
+      <p class="text-xs text-gray-400 uppercase tracking-wide mb-2">Common dhikr</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-gray-300">SubhanAllah (x33)</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-gray-300">Alhamdulillah (x33)</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-gray-300">Allahu Akbar (x33)</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-gray-300">La ilaha illAllah (x99)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Salah Tab -->
+  <div id="tab-salah" class="tab-content hidden">
+    <h2 class="text-lg font-semibold text-gray-200 mb-2">Salah Times</h2>
+    <p class="text-sm text-gray-400 mb-4" id="salah-location">Enable location for accurate times</p>
+
+    <!-- Next prayer highlight -->
+    <div id="salah-next" class="mb-6 p-5 rounded-2xl bg-gradient-to-r from-teal-500/20 to-gold-500/20 border border-teal-500/20">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Next Prayer</div>
+          <div id="salah-next-name" class="text-2xl font-bold text-teal-500 mt-1">--</div>
+        </div>
+        <div class="text-right">
+          <div id="salah-next-time" class="text-2xl font-bold text-white tabular-nums">--:--</div>
+          <div id="salah-countdown" class="text-xs text-gold-500 mt-1">--</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All 5 prayers -->
+    <div class="space-y-2 mb-6" id="salah-list">
+      <div class="salah-row flex items-center justify-between p-4 rounded-2xl bg-white/5" data-prayer="fajr">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-indigo-500/20 flex items-center justify-center text-sm">🌅</div>
+          <div>
+            <div class="text-sm font-medium text-gray-200">Fajr</div>
+            <div class="text-xs text-gray-500">Dawn prayer</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="salah-time text-sm text-gray-300 tabular-nums" id="time-fajr">--:--</span>
+          <button onclick="markSalahPrayed('fajr')" class="salah-check w-7 h-7 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-teal-500 transition" id="check-fajr"></button>
+        </div>
+      </div>
+      <div class="salah-row flex items-center justify-between p-4 rounded-2xl bg-white/5" data-prayer="dhuhr">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center text-sm">☀️</div>
+          <div>
+            <div class="text-sm font-medium text-gray-200">Dhuhr</div>
+            <div class="text-xs text-gray-500">Midday prayer</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="salah-time text-sm text-gray-300 tabular-nums" id="time-dhuhr">--:--</span>
+          <button onclick="markSalahPrayed('dhuhr')" class="salah-check w-7 h-7 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-teal-500 transition" id="check-dhuhr"></button>
+        </div>
+      </div>
+      <div class="salah-row flex items-center justify-between p-4 rounded-2xl bg-white/5" data-prayer="asr">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center text-sm">🌤️</div>
+          <div>
+            <div class="text-sm font-medium text-gray-200">Asr</div>
+            <div class="text-xs text-gray-500">Afternoon prayer</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="salah-time text-sm text-gray-300 tabular-nums" id="time-asr">--:--</span>
+          <button onclick="markSalahPrayed('asr')" class="salah-check w-7 h-7 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-teal-500 transition" id="check-asr"></button>
+        </div>
+      </div>
+      <div class="salah-row flex items-center justify-between p-4 rounded-2xl bg-white/5" data-prayer="maghrib">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-rose-500/20 flex items-center justify-center text-sm">🌅</div>
+          <div>
+            <div class="text-sm font-medium text-gray-200">Maghrib</div>
+            <div class="text-xs text-gray-500">Sunset prayer</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="salah-time text-sm text-gray-300 tabular-nums" id="time-maghrib">--:--</span>
+          <button onclick="markSalahPrayed('maghrib')" class="salah-check w-7 h-7 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-teal-500 transition" id="check-maghrib"></button>
+        </div>
+      </div>
+      <div class="salah-row flex items-center justify-between p-4 rounded-2xl bg-white/5" data-prayer="isha">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-sm">🌙</div>
+          <div>
+            <div class="text-sm font-medium text-gray-200">Isha</div>
+            <div class="text-xs text-gray-500">Night prayer</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="salah-time text-sm text-gray-300 tabular-nums" id="time-isha">--:--</span>
+          <button onclick="markSalahPrayed('isha')" class="salah-check w-7 h-7 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-teal-500 transition" id="check-isha"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today's progress -->
+    <div class="p-4 rounded-2xl bg-white/5 mb-4">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-sm text-gray-400">Today's Salah</span>
+        <span id="salah-progress-text" class="text-sm font-medium text-teal-500">0/5</span>
+      </div>
+      <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+        <div id="salah-progress-bar" class="h-full bg-teal-500 rounded-full transition-all duration-500" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Calculation method selector -->
+    <div class="p-4 rounded-2xl bg-white/5">
+      <div class="text-xs text-gray-400 uppercase tracking-wide mb-2">Calculation Method</div>
+      <select id="calc-method" onchange="saveSalahMethod()" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-sm text-gray-200 outline-none focus:border-teal-500">
+        <option value="MWL">Muslim World League</option>
+        <option value="ISNA">ISNA (North America)</option>
+        <option value="Egypt">Egyptian General Authority</option>
+        <option value="Makkah">Umm al-Qura (Makkah)</option>
+        <option value="Karachi">University of Karachi</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Settings Tab -->
+  <div id="tab-settings" class="tab-content hidden">
+    <h2 class="text-lg font-semibold text-gray-200 mb-6">Settings</h2>
+
+    <div class="space-y-4">
+      <!-- Dark mode -->
+      <div class="flex items-center justify-between p-4 rounded-2xl bg-white/5">
+        <div>
+          <div class="text-sm font-medium text-gray-200">Dark Mode</div>
+          <div class="text-xs text-gray-400">Better for night prayers</div>
+        </div>
+        <button onclick="toggleDarkMode()" id="dark-toggle" class="relative w-12 h-7 rounded-full bg-teal-500 transition-colors">
+          <div id="dark-toggle-dot" class="absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-white shadow transition-transform translate-x-5"></div>
+        </button>
+      </div>
+
+      <!-- Sound -->
+      <div class="flex items-center justify-between p-4 rounded-2xl bg-white/5">
+        <div>
+          <div class="text-sm font-medium text-gray-200">Sound Effects</div>
+          <div class="text-xs text-gray-400">Timer completion notification</div>
+        </div>
+        <button onclick="toggleSound()" id="sound-toggle" class="relative w-12 h-7 rounded-full bg-teal-500 transition-colors">
+          <div id="sound-toggle-dot" class="absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-white shadow transition-transform translate-x-5"></div>
+        </button>
+      </div>
+
+      <!-- Default duration -->
+      <div class="p-4 rounded-2xl bg-white/5">
+        <div class="text-sm font-medium text-gray-200 mb-2">Default Prayer Duration</div>
+        <select id="default-duration" onchange="saveDefaultDuration()" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-sm text-gray-200 outline-none focus:border-teal-500">
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+          <option value="15" selected>15 minutes</option>
+          <option value="20">20 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="45">45 minutes</option>
+          <option value="60">60 minutes</option>
+        </select>
+      </div>
+
+      <!-- Notifications -->
+      <div class="flex items-center justify-between p-4 rounded-2xl bg-white/5">
+        <div>
+          <div class="text-sm font-medium text-gray-200">Prayer Reminders</div>
+          <div class="text-xs text-gray-400" id="notif-status">Not enabled</div>
+        </div>
+        <button onclick="requestNotifications()" id="notif-btn" class="px-4 py-2 rounded-xl bg-teal-500/20 text-teal-500 text-xs font-medium hover:bg-teal-500/30 transition">
+          Enable
+        </button>
+      </div>
+
+      <!-- Data -->
+      <div class="p-4 rounded-2xl bg-white/5">
+        <div class="text-sm font-medium text-gray-200 mb-3">Your Data</div>
+        <div class="flex gap-2">
+          <button onclick="exportData()" class="flex-1 py-2 rounded-xl bg-white/10 text-xs text-gray-300 hover:bg-white/20 transition">Export</button>
+          <button onclick="confirmClearData()" class="flex-1 py-2 rounded-xl bg-red-500/10 text-xs text-red-400 hover:bg-red-500/20 transition">Clear All</button>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="p-4 rounded-2xl bg-white/5 text-center">
+        <div class="text-sm text-gray-400">PrayerLock v1.1.0</div>
+        <div class="text-xs text-gray-500 mt-1">Built with love for the faithful</div>
+        <div class="text-xs text-gray-600 mt-1">Salah mode included</div>
+        <div class="text-xs text-gray-600 mt-1">by @PRINTMAXXER</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-dark-900/95 backdrop-blur-lg border-t border-white/5 z-40" style="padding-bottom: max(env(safe-area-inset-bottom), 8px);">
+  <div class="max-w-md mx-auto flex justify-around py-2">
+    <button onclick="showTab('timer')" data-tab="timer" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span class="text-[10px]">Timer</span>
+    </button>
+    <button onclick="showTab('streak')" data-tab="streak" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+      <span class="text-[10px]">Streak</span>
+    </button>
+    <button onclick="showTab('qibla')" data-tab="qibla" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+      <span class="text-[10px]">Qibla</span>
+    </button>
+    <button onclick="showTab('tasbih')" data-tab="tasbih" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
+      <span class="text-[10px]">Tasbih</span>
+    </button>
+    <button onclick="showTab('salah')" data-tab="salah" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      <span class="text-[10px]">Salah</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Milestone Toast -->
+<div id="milestone-toast" class="fixed top-8 left-1/2 -translate-x-1/2 z-50 hidden">
+  <div class="milestone-anim bg-gold-500 text-dark-900 px-6 py-3 rounded-2xl shadow-2xl text-center">
+    <div class="text-2xl mb-1" id="toast-icon"></div>
+    <div class="text-sm font-bold" id="toast-msg"></div>
+  </div>
+</div>
+
+<script>
+// ==========================================
+// STATE
+// ==========================================
+const STORAGE_KEY = 'prayerlock_data';
+let state = loadState();
+
+function defaultState() {
+  return {
+    darkMode: true,
+    soundOn: true,
+    defaultDuration: 15,
+    selectedDuration: 15,
+    selectedSound: 'silence',
+    streakDays: {},       // { "2026-02-06": { minutes: 15, count: 2 } }
+    currentStreak: 0,
+    longestStreak: 0,
+    totalMinutes: 0,
+    tasbihCount: 0,
+    tasbihTarget: 33,
+    notificationsEnabled: false,
+    salahMethod: 'MWL',
+    salahPrayed: {}
+  };
+}
+
+function loadState() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      return { ...defaultState(), ...parsed };
+    }
+  } catch(e) { console.warn('State load error:', e); }
+  return defaultState();
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch(e) { console.warn('State save error:', e); }
+}
+
+// ==========================================
+// DAILY VERSES
+// ==========================================
+const verses = [
+  { text: "Verily, with hardship comes ease.", source: "Quran 94:6" },
+  { text: "And whoever puts their trust in Allah, He will be enough for them.", source: "Quran 65:3" },
+  { text: "So remember Me; I will remember you.", source: "Quran 2:152" },
+  { text: "Be still, and know that I am God.", source: "Psalm 46:10" },
+  { text: "And He found you lost and guided you.", source: "Quran 93:7" },
+  { text: "The Lord is my shepherd; I shall not want.", source: "Psalm 23:1" },
+  { text: "Allah does not burden a soul beyond that it can bear.", source: "Quran 2:286" },
+  { text: "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.", source: "Jeremiah 29:11" },
+  { text: "Which of the favors of your Lord will you deny?", source: "Quran 55:13" },
+  { text: "Trust in the Lord with all your heart and lean not on your own understanding.", source: "Proverbs 3:5" },
+  { text: "He is with you wherever you are.", source: "Quran 57:4" },
+  { text: "The peace of God, which surpasses all understanding, will guard your hearts and minds.", source: "Philippians 4:7" },
+  { text: "Call upon Me; I will respond to you.", source: "Quran 40:60" },
+  { text: "Come to me, all you who are weary and burdened, and I will give you rest.", source: "Matthew 11:28" },
+  { text: "And when My servants ask you about Me, indeed I am near.", source: "Quran 2:186" },
+  { text: "I can do all things through Him who strengthens me.", source: "Philippians 4:13" },
+  { text: "Indeed, the prayer prohibits immorality and wrongdoing.", source: "Quran 29:45" },
+  { text: "Rejoice always, pray without ceasing, give thanks in all circumstances.", source: "1 Thessalonians 5:16-18" },
+  { text: "And seek help through patience and prayer.", source: "Quran 2:45" },
+  { text: "Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God.", source: "Philippians 4:6" },
+  { text: "My mercy encompasses all things.", source: "Quran 7:156" },
+  { text: "The Lord is near to all who call on Him, to all who call on Him in truth.", source: "Psalm 145:18" },
+  { text: "And in the remembrance of Allah do hearts find rest.", source: "Quran 13:28" },
+  { text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.", source: "Joshua 1:9" },
+  { text: "Indeed, Allah is with the patient.", source: "Quran 2:153" },
+  { text: "The Lord will fight for you; you need only to be still.", source: "Exodus 14:14" },
+  { text: "Say: He is Allah, the One.", source: "Quran 112:1" },
+  { text: "But those who hope in the Lord will renew their strength.", source: "Isaiah 40:31" },
+  { text: "Whoever does righteousness, whether male or female, while being a believer, We will surely cause them to live a good life.", source: "Quran 16:97" },
+  { text: "Delight yourself in the Lord, and He will give you the desires of your heart.", source: "Psalm 37:4" }
+];
+
+function getDailyVerse() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff = now - start;
+  const dayOfYear = Math.floor(diff / 86400000);
+  return verses[dayOfYear % verses.length];
+}
+
+function shareVerse() {
+  const verse = getDailyVerse();
+  const text = `"${verse.text}" - ${verse.source}\n\nvia PrayerLock`;
+  if (navigator.share) {
+    navigator.share({ text }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('Copied to clipboard', '');
+    });
+  }
+}
+
+// ==========================================
+// TABS
+// ==========================================
+let currentTab = 'timer';
+
+function showTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('[id^="tab-"]').forEach(el => el.classList.add('hidden'));
+  const tabEl = document.getElementById('tab-' + tab);
+  if (tabEl) {
+    tabEl.classList.remove('hidden');
+    // Re-trigger animation
+    tabEl.classList.remove('tab-content');
+    void tabEl.offsetWidth;
+    tabEl.classList.add('tab-content');
+  }
+
+  // Update nav buttons
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    const isActive = btn.dataset.tab === tab;
+    btn.classList.toggle('text-teal-500', isActive);
+    btn.classList.toggle('text-gray-500', !isActive);
+  });
+
+  // Special: refresh streak calendar when switching to streak tab
+  if (tab === 'streak') renderStreak();
+  if (tab === 'salah' && !salahTimes) initSalah();
+  if (tab === 'salah' && salahTimes) renderSalahTimes();
+
+  // Hide verse banner on settings
+  document.getElementById('verse-banner').classList.toggle('hidden', tab === 'settings');
+}
+
+// ==========================================
+// TIMER
+// ==========================================
+let timerInterval = null;
+let timerRemaining = 0;
+let timerTotal = 0;
+let timerPaused = false;
+
+// Audio context for completion sound
+let audioCtx = null;
+
+function getAudioContext() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return audioCtx;
+}
+
+function playCompletionSound() {
+  if (!state.soundOn) return;
+  try {
+    const ctx = getAudioContext();
+    // Play a gentle bell-like tone
+    const freqs = [523.25, 659.25, 783.99]; // C5, E5, G5 chord
+    freqs.forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0, ctx.currentTime + i * 0.15);
+      gain.gain.linearRampToValueAtTime(0.15, ctx.currentTime + i * 0.15 + 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.15 + 2);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(ctx.currentTime + i * 0.15);
+      osc.stop(ctx.currentTime + i * 0.15 + 2);
+    });
+  } catch(e) {}
+}
+
+// Background sound generators
+let bgSoundNodes = null;
+
+function startBgSound(type) {
+  stopBgSound();
+  if (type === 'silence' || !state.soundOn) return;
+  try {
+    const ctx = getAudioContext();
+
+    if (type === 'nature') {
+      // Gentle birdsong-like tones cycling
+      const playBird = () => {
+        if (!bgSoundNodes || !bgSoundNodes.active) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const freq = 1200 + Math.random() * 1800;
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(freq * (0.8 + Math.random() * 0.4), ctx.currentTime + 0.3);
+        gain.gain.setValueAtTime(0, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.03, ctx.currentTime + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.5);
+        if (bgSoundNodes && bgSoundNodes.active) {
+          bgSoundNodes.timeout = setTimeout(playBird, 2000 + Math.random() * 5000);
+        }
+      };
+      bgSoundNodes = { active: true, timeout: null };
+      playBird();
+
+    } else if (type === 'rain') {
+      // Brown noise for rain
+      const bufferSize = 2 * ctx.sampleRate;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      let lastOut = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        data[i] = (lastOut + (0.02 * white)) / 1.02;
+        lastOut = data[i];
+        data[i] *= 3.5;
+      }
+      const source = ctx.createBufferSource();
+      source.buffer = buffer;
+      source.loop = true;
+      const gain = ctx.createGain();
+      gain.gain.value = 0.15;
+      // Low pass for rain feel
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 800;
+      source.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+      source.start();
+      bgSoundNodes = { active: true, source, gain, filter };
+    }
+  } catch(e) {}
+}
+
+function stopBgSound() {
+  if (!bgSoundNodes) return;
+  bgSoundNodes.active = false;
+  if (bgSoundNodes.timeout) clearTimeout(bgSoundNodes.timeout);
+  if (bgSoundNodes.source) {
+    try { bgSoundNodes.source.stop(); } catch(e) {}
+  }
+  bgSoundNodes = null;
+}
+
+function selectDuration(min) {
+  state.selectedDuration = min;
+  document.querySelectorAll('.dur-btn').forEach(btn => {
+    const isSelected = parseInt(btn.dataset.dur) === min;
+    btn.classList.toggle('bg-teal-500', isSelected);
+    btn.classList.toggle('text-white', isSelected);
+    btn.classList.toggle('border-teal-500', isSelected);
+    btn.classList.toggle('text-teal-500', !isSelected);
+  });
+}
+
+function selectSound(sound) {
+  state.selectedSound = sound;
+  document.querySelectorAll('.sound-btn').forEach(btn => {
+    const isSelected = btn.dataset.sound === sound;
+    btn.classList.toggle('bg-teal-500/20', isSelected);
+    btn.classList.toggle('text-teal-500', isSelected);
+    btn.classList.toggle('border-teal-500/30', isSelected);
+  });
+}
+
+function startTimer() {
+  timerTotal = state.selectedDuration * 60;
+  timerRemaining = timerTotal;
+  timerPaused = false;
+
+  document.getElementById('timer-setup').classList.add('hidden');
+  document.getElementById('timer-active').classList.remove('hidden');
+  document.getElementById('timer-complete').classList.add('hidden');
+  document.getElementById('btn-pause').textContent = 'Pause';
+
+  startBgSound(state.selectedSound);
+  updateTimerDisplay();
+
+  timerInterval = setInterval(() => {
+    if (!timerPaused) {
+      timerRemaining--;
+      updateTimerDisplay();
+      if (timerRemaining <= 0) {
+        completeTimer();
+      }
+    }
+  }, 1000);
+
+  // Wake lock to keep screen on
+  requestWakeLock();
+}
+
+function updateTimerDisplay() {
+  const min = Math.floor(timerRemaining / 60);
+  const sec = timerRemaining % 60;
+  document.getElementById('timer-display').textContent =
+    String(min).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+
+  const circumference = 2 * Math.PI * 90;
+  const progress = (timerTotal - timerRemaining) / timerTotal;
+  document.getElementById('timer-progress').style.strokeDashoffset =
+    circumference * (1 - progress);
+}
+
+function pauseTimer() {
+  timerPaused = !timerPaused;
+  document.getElementById('btn-pause').textContent = timerPaused ? 'Resume' : 'Pause';
+  if (timerPaused) {
+    stopBgSound();
+  } else {
+    startBgSound(state.selectedSound);
+  }
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  stopBgSound();
+  releaseWakeLock();
+  // Record partial prayer time if at least 1 minute was done
+  const elapsedMinutes = Math.floor((timerTotal - timerRemaining) / 60);
+  if (elapsedMinutes >= 1) {
+    recordPrayer(elapsedMinutes);
+  }
+  resetTimer();
+}
+
+function completeTimer() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  stopBgSound();
+  releaseWakeLock();
+  playCompletionSound();
+
+  // Vibrate
+  if (navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 200]);
+
+  // Record prayer
+  const minutes = Math.round(timerTotal / 60);
+  recordPrayer(minutes);
+
+  document.getElementById('timer-active').classList.add('hidden');
+  document.getElementById('timer-complete').classList.remove('hidden');
+  document.getElementById('complete-msg').textContent = `You prayed for ${minutes} minutes. Beautiful.`;
+
+  const streakText = state.currentStreak > 1
+    ? `${state.currentStreak} day streak! Keep it going.`
+    : 'First step on your prayer journey today.';
+  document.getElementById('streak-msg').textContent = streakText;
+
+  // Send notification if allowed
+  if (state.notificationsEnabled && Notification.permission === 'granted') {
+    new Notification('Prayer Complete', { body: `${minutes} minutes of prayer. ${streakText}`, icon: '🕌' });
+  }
+}
+
+function resetTimer() {
+  document.getElementById('timer-setup').classList.remove('hidden');
+  document.getElementById('timer-active').classList.add('hidden');
+  document.getElementById('timer-complete').classList.add('hidden');
+  selectDuration(state.selectedDuration);
+}
+
+function recordPrayer(minutes) {
+  const today = getDateKey();
+  if (!state.streakDays[today]) {
+    state.streakDays[today] = { minutes: 0, count: 0 };
+  }
+  state.streakDays[today].minutes += minutes;
+  state.streakDays[today].count += 1;
+  state.totalMinutes += minutes;
+
+  // Calculate streak
+  calculateStreak();
+  saveState();
+  checkMilestones();
+}
+
+function getDateKey(date) {
+  const d = date || new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+function calculateStreak() {
+  let streak = 0;
+  const d = new Date();
+  // Check today first
+  const todayKey = getDateKey(d);
+  if (!state.streakDays[todayKey]) {
+    // Check if yesterday is still valid (grace period for today)
+    d.setDate(d.getDate() - 1);
+  }
+
+  while (true) {
+    const key = getDateKey(d);
+    if (state.streakDays[key]) {
+      streak++;
+      d.setDate(d.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+
+  state.currentStreak = streak;
+  if (streak > state.longestStreak) state.longestStreak = streak;
+}
+
+// ==========================================
+// STREAK CALENDAR
+// ==========================================
+function renderStreak() {
+  calculateStreak();
+  document.getElementById('streak-count').textContent = state.currentStreak;
+  document.getElementById('stat-total').textContent = Object.keys(state.streakDays).length;
+  document.getElementById('stat-longest').textContent = state.longestStreak;
+  document.getElementById('stat-minutes').textContent = state.totalMinutes;
+
+  // Build contribution grid (12 weeks)
+  const grid = document.getElementById('streak-grid');
+  grid.innerHTML = '';
+
+  const today = new Date();
+  const totalDays = 84; // 12 weeks
+  const startDate = new Date(today);
+  startDate.setDate(startDate.getDate() - totalDays + 1);
+
+  // Align to start of week (Sunday)
+  const dayOfWeek = startDate.getDay();
+  startDate.setDate(startDate.getDate() - dayOfWeek);
+
+  const weeks = {};
+  const d = new Date(startDate);
+  while (d <= today) {
+    const weekNum = Math.floor((d - startDate) / (7 * 86400000));
+    if (!weeks[weekNum]) weeks[weekNum] = [];
+    const key = getDateKey(d);
+    const data = state.streakDays[key];
+    weeks[weekNum].push({
+      date: key,
+      minutes: data ? data.minutes : 0
+    });
+    d.setDate(d.getDate() + 1);
+  }
+
+  Object.values(weeks).forEach(week => {
+    const col = document.createElement('div');
+    col.className = 'flex flex-col gap-1';
+    week.forEach(day => {
+      const cell = document.createElement('div');
+      cell.className = 'streak-cell';
+      if (day.minutes === 0) {
+        cell.classList.add('bg-white/5');
+      } else if (day.minutes < 10) {
+        cell.classList.add('bg-teal-500/30');
+      } else if (day.minutes < 30) {
+        cell.classList.add('bg-teal-500/60');
+      } else {
+        cell.classList.add('bg-teal-500');
+      }
+      cell.title = `${day.date}: ${day.minutes} min`;
+      col.appendChild(cell);
+    });
+    grid.appendChild(col);
+  });
+
+  // Render milestones
+  renderMilestones();
+}
+
+function renderMilestones() {
+  const badges = document.getElementById('milestone-badges');
+  badges.innerHTML = '';
+  const milestones = [
+    { days: 1, icon: '🌱', label: 'First prayer' },
+    { days: 7, icon: '🔥', label: '7 day streak' },
+    { days: 14, icon: '⭐', label: '2 weeks' },
+    { days: 30, icon: '🏆', label: '30 days' },
+    { days: 60, icon: '💎', label: '60 days' },
+    { days: 90, icon: '👑', label: '90 days' },
+  ];
+
+  milestones.forEach(m => {
+    const achieved = state.longestStreak >= m.days || Object.keys(state.streakDays).length >= m.days;
+    const badge = document.createElement('div');
+    badge.className = `flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${
+      achieved ? 'bg-gold-500/20 text-gold-500' : 'bg-white/5 text-gray-500'
+    }`;
+    badge.innerHTML = `<span>${m.icon}</span> ${m.label}`;
+    badges.appendChild(badge);
+  });
+}
+
+function checkMilestones() {
+  const total = Object.keys(state.streakDays).length;
+  const milestoneAt = [1, 7, 14, 30, 60, 90];
+  const icons = ['🌱', '🔥', '⭐', '🏆', '💎', '👑'];
+  const labels = ['First Prayer!', '7 Day Streak!', '2 Weeks Strong!', '30 Day Milestone!', '60 Days of Devotion!', '90 Day Champion!'];
+
+  milestoneAt.forEach((m, i) => {
+    if (total === m || state.currentStreak === m) {
+      showToast(labels[i], icons[i]);
+    }
+  });
+}
+
+function showToast(msg, icon) {
+  const toast = document.getElementById('milestone-toast');
+  document.getElementById('toast-msg').textContent = msg;
+  document.getElementById('toast-icon').textContent = icon;
+  toast.classList.remove('hidden');
+  setTimeout(() => toast.classList.add('hidden'), 3000);
+}
+
+// ==========================================
+// QIBLA COMPASS
+// ==========================================
+let qiblaWatchId = null;
+let userLat = null, userLng = null;
+const KAABA_LAT = 21.4225;
+const KAABA_LNG = 39.8262;
+
+function calculateQiblaBearing(lat, lng) {
+  const lat1 = lat * Math.PI / 180;
+  const lat2 = KAABA_LAT * Math.PI / 180;
+  const dLng = (KAABA_LNG - lng) * Math.PI / 180;
+
+  const y = Math.sin(dLng);
+  const x = Math.cos(lat1) * Math.tan(lat2) - Math.sin(lat1) * Math.cos(dLng);
+  let bearing = Math.atan2(y, x) * 180 / Math.PI;
+  bearing = (bearing + 360) % 360;
+  return bearing;
+}
+
+function startQibla() {
+  // Request location
+  if (!navigator.geolocation) {
+    document.getElementById('qibla-status').innerHTML = '<p class="text-sm text-red-400">Geolocation not supported</p>';
+    return;
+  }
+
+  document.getElementById('qibla-btn').textContent = 'Locating...';
+  document.getElementById('qibla-btn').disabled = true;
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      userLat = pos.coords.latitude;
+      userLng = pos.coords.longitude;
+      const bearing = calculateQiblaBearing(userLat, userLng);
+
+      document.getElementById('qibla-status').classList.add('hidden');
+      document.getElementById('qibla-bearing').classList.remove('hidden');
+      document.getElementById('bearing-degrees').textContent = Math.round(bearing);
+
+      // Try device orientation for live compass
+      startCompass(bearing);
+    },
+    (err) => {
+      document.getElementById('qibla-btn').textContent = 'Enable Compass';
+      document.getElementById('qibla-btn').disabled = false;
+      // Fallback: show general direction
+      document.getElementById('qibla-status').innerHTML =
+        `<p class="text-sm text-yellow-400 mb-2">Location access denied</p>
+         <p class="text-xs text-gray-400">Grant location permission to see accurate Qibla direction</p>
+         <button onclick="startQibla()" class="mt-3 px-6 py-3 rounded-2xl bg-teal-500 text-white font-medium hover:bg-teal-600 transition">Try Again</button>`;
+    },
+    { enableHighAccuracy: true, timeout: 10000 }
+  );
+}
+
+function startCompass(qiblaBearing) {
+  const updateArrow = (heading) => {
+    const rotation = qiblaBearing - heading;
+    document.getElementById('qibla-arrow').setAttribute('transform', `rotate(${rotation}, 150, 150)`);
+    document.getElementById('qibla-icon').setAttribute('transform', `rotate(${rotation}, 150, 150)`);
+  };
+
+  // Try the modern API first (iOS 13+)
+  if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+    DeviceOrientationEvent.requestPermission().then(response => {
+      if (response === 'granted') {
+        window.addEventListener('deviceorientation', (e) => {
+          if (e.webkitCompassHeading !== undefined) {
+            updateArrow(e.webkitCompassHeading);
+          } else if (e.alpha !== null) {
+            updateArrow(360 - e.alpha);
+          }
+        });
+      } else {
+        // Fallback: static arrow
+        updateArrow(0);
+      }
+    }).catch(() => updateArrow(0));
+  } else if (window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', (e) => {
+      if (e.alpha !== null) {
+        const heading = e.absolute ? e.alpha : (360 - e.alpha);
+        updateArrow(heading);
+      }
+    });
+  } else {
+    // No compass - show static bearing
+    updateArrow(0);
+    document.getElementById('qibla-bearing').innerHTML +=
+      '<p class="text-xs text-yellow-400 mt-2">Compass not available. Arrow shows North = up.</p>';
+  }
+}
+
+// ==========================================
+// TASBIH COUNTER
+// ==========================================
+function setTasbihTarget(target) {
+  state.tasbihTarget = target;
+  state.tasbihCount = 0;
+  saveState();
+  updateTasbihDisplay();
+
+  document.querySelectorAll('.target-btn').forEach(btn => {
+    const isSelected = parseInt(btn.dataset.target) === target;
+    btn.classList.toggle('bg-teal-500/20', isSelected);
+    btn.classList.toggle('text-teal-500', isSelected);
+    btn.classList.toggle('border-teal-500/30', isSelected);
+  });
+}
+
+function promptCustomTarget() {
+  const val = prompt('Enter custom target count:', '100');
+  const num = parseInt(val);
+  if (num && num > 0 && num <= 9999) {
+    setTasbihTarget(num);
+  }
+}
+
+function incrementTasbih(event) {
+  if (state.tasbihCount >= state.tasbihTarget) {
+    // Auto reset and keep going
+    state.tasbihCount = 0;
+  }
+  state.tasbihCount++;
+
+  // Haptic feedback
+  if (navigator.vibrate) navigator.vibrate(20);
+
+  // Ripple effect
+  const area = document.getElementById('tasbih-tap-area');
+  const rect = area.getBoundingClientRect();
+  const ripple = document.createElement('div');
+  ripple.className = 'ripple-effect';
+  ripple.style.left = (event.clientX - rect.left - 25) + 'px';
+  ripple.style.top = (event.clientY - rect.top - 25) + 'px';
+  area.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 600);
+
+  // Click sound
+  if (state.soundOn) {
+    try {
+      const ctx = getAudioContext();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = 800 + (state.tasbihCount % 33) * 5;
+      gain.gain.setValueAtTime(0.05, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.1);
+    } catch(e) {}
+  }
+
+  updateTasbihDisplay();
+  saveState();
+
+  // Target reached
+  if (state.tasbihCount >= state.tasbihTarget) {
+    if (navigator.vibrate) navigator.vibrate([100, 50, 100, 50, 100]);
+    showToast('Target reached!', '✨');
+  }
+}
+
+function resetTasbih() {
+  state.tasbihCount = 0;
+  saveState();
+  updateTasbihDisplay();
+}
+
+function updateTasbihDisplay() {
+  document.getElementById('tasbih-count').textContent = state.tasbihCount;
+  document.getElementById('tasbih-target-display').textContent = state.tasbihTarget;
+  const pct = Math.min((state.tasbihCount / state.tasbihTarget) * 100, 100);
+  document.getElementById('tasbih-progress').style.width = pct + '%';
+}
+
+// ==========================================
+// SETTINGS
+// ==========================================
+function toggleDarkMode() {
+  state.darkMode = !state.darkMode;
+  applyTheme();
+  saveState();
+}
+
+function applyTheme() {
+  const body = document.body;
+  const toggle = document.getElementById('dark-toggle');
+  const dot = document.getElementById('dark-toggle-dot');
+  const nav = document.querySelector('nav');
+
+  if (state.darkMode) {
+    body.className = 'dark-mode geo-pattern min-h-screen text-gray-100 safe-top safe-bottom select-none overflow-x-hidden';
+    toggle.classList.add('bg-teal-500');
+    toggle.classList.remove('bg-gray-300');
+    dot.classList.add('translate-x-5');
+    dot.classList.remove('translate-x-0');
+    nav.classList.remove('bg-white/95', 'border-gray-200');
+    nav.classList.add('bg-dark-900/95', 'border-white/5');
+  } else {
+    body.className = 'light-mode geo-pattern-light min-h-screen text-gray-800 safe-top safe-bottom select-none overflow-x-hidden';
+    toggle.classList.remove('bg-teal-500');
+    toggle.classList.add('bg-gray-300');
+    dot.classList.remove('translate-x-5');
+    dot.classList.add('translate-x-0');
+    nav.classList.add('bg-white/95', 'border-gray-200');
+    nav.classList.remove('bg-dark-900/95', 'border-white/5');
+  }
+}
+
+function toggleSound() {
+  state.soundOn = !state.soundOn;
+  const toggle = document.getElementById('sound-toggle');
+  const dot = document.getElementById('sound-toggle-dot');
+  if (state.soundOn) {
+    toggle.classList.add('bg-teal-500');
+    toggle.classList.remove('bg-gray-300');
+    dot.classList.add('translate-x-5');
+    dot.classList.remove('translate-x-0');
+  } else {
+    toggle.classList.remove('bg-teal-500');
+    toggle.classList.add('bg-gray-300');
+    dot.classList.remove('translate-x-5');
+    dot.classList.add('translate-x-0');
+  }
+  saveState();
+}
+
+function saveDefaultDuration() {
+  state.defaultDuration = parseInt(document.getElementById('default-duration').value);
+  state.selectedDuration = state.defaultDuration;
+  selectDuration(state.defaultDuration);
+  saveState();
+}
+
+function requestNotifications() {
+  if (!('Notification' in window)) {
+    document.getElementById('notif-status').textContent = 'Not supported in this browser';
+    return;
+  }
+  Notification.requestPermission().then(perm => {
+    if (perm === 'granted') {
+      state.notificationsEnabled = true;
+      document.getElementById('notif-status').textContent = 'Enabled';
+      document.getElementById('notif-btn').textContent = 'Enabled';
+      document.getElementById('notif-btn').classList.add('opacity-50');
+      saveState();
+    } else {
+      document.getElementById('notif-status').textContent = 'Permission denied';
+    }
+  });
+}
+
+function exportData() {
+  const data = JSON.stringify(state, null, 2);
+  const blob = new Blob([data], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'prayerlock-data.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function confirmClearData() {
+  if (confirm('This will delete all your prayer history, streaks, and settings. Are you sure?')) {
+    localStorage.removeItem(STORAGE_KEY);
+    state = defaultState();
+    saveState();
+    location.reload();
+  }
+}
+
+// ==========================================
+// WAKE LOCK (keep screen on during prayer)
+// ==========================================
+let wakeLock = null;
+
+async function requestWakeLock() {
+  try {
+    if ('wakeLock' in navigator) {
+      wakeLock = await navigator.wakeLock.request('screen');
+    }
+  } catch(e) {}
+}
+
+function releaseWakeLock() {
+  if (wakeLock) {
+    wakeLock.release().catch(() => {});
+    wakeLock = null;
+  }
+}
+
+// ==========================================
+// SALAH PRAYER TIMES (Astronomical calculation)
+// ==========================================
+// Based on standard Islamic prayer time calculation methods
+// Reference: praytimes.org methodology
+
+const SALAH_METHODS = {
+  MWL:    { fajr: 18, isha: 17 },    // Muslim World League
+  ISNA:   { fajr: 15, isha: 15 },    // Islamic Society of North America
+  Egypt:  { fajr: 19.5, isha: 17.5 },// Egyptian General Authority
+  Makkah: { fajr: 18.5, isha: 90 },  // Umm al-Qura (isha = 90 min after maghrib)
+  Karachi:{ fajr: 18, isha: 18 }     // University of Karachi
+};
+
+let salahTimes = null;
+let salahCountdownInterval = null;
+
+function toRadians(deg) { return deg * Math.PI / 180; }
+function toDegrees(rad) { return rad * 180 / Math.PI; }
+
+function sunPosition(jd) {
+  const D = jd - 2451545.0;
+  const g = (357.529 + 0.98560028 * D) % 360;
+  const q = (280.459 + 0.98564736 * D) % 360;
+  const L = (q + 1.915 * Math.sin(toRadians(g)) + 0.020 * Math.sin(toRadians(2 * g))) % 360;
+  const e = 23.439 - 0.00000036 * D;
+  const RA = toDegrees(Math.atan2(Math.cos(toRadians(e)) * Math.sin(toRadians(L)), Math.cos(toRadians(L)))) / 15;
+  const decl = toDegrees(Math.asin(Math.sin(toRadians(e)) * Math.sin(toRadians(L))));
+  const EqT = q / 15 - fixHour(RA);
+  return { declination: decl, equation: EqT };
+}
+
+function fixHour(a) {
+  a = a - 24 * Math.floor(a / 24);
+  return a < 0 ? a + 24 : a;
+}
+
+function julianDate(year, month, day) {
+  if (month <= 2) { year--; month += 12; }
+  const A = Math.floor(year / 100);
+  const B = 2 - A + Math.floor(A / 4);
+  return Math.floor(365.25 * (year + 4716)) + Math.floor(30.6001 * (month + 1)) + day + B - 1524.5;
+}
+
+function midDay(jd, lng, timezone) {
+  const sun = sunPosition(jd);
+  const eqt = sun.equation;
+  return fixHour(12 - eqt - lng / 15 + timezone);
+}
+
+function sunAngleTime(jd, angle, lat, lng, timezone, ccw) {
+  const sun = sunPosition(jd);
+  const decl = sun.declination;
+  const noon = midDay(jd, lng, timezone);
+  const t = toDegrees(Math.acos(
+    (-Math.sin(toRadians(angle)) - Math.sin(toRadians(lat)) * Math.sin(toRadians(decl))) /
+    (Math.cos(toRadians(lat)) * Math.cos(toRadians(decl)))
+  )) / 15;
+  return noon + (ccw ? -t : t);
+}
+
+function asrTime(jd, factor, lat, lng, timezone) {
+  const sun = sunPosition(jd);
+  const decl = sun.declination;
+  const angle = -toDegrees(Math.atan(1 / (factor + Math.tan(toRadians(Math.abs(lat - decl))))));
+  return sunAngleTime(jd, angle, lat, lng, timezone, false);
+}
+
+function calculateSalahTimes(lat, lng, timezone, date, methodName) {
+  const method = SALAH_METHODS[methodName] || SALAH_METHODS.MWL;
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const jd = julianDate(year, month, day);
+
+  const fajr = sunAngleTime(jd, method.fajr, lat, lng, timezone, true);
+  const sunrise = sunAngleTime(jd, 0.833, lat, lng, timezone, true);
+  const dhuhr = midDay(jd, lng, timezone) + 2/60; // 2 min after noon for safety
+  const asr = asrTime(jd, 1, lat, lng, timezone); // Shafi'i (factor=1)
+  const maghrib = sunAngleTime(jd, 0.833, lat, lng, timezone, false);
+  let isha;
+  if (method.isha > 60) {
+    // Makkah method: isha = maghrib + 90 minutes
+    isha = maghrib + method.isha / 60;
+  } else {
+    isha = sunAngleTime(jd, method.isha, lat, lng, timezone, false);
+  }
+
+  return {
+    fajr: fixHour(fajr),
+    sunrise: fixHour(sunrise),
+    dhuhr: fixHour(dhuhr),
+    asr: fixHour(asr),
+    maghrib: fixHour(maghrib),
+    isha: fixHour(isha)
+  };
+}
+
+function formatTime12(hours) {
+  const h = Math.floor(hours);
+  const m = Math.floor((hours - h) * 60);
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const h12 = h > 12 ? h - 12 : (h === 0 ? 12 : h);
+  return String(h12) + ':' + String(m).padStart(2, '0') + ' ' + ampm;
+}
+
+function hoursToMinutes(hours) {
+  return Math.floor(hours) * 60 + Math.floor((hours - Math.floor(hours)) * 60);
+}
+
+function initSalah() {
+  if (!state.salahMethod) state.salahMethod = 'MWL';
+  if (!state.salahPrayed) state.salahPrayed = {};
+
+  document.getElementById('calc-method').value = state.salahMethod;
+
+  // Try to get location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+        const timezone = -new Date().getTimezoneOffset() / 60;
+        salahTimes = calculateSalahTimes(lat, lng, timezone, new Date(), state.salahMethod);
+        renderSalahTimes();
+        startSalahCountdown();
+        // Reverse geocode for display (simple timezone-based)
+        document.getElementById('salah-location').textContent = `Lat ${lat.toFixed(2)}, Lng ${lng.toFixed(2)}`;
+      },
+      () => {
+        document.getElementById('salah-location').innerHTML =
+          '<span class="text-yellow-400">Location needed for prayer times. </span>' +
+          '<button onclick="initSalah()" class="text-teal-500 underline">Retry</button>';
+      },
+      { enableHighAccuracy: false, timeout: 10000 }
+    );
+  }
+}
+
+function renderSalahTimes() {
+  if (!salahTimes) return;
+
+  const prayers = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
+  prayers.forEach(p => {
+    document.getElementById('time-' + p).textContent = formatTime12(salahTimes[p]);
+  });
+
+  // Update prayed checkmarks for today
+  const today = getDateKey();
+  const todayPrayed = (state.salahPrayed && state.salahPrayed[today]) || [];
+
+  prayers.forEach(p => {
+    const btn = document.getElementById('check-' + p);
+    if (todayPrayed.includes(p)) {
+      btn.innerHTML = '<svg class="w-4 h-4 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>';
+      btn.classList.add('bg-teal-500/20', 'border-teal-500');
+    } else {
+      btn.innerHTML = '';
+      btn.classList.remove('bg-teal-500/20', 'border-teal-500');
+    }
+  });
+
+  // Update progress
+  const count = todayPrayed.length;
+  document.getElementById('salah-progress-text').textContent = count + '/5';
+  document.getElementById('salah-progress-bar').style.width = (count / 5 * 100) + '%';
+
+  // Highlight next prayer
+  highlightNextPrayer();
+}
+
+function highlightNextPrayer() {
+  if (!salahTimes) return;
+
+  const now = new Date();
+  const currentHours = now.getHours() + now.getMinutes() / 60 + now.getSeconds() / 3600;
+
+  const prayers = [
+    { name: 'Fajr', key: 'fajr', time: salahTimes.fajr },
+    { name: 'Dhuhr', key: 'dhuhr', time: salahTimes.dhuhr },
+    { name: 'Asr', key: 'asr', time: salahTimes.asr },
+    { name: 'Maghrib', key: 'maghrib', time: salahTimes.maghrib },
+    { name: 'Isha', key: 'isha', time: salahTimes.isha }
+  ];
+
+  let next = null;
+  for (const p of prayers) {
+    if (p.time > currentHours) {
+      next = p;
+      break;
+    }
+  }
+
+  // If no prayer left today, next is Fajr tomorrow
+  if (!next) {
+    next = { name: 'Fajr', key: 'fajr', time: salahTimes.fajr + 24 };
+  }
+
+  document.getElementById('salah-next-name').textContent = next.name;
+  document.getElementById('salah-next-time').textContent = formatTime12(next.time % 24);
+
+  // Countdown
+  const diffMinutes = (next.time - currentHours) * 60;
+  const hrs = Math.floor(diffMinutes / 60);
+  const mins = Math.floor(diffMinutes % 60);
+  document.getElementById('salah-countdown').textContent =
+    hrs > 0 ? `in ${hrs}h ${mins}m` : `in ${mins}m`;
+
+  // Highlight active row
+  document.querySelectorAll('.salah-row').forEach(row => {
+    row.classList.remove('border', 'border-teal-500/30');
+  });
+  const activeRow = document.querySelector(`.salah-row[data-prayer="${next.key}"]`);
+  if (activeRow) {
+    activeRow.classList.add('border', 'border-teal-500/30');
+  }
+}
+
+function markSalahPrayed(prayer) {
+  const today = getDateKey();
+  if (!state.salahPrayed) state.salahPrayed = {};
+  if (!state.salahPrayed[today]) state.salahPrayed[today] = [];
+
+  const idx = state.salahPrayed[today].indexOf(prayer);
+  if (idx === -1) {
+    state.salahPrayed[today].push(prayer);
+    // Also record as prayer in the streak system (5 min per salah)
+    recordPrayer(5);
+    if (navigator.vibrate) navigator.vibrate(50);
+  } else {
+    // Toggle off
+    state.salahPrayed[today].splice(idx, 1);
+  }
+
+  saveState();
+  renderSalahTimes();
+
+  // Check if all 5 complete
+  if (state.salahPrayed[today].length === 5) {
+    showToast('All 5 prayers complete!', '🕌');
+  }
+}
+
+function saveSalahMethod() {
+  state.salahMethod = document.getElementById('calc-method').value;
+  saveState();
+  initSalah(); // Recalculate
+}
+
+function startSalahCountdown() {
+  if (salahCountdownInterval) clearInterval(salahCountdownInterval);
+  salahCountdownInterval = setInterval(() => {
+    if (currentTab === 'salah') highlightNextPrayer();
+  }, 30000); // Update every 30 seconds
+}
+
+// ==========================================
+// SERVICE WORKER REGISTRATION
+// ==========================================
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(err => {
+      console.log('SW registration failed:', err);
+    });
+  });
+}
+
+// ==========================================
+// INITIALIZATION
+// ==========================================
+function init() {
+  // Show daily verse
+  const verse = getDailyVerse();
+  document.getElementById('verse-text').textContent = `"${verse.text}"`;
+  document.getElementById('verse-source').textContent = `- ${verse.source}`;
+
+  // Set initial UI state
+  selectDuration(state.selectedDuration || state.defaultDuration);
+  selectSound(state.selectedSound);
+  updateTasbihDisplay();
+  applyTheme();
+
+  // Set default duration dropdown
+  document.getElementById('default-duration').value = state.defaultDuration;
+
+  // Set notification status
+  if (state.notificationsEnabled && Notification.permission === 'granted') {
+    document.getElementById('notif-status').textContent = 'Enabled';
+    document.getElementById('notif-btn').textContent = 'Enabled';
+    document.getElementById('notif-btn').classList.add('opacity-50');
+  }
+
+  // Set tasbih target buttons
+  document.querySelectorAll('.target-btn').forEach(btn => {
+    if (parseInt(btn.dataset.target) === state.tasbihTarget) {
+      btn.classList.add('bg-teal-500/20', 'text-teal-500', 'border-teal-500/30');
+    }
+  });
+
+  // Show timer tab by default
+  showTab('timer');
+
+  // Splash screen
+  setTimeout(() => {
+    document.getElementById('splash').style.opacity = '0';
+    document.getElementById('app').style.opacity = '1';
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+    }, 500);
+  }, 800);
+}
+
+document.addEventListener('DOMContentLoaded', init);
+
+// Prevent pull-to-refresh on mobile
+document.body.addEventListener('touchmove', (e) => {
+  if (e.touches.length > 1) e.preventDefault();
+}, { passive: false });
+</script>
+</body>
+</html>

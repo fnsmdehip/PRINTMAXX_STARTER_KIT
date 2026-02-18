@@ -1,0 +1,6 @@
+intel_id,source_type,source_name,date_captured,category,platform,alpha_count,content_generated,status,notes
+CI001,x_bookmarks,YouTube filtered,2026-01-28,YOUTUBE_AUTOMATION,twitter,74,TRUE,COMPLETE,"74 YouTube alpha entries extracted and Zero Waste content generated"
+CI002,web_search,YouTube 2026 tactics,2026-01-28,YOUTUBE_COMPLIANCE,web,3,TRUE,COMPLETE,"2026 policy changes, algorithm shifts, monetization rules"
+CI003,virlo_api,TikTok viral daily,PENDING,VIRAL_CONTENT,tiktok,0,FALSE,SETUP_PENDING,"Virlo API setup created, needs API key"
+CI004,x_bookmarks,Copy psychology filtered,PENDING,COPY_PSYCHOLOGY,twitter,0,FALSE,PENDING,"Need to scrape psychology/copywriting bookmarks"
+CI005,apify,TikTok trending,PENDING,VIRAL_CONTENT,tiktok,0,FALSE,SETUP_PENDING,"Alternative to Virlo if API not available"

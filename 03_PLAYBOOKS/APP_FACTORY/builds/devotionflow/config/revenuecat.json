@@ -1,0 +1,128 @@
+{
+  "app_name": "DailyDevotion",
+  "platform": "android",
+  "api_key": "REPLACE_WITH_REVENUECAT_API_KEY",
+
+  "products": {
+    "subscription": {
+      "monthly": {
+        "product_id": "dailydevotion_monthly",
+        "price": 4.99,
+        "currency": "USD",
+        "duration": "P1M",
+        "trial_period": null,
+        "entitlements": ["premium"]
+      },
+      "yearly": {
+        "product_id": "dailydevotion_yearly",
+        "price": 29.99,
+        "currency": "USD",
+        "duration": "P1Y",
+        "trial_period": "P7D",
+        "entitlements": ["premium"]
+      }
+    },
+    "non_consumable": {
+      "lifetime": {
+        "product_id": "dailydevotion_lifetime",
+        "price": 79.99,
+        "currency": "USD",
+        "entitlements": ["premium"],
+        "enabled": false
+      }
+    }
+  },
+
+  "entitlements": {
+    "premium": {
+      "description": "Full access to all premium features",
+      "features": [
+        "unlimited_habits",
+        "all_templates",
+        "advanced_stats",
+        "multiple_translations",
+        "data_export",
+        "no_ads"
+      ]
+    }
+  },
+
+  "offerings": {
+    "default": {
+      "identifier": "default",
+      "description": "Standard pricing",
+      "packages": [
+        {
+          "identifier": "$rc_monthly",
+          "product_id": "dailydevotion_monthly"
+        },
+        {
+          "identifier": "$rc_annual",
+          "product_id": "dailydevotion_yearly"
+        }
+      ]
+    }
+  },
+
+  "paywall_config": {
+    "title": "Unlock DailyDevotion Premium",
+    "subtitle": "Deepen your spiritual growth",
+    "features": [
+      {
+        "icon": "infinity",
+        "title": "Unlimited habits",
+        "description": "Track as many disciplines as you want"
+      },
+      {
+        "icon": "template",
+        "title": "All templates",
+        "description": "Access all 10+ faith habit templates"
+      },
+      {
+        "icon": "chart",
+        "title": "Advanced statistics",
+        "description": "Deep insights into your spiritual growth"
+      },
+      {
+        "icon": "book",
+        "title": "Multiple translations",
+        "description": "Choose your preferred Bible translation"
+      },
+      {
+        "icon": "download",
+        "title": "Data export",
+        "description": "Backup and export your habit data"
+      },
+      {
+        "icon": "no_ads",
+        "title": "No advertisements",
+        "description": "Distraction-free experience"
+      }
+    ],
+    "cta_text": "Start Free Trial",
+    "restore_text": "Restore Purchases",
+    "terms_text": "Subscription auto-renews unless cancelled 24 hours before period end."
+  },
+
+  "free_tier_limits": {
+    "max_habits": 5,
+    "templates_available": ["morning_prayer", "scripture_reading", "gratitude_journal"],
+    "show_ads": true
+  },
+
+  "notes": {
+    "setup": [
+      "1. Create RevenueCat account at app.revenuecat.com",
+      "2. Create new app, select Android platform",
+      "3. Get API key from RevenueCat dashboard",
+      "4. Replace REPLACE_WITH_REVENUECAT_API_KEY above",
+      "5. Create products in Google Play Console with matching IDs",
+      "6. Connect Google Play to RevenueCat"
+    ],
+    "testing": [
+      "Use license testers in Play Console for testing",
+      "Subscriptions renew quickly in sandbox mode",
+      "Test restore purchases functionality"
+    ]
+  }
+}

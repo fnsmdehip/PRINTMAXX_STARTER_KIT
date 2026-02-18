@@ -1,0 +1,6 @@
+Test_ID,Hypothesis,Variable,Variant_A,Variant_B,Success_Metric,Start_Date,End_Date,Winner,Result_Notes
+EXP_001,Question hooks drive higher engagement than statement hooks on Twitter,Hook style,Statement: 'Most people waste 2hrs on email',Question: 'Why do you spend 2hrs on email?',Engagement rate (likes+comments+shares/impressions),2026-01-20,2026-01-27,,Running concurrently on AI utilities account
+EXP_002,Story format performs better than static posts for faith content,Content format,Static IG post with quote,IG Story series (3-slide narrative),Story completion rate + link clicks,2026-01-21,2026-01-28,,"Testing on @FaithStreakCo, same topic both formats"
+EXP_003,Posting at 6am vs 9am affects reach for fitness content,Post timing,6:00 AM EST,9:00 AM EST,Reach in first 3 hours,2026-01-22,2026-02-05,,Will test same content type on different days
+EXP_004,CTA placement (middle vs end) impacts click-through on threads,CTA position,CTA in tweet 4/7 (middle),CTA in final tweet 7/7 (end),Click-through rate to landing page,2026-01-23,2026-01-30,,"AI utilities thread format, same offer"
+EXP_005,Personal transformation story vs tactical tips for email capture,Lead magnet angle,Free: '7-Day Faith Challenge',Free: 'Faith Habit Tracker Template',Email opt-in conversion rate,2026-01-19,2026-01-26,,Both running on Faith niche landing page with 50/50 split

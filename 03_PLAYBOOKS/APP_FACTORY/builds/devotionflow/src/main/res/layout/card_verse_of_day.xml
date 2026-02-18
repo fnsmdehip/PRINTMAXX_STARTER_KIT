@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Verse of the Day Card
+
+    Displays the daily Bible verse with:
+    - Dove icon
+    - Verse text (italic)
+    - Reference
+    - Share button
+
+    Usage: Include in main activity/fragment
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardVerseOfDay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="12dp"
+    app:cardBackgroundColor="@color/primary_light"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Dove Icon -->
+        <ImageView
+            android:id="@+id/iconDove"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_dove"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/text_on_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleVerse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/title_verse_of_day"
+            android:textAppearance="@style/TextAppearance.DailyDevotion.Title"
+            android:textColor="@color/text_on_primary"
+            app:layout_constraintStart_toEndOf="@id/iconDove"
+            app:layout_constraintTop_toTopOf="@id/iconDove"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Translation Badge -->
+        <TextView
+            android:id="@+id/textTranslation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/text_on_primary"
+            android:textSize="12sp"
+            android:alpha="0.8"
+            tools:text="WEB"
+            app:layout_constraintStart_toEndOf="@id/iconDove"
+            app:layout_constraintTop_toBottomOf="@id/titleVerse" />
+
+        <!-- Verse Text -->
+        <TextView
+            android:id="@+id/textVerseContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.DailyDevotion.Verse"
+            android:textColor="@color/text_on_primary"
+            android:lineSpacingMultiplier="1.4"
+            tools:text="\"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.\""
+            app:layout_constraintTop_toBottomOf="@id/iconDove"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Reference -->
+        <TextView
+            android:id="@+id/textVerseReference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAppearance="@style/TextAppearance.DailyDevotion.VerseReference"
+            android:textColor="@color/text_on_primary"
+            tools:text="John 3:16"
+            app:layout_constraintTop_toBottomOf="@id/textVerseContent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Action Buttons Row -->
+        <LinearLayout
+            android:id="@+id/layoutActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            app:layout_constraintTop_toBottomOf="@id/textVerseReference"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Refresh Button (subtle) -->
+            <ImageButton
+                android:id="@+id/buttonRefresh"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_refresh"
+                android:contentDescription="@string/btn_refresh_verse"
+                app:tint="@color/text_on_primary"
+                android:alpha="0.7" />
+
+            <!-- Share Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonShareVerse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/btn_share_verse"
+                android:textColor="@color/primary"
+                app:backgroundTint="@color/text_on_primary"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_share"
+                app:iconTint="@color/primary"
+                style="@style/Widget.Material3.Button" />
+        </LinearLayout>
+
+        <!-- Loading Overlay -->
+        <FrameLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/primary_light"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/text_on_primary" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

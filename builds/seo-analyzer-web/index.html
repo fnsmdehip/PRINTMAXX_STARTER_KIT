@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteScore Pro - Local SEO Competitor Analyzer</title>
+  <meta name="description" content="See how your website stacks up against local competitors. Free SEO analysis for dental, legal, real estate, and more.">
+  <meta property="og:title" content="SiteScore Pro - Local SEO Competitor Analyzer">
+  <meta property="og:description" content="Analyze your website against local competitors. 30,200+ businesses scored.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --card: #12121a;
+      --border: #1e1e2e;
+      --text: #e4e4e7;
+      --muted: #71717a;
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #eab308;
+      --orange: #f97316;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 2.4em;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--accent-light); }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1em;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 24px 0;
+      margin: 20px 0 40px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: var(--accent-light);
+    }
+    .stat-label { font-size: 0.85em; color: var(--muted); }
+
+    /* Search area */
+    .search-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+    .search-section h2 {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+    .search-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 12px;
+      align-items: end;
+    }
+    .field label {
+      display: block;
+      font-size: 0.85em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .field select, .field input {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.95em;
+    }
+    .btn-analyze {
+      padding: 10px 24px;
+      background: var(--accent);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.95em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .btn-analyze:active { background: var(--accent-light); }
+
+    /* Report card */
+    .report {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .report-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .report-header h3 { font-size: 1.1em; }
+    .report-header .location { color: var(--muted); font-size: 0.9em; }
+    .score-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+    .score-bad { background: rgba(239,68,68,0.15); color: var(--red); }
+    .score-mid { background: rgba(234,179,8,0.15); color: var(--yellow); }
+    .score-ok { background: rgba(249,115,22,0.15); color: var(--orange); }
+    .score-good { background: rgba(34,197,94,0.15); color: var(--green); }
+
+    .report-body { padding: 24px; }
+
+    /* Score bars */
+    .score-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .score-label {
+      width: 120px;
+      font-size: 0.9em;
+      color: var(--muted);
+    }
+    .score-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: var(--bg);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .score-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.8s ease;
+    }
+    .score-val {
+      width: 50px;
+      text-align: right;
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+
+    /* Rankings */
+    .rank-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .rank-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+    .rank-num {
+      font-size: 1.6em;
+      font-weight: 700;
+    }
+    .rank-of { color: var(--muted); font-size: 0.85em; }
+
+    /* Issues */
+    .issues { margin-top: 20px; }
+    .issues h4 {
+      font-size: 0.95em;
+      margin-bottom: 12px;
+      color: var(--red);
+    }
+    .issue-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9em;
+    }
+    .issue-icon { color: var(--red); flex-shrink: 0; }
+    .issue-text { color: var(--muted); }
+
+    /* Competitor comparison */
+    .competitor-section {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .competitor-section h4 {
+      font-size: 0.95em;
+      margin-bottom: 12px;
+      color: var(--accent-light);
+    }
+    .comp-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9em;
+    }
+    .comp-name { flex: 1; }
+    .comp-score {
+      font-weight: 600;
+      margin-left: 12px;
+    }
+    .advantage-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 4px;
+      font-size: 0.8em;
+      color: var(--green);
+      margin: 2px 4px 2px 0;
+    }
+
+    /* Email snippet */
+    .email-section {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .email-section h4 {
+      font-size: 0.95em;
+      margin-bottom: 12px;
+    }
+    .email-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.9em;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .cta-section h2 { font-size: 1.6em; margin-bottom: 12px; }
+    .cta-section p { color: var(--muted); margin-bottom: 24px; }
+    .btn-cta {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--accent);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.05em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-cta:active { background: var(--accent-light); }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 0.85em;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.6em; }
+      .stats-bar { gap: 20px; flex-wrap: wrap; }
+      .search-grid { grid-template-columns: 1fr; }
+      .rank-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <section class="hero">
+      <div class="hero-badge">Free competitive analysis</div>
+      <h1>See how your website stacks up <span>against local competitors</span></h1>
+      <p>We analyzed 30,200+ local business websites across 5,027 cities. Find out where you rank and what you're missing.</p>
+    </section>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-num">30,200</div>
+        <div class="stat-label">businesses analyzed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5,027</div>
+        <div class="stat-label">cities covered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">industries</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">49</div>
+        <div class="stat-label">states</div>
+      </div>
+    </div>
+
+    <section class="search-section">
+      <h2>See a sample competitive report</h2>
+      <div class="search-grid">
+        <div class="field">
+          <label>Industry</label>
+          <select id="industry">
+            <option value="dental">Dental</option>
+            <option value="legal">Legal</option>
+            <option value="real_estate">Real Estate</option>
+            <option value="chiropractic">Chiropractic</option>
+            <option value="beauty">Beauty / Salon</option>
+            <option value="veterinary">Veterinary</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>City</label>
+          <select id="city">
+            <option value="new_york">New York, NY</option>
+            <option value="san_diego">San Diego, CA</option>
+            <option value="houston">Houston, TX</option>
+            <option value="chicago">Chicago, IL</option>
+            <option value="oxford">Oxford, MI</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Your website</label>
+          <input type="text" id="website" placeholder="example.com">
+        </div>
+        <button class="btn-analyze" onclick="showReport()">Analyze</button>
+      </div>
+    </section>
+
+    <!-- Sample report -->
+    <div id="report-area">
+      <div class="report">
+        <div class="report-header">
+          <div>
+            <h3>Oxford Family DDS</h3>
+            <div class="location">oxfordfamilydds.com -- Oxford, MI -- Dental</div>
+          </div>
+          <div class="score-badge score-ok">77/100</div>
+        </div>
+        <div class="report-body">
+          <div class="score-row">
+            <div class="score-label">Design</div>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:100%;background:var(--green)"></div></div>
+            <div class="score-val">25/25</div>
+          </div>
+          <div class="score-row">
+            <div class="score-label">SEO</div>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:var(--yellow)"></div></div>
+            <div class="score-val">18/25</div>
+          </div>
+          <div class="score-row">
+            <div class="score-label">AI Readiness</div>
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:60%;background:var(--orange)"></div></div>
+            <div class="score-val">15/25</div>
+          </div>
+
+          <div class="rank-grid">
+            <div class="rank-card">
+              <div class="rank-num" style="color:var(--red)">#179</div>
+              <div class="rank-of">out of 179 in Oxford, MI</div>
+              <div style="color:var(--red);font-size:0.85em;margin-top:4px">Bottom of local rankings</div>
+            </div>
+            <div class="rank-card">
+              <div class="rank-num" style="color:var(--orange)">#457</div>
+              <div class="rank-of">out of 457 in Michigan</div>
+              <div style="color:var(--orange);font-size:0.85em;margin-top:4px">Bottom half statewide</div>
+            </div>
+          </div>
+
+          <div class="issues">
+            <h4>10 critical issues found</h4>
+            <div class="issue-item">
+              <span class="issue-icon">x</span>
+              <span class="issue-text">No SSL certificate (browsers show "Not Secure" warning to patients)</span>
+            </div>
+            <div class="issue-item">
+              <span class="issue-icon">x</span>
+              <span class="issue-text">Not mobile-friendly (60%+ of searches happen on phones)</span>
+            </div>
+            <div class="issue-item">
+              <span class="issue-icon">x</span>
+              <span class="issue-text">Missing meta description (Google shows random text from your page)</span>
+            </div>
+            <div class="issue-item">
+              <span class="issue-icon">x</span>
+              <span class="issue-text">No schema markup (invisible to Google rich results)</span>
+            </div>
+            <div class="issue-item">
+              <span class="issue-icon">x</span>
+              <span class="issue-text">No FAQ section (missing AI Overview opportunity)</span>
+            </div>
+            <div class="issue-item">
+              <span class="issue-icon">x</span>
+              <span class="issue-text">Missing image alt tags (hurts SEO and accessibility)</span>
+            </div>
+          </div>
+
+          <div class="competitor-section">
+            <h4>Top local competitors</h4>
+            <div class="comp-row">
+              <span class="comp-name">Dr. Erika Johnson - Endodontist</span>
+              <span class="comp-score" style="color:var(--orange)">60/100</span>
+            </div>
+            <div class="comp-row">
+              <span class="comp-name">OakDent Smiles</span>
+              <span class="comp-score" style="color:var(--orange)">56/100</span>
+            </div>
+            <div class="comp-row">
+              <span class="comp-name">Mark W Langberg, DDS, MAGD, PC</span>
+              <span class="comp-score" style="color:var(--orange)">56/100</span>
+            </div>
+            <div class="comp-row">
+              <span class="comp-name">Mayfair Dental Associates</span>
+              <span class="comp-score" style="color:var(--orange)">56/100</span>
+            </div>
+            <div class="comp-row">
+              <span class="comp-name">Ultimate Family Dental</span>
+              <span class="comp-score" style="color:var(--yellow)">51/100</span>
+            </div>
+            <div style="margin-top:12px">
+              <span class="advantage-tag">They have: SSL</span>
+              <span class="advantage-tag">They have: Mobile design</span>
+              <span class="advantage-tag">They have: FAQ section</span>
+              <span class="advantage-tag">They have: Alt tags</span>
+            </div>
+          </div>
+
+          <div class="email-section">
+            <h4>What this means for your practice</h4>
+            <div class="email-box">
+              I analyzed 179 dental practice websites in Oxford, MI. Your site (oxfordfamilydds.com) scored 77/100 on web presence. Biggest issues: no SSL certificate (browsers show "Not Secure"), not mobile-friendly (60%+ of searches are mobile). Your top local competitor (Dr. Erika Johnson) scores 60/100. They have an FAQ section that shows up in AI Overviews, SSL certificate, and mobile-friendly responsive design. You don't. When patients search Google for a dentist in Oxford, your competitors are showing up first.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="cta-section">
+      <h2>Want a full competitive analysis for your business?</h2>
+      <p>We'll analyze your website, compare it to every competitor in your city, and give you a specific action plan to outrank them.</p>
+      <a href="mailto:hello@printmaxx.co?subject=Competitive%20Analysis%20Request&body=Hi%2C%20I'd%20like%20a%20competitive%20analysis%20for%20my%20business.%0A%0ABusiness%20name%3A%0AWebsite%3A%0ACity%3A%0AIndustry%3A" class="btn-cta">Get your free analysis</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>SiteScore Pro. 30,200+ businesses analyzed across 49 states.</p>
+  <!-- PRINTMAXX LEGAL LINKS -->
+<div style="margin-top:12px; font-size:12px; opacity:0.85; text-align:center;">
+  <a href="marketing-disclosure.html">Marketing Disclosure</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="privacy.html">Privacy</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="terms.html">Terms</a>
+</div>
+
+</footer>
+
+  <script>
+    function showReport() {
+      const el = document.getElementById('report-area');
+      el.style.opacity = '0';
+      setTimeout(() => { el.style.opacity = '1'; }, 100);
+    }
+  </script>
+</body>
+</html>

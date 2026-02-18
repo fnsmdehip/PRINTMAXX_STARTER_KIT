@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopMetrics - Analytics Dashboard</title>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --sidebar-w: 240px;
+  --header-h: 64px;
+  --bg: #f5f7fa;
+  --white: #ffffff;
+  --sidebar-bg: #1e2535;
+  --sidebar-hover: #2a3346;
+  --sidebar-active: #3366ff;
+  --text-primary: #1a1d23;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --text-sidebar: #a0aec0;
+  --accent: #3366ff;
+  --accent-light: #ebf0ff;
+  --green: #10b981;
+  --green-light: #ecfdf5;
+  --red: #ef4444;
+  --red-light: #fef2f2;
+  --orange: #f59e0b;
+  --orange-light: #fffbeb;
+  --purple: #8b5cf6;
+  --purple-light: #f5f3ff;
+  --border: #e5e7eb;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --transition: 0.2s ease;
+}
+
+html { font-size: 15px; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: var(--sidebar-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-brand {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  gap: 10px;
+}
+
+.sidebar-brand-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-brand-icon svg { width: 18px; height: 18px; }
+
+.sidebar-brand-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+.sidebar-brand-text span { color: var(--accent); }
+
+.sidebar-section {
+  padding: 20px 12px 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.25);
+}
+
+.sidebar-nav { flex: 1; padding: 8px 12px; }
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--text-sidebar);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.sidebar-link:hover {
+  background: var(--sidebar-hover);
+  color: #fff;
+}
+
+.sidebar-link.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.sidebar-link.active svg { opacity: 1; }
+
+.sidebar-link svg {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.sidebar-link:hover svg { opacity: 1; }
+
+.sidebar-link .badge {
+  margin-left: auto;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  line-height: 1.4;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.sidebar-user:hover { background: var(--sidebar-hover); }
+
+.sidebar-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.sidebar-user-info { overflow: hidden; }
+
+.sidebar-user-name {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-role {
+  color: var(--text-sidebar);
+  font-size: 0.72rem;
+}
+
+/* ===== MAIN AREA ===== */
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+  height: var(--header-h);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+}
+
+.menu-toggle:hover { background: var(--bg); }
+.menu-toggle svg { width: 22px; height: 22px; }
+
+.header-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.header-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.date-picker:hover { border-color: var(--accent); }
+.date-picker svg { width: 16px; height: 16px; color: var(--text-secondary); }
+
+.header-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  position: relative;
+}
+
+.header-btn:hover { background: var(--accent-light); color: var(--accent); }
+
+.header-btn svg { width: 18px; height: 18px; }
+
+.header-btn .notif-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1;
+  padding: 24px 28px 40px;
+}
+
+/* ===== STAT CARDS ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.stat-card:nth-child(1)::after { background: var(--accent); }
+.stat-card:nth-child(2)::after { background: var(--green); }
+.stat-card:nth-child(3)::after { background: var(--purple); }
+.stat-card:nth-child(4)::after { background: var(--orange); }
+
+.stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg { width: 18px; height: 18px; }
+
+.stat-icon.blue { background: var(--accent-light); color: var(--accent); }
+.stat-icon.green { background: var(--green-light); color: var(--green); }
+.stat-icon.purple { background: var(--purple-light); color: var(--purple); }
+.stat-icon.orange { background: var(--orange-light); color: var(--orange); }
+
+.stat-value {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.stat-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.stat-change.up { background: var(--green-light); color: var(--green); }
+.stat-change.down { background: var(--red-light); color: var(--red); }
+
+.stat-change svg { width: 12px; height: 12px; }
+
+.stat-period {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* ===== GRID LAYOUT ===== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 18px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.card-action {
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.card-action:hover { background: var(--accent-light); }
+
+.card-body { padding: 20px 22px; }
+
+/* ===== CHART ===== */
+.chart-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.chart-btn {
+  padding: 5px 12px;
+  border: none;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.chart-btn:hover { background: var(--bg); }
+.chart-btn.active { background: var(--accent); color: #fff; }
+
+.chart-summary {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.chart-summary-item { }
+
+.chart-summary-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.chart-summary-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chart-summary-value .sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.chart-summary-value .sub.up { color: var(--green); }
+.chart-summary-value .sub.down { color: var(--red); }
+
+.chart-area {
+  position: relative;
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  padding-bottom: 30px;
+  padding-left: 48px;
+}
+
+.chart-y-axis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 30px;
+  width: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-y-label {
+  font-size: 0.68rem;
+  color: var(--text-light);
+  text-align: right;
+  padding-right: 8px;
+  font-weight: 500;
+}
+
+.chart-gridlines {
+  position: absolute;
+  left: 48px;
+  right: 0;
+  top: 0;
+  bottom: 30px;
+}
+
+.chart-gridline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex: 1;
+  height: 100%;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.chart-bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.chart-bar {
+  width: 100%;
+  max-width: 40px;
+  border-radius: 5px 5px 2px 2px;
+  background: var(--accent);
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 4px;
+}
+
+.chart-bar:hover {
+  filter: brightness(1.12);
+}
+
+.chart-bar-secondary {
+  background: #c7d7fe;
+}
+
+.chart-bar .tooltip {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sidebar-bg);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.chart-bar .tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--sidebar-bg);
+}
+
+.chart-bar:hover .tooltip { opacity: 1; }
+
+.chart-bar-label {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.73rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.chart-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.chart-legend-dot.primary { background: var(--accent); }
+.chart-legend-dot.secondary { background: #c7d7fe; }
+
+/* ===== TABLE ===== */
+.table-wrapper { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+td {
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+tr:last-child td { border-bottom: none; }
+
+tr:hover td { background: #fafbfc; }
+
+.order-id {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+.customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.customer-name { font-weight: 600; }
+.customer-email { font-size: 0.72rem; color: var(--text-light); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.badge-completed { background: var(--green-light); color: var(--green); }
+.badge-completed::before { background: var(--green); }
+
+.badge-processing { background: var(--accent-light); color: var(--accent); }
+.badge-processing::before { background: var(--accent); }
+
+.badge-shipped { background: var(--orange-light); color: var(--orange); }
+.badge-shipped::before { background: var(--orange); }
+
+.badge-cancelled { background: var(--red-light); color: var(--red); }
+.badge-cancelled::before { background: var(--red); }
+
+.amount { font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ===== TOP PRODUCTS ===== */
+.product-list { display: flex; flex-direction: column; gap: 16px; }
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.product-rank {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.product-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.product-info { flex: 1; min-width: 0; }
+
+.product-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-sku {
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.product-stats { text-align: right; flex-shrink: 0; }
+
+.product-revenue {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.product-units {
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.product-bar-track {
+  width: 100%;
+  height: 6px;
+  background: var(--bg);
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.product-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+.product-item:nth-child(1) .product-bar-fill { background: var(--accent); }
+.product-item:nth-child(2) .product-bar-fill { background: var(--green); }
+.product-item:nth-child(3) .product-bar-fill { background: var(--purple); }
+.product-item:nth-child(4) .product-bar-fill { background: var(--orange); }
+.product-item:nth-child(5) .product-bar-fill { background: var(--red); }
+
+/* ===== OVERLAY ===== */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 90;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .dashboard-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .date-picker span { display: none; }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open { transform: translateX(0); }
+
+  .sidebar-overlay.open { display: block; }
+
+  .main { margin-left: 0; }
+
+  .menu-toggle { display: flex; }
+
+  .content { padding: 18px 16px 32px; }
+
+  .header { padding: 0 16px; }
+
+  .header-subtitle { display: none; }
+
+  .chart-area { height: 180px; }
+
+  .chart-summary { gap: 16px; flex-wrap: wrap; }
+}
+
+@media (max-width: 540px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .stat-card { padding: 16px; }
+
+  .stat-value { font-size: 1.35rem; }
+
+  .stat-icon { width: 32px; height: 32px; }
+
+  .stat-icon svg { width: 14px; height: 14px; }
+
+  th:nth-child(3), td:nth-child(3) { display: none; }
+
+  .chart-bar { max-width: 28px; }
+}
+
+@media (max-width: 400px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR OVERLAY (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="sidebar-brand-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+    </div>
+    <div class="sidebar-brand-text">Shop<span>Metrics</span></div>
+  </div>
+
+  <div class="sidebar-section">Main</div>
+
+  <nav class="sidebar-nav">
+    <a href="#" class="sidebar-link active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Dashboard
+    </a>
+    <a href="#" class="sidebar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      Orders
+      <span class="badge" style="background:var(--red);color:#fff;font-size:0.65rem;padding:2px 7px;border-radius:10px;margin-left:auto;">12</span>
+    </a>
+    <a href="#" class="sidebar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27,6.96 12,12.01 20.73,6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      Products
+    </a>
+    <a href="#" class="sidebar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      Customers
+    </a>
+
+    <div class="sidebar-section" style="padding-left:0;padding-right:0;">Analytics</div>
+
+    <a href="#" class="sidebar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      Reports
+    </a>
+    <a href="#" class="sidebar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+      Real-time
+    </a>
+
+    <div class="sidebar-section" style="padding-left:0;padding-right:0;">Settings</div>
+
+    <a href="#" class="sidebar-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      Settings
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="sidebar-user">
+      <div class="sidebar-user-avatar">JD</div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name">James Dawson</div>
+        <div class="sidebar-user-role">Store Admin</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div>
+        <div class="header-title">Dashboard</div>
+        <div class="header-subtitle">Track your store performance and growth</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="date-picker">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Feb 1 - Feb 12, 2026</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><polyline points="6,9 12,15 18,9"/></svg>
+      </div>
+      <button class="header-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="header-btn" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        <span class="notif-dot"></span>
+      </button>
+      <div class="header-avatar">JD</div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <!-- STAT CARDS -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Total Revenue</span>
+          <div class="stat-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">$47,382</div>
+        <div class="stat-change up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
+          +12.5%
+        </div>
+        <div class="stat-period">vs. previous period</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Total Orders</span>
+          <div class="stat-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">1,247</div>
+        <div class="stat-change up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
+          +8.2%
+        </div>
+        <div class="stat-period">vs. previous period</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Customers</span>
+          <div class="stat-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">856</div>
+        <div class="stat-change up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
+          +5.3%
+        </div>
+        <div class="stat-period">vs. previous period</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Avg. Order Value</span>
+          <div class="stat-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+          </div>
+        </div>
+        <div class="stat-value">$38.00</div>
+        <div class="stat-change down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6,9 12,15 18,9"/></svg>
+          -2.1%
+        </div>
+        <div class="stat-period">vs. previous period</div>
+      </div>
+    </div>
+
+    <!-- CHART + TOP PRODUCTS -->
+    <div class="dashboard-grid">
+      <!-- REVENUE CHART -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Revenue Overview</div>
+          <div class="chart-controls">
+            <button class="chart-btn active">7 Days</button>
+            <button class="chart-btn">30 Days</button>
+            <button class="chart-btn">90 Days</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="chart-summary">
+            <div class="chart-summary-item">
+              <div class="chart-summary-label">This week</div>
+              <div class="chart-summary-value">$12,486 <span class="sub up">+12.5%</span></div>
+            </div>
+            <div class="chart-summary-item">
+              <div class="chart-summary-label">Last week</div>
+              <div class="chart-summary-value">$11,098 <span class="sub down">-3.1%</span></div>
+            </div>
+          </div>
+
+          <div class="chart-area">
+            <div class="chart-y-axis">
+              <span class="chart-y-label">$3k</span>
+              <span class="chart-y-label">$2k</span>
+              <span class="chart-y-label">$1k</span>
+              <span class="chart-y-label">$0</span>
+            </div>
+            <div class="chart-gridlines">
+              <div class="chart-gridline" style="top:0%"></div>
+              <div class="chart-gridline" style="top:33%"></div>
+              <div class="chart-gridline" style="top:66%"></div>
+              <div class="chart-gridline" style="top:100%"></div>
+            </div>
+            <div class="chart-bars">
+              <div class="chart-bar-group">
+                <div style="display:flex;gap:4px;align-items:flex-end;width:100%;justify-content:center;height:100%;">
+                  <div class="chart-bar" style="height:58%;width:45%;"><span class="tooltip">$1,740</span></div>
+                  <div class="chart-bar chart-bar-secondary" style="height:42%;width:45%;"><span class="tooltip">$1,260</span></div>
+                </div>
+                <span class="chart-bar-label">Mon</span>
+              </div>
+              <div class="chart-bar-group">
+                <div style="display:flex;gap:4px;align-items:flex-end;width:100%;justify-content:center;height:100%;">
+                  <div class="chart-bar" style="height:72%;width:45%;"><span class="tooltip">$2,160</span></div>
+                  <div class="chart-bar chart-bar-secondary" style="height:55%;width:45%;"><span class="tooltip">$1,650</span></div>
+                </div>
+                <span class="chart-bar-label">Tue</span>
+              </div>
+              <div class="chart-bar-group">
+                <div style="display:flex;gap:4px;align-items:flex-end;width:100%;justify-content:center;height:100%;">
+                  <div class="chart-bar" style="height:48%;width:45%;"><span class="tooltip">$1,440</span></div>
+                  <div class="chart-bar chart-bar-secondary" style="height:62%;width:45%;"><span class="tooltip">$1,860</span></div>
+                </div>
+                <span class="chart-bar-label">Wed</span>
+              </div>
+              <div class="chart-bar-group">
+                <div style="display:flex;gap:4px;align-items:flex-end;width:100%;justify-content:center;height:100%;">
+                  <div class="chart-bar" style="height:85%;width:45%;"><span class="tooltip">$2,550</span></div>
+                  <div class="chart-bar chart-bar-secondary" style="height:45%;width:45%;"><span class="tooltip">$1,350</span></div>
+                </div>
+                <span class="chart-bar-label">Thu</span>
+              </div>
+              <div class="chart-bar-group">
+                <div style="display:flex;gap:4px;align-items:flex-end;width:100%;justify-content:center;height:100%;">
+                  <div class="chart-bar" style="height:93%;width:45%;"><span class="tooltip">$2,790</span></div>
+                  <div class="chart-bar chart-bar-secondary" style="height:68%;width:45%;"><span class="tooltip">$2,040</span></div>
+                </div>
+                <span class="chart-bar-label">Fri</span>
+              </div>
+              <div class="chart-bar-group">
+                <div style="display:flex;gap:4px;align-items:flex-end;width:100%;justify-content:center;height:100%;">
+                  <div class="chart-bar" style="height:65%;width:45%;"><span class="tooltip">$1,950</span></div>
+                  <div class="chart-bar chart-bar-secondary" style="height:50%;width:45%;"><span class="tooltip">$1,500</span></div>
+                </div>
+                <span class="chart-bar-label">Sat</span>
+              </div>
+              <div class="chart-bar-group">
+                <div style="display:flex;gap:4px;align-items:flex-end;width:100%;justify-content:center;height:100%;">
+                  <div class="chart-bar" style="height:40%;width:45%;"><span class="tooltip">$1,200</span></div>
+                  <div class="chart-bar chart-bar-secondary" style="height:35%;width:45%;"><span class="tooltip">$1,050</span></div>
+                </div>
+                <span class="chart-bar-label">Sun</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-legend">
+            <div class="chart-legend-item"><span class="chart-legend-dot primary"></span> This week</div>
+            <div class="chart-legend-item"><span class="chart-legend-dot secondary"></span> Last week</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP PRODUCTS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Top Products</div>
+          <a href="#" class="card-action">View All</a>
+        </div>
+        <div class="card-body">
+          <div class="product-list">
+            <div class="product-item">
+              <div class="product-rank">1</div>
+              <div class="product-img" style="background:#ebf0ff;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3366ff" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
+              </div>
+              <div class="product-info">
+                <div class="product-name">Leather Crossbody Bag</div>
+                <div class="product-sku">SKU-00142</div>
+                <div class="product-bar-track"><div class="product-bar-fill" style="width:92%;"></div></div>
+              </div>
+              <div class="product-stats">
+                <div class="product-revenue">$8,420</div>
+                <div class="product-units">234 sold</div>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="product-rank">2</div>
+              <div class="product-img" style="background:#ecfdf5;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+              </div>
+              <div class="product-info">
+                <div class="product-name">Wireless Earbuds Pro</div>
+                <div class="product-sku">SKU-00289</div>
+                <div class="product-bar-track"><div class="product-bar-fill" style="width:78%;"></div></div>
+              </div>
+              <div class="product-stats">
+                <div class="product-revenue">$6,195</div>
+                <div class="product-units">189 sold</div>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="product-rank">3</div>
+              <div class="product-img" style="background:#f5f3ff;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="product-info">
+                <div class="product-name">Minimalist Watch</div>
+                <div class="product-sku">SKU-00067</div>
+                <div class="product-bar-track"><div class="product-bar-fill" style="width:61%;"></div></div>
+              </div>
+              <div class="product-stats">
+                <div class="product-revenue">$5,340</div>
+                <div class="product-units">156 sold</div>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="product-rank">4</div>
+              <div class="product-img" style="background:#fffbeb;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+              </div>
+              <div class="product-info">
+                <div class="product-name">Organic Cotton Tee</div>
+                <div class="product-sku">SKU-00415</div>
+                <div class="product-bar-track"><div class="product-bar-fill" style="width:47%;"></div></div>
+              </div>
+              <div class="product-stats">
+                <div class="product-revenue">$3,870</div>
+                <div class="product-units">312 sold</div>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <div class="product-rank">5</div>
+              <div class="product-img" style="background:#fef2f2;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
+              <div class="product-info">
+                <div class="product-name">Scented Candle Set</div>
+                <div class="product-sku">SKU-00523</div>
+                <div class="product-bar-track"><div class="product-bar-fill" style="width:33%;"></div></div>
+              </div>
+              <div class="product-stats">
+                <div class="product-revenue">$2,140</div>
+                <div class="product-units">178 sold</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECENT ORDERS TABLE -->
+    <div class="card" style="margin-top:18px;">
+      <div class="card-header">
+        <div class="card-title">Recent Orders</div>
+        <a href="#" class="card-action">View All Orders</a>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="order-id">#ORD-7842</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">EM</div>
+                  <div>
+                    <div class="customer-name">Emma Mitchell</div>
+                    <div class="customer-email">emma.m@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 12, 2026</td>
+              <td class="amount">$124.99</td>
+              <td><span class="badge badge-completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td><span class="order-id">#ORD-7841</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);">LC</div>
+                  <div>
+                    <div class="customer-name">Liam Chen</div>
+                    <div class="customer-email">l.chen@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 12, 2026</td>
+              <td class="amount">$89.50</td>
+              <td><span class="badge badge-processing">Processing</span></td>
+            </tr>
+            <tr>
+              <td><span class="order-id">#ORD-7840</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">SR</div>
+                  <div>
+                    <div class="customer-name">Sofia Rodriguez</div>
+                    <div class="customer-email">sofia.r@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 11, 2026</td>
+              <td class="amount">$215.00</td>
+              <td><span class="badge badge-shipped">Shipped</span></td>
+            </tr>
+            <tr>
+              <td><span class="order-id">#ORD-7839</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">MT</div>
+                  <div>
+                    <div class="customer-name">Marcus Thompson</div>
+                    <div class="customer-email">marcus.t@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 11, 2026</td>
+              <td class="amount">$67.25</td>
+              <td><span class="badge badge-completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td><span class="order-id">#ORD-7838</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#fa709a,#fee140);">AK</div>
+                  <div>
+                    <div class="customer-name">Aisha Khan</div>
+                    <div class="customer-email">aisha.k@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 10, 2026</td>
+              <td class="amount">$342.80</td>
+              <td><span class="badge badge-completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td><span class="order-id">#ORD-7837</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb);">JP</div>
+                  <div>
+                    <div class="customer-name">Jake Peterson</div>
+                    <div class="customer-email">jake.p@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 10, 2026</td>
+              <td class="amount">$52.00</td>
+              <td><span class="badge badge-cancelled">Cancelled</span></td>
+            </tr>
+            <tr>
+              <td><span class="order-id">#ORD-7836</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#ffecd2,#fcb69f);">NO</div>
+                  <div>
+                    <div class="customer-name">Nina Okafor</div>
+                    <div class="customer-email">nina.o@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 9, 2026</td>
+              <td class="amount">$178.90</td>
+              <td><span class="badge badge-shipped">Shipped</span></td>
+            </tr>
+            <tr>
+              <td><span class="order-id">#ORD-7835</span></td>
+              <td>
+                <div class="customer-cell">
+                  <div class="customer-avatar" style="background:linear-gradient(135deg,#89f7fe,#66a6ff);">DW</div>
+                  <div>
+                    <div class="customer-name">Daniel Wright</div>
+                    <div class="customer-email">d.wright@email.com</div>
+                  </div>
+                </div>
+              </td>
+              <td>Feb 9, 2026</td>
+              <td class="amount">$93.40</td>
+              <td><span class="badge badge-processing">Processing</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const toggle = document.getElementById('menuToggle');
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function() {
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  });
+
+  overlay.addEventListener('click', closeSidebar);
+
+  // Chart tab switching (visual only)
+  document.querySelectorAll('.chart-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.chart-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+    });
+  });
+
+  // Sidebar link active state
+  document.querySelectorAll('.sidebar-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.sidebar-link').forEach(function(l) { l.classList.remove('active'); });
+      link.classList.add('active');
+      if (window.innerWidth <= 768) closeSidebar();
+    });
+  });
+
+  // Animate bars on load
+  var bars = document.querySelectorAll('.chart-bar');
+  bars.forEach(function(bar) {
+    var h = bar.style.height;
+    bar.style.height = '0%';
+    setTimeout(function() {
+      bar.style.height = h;
+    }, 100);
+  });
+
+  // Animate product progress bars on load
+  var fills = document.querySelectorAll('.product-bar-fill');
+  fills.forEach(function(fill) {
+    var w = fill.style.width;
+    fill.style.width = '0%';
+    setTimeout(function() {
+      fill.style.width = w;
+    }, 300);
+  });
+})();
+</script>
+
+<footer style="padding:18px 12px; border-top:1px solid rgba(0,0,0,0.08);"><!-- PRINTMAXX LEGAL LINKS -->
+<div style="margin-top:12px; font-size:12px; opacity:0.85; text-align:center;">
+  <a href="marketing-disclosure.html">Marketing Disclosure</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="privacy.html">Privacy</a>
+  <span style="opacity:0.6;"> · </span>
+  <a href="terms.html">Terms</a>
+</div>
+</footer>
+</body>
+</html>

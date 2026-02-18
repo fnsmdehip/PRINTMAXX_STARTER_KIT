@@ -1,0 +1,372 @@
+{
+  "channel_id": "CF010",
+  "channel_name": "NATURE_WILDLIFE",
+  "category": "CONTENT_FARM",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "Curate and post stunning nature footage, wildlife moments, and natural phenomena across short-form platforms",
+    "value_proposition": "Visual spectacle content that triggers awe, relaxation, and shareability. Mass appeal with global reach.",
+    "content_pillars": [
+      "Animal Moments (35%)",
+      "Natural Phenomena (25%)",
+      "Earth Beauty/Landscapes (25%)",
+      "Conservation/Educational (15%)"
+    ],
+    "differentiation": "Voice-first content, conservation messaging, premium aesthetic"
+  },
+
+  "target_audience": {
+    "primary_demographics": {
+      "age_range": "18-55",
+      "gender_split": "55% female, 45% male",
+      "geography": "Global",
+      "income_level": "Mass market"
+    },
+    "psychographics": {
+      "interests": [
+        "Nature and wildlife",
+        "Photography",
+        "Travel",
+        "Relaxation",
+        "Science/Education"
+      ],
+      "content_consumption": "Scroll during breaks, share with friends/family, save for later"
+    }
+  },
+
+  "platform_strategy": {
+    "primary_platforms": [
+      {
+        "platform": "TikTok",
+        "priority": 1,
+        "posting_frequency": "3-5 posts/day",
+        "growth_targets": {
+          "month_1": 10000,
+          "month_3": 50000,
+          "month_6": 200000,
+          "month_12": 750000
+        }
+      },
+      {
+        "platform": "Instagram",
+        "priority": 2,
+        "content_types": ["Reels (1-2/day)", "Carousels (1/day)", "Stories (5-10/day)"],
+        "growth_targets": {
+          "month_1": 5000,
+          "month_3": 25000,
+          "month_6": 100000
+        }
+      },
+      {
+        "platform": "YouTube Shorts",
+        "priority": 3,
+        "posting_frequency": "5-10 Shorts/day",
+        "notes": "High volume strategy, potential for long-form expansion",
+        "growth_targets": {
+          "month_1": 2000,
+          "month_3": 15000,
+          "month_6": 75000
+        }
+      }
+    ],
+    "secondary_platforms": [
+      {
+        "platform": "X (Twitter)",
+        "posting_frequency": "5-10 posts/day",
+        "notes": "Quote tweet viral nature content"
+      },
+      {
+        "platform": "YouTube Long-form",
+        "timeline": "Month 6+",
+        "content": "Nature documentaries, compilations (15-60 min)"
+      }
+    ]
+  },
+
+  "content_pillars_detailed": {
+    "animal_moments": {
+      "percentage": 35,
+      "types": [
+        {
+          "name": "Predator vs Prey",
+          "hook_patterns": ["You won't believe how this ends...", "The most insane hunt ever captured"],
+          "engagement": "Very high"
+        },
+        {
+          "name": "Animal Parenting",
+          "hook_patterns": ["This mother did the unthinkable...", "Watch this dad protect his baby"],
+          "engagement": "High (emotional)"
+        },
+        {
+          "name": "Unexpected Friendships",
+          "hook_patterns": ["These two shouldn't be friends...", "When enemies become family"],
+          "engagement": "High (wholesome)"
+        },
+        {
+          "name": "Rare Species Footage",
+          "hook_patterns": ["Less than 100 of these exist...", "Thought extinct until this was filmed"],
+          "engagement": "High"
+        },
+        {
+          "name": "Animal Intelligence",
+          "hook_patterns": ["Scientists couldn't believe this...", "Smarter than you think"],
+          "engagement": "High"
+        }
+      ]
+    },
+    "natural_phenomena": {
+      "percentage": 25,
+      "types": [
+        {
+          "name": "Aurora/Light Phenomena",
+          "hook_patterns": ["Earth doing things that look impossible", "This isn't CGI..."],
+          "engagement": "High"
+        },
+        {
+          "name": "Volcanic/Geological",
+          "hook_patterns": ["The Earth is alive...", "The power of nature"],
+          "engagement": "High"
+        },
+        {
+          "name": "Weather Events",
+          "hook_patterns": ["Nature's fury captured...", "Watch this supercell form"],
+          "engagement": "High"
+        },
+        {
+          "name": "Water Phenomena",
+          "hook_patterns": ["The ocean doing something impossible", "This water glows..."],
+          "engagement": "High"
+        }
+      ]
+    },
+    "earth_beauty": {
+      "percentage": 25,
+      "types": [
+        {
+          "name": "Mountain/Aerial Views",
+          "platforms": ["Instagram Reels", "YouTube Shorts"],
+          "engagement": "Medium-high"
+        },
+        {
+          "name": "Ocean/Underwater",
+          "platforms": ["All"],
+          "engagement": "High"
+        },
+        {
+          "name": "Forest/Jungle",
+          "platforms": ["All"],
+          "engagement": "Medium-high"
+        },
+        {
+          "name": "Seasonal Transformations",
+          "content": "Same location across 4 seasons, timelapse",
+          "engagement": "High (satisfying)"
+        }
+      ]
+    },
+    "conservation_educational": {
+      "percentage": 15,
+      "types": [
+        {
+          "name": "Endangered Species Spotlights",
+          "hook_patterns": ["This animal could be extinct by [year]", "Conservation success story"],
+          "engagement": "High (urgent/hopeful)"
+        },
+        {
+          "name": "Ecosystem Explanations",
+          "hook_patterns": ["Remove this animal and everything changes", "This is why [species] matters"],
+          "engagement": "Medium-high"
+        },
+        {
+          "name": "Wildlife Rehabilitation",
+          "hook_patterns": ["Found abandoned...", "After 6 months of care..."],
+          "engagement": "Very high (emotional)"
+        }
+      ]
+    }
+  },
+
+  "content_sourcing": {
+    "stock_footage": {
+      "paid": [
+        {"source": "Storyblocks", "cost": "$20/month", "quality": "High"},
+        {"source": "Artgrid", "cost": "$25/month", "quality": "Premium"},
+        {"source": "Getty (Editorial)", "cost": "Per-clip", "quality": "Highest"}
+      ],
+      "free": [
+        {"source": "Pexels", "quality": "Good"},
+        {"source": "Pixabay", "quality": "Good"},
+        {"source": "Videvo", "quality": "Mixed"},
+        {"source": "Mixkit", "quality": "Good"}
+      ]
+    },
+    "user_submissions": {
+      "strategy": "Feature community content with credit",
+      "benefits": ["Free content", "Community building", "Authentic feel"],
+      "implementation": "DM submissions, hashtag tracking"
+    },
+    "reddit_sources": [
+      "r/NatureIsFuckingLit",
+      "r/natureismetal",
+      "r/interestingasfuck",
+      "r/Damnthatsinteresting"
+    ]
+  },
+
+  "revenue_model": {
+    "streams": {
+      "platform_monetization": {
+        "tiktok_creator_fund": {
+          "timeline": "Month 2+",
+          "estimated": "$0.02-0.04 per 1K views"
+        },
+        "youtube_shorts": {
+          "timeline": "Month 3+",
+          "estimated": "$0.03-0.08 per 1K views"
+        },
+        "youtube_longform": {
+          "timeline": "Month 6+",
+          "cpm": "$2-6 (nature/wellness advertisers)"
+        }
+      },
+      "sponsorships": {
+        "timeline": "Month 6+",
+        "categories": [
+          "Outdoor brands",
+          "Camera/gear companies",
+          "Travel/tourism",
+          "Conservation organizations",
+          "Nature apps (Calm, Headspace)"
+        ],
+        "rates": {
+          "50k_followers": "$200-600/post",
+          "100k_followers": "$500-1500/post",
+          "500k_followers": "$2000-6000/post"
+        }
+      },
+      "affiliate": {
+        "timeline": "Month 1+",
+        "programs": [
+          "Camera gear (Amazon)",
+          "Nature documentaries (streaming services)",
+          "Travel gear",
+          "Photography courses"
+        ],
+        "estimated": "$100-500/month"
+      },
+      "merchandise": {
+        "timeline": "Month 6+",
+        "products": ["Photography prints", "Calendars", "Apparel"],
+        "estimated": "$200-1000/month at scale"
+      },
+      "licensing": {
+        "timeline": "Month 12+",
+        "opportunity": "License original footage to media companies",
+        "estimated": "Variable, $100-5000 per clip"
+      }
+    },
+    "projections": {
+      "month_3": "$100-400",
+      "month_6": "$500-2000",
+      "month_12": "$2000-5000"
+    }
+  },
+
+  "posting_strategy": {
+    "optimal_times_est": {
+      "tiktok": {
+        "weekdays": ["6 AM", "10 AM", "10 PM"],
+        "weekends": ["11 AM", "7 PM", "8 PM"]
+      },
+      "instagram": {
+        "all_days": ["11 AM", "2 PM", "5 PM"]
+      },
+      "youtube": {
+        "all_days": ["12 PM", "3 PM", "6 PM"]
+      }
+    },
+    "weekly_themes": {
+      "monday": "Marine Monday",
+      "tuesday": "Tiny Tuesday (insects, micro)",
+      "wednesday": "Wild Wednesday (predators)",
+      "thursday": "Throwback (classic footage)",
+      "friday": "Funny Friday (animal humor)",
+      "saturday": "Safari Saturday (African wildlife)",
+      "sunday": "Stunning Sunday (landscapes)"
+    },
+    "hashtag_strategy": {
+      "tier_1_mega": ["#nature", "#wildlife", "#animals"],
+      "tier_2_large": ["#wildlifephotography", "#naturelovers", "#earthfocus"],
+      "tier_3_medium": ["#wildlifeplanet", "#naturegram", "#earthcapture"],
+      "tier_4_niche": ["#africansafari", "#marinelife", "#birdwatching"]
+    }
+  },
+
+  "competitors_analyzed": [
+    {
+      "account": "@AMAZlNGNATURE",
+      "platform": "X (Twitter)",
+      "followers": "4M+",
+      "strategy": "Curated viral clips, minimal text, 10-20 posts/day"
+    },
+    {
+      "account": "@Rainmaker1973",
+      "platform": "X (Twitter)",
+      "followers": "1.5M+",
+      "strategy": "Science and nature, educational focus, source attribution"
+    },
+    {
+      "account": "@NatGeo",
+      "platforms": "All",
+      "followers": "280M+ (Instagram)",
+      "strategy": "Professional documentary footage, strong storytelling"
+    },
+    {
+      "account": "@BBCEarth",
+      "platforms": "All",
+      "followers": "7M+ (Instagram)",
+      "strategy": "Documentary clips, David Attenborough narration"
+    },
+    {
+      "account": "@WildlifePlanet",
+      "platform": "Instagram",
+      "followers": "4M+",
+      "strategy": "UGC features, photography focus, community credits"
+    }
+  ],
+
+  "success_metrics": {
+    "growth_kpis": {
+      "follower_growth": "15-25% MoM",
+      "engagement_rate": "3-6%",
+      "save_rate": "5%+ (educational signal)"
+    },
+    "content_kpis": {
+      "posts_per_day": "10-15 across platforms",
+      "viral_hit_rate": "1 in 10 clips hits 50K+ views"
+    }
+  },
+
+  "compliance": {
+    "ai_disclosure": {
+      "required": false,
+      "notes": "Content is curated footage, not AI-generated"
+    },
+    "content_sourcing": {
+      "always_credit": "Credit original photographers/sources",
+      "license_verification": "Verify commercial use rights before posting"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "CF001", "method_name": "RELAX_CHANNELS", "synergy_score": 90},
+      {"method_id": "AI004", "method_name": "ASMR", "synergy_score": 70},
+      {"method_id": "CF007", "method_name": "MOTIVATION_QUOTES", "synergy_score": 60}
+    ],
+    "stack_strategy": "Nature content builds audience -> Cross-promote relax/ambient channels -> Conservation partnerships for credibility"
+  }
+}

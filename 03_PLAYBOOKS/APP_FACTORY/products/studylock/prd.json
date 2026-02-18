@@ -1,0 +1,294 @@
+{
+  "product_name": "StudyLock",
+  "tagline": "Lock your phone. Ace your exams.",
+  "problem_statement": "Students lose 2+ hours daily to phone distractions during study time. StudyLock blocks apps during scheduled study sessions, gamifying focus with streaks and rewards.",
+  "target_audience": {
+    "primary": "College students 18-25 preparing for exams",
+    "secondary": "High school students, grad students, parents monitoring kids",
+    "demographics": {
+      "age": "16-28",
+      "occupation": "Student",
+      "tech_comfort": "High",
+      "pain_points": ["Procrastination", "Social media addiction", "FOMO during study"]
+    }
+  },
+  "market_size": {
+    "tam": "$4B education apps market",
+    "sam": "$800M study/productivity apps",
+    "som": "$20M student screen blocking"
+  },
+  "competitors": [
+    {
+      "name": "Forest",
+      "mrr": "$500,000",
+      "positioning": "Gamified focus timer (grow trees)",
+      "gap": "No actual app blocking"
+    },
+    {
+      "name": "Opal",
+      "mrr": "$600,000",
+      "positioning": "Screen time management",
+      "gap": "Not student-focused"
+    },
+    {
+      "name": "Cold Turkey",
+      "mrr": "$200,000",
+      "positioning": "Hardcore website blocker",
+      "gap": "Desktop only, not mobile"
+    },
+    {
+      "name": "Freedom",
+      "mrr": "$400,000",
+      "positioning": "Cross-device blocking",
+      "gap": "Not gamified for students"
+    }
+  ],
+  "unique_value_proposition": "Forest makes it fun. Opal makes it hard. StudyLock makes it both. Gamified app blocking designed for students.",
+  "tech_stack": {
+    "frontend": "React Native (Expo)",
+    "state": "Zustand",
+    "storage": "MMKV",
+    "ios_native": "Swift (FamilyControls/Screen Time API)",
+    "android_native": "Kotlin (UsageStatsManager)",
+    "payments": "RevenueCat",
+    "analytics": "Mixpanel"
+  },
+  "monetization": {
+    "model": "Freemium with soft paywall",
+    "trial": "7 days free (longer for students)",
+    "pricing": {
+      "monthly": {
+        "price": 4.99,
+        "product_id": "studylock_monthly",
+        "enabled": true,
+        "note": "Student-friendly price point"
+      },
+      "annual": {
+        "price": 29.99,
+        "product_id": "studylock_annual",
+        "enabled": true,
+        "note": "BEST VALUE - one semester price"
+      },
+      "lifetime": {
+        "price": 49.99,
+        "product_id": "studylock_lifetime",
+        "enabled": true,
+        "note": "Popular with students - one-time purchase"
+      }
+    },
+    "entitlements": ["pro"],
+    "rationale": "Lower price for student budget. Lifetime popular with this demo."
+  },
+  "core_features": [
+    {
+      "id": "SL-F001",
+      "name": "Study Session Timer",
+      "description": "Pomodoro-style sessions (25/50/90 min options)",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "SL-F002",
+      "name": "App Blocking",
+      "description": "Block selected apps during active study session",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "SL-F003",
+      "name": "Study Streaks",
+      "description": "Daily/weekly streak tracking with achievements",
+      "priority": "P0",
+      "mvp": true
+    },
+    {
+      "id": "SL-F004",
+      "name": "Focus Score",
+      "description": "Score based on sessions completed, no unlock attempts",
+      "priority": "P1",
+      "mvp": true
+    },
+    {
+      "id": "SL-F005",
+      "name": "Study Schedule",
+      "description": "Pre-schedule study blocks that auto-lock",
+      "priority": "P1",
+      "mvp": false
+    },
+    {
+      "id": "SL-F006",
+      "name": "Friend Challenges",
+      "description": "Compare study stats with friends",
+      "priority": "P2",
+      "mvp": false
+    },
+    {
+      "id": "SL-F007",
+      "name": "Exam Countdown",
+      "description": "Add exam dates with study reminders",
+      "priority": "P2",
+      "mvp": false
+    }
+  ],
+  "success_metrics": {
+    "trial_to_paid": "10%",
+    "day_7_retention": "50%",
+    "monthly_churn": "<12%",
+    "average_sessions_per_week": "5+",
+    "app_store_rating": "4.6+ stars",
+    "month_1_mrr": "$1,000",
+    "month_3_mrr": "$5,000"
+  },
+  "stories": [
+    {
+      "id": "SL-001",
+      "title": "Project setup with Expo",
+      "category": "infrastructure",
+      "priority": 1,
+      "acceptance": [
+        "Expo + TypeScript initialized",
+        "Zustand + MMKV configured",
+        "Navigation with bottom tabs"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-002",
+      "title": "Onboarding with study schedule setup",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "3-4 onboarding screens",
+        "Ask about study goals",
+        "Initial app selection"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-003",
+      "title": "iOS Screen Time blocking",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "FamilyControls integration",
+        "Apply shields during session",
+        "Remove on session complete"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-004",
+      "title": "Android app blocking",
+      "category": "native",
+      "priority": 1,
+      "acceptance": [
+        "UsageStatsManager permission",
+        "Overlay during blocked period",
+        "React Native bridge"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-005",
+      "title": "Study session timer screen",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Full-screen countdown",
+        "Visual progress indicator",
+        "Cannot exit early (or penalty)",
+        "Celebration on complete"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-006",
+      "title": "Home dashboard with stats",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Today's study time",
+        "Current streak",
+        "Focus score",
+        "Start session CTA"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-007",
+      "title": "Streak and achievement system",
+      "category": "features",
+      "priority": 1,
+      "acceptance": [
+        "Daily streak tracking",
+        "Milestone achievements (7, 30, 100 days)",
+        "Sharable badges"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-008",
+      "title": "App blocklist management",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "List installed apps",
+        "Quick-select presets (Social, Games, All)",
+        "Persist selections"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-009",
+      "title": "RevenueCat integration",
+      "category": "services",
+      "priority": 1,
+      "acceptance": [
+        "SDK configured",
+        "All three pricing tiers",
+        "Student discount option"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SL-010",
+      "title": "Soft paywall with value props",
+      "category": "screens",
+      "priority": 1,
+      "acceptance": [
+        "Feature comparison free vs pro",
+        "Social proof (students helped)",
+        "Easy restore purchases"
+      ],
+      "passes": false
+    }
+  ],
+  "marketing_hooks": [
+    "Your GPA doesn't care about your streaks. But your focus does.",
+    "1.2M students use StudyLock during finals",
+    "Average user gains 2.3 hours of study time daily",
+    "Block TikTok. Ace calculus."
+  ],
+  "risks": [
+    {
+      "risk": "Students find workarounds",
+      "likelihood": "high",
+      "impact": "medium",
+      "mitigation": "Make bypassing visible (resets streak, logs attempts)"
+    },
+    {
+      "risk": "Low willingness to pay",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Student discount, lifetime option, annual aligns with semester"
+    },
+    {
+      "risk": "Competition from Forest",
+      "likelihood": "high",
+      "impact": "medium",
+      "mitigation": "Differentiate on actual blocking vs virtual trees"
+    }
+  ],
+  "guardrails": ".ralph/guardrails.md",
+  "progress_log": ".ralph/progress.md"
+}

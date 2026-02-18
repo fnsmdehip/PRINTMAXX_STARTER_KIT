@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Smile Dental | Modern Family Dentistry</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2563eb;--primary-dark:#1d4ed8;--accent:#06b6d4;--bg:#f8fafc;--text:#0f172a;--text-light:#64748b;--white:#ffffff;--radius:12px;--shadow:0 4px 24px rgba(0,0,0,.08)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#1e3a5f 0%,#2563eb 50%,#06b6d4 100%);background-size:200% 200%;animation:gradientShift 8s ease infinite}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero-content{position:relative;z-index:2;text-align:center;color:var(--white);padding:2rem;max-width:800px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;letter-spacing:-.02em;margin-bottom:1rem;opacity:0;transform:translateY(30px);animation:fadeUp .8s ease forwards .3s}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;margin-bottom:2rem;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease forwards .6s}
+.hero-cta{display:inline-block;padding:1rem 2.5rem;background:var(--white);color:var(--primary);font-weight:700;font-size:1.1rem;border-radius:50px;position:relative;overflow:hidden;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease forwards .9s}
+.hero-cta::after{content:'';position:absolute;inset:0;background:rgba(37,99,235,.1);border-radius:50px;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:.7}}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+/* Floating particles */
+.particles{position:absolute;inset:0;z-index:1;overflow:hidden}
+.particle{position:absolute;width:8px;height:8px;background:rgba(255,255,255,.15);border-radius:50%;animation:float linear infinite}
+@keyframes float{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-10vh) rotate(720deg);opacity:0}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;transition:all .3s ease;background:transparent}
+nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);box-shadow:var(--shadow)}
+nav.scrolled .nav-logo,.nav-link.scrolled-link{color:var(--text)}
+.nav-logo{font-weight:800;font-size:1.3rem;color:var(--white);transition:color .3s}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-link{color:rgba(255,255,255,.9);font-weight:500;transition:color .3s;font-size:.95rem}
+nav.scrolled .nav-link{color:var(--text-light)}
+.nav-link:hover{color:var(--accent)}
+.nav-cta{padding:.6rem 1.5rem;background:var(--white);color:var(--primary);border-radius:50px;font-weight:600;transition:all .3s}
+nav.scrolled .nav-cta{background:var(--primary);color:var(--white)}
+@media(max-width:768px){.nav-links{display:none}}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.section-title{text-align:center;margin-bottom:3rem}
+.section-title h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-bottom:.5rem}
+.section-title p{color:var(--text-light);font-size:1.1rem;max-width:600px;margin:0 auto}
+.container{max-width:1200px;margin:0 auto}
+
+/* REVEAL ANIMATION */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.15s}
+.reveal-delay-2{transition-delay:.3s}
+.reveal-delay-3{transition-delay:.45s}
+
+/* SERVICES */
+.services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.service-card{background:var(--bg);border-radius:var(--radius);padding:2rem;position:relative;overflow:hidden;transition:transform .4s ease,box-shadow .4s ease;transform-style:preserve-3d;perspective:600px}
+.service-card:hover{transform:translateY(-6px) rotateX(2deg) rotateY(-2deg);box-shadow:0 20px 40px rgba(37,99,235,.12)}
+.service-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.2rem;color:var(--white)}
+.service-card h3{font-size:1.2rem;font-weight:700;margin-bottom:.5rem}
+.service-card p{color:var(--text-light);font-size:.95rem;line-height:1.7}
+
+/* STATS */
+.stats{background:linear-gradient(135deg,var(--primary),var(--accent));color:var(--white)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;text-align:center}
+.stat-number{font-size:clamp(2.5rem,4vw,3.5rem);font-weight:800;line-height:1}
+.stat-label{font-size:1rem;opacity:.85;margin-top:.5rem}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--bg)}
+.testimonial-track{position:relative;overflow:hidden;height:220px}
+.testimonial-card{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;opacity:0;transition:opacity .8s ease}
+.testimonial-card.active{opacity:1}
+.testimonial-text{font-size:1.15rem;font-style:italic;color:var(--text);max-width:700px;margin:0 auto 1rem;line-height:1.8}
+.testimonial-author{font-weight:700;color:var(--primary)}
+.testimonial-dots{display:flex;gap:.5rem;justify-content:center;margin-top:1.5rem}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--text-light);opacity:.3;cursor:pointer;transition:all .3s}
+.dot.active{opacity:1;background:var(--primary);transform:scale(1.3)}
+
+/* ABOUT */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-image{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#e0e7ff,#cffafe)}
+.about-image-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.about-content h2{font-size:2rem;font-weight:800;margin-bottom:1rem}
+.about-content p{color:var(--text-light);margin-bottom:1rem;line-height:1.8}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2rem}}
+
+/* PARALLAX BANNER */
+.parallax-banner{position:relative;height:350px;background:linear-gradient(135deg,#1e3a5f,#2563eb);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--white);overflow:hidden}
+.parallax-bg{position:absolute;inset:-50px;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.03)"/><circle cx="40" cy="70" r="1.5" fill="rgba(255,255,255,0.04)"/><circle cx="60" cy="10" r="2.5" fill="rgba(255,255,255,0.03)"/><circle cx="90" cy="80" r="2" fill="rgba(255,255,255,0.05)"/></svg>') repeat;background-size:200px;transition:transform .1s linear}
+.parallax-content{position:relative;z-index:2;padding:2rem}
+.parallax-content h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;margin-bottom:1rem}
+.parallax-content p{font-size:1.1rem;opacity:.9;margin-bottom:1.5rem}
+
+/* CTA SECTION */
+.cta-section{background:var(--white);text-align:center;padding:5rem 2rem}
+.cta-section h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-bottom:1rem}
+.cta-section p{color:var(--text-light);margin-bottom:2rem;font-size:1.1rem}
+.cta-btn{display:inline-block;padding:1.1rem 3rem;background:var(--primary);color:var(--white);font-weight:700;font-size:1.1rem;border-radius:50px;border:none;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,99,235,.3)}
+.cta-btn::before{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,.2);border-radius:50%;transform:translate(-50%,-50%);transition:width .6s,height .6s}
+.cta-btn:hover::before{width:300px;height:300px}
+
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem 2rem;text-align:center}
+footer a{color:rgba(255,255,255,.9)}
+footer p{font-size:.9rem}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">Bright Smile Dental</div>
+  <ul class="nav-links">
+    <li><a href="#services" class="nav-link">Services</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+    <li><a class="nav-link nav-cta" href="#contact">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="particles" id="particles"></div>
+  <div class="hero-content">
+    <h1>Your Smile Deserves the Best Care</h1>
+    <p>Modern dentistry meets genuine compassion. Serving families in Springfield for over 15 years with advanced technology and a gentle touch.</p>
+    <a href="#contact" class="hero-cta">Schedule Your Visit</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>What We Do</h2>
+      <p>Comprehensive dental care for every stage of life. From routine cleanings to complete smile makeovers.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">&#128065;</div>
+        <h3>General Dentistry</h3>
+        <p>Cleanings, exams, fillings, and preventive care. We catch problems early so they stay small and affordable.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">&#9733;</div>
+        <h3>Cosmetic Dentistry</h3>
+        <p>Veneers, whitening, and bonding. We design smiles that look natural and boost your confidence.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">&#9879;</div>
+        <h3>Orthodontics</h3>
+        <p>Invisalign and traditional braces for all ages. Straighten your teeth without disrupting your life.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">&#128170;</div>
+        <h3>Implants & Restoration</h3>
+        <p>Dental implants, crowns, and bridges. Permanent solutions that look and feel like real teeth.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">&#128118;</div>
+        <h3>Pediatric Care</h3>
+        <p>Kid-friendly environment with gentle dentists who make visits fun. Building healthy habits early.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">&#9889;</div>
+        <h3>Emergency Dental</h3>
+        <p>Same-day appointments for urgent issues. Toothache at 8am? We'll see you by 9am.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="reveal">
+        <div class="stat-number" data-target="15">0</div>
+        <div class="stat-label">Years in Practice</div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="stat-number" data-target="12500">0</div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="stat-number" data-target="98">0</div>
+        <div class="stat-label">% Patient Satisfaction</div>
+      </div>
+      <div class="reveal reveal-delay-3">
+        <div class="stat-number" data-target="6">0</div>
+        <div class="stat-label">Dentists on Staff</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image reveal">
+        <div class="about-image-inner">&#129463;</div>
+      </div>
+      <div class="about-content reveal reveal-delay-1">
+        <h2>Why Families Choose Us</h2>
+        <p>Dr. Sarah Chen founded Bright Smile Dental in 2011 with a simple idea: dental care should be comfortable, transparent, and affordable.</p>
+        <p>We invest in the latest technology, from digital X-rays (60% less radiation) to same-day crowns with CEREC. But technology is only half the equation. Our team genuinely cares about your experience from the moment you walk in.</p>
+        <p>We accept most insurance plans, offer flexible payment options, and will never recommend treatment you don't need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX BANNER -->
+<section class="parallax-banner">
+  <div class="parallax-bg" id="parallaxBg"></div>
+  <div class="parallax-content reveal">
+    <h2>New Patient Special</h2>
+    <p>Comprehensive exam, full X-rays, and professional cleaning for just $99. No insurance needed.</p>
+    <a href="#contact" class="cta-btn">Claim Your $99 Visit</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>What Our Patients Say</h2>
+      <p>Real reviews from real patients. We let our work speak for itself.</p>
+    </div>
+    <div class="testimonial-track" id="testimonialTrack">
+      <div class="testimonial-card active">
+        <p class="testimonial-text">"I hadn't been to a dentist in 7 years because of anxiety. Dr. Chen and her team made me feel completely at ease. Best dental experience I've ever had."</p>
+        <p class="testimonial-author">Maria G. - Patient since 2019</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Got a same-day crown that looks better than my real teeth. In and out in 2 hours. My old dentist would have taken 3 visits for this."</p>
+        <p class="testimonial-author">James T. - Patient since 2022</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"My kids actually ask to go to the dentist now. The pediatric team is incredible. They make it fun and my kids have had zero cavities since switching here."</p>
+        <p class="testimonial-author">Rachel & David K. - Family patients since 2020</p>
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonialDots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="container reveal">
+    <h2>Ready for a Better Dental Experience?</h2>
+    <p>Call us at <strong>(555) 123-4567</strong> or book online. Same-week appointments available.</p>
+    <a href="tel:5551234567" class="cta-btn">Call Now</a>
+    <div style="margin-top:1rem">
+      <a href="#" class="cta-btn" style="background:var(--accent);margin-left:.5rem">Book Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Bright Smile Dental | 456 Oak Street, Springfield, IL 62704</p>
+  <p style="margin-top:.5rem">Mon-Fri 7am-6pm | Sat 8am-2pm | <a href="tel:5551234567">(555) 123-4567</a></p>
+  <p style="margin-top:1rem;font-size:.8rem;opacity:.5">&copy; 2026 Bright Smile Dental. All rights reserved.</p>
+</footer>
+
+<script>
+// Particles
+(function(){
+  const c=document.getElementById('particles');
+  for(let i=0;i<25;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.style.left=Math.random()*100+'%';
+    p.style.animationDuration=(8+Math.random()*12)+'s';
+    p.style.animationDelay=Math.random()*8+'s';
+    p.style.width=p.style.height=(4+Math.random()*8)+'px';
+    c.appendChild(p);
+  }
+})();
+
+// Nav scroll
+(function(){
+  const nav=document.getElementById('nav');
+  let ticking=false;
+  window.addEventListener('scroll',function(){
+    if(!ticking){
+      requestAnimationFrame(function(){
+        nav.classList.toggle('scrolled',window.scrollY>80);
+        ticking=false;
+      });
+      ticking=true;
+    }
+  });
+})();
+
+// Scroll reveal with IntersectionObserver
+(function(){
+  const els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('visible')});
+    return;
+  }
+  const obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){obs.observe(el)});
+})();
+
+// Counter animation
+(function(){
+  const nums=document.querySelectorAll('.stat-number[data-target]');
+  if(!('IntersectionObserver' in window)){
+    nums.forEach(function(n){n.textContent=n.dataset.target});
+    return;
+  }
+  const obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        const el=e.target;
+        const target=parseInt(el.dataset.target);
+        const dur=1800;
+        const start=performance.now();
+        function tick(now){
+          const p=Math.min((now-start)/dur,1);
+          const ease=1-Math.pow(1-p,3);
+          el.textContent=Math.round(target*ease).toLocaleString();
+          if(p<1)requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        obs.unobserve(el);
+      }
+    });
+  },{threshold:0.5});
+  nums.forEach(function(n){obs.observe(n)});
+})();
+
+// Testimonial carousel
+(function(){
+  const cards=document.querySelectorAll('.testimonial-card');
+  const dots=document.querySelectorAll('.dot');
+  let current=0;
+  let interval;
+  function show(i){
+    cards.forEach(function(c){c.classList.remove('active')});
+    dots.forEach(function(d){d.classList.remove('active')});
+    cards[i].classList.add('active');
+    dots[i].classList.add('active');
+    current=i;
+  }
+  function next(){show((current+1)%cards.length)}
+  function startAuto(){interval=setInterval(next,5000)}
+  dots.forEach(function(d){
+    d.addEventListener('click',function(){
+      clearInterval(interval);
+      show(parseInt(this.dataset.index));
+      startAuto();
+    });
+  });
+  startAuto();
+})();
+
+// Parallax
+(function(){
+  const bg=document.getElementById('parallaxBg');
+  if(!bg)return;
+  let ticking=false;
+  window.addEventListener('scroll',function(){
+    if(!ticking){
+      requestAnimationFrame(function(){
+        const rect=bg.parentElement.getBoundingClientRect();
+        const speed=0.3;
+        bg.style.transform='translateY('+rect.top*speed+'px)';
+        ticking=false;
+      });
+      ticking=true;
+    }
+  });
+})();
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    const t=document.querySelector(this.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>

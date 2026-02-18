@@ -1,0 +1,50 @@
+[
+  {
+    "method_1": "MM090_AI_INTERIOR_DESIGN",
+    "method_2": "MM001_APP_FACTORY",
+    "synergy_score": 95,
+    "description": "Build interior design app with 99% margins (InteriorAI model)",
+    "revenue_multiplier": "3-5x",
+    "based_on_alpha": "Multiple interior design entries"
+  },
+  {
+    "method_1": "MM093_AI_RECOMBINATION",
+    "method_2": "ALL",
+    "synergy_score": 90,
+    "description": "Recombine proven concepts across all methods for unique products",
+    "revenue_multiplier": "2-4x",
+    "based_on_alpha": "Speed arbitrage + recombination patterns"
+  },
+  {
+    "method_1": "MM092_WEB_TO_APP_FUNNEL",
+    "method_2": "MM001_APP_FACTORY",
+    "synergy_score": 98,
+    "description": "Bypass 30% app store tax via web monetization (90% revenue possible)",
+    "revenue_multiplier": "2.3x",
+    "based_on_alpha": "ALPHA514 - 82% top apps use web funnels"
+  },
+  {
+    "method_1": "MM007_COLD_OUTBOUND",
+    "method_2": "MM051_AI_AUTOMATION_AGENCY",
+    "synergy_score": 92,
+    "description": "4-email sequence with AI personalization at scale",
+    "revenue_multiplier": "3-5x",
+    "based_on_alpha": "Cold email entries + AI automation"
+  },
+  {
+    "method_1": "MM001_APP_FACTORY",
+    "method_2": "MM006_CONTENT_FARM",
+    "synergy_score": 94,
+    "description": "Build distribution first via content farm, then monetize with apps",
+    "revenue_multiplier": "4-6x",
+    "based_on_alpha": "Distribution-first content entries"
+  },
+  {
+    "method_1": "MM006_CONTENT_FARM",
+    "method_2": "ALL_CONTENT",
+    "synergy_score": 96,
+    "description": "Cross-post all short-form to FB Reels ($4.40/1K = 4-440x TikTok/YT)",
+    "revenue_multiplier": "4-440x",
+    "based_on_alpha": "ALPHA517 - FB Reels $4.40/1K verified"
+  }
+]

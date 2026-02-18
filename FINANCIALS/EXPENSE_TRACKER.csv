@@ -1,0 +1,4 @@
+date,category,item,amount,recurring,frequency,method_id,notes,receipt_url
+2026-02-04,INFRASTRUCTURE,Apple Developer Account,$99,TRUE,yearly,MM001,Required for iOS apps,
+2026-02-04,INFRASTRUCTURE,Google Play Console,$25,TRUE,yearly,MM001,Required for Android apps,
+2026-02-06,TOOLS,Python dependencies (requests beautifulsoup4 tqdm),$0,FALSE,one-time,MM015,Local business scraper - free dependencies,

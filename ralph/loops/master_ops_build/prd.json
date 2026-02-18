@@ -1,0 +1,64 @@
+{
+  "name": "MASTER OPS BUILD — AGENT SWARM EXECUTION",
+  "description": "Build unified PRINTMAXX_MASTER_OPS.xlsx with all playbook data, alpha thesis, browser/proxy stack. Each task spawns 3-7 parallel agents via TeamCreate.",
+  "tasks": [
+    {
+      "id": "T1",
+      "name": "Build unified XLSX (11 sheets)",
+      "description": "Run builder, collect data from LEDGER, validate output. 3 agents: data collector + builder + validator.",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "T2",
+      "name": "Alpha ops integration",
+      "description": "Scan ALPHA_STAGING for new APPROVED entries. Integrate into ops, tech stack, methods. Zero Waste content. 5 agents.",
+      "agents": 5,
+      "passes": true
+    },
+    {
+      "id": "T3",
+      "name": "Deep playbook expansion",
+      "description": "Gap analysis: 115 ops vs 22 playbooks. Write new playbooks for top gaps. Update stale entries. 4 agents.",
+      "agents": 4,
+      "passes": true
+    },
+    {
+      "id": "T4",
+      "name": "Browser & proxy stack refresh",
+      "description": "Sync accounts, check tool freshness, update integration flow. 3 agents.",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "T5",
+      "name": "Priority rerank via self-test + revenue",
+      "description": "Run self_test.py, analyze revenue, rerank priority launch queue. 3 agents.",
+      "agents": 3,
+      "passes": true
+    },
+    {
+      "id": "T6",
+      "name": "Content & distribution package",
+      "description": "Zero Waste: tweets, newsletter, Gumroad spec, Reddit posts, Medium article from build findings. 5 agents.",
+      "agents": 5,
+      "passes": true
+    },
+    {
+      "id": "T7",
+      "name": "Rebuild & validate final XLSX",
+      "description": "Apply all updates from T1-T6, rebuild XLSX, validate. 2 agents.",
+      "agents": 2,
+      "passes": true
+    },
+    {
+      "id": "T8",
+      "name": "Session handoff & CLAUDE.md update",
+      "description": "Update all session state files. 1 agent.",
+      "agents": 1,
+      "passes": true
+    }
+  ],
+  "total_agent_spawns": 26,
+  "pattern": "ralph_wiggum_loop_with_embedded_agent_swarms"
+}

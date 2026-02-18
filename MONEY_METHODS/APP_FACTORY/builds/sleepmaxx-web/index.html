@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0f0a1e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SleepMaxx">
+<meta name="description" content="Track your sleep, build better habits, and wake up feeling incredible. Free sleep tracker PWA.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f0a1e' width='100' height='100' rx='20'/><text y='70' x='50' text-anchor='middle' font-size='55'>🌙</text></svg>">
+<title>SleepMaxx - Master Your Sleep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        midnight: { 800: '#0f0a1e', 900: '#0a0716', 950: '#060410' },
+        indigo: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' },
+        lavender: { 300: '#c4b5fd', 400: '#a78bfa', 500: '#8b5cf6' },
+        sleep: { blue: '#3b82f6', purple: '#8b5cf6', teal: '#06b6d4' }
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-behavior: none; background: #0f0a1e; color: #e2e8f0; }
+
+.stars-bg {
+  background: #0f0a1e;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.1), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.12), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.1), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(255,255,255,0.08), transparent),
+    radial-gradient(1px 1px at 60px 100px, rgba(255,255,255,0.12), transparent),
+    radial-gradient(2px 2px at 250px 50px, rgba(255,255,255,0.1), transparent);
+  background-size: 300px 150px;
+}
+
+.tab-active { border-bottom: 2px solid #8b5cf6; color: #c4b5fd; }
+.tab-inactive { border-bottom: 2px solid transparent; color: #64748b; }
+.tab-inactive:hover { color: #94a3b8; }
+
+.glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); }
+.glass-hover:hover { background: rgba(255,255,255,0.07); }
+
+.progress-ring-bg { stroke: rgba(139,92,246,0.15); }
+.progress-ring-fill { stroke: #8b5cf6; transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 20px rgba(139,92,246,0.2); } 50% { box-shadow: 0 0 40px rgba(139,92,246,0.4); } }
+
+.bar-animate { animation: barGrow 0.6s ease-out; }
+@keyframes barGrow { from { height: 0; } }
+
+.star-btn { transition: all 0.15s ease; }
+.star-btn:active { transform: scale(1.3); }
+.star-filled { color: #fbbf24; }
+.star-empty { color: #374151; }
+
+input[type="time"] { color-scheme: dark; }
+input[type="number"] { color-scheme: dark; }
+
+.checklist-item { transition: all 0.2s ease; }
+.checklist-done { text-decoration: line-through; opacity: 0.5; }
+
+.streak-flame { animation: flamePulse 1.5s ease-in-out infinite; }
+@keyframes flamePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+.slide-left { animation: slideLeft 0.3s ease; }
+@keyframes slideLeft { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.3); border-radius: 2px; }
+</style>
+</head>
+<body class="stars-bg min-h-screen">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 glass px-4 py-3">
+  <div class="max-w-lg mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">🌙</span>
+      <h1 class="text-lg font-bold bg-gradient-to-r from-lavender-300 to-indigo-400 bg-clip-text text-transparent">SleepMaxx</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <span id="streakBadge" class="text-sm font-semibold px-2 py-1 rounded-full glass hidden">
+        <span class="streak-flame inline-block">🔥</span> <span id="streakCount">0</span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation Tabs -->
+<nav class="sticky top-[52px] z-40 glass">
+  <div class="max-w-lg mx-auto flex">
+    <button onclick="switchTab('timer')" id="tab-timer" class="flex-1 py-3 text-sm font-medium text-center tab-active transition-all">Sleep</button>
+    <button onclick="switchTab('log')" id="tab-log" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Log</button>
+    <button onclick="switchTab('stats')" id="tab-stats" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Stats</button>
+    <button onclick="switchTab('routine')" id="tab-routine" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Routine</button>
+    <button onclick="switchTab('tips')" id="tab-tips" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Tips</button>
+    <button onclick="switchTab('shop')" id="tab-shop" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Shop</button>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="max-w-lg mx-auto px-4 pb-8">
+
+  <!-- SLEEP TIMER TAB -->
+  <section id="panel-timer" class="py-6 fade-in">
+    <!-- Sleep Timer Circle -->
+    <div class="flex flex-col items-center mb-8">
+      <div class="relative w-64 h-64 mb-6">
+        <svg class="w-full h-full -rotate-90" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="88" fill="none" stroke-width="6" class="progress-ring-bg"/>
+          <circle id="sleepRing" cx="100" cy="100" r="88" fill="none" stroke-width="6" class="progress-ring-fill"
+            stroke-linecap="round" stroke-dasharray="553" stroke-dashoffset="553"/>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <div id="timerDisplay" class="text-5xl font-light tracking-tight text-white">0:00:00</div>
+          <div id="timerLabel" class="text-sm text-slate-400 mt-1">Tap to start sleeping</div>
+        </div>
+      </div>
+
+      <button id="sleepBtn" onclick="toggleSleep()"
+        class="w-48 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 pulse-glow bg-gradient-to-r from-indigo-500 to-lavender-500 text-white active:scale-95">
+        Start Sleep
+      </button>
+    </div>
+
+    <!-- Bedtime Alarm -->
+    <div class="glass rounded-2xl p-5 mb-4">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-semibold text-lavender-300">Bedtime Alarm</h3>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="alarmToggle" class="sr-only peer" onchange="toggleAlarm()">
+          <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-500"></div>
+        </label>
+      </div>
+      <div class="flex items-center gap-3">
+        <input type="time" id="bedtimeInput" value="22:30" onchange="saveBedtime()"
+          class="bg-midnight-900 border border-white/10 rounded-xl px-4 py-2.5 text-lg font-medium text-white w-full">
+      </div>
+      <p id="alarmStatus" class="text-xs text-slate-500 mt-2">Alarm off</p>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="grid grid-cols-3 gap-3">
+      <div class="glass rounded-xl p-3 text-center">
+        <div class="text-2xl font-bold text-lavender-400" id="avgSleep">--</div>
+        <div class="text-xs text-slate-500">Avg hours</div>
+      </div>
+      <div class="glass rounded-xl p-3 text-center">
+        <div class="text-2xl font-bold text-indigo-400" id="avgQuality">--</div>
+        <div class="text-xs text-slate-500">Avg quality</div>
+      </div>
+      <div class="glass rounded-xl p-3 text-center">
+        <div class="text-2xl font-bold text-sleep-teal" id="currentStreak">0</div>
+        <div class="text-xs text-slate-500">Day streak</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLEEP LOG TAB -->
+  <section id="panel-log" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-lavender-300">Sleep Log</h2>
+
+    <!-- Rate Last Night -->
+    <div id="rateSection" class="glass rounded-2xl p-5 mb-6">
+      <h3 class="font-semibold mb-3 text-white">Rate last night's sleep</h3>
+      <div class="flex items-center justify-center gap-3 mb-3">
+        <button onclick="rateQuality(1)" class="star-btn text-3xl star-empty" id="star1">&#9733;</button>
+        <button onclick="rateQuality(2)" class="star-btn text-3xl star-empty" id="star2">&#9733;</button>
+        <button onclick="rateQuality(3)" class="star-btn text-3xl star-empty" id="star3">&#9733;</button>
+        <button onclick="rateQuality(4)" class="star-btn text-3xl star-empty" id="star4">&#9733;</button>
+        <button onclick="rateQuality(5)" class="star-btn text-3xl star-empty" id="star5">&#9733;</button>
+      </div>
+      <p id="rateLabel" class="text-center text-sm text-slate-400">Tap a star to rate</p>
+    </div>
+
+    <!-- Manual Entry -->
+    <div class="glass rounded-2xl p-5 mb-6">
+      <h3 class="font-semibold mb-3 text-white">Add manual entry</h3>
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <div>
+          <label class="text-xs text-slate-400 block mb-1">Bedtime</label>
+          <input type="time" id="manualBedtime" value="22:30" class="bg-midnight-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white w-full">
+        </div>
+        <div>
+          <label class="text-xs text-slate-400 block mb-1">Wake time</label>
+          <input type="time" id="manualWake" value="06:30" class="bg-midnight-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white w-full">
+        </div>
+      </div>
+      <button onclick="addManualEntry()" class="w-full py-2.5 rounded-xl bg-indigo-500/20 text-indigo-300 font-medium text-sm hover:bg-indigo-500/30 transition-all active:scale-[0.98]">
+        Add Entry
+      </button>
+    </div>
+
+    <!-- Log Entries -->
+    <h3 class="font-semibold mb-3 text-slate-300">Recent nights</h3>
+    <div id="logEntries" class="space-y-2">
+      <p class="text-sm text-slate-500 text-center py-8">No entries yet. Start tracking your sleep!</p>
+    </div>
+  </section>
+
+  <!-- STATS TAB -->
+  <section id="panel-stats" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-lavender-300">Sleep Stats</h2>
+
+    <!-- Weekly Chart -->
+    <div class="glass rounded-2xl p-5 mb-6">
+      <h3 class="font-semibold mb-4 text-white">This week</h3>
+      <div class="flex items-end justify-between gap-2" style="height: 160px;" id="weeklyChart">
+        <!-- Bars rendered by JS -->
+      </div>
+      <div class="flex justify-between mt-2 text-xs text-slate-500" id="weeklyLabels"></div>
+    </div>
+
+    <!-- Monthly Overview -->
+    <div class="glass rounded-2xl p-5 mb-6">
+      <h3 class="font-semibold mb-3 text-white">30-day overview</h3>
+      <div class="grid grid-cols-7 gap-1" id="monthGrid">
+        <!-- Grid rendered by JS -->
+      </div>
+      <div class="flex items-center justify-end gap-2 mt-3">
+        <span class="text-xs text-slate-500">Less</span>
+        <div class="w-3 h-3 rounded-sm bg-indigo-500/10"></div>
+        <div class="w-3 h-3 rounded-sm bg-indigo-500/30"></div>
+        <div class="w-3 h-3 rounded-sm bg-indigo-500/60"></div>
+        <div class="w-3 h-3 rounded-sm bg-indigo-500"></div>
+        <span class="text-xs text-slate-500">More</span>
+      </div>
+    </div>
+
+    <!-- Streak Record -->
+    <div class="glass rounded-2xl p-5">
+      <h3 class="font-semibold mb-3 text-white">Streak tracker</h3>
+      <div class="flex items-center gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-lavender-400" id="statsCurrentStreak">0</div>
+          <div class="text-xs text-slate-500">Current</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-indigo-400" id="statsBestStreak">0</div>
+          <div class="text-xs text-slate-500">Best ever</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-sleep-teal" id="statsTotalNights">0</div>
+          <div class="text-xs text-slate-500">Nights logged</div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">Streak counts consecutive nights with 7+ hours of sleep</p>
+    </div>
+  </section>
+
+  <!-- ROUTINE TAB -->
+  <section id="panel-routine" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-lavender-300">Bedtime Routine</h2>
+
+    <!-- Checklist -->
+    <div class="glass rounded-2xl p-5 mb-6">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-semibold text-white">Tonight's checklist</h3>
+        <button onclick="resetChecklist()" class="text-xs text-slate-500 hover:text-slate-300 transition-colors">Reset</button>
+      </div>
+      <div id="routineChecklist" class="space-y-2">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="mt-4 flex gap-2">
+        <input type="text" id="newRoutineItem" placeholder="Add custom item..."
+          class="flex-1 bg-midnight-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500"
+          onkeydown="if(event.key==='Enter')addRoutineItem()">
+        <button onclick="addRoutineItem()" class="px-4 py-2 rounded-xl bg-indigo-500/20 text-indigo-300 font-medium text-sm hover:bg-indigo-500/30 transition-all">Add</button>
+      </div>
+    </div>
+
+    <!-- Routine Progress -->
+    <div class="glass rounded-2xl p-5">
+      <h3 class="font-semibold mb-3 text-white">Routine completion</h3>
+      <div class="w-full bg-midnight-900 rounded-full h-3 mb-2">
+        <div id="routineProgress" class="bg-gradient-to-r from-indigo-500 to-lavender-500 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+      </div>
+      <p id="routineProgressText" class="text-sm text-slate-400">0 of 0 completed</p>
+    </div>
+  </section>
+
+  <!-- TIPS TAB -->
+  <section id="panel-tips" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-lavender-300">Sleep Tips</h2>
+
+    <!-- Tips Carousel -->
+    <div class="glass rounded-2xl p-6 mb-6 min-h-[220px] relative overflow-hidden">
+      <div id="tipContent" class="slide-left">
+        <div class="text-4xl mb-3" id="tipEmoji">🌡️</div>
+        <h3 class="font-bold text-lg text-white mb-2" id="tipTitle">Loading...</h3>
+        <p class="text-sm text-slate-300 leading-relaxed" id="tipBody"></p>
+      </div>
+      <div class="flex justify-between items-center mt-6">
+        <button onclick="prevTip()" class="w-10 h-10 rounded-full glass flex items-center justify-center text-slate-400 hover:text-white transition-colors active:scale-95">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="flex gap-1.5" id="tipDots"></div>
+        <button onclick="nextTip()" class="w-10 h-10 rounded-full glass flex items-center justify-center text-slate-400 hover:text-white transition-colors active:scale-95">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Facts -->
+    <div class="space-y-3">
+      <div class="glass rounded-xl p-4 flex items-start gap-3">
+        <span class="text-xl">⏰</span>
+        <div>
+          <h4 class="font-medium text-white text-sm">Adults need 7-9 hours</h4>
+          <p class="text-xs text-slate-400">Consistently getting less than 7 hours increases health risks by 13%.</p>
+        </div>
+      </div>
+      <div class="glass rounded-xl p-4 flex items-start gap-3">
+        <span class="text-xl">📱</span>
+        <div>
+          <h4 class="font-medium text-white text-sm">Blue light delays sleep by 30 min</h4>
+          <p class="text-xs text-slate-400">Screen exposure within 1 hour of bed suppresses melatonin production.</p>
+        </div>
+      </div>
+      <div class="glass rounded-xl p-4 flex items-start gap-3">
+        <span class="text-xl">🏃</span>
+        <div>
+          <h4 class="font-medium text-white text-sm">Exercise improves sleep quality 65%</h4>
+          <p class="text-xs text-slate-400">But avoid intense workouts within 3 hours of bedtime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP TAB -->
+  <section id="panel-shop" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-2 text-lavender-300">Recommended Products</h2>
+    <p class="text-sm text-slate-400 mb-6">Curated sleep gear we actually use and recommend.</p>
+
+    <div class="space-y-4">
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-indigo-500/20 flex items-center justify-center text-2xl shrink-0">😴</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Premium Sleep Mask</h3>
+          <p class="text-xs text-slate-400">100% blackout, contoured design, adjustable strap</p>
+          <span class="text-xs text-indigo-400 font-medium">$24.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-lavender-500/20 flex items-center justify-center text-2xl shrink-0">💊</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Magnesium Glycinate</h3>
+          <p class="text-xs text-slate-400">400mg, chelated for absorption, promotes relaxation</p>
+          <span class="text-xs text-indigo-400 font-medium">$18.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-sleep-teal/20 flex items-center justify-center text-2xl shrink-0">🌡️</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Cooling Mattress Topper</h3>
+          <p class="text-xs text-slate-400">Gel-infused memory foam, breathable cover</p>
+          <span class="text-xs text-indigo-400 font-medium">$89.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-indigo-500/20 flex items-center justify-center text-2xl shrink-0">🔇</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Loop Quiet Earplugs</h3>
+          <p class="text-xs text-slate-400">27dB noise reduction, reusable silicone, 4 ear tip sizes</p>
+          <span class="text-xs text-indigo-400 font-medium">$24.95 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-lavender-500/20 flex items-center justify-center text-2xl shrink-0">🫖</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Chamomile Sleep Tea</h3>
+          <p class="text-xs text-slate-400">Organic chamomile, lavender, valerian root blend</p>
+          <span class="text-xs text-indigo-400 font-medium">$12.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-sleep-teal/20 flex items-center justify-center text-2xl shrink-0">💡</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Sunset Lamp (Red Light)</h3>
+          <p class="text-xs text-slate-400">Warm red/amber LED, timer function, no blue light</p>
+          <span class="text-xs text-indigo-400 font-medium">$29.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <p class="text-xs text-slate-500 text-center mt-6">Links may include affiliate partnerships. We only recommend products we trust.</p>
+  </section>
+
+</main>
+
+<script>
+// ==================== STATE ====================
+const STORAGE_KEY = 'sleepmaxx_data';
+let state = loadState();
+let sleepTimer = null;
+let sleepStart = null;
+let currentTip = 0;
+
+function defaultState() {
+  return {
+    entries: [],
+    bedtime: '22:30',
+    alarmOn: false,
+    routine: [
+      { text: 'Put phone on charger across room', done: false },
+      { text: 'No screens for 30 minutes', done: false },
+      { text: 'Brush teeth and wash face', done: false },
+      { text: 'Read for 10 minutes', done: false },
+      { text: 'Deep breathing (4-7-8 method)', done: false },
+      { text: 'Room temperature set to 65-68F', done: false }
+    ],
+    bestStreak: 0,
+    isSleeping: false,
+    sleepStartTime: null
+  };
+}
+
+function loadState() {
+  try {
+    const s = localStorage.getItem(STORAGE_KEY);
+    if (s) {
+      const parsed = JSON.parse(s);
+      return { ...defaultState(), ...parsed };
+    }
+  } catch(e) {}
+  return defaultState();
+}
+
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+// ==================== TABS ====================
+function switchTab(tab) {
+  const tabs = ['timer', 'log', 'stats', 'routine', 'tips', 'shop'];
+  tabs.forEach(t => {
+    document.getElementById('panel-' + t).classList.toggle('hidden', t !== tab);
+    document.getElementById('tab-' + t).className = t === tab
+      ? 'flex-1 py-3 text-sm font-medium text-center tab-active transition-all'
+      : 'flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all';
+  });
+  if (tab === 'stats') renderStats();
+  if (tab === 'log') renderLog();
+  if (tab === 'routine') renderRoutine();
+  if (tab === 'tips') renderTip();
+}
+
+// ==================== SLEEP TIMER ====================
+function toggleSleep() {
+  if (state.isSleeping) {
+    stopSleep();
+  } else {
+    startSleep();
+  }
+}
+
+function startSleep() {
+  state.isSleeping = true;
+  state.sleepStartTime = Date.now();
+  saveState();
+  sleepStart = state.sleepStartTime;
+  updateSleepUI();
+  sleepTimer = setInterval(updateTimer, 1000);
+  document.getElementById('sleepBtn').textContent = 'Wake Up';
+  document.getElementById('sleepBtn').classList.remove('from-indigo-500', 'to-lavender-500');
+  document.getElementById('sleepBtn').classList.add('from-amber-500', 'to-orange-500');
+  document.getElementById('timerLabel').textContent = 'Sleeping...';
+}
+
+function stopSleep() {
+  const duration = (Date.now() - state.sleepStartTime) / (1000 * 60 * 60);
+  clearInterval(sleepTimer);
+  sleepTimer = null;
+
+  const entry = {
+    date: new Date(state.sleepStartTime).toISOString().split('T')[0],
+    bedtime: new Date(state.sleepStartTime).toTimeString().slice(0,5),
+    wakeTime: new Date().toTimeString().slice(0,5),
+    hours: Math.round(duration * 100) / 100,
+    quality: 0,
+    timestamp: Date.now()
+  };
+  state.entries.unshift(entry);
+
+  state.isSleeping = false;
+  state.sleepStartTime = null;
+  saveState();
+
+  document.getElementById('sleepBtn').textContent = 'Start Sleep';
+  document.getElementById('sleepBtn').classList.remove('from-amber-500', 'to-orange-500');
+  document.getElementById('sleepBtn').classList.add('from-indigo-500', 'to-lavender-500');
+  document.getElementById('timerLabel').textContent = `Slept ${formatHours(entry.hours)}`;
+  document.getElementById('sleepRing').style.strokeDashoffset = '553';
+
+  updateQuickStats();
+  updateStreakBadge();
+}
+
+function updateTimer() {
+  if (!state.sleepStartTime) return;
+  const elapsed = Date.now() - state.sleepStartTime;
+  const hrs = Math.floor(elapsed / 3600000);
+  const mins = Math.floor((elapsed % 3600000) / 60000);
+  const secs = Math.floor((elapsed % 60000) / 1000);
+  document.getElementById('timerDisplay').textContent = `${hrs}:${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+
+  const targetHours = 8;
+  const progress = Math.min(elapsed / (targetHours * 3600000), 1);
+  const offset = 553 - (553 * progress);
+  document.getElementById('sleepRing').style.strokeDashoffset = offset;
+}
+
+function updateSleepUI() {
+  if (state.isSleeping && state.sleepStartTime) {
+    sleepStart = state.sleepStartTime;
+    sleepTimer = setInterval(updateTimer, 1000);
+    updateTimer();
+    document.getElementById('sleepBtn').textContent = 'Wake Up';
+    document.getElementById('sleepBtn').classList.remove('from-indigo-500', 'to-lavender-500');
+    document.getElementById('sleepBtn').classList.add('from-amber-500', 'to-orange-500');
+    document.getElementById('timerLabel').textContent = 'Sleeping...';
+  }
+}
+
+// ==================== BEDTIME ALARM ====================
+function saveBedtime() {
+  state.bedtime = document.getElementById('bedtimeInput').value;
+  saveState();
+  updateAlarmStatus();
+}
+
+function toggleAlarm() {
+  state.alarmOn = document.getElementById('alarmToggle').checked;
+  saveState();
+  updateAlarmStatus();
+  if (state.alarmOn) scheduleAlarmCheck();
+}
+
+function updateAlarmStatus() {
+  const status = document.getElementById('alarmStatus');
+  if (state.alarmOn) {
+    status.textContent = `Alarm set for ${state.bedtime}`;
+    status.classList.remove('text-slate-500');
+    status.classList.add('text-indigo-400');
+  } else {
+    status.textContent = 'Alarm off';
+    status.classList.remove('text-indigo-400');
+    status.classList.add('text-slate-500');
+  }
+}
+
+function scheduleAlarmCheck() {
+  setInterval(() => {
+    if (!state.alarmOn) return;
+    const now = new Date();
+    const timeStr = now.toTimeString().slice(0,5);
+    if (timeStr === state.bedtime && !state.isSleeping) {
+      if (Notification.permission === 'granted') {
+        new Notification('SleepMaxx', { body: 'Time for bed! Start your bedtime routine.', icon: '🌙' });
+      }
+    }
+  }, 30000);
+}
+
+// ==================== QUALITY RATING ====================
+let pendingRating = 0;
+function rateQuality(rating) {
+  pendingRating = rating;
+  for (let i = 1; i <= 5; i++) {
+    const star = document.getElementById('star' + i);
+    star.classList.toggle('star-filled', i <= rating);
+    star.classList.toggle('star-empty', i > rating);
+  }
+  const labels = ['', 'Terrible', 'Poor', 'Okay', 'Good', 'Excellent'];
+  document.getElementById('rateLabel').textContent = labels[rating];
+
+  if (state.entries.length > 0 && state.entries[0].quality === 0) {
+    state.entries[0].quality = rating;
+    saveState();
+  }
+}
+
+// ==================== MANUAL ENTRY ====================
+function addManualEntry() {
+  const bedtime = document.getElementById('manualBedtime').value;
+  const wakeTime = document.getElementById('manualWake').value;
+
+  const [bh, bm] = bedtime.split(':').map(Number);
+  const [wh, wm] = wakeTime.split(':').map(Number);
+  let hours = (wh + wm/60) - (bh + bm/60);
+  if (hours < 0) hours += 24;
+
+  const entry = {
+    date: new Date().toISOString().split('T')[0],
+    bedtime,
+    wakeTime,
+    hours: Math.round(hours * 100) / 100,
+    quality: 0,
+    timestamp: Date.now()
+  };
+  state.entries.unshift(entry);
+  saveState();
+  renderLog();
+  updateQuickStats();
+  updateStreakBadge();
+}
+
+// ==================== LOG RENDERING ====================
+function renderLog() {
+  const container = document.getElementById('logEntries');
+  if (state.entries.length === 0) {
+    container.innerHTML = '<p class="text-sm text-slate-500 text-center py-8">No entries yet. Start tracking your sleep!</p>';
+    return;
+  }
+  container.innerHTML = state.entries.slice(0, 14).map((e, i) => {
+    const stars = [1,2,3,4,5].map(s => `<span class="${s <= e.quality ? 'text-amber-400' : 'text-gray-700'} text-xs">&#9733;</span>`).join('');
+    const d = new Date(e.date);
+    const dayName = d.toLocaleDateString('en', { weekday: 'short' });
+    const dateStr = d.toLocaleDateString('en', { month: 'short', day: 'numeric' });
+    return `
+      <div class="glass rounded-xl p-4 flex items-center gap-3">
+        <div class="text-center w-12 shrink-0">
+          <div class="text-xs text-slate-500">${dayName}</div>
+          <div class="text-sm font-semibold text-white">${dateStr}</div>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm text-white font-medium">${formatHours(e.hours)}</div>
+          <div class="text-xs text-slate-400">${e.bedtime} - ${e.wakeTime}</div>
+        </div>
+        <div class="flex gap-0.5">${stars}</div>
+        <button onclick="deleteEntry(${i})" class="text-slate-600 hover:text-red-400 transition-colors ml-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    `;
+  }).join('');
+}
+
+function deleteEntry(i) {
+  state.entries.splice(i, 1);
+  saveState();
+  renderLog();
+  updateQuickStats();
+  updateStreakBadge();
+}
+
+// ==================== STATS ====================
+function renderStats() {
+  renderWeeklyChart();
+  renderMonthGrid();
+  const streak = calculateStreak();
+  if (streak > state.bestStreak) { state.bestStreak = streak; saveState(); }
+  document.getElementById('statsCurrentStreak').textContent = streak;
+  document.getElementById('statsBestStreak').textContent = state.bestStreak;
+  document.getElementById('statsTotalNights').textContent = state.entries.length;
+}
+
+function renderWeeklyChart() {
+  const chart = document.getElementById('weeklyChart');
+  const labels = document.getElementById('weeklyLabels');
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const today = new Date();
+  let bars = '';
+  let labelHtml = '';
+
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    const entry = state.entries.find(e => e.date === dateStr);
+    const hours = entry ? entry.hours : 0;
+    const pct = Math.min((hours / 10) * 100, 100);
+    const isGood = hours >= 7;
+    const color = hours === 0 ? 'bg-white/5' : isGood ? 'bg-gradient-to-t from-indigo-500 to-lavender-400' : 'bg-gradient-to-t from-amber-600 to-amber-400';
+    bars += `<div class="flex-1 flex flex-col items-center justify-end h-full">
+      <span class="text-xs font-medium mb-1 ${hours === 0 ? 'text-slate-600' : 'text-slate-300'}">${hours > 0 ? hours.toFixed(1) : ''}</span>
+      <div class="w-full max-w-[32px] rounded-t-md ${color} bar-animate" style="height: ${Math.max(pct, 4)}%"></div>
+    </div>`;
+    labelHtml += `<span class="flex-1 text-center">${days[d.getDay()]}</span>`;
+  }
+  chart.innerHTML = bars;
+  labels.innerHTML = labelHtml;
+}
+
+function renderMonthGrid() {
+  const grid = document.getElementById('monthGrid');
+  const today = new Date();
+  let html = '';
+  for (let i = 29; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    const entry = state.entries.find(e => e.date === dateStr);
+    const hours = entry ? entry.hours : 0;
+    let opacity = 'bg-indigo-500/5';
+    if (hours >= 9) opacity = 'bg-indigo-500';
+    else if (hours >= 7) opacity = 'bg-indigo-500/60';
+    else if (hours >= 5) opacity = 'bg-indigo-500/30';
+    else if (hours > 0) opacity = 'bg-indigo-500/10';
+    html += `<div class="aspect-square rounded-sm ${opacity}" title="${dateStr}: ${hours.toFixed(1)}h"></div>`;
+  }
+  // Fill remaining cells
+  const remaining = 35 - 30;
+  for (let i = 0; i < remaining; i++) html += '<div class="aspect-square rounded-sm bg-white/[0.02]"></div>';
+  grid.innerHTML = html;
+}
+
+// ==================== STREAKS ====================
+function calculateStreak() {
+  let streak = 0;
+  const today = new Date();
+  for (let i = 0; i < 365; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    const entry = state.entries.find(e => e.date === dateStr);
+    if (entry && entry.hours >= 7) {
+      streak++;
+    } else {
+      if (i === 0) continue;
+      break;
+    }
+  }
+  return streak;
+}
+
+function updateStreakBadge() {
+  const streak = calculateStreak();
+  const badge = document.getElementById('streakBadge');
+  document.getElementById('streakCount').textContent = streak;
+  document.getElementById('currentStreak').textContent = streak;
+  badge.classList.toggle('hidden', streak === 0);
+}
+
+// ==================== QUICK STATS ====================
+function updateQuickStats() {
+  const recent = state.entries.slice(0, 7);
+  if (recent.length === 0) return;
+
+  const avgHrs = recent.reduce((s, e) => s + e.hours, 0) / recent.length;
+  document.getElementById('avgSleep').textContent = avgHrs.toFixed(1);
+
+  const rated = recent.filter(e => e.quality > 0);
+  if (rated.length > 0) {
+    const avgQ = rated.reduce((s, e) => s + e.quality, 0) / rated.length;
+    document.getElementById('avgQuality').textContent = avgQ.toFixed(1);
+  }
+}
+
+// ==================== ROUTINE ====================
+function renderRoutine() {
+  const list = document.getElementById('routineChecklist');
+  list.innerHTML = state.routine.map((item, i) => `
+    <div class="flex items-center gap-3 checklist-item ${item.done ? 'checklist-done' : ''}">
+      <button onclick="toggleRoutineItem(${i})"
+        class="w-6 h-6 rounded-md border-2 ${item.done ? 'bg-indigo-500 border-indigo-500' : 'border-white/20'} flex items-center justify-center shrink-0 transition-all active:scale-90">
+        ${item.done ? '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>' : ''}
+      </button>
+      <span class="text-sm flex-1 ${item.done ? 'text-slate-500' : 'text-slate-200'}">${item.text}</span>
+      <button onclick="removeRoutineItem(${i})" class="text-slate-600 hover:text-red-400 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  `).join('');
+  updateRoutineProgress();
+}
+
+function toggleRoutineItem(i) {
+  state.routine[i].done = !state.routine[i].done;
+  saveState();
+  renderRoutine();
+}
+
+function addRoutineItem() {
+  const input = document.getElementById('newRoutineItem');
+  const text = input.value.trim();
+  if (!text) return;
+  state.routine.push({ text, done: false });
+  input.value = '';
+  saveState();
+  renderRoutine();
+}
+
+function removeRoutineItem(i) {
+  state.routine.splice(i, 1);
+  saveState();
+  renderRoutine();
+}
+
+function resetChecklist() {
+  state.routine.forEach(item => item.done = false);
+  saveState();
+  renderRoutine();
+}
+
+function updateRoutineProgress() {
+  const total = state.routine.length;
+  const done = state.routine.filter(i => i.done).length;
+  const pct = total > 0 ? (done / total) * 100 : 0;
+  document.getElementById('routineProgress').style.width = pct + '%';
+  document.getElementById('routineProgressText').textContent = `${done} of ${total} completed`;
+}
+
+// ==================== TIPS ====================
+const tips = [
+  { emoji: '🌡️', title: 'Keep your room cool', body: 'The ideal sleep temperature is 60-67F (15-19C). Your body needs to cool down to initiate sleep. A room that is too warm disrupts REM sleep.' },
+  { emoji: '📵', title: 'Screen curfew', body: 'Stop all screens 60 minutes before bed. Blue light from phones suppresses melatonin by up to 50%. Use Night Shift mode if you must use a device.' },
+  { emoji: '⏰', title: 'Consistent schedule', body: 'Go to bed and wake up at the same time every day, even weekends. Your circadian rhythm needs consistency to optimize sleep quality.' },
+  { emoji: '☕', title: 'Caffeine cutoff at 2pm', body: 'Caffeine has a half-life of 5-6 hours. A coffee at 3pm means half that caffeine is still active at 9pm. Set a hard 2pm cutoff.' },
+  { emoji: '🏋️', title: 'Exercise (but timing matters)', body: 'Regular exercise improves sleep quality by 65%. But intense workouts within 3 hours of bed raise core temperature and delay sleep onset.' },
+  { emoji: '🌑', title: 'Total darkness', body: 'Even small amounts of light disrupt melatonin production. Use blackout curtains and cover LED standby lights. Your room should be cave-dark.' },
+  { emoji: '🧘', title: '4-7-8 breathing technique', body: 'Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds. This activates your parasympathetic nervous system and reduces anxiety.' },
+  { emoji: '🍷', title: 'Alcohol is not a sleep aid', body: 'Alcohol helps you fall asleep faster but destroys sleep quality. It suppresses REM sleep by up to 20% and causes more night awakenings.' },
+  { emoji: '📝', title: 'Brain dump before bed', body: 'Write down tomorrow\'s tasks and worries before sleeping. Studies show this reduces time to fall asleep by 9 minutes on average.' },
+  { emoji: '🛏️', title: 'Bed is for sleep only', body: 'Don\'t work, eat, or scroll in bed. Your brain needs to associate the bed with sleep, not stimulation. This is called stimulus control therapy.' }
+];
+
+function renderTip() {
+  const tip = tips[currentTip];
+  const content = document.getElementById('tipContent');
+  content.className = 'slide-left';
+  document.getElementById('tipEmoji').textContent = tip.emoji;
+  document.getElementById('tipTitle').textContent = tip.title;
+  document.getElementById('tipBody').textContent = tip.body;
+
+  const dots = document.getElementById('tipDots');
+  dots.innerHTML = tips.map((_, i) => `<div class="w-1.5 h-1.5 rounded-full ${i === currentTip ? 'bg-lavender-400' : 'bg-white/10'}"></div>`).join('');
+}
+
+function nextTip() {
+  currentTip = (currentTip + 1) % tips.length;
+  renderTip();
+}
+
+function prevTip() {
+  currentTip = (currentTip - 1 + tips.length) % tips.length;
+  renderTip();
+}
+
+// ==================== HELPERS ====================
+function formatHours(h) {
+  const hrs = Math.floor(h);
+  const mins = Math.round((h - hrs) * 60);
+  return `${hrs}h ${mins}m`;
+}
+
+// ==================== INIT ====================
+function init() {
+  document.getElementById('bedtimeInput').value = state.bedtime;
+  document.getElementById('alarmToggle').checked = state.alarmOn;
+  updateAlarmStatus();
+  updateSleepUI();
+  updateQuickStats();
+  updateStreakBadge();
+  renderTip();
+
+  if (Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+  if (state.alarmOn) scheduleAlarmCheck();
+}
+
+// Register service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+
+init();
+</script>
+</body>
+</html>

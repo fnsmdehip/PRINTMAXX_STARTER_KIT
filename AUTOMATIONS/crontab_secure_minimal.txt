@@ -1,0 +1,12 @@
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin
+BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+
+# PRINTMAXX secure runtime loop
+*/30 * * * * cd $BASE && /bin/bash ./ship.sh >> logs/ship_cron.log 2>&1 # PRINTMAXX_SHIP_CAPTAIN
+
+# Enforce OpenRouter per-key daily budget policy (safe no-op without admin key)
+5 0 * * * cd $BASE && python3 AUTOMATIONS/openrouter_budget_guard.py --enforce --quiet >> logs/openrouter_budget_guard.log 2>&1 # PRINTMAXX_OPENROUTER_BUDGET_GUARD
+
+# Keep local model tier online (worker or local low-cost mode)
+@reboot cd $BASE && nohup ollama serve >> logs/ollama_serve.log 2>&1 # PRINTMAXX_OLLAMA

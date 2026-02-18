@@ -1,0 +1,89 @@
+{
+  "PLATFORM_ALGORITHM_GAMING": {
+    "title": "Platform Algorithm Optimization (Legal)",
+    "tactics": [
+      "TikTok: First 3 seconds = hook or die. Use pattern interrupts (zoom, cut, text flash). Post at 6-10 AM and 7-11 PM.",
+      "TikTok: Reply to comments with new videos (algo boost). Stitch/duet trending content in your niche.",
+      "YouTube Shorts: Cross-post TikTok content. YouTube rewards consistency. 1-3 Shorts/day. Use end screens.",
+      "Instagram: Reels get 2-3x reach vs posts. Collab feature = instant audience share. Use trending audio.",
+      "X/Twitter: Quote-tweet viral posts with your take. Thread game: 5-8 tweet threads perform best. Post 5-10x/day.",
+      "Pinterest: SEO-optimize pin titles and descriptions. Rich pins. Group boards. 15-25 pins/day via scheduler.",
+      "YouTube Long: First 30 seconds = retention or death. Open loops. Pattern interrupts every 60 seconds."
+    ]
+  },
+  "COLD_OUTREACH_EDGE": {
+    "title": "Cold Outreach Edge Tactics",
+    "tactics": [
+      "Email warmup: Instantly.ai auto-warmup for 14 days before sending. Start 5 emails/day, ramp to 50.",
+      "SPF/DKIM/DMARC: Set up ALL THREE or go to spam. Use Google Postmaster Tools to monitor reputation.",
+      "Inbox rotation: Use 3-5 sending accounts. Rotate daily. Each account sends max 50/day.",
+      "Timeline hooks: \"I noticed [company] just raised [amount]...\" \u2192 10% reply rate vs 4.4% for generic.",
+      "LinkedIn: Connect \u2192 engage with 3 posts \u2192 THEN pitch. Warm connection = 5x response rate.",
+      "Follow-up sequence: 4-7 touches. Day 1, 3, 7, 14, 21. 42% of replies come from follow-ups.",
+      "Personalization: Use Clay for enrichment. Reference specific company detail in line 1. Never generic openers.",
+      "Subject lines: 3-5 words. Lowercase. No spam triggers. \"quick question\" = 46% open rate benchmark."
+    ]
+  },
+  "SEO_EDGE": {
+    "title": "SEO Edge Tactics (Legal)",
+    "tactics": [
+      "Programmatic SEO: 300+ pages targeting \"[service] in [city]\" patterns. Claude Code generates all pages.",
+      "Parasite SEO: Post on Medium, LinkedIn, Quora (high DA). Link back to money site. Legal, just aggressive.",
+      "Topical authority: 50+ pages on one topic cluster. Google rewards depth. Build pillar + cluster model.",
+      "HARO/Connectively: Answer journalist queries. Get backlinks from Forbes, Business Insider etc. Free DR boost.",
+      "Expired domains: Buy expired domains with existing backlinks. Redirect to your site. Legal but aggressive.",
+      "Google Business Profile: Optimize for local SEO. Photos, posts, reviews, Q&A. Free local traffic.",
+      "Schema markup: Add FAQ, HowTo, Review schema. Rich snippets = 2x CTR in search results."
+    ]
+  },
+  "MULTI_ACCOUNT_MANAGEMENT": {
+    "title": "Multi-Account Strategy (Platform-Dependent)",
+    "tactics": [
+      "GoLogin: Separate browser profiles per account. Each profile = unique fingerprint, cookies, storage.",
+      "Proxy rotation: 1 residential proxy per account. Decodo/Smartproxy. Never share IPs between accounts.",
+      "Warmup schedule: Day 1-3: browse only. Day 4-7: like/follow. Day 8-14: post 1x/day. Day 15+: full activity.",
+      "Content differentiation: Each account = different niche, voice, visual style. Never cross-post identical content.",
+      "Phone verification: Use separate phone numbers per account. Services like TextNow or cheap SIMs.",
+      "Device diversity: Mix mobile and desktop posting. Vary post times. Mimic human behavior patterns.",
+      "CRITICAL: Stay within platform ToS where possible. Multi-account = risk. Lose accounts = lose revenue."
+    ]
+  },
+  "FINDOM_NSFW_GROWTH": {
+    "title": "Findom/NSFW Growth Edge",
+    "tactics": [
+      "X/Twitter discovery: #findom #paypig #humanATM #cashslave #finsub hashtags. Post 5-10x/day.",
+      "Engagement farming: Reply to findom community posts. Build presence. Dont just broadcast.",
+      "Teaser\u2192paywall funnel: Free teaser content on Twitter \u2192 \"Full content on Fanvue\" \u2192 subscription.",
+      "Telegram VIP: $99-499/mo for \"personalized attention\". Spin wheel games, flash sales, exclusive drops.",
+      "Cross-platform stacking: Twitter (discovery) \u2192 Fanvue/Fansly (content) \u2192 Telegram (VIP) \u2192 CashApp (tributes).",
+      "Flash sales: \"Next 10 tributes get exclusive content\". 25% conversion on warm audience. $200 avg.",
+      "Consistency beats volume: 2-3 quality posts/day > 10 low-quality. Build character/narrative arc.",
+      "Bio optimization: CashApp, Venmo, crypto address, Fanvue link, Linktree. Maximum payment options."
+    ]
+  },
+  "CONVERSION_OPTIMIZATION": {
+    "title": "Conversion Edge Tactics",
+    "tactics": [
+      "Anchoring: Show higher price crossed out next to sale price. \"$197 $97\". 2-3x conversion boost.",
+      "Social proof: \"1,247 people bought this\" or \"97% satisfaction rate\". Numbers beat testimonials.",
+      "Countdown timers: Real scarcity (not fake). \"Price increases in 48 hours\" with actual price change.",
+      "Exit intent popups: Offer discount/bonus when user tries to leave. 10-15% save rate.",
+      "Payment splitting: \"3 payments of $33\" vs \"$97 one-time\". Installments = 2x conversion.",
+      "Guarantee: \"30-day money-back, no questions\" removes risk. Refund rate stays under 5% for quality.",
+      "Bundle pricing: Individual items $30 each, bundle of 5 for $97. Perceived value = 50% off.",
+      "First-time discount: 20% off first purchase via email popup. Builds list + converts visitors."
+    ]
+  },
+  "PAYMENT_OPTIMIZATION": {
+    "title": "Payment and Revenue Optimization",
+    "tactics": [
+      "Stripe: 2.9% + $0.30. For high volume: negotiate to 2.2%. Use Stripe Billing for subscriptions.",
+      "Gumroad: 10% fee (down from old pricing). Good for digital products. No monthly fee.",
+      "CashApp/Venmo: 0% fee for personal payments. Perfect for findom tributes. Instant settlement.",
+      "Crypto: Bitcoin/ETH/SOL in bio. Zero fees. Anonymous for buyers (findom audience prefers this).",
+      "Reduce chargebacks: Clear product descriptions, easy refund process, good customer service.",
+      "Multi-currency: Accept international payments. Wise for low-fee international transfers.",
+      "Tax optimization: Track all expenses (tools, hosting, subscriptions). Home office deduction. S-Corp for >$50K/yr."
+    ]
+  }
+}

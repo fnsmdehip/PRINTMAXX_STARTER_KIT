@@ -1,0 +1,46 @@
+# PRINTMAXX Automation Test Dependencies
+# =======================================
+# Install with: pip install -r requirements-test.txt
+
+# Core testing framework
+pytest>=7.0.0
+
+# Coverage reporting
+pytest-cov>=4.0.0
+
+# HTML reports
+pytest-html>=4.0.0
+
+# Parallel execution
+pytest-xdist>=3.0.0
+
+# Test timeout
+pytest-timeout>=2.0.0
+
+# JSON reporting
+pytest-json-report>=1.5.0
+
+# Better assertions
+pytest-clarity>=1.0.0
+
+# Rerun failed tests
+pytest-rerunfailures>=10.0
+
+# Async support (if needed)
+pytest-asyncio>=0.20.0
+
+# Mock support (usually included with Python)
+# mock>=4.0.0  # For Python < 3.8
+
+# Playwright for browser testing
+playwright>=1.40.0
+
+# HTTP mocking
+responses>=0.22.0
+requests-mock>=1.11.0
+
+# Faker for test data generation
+faker>=15.0.0
+
+# Environment variable handling
+python-dotenv>=1.0.0

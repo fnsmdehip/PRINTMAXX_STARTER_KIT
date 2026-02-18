@@ -1,0 +1,82 @@
+# ============================================================
+# NEW CRON ENTRIES — High-Value Scripts Not Currently on Cron
+# ============================================================
+# Generated: 2026-02-18
+# Source: AUDIT/ALPHA_INTEGRATION_GAP_ANALYSIS.md + EXISTING_AUTOMATION_INVENTORY.md
+#
+# These scripts are functional but NOT wired into any automatic schedule.
+# Each entry identified from the gap analysis as high-value for automation.
+#
+# To install, append to existing crontab:
+#   cat AUTOMATIONS/new_cron_entries.txt >> /tmp/cron_additions.txt
+#   (review, then) crontab -l > /tmp/current_cron.txt && cat /tmp/cron_additions.txt >> /tmp/current_cron.txt && crontab /tmp/current_cron.txt
+#
+# Variables (set these at top of crontab if not already present):
+#   BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+#   PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+# ============================================================
+
+# --- P0: Alpha Review Bot (clear 867 PENDING_REVIEW backlog) ---
+# Processes 100 entries/day. Backlog cleared in ~9 days.
+# Runs after all scrapers have deposited new data.
+0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_review_bot.py --batch 100 >> AUTOMATIONS/logs/alpha_review.log 2>&1
+
+# --- P0: Niche Meta Detector on Live Data ---
+# Currently uses hardcoded sample data. With --live flag it reads
+# ALPHA_STAGING.csv + TREND_SIGNALS.csv for real-time meta detection.
+# Runs after alpha review bot so it sees freshly-approved entries.
+0 10 * * * cd $BASE && $PYTHON AUTOMATIONS/niche_meta_detector.py --live >> AUTOMATIONS/logs/meta_detection.log 2>&1
+
+# --- P1: Indeed Hiring Monitor (demand signals) ---
+# Hiring trends = leading indicator for service demand. Not currently on cron.
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/indeed_hiring_monitor.py >> AUTOMATIONS/logs/indeed_hiring.log 2>&1
+
+# --- P1: Competitor Price Monitor ---
+# Track competitor pricing changes. Currently manual only.
+0 11 * * * cd $BASE && $PYTHON AUTOMATIONS/competitor_price_monitor.py >> AUTOMATIONS/logs/competitor_prices.log 2>&1
+
+# --- P1: App Clone Finder (weekly) ---
+# Discover clone/rebrand opportunities from top apps.
+0 4 * * 1 cd $BASE && $PYTHON AUTOMATIONS/app_clone_finder.py >> AUTOMATIONS/logs/app_clone_finder.log 2>&1
+
+# --- P1: Product Hunt Scraper (daily) ---
+# Track new product launches for alpha + competitive intel.
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/producthunt_scraper.py >> AUTOMATIONS/logs/producthunt.log 2>&1
+
+# --- P1: UK Contracts Finder (weekly) ---
+# Additional government contract source beyond SAM.gov.
+0 5 * * 2 cd $BASE && $PYTHON AUTOMATIONS/uk_contracts_finder.py >> AUTOMATIONS/logs/uk_contracts.log 2>&1
+
+# --- P1: StoreLeads Ecom Intel ---
+# Ecom intelligence data for arb opportunities.
+30 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/storeleads_ecom_scraper.py >> AUTOMATIONS/logs/storeleads.log 2>&1
+
+# --- P1: USAspending Federal Data (weekly) ---
+# Federal spending data for gov contract opportunities.
+0 3 * * 3 cd $BASE && $PYTHON AUTOMATIONS/usaspending_scraper.py >> AUTOMATIONS/logs/usaspending.log 2>&1
+
+# --- P2: Meme Coin Signal Tracker (every 6h) ---
+# Reddit/Twitter signal scoring for meme coin opportunities.
+# Low allocation (<5%) but runs autonomously.
+0 0,6,12,18 * * * cd $BASE && $PYTHON AUTOMATIONS/meme_coin_signal_tracker.py >> AUTOMATIONS/logs/memecoin_signals.log 2>&1
+
+# --- P2: Viral Content Scanner (daily) ---
+# Detect viral content patterns for content farm strategy.
+30 7 * * * cd $BASE && $PYTHON AUTOMATIONS/viral_content_scanner.py --scan --limit 50 >> AUTOMATIONS/logs/viral_content.log 2>&1
+
+# --- P2: Content Auto-Poster (3x daily at optimal times) ---
+# Posts approved content from queue. Requires accounts to exist first.
+# Uncomment when Buffer/platform accounts are created:
+# 0 8,12,17 * * * cd $BASE && $PYTHON AUTOMATIONS/auto_content_poster.py --post-next >> AUTOMATIONS/logs/auto_poster.log 2>&1
+
+# --- P2: Freshness Auditor (weekly Sunday) ---
+# Check alpha entries >30 days old for staleness. Flag dead tactics.
+0 2 * * 0 cd $BASE && $PYTHON AUTOMATIONS/freshness_auditor.py >> AUTOMATIONS/logs/freshness.log 2>&1
+
+# --- P2: Nordic Ecom Arb (weekly) ---
+# Scan Nordic markets for ecom arbitrage opportunities.
+0 4 * * 4 cd $BASE && $PYTHON AUTOMATIONS/nordic_ecom_arb.py >> AUTOMATIONS/logs/nordic_ecom.log 2>&1
+
+# --- P3: TheirStack Tech Intel (weekly) ---
+# Technology stack intelligence for lead qualification.
+0 5 * * 5 cd $BASE && $PYTHON AUTOMATIONS/theirstack_tech_intel.py >> AUTOMATIONS/logs/theirstack.log 2>&1

@@ -1,0 +1,155 @@
+{
+  "welcome": {
+    "title": "Welcome to {{appName}}",
+    "subtitle": "Your personal assistant for getting things done.",
+    "cta": "Get Started"
+  },
+  "splash": {
+    "tagline": "Simple. Fast. Effective."
+  },
+  "screens": {
+    "feature1": {
+      "title": "Track Your Progress",
+      "subtitle": "See exactly where you stand with clear, visual progress tracking.",
+      "description": "Get insights that help you improve every day."
+    },
+    "feature2": {
+      "title": "Set Smart Goals",
+      "subtitle": "Create goals that matter and achieve them faster.",
+      "description": "Our system helps you break down big goals into small, manageable steps."
+    },
+    "feature3": {
+      "title": "Build Better Habits",
+      "subtitle": "Form lasting habits with proven methods.",
+      "description": "Track streaks, get reminders, and celebrate your wins."
+    },
+    "feature4": {
+      "title": "Stay Motivated",
+      "subtitle": "Get the encouragement you need, when you need it.",
+      "description": "Daily insights and personalized tips keep you on track."
+    },
+    "notifications": {
+      "title": "Stay on Track",
+      "subtitle": "Get gentle reminders to help you reach your goals.",
+      "description": "We'll only send useful notifications. You control what and when.",
+      "cta": "Enable Notifications",
+      "skip": "Maybe Later"
+    },
+    "permissions": {
+      "title": "One More Thing",
+      "subtitle": "A few permissions help us serve you better.",
+      "notifications": {
+        "title": "Notifications",
+        "description": "Reminders and progress updates"
+      },
+      "calendar": {
+        "title": "Calendar",
+        "description": "Sync with your schedule"
+      },
+      "health": {
+        "title": "Health Data",
+        "description": "Track wellness metrics"
+      }
+    }
+  },
+  "personalization": {
+    "title": "Let's personalize your experience",
+    "subtitle": "Answer a few quick questions so we can help you better.",
+    "skip": "Skip for Now",
+    "questions": {
+      "goal": {
+        "title": "What's your main goal?",
+        "options": {
+          "productivity": "Be more productive",
+          "health": "Improve my health",
+          "learning": "Learn new skills",
+          "habits": "Build better habits",
+          "mindfulness": "Reduce stress",
+          "other": "Something else"
+        }
+      },
+      "experience": {
+        "title": "Have you used similar apps before?",
+        "options": {
+          "never": "This is my first time",
+          "tried": "I've tried a few",
+          "regular": "I use them regularly"
+        }
+      },
+      "frequency": {
+        "title": "How often do you want to check in?",
+        "options": {
+          "daily": "Every day",
+          "weekly": "A few times a week",
+          "flexible": "When I feel like it"
+        }
+      },
+      "time": {
+        "title": "When do you prefer to focus?",
+        "options": {
+          "morning": "Morning",
+          "afternoon": "Afternoon",
+          "evening": "Evening",
+          "varies": "It varies"
+        }
+      }
+    }
+  },
+  "account": {
+    "title": "Create Your Account",
+    "subtitle": "Save your progress and sync across devices.",
+    "signInTitle": "Welcome Back",
+    "signInSubtitle": "Sign in to continue where you left off.",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Create a password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "namePlaceholder": "What should we call you?",
+    "continueWithEmail": "Continue with Email",
+    "continueWithApple": "Continue with Apple",
+    "continueWithGoogle": "Continue with Google",
+    "or": "or",
+    "termsPrefix": "By continuing, you agree to our ",
+    "termsLink": "Terms of Service",
+    "andText": " and ",
+    "privacyLink": "Privacy Policy",
+    "alreadyHaveAccount": "Already have an account? ",
+    "signInLink": "Sign In",
+    "noAccount": "Don't have an account? ",
+    "signUpLink": "Sign Up",
+    "skipForNow": "Skip for Now"
+  },
+  "trial": {
+    "title": "Start Your Free Trial",
+    "subtitle": "Get full access for {{days}} days. No credit card needed.",
+    "features": {
+      "title": "What you'll get:",
+      "feature1": "Unlimited access to all features",
+      "feature2": "Personalized insights and recommendations",
+      "feature3": "Priority support",
+      "feature4": "No ads, ever"
+    },
+    "cta": "Start Free Trial",
+    "noCommitment": "Cancel anytime. No questions asked.",
+    "skipTrial": "Continue with Free Version"
+  },
+  "complete": {
+    "title": "You're All Set!",
+    "subtitle": "Let's achieve great things together.",
+    "cta": "Let's Go",
+    "tip": {
+      "title": "Pro Tip",
+      "text": "Spend 2 minutes setting up your first goal for the best results."
+    }
+  },
+  "progress": {
+    "step": "Step {{current}} of {{total}}",
+    "percentage": "{{percent}}% complete"
+  },
+  "navigation": {
+    "next": "Next",
+    "back": "Back",
+    "skip": "Skip",
+    "done": "Done",
+    "getStarted": "Get Started"
+  }
+}

@@ -1,0 +1,2 @@
+trade_id,method_id,alpha_id,budget,duration_days,start_date,end_date,status,decision,notes,capital_invested,time_invested_hours,revenue_generated,leads_generated,conversion_rate,revenue_per_hour,scalability_score,platform_risk
+PAPER_TRADE_001,MM007_COLD_OUTBOUND,ALPHA524,50.0,7,2026-02-02T08:09:57.458191,2026-02-09T08:09:57.458199,COMPLETE,SCALE,Testing cold email framework,50.0,5.0,125.0,8,0.15625,25.0,7,4

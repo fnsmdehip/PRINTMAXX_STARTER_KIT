@@ -1,0 +1,277 @@
+# Deploy to Play Store Internal Track Workflow
+# Builds signed Android app and uploads to Play Store internal testing
+# Triggered manually or on release tags
+
+name: Deploy to Play Store
+
+on:
+  push:
+    tags:
+      - 'v*-android'
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+      track:
+        description: 'Play Store track'
+        required: true
+        default: 'internal'
+        type: choice
+        options:
+          - internal
+          - alpha
+          - beta
+          - production
+      skip_tests:
+        description: 'Skip tests (not recommended)'
+        required: false
+        default: false
+        type: boolean
+      release_notes:
+        description: 'Release notes'
+        required: false
+        type: string
+
+env:
+  JAVA_VERSION: '17'
+  RUBY_VERSION: '3.2'
+
+jobs:
+  # Run tests first unless skipped
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    if: github.event.inputs.skip_tests != 'true'
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+
+      - name: Run unit tests
+        run: |
+          cd android
+          ./gradlew testReleaseUnitTest --no-daemon
+
+  # Build and deploy
+  deploy:
+    name: Build & Deploy to Play Store
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: always() && (needs.test.result == 'success' || needs.test.result == 'skipped')
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+          working-directory: android
+
+      - name: Install Fastlane
+        run: |
+          cd android
+          bundle install
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+
+      # Decode keystore
+      - name: Decode keystore
+        run: |
+          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > android/app/release-keystore.jks
+
+      # Decode Google Play service account key
+      - name: Decode Play Store credentials
+        run: |
+          echo "${{ secrets.PLAY_STORE_SERVICE_ACCOUNT_JSON }}" | base64 --decode > android/play-store-key.json
+
+      # Version bump if manually triggered
+      - name: Bump version
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          cd android
+          bundle exec fastlane bump_version type:${{ github.event.inputs.version_bump }}
+
+      # Get current version
+      - name: Get version info
+        id: version
+        run: |
+          VERSION_NAME=$(grep 'versionName' android/app/build.gradle | head -1 | sed 's/[^0-9.]//g')
+          VERSION_CODE=$(grep 'versionCode' android/app/build.gradle | head -1 | sed 's/[^0-9]//g')
+          echo "version_name=$VERSION_NAME" >> $GITHUB_OUTPUT
+          echo "version_code=$VERSION_CODE" >> $GITHUB_OUTPUT
+
+      # Build the AAB
+      - name: Build Release AAB
+        run: |
+          cd android
+          bundle exec fastlane build_release
+        env:
+          KEYSTORE_FILE: release-keystore.jks
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+
+      # Upload to Play Store
+      - name: Upload to Play Store
+        run: |
+          cd android
+          bundle exec fastlane upload_play_store \
+            track:${{ github.event.inputs.track || 'internal' }} \
+            changelog:"${{ github.event.inputs.release_notes || 'Bug fixes and improvements' }}"
+        env:
+          SUPPLY_JSON_KEY: play-store-key.json
+
+      # Upload artifacts
+      - name: Upload AAB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-release-${{ github.sha }}
+          path: android/app/build/outputs/bundle/release/*.aab
+          retention-days: 30
+
+      - name: Upload mapping file
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-mapping-${{ github.sha }}
+          path: android/app/build/outputs/mapping/release/mapping.txt
+          retention-days: 90
+
+      # Cleanup sensitive files
+      - name: Cleanup secrets
+        if: always()
+        run: |
+          rm -f android/app/release-keystore.jks
+          rm -f android/play-store-key.json
+
+  # Create GitHub Release
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: success() && startsWith(github.ref, 'refs/tags/')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download AAB artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: android-release-${{ github.sha }}
+          path: ./release-artifacts
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./release-artifacts/*.aab
+          generate_release_notes: true
+          draft: false
+          prerelease: ${{ contains(github.ref, 'beta') || contains(github.ref, 'alpha') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Notify on completion
+  notify:
+    name: Notify
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: always()
+
+    steps:
+      - name: Send success notification
+        if: needs.deploy.result == 'success'
+        uses: 8398a7/action-slack@v3
+        with:
+          status: custom
+          custom_payload: |
+            {
+              "channel": "#releases",
+              "attachments": [
+                {
+                  "color": "good",
+                  "title": "Android Build Uploaded to Play Store",
+                  "fields": [
+                    {
+                      "title": "Repository",
+                      "value": "${{ github.repository }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Track",
+                      "value": "${{ github.event.inputs.track || 'internal' }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Branch",
+                      "value": "${{ github.ref_name }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Author",
+                      "value": "${{ github.actor }}",
+                      "short": true
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Send failure notification
+        if: needs.deploy.result == 'failure'
+        uses: 8398a7/action-slack@v3
+        with:
+          status: failure
+          channel: '#ci-alerts'
+          fields: repo,message,commit,author,action,eventName,ref,workflow
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  # Cleanup old builds
+  cleanup:
+    name: Cleanup Old Builds
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: success()
+
+    steps:
+      - name: Delete old artifacts
+        uses: c-hive/gha-remove-artifacts@v1
+        with:
+          age: '30 days'
+          skip-tags: true
+          skip-recent: 5

@@ -1,0 +1,47 @@
+{
+  "sequence_name": "product_launch",
+  "description": "5-email sequence for product launches",
+  "trigger": "launch_campaign",
+  "emails": [
+    {
+      "id": "launch_01",
+      "delay_days": -3,
+      "subject": "Something new coming Thursday",
+      "preview_text": "You get first look",
+      "body": "Quick heads up.\n\nI've been building something for the past [X weeks/months]. It's almost ready.\n\nOn Thursday, I'm opening it up to email subscribers first.\n\nWhat it is: [ONE SENTENCE DESCRIPTION]\n\nWho it's for: [TARGET AUDIENCE]\n\nWhy I built it: [BRIEF BACKSTORY]\n\nNo action needed today. Just wanted you to know it's coming.\n\nTalk Thursday.\n\n[Name]",
+      "cta": "anticipation"
+    },
+    {
+      "id": "launch_02",
+      "delay_days": -1,
+      "subject": "Tomorrow: [PRODUCT NAME] goes live",
+      "preview_text": "Early access starts in 24 hours",
+      "body": "[PRODUCT NAME] launches tomorrow at [TIME].\n\nHere's what you're getting:\n\n[FEATURE 1] - [Benefit]\n[FEATURE 2] - [Benefit]\n[FEATURE 3] - [Benefit]\n\nPrice: $[X]\n\nBut as an email subscriber, you get early access + [BONUS/DISCOUNT].\n\nI'll send the link tomorrow at [TIME]. Watch your inbox.\n\n[Name]\n\nP.S. Reply if you have questions. Happy to answer before launch.",
+      "cta": "reply"
+    },
+    {
+      "id": "launch_03",
+      "delay_days": 0,
+      "subject": "[PRODUCT NAME] is live",
+      "preview_text": "Get it now + subscriber bonus",
+      "body": "It's here.\n\n[PRODUCT NAME] is officially live.\n\n[GET IT NOW BUTTON]\n\n**What you get:**\n- [Feature 1]\n- [Feature 2]\n- [Feature 3]\n- [SUBSCRIBER BONUS]\n\n**Price:** $[X] (subscriber price)\n\nI built this because [REASON]. It solves [PROBLEM] for [AUDIENCE].\n\nIf that's you, grab it now:\n[GET IT NOW BUTTON]\n\nQuestions? Reply to this email.\n\n[Name]",
+      "cta": "purchase"
+    },
+    {
+      "id": "launch_04",
+      "delay_days": 2,
+      "subject": "What people are saying about [PRODUCT NAME]",
+      "preview_text": "Early results from first buyers",
+      "body": "Quick update on [PRODUCT NAME].\n\n[X] people have grabbed it since Thursday. Here's what they're saying:\n\n\"[TESTIMONIAL 1]\" - [Name]\n\n\"[TESTIMONIAL 2]\" - [Name]\n\n\"[TESTIMONIAL 3]\" - [Name]\n\nThe early feedback has been solid. People are getting [SPECIFIC RESULT].\n\nIf you've been on the fence:\n[GET IT NOW BUTTON]\n\nSubscriber pricing ends [DATE].\n\n[Name]",
+      "cta": "purchase"
+    },
+    {
+      "id": "launch_05",
+      "delay_days": 5,
+      "subject": "Last call: [PRODUCT NAME]",
+      "preview_text": "Subscriber pricing ends tonight",
+      "body": "Final reminder.\n\nSubscriber pricing for [PRODUCT NAME] ends tonight at midnight.\n\nAfter that, price goes to $[HIGHER PRICE].\n\n**Quick recap:**\n- [Main benefit 1]\n- [Main benefit 2]\n- [Main benefit 3]\n\n**Results so far:**\n- [X] buyers\n- [SPECIFIC OUTCOME people are getting]\n\nIf you want it at the subscriber price:\n[GET IT NOW BUTTON]\n\nAfter midnight, the price goes up and I won't email about this again.\n\n[Name]\n\nP.S. If you have a question that's stopping you from buying, reply now. I'll answer before the deadline.",
+      "cta": "purchase"
+    }
+  ]
+}

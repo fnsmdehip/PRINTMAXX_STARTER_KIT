@@ -1,0 +1,29 @@
+# PRINTMAXX Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Core (no external dependencies needed for most scripts)
+# The following are optional but recommended:
+
+# Terminal dashboards
+rich>=13.0.0                  # agent_monitor.py - rich terminal output
+textual>=0.80.0               # quant_dashboard.py - Bloomberg-style TUI
+
+# Web automation (optional - for twitter scraper)
+playwright>=1.40.0            # twitter_alpha_scraper.py, browser automation
+
+# Data analysis
+numpy>=1.24.0                 # revenue_projector.py, quant calculations
+# pandas>=2.0.0               # Uncomment if using pandas-based scripts
+
+# Testing
+pytest>=7.0.0                 # Run tests with: pytest AUTOMATIONS/tests/
+
+# Note: Most AUTOMATIONS/ scripts only use Python stdlib
+# (csv, json, argparse, pathlib, collections, datetime)
+# and will work without installing any packages.
+#
+# Scripts that need packages:
+# - agent_monitor.py: requires 'rich'
+# - quant_dashboard.py: requires 'textual' and 'rich'
+# - twitter_alpha_scraper.py: requires 'playwright'
+# - Everything else: stdlib only

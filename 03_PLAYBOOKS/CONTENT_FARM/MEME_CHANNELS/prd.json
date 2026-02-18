@@ -1,0 +1,276 @@
+{
+  "channel_id": "CF004",
+  "channel_name": "MEME_CHANNELS",
+  "category": "CONTENT_FARM",
+  "status": "ACTIVE",
+  "created_date": "2026-01-22",
+  "last_updated": "2026-01-22",
+
+  "channel_concept": {
+    "core_premise": "Niche-specific meme accounts targeting high-value audiences like tech workers, finance professionals, corporate employees, and fitness enthusiasts",
+    "value_proposition": "Relatable humor that builds engaged communities in specific niches with premium sponsor potential",
+    "content_pillars": [
+      "Relatable niche-specific situations",
+      "Trending meme format adaptations",
+      "Inside jokes for the community",
+      "Hot takes and controversial opinions",
+      "Seasonal and event-based content"
+    ],
+    "differentiation": "Niche-specific focus (not general memes). Target high-CPM audiences. Build community, not just followers."
+  },
+
+  "niche_recommendations": [
+    {
+      "niche": "Corporate/Office humor",
+      "competition": "5/10",
+      "potential": "High",
+      "monetization": "HR software, productivity apps, coffee brands",
+      "example_accounts": ["@corporatenatalie", "@9to5memes"]
+    },
+    {
+      "niche": "Tech/Programming",
+      "competition": "4/10",
+      "potential": "Very High",
+      "monetization": "Developer tools, SaaS, bootcamps, job boards",
+      "example_accounts": ["@programmers_memes", "@techmeme"]
+    },
+    {
+      "niche": "Finance/Investing",
+      "competition": "5/10",
+      "potential": "Very High",
+      "monetization": "Brokers, fintech apps, courses, newsletters",
+      "example_accounts": ["@litquidity", "@arbitrageandy"]
+    },
+    {
+      "niche": "Fitness/Gym",
+      "competition": "6/10",
+      "potential": "High",
+      "monetization": "Supplements, gear, apps, programs",
+      "example_accounts": ["@gymmemesofficial", "@musclememesofficial"]
+    }
+  ],
+
+  "target_audience": {
+    "primary_demographics": {
+      "age_range": "18-35",
+      "geography": "US, UK, Canada, Australia",
+      "income_level": "Varies by niche - finance/tech are highest"
+    },
+    "psychographics": {
+      "content_consumption": "Quick scroll sessions, share with friends, screenshot for group chats",
+      "engagement_patterns": "Tag friends, comment with additions to joke, save for later"
+    }
+  },
+
+  "platform_strategy": {
+    "primary_platform": {
+      "platform": "Instagram",
+      "content_mix": {
+        "static_memes": 50,
+        "reels": 30,
+        "carousels": 20
+      },
+      "posting_frequency": "6-10 posts/day",
+      "optimal_times": ["7:00 AM", "12:00 PM", "5:00 PM", "9:00 PM"],
+      "growth_targets": {
+        "month_1": 10000,
+        "month_3": 50000,
+        "month_6": 200000,
+        "month_12": 500000
+      }
+    },
+    "secondary_platforms": [
+      {
+        "platform": "TikTok",
+        "posting_frequency": "3-5 videos/day",
+        "growth_targets": {
+          "month_1": 20000,
+          "month_3": 100000,
+          "month_6": 400000,
+          "month_12": 1000000
+        }
+      },
+      {
+        "platform": "X (Twitter)",
+        "posting_frequency": "10-15 posts/day",
+        "growth_targets": {
+          "month_1": 5000,
+          "month_3": 25000,
+          "month_6": 100000,
+          "month_12": 300000
+        }
+      }
+    ]
+  },
+
+  "content_sourcing": {
+    "trending_meme_sources": {
+      "tier_1_immediate": [
+        "Twitter/X trending",
+        "Reddit front page and niche subs",
+        "TikTok FYP",
+        "Instagram Explore"
+      ],
+      "tier_2_emerging": [
+        "Know Your Meme",
+        "Imgur trending",
+        "Discord servers",
+        "4chan boards"
+      ],
+      "tier_3_niche": [
+        "Industry-specific subreddits",
+        "Slack communities",
+        "LinkedIn (for corporate)",
+        "Industry forums"
+      ]
+    },
+    "timing_windows": {
+      "immediate": "0-4 hours from trend start - highest viral potential",
+      "standard": "4-24 hours - still relevant",
+      "late": "24-48 hours - only if adding unique twist"
+    }
+  },
+
+  "viral_content_patterns": {
+    "high_performing_formats": [
+      {
+        "format": "Specific Callout",
+        "template": "[Very specific group] explaining [very specific behavior]",
+        "engagement": "15-25%"
+      },
+      {
+        "format": "Tier List",
+        "template": "[Category] tier list: S: [best] A: [great] F: [terrible]",
+        "engagement": "10-20%"
+      },
+      {
+        "format": "Before/After",
+        "template": "Me before [event] vs Me after [event]",
+        "engagement": "8-15%"
+      },
+      {
+        "format": "Hot Take",
+        "template": "Unpopular opinion: [controversial but defensible statement]",
+        "engagement": "12-25%"
+      }
+    ],
+    "viral_triggers": [
+      {"emotion": "Humor", "trigger": "Unexpected twist"},
+      {"emotion": "Recognition", "trigger": "That's so me moment"},
+      {"emotion": "Nostalgia", "trigger": "Shared memory"},
+      {"emotion": "Superiority", "trigger": "Inside joke flex"}
+    ]
+  },
+
+  "revenue_model": {
+    "revenue_per_100k_followers_monthly": {
+      "finance_niche": "$5,700",
+      "tech_niche": "$4,600",
+      "fitness_niche": "$4,150",
+      "gaming_niche": "$3,380",
+      "corporate_niche": "$2,950",
+      "general_niche": "$1,000"
+    },
+    "sponsor_rate_benchmarks": {
+      "10k_followers": "$50-200",
+      "50k_followers": "$200-800",
+      "100k_followers": "$400-1,500",
+      "250k_followers": "$800-3,000",
+      "500k_followers": "$1,500-6,000",
+      "1m_followers": "$3,000-15,000"
+    },
+    "revenue_streams": [
+      "Brand sponsorships",
+      "Affiliate marketing",
+      "Merchandise (quote t-shirts, stickers)",
+      "Platform creator funds",
+      "UGC licensing"
+    ]
+  },
+
+  "growth_playbook": {
+    "phase_1_launch": {
+      "duration": "2-4 weeks",
+      "target": "1,000 followers",
+      "daily_tasks": [
+        "Post 5-8x per day",
+        "Engage for 1 hour (30 min before/after posts)",
+        "Study 3 successful accounts in niche",
+        "Test 3-5 different content formats"
+      ]
+    },
+    "phase_2_foundation": {
+      "duration": "1-3 months",
+      "target": "10,000 followers",
+      "daily_tasks": [
+        "Post 8-10x per day",
+        "Engage for 1.5 hours",
+        "Analyze top posts weekly",
+        "Start collaboration outreach"
+      ]
+    },
+    "phase_3_growth": {
+      "duration": "2-6 months",
+      "target": "50,000 followers",
+      "focus": [
+        "Scale content production",
+        "Monetization prep",
+        "Community building",
+        "First paid partnerships"
+      ]
+    },
+    "phase_4_scale": {
+      "duration": "3-12 months",
+      "target": "250,000 followers",
+      "focus": [
+        "Hire VA for engagement/scheduling",
+        "Create media kit for sponsors",
+        "Launch merch or products",
+        "Diversify to multiple platforms"
+      ]
+    }
+  },
+
+  "automation_potential": {
+    "fully_automatable": [
+      "Post scheduling",
+      "Cross-platform posting",
+      "Basic analytics tracking",
+      "Hashtag research"
+    ],
+    "semi_automatable": [
+      "Trending meme discovery",
+      "Format adaptation",
+      "Caption writing"
+    ],
+    "manual_required": [
+      "Niche-specific humor creation",
+      "Community engagement",
+      "Brand deal negotiations",
+      "Quality control"
+    ]
+  },
+
+  "success_metrics": {
+    "engagement_rate_targets": {
+      "launch_0_1k": "15-30%",
+      "growth_1k_10k": "10-20%",
+      "scale_10k_50k": "8-15%",
+      "mature_50k_250k": "5-10%",
+      "large_250k_plus": "3-7%"
+    }
+  },
+
+  "cross_pollination": {
+    "synergy_methods": [
+      {"method_id": "CF007", "method_name": "MOTIVATION_QUOTES", "synergy_score": 70},
+      {"method_id": "AI001", "method_name": "NICHE_EXPERTS", "synergy_score": 65},
+      {"method_id": "MM002", "method_name": "INFO_PRODUCTS", "synergy_score": 50}
+    ],
+    "niche_stacking": {
+      "professional_stack": ["Corporate humor", "Tech memes", "Finance memes"],
+      "lifestyle_stack": ["Fitness", "Nutrition", "Mental health"],
+      "youth_stack": ["Student life", "Gaming", "Relationship"]
+    }
+  }
+}

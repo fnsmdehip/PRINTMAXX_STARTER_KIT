@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+osascript -e 'tell application "Terminal"
+    activate
+    do script "cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/printmaxx_tui.py"
+end tell'

@@ -1,0 +1,261 @@
+{"timestamp": "2026-02-12T07:43:41.610538", "event": "STATE_INITIALIZED", "op_id": "SYSTEM", "details": {"op_count": 30}}
+{"timestamp": "2026-02-12T07:43:41.624794", "event": "STATE_TRANSITION", "op_id": "MM002", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.624892", "event": "STATE_TRANSITION", "op_id": "MM002b", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.624940", "event": "STATE_TRANSITION", "op_id": "MM003", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.624981", "event": "STATE_TRANSITION", "op_id": "MM003b", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625020", "event": "STATE_TRANSITION", "op_id": "MM004", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625057", "event": "STATE_TRANSITION", "op_id": "MM007", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=66 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625093", "event": "STATE_TRANSITION", "op_id": "MM008", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625128", "event": "STATE_TRANSITION", "op_id": "MM010", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625164", "event": "STATE_TRANSITION", "op_id": "MM013", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625198", "event": "STATE_TRANSITION", "op_id": "MM014", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625233", "event": "STATE_TRANSITION", "op_id": "MM018", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625267", "event": "STATE_TRANSITION", "op_id": "MM018b", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625300", "event": "STATE_TRANSITION", "op_id": "MM020", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625334", "event": "STATE_TRANSITION", "op_id": "MM024", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:43:41.625366", "event": "STATE_TRANSITION", "op_id": "MM025", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=72 > 60"}}
+{"timestamp": "2026-02-12T07:44:01.038004", "event": "STATE_TRANSITION", "op_id": "MM024", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T07:44:01.038202", "event": "STATE_TRANSITION", "op_id": "MM025", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T07:44:01.038334", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-12T07:44:01.039157", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 2, "queue_size": 30, "total_ops": 30}}
+{"timestamp": "2026-02-12T07:44:07.064710", "event": "LEARNING_LOGGED", "op_id": "SYSTEM", "details": {"text": "Orchestrator v1.0 deployed. 30 ops tracked. Signal fusion reads 5 sources. Key finding: 0/18 accounts active = #1 blocker for SCOUTING->ACTIVE transitions. Lead scrapers timing out (32/55 overnight fa"}}
+{"timestamp": "2026-02-12T07:51:21.544883", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-12T07:51:21.546857", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 30, "total_ops": 30}}
+{"timestamp": "2026-02-12T07:59:38.819924", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 30, "new_from_xlsx": 178, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T07:59:45.238691", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T07:59:45.251486", "event": "STATE_TRANSITION", "op_id": "C01", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251566", "event": "STATE_TRANSITION", "op_id": "C02", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251617", "event": "STATE_TRANSITION", "op_id": "C03", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251660", "event": "STATE_TRANSITION", "op_id": "C04", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251702", "event": "STATE_TRANSITION", "op_id": "C05", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251743", "event": "STATE_TRANSITION", "op_id": "C07", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251786", "event": "STATE_TRANSITION", "op_id": "C08", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251825", "event": "STATE_TRANSITION", "op_id": "C09", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251865", "event": "STATE_TRANSITION", "op_id": "C10", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251905", "event": "STATE_TRANSITION", "op_id": "C11", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251951", "event": "STATE_TRANSITION", "op_id": "C13", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.251991", "event": "STATE_TRANSITION", "op_id": "C16", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252034", "event": "STATE_TRANSITION", "op_id": "C18", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252168", "event": "STATE_TRANSITION", "op_id": "C19", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252300", "event": "STATE_TRANSITION", "op_id": "C20", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252356", "event": "STATE_TRANSITION", "op_id": "E01", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252406", "event": "STATE_TRANSITION", "op_id": "E02", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=66 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252448", "event": "STATE_TRANSITION", "op_id": "E03", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252497", "event": "STATE_TRANSITION", "op_id": "E04", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252546", "event": "STATE_TRANSITION", "op_id": "E05", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252618", "event": "STATE_TRANSITION", "op_id": "E06", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252708", "event": "STATE_TRANSITION", "op_id": "E08", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252825", "event": "STATE_TRANSITION", "op_id": "D02", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252882", "event": "STATE_TRANSITION", "op_id": "D03", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252934", "event": "STATE_TRANSITION", "op_id": "D08", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.252981", "event": "STATE_TRANSITION", "op_id": "D09", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253030", "event": "STATE_TRANSITION", "op_id": "D10", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253077", "event": "STATE_TRANSITION", "op_id": "D11", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=66 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253117", "event": "STATE_TRANSITION", "op_id": "D12", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253157", "event": "STATE_TRANSITION", "op_id": "S01", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253204", "event": "STATE_TRANSITION", "op_id": "S03", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253250", "event": "STATE_TRANSITION", "op_id": "S04", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253292", "event": "STATE_TRANSITION", "op_id": "S05", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253334", "event": "STATE_TRANSITION", "op_id": "S08", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253377", "event": "STATE_TRANSITION", "op_id": "S13", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253423", "event": "STATE_TRANSITION", "op_id": "S15", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253466", "event": "STATE_TRANSITION", "op_id": "S16", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253538", "event": "STATE_TRANSITION", "op_id": "S17", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=66 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253582", "event": "STATE_TRANSITION", "op_id": "A01", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=70 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253624", "event": "STATE_TRANSITION", "op_id": "A02", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253664", "event": "STATE_TRANSITION", "op_id": "A03", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253704", "event": "STATE_TRANSITION", "op_id": "A04", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253744", "event": "STATE_TRANSITION", "op_id": "A07", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253786", "event": "STATE_TRANSITION", "op_id": "A08", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253826", "event": "STATE_TRANSITION", "op_id": "A09", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253866", "event": "STATE_TRANSITION", "op_id": "A10", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253944", "event": "STATE_TRANSITION", "op_id": "A12", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.253990", "event": "STATE_TRANSITION", "op_id": "P01", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254032", "event": "STATE_TRANSITION", "op_id": "P02", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254075", "event": "STATE_TRANSITION", "op_id": "P06", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254122", "event": "STATE_TRANSITION", "op_id": "P09", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254175", "event": "STATE_TRANSITION", "op_id": "G02", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=74 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254221", "event": "STATE_TRANSITION", "op_id": "G03", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=74 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254262", "event": "STATE_TRANSITION", "op_id": "G06", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=74 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254304", "event": "STATE_TRANSITION", "op_id": "G07", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=74 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254347", "event": "STATE_TRANSITION", "op_id": "G08", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=74 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254393", "event": "STATE_TRANSITION", "op_id": "G09", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=74 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254437", "event": "STATE_TRANSITION", "op_id": "G11", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=74 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254479", "event": "STATE_TRANSITION", "op_id": "G15", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=72 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254521", "event": "STATE_TRANSITION", "op_id": "N01", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254565", "event": "STATE_TRANSITION", "op_id": "N02", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=70 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254610", "event": "STATE_TRANSITION", "op_id": "N04", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254715", "event": "STATE_TRANSITION", "op_id": "N05", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254792", "event": "STATE_TRANSITION", "op_id": "N08", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254848", "event": "STATE_TRANSITION", "op_id": "N09", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=70 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254891", "event": "STATE_TRANSITION", "op_id": "N11", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254941", "event": "STATE_TRANSITION", "op_id": "N12", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.254989", "event": "STATE_TRANSITION", "op_id": "N22", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255036", "event": "STATE_TRANSITION", "op_id": "N23", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255166", "event": "STATE_TRANSITION", "op_id": "N24", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255209", "event": "STATE_TRANSITION", "op_id": "N28", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255249", "event": "STATE_TRANSITION", "op_id": "N30", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255288", "event": "STATE_TRANSITION", "op_id": "N31", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255327", "event": "STATE_TRANSITION", "op_id": "N32", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255365", "event": "STATE_TRANSITION", "op_id": "N34", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255404", "event": "STATE_TRANSITION", "op_id": "N35", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255443", "event": "STATE_TRANSITION", "op_id": "N37", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255482", "event": "STATE_TRANSITION", "op_id": "N38", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=67 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255522", "event": "STATE_TRANSITION", "op_id": "N39", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255561", "event": "STATE_TRANSITION", "op_id": "N41", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255600", "event": "STATE_TRANSITION", "op_id": "N42", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255639", "event": "STATE_TRANSITION", "op_id": "N45", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255676", "event": "STATE_TRANSITION", "op_id": "N46", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255716", "event": "STATE_TRANSITION", "op_id": "N47", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255755", "event": "STATE_TRANSITION", "op_id": "N61", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255791", "event": "STATE_TRANSITION", "op_id": "N62", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255830", "event": "STATE_TRANSITION", "op_id": "N63", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255866", "event": "STATE_TRANSITION", "op_id": "N64", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255902", "event": "STATE_TRANSITION", "op_id": "N65", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255938", "event": "STATE_TRANSITION", "op_id": "N66", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.255974", "event": "STATE_TRANSITION", "op_id": "N67", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=65 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.256010", "event": "STATE_TRANSITION", "op_id": "N68", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=68 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.256080", "event": "STATE_TRANSITION", "op_id": "N69", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.256175", "event": "STATE_TRANSITION", "op_id": "MM006", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.256253", "event": "STATE_TRANSITION", "op_id": "MM015", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=64 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.256320", "event": "STATE_TRANSITION", "op_id": "MM021", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-12T07:59:45.256363", "event": "STATE_TRANSITION", "op_id": "MM023", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-12T08:03:29.190361", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T08:03:29.489841", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T08:30:02.180013", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T08:30:02.198044", "event": "STATE_TRANSITION", "op_id": "G02", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.198144", "event": "STATE_TRANSITION", "op_id": "G03", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.198206", "event": "STATE_TRANSITION", "op_id": "G06", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.198257", "event": "STATE_TRANSITION", "op_id": "G07", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.198306", "event": "STATE_TRANSITION", "op_id": "G08", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.198355", "event": "STATE_TRANSITION", "op_id": "G09", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.198401", "event": "STATE_TRANSITION", "op_id": "G11", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.198451", "event": "STATE_TRANSITION", "op_id": "G15", "details": {"from": "SCOUTING", "to": "ACTIVE", "reason": "infrastructure ready AND accounts active"}}
+{"timestamp": "2026-02-12T08:30:02.199111", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-12T08:30:02.203276", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 8, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-12T12:30:01.676891", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T12:30:01.698360", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-12T12:30:01.703601", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-12T16:30:02.081060", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T16:30:02.150455", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-12T16:30:02.154861", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-12T20:30:01.165204", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-12T20:30:01.195162", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-12T20:30:01.201530", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-13T00:30:01.642252", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-13T00:30:01.689658", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-13T00:30:01.694915", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-13T02:38:18.022150", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-13T02:38:18.056577", "event": "STATE_TRANSITION", "op_id": "S18", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-02-13T02:38:18.056934", "event": "STATE_TRANSITION", "op_id": "N26", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=62 > 60"}}
+{"timestamp": "2026-02-13T02:38:18.057062", "event": "STATE_TRANSITION", "op_id": "N36", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=63 > 60"}}
+{"timestamp": "2026-02-13T02:38:18.057664", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-13T02:38:18.062260", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 3, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-13T04:30:01.841889", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-13T04:30:01.867896", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-13T04:30:01.872208", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-13T08:30:01.674613", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-13T08:30:01.724429", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-13T08:30:01.729582", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-13T12:30:01.377306", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-13T12:30:01.462713", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-13T12:30:01.469458", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-13T16:30:02.180881", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-13T16:30:02.302525", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-13T16:30:02.323186", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-13T20:30:02.144410", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-13T20:30:02.204738", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-13T20:30:02.209164", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-14T00:30:01.581222", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-14T00:30:01.721810", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-14T00:30:01.728372", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-14T02:39:23.786474", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-14T02:39:23.834317", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-14T02:39:23.838997", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-14T04:30:01.873604", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-14T04:30:02.008626", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-14T04:30:02.030333", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-14T08:30:02.360552", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-14T08:30:02.570573", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-14T08:30:02.579912", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-14T12:30:02.166720", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-14T12:30:02.336500", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-14T12:30:02.379994", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-14T16:30:01.791754", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-14T16:30:01.876542", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-14T16:30:01.897263", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-14T20:30:00.822208", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-14T20:30:00.922484", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-14T20:30:00.941263", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-15T00:30:02.198847", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-15T00:30:02.303284", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-15T00:30:02.307793", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-15T02:39:58.192939", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-15T02:39:58.330737", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-15T02:39:58.368093", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-15T08:30:02.054665", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-15T08:30:02.167248", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-15T08:30:02.173686", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-15T12:30:03.239354", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-15T12:30:03.569543", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-15T12:30:03.574843", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-15T16:30:01.196319", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-15T16:30:01.460482", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-15T16:30:01.465295", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-15T20:30:03.266440", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-15T20:30:03.623596", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-15T20:30:03.666933", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-16T00:30:02.800454", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-16T00:30:03.002697", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-16T00:30:03.241863", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-16T02:40:09.549487", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-16T02:40:09.659303", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-16T02:40:09.670183", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-16T04:30:02.615882", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-16T04:30:02.814370", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-16T04:30:02.846156", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-16T08:30:02.906911", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-16T08:30:03.157785", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-16T08:30:03.164288", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-16T12:30:02.254740", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-16T12:30:02.458138", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-16T12:30:02.465442", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-16T16:30:02.878770", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-16T16:30:03.199857", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-16T16:30:03.205183", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-16T20:30:02.740332", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-16T20:30:03.055992", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-16T20:30:03.102658", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-17T00:30:02.203090", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-17T00:30:02.410567", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-17T00:30:02.431004", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-17T02:40:21.763141", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-17T02:40:21.882013", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-17T02:40:21.895116", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-17T04:30:03.259669", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-17T04:30:03.516738", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-17T04:30:03.553807", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-17T08:30:01.510878", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-17T08:30:01.881018", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-17T08:30:01.887342", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-17T12:30:01.680408", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-17T12:30:01.949754", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-17T12:30:01.962914", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-17T16:30:01.704080", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-17T16:30:01.934261", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-17T16:30:01.939541", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-17T20:30:01.019309", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-17T20:30:01.206003", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-17T20:30:01.213267", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-18T00:30:03.150956", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-18T00:30:03.529564", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-18T00:30:03.536522", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-18T02:40:36.063490", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-18T02:40:36.143978", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-18T02:40:36.151653", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-18T04:30:01.808134", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-18T04:30:02.078876", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-18T04:30:02.085228", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-18T08:30:01.819975", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-18T08:30:02.089122", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-18T08:30:02.099600", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
