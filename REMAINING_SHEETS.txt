@@ -1,0 +1,1618 @@
+################################################################################
+SHEET: PRIORITY_AUTOMATION_EXEC (18 rows x 12 cols)
+COLUMNS: ['RANK', 'OP_ID', 'OP_NAME', 'TIME_TO_FIRST_$', 'READINESS', 'LANE', 'AUTOMATION_SCORE_100', 'SIGNAL_COUNT', 'BLOCKER_KEY', 'APPROVAL_OK', 'SOURCE_ARTIFACT', 'NEXT_AUTOMATION_ACTION']
+--- Row 1 ---
+  RANK: 0.5
+  OP_ID: N68
+  OP_NAME: Ramadan Fasting Tracker PWA
+  TIME_TO_FIRST_$: 3-7 days
+  READINESS: READY
+  LANE: app_factory
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+--- Row 2 ---
+  RANK: 1
+  OP_ID: N61
+  OP_NAME: Nationwide Local Biz Website Redesign
+  TIME_TO_FIRST_$: 14 days
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 3 ---
+  RANK: 3
+  OP_ID: D01
+  OP_NAME: Gumroad Product Portfolio
+  TIME_TO_FIRST_$: 24-48 hours
+  READINESS: READY
+  LANE: gumroad_listings
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  APPROVAL_OK: NO
+  SOURCE_ARTIFACT: output/ecom_autolist/manifest.json
+  NEXT_AUTOMATION_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+--- Row 4 ---
+  RANK: 4
+  OP_ID: S01
+  OP_NAME: Claude Code Freelance Arbitrage
+  TIME_TO_FIRST_$: 48-72 hours
+  READINESS: READY
+  LANE: freelance_arbitrage
+  AUTOMATION_SCORE_100: 52
+  SIGNAL_COUNT: 56
+  BLOCKER_KEY: FIVERR_UPWORK_ACCOUNT
+  APPROVAL_OK: NO
+  SOURCE_ARTIFACT: output/freelance/manifest.json
+  NEXT_AUTOMATION_ACTION: Run freelance scan + draft responder
+--- Row 5 ---
+  RANK: 5
+  OP_ID: S02
+  OP_NAME: Local Biz Website Service
+  TIME_TO_FIRST_$: 1-2 weeks
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 6 ---
+  RANK: 6
+  OP_ID: P02
+  OP_NAME: AI NSFW Findom Portfolio
+  TIME_TO_FIRST_$: 1-2 weeks
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 7 ---
+  RANK: 7
+  OP_ID: S05
+  OP_NAME: Bland AI Voice Outreach
+  TIME_TO_FIRST_$: 1 week
+  READINESS: BLOCKED
+  LANE: cold_outreach_warmup
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 8 ---
+  RANK: 8
+  OP_ID: C12
+  OP_NAME: Email Sequence Machine
+  TIME_TO_FIRST_$: 1-2 weeks
+  READINESS: BLOCKED
+  LANE: cold_outreach_warmup
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 9 ---
+  RANK: 9
+  OP_ID: S18
+  OP_NAME: Rapid Build Monetization
+  TIME_TO_FIRST_$: 1 week
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 10 ---
+  RANK: 10
+  OP_ID: P05
+  OP_NAME: Findom Multiplatform Stack
+  TIME_TO_FIRST_$: 2-3 weeks
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 11 ---
+  RANK: 11
+  OP_ID: S17
+  OP_NAME: Directory Listing Sites
+  TIME_TO_FIRST_$: 2-4 weeks
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 12 ---
+  RANK: 12
+  OP_ID: C01
+  OP_NAME: TikTok Content Farm
+  TIME_TO_FIRST_$: 2-4 weeks
+  READINESS: READY
+  LANE: rbi_intent_sniping
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+--- Row 13 ---
+  RANK: 13
+  OP_ID: S06
+  OP_NAME: Crunchbase Funded Co. Scraping
+  TIME_TO_FIRST_$: 2-4 weeks
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 14 ---
+  RANK: 14
+  OP_ID: S07
+  OP_NAME: Outdated Website Detector
+  TIME_TO_FIRST_$: 2-4 weeks
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 15 ---
+  RANK: 15
+  OP_ID: G13
+  OP_NAME: A/B Test Framework
+  TIME_TO_FIRST_$: 1 week
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 16 ---
+  RANK: 16
+  OP_ID: D07
+  OP_NAME: Whop Digital Storefront
+  TIME_TO_FIRST_$: 24-48 hours
+  READINESS: BUILD
+  LANE: other
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  SOURCE_ARTIFACT: n/a
+  NEXT_AUTOMATION_ACTION: Run discovery
+--- Row 17 ---
+  RANK: 17
+  OP_ID: P11
+  OP_NAME: CashApp/Crypto Bio Monetization
+  TIME_TO_FIRST_$: Immediate
+  READINESS: READY
+  LANE: app_factory
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+
+################################################################################
+SHEET: ETC_EXPANSION_QUEUE (32 rows x 9 cols)
+COLUMNS: ['RANK', 'OP_ID', 'OP_NAME', 'CATEGORY', 'LANE', 'AUTOMATION_SCORE_100', 'SIGNAL_COUNT', 'EXPANSION_LOGIC', 'NEXT_ACTION']
+--- Row 1 ---
+  RANK: 1
+  OP_ID: C01
+  OP_NAME: TikTok Content Farm
+  CATEGORY: CONTENT
+  LANE: rbi_intent_sniping
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run clawdbot_rbi tick + review top draft queues
+--- Row 2 ---
+  RANK: 2
+  OP_ID: C02
+  OP_NAME: YouTube Automation (Faceless)
+  CATEGORY: CONTENT
+  LANE: rbi_intent_sniping
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run clawdbot_rbi tick + review top draft queues
+--- Row 3 ---
+  RANK: 3
+  OP_ID: C03
+  OP_NAME: Instagram Content Network
+  CATEGORY: CONTENT
+  LANE: rbi_intent_sniping
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run clawdbot_rbi tick + review top draft queues
+--- Row 4 ---
+  RANK: 4
+  OP_ID: C06
+  OP_NAME: Podcast Factory (AI Host)
+  CATEGORY: CONTENT
+  LANE: rbi_intent_sniping
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run clawdbot_rbi tick + review top draft queues
+--- Row 5 ---
+  RANK: 5
+  OP_ID: C07
+  OP_NAME: Reddit Content Mining
+  CATEGORY: CONTENT
+  LANE: rbi_intent_sniping
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run clawdbot_rbi tick + review top draft queues
+--- Row 6 ---
+  RANK: 6
+  OP_ID: S01
+  OP_NAME: Claude Code Freelance Arbitrage
+  CATEGORY: SERVICE
+  LANE: freelance_arbitrage
+  AUTOMATION_SCORE_100: 52
+  SIGNAL_COUNT: 56
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run freelance scan + draft responder
+--- Row 7 ---
+  RANK: 7
+  OP_ID: E02
+  OP_NAME: Print-on-Demand Empire
+  CATEGORY: ECOM
+  LANE: ecom_arb
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run ecom arb scan + distributor matrix update
+--- Row 8 ---
+  RANK: 8
+  OP_ID: E05
+  OP_NAME: Amazon KDP Publishing
+  CATEGORY: ECOM
+  LANE: ecom_arb
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run ecom arb scan + distributor matrix update
+--- Row 9 ---
+  RANK: 9
+  OP_ID: E06
+  OP_NAME: Etsy Digital Downloads
+  CATEGORY: ECOM
+  LANE: ecom_arb
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run ecom arb scan + distributor matrix update
+--- Row 10 ---
+  RANK: 10
+  OP_ID: E07
+  OP_NAME: AI Stock Footage Library
+  CATEGORY: ECOM
+  LANE: ecom_arb
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run ecom arb scan + distributor matrix update
+--- Row 11 ---
+  RANK: 11
+  OP_ID: E08
+  OP_NAME: Trending Products Scanner
+  CATEGORY: ECOM
+  LANE: ecom_arb
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run ecom arb scan + distributor matrix update
+--- Row 12 ---
+  RANK: 12
+  OP_ID: D09
+  OP_NAME: AI Wrapper Micro-SaaS
+  CATEGORY: DIGITAL
+  LANE: app_factory
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Package app + deploy guard + store submission queue
+--- Row 13 ---
+  RANK: 13
+  OP_ID: A02
+  OP_NAME: Micro-SaaS Portfolio
+  CATEGORY: APP
+  LANE: app_factory
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Package app + deploy guard + store submission queue
+--- Row 14 ---
+  RANK: 14
+  OP_ID: A04
+  OP_NAME: AI Wrapper Apps
+  CATEGORY: APP
+  LANE: app_factory
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Package app + deploy guard + store submission queue
+--- Row 15 ---
+  RANK: 15
+  OP_ID: A05
+  OP_NAME: Discord Bot Marketplace
+  CATEGORY: APP
+  LANE: app_factory
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Package app + deploy guard + store submission queue
+--- Row 16 ---
+  RANK: 16
+  OP_ID: A06
+  OP_NAME: Telegram Bot Portfolio
+  CATEGORY: APP
+  LANE: app_factory
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Package app + deploy guard + store submission queue
+--- Row 17 ---
+  RANK: 17
+  OP_ID: D01
+  OP_NAME: Gumroad Product Portfolio
+  CATEGORY: DIGITAL
+  LANE: gumroad_listings
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+--- Row 18 ---
+  RANK: 18
+  OP_ID: D02
+  OP_NAME: Notion Template Marketplace
+  CATEGORY: DIGITAL
+  LANE: gumroad_listings
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+--- Row 19 ---
+  RANK: 19
+  OP_ID: D06
+  OP_NAME: Canva Template Store
+  CATEGORY: DIGITAL
+  LANE: gumroad_listings
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+--- Row 20 ---
+  RANK: 20
+  OP_ID: F04
+  OP_NAME: Course/Digital Product Affiliate
+  CATEGORY: AFFILIATE
+  LANE: gumroad_listings
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+--- Row 21 ---
+  RANK: 21
+  OP_ID: N11
+  OP_NAME: PLR/MRR Digital Product Arbitrage
+  CATEGORY: ECOM
+  LANE: gumroad_listings
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+--- Row 22 ---
+  RANK: 22
+  OP_ID: D04
+  OP_NAME: AI Prompt Marketplace
+  CATEGORY: DIGITAL
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run discovery
+--- Row 23 ---
+  RANK: 23
+  OP_ID: D05
+  OP_NAME: Chrome Extension Portfolio
+  CATEGORY: DIGITAL
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run discovery
+--- Row 24 ---
+  RANK: 24
+  OP_ID: D08
+  OP_NAME: Printable/Planner Factory
+  CATEGORY: DIGITAL
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run discovery
+--- Row 25 ---
+  RANK: 25
+  OP_ID: D12
+  OP_NAME: MCP Server Marketplace
+  CATEGORY: DIGITAL
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run discovery
+--- Row 26 ---
+  RANK: 26
+  OP_ID: S02
+  OP_NAME: Local Biz Website Service
+  CATEGORY: SERVICE
+  LANE: other
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Run discovery
+--- Row 27 ---
+  RANK: 27
+  OP_ID: C12
+  OP_NAME: Email Sequence Machine
+  CATEGORY: CONTENT
+  LANE: cold_outreach_warmup
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 28 ---
+  RANK: 28
+  OP_ID: S05
+  OP_NAME: Bland AI Voice Outreach
+  CATEGORY: SERVICE
+  LANE: cold_outreach_warmup
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 29 ---
+  RANK: 29
+  OP_ID: S08
+  OP_NAME: Cold Email Agency
+  CATEGORY: SERVICE
+  LANE: cold_outreach_warmup
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 30 ---
+  RANK: 30
+  OP_ID: N36
+  OP_NAME: Lead List Curation Service
+  CATEGORY: SERVICE
+  LANE: cold_outreach_warmup
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 31 ---
+  RANK: 31
+  OP_ID: N69
+  OP_NAME: AI Call Outreach for Local Biz
+  CATEGORY: SERVICE
+  LANE: cold_outreach_warmup
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  EXPANSION_LOGIC: ETC rule: expand adjacent ops in same lane/category.
+  NEXT_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+
+################################################################################
+SHEET: DEEP_PLAYBOOK_INDEX (1470 rows x 8 cols)
+COLUMNS: ['PLAYBOOK_OP', 'PLAYBOOK_TITLE', 'SECTION', 'ROW_TYPE', 'STEP_INDEX', 'LANE', 'TEXT', 'SOURCE_ROW']
+(Showing first 10 of 1470 rows)
+--- Row 1 ---
+  SECTION: OVERVIEW
+  ROW_TYPE: STEP
+  STEP_INDEX: 1
+  LANE: other
+  TEXT: DEEP OPS PLAYBOOK — FULL INSTRUCTIONS (37 OPS)
+  SOURCE_ROW: 2
+--- Row 2 ---
+  SECTION: OVERVIEW
+  ROW_TYPE: STEP
+  STEP_INDEX: 2
+  LANE: other
+  TEXT: Setup → Algorithm Guide → Shadowban Avoidance → LLM Loop → Manual First → Auto After
+  SOURCE_ROW: 3
+--- Row 3 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: OVERVIEW
+  ROW_TYPE: PLAYBOOK_HEADER
+  STEP_INDEX: 0
+  LANE: ecom_arb
+  TEXT: OP01: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SOURCE_ROW: 5
+--- Row 4 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: LLM ALPHA
+  ROW_TYPE: SECTION
+  STEP_INDEX: 0
+  LANE: ecom_arb
+  TEXT: LLM ALPHA
+  SOURCE_ROW: 6
+--- Row 5 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: LLM ALPHA
+  ROW_TYPE: STEP
+  STEP_INDEX: 1
+  LANE: ecom_arb
+  TEXT: LLM scrapes trending products from TikTok Shop, Etsy trending, Amazon Movers & Shakers, AliExpress hot products. Cross-references demand vs supply. Lists on Etsy/eBay/Mercari with AI-generated descrip
+  SOURCE_ROW: 7
+--- Row 6 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: INFRA STACK
+  ROW_TYPE: SECTION
+  STEP_INDEX: 1
+  LANE: ecom_arb
+  TEXT: INFRA STACK
+  SOURCE_ROW: 8
+--- Row 7 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: INFRA STACK
+  ROW_TYPE: STEP
+  STEP_INDEX: 2
+  LANE: ecom_arb
+  TEXT: Playwright (scraping) + Claude API (analysis) + Etsy/eBay API (listing) + Temu/AliExpress (fulfillment) + Oracle VPS (24/7 cron)
+  SOURCE_ROW: 9
+--- Row 8 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: SETUP INSTRUCTIONS
+  ROW_TYPE: SECTION
+  STEP_INDEX: 2
+  LANE: ecom_arb
+  TEXT: SETUP INSTRUCTIONS
+  SOURCE_ROW: 10
+--- Row 9 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: SETUP INSTRUCTIONS
+  ROW_TYPE: STEP
+  STEP_INDEX: 3
+  LANE: ecom_arb
+  TEXT: 1. Create Etsy shop ($0 to list, $0.20/listing fee). Create eBay account ($0).
+  SOURCE_ROW: 11
+--- Row 10 ---
+  PLAYBOOK_OP: OP01
+  PLAYBOOK_TITLE: ECOMM TRENDING PRODUCT ARB — $50-500/mo → $2K+ at scale
+  SECTION: SETUP INSTRUCTIONS
+  ROW_TYPE: STEP
+  STEP_INDEX: 4
+  LANE: ecom_arb
+  TEXT: 2. Set up Playwright scraper on Oracle VPS: scrape TikTok Shop trending, Etsy trending searches, Amazon Movers.
+  SOURCE_ROW: 12
+
+################################################################################
+SHEET: ALPHA_THESIS_INDEX (38 rows x 8 cols)
+COLUMNS: ['ALPHA_ID', 'OPPORTUNITY', 'LANE', 'BLOCKER_KEY', 'EDGE_DURATION', 'COMMAND_TEMPLATE', 'WHY_LLM_EDGE', 'SOURCE_ROW']
+--- Row 1 ---
+  ALPHA_ID: A001
+  OPPORTUNITY: Ecomm product scouting + auto-listing
+  LANE: ecom_arb
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  EDGE_DURATION: 12-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/ecom_arb_engine.py --hourly --top 2 && python3 AUTOMATIONS/ecom_autopilot.py --tick --top 12 --min-margin 20 --min-profit 3
+  WHY_LLM_EDGE: Human scans 50 products/day. LLM scans 10,000. First-mover on trending products = 40% margins before competition arrives.
+  SOURCE_ROW: 7
+--- Row 2 ---
+  ALPHA_ID: A002
+  OPPORTUNITY: Hyper-personalized cold email at scale
+  LANE: cold_outreach_warmup
+  BLOCKER_KEY: EMAIL_INFRA
+  EDGE_DURATION: 18-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  WHY_LLM_EDGE: Manual personalization = 20 emails/hour. LLM = 500 emails/hour with website-scraped personalization. 3-5x reply rate vs templates.
+  SOURCE_ROW: 8
+--- Row 3 ---
+  ALPHA_ID: A003
+  OPPORTUNITY: SEO content production (10-20 articles/day)
+  LANE: rbi_intent_sniping
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  EDGE_DURATION: 6-18 months (narrowing)
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  WHY_LLM_EDGE: Human writes 1-2 articles/day. LLM writes 10-20 with proper E-E-A-T, schema, internal linking. Topical authority in weeks vs months.
+  SOURCE_ROW: 9
+--- Row 4 ---
+  ALPHA_ID: A004
+  OPPORTUNITY: App factory (2-3 apps/month)
+  LANE: app_factory
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  WHY_LLM_EDGE: Manual dev = 1 app/3 months. Claude Code = 2-3/month. Portfolio of 30 apps in 1 year = massive surface area.
+  SOURCE_ROW: 10
+--- Row 5 ---
+  ALPHA_ID: A005
+  OPPORTUNITY: AI UGC video production
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-18 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Manual UGC = hire creators at $50-500/video. AI UGC via Kling/HeyGen = $0. 100 videos/week vs 5.
+  SOURCE_ROW: 11
+--- Row 6 ---
+  ALPHA_ID: A006
+  OPPORTUNITY: Multi-channel content repurposing
+  LANE: rbi_intent_sniping
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  EDGE_DURATION: 6-12 months (narrowing fast)
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  WHY_LLM_EDGE: Human repurposes 1 piece to 3 platforms. LLM repurposes to 13 channels × 5 platforms = 65 posts from 1 piece.
+  SOURCE_ROW: 12
+--- Row 7 ---
+  ALPHA_ID: A007
+  OPPORTUNITY: Real-time market signal analysis
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human reads 10 earnings calls/quarter. LLM reads ALL earnings calls + on-chain data + options flow simultaneously.
+  SOURCE_ROW: 13
+--- Row 8 ---
+  ALPHA_ID: A008
+  OPPORTUNITY: Notion/digital product factory
+  LANE: gumroad_listings
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  EDGE_DURATION: 12-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/gumroad_autolist_packager.py --write
+  WHY_LLM_EDGE: Human creates 1 template/week. LLM generates structure + copy + SEO for 5-10/week.
+  SOURCE_ROW: 14
+--- Row 9 ---
+  ALPHA_ID: A009
+  OPPORTUNITY: Domain scoring at scale
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human evaluates 50 domains/day. LLM scores 10,000 by brandability, keyword, comps, backlinks.
+  SOURCE_ROW: 15
+--- Row 10 ---
+  ALPHA_ID: A010
+  OPPORTUNITY: AI music production + distribution
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Musician creates 1 song/week. Suno + LLM prompts = 10 songs/day across genres. Spotify passive income.
+  SOURCE_ROW: 16
+--- Row 11 ---
+  ALPHA_ID: A011
+  OPPORTUNITY: Newsletter curation + writing
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-18 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human curator: 4-8 hrs per issue. LLM: scrape 145 sources + draft in 15 min. Human polish in 30 min.
+  SOURCE_ROW: 17
+--- Row 12 ---
+  ALPHA_ID: A012
+  OPPORTUNITY: Web redesign cold outreach with mockups
+  LANE: cold_outreach_warmup
+  BLOCKER_KEY: EMAIL_INFRA
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  WHY_LLM_EDGE: Agency manually prospects 10 businesses/day. LLM scrapes 100 + auto-generates redesign mockups + sends personalized emails.
+  SOURCE_ROW: 18
+--- Row 13 ---
+  ALPHA_ID: A013
+  OPPORTUNITY: YouTube script + video pipeline
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human creates 1 video/week. LLM pipeline: script + voice + visuals + upload = 1 video/day per channel.
+  SOURCE_ROW: 19
+--- Row 14 ---
+  ALPHA_ID: A014
+  OPPORTUNITY: Print on demand trend-reactive design
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-18 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human designer: 5-10 designs/day. LLM monitors trends + generates 200 designs/day with SEO titles.
+  SOURCE_ROW: 20
+--- Row 15 ---
+  ALPHA_ID: A015
+  OPPORTUNITY: Multi-persona social management
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 18-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human manages 1-2 accounts. LLM manages 8 personas × 4 platforms = 32 accounts with consistent voice.
+  SOURCE_ROW: 21
+--- Row 16 ---
+  ALPHA_ID: A016
+  OPPORTUNITY: Automated A/B testing at scale
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human tests 2-3 variants. LLM generates 50 variants + auto-measures + doubles down on winners.
+  SOURCE_ROW: 22
+--- Row 17 ---
+  ALPHA_ID: A017
+  OPPORTUNITY: Freelance service arbitrage (Claude Code)
+  LANE: freelance_arbitrage
+  BLOCKER_KEY: FIVERR_UPWORK_ACCOUNT
+  EDGE_DURATION: 24-48 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/freelance_demand_scanner.py --hourly && python3 AUTOMATIONS/auto_freelance_responder.py --dry-run
+  WHY_LLM_EDGE: Freelancers spend 2-5 days on $50-500 projects. Claude Code does it in 5-60 min. 95%+ margin on every gig. Volume play: 10-20 gigs/day.
+  SOURCE_ROW: 23
+--- Row 18 ---
+  ALPHA_ID: A018
+  OPPORTUNITY: AI UGC video production at scale
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-18 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human UGC: $50-500/video. AI UGC: $0.50-2/video. 100x cost reduction. Sell to DTC brands at 5-10x markup. Volume: 50-100 videos/day.
+  SOURCE_ROW: 24
+--- Row 19 ---
+  ALPHA_ID: A019
+  OPPORTUNITY: Micro-SaaS portfolio via Claude Code
+  LANE: app_factory
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  WHY_LLM_EDGE: Traditional dev: 3-6 months per SaaS. Claude Code: 24-48 hours per MVP. Portfolio approach: build 20 tools, 2-3 become winners.
+  SOURCE_ROW: 25
+--- Row 20 ---
+  ALPHA_ID: A020
+  OPPORTUNITY: Course/info product factory
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Human course creation: 100-500 hours. Claude: 2-4 hours. Production cost approaches $0. Distribution via Udemy (40M learners) + Gumroad.
+  SOURCE_ROW: 26
+--- Row 21 ---
+  ALPHA_ID: A021
+  OPPORTUNITY: Local biz website redesign pipeline
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Manual prospecting: 10 businesses/day. Automated: 100/day with mockup already built. Claude generates redesign before first contact.
+  SOURCE_ROW: 27
+--- Row 22 ---
+  ALPHA_ID: A022
+  OPPORTUNITY: Pinterest affiliate compound machine
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 18-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Most affiliate marketers ignore Pinterest. Pins have 6-12 month shelf life. LLM generates 50-100 optimized pins/day. Traffic compounds.
+  SOURCE_ROW: 28
+--- Row 23 ---
+  ALPHA_ID: A023
+  OPPORTUNITY: Rapid build monetization (48-hr MVP factory)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-48 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Agencies quote $5K-15K and 4-8 weeks. Claude Code delivers in 24-48 hours at $200/mo flat cost. Clients pay for outcome not process. 95%+ margin per build.
+  SOURCE_ROW: 29
+--- Row 24 ---
+  ALPHA_ID: A024
+  OPPORTUNITY: Directory listing sites (local SEO goldmine)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: One template deploys 50+ directory sites. "Best dentist in Austin" = 2,400 searches/mo. Charge $50-200/mo per listing. Near-zero marginal cost. Recurring revenue.
+  SOURCE_ROW: 30
+--- Row 25 ---
+  ALPHA_ID: A025
+  OPPORTUNITY: Gumroad product portfolio (9 products ready)
+  LANE: gumroad_listings
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  EDGE_DURATION: 12-18 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/gumroad_autolist_packager.py --write
+  WHY_LLM_EDGE: 9 digital products already built. Zero production cost remaining. Fastest path to first dollar. 90% margin. Portfolio = 9x discovery surface area.
+  SOURCE_ROW: 31
+--- Row 26 ---
+  ALPHA_ID: A026
+  OPPORTUNITY: Bland AI voice outreach (100 free calls/day)
+  LANE: cold_outreach_warmup
+  BLOCKER_KEY: EMAIL_INFRA
+  EDGE_DURATION: 18-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  WHY_LLM_EDGE: 100 free AI calls/day = 3,000/mo at $0. Cold callers cost $120-200/day. AI qualifies + books meetings. Top of funnel for all service ops.
+  SOURCE_ROW: 32
+--- Row 27 ---
+  ALPHA_ID: A027
+  OPPORTUNITY: X/Twitter growth engine (force multiplier)
+  LANE: rbi_intent_sniping
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  EDGE_DURATION: 12-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  WHY_LLM_EDGE: Discovery layer for all other ops. LLM generates 15-20 tweets/day in authentic voice. Premium revenue share + inbound leads + product sales. Compounds everything.
+  SOURCE_ROW: 33
+--- Row 28 ---
+  ALPHA_ID: A028
+  OPPORTUNITY: Meme page repurpose engine (3 coordinated accounts)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 12-18 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Most meme pages are 1 person manually scrolling and reposting. LLM runs 3 coordinated accounts with AI captions, scheduled posting, cross-platform cascade. 20-30 memes/day vs 5 manual. Engagement farm
+  SOURCE_ROW: 34
+--- Row 29 ---
+  ALPHA_ID: A029
+  OPPORTUNITY: Whop digital storefront (primary platform)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 18-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: 5.7% fees vs Gumroad 10%. Built-in 30% recurring affiliate network = free marketing. 8 listings already prepared. Whop combines products + community + courses in one platform vs stitching 3 tools toge
+  SOURCE_ROW: 35
+--- Row 30 ---
+  ALPHA_ID: A030
+  OPPORTUNITY: Clipper army network (10-500 clippers)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: 500 accounts testing different hooks = 10-50x more viral surface area than solo posting. Double monetization: TikTok Rewards + TikTok Shop on SAME video. Pay $1/1K views, earn $2.40+/1K views. Net pos
+  SOURCE_ROW: 36
+--- Row 31 ---
+  ALPHA_ID: A031
+  OPPORTUNITY: Telegram monetization hub (1B users)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Zero algorithm suppression. Every subscriber sees every post. 50% ad rev share at 1K subs + Stars (100% to creator) + paid channels ($10-50/mo). Bot automation = 10 channels managed with 1 hr/day.
+  SOURCE_ROW: 37
+--- Row 32 ---
+  ALPHA_ID: A032
+  OPPORTUNITY: AI companion app factory (niche-specific)
+  LANE: app_factory
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  WHY_LLM_EDGE: 337 active apps, $120M+ annual revenue, revenue per download doubled. Niche angles (faith, fitness, study) avoid App Store rejection. Template-based: same core code, different niche wrapping. 1 new ap
+  SOURCE_ROW: 38
+--- Row 33 ---
+  ALPHA_ID: A033
+  OPPORTUNITY: Podcast guesting pipeline (zero cost exposure)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-48 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Each 30-60 min appearance = 500-50K high-intent listeners. 3-5x conversion vs social media due to parasocial trust. Claude writes pitches + talking points + follow-up content. You just show up and tal
+  SOURCE_ROW: 39
+--- Row 34 ---
+  ALPHA_ID: A034
+  OPPORTUNITY: Product Hunt launch machine (2-3x/month)
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 18-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Top 5 daily = 3K-10K visitors in 24 hours. FREE. Claude Code builds launchable product in 48 hrs. Launch 2-3x/month while most makers launch once/year. PH pages rank well on Google = long-term SEO res
+  SOURCE_ROW: 40
+--- Row 35 ---
+  ALPHA_ID: A035
+  OPPORTUNITY: Sports betting affiliate content
+  LANE: rbi_intent_sniping
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  WHY_LLM_EDGE: $583B wagered. 25-40% lifetime rev share from sportsbooks. New state legalization = first-mover SEO window. Build content before legalization, rank by launch day. Claude generates 3-5 articles/day.
+  SOURCE_ROW: 41
+--- Row 36 ---
+  ALPHA_ID: A036
+  OPPORTUNITY: GitHub trending open source funnel
+  LANE: other
+  BLOCKER_KEY: NONE
+  EDGE_DURATION: 24-36 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  WHY_LLM_EDGE: Trending repo = 5K-50K developer visitors. Claude Code builds tool in 4-8 hrs. README links to paid version. 1-3% convert. Developers buy tools. Monthly trending repo = reliable lead gen for paid prod
+  SOURCE_ROW: 42
+--- Row 37 ---
+  ALPHA_ID: A037
+  OPPORTUNITY: PLR/MRR digital product arbitrage
+  LANE: gumroad_listings
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  EDGE_DURATION: 18-24 months
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/gumroad_autolist_packager.py --write
+  WHY_LLM_EDGE: Buy PLR at $17, AI-rebrand (new cover, rewritten intro, reformatted), sell at $27-47. 100% margin after initial purchase. Volume: 5 rebranded products/week. AI makes rebranding 10x faster than manual.
+  SOURCE_ROW: 43
+
+################################################################################
+SHEET: VENTURE_AUTOMATION_MAP (55 rows x 10 cols)
+COLUMNS: ['SOURCE', 'VENTURE_ID', 'VENTURE_NAME', 'LANE', 'READINESS', 'BLOCKER_KEY', 'AUTOMATION_SCORE_100', 'SIGNAL_COUNT', 'COMMAND_TEMPLATE', 'NEXT_ACTION']
+--- Row 1 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: C01
+  VENTURE_NAME: TikTok Content Farm
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  NEXT_ACTION: Run clawdbot_rbi tick + review top draft queues
+--- Row 2 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: S01
+  VENTURE_NAME: Claude Code Freelance Arbitrage
+  LANE: freelance_arbitrage
+  READINESS: READY
+  BLOCKER_KEY: FIVERR_UPWORK_ACCOUNT
+  AUTOMATION_SCORE_100: 52
+  SIGNAL_COUNT: 56
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/freelance_demand_scanner.py --hourly && python3 AUTOMATIONS/auto_freelance_responder.py --dry-run
+  NEXT_ACTION: Run freelance scan + draft responder
+--- Row 3 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: N68
+  VENTURE_NAME: Ramadan Fasting Tracker PWA
+  LANE: app_factory
+  READINESS: READY
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  NEXT_ACTION: Package app + deploy guard + store submission queue
+--- Row 4 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: P11
+  VENTURE_NAME: CashApp/Crypto Bio Monetization
+  LANE: app_factory
+  READINESS: READY
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  NEXT_ACTION: Package app + deploy guard + store submission queue
+--- Row 5 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: D01
+  VENTURE_NAME: Gumroad Product Portfolio
+  LANE: gumroad_listings
+  READINESS: READY
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/gumroad_autolist_packager.py --write
+  NEXT_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+--- Row 6 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: N61
+  VENTURE_NAME: Nationwide Local Biz Website Redesign
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 7 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: S02
+  VENTURE_NAME: Local Biz Website Service
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 8 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: P02
+  VENTURE_NAME: AI NSFW Findom Portfolio
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 9 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: S18
+  VENTURE_NAME: Rapid Build Monetization
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 10 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: P05
+  VENTURE_NAME: Findom Multiplatform Stack
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 11 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: S17
+  VENTURE_NAME: Directory Listing Sites
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 12 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: S06
+  VENTURE_NAME: Crunchbase Funded Co. Scraping
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 13 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: S07
+  VENTURE_NAME: Outdated Website Detector
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 14 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: S05
+  VENTURE_NAME: Bland AI Voice Outreach
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  BLOCKER_KEY: EMAIL_INFRA
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  NEXT_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 15 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: C12
+  VENTURE_NAME: Email Sequence Machine
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  BLOCKER_KEY: EMAIL_INFRA
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  NEXT_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+--- Row 16 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: G13
+  VENTURE_NAME: A/B Test Framework
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 17 ---
+  SOURCE: PRIORITY_LAUNCH
+  VENTURE_ID: D07
+  VENTURE_NAME: Whop Digital Storefront
+  LANE: other
+  READINESS: BUILD
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Run discovery
+--- Row 18 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A001
+  VENTURE_NAME: Ecomm product scouting + auto-listing
+  LANE: ecom_arb
+  READINESS: EXPLORE
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/ecom_arb_engine.py --hourly --top 2 && python3 AUTOMATIONS/ecom_autopilot.py --tick --top 12 --min-margin 20 --min-profit 3
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 19 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A002
+  VENTURE_NAME: Hyper-personalized cold email at scale
+  LANE: cold_outreach_warmup
+  READINESS: EXPLORE
+  BLOCKER_KEY: EMAIL_INFRA
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 20 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A003
+  VENTURE_NAME: SEO content production (10-20 articles/day)
+  LANE: rbi_intent_sniping
+  READINESS: EXPLORE
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 21 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A004
+  VENTURE_NAME: App factory (2-3 apps/month)
+  LANE: app_factory
+  READINESS: EXPLORE
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 22 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A005
+  VENTURE_NAME: AI UGC video production
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 23 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A006
+  VENTURE_NAME: Multi-channel content repurposing
+  LANE: rbi_intent_sniping
+  READINESS: EXPLORE
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 24 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A007
+  VENTURE_NAME: Real-time market signal analysis
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 25 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A008
+  VENTURE_NAME: Notion/digital product factory
+  LANE: gumroad_listings
+  READINESS: EXPLORE
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/gumroad_autolist_packager.py --write
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 26 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A009
+  VENTURE_NAME: Domain scoring at scale
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 27 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A010
+  VENTURE_NAME: AI music production + distribution
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 28 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A011
+  VENTURE_NAME: Newsletter curation + writing
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 29 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A012
+  VENTURE_NAME: Web redesign cold outreach with mockups
+  LANE: cold_outreach_warmup
+  READINESS: EXPLORE
+  BLOCKER_KEY: EMAIL_INFRA
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 30 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A013
+  VENTURE_NAME: YouTube script + video pipeline
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 31 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A014
+  VENTURE_NAME: Print on demand trend-reactive design
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 32 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A015
+  VENTURE_NAME: Multi-persona social management
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 33 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A016
+  VENTURE_NAME: Automated A/B testing at scale
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 34 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A017
+  VENTURE_NAME: Freelance service arbitrage (Claude Code)
+  LANE: freelance_arbitrage
+  READINESS: EXPLORE
+  BLOCKER_KEY: FIVERR_UPWORK_ACCOUNT
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/freelance_demand_scanner.py --hourly && python3 AUTOMATIONS/auto_freelance_responder.py --dry-run
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 35 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A018
+  VENTURE_NAME: AI UGC video production at scale
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 36 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A019
+  VENTURE_NAME: Micro-SaaS portfolio via Claude Code
+  LANE: app_factory
+  READINESS: EXPLORE
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 37 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A020
+  VENTURE_NAME: Course/info product factory
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 38 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A021
+  VENTURE_NAME: Local biz website redesign pipeline
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 39 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A022
+  VENTURE_NAME: Pinterest affiliate compound machine
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 40 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A023
+  VENTURE_NAME: Rapid build monetization (48-hr MVP factory)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 41 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A024
+  VENTURE_NAME: Directory listing sites (local SEO goldmine)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 42 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A025
+  VENTURE_NAME: Gumroad product portfolio (9 products ready)
+  LANE: gumroad_listings
+  READINESS: EXPLORE
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/gumroad_autolist_packager.py --write
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 43 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A026
+  VENTURE_NAME: Bland AI voice outreach (100 free calls/day)
+  LANE: cold_outreach_warmup
+  READINESS: EXPLORE
+  BLOCKER_KEY: EMAIL_INFRA
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 44 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A027
+  VENTURE_NAME: X/Twitter growth engine (force multiplier)
+  LANE: rbi_intent_sniping
+  READINESS: EXPLORE
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 45 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A028
+  VENTURE_NAME: Meme page repurpose engine (3 coordinated accounts)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 46 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A029
+  VENTURE_NAME: Whop digital storefront (primary platform)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 47 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A030
+  VENTURE_NAME: Clipper army network (10-500 clippers)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 48 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A031
+  VENTURE_NAME: Telegram monetization hub (1B users)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 49 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A032
+  VENTURE_NAME: AI companion app factory (niche-specific)
+  LANE: app_factory
+  READINESS: EXPLORE
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/app_packager.py --write && python3 AUTOMATIONS/deploy_guard.py --tick
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 50 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A033
+  VENTURE_NAME: Podcast guesting pipeline (zero cost exposure)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 51 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A034
+  VENTURE_NAME: Product Hunt launch machine (2-3x/month)
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 52 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A035
+  VENTURE_NAME: Sports betting affiliate content
+  LANE: rbi_intent_sniping
+  READINESS: EXPLORE
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/clawdbot_rbi_engine.py --tick --max-intents 180 --max-syndication 420 --max-directories 900
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 53 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A036
+  VENTURE_NAME: GitHub trending open source funnel
+  LANE: other
+  READINESS: EXPLORE
+  BLOCKER_KEY: NONE
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/alpha_monitor.py --cron
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+--- Row 54 ---
+  SOURCE: LLM_ALPHA_THESIS
+  VENTURE_ID: A037
+  VENTURE_NAME: PLR/MRR digital product arbitrage
+  LANE: gumroad_listings
+  READINESS: EXPLORE
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  AUTOMATION_SCORE_100: 0
+  SIGNAL_COUNT: 0
+  COMMAND_TEMPLATE: python3 AUTOMATIONS/gumroad_autolist_packager.py --write
+  NEXT_ACTION: Open low-cost probe and validate unit economics
+
+################################################################################
+SHEET: SYSTEM_EVIDENCE (11 rows x 4 cols)
+COLUMNS: ['KEY', 'VALUE', 'SOURCE', 'NOTES']
+--- Row 1 ---
+  KEY: generated_at
+  VALUE: 2026-02-19 04:31:47
+  SOURCE: AUTOMATIONS/master_ops_enhancer.py
+  NOTES: Workbook enhancement run timestamp
+--- Row 2 ---
+  KEY: pending_approvals_count
+  VALUE: 9
+  SOURCE: OPS/HUMAN_LOOP_QUEUE.md
+  NOTES: Keys still blocking live execution
+--- Row 3 ---
+  KEY: approved_keys_count
+  VALUE: 1
+  SOURCE: OPS/HUMAN_APPROVALS.csv
+  NOTES: Persistent approvals
+--- Row 4 ---
+  KEY: freelance_arbitrage.signal_count
+  VALUE: 56
+  SOURCE: output/freelance/manifest.json
+  NOTES: Live queue/signal volume
+--- Row 5 ---
+  KEY: gumroad_listings.signal_count
+  VALUE: 5
+  SOURCE: output/ecom_autolist/manifest.json
+  NOTES: Live queue/signal volume
+--- Row 6 ---
+  KEY: cold_outreach_warmup.signal_count
+  VALUE: 339
+  SOURCE: output/cold_emails/cold_emails_ready.csv
+  NOTES: Live queue/signal volume
+--- Row 7 ---
+  KEY: rbi_intent_sniping.signal_count
+  VALUE: 562
+  SOURCE: output/clawdbot/manifest.json
+  NOTES: Live queue/signal volume
+--- Row 8 ---
+  KEY: app_factory.signal_count
+  VALUE: 15
+  SOURCE: output/apps/manifest.json
+  NOTES: Live queue/signal volume
+--- Row 9 ---
+  KEY: ecom_arb.signal_count
+  VALUE: 15
+  SOURCE: output/ecom/manifest.json
+  NOTES: Live queue/signal volume
+--- Row 10 ---
+  KEY: other.signal_count
+  VALUE: 0
+  SOURCE: n/a
+  NOTES: Live queue/signal volume

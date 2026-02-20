@@ -14,9 +14,10 @@ This addendum records the infrastructure changes that integrate official OpenCla
 2. `OPS/OPENROUTER_BUDGET_POLICY.json`
 3. `scripts/setup_openclaw_worker_stack.sh`
 4. `scripts/setup_control_to_worker_ssh.sh`
-5. `OPS/openclaw/openclaw_worker_template.json5`
-6. `OPS/OPENCLAW_WORKER_ISOLATION_RUNBOOK_2026_02_18.md`
-7. `AUDIT/META_VISION_2026_02_18_OPENCLAW_WORKER_INTEGRATION.md`
+5. `scripts/install_remote_worker_openclaw.sh`
+6. `OPS/openclaw/openclaw_worker_template.json5`
+7. `OPS/OPENCLAW_WORKER_ISOLATION_RUNBOOK_2026_02_18.md`
+8. `AUDIT/META_VISION_2026_02_18_OPENCLAW_WORKER_INTEGRATION.md`
 
 ### Updated files
 
@@ -38,11 +39,13 @@ This addendum records the infrastructure changes that integrate official OpenCla
    - Key generation + authorized key wiring
    - `printmaxx-worker` SSH alias creation
    - Runbook command output for sync and remote setup
-3. Hard OpenRouter key budget guard now exists:
+3. One-command remote installer now exists:
+   - `scripts/install_remote_worker_openclaw.sh` chains SSH bootstrap, rsync sync, worker setup, and optional onboarding
+4. Hard OpenRouter key budget guard now exists:
    - Declarative policy in `OPS/OPENROUTER_BUDGET_POLICY.json`
    - Create/update keys with daily limits via OpenRouter Keys API
    - Daily cron enforcement added in secure cron profile
-4. Agent navigation contract updated in `CODEX.md`:
+5. Agent navigation contract updated in `CODEX.md`:
    - New runbook and command references added for OpenClaw + budget guard
 
 ## Budget Safety Outcome

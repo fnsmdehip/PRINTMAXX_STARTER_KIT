@@ -34,11 +34,8 @@ Contact
 Sign In
 Get Started
 Plans
-Plan Details and Features Prompt
 Compute
-Features
 FAQ
-CTA
 Features
 Autoscaling
 Private Networking
@@ -82,17 +79,6 @@ LinkedIn
 GitHub
 © Render 2026
 Predictable pricing that scales with you.
-View
-workspace plans
-, pricing for
-compute
-/
-Postgres
-/
-Key Value
-, and
-FAQs
-.
 Hobby
 Professional
 Organization
@@ -146,6 +132,132 @@ SAML SSO & SCIM
 Guaranteed uptime
 Premium support
 Customer success
+View our
+compute pricing
+* and
+FAQs
+*Compute costs: Pay only for provisioned resources, with transparent pricing based on CPU and service activation prorated to the second.
+Build & Deploy
+Full-stack services
+Deploy websites, public or private web services, background jobs, databases, and more with usage-based pricing
+Projects & environments
+1 project with 2 environments
+Unlimited
+Unlimited
+Unlimited
+Included bandwidth
+100 GB / month
+500 GB / month
+1 TB / month
+Custom
+Build pipeline minutes
+500 / month
+500 / user / month
+500 / user / month
+Custom
+Vertical scaling
+Horizontal autoscaling
+Performance build pipeline
+Storage
+Postgres
+High availability, read replicas, and 7-day logical backup retention
+Point-in-time recovery
+3-day window
+7-day window
+7-day window
+7-day window
+Key Value
+Persistent disks
+Collaboration
+Team Members
+Up to 10
+Unlimited
+Unlimited
+Roles & permissions
+Workspace admin
+Developer
+Enterprise owner
+Guest
+Preview environments
+Protected environments
+Audit logs
+Networking
+Global coverage
+Private networking
+Private links
+Up to 3
+Up to 3
+Custom
+Custom domains
+Up to 2
+HTTP/2 and HTTP/3
+Service discovery
+WebSockets
+Static outbound IPs
+Compliance
+GDPR DPA
+SOC 2 Type 2 certificate
+ISO 27001 certificate
+HIPAA
+Security
+DDoS Protection
+HTTPS only
+SSH access
+Secret files
+2FA
+Firewall
+Network-isolated environments
+SCIM
+SAML SSO
+Uptime & Monitoring
+Zero-downtime deploys
+Health checks
+Instant rollbacks
+5 builds retained
+15 builds retained
+30 builds retained
+30 builds retained
+Service metrics
+Notifications
+Log retention
+7 days
+14 days
+30 days
+30 days
+Log streams
+HTTP request logs
+OpenTelemetry metrics stream
+Guaranteed uptime
+Extensibility
+REST API
+Webhooks
+1 webhook
+100 webhooks
+Custom
+Support
+Community
+Email
+Chat
+Dedicated support engineer
+Support SLAs
+Dedicated success engineer
+Migration support
+Architecture review
+Quarterly account review
+Private Slack channel
+Convenience
+Infrastructure-as-Code
+Auto deploys from Git
+Command-line interface
+Service previews
+Deploy hooks
+Native runtimes
+Pre-deploy command
+Docker builds
+Environment groups
+Monorepo support
+Automatic Brotli compression
+Wildcard domains
 Hobby
 For personal projects and small-scale applications.
 $
@@ -171,9 +283,108 @@ Enterprise
 For enterprises with critical security, performance and support needs.
 Custom pricing
 Get in touch
-Looking for more plan details and features?
-Pay only for provisioned resources, with transparent pricing based on CPU and service activation prorated to the second.
-Compare all features
+Compare Pricing
+Find the plan that meets your needs.
+Select Plan
+Hobby
+Professional
+Organization
+Enterprise
+Start deploying
+Build & Deploy
+Full-stack services
+Deploy websites, public or private web services, background jobs, databases, and more with usage-based pricing
+Projects & environments
+1 project with 2 environments
+Included bandwidth
+100 GB / month
+Build pipeline minutes
+500 / month
+Vertical scaling
+Horizontal autoscaling
+Performance build pipeline
+Storage
+Postgres
+High availability, read replicas, and 7-day logical backup retention
+Point-in-time recovery
+3-day window
+Key Value
+Persistent disks
+Collaboration
+Team Members
+Roles & permissions
+Workspace admin
+Developer
+Enterprise owner
+Guest
+Preview environments
+Protected environments
+Audit logs
+Networking
+Global coverage
+Private networking
+Private links
+Custom domains
+Up to 2
+HTTP/2 and HTTP/3
+Service discovery
+WebSockets
+Static outbound IPs
+Compliance
+GDPR DPA
+SOC 2 Type 2 certificate
+ISO 27001 certificate
+HIPAA
+Security
+DDoS Protection
+HTTPS only
+SSH access
+Secret files
+2FA
+Firewall
+Network-isolated environments
+SCIM
+SAML SSO
+Uptime & Monitoring
+Zero-downtime deploys
+Health checks
+Instant rollbacks
+5 builds retained
+Service metrics
+Notifications
+Log retention
+7 days
+Log streams
+HTTP request logs
+OpenTelemetry metrics stream
+Guaranteed uptime
+Extensibility
+REST API
+Webhooks
+Support
+Community
+Email
+Chat
+Dedicated support engineer
+Support SLAs
+Dedicated success engineer
+Migration support
+Architecture review
+Quarterly account review
+Private Slack channel
+Convenience
+Infrastructure-as-Code
+Auto deploys from Git
+Command-line interface
+Service previews
+Deploy hooks
+Native runtimes
+Pre-deploy command
+Docker builds
+Environment groups
+Monorepo support
+Automatic Brotli compression
+Wildcard domains
 Compute pricing
 Sensible, scalable, prorated by the second.
 Static Sites
@@ -489,235 +700,6 @@ Up to 512 GB
 Up to 64
 Show
 Pricing
-Features
-Compare plans and features.
-Hobby
-Professional
-Organization
-Enterprise
-Build & Deploy
-Full-stack services
-Deploy websites, public or private web services, background jobs, databases, and more with usage-based pricing
-Projects & environments
-1 project with 2 environments
-Unlimited
-Unlimited
-Unlimited
-Included bandwidth
-100 GB / month
-500 GB / month
-1 TB / month
-Custom
-Build pipeline minutes
-500 / month
-500 / user / month
-500 / user / month
-Custom
-Vertical scaling
-Horizontal autoscaling
-Performance build pipeline
-Storage
-Postgres
-High availability, read replicas, and 7-day logical backup retention
-Point-in-time recovery
-3-day window
-7-day window
-7-day window
-7-day window
-Key Value
-Persistent disks
-Collaboration
-Team Members
-Up to 10
-Unlimited
-Unlimited
-Roles & permissions
-Workspace admin
-Developer
-Enterprise owner
-Guest
-Preview environments
-Protected environments
-Audit logs
-Networking
-Global coverage
-Private networking
-Private links
-Up to 3
-Up to 3
-Custom
-Custom domains
-Up to 2
-HTTP/2 and HTTP/3
-Service discovery
-WebSockets
-Static outbound IPs
-Compliance
-GDPR DPA
-SOC 2 Type 2 certificate
-ISO 27001 certificate
-HIPAA
-Security
-DDoS Protection
-HTTPS only
-SSH access
-Secret files
-2FA
-Firewall
-Network-isolated environments
-SCIM
-SAML SSO
-Uptime & Monitoring
-Zero-downtime deploys
-Health checks
-Instant rollbacks
-5 builds retained
-15 builds retained
-30 builds retained
-30 builds retained
-Service metrics
-Notifications
-Log retention
-7 days
-14 days
-30 days
-30 days
-Log streams
-HTTP request logs
-OpenTelemetry metrics stream
-Guaranteed uptime
-Extensibility
-REST API
-Webhooks
-1 webhook
-100 webhooks
-Custom
-Support
-Community
-Email
-Chat
-Dedicated support engineer
-Support SLAs
-Dedicated success engineer
-Migration support
-Architecture review
-Quarterly account review
-Private Slack channel
-Convenience
-Infrastructure-as-Code
-Auto deploys from Git
-Command-line interface
-Service previews
-Deploy hooks
-Native runtimes
-Pre-deploy command
-Docker builds
-Environment groups
-Monorepo support
-Automatic Brotli compression
-Wildcard domains
-Compare Pricing
-Find the plan that meets your needs.
-Select Plan
-Hobby
-Professional
-Organization
-Enterprise
-Start deploying
-Build & Deploy
-Full-stack services
-Deploy websites, public or private web services, background jobs, databases, and more with usage-based pricing
-Projects & environments
-1 project with 2 environments
-Included bandwidth
-100 GB / month
-Build pipeline minutes
-500 / month
-Vertical scaling
-Horizontal autoscaling
-Performance build pipeline
-Storage
-Postgres
-High availability, read replicas, and 7-day logical backup retention
-Point-in-time recovery
-3-day window
-Key Value
-Persistent disks
-Collaboration
-Team Members
-Roles & permissions
-Workspace admin
-Developer
-Enterprise owner
-Guest
-Preview environments
-Protected environments
-Audit logs
-Networking
-Global coverage
-Private networking
-Private links
-Custom domains
-Up to 2
-HTTP/2 and HTTP/3
-Service discovery
-WebSockets
-Static outbound IPs
-Compliance
-GDPR DPA
-SOC 2 Type 2 certificate
-ISO 27001 certificate
-HIPAA
-Security
-DDoS Protection
-HTTPS only
-SSH access
-Secret files
-2FA
-Firewall
-Network-isolated environments
-SCIM
-SAML SSO
-Uptime & Monitoring
-Zero-downtime deploys
-Health checks
-Instant rollbacks
-5 builds retained
-Service metrics
-Notifications
-Log retention
-7 days
-Log streams
-HTTP request logs
-OpenTelemetry metrics stream
-Guaranteed uptime
-Extensibility
-REST API
-Webhooks
-Support
-Community
-Email
-Chat
-Dedicated support engineer
-Support SLAs
-Dedicated success engineer
-Migration support
-Architecture review
-Quarterly account review
-Private Slack channel
-Convenience
-Infrastructure-as-Code
-Auto deploys from Git
-Command-line interface
-Service previews
-Deploy hooks
-Native runtimes
-Pre-deploy command
-Docker builds
-Environment groups
-Monorepo support
-Automatic Brotli compression
-Wildcard domains
 Frequently Asked Questions
 How does billing work?
 We charge for your workspace plan and your total compute usage at the end of the month. Plan costs depend on your workspace type and the number of team members in the workspace. Compute usage is billed and prorated by the second. If you create a service and delete it after a day, you pay for just a day.
@@ -758,6 +740,3 @@ support@render.com
 , or talk to us in our
 user community
 .
-Start building with Render
-The Zero DevOps cloud for developers and teams.
-Get Started

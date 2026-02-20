@@ -1,0 +1,2508 @@
+################################################################################
+SHEET: AUTO_STATUS_LIVE (180 rows x 13 cols)
+COLUMNS: ['OP_ID', 'CATEGORY', 'OP_NAME', 'LANE', 'READINESS', 'AUTOMATION_SCORE_100', 'SIGNAL_COUNT', 'BLOCKER_KEY', 'APPROVAL_OK', 'NEXT_AUTOMATION_ACTION', 'SOURCE_ARTIFACT', 'EXPECTED_PROFIT_HINT_USD', 'UPDATED_AT']
+--- Row 1 ---
+  OP_ID: C01
+  CATEGORY: CONTENT
+  OP_NAME: TikTok Content Farm
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 2 ---
+  OP_ID: C02
+  CATEGORY: CONTENT
+  OP_NAME: YouTube Automation (Faceless)
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 3 ---
+  OP_ID: C03
+  CATEGORY: CONTENT
+  OP_NAME: Instagram Content Network
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 4 ---
+  OP_ID: C06
+  CATEGORY: CONTENT
+  OP_NAME: Podcast Factory (AI Host)
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 5 ---
+  OP_ID: C07
+  CATEGORY: CONTENT
+  OP_NAME: Reddit Content Mining
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 6 ---
+  OP_ID: C08
+  CATEGORY: CONTENT
+  OP_NAME: Pinterest Affiliate Engine
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 7 ---
+  OP_ID: C09
+  CATEGORY: CONTENT
+  OP_NAME: YouTube Shorts Factory
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 8 ---
+  OP_ID: C10
+  CATEGORY: CONTENT
+  OP_NAME: Meme Account Network
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 9 ---
+  OP_ID: C11
+  CATEGORY: CONTENT
+  OP_NAME: Long-tail SEO Content Farm
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 10 ---
+  OP_ID: C14
+  CATEGORY: CONTENT
+  OP_NAME: Remotion Video Production
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 11 ---
+  OP_ID: C15
+  CATEGORY: CONTENT
+  OP_NAME: AI UGC Video Factory
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 12 ---
+  OP_ID: C16
+  CATEGORY: CONTENT
+  OP_NAME: FB Reels Crosspost
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 13 ---
+  OP_ID: C18
+  CATEGORY: CONTENT
+  OP_NAME: Viral Content Repurposer
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 14 ---
+  OP_ID: C19
+  CATEGORY: CONTENT
+  OP_NAME: ASMR AI Content Channel
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 15 ---
+  OP_ID: C20
+  CATEGORY: CONTENT
+  OP_NAME: Sports/Gaming Clips Channel
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 16 ---
+  OP_ID: E01
+  CATEGORY: ECOM
+  OP_NAME: TikTok Shop Arbitrage
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 17 ---
+  OP_ID: E03
+  CATEGORY: ECOM
+  OP_NAME: Ecom Arbitrage Scanner
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 18 ---
+  OP_ID: M03
+  CATEGORY: COMMUNITY
+  OP_NAME: Telegram VIP Channel
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 19 ---
+  OP_ID: G02
+  CATEGORY: GROWTH
+  OP_NAME: RBI Perpetual Improvement System
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 20 ---
+  OP_ID: G12
+  CATEGORY: GROWTH
+  OP_NAME: Content QA Pipeline
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 21 ---
+  OP_ID: N01
+  CATEGORY: CONTENT
+  OP_NAME: Meme Page Repurpose Strategy
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 22 ---
+  OP_ID: N06
+  CATEGORY: COMMUNITY
+  OP_NAME: Telegram Channel Monetization
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 23 ---
+  OP_ID: N19
+  CATEGORY: CONTENT
+  OP_NAME: Cross-Platform Content Arbitrage
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 24 ---
+  OP_ID: N30
+  CATEGORY: CONTENT
+  OP_NAME: AI Music Production
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 25 ---
+  OP_ID: N31
+  CATEGORY: CONTENT
+  OP_NAME: Thread Repurpose Engine
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 26 ---
+  OP_ID: N46
+  CATEGORY: CONTENT
+  OP_NAME: Medium/Substack Cross-Post Strategy
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 27 ---
+  OP_ID: N55
+  CATEGORY: DIGITAL
+  OP_NAME: Chrome Extension Arbitrage
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 28 ---
+  OP_ID: N70
+  CATEGORY: CONTENT
+  OP_NAME: App Store Optimization + ASO Content
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 68
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 29 ---
+  OP_ID: C04
+  CATEGORY: CONTENT
+  OP_NAME: X/Twitter Growth Engine
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 30 ---
+  OP_ID: C05
+  CATEGORY: CONTENT
+  OP_NAME: Newsletter Empire
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 31 ---
+  OP_ID: C13
+  CATEGORY: CONTENT
+  OP_NAME: Truth Pages / Authority Content
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 32 ---
+  OP_ID: C17
+  CATEGORY: CONTENT
+  OP_NAME: LinkedIn Content Strategy
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 33 ---
+  OP_ID: M01
+  CATEGORY: COMMUNITY
+  OP_NAME: Paid Discord Community
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 34 ---
+  OP_ID: M02
+  CATEGORY: COMMUNITY
+  OP_NAME: Skool Community
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 35 ---
+  OP_ID: M04
+  CATEGORY: COMMUNITY
+  OP_NAME: Patreon Community
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 36 ---
+  OP_ID: M05
+  CATEGORY: COMMUNITY
+  OP_NAME: Newsletter Community (Paid)
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 37 ---
+  OP_ID: M06
+  CATEGORY: COMMUNITY
+  OP_NAME: Whop Community
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 38 ---
+  OP_ID: N03
+  CATEGORY: COMMUNITY
+  OP_NAME: Skool Community Platform
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 39 ---
+  OP_ID: N26
+  CATEGORY: SERVICE
+  OP_NAME: Content Clipping Service
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 40 ---
+  OP_ID: N33
+  CATEGORY: GROWTH
+  OP_NAME: Reddit Account Warmup SOP
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 41 ---
+  OP_ID: N52
+  CATEGORY: GROWTH
+  OP_NAME: Quora/Reddit Answer Marketing
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 61
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 42 ---
+  OP_ID: N43
+  CATEGORY: COMMUNITY
+  OP_NAME: FetLife/Niche Community Infiltration
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 56
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 43 ---
+  OP_ID: N45
+  CATEGORY: ECOM
+  OP_NAME: Walmart Clearance Arbitrage
+  LANE: rbi_intent_sniping
+  READINESS: READY
+  AUTOMATION_SCORE_100: 56
+  SIGNAL_COUNT: 562
+  BLOCKER_KEY: X_MULTI_ACCOUNT_STACK
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run clawdbot_rbi tick + review top draft queues
+  SOURCE_ARTIFACT: output/clawdbot/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 44 ---
+  OP_ID: S01
+  CATEGORY: SERVICE
+  OP_NAME: Claude Code Freelance Arbitrage
+  LANE: freelance_arbitrage
+  READINESS: READY
+  AUTOMATION_SCORE_100: 52
+  SIGNAL_COUNT: 56
+  BLOCKER_KEY: FIVERR_UPWORK_ACCOUNT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run freelance scan + draft responder
+  SOURCE_ARTIFACT: output/freelance/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 45 ---
+  OP_ID: E02
+  CATEGORY: ECOM
+  OP_NAME: Print-on-Demand Empire
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 46 ---
+  OP_ID: E05
+  CATEGORY: ECOM
+  OP_NAME: Amazon KDP Publishing
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 47 ---
+  OP_ID: E06
+  CATEGORY: ECOM
+  OP_NAME: Etsy Digital Downloads
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 48 ---
+  OP_ID: E07
+  CATEGORY: ECOM
+  OP_NAME: AI Stock Footage Library
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 49 ---
+  OP_ID: E08
+  CATEGORY: ECOM
+  OP_NAME: Trending Products Scanner
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 50 ---
+  OP_ID: D09
+  CATEGORY: DIGITAL
+  OP_NAME: AI Wrapper Micro-SaaS
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 51 ---
+  OP_ID: A02
+  CATEGORY: APP
+  OP_NAME: Micro-SaaS Portfolio
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 52 ---
+  OP_ID: A04
+  CATEGORY: APP
+  OP_NAME: AI Wrapper Apps
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 53 ---
+  OP_ID: A05
+  CATEGORY: APP
+  OP_NAME: Discord Bot Marketplace
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 54 ---
+  OP_ID: A06
+  CATEGORY: APP
+  OP_NAME: Telegram Bot Portfolio
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 55 ---
+  OP_ID: A10
+  CATEGORY: APP
+  OP_NAME: PromptVault App
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 56 ---
+  OP_ID: A12
+  CATEGORY: APP
+  OP_NAME: Meme Coin Signal Service
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 57 ---
+  OP_ID: P11
+  CATEGORY: PERSONA
+  OP_NAME: CashApp/Crypto Bio Monetization
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 58 ---
+  OP_ID: F02
+  CATEGORY: AFFILIATE
+  OP_NAME: Amazon Associates Empire
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 59 ---
+  OP_ID: N24
+  CATEGORY: APP
+  OP_NAME: Custom GPT Business
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 60 ---
+  OP_ID: N37
+  CATEGORY: APP
+  OP_NAME: AI Workflow Marketplace
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 61 ---
+  OP_ID: N38
+  CATEGORY: APP
+  OP_NAME: Bluesky AT Protocol Apps
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 62 ---
+  OP_ID: N54
+  CATEGORY: DIGITAL
+  OP_NAME: API Wrapper Products
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 63 ---
+  OP_ID: N63
+  CATEGORY: APP
+  OP_NAME: Dusk - Sleep Tracker PWA
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 64 ---
+  OP_ID: N64
+  CATEGORY: APP
+  OP_NAME: Vault - Pomodoro Timer PWA
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 65 ---
+  OP_ID: N65
+  CATEGORY: APP
+  OP_NAME: Streakr - Habit Tracker PWA
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 66 ---
+  OP_ID: N66
+  CATEGORY: APP
+  OP_NAME: Mise - Meal Planner PWA
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 67 ---
+  OP_ID: N67
+  CATEGORY: APP
+  OP_NAME: Steplock - Walk Tracker PWA
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 68 ---
+  OP_ID: N68
+  CATEGORY: APP
+  OP_NAME: Ramadan Fasting Tracker PWA
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 48
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 69 ---
+  OP_ID: D01
+  CATEGORY: DIGITAL
+  OP_NAME: Gumroad Product Portfolio
+  LANE: gumroad_listings
+  READINESS: READY
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+  SOURCE_ARTIFACT: output/ecom_autolist/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 70 ---
+  OP_ID: D02
+  CATEGORY: DIGITAL
+  OP_NAME: Notion Template Marketplace
+  LANE: gumroad_listings
+  READINESS: READY
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+  SOURCE_ARTIFACT: output/ecom_autolist/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 71 ---
+  OP_ID: D06
+  CATEGORY: DIGITAL
+  OP_NAME: Canva Template Store
+  LANE: gumroad_listings
+  READINESS: READY
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+  SOURCE_ARTIFACT: output/ecom_autolist/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 72 ---
+  OP_ID: F04
+  CATEGORY: AFFILIATE
+  OP_NAME: Course/Digital Product Affiliate
+  LANE: gumroad_listings
+  READINESS: READY
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+  SOURCE_ARTIFACT: output/ecom_autolist/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 73 ---
+  OP_ID: N11
+  CATEGORY: ECOM
+  OP_NAME: PLR/MRR Digital Product Arbitrage
+  LANE: gumroad_listings
+  READINESS: READY
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+  SOURCE_ARTIFACT: output/ecom_autolist/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 74 ---
+  OP_ID: N58
+  CATEGORY: DIGITAL
+  OP_NAME: Template Marketplace Multi-list
+  LANE: gumroad_listings
+  READINESS: READY
+  AUTOMATION_SCORE_100: 47
+  SIGNAL_COUNT: 5
+  BLOCKER_KEY: GUMROAD_ACCOUNT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate Gumroad listing pack + approve AUTO_LIST_ECOM
+  SOURCE_ARTIFACT: output/ecom_autolist/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 75 ---
+  OP_ID: D04
+  CATEGORY: DIGITAL
+  OP_NAME: AI Prompt Marketplace
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 76 ---
+  OP_ID: D05
+  CATEGORY: DIGITAL
+  OP_NAME: Chrome Extension Portfolio
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 77 ---
+  OP_ID: D08
+  CATEGORY: DIGITAL
+  OP_NAME: Printable/Planner Factory
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 78 ---
+  OP_ID: D12
+  CATEGORY: DIGITAL
+  OP_NAME: MCP Server Marketplace
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 79 ---
+  OP_ID: S02
+  CATEGORY: SERVICE
+  OP_NAME: Local Biz Website Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 80 ---
+  OP_ID: S04
+  CATEGORY: SERVICE
+  OP_NAME: AI Automation Agency
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 81 ---
+  OP_ID: S06
+  CATEGORY: SERVICE
+  OP_NAME: Crunchbase Funded Co. Scraping
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 82 ---
+  OP_ID: S07
+  CATEGORY: SERVICE
+  OP_NAME: Outdated Website Detector
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 83 ---
+  OP_ID: S09
+  CATEGORY: SERVICE
+  OP_NAME: AI Chatbot Installation Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 84 ---
+  OP_ID: S10
+  CATEGORY: SERVICE
+  OP_NAME: Resume/Cover Letter Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 85 ---
+  OP_ID: S13
+  CATEGORY: SERVICE
+  OP_NAME: Social Media Management
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 86 ---
+  OP_ID: S17
+  CATEGORY: SERVICE
+  OP_NAME: Directory Listing Sites
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 87 ---
+  OP_ID: S18
+  CATEGORY: SERVICE
+  OP_NAME: Rapid Build Monetization
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 88 ---
+  OP_ID: P01
+  CATEGORY: PERSONA
+  OP_NAME: AI Influencer Portfolio (SFW)
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 89 ---
+  OP_ID: P02
+  CATEGORY: PERSONA
+  OP_NAME: AI NSFW Findom Portfolio
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 90 ---
+  OP_ID: P03
+  CATEGORY: PERSONA
+  OP_NAME: AI Girlfriend/Companion
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 91 ---
+  OP_ID: P04
+  CATEGORY: PERSONA
+  OP_NAME: Cosplay/Fantasy AI Persona
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 92 ---
+  OP_ID: P05
+  CATEGORY: PERSONA
+  OP_NAME: Findom Multiplatform Stack
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 93 ---
+  OP_ID: P06
+  CATEGORY: PERSONA
+  OP_NAME: AI ASMR Creator
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 94 ---
+  OP_ID: P07
+  CATEGORY: PERSONA
+  OP_NAME: Fitness AI Influencer
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 95 ---
+  OP_ID: P08
+  CATEGORY: PERSONA
+  OP_NAME: Faith/Spiritual AI Persona
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 96 ---
+  OP_ID: P09
+  CATEGORY: PERSONA
+  OP_NAME: Gaming AI Streamer
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 97 ---
+  OP_ID: P12
+  CATEGORY: PERSONA
+  OP_NAME: AI Persona Website Portfolio
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 98 ---
+  OP_ID: I05
+  CATEGORY: INVEST
+  OP_NAME: Revenue-Based Portfolio Allocation
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 99 ---
+  OP_ID: F01
+  CATEGORY: AFFILIATE
+  OP_NAME: Affiliate Review Sites
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 100 ---
+  OP_ID: F05
+  CATEGORY: AFFILIATE
+  OP_NAME: Deal/Coupon Aggregator
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 101 ---
+  OP_ID: G01
+  CATEGORY: GROWTH
+  OP_NAME: Multi-Account Warmup System
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 102 ---
+  OP_ID: G03
+  CATEGORY: GROWTH
+  OP_NAME: Daily Briefing System
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 103 ---
+  OP_ID: G04
+  CATEGORY: GROWTH
+  OP_NAME: Alpha Extraction Pipeline
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 104 ---
+  OP_ID: G05
+  CATEGORY: GROWTH
+  OP_NAME: Ralph Agent Orchestration
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 105 ---
+  OP_ID: G06
+  CATEGORY: GROWTH
+  OP_NAME: Cross-Pollination Engine
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 106 ---
+  OP_ID: G07
+  CATEGORY: GROWTH
+  OP_NAME: Niche Meta Detection
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 107 ---
+  OP_ID: G08
+  CATEGORY: GROWTH
+  OP_NAME: Platform Algorithm Monitor
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 108 ---
+  OP_ID: G09
+  CATEGORY: GROWTH
+  OP_NAME: Revenue Projection Engine
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 109 ---
+  OP_ID: G10
+  CATEGORY: GROWTH
+  OP_NAME: Quant Dashboard
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 110 ---
+  OP_ID: G11
+  CATEGORY: GROWTH
+  OP_NAME: Method Performance Analyzer
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 111 ---
+  OP_ID: G14
+  CATEGORY: GROWTH
+  OP_NAME: Git Backup + Version Control
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 112 ---
+  OP_ID: N02
+  CATEGORY: DIGITAL
+  OP_NAME: Whop Digital Storefront
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 113 ---
+  OP_ID: N05
+  CATEGORY: GROWTH
+  OP_NAME: Swarm Promotion Strategy
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 114 ---
+  OP_ID: N12
+  CATEGORY: DIGITAL
+  OP_NAME: Lemon Squeezy Products
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 115 ---
+  OP_ID: N29
+  CATEGORY: GROWTH
+  OP_NAME: Repurpose.io Cross-Posting
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 116 ---
+  OP_ID: N39
+  CATEGORY: SERVICE
+  OP_NAME: AI Voice Cloning Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 117 ---
+  OP_ID: N42
+  CATEGORY: SERVICE
+  OP_NAME: Curated Data Products
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 118 ---
+  OP_ID: N44
+  CATEGORY: AFFILIATE
+  OP_NAME: Pinterest Affiliate Strategy
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 119 ---
+  OP_ID: N51
+  CATEGORY: GROWTH
+  OP_NAME: GitHub Trending Strategy
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 120 ---
+  OP_ID: N59
+  CATEGORY: SERVICE
+  OP_NAME: AI Voice Cloning Gigs
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 121 ---
+  OP_ID: N60
+  CATEGORY: DIGITAL
+  OP_NAME: Competitive Intel Reports
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 122 ---
+  OP_ID: N61
+  CATEGORY: SERVICE
+  OP_NAME: Nationwide Local Biz Website Redesign
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 123 ---
+  OP_ID: N62
+  CATEGORY: SERVICE
+  OP_NAME: Motion Website Upsell Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 45
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 124 ---
+  OP_ID: C12
+  CATEGORY: CONTENT
+  OP_NAME: Email Sequence Machine
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 125 ---
+  OP_ID: S05
+  CATEGORY: SERVICE
+  OP_NAME: Bland AI Voice Outreach
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 126 ---
+  OP_ID: S08
+  CATEGORY: SERVICE
+  OP_NAME: Cold Email Agency
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 127 ---
+  OP_ID: N36
+  CATEGORY: SERVICE
+  OP_NAME: Lead List Curation Service
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 128 ---
+  OP_ID: N69
+  CATEGORY: SERVICE
+  OP_NAME: AI Call Outreach for Local Biz
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  AUTOMATION_SCORE_100: 43
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 129 ---
+  OP_ID: E04
+  CATEGORY: ECOM
+  OP_NAME: Dropshipping Automation
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 130 ---
+  OP_ID: E09
+  CATEGORY: ECOM
+  OP_NAME: Flash Sale Funnel
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 131 ---
+  OP_ID: E10
+  CATEGORY: ECOM
+  OP_NAME: PEMF Device Business
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 132 ---
+  OP_ID: D11
+  CATEGORY: DIGITAL
+  OP_NAME: White-Label SaaS Reselling
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 133 ---
+  OP_ID: A01
+  CATEGORY: APP
+  OP_NAME: Portfolio App Builder
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 134 ---
+  OP_ID: A03
+  CATEGORY: APP
+  OP_NAME: Roblox Game Development
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 135 ---
+  OP_ID: A07
+  CATEGORY: APP
+  OP_NAME: PrayerLock App
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 136 ---
+  OP_ID: A08
+  CATEGORY: APP
+  OP_NAME: StudyLock/LearnLock Apps
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 137 ---
+  OP_ID: A09
+  CATEGORY: APP
+  OP_NAME: SaaS Dashboard Builder
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 138 ---
+  OP_ID: A11
+  CATEGORY: APP
+  OP_NAME: Algo Trading Bot
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 139 ---
+  OP_ID: N09
+  CATEGORY: APP
+  OP_NAME: AI Companion App
+  LANE: app_factory
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: STORE_ACCOUNT_AND_PAYMENT
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Package app + deploy guard + store submission queue
+  SOURCE_ARTIFACT: output/apps/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 140 ---
+  OP_ID: N41
+  CATEGORY: ECOM
+  OP_NAME: Subscription Box Curation
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 41
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 141 ---
+  OP_ID: D03
+  CATEGORY: DIGITAL
+  OP_NAME: Course/Info Product Factory
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 142 ---
+  OP_ID: D07
+  CATEGORY: DIGITAL
+  OP_NAME: Whop Digital Storefront
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 143 ---
+  OP_ID: D10
+  CATEGORY: DIGITAL
+  OP_NAME: Waitlist/Presale Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 144 ---
+  OP_ID: S03
+  CATEGORY: SERVICE
+  OP_NAME: Paywall Optimization Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 145 ---
+  OP_ID: S11
+  CATEGORY: SERVICE
+  OP_NAME: AI Subcontracting Network
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 146 ---
+  OP_ID: S12
+  CATEGORY: SERVICE
+  OP_NAME: SEO/GEO Optimization Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 147 ---
+  OP_ID: S15
+  CATEGORY: SERVICE
+  OP_NAME: Micro-Influencer Network Management
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 148 ---
+  OP_ID: S16
+  CATEGORY: SERVICE
+  OP_NAME: Influencer Revenue Share Program
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 149 ---
+  OP_ID: P10
+  CATEGORY: PERSONA
+  OP_NAME: Patreon/Membership Stack
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 150 ---
+  OP_ID: I01
+  CATEGORY: INVEST
+  OP_NAME: Meme Coin Trading System
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 151 ---
+  OP_ID: I02
+  CATEGORY: INVEST
+  OP_NAME: Domain Flipping
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 152 ---
+  OP_ID: I03
+  CATEGORY: INVEST
+  OP_NAME: Account Portfolio & Resale
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 153 ---
+  OP_ID: I04
+  CATEGORY: INVEST
+  OP_NAME: Algo Trading Infrastructure
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 154 ---
+  OP_ID: F03
+  CATEGORY: AFFILIATE
+  OP_NAME: Tool/Software Affiliate
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 155 ---
+  OP_ID: G13
+  CATEGORY: GROWTH
+  OP_NAME: A/B Test Framework
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 156 ---
+  OP_ID: N04
+  CATEGORY: GROWTH
+  OP_NAME: Clipper Army Full SOP
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 157 ---
+  OP_ID: N07
+  CATEGORY: GROWTH
+  OP_NAME: Discord Distribution Hub
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 158 ---
+  OP_ID: N08
+  CATEGORY: GROWTH
+  OP_NAME: Reply Guy Growth Strategy
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 159 ---
+  OP_ID: N10
+  CATEGORY: AFFILIATE
+  OP_NAME: Sports Betting Affiliate
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 160 ---
+  OP_ID: N13
+  CATEGORY: GROWTH
+  OP_NAME: VA Hiring and Training System
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 161 ---
+  OP_ID: N20
+  CATEGORY: GROWTH
+  OP_NAME: Paid Engagement Bootstrap
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 162 ---
+  OP_ID: N22
+  CATEGORY: GROWTH
+  OP_NAME: LinkedIn Automation
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 163 ---
+  OP_ID: N25
+  CATEGORY: AFFILIATE
+  OP_NAME: Longevity/Supplement Affiliate
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 164 ---
+  OP_ID: N27
+  CATEGORY: GROWTH
+  OP_NAME: Entity SEO Strategy
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 165 ---
+  OP_ID: N28
+  CATEGORY: GROWTH
+  OP_NAME: Build-in-Public Strategy
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 166 ---
+  OP_ID: N32
+  CATEGORY: GROWTH
+  OP_NAME: SMS Marketing (Opted-in)
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 167 ---
+  OP_ID: N34
+  CATEGORY: SERVICE
+  OP_NAME: Fractional CMO/CTO Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 168 ---
+  OP_ID: N35
+  CATEGORY: SERVICE
+  OP_NAME: AI Compliance Audit Service
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 169 ---
+  OP_ID: N50
+  CATEGORY: GROWTH
+  OP_NAME: Podcast Guesting Pipeline
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 170 ---
+  OP_ID: N53
+  CATEGORY: GROWTH
+  OP_NAME: Product Hunt Launch Playbook
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 38
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 171 ---
+  OP_ID: S14
+  CATEGORY: SERVICE
+  OP_NAME: VA Outreach Service
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  AUTOMATION_SCORE_100: 36
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 172 ---
+  OP_ID: N23
+  CATEGORY: GROWTH
+  OP_NAME: X Cold DM Outreach
+  LANE: cold_outreach_warmup
+  READINESS: BLOCKED
+  AUTOMATION_SCORE_100: 36
+  SIGNAL_COUNT: 339
+  BLOCKER_KEY: EMAIL_INFRA
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Generate preview sends (no-live) and clear EMAIL_INFRA
+  SOURCE_ARTIFACT: output/cold_emails/cold_emails_ready.csv
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 173 ---
+  OP_ID: N47
+  CATEGORY: ECOM
+  OP_NAME: eBay/FB Marketplace Flipping
+  LANE: ecom_arb
+  READINESS: READY
+  AUTOMATION_SCORE_100: 36
+  SIGNAL_COUNT: 15
+  BLOCKER_KEY: ACCOUNT_EBAY/ETSY/AMAZON
+  APPROVAL_OK: NO
+  NEXT_AUTOMATION_ACTION: Run ecom arb scan + distributor matrix update
+  SOURCE_ARTIFACT: output/ecom/manifest.json
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 174 ---
+  OP_ID: N21
+  CATEGORY: GROWTH
+  OP_NAME: Aged Account Purchasing
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 33
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 175 ---
+  OP_ID: N40
+  CATEGORY: INVEST
+  OP_NAME: DePIN Node Operation
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 33
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 176 ---
+  OP_ID: N56
+  CATEGORY: GROWTH
+  OP_NAME: Newsletter Sponsorship Barter
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 33
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 177 ---
+  OP_ID: N57
+  CATEGORY: SERVICE
+  OP_NAME: Micro-Consulting via Twitter DMs
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 33
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 178 ---
+  OP_ID: G15
+  CATEGORY: GROWTH
+  OP_NAME: Grey Hat Legal Playbook
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 30
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+--- Row 179 ---
+  OP_ID: TOTAL OPS:
+  LANE: other
+  READINESS: BUILD
+  AUTOMATION_SCORE_100: 30
+  SIGNAL_COUNT: 0
+  BLOCKER_KEY: NONE
+  APPROVAL_OK: YES
+  NEXT_AUTOMATION_ACTION: Run discovery
+  SOURCE_ARTIFACT: n/a
+  EXPECTED_PROFIT_HINT_USD: 0
+  UPDATED_AT: 2026-02-19 04:31:46
+

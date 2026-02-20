@@ -1,0 +1,119 @@
+{
+  "sprint_name": "PRINTMAXX — List Everything (2hr)",
+  "total_minutes": 120,
+  "reminder_interval_minutes": 15,
+  "stale_warning_minutes": 20,
+  "tasks": [
+    {
+      "name": "Gumroad: List free lead magnet ($0+ PWYW)",
+      "platform": "Gumroad",
+      "time_estimate": "5min",
+      "instructions": [
+        "Open: https://gumroad.com/dashboard/products",
+        "Click 'New product' → Digital product",
+        "Copy from PASTE_READY_GUMROAD.md — Product 1 (5 Free AI Prompts)",
+        "Set price $0+, enable Discover, paste all 10 tags",
+        "Upload PDF from DIGITAL_PRODUCTS/ready_to_sell/pdfs/",
+        "Add cover image, publish"
+      ]
+    },
+    {
+      "name": "Gumroad: List top 5 paid products",
+      "platform": "Gumroad",
+      "time_estimate": "20min",
+      "instructions": [
+        "List products 2-6 from PASTE_READY_GUMROAD.md",
+        "Cold Email Playbook $9.99, Vibe Coding $14.99, AI Toolkit $14.99",
+        "Twitter Growth $9.99, Local Biz System $27.99",
+        "Each: title, description, tags, cover, PDF upload, enable Discover",
+        "Set upsells on thank-you pages"
+      ]
+    },
+    {
+      "name": "Gumroad: List remaining 7 products",
+      "platform": "Gumroad",
+      "time_estimate": "20min",
+      "instructions": [
+        "List products 7-13 from PASTE_READY_GUMROAD.md",
+        "Same flow: title, desc, tags, PDF, cover, Discover ON",
+        "Space 1-2 min between each (individual algo boost per product)"
+      ]
+    },
+    {
+      "name": "Fiverr: Create top 3 gigs",
+      "platform": "Fiverr",
+      "time_estimate": "15min",
+      "instructions": [
+        "Open: https://www.fiverr.com/seller_dashboard",
+        "Create gigs from PASTE_READY_FIVERR.md — gigs 1-3",
+        "Gig 1: Cold Email System, Gig 2: AI Automation Setup, Gig 3: Vibe Coding",
+        "Each: title, category, 5 tags, 3-tier pricing, description, FAQ",
+        "Add a screen recording video if possible (ranks higher)",
+        "Price 30-40% below market for first orders"
+      ]
+    },
+    {
+      "name": "Fiverr: Create gigs 4-5",
+      "platform": "Fiverr",
+      "time_estimate": "10min",
+      "instructions": [
+        "Gig 4: Twitter Growth Management",
+        "Gig 5: Landing Page Build",
+        "Same flow: paste from PASTE_READY_FIVERR.md"
+      ]
+    },
+    {
+      "name": "KDP: Submit Ramadan Journal (URGENT — Feb 28)",
+      "platform": "Amazon KDP",
+      "time_estimate": "15min",
+      "instructions": [
+        "Open: https://kdp.amazon.com",
+        "Create account if needed, then 'Create Paperback'",
+        "Book 4 from PASTE_READY_KDP.md: Ramadan Reflection Journal $8.99",
+        "Upload interior PDF + cover PDF",
+        "Paste 7 keywords, select 2 categories",
+        "Set territory: All, rights: I own copyright",
+        "Submit for review (24-72 hours — cutting it close)"
+      ]
+    },
+    {
+      "name": "KDP: Submit Prayer Journal + Fitness Log",
+      "platform": "Amazon KDP",
+      "time_estimate": "15min",
+      "instructions": [
+        "Book 1: 90-Day Prayer Journal $9.99",
+        "Book 2: 12-Week Fitness Log $8.99",
+        "Same flow from PASTE_READY_KDP.md",
+        "Interior PDF + cover PDF + keywords + categories"
+      ]
+    },
+    {
+      "name": "Create Etsy account + list first 3 products",
+      "platform": "Etsy",
+      "time_estimate": "15min",
+      "instructions": [
+        "Open: https://www.etsy.com/sell",
+        "Create shop (name: PrintmaxxDigital or similar)",
+        "List 3 products from PASTE_READY_ETSY.md",
+        "Product 1: Local Biz System $27.99",
+        "Product 2: AI Automation Toolkit $14.99",
+        "Product 3: Vibe Coding Playbook $14.99",
+        "Each: paste title (140 chars), all 13 tags, upload mockup image + PDF",
+        "DO NOT list more than 5 today (Etsy fraud detection)"
+      ]
+    },
+    {
+      "name": "Create Redbubble account + upload 5 designs",
+      "platform": "Redbubble",
+      "time_estimate": "10min",
+      "instructions": [
+        "Open: https://www.redbubble.com/portfolio/manage_works",
+        "Create account if needed",
+        "Upload first 5 designs from PASTE_READY_REDBUBBLE.md (F1-F5)",
+        "Each: upload PNG, paste title with keywords, paste 15 tags",
+        "Enable ALL product types, set 35% markup",
+        "Upload 5-10 per day max, more tomorrow"
+      ]
+    }
+  ]
+}

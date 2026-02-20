@@ -1,0 +1,185 @@
+# PRINTMAXX Autonomous Worker Configuration
+# All tunables for the 24/7 supervisor daemon
+
+# --- Cost & Time Limits ---
+cost_cap_per_run: 5.00       # Max estimated cost per agent run ($)
+cost_cap_daily: 50.00        # Max estimated daily cost ($) — supervisor pauses if exceeded
+time_cap_per_run_min: 120    # Max minutes per agent run before kill
+time_cap_per_task_min: 30    # Max minutes per individual task
+
+# --- Supervisor Settings ---
+poll_interval_sec: 300       # Check queue every 5 minutes
+self_plan_interval_hours: 6  # If queue empty for this long, spawn self-planning agent
+max_concurrent_runs: 1       # How many agent sessions to run at once (start with 1)
+health_check_interval_min: 120  # System health check every 2 hours
+retrospective_schedule: "weekly"  # When to run retrospective agent (daily|weekly)
+daily_digest_hour: 22        # Send daily digest at 10 PM
+
+# --- Schedule (cron-triggered pipeline runs) ---
+# These define when the supervisor auto-starts specific pipelines
+# Format: "HH:MM" in 24h time
+schedule:
+  research_pipeline: "05:00"     # Full scrape → process → score
+  content_generation_am: "08:00" # Content from overnight alpha
+  midday_pulse: "12:00"          # Quick trending scan
+  content_generation_pm: "17:00" # Content round 2
+  overnight_builder: "22:00"     # Longer builds, features, tools
+  retrospective: "22:30"        # Review day's work (runs after overnight starts)
+
+# --- Guardrails (non-negotiable) ---
+guardrails:
+  # Actions that are ALWAYS blocked (agent cannot do these)
+  blocked_actions:
+    - "git push"
+    - "npm publish"
+    - "pip publish"
+    - "payment"
+    - "stripe"
+    - "paypal"
+    - "account creation"
+    - "password"
+    - "credential"
+    - "ssh-keygen"
+    - "rm -rf /"
+    - "sudo rm"
+    - "diskutil"
+    - "mkfs"
+
+  # Actions that trigger human escalation (not blocked, but alerts sent)
+  escalation_triggers:
+    - "deploy"
+    - "publish"
+    - "send email"
+    - "post to twitter"
+    - "post to social"
+    - "purchase"
+    - "create account"
+    - "modify .env"
+    - "modify SECRETS"
+
+  # Path restrictions — agents can only write within these
+  allowed_write_paths:
+    - "AUTOMATIONS/"
+    - "OPS/"
+    - "LEDGER/"
+    - "CONTENT/"
+    - "MONEY_METHODS/"
+    - "PRODUCTS/"
+    - "DIGITAL_PRODUCTS/"
+    - "builds/"
+    - "output/"
+    - "ralph/"
+    - "scripts/"
+
+  # Files that are NEVER modified by autonomous agents
+  protected_files:
+    - "CLAUDE.md"
+    - "SECRETS/"
+    - "FINANCIALS/"
+    - ".env"
+    - ".claude/rules/"
+    - "package.json"
+    - "package-lock.json"
+
+# --- LLM Backends ---
+# Priority order for spawning agent sessions.
+# Supervisor tries each in order, falls back on failure.
+#
+# PRIMARY: Codex CLI (OpenAI, OAuth, free with ChatGPT Pro)
+#   - Full autonomous agent with built-in tool use, ALWAYS use best available model
+#   - Install: npm i -g @openai/codex
+#   - Auth: codex login (OAuth, no API key needed)
+#
+# FALLBACK 1: Kimi 2.5 (Moonshot AI)
+#   - OpenAI-compatible API, very cheap
+#   - Set KIMI_API_KEY env var or kimi_api_key below
+#
+# FALLBACK 2: MiniMax
+#   - OpenAI-compatible API, fast
+#   - Set MINIMAX_API_KEY env var or minimax_api_key below
+#
+# NOTE: Claude CLI is NOT in the autonomous chain.
+#   Claude Max is interactive-only — can't power autonomous loops.
+#   Codex OAuth is free + unlimited with ChatGPT Pro. Use that.
+#
+backend_order: "codex,kimi,minimax"  # Codex primary, Kimi/MiniMax fallback. NO Claude.
+codex_model: "gpt-5.3-codex"                 # ALWAYS USE BEST MODEL. GPT-5.3 via Codex CLI (ChatGPT Pro)
+codex_approval_mode: "full-auto"            # full-auto = no human approval needed
+claude_model: "sonnet"                      # Claude model for --print mode
+kimi_api_key: ""                            # Or set KIMI_API_KEY env var
+kimi_model: "kimi-k2-0711-chat"             # Kimi model
+minimax_api_key: ""                         # Or set MINIMAX_API_KEY env var
+minimax_model: "MiniMax-Text-01"            # MiniMax model
+
+# --- Telegram Alerts ---
+# Set these or use environment variables TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID
+telegram_bot_token: ""
+telegram_chat_id: ""
+
+# What events trigger Telegram alerts
+alert_on:
+  task_started: false          # Too noisy for most setups
+  task_completed: true
+  task_failed: true
+  human_needed: true           # Always alert
+  cost_warning: true           # When approaching daily cap
+  agent_timeout: true
+  daily_digest: true
+  system_health: true          # Only on DEGRADED or DOWN
+  queue_empty: false           # Only useful for debugging
+  supervisor_start_stop: true
+
+# --- Git Sync ---
+# How the spare laptop syncs with GitHub
+git_sync:
+  enabled: true
+  interval_hours: 6            # Push every 6 hours
+  remote: "origin"
+  branch: "main"
+  auto_pull: true              # Pull before each run
+  auto_push: false             # SAFETY: disabled by default. Enable after testing.
+  commit_prefix: "[autonomous]"
+
+# --- Task Categories ---
+# Define what types of tasks the autonomous worker handles
+task_categories:
+  research:
+    description: "Scrape, process, score alpha from 350+ sources"
+    risk_level: "LOW"
+    max_runtime_min: 60
+    priority: 1
+
+  content:
+    description: "Generate content from approved alpha"
+    risk_level: "LOW"
+    max_runtime_min: 45
+    priority: 2
+
+  analysis:
+    description: "Process data, score leads, analyze trends"
+    risk_level: "LOW"
+    max_runtime_min: 30
+    priority: 3
+
+  building:
+    description: "Build landing pages, tools, app features"
+    risk_level: "MEDIUM"
+    max_runtime_min: 120
+    priority: 4
+
+  maintenance:
+    description: "System health, cleanup, log rotation"
+    risk_level: "LOW"
+    max_runtime_min: 15
+    priority: 5
+
+  self_improvement:
+    description: "Retrospective, learning extraction, prompt mutation"
+    risk_level: "LOW"
+    max_runtime_min: 60
+    priority: 6
+
+# --- Logging ---
+log_dir: "AUTOMATIONS/logs/autonomous/"
+log_retention_days: 30
+log_level: "INFO"             # DEBUG | INFO | WARNING | ERROR

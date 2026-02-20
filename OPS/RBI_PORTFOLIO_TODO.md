@@ -1,14 +1,14 @@
 # RBI Portfolio Todo
 
-Generated: 2026-02-18 11:30:54
+Generated: 2026-02-19 20:30:58
 
 ## Top 5 Active Focus (Exploit + Explore)
 
-1. `MM007` COLD_OUTBOUND -> MAINTAIN (score 68.17, est $5500/mo)
-2. `MM019` PORTFOLIO_APP_BUILDER -> MAINTAIN (score 65.19, est $27500/mo)
-3. `MM001` APP_FACTORY -> MAINTAIN (score 65.01, est $25500/mo)
-4. `MM021` PERSONAL_BRAND_SEO -> MAINTAIN (score 63.96, est $11000/mo)
-5. `MM070` WEB_REDESIGN_COLD_OUTREACH -> MAINTAIN (score 63.7, est $26500/mo)
+1. `MM007` COLD_OUTBOUND -> MAINTAIN (score 68.04, est $5500/mo)
+2. `MM019` PORTFOLIO_APP_BUILDER -> MAINTAIN (score 65.06, est $27500/mo)
+3. `MM001` APP_FACTORY -> MAINTAIN (score 64.87, est $25500/mo)
+4. `MM021` PERSONAL_BRAND_SEO -> MAINTAIN (score 63.83, est $11000/mo)
+5. `MM070` WEB_REDESIGN_COLD_OUTREACH -> MAINTAIN (score 63.57, est $26500/mo)
 
 ## Rule
 

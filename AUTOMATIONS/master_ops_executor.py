@@ -34,14 +34,14 @@ COMMANDS_BY_OP: Dict[str, List[str]] = {
         "python3 AUTOMATIONS/email_sender.py --preview --outreach AUTOMATIONS/outreach/HOT_BATCH_FEB13_COMPLIANT.csv --max-sends 25",
     ],
     "N61": [
-        "python3 AUTOMATIONS/nationwide_scraper.py --city-limit 5 --industry-limit 3",
+        "python3 AUTOMATIONS/local_biz_pipeline.py --urls-file AUTOMATIONS/sample_local_biz_urls.csv --dry-run",
     ],
     "N68": [
         "python3 AUTOMATIONS/app_packager.py --write",
         "python3 AUTOMATIONS/deploy_guard.py --tick",
     ],
     "S02": [
-        "python3 AUTOMATIONS/local_biz_pipeline.py --sample-size 20",
+        "python3 AUTOMATIONS/local_biz_pipeline.py --urls-file AUTOMATIONS/sample_local_biz_urls.csv --dry-run",
     ],
 }
 

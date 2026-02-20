@@ -174,6 +174,18 @@ AUTO_STEPS: List[Step] = [
         "python3 AUTOMATIONS/master_ops_executor.py --top 12 --max-per-lane 3",
         240,
     ),
+    Step(
+        "venture_map_exec",
+        "Execute all venture-map lanes (deduped, cooldown-aware, throttled)",
+        "python3 AUTOMATIONS/net_guard.py --key venture_map_exec --min-interval-sec 21600 -- python3 AUTOMATIONS/venture_map_executor.py --max-rows 120 --max-per-lane 30 --max-commands 20 --apply",
+        1500,
+    ),
+    Step(
+        "venture_map_health",
+        "Check venture-map freshness/failure health (12h target)",
+        "python3 AUTOMATIONS/venture_map_health_check.py --max-age-hours 12 --critical-age-hours 24",
+        120,
+    ),
 
     Step(
         "gov_monitor",
@@ -749,6 +761,8 @@ def run_once(approved: set[str], *, swarm: bool = False, max_parallel: int = 4) 
                 "clawwork_sidecar",
                 "master_ops_enhance",
                 "master_ops_exec_plan",
+                "venture_map_exec",
+                "venture_map_health",
                 "human_brief",
                 "rbi_daily",
                 "rbi_portfolio",

@@ -1,0 +1,7 @@
+timestamp,status,reason,max_age_hours,critical_age_hours,last_run_at,last_ok_at,last_ok_age_hours,last_batch_status_counts,last_batch_command_count
+2026-02-19 18:45:11,OK,Last successful venture-map run is fresh (5.58h),12.0,24.0,2026-02-19 13:10:31,2026-02-19 13:10:31,5.578,"{""OK"": 7}",7
+2026-02-19 18:46:22,OK,Last successful venture-map run is fresh (5.60h),12.0,24.0,2026-02-19 13:10:31,2026-02-19 13:10:31,5.598,"{""OK"": 7}",7
+2026-02-19 19:00:29,OK,Last successful venture-map run is fresh (5.83h),12.0,24.0,2026-02-19 13:10:31,2026-02-19 13:10:31,5.833,"{""OK"": 7}",7
+2026-02-19 19:30:49,OK,Last successful venture-map run is fresh (6.34h),12.0,24.0,2026-02-19 13:10:31,2026-02-19 13:10:31,6.338,"{""OK"": 7}",7
+2026-02-19 20:01:20,OK,Last successful venture-map run is fresh (0.00h),12.0,24.0,2026-02-19 20:01:20,2026-02-19 20:01:20,0.0,"{""OK"": 5}",5
+2026-02-19 20:30:58,OK,Last successful venture-map run is fresh (0.49h),12.0,24.0,2026-02-19 20:01:20,2026-02-19 20:01:20,0.494,"{""OK"": 5}",5

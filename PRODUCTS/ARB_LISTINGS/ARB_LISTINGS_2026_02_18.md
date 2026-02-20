@@ -1,4 +1,4 @@
-# PRINTMAXX Arb Listings — 2026-02-18 11:30
+# PRINTMAXX Arb Listings — 2026-02-18 16:00
 
 **4 profitable products** | Min margin: 30.0%
 
