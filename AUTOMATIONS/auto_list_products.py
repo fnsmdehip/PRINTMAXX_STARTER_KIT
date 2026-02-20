@@ -527,6 +527,7 @@ def main():
     parser.add_argument("--start", type=int, default=1, help="Start from listing number (1-indexed)")
     parser.add_argument("--count", type=int, default=0, help="Number of listings to process (0 = all)")
     parser.add_argument("--headless", action="store_true", help="Run browser headless (not recommended)")
+    parser.add_argument("--chrome-profile", dest="chrome_profile", default="", help="Path to Chrome user data dir (uses logged-in session)")
     args = parser.parse_args()
 
     platform = args.platform
@@ -590,16 +591,37 @@ def main():
         sys.exit(1)
 
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=args.headless)
-        context = browser.new_context(
-            viewport={"width": 1280, "height": 900},
-            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        )
-        page = context.new_page()
+        # Try connecting to existing Chrome via CDP (user already logged in)
+        chrome_cdp = os.environ.get("CHROME_CDP", "")
+        chrome_profile = args.chrome_profile if hasattr(args, "chrome_profile") and args.chrome_profile else ""
 
-        # Navigate to platform and let user log in
+        if chrome_cdp:
+            print(f"  Connecting to Chrome via CDP: {chrome_cdp}")
+            browser = pw.chromium.connect_over_cdp(chrome_cdp)
+            context = browser.contexts[0] if browser.contexts else browser.new_context()
+            page = context.new_page()
+        elif chrome_profile:
+            print(f"  Launching Chrome with profile: {chrome_profile}")
+            context = pw.chromium.launch_persistent_context(
+                chrome_profile,
+                headless=False,
+                channel="chrome",
+                viewport={"width": 1280, "height": 900},
+            )
+            page = context.new_page()
+            browser = None  # persistent context manages its own browser
+        else:
+            browser = pw.chromium.launch(headless=args.headless)
+            context = browser.new_context(
+                viewport={"width": 1280, "height": 900},
+                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            )
+            page = context.new_page()
+
+        # Navigate to platform and let user log in (skip if CDP — already logged in)
         page.goto(PLATFORM_URLS[platform])
-        wait_for_login(page, platform)
+        if not chrome_cdp and not chrome_profile:
+            wait_for_login(page, platform)
 
         automator = AUTOMATORS[platform]
         succeeded = 0

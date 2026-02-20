@@ -29,6 +29,15 @@ export OPENROUTER_ADMIN_API_KEY="sk-or-admin-..."
 
 ## 1) On control node (M1): establish SSH link + alias
 
+Fast path (one command, includes sync + worker setup + optional onboarding):
+
+```bash
+cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+bash scripts/install_remote_worker_openclaw.sh <user@worker-host> <worker_project_path> --run-onboard
+```
+
+Manual path:
+
 ```bash
 cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
 bash scripts/setup_control_to_worker_ssh.sh <user@worker-host> <worker_project_path>

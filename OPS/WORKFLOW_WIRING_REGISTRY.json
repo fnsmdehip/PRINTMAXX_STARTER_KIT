@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-02-19T17:54:47.127136",
+  "pipelines": [
+    "research",
+    "content",
+    "competitor",
+    "leads",
+    "ecom",
+    "freelance",
+    "compliance",
+    "telegram",
+    "health",
+    "overnight",
+    "retrospective",
+    "app_ideation",
+    "venture_tracking"
+  ],
+  "standalone_count": 4,
+  "total_tasks": 28,
+  "tasks": [
+    {
+      "id": "AUTO_20260219_research_twitter_scrape",
+      "pipeline": "research",
+      "step": "twitter_scrape",
+      "script": "twitter_alpha_scraper.py",
+      "priority": 1,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_research_reddit_scrape",
+      "pipeline": "research",
+      "step": "reddit_scrape",
+      "script": "background_reddit_scraper.py",
+      "priority": 1,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_research_research_orchestrator",
+      "pipeline": "research",
+      "step": "research_orchestrator",
+      "script": "daily_research_orchestrator.py",
+      "priority": 1,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_research_unified_alpha_monitor",
+      "pipeline": "research",
+      "step": "unified_alpha_monitor",
+      "script": "unified_alpha_monitor.py",
+      "priority": 1,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_research_pain_point_miner",
+      "pipeline": "research",
+      "step": "pain_point_miner",
+      "script": "reddit_pain_point_miner.py",
+      "priority": 1,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_research_alpha_processing",
+      "pipeline": "research",
+      "step": "alpha_processing",
+      "script": "alpha_auto_processor.py",
+      "priority": 1,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_content_content_generation",
+      "pipeline": "content",
+      "step": "content_generation",
+      "script": "LLM task",
+      "priority": 2,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_competitor_competitor_monitor",
+      "pipeline": "competitor",
+      "step": "competitor_monitor",
+      "script": "competitor_monitor.py",
+      "priority": 3,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_competitor_app_store_tracker",
+      "pipeline": "competitor",
+      "step": "app_store_tracker",
+      "script": "app_store_competitor_tracker.py",
+      "priority": 3,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_leads_lead_qualification",
+      "pipeline": "leads",
+      "step": "lead_qualification",
+      "script": "closed_loop_pipeline.py",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_ecom_ecom_arb_scan",
+      "pipeline": "ecom",
+      "step": "ecom_arb_scan",
+      "script": "ecom_arb_engine.py",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_ecom_trend_scan",
+      "pipeline": "ecom",
+      "step": "trend_scan",
+      "script": "trend_aggregator.py",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_ecom_trend_to_listing",
+      "pipeline": "ecom",
+      "step": "trend_to_listing",
+      "script": "trend_to_listing.py",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_freelance_freelance_scan",
+      "pipeline": "freelance",
+      "step": "freelance_scan",
+      "script": "freelance_demand_scanner.py",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_freelance_freelance_pipeline",
+      "pipeline": "freelance",
+      "step": "freelance_pipeline",
+      "script": "freelance_pipeline.py",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_compliance_compliance_deadlines",
+      "pipeline": "compliance",
+      "step": "compliance_deadlines",
+      "script": "compliance_deadline_tracker.py",
+      "priority": 5,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_compliance_content_compliance",
+      "pipeline": "compliance",
+      "step": "content_compliance",
+      "script": "compliance_scanner.py",
+      "priority": 5,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_telegram_telegram_monitor",
+      "pipeline": "telegram",
+      "step": "telegram_monitor",
+      "script": "telegram_community_monitor.py",
+      "priority": 3,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_health_system_health",
+      "pipeline": "health",
+      "step": "system_health",
+      "script": "system_health_monitor.py",
+      "priority": 5,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_health_memory_refresh",
+      "pipeline": "health",
+      "step": "memory_refresh",
+      "script": "memory_manager.py",
+      "priority": 5,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_overnight_overnight_build",
+      "pipeline": "overnight",
+      "step": "overnight_build",
+      "script": "LLM task",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_retrospective_retrospective",
+      "pipeline": "retrospective",
+      "step": "retrospective",
+      "script": "LLM task",
+      "priority": 6,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_app_ideation_app_ideation_scan",
+      "pipeline": "app_ideation",
+      "step": "app_ideation_scan",
+      "script": "app_ideation_specialist.py",
+      "priority": 3,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_venture_tracking_venture_performance",
+      "pipeline": "venture_tracking",
+      "step": "venture_performance",
+      "script": "venture_performance_tracker.py",
+      "priority": 4,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_standalone_freshness_auditor",
+      "pipeline": "standalone",
+      "step": "freshness_auditor.py",
+      "script": "LLM task",
+      "priority": 5,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_standalone_alpha_review_bot",
+      "pipeline": "standalone",
+      "step": "alpha_review_bot.py",
+      "script": "alpha_review_bot.py",
+      "priority": 2,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_standalone_niche_meta_detector",
+      "pipeline": "standalone",
+      "step": "niche_meta_detector.py",
+      "script": "niche_meta_detector.py",
+      "priority": 3,
+      "status": "PENDING"
+    },
+    {
+      "id": "AUTO_20260219_standalone_backup_system",
+      "pipeline": "standalone",
+      "step": "backup_system.py",
+      "script": "backup_system.py",
+      "priority": 5,
+      "status": "PENDING"
+    }
+  ]
+}

@@ -61,13 +61,20 @@ Role source of truth:
 
 - Primary runner: `AUTOMATIONS/ship_captain.py`
 - Launcher: `ship.sh`
+- Venture-map auto execution is wired into Ship Captain as `venture_map_exec`:
+  - Runs `AUTOMATIONS/venture_map_executor.py --apply`
+  - Throttled by `AUTOMATIONS/net_guard.py` to every 6 hours (`--min-interval-sec 21600`)
+  - Additional per-command/venture cooldown is enforced by `LEDGER/VENTURE_MAP_EXEC_STATE.json`
+- Venture-map health guard is wired as `venture_map_health`:
+  - Runs `AUTOMATIONS/venture_map_health_check.py --max-age-hours 12 --critical-age-hours 24`
+  - Flags stale if last successful venture-map run is older than 12 hours
 - Queue and approvals:
   - `OPS/HUMAN_LOOP_QUEUE.md`
   - `OPS/HUMAN_APPROVALS.csv`
 - GUI status panel:
   - `output/dashboard/index.html` (auto-refresh)
 
-## Agent Navigation (2026-02-18 Refresh)
+## Agent Navigation (2026-02-19 Refresh)
 
 Use this order when entering the system:
 
@@ -80,6 +87,7 @@ Use this order when entering the system:
 3. Official OpenClaw + worker isolation runbook:
    - `OPS/OPENCLAW_WORKER_ISOLATION_RUNBOOK_2026_02_18.md`
    - `OPS/openclaw/openclaw_worker_template.json5`
+   - `scripts/install_remote_worker_openclaw.sh`
    - `scripts/setup_control_to_worker_ssh.sh`
    - `scripts/setup_openclaw_worker_stack.sh`
    - `AUTOMATIONS/openrouter_budget_guard.py`
@@ -109,6 +117,10 @@ Use this order when entering the system:
   - `AUDIT/META_VISION_2026_02_16.md` (swarm metrics sweep)
   - `AUDIT/META_VISION_2026_02_17_AUTOMATION.md` (automation upgrade pass)
   - `AUDIT/META_VISION_2026_02_18_OPENCLAW_WORKER_INTEGRATION.md` (official OpenClaw + worker isolation addendum)
+  - `AUDIT/META_VISION_2026_02_19_MASTER_OPS_EXECUTION_PASS.md` (priority-sheet apply pass + executor stabilization)
+  - `AUDIT/META_VISION_2026_02_19_VENTURE_MAP_EXECUTOR.md` (all-venture executor + cooldown/dedupe validation)
+  - `AUDIT/META_VISION_2026_02_19_SHIP_CAPTAIN_VENTURE_WIRING.md` (ship_captain auto-step integration for venture-map execution)
+  - `AUDIT/META_VISION_2026_02_19_VENTURE_MAP_HEALTH_GUARD.md` (venture-map freshness guard + ship_captain health-step wiring)
   - `AUDIT/META_VISION_FULL_CONTEXT_2026_02_16.md` (raw-corpus-linked update)
   - `AUDIT/META_VISION_2026_02_16_FILE_INVENTORY.csv` (full file/folder inventory)
 8. Alpha pipeline (Feb 18 — auto-scrape → auto-process → auto-route):
@@ -135,6 +147,18 @@ Use this order when entering the system:
   - `PRINTMAXX_MASTER_OPS_ENHANCED_2026-02-17.xlsx` (live enhanced clone)
   - `AUTOMATIONS/master_ops_enhancer.py`
   - `AUTOMATIONS/master_ops_executor.py`
+  - `AUTOMATIONS/venture_map_executor.py`
+  - `AUTOMATIONS/venture_map_health_check.py`
+  - Executor stability note:
+    - `N61` + `S02` are mapped to `local_biz_pipeline.py --urls-file AUTOMATIONS/sample_local_biz_urls.csv --dry-run` to avoid brittle discovery-arg/runtime failures during safe prework runs.
+  - Venture-map execution controls:
+    - Dedupes repeated command templates across ventures per pass.
+    - Persists cooldown state in `LEDGER/VENTURE_MAP_EXEC_STATE.json`.
+    - Writes run ledger to `LEDGER/VENTURE_MAP_EXEC_RUNS.csv`.
+    - Writes latest pass output to `output/venture_map_exec/latest.md`.
+  - Venture-map health controls:
+    - Writes health manifest + markdown to `output/venture_map_health/`.
+    - Writes health ledger to `LEDGER/VENTURE_MAP_HEALTH.csv`.
   - Enhanced sheets to drive automation:
     - `PRIORITY_AUTOMATION_EXEC`
     - `ETC_EXPANSION_QUEUE`
@@ -152,6 +176,14 @@ Use this order when entering the system:
   - `python3 AUTOMATIONS/master_ops_enhancer.py`
 - Master Ops execution planning (safe):
   - `python3 AUTOMATIONS/master_ops_executor.py --top 12 --max-per-lane 3`
+- Venture map execution planning (all ventures, cooldown-aware dry run):
+  - `python3 AUTOMATIONS/venture_map_executor.py --max-rows 120 --max-per-lane 30 --max-commands 20`
+- Venture map execution apply (all ventures, deduped + cooldown-aware):
+  - `python3 AUTOMATIONS/venture_map_executor.py --max-rows 120 --max-per-lane 30 --max-commands 20 --apply`
+- Venture map health check (strict):
+  - `python3 AUTOMATIONS/venture_map_health_check.py --max-age-hours 12 --critical-age-hours 24`
+- Venture map health check (report-only):
+  - `python3 AUTOMATIONS/venture_map_health_check.py --max-age-hours 12 --critical-age-hours 24 --no-fail`
 - OpenRouter key budget guard (dry-run):
   - `python3 AUTOMATIONS/openrouter_budget_guard.py --enforce --dry-run`
 - OpenRouter key budget guard (live):
@@ -160,6 +192,8 @@ Use this order when entering the system:
   - `python3 AUTOMATIONS/openrouter_budget_guard.py --status`
 - Control -> worker SSH bootstrap:
   - `bash scripts/setup_control_to_worker_ssh.sh <user@worker-host> <worker_project_path>`
+- One-command remote worker bootstrap:
+  - `bash scripts/install_remote_worker_openclaw.sh <user@worker-host> <worker_project_path> --run-onboard`
 - Worker stack bootstrap (official OpenClaw + worker role):
   - `bash scripts/setup_openclaw_worker_stack.sh`
 - Worker stack bootstrap + onboarding:
