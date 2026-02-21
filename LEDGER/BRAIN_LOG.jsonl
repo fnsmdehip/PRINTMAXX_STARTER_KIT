@@ -22,3 +22,5 @@
 {"timestamp": "2026-02-18T01:30:00.763417", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 2}
 {"timestamp": "2026-02-18T02:40:45.663479", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 2}
 {"timestamp": "2026-02-19T05:30:02.616531", "type": "morning_briefing", "cron_success_rate": 0}
+{"timestamp": "2026-02-20T01:30:00.740869", "type": "heal", "failed_scripts": 0, "missing_subsystems": 0, "stale_signals": 1}
+{"timestamp": "2026-02-20T05:30:01.740214", "type": "morning_briefing", "cron_success_rate": 0}
