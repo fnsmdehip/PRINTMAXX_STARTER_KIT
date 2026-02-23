@@ -20,11 +20,10 @@ mkdir -p "$LOG_DIR"
 # SAFETY: Load guardrails wrapper
 source "$BASE_DIR/AUTOMATIONS/guardrails_wrapper.sh"
 
-# SAFETY: Create incremental backup before overnight run
-log_msg="Pre-overnight backup"
-if [ -f "$BASE_DIR/AUTOMATIONS/backup_system.py" ]; then
-    $PYTHON "$BASE_DIR/AUTOMATIONS/backup_system.py" --auto >> "$LOG_DIR/backup_overnight.log" 2>&1 || true
-fi
+# SAFETY: backup disabled - was creating 22-25GB copies nightly, git handles version control
+# if [ -f "$BASE_DIR/AUTOMATIONS/backup_system.py" ]; then
+#     $PYTHON "$BASE_DIR/AUTOMATIONS/backup_system.py" --auto >> "$LOG_DIR/backup_overnight.log" 2>&1 || true
+# fi
 
 log() {
     echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG_FILE"

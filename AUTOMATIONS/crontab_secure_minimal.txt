@@ -9,4 +9,3 @@ BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
 5 0 * * * cd $BASE && python3 AUTOMATIONS/openrouter_budget_guard.py --enforce --quiet >> logs/openrouter_budget_guard.log 2>&1 # PRINTMAXX_OPENROUTER_BUDGET_GUARD
 
 # Keep local model tier online (worker or local low-cost mode)
-@reboot cd $BASE && nohup ollama serve >> logs/ollama_serve.log 2>&1 # PRINTMAXX_OLLAMA

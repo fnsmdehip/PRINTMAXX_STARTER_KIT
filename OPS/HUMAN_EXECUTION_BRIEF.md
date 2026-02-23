@@ -1,24 +1,24 @@
 # Human Execution Brief
 
-Generated: 2026-02-20 20:30:47
+Generated: 2026-02-22 20:31:06
 
 ## Publish Packs (Ready)
 
-- Total items: 18
-- instagram/carousel persona=n/a scheduled=2026-02-21 11:30
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/aria-pmx-faith-002-20260220-000112/index.html
+- Total items: 24
+- instagram/carousel persona=n/a scheduled=2026-02-23 11:30
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/aria-pmx-faith-002-20260222-120823/index.html
   - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
-- instagram/carousel persona=n/a scheduled=2026-02-21 11:15
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/selah-pmx-car-003-20260220-000112/index.html
+- instagram/carousel persona=n/a scheduled=2026-02-23 11:15
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/selah-pmx-car-002-20260222-120823/index.html
   - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
-- instagram/carousel persona=n/a scheduled=2026-02-21 11:00
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/rhea-pmx-fit-002-20260220-000112/index.html
+- instagram/carousel persona=n/a scheduled=2026-02-23 11:00
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/rhea-pmx-car-002-20260222-120823/index.html
   - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
-- instagram/carousel persona=n/a scheduled=2026-02-20 11:30
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/aria-pmx-car-002-20260219-040130/index.html
+- instagram/carousel persona=n/a scheduled=2026-02-22 11:30
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/aria-pmx-faith-002-20260221-000141/index.html
   - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
-- instagram/carousel persona=n/a scheduled=2026-02-20 11:15
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/selah-pmx-car-002-20260219-040130/index.html
+- instagram/carousel persona=n/a scheduled=2026-02-22 11:15
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/selah-pmx-car-002-20260221-000141/index.html
   - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
 
 ## Buffer CSVs (Upload Targets)
@@ -38,7 +38,7 @@ Generated: 2026-02-20 20:30:47
 ## Freelance Pack (No Posting)
 
 - Pack: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/freelance/latest.md
-- Draft responses (last 72h): 57
+- Draft responses (last 72h): 48
 
 ## Gov Bid Pack (No Bidding)
 
@@ -68,8 +68,8 @@ Generated: 2026-02-20 20:30:47
 - Syndication rows: 420
 - Directory wave rows: 900
 - Job-sniper rows: 200
-- Keyword-gap rows: 82
-- Community rows: 75
+- Keyword-gap rows: 83
+- Community rows: 73
 
 ## ClawWork Sidecar (Economic Benchmark)
 
@@ -84,7 +84,7 @@ Generated: 2026-02-20 20:30:47
 
 # Human Loop Queue
 
-Generated: 2026-02-20 20:01:16
+Generated: 2026-02-22 20:01:38
 
 Node role: `worker`
 
@@ -100,7 +100,7 @@ Critical actions are blocked until explicitly approved.
 - [ ] `EMAIL_INFRA` - Configure Gmail/Resend + PHYSICAL_ADDRESS in SECRETS/PAYMENT_INFO.md (required for LIVE_EMAIL_SEND).
 - [ ] `GUMROAD_API_TOKEN` - Add GUMROAD_ACCESS_TOKEN to SECRETS/PAYMENT_INFO.md for AUTO_LIST_ECOM.
 - [ ] `LIVE_EMAIL_SEND` - Approve live cold-email send (100 max)
-- [ ] `COMPLIANCE_HIGH_RISK` - High compliance risk: 6 CRITICAL issues in LEDGER/compliance_scan_2026_02_20.json. Required for live high-upside execution.
+- [ ] `COMPLIANCE_HIGH_RISK` - High compliance risk: 6 CRITICAL issues in LEDGER/compliance_scan_2026_02_22.json. Required for live high-upside execution.
 
 ## Approved (Persistent)
 

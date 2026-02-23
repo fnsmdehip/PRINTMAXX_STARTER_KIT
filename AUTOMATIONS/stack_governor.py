@@ -123,6 +123,11 @@ def _run(cmd: str, timeout_sec: int = 8) -> Tuple[int, str, str]:
 
 
 def detect_ollama(local_preferred: List[str]) -> Dict[str, object]:
+    # Ollama disabled: running 'ollama list' wakes the daemon automatically,
+    # causing it to appear in the dock/menu bar every 30 min. User does not
+    # want local models running. Always return not-installed.
+    return {"installed": False, "daemon_ready": False, "models": []}
+
     installed = _run("command -v ollama >/dev/null && echo yes || echo no", 3)[1].strip() == "yes"
     result: Dict[str, object] = {"installed": installed, "daemon_ready": False, "models": []}
     if not installed:
