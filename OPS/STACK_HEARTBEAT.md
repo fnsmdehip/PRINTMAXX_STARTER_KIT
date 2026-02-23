@@ -1,6 +1,6 @@
 # Runtime Stack Heartbeat
 
-Generated: 2026-02-20 20:30:03
+Generated: 2026-02-22 21:00:01
 
 Node role: `worker`
 
@@ -16,16 +16,16 @@ Policy version: 2026-02-15
 
 ## Provider Readiness
 
-- Ollama installed: yes
-- Ollama daemon ready: yes
-- Local models: mistral:instruct, qwen-gguf:latest
+- Ollama installed: no
+- Ollama daemon ready: no
+- Local models: none
 - OpenRouter key ready: no
 - Anthropic key ready: no
 - OpenAI key ready: no
 
 ## Active Routes
 
-- low_risk_bulk: ollama / mistral:instruct (local)
-- medium_risk_content: ollama / mistral:instruct (local)
-- high_risk_reasoning: ollama / mistral:instruct (local)
-- code_generation: ollama / mistral:instruct (local)
+- low_risk_bulk: none / none (unavailable)
+- medium_risk_content: none / none (unavailable)
+- high_risk_reasoning: none / none (unavailable)
+- code_generation: none / none (unavailable)
