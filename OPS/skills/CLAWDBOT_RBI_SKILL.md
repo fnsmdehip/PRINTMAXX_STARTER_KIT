@@ -1,6 +1,6 @@
 # CLAWDBOT RBI Skill (Project Local)
 
-Updated: 2026-02-22 20:30:08
+Updated: 2026-02-23 20:34:05
 
 ## Mission
 - Convert high-intent market signals into compliant, execution-ready queue items.
