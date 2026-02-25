@@ -785,3 +785,29 @@ Video structure:
 
 → Sound: “control
 
+
+
+---
+
+## Pending Enhancement (ALPHA12318, Score: 24)
+
+**Source:** r/EntrepreneurRideAlong (https://reddit.com/r/EntrepreneurRideAlong/comments/1rcp3hf/would_you_pay_20mo_to_stop_hunting_for_leads_and/) | **URL:** 
+**Added:** 2026-02-24T06:00:02-05:00
+
+Would you pay $20/mo to stop "hunting" for leads and just have them delivered to your inbox?. Hey everyone,
+
+Like most devs here, I love building but absolutely loathe "sales." Specifically, I hate spending hours on Reddit and HN trying to find that one person asking for a tool like mine, only
+
+
+
+---
+
+## Pending Enhancement (ALPHA12340, Score: 24)
+
+**Source:** r/ecommerce (https://reddit.com/r/ecommerce/comments/1rczz24/those_of_you_making_product_videos_what_are_you/) | **URL:** 
+**Added:** 2026-02-24T06:00:02-05:00
+
+Those of you making product videos - what are you spending per video and is it worth it?. I run a small DTC brand with about 40 SKUs. Last year I was paying freelance videographers $300-500 per product video for social media and listings. It added up to over $4K for the year.
+
+This year I
+
