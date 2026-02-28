@@ -811,3 +811,96 @@ Those of you making product videos - what are you spending per video and is it w
 
 This year I
 
+
+
+---
+
+## Pending Enhancement (ALPHA13172, Score: 30)
+
+**Source:** r/EntrepreneurRideAlong (https://reddit.com/r/EntrepreneurRideAlong/comments/1rdeqiw/how_to_negotiate_when_youve_never_sold_a_business/) | **URL:** 
+**Added:** 2026-02-27T19:47:25-05:00
+
+how to negotiate when you've never sold a business before. a guy lost probably $180k on the table because he didn't google the buyer
+
+at this point I keep seeing that first time sellers don't research who they're selling to.
+
+Like at all. They'll spend months
+
+
+
+---
+
+## Pending Enhancement (ALPHA13299, Score: 24)
+
+**Source:** r/ecommerce (https://reddit.com/r/ecommerce/comments/1reb0k4/my_gf_is_launching_a_beauty_brand_with_50k_am_i/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+My GF is launching a beauty brand with $50k. Am I being supportive or letting her walk into a trap?. She wants to focus on mid-to-low priced beauty products targeting women 18–40 in Southeast Asia. She’s always been into beauty, follows TikTok trends, ingredient breakdowns, that kind of stuff. This i
+
+
+
+---
+
+## Pending Enhancement (ALPHA13305, Score: 30)
+
+**Source:** r/SaaS (https://reddit.com/r/SaaS/comments/1re3ynv/how_do_you_actually_grow_your_early_saas_business/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+How do you actually grow your early SaaS business without paying $500+ on ads?. I'm 18 inexperienced launching my first SaaS (Leben AI) and trying to figure out how to actually get conversions because I don't want to be spending hundreds of dollars on ad spend right away and want
+
+
+
+---
+
+## Pending Enhancement (ALPHA13369, Score: 24)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/fellow-app
+**Added:** 2026-02-27T19:47:26-05:00
+
+[PH LAUNCH] Ask Fellow: Automate post-meeting actions from documentation to emails
+
+
+
+---
+
+## Pending Enhancement (ALPHA13416, Score: 24)
+
+**Source:** r/indiehackers (https://reddit.com/r/indiehackers/comments/1ren341/launched_a_pet_sitter_marketplace_that_doesnt/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+Launched a pet sitter marketplace that doesnt take a cut from bookings. Sitter Rank launched on PH today. Its a platform where pet sitters keep 100% of their booking income instead of losing 20-40% to Rover/Wag.
+
+Revenue model is SaaS subscriptions from sitters (free tier
+
+
+
+---
+
+## Pending Enhancement (ALPHA13453, Score: 26)
+
+**Source:** r/SideProject (https://reddit.com/r/SideProject/comments/1rfczi7/10_users_in_10_days_honest_breakdown/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+10 users in 10 days - honest breakdown. Launched FluoTest 10 days ago. Free quiz tool for lead qualification.
+
+Had a post hit #1 on r/SaaS. Felt amazing.
+
+But viral posts ≠ users. Direct outreach does.
+
+What surprised me:
+
+	∙	People don’t w
+
+
+
+---
+
+## Pending Enhancement (ALPHA13615, Score: 36)
+
+**Source:** r/SaaS (https://reddit.com/r/SaaS/comments/1rfzxpq/earlystage_saas_teams_are_you_paying_for_postman/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+Early-stage SaaS teams - are you paying for Postman now?. We’re pre-revenue and the new pricing change (1-user Free limit) makes it hard to justify $20/month per developer.
+
+I understand monetization, but API testing tools used to be easy to collaborate with
+

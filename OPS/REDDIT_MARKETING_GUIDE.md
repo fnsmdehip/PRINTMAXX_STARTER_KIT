@@ -304,3 +304,17 @@ Happy to answer questions.
 3. Identify 3 validated opportunities
 4. Build MVP for highest-signal idea
 5. Launch in r/SideProject with value-first post
+
+
+---
+
+## Pending Enhancement (ALPHA13268, Score: 38)
+
+**Source:** r/EntrepreneurRideAlong (https://reddit.com/r/EntrepreneurRideAlong/comments/1rdy6yn/built_an_ios_app_got_175k_organic_views_on_reddit/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+Built an iOS app, got 175K organic views on Reddit, made $0. Here's my real-time ride along of what went wrong.. Solo founder here, sharing this in real time because I think the mistakes are more useful than the wins.
+
+  
+The app: Snag AI — an iOS tool that uses AI to analyze marketplace listings (Facebook Marke
+
