@@ -136,10 +136,26 @@ log ""
 log ">>> PHASE 4: ALPHA ANALYSIS"
 
 run_script "alpha_screening" \
-    "$PYTHON AUTOMATIONS/alpha_screening.py --pending" 120 || true
+    "$PYTHON AUTOMATIONS/alpha_screening.py --pending" 300 || true
 
 run_script "alpha_validator" \
-    "$PYTHON AUTOMATIONS/alpha_validator.py" 120 || true
+    "$PYTHON AUTOMATIONS/alpha_validator.py" 300 || true
+
+# PHASE 4B: Alpha Enhancement Pipeline (research → bolster → content)
+log ""
+log ">>> PHASE 4B: ALPHA ENHANCEMENT PIPELINE"
+
+[ -f "$BASE_DIR/AUTOMATIONS/alpha_research_runner.py" ] && \
+    run_script "alpha_research_runner" \
+        "$PYTHON AUTOMATIONS/alpha_research_runner.py --run --batch-size 20" 300 || true
+
+[ -f "$BASE_DIR/AUTOMATIONS/playbook_enhancer.py" ] && \
+    run_script "playbook_enhancer" \
+        "$PYTHON AUTOMATIONS/playbook_enhancer.py --run --batch-size 20" 300 || true
+
+[ -f "$BASE_DIR/AUTOMATIONS/scale_verdict_to_content.py" ] && \
+    run_script "scale_verdict_to_content" \
+        "$PYTHON AUTOMATIONS/scale_verdict_to_content.py --run" 300 || true
 
 # PHASE 5: New Research Ops (built this session)
 log ""

@@ -893,7 +893,7 @@ def get_unprocessed_alpha(rows: list[dict], specific_id: str | None = None) -> l
         aid = row.get("alpha_id", "").strip()
         status = row.get("status", "").strip()
         category = row.get("category", "").strip()
-        ops_done = row.get("ops_generated", "").strip().upper()
+        ops_done = (row.get("ops_generated") or "").strip().upper()
 
         # Filter for specific ID if requested
         if specific_id and aid != specific_id:

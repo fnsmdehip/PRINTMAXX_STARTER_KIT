@@ -438,3 +438,25 @@ There are only two businesses I'd recommend anyone who is just starting do rn:
 
 no noise no bs. these
 
+
+
+---
+
+## Pending Enhancement (ALPHA13562, Score: 30)
+
+**Source:** r/indiehackers | **URL:** https://www.reddit.com/r/indiehackers/comments/1rffdfa/live_on_product_hunt_today_top_10_early_usage/
+**Added:** 2026-02-27T19:47:26-05:00
+
+[ACQUISITION] Live on Product Hunt today – Top 10. Early usage signals from our voice agent launch.
+
+
+
+---
+
+## Pending Enhancement (ALPHA13579, Score: 30)
+
+**Source:** HackerNews | **URL:** https://www.usecardboard.com/
+**Added:** 2026-02-27T19:47:26-05:00
+
+[ACQUISITION] Launch HN: Cardboard (YC W26) – Agentic video editor
+

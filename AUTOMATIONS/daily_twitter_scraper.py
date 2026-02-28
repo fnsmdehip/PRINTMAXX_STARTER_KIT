@@ -168,20 +168,25 @@ def save_to_csv(all_tweets):
 
     # Read existing CSV
     rows = []
+    required_fields = [
+        'alpha_id', 'source', 'source_url', 'category', 'tactic',
+        'roi_potential', 'priority', 'status', 'applicable_methods',
+        'applicable_niches', 'synergy_score', 'reviewer_notes',
+        'quality_issues', 'engagement_authenticity', 'earnings_verified',
+        'extracted_method', 'compliance_notes', 'date_added'
+    ]
     fieldnames = []
     if ALPHA_STAGING.exists():
         with open(ALPHA_STAGING, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            fieldnames = reader.fieldnames
+            fieldnames = list(reader.fieldnames) if reader.fieldnames else []
             rows = list(reader)
+        # Merge in any new fields that the CSV doesn't have yet
+        for field in required_fields:
+            if field not in fieldnames:
+                fieldnames.append(field)
     else:
-        fieldnames = [
-            'alpha_id', 'source', 'source_url', 'category', 'tactic',
-            'roi_potential', 'priority', 'status', 'applicable_methods',
-            'applicable_niches', 'synergy_score', 'reviewer_notes',
-            'quality_issues', 'engagement_authenticity', 'earnings_verified',
-            'extracted_method', 'compliance_notes', 'date_added'
-        ]
+        fieldnames = required_fields
 
     # Add new entries
     next_id = get_next_alpha_id()

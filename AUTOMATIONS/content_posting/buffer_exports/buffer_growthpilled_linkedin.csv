@@ -1,0 +1,476 @@
+Date,Time,Text
+2026-03-02,12:29,"I built a system that finds local businesses with garbage websites and cold emails them with live demos of what their site could look like.
+
+Here's exactly how it works (and the numbers so far).
+
+🧵.
+
+#startup #solopreneur #ai"
+2026-03-02,16:24,Step 3: automatic cold email generation.
+2026-03-02,21:33,"Hot leads (score >= 65) get personalized 3-email sequences.
+
+Each email includes a live demo url matching their industry.
+
+Dental practice → dental-demo.surge.sh.
+
+Law firm → legal-demo.surge.sh.
+
+#solopreneur #startup"
+2026-03-03,12:41,"The demo sites are already live.
+
+16 of them.
+
+#coding"
+2026-03-03,16:33,"Entire pipeline runs via cron at 3am.
+
+Crash recovery built in (active-tasks.md pattern from openclaw).
+
+If it dies mid-batch, next run picks up exactly where it left off.
+
+#productivity #startup"
+2026-03-03,21:38,"1.
+
+Ramadan app launch window closes feb 28 (muslim pro makes $30-50m arr during ramadan)
+2.
+
+Apple aso now factors battery consumption into search rankings (march 1)
+3.
+
+Google core update drops march 15.
+
+Audit your programmatic seo pages now.
+
+#productivity #automation"
+2026-03-04,12:29,"## thread.
+
+""i automated my compliance and signal monitoring.
+
+Here's how."" (7 tweets)."
+2026-03-04,16:38,"Urgency system:
+- red = deadline in <30 days
+- yellow = <90 days
+- blue = future
+- green = already active (you should already be compliant).
+
+#indiehackers #ai #saas"
+2026-03-04,21:40,"Second tool: telegram_community_monitor.py.
+
+450 lines.
+
+#productivity #coding"
+2026-03-05,12:29,"Nothing is standalone.
+
+Every scanner connects to every other system."
+2026-03-05,16:42,"Total build time for both tools: ~3 hours.
+
+#coding #ai #startup"
+2026-03-05,21:20,"5,646 local businesses with outdated websites identified.
+
+Personalized cold emails with live demo links generated automatically.
+
+The pipeline runs at 3am.
+
+I wake up to qualified leads.
+
+#indiehackers"
+2026-03-06,12:43,"Analyzed 102,200 business websites last night while sleeping.
+
+9,678 have garbage sites that need rebuilding.
+
+Cold emails already drafted.
+
+This is what automation looks like."
+2026-03-06,16:20,"I tested every social media warmup method for managing 12 brand accounts without getting shadowbanned.
+
+#solopreneur"
+2026-03-06,21:34,"The algo rewards velocity of genuine engagement, not volume of fake.
+
+#solopreneur #buildinpublic"
+2026-03-09,12:34,"I'm about to launch 12 brand accounts across x, instagram, tiktok, youtube."
+2026-03-09,16:31,"- canvas fingerprint inconsistencies
+- mouse movement patterns (bots move in smooth linear paths)
+- typing cadence uniformity
+- pause duration between actions (humans browse between actions, bots don't)
+- timezone/language mismatches vs ip geolocation
+- action velocity spikes (0 to 50 follows in an hour = sus)."
+2026-03-09,21:31,"Total cost for managing 12 accounts safely: $100-132/mo (gologin $49 + soax $26 + buffer $6 + publer $12).
+
+#buildinpublic #nocode #saas"
+2026-03-10,12:28,"*disclaimer: results not typical.
+
+Individual results vary based on effort, market conditions, and other factors.*.
+
+#ai #saas"
+2026-03-10,16:43,"I run 62 autonomous ai agent loops overnight on two laptops.
+
+282 scripts.
+
+57 cron jobs.
+
+Research, content, outreach, competitive intel.
+
+#automation #solopreneur #buildinpublic"
+2026-03-10,21:19,"It's a dag with file-based contracts instead of api contracts.
+
+Simpler to set up than airflow.
+
+Tradeoff is less .
+
+#solopreneur"
+2026-03-11,12:22,"62 loops overnight will burn money if you're not careful.
+
+#buildinpublic"
+2026-03-11,16:30,"Built the scanner in one session.
+
+Now it runs at 8:30 am every morning.
+
+Catches problems before they become lawsuits.
+
+#solopreneur #automation #nocode"
+2026-03-11,21:38,"Built a bloomberg-style dashboard that reads every file in my project in real time.
+
+14 panels.
+
+Alpha entries, lead pipeline, site uptime, cron health, financial tracking, compliance status.
+
+#productivity #coding"
+2026-03-12,12:42,"The entire pipeline took 20 minutes to execute.
+
+The system that found the leads took 5."
+2026-03-12,16:24,"- ftc: affiliate links without disclosure
+- can-spam: emails missing physical address or unsubscribe
+- income: revenue claims without ""results may vary"" disclaimers
+- fake_proof: unverifiable social proof (""3 businesses already asked"")
+- pii: exposed personal information
+- health: medical claims without disclaimers
+- platform: language that triggers automated tos enforcement.
+
+#automation"
+2026-03-12,21:32,"Built the whole thing in ~400 lines of python.
+
+Regex patterns, severity scoring, category routing, fix suggestions for every issue.
+
+#indiehackers"
+2026-03-13,12:44,"- [x] zero em dashes
+- [x] zero banned ai vocabulary
+- [x] consequence-first hooks
+- [x] specific numbers (2,086 / 285 / 1,534 / 453 / $50,120 / 7 / 400 / 14 / $3,060 / $9,400)
+- [x] would @pipelineabuser post this? yes
+- [x] lowercase energy
+- [x] no ""it's not just x, it's y"" patterns
+- [x] no promotional adjectives
+- [x] first sentence delivers value in every piece
+- [x] one hedge max per sentence.
+
+#coding #solopreneur"
+2026-03-13,16:27,"Real numbers used throughout:
+- 92 python scripts, 50,000+ lines of automation code
+- 13+ parallel ai agents in a single session
+- 992 alpha entries tracked, 742 vetted in one pass
+- 7 pwa apps built and polished
+- 150+ business ops tracked in a single xlsx
+- 16 cron jobs running overnight
+- 1,661 leads scraped
+- 51mb of tracking data across 2,143 rows
+- 3,890 markdown files in the system
+- $0 revenue (pre-launch, everything built).
+
+#nocode"
+2026-03-13,21:27,"My alpha screening system is insane.
+
+992 entries in a staging csv.
+
+Each one gets scored for: engagement authenticity (bot detection), earnings verification (screenshot vs text claim), replicability, roi potential, and time to first dollar.
+
+Hedge fund rigor applied to side hustles.
+
+#solopreneur #saas"
+2026-03-16,12:28,"I wrote a python script that scores local business leads 0-100 based on: website age, mobile responsiveness, page speed, social presence, review count, and 12 other signals.
+
+Ran it across 203 cities.
+
+1,661 leads scored and ranked.
+
+Cold email templates auto-generated per industry.
+
+One person did this.
+
+#startup #saas"
+2026-03-16,16:43,"The file tree for my solopreneur operating system is 3,890 markdown files.
+
+51mb of tracking data.
+
+12mb of automation scripts.
+
+Every business decision tracked in csvs.
+
+Every strategy documented.
+
+Every experiment logged.
+
+This is what institutional-grade solo looks like."
+2026-03-16,21:30,"The deploy script for all 7 apps is 100 lines of bash.
+
+Loops through each app directory.
+
+Runs vercel deploy.
+
+Logs the url.
+
+Total deployment time: under 10 minutes.
+
+But it's been sitting there for 2 days because i haven't run `vercel login` yet.
+
+Execution gap is real."
+2026-03-17,12:20,"Ai solopreneurship is the biggest wealth transfer happening right now and nobody's covering it properly.
+
+One person with claude code, 92 python scripts, and a cron job can out-execute a 10-person startup.
+
+The  is insane and it's only february 2026.
+
+#saas #automation #indiehackers"
+2026-03-17,16:32,"Most people think ai solopreneurship means ""use chatgpt to write blog posts."" actual ai solopreneurship: 13 parallel agents, quant terminal, overnight automation, alpha screening with bot detection, monte carlo revenue projections, and paper trading business models before deploying capital.
+
+#buildinpublic #startup"
+2026-03-17,21:17,"My quant terminal is 116kb of python.
+
+Renders in terminal.
+
+6 panels: alpha pipeline, revenue tracker, content queue, deployment status, experiment results, system health.
+
+Updates from csv files.
+
+No database.
+
+No server.
+
+Just python reading flat files.
+
+Looks like a bloomberg terminal for broke people.
+
+#saas #ai"
+2026-03-18,12:30,"1/ i track 150+ business operations simultaneously.
+
+From affiliate marketing to ai influencer personas to gov contract alerts.
+
+Here's the actual system.
+
+#nocode #productivity #coding"
+2026-03-18,16:26,"5/ the morning output: a daily todo generator runs at 8:30 am.
+
+Reads overnight logs, new leads, pending alpha, deployment status.
+
+Generates a prioritized markdown file.
+
+I open my laptop and know exactly what to do.
+
+#automation #solopreneur #nocode"
+2026-03-18,21:45,"6/ the bot detection layer: before trusting any ""proof,"" i check engagement ratios.
+
+10k likes with 3 comments = botted.
+
+Generic ""great post!"" replies = bought.
+
+Account age vs follower count mismatches = suspicious.
+
+Most guru proof is manufactured.
+
+#solopreneur #buildinpublic #productivity"
+2026-03-19,12:20,"2/ the bottleneck isn't building.
+
+Building is solved.
+
+Ai agents will build anything you describe.
+
+The bottleneck is: creating accounts, entering payment info, clicking publish, and telling real humans your thing exists.
+
+#buildinpublic #automation #startup"
+2026-03-19,16:36,"4/ the psychological barrier: building feels productive.
+
+Shipping feels exposing.
+
+Every builder i know has 10x more built than shipped.
+
+The code doesn't judge you.
+
+The market does.
+
+#startup #indiehackers"
+2026-03-19,21:39,"6/ what i'd do differently: create accounts first.
+
+Before building anything.
+
+The deploy script has been sitting there for 2 days because i haven't logged into vercel.
+
+Accounts take 10 minutes each.
+
+I've spent 200 hours building and 0 hours signing up.
+
+#automation"
+2026-03-20,12:43,"7/ the honest take: ai solopreneurship is real.
+
+The  is real.
+
+The speed is real.
+
+But it doesn't remove the boring parts.
+
+It just makes the boring parts a smaller percentage of total work.
+
+2% of the work (account creation) gates 100% of the revenue."
+2026-03-20,16:22,"1.
+
+**dusk** - sleep tracker with streaks, heatmaps, and sleep tips
+2.
+
+**vault** - pomodoro timer with ambient sounds and task tracking
+3.
+
+**streakr** - habit tracker with heatmaps and milestone celebrations
+4.
+
+**mise** - meal planner with recipes and auto-generated grocery lists
+5.
+
+**steplock** - walking gamification with rewards and challenges
+6.
+
+**hilal** - bilingual (en/ar) ramadan companion with prayer tracking
+7.
+
+**prayerlock** - prayer habit tracker with qibla compass and tasbih counter."
+2026-03-20,21:37,"Happy to answer questions about the workflow.
+
+#ai #startup"
+2026-03-23,12:42,"**the system:**
+- 150+ business ops tracked in a single xlsx (12 sheets)
+- 992 alpha entries (business opportunities) screened and scored
+- 92 python automation scripts for data collection
+- 16 cron jobs run overnight to refresh data
+- bloomberg-style terminal dashboard shows everything in one view."
+2026-03-23,16:38,"**the pipeline:**
+1.
+
+Sources: 89 twitter accounts, reddit (41 subreddits), product hunt, indie hackers, hn
+2.
+
+Every opportunity goes into a staging csv
+3.
+
+Each entry gets scored on 8 dimensions
+4.
+
+Bot detection on engagement metrics (10k likes with 3 comments = sus)
+5.
+
+Earnings claims verified or flagged (most are inflated)
+6.
+
+Approved entries get integrated into execution plans."
+2026-03-23,21:29,"**results from 992 entries:**
+- 118 approved (12%) - real, specific, replicable methods
+- 377 engagement_bait (38%) - good for content, not for strategy
+- 176 repurpose_only (18%) - case study value only
+- 60 exaggerated_but_signal (6%) - inflated claims hiding real methods
+- 11 rejected (1%) - verified fake or duplicate.
+
+#ai #indiehackers"
+2026-03-24,12:25,"**the 12% that passed had these in common:**
+- specific revenue numbers (not ""good money"" but ""$2,847 in 14 days"")
+- clear framework (step 1, step 2, step 3)
+- proof that passes bot detection (engagement ratio matches, real comments)
+- achievable with existing tools (no ""just raise $500k"" requirements).
+
+#nocode"
+2026-03-24,16:28,"The system runs as a python script.
+
+All data stored in csv.
+
+Takes about 30 seconds per entry to score.
+
+I review the approved batch weekly.
+
+#saas"
+2026-03-24,21:35,"Built a 6-panel terminal dashboard in python (116kb, no web ui):
+- panel 1: alpha pipeline (992 screened opportunities)
+- panel 2: revenue tracker (by method, by platform)
+- panel 3: content queue (1,278 pieces across 5 niches)
+- panel 4: deployment status (7 apps, hosting, domains)
+- panel 5: experiment results (a/b tests, hypothesis tracking)
+- panel 6: system health (cron jobs, script status, lead counts)."
+2026-03-25,12:35,"### 5.5 r/webdev: ""built 7 production pwas as single html files.
+
+Each under 80kb."".
+
+#automation #startup"
+2026-03-25,16:45,"I wanted to see how far i could push the ""single file"" approach.
+
+Each app:
+- single html file (html + css + js inline)
+- under 80kb total
+- tailwind css via cdn (no build step)
+- inter font via google fonts
+- all data in localstorage
+- full pwa: service worker, manifest.json, offline support
+- installable on home screen
+- proper mobile ux: safe-area-inset, viewport-fit, touch targets.
+
+#coding #ai"
+2026-03-25,21:32,"**the 7 apps:**
+- sleep tracker (vanilla css, dark theme)
+- pomodoro timer (ambient sounds via web audio api)
+- habit tracker (heatmap calendar, streak celebrations)
+- meal planner (weekly grid, recipe library, macro tracking)
+- walking gamification (progress ring, achievements, challenges)
+- ramadan companion (bilingual en/ar, full rtl support)
+- prayer tracker (qibla compass, geometric patterns).
+
+#automation #ai"
+2026-03-26,12:21,"**what worked:**
+- tailwind cdn removes all build complexity
+- localstorage is fine for personal data apps
+- pwa install gives a native feel for free
+- no backend = no hosting costs = vercel free tier forever
+- og tags + twitter cards for sharing.
+
+#startup #indiehackers"
+2026-03-26,16:32,"- [x] zero em dashes
+- [x] zero banned ai vocabulary (no , , , , )
+- [x] no ""it's not just x, it's y"" constructions
+- [x] no vague attributions
+- [x] no promotional adjectives
+- [x] consequence-first hooks on every tweet
+- [x] specific numbers throughout: 92, 50000+, 13, 992, 742, 118, 377, 176, 60, 150+, 7, 16, 1661, 2143, 3890, 51mb, 12mb, 116kb, 80kb, 203, 89, 1278, 467, 70%, 12%, 366, 28, 20, 50, 10
+- [x] real tool names: claude code, python, playwright, vercel, tailwind, inter, localstorage, buffer, gumroad, cron, csv, git
+- [x] would @pipelineabuser post this? yes
+- [x] first sentence delivers value in every piece
+- [x] lowercase energy throughout tweets
+- [x] reddit/hn posts use appropriate tone (less aggressive, more helpful).
+
+#indiehackers #ai"
+2026-03-26,21:18,"The 5% unpredictable failure rate is the dealbreaker.
+
+95 tasks work perfectly.
+
+The 96th completely fails.
+
+For critical business processes that's unacceptable.
+
+#productivity"
+2026-03-27,12:38,"$50/mo cost increase.
+
+Runs on 2 macbooks.
+
+Mit licensed.
+
+#saas #nocode #buildinpublic"
+2026-03-27,16:33,"Full research writeup on substack.
+
+Github.com/fnsmdehip/memento."
+2026-03-27,21:30,"So i killed them.
+
+On purpose.
+
+Every single iteration.
+
+#automation #saas #productivity"

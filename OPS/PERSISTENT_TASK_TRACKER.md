@@ -195,6 +195,45 @@
   - Trend signals: 228 signals (33 general, 15 digital product, 9 tech gadget)
   - Research pipeline: running in background (twitter + reddit + alpha extraction)
 
+### T025: Fiverr Account Created
+- **Status:** DONE ✓
+- **Completed:** 2026-02-27
+- **Action needed:** Fill in FIVERR_EMAIL and FIVERR_PASSWORD in SECRETS/CREDENTIALS.env
+- **Next:** List 11 gigs from PRODUCTS/FIVERR_INSTANT_UPLOAD/
+
+### T026: Etsy Account Created
+- **Status:** DONE ✓
+- **Completed:** 2026-02-27
+- **Action needed:** Fill in ETSY_EMAIL and ETSY_PASSWORD in SECRETS/CREDENTIALS.env
+- **Next:** List 20 products from PRODUCTS/ETSY_LISTINGS_20.md
+
+### T027: Buy Pre-Warmed Twitter Account
+- **Status:** IN_PROGRESS
+- **Priority:** P0 — unblocks meme page + NSFW account
+- **Marketplaces open:** Fameswap, Swapd
+- **Budget:** $50-300
+- **What to look for:** 1K-10K followers, entertainment/meme niche, aged 1yr+, real engagement
+- **After purchase:** Change email, phone, password, 2FA immediately
+
+### T028: Swarm Reboot (6 agents)
+- **Status:** DONE ✓
+- **Started:** 2026-02-27
+- **Completed:** 2026-02-27 (recovered + finished in follow-up session)
+- **Original agents hit context limits — deliverables completed by recovery session**
+- **All 12 deliverables verified:**
+  1. ✅ `OPS/CLAUDE_COWORK_INTEGRATION_PLAN.md` (223 lines) — Cowork vs Cron vs Ralph comparison, hybrid architecture, 5 new Cowork tasks
+  2. ✅ `AUTOMATIONS/nsfw_safety_system.py` (1077 lines) — DM scanning, content approval, compliance audit
+  3. ✅ `MONEY_METHODS/AI_INFLUENCER/NSFW_SAFETY_EXECUTION_PLAN.md` (299 lines) — Full launch plan, DM protocol, VA hiring, Fanvue tiers
+  4. ✅ `OPS/NSFW_COMPLIANCE_CHECKLIST.md` (199 lines) — FTC, Twitter TOS, Fanvue, NCMEC, audit schedule
+  5. ✅ `OPS/MEME_PAGE_AUTOMATION_PLAYBOOK.md` (236 lines) — Shadowban rules, account buying, content sourcing, 30-day plan
+  6. ✅ `AUTOMATIONS/content_repurposer.py` (524 lines) — Reddit scraping, Claude caption rewrite, natural scheduling, SQLite tracking
+  7. ✅ `OPS/LOCAL_VIDEO_GEN_SETUP.md` (432 lines) — Mac video gen models, TTS setup, ComfyUI
+  8. ✅ `OPS/YOUTUBE_FACTORY_PLAYBOOK.md` (262 lines) — 6 niches with CPM, full pipeline, content calendar, revenue projections
+  9. ✅ `AUTOMATIONS/youtube_factory.py` (659 lines) — Script gen → TTS → assembly → clip → upload pipeline
+  10. ✅ `OPS/SPREADSHEET_COMPATIBILITY_REPORT.md` (49 lines) — Keep xlsx, Numbers compatible
+  11. ✅ `AUTOMATIONS/content_factory.py` (1030 lines) — Multi-platform content distribution
+  12. ✅ `OPS/CONTENT_FACTORY_PLAYBOOK.md` (322 lines) — Daily workflow, platform rules, recycling
+
 ### T024: @beautyshowcase Reverse-Engineered for @velvetframes
 - **Status:** DONE ✓
 - **Completed:** 2026-02-14

@@ -261,3 +261,14 @@ Interested in a primary placement for [month]? Happy to share our media kit.
 ---
 
 Last updated: 2026-01-23
+
+
+---
+
+## Pending Enhancement (ALPHA13235, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rdjptu/ive_build_a_youtube_to_newsletter_automation/
+**Added:** 2026-02-27T19:47:26-05:00
+
+[ACQUISITION] I've Build A Youtube to Newsletter Automation
+

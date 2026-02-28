@@ -374,3 +374,24 @@
 {"timestamp": "2026-02-25T20:30:01.134728", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
 {"timestamp": "2026-02-25T20:30:01.547945", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
 {"timestamp": "2026-02-25T20:30:01.580168", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-26T12:30:02.026794", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-26T12:30:02.601556", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-26T12:30:02.708500", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-26T16:30:01.311183", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-26T16:30:01.675986", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-26T16:30:01.681382", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-26T20:30:01.024983", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-26T20:30:01.541157", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-26T20:30:01.548995", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-27T08:03:23.270832", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-27T08:03:23.427775", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-27T08:03:23.432631", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-27T08:30:02.327078", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-27T08:30:03.220624", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-27T08:30:03.260979", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-27T16:30:01.966904", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-27T16:30:02.621322", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-27T16:30:02.627713", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-02-27T20:30:01.787447", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-02-27T20:30:02.520267", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-02-27T20:30:02.525084", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}

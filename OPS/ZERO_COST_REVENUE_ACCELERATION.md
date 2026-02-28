@@ -1143,3 +1143,73 @@ Watch it here:
 https://
 tapthe.link/6aNpGh3Al
 
+
+
+---
+
+## Pending Enhancement (ALPHA13250, Score: 36)
+
+**Source:** r/startups (https://reddit.com/r/startups/comments/1rdmv1s/honest_question_how_many_of_you_actually_know/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+Honest question: how many of you actually know where profit is lost in your business? (I will not promote). Honest question, and I’m asking this because I’ve tripped over it myself more than once.
+
+I’m currently working in a company doing around $10m a year, and this genuinely caught me off guard.
+
+Revenue
+
+
+
+---
+
+## Pending Enhancement (ALPHA13267, Score: 25)
+
+**Source:** r/Entrepreneur (https://reddit.com/r/Entrepreneur/comments/1rdszm9/niched_into_serving_only_pediatric_dental_offices/) | **URL:** 
+**Added:** 2026-02-27T19:47:26-05:00
+
+Niched into serving only pediatric dental offices and went from $4k to $22k/month in 8 months. Was running a generic local marketing agency for about 2 years, doing SEO and Google ads for whoever would pay me. Landscapers, chiropractors, roofing companies, you name it. Revenue was okay but i wa
+
+
+
+---
+
+## Pending Enhancement (ALPHA13354, Score: 24)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/02/24/india-ai-boom-pushes-firms-to-trade-near-term-revenue-for-users/) | **URL:** https://techcrunch.com/2026/02/24/india-ai-boom-pushes-firms-to-trade-near-term-revenue-for-users/
+**Added:** 2026-02-27T19:47:26-05:00
+
+[PLATFORM UPDATE] India&#8217;s AI boom pushes firms to trade near-term revenue for users
+
+
+
+---
+
+## Pending Enhancement (ALPHA13361, Score: 24)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/arzule
+**Added:** 2026-02-27T19:47:26-05:00
+
+[PH LAUNCH] Arzule: Turn partnerships into predictable revenue with AI
+
+
+
+---
+
+## Pending Enhancement (ALPHA13641, Score: 38)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/) | **URL:** https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/
+**Added:** 2026-02-27T19:47:26-05:00
+
+[PLATFORM UPDATE] AI music generator Suno hits 2M paid subscribers and $300M in annual recurring revenue
+
+
+
+---
+
+## Pending Enhancement (ALPHA13690, Score: 24)
+
+**Source:** r/indiehackers | **URL:** https://www.reddit.com/r/indiehackers/comments/1rgfovi/selling_4_prerevenue_sites_with_great_potential/
+**Added:** 2026-02-27T19:47:26-05:00
+
+[ACQUISITION] [Selling] 4 pre-revenue sites with great potential
+
