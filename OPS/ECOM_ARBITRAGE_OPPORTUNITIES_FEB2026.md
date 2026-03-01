@@ -537,3 +537,23 @@ This can happen all at once in parallel if you give OpenClaw the https://t.co/W4
 
 I highly recommned this playlist on human behavior. https://t.co/WzI581jd5D
 
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA546 — 2026-02-28
+**Source:** Fiverr / Medium / Millo ([link](https://www.fiverr.com/gigs/selling))
+**Category:** ECOM_ARB
+**Method:** Sell AI prompt packs. YouTube automation service. Short video editing = low skill high demand.
+**Insight:** Fiverr 2026: AI prompt writing (new hot gig). Short video editing (CapCut). YouTube automation. Web design. VA services.
+**Potential:** ROI: HIGH | Synergy: 75
+
+### Alpha Insight: ALPHA547 — 2026-02-28
+**Source:** Medium (Activated Thinker) ([link](https://medium.com/activated-thinker/5-micro-niche-gigs-that-will-explode-on-fiverr-in-2026-5b305d923574))
+**Category:** ECOM_ARB
+**Method:** Custom GPT building $50-200/gig. AI product photos $30-100. Notion AI templates $20-50.
+**Insight:** Micro-niche Fiverr 2026: AI voice cloning. Custom GPT building ($50-200). AI product photography ($30-100). Notion AI templates ($20-50).
+**Potential:** ROI: HIGH | Synergy: 80
+

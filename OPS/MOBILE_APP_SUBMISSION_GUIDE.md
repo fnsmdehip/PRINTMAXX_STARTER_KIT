@@ -551,3 +551,17 @@ cd ios/App && fastlane release
 # Wrap all 6 apps at once
 bash scripts/wrap_and_submit_all.sh ios
 ```
+
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA540 — 2026-02-28
+**Source:** CNBC ([link](https://www.cnbc.com/2026/01/15/ai-startup-replit-launches-feature-to-vibe-code-mobile-apps.html))
+**Category:** APP_FACTORY
+**Method:** Replit mobile builder: describe app -> get iOS/Android. Skip Xcode entirely.
+**Insight:** Replit mobile app vibe coding launched Jan 2026. Build iOS/Android with natural language. No Xcode needed.
+**Potential:** ROI: HIGHEST | Synergy: 95
+

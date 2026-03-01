@@ -904,3 +904,35 @@ Early-stage SaaS teams - are you paying for Postman now?. We’re pre-revenue an
 
 I understand monetization, but API testing tools used to be easy to collaborate with
 
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA543 — 2026-02-28
+**Source:** Buffer / TokChart ([link](https://buffer.com/resources/trending-songs-tiktok/))
+**Category:** CONTENT_FORMAT
+**Method:** No-talking trends perfect for faceless accounts. Bridgerton for product showcases. Check tokchart.com daily.
+**Insight:** Feb 2026 TikTok sounds: ZOMB (IG-vs-reality). No-talking: No Hands + Euphoria glam + Group Consensus + Thermostat Game. Bridgerton for products.
+**Potential:** ROI: HIGH | Synergy: 75
+
+
+
+---
+
+## Pending Enhancement (ALPHA13743, Score: 24)
+
+**Source:** @marryevan999 (bookmarks) | **URL:** https://x.com/marryevan999/status/2025966737037152679
+**Added:** 2026-02-28T06:00:01-05:00
+
+Faceless Instagram pages will be the biggest side hustle in 2026:
+
+• Can be made with AI in 1 day
+• Only requires 1-2 hours a week
+• Can rinse & repeat as many times
+
+If you want to make $10k/month in passive income…
+
+Follow these 7 simple steps:
+

@@ -1213,3 +1213,16 @@ Niched into serving only pediatric dental offices and went from $4k to $22k/mont
 
 [ACQUISITION] [Selling] 4 pre-revenue sites with great potential
 
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA536 — 2026-02-28
+**Source:** @thejustinwelsh on X ([link](https://x.com/thejustinwelsh/status/1874418985271259339))
+**Category:** MONETIZATION
+**Method:** Portfolio solopreneur model: audience on LinkedIn/X -> info products at 86% margins
+**Insight:** Justin Welsh $4.15M+ solopreneur revenue 2024 at 86% margins. Zero ads. LinkedIn + X -> info products.
+**Potential:** ROI: HIGHEST | Synergy: 85
+

@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-02-24T05:41:18.587345",
+  "last_run": "2026-02-28T05:41:19.038661",
   "runs": [
     {
       "timestamp": "2026-02-13T18:52:51.501579",
@@ -127,8 +127,19 @@
         "bookmarks": null
       },
       "duration_seconds": 677.723645
+    },
+    {
+      "timestamp": "2026-02-28T05:41:19.038680",
+      "alpha_count": 219,
+      "content_count": 4,
+      "scrape_results": {
+        "twitter": "TIMEOUT (10m)",
+        "reddit": "OK",
+        "bookmarks": null
+      },
+      "duration_seconds": 677.888886
     }
   ],
-  "total_alpha": 8301,
-  "total_content": 297
+  "total_alpha": 8520,
+  "total_content": 301
 }
