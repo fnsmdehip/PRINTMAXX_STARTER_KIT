@@ -648,3 +648,24 @@ How I hit $27k MRR by ignoring standard startup advice with 5 channels. If you a
 
 I just hit $27k MRR with [my tool](https://tryrebelgrowth.com
 
+
+
+---
+
+## Pending Enhancement (ALPHA13716, Score: 24)
+
+**Source:** r/Affiliatemarketing (https://reddit.com/r/Affiliatemarketing/comments/1rgp4dm/i_made_800_in_affiliate_commissions_from_a/) | **URL:** 
+**Added:** 2026-02-28T06:00:01-05:00
+
+I Made $800+ in Affiliate Commissions From a Business I Already Sold. I’m *not* here to sell you anything.
+
+No course.  
+No funnel.  
+No DM me.
+
+Just sharing something that surprised me.
+
+A while back I was selling AI automation bots for **$147 each**.
+
+Nothing crazy. N
+

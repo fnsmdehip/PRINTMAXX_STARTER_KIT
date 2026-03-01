@@ -609,3 +609,29 @@ how to use claude code + outscraper + crawl4ai to build a profitable online dire
 2. use claude code to clean, dedupe, and structure the data in passes
 3. run crawl4ai to verify live sites and filter junk
 
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA539 — 2026-02-28
+**Source:** TechCrunch ([link](https://techcrunch.com/2025/09/29/vibe-coding-startup-anything-nabs-a-100m-valuation-after-hitting-2m-arr-in-its-first-two-weeks/))
+**Category:** TOOL_ALPHA
+**Method:** Vibe coding platforms validated at scale. Use Lovable/Replit for builds.
+**Insight:** Vibe coding platforms: Anything $2M ARR in 2 weeks. Lovable $100M ARR in 8mo targeting $250M. Replit $150M ARR.
+**Potential:** ROI: HIGHEST | Synergy: 80
+
+
+
+---
+
+## Pending Enhancement (ALPHA13702, Score: 30)
+
+**Source:** r/startups (https://reddit.com/r/startups/comments/1rgipqo/startup_idea_for_receiving_commissions_quicker_i/) | **URL:** 
+**Added:** 2026-02-28T06:00:01-05:00
+
+Startup idea for receiving commissions quicker (I will not promote). TL;DR
+
+Startup idea: A platform for commission-based workers (e.g., tech sales) to access earned commissions within 24 hours for a fee (e.g., 5% on $50k = $2,500 deduction), repaid fully upon employer
+

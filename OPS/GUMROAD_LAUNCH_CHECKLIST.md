@@ -728,3 +728,17 @@ The Everything Bundle at $197 is the anchor that makes the $47 and $97 bundles f
 - Raise one $47 product to $57 (test one at a time)
 - Add a $297 "VIP" tier with a 30-minute call included
 - Offer a limited-time 50% discount code for Twitter followers
+
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA_MICRO_INFO_001 — 2026-02-28
+**Source:** Twitter engagement bait (info products)
+**Category:** MONETIZATION
+**Method:** $29-39 micro info products. 1-2 hour build time. 400 buyers = $13.6K/mo. Sell tight specific solutions not masterclasses. Notion doc with useful stuff. Odd number titles convert better (73 not 50). Lead with proof then mention guide.
+**Insight:** $29-39 micro info products. Sell tight specific solutions. 60-80 proven examples in one doc. 1-2 hour build time. 400 buyers x $34 = $13600/mo. Platforms: Gumroad or Whop. Lead with proof not features. Impulse price zone.
+**Potential:** ROI: HIGH | Synergy: 85
+
