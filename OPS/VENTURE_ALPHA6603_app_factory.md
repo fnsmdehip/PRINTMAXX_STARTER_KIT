@@ -86,3 +86,9 @@ _Insights auto-appended by playbook_enhancer.py. Review and integrate as needed.
 **Insight:** Vibe coding services: custom builds $300-800. Micro-SaaS $5-15/mo (10-20 users). Internal tools $300-1K + $50-100/mo maintenance.
 **Potential:** ROI: HIGH | Synergy: 80
 
+### Alpha Insight: ALPHA1406 — 2026-03-01
+**Source:** 2026-02-13
+**Category:** APP_FACTORY
+**Insight:** I launched my first monetized iOS app 3 months ago. Here's every mistake I made (and the numbers). Hey everyone, wanted to quickly share of what the last 3 months looked like after launching my first "proper" iOS app [DayZen](https://apps.apple.com/us/app/dayzen-visual-time-planner/id6754326173) (a visual time-blocking tool). I built one app before purely as a learning exercise and never tried to earn from it. This time I went all in on actually monetizing. Here's what happened. **The numbers
+**Potential:** ROI: https://reddit.com/r/SideProject/comments/1qyl08n/i_launched_my_first_monetized_ios_app_3_months/ | Synergy: 92
+

@@ -1,6 +1,6 @@
 # Human Loop Queue
 
-Generated: 2026-02-28 20:31:40
+Generated: 2026-03-01 20:33:08
 
 Node role: `worker`
 
@@ -16,7 +16,7 @@ Critical actions are blocked until explicitly approved.
 - [ ] `EMAIL_INFRA` - Configure Gmail/Resend + PHYSICAL_ADDRESS in SECRETS/PAYMENT_INFO.md (required for LIVE_EMAIL_SEND).
 - [ ] `GUMROAD_API_TOKEN` - Add GUMROAD_ACCESS_TOKEN to SECRETS/PAYMENT_INFO.md for AUTO_LIST_ECOM.
 - [ ] `LIVE_EMAIL_SEND` - Approve live cold-email send (100 max)
-- [ ] `COMPLIANCE_HIGH_RISK` - High compliance risk: 6 CRITICAL issues in LEDGER/compliance_scan_2026_02_28.json. Required for live high-upside execution.
+- [ ] `COMPLIANCE_HIGH_RISK` - High compliance risk: 6 CRITICAL issues in LEDGER/compliance_scan_2026_03_01.json. Required for live high-upside execution.
 
 ## Approved (Persistent)
 

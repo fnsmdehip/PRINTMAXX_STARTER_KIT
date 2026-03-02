@@ -635,3 +635,9 @@ Startup idea for receiving commissions quicker (I will not promote). TL;DR
 
 Startup idea: A platform for commission-based workers (e.g., tech sales) to access earned commissions within 24 hours for a fee (e.g., 5% on $50k = $2,500 deduction), repaid fully upon employer
 
+### Alpha Insight: ALPHA1417 — 2026-03-01
+**Source:** 2026-02-13
+**Category:** TOOL_ALPHA
+**Insight:** You don’t need a ton of money to buy a small business A lot of people think you need hundreds of thousands of dollars, an MBA, or 10 years of experience to buy a business. That wasn’t my experience at all. When I was 21, I bought my first business for **$4,000**. It was a small B2C SaaS that was already making around **$500/month**. Nothing crazy as such, but it was real revenue. And that I exited at 6 figures. Since then, I’ve bought **5 more businesses**, all for **under $10k**, and every
+**Potential:** ROI: https://reddit.com/r/EntrepreneurRideAlong/comments/1quycoe/you_dont_need_a_ton_of_money_to_buy_a_small/ | Synergy: 125
+

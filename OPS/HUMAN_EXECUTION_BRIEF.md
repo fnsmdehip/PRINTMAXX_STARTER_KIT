@@ -1,24 +1,24 @@
 # Human Execution Brief
 
-Generated: 2026-02-28 20:30:52
+Generated: 2026-03-01 20:32:10
 
 ## Publish Packs (Ready)
 
-- Total items: 42
+- Total items: 45
+- instagram/carousel persona=n/a scheduled=2026-03-02 11:30
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/aria-pmx-car-002-20260301-000002/index.html
+  - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
+- instagram/carousel persona=n/a scheduled=2026-03-02 11:15
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/selah-pmx-car-002-20260301-000002/index.html
+  - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
+- instagram/carousel persona=n/a scheduled=2026-03-02 11:00
+  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/rhea-pmx-faith-002-20260301-000002/index.html
+  - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
 - instagram/carousel persona=n/a scheduled=2026-03-01 11:30
   - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/aria-pmx-car-003-20260228-000001/index.html
   - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
 - instagram/carousel persona=n/a scheduled=2026-03-01 11:15
   - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/selah-pmx-car-003-20260228-000001/index.html
-  - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
-- instagram/carousel persona=n/a scheduled=2026-03-01 11:00
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/rhea-pmx-car-002-20260228-000001/index.html
-  - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
-- instagram/carousel persona=n/a scheduled=2026-02-28 11:30
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/aria-pmx-car-002-20260227-070124/index.html
-  - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
-- instagram/carousel persona=n/a scheduled=2026-02-28 11:15
-  - preview: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/carousels/selah-pmx-car-003-20260227-070124/index.html
   - buffer_csv: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/publish_packs/buffer/buffer_import_instagram.csv
 
 ## Buffer CSVs (Upload Targets)
@@ -38,7 +38,7 @@ Generated: 2026-02-28 20:30:52
 ## Freelance Pack (No Posting)
 
 - Pack: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/freelance/latest.md
-- Draft responses (last 72h): 52
+- Draft responses (last 72h): 58
 
 ## Gov Bid Pack (No Bidding)
 
@@ -69,22 +69,22 @@ Generated: 2026-02-28 20:30:52
 - Directory wave rows: 900
 - Job-sniper rows: 200
 - Keyword-gap rows: 98
-- Community rows: 65
+- Community rows: 88
 
 ## ClawWork Sidecar (Economic Benchmark)
 
 - Pack: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/output/clawwork_sidecar/latest.md
-- Budget state: HARD_STOP
-- Estimated eval cost (this run): $0.00
-- Expected sampled profit: $0.00
-- Top lane: freelance_arbitrage (profit=$0.00)
+- Budget state: NORMAL
+- Estimated eval cost (this run): $0.36
+- Expected sampled profit: $234.63
+- Top lane: freelance_arbitrage (profit=$161.86)
 
 
 ## Human Loop Queue (Blockers / Approvals)
 
 # Human Loop Queue
 
-Generated: 2026-02-28 20:01:10
+Generated: 2026-03-01 20:01:22
 
 Node role: `worker`
 
@@ -100,7 +100,7 @@ Critical actions are blocked until explicitly approved.
 - [ ] `EMAIL_INFRA` - Configure Gmail/Resend + PHYSICAL_ADDRESS in SECRETS/PAYMENT_INFO.md (required for LIVE_EMAIL_SEND).
 - [ ] `GUMROAD_API_TOKEN` - Add GUMROAD_ACCESS_TOKEN to SECRETS/PAYMENT_INFO.md for AUTO_LIST_ECOM.
 - [ ] `LIVE_EMAIL_SEND` - Approve live cold-email send (100 max)
-- [ ] `COMPLIANCE_HIGH_RISK` - High compliance risk: 6 CRITICAL issues in LEDGER/compliance_scan_2026_02_28.json. Required for live high-upside execution.
+- [ ] `COMPLIANCE_HIGH_RISK` - High compliance risk: 6 CRITICAL issues in LEDGER/compliance_scan_2026_03_01.json. Required for live high-upside execution.
 
 ## Approved (Persistent)
 
