@@ -936,3 +936,9 @@ If you want to make $10k/month in passive income…
 
 Follow these 7 simple steps:
 
+### Alpha Insight: ALPHA1351 — 2026-03-01
+**Source:** 2026-02-13
+**Category:** CONTENT_FORMAT
+**Insight:** the top 2 TikTok shop affiliates made $810k in 35 days, COMMISSION orangeshoppin & cakedfinds i built an agent to clone their videos with AI and pump out 300+ per day should not give this away for free, but f*k it Like, rt & comment “CLONE” i’ll send you the template i built
+**Potential:** ROI: https://x.com/Jonnyvandel/status/2014436022621282486 | Synergy: 385
+

@@ -746,3 +746,16 @@ Status values:
 ---
 
 **Status:** NOT_STARTED. Begin Phase 0 (buy domains + set up Workspace) today. Everything else follows sequentially.
+
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA1430 — 2026-03-01
+**Source:** 2026-02-13
+**Category:** OUTBOUND
+**Insight:** hit my first 6 figures as a solo consultant, COLD EMAIL did 80% of the heavy lifting Hey folks, just wanted to share this because a year ago I was lurking here trying to figure this stuff out and posts like this helped me background: I do fractional CFO work for funded startups. been doing it for 4 years but always relied on referrals and linkedin. referrals dried up early 2024 so I had to figure out outbound or die basically started with Woodpecker in february. sent maybe 2000 emails over 3 m
+**Potential:** ROI: https://reddit.com/r/coldemail/comments/1qz6vnz/hit_my_first_6_figures_as_a_solo_consultant_cold/ | Synergy: 71
+
