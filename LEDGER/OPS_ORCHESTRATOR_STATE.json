@@ -1,8 +1,8 @@
 {
   "meta": {
     "created_at": "2026-02-12T07:43:41.609997",
-    "last_run": "2026-03-01T20:30:01.722617",
-    "total_runs": 102,
+    "last_run": "2026-03-02T20:30:01.883557",
+    "total_runs": 105,
     "version": "1.0.0"
   },
   "ops": {
@@ -756,9 +756,9 @@
         "MONEY_METHODS/POD/"
       ],
       "needs_accounts": [
-        "teespring",
         "mba",
-        "redbubble"
+        "redbubble",
+        "teespring"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -794,8 +794,8 @@
       ],
       "needs_accounts": [
         "amazon",
-        "ebay",
-        "walmart"
+        "walmart",
+        "ebay"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -1112,8 +1112,8 @@
         "03_PLAYBOOKS/NOTION_TEMPLATES/"
       ],
       "needs_accounts": [
-        "notion_marketplace",
-        "gumroad"
+        "gumroad",
+        "notion_marketplace"
       ],
       "base_freq_hours": 48,
       "current_freq_hours": 48,
@@ -1148,9 +1148,9 @@
         "03_PLAYBOOKS/COURSE_CREATOR/"
       ],
       "needs_accounts": [
+        "gumroad",
         "udemy",
-        "teachable",
-        "gumroad"
+        "teachable"
       ],
       "base_freq_hours": 48,
       "current_freq_hours": 48,
@@ -1185,8 +1185,8 @@
         "TAB3 ALPHA"
       ],
       "needs_accounts": [
-        "promptbase",
-        "gumroad"
+        "gumroad",
+        "promptbase"
       ],
       "base_freq_hours": 48,
       "current_freq_hours": 48,
@@ -1327,8 +1327,8 @@
         "08_PRODUCTS/"
       ],
       "needs_accounts": [
-        "etsy",
-        "gumroad"
+        "gumroad",
+        "etsy"
       ],
       "base_freq_hours": 48,
       "current_freq_hours": 48,
@@ -1504,9 +1504,9 @@
         "PRINTMAXX_FREELANCE_ARB.xlsx"
       ],
       "needs_accounts": [
-        "freelancer_+7",
+        "upwork",
         "fiverr",
-        "upwork"
+        "freelancer_+7"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -1821,8 +1821,8 @@
         "First principles"
       ],
       "needs_accounts": [
-        "fiverr",
-        "upwork"
+        "upwork",
+        "fiverr"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -2595,8 +2595,8 @@
       ],
       "needs_accounts": [
         "twitter",
-        "telegram",
         "fanvue",
+        "telegram",
         "patreon",
         "fansly"
       ],
@@ -2633,9 +2633,9 @@
         "AI_NSFW_FINDOM_EXECUTION_PLAN.md"
       ],
       "needs_accounts": [
-        "fanvue",
         "telegram",
-        "fansly"
+        "fansly",
+        "fanvue"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -2670,9 +2670,9 @@
         "AI_NSFW_FINDOM_EXECUTION_PLAN.md"
       ],
       "needs_accounts": [
-        "fanvue",
+        "fansly",
         "instagram",
-        "fansly"
+        "fanvue"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -2707,10 +2707,10 @@
         "SYNERGY_PACKAGES/AI_FINDOM_MULTIPLATFORM.md"
       ],
       "needs_accounts": [
-        "twitter",
-        "fanvue",
         "telegram",
-        "fansly"
+        "fansly",
+        "twitter",
+        "fanvue"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -2781,9 +2781,9 @@
         "03_PLAYBOOKS/AI_INFLUENCER/FITNESS/"
       ],
       "needs_accounts": [
-        "youtube",
         "tiktok",
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -2819,8 +2819,8 @@
       ],
       "needs_accounts": [
         "tiktok",
-        "youtube",
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -2926,8 +2926,8 @@
         "AI_NSFW_FINDOM_EXECUTION_PLAN.md"
       ],
       "needs_accounts": [
-        "twitter",
-        "instagram"
+        "instagram",
+        "twitter"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -4056,10 +4056,10 @@
         "PRODUCTS/branding/MEME_ACCOUNTS.md"
       ],
       "needs_accounts": [
-        "twitter",
         "yt",
+        "tiktok",
         "ig",
-        "tiktok"
+        "twitter"
       ],
       "base_freq_hours": 6,
       "current_freq_hours": 6,
@@ -4164,8 +4164,8 @@
         "MONEY_METHODS/SYNERGY_PACKAGES/SYN352_CLIPPER_TIKTOK_DOUBLE_MONETIZATION.md"
       ],
       "needs_accounts": [
-        "ig",
         "tiktok",
+        "ig",
         "youtube"
       ],
       "base_freq_hours": 24,
@@ -4376,8 +4376,8 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
-        "apple_dev",
-        "social"
+        "social",
+        "apple_dev"
       ],
       "base_freq_hours": 48,
       "current_freq_hours": 48,
@@ -4412,9 +4412,9 @@
         "OPS/GREY_HAT_LEGAL_PLAYBOOK_2026.md"
       ],
       "needs_accounts": [
-        "etsy",
+        "gumroad",
         "whop",
-        "gumroad"
+        "etsy"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -4484,9 +4484,9 @@
         "OPS/VA_HIRING_SYSTEM.md + OPS/VA_TASK_SOPS.md"
       ],
       "needs_accounts": [
-        "onlinejobs.ph",
+        "upwork",
         "fiverr",
-        "upwork"
+        "onlinejobs.ph"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -4521,10 +4521,10 @@
         "OPS/GREY_HAT_LEGAL_PLAYBOOK_2026.md + MONEY_METHODS/SYNERGY_STACKS/"
       ],
       "needs_accounts": [
+        "ig",
         "yt",
         "fb",
         "pinterest",
-        "ig",
         "tiktok"
       ],
       "base_freq_hours": 6,
@@ -4738,8 +4738,8 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
-        "apple_dev",
         "newsletter",
+        "apple_dev",
         "youtube"
       ],
       "base_freq_hours": 48,
@@ -4845,8 +4845,8 @@
         "OPS/RETARDMAXX_30DAY_SPRINT.md"
       ],
       "needs_accounts": [
-        "twitter",
-        "newsletter"
+        "newsletter",
+        "twitter"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -4917,8 +4917,8 @@
       ],
       "needs_accounts": [
         "youtube_music",
-        "spotify",
-        "apple_music"
+        "apple_music",
+        "spotify"
       ],
       "base_freq_hours": 6,
       "current_freq_hours": 6,
@@ -5058,8 +5058,8 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
-        "linkedin",
-        "direct"
+        "direct",
+        "linkedin"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -5094,8 +5094,8 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
-        "linkedin",
-        "direct"
+        "direct",
+        "linkedin"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -5130,9 +5130,9 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
+        "gumroad",
         "direct",
-        "whop",
-        "gumroad"
+        "whop"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -5167,8 +5167,8 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
-        "whop",
-        "gumroad"
+        "gumroad",
+        "whop"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -5309,8 +5309,8 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
-        "crate_joy",
-        "shopify"
+        "shopify",
+        "crate_joy"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -5345,8 +5345,8 @@
         "OPS/NOVEL_OPPORTUNITIES_REPORT.md"
       ],
       "needs_accounts": [
-        "whop",
-        "gumroad"
+        "gumroad",
+        "whop"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -5452,8 +5452,8 @@
       ],
       "needs_accounts": [
         "amazon",
-        "ebay",
-        "fb_marketplace"
+        "fb_marketplace",
+        "ebay"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -5524,8 +5524,8 @@
         "OPS/RETARDMAXX_30DAY_SPRINT.md"
       ],
       "needs_accounts": [
-        "ebay",
-        "fb_marketplace"
+        "fb_marketplace",
+        "ebay"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -5806,8 +5806,8 @@
         "First principles"
       ],
       "needs_accounts": [
-        "twitter",
-        "cal.com"
+        "cal.com",
+        "twitter"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -5842,11 +5842,11 @@
         "First principles"
       ],
       "needs_accounts": [
-        "creative_market",
         "notion",
+        "whop",
         "etsy",
         "gumroad",
-        "whop"
+        "creative_market"
       ],
       "base_freq_hours": 48,
       "current_freq_hours": 48,
@@ -5881,8 +5881,8 @@
         "First principles"
       ],
       "needs_accounts": [
-        "fiverr",
-        "upwork"
+        "upwork",
+        "fiverr"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -5917,8 +5917,8 @@
         "First principles"
       ],
       "needs_accounts": [
-        "whop",
-        "gumroad"
+        "gumroad",
+        "whop"
       ],
       "base_freq_hours": 48,
       "current_freq_hours": 48,
@@ -5953,10 +5953,10 @@
         "MONEY_METHODS/LOCAL_BIZ/"
       ],
       "needs_accounts": [
-        "bland.ai",
-        "google_maps",
         "vercel",
-        "instantly.ai"
+        "bland.ai",
+        "instantly.ai",
+        "google_maps"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -5991,9 +5991,9 @@
         "MONEY_METHODS/LOCAL_BIZ/motion_templates/"
       ],
       "needs_accounts": [
-        "bolt.new",
+        "vercel",
         "lovable",
-        "vercel"
+        "bolt.new"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,
@@ -6208,9 +6208,9 @@
         "ralph/loops/app_factory/output/ramadan-tracker/"
       ],
       "needs_accounts": [
-        "apple_dev",
         "pwa",
-        "vercel"
+        "vercel",
+        "apple_dev"
       ],
       "base_freq_hours": 24,
       "current_freq_hours": 24,
@@ -6246,8 +6246,8 @@
       ],
       "needs_accounts": [
         "bland.ai",
-        "retell.ai",
-        "vapi.ai"
+        "vapi.ai",
+        "retell.ai"
       ],
       "base_freq_hours": 12,
       "current_freq_hours": 12,

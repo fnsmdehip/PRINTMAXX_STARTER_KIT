@@ -350,3 +350,14 @@ Applied 0.70x calibration factor based on:
 
 [ACQUISITION] Fed up with scanner apps that crash, hide features, and cost a fortune? My side project, Scannr, aims to be different.
 
+
+
+---
+
+## Pending Enhancement (ALPHA14614, Score: 32)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rhao5q/i_kept_failing_interviews_because_i_couldnt/
+**Added:** 2026-03-02T19:47:13-05:00
+
+[ACQUISITION] I kept failing interviews because I couldn’t explain my own project… so I built something.
+

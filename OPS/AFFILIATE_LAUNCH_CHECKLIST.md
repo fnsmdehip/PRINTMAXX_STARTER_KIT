@@ -460,3 +460,61 @@ no noise no bs. these
 
 [ACQUISITION] Launch HN: Cardboard (YC W26) – Agentic video editor
 
+
+
+---
+
+## Pending Enhancement (ALPHA14253, Score: 48)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1986079863065759778
+**Added:** 2026-03-02T19:45:22-05:00
+
+you think digital products are complicated.
+
+like you need to understand marketing, sales funnels, and all this technical stuff.
+
+so you watch hours of youtube videos trying to learn everything before doing anything.
+
+when all it takes is:
+
+- computer with internet connection
+- a profitable niche
+- a simple traffic source
+
+that's it.
+
+you don't need to be smart, creative, or have special skills - 
+
+
+
+---
+
+## Pending Enhancement (ALPHA14750, Score: 30)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1ri73of/is_affiliatefirst_still_viable_in_2026/
+**Added:** 2026-03-02T19:47:14-05:00
+
+[ACQUISITION] Is affiliate-first still viable in 2026
+
+
+
+---
+
+## Pending Enhancement (ALPHA14752, Score: 36)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1ri6bch/i_accidentally_sabotaged_my_own_app_launch_2k/
+**Added:** 2026-03-02T19:47:14-05:00
+
+[ACQUISITION] I accidentally sabotaged my own app launch: 2K impressions, 11 downloads (0.5% conversion). Here is the stupid mistake I
+
+
+
+---
+
+## Pending Enhancement (ALPHA14918, Score: 30)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47220320
+**Added:** 2026-03-02T19:47:14-05:00
+
+[ACQUISITION] Launch HN: OctaPulse (YC W26) – Robotics and computer vision for fish farming
+

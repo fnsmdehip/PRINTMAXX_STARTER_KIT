@@ -1,66 +1,47 @@
 # Alpha Monitor Digest — 2026-03-01
 
-**Scan time:** 17:01
-**Reddit posts scanned:** 60
-**News items found:** 13
+**Scan time:** 23:31
+**Reddit posts scanned:** 59
+**News items found:** 14
 
 ---
 
 ## Top Reddit Alpha (Score >= 50)
 
 ### [Launched a pet sitter marketplace that doesnt take a cut from bookings](https://reddit.com/r/indiehackers/comments/1ren341/launched_a_pet_sitter_marketplace_that_doesnt/)
-**r/indiehackers** | Score: 14 | Comments: 42 | Alpha: 63/100
+**r/indiehackers** | Score: 13 | Comments: 42 | Alpha: 63/100
 > Sitter Rank launched on PH today. Its a platform where pet sitters keep 100% of their booking income instead of losing 20-40% to Rover/Wag.
 
 Revenue model is SaaS subscriptions from sitters (free tier...
 
 ### [Built a client-side SVG to PNG converter - Canvas API, batch processing, up to 2](https://reddit.com/r/webdev/comments/1rhbnyv/built_a_clientside_svg_to_png_converter_canvas/)
-**r/webdev** | Score: 521 | Comments: 49 | Alpha: 58/100
+**r/webdev** | Score: 526 | Comments: 49 | Alpha: 58/100
 > Hi!
 
 I built [www.svgtopngs.com](https://www.svgtopngs.com) because I kept running into the same annoying workflow - needing to convert SVG icons and logos to PNG for platforms that don't support vect...
 
-### [Third exit](https://reddit.com/r/Entrepreneur/comments/1rgln0s/third_exit/)
-**r/Entrepreneur** | Score: 340 | Comments: 152 | Alpha: 55/100
-> Not sure why I want to post this here. I just want to shout it at the rooftops everywhere, I guess.
-  
-First exit 10 years ago, $11M sold to a UK semiconductor company.  
-Second exit 4 years ago, $21M...
-
 ### [what advice do you have for me? when should you pivot?](https://reddit.com/r/Entrepreneur/comments/1ri6fxp/what_advice_do_you_have_for_me_when_should_you/)
-**r/Entrepreneur** | Score: 1 | Comments: 9 | Alpha: 53/100
+**r/Entrepreneur** | Score: 5 | Comments: 18 | Alpha: 53/100
 > i exited my last company 3 years ago now and have been trying to get back into entrepreneurship for about a year now (although haven't locked in like i'd before) and absolutely struggling.
 
 my first 6...
 
 ### [Month 9 update: Hit $2.8K MRR with my consulting business, finally automated the](https://reddit.com/r/EntrepreneurRideAlong/comments/1ri462f/month_9_update_hit_28k_mrr_with_my_consulting/)
-**r/EntrepreneurRideAlong** | Score: 4 | Comments: 2 | Alpha: 53/100
+**r/EntrepreneurRideAlong** | Score: 6 | Comments: 4 | Alpha: 53/100
 > Running a market research consulting business solo. Nine months in and finally feeling like I have systems that work instead of just surviving.
 
 Revenue progression:
 
 Month 1-3: $800-1,200 (inconsiste...
 
-### [I made $176 in my first month as a solo founder. Here's every channel I tried an](https://reddit.com/r/SaaS/comments/1ri0b9m/i_made_176_in_my_first_month_as_a_solo_founder/)
-**r/SaaS** | Score: 17 | Comments: 18 | Alpha: 53/100
-> I set a goal to make 1 sale by end of February. Got 4. $176 total across 2 products ($39 distribution framework + $59 Nuxt boilerplate).
-
-I'm a software engineer building on the side after my 9-5 in R...
-
-### [Built a tool for myself — and honestly, using it beats selling it for $29](https://reddit.com/r/SaaS/comments/1ri6w13/built_a_tool_for_myself_and_honestly_using_it/)
-**r/SaaS** | Score: 4 | Comments: 2 | Alpha: 53/100
-> I've been building SaaS tools for a while now, and I had a realization that changed how I think about everything.
-
-We all default to the same playbook: build something, slap a $29/month price tag on i...
-
 ### [when should you consider pivoting? (i will not promote)](https://reddit.com/r/startups/comments/1ri60bn/when_should_you_consider_pivoting_i_will_not/)
-**r/startups** | Score: 5 | Comments: 4 | Alpha: 53/100
+**r/startups** | Score: 5 | Comments: 9 | Alpha: 53/100
 > i exited my last company 3 years ago now and have been trying to get back into entrepreneurship for about a year now (although haven't locked in like i'd before) and absolutely struggling.
 
 my first 6...
 
 ### [Just signed two new MVP projects ($8.8k and $14k)](https://reddit.com/r/Entrepreneur/comments/1rh29sk/just_signed_two_new_mvp_projects_88k_and_14k/)
-**r/Entrepreneur** | Score: 29 | Comments: 25 | Alpha: 50/100
+**r/Entrepreneur** | Score: 33 | Comments: 26 | Alpha: 50/100
 > A few months ago I posted about closing my first client. Since then, things kept moving.
 
 Recently I signed two new projects:
@@ -69,13 +50,19 @@ An $8,800 web app for managing gigs and bookings
 A $14k mobile app in t...
 
 ### [I analyzed all 28,844 programs on Skimlinks. Here's what most affiliates get wro](https://reddit.com/r/juststart/comments/1r1v2h1/i_analyzed_all_28844_programs_on_skimlinks_heres/)
-**r/juststart** | Score: 6 | Comments: 7 | Alpha: 50/100
+**r/juststart** | Score: 7 | Comments: 7 | Alpha: 50/100
 > TL;DR: Two-thirds of Skimlinks programs have no click data. The median EPC is $0.14. Commission rate is the wrong thing to optimize - EPC is. Interactive report with full data in comments.
 
 I pulled e...
 
+### [Someone is willing to pay $20K for my 130K Instagram account, advise?](https://reddit.com/r/socialmedia/comments/1riab44/someone_is_willing_to_pay_20k_for_my_130k/)
+**r/socialmedia** | Score: 0 | Comments: 22 | Alpha: 50/100
+> So here’s the situation: I found this insanely rich 22  year old on Instagram, trust fund vibes, family in oil, reels of pouring champagne on his Rolex, the whole flex. 
+
+His account has like 30K foll...
+
 ### [I analyzed 6 successful SaaS launches and found the same pattern in all of them](https://reddit.com/r/indiehackers/comments/1rega48/i_analyzed_6_successful_saas_launches_and_found/)
-**r/indiehackers** | Score: 30 | Comments: 56 | Alpha: 50/100
+**r/indiehackers** | Score: 31 | Comments: 57 | Alpha: 50/100
 > Here's what every successful SaaS launch had in common:
 
 1. **They focused on ONE customer acquisition channel**
@@ -84,13 +71,13 @@ I pulled e...
 2. **They built bef...
 
 ### [I mass-messaged 200+ people on LinkedIn about my SaaS. Here's what actually happ](https://reddit.com/r/SaaS/comments/1rhwfvg/i_massmessaged_200_people_on_linkedin_about_my/)
-**r/SaaS** | Score: 28 | Comments: 51 | Alpha: 50/100
+**r/SaaS** | Score: 39 | Comments: 58 | Alpha: 50/100
 > I'm a solo founder, building a B2B SaaS. No funding, no team besides my co-founder. Based in Spain.
 
 A few weeks ago I decided to go hard on LinkedIn outreach. Cold DMs to product managers, founders, ...
 
 ### [Long-running Google Ads account suddenly stopped working. Built a new funnel. Ar](https://reddit.com/r/PPC/comments/1ri9tl5/longrunning_google_ads_account_suddenly_stopped/)
-**r/PPC** | Score: 1 | Comments: 3 | Alpha: 50/100
+**r/PPC** | Score: 1 | Comments: 11 | Alpha: 50/100
 > Hi all,
 
 Looking for some experienced perspectives here.
@@ -98,7 +85,7 @@ Looking for some experienced perspectives here.
 We’ve been running Google Ads for a health/diet digital product for about 5–6 years on the same account. Up until around July/August 2025 the ...
 
 ### [Here's how I hit my first $1K/month income](https://reddit.com/r/dropship/comments/1rg7hwp/heres_how_i_hit_my_first_1kmonth_income/)
-**r/dropship** | Score: 10 | Comments: 7 | Alpha: 50/100
+**r/dropship** | Score: 9 | Comments: 7 | Alpha: 50/100
 > For the longest time I was stuck around $50–$100 a month dropshipping random trending gadgets. They'd sell for a week then vanish, returns were high, and no one ever came back.
 
 So lesson learned, I s...
@@ -143,6 +130,8 @@ So lesson learned, I s...
 - **[TechCrunch]** [Musk bashes OpenAI in deposition, saying &#8216;nobody committed suicide because](https://techcrunch.com/2026/02/27/musk-bashes-openai-in-deposition-saying-nobody-committed-suicide-because-of-grok/)
   > In his lawsuit against OpenAI, Musk touted xAI safety compared with ChatGPT. A few months later, xAI's Grok flooded X with nonconsensual nude images.
 
+- **[TheVerge]** [A robot arm with puppy dog eyes is just one of Lenovo&#8217;s new desktop AI con](https://www.theverge.com/tech/885228/lenovo-ai-workmate-companion-work-concept-robot-arm-desktop-clock-hub)
+
 - **[TheVerge]** [Honor claims its Robot Phone will launch later this year](https://www.theverge.com/gadgets/887140/honor-robot-phone-mwc-release-date-specs)
 
 ---
@@ -170,4 +159,4 @@ So lesson learned, I s...
 - "doesn't work"
 
 ---
-*Generated by alpha_monitor.py at 2026-03-01T17:01:17.022577*
+*Generated by alpha_monitor.py at 2026-03-01T23:31:09.640587*
