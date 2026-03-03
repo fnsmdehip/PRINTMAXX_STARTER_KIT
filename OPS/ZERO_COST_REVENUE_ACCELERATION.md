@@ -1226,3 +1226,100 @@ _Insights auto-appended by playbook_enhancer.py. Review and integrate as needed.
 **Insight:** Justin Welsh $4.15M+ solopreneur revenue 2024 at 86% margins. Zero ads. LinkedIn + X -> info products.
 **Potential:** ROI: HIGHEST | Synergy: 85
 
+
+
+---
+
+## Pending Enhancement (ALPHA14302, Score: 38)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1615669683520167936
+**Added:** 2026-03-02T19:45:22-05:00
+
+New Site - Interetsing 
+DR - 13 
+Traffic - 1 Million 
+Niche - Captions, Quotes, Messages 
+Monetisation - Mediavine 
+Expected Revenue - $10,000 to $15,000
+Site Age -  9 Months 
+Top Ten Pages Traffic - 144965
+The most exciting part is
+
+
+
+---
+
+## Pending Enhancement (ALPHA14303, Score: 42)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1591305300140777472
+**Added:** 2026-03-02T19:45:22-05:00
+
+New Site 
+DR - 18 
+Traffic - 233,000
+Niche - Travel
+Monetization - Adthrive, Affiliate 
+Expected Revenue - $8,000 to $12,00
+Buyer Intent Keywords 
+Top 5 Pages Traffic - 71,179
+Total Pages - 360
+Site Age - 12 months 
+US Traffic - 85.7% , UK - 10.8%
+
+
+
+---
+
+## Pending Enhancement (ALPHA14308, Score: 36)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1768599385049305444
+**Added:** 2026-03-02T19:45:22-05:00
+
+Huge traffic from just 45 pages - Kids coloring site 
+
+Revenue - $2000 to $2500 
+
+DM me for the price of Keywords and the list in my bio with lifetime updates
+
+
+
+---
+
+## Pending Enhancement (ALPHA14476, Score: 36)
+
+**Source:** @stockMKTnewz (daily scraper) | **URL:** https://x.com/StockMKTNewz/status/2026772176666337671
+**Added:** 2026-03-02T19:46:33-05:00
+
+NVIDIA $NVDA JUST REPORTED EARNINGS
+
+EPS of $1.62 beating expectations of $1.50
+Revenue of $68.1B beating expectations of $65.9B
+
+
+
+---
+
+## Pending Enhancement (ALPHA14789, Score: 48)
+
+**Source:** r/SaaS (https://reddit.com/r/SaaS/comments/1ripntp/my_product_hunt_alternative_hit_27k_revenue_and/) | **URL:** 
+**Added:** 2026-03-02T19:47:14-05:00
+
+My Product Hunt alternative hit $2.7K revenue and 2,200 users. Here's why I think it's better.. i've been building side projects for a while and i've launched on product hunt multiple times. here's what i learned the hard way:
+
+your launch lives and dies in 24 hours. if you don't have an audienc
+
+
+
+---
+
+## Pending Enhancement (ALPHA14809, Score: 30)
+
+**Source:** r/EntrepreneurRideAlong (https://reddit.com/r/EntrepreneurRideAlong/comments/1rixly2/case_study_local_florist_4xd_valentines_revenue/) | **URL:** 
+**Added:** 2026-03-02T19:47:14-05:00
+
+Case Study: Local florist 4x'd Valentines revenue with one landing page. Doing March 8th push now - here is the blueprint.. Context: Small florist in my city did 800 EUR last Valentines Day. This year we hit 3.2k EUR with a simple change.
+
+
+
+The problem: They were taking orders via Facebook comments and phone calls. 70% of
+

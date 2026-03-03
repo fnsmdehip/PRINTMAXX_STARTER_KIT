@@ -641,3 +641,448 @@ Startup idea: A platform for commission-based workers (e.g., tech sales) to acce
 **Insight:** You don’t need a ton of money to buy a small business A lot of people think you need hundreds of thousands of dollars, an MBA, or 10 years of experience to buy a business. That wasn’t my experience at all. When I was 21, I bought my first business for **$4,000**. It was a small B2C SaaS that was already making around **$500/month**. Nothing crazy as such, but it was real revenue. And that I exited at 6 figures. Since then, I’ve bought **5 more businesses**, all for **under $10k**, and every
 **Potential:** ROI: https://reddit.com/r/EntrepreneurRideAlong/comments/1quycoe/you_dont_need_a_ton_of_money_to_buy_a_small/ | Synergy: 125
 
+
+
+---
+
+## Pending Enhancement (ALPHA14221, Score: 24)
+
+**Source:** @gregisenberg (daily scraper) | **URL:** https://x.com/gregisenberg/status/1853066574309011776
+**Added:** 2026-03-02T19:45:22-05:00
+
+this youtuber with 9m subs saw his wife struggle to find a quality wheelchair — $5k price tags, long waits, made in china
+
+so he built his own factory in the USA
+
+now, he sells these $1,000 custom wheelchairs, shipped in weeks
+
+we need more creator-led businesses like this.
+
+
+
+---
+
+## Pending Enhancement (ALPHA14250, Score: 36)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1986467721475764684
+**Added:** 2026-03-02T19:45:22-05:00
+
+most genius digital product arbitrage i've seen this year:
+
+guy found guru doing $50k/month with faceless accounts
+
+everyone told him he needed his own unique method, original frameworks, proprietary systems
+he ignored all of it
+
+just: copied their multi-account structure, hired same VA model, used their telegram funnel
+generated $31k first month
+
+no innovation. no original ideas. no reinventing w
+
+
+
+---
+
+## Pending Enhancement (ALPHA14288, Score: 24)
+
+**Source:** @wannercashcow (daily scraper) | **URL:** https://x.com/wannercashcow/status/1935328699534164416
+**Added:** 2026-03-02T19:45:22-05:00
+
+Google's VEO 3 is the most powerful AI video tool out right now.
+
+It costs $250/month, but I use it for FREE.
+
+And I turn that into faceless videos that ACTUALLY make money 
+
+
+
+---
+
+## Pending Enhancement (ALPHA14299, Score: 30)
+
+**Source:** @purpdevvv (daily scraper) | **URL:** https://x.com/purpdevvv/status/1985665775697281476
+**Added:** 2026-03-02T19:45:22-05:00
+
+my deploying hit rate is ~30%. 10 deploys, 3 do well
+
+that’s why i’ve launched over 8k tokens to negate those odds
+
+failure is more expected than success, but the fails cost 0
+
+work harder
+
+
+
+---
+
+## Pending Enhancement (ALPHA14300, Score: 24)
+
+**Source:** @purpdevvv (daily scraper) | **URL:** https://x.com/purpdevvv/status/1985319079218188616
+**Added:** 2026-03-02T19:45:22-05:00
+
+i've been spam deploying for 15 months and stupidly paid 
+
+snipers track and buy my deploys due to previous performance, if this scares you, please do not buy my coins
+
+we don't need ur $20 and fud in the comms
+
+see you at the next $1m runner
+
+
+
+---
+
+## Pending Enhancement (ALPHA14317, Score: 30)
+
+**Source:** @iamgdsa (daily scraper) | **URL:** https://x.com/iamgdsa/status/1831327864802676802
+**Added:** 2026-03-02T19:45:22-05:00
+
+Cal AI is now famously doing $400K+ MRR.
+
+They’re running a mix channel acquisition strategy (ads + influencers + other).
+
+I went to check their influencer marketing strategies.
+
+They’re running targeted influencer marketing with crafted videos aiming for ≈$5 CPM:
+
+
+
+---
+
+## Pending Enhancement (ALPHA14318, Score: 30)
+
+**Source:** @jasoncfox (daily scraper) | **URL:** https://x.com/jasoncfox/status/1894017952132854068
+**Added:** 2026-03-02T19:45:28-05:00
+
+I was on a call with a guy doing $600k/mo. 
+
+Almost every sentence started like this
+
+'I was reading this book'
+'I was listening to this podcast'
+'I was on a call with my mentor'
+
+Then he would explain how he was implementing what he learned
+
+And That's why he's at $600k/mo.
+
+
+
+---
+
+## Pending Enhancement (ALPHA14330, Score: 24)
+
+**Source:** @codyschneiderxx (daily scraper) | **URL:** https://x.com/codyschneiderxx/status/1945166479667691616
+**Added:** 2026-03-02T19:45:28-05:00
+
+please i beg you, dont make an automation agency 
+
+make a productized service that has defined recurring deliverables that uses automations to do 90% of the work and can run at a 80% margin
+
+
+
+---
+
+## Pending Enhancement (ALPHA14341, Score: 30)
+
+**Source:** @Jonnyvandel (daily scraper) | **URL:** https://x.com/Jonnyvandel/status/1954210569826767205
+**Added:** 2026-03-02T19:45:28-05:00
+
+AI found the product.
+
+AI made the ads.
+
+AI posted 300+ vids/day
+
+AI makes $200k/mo.
+
+(ai slop strat) 
+
+like & comment “MASS” and i’ll send you the full strategy.
+
+
+
+---
+
+## Pending Enhancement (ALPHA14342, Score: 30)
+
+**Source:** @Jonnyvandel (daily scraper) | **URL:** https://x.com/Jonnyvandel/status/1947027782053294538
+**Added:** 2026-03-02T19:45:28-05:00
+
+AI found the product.
+
+AI made the ads.
+
+AI posted 300+ vids/day.
+
+Makes $200k/mo.
+
+(this feels illegal)
+
+like & comment “Mass” and i’ll send you the full workflow.
+
+
+
+---
+
+## Pending Enhancement (ALPHA14350, Score: 36)
+
+**Source:** @yegormethod (daily scraper) | **URL:** https://x.com/yegormethod/status/1971968128092410150
+**Added:** 2026-03-02T19:45:28-05:00
+
+met this guy in dubai who helps people "restructure wealth internationally"
+
+drives a $3M pagani
+has 7 passports
+definitely not laundering money ()
+
+his system for making money untouchable:
+
+(posting this from a VPN)
+
+the "Dubai Stack":
+- dubai company (0% tax)
+- estonian holding (blockchain friendly)
+- singapore trading (banking hub)
+- swiss trust (privacy laws)
+- cayman foundation (asset protect
+
+
+
+---
+
+## Pending Enhancement (ALPHA14394, Score: 36)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954632271631401249
+**Added:** 2026-03-02T19:45:28-05:00
+
+How to set up Claude code in 2 min (for complete beginners)
+
+You need 3 tools to change your business.
+
+1) Claude code builds
+2) GitHub stores
+3) Vercel hosts
+
+Costs $20.
+
+What a time!
+
+Thank you 
+@boringmarketer
+
+
+
+---
+
+## Pending Enhancement (ALPHA14398, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-02T19:45:28-05:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA14404, Score: 24)
+
+**Source:** @TheShamdoo (daily scraper) | **URL:** https://x.com/TheShamdoo/status/1973576908081336679
+**Added:** 2026-03-02T19:45:28-05:00
+
+You guys seriously don’t get how cooked the economy is 
+
+Trying to go on a trip with like 15 college friends - it’s about $200 per person for the weekend
+
+Only THREE of them can afford it. THREE. The youth is living off their parents and it’s a house of cards waiting to topple
+
+
+
+---
+
+## Pending Enhancement (ALPHA14415, Score: 24)
+
+**Source:** @unusual_whales (daily scraper) | **URL:** https://x.com/unusual_whales/status/1600140756672401408
+**Added:** 2026-03-02T19:45:29-05:00
+
+Last week, the IRS has stated that Americans must report payments on Venmo, PayPal over $600.
+
+Last week, the Defense Department failed its fifth audit, unable to account  for more than 61% its assets, worth about  $1.8 trillion.
+
+
+
+---
+
+## Pending Enhancement (ALPHA14424, Score: 42)
+
+**Source:** @DeItaone (daily scraper) | **URL:** https://x.com/DeItaone/status/1987503995661746428
+**Added:** 2026-03-02T19:46:33-05:00
+
+TRUMP ANNOUNCES $2,000 TARIFF DIVIDEND FOR AMERICANS
+
+President Donald Trump announced a $2,000 payment to most Americans, funded by U.S. tariff revenues. In a Truth Social post, he said the U.S. is collecting “trillions of dollars” in tariffs and will use the money to reduce national debt and reward citizens—excluding high-income earners. Trump called tariff critics “fools” and claimed the U.S. i
+
+
+
+---
+
+## Pending Enhancement (ALPHA14434, Score: 32)
+
+**Source:** @lookonchain (daily scraper) | **URL:** https://x.com/lookonchain/status/1851672470924988755
+**Added:** 2026-03-02T19:46:33-05:00
+
+MrBeast (
+@MrBeast
+), an influencer with 31.2M followers, has engaged in insider trading, misleading investors, and using his influence to pump tokens, only to dump them later.
+
+He has made over $23M in profits from various crypto projects:
+
+$11.45M from $SUPER
+$4.65M from $ERN
+$1.72M from $PMON
+$1.31M from $STAK
+$1M from $AIOZ
+And more...
+
+https://
+loock.io/blog/mrbeast-i
+nvestigation
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA14436, Score: 24)
+
+**Source:** @lookonchain (daily scraper) | **URL:** https://x.com/lookonchain/status/1941126810961653780
+**Added:** 2026-03-02T19:46:33-05:00
+
+A Bitcoin OG holding at least 80,009 $BTC($8.69B) woke up after 14+ years of dormancy and transferred out 40,000 $BTC($4.35B) today!
+
+This OG controls about 8 wallets, 2 of which received 20,000 $BTC($15,600 at the time, $2.18B now) on April 2, 2011, when the price of $BTC was 0.78.
+
+The other 6 wallets received 60,009 $BTC($202K at the time, $6.52B now) on May 4, 2011, when the price of $BTC was 
+
+
+
+---
+
+## Pending Enhancement (ALPHA14448, Score: 26)
+
+**Source:** @whale_alert (daily scraper) | **URL:** https://x.com/whale_alert/status/1397906624656908294
+**Added:** 2026-03-02T19:46:33-05:00
+
+   2021 is set to be a record shattering year for scammers! We have tracked $153 million USD in stolen #BTC so far and need your help to make blockchain safer for everyone. Report scams and cryptocurrency related crimes on our anti-scam website:
+
+
+
+---
+
+## Pending Enhancement (ALPHA14464, Score: 30)
+
+**Source:** @GlassNode (daily scraper) | **URL:** https://x.com/glassnode/status/2026685216627011585
+**Added:** 2026-03-02T19:46:33-05:00
+
+Waiting for Conviction
+
+$BTC is range-bound between key valuation anchors, with $60k–$69k absorbing sell pressure. Profitability and breadth are fading, spot and ETF flows stay negative, and leverage has reset.
+
+Read the full Week On-Chain 
+
+https://
+glassno.de/4kXOnIb
+
+
+
+---
+
+## Pending Enhancement (ALPHA14482, Score: 26)
+
+**Source:** @OptionsAction (daily scraper) | **URL:** https://x.com/OptionsAction/status/1235339223814852608
+**Added:** 2026-03-02T19:46:33-05:00
+
+One trader just put down a $2 million bet that the pain for oil is not over. 
+@Michael_Khouw
+ has the details.
+
+
+
+---
+
+## Pending Enhancement (ALPHA14518, Score: 24)
+
+**Source:** @nicbstme (daily scraper) | **URL:** https://x.com/nicbstme/status/1902942035553685914
+**Added:** 2026-03-02T19:46:33-05:00
+
+I love it! I wish the underlying data was more accurate. I asked 
+@fintool
+ to identify data discrepancies and there are a lot: 
+- $NOW number of employees is 26,293 not 22,000
+- $NOW FY24 revenue is $10.9B not $8.5B
+- $NOW Subscription rev Q4 2024 is $2.8B not $2.96B
+- etc etc
+
+
+
+---
+
+## Pending Enhancement (ALPHA14529, Score: 36)
+
+**Source:** @saimagnate (daily scraper) | **URL:** https://x.com/saimagnate/status/1917814434753568786
+**Added:** 2026-03-02T19:47:13-05:00
+
+Everyone’s selling courses on how to start a faceless YouTube channel but 90% of them don’t tell you what actual tools people are using to run banger channels with a $0 budget in 2025.
+
+Here’s the full stack. Learn it. Use it. Print money.
+
+
+
+
+---
+
+## Pending Enhancement (ALPHA14533, Score: 32)
+
+**Source:** @zach_yadegari (daily scraper) | **URL:** https://x.com/zach_yadegari/status/1831539643549995317
+**Added:** 2026-03-02T19:47:13-05:00
+
+Cal AI just passed $1 million in revenue.
+
+Today was my first day of high school senior year.
+
+Was this destiny? 
+Did I will this into existence? 
+Luck?
+
+I don’t know.
+
+
+
+---
+
+## Pending Enhancement (ALPHA14769, Score: 36)
+
+**Source:** r/EntrepreneurRideAlong (https://reddit.com/r/EntrepreneurRideAlong/comments/1ri462f/month_9_update_hit_28k_mrr_with_my_consulting/) | **URL:** 
+**Added:** 2026-03-02T19:47:14-05:00
+
+Month 9 update: Hit $2.8K MRR with my consulting business, finally automated the chaos. Running a market research consulting business solo. Nine months in and finally feeling like I have systems that work instead of just surviving.
+
+Revenue progression:
+
+Month 1-3: $800-1,200 (inconsiste
+

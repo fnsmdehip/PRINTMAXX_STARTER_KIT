@@ -942,3 +942,185 @@ Follow these 7 simple steps:
 **Insight:** the top 2 TikTok shop affiliates made $810k in 35 days, COMMISSION orangeshoppin & cakedfinds i built an agent to clone their videos with AI and pump out 300+ per day should not give this away for free, but f*k it Like, rt & comment “CLONE” i’ll send you the template i built
 **Potential:** ROI: https://x.com/Jonnyvandel/status/2014436022621282486 | Synergy: 385
 
+
+
+---
+
+## Pending Enhancement (ALPHA14232, Score: 46)
+
+**Source:** @dansugcmodels (daily scraper) | **URL:** https://x.com/dansugcmodels/status/1986470873096986958
+**Added:** 2026-03-02T19:45:22-05:00
+
+I analyzed 10,000 Jenni AI tiktok viral videos and found top 5 emotions that generate 80% of the views:
+
+> confused
+> frustrated
+> struggling
+> “whaaaat?”
+> tired in bed
+
+They’re easy to capture: 5–7 seconds, a clear hook, filmed on your phone, no script needed.
+
+The real bottleneck is finding reliable UGC creators at scale. its costly, inconsistent, and slow to deliver.
+
+I’ve bundled 100 human UG
+
+
+
+---
+
+## Pending Enhancement (ALPHA14252, Score: 30)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1984628980335480979
+**Added:** 2026-03-02T19:45:22-05:00
+
+most evil info product i've seen this year:
+
+a “21-day confidence bootcamp to make her chase you”
+
+tiktok ads targeting men with 0 dating experience
+
+landing page opens with:
+
+“she’s not ignoring you because she’s busy - she just doesn’t respect you.”
+
+“you can fix that in 3 weeks.”
+
+they scroll in silence questioning their whole existence
+
+offer: $67 bootcamp + $49/mo “alpha group chat”
+
+every li
+
+
+
+---
+
+## Pending Enhancement (ALPHA14254, Score: 54)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1989356178992664976
+**Added:** 2026-03-02T19:45:22-05:00
+
+most genius b2b info product hack i've seen this year: 
+
+guy was stuck at $2k/month selling $97 community access 
+
+everyone told him he needed more content, bigger audience, better marketing, viral growth 
+
+he ignored all of it 
+
+just: repositioned same product as infrastructure, not education, changed from "learn" to "install working infrastructure", raised price to $1997 
+
+multiple 5-figs first 
+
+
+
+---
+
+## Pending Enhancement (ALPHA14305, Score: 30)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1664517988274561025
+**Added:** 2026-03-02T19:45:22-05:00
+
+This Simple DR 6 site earned more than $4000 in 7 months with just 70 articles.
+
+Niche - Food - Cake
+Monetization - Adthrive
+What They Did - Listed cake prices from several food outlets and Left it and dint update content for Years 
+
+Some Interesting Facts
+
+
+
+---
+
+## Pending Enhancement (ALPHA14309, Score: 36)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1722219052444356815
+**Added:** 2026-03-02T19:45:22-05:00
+
+ This is Big 
+
+ This single page website earns $5000 to $7000 a month from affiliates 
+
+How about creating a  website similar to the look of Google Sheets as a homepage and listing 100s of product info and linking to affiliates?
+
+It is as simple as this.
+Niche - Computer Parts
+Monetisation  - Amazon Affiliates
+Traffic - 86.5k (Similar Web Data)
+Gets traffic from forums, social media etc
+No Blog
+No
+
+
+
+---
+
+## Pending Enhancement (ALPHA14312, Score: 44)
+
+**Source:** @iamgdsa (daily scraper) | **URL:** https://x.com/iamgdsa/status/1907068912308719644
+**Added:** 2026-03-02T19:45:22-05:00
+
+POV Camera does $150k mrr.
+
+11 TikTok accounts. 67M views. 3 hooks.
+
+Repeating the exact same format scheme (full AI avatars).
+
+Never seen anything like this:
+
+
+
+---
+
+## Pending Enhancement (ALPHA14321, Score: 24)
+
+**Source:** @jasoncfox (daily scraper) | **URL:** https://x.com/jasoncfox/status/1975175468757197156
+**Added:** 2026-03-02T19:45:28-05:00
+
+My first 5 clients came from the simplest DM
+
+My first $500k came from a simple DM and content
+
+My first $1m came from a simple DM, Content and Sales process
+
+Nothing complicated and nothing over the top
+
+I just filmed a training breaking down 7 of my best DMs that worked through all of these stages
+
+If you want it drop 'DM' below and I'll shoot it over (Must be following)
+
+
+
+---
+
+## Pending Enhancement (ALPHA14352, Score: 24)
+
+**Source:** @yegormethod (daily scraper) | **URL:** https://x.com/yegormethod/status/1965430067208544467
+**Added:** 2026-03-02T19:45:28-05:00
+
+There’s a guy in your city who woke up at 4am, hit the gym for two hours, and will make $30,000 before you finish your first cup of coffee.
+
+You've never met him. You've never seen his posts.
+He doesn't have a "personal brand."
+
+He's not tweeting "rise and grind" from his iPhone.
+He's on a burner phone closing a deal that would change your family's life.
+
+He's not making a vision board.
+He's revie
+
+
+
+---
+
+## Pending Enhancement (ALPHA14770, Score: 24)
+
+**Source:** r/SaaS (https://reddit.com/r/SaaS/comments/1ri0b9m/i_made_176_in_my_first_month_as_a_solo_founder/) | **URL:** 
+**Added:** 2026-03-02T19:47:14-05:00
+
+I made $176 in my first month as a solo founder. Here's every channel I tried and what actually converted.. I set a goal to make 1 sale by end of February. Got 4. $176 total across 2 products ($39 distribution framework + $59 Nuxt boilerplate).
+
+I'm a software engineer building on the side after my 9-5 in R
+
