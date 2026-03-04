@@ -125,6 +125,10 @@ TEMPLATES = {
             "{tactic_short}. been using {tool} for a week. already saved {number} hours.",
             "the tool nobody talks about: {tool}. {tactic_short}. zero excuses left.",
             "if you're not using {tool} you're leaving money on the table. {tactic_short}.",
+            "{tactic_short}. it's borderline illegal how much this saves you.",
+            "{tactic_short}. stop overthinking it, just set it up.",
+            "{tactic_short}. been testing this for a week. already saved {number} hours.",
+            "{tactic_short}. zero excuses left.",
         ],
         "APP_FACTORY": [
             "analyzed {number} apps doing $100k+/mo. {tactic_short}. the pattern is obvious.",
@@ -220,7 +224,11 @@ TEMPLATES = {
 # Alpha reader
 # ---------------------------------------------------------------------------
 def read_alpha_entries(batch_size: int = 20) -> list[dict]:
-    """Read APPROVED or PENDING_REVIEW entries from ALPHA_STAGING.csv."""
+    """Read APPROVED or PENDING_REVIEW entries from ALPHA_STAGING.csv.
+
+    Sorts by priority/roi_potential so highest-signal entries are drafted first,
+    regardless of their position in the CSV.
+    """
     entries = []
     csv_path = safe_path(ALPHA_CSV)
     if not csv_path.exists():
@@ -233,9 +241,18 @@ def read_alpha_entries(batch_size: int = 20) -> list[dict]:
             status = (row.get("status") or "").strip().upper()
             if status in ("APPROVED", "PENDING_REVIEW"):
                 entries.append(row)
-            if len(entries) >= batch_size:
-                break
-    return entries
+
+    # Sort by signal quality: HIGHEST > HIGH > MEDIUM > LOW, then by priority
+    roi_order = {"HIGHEST": 4, "HIGH": 3, "MEDIUM": 2, "LOW": 1}
+    priority_order = {"P0": 4, "P1": 3, "P2": 2, "P3": 1}
+    entries.sort(
+        key=lambda e: (
+            roi_order.get((e.get("roi_potential") or "").upper(), 0),
+            priority_order.get((e.get("priority") or "").upper(), 0),
+        ),
+        reverse=True,
+    )
+    return entries[:batch_size]
 
 
 # ---------------------------------------------------------------------------
@@ -258,9 +275,11 @@ def extract_tactic_short(entry: dict) -> str:
                     val = val[:cut + 1]
                 else:
                     val = val[:177] + "..."
-            # Lowercase first char for casual voice
+            # Lowercase first char for casual voice — but preserve acronyms
             if val and val[0].isupper():
-                val = val[0].lower() + val[1:]
+                first_word = val.split()[0] if val.split() else ""
+                if not first_word.isupper() or len(first_word) <= 1:
+                    val = val[0].lower() + val[1:]
             return val
     # Fallback
     return entry.get("alpha_id", "alpha")
@@ -297,15 +316,38 @@ def extract_tool(entry: dict) -> str:
         entry.get("source", ""),
         entry.get("reviewer_notes", ""),
     ])
-    # Look for tool patterns (word.io, word.ai, word.com, etc.)
+    # Blocklist: generic words that aren't tool names
+    _SKIP = {
+        "APPROVED", "PENDING", "HIGH", "HIGHEST", "TRUE", "FALSE", "ALPHA",
+        "The", "This", "That", "These", "What", "How", "Why", "When", "Where",
+        "New", "Use", "Using", "Build", "Just", "Get", "Got", "Has", "Have",
+        "Not", "But", "And", "For", "From", "With", "Into", "All",
+        "Cold", "Free", "Best", "Top", "Most", "Real", "Full", "Big",
+        "Revenue", "Growth", "Content", "Email", "Social", "Market",
+        "No", "AI", "SEO", "API", "App", "Web", "Ads",
+        "REVIEW", "PENDING_REVIEW", "MEDIUM", "LOW", "LOWEST",
+        "GitHub", "Reddit", "Twitter", "LinkedIn",
+        "Autonomous", "Automated", "Advanced", "Custom", "Simple",
+        "Local", "Global", "Open", "Source", "Code", "Data",
+        "Server", "Client", "Cloud", "Mobile", "Desktop",
+        "Every", "Some", "Many", "Each", "Other", "More",
+        "First", "Last", "Next", "Same", "Such", "Still",
+    }
+
+    # 1. Look for domain-style tool names (word.io, word.ai, etc.)
     m = re.search(r'(\w+\.(?:io|ai|com|dev|app|co|sh|so))', text, re.IGNORECASE)
     if m:
         return m.group(1)
-    # Look for capitalized tool names
-    m = re.search(r'\b([A-Z][a-zA-Z]+(?:\s[A-Z][a-zA-Z]+)?)\b', text)
-    if m and m.group(1) not in ("APPROVED", "PENDING", "HIGH", "HIGHEST", "TRUE", "FALSE", "ALPHA", "The"):
+
+    # 2. Look for known tool name patterns (n8n, GPT-4, Claude, etc.)
+    m = re.search(r'\b(n8n|GPT-\d|Claude|Cursor|Vercel|Supabase|Stripe|Notion|Airtable|Zapier|Make|Buffer|Beehiiv|Substack|Gumroad|Playwright|Puppeteer|Selenium|RevenueCat|Capacitor|MCP|LLMs?)\b', text, re.IGNORECASE)
+    if m:
         return m.group(1)
-    return entry.get("source", "this tool")
+
+    # 3. No clear tool found — return empty string to signal "no tool"
+    #    (Capitalized-word regex produces too many false positives like
+    #     "Applicable", "Autonomous", etc. from reviewer notes)
+    return ""
 
 
 # ---------------------------------------------------------------------------
@@ -344,9 +386,16 @@ def generate_tweets_for_entry(entry: dict, target_account: str | None = None) ->
         if not template_list:
             continue
 
+        # Filter out tool-dependent templates when no tool was extracted
+        usable_templates = template_list
+        if not tool:
+            usable_templates = [t for t in template_list if "{tool}" not in t]
+            if not usable_templates:
+                usable_templates = template_list  # fallback: use all, tool="" will just leave gap
+
         # Pick 3-5 random templates
-        count = min(random.randint(3, 5), len(template_list))
-        chosen = random.sample(template_list, count)
+        count = min(random.randint(3, 5), len(usable_templates))
+        chosen = random.sample(usable_templates, count)
 
         for template in chosen:
             tweet_text = template.format(

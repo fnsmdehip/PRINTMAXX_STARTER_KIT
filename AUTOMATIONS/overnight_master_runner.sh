@@ -86,7 +86,7 @@ log ""
 log ">>> PHASE 1: DAILY RESEARCH SCRAPERS"
 
 run_script "daily_nocost_rbi_scanner" \
-    "$PYTHON AUTOMATIONS/daily_nocost_rbi_scanner.py --scan --next-actions" 120 || true
+    "$PYTHON AUTOMATIONS/daily_nocost_rbi_scanner.py --scan" 120 || true
 
 run_script "platform_meta_monitor" \
     "$PYTHON AUTOMATIONS/platform_meta_monitor.py" 120 || true
@@ -95,7 +95,7 @@ run_script "niche_meta_detector" \
     "$PYTHON AUTOMATIONS/niche_meta_detector.py" 120 || true
 
 run_script "viral_content_scanner" \
-    "$PYTHON AUTOMATIONS/viral_content_scanner.py --scan --limit 20" 120 || true
+    "$PYTHON AUTOMATIONS/viral_content_scanner.py --scan --limit 20" 300 || true
 
 # PHASE 2: Lead Generation Scrapers
 log ""

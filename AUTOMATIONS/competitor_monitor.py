@@ -33,8 +33,15 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
+import ssl
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
+
+try:
+    import certifi
+    SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+except ImportError:
+    SSL_CONTEXT = ssl.create_default_context()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 HISTORY_FILE = PROJECT_ROOT / "AUTOMATIONS" / "logs" / "competitor_history.json"
@@ -128,7 +135,7 @@ def fetch_app_store(search_term, country="us", limit=3):
     url = f"https://itunes.apple.com/search?term={encoded}&entity=software&country={country}&limit={limit}"
     req = Request(url, headers={"User-Agent": "PrintMaxx-CompetitorMonitor/1.0"})
     try:
-        with urlopen(req, timeout=15) as resp:
+        with urlopen(req, timeout=15, context=SSL_CONTEXT) as resp:
             data = json.loads(resp.read().decode("utf-8"))
             return data.get("results", [])
     except (URLError, HTTPError, json.JSONDecodeError) as e:

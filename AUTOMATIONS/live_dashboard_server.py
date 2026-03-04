@@ -210,8 +210,8 @@ def collect_alpha_funnel():
         c = (r.get("category") or "UNKNOWN").strip()
         status_counts[s] += 1
         cat_counts[c] += 1
-        created = r.get("created_at", "")
-        if today_str in created:
+        created = r.get("created_at") or ""
+        if created and today_str in created:
             today_count += 1
 
     return {
