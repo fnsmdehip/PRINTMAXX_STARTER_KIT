@@ -595,6 +595,38 @@ def check_14_disk_space() -> dict:
         return _result("14. Disk Space", "RED", f"Check failed: {e}")
 
 
+def check_15_new_pipelines() -> dict:
+    """New pipeline freshness: content_trend, app_clone, tweet_drafter, quote_scanner logs."""
+    log_map = {
+        "content_trends": LOGS / "content_trends.log",
+        "app_clone":      LOGS / "app_clone.log",
+        "tweet_drafter":  LOGS / "tweet_drafter.log",
+        "quote_scanner":  LOGS / "quote_scanner.log",
+    }
+    ages = {}
+    worst = 0.0
+    for name, path in log_map.items():
+        a = _file_age_h(path)
+        ages[name] = round(a, 1) if a != float("inf") else None
+        if a > worst:
+            worst = a
+
+    if worst == float("inf"):
+        sev = "RED"
+        detail = "Some new pipeline logs missing"
+    elif worst > RED_H:
+        sev = "RED"
+        detail = f"New pipelines stale: worst {_fmt_age(worst)}"
+    elif worst > AMBER_H:
+        sev = "AMBER"
+        detail = f"New pipelines aging: worst {_fmt_age(worst)}"
+    else:
+        sev = "GREEN"
+        detail = f"New pipelines healthy: worst {_fmt_age(worst)}"
+
+    return _result("15. New Pipelines", sev, detail, file_ages_h=ages)
+
+
 # ---------------------------------------------------------------------------
 # Result builder
 # ---------------------------------------------------------------------------
@@ -629,6 +661,7 @@ ALL_CHECKS = [
     check_12_daily_logs,
     check_13_running_processes,
     check_14_disk_space,
+    check_15_new_pipelines,
 ]
 
 

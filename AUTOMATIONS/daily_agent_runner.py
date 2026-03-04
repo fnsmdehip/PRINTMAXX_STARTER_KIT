@@ -175,6 +175,22 @@ def print_status():
     recent = get_recent_files(24)
     priorities = build_priorities()
 
+    # Pipeline stats
+    content_queue = BASE / "CONTENT" / "social" / "CONTENT_QUEUE.csv"
+    queue_count = count_lines(content_queue) - 1 if content_queue.exists() else 0
+
+    # Agent count
+    agents_dir = BASE / ".claude" / "agents"
+    agent_count = len(list(agents_dir.glob("*.md"))) if agents_dir.exists() else 0
+
+    # Cron job count
+    try:
+        import subprocess
+        result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=5)
+        cron_active = sum(1 for line in result.stdout.splitlines() if line.strip() and not line.strip().startswith("#") and not "=" in line.split()[0] if line.strip())
+    except Exception:
+        cron_active = 0
+
     print(f"""
 {'='*60}
   PRINTMAXX DAILY STATUS — {now.strftime('%Y-%m-%d %H:%M')}
@@ -182,7 +198,8 @@ def print_status():
 
 REVENUE: ${revenue:.2f} total (target: $1K/mo)
 ACCOUNTS: {accts['created']}/{accts['total']} active {'⚠ BLOCKED' if accts['created'] < 3 else '✓'}
-RAMADAN: {(datetime(2026, 2, 28) - now).days} days away (app built, needs deploy)
+CONTENT QUEUE: {queue_count} drafts ready (run: content_queue.py --next 10)
+CRON JOBS: {cron_active} active | AGENTS: {agent_count} specialized
 FILES MODIFIED (24h): {len(recent)}
 
 {'─'*60}

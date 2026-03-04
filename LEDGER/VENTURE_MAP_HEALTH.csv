@@ -382,3 +382,15 @@ timestamp,status,reason,max_age_hours,critical_age_hours,last_run_at,last_ok_at,
 2026-03-02 19:30:25,OK,Last successful venture-map run is fresh (3.29h),12.0,24.0,2026-03-02 16:12:54,2026-03-02 16:12:54,3.292,"{""OK"": 7}",7
 2026-03-02 20:02:17,OK,Last successful venture-map run is fresh (3.82h),12.0,24.0,2026-03-02 16:12:54,2026-03-02 16:12:54,3.823,"{""OK"": 7}",7
 2026-03-02 20:30:26,OK,Last successful venture-map run is fresh (4.29h),12.0,24.0,2026-03-02 16:12:54,2026-03-02 16:12:54,4.292,"{""OK"": 7}",7
+2026-03-02 21:00:33,OK,Last successful venture-map run is fresh (4.79h),12.0,24.0,2026-03-02 16:12:54,2026-03-02 16:12:54,4.794,"{""OK"": 7}",7
+2026-03-02 21:30:24,OK,Last successful venture-map run is fresh (5.29h),12.0,24.0,2026-03-02 16:12:54,2026-03-02 16:12:54,5.292,"{""OK"": 7}",7
+2026-03-02 22:00:25,OK,Last successful venture-map run is fresh (5.79h),12.0,24.0,2026-03-02 16:12:54,2026-03-02 16:12:54,5.792,"{""OK"": 7}",7
+2026-03-02 22:33:28,OK,Last successful venture-map run is fresh (0.00h),12.0,24.0,2026-03-02 22:33:28,2026-03-02 22:33:28,0.0,"{""OK"": 5}",5
+2026-03-03 10:04:38,OK,Last successful venture-map run is fresh (0.00h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,0.0,"{""OK"": 6}",6
+2026-03-03 10:32:02,OK,Last successful venture-map run is fresh (0.46h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,0.457,"{""OK"": 6}",6
+2026-03-03 11:00:51,OK,Last successful venture-map run is fresh (0.94h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,0.937,"{""OK"": 6}",6
+2026-03-03 11:30:36,OK,Last successful venture-map run is fresh (1.43h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,1.433,"{""OK"": 6}",6
+2026-03-03 12:00:30,OK,Last successful venture-map run is fresh (1.93h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,1.931,"{""OK"": 6}",6
+2026-03-03 12:30:39,OK,Last successful venture-map run is fresh (2.43h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,2.434,"{""OK"": 6}",6
+2026-03-03 14:00:55,OK,Last successful venture-map run is fresh (3.94h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,3.938,"{""OK"": 6}",6
+2026-03-03 14:30:25,OK,Last successful venture-map run is fresh (4.43h),12.0,24.0,2026-03-03 10:04:38,2026-03-03 10:04:38,4.43,"{""OK"": 6}",6
