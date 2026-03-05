@@ -1086,3 +1086,15 @@ Revenue progression:
 
 Month 1-3: $800-1,200 (inconsiste
 
+### Alpha Insight: ALPHA1471 — 2026-03-05
+**Source:** 2026-02-13
+**Category:** TOOL_ALPHA
+**Insight:** I bought my first business at 21 for $4k A lot of people think you need hundreds of thousands of dollars, an MBA, or 10 years of experience to buy a business. That wasn’t my experience at all. When I was 21, I bought my first business for **$4,000**. It was a small B2C SaaS that was already making around **$500/month**. Nothing crazy as such, but it was real revenue. And that I exited at 6 figures. Since then, I’ve bought **5 more businesses**, all for **under $10k**, and every one of them w
+**Potential:** ROI: https://reddit.com/r/Entrepreneur/comments/1quyaax/i_bought_my_first_business_at_21_for_4k/ | Synergy: 242
+
+### Alpha Insight: ALPHA1499 — 2026-03-05
+**Source:** 2026-02-13
+**Category:** TOOL_ALPHA
+**Insight:** 53 paying customers, $4,150 MRR, and a cease-and-desist. AMA. Quick background: I left my PM role at a Series B about 11 months ago to build a SaaS that automates compliance reminders for dental offices. Small TAM — around 4,200 practices in the US. 6,800 if you count veterinary, which I've started doing in my projections. Real pain though. I watched our office manager spend 40 minutes a week on this. Built the MVP in 3 weeks (Next.js, Supabase, Stripe, Vercel). Whole thing costs me $8.11/month
+**Potential:** ROI: https://reddit.com/r/SaaS/comments/1qzhy0n/53_paying_customers_4150_mrr_and_a_ceaseanddesist/ | Synergy: 297
+

@@ -11,7 +11,9 @@ The missing execution layer. This script ACTUALLY CREATES output:
 
 Usage:
     python3 AUTOMATIONS/autonomous_factory.py --full           # Run entire factory
-    python3 AUTOMATIONS/autonomous_factory.py --assets         # Generate images via Gemini
+    python3 AUTOMATIONS/autonomous_factory.py --assets         # Generate images via Gemini API (falls back to browser)
+    python3 AUTOMATIONS/autonomous_factory.py --browser-assets # Generate via Chrome/ImageFX (no API needed, free)
+    python3 AUTOMATIONS/autonomous_factory.py --collect-assets # Collect browser-downloaded images into asset dirs
     python3 AUTOMATIONS/autonomous_factory.py --deploy         # Deploy apps to surge.sh
     python3 AUTOMATIONS/autonomous_factory.py --listings       # Generate ecom listings
     python3 AUTOMATIONS/autonomous_factory.py --content        # Produce content from pipeline
@@ -100,6 +102,14 @@ def get_gemini_client():
                     api_key = line.split("=", 1)[1].strip().strip('"').strip("'")
                     break
     if not api_key:
+        # Also check project root .env
+        root_env = BASE / ".env"
+        if root_env.exists():
+            for line in root_env.read_text().splitlines():
+                if line.startswith("GEMINI_API_KEY="):
+                    api_key = line.split("=", 1)[1].strip().strip('"').strip("'")
+                    break
+    if not api_key:
         log("WARNING: No GEMINI_API_KEY found. Asset generation will be skipped.")
         log("  To enable: Get free key at https://ai.google.dev then add to SECRETS/.env")
         log("  Format: GEMINI_API_KEY=your_key_here")
@@ -161,32 +171,189 @@ def load_asset_prompts():
     return prompts
 
 
-def generate_assets(client, max_images=10):
-    """Generate app assets using Gemini API."""
-    if not client:
-        log("SKIP: No Gemini client available for asset generation")
-        return {"generated": 0, "skipped": "no_api_key"}
+def generate_assets_browser(max_images=10):
+    """Generate app assets via Chrome browser (ImageFX). No API key needed.
 
-    from google import genai
-
+    Opens Chrome tabs to ImageFX with prompts ready. User generates images
+    in browser, downloads land in ~/Downloads, then we move them to asset dirs.
+    """
     prompts = load_asset_prompts()
     if not prompts:
         log("SKIP: No asset prompts loaded")
         return {"generated": 0, "skipped": "no_prompts"}
 
+    # Collect prompts that need generation
+    pending = []
+    for app_name, variants in prompts.items():
+        app_asset_dir = safe_path(ASSET_OUTPUT / app_name)
+        app_asset_dir.mkdir(parents=True, exist_ok=True)
+
+        for variant_name, prompt_text in variants.items():
+            if len(pending) >= max_images:
+                break
+            if not prompt_text or len(prompt_text) < 20:
+                continue
+
+            output_file = app_asset_dir / f"{variant_name}_{TODAY}.png"
+            if output_file.exists():
+                continue
+
+            pending.append({
+                "app": app_name,
+                "variant": variant_name,
+                "prompt": prompt_text,
+                "output": str(output_file),
+            })
+
+    if not pending:
+        log("All assets already generated today")
+        return {"generated": 0, "pending": 0}
+
+    # Write batch file with all prompts for easy copy-paste
+    batch_file = safe_path(ASSET_OUTPUT / f"BROWSER_PROMPTS_{TODAY}.md")
+    lines = [
+        f"# ImageFX Browser Generation Batch - {TODAY}",
+        f"\n**{len(pending)} images to generate**",
+        f"**URL:** https://labs.google/fx",
+        f"\nFor each prompt below:",
+        f"1. Copy the prompt text",
+        f"2. Paste into ImageFX",
+        f"3. Generate and download the image",
+        f"4. Save as the filename shown\n",
+    ]
+    for i, p in enumerate(pending, 1):
+        lines.extend([
+            f"---\n",
+            f"## {i}. {p['app']} / {p['variant']}",
+            f"**Save as:** `{Path(p['output']).name}`",
+            f"**Save to:** `{Path(p['output']).parent.relative_to(BASE)}/`",
+            f"\n```",
+            p["prompt"],
+            f"```\n",
+        ])
+
+    batch_file.write_text("\n".join(lines))
+    log(f"Wrote {len(pending)} prompts to {batch_file.name}")
+
+    # Open Chrome to ImageFX (max 5 tabs to not overwhelm)
+    tabs_to_open = min(len(pending), 5)
+    log(f"Opening {tabs_to_open} ImageFX tabs in Chrome...")
+
+    # Open first tab to ImageFX
+    subprocess.run(
+        ["open", "-a", "Google Chrome", "https://labs.google/fx"],
+        capture_output=True
+    )
+    time.sleep(1)
+
+    # Open the batch file so user can see all prompts
+    subprocess.run(["open", str(batch_file)], capture_output=True)
+
+    # Check if any images were previously downloaded but not moved
+    moved = _collect_downloaded_assets(pending)
+
+    log(f"\nBROWSER ASSET GENERATION:")
+    log(f"  {len(pending)} prompts ready at: {batch_file.relative_to(BASE)}")
+    log(f"  Chrome opened to ImageFX")
+    log(f"  {moved} previously downloaded images collected")
+    log(f"  Generate images in browser, then run --collect-assets to move them")
+
+    return {
+        "generated": moved,
+        "pending": len(pending) - moved,
+        "batch_file": str(batch_file.relative_to(BASE)),
+        "mode": "browser",
+    }
+
+
+def _collect_downloaded_assets(pending_list=None):
+    """Move generated images from Downloads to asset directories.
+
+    Looks for files matching our naming pattern in ~/Downloads.
+    """
+    downloads = Path.home() / "Downloads"
+    if not downloads.exists():
+        return 0
+
+    if pending_list is None:
+        prompts = load_asset_prompts()
+        pending_list = []
+        for app_name, variants in prompts.items():
+            app_asset_dir = safe_path(ASSET_OUTPUT / app_name)
+            for variant_name, prompt_text in variants.items():
+                output_file = app_asset_dir / f"{variant_name}_{TODAY}.png"
+                if not output_file.exists():
+                    pending_list.append({
+                        "app": app_name,
+                        "variant": variant_name,
+                        "output": str(output_file),
+                    })
+
+    moved = 0
+    for p in pending_list:
+        target = Path(p["output"])
+        target_name = target.stem  # e.g. variant_name_2026-03-05
+
+        # Look for matching files in Downloads (ImageFX saves as .png or .jpeg)
+        for ext in [".png", ".jpeg", ".jpg", ".webp"]:
+            # Match exact name or ImageFX default names containing our variant
+            for dl_file in downloads.glob(f"*{ext}"):
+                name_lower = dl_file.stem.lower()
+                variant_lower = p["variant"].lower()
+                app_lower = p["app"].lower()
+
+                # Match if filename contains both app and variant keywords
+                if (app_lower in name_lower and variant_lower[:15] in name_lower) or \
+                   dl_file.stem == target.stem:
+                    safe_path(target)
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    # Copy (not move) to be safe with Downloads folder
+                    import shutil
+                    shutil.copy2(str(dl_file), str(target))
+                    log(f"  Collected: {dl_file.name} -> {target.relative_to(BASE)}")
+                    moved += 1
+                    break
+            if target.exists():
+                break
+
+    return moved
+
+
+def collect_downloaded_assets():
+    """CLI entrypoint to collect downloaded browser-generated assets."""
+    moved = _collect_downloaded_assets()
+    log(f"Collected {moved} images from Downloads")
+    return {"collected": moved}
+
+
+def generate_assets(client, max_images=10, browser_fallback=True):
+    """Generate app assets using Gemini API with browser fallback."""
+    prompts = load_asset_prompts()
+    if not prompts:
+        log("SKIP: No asset prompts loaded")
+        return {"generated": 0, "skipped": "no_prompts"}
+
+    # If no API client, go straight to browser mode
+    if not client:
+        log("No Gemini API client. Using browser-based generation (ImageFX).")
+        return generate_assets_browser(max_images)
+
+    from google import genai
+
     generated = 0
     errors = 0
+    quota_hit = False
     results = []
 
     for app_name, variants in prompts.items():
-        if generated >= max_images:
+        if generated >= max_images or quota_hit:
             break
 
         app_asset_dir = safe_path(ASSET_OUTPUT / app_name)
         app_asset_dir.mkdir(parents=True, exist_ok=True)
 
         for variant_name, prompt_text in variants.items():
-            if generated >= max_images:
+            if generated >= max_images or quota_hit:
                 break
             if not prompt_text or len(prompt_text) < 20:
                 continue
@@ -199,16 +366,46 @@ def generate_assets(client, max_images=10):
 
             log(f"  Generating: {app_name}/{variant_name}...")
             try:
-                response = client.models.generate_content(
-                    model="gemini-2.5-flash-preview-05-20",
-                    contents=[prompt_text],
-                )
+                from google.genai import types
+                # Try image models in order of quality (best first)
+                image_models = ["gemini-2.5-flash-image", "gemini-2.0-flash-exp-image-generation"]
+                response = None
+                for img_model in image_models:
+                    try:
+                        response = client.models.generate_content(
+                            model=img_model,
+                            contents=[prompt_text],
+                            config=types.GenerateContentConfig(
+                                response_modalities=["IMAGE"],
+                                image_config=types.ImageConfig(
+                                    aspect_ratio="1:1",
+                                ),
+                            ),
+                        )
+                        break  # success
+                    except Exception as model_err:
+                        err_str = str(model_err)
+                        if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                            log(f"  Rate limited on {img_model}. Switching to browser mode.")
+                            response = None
+                            quota_hit = True
+                            break
+                        elif "400" in err_str or "not support" in err_str.lower():
+                            log(f"  {img_model} not available, trying next...")
+                            continue
+                        else:
+                            raise
+
+                if quota_hit:
+                    break
 
                 # Check if response has image data
-                if response and response.candidates:
-                    for part in response.candidates[0].content.parts:
+                if response and hasattr(response, 'parts') and response.parts:
+                    for part in response.parts:
                         if hasattr(part, 'inline_data') and part.inline_data:
-                            img_data = base64.b64decode(part.inline_data.data)
+                            img_data = part.inline_data.data
+                            if isinstance(img_data, str):
+                                img_data = base64.b64decode(img_data)
                             safe_path(output_file)
                             with open(output_file, "wb") as f:
                                 f.write(img_data)
@@ -235,6 +432,18 @@ def generate_assets(client, max_images=10):
                 log(f"  ERROR generating {app_name}/{variant_name}: {e}")
                 errors += 1
                 time.sleep(5)
+
+    # If API quota was hit, fall back to browser for remaining
+    if quota_hit and browser_fallback:
+        log("\nAPI quota exhausted. Falling back to browser-based generation...")
+        browser_result = generate_assets_browser(max_images - generated)
+        return {
+            "generated": generated + browser_result.get("generated", 0),
+            "errors": errors,
+            "results": results,
+            "browser_pending": browser_result.get("pending", 0),
+            "mode": "hybrid",
+        }
 
     log(f"Asset generation complete: {generated} generated, {errors} errors")
     return {"generated": generated, "errors": errors, "results": results}
@@ -477,12 +686,13 @@ def produce_content():
     alpha_csv = LEDGER / "ALPHA_STAGING.csv"
     if alpha_csv.exists():
         today_alpha = []
+        yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
         with open(alpha_csv, "r") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 ts = row.get("timestamp", "")
                 status = row.get("status", "")
-                if TODAY in ts and status == "APPROVED":
+                if status == "APPROVED" and (TODAY in ts or yesterday in ts):
                     today_alpha.append(row)
 
         if today_alpha:
@@ -525,6 +735,50 @@ def produce_content():
     if auto_dir.exists():
         auto_files = list(auto_dir.glob("*.md")) + list(auto_dir.glob("*.csv"))
         results["auto_generated_files"] = len(auto_files)
+
+    # 3. Generate tweets from ecom arb finds (building-in-public content)
+    arb_csv = LEDGER / "ECOM_ARB_OPPORTUNITIES.csv"
+    if arb_csv.exists():
+        top_arb = []
+        with open(arb_csv, "r") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                try:
+                    margin = float(row.get("margin_pct", "0").replace("%", ""))
+                    if margin > 40 and (TODAY in row.get("timestamp", "") or
+                                        (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d") in row.get("timestamp", "")):
+                        top_arb.append(row)
+                except (ValueError, TypeError):
+                    pass
+
+        if top_arb:
+            arb_tweets_file = safe_path(CONTENT / "social" / "auto_generated" / f"factory_arb_tweets_{TODAY}.md")
+            arb_tweets_file.parent.mkdir(parents=True, exist_ok=True)
+            arb_lines = [
+                f"# Factory Arb Tweets - {TODAY}",
+                f"Status: PENDING_REVIEW",
+                f"Source: autonomous_factory.py from {len(top_arb)} high-margin finds",
+                ""
+            ]
+            for opp in top_arb[:5]:
+                product = opp.get("product", "unknown")
+                margin = opp.get("margin_pct", "?")
+                sell = opp.get("sell_price", "?")
+                source = opp.get("source_price", "?")
+                tweet = f"found a {product} selling for ${sell}. source price ${source}. that's {margin}% margin before platform fees. the arb scanner catches these every 2 hours. just need accounts to start listing."
+                arb_lines.extend([
+                    "---",
+                    f"**Product:** {product} ({margin}% margin)",
+                    "```",
+                    tweet[:280],
+                    "```",
+                    ""
+                ])
+                results["tweets_drafted"] += 1
+
+            safe_path(arb_tweets_file)
+            arb_tweets_file.write_text("\n".join(arb_lines))
+            log(f"Drafted {min(len(top_arb), 5)} arb tweets")
 
     results["pending"] = pending_count
     results["ready"] = ready_count
@@ -680,7 +934,12 @@ def generate_production_report(asset_results=None, deploy_results=None,
     if metrics['accounts_created'] == 0:
         blockers.append("1. **NO ACCOUNTS CREATED** — Cannot list products, send emails, or post content without platform accounts. Start: https://gumroad.com → https://fiverr.com → https://upwork.com")
     if not asset_results or asset_results.get("generated", 0) == 0:
-        blockers.append(f"2. **NO GEMINI API KEY** — Cannot generate app assets. Get free key at https://ai.google.dev then add GEMINI_API_KEY=xxx to SECRETS/.env")
+        mode = (asset_results or {}).get("mode", "")
+        if mode == "browser" or (asset_results or {}).get("browser_pending", 0) > 0:
+            pending = (asset_results or {}).get("pending", 0) or (asset_results or {}).get("browser_pending", 0)
+            blockers.append(f"2. **BROWSER ASSETS PENDING** — {pending} images queued for browser generation. Run: `--browser-assets` then download from ImageFX, then `--collect-assets`")
+        else:
+            blockers.append(f"2. **ASSET GENERATION** — Run `--browser-assets` to generate via ImageFX (free, no API billing needed) or enable billing at https://ai.google.dev for API mode")
     if metrics['emails_sent'] == 0:
         blockers.append(f"3. **ZERO EMAILS SENT** — {metrics.get('emails_ready', 0)} emails drafted but 0 sent. Need email infra (DeliverOn $23/mo or Instantly $30/mo)")
     if metrics['revenue'] == 0:
@@ -882,6 +1141,13 @@ def show_status():
         env_file = SECRETS / ".env"
         if env_file.exists():
             has_key = "GEMINI_API_KEY" in env_file.read_text()
+    if not has_key:
+        root_env = BASE / ".env"
+        if root_env.exists():
+            for line in root_env.read_text().splitlines():
+                if line.startswith("GEMINI_API_KEY=") and line.split("=", 1)[1].strip():
+                    has_key = True
+                    break
 
     print(f"\n  GEMINI API:    {'CONFIGURED' if has_key else 'MISSING (get free key at https://ai.google.dev)'}")
 
@@ -916,10 +1182,13 @@ def main():
     parser.add_argument("--force-deploy", action="store_true", help="Force redeploy all apps")
     parser.add_argument("--max-images", type=int, default=10, help="Max images to generate per run")
     parser.add_argument("--min-margin", type=float, default=25, help="Min margin for listings")
+    parser.add_argument("--browser-assets", action="store_true", help="Generate assets via Chrome/ImageFX (no API needed)")
+    parser.add_argument("--collect-assets", action="store_true", help="Collect downloaded browser-generated assets from ~/Downloads")
     args = parser.parse_args()
 
     if not any([args.full, args.assets, args.deploy, args.listings,
-                args.content, args.report, args.status]):
+                args.content, args.report, args.status, args.browser_assets,
+                args.collect_assets]):
         args.status = True
 
     log(f"=== FACTORY RUN START: {NOW} ===")
@@ -931,6 +1200,19 @@ def main():
 
     if args.status:
         show_status()
+        return
+
+    if args.collect_assets:
+        log("\n--- COLLECT BROWSER-GENERATED ASSETS ---")
+        result = collect_downloaded_assets()
+        print(f"Collected {result['collected']} images from Downloads")
+        return
+
+    if args.browser_assets:
+        log("\n--- BROWSER-BASED ASSET GENERATION (ImageFX) ---")
+        asset_results = generate_assets_browser(max_images=args.max_images)
+        if args.report or args.full:
+            generate_production_report(asset_results=asset_results)
         return
 
     if args.full or args.assets:
