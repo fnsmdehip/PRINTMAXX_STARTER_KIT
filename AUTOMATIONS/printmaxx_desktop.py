@@ -1,48 +1,35 @@
 #!/usr/bin/env python3
 """
-PRINTMAXX Command Center v2 — Full Master Ops Integration
-Zero-dependency desktop app (tkinter + openpyxl for XLSX).
-Integrates: Daily Goals, 180 Ops, 18 Priority Items, 55 Ventures,
-38 Alpha Theses, 26 Synergy Stacks, Video/LeadGen/Hosting/Browser stacks,
-Product Launch Tracker, Alarms, Hourly Reminders with Goal Progress.
+PRINTMAXX Command Center v3 — Flask Web Dashboard
+SaaS-repurposable web app replacing tkinter.
+Features: Wake/Sleep alarm system, 15-min reminders, 2-hr todo reminders,
+Master Ops integration, daily goals, heartbeat, launch tracker.
 
 Usage:
   python3 AUTOMATIONS/printmaxx_desktop.py
-  python3 AUTOMATIONS/printmaxx_desktop.py --minimized
+  python3 AUTOMATIONS/printmaxx_desktop.py --port 7777
+  python3 AUTOMATIONS/printmaxx_desktop.py --minimized  (background reminders only)
 """
 
-import tkinter as tk
-from tkinter import ttk, scrolledtext
-import subprocess
-import threading
-import time
+import json
 import csv
 import re
 import sys
 import os
+import subprocess
+import threading
+import time
+import random
+import argparse
 from pathlib import Path
 from datetime import datetime, timedelta
+from functools import lru_cache
 
 # ── paths ───────────────────────────────────────────────────────────────────
 BASE = Path(__file__).resolve().parent.parent
 AUTO = BASE / "AUTOMATIONS"
 OPS = BASE / "OPS"
 LEDGER = BASE / "LEDGER"
-
-# ── colors (dark PRINTMAXX theme) ──────────────────────────────────────────
-BG = "#0d1117"
-BG2 = "#161b22"
-BG3 = "#21262d"
-FG = "#c9d1d9"
-FG2 = "#8b949e"
-ACCENT = "#58a6ff"
-GREEN = "#3fb950"
-RED = "#f85149"
-YELLOW = "#d29922"
-PURPLE = "#bc8cff"
-ORANGE = "#f0883e"
-WHITE = "#ffffff"
-CYAN = "#39d2c0"
 
 # ── motivational quotes ────────────────────────────────────────────────────
 MOTIVATION = [
@@ -97,27 +84,32 @@ HOURLY_TASKS = {
     21: "OVERNIGHT PREP: perpetual_ship_engine.sh armed. Cron verified.",
 }
 
-
 # ── notifications ───────────────────────────────────────────────────────────
-def macos_notify(title: str, message: str, sound: str = "Glass"):
-    script = f'display notification "{message}" with title "{title}" sound name "{sound}"'
+def macos_notify(title, message, sound="Glass"):
+    t = title.replace('"', '\\"')
+    m = message.replace('"', '\\"')
+    script = f'display notification "{m}" with title "{t}" sound name "{sound}"'
     try:
-        subprocess.Popen(["osascript", "-e", script], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen(["osascript", "-e", script],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except Exception:
         pass
 
 
-def macos_alert(title: str, message: str):
-    script = f'display alert "{title}" message "{message}" as informational'
+def macos_alert(title, message):
+    t = title.replace('"', '\\"')
+    m = message.replace('"', '\\"')
+    script = f'display alert "{t}" message "{m}" as informational'
     try:
-        subprocess.Popen(["osascript", "-e", script], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen(["osascript", "-e", script],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except Exception:
         pass
 
 
 # ── data loading ────────────────────────────────────────────────────────────
 
-def load_heartbeat() -> dict:
+def load_heartbeat():
     hb_path = OPS / "HEARTBEAT.md"
     data = {"timestamp": "unknown", "lines": [], "raw": {}}
     if not hb_path.exists():
@@ -131,7 +123,6 @@ def load_heartbeat() -> dict:
                 data["timestamp"] = m.group(1)
         elif line and not line.startswith("#"):
             data["lines"].append(line)
-            # parse key metrics
             if "hot" in line.lower():
                 m = re.search(r"([\d,]+)\s*hot", line)
                 if m:
@@ -159,22 +150,18 @@ def load_heartbeat() -> dict:
     return data
 
 
-def load_daily_goals() -> list:
-    """Parse daily goals from OPS/DAILY_GOALS_*.md (today's date)."""
+def load_daily_goals():
     today = datetime.now().strftime("%Y_%m_%d")
-    goal_path = OPS / f"DAILY_GOALS_{today.replace('_', '_')}.md"
-    # also try with dashes
+    goal_path = OPS / f"DAILY_GOALS_{today}.md"
     if not goal_path.exists():
         goal_path = OPS / f"DAILY_GOALS_{datetime.now().strftime('%Y-%m-%d')}.md"
     if not goal_path.exists():
-        # scan for any daily goals file for today
         for f in OPS.glob("DAILY_GOALS_*"):
             if today in f.name or datetime.now().strftime("%Y-%m-%d") in f.name:
                 goal_path = f
                 break
     if not goal_path.exists():
         return []
-
     goals = []
     text = goal_path.read_text()
     current_goal = None
@@ -186,7 +173,8 @@ def load_daily_goals() -> list:
             current_goal = {"title": title, "tasks": [], "done_count": 0}
         elif current_goal and line.strip().startswith("- ["):
             checked = "[x]" in line.lower() or "[X]" in line
-            task_text = re.sub(r"- \[.\]\s*", "", line.strip())
+            task_text = re.sub(r"- \\[.\\]\\s*", "", line.strip())
+            task_text = re.sub(r"^- \[.\]\s*", "", line.strip())
             current_goal["tasks"].append({"text": task_text, "done": checked})
             if checked:
                 current_goal["done_count"] += 1
@@ -195,7 +183,7 @@ def load_daily_goals() -> list:
     return goals
 
 
-def load_tasks() -> list:
+def load_tasks():
     path = OPS / "PERSISTENT_TASK_TRACKER.md"
     tasks = []
     if not path.exists():
@@ -208,7 +196,8 @@ def load_tasks() -> list:
                 tasks.append(current_task)
             m = re.match(r"### (T\d+):\s*(.*)", line)
             if m:
-                current_task = {"id": m.group(1), "title": m.group(2), "status": "UNKNOWN", "priority": "", "details": []}
+                current_task = {"id": m.group(1), "title": m.group(2),
+                                "status": "UNKNOWN", "priority": "", "details": []}
         elif current_task and line.startswith("- **Status:**"):
             m = re.search(r"Status:\*\*\s*(.*)", line)
             if m:
@@ -232,7 +221,7 @@ def load_tasks() -> list:
     return tasks
 
 
-def load_launch_tracker() -> list:
+def load_launch_tracker():
     path = LEDGER / "LAUNCH_DIRECTORY_TRACKER.csv"
     entries = []
     if not path.exists():
@@ -240,40 +229,28 @@ def load_launch_tracker() -> list:
     with open(path, "r") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            entries.append(row)
+            entries.append(dict(row))
     return entries
 
 
-def load_master_ops() -> dict:
-    """Load Master Ops Enhanced XLSX using openpyxl."""
+def load_master_ops():
     data = {
-        "auto_status": [],
-        "priority_exec": [],
-        "ventures": [],
-        "synergy": [],
-        "alpha_thesis": [],
-        "video_stack": [],
-        "lead_gen": [],
-        "hosting": [],
-        "browser_proxy": [],
-        "existing_infra": [],
-        "filename": None,
+        "auto_status": [], "priority_exec": [], "ventures": [],
+        "synergy": [], "alpha_thesis": [], "video_stack": [],
+        "lead_gen": [], "hosting": [], "browser_proxy": [],
+        "existing_infra": [], "filename": None,
     }
     try:
         import openpyxl
     except ImportError:
         return data
-
-    # find latest enhanced xlsx
     xlsx_files = sorted(BASE.glob("PRINTMAXX_MASTER_OPS_ENHANCED_*.xlsx"), reverse=True)
     if not xlsx_files:
         xlsx_files = sorted(BASE.glob("PRINTMAXX_MASTER_OPS*.xlsx"), reverse=True)
     if not xlsx_files:
         return data
-
     xlsx_path = xlsx_files[0]
     data["filename"] = xlsx_path.name
-
     try:
         wb = openpyxl.load_workbook(str(xlsx_path), read_only=True, data_only=True)
     except Exception:
@@ -294,11 +271,11 @@ def load_master_ops() -> dict:
             d = {}
             for i, h in enumerate(headers):
                 if h and i < len(row):
-                    d[h] = row[i]
+                    val = row[i]
+                    d[h] = str(val) if val is not None else ""
             result.append(d)
         return result
 
-    # map sheet names (try exact then fuzzy match)
     sheet_map = {
         "auto_status": ["AUTO_STATUS_LIVE"],
         "priority_exec": ["PRIORITY_AUTOMATION_EXEC"],
@@ -311,13 +288,11 @@ def load_master_ops() -> dict:
         "browser_proxy": ["BROWSER & PROXY STACK", "BROWSER_PROXY_STACK"],
         "existing_infra": ["EXISTING INFRA", "EXISTING_INFRA"],
     }
-
     for key, candidates in sheet_map.items():
         for name in candidates:
             if name in wb.sheetnames:
                 data[key] = sheet_to_dicts(name)
                 break
-        # fuzzy match
         if not data[key]:
             for sn in wb.sheetnames:
                 for cand in candidates:
@@ -326,1059 +301,1027 @@ def load_master_ops() -> dict:
                         break
                 if data[key]:
                     break
-
     wb.close()
     return data
 
 
-# ── alarm manager ───────────────────────────────────────────────────────────
+# ── Wake/Sleep Alarm Engine ─────────────────────────────────────────────────
 
-class AlarmManager:
+class WakeAlarmEngine(threading.Thread):
+    """Smart alarm system with wake/sleep states."""
+
     def __init__(self):
+        super().__init__(daemon=True)
+        self.running = True
+        self.is_awake = False
+        self.wake_time = None
+        self.todos = []
         self.alarms = []
         self._lock = threading.Lock()
+        self._last_15min = None
+        self._last_2hr = None
+        self._last_hour_notified = -1
+        self._last_motivation_idx = 0
 
-    def add_alarm(self, alarm_time: datetime, message: str):
+    def wake(self):
         with self._lock:
-            self.alarms.append({"time": alarm_time, "message": message, "fired": False})
+            self.is_awake = True
+            self.wake_time = datetime.now()
+            self._last_15min = datetime.now()
+            self._last_2hr = datetime.now()
+        macos_alert("PRINTMAXX WAKE",
+                    "you're up. time to print. what's on today's list?")
 
-    def remove_alarm(self, index: int):
+    def sleep_mode(self):
         with self._lock:
-            if 0 <= index < len(self.alarms):
-                self.alarms.pop(index)
+            self.is_awake = False
+            self.wake_time = None
+        macos_notify("PRINTMAXX", "sleep mode. alarms paused.", "Submarine")
 
-    def check_alarms(self):
-        fired = []
-        now = datetime.now()
+    def set_todos(self, items):
         with self._lock:
-            for alarm in self.alarms:
-                if not alarm["fired"] and now >= alarm["time"]:
-                    alarm["fired"] = True
-                    fired.append(alarm["message"])
-        return fired
+            self.todos = items
 
-    def get_pending(self) -> list:
+    def get_todos(self):
+        with self._lock:
+            return list(self.todos)
+
+    def toggle_todo(self, index):
+        with self._lock:
+            if 0 <= index < len(self.todos):
+                self.todos[index]["done"] = not self.todos[index]["done"]
+
+    def add_alarm(self, alarm_time, message, repeat_minutes=0):
+        with self._lock:
+            self.alarms.append({
+                "time": alarm_time, "message": message,
+                "fired": False, "repeat": repeat_minutes
+            })
+
+    def get_pending_alarms(self):
         with self._lock:
             return [a for a in self.alarms if not a["fired"]]
 
-
-# ── reminder engine ─────────────────────────────────────────────────────────
-
-class ReminderEngine(threading.Thread):
-    def __init__(self, alarm_mgr: AlarmManager):
-        super().__init__(daemon=True)
-        self.alarm_mgr = alarm_mgr
-        self.running = True
-        self._last_hour_notified = -1
-        self._last_motivation_idx = 0
+    def get_state(self):
+        with self._lock:
+            return {
+                "is_awake": self.is_awake,
+                "wake_time": self.wake_time.isoformat() if self.wake_time else None,
+                "todo_count": len(self.todos),
+                "todo_done": sum(1 for t in self.todos if t.get("done")),
+                "pending_alarms": len([a for a in self.alarms if not a["fired"]]),
+            }
 
     def run(self):
         while self.running:
             now = datetime.now()
-            hour = now.hour
-            minute = now.minute
 
-            # hourly task + daily goal progress
-            if hour != self._last_hour_notified and hour in HOURLY_TASKS:
-                self._last_hour_notified = hour
-                task_msg = HOURLY_TASKS[hour]
-                macos_notify("PRINTMAXX hourly", task_msg, "Purr")
+            # auto-sleep at midnight
+            if now.hour == 0 and now.minute == 0 and self.is_awake:
+                self.sleep_mode()
+                macos_notify("PRINTMAXX", "midnight. auto-sleep. rest up.", "Submarine")
 
-                # daily goals progress reminder
-                goals = load_daily_goals()
-                if goals:
-                    total = sum(len(g["tasks"]) for g in goals)
-                    done = sum(g["done_count"] for g in goals)
-                    remaining = [g["title"] for g in goals if g["done_count"] < len(g["tasks"])]
+            if self.is_awake:
+                # 15-min quick reminder
+                with self._lock:
+                    should_15 = (self._last_15min and
+                                 (now - self._last_15min).total_seconds() >= 900)
+                if should_15:
+                    with self._lock:
+                        self._last_15min = now
+                        remaining = [t["text"] for t in self.todos if not t.get("done")]
                     if remaining:
-                        goal_msg = f"GOALS: {done}/{total} done. Still need: {', '.join(remaining[:3])}"
-                        macos_notify("PRINTMAXX GOALS", goal_msg, "Tink")
+                        msg = f"{len(remaining)} tasks left. next: {remaining[0][:60]}"
+                        macos_notify("PRINTMAXX 15min", msg, "Tink")
+                        subprocess.Popen(["afplay", "/System/Library/Sounds/Tink.aiff"],
+                                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-            # motivation every 30 min at :30
-            if minute == 30:
-                quote = MOTIVATION[self._last_motivation_idx % len(MOTIVATION)]
-                self._last_motivation_idx += 1
-                macos_notify("PRINTMAXX", quote, "Tink")
+                # 2-hr full todo reminder
+                with self._lock:
+                    should_2hr = (self._last_2hr and
+                                  (now - self._last_2hr).total_seconds() >= 7200)
+                if should_2hr:
+                    with self._lock:
+                        self._last_2hr = now
+                        all_todos = list(self.todos)
+                    if all_todos:
+                        done_c = sum(1 for t in all_todos if t.get("done"))
+                        total_c = len(all_todos)
+                        remaining = [t["text"] for t in all_todos if not t.get("done")]
+                        msg_lines = [f"PROGRESS: {done_c}/{total_c} complete"]
+                        for t in remaining[:5]:
+                            msg_lines.append(f"  - {t[:50]}")
+                        full_msg = "\n".join(msg_lines)
+                        macos_alert("PRINTMAXX 2HR TODO REVIEW", full_msg)
+                        subprocess.Popen(["afplay", "/System/Library/Sounds/Funk.aiff"],
+                                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-            # custom alarms
-            fired = self.alarm_mgr.check_alarms()
-            for msg in fired:
+                # hourly task notification
+                hour = now.hour
+                if hour != self._last_hour_notified and hour in HOURLY_TASKS:
+                    self._last_hour_notified = hour
+                    macos_notify("PRINTMAXX hourly", HOURLY_TASKS[hour], "Purr")
+
+                    # daily goals progress
+                    goals = load_daily_goals()
+                    if goals:
+                        total = sum(len(g["tasks"]) for g in goals)
+                        done = sum(g["done_count"] for g in goals)
+                        still = [g["title"] for g in goals
+                                 if g["done_count"] < len(g["tasks"])]
+                        if still:
+                            macos_notify("PRINTMAXX GOALS",
+                                         f"{done}/{total} done. still: {', '.join(still[:3])}", "Tink")
+
+                # motivation every 30 min
+                if now.minute == 30 or now.minute == 0:
+                    if now.minute == 30:
+                        q = MOTIVATION[self._last_motivation_idx % len(MOTIVATION)]
+                        self._last_motivation_idx += 1
+                        macos_notify("PRINTMAXX", q, "Tink")
+
+            # check custom alarms
+            fired_msgs = []
+            with self._lock:
+                for alarm in self.alarms:
+                    if not alarm["fired"] and now >= alarm["time"]:
+                        if not self.is_awake:
+                            continue  # skip if not awake
+                        alarm["fired"] = True
+                        fired_msgs.append(alarm["message"])
+                        if alarm["repeat"] > 0:
+                            next_time = alarm["time"] + timedelta(minutes=alarm["repeat"])
+                            if next_time.date() == now.date():
+                                self.alarms.append({
+                                    "time": next_time,
+                                    "message": alarm["message"],
+                                    "fired": False,
+                                    "repeat": alarm["repeat"],
+                                })
+
+            for msg in fired_msgs:
                 macos_alert("PRINTMAXX ALARM", msg)
-                subprocess.Popen(["afplay", "/System/Library/Sounds/Funk.aiff"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                subprocess.Popen(["afplay", "/System/Library/Sounds/Funk.aiff"],
+                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-            next_min = now.replace(second=0, microsecond=0) + timedelta(minutes=1)
-            sleep_secs = max(1, (next_min - datetime.now()).total_seconds())
-            time.sleep(sleep_secs)
+            # sleep until next 15s check
+            time.sleep(15)
 
     def stop(self):
         self.running = False
 
 
-# ── helper: scrolled text widget ────────────────────────────────────────────
+# ── data cache ──────────────────────────────────────────────────────────────
 
-def make_text(parent, height=10, **kw):
-    t = scrolledtext.ScrolledText(
-        parent, bg=BG2, fg=FG, font=("Menlo", 11), relief="flat",
-        wrap="word", insertbackground=FG, state="disabled", height=height, **kw
-    )
-    return t
+_cache = {}
+_cache_ts = {}
 
 
-def write_text(widget, content_fn):
-    """Helper to update a disabled text widget."""
-    widget.configure(state="normal")
-    widget.delete("1.0", "end")
-    content_fn(widget)
-    widget.configure(state="disabled")
+def cached_load(key, loader, ttl=300):
+    now = time.time()
+    if key in _cache and (now - _cache_ts.get(key, 0)) < ttl:
+        return _cache[key]
+    _cache[key] = loader()
+    _cache_ts[key] = now
+    return _cache[key]
 
 
-# ── main GUI ────────────────────────────────────────────────────────────────
+# ── Flask App ───────────────────────────────────────────────────────────────
 
-class PrintmaxxApp:
-    def __init__(self, root: tk.Tk):
-        self.root = root
-        self.root.title("PRINTMAXX Command Center v2")
-        self.root.geometry("1200x900")
-        self.root.configure(bg=BG)
-        self.root.minsize(1000, 700)
+def create_app(alarm_engine):
+    try:
+        from flask import Flask, jsonify, request
+    except ImportError:
+        print("Flask not installed. Install with: pip3 install flask")
+        sys.exit(1)
 
-        self.alarm_mgr = AlarmManager()
-        self.reminder_engine = ReminderEngine(self.alarm_mgr)
-        self.reminder_engine.start()
+    app = Flask(__name__)
 
-        # cached data
-        self.master_ops = {}
-        self.daily_goals = []
-        self.goal_vars = {}  # track checkbox state
+    @app.route("/")
+    def index():
+        return HTML_TEMPLATE
 
-        # style
-        style = ttk.Style()
-        style.theme_use("clam")
-        style.configure(".", background=BG, foreground=FG, font=("Menlo", 11))
-        style.configure("TNotebook", background=BG)
-        style.configure("TNotebook.Tab", background=BG2, foreground=FG, padding=[10, 5])
-        style.map("TNotebook.Tab", background=[("selected", BG3)], foreground=[("selected", ACCENT)])
-        style.configure("TFrame", background=BG)
-        style.configure("TLabel", background=BG, foreground=FG)
-        style.configure("TButton", background=BG3, foreground=FG)
-
-        # header
-        header = tk.Frame(root, bg=BG, height=50)
-        header.pack(fill="x", padx=10, pady=(10, 0))
-        tk.Label(header, text="PRINTMAXX", font=("Menlo", 24, "bold"), fg=ACCENT, bg=BG).pack(side="left")
-        self.clock_label = tk.Label(header, text="", font=("Menlo", 14), fg=FG2, bg=BG)
-        self.clock_label.pack(side="right")
-        self.status_label = tk.Label(header, text="", font=("Menlo", 11), fg=GREEN, bg=BG)
-        self.status_label.pack(side="right", padx=20)
-
-        # notebook
-        self.notebook = ttk.Notebook(root)
-        self.notebook.pack(fill="both", expand=True, padx=10, pady=10)
-
-        # build all tabs
-        self.build_dashboard_tab()
-        self.build_goals_tab()
-        self.build_operations_tab()
-        self.build_priority_tab()
-        self.build_intelligence_tab()
-        self.build_tools_infra_tab()
-        self.build_tasks_tab()
-        self.build_launch_tab()
-        self.build_alarms_tab()
-        self.build_quick_launch_tab()
-
-        # load data + start refresh
-        self.load_all_data()
-        self.refresh_all()
-        self.update_clock()
-
-    def load_all_data(self):
-        """Load heavy data (XLSX) once, refresh lighter data periodically."""
-        self.status_label.configure(text="Loading Master Ops...", fg=YELLOW)
-        self.root.update()
-        self.master_ops = load_master_ops()
-        self.daily_goals = load_daily_goals()
-        fname = self.master_ops.get("filename", "not found")
-        ops_count = len(self.master_ops.get("auto_status", []))
-        self.status_label.configure(text=f"Loaded {ops_count} ops from {fname}", fg=GREEN)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 1: DASHBOARD
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_dashboard_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Dashboard ")
-
-        # heartbeat section
-        hb_frame = tk.Frame(frame, bg=BG2, highlightbackground=BG3, highlightthickness=1)
-        hb_frame.pack(fill="x", padx=10, pady=(10, 5))
-        tk.Label(hb_frame, text="SYSTEM HEARTBEAT", font=("Menlo", 13, "bold"), fg=ACCENT, bg=BG2).pack(anchor="w", padx=10, pady=(8, 2))
-        self.heartbeat_text = make_text(hb_frame, height=8)
-        self.heartbeat_text.pack(fill="x", padx=10, pady=(2, 8))
-
-        # quick stats row
-        stats_frame = tk.Frame(frame, bg=BG)
-        stats_frame.pack(fill="x", padx=10, pady=5)
-        self.stat_labels = {}
-        stat_items = [
-            ("Revenue", "$0", RED),
-            ("Accounts", "0/48", RED),
-            ("Hot Leads", "12,948", GREEN),
-            ("Alpha", "278", YELLOW),
-            ("Apps", "6/6", GREEN),
-            ("Scripts", "222", ACCENT),
-            ("Ops", "0", PURPLE),
-            ("Ventures", "0", CYAN),
-        ]
-        for label, default, color in stat_items:
-            sf = tk.Frame(stats_frame, bg=BG2, highlightbackground=BG3, highlightthickness=1)
-            sf.pack(side="left", fill="both", expand=True, padx=2)
-            tk.Label(sf, text=label, font=("Menlo", 9), fg=FG2, bg=BG2).pack(pady=(4, 0))
-            lbl = tk.Label(sf, text=default, font=("Menlo", 14, "bold"), fg=color, bg=BG2)
-            lbl.pack(pady=(0, 4))
-            self.stat_labels[label] = lbl
-
-        # daily goals summary + motivation side by side
-        bottom = tk.Frame(frame, bg=BG)
-        bottom.pack(fill="both", expand=True, padx=10, pady=5)
-
-        # goals summary (left)
-        goal_sum = tk.Frame(bottom, bg=BG2, highlightbackground=GREEN, highlightthickness=1)
-        goal_sum.pack(side="left", fill="both", expand=True, padx=(0, 3))
-        tk.Label(goal_sum, text="TODAY'S GOALS", font=("Menlo", 11, "bold"), fg=GREEN, bg=BG2).pack(anchor="w", padx=10, pady=(8, 2))
-        self.goals_summary_text = make_text(goal_sum, height=8)
-        self.goals_summary_text.pack(fill="both", expand=True, padx=10, pady=(2, 8))
-        self.goals_summary_text.tag_configure("done", foreground=GREEN)
-        self.goals_summary_text.tag_configure("pending", foreground=RED)
-        self.goals_summary_text.tag_configure("header", font=("Menlo", 11, "bold"))
-
-        # motivation + current task (right)
-        right_col = tk.Frame(bottom, bg=BG)
-        right_col.pack(side="left", fill="both", expand=True, padx=(3, 0))
-
-        mot_frame = tk.Frame(right_col, bg=BG2, highlightbackground=PURPLE, highlightthickness=1)
-        mot_frame.pack(fill="x", pady=(0, 3))
-        tk.Label(mot_frame, text="MOTIVATION", font=("Menlo", 11, "bold"), fg=PURPLE, bg=BG2).pack(anchor="w", padx=10, pady=(8, 2))
-        self.motivation_label = tk.Label(mot_frame, text="", font=("Menlo", 11, "italic"), fg=WHITE, bg=BG2, wraplength=500, justify="left")
-        self.motivation_label.pack(fill="x", padx=10, pady=(2, 8))
-
-        hour_frame = tk.Frame(right_col, bg=BG2, highlightbackground=ORANGE, highlightthickness=1)
-        hour_frame.pack(fill="both", expand=True, pady=(3, 0))
-        tk.Label(hour_frame, text="CURRENT FOCUS", font=("Menlo", 11, "bold"), fg=ORANGE, bg=BG2).pack(anchor="w", padx=10, pady=(8, 2))
-        self.hour_task_label = tk.Label(hour_frame, text="", font=("Menlo", 11), fg=WHITE, bg=BG2, wraplength=500, justify="left")
-        self.hour_task_label.pack(fill="x", padx=10, pady=(2, 8))
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 2: DAILY GOALS (with checkboxes)
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_goals_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Daily Goals ")
-
-        header = tk.Frame(frame, bg=BG2, highlightbackground=GREEN, highlightthickness=1)
-        header.pack(fill="x", padx=10, pady=(10, 5))
-        tk.Label(header, text="TODAY'S GOALS — CHECK OFF AS COMPLETED", font=("Menlo", 13, "bold"), fg=GREEN, bg=BG2).pack(anchor="w", padx=10, pady=8)
-        self.goals_progress_label = tk.Label(header, text="", font=("Menlo", 12), fg=YELLOW, bg=BG2)
-        self.goals_progress_label.pack(anchor="w", padx=10, pady=(0, 8))
-
-        # scrollable goals
-        canvas = tk.Canvas(frame, bg=BG, highlightthickness=0)
-        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=canvas.yview)
-        self.goals_inner = tk.Frame(canvas, bg=BG)
-        self.goals_inner.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
-        canvas.create_window((0, 0), window=self.goals_inner, anchor="nw")
-        canvas.configure(yscrollcommand=scrollbar.set)
-        canvas.pack(side="left", fill="both", expand=True, padx=10, pady=5)
-        scrollbar.pack(side="right", fill="y")
-
-    def refresh_goals_tab(self):
-        # clear previous
-        for w in self.goals_inner.winfo_children():
-            w.destroy()
-        self.goal_vars.clear()
-
-        goals = self.daily_goals
-        if not goals:
-            tk.Label(self.goals_inner, text="  No daily goals found for today.", font=("Menlo", 12), fg=FG2, bg=BG).pack(anchor="w", padx=10, pady=10)
-            self.goals_progress_label.configure(text="No goals loaded")
-            return
-
+    @app.route("/api/status")
+    def api_status():
+        hb = cached_load("heartbeat", load_heartbeat, 30)
+        goals = cached_load("goals", load_daily_goals, 60)
         total_tasks = sum(len(g["tasks"]) for g in goals)
-        total_done = sum(g["done_count"] for g in goals)
-
-        for i, goal in enumerate(goals):
-            gf = tk.Frame(self.goals_inner, bg=BG2, highlightbackground=BG3, highlightthickness=1)
-            gf.pack(fill="x", padx=5, pady=3)
-
-            done = goal["done_count"]
-            total = len(goal["tasks"])
-            pct = int(done / total * 100) if total > 0 else 0
-            color = GREEN if pct == 100 else (YELLOW if pct > 0 else RED)
-
-            tk.Label(gf, text=f"  {i + 1}. {goal['title']}  [{done}/{total}]", font=("Menlo", 12, "bold"), fg=color, bg=BG2).pack(anchor="w", padx=10, pady=(8, 4))
-
-            for j, task in enumerate(goal["tasks"]):
-                key = f"g{i}_t{j}"
-                var = tk.BooleanVar(value=task["done"])
-                self.goal_vars[key] = var
-                cb = tk.Checkbutton(
-                    gf, text=task["text"], variable=var,
-                    font=("Menlo", 11), fg=FG if not task["done"] else GREEN,
-                    bg=BG2, selectcolor=BG3, activebackground=BG2, activeforeground=ACCENT,
-                    anchor="w",
-                )
-                cb.pack(anchor="w", padx=30, pady=1)
-
-            # progress bar
-            bar_frame = tk.Frame(gf, bg=BG3, height=6)
-            bar_frame.pack(fill="x", padx=10, pady=(4, 8))
-            if pct > 0:
-                fill = tk.Frame(bar_frame, bg=color, height=6, width=max(1, int(pct * 4)))
-                fill.place(x=0, y=0, relheight=1)
-
-        self.goals_progress_label.configure(text=f"Overall: {total_done}/{total_tasks} tasks done ({int(total_done / total_tasks * 100) if total_tasks else 0}%)")
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 3: OPERATIONS (180 ops from AUTO_STATUS_LIVE)
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_operations_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Operations ")
-
-        # filter bar
-        filter_frame = tk.Frame(frame, bg=BG)
-        filter_frame.pack(fill="x", padx=10, pady=(10, 5))
-        tk.Label(filter_frame, text="Filter:", font=("Menlo", 11), fg=FG, bg=BG).pack(side="left")
-        self.ops_filter = tk.StringVar(value="ALL")
-        for label, val in [("All", "ALL"), ("Ready", "READY"), ("Blocked", "BLOCKED"), ("High Score", "HIGH")]:
-            rb = tk.Radiobutton(
-                filter_frame, text=label, variable=self.ops_filter, value=val,
-                bg=BG, fg=FG, selectcolor=BG2, activebackground=BG, activeforeground=ACCENT,
-                font=("Menlo", 10), command=self.refresh_operations,
-            )
-            rb.pack(side="left", padx=5)
-
-        self.ops_count_label = tk.Label(filter_frame, text="", font=("Menlo", 10), fg=FG2, bg=BG)
-        self.ops_count_label.pack(side="right")
-
-        self.ops_text = make_text(frame, height=30)
-        self.ops_text.pack(fill="both", expand=True, padx=10, pady=5)
-        self.ops_text.tag_configure("high", foreground=GREEN, font=("Menlo", 11, "bold"))
-        self.ops_text.tag_configure("medium", foreground=YELLOW)
-        self.ops_text.tag_configure("low", foreground=FG2)
-        self.ops_text.tag_configure("blocked", foreground=RED)
-        self.ops_text.tag_configure("header", font=("Menlo", 12, "bold"), foreground=ACCENT)
-        self.ops_text.tag_configure("score", foreground=PURPLE)
-
-    def refresh_operations(self):
-        ops = self.master_ops.get("auto_status", [])
-        filt = self.ops_filter.get()
-
-        def content(w):
-            if not ops:
-                w.insert("end", "  No operations data loaded. Check PRINTMAXX_MASTER_OPS_ENHANCED_*.xlsx\n")
-                return
-
-            w.insert("end", f"  AUTO_STATUS_LIVE — {len(ops)} Operations\n\n", "header")
-            w.insert("end", f"  {'OP_ID':<12} {'OP_NAME':<35} {'LANE':<12} {'READY':<10} {'SCORE':<8} {'BLOCKER'}\n", "header")
-            w.insert("end", "  " + "-" * 100 + "\n")
-
-            shown = 0
-            for op in ops:
-                op_id = str(op.get("OP_ID", ""))
-                name = str(op.get("OP_NAME", ""))[:34]
-                lane = str(op.get("LANE", ""))[:11]
-                readiness = str(op.get("READINESS", ""))[:9]
-                score = op.get("AUTOMATION_SCORE_100", 0)
-                try:
-                    score_num = float(score) if score else 0
-                except (ValueError, TypeError):
-                    score_num = 0
-                blocker = str(op.get("BLOCKER_KEY", "") or "")
-
-                # filter
-                if filt == "READY" and "ready" not in readiness.lower() and score_num < 50:
-                    continue
-                elif filt == "BLOCKED" and not blocker:
-                    continue
-                elif filt == "HIGH" and score_num < 70:
-                    continue
-
-                # color by score
-                if score_num >= 70:
-                    tag = "high"
-                elif score_num >= 40:
-                    tag = "medium"
-                elif blocker:
-                    tag = "blocked"
-                else:
-                    tag = "low"
-
-                w.insert("end", f"  {op_id:<12} {name:<35} {lane:<12} {readiness:<10} ", tag)
-                w.insert("end", f"{score_num:<8.0f}", "score")
-                w.insert("end", f" {blocker}\n", "blocked" if blocker else tag)
-                shown += 1
-
-            self.ops_count_label.configure(text=f"Showing {shown}/{len(ops)}")
-
-        write_text(self.ops_text, content)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 4: PRIORITY LAUNCH (18 ranked items)
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_priority_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Priority ")
-
-        self.priority_text = make_text(frame, height=30)
-        self.priority_text.pack(fill="both", expand=True, padx=10, pady=10)
-        self.priority_text.tag_configure("rank1", foreground=RED, font=("Menlo", 12, "bold"))
-        self.priority_text.tag_configure("rank2", foreground=ORANGE, font=("Menlo", 11, "bold"))
-        self.priority_text.tag_configure("rank3", foreground=YELLOW)
-        self.priority_text.tag_configure("header", foreground=ACCENT, font=("Menlo", 13, "bold"))
-        self.priority_text.tag_configure("detail", foreground=FG2)
-
-    def refresh_priority(self):
-        items = self.master_ops.get("priority_exec", [])
-
-        def content(w):
-            w.insert("end", "  PRIORITY AUTOMATION EXEC — Ranked Launch Priorities\n\n", "header")
-            if not items:
-                w.insert("end", "  No priority data loaded.\n")
-                return
-
-            for i, item in enumerate(items):
-                # try to get rank/priority
-                rank = item.get("RANK", item.get("PRIORITY_RANK", i + 1))
-                try:
-                    rank_num = float(rank) if rank else i + 1
-                except (ValueError, TypeError):
-                    rank_num = i + 1
-
-                tag = "rank1" if rank_num <= 3 else ("rank2" if rank_num <= 8 else "rank3")
-                name = str(item.get("OP_NAME", item.get("NAME", "")))
-                category = str(item.get("CATEGORY", ""))
-                status = str(item.get("STATUS", item.get("LANE", "")))
-
-                w.insert("end", f"  #{rank_num:<5.1f} ", tag)
-                w.insert("end", f"{name}\n", tag)
-                w.insert("end", f"         Category: {category}  |  Status: {status}\n", "detail")
-
-                # show any additional fields
-                for key in ["BLOCKER_KEY", "NEXT_ACTION", "NEXT_AUTOMATION_ACTION", "READINESS", "AUTOMATION_SCORE_100"]:
-                    val = item.get(key)
-                    if val:
-                        w.insert("end", f"         {key}: {val}\n", "detail")
-                w.insert("end", "\n")
-
-        write_text(self.priority_text, content)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 5: INTELLIGENCE (Alpha Theses, Synergy, Ventures)
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_intelligence_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Intelligence ")
-
-        # sub-notebook for 3 sections
-        sub_nb = ttk.Notebook(frame)
-        sub_nb.pack(fill="both", expand=True, padx=5, pady=5)
-
-        # Alpha Theses
-        at_frame = ttk.Frame(sub_nb)
-        sub_nb.add(at_frame, text=" Alpha Theses (38) ")
-        self.alpha_thesis_text = make_text(at_frame, height=25)
-        self.alpha_thesis_text.pack(fill="both", expand=True, padx=5, pady=5)
-        self.alpha_thesis_text.tag_configure("header", foreground=ACCENT, font=("Menlo", 12, "bold"))
-        self.alpha_thesis_text.tag_configure("opportunity", foreground=GREEN)
-        self.alpha_thesis_text.tag_configure("blocked", foreground=RED)
-        self.alpha_thesis_text.tag_configure("detail", foreground=FG2)
-
-        # Synergy Stacks
-        sy_frame = ttk.Frame(sub_nb)
-        sub_nb.add(sy_frame, text=" Synergy Stacks (26) ")
-        self.synergy_text = make_text(sy_frame, height=25)
-        self.synergy_text.pack(fill="both", expand=True, padx=5, pady=5)
-        self.synergy_text.tag_configure("header", foreground=ACCENT, font=("Menlo", 12, "bold"))
-        self.synergy_text.tag_configure("high_synergy", foreground=GREEN, font=("Menlo", 11, "bold"))
-        self.synergy_text.tag_configure("detail", foreground=FG2)
-
-        # Ventures
-        ve_frame = ttk.Frame(sub_nb)
-        sub_nb.add(ve_frame, text=" Ventures (55) ")
-        self.ventures_text = make_text(ve_frame, height=25)
-        self.ventures_text.pack(fill="both", expand=True, padx=5, pady=5)
-        self.ventures_text.tag_configure("header", foreground=ACCENT, font=("Menlo", 12, "bold"))
-        self.ventures_text.tag_configure("ready", foreground=GREEN)
-        self.ventures_text.tag_configure("blocked", foreground=RED)
-        self.ventures_text.tag_configure("detail", foreground=FG2)
-
-    def refresh_intelligence(self):
-        # Alpha theses
-        theses = self.master_ops.get("alpha_thesis", [])
-
-        def at_content(w):
-            w.insert("end", f"  ALPHA THESIS INDEX — {len(theses)} Theses\n\n", "header")
-            for t in theses:
-                alpha_id = str(t.get("ALPHA_ID", ""))
-                opp = str(t.get("OPPORTUNITY", ""))
-                lane = str(t.get("LANE", ""))
-                blocker = str(t.get("BLOCKER_KEY", "") or "")
-                edge = str(t.get("EDGE_DURATION", "") or "")
-                tag = "blocked" if blocker else "opportunity"
-                w.insert("end", f"  {alpha_id:<12} ", tag)
-                w.insert("end", f"{opp}\n", tag)
-                if lane or edge:
-                    w.insert("end", f"              Lane: {lane}  Edge: {edge}\n", "detail")
-                if blocker:
-                    w.insert("end", f"              BLOCKER: {blocker}\n", "blocked")
-                w.insert("end", "\n")
-
-        write_text(self.alpha_thesis_text, at_content)
-
-        # Synergy stacks
-        synergy = self.master_ops.get("synergy", [])
-
-        def sy_content(w):
-            w.insert("end", f"  SYNERGY STACKS — {len(synergy)} Packages\n\n", "header")
-            for s in synergy:
-                pkg_id = str(s.get("PACKAGE_ID", ""))
-                name = str(s.get("NAME", ""))
-                score = s.get("SYNERGY_SCORE", 0)
-                methods = str(s.get("METHODS_COMBINED", "") or "")
-                mult = s.get("REVENUE_MULTIPLIER", "")
-                try:
-                    score_num = float(score) if score else 0
-                except (ValueError, TypeError):
-                    score_num = 0
-                tag = "high_synergy" if score_num >= 80 else "detail"
-                w.insert("end", f"  {pkg_id:<12} {name}  [Score: {score_num:.0f}]", tag)
-                if mult:
-                    w.insert("end", f"  [Multiplier: {mult}x]", tag)
-                w.insert("end", "\n")
-                if methods:
-                    w.insert("end", f"              Methods: {methods[:80]}\n", "detail")
-                w.insert("end", "\n")
-
-        write_text(self.synergy_text, sy_content)
-
-        # Ventures
-        ventures = self.master_ops.get("ventures", [])
-
-        def ve_content(w):
-            w.insert("end", f"  VENTURE AUTOMATION MAP — {len(ventures)} Ventures\n\n", "header")
-            for v in ventures:
-                vid = str(v.get("VENTURE_ID", ""))
-                name = str(v.get("VENTURE_NAME", ""))
-                lane = str(v.get("LANE", ""))
-                readiness = str(v.get("READINESS", ""))
-                score = v.get("AUTOMATION_SCORE_100", 0)
-                blocker = str(v.get("BLOCKER_KEY", "") or "")
-                try:
-                    score_num = float(score) if score else 0
-                except (ValueError, TypeError):
-                    score_num = 0
-                tag = "blocked" if blocker else ("ready" if score_num >= 60 else "detail")
-                w.insert("end", f"  {vid:<12} {name[:30]:<32} {lane:<12} Score: {score_num:<6.0f}", tag)
-                if blocker:
-                    w.insert("end", f" BLOCKER: {blocker}", "blocked")
-                w.insert("end", "\n")
-
-        write_text(self.ventures_text, ve_content)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 6: TOOLS & INFRA
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_tools_infra_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Tools/Infra ")
-
-        sub_nb = ttk.Notebook(frame)
-        sub_nb.pack(fill="both", expand=True, padx=5, pady=5)
-
-        stacks = [
-            ("Video/Media", "video_stack", 28),
-            ("Lead Gen", "lead_gen", 33),
-            ("Hosting", "hosting", 14),
-            ("Browser/Proxy", "browser_proxy", 60),
-            ("Existing Infra", "existing_infra", 60),
-        ]
-        self.stack_texts = {}
-        for label, key, count in stacks:
-            sf = ttk.Frame(sub_nb)
-            sub_nb.add(sf, text=f" {label} ({count}) ")
-            t = make_text(sf, height=25)
-            t.pack(fill="both", expand=True, padx=5, pady=5)
-            t.tag_configure("header", foreground=ACCENT, font=("Menlo", 12, "bold"))
-            t.tag_configure("item", foreground=FG)
-            self.stack_texts[key] = t
-
-    def refresh_tools_infra(self):
-        for key, text_widget in self.stack_texts.items():
-            items = self.master_ops.get(key, [])
-
-            def make_content(w, items=items, key=key):
-                w.insert("end", f"  {key.upper().replace('_', ' ')} — {len(items)} items\n\n", "header")
-                if not items:
-                    w.insert("end", "  No data loaded for this stack.\n")
-                    return
-                # show all columns for each item
-                headers = list(items[0].keys()) if items else []
-                for item in items:
-                    first_val = str(item.get(headers[0], "")) if headers else ""
-                    w.insert("end", f"  {first_val}\n", "item")
-                    for h in headers[1:]:
-                        val = item.get(h)
-                        if val:
-                            w.insert("end", f"    {h}: {val}\n")
-
-            write_text(text_widget, make_content)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 7: TASKS
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_tasks_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Tasks ")
-
-        filter_frame = tk.Frame(frame, bg=BG)
-        filter_frame.pack(fill="x", padx=10, pady=(10, 5))
-        self.task_filter = tk.StringVar(value="ALL")
-        for label, val in [("All", "ALL"), ("Pending", "PENDING"), ("Active", "IN_PROGRESS"), ("Blocked", "BLOCKED"), ("Done", "DONE")]:
-            rb = tk.Radiobutton(
-                filter_frame, text=label, variable=self.task_filter, value=val,
-                bg=BG, fg=FG, selectcolor=BG2, activebackground=BG, activeforeground=ACCENT,
-                font=("Menlo", 10), command=self.refresh_tasks,
-            )
-            rb.pack(side="left", padx=5)
-
-        self.task_text = make_text(frame, height=25)
-        self.task_text.pack(fill="both", expand=True, padx=10, pady=5)
-        self.task_text.tag_configure("done", foreground=GREEN)
-        self.task_text.tag_configure("in_progress", foreground=ACCENT)
-        self.task_text.tag_configure("blocked", foreground=RED)
-        self.task_text.tag_configure("pending", foreground=YELLOW)
-        self.task_text.tag_configure("title", font=("Menlo", 12, "bold"))
-        self.task_text.tag_configure("detail", foreground=FG2)
-
-    def refresh_tasks(self):
-        tasks = load_tasks()
-        filt = self.task_filter.get()
-
-        def content(w):
-            counts = {"DONE": 0, "IN_PROGRESS": 0, "BLOCKED": 0, "PENDING": 0, "UNKNOWN": 0}
-            for t in tasks:
-                counts[t["status"]] = counts.get(t["status"], 0) + 1
-            w.insert("end", f"  Total: {len(tasks)}  |  Done: {counts['DONE']}  |  Active: {counts['IN_PROGRESS']}  |  Blocked: {counts['BLOCKED']}  |  Pending: {counts['PENDING']}\n\n")
-
-            for t in tasks:
-                if filt != "ALL" and t["status"] != filt:
-                    continue
-                status_tag = t["status"].lower()
-                icon = {"DONE": "[+]", "IN_PROGRESS": "[>]", "BLOCKED": "[X]", "PENDING": "[ ]"}.get(t["status"], "[?]")
-                w.insert("end", f"  {icon} ", status_tag)
-                w.insert("end", f"{t['id']}: {t['title']}\n", "title")
-                if t["priority"]:
-                    w.insert("end", f"      Priority: {t['priority']}\n", "detail")
-                for d in t["details"][:3]:
-                    w.insert("end", f"      {d}\n", "detail")
-                w.insert("end", "\n")
-
-        write_text(self.task_text, content)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 8: PRODUCT LAUNCH
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_launch_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Launch ")
-
-        summary_frame = tk.Frame(frame, bg=BG2, highlightbackground=BG3, highlightthickness=1)
-        summary_frame.pack(fill="x", padx=10, pady=(10, 5))
-        self.launch_summary_label = tk.Label(summary_frame, text="Loading...", font=("Menlo", 12), fg=FG, bg=BG2, justify="left")
-        self.launch_summary_label.pack(anchor="w", padx=10, pady=8)
-
-        sel_frame = tk.Frame(frame, bg=BG)
-        sel_frame.pack(fill="x", padx=10, pady=5)
-        tk.Label(sel_frame, text="Product:", font=("Menlo", 11), fg=FG, bg=BG).pack(side="left", padx=(0, 5))
-        self.product_var = tk.StringVar()
-        self.product_combo = ttk.Combobox(sel_frame, textvariable=self.product_var, state="readonly", width=30)
-        self.product_combo.pack(side="left", padx=5)
-        self.product_combo.bind("<<ComboboxSelected>>", lambda e: self.refresh_launch_list())
-
-        tk.Button(sel_frame, text="Open HIGHEST Tabs", font=("Menlo", 10), bg=PURPLE, fg=WHITE, relief="flat", command=self.open_highest_priority_tabs).pack(side="right", padx=5)
-        tk.Button(sel_frame, text="Run Automator", font=("Menlo", 10), bg=GREEN, fg=BG, relief="flat", command=self.run_launch_automator).pack(side="right", padx=5)
-
-        self.launch_text = make_text(frame, height=20)
-        self.launch_text.pack(fill="both", expand=True, padx=10, pady=5)
-        self.launch_text.tag_configure("highest", foreground=RED, font=("Menlo", 11, "bold"))
-        self.launch_text.tag_configure("high", foreground=ORANGE)
-        self.launch_text.tag_configure("medium", foreground=YELLOW)
-        self.launch_text.tag_configure("low", foreground=FG2)
-        self.launch_text.tag_configure("submitted", foreground=GREEN)
-        self.launch_text.tag_configure("url", foreground=ACCENT)
-
-    def refresh_launch(self):
-        entries = load_launch_tracker()
-        if not entries:
-            return
-        products = sorted(set(e.get("product_id", "") for e in entries))
-        self.product_combo["values"] = products
-        if not self.product_var.get() and products:
-            self.product_var.set(products[0])
-
-        counts = {}
-        for e in entries:
-            s = e.get("status", "UNKNOWN")
-            counts[s] = counts.get(s, 0) + 1
-        total = len(entries)
-        pending = counts.get("PENDING", 0)
-        submitted = counts.get("SUBMITTED", 0)
-        approved = counts.get("APPROVED", 0)
-        self.launch_summary_label.configure(text=f"Total: {total} across {len(products)} products  |  Pending: {pending}  |  Submitted: {submitted}  |  Approved: {approved}")
-        self.refresh_launch_list()
-
-    def refresh_launch_list(self):
-        entries = load_launch_tracker()
-        product = self.product_var.get()
-
-        def content(w):
-            filtered = [e for e in entries if e.get("product_id") == product]
-            for priority in ["HIGHEST", "HIGH", "MEDIUM", "LOW"]:
-                group = [e for e in filtered if e.get("priority") == priority]
-                if not group:
-                    continue
-                tag = priority.lower()
-                w.insert("end", f"\n  [{priority}] ({len(group)} directories)\n", tag)
-                for e in group:
-                    status = e.get("status", "PENDING")
-                    name = e.get("directory_name", "")
-                    url = e.get("directory_url", "")
-                    icon = "[+]" if status != "PENDING" else "[ ]"
-                    stag = "submitted" if status != "PENDING" else tag
-                    w.insert("end", f"    {icon} {name}", stag)
-                    w.insert("end", f"  {url}\n", "url")
-
-        write_text(self.launch_text, content)
-
-    def open_highest_priority_tabs(self):
-        product = self.product_var.get()
-        entries = load_launch_tracker()
-        count = 0
-        for e in entries:
-            if e.get("product_id") == product and e.get("priority") == "HIGHEST" and e.get("status") == "PENDING":
-                url = e.get("directory_url", "")
-                if url:
-                    subprocess.Popen(["open", url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    count += 1
-                    time.sleep(0.3)
-        self.status_label.configure(text=f"Opened {count} tabs for {product}", fg=GREEN)
-
-    def run_launch_automator(self):
-        script = AUTO / "product_launch_automator.py"
-        if script.exists():
-            self.run_tool(f"python3 {script} --launch --product {self.product_var.get()}", "Launch Automator")
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 9: ALARMS
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_alarms_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Alarms ")
-
-        add_frame = tk.Frame(frame, bg=BG2, highlightbackground=BG3, highlightthickness=1)
-        add_frame.pack(fill="x", padx=10, pady=(10, 5))
-        tk.Label(add_frame, text="SET ALARM", font=("Menlo", 13, "bold"), fg=ACCENT, bg=BG2).pack(anchor="w", padx=10, pady=(8, 5))
-
-        input_frame = tk.Frame(add_frame, bg=BG2)
-        input_frame.pack(fill="x", padx=10, pady=5)
-        tk.Label(input_frame, text="Time (HH:MM):", font=("Menlo", 11), fg=FG, bg=BG2).pack(side="left")
-        self.alarm_time_entry = tk.Entry(input_frame, width=8, bg=BG3, fg=FG, font=("Menlo", 12), insertbackground=FG, relief="flat")
-        self.alarm_time_entry.pack(side="left", padx=5)
-        tk.Label(input_frame, text="Message:", font=("Menlo", 11), fg=FG, bg=BG2).pack(side="left", padx=(10, 0))
-        self.alarm_msg_entry = tk.Entry(input_frame, width=40, bg=BG3, fg=FG, font=("Menlo", 12), insertbackground=FG, relief="flat")
-        self.alarm_msg_entry.pack(side="left", padx=5)
-        tk.Button(input_frame, text="Set", font=("Menlo", 10), bg=GREEN, fg=BG, relief="flat", command=self.add_alarm).pack(side="left", padx=10)
-
-        quick_frame = tk.Frame(add_frame, bg=BG2)
-        quick_frame.pack(fill="x", padx=10, pady=(5, 10))
-        for minutes, label in [(15, "15min"), (30, "30min"), (60, "1hr"), (120, "2hr")]:
-            tk.Button(quick_frame, text=label, font=("Menlo", 10), bg=BG3, fg=ACCENT, relief="flat", command=lambda m=minutes: self.add_quick_alarm(m)).pack(side="left", padx=3)
-
-        self.alarms_text = make_text(frame, height=10)
-        self.alarms_text.pack(fill="x", padx=10, pady=5)
-
-        # hourly schedule
-        tk.Label(frame, text="DAILY SCHEDULE", font=("Menlo", 11, "bold"), fg=FG2, bg=BG).pack(anchor="w", padx=10, pady=(5, 2))
-        sched_text = make_text(frame, height=8)
-        sched_text.pack(fill="both", expand=True, padx=10, pady=(0, 10))
-        sched_text.configure(state="normal")
-        for hour in sorted(HOURLY_TASKS.keys()):
-            sched_text.insert("end", f"  {hour:02d}:00  {HOURLY_TASKS[hour]}\n")
-        sched_text.configure(state="disabled")
-
-    def add_alarm(self):
-        time_str = self.alarm_time_entry.get().strip()
-        msg = self.alarm_msg_entry.get().strip()
-        if not time_str or not msg:
-            return
-        try:
-            h, m = map(int, time_str.split(":"))
-            now = datetime.now()
-            alarm_dt = now.replace(hour=h, minute=m, second=0, microsecond=0)
-            if alarm_dt <= now:
-                alarm_dt += timedelta(days=1)
-            self.alarm_mgr.add_alarm(alarm_dt, msg)
-            self.alarm_time_entry.delete(0, "end")
-            self.alarm_msg_entry.delete(0, "end")
-            self.refresh_alarms()
-            self.status_label.configure(text=f"Alarm set for {alarm_dt.strftime('%H:%M')}", fg=GREEN)
-        except Exception:
-            self.status_label.configure(text="Invalid time format. Use HH:MM", fg=RED)
-
-    def add_quick_alarm(self, minutes: int):
-        alarm_dt = datetime.now() + timedelta(minutes=minutes)
-        self.alarm_mgr.add_alarm(alarm_dt, f"{minutes} minute reminder")
-        self.refresh_alarms()
-        macos_notify("PRINTMAXX", f"Alarm set for {minutes} minutes", "Pop")
-        self.status_label.configure(text=f"Alarm: {alarm_dt.strftime('%H:%M')} ({minutes}min)", fg=GREEN)
-
-    def refresh_alarms(self):
-        pending = self.alarm_mgr.get_pending()
-
-        def content(w):
-            if not pending:
-                w.insert("end", "  No active alarms.\n")
-            else:
-                for i, a in enumerate(pending):
-                    dt = a["time"].strftime("%H:%M")
-                    delta = a["time"] - datetime.now()
-                    mins = max(0, int(delta.total_seconds() / 60))
-                    w.insert("end", f"  [{i + 1}] {dt} ({mins}min) - {a['message']}\n")
-
-        write_text(self.alarms_text, content)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TAB 10: QUICK LAUNCH
-    # ══════════════════════════════════════════════════════════════════════
-
-    def build_quick_launch_tab(self):
-        frame = ttk.Frame(self.notebook)
-        self.notebook.add(frame, text=" Quick Launch ")
-
-        groups = [
-            ("System", [
-                ("Health Check", f"python3 {AUTO}/system_health_monitor.py --quick"),
-                ("Heartbeat", f"python3 {AUTO}/memory_manager.py --heartbeat"),
-                ("Memory Full", f"python3 {AUTO}/memory_manager.py --full"),
-                ("Venture Scores", f"python3 {AUTO}/venture_performance_tracker.py --recommend"),
-            ]),
-            ("Dashboard", [
-                ("Web Dashboard", f"python3 {AUTO}/ops_web_dashboard.py"),
-                ("Quant Terminal", f"python3 {AUTO}/printmaxx_quant_terminal.py --summary"),
-                ("Pipeline", f"python3 {AUTO}/closed_loop_pipeline.py --status"),
-                ("Rebalancer", f"python3 {AUTO}/auto_rebalancer.py --check"),
-            ]),
-            ("Research", [
-                ("Twitter Scraper", f"python3 {AUTO}/twitter_alpha_scraper.py --all"),
-                ("Reddit Scraper", f"python3 {AUTO}/background_reddit_scraper.py --scrape"),
-                ("Alpha Processor", f"python3 {AUTO}/alpha_auto_processor.py --process-new"),
-                ("Memory Search", f"python3 {AUTO}/semantic_memory_search.py --stats"),
-            ]),
-            ("Content", [
-                ("Content Trends", f"python3 {AUTO}/content_trend_pipeline.py --status"),
-                ("Compliance", f"python3 {AUTO}/compliance_scanner.py --audit-all"),
-                ("Freelance Pipe", f"python3 {AUTO}/freelance_pipeline.py --daily"),
-                ("Cold Email", f"python3 {AUTO}/generate_cold_emails.py --dry-run"),
-            ]),
-            ("Launch", [
-                ("Launch Status", f"python3 {AUTO}/product_launch_automator.py --status"),
-                ("SaaS Scanner", f"python3 {AUTO}/saas_product_scanner.py --scan"),
-                ("App Clones", f"python3 {AUTO}/app_clone_pipeline.py --status"),
-                ("Trend Scanner", f"python3 {AUTO}/trend_aggregator.py --scan"),
-            ]),
-        ]
-
-        canvas = tk.Canvas(frame, bg=BG, highlightthickness=0)
-        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=canvas.yview)
-        scroll_frame = tk.Frame(canvas, bg=BG)
-        scroll_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
-        canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
-        canvas.configure(yscrollcommand=scrollbar.set)
-
-        for group_name, tools in groups:
-            gf = tk.Frame(scroll_frame, bg=BG2, highlightbackground=BG3, highlightthickness=1)
-            gf.pack(fill="x", padx=10, pady=3)
-            tk.Label(gf, text=group_name.upper(), font=("Menlo", 11, "bold"), fg=ACCENT, bg=BG2).pack(anchor="w", padx=10, pady=(6, 3))
-            btn_frame = tk.Frame(gf, bg=BG2)
-            btn_frame.pack(fill="x", padx=10, pady=(0, 6))
-            for tool_name, cmd in tools:
-                btn = tk.Button(
-                    btn_frame, text=tool_name, font=("Menlo", 10),
-                    bg=BG3, fg=FG, relief="flat", width=18,
-                    command=lambda c=cmd, n=tool_name: self.run_tool(c, n),
-                )
-                btn.pack(side="left", padx=3)
-
-        canvas.pack(side="left", fill="both", expand=True)
-        scrollbar.pack(side="right", fill="y")
-
-    # ══════════════════════════════════════════════════════════════════════
-    # ACTIONS
-    # ══════════════════════════════════════════════════════════════════════
-
-    def run_tool(self, cmd: str, name: str):
-        apple_script = f'''
-        tell application "Terminal"
-            activate
-            do script "cd \\"{BASE}\\" && {cmd}"
-        end tell
-        '''
-        try:
-            subprocess.Popen(["osascript", "-e", apple_script], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            self.status_label.configure(text=f"Launched: {name}", fg=GREEN)
-        except Exception as e:
-            self.status_label.configure(text=f"Error: {e}", fg=RED)
-
-    # ══════════════════════════════════════════════════════════════════════
-    # REFRESH
-    # ══════════════════════════════════════════════════════════════════════
-
-    def update_clock(self):
-        now = datetime.now()
-        self.clock_label.configure(text=now.strftime("%Y-%m-%d %H:%M:%S"))
-        self.root.after(1000, self.update_clock)
-
-    def refresh_all(self):
-        try:
-            self.refresh_dashboard()
-            self.refresh_goals_tab()
-            self.refresh_operations()
-            self.refresh_priority()
-            self.refresh_intelligence()
-            self.refresh_tools_infra()
-            self.refresh_tasks()
-            self.refresh_launch()
-            self.refresh_alarms()
-        except Exception:
-            pass
-        self.root.after(60000, self.refresh_all)
-
-    def refresh_dashboard(self):
-        hb = load_heartbeat()
-
-        # heartbeat text
-        def hb_content(w):
-            w.insert("end", f"  Last update: {hb['timestamp']}\n\n")
-            for line in hb["lines"]:
-                w.insert("end", f"  {line}\n")
-
-        write_text(self.heartbeat_text, hb_content)
-
-        # stats from heartbeat
-        raw = hb.get("raw", {})
-        if "hot_leads" in raw:
-            self.stat_labels["Hot Leads"].configure(text=raw["hot_leads"])
-        if "revenue" in raw:
-            val = raw["revenue"]
-            color = GREEN if val != "0" else RED
-            self.stat_labels["Revenue"].configure(text=f"${val}", fg=color)
-        if "alpha_pending" in raw:
-            self.stat_labels["Alpha"].configure(text=raw["alpha_pending"])
-        if "accounts" in raw:
-            self.stat_labels["Accounts"].configure(text=raw["accounts"])
-        if "apps_live" in raw:
-            self.stat_labels["Apps"].configure(text=raw["apps_live"])
-        if "scripts" in raw:
-            self.stat_labels["Scripts"].configure(text=raw["scripts"])
-
-        # ops + ventures count from master ops
-        ops_count = len(self.master_ops.get("auto_status", []))
-        vent_count = len(self.master_ops.get("ventures", []))
-        self.stat_labels["Ops"].configure(text=str(ops_count))
-        self.stat_labels["Ventures"].configure(text=str(vent_count))
-
-        # motivation
-        idx = int(time.time() / 120) % len(MOTIVATION)
-        self.motivation_label.configure(text=f'"{MOTIVATION[idx]}"')
-
-        # current hour task
-        hour = datetime.now().hour
-        if hour in HOURLY_TASKS:
-            self.hour_task_label.configure(text=HOURLY_TASKS[hour])
-        else:
-            self.hour_task_label.configure(text="No scheduled task this hour. Build something.")
-
-        # goals summary on dashboard
-        self.daily_goals = load_daily_goals()
-        goals = self.daily_goals
-
-        def goals_content(w):
-            if not goals:
-                w.insert("end", "  No daily goals loaded for today.\n")
-                return
-            total = sum(len(g["tasks"]) for g in goals)
-            done = sum(g["done_count"] for g in goals)
-            pct = int(done / total * 100) if total > 0 else 0
-            w.insert("end", f"  Progress: {done}/{total} ({pct}%)\n\n", "header")
+        done_tasks = sum(g["done_count"] for g in goals)
+        return jsonify({
+            "heartbeat": hb,
+            "goals_summary": {
+                "total": total_tasks,
+                "done": done_tasks,
+                "goals": [{"title": g["title"],
+                           "done": g["done_count"],
+                           "total": len(g["tasks"])} for g in goals]
+            },
+            "wake_state": alarm_engine.get_state(),
+            "hour_task": HOURLY_TASKS.get(datetime.now().hour, ""),
+            "quote": random.choice(MOTIVATION),
+            "time": datetime.now().strftime("%H:%M:%S"),
+        })
+
+    @app.route("/api/goals")
+    def api_goals():
+        return jsonify({"goals": load_daily_goals()})
+
+    @app.route("/api/operations")
+    def api_operations():
+        ops = cached_load("ops", load_master_ops, 300)
+        return jsonify(ops)
+
+    @app.route("/api/operations/<category>")
+    def api_ops_category(category):
+        ops = cached_load("ops", load_master_ops, 300)
+        items = ops.get(category, [])
+        return jsonify({"category": category, "items": items})
+
+    @app.route("/api/tasks")
+    def api_tasks():
+        return jsonify({"tasks": load_tasks()})
+
+    @app.route("/api/launch")
+    def api_launch():
+        return jsonify({"entries": load_launch_tracker()})
+
+    @app.route("/api/wake", methods=["POST"])
+    def api_wake():
+        alarm_engine.wake()
+        # load daily goals as initial todos if no todos set
+        if not alarm_engine.get_todos():
+            goals = load_daily_goals()
+            items = []
             for g in goals:
-                d = g["done_count"]
-                t = len(g["tasks"])
-                tag = "done" if d == t else "pending"
-                icon = "[+]" if d == t else f"[{d}/{t}]"
-                w.insert("end", f"  {icon} {g['title']}\n", tag)
+                for t in g["tasks"]:
+                    items.append({"text": f"[{g['title']}] {t['text']}", "done": t["done"]})
+            if items:
+                alarm_engine.set_todos(items)
+        return jsonify({"status": "awake", "state": alarm_engine.get_state()})
 
-        write_text(self.goals_summary_text, goals_content)
+    @app.route("/api/sleep", methods=["POST"])
+    def api_sleep():
+        alarm_engine.sleep_mode()
+        return jsonify({"status": "asleep"})
+
+    @app.route("/api/todo", methods=["POST"])
+    def api_set_todos():
+        data = request.get_json(force=True)
+        items = data.get("items", [])
+        alarm_engine.set_todos([{"text": i, "done": False} for i in items])
+        return jsonify({"status": "ok", "count": len(items)})
+
+    @app.route("/api/todo/toggle", methods=["POST"])
+    def api_toggle_todo():
+        data = request.get_json(force=True)
+        idx = data.get("index", -1)
+        alarm_engine.toggle_todo(idx)
+        return jsonify({"status": "ok", "todos": alarm_engine.get_todos()})
+
+    @app.route("/api/alarm", methods=["POST"])
+    def api_add_alarm():
+        data = request.get_json(force=True)
+        minutes = data.get("minutes", 15)
+        message = data.get("message", "PRINTMAXX alarm")
+        repeat = data.get("repeat", 0)
+        alarm_time = datetime.now() + timedelta(minutes=minutes)
+        alarm_engine.add_alarm(alarm_time, message, repeat)
+        return jsonify({"status": "ok", "alarm_time": alarm_time.strftime("%H:%M")})
+
+    @app.route("/api/alarm/repeat15", methods=["POST"])
+    def api_alarm_repeat15():
+        now = datetime.now()
+        midnight = now.replace(hour=23, minute=59, second=59)
+        alarm_engine.add_alarm(
+            now + timedelta(minutes=15),
+            "15-min check: finish today's todo list!",
+            repeat_minutes=15
+        )
+        return jsonify({"status": "ok", "message": "repeating every 15 min until midnight"})
+
+    @app.route("/api/wake-state")
+    def api_wake_state():
+        return jsonify(alarm_engine.get_state())
+
+    @app.route("/api/todos")
+    def api_get_todos():
+        return jsonify({"todos": alarm_engine.get_todos()})
+
+    return app
+
+
+# ── HTML Template ───────────────────────────────────────────────────────────
+# All JavaScript uses safe DOM methods (textContent, createElement, appendChild)
+# No innerHTML anywhere — passes security hook
+
+HTML_TEMPLATE = r"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRINTMAXX Command Center</title>
+<style>
+:root {
+  --bg: #09090b; --bg2: #18181b; --bg3: #27272a;
+  --fg: #fafafa; --fg2: #a1a1aa; --fg3: #71717a;
+  --accent: #3b82f6; --accent2: #8b5cf6;
+  --green: #22c55e; --red: #ef4444; --yellow: #eab308;
+  --orange: #f97316; --cyan: #06b6d4;
+  --border: #3f3f46; --card: #1c1c1e;
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg); color: var(--fg);
+  display: flex; height: 100vh; overflow: hidden;
+}
+/* ── sidebar ── */
+.sidebar {
+  width: 240px; background: var(--bg2); border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; flex-shrink: 0;
+}
+.sidebar-header {
+  padding: 20px; border-bottom: 1px solid var(--border);
+}
+.sidebar-header h1 {
+  font-size: 18px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.sidebar-header .wake-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 10px;
+  font-size: 11px; font-weight: 600; margin-top: 6px;
+}
+.wake-badge.awake { background: rgba(34,197,94,0.15); color: var(--green); }
+.wake-badge.asleep { background: rgba(239,68,68,0.15); color: var(--red); }
+.sidebar nav { flex: 1; padding: 8px; overflow-y: auto; }
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: 8px; cursor: pointer;
+  color: var(--fg2); font-size: 13px; font-weight: 500;
+  transition: all 0.15s;
+}
+.nav-item:hover { background: var(--bg3); color: var(--fg); }
+.nav-item.active { background: rgba(59,130,246,0.12); color: var(--accent); }
+.nav-icon { width: 18px; text-align: center; font-size: 15px; }
+.sidebar-footer {
+  padding: 12px; border-top: 1px solid var(--border);
+  display: flex; gap: 8px;
+}
+.sidebar-footer button {
+  flex: 1; padding: 8px; border-radius: 8px; border: none;
+  font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s;
+}
+.btn-wake { background: var(--green); color: #000; }
+.btn-wake:hover { opacity: 0.85; }
+.btn-sleep { background: var(--bg3); color: var(--fg2); border: 1px solid var(--border) !important; }
+.btn-sleep:hover { background: var(--border); }
+/* ── main ── */
+.main { flex: 1; overflow-y: auto; padding: 24px; }
+.page { display: none; }
+.page.active { display: block; }
+.page-title {
+  font-size: 24px; font-weight: 700; margin-bottom: 4px;
+}
+.page-subtitle { color: var(--fg2); font-size: 13px; margin-bottom: 20px; }
+/* ── cards ── */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.card {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; transition: border-color 0.15s;
+}
+.card:hover { border-color: var(--fg3); }
+.card-label { font-size: 11px; color: var(--fg3); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.card-value { font-size: 28px; font-weight: 700; }
+.card-sub { font-size: 12px; color: var(--fg2); margin-top: 4px; }
+/* ── tables ── */
+.data-table {
+  width: 100%; border-collapse: collapse; margin-top: 12px;
+}
+.data-table th {
+  text-align: left; padding: 8px 12px; font-size: 11px;
+  color: var(--fg3); text-transform: uppercase; letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border); position: sticky; top: 0;
+  background: var(--bg);
+}
+.data-table td {
+  padding: 8px 12px; font-size: 13px; border-bottom: 1px solid var(--border);
+  color: var(--fg2);
+}
+.data-table tr:hover td { background: var(--bg2); }
+/* ── status pills ── */
+.pill {
+  display: inline-block; padding: 2px 8px; border-radius: 6px;
+  font-size: 11px; font-weight: 600;
+}
+.pill-green { background: rgba(34,197,94,0.12); color: var(--green); }
+.pill-red { background: rgba(239,68,68,0.12); color: var(--red); }
+.pill-yellow { background: rgba(234,179,8,0.12); color: var(--yellow); }
+.pill-blue { background: rgba(59,130,246,0.12); color: var(--accent); }
+.pill-purple { background: rgba(139,92,246,0.12); color: var(--accent2); }
+/* ── quote banner ── */
+.quote-banner {
+  background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(139,92,246,0.08));
+  border: 1px solid rgba(59,130,246,0.15); border-radius: var(--radius);
+  padding: 16px 20px; margin-bottom: 20px; font-size: 14px; color: var(--fg2);
+  font-style: italic;
+}
+/* ── goal bar ── */
+.goal-bar-wrap { margin-bottom: 12px; }
+.goal-bar-header { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 13px; }
+.goal-bar-track {
+  height: 8px; background: var(--bg3); border-radius: 4px; overflow: hidden;
+}
+.goal-bar-fill {
+  height: 100%; border-radius: 4px; transition: width 0.3s;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+}
+/* ── todo list ── */
+.todo-item {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+  border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.1s;
+}
+.todo-item:hover { background: var(--bg2); }
+.todo-check {
+  width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: all 0.15s;
+}
+.todo-check.done { background: var(--green); border-color: var(--green); }
+.todo-text { font-size: 13px; color: var(--fg2); }
+.todo-text.done { text-decoration: line-through; color: var(--fg3); }
+/* ── alarm section ── */
+.alarm-controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.alarm-btn {
+  padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg2); color: var(--fg); font-size: 13px; cursor: pointer;
+  transition: all 0.15s;
+}
+.alarm-btn:hover { border-color: var(--accent); color: var(--accent); }
+.alarm-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.alarm-btn.primary:hover { opacity: 0.85; }
+/* ── heartbeat lines ── */
+.hb-line { padding: 4px 0; font-size: 13px; color: var(--fg2); font-family: 'SF Mono', Menlo, monospace; }
+/* ── section header ── */
+.section-header { font-size: 16px; font-weight: 600; margin: 20px 0 12px; }
+/* ── loading ── */
+.loading { color: var(--fg3); font-size: 13px; padding: 20px; }
+/* ── quick launch ── */
+.ql-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+.ql-btn {
+  padding: 12px 16px; background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--fg); font-size: 12px;
+  cursor: pointer; transition: all 0.15s; text-align: left;
+}
+.ql-btn:hover { border-color: var(--accent); background: var(--bg3); }
+.ql-btn-label { font-weight: 600; font-size: 13px; margin-bottom: 2px; }
+.ql-btn-desc { color: var(--fg3); font-size: 11px; }
+/* ── scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--fg3); }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h1>PRINTMAXX</h1>
+    <div id="wakeBadge" class="wake-badge asleep">ASLEEP</div>
+  </div>
+  <nav id="navList"></nav>
+  <div class="sidebar-footer">
+    <button class="btn-wake" onclick="doWake()">WAKE</button>
+    <button class="btn-sleep" onclick="doSleep()">SLEEP</button>
+  </div>
+</div>
+
+<div class="main">
+  <!-- DASHBOARD -->
+  <div id="page-dashboard" class="page active">
+    <div class="page-title">Dashboard</div>
+    <div class="page-subtitle" id="dashTime"></div>
+    <div id="quoteBanner" class="quote-banner"></div>
+    <div id="dashCards" class="cards"></div>
+    <div class="section-header">Heartbeat</div>
+    <div id="hbLines"></div>
+    <div class="section-header">Current Hour Task</div>
+    <div id="hourTask" class="hb-line"></div>
+  </div>
+
+  <!-- GOALS -->
+  <div id="page-goals" class="page">
+    <div class="page-title">Daily Goals</div>
+    <div class="page-subtitle" id="goalsSubtitle"></div>
+    <div id="goalBars"></div>
+  </div>
+
+  <!-- TODOS -->
+  <div id="page-todos" class="page">
+    <div class="page-title">Todo List</div>
+    <div class="page-subtitle">click to toggle. alarms remind every 15 min when awake.</div>
+    <div id="todoList"></div>
+  </div>
+
+  <!-- OPERATIONS -->
+  <div id="page-operations" class="page">
+    <div class="page-title">Master Ops</div>
+    <div class="page-subtitle" id="opsSubtitle"></div>
+    <div id="opsContent"></div>
+  </div>
+
+  <!-- PRIORITY -->
+  <div id="page-priority" class="page">
+    <div class="page-title">Priority Automation</div>
+    <div class="page-subtitle">Top priority automation tasks from Master Ops</div>
+    <div id="priorityContent"></div>
+  </div>
+
+  <!-- VENTURES -->
+  <div id="page-ventures" class="page">
+    <div class="page-title">Ventures</div>
+    <div class="page-subtitle">Venture automation map</div>
+    <div id="venturesContent"></div>
+  </div>
+
+  <!-- TOOLS -->
+  <div id="page-tools" class="page">
+    <div class="page-title">Tool Stacks</div>
+    <div class="page-subtitle">Video, Lead Gen, Hosting, Browser stacks</div>
+    <div id="toolsContent"></div>
+  </div>
+
+  <!-- ALARMS -->
+  <div id="page-alarms" class="page">
+    <div class="page-title">Alarms</div>
+    <div class="page-subtitle">Smart alarm system. Only fires when awake.</div>
+    <div class="alarm-controls">
+      <button class="alarm-btn primary" onclick="setRepeat15()">Every 15 min until midnight</button>
+      <button class="alarm-btn" onclick="addQuickAlarm(15)">+15 min</button>
+      <button class="alarm-btn" onclick="addQuickAlarm(30)">+30 min</button>
+      <button class="alarm-btn" onclick="addQuickAlarm(60)">+1 hr</button>
+      <button class="alarm-btn" onclick="addQuickAlarm(120)">+2 hr</button>
+    </div>
+    <div class="section-header">Pending Alarms</div>
+    <div id="alarmList"></div>
+  </div>
+
+  <!-- TASKS -->
+  <div id="page-tasks" class="page">
+    <div class="page-title">Task Tracker</div>
+    <div class="page-subtitle">From PERSISTENT_TASK_TRACKER.md</div>
+    <div id="taskContent"></div>
+  </div>
+
+  <!-- LAUNCH -->
+  <div id="page-launch" class="page">
+    <div class="page-title">Launch Tracker</div>
+    <div class="page-subtitle">Product directory submissions</div>
+    <div id="launchContent"></div>
+  </div>
+
+  <!-- QUICK LAUNCH -->
+  <div id="page-quick" class="page">
+    <div class="page-title">Quick Launch</div>
+    <div class="page-subtitle">One-click tool launchers</div>
+    <div id="quickGrid" class="ql-grid"></div>
+  </div>
+</div>
+
+<script>
+// ── state ──
+var state = { page: 'dashboard', todos: [] };
+
+// ── nav items ──
+var NAV = [
+  {id:'dashboard', icon:'\u25A0', label:'Dashboard'},
+  {id:'goals', icon:'\u2606', label:'Daily Goals'},
+  {id:'todos', icon:'\u2713', label:'Todo List'},
+  {id:'operations', icon:'\u2699', label:'Operations'},
+  {id:'priority', icon:'\u26A1', label:'Priority'},
+  {id:'ventures', icon:'\u27A4', label:'Ventures'},
+  {id:'tools', icon:'\u2692', label:'Tools'},
+  {id:'alarms', icon:'\u23F0', label:'Alarms'},
+  {id:'tasks', icon:'\u2630', label:'Tasks'},
+  {id:'launch', icon:'\u2708', label:'Launch'},
+  {id:'quick', icon:'\u2B50', label:'Quick Launch'}
+];
+
+// ── quick launch commands ──
+var QUICK_CMDS = [
+  {label:'System Health', desc:'health check', cmd:'python3 AUTOMATIONS/system_health_monitor.py --quick'},
+  {label:'Heartbeat', desc:'refresh heartbeat', cmd:'python3 AUTOMATIONS/memory_manager.py --heartbeat'},
+  {label:'Agent Runner', desc:'auto-orient', cmd:'python3 AUTOMATIONS/daily_agent_runner.py --status'},
+  {label:'Rebalancer', desc:'score methods', cmd:'python3 AUTOMATIONS/auto_rebalancer.py --check'},
+  {label:'Venture Tracker', desc:'kill/double', cmd:'python3 AUTOMATIONS/venture_performance_tracker.py --recommend'},
+  {label:'Alpha Screener', desc:'pending alpha', cmd:'python3 AUTOMATIONS/alpha_screening.py --pending'},
+  {label:'Quant Terminal', desc:'full TUI', cmd:'python3 AUTOMATIONS/printmaxx_quant_terminal.py --summary'},
+  {label:'Pipeline Status', desc:'lead pipeline', cmd:'python3 AUTOMATIONS/closed_loop_pipeline.py --status'},
+  {label:'Checkpoints', desc:'human approvals', cmd:'python3 AUTOMATIONS/checkpoint_manager.py --status'},
+  {label:'SaaS Scanner', desc:'SaaS potential', cmd:'python3 AUTOMATIONS/saas_product_scanner.py --top 5'},
+  {label:'Memory Search', desc:'search ops', cmd:'python3 AUTOMATIONS/semantic_memory_search.py --stats'},
+  {label:'Compliance', desc:'deadline check', cmd:'python3 AUTOMATIONS/compliance_deadline_tracker.py --check'},
+];
+
+// ── safe DOM helpers ──
+function el(tag, attrs, children) {
+  var e = document.createElement(tag);
+  if (attrs) {
+    for (var k in attrs) {
+      if (k === 'className') e.className = attrs[k];
+      else if (k === 'onclick') e.onclick = attrs[k];
+      else if (k === 'style') e.setAttribute('style', attrs[k]);
+      else e.setAttribute(k, attrs[k]);
+    }
+  }
+  if (children) {
+    if (typeof children === 'string') e.textContent = children;
+    else if (Array.isArray(children)) children.forEach(function(c) { if (c) e.appendChild(c); });
+    else e.appendChild(children);
+  }
+  return e;
+}
+
+function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+
+// ── build nav ──
+function buildNav() {
+  var nav = document.getElementById('navList');
+  NAV.forEach(function(item) {
+    var div = el('div', {className: 'nav-item' + (item.id === state.page ? ' active' : ''),
+                         onclick: function() { switchPage(item.id); }}, [
+      el('span', {className: 'nav-icon'}, item.icon),
+      el('span', {}, item.label)
+    ]);
+    div.dataset.navId = item.id;
+    nav.appendChild(div);
+  });
+}
+
+function switchPage(id) {
+  state.page = id;
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  var pg = document.getElementById('page-' + id);
+  if (pg) pg.classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(function(n) {
+    n.classList.toggle('active', n.dataset.navId === id);
+  });
+  loadPageData(id);
+}
+
+// ── API helpers ──
+function api(path, opts) {
+  return fetch(path, opts).then(function(r) { return r.json(); });
+}
+
+function post(path, body) {
+  return api(path, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body || {})});
+}
+
+// ── wake/sleep ──
+function doWake() { post('/api/wake').then(function() { refreshDashboard(); }); }
+function doSleep() { post('/api/sleep').then(function() { refreshDashboard(); }); }
+
+// ── alarms ──
+function setRepeat15() {
+  post('/api/alarm/repeat15').then(function() { loadAlarms(); });
+}
+function addQuickAlarm(min) {
+  post('/api/alarm', {minutes: min, message: min + ' min alarm'}).then(function() { loadAlarms(); });
+}
+
+// ── toggle todo ──
+function toggleTodo(idx) {
+  post('/api/todo/toggle', {index: idx}).then(function(d) {
+    state.todos = d.todos;
+    renderTodos();
+  });
+}
+
+// ── build table from array of dicts ──
+function buildTable(container, items, maxCols) {
+  clear(container);
+  if (!items || items.length === 0) {
+    container.appendChild(el('div', {className: 'loading'}, 'No data'));
+    return;
+  }
+  var keys = Object.keys(items[0]);
+  if (maxCols && keys.length > maxCols) keys = keys.slice(0, maxCols);
+  var table = el('table', {className: 'data-table'});
+  var thead = el('thead');
+  var headRow = el('tr');
+  keys.forEach(function(k) { headRow.appendChild(el('th', {}, k)); });
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+  var tbody = el('tbody');
+  items.slice(0, 100).forEach(function(item) {
+    var row = el('tr');
+    keys.forEach(function(k) {
+      var val = item[k] || '';
+      var td = el('td');
+      // status pills
+      var valStr = String(val).toUpperCase();
+      if (valStr === 'DONE' || valStr === 'LIVE' || valStr === 'ACTIVE') {
+        td.appendChild(el('span', {className: 'pill pill-green'}, String(val)));
+      } else if (valStr === 'BLOCKED' || valStr === 'FAILED' || valStr === 'DEAD') {
+        td.appendChild(el('span', {className: 'pill pill-red'}, String(val)));
+      } else if (valStr === 'IN_PROGRESS' || valStr === 'PENDING') {
+        td.appendChild(el('span', {className: 'pill pill-yellow'}, String(val)));
+      } else {
+        td.textContent = String(val).substring(0, 80);
+      }
+      row.appendChild(td);
+    });
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+  container.appendChild(table);
+  if (items.length > 100) {
+    container.appendChild(el('div', {className: 'loading'}, '... and ' + (items.length - 100) + ' more'));
+  }
+}
+
+// ── build card ──
+function buildCard(label, value, sub, color) {
+  var card = el('div', {className: 'card'});
+  card.appendChild(el('div', {className: 'card-label'}, label));
+  var valEl = el('div', {className: 'card-value'});
+  if (color) valEl.style.color = 'var(--' + color + ')';
+  valEl.textContent = value;
+  card.appendChild(valEl);
+  if (sub) card.appendChild(el('div', {className: 'card-sub'}, sub));
+  return card;
+}
+
+// ── dashboard refresh ──
+function refreshDashboard() {
+  api('/api/status').then(function(d) {
+    // time
+    document.getElementById('dashTime').textContent = d.time;
+    // quote
+    document.getElementById('quoteBanner').textContent = d.quote;
+    // wake badge
+    var badge = document.getElementById('wakeBadge');
+    badge.textContent = d.wake_state.is_awake ? 'AWAKE' : 'ASLEEP';
+    badge.className = 'wake-badge ' + (d.wake_state.is_awake ? 'awake' : 'asleep');
+    // cards
+    var cards = document.getElementById('dashCards');
+    clear(cards);
+    var raw = d.heartbeat.raw || {};
+    cards.appendChild(buildCard('Hot Leads', raw.hot_leads || '0', 'qualified leads', 'orange'));
+    cards.appendChild(buildCard('Revenue', '$' + (raw.revenue || '0'), 'total earned', 'green'));
+    cards.appendChild(buildCard('Alpha Pending', raw.alpha_pending || '0', 'needs review', 'yellow'));
+    cards.appendChild(buildCard('Accounts', raw.accounts || '0/0', 'created', 'accent'));
+    cards.appendChild(buildCard('Apps', raw.apps_live || '0/0', 'live', 'cyan'));
+    cards.appendChild(buildCard('Goals', d.goals_summary.done + '/' + d.goals_summary.total, 'completed today', 'accent2'));
+    cards.appendChild(buildCard('Todos', d.wake_state.todo_done + '/' + d.wake_state.todo_count, 'wake session', 'green'));
+    cards.appendChild(buildCard('Alarms', String(d.wake_state.pending_alarms), 'pending', 'yellow'));
+    // heartbeat
+    var hbEl = document.getElementById('hbLines');
+    clear(hbEl);
+    (d.heartbeat.lines || []).forEach(function(line) {
+      hbEl.appendChild(el('div', {className: 'hb-line'}, line));
+    });
+    // hour task
+    document.getElementById('hourTask').textContent = d.hour_task || 'No task for this hour';
+  });
+}
+
+// ── goals page ──
+function loadGoals() {
+  api('/api/goals').then(function(d) {
+    var goals = d.goals || [];
+    var total = 0, done = 0;
+    goals.forEach(function(g) { total += g.tasks.length; done += g.done_count; });
+    document.getElementById('goalsSubtitle').textContent = done + '/' + total + ' tasks completed today';
+    var container = document.getElementById('goalBars');
+    clear(container);
+    goals.forEach(function(g) {
+      var pct = g.tasks.length > 0 ? Math.round(g.done_count / g.tasks.length * 100) : 0;
+      var wrap = el('div', {className: 'goal-bar-wrap'});
+      var header = el('div', {className: 'goal-bar-header'}, [
+        el('span', {}, g.title),
+        el('span', {}, g.done_count + '/' + g.tasks.length)
+      ]);
+      wrap.appendChild(header);
+      var track = el('div', {className: 'goal-bar-track'});
+      var fill = el('div', {className: 'goal-bar-fill', style: 'width:' + pct + '%'});
+      track.appendChild(fill);
+      wrap.appendChild(track);
+      container.appendChild(wrap);
+    });
+  });
+}
+
+// ── todo rendering ──
+function renderTodos() {
+  var container = document.getElementById('todoList');
+  clear(container);
+  state.todos.forEach(function(t, i) {
+    var item = el('div', {className: 'todo-item', onclick: function() { toggleTodo(i); }});
+    var check = el('div', {className: 'todo-check' + (t.done ? ' done' : '')});
+    if (t.done) check.textContent = '\u2713';
+    item.appendChild(check);
+    item.appendChild(el('span', {className: 'todo-text' + (t.done ? ' done' : '')}, t.text));
+    container.appendChild(item);
+  });
+  if (state.todos.length === 0) {
+    container.appendChild(el('div', {className: 'loading'}, 'No todos. Wake up to load daily goals as todos.'));
+  }
+}
+
+function loadTodos() {
+  api('/api/todos').then(function(d) {
+    state.todos = d.todos || [];
+    renderTodos();
+  });
+}
+
+// ── operations page ──
+function loadOperations() {
+  api('/api/operations').then(function(d) {
+    document.getElementById('opsSubtitle').textContent = 'Source: ' + (d.filename || 'not found');
+    var container = document.getElementById('opsContent');
+    clear(container);
+    var categories = [
+      {key: 'auto_status', label: 'Auto Status Live'},
+      {key: 'synergy', label: 'Synergy Stacks'},
+      {key: 'alpha_thesis', label: 'Alpha Thesis Index'},
+      {key: 'existing_infra', label: 'Existing Infrastructure'},
+    ];
+    categories.forEach(function(cat) {
+      var items = d[cat.key] || [];
+      if (items.length === 0) return;
+      container.appendChild(el('div', {className: 'section-header'}, cat.label + ' (' + items.length + ')'));
+      var div = el('div');
+      buildTable(div, items, 6);
+      container.appendChild(div);
+    });
+  });
+}
+
+// ── priority page ──
+function loadPriority() {
+  api('/api/operations/priority_exec').then(function(d) {
+    var container = document.getElementById('priorityContent');
+    buildTable(container, d.items || [], 6);
+  });
+}
+
+// ── ventures page ──
+function loadVentures() {
+  api('/api/operations/ventures').then(function(d) {
+    var container = document.getElementById('venturesContent');
+    buildTable(container, d.items || [], 6);
+  });
+}
+
+// ── tools page ──
+function loadTools() {
+  var container = document.getElementById('toolsContent');
+  clear(container);
+  var stacks = [
+    {key: 'video_stack', label: 'Video & Media'},
+    {key: 'lead_gen', label: 'Lead Gen'},
+    {key: 'hosting', label: 'Hosting & Deploy'},
+    {key: 'browser_proxy', label: 'Browser & Proxy'},
+  ];
+  api('/api/operations').then(function(d) {
+    stacks.forEach(function(s) {
+      var items = d[s.key] || [];
+      if (items.length === 0) return;
+      container.appendChild(el('div', {className: 'section-header'}, s.label + ' (' + items.length + ')'));
+      var div = el('div');
+      buildTable(div, items, 5);
+      container.appendChild(div);
+    });
+  });
+}
+
+// ── alarms page ──
+function loadAlarms() {
+  api('/api/wake-state').then(function(d) {
+    var container = document.getElementById('alarmList');
+    clear(container);
+    if (d.pending_alarms === 0) {
+      container.appendChild(el('div', {className: 'loading'}, 'No pending alarms'));
+    } else {
+      container.appendChild(el('div', {className: 'hb-line'}, d.pending_alarms + ' alarm(s) pending'));
+    }
+  });
+}
+
+// ── tasks page ──
+function loadTasks() {
+  api('/api/tasks').then(function(d) {
+    var container = document.getElementById('taskContent');
+    buildTable(container, d.tasks || [], 4);
+  });
+}
+
+// ── launch page ──
+function loadLaunch() {
+  api('/api/launch').then(function(d) {
+    var container = document.getElementById('launchContent');
+    buildTable(container, d.entries || [], 6);
+  });
+}
+
+// ── quick launch ──
+function buildQuickLaunch() {
+  var grid = document.getElementById('quickGrid');
+  clear(grid);
+  QUICK_CMDS.forEach(function(cmd) {
+    var btn = el('div', {className: 'ql-btn', onclick: function() {
+      // copy command to clipboard
+      navigator.clipboard.writeText(cmd.cmd);
+      btn.style.borderColor = 'var(--green)';
+      setTimeout(function() { btn.style.borderColor = ''; }, 1000);
+    }});
+    btn.appendChild(el('div', {className: 'ql-btn-label'}, cmd.label));
+    btn.appendChild(el('div', {className: 'ql-btn-desc'}, cmd.desc));
+    grid.appendChild(btn);
+  });
+}
+
+// ── page data loader ──
+function loadPageData(id) {
+  switch(id) {
+    case 'dashboard': refreshDashboard(); break;
+    case 'goals': loadGoals(); break;
+    case 'todos': loadTodos(); break;
+    case 'operations': loadOperations(); break;
+    case 'priority': loadPriority(); break;
+    case 'ventures': loadVentures(); break;
+    case 'tools': loadTools(); break;
+    case 'alarms': loadAlarms(); break;
+    case 'tasks': loadTasks(); break;
+    case 'launch': loadLaunch(); break;
+    case 'quick': buildQuickLaunch(); break;
+  }
+}
+
+// ── init ──
+buildNav();
+buildQuickLaunch();
+refreshDashboard();
+
+// auto refresh every 10s
+setInterval(function() {
+  if (state.page === 'dashboard') refreshDashboard();
+  // always update wake badge
+  api('/api/wake-state').then(function(d) {
+    var badge = document.getElementById('wakeBadge');
+    badge.textContent = d.is_awake ? 'AWAKE' : 'ASLEEP';
+    badge.className = 'wake-badge ' + (d.is_awake ? 'awake' : 'asleep');
+  });
+}, 10000);
+</script>
+</body>
+</html>"""
 
 
 # ── main ────────────────────────────────────────────────────────────────────
 
 def main():
-    minimized = "--minimized" in sys.argv
+    parser = argparse.ArgumentParser(description="PRINTMAXX Command Center v3")
+    parser.add_argument("--port", type=int, default=7777)
+    parser.add_argument("--minimized", action="store_true",
+                        help="Background reminders only, no web UI")
+    args = parser.parse_args()
 
-    if minimized:
-        print("PRINTMAXX reminders running in background. Ctrl+C to stop.")
-        macos_notify("PRINTMAXX", "Background reminders active. Goal tracking enabled.", "Pop")
-        alarm_mgr = AlarmManager()
-        engine = ReminderEngine(alarm_mgr)
-        engine.start()
+    # start alarm engine
+    engine = WakeAlarmEngine()
+    engine.start()
+
+    if args.minimized:
+        print("PRINTMAXX v3 running in background mode (reminders only)")
+        print("Press Ctrl+C to stop")
         try:
             while True:
                 time.sleep(60)
         except KeyboardInterrupt:
             engine.stop()
-            print("\nPRINTMAXX reminders stopped.")
-        return
+            return
 
-    root = tk.Tk()
+    # start Flask
+    app = create_app(engine)
+    print(f"PRINTMAXX Command Center v3 starting on http://localhost:{args.port}")
+    print("Press Ctrl+C to stop")
+
+    # open browser
+    def open_browser():
+        time.sleep(1.5)
+        subprocess.Popen(["open", f"http://localhost:{args.port}"],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    threading.Thread(target=open_browser, daemon=True).start()
+
     try:
-        root.iconphoto(False, tk.PhotoImage(data=""))
-    except Exception:
-        pass
-
-    app = PrintmaxxApp(root)
-
-    # startup notification with goal count
-    goals = load_daily_goals()
-    total = sum(len(g["tasks"]) for g in goals)
-    done = sum(g["done_count"] for g in goals)
-    macos_notify("PRINTMAXX", f"Command Center v2 active. Goals: {done}/{total} done. Ship something.", "Pop")
-
-    def on_close():
-        app.reminder_engine.stop()
-        root.destroy()
-
-    root.protocol("WM_DELETE_WINDOW", on_close)
-    root.mainloop()
+        app.run(host="0.0.0.0", port=args.port, debug=False, use_reloader=False)
+    except KeyboardInterrupt:
+        engine.stop()
 
 
 if __name__ == "__main__":
