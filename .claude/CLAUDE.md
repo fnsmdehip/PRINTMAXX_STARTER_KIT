@@ -1671,6 +1671,19 @@ Then BUILD those tools without asking permission. The user wants autonomous exec
 | **Scheduled tasks framework** | `OPS/SCHEDULED_TASKS_FRAMEWORK.md` (cron, LaunchD, overnight loops, all automation scheduling) |
 | **Agent directory (39 agents)** | `.claude/agents/` (8 categories: eng 5, prod 4, mkt 6, design 3, pm 4, studio 7, test 4, research 2) |
 | **UGCDrop ops** | Added to `PRINTMAXX_MASTER_OPS.xlsx` ($0.01 UGC clips, affiliate opportunity) |
+| **--- MAR 4 SESSION (AUTONOMOUS AGENT LOOP SYSTEM) ---** | |
+| **Autonomous orchestrator** | `AUTOMATIONS/autonomous_orchestrator.py` (~300 lines, generates Claude session prompts from system state, runs headless Claude sessions, routes outputs) |
+| **Auto rebalancer** | `AUTOMATIONS/auto_rebalancer.py` (~300 lines, kill losers/reinvest winners, composite scoring, 7-day rolling health, checkpoints for kills) |
+| **Checkpoint manager** | `AUTOMATIONS/checkpoint_manager.py` (~200 lines, human-in-the-loop: PURCHASE/PUBLISH/ACCOUNT/STRATEGY/KILL approvals) |
+| **Schedule Claude** | `AUTOMATIONS/schedule_claude.sh` (~100 lines, cron-callable: disk guard, lock file, caffeinate, 30min timeout, 3 daily sessions) |
+| **SaaS product scanner** | `AUTOMATIONS/saas_product_scanner.py` (~300 lines, scores 12 automations for SaaS potential, generates manifest) |
+| **SaaS product manifest** | `OPS/SAAS_PRODUCT_MANIFEST.md` (12 SaaS candidates ranked, detailed breakdown, anti-abuse architecture) |
+| **Semantic memory search** | `AUTOMATIONS/semantic_memory_search.py` (TF-IDF search across all JSONL logs + markdown, 1,175 docs, 14 categories) |
+| **Search index** | `AUTOMATIONS/logs/.search_index/` (tfidf_index.json + documents.json, rebuilt daily 4:30 AM) |
+| **Claude subconscious setup** | `AUTOMATIONS/setup_subconscious.sh` (letta-ai persistent memory plugin for interactive sessions, requires API key) |
+| **PRINTMAXX Desktop App** | `AUTOMATIONS/printmaxx_desktop.py` (~650 lines, tkinter GUI, 5 tabs, hourly macOS notifications, 40 motivational quotes, alarm system, launch tracker, quick-launch buttons) |
+| **Product Launch Automator** | `AUTOMATIONS/product_launch_automator.py` (~450 lines, 17 directory guides, 6 products, copy gen, tab opening, CSV tracking, submission checklists) |
+| **Launch copy output** | `OPS/LAUNCH_COPY_{PRODUCT}.md` (auto-generated submission copy per product) |
 
 ### "I want to..." (task router)
 
@@ -1889,6 +1902,21 @@ Then BUILD those tools without asking permission. The user wants autonomous exec
 | View Claude scheduled tasks guide | `OPS/SCHEDULED_TASKS_FRAMEWORK.md` (cron, LaunchD, overnight loops, all automation scheduling) |
 | Browse 39 specialized agents | `.claude/agents/` (8 categories: eng, prod, mkt, design, pm, studio, test, research) |
 | Find UGCDrop pricing/details | `MONEY_METHODS/UGCDROP/` (UGC clips from $0.01, affiliate opp) |
+| Search operational memory | `python3 AUTOMATIONS/semantic_memory_search.py "query"` (or `--category learnings --recent 7 "query"`, `--live`, `--stats`, `--index`) |
+| Search memory via web dashboard | `python3 AUTOMATIONS/ops_web_dashboard.py` then use search bar (or `GET /api/search?q=query&category=X`) |
+| Run autonomous orchestrator | `python3 AUTOMATIONS/autonomous_orchestrator.py --status` (system state) or `--prep morning\|midday\|evening` (generate prompt) or `--auto morning` (full headless session) |
+| Score all methods (rebalancer) | `python3 AUTOMATIONS/auto_rebalancer.py --check` (score + report) or `--rebalance` (auto-adjust + checkpoints) or `--history` (trend) |
+| Manage human checkpoints | `python3 AUTOMATIONS/checkpoint_manager.py --status` (pending items) or `--approve FILE` or `--reject FILE` or `--summary` |
+| Scan SaaS potential | `python3 AUTOMATIONS/saas_product_scanner.py --scan` (rank all) or `--top 5` (details) or `--manifest` (generate full manifest) |
+| View SaaS manifest | `OPS/SAAS_PRODUCT_MANIFEST.md` (12 products ranked with pricing, competitors, moats, anti-abuse architecture) |
+| Open PRINTMAXX desktop app | `python3 AUTOMATIONS/printmaxx_desktop.py` (5-tab command center, hourly reminders, macOS notifications, alarms, motivation, launch tracker) |
+| Run desktop reminders only (no GUI) | `python3 AUTOMATIONS/printmaxx_desktop.py --minimized` (hourly task notifications + motivational quotes every 30 min) |
+| Check product launch status | `python3 AUTOMATIONS/product_launch_automator.py --status` (progress bars per product, priority breakdown) |
+| Launch product on directories | `python3 AUTOMATIONS/product_launch_automator.py --launch --product focuslock-web` (generates copy + opens tabs) |
+| Generate submission copy | `python3 AUTOMATIONS/product_launch_automator.py --generate-copy --product focuslock-web` (saves to OPS/LAUNCH_COPY_{PRODUCT}.md) |
+| Get submission checklist | `python3 AUTOMATIONS/product_launch_automator.py --checklist --product focuslock-web` (step-by-step per directory) |
+| Mark directories submitted | `python3 AUTOMATIONS/product_launch_automator.py --mark-submitted --product focuslock-web --directories ProductHunt,HackerNews` |
+| Set a quick alarm | Desktop app → Alarms tab → Quick alarms (15min/30min/1hr/2hr) or custom HH:MM |
 
 ### Cross-reference checklist (before building ANY method)
 
@@ -1942,6 +1970,14 @@ Then BUILD those tools without asking permission. The user wants autonomous exec
 | **App Clone Pipeline** | `python3 AUTOMATIONS/app_clone_pipeline.py --scan` | 61 clone opps: 6 apps × 9 langs × 6 demos, rebrand packages |
 | **Tweet Auto Drafter** | `python3 AUTOMATIONS/tweet_auto_drafter.py` | Auto-draft tweets from scraped high-signal content |
 | **Quote Tweet Scanner** | `python3 AUTOMATIONS/quote_tweet_scanner.py` | Find QT opportunities from monitored accounts |
+| **Semantic Memory Search** | `python3 AUTOMATIONS/semantic_memory_search.py "query"` | TF-IDF search across all 1,175+ operational docs (14 categories, `--live`, `--stats`, `--index`) |
+| **Autonomous Orchestrator** | `python3 AUTOMATIONS/autonomous_orchestrator.py --status` | Planner: system state → focused Claude session prompts (morning/midday/evening) |
+| **Auto Rebalancer** | `python3 AUTOMATIONS/auto_rebalancer.py --check` | Judge: score all methods 0-100, KILL/REDUCE/MAINTAIN/DOUBLE_DOWN |
+| **Checkpoint Manager** | `python3 AUTOMATIONS/checkpoint_manager.py --status` | Human-in-loop: PURCHASE/PUBLISH/ACCOUNT/STRATEGY/KILL approvals |
+| **SaaS Product Scanner** | `python3 AUTOMATIONS/saas_product_scanner.py --scan` | Score 12+ automations for SaaS potential (price, moat, abuse risk) |
+| **Schedule Claude** | `bash AUTOMATIONS/schedule_claude.sh morning\|midday\|evening` | Cron-callable: disk guard + caffeinate + Claude headless + 30min timeout |
+| **PRINTMAXX Desktop** | `python3 AUTOMATIONS/printmaxx_desktop.py` | Desktop command center: 5-tab GUI, hourly reminders, macOS notifications, alarms, task list, launch tracker, quick-launch buttons. `--minimized` for background reminders only |
+| **Product Launch Automator** | `python3 AUTOMATIONS/product_launch_automator.py --status` | 17 directory guides, 6 products, copy generation, browser tab opening, submission tracking. `--launch --product X`, `--generate-copy`, `--checklist`, `--open-tabs`, `--mark-submitted` |
 
 **Full documentation:** `OPS/QUANT_INFRASTRUCTURE_GUIDE.md` | `OPS/QUANT_QUICK_START.md`
 **Cron commands:** `./printmaxx_cron.sh` with no args for help. See Document Version Tracker above for full command list.
@@ -3025,6 +3061,38 @@ These documents contain hedge fund-level strategic analysis. Read them when doin
 ---
 
 ## Session Log (Most Recent First)
+
+### 2026-03-04 (continued B) — PRINTMAXX DESKTOP APP + PRODUCT LAUNCH AUTOMATOR
+- **printmaxx_desktop.py** (~650 lines): Zero-dependency tkinter desktop command center. Dark theme (BG=#0d1117, ACCENT=#58a6ff). 5 tabs: Dashboard (heartbeat stats, motivation, current hour task), Tasks (from PERSISTENT_TASK_TRACKER.md, filter by status), Product Launch (directory tracker, product selector, "Open HIGHEST Priority Tabs" button), Alarms (custom HH:MM + quick 15min/30min/1hr/2hr), Quick Launch (20 tool buttons in 5 groups opening Terminal windows). Background ReminderEngine thread: hourly task notifications via macOS notification center, motivational quotes every 30 min, custom alarm checking. 40 PRINTMAXX-voice motivational quotes. 15 hourly task assignments (7 AM - 9 PM). `--minimized` flag for background-only reminders. Auto-refresh every 60 seconds.
+- **product_launch_automator.py** (~450 lines): Product directory submission automation. PRODUCTS dict with 6 products (focuslock-web, habitforge-web, mealmaxx-web, sleepmaxx-web, prayerlock-web, walktounlock-web). DIRECTORY_GUIDES dict with 17 major directories (ProductHunt, HackerNews, Reddit, BetaList, MicroLaunch, Uneed, Fazier, PeerList, TinyLaunch, IndieHackers, TinyStartups, SideProjectors, LaunchIgniter, Peerpush, DevHunt, AILaunch, TheresAnAIForThat). CLI: --status (visual progress bars), --launch --product X (generate copy + open tabs), --generate-copy (markdown file), --checklist (step-by-step), --open-tabs, --mark-submitted, --list-products. Tested: 1,978 entries across 23 products, all PENDING.
+- **Launch copy generated**: `OPS/LAUNCH_COPY_FOCUSLOCK-WEB.md` (submission copy for all directories)
+- **Cron entries added**: 7:30 AM desktop reminders (--minimized), 8 AM launch status check
+- **CLAUDE.md updated**: Nav table (+3), task router (+8), quant tools (+2), session log
+- **Desktop app launched**: Running with PID, macOS notifications active
+
+### 2026-03-04 (continued) — SEMANTIC MEMORY SEARCH + WEB DASHBOARD INTEGRATION
+- **semantic_memory_search.py** (~617 lines): Zero-dependency TF-IDF search engine across all PRINTMAXX operational logs. Indexes 11 JSONL sources + 3 markdown sources + checkpoint files = 1,175 documents, 2,537 unique terms, 14 categories. CLI: `--index` (build), `--stats`, `--query`/positional, `--category`, `--recent N`, `--live` (fresh), `--export`. Programmatic API: `api_search(query, top_k, category, recent_days)`. Fixed rebalancer snippet builder (dict vs list format). Fixed pipeline snippet builder (actual schema: step/batch_size/new_hot/new_warm). Index at `AUTOMATIONS/logs/.search_index/` (317.8 KB).
+- **ops_web_dashboard.py updated**: Added `/api/search?q=query&category=X&recent=N&top=K` endpoint calling `api_search()`. Added search bar UI with category dropdown. Added "Rebuild Index" trigger button. 12 OPS_COMMANDS total now.
+- **Cron entry added**: 4:30 AM daily search index rebuild (before 5:30 AM research pipeline).
+- **CLAUDE.md updated**: Nav table (+2 entries), task router (+2), quant tools (+1), session log.
+- **Categories indexed**: orchestrator (454), pipeline (269), signals (136), learnings (112), cold_email (78), brain (42), tasks (33), scraper (32), prompts (9), alerts (4), rebalancer (3), heartbeat (1), active_tasks (1), overnight_log (1).
+
+### 2026-03-04 — AUTONOMOUS AGENT LOOP SYSTEM (5 scripts + 6 gaps + web dashboard + ad tracker)
+- **autonomous_orchestrator.py** (~430 lines): AI brain/planner. Gathers system state from 10+ sources (HEARTBEAT.md, overnight logs, lead pipeline, alpha staging, revenue, checkpoints, disk, rebalancer scores). Generates focused Claude Code session prompts for morning/midday/evening. Full headless loop via `--auto`. Tested: 12,948 hot leads, 278 alpha pending, 47.4GB disk. **Patched:** Post-session accounting now uses regex tool-call markers + fallback patterns instead of naive string counting. Added conditional mid-session branching (routing rules in all 3 prompts). Added exact-state checkpoint resume (save/load/clear, 2h expiry). Added `--plan` flag for pre-session plan visibility.
+- **auto_rebalancer.py** (~460 lines): Kill losers, reinvest winners. Composite scoring: venture_score (40%) + overnight success_rate (30%) + trend (30%). Actions: DOUBLE_DOWN (>=70), MAINTAIN (>=40), REDUCE (>=20), KILL (<20). Auto-disables scripts failing 80%+ over 7 days. **Patched:** (1) Trend scoring now reads `rebalance_history.jsonl` and computes 7-day score deltas per method (was hardcoded 0). (2) Overnight JSON parser now tries proper `json.loads()` first, falls back to JSONL line-by-line.
+- **checkpoint_manager.py** (~225 lines): Human-in-the-loop approvals. 5 types: PURCHASE (>$50), PUBLISH (first time), ACCOUNT (credentials), STRATEGY (kill/pivot), KILL (disable method). Directory: `OPS/checkpoints/{pending,approved,rejected,done}/`. History: `OPS/checkpoints/history.jsonl`.
+- **schedule_claude.sh** (~140 lines): Cron entrypoint with safety guards. **Patched:** (1) PID liveness check via `kill -0` instead of mtime-based lock age. (2) Memory refresh (`memory_manager.py --full`) before prompt generation. (3) Crash recovery: writes SESSION_IN_FLIGHT to active-tasks.md before Claude launch, clears after post-process. (4) CRLF line endings stripped from all 5 files.
+- **saas_product_scanner.py** (~360 lines): 12 pre-analyzed SaaS candidates. Top 4: LeadMaxx (88), ViralProductFinder (85), ClipMaxx (82), MethodMaxx (80). `scan_scripts()` discovers 37 additional unscored candidates. Generated full manifest at `OPS/SAAS_PRODUCT_MANIFEST.md`.
+- **setup_subconscious.sh** (~80 lines): Setup script for letta-ai/claude-subconscious persistent memory plugin. Requires Letta API key (free at app.letta.com). Adds 4 hooks (SessionStart, UserPromptSubmit, PreToolUse, Stop) for interactive sessions. Cron sessions unaffected.
+- **ops_web_dashboard.py** (~320 lines): Zero-dependency Python web dashboard at localhost:8080. Dark theme, 9 live data cards (system overview, heartbeat, active tasks, rebalancer scores, rebalance history, pending checkpoints, session checkpoint/resume, pipeline metrics, overnight log). 11 trigger buttons for all operations (plan morning/midday/evening, heartbeat, memory, checkpoints, rebalancer, ventures, SaaS scan, health, orchestrator). Auto-refresh every 30s. Uses safe DOM methods (textContent/createElement, no innerHTML) to pass security hook. Tested: serves HTML + JSON API correctly.
+- **ad_budget_tracker.py** (~280 lines): $20 per marketing run system. Kill losers, scale winners. Tracks spend, impressions, clicks, CTR, conversions, CPA, revenue, ROAS. Auto-scores 0-100 and recommends SCALE_5X/SCALE_2X/MAINTAIN/REDUCE/KILL. Integrates with rebalancer pattern. CSV tracker at `LEDGER/AD_BUDGET_TRACKER.csv`.
+- **Daily goals tracker**: `OPS/DAILY_GOALS_2026_03_04.md` with 7 user goals (PRINTMAXX tweets, ecom listings, content to twitter, mobile apps, twitter/tiktok setup, $20 marketing runs).
+- **Cron entries added** (261→277 lines): 7 AM morning session, 1 PM midday session, 6 PM evening session, 6:15 PM rebalancer check.
+- **Architecture**: Planner-Worker-Judge pattern (from Cursor scaling agents research). Orchestrator (Planner) → Claude Code headless sessions (Worker) → Rebalancer (Judge). 3-layer: Cron (deterministic) → Claude Scheduler (3 daily AI sessions) → Human Checkpoints (purchases, publishing, accounts, strategy only).
+- **6 gaps patched** from system audit: trend scoring, JSON parser, PID lock, memory refresh, crash recovery, post-session accounting. CRLF line endings fixed in all 5 scripts. Additional 3 gaps fixed: conditional branching, checkpoint resume, pre-session plan.
+- **Letta security assessment**: Hosted API stores data, may use for training. Self-hosting available at localhost:8283 for zero leakage. Recommendation: skip Letta cloud, self-host if needed.
+- **Paperclip.ing comparison**: Complementary to PRINTMAXX (they have React dashboard/org charts/governance, we have business logic/210+ scripts/scoring). Integration consideration noted.
+- **CLAUDE.md updated**: Nav table (+9), task router (+7), quant tools (+7), session log.
 
 ### 2026-03-03 — CONTENT PIPELINE + APP CLONE + 35 AGENTS + UGCDROP
 - **Content trend pipeline built** (`AUTOMATIONS/content_trend_pipeline.py`, ~350 lines): Scans TREND_SIGNALS.csv, ALPHA_STAGING.csv, Twitter scraper output. Generates content for 5 accounts using hook templates. CLI: --scan, --generate, --dry-run, --status. Tested: found 422 trends, 5,911 alpha entries. Note: 500+ likes threshold may need lowering for content generation.

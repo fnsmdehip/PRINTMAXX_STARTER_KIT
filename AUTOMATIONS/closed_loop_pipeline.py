@@ -79,6 +79,33 @@ signal.signal(signal.SIGTERM, handle_signal)
 
 
 # ---------------------------------------------------------------------------
+# SAFE I/O — Prevents cascading failures from disk space exhaustion (Errno 28)
+# ---------------------------------------------------------------------------
+
+def safe_write_text(path: Path, content: str):
+    """Atomic write: write to temp file, then rename. Handles disk errors gracefully."""
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    try:
+        tmp.write_text(content)
+        tmp.rename(path)
+    except OSError as e:
+        print(f"[ERROR] Failed to write {path.name}: {e}", flush=True)
+        try:
+            tmp.unlink(missing_ok=True)
+        except Exception:
+            pass
+
+
+def safe_append(path: Path, line: str):
+    """Append a line to a file, handling disk errors gracefully."""
+    try:
+        with open(path, "a") as f:
+            f.write(line + "\n")
+    except OSError as e:
+        print(f"[ERROR] Failed to append to {path.name}: {e}", flush=True)
+
+
+# ---------------------------------------------------------------------------
 # LOGGING (dual: console + daily file)
 # ---------------------------------------------------------------------------
 
@@ -86,16 +113,14 @@ def log(msg: str):
     ts = datetime.now().strftime("%H:%M:%S")
     line = f"[{ts}] {msg}"
     print(line, flush=True)
-    with open(DAILY_LOG, "a") as f:
-        f.write(line + "\n")
+    safe_append(DAILY_LOG, line)
 
 
 def log_metric(metric: dict):
     """Append metric to JSONL file (long-term memory)."""
     metric["timestamp"] = datetime.now().isoformat()
     metric["date"] = TODAY
-    with open(PIPELINE_METRICS, "a") as f:
-        f.write(json.dumps(metric) + "\n")
+    safe_append(PIPELINE_METRICS, json.dumps(metric))
 
 
 # ---------------------------------------------------------------------------
@@ -148,13 +173,13 @@ def write_active_tasks(phase: str, details: dict):
     lines.append("---")
     lines.append(f"*Last updated: {now}*")
 
-    ACTIVE_TASKS.write_text("\n".join(lines))
+    safe_write_text(ACTIVE_TASKS, "\n".join(lines))
 
 
 def clear_active_tasks():
     """Clear after successful completion."""
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    ACTIVE_TASKS.write_text(
+    safe_write_text(ACTIVE_TASKS,
         f"# Active Tasks — {now}\n\n"
         f"No tasks currently running. Pipeline idle.\n\n"
         f"Last successful run: {now}\n"

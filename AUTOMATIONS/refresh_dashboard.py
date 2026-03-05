@@ -893,7 +893,16 @@ body {{ background: #0a0a0a; color: #e0e0e0; font-family: 'SF Mono', 'Fira Code'
 </html>"""
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(html, encoding='utf-8')
+    tmp = OUTPUT_FILE.with_suffix(".html.tmp")
+    try:
+        tmp.write_text(html, encoding='utf-8')
+        tmp.rename(OUTPUT_FILE)
+    except OSError as e:
+        print(f"[DASHBOARD] WARNING: Failed to write dashboard: {e}")
+        try:
+            tmp.unlink(missing_ok=True)
+        except Exception:
+            pass
     return OUTPUT_FILE
 
 
