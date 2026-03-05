@@ -92,3 +92,9 @@ _Insights auto-appended by playbook_enhancer.py. Review and integrate as needed.
 **Insight:** I launched my first monetized iOS app 3 months ago. Here's every mistake I made (and the numbers). Hey everyone, wanted to quickly share of what the last 3 months looked like after launching my first "proper" iOS app [DayZen](https://apps.apple.com/us/app/dayzen-visual-time-planner/id6754326173) (a visual time-blocking tool). I built one app before purely as a learning exercise and never tried to earn from it. This time I went all in on actually monetizing. Here's what happened. **The numbers
 **Potential:** ROI: https://reddit.com/r/SideProject/comments/1qyl08n/i_launched_my_first_monetized_ios_app_3_months/ | Synergy: 92
 
+### Alpha Insight: ALPHA1475 — 2026-03-05
+**Source:** 2026-02-13
+**Category:** APP_FACTORY
+**Insight:** I fired my biggest client and it was the best business decision I ever made Last year I had a client that made up about 40% of my revenue. They were also the reason I was working 60+ hour weeks, constantly stressed, and slowly losing every other client I had. Here's what happened and why letting them go changed everything. **The situation:** This client was a mid-size ecommerce brand. They paid well -- around $4,500/month. But they were absolutely brutal to work with. Scope creep on every pro
+**Potential:** ROI: https://reddit.com/r/Entrepreneur/comments/1r0upe7/i_fired_my_biggest_client_and_it_was_the_best/ | Synergy: 131
+

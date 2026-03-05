@@ -161,7 +161,12 @@ def load_daily_goals():
                 goal_path = f
                 break
     if not goal_path.exists():
-        return []
+        # Fall back to most recent goals file (don't lose todos just because date changed)
+        all_goals = sorted(OPS.glob("DAILY_GOALS_*"), reverse=True)
+        if all_goals:
+            goal_path = all_goals[0]
+        else:
+            return []
     goals = []
     text = goal_path.read_text()
     current_goal = None
@@ -315,7 +320,7 @@ class WakeAlarmEngine(threading.Thread):
         self.running = True
         self.is_awake = False
         self.wake_time = None
-        self.todos = []
+        self.todos = self._load_persisted_todos()
         self.alarms = []
         self._lock = threading.Lock()
         self._last_15min = None
@@ -338,9 +343,31 @@ class WakeAlarmEngine(threading.Thread):
             self.wake_time = None
         macos_notify("PRINTMAXX", "sleep mode. alarms paused.", "Submarine")
 
+    @staticmethod
+    def _todo_file():
+        return OPS / ".todos_persisted.json"
+
+    def _load_persisted_todos(self):
+        f = self._todo_file()
+        if f.exists():
+            try:
+                import json
+                return json.loads(f.read_text())
+            except Exception:
+                pass
+        return []
+
+    def _save_todos(self):
+        try:
+            import json
+            self._todo_file().write_text(json.dumps(self.todos, indent=2))
+        except Exception:
+            pass
+
     def set_todos(self, items):
         with self._lock:
             self.todos = items
+            self._save_todos()
 
     def get_todos(self):
         with self._lock:
@@ -350,6 +377,7 @@ class WakeAlarmEngine(threading.Thread):
         with self._lock:
             if 0 <= index < len(self.todos):
                 self.todos[index]["done"] = not self.todos[index]["done"]
+                self._save_todos()
 
     def add_alarm(self, alarm_time, message, repeat_minutes=0):
         with self._lock:

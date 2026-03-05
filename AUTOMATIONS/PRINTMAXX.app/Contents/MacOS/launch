@@ -1,0 +1,31 @@
+#!/bin/bash
+# PRINTMAXX Dashboard Launcher
+# Starts the Flask dashboard and opens it in browser
+
+BASE_DIR="/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt"
+PORT=7777
+LOG="$BASE_DIR/AUTOMATIONS/logs/dashboard.log"
+
+# Check if already running
+if lsof -i :$PORT &>/dev/null; then
+    open "http://localhost:$PORT"
+    exit 0
+fi
+
+# Start the dashboard
+cd "$BASE_DIR"
+python3 AUTOMATIONS/printmaxx_desktop.py --port $PORT >> "$LOG" 2>&1 &
+DASHBOARD_PID=$!
+
+# Wait for it to start (max 10 seconds)
+for i in {1..20}; do
+    if curl -s -o /dev/null http://localhost:$PORT 2>/dev/null; then
+        open "http://localhost:$PORT"
+        exit 0
+    fi
+    sleep 0.5
+done
+
+# If we get here, something went wrong
+osascript -e 'display notification "Dashboard failed to start. Check logs." with title "PRINTMAXX"'
+exit 1
