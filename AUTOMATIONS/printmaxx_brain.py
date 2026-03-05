@@ -109,8 +109,11 @@ def log_event(event_type, data):
         "type": event_type,
         **data,
     }
-    with open(BRAIN_LOG, "a") as f:
-        f.write(json.dumps(entry) + "\n")
+    try:
+        with open(BRAIN_LOG, "a") as f:
+            f.write(json.dumps(entry) + "\n")
+    except OSError as e:
+        print(f"[BRAIN] WARNING: Failed to write log: {e}", flush=True)
 
 
 def load_state():
@@ -131,10 +134,19 @@ def load_state():
 
 
 def save_state(state):
-    """Persist brain state."""
+    """Persist brain state via atomic write (prevents Errno 28 corruption)."""
     BRAIN_STATE.parent.mkdir(parents=True, exist_ok=True)
-    with open(BRAIN_STATE, "w") as f:
-        json.dump(state, f, indent=2, default=str)
+    tmp = BRAIN_STATE.with_suffix(".json.tmp")
+    try:
+        with open(tmp, "w") as f:
+            json.dump(state, f, indent=2, default=str)
+        tmp.rename(BRAIN_STATE)
+    except OSError as e:
+        print(f"[BRAIN] WARNING: Failed to save state: {e}", flush=True)
+        try:
+            tmp.unlink(missing_ok=True)
+        except Exception:
+            pass
 
 
 def run_subsystem(name, args="", timeout=60):

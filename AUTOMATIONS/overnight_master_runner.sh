@@ -17,6 +17,13 @@ STATUS_FILE="$LOG_DIR/overnight_status_${DATE}.json"
 
 mkdir -p "$LOG_DIR"
 
+# SAFETY: Disk space guard — abort early if <2GB free to prevent cascading Errno 28 failures
+AVAIL_KB=$(df -k "$BASE_DIR" | tail -1 | awk '{print $4}')
+if [ "$AVAIL_KB" -lt 2097152 ]; then
+    echo "[$(date '+%H:%M:%S')] ABORT: Only $((AVAIL_KB / 1024))MB free (<2GB). Skipping overnight run to prevent cascading write failures." | tee -a "$LOG_DIR/overnight_${DATE}.log"
+    exit 1
+fi
+
 # SAFETY: Load guardrails wrapper
 source "$BASE_DIR/AUTOMATIONS/guardrails_wrapper.sh"
 
@@ -185,25 +192,22 @@ log ">>> PHASE 5: NEW RESEARCH OPS"
     run_script "run_all_research_ops" \
         "$PYTHON AUTOMATIONS/run_all_research_ops.py" 600 || true
 
-# PHASE 6: New lead source scrapers (built this session)
+# PHASE 6: New lead source scrapers
 log ""
 log ">>> PHASE 6: NEW LEAD SOURCES"
 
-[ -f "$BASE_DIR/AUTOMATIONS/linkedin_events_scraper.py" ] && \
-    run_script "linkedin_events" \
-        "$PYTHON AUTOMATIONS/linkedin_events_scraper.py" 600 || true
-
-[ -f "$BASE_DIR/AUTOMATIONS/g2_reviewer_scraper.py" ] && \
-    run_script "g2_reviewers" \
-        "$PYTHON AUTOMATIONS/g2_reviewer_scraper.py" 600 || true
-
-[ -f "$BASE_DIR/AUTOMATIONS/indeed_hiring_monitor.py" ] && \
-    run_script "indeed_hiring" \
-        "$PYTHON AUTOMATIONS/indeed_hiring_monitor.py" 600 || true
-
-[ -f "$BASE_DIR/AUTOMATIONS/nordic_ecom_arb.py" ] && \
-    run_script "nordic_ecom" \
-        "$PYTHON AUTOMATIONS/nordic_ecom_arb.py" 600 || true
+# DISABLED: linkedin_events, g2_reviewers, indeed_hiring, nordic_ecom
+# All 4 depend on Google Search scraping which returns 429 every time.
+# Failed every night for 5+ consecutive runs, wasting 40min/night (4 x 600s timeout).
+# Re-enable when rotating proxies or paid search API is set up.
+# [ -f "$BASE_DIR/AUTOMATIONS/linkedin_events_scraper.py" ] && \
+#     run_script "linkedin_events" "$PYTHON AUTOMATIONS/linkedin_events_scraper.py" 600 || true
+# [ -f "$BASE_DIR/AUTOMATIONS/g2_reviewer_scraper.py" ] && \
+#     run_script "g2_reviewers" "$PYTHON AUTOMATIONS/g2_reviewer_scraper.py" 600 || true
+# [ -f "$BASE_DIR/AUTOMATIONS/indeed_hiring_monitor.py" ] && \
+#     run_script "indeed_hiring" "$PYTHON AUTOMATIONS/indeed_hiring_monitor.py" 600 || true
+# [ -f "$BASE_DIR/AUTOMATIONS/nordic_ecom_arb.py" ] && \
+#     run_script "nordic_ecom" "$PYTHON AUTOMATIONS/nordic_ecom_arb.py" 600 || true
 
 [ -f "$BASE_DIR/AUTOMATIONS/app_clone_finder.py" ] && \
     run_script "app_clone_finder" \

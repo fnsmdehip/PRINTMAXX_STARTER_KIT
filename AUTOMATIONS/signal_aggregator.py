@@ -463,21 +463,30 @@ def save_fused_csv(fused: list):
         "signal_type", "timestamp"
     ]
 
-    with open(FUSED_OUTPUT, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
-        writer.writeheader()
-        for i, sig in enumerate(fused):
-            sig["rank"] = i + 1
-            sig["action"] = categorize_action(sig)
-            sig["timestamp"] = datetime.now().isoformat()
-            sig["fused_score"] = round(sig["fused_score"], 1)
-            sig["weighted_score"] = round(sig.get("weighted_score", 0), 1)
-            sig["normalized_score"] = round(sig.get("normalized_score", 0), 1)
-            sig["decay_factor"] = round(sig.get("decay_factor", 0), 3)
-            sig["reliability"] = round(sig.get("reliability", 0), 2)
-            sig["budget"] = round(sig.get("budget", 0), 2)
-            sig["age_hours"] = round(sig.get("age_hours", 0), 1)
-            writer.writerow(sig)
+    tmp = FUSED_OUTPUT.with_suffix(".csv.tmp")
+    try:
+        with open(tmp, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+            writer.writeheader()
+            for i, sig in enumerate(fused):
+                sig["rank"] = i + 1
+                sig["action"] = categorize_action(sig)
+                sig["timestamp"] = datetime.now().isoformat()
+                sig["fused_score"] = round(sig["fused_score"], 1)
+                sig["weighted_score"] = round(sig.get("weighted_score", 0), 1)
+                sig["normalized_score"] = round(sig.get("normalized_score", 0), 1)
+                sig["decay_factor"] = round(sig.get("decay_factor", 0), 3)
+                sig["reliability"] = round(sig.get("reliability", 0), 2)
+                sig["budget"] = round(sig.get("budget", 0), 2)
+                sig["age_hours"] = round(sig.get("age_hours", 0), 1)
+                writer.writerow(sig)
+        tmp.rename(FUSED_OUTPUT)
+    except OSError as e:
+        print(f"[SIGNAL_AGG] WARNING: Failed to write fused signals: {e}")
+        try:
+            tmp.unlink(missing_ok=True)
+        except Exception:
+            pass
 
 
 def append_history(fused: list):
@@ -500,8 +509,11 @@ def append_history(fused: list):
         cat_counts[s["primary_category"]] += 1
     entry["by_category"] = dict(cat_counts)
 
-    with open(HISTORY_OUTPUT, "a", encoding="utf-8") as f:
-        f.write(json.dumps(entry) + "\n")
+    try:
+        with open(HISTORY_OUTPUT, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry) + "\n")
+    except OSError as e:
+        print(f"[SIGNAL_AGG] WARNING: Failed to append history: {e}")
 
 
 def print_table(fused: list, limit: int = 20):
