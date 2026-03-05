@@ -1,0 +1,63 @@
+{
+  "ecom_total": 3394,
+  "ecom_today": 75,
+  "ecom_high_margin": 443,
+  "freelance_total": 14510,
+  "alpha_total": 14423,
+  "alpha_pending": 278,
+  "trend_total": 422,
+  "app_builds": 4,
+  "apps_deployed": 43,
+  "arb_listings_count": 364,
+  "content_auto_count": 28,
+  "asset_count": 0,
+  "accounts_created": 0,
+  "products_listed": 0,
+  "emails_sent": 0,
+  "emails_ready": 489282,
+  "revenue": 0.0,
+  "report_generated": "2026-03-04 23:56:15",
+  "asset_results": {
+    "generated": 0,
+    "skipped": "no_api_key"
+  },
+  "deploy_results": {
+    "deployed": 1,
+    "skipped": 3,
+    "apps": [
+      {
+        "name": "prayerlock-web",
+        "url": "https://prayerlock-web.surge.sh",
+        "status": "deployed"
+      },
+      {
+        "name": "focuslock-web",
+        "url": "https://focuslock-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "sleepmaxx-web",
+        "url": "https://sleepmaxx-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "walktounlock-web",
+        "url": "https://walktounlock-web.surge.sh",
+        "status": "already_live"
+      }
+    ]
+  },
+  "listing_results": {
+    "generated": 20,
+    "file": "PRODUCTS/ARB_LISTINGS/ARB_LISTINGS_2026-03-04.md"
+  },
+  "content_results": {
+    "tweets_drafted": 0,
+    "content_moved": 0,
+    "alpha_converted": 0,
+    "auto_generated_files": 28,
+    "pending": 75,
+    "ready": 0,
+    "posted": 0
+  }
+}
