@@ -83,3 +83,6 @@ AUDIT/META_VISION_*_FILE_INVENTORY.csv
 # Python cache
 __pycache__/
 *.pyc
+
+# Local LLM quarantine — never commit, never feed to Claude
+CONTENT/_LOCAL_LLM_QUARANTINE/

@@ -1,0 +1,6 @@
+{"ts": "2026-03-06T00:14:15.201256", "venture": "edge_tactics", "result": "success", "duration": 52.6, "output": "Generated edge tactics: edge_20260306_0014.md"}
+{"ts": "2026-03-06T00:15:04.088176", "venture": "viral_content", "result": "success", "duration": 35.0, "output": "Generated viral content: viral_20260306_0015.md"}
+{"ts": "2026-03-06T00:15:04.276516", "venture": "adult_content", "result": "skipped", "duration": 0.0, "output": "Findom playbook not built yet"}
+{"ts": "2026-03-06T00:27:15.189975", "venture": "adult_content", "result": "success", "duration": 21.9, "output": "Generated findom content: findom_content_20260306_0027.md"}
+{"ts": "2026-03-06T01:23:04.350147", "venture": "adult_content", "result": "partial", "duration": 39.3, "output": "Intel OK but local LLM not available for content \u2014 install Ollama"}
+{"ts": "2026-03-06T01:24:05.455278", "venture": "adult_content", "result": "success", "duration": 35.4, "output": "Intel (Claude) + content (local LLM) both generated"}
