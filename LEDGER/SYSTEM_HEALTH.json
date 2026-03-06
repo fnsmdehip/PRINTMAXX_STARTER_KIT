@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-05T02:18:52.383813",
+  "generated": "2026-03-05T21:58:28.206764",
   "scripts": {
     "daily_nocost_rbi_scanner": {
       "total_runs": 4,
@@ -288,25 +288,25 @@
       "is_critical": true
     },
     "performance_health": {
-      "total_runs": 3,
+      "total_runs": 4,
       "success_rate": 100.0,
       "timeout_rate": 0.0,
       "fail_rate": 0.0,
       "trend": "STABLE",
       "category": "brain",
       "last_status": "OK",
-      "last_run": "2026-03-01",
+      "last_run": "2026-03-05",
       "is_critical": false
     },
     "brain_heal": {
-      "total_runs": 3,
+      "total_runs": 4,
       "success_rate": 100.0,
       "timeout_rate": 0.0,
       "fail_rate": 0.0,
       "trend": "STABLE",
       "category": "brain",
       "last_status": "OK",
-      "last_run": "2026-03-01",
+      "last_run": "2026-03-05",
       "is_critical": false
     },
     "alpha_research_runner": {
