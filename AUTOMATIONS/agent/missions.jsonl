@@ -14,3 +14,8 @@
 {"ts": "2026-03-06T03:00:02.498562", "mission": "health_heal", "result": "success", "duration_s": 2.5, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-06T03:00:02.757670", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 7 response drafts, 12 listing drafts"}
 {"ts": "2026-03-06T04:02:00.118735", "mission": "upgrade_night", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-06T04:02:01.790073", "mission": "safety_night", "result": "success", "duration_s": 1.7, "output": "Git safety commit"}
+{"ts": "2026-03-06T05:00:02.327410", "mission": "health_heal", "result": "success", "duration_s": 2.4, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-06T05:00:02.601979", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 7 response drafts, 12 listing drafts"}
+{"ts": "2026-03-06T05:06:00.825579", "mission": "research_night", "result": "partial", "duration_s": 358.2, "output": "1/3 scrapers completed"}
+{"ts": "2026-03-06T05:07:20.943149", "mission": "hunt_night", "result": "success", "duration_s": 80.1, "output": "Found opportunity, saved to opportunity_20260306_0507.md"}
