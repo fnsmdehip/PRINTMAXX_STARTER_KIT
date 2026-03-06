@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dusk — Feature Graphic 1024x500</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #111; }
+  .graphic {
+    width: 1024px; height: 500px;
+    background: linear-gradient(180deg, #1A0A3E 0%, #4A148C 50%, #CE93D8 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; text-align: center;
+  }
+  .stars-layer { position: absolute; top: 0; left: 0; right: 0; height: 60%; }
+  .dot { position: absolute; width: 3px; height: 3px; background: #FFF; border-radius: 50%; }
+  .left { position: relative; z-index: 1; }
+  .left h1 {
+    font-family: 'Quicksand', sans-serif; font-size: 72px; color: #FFFFFF;
+    font-weight: 300; letter-spacing: 12px; margin-bottom: 16px;
+  }
+  .left p { font-family: 'Quicksand', sans-serif; font-size: 22px; color: rgba(255,255,255,0.6); letter-spacing: 4px; }
+  .horizon {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+    background: linear-gradient(180deg, transparent, rgba(206,147,216,0.3));
+  }
+  .sun-glow {
+    position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%);
+    width: 200px; height: 200px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(206,147,216,0.4), transparent 70%);
+  }
+  .badge {
+    position: absolute; bottom: 24px; right: 40px;
+    font-family: 'Inter', sans-serif; font-size: 14px;
+    color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="graphic">
+  <div class="stars-layer">
+    <div class="dot" style="top:15%;left:10%;opacity:0.8"></div>
+    <div class="dot" style="top:25%;left:30%;opacity:0.5"></div>
+    <div class="dot" style="top:10%;left:55%;opacity:0.7"></div>
+    <div class="dot" style="top:35%;left:75%;opacity:0.4"></div>
+    <div class="dot" style="top:20%;left:85%;opacity:0.9"></div>
+    <div class="dot" style="top:8%;left:45%;opacity:0.6"></div>
+    <div class="dot" style="top:40%;left:20%;opacity:0.3"></div>
+  </div>
+  <div class="left">
+    <h1>dusk</h1>
+    <p>wind down. sleep better.</p>
+  </div>
+  <div class="horizon"></div>
+  <div class="sun-glow"></div>
+  <div class="badge">PRINTMAXX</div>
+</div>
+</body>
+</html>

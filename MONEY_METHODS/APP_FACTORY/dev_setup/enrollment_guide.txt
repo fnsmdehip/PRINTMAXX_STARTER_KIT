@@ -1,0 +1,75 @@
+STEP 1: Create or verify your Apple ID
+  Go to: https://appleid.apple.com/
+  Use a dedicated business email (not personal Gmail)
+  Enable two-factor authentication (REQUIRED for developer program)
+  Verify your phone number and email
+
+STEP 2: Decide: Individual or Organization enrollment
+  INDIVIDUAL ($99/year):
+    - Your legal name appears as seller on App Store
+    - Faster approval (usually 24-48 hours)
+    - Good for: solo developers, starting out
+  
+  ORGANIZATION ($99/year):
+    - Company name appears as seller on App Store
+    - Requires D-U-N-S number (free but takes 5-14 business days)
+    - Requires legal entity (LLC, Corp, etc.)
+    - Good for: professional appearance, multiple team members
+  
+  RECOMMENDATION: Start as Individual. Convert to Organization later.
+
+STEP 3: Get a D-U-N-S number (Organization only)
+  Go to: https://developer.apple.com/enroll/duns-lookup/
+  Search for your company. If not found, request a free D-U-N-S number.
+  Dun & Bradstreet will contact you within 5-14 business days.
+  You need: legal business name, address, phone number, EIN/Tax ID
+  SKIP this step if enrolling as Individual.
+
+STEP 4: Start enrollment
+  Go to: https://developer.apple.com/programs/enroll/
+  Sign in with your Apple ID
+  Select Individual or Organization
+  Fill in your legal information exactly as it appears on government ID
+  For Individual: Apple may require identity verification via iPhone or iPad
+
+STEP 5: Pay the $99 annual fee
+  Apple accepts credit/debit cards
+  Payment is non-refundable
+  Membership auto-renews annually (can cancel in settings)
+  After payment, account activation takes up to 48 hours
+
+STEP 6: Enroll in Apple Small Business Program (saves 15%)
+  URL: https://developer.apple.com/programs/small-business/
+  If your app revenue is under $1M/year, you qualify
+  Commission drops from 30% to 15% on all App Store revenue
+  Must be enrolled BEFORE your first sale to get the lower rate
+  Re-qualifies annually based on previous year revenue
+
+STEP 7: Set up App Store Connect
+  Go to: https://appstoreconnect.apple.com/
+  Accept the latest agreements (Paid Apps, Free Apps)
+  Set up banking information for revenue payments
+  Set up tax forms (W-9 for US developers)
+  Create your first app listing (you can save as draft)
+
+STEP 8: Create App Store Connect API key
+  Go to: App Store Connect > Users and Access > Keys
+  Generate an API key with Admin role
+  Download the .p8 file (you can only download it ONCE)
+  Save the Key ID and Issuer ID
+  Store the .p8 file securely (needed for altool and Fastlane)
+  NEVER commit the .p8 file to git
+
+STEP 9: Configure Xcode signing
+  Open Xcode > Settings > Accounts
+  Add your Apple ID
+  Your team should appear automatically
+  Xcode will manage signing certificates and provisioning profiles
+  For each app: set Automatically manage signing = YES
+
+STEP 10: Create sandbox tester account
+  App Store Connect > Users and Access > Sandbox Testers
+  Create a new sandbox tester with a unique email
+  On your test iPhone: Settings > App Store > Sandbox Account
+  Sign in with the sandbox tester credentials
+  This allows testing in-app purchases without real charges

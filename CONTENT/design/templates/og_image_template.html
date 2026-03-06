@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG Image Template — PRINTMAXX</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #333; display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px; }
+  .label { color: #999; font-size: 14px; font-family: Inter, sans-serif; }
+
+  .og-card {
+    width: 1200px;
+    height: 630px;
+    background: #0D0D0D;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+  }
+  .og-card .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,255,65,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,65,0.04) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .og-card .accent-bar {
+    position: absolute; left: 0; top: 0; width: 6px; height: 100%;
+    background: linear-gradient(180deg, #00FF41, #00D4FF);
+  }
+  .og-card .brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #00FF41;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    position: relative; z-index: 1;
+  }
+  .og-card h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.15;
+    max-width: 800px;
+    position: relative; z-index: 1;
+  }
+  .og-card .description {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    color: #6B6B6B;
+    margin-top: 20px;
+    max-width: 700px;
+    position: relative; z-index: 1;
+  }
+  .og-card .footer {
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+  .og-card .footer .url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #00D4FF;
+  }
+  .og-card .footer .handle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #6B6B6B;
+  }
+
+  /* Variant: Light (selahmoments style) */
+  .og-light {
+    background: #FFF8F0;
+  }
+  .og-light .grid { display: none; }
+  .og-light .accent-bar { background: linear-gradient(180deg, #C9A84C, #C67B5C); }
+  .og-light .brand { color: #C9A84C; font-family: Georgia, serif; letter-spacing: 6px; }
+  .og-light h1 { color: #3C2415; font-family: Georgia, serif; font-weight: 700; font-size: 48px; }
+  .og-light .description { color: #8C7B6B; font-family: Georgia, serif; }
+  .og-light .footer .url { color: #C67B5C; font-family: Georgia, serif; }
+  .og-light .footer .handle { color: #8C7B6B; font-family: Georgia, serif; }
+</style>
+</head>
+<body>
+
+<p class="label">Dark variant (printmaxxer) — 1200x630</p>
+<div class="og-card">
+  <div class="grid"></div>
+  <div class="accent-bar"></div>
+  <div class="brand">PRINTMAXX</div>
+  <h1>Your Title Goes Here — Make It Count</h1>
+  <div class="description">A brief description of the content. Keep it under two lines for best readability in link previews.</div>
+  <div class="footer">
+    <span class="url">printmaxx.dev</span>
+    <span class="handle">@printmaxxer</span>
+  </div>
+</div>
+
+<p class="label">Light variant (selahmoments) — 1200x630</p>
+<div class="og-card og-light">
+  <div class="grid"></div>
+  <div class="accent-bar"></div>
+  <div class="brand">SELAH MOMENTS</div>
+  <h1>Your Title Goes Here — Make It Count</h1>
+  <div class="description">A brief description of the content. Keep it under two lines for best readability in link previews.</div>
+  <div class="footer">
+    <span class="url">selahmoments.com</span>
+    <span class="handle">@selahmoments</span>
+  </div>
+</div>
+
+</body>
+</html>

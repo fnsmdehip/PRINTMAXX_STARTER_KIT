@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StackMaxx — Solopreneur Tech Stack Builder</title>
+<meta name="description" content="Build your perfect solopreneur tech stack in 2 minutes. Free tool recommendations based on your budget and goals.">
+<link rel="manifest" href="manifest.json">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#12121a;--border:#1e1e2e;--text:#e2e2e8;--muted:#8888a0;--accent:#6366f1;--accent2:#818cf8;--green:#22c55e;--red:#ef4444;--orange:#f97316;--yellow:#eab308}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5}
+.container{max-width:800px;margin:0 auto;padding:20px}
+h1{font-size:2rem;font-weight:800;margin-bottom:4px}
+h2{font-size:1.3rem;font-weight:700;margin-bottom:12px}
+h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+.hero{text-align:center;padding:60px 20px 40px}
+.hero h1{font-size:2.4rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);font-size:1.1rem;margin-top:8px;max-width:500px;margin-left:auto;margin-right:auto}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-size:0.7rem;padding:2px 8px;border-radius:12px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px}
+.card:hover{border-color:var(--accent);transition:border-color 0.2s}
+.step-indicator{display:flex;justify-content:center;gap:8px;margin-bottom:32px}
+.step-dot{width:10px;height:10px;border-radius:50%;background:var(--border)}
+.step-dot.active{background:var(--accent)}
+.step-dot.done{background:var(--green)}
+label{display:block;font-size:0.85rem;color:var(--muted);margin-bottom:6px;font-weight:500}
+.option-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:20px}
+.option{background:var(--card);border:2px solid var(--border);border-radius:10px;padding:16px 12px;text-align:center;cursor:pointer;transition:all 0.15s}
+.option:hover{border-color:var(--accent2);transform:translateY(-1px)}
+.option.selected{border-color:var(--accent);background:rgba(99,102,241,0.08)}
+.option .icon{font-size:1.5rem;margin-bottom:6px}
+.option .name{font-size:0.85rem;font-weight:600}
+.option .cost{font-size:0.7rem;color:var(--muted);margin-top:2px}
+.btn{background:var(--accent);color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.15s}
+.btn:hover{background:var(--accent2);transform:translateY(-1px)}
+.btn:disabled{opacity:0.4;cursor:not-allowed;transform:none}
+.btn-outline{background:transparent;border:2px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--accent);background:rgba(99,102,241,0.05)}
+.btn-row{display:flex;gap:10px;justify-content:center;margin-top:24px}
+.slider-wrap{margin-bottom:20px}
+.slider-wrap input[type=range]{width:100%;accent-color:var(--accent);margin-top:8px}
+.slider-labels{display:flex;justify-content:space-between;font-size:0.75rem;color:var(--muted);margin-top:4px}
+.budget-display{text-align:center;font-size:1.8rem;font-weight:800;color:var(--accent);margin:8px 0}
+.results{display:none}
+.result-category{margin-bottom:24px}
+.result-category h3{color:var(--accent2);font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.tool-card{display:flex;align-items:center;gap:14px;padding:14px;background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:8px}
+.tool-card .tool-icon{width:40px;height:40px;border-radius:8px;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.tool-card .tool-info{flex:1;min-width:0}
+.tool-card .tool-name{font-weight:700;font-size:0.95rem}
+.tool-card .tool-desc{font-size:0.78rem;color:var(--muted);margin-top:2px}
+.tool-card .tool-price{text-align:right;flex-shrink:0}
+.tool-card .tool-price .price{font-weight:700;font-size:0.95rem}
+.tool-card .tool-price .period{font-size:0.7rem;color:var(--muted)}
+.free-tag{color:var(--green);font-weight:700}
+.total-bar{background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:20px;text-align:center;margin:24px 0}
+.total-bar .total-label{font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.total-bar .total-amount{font-size:2rem;font-weight:800;color:var(--accent)}
+.total-bar .total-note{font-size:0.8rem;color:var(--muted);margin-top:4px}
+.share-row{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.cta-box{background:linear-gradient(135deg,rgba(99,102,241,0.12),rgba(129,140,248,0.06));border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-top:24px}
+.cta-box p{color:var(--muted);font-size:0.85rem;margin-top:8px}
+.email-row{display:flex;gap:8px;max-width:400px;margin:16px auto 0}
+.email-row input{flex:1;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.9rem}
+.email-row input:focus{outline:none;border-color:var(--accent)}
+.hidden{display:none}
+.check{display:inline-flex;align-items:center;gap:6px;margin-bottom:6px;font-size:0.85rem}
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;margin-bottom:16px}
+@media(max-width:600px){
+  .hero h1{font-size:1.8rem}
+  .option-grid{grid-template-columns:repeat(2,1fr)}
+  .check-grid{grid-template-columns:1fr}
+  .email-row{flex-direction:column}
+  .btn-row{flex-direction:column;align-items:stretch}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <div class="badge">free tool</div>
+    <h1>build your perfect tech stack</h1>
+    <p>answer 4 questions. get a curated stack recommendation with exact costs. takes 2 minutes.</p>
+  </div>
+
+  <div class="step-indicator" id="stepIndicator"></div>
+
+  <div class="card step-card" id="step1">
+    <h2>what are you building?</h2>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:16px">pick all that apply</p>
+    <div class="check-grid" id="buildType"></div>
+    <div class="btn-row">
+      <button class="btn" onclick="nextStep(2)">next</button>
+    </div>
+  </div>
+
+  <div class="card step-card hidden" id="step2">
+    <h2>monthly tool budget?</h2>
+    <div class="slider-wrap">
+      <div class="budget-display" id="budgetDisplay">$0/mo</div>
+      <input type="range" min="0" max="500" step="10" value="0" id="budgetSlider">
+      <div class="slider-labels"><span>$0 (free only)</span><span>$250</span><span>$500+</span></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="nextStep(1)">back</button>
+      <button class="btn" onclick="nextStep(3)">next</button>
+    </div>
+  </div>
+
+  <div class="card step-card hidden" id="step3">
+    <h2>current monthly revenue?</h2>
+    <div class="option-grid" id="revenueStage"></div>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="nextStep(2)">back</button>
+      <button class="btn" onclick="nextStep(4)">next</button>
+    </div>
+  </div>
+
+  <div class="card step-card hidden" id="step4">
+    <h2>top priority right now?</h2>
+    <div class="option-grid" id="priorities"></div>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="nextStep(3)">back</button>
+      <button class="btn" onclick="generateStack()">build my stack</button>
+    </div>
+  </div>
+
+  <div class="results" id="results"></div>
+</div>
+
+<script>
+const BUILD_TYPES = [
+  {id:'saas',label:'SaaS / Web App'},
+  {id:'ecom',label:'E-commerce'},
+  {id:'content',label:'Content / Newsletter'},
+  {id:'agency',label:'Agency / Services'},
+  {id:'apps',label:'Mobile Apps'},
+  {id:'community',label:'Community / Course'},
+  {id:'freelance',label:'Freelancing'},
+  {id:'affiliate',label:'Affiliate / SEO'}
+];
+
+const REVENUE_STAGES = [
+  {id:'pre',label:'$0',desc:'Pre-revenue'},
+  {id:'early',label:'$1-1K',desc:'Early'},
+  {id:'growing',label:'$1K-5K',desc:'Growing'},
+  {id:'scaling',label:'$5K-20K',desc:'Scaling'},
+  {id:'established',label:'$20K+',desc:'Established'}
+];
+
+const PRIORITIES = [
+  {id:'launch',icon:'\u{1F680}',label:'Ship fast'},
+  {id:'grow',icon:'\u{1F4C8}',label:'Get users'},
+  {id:'monetize',icon:'\u{1F4B0}',label:'Make money'},
+  {id:'automate',icon:'\u2699\uFE0F',label:'Automate'},
+  {id:'scale',icon:'\u{1F3D7}\uFE0F',label:'Scale up'},
+  {id:'reduce',icon:'\u2702\uFE0F',label:'Cut costs'}
+];
+
+const TOOLS = {
+  hosting:[
+    {name:'Vercel',desc:'deploy in 30 seconds. git push = live.',price:0,paid:20,icon:'\u25B2',tags:['saas','content','apps'],budget:'any'},
+    {name:'Surge.sh',desc:'static sites deployed from CLI. dead simple.',price:0,paid:0,icon:'\u26A1',tags:['content','freelance','affiliate'],budget:'free'},
+    {name:'Railway',desc:'backend hosting with databases included.',price:0,paid:5,icon:'\u{1F682}',tags:['saas','agency'],budget:'any'},
+    {name:'Cloudflare Pages',desc:'unlimited bandwidth. workers for serverless.',price:0,paid:0,icon:'\u2601\uFE0F',tags:['saas','content','ecom'],budget:'free'},
+    {name:'DigitalOcean',desc:'$4/mo droplet runs everything.',price:4,paid:4,icon:'\u{1F30A}',tags:['saas','agency'],budget:'low'}
+  ],
+  payments:[
+    {name:'Stripe',desc:'2.9% + 30c. the standard. accepts everything.',price:0,paid:0,icon:'\u{1F4B3}',tags:['saas','ecom','agency','freelance','community'],budget:'any'},
+    {name:'Gumroad',desc:'sell digital products. 10% fee but zero setup.',price:0,paid:0,icon:'\u{1F6D2}',tags:['content','community','affiliate'],budget:'free'},
+    {name:'LemonSqueezy',desc:'MoR handles taxes globally. 5% + 50c.',price:0,paid:0,icon:'\u{1F34B}',tags:['saas','apps'],budget:'any'},
+    {name:'Ko-fi',desc:'tips and memberships. 0% platform fee.',price:0,paid:0,icon:'\u2615',tags:['content','community'],budget:'free'}
+  ],
+  email:[
+    {name:'Beehiiv',desc:'newsletter platform. free to 2,500 subs.',price:0,paid:42,icon:'\u{1F41D}',tags:['content','community','affiliate'],budget:'any'},
+    {name:'Resend',desc:'transactional emails. 3K/mo free.',price:0,paid:20,icon:'\u{1F4E7}',tags:['saas','agency'],budget:'any'},
+    {name:'Buttondown',desc:'minimal newsletter. markdown-first.',price:0,paid:9,icon:'\u{1F4E8}',tags:['content'],budget:'low'},
+    {name:'Loops',desc:'email for SaaS. drip campaigns built in.',price:0,paid:49,icon:'\u{1F504}',tags:['saas'],budget:'mid'}
+  ],
+  analytics:[
+    {name:'Plausible',desc:'privacy-first analytics. no cookie banner.',price:0,paid:9,icon:'\u{1F4CA}',tags:['saas','content','ecom','affiliate'],budget:'any'},
+    {name:'PostHog',desc:'product analytics + session replay. 1M events free.',price:0,paid:0,icon:'\u{1F994}',tags:['saas','apps'],budget:'free'},
+    {name:'Umami',desc:'self-hosted analytics. completely free.',price:0,paid:0,icon:'\u{1F4C8}',tags:['content','affiliate'],budget:'free'},
+    {name:'Google Analytics',desc:'free but google sees everything.',price:0,paid:0,icon:'\u{1F4C9}',tags:['ecom','affiliate','freelance'],budget:'free'}
+  ],
+  design:[
+    {name:'Figma',desc:'design tool. free for 3 projects.',price:0,paid:12,icon:'\u{1F3A8}',tags:['saas','apps','agency','freelance'],budget:'any'},
+    {name:'Canva',desc:'social graphics and presentations.',price:0,paid:13,icon:'\u{1F5BC}\uFE0F',tags:['content','community','ecom'],budget:'any'},
+    {name:'Excalidraw',desc:'whiteboard sketches. free and open source.',price:0,paid:0,icon:'\u270F\uFE0F',tags:['saas','agency'],budget:'free'}
+  ],
+  social:[
+    {name:'Buffer',desc:'schedule posts. 3 channels free.',price:0,paid:6,icon:'\u{1F4F1}',tags:['content','community','ecom','affiliate'],budget:'any'},
+    {name:'Typefully',desc:'twitter-first scheduling. thread composer.',price:0,paid:12,icon:'\u{1F426}',tags:['content','community'],budget:'low'},
+    {name:'Tweetlio',desc:'bulk scheduling and analytics.',price:0,paid:15,icon:'\u{1F4CB}',tags:['content','affiliate'],budget:'low'}
+  ],
+  automation:[
+    {name:'n8n',desc:'self-hosted zapier. unlimited workflows.',price:0,paid:0,icon:'\u{1F517}',tags:['saas','agency','ecom','freelance'],budget:'free'},
+    {name:'Make.com',desc:'visual automation. 1K ops/mo free.',price:0,paid:9,icon:'\u2699\uFE0F',tags:['agency','ecom','freelance'],budget:'any'},
+    {name:'Cron (macOS)',desc:'scheduled scripts. literally free.',price:0,paid:0,icon:'\u23F0',tags:['saas','content','agency'],budget:'free'},
+    {name:'GitHub Actions',desc:'CI/CD + scheduled tasks. 2K min/mo free.',price:0,paid:0,icon:'\u{1F527}',tags:['saas','apps'],budget:'free'}
+  ],
+  database:[
+    {name:'Supabase',desc:'postgres + auth + storage. 500MB free.',price:0,paid:25,icon:'\u{1F5C4}\uFE0F',tags:['saas','apps','community'],budget:'any'},
+    {name:'PlanetScale',desc:'serverless MySQL. 1B reads/mo free.',price:0,paid:29,icon:'\u{1F30D}',tags:['saas'],budget:'mid'},
+    {name:'Turso',desc:'edge SQLite. 9GB free.',price:0,paid:29,icon:'\u{1F3CE}\uFE0F',tags:['saas','apps'],budget:'any'},
+    {name:'Google Sheets',desc:'database for non-engineers. API included.',price:0,paid:0,icon:'\u{1F4D7}',tags:['freelance','agency','content'],budget:'free'},
+    {name:'Airtable',desc:'spreadsheet-database hybrid. 1,200 records free.',price:0,paid:20,icon:'\u{1F4CB}',tags:['agency','freelance','ecom'],budget:'any'}
+  ],
+  crm:[
+    {name:'Notion',desc:'CRM + docs + wiki. all-in-one workspace.',price:0,paid:8,icon:'\u{1F4DD}',tags:['agency','freelance','content'],budget:'any'},
+    {name:'HubSpot',desc:'free CRM. overkill features.',price:0,paid:0,icon:'\u{1F9F2}',tags:['agency','saas'],budget:'free'},
+    {name:'Google Sheets CRM',desc:'custom CRM in a spreadsheet. surprisingly effective.',price:0,paid:0,icon:'\u{1F4CA}',tags:['freelance','agency'],budget:'free'}
+  ],
+  ai:[
+    {name:'Claude API',desc:'best reasoning. code generation. analysis.',price:0,paid:0,icon:'\u{1F9E0}',tags:['saas','agency','content','apps'],budget:'any'},
+    {name:'OpenAI API',desc:'GPT-4o for everything. pay per token.',price:0,paid:0,icon:'\u{1F916}',tags:['saas','agency','content'],budget:'any'},
+    {name:'Cursor',desc:'AI code editor. ships 10x faster.',price:0,paid:20,icon:'\u2328\uFE0F',tags:['saas','apps'],budget:'low'},
+    {name:'Claude Code',desc:'CLI coding agent. autonomous builds.',price:0,paid:20,icon:'\u{1F4BB}',tags:['saas','apps','agency'],budget:'low'}
+  ]
+};
+
+let state = {buildTypes:[], budget:0, revenue:'pre', priority:'launch', currentStep:1};
+
+function clearChildren(el) {
+  while(el.firstChild) el.removeChild(el.firstChild);
+}
+
+function init() {
+  const btEl = document.getElementById('buildType');
+  BUILD_TYPES.forEach(function(bt) {
+    var d = document.createElement('div');
+    d.className = 'check';
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.id = 'bt_'+bt.id;
+    cb.value = bt.id;
+    cb.addEventListener('change', function() {
+      if(cb.checked) state.buildTypes.push(bt.id);
+      else state.buildTypes = state.buildTypes.filter(function(x){return x!==bt.id;});
+    });
+    var lb = document.createElement('label');
+    lb.htmlFor = 'bt_'+bt.id;
+    lb.textContent = bt.label;
+    lb.style.cssText = 'display:inline;margin:0;cursor:pointer';
+    d.appendChild(cb);
+    d.appendChild(lb);
+    btEl.appendChild(d);
+  });
+
+  var revEl = document.getElementById('revenueStage');
+  REVENUE_STAGES.forEach(function(rs) {
+    var d = document.createElement('div');
+    d.className = 'option';
+    d.dataset.value = rs.id;
+    d.addEventListener('click', function() {
+      revEl.querySelectorAll('.option').forEach(function(o){o.classList.remove('selected');});
+      d.classList.add('selected');
+      state.revenue = rs.id;
+    });
+    var n = document.createElement('div');
+    n.className = 'name';
+    n.textContent = rs.label;
+    var c = document.createElement('div');
+    c.className = 'cost';
+    c.textContent = rs.desc;
+    d.appendChild(n);
+    d.appendChild(c);
+    revEl.appendChild(d);
+  });
+
+  var prEl = document.getElementById('priorities');
+  PRIORITIES.forEach(function(pr) {
+    var d = document.createElement('div');
+    d.className = 'option';
+    d.dataset.value = pr.id;
+    d.addEventListener('click', function() {
+      prEl.querySelectorAll('.option').forEach(function(o){o.classList.remove('selected');});
+      d.classList.add('selected');
+      state.priority = pr.id;
+    });
+    var ic = document.createElement('div');
+    ic.className = 'icon';
+    ic.textContent = pr.icon;
+    var n = document.createElement('div');
+    n.className = 'name';
+    n.textContent = pr.label;
+    d.appendChild(ic);
+    d.appendChild(n);
+    prEl.appendChild(d);
+  });
+
+  document.getElementById('budgetSlider').addEventListener('input', function(e) {
+    state.budget = parseInt(e.target.value);
+    document.getElementById('budgetDisplay').textContent = state.budget === 0 ? '$0/mo (free only)' : '$'+state.budget+'/mo';
+  });
+
+  updateSteps();
+}
+
+function updateSteps() {
+  var si = document.getElementById('stepIndicator');
+  clearChildren(si);
+  for(var i=1;i<=4;i++){
+    var dot = document.createElement('div');
+    dot.className = 'step-dot' + (i===state.currentStep?' active':'') + (i<state.currentStep?' done':'');
+    si.appendChild(dot);
+  }
+}
+
+function nextStep(n) {
+  document.querySelectorAll('.step-card').forEach(function(c){c.classList.add('hidden');});
+  var el = document.getElementById('step'+n);
+  if(el) el.classList.remove('hidden');
+  state.currentStep = n;
+  updateSteps();
+}
+
+function scoreTool(tool, tags) {
+  var score = 0;
+  var overlap = tool.tags.filter(function(t){return tags.indexOf(t)!==-1;});
+  score += overlap.length * 20;
+  if(state.budget === 0 && tool.price === 0) score += 30;
+  else if(state.budget > 0 && tool.paid <= state.budget * 0.3) score += 15;
+  if(state.revenue === 'pre' && tool.price === 0) score += 20;
+  if(state.revenue === 'scaling' && tool.paid > 0) score += 10;
+  return score;
+}
+
+function generateStack() {
+  var tags = state.buildTypes.length > 0 ? state.buildTypes : ['saas','content'];
+  var results = document.getElementById('results');
+  clearChildren(results);
+  results.style.display = 'block';
+
+  document.querySelectorAll('.step-card').forEach(function(c){c.classList.add('hidden');});
+  document.getElementById('stepIndicator').style.display = 'none';
+
+  var heading = document.createElement('h2');
+  heading.textContent = 'your stack';
+  heading.style.textAlign = 'center';
+  heading.style.marginBottom = '8px';
+  results.appendChild(heading);
+
+  var sub = document.createElement('p');
+  sub.style.cssText = 'text-align:center;color:var(--muted);font-size:0.85rem;margin-bottom:24px';
+  sub.textContent = 'curated for ' + tags.join(' + ') + ' at $' + state.budget + '/mo budget';
+  results.appendChild(sub);
+
+  var totalMonthly = 0;
+  var categories = Object.keys(TOOLS);
+  var catLabels = {hosting:'hosting',payments:'payments',email:'email & newsletter',analytics:'analytics',design:'design',social:'social media',automation:'automation',database:'database',crm:'crm & workspace',ai:'ai tools'};
+
+  categories.forEach(function(cat) {
+    var tools = TOOLS[cat]
+      .map(function(t){return Object.assign({}, t, {score: scoreTool(t, tags)});})
+      .filter(function(t){return t.score > 0;})
+      .sort(function(a,b){return b.score - a.score;})
+      .slice(0, 2);
+
+    if(tools.length === 0) return;
+
+    var section = document.createElement('div');
+    section.className = 'result-category';
+
+    var h = document.createElement('h3');
+    h.textContent = catLabels[cat] || cat;
+    section.appendChild(h);
+
+    tools.forEach(function(tool) {
+      var card = document.createElement('div');
+      card.className = 'tool-card';
+
+      var iconDiv = document.createElement('div');
+      iconDiv.className = 'tool-icon';
+      iconDiv.textContent = tool.icon;
+
+      var info = document.createElement('div');
+      info.className = 'tool-info';
+      var nameEl = document.createElement('div');
+      nameEl.className = 'tool-name';
+      nameEl.textContent = tool.name;
+      var descEl = document.createElement('div');
+      descEl.className = 'tool-desc';
+      descEl.textContent = tool.desc;
+      info.appendChild(nameEl);
+      info.appendChild(descEl);
+
+      var priceDiv = document.createElement('div');
+      priceDiv.className = 'tool-price';
+      var usePaid = state.budget > 0 && state.revenue !== 'pre' && tool.paid > 0;
+      var cost = usePaid ? tool.paid : tool.price;
+      totalMonthly += cost;
+
+      var priceEl = document.createElement('div');
+      priceEl.className = 'price' + (cost === 0 ? ' free-tag' : '');
+      priceEl.textContent = cost === 0 ? 'free' : '$'+cost;
+      var periodEl = document.createElement('div');
+      periodEl.className = 'period';
+      periodEl.textContent = cost > 0 ? '/month' : '';
+      priceDiv.appendChild(priceEl);
+      priceDiv.appendChild(periodEl);
+
+      card.appendChild(iconDiv);
+      card.appendChild(info);
+      card.appendChild(priceDiv);
+      section.appendChild(card);
+    });
+
+    results.appendChild(section);
+  });
+
+  var totalBar = document.createElement('div');
+  totalBar.className = 'total-bar';
+  var tl = document.createElement('div');
+  tl.className = 'total-label';
+  tl.textContent = 'estimated monthly cost';
+  var ta = document.createElement('div');
+  ta.className = 'total-amount';
+  ta.textContent = totalMonthly === 0 ? '$0' : '$'+totalMonthly+'/mo';
+  var tn = document.createElement('div');
+  tn.className = 'total-note';
+  tn.textContent = totalMonthly === 0 ? 'completely free stack. no excuses.' : 'ROI positive if you close 1 client.';
+  totalBar.appendChild(tl);
+  totalBar.appendChild(ta);
+  totalBar.appendChild(tn);
+  results.appendChild(totalBar);
+
+  var shareRow = document.createElement('div');
+  shareRow.className = 'share-row';
+
+  var copyBtn = document.createElement('button');
+  copyBtn.className = 'btn btn-outline';
+  copyBtn.textContent = 'copy stack';
+  copyBtn.addEventListener('click', function() {
+    var text = Array.from(results.querySelectorAll('.tool-name')).map(function(n){return n.textContent;}).join(', ');
+    navigator.clipboard.writeText('my solopreneur stack: ' + text + ' \u2014 built with stackmaxx').then(function(){
+      copyBtn.textContent = 'copied';
+      setTimeout(function(){copyBtn.textContent='copy stack';},2000);
+    });
+  });
+
+  var tweetBtn = document.createElement('button');
+  tweetBtn.className = 'btn btn-outline';
+  tweetBtn.textContent = 'share on X';
+  tweetBtn.addEventListener('click', function() {
+    var toolNames = Array.from(results.querySelectorAll('.tool-name')).map(function(n){return n.textContent;}).slice(0,5).join(', ');
+    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('my $'+totalMonthly+'/mo solopreneur stack:\n\n'+toolNames+'\n\nbuilt mine in 2 min with stackmaxx');
+    window.open(url,'_blank');
+  });
+
+  var restartBtn = document.createElement('button');
+  restartBtn.className = 'btn btn-outline';
+  restartBtn.textContent = 'start over';
+  restartBtn.addEventListener('click', function() {
+    results.style.display = 'none';
+    document.getElementById('stepIndicator').style.display = 'flex';
+    nextStep(1);
+  });
+
+  shareRow.appendChild(copyBtn);
+  shareRow.appendChild(tweetBtn);
+  shareRow.appendChild(restartBtn);
+  results.appendChild(shareRow);
+
+  var cta = document.createElement('div');
+  cta.className = 'cta-box';
+  var ctaH = document.createElement('h3');
+  ctaH.textContent = 'want the full setup guide?';
+  var ctaP = document.createElement('p');
+  ctaP.textContent = 'step-by-step instructions to configure every tool. plus automation scripts to connect them.';
+  var emailRow = document.createElement('div');
+  emailRow.className = 'email-row';
+  var emailInput = document.createElement('input');
+  emailInput.type = 'email';
+  emailInput.placeholder = 'you@email.com';
+  var emailBtn = document.createElement('button');
+  emailBtn.className = 'btn';
+  emailBtn.textContent = 'send it';
+  emailBtn.addEventListener('click', function() {
+    var email = emailInput.value.trim();
+    if(email && email.indexOf('@') !== -1) {
+      var leads = JSON.parse(localStorage.getItem('stackmaxx_leads')||'[]');
+      leads.push({email: email, stack: Array.from(results.querySelectorAll('.tool-name')).map(function(n){return n.textContent;}), budget: state.budget, revenue: state.revenue, ts: new Date().toISOString()});
+      localStorage.setItem('stackmaxx_leads', JSON.stringify(leads));
+      emailBtn.textContent = 'sent';
+      emailBtn.disabled = true;
+      emailInput.value = '';
+    }
+  });
+  emailRow.appendChild(emailInput);
+  emailRow.appendChild(emailBtn);
+  cta.appendChild(ctaH);
+  cta.appendChild(ctaP);
+  cta.appendChild(emailRow);
+  results.appendChild(cta);
+
+  results.scrollIntoView({behavior:'smooth'});
+}
+
+init();
+</script>
+</body>
+</html>

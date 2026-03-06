@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AITools.directory - Best AI tools for solopreneurs</title>
+  <meta name="description" content="100+ AI tools reviewed and ranked by actual solopreneurs. Find the right tool for writing, automation, video, images, and more.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0a; --surface: #111111; --surface2: #1a1a1a; --border: #222222;
+      --text: #e8e8e8; --muted: #888888; --accent: #7c6af7; --accent-dim: #3d3479;
+      --green: #22c55e; --yellow: #eab308; --red: #ef4444;
+    }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    nav { border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: var(--bg); z-index: 100; }
+    .nav-brand { font-size: 16px; font-weight: 700; }
+    .nav-brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); font-size: 14px; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--accent); color: #fff !important; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; }
+    .hero { max-width: 680px; margin: 0 auto; padding: 80px 24px 60px; text-align: center; }
+    .hero-badge { display: inline-block; background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-dim); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin-bottom: 18px; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero p { color: var(--muted); font-size: 16px; max-width: 500px; margin: 0 auto 32px; }
+    .hero-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .hero-stat strong { display: block; font-size: 24px; font-weight: 800; }
+    .hero-stat span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .search-bar { max-width: 680px; margin: 0 auto 40px; padding: 0 24px; }
+    .search-wrap { position: relative; }
+    .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+    .search-input { width: 100%; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 14px 14px 14px 44px; border-radius: 10px; font-size: 15px; outline: none; transition: border-color 0.15s; }
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus { border-color: var(--accent); }
+    .filters { max-width: 1200px; margin: 0 auto 32px; padding: 0 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn { background: var(--surface); border: 1px solid var(--border); color: var(--muted); padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer; transition: all 0.15s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--text); }
+    .section-hdr { max-width: 1200px; margin: 0 auto 20px; padding: 0 24px; }
+    .section-hdr h2 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+    .tools-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+    .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: border-color 0.15s, transform 0.15s; cursor: pointer; display: block; }
+    .tool-card:hover { border-color: #333; transform: translateY(-2px); }
+    .tool-card.featured { border-color: var(--accent-dim); }
+    .tool-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+    .tool-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--surface2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .tool-meta { flex: 1; min-width: 0; }
+    .tool-name { font-weight: 700; font-size: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .badge { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; letter-spacing: 0.3px; text-transform: uppercase; }
+    .badge-free { background: rgba(34,197,94,0.15); color: var(--green); }
+    .badge-paid { background: rgba(124,106,247,0.15); color: var(--accent); }
+    .badge-freemium { background: rgba(234,179,8,0.15); color: var(--yellow); }
+    .badge-hot { background: rgba(239,68,68,0.15); color: var(--red); }
+    .tool-tagline { color: var(--muted); font-size: 13px; margin-top: 2px; }
+    .tool-desc { font-size: 14px; color: #aaa; line-height: 1.5; margin-bottom: 14px; }
+    .tool-footer { display: flex; align-items: center; justify-content: space-between; }
+    .tool-category { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); padding: 3px 10px; border-radius: 20px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .tool-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+    .stars { color: var(--yellow); }
+    .no-results { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 60px 0; }
+    .no-results a { color: var(--accent); }
+    .submit-banner { background: linear-gradient(135deg, var(--surface), #0d0b1e); border: 1px solid #2a2050; max-width: 1200px; margin: 0 auto 48px; padding: 32px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .submit-banner h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+    .submit-banner p { color: var(--muted); font-size: 14px; }
+    .submit-btn { background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--muted); font-size: 13px; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 12px; flex-wrap: wrap; }
+    @media (max-width: 640px) { .nav-links { display: none; } .tools-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">AI<span>Tools</span>.directory</a>
+  <ul class="nav-links">
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#automation">Automation</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#image">Image</a></li>
+    <li><a href="#dev">Dev</a></li>
+  </ul>
+  <a href="#submit" class="nav-cta">Submit a tool</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Curated by solopreneurs</div>
+  <h1>Find the <em>right AI tool</em>, not just the most hyped one</h1>
+  <p>100+ tools reviewed by people who actually use them. Rated on value, not hype.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>127</strong><span>Tools listed</span></div>
+    <div class="hero-stat"><strong>4,800+</strong><span>Real ratings</span></div>
+    <div class="hero-stat"><strong>43</strong><span>Free tools</span></div>
+    <div class="hero-stat"><strong>Weekly</strong><span>Updated</span></div>
+  </div>
+</section>
+
+<div class="search-bar">
+  <div class="search-wrap">
+    <div class="search-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </div>
+    <input type="text" class="search-input" placeholder="Search tools — writing, video, code..." id="searchInput" autocomplete="off">
+  </div>
+</div>
+
+<div class="filters" id="filtersBar">
+  <button class="filter-btn active" data-filter="all">All tools</button>
+  <button class="filter-btn" data-filter="writing">Writing</button>
+  <button class="filter-btn" data-filter="automation">Automation</button>
+  <button class="filter-btn" data-filter="video">Video</button>
+  <button class="filter-btn" data-filter="image">Image</button>
+  <button class="filter-btn" data-filter="dev">Dev</button>
+  <button class="filter-btn" data-filter="seo">SEO</button>
+  <button class="filter-btn" data-filter="audio">Audio</button>
+  <button class="filter-btn" data-filter="research">Research</button>
+  <button class="filter-btn" data-filter="free">Free only</button>
+</div>
+
+<div class="section-hdr">
+  <h2>Editor picks — used by this site to make money</h2>
+</div>
+
+<div class="tools-grid" id="toolsGrid"></div>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 24px 48px;">
+  <div class="submit-banner" id="submit">
+    <div>
+      <h3>Built something worth listing?</h3>
+      <p>We only list tools we have actually used or that come highly recommended with real-world proof. No paid placements.</p>
+    </div>
+    <a href="mailto:submit@aitools.directory" class="submit-btn">Submit your tool</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Submit a tool</a>
+    <a href="#">Newsletter</a>
+    <a href="#">Affiliate disclosure</a>
+    <a href="#">Privacy</a>
+  </div>
+  <p>Some links are affiliate links. We earn a commission if you sign up, at no extra cost to you.<br>We only list tools we would use ourselves. Updated weekly.</p>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // All tool data is static and hardcoded here — not from user input
+  var tools = [
+    { name: "Claude", emoji: "AI", tagline: "Best for complex writing and reasoning", desc: "Anthropic flagship. Better long-form than GPT-4, better reasoning, fewer hallucinations. Go-to for content production pipelines.", category: "writing", tags: ["writing","automation","research","dev"], pricing: "freemium", price: "Free / $20/mo Pro", rating: 4.9, featured: true, href: "https://claude.ai" },
+    { name: "ChatGPT", emoji: "AI", tagline: "The standard — still solid", desc: "GPT-4o handles most writing tasks well. Better integrations than Claude. Plugin ecosystem useful if you pay for Plus.", category: "writing", tags: ["writing","research"], pricing: "freemium", price: "Free / $20/mo Plus", rating: 4.7, href: "https://chat.openai.com" },
+    { name: "Copy.ai", emoji: "WT", tagline: "Sales copy fast", desc: "Best for short-form: ad copy, email subject lines, product descriptions. Good for first drafts.", category: "writing", tags: ["writing"], pricing: "freemium", price: "Free / $36/mo", rating: 4.0, href: "https://copy.ai" },
+    { name: "Perplexity", emoji: "AI", tagline: "AI search with real citations", desc: "Replaces Google for research. Real sources. Pro adds Claude and GPT-4 models. Used daily for market research.", category: "research", tags: ["research","writing"], pricing: "freemium", price: "Free / $20/mo Pro", rating: 4.8, featured: true, href: "https://perplexity.ai" },
+    { name: "Jasper", emoji: "WT", tagline: "Enterprise content at scale", desc: "Excels at long-form SEO content in volume. Built-in brand voice. Better for teams. Solo use: overkill vs Claude.", category: "writing", tags: ["writing","seo"], pricing: "paid", price: "$49/mo+", rating: 3.8, href: "https://jasper.ai" },
+    { name: "n8n", emoji: "AU", tagline: "Zapier but you own your data", desc: "Self-hosted automation. Way more powerful than Zapier for complex workflows. 500+ integrations.", category: "automation", tags: ["automation","dev"], pricing: "freemium", price: "Free self-host / $20/mo cloud", rating: 4.8, featured: true, href: "https://n8n.io" },
+    { name: "Make", emoji: "AU", tagline: "Visual automation without code", desc: "Cheaper and more visual than Zapier. Better for data transformation tasks. Faster to get started than n8n.", category: "automation", tags: ["automation"], pricing: "freemium", price: "Free / $9/mo+", rating: 4.5, href: "https://make.com" },
+    { name: "Zapier", emoji: "AU", tagline: "Industry standard — reliable", desc: "Most reliable for mission-critical automations. Pricing is painful. Worth it when downtime means lost revenue.", category: "automation", tags: ["automation"], pricing: "freemium", price: "Free / $19.99/mo+", rating: 4.2, href: "https://zapier.com" },
+    { name: "Instantly.ai", emoji: "EM", tagline: "Cold email at scale with warmup built in", desc: "Best cold email platform. Unlimited email accounts, built-in warmup, reply detection. 5K emails/day at $47/mo.", category: "automation", tags: ["automation","writing"], pricing: "paid", price: "$37/mo Growth", rating: 4.9, featured: true, href: "https://instantly.ai" },
+    { name: "Apollo.io", emoji: "LD", tagline: "B2B lead database and sequences", desc: "270M contact database. Email sequences built in. Technographic filters. $49/mo Basic = 1,200 credits/mo.", category: "automation", tags: ["automation","research"], pricing: "freemium", price: "Free / $49/mo Basic", rating: 4.6, href: "https://apollo.io" },
+    { name: "CapCut", emoji: "VD", tagline: "Best free video editor", desc: "Auto-captions that work. Trending audio, AI background removal, templates. Free. No reason to use anything else at entry level.", category: "video", tags: ["video"], pricing: "free", price: "Free", rating: 4.8, featured: true, href: "https://capcut.com" },
+    { name: "HeyGen", emoji: "AV", tagline: "AI avatars that look real", desc: "Best AI avatar tool. 100+ voice options, multi-language. Use for UGC ads and product demos.", category: "video", tags: ["video"], pricing: "paid", price: "$29/mo Starter", rating: 4.4, href: "https://heygen.com" },
+    { name: "Descript", emoji: "VD", tagline: "Edit video by editing the transcript", desc: "Records, transcribes, edit by deleting words from transcript. Built-in voice clone. Best for podcasts.", category: "video", tags: ["video","audio"], pricing: "freemium", price: "Free / $12/mo+", rating: 4.5, href: "https://descript.com" },
+    { name: "Remotion", emoji: "VD", tagline: "Programmatic video in React", desc: "Generate videos with TypeScript. 30x cheaper than AI video tools for high volume. $15/mo VPS for batch pipelines.", category: "video", tags: ["video","dev"], pricing: "free", price: "Free (OSS)", rating: 4.7, href: "https://remotion.dev" },
+    { name: "Runway ML", emoji: "VD", tagline: "Gen-3 video is genuinely impressive", desc: "Text-to-video and image-to-video. Gen-3 produces cinematic clips. Best for high-end visual content, not bulk.", category: "video", tags: ["video","image"], pricing: "paid", price: "$15/mo Standard", rating: 4.3, href: "https://runwayml.com" },
+    { name: "Midjourney", emoji: "IM", tagline: "Best image quality, Discord-based", desc: "King for artistic and commercial images. V6 quality is unmatched. $10/mo Basic = 200 images/mo.", category: "image", tags: ["image"], pricing: "paid", price: "$10/mo Basic", rating: 4.9, featured: true, href: "https://midjourney.com" },
+    { name: "Ideogram", emoji: "IM", tagline: "Best AI tool for text in images", desc: "Only AI image tool that reliably generates readable text. Perfect for social graphics and thumbnails with text.", category: "image", tags: ["image"], pricing: "freemium", price: "Free / $7/mo Basic", rating: 4.7, href: "https://ideogram.ai" },
+    { name: "DALL-E 3", emoji: "IM", tagline: "Best text understanding in prompts", desc: "Understands complex prompts better than Midjourney. Worse on artistic quality. Included in ChatGPT Plus.", category: "image", tags: ["image"], pricing: "freemium", price: "Included in ChatGPT Plus", rating: 4.2, href: "https://openai.com" },
+    { name: "Adobe Firefly", emoji: "IM", tagline: "Commercially safe AI images", desc: "Trained on licensed content only. Safe for commercial use without copyright risk. Integrated into Photoshop.", category: "image", tags: ["image"], pricing: "freemium", price: "Free / $4.99/mo", rating: 4.3, href: "https://firefly.adobe.com" },
+    { name: "Claude Code", emoji: "DV", tagline: "Best AI coding agent in 2025", desc: "Autonomous coding agent that reads your full codebase and executes tasks. Writes, edits, runs tests, fixes bugs.", category: "dev", tags: ["dev","automation"], pricing: "paid", price: "$20/mo Pro", rating: 5.0, featured: true, href: "https://claude.ai" },
+    { name: "Cursor", emoji: "DV", tagline: "VS Code with AI built in", desc: "AI-native IDE. Composer mode writes multi-file features from a prompt. Better than Copilot for complex refactors.", category: "dev", tags: ["dev"], pricing: "freemium", price: "Free / $20/mo Pro", rating: 4.8, href: "https://cursor.com" },
+    { name: "Vercel v0", emoji: "DV", tagline: "Generate UI components instantly", desc: "Text prompt to production-ready React and Tailwind component. One-click deploy to Vercel.", category: "dev", tags: ["dev"], pricing: "freemium", price: "Free / $20/mo Premium", rating: 4.5, href: "https://v0.dev" },
+    { name: "Supabase", emoji: "DV", tagline: "Open-source Firebase alternative", desc: "Postgres database plus auth plus storage plus realtime in one. Free tier handles most early-stage apps.", category: "dev", tags: ["dev"], pricing: "freemium", price: "Free / $25/mo Pro", rating: 4.8, href: "https://supabase.com" },
+    { name: "Ahrefs", emoji: "SE", tagline: "Best backlink and keyword research tool", desc: "Definitive SEO tool. Keyword explorer, site audit, content gap, backlink analysis. $99/mo Lite handles one site.", category: "seo", tags: ["seo","research"], pricing: "paid", price: "$99/mo Lite", rating: 4.8, href: "https://ahrefs.com" },
+    { name: "Semrush", emoji: "SE", tagline: "All-in-one SEO and competitor intel", desc: "Broader feature set than Ahrefs. Better for PPC and competitive research. Use free trial for one-time audits.", category: "seo", tags: ["seo","research"], pricing: "paid", price: "$129.95/mo Pro", rating: 4.6, href: "https://semrush.com" },
+    { name: "SurferSEO", emoji: "SE", tagline: "On-page SEO optimization", desc: "Content editor scores your article against top-ranking pages. AI writing built in. Worth it at 10+ articles/month.", category: "seo", tags: ["seo","writing"], pricing: "paid", price: "$89/mo Essential", rating: 4.4, href: "https://surferseo.com" },
+    { name: "ElevenLabs", emoji: "AU", tagline: "Best AI voice — not even close", desc: "Voice cloning and AI narration that sounds human. The go-to for all faceless content. $5/mo Starter = 30K chars.", category: "audio", tags: ["audio","video"], pricing: "freemium", price: "Free / $5/mo Starter", rating: 5.0, featured: true, href: "https://elevenlabs.io" },
+    { name: "Udio", emoji: "MU", tagline: "Best AI music generation", desc: "Text-to-music with genre control. Use for YouTube background music with no copyright strikes.", category: "audio", tags: ["audio"], pricing: "freemium", price: "Free / $10/mo Standard", rating: 4.6, href: "https://udio.com" },
+    { name: "Whisper", emoji: "AU", tagline: "Transcription at near-zero cost", desc: "Open-source STT. Runs locally. 99% accuracy. $0 for unlimited transcription. Use for podcast clips.", category: "audio", tags: ["audio","dev"], pricing: "free", price: "Free (self-host)", rating: 4.8, href: "https://github.com/openai/whisper" }
+  ];
+
+  var currentFilter = "all";
+  var searchQuery = "";
+
+  function esc(str) {
+    // Escape for use in textContent — not needed with DOM but included defensively
+    return String(str || "");
+  }
+
+  function el(tag, cls) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    return e;
+  }
+
+  function makeCard(tool) {
+    var a = el("a", "tool-card" + (tool.featured ? " featured" : ""));
+    a.href = tool.href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+
+    var header = el("div", "tool-header");
+
+    var icon = el("div", "tool-icon");
+    icon.textContent = tool.emoji;
+    header.appendChild(icon);
+
+    var meta = el("div", "tool-meta");
+    var nameRow = el("div", "tool-name");
+    var nameText = document.createTextNode(tool.name + " ");
+    nameRow.appendChild(nameText);
+
+    var pricingClass = tool.pricing === "free" ? "badge-free" : tool.pricing === "paid" ? "badge-paid" : "badge-freemium";
+    var pBadge = el("span", "badge " + pricingClass);
+    pBadge.textContent = tool.pricing;
+    nameRow.appendChild(pBadge);
+
+    if (tool.rating >= 4.9) {
+      var hotBadge = el("span", "badge badge-hot");
+      hotBadge.textContent = "Top Pick";
+      nameRow.appendChild(hotBadge);
+    }
+    meta.appendChild(nameRow);
+
+    var tagline = el("div", "tool-tagline");
+    tagline.textContent = tool.tagline;
+    meta.appendChild(tagline);
+    header.appendChild(meta);
+    a.appendChild(header);
+
+    var desc = el("div", "tool-desc");
+    desc.textContent = tool.desc;
+    a.appendChild(desc);
+
+    var footer = el("div", "tool-footer");
+    var cat = el("span", "tool-category");
+    cat.textContent = tool.category;
+    footer.appendChild(cat);
+
+    var ratingWrap = el("div", "tool-rating");
+    var starsEl = el("span", "stars");
+    var full = Math.floor(tool.rating);
+    starsEl.textContent = "\u2605".repeat(full);
+    ratingWrap.appendChild(starsEl);
+    var ratingNum = document.createTextNode(" " + tool.rating.toFixed(1));
+    ratingWrap.appendChild(ratingNum);
+    footer.appendChild(ratingWrap);
+    a.appendChild(footer);
+
+    return a;
+  }
+
+  function render() {
+    var grid = document.getElementById("toolsGrid");
+    if (!grid) return;
+
+    var filtered = tools.filter(function(t) {
+      if (currentFilter === "free") return t.pricing === "free";
+      if (currentFilter !== "all") return t.tags && t.tags.indexOf(currentFilter) !== -1;
+      return true;
+    });
+
+    if (searchQuery) {
+      var q = searchQuery.toLowerCase();
+      filtered = filtered.filter(function(t) {
+        return t.name.toLowerCase().indexOf(q) !== -1 ||
+               t.tagline.toLowerCase().indexOf(q) !== -1 ||
+               t.desc.toLowerCase().indexOf(q) !== -1 ||
+               t.category.toLowerCase().indexOf(q) !== -1;
+      });
+    }
+
+    filtered.sort(function(a, b) {
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      return b.rating - a.rating;
+    });
+
+    // Clear grid safely
+    while (grid.firstChild) grid.removeChild(grid.firstChild);
+
+    if (filtered.length === 0) {
+      var msg = el("div", "no-results");
+      msg.textContent = "No tools found for that search. ";
+      var link = el("a");
+      link.href = "mailto:submit@aitools.directory";
+      link.textContent = "Suggest one";
+      msg.appendChild(link);
+      grid.appendChild(msg);
+    } else {
+      filtered.forEach(function(t) {
+        grid.appendChild(makeCard(t));
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("filtersBar").addEventListener("click", function(e) {
+      var btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      document.querySelectorAll(".filter-btn").forEach(function(b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      currentFilter = btn.getAttribute("data-filter");
+      render();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", function(e) {
+      searchQuery = e.target.value.trim();
+      render();
+    });
+
+    render();
+  });
+})();
+</script>
+</body>
+</html>

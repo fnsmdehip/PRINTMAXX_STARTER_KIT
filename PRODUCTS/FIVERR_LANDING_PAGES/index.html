@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX Services | Web Dev, Automation, Data, AI</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--green:#22c55e}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 40px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 24px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:#60a5fa}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.services{padding:40px 0 80px}
+.services h2{font-size:1.6rem;font-weight:700;margin-bottom:24px;text-align:center;color:var(--muted)}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;transition:border-color .2s,transform .2s;cursor:pointer;display:block}
+.service-card:hover{border-color:#444;transform:translateY(-2px)}
+.service-card .accent-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:8px}
+.service-card .category{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;display:flex;align-items:center}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
+.service-card .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;line-height:1.5}
+.service-card .meta{display:flex;gap:16px;flex-wrap:wrap}
+.service-card .meta-item{font-size:0.8rem;color:var(--muted)}
+.service-card .meta-item .val{font-weight:700;color:var(--text)}
+.service-card .price-range{font-size:0.9rem;font-weight:700;margin-top:16px;color:var(--green)}
+.service-card .view-link{display:inline-block;margin-top:12px;font-size:0.85rem;font-weight:600;color:#60a5fa;border-bottom:1px solid transparent}
+.service-card:hover .view-link{border-bottom-color:#60a5fa}
+.bottom-cta{padding:60px 0;text-align:center;border-top:1px solid var(--border)}
+.bottom-cta h2{font-size:1.8rem;font-weight:800;margin-bottom:12px}
+.bottom-cta p{color:var(--muted);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-block;background:#3b82f6;color:#fff;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#2563eb}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.service-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>i build things that make you money</h1>
+<p class="sub">websites, landing pages, cold email, scraping, automation, SEO, content, apps, AI chatbots, data analysis. 10 services. all battle-tested.</p>
+<div class="stats">
+<div class="stat"><div class="num">500+</div><div class="label">projects delivered</div></div>
+<div class="stat"><div class="num">10</div><div class="label">services</div></div>
+<div class="stat"><div class="num">40+</div><div class="label">industries served</div></div>
+<div class="stat"><div class="num">$50-1K</div><div class="label">price range</div></div>
+</div>
+</section>
+
+<section class="services">
+<h2>services</h2>
+<div class="service-grid">
+
+<a href="website-design.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#3b82f6"></span>web development</div>
+<h3>modern website for local businesses</h3>
+<div class="desc">fast, mobile-first sites for dentists, plumbers, restaurants, lawyers, and 20+ other business types. every site scores 90+ on PageSpeed.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">150+</span> sites built</div>
+<div class="meta-item"><span class="val">3-14</span> day delivery</div>
+</div>
+<div class="price-range">$75 - $750</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="landing-page.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#8b5cf6"></span>conversion</div>
+<h3>high-converting landing page</h3>
+<div class="desc">one page, one offer, one action. average conversion rate: 5-12% vs industry average of 2.3%. A/B testing included.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">130+</span> pages built</div>
+<div class="meta-item"><span class="val">3-10</span> day delivery</div>
+</div>
+<div class="price-range">$80 - $600</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="cold-email.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#ef4444"></span>outreach</div>
+<h3>cold email sequences that get replies</h3>
+<div class="desc">3-8% reply rate. 6-question framework in under 100 words per email. 80% of replies come from follow-ups 2-5.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">110+</span> campaigns</div>
+<div class="meta-item"><span class="val">2-10</span> day delivery</div>
+</div>
+<div class="price-range">$60 - $500</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="web-scraping.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#10b981"></span>data</div>
+<h3>web scraping + clean data delivery</h3>
+<div class="desc">up to 50,000 records from any website. clean, deduplicated, formatted. CSV, Excel, JSON. 200+ sites scraped.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">200+</span> sites scraped</div>
+<div class="meta-item"><span class="val">2-7</span> day delivery</div>
+</div>
+<div class="price-range">$50 - $500</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="automation.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#f59e0b"></span>automation</div>
+<h3>business workflow automation</h3>
+<div class="desc">Python scripts that replace 3-15 hours of manual work per week. set up once, runs forever. 50+ API integrations.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">3-15hr</span> saved/week</div>
+<div class="meta-item"><span class="val">3-14</span> day delivery</div>
+</div>
+<div class="price-range">$75 - $800</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="seo-pages.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#06b6d4"></span>SEO</div>
+<h3>100 SEO-optimized pages</h3>
+<div class="desc">programmatic SEO. "[service] in [city]" targeting. 10,000+ pages built across 40+ industries. rank in 2-6 weeks.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">10K+</span> pages generated</div>
+<div class="meta-item"><span class="val">3-14</span> day delivery</div>
+</div>
+<div class="price-range">$100 - $1,000</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="content-writing.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#ec4899"></span>content</div>
+<h3>30 days of social media content</h3>
+<div class="desc">platform-specific copy for Twitter, Instagram, LinkedIn, TikTok, Facebook. 40/25/20/15 content mix. Buffer CSV included.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">200+</span> accounts served</div>
+<div class="meta-item"><span class="val">3-10</span> day delivery</div>
+</div>
+<div class="price-range">$50 - $500</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="app-development.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#6366f1"></span>app development</div>
+<h3>PWA mobile app for your business</h3>
+<div class="desc">works on every phone. installs like native. offline support, push notifications. no App Store fees. source code yours.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">30+</span> apps built</div>
+<div class="meta-item"><span class="val">5-30</span> day delivery</div>
+</div>
+<div class="price-range">$100 - $1,000</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="ai-chatbot.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#14b8a6"></span>AI</div>
+<h3>AI chatbot for your website</h3>
+<div class="desc">trained on YOUR data. answers in 3 seconds. captures leads 24/7. handles 80-90% of common questions. one script tag.</div>
+<div class="meta">
+<div class="meta-item"><span class="val">24/7</span> lead capture</div>
+<div class="meta-item"><span class="val">3-14</span> day delivery</div>
+</div>
+<div class="price-range">$75 - $800</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+<a href="data-analysis.html" class="service-card">
+<div class="category"><span class="accent-dot" style="background:#f97316"></span>analytics</div>
+<h3>data analysis + dashboard</h3>
+<div class="desc">turn messy spreadsheets into clear answers. interactive dashboards that auto-update. every chart includes the "so what."</div>
+<div class="meta">
+<div class="meta-item"><span class="val">1M</span> rows max</div>
+<div class="meta-item"><span class="val">3-14</span> day delivery</div>
+</div>
+<div class="price-range">$75 - $750</div>
+<span class="view-link">view details + samples</span>
+</a>
+
+</div>
+</section>
+
+<section class="bottom-cta">
+<h2>need something specific? just message me.</h2>
+<p>i'll tell you which service fits, how long it takes, and what it costs. no charge for the conversation.</p>
+<a href="#" class="cta-btn">Contact on Fiverr</a>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>all services include revisions, documentation, and support. source code yours on every project. no vendor lock-in.</p>
+</div>
+</footer>
+</body>
+</html>

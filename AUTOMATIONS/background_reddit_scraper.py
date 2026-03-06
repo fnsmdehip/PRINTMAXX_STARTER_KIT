@@ -16,12 +16,18 @@ import re
 import json
 import time
 import argparse
-import requests
+import sys
 from pathlib import Path
+
+try:
+    import requests
+except ImportError:
+    print("ERROR: requests not installed. Run: pip3 install requests")
+    sys.exit(1)
 from datetime import datetime
 
-# Paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+# Paths (auto-detected from script location)
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 ALPHA_STAGING = LEDGER_DIR / "ALPHA_STAGING.csv"
 RESEARCH_SUBREDDITS = LEDGER_DIR / "RESEARCH_SUBREDDITS.csv"

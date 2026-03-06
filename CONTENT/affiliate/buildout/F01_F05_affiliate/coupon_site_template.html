@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Deals & Coupons [YEAR] — Verified Promo Codes That Actually Work</title>
+<meta name="description" content="Verified SaaS coupons, lifetime deals, and promo codes updated daily. Never pay full price for software tools again.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface2: #1e1e1e;
+    --border: #262626;
+    --text: #efefef;
+    --muted: #777;
+    --accent: #f59e0b;
+    --green: #22c55e;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --purple: #a855f7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; }
+  a { color: var(--accent); text-decoration: none; }
+  input { font-family: inherit; }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* Header */
+  .site-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0; position: sticky; top: 0; z-index: 100; }
+  .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; height: 60px; gap: 24px; }
+  .logo { font-weight: 800; font-size: 20px; letter-spacing: -0.5px; white-space: nowrap; }
+  .logo em { color: var(--accent); font-style: normal; }
+  .header-search { flex: 1; max-width: 400px; position: relative; }
+  .header-search input { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 14px; border-radius: 8px; font-size: 14px; outline: none; }
+  .header-search input:focus { border-color: var(--accent); }
+  .header-search input::placeholder { color: var(--muted); }
+  .header-nav { display: flex; gap: 20px; font-size: 14px; margin-left: auto; }
+  .header-nav a { color: var(--muted); }
+  .header-nav a:hover { color: var(--text); }
+  .submit-deal-btn { background: var(--accent); color: #000; font-weight: 700; font-size: 13px; padding: 7px 14px; border-radius: 6px; border: none; white-space: nowrap; }
+
+  /* Hero */
+  .hero { background: linear-gradient(135deg, #1a1200 0%, #0a0a0a 60%); border-bottom: 1px solid var(--border); padding: 48px 20px; text-align: center; }
+  .hero h1 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 12px; }
+  .hero h1 em { color: var(--accent); font-style: normal; }
+  .hero p { color: var(--muted); font-size: 17px; max-width: 500px; margin: 0 auto 24px; }
+  .hero-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat-num { font-size: 28px; font-weight: 800; color: var(--accent); line-height: 1; }
+  .hero-stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+
+  /* Layout */
+  .page-layout { max-width: 1200px; margin: 0 auto; padding: 32px 20px; display: grid; grid-template-columns: 220px 1fr; gap: 32px; }
+
+  /* Sidebar */
+  .sidebar { position: sticky; top: 76px; height: fit-content; }
+  .sidebar-section { margin-bottom: 24px; }
+  .sidebar-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 10px; }
+  .sidebar-link { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 6px; font-size: 14px; color: var(--muted); margin-bottom: 2px; }
+  .sidebar-link:hover, .sidebar-link.active { background: var(--surface); color: var(--text); text-decoration: none; }
+  .sidebar-count { background: var(--surface2); color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 10px; }
+  .sidebar-link.active .sidebar-count { background: rgba(245,158,11,0.15); color: var(--accent); }
+
+  /* Toolbar */
+  .toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+  .toolbar-left { display: flex; gap: 8px; flex-wrap: wrap; }
+  .filter-btn { background: var(--surface); border: 1px solid var(--border); color: var(--muted); padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; }
+  .filter-btn:hover, .filter-btn.active { background: rgba(245,158,11,0.1); border-color: var(--accent); color: var(--accent); }
+  .sort-select { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 7px 12px; border-radius: 6px; font-size: 13px; }
+
+  /* Deal cards */
+  .deals-grid { display: flex; flex-direction: column; gap: 12px; }
+
+  .deal-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: grid; grid-template-columns: 64px 1fr auto; gap: 16px; align-items: center; transition: border-color 0.15s; }
+  .deal-card:hover { border-color: var(--accent); }
+  .deal-card.featured { border-color: rgba(245,158,11,0.4); background: linear-gradient(135deg, rgba(245,158,11,0.04) 0%, var(--surface) 60%); }
+  .deal-card.lifetime { border-color: rgba(168,85,247,0.4); }
+  .deal-card.expiring { border-color: rgba(239,68,68,0.3); }
+
+  .deal-logo { width: 64px; height: 64px; border-radius: 12px; background: var(--surface2); display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; border: 1px solid var(--border); }
+
+  .deal-info { min-width: 0; }
+  .deal-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+  .deal-name { font-weight: 700; font-size: 17px; }
+  .deal-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; }
+  .badge-featured { background: rgba(245,158,11,0.15); color: var(--accent); }
+  .badge-lifetime { background: rgba(168,85,247,0.15); color: var(--purple); }
+  .badge-verified { background: rgba(34,197,94,0.12); color: var(--green); }
+  .badge-expiring { background: rgba(239,68,68,0.12); color: var(--red); }
+  .badge-free { background: rgba(59,130,246,0.12); color: var(--blue); }
+
+  .deal-tagline { font-size: 14px; color: var(--muted); margin-bottom: 10px; line-height: 1.4; }
+
+  .deal-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .deal-category { font-size: 12px; color: var(--muted); background: var(--surface2); padding: 3px 8px; border-radius: 4px; }
+  .deal-savings { font-size: 13px; color: var(--green); font-weight: 600; }
+  .deal-uses { font-size: 12px; color: var(--muted); }
+  .deal-verified-time { font-size: 12px; color: var(--muted); }
+
+  /* Coupon code section */
+  .deal-action { text-align: right; min-width: 160px; }
+  .coupon-wrapper { margin-bottom: 10px; }
+  .coupon-box { display: flex; align-items: center; gap: 0; border: 1px dashed var(--border); border-radius: 6px; overflow: hidden; }
+  .coupon-code { flex: 1; background: var(--surface2); padding: 8px 12px; font-size: 14px; font-weight: 700; font-family: monospace; letter-spacing: 1px; color: var(--accent); }
+  .copy-btn { background: var(--accent); color: #000; border: none; padding: 8px 12px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+  .copy-btn:hover { opacity: 0.9; }
+  .copy-btn.copied { background: var(--green); }
+
+  .get-deal-btn { display: block; background: var(--accent); color: #000; font-weight: 700; font-size: 14px; padding: 10px 18px; border-radius: 8px; text-align: center; border: none; width: 100%; margin-top: 8px; }
+  .get-deal-btn:hover { opacity: 0.9; text-decoration: none; }
+  .get-deal-btn.outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+  .deal-price { font-size: 13px; text-align: center; margin-top: 6px; }
+  .deal-price .orig { color: var(--muted); text-decoration: line-through; margin-right: 4px; }
+  .deal-price .sale { color: var(--green); font-weight: 700; }
+
+  /* Lifetime deal card (special) */
+  .ltd-banner { background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(245,158,11,0.04)); border: 1px solid rgba(168,85,247,0.3); border-radius: 12px; padding: 20px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .ltd-left h3 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+  .ltd-left p { font-size: 14px; color: var(--muted); }
+  .ltd-right { text-align: right; }
+  .ltd-price-orig { font-size: 13px; color: var(--muted); text-decoration: line-through; }
+  .ltd-price-sale { font-size: 36px; font-weight: 900; color: var(--purple); line-height: 1; }
+  .ltd-price-sale span { font-size: 14px; color: var(--muted); font-weight: 400; }
+  .ltd-btn { background: var(--purple); color: #fff; font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 8px; display: inline-block; margin-top: 8px; }
+  .ltd-btn:hover { text-decoration: none; opacity: 0.9; }
+
+  /* Alert banner */
+  .alert-banner { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; padding: 12px 16px; font-size: 14px; color: var(--accent); margin-bottom: 20px; display: flex; gap: 10px; align-items: center; }
+
+  /* Pagination */
+  .pagination { display: flex; gap: 8px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+  .page-btn { background: var(--surface); border: 1px solid var(--border); color: var(--muted); padding: 8px 14px; border-radius: 6px; font-size: 14px; }
+  .page-btn.active { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 700; }
+  .page-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+  /* Submit deal form */
+  .submit-section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 32px; }
+  .submit-section h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .submit-section p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .form-field { display: flex; flex-direction: column; gap: 4px; }
+  .form-field label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; color: var(--muted); }
+  .form-field input, .form-field select, .form-field textarea { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 9px 12px; border-radius: 6px; font-size: 14px; outline: none; font-family: inherit; }
+  .form-field input:focus, .form-field textarea:focus { border-color: var(--accent); }
+  .form-field textarea { min-height: 80px; resize: vertical; }
+  .form-submit { background: var(--accent); color: #000; font-weight: 700; font-size: 15px; padding: 12px 24px; border-radius: 8px; border: none; width: 100%; margin-top: 4px; }
+
+  /* Disclosure */
+  .disclosure { font-size: 12px; color: var(--muted); padding: 16px; text-align: center; border-top: 1px solid var(--border); margin-top: 32px; }
+
+  /* Footer */
+  .site-footer { background: var(--surface); border-top: 1px solid var(--border); padding: 32px 20px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .footer-col-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 12px; }
+  .footer-col a { display: block; color: var(--muted); font-size: 14px; margin-bottom: 6px; }
+  .footer-col a:hover { color: var(--text); }
+  .footer-bottom { max-width: 1200px; margin: 24px auto 0; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 900px) {
+    .page-layout { grid-template-columns: 1fr; }
+    .sidebar { position: static; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+    .sidebar-section { margin-bottom: 0; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .deal-card { grid-template-columns: 1fr; }
+    .deal-action { text-align: left; min-width: 0; }
+    .coupon-wrapper { max-width: 260px; }
+    .header-nav { display: none; }
+    .hero-stats { gap: 24px; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">Deal<em>Stack</em></div>
+    <div class="header-search">
+      <input type="search" placeholder="Search 200+ SaaS deals...">
+    </div>
+    <nav class="header-nav">
+      <a href="#">Lifetime Deals</a>
+      <a href="#">Expiring Soon</a>
+      <a href="#">Free Tools</a>
+    </nav>
+    <button class="submit-deal-btn">Submit a Deal</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>SaaS deals that <em>actually work</em><br>in [YEAR]</h1>
+  <p>Verified promo codes and lifetime deals for the tools solopreneurs and founders actually use.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">247</div>
+      <div class="hero-stat-label">Active Deals</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">$2.4M</div>
+      <div class="hero-stat-label">Saved by users</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">18K</div>
+      <div class="hero-stat-label">Monthly visitors</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">Daily</div>
+      <div class="hero-stat-label">Verified updates</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="page-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Category</div>
+      <a href="#" class="sidebar-link active">All deals <span class="sidebar-count">247</span></a>
+      <a href="#" class="sidebar-link">Email marketing <span class="sidebar-count">18</span></a>
+      <a href="#" class="sidebar-link">SEO tools <span class="sidebar-count">22</span></a>
+      <a href="#" class="sidebar-link">CRM / Sales <span class="sidebar-count">15</span></a>
+      <a href="#" class="sidebar-link">Analytics <span class="sidebar-count">12</span></a>
+      <a href="#" class="sidebar-link">Design <span class="sidebar-count">19</span></a>
+      <a href="#" class="sidebar-link">Productivity <span class="sidebar-count">24</span></a>
+      <a href="#" class="sidebar-link">AI tools <span class="sidebar-count">31</span></a>
+      <a href="#" class="sidebar-link">Ecommerce <span class="sidebar-count">20</span></a>
+      <a href="#" class="sidebar-link">Hosting <span class="sidebar-count">11</span></a>
+      <a href="#" class="sidebar-link">Video / Media <span class="sidebar-count">16</span></a>
+      <a href="#" class="sidebar-link">Developer tools <span class="sidebar-count">19</span></a>
+      <a href="#" class="sidebar-link">Finance <span class="sidebar-count">10</span></a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Deal type</div>
+      <a href="#" class="sidebar-link">Lifetime deals <span class="sidebar-count">34</span></a>
+      <a href="#" class="sidebar-link">Free plans <span class="sidebar-count">47</span></a>
+      <a href="#" class="sidebar-link">% Off coupons <span class="sidebar-count">89</span></a>
+      <a href="#" class="sidebar-link">Free trials <span class="sidebar-count">77</span></a>
+      <a href="#" class="sidebar-link">Expiring soon <span class="sidebar-count">12</span></a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- ALERT -->
+    <div class="alert-banner">
+      Black Friday 2026 deals tracker going live Nov 15. <a href="#" style="color: var(--accent); font-weight: 600; margin-left: 4px;">Get notified</a>
+    </div>
+
+    <!-- LIFETIME DEAL FEATURED -->
+    <div class="ltd-banner">
+      <div class="ltd-left">
+        <h3>AppSumo Pick: [Tool Name]</h3>
+        <p>One-time payment. Unlimited access forever. Verified working as of [date].</p>
+        <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+          <span class="deal-badge badge-lifetime">Lifetime deal</span>
+          <span class="deal-badge badge-verified">Verified today</span>
+          <span style="font-size: 13px; color: var(--muted);">147 claimed this week</span>
+        </div>
+      </div>
+      <div class="ltd-right">
+        <div class="ltd-price-orig">$[X]/mo billed annually</div>
+        <div class="ltd-price-sale">$[X]<span> one-time</span></div>
+        <a href="[AFFILIATE LINK]" class="ltd-btn">Get lifetime deal</a>
+      </div>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">% Off</button>
+        <button class="filter-btn">Lifetime</button>
+        <button class="filter-btn">Free</button>
+        <button class="filter-btn">Expiring</button>
+      </div>
+      <select class="sort-select">
+        <option>Sort: Most popular</option>
+        <option>Sort: Newest</option>
+        <option>Sort: Biggest discount</option>
+        <option>Sort: Expiring soon</option>
+      </select>
+    </div>
+
+    <!-- DEALS GRID -->
+    <div class="deals-grid">
+
+      <!-- Deal 1: Featured with coupon code -->
+      <div class="deal-card featured">
+        <div class="deal-logo">📧</div>
+        <div class="deal-info">
+          <div class="deal-top">
+            <div class="deal-name">ConvertKit (Kit)</div>
+            <span class="deal-badge badge-featured">Featured</span>
+            <span class="deal-badge badge-verified">Verified</span>
+          </div>
+          <div class="deal-tagline">Email marketing for creators. 10K subscribers free. Use code for 30% off first 3 months on Pro plan.</div>
+          <div class="deal-meta">
+            <span class="deal-category">Email marketing</span>
+            <span class="deal-savings">Save 30% — $44.70 off</span>
+            <span class="deal-uses">2,341 used</span>
+            <span class="deal-verified-time">Verified 2 hours ago</span>
+          </div>
+        </div>
+        <div class="deal-action">
+          <div class="coupon-wrapper">
+            <div class="coupon-box">
+              <div class="coupon-code" id="code1">CREATOR30</div>
+              <button class="copy-btn" onclick="copyCode('code1', this)">Copy</button>
+            </div>
+          </div>
+          <a href="[AFFILIATE LINK]" class="get-deal-btn">Get deal</a>
+          <div class="deal-price"><span class="orig">$149/mo</span><span class="sale">$104.30/mo</span></div>
+        </div>
+      </div>
+
+      <!-- Deal 2: Free plan / no code needed -->
+      <div class="deal-card">
+        <div class="deal-logo">🐝</div>
+        <div class="deal-info">
+          <div class="deal-top">
+            <div class="deal-name">Beehiiv</div>
+            <span class="deal-badge badge-free">Free tier</span>
+            <span class="deal-badge badge-verified">Verified</span>
+          </div>
+          <div class="deal-tagline">Newsletter platform. Free plan supports up to 2,500 subscribers. No credit card required. Scale plan 20% affiliate discount via partner link.</div>
+          <div class="deal-meta">
+            <span class="deal-category">Newsletter</span>
+            <span class="deal-savings">Free for 2,500 subs</span>
+            <span class="deal-uses">892 used this month</span>
+            <span class="deal-verified-time">Verified yesterday</span>
+          </div>
+        </div>
+        <div class="deal-action">
+          <a href="[AFFILIATE LINK]" class="get-deal-btn">Get free plan</a>
+          <div class="deal-price" style="color: var(--green); font-weight: 600; margin-top: 8px; text-align: center;">$0/mo to start</div>
+        </div>
+      </div>
+
+      <!-- Deal 3: % Discount with expiry -->
+      <div class="deal-card expiring">
+        <div class="deal-logo">🔍</div>
+        <div class="deal-info">
+          <div class="deal-top">
+            <div class="deal-name">Semrush</div>
+            <span class="deal-badge badge-expiring">Expires in 3 days</span>
+            <span class="deal-badge badge-verified">Verified</span>
+          </div>
+          <div class="deal-tagline">SEO platform. 14-day Pro trial normally $119.95/mo — free via this link. No coupon code needed. Auto-applies at checkout.</div>
+          <div class="deal-meta">
+            <span class="deal-category">SEO tools</span>
+            <span class="deal-savings">$119.95 free trial value</span>
+            <span class="deal-uses">5,122 used</span>
+            <span class="deal-verified-time">Verified 4 hours ago</span>
+          </div>
+        </div>
+        <div class="deal-action">
+          <a href="[AFFILIATE LINK]" class="get-deal-btn">Start free trial</a>
+          <div class="deal-price" style="text-align: center; font-size: 12px; color: var(--red); margin-top: 6px;">Offer ends [date]</div>
+        </div>
+      </div>
+
+      <!-- Deal 4: Lifetime deal -->
+      <div class="deal-card lifetime">
+        <div class="deal-logo">⚡</div>
+        <div class="deal-info">
+          <div class="deal-top">
+            <div class="deal-name">[AppSumo Product]</div>
+            <span class="deal-badge badge-lifetime">Lifetime</span>
+            <span class="deal-badge badge-verified">Verified</span>
+          </div>
+          <div class="deal-tagline">[What it does]. One-time payment replaces $[X]/mo subscription. Codes expire when stock runs out — [X] left.</div>
+          <div class="deal-meta">
+            <span class="deal-category">[Category]</span>
+            <span class="deal-savings">Saves $[X]/yr vs subscription</span>
+            <span class="deal-uses">[X] claimed</span>
+            <span class="deal-verified-time">Verified today</span>
+          </div>
+        </div>
+        <div class="deal-action">
+          <div class="coupon-wrapper">
+            <div class="coupon-box">
+              <div class="coupon-code" id="code4">SUMO[X]</div>
+              <button class="copy-btn" onclick="copyCode('code4', this)">Copy</button>
+            </div>
+          </div>
+          <a href="[AFFILIATE LINK]" class="get-deal-btn">Get lifetime deal</a>
+          <div class="deal-price"><span class="orig">$[X]/yr</span><span class="sale">$[X] one-time</span></div>
+        </div>
+      </div>
+
+      <!-- Deal 5: Simple % off -->
+      <div class="deal-card">
+        <div class="deal-logo">🎯</div>
+        <div class="deal-info">
+          <div class="deal-top">
+            <div class="deal-name">HubSpot CRM</div>
+            <span class="deal-badge badge-free">Free forever</span>
+          </div>
+          <div class="deal-tagline">Full CRM free forever. Contact management, email tracking, deal pipeline. No coupon needed — link goes to free signup.</div>
+          <div class="deal-meta">
+            <span class="deal-category">CRM / Sales</span>
+            <span class="deal-savings">Free plan = $0/mo</span>
+            <span class="deal-uses">14,200 used this month</span>
+            <span class="deal-verified-time">Verified 1 day ago</span>
+          </div>
+        </div>
+        <div class="deal-action">
+          <a href="[AFFILIATE LINK]" class="get-deal-btn">Get free CRM</a>
+        </div>
+      </div>
+
+      <!-- Deal 6: Annual discount -->
+      <div class="deal-card">
+        <div class="deal-logo">📹</div>
+        <div class="deal-info">
+          <div class="deal-top">
+            <div class="deal-name">Loom</div>
+            <span class="deal-badge badge-verified">Verified</span>
+          </div>
+          <div class="deal-tagline">Screen recording + async video. 25 videos free forever. Business plan 50% off annual vs monthly. Code applies at checkout.</div>
+          <div class="deal-meta">
+            <span class="deal-category">Video / Productivity</span>
+            <span class="deal-savings">Save 50% on annual</span>
+            <span class="deal-uses">1,847 used</span>
+            <span class="deal-verified-time">Verified 3 days ago</span>
+          </div>
+        </div>
+        <div class="deal-action">
+          <div class="coupon-wrapper">
+            <div class="coupon-box">
+              <div class="coupon-code" id="code6">ANNUAL50</div>
+              <button class="copy-btn" onclick="copyCode('code6', this)">Copy</button>
+            </div>
+          </div>
+          <a href="[AFFILIATE LINK]" class="get-deal-btn">Get deal</a>
+          <div class="deal-price"><span class="orig">$15/user/mo</span><span class="sale">$7.50/user/mo</span></div>
+        </div>
+      </div>
+
+    </div><!-- /deals-grid -->
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">4</button>
+      <button class="page-btn">5</button>
+      <button class="page-btn">Next →</button>
+    </div>
+
+    <!-- SUBMIT DEAL FORM -->
+    <div class="submit-section">
+      <h3>Know a deal we're missing?</h3>
+      <p>Submit a promo code or discount. We verify within 24 hours and credit you if approved.</p>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Product name</label>
+          <input type="text" placeholder="e.g. Notion, Ahrefs, ClickUp">
+        </div>
+        <div class="form-field">
+          <label>Coupon code (if applicable)</label>
+          <input type="text" placeholder="e.g. SAVE30 or 'No code needed'">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Deal type</label>
+          <select>
+            <option>% discount</option>
+            <option>Lifetime deal</option>
+            <option>Free plan</option>
+            <option>Free trial extension</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Discount amount / value</label>
+          <input type="text" placeholder="e.g. 30% off, $50 off, Free forever">
+        </div>
+      </div>
+      <div class="form-field" style="margin-bottom: 12px;">
+        <label>Deal URL or where to find it</label>
+        <input type="url" placeholder="https://...">
+      </div>
+      <div class="form-field" style="margin-bottom: 12px;">
+        <label>Expiry date (if known)</label>
+        <input type="date">
+      </div>
+      <div class="form-field" style="margin-bottom: 16px;">
+        <label>Additional notes</label>
+        <textarea placeholder="Any conditions, fine print, or how you found this deal..."></textarea>
+      </div>
+      <button class="form-submit">Submit deal for review</button>
+    </div>
+
+    <div class="disclosure">
+      Affiliate disclosure: Some deals on this page use affiliate links. When you click through and make a purchase, we may earn a commission at no extra cost to you. This does not influence which deals we feature or how we rate them. We only list deals we believe provide genuine value.
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-col-title">Categories</div>
+      <a href="#">Email marketing</a>
+      <a href="#">SEO tools</a>
+      <a href="#">CRM / Sales</a>
+      <a href="#">AI tools</a>
+      <a href="#">Design</a>
+      <a href="#">Analytics</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Deal types</div>
+      <a href="#">Lifetime deals</a>
+      <a href="#">Free plans</a>
+      <a href="#">% Off coupons</a>
+      <a href="#">Free trials</a>
+      <a href="#">Expiring soon</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Site</div>
+      <a href="#">About</a>
+      <a href="#">Submit a deal</a>
+      <a href="#">Affiliate disclosure</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Deal<strong>Stack</strong> — Verified SaaS deals updated daily</span>
+    <span>Affiliate disclosure: we earn commissions on qualifying purchases</span>
+  </div>
+</footer>
+
+<script>
+// Copy coupon code
+function copyCode(id, btn) {
+  var code = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(code).then(function() {
+    var original = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+// Category filter
+document.querySelectorAll('.sidebar-link').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('.sidebar-link').forEach(function(l) { l.classList.remove('active'); });
+    this.classList.add('active');
+    // Filter implementation: add data-category attributes to deal cards and filter here
+  });
+});
+
+// Deal type filter buttons
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    this.classList.add('active');
+  });
+});
+
+// Search
+document.querySelector('.header-search input').addEventListener('input', function() {
+  var query = this.value.toLowerCase();
+  document.querySelectorAll('.deal-card').forEach(function(card) {
+    var name = card.querySelector('.deal-name').textContent.toLowerCase();
+    var desc = card.querySelector('.deal-tagline').textContent.toLowerCase();
+    card.style.display = (name.includes(query) || desc.includes(query) || !query) ? '' : 'none';
+  });
+});
+
+// Submit deal scroll
+document.querySelector('.submit-deal-btn').addEventListener('click', function() {
+  document.querySelector('.submit-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+
+</body>
+</html>

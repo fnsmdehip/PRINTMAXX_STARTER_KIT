@@ -9,7 +9,7 @@ Outputs one .md file per account to OPS/TWITTER_ACCOUNT_QUICK_SHEETS/
 import os
 import pathlib
 
-BASE = pathlib.Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASE / "OPS" / "TWITTER_ACCOUNT_QUICK_SHEETS"
 
 # Account data: real bios and prompts extracted from T1 and T2 source files

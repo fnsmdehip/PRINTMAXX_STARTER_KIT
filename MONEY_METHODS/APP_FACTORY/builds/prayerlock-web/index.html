@@ -529,13 +529,16 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-be
         <div class="text-xs text-gray-500 mt-1">Built with love for the faithful</div>
         <div class="text-xs text-gray-600 mt-1">Salah mode included</div>
         <div class="text-xs text-gray-600 mt-1">by @PRINTMAXXER</div>
+        <button onclick="openPrivacyPolicy()" class="text-xs text-teal-500/50 mt-2 underline" aria-label="View privacy policy">Privacy Policy</button>
+        <span class="text-xs text-gray-600 mx-2">|</span>
+        <a href="mailto:support@prayerlock.app" class="text-xs text-teal-500/50 mt-2 underline" aria-label="Contact support">Support</a>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Bottom Navigation -->
-<nav class="fixed bottom-0 left-0 right-0 bg-dark-900/95 backdrop-blur-lg border-t border-white/5 z-40" style="padding-bottom: max(env(safe-area-inset-bottom), 8px);">
+<nav class="fixed bottom-0 left-0 right-0 bg-dark-900/95 backdrop-blur-lg border-t border-white/5 z-40" aria-label="Main navigation" style="padding-bottom: max(env(safe-area-inset-bottom), 8px);">
   <div class="max-w-md mx-auto flex justify-around py-2">
     <button onclick="showTab('timer')" data-tab="timer" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -1686,6 +1689,34 @@ function init() {
       document.getElementById('splash').style.display = 'none';
     }, 500);
   }, 800);
+}
+
+function openPrivacyPolicy(){
+var pp=document.createElement('div');pp.id='privacy-modal';
+pp.className='fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4';
+pp.onclick=function(e){if(e.target===pp)pp.remove()};
+var inner=document.createElement('div');
+inner.className='rounded-2xl max-w-md w-full max-h-[80vh] overflow-y-auto p-6 text-sm leading-relaxed';
+inner.style.cssText='background:#22223a;color:#94a3b8';
+var sections=[
+{h:'Privacy Policy',p:''},
+{h:'',p:'Last updated: February 28, 2026'},
+{h:'',p:'PrayerLock is a free prayer habit tracker PWA. We respect your privacy.'},
+{h:'Data Collection',p:'All data (prayer history, streaks, settings) is stored locally on your device using localStorage. We do NOT collect, transmit, or store any personal data on external servers.'},
+{h:'Location Data',p:'If you grant location permission for Qibla compass, coordinates are used solely on your device. Location data is never transmitted externally.'},
+{h:'No Analytics',p:'We do not use Google Analytics, Facebook Pixel, or any third-party tracking.'},
+{h:'No Account Required',p:'The App does not require registration, login, or any personal information.'},
+{h:'Data Deletion',p:'Delete all data anytime using Clear All in Settings, or by clearing browser data.'},
+{h:'Contact',p:'Questions? Contact: privacy@printmaxx.dev'},
+{h:'Terms of Service',p:'The App is provided as-is without warranty. Prayer times are calculated algorithmically and may vary from local mosque announcements. Verify with your local Islamic authority.'}
+];
+sections.forEach(function(s){
+if(s.h){var h=document.createElement('h3');h.style.cssText='font-weight:600;color:#f1f5f9;margin-top:12px;margin-bottom:6px';h.textContent=s.h;inner.appendChild(h)}
+if(s.p){var p=document.createElement('p');p.style.marginBottom='10px';p.textContent=s.p;inner.appendChild(p)}
+});
+var btn=document.createElement('button');btn.style.cssText='margin-top:12px;width:100%;padding:12px;border-radius:12px;background:#0d9488;color:white;font-weight:600;border:none;cursor:pointer';
+btn.textContent='Close';btn.onclick=function(){pp.remove()};inner.appendChild(btn);
+pp.appendChild(inner);document.body.appendChild(pp)
 }
 
 document.addEventListener('DOMContentLoaded', init);

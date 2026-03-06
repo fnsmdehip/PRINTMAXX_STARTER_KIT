@@ -1,0 +1,217 @@
+{
+  "app_name": "focuslock",
+  "niche": "productivity",
+  "generated_at": "2026-03-05T09:20:00.000000",
+  "strategy": {
+    "primary": "subscription",
+    "secondary": ["affiliate", "freemium"],
+    "tertiary": ["ads"],
+    "subscription_tier": "mid",
+    "optimal_weekly": 1.99,
+    "optimal_monthly": 6.99,
+    "optimal_yearly": 39.99,
+    "affiliate_categories": [
+      {
+        "category": "noise-canceling headphones",
+        "commission": "3-6%",
+        "program": "Amazon Associates",
+        "avg_order": 149.0
+      },
+      {
+        "category": "standing desks",
+        "commission": "5-10%",
+        "program": "FlexiSpot Affiliate",
+        "avg_order": 399.0
+      },
+      {
+        "category": "productivity courses",
+        "commission": "30-50%",
+        "program": "Skillshare/Udemy",
+        "avg_order": 29.99
+      },
+      {
+        "category": "blue light glasses",
+        "commission": "10-20%",
+        "program": "Felix Gray",
+        "avg_order": 95.0
+      }
+    ],
+    "ad_strategy": "rewarded video only (unlock 1hr focus session for watching ad)",
+    "paywall_timing": "after 7 free focus sessions, then paywall",
+    "premium_features": [
+      "unlimited focus sessions",
+      "custom blocklists",
+      "focus analytics dashboard",
+      "ambient sound library",
+      "team focus rooms",
+      "calendar integration"
+    ],
+    "donation_model": false,
+    "notes": "productivity users are price-sensitive but value proven tools. undercut Forest ($3.99 one-time) and Freedom ($8.99/mo) with freemium. conversion spikes at day 7-14."
+  },
+  "competitor_pricing": {
+    "competitors": [
+      {
+        "name": "Forest",
+        "monthly": 0.0,
+        "yearly": 0.0,
+        "one_time": 3.99,
+        "downloads": "10M+",
+        "rating": 4.7
+      },
+      {
+        "name": "Freedom",
+        "monthly": 8.99,
+        "yearly": 39.99,
+        "downloads": "1M+",
+        "rating": 4.4
+      },
+      {
+        "name": "Flora",
+        "monthly": 0.0,
+        "yearly": 0.0,
+        "one_time": 1.99,
+        "downloads": "5M+",
+        "rating": 4.6
+      },
+      {
+        "name": "Focus@Will",
+        "monthly": 9.99,
+        "yearly": 52.99,
+        "downloads": "500K+",
+        "rating": 4.3
+      },
+      {
+        "name": "Be Focused",
+        "monthly": 0.0,
+        "yearly": 0.0,
+        "one_time": 4.99,
+        "downloads": "1M+",
+        "rating": 4.5
+      }
+    ],
+    "avg_monthly": 9.49,
+    "avg_yearly": 46.49,
+    "recommended_monthly": 6.99,
+    "recommended_yearly": 39.99,
+    "strategy_note": "undercut Freedom significantly. compete with Forest on value (they're one-time purchase but limited features). focus analytics is the differentiator."
+  },
+  "revenuecat_config": {
+    "app_name": "focuslock",
+    "revenuecat_project": "rc_focuslock",
+    "entitlements": [
+      {
+        "id": "focuslock_premium",
+        "display_name": "FocusLock Premium",
+        "description": "Full access to all focus features"
+      }
+    ],
+    "offerings": [
+      {
+        "id": "focuslock_default",
+        "display_name": "Default Offering",
+        "packages": [
+          {"id": "$rc_weekly", "product_id": "focuslock_weekly"},
+          {"id": "$rc_monthly", "product_id": "focuslock_monthly"},
+          {"id": "$rc_annual", "product_id": "focuslock_yearly"}
+        ]
+      }
+    ],
+    "products": [
+      {
+        "id": "focuslock_weekly",
+        "type": "auto_renewable_subscription",
+        "price": 1.99,
+        "period": "P1W",
+        "trial": "P3D",
+        "store_product_id": "focuslock.weekly"
+      },
+      {
+        "id": "focuslock_monthly",
+        "type": "auto_renewable_subscription",
+        "price": 6.99,
+        "period": "P1M",
+        "trial": "P7D",
+        "store_product_id": "focuslock.monthly"
+      },
+      {
+        "id": "focuslock_yearly",
+        "type": "auto_renewable_subscription",
+        "price": 39.99,
+        "period": "P1Y",
+        "trial": "P7D",
+        "store_product_id": "focuslock.yearly",
+        "introductory_offer": {
+          "type": "pay_up_front",
+          "price": 19.99,
+          "period": "P1Y",
+          "cycles": 1
+        }
+      },
+      {
+        "id": "focuslock_lifetime",
+        "type": "non_consumable",
+        "price": 99.99,
+        "store_product_id": "focuslock.lifetime"
+      }
+    ],
+    "subscription_group": "focuslock_subscriptions"
+  },
+  "paywall_copy": {
+    "headline": "your focus. protected.",
+    "subhead": "block distractions. track deep work. build the habit that changes everything.",
+    "value_prop": "the average person checks their phone 96 times per day. each check costs 23 minutes to refocus. that's 36 hours per week lost.",
+    "social_proof": "join 5,000+ focused builders",
+    "features_headline": "everything you get with premium:",
+    "pricing_display": {
+      "monthly": {"label": "monthly", "price": "$6.99", "period": "/mo", "note": "cancel anytime"},
+      "yearly": {"label": "yearly", "price": "$3.33", "period": "/mo", "note": "billed $39.99/yr. save 52%.", "badge": "best value", "recommended": true},
+      "weekly": {"label": "weekly", "price": "$1.99", "period": "/wk", "note": "3-day free trial"}
+    },
+    "cta_button": "start free trial",
+    "cta_subtext": "7-day free trial. cancel anytime.",
+    "premium_features": [
+      "unlimited focus sessions",
+      "custom blocklists",
+      "focus analytics dashboard",
+      "ambient sound library",
+      "team focus rooms",
+      "calendar integration"
+    ],
+    "close_button_note": "always show X/close button. apple rejects hidden close buttons."
+  },
+  "revenue_projections": {
+    "at_1k_downloads": {
+      "realistic": {
+        "label": "4% conversion (productivity users convert higher)",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.04,
+        "paying_users": 40,
+        "monthly_subscribers": 28,
+        "yearly_subscribers": 12,
+        "subscription_gross": 235.84,
+        "subscription_net": 165.09,
+        "affiliate_revenue": 15.0,
+        "ad_revenue": 150.0,
+        "total_monthly_revenue": 330.09,
+        "total_yearly_revenue": 3961.08
+      }
+    },
+    "at_10k_downloads": {
+      "realistic": {
+        "label": "4% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.04,
+        "paying_users": 400,
+        "monthly_subscribers": 280,
+        "yearly_subscribers": 120,
+        "subscription_gross": 2358.40,
+        "subscription_net": 1650.88,
+        "affiliate_revenue": 150.0,
+        "ad_revenue": 1200.0,
+        "total_monthly_revenue": 3000.88,
+        "total_yearly_revenue": 36010.56
+      }
+    }
+  }
+}

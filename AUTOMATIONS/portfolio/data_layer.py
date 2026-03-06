@@ -12,7 +12,7 @@ from datetime import datetime, date
 from pathlib import Path
 from typing import List, Dict, Optional
 
-PROJECT_ROOT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # ---------------------------------------------------------------------------
 # Data Classes

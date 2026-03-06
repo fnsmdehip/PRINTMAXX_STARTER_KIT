@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <rect width="400" height="100" fill="#FFF8F0"/>
+  <text x="200" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#C9A84C" text-anchor="middle" letter-spacing="6">SELAH</text>
+  <text x="200" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#C67B5C" text-anchor="middle" letter-spacing="12" font-style="italic">MOMENTS</text>
+  <line x1="80" y1="80" x2="160" y2="80" stroke="#DDD0C0" stroke-width="1"/>
+  <circle cx="200" cy="80" r="3" fill="#C9A84C"/>
+  <line x1="240" y1="80" x2="320" y2="80" stroke="#DDD0C0" stroke-width="1"/>
+</svg>

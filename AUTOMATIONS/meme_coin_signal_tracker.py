@@ -10,11 +10,12 @@ import json
 import os
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Dict, List, Optional
 from dataclasses import dataclass, asdict
 
-# Configuration
-PROJECT_ROOT = "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt"
+# Configuration (auto-detected from script location)
+PROJECT_ROOT = str(Path(__file__).resolve().parent.parent)
 BACKTEST_DATA = f"{PROJECT_ROOT}/LEDGER/MEME_COIN_BACKTEST_DATA.csv"
 PATTERNS_DATA = f"{PROJECT_ROOT}/LEDGER/MEME_COIN_PATTERNS.csv"
 WATCHLIST_FILE = f"{PROJECT_ROOT}/LEDGER/MEME_COIN_WATCHLIST.csv"

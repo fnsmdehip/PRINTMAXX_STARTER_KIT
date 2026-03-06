@@ -4,15 +4,25 @@ E-commerce Arbitrage Scanner
 Finds profitable arbitrage opportunities by comparing source prices to selling prices.
 """
 
-import requests
-from bs4 import BeautifulSoup
 import csv
+import json
+import sys
 import time
 import random
 import argparse
 from datetime import datetime
+from pathlib import Path
 from urllib.parse import quote_plus
-import json
+
+try:
+    import requests
+    from bs4 import BeautifulSoup
+except ImportError as e:
+    print(f"ERROR: Missing dependency: {e}")
+    print("Install with: pip3 install requests beautifulsoup4")
+    sys.exit(1)
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Platform fees
 PLATFORM_FEES = {
@@ -386,7 +396,7 @@ def main():
                         help='Minimum net profit in dollars (default: 5.0)')
     parser.add_argument('--min-margin', type=float, default=20.0,
                         help='Minimum profit margin percentage (default: 20.0)')
-    parser.add_argument('--output', default='ecom_arb_opportunities.csv',
+    parser.add_argument('--output', default=str(BASE_DIR / 'LEDGER' / 'ecom_arb_opportunities.csv'),
                         help='Output CSV filename')
 
     args = parser.parse_args()

@@ -40,8 +40,8 @@ except ImportError:
     HAS_CRYPTO = False
     print("WARNING: pycryptodome not installed. Run: pip3 install pycryptodome")
 
-# Paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+# Paths (auto-detected from script location)
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 ALPHA_STAGING = LEDGER_DIR / "ALPHA_STAGING.csv"
 HIGH_SIGNAL_SOURCES = LEDGER_DIR / "HIGH_SIGNAL_SOURCES.csv"

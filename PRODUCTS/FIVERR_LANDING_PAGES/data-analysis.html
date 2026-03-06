@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analysis + Dashboard | Turn Messy Data Into Clear Answers</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#f97316;--accent2:#fb923c;--green:#22c55e}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#000;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#ea580c}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.sample{padding:60px 0;border-top:1px solid var(--border)}
+.sample h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.sample .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.dashboard-mock{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;max-width:800px}
+.dashboard-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.dashboard-header h3{font-size:1.1rem}
+.dashboard-header .date{font-size:0.8rem;color:var(--muted)}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px}
+.kpi{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:14px;text-align:center}
+.kpi .val{font-size:1.5rem;font-weight:800;color:var(--accent2)}
+.kpi .lbl{font-size:0.75rem;color:var(--muted);margin-top:2px}
+.kpi .change{font-size:0.75rem;margin-top:4px}
+.kpi .change.up{color:var(--green)}
+.kpi .change.down{color:#ef4444}
+.chart-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.chart-box{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:16px}
+.chart-box h4{font-size:0.85rem;color:var(--muted);margin-bottom:12px}
+.bar-chart{display:flex;align-items:flex-end;gap:8px;height:100px}
+.bar{background:var(--accent);border-radius:4px 4px 0 0;min-width:24px;position:relative}
+.bar .bar-label{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:0.65rem;color:var(--muted);white-space:nowrap}
+.insight-box{background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.2);border-radius:8px;padding:16px;margin-top:16px}
+.insight-box h4{font-size:0.85rem;color:var(--accent2);margin-bottom:8px}
+.insight-box p{font-size:0.85rem;color:var(--muted)}
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#000;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+.cases{padding:60px 0;border-top:1px solid var(--border)}
+.cases h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.case-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.case-card .industry{font-size:0.8rem;color:var(--accent2);font-weight:600;text-transform:uppercase;margin-bottom:6px}
+.case-card h3{font-size:1rem;margin-bottom:8px}
+.case-card p{font-size:0.88rem;color:var(--muted)}
+.case-card .finding{margin-top:10px;font-size:0.85rem;color:var(--green)}
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#2e1a0a,#1a0f05);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#1a0f05,#2e1a0a);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted);text-align:center;padding:12px}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.tier-grid{grid-template-columns:1fr}.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}.chart-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>you have data. you know there are insights in there. you just can't see them.</h1>
+<p class="sub">i clean your messy spreadsheets, find the 5-15 things you need to know, and build a dashboard you'll actually check every morning.</p>
+<div class="stats">
+<div class="stat"><div class="num">1M</div><div class="label">max rows handled</div></div>
+<div class="stat"><div class="num">5+</div><div class="label">data sources merged</div></div>
+<div class="stat"><div class="num">15+</div><div class="label">insights per analysis</div></div>
+<div class="stat"><div class="num">$0</div><div class="label">dashboard hosting (Sheets)</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="sample">
+<h2>sample dashboard: ecommerce sales analysis</h2>
+<p class="desc">not a pretty chart. every visualization has: what the data shows, why it matters, and what to do about it.</p>
+<div class="dashboard-mock">
+<div class="dashboard-header"><h3>Q4 Sales Dashboard</h3><div class="date">Oct 1 - Dec 31, 2025</div></div>
+<div class="kpi-row">
+<div class="kpi"><div class="val">$142K</div><div class="lbl">total revenue</div><div class="change up">+18% vs Q3</div></div>
+<div class="kpi"><div class="val">2,847</div><div class="lbl">orders</div><div class="change up">+12% vs Q3</div></div>
+<div class="kpi"><div class="val">$49.89</div><div class="lbl">avg order value</div><div class="change up">+5.3%</div></div>
+<div class="kpi"><div class="val">3.2%</div><div class="lbl">return rate</div><div class="change down">+0.8%</div></div>
+</div>
+<div class="chart-row">
+<div class="chart-box">
+<h4>revenue by product category</h4>
+<div class="bar-chart">
+<div class="bar" style="height:90px"><span class="bar-label">Electronics</span></div>
+<div class="bar" style="height:65px"><span class="bar-label">Apparel</span></div>
+<div class="bar" style="height:45px"><span class="bar-label">Home</span></div>
+<div class="bar" style="height:30px"><span class="bar-label">Beauty</span></div>
+<div class="bar" style="height:20px"><span class="bar-label">Sports</span></div>
+</div>
+</div>
+<div class="chart-box">
+<h4>revenue by channel</h4>
+<div class="bar-chart">
+<div class="bar" style="height:80px"><span class="bar-label">Organic</span></div>
+<div class="bar" style="height:60px"><span class="bar-label">Paid</span></div>
+<div class="bar" style="height:35px"><span class="bar-label">Email</span></div>
+<div class="bar" style="height:25px"><span class="bar-label">Social</span></div>
+<div class="bar" style="height:15px"><span class="bar-label">Direct</span></div>
+</div>
+</div>
+</div>
+<div class="insight-box">
+<h4>key finding</h4>
+<p>your top 20% of customers generate 68% of revenue. 82% of them bought Electronics first. recommendation: double down on Electronics acquisition and build a cross-sell flow to Apparel (highest margin category).</p>
+</div>
+</div>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">Data Cleanup + Report</div>
+<div class="price">$75 <span>/ one-time</span></div>
+<div class="delivery">delivered in 3 days</div>
+<div class="desc">clean your messy data + formatted report with 5 key insights and 3 charts.</div>
+<ul>
+<li>data cleaning + dedup</li>
+<li>5 key insights</li>
+<li>3 charts</li>
+<li>1 revision</li>
+<li class="no">interactive dashboard</li>
+<li class="no">recommendations</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">Full Analysis + Dashboard</div>
+<div class="price">$250 <span>/ one-time</span></div>
+<div class="delivery">delivered in 7 days</div>
+<div class="desc">full analysis with 10+ insights, interactive dashboard, and written recommendations.</div>
+<ul>
+<li>10+ insights</li>
+<li>10+ charts</li>
+<li>interactive dashboard</li>
+<li>5 written recommendations</li>
+<li>Google Sheets or Looker Studio</li>
+<li>7-day support</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">Live Dashboard System</div>
+<div class="price">$750 <span>/ one-time</span></div>
+<div class="delivery">delivered in 14 days</div>
+<div class="desc">live auto-updating dashboard from multiple data sources. KPI tracking, alerts, 30-minute strategy call.</div>
+<ul>
+<li>15+ insights</li>
+<li>auto-updating dashboard</li>
+<li>up to 5 data sources merged</li>
+<li>KPI tracking + alerts</li>
+<li>10 prioritized recommendations</li>
+<li>30-min strategy walkthrough</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="cases">
+<h2>what i've found in client data</h2>
+<div class="case-grid">
+<div class="case-card">
+<div class="industry">ecommerce</div>
+<h3>30% of SKUs were break-even or losing money</h3>
+<p>client thought all products were profitable. analysis showed 30% of SKUs had negative margin after shipping and returns.</p>
+<div class="finding">cut 47 losing SKUs. profit margin increased 22%.</div>
+</div>
+<div class="case-card">
+<div class="industry">marketing agency</div>
+<h3>$2,000/month in wasted ad spend</h3>
+<p>analyzed which channels brought paying customers vs just traffic. two channels had zero conversions over 6 months.</p>
+<div class="finding">reallocated budget. same spend, 40% more conversions.</div>
+</div>
+<div class="case-card">
+<div class="industry">startup</div>
+<h3>$800/month in duplicate subscriptions</h3>
+<p>financial data showed 3 overlapping tools doing the same job. nobody noticed because billing went to different cards.</p>
+<div class="finding">consolidated tools. $9,600/year saved.</div>
+</div>
+</div>
+</section>
+
+<section class="proof">
+<h2>client feedback</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"sent a messy Google Sheet with 8,000 rows. got back a clean dashboard with 12 insights i didn't know existed. the SKU analysis alone saved us $4,000/month."</div>
+<div class="author">Kevin L. - ecommerce founder</div>
+<div class="result">$4,000/month saved from one insight</div>
+</div>
+<div class="testimonial">
+<div class="quote">"i told him 'i don't know what i'm looking for.' he found 3 things i should have noticed a year ago."</div>
+<div class="author">Amanda S. - SaaS co-founder</div>
+<div class="result">3 missed insights uncovered</div>
+</div>
+<div class="testimonial">
+<div class="quote">"the live dashboard auto-updates from our Google Analytics and Shopify. i check it every morning with my coffee. takes 5 seconds."</div>
+<div class="author">Derek M. - DTC brand</div>
+<div class="result">auto-updating daily dashboard</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>recent analyses</h2>
+<div class="port-grid">
+<div class="port-item"><div class="port-thumb">ecommerce<br>8,000 rows</div><div class="port-info"><h3>Sales Analysis</h3><p>SKU profitability, channel ROI</p></div></div>
+<div class="port-item"><div class="port-thumb">SaaS metrics<br>12 months</div><div class="port-info"><h3>Churn Analysis</h3><p>cohort analysis, retention</p></div></div>
+<div class="port-item"><div class="port-thumb">marketing<br>5 channels</div><div class="port-info"><h3>Channel ROI</h3><p>attribution, cost per acquisition</p></div></div>
+<div class="port-item"><div class="port-thumb">operations<br>logistics data</div><div class="port-info"><h3>Bottleneck Finder</h3><p>delivery times, process gaps</p></div></div>
+<div class="port-item"><div class="port-thumb">financial<br>expense audit</div><div class="port-info"><h3>Cost Analysis</h3><p>duplicate subs, waste finder</p></div></div>
+<div class="port-item"><div class="port-thumb">customer data<br>CRM export</div><div class="port-info"><h3>ICP Analysis</h3><p>best customer profile, LTV</p></div></div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open"><div class="faq-q">what format should i send my data in?</div><div class="faq-a">anything. CSV, Excel, Google Sheets link, database export, even PDFs or screenshots. i handle the conversion and cleanup.</div></div>
+<div class="faq-item"><div class="faq-q">i don't know what i'm looking for. is that fine?</div><div class="faq-a">that's the whole point. i start with exploratory analysis: what patterns exist, what's unusual, what's trending. then i surface the findings.</div></div>
+<div class="faq-item"><div class="faq-q">can the dashboard update automatically?</div><div class="faq-a">Premium includes auto-updating dashboards. if your data lives in Google Sheets, a database, or an API, it refreshes automatically.</div></div>
+<div class="faq-item"><div class="faq-q">how much data can you handle?</div><div class="faq-a">up to 100K rows for Basic/Standard. up to 1 million rows for Premium. most business datasets are well under 100K.</div></div>
+</section>
+
+<section class="final-cta">
+<h2>send me a sample of your data</h2>
+<p>even a screenshot of the spreadsheet. i'll tell you in 15 minutes what insights are hiding in there.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a><br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+<footer><div class="container"><p>charts are decoration without context. every visualization includes what the data shows, why it matters, and what to do about it.</p></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});</script>
+</body>
+</html>

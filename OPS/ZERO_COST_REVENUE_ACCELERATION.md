@@ -1323,3 +1323,41 @@ Case Study: Local florist 4x'd Valentines revenue with one landing page. Doing M
 
 The problem: They were taking orders via Facebook comments and phone calls. 70% of
 
+
+
+---
+
+## Pending Enhancement (ALPHA14947, Score: 42)
+
+**Source:** @StevenCravotta (explicit-handles) | **URL:** https://x.com/StevenCravotta/status/2027760464520708233
+**Added:** 2026-03-05T05:36:13-05:00
+
+App founder's dream life:
+
+· Two apps doing $20k MRR each
+· A small team you trust
+· Working from a coffee shop
+· Less meetings, more async updates
+· Recurring revenue while you sleep
+· Building products people love
+· Freedom to travel the world
+
+
+
+---
+
+## Pending Enhancement (ALPHA15038, Score: 24)
+
+**Source:** @gregogallagher (explicit-handles) | **URL:** https://x.com/UpRockCom/status/2028055732776484953/analytics
+**Added:** 2026-03-05T05:36:13-05:00
+
+Builders. Educators. Streamers.
+
+If you're teaching AI, building with AI, or shipping in public >> this is for you.
+
+UpRock Creator Program is live:
+• Early access to new products
+• Co-marketing support
+• Direct line to the team
+• 30% revenue share (lifetime per customer)
+

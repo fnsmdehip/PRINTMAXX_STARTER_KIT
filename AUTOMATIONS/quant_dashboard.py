@@ -35,7 +35,7 @@ from rich.table import Table
 from rich.panel import Panel
 
 # Paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 FINANCIALS_DIR = PROJECT_DIR / "FINANCIALS"
 TASK_DIR = Path("/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks")

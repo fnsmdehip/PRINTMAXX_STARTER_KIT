@@ -1098,3 +1098,26 @@ Month 1-3: $800-1,200 (inconsiste
 **Insight:** 53 paying customers, $4,150 MRR, and a cease-and-desist. AMA. Quick background: I left my PM role at a Series B about 11 months ago to build a SaaS that automates compliance reminders for dental offices. Small TAM — around 4,200 practices in the US. 6,800 if you count veterinary, which I've started doing in my projections. Real pain though. I watched our office manager spend 40 minutes a week on this. Built the MVP in 3 weeks (Next.js, Supabase, Stripe, Vercel). Whole thing costs me $8.11/month
 **Potential:** ROI: https://reddit.com/r/SaaS/comments/1qzhy0n/53_paying_customers_4150_mrr_and_a_ceaseanddesist/ | Synergy: 297
 
+### Alpha Insight: ALPHA1711 — 2026-03-05
+**Source:** 2026-02-13
+**Category:** TOOL_ALPHA
+**Insight:** We sold our SaaS startup for $15M in 18 months. Here's exactly how we did it. I'm a PM at [telos](https://www.telos-ai.org) now, but before this I was the founding engineer at a startup that sold for $15M in 18 months. Sharing bc I think this is relevant for founders here. The founders had been running this playbook for years. One had 8 successful exits, the other had 3. When they hired me, they told me exactly how it would go. I was skeptical, but it worked exactly as they said. Here's the pl
+**Potential:** ROI: https://reddit.com/r/SaaS/comments/1qr9css/we_sold_our_saas_startup_for_15m_in_18_months/ | Synergy: 265
+
+
+
+---
+
+## Pending Enhancement (ALPHA15144, Score: 32)
+
+**Source:** @SimonasDip (explicit-handles) | **URL:** https://x.com/SimonasDip/status/2028065284376998164
+**Added:** 2026-03-05T06:24:45-05:00
+
+Another viral AI Podcast page that's fully automated
+
+here's how:
+
+- Create avatar image with nano banana pro (repost & reply for the prompt)
+- use GPT Podcast Script Generator to create natural podcast script (empowerment, inspiration, anything broad)
+- use Elevenlabs for
+

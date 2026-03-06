@@ -12,7 +12,7 @@ import re
 from pathlib import Path
 from datetime import datetime
 
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 ALPHA_STAGING = PROJECT_DIR / "LEDGER" / "ALPHA_STAGING.csv"
 HIGH_SIGNAL_SOURCES = PROJECT_DIR / "LEDGER" / "HIGH_SIGNAL_SOURCES.csv"
 

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vault">
+<meta name="theme-color" content="#0a0c0e">
+<title>Vault - Deep Work Timer</title>
+<style>
+  :root {
+    --bg:#0a0c0e; --surface:#13161b; --surface2:#1c2028; --surface3:#242936;
+    --accent:#00d4aa; --accent2:#00f0c0; --accent-dim:rgba(0,212,170,.15);
+    --text:#e2e8f0; --text2:#8892a4; --text3:#4a5568;
+    --red:#fc8181; --amber:#f6ad55; --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:var(--bg);color:var(--text);min-height:100vh;min-height:100dvh;
+    overflow-x:hidden;user-select:none;overflow-y:auto;}
+  .app{max-width:500px;margin:0 auto;}
+  .header{padding:16px 20px;padding-top:max(16px,env(safe-area-inset-top));
+    display:flex;justify-content:space-between;align-items:center;}
+  .logo{font-size:22px;font-weight:800;letter-spacing:-.5px;color:var(--text);}
+  .logo-dot{color:var(--accent);}
+  .session-count{font-size:12px;color:var(--text3);background:var(--surface2);
+    padding:5px 10px;border-radius:20px;font-weight:600;}
+  .timer-section{padding:20px;display:flex;flex-direction:column;align-items:center;}
+  .mode-badge{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;
+    color:var(--accent);font-weight:700;margin-bottom:20px;}
+  .ring-wrap{position:relative;display:inline-block;}
+  .ring{width:220px;height:220px;}
+  .ring-bg{fill:none;stroke:var(--surface2);stroke-width:12;}
+  .ring-fill{fill:none;stroke:var(--accent);stroke-width:12;stroke-linecap:round;
+    transform-origin:center;transform:rotate(-90deg);
+    transition:stroke-dashoffset 1s linear,stroke .3s;}
+  .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;}
+  .time-display{font-size:52px;font-weight:200;letter-spacing:-2px;font-variant-numeric:tabular-nums;}
+  .time-label{font-size:12px;color:var(--text3);margin-top:2px;}
+  .controls{display:flex;align-items:center;gap:16px;margin-top:28px;}
+  .ctrl-btn{width:48px;height:48px;border-radius:50%;background:var(--surface2);
+    border:none;color:var(--text2);font-size:20px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:all .2s;}
+  .ctrl-btn:active{transform:scale(.9);}
+  .play-btn{width:72px;height:72px;border-radius:50%;background:var(--accent);
+    border:none;color:#000;font-size:28px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:all .2s;box-shadow:0 0 24px rgba(0,212,170,.3);}
+  .play-btn:active{transform:scale(.93);}
+  .play-btn.paused{background:var(--surface3);}
+  .modes{display:flex;gap:6px;padding:0 20px;margin-bottom:16px;
+    overflow-x:auto;scrollbar-width:none;}
+  .modes::-webkit-scrollbar{display:none;}
+  .mode-btn{flex-shrink:0;padding:8px 16px;border-radius:20px;
+    background:var(--surface2);border:1px solid transparent;color:var(--text2);
+    font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .2s;}
+  .mode-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+  .task-section{padding:0 20px 16px;}
+  .task-input{width:100%;background:var(--surface);border:1px solid var(--surface3);
+    border-radius:var(--radius);padding:14px 16px;color:var(--text);font-size:15px;
+    outline:none;transition:border-color .2s;}
+  .task-input:focus{border-color:var(--accent);}
+  .task-input::placeholder{color:var(--text3);}
+  .log-section{padding:0 20px;}
+  .section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+  .section-title{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);font-weight:600;}
+  .clear-btn{font-size:12px;color:var(--text3);background:none;border:none;cursor:pointer;}
+  .session-item{background:var(--surface);border-radius:12px;padding:12px 14px;
+    margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;}
+  .session-left{display:flex;align-items:center;gap:10px;}
+  .session-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .session-task{font-size:14px;font-weight:500;}
+  .session-meta{font-size:11px;color:var(--text3);margin-top:2px;}
+  .session-dur{font-size:13px;font-weight:600;color:var(--accent);}
+  .stats-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 20px 16px;}
+  .stat-card{background:var(--surface);border-radius:14px;padding:12px;text-align:center;}
+  .stat-num{font-size:22px;font-weight:800;color:var(--accent);}
+  .stat-lbl{font-size:11px;color:var(--text3);margin-top:3px;}
+  .divider{height:1px;background:var(--surface2);margin:4px 20px 16px;}
+  .toast{position:fixed;bottom:max(24px,env(safe-area-inset-bottom));left:50%;
+    transform:translateX(-50%) translateY(80px);background:var(--surface3);
+    color:var(--text);padding:12px 20px;border-radius:30px;font-size:14px;
+    font-weight:500;transition:transform .3s;z-index:99;white-space:nowrap;
+    border:1px solid var(--surface3);}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+    z-index:100;align-items:flex-end;}
+  .modal-overlay.open{display:flex;}
+  .modal{width:100%;background:var(--surface);border-radius:24px 24px 0 0;
+    padding:24px 20px;padding-bottom:max(24px,env(safe-area-inset-bottom));}
+  .modal-title{font-size:17px;font-weight:700;margin-bottom:20px;text-align:center;}
+  .setting-row{display:flex;justify-content:space-between;align-items:center;
+    padding:14px 0;border-bottom:1px solid var(--surface2);}
+  .setting-row:last-of-type{border-bottom:none;}
+  .setting-label{font-size:15px;}
+  .setting-sub{font-size:12px;color:var(--text3);margin-top:2px;}
+  .number-input{display:flex;align-items:center;gap:10px;}
+  .num-btn{width:32px;height:32px;border-radius:50%;background:var(--surface2);
+    border:none;color:var(--text);font-size:18px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;}
+  .num-val{font-size:16px;font-weight:700;min-width:28px;text-align:center;}
+  .modal-close{width:100%;padding:14px;background:var(--accent);border:none;
+    border-radius:var(--radius);color:#000;font-size:15px;font-weight:700;cursor:pointer;margin-top:16px;}
+  .bottom-pad{height:max(20px,env(safe-area-inset-bottom));}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <div class="logo">Vault<span class="logo-dot">.</span></div>
+    <div class="session-count" id="session-count">0 today</div>
+  </div>
+  <div class="modes" id="mode-buttons"></div>
+  <div class="timer-section">
+    <div class="mode-badge" id="mode-badge">FOCUS</div>
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 220 220">
+        <circle class="ring-bg" cx="110" cy="110" r="96"/>
+        <circle class="ring-fill" id="ring-fill" cx="110" cy="110" r="96"
+          stroke-dasharray="603" stroke-dashoffset="0"/>
+      </svg>
+      <div class="ring-center">
+        <div class="time-display" id="time-display">25:00</div>
+        <div class="time-label" id="time-label">Ready</div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="ctrl-btn" id="skip-btn" title="Skip" onclick="skipSession()"></button>
+      <button class="play-btn" id="play-btn" onclick="toggleTimer()"></button>
+      <button class="ctrl-btn" id="settings-btn" title="Settings" onclick="openSettings()"></button>
+    </div>
+  </div>
+  <div class="task-section">
+    <input type="text" class="task-input" id="task-input"
+      placeholder="What are you working on?" maxlength="80">
+  </div>
+  <div class="stats-bar">
+    <div class="stat-card"><div class="stat-num" id="stat-sessions">0</div><div class="stat-lbl">Sessions</div></div>
+    <div class="stat-card"><div class="stat-num" id="stat-focus">0m</div><div class="stat-lbl">Focus time</div></div>
+    <div class="stat-card"><div class="stat-num" id="stat-streak">0</div><div class="stat-lbl">Day streak</div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="log-section">
+    <div class="section-header">
+      <span class="section-title">Today's Sessions</span>
+      <button class="clear-btn" onclick="clearTodaySessions()">Clear</button>
+    </div>
+    <div id="session-list"></div>
+  </div>
+  <div class="bottom-pad"></div>
+</div>
+
+<div class="modal-overlay" id="settings-modal">
+  <div class="modal">
+    <div class="modal-title">Settings</div>
+    <div class="setting-row">
+      <div><div class="setting-label">Focus duration</div><div class="setting-sub">minutes</div></div>
+      <div class="number-input">
+        <button class="num-btn" onclick="adjustSetting('focus',-5)">-</button>
+        <div class="num-val" id="set-focus">25</div>
+        <button class="num-btn" onclick="adjustSetting('focus',5)">+</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div><div class="setting-label">Short break</div><div class="setting-sub">minutes</div></div>
+      <div class="number-input">
+        <button class="num-btn" onclick="adjustSetting('short',-1)">-</button>
+        <div class="num-val" id="set-short">5</div>
+        <button class="num-btn" onclick="adjustSetting('short',1)">+</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div><div class="setting-label">Long break</div><div class="setting-sub">minutes</div></div>
+      <div class="number-input">
+        <button class="num-btn" onclick="adjustSetting('long',-5)">-</button>
+        <div class="num-val" id="set-long">20</div>
+        <button class="num-btn" onclick="adjustSetting('long',5)">+</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div><div class="setting-label">Sessions before long break</div></div>
+      <div class="number-input">
+        <button class="num-btn" onclick="adjustSetting('cycle',-1)">-</button>
+        <div class="num-val" id="set-cycle">4</div>
+        <button class="num-btn" onclick="adjustSetting('cycle',1)">+</button>
+      </div>
+    </div>
+    <button class="modal-close" onclick="closeSettings()">Done</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ─── CONSTANTS ───────────────────────────────────────────────
+const PLAY_ICON  = '\u25B6';  // ▶
+const PAUSE_ICON = '\u23F8';  // ⏸
+const SKIP_ICON  = '\u23ED';  // ⏭
+const GEAR_ICON  = '\u2699';  // ⚙
+const CIRCUM     = 603;       // 2 * pi * 96
+
+const MODES = [
+  { id:'focus',  label:'Focus',       badge:'FOCUS',       color:'#00d4aa', isBreak:false },
+  { id:'short',  label:'Short Break', badge:'BREAK',       color:'#f6ad55', isBreak:true  },
+  { id:'long',   label:'Long Break',  badge:'LONG BREAK',  color:'#a78bfa', isBreak:true  },
+  { id:'custom', label:'Custom',      badge:'CUSTOM',      color:'#60a5fa', isBreak:false },
+];
+const SETTING_BOUNDS = { focus:[5,90], short:[1,15], long:[5,60], cycle:[1,8] };
+
+// ─── STATE ────────────────────────────────────────────────────
+let cfg = {};
+try { cfg = JSON.parse(localStorage.getItem('vault_cfg') || '{}'); } catch(e) {}
+cfg.focus = cfg.focus || 25; cfg.short = cfg.short || 5;
+cfg.long  = cfg.long  || 20; cfg.cycle = cfg.cycle || 4;
+
+let log = [];
+try { log = JSON.parse(localStorage.getItem('vault_log') || '[]'); } catch(e) {}
+if (!Array.isArray(log)) log = [];
+
+let streak = 0;
+try { streak = parseInt(localStorage.getItem('vault_streak') || '0') || 0; } catch(e) {}
+
+function saveCfg() { try{localStorage.setItem('vault_cfg',JSON.stringify(cfg));}catch(e){} }
+function saveLog() { try{localStorage.setItem('vault_log',JSON.stringify(log));}catch(e){} }
+function saveStreak() { try{localStorage.setItem('vault_streak',String(streak));}catch(e){} }
+
+let currentModeId = 'focus';
+let timerSecs     = 0;
+let timerRunning  = false;
+let timerInterval = null;
+
+// ─── INIT ─────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  // Set static icons on buttons
+  document.getElementById('skip-btn').textContent    = SKIP_ICON;
+  document.getElementById('play-btn').textContent    = PLAY_ICON;
+  document.getElementById('settings-btn').textContent = GEAR_ICON;
+  timerSecs = cfg.focus * 60;
+  renderAll();
+});
+
+function renderAll() {
+  renderModes();
+  renderTimerDisplay();
+  renderRing(1);
+  renderStats();
+  renderSessionList();
+  updateSettingsUI();
+}
+
+// ─── MODE ─────────────────────────────────────────────────────
+function getMins(id) {
+  if (id === 'custom') return 90;
+  if (id === 'focus')  return cfg.focus;
+  if (id === 'short')  return cfg.short;
+  if (id === 'long')   return cfg.long;
+  return 25;
+}
+function getModeColor(id) { return (MODES.find(m => m.id === id) || MODES[0]).color; }
+function getModeBadge(id) { return (MODES.find(m => m.id === id) || MODES[0]).badge; }
+
+function renderModes() {
+  const el = document.getElementById('mode-buttons');
+  el.textContent = '';
+  MODES.forEach(m => {
+    const btn = document.createElement('button');
+    btn.className = 'mode-btn' + (currentModeId === m.id ? ' active' : '');
+    btn.textContent = m.label;
+    btn.onclick = () => setMode(m.id);
+    el.appendChild(btn);
+  });
+}
+
+function setMode(id) {
+  if (timerRunning) { showToast('Stop timer before switching'); return; }
+  currentModeId = id;
+  timerSecs = getMins(id) * 60;
+  const color  = getModeColor(id);
+  const badge  = document.getElementById('mode-badge');
+  badge.textContent = getModeBadge(id);
+  badge.style.color = color;
+  document.getElementById('ring-fill').setAttribute('stroke', color);
+  const playBtn = document.getElementById('play-btn');
+  playBtn.style.background = MODES.find(m=>m.id===id)?.isBreak ? 'var(--surface3)' : color;
+  playBtn.style.color      = MODES.find(m=>m.id===id)?.isBreak ? color : '#000';
+  playBtn.textContent = PLAY_ICON;
+  playBtn.classList.remove('paused');
+  document.getElementById('time-label').textContent = 'Ready';
+  renderTimerDisplay();
+  renderRing(1);
+  renderModes();
+}
+
+// ─── TIMER ────────────────────────────────────────────────────
+function toggleTimer() {
+  timerRunning ? pauseTimer() : startTimer();
+}
+
+function startTimer() {
+  timerRunning = true;
+  const playBtn = document.getElementById('play-btn');
+  playBtn.textContent = PAUSE_ICON;
+  playBtn.classList.remove('paused');
+  document.getElementById('time-label').textContent =
+    MODES.find(m=>m.id===currentModeId)?.isBreak ? 'Break' : 'Focus';
+  timerInterval = setInterval(tick, 1000);
+}
+
+function pauseTimer() {
+  clearInterval(timerInterval); timerRunning = false;
+  const playBtn = document.getElementById('play-btn');
+  playBtn.textContent = PLAY_ICON;
+  playBtn.classList.add('paused');
+  document.getElementById('time-label').textContent = 'Paused';
+}
+
+function tick() {
+  if (timerSecs <= 0) { completeSession(); return; }
+  timerSecs--;
+  renderTimerDisplay();
+  renderRing(timerSecs / (getMins(currentModeId) * 60));
+}
+
+function completeSession() {
+  clearInterval(timerInterval); timerRunning = false;
+  const playBtn = document.getElementById('play-btn');
+  playBtn.textContent = PLAY_ICON;
+  playBtn.classList.add('paused');
+  document.getElementById('time-label').textContent = 'Done!';
+
+  const isBreak = MODES.find(m=>m.id===currentModeId)?.isBreak;
+  if (!isBreak) {
+    const taskInput = document.getElementById('task-input');
+    const taskText = taskInput ? taskInput.value.trim() : '';
+    log.push({
+      task: taskText || 'Focus session',
+      mode: currentModeId,
+      mins: getMins(currentModeId),
+      date: new Date().toISOString().split('T')[0],
+      ts:   Date.now(),
+    });
+    saveLog();
+    updateStreak();
+    renderStats();
+    renderSessionList();
+    showToast('Session complete. Take a break.');
+    const focusToday = getTodaySessions().filter(s => !MODES.find(m=>m.id===s.mode)?.isBreak).length;
+    setTimeout(() => setMode(focusToday % cfg.cycle === 0 ? 'long' : 'short'), 1500);
+  } else {
+    showToast('Break over. Back to work.');
+    setTimeout(() => setMode('focus'), 1200);
+  }
+}
+
+function skipSession() {
+  clearInterval(timerInterval); timerRunning = false;
+  timerSecs = getMins(currentModeId) * 60;
+  document.getElementById('play-btn').textContent = PLAY_ICON;
+  document.getElementById('play-btn').classList.add('paused');
+  document.getElementById('time-label').textContent = 'Ready';
+  renderTimerDisplay(); renderRing(1);
+}
+
+function renderTimerDisplay() {
+  const m = Math.floor(timerSecs/60), s = timerSecs%60;
+  document.getElementById('time-display').textContent =
+    String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+}
+
+function renderRing(pct) {
+  const offset = CIRCUM * (1 - Math.max(0, Math.min(1, pct)));
+  document.getElementById('ring-fill').setAttribute('stroke-dashoffset', offset.toFixed(2));
+}
+
+// ─── SESSION LIST (all user data via textContent) ─────────────
+function getTodaySessions() {
+  const today = new Date().toISOString().split('T')[0];
+  return log.filter(s => s.date === today);
+}
+
+function renderSessionList() {
+  const el = document.getElementById('session-list');
+  el.textContent = '';
+  const sessions = getTodaySessions().slice().reverse();
+  if (!sessions.length) {
+    const msg = document.createElement('div');
+    msg.style.cssText = 'text-align:center;color:var(--text3);padding:24px 0;font-size:13px;';
+    msg.textContent = 'No sessions yet. Start your first focus block.';
+    el.appendChild(msg); return;
+  }
+  sessions.forEach(s => {
+    const item = document.createElement('div'); item.className = 'session-item';
+    const left = document.createElement('div'); left.className = 'session-left';
+    const dot  = document.createElement('div'); dot.className = 'session-dot';
+    dot.style.background = getModeColor(s.mode);
+    const info = document.createElement('div');
+    const taskEl = document.createElement('div'); taskEl.className = 'session-task';
+    // Clamp task to 60 chars via textContent — no injection risk
+    taskEl.textContent = String(s.task || 'Focus session').substring(0, 60);
+    const metaEl = document.createElement('div'); metaEl.className = 'session-meta';
+    metaEl.textContent = s.ts ? new Date(s.ts).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}) : '';
+    info.appendChild(taskEl); info.appendChild(metaEl);
+    left.appendChild(dot); left.appendChild(info);
+    const dur = document.createElement('div'); dur.className = 'session-dur';
+    dur.textContent = Math.max(1, parseInt(s.mins) || 25) + 'm';
+    item.appendChild(left); item.appendChild(dur);
+    el.appendChild(item);
+  });
+}
+
+function clearTodaySessions() {
+  const today = new Date().toISOString().split('T')[0];
+  log = log.filter(s => s.date !== today);
+  saveLog(); renderStats(); renderSessionList(); updateSessionCount();
+}
+
+// ─── STATS ────────────────────────────────────────────────────
+function updateStreak() {
+  const days = [...new Set(log.map(s => s.date))].sort();
+  if (!days.length) { streak = 0; saveStreak(); return; }
+  const today = new Date().toISOString().split('T')[0];
+  if (days[days.length-1] !== today) { streak = 0; saveStreak(); return; }
+  let s = 1;
+  for (let i = days.length-2; i >= 0; i--) {
+    const d1 = new Date(days[i]+'T00:00:00'), d2 = new Date(days[i+1]+'T00:00:00');
+    if ((d2-d1) === 86400000) s++; else break;
+  }
+  streak = s; saveStreak();
+}
+
+function renderStats() {
+  const focusSessions = getTodaySessions().filter(s => !MODES.find(m=>m.id===s.mode)?.isBreak);
+  const totalMins = focusSessions.reduce((acc,s) => acc + Math.max(1,parseInt(s.mins)||25), 0);
+  document.getElementById('stat-sessions').textContent = focusSessions.length;
+  document.getElementById('stat-focus').textContent = totalMins >= 60 ? (totalMins/60).toFixed(1)+'h' : totalMins+'m';
+  document.getElementById('stat-streak').textContent = streak;
+  updateSessionCount();
+}
+
+function updateSessionCount() {
+  const n = getTodaySessions().filter(s => !MODES.find(m=>m.id===s.mode)?.isBreak).length;
+  document.getElementById('session-count').textContent = n + ' today';
+}
+
+// ─── SETTINGS ─────────────────────────────────────────────────
+function openSettings() { updateSettingsUI(); document.getElementById('settings-modal').classList.add('open'); }
+function closeSettings() { document.getElementById('settings-modal').classList.remove('open'); setMode(currentModeId); }
+
+function updateSettingsUI() {
+  document.getElementById('set-focus').textContent = cfg.focus;
+  document.getElementById('set-short').textContent = cfg.short;
+  document.getElementById('set-long').textContent  = cfg.long;
+  document.getElementById('set-cycle').textContent = cfg.cycle;
+}
+
+function adjustSetting(key, delta) {
+  const [min, max] = SETTING_BOUNDS[key];
+  cfg[key] = Math.min(max, Math.max(min, cfg[key] + delta));
+  saveCfg(); updateSettingsUI();
+}
+
+// ─── TOAST ────────────────────────────────────────────────────
+let toastTimeout = null;
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; // always textContent — safe
+  el.classList.add('show');
+  if (toastTimeout) clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => el.classList.remove('show'), 2500);
+}
+
+// Modal dismiss on overlay click
+document.getElementById('settings-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeSettings();
+});
+</script>
+</body>
+</html>

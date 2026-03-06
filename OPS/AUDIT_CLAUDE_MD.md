@@ -747,3 +747,9 @@ _Insights auto-appended by playbook_enhancer.py. Review and integrate as needed.
 **Insight:** I built a kids AI app as a side project 5 months ago. It just crossed $17K ARR and ranks #1 for "AI for kids" in the US and UK. Five months ago my kid asked ChatGPT about dangerous snakes. The response was detailed, accurate, and completely age-inappropriate. Weeks of anxiety and sleep issues followed. That was my "I should build something" moment. I'm an engineering manager at a FAANG company, so I started building nights and weekends. I called it Askie. The ARR journey looked like this: the
 **Potential:** ROI: https://reddit.com/r/AppBusiness/comments/1qvlw45/i_built_a_kids_ai_app_as_a_side_project_5_months/ | Synergy: 116
 
+### Alpha Insight: ALPHA1589 — 2026-03-05
+**Source:** 2026-02-13
+**Category:** AI_ALPHA
+**Insight:** No passive income ideas? Use these 9 prompts to find ideas that can turn into passive income Here are 9 prompts to help you sift through potential ideas and pick the one that is a potential winner! Pro tip: use GPT or the LLM you know best, so it can leverage your full context and history. **1)** Act as my brutally honest co-founder. I’m overwhelmed with too many business ideas. Your first job is NOT to be nice, it’s to organize them so we can kill most of them later. First, ask m
+**Potential:** ROI: https://reddit.com/r/passive_income/comments/1qxqdb0/no_passive_income_ideas_use_these_9_prompts_to/ | Synergy: 74
+

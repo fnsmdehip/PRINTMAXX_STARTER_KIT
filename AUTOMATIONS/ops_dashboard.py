@@ -45,7 +45,7 @@ except ImportError:
     from rich import box
 
 # Project paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 OPS_DIR = PROJECT_DIR / "OPS"
 RALPH_DIR = PROJECT_DIR / "ralph"

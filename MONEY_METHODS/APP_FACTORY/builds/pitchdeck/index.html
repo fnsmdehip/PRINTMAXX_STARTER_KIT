@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0a0a12">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PitchDeck">
+<meta name="description" content="Build clean micro pitch decks in minutes. 6-slide format with templates for SaaS, agency, product, and service businesses.">
+<meta property="og:title" content="PitchDeck - Micro Pitch Deck Builder">
+<meta property="og:description" content="Build investor-ready pitch decks in minutes. Templates, competitor grids, financial projections. Free PWA.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PitchDeck - Micro Pitch Deck Builder">
+<meta name="twitter:description" content="Build clean pitch decks in minutes. SaaS, agency, product templates. Free PWA.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a12' width='100' height='100' rx='20'/><text y='68' x='50' text-anchor='middle' font-size='50'>📊</text></svg>">
+<title>PitchDeck - Micro Pitch Deck Builder</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{-webkit-tap-highlight-color:transparent;box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a12;--bg2:#12121e;--bg3:#1a1a2e;--bg4:#242440;
+  --text:#f0f0f8;--text2:#a0a0c0;--text3:#606080;
+  --accent:#f43f5e;--accent2:#fb7185;--accent3:#e11d48;
+  --blue:#3b82f6;--green:#22c55e;--purple:#a855f7;--orange:#f59e0b;--cyan:#06b6d4;
+  --radius:14px;--radius-sm:10px;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+#app{height:100%;display:flex;flex-direction:column;overflow:hidden}
+
+.header{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.header h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.header h1 span{color:var(--accent2)}
+.header-actions{display:flex;gap:8px}
+
+.icon-btn{width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:var(--bg2);color:var(--text2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent2)}
+
+.main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:0 0 100px}
+.main::-webkit-scrollbar{display:none}
+
+.section{padding:20px}
+.section+.section{border-top:1px solid rgba(255,255,255,.04)}
+.section-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:14px}
+
+.input-group{margin-bottom:14px}
+.input-group label{display:block;font-size:13px;font-weight:500;color:var(--text2);margin-bottom:6px}
+.input-group input,.input-group textarea,.input-group select{width:100%;background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;color:var(--text);font-size:15px;font-family:inherit;outline:none;transition:border-color .15s}
+.input-group input:focus,.input-group textarea:focus,.input-group select:focus{border-color:var(--accent)}
+.input-group textarea{resize:vertical;min-height:70px}
+.input-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23a0a0c0' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.input-group select option{background:var(--bg2);color:var(--text)}
+.input-group .helper{font-size:11px;color:var(--text3);margin-top:4px}
+
+.row{display:flex;gap:10px}
+.row .input-group{flex:1}
+
+.btn{width:100%;padding:14px;border-radius:var(--radius);border:none;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent3)}
+.btn-primary:active{transform:scale(.98)}
+.btn-secondary{background:var(--bg3);color:var(--text2);border:1px solid rgba(255,255,255,.08)}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.btn-sm{width:auto;padding:8px 14px;font-size:13px;border-radius:8px}
+.btn-row{display:flex;gap:8px;margin-top:12px}
+.btn-row .btn{flex:1}
+
+/* Templates */
+.template-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.template-card{background:var(--bg2);border:2px solid rgba(255,255,255,.06);border-radius:var(--radius-sm);padding:14px;cursor:pointer;transition:all .15s;text-align:center}
+.template-card:hover{border-color:rgba(255,255,255,.15)}
+.template-card.selected{border-color:var(--accent);background:rgba(244,63,94,.05)}
+.template-icon{font-size:24px;margin-bottom:6px}
+.template-name{font-size:13px;font-weight:600;color:var(--text)}
+.template-desc{font-size:11px;color:var(--text3);margin-top:2px}
+
+/* Slides */
+.slide{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:32px 24px;margin-bottom:16px;min-height:280px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;animation:fadeUp .4s ease}
+.slide::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.slide-1::before{background:var(--accent)}
+.slide-2::before{background:var(--blue)}
+.slide-3::before{background:var(--green)}
+.slide-4::before{background:var(--purple)}
+.slide-5::before{background:var(--orange)}
+.slide-6::before{background:var(--cyan)}
+.slide-number{position:absolute;top:12px;right:16px;font-size:11px;font-weight:600;color:var(--text3);letter-spacing:.5px}
+.slide-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.slide-1 .slide-label{color:var(--accent2)}
+.slide-2 .slide-label{color:var(--blue)}
+.slide-3 .slide-label{color:var(--green)}
+.slide-4 .slide-label{color:var(--purple)}
+.slide-5 .slide-label{color:var(--orange)}
+.slide-6 .slide-label{color:var(--cyan)}
+.slide h2{font-size:22px;font-weight:700;line-height:1.3;margin-bottom:10px;letter-spacing:-.3px}
+.slide p{font-size:14px;line-height:1.65;color:var(--text2)}
+.slide .stat{font-size:32px;font-weight:800;letter-spacing:-.5px}
+.slide .stat-label{font-size:13px;color:var(--text3);margin-top:2px}
+.slide .stat-row{display:flex;gap:24px;margin-top:16px}
+.slide .stat-item{flex:1}
+
+/* Competitor Grid */
+.comp-grid{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.comp-grid th{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08);color:var(--text3);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.comp-grid td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text2)}
+.comp-grid .you{color:var(--accent2);font-weight:600}
+.comp-add{margin-top:8px}
+.comp-row{display:flex;gap:8px;margin-bottom:6px}
+.comp-row input{flex:1;background:var(--bg3);border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:8px 10px;color:var(--text);font-size:13px;font-family:inherit;outline:none}
+.comp-row input:focus{border-color:var(--accent)}
+
+/* Financial Projections */
+.fin-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.fin-table th{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08);color:var(--text3);font-weight:500;font-size:11px;text-transform:uppercase}
+.fin-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text2)}
+.fin-table .total{font-weight:600;color:var(--text)}
+.fin-input-row{display:flex;gap:8px;margin-bottom:8px}
+.fin-input-row .input-group{flex:1;margin-bottom:0}
+.fin-input-row input{padding:10px 12px}
+
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:10px 20px;border-radius:var(--radius);font-size:13px;font-weight:500;opacity:0;transition:opacity .2s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
+
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--bg);border-top:1px solid rgba(255,255,255,.06);padding:8px 0 max(8px,env(safe-area-inset-bottom));z-index:50}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0;cursor:pointer;color:var(--text3);transition:color .15s;border:none;background:none;font-family:inherit}
+.nav-item.active{color:var(--accent2)}
+.nav-item svg{width:20px;height:20px}
+.nav-item span{font-size:10px;font-weight:500}
+
+.privacy-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.privacy-overlay.show{display:flex}
+.privacy-content{background:var(--bg2);border-radius:var(--radius);padding:24px;max-width:500px;max-height:80vh;overflow-y:auto;width:100%}
+.privacy-content h2{font-size:18px;font-weight:700;margin-bottom:12px}
+.privacy-content p{font-size:13px;line-height:1.7;color:var(--text2);margin-bottom:10px}
+
+.view{display:none}
+.view.active{display:block}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:640px){.main{max-width:600px;margin:0 auto}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="header">
+    <h1>Pitch<span>Deck</span></h1>
+    <div class="header-actions">
+      <button class="icon-btn" id="btnExport" aria-label="Export" style="display:none">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="main" id="mainScroll">
+    <!-- Builder View -->
+    <div class="view active" id="viewBuilder">
+      <div class="section">
+        <div class="section-title">Choose Template</div>
+        <div class="template-grid" id="templateGrid"></div>
+      </div>
+      <div class="section">
+        <div class="section-title">Your Pitch</div>
+        <div class="input-group">
+          <label>Company / Product Name</label>
+          <input type="text" id="inputDeckName" placeholder="e.g. Acme, ShipFast, Vendora" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label>One-Line Description</label>
+          <input type="text" id="inputTagline" placeholder="e.g. Cold outreach on autopilot for SaaS teams" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label>Problem</label>
+          <textarea id="inputProblem" placeholder="What problem do you solve? Be specific about who feels the pain and how much it costs them."></textarea>
+        </div>
+        <div class="input-group">
+          <label>Solution</label>
+          <textarea id="inputSolution" placeholder="How does your product solve this? What makes it different?"></textarea>
+        </div>
+        <div class="input-group">
+          <label>Market Size (TAM)</label>
+          <input type="text" id="inputMarket" placeholder="e.g. $4.2B cold email market, growing 18% YoY" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label>Traction / Social Proof</label>
+          <textarea id="inputTraction" placeholder="e.g. 2,400 users, $8K MRR, 40% MoM growth, featured in TechCrunch"></textarea>
+        </div>
+        <div class="input-group">
+          <label>The Ask</label>
+          <input type="text" id="inputAsk" placeholder="e.g. Raising $500K pre-seed at $5M valuation" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" id="btnBuild">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          Build Pitch Deck
+        </button>
+      </div>
+    </div>
+
+    <!-- Deck View -->
+    <div class="view" id="viewDeck">
+      <div class="section" id="deckOutput"></div>
+      <div class="section">
+        <div class="btn-row">
+          <button class="btn btn-secondary" id="btnExportImages">Export as Images</button>
+          <button class="btn btn-secondary" id="btnPrint">Print / PDF</button>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-secondary" id="btnEditDeck">Edit Deck</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Competitor View -->
+    <div class="view" id="viewCompetitor">
+      <div class="section">
+        <div class="section-title">Competitor Grid Builder</div>
+        <div class="input-group">
+          <label>Your Company</label>
+          <input type="text" id="compYou" placeholder="Your company name" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label>Features to Compare (comma-separated)</label>
+          <input type="text" id="compFeatures" placeholder="e.g. Price, Speed, Integrations, Support" autocomplete="off">
+        </div>
+        <div id="compCompetitors">
+          <div class="section-title" style="margin-top:12px">Competitors</div>
+        </div>
+        <button class="btn btn-secondary btn-sm" id="btnAddComp" style="margin-bottom:12px">+ Add Competitor</button>
+        <button class="btn btn-primary" id="btnBuildGrid">Build Grid</button>
+        <div id="compOutput" style="margin-top:16px"></div>
+      </div>
+    </div>
+
+    <!-- Financial Projections View -->
+    <div class="view" id="viewFinancials">
+      <div class="section">
+        <div class="section-title">Financial Projection Calculator</div>
+        <div class="fin-input-row">
+          <div class="input-group">
+            <label>Monthly Revenue Now</label>
+            <input type="number" id="finRevenue" placeholder="8000" min="0">
+          </div>
+          <div class="input-group">
+            <label>MoM Growth %</label>
+            <input type="number" id="finGrowth" placeholder="20" min="0" max="500">
+          </div>
+        </div>
+        <div class="fin-input-row">
+          <div class="input-group">
+            <label>Monthly Costs</label>
+            <input type="number" id="finCosts" placeholder="3000" min="0">
+          </div>
+          <div class="input-group">
+            <label>Cost Growth %/mo</label>
+            <input type="number" id="finCostGrowth" placeholder="5" min="0" max="200">
+          </div>
+        </div>
+        <button class="btn btn-primary" id="btnCalcFin">Calculate 12-Month Projection</button>
+        <div id="finOutput" style="margin-top:16px"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <button class="nav-item active" data-view="viewBuilder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+      <span>Builder</span>
+    </button>
+    <button class="nav-item" data-view="viewDeck">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <span>Deck</span>
+    </button>
+    <button class="nav-item" data-view="viewCompetitor">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      <span>Compete</span>
+    </button>
+    <button class="nav-item" data-view="viewFinancials">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+      <span>Finance</span>
+    </button>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div class="privacy-overlay" id="privacyOverlay">
+    <div class="privacy-content" id="privacyContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+// ===== DOM HELPERS =====
+function el(tag, attrs, children) {
+  var e = document.createElement(tag);
+  if (attrs) {
+    for (var k in attrs) {
+      if (k === 'className') e.className = attrs[k];
+      else if (k === 'textContent') e.textContent = attrs[k];
+      else if (k === 'innerHTML') { /* skip for XSS safety */ }
+      else if (k.indexOf('on') === 0) e.addEventListener(k.slice(2).toLowerCase(), attrs[k]);
+      else e.setAttribute(k, attrs[k]);
+    }
+  }
+  if (children) {
+    for (var i = 0; i < children.length; i++) {
+      if (typeof children[i] === 'string') e.appendChild(document.createTextNode(children[i]));
+      else if (children[i]) e.appendChild(children[i]);
+    }
+  }
+  return e;
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2000);
+}
+
+// ===== TEMPLATES =====
+var TEMPLATES = [
+  {id:'saas', icon:'S', name:'SaaS', desc:'Software product', problem:'Manual processes waste 10+ hours/week', solution:'Automated platform that replaces spreadsheets', market:'$12B market, 22% CAGR', traction:'500 beta users, $3K MRR', ask:'Raising $300K pre-seed'},
+  {id:'agency', icon:'A', name:'Agency', desc:'Service business', problem:'Businesses struggle to find reliable talent', solution:'Done-for-you service with guaranteed deliverables', market:'$850B professional services market', traction:'12 clients, $15K MRR, 95% retention', ask:'Raising $150K to scale operations'},
+  {id:'product', icon:'P', name:'Product', desc:'Physical or digital', problem:'Existing products are overpriced and overcomplicated', solution:'Simple, affordable alternative with better UX', market:'$5.4B market with 15% growth', traction:'1,200 units sold, 4.8 star rating', ask:'Raising $500K seed round'},
+  {id:'service', icon:'V', name:'Service', desc:'Marketplace/platform', problem:'Finding and comparing service providers is painful', solution:'Marketplace that connects buyers with vetted providers', market:'$3.2B addressable market', traction:'400 providers, 2K transactions, $8K MRR', ask:'Raising $750K to launch in 3 new cities'}
+];
+
+var selectedTemplate = null;
+
+function renderTemplates() {
+  var grid = document.getElementById('templateGrid');
+  grid.textContent = '';
+  for (var i = 0; i < TEMPLATES.length; i++) {
+    (function(tmpl) {
+      var card = el('div', {className: 'template-card' + (selectedTemplate === tmpl.id ? ' selected' : '')});
+      card.appendChild(el('div', {className: 'template-icon', textContent: tmpl.icon, style: 'font-weight:800;font-size:28px;color:var(--accent2)'}));
+      card.appendChild(el('div', {className: 'template-name', textContent: tmpl.name}));
+      card.appendChild(el('div', {className: 'template-desc', textContent: tmpl.desc}));
+      card.addEventListener('click', function() {
+        selectedTemplate = tmpl.id;
+        document.getElementById('inputProblem').value = tmpl.problem;
+        document.getElementById('inputSolution').value = tmpl.solution;
+        document.getElementById('inputMarket').value = tmpl.market;
+        document.getElementById('inputTraction').value = tmpl.traction;
+        document.getElementById('inputAsk').value = tmpl.ask;
+        renderTemplates();
+        showToast(tmpl.name + ' template loaded');
+      });
+      grid.appendChild(card);
+    })(TEMPLATES[i]);
+  }
+}
+
+// ===== BUILD DECK =====
+function buildDeck() {
+  var name = document.getElementById('inputDeckName').value.trim();
+  var tagline = document.getElementById('inputTagline').value.trim();
+  var problem = document.getElementById('inputProblem').value.trim();
+  var solution = document.getElementById('inputSolution').value.trim();
+  var market = document.getElementById('inputMarket').value.trim();
+  var traction = document.getElementById('inputTraction').value.trim();
+  var ask = document.getElementById('inputAsk').value.trim();
+
+  if (!name || !problem || !solution) {
+    showToast('Fill in name, problem, and solution');
+    return;
+  }
+
+  var output = document.getElementById('deckOutput');
+  output.textContent = '';
+
+  // Parse traction into stat items
+  var tractionItems = traction ? traction.split(',').map(function(s){ return s.trim(); }).filter(Boolean) : [];
+
+  // Slide 1: Title
+  var s1 = el('div', {className: 'slide slide-1', id: 'slide-1'});
+  s1.appendChild(el('span', {className: 'slide-number', textContent: '01 / 06'}));
+  s1.appendChild(el('h2', {textContent: name, style: 'font-size:32px;margin-bottom:8px'}));
+  if (tagline) s1.appendChild(el('p', {textContent: tagline, style: 'font-size:16px'}));
+  output.appendChild(s1);
+
+  // Slide 2: Problem
+  var s2 = el('div', {className: 'slide slide-2', id: 'slide-2'});
+  s2.appendChild(el('span', {className: 'slide-number', textContent: '02 / 06'}));
+  s2.appendChild(el('div', {className: 'slide-label', textContent: 'The Problem'}));
+  s2.appendChild(el('h2', {textContent: 'The Problem'}));
+  s2.appendChild(el('p', {textContent: problem}));
+  output.appendChild(s2);
+
+  // Slide 3: Solution
+  var s3 = el('div', {className: 'slide slide-3', id: 'slide-3'});
+  s3.appendChild(el('span', {className: 'slide-number', textContent: '03 / 06'}));
+  s3.appendChild(el('div', {className: 'slide-label', textContent: 'Our Solution'}));
+  s3.appendChild(el('h2', {textContent: 'The Solution'}));
+  s3.appendChild(el('p', {textContent: solution}));
+  output.appendChild(s3);
+
+  // Slide 4: Market
+  var s4 = el('div', {className: 'slide slide-4', id: 'slide-4'});
+  s4.appendChild(el('span', {className: 'slide-number', textContent: '04 / 06'}));
+  s4.appendChild(el('div', {className: 'slide-label', textContent: 'Market Opportunity'}));
+  s4.appendChild(el('h2', {textContent: 'Market Size'}));
+  s4.appendChild(el('p', {textContent: market || 'Market data to be added'}));
+  output.appendChild(s4);
+
+  // Slide 5: Traction
+  var s5 = el('div', {className: 'slide slide-5', id: 'slide-5'});
+  s5.appendChild(el('span', {className: 'slide-number', textContent: '05 / 06'}));
+  s5.appendChild(el('div', {className: 'slide-label', textContent: 'Traction'}));
+  s5.appendChild(el('h2', {textContent: 'Traction & Proof'}));
+  if (tractionItems.length > 0) {
+    var statRow = el('div', {className: 'stat-row', style: 'flex-wrap:wrap'});
+    for (var ti = 0; ti < tractionItems.length; ti++) {
+      var si = el('div', {className: 'stat-item'});
+      si.appendChild(el('div', {textContent: tractionItems[ti], style: 'font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px'}));
+      statRow.appendChild(si);
+    }
+    s5.appendChild(statRow);
+  } else {
+    s5.appendChild(el('p', {textContent: 'Traction data to be added'}));
+  }
+  output.appendChild(s5);
+
+  // Slide 6: The Ask
+  var s6 = el('div', {className: 'slide slide-6', id: 'slide-6'});
+  s6.appendChild(el('span', {className: 'slide-number', textContent: '06 / 06'}));
+  s6.appendChild(el('div', {className: 'slide-label', textContent: 'The Ask'}));
+  s6.appendChild(el('h2', {textContent: ask || 'Let\'s Talk'}));
+  s6.appendChild(el('p', {textContent: 'Contact: ' + name}));
+  output.appendChild(s6);
+
+  // Save to localStorage
+  localStorage.setItem('pitchdeck_last', JSON.stringify({
+    name:name, tagline:tagline, problem:problem, solution:solution,
+    market:market, traction:traction, ask:ask, template:selectedTemplate
+  }));
+
+  switchView('viewDeck');
+  document.getElementById('btnExport').style.display = 'flex';
+}
+
+// ===== EXPORT =====
+function exportImages() {
+  if (typeof html2canvas === 'undefined') {
+    showToast('html2canvas not loaded. Check your connection.');
+    return;
+  }
+  showToast('Generating images...');
+  var slides = document.querySelectorAll('#deckOutput .slide');
+  var count = 0;
+  for (var i = 0; i < slides.length; i++) {
+    (function(slide, idx){
+      html2canvas(slide, {
+        backgroundColor: '#12121e',
+        scale: 2,
+        useCORS: true
+      }).then(function(canvas){
+        var link = document.createElement('a');
+        link.download = 'slide-' + (idx + 1) + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        count++;
+        if (count === slides.length) showToast('All slides exported');
+      }).catch(function(){
+        showToast('Export failed for slide ' + (idx + 1));
+      });
+    })(slides[i], i);
+  }
+}
+
+function printDeck() {
+  window.print();
+}
+
+// ===== COMPETITOR GRID =====
+var compCount = 0;
+
+function addCompetitor() {
+  compCount++;
+  var container = document.getElementById('compCompetitors');
+  var row = el('div', {className: 'comp-row', id: 'comp-row-' + compCount});
+  row.appendChild(el('input', {type: 'text', placeholder: 'Competitor name', className: 'comp-name-input'}));
+  var removeBtn = el('button', {className: 'btn btn-sm btn-secondary', textContent: 'X'});
+  (function(rowEl){
+    removeBtn.addEventListener('click', function(){ rowEl.remove(); });
+  })(row);
+  row.appendChild(removeBtn);
+  container.appendChild(row);
+}
+
+function buildCompGrid() {
+  var you = document.getElementById('compYou').value.trim();
+  var features = document.getElementById('compFeatures').value.trim().split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+  if (!you || features.length === 0) {
+    showToast('Enter your company and features');
+    return;
+  }
+
+  var competitors = [];
+  var nameInputs = document.querySelectorAll('.comp-name-input');
+  for (var i = 0; i < nameInputs.length; i++) {
+    var n = nameInputs[i].value.trim();
+    if (n) competitors.push(n);
+  }
+
+  var output = document.getElementById('compOutput');
+  output.textContent = '';
+
+  var table = el('table', {className: 'comp-grid'});
+  var thead = el('thead');
+  var headerRow = el('tr');
+  headerRow.appendChild(el('th', {textContent: 'Feature'}));
+  headerRow.appendChild(el('th', {className: 'you', textContent: you}));
+  for (var c = 0; c < competitors.length; c++) {
+    headerRow.appendChild(el('th', {textContent: competitors[c]}));
+  }
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  var tbody = el('tbody');
+  for (var f = 0; f < features.length; f++) {
+    var row = el('tr');
+    row.appendChild(el('td', {textContent: features[f], style: 'font-weight:500;color:var(--text)'}));
+    row.appendChild(el('td', {className: 'you', textContent: 'Yes'}));
+    for (var cc = 0; cc < competitors.length; cc++) {
+      row.appendChild(el('td', {textContent: 'Partial'}));
+    }
+    tbody.appendChild(row);
+  }
+  table.appendChild(tbody);
+
+  var card = el('div', {className: 'slide', style: 'min-height:auto;padding:20px'});
+  card.appendChild(el('h2', {textContent: 'Competitive Landscape', style: 'font-size:18px;margin-bottom:12px'}));
+  card.appendChild(table);
+  card.appendChild(el('p', {textContent: 'Tap cells to edit values', style: 'font-size:11px;color:var(--text3);margin-top:10px'}));
+  output.appendChild(card);
+
+  // Make cells editable
+  var tds = table.querySelectorAll('tbody td');
+  for (var t = 0; t < tds.length; t++) {
+    tds[t].style.cursor = 'pointer';
+    tds[t].addEventListener('click', function(){
+      var current = this.textContent;
+      var options = ['Yes', 'No', 'Partial', 'Best'];
+      var idx = options.indexOf(current);
+      this.textContent = options[(idx + 1) % options.length];
+    });
+  }
+  showToast('Grid built. Tap cells to edit.');
+}
+
+// ===== FINANCIAL PROJECTIONS =====
+function calcFinancials() {
+  var rev = parseFloat(document.getElementById('finRevenue').value) || 0;
+  var growth = parseFloat(document.getElementById('finGrowth').value) || 0;
+  var costs = parseFloat(document.getElementById('finCosts').value) || 0;
+  var costGrowth = parseFloat(document.getElementById('finCostGrowth').value) || 0;
+
+  if (rev === 0) {
+    showToast('Enter your current monthly revenue');
+    return;
+  }
+
+  var output = document.getElementById('finOutput');
+  output.textContent = '';
+
+  var card = el('div', {className: 'slide', style: 'min-height:auto;padding:20px'});
+  card.appendChild(el('h2', {textContent: '12-Month Financial Projection', style: 'font-size:18px;margin-bottom:12px'}));
+
+  var table = el('table', {className: 'fin-table'});
+  var thead = el('thead');
+  var hRow = el('tr');
+  ['Month', 'Revenue', 'Costs', 'Profit', 'Margin'].forEach(function(h){
+    hRow.appendChild(el('th', {textContent: h}));
+  });
+  thead.appendChild(hRow);
+  table.appendChild(thead);
+
+  var tbody = el('tbody');
+  var totalRev = 0, totalProfit = 0;
+  var currentRev = rev;
+  var currentCosts = costs;
+
+  for (var m = 1; m <= 12; m++) {
+    var profit = currentRev - currentCosts;
+    var margin = currentRev > 0 ? Math.round((profit / currentRev) * 100) : 0;
+    totalRev += currentRev;
+    totalProfit += profit;
+
+    var row = el('tr');
+    row.appendChild(el('td', {textContent: 'M' + m}));
+    row.appendChild(el('td', {textContent: '$' + Math.round(currentRev).toLocaleString()}));
+    row.appendChild(el('td', {textContent: '$' + Math.round(currentCosts).toLocaleString()}));
+    row.appendChild(el('td', {textContent: '$' + Math.round(profit).toLocaleString(), style: profit >= 0 ? 'color:var(--green)' : 'color:var(--accent)'}));
+    row.appendChild(el('td', {textContent: margin + '%'}));
+    tbody.appendChild(row);
+
+    currentRev *= (1 + growth / 100);
+    currentCosts *= (1 + costGrowth / 100);
+  }
+
+  // Totals row
+  var tRow = el('tr');
+  tRow.appendChild(el('td', {className: 'total', textContent: 'Total'}));
+  tRow.appendChild(el('td', {className: 'total', textContent: '$' + Math.round(totalRev).toLocaleString()}));
+  tRow.appendChild(el('td', {className: 'total', textContent: '-'}));
+  tRow.appendChild(el('td', {className: 'total', textContent: '$' + Math.round(totalProfit).toLocaleString(), style: totalProfit >= 0 ? 'color:var(--green)' : 'color:var(--accent)'}));
+  tRow.appendChild(el('td', {className: 'total', textContent: '-'}));
+  tbody.appendChild(tRow);
+  table.appendChild(tbody);
+
+  card.appendChild(table);
+
+  // Summary
+  var summary = el('div', {style: 'margin-top:16px;display:flex;gap:16px;flex-wrap:wrap'});
+  var arrEl = el('div', {style: 'flex:1;min-width:120px'});
+  arrEl.appendChild(el('div', {textContent: '$' + Math.round(currentRev * 12).toLocaleString(), style: 'font-size:24px;font-weight:800;color:var(--green)'}));
+  arrEl.appendChild(el('div', {textContent: 'Projected ARR (M12)', style: 'font-size:12px;color:var(--text3)'}));
+  summary.appendChild(arrEl);
+  var burnEl = el('div', {style: 'flex:1;min-width:120px'});
+  var lastProfit = (currentRev / (1 + growth/100)) - (currentCosts / (1 + costGrowth/100));
+  burnEl.appendChild(el('div', {textContent: lastProfit >= 0 ? 'Profitable' : '$' + Math.round(Math.abs(lastProfit)).toLocaleString() + '/mo burn', style: 'font-size:24px;font-weight:800;color:' + (lastProfit >= 0 ? 'var(--green)' : 'var(--accent)')}));
+  burnEl.appendChild(el('div', {textContent: lastProfit >= 0 ? 'Month 12 Status' : 'Monthly Burn (M12)', style: 'font-size:12px;color:var(--text3)'}));
+  summary.appendChild(burnEl);
+  card.appendChild(summary);
+
+  output.appendChild(card);
+  showToast('Projection calculated');
+}
+
+// ===== NAV =====
+function switchView(viewId) {
+  var views = document.querySelectorAll('.view');
+  for (var i = 0; i < views.length; i++) views[i].classList.remove('active');
+  document.getElementById(viewId).classList.add('active');
+  var navs = document.querySelectorAll('.nav-item');
+  for (var j = 0; j < navs.length; j++) {
+    navs[j].classList.toggle('active', navs[j].getAttribute('data-view') === viewId);
+  }
+  document.getElementById('mainScroll').scrollTop = 0;
+}
+
+// ===== PRIVACY =====
+function showPrivacy() {
+  var overlay = document.getElementById('privacyOverlay');
+  var content = document.getElementById('privacyContent');
+  content.textContent = '';
+  content.appendChild(el('h2', {textContent: 'Privacy Policy'}));
+  content.appendChild(el('p', {textContent: 'PitchDeck is a client-side web application. All data stays on your device in localStorage. No data is sent to any server.'}));
+  content.appendChild(el('p', {textContent: 'We do not collect personal information, pitch content, or usage data. No analytics, no tracking cookies, no third-party data sharing.'}));
+  content.appendChild(el('p', {textContent: 'html2canvas is loaded from a CDN for image export functionality. This library processes your slides locally in your browser.'}));
+  content.appendChild(el('p', {textContent: 'You can clear all stored data at any time via browser settings. Last updated: March 2026.'}));
+  var closeBtn = el('button', {className: 'btn btn-secondary', textContent: 'Close', style: 'margin-top:16px', onClick: function(){ overlay.classList.remove('show'); }});
+  content.appendChild(closeBtn);
+  overlay.classList.add('show');
+}
+
+function addFooters() {
+  var views = document.querySelectorAll('.view');
+  for (var i = 0; i < views.length; i++) {
+    var footer = el('div', {style: 'text-align:center;padding:24px 20px 16px'});
+    var link = el('a', {style: 'font-size:12px;color:var(--text3);cursor:pointer;text-decoration:underline', textContent: 'Privacy Policy'});
+    link.addEventListener('click', showPrivacy);
+    footer.appendChild(link);
+    views[i].appendChild(footer);
+  }
+}
+
+// ===== INIT =====
+renderTemplates();
+
+document.getElementById('btnBuild').addEventListener('click', buildDeck);
+document.getElementById('btnExportImages').addEventListener('click', exportImages);
+document.getElementById('btnPrint').addEventListener('click', printDeck);
+document.getElementById('btnExport').addEventListener('click', exportImages);
+document.getElementById('btnEditDeck').addEventListener('click', function(){ switchView('viewBuilder'); });
+document.getElementById('btnAddComp').addEventListener('click', addCompetitor);
+document.getElementById('btnBuildGrid').addEventListener('click', buildCompGrid);
+document.getElementById('btnCalcFin').addEventListener('click', calcFinancials);
+
+var navItems = document.querySelectorAll('.nav-item');
+for (var n = 0; n < navItems.length; n++) {
+  navItems[n].addEventListener('click', function(){
+    switchView(this.getAttribute('data-view'));
+  });
+}
+
+// Add 2 competitor rows by default
+addCompetitor();
+addCompetitor();
+
+addFooters();
+
+// Load last deck from localStorage
+try {
+  var last = JSON.parse(localStorage.getItem('pitchdeck_last'));
+  if (last) {
+    document.getElementById('inputDeckName').value = last.name || '';
+    document.getElementById('inputTagline').value = last.tagline || '';
+    document.getElementById('inputProblem').value = last.problem || '';
+    document.getElementById('inputSolution').value = last.solution || '';
+    document.getElementById('inputMarket').value = last.market || '';
+    document.getElementById('inputTraction').value = last.traction || '';
+    document.getElementById('inputAsk').value = last.ask || '';
+    if (last.template) { selectedTemplate = last.template; renderTemplates(); }
+  }
+} catch(e) {}
+
+// Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(function(e){ console.log('SW registration failed:', e); });
+}
+
+})();
+</script>
+</body>
+</html>

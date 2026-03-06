@@ -1,0 +1,33 @@
+{
+  "apps": {
+    "hilal": {
+      "snapshots": [
+        {
+          "timestamp": "2026-03-05T04:12:02.651447",
+          "keyword_string": "ramadan,prayer,times,fasting,islam,quran,dua,iftar,suhoor,muslim,salah,adhan,qibla,taraweeh,eid,hajj",
+          "keyword_count": 16,
+          "char_count": 100,
+          "selected_keywords": [
+            "ramadan",
+            "prayer",
+            "times",
+            "fasting",
+            "islam",
+            "quran",
+            "dua",
+            "iftar",
+            "suhoor",
+            "muslim",
+            "salah",
+            "adhan",
+            "qibla",
+            "taraweeh",
+            "eid",
+            "hajj"
+          ]
+        }
+      ]
+    }
+  },
+  "snapshots": []
+}

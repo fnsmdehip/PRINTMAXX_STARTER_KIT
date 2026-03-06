@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="cvg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B30FF"/>
+      <stop offset="100%" style="stop-color:#FF6B35"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="100" fill="#0A0A1A"/>
+  <!-- Play button icon -->
+  <polygon points="30,30 30,70 60,50" fill="url(#cvg)"/>
+  <text x="75" y="60" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="36" font-weight="700" fill="#F0F0F0" letter-spacing="2">CLIP</text>
+  <text x="230" y="60" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="36" font-weight="700" fill="url(#cvg)" letter-spacing="2">VAULT</text>
+  <rect x="75" y="72" width="300" height="2" rx="1" fill="url(#cvg)" opacity="0.5"/>
+  <!-- Streaming dots -->
+  <circle cx="340" cy="25" r="4" fill="#9B30FF" opacity="0.8"/>
+  <circle cx="355" cy="25" r="4" fill="#C64DCA" opacity="0.6"/>
+  <circle cx="370" cy="25" r="4" fill="#FF6B35" opacity="0.8"/>
+</svg>

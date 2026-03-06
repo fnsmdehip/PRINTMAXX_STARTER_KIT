@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 SEO Pages for Your Business | Programmatic SEO</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#06b6d4;--accent2:#22d3ee;--green:#22c55e}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#000;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#0891b2}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.sample{padding:60px 0;border-top:1px solid var(--border)}
+.sample h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.sample .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.page-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.page-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.page-card .keyword{font-size:0.8rem;color:var(--accent2);font-weight:600;margin-bottom:6px}
+.page-card h3{font-size:1rem;margin-bottom:6px}
+.page-card p{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
+.page-card .meta{font-size:0.78rem;color:var(--green)}
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#000;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+.how{padding:60px 0;border-top:1px solid var(--border)}
+.how h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.how-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px}
+.how-item h3{font-size:1rem;margin-bottom:6px}
+.how-item p{font-size:0.88rem;color:var(--muted)}
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#0a2e33,#051a1e);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#0a1a1e,#0a2e33);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted);text-align:center;padding:12px}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.tier-grid{grid-template-columns:1fr}.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>you want to rank for 100 keywords. writing them by hand would take 200+ hours.</h1>
+<p class="sub">i generate them programmatically in 3-7 days. 10,000+ pages built across 40+ industries. average time to first ranking: 2-6 weeks.</p>
+<div class="stats">
+<div class="stat"><div class="num">10K+</div><div class="label">pages generated</div></div>
+<div class="stat"><div class="num">40+</div><div class="label">industries</div></div>
+<div class="stat"><div class="num">2-6wk</div><div class="label">time to rank</div></div>
+<div class="stat"><div class="num">3-5x</div><div class="label">conversion vs head terms</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="sample">
+<h2>sample pages: plumber targeting 6 cities</h2>
+<p class="desc">each page has unique content, city-specific details, and unique meta tags. not copy-paste.</p>
+<div class="page-grid">
+<div class="page-card">
+<div class="keyword">targeting: emergency plumber in austin tx</div>
+<h3>Emergency Plumber in Austin, TX</h3>
+<p>24/7 emergency plumbing in Austin. licensed, insured. average response time 45 minutes. serving downtown, South Congress, Hyde Park, and all Austin neighborhoods.</p>
+<div class="meta">schema markup + unique title tag + internal links</div>
+</div>
+<div class="page-card">
+<div class="keyword">targeting: drain cleaning in dallas tx</div>
+<h3>Drain Cleaning in Dallas, TX</h3>
+<p>professional drain cleaning for Dallas homes and businesses. camera inspection, hydro jetting, rooter service. serving Uptown, Deep Ellum, Oak Lawn, and DFW metro.</p>
+<div class="meta">schema markup + unique title tag + internal links</div>
+</div>
+<div class="page-card">
+<div class="keyword">targeting: water heater repair in houston tx</div>
+<h3>Water Heater Repair in Houston, TX</h3>
+<p>same-day water heater repair in Houston. tankless and traditional. serving Montrose, Heights, Katy, Sugar Land. free estimates. licensed TX plumber.</p>
+<div class="meta">schema markup + unique title tag + internal links</div>
+</div>
+</div>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">25 SEO Pages</div>
+<div class="price">$100 <span>/ one-time</span></div>
+<div class="delivery">delivered in 3 days</div>
+<div class="desc">25 SEO pages targeting "[service] in [city]" keywords. meta tags, schema, internal linking.</div>
+<ul>
+<li>25 pages</li>
+<li>meta tags + schema</li>
+<li>responsive design</li>
+<li>internal linking</li>
+<li>1 revision</li>
+<li class="no">keyword research (you provide)</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">100 SEO Pages</div>
+<div class="price">$300 <span>/ one-time</span></div>
+<div class="delivery">delivered in 7 days</div>
+<div class="desc">100 pages with keyword research, sitemap, responsive design, schema, deployment.</div>
+<ul>
+<li>100 pages</li>
+<li>keyword research included</li>
+<li>sitemap.xml</li>
+<li>full cluster internal linking</li>
+<li>responsive design</li>
+<li>2 revisions</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">500 SEO Pages + Strategy</div>
+<div class="price">$1,000 <span>/ one-time</span></div>
+<div class="delivery">delivered in 14 days</div>
+<div class="desc">500 pages with competitor gap analysis, content clusters, analytics, sitemap submission, 30-day ranking report.</div>
+<ul>
+<li>500 pages</li>
+<li>competitor gap analysis</li>
+<li>content clusters + hub pages</li>
+<li>analytics tracking</li>
+<li>sitemap submission</li>
+<li>30-day ranking report</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="how">
+<h2>why this works</h2>
+<div class="how-grid">
+<div class="how-item"><h3>long-tail = low competition</h3><p>"emergency plumber in Cedar Park TX" has almost no competition. these pages rank in 2-6 weeks.</p></div>
+<div class="how-item"><h3>high intent = high conversion</h3><p>someone searching "[service] in [city]" is ready to call. conversion rates are 3-5x higher than head terms.</p></div>
+<div class="how-item"><h3>volume = traffic</h3><p>a single page gets 10-50 visits/month. 100 pages = 1,000-5,000 visits/month. all high-intent.</p></div>
+<div class="how-item"><h3>not duplicate content</h3><p>each page has unique content tailored to the specific city. unique meta tags. city-specific details. Google treats them as separate pages.</p></div>
+</div>
+</section>
+
+<section class="proof">
+<h2>results</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"went from 0 organic pages to 100 pages targeting every city we serve. started ranking for 23 keywords in the first month."</div>
+<div class="author">Greg T. - HVAC company owner</div>
+<div class="result">23 keywords ranking, month 1</div>
+</div>
+<div class="testimonial">
+<div class="quote">"the $300 package brought in 47 calls in the first 60 days from Google searches we weren't showing up for before."</div>
+<div class="author">Dr. Patel - dental clinic</div>
+<div class="result">47 calls in 60 days from SEO pages</div>
+</div>
+<div class="testimonial">
+<div class="quote">"my competitors have been doing SEO for years. i deployed 100 pages and started outranking them for city-specific terms in 3 weeks."</div>
+<div class="author">Maria S. - cleaning service</div>
+<div class="result">outranking competitors in 3 weeks</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>industries i've built for</h2>
+<div class="port-grid">
+<div class="port-item"><div class="port-thumb">plumbing / HVAC<br>200+ cities</div><div class="port-info"><h3>Home Services</h3><p>service + city pages</p></div></div>
+<div class="port-item"><div class="port-thumb">dental clinics<br>150+ cities</div><div class="port-info"><h3>Healthcare</h3><p>procedure + location pages</p></div></div>
+<div class="port-item"><div class="port-thumb">law firms<br>100+ cities</div><div class="port-info"><h3>Legal</h3><p>practice area + city pages</p></div></div>
+<div class="port-item"><div class="port-thumb">real estate<br>300+ neighborhoods</div><div class="port-info"><h3>Real Estate</h3><p>homes for sale in [area]</p></div></div>
+<div class="port-item"><div class="port-thumb">cleaning services<br>75+ cities</div><div class="port-info"><h3>Cleaning</h3><p>service type + area pages</p></div></div>
+<div class="port-item"><div class="port-thumb">fitness studios<br>50+ locations</div><div class="port-info"><h3>Fitness</h3><p>class type + location pages</p></div></div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open"><div class="faq-q">isn't this duplicate content?</div><div class="faq-a">no. each page has unique content tailored to the specific city/keyword. different meta tags, city-specific details, varied content. Google treats them as separate pages targeting separate queries.</div></div>
+<div class="faq-item"><div class="faq-q">how do i add these to my website?</div><div class="faq-a">delivered as HTML files with sitemap.xml. WordPress upload instructions included. can also host as a standalone microsite on a subdomain. Premium includes deployment help.</div></div>
+<div class="faq-item"><div class="faq-q">how long until the pages rank?</div><div class="faq-a">low-competition local terms: 2-6 weeks. medium competition: 1-3 months. depends on your domain authority and site age.</div></div>
+<div class="faq-item"><div class="faq-q">can you target other keyword patterns?</div><div class="faq-a">yes. "[product] vs [product]", "best [product] for [use case]", "[topic] statistics [year]", "how to [task] in [city]". any repeatable pattern works.</div></div>
+</section>
+
+<section class="final-cta">
+<h2>send me your business type and service area</h2>
+<p>i'll estimate how many pages you need and what traffic to expect. no charge for the estimate.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a><br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+<footer><div class="container"><p>a single page gets 10-50 visits/month. 100 pages = 1,000-5,000 high-intent visits/month. the math works.</p></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});</script>
+</body>
+</html>

@@ -1124,3 +1124,64 @@ I made $176 in my first month as a solo founder. Here's every channel I tried an
 
 I'm a software engineer building on the side after my 9-5 in R
 
+### Alpha Insight: ALPHA1578 — 2026-03-05
+**Source:** 2026-02-13
+**Category:** CONTENT_FORMAT
+**Insight:** I audited 500+ Instagram accounts in late 2025. Here is what is actually working vs what isn't. Everyone keeps screaming "just post more Reels," but after auditing over 500 accounts in the last 3 months (mix of E-com, Personal Brands, and Local Biz), the data is painting a slightly different picture. I wanted to share the raw trends we’re seeing across our client accounts so you can stop guessing. 1. Carousels are the new "Save" magnets For accounts under 10k followers, Carousels are currently
+**Potential:** ROI: https://reddit.com/r/SocialMediaMarketing/comments/1qypdu1/i_audited_500_instagram_accounts_in_late_2025/ | Synergy: 140
+
+
+
+---
+
+## Pending Enhancement (ALPHA14930, Score: 24)
+
+**Source:** @affprinter (explicit-handles) | **URL:** https://x.com/affprinter/status/2028375214476890620
+**Added:** 2026-03-05T05:36:13-05:00
+
+Tiktok organic + affiliate sweep offers = easiest way to make $7k/week
+
+its so simple but people just dont have the right guidance
+
+so I made a free guide for you guys so you can print $20k/months
+
+Just comment "sweeps" and retweet and ill send it over (must follow for auto dm)
+
+
+
+---
+
+## Pending Enhancement (ALPHA14934, Score: 24)
+
+**Source:** @StevenCravotta (explicit-handles) | **URL:** https://x.com/StevenCravotta/status/2028560487219163469
+**Added:** 2026-03-05T05:36:13-05:00
+
+The only time you are allowed to hard sell on TikTok:
+
+Reply videos.
+
+I'm stealing the traffic from my own viral video.
+
+One reply video got 6,000 likes and 100,000 views with a hard sales pitch.
+
+
+
+---
+
+## Pending Enhancement (ALPHA15135, Score: 20)
+
+**Source:** @SimonasDip (explicit-handles) | **URL:** https://x.com/SimonasDip/status/2028467439084687734
+**Added:** 2026-03-05T06:24:45-05:00
+
+scaled 300+ tiktok accounts to hit us audiences without getting banned
+
+the secret isn't content
+
+it's making tiktok think your account is real before you post anything
+
+here are 3 automated methods that actually work
+
+method 1: native auto scroll
+
+some accounts get this by
+

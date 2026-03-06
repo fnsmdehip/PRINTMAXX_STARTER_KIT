@@ -31,7 +31,7 @@ console = Console()
 
 # Paths
 TASK_DIR = Path("/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks")
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 ALPHA_STAGING = PROJECT_DIR / "LEDGER/ALPHA_STAGING.csv"
 RALPH_DIR = PROJECT_DIR / "ralph/loops/mega"
 

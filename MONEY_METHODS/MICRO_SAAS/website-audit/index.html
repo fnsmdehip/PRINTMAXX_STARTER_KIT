@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Audit Tool</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6c5ce7">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f1117;--surface:#1a1d27;--surface2:#242835;--border:#2d3140;
+  --text:#e4e6ef;--text-dim:#8b8fa3;--accent:#6c5ce7;--accent-light:#a29bfe;
+  --green:#00b894;--yellow:#fdcb6e;--red:#e17055;--orange:#f39c12;
+  --radius:10px;--shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:24px 16px}
+header{text-align:center;padding:48px 0 32px}
+header h1{font-size:28px;font-weight:700;letter-spacing:-0.5px}
+header p{color:var(--text-dim);margin-top:8px;font-size:15px}
+.input-group{display:flex;gap:12px;margin:32px 0}
+.input-group input{flex:1;padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);font-size:16px;outline:none;transition:border-color .2s}
+.input-group input:focus{border-color:var(--accent)}
+.input-group input::placeholder{color:var(--text-dim)}
+button{padding:14px 28px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-size:15px;font-weight:600;cursor:pointer;transition:opacity .2s,transform .1s}
+button:hover{opacity:.9}
+button:active{transform:scale(.97)}
+button:disabled{opacity:.5;cursor:not-allowed}
+.scanning{text-align:center;padding:48px 0}
+.scanning .spinner{width:48px;height:48px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;margin:0 auto 16px;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scanning p{color:var(--text-dim);font-size:14px}
+.report{margin-top:32px}
+.grade-card{background:var(--surface);border-radius:16px;padding:32px;text-align:center;margin-bottom:24px;box-shadow:var(--shadow)}
+.grade-letter{font-size:72px;font-weight:800;line-height:1}
+.grade-label{font-size:14px;color:var(--text-dim);margin-top:4px}
+.score-bar{margin-top:16px;height:8px;background:var(--surface2);border-radius:4px;overflow:hidden}
+.score-fill{height:100%;border-radius:4px;transition:width .8s ease}
+.checks-grid{display:grid;gap:12px}
+.check-item{background:var(--surface);border-radius:var(--radius);padding:18px 20px;display:flex;align-items:flex-start;gap:14px;border:1px solid var(--border)}
+.check-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px}
+.check-icon.pass{background:rgba(0,184,148,.15);color:var(--green)}
+.check-icon.warn{background:rgba(253,203,110,.15);color:var(--yellow)}
+.check-icon.fail{background:rgba(225,112,85,.15);color:var(--red)}
+.check-details h3{font-size:15px;font-weight:600;margin-bottom:2px}
+.check-details p{font-size:13px;color:var(--text-dim);line-height:1.5}
+.check-details .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin-top:6px;font-weight:600}
+.tag.seo{background:rgba(108,92,231,.15);color:var(--accent-light)}
+.tag.perf{background:rgba(0,184,148,.15);color:var(--green)}
+.tag.a11y{background:rgba(243,156,18,.15);color:var(--orange)}
+.tag.security{background:rgba(225,112,85,.15);color:var(--red)}
+.cta-section{background:linear-gradient(135deg,#6c5ce7 0%,#a29bfe 100%);border-radius:16px;padding:36px;text-align:center;margin-top:32px}
+.cta-section h2{font-size:22px;font-weight:700;color:#fff;margin-bottom:8px}
+.cta-section p{color:rgba(255,255,255,.8);margin-bottom:20px;font-size:14px}
+.cta-section .email-group{display:flex;gap:10px;max-width:400px;margin:0 auto}
+.cta-section input{flex:1;padding:12px 16px;border-radius:8px;border:none;font-size:14px;outline:none}
+.cta-section button{background:#fff;color:var(--accent);padding:12px 20px;font-size:14px}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--green);color:#fff;padding:14px 24px;border-radius:var(--radius);font-size:14px;font-weight:600;transform:translateY(100px);opacity:0;transition:all .3s ease;z-index:100}
+.toast.show{transform:translateY(0);opacity:1}
+.note{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-top:24px;font-size:13px;color:var(--text-dim);line-height:1.6;text-align:center}
+@media(max-width:600px){
+  .input-group{flex-direction:column}
+  .input-group button{width:100%}
+  .cta-section .email-group{flex-direction:column}
+  header h1{font-size:22px}
+  .grade-letter{font-size:56px}
+}
+</style>
+</head>
+<body>
+<div class="container" id="app"></div>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+  'use strict';
+
+  var app = document.getElementById('app');
+  var toastEl = document.getElementById('toast');
+
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    setTimeout(function(){ toastEl.classList.remove('show'); }, 3000);
+  }
+
+  function clearEl(parent) {
+    while (parent.firstChild) parent.removeChild(parent.firstChild);
+  }
+
+  function el(tag, attrs, children) {
+    var e = document.createElement(tag);
+    if (attrs) {
+      Object.keys(attrs).forEach(function(k) {
+        if (k === 'className') e.className = attrs[k];
+        else if (k.indexOf('on') === 0) e.addEventListener(k.slice(2).toLowerCase(), attrs[k]);
+        else if (k === 'htmlFor') e.setAttribute('for', attrs[k]);
+        else e.setAttribute(k, attrs[k]);
+      });
+    }
+    if (typeof children === 'string') e.textContent = children;
+    else if (Array.isArray(children)) children.forEach(function(c){ if(c) e.appendChild(c); });
+    return e;
+  }
+
+  function renderHome() {
+    clearEl(app);
+    var header = el('header', null, [
+      el('h1', null, 'Website Audit Tool'),
+      el('p', null, 'Enter any URL to get an instant SEO, performance, and accessibility report')
+    ]);
+
+    var urlInput = el('input', { type: 'text', placeholder: 'https://example.com', id: 'urlInput' });
+    var scanBtn = el('button', { onClick: startScan }, 'Run Audit');
+    var inputGroup = el('div', { className: 'input-group' }, [urlInput, scanBtn]);
+
+    var note = el('div', { className: 'note' },
+      'This tool performs client-side analysis by fetching the target URL through a CORS proxy. ' +
+      'Results are estimates based on the HTML response and may differ from server-side tools.');
+
+    app.appendChild(header);
+    app.appendChild(inputGroup);
+    app.appendChild(note);
+
+    urlInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') startScan();
+    });
+  }
+
+  function startScan() {
+    var raw = document.getElementById('urlInput').value.trim();
+    if (!raw) return;
+    if (raw.indexOf('http') !== 0) raw = 'https://' + raw;
+
+    clearEl(app);
+    var spinner = el('div', { className: 'spinner' });
+    var msg = el('p', null, 'Analyzing ' + raw + '...');
+    var scanning = el('div', { className: 'scanning' }, [spinner, msg]);
+    app.appendChild(scanning);
+
+    fetchAndAnalyze(raw);
+  }
+
+  function fetchAndAnalyze(url) {
+    var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+
+    fetch(proxyUrl, { signal: AbortSignal.timeout(15000) })
+      .then(function(res) {
+        if (!res.ok) throw new Error('Fetch failed');
+        return res.text();
+      })
+      .then(function(html) {
+        var checks = analyzeHTML(html, url);
+        renderReport(url, checks);
+      })
+      .catch(function() {
+        var checks = analyzeURLOnly(url);
+        renderReport(url, checks);
+      });
+  }
+
+  function analyzeHTML(html, url) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(html, 'text/html');
+    var checks = [];
+
+    var isHttps = url.indexOf('https://') === 0;
+    checks.push({
+      name: 'HTTPS Enabled', pass: isHttps, status: isHttps ? 'pass' : 'fail',
+      detail: isHttps ? 'Site is served over a secure HTTPS connection.' : 'Site is not using HTTPS. This hurts SEO and user trust.',
+      tag: 'security'
+    });
+
+    var title = doc.querySelector('title');
+    var hasTitle = title && title.textContent.trim().length > 0;
+    var titleLen = hasTitle ? title.textContent.trim().length : 0;
+    var titleGood = hasTitle && titleLen >= 10 && titleLen <= 70;
+    checks.push({
+      name: 'Title Tag', pass: titleGood,
+      status: titleGood ? 'pass' : (hasTitle ? 'warn' : 'fail'),
+      detail: !hasTitle ? 'No title tag found. Every page needs a unique, descriptive title.' :
+        (titleGood ? 'Title tag present (' + titleLen + ' chars). Good length for search results.' :
+        'Title is ' + titleLen + ' characters. Ideal length is 10-70 characters.'),
+      tag: 'seo'
+    });
+
+    var metaDesc = doc.querySelector('meta[name="description"]');
+    var hasDesc = metaDesc && metaDesc.getAttribute('content') && metaDesc.getAttribute('content').trim().length > 0;
+    var descLen = hasDesc ? metaDesc.getAttribute('content').trim().length : 0;
+    var descGood = hasDesc && descLen >= 50 && descLen <= 160;
+    checks.push({
+      name: 'Meta Description', pass: descGood,
+      status: descGood ? 'pass' : (hasDesc ? 'warn' : 'fail'),
+      detail: !hasDesc ? 'No meta description found. This snippet appears in search results.' :
+        (descGood ? 'Meta description present (' + descLen + ' chars). Good length.' :
+        'Meta description is ' + descLen + ' characters. Aim for 50-160 characters.'),
+      tag: 'seo'
+    });
+
+    var viewport = doc.querySelector('meta[name="viewport"]');
+    checks.push({
+      name: 'Mobile Viewport', pass: !!viewport,
+      status: viewport ? 'pass' : 'fail',
+      detail: viewport ? 'Viewport meta tag is set. Site is configured for mobile devices.' :
+        'No viewport meta tag found. Site may not render properly on mobile devices.',
+      tag: 'perf'
+    });
+
+    var h1s = doc.querySelectorAll('h1');
+    var h1Good = h1s.length === 1;
+    checks.push({
+      name: 'H1 Heading', pass: h1Good,
+      status: h1Good ? 'pass' : (h1s.length === 0 ? 'fail' : 'warn'),
+      detail: h1s.length === 0 ? 'No H1 heading found. Each page should have exactly one H1.' :
+        (h1Good ? 'Exactly one H1 heading found. Good heading structure.' :
+        h1s.length + ' H1 headings found. Best practice is to have exactly one H1 per page.'),
+      tag: 'seo'
+    });
+
+    var headings = doc.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    var hierarchyOk = true;
+    var prevLevel = 0;
+    for (var i = 0; i < headings.length; i++) {
+      var level = parseInt(headings[i].tagName.charAt(1));
+      if (level > prevLevel + 1 && prevLevel > 0) { hierarchyOk = false; break; }
+      prevLevel = level;
+    }
+    checks.push({
+      name: 'Heading Hierarchy', pass: hierarchyOk,
+      status: hierarchyOk ? 'pass' : 'warn',
+      detail: hierarchyOk ? 'Heading levels follow a logical order (no skipped levels).' :
+        'Heading levels skip ranks (e.g., H1 to H3). Use a sequential hierarchy for better SEO.',
+      tag: 'seo'
+    });
+
+    var imgs = doc.querySelectorAll('img');
+    var imgsNoAlt = 0;
+    for (var j = 0; j < imgs.length; j++) {
+      var alt = imgs[j].getAttribute('alt');
+      if (alt === null || alt.trim() === '') imgsNoAlt++;
+    }
+    var imgGood = imgs.length === 0 || imgsNoAlt === 0;
+    checks.push({
+      name: 'Image Alt Text', pass: imgGood,
+      status: imgGood ? 'pass' : (imgsNoAlt > imgs.length / 2 ? 'fail' : 'warn'),
+      detail: imgs.length === 0 ? 'No images found on the page.' :
+        (imgGood ? 'All ' + imgs.length + ' images have alt attributes.' :
+        imgsNoAlt + ' of ' + imgs.length + ' images are missing alt text. This hurts accessibility and SEO.'),
+      tag: 'a11y'
+    });
+
+    var links = doc.querySelectorAll('a[href]');
+    var extLinks = 0; var intLinks = 0; var nofollow = 0;
+    for (var k = 0; k < links.length; k++) {
+      var href = links[k].getAttribute('href') || '';
+      if (href.indexOf('http') === 0) extLinks++; else intLinks++;
+      if ((links[k].getAttribute('rel') || '').indexOf('nofollow') > -1) nofollow++;
+    }
+    var linkDetail = links.length + ' links found (' + intLinks + ' internal, ' + extLinks + ' external).';
+    if (nofollow > 0) linkDetail += ' ' + nofollow + ' nofollow links.';
+    checks.push({
+      name: 'Link Structure', pass: links.length > 0,
+      status: links.length > 3 ? 'pass' : (links.length > 0 ? 'warn' : 'fail'),
+      detail: linkDetail, tag: 'seo'
+    });
+
+    var sizeKB = Math.round(html.length / 1024);
+    var sizeOk = sizeKB < 200;
+    checks.push({
+      name: 'Page Size', pass: sizeOk,
+      status: sizeOk ? 'pass' : (sizeKB < 500 ? 'warn' : 'fail'),
+      detail: 'HTML document is approximately ' + sizeKB + 'KB. ' +
+        (sizeOk ? 'Within recommended limits.' : 'Consider reducing page size for faster load times.'),
+      tag: 'perf'
+    });
+
+    var ogTitle = doc.querySelector('meta[property="og:title"]');
+    var ogDesc = doc.querySelector('meta[property="og:description"]');
+    var ogImg = doc.querySelector('meta[property="og:image"]');
+    var ogCount = (ogTitle ? 1 : 0) + (ogDesc ? 1 : 0) + (ogImg ? 1 : 0);
+    checks.push({
+      name: 'Open Graph Tags', pass: ogCount === 3,
+      status: ogCount === 3 ? 'pass' : (ogCount > 0 ? 'warn' : 'fail'),
+      detail: ogCount === 3 ? 'All essential Open Graph tags (title, description, image) are present.' :
+        ogCount + ' of 3 Open Graph tags found. Add og:title, og:description, and og:image for better social sharing.',
+      tag: 'seo'
+    });
+
+    var htmlEl = doc.querySelector('html');
+    var hasLang = htmlEl && htmlEl.getAttribute('lang');
+    checks.push({
+      name: 'Language Attribute', pass: !!hasLang,
+      status: hasLang ? 'pass' : 'warn',
+      detail: hasLang ? 'HTML lang attribute is set to "' + htmlEl.getAttribute('lang') + '".' :
+        'No lang attribute on the HTML element. This helps search engines and screen readers.',
+      tag: 'a11y'
+    });
+
+    var canonical = doc.querySelector('link[rel="canonical"]');
+    checks.push({
+      name: 'Canonical URL', pass: !!canonical,
+      status: canonical ? 'pass' : 'warn',
+      detail: canonical ? 'Canonical URL is set. This prevents duplicate content issues.' :
+        'No canonical URL found. Consider adding one to prevent duplicate content penalties.',
+      tag: 'seo'
+    });
+
+    return checks;
+  }
+
+  function analyzeURLOnly(url) {
+    var isHttps = url.indexOf('https://') === 0;
+    return [
+      { name: 'HTTPS Enabled', pass: isHttps, status: isHttps ? 'pass' : 'fail',
+        detail: isHttps ? 'Site uses HTTPS.' : 'Site does not use HTTPS.', tag: 'security' },
+      { name: 'Page Fetch', pass: false, status: 'fail',
+        detail: 'Could not fetch the page for analysis. The site may block automated requests or the URL may be invalid.', tag: 'perf' },
+      { name: 'Note', pass: false, status: 'warn',
+        detail: 'Only URL-based checks could be performed. Enter your email below for a manual review.', tag: 'seo' }
+    ];
+  }
+
+  function calcGrade(checks) {
+    var total = checks.length;
+    var passed = 0;
+    checks.forEach(function(c) {
+      if (c.status === 'pass') passed += 1;
+      else if (c.status === 'warn') passed += 0.5;
+    });
+    var pct = Math.round((passed / total) * 100);
+    var letter = pct >= 90 ? 'A' : pct >= 75 ? 'B' : pct >= 60 ? 'C' : pct >= 40 ? 'D' : 'F';
+    return { pct: pct, letter: letter };
+  }
+
+  function gradeColor(letter) {
+    var map = { A: '#00b894', B: '#00cec9', C: '#fdcb6e', D: '#e17055', F: '#d63031' };
+    return map[letter] || '#6c5ce7';
+  }
+
+  function renderReport(url, checks) {
+    clearEl(app);
+    var grade = calcGrade(checks);
+    var color = gradeColor(grade.letter);
+
+    var backBtn = el('button', { onClick: renderHome, style: 'background:var(--surface);color:var(--text);margin-bottom:24px;font-size:13px;padding:10px 18px;border:1px solid var(--border)' }, 'New Audit');
+
+    var letterEl = el('div', { className: 'grade-letter', style: 'color:' + color }, grade.letter);
+    var labelEl = el('div', { className: 'grade-label' }, 'Overall Score: ' + grade.pct + '/100');
+    var barFill = el('div', { className: 'score-fill', style: 'width:0%;background:' + color });
+    var bar = el('div', { className: 'score-bar' }, [barFill]);
+    var urlLabel = el('div', { style: 'color:var(--text-dim);font-size:13px;margin-top:12px;word-break:break-all' }, url);
+    var gradeCard = el('div', { className: 'grade-card' }, [letterEl, labelEl, bar, urlLabel]);
+
+    setTimeout(function(){ barFill.style.width = grade.pct + '%'; }, 100);
+
+    var grid = el('div', { className: 'checks-grid' });
+    checks.forEach(function(c) {
+      var iconText = c.status === 'pass' ? '\u2713' : c.status === 'warn' ? '!' : '\u2717';
+      var icon = el('div', { className: 'check-icon ' + c.status }, iconText);
+      var tagEl = el('span', { className: 'tag ' + c.tag }, c.tag.toUpperCase());
+      var details = el('div', { className: 'check-details' }, [
+        el('h3', null, c.name),
+        el('p', null, c.detail),
+        tagEl
+      ]);
+      grid.appendChild(el('div', { className: 'check-item' }, [icon, details]));
+    });
+
+    var emailInput = el('input', { type: 'email', placeholder: 'you@company.com', id: 'ctaEmail' });
+    var ctaBtn = el('button', { onClick: function() {
+      var em = document.getElementById('ctaEmail').value.trim();
+      if (!em || em.indexOf('@') < 1) { showToast('Please enter a valid email'); return; }
+      var leads = JSON.parse(localStorage.getItem('sa_leads') || '[]');
+      leads.push({ email: em, url: url, grade: grade.letter, date: new Date().toISOString() });
+      localStorage.setItem('sa_leads', JSON.stringify(leads));
+      showToast('Report will be sent to ' + em);
+      document.getElementById('ctaEmail').value = '';
+    }}, 'Get Full Report');
+    var emailGroup = el('div', { className: 'email-group' }, [emailInput, ctaBtn]);
+    var ctaSection = el('div', { className: 'cta-section' }, [
+      el('h2', null, 'Get Your Detailed Report'),
+      el('p', null, 'Receive a comprehensive PDF report with actionable recommendations and priority fixes.'),
+      emailGroup
+    ]);
+
+    var report = el('div', { className: 'report' }, [gradeCard, grid, ctaSection]);
+    app.appendChild(backBtn);
+    app.appendChild(report);
+  }
+
+  renderHome();
+})();
+</script>
+</body>
+</html>

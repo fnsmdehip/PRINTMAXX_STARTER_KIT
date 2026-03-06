@@ -12,7 +12,7 @@ from pathlib import Path
 from datetime import datetime
 from playwright.async_api import async_playwright
 
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 ALPHA_STAGING = PROJECT_DIR / "LEDGER" / "ALPHA_STAGING.csv"
 
 async def scrape_caiden_cdp():

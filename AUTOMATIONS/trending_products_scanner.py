@@ -4,14 +4,24 @@ Trending Products Scanner
 Finds trending products across Amazon for arbitrage opportunities.
 """
 
-import requests
-from bs4 import BeautifulSoup
 import csv
+import sys
 import time
 import random
 import argparse
 from datetime import datetime
+from pathlib import Path
 from urllib.parse import quote_plus
+
+try:
+    import requests
+    from bs4 import BeautifulSoup
+except ImportError as e:
+    print(f"ERROR: Missing dependency: {e}")
+    print("Install with: pip3 install requests beautifulsoup4")
+    sys.exit(1)
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -347,7 +357,7 @@ def main():
     parser.add_argument('--source', default='all',
                         choices=['all', 'movers', 'bestsellers', 'wished'],
                         help='Which trending list to scrape')
-    parser.add_argument('--output', default='trending_products.csv',
+    parser.add_argument('--output', default=str(BASE_DIR / 'LEDGER' / 'trending_products.csv'),
                         help='Output CSV filename')
 
     args = parser.parse_args()

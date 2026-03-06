@@ -36,7 +36,7 @@ from collections import defaultdict
 import statistics
 
 # Paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 FINANCIALS_DIR = PROJECT_DIR / "FINANCIALS"
 AUTOMATIONS_DIR = PROJECT_DIR / "AUTOMATIONS"

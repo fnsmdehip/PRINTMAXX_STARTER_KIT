@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <rect width="400" height="100" fill="#000000"/>
+  <rect x="15" y="15" width="370" height="70" fill="none" stroke="#E60012" stroke-width="3"/>
+  <text x="200" y="62" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">REP</text>
+  <text x="305" y="62" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="44" font-weight="900" fill="#E60012" text-anchor="middle" letter-spacing="4">SCHEME</text>
+  <rect x="15" y="15" width="6" height="70" fill="#E60012"/>
+  <rect x="379" y="15" width="6" height="70" fill="#E60012"/>
+</svg>

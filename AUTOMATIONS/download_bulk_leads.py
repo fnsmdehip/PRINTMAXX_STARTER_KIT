@@ -29,9 +29,9 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 
-PROJECT_ROOT = "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt"
+PROJECT_ROOT = str(Path(__file__).resolve().parent.parent)
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "AUTOMATIONS", "leads", "bulk")
-PYTHON = "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3"
+PYTHON = sys.executable  # Use current Python interpreter instead of hardcoded path
 
 # Target business categories (Overture Maps category names)
 TARGET_CATEGORIES = {

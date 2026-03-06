@@ -1,0 +1,14 @@
+[
+  {
+    "id": "run_20260305_023418",
+    "created": "2026-03-05T02:34:18.104007",
+    "command": "cd /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt && python3 AUTOMATIONS/alpha_auto_processor.py --process-new",
+    "description": "278 alpha entries pending review",
+    "schedule": "once",
+    "next_run": "2026-03-05T02:34:18.104009",
+    "enabled": true,
+    "run_count": 0,
+    "last_status": null,
+    "source": "perpetual"
+  }
+]

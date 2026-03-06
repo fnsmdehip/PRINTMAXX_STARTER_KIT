@@ -1,0 +1,10 @@
+{
+  "name": "ROI Calculator",
+  "short_name": "ROICalc",
+  "description": "See how much revenue your bad website is costing you",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#10b981",
+  "icons": []
+}

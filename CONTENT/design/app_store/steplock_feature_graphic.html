@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>StepLock — Feature Graphic 1024x500</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #111; }
+  .graphic {
+    width: 1024px; height: 500px;
+    background: linear-gradient(135deg, #0D47A1 0%, #01579B 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; padding: 0 80px;
+  }
+  .motion-lines {
+    position: absolute; right: 300px; top: 50%; transform: translateY(-50%);
+  }
+  .motion-line {
+    width: 80px; height: 3px; background: rgba(0,229,255,0.15);
+    margin: 12px 0; border-radius: 2px;
+  }
+  .motion-line:nth-child(2) { width: 120px; opacity: 0.8; }
+  .motion-line:nth-child(3) { width: 60px; }
+  .left { position: relative; z-index: 1; flex: 1; }
+  .left h1 {
+    font-family: 'Oswald', sans-serif; font-size: 60px; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 4px; margin-bottom: 16px;
+  }
+  .left h1 span { color: #00E5FF; }
+  .left p { font-family: 'Inter', sans-serif; font-size: 20px; color: rgba(255,255,255,0.6); max-width: 380px; }
+  .right { position: relative; z-index: 1; }
+  .icon-preview {
+    width: 160px; height: 160px; border-radius: 36px;
+    background: linear-gradient(135deg, #0D47A1, #1565C0);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    font-size: 60px; color: #00E5FF;
+  }
+  .badge {
+    position: absolute; bottom: 40px; right: 80px;
+    font-family: 'Inter', sans-serif; font-size: 14px;
+    color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="graphic">
+  <div class="motion-lines">
+    <div class="motion-line"></div>
+    <div class="motion-line"></div>
+    <div class="motion-line"></div>
+  </div>
+  <div class="left">
+    <h1>Step<span>Lock</span></h1>
+    <p>Hit your step goal before you unlock your phone. Walk more, scroll less.</p>
+  </div>
+  <div class="right">
+    <div class="icon-preview">&#128095;</div>
+  </div>
+  <div class="badge">PRINTMAXX</div>
+</div>
+</body>
+</html>

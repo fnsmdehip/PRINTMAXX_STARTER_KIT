@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLASH DEAL — 73% Off Today Only</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; }
+
+    /* URGENCY BAR */
+    .urgency-bar {
+      background: #ff3b30;
+      text-align: center;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.85; } }
+
+    /* HERO */
+    .hero {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: #ff3b30;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 42px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .hero h1 span { color: #ff9500; }
+    .hero p {
+      font-size: 16px;
+      color: #999;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* PRODUCT IMAGE PLACEHOLDER */
+    .product-img {
+      width: 100%;
+      max-width: 420px;
+      height: 300px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444;
+      font-size: 13px;
+    }
+
+    /* COUNTDOWN */
+    .countdown-wrap {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .countdown-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .countdown {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .countdown-unit {
+      text-align: center;
+      min-width: 60px;
+    }
+    .countdown-num {
+      font-size: 36px;
+      font-weight: 800;
+      color: #ff3b30;
+      line-height: 1;
+    }
+    .countdown-unit span {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #555;
+    }
+    .countdown-sep { font-size: 30px; color: #333; padding-top: 4px; }
+
+    /* PRICING */
+    .pricing {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .price-original {
+      font-size: 20px;
+      color: #444;
+      text-decoration: line-through;
+    }
+    .price-sale {
+      font-size: 42px;
+      font-weight: 800;
+      color: #ff9500;
+    }
+    .discount-tag {
+      background: #ff3b30;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .savings-note {
+      font-size: 13px;
+      color: #666;
+    }
+    .savings-note strong { color: #30d158; }
+
+    /* SOCIAL PROOF BAR */
+    .social-bar {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .social-pill {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .social-pill .icon { font-size: 14px; }
+
+    /* CTA BUTTON */
+    .cta-wrap { margin-bottom: 12px; }
+    .cta-btn {
+      display: block;
+      width: 100%;
+      padding: 18px 24px;
+      background: #ff9500;
+      color: #000;
+      font-size: 18px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.1s, background 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .cta-btn:hover { background: #e08800; transform: translateY(-1px); }
+    .cta-btn:active { transform: translateY(0); }
+    .cta-sub {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    /* STOCK COUNTER */
+    .stock-bar-wrap { margin-bottom: 24px; }
+    .stock-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .stock-label .urgent { color: #ff3b30; font-weight: 600; }
+    .stock-bar {
+      height: 8px;
+      background: #1a1a1a;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .stock-fill {
+      height: 100%;
+      width: 73%;
+      background: linear-gradient(90deg, #ff9500, #ff3b30);
+      border-radius: 4px;
+    }
+
+    /* BENEFITS */
+    .benefits { margin-bottom: 32px; }
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .benefit:last-child { border-bottom: none; }
+    .benefit-icon {
+      width: 36px;
+      height: 36px;
+      background: #1a1a1a;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .benefit-text h3 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+    .benefit-text p { font-size: 13px; color: #666; line-height: 1.4; }
+
+    /* TESTIMONIALS */
+    .testimonials { margin-bottom: 32px; }
+    .testimonials h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .testimonial {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .stars { color: #ff9500; font-size: 14px; margin-bottom: 8px; }
+    .testimonial p { font-size: 14px; color: #ccc; line-height: 1.5; margin-bottom: 8px; }
+    .reviewer { font-size: 12px; color: #555; }
+    .reviewer strong { color: #888; }
+
+    /* GUARANTEE */
+    .guarantee {
+      background: #0d1a0d;
+      border: 1px solid #1a331a;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .guarantee-icon { font-size: 36px; margin-bottom: 8px; }
+    .guarantee h3 { font-size: 16px; font-weight: 700; color: #30d158; margin-bottom: 6px; }
+    .guarantee p { font-size: 13px; color: #666; line-height: 1.5; }
+
+    /* FAQ */
+    .faq { margin-bottom: 32px; }
+    .faq h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .faq-item { border-bottom: 1px solid #1a1a1a; padding: 14px 0; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; cursor: pointer; }
+    .faq-a { font-size: 13px; color: #666; line-height: 1.5; }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 24px 20px 40px;
+      font-size: 11px;
+      color: #333;
+      border-top: 1px solid #1a1a1a;
+      margin-top: 32px;
+    }
+    .footer a { color: #444; text-decoration: none; }
+    .footer a:hover { color: #666; }
+
+    /* STICKY MOBILE CTA */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0a0a0a;
+      border-top: 1px solid #1a1a1a;
+      padding: 12px 20px;
+      z-index: 100;
+    }
+    @media (max-width: 600px) { .sticky-cta { display: block; } }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero { padding: 20px 16px 16px; }
+      .countdown-num { font-size: 28px; }
+      .price-sale { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar">
+    FLASH DEAL ENDS IN <span id="bar-timer">03:47:22</span> — ONLY 7 LEFT AT THIS PRICE
+  </div>
+
+  <div class="hero">
+
+    <!-- BADGE -->
+    <div class="badge">Limited Time Offer</div>
+
+    <!-- HEADLINE — CUSTOMIZE THIS -->
+    <h1>The <span>[PRODUCT NAME]</span> That<br>Sold Out 3 Times Last Month</h1>
+    <p>[One sentence: what it does + who it's for. Specific. No fluff. Max 20 words.]<br>Today only: 73% off retail — ships free, arrives in 5-7 days.</p>
+
+    <!-- PRODUCT IMAGE -->
+    <div class="product-img">
+      [Replace with &lt;img src="product.jpg" alt="[Product name]" style="width:100%;height:100%;object-fit:contain;border-radius:8px"&gt;]
+    </div>
+
+    <!-- COUNTDOWN TIMER -->
+    <div class="countdown-wrap">
+      <div class="countdown-label">This price expires in</div>
+      <div class="countdown">
+        <div class="countdown-unit">
+          <div class="countdown-num" id="hours">03</div>
+          <span>hours</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-num" id="minutes">47</div>
+          <span>minutes</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-num" id="seconds">22</div>
+          <span>seconds</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="pricing">
+      <div class="price-row">
+        <span class="price-original">$[RETAIL]</span>
+        <span class="price-sale">$[FLASH PRICE]</span>
+        <span class="discount-tag">-73%</span>
+      </div>
+      <div class="savings-note">You save <strong>$[SAVINGS AMOUNT]</strong> today</div>
+    </div>
+
+    <!-- SOCIAL PROOF BAR -->
+    <div class="social-bar">
+      <div class="social-pill"><span class="icon">⭐</span> 4.8/5 (2,341 reviews)</div>
+      <div class="social-pill"><span class="icon">📦</span> 14,000+ sold</div>
+      <div class="social-pill"><span class="icon">🛡</span> 30-day guarantee</div>
+    </div>
+
+    <!-- STOCK COUNTER -->
+    <div class="stock-bar-wrap">
+      <div class="stock-label">
+        <span>73% claimed</span>
+        <span class="urgent">Only 7 units left</span>
+      </div>
+      <div class="stock-bar"><div class="stock-fill"></div></div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-wrap">
+      <a href="[CHECKOUT_URL]" class="cta-btn">Claim My [DISCOUNT]% Discount →</a>
+      <div class="cta-sub">Secure checkout · Free shipping · Ships in 24 hours</div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon">[ICON]</div>
+        <div class="benefit-text">
+          <h3>[Benefit 1 — specific and measurable]</h3>
+          <p>[Supporting detail. One sentence. Real claim.]</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">[ICON]</div>
+        <div class="benefit-text">
+          <h3>[Benefit 2]</h3>
+          <p>[Supporting detail.]</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">[ICON]</div>
+        <div class="benefit-text">
+          <h3>[Benefit 3]</h3>
+          <p>[Supporting detail.]</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="testimonials">
+      <h2>What buyers are saying</h2>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"[Specific testimonial — real outcome, real number if possible. 2-3 sentences max.]"</p>
+        <div class="reviewer"><strong>[First name, Last initial]</strong> · Verified buyer · [City, State]</div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"[Second testimonial. Different angle from first one. Problem → solution format.]"</p>
+        <div class="reviewer"><strong>[First name, Last initial]</strong> · Verified buyer · [City, State]</div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"[Third testimonial. Focus on value — mentions the price / deal angle.]"</p>
+        <div class="reviewer"><strong>[First name, Last initial]</strong> · Verified buyer · [City, State]</div>
+      </div>
+    </div>
+
+    <!-- SECOND CTA -->
+    <div class="cta-wrap" style="margin-bottom:24px">
+      <a href="[CHECKOUT_URL]" class="cta-btn">Get [PRODUCT NAME] at [DISCOUNT]% Off →</a>
+      <div class="cta-sub">Price goes back to $[RETAIL] when timer hits zero</div>
+    </div>
+
+    <!-- GUARANTEE -->
+    <div class="guarantee">
+      <div class="guarantee-icon">🛡</div>
+      <h3>30-Day Money-Back Guarantee</h3>
+      <p>Try it for 30 days. If you're not completely happy, we'll refund every penny — no questions, no hassle. You risk nothing.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h2>Quick answers</h2>
+      <div class="faq-item">
+        <div class="faq-q">When does this price expire?</div>
+        <div class="faq-a">The flash sale price is only valid for the time shown on the countdown timer above. Once it hits zero, the price returns to $[RETAIL]. We can't extend it for late orders.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How fast does it ship?</div>
+        <div class="faq-a">Orders placed today ship within 24 hours and arrive in 5-7 business days via standard shipping. Expedited options available at checkout.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if it doesn't work for me?</div>
+        <div class="faq-a">We offer a full 30-day refund. Email [support email] and we'll process it same day. No restocking fees, no return shipping required.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">[Specific product objection]</div>
+        <div class="faq-a">[Direct answer to that objection. Don't hedge.]</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2026 [Company Name] · <a href="#">Privacy Policy</a> · <a href="#">Terms</a> · <a href="#">Contact</a></p>
+    <p style="margin-top:6px">*Sale price valid through timer expiration only. Limited quantities available. Results may vary.</p>
+  </div>
+
+  <!-- STICKY MOBILE CTA (shows on mobile only) -->
+  <div class="sticky-cta">
+    <a href="[CHECKOUT_URL]" class="cta-btn" style="padding:14px;font-size:16px">Claim [DISCOUNT]% Off — $[FLASH PRICE] →</a>
+  </div>
+
+  <script>
+    // COUNTDOWN TIMER
+    // Set your target deadline here (24 hours from a fixed point, or rolling per-visitor)
+    // For true scarcity: use fixed deadline (better conversion)
+    // For rolling: localStorage-based (expires 4 hours after first visit)
+
+    function getDeadline() {
+      const stored = localStorage.getItem('flash_deadline');
+      if (stored) return parseInt(stored);
+      const deadline = Date.now() + (4 * 60 * 60 * 1000); // 4 hours from now
+      localStorage.setItem('flash_deadline', deadline);
+      return deadline;
+    }
+
+    function updateTimer() {
+      const deadline = getDeadline();
+      const remaining = deadline - Date.now();
+
+      if (remaining <= 0) {
+        // Timer expired — show expired state
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        document.getElementById('bar-timer').textContent = 'EXPIRED';
+        // Optional: redirect to full-price page or update CTA
+        return;
+      }
+
+      const h = Math.floor(remaining / 3600000);
+      const m = Math.floor((remaining % 3600000) / 60000);
+      const s = Math.floor((remaining % 60000) / 1000);
+
+      const pad = n => String(n).padStart(2, '0');
+      document.getElementById('hours').textContent = pad(h);
+      document.getElementById('minutes').textContent = pad(m);
+      document.getElementById('seconds').textContent = pad(s);
+      document.getElementById('bar-timer').textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+
+    // STOCK COUNTER (simulated depletion)
+    // Optional: reduce stock count every N minutes to add urgency
+    const baseStock = 7;
+    const stockEl = document.querySelector('.stock-label .urgent');
+    // Uncomment to enable slow depletion:
+    // setInterval(() => {
+    //   const current = parseInt(stockEl.textContent);
+    //   if (current > 1) stockEl.textContent = `Only ${current - 1} units left`;
+    // }, 600000); // every 10 minutes
+
+    // EXIT INTENT (desktop only)
+    let exitShown = false;
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY < 5 && !exitShown) {
+        exitShown = true;
+        // Simple alert version — replace with modal for better UX
+        // Could show: "Wait! Get an extra 5% off with code STAY5"
+        console.log('Exit intent triggered — add popup here');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+<!--
+CUSTOMIZATION GUIDE:
+===================
+1. Replace all [PLACEHOLDERS] with real product data
+2. Update countdown timer endpoint (localStorage rolling = per-visitor, date-based = site-wide)
+3. Testimonials: get real ones from early buyers / TikTok comments
+4. The stock counter: keep it honest — if you have 50 units, start at 50. Fake scarcity = chargebacks
+5. Checkout URL: Shopify product page, TikTok Shop link, or direct Stripe Payment Link
+6. FTC compliance: "Results may vary" footer already included
+
+CONVERSION OPTIMIZATION NOTES:
+- Countdown timer + stock bar together: +15-25% CVR in split tests
+- Free shipping messaging: reduces cart abandonment 20-30%
+- 3 testimonials minimum: below this, buyers don't trust
+- Guarantee: 30-day guarantee increases conversions more than it increases returns
+- Mobile sticky CTA: critical — 60%+ of flash sale traffic is mobile
+-->

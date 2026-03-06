@@ -1,0 +1,212 @@
+[
+  {
+    "name": "prayerlock",
+    "niche": "faith",
+    "timestamp": "2026-03-05T02:35:14.478536",
+    "checks": {
+      "app_store": {
+        "available": true,
+        "similar_count": 10,
+        "exact_match": false,
+        "competitors": [
+          "prayer lock: christian focus",
+          "prayer lock: muslim focus",
+          "Pray Screen Time - Bible Focus",
+          "PrayLock : Prayer Screen Time",
+          "Bible Mode: Reduce Screen Time"
+        ]
+      },
+      "domains": {
+        "prayerlock.com": "TAKEN",
+        "prayerlock.app": "LIKELY_AVAILABLE",
+        "prayerlock.io": "LIKELY_AVAILABLE"
+      }
+    },
+    "scores": {
+      "app_store_available": 100,
+      "domain_available": 100,
+      "name_length": 70,
+      "pronounceable": 100,
+      "insider_authentic": 90,
+      "keyword_relevance": 90,
+      "unique_searchable": 85
+    },
+    "composite_score": 93,
+    "verdict": "STRONG"
+  },
+  {
+    "name": "dusk",
+    "niche": "sleep",
+    "timestamp": "2026-03-05T02:35:16.390722",
+    "checks": {
+      "app_store": {
+        "available": true,
+        "similar_count": 10,
+        "exact_match": false,
+        "competitors": [
+          "DUSK - Drinks, Deals & Rewards",
+          "Dusk.fm",
+          "As Dusk Falls Companion App",
+          "Dusk: Video Speed Dating App",
+          "dusk. - for sunset lovers"
+        ]
+      },
+      "domains": {
+        "dusk.com": "TAKEN",
+        "dusk.app": "TAKEN",
+        "dusk.io": "LIKELY_AVAILABLE"
+      }
+    },
+    "scores": {
+      "app_store_available": 100,
+      "domain_available": 60,
+      "name_length": 100,
+      "pronounceable": 100,
+      "insider_authentic": 90,
+      "keyword_relevance": 60,
+      "unique_searchable": 60
+    },
+    "composite_score": 82,
+    "verdict": "STRONG"
+  },
+  {
+    "name": "vault",
+    "niche": "finance",
+    "timestamp": "2026-03-05T02:35:18.134169",
+    "checks": {
+      "app_store": {
+        "available": true,
+        "similar_count": 9,
+        "exact_match": false,
+        "competitors": [
+          "Private Photo Vault - Pic Safe",
+          "Vault - Hide photos & videos",
+          "My Vault Card",
+          "Secret Photo Vault: Keepsafe",
+          "Calculator# Hide Photos Videos"
+        ]
+      },
+      "domains": {
+        "vault.com": "TAKEN",
+        "vault.app": "TAKEN",
+        "vault.io": "TAKEN"
+      }
+    },
+    "scores": {
+      "app_store_available": 100,
+      "domain_available": 20,
+      "name_length": 100,
+      "pronounceable": 100,
+      "insider_authentic": 90,
+      "keyword_relevance": 90,
+      "unique_searchable": 85
+    },
+    "composite_score": 84,
+    "verdict": "STRONG"
+  },
+  {
+    "name": "streakr",
+    "niche": "habits",
+    "timestamp": "2026-03-05T02:35:19.605937",
+    "checks": {
+      "app_store": {
+        "available": true,
+        "similar_count": 9,
+        "exact_match": false,
+        "competitors": [
+          "streakr - One Task",
+          "Streaks",
+          "Streaker Run",
+          "MyStreaks - Streak Tracker",
+          "Goal Streak: Habit Tracker"
+        ]
+      },
+      "domains": {
+        "streakr.com": "TAKEN",
+        "streakr.app": "TAKEN",
+        "streakr.io": "TAKEN"
+      }
+    },
+    "scores": {
+      "app_store_available": 100,
+      "domain_available": 20,
+      "name_length": 100,
+      "pronounceable": 100,
+      "insider_authentic": 90,
+      "keyword_relevance": 90,
+      "unique_searchable": 85
+    },
+    "composite_score": 84,
+    "verdict": "STRONG"
+  },
+  {
+    "name": "mise",
+    "niche": "cooking",
+    "timestamp": "2026-03-05T02:35:21.026767",
+    "checks": {
+      "app_store": {
+        "available": true,
+        "similar_count": 10,
+        "exact_match": false,
+        "competitors": [
+          "mise - recipes, simplified",
+          "Mise - Your Digital Ma\u00eetre d'",
+          "Mise: Recipe Manager & Journal",
+          "Mises Browser",
+          "Messenger"
+        ]
+      },
+      "domains": {
+        "mise.com": "TAKEN",
+        "mise.app": "LIKELY_AVAILABLE",
+        "mise.io": "LIKELY_AVAILABLE"
+      }
+    },
+    "scores": {
+      "app_store_available": 100,
+      "domain_available": 100,
+      "name_length": 100,
+      "pronounceable": 100,
+      "insider_authentic": 90,
+      "keyword_relevance": 60,
+      "unique_searchable": 60
+    },
+    "composite_score": 88,
+    "verdict": "STRONG"
+  },
+  {
+    "name": "steplock",
+    "niche": "fitness",
+    "timestamp": "2026-03-05T02:35:22.627121",
+    "checks": {
+      "app_store": {
+        "available": true,
+        "similar_count": 8,
+        "exact_match": false,
+        "competitors": [
+          "StepLock \u2013 Walk to Unlock",
+          "TTLock",
+          "Danalock",
+          "StepKnight",
+          "eSmartLock"
+        ]
+      },
+      "domains": {
+        "steplock.com": "TAKEN",
+        "steplock.app": "TAKEN",
+        "steplock.io": "LIKELY_AVAILABLE"
+      }
+    },
+    "scores": {
+      "app_store_available": 100,
+      "domain_available": 60,
+      "name_length": 100,
+      "pronounceable": 100,
+      "insider_authentic": 90,
+      "keyword_relevance": 90,
+      "unique_searchable": 85
+    },
+    "composite_score": 90,
+    "verdict": "STRONG"
+  }
+]

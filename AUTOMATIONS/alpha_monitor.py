@@ -42,8 +42,8 @@ import urllib.error
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# ─── Paths ──────────────────────────────────────────────────
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+# ─── Paths (auto-detected from script location) ─────────────
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT_DIR / "AUTOMATIONS"
 LEDGER = PROJECT_DIR / "LEDGER"
 OPS = PROJECT_DIR / "OPS"

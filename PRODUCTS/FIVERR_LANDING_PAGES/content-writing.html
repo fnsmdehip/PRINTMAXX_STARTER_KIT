@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30 Days of Social Media Content | Ready to Post Today</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#ec4899;--accent2:#f472b6;--green:#22c55e}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#db2777}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.sample{padding:60px 0;border-top:1px solid var(--border)}
+.sample h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.sample .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.post-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.post-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.post-card .type{display:inline-block;padding:2px 10px;border-radius:12px;font-size:0.75rem;font-weight:600;margin-bottom:10px}
+.post-card .type.value{background:rgba(34,197,94,0.15);color:var(--green)}
+.post-card .type.engage{background:rgba(236,72,153,0.15);color:var(--accent2)}
+.post-card .type.promo{background:rgba(245,158,11,0.15);color:#fbbf24}
+.post-card .platform{font-size:0.78rem;color:var(--muted);margin-bottom:8px}
+.post-card .content{font-size:0.9rem;line-height:1.6;margin-bottom:10px}
+.post-card .hashtags{font-size:0.78rem;color:var(--accent2)}
+.mix{padding:60px 0;border-top:1px solid var(--border)}
+.mix h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.mix-bar{display:flex;height:40px;border-radius:8px;overflow:hidden;margin-bottom:16px}
+.mix-bar div{display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:600;color:#000}
+.mix-bar .v{background:var(--green);flex:40}
+.mix-bar .e{background:var(--accent);flex:25}
+.mix-bar .s{background:#8b5cf6;flex:20;color:#fff}
+.mix-bar .p{background:#f59e0b;flex:15}
+.mix-legend{display:flex;gap:24px;flex-wrap:wrap;font-size:0.85rem;color:var(--muted)}
+.mix-legend span{display:flex;align-items:center;gap:6px}
+.mix-legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#2e0a20,#1a0512);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#1a0a14,#2e0a20);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted);text-align:center;padding:12px}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.tier-grid{grid-template-columns:1fr}.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>you stare at the screen for 15 minutes. type something generic. delete it. post nothing.</h1>
+<p class="sub">i write 30 days of content in one batch. copy, paste, publish. no more "what should i post today?" 200+ accounts served across 8 niches.</p>
+<div class="stats">
+<div class="stat"><div class="num">200+</div><div class="label">accounts served</div></div>
+<div class="stat"><div class="num">30</div><div class="label">days of content</div></div>
+<div class="stat"><div class="num">5</div><div class="label">platforms covered</div></div>
+<div class="stat"><div class="num">40/25/20/15</div><div class="label">content mix ratio</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="sample">
+<h2>sample posts: fitness coach on Instagram</h2>
+<p class="desc">each post tailored to the platform. Twitter is not Instagram is not LinkedIn. different copy for each.</p>
+<div class="post-grid">
+<div class="post-card">
+<span class="type value">value post</span>
+<div class="platform">Instagram - Day 3</div>
+<div class="content">the biggest lie in fitness: "you need to work out 6 days a week."<br><br>you need 3 solid sessions. here's a split that actually works for people with jobs:<br><br>monday: upper body compound<br>wednesday: lower body compound<br>friday: full body + accessories<br><br>total gym time: 3.5 hours/week. that's it.<br><br>consistency beats volume every time.</div>
+<div class="hashtags">#fitnesscoach #workouttips #fitnessmotivation #strengthtraining #gymlife</div>
+</div>
+<div class="post-card">
+<span class="type engage">engagement post</span>
+<div class="platform">Instagram - Day 7</div>
+<div class="content">unpopular opinion: stretching before lifting is overrated.<br><br>warm up with lighter sets of the exercise you're about to do. that's the best prep.<br><br>agree or disagree? drop your take below.</div>
+<div class="hashtags">#fitnessdebate #gymmyths #personaltrainer #fitnesstips #workout</div>
+</div>
+<div class="post-card">
+<span class="type promo">promotional post</span>
+<div class="platform">Instagram - Day 12</div>
+<div class="content">3 spots left for 1-on-1 coaching this month.<br><br>what you get:<br>- custom training program (updated monthly)<br>- nutrition plan based on your actual schedule<br>- weekly check-ins (form reviews, progress tracking)<br>- direct text access for questions<br><br>not a cookie-cutter PDF. link in bio to apply.</div>
+<div class="hashtags">#personaltraining #onlinecoaching #fitnessprogram #getfit #coaching</div>
+</div>
+</div>
+</section>
+
+<section class="mix">
+<h2>the content mix (tested across 200+ accounts)</h2>
+<div class="mix-bar">
+<div class="v">40%</div>
+<div class="e">25%</div>
+<div class="s">20%</div>
+<div class="p">15%</div>
+</div>
+<div class="mix-legend">
+<span><span class="dot" style="background:var(--green)"></span> value posts (tips, how-tos, data)</span>
+<span><span class="dot" style="background:var(--accent)"></span> engagement posts (questions, polls, hot takes)</span>
+<span><span class="dot" style="background:#8b5cf6"></span> story posts (behind-the-scenes, lessons)</span>
+<span><span class="dot" style="background:#f59e0b"></span> promotional posts (offers, testimonials, CTAs)</span>
+</div>
+<p style="color:var(--muted);margin-top:16px;font-size:0.9rem">pure value gets saved but not shared. pure promo gets ignored. this ratio grows followers AND converts them.</p>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">15 Posts</div>
+<div class="price">$50 <span>/ one-time</span></div>
+<div class="delivery">delivered in 3 days</div>
+<div class="desc">15 posts for 1 platform with captions and hashtags. covers 2 weeks.</div>
+<ul>
+<li>15 posts</li>
+<li>1 platform</li>
+<li>captions + hashtags</li>
+<li>1 revision</li>
+<li class="no">posting schedule</li>
+<li class="no">Buffer CSV import</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">30-Day Content Pack</div>
+<div class="price">$150 <span>/ one-time</span></div>
+<div class="delivery">delivered in 5 days</div>
+<div class="desc">60 posts for 2 platforms. captions, hashtags, posting schedule, content mix strategy.</div>
+<ul>
+<li>60 posts (30 per platform)</li>
+<li>2 platforms</li>
+<li>posting schedule</li>
+<li>content mix strategy</li>
+<li>Buffer/Hootsuite CSV</li>
+<li>3 revisions</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">Full Content System</div>
+<div class="price">$500 <span>/ one-time</span></div>
+<div class="delivery">delivered in 10 days</div>
+<div class="desc">150 posts for 5 platforms + visual direction + content calendar + engagement templates + strategy doc.</div>
+<ul>
+<li>150 posts (30 per platform)</li>
+<li>5 platforms</li>
+<li>visual direction notes</li>
+<li>20 reply templates</li>
+<li>content strategy doc</li>
+<li>5 revisions</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="proof">
+<h2>client results</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"went from posting 2x/week to daily. followers grew 340% in 3 months. DMs went from 2/week to 15/week."</div>
+<div class="author">Alex R. - fitness coach</div>
+<div class="result">340% follower growth, 7.5x more DMs</div>
+</div>
+<div class="testimonial">
+<div class="quote">"the Buffer CSV import is a game. imported the whole month in one click. haven't thought about social media since."</div>
+<div class="author">Sarah M. - SaaS founder</div>
+<div class="result">entire month scheduled in 1 click</div>
+</div>
+<div class="testimonial">
+<div class="quote">"first time my engagement posts actually got engagement. the hot take format drives 5x more comments than my old posts."</div>
+<div class="author">Jason K. - real estate agent</div>
+<div class="result">5x engagement increase</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>niches i write for</h2>
+<div class="port-grid">
+<div class="port-item"><div class="port-thumb">fitness coaches<br>32 clients</div><div class="port-info"><h3>Fitness</h3><p>IG, TikTok, Twitter</p></div></div>
+<div class="port-item"><div class="port-thumb">SaaS companies<br>18 clients</div><div class="port-info"><h3>SaaS / Tech</h3><p>Twitter, LinkedIn</p></div></div>
+<div class="port-item"><div class="port-thumb">local businesses<br>45 clients</div><div class="port-info"><h3>Local Biz</h3><p>IG, Facebook, Google</p></div></div>
+<div class="port-item"><div class="port-thumb">personal brands<br>27 clients</div><div class="port-info"><h3>Personal Brand</h3><p>Twitter, LinkedIn, IG</p></div></div>
+<div class="port-item"><div class="port-thumb">ecommerce<br>14 clients</div><div class="port-info"><h3>Ecommerce</h3><p>IG, TikTok, Pinterest</p></div></div>
+<div class="port-item"><div class="port-thumb">consultants<br>21 clients</div><div class="port-info"><h3>Consulting</h3><p>LinkedIn, Twitter</p></div></div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open"><div class="faq-q">do you create the images/videos too?</div><div class="faq-a">this gig covers written content: captions, hashtags, posting schedule. Premium includes visual direction notes (what the image should show, layout ideas). graphic design is a separate service.</div></div>
+<div class="faq-item"><div class="faq-q">can you match my brand voice?</div><div class="faq-a">yes. send me 5-10 existing posts that represent your voice. i'll match the tone. first 3 posts delivered as a sample for approval before writing the rest.</div></div>
+<div class="faq-item"><div class="faq-q">what format is it delivered in?</div><div class="faq-a">Google Sheets or Excel with columns: Date, Platform, Content Type, Caption, Hashtags, Visual Direction (Premium). Standard and Premium include a Buffer-ready CSV.</div></div>
+<div class="faq-item"><div class="faq-q">can you handle multiple brands?</div><div class="faq-a">each brand is a separate order. agencies managing 3+ brands get 15% bulk discount.</div></div>
+</section>
+
+<section class="final-cta">
+<h2>send me your niche and Instagram handle</h2>
+<p>i'll write 3 free sample posts in 2 hours so you can see the quality before ordering.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a><br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+<footer><div class="container"><p>platform-specific copy. Twitter is not Instagram is not LinkedIn. each platform gets content written for how people use it.</p></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});</script>
+</body>
+</html>

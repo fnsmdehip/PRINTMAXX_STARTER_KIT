@@ -759,3 +759,9 @@ _Insights auto-appended by playbook_enhancer.py. Review and integrate as needed.
 **Insight:** hit my first 6 figures as a solo consultant, COLD EMAIL did 80% of the heavy lifting Hey folks, just wanted to share this because a year ago I was lurking here trying to figure this stuff out and posts like this helped me background: I do fractional CFO work for funded startups. been doing it for 4 years but always relied on referrals and linkedin. referrals dried up early 2024 so I had to figure out outbound or die basically started with Woodpecker in february. sent maybe 2000 emails over 3 m
 **Potential:** ROI: https://reddit.com/r/coldemail/comments/1qz6vnz/hit_my_first_6_figures_as_a_solo_consultant_cold/ | Synergy: 71
 
+### Alpha Insight: ALPHA1710 — 2026-03-05
+**Source:** 2026-02-13
+**Category:** OUTBOUND
+**Insight:** 90% of you are failing because you build B2C apps instead of boring B2B tools I need to say this because I see this sub is filled with people crying about "marketing is hard" while trying to sell a $5 month habit tracker to broke college students XD I’ve built 30+ MVPs. The ones that have failed? Almost exclusively were B2C "lifestyle" apps. The ones making $20k MRR right now? Boring, ugly B2B tools for unsexy industries. If you are an indie hacker or a solo founder, B2C is a trap. You are pl
+**Potential:** ROI: https://reddit.com/r/SaaS/comments/1qtb44u/90_of_you_are_failing_because_you_build_b2c_apps/ | Synergy: 344
+
