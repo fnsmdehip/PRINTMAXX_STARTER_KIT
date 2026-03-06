@@ -1,31 +1,100 @@
 {
-  "ecom_total": 3394,
-  "ecom_today": 0,
-  "ecom_high_margin": 443,
-  "freelance_total": 14551,
-  "alpha_total": 14423,
-  "alpha_pending": 278,
-  "trend_total": 422,
-  "app_builds": 4,
+  "ecom_total": 3473,
+  "ecom_today": 79,
+  "ecom_high_margin": 461,
+  "freelance_total": 14851,
+  "alpha_total": 15053,
+  "alpha_pending": 360,
+  "trend_total": 482,
+  "app_builds": 11,
   "apps_deployed": 43,
-  "arb_listings_count": 364,
-  "content_auto_count": 29,
-  "asset_count": 0,
+  "arb_listings_count": 384,
+  "content_auto_count": 30,
+  "asset_count": 19,
   "accounts_created": 0,
   "products_listed": 0,
   "emails_sent": 0,
   "emails_ready": 489282,
   "revenue": 0.0,
-  "report_generated": "2026-03-05 00:01:07",
-  "asset_results": {},
-  "deploy_results": {},
-  "listing_results": {},
+  "report_generated": "2026-03-05 21:57:22",
+  "asset_results": {
+    "generated": 19,
+    "errors": 0,
+    "results": [],
+    "browser_pending": 0,
+    "mode": "hybrid"
+  },
+  "deploy_results": {
+    "deployed": 0,
+    "skipped": 11,
+    "apps": [
+      {
+        "name": "coldmaxx",
+        "url": "https://coldmaxx.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "focuslock-web",
+        "url": "https://focuslock-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "invoiceforge",
+        "url": "https://invoiceforge.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "pagescorer",
+        "url": "https://pagescorer.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "pitchdeck",
+        "url": "https://pitchdeck.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "prayerlock-web",
+        "url": "https://prayerlock-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "prospectmaxx",
+        "url": "https://prospectmaxx.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "roicalc",
+        "url": "https://roicalc.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "sleepmaxx-web",
+        "url": "https://sleepmaxx-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "stackmaxx",
+        "url": "https://stackmaxx.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "walktounlock-web",
+        "url": "https://walktounlock-web.surge.sh",
+        "status": "already_live"
+      }
+    ]
+  },
+  "listing_results": {
+    "generated": 20,
+    "file": "PRODUCTS/ARB_LISTINGS/ARB_LISTINGS_2026-03-05.md"
+  },
   "content_results": {
     "tweets_drafted": 5,
     "content_moved": 0,
     "alpha_converted": 0,
-    "auto_generated_files": 28,
-    "pending": 75,
+    "auto_generated_files": 30,
+    "pending": 85,
     "ready": 0,
     "posted": 0
   }

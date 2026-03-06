@@ -1,6 +1,6 @@
 # Factory Arb Tweets - 2026-03-05
 Status: PENDING_REVIEW
-Source: autonomous_factory.py from 5 high-margin finds
+Source: autonomous_factory.py from 17 high-margin finds
 
 ---
 **Product:** phone projector (46.1% margin)
