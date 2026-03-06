@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mise — Feature Graphic 1024x500</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #111; }
+  .graphic {
+    width: 1024px; height: 500px;
+    background: linear-gradient(135deg, #BF360C 0%, #7F1D0E 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; padding: 0 80px;
+  }
+  .texture {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: repeating-linear-gradient(45deg, #FFF 0px, #FFF 1px, transparent 1px, transparent 20px);
+  }
+  .left { position: relative; z-index: 1; flex: 1; }
+  .left .label {
+    font-family: 'Inter', sans-serif; font-size: 14px; color: #FFF3E0;
+    text-transform: uppercase; letter-spacing: 4px; margin-bottom: 12px; opacity: 0.7;
+  }
+  .left h1 {
+    font-family: 'Playfair Display', serif; font-size: 64px; color: #FFFFFF;
+    font-style: italic; margin-bottom: 16px;
+  }
+  .left h1 span { color: #FFF3E0; font-style: normal; }
+  .left p { font-family: 'Inter', sans-serif; font-size: 20px; color: rgba(255,255,255,0.6); max-width: 400px; }
+  .right { position: relative; z-index: 1; }
+  .icon-preview {
+    width: 160px; height: 160px; border-radius: 36px;
+    background: linear-gradient(135deg, #BF360C, #D84315);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    font-size: 64px; color: #FFF3E0;
+  }
+  .badge {
+    position: absolute; bottom: 40px; right: 80px;
+    font-family: 'Inter', sans-serif; font-size: 14px;
+    color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="graphic">
+  <div class="texture"></div>
+  <div class="left">
+    <div class="label">Mise en Place</div>
+    <h1>Everything <span>in its place.</span></h1>
+    <p>Meal prep timer, recipe organizer, and kitchen workflow companion.</p>
+  </div>
+  <div class="right">
+    <div class="icon-preview">&#9749;</div>
+  </div>
+  <div class="badge">PRINTMAXX</div>
+</div>
+</body>
+</html>

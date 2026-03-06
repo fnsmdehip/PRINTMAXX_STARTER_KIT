@@ -26,7 +26,7 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
-BASE_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+BASE_DIR = Path(__file__).resolve().parent.parent
 AUTOMATIONS_DIR = BASE_DIR / "AUTOMATIONS"
 LOG_DIR = AUTOMATIONS_DIR / "logs"
 LOG_FILE = LOG_DIR / "research_ops.log"

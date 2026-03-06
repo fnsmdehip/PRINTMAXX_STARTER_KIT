@@ -573,6 +573,91 @@ def create_app(alarm_engine):
     def api_launch():
         return jsonify({"entries": load_launch_tracker()})
 
+    @app.route("/api/scheduled-runs")
+    def api_scheduled_runs():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from scheduled_runs_manager import get_api_json
+            return jsonify(get_api_json())
+        except Exception as e:
+            return jsonify({"error": str(e), "summary": {"total_cron_jobs": 0}})
+
+    @app.route("/api/scheduled-runs/perpetual", methods=["POST"])
+    def api_perpetual_cycle():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from scheduled_runs_manager import perpetual_improvement_cycle
+            result = perpetual_improvement_cycle()
+            return jsonify(result)
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+    @app.route("/api/app-names/audit")
+    def api_app_name_audit():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from app_name_validator import audit_current_apps
+            results = audit_current_apps()
+            return jsonify({"results": results})
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+    @app.route("/api/money-printer")
+    def api_money_printer():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from money_printer_engine import get_api_json as mp_json
+            return jsonify(mp_json())
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+    @app.route("/api/money-printer/cycle", methods=["POST"])
+    def api_money_printer_cycle():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from money_printer_engine import run_full_cycle
+            result = run_full_cycle()
+            return jsonify(result)
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+    @app.route("/api/autonomous-printer")
+    def api_autonomous_printer():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from autonomous_money_printer import get_api_json as amp_json
+            return jsonify(amp_json())
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+    @app.route("/api/autonomous-printer/cycle", methods=["POST"])
+    def api_autonomous_printer_cycle():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from autonomous_money_printer import run_full_cycle
+            result = run_full_cycle(max_tasks=3)
+            return jsonify({"status": "ok", "executed": result["execution"]["executed"]})
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+    @app.route("/api/discovery")
+    def api_discovery():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from agentic_discovery import get_api_json as disc_json
+            return jsonify(disc_json())
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
+    @app.route("/api/creative-sourcer")
+    def api_creative_sourcer():
+        try:
+            sys.path.insert(0, str(AUTO))
+            from creative_sourcer import get_api_json as cs_json
+            return jsonify(cs_json())
+        except Exception as e:
+            return jsonify({"error": str(e)})
+
     @app.route("/api/wake", methods=["POST"])
     def api_wake():
         alarm_engine.wake()
@@ -910,6 +995,77 @@ body {
     <div id="launchContent"></div>
   </div>
 
+  <!-- MONEY PRINTER -->
+  <div id="page-printer" class="page">
+    <div class="page-title">Money Printer Engine</div>
+    <div class="page-subtitle">21 methods scored. Kill losers. Double winners. 24/7 autonomous.</div>
+    <div id="mpSummary" class="cards"></div>
+    <div style="margin: 12px 0;">
+      <button class="alarm-btn primary" onclick="runPrinterCycle()">Run Full Cycle</button>
+      <button class="alarm-btn" onclick="loadPrinter()">Refresh</button>
+    </div>
+    <div class="page-title" style="font-size:14px; margin-top:16px;">Top Methods (by composite score)</div>
+    <div id="mpMethods"></div>
+    <div class="page-title" style="font-size:14px; margin-top:16px;">Blockers</div>
+    <div id="mpBlockers"></div>
+    <div class="page-title" style="font-size:14px; margin-top:16px;">Optimizations Needed</div>
+    <div id="mpOptimizations"></div>
+  </div>
+
+  <!-- AUTOPILOT BRAIN -->
+  <div id="page-autopilot" class="page">
+    <div class="page-title">Autopilot Brain</div>
+    <div class="page-subtitle">24/7 autonomous orchestration. Priorities scored. Tasks auto-executed.</div>
+    <div id="apSummary" class="cards"></div>
+    <div style="margin: 12px 0;">
+      <button class="alarm-btn primary" onclick="runAutopilotCycle()">Run Autonomous Cycle</button>
+      <button class="alarm-btn" onclick="loadAutopilot()">Refresh</button>
+    </div>
+    <div class="page-title" style="font-size:14px; margin-top:16px;">Top Priorities</div>
+    <div id="apPriorities"></div>
+    <div class="page-title" style="font-size:14px; margin-top:16px;">Blockers</div>
+    <div id="apBlockers"></div>
+  </div>
+
+  <!-- DISCOVERY -->
+  <div id="page-discovery" class="page">
+    <div class="page-title">Agentic Discovery</div>
+    <div class="page-subtitle">Self-improving opportunity finder. Cross-pollination. Seasonal. Underserved markets.</div>
+    <div id="discSummary" class="cards"></div>
+    <div style="margin: 12px 0;">
+      <button class="alarm-btn primary" onclick="runDiscovery()">Run Discovery Scan</button>
+      <button class="alarm-btn" onclick="loadDiscovery()">Refresh</button>
+    </div>
+    <div id="discOpportunities"></div>
+  </div>
+
+  <!-- SCHEDULED RUNS -->
+  <div id="page-scheduled" class="page">
+    <div class="page-title">Scheduled Runs</div>
+    <div class="page-subtitle" id="schedSubtitle">Cron jobs, agent sessions, and perpetual improvement</div>
+    <div id="schedSummary" class="cards"></div>
+    <div style="margin: 12px 0;">
+      <button class="alarm-btn primary" onclick="runPerpetual()">Run Perpetual Improvement Cycle</button>
+      <button class="alarm-btn" onclick="loadScheduled()">Refresh</button>
+    </div>
+    <div class="section-header">By Category</div>
+    <div id="schedCategories"></div>
+    <div class="section-header">Claude Agent Sessions</div>
+    <div id="schedClaude"></div>
+    <div class="section-header">Custom / Auto-Created Runs</div>
+    <div id="schedCustom"></div>
+    <div class="section-header">Recent History</div>
+    <div id="schedHistory"></div>
+  </div>
+
+  <!-- APP NAMES -->
+  <div id="page-appnames" class="page">
+    <div class="page-title">App Name Validator</div>
+    <div class="page-subtitle">SEO/AIO optimization + availability checking</div>
+    <button class="alarm-btn primary" onclick="runNameAudit()">Run Full Audit</button>
+    <div id="nameAuditResults" style="margin-top: 12px;"></div>
+  </div>
+
   <!-- QUICK LAUNCH -->
   <div id="page-quick" class="page">
     <div class="page-title">Quick Launch</div>
@@ -925,11 +1081,16 @@ var state = { page: 'dashboard', todos: [] };
 // ── nav items ──
 var NAV = [
   {id:'dashboard', icon:'\u25A0', label:'Dashboard'},
+  {id:'printer', icon:'\u0024', label:'Money Printer'},
+  {id:'autopilot', icon:'\u2699', label:'Autopilot Brain'},
+  {id:'discovery', icon:'\u2316', label:'Discovery'},
+  {id:'scheduled', icon:'\u23F1', label:'Scheduled Runs'},
   {id:'goals', icon:'\u2606', label:'Daily Goals'},
   {id:'todos', icon:'\u2713', label:'Todo List'},
   {id:'operations', icon:'\u2699', label:'Operations'},
   {id:'priority', icon:'\u26A1', label:'Priority'},
   {id:'ventures', icon:'\u27A4', label:'Ventures'},
+  {id:'appnames', icon:'\u2605', label:'App Names'},
   {id:'tools', icon:'\u2692', label:'Tools'},
   {id:'alarms', icon:'\u23F0', label:'Alarms'},
   {id:'tasks', icon:'\u2630', label:'Tasks'},
@@ -1274,15 +1435,288 @@ function buildQuickLaunch() {
   });
 }
 
+// ── money printer page ──
+function loadPrinter() {
+  api('/api/money-printer').then(function(d) {
+    if (d.error) return;
+    var s = d.methods || {};
+    var r = d.revenue || {};
+    var costLabels = {0:'FREE', 1:'<$10/mo', 2:'<$50/mo', 3:'<$200/mo', 4:'$200+/mo'};
+    document.getElementById('mpSummary').innerHTML =
+      '<div class="card"><div class="card-value">$' + (r.total||0).toFixed(2) + '</div><div class="card-label">Revenue</div></div>' +
+      '<div class="card"><div class="card-value">' + (s.total||0) + '</div><div class="card-label">Methods</div></div>' +
+      '<div class="card"><div class="card-value">' + (s.deployed||0) + '</div><div class="card-label">Deployed</div></div>' +
+      '<div class="card"><div class="card-value">' + (s.ready||0) + '</div><div class="card-label">Ready</div></div>' +
+      '<div class="card"><div class="card-value">' + (s.building||0) + '</div><div class="card-label">Building</div></div>';
+    var ranked = s.ranked || [];
+    var html = '<table style="width:100%;border-collapse:collapse;font-size:12px;"><tr style="color:#8b949e;"><th style="text-align:left;padding:4px;">#</th><th style="text-align:left;padding:4px;">Score</th><th style="text-align:left;padding:4px;">Method</th><th style="text-align:left;padding:4px;">Status</th><th style="text-align:left;padding:4px;">Revenue</th><th style="text-align:left;padding:4px;">Cost</th></tr>';
+    for (var i = 0; i < ranked.length; i++) {
+      var m = ranked[i];
+      var color = m.score >= 70 ? '#3fb950' : m.score >= 55 ? '#d29922' : '#f85149';
+      html += '<tr style="border-top:1px solid #21262d;"><td style="padding:4px;">' + (i+1) + '</td><td style="padding:4px;color:' + color + ';">' + m.score + '</td><td style="padding:4px;">' + m.name + '</td><td style="padding:4px;">' + m.status + '</td><td style="padding:4px;">' + m.revenue_potential + '</td><td style="padding:4px;">' + (costLabels[m.cost]||'?') + '</td></tr>';
+    }
+    html += '</table>';
+    document.getElementById('mpMethods').innerHTML = html;
+    var blockers = d.blockers || [];
+    var bhtml = '';
+    for (var j = 0; j < blockers.length; j++) {
+      var b = blockers[j];
+      var bc = b.severity === 'CRITICAL' ? '#f85149' : '#d29922';
+      bhtml += '<div style="border-left:3px solid ' + bc + ';padding:6px 10px;margin:6px 0;background:#161b22;border-radius:4px;"><strong style="color:' + bc + ';">[' + b.severity + '] ' + b.blocker + '</strong><br><span style="color:#c9d1d9;font-size:12px;">' + b.detail + '</span><br><span style="color:#8b949e;font-size:11px;">Fix: ' + b.fix + '</span></div>';
+    }
+    document.getElementById('mpBlockers').innerHTML = bhtml || '<div style="color:#8b949e;">No blockers</div>';
+    var opts = d.optimizations || [];
+    var ohtml = '';
+    for (var k = 0; k < Math.min(opts.length, 8); k++) {
+      var o = opts[k];
+      ohtml += '<div style="padding:4px 8px;margin:3px 0;background:#161b22;border-radius:4px;font-size:12px;"><span style="color:#d29922;">[' + o.issue + ']</span> ' + o.method + ': ' + o.detail + '</div>';
+    }
+    document.getElementById('mpOptimizations').innerHTML = ohtml || '<div style="color:#8b949e;">All optimized</div>';
+  });
+}
+
+function runPrinterCycle() {
+  var btn = event.target; btn.disabled = true; btn.textContent = 'Running...';
+  api('/api/money-printer/cycle', 'POST').then(function(d) {
+    btn.disabled = false; btn.textContent = 'Run Full Cycle';
+    if (d.status === 'OK') {
+      alert('Cycle complete. Actions: ' + (d.actions_taken||[]).join(', '));
+      loadPrinter();
+    } else {
+      alert('Cycle result: ' + (d.reason || d.error || 'unknown'));
+    }
+  });
+}
+
+// ── autopilot brain page ──
+function loadAutopilot() {
+  api('/api/autonomous-printer').then(function(d) {
+    if (d.error) { document.getElementById('apSummary').innerHTML = '<div style="color:#f85149;">Error: ' + d.error + '</div>'; return; }
+    var cards = '<div class="card"><div class="card-value">$' + (d.revenue||{}).total + '</div><div class="card-label">Revenue</div></div>';
+    cards += '<div class="card"><div class="card-value">' + (d.accounts||{}).active + '/' + (d.accounts||{}).total + '</div><div class="card-label">Accounts</div></div>';
+    cards += '<div class="card"><div class="card-value">' + (d.leads||{}).hot + '</div><div class="card-label">Hot Leads</div></div>';
+    cards += '<div class="card"><div class="card-value">' + d.cron_jobs + '</div><div class="card-label">Cron Jobs</div></div>';
+    cards += '<div class="card"><div class="card-value">' + d.disk_usage_pct + '%</div><div class="card-label">Disk</div></div>';
+    document.getElementById('apSummary').innerHTML = cards;
+    var priorities = d.priorities || [];
+    var phtml = '<table style="width:100%;font-size:12px;color:#c9d1d9;"><tr style="color:#8b949e;"><th>Rank</th><th>Score</th><th>Category</th><th>Type</th><th>Action</th></tr>';
+    for (var i = 0; i < Math.min(priorities.length, 15); i++) {
+      var p = priorities[i];
+      var color = p.score >= 80 ? '#f85149' : p.score >= 60 ? '#d29922' : '#3fb950';
+      var typeColor = p.type === 'AUTOMATED' ? '#3fb950' : p.type === 'HUMAN_REQUIRED' ? '#f85149' : '#d29922';
+      phtml += '<tr style="border-top:1px solid #21262d;"><td style="padding:4px;">' + (i+1) + '</td><td style="padding:4px;color:' + color + ';">' + p.score + '</td><td style="padding:4px;">' + p.category + '</td><td style="padding:4px;color:' + typeColor + ';">' + p.type + '</td><td style="padding:4px;">' + p.action.substring(0,60) + '</td></tr>';
+    }
+    phtml += '</table>';
+    document.getElementById('apPriorities').innerHTML = phtml;
+    var blockers = d.blockers || [];
+    var bhtml = '';
+    for (var j = 0; j < blockers.length; j++) {
+      var b = blockers[j];
+      var bc = b.severity === 'CRITICAL' ? '#f85149' : '#d29922';
+      bhtml += '<div style="border-left:3px solid ' + bc + ';padding:6px 10px;margin:6px 0;background:#161b22;border-radius:4px;"><strong style="color:' + bc + ';">[' + b.severity + '] ' + b.type + '</strong><br><span style="color:#c9d1d9;font-size:12px;">' + b.description.substring(0,100) + '</span><br><span style="color:#8b949e;font-size:11px;">Fix: ' + b.fix.substring(0,80) + '</span></div>';
+    }
+    document.getElementById('apBlockers').innerHTML = bhtml || '<div style="color:#3fb950;">No blockers</div>';
+  });
+}
+function runAutopilotCycle() {
+  var btn = event.target; btn.disabled = true; btn.textContent = 'Running cycle...';
+  api('/api/autonomous-printer/cycle', 'POST').then(function(d) {
+    btn.disabled = false; btn.textContent = 'Run Autonomous Cycle';
+    alert('Cycle done. Tasks executed: ' + (d.executed || 0));
+    loadAutopilot();
+  });
+}
+
+// ── discovery page ──
+function loadDiscovery() {
+  api('/api/discovery').then(function(d) {
+    if (d.error) { document.getElementById('discSummary').innerHTML = '<div style="color:#f85149;">Error: ' + d.error + '</div>'; return; }
+    var cards = '<div class="card"><div class="card-value">' + (d.total_opportunities||0) + '</div><div class="card-label">Total Opportunities</div></div>';
+    var dims = d.dimensions || {};
+    for (var key in dims) {
+      cards += '<div class="card"><div class="card-value">' + (dims[key]||[]).length + '</div><div class="card-label">' + key.replace(/_/g,' ') + '</div></div>';
+    }
+    document.getElementById('discSummary').innerHTML = cards;
+    var ohtml = '';
+    var allOpps = [];
+    for (var dim in dims) {
+      var items = dims[dim] || [];
+      for (var i = 0; i < items.length; i++) {
+        allOpps.push({dim: dim, item: items[i]});
+      }
+    }
+    for (var j = 0; j < allOpps.length; j++) {
+      var o = allOpps[j];
+      var item = o.item;
+      var name = typeof item === 'string' ? item : (item.name || item.opportunity || item.title || JSON.stringify(item).substring(0,80));
+      var dimColor = {'cross_pollination':'#58a6ff','seasonal':'#f0883e','underserved':'#a371f7','revenue_angles':'#3fb950','hypotheses':'#d29922'}[o.dim] || '#8b949e';
+      ohtml += '<div style="padding:4px 8px;margin:3px 0;background:#161b22;border-radius:4px;font-size:12px;border-left:3px solid ' + dimColor + ';"><span style="color:' + dimColor + ';">[' + o.dim.replace(/_/g,' ') + ']</span> ' + name + '</div>';
+    }
+    document.getElementById('discOpportunities').innerHTML = ohtml || '<div style="color:#8b949e;">Run discovery scan first</div>';
+  });
+}
+function runDiscovery() {
+  var btn = event.target; btn.disabled = true; btn.textContent = 'Scanning...';
+  fetch('/api/discovery').then(function(r){return r.json();}).then(function(d) {
+    btn.disabled = false; btn.textContent = 'Run Discovery Scan';
+    loadDiscovery();
+  });
+}
+
+// ── scheduled runs page ──
+function loadScheduled() {
+  api('/api/scheduled-runs').then(function(d) {
+    if (d.error) {
+      document.getElementById('schedSubtitle').textContent = 'Error: ' + d.error;
+      return;
+    }
+    var s = d.summary || {};
+    document.getElementById('schedSubtitle').textContent =
+      s.total_cron_jobs + ' cron jobs | ' + s.claude_sessions + ' agent sessions | ' +
+      s.custom_runs + ' custom runs | ' + s.jobs_error + ' errors';
+
+    // Summary cards
+    var cards = document.getElementById('schedSummary');
+    clear(cards);
+    cards.appendChild(buildCard('Cron Jobs', String(s.total_cron_jobs), s.jobs_ok + ' OK', 'accent'));
+    cards.appendChild(buildCard('Errors', String(s.jobs_error), 'need attention', s.jobs_error > 0 ? 'red' : 'green'));
+    cards.appendChild(buildCard('Agent Sessions', String(s.claude_sessions), 'scheduled', 'cyan'));
+    cards.appendChild(buildCard('Custom Runs', String(s.active_custom || 0), 'active', 'yellow'));
+    cards.appendChild(buildCard('Guardrails', d.guardrails && d.guardrails.ok ? 'OK' : 'ISSUES', '', d.guardrails && d.guardrails.ok ? 'green' : 'red'));
+
+    // Categories
+    var catEl = document.getElementById('schedCategories');
+    clear(catEl);
+    var categories = d.categories || {};
+    Object.keys(categories).sort().forEach(function(cat) {
+      var jobs = categories[cat];
+      var header = el('div', {className: 'section-header', style: 'margin-top:12px;font-size:13px;'}, cat + ' (' + jobs.length + ')');
+      catEl.appendChild(header);
+      var items = jobs.map(function(j) {
+        return {
+          Script: j.script,
+          Frequency: j.frequency,
+          Status: j.last_status,
+          'Last Run': j.last_run ? j.last_run.substring(0, 16).replace('T', ' ') : 'never'
+        };
+      });
+      buildTable(catEl, items, 4);
+    });
+
+    // Claude sessions
+    var claudeEl = document.getElementById('schedClaude');
+    clear(claudeEl);
+    if (d.claude_sessions && d.claude_sessions.length > 0) {
+      var csItems = d.claude_sessions.map(function(cs) {
+        return {
+          Session: cs.session_type || cs.script,
+          Schedule: cs.frequency,
+          Status: cs.last_status,
+          'Last Run': cs.last_run ? cs.last_run.substring(0, 16).replace('T', ' ') : 'never'
+        };
+      });
+      buildTable(claudeEl, csItems, 4);
+    } else {
+      claudeEl.appendChild(el('div', {className: 'loading'}, 'No Claude sessions scheduled'));
+    }
+
+    // Custom runs
+    var customEl = document.getElementById('schedCustom');
+    clear(customEl);
+    if (d.custom_runs && d.custom_runs.length > 0) {
+      var crItems = d.custom_runs.map(function(r) {
+        return {
+          ID: r.id,
+          Description: (r.description || '').substring(0, 50),
+          Schedule: r.schedule,
+          Source: r.source,
+          Enabled: r.enabled ? 'YES' : 'NO'
+        };
+      });
+      buildTable(customEl, crItems, 5);
+    } else {
+      customEl.appendChild(el('div', {className: 'loading'}, 'No custom runs yet'));
+    }
+
+    // History
+    var histEl = document.getElementById('schedHistory');
+    clear(histEl);
+    if (d.recent_history && d.recent_history.length > 0) {
+      var hItems = d.recent_history.slice(-10).reverse().map(function(h) {
+        return {
+          Time: (h.timestamp || '').substring(0, 16).replace('T', ' '),
+          Action: h.action,
+          Detail: (h.description || h.run_id || '').substring(0, 40)
+        };
+      });
+      buildTable(histEl, hItems, 3);
+    } else {
+      histEl.appendChild(el('div', {className: 'loading'}, 'No run history yet'));
+    }
+  });
+}
+
+function runPerpetual() {
+  post('/api/scheduled-runs/perpetual').then(function(d) {
+    if (d.error) {
+      alert('Error: ' + d.error);
+    } else {
+      alert('Perpetual cycle: ' + d.status + '. Suggestions: ' + (d.suggestions || []).length + '. Created: ' + (d.created || []).length);
+      loadScheduled();
+    }
+  });
+}
+
+// ── app names page ──
+function loadAppNames() {
+  var container = document.getElementById('nameAuditResults');
+  clear(container);
+  container.appendChild(el('div', {className: 'loading'}, 'Click "Run Full Audit" to validate app names'));
+}
+
+function runNameAudit() {
+  var container = document.getElementById('nameAuditResults');
+  clear(container);
+  container.appendChild(el('div', {className: 'loading'}, 'Running audit... (checking App Store, domains, SEO scores)'));
+  api('/api/app-names/audit').then(function(d) {
+    clear(container);
+    if (d.error) {
+      container.appendChild(el('div', {className: 'loading'}, 'Error: ' + d.error));
+      return;
+    }
+    var results = d.results || [];
+    var items = results.map(function(r) {
+      var domAvail = 0;
+      if (r.checks && r.checks.domains) {
+        Object.values(r.checks.domains).forEach(function(v) { if (v === 'LIKELY_AVAILABLE') domAvail++; });
+      }
+      return {
+        Name: r.name,
+        Score: r.composite_score + '/100',
+        Verdict: r.verdict,
+        'App Store': r.checks && r.checks.app_store && r.checks.app_store.available ? 'AVAIL' : 'TAKEN',
+        'Domains': domAvail + '/3 avail',
+        Niche: r.niche
+      };
+    });
+    buildTable(container, items, 6);
+  });
+}
+
 // ── page data loader ──
 function loadPageData(id) {
   switch(id) {
     case 'dashboard': refreshDashboard(); break;
+    case 'printer': loadPrinter(); break;
+    case 'autopilot': loadAutopilot(); break;
+    case 'discovery': loadDiscovery(); break;
+    case 'scheduled': loadScheduled(); break;
     case 'goals': loadGoals(); break;
     case 'todos': loadTodos(); break;
     case 'operations': loadOperations(); break;
     case 'priority': loadPriority(); break;
     case 'ventures': loadVentures(); break;
+    case 'appnames': loadAppNames(); break;
     case 'tools': loadTools(); break;
     case 'alarms': loadAlarms(); break;
     case 'tasks': loadTasks(); break;

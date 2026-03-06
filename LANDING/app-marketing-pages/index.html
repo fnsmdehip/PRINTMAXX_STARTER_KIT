@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX - Apps That Fix Real Problems</title>
+<meta name="description" content="PRINTMAXX builds apps that solve real problems. 7 products. No fluff. Phone lockers, meal prep, sleep optimization, cold email, moon sighting, and more.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--text:#e5e5e5;--muted:#888;--border:#222}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.2rem;font-weight:800;letter-spacing:-0.5px;text-transform:uppercase}
+
+.hero{padding:100px 0 40px;text-align:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:800;line-height:1.1;letter-spacing:-2px;max-width:700px;margin:0 auto 24px}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:500px;margin:0 auto;line-height:1.7}
+
+.grid{padding:60px 0 100px}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+
+.app-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:36px 32px;transition:border-color 0.2s,transform 0.2s;display:block}
+.app-card:hover{border-color:#444;transform:translateY(-4px)}
+.app-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.app-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.app-name{font-size:1.15rem;font-weight:700;letter-spacing:-0.5px}
+.app-tagline{font-size:0.95rem;color:var(--text);line-height:1.6;margin-bottom:16px;font-weight:500}
+.app-desc{font-size:0.85rem;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.app-cta{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;display:inline-flex;align-items:center;gap:6px}
+.app-cta .arrow{transition:transform 0.2s}
+.app-card:hover .arrow{transform:translateX(4px)}
+
+/* individual accent colors */
+.app-card[data-app="prayerlock"] .app-dot{background:#2dd4a8}
+.app-card[data-app="prayerlock"] .app-cta{color:#2dd4a8}
+.app-card[data-app="focuslock"] .app-dot{background:#f97316}
+.app-card[data-app="focuslock"] .app-cta{color:#f97316}
+.app-card[data-app="mealmaxx"] .app-dot{background:#84cc16}
+.app-card[data-app="mealmaxx"] .app-cta{color:#84cc16}
+.app-card[data-app="sleepmaxx"] .app-dot{background:#8b5cf6}
+.app-card[data-app="sleepmaxx"] .app-cta{color:#8b5cf6}
+.app-card[data-app="walktounlock"] .app-dot{background:#ef4444}
+.app-card[data-app="walktounlock"] .app-cta{color:#ef4444}
+.app-card[data-app="hilal"] .app-dot{background:#fbbf24}
+.app-card[data-app="hilal"] .app-cta{color:#fbbf24}
+.app-card[data-app="coldmaxx"] .app-dot{background:#06b6d4}
+.app-card[data-app="coldmaxx"] .app-cta{color:#06b6d4}
+
+.bottom{padding:60px 0;border-top:1px solid var(--border);text-align:center}
+.bottom p{font-size:0.95rem;color:var(--muted);max-width:500px;margin:0 auto;line-height:1.7}
+.bottom .tagline{font-size:1.4rem;font-weight:800;color:var(--text);letter-spacing:-1px;margin-bottom:12px}
+
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
+footer p{font-size:0.8rem;color:var(--muted)}
+
+@media(max-width:640px){
+  .hero{padding:60px 0 30px}
+  .apps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+  <div class="logo">PRINTMAXX</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+  <h1>7 apps. real problems. no fluff.</h1>
+  <p>we build tools that fix specific things. phone addiction, bad sleep, cold email, meal prep, waking up. if the problem is real, we build for it.</p>
+</div>
+</section>
+
+<section class="grid">
+<div class="container">
+  <div class="apps">
+
+    <a href="prayerlock/" class="app-card" data-app="prayerlock">
+      <div class="app-header">
+        <div class="app-dot"></div>
+        <div class="app-name">PrayerLock</div>
+      </div>
+      <div class="app-tagline">your phone locks itself at prayer time. no willpower needed.</div>
+      <div class="app-desc">auto-lock at adhan. customizable duration. streak tracking. family mode. built for muslim professionals who want to protect their salah.</div>
+      <div class="app-cta">view app <span class="arrow">&rarr;</span></div>
+    </a>
+
+    <a href="focuslock/" class="app-card" data-app="focuslock">
+      <div class="app-header">
+        <div class="app-dot"></div>
+        <div class="app-name">FocusLock</div>
+      </div>
+      <div class="app-tagline">block everything. ship something. your phone is the enemy.</div>
+      <div class="app-desc">pomodoro lock. app whitelist. emergency unlock with a shame counter. focus streaks. for builders who need to actually build.</div>
+      <div class="app-cta">view app <span class="arrow">&rarr;</span></div>
+    </a>
+
+    <a href="mealmaxx/" class="app-card" data-app="mealmaxx">
+      <div class="app-header">
+        <div class="app-dot"></div>
+        <div class="app-name">MealMaxx</div>
+      </div>
+      <div class="app-tagline">meal prep in 10 minutes. grocery list included.</div>
+      <div class="app-desc">weekly planner. auto grocery list. macro tracking. budget mode. stop spending $1,620/month on uber eats.</div>
+      <div class="app-cta">view app <span class="arrow">&rarr;</span></div>
+    </a>
+
+    <a href="sleepmaxx/" class="app-card" data-app="sleepmaxx">
+      <div class="app-header">
+        <div class="app-dot"></div>
+        <div class="app-name">SleepMaxx</div>
+      </div>
+      <div class="app-tagline">your sleep sucks. this fixes it. no $300 mattress needed.</div>
+      <div class="app-desc">sleep score. wind-down routine. blue light reminder. sleep debt tracker. 47 more minutes of sleep per night. free.</div>
+      <div class="app-cta">view app <span class="arrow">&rarr;</span></div>
+    </a>
+
+    <a href="walktounlock/" class="app-card" data-app="walktounlock">
+      <div class="app-header">
+        <div class="app-dot"></div>
+        <div class="app-name">WalkToUnlock</div>
+      </div>
+      <div class="app-tagline">your alarm doesn't stop until you walk 100 steps.</div>
+      <div class="app-desc">step-verified alarm. GPS check-in mode. social accountability. streak rewards. 0 snooze buttons available.</div>
+      <div class="app-cta">view app <span class="arrow">&rarr;</span></div>
+    </a>
+
+    <a href="hilal/" class="app-card" data-app="hilal">
+      <div class="app-header">
+        <div class="app-dot"></div>
+        <div class="app-name">Hilal</div>
+      </div>
+      <div class="app-tagline">crowdsourced moon sighting for your city. no more confusion.</div>
+      <div class="app-desc">community reports. masjid integration. notification alerts. historical data. 340+ cities. 1,200+ masjids connected.</div>
+      <div class="app-cta">view app <span class="arrow">&rarr;</span></div>
+    </a>
+
+    <a href="coldmaxx/" class="app-card" data-app="coldmaxx">
+      <div class="app-header">
+        <div class="app-dot"></div>
+        <div class="app-name">ColdMaxx</div>
+      </div>
+      <div class="app-tagline">cold emails that get replies. not spam. actual meetings.</div>
+      <div class="app-desc">AIDA/PAS/BAB frameworks. spam score checker. follow-up sequences. A/B testing. 34% avg open rate vs 17% industry standard.</div>
+      <div class="app-cta">view app <span class="arrow">&rarr;</span></div>
+    </a>
+
+  </div>
+</div>
+</section>
+
+<section class="bottom">
+<div class="container">
+  <div class="tagline">build things that fix things.</div>
+  <p>PRINTMAXX ships apps for specific problems. no feature bloat. no pivot every quarter. if the problem is real and the solution is clear, we build it and ship it.</p>
+</div>
+</section>
+
+<footer>
+<div class="container">
+  <p>PRINTMAXX 2026. all rights reserved.</p>
+</div>
+</footer>
+
+</body>
+</html>

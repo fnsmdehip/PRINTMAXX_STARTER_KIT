@@ -23,7 +23,7 @@ from datetime import datetime
 from typing import Dict, List, Any
 from collections import defaultdict
 
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 BACKTEST_DIR = LEDGER_DIR / "BACKTESTS"
 BACKTEST_DIR.mkdir(exist_ok=True)

@@ -18,7 +18,6 @@ Usage:
   python3 gov_tenders_scraper.py --min-budget 50000  # Minimum budget $50K
 """
 
-import requests
 import csv
 import json
 import os
@@ -29,6 +28,12 @@ import re
 from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote
+
+try:
+    import requests
+except ImportError:
+    print("ERROR: requests not installed. Run: pip3 install requests")
+    sys.exit(1)
 
 # ============================================================
 # CONFIGURATION

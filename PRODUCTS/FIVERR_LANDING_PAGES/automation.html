@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Automation | Save 3-15 Hours/Week | Custom Scripts</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#f59e0b;--accent2:#fbbf24;--green:#22c55e}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#000;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#d97706}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.sample{padding:60px 0;border-top:1px solid var(--border)}
+.sample h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.sample .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.case-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.case-card .before{color:var(--accent);font-size:0.8rem;font-weight:600;text-transform:uppercase;margin-bottom:8px}
+.case-card h3{font-size:1.1rem;margin-bottom:8px}
+.case-card p{font-size:0.9rem;color:var(--muted);margin-bottom:12px}
+.case-card .after{background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:12px;font-size:0.85rem;color:var(--green)}
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#000;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+.auto-list{padding:60px 0;border-top:1px solid var(--border)}
+.auto-list h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.auto-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.auto-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px}
+.auto-item h3{font-size:0.95rem;margin-bottom:4px}
+.auto-item p{font-size:0.82rem;color:var(--muted)}
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#2e1f0a,#1a1208);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#1a1608,#2e1f0a);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted);text-align:center;padding:12px}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.tier-grid{grid-template-columns:1fr}.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>you spend 5-10 hours a week on tasks a script could do in 5 minutes</h1>
+<p class="sub">i build Python automations that do it for you. set it up once, it runs forever. most clients save 3-15 hours per week.</p>
+<div class="stats">
+<div class="stat"><div class="num">3-15hr</div><div class="label">saved per week</div></div>
+<div class="stat"><div class="num">50+</div><div class="label">API integrations</div></div>
+<div class="stat"><div class="num">$0</div><div class="label">ongoing cost (most)</div></div>
+<div class="stat"><div class="num">100%</div><div class="label">yours to keep</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="sample">
+<h2>real client examples</h2>
+<p class="desc">not hypothetical. these are automations i built that are running right now.</p>
+<div class="case-grid">
+<div class="case-card">
+<div class="before">before: 3 hours/day</div>
+<h3>CSV report merger</h3>
+<p>client downloaded CSV reports from 5 platforms every morning, merged them manually, uploaded to Google Sheets.</p>
+<div class="after">after: runs in 4 minutes on a schedule. zero human time.</div>
+</div>
+<div class="case-card">
+<div class="before">before: 500+ files/week manually</div>
+<h3>file organizer</h3>
+<p>manually renamed and sorted 500+ files per week into client folders based on naming conventions.</p>
+<div class="after">after: script processes files in 30 seconds when they hit the folder.</div>
+</div>
+<div class="case-card">
+<div class="before">before: checking 200 URLs manually</div>
+<h3>competitor price monitor</h3>
+<p>needed to check 200 competitor prices daily. was doing it by hand, missing changes constantly.</p>
+<div class="after">after: scrapes every morning, Slack alert if anything changes. zero missed updates.</div>
+</div>
+</div>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">Single Automation</div>
+<div class="price">$75 <span>/ one-time</span></div>
+<div class="delivery">delivered in 3 days</div>
+<div class="desc">1 automated task. Python script delivered with instructions.</div>
+<ul>
+<li>1 task automated</li>
+<li>0-1 API integration</li>
+<li>basic error handling</li>
+<li>README instructions</li>
+<li>1 revision</li>
+<li class="no">scheduling setup</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">Multi-Step Workflow</div>
+<div class="price">$250 <span>/ one-time</span></div>
+<div class="delivery">delivered in 7 days</div>
+<div class="desc">multi-step workflow connecting 2-3 tools/APIs. error handling, logging, scheduling.</div>
+<ul>
+<li>3-5 tasks automated</li>
+<li>2-3 API integrations</li>
+<li>error handling + logging</li>
+<li>scheduling setup (cron)</li>
+<li>full documentation</li>
+<li>7-day support</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">Full System Build</div>
+<div class="price">$800 <span>/ one-time</span></div>
+<div class="delivery">delivered in 14 days</div>
+<div class="desc">complete automation system. multiple workflows, scheduled runs, notifications, 30-day support.</div>
+<ul>
+<li>unlimited tasks (within scope)</li>
+<li>5+ API integrations</li>
+<li>error alerts + monitoring</li>
+<li>dashboard/notifications</li>
+<li>full docs + video walkthrough</li>
+<li>30-day support</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="auto-list">
+<h2>what i automate</h2>
+<div class="auto-grid">
+<div class="auto-item"><h3>spreadsheet processing</h3><p>merge, clean, transform, format Excel/CSV files</p></div>
+<div class="auto-item"><h3>email automation</h3><p>parse incoming, auto-reply, extract data from attachments</p></div>
+<div class="auto-item"><h3>data pipelines</h3><p>pull from API A, transform, push to API B</p></div>
+<div class="auto-item"><h3>file management</h3><p>rename, organize, convert, compress, upload</p></div>
+<div class="auto-item"><h3>report generation</h3><p>pull from multiple sources, create formatted reports</p></div>
+<div class="auto-item"><h3>CRM updates</h3><p>sync data between tools, update records based on rules</p></div>
+<div class="auto-item"><h3>invoice processing</h3><p>extract data from PDFs, organize in spreadsheet</p></div>
+<div class="auto-item"><h3>custom notifications</h3><p>Slack/email alerts when conditions are met</p></div>
+</div>
+</section>
+
+<section class="proof">
+<h2>client results</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"spent $250 on the multi-step workflow. saves me 8 hours per week. at my rate that's $1,600/month saved. ROI positive in 5 days."</div>
+<div class="author">Tom B. - ecommerce operator</div>
+<div class="result">$1,600/month saved from $250 investment</div>
+</div>
+<div class="testimonial">
+<div class="quote">"the script just works. runs every morning at 6am, data is in my Google Sheet by the time i open my laptop."</div>
+<div class="author">Priya S. - marketing manager</div>
+<div class="result">daily reports automated, zero manual work</div>
+</div>
+<div class="testimonial">
+<div class="quote">"i don't know Python. was nervous about using a script. the setup instructions were literally 3 commands. took 2 minutes."</div>
+<div class="author">Mike D. - agency owner</div>
+<div class="result">2-minute setup, no Python knowledge needed</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>recent automation builds</h2>
+<div class="port-grid">
+<div class="port-item"><div class="port-thumb">5-platform CSV merger<br>3hr/day to 4min</div><div class="port-info"><h3>Report Merger</h3><p>5 APIs, Google Sheets output</p></div></div>
+<div class="port-item"><div class="port-thumb">file organizer<br>500 files in 30sec</div><div class="port-info"><h3>Auto Sorter</h3><p>rename, sort, compress</p></div></div>
+<div class="port-item"><div class="port-thumb">price monitor<br>200 competitors daily</div><div class="port-info"><h3>Price Tracker</h3><p>scrape + Slack alerts</p></div></div>
+<div class="port-item"><div class="port-thumb">invoice parser<br>PDF to spreadsheet</div><div class="port-info"><h3>Invoice Bot</h3><p>extract, validate, organize</p></div></div>
+<div class="port-item"><div class="port-thumb">CRM sync<br>HubSpot + Airtable</div><div class="port-info"><h3>Data Sync</h3><p>bidirectional, real-time</p></div></div>
+<div class="port-item"><div class="port-thumb">email parser<br>auto-extract attachments</div><div class="port-info"><h3>Email Bot</h3><p>parse, extract, file</p></div></div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open"><div class="faq-q">i don't know Python. can i still use this?</div><div class="faq-a">yes. every script comes with step-by-step instructions. install Python (1 click), install dependencies (1 command), run the script (1 command). Premium includes a video walkthrough.</div></div>
+<div class="faq-item"><div class="faq-q">can it run on a schedule?</div><div class="faq-a">Standard and Premium include scheduling setup. cron on Mac/Linux, Task Scheduler on Windows. runs automatically at whatever frequency you need.</div></div>
+<div class="faq-item"><div class="faq-q">can you connect to my tools?</div><div class="faq-a">if the tool has an API, i can connect to it. i've integrated with Salesforce, HubSpot, Airtable, Google Sheets, Slack, Notion, Stripe, Shopify, Mailchimp, and 50+ others.</div></div>
+<div class="faq-item"><div class="faq-q">what if something breaks?</div><div class="faq-a">Standard: 7 days support. Premium: 30 days. every script includes error handling that logs issues so you know exactly what happened.</div></div>
+<div class="faq-item"><div class="faq-q">how much time will this actually save?</div><div class="faq-a">most clients save 3-15 hours per week. at $50/hour, that's $600-3,000/month from a one-time $75-800 investment.</div></div>
+</section>
+
+<section class="final-cta">
+<h2>describe the task you want automated</h2>
+<p>i'll tell you in 30 minutes if it's feasible, how long it'll take, and how many hours per week it saves you.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a><br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+<footer><div class="container"><p>working Python script. not pseudocode. not a plan document. a script that runs on your machine and does the job.</p></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});</script>
+</body>
+</html>

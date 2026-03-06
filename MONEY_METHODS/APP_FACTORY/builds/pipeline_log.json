@@ -1,0 +1,146 @@
+{
+  "runs": [
+    {
+      "app": "sleepmaxx",
+      "display_name": "SleepMaxx",
+      "steps": [
+        "metadata",
+        "screenshots"
+      ],
+      "results": {
+        "metadata": true,
+        "screenshots": true
+      },
+      "elapsed_seconds": 0.0,
+      "timestamp": "2026-03-05T04:11:48.155549"
+    },
+    {
+      "app": "focuslock",
+      "display_name": "FocusLock",
+      "steps": [
+        "metadata",
+        "screenshots"
+      ],
+      "results": {
+        "metadata": true,
+        "screenshots": true
+      },
+      "elapsed_seconds": 0.0,
+      "timestamp": "2026-03-05T04:12:06.398951"
+    },
+    {
+      "app": "habitforge",
+      "display_name": "HabitForge",
+      "steps": [
+        "metadata",
+        "screenshots"
+      ],
+      "results": {
+        "metadata": true,
+        "screenshots": true
+      },
+      "elapsed_seconds": 0.0,
+      "timestamp": "2026-03-05T04:12:06.399868"
+    },
+    {
+      "app": "mealmaxx",
+      "display_name": "MealMaxx",
+      "steps": [
+        "metadata",
+        "screenshots"
+      ],
+      "results": {
+        "metadata": true,
+        "screenshots": true
+      },
+      "elapsed_seconds": 0.0,
+      "timestamp": "2026-03-05T04:12:06.400773"
+    },
+    {
+      "app": "hilal",
+      "display_name": "Hilal",
+      "steps": [
+        "metadata",
+        "screenshots"
+      ],
+      "results": {
+        "metadata": true,
+        "screenshots": true
+      },
+      "elapsed_seconds": 0.0,
+      "timestamp": "2026-03-05T04:12:06.401606"
+    },
+    {
+      "app": "sleepmaxx",
+      "display_name": "SleepMaxx",
+      "steps": [
+        "metadata",
+        "screenshots"
+      ],
+      "results": {
+        "metadata": true,
+        "screenshots": true
+      },
+      "elapsed_seconds": 0.0,
+      "timestamp": "2026-03-05T04:12:06.402391"
+    },
+    {
+      "app": "walktounlock",
+      "display_name": "WalkToUnlock",
+      "steps": [
+        "metadata",
+        "screenshots"
+      ],
+      "results": {
+        "metadata": true,
+        "screenshots": true
+      },
+      "elapsed_seconds": 0.0,
+      "timestamp": "2026-03-05T04:12:06.404200"
+    }
+  ],
+  "apps": {
+    "sleepmaxx": {
+      "last_run": "2026-03-05T04:12:06.402392",
+      "last_results": {
+        "metadata": true,
+        "screenshots": true
+      }
+    },
+    "focuslock": {
+      "last_run": "2026-03-05T04:12:06.398952",
+      "last_results": {
+        "metadata": true,
+        "screenshots": true
+      }
+    },
+    "habitforge": {
+      "last_run": "2026-03-05T04:12:06.399870",
+      "last_results": {
+        "metadata": true,
+        "screenshots": true
+      }
+    },
+    "mealmaxx": {
+      "last_run": "2026-03-05T04:12:06.400774",
+      "last_results": {
+        "metadata": true,
+        "screenshots": true
+      }
+    },
+    "hilal": {
+      "last_run": "2026-03-05T04:12:06.401607",
+      "last_results": {
+        "metadata": true,
+        "screenshots": true
+      }
+    },
+    "walktounlock": {
+      "last_run": "2026-03-05T04:12:06.404202",
+      "last_results": {
+        "metadata": true,
+        "screenshots": true
+      }
+    }
+  }
+}

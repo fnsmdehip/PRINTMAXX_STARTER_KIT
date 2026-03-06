@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="dg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7C4DFF;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#64B5F6;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="100" fill="#F5F0FF"/>
+  <circle cx="50" cy="50" r="25" fill="url(#dg)" stroke="#D1C4E9" stroke-width="1"/>
+  <circle cx="50" cy="50" r="15" fill="none" stroke="#7C4DFF" stroke-width="0.5" opacity="0.5"/>
+  <text x="90" y="55" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="32" font-weight="200" fill="#7C4DFF" letter-spacing="8">drift</text>
+  <text x="260" y="55" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="32" font-weight="200" fill="#64B5F6" letter-spacing="8">hour</text>
+  <line x1="90" y1="70" x2="370" y2="70" stroke="#D1C4E9" stroke-width="0.5"/>
+</svg>

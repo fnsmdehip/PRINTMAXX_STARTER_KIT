@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chatbot for Your Website | 24/7 Lead Capture | Custom Trained</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#14b8a6;--accent2:#2dd4bf;--green:#22c55e}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#000;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#0d9488}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.demo{padding:60px 0;border-top:1px solid var(--border)}
+.demo h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.demo .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.chat-window{background:var(--card);border:1px solid var(--border);border-radius:16px;max-width:500px;overflow:hidden}
+.chat-header{background:var(--accent);padding:14px 20px;color:#000;font-weight:700;font-size:0.95rem}
+.chat-body{padding:20px;min-height:300px}
+.msg{margin-bottom:16px;display:flex;gap:10px}
+.msg.bot .bubble{background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.2);border-radius:12px 12px 12px 4px;padding:12px 16px;max-width:320px;font-size:0.88rem}
+.msg.user{justify-content:flex-end}
+.msg.user .bubble{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:12px 12px 4px 12px;padding:12px 16px;max-width:320px;font-size:0.88rem}
+.msg .avatar{width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:#000;flex-shrink:0}
+.msg.user .avatar{background:#333;color:var(--text)}
+.chat-input{border-top:1px solid var(--border);padding:14px 20px;display:flex;gap:8px}
+.chat-input input{flex:1;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-size:0.88rem;outline:none}
+.chat-input button{background:var(--accent);border:none;border-radius:8px;padding:10px 16px;color:#000;font-weight:600;cursor:pointer;font-size:0.85rem}
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#000;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+.results{padding:60px 0;border-top:1px solid var(--border)}
+.results h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.result-card .industry{font-size:0.8rem;color:var(--accent2);font-weight:600;margin-bottom:6px;text-transform:uppercase}
+.result-card h3{font-size:1.05rem;margin-bottom:8px}
+.result-card p{font-size:0.88rem;color:var(--muted);margin-bottom:12px}
+.result-card .metric{font-size:0.85rem;color:var(--green)}
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#0a2e28,#051a16);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#0a1a18,#0a2e28);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted);text-align:center;padding:12px}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.tier-grid{grid-template-columns:1fr}.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>your website visitors have questions at 2 AM. your live chat is offline.</h1>
+<p class="sub">an AI chatbot answers in 3 seconds. every time. 24/7. trained on YOUR business data, not generic responses. one script tag to install.</p>
+<div class="stats">
+<div class="stat"><div class="num">3sec</div><div class="label">response time</div></div>
+<div class="stat"><div class="num">24/7</div><div class="label">always on</div></div>
+<div class="stat"><div class="num">80-90%</div><div class="label">questions handled</div></div>
+<div class="stat"><div class="num">$5-30</div><div class="label">monthly API cost</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="demo">
+<h2>live demo: dental clinic chatbot</h2>
+<p class="desc">trained on the clinic's FAQ, pricing, and services. answers with THEIR data, not generic responses.</p>
+<div class="chat-window">
+<div class="chat-header">SmileCare Assistant</div>
+<div class="chat-body">
+<div class="msg bot"><div class="avatar">SC</div><div class="bubble">hi there. i'm SmileCare's assistant. i can answer questions about our services, pricing, and hours. how can i help?</div></div>
+<div class="msg user"><div class="bubble">how much does a teeth cleaning cost?</div><div class="avatar">Y</div></div>
+<div class="msg bot"><div class="avatar">SC</div><div class="bubble">a standard teeth cleaning at SmileCare is $125 without insurance. with most PPO plans, your copay is $0-25. we also offer a membership plan at $29/month that includes 2 cleanings per year. want me to help you book an appointment?</div></div>
+<div class="msg user"><div class="bubble">yes, do you have anything this week?</div><div class="avatar">Y</div></div>
+<div class="msg bot"><div class="avatar">SC</div><div class="bubble">i can see openings on Thursday at 10am and Friday at 2pm. which works better? i'll need your name, phone number, and email to confirm.</div></div>
+</div>
+<div class="chat-input"><input type="text" placeholder="type a message..." disabled><button disabled>Send</button></div>
+</div>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">Simple FAQ Bot</div>
+<div class="price">$75 <span>/ one-time</span></div>
+<div class="delivery">delivered in 3 days</div>
+<div class="desc">AI chatbot trained on your FAQ data. answers common questions. one script tag to embed.</div>
+<ul>
+<li>up to 10 pages of training data</li>
+<li>basic personality</li>
+<li>1 revision</li>
+<li class="no">lead capture</li>
+<li class="no">email notifications</li>
+<li class="no">analytics</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">Smart Lead Bot</div>
+<div class="price">$250 <span>/ one-time</span></div>
+<div class="delivery">delivered in 7 days</div>
+<div class="desc">chatbot with lead capture, email alerts, conversation memory, custom personality, analytics.</div>
+<ul>
+<li>up to 50 pages of training data</li>
+<li>lead capture (name, email, phone)</li>
+<li>email notifications on new leads</li>
+<li>conversation memory</li>
+<li>custom personality + branding</li>
+<li>analytics dashboard</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">Full AI Assistant</div>
+<div class="price">$800 <span>/ one-time</span></div>
+<div class="delivery">delivered in 14 days</div>
+<div class="desc">multi-model AI with booking integration, CRM sync, human escalation, multilingual, 30-day optimization.</div>
+<ul>
+<li>unlimited training data</li>
+<li>booking integration (Cal.com)</li>
+<li>CRM sync (HubSpot, Salesforce)</li>
+<li>human escalation rules</li>
+<li>10+ languages</li>
+<li>30-day optimization</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="results">
+<h2>real results from real businesses</h2>
+<div class="result-grid">
+<div class="result-card">
+<div class="industry">dental clinic</div>
+<h3>73% of questions handled automatically</h3>
+<p>chatbot answered "what are your hours?", "do you take my insurance?", and "how much is X procedure?" without any human involvement.</p>
+<div class="metric">24 leads captured, 8 appointments booked, month 1</div>
+</div>
+<div class="result-card">
+<div class="industry">marketing agency</div>
+<h3>40% higher lead quality score</h3>
+<p>bot pre-qualified leads before they hit the contact form. sales team stopped wasting time on bad-fit prospects.</p>
+<div class="metric">average deal size increased because only qualified leads got through</div>
+</div>
+<div class="result-card">
+<div class="industry">local plumber</div>
+<h3>11 emergency calls booked after hours</h3>
+<p>chatbot answered service area questions, gave rough pricing estimates, captured emergency requests at 2 AM.</p>
+<div class="metric">11 calls in month 1 that would have been lost to competitors</div>
+</div>
+</div>
+</section>
+
+<section class="proof">
+<h2>client feedback</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"installed it in 5 minutes. literally pasted one line of code. it was answering patient questions within 10 minutes of going live."</div>
+<div class="author">Dr. Kim - dental clinic</div>
+<div class="result">live in 5 minutes, 73% question resolution</div>
+</div>
+<div class="testimonial">
+<div class="quote">"the bot captured 3 leads on its first night. all after midnight. those are clients i would have lost completely."</div>
+<div class="author">Tony R. - plumbing company</div>
+<div class="result">3 after-hours leads captured, night 1</div>
+</div>
+<div class="testimonial">
+<div class="quote">"running cost is $8/month for about 200 conversations. cheaper than paying someone to answer the same 10 questions."</div>
+<div class="author">Sarah L. - ecommerce brand</div>
+<div class="result">$8/month for 200 conversations</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>chatbots i've built</h2>
+<div class="port-grid">
+<div class="port-item"><div class="port-thumb">dental clinic<br>FAQ + booking</div><div class="port-info"><h3>SmileCare Bot</h3><p>pricing, hours, appointments</p></div></div>
+<div class="port-item"><div class="port-thumb">marketing agency<br>lead qualifier</div><div class="port-info"><h3>LeadBot Pro</h3><p>qualify, capture, CRM sync</p></div></div>
+<div class="port-item"><div class="port-thumb">plumber<br>after-hours capture</div><div class="port-info"><h3>EmergencyBot</h3><p>service area, pricing, urgent</p></div></div>
+<div class="port-item"><div class="port-thumb">ecommerce<br>product support</div><div class="port-info"><h3>ShopAssist</h3><p>sizing, shipping, returns</p></div></div>
+<div class="port-item"><div class="port-thumb">SaaS<br>onboarding helper</div><div class="port-info"><h3>OnboardBot</h3><p>setup guide, feature FAQ</p></div></div>
+<div class="port-item"><div class="port-thumb">real estate<br>property questions</div><div class="port-info"><h3>PropertyBot</h3><p>listings, scheduling, area info</p></div></div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open"><div class="faq-q">what AI model does it use?</div><div class="faq-a">GPT-4o-mini for most bots (fast, cheap, good). option to upgrade to GPT-4o for more nuanced conversations. the AI only answers from your training data. it won't make things up.</div></div>
+<div class="faq-item"><div class="faq-q">how much does it cost to run?</div><div class="faq-a">$5-30/month in API calls depending on volume. 100 chats/month = about $5-10. i estimate your monthly cost before building.</div></div>
+<div class="faq-item"><div class="faq-q">can it book appointments?</div><div class="faq-a">Premium includes Cal.com or Calendly integration. bot checks availability, suggests times, confirms booking. no human needed.</div></div>
+<div class="faq-item"><div class="faq-q">what if it gives a wrong answer?</div><div class="faq-a">it only answers from the data you provide. if your FAQ says $150, it says $150. feedback mechanism included. Premium gets 30 days of accuracy optimization.</div></div>
+<div class="faq-item"><div class="faq-q">what website platforms does it work on?</div><div class="faq-a">everything. WordPress, Wix, Squarespace, Webflow, Shopify, custom sites. one script tag. 5 minutes to install.</div></div>
+</section>
+
+<section class="final-cta">
+<h2>message me your website URL</h2>
+<p>i'll tell you exactly what questions the chatbot could handle and estimate how many leads it would capture based on your traffic.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a><br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+<footer><div class="container"><p>not a generic ChatGPT widget. trained on YOUR content. YOUR pricing. YOUR services. YOUR brand voice.</p></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});</script>
+</body>
+</html>

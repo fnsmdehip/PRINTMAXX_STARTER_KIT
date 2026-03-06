@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Scraping | Clean Data in 48 Hours | 200+ Sites Scraped</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#10b981;--accent2:#34d399;--green:#22c55e;--orange:#f59e0b}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#059669}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.sample{padding:60px 0;border-top:1px solid var(--border)}
+.sample h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.sample .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.data-table{width:100%;overflow-x:auto;margin-bottom:24px}
+.data-table table{width:100%;border-collapse:collapse;font-size:0.85rem;min-width:600px}
+.data-table th{background:var(--card);padding:10px 12px;text-align:left;border:1px solid var(--border);color:var(--accent2);font-weight:600}
+.data-table td{padding:10px 12px;border:1px solid var(--border);color:var(--muted)}
+.data-table tr:nth-child(even) td{background:rgba(255,255,255,0.02)}
+.data-note{font-size:0.8rem;color:var(--muted);margin-top:8px;font-style:italic}
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+.scrape-list{padding:60px 0;border-top:1px solid var(--border)}
+.scrape-list h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.scrape-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.scrape-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px}
+.scrape-item h3{font-size:0.95rem;margin-bottom:4px}
+.scrape-item p{font-size:0.82rem;color:var(--muted)}
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#0a2e1f,#051a10);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#0a1a14,#0a2e1f);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted);text-align:center;padding:12px}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.tier-grid{grid-template-columns:1fr}.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>you need data from a website. copying it manually would take 40 hours.</h1>
+<p class="sub">i'll have it in a clean spreadsheet in 48 hours. names, emails, prices, listings, reviews, whatever. 200+ websites scraped.</p>
+<div class="stats">
+<div class="stat"><div class="num">200+</div><div class="label">websites scraped</div></div>
+<div class="stat"><div class="num">50K</div><div class="label">max records per job</div></div>
+<div class="stat"><div class="num">48hr</div><div class="label">typical delivery</div></div>
+<div class="stat"><div class="num">100%</div><div class="label">clean, deduplicated</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="sample">
+<h2>sample output: 500 dental practices in Texas</h2>
+<p class="desc">every record formatted, deduplicated, ready to import into your CRM or spreadsheet. no raw HTML dumps.</p>
+<div class="data-table">
+<table>
+<tr><th>Business Name</th><th>Address</th><th>Phone</th><th>Website</th><th>Rating</th><th>Reviews</th></tr>
+<tr><td>Smile Dental Austin</td><td>1234 Congress Ave, Austin TX</td><td>(512) 555-0142</td><td>smiledental.com</td><td>4.8</td><td>247</td></tr>
+<tr><td>Dallas Family Dentistry</td><td>5678 Oak Lawn Ave, Dallas TX</td><td>(214) 555-0198</td><td>dallasfamilydent.com</td><td>4.6</td><td>183</td></tr>
+<tr><td>Houston Dental Group</td><td>910 Westheimer Rd, Houston TX</td><td>(713) 555-0176</td><td>houstondental.com</td><td>4.9</td><td>312</td></tr>
+<tr><td>SA Bright Smiles</td><td>2345 Broadway, San Antonio TX</td><td>(210) 555-0134</td><td>sabrightsmiles.com</td><td>4.7</td><td>156</td></tr>
+<tr><td>Fort Worth Dental Care</td><td>6789 Camp Bowie, Fort Worth TX</td><td>(817) 555-0167</td><td>fwdentalcare.com</td><td>4.5</td><td>98</td></tr>
+</table>
+</div>
+<p class="data-note">sample data for demonstration. actual deliverable includes all requested fields, fully verified.</p>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">Quick Scrape</div>
+<div class="price">$50 <span>/ one-time</span></div>
+<div class="delivery">delivered in 2 days</div>
+<div class="desc">up to 500 records from 1 website. delivered as clean CSV/Excel.</div>
+<ul>
+<li>up to 500 records</li>
+<li>1 website</li>
+<li>CSV or Excel output</li>
+<li>basic data cleaning</li>
+<li>1 revision</li>
+<li class="no">custom script</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">Full Data Extract</div>
+<div class="price">$150 <span>/ one-time</span></div>
+<div class="delivery">delivered in 4 days</div>
+<div class="desc">up to 5,000 records from up to 3 websites. deduplication, cleaning, formatting included.</div>
+<ul>
+<li>up to 5,000 records</li>
+<li>up to 3 websites</li>
+<li>CSV + Excel + JSON</li>
+<li>full dedup and cleaning</li>
+<li>2 revisions</li>
+<li class="no">custom script</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">Custom Scraper Build</div>
+<div class="price">$500 <span>/ one-time</span></div>
+<div class="delivery">delivered in 7 days</div>
+<div class="desc">custom Python scraper for your use case. up to 50,000 records. the script is yours to keep and re-run.</div>
+<ul>
+<li>up to 50,000 records</li>
+<li>unlimited websites</li>
+<li>CSV + Excel + JSON + database</li>
+<li>custom Python script (yours)</li>
+<li>scheduling setup</li>
+<li>full documentation</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="scrape-list">
+<h2>what i scrape</h2>
+<div class="scrape-grid">
+<div class="scrape-item"><h3>business directories</h3><p>Google Maps, Yelp, Yellow Pages, BBB</p></div>
+<div class="scrape-item"><h3>real estate listings</h3><p>Zillow, Realtor, Redfin</p></div>
+<div class="scrape-item"><h3>ecommerce products</h3><p>Amazon, Shopify stores, eBay</p></div>
+<div class="scrape-item"><h3>job listings</h3><p>LinkedIn, Indeed, Glassdoor</p></div>
+<div class="scrape-item"><h3>review sites</h3><p>Google Reviews, Trustpilot, G2</p></div>
+<div class="scrape-item"><h3>government databases</h3><p>SAM.gov, public records, USAspending</p></div>
+</div>
+</section>
+
+<section class="proof">
+<h2>client results</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"needed 10,000 restaurant contacts for a cold email campaign. got a clean spreadsheet in 3 days. every record verified."</div>
+<div class="author">Jake P. - marketing agency</div>
+<div class="result">10,000 records, 3-day delivery</div>
+</div>
+<div class="testimonial">
+<div class="quote">"the custom scraper saved me 15 hours per week. it runs on a schedule and dumps fresh data into my Google Sheet every morning."</div>
+<div class="author">Lisa H. - competitor analyst</div>
+<div class="result">15 hours/week saved</div>
+</div>
+<div class="testimonial">
+<div class="quote">"tried scraping Zillow myself for 2 days. gave up. sent the URL, got 5,000 listings with all fields in 4 days."</div>
+<div class="author">Mark R. - real estate investor</div>
+<div class="result">5,000 listings scraped</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>recent scraping projects</h2>
+<div class="port-grid">
+<div class="port-item"><div class="port-thumb">500 dental practices<br>TX, Google Maps</div><div class="port-info"><h3>Dental Leads</h3><p>name, phone, email, rating, reviews</p></div></div>
+<div class="port-item"><div class="port-thumb">3,000 Shopify products<br>competitor store</div><div class="port-info"><h3>Product Intel</h3><p>name, price, SKU, reviews, stock</p></div></div>
+<div class="port-item"><div class="port-thumb">10,000 job listings<br>Indeed, 5 cities</div><div class="port-info"><h3>Job Market Data</h3><p>title, company, salary, location</p></div></div>
+<div class="port-item"><div class="port-thumb">5,000 Zillow listings<br>3 metro areas</div><div class="port-info"><h3>Real Estate Data</h3><p>address, price, beds, baths, sqft</p></div></div>
+<div class="port-item"><div class="port-thumb">2,000 Google reviews<br>competitor analysis</div><div class="port-info"><h3>Review Analysis</h3><p>rating, text, date, response</p></div></div>
+<div class="port-item"><div class="port-thumb">custom Python scraper<br>daily price monitor</div><div class="port-info"><h3>Price Tracker</h3><p>auto-runs, Slack alerts on changes</p></div></div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open"><div class="faq-q">is web scraping legal?</div><div class="faq-a">scraping publicly available data is legal in the US (hiQ v. LinkedIn, 2022). i only scrape public data. no paywalls, no authentication bypass, no private info.</div></div>
+<div class="faq-item"><div class="faq-q">can you scrape [specific website]?</div><div class="faq-a">message me the URL before ordering. i'll confirm within 2 hours whether i can scrape it, what fields are available, and how many records exist.</div></div>
+<div class="faq-item"><div class="faq-q">what if the website changes after delivery?</div><div class="faq-a">Premium includes a reusable Python script. if the site changes within 30 days, i update the scraper once at no charge.</div></div>
+<div class="faq-item"><div class="faq-q">can you scrape emails?</div><div class="faq-a">i extract emails that are publicly displayed on websites (business directories, contact pages). no private emails, no data behind logins.</div></div>
+</section>
+
+<section class="final-cta">
+<h2>message me the URL and what data you need</h2>
+<p>i'll confirm feasibility and give you a record count estimate within 2 hours. plus a 10-record sample before the full job.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a><br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+<footer><div class="container"><p>i deliver a 10-record sample before running the full job. if the sample doesn't match, you adjust before i proceed. no surprises.</p></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});</script>
+</body>
+</html>

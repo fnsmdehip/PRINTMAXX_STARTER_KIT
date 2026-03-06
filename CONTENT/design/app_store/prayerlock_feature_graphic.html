@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PrayerLock — Feature Graphic 1024x500</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #111; }
+  .graphic {
+    width: 1024px; height: 500px;
+    background: linear-gradient(135deg, #1A237E 0%, #0D1442 60%, #000033 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; padding: 0 80px;
+  }
+  .graphic .pattern {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 25% 50%, rgba(255,213,79,0.08) 0%, transparent 50%);
+  }
+  .stars { position: absolute; top: 40px; right: 80px; }
+  .star { fill: #FFD54F; opacity: 0.6; }
+  .left { position: relative; z-index: 1; flex: 1; }
+  .left h1 {
+    font-family: 'Playfair Display', serif; font-size: 56px; color: #FFFFFF;
+    line-height: 1.15; margin-bottom: 16px;
+  }
+  .left h1 span { color: #FFD54F; }
+  .left p { font-family: 'Inter', sans-serif; font-size: 20px; color: rgba(255,255,255,0.6); max-width: 400px; }
+  .right { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; }
+  .icon-preview {
+    width: 160px; height: 160px; border-radius: 36px;
+    background: linear-gradient(135deg, #1A237E, #283593);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    font-size: 72px; color: #FFD54F;
+  }
+  .badge {
+    position: absolute; bottom: 40px; right: 80px;
+    font-family: 'Inter', sans-serif; font-size: 14px;
+    color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="graphic">
+  <div class="pattern"></div>
+  <div class="left">
+    <h1>Lock In Your <span>Prayer</span></h1>
+    <p>Distraction-free prayer times with screen locking and gentle reminders.</p>
+  </div>
+  <div class="right">
+    <div class="icon-preview">&#9790;</div>
+  </div>
+  <div class="badge">PRINTMAXX</div>
+</div>
+</body>
+</html>

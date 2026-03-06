@@ -1,1029 +1,1286 @@
 #!/usr/bin/env python3
 """
 PRINTMAXX Content Factory
-=========================
-Unified content pipeline: ingest -> adapt -> schedule -> track -> recycle.
+==========================
+One script to rule all content generation. Takes ANY input (alpha entry, build
+log, research finding, tool discovery) and outputs ALL formats simultaneously.
 
-Takes content from CONTENT/social/{niche}/ directories, adapts for multiple
-platforms, schedules with natural timing, tracks what's posted, and recycles
-top performers after 30 days.
+Runs the copy-style.md checklist on every piece of output. No em dashes, no AI
+vocabulary, consequence-first hooks, PRINTMAXXER voice.
 
-CLI:
-  --status          Show factory status (content counts, queue depth, recycling)
-  --ingest          Scan content dirs and load new pieces into the queue
-  --adapt           Adapt queued content for all target platforms
-  --schedule        Generate Buffer-compatible CSVs with optimal timing
-  --recycle-winners Re-queue top performers with modifications (30+ days old)
-  --factory INPUT   Take a single piece of text and generate 50+ adapted variants
-  --dry-run         Preview actions without writing files
-  --niche NICHE     Filter to specific niche (faith, fitness, tech, etc.)
-  --platform PLAT   Filter to specific platform (twitter, linkedin, reddit, etc.)
-  --export-buffer   Export scheduled content as Buffer-compatible CSVs
-  --daily           Run full daily cycle: ingest + adapt + schedule + recycle
+Outputs:
+    - 3 tweets (consequence-first hooks, PRINTMAXXER voice)
+    - 1 tweet thread (5-7 tweets)
+    - 1 LinkedIn post (B2B angle)
+    - 1 Reddit post (value-first, platform-appropriate)
+    - 1 newsletter section (2-3 paragraphs)
+    - 1 Gumroad product angle (if applicable)
 
 Usage:
-  python3 AUTOMATIONS/content_factory.py --status
-  python3 AUTOMATIONS/content_factory.py --daily --dry-run
-  python3 AUTOMATIONS/content_factory.py --factory "cold emailed 200 dentists. 27% open rate. booked 4 calls."
-  python3 AUTOMATIONS/content_factory.py --ingest --niche faith
-  python3 AUTOMATIONS/content_factory.py --export-buffer --platform twitter
-  python3 AUTOMATIONS/content_factory.py --recycle-winners
+    python3 AUTOMATIONS/content_factory.py --input "topic or finding"
+    python3 AUTOMATIONS/content_factory.py --from-alpha ALPHA042
+    python3 AUTOMATIONS/content_factory.py --from-session
+    python3 AUTOMATIONS/content_factory.py --batch-alpha 10
+    python3 AUTOMATIONS/content_factory.py --voice-check "CONTENT/social/auto_generated/tweets_*.csv"
+    python3 AUTOMATIONS/content_factory.py --dry-run --input "cold email framework"
+
+Cron:
+    0 8 * * * cd $BASE && python3 AUTOMATIONS/content_factory.py --batch-alpha 5 >> AUTOMATIONS/logs/content_factory.log 2>&1
 """
 
-import os
-import sys
+from __future__ import annotations
+
+import argparse
 import csv
 import json
-import re
-import hashlib
-import argparse
+import os
 import random
-from datetime import datetime, timedelta, timezone
+import re
+import sys
+import textwrap
+from datetime import datetime
 from pathlib import Path
-from collections import defaultdict
+from typing import Any, Dict, List, Optional, Tuple
 
 # ---------------------------------------------------------------------------
-# PATHS
+# Path safety
 # ---------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent
-CONTENT_SOCIAL = BASE_DIR / "CONTENT" / "social"
-LEDGER_DIR = BASE_DIR / "LEDGER"
-OPS_DIR = BASE_DIR / "OPS"
-AUTOMATIONS_DIR = BASE_DIR / "AUTOMATIONS"
-CONTENT_POSTING = AUTOMATIONS_DIR / "content_posting"
-BUFFER_EXPORT_DIR = AUTOMATIONS_DIR / "content_posting" / "buffer_exports"
-
-# Tracking files
-FACTORY_QUEUE_CSV = LEDGER_DIR / "CONTENT_FACTORY_QUEUE.csv"
-FACTORY_POSTED_CSV = LEDGER_DIR / "CONTENT_FACTORY_POSTED.csv"
-FACTORY_RECYCLED_CSV = LEDGER_DIR / "CONTENT_FACTORY_RECYCLED.csv"
-CONTENT_POSTED_CSV = LEDGER_DIR / "CONTENT_POSTED.csv"
-CONTENT_PERFORMANCE_CSV = LEDGER_DIR / "CONTENT_PERFORMANCE.csv"
-CONTENT_WINNERS_CSV = LEDGER_DIR / "CONTENT_WINNERS.csv"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+ALPHA_CSV = PROJECT_ROOT / "LEDGER" / "ALPHA_STAGING.csv"
+OUTPUT_DIR = PROJECT_ROOT / "CONTENT" / "social" / "auto_generated"
+LOG_DIR = PROJECT_ROOT / "AUTOMATIONS" / "logs"
+SESSION_LOG = PROJECT_ROOT / "OPS" / "SESSION_LOG.md"
+COPY_STYLE = PROJECT_ROOT / ".claude" / "rules" / "copy-style.md"
 
 
-def safe_path(target):
+def safe_path(target: Path) -> Path:
     resolved = Path(target).resolve()
-    if not str(resolved).startswith(str(BASE_DIR)):
-        raise ValueError(f"BLOCKED: {resolved} is outside project root")
+    if not str(resolved).startswith(str(PROJECT_ROOT)):
+        raise ValueError(f"BLOCKED: {resolved} is outside project root {PROJECT_ROOT}")
     return resolved
 
 
+def log(msg: str) -> None:
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{ts}] content_factory: {msg}"
+    print(line, file=sys.stderr)
+    safe_path(LOG_DIR).mkdir(parents=True, exist_ok=True)
+    with open(safe_path(LOG_DIR / "content_factory.log"), "a") as f:
+        f.write(line + "\n")
+
+
 # ---------------------------------------------------------------------------
-# ACCOUNT + PLATFORM CONFIG
+# BANNED vocabulary and patterns from copy-style.md
+# ---------------------------------------------------------------------------
+BANNED_WORDS = [
+    "additionally", "moreover", "furthermore", "testament", "landscape",
+    "paradigm", "leverage", "utilize", "delve", "dive into", "unpack",
+    "comprehensive", "robust", "streamlined", "game-changer", "unlock",
+    "elevate", "cutting-edge", "innovative", "revolutionary", "empower",
+    "enable", "foster", "seamless", "frictionless", "journey",
+    "groundbreaking", "synergy", "holistic", "unprecedented",
+    "transformative", "disruptive", "ecosystem", "scalable",
+]
+
+BANNED_PHRASES = [
+    "it's not just", "in order to", "due to the fact that",
+    "at this point in time", "in terms of", "it's important to note",
+    "it goes without saying", "i hope this helps",
+    "let me know if you have questions", "happy to assist",
+    "as of my last update", "great question",
+    "in today's rapidly evolving", "in conclusion",
+]
+
+FIND_REPLACE = {
+    "\u2014": ", ",    # em dash
+    "\u2013": ", ",    # en dash
+    "leverage": "use",
+    "utilize": "use",
+    "additionally": "also",
+    "furthermore": "also",
+    "delve into": "look at",
+    "comprehensive": "",
+    "robust": "solid",
+    "innovative": "new",
+    "seamless": "smooth",
+    "streamlined": "simple",
+    "empower": "help",
+}
+
+# ---------------------------------------------------------------------------
+# Account definitions
 # ---------------------------------------------------------------------------
 ACCOUNTS = {
-    "printmaxxer":  {"niche": "tech",     "handle": "@PRINTMAXXER",    "platforms": ["twitter", "linkedin", "reddit"]},
-    "growthpilled": {"niche": "tech",     "handle": "@growthpilled",   "platforms": ["twitter", "linkedin"]},
-    "outboundtwts": {"niche": "tech",     "handle": "@outboundtwts",   "platforms": ["twitter", "linkedin"]},
-    "clipvault":    {"niche": "memes",    "handle": "@clipvault_",     "platforms": ["twitter", "tiktok", "instagram"]},
-    "toolstwts":    {"niche": "tech",     "handle": "@toolstwts",      "platforms": ["twitter"]},
-    "repscheme":    {"niche": "fitness",  "handle": "@repscheme",      "platforms": ["twitter", "tiktok", "instagram"]},
-    "voidpilled":   {"niche": "esoteric", "handle": "@voidpilled",     "platforms": ["twitter"]},
-    "selahmoments": {"niche": "faith",    "handle": "@selahmoments",   "platforms": ["twitter", "tiktok", "instagram"]},
-    "shiplog":      {"niche": "tech",     "handle": "@shiplog_",       "platforms": ["twitter"]},
-    "silentframes": {"niche": "aesthetic","handle": "@silentframes",   "platforms": ["twitter", "instagram"]},
-    "velvetframes": {"niche": "beauty",   "handle": "@velvetframes",   "platforms": ["twitter", "instagram"]},
-    "drifthour":    {"niche": "ambient",  "handle": "@drifthour",      "platforms": ["twitter", "youtube"]},
+    "PRINTMAXXER": {
+        "handle": "@PRINTMAXXER",
+        "niche": "tech/building-in-public",
+        "tone": "aggressive builder energy, specific numbers, consequence-first",
+        "relevant_keywords": [
+            "saas", "revenue", "mrr", "ship", "build", "launch", "code",
+            "automation", "ai", "gpt", "claude", "startup", "indie",
+            "product", "growth", "cold email", "gumroad", "stripe",
+            "scraper", "tool", "wrapper", "api", "agent", "deploy",
+        ],
+    },
+    "repscheme": {
+        "handle": "@repscheme",
+        "niche": "fitness",
+        "tone": "discipline-focused, no excuses, numbers on gains",
+        "relevant_keywords": [
+            "gym", "fitness", "workout", "lift", "muscle", "protein",
+            "creatine", "sleep", "discipline", "consistency",
+        ],
+    },
+    "drifthour": {
+        "handle": "@drifthour",
+        "niche": "aesthetic/ambient",
+        "tone": "atmospheric, minimal words, vibe-first, lowercase",
+        "relevant_keywords": [
+            "aesthetic", "lofi", "ambient", "music", "curate", "vibe",
+            "golden hour", "morning", "walk", "silence", "minimal",
+        ],
+    },
+    "voidpilled": {
+        "handle": "@voidpilled",
+        "niche": "esoteric",
+        "tone": "cryptic, philosophical, brief, no hedging",
+        "relevant_keywords": [
+            "consciousness", "psychedelic", "brain", "neuroscience",
+            "meditation", "energy", "frequency", "simulation", "reality",
+            "pattern", "system", "data", "signal", "hidden", "deep",
+        ],
+    },
+    "selahmoments": {
+        "handle": "@selahmoments",
+        "niche": "faith",
+        "tone": "reflective, purposeful, community-oriented, lowercase",
+        "relevant_keywords": [
+            "faith", "god", "prayer", "steward", "grace", "blessing",
+            "church", "ministry", "serve", "community", "worship",
+        ],
+    },
 }
 
-# Map niches to content directories
-NICHE_DIRS = {
-    "tech":      ["printmaxxer", "ai", "growthpilled", "outboundtwts", "toolstwts", "shiplog"],
-    "faith":     ["faith", "selahmoments", "ramadan"],
-    "fitness":   ["fitness", "repscheme"],
-    "memes":     ["memes", "clipvault"],
-    "esoteric":  ["esoteric"],
-    "aesthetic":  ["aesthetic", "silentframes"],
-    "beauty":    ["beauty_curated"],
-    "ambient":   ["drifthour"],
-    "findom":    ["findom"],
-}
+# ---------------------------------------------------------------------------
+# Tweet hook templates (consequence-first, PRINTMAXXER voice)
+# ---------------------------------------------------------------------------
+TWEET_HOOKS = [
+    "{consequence}. here's exactly how it works.",
+    "{consequence}. most people miss this completely.",
+    "i {action} and {consequence}. stop overthinking it.",
+    "{consequence}. the play is right there if you're paying attention.",
+    "{tool_or_method}. {consequence}. it's borderline illegal how good this is.",
+    "{consequence}. tested it myself. {proof}.",
+    "just {action}. {consequence}. no excuses left.",
+    "{consequence}. one session. that's all it took.",
+    "the {topic} play nobody talks about: {method}. {consequence}.",
+    "{consequence}. and i almost didn't try it.",
+]
 
-# Peak posting times per platform (UTC hours). 2-4 slots per platform.
-PLATFORM_PEAK_TIMES = {
-    "twitter":   [13, 17, 22, 1],     # 8am, 12pm, 5pm, 8pm EST
-    "linkedin":  [12, 16, 21],         # 7am, 11am, 4pm EST
-    "tiktok":    [11, 17, 2],          # 6am, 12pm, 9pm EST
-    "instagram": [14, 19, 0],          # 9am, 2pm, 7pm EST
-    "reddit":    [13, 18, 23],         # 8am, 1pm, 6pm EST
-    "youtube":   [15, 20],             # 10am, 3pm EST
-    "substack":  [14],                 # 9am EST (1 post/day max)
-}
+THREAD_OPENERS = [
+    "i {action} and the results were wild. full breakdown:",
+    "{consequence}. here's the exact playbook (thread):",
+    "spent {timeframe} testing this. {consequence}. here's everything:",
+    "the {topic} strategy that actually works. no fluff, just steps:",
+    "{consequence}. and it only took {timeframe}. here's how:",
+]
 
-# Character limits per platform
-CHAR_LIMITS = {
-    "twitter":   280,
-    "linkedin":  3000,
-    "tiktok":    2200,
-    "instagram": 2200,
-    "reddit":    40000,
-    "youtube":   5000,
-    "substack":  100000,
-}
+THREAD_CLOSERS = [
+    "that's the whole play. stop planning, start doing.",
+    "repost this if it helped. building more of these.",
+    "the formula: {method}. results speak for themselves.",
+    "now you know. the rest is execution.",
+    "if this saved you time, follow for more like this.",
+]
 
-# Hashtag strategies per platform
-HASHTAG_STRATEGY = {
-    "twitter":   {"count": (0, 2), "style": "minimal"},        # 0-2 hashtags, embedded
-    "linkedin":  {"count": (0, 3), "style": "bottom"},         # 0-3 at bottom
-    "tiktok":    {"count": (3, 7), "style": "bottom_fyp"},     # 3-7, always include #fyp
-    "instagram": {"count": (5, 15), "style": "bottom_block"},  # 5-15 in block
-    "reddit":    {"count": (0, 0), "style": "none"},           # zero hashtags
-    "youtube":   {"count": (3, 8), "style": "description"},    # in description
-    "substack":  {"count": (0, 0), "style": "none"},
-}
+LINKEDIN_TEMPLATES = [
+    "I tested {method} for {timeframe}.\n\nResults:\n{bullets}\n\nThe takeaway: {takeaway}\n\nIf you're building in this space, this is worth trying.",
+    "{consequence}.\n\nHere's what I learned after {timeframe} of testing:\n\n{bullets}\n\nThe B2B angle: {b2b_angle}",
+    "Most people overthink {topic}.\n\nHere's the simple version:\n\n{bullets}\n\n{takeaway}",
+]
 
-# Niche-specific hashtag pools
-NICHE_HASHTAGS = {
-    "tech":     ["#buildinpublic", "#indiehackers", "#solopreneur", "#saas", "#automation",
-                 "#startup", "#coding", "#ai", "#productivity", "#nocode"],
-    "faith":    ["#faith", "#prayer", "#christianity", "#bible", "#godisgood",
-                 "#prayerlife", "#devotional", "#scripture", "#morningprayer", "#faithjourney"],
-    "fitness":  ["#fitness", "#gym", "#workout", "#gains", "#fitfam",
-                 "#bodybuilding", "#nutrition", "#protein", "#training", "#healthylifestyle"],
-    "memes":    ["#memes", "#funny", "#viral", "#relatable", "#trending"],
-    "esoteric": ["#philosophy", "#consciousness", "#wisdom", "#awakening", "#metaphysics"],
-    "aesthetic": ["#aesthetic", "#photography", "#art", "#minimal", "#design"],
-    "beauty":   ["#beauty", "#skincare", "#makeup", "#glam", "#selfcare"],
-    "ambient":  ["#ambient", "#lofi", "#chill", "#relaxing", "#study"],
-    "findom":   ["#findom", "#paypig", "#tribute", "#goddess"],
-}
+REDDIT_TEMPLATES = [
+    "## {title}\n\n{intro}\n\n**What I did:**\n{steps}\n\n**Results:**\n{results}\n\nHappy to answer questions.",
+    "## {title}\n\n{intro}\n\n{body}\n\nLet me know if you want the details on any specific step.",
+    "## {title}\n\nI spent {timeframe} on this and wanted to share what I found.\n\n{body}\n\n**Key numbers:** {results}",
+]
 
-# AI slop words to filter
-AI_SLOP = {
-    "additionally", "moreover", "furthermore", "testament", "landscape",
-    "paradigm", "leverage", "utilize", "delve", "unpack", "comprehensive",
-    "robust", "streamlined", "game-changer", "unlock", "elevate",
-    "cutting-edge", "innovative", "revolutionary", "empower", "seamless",
-    "frictionless", "journey", "groundbreaking", "nestled", "tapestry",
-}
+NEWSLETTER_TEMPLATES = [
+    "{hook}\n\n{body_p1}\n\n{body_p2}\n\nThe bottom line: {takeaway}",
+    "{hook}\n\n{body_p1}\n\n{body_p2}\n\n{body_p3}",
+]
 
+GUMROAD_ANGLES = [
+    "the {topic} playbook: everything I tested, what worked, what didn't. {price_anchor}.",
+    "{method} template pack: copy my exact {topic} setup. save {timeframe} of trial and error.",
+    "the {topic} swipe file: {number} proven {asset_type} you can use today.",
+]
 
 # ---------------------------------------------------------------------------
-# CONTENT EXTRACTION
+# Content input extraction
 # ---------------------------------------------------------------------------
-
-def extract_posts_from_md(filepath: Path) -> list[dict]:
-    """Extract individual posts/tweets from a markdown content file."""
-    posts = []
-    text = filepath.read_text(encoding="utf-8", errors="replace")
-
-    # Skip non-content files
-    skip_patterns = ["CENTRAL_INDEX", "GUIDE", "PLAYBOOK", "AUDIT", "STRATEGY", "INDEX"]
-    if any(p in filepath.stem.upper() for p in skip_patterns):
-        return []
-
-    # Try to detect tweet-style content (numbered lists, separated blocks)
-    # Pattern 1: Lines that look like standalone tweets (short, no markdown headers)
-    lines = text.split("\n")
-    current_block = []
-    in_content = False
-
-    for line in lines:
-        stripped = line.strip()
-
-        # Skip markdown headers and metadata lines
-        if stripped.startswith("#") and len(stripped) < 80:
-            if current_block and in_content:
-                block_text = "\n".join(current_block).strip()
-                if 20 < len(block_text) < 3000 and not block_text.startswith("```"):
-                    posts.append({
-                        "text": block_text,
-                        "source_file": str(filepath.relative_to(BASE_DIR)),
-                        "extracted_at": datetime.now(timezone.utc).isoformat(),
-                    })
-            current_block = []
-            in_content = False
-            continue
-
-        # Skip code blocks, tables, metadata
-        if stripped.startswith("```") or stripped.startswith("|") or stripped.startswith("---"):
-            if current_block and in_content:
-                block_text = "\n".join(current_block).strip()
-                if 20 < len(block_text) < 3000:
-                    posts.append({
-                        "text": block_text,
-                        "source_file": str(filepath.relative_to(BASE_DIR)),
-                        "extracted_at": datetime.now(timezone.utc).isoformat(),
-                    })
-            current_block = []
-            in_content = False
-            continue
-
-        if stripped:
-            in_content = True
-            current_block.append(stripped)
-        elif current_block and in_content:
-            # Empty line = block separator
-            block_text = "\n".join(current_block).strip()
-            if 20 < len(block_text) < 3000 and not block_text.startswith("```"):
-                posts.append({
-                    "text": block_text,
-                    "source_file": str(filepath.relative_to(BASE_DIR)),
-                    "extracted_at": datetime.now(timezone.utc).isoformat(),
-                })
-            current_block = []
-            in_content = False
-
-    # Don't forget last block
-    if current_block and in_content:
-        block_text = "\n".join(current_block).strip()
-        if 20 < len(block_text) < 3000 and not block_text.startswith("```"):
-            posts.append({
-                "text": block_text,
-                "source_file": str(filepath.relative_to(BASE_DIR)),
-                "extracted_at": datetime.now(timezone.utc).isoformat(),
-            })
-
-    return posts
-
-
-def extract_posts_from_csv(filepath: Path) -> list[dict]:
-    """Extract posts from a CSV file (Buffer format or similar)."""
-    posts = []
-    try:
-        with open(filepath, "r", encoding="utf-8", errors="replace") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                # Try common column names for content text
-                text = (row.get("text") or row.get("post_text") or
-                        row.get("tweet_text") or row.get("content") or
-                        row.get("Text") or "")
-                text = text.strip().strip('"')
-                if len(text) > 20:
-                    posts.append({
-                        "text": text,
-                        "source_file": str(filepath.relative_to(BASE_DIR)),
-                        "extracted_at": datetime.now(timezone.utc).isoformat(),
-                    })
-    except Exception:
-        pass
-    return posts
-
-
-def content_hash(text: str) -> str:
-    """Generate a short hash for deduplication."""
-    normalized = re.sub(r"\s+", " ", text.lower().strip())
-    return hashlib.md5(normalized.encode()).hexdigest()[:12]
-
-
-# ---------------------------------------------------------------------------
-# PLATFORM ADAPTATION
-# ---------------------------------------------------------------------------
-
-def adapt_for_platform(text: str, platform: str, niche: str) -> str:
-    """Adapt content text for a specific platform's format and limits."""
-    adapted = text.strip()
-
-    # Clean AI slop
-    for word in AI_SLOP:
-        pattern = re.compile(r"\b" + re.escape(word) + r"\b", re.IGNORECASE)
-        adapted = pattern.sub("", adapted)
-
-    # Remove em dashes
-    adapted = adapted.replace("—", ". ").replace("–", ". ")
-
-    # Platform-specific formatting
-    if platform == "twitter":
-        # Keep short. Remove excessive hashtags. Lowercase energy.
-        adapted = adapted.lower() if not any(c.isupper() for c in adapted[:3]) else adapted
-        if len(adapted) > 280:
-            # Truncate at last sentence boundary before 277 chars
-            truncated = adapted[:277]
-            last_period = truncated.rfind(".")
-            if last_period > 100:
-                adapted = truncated[:last_period + 1]
-            else:
-                adapted = truncated.rstrip() + "..."
-        # Strip hashtags for twitter (they hurt reach)
-        adapted = re.sub(r"#\w+\s*", "", adapted).strip()
-
-    elif platform == "linkedin":
-        # Professional tone. Add line breaks for readability.
-        # Capitalize first letter of sentences
-        sentences = adapted.split(". ")
-        adapted = ".\n\n".join(s.strip().capitalize() if s else s for s in sentences if s.strip())
-        if not adapted.endswith("."):
-            adapted += "."
-
-    elif platform == "tiktok":
-        # Short caption. Add #fyp. Casual tone.
-        if len(adapted) > 300:
-            # Use first 2-3 sentences as caption
-            sentences = re.split(r"[.!?]+", adapted)
-            caption_parts = []
-            length = 0
-            for s in sentences:
-                s = s.strip()
-                if not s:
-                    continue
-                if length + len(s) > 250:
-                    break
-                caption_parts.append(s)
-                length += len(s)
-            adapted = ". ".join(caption_parts)
-            if not adapted.endswith((".", "!", "?")):
-                adapted += "."
-
-    elif platform == "instagram":
-        # Longer caption OK. Add line breaks.
-        adapted = adapted.replace(". ", ".\n\n")
-
-    elif platform == "reddit":
-        # No hashtags. Conversational. Can be longer.
-        adapted = re.sub(r"#\w+\s*", "", adapted).strip()
-        # Remove promotional CTAs for Reddit
-        cta_patterns = [r"link in bio", r"reply \w+ for", r"DM me for"]
-        for pat in cta_patterns:
-            adapted = re.sub(pat, "", adapted, flags=re.IGNORECASE).strip()
-
-    elif platform == "youtube":
-        # Description format. Can include links and timestamps.
-        pass
-
-    elif platform == "substack":
-        # Newsletter format. Expand into paragraphs.
-        adapted = adapted.replace(". ", ".\n\n")
-
-    # Add hashtags based on platform strategy
-    hashtag_config = HASHTAG_STRATEGY.get(platform, {"count": (0, 0), "style": "none"})
-    min_tags, max_tags = hashtag_config["count"]
-    if max_tags > 0 and niche in NICHE_HASHTAGS:
-        pool = NICHE_HASHTAGS[niche]
-        num_tags = random.randint(min_tags, min(max_tags, len(pool)))
-        selected = random.sample(pool, num_tags)
-
-        if platform == "tiktok":
-            selected = ["#fyp"] + [t for t in selected if t != "#fyp"]
-
-        tag_str = " ".join(selected)
-
-        if hashtag_config["style"] in ("bottom", "bottom_fyp", "bottom_block", "description"):
-            adapted = adapted.rstrip() + "\n\n" + tag_str
-        elif hashtag_config["style"] == "minimal":
-            adapted = adapted.rstrip() + " " + tag_str
-
-    # Enforce character limit
-    limit = CHAR_LIMITS.get(platform, 5000)
-    if len(adapted) > limit:
-        adapted = adapted[:limit - 3].rstrip() + "..."
-
-    return adapted.strip()
-
-
-# ---------------------------------------------------------------------------
-# SCHEDULING
-# ---------------------------------------------------------------------------
-
-def generate_schedule(posts: list[dict], start_date: datetime = None,
-                      days: int = 30, platform_filter: str = None) -> list[dict]:
-    """Generate a posting schedule with natural timing jitter."""
-    if start_date is None:
-        start_date = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
-        start_date += timedelta(days=1)  # Start tomorrow
-
-    scheduled = []
-    # Group posts by account+platform
-    post_queue = defaultdict(list)
-    for p in posts:
-        key = (p.get("account", "printmaxxer"), p.get("platform", "twitter"))
-        if platform_filter and key[1] != platform_filter:
-            continue
-        post_queue[key].append(p)
-
-    for (account, platform), account_posts in post_queue.items():
-        peak_hours = PLATFORM_PEAK_TIMES.get(platform, [13, 17])
-        posts_per_day = min(len(peak_hours), 4)
-
-        idx = 0
-        for day_offset in range(days):
-            if idx >= len(account_posts):
-                break
-            post_date = start_date + timedelta(days=day_offset)
-
-            # Skip weekends for LinkedIn
-            if platform == "linkedin" and post_date.weekday() >= 5:
-                continue
-
-            for slot_hour in peak_hours[:posts_per_day]:
-                if idx >= len(account_posts):
-                    break
-                # Add jitter: +/- 15 minutes
-                jitter_min = random.randint(-15, 15)
-                post_time = post_date.replace(hour=slot_hour % 24, minute=max(0, min(59, 30 + jitter_min)))
-
-                entry = account_posts[idx].copy()
-                entry["scheduled_at"] = post_time.strftime("%Y-%m-%d %H:%M")
-                entry["scheduled_date"] = post_time.strftime("%Y-%m-%d")
-                entry["scheduled_time"] = post_time.strftime("%H:%M")
-                entry["status"] = "scheduled"
-                scheduled.append(entry)
-                idx += 1
-
-    # Sort by time
-    scheduled.sort(key=lambda x: x.get("scheduled_at", ""))
-    return scheduled
-
-
-# ---------------------------------------------------------------------------
-# RECYCLING
-# ---------------------------------------------------------------------------
-
-def find_winners_for_recycling(min_age_days: int = 30) -> list[dict]:
-    """Find top-performing posts that are old enough to recycle."""
-    winners = []
-    cutoff = datetime.now(timezone.utc) - timedelta(days=min_age_days)
-
-    if not CONTENT_PERFORMANCE_CSV.exists():
-        return winners
-
-    try:
-        with open(CONTENT_PERFORMANCE_CSV, "r") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                posted_at = row.get("posted_at", "")
-                if not posted_at:
-                    continue
-                try:
-                    post_date = datetime.fromisoformat(posted_at.replace("Z", "+00:00"))
-                except (ValueError, TypeError):
-                    continue
-
-                if post_date > cutoff:
-                    continue  # Too recent
-
-                # Check if it was a winner (high engagement)
-                try:
-                    score = float(row.get("winner_score", 0))
-                except (ValueError, TypeError):
-                    score = 0
-
-                if score >= 50:
-                    winners.append({
-                        "text": row.get("full_text", row.get("content_preview", "")),
-                        "original_account": row.get("account", ""),
-                        "original_platform": row.get("platform", ""),
-                        "original_score": score,
-                        "original_posted_at": posted_at,
-                        "source_file": "recycled_winner",
-                    })
-    except Exception:
-        pass
-
-    return winners
-
-
-def recycle_post(text: str) -> str:
-    """Modify a winning post for re-posting (avoid exact duplicate detection)."""
-    modifications = [
-        # Swap opening
-        (r"^(i |I )", lambda m: random.choice(["just ", "update: ", "still true: ", "reminder: ", ""])),
-        # Add "update" prefix
-        (r"^", lambda m: random.choice(["", "update: ", "still works: ", ""]) if random.random() > 0.5 else ""),
-        # Swap "here's" with alternatives
-        (r"here'?s", lambda m: random.choice(["here's", "this is", "check"])),
-    ]
-
-    recycled = text
-    mod_applied = False
-    for pattern, replacement in modifications:
-        if not mod_applied and random.random() > 0.5:
-            try:
-                recycled = re.sub(pattern, replacement, recycled, count=1)
-                mod_applied = True
-            except Exception:
-                pass
-
-    if not mod_applied:
-        # At minimum, add a subtle variation
-        suffixes = [
-            "",
-            "\n\nstill works.",
-            "\n\nthis still hits.",
-            "\n\nnothing has changed.",
-        ]
-        recycled = recycled.rstrip() + random.choice(suffixes)
-
-    return recycled.strip()
-
-
-# ---------------------------------------------------------------------------
-# FACTORY MODE (1 input -> 50+ outputs)
-# ---------------------------------------------------------------------------
-
-def factory_expand(text: str, niche: str = "tech") -> list[dict]:
-    """Take a single piece of content and generate 50+ adapted variants."""
-    variants = []
-    source_hash = content_hash(text)
-
-    # 1. Direct platform adaptations (6 platforms)
-    for platform in PLATFORM_PEAK_TIMES:
-        adapted = adapt_for_platform(text, platform, niche)
-        variants.append({
-            "text": adapted,
-            "platform": platform,
-            "niche": niche,
-            "variant_type": "platform_adapt",
-            "source_hash": source_hash,
-        })
-
-    # 2. Hook variations (8 different hooks)
-    hook_templates = [
-        "most people don't know this: {core}",
-        "unpopular opinion: {core}",
-        "i tested this for 30 days. {core}",
-        "stop doing it wrong. {core}",
-        "the thing nobody talks about: {core}",
-        "here's what actually works: {core}",
-        "this changed everything for me. {core}",
-        "everyone's overcomplicating this. {core}",
-    ]
-    # Extract core message (first 2 sentences)
-    sentences = re.split(r"[.!?]+", text)
-    core = ". ".join(s.strip() for s in sentences[:2] if s.strip())
-    if core and not core.endswith("."):
-        core += "."
-
-    for template in hook_templates:
-        hooked = template.format(core=core)
-        for platform in ["twitter", "linkedin", "tiktok"]:
-            adapted = adapt_for_platform(hooked, platform, niche)
-            variants.append({
-                "text": adapted,
-                "platform": platform,
-                "niche": niche,
-                "variant_type": "hook_variation",
-                "source_hash": source_hash,
-            })
-
-    # 3. Question format (engagement posts)
-    question_templates = [
-        "am i the only one who thinks {topic}?",
-        "what's your take on {topic}?",
-        "agree or disagree: {topic}",
-        "{topic}. hot take or common sense?",
-    ]
-    topic = sentences[0].strip().rstrip(".").lower() if sentences else text[:100]
-    for template in question_templates:
-        q = template.format(topic=topic)
-        for platform in ["twitter", "tiktok"]:
-            variants.append({
-                "text": q,
-                "platform": platform,
-                "niche": niche,
-                "variant_type": "question_format",
-                "source_hash": source_hash,
-            })
-
-    # 4. Thread opener (for Twitter threads)
-    thread_opener = f"{core}\n\na thread on what i learned:"
-    variants.append({
-        "text": adapt_for_platform(thread_opener, "twitter", niche),
-        "platform": "twitter",
-        "niche": niche,
-        "variant_type": "thread_opener",
-        "source_hash": source_hash,
-    })
-
-    # 5. Cross-niche adaptations
-    niche_angles = {
-        "faith":   "from a spiritual perspective: ",
-        "fitness": "this applies to training too. ",
-        "tech":    "same principle in tech: ",
-        "memes":   "",
+def extract_topic_from_text(text: str) -> dict:
+    """Parse free text into structured content seed."""
+    seed = {
+        "raw_input": text,
+        "topic": "",
+        "method": "",
+        "consequence": "",
+        "tool": "",
+        "numbers": [],
+        "timeframe": "",
+        "action": "",
+        "proof": "",
+        "input_type": "text",
     }
-    for target_niche, prefix in niche_angles.items():
-        if target_niche == niche:
-            continue
-        cross = prefix + core
-        for platform in ["twitter", "instagram"]:
-            adapted = adapt_for_platform(cross, platform, target_niche)
-            variants.append({
-                "text": adapted,
-                "platform": platform,
-                "niche": target_niche,
-                "variant_type": "cross_niche",
-                "source_hash": source_hash,
-            })
+
+    # Extract numbers
+    numbers = re.findall(r'\$[\d,]+[kK]?(?:/(?:mo|month|day|year|week))?|\d+(?:\.\d+)?%|\d+[xX]|\d{2,}\+?', text)
+    seed["numbers"] = numbers[:5]
+
+    # Extract tool names (domain style or known tools)
+    tool_match = re.search(r'(\w+\.(?:io|ai|com|dev|app|co|sh|so))', text, re.IGNORECASE)
+    if tool_match:
+        seed["tool"] = tool_match.group(1)
+    else:
+        known = re.search(
+            r'\b(n8n|GPT-\d|Claude|Cursor|Vercel|Supabase|Stripe|Notion|'
+            r'Airtable|Zapier|Make|Buffer|Beehiiv|Substack|Gumroad|'
+            r'Playwright|Puppeteer|RevenueCat|Capacitor)\b',
+            text, re.IGNORECASE,
+        )
+        if known:
+            seed["tool"] = known.group(1)
+
+    # Extract timeframe
+    tf_match = re.search(r'(\d+\s*(?:hours?|days?|weeks?|months?|minutes?|sessions?))', text, re.IGNORECASE)
+    if tf_match:
+        seed["timeframe"] = tf_match.group(1)
+    else:
+        seed["timeframe"] = random.choice(["one session", "2 hours", "a weekend", "30 minutes"])
+
+    # First sentence as consequence, rest as method
+    sentences = re.split(r'[.!?]\s+', text.strip())
+    if sentences:
+        seed["consequence"] = sentences[0].strip().rstrip(".")
+        if len(seed["consequence"]) > 140:
+            seed["consequence"] = seed["consequence"][:137] + "..."
+    if len(sentences) > 1:
+        seed["method"] = ". ".join(sentences[1:3]).strip()
+
+    # Topic: first few important words
+    words = [w for w in text.split()[:8] if len(w) > 3]
+    seed["topic"] = " ".join(words[:4]).lower()
+
+    # Action verb extraction
+    action_match = re.search(
+        r'\b(built|shipped|tested|launched|automated|scraped|deployed|'
+        r'wired|connected|set up|configured|found|discovered|created)\b',
+        text, re.IGNORECASE,
+    )
+    if action_match:
+        seed["action"] = action_match.group(1).lower()
+    else:
+        seed["action"] = random.choice(["tested this", "set this up", "built this out"])
+
+    # Proof
+    if numbers:
+        seed["proof"] = f"{numbers[0]} and counting"
+    else:
+        seed["proof"] = "results speak for themselves"
+
+    return seed
+
+
+def extract_from_alpha(entry: dict) -> dict:
+    """Convert an ALPHA_STAGING row into a content seed."""
+    tactic = ""
+    for field in ("extracted_method", "tactic", "reviewer_notes", "alpha_text"):
+        val = (entry.get(field) or "").strip()
+        if val and len(val) > 15:
+            val = re.sub(r'^APPROVED\.?\s*', '', val, flags=re.IGNORECASE)
+            tactic = val.strip(". ")
+            break
+
+    if not tactic:
+        tactic = entry.get("alpha_id", "unknown alpha")
+
+    seed = extract_topic_from_text(tactic)
+    seed["input_type"] = "alpha"
+    seed["alpha_id"] = entry.get("alpha_id", "")
+    seed["category"] = entry.get("category", "")
+    seed["source"] = entry.get("source", "")
+    return seed
+
+
+def extract_from_session_log() -> list[dict]:
+    """Pull recent session accomplishments as content seeds."""
+    seeds = []
+    if not SESSION_LOG.exists():
+        log("SESSION_LOG.md not found")
+        return seeds
+
+    content = SESSION_LOG.read_text(encoding="utf-8", errors="replace")
+
+    # Find recent session blocks
+    session_blocks = re.split(r'(?=##\s+Session\s+\d|(?=\d{4}-\d{2}-\d{2}))', content)
+
+    for block in session_blocks[-3:]:
+        bullets = re.findall(r'[-*]\s+(.{20,200})', block)
+        for bullet in bullets[:5]:
+            if any(skip in bullet.lower() for skip in [
+                "session_log", "persistent_task", "heartbeat",
+                "updated ops", "read ", "checked ", "status:",
+            ]):
+                continue
+            seed = extract_topic_from_text(bullet)
+            seed["input_type"] = "session"
+            seeds.append(seed)
+
+    log(f"Extracted {len(seeds)} content seeds from session log")
+    return seeds[:10]
+
+
+# ---------------------------------------------------------------------------
+# Voice check (copy-style.md compliance)
+# ---------------------------------------------------------------------------
+def voice_check(text: str) -> dict:
+    """Run the copy-style.md pre-publish checklist on text.
+
+    Returns dict with pass/fail, issues found, and cleaned text.
+    """
+    issues = []
+    cleaned = text
+
+    # 1. Em dashes
+    if "\u2014" in cleaned or "\u2013" in cleaned:
+        issues.append("em/en dash found")
+        cleaned = cleaned.replace("\u2014", ", ").replace("\u2013", ", ")
+
+    # 2. Banned AI vocabulary
+    text_lower = cleaned.lower()
+    for word in BANNED_WORDS:
+        if word in text_lower:
+            issues.append(f"banned word: '{word}'")
+            if word in FIND_REPLACE:
+                replacement = FIND_REPLACE[word]
+                cleaned = re.sub(
+                    rf'\b{re.escape(word)}\b',
+                    replacement,
+                    cleaned,
+                    flags=re.IGNORECASE,
+                )
+
+    # 3. Banned phrases
+    for phrase in BANNED_PHRASES:
+        if phrase in text_lower:
+            issues.append(f"banned phrase: '{phrase}'")
+            cleaned = re.sub(re.escape(phrase), "", cleaned, flags=re.IGNORECASE)
+
+    # 4. "It's not just X, it's Y" construction
+    if re.search(r"it'?s not just .+, it'?s", text_lower):
+        issues.append("'it's not just X, it's Y' construction")
+
+    # 5. Excessive hedging
+    hedges = ["might", "possibly", "perhaps", "somewhat", "maybe", "could potentially"]
+    for sent in re.split(r'[.!?]', cleaned):
+        hedge_count = sum(1 for h in hedges if h in sent.lower())
+        if hedge_count >= 2:
+            issues.append(f"excessive hedging: '{sent.strip()[:60]}...'")
+
+    # 6. Title case headings
+    title_case = re.findall(r'^[A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+', cleaned, re.MULTILINE)
+    if title_case and len(title_case) > 1:
+        issues.append("possible title case heading detected")
+
+    # 7. Sycophantic tone
+    syc_patterns = ["great question", "that's such an", "insightful observation"]
+    for sp in syc_patterns:
+        if sp in text_lower:
+            issues.append(f"sycophantic tone: '{sp}'")
+
+    # 8. Chatbot artifacts
+    chatbot = ["i hope this helps", "let me know if", "happy to assist", "feel free to"]
+    for cb in chatbot:
+        if cb in text_lower:
+            issues.append(f"chatbot artifact: '{cb}'")
+            cleaned = re.sub(re.escape(cb) + r'[.!]*', '', cleaned, flags=re.IGNORECASE)
+
+    # 9. Promotional language
+    promo = ["breathtaking", "nestled", "cutting-edge", "state-of-the-art", "world-class"]
+    for p in promo:
+        if p in text_lower:
+            issues.append(f"promotional language: '{p}'")
+
+    # 10. Vague attributions
+    vague = ["studies show", "experts believe", "experts agree", "research suggests"]
+    for v in vague:
+        if v in text_lower:
+            issues.append(f"vague attribution: '{v}'")
+
+    # 11. Filler phrases
+    fillers = {
+        "in order to": "to",
+        "due to the fact that": "because",
+        "at this point in time": "now",
+        "it goes without saying": "",
+    }
+    for filler, replacement in fillers.items():
+        if filler in text_lower:
+            issues.append(f"filler phrase: '{filler}'")
+            cleaned = re.sub(re.escape(filler), replacement, cleaned, flags=re.IGNORECASE)
+
+    # 12. Significance inflation
+    inflation = ["revolutionary", "transforms the landscape", "unprecedented levels",
+                 "paradigm shift", "groundbreaking"]
+    for inf in inflation:
+        if inf in text_lower:
+            issues.append(f"significance inflation: '{inf}'")
+
+    # Clean up artifacts
+    cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+    cleaned = re.sub(r'\s+([,.])', r'\1', cleaned)
+    cleaned = re.sub(r'([,.])\1+', r'\1', cleaned)
+
+    passed = len(issues) == 0
+    return {
+        "passed": passed,
+        "issues": issues,
+        "original": text,
+        "cleaned": cleaned,
+        "issue_count": len(issues),
+    }
+
+
+def voice_check_batch(texts: list[str]) -> list[dict]:
+    """Run voice check on multiple texts."""
+    return [voice_check(t) for t in texts]
+
+
+# ---------------------------------------------------------------------------
+# Content generators
+# ---------------------------------------------------------------------------
+def generate_tweets(seed: dict, count: int = 3) -> list[str]:
+    """Generate consequence-first tweet variants."""
+    tweets = []
+    consequence = seed.get("consequence", "results were wild")
+    method = seed.get("method", "")
+    tool = seed.get("tool", "")
+    action = seed.get("action", "tested this")
+    proof = seed.get("proof", "results speak for themselves")
+    topic = seed.get("topic", "this")
+    numbers = seed.get("numbers", [])
+    tool_or_method = tool if tool else (method[:60] if method else topic)
+
+    available_hooks = list(TWEET_HOOKS)
+    random.shuffle(available_hooks)
+
+    for i in range(min(count, len(available_hooks))):
+        template = available_hooks[i]
+        try:
+            tweet = template.format(
+                consequence=consequence,
+                method=method[:80] if method else topic,
+                tool_or_method=tool_or_method,
+                action=action,
+                proof=proof,
+                topic=topic,
+                tool=tool if tool else "this tool",
+                number=numbers[0] if numbers else "100+",
+                timeframe=seed.get("timeframe", "one session"),
+            )
+        except (KeyError, IndexError):
+            tweet = f"{consequence}. {method[:80] if method else topic}. just do it."
+
+        # Lowercase for PRINTMAXXER voice
+        tweet = tweet.lower()
+
+        # Enforce 280 char limit
+        if len(tweet) > 280:
+            tweet = tweet[:277] + "..."
+
+        # Voice check and clean
+        vc = voice_check(tweet)
+        tweet = vc["cleaned"]
+
+        if len(tweet) > 20:
+            tweets.append(tweet)
+
+    return tweets[:count]
+
+
+def generate_thread(seed: dict, length: int = 6) -> list[str]:
+    """Generate a 5-7 tweet thread."""
+    thread = []
+    consequence = seed.get("consequence", "results were wild")
+    method = seed.get("method", "")
+    topic = seed.get("topic", "this")
+    tool = seed.get("tool", "")
+    action = seed.get("action", "tested this")
+    timeframe = seed.get("timeframe", "one session")
+    numbers = seed.get("numbers", [])
+
+    # Tweet 1: Hook
+    opener = random.choice(THREAD_OPENERS)
+    try:
+        t1 = opener.format(
+            consequence=consequence,
+            action=action,
+            topic=topic,
+            timeframe=timeframe,
+        )
+    except KeyError:
+        t1 = f"i {action} and {consequence}. full breakdown:"
+    thread.append(t1.lower())
+
+    # Tweet 2: Context / problem
+    if method:
+        t2 = f"the problem: most people overcomplicate {topic}. they spend weeks planning when the answer is right there."
+    else:
+        t2 = f"most people won't try this because it seems too simple. that's exactly why it works."
+    thread.append(t2.lower())
+
+    # Tweet 3-5: Method steps
+    if method:
+        method_parts = re.split(r'[.;]\s*', method)
+        for i, part in enumerate(method_parts[:3]):
+            part = part.strip()
+            if len(part) > 15:
+                step = f"step {i + 1}: {part}"
+                if tool and i == 0:
+                    step += f". i used {tool} for this."
+                if numbers and i < len(numbers):
+                    step += f" ({numbers[i]} results)"
+                thread.append(step.lower())
+    else:
+        thread.append(f"step 1: find the exact thing that's working. don't guess. look at the data.")
+        if tool:
+            thread.append(f"step 2: set up {tool}. takes {timeframe}. stop overthinking the setup.")
+        else:
+            thread.append(f"step 2: set it up. takes {timeframe}. stop overthinking the setup.")
+        thread.append(f"step 3: run it. measure it. iterate. that's the whole formula.")
+
+    # Pad to desired length
+    filler_insights = [
+        f"the key insight: {topic} rewards consistency over perfection.",
+        f"most people quit before the compound effect kicks in. don't be most people.",
+        f"this works because everyone else is overthinking it. simplicity is the edge.",
+        f"i tested {random.choice(['3', '5', '7', '10'])} variations. this one won by a mile.",
+    ]
+    while len(thread) < length - 1:
+        thread.append(random.choice(filler_insights).lower())
+
+    # Final tweet: closer
+    closer = random.choice(THREAD_CLOSERS)
+    try:
+        final = closer.format(method=method[:60] if method else topic)
+    except KeyError:
+        final = "that's the play. stop planning, start doing."
+    thread.append(final.lower())
+
+    # Voice check each tweet
+    cleaned_thread = []
+    for t in thread[:length]:
+        vc = voice_check(t)
+        t_clean = vc["cleaned"]
+        if len(t_clean) > 280:
+            t_clean = t_clean[:277] + "..."
+        cleaned_thread.append(t_clean)
+
+    return cleaned_thread
+
+
+def generate_linkedin(seed: dict) -> str:
+    """Generate a LinkedIn post with B2B angle."""
+    consequence = seed.get("consequence", "results were significant")
+    method = seed.get("method", "")
+    topic = seed.get("topic", "this approach")
+    tool = seed.get("tool", "")
+    timeframe = seed.get("timeframe", "2 weeks")
+    numbers = seed.get("numbers", [])
+
+    # Build bullet points
+    bullets = []
+    if method:
+        for part in re.split(r'[.;]\s*', method)[:4]:
+            part = part.strip()
+            if len(part) > 10:
+                bullets.append(f"- {part}")
+    if not bullets:
+        bullets = [
+            f"- Tested the approach for {timeframe}",
+            f"- Results: {numbers[0] if numbers else 'measurable improvement'}",
+            f"- Setup time: {timeframe}",
+        ]
+    bullet_text = "\n".join(bullets)
+
+    b2b_angles = [
+        f"If you're running a team, this saves each person {timeframe} per week.",
+        f"The B2B application: any company doing {topic} should test this immediately.",
+        f"For agencies and consultancies: this is a service you can sell.",
+        f"Enterprise teams are sleeping on this. The ROI is clear.",
+    ]
+    b2b = random.choice(b2b_angles)
+
+    takeaway = f"The data is clear. {consequence}. Worth testing for any team."
+    if tool:
+        takeaway = f"Tool used: {tool}. {consequence}. Worth testing for any team."
+
+    template = random.choice(LINKEDIN_TEMPLATES)
+    try:
+        post = template.format(
+            consequence=consequence,
+            method=method[:100] if method else topic,
+            topic=topic,
+            timeframe=timeframe,
+            bullets=bullet_text,
+            takeaway=takeaway,
+            b2b_angle=b2b,
+        )
+    except KeyError:
+        post = f"{consequence}.\n\nHere's what I found after {timeframe} of testing:\n\n{bullet_text}\n\n{takeaway}"
+
+    vc = voice_check(post)
+    return vc["cleaned"]
+
+
+def generate_reddit(seed: dict) -> dict:
+    """Generate a Reddit post (value-first, no self-promo)."""
+    consequence = seed.get("consequence", "results were significant")
+    method = seed.get("method", "")
+    topic = seed.get("topic", "this approach")
+    tool = seed.get("tool", "")
+    timeframe = seed.get("timeframe", "a few weeks")
+    numbers = seed.get("numbers", [])
+    category = seed.get("category", "")
+
+    subreddit_map = {
+        "APP_FACTORY": ["r/SideProject", "r/indiehackers", "r/startups"],
+        "TOOL_ALPHA": ["r/SaaS", "r/webdev", "r/Entrepreneur"],
+        "GROWTH_HACK": ["r/Entrepreneur", "r/smallbusiness", "r/marketing"],
+        "MONETIZATION": ["r/Entrepreneur", "r/passive_income", "r/indiehackers"],
+        "CONTENT_FORMAT": ["r/content_marketing", "r/socialmedia", "r/marketing"],
+        "OUTBOUND": ["r/sales", "r/Entrepreneur", "r/marketing"],
+        "SEO_GEO_ASO": ["r/SEO", "r/webdev", "r/indiehackers"],
+    }
+    suggested_subs = subreddit_map.get(category, ["r/Entrepreneur", "r/SideProject"])
+
+    title = f"I {seed.get('action', 'tested')} {topic} for {timeframe}. Here's what happened."
+    if len(title) > 150:
+        title = title[:147] + "..."
+
+    intro = f"Been working on {topic} and wanted to share real results, not theory."
+
+    steps = ""
+    if method:
+        parts = re.split(r'[.;]\s*', method)
+        step_lines = []
+        for i, part in enumerate(parts[:5]):
+            part = part.strip()
+            if len(part) > 10:
+                step_lines.append(f"{i + 1}. {part}")
+        steps = "\n".join(step_lines)
+
+    results = consequence
+    if numbers:
+        results += f" ({', '.join(numbers[:3])})"
+
+    body = ""
+    if method:
+        body = f"The approach:\n\n{steps}\n\n"
+    body += f"Bottom line: {results}."
+    if tool:
+        body += f" Used {tool} for most of this."
+
+    template = random.choice(REDDIT_TEMPLATES)
+    try:
+        post_text = template.format(
+            title=title,
+            intro=intro,
+            steps=steps,
+            results=results,
+            body=body,
+            timeframe=timeframe,
+        )
+    except KeyError:
+        post_text = f"## {title}\n\n{intro}\n\n{body}\n\nHappy to answer questions."
+
+    vc = voice_check(post_text)
+
+    return {
+        "title": title,
+        "body": vc["cleaned"],
+        "suggested_subreddits": suggested_subs,
+    }
+
+
+def generate_newsletter(seed: dict) -> str:
+    """Generate a 2-3 paragraph newsletter section."""
+    consequence = seed.get("consequence", "results were wild")
+    method = seed.get("method", "")
+    topic = seed.get("topic", "this approach")
+    tool = seed.get("tool", "")
+    timeframe = seed.get("timeframe", "this week")
+    numbers = seed.get("numbers", [])
+
+    hook = f"{consequence}. that's the headline from this week's testing."
+
+    body_p1 = f"here's what happened: i spent {timeframe} on {topic}"
+    if tool:
+        body_p1 += f" using {tool}"
+    body_p1 += "."
+    if method:
+        body_p1 += f" the method: {method[:200]}."
+
+    body_p2 = "the numbers tell the story."
+    if numbers:
+        body_p2 += f" {', '.join(numbers[:3])}."
+    body_p2 += f" {consequence}. and the setup was simpler than expected."
+
+    body_p3 = f"if you're working on anything related to {topic}, this is worth testing."
+    body_p3 += f" took me {timeframe} to get results. no reason you can't do the same."
+
+    takeaway = f"the bottom line: {topic} works when you actually execute instead of planning forever."
+
+    template = random.choice(NEWSLETTER_TEMPLATES)
+    try:
+        section = template.format(
+            hook=hook,
+            body_p1=body_p1,
+            body_p2=body_p2,
+            body_p3=body_p3,
+            takeaway=takeaway,
+        )
+    except KeyError:
+        section = f"{hook}\n\n{body_p1}\n\n{body_p2}\n\n{takeaway}"
+
+    vc = voice_check(section)
+    return vc["cleaned"]
+
+
+def generate_gumroad_angle(seed: dict) -> Optional[str]:
+    """Generate a Gumroad product angle if applicable."""
+    topic = seed.get("topic", "")
+    method = seed.get("method", "")
+    category = seed.get("category", "")
+    numbers = seed.get("numbers", [])
+
+    productizable = ["APP_FACTORY", "TOOL_ALPHA", "GROWTH_HACK", "MONETIZATION",
+                     "CONTENT_FORMAT", "OUTBOUND", "SEO_GEO_ASO"]
+    has_method = len(method) > 30
+
+    if category not in productizable and not has_method:
+        return None
+
+    price_anchors = ["$19", "$27", "$39", "$47", "$9"]
+    asset_types = ["templates", "frameworks", "swipe files", "scripts", "checklists"]
+
+    template = random.choice(GUMROAD_ANGLES)
+    try:
+        angle = template.format(
+            topic=topic,
+            method=method[:60] if method else topic,
+            timeframe=seed.get("timeframe", "weeks"),
+            number=numbers[0] if numbers else "50+",
+            asset_type=random.choice(asset_types),
+            price_anchor=random.choice(price_anchors),
+        )
+    except KeyError:
+        angle = f"the {topic} playbook: everything tested, what worked, what didn't. {random.choice(price_anchors)}."
+
+    vc = voice_check(angle)
+    return vc["cleaned"]
+
+
+# ---------------------------------------------------------------------------
+# Cross-niche adaptation: generate account-specific tweet variants
+# ---------------------------------------------------------------------------
+NICHE_TEMPLATES = {
+    "repscheme": [
+        "the discipline is the same whether it's reps or {topic}. {consequence}.",
+        "{consequence}. same energy as hitting a PR. consistent effort wins.",
+        "no shortcuts. {consequence}. put in the work and the numbers follow.",
+    ],
+    "drifthour": [
+        "{consequence}... let that sit for a moment.",
+        "the aesthetic of doing the work quietly... {consequence}.",
+        "found something worth sharing... {consequence}.",
+    ],
+    "voidpilled": [
+        "{consequence}. the simulation rewards those who see the pattern.",
+        "they don't want you to know this: {consequence}.",
+        "esoteric alpha: {consequence}. hide in plain sight.",
+    ],
+    "selahmoments": [
+        "stewardship means using every tool available. {consequence}.",
+        "{consequence}. building with purpose, not just profit. selah.",
+        "the work of your hands matters. {consequence}.",
+    ],
+}
+
+
+def generate_niche_variants(seed: dict) -> dict:
+    """Generate one tweet per niche account from the same seed."""
+    variants = {}
+    consequence = seed.get("consequence", "results were wild")
+    topic = seed.get("topic", "this")
+
+    for acct_name, templates in NICHE_TEMPLATES.items():
+        template = random.choice(templates)
+        try:
+            tweet = template.format(
+                consequence=consequence,
+                topic=topic,
+            )
+        except KeyError:
+            tweet = f"{consequence}."
+
+        tweet = tweet.lower()
+        if len(tweet) > 280:
+            tweet = tweet[:277] + "..."
+        vc = voice_check(tweet)
+        variants[acct_name] = vc["cleaned"]
 
     return variants
 
 
 # ---------------------------------------------------------------------------
-# BUFFER EXPORT
+# Full content generation pipeline
 # ---------------------------------------------------------------------------
+def generate_all_content(seed: dict) -> dict:
+    """Generate ALL content formats from a single seed."""
+    log(f"Generating all content for seed: {seed.get('topic', 'unknown')[:50]}")
 
-def export_buffer_csv(scheduled: list[dict], output_dir: Path = None):
-    """Export scheduled content as Buffer-compatible CSVs, one per account+platform."""
-    if output_dir is None:
-        output_dir = BUFFER_EXPORT_DIR
-    output_dir.mkdir(parents=True, exist_ok=True)
+    result = {
+        "seed": seed,
+        "generated_at": datetime.now().isoformat(),
+        "tweets": generate_tweets(seed, count=3),
+        "thread": generate_thread(seed, length=6),
+        "linkedin": generate_linkedin(seed),
+        "reddit": generate_reddit(seed),
+        "newsletter": generate_newsletter(seed),
+        "gumroad_angle": generate_gumroad_angle(seed),
+        "niche_variants": generate_niche_variants(seed),
+        "voice_check_summary": {},
+    }
 
-    grouped = defaultdict(list)
-    for entry in scheduled:
-        key = f"{entry.get('account', 'unknown')}_{entry.get('platform', 'unknown')}"
-        grouped[key].append(entry)
+    # Aggregate voice check
+    all_texts = []
+    all_texts.extend(result["tweets"])
+    all_texts.extend(result["thread"])
+    all_texts.append(result["linkedin"])
+    all_texts.append(result["reddit"]["body"])
+    all_texts.append(result["newsletter"])
+    if result["gumroad_angle"]:
+        all_texts.append(result["gumroad_angle"])
+    all_texts.extend(result["niche_variants"].values())
 
+    checks = voice_check_batch(all_texts)
+    total_issues = sum(c["issue_count"] for c in checks)
+    all_passed = all(c["passed"] for c in checks)
+
+    result["voice_check_summary"] = {
+        "all_passed": all_passed,
+        "total_issues": total_issues,
+        "items_checked": len(checks),
+        "items_passed": sum(1 for c in checks if c["passed"]),
+    }
+
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Save output
+# ---------------------------------------------------------------------------
+def save_content(content: dict, dry_run: bool = False) -> list[str]:
+    """Save all generated content to CONTENT/social/auto_generated/."""
+    safe_path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    seed = content.get("seed", {})
+    topic_slug = re.sub(r'[^a-z0-9]+', '_', seed.get("topic", "unknown")[:30].lower()).strip("_")
     files_written = []
-    for key, entries in grouped.items():
-        filepath = safe_path(output_dir / f"buffer_{key}.csv")
-        with open(filepath, "w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow(["Date", "Time", "Text"])
-            for e in entries:
-                writer.writerow([
-                    e.get("scheduled_date", ""),
-                    e.get("scheduled_time", ""),
-                    e.get("text", ""),
-                ])
-        files_written.append(str(filepath.relative_to(BASE_DIR)))
+
+    if dry_run:
+        print(f"\n{'='*70}")
+        print(f"  CONTENT FACTORY OUTPUT (DRY RUN)")
+        print(f"  Topic: {seed.get('topic', 'unknown')}")
+        print(f"  Input type: {seed.get('input_type', 'text')}")
+        print(f"  Voice check: {'PASSED' if content['voice_check_summary']['all_passed'] else 'ISSUES FOUND'}")
+        print(f"  Issues: {content['voice_check_summary']['total_issues']}")
+        print(f"{'='*70}\n")
+
+        print("--- TWEETS (3) ---")
+        for i, t in enumerate(content["tweets"], 1):
+            print(f"  {i}. {t}")
+            print(f"     [{len(t)} chars]")
+        print()
+
+        print("--- THREAD ({} tweets) ---".format(len(content["thread"])))
+        for i, t in enumerate(content["thread"], 1):
+            print(f"  {i}/{len(content['thread'])}. {t}")
+        print()
+
+        print("--- LINKEDIN ---")
+        print(textwrap.indent(content["linkedin"], "  "))
+        print()
+
+        print("--- REDDIT ---")
+        reddit = content["reddit"]
+        print(f"  Subreddits: {', '.join(reddit['suggested_subreddits'])}")
+        print(f"  Title: {reddit['title']}")
+        print(textwrap.indent(reddit["body"][:500], "  "))
+        print()
+
+        print("--- NEWSLETTER ---")
+        print(textwrap.indent(content["newsletter"][:500], "  "))
+        print()
+
+        if content["gumroad_angle"]:
+            print("--- GUMROAD ANGLE ---")
+            print(f"  {content['gumroad_angle']}")
+        else:
+            print("--- GUMROAD ANGLE: N/A (not productizable) ---")
+        print()
+
+        print("--- NICHE VARIANTS ---")
+        for acct, tweet in content["niche_variants"].items():
+            print(f"  @{acct}: {tweet}")
+        print()
+
+        return []
+
+    # Save tweets CSV
+    tweet_file = safe_path(OUTPUT_DIR / f"factory_tweets_{topic_slug}_{ts}.csv")
+    with open(tweet_file, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            "tweet_text", "format", "account", "source_topic",
+            "voice_check", "status", "created_date",
+        ])
+        writer.writeheader()
+        # Main account tweets
+        for t in content["tweets"]:
+            writer.writerow({
+                "tweet_text": t,
+                "format": "single_tweet",
+                "account": "@PRINTMAXXER",
+                "source_topic": seed.get("topic", ""),
+                "voice_check": "PASSED" if voice_check(t)["passed"] else "NEEDS_REVIEW",
+                "status": "PENDING_REVIEW",
+                "created_date": datetime.now().strftime("%Y-%m-%d"),
+            })
+        # Niche variants
+        for acct, tweet in content["niche_variants"].items():
+            writer.writerow({
+                "tweet_text": tweet,
+                "format": "niche_variant",
+                "account": f"@{acct}",
+                "source_topic": seed.get("topic", ""),
+                "voice_check": "PASSED" if voice_check(tweet)["passed"] else "NEEDS_REVIEW",
+                "status": "PENDING_REVIEW",
+                "created_date": datetime.now().strftime("%Y-%m-%d"),
+            })
+    files_written.append(str(tweet_file))
+
+    # Save thread
+    thread_file = safe_path(OUTPUT_DIR / f"factory_thread_{topic_slug}_{ts}.json")
+    with open(thread_file, "w", encoding="utf-8") as f:
+        json.dump({
+            "type": "thread",
+            "account": "@PRINTMAXXER",
+            "topic": seed.get("topic", ""),
+            "tweets": content["thread"],
+            "tweet_count": len(content["thread"]),
+            "status": "PENDING_REVIEW",
+            "created_at": content["generated_at"],
+        }, f, indent=2)
+    files_written.append(str(thread_file))
+
+    # Save LinkedIn
+    li_file = safe_path(OUTPUT_DIR / f"factory_linkedin_{topic_slug}_{ts}.txt")
+    with open(li_file, "w", encoding="utf-8") as f:
+        f.write(f"# LinkedIn Post - {seed.get('topic', 'unknown')}\n")
+        f.write(f"# Generated: {content['generated_at']}\n")
+        f.write(f"# Status: PENDING_REVIEW\n\n")
+        f.write(content["linkedin"])
+    files_written.append(str(li_file))
+
+    # Save Reddit
+    reddit = content["reddit"]
+    reddit_file = safe_path(OUTPUT_DIR / f"factory_reddit_{topic_slug}_{ts}.txt")
+    with open(reddit_file, "w", encoding="utf-8") as f:
+        f.write(f"# Reddit Post - {seed.get('topic', 'unknown')}\n")
+        f.write(f"# Suggested subreddits: {', '.join(reddit['suggested_subreddits'])}\n")
+        f.write(f"# Status: PENDING_REVIEW\n\n")
+        f.write(f"Title: {reddit['title']}\n\n")
+        f.write(reddit["body"])
+    files_written.append(str(reddit_file))
+
+    # Save newsletter
+    nl_file = safe_path(OUTPUT_DIR / f"factory_newsletter_{topic_slug}_{ts}.txt")
+    with open(nl_file, "w", encoding="utf-8") as f:
+        f.write(f"# Newsletter Section - {seed.get('topic', 'unknown')}\n")
+        f.write(f"# Status: PENDING_REVIEW\n\n")
+        f.write(content["newsletter"])
+    files_written.append(str(nl_file))
+
+    # Save Gumroad angle
+    if content["gumroad_angle"]:
+        gum_file = safe_path(OUTPUT_DIR / f"factory_gumroad_{topic_slug}_{ts}.txt")
+        with open(gum_file, "w", encoding="utf-8") as f:
+            f.write(f"# Gumroad Product Angle - {seed.get('topic', 'unknown')}\n")
+            f.write(f"# Status: PENDING_REVIEW\n\n")
+            f.write(content["gumroad_angle"])
+        files_written.append(str(gum_file))
+
+    # Save combined manifest
+    manifest_file = safe_path(OUTPUT_DIR / f"factory_manifest_{topic_slug}_{ts}.json")
+    with open(manifest_file, "w", encoding="utf-8") as f:
+        json.dump({
+            "generated_at": content["generated_at"],
+            "seed_topic": seed.get("topic", ""),
+            "seed_input_type": seed.get("input_type", "text"),
+            "alpha_id": seed.get("alpha_id", ""),
+            "voice_check_summary": content["voice_check_summary"],
+            "files": files_written,
+            "content_counts": {
+                "tweets": len(content["tweets"]),
+                "niche_variants": len(content["niche_variants"]),
+                "thread_tweets": len(content["thread"]),
+                "linkedin": 1,
+                "reddit": 1,
+                "newsletter": 1,
+                "gumroad": 1 if content["gumroad_angle"] else 0,
+            },
+        }, f, indent=2)
+    files_written.append(str(manifest_file))
 
     return files_written
 
 
 # ---------------------------------------------------------------------------
-# QUEUE MANAGEMENT
+# CLI entry points
 # ---------------------------------------------------------------------------
+def cmd_from_input(text: str, dry_run: bool = False) -> None:
+    """Generate content from free text input."""
+    log(f"Generating from input: {text[:80]}...")
+    seed = extract_topic_from_text(text)
+    content = generate_all_content(seed)
+    files = save_content(content, dry_run=dry_run)
+    if files:
+        log(f"Saved {len(files)} files")
+        for fp in files:
+            print(f"  {fp}")
+    vc = content["voice_check_summary"]
+    print(f"\nVoice check: {'PASSED' if vc['all_passed'] else 'ISSUES: ' + str(vc['total_issues'])}")
 
-def load_queue() -> list[dict]:
-    """Load the content factory queue."""
-    if not FACTORY_QUEUE_CSV.exists():
-        return []
-    try:
-        with open(FACTORY_QUEUE_CSV, "r", encoding="utf-8") as f:
-            return list(csv.DictReader(f))
-    except Exception:
-        return []
 
-
-def save_queue(entries: list[dict]):
-    """Save the content factory queue."""
-    if not entries:
+def cmd_from_alpha(alpha_id: str, dry_run: bool = False) -> None:
+    """Generate content from a specific alpha entry."""
+    if not ALPHA_CSV.exists():
+        log(f"ALPHA_STAGING.csv not found at {ALPHA_CSV}")
         return
-    fieldnames = ["queue_id", "content_hash", "text", "niche", "account", "platform",
-                  "variant_type", "source_file", "source_hash", "status",
-                  "scheduled_at", "scheduled_date", "scheduled_time",
-                  "created_at", "posted_at"]
 
-    FACTORY_QUEUE_CSV.parent.mkdir(parents=True, exist_ok=True)
-    with open(safe_path(FACTORY_QUEUE_CSV), "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(entries)
+    with open(ALPHA_CSV, "r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if (row.get("alpha_id") or "").strip().upper() == alpha_id.upper():
+                seed = extract_from_alpha(row)
+                content = generate_all_content(seed)
+                files = save_content(content, dry_run=dry_run)
+                if files:
+                    log(f"Generated content for {alpha_id}: {len(files)} files")
+                    for fp in files:
+                        print(f"  {fp}")
+                vc = content["voice_check_summary"]
+                print(f"\nVoice check: {'PASSED' if vc['all_passed'] else 'ISSUES: ' + str(vc['total_issues'])}")
+                return
 
-
-def load_posted_hashes() -> set:
-    """Load hashes of already-posted content for dedup."""
-    hashes = set()
-    for csv_path in [FACTORY_POSTED_CSV, CONTENT_POSTED_CSV]:
-        if csv_path.exists():
-            try:
-                with open(csv_path, "r", encoding="utf-8") as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        h = row.get("content_hash", "")
-                        if h:
-                            hashes.add(h)
-            except Exception:
-                pass
-    return hashes
+    log(f"Alpha ID '{alpha_id}' not found in ALPHA_STAGING.csv")
+    print(f"Alpha ID '{alpha_id}' not found.")
 
 
-# ---------------------------------------------------------------------------
-# INGEST
-# ---------------------------------------------------------------------------
+def cmd_batch_alpha(count: int, dry_run: bool = False) -> None:
+    """Generate content for N most recent approved alpha entries."""
+    if not ALPHA_CSV.exists():
+        log("ALPHA_STAGING.csv not found")
+        return
 
-def ingest_content(niche_filter: str = None) -> list[dict]:
-    """Scan CONTENT/social/ directories and extract new content pieces."""
-    all_posts = []
-    posted_hashes = load_posted_hashes()
-    queue_hashes = {e.get("content_hash", "") for e in load_queue()}
-    known_hashes = posted_hashes | queue_hashes
+    entries = []
+    with open(ALPHA_CSV, "r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            status = (row.get("status") or "").strip().upper()
+            if status in ("APPROVED", "PENDING_REVIEW"):
+                entries.append(row)
 
-    # Also scan CSV content files
-    csv_dirs = [CONTENT_POSTING]
+    roi_order = {"HIGHEST": 4, "HIGH": 3, "MEDIUM": 2, "LOW": 1}
+    entries.sort(
+        key=lambda e: roi_order.get((e.get("roi_potential") or "").upper(), 0),
+        reverse=True,
+    )
+    entries = entries[:count]
 
-    for niche, dirs in NICHE_DIRS.items():
-        if niche_filter and niche != niche_filter:
-            continue
+    log(f"Batch processing {len(entries)} alpha entries")
+    total_files = 0
 
-        for dirname in dirs:
-            content_dir = CONTENT_SOCIAL / dirname
-            if not content_dir.exists():
-                continue
+    for entry in entries:
+        seed = extract_from_alpha(entry)
+        content = generate_all_content(seed)
+        files = save_content(content, dry_run=dry_run)
+        total_files += len(files)
+        alpha_id = entry.get("alpha_id", "?")
+        vc = content["voice_check_summary"]
+        status = "PASSED" if vc["all_passed"] else f"ISSUES({vc['total_issues']})"
+        print(f"  {alpha_id}: {len(files)} files, voice: {status}")
 
-            # Scan .md files
-            for md_file in content_dir.glob("*.md"):
-                posts = extract_posts_from_md(md_file)
-                for p in posts:
-                    h = content_hash(p["text"])
-                    if h not in known_hashes:
-                        p["niche"] = niche
-                        p["content_hash"] = h
-                        p["status"] = "queued"
-                        p["created_at"] = datetime.now(timezone.utc).isoformat()
-                        all_posts.append(p)
-                        known_hashes.add(h)
+    log(f"Batch complete: {len(entries)} entries, {total_files} files generated")
+    print(f"\nTotal: {len(entries)} entries processed, {total_files} files generated")
 
-    # Scan CSV files in content_posting/
-    for csv_dir in csv_dirs:
-        if not csv_dir.exists():
-            continue
-        for csv_file in csv_dir.glob("*.csv"):
-            posts = extract_posts_from_csv(csv_file)
-            for p in posts:
-                h = content_hash(p["text"])
-                if h not in known_hashes:
-                    # Guess niche from filename
-                    fname = csv_file.stem.lower()
-                    niche = "tech"
-                    for n in NICHE_DIRS:
-                        if n in fname:
-                            niche = n
-                            break
-                    if niche_filter and niche != niche_filter:
+
+def cmd_from_session(dry_run: bool = False) -> None:
+    """Generate content from recent session log entries."""
+    seeds = extract_from_session_log()
+    if not seeds:
+        print("No content seeds found in session log.")
+        return
+
+    total_files = 0
+    for seed in seeds[:5]:
+        content = generate_all_content(seed)
+        files = save_content(content, dry_run=dry_run)
+        total_files += len(files)
+
+    log(f"Session content: {len(seeds)} seeds, {total_files} files")
+    print(f"\nGenerated content from {min(len(seeds), 5)} session items, {total_files} files")
+
+
+def cmd_voice_check(filepath: str) -> None:
+    """Run voice check on an existing content file."""
+    import glob as g
+
+    files = g.glob(filepath)
+    if not files:
+        files = g.glob(str(PROJECT_ROOT / filepath))
+    if not files:
+        print(f"No files matching: {filepath}")
+        return
+
+    total_issues = 0
+    total_items = 0
+    total_passed = 0
+
+    for fpath in files:
+        print(f"\n--- Voice Check: {Path(fpath).name} ---")
+
+        if fpath.endswith(".csv"):
+            with open(fpath, "r", newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    text = row.get("tweet_text", row.get("draft", ""))
+                    if not text:
                         continue
-                    p["niche"] = niche
-                    p["content_hash"] = h
-                    p["status"] = "queued"
-                    p["created_at"] = datetime.now(timezone.utc).isoformat()
-                    all_posts.append(p)
-                    known_hashes.add(h)
+                    vc = voice_check(text)
+                    total_items += 1
+                    if not vc["passed"]:
+                        total_issues += vc["issue_count"]
+                        print(f"  FAIL ({vc['issue_count']} issues): {text[:80]}...")
+                        for issue in vc["issues"]:
+                            print(f"    - {issue}")
+                    else:
+                        total_passed += 1
+                        print(f"  PASS: {text[:80]}...")
+        elif fpath.endswith(".json"):
+            try:
+                with open(fpath, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                texts = data.get("tweets", [])
+                if isinstance(texts, list):
+                    for t in texts:
+                        vc = voice_check(t)
+                        total_items += 1
+                        if not vc["passed"]:
+                            total_issues += vc["issue_count"]
+                            print(f"  FAIL: {t[:80]}...")
+                        else:
+                            total_passed += 1
+            except (json.JSONDecodeError, AttributeError):
+                pass
+        else:
+            text = Path(fpath).read_text(encoding="utf-8", errors="replace")
+            vc = voice_check(text)
+            total_items += 1
+            if not vc["passed"]:
+                total_issues += vc["issue_count"]
+                print(f"  FAIL ({vc['issue_count']} issues)")
+                for issue in vc["issues"]:
+                    print(f"    - {issue}")
+            else:
+                total_passed += 1
+                print(f"  PASS")
 
-    return all_posts
-
-
-# ---------------------------------------------------------------------------
-# ADAPT
-# ---------------------------------------------------------------------------
-
-def adapt_queue(queue: list[dict], platform_filter: str = None) -> list[dict]:
-    """Take queued content and create platform-adapted versions."""
-    adapted_entries = []
-    posted_hashes = load_posted_hashes()
-
-    for entry in queue:
-        if entry.get("status") != "queued":
-            continue
-        if entry.get("platform"):
-            # Already adapted
-            adapted_entries.append(entry)
-            continue
-
-        text = entry.get("text", "")
-        niche = entry.get("niche", "tech")
-
-        # Find accounts for this niche
-        target_accounts = [(name, info) for name, info in ACCOUNTS.items()
-                           if info["niche"] == niche]
-        if not target_accounts:
-            # Default to printmaxxer for tech content
-            target_accounts = [("printmaxxer", ACCOUNTS["printmaxxer"])]
-
-        for account_name, account_info in target_accounts:
-            for platform in account_info["platforms"]:
-                if platform_filter and platform != platform_filter:
-                    continue
-
-                adapted_text = adapt_for_platform(text, platform, niche)
-                h = content_hash(adapted_text)
-
-                if h in posted_hashes:
-                    continue
-
-                adapted_entries.append({
-                    "queue_id": f"CF_{h}",
-                    "content_hash": h,
-                    "text": adapted_text,
-                    "niche": niche,
-                    "account": account_name,
-                    "platform": platform,
-                    "variant_type": "platform_adapt",
-                    "source_file": entry.get("source_file", ""),
-                    "source_hash": entry.get("content_hash", ""),
-                    "status": "adapted",
-                    "created_at": entry.get("created_at", datetime.now(timezone.utc).isoformat()),
-                })
-
-    return adapted_entries
+    print(f"\n--- Summary ---")
+    print(f"  Items checked: {total_items}")
+    print(f"  Passed: {total_passed}")
+    print(f"  Total issues: {total_issues}")
+    if total_items > 0:
+        print(f"  Pass rate: {(total_passed / total_items) * 100:.0f}%")
 
 
 # ---------------------------------------------------------------------------
-# STATUS
+# Main
 # ---------------------------------------------------------------------------
-
-def show_status():
-    """Show factory status overview."""
-    queue = load_queue()
-    posted_hashes = load_posted_hashes()
-
-    # Count content files
-    md_count = 0
-    csv_count = 0
-    for niche, dirs in NICHE_DIRS.items():
-        for dirname in dirs:
-            d = CONTENT_SOCIAL / dirname
-            if d.exists():
-                md_count += len(list(d.glob("*.md")))
-    for f in CONTENT_POSTING.glob("*.csv"):
-        csv_count += 1
-
-    # Queue stats
-    queued = len([e for e in queue if e.get("status") == "queued"])
-    adapted = len([e for e in queue if e.get("status") == "adapted"])
-    scheduled = len([e for e in queue if e.get("status") == "scheduled"])
-
-    # Platform breakdown
-    platform_counts = defaultdict(int)
-    niche_counts = defaultdict(int)
-    for e in queue:
-        platform_counts[e.get("platform", "unknown")] += 1
-        niche_counts[e.get("niche", "unknown")] += 1
-
-    print("=" * 60)
-    print("  PRINTMAXX CONTENT FACTORY STATUS")
-    print("=" * 60)
-    print()
-    print(f"  Content Sources:")
-    print(f"    Markdown files:    {md_count}")
-    print(f"    CSV files:         {csv_count}")
-    print(f"    Content dirs:      {len(NICHE_DIRS)} niches")
-    print()
-    print(f"  Queue:")
-    print(f"    Raw/queued:        {queued}")
-    print(f"    Adapted:           {adapted}")
-    print(f"    Scheduled:         {scheduled}")
-    print(f"    Total in queue:    {len(queue)}")
-    print(f"    Already posted:    {len(posted_hashes)}")
-    print()
-    if platform_counts:
-        print(f"  By Platform:")
-        for plat, count in sorted(platform_counts.items(), key=lambda x: -x[1]):
-            print(f"    {plat:15s}  {count}")
-        print()
-    if niche_counts:
-        print(f"  By Niche:")
-        for niche, count in sorted(niche_counts.items(), key=lambda x: -x[1]):
-            print(f"    {niche:15s}  {count}")
-    print()
-
-    # Recycling candidates
-    winners = find_winners_for_recycling()
-    print(f"  Recycling:")
-    print(f"    Winners 30d+ old:  {len(winners)}")
-    print()
-    print("=" * 60)
-
-
-# ---------------------------------------------------------------------------
-# MAIN
-# ---------------------------------------------------------------------------
-
-def main():
-    parser = argparse.ArgumentParser(description="PRINTMAXX Content Factory")
-    parser.add_argument("--status", action="store_true", help="Show factory status")
-    parser.add_argument("--ingest", action="store_true", help="Scan and ingest new content")
-    parser.add_argument("--adapt", action="store_true", help="Adapt queued content for platforms")
-    parser.add_argument("--schedule", action="store_true", help="Generate posting schedule")
-    parser.add_argument("--recycle-winners", action="store_true", help="Re-queue top performers")
-    parser.add_argument("--factory", type=str, help="Factory mode: expand single input to 50+ variants")
-    parser.add_argument("--export-buffer", action="store_true", help="Export Buffer-compatible CSVs")
-    parser.add_argument("--daily", action="store_true", help="Full daily cycle")
-    parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
-    parser.add_argument("--niche", type=str, help="Filter by niche")
-    parser.add_argument("--platform", type=str, help="Filter by platform")
-    parser.add_argument("--days", type=int, default=30, help="Schedule days ahead (default: 30)")
-
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="PRINTMAXX Content Factory: one script to generate all content formats",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=textwrap.dedent("""\
+        examples:
+          %(prog)s --input "cold email framework that got 40%% reply rate"
+          %(prog)s --from-alpha ALPHA042
+          %(prog)s --batch-alpha 10
+          %(prog)s --from-session
+          %(prog)s --voice-check "CONTENT/social/auto_generated/tweets_*.csv"
+          %(prog)s --dry-run --input "scraper that monitors competitor pricing"
+        """),
+    )
+    parser.add_argument(
+        "--input", "-i", type=str, default=None,
+        help="Free text input (topic, finding, tool discovery, etc.)",
+    )
+    parser.add_argument(
+        "--from-alpha", type=str, default=None, metavar="ALPHA_ID",
+        help="Generate from a specific alpha entry by ID",
+    )
+    parser.add_argument(
+        "--from-session", action="store_true",
+        help="Generate from recent session log entries",
+    )
+    parser.add_argument(
+        "--batch-alpha", type=int, default=None, metavar="N",
+        help="Batch generate from top N alpha entries",
+    )
+    parser.add_argument(
+        "--voice-check", type=str, default=None, metavar="FILE",
+        help="Run copy-style.md voice check on existing content file(s)",
+    )
+    parser.add_argument(
+        "--dry-run", "-d", action="store_true",
+        help="Preview output without saving files",
+    )
     args = parser.parse_args()
 
-    if args.status:
-        show_status()
-        return
-
-    if args.factory:
-        niche = args.niche or "tech"
-        variants = factory_expand(args.factory, niche)
-        print(f"\nFactory mode: generated {len(variants)} variants from input\n")
-        for i, v in enumerate(variants[:10], 1):
-            print(f"  [{i}] ({v['platform']}/{v['niche']}/{v['variant_type']})")
-            preview = v["text"][:120].replace("\n", " ")
-            print(f"      {preview}...")
-            print()
-        if len(variants) > 10:
-            print(f"  ... and {len(variants) - 10} more variants")
-        print()
-
-        if not args.dry_run:
-            # Save variants to queue
-            queue = load_queue()
-            for v in variants:
-                v["queue_id"] = f"CF_{content_hash(v['text'])}"
-                v["content_hash"] = content_hash(v["text"])
-                v["status"] = "adapted"
-                v["created_at"] = datetime.now(timezone.utc).isoformat()
-                queue.append(v)
-            save_queue(queue)
-            print(f"  Saved {len(variants)} variants to queue")
-        else:
-            print("  [DRY RUN] Would save to queue")
-        return
-
-    if args.daily or args.ingest:
-        print("\n[INGEST] Scanning content directories...")
-        new_posts = ingest_content(niche_filter=args.niche)
-        print(f"  Found {len(new_posts)} new content pieces")
-        if new_posts and not args.dry_run:
-            queue = load_queue()
-            queue.extend(new_posts)
-            save_queue(queue)
-            print(f"  Added to queue (total: {len(queue)})")
-        elif args.dry_run:
-            print("  [DRY RUN] Would add to queue")
-            for p in new_posts[:5]:
-                preview = p["text"][:80].replace("\n", " ")
-                print(f"    - [{p['niche']}] {preview}...")
-            if len(new_posts) > 5:
-                print(f"    ... and {len(new_posts) - 5} more")
-
-    if args.daily or args.adapt:
-        print("\n[ADAPT] Adapting content for platforms...")
-        queue = load_queue()
-        adapted = adapt_queue(queue, platform_filter=args.platform)
-        print(f"  Created {len(adapted)} adapted versions")
-        if adapted and not args.dry_run:
-            save_queue(adapted)
-            print(f"  Queue updated ({len(adapted)} entries)")
-        elif args.dry_run:
-            print("  [DRY RUN] Would update queue")
-            for a in adapted[:5]:
-                print(f"    - [{a['account']}/{a['platform']}] {a['text'][:60]}...")
-
-    if args.daily or args.schedule:
-        print("\n[SCHEDULE] Generating posting schedule...")
-        queue = load_queue()
-        ready = [e for e in queue if e.get("status") in ("adapted", "queued")]
-        scheduled = generate_schedule(ready, days=args.days, platform_filter=args.platform)
-        print(f"  Scheduled {len(scheduled)} posts over {args.days} days")
-        if scheduled and not args.dry_run:
-            for e in scheduled:
-                e["status"] = "scheduled"
-            save_queue(scheduled)
-        elif args.dry_run:
-            print("  [DRY RUN] Schedule preview:")
-            for s in scheduled[:10]:
-                print(f"    {s.get('scheduled_at', '?'):16s} | {s.get('account', '?'):15s} | {s.get('platform', '?'):10s} | {s.get('text', '')[:50]}...")
-
-    if args.daily or args.recycle_winners:
-        print("\n[RECYCLE] Checking for recyclable winners...")
-        winners = find_winners_for_recycling()
-        print(f"  Found {len(winners)} posts eligible for recycling (30+ days old, score >= 50)")
-        recycled = []
-        for w in winners:
-            modified = recycle_post(w["text"])
-            recycled.append({
-                "text": modified,
-                "niche": "tech",  # Default, would need mapping
-                "source_file": "recycled_winner",
-                "content_hash": content_hash(modified),
-                "status": "queued",
-                "variant_type": "recycled",
-                "created_at": datetime.now(timezone.utc).isoformat(),
-            })
-        if recycled and not args.dry_run:
-            queue = load_queue()
-            queue.extend(recycled)
-            save_queue(queue)
-            print(f"  Added {len(recycled)} recycled posts to queue")
-        elif args.dry_run and recycled:
-            print("  [DRY RUN] Would recycle:")
-            for r in recycled[:3]:
-                print(f"    - {r['text'][:80]}...")
-
-    if args.export_buffer:
-        print("\n[EXPORT] Generating Buffer CSVs...")
-        queue = load_queue()
-        scheduled = [e for e in queue if e.get("status") == "scheduled"]
-        if not scheduled:
-            # Auto-schedule if nothing is scheduled yet
-            ready = [e for e in queue if e.get("status") in ("adapted", "queued")]
-            scheduled = generate_schedule(ready, days=args.days, platform_filter=args.platform)
-
-        if scheduled:
-            if args.dry_run:
-                print(f"  [DRY RUN] Would export {len(scheduled)} posts as Buffer CSVs")
-            else:
-                files = export_buffer_csv(scheduled)
-                print(f"  Exported {len(scheduled)} posts to {len(files)} files:")
-                for f in files:
-                    print(f"    - {f}")
-        else:
-            print("  No scheduled content to export. Run --daily first.")
-
-    if args.daily:
-        print("\n" + "=" * 60)
-        print("  DAILY CYCLE COMPLETE")
-        print("=" * 60)
-        show_status()
+    if args.voice_check:
+        cmd_voice_check(args.voice_check)
+    elif args.input:
+        cmd_from_input(args.input, dry_run=args.dry_run)
+    elif args.from_alpha:
+        cmd_from_alpha(args.from_alpha, dry_run=args.dry_run)
+    elif args.batch_alpha is not None:
+        cmd_batch_alpha(args.batch_alpha, dry_run=args.dry_run)
+    elif args.from_session:
+        cmd_from_session(dry_run=args.dry_run)
+    else:
+        parser.print_help()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <rect width="400" height="100" fill="#0D0D0D"/>
+  <text x="20" y="38" font-family="'Courier New', monospace" font-size="14" fill="#0A3D0A">&gt;_ PRINTMAXX SYSTEMS</text>
+  <text x="20" y="70" font-family="'Courier New', monospace" font-size="36" font-weight="bold" fill="#00FF41">PRINTMAXXER</text>
+  <rect x="350" y="25" width="8" height="50" fill="#00FF41" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <line x1="20" y1="82" x2="380" y2="82" stroke="#0A3D0A" stroke-width="1"/>
+  <text x="20" y="95" font-family="'Courier New', monospace" font-size="10" fill="#6B6B6B">BUILD // SHIP // AUTOMATE</text>
+</svg>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Website for Local Businesses | 150+ Built</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#3b82f6;--accent2:#60a5fa;--green:#22c55e;--orange:#f59e0b}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+/* hero */
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#2563eb}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+/* sample */
+.sample{padding:60px 0;border-top:1px solid var(--border)}
+.sample h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.sample .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.mockup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.mockup-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative}
+.mockup-card .tag{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;padding:4px 10px;border-radius:20px;font-size:0.75rem;font-weight:600}
+.mockup-card h3{font-size:1.1rem;margin-bottom:8px}
+.mockup-card p{font-size:0.9rem;color:var(--muted)}
+.mockup-card .score{margin-top:12px;font-size:0.85rem;color:var(--green)}
+/* tiers */
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+/* what you get */
+.details{padding:60px 0;border-top:1px solid var(--border)}
+.details h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.detail-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.detail-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px}
+.detail-item h3{font-size:1rem;margin-bottom:6px}
+.detail-item p{font-size:0.88rem;color:var(--muted)}
+/* social proof */
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#1e3a5f,#0a1628);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+/* portfolio */
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted)}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+/* faq */
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+/* final cta */
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+/* footer */
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){
+.hero .stats{flex-direction:column;gap:16px}
+.tier-grid{grid-template-columns:1fr}
+.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<section class="hero">
+<h1>your local business website looks like it was built in 2011</h1>
+<p class="sub">i build modern sites for dentists, plumbers, restaurants, lawyers, and 20+ other local business types. 150+ built. every one scores 90+ on Google PageSpeed.</p>
+<div class="stats">
+<div class="stat"><div class="num">150+</div><div class="label">sites built</div></div>
+<div class="stat"><div class="num">90+</div><div class="label">PageSpeed score</div></div>
+<div class="stat"><div class="num">&lt;2s</div><div class="label">load time</div></div>
+<div class="stat"><div class="num">$0/mo</div><div class="label">hosting cost</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="sample">
+<h2>what you actually get</h2>
+<p class="desc">not a WordPress site with 47 plugins that breaks when you sneeze. clean code, fast hosting, zero maintenance.</p>
+<div class="mockup-grid">
+<div class="mockup-card">
+<span class="tag">dental</span>
+<h3>Smile Dental Clinic</h3>
+<p>one-page site with appointment booking, Google Maps, and patient testimonials. loads in 1.4s on mobile.</p>
+<div class="score">PageSpeed: 97/100</div>
+</div>
+<div class="mockup-card">
+<span class="tag">restaurant</span>
+<h3>Bella's Italian Kitchen</h3>
+<p>menu, hours, Google Maps embed, reservation form. mobile-first. photos optimized to under 100KB each.</p>
+<div class="score">PageSpeed: 95/100</div>
+</div>
+<div class="mockup-card">
+<span class="tag">hvac</span>
+<h3>CoolAir Pro Services</h3>
+<p>service area map, 5-star review carousel, emergency contact form, service page for each offering.</p>
+<div class="score">PageSpeed: 93/100</div>
+</div>
+</div>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">Starter Site</div>
+<div class="price">$75 <span>/ one-time</span></div>
+<div class="delivery">delivered in 3 days</div>
+<div class="desc">1-page responsive website with contact form. mobile-optimized, deployed live.</div>
+<ul>
+<li>responsive design</li>
+<li>contact form</li>
+<li>1 revision</li>
+<li class="no">custom domain setup</li>
+<li class="no">Google Maps</li>
+<li class="no">SEO setup</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">Business Site</div>
+<div class="price">$250 <span>/ one-time</span></div>
+<div class="delivery">delivered in 7 days</div>
+<div class="desc">5-page site with contact form, Google Maps, testimonials, SEO basics, custom branding.</div>
+<ul>
+<li>5 pages</li>
+<li>Google Maps embed</li>
+<li>basic SEO setup</li>
+<li>testimonials section</li>
+<li>custom domain setup</li>
+<li>3 revisions</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">Full Brand Site</div>
+<div class="price">$750 <span>/ one-time</span></div>
+<div class="delivery">delivered in 14 days</div>
+<div class="desc">10-page site with booking system, blog, analytics, speed optimization, full SEO, 30-day support.</div>
+<ul>
+<li>10 pages</li>
+<li>booking/scheduling system</li>
+<li>blog section</li>
+<li>full SEO + analytics</li>
+<li>30-day support</li>
+<li>5 revisions</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="details">
+<h2>the process. 4 steps. done.</h2>
+<div class="detail-list">
+<div class="detail-item">
+<h3>1. send your stuff</h3>
+<p>logo, photos, basic info (services, hours, address). no logo? i make one. no photos? i source professional stock.</p>
+</div>
+<div class="detail-item">
+<h3>2. i build it</h3>
+<p>3-7 days depending on package. modern framework, not WordPress bloat. fast, clean, works on every phone.</p>
+</div>
+<div class="detail-item">
+<h3>3. you review</h3>
+<p>request changes, i revise. 1-5 revisions depending on tier. you don't approve it, it doesn't go live.</p>
+</div>
+<div class="detail-item">
+<h3>4. site goes live</h3>
+<p>deployed on your domain. $0/month hosting. you own everything. done.</p>
+</div>
+</div>
+</section>
+
+<section class="proof">
+<h2>results from real clients</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"old site took 8 seconds to load. new site loads in 1.3s. phone calls went up 40% in the first month."</div>
+<div class="author">Dr. M. - dental clinic owner</div>
+<div class="result">+40% phone calls, month 1</div>
+</div>
+<div class="testimonial">
+<div class="quote">"handed over my logo and services list. got a finished site in 4 days. no back-and-forth headaches."</div>
+<div class="author">James R. - HVAC contractor</div>
+<div class="result">4-day delivery</div>
+</div>
+<div class="testimonial">
+<div class="quote">"finally have a site that doesn't embarrass me when i hand out business cards. customers actually find us on Google now."</div>
+<div class="author">Sarah K. - salon owner</div>
+<div class="result">ranking page 1 for "[salon] + [city]"</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>recent work</h2>
+<div class="port-grid">
+<div class="port-item">
+<div class="port-thumb">dental clinic - 1 pager</div>
+<div class="port-info"><h3>Smile Dental</h3><p>1-page site, booking, 97 PageSpeed</p></div>
+</div>
+<div class="port-item">
+<div class="port-thumb">restaurant - 5 pages</div>
+<div class="port-info"><h3>Bella's Kitchen</h3><p>menu, hours, reservations</p></div>
+</div>
+<div class="port-item">
+<div class="port-thumb">law firm - 7 pages</div>
+<div class="port-info"><h3>Harris & Cole LLP</h3><p>practice areas, attorney bios</p></div>
+</div>
+<div class="port-item">
+<div class="port-thumb">plumbing - 5 pages</div>
+<div class="port-info"><h3>FastDrain Plumbing</h3><p>service areas, emergency CTA</p></div>
+</div>
+<div class="port-item">
+<div class="port-thumb">gym - 3 pages</div>
+<div class="port-info"><h3>IronPeak Fitness</h3><p>class schedule, sign-up form</p></div>
+</div>
+<div class="port-item">
+<div class="port-thumb">real estate - 10 pages</div>
+<div class="port-info"><h3>Metro Realty Group</h3><p>listings, agent profiles, blog</p></div>
+</div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open">
+<div class="faq-q">what platform do you build on?</div>
+<div class="faq-a">modern web frameworks (Next.js, Astro) deployed on free-tier hosting. loads in under 2 seconds, costs $0/month to host, and doesn't need constant plugin updates like WordPress. if you specifically need WordPress, i can do that too.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">do i need to buy a domain?</div>
+<div class="faq-a">you'll need your own domain ($10-15/year from Namecheap or Google Domains). Standard and Premium packages include domain connection and DNS setup at no extra charge.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">will it rank on Google?</div>
+<div class="faq-a">Standard and Premium include SEO fundamentals: title tags, meta descriptions, header structure, image optimization, sitemap, and Google Business Profile connection. gets you indexed for "[your service] + [your city]" searches.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">can you add a booking system?</div>
+<div class="faq-a">Premium includes Cal.com or Calendly integration. visitors book appointments directly on your site without calling. if you already use a scheduling tool, i integrate that instead.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">what about changes after delivery?</div>
+<div class="faq-a">each package includes 1-5 revisions. Premium clients get 30 days of support for minor text/image changes. ongoing updates: $50/month maintenance retainer.</div>
+</div>
+</section>
+
+<section class="final-cta">
+<h2>message me your current site URL</h2>
+<p>i'll tell you in 60 seconds what's broken and how much it's costing you. no charge. no obligation.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+
+<footer>
+<div class="container">
+<p>53% of mobile visitors leave if a site takes longer than 3 seconds to load. every site i build scores 90+ on Google PageSpeed.</p>
+</div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});
+</script>
+</body>
+</html>

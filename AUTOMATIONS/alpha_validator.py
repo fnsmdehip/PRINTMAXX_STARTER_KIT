@@ -43,7 +43,7 @@ from typing import Dict, List, Any, Optional, Tuple
 from collections import defaultdict
 import math
 
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 CACHE_FILE = LEDGER_DIR / "ALPHA_VALIDATION_CACHE.csv"
 ALPHA_FILE = LEDGER_DIR / "ALPHA_STAGING.csv"

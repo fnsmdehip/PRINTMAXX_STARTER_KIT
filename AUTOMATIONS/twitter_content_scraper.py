@@ -52,7 +52,7 @@ except ImportError:
     print("WARNING: pycryptodome not installed. Run: pip3 install pycryptodome")
 
 # Paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 MEDIA_DIR = PROJECT_DIR / "AUTOMATIONS" / "media_downloads"
 OUTPUT_DIR = PROJECT_DIR / "AUTOMATIONS" / "twitter_scraper_output"
 REPURPOSE_QUEUE = PROJECT_DIR / "AUTOMATIONS" / "repurpose_queue.csv"

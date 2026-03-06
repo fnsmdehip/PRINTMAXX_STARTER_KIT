@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Twitter Header Template — PRINTMAXX</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;700&family=Oswald:wght@400;700&family=Playfair+Display:wght@700&family=Quicksand:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #222; display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px; font-family: Inter, sans-serif; }
+  .label { color: #999; font-size: 14px; margin-bottom: 8px; }
+  .header { width: 1500px; height: 500px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+
+  /* === PRINTMAXXER === */
+  .printmaxxer { background: #0D0D0D; }
+  .printmaxxer .grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(0,255,65,0.05) 1px, transparent 1px),
+                       linear-gradient(90deg, rgba(0,255,65,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .printmaxxer .content { position: relative; z-index: 1; text-align: center; }
+  .printmaxxer .tag { color: #0A3D0A; font-family: 'JetBrains Mono', monospace; font-size: 18px; margin-bottom: 12px; }
+  .printmaxxer h1 { color: #00FF41; font-family: 'JetBrains Mono', monospace; font-size: 72px; font-weight: 700; letter-spacing: 4px; }
+  .printmaxxer .sub { color: #6B6B6B; font-family: 'JetBrains Mono', monospace; font-size: 20px; margin-top: 16px; }
+  .printmaxxer .stats { display: flex; gap: 60px; margin-top: 40px; justify-content: center; }
+  .printmaxxer .stat { text-align: center; }
+  .printmaxxer .stat-num { color: #00D4FF; font-family: 'JetBrains Mono', monospace; font-size: 36px; font-weight: 700; }
+  .printmaxxer .stat-label { color: #6B6B6B; font-family: 'JetBrains Mono', monospace; font-size: 14px; margin-top: 4px; }
+
+  /* === SELAHMOMENTS === */
+  .selahmoments { background: #FFF8F0; }
+  .selahmoments .ornament { position: absolute; width: 300px; height: 300px; border: 1px solid #DDD0C0; border-radius: 50%; opacity: 0.3; }
+  .selahmoments .ornament:nth-child(1) { top: -100px; left: -100px; }
+  .selahmoments .ornament:nth-child(2) { bottom: -100px; right: -100px; }
+  .selahmoments .content { position: relative; z-index: 1; text-align: center; }
+  .selahmoments h1 { color: #C9A84C; font-family: 'Playfair Display', serif; font-size: 64px; letter-spacing: 8px; }
+  .selahmoments .divider { width: 120px; height: 1px; background: #C9A84C; margin: 20px auto; }
+  .selahmoments .sub { color: #C67B5C; font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; }
+
+  /* === REPSCHEME === */
+  .repscheme { background: #000; }
+  .repscheme .stripe { position: absolute; width: 100%; height: 8px; background: #E60012; }
+  .repscheme .stripe.top { top: 0; }
+  .repscheme .stripe.bottom { bottom: 0; }
+  .repscheme .content { position: relative; z-index: 1; text-align: center; }
+  .repscheme h1 { color: #FFF; font-family: 'Oswald', sans-serif; font-size: 96px; font-weight: 700; text-transform: uppercase; letter-spacing: 12px; }
+  .repscheme h1 span { color: #E60012; }
+  .repscheme .sub { color: #B0B0B0; font-family: 'Oswald', sans-serif; font-size: 22px; text-transform: uppercase; letter-spacing: 8px; margin-top: 12px; }
+
+  /* === DRIFTHOUR === */
+  .drifthour { background: linear-gradient(135deg, #F5F0FF 0%, #EDE7F6 50%, #D1C4E9 100%); }
+  .drifthour .content { position: relative; z-index: 1; text-align: center; }
+  .drifthour h1 { color: #7C4DFF; font-family: 'Quicksand', sans-serif; font-size: 72px; font-weight: 300; letter-spacing: 16px; }
+  .drifthour .sub { color: #9FA8DA; font-family: 'Quicksand', sans-serif; font-size: 20px; letter-spacing: 6px; margin-top: 16px; }
+
+  /* === CLIPVAULT === */
+  .clipvault { background: #0A0A1A; }
+  .clipvault .glow { position: absolute; width: 400px; height: 400px; border-radius: 50%; filter: blur(120px); opacity: 0.3; }
+  .clipvault .glow.purple { background: #9B30FF; top: -100px; left: 200px; }
+  .clipvault .glow.orange { background: #FF6B35; bottom: -100px; right: 200px; }
+  .clipvault .content { position: relative; z-index: 1; text-align: center; }
+  .clipvault h1 { font-family: 'Space Grotesk', sans-serif; font-size: 80px; font-weight: 700; letter-spacing: 6px; background: linear-gradient(135deg, #9B30FF, #FF6B35); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .clipvault .sub { color: #A090B0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<p class="label">@printmaxxer — 1500x500</p>
+<div class="header printmaxxer">
+  <div class="grid"></div>
+  <div class="content">
+    <div class="tag">&gt;_ initializing system</div>
+    <h1>PRINTMAXXER</h1>
+    <div class="sub">BUILD // SHIP // AUTOMATE</div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">7</div><div class="stat-label">APPS LIVE</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">BRANDS</div></div>
+      <div class="stat"><div class="stat-num">$0-1K</div><div class="stat-label">JOURNEY</div></div>
+    </div>
+  </div>
+</div>
+
+<p class="label">@selahmoments — 1500x500</p>
+<div class="header selahmoments">
+  <div class="ornament"></div>
+  <div class="ornament"></div>
+  <div class="content">
+    <h1>SELAH</h1>
+    <div class="divider"></div>
+    <div class="sub">pause. reflect. breathe.</div>
+  </div>
+</div>
+
+<p class="label">@repscheme — 1500x500</p>
+<div class="header repscheme">
+  <div class="stripe top"></div>
+  <div class="stripe bottom"></div>
+  <div class="content">
+    <h1>REP<span>SCHEME</span></h1>
+    <div class="sub">No Days Off</div>
+  </div>
+</div>
+
+<p class="label">@drifthour — 1500x500</p>
+<div class="header drifthour">
+  <div class="content">
+    <h1>drifthour</h1>
+    <div class="sub">your hour to exhale</div>
+  </div>
+</div>
+
+<p class="label">@clipvault — 1500x500</p>
+<div class="header clipvault">
+  <div class="glow purple"></div>
+  <div class="glow orange"></div>
+  <div class="content">
+    <h1>CLIPVAULT</h1>
+    <div class="sub">curate. clip. create.</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice — PRINTMAXX</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; background: #F5F5F5; padding: 40px 20px; color: #333; }
+
+  .invoice {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .invoice-header {
+    background: #0D0D0D;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .invoice-header .brand {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00FF41;
+    letter-spacing: 2px;
+  }
+  .invoice-header .invoice-label {
+    text-align: right;
+  }
+  .invoice-header .invoice-label h2 {
+    font-size: 28px;
+    color: #FFFFFF;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  .invoice-header .invoice-label .inv-number {
+    font-size: 14px;
+    color: #6B6B6B;
+    margin-top: 4px;
+  }
+
+  .invoice-meta {
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E8E8E8;
+  }
+  .meta-group h4 {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .meta-group p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .invoice-dates {
+    padding: 24px 40px;
+    display: flex;
+    gap: 60px;
+    border-bottom: 1px solid #E8E8E8;
+    background: #FAFAFA;
+  }
+  .date-item .date-label {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .date-item .date-value {
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  .invoice-table {
+    padding: 0 40px 32px;
+  }
+  .invoice-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+  .invoice-table th {
+    text-align: left;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    border-bottom: 2px solid #E8E8E8;
+  }
+  .invoice-table th:last-child,
+  .invoice-table td:last-child { text-align: right; }
+  .invoice-table td {
+    padding: 16px 0;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .item-desc { font-size: 12px; color: #999; margin-top: 2px; }
+
+  .invoice-totals {
+    padding: 0 40px 32px;
+  }
+  .totals-table {
+    width: 280px;
+    margin-left: auto;
+    border-collapse: collapse;
+  }
+  .totals-table td {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+  .totals-table .label { color: #999; }
+  .totals-table .value { text-align: right; color: #333; font-weight: 500; }
+  .totals-table .total-row td {
+    padding-top: 12px;
+    border-top: 2px solid #0D0D0D;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0D0D0D;
+  }
+
+  .invoice-notes {
+    padding: 24px 40px;
+    background: #FAFAFA;
+    border-top: 1px solid #E8E8E8;
+  }
+  .invoice-notes h4 {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .invoice-notes p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .invoice-footer {
+    padding: 24px 40px;
+    background: #0D0D0D;
+    text-align: center;
+  }
+  .invoice-footer p {
+    font-size: 12px;
+    color: #6B6B6B;
+    line-height: 1.6;
+  }
+  .invoice-footer a { color: #00FF41; text-decoration: none; }
+
+  @media print {
+    body { background: #FFF; padding: 0; }
+    .invoice { box-shadow: none; border-radius: 0; }
+  }
+  @media (max-width: 640px) {
+    .invoice-header, .invoice-meta { flex-direction: column; gap: 16px; }
+    .invoice-header .invoice-label { text-align: left; }
+    .invoice-dates { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="invoice">
+
+  <div class="invoice-header">
+    <div class="brand">PRINTMAXX</div>
+    <div class="invoice-label">
+      <h2>Invoice</h2>
+      <div class="inv-number">#INV-[XXXX]</div>
+    </div>
+  </div>
+
+  <div class="invoice-meta">
+    <div class="meta-group">
+      <h4>From</h4>
+      <p>
+        <strong>[Your Name / Business Name]</strong><br>
+        [Street Address]<br>
+        [City, State ZIP]<br>
+        [Email Address]
+      </p>
+    </div>
+    <div class="meta-group">
+      <h4>Bill To</h4>
+      <p>
+        <strong>[Client Name]</strong><br>
+        [Client Company]<br>
+        [Client Address]<br>
+        [Client Email]
+      </p>
+    </div>
+  </div>
+
+  <div class="invoice-dates">
+    <div class="date-item">
+      <div class="date-label">Invoice Date</div>
+      <div class="date-value">[Month DD, YYYY]</div>
+    </div>
+    <div class="date-item">
+      <div class="date-label">Due Date</div>
+      <div class="date-value">[Month DD, YYYY]</div>
+    </div>
+    <div class="date-item">
+      <div class="date-label">Payment Terms</div>
+      <div class="date-value">Net 30</div>
+    </div>
+  </div>
+
+  <div class="invoice-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Rate</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            [Service/Product Name]
+            <div class="item-desc">[Brief description of deliverable]</div>
+          </td>
+          <td>1</td>
+          <td>$X,XXX.XX</td>
+          <td>$X,XXX.XX</td>
+        </tr>
+        <tr>
+          <td>
+            [Service/Product Name]
+            <div class="item-desc">[Brief description of deliverable]</div>
+          </td>
+          <td>1</td>
+          <td>$XXX.XX</td>
+          <td>$XXX.XX</td>
+        </tr>
+        <tr>
+          <td>
+            [Service/Product Name]
+            <div class="item-desc">[Brief description of deliverable]</div>
+          </td>
+          <td>1</td>
+          <td>$XXX.XX</td>
+          <td>$XXX.XX</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="invoice-totals">
+    <table class="totals-table">
+      <tr>
+        <td class="label">Subtotal</td>
+        <td class="value">$X,XXX.XX</td>
+      </tr>
+      <tr>
+        <td class="label">Tax (0%)</td>
+        <td class="value">$0.00</td>
+      </tr>
+      <tr>
+        <td class="label">Discount</td>
+        <td class="value">-$0.00</td>
+      </tr>
+      <tr class="total-row">
+        <td>Total Due</td>
+        <td style="text-align:right;">$X,XXX.XX</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="invoice-notes">
+    <h4>Notes</h4>
+    <p>
+      Payment accepted via bank transfer, PayPal, or Stripe.<br>
+      Please include invoice number in the payment reference.<br>
+      Thank you for your business.
+    </p>
+  </div>
+
+  <div class="invoice-footer">
+    <p>
+      PRINTMAXX | <a href="https://printmaxx.dev">printmaxx.dev</a> | hello@printmaxx.dev
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

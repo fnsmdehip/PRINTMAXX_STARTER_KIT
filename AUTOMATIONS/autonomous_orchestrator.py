@@ -464,9 +464,12 @@ def cmd_auto(session_type):
     # Save checkpoint: session starting
     save_checkpoint(session_type, 0, state)
 
-    claude = Path("/Users/macbookpro/.local/bin/claude")
+    # Auto-detect claude CLI location
+    import shutil
+    claude_path = shutil.which("claude")
+    claude = Path(claude_path) if claude_path else Path.home() / ".local" / "bin" / "claude"
     if not claude.exists():
-        print(f"[ORCH] Claude CLI not found. Run manually:")
+        print(f"[ORCH] Claude CLI not found at {claude}. Run manually:")
         print(f"  cat {prompt_file} | claude --print --dangerously-skip-permissions")
         return
 

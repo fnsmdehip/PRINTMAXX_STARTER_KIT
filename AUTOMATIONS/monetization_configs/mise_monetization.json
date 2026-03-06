@@ -1,0 +1,444 @@
+{
+  "app_name": "mise",
+  "niche": "cooking",
+  "generated_at": "2026-03-05T02:57:49.151095",
+  "strategy": {
+    "primary": "subscription",
+    "secondary": [
+      "affiliate",
+      "iap"
+    ],
+    "tertiary": [
+      "ads"
+    ],
+    "subscription_tier": "low",
+    "optimal_weekly": 1.99,
+    "optimal_monthly": 6.99,
+    "optimal_yearly": 34.99,
+    "affiliate_categories": [
+      {
+        "category": "kitchen tools / gadgets",
+        "commission": "4-8%",
+        "program": "Amazon Associates",
+        "avg_order": 35.0
+      },
+      {
+        "category": "meal kit delivery",
+        "commission": "10-20%",
+        "program": "HelloFresh / Blue Apron",
+        "avg_order": 60.0
+      },
+      {
+        "category": "specialty ingredients",
+        "commission": "8-15%",
+        "program": "Thrive Market",
+        "avg_order": 50.0
+      },
+      {
+        "category": "cookware sets",
+        "commission": "5-10%",
+        "program": "Our Place / Caraway",
+        "avg_order": 150.0
+      },
+      {
+        "category": "cooking classes",
+        "commission": "20-40%",
+        "program": "MasterClass / America's Test Kitchen",
+        "avg_order": 120.0
+      }
+    ],
+    "ad_strategy": "native recipe sponsorships. rewarded video for premium recipes.",
+    "paywall_timing": "after 5 saved recipes or 1 week of meal planning",
+    "premium_features": [
+      "unlimited recipe saves",
+      "AI meal planning",
+      "grocery list generation",
+      "nutritional analysis",
+      "premium chef recipes"
+    ],
+    "donation_model": false,
+    "notes": "recipe packs as IAP ($1.99-$4.99 per cuisine pack). kitchen tool affiliate integrates naturally into recipe ingredients. meal kit affiliate on the meal planning screen."
+  },
+  "competitor_pricing": {
+    "competitors": [
+      {
+        "name": "Mealime",
+        "monthly": 5.99,
+        "yearly": 29.99,
+        "downloads": "5M+",
+        "rating": 4.6
+      },
+      {
+        "name": "Paprika",
+        "monthly": 0.0,
+        "yearly": 0.0,
+        "downloads": "1M+",
+        "rating": 4.5
+      },
+      {
+        "name": "Yummly",
+        "monthly": 4.99,
+        "yearly": 29.99,
+        "downloads": "10M+",
+        "rating": 4.7
+      },
+      {
+        "name": "Whisk",
+        "monthly": 0.0,
+        "yearly": 0.0,
+        "downloads": "1M+",
+        "rating": 4.4
+      },
+      {
+        "name": "SideChef",
+        "monthly": 9.99,
+        "yearly": 59.99,
+        "downloads": "1M+",
+        "rating": 4.5
+      }
+    ],
+    "avg_monthly": 4.19,
+    "avg_yearly": 23.99,
+    "recommended_monthly": 6.99,
+    "recommended_yearly": 34.99,
+    "strategy_note": "Paprika is one-time $4.99. cooking apps are price-sensitive. AI meal planning is the premium differentiator that justifies subscription."
+  },
+  "revenuecat_config": {
+    "app_name": "mise",
+    "revenuecat_project": "rc_mise",
+    "entitlements": [
+      {
+        "id": "mise_premium",
+        "display_name": "mise Premium",
+        "description": "Full access to all premium features"
+      }
+    ],
+    "offerings": [
+      {
+        "id": "mise_default",
+        "display_name": "Default Offering",
+        "packages": [
+          {
+            "id": "$rc_weekly",
+            "product_id": "mise_weekly"
+          },
+          {
+            "id": "$rc_monthly",
+            "product_id": "mise_monthly"
+          },
+          {
+            "id": "$rc_annual",
+            "product_id": "mise_yearly"
+          }
+        ]
+      }
+    ],
+    "products": [
+      {
+        "id": "mise_weekly",
+        "type": "auto_renewable_subscription",
+        "price": 1.99,
+        "period": "P1W",
+        "trial": "P3D",
+        "store_product_id": "mise.weekly"
+      },
+      {
+        "id": "mise_monthly",
+        "type": "auto_renewable_subscription",
+        "price": 6.99,
+        "period": "P1M",
+        "trial": "P7D",
+        "store_product_id": "mise.monthly"
+      },
+      {
+        "id": "mise_yearly",
+        "type": "auto_renewable_subscription",
+        "price": 34.99,
+        "period": "P1Y",
+        "trial": "P7D",
+        "store_product_id": "mise.yearly",
+        "introductory_offer": {
+          "type": "pay_up_front",
+          "price": 17.5,
+          "period": "P1Y",
+          "cycles": 1
+        }
+      },
+      {
+        "id": "mise_lifetime",
+        "type": "non_consumable",
+        "price": 104.97,
+        "store_product_id": "mise.lifetime"
+      }
+    ],
+    "subscription_group": "mise_subscriptions"
+  },
+  "affiliate_placements": [
+    {
+      "screen": "recipe_detail",
+      "trigger": "viewing a recipe's ingredients",
+      "type": "ingredient_source",
+      "affiliate_category": "kitchen tools / gadgets",
+      "program": "Amazon Associates",
+      "commission": "4-8%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "grocery_list",
+      "trigger": "generating a shopping list",
+      "type": "delivery_service",
+      "affiliate_category": "meal kit delivery",
+      "program": "HelloFresh / Blue Apron",
+      "commission": "10-20%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "equipment_tag",
+      "trigger": "recipe needs specific equipment",
+      "type": "equipment_link",
+      "affiliate_category": "specialty ingredients",
+      "program": "Thrive Market",
+      "commission": "8-15%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "meal_plan_complete",
+      "trigger": "completing weekly meal plan",
+      "type": "kit_recommendation",
+      "affiliate_category": "cookware sets",
+      "program": "Our Place / Caraway",
+      "commission": "5-10%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    }
+  ],
+  "ad_placements": [
+    {
+      "type": "rewarded_video",
+      "location": "unlock premium feature for 24h / streak protection",
+      "frequency": "user-initiated, max 3 per day",
+      "estimated_cpm": 25.0,
+      "note": "only ad type. keeps experience clean. user opts in."
+    }
+  ],
+  "paywall_copy": {
+    "headline": "dinner. solved.",
+    "subhead": "AI meal plans, smart grocery lists, and premium recipes. less than one takeout order per month.",
+    "value_prop": "you spend $40+ on one takeout order. $6.99/mo saves you $200+ on groceries with better meals.",
+    "social_proof": "users save an average of $127/month on food costs",
+    "features_headline": "never ask 'what's for dinner' again:",
+    "pricing_display": {
+      "monthly": {
+        "label": "monthly",
+        "price": "$6.99",
+        "period": "/mo",
+        "note": "cancel anytime"
+      },
+      "yearly": {
+        "label": "yearly",
+        "price": "$2.92",
+        "period": "/mo",
+        "note": "billed $34.99/yr. save 58%.",
+        "badge": "most popular",
+        "recommended": true
+      },
+      "weekly": {
+        "label": "weekly",
+        "price": "$1.99",
+        "period": "/wk",
+        "note": "3-day free trial"
+      }
+    },
+    "cta_button": "start free trial",
+    "cta_subtext": "7-day free trial. cancel anytime. no commitment.",
+    "premium_features": [
+      "unlimited recipe saves",
+      "AI meal planning",
+      "grocery list generation",
+      "nutritional analysis",
+      "premium chef recipes"
+    ],
+    "close_button_note": "always show X/close button. apple rejects hidden close buttons."
+  },
+  "revenue_projections": {
+    "at_1k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.01,
+        "paying_users": 10,
+        "monthly_subscribers": 7,
+        "yearly_subscribers": 3,
+        "subscription_gross": 57.68,
+        "subscription_net": 40.37,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 199.8,
+        "total_monthly_revenue": 240.17,
+        "total_yearly_revenue": 2882.09
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.03,
+        "paying_users": 30,
+        "monthly_subscribers": 21,
+        "yearly_subscribers": 9,
+        "subscription_gross": 173.03,
+        "subscription_net": 121.12,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 195.75,
+        "total_monthly_revenue": 316.87,
+        "total_yearly_revenue": 3802.47
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.07,
+        "paying_users": 70,
+        "monthly_subscribers": 49,
+        "yearly_subscribers": 21,
+        "subscription_gross": 403.74,
+        "subscription_net": 282.62,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 187.65,
+        "total_monthly_revenue": 470.27,
+        "total_yearly_revenue": 5643.24
+      }
+    },
+    "at_5k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.01,
+        "paying_users": 50,
+        "monthly_subscribers": 35,
+        "yearly_subscribers": 15,
+        "subscription_gross": 288.39,
+        "subscription_net": 201.87,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 1001.7,
+        "total_monthly_revenue": 1235.57,
+        "total_yearly_revenue": 14826.85
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.03,
+        "paying_users": 150,
+        "monthly_subscribers": 105,
+        "yearly_subscribers": 45,
+        "subscription_gross": 865.16,
+        "subscription_net": 605.61,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 981.45,
+        "total_monthly_revenue": 1619.06,
+        "total_yearly_revenue": 19428.76
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.07,
+        "paying_users": 350,
+        "monthly_subscribers": 244,
+        "yearly_subscribers": 105,
+        "subscription_gross": 2011.72,
+        "subscription_net": 1408.21,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 940.95,
+        "total_monthly_revenue": 2381.16,
+        "total_yearly_revenue": 28573.87
+      }
+    },
+    "at_10k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.01,
+        "paying_users": 100,
+        "monthly_subscribers": 70,
+        "yearly_subscribers": 30,
+        "subscription_gross": 576.77,
+        "subscription_net": 403.74,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 2004.75,
+        "total_monthly_revenue": 2480.49,
+        "total_yearly_revenue": 29765.91
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.03,
+        "paying_users": 300,
+        "monthly_subscribers": 210,
+        "yearly_subscribers": 90,
+        "subscription_gross": 1730.33,
+        "subscription_net": 1211.23,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 1964.25,
+        "total_monthly_revenue": 3247.48,
+        "total_yearly_revenue": 38969.73
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.07,
+        "paying_users": 700,
+        "monthly_subscribers": 489,
+        "yearly_subscribers": 210,
+        "subscription_gross": 4030.44,
+        "subscription_net": 2821.3,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 1883.25,
+        "total_monthly_revenue": 4776.55,
+        "total_yearly_revenue": 57318.65
+      }
+    },
+    "at_50k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.01,
+        "paying_users": 500,
+        "monthly_subscribers": 350,
+        "yearly_subscribers": 150,
+        "subscription_gross": 2883.88,
+        "subscription_net": 2018.71,
+        "affiliate_revenue": 392.0,
+        "ad_revenue": 10023.75,
+        "total_monthly_revenue": 12434.46,
+        "total_yearly_revenue": 149213.55
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.03,
+        "paying_users": 1500,
+        "monthly_subscribers": 1050,
+        "yearly_subscribers": 450,
+        "subscription_gross": 8651.62,
+        "subscription_net": 6056.14,
+        "affiliate_revenue": 384.0,
+        "ad_revenue": 9821.25,
+        "total_monthly_revenue": 16261.39,
+        "total_yearly_revenue": 195136.65
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.07,
+        "paying_users": 3500,
+        "monthly_subscribers": 2450,
+        "yearly_subscribers": 1050,
+        "subscription_gross": 20187.12,
+        "subscription_net": 14130.99,
+        "affiliate_revenue": 368.0,
+        "ad_revenue": 9416.25,
+        "total_monthly_revenue": 23915.24,
+        "total_yearly_revenue": 286982.85
+      }
+    }
+  }
+}

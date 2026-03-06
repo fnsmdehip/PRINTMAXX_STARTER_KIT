@@ -16,10 +16,15 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote_plus
 
-import requests
-from bs4 import BeautifulSoup
+try:
+    import requests
+    from bs4 import BeautifulSoup
+except ImportError as e:
+    print(f"ERROR: Missing dependency: {e}")
+    print("Install with: pip3 install requests beautifulsoup4")
+    sys.exit(1)
 
-BASE_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_CSV = BASE_DIR / "LEDGER" / "PLATFORM_ALGO_CHANGES.csv"
 CSV_COLUMNS = ["date", "platform", "change_type", "description", "source_url", "impact_level", "action_required"]
 

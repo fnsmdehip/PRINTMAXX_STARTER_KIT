@@ -57,8 +57,11 @@ from functools import wraps
 # CONFIGURATION - HARDCODED SAFETY BOUNDARIES
 # ============================================================
 
-# The ONE folder we're allowed to modify
-PROJECT_ROOT = "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt"
+# The ONE folder we're allowed to modify (auto-detected from script location, fallback to hardcoded)
+PROJECT_ROOT = str(Path(__file__).resolve().parent.parent)
+_EXPECTED_ROOT = "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt"
+if not PROJECT_ROOT.endswith("PRINTMAXX_STARTER_KITttttt"):
+    PROJECT_ROOT = _EXPECTED_ROOT  # safety fallback
 
 # Folders we can READ from (but not write to) outside project
 READABLE_EXTERNAL = [

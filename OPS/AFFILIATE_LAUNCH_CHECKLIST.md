@@ -518,3 +518,40 @@ you don't need to be smart, creative, or have special skills -
 
 [ACQUISITION] Launch HN: OctaPulse (YC W26) – Robotics and computer vision for fish farming
 
+
+
+---
+
+## Pending Enhancement (ALPHA14988, Score: 36)
+
+**Source:** @HamptonAc_ (explicit-handles) | **URL:** https://x.com/HamptonAc_/status/2028332721294954714
+**Added:** 2026-03-05T05:36:13-05:00
+
+You could literally open your laptop right now and:
+
+→ Go to AutoDS
+→ Find a product that sold 10K units this week
+→ Check if there's 3+ competitors running Facebook ads
+→ Build a store in 20 minutes with AI
+→ Source it through Teem Drop
+→ Launch a $100 test tomorrow
+
+But
+
+
+
+---
+
+## Pending Enhancement (ALPHA15012, Score: 36)
+
+**Source:** @HamptonAc_ (explicit-handles) | **URL:** https://x.com/HamptonAc_/status/2026577749616280058
+**Added:** 2026-03-05T05:36:13-05:00
+
+Had a student making $800/day profit on one product.
+
+He asked if he should launch more products to "diversify."
+
+I told him to ride this one until the wheels fall off.
+
+Didn't listen. Went on to split his focus across 4 products. Lost the original winner, trying to find another
+

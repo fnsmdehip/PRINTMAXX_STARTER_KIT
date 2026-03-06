@@ -70,7 +70,7 @@ except ImportError:
 # CONFIGURATION
 # =============================================================================
 
-PROJECT_ROOT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_ROOT / "LEDGER"
 OPS_DIR = PROJECT_ROOT / "OPS"
 FINANCIALS_DIR = PROJECT_ROOT / "FINANCIALS"

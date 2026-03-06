@@ -1,0 +1,440 @@
+{
+  "app_name": "streakr",
+  "niche": "habits",
+  "generated_at": "2026-03-05T02:57:49.150463",
+  "strategy": {
+    "primary": "subscription",
+    "secondary": [
+      "affiliate",
+      "freemium"
+    ],
+    "tertiary": [
+      "ads"
+    ],
+    "subscription_tier": "low",
+    "optimal_weekly": 1.99,
+    "optimal_monthly": 4.99,
+    "optimal_yearly": 29.99,
+    "affiliate_categories": [
+      {
+        "category": "habit books (Atomic Habits, etc.)",
+        "commission": "4-8%",
+        "program": "Amazon Associates",
+        "avg_order": 18.0
+      },
+      {
+        "category": "journals / planners",
+        "commission": "10-20%",
+        "program": "Etsy / Amazon",
+        "avg_order": 22.0
+      },
+      {
+        "category": "wellness supplements",
+        "commission": "15-30%",
+        "program": "AG1 / Athletic Greens",
+        "avg_order": 79.0
+      },
+      {
+        "category": "mindfulness apps",
+        "commission": "20-40%",
+        "program": "Headspace / Calm referral",
+        "avg_order": 70.0
+      }
+    ],
+    "ad_strategy": "rewarded video for streak protection. no ads during habit logging.",
+    "paywall_timing": "after tracking 3 habits for 7 days free",
+    "premium_features": [
+      "unlimited habits",
+      "advanced analytics / streaks",
+      "custom reminders",
+      "habit stacking suggestions",
+      "community / accountability partners",
+      "widget support"
+    ],
+    "donation_model": false,
+    "notes": "habit apps have the highest retention potential. streak mechanics create natural lock-in. AG1/supplement affiliate works because health-conscious habit trackers overlap. streak freeze as consumable IAP ($0.99)."
+  },
+  "competitor_pricing": {
+    "competitors": [
+      {
+        "name": "Streaks",
+        "monthly": 0.0,
+        "yearly": 0.0,
+        "downloads": "1M+",
+        "rating": 4.7
+      },
+      {
+        "name": "HabitNow",
+        "monthly": 2.99,
+        "yearly": 14.99,
+        "downloads": "5M+",
+        "rating": 4.5
+      },
+      {
+        "name": "Habitica",
+        "monthly": 4.99,
+        "yearly": 47.99,
+        "downloads": "5M+",
+        "rating": 4.3
+      },
+      {
+        "name": "Productive",
+        "monthly": 6.99,
+        "yearly": 39.99,
+        "downloads": "1M+",
+        "rating": 4.6
+      },
+      {
+        "name": "Atoms",
+        "monthly": 4.99,
+        "yearly": 29.99,
+        "downloads": "500K+",
+        "rating": 4.7
+      }
+    ],
+    "avg_monthly": 3.99,
+    "avg_yearly": 26.59,
+    "recommended_monthly": 4.99,
+    "recommended_yearly": 29.99,
+    "strategy_note": "Streaks is Apple Design Award winner, one-time $4.99. habit apps are price-sensitive. gamification (streaks, badges) drives retention better than features."
+  },
+  "revenuecat_config": {
+    "app_name": "streakr",
+    "revenuecat_project": "rc_streakr",
+    "entitlements": [
+      {
+        "id": "streakr_premium",
+        "display_name": "streakr Premium",
+        "description": "Full access to all premium features"
+      }
+    ],
+    "offerings": [
+      {
+        "id": "streakr_default",
+        "display_name": "Default Offering",
+        "packages": [
+          {
+            "id": "$rc_weekly",
+            "product_id": "streakr_weekly"
+          },
+          {
+            "id": "$rc_monthly",
+            "product_id": "streakr_monthly"
+          },
+          {
+            "id": "$rc_annual",
+            "product_id": "streakr_yearly"
+          }
+        ]
+      }
+    ],
+    "products": [
+      {
+        "id": "streakr_weekly",
+        "type": "auto_renewable_subscription",
+        "price": 1.99,
+        "period": "P1W",
+        "trial": "P3D",
+        "store_product_id": "streakr.weekly"
+      },
+      {
+        "id": "streakr_monthly",
+        "type": "auto_renewable_subscription",
+        "price": 4.99,
+        "period": "P1M",
+        "trial": "P7D",
+        "store_product_id": "streakr.monthly"
+      },
+      {
+        "id": "streakr_yearly",
+        "type": "auto_renewable_subscription",
+        "price": 29.99,
+        "period": "P1Y",
+        "trial": "P7D",
+        "store_product_id": "streakr.yearly",
+        "introductory_offer": {
+          "type": "pay_up_front",
+          "price": 14.99,
+          "period": "P1Y",
+          "cycles": 1
+        }
+      },
+      {
+        "id": "streakr_lifetime",
+        "type": "non_consumable",
+        "price": 89.97,
+        "store_product_id": "streakr.lifetime"
+      }
+    ],
+    "subscription_group": "streakr_subscriptions"
+  },
+  "affiliate_placements": [
+    {
+      "screen": "habit_complete",
+      "trigger": "after completing daily habits",
+      "type": "wellness_recommendation",
+      "affiliate_category": "habit books (Atomic Habits, etc.)",
+      "program": "Amazon Associates",
+      "commission": "4-8%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "streak_milestone",
+      "trigger": "hitting 7/30/100 day streaks",
+      "type": "celebration_suggestion",
+      "affiliate_category": "journals / planners",
+      "program": "Etsy / Amazon",
+      "commission": "10-20%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "habit_suggestions",
+      "trigger": "browsing suggested new habits",
+      "type": "resource_link",
+      "affiliate_category": "wellness supplements",
+      "program": "AG1 / Athletic Greens",
+      "commission": "15-30%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "weekly_review",
+      "trigger": "weekly habit summary",
+      "type": "improvement_product",
+      "affiliate_category": "mindfulness apps",
+      "program": "Headspace / Calm referral",
+      "commission": "20-40%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    }
+  ],
+  "ad_placements": [
+    {
+      "type": "rewarded_video",
+      "location": "unlock premium feature for 24h / streak protection",
+      "frequency": "user-initiated, max 3 per day",
+      "estimated_cpm": 25.0,
+      "note": "only ad type. keeps experience clean. user opts in."
+    }
+  ],
+  "paywall_copy": {
+    "headline": "don't break the chain.",
+    "subhead": "unlimited habits, streak protection, and smart insights. $2.5/mo.",
+    "value_prop": "$4.99/mo to build the life you actually want. cheaper than the gym membership you never use.",
+    "social_proof": "users with 30+ day streaks report 67% higher life satisfaction",
+    "features_headline": "everything you need to stick with it:",
+    "pricing_display": {
+      "monthly": {
+        "label": "monthly",
+        "price": "$4.99",
+        "period": "/mo",
+        "note": "cancel anytime"
+      },
+      "yearly": {
+        "label": "yearly",
+        "price": "$2.5",
+        "period": "/mo",
+        "note": "billed $29.99/yr. save 50%.",
+        "badge": "most popular",
+        "recommended": true
+      },
+      "weekly": {
+        "label": "weekly",
+        "price": "$1.99",
+        "period": "/wk",
+        "note": "3-day free trial"
+      }
+    },
+    "cta_button": "start free trial",
+    "cta_subtext": "7-day free trial. cancel anytime. no commitment.",
+    "premium_features": [
+      "unlimited habits",
+      "advanced analytics / streaks",
+      "custom reminders",
+      "habit stacking suggestions",
+      "community / accountability partners",
+      "widget support"
+    ],
+    "close_button_note": "always show X/close button. apple rejects hidden close buttons."
+  },
+  "revenue_projections": {
+    "at_1k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.01,
+        "paying_users": 10,
+        "monthly_subscribers": 7,
+        "yearly_subscribers": 3,
+        "subscription_gross": 42.43,
+        "subscription_net": 29.7,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 199.8,
+        "total_monthly_revenue": 229.5,
+        "total_yearly_revenue": 2753.99
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.03,
+        "paying_users": 30,
+        "monthly_subscribers": 21,
+        "yearly_subscribers": 9,
+        "subscription_gross": 127.28,
+        "subscription_net": 89.1,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 195.75,
+        "total_monthly_revenue": 284.85,
+        "total_yearly_revenue": 3418.17
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.07,
+        "paying_users": 70,
+        "monthly_subscribers": 49,
+        "yearly_subscribers": 21,
+        "subscription_gross": 296.99,
+        "subscription_net": 207.89,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 187.65,
+        "total_monthly_revenue": 395.54,
+        "total_yearly_revenue": 4746.54
+      }
+    },
+    "at_5k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.01,
+        "paying_users": 50,
+        "monthly_subscribers": 35,
+        "yearly_subscribers": 15,
+        "subscription_gross": 212.14,
+        "subscription_net": 148.5,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 1001.7,
+        "total_monthly_revenue": 1182.2,
+        "total_yearly_revenue": 14186.35
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.03,
+        "paying_users": 150,
+        "monthly_subscribers": 105,
+        "yearly_subscribers": 45,
+        "subscription_gross": 636.41,
+        "subscription_net": 445.49,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 981.45,
+        "total_monthly_revenue": 1458.94,
+        "total_yearly_revenue": 17507.26
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.07,
+        "paying_users": 350,
+        "monthly_subscribers": 244,
+        "yearly_subscribers": 105,
+        "subscription_gross": 1479.97,
+        "subscription_net": 1035.98,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 940.95,
+        "total_monthly_revenue": 2008.93,
+        "total_yearly_revenue": 24107.17
+      }
+    },
+    "at_10k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.01,
+        "paying_users": 100,
+        "monthly_subscribers": 70,
+        "yearly_subscribers": 30,
+        "subscription_gross": 424.27,
+        "subscription_net": 296.99,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 2004.75,
+        "total_monthly_revenue": 2373.74,
+        "total_yearly_revenue": 28484.91
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.03,
+        "paying_users": 300,
+        "monthly_subscribers": 210,
+        "yearly_subscribers": 90,
+        "subscription_gross": 1272.83,
+        "subscription_net": 890.98,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 1964.25,
+        "total_monthly_revenue": 2927.23,
+        "total_yearly_revenue": 35126.73
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.07,
+        "paying_users": 700,
+        "monthly_subscribers": 489,
+        "yearly_subscribers": 210,
+        "subscription_gross": 2964.93,
+        "subscription_net": 2075.45,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 1883.25,
+        "total_monthly_revenue": 4030.7,
+        "total_yearly_revenue": 48368.45
+      }
+    },
+    "at_50k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.01,
+        "paying_users": 500,
+        "monthly_subscribers": 350,
+        "yearly_subscribers": 150,
+        "subscription_gross": 2121.38,
+        "subscription_net": 1484.96,
+        "affiliate_revenue": 392.0,
+        "ad_revenue": 10023.75,
+        "total_monthly_revenue": 11900.71,
+        "total_yearly_revenue": 142808.55
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.03,
+        "paying_users": 1500,
+        "monthly_subscribers": 1050,
+        "yearly_subscribers": 450,
+        "subscription_gross": 6364.12,
+        "subscription_net": 4454.89,
+        "affiliate_revenue": 384.0,
+        "ad_revenue": 9821.25,
+        "total_monthly_revenue": 14660.14,
+        "total_yearly_revenue": 175921.65
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.07,
+        "paying_users": 3500,
+        "monthly_subscribers": 2450,
+        "yearly_subscribers": 1050,
+        "subscription_gross": 14849.62,
+        "subscription_net": 10394.74,
+        "affiliate_revenue": 368.0,
+        "ad_revenue": 9416.25,
+        "total_monthly_revenue": 20178.99,
+        "total_yearly_revenue": 242147.85
+      }
+    }
+  }
+}

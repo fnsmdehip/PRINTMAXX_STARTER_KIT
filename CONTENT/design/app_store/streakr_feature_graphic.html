@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Streakr — Feature Graphic 1024x500</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #111; }
+  .graphic {
+    width: 1024px; height: 500px;
+    background: linear-gradient(135deg, #FF6F00 0%, #E65100 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; padding: 0 80px;
+  }
+  .flame-glow {
+    position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,234,0,0.2), transparent 70%);
+  }
+  .streak-dots {
+    position: absolute; bottom: 60px; left: 80px; right: 80px;
+    display: flex; gap: 12px;
+  }
+  .streak-dot {
+    width: 16px; height: 16px; border-radius: 50%; background: rgba(255,255,255,0.15);
+  }
+  .streak-dot.active { background: #FFEA00; }
+  .left { position: relative; z-index: 1; flex: 1; }
+  .left h1 {
+    font-family: 'Oswald', sans-serif; font-size: 64px; color: #FFFFFF;
+    text-transform: uppercase; letter-spacing: 4px; margin-bottom: 16px;
+  }
+  .left h1 span { color: #FFEA00; }
+  .left p { font-family: 'Inter', sans-serif; font-size: 20px; color: rgba(255,255,255,0.7); max-width: 380px; }
+  .right { position: relative; z-index: 1; }
+  .icon-preview {
+    width: 160px; height: 160px; border-radius: 36px;
+    background: linear-gradient(135deg, #FF6F00, #FF8F00);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    font-size: 72px; color: #FFEA00;
+  }
+  .badge {
+    position: absolute; bottom: 24px; right: 80px;
+    font-family: 'Inter', sans-serif; font-size: 14px;
+    color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="graphic">
+  <div class="flame-glow"></div>
+  <div class="left">
+    <h1>Streak<span>r</span></h1>
+    <p>Build unbreakable habits. Track your streaks. Never miss a day.</p>
+  </div>
+  <div class="right">
+    <div class="icon-preview">&#128293;</div>
+  </div>
+  <div class="streak-dots">
+    <div class="streak-dot active"></div>
+    <div class="streak-dot active"></div>
+    <div class="streak-dot active"></div>
+    <div class="streak-dot active"></div>
+    <div class="streak-dot active"></div>
+    <div class="streak-dot active"></div>
+    <div class="streak-dot active"></div>
+    <div class="streak-dot"></div>
+    <div class="streak-dot"></div>
+    <div class="streak-dot"></div>
+    <div class="streak-dot"></div>
+    <div class="streak-dot"></div>
+    <div class="streak-dot"></div>
+    <div class="streak-dot"></div>
+  </div>
+  <div class="badge">PRINTMAXX</div>
+</div>
+</body>
+</html>

@@ -42,7 +42,7 @@ from dataclasses import dataclass, asdict, field
 from collections import defaultdict
 import statistics
 
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 FINANCIALS_DIR = PROJECT_DIR / "FINANCIALS"
 PAPER_TRADE_DIR = LEDGER_DIR / "PAPER_TRADES"

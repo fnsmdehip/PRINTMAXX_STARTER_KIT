@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Revenue Dashboard Template — PRINTMAXX [TEMPLATE ONLY]</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #111; display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px; }
+
+  .warning-banner {
+    background: #FFB300;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .dashboard {
+    width: 1200px;
+    background: #0D0D0D;
+    border: 1px solid #1A1A2E;
+    border-radius: 16px;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid #1A1A2E;
+  }
+  .dash-header .title {
+    font-family: 'JetBrains Mono', monospace;
+    color: #00FF41;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .dash-header .period {
+    color: #6B6B6B;
+    font-size: 14px;
+  }
+  .dash-header .template-badge {
+    background: #FFB300;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .metric-card {
+    padding: 32px;
+    border-right: 1px solid #1A1A2E;
+    border-bottom: 1px solid #1A1A2E;
+  }
+  .metric-card:last-child { border-right: none; }
+  .metric-label {
+    font-size: 13px;
+    color: #6B6B6B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .metric-value {
+    font-size: 36px;
+    font-weight: 800;
+    color: #FFFFFF;
+  }
+  .metric-change {
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+  .metric-change.up { color: #39FF14; }
+  .metric-change.down { color: #FF3333; }
+
+  .chart-area {
+    padding: 32px;
+    border-bottom: 1px solid #1A1A2E;
+  }
+  .chart-title {
+    color: #6B6B6B;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 180px;
+  }
+  .chart-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .chart-bar {
+    width: 100%;
+    max-width: 60px;
+    background: linear-gradient(180deg, #00FF41, #00D4FF);
+    border-radius: 4px 4px 0 0;
+    min-height: 4px;
+  }
+  .chart-label {
+    font-size: 11px;
+    color: #6B6B6B;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .app-rows {
+    padding: 0 32px 32px;
+  }
+  .app-row-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 16px 0;
+    border-bottom: 1px solid #1A1A2E;
+    color: #6B6B6B;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .app-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 16px 0;
+    border-bottom: 1px solid #0A0A15;
+    align-items: center;
+  }
+  .app-name {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .app-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .app-val { color: #E0E0E0; font-size: 15px; font-weight: 500; }
+  .app-val.green { color: #39FF14; }
+</style>
+</head>
+<body>
+
+<div class="warning-banner">
+  TEMPLATE ONLY — Replace placeholder values with actual data before posting. Do not misrepresent revenue.
+</div>
+
+<div class="dashboard">
+  <div class="dash-header">
+    <div class="title">&gt;_ PRINTMAXX REVENUE DASHBOARD</div>
+    <div class="template-badge">Template — Replace Data</div>
+    <div class="period">March 2026 | 30-Day View</div>
+  </div>
+
+  <div class="metrics-row">
+    <div class="metric-card">
+      <div class="metric-label">Total Revenue</div>
+      <div class="metric-value">$X,XXX</div>
+      <div class="metric-change up">+XX% vs last month</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">MRR</div>
+      <div class="metric-value">$XXX</div>
+      <div class="metric-change up">+XX%</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Total Users</div>
+      <div class="metric-value">X,XXX</div>
+      <div class="metric-change up">+XXX new</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Active Apps</div>
+      <div class="metric-value">7</div>
+      <div class="metric-change up">All live</div>
+    </div>
+  </div>
+
+  <div class="chart-area">
+    <div class="chart-title">Revenue by Week</div>
+    <div class="chart-bars">
+      <div class="chart-bar-group"><div class="chart-bar" style="height:40px"></div><div class="chart-label">W1</div></div>
+      <div class="chart-bar-group"><div class="chart-bar" style="height:65px"></div><div class="chart-label">W2</div></div>
+      <div class="chart-bar-group"><div class="chart-bar" style="height:90px"></div><div class="chart-label">W3</div></div>
+      <div class="chart-bar-group"><div class="chart-bar" style="height:120px"></div><div class="chart-label">W4</div></div>
+    </div>
+  </div>
+
+  <div class="app-rows">
+    <div class="app-row-header">
+      <div>App</div>
+      <div>Revenue</div>
+      <div>Downloads</div>
+      <div>Rating</div>
+      <div>Status</div>
+    </div>
+    <div class="app-row">
+      <div class="app-name"><div class="app-icon" style="background:#1A237E;color:#FFF">P</div> PrayerLock</div>
+      <div class="app-val">$XXX</div>
+      <div class="app-val">X,XXX</div>
+      <div class="app-val">X.X</div>
+      <div class="app-val green">Live</div>
+    </div>
+    <div class="app-row">
+      <div class="app-name"><div class="app-icon" style="background:#1B5E20;color:#FFF">H</div> Hilal</div>
+      <div class="app-val">$XXX</div>
+      <div class="app-val">X,XXX</div>
+      <div class="app-val">X.X</div>
+      <div class="app-val green">Live</div>
+    </div>
+    <div class="app-row">
+      <div class="app-name"><div class="app-icon" style="background:#E65100;color:#FFF">F</div> FocusLock</div>
+      <div class="app-val">$XXX</div>
+      <div class="app-val">X,XXX</div>
+      <div class="app-val">X.X</div>
+      <div class="app-val green">Live</div>
+    </div>
+    <div class="app-row">
+      <div class="app-name"><div class="app-icon" style="background:#4A148C;color:#FFF">D</div> Dusk</div>
+      <div class="app-val">$XXX</div>
+      <div class="app-val">X,XXX</div>
+      <div class="app-val">X.X</div>
+      <div class="app-val green">Live</div>
+    </div>
+    <div class="app-row">
+      <div class="app-name"><div class="app-icon" style="background:#BF360C;color:#FFF">M</div> Mise</div>
+      <div class="app-val">$XXX</div>
+      <div class="app-val">X,XXX</div>
+      <div class="app-val">X.X</div>
+      <div class="app-val green">Live</div>
+    </div>
+    <div class="app-row">
+      <div class="app-name"><div class="app-icon" style="background:#0D47A1;color:#FFF">S</div> StepLock</div>
+      <div class="app-val">$XXX</div>
+      <div class="app-val">X,XXX</div>
+      <div class="app-val">X.X</div>
+      <div class="app-val green">Live</div>
+    </div>
+    <div class="app-row">
+      <div class="app-name"><div class="app-icon" style="background:#FF6F00;color:#FFF">R</div> Streakr</div>
+      <div class="app-val">$XXX</div>
+      <div class="app-val">X,XXX</div>
+      <div class="app-val">X.X</div>
+      <div class="app-val green">Live</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

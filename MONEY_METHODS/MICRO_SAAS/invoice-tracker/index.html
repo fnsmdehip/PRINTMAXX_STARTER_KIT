@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Tracker</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00b894">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f1117;--surface:#1a1d27;--surface2:#242835;--border:#2d3140;
+  --text:#e4e6ef;--text-dim:#8b8fa3;--accent:#00b894;--accent2:#00cec9;
+  --green:#00b894;--yellow:#fdcb6e;--red:#e17055;--blue:#74b9ff;
+  --radius:10px;--shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6}
+.app{max-width:960px;margin:0 auto;padding:24px 16px}
+header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+header h1{font-size:24px;font-weight:700;letter-spacing:-0.5px}
+.header-actions{display:flex;gap:10px}
+button{padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s,transform .1s}
+button:hover{opacity:.9}
+button:active{transform:scale(.97)}
+button.secondary{background:var(--surface);border:1px solid var(--border);color:var(--text)}
+button.small{padding:6px 14px;font-size:12px}
+button.danger{background:var(--red)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:28px}
+.stat-card{background:var(--surface);border-radius:var(--radius);padding:20px;border:1px solid var(--border)}
+.stat-card .label{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.stat-card .value{font-size:28px;font-weight:700;margin-top:4px}
+.stat-card .value.green{color:var(--green)}
+.stat-card .value.yellow{color:var(--yellow)}
+.stat-card .value.red{color:var(--red)}
+.stat-card .value.blue{color:var(--blue)}
+
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.toolbar select,.toolbar input{padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);color:var(--text);font-size:13px;outline:none}
+.toolbar select:focus,.toolbar input:focus{border-color:var(--accent)}
+.toolbar .spacer{flex:1}
+
+.table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;min-width:600px}
+th{background:var(--surface);padding:12px 16px;text-align:left;font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;font-weight:600;cursor:pointer;user-select:none;white-space:nowrap}
+th:hover{color:var(--text)}
+td{padding:14px 16px;border-top:1px solid var(--border);font-size:14px;background:var(--surface2)}
+tr:hover td{background:var(--surface)}
+.status-badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.status-badge.paid{background:rgba(0,184,148,.15);color:var(--green)}
+.status-badge.outstanding{background:rgba(116,185,255,.15);color:var(--blue)}
+.status-badge.overdue{background:rgba(225,112,85,.15);color:var(--red)}
+.actions-cell{display:flex;gap:6px}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:100;padding:16px}
+.modal{background:var(--surface);border-radius:16px;padding:32px;width:100%;max-width:480px;box-shadow:var(--shadow)}
+.modal h2{font-size:20px;margin-bottom:20px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:12px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select{width:100%;padding:12px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;outline:none}
+.form-group input:focus,.form-group select:focus{border-color:var(--accent)}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:24px}
+
+.empty{text-align:center;padding:60px 20px;color:var(--text-dim)}
+.empty h3{font-size:18px;color:var(--text);margin-bottom:8px}
+
+.toast{position:fixed;bottom:24px;right:24px;background:var(--accent);color:#fff;padding:14px 24px;border-radius:var(--radius);font-size:14px;font-weight:600;transform:translateY(100px);opacity:0;transition:all .3s;z-index:200}
+.toast.show{transform:translateY(0);opacity:1}
+
+@media(max-width:600px){
+  .stats{grid-template-columns:1fr 1fr}
+  .stat-card .value{font-size:22px}
+  header{flex-direction:column;align-items:flex-start}
+  .toolbar{flex-direction:column}
+  .toolbar .spacer{display:none}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+  'use strict';
+
+  var STORAGE_KEY = 'inv_tracker_data';
+  var app = document.getElementById('app');
+  var toastEl = document.getElementById('toast');
+
+  var state = {
+    invoices: [],
+    filter: 'all',
+    sort: 'date-desc',
+    search: ''
+  };
+
+  function load() {
+    try {
+      var d = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      if (d && Array.isArray(d)) state.invoices = d;
+    } catch(e) {}
+  }
+
+  function save() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.invoices));
+  }
+
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    setTimeout(function(){ toastEl.classList.remove('show'); }, 2500);
+  }
+
+  function genId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+  }
+
+  function clearEl(parent) {
+    while (parent.firstChild) parent.removeChild(parent.firstChild);
+  }
+
+  function el(tag, attrs, children) {
+    var e = document.createElement(tag);
+    if (attrs) {
+      Object.keys(attrs).forEach(function(k) {
+        if (k === 'className') e.className = attrs[k];
+        else if (k.indexOf('on') === 0) e.addEventListener(k.slice(2).toLowerCase(), attrs[k]);
+        else e.setAttribute(k, attrs[k]);
+      });
+    }
+    if (typeof children === 'string') e.textContent = children;
+    else if (typeof children === 'number') e.textContent = String(children);
+    else if (Array.isArray(children)) children.forEach(function(c){ if(c) e.appendChild(c); });
+    return e;
+  }
+
+  function formatMoney(n) {
+    return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function formatDate(d) {
+    var parts = d.split('-');
+    return parts[1] + '/' + parts[2] + '/' + parts[0];
+  }
+
+  function getStatus(inv) {
+    if (inv.status === 'paid') return 'paid';
+    var today = new Date(); today.setHours(0,0,0,0);
+    var due = new Date(inv.dueDate + 'T00:00:00');
+    return due < today ? 'overdue' : 'outstanding';
+  }
+
+  function getFilteredSorted() {
+    var list = state.invoices.map(function(inv) {
+      return Object.assign({}, inv, { computedStatus: getStatus(inv) });
+    });
+
+    if (state.filter !== 'all') {
+      list = list.filter(function(inv) { return inv.computedStatus === state.filter; });
+    }
+
+    if (state.search) {
+      var q = state.search.toLowerCase();
+      list = list.filter(function(inv) {
+        return inv.client.toLowerCase().indexOf(q) > -1 ||
+               (inv.description && inv.description.toLowerCase().indexOf(q) > -1);
+      });
+    }
+
+    var sortKey = state.sort.split('-')[0];
+    var sortDir = state.sort.split('-')[1] === 'asc' ? 1 : -1;
+    list.sort(function(a, b) {
+      if (sortKey === 'date') return (a.dueDate > b.dueDate ? 1 : -1) * sortDir;
+      if (sortKey === 'amount') return (a.amount - b.amount) * sortDir;
+      if (sortKey === 'client') return a.client.localeCompare(b.client) * sortDir;
+      return 0;
+    });
+
+    return list;
+  }
+
+  function computeStats() {
+    var totalOutstanding = 0, totalPaid = 0, overdueCount = 0;
+    state.invoices.forEach(function(inv) {
+      var s = getStatus(inv);
+      if (s === 'paid') totalPaid += Number(inv.amount);
+      else {
+        totalOutstanding += Number(inv.amount);
+        if (s === 'overdue') overdueCount++;
+      }
+    });
+    return { totalOutstanding: totalOutstanding, totalPaid: totalPaid, overdueCount: overdueCount, total: state.invoices.length };
+  }
+
+  function render() {
+    clearEl(app);
+    var stats = computeStats();
+
+    var addBtn = el('button', { onClick: function(){ showModal(); } }, '+ New Invoice');
+    var csvBtn = el('button', { className: 'secondary', onClick: exportCSV }, 'Export CSV');
+    var headerActions = el('div', { className: 'header-actions' }, [csvBtn, addBtn]);
+    var header = el('header', null, [el('h1', null, 'Invoice Tracker'), headerActions]);
+
+    var statsGrid = el('div', { className: 'stats' }, [
+      makeStatCard('Total Invoices', String(stats.total), 'blue'),
+      makeStatCard('Outstanding', formatMoney(stats.totalOutstanding), 'yellow'),
+      makeStatCard('Paid', formatMoney(stats.totalPaid), 'green'),
+      makeStatCard('Overdue', String(stats.overdueCount), 'red')
+    ]);
+
+    var filterSel = el('select', { onChange: function(e){ state.filter = e.target.value; render(); } });
+    [['all','All Invoices'],['outstanding','Outstanding'],['paid','Paid'],['overdue','Overdue']].forEach(function(o){
+      var opt = el('option', { value: o[0] }, o[1]);
+      if (state.filter === o[0]) opt.selected = true;
+      filterSel.appendChild(opt);
+    });
+
+    var sortSel = el('select', { onChange: function(e){ state.sort = e.target.value; render(); } });
+    [['date-desc','Newest First'],['date-asc','Oldest First'],['amount-desc','Highest Amount'],['amount-asc','Lowest Amount'],['client-asc','Client A-Z']].forEach(function(o){
+      var opt = el('option', { value: o[0] }, o[1]);
+      if (state.sort === o[0]) opt.selected = true;
+      sortSel.appendChild(opt);
+    });
+
+    var searchInput = el('input', { type: 'text', placeholder: 'Search clients...',
+      onInput: function(e){ state.search = e.target.value; render(); }
+    });
+    searchInput.value = state.search;
+
+    var toolbar = el('div', { className: 'toolbar' }, [filterSel, sortSel, el('div',{className:'spacer'}), searchInput]);
+
+    app.appendChild(header);
+    app.appendChild(statsGrid);
+    app.appendChild(toolbar);
+
+    var list = getFilteredSorted();
+    if (list.length === 0) {
+      var emptyMsg = state.invoices.length === 0 ? 'Add your first invoice to get started.' : 'No invoices match your current filters.';
+      app.appendChild(el('div', { className: 'empty' }, [
+        el('h3', null, 'No Invoices Found'),
+        el('p', null, emptyMsg)
+      ]));
+    } else {
+      app.appendChild(buildTable(list));
+    }
+  }
+
+  function makeStatCard(label, value, color) {
+    return el('div', { className: 'stat-card' }, [
+      el('div', { className: 'label' }, label),
+      el('div', { className: 'value ' + color }, value)
+    ]);
+  }
+
+  function buildTable(list) {
+    var wrap = el('div', { className: 'table-wrap' });
+    var table = el('table');
+    var thead = el('thead');
+    var headerRow = el('tr');
+
+    ['Client', 'Amount', 'Due Date', 'Status', 'Actions'].forEach(function(h) {
+      headerRow.appendChild(el('th', null, h));
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    var tbody = el('tbody');
+    list.forEach(function(inv) {
+      var tr = el('tr');
+
+      var clientCell = el('td');
+      clientCell.appendChild(el('div', { style: 'font-weight:600' }, inv.client));
+      if (inv.description) {
+        clientCell.appendChild(el('div', { style: 'font-size:12px;color:var(--text-dim);margin-top:2px' }, inv.description));
+      }
+      tr.appendChild(clientCell);
+
+      tr.appendChild(el('td', { style: 'font-weight:600;font-variant-numeric:tabular-nums' }, formatMoney(inv.amount)));
+      tr.appendChild(el('td', null, formatDate(inv.dueDate)));
+
+      var badge = el('span', { className: 'status-badge ' + inv.computedStatus }, inv.computedStatus);
+      tr.appendChild(el('td', null, [badge]));
+
+      var actionsCell = el('td');
+      var actionsDiv = el('div', { className: 'actions-cell' });
+
+      if (inv.computedStatus !== 'paid') {
+        actionsDiv.appendChild(el('button', { className: 'small', onClick: (function(id){
+          return function() { markPaid(id); };
+        })(inv.id) }, 'Mark Paid'));
+      }
+
+      actionsDiv.appendChild(el('button', { className: 'small secondary', onClick: (function(id){
+        return function() { showModal(id); };
+      })(inv.id) }, 'Edit'));
+
+      actionsDiv.appendChild(el('button', { className: 'small danger', onClick: (function(id){
+        return function() { deleteInvoice(id); };
+      })(inv.id) }, 'Del'));
+
+      actionsCell.appendChild(actionsDiv);
+      tr.appendChild(actionsCell);
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    wrap.appendChild(table);
+    return wrap;
+  }
+
+  function markPaid(id) {
+    state.invoices = state.invoices.map(function(inv) {
+      if (inv.id === id) return Object.assign({}, inv, { status: 'paid' });
+      return inv;
+    });
+    save();
+    showToast('Invoice marked as paid');
+    render();
+  }
+
+  function deleteInvoice(id) {
+    if (!confirm('Delete this invoice?')) return;
+    state.invoices = state.invoices.filter(function(inv) { return inv.id !== id; });
+    save();
+    showToast('Invoice deleted');
+    render();
+  }
+
+  function showModal(editId) {
+    var existing = null;
+    if (editId) {
+      existing = state.invoices.find(function(inv){ return inv.id === editId; });
+    }
+
+    var overlay = el('div', { className: 'modal-overlay', onClick: function(e) {
+      if (e.target === overlay) overlay.remove();
+    }});
+
+    var modal = el('div', { className: 'modal' });
+    modal.appendChild(el('h2', null, existing ? 'Edit Invoice' : 'New Invoice'));
+
+    var clientGroup = makeFormField('Client Name', 'text', 'client', existing ? existing.client : '');
+    var descGroup = makeFormField('Description (optional)', 'text', 'desc', existing ? (existing.description || '') : '');
+    var amountGroup = makeFormField('Amount ($)', 'number', 'amount', existing ? existing.amount : '');
+    var today = new Date().toISOString().split('T')[0];
+    var dateGroup = makeFormField('Due Date', 'date', 'dueDate', existing ? existing.dueDate : today);
+
+    var statusGroup = el('div', { className: 'form-group' });
+    statusGroup.appendChild(el('label', null, 'Status'));
+    var statusSel = el('select', { id: 'modal-status' });
+    [['outstanding','Outstanding'],['paid','Paid']].forEach(function(o){
+      var opt = el('option', { value: o[0] }, o[1]);
+      if (existing && existing.status === o[0]) opt.selected = true;
+      statusSel.appendChild(opt);
+    });
+    statusGroup.appendChild(statusSel);
+
+    var saveBtn = el('button', { onClick: function() {
+      var client = document.getElementById('modal-client').value.trim();
+      var amount = parseFloat(document.getElementById('modal-amount').value);
+      var dueDate = document.getElementById('modal-dueDate').value;
+      var status = document.getElementById('modal-status').value;
+      var desc = document.getElementById('modal-desc').value.trim();
+
+      if (!client) { showToast('Client name is required'); return; }
+      if (isNaN(amount) || amount <= 0) { showToast('Enter a valid amount'); return; }
+      if (!dueDate) { showToast('Due date is required'); return; }
+
+      if (existing) {
+        state.invoices = state.invoices.map(function(inv) {
+          if (inv.id === editId) return { id: inv.id, client: client, amount: amount, dueDate: dueDate, status: status, description: desc };
+          return inv;
+        });
+        showToast('Invoice updated');
+      } else {
+        state.invoices.push({ id: genId(), client: client, amount: amount, dueDate: dueDate, status: status, description: desc });
+        showToast('Invoice added');
+      }
+      save();
+      overlay.remove();
+      render();
+    }}, existing ? 'Save Changes' : 'Add Invoice');
+
+    var cancelBtn = el('button', { className: 'secondary', onClick: function(){ overlay.remove(); } }, 'Cancel');
+    var actions = el('div', { className: 'modal-actions' }, [cancelBtn, saveBtn]);
+
+    modal.appendChild(clientGroup);
+    modal.appendChild(descGroup);
+    modal.appendChild(amountGroup);
+    modal.appendChild(dateGroup);
+    modal.appendChild(statusGroup);
+    modal.appendChild(actions);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+  }
+
+  function makeFormField(labelText, type, id, value) {
+    var group = el('div', { className: 'form-group' });
+    group.appendChild(el('label', null, labelText));
+    var input = el('input', { type: type, id: 'modal-' + id });
+    if (value !== undefined && value !== '') input.value = value;
+    if (type === 'number') { input.setAttribute('step', '0.01'); input.setAttribute('min', '0'); }
+    group.appendChild(input);
+    return group;
+  }
+
+  function exportCSV() {
+    if (state.invoices.length === 0) { showToast('No invoices to export'); return; }
+    var rows = [['Client', 'Description', 'Amount', 'Due Date', 'Status']];
+    state.invoices.forEach(function(inv) {
+      rows.push([
+        '"' + inv.client.replace(/"/g, '""') + '"',
+        '"' + (inv.description || '').replace(/"/g, '""') + '"',
+        inv.amount,
+        inv.dueDate,
+        getStatus(inv)
+      ]);
+    });
+    var csv = rows.map(function(r){ return r.join(','); }).join('\n');
+    var blob = new Blob([csv], { type: 'text/csv' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'invoices_' + new Date().toISOString().split('T')[0] + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast('CSV exported');
+  }
+
+  load();
+  render();
+})();
+</script>
+</body>
+</html>

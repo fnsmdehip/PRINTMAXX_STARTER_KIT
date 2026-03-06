@@ -1,0 +1,440 @@
+{
+  "app_name": "vault",
+  "niche": "finance",
+  "generated_at": "2026-03-05T02:57:49.149320",
+  "strategy": {
+    "primary": "subscription",
+    "secondary": [
+      "affiliate",
+      "freemium"
+    ],
+    "tertiary": [],
+    "subscription_tier": "high",
+    "optimal_weekly": 3.99,
+    "optimal_monthly": 12.99,
+    "optimal_yearly": 69.99,
+    "affiliate_categories": [
+      {
+        "category": "investment platforms (Robinhood, Wealthfront)",
+        "commission": "$5-$100 per signup",
+        "program": "Robinhood / Wealthfront Referral",
+        "avg_order": 0
+      },
+      {
+        "category": "budgeting tools",
+        "commission": "20-40%",
+        "program": "YNAB / Copilot Affiliate",
+        "avg_order": 99.0
+      },
+      {
+        "category": "credit monitoring",
+        "commission": "$20-$50 per signup",
+        "program": "Credit Karma / Experian",
+        "avg_order": 0
+      },
+      {
+        "category": "financial books",
+        "commission": "4-8%",
+        "program": "Amazon Associates",
+        "avg_order": 20.0
+      },
+      {
+        "category": "tax software",
+        "commission": "15-25%",
+        "program": "TurboTax / H&R Block",
+        "avg_order": 80.0
+      }
+    ],
+    "ad_strategy": "no ads. finance users expect premium, ad-free experience.",
+    "paywall_timing": "after connecting 1 account or 2-week trial",
+    "premium_features": [
+      "unlimited account connections",
+      "AI spending analysis",
+      "investment tracking",
+      "bill reminders / negotiation",
+      "custom financial reports",
+      "net worth tracking"
+    ],
+    "donation_model": false,
+    "notes": "finance is the highest-willingness-to-pay niche. per-signup referral commissions for investment platforms are massive ($5-$100 each). no ads, premium feel mandatory. compliance: never give financial advice, only tracking/tools."
+  },
+  "competitor_pricing": {
+    "competitors": [
+      {
+        "name": "Mint (Credit Karma)",
+        "monthly": 0.0,
+        "yearly": 0.0,
+        "downloads": "50M+",
+        "rating": 4.6
+      },
+      {
+        "name": "YNAB",
+        "monthly": 14.99,
+        "yearly": 99.0,
+        "downloads": "5M+",
+        "rating": 4.8
+      },
+      {
+        "name": "Copilot",
+        "monthly": 14.99,
+        "yearly": 95.88,
+        "downloads": "500K+",
+        "rating": 4.8
+      },
+      {
+        "name": "Rocket Money",
+        "monthly": 12.0,
+        "yearly": 48.0,
+        "downloads": "10M+",
+        "rating": 4.6
+      },
+      {
+        "name": "PocketGuard",
+        "monthly": 7.99,
+        "yearly": 34.99,
+        "downloads": "5M+",
+        "rating": 4.5
+      }
+    ],
+    "avg_monthly": 9.99,
+    "avg_yearly": 55.57,
+    "recommended_monthly": 12.99,
+    "recommended_yearly": 69.99,
+    "strategy_note": "match Copilot. finance users pay premium for quality. YNAB has strong brand loyalty. differentiate with AI analysis and simpler UX."
+  },
+  "revenuecat_config": {
+    "app_name": "vault",
+    "revenuecat_project": "rc_vault",
+    "entitlements": [
+      {
+        "id": "vault_premium",
+        "display_name": "vault Premium",
+        "description": "Full access to all premium features"
+      }
+    ],
+    "offerings": [
+      {
+        "id": "vault_default",
+        "display_name": "Default Offering",
+        "packages": [
+          {
+            "id": "$rc_weekly",
+            "product_id": "vault_weekly"
+          },
+          {
+            "id": "$rc_monthly",
+            "product_id": "vault_monthly"
+          },
+          {
+            "id": "$rc_annual",
+            "product_id": "vault_yearly"
+          }
+        ]
+      }
+    ],
+    "products": [
+      {
+        "id": "vault_weekly",
+        "type": "auto_renewable_subscription",
+        "price": 3.99,
+        "period": "P1W",
+        "trial": "P3D",
+        "store_product_id": "vault.weekly"
+      },
+      {
+        "id": "vault_monthly",
+        "type": "auto_renewable_subscription",
+        "price": 12.99,
+        "period": "P1M",
+        "trial": "P7D",
+        "store_product_id": "vault.monthly"
+      },
+      {
+        "id": "vault_yearly",
+        "type": "auto_renewable_subscription",
+        "price": 69.99,
+        "period": "P1Y",
+        "trial": "P7D",
+        "store_product_id": "vault.yearly",
+        "introductory_offer": {
+          "type": "pay_up_front",
+          "price": 34.99,
+          "period": "P1Y",
+          "cycles": 1
+        }
+      },
+      {
+        "id": "vault_lifetime",
+        "type": "non_consumable",
+        "price": 209.97,
+        "store_product_id": "vault.lifetime"
+      }
+    ],
+    "subscription_group": "vault_subscriptions"
+  },
+  "affiliate_placements": [
+    {
+      "screen": "investment_overview",
+      "trigger": "viewing investment summary",
+      "type": "platform_referral",
+      "affiliate_category": "investment platforms (Robinhood, Wealthfront)",
+      "program": "Robinhood / Wealthfront Referral",
+      "commission": "$5-$100 per signup",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "budget_optimization",
+      "trigger": "AI suggests savings opportunities",
+      "type": "tool_suggestion",
+      "affiliate_category": "budgeting tools",
+      "program": "YNAB / Copilot Affiliate",
+      "commission": "20-40%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "credit_score",
+      "trigger": "viewing credit-related info",
+      "type": "monitoring_referral",
+      "affiliate_category": "credit monitoring",
+      "program": "Credit Karma / Experian",
+      "commission": "$20-$50 per signup",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "tax_season",
+      "trigger": "Q1 tax prep reminder",
+      "type": "software_recommendation",
+      "affiliate_category": "financial books",
+      "program": "Amazon Associates",
+      "commission": "4-8%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    }
+  ],
+  "ad_placements": [
+    {
+      "recommendation": "ads not recommended for finance. focus on subscription + affiliate instead."
+    }
+  ],
+  "paywall_copy": {
+    "headline": "see where every dollar goes.",
+    "subhead": "AI analysis, investment tracking, bill negotiation. pays for itself in the first week.",
+    "value_prop": "$12.99/mo. users find an average of $340/mo in savings they didn't know they had.",
+    "social_proof": "85% of premium users save more than the subscription cost in their first month",
+    "features_headline": "your money. your rules:",
+    "pricing_display": {
+      "monthly": {
+        "label": "monthly",
+        "price": "$12.99",
+        "period": "/mo",
+        "note": "cancel anytime"
+      },
+      "yearly": {
+        "label": "yearly",
+        "price": "$5.83",
+        "period": "/mo",
+        "note": "billed $69.99/yr. save 55%.",
+        "badge": "most popular",
+        "recommended": true
+      },
+      "weekly": {
+        "label": "weekly",
+        "price": "$3.99",
+        "period": "/wk",
+        "note": "3-day free trial"
+      }
+    },
+    "cta_button": "start free trial",
+    "cta_subtext": "7-day free trial. cancel anytime. no commitment.",
+    "premium_features": [
+      "unlimited account connections",
+      "AI spending analysis",
+      "investment tracking",
+      "bill reminders / negotiation",
+      "custom financial reports",
+      "net worth tracking"
+    ],
+    "close_button_note": "always show X/close button. apple rejects hidden close buttons."
+  },
+  "revenue_projections": {
+    "at_1k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.01,
+        "paying_users": 10,
+        "monthly_subscribers": 7,
+        "yearly_subscribers": 3,
+        "subscription_gross": 108.43,
+        "subscription_net": 75.9,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 75.9,
+        "total_yearly_revenue": 910.79
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.03,
+        "paying_users": 30,
+        "monthly_subscribers": 21,
+        "yearly_subscribers": 9,
+        "subscription_gross": 325.28,
+        "subscription_net": 227.7,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 227.7,
+        "total_yearly_revenue": 2732.37
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.07,
+        "paying_users": 70,
+        "monthly_subscribers": 49,
+        "yearly_subscribers": 21,
+        "subscription_gross": 758.99,
+        "subscription_net": 531.29,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 531.29,
+        "total_yearly_revenue": 6375.54
+      }
+    },
+    "at_5k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.01,
+        "paying_users": 50,
+        "monthly_subscribers": 35,
+        "yearly_subscribers": 15,
+        "subscription_gross": 542.14,
+        "subscription_net": 379.5,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 411.5,
+        "total_yearly_revenue": 4937.95
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.03,
+        "paying_users": 150,
+        "monthly_subscribers": 105,
+        "yearly_subscribers": 45,
+        "subscription_gross": 1626.41,
+        "subscription_net": 1138.49,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 1170.49,
+        "total_yearly_revenue": 14045.86
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.07,
+        "paying_users": 350,
+        "monthly_subscribers": 244,
+        "yearly_subscribers": 105,
+        "subscription_gross": 3781.97,
+        "subscription_net": 2647.38,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 2679.38,
+        "total_yearly_revenue": 32152.57
+      }
+    },
+    "at_10k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.01,
+        "paying_users": 100,
+        "monthly_subscribers": 70,
+        "yearly_subscribers": 30,
+        "subscription_gross": 1084.28,
+        "subscription_net": 758.99,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 830.99,
+        "total_yearly_revenue": 9971.91
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.03,
+        "paying_users": 300,
+        "monthly_subscribers": 210,
+        "yearly_subscribers": 90,
+        "subscription_gross": 3252.82,
+        "subscription_net": 2276.98,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 2348.98,
+        "total_yearly_revenue": 28187.73
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.07,
+        "paying_users": 700,
+        "monthly_subscribers": 489,
+        "yearly_subscribers": 210,
+        "subscription_gross": 7576.93,
+        "subscription_net": 5303.85,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 5375.85,
+        "total_yearly_revenue": 64510.25
+      }
+    },
+    "at_50k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.01,
+        "paying_users": 500,
+        "monthly_subscribers": 350,
+        "yearly_subscribers": 150,
+        "subscription_gross": 5421.38,
+        "subscription_net": 3794.96,
+        "affiliate_revenue": 392.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 4186.96,
+        "total_yearly_revenue": 50243.55
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.03,
+        "paying_users": 1500,
+        "monthly_subscribers": 1050,
+        "yearly_subscribers": 450,
+        "subscription_gross": 16264.12,
+        "subscription_net": 11384.89,
+        "affiliate_revenue": 384.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 11768.89,
+        "total_yearly_revenue": 141226.65
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.07,
+        "paying_users": 3500,
+        "monthly_subscribers": 2450,
+        "yearly_subscribers": 1050,
+        "subscription_gross": 37949.62,
+        "subscription_net": 26564.74,
+        "affiliate_revenue": 368.0,
+        "ad_revenue": 0.0,
+        "total_monthly_revenue": 26932.74,
+        "total_yearly_revenue": 323192.85
+      }
+    }
+  }
+}

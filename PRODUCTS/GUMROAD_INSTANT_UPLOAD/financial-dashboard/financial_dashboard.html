@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solopreneur Financial Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  h1 { font-size: 1.4rem; font-weight: 600; margin-bottom: 4px; }
+  h2 { font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+  .subtitle { color: #666; font-size: 0.85rem; margin-bottom: 24px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .card-full { grid-column: 1 / -1; }
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 8px 0;
+  }
+  .stat-label { color: #888; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .positive { color: #22c55e; }
+  .negative { color: #ef4444; }
+  .neutral { color: #888; }
+  input, select {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  input:focus, select:focus { outline: none; border-color: #555; }
+  button {
+    background: #22c55e;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  button:hover { background: #16a34a; }
+  button.secondary { background: #333; color: #e0e0e0; }
+  button.secondary:hover { background: #444; }
+  button.danger { background: #ef4444; }
+  button.danger:hover { background: #dc2626; }
+  .form-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: end;
+  }
+  .form-group { flex: 1; }
+  .form-group label { display: block; font-size: 0.75rem; color: #888; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { text-align: left; padding: 8px; color: #888; border-bottom: 1px solid #222; font-weight: 500; }
+  td { padding: 8px; border-bottom: 1px solid #1a1a1a; }
+  .actions button { padding: 4px 8px; font-size: 0.75rem; margin-left: 4px; }
+  .bar-chart { display: flex; align-items: end; gap: 4px; height: 150px; margin-top: 12px; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; flex: 1; height: 100%; justify-content: end; }
+  .bar {
+    width: 100%;
+    max-width: 40px;
+    border-radius: 3px 3px 0 0;
+    min-height: 2px;
+    transition: height 0.3s;
+  }
+  .bar-label { font-size: 0.65rem; color: #666; margin-top: 4px; }
+  .bar-value { font-size: 0.65rem; color: #888; margin-bottom: 2px; }
+  .bar-revenue { background: #22c55e; }
+  .bar-expense { background: #ef4444; }
+  .bar-profit { background: #3b82f6; }
+  .legend { display: flex; gap: 16px; margin-top: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #888; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+  .kelly-result { margin-top: 12px; padding: 12px; background: #1a1a1a; border-radius: 4px; }
+  .tab-bar { display: flex; gap: 0; margin-bottom: 16px; border-bottom: 1px solid #222; }
+  .tab {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #888;
+    border-bottom: 2px solid transparent;
+    font-size: 0.85rem;
+  }
+  .tab.active { color: #e0e0e0; border-bottom-color: #22c55e; }
+  .tab:hover { color: #ccc; }
+  .hidden { display: none; }
+  .export-bar { display: flex; gap: 8px; margin-bottom: 16px; }
+  @media (max-width: 600px) {
+    .form-row { flex-direction: column; }
+    .grid { grid-template-columns: 1fr; }
+    body { padding: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>financial dashboard</h1>
+<p class="subtitle">your money. your machine. no subscriptions.</p>
+
+<div class="export-bar">
+  <button class="secondary" onclick="exportCSV('revenue')">export revenue csv</button>
+  <button class="secondary" onclick="exportCSV('expenses')">export expenses csv</button>
+  <button class="secondary" onclick="exportCSV('all')">export all csv</button>
+  <button class="danger" onclick="clearAllData()">reset all data</button>
+</div>
+
+<!-- summary cards -->
+<div class="grid" id="summary-cards">
+  <div class="card">
+    <div class="stat-label">total revenue (this month)</div>
+    <div class="stat-value positive" id="total-revenue">$0</div>
+  </div>
+  <div class="card">
+    <div class="stat-label">total expenses (this month)</div>
+    <div class="stat-value negative" id="total-expenses">$0</div>
+  </div>
+  <div class="card">
+    <div class="stat-label">net profit (this month)</div>
+    <div class="stat-value" id="net-profit">$0</div>
+  </div>
+  <div class="card">
+    <div class="stat-label">profit margin</div>
+    <div class="stat-value" id="profit-margin">0%</div>
+  </div>
+  <div class="card">
+    <div class="stat-label">monthly burn rate</div>
+    <div class="stat-value" id="burn-rate">$0</div>
+  </div>
+  <div class="card">
+    <div class="stat-label">runway (months)</div>
+    <div class="stat-value" id="runway">--</div>
+  </div>
+</div>
+
+<!-- tabs -->
+<div class="tab-bar">
+  <div class="tab active" onclick="switchTab('revenue', this)">revenue</div>
+  <div class="tab" onclick="switchTab('expenses', this)">expenses</div>
+  <div class="tab" onclick="switchTab('chart', this)">monthly chart</div>
+  <div class="tab" onclick="switchTab('kelly', this)">kelly criterion</div>
+  <div class="tab" onclick="switchTab('projections', this)">projections</div>
+</div>
+
+<!-- revenue tab -->
+<div id="tab-revenue" class="card card-full">
+  <h2>add revenue</h2>
+  <div class="form-row">
+    <div class="form-group">
+      <label>date</label>
+      <input type="date" id="rev-date">
+    </div>
+    <div class="form-group">
+      <label>source</label>
+      <input type="text" id="rev-source" placeholder="gumroad, freelance, ads...">
+    </div>
+    <div class="form-group">
+      <label>amount ($)</label>
+      <input type="number" id="rev-amount" placeholder="0.00" step="0.01">
+    </div>
+    <div class="form-group">
+      <label>notes</label>
+      <input type="text" id="rev-notes" placeholder="optional">
+    </div>
+    <div class="form-group">
+      <label>&nbsp;</label>
+      <button onclick="addRevenue()">add</button>
+    </div>
+  </div>
+  <table id="revenue-table">
+    <thead>
+      <tr><th>date</th><th>source</th><th>amount</th><th>notes</th><th>actions</th></tr>
+    </thead>
+    <tbody id="revenue-tbody"></tbody>
+  </table>
+</div>
+
+<!-- expenses tab -->
+<div id="tab-expenses" class="card card-full hidden">
+  <h2>add expense</h2>
+  <div class="form-row">
+    <div class="form-group">
+      <label>date</label>
+      <input type="date" id="exp-date">
+    </div>
+    <div class="form-group">
+      <label>category</label>
+      <select id="exp-category">
+        <option value="tools">tools & software</option>
+        <option value="hosting">hosting & domains</option>
+        <option value="ads">advertising</option>
+        <option value="contractor">contractors</option>
+        <option value="education">education</option>
+        <option value="hardware">hardware</option>
+        <option value="other">other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>description</label>
+      <input type="text" id="exp-desc" placeholder="what was it?">
+    </div>
+    <div class="form-group">
+      <label>amount ($)</label>
+      <input type="number" id="exp-amount" placeholder="0.00" step="0.01">
+    </div>
+    <div class="form-group">
+      <label>&nbsp;</label>
+      <button onclick="addExpense()">add</button>
+    </div>
+  </div>
+  <table id="expense-table">
+    <thead>
+      <tr><th>date</th><th>category</th><th>description</th><th>amount</th><th>actions</th></tr>
+    </thead>
+    <tbody id="expense-tbody"></tbody>
+  </table>
+</div>
+
+<!-- chart tab -->
+<div id="tab-chart" class="card card-full hidden">
+  <h2>monthly overview (last 6 months)</h2>
+  <div class="bar-chart" id="monthly-chart"></div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> revenue</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> expenses</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> profit</div>
+  </div>
+</div>
+
+<!-- kelly tab -->
+<div id="tab-kelly" class="card card-full hidden">
+  <h2>kelly criterion capital allocator</h2>
+  <p style="color:#888; font-size:0.85rem; margin-bottom:16px;">
+    how much of your capital to allocate to a venture based on your edge and win rate.
+    the same math hedge funds use for position sizing.
+  </p>
+  <div class="form-row">
+    <div class="form-group">
+      <label>win probability (0-1)</label>
+      <input type="number" id="kelly-win" placeholder="0.60" step="0.01" min="0" max="1">
+    </div>
+    <div class="form-group">
+      <label>win/loss ratio (avg win / avg loss)</label>
+      <input type="number" id="kelly-ratio" placeholder="2.0" step="0.1" min="0">
+    </div>
+    <div class="form-group">
+      <label>total capital ($)</label>
+      <input type="number" id="kelly-capital" placeholder="10000" step="100">
+    </div>
+    <div class="form-group">
+      <label>&nbsp;</label>
+      <button onclick="calcKelly()">calculate</button>
+    </div>
+  </div>
+  <div class="kelly-result" id="kelly-result">
+    enter your numbers and hit calculate.
+  </div>
+</div>
+
+<!-- projections tab -->
+<div id="tab-projections" class="card card-full hidden">
+  <h2>12-month projection</h2>
+  <div class="form-row">
+    <div class="form-group">
+      <label>monthly revenue growth rate (%)</label>
+      <input type="number" id="proj-growth" placeholder="10" step="1" value="10">
+    </div>
+    <div class="form-group">
+      <label>monthly expense growth rate (%)</label>
+      <input type="number" id="proj-expense-growth" placeholder="5" step="1" value="5">
+    </div>
+    <div class="form-group">
+      <label>current savings ($)</label>
+      <input type="number" id="proj-savings" placeholder="5000" step="100">
+    </div>
+    <div class="form-group">
+      <label>&nbsp;</label>
+      <button onclick="calcProjections()">project</button>
+    </div>
+  </div>
+  <table id="projection-table">
+    <thead>
+      <tr><th>month</th><th>revenue</th><th>expenses</th><th>profit</th><th>cumulative</th><th>savings</th></tr>
+    </thead>
+    <tbody id="projection-tbody"></tbody>
+  </table>
+</div>
+
+<script>
+// data store
+var STORAGE_KEY = 'solopreneur_dashboard';
+
+function loadData() {
+  var raw = localStorage.getItem(STORAGE_KEY);
+  if (raw) return JSON.parse(raw);
+  return { revenue: [], expenses: [], settings: {} };
+}
+
+function saveData(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function generateId() {
+  return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+}
+
+function fmt(n) {
+  return '$' + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+}
+
+function fmtExact(n) {
+  return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.textContent = str;
+  return div.textContent;
+}
+
+function monthKey(date) {
+  var d = new Date(date);
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+}
+
+function currentMonthKey() {
+  var now = new Date();
+  return now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
+}
+
+// revenue
+function addRevenue() {
+  var date = document.getElementById('rev-date').value;
+  var source = document.getElementById('rev-source').value.trim();
+  var amount = parseFloat(document.getElementById('rev-amount').value);
+  var notes = document.getElementById('rev-notes').value.trim();
+
+  if (!date || !source || isNaN(amount) || amount <= 0) {
+    alert('fill in date, source, and a positive amount');
+    return;
+  }
+
+  var data = loadData();
+  data.revenue.push({ id: generateId(), date: date, source: source, amount: amount, notes: notes });
+  saveData(data);
+
+  document.getElementById('rev-source').value = '';
+  document.getElementById('rev-amount').value = '';
+  document.getElementById('rev-notes').value = '';
+
+  render();
+}
+
+function deleteRevenue(id) {
+  var data = loadData();
+  data.revenue = data.revenue.filter(function(r) { return r.id !== id; });
+  saveData(data);
+  render();
+}
+
+// expenses
+function addExpense() {
+  var date = document.getElementById('exp-date').value;
+  var category = document.getElementById('exp-category').value;
+  var desc = document.getElementById('exp-desc').value.trim();
+  var amount = parseFloat(document.getElementById('exp-amount').value);
+
+  if (!date || !desc || isNaN(amount) || amount <= 0) {
+    alert('fill in date, description, and a positive amount');
+    return;
+  }
+
+  var data = loadData();
+  data.expenses.push({ id: generateId(), date: date, category: category, description: desc, amount: amount });
+  saveData(data);
+
+  document.getElementById('exp-desc').value = '';
+  document.getElementById('exp-amount').value = '';
+
+  render();
+}
+
+function deleteExpense(id) {
+  var data = loadData();
+  data.expenses = data.expenses.filter(function(e) { return e.id !== id; });
+  saveData(data);
+  render();
+}
+
+// kelly criterion
+function calcKelly() {
+  var p = parseFloat(document.getElementById('kelly-win').value);
+  var ratio = parseFloat(document.getElementById('kelly-ratio').value);
+  var capital = parseFloat(document.getElementById('kelly-capital').value);
+  var resultDiv = document.getElementById('kelly-result');
+
+  if (isNaN(p) || isNaN(ratio) || p <= 0 || p >= 1 || ratio <= 0) {
+    resultDiv.textContent = 'enter valid numbers. win probability between 0 and 1, positive ratio.';
+    return;
+  }
+
+  var q = 1 - p;
+  var kelly = (p * ratio - q) / ratio;
+  var halfKelly = kelly / 2;
+  var quarterKelly = kelly / 4;
+
+  // clear and rebuild using DOM methods
+  resultDiv.textContent = '';
+
+  if (kelly <= 0) {
+    var warning = document.createElement('p');
+    warning.style.color = '#ef4444';
+    warning.style.fontWeight = '600';
+    warning.textContent = 'negative edge. do not bet.';
+    resultDiv.appendChild(warning);
+
+    var detail = document.createElement('p');
+    detail.style.color = '#888';
+    detail.style.marginTop = '8px';
+    detail.textContent = 'kelly fraction: ' + (kelly * 100).toFixed(1) + '%. this means the odds are against you. walk away or find a better opportunity.';
+    resultDiv.appendChild(detail);
+  } else {
+    var allocFull = capital ? fmt(capital * kelly) : '--';
+    var allocHalf = capital ? fmt(capital * halfKelly) : '--';
+    var allocQuarter = capital ? fmt(capital * quarterKelly) : '--';
+
+    var p1 = document.createElement('p');
+    p1.textContent = 'full kelly: ' + (kelly * 100).toFixed(1) + '% of capital ' + (capital ? '= ' + allocFull : '');
+    resultDiv.appendChild(p1);
+
+    var p2 = document.createElement('p');
+    p2.textContent = 'half kelly (recommended): ' + (halfKelly * 100).toFixed(1) + '% of capital ' + (capital ? '= ' + allocHalf : '');
+    resultDiv.appendChild(p2);
+
+    var p3 = document.createElement('p');
+    p3.textContent = 'quarter kelly (conservative): ' + (quarterKelly * 100).toFixed(1) + '% of capital ' + (capital ? '= ' + allocQuarter : '');
+    resultDiv.appendChild(p3);
+
+    var note = document.createElement('p');
+    note.style.color = '#888';
+    note.style.marginTop = '12px';
+    note.style.fontSize = '0.8rem';
+    note.textContent = 'half kelly is standard practice. full kelly maximizes long-term growth but has brutal drawdowns. quarter kelly is for when you are not confident in your edge estimate.';
+    resultDiv.appendChild(note);
+  }
+}
+
+// projections
+function calcProjections() {
+  var growthRate = parseFloat(document.getElementById('proj-growth').value) / 100;
+  var expGrowthRate = parseFloat(document.getElementById('proj-expense-growth').value) / 100;
+  var savings = parseFloat(document.getElementById('proj-savings').value) || 0;
+
+  var data = loadData();
+  var cm = currentMonthKey();
+
+  var baseRevenue = data.revenue.filter(function(r) { return monthKey(r.date) === cm; }).reduce(function(s, r) { return s + r.amount; }, 0);
+  var baseExpense = data.expenses.filter(function(e) { return monthKey(e.date) === cm; }).reduce(function(s, e) { return s + e.amount; }, 0);
+
+  if (baseRevenue === 0) baseRevenue = 100;
+  if (baseExpense === 0) baseExpense = 50;
+
+  var tbody = document.getElementById('projection-tbody');
+  tbody.textContent = '';
+
+  var cumulative = 0;
+  var currentSavings = savings;
+  var months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+  var now = new Date();
+
+  for (var i = 0; i < 12; i++) {
+    var rev = baseRevenue * Math.pow(1 + growthRate, i);
+    var exp = baseExpense * Math.pow(1 + expGrowthRate, i);
+    var profit = rev - exp;
+    cumulative += profit;
+    currentSavings += profit;
+
+    var monthIndex = (now.getMonth() + i) % 12;
+    var year = now.getFullYear() + Math.floor((now.getMonth() + i) / 12);
+
+    var tr = document.createElement('tr');
+
+    var tdMonth = document.createElement('td');
+    tdMonth.textContent = months[monthIndex] + ' ' + year;
+    tr.appendChild(tdMonth);
+
+    var tdRev = document.createElement('td');
+    tdRev.className = 'positive';
+    tdRev.textContent = fmt(rev);
+    tr.appendChild(tdRev);
+
+    var tdExp = document.createElement('td');
+    tdExp.className = 'negative';
+    tdExp.textContent = fmt(exp);
+    tr.appendChild(tdExp);
+
+    var tdProfit = document.createElement('td');
+    tdProfit.className = profit >= 0 ? 'positive' : 'negative';
+    tdProfit.textContent = (profit >= 0 ? '+' : '-') + fmt(Math.abs(profit));
+    tr.appendChild(tdProfit);
+
+    var tdCum = document.createElement('td');
+    tdCum.className = cumulative >= 0 ? 'positive' : 'negative';
+    tdCum.textContent = (cumulative >= 0 ? '+' : '-') + fmt(Math.abs(cumulative));
+    tr.appendChild(tdCum);
+
+    var tdSavings = document.createElement('td');
+    tdSavings.textContent = fmt(currentSavings);
+    tr.appendChild(tdSavings);
+
+    tbody.appendChild(tr);
+  }
+}
+
+// monthly chart
+function renderChart() {
+  var data = loadData();
+  var container = document.getElementById('monthly-chart');
+  container.textContent = '';
+
+  var chartMonths = [];
+  var now = new Date();
+  for (var i = 5; i >= 0; i--) {
+    var d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    chartMonths.push(monthKey(d));
+  }
+
+  var monthNames = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+
+  var maxVal = 1;
+  var chartData = chartMonths.map(function(mk) {
+    var rev = data.revenue.filter(function(r) { return monthKey(r.date) === mk; }).reduce(function(s, r) { return s + r.amount; }, 0);
+    var exp = data.expenses.filter(function(e) { return monthKey(e.date) === mk; }).reduce(function(s, e) { return s + e.amount; }, 0);
+    var profit = rev - exp;
+    maxVal = Math.max(maxVal, rev, exp, Math.abs(profit));
+    return { month: mk, rev: rev, exp: exp, profit: profit };
+  });
+
+  chartData.forEach(function(d) {
+    var monthIdx = parseInt(d.month.split('-')[1]) - 1;
+    var col = document.createElement('div');
+    col.className = 'bar-col';
+
+    var revH = Math.max(2, (d.rev / maxVal) * 130);
+    var expH = Math.max(2, (d.exp / maxVal) * 130);
+    var profH = Math.max(2, (Math.abs(d.profit) / maxVal) * 130);
+
+    var valDiv = document.createElement('div');
+    valDiv.className = 'bar-value';
+    valDiv.textContent = fmt(d.rev);
+    col.appendChild(valDiv);
+
+    var revBar = document.createElement('div');
+    revBar.className = 'bar bar-revenue';
+    revBar.style.height = revH + 'px';
+    col.appendChild(revBar);
+
+    var expBar = document.createElement('div');
+    expBar.className = 'bar bar-expense';
+    expBar.style.height = expH + 'px';
+    expBar.style.marginTop = '2px';
+    col.appendChild(expBar);
+
+    var profBar = document.createElement('div');
+    profBar.className = 'bar ' + (d.profit >= 0 ? 'bar-profit' : 'bar-expense');
+    profBar.style.height = profH + 'px';
+    profBar.style.marginTop = '2px';
+    profBar.style.opacity = '0.7';
+    col.appendChild(profBar);
+
+    var label = document.createElement('div');
+    label.className = 'bar-label';
+    label.textContent = monthNames[monthIdx];
+    col.appendChild(label);
+
+    container.appendChild(col);
+  });
+}
+
+// export
+function exportCSV(type) {
+  var data = loadData();
+  var csv = '';
+
+  if (type === 'revenue' || type === 'all') {
+    csv += 'type,date,source/category,description,amount,notes\n';
+    data.revenue.forEach(function(r) {
+      csv += 'revenue,' + r.date + ',' + r.source + ',,' + r.amount + ',' + (r.notes || '') + '\n';
+    });
+  }
+
+  if (type === 'expenses' || type === 'all') {
+    if (type !== 'all') csv += 'type,date,source/category,description,amount,notes\n';
+    data.expenses.forEach(function(e) {
+      csv += 'expense,' + e.date + ',' + e.category + ',' + e.description + ',' + e.amount + ',\n';
+    });
+  }
+
+  var blob = new Blob([csv], { type: 'text/csv' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'financial_' + type + '_' + new Date().toISOString().slice(0, 10) + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function clearAllData() {
+  if (confirm('this will delete ALL your financial data. are you sure?')) {
+    if (confirm('seriously, this is permanent. last chance.')) {
+      localStorage.removeItem(STORAGE_KEY);
+      render();
+    }
+  }
+}
+
+// tabs
+function switchTab(tab, el) {
+  document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('[id^="tab-"]').forEach(function(t) { t.classList.add('hidden'); });
+
+  el.classList.add('active');
+  document.getElementById('tab-' + tab).classList.remove('hidden');
+
+  if (tab === 'chart') renderChart();
+}
+
+// render everything
+function render() {
+  var data = loadData();
+  var cm = currentMonthKey();
+
+  var monthRevenue = data.revenue.filter(function(r) { return monthKey(r.date) === cm; }).reduce(function(s, r) { return s + r.amount; }, 0);
+  var monthExpenses = data.expenses.filter(function(e) { return monthKey(e.date) === cm; }).reduce(function(s, e) { return s + e.amount; }, 0);
+  var profit = monthRevenue - monthExpenses;
+  var margin = monthRevenue > 0 ? (profit / monthRevenue * 100) : 0;
+
+  // burn rate (avg last 3 months)
+  var burnMonths = [];
+  var now = new Date();
+  for (var i = 0; i < 3; i++) {
+    var d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    burnMonths.push(monthKey(d));
+  }
+  var totalBurn = burnMonths.reduce(function(s, mk) {
+    return s + data.expenses.filter(function(e) { return monthKey(e.date) === mk; }).reduce(function(es, e) { return es + e.amount; }, 0);
+  }, 0);
+  var avgBurn = totalBurn / Math.max(burnMonths.length, 1);
+
+  var totalCash = data.revenue.reduce(function(s, r) { return s + r.amount; }, 0) - data.expenses.reduce(function(s, e) { return s + e.amount; }, 0);
+  var runway = avgBurn > 0 ? Math.max(0, totalCash / avgBurn) : Infinity;
+
+  // update summary
+  document.getElementById('total-revenue').textContent = fmt(monthRevenue);
+  document.getElementById('total-expenses').textContent = fmt(monthExpenses);
+
+  var profitEl = document.getElementById('net-profit');
+  profitEl.textContent = (profit >= 0 ? '+' : '-') + fmt(Math.abs(profit));
+  profitEl.className = 'stat-value ' + (profit >= 0 ? 'positive' : 'negative');
+
+  var marginEl = document.getElementById('profit-margin');
+  marginEl.textContent = margin.toFixed(1) + '%';
+  marginEl.className = 'stat-value ' + (margin >= 0 ? 'positive' : 'negative');
+
+  document.getElementById('burn-rate').textContent = fmt(avgBurn) + '/mo';
+
+  var runwayEl = document.getElementById('runway');
+  if (runway === Infinity) {
+    runwayEl.textContent = '--';
+    runwayEl.className = 'stat-value neutral';
+  } else {
+    runwayEl.textContent = runway.toFixed(1);
+    runwayEl.className = 'stat-value ' + (runway > 6 ? 'positive' : runway > 3 ? 'neutral' : 'negative');
+  }
+
+  // render revenue table using DOM methods
+  var revBody = document.getElementById('revenue-tbody');
+  revBody.textContent = '';
+  var sortedRev = data.revenue.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+  sortedRev.forEach(function(r) {
+    var tr = document.createElement('tr');
+
+    var tdDate = document.createElement('td');
+    tdDate.textContent = r.date;
+    tr.appendChild(tdDate);
+
+    var tdSource = document.createElement('td');
+    tdSource.textContent = r.source;
+    tr.appendChild(tdSource);
+
+    var tdAmt = document.createElement('td');
+    tdAmt.className = 'positive';
+    tdAmt.textContent = fmtExact(r.amount);
+    tr.appendChild(tdAmt);
+
+    var tdNotes = document.createElement('td');
+    tdNotes.textContent = r.notes || '';
+    tr.appendChild(tdNotes);
+
+    var tdActions = document.createElement('td');
+    tdActions.className = 'actions';
+    var delBtn = document.createElement('button');
+    delBtn.className = 'danger';
+    delBtn.textContent = 'x';
+    delBtn.setAttribute('data-id', r.id);
+    delBtn.addEventListener('click', function() { deleteRevenue(this.getAttribute('data-id')); });
+    tdActions.appendChild(delBtn);
+    tr.appendChild(tdActions);
+
+    revBody.appendChild(tr);
+  });
+
+  // render expense table using DOM methods
+  var expBody = document.getElementById('expense-tbody');
+  expBody.textContent = '';
+  var sortedExp = data.expenses.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+  sortedExp.forEach(function(e) {
+    var tr = document.createElement('tr');
+
+    var tdDate = document.createElement('td');
+    tdDate.textContent = e.date;
+    tr.appendChild(tdDate);
+
+    var tdCat = document.createElement('td');
+    tdCat.textContent = e.category;
+    tr.appendChild(tdCat);
+
+    var tdDesc = document.createElement('td');
+    tdDesc.textContent = e.description;
+    tr.appendChild(tdDesc);
+
+    var tdAmt = document.createElement('td');
+    tdAmt.className = 'negative';
+    tdAmt.textContent = fmtExact(e.amount);
+    tr.appendChild(tdAmt);
+
+    var tdActions = document.createElement('td');
+    tdActions.className = 'actions';
+    var delBtn = document.createElement('button');
+    delBtn.className = 'danger';
+    delBtn.textContent = 'x';
+    delBtn.setAttribute('data-id', e.id);
+    delBtn.addEventListener('click', function() { deleteExpense(this.getAttribute('data-id')); });
+    tdActions.appendChild(delBtn);
+    tr.appendChild(tdActions);
+
+    revBody.appendChild(tr);
+  });
+}
+
+// init
+(function() {
+  var today = new Date().toISOString().slice(0, 10);
+  document.getElementById('rev-date').value = today;
+  document.getElementById('exp-date').value = today;
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Email Sequences That Get Replies | 3-8% Reply Rate</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--card:#141416;--border:#222;--text:#e0e0e0;--muted:#888;--accent:#ef4444;--accent2:#f87171;--green:#22c55e;--orange:#f59e0b}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 32px}
+.hero .stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:2rem;font-weight:800;color:var(--accent2)}
+.hero .stat .label{font-size:0.85rem;color:var(--muted)}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 36px;border-radius:8px;font-size:1.05rem;font-weight:600;transition:background .2s}
+.cta-btn:hover{background:#dc2626}
+.cta-secondary{background:transparent;border:1px solid var(--border);color:var(--text);margin-left:12px}
+.cta-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.sample{padding:60px 0;border-top:1px solid var(--border)}
+.sample h2{font-size:1.8rem;font-weight:700;margin-bottom:12px}
+.sample .desc{color:var(--muted);margin-bottom:32px;max-width:600px}
+.email-demo{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:20px;max-width:600px}
+.email-demo .email-header{display:flex;justify-content:space-between;margin-bottom:16px;font-size:0.85rem;color:var(--muted)}
+.email-demo .subject{font-weight:700;font-size:1.05rem;margin-bottom:12px;color:var(--accent2)}
+.email-demo .body{font-size:0.92rem;color:var(--muted);line-height:1.7}
+.email-demo .body p{margin-bottom:10px}
+.email-label{display:inline-block;background:var(--accent);color:#fff;padding:2px 10px;border-radius:12px;font-size:0.75rem;font-weight:600;margin-bottom:12px}
+.tiers{padding:60px 0;border-top:1px solid var(--border)}
+.tiers h2{font-size:1.8rem;font-weight:700;margin-bottom:32px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tier{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative}
+.tier.popular{border-color:var(--accent)}
+.tier.popular::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase}
+.tier .name{font-size:0.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px}
+.tier .price{font-size:2.4rem;font-weight:800;margin-bottom:4px}
+.tier .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.tier .delivery{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.tier .desc{font-size:0.9rem;color:var(--muted);margin-bottom:16px;min-height:60px}
+.tier ul{list-style:none;margin-bottom:20px}
+.tier li{padding:6px 0;font-size:0.9rem;border-bottom:1px solid var(--border)}
+.tier li::before{content:'+ ';color:var(--green);font-weight:700}
+.tier li.no::before{content:'- ';color:#666}
+.tier li.no{color:#555}
+.tier .cta-btn{width:100%;text-align:center;display:block}
+.framework{padding:60px 0;border-top:1px solid var(--border)}
+.framework h2{font-size:1.8rem;font-weight:700;margin-bottom:24px}
+.framework-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.framework-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px}
+.framework-item .num{font-size:2rem;font-weight:800;color:var(--accent2);margin-bottom:4px}
+.framework-item h3{font-size:1rem;margin-bottom:6px}
+.framework-item p{font-size:0.88rem;color:var(--muted)}
+.proof{padding:60px 0;border-top:1px solid var(--border)}
+.proof h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.promo-banner{background:linear-gradient(135deg,#3b1111,#1a0808);border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-bottom:32px}
+.promo-banner .promo-text{font-size:1.2rem;font-weight:700;color:var(--accent2)}
+.promo-banner .promo-sub{font-size:0.9rem;color:var(--muted);margin-top:4px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.testimonial .quote{font-size:0.95rem;font-style:italic;margin-bottom:12px}
+.testimonial .author{font-size:0.85rem;color:var(--muted)}
+.testimonial .result{font-size:0.85rem;color:var(--green);margin-top:8px}
+.portfolio{padding:60px 0;border-top:1px solid var(--border)}
+.portfolio h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.port-thumb{height:140px;background:linear-gradient(135deg,#1a1a2e,#2e1111);display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:var(--muted);text-align:center;padding:12px}
+.port-info{padding:14px}
+.port-info h3{font-size:0.95rem;margin-bottom:4px}
+.port-info p{font-size:0.8rem;color:var(--muted)}
+.faq{padding:60px 0;border-top:1px solid var(--border)}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:24px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:16px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted)}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{padding:0 20px 16px;font-size:0.9rem;color:var(--muted);display:none}
+.faq-item.open .faq-a{display:block}
+.final-cta{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:2rem;font-weight:800;margin-bottom:12px}
+.final-cta p{color:var(--muted);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+footer{padding:32px 0;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#555}
+@media(max-width:600px){.hero .stats{flex-direction:column;gap:16px}.tier-grid{grid-template-columns:1fr}.cta-secondary{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<h1>cold email works. yours doesn't because the copy is wrong.</h1>
+<p class="sub">i've written sequences that booked 12 meetings from 200 sends. 6% reply-to-meeting rate. no ads budget. no warm intros. the framework handles it.</p>
+<div class="stats">
+<div class="stat"><div class="num">3-8%</div><div class="label">reply rate</div></div>
+<div class="stat"><div class="num">15-40%</div><div class="label">open rate</div></div>
+<div class="stat"><div class="num">110+</div><div class="label">campaigns written</div></div>
+<div class="stat"><div class="num">&lt;100</div><div class="label">words per email</div></div>
+</div>
+<a href="#" class="cta-btn">Order on Fiverr</a>
+<a href="#pricing" class="cta-btn cta-secondary">See pricing</a>
+</section>
+
+<section class="sample">
+<h2>sample sequence: web design agency targeting dentists</h2>
+<p class="desc">every email answers 6 questions in under 100 words. if your cold email doesn't answer all 6 in the first scroll, it gets deleted.</p>
+<div class="email-demo">
+<span class="email-label">email 1 - the opener</span>
+<div class="subject">Subject: your website is costing you patients</div>
+<div class="body">
+<p>hi {{first_name}},</p>
+<p>i checked {{practice_name}}'s website. it loads in 6.2 seconds and doesn't show up for "dentist in {{city}}" on Google.</p>
+<p>i build fast, modern sites for dental practices. 42 clinics so far. average result: 35% more appointment bookings in 90 days.</p>
+<p>worth a 10-minute call this week?</p>
+</div>
+</div>
+<div class="email-demo">
+<span class="email-label">email 2 - value add</span>
+<div class="subject">Subject: re: your website is costing you patients</div>
+<div class="body">
+<p>hi {{first_name}},</p>
+<p>quick follow-up. here's what i found on your Google Business listing: {{specific_issue}}.</p>
+<p>fixing that alone could bring in 5-10 more calls per month. takes about 15 minutes.</p>
+<p>want me to walk you through it?</p>
+</div>
+</div>
+<div class="email-demo">
+<span class="email-label">email 3 - the breakup</span>
+<div class="subject">Subject: closing the loop</div>
+<div class="body">
+<p>hi {{first_name}},</p>
+<p>last email on this. i just finished a site for a dental clinic in {{nearby_city}} and they're already ranking for 12 new keywords.</p>
+<p>if the timing isn't right, no worries. if it is, here's my calendar: {{link}}</p>
+</div>
+</div>
+</section>
+
+<section class="tiers" id="pricing">
+<h2>pricing</h2>
+<div class="tier-grid">
+<div class="tier">
+<div class="name">3-Email Sequence</div>
+<div class="price">$60 <span>/ one-time</span></div>
+<div class="delivery">delivered in 2 days</div>
+<div class="desc">3-email cold outreach sequence for 1 target persona. subject lines, body copy, and CTA optimized for replies.</div>
+<ul>
+<li>3 emails</li>
+<li>1 target persona</li>
+<li>1 subject line per email</li>
+<li>1 revision</li>
+<li class="no">lead list</li>
+<li class="no">sending tool guide</li>
+</ul>
+<a href="#" class="cta-btn">Order Basic</a>
+</div>
+<div class="tier popular">
+<div class="name">Full Campaign</div>
+<div class="price">$175 <span>/ one-time</span></div>
+<div class="delivery">delivered in 5 days</div>
+<div class="desc">5-email sequence for 2 personas + A/B subject lines + lead list criteria + objection handling.</div>
+<ul>
+<li>10 emails (5 per persona)</li>
+<li>2 target personas</li>
+<li>2 subject line variants per email</li>
+<li>objection handling follow-ups</li>
+<li>lead list criteria doc</li>
+<li>3 revisions</li>
+</ul>
+<a href="#" class="cta-btn">Order Standard</a>
+</div>
+<div class="tier">
+<div class="name">Outreach System</div>
+<div class="price">$500 <span>/ one-time</span></div>
+<div class="delivery">delivered in 10 days</div>
+<div class="desc">3 complete campaigns (15 emails) + ICP research + 100 verified leads + sending tool setup + tracking.</div>
+<ul>
+<li>15 emails (3 campaigns)</li>
+<li>ICP research doc</li>
+<li>100 verified leads</li>
+<li>sending tool setup guide</li>
+<li>tracking framework</li>
+<li>5 revisions</li>
+</ul>
+<a href="#" class="cta-btn">Order Premium</a>
+</div>
+</div>
+</section>
+
+<section class="framework">
+<h2>the 6-question framework</h2>
+<p style="color:var(--muted);margin-bottom:24px">every email i write answers these 6 questions in under 100 words. that's it.</p>
+<div class="framework-grid">
+<div class="framework-item"><div class="num">1</div><h3>what do you do?</h3><p>one sentence. no jargon.</p></div>
+<div class="framework-item"><div class="num">2</div><h3>who do you do it for?</h3><p>specific target. not "businesses."</p></div>
+<div class="framework-item"><div class="num">3</div><h3>how do you do it?</h3><p>method, not marketing.</p></div>
+<div class="framework-item"><div class="num">4</div><h3>what problem do you solve?</h3><p>their pain. specific.</p></div>
+<div class="framework-item"><div class="num">5</div><h3>what proof do you have?</h3><p>numbers. names. results.</p></div>
+<div class="framework-item"><div class="num">6</div><h3>what's the next step?</h3><p>one clear CTA. calendar link or reply.</p></div>
+</div>
+</section>
+
+<section class="proof">
+<h2>results</h2>
+<div class="promo-banner">
+<div class="promo-text">first 5 clients get 20% off any package</div>
+<div class="promo-sub">limited launch pricing. message before ordering to claim.</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<div class="quote">"sent 200 emails. got 12 replies. booked 8 meetings. closed 3 clients worth $7,500 each. best $175 i've spent."</div>
+<div class="author">Chris L. - web design agency</div>
+<div class="result">$22,500 from $175 investment</div>
+</div>
+<div class="testimonial">
+<div class="quote">"was getting 0.5% reply rate with my old emails. new sequences hit 5.2% from day one. same list."</div>
+<div class="author">Nina K. - SaaS founder</div>
+<div class="result">0.5% to 5.2% reply rate</div>
+</div>
+<div class="testimonial">
+<div class="quote">"the breakup email in position 3 is where most replies came from. never would have written that myself."</div>
+<div class="author">David M. - marketing consultant</div>
+<div class="result">80% of replies from follow-ups 2-5</div>
+</div>
+</div>
+</section>
+
+<section class="portfolio">
+<h2>industries i've written for</h2>
+<div class="port-grid">
+<div class="port-item"><div class="port-thumb">SaaS outreach<br>14 campaigns</div><div class="port-info"><h3>SaaS</h3><p>demo bookings, trial signups</p></div></div>
+<div class="port-item"><div class="port-thumb">agency outreach<br>22 campaigns</div><div class="port-info"><h3>Marketing Agencies</h3><p>client acquisition, partnerships</p></div></div>
+<div class="port-item"><div class="port-thumb">web design<br>18 campaigns</div><div class="port-info"><h3>Web Design</h3><p>local business prospecting</p></div></div>
+<div class="port-item"><div class="port-thumb">local services<br>31 campaigns</div><div class="port-info"><h3>Local Services</h3><p>B2B lead generation</p></div></div>
+<div class="port-item"><div class="port-thumb">consulting<br>11 campaigns</div><div class="port-info"><h3>Consulting</h3><p>high-ticket client outreach</p></div></div>
+<div class="port-item"><div class="port-thumb">recruiting<br>8 campaigns</div><div class="port-info"><h3>Recruiting</h3><p>candidate and client sourcing</p></div></div>
+</div>
+</section>
+
+<section class="faq">
+<h2>questions</h2>
+<div class="faq-item open"><div class="faq-q">will these work for my industry?</div><div class="faq-a">if you sell B2B and your deal size is $500+, cold email works. i've written for SaaS, agencies, consultants, local services, real estate, recruiting. the framework is the same. the personalization changes.</div></div>
+<div class="faq-item"><div class="faq-q">do you help with sending and deliverability?</div><div class="faq-a">Premium includes a sending tool setup guide (Instantly, Smartlead, or Lemlist) with warmup protocol and deliverability best practices. i don't manage the sending, but you get the exact steps.</div></div>
+<div class="faq-item"><div class="faq-q">how many emails should i send per day?</div><div class="faq-a">start with 20-30/day from a warmed domain. scale to 50-100/day after 2 weeks. never send 500 on day 1 from a new domain.</div></div>
+<div class="faq-item"><div class="faq-q">can you build my lead list?</div><div class="faq-a">Premium includes 100 verified leads (name, email, company, title) matching your ICP. i use Apollo, Hunter, and manual verification.</div></div>
+<div class="faq-item"><div class="faq-q">what reply rate should i expect?</div><div class="faq-a">with good copy and a targeted list: 15-40% open rate, 3-8% reply rate. if you're under 2%, either the list targeting is off or the offer doesn't match.</div></div>
+</section>
+
+<section class="final-cta">
+<h2>send me your offer, target audience, and biggest objection</h2>
+<p>i'll send back a free subject line in 30 minutes. no charge. no obligation.</p>
+<a href="#" class="cta-btn">Order on Fiverr</a><br><br>
+<a href="#" class="cta-btn cta-secondary">Contact for Quote</a>
+</section>
+</div>
+<footer><div class="container"><p>CAN-SPAM compliant. all templates include unsubscribe mechanism and physical address placeholder.</p></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});</script>
+</body>
+</html>

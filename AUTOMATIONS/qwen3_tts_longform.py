@@ -18,10 +18,29 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Sequence
 
-import numpy as np
-import soundfile as sf
-import torch
-from qwen_tts import Qwen3TTSModel
+try:
+    import numpy as np
+except ImportError:
+    np = None
+    print("WARNING: numpy not installed. Run: pip3 install numpy")
+
+try:
+    import soundfile as sf
+except ImportError:
+    sf = None
+    print("WARNING: soundfile not installed. Run: pip3 install soundfile")
+
+try:
+    import torch
+except ImportError:
+    torch = None
+    print("WARNING: torch not installed. Run: pip3 install torch")
+
+try:
+    from qwen_tts import Qwen3TTSModel
+except ImportError:
+    Qwen3TTSModel = None
+    print("WARNING: qwen_tts not installed. This requires the Qwen3-TTS model package.")
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -458,4 +477,15 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    _missing = []
+    if np is None: _missing.append("numpy")
+    if sf is None: _missing.append("soundfile")
+    if torch is None: _missing.append("torch")
+    if Qwen3TTSModel is None: _missing.append("qwen_tts")
+    if _missing:
+        print(f"\nERROR: Missing required packages: {', '.join(_missing)}")
+        print(f"Install with: pip3 install {' '.join(m for m in _missing if m != 'qwen_tts')}")
+        if "qwen_tts" in _missing:
+            print("For qwen_tts: see https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice")
+        raise SystemExit(1)
     raise SystemExit(main())

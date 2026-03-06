@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0f0f1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ColdMaxx">
+<meta name="description" content="Generate high-converting cold email sequences using proven frameworks. AIDA, PAS, BAB templates. Spam checker included.">
+<meta property="og:title" content="ColdMaxx - Cold Email Generator">
+<meta property="og:description" content="Generate 3 cold email variants using proven copywriting frameworks. Subject lines, follow-ups, spam checker. Free PWA.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ColdMaxx - Cold Email Generator">
+<meta name="twitter:description" content="Cold email templates that actually convert. AIDA, PAS, BAB frameworks. Free PWA.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f0f1a' width='100' height='100' rx='20'/><text y='68' x='50' text-anchor='middle' font-size='50'>⚡</text></svg>">
+<title>ColdMaxx - Cold Email Generator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{-webkit-tap-highlight-color:transparent;box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f1a;--bg2:#161625;--bg3:#1e1e32;--bg4:#2a2a44;
+  --text:#e8e8f0;--text2:#9a9ab5;--text3:#6a6a85;
+  --accent:#6366f1;--accent2:#818cf8;--accent3:#4f46e5;
+  --green:#22c55e;--red:#ef4444;--orange:#f59e0b;--cyan:#06b6d4;
+  --radius:12px;--radius-sm:8px;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+#app{height:100%;display:flex;flex-direction:column;overflow:hidden}
+
+.header{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.header h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.header h1 span{color:var(--accent2)}
+.header-actions{display:flex;gap:8px}
+.icon-btn{width:36px;height:36px;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,.08);background:var(--bg2);color:var(--text2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent2)}
+
+.main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:0 0 120px}
+.main::-webkit-scrollbar{display:none}
+
+.section{padding:20px}
+.section+.section{border-top:1px solid rgba(255,255,255,.04)}
+.section-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:14px}
+
+.input-group{margin-bottom:14px}
+.input-group label{display:block;font-size:13px;font-weight:500;color:var(--text2);margin-bottom:6px}
+.input-group input,.input-group textarea,.input-group select{width:100%;background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-sm);padding:12px 14px;color:var(--text);font-size:15px;font-family:inherit;outline:none;transition:border-color .15s}
+.input-group input:focus,.input-group textarea:focus,.input-group select:focus{border-color:var(--accent)}
+.input-group textarea{resize:vertical;min-height:70px}
+.input-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%239a9ab5' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.input-group select option{background:var(--bg2);color:var(--text)}
+
+.row{display:flex;gap:10px}
+.row .input-group{flex:1}
+
+.btn{width:100%;padding:14px;border-radius:var(--radius);border:none;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent3)}
+.btn-primary:active{transform:scale(.98)}
+.btn-secondary{background:var(--bg3);color:var(--text2);border:1px solid rgba(255,255,255,.08)}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent2)}
+.btn-sm{width:auto;padding:8px 14px;font-size:13px;border-radius:var(--radius-sm)}
+
+.tabs{display:flex;gap:4px;background:var(--bg2);border-radius:var(--radius);padding:4px;margin-bottom:16px}
+.tab{flex:1;padding:10px 8px;border-radius:var(--radius-sm);border:none;background:transparent;color:var(--text3);font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;text-align:center}
+.tab.active{background:var(--accent);color:#fff}
+
+.email-card{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:16px;margin-bottom:12px;animation:fadeUp .3s ease}
+.email-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.email-card-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;padding:4px 8px;border-radius:4px;display:inline-block}
+.label-aida{background:rgba(99,102,241,.15);color:var(--accent2)}
+.label-pas{background:rgba(34,197,94,.15);color:var(--green)}
+.label-bab{background:rgba(6,182,212,.15);color:var(--cyan)}
+.email-card-actions{display:flex;gap:6px}
+.email-subject{font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.04)}
+.email-body{font-size:14px;line-height:1.65;color:var(--text2);white-space:pre-wrap}
+.email-meta{display:flex;gap:16px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.04)}
+.email-meta span{font-size:12px;color:var(--text3)}
+.email-meta .warn{color:var(--orange)}
+.email-meta .good{color:var(--green)}
+
+.followup-section{margin-top:16px}
+.followup-card{background:var(--bg3);border:1px solid rgba(255,255,255,.04);border-radius:var(--radius-sm);padding:14px;margin-bottom:8px}
+.followup-card-header{font-size:12px;font-weight:600;color:var(--text3);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.followup-body{font-size:13px;line-height:1.6;color:var(--text2);white-space:pre-wrap}
+
+.spam-check{margin-top:14px;padding:14px;background:var(--bg3);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,.04)}
+.spam-check-title{font-size:12px;font-weight:600;color:var(--text3);margin-bottom:8px}
+.spam-word{display:inline-block;padding:3px 8px;border-radius:4px;font-size:12px;margin:2px;background:rgba(239,68,68,.12);color:var(--red)}
+.spam-clean{font-size:13px;color:var(--green)}
+
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:10px 20px;border-radius:var(--radius);font-size:13px;font-weight:500;opacity:0;transition:opacity .2s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--text3)}
+.empty-state svg{width:48px;height:48px;margin:0 auto 16px;opacity:.4}
+.empty-state p{font-size:14px;line-height:1.6}
+
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--bg);border-top:1px solid rgba(255,255,255,.06);padding:8px 0 max(8px,env(safe-area-inset-bottom));z-index:50}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0;cursor:pointer;color:var(--text3);transition:color .15s;border:none;background:none;font-family:inherit}
+.nav-item.active{color:var(--accent2)}
+.nav-item svg{width:20px;height:20px}
+.nav-item span{font-size:10px;font-weight:500}
+
+.history-item{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:14px;margin-bottom:8px;cursor:pointer;transition:border-color .15s}
+.history-item:hover{border-color:var(--accent)}
+.history-item-title{font-size:14px;font-weight:600;margin-bottom:4px}
+.history-item-meta{font-size:12px;color:var(--text3)}
+.history-item-delete{float:right;color:var(--text3);cursor:pointer;padding:4px}
+.history-item-delete:hover{color:var(--red)}
+
+.privacy-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.privacy-overlay.show{display:flex}
+.privacy-content{background:var(--bg2);border-radius:var(--radius);padding:24px;max-width:500px;max-height:80vh;overflow-y:auto;width:100%}
+.privacy-content h2{font-size:18px;font-weight:700;margin-bottom:12px}
+.privacy-content p{font-size:13px;line-height:1.7;color:var(--text2);margin-bottom:10px}
+.privacy-content .close-privacy{margin-top:16px}
+
+.view{display:none}
+.view.active{display:block}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:640px){.main{max-width:560px;margin:0 auto}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="header">
+    <h1>Cold<span>Maxx</span></h1>
+    <div class="header-actions">
+      <button class="icon-btn" id="historyToggle" aria-label="History">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="main" id="mainScroll">
+    <!-- Generator View -->
+    <div class="view active" id="viewGenerator">
+      <div class="section">
+        <div class="section-title">Your Offer</div>
+        <div class="input-group">
+          <label>Target Industry</label>
+          <input type="text" id="inputIndustry" placeholder="e.g. SaaS, Real Estate, E-commerce" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label>Service You Offer</label>
+          <input type="text" id="inputService" placeholder="e.g. Cold email outreach, Web design, SEO" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label>Pain Point You Solve</label>
+          <textarea id="inputPain" placeholder="e.g. They waste 10+ hours/week on manual outreach with 2% reply rates"></textarea>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <label>Your Name</label>
+            <input type="text" id="inputName" placeholder="Alex" autocomplete="off">
+          </div>
+          <div class="input-group">
+            <label>Company (optional)</label>
+            <input type="text" id="inputCompany" placeholder="Acme Co" autocomplete="off">
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Tone</label>
+          <select id="inputTone">
+            <option value="direct">Direct & Confident</option>
+            <option value="friendly">Friendly & Casual</option>
+            <option value="formal">Professional & Formal</option>
+            <option value="cheeky">Cheeky & Bold</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" id="btnGenerate">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Generate Cold Emails
+        </button>
+      </div>
+
+      <div id="outputArea"></div>
+    </div>
+
+    <!-- History View -->
+    <div class="view" id="viewHistory">
+      <div class="section">
+        <div class="section-title">Saved Generations</div>
+        <div id="historyList"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <button class="nav-item active" data-view="viewGenerator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <span>Generate</span>
+    </button>
+    <button class="nav-item" data-view="viewHistory">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>History</span>
+    </button>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div class="privacy-overlay" id="privacyOverlay">
+    <div class="privacy-content" id="privacyContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+// ===== SPAM WORDS =====
+const SPAM_WORDS = [
+  'free','guarantee','no obligation','act now','limited time','click here','buy now',
+  'order now','congratulations','winner','urgent','exclusive deal','no cost','risk free',
+  'double your','earn money','cash bonus','make money','be your own boss','work from home',
+  'million dollars','once in a lifetime','100%','dear friend','no strings attached',
+  'special promotion','incredible deal','lowest price','save big','apply now',
+  'as seen on','call now','credit card','discount','eliminate','extra income',
+  'fast cash','for free','get paid','giving away','info you requested','no catch',
+  'no experience','no fees','no gimmick','no investment','no purchase necessary',
+  'not spam','promise you','pure profit','satisfaction','take action','trial',
+  'unlimited','while supplies last','you have been selected','your income'
+];
+
+// ===== FRAMEWORKS =====
+function generateAIDA(data) {
+  const {industry, service, pain, name, company, tone} = data;
+  const sig = company ? name + ' | ' + company : name;
+  const tones = {
+    direct: {
+      subject: 'Quick question about ' + industry + ' outreach',
+      body: 'Hi {{FirstName}},\n\nI noticed most ' + industry + ' companies still ' + pain.toLowerCase() + '.\n\nWe help ' + industry + ' teams fix this with ' + service.toLowerCase() + '. The result: less wasted time, more closed deals.\n\nWould a 15-minute call this week make sense to see if this fits?\n\nBest,\n' + sig
+    },
+    friendly: {
+      subject: 'Thought this might help, {{FirstName}}',
+      body: 'Hey {{FirstName}},\n\nRandom question. Do you ever feel like ' + pain.toLowerCase() + '?\n\nI work with ' + industry + ' teams and we use ' + service.toLowerCase() + ' to fix exactly that. Most clients see results in the first 2 weeks.\n\nWorth a quick chat? No pressure either way.\n\nCheers,\n' + sig
+    },
+    formal: {
+      subject: 'Partnership opportunity for {{Company}}',
+      body: 'Dear {{FirstName}},\n\nI am reaching out because many ' + industry + ' organizations face a common challenge: ' + pain.toLowerCase() + '.\n\nOur firm specializes in ' + service.toLowerCase() + ', and we have helped similar companies in ' + industry + ' overcome this obstacle efficiently.\n\nWould you be open to a brief conversation to explore whether this might benefit your team?\n\nRegards,\n' + sig
+    },
+    cheeky: {
+      subject: 'Your ' + industry + ' competitors are doing this',
+      body: 'Hey {{FirstName}},\n\nNot to be dramatic, but ' + pain.toLowerCase() + ' is costing ' + industry + ' companies more than they think.\n\nI help fix that with ' + service.toLowerCase() + '. No fluff, just results.\n\nGot 15 minutes this week? If not, your competitors probably do.\n\n' + sig
+    }
+  };
+  return tones[tone] || tones.direct;
+}
+
+function generatePAS(data) {
+  const {industry, service, pain, name, company, tone} = data;
+  const sig = company ? name + ' | ' + company : name;
+  const tones = {
+    direct: {
+      subject: 'The ' + industry + ' problem nobody talks about',
+      body: 'Hi {{FirstName}},\n\nHere is the problem: most ' + industry + ' teams ' + pain.toLowerCase() + '. It compounds every month and burns through budget that could go toward growth.\n\nThe fix is straightforward. ' + service.charAt(0).toUpperCase() + service.slice(1).toLowerCase() + ' eliminates the bottleneck so your team can focus on what actually moves revenue.\n\nOpen to a quick 15-minute walkthrough?\n\n' + sig
+    },
+    friendly: {
+      subject: 'Ever feel stuck with this, {{FirstName}}?',
+      body: 'Hey {{FirstName}},\n\nSo here is something I keep hearing from ' + industry + ' folks: ' + pain.toLowerCase() + '. Sound familiar?\n\nThe worst part is it just gets worse the longer you ignore it. More wasted hours, more missed opportunities.\n\nGood news though. ' + service.charAt(0).toUpperCase() + service.slice(1).toLowerCase() + ' fixes this pretty fast. Most people I work with wish they started sooner.\n\nWant to see how? Happy to walk you through it.\n\n' + sig
+    },
+    formal: {
+      subject: 'Addressing a critical ' + industry + ' challenge',
+      body: 'Dear {{FirstName}},\n\nA recurring challenge in ' + industry + ' is that teams ' + pain.toLowerCase() + '. Left unaddressed, this leads to declining efficiency and missed revenue targets.\n\nOur ' + service.toLowerCase() + ' approach has been specifically designed to resolve this issue for ' + industry + ' professionals.\n\nI would welcome the opportunity to discuss how this could benefit your organization.\n\nSincerely,\n' + sig
+    },
+    cheeky: {
+      subject: 'This is costing you more than you think',
+      body: 'Hey {{FirstName}},\n\n' + pain.charAt(0).toUpperCase() + pain.slice(1).toLowerCase() + '. That is the problem.\n\nAnd every week you do not fix it, it gets worse. Your competitors in ' + industry + ' are already solving this.\n\nThe solution: ' + service.toLowerCase() + '. Clean, fast, no BS.\n\n15 minutes. That is all I need to show you.\n\n' + sig
+    }
+  };
+  return tones[tone] || tones.direct;
+}
+
+function generateBAB(data) {
+  const {industry, service, pain, name, company, tone} = data;
+  const sig = company ? name + ' | ' + company : name;
+  const tones = {
+    direct: {
+      subject: 'From struggling to scaling in ' + industry,
+      body: 'Hi {{FirstName}},\n\nRight now, most ' + industry + ' teams ' + pain.toLowerCase() + '. It is frustrating and it slows everything down.\n\nImagine instead: your pipeline runs smoothly, your team focuses on closing, and the manual work is gone.\n\nThat is exactly what ' + service.toLowerCase() + ' delivers. I have helped other ' + industry + ' teams make this shift.\n\nWant to see how it works? 15 minutes is all it takes.\n\n' + sig
+    },
+    friendly: {
+      subject: 'What if this was not a problem anymore?',
+      body: 'Hey {{FirstName}},\n\nRight now you are probably dealing with ' + pain.toLowerCase() + '. It is one of those things that just drains energy.\n\nBut picture this: that whole problem is gone. Your ' + industry + ' operation runs clean, and you actually have time to focus on growth.\n\nThat is what ' + service.toLowerCase() + ' does. I would love to show you how other teams made the switch.\n\nFree this week for a quick call?\n\n' + sig
+    },
+    formal: {
+      subject: 'A better approach for ' + industry + ' operations',
+      body: 'Dear {{FirstName}},\n\nCurrently, many ' + industry + ' organizations ' + pain.toLowerCase() + '. This creates operational inefficiencies that impact the bottom line.\n\nHowever, there is a better state: streamlined operations where your team is focused on high-value activities rather than manual processes.\n\nOur ' + service.toLowerCase() + ' offering bridges this gap. We have implemented this successfully across multiple ' + industry + ' organizations.\n\nI would be pleased to discuss this further at your convenience.\n\nBest regards,\n' + sig
+    },
+    cheeky: {
+      subject: 'Your ' + industry + ' team in 30 days',
+      body: 'Hey {{FirstName}},\n\nToday: ' + pain.toLowerCase() + '. Frustrating. Expensive. Normal for ' + industry + '.\n\n30 days from now: that is all gone. Pipeline is clean. Team is focused. Revenue is up.\n\nThe bridge between those two? ' + service.toLowerCase() + '.\n\nI have done this for other ' + industry + ' teams. Want to be next?\n\n' + sig
+    }
+  };
+  return tones[tone] || tones.direct;
+}
+
+// ===== FOLLOW-UPS =====
+function generateFollowUps(data) {
+  const {industry, service, name, company} = data;
+  const sig = company ? name + ' | ' + company : name;
+  return [
+    {
+      day: 3,
+      subject: 'Following up, {{FirstName}}',
+      body: 'Hi {{FirstName}},\n\nJust bumping this to the top of your inbox. I know ' + industry + ' moves fast.\n\nWould a quick 15-minute call work this week? Happy to work around your schedule.\n\n' + sig
+    },
+    {
+      day: 7,
+      subject: 'One more thing about ' + service.toLowerCase(),
+      body: 'Hey {{FirstName}},\n\nI wanted to share a quick example. We recently helped a ' + industry + ' team cut their process time by 40% using ' + service.toLowerCase() + '.\n\nWorth exploring? I can send over a brief case study if that is easier than a call.\n\n' + sig
+    },
+    {
+      day: 14,
+      subject: 'Last one from me, {{FirstName}}',
+      body: 'Hi {{FirstName}},\n\nI do not want to fill your inbox, so this is my last note.\n\nIf ' + service.toLowerCase() + ' is not a priority right now, totally understand. If it ever is, you know where to find me.\n\nWishing you and the ' + industry + ' team all the best.\n\n' + sig
+    }
+  ];
+}
+
+// ===== SUBJECT LINE GENERATOR =====
+function generateSubjectLines(data) {
+  const {industry, service, pain} = data;
+  return [
+    'Quick question about ' + industry,
+    industry + ' teams are switching to this',
+    'Saw {{Company}} is growing. Thought this might help.',
+    'The ' + service.toLowerCase() + ' approach that works',
+    'Re: ' + pain.split(' ').slice(0, 5).join(' '),
+    '{{FirstName}}, 15 min this week?',
+    'Idea for {{Company}}',
+    'How ' + industry + ' teams solve ' + pain.split(' ').slice(0, 4).join(' ')
+  ];
+}
+
+// ===== SPAM CHECK =====
+function checkSpam(text) {
+  const lower = text.toLowerCase();
+  var found = [];
+  for (var i = 0; i < SPAM_WORDS.length; i++) {
+    if (lower.indexOf(SPAM_WORDS[i]) !== -1) {
+      found.push(SPAM_WORDS[i]);
+    }
+  }
+  return found;
+}
+
+// ===== DOM HELPERS =====
+function el(tag, attrs, children) {
+  var e = document.createElement(tag);
+  if (attrs) {
+    for (var k in attrs) {
+      if (k === 'className') e.className = attrs[k];
+      else if (k === 'textContent') e.textContent = attrs[k];
+      else if (k.indexOf('on') === 0) e.addEventListener(k.slice(2).toLowerCase(), attrs[k]);
+      else e.setAttribute(k, attrs[k]);
+    }
+  }
+  if (children) {
+    for (var i = 0; i < children.length; i++) {
+      if (typeof children[i] === 'string') {
+        e.appendChild(document.createTextNode(children[i]));
+      } else if (children[i]) {
+        e.appendChild(children[i]);
+      }
+    }
+  }
+  return e;
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2000);
+}
+
+function copyText(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function(){ showToast('Copied to clipboard'); });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('Copied to clipboard');
+  }
+}
+
+// ===== RENDER =====
+function renderEmails(data) {
+  var output = document.getElementById('outputArea');
+  output.textContent = '';
+
+  var aida = generateAIDA(data);
+  var pas = generatePAS(data);
+  var bab = generateBAB(data);
+  var followUps = generateFollowUps(data);
+  var subjectLines = generateSubjectLines(data);
+
+  var emails = [
+    {label: 'AIDA', labelClass: 'label-aida', framework: 'Attention, Interest, Desire, Action', email: aida},
+    {label: 'PAS', labelClass: 'label-pas', framework: 'Problem, Agitate, Solution', email: pas},
+    {label: 'BAB', labelClass: 'label-bab', framework: 'Before, After, Bridge', email: bab}
+  ];
+
+  // Emails section
+  var emailSection = el('div', {className: 'section'});
+  emailSection.appendChild(el('div', {className: 'section-title', textContent: 'Generated Emails'}));
+
+  for (var i = 0; i < emails.length; i++) {
+    (function(em){
+      var card = el('div', {className: 'email-card'});
+      var header = el('div', {className: 'email-card-header'});
+      var labelEl = el('span', {className: 'email-card-label ' + em.labelClass, textContent: em.label + ' Framework'});
+      header.appendChild(labelEl);
+
+      var actions = el('div', {className: 'email-card-actions'});
+      var copyBtn = el('button', {className: 'btn btn-sm btn-secondary', textContent: 'Copy', onClick: function(){
+        copyText('Subject: ' + em.email.subject + '\n\n' + em.email.body);
+      }});
+      actions.appendChild(copyBtn);
+      header.appendChild(actions);
+      card.appendChild(header);
+
+      var subj = el('div', {className: 'email-subject'});
+      subj.appendChild(el('span', {textContent: 'Subject: ', style: 'color:var(--text3);font-weight:400'}));
+      subj.appendChild(document.createTextNode(em.email.subject));
+      card.appendChild(subj);
+
+      var body = el('div', {className: 'email-body', textContent: em.email.body});
+      card.appendChild(body);
+
+      // Meta
+      var chars = em.email.body.length;
+      var words = em.email.body.split(/\s+/).length;
+      var spamWords = checkSpam(em.email.subject + ' ' + em.email.body);
+
+      var meta = el('div', {className: 'email-meta'});
+      meta.appendChild(el('span', {textContent: chars + ' chars'}));
+      meta.appendChild(el('span', {textContent: words + ' words'}));
+      if (spamWords.length > 0) {
+        meta.appendChild(el('span', {className: 'warn', textContent: spamWords.length + ' spam words'}));
+      } else {
+        meta.appendChild(el('span', {className: 'good', textContent: 'Spam clean'}));
+      }
+      card.appendChild(meta);
+
+      // Spam details
+      if (spamWords.length > 0) {
+        var sc = el('div', {className: 'spam-check'});
+        sc.appendChild(el('div', {className: 'spam-check-title', textContent: 'Detected Spam Trigger Words'}));
+        for (var j = 0; j < spamWords.length; j++) {
+          sc.appendChild(el('span', {className: 'spam-word', textContent: spamWords[j]}));
+        }
+        card.appendChild(sc);
+      }
+
+      emailSection.appendChild(card);
+    })(emails[i]);
+  }
+  output.appendChild(emailSection);
+
+  // Subject Lines
+  var slSection = el('div', {className: 'section'});
+  slSection.appendChild(el('div', {className: 'section-title', textContent: 'Alternative Subject Lines'}));
+  var slCard = el('div', {className: 'email-card'});
+  for (var s = 0; s < subjectLines.length; s++) {
+    (function(line){
+      var row = el('div', {style: 'display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)'});
+      row.appendChild(el('span', {textContent: line, style: 'font-size:14px;color:var(--text2)'}));
+      var cb = el('button', {className: 'btn btn-sm btn-secondary', textContent: 'Copy', onClick: function(){ copyText(line); }});
+      row.appendChild(cb);
+      slCard.appendChild(row);
+    })(subjectLines[s]);
+  }
+  slSection.appendChild(slCard);
+  output.appendChild(slSection);
+
+  // Follow-ups
+  var fuSection = el('div', {className: 'section'});
+  fuSection.appendChild(el('div', {className: 'section-title', textContent: 'Follow-Up Sequence'}));
+  for (var f = 0; f < followUps.length; f++) {
+    (function(fu, idx){
+      var card = el('div', {className: 'followup-card'});
+      var hdr = el('div', {className: 'followup-card-header'});
+      hdr.appendChild(el('span', {textContent: 'Follow-Up #' + (idx + 1) + ' (Day ' + fu.day + ')'}));
+      var copyBtn = el('button', {className: 'btn btn-sm btn-secondary', textContent: 'Copy', style: 'margin-left:auto', onClick: function(){
+        copyText('Subject: ' + fu.subject + '\n\n' + fu.body);
+      }});
+      hdr.appendChild(copyBtn);
+      card.appendChild(hdr);
+      card.appendChild(el('div', {className: 'email-subject', textContent: 'Subject: ' + fu.subject, style: 'font-size:13px'}));
+      card.appendChild(el('div', {className: 'followup-body', textContent: fu.body}));
+      fuSection.appendChild(card);
+    })(followUps[f], f);
+  }
+  output.appendChild(fuSection);
+
+  // Save to history
+  saveToHistory(data, {aida: aida, pas: pas, bab: bab});
+}
+
+// ===== HISTORY =====
+function getHistory() {
+  try { return JSON.parse(localStorage.getItem('coldmaxx_history') || '[]'); }
+  catch(e) { return []; }
+}
+
+function saveToHistory(data, emails) {
+  var history = getHistory();
+  history.unshift({
+    id: Date.now(),
+    date: new Date().toISOString(),
+    data: data,
+    emails: emails
+  });
+  if (history.length > 50) history = history.slice(0, 50);
+  localStorage.setItem('coldmaxx_history', JSON.stringify(history));
+}
+
+function renderHistory() {
+  var list = document.getElementById('historyList');
+  list.textContent = '';
+  var history = getHistory();
+  if (history.length === 0) {
+    var empty = el('div', {className: 'empty-state'});
+    empty.appendChild(el('p', {textContent: 'No saved generations yet. Generate your first cold email sequence above.'}));
+    list.appendChild(empty);
+    return;
+  }
+  for (var i = 0; i < history.length; i++) {
+    (function(item){
+      var card = el('div', {className: 'history-item'});
+      var del = el('span', {className: 'history-item-delete', textContent: 'x', onClick: function(e){
+        e.stopPropagation();
+        var h = getHistory().filter(function(x){ return x.id !== item.id; });
+        localStorage.setItem('coldmaxx_history', JSON.stringify(h));
+        renderHistory();
+        showToast('Deleted');
+      }});
+      card.appendChild(del);
+      card.appendChild(el('div', {className: 'history-item-title', textContent: item.data.service + ' for ' + item.data.industry}));
+      var d = new Date(item.date);
+      card.appendChild(el('div', {className: 'history-item-meta', textContent: d.toLocaleDateString() + ' at ' + d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}));
+      card.addEventListener('click', function(){
+        document.getElementById('inputIndustry').value = item.data.industry;
+        document.getElementById('inputService').value = item.data.service;
+        document.getElementById('inputPain').value = item.data.pain;
+        document.getElementById('inputName').value = item.data.name;
+        document.getElementById('inputCompany').value = item.data.company;
+        document.getElementById('inputTone').value = item.data.tone;
+        switchView('viewGenerator');
+        renderEmails(item.data);
+        document.getElementById('mainScroll').scrollTop = 0;
+      });
+      list.appendChild(card);
+    })(history[i]);
+  }
+}
+
+// ===== NAVIGATION =====
+function switchView(viewId) {
+  var views = document.querySelectorAll('.view');
+  for (var i = 0; i < views.length; i++) views[i].classList.remove('active');
+  document.getElementById(viewId).classList.add('active');
+
+  var navs = document.querySelectorAll('.nav-item');
+  for (var j = 0; j < navs.length; j++) {
+    navs[j].classList.toggle('active', navs[j].getAttribute('data-view') === viewId);
+  }
+
+  if (viewId === 'viewHistory') renderHistory();
+  document.getElementById('mainScroll').scrollTop = 0;
+}
+
+// ===== PRIVACY POLICY =====
+function showPrivacy() {
+  var overlay = document.getElementById('privacyOverlay');
+  var content = document.getElementById('privacyContent');
+  content.textContent = '';
+
+  content.appendChild(el('h2', {textContent: 'Privacy Policy'}));
+  content.appendChild(el('p', {textContent: 'ColdMaxx is a client-side web application. All data you enter stays on your device in localStorage. No data is sent to any server.'}));
+  content.appendChild(el('p', {textContent: 'We do not collect, store, or transmit any personal information, email content, or usage data. There are no analytics, cookies (beyond PWA caching), or third-party trackers.'}));
+  content.appendChild(el('p', {textContent: 'Generated emails are created entirely in your browser using template logic. No AI API calls are made.'}));
+  content.appendChild(el('p', {textContent: 'You can clear all stored data at any time by clearing your browser data or using your browser settings.'}));
+  content.appendChild(el('p', {textContent: 'Last updated: March 2026.'}));
+
+  var closeBtn = el('button', {className: 'btn btn-secondary close-privacy', textContent: 'Close', onClick: function(){
+    overlay.classList.remove('show');
+  }});
+  content.appendChild(closeBtn);
+  overlay.classList.add('show');
+}
+
+// ===== FOOTER =====
+function addFooter() {
+  var views = document.querySelectorAll('.view');
+  for (var i = 0; i < views.length; i++) {
+    var footer = el('div', {style: 'text-align:center;padding:24px 20px 16px'});
+    var link = el('a', {
+      style: 'font-size:12px;color:var(--text3);cursor:pointer;text-decoration:underline',
+      textContent: 'Privacy Policy'
+    });
+    link.addEventListener('click', showPrivacy);
+    footer.appendChild(link);
+    views[i].appendChild(footer);
+  }
+}
+
+// ===== INIT =====
+document.getElementById('btnGenerate').addEventListener('click', function(){
+  var industry = document.getElementById('inputIndustry').value.trim();
+  var service = document.getElementById('inputService').value.trim();
+  var pain = document.getElementById('inputPain').value.trim();
+  var name = document.getElementById('inputName').value.trim() || 'Alex';
+  var company = document.getElementById('inputCompany').value.trim();
+  var tone = document.getElementById('inputTone').value;
+
+  if (!industry || !service || !pain) {
+    showToast('Fill in industry, service, and pain point');
+    return;
+  }
+
+  renderEmails({industry:industry, service:service, pain:pain, name:name, company:company, tone:tone});
+
+  setTimeout(function(){
+    var outputArea = document.getElementById('outputArea');
+    if (outputArea.firstChild) {
+      outputArea.firstChild.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  }, 100);
+});
+
+var navItems = document.querySelectorAll('.nav-item');
+for (var n = 0; n < navItems.length; n++) {
+  navItems[n].addEventListener('click', function(){
+    switchView(this.getAttribute('data-view'));
+  });
+}
+
+document.getElementById('historyToggle').addEventListener('click', function(){
+  switchView('viewHistory');
+});
+
+addFooter();
+
+// ===== SERVICE WORKER =====
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(function(e){ console.log('SW registration failed:', e); });
+}
+
+})();
+</script>
+</body>
+</html>

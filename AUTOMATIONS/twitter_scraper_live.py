@@ -24,7 +24,7 @@ from playwright.async_api import async_playwright
 import argparse
 
 # Paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 ALPHA_STAGING = LEDGER_DIR / "ALPHA_STAGING.csv"
 HIGH_SIGNAL_SOURCES = LEDGER_DIR / "HIGH_SIGNAL_SOURCES.csv"

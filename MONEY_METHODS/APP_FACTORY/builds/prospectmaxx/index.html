@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ProspectMaxx — Local Business Lead Finder</title>
+<meta name="description" content="Find local businesses that need websites. Generate prospect lists with contact info in seconds.">
+<link rel="manifest" href="manifest.json">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#12121c;--border:#1e1e30;--text:#eaeaf0;--muted:#7a7a90;--accent:#f59e0b;--accent2:#fbbf24;--green:#22c55e;--red:#ef4444}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5}
+.container{max-width:800px;margin:0 auto;padding:20px}
+.hero{text-align:center;padding:48px 16px 28px}
+.hero h1{font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);margin-top:8px;font-size:0.95rem}
+.tag{display:inline-block;background:var(--accent);color:#000;font-size:0.65rem;padding:2px 8px;border-radius:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:0.82rem;color:var(--muted);margin-bottom:6px;font-weight:500}
+.field input,.field select{width:100%;padding:11px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.9rem}
+.field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.btn{background:var(--accent);color:#000;border:none;padding:14px;border-radius:10px;font-size:0.95rem;font-weight:700;cursor:pointer;width:100%}
+.btn:hover{background:var(--accent2)}
+.btn-sm{padding:8px 16px;font-size:0.8rem;width:auto;border-radius:8px}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text);font-weight:500}
+.btn-outline:hover{border-color:var(--accent)}
+.results{display:none}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.stat{background:var(--card);padding:14px;text-align:center}
+.stat .num{font-size:1.4rem;font-weight:800;color:var(--accent)}
+.stat .label{font-size:0.7rem;color:var(--muted);text-transform:uppercase;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:0.82rem}
+th{text-align:left;padding:10px 8px;border-bottom:2px solid var(--border);color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.5px}
+td{padding:10px 8px;border-bottom:1px solid var(--border)}
+tr:hover td{background:rgba(245,158,11,0.03)}
+.score-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.72rem;font-weight:700}
+.score-hot{background:rgba(239,68,68,0.15);color:var(--red)}
+.score-warm{background:rgba(245,158,11,0.15);color:var(--accent)}
+.score-cold{background:rgba(34,197,94,0.15);color:var(--green)}
+.action-row{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.cta-box{background:linear-gradient(135deg,rgba(245,158,11,0.1),rgba(251,191,36,0.04));border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-top:16px}
+.cta-box p{color:var(--muted);font-size:0.82rem;margin:6px 0 14px}
+.email-row{display:flex;gap:8px;max-width:360px;margin:0 auto}
+.email-row input{flex:1;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.85rem}
+.loading{display:none;text-align:center;padding:30px}
+.spinner{width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tip{font-size:0.75rem;color:var(--muted);font-style:italic;margin-top:12px;text-align:center}
+@media(max-width:600px){.row,.row3{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr}.email-row{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <div class="tag">lead generation</div>
+    <h1>find businesses that need your services</h1>
+    <p>generate a targeted prospect list with website audit scores and contact opportunities. free.</p>
+  </div>
+
+  <div class="card" id="form">
+    <div class="row">
+      <div class="field">
+        <label>target industry</label>
+        <select id="industry">
+          <option value="restaurant">Restaurants</option>
+          <option value="dental">Dentists</option>
+          <option value="lawyer">Lawyers</option>
+          <option value="realtor">Real Estate Agents</option>
+          <option value="contractor">Contractors / Home Services</option>
+          <option value="salon">Hair Salons / Barbers</option>
+          <option value="gym">Gyms / Fitness Studios</option>
+          <option value="auto">Auto Repair / Dealers</option>
+          <option value="medical">Medical Practices</option>
+          <option value="accounting">Accountants / CPAs</option>
+          <option value="photography">Photographers</option>
+          <option value="daycare">Daycare / Childcare</option>
+          <option value="pet">Pet Services / Vets</option>
+          <option value="retail">Retail Stores</option>
+          <option value="cleaning">Cleaning Services</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>city / area</label>
+        <input type="text" id="city" placeholder="e.g. Austin TX" value="">
+      </div>
+    </div>
+    <div class="row3">
+      <div class="field">
+        <label>list size</label>
+        <select id="listSize">
+          <option value="10">10 prospects</option>
+          <option value="25" selected>25 prospects</option>
+          <option value="50">50 prospects</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>service you offer</label>
+        <select id="service">
+          <option value="website">Website Design</option>
+          <option value="seo">SEO</option>
+          <option value="social">Social Media</option>
+          <option value="ads">Google/FB Ads</option>
+          <option value="branding">Branding</option>
+          <option value="automation">Automation</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>min website score</label>
+        <select id="minScore">
+          <option value="any">Any (all leads)</option>
+          <option value="bad" selected>Bad sites only</option>
+          <option value="none">No website</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" onclick="generate()">generate prospect list</button>
+    <div class="tip">generates realistic sample data for planning. connect Google Maps API for real leads.</div>
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <div style="color:var(--muted);font-size:0.85rem" id="loadingText">scanning businesses in your area...</div>
+  </div>
+
+  <div class="results" id="results"></div>
+</div>
+
+<script>
+function clearChildren(el){while(el.firstChild)el.removeChild(el.firstChild);}
+function ce(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt)e.textContent=txt;return e;}
+
+var FIRST_NAMES = ['Mike','Sarah','James','Lisa','David','Maria','John','Jennifer','Robert','Emily','Tom','Angela','Chris','Nicole','Steve','Rachel','Dan','Amanda','Brian','Laura'];
+var LAST_NAMES = ['Johnson','Smith','Williams','Brown','Jones','Garcia','Miller','Davis','Rodriguez','Martinez','Anderson','Taylor','Thomas','Hernandez','Moore','Martin','Jackson','Thompson','White','Lopez'];
+var STREETS = ['Main St','Oak Ave','Elm St','Pine Rd','Maple Dr','Cedar Ln','1st Ave','2nd St','Market St','Broadway','Commerce Dr','Park Ave','Lake Rd','River Dr','Hill St'];
+
+var INDUSTRY_DATA = {
+  restaurant:{names:['Bella Italia','Golden Dragon','Taco Loco','The Grill House','Sakura Sushi','Mama Rosa\'s','The Blue Plate','Curry Palace','Mediterranean Kitchen','Smoke & Fire BBQ','The Breakfast Club','Noodle House','Fresh Catch','The Vegan Spot','Little Greece','Pizza Corner','Thai Garden','El Rancho','Bistro 41','Harbor Grill'],type:'Restaurant'},
+  dental:{names:['Bright Smile Dental','Family Dental Care','Comfort Dentistry','Premier Dental','Gentle Dental','SmileCraft','CityView Dental','Parkside Dental','Evergreen Dental','Summit Dental','Valley Dental Group','Horizon Dental','Lakeside Dental','Midtown Dental','Heritage Dental','Clearview Dental','Diamond Dental','Sunset Dental','Cornerstone Dental','Apex Dental'],type:'Dental Practice'},
+  lawyer:{names:['Smith & Associates','Johnson Law Group','Davis Legal','Williams Law Firm','Brown & Partners','Garcia Law Office','Anderson Legal','Thompson & Associates','Miller Legal Group','Roberts Law','Heritage Law','Summit Legal','Landmark Law','Cornerstone Legal','Liberty Law Group','Justice Law','Shield Legal','Premier Law','Apex Legal','Pinnacle Law'],type:'Law Firm'},
+  realtor:{names:['HomeFind Realty','Premier Properties','City Living Realty','Lakeside Real Estate','Summit Realty','Horizon Properties','Keystone Real Estate','First Choice Realty','Golden Gate Properties','Parkview Realty','Heritage Homes','Landmark Realty','Compass Properties','NextHome Realty','Elite Real Estate','Cornerstone Realty','Valley Properties','Crestview Realty','Metro Homes','Pinnacle Properties'],type:'Real Estate'},
+  contractor:{names:['A1 Contractors','Pro Build Services','HandyPro','Elite Home Improvement','Summit Construction','Valley Builders','Heritage Contractors','Premier Renovations','Cornerstone Builders','First Rate Contractors','Quality Build','Master Craft','Pro Reno','Top Notch Builders','Ace Construction','Blue Ribbon Builders','Crown Contractors','Diamond Build','Eagle Construction','Gold Standard'],type:'Contractor'},
+  salon:{names:['Style Studio','The Hair Lounge','Glow Beauty','Luxe Salon','The Cut Above','Shear Perfection','Mane Attraction','Bliss Beauty Bar','Polished','The Beauty Spot','Edge Barber','Fade Factory','Fresh Cuts','Royal Barber','Crown Salon','Studio 7','The Loft Salon','Velvet Hair','Zen Beauty','Artistry Salon'],type:'Salon'},
+  gym:{names:['Iron Forge Fitness','Peak Performance','FitLife Studio','CrossFit Elite','Flex Fitness','PowerHouse Gym','CoreStrength','BodyWorks','Elevate Fitness','Summit Athletics','Pulse Fitness','Vibe Gym','Alpha Fitness','Beast Mode','Grind House','Lift Lab','Rise Fitness','Sweat Factory','Titan Gym','Zenith Fitness'],type:'Gym'},
+  auto:{names:['AutoCare Plus','Precision Auto','Mike\'s Auto Shop','Quick Fix Auto','Pro Mechanic','A1 Auto Repair','City Auto Service','Express Auto','Golden Wrench','Highway Auto','Master Mechanic','Peak Auto','Premier Auto Care','Quality Auto','Reliable Auto','Speedway Auto','Summit Auto','Top Gear','Valley Auto','Westside Motors'],type:'Auto Shop'},
+  medical:{names:['CityView Medical','Family Health Center','Premier Medical Group','Wellness Clinic','HealthFirst','Cornerstone Medical','Summit Health','Valley Medical','Heritage Health','Lakeside Medical','Metro Health','Pacific Medical','Riverside Health','Sunrise Medical','United Health Clinic','VitaCare','WellPoint Medical','Zenith Health','Apex Medical','Diamond Health'],type:'Medical Practice'},
+  accounting:{names:['Precision Accounting','Clear Books CPA','Summit Financial','Heritage Tax','Premier Accounts','Valley CPA Group','Cornerstone Financial','First Choice CPA','Horizon Accounting','Keystone Tax','Landmark Financial','Metro CPA','Pacific Accounting','Pinnacle Tax','Quality Books','Reliable CPA','Sunrise Financial','TopLine Accounting','United CPA','Vista Financial'],type:'CPA Firm'},
+  photography:{names:['Shutter Click','Frame Perfect','Golden Hour Studio','Lens & Light','Capture Studios','Focus Photography','Moment Studios','Pixel Perfect','Bright Image','Crystal Clear','Dreamshot','Everlast Photos','Flash Studios','Glimmer Photography','Halo Studios','Iris Photography','Jewel Tones','Kaleidoscope','Luminous','Mosaic Studios'],type:'Photography Studio'},
+  daycare:{names:['Little Stars','Sunshine Academy','Happy Kids','Growing Minds','Tiny Tots','Bright Beginnings','Rainbow Academy','Little Explorers','KinderCare','Sweet Pea','BabySteps','Creative Kids','Discovery Academy','Evergreen Kids','Fun Factory','Garden Kids','Happy Hearts','Imagination Station','Joy Academy','KidsFirst'],type:'Daycare'},
+  pet:{names:['Pawsome Care','Happy Tails','PetPro Clinic','Bark & Purr','Fuzzy Friends','Wagging Tails','Critter Care','PawPrint Vet','Companion Animal','Fetch Vet','Good Boy Vet','Happy Paws','Lucky Pet','Noble Vet','Oasis Pet Care','Pedigree Vet','Rascal Care','Snuggle Pets','TailWag Vet','Urban Pet'],type:'Pet Services'},
+  retail:{names:['Main Street Boutique','The Corner Store','Urban Finds','Treasure Trove','City Market','Style Hub','The Gift Box','Local Goods','Vintage Vault','Modern Finds','Artisan Market','Bazaar','Curated Home','DailyGoods','Emporium','Flair Boutique','Golden Finds','Harbor Shop','Indie Market','Junction Store'],type:'Retail Store'},
+  cleaning:{names:['Sparkle Clean','Fresh Start Cleaning','Pro Clean','Diamond Shine','Crystal Clear Services','A1 Cleaning','Bright & Clean','Eco Clean','First Impression','Gleam Team','HomeShine','Immaculate','JetClean','KleenPro','Luxe Clean','Maid Right','NeatFreak','Onyx Cleaning','PristinePro','QuickClean'],type:'Cleaning Service'}
+};
+
+function seed(s){return function(){s=Math.sin(s)*10000;return s-Math.floor(s);};}
+
+function generate(){
+  var industry = document.getElementById('industry').value;
+  var city = document.getElementById('city').value.trim()||'Your City';
+  var listSize = parseInt(document.getElementById('listSize').value);
+  var service = document.getElementById('service').value;
+  var minScore = document.getElementById('minScore').value;
+
+  document.getElementById('loading').style.display='block';
+  document.getElementById('results').style.display='none';
+
+  var msgs = ['scanning businesses in '+city+'...','checking websites...','scoring opportunities...','ranking prospects...'];
+  var loadText = document.getElementById('loadingText');
+  var msgIdx = 0;
+  var interval = setInterval(function(){
+    msgIdx++;
+    if(msgIdx<msgs.length) loadText.textContent=msgs[msgIdx];
+  },600);
+
+  setTimeout(function(){
+    clearInterval(interval);
+    document.getElementById('loading').style.display='none';
+    renderResults(industry,city,listSize,service,minScore);
+  },2400);
+}
+
+function renderResults(industry,city,listSize,service,minScore){
+  var data = INDUSTRY_DATA[industry];
+  var rng = seed(city.length*industry.length+listSize);
+  var prospects = [];
+
+  for(var i=0;i<listSize;i++){
+    var nameIdx = Math.floor(rng()*data.names.length);
+    var bName = data.names[nameIdx];
+    if(prospects.some(function(p){return p.name===bName;})) bName = bName+' '+city.split(' ')[0];
+
+    var hasWebsite = rng()>0.3;
+    var webScore = hasWebsite ? Math.floor(rng()*70+10) : 0;
+    var mobileOk = hasWebsite && rng()>0.5;
+    var hasSsl = hasWebsite && rng()>0.4;
+    var lastUpdated = hasWebsite ? (rng()>0.5?'2020':'2024') : 'N/A';
+
+    var fIdx = Math.floor(rng()*FIRST_NAMES.length);
+    var lIdx = Math.floor(rng()*LAST_NAMES.length);
+    var owner = FIRST_NAMES[fIdx]+' '+LAST_NAMES[lIdx];
+    var street = Math.floor(rng()*9000+100)+' '+STREETS[Math.floor(rng()*STREETS.length)];
+
+    var opportunity;
+    if(!hasWebsite) opportunity='hot';
+    else if(webScore<40) opportunity='hot';
+    else if(webScore<60) opportunity='warm';
+    else opportunity='cold';
+
+    if(minScore==='bad' && opportunity==='cold') continue;
+    if(minScore==='none' && hasWebsite) continue;
+
+    prospects.push({
+      name:bName,type:data.type,owner:owner,address:street+', '+city,
+      phone:'('+Math.floor(rng()*900+100)+') '+Math.floor(rng()*900+100)+'-'+Math.floor(rng()*9000+1000),
+      hasWebsite:hasWebsite,webScore:webScore,mobileOk:mobileOk,hasSsl:hasSsl,lastUpdated:lastUpdated,
+      opportunity:opportunity
+    });
+    if(prospects.length>=listSize) break;
+  }
+
+  while(prospects.length<listSize){
+    var extra = Math.floor(rng()*data.names.length);
+    prospects.push({
+      name:data.names[extra]+' #'+(prospects.length+1),type:data.type,owner:FIRST_NAMES[Math.floor(rng()*20)]+' '+LAST_NAMES[Math.floor(rng()*20)],
+      address:Math.floor(rng()*9000+100)+' '+STREETS[Math.floor(rng()*STREETS.length)]+', '+city,
+      phone:'('+Math.floor(rng()*900+100)+') '+Math.floor(rng()*900+100)+'-'+Math.floor(rng()*9000+1000),
+      hasWebsite:false,webScore:0,mobileOk:false,hasSsl:false,lastUpdated:'N/A',
+      opportunity:'hot'
+    });
+  }
+
+  prospects.sort(function(a,b){var order={hot:0,warm:1,cold:2};return order[a.opportunity]-order[b.opportunity];});
+
+  var results = document.getElementById('results');
+  clearChildren(results);
+  results.style.display='block';
+
+  var hot=prospects.filter(function(p){return p.opportunity==='hot';}).length;
+  var warm=prospects.filter(function(p){return p.opportunity==='warm';}).length;
+  var noSite=prospects.filter(function(p){return !p.hasWebsite;}).length;
+
+  var statsRow = ce('div','stats-row');
+  [{n:hot,l:'hot prospects'},{n:warm,l:'warm prospects'},{n:noSite,l:'no website'}].forEach(function(s){
+    var d=ce('div','stat');
+    d.appendChild(ce('div','num',s.n.toString()));
+    d.appendChild(ce('div','label',s.l));
+    statsRow.appendChild(d);
+  });
+  results.appendChild(statsRow);
+
+  var tableCard = ce('div','card');
+  tableCard.style.padding='12px';tableCard.style.overflowX='auto';
+  var table = document.createElement('table');
+  var thead = document.createElement('thead');
+  var headerRow = document.createElement('tr');
+  ['Business','Owner','Phone','Website Score','Opportunity'].forEach(function(h){
+    var th = document.createElement('th');
+    th.textContent = h;
+    headerRow.appendChild(th);
+  });
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  var tbody = document.createElement('tbody');
+  prospects.forEach(function(p){
+    var tr = document.createElement('tr');
+    var td1 = document.createElement('td');
+    var nameEl = ce('div','',p.name);
+    nameEl.style.fontWeight='600';
+    var addrEl = ce('div','',p.address);
+    addrEl.style.cssText='font-size:0.72rem;color:var(--muted)';
+    td1.appendChild(nameEl);td1.appendChild(addrEl);
+
+    var td2 = document.createElement('td');
+    td2.textContent = p.owner;
+
+    var td3 = document.createElement('td');
+    td3.textContent = p.phone;
+    td3.style.whiteSpace='nowrap';
+
+    var td4 = document.createElement('td');
+    if(p.hasWebsite){
+      td4.textContent = p.webScore+'/100';
+      td4.style.color = p.webScore<40?'var(--red)':p.webScore<60?'var(--accent)':'var(--green)';
+      td4.style.fontWeight='700';
+    } else {
+      td4.textContent = 'None';
+      td4.style.color='var(--red)';
+      td4.style.fontWeight='700';
+    }
+
+    var td5 = document.createElement('td');
+    var badge = ce('span','score-badge score-'+p.opportunity,p.opportunity.toUpperCase());
+    td5.appendChild(badge);
+
+    tr.appendChild(td1);tr.appendChild(td2);tr.appendChild(td3);tr.appendChild(td4);tr.appendChild(td5);
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  tableCard.appendChild(table);
+  results.appendChild(tableCard);
+
+  // Actions
+  var actionRow = ce('div','action-row');
+  var exportBtn = ce('button','btn-sm btn-outline','export CSV');
+  exportBtn.addEventListener('click',function(){
+    var csv='Business,Type,Owner,Address,Phone,Has Website,Web Score,Mobile OK,SSL,Last Updated,Opportunity\n';
+    prospects.forEach(function(p){
+      csv+='"'+p.name+'","'+p.type+'","'+p.owner+'","'+p.address+'","'+p.phone+'",'+p.hasWebsite+','+p.webScore+','+p.mobileOk+','+p.hasSsl+',"'+p.lastUpdated+'","'+p.opportunity+'"\n';
+    });
+    var blob = new Blob([csv],{type:'text/csv'});
+    var a = document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='prospects_'+industry+'_'+city.replace(/\s/g,'_')+'.csv';
+    a.click();
+  });
+
+  var emailBtn = ce('button','btn-sm btn-outline','generate cold emails');
+  emailBtn.addEventListener('click',function(){
+    var hotProspects = prospects.filter(function(p){return p.opportunity==='hot';});
+    var emailText = hotProspects.slice(0,5).map(function(p){
+      return 'To: '+p.owner+' at '+p.name+'\nSubject: quick question about '+p.name+'\'s online presence\n\nHi '+p.owner.split(' ')[0]+',\n\n'+(p.hasWebsite?'I took a look at '+p.name+'\'s website and noticed a few things that might be costing you customers. Your site scored '+p.webScore+'/100 on our audit.':'I noticed '+p.name+' doesn\'t have a website yet. In 2026, '+p.type.toLowerCase()+'s without a website lose an estimated 70% of potential customers to competitors who do.')+'\n\nWould it be worth a 10-minute call to show you what I found?\n\nBest,\n[Your name]';
+    }).join('\n\n---\n\n');
+    navigator.clipboard.writeText(emailText).then(function(){emailBtn.textContent='copied 5 emails';setTimeout(function(){emailBtn.textContent='generate cold emails';},3000);});
+  });
+
+  var newBtn = ce('button','btn-sm btn-outline','new search');
+  newBtn.addEventListener('click',function(){results.style.display='none';document.getElementById('form').scrollIntoView({behavior:'smooth'});});
+
+  actionRow.appendChild(exportBtn);actionRow.appendChild(emailBtn);actionRow.appendChild(newBtn);
+  results.appendChild(actionRow);
+
+  // CTA
+  var cta = ce('div','cta-box');
+  cta.appendChild(ce('h3','','want real leads with verified emails?'));
+  var ctaP = ce('p','','upgrade to ProspectMaxx Pro for real Google Maps scraping, email verification, and automated outreach sequences.');
+  cta.appendChild(ctaP);
+  var emailRow = ce('div','email-row');
+  var emailInput = document.createElement('input');
+  emailInput.type='email';emailInput.placeholder='you@email.com';
+  var joinBtn = ce('button','btn btn-sm','join waitlist');
+  joinBtn.addEventListener('click',function(){
+    var email=emailInput.value.trim();
+    if(email&&email.indexOf('@')!==-1){
+      var leads=JSON.parse(localStorage.getItem('prospectmaxx_leads')||'[]');
+      leads.push({email:email,industry:industry,city:city,ts:new Date().toISOString()});
+      localStorage.setItem('prospectmaxx_leads',JSON.stringify(leads));
+      joinBtn.textContent='joined';joinBtn.disabled=true;
+    }
+  });
+  emailRow.appendChild(emailInput);emailRow.appendChild(joinBtn);
+  cta.appendChild(emailRow);
+  results.appendChild(cta);
+
+  results.scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>

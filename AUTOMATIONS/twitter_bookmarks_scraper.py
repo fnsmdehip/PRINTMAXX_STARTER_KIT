@@ -42,7 +42,7 @@ except ImportError:
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 ALPHA_STAGING = LEDGER_DIR / "ALPHA_STAGING.csv"
 

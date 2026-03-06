@@ -1,0 +1,444 @@
+{
+  "app_name": "dusk",
+  "niche": "sleep",
+  "generated_at": "2026-03-05T02:57:49.148446",
+  "strategy": {
+    "primary": "subscription",
+    "secondary": [
+      "affiliate",
+      "freemium"
+    ],
+    "tertiary": [
+      "ads"
+    ],
+    "subscription_tier": "mid",
+    "optimal_weekly": 2.99,
+    "optimal_monthly": 7.99,
+    "optimal_yearly": 39.99,
+    "affiliate_categories": [
+      {
+        "category": "mattresses",
+        "commission": "5-12%",
+        "program": "Casper / Purple / Helix",
+        "avg_order": 1200.0
+      },
+      {
+        "category": "sleep supplements (melatonin, magnesium)",
+        "commission": "15-30%",
+        "program": "Moon Juice / Natural Vitality",
+        "avg_order": 30.0
+      },
+      {
+        "category": "weighted blankets",
+        "commission": "8-15%",
+        "program": "Bearaby / Amazon",
+        "avg_order": 120.0
+      },
+      {
+        "category": "blue light glasses",
+        "commission": "10-20%",
+        "program": "Felix Gray / Warby Parker",
+        "avg_order": 95.0
+      },
+      {
+        "category": "white noise machines",
+        "commission": "4-8%",
+        "program": "Hatch / Amazon",
+        "avg_order": 60.0
+      }
+    ],
+    "ad_strategy": "no ads during sleep sessions. rewarded video for premium sounds during daytime browsing only.",
+    "paywall_timing": "after 7-night sleep score tracking preview",
+    "premium_features": [
+      "unlimited sleep sounds library",
+      "smart alarm (wake during light sleep)",
+      "sleep coaching / tips engine",
+      "sleep environment analysis",
+      "advanced sleep analytics"
+    ],
+    "donation_model": false,
+    "notes": "mattress affiliate is the sleeper (pun intended) money maker. a single mattress sale = $60-$144 commission. sleep users are health-conscious spenders. never interrupt sleep experience with monetization."
+  },
+  "competitor_pricing": {
+    "competitors": [
+      {
+        "name": "Calm",
+        "monthly": 14.99,
+        "yearly": 69.99,
+        "downloads": "100M+",
+        "rating": 4.4
+      },
+      {
+        "name": "Headspace",
+        "monthly": 12.99,
+        "yearly": 69.99,
+        "downloads": "70M+",
+        "rating": 4.5
+      },
+      {
+        "name": "Sleep Cycle",
+        "monthly": 9.99,
+        "yearly": 39.99,
+        "downloads": "50M+",
+        "rating": 4.5
+      },
+      {
+        "name": "Pillow",
+        "monthly": 4.99,
+        "yearly": 29.99,
+        "downloads": "1M+",
+        "rating": 4.3
+      },
+      {
+        "name": "BetterSleep",
+        "monthly": 9.99,
+        "yearly": 49.99,
+        "downloads": "10M+",
+        "rating": 4.7
+      }
+    ],
+    "avg_monthly": 10.59,
+    "avg_yearly": 51.99,
+    "recommended_monthly": 7.99,
+    "recommended_yearly": 39.99,
+    "strategy_note": "undercut Calm/Headspace significantly. match Sleep Cycle. sleep-specific positioning vs meditation-first competitors."
+  },
+  "revenuecat_config": {
+    "app_name": "dusk",
+    "revenuecat_project": "rc_dusk",
+    "entitlements": [
+      {
+        "id": "dusk_premium",
+        "display_name": "dusk Premium",
+        "description": "Full access to all premium features"
+      }
+    ],
+    "offerings": [
+      {
+        "id": "dusk_default",
+        "display_name": "Default Offering",
+        "packages": [
+          {
+            "id": "$rc_weekly",
+            "product_id": "dusk_weekly"
+          },
+          {
+            "id": "$rc_monthly",
+            "product_id": "dusk_monthly"
+          },
+          {
+            "id": "$rc_annual",
+            "product_id": "dusk_yearly"
+          }
+        ]
+      }
+    ],
+    "products": [
+      {
+        "id": "dusk_weekly",
+        "type": "auto_renewable_subscription",
+        "price": 2.99,
+        "period": "P1W",
+        "trial": "P3D",
+        "store_product_id": "dusk.weekly"
+      },
+      {
+        "id": "dusk_monthly",
+        "type": "auto_renewable_subscription",
+        "price": 7.99,
+        "period": "P1M",
+        "trial": "P7D",
+        "store_product_id": "dusk.monthly"
+      },
+      {
+        "id": "dusk_yearly",
+        "type": "auto_renewable_subscription",
+        "price": 39.99,
+        "period": "P1Y",
+        "trial": "P7D",
+        "store_product_id": "dusk.yearly",
+        "introductory_offer": {
+          "type": "pay_up_front",
+          "price": 20.0,
+          "period": "P1Y",
+          "cycles": 1
+        }
+      },
+      {
+        "id": "dusk_lifetime",
+        "type": "non_consumable",
+        "price": 119.97,
+        "store_product_id": "dusk.lifetime"
+      }
+    ],
+    "subscription_group": "dusk_subscriptions"
+  },
+  "affiliate_placements": [
+    {
+      "screen": "sleep_report",
+      "trigger": "viewing morning sleep report",
+      "type": "improvement_suggestion",
+      "affiliate_category": "mattresses",
+      "program": "Casper / Purple / Helix",
+      "commission": "5-12%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "sleep_environment",
+      "trigger": "browsing sleep improvement tips",
+      "type": "product_recommendation",
+      "affiliate_category": "sleep supplements (melatonin, magnesium)",
+      "program": "Moon Juice / Natural Vitality",
+      "commission": "15-30%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "bedtime_routine",
+      "trigger": "setting up bedtime routine",
+      "type": "relaxation_product",
+      "affiliate_category": "weighted blankets",
+      "program": "Bearaby / Amazon",
+      "commission": "8-15%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    },
+    {
+      "screen": "weekly_sleep_summary",
+      "trigger": "weekly sleep score review",
+      "type": "upgrade_suggestion",
+      "affiliate_category": "blue light glasses",
+      "program": "Felix Gray / Warby Parker",
+      "commission": "10-20%",
+      "disclosure": "FTC disclosure required. use 'recommended for you (affiliate link)' or similar.",
+      "ux_note": "must feel native, not spammy. contextual relevance is everything."
+    }
+  ],
+  "ad_placements": [
+    {
+      "type": "rewarded_video",
+      "location": "unlock premium feature for 24h / streak protection",
+      "frequency": "user-initiated, max 3 per day",
+      "estimated_cpm": 25.0,
+      "note": "only ad type. keeps experience clean. user opts in."
+    }
+  ],
+  "paywall_copy": {
+    "headline": "sleep better tonight.",
+    "subhead": "smart alarm, sleep sounds, and sleep coaching. 3.33/mo with annual.",
+    "value_prop": "better sleep = better everything. $3.33/mo is less than one bad night costs your productivity.",
+    "social_proof": "users report falling asleep 23 minutes faster on average",
+    "features_headline": "wake up feeling different:",
+    "pricing_display": {
+      "monthly": {
+        "label": "monthly",
+        "price": "$7.99",
+        "period": "/mo",
+        "note": "cancel anytime"
+      },
+      "yearly": {
+        "label": "yearly",
+        "price": "$3.33",
+        "period": "/mo",
+        "note": "billed $39.99/yr. save 58%.",
+        "badge": "most popular",
+        "recommended": true
+      },
+      "weekly": {
+        "label": "weekly",
+        "price": "$2.99",
+        "period": "/wk",
+        "note": "3-day free trial"
+      }
+    },
+    "cta_button": "start free trial",
+    "cta_subtext": "7-day free trial. cancel anytime. no commitment.",
+    "premium_features": [
+      "unlimited sleep sounds library",
+      "smart alarm (wake during light sleep)",
+      "sleep coaching / tips engine",
+      "sleep environment analysis",
+      "advanced sleep analytics"
+    ],
+    "close_button_note": "always show X/close button. apple rejects hidden close buttons."
+  },
+  "revenue_projections": {
+    "at_1k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.01,
+        "paying_users": 10,
+        "monthly_subscribers": 7,
+        "yearly_subscribers": 3,
+        "subscription_gross": 65.93,
+        "subscription_net": 46.15,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 199.8,
+        "total_monthly_revenue": 245.95,
+        "total_yearly_revenue": 2951.39
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.03,
+        "paying_users": 30,
+        "monthly_subscribers": 21,
+        "yearly_subscribers": 9,
+        "subscription_gross": 197.78,
+        "subscription_net": 138.45,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 195.75,
+        "total_monthly_revenue": 334.2,
+        "total_yearly_revenue": 4010.37
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 1000,
+        "conversion_rate": 0.07,
+        "paying_users": 70,
+        "monthly_subscribers": 49,
+        "yearly_subscribers": 21,
+        "subscription_gross": 461.49,
+        "subscription_net": 323.04,
+        "affiliate_revenue": 0.0,
+        "ad_revenue": 187.65,
+        "total_monthly_revenue": 510.69,
+        "total_yearly_revenue": 6128.34
+      }
+    },
+    "at_5k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.01,
+        "paying_users": 50,
+        "monthly_subscribers": 35,
+        "yearly_subscribers": 15,
+        "subscription_gross": 329.64,
+        "subscription_net": 230.75,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 1001.7,
+        "total_monthly_revenue": 1264.45,
+        "total_yearly_revenue": 15173.35
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.03,
+        "paying_users": 150,
+        "monthly_subscribers": 105,
+        "yearly_subscribers": 45,
+        "subscription_gross": 988.91,
+        "subscription_net": 692.24,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 981.45,
+        "total_monthly_revenue": 1705.69,
+        "total_yearly_revenue": 20468.26
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 5000,
+        "conversion_rate": 0.07,
+        "paying_users": 350,
+        "monthly_subscribers": 244,
+        "yearly_subscribers": 105,
+        "subscription_gross": 2299.47,
+        "subscription_net": 1609.63,
+        "affiliate_revenue": 32.0,
+        "ad_revenue": 940.95,
+        "total_monthly_revenue": 2582.58,
+        "total_yearly_revenue": 30990.97
+      }
+    },
+    "at_10k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.01,
+        "paying_users": 100,
+        "monthly_subscribers": 70,
+        "yearly_subscribers": 30,
+        "subscription_gross": 659.28,
+        "subscription_net": 461.49,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 2004.75,
+        "total_monthly_revenue": 2538.24,
+        "total_yearly_revenue": 30458.91
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.03,
+        "paying_users": 300,
+        "monthly_subscribers": 210,
+        "yearly_subscribers": 90,
+        "subscription_gross": 1977.83,
+        "subscription_net": 1384.48,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 1964.25,
+        "total_monthly_revenue": 3420.73,
+        "total_yearly_revenue": 41048.73
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 10000,
+        "conversion_rate": 0.07,
+        "paying_users": 700,
+        "monthly_subscribers": 489,
+        "yearly_subscribers": 210,
+        "subscription_gross": 4606.94,
+        "subscription_net": 3224.85,
+        "affiliate_revenue": 72.0,
+        "ad_revenue": 1883.25,
+        "total_monthly_revenue": 5180.1,
+        "total_yearly_revenue": 62161.25
+      }
+    },
+    "at_50k_downloads": {
+      "pessimistic": {
+        "label": "1% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.01,
+        "paying_users": 500,
+        "monthly_subscribers": 350,
+        "yearly_subscribers": 150,
+        "subscription_gross": 3296.38,
+        "subscription_net": 2307.46,
+        "affiliate_revenue": 392.0,
+        "ad_revenue": 10023.75,
+        "total_monthly_revenue": 12723.21,
+        "total_yearly_revenue": 152678.55
+      },
+      "realistic": {
+        "label": "3% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.03,
+        "paying_users": 1500,
+        "monthly_subscribers": 1050,
+        "yearly_subscribers": 450,
+        "subscription_gross": 9889.12,
+        "subscription_net": 6922.39,
+        "affiliate_revenue": 384.0,
+        "ad_revenue": 9821.25,
+        "total_monthly_revenue": 17127.64,
+        "total_yearly_revenue": 205531.65
+      },
+      "optimistic": {
+        "label": "7% conversion",
+        "monthly_downloads": 50000,
+        "conversion_rate": 0.07,
+        "paying_users": 3500,
+        "monthly_subscribers": 2450,
+        "yearly_subscribers": 1050,
+        "subscription_gross": 23074.62,
+        "subscription_net": 16152.24,
+        "affiliate_revenue": 368.0,
+        "ad_revenue": 9416.25,
+        "total_monthly_revenue": 25936.49,
+        "total_yearly_revenue": 311237.85
+      }
+    }
+  }
+}

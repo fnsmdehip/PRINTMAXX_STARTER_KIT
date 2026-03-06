@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ROI Calculator — See Your Website Redesign Payoff</title>
+<meta name="description" content="Calculate the ROI of redesigning your website. See exactly how much revenue you're leaving on the table.">
+<link rel="manifest" href="manifest.json">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#14141f;--border:#1f1f30;--text:#eee;--muted:#888;--accent:#10b981;--accent2:#34d399;--red:#ef4444;--blue:#3b82f6}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5}
+.container{max-width:680px;margin:0 auto;padding:20px}
+.hero{text-align:center;padding:48px 16px 32px}
+.hero h1{font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);margin-top:8px;font-size:0.95rem}
+.tag{display:inline-block;background:var(--accent);color:#000;font-size:0.65rem;padding:2px 8px;border-radius:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:0.82rem;color:var(--muted);margin-bottom:6px;font-weight:500}
+.field input,.field select{width:100%;padding:12px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.95rem}
+.field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
+.field .hint{font-size:0.72rem;color:var(--muted);margin-top:4px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{background:var(--accent);color:#000;border:none;padding:14px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;width:100%}
+.btn:hover{background:var(--accent2)}
+.results{display:none}
+.metric{text-align:center;padding:16px}
+.metric .num{font-size:2.2rem;font-weight:800}
+.metric .label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border-radius:12px;overflow:hidden;margin-bottom:16px}
+.metric-grid .metric{background:var(--card)}
+.comparison{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-bottom:16px}
+.comparison-col{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center}
+.comparison-col.highlight{border-color:var(--accent);background:rgba(16,185,129,0.06)}
+.comparison-col h4{font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+.comparison-col .big{font-size:1.5rem;font-weight:800}
+.arrow{font-size:1.5rem;color:var(--accent)}
+.timeline{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.timeline h3{font-size:0.95rem;margin-bottom:12px}
+.timeline-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:0.85rem}
+.timeline-row:last-child{border-bottom:none}
+.timeline-row .month{color:var(--muted)}
+.green{color:var(--accent)}
+.red{color:var(--red)}
+.cta-box{background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(52,211,153,0.04));border:1px solid var(--accent);border-radius:12px;padding:24px;text-align:center;margin-top:16px}
+.cta-box p{color:var(--muted);font-size:0.85rem;margin:8px 0 16px}
+.email-row{display:flex;gap:8px;max-width:360px;margin:0 auto}
+.email-row input{flex:1;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.85rem}
+.btn-sm{padding:10px 16px;font-size:0.85rem;border-radius:8px;width:auto}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text);font-weight:500}
+.btn-outline:hover{border-color:var(--accent)}
+.share-row{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+@media(max-width:500px){.row{grid-template-columns:1fr}.comparison{grid-template-columns:1fr;gap:8px}.arrow{transform:rotate(90deg)}.metric .num{font-size:1.6rem}.email-row{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <div class="tag">free calculator</div>
+    <h1>how much is your bad website costing you?</h1>
+    <p>plug in your numbers. see exactly how much revenue a redesign would generate.</p>
+  </div>
+
+  <div class="card" id="form">
+    <div class="row">
+      <div class="field">
+        <label>monthly website visitors</label>
+        <input type="number" id="visitors" value="5000" min="100">
+        <div class="hint">check google analytics or estimate</div>
+      </div>
+      <div class="field">
+        <label>current conversion rate (%)</label>
+        <input type="number" id="convRate" value="1.5" min="0.1" step="0.1">
+        <div class="hint">leads, sales, or signups / visitors</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>average deal value ($)</label>
+        <input type="number" id="dealValue" value="500" min="1">
+        <div class="hint">avg revenue per customer/client</div>
+      </div>
+      <div class="field">
+        <label>business type</label>
+        <select id="bizType">
+          <option value="service">Service business</option>
+          <option value="saas">SaaS / subscription</option>
+          <option value="ecom">E-commerce</option>
+          <option value="local">Local business</option>
+          <option value="agency">Agency / consulting</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>redesign investment ($)</label>
+      <input type="number" id="investment" value="3000" min="100">
+      <div class="hint">what you'd spend on a professional redesign</div>
+    </div>
+    <button class="btn" onclick="calculate()">calculate my ROI</button>
+  </div>
+
+  <div class="results" id="results"></div>
+</div>
+
+<script>
+function clearChildren(el){while(el.firstChild)el.removeChild(el.firstChild);}
+function ce(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt)e.textContent=txt;return e;}
+function fmt(n){return n>=1000000?'$'+(n/1000000).toFixed(1)+'M':n>=1000?'$'+Math.round(n).toLocaleString():'$'+Math.round(n);}
+
+var INDUSTRY_LIFTS = {service:0.85,saas:0.65,ecom:0.45,local:1.1,agency:0.9};
+
+function calculate(){
+  var visitors = parseInt(document.getElementById('visitors').value)||5000;
+  var convRate = parseFloat(document.getElementById('convRate').value)||1.5;
+  var dealValue = parseInt(document.getElementById('dealValue').value)||500;
+  var bizType = document.getElementById('bizType').value;
+  var investment = parseInt(document.getElementById('investment').value)||3000;
+
+  var lift = INDUSTRY_LIFTS[bizType]||0.7;
+  var newConvRate = Math.min(convRate * (1 + lift), 15);
+  var currentConversions = Math.round(visitors * convRate / 100);
+  var newConversions = Math.round(visitors * newConvRate / 100);
+  var currentRevenue = currentConversions * dealValue;
+  var newRevenue = newConversions * dealValue;
+  var monthlyGain = newRevenue - currentRevenue;
+  var yearlyGain = monthlyGain * 12;
+  var roi = Math.round((yearlyGain - investment) / investment * 100);
+  var paybackMonths = monthlyGain > 0 ? Math.ceil(investment / monthlyGain) : 99;
+
+  var results = document.getElementById('results');
+  clearChildren(results);
+  results.style.display = 'block';
+
+  // Metric grid
+  var grid = ce('div','metric-grid');
+  var metrics = [
+    {num:fmt(monthlyGain)+'/mo',label:'additional monthly revenue',color:'var(--accent)'},
+    {num:fmt(yearlyGain)+'/yr',label:'additional yearly revenue',color:'var(--accent)'},
+    {num:roi+'%',label:'return on investment',color:roi>0?'var(--accent)':'var(--red)'},
+    {num:paybackMonths<=12?paybackMonths+' mo':'12+ mo',label:'payback period',color:paybackMonths<=3?'var(--accent)':paybackMonths<=6?'var(--accent2)':'var(--red)'}
+  ];
+  metrics.forEach(function(m){
+    var d = ce('div','metric');
+    var n = ce('div','num',m.num);
+    n.style.color = m.color;
+    var l = ce('div','label',m.label);
+    d.appendChild(n);d.appendChild(l);
+    grid.appendChild(d);
+  });
+  results.appendChild(grid);
+
+  // Before/After comparison
+  var comp = ce('div','comparison');
+  var before = ce('div','comparison-col');
+  var bH = ce('h4','','current');
+  var bRate = ce('div','big red',convRate.toFixed(1)+'%');
+  var bConv = ce('div','',currentConversions+' conversions/mo');
+  bConv.style.cssText='font-size:0.8rem;color:var(--muted);margin-top:4px';
+  var bRev = ce('div','',fmt(currentRevenue)+'/mo');
+  bRev.style.cssText='font-size:0.85rem;margin-top:4px';
+  before.appendChild(bH);before.appendChild(bRate);before.appendChild(bConv);before.appendChild(bRev);
+
+  var arrowEl = ce('div','arrow','\u2192');
+
+  var after = ce('div','comparison-col highlight');
+  var aH = ce('h4','','after redesign');
+  var aRate = ce('div','big green',newConvRate.toFixed(1)+'%');
+  var aConv = ce('div','',newConversions+' conversions/mo');
+  aConv.style.cssText='font-size:0.8rem;color:var(--muted);margin-top:4px';
+  var aRev = ce('div','',fmt(newRevenue)+'/mo');
+  aRev.style.cssText='font-size:0.85rem;margin-top:4px;color:var(--accent)';
+  after.appendChild(aH);after.appendChild(aRate);after.appendChild(aConv);after.appendChild(aRev);
+
+  comp.appendChild(before);comp.appendChild(arrowEl);comp.appendChild(after);
+  results.appendChild(comp);
+
+  // 12-month timeline
+  var tl = ce('div','timeline');
+  var tlH = ce('h3','','12-month revenue timeline');
+  tl.appendChild(tlH);
+  var cumulative = -investment;
+  for(var i=1;i<=12;i++){
+    cumulative += monthlyGain;
+    var row = ce('div','timeline-row');
+    var month = ce('span','month','Month '+i);
+    var val = ce('span',cumulative>=0?'green':'red',fmt(cumulative));
+    row.appendChild(month);row.appendChild(val);
+    tl.appendChild(row);
+  }
+  results.appendChild(tl);
+
+  // Methodology note
+  var note = ce('div','card');
+  note.style.fontSize='0.8rem';
+  note.style.color='var(--muted)';
+  var noteTitle = ce('strong','','how we calculate this');
+  noteTitle.style.display='block';
+  noteTitle.style.marginBottom='4px';
+  noteTitle.style.color='var(--text)';
+  var noteText = document.createTextNode(
+    'Conversion lift based on industry averages: service businesses see 85% avg lift from professional redesign, ' +
+    'SaaS sees 65%, e-commerce 45%, local businesses 110%, agencies 90%. ' +
+    'Source: aggregated from HubSpot, WordStream, and Unbounce benchmark reports. ' +
+    'Your actual results depend on current site quality, traffic quality, and offer strength.'
+  );
+  note.appendChild(noteTitle);
+  note.appendChild(noteText);
+  results.appendChild(note);
+
+  // Share
+  var shareRow = ce('div','share-row');
+  var copyBtn = ce('button','btn-sm btn-outline','copy results');
+  copyBtn.addEventListener('click',function(){
+    var txt = 'Website Redesign ROI:\nCurrent: '+convRate+'% conversion, '+fmt(currentRevenue)+'/mo\nAfter: '+newConvRate.toFixed(1)+'% conversion, '+fmt(newRevenue)+'/mo\nROI: '+roi+'% | Payback: '+paybackMonths+' months\nCalculate yours: roicalc.surge.sh';
+    navigator.clipboard.writeText(txt).then(function(){copyBtn.textContent='copied';setTimeout(function(){copyBtn.textContent='copy results';},2000);});
+  });
+  var tweetBtn = ce('button','btn-sm btn-outline','share on X');
+  tweetBtn.addEventListener('click',function(){
+    var txt = 'my current website is leaving '+fmt(yearlyGain)+'/yr on the table.\n\nconversion rate: '+convRate+'% -> '+newConvRate.toFixed(1)+'%\nROI on redesign: '+roi+'%\npayback: '+paybackMonths+' months\n\ncalculate yours: roicalc.surge.sh';
+    window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt),'_blank');
+  });
+  var resetBtn = ce('button','btn-sm btn-outline','recalculate');
+  resetBtn.addEventListener('click',function(){results.style.display='none';document.getElementById('form').scrollIntoView({behavior:'smooth'});});
+
+  shareRow.appendChild(copyBtn);shareRow.appendChild(tweetBtn);shareRow.appendChild(resetBtn);
+  results.appendChild(shareRow);
+
+  // CTA
+  var cta = ce('div','cta-box');
+  var ctaH = ce('h3','','ready to stop leaving money on the table?');
+  var ctaP = ce('p','','get a free conversion audit of your current site. we\'ll show you exactly where the leaks are and how to fix them.');
+  var emailRow = ce('div','email-row');
+  var emailInput = document.createElement('input');
+  emailInput.type='email';emailInput.placeholder='you@email.com';
+  var emailBtn = ce('button','btn btn-sm','get free audit');
+  emailBtn.addEventListener('click',function(){
+    var email = emailInput.value.trim();
+    if(email && email.indexOf('@')!==-1){
+      var leads = JSON.parse(localStorage.getItem('roicalc_leads')||'[]');
+      leads.push({email:email,visitors:visitors,convRate:convRate,dealValue:dealValue,bizType:bizType,roi:roi,ts:new Date().toISOString()});
+      localStorage.setItem('roicalc_leads',JSON.stringify(leads));
+      emailBtn.textContent='sent';emailBtn.disabled=true;
+    }
+  });
+  emailRow.appendChild(emailInput);emailRow.appendChild(emailBtn);
+  cta.appendChild(ctaH);cta.appendChild(ctaP);cta.appendChild(emailRow);
+  results.appendChild(cta);
+
+  results.scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>

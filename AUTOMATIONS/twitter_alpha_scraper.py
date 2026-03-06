@@ -31,12 +31,17 @@ import re
 import shutil
 import sqlite3
 import subprocess
+import sys
 import tempfile
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from playwright.async_api import async_playwright
-import argparse
+
+try:
+    from playwright.async_api import async_playwright
+except ImportError:
+    print("ERROR: playwright not installed. Run: pip3 install playwright && python3 -m playwright install chromium")
+    sys.exit(1)
 
 try:
     from Crypto.Cipher import AES
@@ -45,8 +50,8 @@ except ImportError:
     HAS_CRYPTO = False
     print("WARNING: pycryptodome not installed. Run: pip3 install pycryptodome")
 
-# Paths
-PROJECT_DIR = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+# Paths (auto-detected from script location)
+PROJECT_DIR = Path(__file__).resolve().parent.parent
 OPS_DIR = PROJECT_DIR / "OPS"
 LEDGER_DIR = PROJECT_DIR / "LEDGER"
 ALPHA_STAGING = LEDGER_DIR / "ALPHA_STAGING.csv"

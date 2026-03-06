@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX Social Media Dashboard</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a26;
+  --bg-hover: #22222e;
+  --border: #2a2a3a;
+  --text-primary: #e8e8ef;
+  --text-secondary: #8888a0;
+  --text-muted: #55556a;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --accent-dim: rgba(99,102,241,0.15);
+  --green: #22c55e;
+  --green-dim: rgba(34,197,94,0.15);
+  --red: #ef4444;
+  --red-dim: rgba(239,68,68,0.15);
+  --orange: #f59e0b;
+  --orange-dim: rgba(245,158,11,0.15);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-brand { font-weight: 700; font-size: 18px; letter-spacing: -0.5px; }
+.nav-brand span { color: var(--accent); }
+.nav-tabs {
+  display: flex; gap: 4px; background: var(--bg-tertiary);
+  padding: 4px; border-radius: var(--radius);
+}
+.nav-tab {
+  padding: 8px 16px; border-radius: 6px; border: none;
+  background: transparent; color: var(--text-secondary); cursor: pointer;
+  font-size: 14px; font-weight: 500; transition: all 0.15s;
+}
+.nav-tab:hover { color: var(--text-primary); background: var(--bg-hover); }
+.nav-tab.active { color: var(--text-primary); background: var(--accent); }
+.nav-actions { display: flex; gap: 8px; }
+
+.btn {
+  padding: 8px 16px; border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--bg-tertiary); color: var(--text-primary); cursor: pointer;
+  font-size: 13px; font-weight: 500; transition: all 0.15s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn:hover { background: var(--bg-hover); border-color: var(--text-muted); }
+.btn-primary { background: var(--accent); border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-danger { color: var(--red); }
+.btn-danger:hover { background: var(--red-dim); }
+.btn-sm { padding: 4px 10px; font-size: 12px; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 24px; }
+.page { display: none; }
+.page.active { display: block; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.card {
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+}
+.card-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;
+}
+.card-title {
+  font-size: 14px; font-weight: 600; color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+.stat-value { font-size: 32px; font-weight: 700; letter-spacing: -1px; margin: 4px 0; }
+.stat-change {
+  font-size: 13px; font-weight: 500; display: inline-flex; align-items: center;
+  gap: 4px; padding: 2px 8px; border-radius: 20px;
+}
+.stat-change.up { color: var(--green); background: var(--green-dim); }
+.stat-change.down { color: var(--red); background: var(--red-dim); }
+
+.platform-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+}
+.platform-twitter { background: rgba(29,155,240,0.15); color: #1d9bf0; }
+.platform-linkedin { background: rgba(10,102,194,0.15); color: #0a66c2; }
+.platform-instagram { background: rgba(225,48,108,0.15); color: #e1306c; }
+.platform-tiktok { background: rgba(255,0,80,0.15); color: #ff0050; }
+
+.schedule-grid {
+  display: grid; grid-template-columns: 80px repeat(7, 1fr);
+  gap: 2px; font-size: 13px;
+}
+.schedule-header {
+  padding: 10px 8px; text-align: center; font-weight: 600;
+  color: var(--text-secondary); font-size: 12px; text-transform: uppercase;
+}
+.schedule-time {
+  padding: 10px 8px; color: var(--text-muted); font-size: 12px; display: flex; align-items: center;
+}
+.schedule-cell {
+  padding: 8px; border-radius: 6px; background: var(--bg-tertiary);
+  min-height: 48px; cursor: pointer; transition: all 0.15s; position: relative;
+}
+.schedule-cell:hover { background: var(--bg-hover); }
+.schedule-cell.has-post { border-left: 3px solid var(--accent); }
+.schedule-cell .post-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.schedule-cell .post-label {
+  font-size: 11px; color: var(--text-secondary); margin-top: 2px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.queue-item {
+  display: flex; align-items: flex-start; gap: 16px; padding: 16px;
+  border-bottom: 1px solid var(--border); transition: background 0.15s;
+}
+.queue-item:hover { background: var(--bg-tertiary); }
+.queue-item:last-child { border-bottom: none; }
+.queue-time { min-width: 100px; font-size: 13px; color: var(--text-muted); padding-top: 2px; }
+.queue-content { flex: 1; }
+.queue-content p { font-size: 14px; color: var(--text-primary); margin-bottom: 8px; line-height: 1.6; }
+.queue-actions { display: flex; gap: 6px; align-items: flex-start; }
+
+.compose-area {
+  width: 100%; min-height: 120px; background: var(--bg-tertiary);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--text-primary); padding: 14px; font-size: 14px;
+  font-family: inherit; resize: vertical; line-height: 1.6;
+}
+.compose-area:focus { outline: none; border-color: var(--accent); }
+.compose-footer {
+  display: flex; align-items: center; justify-content: space-between; margin-top: 12px;
+}
+.char-counter { font-size: 13px; color: var(--text-muted); }
+.char-counter.warn { color: var(--orange); }
+.char-counter.over { color: var(--red); }
+
+.form-group { margin-bottom: 14px; }
+.form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text-secondary); margin-bottom: 6px; }
+.form-input, .form-select {
+  width: 100%; padding: 8px 12px; background: var(--bg-tertiary);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--text-primary); font-size: 14px; font-family: inherit;
+}
+.form-input:focus, .form-select:focus { outline: none; border-color: var(--accent); }
+
+.bar-chart { display: flex; align-items: flex-end; gap: 6px; height: 160px; padding-top: 10px; }
+.bar-col {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  gap: 6px; height: 100%; justify-content: flex-end;
+}
+.bar {
+  width: 100%; max-width: 40px; background: var(--accent);
+  border-radius: 4px 4px 0 0; transition: height 0.3s; min-height: 4px;
+}
+.bar-label { font-size: 11px; color: var(--text-muted); }
+.bar-value { font-size: 11px; color: var(--text-secondary); font-weight: 600; }
+
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  z-index: 200; align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px; width: 90%;
+  max-width: 480px; max-height: 90vh; overflow-y: auto;
+}
+.modal-title { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .nav { flex-direction: column; gap: 12px; padding: 12px 16px; }
+  .nav-tabs { width: 100%; overflow-x: auto; }
+  .container { padding: 16px; }
+  .schedule-grid { grid-template-columns: 60px repeat(7, 1fr); font-size: 11px; overflow-x: auto; }
+  .queue-item { flex-direction: column; }
+  .queue-time { min-width: unset; }
+}
+@media (max-width: 480px) {
+  .nav-actions { width: 100%; justify-content: flex-end; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">PRINT<span>MAXX</span> Dashboard</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-page="dashboard">Dashboard</button>
+    <button class="nav-tab" data-page="schedule">Schedule</button>
+    <button class="nav-tab" data-page="queue">Queue</button>
+    <button class="nav-tab" data-page="analytics">Analytics</button>
+  </div>
+  <div class="nav-actions">
+    <button class="btn btn-primary" onclick="openCompose()">+ New Post</button>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- DASHBOARD PAGE -->
+  <div class="page active" id="page-dashboard">
+    <div class="grid-4" style="margin-bottom:24px">
+      <div class="card">
+        <div class="card-title">Total Followers</div>
+        <div class="stat-value" id="stat-followers">0</div>
+        <span class="stat-change up" id="stat-followers-change">+0%</span>
+      </div>
+      <div class="card">
+        <div class="card-title">Engagement Rate</div>
+        <div class="stat-value" id="stat-engagement">0%</div>
+        <span class="stat-change up" id="stat-engagement-change">+0%</span>
+      </div>
+      <div class="card">
+        <div class="card-title">Posts This Week</div>
+        <div class="stat-value" id="stat-posts">0</div>
+        <span class="stat-change up" id="stat-posts-change">+0</span>
+      </div>
+      <div class="card">
+        <div class="card-title">Queue Size</div>
+        <div class="stat-value" id="stat-queue">0</div>
+        <span class="stat-change" style="color:var(--text-muted)">pending</span>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><div class="card-title">Platform Breakdown</div></div>
+        <div id="platform-breakdown"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Quick Compose</div></div>
+        <textarea class="compose-area" id="dash-compose" placeholder="What's on your mind..." oninput="updateCharCounter(this, 'dash-counter')"></textarea>
+        <div class="compose-footer">
+          <div class="char-counter" id="dash-counter">0 / 280</div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <select class="form-select" id="dash-platform" style="width:auto">
+              <option value="twitter">Twitter/X</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="instagram">Instagram</option>
+              <option value="tiktok">TikTok</option>
+            </select>
+            <button class="btn btn-primary btn-sm" onclick="quickPost()">Add to Queue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <div class="card-header">
+        <div class="card-title">Upcoming Queue</div>
+        <button class="btn btn-sm" onclick="switchPage('queue')">View All</button>
+      </div>
+      <div id="dash-queue-preview"></div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE PAGE -->
+  <div class="page" id="page-schedule">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Weekly Posting Schedule</div>
+        <select class="form-select" id="schedule-platform-filter" style="width:auto" onchange="renderSchedule()">
+          <option value="all">All Platforms</option>
+          <option value="twitter">Twitter/X</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="instagram">Instagram</option>
+          <option value="tiktok">TikTok</option>
+        </select>
+      </div>
+      <div class="schedule-grid" id="schedule-grid"></div>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <div class="card-header"><div class="card-title">Add Scheduled Slot</div></div>
+      <div class="grid-3">
+        <div class="form-group">
+          <label class="form-label">Day</label>
+          <select class="form-select" id="slot-day">
+            <option value="0">Monday</option><option value="1">Tuesday</option>
+            <option value="2">Wednesday</option><option value="3">Thursday</option>
+            <option value="4">Friday</option><option value="5">Saturday</option>
+            <option value="6">Sunday</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Time</label>
+          <input type="time" class="form-input" id="slot-time" value="09:00">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Platform</label>
+          <select class="form-select" id="slot-platform">
+            <option value="twitter">Twitter/X</option><option value="linkedin">LinkedIn</option>
+            <option value="instagram">Instagram</option><option value="tiktok">TikTok</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Label (optional)</label>
+        <input type="text" class="form-input" id="slot-label" placeholder="e.g. Thread, Engagement post, Story...">
+      </div>
+      <button class="btn btn-primary" onclick="addSlot()">Add Slot</button>
+    </div>
+  </div>
+
+  <!-- QUEUE PAGE -->
+  <div class="page" id="page-queue">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Content Queue</div>
+        <div style="display:flex;gap:8px">
+          <select class="form-select" id="queue-filter" style="width:auto" onchange="renderQueue()">
+            <option value="all">All Platforms</option>
+            <option value="twitter">Twitter/X</option><option value="linkedin">LinkedIn</option>
+            <option value="instagram">Instagram</option><option value="tiktok">TikTok</option>
+          </select>
+          <button class="btn btn-sm" onclick="exportCSV()">Export CSV</button>
+        </div>
+      </div>
+      <div id="queue-list"></div>
+      <div id="queue-empty" style="display:none;text-align:center;padding:40px;color:var(--text-muted)">
+        Queue is empty. Add posts using the compose button.
+      </div>
+    </div>
+  </div>
+
+  <!-- ANALYTICS PAGE -->
+  <div class="page" id="page-analytics">
+    <div class="grid-4" style="margin-bottom:24px">
+      <div class="card">
+        <div class="card-title">Twitter/X</div>
+        <div class="stat-value" style="color:#1d9bf0" id="analytics-twitter-followers">0</div>
+        <div style="font-size:13px;color:var(--text-muted)">followers</div>
+      </div>
+      <div class="card">
+        <div class="card-title">LinkedIn</div>
+        <div class="stat-value" style="color:#0a66c2" id="analytics-linkedin-followers">0</div>
+        <div style="font-size:13px;color:var(--text-muted)">followers</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Instagram</div>
+        <div class="stat-value" style="color:#e1306c" id="analytics-instagram-followers">0</div>
+        <div style="font-size:13px;color:var(--text-muted)">followers</div>
+      </div>
+      <div class="card">
+        <div class="card-title">TikTok</div>
+        <div class="stat-value" style="color:#ff0050" id="analytics-tiktok-followers">0</div>
+        <div style="font-size:13px;color:var(--text-muted)">followers</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><div class="card-title">Posts Per Day (Last 7 Days)</div></div>
+        <div class="bar-chart" id="chart-posts"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div class="card-title">Engagement Per Day</div></div>
+        <div class="bar-chart" id="chart-engagement"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <div class="card-header">
+        <div class="card-title">Platform Stats</div>
+        <button class="btn btn-sm" onclick="openStatsEditor()">Edit Stats</button>
+      </div>
+      <div id="analytics-table"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- COMPOSE MODAL -->
+<div class="modal-overlay" id="compose-modal">
+  <div class="modal">
+    <div class="modal-title" id="compose-modal-title">New Post</div>
+    <div class="form-group">
+      <label class="form-label">Platform</label>
+      <select class="form-select" id="compose-platform">
+        <option value="twitter">Twitter/X</option><option value="linkedin">LinkedIn</option>
+        <option value="instagram">Instagram</option><option value="tiktok">TikTok</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Scheduled Date and Time</label>
+      <input type="datetime-local" class="form-input" id="compose-datetime">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Content</label>
+      <textarea class="compose-area" id="compose-content" placeholder="Write your post..." oninput="updateCharCounter(this, 'compose-counter')"></textarea>
+      <div class="char-counter" id="compose-counter" style="margin-top:8px">0 / 280</div>
+    </div>
+    <div style="display:flex;gap:8px;justify-content:flex-end">
+      <button class="btn" onclick="closeCompose()">Cancel</button>
+      <button class="btn btn-primary" id="compose-submit" onclick="submitPost()">Add to Queue</button>
+    </div>
+    <input type="hidden" id="compose-edit-id" value="">
+  </div>
+</div>
+
+<!-- STATS EDITOR MODAL -->
+<div class="modal-overlay" id="stats-modal">
+  <div class="modal">
+    <div class="modal-title">Edit Platform Stats</div>
+    <div id="stats-editor-fields"></div>
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:16px">
+      <button class="btn" onclick="closeStatsEditor()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveStats()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var PLATFORMS = ['twitter', 'linkedin', 'instagram', 'tiktok'];
+  var PLATFORM_LABELS = { twitter: 'Twitter/X', linkedin: 'LinkedIn', instagram: 'Instagram', tiktok: 'TikTok' };
+  var PLATFORM_COLORS = { twitter: '#1d9bf0', linkedin: '#0a66c2', instagram: '#e1306c', tiktok: '#ff0050' };
+  var DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  var TIME_SLOTS = ['06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00'];
+
+  function loadData(key, fallback) {
+    try { var d = localStorage.getItem('pm_' + key); return d ? JSON.parse(d) : fallback; }
+    catch(e) { return fallback; }
+  }
+  function saveData(key, data) { localStorage.setItem('pm_' + key, JSON.stringify(data)); }
+
+  var queue = loadData('queue', []);
+  var scheduleSlots = loadData('schedule', []);
+  var platformStats = loadData('stats', {
+    twitter: { followers: 2847, engagement: 4.2, posts: 142, followersChange: 12.3, engagementChange: 0.8 },
+    linkedin: { followers: 1203, engagement: 6.1, posts: 67, followersChange: 8.7, engagementChange: 1.2 },
+    instagram: { followers: 891, engagement: 3.8, posts: 94, followersChange: 5.4, engagementChange: -0.3 },
+    tiktok: { followers: 456, engagement: 8.9, posts: 31, followersChange: 22.1, engagementChange: 3.1 }
+  });
+
+  function persist() {
+    saveData('queue', queue);
+    saveData('schedule', scheduleSlots);
+    saveData('stats', platformStats);
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.textContent;
+  }
+
+  function safeSetContent(el, text) {
+    el.textContent = text;
+  }
+
+  function formatDateTime(dt) {
+    if (!dt) return '';
+    var d = new Date(dt);
+    return d.toLocaleDateString('en', { month: 'short', day: 'numeric' }) + ' ' + d.toLocaleTimeString('en', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  // Build DOM elements safely
+  function createElement(tag, attrs, children) {
+    var el = document.createElement(tag);
+    if (attrs) {
+      Object.keys(attrs).forEach(function(key) {
+        if (key === 'style' && typeof attrs[key] === 'object') {
+          Object.keys(attrs[key]).forEach(function(sk) { el.style[sk] = attrs[key][sk]; });
+        } else if (key === 'className') {
+          el.className = attrs[key];
+        } else if (key.indexOf('on') === 0) {
+          el.addEventListener(key.substring(2).toLowerCase(), attrs[key]);
+        } else {
+          el.setAttribute(key, attrs[key]);
+        }
+      });
+    }
+    if (children) {
+      if (typeof children === 'string') {
+        el.textContent = children;
+      } else if (Array.isArray(children)) {
+        children.forEach(function(child) {
+          if (child) el.appendChild(typeof child === 'string' ? document.createTextNode(child) : child);
+        });
+      } else {
+        el.appendChild(children);
+      }
+    }
+    return el;
+  }
+
+  // NAV
+  document.querySelectorAll('.nav-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() { switchPage(tab.dataset.page); });
+  });
+
+  function switchPage(page) {
+    document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.toggle('active', t.dataset.page === page); });
+    document.querySelectorAll('.page').forEach(function(p) { p.classList.toggle('active', p.id === 'page-' + page); });
+    if (page === 'dashboard') renderDashboard();
+    if (page === 'schedule') renderSchedule();
+    if (page === 'queue') renderQueue();
+    if (page === 'analytics') renderAnalytics();
+  }
+  window.switchPage = switchPage;
+
+  // DASHBOARD
+  function renderDashboard() {
+    var total = PLATFORMS.reduce(function(s, p) { return s + (platformStats[p] ? platformStats[p].followers : 0); }, 0);
+    var avgEng = PLATFORMS.reduce(function(s, p) { return s + (platformStats[p] ? platformStats[p].engagement : 0); }, 0) / PLATFORMS.length;
+    var totalPosts = PLATFORMS.reduce(function(s, p) { return s + (platformStats[p] ? platformStats[p].posts : 0); }, 0);
+    var avgFollowChange = PLATFORMS.reduce(function(s, p) { return s + (platformStats[p] ? platformStats[p].followersChange : 0); }, 0) / PLATFORMS.length;
+    var avgEngChange = PLATFORMS.reduce(function(s, p) { return s + (platformStats[p] ? platformStats[p].engagementChange : 0); }, 0) / PLATFORMS.length;
+
+    document.getElementById('stat-followers').textContent = total.toLocaleString();
+    document.getElementById('stat-engagement').textContent = avgEng.toFixed(1) + '%';
+    document.getElementById('stat-posts').textContent = totalPosts;
+    document.getElementById('stat-queue').textContent = queue.length;
+
+    var fc = document.getElementById('stat-followers-change');
+    fc.textContent = (avgFollowChange >= 0 ? '+' : '') + avgFollowChange.toFixed(1) + '%';
+    fc.className = 'stat-change ' + (avgFollowChange >= 0 ? 'up' : 'down');
+
+    var ec = document.getElementById('stat-engagement-change');
+    ec.textContent = (avgEngChange >= 0 ? '+' : '') + avgEngChange.toFixed(1) + '%';
+    ec.className = 'stat-change ' + (avgEngChange >= 0 ? 'up' : 'down');
+
+    var pc = document.getElementById('stat-posts-change');
+    pc.textContent = '+' + queue.length;
+    pc.className = 'stat-change up';
+
+    // Platform breakdown
+    var pb = document.getElementById('platform-breakdown');
+    pb.replaceChildren();
+    PLATFORMS.forEach(function(p) {
+      var s = platformStats[p] || {};
+      var row = createElement('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid var(--border)' } }, [
+        createElement('div', { style: { display: 'flex', alignItems: 'center', gap: '10px' } }, [
+          createElement('div', { style: { width: '10px', height: '10px', borderRadius: '50%', background: PLATFORM_COLORS[p] } }),
+          createElement('span', { style: { fontWeight: '500' } }, PLATFORM_LABELS[p])
+        ]),
+        createElement('div', { style: { display: 'flex', gap: '24px', fontSize: '13px', color: 'var(--text-secondary)' } }, [
+          createElement('span', null, (s.followers || 0).toLocaleString() + ' followers'),
+          createElement('span', null, (s.engagement || 0).toFixed(1) + '% eng'),
+          createElement('span', null, (s.posts || 0) + ' posts')
+        ])
+      ]);
+      pb.appendChild(row);
+    });
+
+    // Queue preview
+    var preview = document.getElementById('dash-queue-preview');
+    preview.replaceChildren();
+    var sorted = queue.slice().sort(function(a, b) { return new Date(a.datetime) - new Date(b.datetime); });
+    var next3 = sorted.slice(0, 3);
+    if (next3.length === 0) {
+      preview.appendChild(createElement('div', { style: { textAlign: 'center', padding: '30px', color: 'var(--text-muted)' } }, 'No posts in queue'));
+    } else {
+      next3.forEach(function(post) {
+        var contentText = post.content.length > 120 ? post.content.substring(0, 120) + '...' : post.content;
+        var item = createElement('div', { className: 'queue-item' }, [
+          createElement('div', { className: 'queue-time' }, formatDateTime(post.datetime)),
+          createElement('div', { className: 'queue-content' }, [
+            createElement('p', null, contentText),
+            createElement('span', { className: 'platform-badge platform-' + post.platform }, PLATFORM_LABELS[post.platform])
+          ])
+        ]);
+        preview.appendChild(item);
+      });
+    }
+  }
+
+  // SCHEDULE
+  function renderSchedule() {
+    var filter = document.getElementById('schedule-platform-filter').value;
+    var grid = document.getElementById('schedule-grid');
+    grid.replaceChildren();
+
+    grid.appendChild(createElement('div', { className: 'schedule-header' }));
+    DAYS.forEach(function(d) { grid.appendChild(createElement('div', { className: 'schedule-header' }, d)); });
+
+    TIME_SLOTS.forEach(function(time) {
+      grid.appendChild(createElement('div', { className: 'schedule-time' }, time));
+      for (var d = 0; d < 7; d++) {
+        (function(day) {
+          var slots = scheduleSlots.filter(function(s) {
+            return s.day == day && s.time === time && (filter === 'all' || s.platform === filter);
+          });
+          var hasPost = slots.length > 0;
+          var cell = createElement('div', {
+            className: 'schedule-cell' + (hasPost ? ' has-post' : ''),
+            title: slots.map(function(s) { return s.label || PLATFORM_LABELS[s.platform]; }).join(', '),
+            onClick: function() { cellClick(day, time); }
+          });
+          slots.forEach(function(s) {
+            var dot = createElement('span', { className: 'post-dot', style: { background: PLATFORM_COLORS[s.platform] } });
+            cell.appendChild(dot);
+          });
+          if (hasPost) {
+            var label = createElement('div', { className: 'post-label' }, slots.map(function(s) { return s.label || PLATFORM_LABELS[s.platform]; }).join(', '));
+            cell.appendChild(label);
+          }
+          grid.appendChild(cell);
+        })(d);
+      }
+    });
+  }
+  window.renderSchedule = renderSchedule;
+
+  function addSlot() {
+    var day = document.getElementById('slot-day').value;
+    var time = document.getElementById('slot-time').value;
+    var platform = document.getElementById('slot-platform').value;
+    var label = document.getElementById('slot-label').value.trim();
+    var normTime = time.substring(0, 2) + ':00';
+    scheduleSlots.push({ id: Date.now(), day: parseInt(day), time: normTime, platform: platform, label: label });
+    persist();
+    renderSchedule();
+    document.getElementById('slot-label').value = '';
+  }
+  window.addSlot = addSlot;
+
+  function cellClick(day, time) {
+    document.getElementById('slot-day').value = day;
+    document.getElementById('slot-time').value = time;
+    var el = document.getElementById('slot-time');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // QUEUE
+  function renderQueue() {
+    var filter = document.getElementById('queue-filter').value;
+    var list = document.getElementById('queue-list');
+    var empty = document.getElementById('queue-empty');
+    var filtered = queue.filter(function(p) { return filter === 'all' || p.platform === filter; })
+      .sort(function(a, b) { return new Date(a.datetime) - new Date(b.datetime); });
+
+    if (filtered.length === 0) {
+      list.replaceChildren();
+      empty.style.display = 'block';
+      return;
+    }
+    empty.style.display = 'none';
+    list.replaceChildren();
+    filtered.forEach(function(post) {
+      var item = createElement('div', { className: 'queue-item' }, [
+        createElement('div', { className: 'queue-time' }, formatDateTime(post.datetime)),
+        createElement('div', { className: 'queue-content' }, [
+          createElement('p', null, post.content),
+          createElement('span', { className: 'platform-badge platform-' + post.platform }, PLATFORM_LABELS[post.platform])
+        ]),
+        createElement('div', { className: 'queue-actions' }, [
+          createElement('button', { className: 'btn btn-sm', onClick: function() { editPost(post.id); } }, 'Edit'),
+          createElement('button', { className: 'btn btn-sm btn-danger', onClick: function() { deletePost(post.id); } }, 'Delete')
+        ])
+      ]);
+      list.appendChild(item);
+    });
+  }
+  window.renderQueue = renderQueue;
+
+  function deletePost(id) {
+    queue = queue.filter(function(p) { return p.id !== id; });
+    persist();
+    renderQueue();
+    renderDashboard();
+  }
+
+  function editPost(id) {
+    var post = queue.find(function(p) { return p.id === id; });
+    if (!post) return;
+    document.getElementById('compose-edit-id').value = id;
+    document.getElementById('compose-platform').value = post.platform;
+    document.getElementById('compose-datetime').value = post.datetime;
+    document.getElementById('compose-content').value = post.content;
+    document.getElementById('compose-modal-title').textContent = 'Edit Post';
+    document.getElementById('compose-submit').textContent = 'Save Changes';
+    updateCharCounter(document.getElementById('compose-content'), 'compose-counter');
+    document.getElementById('compose-modal').classList.add('active');
+  }
+
+  // COMPOSE
+  function openCompose() {
+    document.getElementById('compose-edit-id').value = '';
+    document.getElementById('compose-content').value = '';
+    document.getElementById('compose-modal-title').textContent = 'New Post';
+    document.getElementById('compose-submit').textContent = 'Add to Queue';
+    var now = new Date();
+    now.setHours(now.getHours() + 1, 0, 0, 0);
+    document.getElementById('compose-datetime').value = now.toISOString().slice(0, 16);
+    updateCharCounter(document.getElementById('compose-content'), 'compose-counter');
+    document.getElementById('compose-modal').classList.add('active');
+  }
+  window.openCompose = openCompose;
+
+  function closeCompose() {
+    document.getElementById('compose-modal').classList.remove('active');
+  }
+  window.closeCompose = closeCompose;
+
+  function submitPost() {
+    var content = document.getElementById('compose-content').value.trim();
+    var platform = document.getElementById('compose-platform').value;
+    var datetime = document.getElementById('compose-datetime').value;
+    var editId = document.getElementById('compose-edit-id').value;
+    if (!content || !datetime) return;
+
+    if (editId) {
+      var idx = queue.findIndex(function(p) { return p.id === editId; });
+      if (idx !== -1) {
+        queue[idx].content = content;
+        queue[idx].platform = platform;
+        queue[idx].datetime = datetime;
+      }
+    } else {
+      queue.push({ id: String(Date.now()), content: content, platform: platform, datetime: datetime });
+    }
+    persist();
+    closeCompose();
+    renderDashboard();
+    renderQueue();
+  }
+  window.submitPost = submitPost;
+
+  function quickPost() {
+    var textarea = document.getElementById('dash-compose');
+    var content = textarea.value.trim();
+    var platform = document.getElementById('dash-platform').value;
+    if (!content) return;
+    var now = new Date();
+    now.setHours(now.getHours() + 1, 0, 0, 0);
+    queue.push({ id: String(Date.now()), content: content, platform: platform, datetime: now.toISOString().slice(0, 16) });
+    persist();
+    textarea.value = '';
+    updateCharCounter(textarea, 'dash-counter');
+    renderDashboard();
+  }
+  window.quickPost = quickPost;
+
+  function updateCharCounter(textarea, counterId) {
+    var counter = document.getElementById(counterId);
+    var platformSel = textarea.id === 'dash-compose' ? 'dash-platform' : 'compose-platform';
+    var platform = document.getElementById(platformSel) ? document.getElementById(platformSel).value : 'twitter';
+    var limits = { twitter: 280, linkedin: 3000, instagram: 2200, tiktok: 2200 };
+    var limit = limits[platform] || 280;
+    var len = textarea.value.length;
+    counter.textContent = len + ' / ' + limit;
+    counter.className = 'char-counter' + (len > limit ? ' over' : len > limit * 0.9 ? ' warn' : '');
+  }
+  window.updateCharCounter = updateCharCounter;
+
+  // ANALYTICS
+  function renderAnalytics() {
+    PLATFORMS.forEach(function(p) {
+      var el = document.getElementById('analytics-' + p + '-followers');
+      if (el) el.textContent = (platformStats[p] ? platformStats[p].followers : 0).toLocaleString();
+    });
+
+    var days = [];
+    for (var i = 6; i >= 0; i--) {
+      var d = new Date(); d.setDate(d.getDate() - i);
+      days.push(d.toLocaleDateString('en', { weekday: 'short' }));
+    }
+
+    var postData = days.map(function() { return Math.floor(Math.random() * 8) + 1; });
+    var engData = days.map(function() { return (Math.random() * 10 + 1).toFixed(1); });
+    var maxPosts = Math.max.apply(null, postData.concat([1]));
+    var maxEng = Math.max.apply(null, engData.map(Number).concat([1]));
+
+    var chartPosts = document.getElementById('chart-posts');
+    chartPosts.replaceChildren();
+    days.forEach(function(day, i) {
+      var col = createElement('div', { className: 'bar-col' }, [
+        createElement('div', { className: 'bar-value' }, String(postData[i])),
+        createElement('div', { className: 'bar', style: { height: (postData[i] / maxPosts * 120) + 'px' } }),
+        createElement('div', { className: 'bar-label' }, day)
+      ]);
+      chartPosts.appendChild(col);
+    });
+
+    var chartEng = document.getElementById('chart-engagement');
+    chartEng.replaceChildren();
+    days.forEach(function(day, i) {
+      var col = createElement('div', { className: 'bar-col' }, [
+        createElement('div', { className: 'bar-value' }, engData[i] + '%'),
+        createElement('div', { className: 'bar', style: { height: (engData[i] / maxEng * 120) + 'px', background: 'var(--green)' } }),
+        createElement('div', { className: 'bar-label' }, day)
+      ]);
+      chartEng.appendChild(col);
+    });
+
+    // Table
+    var tableDiv = document.getElementById('analytics-table');
+    tableDiv.replaceChildren();
+    var table = createElement('table', { style: { width: '100%', fontSize: '14px', borderCollapse: 'collapse' } });
+    var thead = createElement('thead');
+    var headerRow = createElement('tr', { style: { borderBottom: '1px solid var(--border)' } });
+    ['Platform', 'Followers', 'Growth', 'Eng. Rate', 'Posts'].forEach(function(h, idx) {
+      headerRow.appendChild(createElement('th', {
+        style: { textAlign: idx === 0 ? 'left' : 'right', padding: '10px 8px', color: 'var(--text-secondary)', fontWeight: '500' }
+      }, h));
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    var tbody = createElement('tbody');
+    PLATFORMS.forEach(function(p) {
+      var s = platformStats[p] || {};
+      var tr = createElement('tr', { style: { borderBottom: '1px solid var(--border)' } });
+      tr.appendChild(createElement('td', { style: { padding: '10px 8px' } },
+        createElement('span', { className: 'platform-badge platform-' + p }, PLATFORM_LABELS[p])
+      ));
+      tr.appendChild(createElement('td', { style: { textAlign: 'right', padding: '10px 8px', fontWeight: '600' } },
+        (s.followers || 0).toLocaleString()
+      ));
+      var changeSpan = createElement('span', {
+        className: 'stat-change ' + ((s.followersChange || 0) >= 0 ? 'up' : 'down')
+      }, ((s.followersChange || 0) >= 0 ? '+' : '') + (s.followersChange || 0).toFixed(1) + '%');
+      tr.appendChild(createElement('td', { style: { textAlign: 'right', padding: '10px 8px' } }, changeSpan));
+      tr.appendChild(createElement('td', { style: { textAlign: 'right', padding: '10px 8px' } },
+        (s.engagement || 0).toFixed(1) + '%'
+      ));
+      tr.appendChild(createElement('td', { style: { textAlign: 'right', padding: '10px 8px' } },
+        String(s.posts || 0)
+      ));
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    tableDiv.appendChild(table);
+  }
+
+  // STATS EDITOR
+  function openStatsEditor() {
+    var fields = document.getElementById('stats-editor-fields');
+    fields.replaceChildren();
+    PLATFORMS.forEach(function(p) {
+      var s = platformStats[p] || {};
+      var section = createElement('div', { style: { marginBottom: '16px', paddingBottom: '16px', borderBottom: '1px solid var(--border)' } });
+      section.appendChild(createElement('div', { style: { fontWeight: '600', marginBottom: '10px', color: PLATFORM_COLORS[p] } }, PLATFORM_LABELS[p]));
+
+      var grid = createElement('div', { className: 'grid-2', style: { gap: '10px' } });
+      var fieldData = [
+        { label: 'Followers', id: 'se-' + p + '-followers', value: s.followers || 0, type: 'number' },
+        { label: 'Engagement %', id: 'se-' + p + '-engagement', value: s.engagement || 0, type: 'number', step: '0.1' },
+        { label: 'Post Count', id: 'se-' + p + '-posts', value: s.posts || 0, type: 'number' },
+        { label: 'Follower Growth %', id: 'se-' + p + '-followersChange', value: s.followersChange || 0, type: 'number', step: '0.1' }
+      ];
+      fieldData.forEach(function(f) {
+        var group = createElement('div', { className: 'form-group' });
+        group.appendChild(createElement('label', { className: 'form-label' }, f.label));
+        var attrs = { className: 'form-input', type: f.type, id: f.id, value: String(f.value) };
+        if (f.step) attrs.step = f.step;
+        group.appendChild(createElement('input', attrs));
+        grid.appendChild(group);
+      });
+      section.appendChild(grid);
+      fields.appendChild(section);
+    });
+    document.getElementById('stats-modal').classList.add('active');
+  }
+  window.openStatsEditor = openStatsEditor;
+
+  function closeStatsEditor() {
+    document.getElementById('stats-modal').classList.remove('active');
+  }
+  window.closeStatsEditor = closeStatsEditor;
+
+  function saveStats() {
+    PLATFORMS.forEach(function(p) {
+      platformStats[p] = {
+        followers: parseInt(document.getElementById('se-' + p + '-followers').value) || 0,
+        engagement: parseFloat(document.getElementById('se-' + p + '-engagement').value) || 0,
+        posts: parseInt(document.getElementById('se-' + p + '-posts').value) || 0,
+        followersChange: parseFloat(document.getElementById('se-' + p + '-followersChange').value) || 0,
+        engagementChange: platformStats[p] ? platformStats[p].engagementChange : 0
+      };
+    });
+    persist();
+    closeStatsEditor();
+    renderDashboard();
+    renderAnalytics();
+  }
+  window.saveStats = saveStats;
+
+  // CSV EXPORT
+  function exportCSV() {
+    if (queue.length === 0) { alert('Queue is empty.'); return; }
+    var header = 'Platform,Date/Time,Content\n';
+    var rows = queue.map(function(p) {
+      return '"' + PLATFORM_LABELS[p.platform] + '","' + p.datetime + '","' + p.content.replace(/"/g, '""') + '"';
+    }).join('\n');
+    var blob = new Blob([header + rows], { type: 'text/csv' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'printmaxx_queue_' + new Date().toISOString().slice(0, 10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+  window.exportCSV = exportCSV;
+
+  // Close modals on overlay click
+  document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) overlay.classList.remove('active');
+    });
+  });
+
+  // Platform change updates char counter
+  document.getElementById('dash-platform').addEventListener('change', function() {
+    updateCharCounter(document.getElementById('dash-compose'), 'dash-counter');
+  });
+  document.getElementById('compose-platform').addEventListener('change', function() {
+    updateCharCounter(document.getElementById('compose-content'), 'compose-counter');
+  });
+
+  // INIT
+  renderDashboard();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "PitchDeck - Micro Pitch Deck Builder",
+  "short_name": "PitchDeck",
+  "description": "Build investor-ready pitch decks in minutes. 6-slide format with templates for SaaS, agency, product, and service businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a12",
+  "theme_color": "#0a0a12",
+  "categories": ["business", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230a0a12' width='512' height='512' rx='100'/><rect x='100' y='140' width='312' height='200' rx='12' fill='none' stroke='%23f43f5e' stroke-width='10'/><line x1='100' y1='200' x2='412' y2='200' stroke='%23f43f5e' stroke-width='6' opacity='.4'/><rect x='120' y='220' width='80' height='8' rx='4' fill='%23fb7185'/><rect x='120' y='240' width='120' height='8' rx='4' fill='%23606080'/><rect x='120' y='260' width='100' height='8' rx='4' fill='%23606080'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230a0a12' width='192' height='192' rx='40'/><rect x='36' y='50' width='120' height='80' rx='8' fill='none' stroke='%23f43f5e' stroke-width='5'/><line x1='36' y1='75' x2='156' y2='75' stroke='%23f43f5e' stroke-width='3' opacity='.4'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230a0a12' width='512' height='512'/><rect x='100' y='140' width='312' height='200' rx='12' fill='none' stroke='%23f43f5e' stroke-width='10'/><line x1='100' y1='200' x2='412' y2='200' stroke='%23f43f5e' stroke-width='6' opacity='.4'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,52 @@
+timestamp,source,action,reasoning,outcome
+2026-03-05T21:33:36.616084,freelance_demand,draft_response:[TASK]_[HIRING]_Full-Time_Horror_Gaming_Editor_($1,Score 65.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-05T21:33:36.616840,freelance_demand,draft_response:[HIRING]_Senior_Software_Engineer_-_Python_Java_Ex,Score 65.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-05T21:33:36.617083,freelance_demand,draft_response:[HIRING]_[US]_30_Remote_Javascript_jobs,Score 65.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-05T21:33:36.624557,ecom_arb,listing_draft:cable_organizer,"Margin 45.0% >= 25% threshold, action=LIST",PENDING
+2026-03-05T21:33:36.624799,ecom_arb,listing_draft:neck_stretcher,"Margin 35.3% >= 25% threshold, action=LIST",PENDING
+2026-03-05T21:33:36.625019,ecom_arb,listing_draft:yoga_mat,"Margin 27.3% >= 25% threshold, action=LIST",PENDING
+2026-03-05T21:33:36.625233,ecom_arb,listing_draft:scalp_massager,"Margin 23.6% >= 25% threshold, action=LIST",PENDING
+2026-03-05T21:33:36.625459,ecom_arb,listing_draft:led_face_mask,"Margin 40.8% >= 25% threshold, action=LIST",PENDING
+2026-03-05T21:33:36.625679,ecom_arb,listing_draft:posture_corrector,"Margin 30.5% >= 25% threshold, action=LIST",PENDING
+2026-03-05T21:33:36.626342,ecom_arb,listing_draft:gua_sha_tool,"Margin 52.1% >= 25% threshold, action=LIST",PENDING
+2026-03-05T21:33:36.749865,content_integration,integrated:A07_N68_apps,Moved 7 files to content pipeline,PENDING
+2026-03-05T21:33:36.754846,content_integration,integrated:C06_podcast,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.757538,content_integration,integrated:C02_youtube,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.760688,content_integration,integrated:C01_tiktok,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.762651,content_integration,integrated:E03_arbitrage,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.766410,content_integration,integrated:C17_linkedin,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.769309,content_integration,integrated:C13_truth_pages,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.772277,content_integration,integrated:D08_D12_digital,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.775395,content_integration,integrated:A01_A06_apps,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.777830,content_integration,integrated:C09_shorts,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.780462,content_integration,integrated:C07_reddit,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.782384,content_integration,integrated:C16_fb_reels,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.786555,content_integration,integrated:S13_S18_services,Moved 6 files to content pipeline,PENDING
+2026-03-05T21:33:36.790503,content_integration,integrated:M01_M06_community,Moved 6 files to content pipeline,PENDING
+2026-03-05T21:33:36.795107,content_integration,integrated:S06_S12_services,Moved 7 files to content pipeline,PENDING
+2026-03-05T21:33:36.798336,content_integration,integrated:E02_pod,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.802380,content_integration,integrated:C15_ugc,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.805021,content_integration,integrated:C08_pinterest,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.818005,content_integration,integrated:S01_S05_services,Moved 18 files to content pipeline,PENDING
+2026-03-05T21:33:36.820677,content_integration,integrated:E06_etsy,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.823261,content_integration,integrated:C10_memes,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.826309,content_integration,integrated:C05_newsletter,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.829333,content_integration,integrated:C03_instagram,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.833556,content_integration,integrated:P01_P12_personas,Moved 6 files to content pipeline,PENDING
+2026-03-05T21:33:36.836700,content_integration,integrated:C11_seo,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.839733,content_integration,integrated:E01_tiktok_shop,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.842207,content_integration,integrated:C14_remotion,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.844225,content_integration,integrated:E08_E10_ecom_misc,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.850049,content_integration,integrated:N_series,Moved 11 files to content pipeline,PENDING
+2026-03-05T21:33:36.853353,content_integration,integrated:C18_repurpose,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.856110,content_integration,integrated:C12_email,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.858131,content_integration,integrated:C20_sports_gaming,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.861448,content_integration,integrated:C04_twitter,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.864983,content_integration,integrated:F01_F05_affiliate,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.866882,content_integration,integrated:E07_stock,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.870990,content_integration,integrated:G01_G15_growth,Moved 7 files to content pipeline,PENDING
+2026-03-05T21:33:36.879420,content_integration,integrated:D01_D07_digital,Moved 14 files to content pipeline,PENDING
+2026-03-05T21:33:36.881498,content_integration,integrated:C19_asmr,Moved 3 files to content pipeline,PENDING
+2026-03-05T21:33:36.884153,content_integration,integrated:E05_kdp,Moved 4 files to content pipeline,PENDING
+2026-03-05T21:33:36.887501,content_integration,integrated:I01_I05_invest,Moved 5 files to content pipeline,PENDING
+2026-03-05T21:33:36.891496,content_integration,integrated:E04_dropship,Moved 4 files to content pipeline,PENDING

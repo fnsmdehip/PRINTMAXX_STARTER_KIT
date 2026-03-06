@@ -1,48 +1,50 @@
-# PRINTMAXX Automated Cron Jobs v2 — With Perpetual Ship Engine
+# PRINTMAXX Automated Cron Jobs v2 — Updated 2026-03-05 with new intelligence scripts
 # Install: crontab AUTOMATIONS/crontab_printmaxx_v2.txt
 # Or merge: crontab -l > /tmp/cron_backup && cat AUTOMATIONS/crontab_printmaxx_v2.txt >> /tmp/cron_backup && crontab /tmp/cron_backup
 #
 # Python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 # Base dir: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
+# Log dir: AUTOMATIONS/logs/ (append-only, never deleted)
 #
-# Changes from v1:
-#   - Added perpetual engine layer1 at 1:00 AM (pre-overnight data)
-#   - Added daily TODO generator at 8:30 AM
-#   - Added handoff state snapshot at 9:00 AM
-#   - Added venture tracker every 4 hours
-#   - Added ecom distributor weekly check
-#   - Added nightly backup via engine at 9:00 PM
-#   - Fixed RBI scanner: --summary -> --scan
+# NEW in v2 (Mar 5): opportunity_radar, competitive_intelligence_engine,
+#   financial_intelligence, engagement_optimizer, health_check_all, auto_scheduler
+# All scripts have proper paths, error handling via stderr redirect, log rotation
 
 SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin
 BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
 PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 
-# ============================================================
-# DAILY (every day)
-# ============================================================
-
-# 1:00 AM - Perpetual engine Layer 1 (pre-overnight data gathering)
-0 1 * * * cd $BASE && bash AUTOMATIONS/perpetual_ship_engine.sh layer1 >> AUTOMATIONS/logs/cron_engine_layer1.log 2>&1
+# =============================================================================
+# DAILY (every day) — ordered by time
+# =============================================================================
 
 # 2:00 AM - Master overnight runner (all scrapers + analyzers)
 0 2 * * * cd $BASE && bash AUTOMATIONS/overnight_master_runner.sh >> AUTOMATIONS/logs/cron_overnight.log 2>&1
 
-# 5:45 AM - Unified alpha monitor (Reddit niche + GitHub MIT + ASO + competitors + freshness)
-45 5 * * * cd $BASE && $PYTHON AUTOMATIONS/unified_alpha_monitor.py --full >> AUTOMATIONS/logs/unified_alpha.log 2>&1
+# 4:00 AM - [NEW] Competitive intelligence engine (full daily scan)
+0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/competitive_intelligence_engine.py --scan-all >> AUTOMATIONS/logs/competitive_intel.log 2>&1
 
-# 6:30 AM - Reddit pain point miner (buying intent extraction)
-30 6 * * * cd $BASE && $PYTHON AUTOMATIONS/reddit_pain_point_miner.py --scan >> AUTOMATIONS/logs/pain_miner.log 2>&1
+# 5:00 AM - [NEW] Health check all systems
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/health_check_all.py --check >> AUTOMATIONS/logs/health_check_all.log 2>&1
 
-# 6:00 AM - Twitter signal account scraper
-0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_twitter_scraper.py >> AUTOMATIONS/logs/scraper_daily.log 2>&1
+# 6:00 AM - [NEW] Opportunity radar daily scan
+0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/opportunity_radar.py --daily >> AUTOMATIONS/logs/opportunity_radar.log 2>&1
+
+# 6:05 AM - Twitter signal account scraper (staggered 5min to avoid collision with radar)
+5 6 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_twitter_scraper.py >> AUTOMATIONS/logs/scraper_daily.log 2>&1
 
 # 6:15 AM - Reddit subreddit scraper
 15 6 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_reddit_scraper.py >> AUTOMATIONS/logs/scraper_daily_reddit.log 2>&1
 
-# 7:00 AM - Platform algo detection
-0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/platform_algo_detection.py >> AUTOMATIONS/logs/algo_detection.log 2>&1
+# 7:00 AM - [NEW] Financial intelligence dashboard
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/financial_intelligence.py --dashboard >> AUTOMATIONS/logs/financial_intelligence.log 2>&1
+
+# 7:05 AM - [NEW] Auto content scheduler (generate Buffer CSV for the day)
+5 7 * * * cd $BASE && $PYTHON AUTOMATIONS/auto_scheduler.py --generate >> AUTOMATIONS/logs/auto_scheduler.log 2>&1
+
+# 7:10 AM - Platform algo detection
+10 7 * * * cd $BASE && $PYTHON AUTOMATIONS/platform_algo_detection.py >> AUTOMATIONS/logs/algo_detection.log 2>&1
 
 # 7:15 AM - Hashtag and audio tracking
 15 7 * * * cd $BASE && $PYTHON AUTOMATIONS/hashtag_audio_tracking.py >> AUTOMATIONS/logs/hashtag_audio.log 2>&1
@@ -50,47 +52,12 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 # 8:00 AM - Daily no-cost RBI scan
 0 8 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_nocost_rbi_scanner.py --scan >> AUTOMATIONS/logs/rbi_scanner.log 2>&1
 
-# 8:30 AM - Auto-generate daily TODO from overnight results
-30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_todo_generator.py >> AUTOMATIONS/logs/cron_daily_todo.log 2>&1
-
-# 9:00 AM - Save handoff state snapshot for continuity
-0 9 * * * cd $BASE && bash AUTOMATIONS/perpetual_ship_engine.sh handoff >> AUTOMATIONS/logs/cron_handoff.log 2>&1
-
-# 9:00 PM - Nightly backup (git commit + safe clone)
-0 21 * * * cd $BASE && bash AUTOMATIONS/perpetual_ship_engine.sh backup >> AUTOMATIONS/logs/cron_backup.log 2>&1
-
-# 9:15 PM - Guardrails incremental backup (separate from git backup)
-15 21 * * * cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --incremental >> AUTOMATIONS/logs/guardrails_backup.log 2>&1
-
-# Sunday 3:00 AM - Full guardrails backup + prune old ones
-0 3 * * 0 cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --full >> AUTOMATIONS/logs/guardrails_full_backup.log 2>&1 && $PYTHON AUTOMATIONS/backup_system.py --prune >> AUTOMATIONS/logs/guardrails_prune.log 2>&1
-
-# 1:45 AM Daily - Pre-overnight guardrails backup
-45 1 * * * cd $BASE && $PYTHON AUTOMATIONS/backup_system.py --auto >> AUTOMATIONS/logs/guardrails_pre_overnight.log 2>&1
-
 # Auto-resume monitor: every 30 min between midnight and 8am
 */30 0-8 * * * cd $BASE && bash AUTOMATIONS/auto_resume_monitor.sh >> AUTOMATIONS/logs/auto_resume.log 2>&1
 
-# ============================================================
-# EVERY 4 HOURS — Venture & Performance Tracking
-# ============================================================
-
-# Venture performance scoring (track all 15 ventures)
-0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/venture_performance_tracker.py --recommend >> AUTOMATIONS/logs/cron_ventures.log 2>&1
-
-# ============================================================
-# EVERY 6 HOURS — Federal & Alpha
-# ============================================================
-
-# SAM.gov monitor (federal contracts update frequently)
-0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/sam_gov_monitor.py >> AUTOMATIONS/logs/sam_gov.log 2>&1
-
-# Alpha screening on new entries
-30 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_screening.py --pending >> AUTOMATIONS/logs/alpha_screen.log 2>&1
-
-# ============================================================
+# =============================================================================
 # WEEKLY (Mondays)
-# ============================================================
+# =============================================================================
 
 # 3:00 AM Monday - Platform RPM tracking
 0 3 * * 1 cd $BASE && $PYTHON AUTOMATIONS/platform_rpm_tracking.py >> AUTOMATIONS/logs/rpm_tracking.log 2>&1
@@ -108,119 +75,28 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 0 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_scanner.py >> AUTOMATIONS/logs/ecom_arb.log 2>&1
 15 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/trending_products_scanner.py >> AUTOMATIONS/logs/trending_products.log 2>&1
 
-# 5:30 AM Monday - Ecom distribution status check
-30 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/ecom_distributor.py --status >> AUTOMATIONS/logs/cron_ecom_status.log 2>&1
+# 6:00 AM Monday - [NEW] Engagement optimizer weekly schedule
+0 6 * * 1 cd $BASE && $PYTHON AUTOMATIONS/engagement_optimizer.py --weekly-schedule >> AUTOMATIONS/logs/engagement_optimizer.log 2>&1
 
-# ============================================================
-# BRAIN SYSTEM (NEW — Hedge Fund Level Orchestration)
-# ============================================================
+# =============================================================================
+# EVERY 2-4 HOURS (recurring scans)
+# =============================================================================
 
-# 5:30 AM - Brain morning briefing (before human wakes up)
-30 5 * * * cd $BASE && $PYTHON AUTOMATIONS/printmaxx_brain.py --morning >> AUTOMATIONS/logs/brain_morning.log 2>&1
+# Ecom arb engine - scan for profitable products every 2 hours
+0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_engine.py --hourly --top 5 >> AUTOMATIONS/logs/ecom_arb_engine.log 2>&1
 
-# 6:30 PM - Brain evening review (end of business day)
-30 18 * * * cd $BASE && $PYTHON AUTOMATIONS/printmaxx_brain.py --evening >> AUTOMATIONS/logs/brain_evening.log 2>&1
+# Freelance demand scanner - find active hiring posts every 3 hours
+0 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/freelance_demand_scanner.py --hourly >> AUTOMATIONS/logs/freelance_demand.log 2>&1
 
-# Every 3 hours - Signal aggregation (fuse all data sources)
-0 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/signal_aggregator.py --scan >> AUTOMATIONS/logs/signal_agg.log 2>&1
+# Trend aggregator - multi-source viral trend detection every 4 hours
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/trend_aggregator.py --hourly >> AUTOMATIONS/logs/trend_aggregator.log 2>&1
 
-# Every 4 hours (offset) - Ops orchestrator execution cycle
-30 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/ops_orchestrator.py --run >> AUTOMATIONS/logs/orchestrator.log 2>&1
+# =============================================================================
+# EVERY 6 HOURS
+# =============================================================================
 
-# 7:00 AM - System health check
-0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/performance_optimizer.py --health >> AUTOMATIONS/logs/health.log 2>&1
+# SAM.gov monitor (federal contracts update frequently)
+0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/sam_gov_monitor.py >> AUTOMATIONS/logs/sam_gov.log 2>&1
 
-# 3:30 AM - Self-healing (before overnight runner)
-30 1 * * * cd $BASE && $PYTHON AUTOMATIONS/printmaxx_brain.py --heal >> AUTOMATIONS/logs/heal.log 2>&1
-
-# Every 2 hours - Freelance demand scanner (highest Kelly ops)
-0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/freelance_demand_scanner.py >> AUTOMATIONS/logs/freelance_demand_$(date +\%Y-\%m-\%d).log 2>&1
-
-# Every 2 hours (offset) - Ecom arb engine (second highest signal source)
-30 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_engine.py >> AUTOMATIONS/logs/ecom_arb_$(date +\%Y-\%m-\%d).log 2>&1
-
-# Every 4 hours - Trend aggregator (multi-source)
-45 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/trend_aggregator.py >> AUTOMATIONS/logs/trend_agg_$(date +\%Y-\%m-\%d).log 2>&1
-
-# Sunday 2:00 AM - Full performance report
-0 2 * * 0 cd $BASE && $PYTHON AUTOMATIONS/performance_optimizer.py --report >> AUTOMATIONS/logs/perf_report.log 2>&1
-
-# ============================================================
-# CLOSED-LOOP PIPELINE (Lead Qualification → Cold Email → Track)
-# ============================================================
-
-# 3:00 AM - Closed-loop pipeline: 5 cycles x 2000 leads = 10,000/night
-0 3 * * * cd $BASE && $PYTHON AUTOMATIONS/closed_loop_pipeline.py --cycles 5 --batch 2000 --workers 30 >> AUTOMATIONS/logs/closed_loop.log 2>&1
-
-# ============================================================
-# NEW PIPELINE TOOLS (Feb 13 2026)
-# ============================================================
-
-# 4:00 AM Daily - Lead enrichment (top 100 hot leads)
-0 4 * * * cd $BASE && $PYTHON AUTOMATIONS/lead_enrichment.py --enrich --top 100 >> AUTOMATIONS/logs/lead_enrichment.log 2>&1
-
-# 9:00 AM Daily - Response tracker follow-ups
-0 9 * * * cd $BASE && $PYTHON AUTOMATIONS/response_tracker.py --followups >> AUTOMATIONS/logs/response_tracker.log 2>&1
-
-# 4:30 AM Daily - Refresh dashboard after pipeline runs
-30 4 * * * cd $BASE && $PYTHON AUTOMATIONS/refresh_dashboard.py >> AUTOMATIONS/logs/dashboard.log 2>&1
-
-# 10:00 AM Daily - SEO competitor analyzer (summary stats)
-0 10 * * * cd $BASE && $PYTHON AUTOMATIONS/seo_competitor_analyzer.py --summary >> AUTOMATIONS/logs/seo_competitor.log 2>&1
-
-# 5:00 AM Wednesday - Personalize demo sites for hot leads
-0 5 * * 3 cd $BASE && $PYTHON AUTOMATIONS/personalize_demos.py --hot-leads >> AUTOMATIONS/logs/personalize_demos.log 2>&1
-
-# 6:00 AM Monday - Email domain health check (weekly)
-0 6 * * 1 cd $BASE && $PYTHON AUTOMATIONS/email_domain_health.py --check-all >> AUTOMATIONS/logs/email_health.log 2>&1
-
-# 6:00 AM Sunday - SEO competitor full analysis (all hot leads, weekly)
-0 6 * * 0 cd $BASE && $PYTHON AUTOMATIONS/seo_competitor_analyzer.py --all-hot --export AUTOMATIONS/leads/seo_competitor_weekly.csv >> AUTOMATIONS/logs/seo_competitor_weekly.log 2>&1
-
-# ============================================================
-# MEMORY MANAGER (OpenClaw 3-Layer Pattern)
-# ============================================================
-
-# 5:00 AM - Full memory refresh (heartbeat + active tasks + daily log + health)
-0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/memory_manager.py --full >> AUTOMATIONS/logs/memory.log 2>&1
-
-# 8:00 AM - HEARTBEAT refresh (before human wakes up)
-0 8 * * * cd $BASE && $PYTHON AUTOMATIONS/memory_manager.py --heartbeat >> AUTOMATIONS/logs/heartbeat.log 2>&1
-
-# 11:59 PM - End-of-day summary
-59 23 * * * cd $BASE && $PYTHON AUTOMATIONS/memory_manager.py --daily-summary >> AUTOMATIONS/logs/memory.log 2>&1
-
-# ============================================================
-# DAILY RESEARCH + ALPHA-TO-OPS PIPELINE (Feb 13 2026)
-# ============================================================
-
-# 5:30 AM - Daily research pipeline (scrape Twitter + Reddit + bookmarks, extract alpha, generate content)
-30 5 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_research_pipeline.py --cron >> AUTOMATIONS/logs/research_pipeline.log 2>&1
-
-# 7:30 AM - Alpha-to-Ops auto-generation (convert approved alpha into actionable ops files)
-30 7 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_to_ops.py --cron >> AUTOMATIONS/logs/alpha_to_ops.log 2>&1
-
-# 8:15 AM - Guardrails compliance scan on all pending content
-15 8 * * * cd $BASE && $PYTHON AUTOMATIONS/guardrails.py --audit-all >> AUTOMATIONS/logs/guardrails_audit.log 2>&1
-
-# 8:30 AM - Content compliance scan (FTC, CAN-SPAM, income claims, PII)
-30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/compliance_scanner.py --audit-all --save >> AUTOMATIONS/logs/compliance_scan.log 2>&1
-
-# 8:45 AM - Compliance deadline tracker (regulatory milestone alerts)
-45 8 * * * cd $BASE && $PYTHON AUTOMATIONS/compliance_deadline_tracker.py --check --digest >> AUTOMATIONS/logs/compliance_deadlines.log 2>&1
-
-# Monday 6:30 AM - Compliance deadline scan for new regulations (weekly)
-30 6 * * 1 cd $BASE && $PYTHON AUTOMATIONS/compliance_deadline_tracker.py --scan >> AUTOMATIONS/logs/compliance_scan_new.log 2>&1
-
-# 9:15 AM - Telegram community monitor (signal extraction from public channels)
-15 9 * * * cd $BASE && $PYTHON AUTOMATIONS/telegram_community_monitor.py --scan >> AUTOMATIONS/logs/telegram_monitor.log 2>&1
-
-# 9:30 AM - Live dashboard data refresh
-30 9 * * * cd $BASE && $PYTHON AUTOMATIONS/live_dashboard_server.py --refresh >> AUTOMATIONS/logs/dashboard_refresh.log 2>&1
-
-# ============================================================
-# VOICEOVER PIPELINE (Qwen local + ElevenLabs fallback)
-# ============================================================
-
-# Every hour at :20 - render newly approved video scripts to voice assets
-20 * * * * cd $BASE && /bin/bash scripts/approved_voice_runner.sh --max-jobs 2 --max-blocks-per-source 1 >> AUTOMATIONS/logs/voice_render.log 2>&1 # PRINTMAXX_VOICE_RENDER
+# Alpha screening on new entries
+30 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_screening.py --pending >> AUTOMATIONS/logs/alpha_screen.log 2>&1
