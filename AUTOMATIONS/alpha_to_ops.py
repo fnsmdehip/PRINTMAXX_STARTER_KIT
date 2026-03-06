@@ -918,8 +918,10 @@ def get_unprocessed_alpha(rows: list[dict], specific_id: str | None = None) -> l
 
 def process_alpha(alpha: dict, dry_run: bool = False) -> dict | None:
     """Process a single alpha entry. Returns tracker row or None."""
-    aid = alpha["alpha_id"].strip()
-    category = alpha["category"].strip()
+    aid = (alpha.get("alpha_id") or "").strip()
+    category = (alpha.get("category") or "").strip()
+    if not aid or not category:
+        return None
     roi = alpha.get("roi_potential", "MEDIUM")
 
     generator = GENERATORS.get(category)

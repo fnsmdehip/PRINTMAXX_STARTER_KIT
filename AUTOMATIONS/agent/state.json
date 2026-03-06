@@ -1,0 +1,29 @@
+{
+  "last_cycle": "2026-03-05T23:50:28.898014",
+  "cycles_run": 4,
+  "missions_completed": 7,
+  "missions_failed": 0,
+  "last_mission_results": {
+    "health_heal": "success",
+    "process_decide": "success",
+    "scan_opps_eve": "success",
+    "gen_content_eve": "success",
+    "safety_commit": "success",
+    "screen_alpha_night": "success",
+    "content": "success"
+  },
+  "active_priorities": [],
+  "learnings": [],
+  "blockers": [
+    "account_creation"
+  ],
+  "disk_gb_free": 13.9,
+  "last_run_times": {
+    "health_heal": "2026-03-05T23:29:30.941634",
+    "process_decide": "2026-03-05T23:29:31.217332",
+    "scan_opps_eve": "2026-03-05T23:33:10.816592",
+    "gen_content_eve": "2026-03-05T23:34:03.929884",
+    "safety_commit": "2026-03-05T23:34:06.216629",
+    "screen_alpha_night": "2026-03-05T23:34:40.089415"
+  }
+}
