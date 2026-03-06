@@ -51,3 +51,11 @@ timestamp,source,action,reasoning,outcome
 2026-03-05T21:33:36.887501,content_integration,integrated:I01_I05_invest,Moved 5 files to content pipeline,PENDING
 2026-03-05T21:33:36.891496,content_integration,integrated:E04_dropship,Moved 4 files to content pipeline,PENDING
 2026-03-05T22:00:00.597901,freelance_demand,draft_response:[TASK]_$100_—_Need_girl_to_record_20_short_UGC_vid,Score 60.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-06T01:00:04.043546,freelance_demand,draft_response:[HIRING]_[US]_30_Remote_Javascript_jobs,Score 65.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-06T01:00:04.044366,freelance_demand,draft_response:[TASK]_$100_—_Need_girl_to_record_20_short_UGC_vid,Score 60.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-06T01:00:04.044897,freelance_demand,draft_response:[TASK]_[HIRING]_Full-Time_Horror_Gaming_Editor_($1,Score 60.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-06T01:00:04.054017,ecom_arb,listing_draft:yoga_mat,"Margin 27.3% >= 25% threshold, action=LIST",PENDING
+2026-03-06T01:00:04.054619,ecom_arb,listing_draft:scalp_massager,"Margin 23.6% >= 25% threshold, action=LIST",PENDING
+2026-03-06T01:00:04.055029,ecom_arb,listing_draft:led_face_mask,"Margin 40.8% >= 25% threshold, action=LIST",PENDING
+2026-03-06T01:00:04.055320,ecom_arb,listing_draft:posture_corrector,"Margin 30.5% >= 25% threshold, action=LIST",PENDING
+2026-03-06T01:00:04.055598,ecom_arb,listing_draft:gua_sha_tool,"Margin 52.1% >= 25% threshold, action=LIST",PENDING

@@ -23,9 +23,18 @@ MISSION_LOG = PROJECT / "AUTOMATIONS" / "agent" / "missions.jsonl"
 AGENT_LOG = PROJECT / "AUTOMATIONS" / "logs" / "agent.log"
 
 
+OPS_STATE_FILE = PROJECT / "AUTOMATIONS" / "agent" / "ops_manager" / "ops_state.json"
+OPS_VENTURE_LOG = PROJECT / "AUTOMATIONS" / "agent" / "ops_manager" / "venture_log.jsonl"
+
 def get_state():
     try:
         return json.loads(STATE_FILE.read_text())
+    except Exception:
+        return {}
+
+def get_ops_state():
+    try:
+        return json.loads(OPS_STATE_FILE.read_text())
     except Exception:
         return {}
 
@@ -138,6 +147,27 @@ def build_html():
             content_preview = latest.replace("<", "&lt;").replace(">", "&gt;").replace("\n", "<br>")
         except Exception:
             content_preview = "Error reading content"
+
+    # Ops Manager venture status
+    ops = get_ops_state()
+    venture_rows = ""
+    for vname, vdata in ops.get("venture_status", {}).items():
+        result = vdata.get("last_result", "?")
+        color = result_colors.get(result, "#fff")
+        icon = result_icons.get(result, "?")
+        last_run = vdata.get("last_run", "?")[:16]
+        summary = vdata.get("last_summary", "")[:60]
+        venture_rows += f'<tr><td style="color:{color}">{icon}</td><td>{vname}</td><td>{result}</td><td>{summary}</td><td>{last_run}</td></tr>\n'
+
+    ops_html = f"""
+    <div class="card" style="margin-bottom:16px">
+      <h2>Ops Manager Ventures ({ops.get("cycles_run", 0)} cycles)</h2>
+      <table>
+        <tr><th></th><th>Venture</th><th>Result</th><th>Summary</th><th>Last Run</th></tr>
+        {venture_rows if venture_rows else '<tr><td colspan="5" style="color:#71717a">No venture cycles run yet</td></tr>'}
+      </table>
+    </div>
+    """
 
     # Guardrails status
     guardrails_html = """
@@ -254,6 +284,8 @@ def build_html():
     </div>
     {guardrails_html}
   </div>
+
+  {ops_html}
 
   <div class="card" style="margin-bottom:16px">
     <h2>Mission Log (Recent)</h2>
