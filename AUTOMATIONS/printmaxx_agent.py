@@ -43,11 +43,42 @@ MISSION_LOG = AGENT_DIR / "missions.jsonl"
 MEMORY_FILE = AGENT_DIR / "memory.json"
 PYTHON = sys.executable
 
+BLOCKED_DIRS = [
+    Path.home() / "Desktop",
+    Path.home() / "Downloads",
+    Path.home() / "Pictures",
+    Path.home() / "Music",
+    Path.home() / "Movies",
+    Path.home() / "Library",
+    Path.home() / ".ssh",
+    Path.home() / ".aws",
+    Path.home() / ".gnupg",
+    Path("/System"), Path("/Library"), Path("/usr"), Path("/bin"), Path("/etc"), Path("/var"),
+]
+BLOCKED_COMMANDS = ["rm -rf /", "rm -rf ~", "rm -rf $HOME", "dd if=", "diskutil erase",
+                     "mkfs", "format", "> /dev/", "fork", ":(){ :|:& };:"]
+
 def safe_path(p):
+    """Verify path is within project root. Raises ValueError if not."""
     resolved = Path(p).resolve()
-    if not str(resolved).startswith(str(PROJECT)):
-        raise ValueError(f"BLOCKED: {resolved} outside project")
+    project_resolved = PROJECT.resolve()
+    if not str(resolved).startswith(str(project_resolved)):
+        raise ValueError(f"GUARDRAIL BLOCKED: {resolved} is outside project root {project_resolved}")
+    for blocked in BLOCKED_DIRS:
+        if str(resolved).startswith(str(blocked.resolve())):
+            raise ValueError(f"GUARDRAIL BLOCKED: {resolved} is in protected directory {blocked}")
     return resolved
+
+def safe_command(cmd_str):
+    """Check a command string for dangerous patterns."""
+    lower = cmd_str.lower()
+    for bad in BLOCKED_COMMANDS:
+        if bad in lower:
+            raise ValueError(f"GUARDRAIL BLOCKED dangerous command: {bad}")
+    # Block writes outside project
+    for pattern in ["> /", ">> /", "> ~/", ">> ~/"]:
+        if pattern in cmd_str and str(PROJECT) not in cmd_str.split(pattern)[-1][:100]:
+            raise ValueError(f"GUARDRAIL BLOCKED: redirect outside project")
 
 
 # === STATE MANAGEMENT ===
@@ -105,8 +136,16 @@ class AgentState:
 # === MISSION RUNNER ===
 
 def run_script(script, args="", timeout=300):
-    """Run a Python script and return (success, output)."""
-    cmd = f"{PYTHON} {PROJECT / 'AUTOMATIONS' / script} {args}"
+    """Run a Python script from AUTOMATIONS/ only. Guardrailed."""
+    script_path = (PROJECT / "AUTOMATIONS" / script).resolve()
+    # Guardrail: script must be inside project
+    if not str(script_path).startswith(str(PROJECT.resolve())):
+        log(f"GUARDRAIL BLOCKED: {script} resolves outside project", "SECURITY")
+        return False, f"BLOCKED: {script} outside project"
+    if not script_path.exists():
+        return False, f"Script not found: {script}"
+    cmd = f"{PYTHON} {script_path} {args}"
+    safe_command(cmd)
     try:
         r = subprocess.run(
             cmd, shell=True, capture_output=True, text=True,
@@ -275,22 +314,26 @@ def mission_generate_content():
         return "skipped", "No fresh data to generate content from"
 
     # Use Claude to generate tweets from today's findings
-    prompt = f"""You are @printmaxxer. Generate 5 tweets and 1 thread (5 tweets) from today's intelligence.
+    prompt = f"""You are @printmaxxer on Twitter. Write 5 standalone tweets and 1 thread (5 tweets) based on today's real intelligence data below.
 
-RULES:
-- Consequence-first hooks. Exact numbers. No em dashes. No AI vocab. Lowercase energy.
-- Lead with the insight, not the setup. Make people stop scrolling.
-- Reference specific tools, specific numbers, specific outcomes.
-- Would @pipelineabuser actually post this? If not, rewrite.
+VOICE RULES (non-negotiable):
+- lowercase energy. no caps unless emphasizing a number.
+- consequence-first hooks. lead with what happened or what works, not "here's how" or "I found".
+- exact numbers always. "$47/hr" not "good money". "200+ pages" not "a lot".
+- no em dashes. no AI words (leverage, utilize, comprehensive, innovative, seamless, game-changer, delve).
+- name specific tools (visualping.io, photon, buffer) not generic terms ("a monitoring tool").
+- short punchy sentences. staccato rhythm. period-heavy.
+- would @pipelineabuser post this? if it sounds like a LinkedIn influencer, delete it and rewrite.
 
-TODAY'S INTELLIGENCE:
+BAD EXAMPLE: "I discovered an incredible opportunity in the meal prep space that could generate significant revenue."
+GOOD EXAMPLE: "meal prep pain point showed up 3x in today's scan. $300-500/mo retainer per client. batch 4-5 clients same day and it's a logistics play not a service. nobody's doing this with route optimization yet."
+
+TODAY'S INTELLIGENCE (real data, use these specifics):
 {chr(10).join(sources)}
 
-OUTPUT FORMAT:
-Write the tweets directly. No headers, no numbering, just the tweets separated by ---
-For the thread, use THREAD: prefix then each tweet on its own line.
-
-Write to: CONTENT/social/printmaxxer/AGENT_CONTENT_{datetime.now().strftime('%Y%m%d')}.md
+OUTPUT: Write each tweet as ready-to-post copy. Separate tweets with ---
+After the 5 standalone tweets, write THREAD: then each thread tweet on its own line separated by ---
+No meta commentary. No "here are the tweets". Just the tweets themselves.
 """
 
     ok, out = run_claude(prompt, timeout=120)
