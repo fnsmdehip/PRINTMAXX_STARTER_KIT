@@ -1273,6 +1273,28 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('action') === 'bodydouble') showScreen('focus');
 
 setInterval(updatePeerCount, 8000);
+
+// Email capture - show after 30 seconds
+setTimeout(() => {
+  if (!localStorage.getItem('adhd_email_dismissed')) {
+    document.getElementById('email-capture-overlay').style.display = 'block';
+  }
+}, 30000);
 </script>
+
+<div id="email-capture-overlay" style="display:none;position:fixed;bottom:0;left:0;right:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.85) 30%);padding:40px 20px 30px;z-index:200;text-align:center">
+  <div style="max-width:400px;margin:0 auto">
+    <p style="color:#fff;font-size:1.1rem;font-weight:700;margin-bottom:6px">get ADHD Streak updates</p>
+    <p style="color:rgba(255,255,255,0.7);font-size:0.8rem;margin-bottom:14px">new features, focus techniques, community events. no spam.</p>
+    <form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+      <input type="hidden" name="_subject" value="ADHD Streak email signup">
+      <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:180px;padding:12px 16px;border-radius:10px;border:none;background:rgba(255,255,255,0.15);color:#fff;font-size:0.9rem;outline:none;backdrop-filter:blur(10px)">
+      <button type="submit" style="padding:12px 20px;border-radius:10px;border:none;background:#7C3AED;color:#fff;font-size:0.9rem;font-weight:700;cursor:pointer;white-space:nowrap">notify me</button>
+    </form>
+    <button onclick="this.parentElement.parentElement.style.display='none';localStorage.setItem('adhd_email_dismissed','1')" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:10px;cursor:pointer">no thanks</button>
+  </div>
+</div>
 </body>
 </html>

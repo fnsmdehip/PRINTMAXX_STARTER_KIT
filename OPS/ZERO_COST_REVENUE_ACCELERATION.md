@@ -1472,3 +1472,14 @@ oops it looks like i thought this app was alarmy ($600k/month) but it’s actual
 
 here are the revenue of alarmy, they’re doing the same distribution!
 
+
+
+---
+
+## Pending Enhancement (OPP_SCAN_011, Score: 55)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://apify.com/store
+**Added:** 2026-03-07T12:16:57-05:00
+
+Apify Actor Store — package existing Playwright/Python scrapers as Apify Actors. Zero listing cost. Passive revenue per run. We have 4+ working scrapers already. Popular actors earn $500-5K+/mo. Reddit scraper adapts in 2-4 hours. Google Business Profile and App Store review scrapers as expansion.
+

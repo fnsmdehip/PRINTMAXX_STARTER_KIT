@@ -1,104 +1,90 @@
 {
-  "last_cycle": "2026-03-07T22:15:00Z",
-  "cycle_number": 4,
+  "last_cycle": "2026-03-07T23:30:00Z",
+  "cycle_number": 5,
   "cycle_summary": {
-    "total_items_reviewed": 72,
-    "passed_no_changes": 68,
-    "fixed_and_approved": 3,
-    "blocked": 1,
-    "flagged_for_review": 0,
-    "pass_rate_before_fixes": "94.4%",
-    "pass_rate_after_fixes": "100%"
+    "total_items_reviewed": 38,
+    "passed_no_changes": 20,
+    "fixed_and_approved": 17,
+    "blocked": 0,
+    "flagged_for_review": 1,
+    "pass_rate_before_fixes": "52.6%",
+    "pass_rate_after_fixes": "97.4%"
   },
   "content_review": {
-    "files_scanned": 11,
-    "tweets_reviewed": 28,
-    "threads_reviewed": 4,
-    "linkedin_posts_reviewed": 3,
-    "newsletter_drafts_reviewed": 1,
-    "cross_niche_posts_reviewed": 4,
-    "reddit_posts_reviewed": 3,
-    "hn_posts_reviewed": 1,
-    "competitor_counter_posts_reviewed": 6,
-    "roi_calculator_posts_reviewed": 10,
-    "em_dash_violations": 1,
-    "em_dashes_fixed": 1,
-    "em_dash_locations": [
-      "competitor_counter_content_20260307.md line 91: double-dash in tweet content -> period"
+    "files_scanned": 28,
+    "tweets_reviewed": 24,
+    "threads_reviewed": 6,
+    "outreach_emails_reviewed": 10,
+    "fixes_applied": [
+      "5 trend posts: cookie-cutter endings removed, em dashes removed, unique copy written",
+      "4 duplicate trend posts: 2 marked as duplicates, 2 rewritten with unique angles",
+      "3 brain insight posts: truncated text completed, cookie-cutter endings removed, proper metadata added",
+      "mar21_1100 thread: removed redundant text between tweet 1 and tweet 2",
+      "mar22_1100 (PrayerLock): differentiated from FocusLock promo, added Ramadan urgency angle",
+      "mar22_1430 (FocusLock): differentiated with competitor pricing comparison (Opal $99, one sec $4.99/mo)",
+      "compound_cycle2_standalone tweet 5: corrected Gumroad math ($10,500 was wrong, actual is $2,400)",
+      "counter_cycle4_20260307_5: unstructured multi-topic dump extracted to clean single-angle post (PWA hack)",
+      "leadmachine_cycle3 Austin ISD email: 'happy to' sycophantic artifact -> 'can we'"
     ],
+    "em_dash_violations": 2,
+    "em_dashes_fixed": 2,
     "banned_word_violations": 0,
-    "sycophantic_artifacts": 0,
-    "hook_rewrites": 0,
-    "note": "Content quality significantly improved from cycle 3. Swarm agents no longer generating em dashes in body copy. The cycle 2 generated content (tweets_5_posts, thread_ai_saas_pricing, cross_niche, linkedin, newsletter, research_cycle) is clean across all checks."
+    "cookie_cutter_violations": 8,
+    "cookie_cutter_fixed": 8,
+    "math_errors": 1,
+    "math_errors_fixed": 1,
+    "duplicate_content_violations": 3,
+    "duplicate_content_fixed": 3,
+    "sycophantic_artifacts": 1,
+    "sycophantic_fixed": 1,
+    "truncated_content": 3,
+    "truncated_fixed": 3,
+    "note": "NEW FAILURE MODE DETECTED: cookie-cutter template endings on automated content. 8 posts had identical closers. Swarm agents (content_compounder, swarm_brain) have hardcoded template tails. The trend generator uses 'most people won't notice this shift for another 6 months' on EVERY output. The brain insight generator uses 'this is what happens when you let AI agents manage themselves' on EVERY output. These must be fixed at the PROMPT TEMPLATE level."
   },
   "outreach_review": {
-    "total_emails_reviewed": 30,
-    "files_reviewed": 3,
-    "sycophantic_artifacts": 2,
-    "sycophantic_fixed": "leadmachine_cycle2_20260307.md: 'happy to scope' x2 -> 'can we scope'",
+    "total_emails_reviewed": 10,
+    "files_reviewed": 1,
+    "sycophantic_artifacts": 1,
+    "sycophantic_fixed": "leadmachine_cycle3_20260307.md: 'happy to do' -> 'can we do'",
     "banned_word_violations": 0,
+    "em_dash_violations": 0,
     "personalization_quality": "strong",
     "human_tone": "pass",
-    "word_count_compliance": "pass",
-    "note": "Outreach quality is high. ADA compliance angle is strong and legally grounded. Only 2 'happy to' sycophantic artifacts found and fixed across 30 emails."
+    "word_count_compliance": "mostly pass",
+    "note": "ADA compliance outreach is highly personalized. Real case references, specific attorney names, business-specific vulnerability analysis. Quality remains high across all outreach cycles."
   },
   "deployment_review": {
-    "sites_status_checked": 5,
-    "sites_returning_200": 4,
-    "sites_returning_404": 1,
-    "sites_404": ["printmaxx-site.surge.sh"],
-    "dead_cta_count": 17,
-    "dead_cta_pages": [
-      "sleepmaxx", "walktounlock", "mealmaxx",
-      "episcopal-streak", "orthodox-streak", "evangelical-streak",
-      "methodist-streak", "presbyterian-streak", "catholic-streak",
-      "lutheran-streak", "shia-streak", "baptist-streak",
-      "protestant-streak", "pentecostal-streak", "sunni-streak",
-      "anglican-streak", "ai-stack-2026"
-    ],
-    "critical_issues": [
-      "printmaxx-site.surge.sh returning 404 (main site DOWN)",
-      "17 landing pages still have dead CTAs (href='#') preventing conversion",
-      "BUFFER_UPLOAD_MAR7.csv BLOCKED: cross-account contamination + truncation bugs in tweet_drafter.py"
-    ],
-    "fixed_since_last_cycle": [
-      "focuslock landing page: dead CTA fixed (was 1, now 0)"
+    "sites_spot_checked": 4,
+    "results": {
+      "printmaxx.surge.sh": "404 - PERSISTENT CRITICAL (10+ hours down)",
+      "printmaxx-site.surge.sh": "404 - PERSISTENT CRITICAL",
+      "prayerlock-app.surge.sh": "200 - OK",
+      "focuslock-app.surge.sh": "200 - OK"
+    },
+    "persistent_critical": [
+      "printmaxx.surge.sh AND printmaxx-site.surge.sh returning 404 (MAIN SITE DOWN since cycle 2)",
+      "17 landing pages still have dead CTAs (href='#') - ZERO conversion possible",
+      "BUFFER_UPLOAD_MAR7.csv still blocked (tweet_drafter.py pipeline bug)",
+      "hilal.surge.sh and prayerlock-app.surge.sh have broken footer links to printmaxx-lead-magnets.surge.sh (should be printmaxx-magnets.surge.sh)"
     ]
   },
-  "media_review": {
-    "new_images_since_last_cycle": 59,
-    "images_over_500kb": 1,
-    "over_500kb_details": "gumroad_cover_4.png (561KB) - minor, Gumroad asset not web-deployed",
-    "new_videos_since_last_cycle": 0,
-    "all_within_size_limits": true
-  },
-  "buffer_csv_review": {
-    "status": "BLOCKED",
-    "file": "BUFFER_UPLOAD_MAR7.csv",
-    "issues": [
-      "Cross-account contamination: identical content posted to @PRINTMAXXER, @repscheme, @finance, @selahmoments with only prefix changes",
-      "@drifthour posts: formulaic slop (aesthetic phrases prepended to data points, no original content)",
-      "@repscheme posts: formulaic slop (fitness metaphors prepended to unrelated data points)",
-      "@PRINTMAXXER tool posts: truncation bugs ('46.9% hours', 'been using No for a week')",
-      "Same earnings timeline posted 4x to different accounts"
-    ],
-    "root_cause": "tweet_drafter.py token parsing regex + cross-account template engine",
-    "action": "Keep blocked. Fix tweet_drafter.py before regenerating."
-  },
   "most_common_failures": [
-    "dead_CTA_links (17 pages, persistent since cycle 3 - REVENUE BLOCKER)",
-    "buffer_csv_cross_contamination (pipeline bug in tweet_drafter.py)",
-    "sycophantic_artifacts_in_outreach (2 instances of 'happy to')",
-    "em_dash_in_competitor_content (1 instance, double-dash)"
+    "cookie_cutter_template_endings (8 - SYSTEMIC, needs prompt template fix)",
+    "truncated_generation_output (3 - brain insight pipeline truncating mid-sentence)",
+    "duplicate_near_identical_content (3 - same template applied to different products)",
+    "math_calculation_errors (1 - fee calculator bug producing wildly wrong numbers)",
+    "dead_CTA_links (17 pages persistent - REVENUE BLOCKER)",
+    "main_site_404 (persistent critical since cycle 2)"
   ],
   "trend": {
-    "direction": "content_improving_deployment_stalled",
+    "direction": "automated_agent_quality_is_the_new_bottleneck",
     "pass_rate_history": [
       "96.3% (cycle 1)",
       "97.9% (cycle 2)",
-      "45.4% raw / 100% after fixes (cycle 3 - deep audit)",
-      "94.4% raw / 100% after fixes (cycle 4)"
+      "45.4% raw / 100% after fixes (cycle 3)",
+      "94.4% raw / 100% after fixes (cycle 4)",
+      "52.6% raw / 97.4% after fixes (cycle 5)"
     ],
-    "note": "Content quality is now solid. Swarm agents stopped generating em dashes in body copy (14 violations in cycle 3, down to 1 in cycle 4). Outreach quality consistently strong. REAL problem remains DEPLOYMENTS: 17 dead CTAs + 1 site returning 404. This is the #1 revenue blocker. BUFFER_UPLOAD_MAR7.csv still blocked due to tweet_drafter.py pipeline bug."
+    "note": "CLEAR PATTERN: Handwritten/scheduled tweets (mar19-22 batch) are CLEAN. Automated agent output (trend posts, brain insights, counter posts, compound posts) has systemic quality issues: cookie-cutter endings, truncated output, duplicate templates, math errors. The quality gap is between HUMAN-REVIEWED PIPELINE (clean) and AUTOMATED PIPELINE (degrading). Root cause: agent prompt templates need quality constraints baked in. DEPLOYMENT remains the #1 revenue blocker."
   }
 }

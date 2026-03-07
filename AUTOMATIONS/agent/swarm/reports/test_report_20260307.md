@@ -154,3 +154,122 @@ HVAC, lawn, salon, restaurant (Italian), Joe's Plumbing, FlowStack, ShopMetrics.
 - **Test script:** AUTOMATIONS/playwright_site_tester.py (async, 8-concurrent)
 
 *Generated: 2026-03-07T07:45:00 | Playwright async tester | 117 sites in ~2 min*
+
+---
+
+# CYCLE 2 — 2026-03-07 18:14 UTC
+**Agent:** playwright_tester | **Sites tested:** 147 | **Duration:** ~4 min (concurrent HTTP + Playwright visual)
+
+## Cycle 2 Summary
+
+| Status | Count | % |
+|--------|-------|---|
+| GREEN | 134 | 91.2% |
+| YELLOW | 11 | 7.5% |
+| RED (permanent) | 1 | 0.7% |
+| Transient RED (recovered) | 3 | — |
+| **TOTAL** | **147** | — |
+
+---
+
+## RED — Permanent (1)
+
+### 🔴 DNS Label Too Long — Never Will Work
+**Site:** `local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh`
+**Error:** `nslookup: label too long (65 chars, max 63)`
+**Status:** Was also flagged in Cycle 1. Still unresolved.
+**Fix:** `surge teardown local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh` then redeploy as `miami-local-plumbing-experts.surge.sh`
+
+---
+
+## RED → GREEN (Transient 504s, Recovered)
+
+| Site | Cycle 2 First | Retest |
+|------|--------------|--------|
+| `galaxia-dental-austin.surge.sh` | 504 | ✅ 200 |
+| `barton-springs-saloon-austin.surge.sh` | 504 | ✅ 200 |
+| `atlanta-roofing-company-preview.surge.sh` | 504 | ✅ 200 |
+
+Root cause: surge.sh CDN propagation delay (~90s after deploy). All now stable.
+
+---
+
+## YELLOW — Issues Found (11)
+
+### 🟡 Broken Footer Links (HIGH PRIORITY)
+**Affected sites:** `hilal.surge.sh`, `prayerlock-app.surge.sh`
+**Issue:** Footer links to `https://printmaxx-lead-magnets.surge.sh/` → 404
+**Correct URL:** `https://printmaxx-magnets.surge.sh` (200 OK)
+**Impact:** Broken outbound link on 2 flagship Ramadan apps during active Ramadan season
+**Fix:** Edit footer HTML in both deployments and `surge` redeploy
+
+### 🟡 ADHD-Streak — Missing PWA Icons (MEDIUM)
+**Site:** `adhd-streak.surge.sh`
+**Issues:**
+- `favicon.ico` → 404
+- `icon-192.png` → 404 (PWA manifest broken — home screen install fails)
+- `apple-mobile-web-app-capable` deprecation warning
+**Also:** Not in deployed_assets.json catalog (deployed ~2h ago)
+
+### 🟡 Slow Load Times (>3s target) — 8 sites
+| Site | Time | Category |
+|------|------|----------|
+| adhd-streak.surge.sh | 6.1s | App |
+| kelly-personal-training-austin.surge.sh | 6.0s | New Austin |
+| artz-rib-house-austin.surge.sh | 5.9s | New Austin |
+| south-tampa-locksmith-preview.surge.sh | 5.6s | Preview |
+| magnolia-cafe-austin.surge.sh | 4.9s | New Austin |
+| jax-emergency-plumber-preview.surge.sh | 4.3s | Preview |
+| zax-pints-plates-austin.surge.sh | 3.7s | New Austin |
+| memphis-plumbing-preview.surge.sh | 3.7s | Preview |
+
+### 🟡 Favicon 404 — Cosmetic, Low Priority
+All sites missing favicon.ico. Console error only, no user-visible impact.
+**Quick fix for all:** `<link rel="icon" href="data:,">` in `<head>` suppresses the 404.
+
+---
+
+## Catalog Gaps — New Sites Not in deployed_assets.json
+
+11 new sites deployed since last catalog update:
+
+| Site | Age | Status |
+|------|-----|--------|
+| adhd-streak.surge.sh | ~2h | YELLOW |
+| magnolia-cafe-austin.surge.sh | ~41min | YELLOW |
+| kelly-personal-training-austin.surge.sh | ~41min | YELLOW |
+| galaxia-dental-austin.surge.sh | ~41min | GREEN |
+| barton-springs-saloon-austin.surge.sh | ~41min | GREEN |
+| zax-pints-plates-austin.surge.sh | ~41min | YELLOW |
+| artz-rib-house-austin.surge.sh | ~41min | YELLOW |
+| memphis-plumbing-preview.surge.sh | ~44min | YELLOW |
+| jax-emergency-plumber-preview.surge.sh | ~44min | YELLOW |
+| south-tampa-locksmith-preview.surge.sh | ~45min | YELLOW |
+| atlanta-roofing-company-preview.surge.sh | ~45min | GREEN |
+
+---
+
+## Visual Screenshots (Playwright)
+
+| Site | Status | Notes |
+|------|--------|-------|
+| hilal.surge.sh | ✅ Renders | Sharp dark UI, gold CTA, strong copy. Footer link broken. |
+| prayerlock-app.surge.sh | ✅ Renders | Sharp dark UI, teal CTA, strong copy. Footer link broken. |
+| galaxia-dental-austin.surge.sh | ✅ Renders | Functional but generic copy ("Quality service since day one") |
+| adhd-streak.surge.sh | ✅ Renders | Full PWA tracker UI. Missing icons. App functional. |
+
+Screenshots: `AUTOMATIONS/agent/swarm/screenshots/` — hilal_surge_sh.png, prayerlock_app.png, galaxia_dental_austin.png, adhd_streak.png
+
+---
+
+## Recommended Actions (Cycle 2 Priority)
+
+1. **[IMMEDIATE]** Fix `printmaxx-lead-magnets.surge.sh` → `printmaxx-magnets.surge.sh` in footers of hilal.surge.sh and prayerlock-app.surge.sh. Ramadan = active season.
+2. **[HIGH]** Retire broken DNS URL. Redeploy as `miami-local-plumbing-experts.surge.sh`
+3. **[MEDIUM]** Add icon-192.png + favicon.ico to adhd-streak.surge.sh
+4. **[MEDIUM]** Add 11 new sites to deployed_assets.json
+5. **[LOW]** Improve copy quality on Austin/preview local biz sites before client outreach
+
+---
+
+*Cycle 2 completed: 2026-03-07T18:18 UTC | playwright_tester agent*

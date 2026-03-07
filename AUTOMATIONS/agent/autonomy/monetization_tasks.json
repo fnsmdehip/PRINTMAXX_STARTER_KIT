@@ -1,0 +1,50 @@
+[
+  {
+    "task": "Add analytics script to all pages",
+    "source": "monetization_audit",
+    "status": "PENDING",
+    "created_at": "2026-03-07T12:07:52.401431"
+  },
+  {
+    "task": "Add affiliate links to SleepMaxx, ColdMaxx, MealMaxx",
+    "source": "monetization_audit",
+    "status": "PENDING",
+    "created_at": "2026-03-07T12:07:52.401440"
+  },
+  {
+    "task": "Redeploy updated pages to surge.sh",
+    "source": "monetization_audit",
+    "status": "PENDING",
+    "created_at": "2026-03-07T12:07:52.401441"
+  },
+  {
+    "task": "Store: Replace mailto: with Gumroad links (blocked on account)",
+    "source": "monetization_audit",
+    "status": "BLOCKED",
+    "created_at": "2026-03-07T12:07:52.401484"
+  },
+  {
+    "task": "Analytics: Add Plausible/GA to all 7 pages",
+    "source": "monetization_audit",
+    "status": "PENDING",
+    "created_at": "2026-03-07T12:07:52.401486"
+  },
+  {
+    "task": "ColdMaxx: Add payment link for $12/mo (blocked on Stripe)",
+    "source": "monetization_audit",
+    "status": "BLOCKED",
+    "created_at": "2026-03-07T12:07:52.401487"
+  },
+  {
+    "task": "SleepMaxx: Add affiliate links for WHOOP, Oura Ring",
+    "source": "monetization_audit",
+    "status": "PENDING",
+    "created_at": "2026-03-07T12:07:52.401489"
+  },
+  {
+    "task": "MealMaxx + SleepMaxx: Replace email CTAs with payment links on Pro sections",
+    "source": "monetization_audit",
+    "status": "PENDING",
+    "created_at": "2026-03-07T12:07:52.401490"
+  }
+]

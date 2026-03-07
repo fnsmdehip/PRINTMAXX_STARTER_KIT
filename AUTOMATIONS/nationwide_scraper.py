@@ -349,7 +349,7 @@ def run_nationwide(categories, max_cities=200, limit_per_city=30,
                 try:
                     if int(row.get("website_score", "100")) <= 30:
                         hot += 1
-                except: pass
+                except (ValueError, KeyError): pass
         print(f"  HOT leads (0-30): {hot}")
 
     print(f"\n  Next: python3 mass_outreach.py --input {leads_dir / 'MASTER_LEADS.csv'} --template dental")

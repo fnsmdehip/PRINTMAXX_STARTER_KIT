@@ -1717,3 +1717,16 @@ the hiring manager only rejected it because the writing was "too AI obvious."
 
 meanwhile most small businesses are
 
+
+
+---
+
+## Pending Enhancement (ALPHA17368, Score: 43)
+
+**Source:** @gregisenberg (high-signal-accounts) | **URL:** https://x.com/gregisenberg/status/2028491519271780665
+**Added:** 2026-03-07T12:16:57-05:00
+
+this is one of those stories that sounds fake but is inspirational 
+
+teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead of fundraising, grow to ~15m downloads and $30m+ in revenue, and sell to
+

@@ -1,17 +1,12 @@
 # PRINTMAXX PRODUCTION REPORT
-## 2026-03-07 | Generated 2026-03-07 06:30:00
+## 2026-03-07 | Generated 2026-03-07 13:30:01
 
 ---
 
 ## FACTORY OUTPUT TODAY
 
-### Assets Generated (Gemini/Nano Banana)
-- **Images created:** 10
-- **Errors:** 0
-
-### Apps Deployed (surge.sh)
-- **Deployed:** 0
-- **Skipped:** surge_not_installed
+### Assets Generated
+- **Status:** Not run this cycle (no Gemini API key or --assets not used)
 
 ### Ecom Listings Generated
 - **Listings created:** 20
@@ -19,8 +14,8 @@
 
 ### Content Pipeline
 - **Tweets drafted today:** 0
-- **Pending review:** 122
-- **Ready to post:** 0
+- **Pending review:** 155
+- **Ready to post:** 1
 - **Posted:** 0
 - **Auto-generated files total:** 31
 
@@ -31,8 +26,8 @@
 ### Scanning Layer (WORKING)
 - **Ecom arb opportunities:** 3491 total, 0 added today
 - **High-margin products (>30%):** 462
-- **Freelance demand posts:** 15098 total
-- **Alpha entries:** 16400 total, 66 pending review
+- **Freelance demand posts:** 15146 total
+- **Alpha entries:** 10532 total, 0 pending review
 - **Trend signals:** 625 total
 
 ### Production Layer (THIS FACTORY)
@@ -53,7 +48,8 @@
 ## TOP BLOCKERS
 
 1. **NO ACCOUNTS CREATED** — Cannot list products, send emails, or post content without platform accounts. Start: https://gumroad.com → https://fiverr.com → https://upwork.com
-3. **ZERO EMAILS SENT** — 489282 emails drafted but 0 sent. Need email infra (DeliverOn $23/mo or Instantly $30/mo)
+2. **ASSET GENERATION** — Run `--browser-assets` to generate via ImageFX (free, no API billing needed) or enable billing at https://ai.google.dev for API mode
+3. **ZERO EMAILS SENT** — 502251 emails drafted but 0 sent. Need email infra (DeliverOn $23/mo or Instantly $30/mo)
 4. **$0 REVENUE** — Everything is ready to sell but nothing is listed on any platform
 
 ---

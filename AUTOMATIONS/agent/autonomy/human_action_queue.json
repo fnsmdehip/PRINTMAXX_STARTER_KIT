@@ -1,0 +1,58 @@
+[
+  {
+    "priority": 1,
+    "title": "31 PRODUCT LISTINGS READY - ZERO ON ANY PLATFORM",
+    "severity": "CRITICAL",
+    "action": "Upload to Gumroad (13 products), Fiverr (10 gigs), Whop (8 listings). All copy/descriptions ready in PRODUCTS/GUMROAD_INSTANT_UPLOAD/, PRODUCTS/FIVERR_INSTANT_UPLOAD/, PRODUCTS/WHOP_INSTANT_UPLOAD/",
+    "revenue_impact": "Even 1 sale/day at $29 avg = $870/mo. Zero effort - copy/paste listings.",
+    "source": "gap_report_20260307_cycle4"
+  },
+  {
+    "priority": 2,
+    "title": "16 COLD EMAILS DRAFTED - NOT SENT",
+    "severity": "CRITICAL",
+    "action": "Open AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md. Copy each email. Send from warmed email account. 16 personalized emails targeting local biz with specific website issues.",
+    "revenue_impact": "$1,500-3,000 per client close. 1 close from 16 = $1,500 minimum.",
+    "source": "gap_report_20260307_cycle4"
+  },
+  {
+    "priority": 3,
+    "title": "210 SOCIAL POSTS IN QUEUE - NOT DISTRIBUTED",
+    "severity": "CRITICAL",
+    "action": "Upload CONTENT/social/BUFFER_UPLOAD_MAR7.csv (147 rows) to Buffer. Remaining 63 posts in CONTENT/social/posting_queue/ need manual scheduling.",
+    "revenue_impact": "Content drives traffic. 210 posts = weeks of organic reach sitting idle.",
+    "source": "gap_report_20260307_cycle4"
+  },
+  {
+    "priority": 4,
+    "title": "11 VIDEOS GENERATED - NOT UPLOADED",
+    "severity": "HIGH",
+    "action": "Upload MP4 files from CONTENT/social/videos/ to Twitter, TikTok, LinkedIn, YouTube Shorts. Caption .txt files included.",
+    "revenue_impact": "Video content has 3-5x higher engagement than text. 11 videos = 2 weeks of video content.",
+    "source": "gap_report_20260307_cycle4"
+  },
+  {
+    "priority": 5,
+    "title": "1,178 LEADS ACROSS 37 CSVs - ONLY 22 SCORED",
+    "severity": "HIGH",
+    "action": "Run lead scoring pipeline. Generate cold emails for top 100 leads. Verticals: dentists (307), lawyers (310), plumbers (212), restaurants (349).",
+    "revenue_impact": "At 2% close rate = ~24 clients x $2,000 = $48,000 pipeline.",
+    "source": "gap_report_20260307_cycle4"
+  },
+  {
+    "priority": 6,
+    "title": "43 APPROVED ALPHA - OPS NOT GENERATED",
+    "severity": "HIGH",
+    "action": "Run: python3 AUTOMATIONS/alpha_auto_processor.py --process-new",
+    "revenue_impact": "Actionable intelligence sitting idle. Includes micro info products, paywall optimization, AI influencer methods.",
+    "source": "gap_report_20260307_cycle4"
+  },
+  {
+    "priority": 7,
+    "title": "RESOLVED: hilal.surge.sh was 404 - NOW FIXED",
+    "severity": "RESOLVED",
+    "action": "Deployed this cycle. hilal.surge.sh now returns 200.",
+    "revenue_impact": "Ramadan tracker marketing page accessible during Ramadan.",
+    "source": "gap_report_20260307_cycle4"
+  }
+]
