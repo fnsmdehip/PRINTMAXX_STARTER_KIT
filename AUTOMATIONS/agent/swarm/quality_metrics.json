@@ -1,0 +1,67 @@
+{
+  "last_cycle": "2026-03-07T09:15:00Z",
+  "cycle_summary": {
+    "total_items_reviewed": 82,
+    "passed": 73,
+    "fixed_and_approved": 6,
+    "blocked": 1,
+    "flagged_for_review": 2,
+    "pass_rate": "96.3%"
+  },
+  "content_review": {
+    "files_scanned": 20,
+    "tweets_reviewed": 49,
+    "threads_reviewed": 4,
+    "reddit_posts_reviewed": 8,
+    "linkedin_posts_reviewed": 5,
+    "outreach_emails_reviewed": 10,
+    "em_dash_violations": 19,
+    "em_dashes_fixed": 19,
+    "banned_word_violations": 1,
+    "banned_words_fixed": 1,
+    "false_quality_gate_pass": 1,
+    "note": "reddit_posts_20260307.md claimed [x] Zero em dashes but had 18 em dashes in body text"
+  },
+  "deployment_review": {
+    "sites_checked": 5,
+    "sites_live": 4,
+    "sites_down": 1,
+    "down_sites": ["scripture-streak.surge.sh (HTTP 404)"],
+    "meta_tags_verified": ["coldmaxx-app.surge.sh", "prayerlock-app.surge.sh"],
+    "meta_tags_pass": true
+  },
+  "image_review": {
+    "images_checked": 21,
+    "correct_dimensions": 21,
+    "text_readable": true,
+    "professional_quality": true,
+    "all_under_500kb": true,
+    "categories": {
+      "product_covers_1280x720": 5,
+      "social_cards_1200x675": 5,
+      "quote_cards_1080x1080": 3,
+      "niche_cards_1200x675": 3,
+      "og_images_1200x630": 1,
+      "misc": 4
+    },
+    "minor_issues": ["quote_publish_gap.png has excess bottom whitespace"]
+  },
+  "outreach_review": {
+    "emails_reviewed": 10,
+    "personalized": true,
+    "under_100_words": true,
+    "human_sounding": true,
+    "em_dashes_in_emails": 15,
+    "note": "Em dashes used throughout outreach emails. Lower priority than social but should be cleaned in next cycle."
+  },
+  "most_common_failures": [
+    "em_dashes_in_published_copy (19 instances across 3 files)",
+    "false_checklist_pass (1 file claimed zero em dashes, had 18)",
+    "banned_word_landscape (1 instance in opp_scanner_posts)",
+    "site_down_404 (scripture-streak.surge.sh)"
+  ],
+  "trend": {
+    "direction": "improving",
+    "note": "Generated tweet content (5 files, 49 tweets) was clean on first pass. Issues concentrated in reddit/linkedin distribution copy. The core content pipeline is producing quality output. Distribution formatting is the weak link."
+  }
+}

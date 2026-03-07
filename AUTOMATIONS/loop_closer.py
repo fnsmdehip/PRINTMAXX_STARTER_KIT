@@ -472,6 +472,16 @@ def execute_decisions(dry_run=False):
         action_type = decision.get("decision", decision.get("type", decision.get("action", ""))).lower()
         target = decision.get("agent", decision.get("target", decision.get("op_id", "unknown")))
         params = decision.get("params", decision.get("details", {}))
+        # Handle brain_decisions format: "new_interval": "12h" → params {"hours": 12.0}
+        if not params and "new_interval" in decision:
+            raw = decision["new_interval"]
+            if isinstance(raw, str) and raw.endswith("h"):
+                try:
+                    params = {"hours": float(raw[:-1])}
+                except ValueError:
+                    pass
+            elif isinstance(raw, (int, float)):
+                params = {"hours": float(raw)}
         source = decision.get("source", "unknown")
 
         # Skip already executed

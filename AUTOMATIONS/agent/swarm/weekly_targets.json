@@ -45,14 +45,27 @@
     },
     "apps_with_email_capture": {
       "target": 3,
-      "actual": 0,
+      "actual": 3,
       "owner": "AGENT",
       "priority": "P2",
-      "apps": ["prayerlock-app.surge.sh", "focuslock-app.surge.sh", "coldmaxx-app.surge.sh"]
+      "apps": ["prayerlock-app.surge.sh", "focuslock-app.surge.sh", "coldmaxx-app.surge.sh"],
+      "note": "Email capture added + DEPLOYED to surge.sh by META EXECUTOR 2026-03-07. All 3 live and returning 200."
+    },
+    "promo_content_generated": {
+      "target": 10,
+      "actual": 10,
+      "owner": "AGENT",
+      "priority": "P1",
+      "note": "10 promotional tweets created by META EXECUTOR 2026-03-07 in posting_queue/"
     }
   },
   "last_week_results": {
-    "note": "First week of tracking. No prior targets to compare against.",
-    "revenue_generated": 0
+    "note": "Week of 2026-03-06. All targets missed. Human has not created marketplace accounts.",
+    "revenue_generated": 0,
+    "gumroad_listed": 0,
+    "fiverr_listed": 0,
+    "cold_emails_sent": 0,
+    "content_posted": 0,
+    "blocker": "HUMAN ACTION REQUIRED: Create Stripe + Gumroad + Fiverr accounts. See AUTOMATIONS/agent/swarm/urgent_actions.md"
   }
 }

@@ -209,3 +209,27 @@ Here's a playbook:
 • One profile = One account = One browser = One location
 • Set up in settings for
 
+
+
+---
+
+## Pending Enhancement (ALPHA16386, Score: 23)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2029633068773036162
+**Added:** 2026-03-07T02:16:23-05:00
+
+New account in. Great. Now what...?
+
+How to know when to give up or when to double down.
+
+(a rule of thumb 
+@iamgdsa
+ got from launching 500+ accounts from scratch)
+
+A good start looks like:
+
+> 8/10 videos
+> High view variation (2/3x median)
+> 1 video at 10x median
+> Most videos
+

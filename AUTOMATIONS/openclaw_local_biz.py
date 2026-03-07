@@ -154,11 +154,16 @@ def search_businesses(city, niche, limit=20):
 
             if not title or not actual:
                 continue
-            # skip aggregator sites
+            # skip aggregator sites and ad redirects
+            if "duckduckgo.com/y.js" in actual or "bing.com/aclick" in actual:
+                continue
             dominated = ["yelp.com", "yellowpages.com", "facebook.com",
                          "mapquest.com", "bbb.org", "angi.com",
                          "thumbtack.com", "google.com", "tripadvisor.com",
-                         "nextdoor.com", "healthgrades.com", "zocdoc.com"]
+                         "nextdoor.com", "healthgrades.com", "zocdoc.com",
+                         "homeadvisor.com", "groupon.com", "duckduckgo.com",
+                         "bing.com", "bestprosintown.com", "airtasker.com",
+                         "buildzoom.com", "threebestrated.com"]
             domain = urllib.parse.urlparse(actual).hostname or ""
             if any(d in domain for d in dominated):
                 continue
@@ -364,6 +369,15 @@ _SVC = {
     "auto repair": ["Oil Change","Brake Service","Engine Repair","Transmission","AC Service","Diagnostics"],
     "roofing": ["Roof Repair","Roof Replacement","Leak Repair","Storm Damage","Free Inspection","Gutter Service"],
 }
+_SVC.update({
+    "towing": ["24/7 Emergency Towing", "Flatbed Towing", "Roadside Assistance", "Jump Start Service", "Lockout Service", "Long Distance Towing"],
+    "locksmith": ["Emergency Lockout", "Lock Rekeying", "Key Duplication", "Smart Lock Install", "Commercial Locks", "Car Key Replacement"],
+    "pest control": ["General Pest Control", "Termite Treatment", "Rodent Removal", "Bed Bug Treatment", "Mosquito Control", "Wildlife Removal"],
+    "carpet cleaning": ["Deep Steam Cleaning", "Stain Removal", "Pet Odor Treatment", "Upholstery Cleaning", "Tile & Grout Cleaning", "Move-Out Cleaning"],
+    "pressure washing": ["House Washing", "Driveway Cleaning", "Deck Restoration", "Roof Soft Wash", "Commercial Pressure Wash", "Fence Cleaning"],
+    "handyman": ["Home Repairs", "Drywall & Painting", "Furniture Assembly", "Door & Window Repair", "Tile Work", "Deck & Fence Repair"],
+    "tree service": ["Tree Removal", "Tree Trimming", "Stump Grinding", "Emergency Storm Cleanup", "Land Clearing", "Tree Health Assessment"],
+})
 NICHE_SERVICES = {**_SVC, "dental": _SVC["dentist"], "plumbing": _SVC["plumber"]}
 
 DEFAULT_SERVICES = ["Professional Service", "Quality Results", "Free Estimates", "Experienced Team", "Licensed & Insured", "Satisfaction Guaranteed"]
@@ -422,7 +436,7 @@ def deploy_surge(site_dir, domain_slug):
 
 
 def build_sites(deploy=True):
-    """Build preview sites for all D/F grade leads without a preview_url."""
+    """Build preview sites for all C/D/F grade leads without a preview_url."""
     if not LEADS_CSV.exists():
         log("No leads CSV found. Run --discover first.")
         return 0
@@ -437,7 +451,7 @@ def build_sites(deploy=True):
     for i, row in enumerate(rows):
         if _shutdown:
             break
-        if row.get("grade", "C") not in ("D", "F"):
+        if row.get("grade", "B") not in ("C", "D", "F"):
             continue
         if row.get("preview_url", "").strip():
             continue
@@ -537,7 +551,7 @@ def generate_outreach():
 
     outreach_rows = []
     for row in rows:
-        if row.get("grade", "C") not in ("D", "F"):
+        if row.get("grade", "B") not in ("C", "D", "F"):
             continue
         if not row.get("preview_url", "").strip():
             continue

@@ -1,0 +1,56 @@
+
+[2026-03-07 03:16] QUALITY ALERT — 2 RED site(s) detected:
+  ✗ Local Plumbing Miami (zip) | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Exception: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
+  ✗ PrintMaxx Local Demos | https://printmaxx-local-demos.surge.sh | HTTP 404
+
+[2026-03-07 03:18] QUALITY ALERT — 2 RED site(s) detected:
+  ✗ Local Plumbing Miami (zip) | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Exception: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
+  ✗ PrintMaxx Local Demos | https://printmaxx-local-demos.surge.sh | HTTP 404
+
+[2026-03-07 03:20] QUALITY ALERT — 2 RED site(s) detected:
+  ✗ Local Plumbing Miami (zip) | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Exception: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
+  ✗ PrintMaxx Local Demos | https://printmaxx-local-demos.surge.sh | HTTP 404
+
+[2026-03-07 09:15] QUALITY GATE CYCLE COMPLETE — Results:
+
+  BLOCKED:
+  ✗ scripture-streak.surge.sh returns HTTP 404
+    Impact: Referenced in 8+ content pieces across reddit, HN, tweets
+    Action: REDEPLOY before publishing any content linking to it
+    Blocked content: reddit_posts_20260307.md, hn_tweetstorms_20260307.md, cross_niche_adaptations.md
+
+  FIXED (19 em dashes removed, 1 banned word replaced):
+  ✓ reddit_posts_20260307.md: 18 em dashes fixed (file falsely claimed "[x] Zero em dashes")
+  ✓ linkedin_posts_20260307.md: 2 em dashes fixed in post body text
+  ✓ LINKEDIN_ASSET_POSTS_20260307.md: 2 em dashes fixed (duplicate of above)
+  ✓ opp_scanner_posts_20260307.md: "landscape" (banned word) replaced with "space"
+
+  PASSED (no fixes needed):
+  ✓ tweets_batch_alpha_intel.md (12 tweets) CLEAN
+  ✓ tweets_building_in_public.md (14 tweets) CLEAN
+  ✓ tweets_hn_ph_intel.md (5 tweets) CLEAN
+  ✓ tweets_ih_alpha_gold.md (12 tweets) CLEAN
+  ✓ cross_niche_adaptations.md (11 pieces) CLEAN
+  ✓ compound_building_trap_mar7.txt (7 tweets) CLEAN
+  ✓ research_cycle_20260307_0300.md (7 tweets + thread) CLEAN
+  ✓ All 4 READY_TO_POST scheduled tweets (mar7) CLEAN
+  ✓ All 21 generated images: correct dimensions, readable, professional
+  ✓ 3 remotion videos present in output directory
+  ✓ App meta tags (coldmaxx, prayerlock) proper og/twitter/viewport tags
+
+  FLAGGED (lower priority):
+  ! outreach_drafts/batch_20260307.md: 15 em dashes in email copy. Emails are personalized, under 100 words, human-sounding. Lower priority for email vs social.
+  ! quote_publish_gap.png: excess bottom whitespace. Functional but could be tighter.
+
+  STATS: 82 items reviewed | 96.3% pass rate | 0 banned AI vocabulary in core tweets
+  TREND: Core tweet pipeline is CLEAN. Issues concentrated in distribution formatting (reddit/linkedin).
+
+[2026-03-07 08:30] QUALITY ALERT — 1 RED site requires HUMAN action:
+  ✗ Local Plumbing Miami (zip) | local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | DNS NOT RESOLVED — domain label 65 chars, exceeds RFC 1035 63-char max
+  → Fix: Redeploy with shorter domain name (≤ 63 chars)
+  → Duplicate content live at: plumbers-just-enter-your-zip-code-miami-fl.surge.sh (200 OK)
+
+[2026-03-07 08:30] AUTO-FIXED (no human action needed):
+  ✓ focuslock-app.surge.sh — sw.js missing → added and redeployed
+  ✓ focuslock-web.surge.sh — sw.js missing → added and redeployed
+  ✓ printmaxx-local-demos.surge.sh — 404 → rebuilt hub page and redeployed

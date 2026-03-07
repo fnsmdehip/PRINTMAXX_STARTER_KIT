@@ -1401,3 +1401,30 @@ Claude Migration as a Service playbook: Pick vertical (car dealerships/CRE broke
 
 park.io: domain backorder service for hacker domains (.io .ly .me). Revenue from automation removing manual work. Secondary product file.io gaining traction. Key lesson: automate everything so you can
 
+
+
+---
+
+## Pending Enhancement (ALPHA16322, Score: 31)
+
+**Source:** @levelsio (high-signal-accounts) | **URL:** https://x.com/levelsio/status/2029708985008337342
+**Added:** 2026-03-07T02:16:23-05:00
+
+http://
+photoai.com is a 40,870 line file called index.php
+
+$105,000/mo revenue
+
+$80,000/mo profit
+
+
+
+---
+
+## Pending Enhancement (ALPHA16416, Score: 24)
+
+**Source:** @DeItaone (high-signal-accounts) | **URL:** https://x.com/DeItaone/status/2029620790350553189
+**Added:** 2026-03-07T02:16:23-05:00
+
+ANDURIL EXPECTS TO ROUGHLY DOUBLE REVENUE THIS YEAR TO ABOUT $4.3 BILLION - THE INFORMATION
+

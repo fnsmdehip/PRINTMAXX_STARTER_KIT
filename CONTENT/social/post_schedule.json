@@ -1,0 +1,51 @@
+{
+  "limits": {
+    "twitter": {
+      "max_per_day": 5,
+      "min_hours_between": 2
+    },
+    "linkedin": {
+      "max_per_day": 2,
+      "min_hours_between": 4
+    },
+    "reddit": {
+      "max_per_day_per_subreddit": 1,
+      "min_hours_between": 6
+    }
+  },
+  "posting_method": "manual_buffer",
+  "api_status": {
+    "twitter": "no_api_keys",
+    "linkedin": "no_api_keys",
+    "reddit": "no_api_keys"
+  },
+  "accounts": {
+    "@PRINTMAXXER": {
+      "platform": "twitter",
+      "approved_source": "CONTENT/social/APPROVED_POSTS_MAR6.csv",
+      "schedule": [
+        {"date": "2026-03-07", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_0730.txt"},
+        {"date": "2026-03-07", "time": "11:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1100.txt"},
+        {"date": "2026-03-07", "time": "14:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1430.txt"},
+        {"date": "2026-03-07", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1800.txt"},
+        {"date": "2026-03-08", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_0730.txt"},
+        {"date": "2026-03-08", "time": "11:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1100.txt"},
+        {"date": "2026-03-08", "time": "14:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1430.txt"},
+        {"date": "2026-03-08", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1800.txt"},
+        {"date": "2026-03-09", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_0730.txt"},
+        {"date": "2026-03-09", "time": "11:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_1100.txt"},
+        {"date": "2026-03-09", "time": "14:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_1430.txt"},
+        {"date": "2026-03-09", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_1800.txt"},
+        {"date": "2026-03-10", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_0730.txt"},
+        {"date": "2026-03-10", "time": "11:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_1100.txt"},
+        {"date": "2026-03-10", "time": "14:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_1430.txt"},
+        {"date": "2026-03-10", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_1800.txt"},
+        {"date": "2026-03-11", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_0730.txt"},
+        {"date": "2026-03-11", "time": "11:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1100.txt"},
+        {"date": "2026-03-11", "time": "14:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1430.txt"},
+        {"date": "2026-03-11", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1800.txt"}
+      ]
+    }
+  },
+  "last_updated": "2026-03-07T00:00:00Z"
+}

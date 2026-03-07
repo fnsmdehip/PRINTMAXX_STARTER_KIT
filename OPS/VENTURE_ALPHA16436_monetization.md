@@ -1,15 +1,25 @@
 # Venture Opportunity: ALPHA16436
 
-**Source:** IndieHackers - Interview
-**URL:** https://www.indiehackers.com/post/providing-measurable-value-to-customers-to-bring-in-3k-mo-9UXVMnkPsbtLjNSmPgYE
+**Source:** @lookonchain (high-signal-accounts)
+**URL:** https://x.com/lookonchain/status/2029742080210391121
 **Category:** MONETIZATION
-**Score:** 42/100
-**Created:** 2026-03-07T00:41:17-05:00
+**Score:** 52/100
+**Created:** 2026-03-07T03:02:27-05:00
 **Status:** NEEDS_EVALUATION
 
 ## Opportunity Details
 
-Built trading algorithm SaaS with measurable ROI. $3k/mo through direct sales to traders. Cold email to quantitative traders. Key: show measurable $ return and sales become easy. ROI-positive product 
+Someone created a new wallet "Idothisfromtimetotime" 3 hours ago and spent $50K betting that Iran will NOT close the Strait of Hormuz by March 31.
+
+Right now, he's already down $18K(-36.15%).
+
+Did he get the wrong intel?
+
+
+https://
+polymarket.com/0xe81352293f82
+e421a04d670ef52c8570ffab1e91
+…
 
 ## Estimated Revenue Potential
 

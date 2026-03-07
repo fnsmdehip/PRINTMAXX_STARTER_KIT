@@ -4652,3 +4652,62 @@ The app exposes if your partner is a Gooner by telling you when they visit a cor
 
 Connected agriculture platform linking farmers ag retail and logistics. $300k/mo Feb 2026 claimed. AgTech vertical SaaS. Linking supply chain for agricultural sector.
 
+
+
+---
+
+## Pending Enhancement (ALPHA16327, Score: 20)
+
+**Source:** @levelsio (high-signal-accounts) | **URL:** https://x.com/levelsio/status/2030024294894358772
+**Added:** 2026-03-07T02:16:23-05:00
+
+I'm not at all convinced by the wishful thinkers that AI is causing software development jobs to grow right now
+
+More realistically I think is ~90% are fired and the ~10% top devs are kept who (with AI) do the job of 10 devs in 1
+
+Then besides that you do get natural growth of
+
+
+
+---
+
+## Pending Enhancement (ALPHA16352, Score: 22)
+
+**Source:** @iamgdsa (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2029527423315058926
+**Added:** 2026-03-07T02:16:23-05:00
+
+Short-form is more competitive.
+
+Algorithms are sharper.
+
+Audience attention is thinner.
+
+But the opportunity is still massive, if you know how to play it.
+
+That's why we started The Growth Lab Live (and why we're doing it again for the 4th time).
+
+Your unfair advantage starts
+
+
+
+---
+
+## Pending Enhancement (ALPHA16470, Score: 28)
+
+**Source:** @corbin_braun (high-signal-accounts) | **URL:** https://x.com/corbin_braun/status/2029667596996686005
+**Added:** 2026-03-07T03:02:27-05:00
+
+It is actually crazy building this software from the ground up.
+
+I don't even need plans or roadmaps anymore.
+
+I just know from experience what is next.
+
+Then it is just
+
+go go go.
+
+If you know how to code and have distribution,
+
+congrats, you are a millionaire.
+

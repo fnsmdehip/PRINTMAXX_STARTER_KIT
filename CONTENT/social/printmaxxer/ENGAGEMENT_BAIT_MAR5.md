@@ -93,12 +93,12 @@ i keep seeing people hype openclaw but from what i can tell it's basically a man
 
 not hating, genuinely curious if there's something openclaw does that this pattern can't. my overnight runs produce 40+ files per session with code review and tests passing.
 
-2. **Title:** "built a subconscious memory system for claude code — it remembers decisions across sessions"
+2. **Title:** "built a subconscious memory system for claude code. it remembers decisions across sessions"
 **Body:** just finished building this and it's already changing how i work. two bash scripts:
 
-session_start_injector.sh — reads a JSONL memories file, injects the top 30 memories grouped by category (PREFERENCE, DECISION, STRATEGIC, LEARNED, etc.) into the session via a hook.
+session_start_injector.sh - reads a JSONL memories file, injects the top 30 memories grouped by category (PREFERENCE, DECISION, STRATEGIC, LEARNED, etc.) into the session via a hook.
 
-session_end_processor.sh — grabs the session transcript, launches a background `claude -p` process that extracts key memories with confidence scores.
+session_end_processor.sh - grabs the session transcript, launches a background `claude -p` process that extracts key memories with confidence scores.
 
 the result: claude code remembers that i prefer X over Y, that i made decision Z last week, that approach A failed. without me having to re-explain every session.
 
@@ -113,7 +113,7 @@ ended up with: python scripts + argparse + cron. that's it. 248 scripts. 156K li
 
 frameworks add complexity that solo devs don't need. you don't need multi-agent orchestration. you need one agent that reads a file, does a thing, and writes the output. bash can orchestrate that.
 
-the only framework worth using is claude code itself — it's already an agent with file access, terminal, and tool use. just point it at a prompt file and let it run.
+the only framework worth using is claude code itself. it's already an agent with file access, terminal, and tool use. just point it at a prompt file and let it run.
 
 am i being a boomer about this or does anyone else feel this way?
 
@@ -123,9 +123,9 @@ am i being a boomer about this or does anyone else feel this way?
 **Body:** built a script-to-SaaS analyzer. it reads the AST of every python file, checks for CLI interface (argparse), estimates market size, defensibility, and recurring potential. scores 0-100.
 
 results surprised me:
-1. local biz website scraper (95) — pulls google maps data, scores websites, generates audits
-2. daily nocost RBI scanner (95) — finds $0-capital revenue opportunities from public data
-3. local biz pipeline (94) — full CRM from scrape to email sequence to follow-up
+1. local biz website scraper (95) - pulls google maps data, scores websites, generates audits
+2. daily nocost RBI scanner (95) - finds $0-capital revenue opportunities from public data
+3. local biz pipeline (94) - full CRM from scrape to email sequence to follow-up
 
 the pattern: picks-and-shovels tools that solve boring problems for boring businesses. not sexy AI wrappers.
 

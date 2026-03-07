@@ -1,24 +1,24 @@
 {
-  "last_decision_cycle": "2026-03-07T01:21:40.507915",
-  "last_feedback_cycle": "2026-03-07T01:21:40.511004",
-  "last_pipeline_cycle": "2026-03-07T01:21:40.512003",
-  "decisions_executed": 1,
-  "feedback_updates": 24,
+  "last_decision_cycle": "2026-03-07T03:21:31.370737",
+  "last_feedback_cycle": "2026-03-07T03:21:31.378728",
+  "last_pipeline_cycle": "2026-03-07T03:21:31.462786",
+  "decisions_executed": 10,
+  "feedback_updates": 72,
   "pipeline_advances": 0,
   "agent_scores": {
     "gap_hunter": {
-      "total_runs": 0,
-      "produced_output": 0,
-      "led_to_action": 0,
+      "total_runs": 2,
+      "produced_output": 2,
+      "led_to_action": 4,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 160.0
     },
     "opportunity_scanner": {
-      "total_runs": 0,
-      "produced_output": 0,
+      "total_runs": 2,
+      "produced_output": 2,
       "led_to_action": 0,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 40.0
     },
     "competitor_stalker": {
       "total_runs": 0,
@@ -28,74 +28,74 @@
       "effectiveness": 0.0
     },
     "asset_deployer": {
-      "total_runs": 1,
-      "produced_output": 0,
-      "led_to_action": 1,
+      "total_runs": 3,
+      "produced_output": 2,
+      "led_to_action": 3,
       "led_to_revenue": 0,
-      "effectiveness": 60.0
+      "effectiveness": 116.7
     },
     "content_compounder": {
-      "total_runs": 1,
-      "produced_output": 1,
-      "led_to_action": 1,
+      "total_runs": 3,
+      "produced_output": 3,
+      "led_to_action": 5,
       "led_to_revenue": 0,
-      "effectiveness": 100.0
+      "effectiveness": 140.0
     },
     "lead_machine": {
-      "total_runs": 0,
-      "produced_output": 0,
-      "led_to_action": 0,
+      "total_runs": 2,
+      "produced_output": 2,
+      "led_to_action": 2,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 100.0
     },
     "seo_aso_optimizer": {
       "total_runs": 0,
       "produced_output": 0,
-      "led_to_action": 0,
+      "led_to_action": 2,
       "led_to_revenue": 0,
       "effectiveness": 0.0
     },
     "conversion_optimizer": {
       "total_runs": 0,
       "produced_output": 0,
-      "led_to_action": 0,
+      "led_to_action": 2,
       "led_to_revenue": 0,
       "effectiveness": 0.0
     },
     "quality_enforcer": {
-      "total_runs": 0,
-      "produced_output": 0,
+      "total_runs": 2,
+      "produced_output": 2,
       "led_to_action": 0,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 40.0
     },
     "trend_synthesizer": {
       "total_runs": 0,
       "produced_output": 0,
-      "led_to_action": 0,
+      "led_to_action": 2,
       "led_to_revenue": 0,
       "effectiveness": 0.0
     },
     "cross_pollinator": {
-      "total_runs": 0,
-      "produced_output": 0,
-      "led_to_action": 0,
+      "total_runs": 2,
+      "produced_output": 2,
+      "led_to_action": 4,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 160.0
     },
     "revenue_tracker": {
       "total_runs": 0,
       "produced_output": 0,
-      "led_to_action": 0,
+      "led_to_action": 2,
       "led_to_revenue": 0,
       "effectiveness": 0.0
     },
     "system_healer": {
-      "total_runs": 1,
-      "produced_output": 1,
-      "led_to_action": 1,
+      "total_runs": 3,
+      "produced_output": 3,
+      "led_to_action": 5,
       "led_to_revenue": 0,
-      "effectiveness": 100.0
+      "effectiveness": 140.0
     },
     "data_janitor": {
       "total_runs": 0,
@@ -105,25 +105,25 @@
       "effectiveness": 0.0
     },
     "distribution_engine": {
-      "total_runs": 0,
-      "produced_output": 0,
-      "led_to_action": 0,
+      "total_runs": 2,
+      "produced_output": 2,
+      "led_to_action": 2,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 100.0
     },
     "inbound_maximizer": {
-      "total_runs": 0,
+      "total_runs": 2,
       "produced_output": 0,
-      "led_to_action": 0,
+      "led_to_action": 2,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 120.0
     },
     "swarm_brain": {
-      "total_runs": 0,
-      "produced_output": 0,
+      "total_runs": 2,
+      "produced_output": 2,
       "led_to_action": 0,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 40.0
     },
     "video_factory": {
       "total_runs": 0,
@@ -133,46 +133,46 @@
       "effectiveness": 0.0
     },
     "image_factory": {
-      "total_runs": 0,
-      "produced_output": 0,
-      "led_to_action": 0,
+      "total_runs": 2,
+      "produced_output": 2,
+      "led_to_action": 2,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 100.0
     },
     "quality_gate": {
-      "total_runs": 1,
+      "total_runs": 3,
       "produced_output": 0,
-      "led_to_action": 1,
+      "led_to_action": 5,
       "led_to_revenue": 0,
-      "effectiveness": 60.0
+      "effectiveness": 300.0
     },
     "playwright_tester": {
-      "total_runs": 0,
+      "total_runs": 2,
       "produced_output": 0,
       "led_to_action": 0,
       "led_to_revenue": 0,
       "effectiveness": 0.0
     },
     "alert_dispatcher": {
-      "total_runs": 1,
-      "produced_output": 1,
-      "led_to_action": 0,
+      "total_runs": 3,
+      "produced_output": 3,
+      "led_to_action": 2,
       "led_to_revenue": 0,
-      "effectiveness": 40.0
+      "effectiveness": 80.0
     },
     "social_poster": {
-      "total_runs": 0,
-      "produced_output": 0,
-      "led_to_action": 0,
+      "total_runs": 2,
+      "produced_output": 2,
+      "led_to_action": 2,
       "led_to_revenue": 0,
-      "effectiveness": 0.0
+      "effectiveness": 100.0
     },
     "meta_executor": {
-      "total_runs": 1,
-      "produced_output": 1,
-      "led_to_action": 0,
+      "total_runs": 3,
+      "produced_output": 3,
+      "led_to_action": 4,
       "led_to_revenue": 0,
-      "effectiveness": 40.0
+      "effectiveness": 120.0
     }
   }
 }

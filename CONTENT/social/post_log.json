@@ -1,0 +1,37 @@
+{
+  "log": [
+    {"id": "pm-mar7-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_0730.txt", "chars": 192, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar7-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1100.txt", "chars": 204, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar7-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1430.txt", "chars": 188, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar7-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1800.txt", "chars": 191, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar8-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-08T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_0730.txt", "chars": 181, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar8-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-08T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1100.txt", "chars": 217, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar8-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-08T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1430.txt", "chars": 167, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar8-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-08T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1800.txt", "chars": 171, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar9-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-09T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_0730.txt", "chars": 172, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar9-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-09T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_1100.txt", "chars": 181, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar9-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-09T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_1430.txt", "chars": 214, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar9-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-09T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar9_1800.txt", "chars": 208, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar10-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-10T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_0730.txt", "chars": 228, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar10-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-10T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_1100.txt", "chars": 225, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar10-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-10T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_1430.txt", "chars": 227, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar10-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-10T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar10_1800.txt", "chars": 154, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar11-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_0730.txt", "chars": 209, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar11-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1100.txt", "chars": 212, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar11-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1430.txt", "chars": 206, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar11-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1800.txt", "chars": 221, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null}
+  ],
+  "summary": {
+    "total_posted": 0,
+    "total_queued": 20,
+    "last_post_date": null,
+    "platforms": {
+      "twitter": {"posted": 0, "queued": 20},
+      "linkedin": {"posted": 0, "queued": 0},
+      "reddit": {"posted": 0, "queued": 0}
+    }
+  },
+  "pipeline_bug_notes": "auto-generation pipeline has token parsing bug: tool names extracted as single words. fix needed in tweet_drafter before next batch. also: cross-account template contamination between @repscheme/@selahmoments/@PRINTMAXXER.",
+  "created": "2026-03-07T00:00:00Z",
+  "last_updated": "2026-03-07T00:00:00Z"
+}

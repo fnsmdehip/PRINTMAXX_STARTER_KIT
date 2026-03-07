@@ -26,3 +26,5 @@
 {"ts": "2026-03-07T01:23:58.997836", "mission": "upgrade_night", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}
 {"ts": "2026-03-07T01:25:29.094716", "mission": "hunt_night", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
 {"ts": "2026-03-07T01:25:36.598634", "mission": "safety_night", "result": "success", "duration_s": 7.4, "output": "Git safety commit"}
+{"ts": "2026-03-07T03:00:03.032062", "mission": "health_heal", "result": "success", "duration_s": 2.9, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-07T03:00:03.308095", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 14 response drafts, 17 listing drafts"}

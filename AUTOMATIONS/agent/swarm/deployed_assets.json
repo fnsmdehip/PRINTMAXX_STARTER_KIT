@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-03-07T01:23:00",
-  "total_deployments": 70,
+  "last_updated": "2026-03-07T03:30:00",
+  "total_deployments": 85,
   "all_200": true,
   "summary": {
     "apps": 20,
-    "streak_landing_pages": 13,
-    "local_biz_openclaw": 6,
-    "tools_saas": 12,
-    "demos": 12,
+    "streak_landing_pages": 15,
+    "local_biz_openclaw": 12,
+    "tools_saas": 13,
+    "demos": 19,
     "hubs": 4,
-    "other": 3
+    "other": 2
   },
   "deployments": {
     "core_apps": [
@@ -35,7 +35,9 @@
       {"name": "Scripture Streak (LDS)", "url": "https://scripture-streak-lds.surge.sh", "status": 200, "deployed": "2026-03-07"},
       {"name": "Quran Streak", "url": "https://quran-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
       {"name": "Guru Streak (Sikh)", "url": "https://guru-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
-      {"name": "Torah Streak", "url": "https://torah-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"}
+      {"name": "Torah Streak", "url": "https://torah-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Mormon Streak", "url": "https://mormon-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Sikh Streak", "url": "https://sikh-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"}
     ],
     "tools_saas": [
       {"name": "InvoiceForge", "url": "https://invoiceforge.surge.sh", "status": 200, "deployed": "2026-03-05"},
@@ -49,7 +51,8 @@
       {"name": "Invoice Tracker", "url": "https://invoicetracker.surge.sh", "status": 200, "deployed": "2026-03-05"},
       {"name": "Content Calendar", "url": "https://contentcalendar.surge.sh", "status": 200, "deployed": "2026-03-05"},
       {"name": "SiteScore Analyzer", "url": "https://sitescore-analyzer.surge.sh", "status": 200, "deployed": "2026-02-21"},
-      {"name": "SiteScore App", "url": "https://sitescore-app.surge.sh", "status": 200, "deployed": "2026-02-21"}
+      {"name": "SiteScore App", "url": "https://sitescore-app.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Fiverr Services Hub", "url": "https://fiverr-services-pm.surge.sh", "status": 200, "deployed": "2026-03-07"}
     ],
     "web_marketing_pages": [
       {"name": "PrayerLock Web", "url": "https://prayerlock-web.surge.sh", "status": 200, "deployed": "2026-03-05"},
@@ -79,7 +82,13 @@
       {"name": "Plumber Houston Local", "url": "https://local-plumbing-experts-replace-plumbing-houston-tx.surge.sh", "status": 200, "deployed": "2026-03-07"},
       {"name": "Plumber Miami ZIP", "url": "https://plumbers-just-enter-your-zip-code-miami-fl.surge.sh", "status": 200, "deployed": "2026-03-07"},
       {"name": "Plumber Miami Local", "url": "https://local-plumbing-miami-fl.surge.sh", "status": 200, "deployed": "2026-03-07"},
-      {"name": "Dentist Austin", "url": "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh", "status": 200, "deployed": "2026-03-07"}
+      {"name": "Dentist Austin", "url": "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Handyman Jacksonville", "url": "https://handyman-matters-jacksonville-jacksonville-fl.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Emergency Plumber Jacksonville", "url": "https://jacksonville-emergency-plumber-jacksonville-fl.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Plumbing HVAC Memphis", "url": "https://professional-plumbing-heating-cooling-memphis-tn.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Locksmith Tampa", "url": "https://south-tampa-locksmith-tampa-fl.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Plumber Miami Zip2", "url": "https://miami-plumbing-zip.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Cold Email Calc", "url": "https://cold-email-calc.surge.sh", "status": 200, "deployed": "2026-03-07"}
     ],
     "demos": [
       {"name": "Restaurant Motion", "url": "https://restaurant-motion.surge.sh", "status": 200, "deployed": "2026-02-21"},
@@ -93,7 +102,14 @@
       {"name": "Dental Demo", "url": "https://dental-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
       {"name": "FlowStack Demo", "url": "https://flowstack-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
       {"name": "ShopMetrics Dashboard", "url": "https://shopmetrics-dashboard.surge.sh", "status": 200, "deployed": "2026-02-21"},
-      {"name": "PrintMaxx Demos", "url": "https://printmaxx-demos.surge.sh", "status": 200, "deployed": "2026-02-21"}
+      {"name": "PrintMaxx Demos", "url": "https://printmaxx-demos.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Mike's HVAC Demo", "url": "https://mikes-hvac-demo.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Elite Fitness Demo", "url": "https://elite-fitness-demo.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Smith Family Dentistry Demo", "url": "https://smith-dentistry-demo.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Perfect Lawn Demo", "url": "https://perfect-lawn-demo.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Bella's Salon Demo", "url": "https://bellas-salon-demo.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Tony's Italian Restaurant Demo", "url": "https://tonys-restaurant-demo.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Joe's Plumbing Demo", "url": "https://joes-plumbing-demo.surge.sh", "status": 200, "deployed": "2026-03-07"}
     ],
     "seo_tools": [
       {"name": "PrintMaxx SEO", "url": "https://printmaxx-seo.surge.sh", "status": 200, "deployed": "2026-02-21"},

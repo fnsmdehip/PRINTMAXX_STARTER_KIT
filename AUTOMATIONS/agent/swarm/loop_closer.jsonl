@@ -1,1 +1,10 @@
 {"ts": "2026-03-07T01:21:40.507627", "action": "execute_target", "target": "apps_with_email_capture", "result": "OK", "details": "Triggered asset_deployer for target: apps_with_email_capture"}
+{"ts": "2026-03-07T03:20:22.647779", "action": "adjust_interval", "target": "meta_executor", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648325", "action": "adjust_interval", "target": "gap_hunter", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648412", "action": "adjust_interval", "target": "system_healer", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648468", "action": "adjust_interval", "target": "content_compounder", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648515", "action": "adjust_interval", "target": "lead_machine", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648561", "action": "adjust_interval", "target": "video_factory", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648606", "action": "adjust_interval", "target": "image_factory", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648654", "action": "adjust_interval", "target": "trend_synthesizer", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}
+{"ts": "2026-03-07T03:20:22.648698", "action": "adjust_interval", "target": "cross_pollinator", "result": "FAILED", "details": "Missing or invalid 'hours' parameter"}

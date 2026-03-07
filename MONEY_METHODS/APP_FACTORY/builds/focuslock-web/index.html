@@ -935,5 +935,99 @@ if ('serviceWorker' in navigator) {
 
 init();
 </script>
+
+<!-- ===== PRO BADGE ===== -->
+<a href="https://printmaxx.gumroad.com" target="_blank" rel="noopener" style="
+  position:fixed;bottom:20px;right:16px;z-index:999;
+  background:linear-gradient(135deg,#f97316,#ea580c);
+  color:#fff;font-family:'Inter',system-ui,sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:.5px;
+  padding:6px 12px;border-radius:20px;text-decoration:none;
+  box-shadow:0 2px 12px rgba(249,115,22,.45);
+  display:flex;align-items:center;gap:5px;
+  transition:transform .15s,box-shadow .15s;
+" onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 18px rgba(249,115,22,.65)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(249,115,22,.45)'">
+  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+  Upgrade to Pro
+</a>
+
+<!-- ===== EMAIL CAPTURE MODAL ===== -->
+<div id="flEmailOverlay" style="
+  position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;
+  display:none;align-items:center;justify-content:center;padding:20px;
+">
+  <div style="
+    background:#1c1917;border:1px solid rgba(249,115,22,.2);
+    border-radius:20px;padding:28px 24px;max-width:380px;width:100%;
+    box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 40px rgba(249,115,22,.05);
+    position:relative;animation:flSlideUp .3s ease;
+    box-sizing:border-box;
+  ">
+    <button id="flEmailClose" aria-label="Close" style="
+      position:absolute;top:12px;right:14px;background:none;border:none;
+      color:#64748b;cursor:pointer;font-size:20px;line-height:1;padding:4px;
+    ">&times;</button>
+
+    <div style="font-size:30px;margin-bottom:10px;text-align:center;">🎯</div>
+    <h2 style="
+      font-family:'Inter',system-ui,sans-serif;font-size:17px;font-weight:700;
+      color:#f1f5f9;text-align:center;margin:0 0 8px;line-height:1.35;
+    ">Get the focus accountability system</h2>
+    <p style="
+      font-family:'Inter',system-ui,sans-serif;font-size:13px;color:#94a3b8;
+      text-align:center;margin:0 0 20px;line-height:1.6;
+    ">Join 300+ builders who ship daily. Weekly focus breakdowns, deep work protocols, and what's actually working.</p>
+
+    <form action="https://formsubmit.co/printmaxxstudio@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:10px;">
+      <input type="hidden" name="_subject" value="[FocusLock] Email Signup">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://focuslock.surge.sh">
+      <input type="email" name="email" required placeholder="your@email.com" style="
+        width:100%;background:#171412;border:1px solid rgba(255,255,255,.08);
+        border-radius:12px;padding:13px 14px;color:#f1f5f9;
+        font-family:'Inter',system-ui,sans-serif;font-size:15px;outline:none;
+        box-sizing:border-box;transition:border-color .15s;
+      " onfocus="this.style.borderColor='rgba(249,115,22,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.08)'">
+      <button type="submit" style="
+        width:100%;background:linear-gradient(135deg,#f97316,#ea580c);
+        color:#1c1917;border:none;border-radius:12px;padding:13px;
+        font-family:'Inter',system-ui,sans-serif;font-size:15px;font-weight:700;
+        cursor:pointer;transition:opacity .15s;
+      " onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+        Send me the system
+      </button>
+    </form>
+    <p style="font-family:'Inter',system-ui,sans-serif;font-size:11px;color:#475569;text-align:center;margin:12px 0 0;">No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<style>
+@keyframes flSlideUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+</style>
+
+<script>
+(function(){
+  var FL_DISMISS_KEY = 'focuslock_email_dismiss';
+  function shouldShow() {
+    var ts = localStorage.getItem(FL_DISMISS_KEY);
+    if (!ts) return true;
+    return (Date.now() - parseInt(ts, 10)) > 7 * 24 * 60 * 60 * 1000;
+  }
+  function dismiss() {
+    localStorage.setItem(FL_DISMISS_KEY, String(Date.now()));
+    document.getElementById('flEmailOverlay').style.display = 'none';
+  }
+  if (shouldShow()) {
+    setTimeout(function() {
+      var overlay = document.getElementById('flEmailOverlay');
+      overlay.style.display = 'flex';
+      document.getElementById('flEmailClose').addEventListener('click', dismiss);
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) dismiss();
+      });
+    }, 30000);
+  }
+})();
+</script>
 </body>
 </html>
