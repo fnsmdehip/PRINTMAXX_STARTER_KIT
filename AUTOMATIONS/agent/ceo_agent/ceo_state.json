@@ -1,7 +1,7 @@
 {
   "last_cycle": null,
   "cycles_run": 0,
-  "total_decisions": 0,
+  "total_decisions": 4,
   "op_scores": {
     "C01": {
       "op_id": "C01",
@@ -6629,9 +6629,21 @@
       }
     ]
   },
-  "protected_ops": [],
+  "protected_ops": [
+    "C01",
+    "C09",
+    "C11",
+    "C16",
+    "E01"
+  ],
   "killed_ops": [],
-  "promoted_ops": [],
+  "promoted_ops": [
+    "C01",
+    "C09",
+    "C11",
+    "C16",
+    "E01"
+  ],
   "created_ventures": [],
   "enhanced_ops": [],
   "last_discover": null,
