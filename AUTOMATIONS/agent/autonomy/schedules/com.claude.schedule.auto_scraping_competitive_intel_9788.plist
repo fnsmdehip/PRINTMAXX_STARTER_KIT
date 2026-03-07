@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude.schedule.auto_scraping_competitive_intel_9788</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; claude -p "You are the SCRAPING autonomy agent for PRINTMAXX venture '\''Competitive Intel'\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 2h. Each cycle: 1. CONFIGURE: Check scraper configs, update targets if needed. 2. SCRAPE: Run all configured scrapers. Handle rate limits. 3. CLEAN: Deduplicate, normalize, validate scraped data. 4. ANALYZE: Score and categorize all new data points. 5. STORE: Append to appropriate LEDGER/ CSV files. 6. ALERT: Flag high-value findings for immediate action.  Rules: All files in /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt. Respect rate limits. No TOS violations." --dangerously-skip-permissions --model claude-sonnet-4-6 >> "/Users/macbookpro/.claude/logs/auto_scraping_competitive_intel_9788.log" 2>&amp;1</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/Users/macbookpro/.local/bin</string>
+    </dict>
+    <key>StartInterval</key>
+    <integer>7200</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_scraping_competitive_intel_9788.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_scraping_competitive_intel_9788.error.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

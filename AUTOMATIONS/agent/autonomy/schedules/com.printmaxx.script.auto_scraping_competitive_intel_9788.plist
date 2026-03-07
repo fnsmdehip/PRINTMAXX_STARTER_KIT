@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.printmaxx.script.auto_scraping_competitive_intel_9788</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/venture_autonomy.py --run auto_scraping_competitive_intel_9788 >> "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/auto_scraping_competitive_intel_9788.log" 2>&amp;1</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+    </dict>
+    <key>StartInterval</key>
+    <integer>7200</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/auto_scraping_competitive_intel_9788.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/auto_scraping_competitive_intel_9788_err.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

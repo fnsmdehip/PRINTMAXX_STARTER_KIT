@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude.schedule.auto_app_app_factory_9788</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; claude -p "You are the APP FACTORY autonomy agent for PRINTMAXX venture '\''App Factory'\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 12h. Each cycle: 1. FIND GAP: Research app store gaps, Reddit complaints, Twitter requests. Look for underserved niches. 2. SPEC: Write a 1-page PRD for the top opportunity. 3. BUILD: Create a Next.js PWA in MONEY_METHODS/APP_FACTORY/. 4. DEPLOY: Deploy to surge.sh or Vercel. 5. ASO: Generate keywords, description, screenshots spec. 6. TRACK: Check analytics on deployed apps.  Rules: - Apps must match top 10 in category quality - All files stay in /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt - Include monetization config, privacy policy, content" --dangerously-skip-permissions --model claude-sonnet-4-6 >> "/Users/macbookpro/.claude/logs/auto_app_app_factory_9788.log" 2>&amp;1</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/Users/macbookpro/.local/bin</string>
+    </dict>
+    <key>StartInterval</key>
+    <integer>43200</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_app_app_factory_9788.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_app_app_factory_9788.error.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

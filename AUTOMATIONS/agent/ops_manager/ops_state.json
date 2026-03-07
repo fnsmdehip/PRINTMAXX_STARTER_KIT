@@ -1,15 +1,216 @@
 {
   "last_cycle": "2026-03-06T01:24:05.456070",
   "cycles_run": 6,
-  "venture_scores": {},
+  "venture_scores": {
+    "services": {
+      "name": "services",
+      "priority": 1,
+      "score": 0.0,
+      "estimated_monthly": "$500-10,000",
+      "time_to_first_dollar": "3-14 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "fiverr",
+        "upwork",
+        "email_accounts"
+      ],
+      "compliance_notes": [
+        "Accurate service descriptions",
+        "Clear deliverables"
+      ]
+    },
+    "edge_tactics": {
+      "name": "edge_tactics",
+      "priority": 1,
+      "score": 0.0,
+      "estimated_monthly": "$0 direct (10x amplifier for all ventures)",
+      "time_to_first_dollar": "N/A \u2014 multiplier",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "twitter",
+        "tiktok",
+        "instagram"
+      ],
+      "compliance_notes": [
+        "All tactics must be ALLOWED or RISKY per grey_hat_legal.md \u2014 never ILLEGAL",
+        "FTC disclosure on all monetized content",
+        "No coordinated inauthentic behavior (each account adds genuine value)",
+        "No fake scarcity/urgency (FTC explicitly targets this)",
+        "AI content disclosed where platform requires it"
+      ]
+    },
+    "content_farm": {
+      "name": "content_farm",
+      "priority": 2,
+      "score": 0.0,
+      "estimated_monthly": "$500-5,000",
+      "time_to_first_dollar": "14-30 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "twitter",
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "compliance_notes": [
+        "FTC disclosure on affiliate links",
+        "AI content disclosure where required"
+      ]
+    },
+    "adult_content": {
+      "name": "adult_content",
+      "priority": 2,
+      "score": 0.0,
+      "estimated_monthly": "$500-10,000",
+      "time_to_first_dollar": "7-21 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "twitter_adult",
+        "loyalfans",
+        "cashapp"
+      ],
+      "compliance_notes": [
+        "FTC disclosure on all monetized content",
+        "AI persona disclosure where legally required",
+        "Age verification on gated content (18+)",
+        "All transactions are voluntary \u2014 no coercion claims",
+        "Tax reporting: track all income, 1099 threshold",
+        "Platform TOS compliance \u2014 review each platform's adult content policy",
+        "No minors, no non-consensual content, no illegal content",
+        "CAN-SPAM compliance on any email marketing"
+      ]
+    },
+    "viral_content": {
+      "name": "viral_content",
+      "priority": 2,
+      "score": 0.0,
+      "estimated_monthly": "$200-5,000",
+      "time_to_first_dollar": "7-21 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "tiktok",
+        "instagram",
+        "twitter"
+      ],
+      "compliance_notes": [
+        "AI-generated content disclosed where platform requires",
+        "FTC disclosure on any paid/affiliate content",
+        "No fake testimonials",
+        "UGC ads must comply with platform ad policies",
+        "Controversy content must not violate hate speech policies"
+      ]
+    },
+    "competitive_intel": {
+      "name": "competitive_intel",
+      "priority": 2,
+      "score": 0.0,
+      "estimated_monthly": "$0 direct (informs all other ventures)",
+      "time_to_first_dollar": "N/A \u2014 intelligence layer",
+      "readiness_pct": 0.0,
+      "accounts_needed": [],
+      "compliance_notes": [
+        "Only scrape public data",
+        "No CFAA violations"
+      ]
+    },
+    "growth": {
+      "name": "growth",
+      "priority": 2,
+      "score": 0.0,
+      "estimated_monthly": "$0 direct (enables all other ventures)",
+      "time_to_first_dollar": "N/A \u2014 force multiplier",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "twitter",
+        "reddit",
+        "producthunt"
+      ],
+      "compliance_notes": []
+    },
+    "ecom": {
+      "name": "ecom",
+      "priority": 3,
+      "score": 0.0,
+      "estimated_monthly": "$200-3,000",
+      "time_to_first_dollar": "7-21 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "ebay",
+        "facebook_marketplace",
+        "etsy"
+      ],
+      "compliance_notes": [
+        "Product safety disclosures",
+        "Accurate descriptions"
+      ]
+    },
+    "digital_products": {
+      "name": "digital_products",
+      "priority": 3,
+      "score": 0.0,
+      "estimated_monthly": "$100-2,000",
+      "time_to_first_dollar": "7-30 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "gumroad",
+        "etsy",
+        "payhip"
+      ],
+      "compliance_notes": [
+        "Accurate product descriptions",
+        "Refund policy"
+      ]
+    },
+    "affiliate": {
+      "name": "affiliate",
+      "priority": 3,
+      "score": 0.0,
+      "estimated_monthly": "$100-3,000",
+      "time_to_first_dollar": "14-45 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "amazon_associates",
+        "shareasale",
+        "impact"
+      ],
+      "compliance_notes": [
+        "FTC disclosure required on ALL affiliate content",
+        "Must disclose material connection"
+      ]
+    },
+    "apps": {
+      "name": "apps",
+      "priority": 4,
+      "score": 0.0,
+      "estimated_monthly": "$50-1,000",
+      "time_to_first_dollar": "14-60 days",
+      "readiness_pct": 0.0,
+      "accounts_needed": [
+        "surge_sh"
+      ],
+      "compliance_notes": []
+    }
+  },
   "venture_status": {},
   "revenue": {
     "total": 0,
     "by_venture": {}
   },
-  "active_ventures": [],
+  "active_ventures": [
+    "services",
+    "edge_tactics",
+    "content_farm",
+    "adult_content",
+    "viral_content",
+    "competitive_intel",
+    "growth",
+    "ecom",
+    "digital_products",
+    "affiliate",
+    "apps"
+  ],
   "killed_ventures": [],
   "pending_ventures": [],
-  "last_prioritization": null,
+  "last_prioritization": "2026-03-06T20:06:35.946803",
   "disk_gb_free": 65.5
 }

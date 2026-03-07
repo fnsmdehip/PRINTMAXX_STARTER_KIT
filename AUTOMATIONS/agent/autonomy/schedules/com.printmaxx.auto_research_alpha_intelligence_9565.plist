@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.printmaxx.auto_research_alpha_intelligence_9565</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Library/Frameworks/Python.framework/Versions/3.12/bin/python3</string>
+        <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/venture_autonomy.py</string>
+        <string>--run</string>
+        <string>auto_research_alpha_intelligence_9565</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>7200</integer>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/auto_research_alpha_intelligence_9565.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/auto_research_alpha_intelligence_9565_err.log</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+    </dict>
+</dict>
+</plist>

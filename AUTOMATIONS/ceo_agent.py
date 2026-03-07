@@ -8,13 +8,19 @@ scores all 182 ops dynamically, makes strategic decisions, delegates
 to venture sub-agents, and protects good ops with git-based failsafes.
 
 Architecture:
-  CEO AGENT (this file)
-  ├── GitGuard       — auto-snapshot before changes, rollback on failure
-  ├── XlsxIntel      — reads 182 ops from master xlsx dynamically
-  ├── VentureScorer  — multi-signal scoring (readiness + automation + synergy + revenue)
-  ├── CEOBrain       — strategic decisions (PROMOTE / ENHANCE / CREATE / KILL / DISCOVER)
-  ├── VentureRunner  — delegates to existing venture classes + dynamic ops
-  └── AuditTrail     — regression detection, protected ops enforcement
+  CEO AGENT (this file) — FULL ORCHESTRATOR of ALL systems
+  ├── GitGuard           — auto-snapshot before changes, rollback on failure
+  ├── XlsxIntel          — reads 182 ops from master xlsx dynamically
+  ├── VentureScorer      — multi-signal scoring (readiness + automation + synergy + revenue)
+  ├── CEOBrain           — strategic decisions (PROMOTE / ENHANCE / CREATE / KILL / DISCOVER)
+  ├── VentureRunner      — delegates to existing + dynamic venture agents
+  ├── AuditTrail         — regression detection, protected ops enforcement
+  ├── Alpha Pipeline     — twitter/reddit scrapers + alpha processor
+  ├── Research Pipeline  — daily_research_orchestrator (once/day)
+  ├── Decision Engine    — closed-loop decision_engine.py
+  ├── Content Generation — printmaxx_agent content + upgrade missions
+  ├── System Health      — system_health_monitor + auto-fix
+  └── Cron Management    — read/write/track scheduled tasks
 
 Failsafes:
   - Git commit before every decision batch
@@ -25,13 +31,21 @@ Failsafes:
   - All file ops locked to PROJECT root (inherited guardrails)
 
 Usage:
-  python3 AUTOMATIONS/ceo_agent.py                  # One CEO cycle
+  python3 AUTOMATIONS/ceo_agent.py                  # One CEO cycle (full orchestration)
   python3 AUTOMATIONS/ceo_agent.py --status          # Full status dashboard
   python3 AUTOMATIONS/ceo_agent.py --daemon           # Run forever (24/7)
   python3 AUTOMATIONS/ceo_agent.py --score            # Score all ops from xlsx
   python3 AUTOMATIONS/ceo_agent.py --decide           # Show decisions without executing
   python3 AUTOMATIONS/ceo_agent.py --protect OP_ID    # Add op to protected list
   python3 AUTOMATIONS/ceo_agent.py --rollback         # Rollback last CEO change batch
+  python3 AUTOMATIONS/ceo_agent.py --alpha            # Run alpha pipeline only
+  python3 AUTOMATIONS/ceo_agent.py --research         # Run research pipeline only
+  python3 AUTOMATIONS/ceo_agent.py --content          # Run content generation only
+  python3 AUTOMATIONS/ceo_agent.py --health           # Run system health check only
+  python3 AUTOMATIONS/ceo_agent.py --decision-engine  # Run decision engine only
+  python3 AUTOMATIONS/ceo_agent.py --ventures         # Run dynamic ventures only
+  python3 AUTOMATIONS/ceo_agent.py --cron-list        # Show managed cron entries
+  python3 AUTOMATIONS/ceo_agent.py --cron-add "..."   # Add a cron entry
 """
 
 import argparse
@@ -70,7 +84,27 @@ PROTECT_THRESHOLD = 60          # score above this = protected from kill
 PROMOTE_THRESHOLD = 70          # score above this = double down
 CYCLE_INTERVAL_HOURS = 1        # how often the CEO runs
 DISCOVER_INTERVAL_HOURS = 4     # how often to hunt new ventures
+ALPHA_INTERVAL_HOURS = 2        # how often to run alpha scrapers
+RESEARCH_INTERVAL_HOURS = 24    # daily research (once per day)
+CONTENT_INTERVAL_HOURS = 6      # content generation interval
+HEALTH_INTERVAL_HOURS = 1       # system health check interval
+OPENCLAW_INTERVAL_HOURS = 4     # openclaw local biz pipeline interval
+AUTONOMY_INTERVAL_HOURS = 2    # venture autonomy engine interval
 GIT_SNAPSHOT_BEFORE_CHANGES = True
+
+# OpenClaw city rotation — cycles through these automatically
+OPENCLAW_CITIES = [
+    ("Austin TX", "dentist"), ("Austin TX", "plumber"), ("Austin TX", "lawyer"),
+    ("Houston TX", "dentist"), ("Houston TX", "plumber"), ("Houston TX", "lawyer"),
+    ("Dallas TX", "dentist"), ("Dallas TX", "plumber"), ("Dallas TX", "lawyer"),
+    ("Miami FL", "dentist"), ("Miami FL", "plumber"), ("Miami FL", "lawyer"),
+    ("Atlanta GA", "dentist"), ("Atlanta GA", "plumber"), ("Atlanta GA", "lawyer"),
+    ("Chicago IL", "dentist"), ("Chicago IL", "plumber"), ("Chicago IL", "lawyer"),
+    ("Phoenix AZ", "dentist"), ("Phoenix AZ", "plumber"), ("Phoenix AZ", "lawyer"),
+    ("Denver CO", "dentist"), ("Denver CO", "plumber"), ("Denver CO", "lawyer"),
+    ("Seattle WA", "dentist"), ("Seattle WA", "plumber"), ("Seattle WA", "lawyer"),
+    ("New York NY", "dentist"), ("New York NY", "plumber"), ("New York NY", "lawyer"),
+]
 
 # Master xlsx path (find the latest one)
 XLSX_PATTERNS = [
@@ -119,6 +153,50 @@ def log(msg, level="INFO"):
             f.write(line + "\n")
     except Exception:
         pass
+
+
+def run_script(script_path, args="", timeout_sec=300, label=None):
+    """Run a PRINTMAXX script with guardrails. Returns (success, output)."""
+    full_path = PROJECT / "AUTOMATIONS" / script_path if "/" not in script_path else PROJECT / script_path
+    if not full_path.exists():
+        msg = f"Script not found: {full_path}"
+        log(msg, "WARN")
+        return False, msg
+
+    cmd = f"{PYTHON} {full_path} {args}".strip()
+    safe_command(cmd)
+    tag = label or script_path
+    log(f"Running: {tag} {args}")
+
+    try:
+        result = subprocess.run(
+            cmd, shell=True, capture_output=True, text=True,
+            timeout=timeout_sec, cwd=str(PROJECT)
+        )
+        output = (result.stdout or "") + (result.stderr or "")
+        output = output[-2000:]  # keep last 2000 chars
+        if result.returncode == 0:
+            log(f"  OK: {tag}")
+            return True, output
+        else:
+            log(f"  FAIL (rc={result.returncode}): {tag}", "WARN")
+            return False, output
+    except subprocess.TimeoutExpired:
+        log(f"  TIMEOUT ({timeout_sec}s): {tag}", "WARN")
+        return False, f"Timed out after {timeout_sec}s"
+    except Exception as e:
+        log(f"  ERROR: {tag}: {e}", "ERROR")
+        return False, str(e)[:500]
+
+
+def _hours_since(iso_ts):
+    """Return hours elapsed since an ISO timestamp string. Returns float('inf') if None/invalid."""
+    if not iso_ts:
+        return float('inf')
+    try:
+        return (datetime.now() - datetime.fromisoformat(str(iso_ts))).total_seconds() / 3600
+    except Exception:
+        return float('inf')
 
 
 # ============================================================================
@@ -347,7 +425,18 @@ class CEOState:
             "enhanced_ops": [],      # ops that got enhanced
             "last_discover": None,
             "last_git_snapshot": None,
-            "performance_baseline": {},  # pre-change metrics for regression check
+            "last_alpha_scrape": None,    # last alpha pipeline run
+            "last_research": None,        # last daily research run
+            "last_content_gen": None,     # last content generation run
+            "last_health_check": None,    # last system health check
+            "last_decision_engine": None, # last decision engine cycle
+            "managed_crons": [],          # cron entries managed by CEO
+            "alpha_pipeline_results": {}, # latest alpha pipeline stats
+            "health_issues": [],          # outstanding health issues
+            "last_openclaw": None,        # last openclaw pipeline run
+            "openclaw_city_index": 0,     # current city rotation index
+            "openclaw_stats": {},         # openclaw pipeline stats
+            "performance_baseline": {},   # pre-change metrics for regression check
             "config": {
                 "max_changes": MAX_CHANGES_PER_CYCLE,
                 "kill_threshold": KILL_THRESHOLD,
@@ -889,6 +978,103 @@ class VentureRunner:
         log(f"DISCOVERED {op_id} ({decision['name']})")
         return {"status": "success", "action": "discovery logged for evaluation"}
 
+    def run_dynamic_ventures(self):
+        """Read CEO-created venture JSON files and run relevant scripts for them."""
+        venture_dir = CEO_DIR / "ventures"
+        if not venture_dir.exists():
+            log("No ventures directory yet — skipping dynamic ventures")
+            return []
+
+        results = []
+        venture_files = sorted(venture_dir.glob("venture_*.json"))
+        if not venture_files:
+            log("No dynamic venture definitions found")
+            return results
+
+        # Map lane/category to relevant automation scripts
+        lane_scripts = {
+            "CONTENT": [
+                ("printmaxx_agent.py", "--mission content"),
+            ],
+            "OUTBOUND": [
+                ("printmaxx_agent.py", "--mission outreach"),
+            ],
+            "APP_FACTORY": [
+                ("printmaxx_agent.py", "--mission apps"),
+            ],
+            "RESEARCH": [
+                ("daily_research_orchestrator.py", "--full"),
+            ],
+            "SCRAPING": [
+                ("twitter_alpha_scraper.py", "--all"),
+                ("background_reddit_scraper.py", "--scrape"),
+            ],
+            "MONETIZATION": [
+                ("printmaxx_agent.py", "--mission monetize"),
+            ],
+            "SEO": [
+                ("printmaxx_agent.py", "--mission seo"),
+            ],
+            "SOCIAL": [
+                ("printmaxx_agent.py", "--mission social"),
+            ],
+        }
+
+        for vf in venture_files:
+            try:
+                vdef = json.loads(vf.read_text())
+            except Exception as e:
+                log(f"Failed to read venture {vf.name}: {e}", "WARN")
+                continue
+
+            op_id = vdef.get("op_id", "")
+            v_name = vdef.get("name", "")
+            v_lane = str(vdef.get("lane", "")).upper().strip()
+            v_category = str(vdef.get("category", "")).upper().strip()
+            v_status = vdef.get("status", "CREATED")
+
+            # Skip killed ventures
+            if v_status in ("KILLED", "PAUSED"):
+                continue
+
+            # Find matching scripts by lane, then by category
+            scripts_to_run = lane_scripts.get(v_lane, [])
+            if not scripts_to_run:
+                scripts_to_run = lane_scripts.get(v_category, [])
+
+            if not scripts_to_run:
+                log(f"  Venture {op_id} ({v_name}): no matching scripts for lane={v_lane} cat={v_category}")
+                results.append({"op_id": op_id, "name": v_name, "status": "no_scripts"})
+                continue
+
+            # Run each matched script
+            for script_name, script_args in scripts_to_run:
+                script_path = PROJECT / "AUTOMATIONS" / script_name
+                if not script_path.exists():
+                    log(f"  Script not found for venture {op_id}: {script_name}", "WARN")
+                    continue
+
+                ok, output = run_script(script_name, script_args, timeout_sec=180,
+                                        label=f"venture:{op_id}:{script_name}")
+                results.append({
+                    "op_id": op_id,
+                    "name": v_name,
+                    "script": script_name,
+                    "status": "success" if ok else "failed",
+                })
+
+            # Update venture run stats
+            vdef["cycles_run"] = vdef.get("cycles_run", 0) + 1
+            vdef["last_cycle"] = datetime.now().isoformat()
+            try:
+                safe_path(vf)
+                vf.write_text(json.dumps(vdef, indent=2, default=str))
+            except Exception as e:
+                log(f"  Failed to update venture file {vf.name}: {e}", "WARN")
+
+        log(f"Dynamic ventures: ran {len(results)} tasks across {len(venture_files)} ventures")
+        return results
+
     def _try_auto_fix(self, op_id, blocker):
         """Attempt to automatically fix a blocker."""
         # Map common blockers to scripts
@@ -1070,57 +1256,58 @@ def run_ceo_cycle(dry_run=False):
         log("Phase 2: CEO making strategic decisions...")
         decisions = brain.analyze_and_decide(dry_run=dry_run)
 
+        issues = []  # track issues across all phases
+
         if not decisions:
-            log("No decisions needed this cycle — all ops stable")
-            state.data["last_cycle"] = datetime.now().isoformat()
-            state.data["cycles_run"] += 1
-            state.save()
-            return
+            log("No strategic decisions needed this cycle — all ops stable")
+        else:
+            # Log decisions
+            for d in decisions:
+                log(f"  [{d['type']}] {d['op_id']} ({d['name']}): {d['reason']}")
 
-        # Log decisions
-        for d in decisions:
-            log(f"  [{d['type']}] {d['op_id']} ({d['name']}): {d['reason']}")
+            if dry_run:
+                log("DRY RUN — decisions not executed")
+                state.data["last_cycle"] = datetime.now().isoformat()
+                state.data["cycles_run"] += 1
+                state.save()
+                return
 
-        if dry_run:
-            log("DRY RUN — decisions not executed")
-            return
+            # 3. Git snapshot BEFORE changes
+            log("Phase 3: Git snapshot before changes...")
+            audit.capture_baseline()
+            git.snapshot("ceo_pre_decisions")
 
-        # 3. Git snapshot BEFORE changes
-        log("Phase 3: Git snapshot before changes...")
-        audit.capture_baseline()
-        git.snapshot("ceo_pre_decisions")
+            # 4. Execute decisions
+            log("Phase 4: Executing decisions...")
+            results = runner.execute_decisions(decisions)
 
-        # 4. Execute decisions
-        log("Phase 4: Executing decisions...")
-        results = runner.execute_decisions(decisions)
+            for r in results:
+                d = r.get("decision", {})
+                status = r.get("status", "unknown")
+                log(f"  [{status.upper()}] {d.get('type', '?')} {d.get('op_id', '?')}")
 
-        for r in results:
-            d = r.get("decision", {})
-            status = r.get("status", "unknown")
-            log(f"  [{status.upper()}] {d.get('type', '?')} {d.get('op_id', '?')}")
+            # 5. Post-decision audit
+            log("Phase 5: Post-decision audit...")
+            issues = audit.check_regression(results)
 
-        # 5. Post-decision audit
-        log("Phase 5: Post-decision audit...")
-        issues = audit.check_regression(results)
+            if issues and any("failed" in i.lower() for i in issues):
+                log("REGRESSION DETECTED — considering rollback", "WARN")
+                # Only rollback if multiple failures
+                failed_count = sum(1 for r in results if r.get("status") == "failed")
+                if failed_count > 2:
+                    log("ROLLING BACK — too many failures", "ERROR")
+                    git.rollback()
+                else:
+                    log("Minor failures — proceeding without rollback")
 
-        if issues and any("failed" in i.lower() for i in issues):
-            log("REGRESSION DETECTED — considering rollback", "WARN")
-            # Only rollback if multiple failures
-            failed_count = sum(1 for r in results if r.get("status") == "failed")
-            if failed_count > 2:
-                log("ROLLING BACK — too many failures", "ERROR")
-                git.rollback()
-            else:
-                log("Minor failures — proceeding without rollback")
-
-        # 6. Post-change commit
-        summary_parts = []
-        for dtype in ["PROMOTE", "ENHANCE", "CREATE", "KILL", "DISCOVER"]:
-            count = sum(1 for d in decisions if d["type"] == dtype)
-            if count:
-                summary_parts.append(f"{count} {dtype.lower()}")
-        summary = ", ".join(summary_parts) if summary_parts else "no changes"
-        git.post_change_commit(summary)
+            # 6. Post-change commit
+            summary_parts = []
+            for dtype in ["PROMOTE", "ENHANCE", "CREATE", "KILL", "DISCOVER"]:
+                count = sum(1 for d in decisions if d["type"] == dtype)
+                if count:
+                    summary_parts.append(f"{count} {dtype.lower()}")
+            summary = ", ".join(summary_parts) if summary_parts else "no changes"
+            git.post_change_commit(summary)
 
         # 7. Optionally run existing venture cycles
         # (only every other CEO cycle to avoid overload)
@@ -1128,6 +1315,224 @@ def run_ceo_cycle(dry_run=False):
             log("Phase 6: Running existing venture sub-agents...")
             ok, msg = runner.run_existing_ventures()
             log(f"  Ventures: {'OK' if ok else 'FAILED'} — {msg[:80]}")
+
+        # ======================================================================
+        # NEW ORCHESTRATION PHASES — CEO as full system orchestrator
+        # ======================================================================
+
+        # Phase 7: Alpha Pipeline Integration
+        # Run scrapers + alpha processor (max every ALPHA_INTERVAL_HOURS)
+        hours_since_alpha = _hours_since(state.data.get("last_alpha_scrape"))
+        if hours_since_alpha >= ALPHA_INTERVAL_HOURS:
+            log("Phase 7: Alpha Pipeline — scraping + processing...")
+            alpha_results = {}
+
+            # Twitter alpha scraper
+            ok, out = run_script("twitter_alpha_scraper.py", "--all",
+                                 timeout_sec=300, label="alpha:twitter")
+            alpha_results["twitter_scraper"] = "ok" if ok else "failed"
+
+            # Reddit scraper
+            ok, out = run_script("background_reddit_scraper.py", "--scrape",
+                                 timeout_sec=300, label="alpha:reddit")
+            alpha_results["reddit_scraper"] = "ok" if ok else "failed"
+
+            # Alpha auto processor — processes scraped data into actionable items
+            ok, out = run_script("alpha_auto_processor.py", "--process-new",
+                                 timeout_sec=180, label="alpha:processor")
+            alpha_results["alpha_processor"] = "ok" if ok else "failed"
+
+            state.data["last_alpha_scrape"] = datetime.now().isoformat()
+            state.data["alpha_pipeline_results"] = alpha_results
+            state.save()
+            successes = sum(1 for v in alpha_results.values() if v == "ok")
+            log(f"  Alpha pipeline: {successes}/{len(alpha_results)} succeeded")
+        else:
+            log(f"Phase 7: Alpha Pipeline — skipped ({hours_since_alpha:.1f}h < {ALPHA_INTERVAL_HOURS}h interval)")
+
+        # Phase 8: Research Orchestration (once per day)
+        hours_since_research = _hours_since(state.data.get("last_research"))
+        if hours_since_research >= RESEARCH_INTERVAL_HOURS:
+            log("Phase 8: Daily Research Orchestration...")
+            ok, out = run_script("daily_research_orchestrator.py", "--full",
+                                 timeout_sec=600, label="research:daily")
+            state.data["last_research"] = datetime.now().isoformat()
+            state.save()
+            log(f"  Research: {'OK' if ok else 'FAILED'}")
+        else:
+            log(f"Phase 8: Research — skipped ({hours_since_research:.1f}h < {RESEARCH_INTERVAL_HOURS}h interval)")
+
+        # Phase 9: Decision Engine — closed-loop processing
+        log("Phase 9: Decision Engine — processing pending data into actions...")
+        ok, out = run_script("decision_engine.py", "--cycle",
+                             timeout_sec=300, label="decision:engine")
+        state.data["last_decision_engine"] = datetime.now().isoformat()
+        state.save()
+        log(f"  Decision engine: {'OK' if ok else 'FAILED'}")
+
+        # Phase 10: Content Generation (every CONTENT_INTERVAL_HOURS)
+        hours_since_content = _hours_since(state.data.get("last_content_gen"))
+        if hours_since_content >= CONTENT_INTERVAL_HOURS:
+            log("Phase 10: Content Generation from intelligence...")
+            content_results = {}
+
+            ok, out = run_script("printmaxx_agent.py", "--mission content",
+                                 timeout_sec=300, label="content:generate")
+            content_results["content_gen"] = "ok" if ok else "failed"
+
+            ok, out = run_script("printmaxx_agent.py", "--mission upgrade",
+                                 timeout_sec=300, label="content:upgrade")
+            content_results["upgrade"] = "ok" if ok else "failed"
+
+            state.data["last_content_gen"] = datetime.now().isoformat()
+            state.save()
+            successes = sum(1 for v in content_results.values() if v == "ok")
+            log(f"  Content: {successes}/{len(content_results)} succeeded")
+        else:
+            log(f"Phase 10: Content — skipped ({hours_since_content:.1f}h < {CONTENT_INTERVAL_HOURS}h interval)")
+
+        # Phase 11: System Health Monitor
+        hours_since_health = _hours_since(state.data.get("last_health_check"))
+        if hours_since_health >= HEALTH_INTERVAL_HOURS:
+            log("Phase 11: System Health Check...")
+            ok, out = run_script("system_health_monitor.py", "--quick",
+                                 timeout_sec=120, label="health:check")
+            state.data["last_health_check"] = datetime.now().isoformat()
+
+            # Parse health output for issues and attempt auto-fix
+            if ok and out:
+                # Look for lines containing FAIL, ERROR, BROKEN, DOWN
+                health_issues = []
+                for line in out.split("\n"):
+                    line_upper = line.upper()
+                    if any(kw in line_upper for kw in ["FAIL", "ERROR", "BROKEN", "DOWN", "DEAD"]):
+                        health_issues.append(line.strip()[:200])
+                state.data["health_issues"] = health_issues[-20:]  # keep last 20
+
+                if health_issues:
+                    log(f"  Health issues found: {len(health_issues)}")
+                    # Attempt auto-fix by re-running health monitor with fix flag
+                    fix_ok, fix_out = run_script("system_health_monitor.py", "--quick --fix",
+                                                  timeout_sec=120, label="health:autofix")
+                    if fix_ok:
+                        log("  Auto-fix attempted")
+                    else:
+                        log("  Auto-fix failed or not supported", "WARN")
+                else:
+                    log("  System healthy — no issues detected")
+            else:
+                log(f"  Health check: {'OK' if ok else 'FAILED'}")
+
+            state.save()
+        else:
+            log(f"Phase 11: Health — skipped ({hours_since_health:.1f}h < {HEALTH_INTERVAL_HOURS}h interval)")
+
+        # Phase 12: Dynamic Ventures — run CEO-created venture agents
+        if state.data["cycles_run"] % 3 == 0:  # every 3rd cycle to avoid overload
+            log("Phase 12: Running dynamic venture agents...")
+            dv_results = runner.run_dynamic_ventures()
+            dv_success = sum(1 for r in dv_results if r.get("status") == "success")
+            log(f"  Dynamic ventures: {dv_success}/{len(dv_results)} succeeded")
+
+        # Phase 13: OpenClaw Local Biz Pipeline — autonomous lead gen + site building
+        hours_since_openclaw = _hours_since(state.data.get("last_openclaw"))
+        if hours_since_openclaw >= OPENCLAW_INTERVAL_HOURS:
+            log("Phase 13: OpenClaw Local Biz Pipeline...")
+            openclaw_script = PROJECT / "AUTOMATIONS" / "openclaw_local_biz.py"
+            if openclaw_script.exists():
+                # Rotate through cities
+                city_idx = state.data.get("openclaw_city_index", 0) % len(OPENCLAW_CITIES)
+                city, niche = OPENCLAW_CITIES[city_idx]
+                log(f"  OpenClaw: discovering {niche} in {city} (rotation #{city_idx + 1}/{len(OPENCLAW_CITIES)})")
+
+                # Step 1: Discover leads
+                ok, out = run_script("openclaw_local_biz.py", f'--discover "{city}" {niche}',
+                                     timeout_sec=120, label=f"openclaw:discover:{city}:{niche}")
+                openclaw_results = {"discover": "ok" if ok else "failed", "city": city, "niche": niche}
+
+                # Step 2: Build preview sites for F-grade leads
+                if ok:
+                    ok2, out2 = run_script("openclaw_local_biz.py", "--build",
+                                           timeout_sec=180, label="openclaw:build")
+                    openclaw_results["build"] = "ok" if ok2 else "failed"
+
+                    # Step 3: Generate outreach
+                    ok3, out3 = run_script("openclaw_local_biz.py", "--outreach",
+                                           timeout_sec=60, label="openclaw:outreach")
+                    openclaw_results["outreach"] = "ok" if ok3 else "failed"
+
+                state.data["last_openclaw"] = datetime.now().isoformat()
+                state.data["openclaw_city_index"] = (city_idx + 1) % len(OPENCLAW_CITIES)
+                state.data["openclaw_stats"] = openclaw_results
+                state.save()
+                successes = sum(1 for v in openclaw_results.values() if v == "ok")
+                log(f"  OpenClaw: {successes}/{len(openclaw_results)} phases succeeded ({city} {niche})")
+            else:
+                log("  OpenClaw script not found — skipping", "WARN")
+        else:
+            log(f"Phase 13: OpenClaw — skipped ({hours_since_openclaw:.1f}h < {OPENCLAW_INTERVAL_HOURS}h interval)")
+
+        # Phase 14: Scheduled Task Management — sync cron state
+        log("Phase 14: Cron/scheduled task sync...")
+        try:
+            cron_result = subprocess.run(
+                ["crontab", "-l"], capture_output=True, text=True, timeout=10
+            )
+            if cron_result.returncode == 0:
+                cron_lines = [
+                    line.strip() for line in cron_result.stdout.split("\n")
+                    if line.strip() and not line.strip().startswith("#")
+                ]
+                state.data["managed_crons"] = cron_lines[-50:]  # track last 50 entries
+                log(f"  Cron: {len(cron_lines)} active entries tracked")
+            else:
+                log("  Cron: no crontab found (empty or not set)")
+                state.data["managed_crons"] = []
+        except Exception as e:
+            log(f"  Cron sync failed: {e}", "WARN")
+
+        state.save()
+
+        # Phase 15: Venture Autonomy Engine — run all autonomous venture pipelines
+        hours_since_autonomy = _hours_since(state.data.get("last_autonomy_run"))
+        if hours_since_autonomy >= AUTONOMY_INTERVAL_HOURS:
+            log("Phase 15: Venture Autonomy Engine — running all autonomous ventures...")
+            autonomy_script = PROJECT / "AUTOMATIONS" / "venture_autonomy.py"
+            if autonomy_script.exists():
+                ok, out = run_script("venture_autonomy.py", "--run-all",
+                                     timeout_sec=600, label="autonomy:run-all")
+                state.data["last_autonomy_run"] = datetime.now().isoformat()
+
+                # Parse output for stats
+                autonomy_stats = {"status": "ok" if ok else "failed"}
+                if ok and out:
+                    for line in out.split("\n"):
+                        if "Ran" in line and "ventures" in line:
+                            autonomy_stats["summary"] = line.strip()[:200]
+                state.data["autonomy_stats"] = autonomy_stats
+                state.save()
+                log(f"  Autonomy engine: {'OK' if ok else 'FAILED'}")
+
+                # Self-management: auto-install missing, fix broken, adjust intervals, prune dead
+                log("Phase 15b: Self-management — auto-install/fix/adjust/prune...")
+                ok2, out2 = run_script("venture_autonomy.py", "--self-manage",
+                                       timeout_sec=300, label="autonomy:self-manage")
+                sm_actions = 0
+                if ok2 and out2:
+                    for line in out2.split("\n"):
+                        if "actions taken" in line:
+                            try:
+                                sm_actions = int(line.split(":")[1].strip().split()[0])
+                            except Exception:
+                                pass
+                state.data["last_self_manage"] = datetime.now().isoformat()
+                state.data["self_manage_actions"] = sm_actions
+                state.save()
+                log(f"  Self-management: {sm_actions} actions")
+            else:
+                log("  Autonomy engine script not found — skipping", "WARN")
+        else:
+            log(f"Phase 15: Autonomy — skipped ({hours_since_autonomy:.1f}h < {AUTONOMY_INTERVAL_HOURS}h interval)")
 
         # Update state
         state.data["last_cycle"] = datetime.now().isoformat()
@@ -1163,6 +1568,19 @@ def show_status():
     print(f"Total decisions:  {state.data['total_decisions']}")
     print(f"Last cycle:       {state.data.get('last_cycle', 'never')}")
     print(f"Last discovery:   {state.data.get('last_discover', 'never')}")
+    print(f"Last alpha:       {state.data.get('last_alpha_scrape', 'never')}")
+    print(f"Last research:    {state.data.get('last_research', 'never')}")
+    print(f"Last content:     {state.data.get('last_content_gen', 'never')}")
+    print(f"Last health:      {state.data.get('last_health_check', 'never')}")
+    print(f"Last decision:    {state.data.get('last_decision_engine', 'never')}")
+    print(f"Last openclaw:    {state.data.get('last_openclaw', 'never')}")
+    print(f"Last autonomy:    {state.data.get('last_autonomy_run', 'never')}")
+    print(f"Last self-manage: {state.data.get('last_self_manage', 'never')} ({state.data.get('self_manage_actions', 0)} actions)")
+    oc_idx = state.data.get("openclaw_city_index", 0)
+    if oc_idx < len(OPENCLAW_CITIES):
+        next_city, next_niche = OPENCLAW_CITIES[oc_idx]
+        print(f"Next openclaw:    {next_niche} in {next_city} (#{oc_idx + 1}/{len(OPENCLAW_CITIES)})")
+    print(f"Managed crons:    {len(state.data.get('managed_crons', []))}")
     print(f"Disk free:        {disk_free_gb()}GB")
 
     # Score all ops
@@ -1229,6 +1647,44 @@ def show_status():
             except Exception:
                 pass
 
+    # Alpha pipeline results
+    alpha_results = state.data.get("alpha_pipeline_results", {})
+    if alpha_results:
+        print(f"\nALPHA PIPELINE (last run):")
+        for k, v in alpha_results.items():
+            print(f"  {k}: {v}")
+
+    # Health issues
+    health_issues = state.data.get("health_issues", [])
+    if health_issues:
+        print(f"\nHEALTH ISSUES ({len(health_issues)}):")
+        for issue in health_issues[-5:]:
+            print(f"  {issue[:80]}")
+
+    # Managed crons
+    managed_crons = state.data.get("managed_crons", [])
+    if managed_crons:
+        print(f"\nMANAGED CRONS ({len(managed_crons)}):")
+        for cron in managed_crons[-10:]:
+            print(f"  {cron[:80]}")
+
+    # Dynamic ventures
+    venture_dir = CEO_DIR / "ventures"
+    if venture_dir.exists():
+        venture_files = list(venture_dir.glob("venture_*.json"))
+        if venture_files:
+            print(f"\nDYNAMIC VENTURES ({len(venture_files)}):")
+            for vf in venture_files[:10]:
+                try:
+                    vdef = json.loads(vf.read_text())
+                    v_name = vdef.get("name", "")[:35]
+                    v_status = vdef.get("status", "?")
+                    v_cycles = vdef.get("cycles_run", 0)
+                    v_lane = vdef.get("lane", "?")
+                    print(f"  {vdef.get('op_id', '?'):<6} {v_name:<35} {v_status:<10} lane={v_lane} runs={v_cycles}")
+                except Exception:
+                    pass
+
     # Config
     config = state.data.get("config", {})
     print(f"\nCONFIG:")
@@ -1238,6 +1694,30 @@ def show_status():
     print(f"  Promote threshold: > {config.get('promote_threshold', PROMOTE_THRESHOLD)}")
     print(f"  Cycle interval:    {CYCLE_INTERVAL_HOURS}h")
     print(f"  Discover interval: {DISCOVER_INTERVAL_HOURS}h")
+    print(f"  Alpha interval:    {ALPHA_INTERVAL_HOURS}h")
+    print(f"  Research interval: {RESEARCH_INTERVAL_HOURS}h")
+    print(f"  Content interval:  {CONTENT_INTERVAL_HOURS}h")
+    print(f"  Health interval:   {HEALTH_INTERVAL_HOURS}h")
+    print(f"  OpenClaw interval: {OPENCLAW_INTERVAL_HOURS}h")
+
+    # OpenClaw stats
+    oc_stats = state.data.get("openclaw_stats", {})
+    if oc_stats:
+        print(f"\nOPENCLAW PIPELINE (last run):")
+        for k, v in oc_stats.items():
+            print(f"  {k}: {v}")
+        # Also show live stats if the script exists
+        oc_script = PROJECT / "AUTOMATIONS" / "openclaw_local_biz.py"
+        if oc_script.exists():
+            try:
+                oc_state_file = PROJECT / "AUTOMATIONS" / "leads" / "openclaw" / ".openclaw_state.json"
+                if oc_state_file.exists():
+                    oc_live = json.loads(oc_state_file.read_text())
+                    print(f"  total_leads: {oc_live.get('total_leads', 0)}")
+                    print(f"  sites_built: {oc_live.get('total_sites_built', 0)}")
+            except Exception:
+                pass
+
     print("=" * 70)
 
 
@@ -1280,6 +1760,14 @@ def main():
     parser.add_argument("--run", action="store_true", help="Run one CEO cycle")
     parser.add_argument("--protect", type=str, help="Add op to protected list")
     parser.add_argument("--rollback", action="store_true", help="Rollback last CEO changes")
+    parser.add_argument("--alpha", action="store_true", help="Run alpha pipeline only")
+    parser.add_argument("--research", action="store_true", help="Run research pipeline only")
+    parser.add_argument("--content", action="store_true", help="Run content generation only")
+    parser.add_argument("--health", action="store_true", help="Run system health check only")
+    parser.add_argument("--decision-engine", action="store_true", help="Run decision engine only")
+    parser.add_argument("--ventures", action="store_true", help="Run dynamic ventures only")
+    parser.add_argument("--cron-list", action="store_true", help="Show managed cron entries")
+    parser.add_argument("--cron-add", type=str, help="Add a cron entry (e.g., '0 */2 * * * python3 ...')")
     args = parser.parse_args()
 
     if args.status:
@@ -1321,6 +1809,91 @@ def main():
                 print("No CEO snapshot found to rollback to")
         except Exception as e:
             print(f"Rollback failed: {e}")
+    elif args.alpha:
+        log("Running alpha pipeline (standalone)...")
+        ok1, _ = run_script("twitter_alpha_scraper.py", "--all", label="alpha:twitter")
+        ok2, _ = run_script("background_reddit_scraper.py", "--scrape", label="alpha:reddit")
+        ok3, _ = run_script("alpha_auto_processor.py", "--process-new", label="alpha:processor")
+        print(f"Alpha pipeline: twitter={'OK' if ok1 else 'FAIL'} reddit={'OK' if ok2 else 'FAIL'} processor={'OK' if ok3 else 'FAIL'}")
+    elif args.research:
+        log("Running research pipeline (standalone)...")
+        ok, out = run_script("daily_research_orchestrator.py", "--full", timeout_sec=600, label="research:daily")
+        print(f"Research: {'OK' if ok else 'FAILED'}")
+        if out:
+            print(out[-500:])
+    elif args.content:
+        log("Running content generation (standalone)...")
+        ok1, _ = run_script("printmaxx_agent.py", "--mission content", label="content:generate")
+        ok2, _ = run_script("printmaxx_agent.py", "--mission upgrade", label="content:upgrade")
+        print(f"Content: generate={'OK' if ok1 else 'FAIL'} upgrade={'OK' if ok2 else 'FAIL'}")
+    elif args.health:
+        log("Running system health check (standalone)...")
+        ok, out = run_script("system_health_monitor.py", "--quick", label="health:check")
+        print(f"Health: {'OK' if ok else 'FAILED'}")
+        if out:
+            print(out[-1000:])
+    elif args.decision_engine:
+        log("Running decision engine (standalone)...")
+        ok, out = run_script("decision_engine.py", "--cycle", label="decision:engine")
+        print(f"Decision engine: {'OK' if ok else 'FAILED'}")
+        if out:
+            print(out[-500:])
+    elif args.ventures:
+        log("Running dynamic ventures (standalone)...")
+        state = CEOState()
+        xlsx = XlsxIntel()
+        runner = VentureRunner(state, xlsx)
+        results = runner.run_dynamic_ventures()
+        for r in results:
+            print(f"  {r.get('op_id', '?')}: {r.get('status', '?')} ({r.get('script', '')})")
+        print(f"Total: {len(results)} venture tasks")
+    elif args.cron_list:
+        state = CEOState()
+        managed = state.data.get("managed_crons", [])
+        print(f"Managed cron entries ({len(managed)}):")
+        for c in managed:
+            print(f"  {c}")
+        # Also show live crontab
+        try:
+            result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+            if result.returncode == 0:
+                live_lines = [l.strip() for l in result.stdout.split("\n") if l.strip() and not l.strip().startswith("#")]
+                print(f"\nLive crontab ({len(live_lines)} entries):")
+                for l in live_lines:
+                    print(f"  {l}")
+        except Exception as e:
+            print(f"Could not read crontab: {e}")
+    elif args.cron_add:
+        cron_entry = args.cron_add.strip()
+        if not cron_entry:
+            print("Empty cron entry — nothing to add")
+        else:
+            try:
+                # Read current crontab
+                result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+                current = result.stdout if result.returncode == 0 else ""
+
+                # Check for duplicate
+                if cron_entry in current:
+                    print(f"Cron entry already exists: {cron_entry}")
+                else:
+                    # Append new entry
+                    new_crontab = current.rstrip("\n") + "\n" + cron_entry + "\n"
+                    install = subprocess.run(
+                        ["crontab", "-"], input=new_crontab, capture_output=True,
+                        text=True, timeout=10
+                    )
+                    if install.returncode == 0:
+                        print(f"Added cron entry: {cron_entry}")
+                        # Track in state
+                        state = CEOState()
+                        managed = state.data.setdefault("managed_crons", [])
+                        managed.append(cron_entry)
+                        state.save()
+                    else:
+                        print(f"Failed to install cron: {install.stderr}")
+            except Exception as e:
+                print(f"Cron add failed: {e}")
     elif args.run:
         run_ceo_cycle()
     else:

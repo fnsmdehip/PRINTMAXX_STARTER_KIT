@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude.schedule.auto_content_niche_content_farm_9569</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; claude -p "You are the CONTENT autonomy agent for PRINTMAXX venture '\''Niche Content Farm'\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 6h. Each cycle: 1. FIND TOPICS: Scan trending topics in the venture'\''s niche. Check LEDGER/ALPHA_STAGING.csv for recent alpha. Check CONTENT/social/ for what'\''s already been posted. 2. GENERATE: Create 5 social posts (X/Twitter format), 1 thread (5-7 tweets), 1 newsletter draft. Follow .claude/rules/copy-style.md voice guidelines. 3. FORMAT: Adapt content for each platform (X, LinkedIn, newsletter, blog). 4. SCHEDULE: Save all content to CONTENT/social/generated/ as PENDING_REVIEW with timestamps. 5. DISTRIBUTE: Move APPROVED content to posting queue. 6. TRACK: Check engagement on previously posted content.  Rules: - NEVER use AI slop vocabulary (see .claude/rules/copy-style.md) - Consequence-first hooks, specific numbers, lowercase energy - All files stay in /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" --dangerously-skip-permissions --model claude-sonnet-4-6 >> "/Users/macbookpro/.claude/logs/auto_content_niche_content_farm_9569.log" 2>&amp;1</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/Users/macbookpro/.local/bin</string>
+    </dict>
+    <key>StartInterval</key>
+    <integer>21600</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_content_niche_content_farm_9569.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/macbookpro/.claude/logs/auto_content_niche_content_farm_9569.error.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
