@@ -1276,3 +1276,69 @@ Reply w/'AI' and ill send you guide on how to do it
 > cross-post to Tiktok, IG, YT & Facebook
 > pay based on performance and not
 
+
+
+---
+
+## Pending Enhancement (ALPHA16293, Score: 26)
+
+**Source:** @espindeezy (daily scraper) | **URL:** https://x.com/espindeezy/status/1846270665529467248
+**Added:** 2026-03-07T00:25:43-05:00
+
+I made 39k in the last 7 days with TikTok Shop
+
+How?
+
+By not reinventing the wheel.
+
+My video took inspiration from another creator inside 
+@creatorscorner0
+ who went mega viral with the same product
+
+And guess what? HIS video had taken inspiration from one of MY viral videos 
+
+And you guessed it… that video was inspired by another creator inside our group. 
+
+You’ll get 10x better re
+
+
+
+---
+
+## Pending Enhancement (ALPHA16300, Score: 32)
+
+**Source:** @SimonasDip (daily scraper) | **URL:** https://x.com/SimonasDip/status/1974156805379969399
+**Added:** 2026-03-07T00:25:44-05:00
+
+All methods to target US audience on TikTok (ranked from least to most reliable)
+
+1. VPN + US SIM card + restored phone + proxies
+Basically pretend you’re in the US by wiping a phone, inserting a US SIM, running VPN/proxy.
+
+ Pros: Cheapest DIY hack if you’re techy.
+ Cons: VPNs get flagged, proxies break, SIMs cost money. Accounts often stop hitting the US feed after a while.
+
+Reliability s
+
+
+
+---
+
+## Pending Enhancement (ALPHA16401, Score: 38)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/sumoclip
+**Added:** 2026-03-07T00:41:17-05:00
+
+Turn long videos into viral clips in minutes. $3.5k/mo March 2026. Repurposing workflow tool for content creators. Growing category.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16409, Score: 35)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/wordy
+**Added:** 2026-03-07T00:41:17-05:00
+
+Learn languages by watching movies and TV shows. $20k/mo 2026. Entertainment-education crossover niche. Works on existing Netflix/streaming behavior.
+

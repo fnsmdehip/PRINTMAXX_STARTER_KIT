@@ -1379,3 +1379,25 @@ Sees Q2 revenue about $22.0B, est. $20.53B
 Sees Q2 adjusted EBITDA about 68% of projected revenue
 Expects AI semiconductor
 
+
+
+---
+
+## Pending Enhancement (ALPHA16308, Score: 67)
+
+**Source:** Twitter/ideabrowser.com | **URL:** https://ideabrowser.com
+**Added:** 2026-03-07T00:25:44-05:00
+
+Claude Migration as a Service playbook: Pick vertical (car dealerships/CRE brokerages). Record workflows with Wispr Flow. Turn SOPs into Claude skills into agents into dashboards. Revenue: Workshops $2.5-10K + Process mapping $5K/mo + Custom agents $10K/mo + Maintenance $1K/mo. 15 clients = $1M by month 10. Window: Claude memory imports just launched - most businesses havent heard of Claude Projec
+
+
+
+---
+
+## Pending Enhancement (ALPHA16425, Score: 42)
+
+**Source:** IndieHackers - Interview | **URL:** https://www.indiehackers.com/post/how-automating-tasks-helped-me-grow-revenue-to-over-125k-mo-tedTWxnisjbjj5M0Udbm
+**Added:** 2026-03-07T00:41:17-05:00
+
+park.io: domain backorder service for hacker domains (.io .ly .me). Revenue from automation removing manual work. Secondary product file.io gaining traction. Key lesson: automate everything so you can
+

@@ -1548,6 +1548,22 @@ def run_ceo_cycle(dry_run=False):
         else:
             log(f"Phase 15: Autonomy — skipped ({hours_since_autonomy:.1f}h < {AUTONOMY_INTERVAL_HOURS}h interval)")
 
+        # Phase 16: Loop Closer — close decision/feedback/pipeline loops
+        log("Phase 16: Loop Closer — closing decision/feedback/pipeline loops...")
+        loop_script = PROJECT / "AUTOMATIONS" / "loop_closer.py"
+        if loop_script.exists():
+            ok_loop, out_loop = run_script("loop_closer.py", "--cycle",
+                                           timeout_sec=120, label="loop_closer:cycle")
+            state.data["last_loop_closer"] = datetime.now().isoformat()
+            if out_loop:
+                # Parse decisions/feedback/pipeline counts from output
+                for line in out_loop.split("\n"):
+                    if "Cycle complete:" in line:
+                        log(f"  {line.strip()}")
+            state.save()
+        else:
+            log("  Loop closer script not found — skipping", "WARN")
+
         # Update state
         state.data["last_cycle"] = datetime.now().isoformat()
         state.data["cycles_run"] += 1

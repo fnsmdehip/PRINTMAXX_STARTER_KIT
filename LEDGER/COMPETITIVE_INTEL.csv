@@ -1,0 +1,164 @@
+type,category,name,price,rating,rating_count,version,last_updated,positive_sentiment,negative_sentiment,source,url,metric_1,metric_2,notes,scan_date
+app,faith,Hallow: Prayer & Meditation,Free,4.89,353096,12.19.1,2026-03-04,1,0,itunes_api,,"Hallow, Inc.",Reference,,2026-03-07T00:24:29.160952
+app,faith,Pray.com: Bible & Daily Prayer,Free,4.79,188460,2.132.5,2026-03-05,2,0,itunes_api,,"Pray, Inc.",Health & Fitness,,2026-03-07T00:24:44.875373
+app,faith,Glorify: Devotional & Prayer,Free,4.93,90318,2.169.0,2026-03-05,0,0,itunes_api,,TUPOE LTD,Reference,,2026-03-07T00:24:32.185157
+app,faith,Abide: Bible Prayer Meditation,Free,4.87,120954,3.77.0,2026-02-05,4,0,itunes_api,,Guideposts Church Corporation,Reference,,2026-03-07T00:24:33.894697
+app,faith,Bible,Free,4.92,13007520,11.17.0,2026-02-19,2,0,itunes_api,,Life.Church,Reference,,2026-03-07T00:24:35.337100
+app,faith,Lectio 365: Daily Bible Prayer,Free,4.78,985,4.7.0,2026-02-17,0,1,itunes_api,,24-7 Prayer,Reference,Add Brazilian Portuguese language support.; Improve overall stability and performance.,2026-03-07T00:24:37.070621
+app,faith,Bible App for Kids,Free,4.66,8924,3.2.0,2026-02-26,3,0,itunes_api,,Life.Church,Education,,2026-03-07T00:24:38.677259
+app,faith,Daily Holy Rosary Prayer App,Free,4.84,11448,7.8,2025-02-12,2,0,itunes_api,,Tomasz Powalka,Reference,,2026-03-07T00:24:40.007683
+app,faith,Catholic Answers,Free,4.89,2149,4.2.2,2025-12-10,2,0,itunes_api,,Catholic Answers Inc.,Education,,2026-03-07T00:24:41.875281
+app,faith,Bible Chat: Daily Devotional,Free,4.93,311833,4.2.9,2026-02-27,4,0,itunes_api,,Book Vitals Inc.,Reference,,2026-03-07T00:24:43.470692
+app,faith,Breethe: Sleep & Meditation,Free,4.74,68648,4.98,2026-02-27,4,0,itunes_api,,OMG. I Can Meditate! Inc.,Health & Fitness,,2026-03-05T05:46:25.054713
+app,faith,Amen: Catholic Bible & Prayers,Free,4.92,45180,1.29.0,2026-02-06,0,0,itunes_api,,"Augustine Institute, Inc.",Reference,,2026-03-07T00:24:48.120831
+app,faith,UP Faith & Family,Free,4.57,10376,10.000.1,2026-01-16,0,0,itunes_api,,"UP Faith & Family, LLC",Entertainment,Bug fixes; Performance improvements,2026-03-05T05:46:29.992092
+app,faith,The Bible Memory App,Free,4.81,29591,9.0,2026-01-10,1,0,itunes_api,,"Millennial Apps, LLC",Reference,Insights Sharing; Bible Reading History; Group Member Management,2026-03-07T00:24:51.114994
+app,faith,Echo Prayer,Free,4.81,21357,3.6.6,2025-12-15,3,0,itunes_api,,"The Parable Group, Inc.",Lifestyle,,2026-03-07T00:24:52.808626
+app,faith,Dwell: Audio Bible,Free,4.9,78817,2026.2.2,2026-02-22,2,0,itunes_api,,"Dwell App, LLC",Reference,"Open Dwell using simple voice commands; Play Scripture, listening plans, and devotionals; Listen while cooking, cleaning, or moving through your day",2026-03-07T00:24:53.860548
+app,faith,Verses - Bible Memory,Free,4.66,3864,5.4.3,2020-03-13,1,0,itunes_api,,"Verses, Ltd. Co.",Reference,Fixed an issue with the CSB translation where some Psalms were off by 1 chapter.,2026-03-07T00:24:55.370698
+app,faith,PrayerMate - Christian Prayer,Free,4.81,412,9.1.28,2026-02-14,1,0,itunes_api,,Discipleship Tech,Productivity,,2026-03-07T00:24:56.801785
+app,faith,First 5,Free,4.53,874,3.33.1,2025-12-30,1,0,itunes_api,,"Proverbs 31 Ministry, Inc.",Lifestyle,,2026-03-07T00:24:58.444791
+app,screen_time,Opal: Screen Time Control,Free,4.79,68087,3.151,2026-03-03,2,0,itunes_api,,OPAL OS CORPORATION,Productivity,,2026-03-07T00:25:00.221139
+app,screen_time,BePresent: Screen Time Control,Free,4.85,38609,0.18.61,2026-03-04,3,0,itunes_api,,Screen Detox Inc,Productivity,,2026-03-07T00:25:11.329642
+app,screen_time,one sec | screen time + focus,Free,4.83,22235,5.1,2025-12-17,1,0,itunes_api,,riedel.wtf apps S.L.,Productivity,Big update for one sec’s conversational reflection intervention. Completely redesigned & improved te; App Icon picker updated and UI fixes.; Bug fixes around strict block of apps.,2026-03-07T00:25:09.799121
+app,screen_time,ScreenZen- Screen Time Control,Free,4.85,33526,1.2.175,2026-02-06,0,0,itunes_api,,ScreenZen LLC,Productivity,"See your unlock countdown in the Dynamic Island and quickly relock apps with one tap.; Fully redesigned settings experience.; Combine strict blocking, limits, and break times all within a single app group.",2026-03-07T00:25:23.960073
+app,screen_time,Roots: Screen Time Control,Free,4.76,1518,2.14.4,2026-01-26,1,0,itunes_api,,MWM,Productivity,,2026-03-07T00:25:06.695300
+app,screen_time,AppBlock: Block Apps & Website,Free,4.58,5401,4.8.3,2026-03-05,1,1,itunes_api,,MobileSoft s.r.o.,Productivity,,2026-03-07T00:25:08.390174
+app,screen_time,Flipd: focus & study timer,Free,4.52,6922,5.0.1,2025-02-25,1,0,itunes_api,,Flipd Apps,Productivity,,2026-03-07T00:25:13.019946
+app,screen_time,"Offline: Files, Browser, VPN",Free,4.62,135303,1.2.9,2025-10-31,2,0,itunes_api,,SAEED ABDULLAH ALHAJRI,Utilities,,2026-03-05T05:47:09.619500
+app,screen_time,SPACE - Break phone addiction,Free,4.22,613,14.1.2,2019-11-04,2,0,itunes_api,,Mrigaen Kapadia,Productivity,,2026-03-07T00:25:16.393057
+app,screen_time,Freedom: Control Screen Time,Free,4.39,5008,7.2,2026-03-02,3,0,itunes_api,,Eighty Percent Solutions Corporation,Productivity,,2026-03-07T00:25:17.410146
+app,productivity,Forest: Focus for Productivity,Free,4.82,47465,5.9.0,2026-03-04,1,0,itunes_api,,"SEEKRTECH CO., LTD.",Productivity,,2026-03-07T00:26:33.610891
+app,productivity,Flora - Green Focus,Free,4.76,81646,3.7.37,2026-02-03,3,0,itunes_api,,AppFinca Inc.,Productivity,Bug fixes & performance improvements,2026-03-07T00:26:35.006952
+app,screen_time,Minimalist Launcher,Free,4.67,2974,23,2026-03-02,0,0,itunes_api,,Ankit Kumar,Productivity,,2026-03-07T00:25:22.285405
+app,screen_time,ClearSpace: Reduce Screen Time,Free,4.74,8224,2.7.2,2026-01-16,0,0,itunes_api,,"Clearspace Technologies, Inc.",Productivity,,2026-03-07T00:25:25.322226
+app,screen_time,Be Focused – Deep Focus Timer,Free,4.71,4287,2.7,2026-02-18,1,0,itunes_api,,Denys Ievenko,Productivity,,2026-03-07T00:25:26.879445
+app,screen_time,BlockSite: Block Apps & Focus,Free,4.23,5827,4.3.3,2026-03-01,2,0,itunes_api,,BlockSite LP,Productivity,,2026-03-07T00:25:28.488300
+app,screen_time,Friendly Social Browser,Free,4.58,84393,8.9.56,2025-05-21,0,0,itunes_api,,"Friendly, Inc.",Social Networking,,2026-03-07T00:25:29.909446
+app,study,Gauth: AI Study Companion,Free,4.84,1336971,1.91.0,2026-02-11,1,0,itunes_api,,GAUTHTECH PTE. LTD.,Education,,2026-03-07T00:25:31.253043
+app,study,Knowunity: AI Study & Homework,Free,4.63,3915,6.9.1,2026-02-27,1,0,itunes_api,,Knowunity Inc.,Education,,2026-03-07T00:25:32.939795
+app,study,Quizlet: More than Flashcards,Free,4.78,1053229,10.26,2026-03-02,1,0,itunes_api,,Quizlet Inc,Education,,2026-03-07T00:25:43.970549
+app,study,AnkiMobile Flashcards,$24.99,4.07,2207,25.09,2025-09-08,1,0,itunes_api,,Ankitects Pty Ltd,Education,Updates to match desktop 25.09 release.; Support 'show reminder' in the 'show question' auto-answer action.; Make it easier to debug issues with card templates by exposing the reviewer to Safari.,2026-03-07T00:25:36.149179
+app,study,Brainly: AI Homework Helper,Free,4.72,283181,4.208.0,2026-03-02,1,0,itunes_api,,Brainly sp. z o o,Education,,2026-03-07T00:25:37.660860
+app,study,Photomath,Free,4.77,732963,8.46.0,2026-02-12,0,0,itunes_api,,Google LLC,Education,,2026-03-07T00:25:39.333866
+app,study,Socratic AI - Homework Helper,Free,4.74,4687,1.5.1,2026-03-06,1,0,itunes_api,,"Chengdu BiFang AI Tech Co., Ltd",Education,Class guides & notes; Test prep resources; Homework helpers,2026-03-07T00:25:40.809891
+app,study,Chegg Study - Homework Help,Free,4.69,204821,6.37.0,2026-02-17,0,1,itunes_api,,"Chegg, Inc.",Education,,2026-03-07T00:25:42.662126
+app,study,Notion Calendar,Free,4.75,6120,1.87.0,2026-01-19,0,0,itunes_api,,"Notion Labs, Incorporated",Productivity,,2026-03-07T00:25:45.516474
+app,productivity,Todoist: To Do List & Calendar,Free,4.8,123996,26.2.31,2026-03-03,1,0,itunes_api,,Doist Inc.,Productivity,,2026-03-07T00:26:38.053850
+app,productivity,Obsidian - Connected Notes,Free,4.49,2381,1.12.4,2026-02-27,0,0,itunes_api,,Dynalist Inc.,Productivity,,2026-03-07T00:26:44.389462
+app,study,RemNote - Notes & Flashcards,Free,4.84,1198,1.23.14,2026-03-06,1,0,itunes_api,,"RemNote, LLC",Education,,2026-03-07T00:25:50.271723
+app,study,Kahoot! Play & Create Quizzes,Free,4.56,47375,6.6.1,2026-03-03,1,0,itunes_api,,Kahoot ASA,Education,,2026-03-07T00:25:51.799224
+app,study,Khan Academy,Free,4.57,103332,8.4.1,2026-02-24,0,0,itunes_api,,Khan Academy,Education,,2026-03-07T00:25:53.099019
+app,study,Duolingo - Language Lessons,Free,4.73,4992394,7.112.1,2026-03-03,2,0,itunes_api,,"Duolingo, Inc",Education,,2026-03-07T00:25:54.575185
+app,study,Coursera: Grow your career,Free,4.85,165967,8.5.0,2026-02-23,0,0,itunes_api,,"Coursera, Inc.",Education,,2026-03-07T00:25:56.042575
+app,study,Brilliant: Learn by doing,Free,4.74,27646,9.16.0,2026-03-02,0,0,itunes_api,,"Brilliant Worldwide, Inc",Education,,2026-03-05T05:48:34.727790
+app,study,WolframAlpha,Free,2.8,123,2.6.1,2025-12-17,0,0,itunes_api,,Wolfram Group LLC,Education,Adds support for the Liquid Glass interface in iOS 26; Adds a new icon for iOS 26; Bug fixes,2026-03-07T00:25:59.321539
+app,study,Symbolab - AI Math Solver App,Free,4.57,25953,13.0.0,2025-12-17,1,0,itunes_api,,Eqsquest Ltd,Education,,2026-03-07T00:26:01.011275
+app,fitness,Fitbod: Gym & Fitness Planner,Free,4.82,265407,8.7.0,2026-03-06,1,0,itunes_api,,Fitbod Inc.,Health & Fitness,Bug fixes and improvements,2026-03-07T00:26:02.578113
+app,fitness,Streaks Workout,$4.99,4.76,6946,7.2.1,2026-02-24,1,0,itunes_api,,Crunchy Bagel Pty Ltd,Health & Fitness,Fixes and issue that may prevent workouts from saving correctly in some situations; Improvements to workout duration estimation on main menu; Support for kilojoules (based on your HealthKit preferred energy unit),2026-03-07T00:26:04.297665
+app,fitness,"StepBet: Walk, Get Active, Win",Free,4.8,21973,22.5.0,2026-02-04,0,0,itunes_api,,FitnessAI Inc.,Health & Fitness,,2026-03-07T00:26:05.810794
+app,fitness,Nike Training Club,Free,4.85,274938,6.70.0,2026-02-02,0,0,itunes_api,,"Nike, Inc",Health & Fitness,,2026-03-07T00:26:07.403641
+app,fitness,Peloton: Fitness & Workouts,Free,4.92,804888,15.121.1,2026-03-04,0,0,itunes_api,,"Peloton Interactive, Inc.",Health & Fitness,,2026-03-07T00:26:09.726391
+app,fitness,"Strava: Run, Bike, Walk",Free,4.81,352719,453.1.0,2026-03-05,1,0,itunes_api,,Strava Inc.,Health & Fitness,,2026-03-07T00:26:10.774229
+app,fitness,MyFitnessPal: Calorie Counter,Free,4.71,2276204,26.9.1,2026-03-05,1,0,itunes_api,,"MyFitnessPal, Inc.",Health & Fitness,,2026-03-07T00:26:12.114248
+app,fitness,Strong Workout Tracker Gym Log,Free,4.86,108325,6.2.8,2026-02-23,3,0,itunes_api,,Strong Fitness PTE Limited,Health & Fitness,,2026-03-07T00:26:13.739522
+app,fitness,JEFIT Workout Plan Gym Tracker,Free,4.77,46370,16.3.4,2026-03-05,1,0,itunes_api,,Jefit Inc.,Health & Fitness,,2026-03-07T00:26:15.218035
+app,fitness,Hevy - Workout Tracker Gym Log,Free,4.92,59991,3.0.1,2026-03-06,3,0,itunes_api,,Hevy Studios S.L.,Health & Fitness,Generate your workouts; Follow a trainer guided program; Progress weight with progress overload,2026-03-07T00:26:16.830027
+app,fitness,Fitbit: Health & Fitness,Free,4.52,641313,4.64,2026-02-26,1,0,itunes_api,,Google LLC,Health & Fitness,,2026-03-07T00:26:18.487606
+app,fitness,Apple Fitness,Free,2.86,10611,2.6,2026-03-07,0,0,itunes_api,,Apple Inc.,Health & Fitness,,2026-03-07T00:26:20.016772
+app,fitness,Gymshark Training and Fitness,Free,4.85,14558,2.62.0,2025-06-25,2,0,itunes_api,,Gymshark Ltd,Health & Fitness,,2026-03-07T00:26:21.279979
+app,fitness,Sweat: Fitness App For Women,Free,4.63,42536,7.6.14,2026-01-29,1,0,itunes_api,,The Bikini Body Training Company Pty Ltd,Health & Fitness,,2026-03-07T00:26:22.727095
+app,fitness,Centr: Strength & Fitness App,Free,4.75,20736,9.3.3,2026-03-02,2,0,itunes_api,,CH Digital Pty Ltd,Health & Fitness,,2026-03-07T00:26:24.470237
+app,fitness,Future Pro: Personal Training,Free,4.87,10213,2026.0,2026-02-05,1,0,itunes_api,,"Future Research, Inc.",Health & Fitness,,2026-03-07T00:26:26.057690
+app,fitness,Caliber: Strength Training,Free,4.84,5316,5.12.2,2026-03-02,1,0,itunes_api,,"Caliber Fitness, Inc.",Health & Fitness,New Feature: Reset your exercise personal bests!; Added dates for personal bests on Exercise History screen,2026-03-07T00:26:27.647423
+app,fitness,Stronglifts 5x5 Workout,Free,4.87,75765,4.2,2026-02-12,1,0,itunes_api,,Stronglifts Limited,Health & Fitness,,2026-03-07T00:26:29.088386
+app,fitness,Fitness AI Gym Workout Planner,Free,4.7,54830,15.4,2026-02-25,3,0,itunes_api,,FitnessAI Inc.,Health & Fitness,,2026-03-07T00:26:30.721422
+app,fitness,Freeletics: Workouts & Fitness,Free,4.64,22113,26.8.2,2026-03-02,1,0,itunes_api,,Freeletics GmbH,Health & Fitness,,2026-03-07T00:26:32.406682
+app,productivity,Focus Keeper - Pomodoro Timer,Free,4.79,31183,4.2.11,2026-03-05,2,0,itunes_api,,PIXO Incorporation,Productivity,More customizable Task Timer settings to better match your workflow.; Improved timer stability and bug fixes for a more reliable experience.; Enhanced App Blocking to help protect your focus and reduce distractions.,2026-03-07T00:26:36.600690
+app,productivity,Things 3,$9.99,4.82,27387,3.22.8,2026-02-25,6,0,itunes_api,,Cultured Code GmbH & Co. KG,Productivity,,2026-03-07T00:26:39.864730
+app,productivity,TickTick:To-Do List & Calendar,Free,4.86,41697,8020,2026-02-05,0,0,itunes_api,,Appest Limited,Productivity,New Countdown Notes: Capture meaningful moments and helpful reminders for every special day.,2026-03-07T00:26:41.661015
+app,productivity,"Notion: Notes, Tasks, AI",Free,4.78,78831,1.7.285,2026-03-03,4,0,itunes_api,,"Notion Labs, Incorporated",Productivity,,2026-03-07T00:26:43.242827
+app,productivity,Bear - Markdown Notes,Free,4.68,6798,2.6.7,2026-02-17,4,0,itunes_api,,Shiny Frog Ltd.,Productivity,Home Screen long-press actions on iOS now respect your “Start New Notes With” preference; Fixed an issue where the purchase panel didn’t appear when non-Pro users tried to enable app locking; Improved the password field layout so it stays visible above the keyboard,2026-03-07T00:26:46.364779
+app,productivity,"Craft: Notes, Documents, AI",Free,4.84,6488,3.3.9,2026-02-17,2,0,itunes_api,,Craft Docs Limited,Productivity,"Collections now include a new Gallery view, a grid based card layout as an alternative to table view; Collections are now noticeably faster. Importing large CSV files no longer freezes the app, scrollin; Selecting Settings from the sidebar now opens Space Settings directly instead of the Templates tab.",2026-03-07T00:26:47.863858
+app,productivity,"Goodnotes: AI Notes, Docs, PDF",Free,4.72,406588,7.0.36,2026-02-17,2,0,itunes_api,,Goodnotes Limited,Productivity,,2026-03-07T00:26:49.372678
+app,productivity,Notability: AI Notes & PDF app,Free,4.76,442399,15.4.2,2026-03-04,2,0,itunes_api,,"Ginger Labs, Inc.",Productivity,,2026-03-07T00:26:51.095013
+app,productivity,Structured - Daily Planner,Free,4.8,155078,4.4.4,2026-02-19,1,0,itunes_api,,unorderly GmbH,Productivity,"Fixed an issue where calendar events could disappear after changing calendar selections.; Resolved an edge case where AI-edited task changes could remain visible after deletion.; Improved editor interactions, including icon and color behavior.",2026-03-07T00:26:52.756697
+app,productivity,Calendars: Schedule Planner,Free,4.72,117835,5.37.22,2026-03-02,0,0,itunes_api,,Readdle Technologies Limited,Productivity,,2026-03-07T00:26:54.138365
+app,productivity,Fantastical Calendar,Free,4.15,22137,4.1.9,2026-03-03,3,0,itunes_api,,Flexibits Inc.,Productivity,"Microsoft Teams meetings can now be added to events that aren't on a Microsoft 365 account. Enable ""; Added support for categories to delegated calendars on Microsoft Graph accounts; Added support for Deadlines on Todoist tasks",2026-03-07T00:26:55.687537
+app,productivity,Spark AI Email & Calendar,Free,4.63,80968,3.19.5,2026-02-12,5,0,itunes_api,,Readdle Technologies Limited,Productivity,,2026-03-07T00:26:57.424733
+app,productivity,Superhuman Mail,Free,4.59,3322,4.61.1,2026-03-06,1,0,itunes_api,,SUPERHUMAN LABS INC.,Productivity,,2026-03-07T00:26:58.980407
+app,productivity,"Raycast: AI, Notes and more",Free,4.29,138,1.2.7,2026-03-02,1,0,itunes_api,,Raycast Technologies Inc,Productivity,AI: Background chats with Live Activity support; AI: Run multiple chats simultaneously; AI: Option to save disposable chat,2026-03-07T00:27:00.427933
+app,productivity,Hello Alfred,Free,4.7,2104,2.30.0,2026-02-25,1,0,itunes_api,,Alfred Club Inc,Lifestyle,,2026-03-05T05:50:23.110683
+app,productivity,Microsoft SwiftKey AI Keyboard,Free,4.59,119001,4.2.9,2026-02-25,0,0,itunes_api,,TouchType Ltd,Utilities,,2026-03-07T00:27:03.803735
+app,sleep,Sleep Cycle - Tracker & Sounds,Free,4.66,20832,6.26.8,2026-03-03,1,0,itunes_api,,Sleep Cycle AB,Health & Fitness,,2026-03-07T00:27:05.276319
+app,sleep,Pillow: Sleep Tracker,Free,4.37,95315,6.2.8,2026-03-06,2,0,itunes_api,,Neybox Digital Ltd.,Health & Fitness,"Invite friends and earn rewards with our new referral experience, now with smoother code redemption,; Fixed an issue that could make the smart alarm misbehave in some rare cases.; Fixed an issue where the Apple Watch app was unable to send diagnostics to the iPhone.",2026-03-07T00:27:06.892300
+app,sleep,AutoSleep: Watch Sleep Tracker,$8.99,4.71,60690,6.16,2025-11-29,2,0,itunes_api,,TANTSISSA HOLDINGS PTY LTD,Health & Fitness,,2026-03-07T00:27:08.213066
+app,sleep,Calm,Free,4.77,1941595,6.90,2026-03-02,2,0,itunes_api,,"Calm.com, Inc.",Health & Fitness,,2026-03-07T00:27:09.720030
+app,sleep,Headspace: Meditation & Sleep,Free,4.84,973997,3.413.0,2026-02-26,1,0,itunes_api,,Headspace Inc.,Health & Fitness,,2026-03-07T00:27:11.332395
+app,sleep,BetterSleep: Relax and Sleep,Free,4.75,389035,26.3,2026-03-02,7,0,itunes_api,,"BetterSleep Health, LLC",Health & Fitness,,2026-03-07T00:27:27.935471
+app,sleep,Insight Timer–Meditate & Sleep,Free,4.9,435999,20.6.0,2026-02-26,2,0,itunes_api,,Insight Network Inc,Health & Fitness,,2026-03-07T00:27:14.235038
+app,sleep,White Noise Lite,Free,4.83,264035,8.2.1,2026-01-07,1,2,itunes_api,,TMSOFT,Health & Fitness,,2026-03-05T05:50:53.216136
+app,sleep,Focus Noodles-Study timer,$3.99,4.72,196,2.9.7,2026-01-20,2,0,itunes_api,,"ideaTiny Co., Ltd.",Productivity,,2026-03-05T05:50:55.699185
+app,sleep,Rain Rain Sleep Sounds,Free,4.85,133758,6.9.10,2025-01-22,2,1,itunes_api,,Tim Gostony,Health & Fitness,,2026-03-07T00:27:18.925970
+app,sleep,"TIDE: Sleep, Focus, Meditation",Free,4.83,8241,5.8.1,2026-03-04,1,0,itunes_api,,"Guangzhou Moreless Network Technology Co., Ltd",Health & Fitness,Multiple user experience optimizations and bug fixes.,2026-03-07T00:27:20.731269
+app,sleep,"Pzizz - Sleep, Nap, Focus",Free,4.78,9646,5.0.43,2026-02-19,4,0,itunes_api,,Pzizz Ltd,Health & Fitness,Fixed a crash affecting users on iOS 26,2026-03-07T00:27:22.191035
+app,sleep,SleepScore by Sleep.ai,Free,4.36,7456,2.80.4,2026-02-02,1,1,itunes_api,,Consumer Sleep Solutions LLC,Health & Fitness,,2026-03-07T00:27:23.518292
+app,sleep,SleepWatch - Top Sleep Tracker,Free,4.65,328547,8.7.2,2026-02-20,2,1,itunes_api,,"Bodymatter, Inc.",Health & Fitness,,2026-03-07T00:27:24.995381
+app,sleep,"Loóna: Sleep, reduce anxiety",Free,4.56,26092,2.56.2,2025-03-21,1,0,itunes_api,,Loona Inc,Health & Fitness,,2026-03-07T00:27:26.451294
+app,sleep,Relax Melodies P: Sleep Sounds,$99.99,4.78,6430,6.5.1,2018-04-26,2,0,itunes_api,,"BetterSleep Health, LLC",Health & Fitness,"A completely revamped meditation section with smarter content categorization and gorgeous graphics; A brand new sound mixer allowing you to mix sounds and control volumes all in one place.; And of course, we’ve taken care of necessary bug fixes.",2026-03-07T00:27:29.602167
+app,sleep,"ShutEye®: Sleep Tracker, Sound",Free,4.77,345633,3.3.6,2026-03-06,1,0,itunes_api,,ENERJOY PTE. LTD.,Health & Fitness,,2026-03-07T00:27:31.102267
+app,sleep,Sleepiest: Sleep Sounds App,Free,4.64,30331,17.47,2026-02-20,1,0,itunes_api,,Happiest  LTD,Health & Fitness,,2026-03-07T00:27:32.891131
+app,sleep,NapBot - Auto Sleep Tracker,Free,4.16,6283,2.1,2025-09-11,1,0,itunes_api,,Majid Jabrayilov,Health & Fitness,,2026-03-07T00:27:34.567505
+app,journal,Day One: Daily Journal & Diary,Free,4.83,115190,2026.5,2026-03-03,3,0,itunes_api,,Bloom Built Inc,Health & Fitness,Various bug fixes and performance improvements,2026-03-07T00:27:36.150552
+app,journal,"Journey - Diary, Journal",Free,4.64,5012,5.6.4,2025-11-17,3,0,itunes_api,,Two App Studio Pte. Ltd.,Lifestyle,"Liquid Glass Experience: Enjoy a fluid, immersive interface designed with the new Liquid Glass desig; Reflections: Ask follow-up questions on your recent or current journal entries to inspire deeper wri; Moments: In addition to iPhone, iPad devices can now receive journaling suggestions.",2026-03-07T00:27:37.688530
+app,journal,stoic. journal & mental health,Free,4.82,33808,2026.7,2026-02-23,2,0,itunes_api,,Stoic app inc.,Health & Fitness,,2026-03-07T00:27:39.110519
+app,journal,Finch: Self-Care Pet,Free,4.95,652496,3.73.135,2026-03-05,1,0,itunes_api,,Finch Care Public Benefit Corporation,Health & Fitness,,2026-03-07T00:27:40.728655
+app,journal,Gratitude: Self-Care Journal,Free,4.88,44724,5.4.8,2026-03-06,3,1,itunes_api,,Hapjoy Technologies Private Limited,Health & Fitness,Added quick actions for journal entries with long press to share or delete entries; Added the ability to copy challenge examples to the clipboard; Fixed an issue where a black screen appeared for non-Pro iPad users when accessing Pro features,2026-03-07T00:28:02.468746
+app,journal,5 Minute Journal・Daily Diary,Free,4.76,17182,4.3.3,2026-03-04,4,0,itunes_api,,Intelligent Change LLC,Health & Fitness,,2026-03-07T00:27:44.090458
+app,journal,"Grid Diary - Journal, Planner",Free,4.63,963,3.8.4,2025-06-18,1,0,itunes_api,,"Xiamen Sumi Network Technology Co., Ltd.",Lifestyle,,2026-03-05T05:51:48.345781
+app,journal,Reflectly - Journal & AI Diary,Free,4.57,81735,4.15.1,2026-02-03,3,0,itunes_api,,"Kodeon, Inc.",Health & Fitness,,2026-03-07T00:27:47.234757
+app,journal,Daylio Journal - Mood Tracker,Free,4.77,58409,1.69.5,2026-03-04,1,0,itunes_api,,Relaxio s.r.o.,Lifestyle,,2026-03-07T00:28:01.033707
+app,journal,Momento: Private Journal Diary,Free,4.11,876,3.6.5,2023-12-28,3,0,itunes_api,,d3i Ltd,Lifestyle,,2026-03-07T00:27:50.558326
+app,journal,Penzu,Free,4.23,2467,3.15,2026-02-26,2,0,itunes_api,,Penzu Inc.,Productivity,App-wide toolbar improvements including Liquid Glass support; Fix entry date issue for users in non-Gregorian calendar locales; Sync system performance improvements,2026-03-07T00:27:52.211902
+app,journal,Diarium Journal: Private Diary,Free,4.79,1793,3.2.5,2026-03-05,2,0,itunes_api,,Timo Partl,Lifestyle,,2026-03-07T00:27:53.690465
+app,journal,DailyBean - simplest journal,Free,4.82,68188,4.6.0,2026-03-01,0,0,itunes_api,,BlueSignum Corp.,Lifestyle,,2026-03-07T00:27:54.923083
+app,journal,Pixa - My Year in Pixels,Free,4.53,603,1.6.0,2026-03-02,0,0,itunes_api,,Tulip Tech AB,Productivity,,2026-03-07T00:27:56.538951
+app,journal,Bearable - Symptom Tracker,Free,4.76,5043,1.0.586,2026-02-26,1,0,itunes_api,,Bearable Ltd,Health & Fitness,,2026-03-07T00:27:57.928020
+app,journal,Moodnotes - Mood Tracker,Free,4.65,10954,3.14.8,2024-10-24,1,0,itunes_api,,Mosaic S.r.l.,Health & Fitness,,2026-03-05T05:52:16.657668
+app,journal,Gratitude Plus – Journal,Free,4.87,13680,3.10.25,2026-02-18,4,0,itunes_api,,Redwheel Apps,Health & Fitness,Video upload support for premium members!; Bug fixes and performance improvements.,2026-03-05T05:52:21.506651
+app,journal,"Routine Planner, Habit Tracker",Free,4.72,16192,3.29.18,2026-02-24,1,0,itunes_api,,Routinery Corp.,Productivity,,2026-03-07T00:28:04.074018
+app,journal,Balance: Meditation & Sleep,Free,4.88,118768,1.197.0,2026-02-24,2,0,itunes_api,,"Elevate Labs, LLC",Health & Fitness,,2026-03-07T00:28:05.544738
+app,faith,"Aura: Meditation & Sleep, CBT",Free,4.67,34734,3.18.166,2026-02-23,3,0,itunes_api,,Aura Health Inc.,Health & Fitness,,2026-03-07T00:24:46.576572
+app,faith,Creed: Bible Chat & Companion,Free,4.88,13559,1.1.2,2026-03-04,1,0,itunes_api,,"Lemon Tree Labs, Inc.",Reference,,2026-03-07T00:24:49.552839
+app,screen_time,Off - Shutdown and Wake On Lan,Free,4.56,444,3.39,2025-09-11,0,0,itunes_api,,BRIDGETECH SOLUTIONS LIMITED,Utilities,,2026-03-07T00:25:14.506044
+app,productivity,Town of Alfred,Free,0,0,5.48.1,2025-06-11,0,0,itunes_api,,"GOGov, Inc.",Utilities,,2026-03-07T00:27:02.065476
+app,sleep,White Noise Deep Sleep Sounds,Free,4.8,199591,3.41.1,2026-02-19,3,1,itunes_api,,"Slumber Studios, LLC",Health & Fitness,,2026-03-07T00:27:15.879990
+app,sleep,CloudFocus: Deep Focus,Free,4.57,89,1.7.2,2026-02-12,1,0,itunes_api,,POINT ONE TECHNOLOGY LIMITED,Lifestyle,,2026-03-07T00:27:17.216217
+content_twitter,indie_hacking,@levelsio,,,,,,,,twitter,https://x.com/levelsio,Engagement avg: None,Following: None,,2026-03-07T00:31:04.609575
+content_twitter,solopreneur,@taborbayfern,,,,,,,,twitter,https://x.com/taborbayfern,Engagement avg: None,Following: None,,2026-03-07T00:31:20.639493
+content_twitter,indie_hacking,@dannypostmaa,,,,,,,,twitter,https://x.com/dannypostmaa,Engagement avg: None,Following: None,,2026-03-07T00:31:35.842037
+content_twitter,indie_hacking,@marc_louvion,,,,,,,,twitter,https://x.com/marc_louvion,Engagement avg: None,Following: None,,2026-03-07T00:31:58.752490
+content_twitter,indie_hacking,@tdinh_me,,,,,,,,twitter,https://x.com/tdinh_me,Engagement avg: None,Following: None,,2026-03-07T00:32:25.754386
+content_twitter,saas,@arlogilbert,,,,,,,,twitter,https://x.com/arlogilbert,Engagement avg: None,Following: None,,2026-03-07T00:32:51.421175
+content_twitter,indie_hacking,@paborenstein,,,,,,,,twitter,https://x.com/paborenstein,Engagement avg: None,Following: None,,2026-03-07T00:33:20.223730
+content_twitter,design,@cloakdagger_,,,,,,,,twitter,https://x.com/cloakdagger_,Engagement avg: None,Following: None,,2026-03-07T00:33:57.011870
+content_twitter,service_business,@sweatystartup,,,,,,,,twitter,https://x.com/sweatystartup,Engagement avg: None,Following: None,,2026-03-07T00:34:27.562138
+content_twitter,content_creator,@SahilBloom,,,,,,,,twitter,https://x.com/SahilBloom,Engagement avg: None,Following: None,,2026-03-07T00:34:43.605763
+content_twitter,apps,@JamesonCamp,,,,,,,,twitter,https://x.com/JamesonCamp,Engagement avg: None,Following: None,,2026-03-07T00:34:58.678895
+content_twitter,apps,@iamkelyanme,,,,,,,,twitter,https://x.com/iamkelyanme,Engagement avg: None,Following: None,,2026-03-07T00:35:14.060914
+content_twitter,saas,@hnshah,,,,,,,,twitter,https://x.com/hnshah,Engagement avg: None,Following: None,,2026-03-07T00:35:29.118183
+content_twitter,indie_hacking,@thepatwalls,,,,,,,,twitter,https://x.com/thepatwalls,Engagement avg: None,Following: None,,2026-03-07T00:35:44.171264
+content_twitter,automation,@aaborot,,,,,,,,twitter,https://x.com/aaborot,Engagement avg: None,Following: None,,2026-03-07T00:35:59.239815
+content_twitter,philosophy,@naval,,,,,,,,twitter,https://x.com/naval,Engagement avg: None,Following: None,,2026-03-07T00:36:14.305964
+content_twitter,productized,@jackbutcher,,,,,,,,twitter,https://x.com/jackbutcher,Engagement avg: None,Following: None,,2026-03-07T00:36:29.356454
+content_twitter,writing,@david_perell,,,,,,,,twitter,https://x.com/david_perell,Engagement avg: None,Following: None,,2026-03-07T00:36:44.419176
+content_twitter,writing,@Julian,,,,,,,,twitter,https://x.com/Julian,Engagement avg: None,Following: None,,2026-03-07T00:36:59.346427
+content_twitter,writing,@dickiebush,,,,,,,,twitter,https://x.com/dickiebush,Engagement avg: None,Following: None,,2026-03-07T00:37:14.498355
+content_gumroad,indie_hacking,Pieter Levels,,,,,,,,gumroad,https://levelsio.gumroad.com,0 products,Est revenue: $0,,2026-03-07T00:37:22.328764
+content_gumroad,indie_hacking,Marc Lou,,,0,,,,,gumroad,https://marclou.gumroad.com,0 products,Est revenue: $0,,2026-03-07T00:37:23.027464
+content_gumroad,indie_hacking,Danny Postma,,,,,,,,gumroad,https://dannypostma.gumroad.com,0 products,Est revenue: $0,,2026-03-07T00:37:33.007303
+content_gumroad,saas,Tibo,,,0,,,,,gumroad,https://tibo.gumroad.com,0 products,Est revenue: $0,,2026-03-07T00:37:33.685666
+content_gumroad,boilerplates,Ship Fast,$1.0-$299.0,,0,,,,,gumroad,https://shipfa.st,18 products,Est revenue: $0.0,,2026-03-07T00:37:37.102712
+content_gumroad,indie_hacking,Indie Page,,,,,,,,gumroad,https://indiepage.gumroad.com,0 products,Est revenue: $0,,2026-03-07T00:37:46.860608
+content_gumroad,business,Starter Story,,,0,,,,,gumroad,https://starterstory.gumroad.com,0 products,Est revenue: $0,,2026-03-07T00:37:47.544843
+content_gumroad,design,Growth Design,,,,,,,,gumroad,https://growth.design,0 products,Est revenue: $0,,2026-03-07T00:37:57.388648
