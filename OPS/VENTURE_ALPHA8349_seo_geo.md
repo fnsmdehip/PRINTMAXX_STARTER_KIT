@@ -320,3 +320,14 @@ Who gives a fuck about Google lens
 
 No teenage girl is using Google lens to find outfits for the best prices. They
 
+
+
+---
+
+## Pending Enhancement (ALPHA17428, Score: 52)
+
+**Source:** indiehackers_reddit | **URL:** https://reddit.com/r/indiehackers/comments/1rjtja0/what_i_actually_did_in_the_first_10_days_to_make/
+**Added:** 2026-03-07T15:25:10-05:00
+
+Specific 10-day SEO playbook to get Google to notice a new product — 54 upvotes
+

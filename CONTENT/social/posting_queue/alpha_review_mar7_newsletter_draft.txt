@@ -1,0 +1,65 @@
+STATUS: PENDING_REVIEW
+PLATFORM: Newsletter
+TYPE: newsletter issue draft
+SOURCE: Alpha Review Batch Mar 7 2026
+SUBJECT_OPTIONS:
+  - "4 conversion fixes with actual numbers (not guru vibes)"
+  - "2% to 11%: one change, 5x conversion"
+  - "I tracked which marketing channels actually make money"
+---
+
+# 4 Conversion Fixes From This Week (With Real Data)
+
+I scan hundreds of solopreneur posts every week looking for alpha -- findings with specific numbers, not motivation.
+
+This week had 4 posts with actual conversion data. Here's what they found.
+
+## 1. Free Trial = 5x Conversion
+
+One dev had a hard paywall on their app. 2% conversion. Added a 7-day free trial. 11%.
+
+Same app. Same features. Same price. Just let users experience the value before asking for money.
+
+If your app has a hard paywall, this is the single highest-ROI change you can make today.
+
+## 2. Personalized Email = 7.2x CTR
+
+Solo founder with 322 users. Generic emails got 2.5% CTR. Personalized emails with 39 data attributes synced from Supabase got 18% CTR.
+
+Setup: Brevo free tier + Supabase sync every 4 hours. 8 automations. Total cost: $0.
+
+The takeaway isn't "personalize your emails." Everyone knows that. The takeaway is the specific stack that makes it possible at $0 cost with no marketing team.
+
+## 3. Channel ROI, Not Channel Traffic
+
+Founder tracked every marketing channel for a $39 digital product.
+
+- Email newsletter: 28% buyer conversion
+- Twitter organic: 8%
+- Reddit: 6%
+- Paid ads: negative ROI
+
+Most channels send traffic. Very few send buyers. If you're not tracking conversion by channel, you're optimizing for vanity metrics.
+
+## 4. Reposition, Don't Rebuild
+
+400 signups in 30 days. $0 revenue. Dev tools for developers.
+
+The fix: stopped targeting developers-as-hobbyists and started targeting developers-at-work. Same product, different positioning. Revenue started flowing.
+
+Before you rebuild your product, ask: "Am I talking to people who actually pay for things?"
+
+## The Pattern
+
+None of these founders rebuilt their product. None raised money. None hired a marketing team. They each changed one thing about how people experience or discover what they already built.
+
+Conversion is a positioning problem, not a product problem.
+
+## Tool Alpha: 2 Finds Worth Looking At
+
+**Context-Compactor** (github.com/HalfEmptyDrum/Context-Compactor) -- open source tool that summarizes agent context instead of truncating it. If you run AI coding agents, this solves the context window problem.
+
+**RunAutoCo** (runautoco.com) -- autonomous AI company that ran 22 business cycles for $36 total. Interesting architecture to study if you're building agent infrastructure.
+
+---
+Next issue: tracking which of these fixes I actually implement and what happens.

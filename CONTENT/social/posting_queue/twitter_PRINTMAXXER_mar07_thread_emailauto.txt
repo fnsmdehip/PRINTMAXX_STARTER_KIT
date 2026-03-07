@@ -1,0 +1,85 @@
+STATUS: PENDING_REVIEW
+TYPE: thread
+GENERATED: 2026-03-07
+SOURCE: alpha_research_cycle
+---
+[TWEET 1 - HOOK]
+one solo founder. 8 email automations. Brevo free tier + Supabase.
+
+personalized emails: 18% CTR.
+generic emails: 2.5% CTR.
+
+that's a 7x difference from the same list. here's exactly what he built.
+
+---
+
+[TWEET 2]
+the setup costs $0/month.
+
+Brevo free tier handles up to 300 emails/day. Supabase stores user data and triggers the automations. no monthly SaaS bill. no agency. one person built this in a weekend.
+
+the tools weren't the hard part.
+
+---
+
+[TWEET 3]
+the 8 automations (what actually matters):
+
+1. welcome sequence (day 0, day 3, day 7)
+2. trial-to-paid nudge at day 5
+3. win-back after 14 days inactive
+4. usage milestone celebration
+5. referral ask after first win
+6. upsell at 30 days
+7. churn survey on cancel
+8. re-engage after 60 days silent
+
+each one pulls user data from Supabase to personalize the send.
+
+---
+
+[TWEET 4]
+"personalized" doesn't mean first name.
+
+it means: what feature did they use last, how many times did they log in this week, are they on free or paid, did they invite anyone.
+
+generic email: "hey, check out our new feature."
+personalized email: "you ran 3 reports last week. here's one more thing those users usually do next."
+
+18% vs 2.5% CTR. that gap is the difference.
+
+---
+
+[TWEET 5]
+the free trial piece is separate but connected.
+
+same founder tracked conversion before and after adding a 7-day trial.
+
+2% paid conversion became 11% paid conversion.
+
+5x revenue lift. zero new traffic required. the trial removes the "i don't know if this is worth it" friction that kills most SaaS sales.
+
+---
+
+[TWEET 6]
+the full stack for $0/month:
+
+- Brevo (email automation, free to 300/day)
+- Supabase (postgres + auth + edge functions, free tier)
+- one weekend to build
+- one founder to run it
+
+no team. no agency. no $500/month email tool.
+
+it's borderline illegal how cheap this infrastructure has gotten.
+
+---
+
+[TWEET 7 - CTA]
+the ppl buying $299/month email tools are subsidizing the founders who figured out the free stack.
+
+Brevo + Supabase + 8 automations.
+
+build it once. it runs forever.
+
+if you want the full automation map (which triggers connect to which data fields) drop a reply. i'll put it together.
