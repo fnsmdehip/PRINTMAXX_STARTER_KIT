@@ -586,3 +586,14 @@ So he asked me how to start affiliate. I wrote him a little guide in my notes an
 
  2 weeks later he sends me a screenshot of a $1k day
 
+
+
+---
+
+## Pending Enhancement (ALPHA16450, Score: 48)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/post/generating-2-000-mo-from-an-uptime-monitoring-service-dB7NBg82GygQCrrI3dNc
+**Added:** 2026-03-07T00:41:17-05:00
+
+Left job due to burnout. Launched Apex Ping (simple uptime monitor) on Product Hunt. $2k/mo from developer tool with simple pricing ($9-30/mo). Key: launch after burnout with simple tool in well-under
+

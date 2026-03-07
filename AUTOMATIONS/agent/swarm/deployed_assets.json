@@ -1,0 +1,106 @@
+{
+  "last_updated": "2026-03-07T01:23:00",
+  "total_deployments": 70,
+  "all_200": true,
+  "summary": {
+    "apps": 20,
+    "streak_landing_pages": 13,
+    "local_biz_openclaw": 6,
+    "tools_saas": 12,
+    "demos": 12,
+    "hubs": 4,
+    "other": 3
+  },
+  "deployments": {
+    "core_apps": [
+      {"name": "PrayerLock App", "url": "https://prayerlock-app.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "FocusLock App", "url": "https://focuslock-app.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "Hilal App", "url": "https://hilal-app.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "MealMaxx App", "url": "https://mealmaxx-app.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "ColdMaxx App", "url": "https://coldmaxx-app.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "SleepMaxx App", "url": "https://sleepmaxx-app.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "WalkToUnlock App", "url": "https://walktounlock-app.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "HabitForge App", "url": "https://habitforge-app.surge.sh", "status": 200, "deployed": "2026-02-21"}
+    ],
+    "streak_landing_pages": [
+      {"name": "Art Streak", "url": "https://art-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Coding Streak", "url": "https://coding-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Fitness Streak", "url": "https://fitness-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Journal Streak", "url": "https://journal-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Language Streak", "url": "https://language-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Meditation Streak", "url": "https://meditation-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Reading Streak", "url": "https://reading-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Sutra Streak (Buddhist)", "url": "https://sutra-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Gita Streak", "url": "https://gita-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Scripture Streak (LDS)", "url": "https://scripture-streak-lds.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Quran Streak", "url": "https://quran-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Guru Streak (Sikh)", "url": "https://guru-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Torah Streak", "url": "https://torah-streak-app.surge.sh", "status": 200, "deployed": "2026-03-07"}
+    ],
+    "tools_saas": [
+      {"name": "InvoiceForge", "url": "https://invoiceforge.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "ROI Calc", "url": "https://roicalc.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "StackMaxx", "url": "https://stackmaxx.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "PageScorer", "url": "https://pagescorer.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "ProspectMaxx", "url": "https://prospectmaxx.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "PitchDeck", "url": "https://pitchdeck.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "MCP Hub", "url": "https://mcphub.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "Website Audit Tool", "url": "https://website-audit-tool.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "Invoice Tracker", "url": "https://invoicetracker.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "Content Calendar", "url": "https://contentcalendar.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "SiteScore Analyzer", "url": "https://sitescore-analyzer.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "SiteScore App", "url": "https://sitescore-app.surge.sh", "status": 200, "deployed": "2026-02-21"}
+    ],
+    "web_marketing_pages": [
+      {"name": "PrayerLock Web", "url": "https://prayerlock-web.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "FocusLock Web", "url": "https://focuslock-web.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "WalkToUnlock Web", "url": "https://walktounlock-web.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "SleepMaxx Web", "url": "https://sleepmaxx-web.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "MealMaxx Web", "url": "https://mealmaxx-web.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "HabitForge Web", "url": "https://habitforge-web.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "ColdMaxx", "url": "https://coldmaxx.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "FocusLock", "url": "https://focuslock.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "Ramadan Tracker", "url": "https://ramadan-tracker.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "PrayerLock", "url": "https://prayerlock.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "WalkToUnlock", "url": "https://walktounlock.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "SleepMaxx", "url": "https://sleepmaxx.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "MealMaxx", "url": "https://mealmaxx.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "Hilal Ramadan", "url": "https://hilal-ramadan.surge.sh", "status": 200, "deployed": "2026-02-21"}
+    ],
+    "hubs": [
+      {"name": "PrintMaxx Apps Hub", "url": "https://printmaxx-apps.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "PrintMaxx Services", "url": "https://printmaxx-services.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "PrintMaxx Portfolio", "url": "https://printmaxx-portfolio.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "PrintMaxx Dashboard", "url": "https://printmaxx-dashboard.surge.sh", "status": 200, "deployed": "2026-02-21"}
+    ],
+    "local_biz_openclaw": [
+      {"name": "Plumber Houston (MeetAPlumber)", "url": "https://find-plumbers-in-houston-texas-meetaplumber-com-houston-tx.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Plumber Houston ZIP", "url": "https://plumbers-just-enter-your-zip-code-houston-tx.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Plumber Houston Local", "url": "https://local-plumbing-experts-replace-plumbing-houston-tx.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Plumber Miami ZIP", "url": "https://plumbers-just-enter-your-zip-code-miami-fl.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Plumber Miami Local", "url": "https://local-plumbing-miami-fl.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "Dentist Austin", "url": "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh", "status": 200, "deployed": "2026-03-07"}
+    ],
+    "demos": [
+      {"name": "Restaurant Motion", "url": "https://restaurant-motion.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Realtor Motion", "url": "https://realtor-motion.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Dental Motion", "url": "https://dental-motion.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Restaurant Site Demo", "url": "https://restaurant-site-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Realtor Demo", "url": "https://realtor-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Plumber Demo", "url": "https://plumber-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Legal Demo", "url": "https://legal-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Fitness Demo", "url": "https://fitness-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Dental Demo", "url": "https://dental-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "FlowStack Demo", "url": "https://flowstack-demo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "ShopMetrics Dashboard", "url": "https://shopmetrics-dashboard.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "PrintMaxx Demos", "url": "https://printmaxx-demos.surge.sh", "status": 200, "deployed": "2026-02-21"}
+    ],
+    "seo_tools": [
+      {"name": "PrintMaxx SEO", "url": "https://printmaxx-seo.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "PrintMaxx Analyzer", "url": "https://printmaxx-analyzer.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "PrintMaxx Command", "url": "https://printmaxx-command.surge.sh", "status": 200, "deployed": "2026-02-21"},
+      {"name": "Social Dashboard PM", "url": "https://social-dashboard-pm.surge.sh", "status": 200, "deployed": "2026-03-05"},
+      {"name": "PrintMaxx Local Demos", "url": "https://printmaxx-local-demos.surge.sh", "status": 200, "deployed": "2026-02-21"}
+    ]
+  }
+}

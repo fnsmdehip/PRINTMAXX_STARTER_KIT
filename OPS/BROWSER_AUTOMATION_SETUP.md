@@ -1231,3 +1231,279 @@ Most people build bots on vibes and YouTube tutorials
 
 I fed Claude the exact math that Jane Street quants
 
+
+
+---
+
+## Pending Enhancement (ALPHA16264, Score: 36)
+
+**Source:** @levelsio (daily scraper) | **URL:** https://x.com/levelsio/status/2029572994213773428
+**Added:** 2026-03-07T00:25:43-05:00
+
+ 
+@X
+ paid me a reasonable $12,000 to tweet this month
+
+$10,511 ad rev share
+$1,247 subs revenue
+(= $11,758 per 28 days)
+
+= $12,807/month
+
+Median X revenue now since X started paying me is @ $9,000/mo
+
+If my X account was a business and valued at just these payouts, it would be worth at 10x @ $1,080,000, or at 20x @ $2,160,000
+
+Although I think a bit more if you value the reach
+
+
+
+---
+
+## Pending Enhancement (ALPHA16275, Score: 24)
+
+**Source:** @yegormethod (daily scraper) | **URL:** https://x.com/yegormethod/status/1918425276700123225
+**Added:** 2026-03-07T00:25:43-05:00
+
+Last year, I sat in my car outside the gym and cried.
+
+Bank account had $214.
+
+My ex had just posted a pic with some new guy.
+And I had 2 unread Stripe chargebacks sitting on Gmail.
+I sobbed like a baby.
+
+I didn’t lift.
+I didn’t even get out.
+Just sat there feeling like a fucking
+
+
+
+---
+
+## Pending Enhancement (ALPHA16280, Score: 24)
+
+**Source:** @yegormethod (daily scraper) | **URL:** https://x.com/yegormethod/status/1908868291667382521
+**Added:** 2026-03-07T00:25:43-05:00
+
+Your $20K/month business is on the other side of:
+– 13 awkward sales calls
+– 2 refund requests
+– 1 gut punch from a bad hire
+– and showing up again anyway
+
+
+
+---
+
+## Pending Enhancement (ALPHA16283, Score: 30)
+
+**Source:** @yegormethod (daily scraper) | **URL:** https://x.com/yegormethod/status/1985000379260584132
+**Added:** 2026-03-07T00:25:43-05:00
+
+if you're selling on your main twitter account you're a sub 5 virgin and everyone can smell the desperation through their screen
+
+every guy making $300k/month on x has the same secret and i'm about to expose the entire game...
+
+YOUR MAIN IS NOT FOR SELLING.
+
+it's for building
+
+
+
+---
+
+## Pending Enhancement (ALPHA16309, Score: 59)
+
+**Source:** Twitter/@DCinfoscaling | **URL:** https://twitter.com/DCinfoscaling
+**Added:** 2026-03-07T00:25:44-05:00
+
+Chief of Staff Claude Code system built by non-programmer in 36 hours: Overnight auto-scans calendar for drive times + triages email to Todoist. AM Sweep classifies tasks (Green=auto Yellow=80%-prep Red=human Gray=skip). 6 parallel subagents: email drafter + Obsidian updater + scheduler + researcher. Auto-generates time-blocked calendar with real drive times + errand batching. Layered architecture
+
+
+
+---
+
+## Pending Enhancement (ALPHA16388, Score: 23)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/24calldesk/launches/24calldesk
+**Added:** 2026-03-07T00:41:17-05:00
+
+ProductHunt launch: AI call agent and workflow automations for small businesses
+
+
+
+---
+
+## Pending Enhancement (ALPHA16402, Score: 44)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/interviewkit-ai
+**Added:** 2026-03-07T00:41:17-05:00
+
+Automate candidate interviews with AI. $3k/mo March 2026. B2B HR tech niche. AI replaces screening calls.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16405, Score: 38)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/korel-2
+**Added:** 2026-03-07T00:41:17-05:00
+
+Turn interviews and founder thinking into weeks of content. $1.5k/mo March 2026. AI content repurposing for founders/executives. Long-form to short-form pipeline.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16406, Score: 30)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/origami-2
+**Added:** 2026-03-07T00:41:17-05:00
+
+Find your perfect customers with one prompt. $5k/mo March 2026. AI lead generation / ICP discovery tool. Cold outreach enablement category.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16415, Score: 35)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/speechable
+**Added:** 2026-03-07T00:41:17-05:00
+
+Turn any document into audio podcasts and TED-style lectures. $10k/mo Feb 2026. Text-to-speech/audio content niche. B2B + consumer.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16417, Score: 35)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/callframe
+**Added:** 2026-03-07T00:41:17-05:00
+
+24/7 virtual receptionist for service businesses. $10k/mo Feb 2026. AI phone answering for plumbers/salons/dentists. Massive TAM.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16418, Score: 35)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/mentera
+**Added:** 2026-03-07T00:41:17-05:00
+
+AI Agents for Medical Private Practices. $10k/mo Feb 2026. Regulated vertical (healthcare) but small private practices are hugely under-served.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16420, Score: 24)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/synctosheet
+**Added:** 2026-03-07T00:41:17-05:00
+
+Export LinkedIn profiles and company data directly to Google Sheets. $999/mo 2026. Prospecting automation for sales teams. Simple but high-value workflow.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16422, Score: 30)
+
+**Source:** IndieHackers | **URL:** https://translatorhub.org
+**Added:** 2026-03-07T00:41:17-05:00
+
+Collection of professional translation tools. $5k/mo March 2026. SEO-driven traffic from translators globally. Multi-tool site model.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16442, Score: 43)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/similarity-api
+**Added:** 2026-03-07T00:41:17-05:00
+
+Fuzzy-match million-row datasets in minutes not hours. $20k/mo Feb 2026. B2B data tool for operations teams. API-first product.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16445, Score: 42)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/epic-2
+**Added:** 2026-03-07T00:41:17-05:00
+
+Make visual sitemaps for your website/SaaS. $2.5k/mo March 2026. Design/UX tool for product teams. Simple single-purpose SaaS.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16446, Score: 36)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/finfol-io
+**Added:** 2026-03-07T00:41:17-05:00
+
+Your financial memory for high-stakes decisions. $2k/mo March 2026. Personal finance + decision logging niche. Interesting intersection of fintech and decision tracking.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16447, Score: 42)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/rakenne-2
+**Added:** 2026-03-07T00:41:17-05:00
+
+AI document workflows that domain experts actually use. $2k/mo March 2026. Enterprise AI document processing for specialists (lawyers accountants engineers).
+
+
+
+---
+
+## Pending Enhancement (ALPHA16448, Score: 41)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/saleoid
+**Added:** 2026-03-07T00:41:17-05:00
+
+Your Sales Droid - AI-powered sales automation. $25k/mo Feb 2026. AI SDR / sales automation category is hot. B2B with high ACV.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16453, Score: 30)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/arbol
+**Added:** 2026-03-07T00:41:17-05:00
+
+AI employees that make and answer phone calls like humans. $7k/mo Feb 2026. AI voice agent category. B2B sales and customer service automation.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16454, Score: 47)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/housepaint-ai
+**Added:** 2026-03-07T00:41:17-05:00
+
+Photorealistic AI house paint visualizer. $10k/mo Feb 2026. Consumer + contractor tool. Before/after AI image for home improvement decisions.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16455, Score: 35)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/lucid-engine
+**Added:** 2026-03-07T00:41:17-05:00
+
+The First GEO and AI Visibility Platform. $10k/mo Feb 2026. GEO = Generative Engine Optimization - optimizing content for AI search engines (ChatGPT Perplexity). Emerging category.
+

@@ -669,3 +669,102 @@ A while back I was selling AI automation bots for **$147 each**.
 
 Nothing crazy. N
 
+
+
+---
+
+## Pending Enhancement (ALPHA16381, Score: 23)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/chatgpt
+**Added:** 2026-03-07T00:41:17-05:00
+
+ProductHunt launch: Build and update spreadsheets with ChatGPT in real time
+
+
+
+---
+
+## Pending Enhancement (ALPHA16404, Score: 50)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/storyclips
+**Added:** 2026-03-07T00:41:17-05:00
+
+Create viral faceless videos on autopilot. $2.5k/mo 2026. Faceless video creation is a validated $2k+ MRR niche with low CAC from creator communities.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16410, Score: 52)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/kintsu-ai
+**Added:** 2026-03-07T00:41:17-05:00
+
+Vibe code your existing WordPress site. $50k/mo Feb 2026. AI code generation applied to the world's largest CMS. 40% of the internet is WordPress.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16413, Score: 49)
+
+**Source:** IndieHackers | **URL:** https://optiway.io/
+**Added:** 2026-03-07T00:41:17-05:00
+
+Route planning SaaS hitting $30k MRR with SEO-driven acquisition in a niche B2B category. No VC funding mentioned. Solo/small team.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16416, Score: 51)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/contagent
+**Added:** 2026-03-07T00:41:17-05:00
+
+Grow your X audience on autopilot. $10k/mo Feb 2026. X/Twitter growth automation tool. Platform risk but high current demand.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16421, Score: 36)
+
+**Source:** IndieHackers | **URL:** https://wifimouse.necta.us
+**Added:** 2026-03-07T00:41:17-05:00
+
+Utility app with $6k/mo revenue. Phone as wireless mouse/keyboard. One-time purchase + premium upgrade model. Low churn by design.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16443, Score: 41)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/image-to-photo
+**Added:** 2026-03-07T00:41:17-05:00
+
+Image-to-realistic-photo AI tool. $20k/mo Feb 2026. Likely pure SEO play targeting image transformation keywords. Chinese domain (.cn variant) suggests global SEO arbitrage.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16444, Score: 30)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/product/hullo-ai-matchmaking
+**Added:** 2026-03-07T00:41:17-05:00
+
+AI-powered matchmaking for more intentional connections. $4.5k/mo March 2026. Premium dating with AI matchmaking rather than algorithmic swiping. High willingness to pay in dating niche.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16449, Score: 42)
+
+**Source:** IndieHackers - Interview | **URL:** https://www.indiehackers.com/post/turning-my-popular-open-source-tool-into-a-1-200-mo-product-VuSVTzKTfXPjRYA44Ezn
+**Added:** 2026-03-07T00:41:17-05:00
+
+Built open-source Twitch music display tool. Added paid tier after 1000+ GitHub stars. $1.2k/mo from converting OSS users to paid. Key: open source as distribution then monetize the power users.
+
