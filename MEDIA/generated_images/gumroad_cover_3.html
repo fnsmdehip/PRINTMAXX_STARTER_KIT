@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1600px;
+    height: 900px;
+    background: #0d1117;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Left panel - main content */
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Right panel - stat showcase */
+  .right {
+    width: 420px;
+    background: #FF6B35;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  /* Diagonal cut on right panel */
+  .right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 100px;
+    height: 100%;
+    background: #FF6B35;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+
+  /* Subtle noise texture on left */
+  .noise {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle at 20% 80%, rgba(255,107,53,0.04) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(255,107,53,0.03) 0%, transparent 40%);
+  }
+
+  /* Category label */
+  .category {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #FF6B35;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .category::after {
+    content: '';
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: #FF6B35;
+    opacity: 0.4;
+  }
+
+  /* Big number */
+  .big-num {
+    font-size: 200px;
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -10px;
+    color: #ffffff;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
+  /* Subtle outline effect */
+  .big-num-outline {
+    font-size: 200px;
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -10px;
+    position: absolute;
+    top: 88px;
+    left: 101px;
+    -webkit-text-stroke: 1px rgba(255,107,53,0.12);
+    color: transparent;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Subject lines label */
+  .subject-label {
+    font-size: 46px;
+    font-weight: 900;
+    color: #FF6B35;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .that-get {
+    font-size: 26px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Bullets */
+  .bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+  }
+  .bullet-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.55);
+  }
+  .bullet-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #FF6B35;
+    flex-shrink: 0;
+  }
+
+  /* Right panel content */
+  .open-rate-label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 16px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .open-rate-num {
+    font-size: 110px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -4px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .open-rate-pct {
+    font-size: 50px;
+    font-weight: 700;
+    vertical-align: super;
+    color: rgba(0,0,0,0.3);
+  }
+  .open-rate-sub {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.4);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .price-box {
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+    padding: 24px 44px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .price-amount {
+    font-size: 60px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+  .price-desc {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 4px;
+  }
+
+  /* Brand */
+  .brand {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.1);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div class="left">
+    <div class="noise"></div>
+    <div class="category">Email Marketing</div>
+    <div style="position:relative;">
+      <div class="big-num-outline">73</div>
+      <div class="big-num">73</div>
+    </div>
+    <div class="subject-label">Subject Lines</div>
+    <div class="that-get">that actually get opens</div>
+    <div class="bullets">
+      <div class="bullet-item"><div class="bullet-dot"></div>Industry-tested across 464K cold emails</div>
+      <div class="bullet-item"><div class="bullet-dot"></div>Sorted by open rate. Copy-paste ready.</div>
+      <div class="bullet-item"><div class="bullet-dot"></div>Broken down by niche, tone, and intent</div>
+    </div>
+    <div class="brand">PRINTMAXX</div>
+  </div>
+
+  <div class="right">
+    <div class="open-rate-label">Avg Open Rate</div>
+    <div class="open-rate-num">38<span class="open-rate-pct">%</span></div>
+    <div class="open-rate-sub">vs 8% industry avg</div>
+    <div class="price-box">
+      <div class="price-amount">$29</div>
+      <div class="price-desc">one-time</div>
+    </div>
+  </div>
+</body>
+</html>

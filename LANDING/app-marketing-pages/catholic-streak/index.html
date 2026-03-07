@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catholic Streak - Build Your Daily Catholic Prayer Habit</title>
+<meta name="description" content="Track your daily Rosary, Mass, and scripture reading. Catholic Streak sends push reminders, tracks your prayer chain, and keeps your faith life consistent.">
+<meta name="keywords" content="catholic prayer app, rosary streak, daily mass tracker, catholic devotional app, liturgy of the hours app, catholic habits">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Catholic Streak - Build Your Daily Catholic Prayer Habit">
+<meta property="og:description" content="Track your daily Rosary, Mass, and scripture. Never miss a day.">
+<meta property="og:url" content="https://catholic-streak.surge.sh/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<link rel="canonical" href="https://catholic-streak.surge.sh/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d0d1a;--surface:#12122a;--surface2:#1a1a3a;--accent:#c9a227;--accent2:#a8861e;--text:#e8e4d9;--muted:#7a7a9a;--border:#222240}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.1rem;font-weight:700;letter-spacing:-0.5px}
+.logo span{color:var(--accent)}
+nav a.cta-sm{background:var(--accent);color:#000;padding:8px 20px;border-radius:6px;font-size:0.85rem;font-weight:600}
+.hero{padding:90px 0 70px;text-align:center}
+.badge{display:inline-block;background:var(--surface2);border:1px solid var(--border);padding:6px 16px;border-radius:20px;font-size:0.78rem;color:var(--muted);margin-bottom:22px;letter-spacing:0.5px;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:800;line-height:1.1;letter-spacing:-2px;max-width:680px;margin:0 auto 22px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:480px;margin:0 auto 36px;line-height:1.7}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#000;padding:14px 34px;border-radius:8px;font-size:1rem;font-weight:700}
+.hero-sub{margin-top:14px;font-size:0.82rem;color:var(--muted)}
+.stats{padding:56px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats .container{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;text-align:center}
+.stat-num{font-size:2.4rem;font-weight:800;color:var(--accent);letter-spacing:-1px}
+.stat-label{font-size:0.82rem;color:var(--muted);margin-top:4px}
+.section{padding:72px 0}
+.section h2{font-size:1.7rem;font-weight:700;letter-spacing:-1px;margin-bottom:44px;text-align:center}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+.icon{font-size:1.8rem;margin-bottom:14px}
+.feature-card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.feature-card p{font-size:0.88rem;color:var(--muted);line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px;margin-top:8px}
+.step{text-align:center}
+.step-num{width:38px;height:38px;background:var(--accent);color:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:14px}
+.step h3{font-size:0.95rem;font-weight:700;margin-bottom:6px}
+.step p{font-size:0.83rem;color:var(--muted);line-height:1.6}
+.cta-section{padding:80px 0;text-align:center;border-top:1px solid var(--border)}
+.cta-section h2{font-size:2rem;font-weight:800;letter-spacing:-1px;margin-bottom:16px}
+.cta-section p{color:var(--muted);margin-bottom:36px;max-width:440px;margin-left:auto;margin-right:auto}
+.price-tag{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:32px;max-width:360px;margin:0 auto 32px;text-align:center}
+.price-free{font-size:1.8rem;font-weight:800;color:var(--accent)}
+.price-sub{font-size:0.85rem;color:var(--muted);margin-top:4px}
+footer{padding:36px 0;border-top:1px solid var(--border);text-align:center;font-size:0.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <div class="logo">Catholic<span>Streak</span></div>
+    <a href="#download" class="cta-sm">Download Free</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="badge">Daily Catholic Faith Tracker</div>
+    <h1>Your daily Rosary. <span>Never broken.</span></h1>
+    <p>Track Mass attendance, Rosary, scripture reading, and Liturgy of the Hours. One streak. Total accountability.</p>
+    <a href="#download" class="hero-cta">Start Your Streak — Free</a>
+    <div class="hero-sub">Free forever. Premium $1.99 lifetime.</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div><div class="stat-num">1.3B</div><div class="stat-label">Catholics worldwide</div></div>
+    <div><div class="stat-num">40+</div><div class="stat-label">Streak milestones</div></div>
+    <div><div class="stat-num">5 min</div><div class="stat-label">Daily check-in</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Built for serious Catholics</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">📿</div>
+        <h3>Rosary Tracker</h3>
+        <p>Log each Mystery. Track your weekly Rosary habit with visual progress.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">⛪</div>
+        <h3>Mass Attendance</h3>
+        <p>Log Sunday Mass, daily Mass, and holy days of obligation automatically.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📖</div>
+        <h3>Daily Scripture</h3>
+        <p>Daily Gospel reading delivered at your chosen time. Track completion.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🕰️</div>
+        <h3>Liturgy of the Hours</h3>
+        <p>Morning and Evening Prayer reminders synced to your local time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔔</div>
+        <h3>Push Reminders</h3>
+        <p>Custom reminders so you never forget your daily spiritual commitments.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">👨‍👩‍👧</div>
+        <h3>Family Accountability</h3>
+        <p>Share your streak with family. Keep each other on track together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="border-top:1px solid var(--border)">
+  <div class="container">
+    <h2>Three steps to a consistent prayer life</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Set your practices</h3>
+        <p>Choose which Catholic practices to track: Rosary, Mass, scripture, fasting, divine mercy.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Daily check-in</h3>
+        <p>Tap to confirm each practice. Takes under 2 minutes. Streak grows automatically.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Protect your chain</h3>
+        <p>Streak alerts before midnight. Never let a day pass without your practice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="download">
+  <div class="container">
+    <h2>Start your Catholic streak today</h2>
+    <p>Free to download. No account required. Start building your prayer habit in 60 seconds.</p>
+    <div class="price-tag">
+      <div class="price-free">Free</div>
+      <div class="price-sub">Ad-supported tier — forever free</div>
+      <div style="margin-top:16px;font-size:0.85rem;color:var(--muted)">Premium: $1.99 lifetime or $0.99/mo</div>
+    </div>
+    <a href="#" class="hero-cta">Download on App Store</a>
+    <div class="hero-sub" style="margin-top:14px">iOS &amp; Android. Available now.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 CatholicStreak. Built with faith in mind. | <a href="mailto:support@printmaxx.com">Support</a></p>
+  </div>
+</footer>
+</body>
+</html>

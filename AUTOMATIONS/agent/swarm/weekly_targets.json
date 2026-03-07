@@ -3,12 +3,12 @@
   "week_end": "2026-03-13",
   "targets": {
     "gumroad_products_listed": {
-      "target": 3,
+      "target": 13,
       "actual": 0,
       "owner": "HUMAN",
-      "guide": "OPS/GUMROAD_UPLOAD_NOW.md",
+      "guide": "OPS/FIRST_DOLLAR_ACTION_PLAN.md",
       "priority": "P0",
-      "note": "Start with 3: Cold Email Playbook ($27), 73 Subject Lines ($29), Free Lead Magnet ($0). 20 min."
+      "note": "All 13 PDFs ready + paste-ready listings. 45 min total. See OPS/FIRST_DOLLAR_ACTION_PLAN.md Step 1."
     },
     "fiverr_gigs_listed": {
       "target": 2,
@@ -19,20 +19,20 @@
       "note": "Start with 2: Website Design ($75-750), Cold Email ($50-300). 15 min."
     },
     "cold_emails_sent": {
-      "target": 5,
+      "target": 16,
       "actual": 0,
       "owner": "HUMAN",
       "guide": "AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md",
       "priority": "P0",
-      "note": "Send 5 from personal Gmail. No infrastructure needed. 10 min."
+      "note": "Send all 16 from personal Gmail. 15 min. No infrastructure needed. $1.5-3K per close."
     },
     "content_posts_published": {
-      "target": 10,
+      "target": 28,
       "actual": 0,
       "owner": "HUMAN",
       "guide": "CONTENT/social/posting_queue/",
       "priority": "P1",
-      "note": "Copy/paste 10 tweets from posting_queue/. 15 min total."
+      "note": "4 posts/day for 7 days. 132 txt + 41 png ready. 20 min/day."
     },
     "etsy_listings_posted": {
       "target": 5,
@@ -65,10 +65,10 @@
     },
     "social_content_generated": {
       "target": 40,
-      "actual": 100,
+      "actual": 132,
       "owner": "AGENT",
       "priority": "DONE",
-      "note": "100+ posts in posting_queue/. Mar 7-16 fully covered."
+      "note": "132 text posts + 41 images in posting_queue/. Mar 7-16 fully covered."
     },
     "storefront_built": {
       "target": 1,

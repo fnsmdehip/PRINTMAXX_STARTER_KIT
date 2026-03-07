@@ -19,6 +19,7 @@
 <meta name="twitter:description" content="AIDA, PAS, BAB frameworks. Spam score checker. Follow-up sequences. Get replies, not unsubscribes.">
 <meta name="twitter:image" content="https://coldmaxx.surge.sh/og-image.png">
 <link rel="canonical" href="https://coldmaxx.surge.sh/">
+<script defer data-domain="coldmaxx-app.surge.sh" src="https://plausible.io/js/script.js"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"ColdMaxx","description":"ColdMaxx generates cold email templates using AIDA, PAS, and BAB frameworks with spam score checker and follow-up sequences.","url":"https://coldmaxx.surge.sh/","applicationCategory":"BusinessApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"keywords":"cold email generator, cold email templates, AIDA framework, spam score checker, cold outreach, email sequences"}
 </script>
@@ -79,6 +80,18 @@ nav a.cta-sm:hover{background:var(--accent2)}
 .testimonial{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px}
 .testimonial p{font-size:0.95rem;color:var(--text);line-height:1.7;margin-bottom:16px;font-style:italic}
 .testimonial .author{font-size:0.8rem;color:var(--muted)}
+.tool-stack{padding:80px 0;border-top:1px solid var(--border)}
+.tool-stack h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:8px;text-align:center}
+.tool-stack .stack-sub{font-size:0.95rem;color:var(--muted);text-align:center;margin-bottom:48px}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.2s}
+.tool-card:hover{border-color:var(--accent)}
+.tool-card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.tool-name{font-size:1rem;font-weight:700;letter-spacing:-0.3px;color:var(--text)}
+.tool-price{font-size:0.78rem;color:var(--accent);font-weight:600;white-space:nowrap;margin-left:8px;padding-top:2px}
+.tool-desc{font-size:0.88rem;color:var(--muted);line-height:1.6}
+.tool-link{font-size:0.8rem;font-weight:600;color:var(--accent);margin-top:4px;display:inline-block}
+.tool-link:hover{text-decoration:underline}
 .final-cta{padding:100px 0;text-align:center;border-top:1px solid var(--border)}
 .final-cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px}
 .final-cta p{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
@@ -207,6 +220,47 @@ footer p{font-size:0.8rem;color:var(--muted)}
     <div class="testimonial">
       <p>"the follow-up sequences are what really close deals. email 3 at day 7 has the highest reply rate for me. coldmaxx figures out the timing automatically."</p>
       <div class="author">-- brian t., agency owner, miami</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="tool-stack">
+<div class="container">
+  <h2>tools that actually work</h2>
+  <p class="stack-sub">the sending infrastructure behind every campaign that books meetings.</p>
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <span class="tool-name">Instantly.ai</span>
+        <span class="tool-price">$37/mo</span>
+      </div>
+      <p class="tool-desc">warm up and send from unlimited inboxes. the deliverability backbone for any serious cold email operation.</p>
+      <a href="https://instantly.ai" class="tool-link" target="_blank" rel="noopener">instantly.ai &rarr;</a>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <span class="tool-name">Apollo.io</span>
+        <span class="tool-price">free tier</span>
+      </div>
+      <p class="tool-desc">find verified B2B emails with a built-in sequencer. most teams start here and never leave. free tier covers 150 exports/mo.</p>
+      <a href="https://apollo.io" class="tool-link" target="_blank" rel="noopener">apollo.io &rarr;</a>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <span class="tool-name">Smartlead</span>
+        <span class="tool-price">best deliverability</span>
+      </div>
+      <p class="tool-desc">multi-inbox rotation with AI warmup. when you're running 10+ domains and need inbox placement to hold, this is the tool.</p>
+      <a href="https://smartlead.ai" class="tool-link" target="_blank" rel="noopener">smartlead.ai &rarr;</a>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <span class="tool-name">Lemlist</span>
+        <span class="tool-price">multichannel</span>
+      </div>
+      <p class="tool-desc">personalized images in cold email. your prospect's name on a screenshot of their own website. reply rates go up, guaranteed.</p>
+      <a href="https://lemlist.com" class="tool-link" target="_blank" rel="noopener">lemlist.com &rarr;</a>
     </div>
   </div>
 </div>

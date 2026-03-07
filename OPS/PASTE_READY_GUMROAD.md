@@ -425,3 +425,14 @@ Enable "Discover" on ALL products for Gumroad marketplace visibility.
 
 100 copy-paste social media prompts + Canva templates for real estate. $1.8k/mo March 2026. Productized prompt pack with digital download model.
 
+
+
+---
+
+## Pending Enhancement (ALPHA17038, Score: 49)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://resellready.co/blogs/news/most-profitable-digital-products-for-passive-income-in-2026
+**Added:** 2026-03-07T08:10:08-05:00
+
+[OPP-008] AI Prompt Pack & Workflow Store: Package our 90+ scripts and Claude prompts into sellable digital products. AI templates = fastest-growing category 2026. 80-95% margins. 4 products ready to ship: Solopreneur Claude Kit ($19) + Ralph Templates ($29) + Cold Email Bundle ($39) + PWA Playbook ($24).
+

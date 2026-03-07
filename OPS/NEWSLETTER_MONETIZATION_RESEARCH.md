@@ -272,3 +272,22 @@ Last updated: 2026-01-23
 
 [ACQUISITION] I've Build A Youtube to Newsletter Automation
 
+
+
+---
+
+## Pending Enhancement (ALPHA17129, Score: 49)
+
+**Source:** @nicolascole77 (high-signal-accounts) | **URL:** https://x.com/Nicolascole77/status/2029913419311382708
+**Added:** 2026-03-07T09:48:10-05:00
+
+7. Substack (Free or 10% of paid subs)
+
+Hosts my personal + Write with AI paid newsletter (~$427k/yr).
+
+The built-in referral engine is a massive growth lever.
+
+The perfect platform for beginners—nothing beats it.
+
+But if I had to build a new writing business from scratch today:
+

@@ -1,0 +1,17 @@
+PLATFORM: Twitter/X
+ACCOUNT: @PRINTMAXXER
+SCHEDULED: 2026-03-17 07:30
+CHARACTER_COUNT: 272
+IMAGE: none
+STATUS: READY_TO_POST
+SOURCE: compound_conversion_compound.md (Tweet 1 - localStorage Disaster)
+
+---
+
+audited my email capture forms last night. one of them was saving every email to localStorage.
+
+not a database. not a server. the user's browser.
+
+every single lead: gone the moment they closed the tab.
+
+lesson: test your forms by actually submitting one. radical concept.

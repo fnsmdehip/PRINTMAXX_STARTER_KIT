@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1600px;
+    height: 900px;
+    background: linear-gradient(145deg, #0a1628 0%, #0f2044 40%, #091530 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 120px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Background envelope shape (decorative) */
+  .env-bg {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 680px;
+    height: 480px;
+    opacity: 0.04;
+  }
+  .env-bg rect {
+    fill: #4a90e2;
+    rx: 12;
+  }
+  .env-bg line {
+    stroke: #4a90e2;
+    stroke-width: 4;
+  }
+
+  /* Diagonal stripe overlay */
+  .stripes {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.012) 40px,
+      rgba(255,255,255,0.012) 41px
+    );
+  }
+
+  /* Blue glow right */
+  .glow-right {
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(30,100,255,0.08) 0%, transparent 65%);
+    border-radius: 50%;
+  }
+  .glow-bottom {
+    position: absolute;
+    bottom: -200px;
+    left: 200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,212,170,0.05) 0%, transparent 65%);
+    border-radius: 50%;
+  }
+
+  /* Top label */
+  .top-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+  }
+  .label-pill {
+    background: rgba(30,100,255,0.2);
+    border: 1px solid rgba(30,100,255,0.35);
+    color: #6ab0ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+  }
+  .label-rule {
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  /* THE text */
+  .the-word {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* COLD EMAIL */
+  .cold-word {
+    font-size: 136px;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -5px;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+  }
+  .email-word {
+    font-size: 136px;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -5px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* PLAYBOOK */
+  .playbook-word {
+    font-size: 136px;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -5px;
+    background: linear-gradient(90deg, #4a90e2 0%, #00D4AA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Description row */
+  .desc-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .description {
+    font-size: 19px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.4);
+    max-width: 620px;
+    line-height: 1.65;
+  }
+
+  /* Price */
+  .price-block {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .price-from {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .price-amount {
+    font-size: 96px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -3px;
+  }
+  .price-desc {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Brand */
+  .brand {
+    position: absolute;
+    bottom: 44px;
+    left: 120px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.08);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  /* Top border accent */
+  .top-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4a90e2 0%, #00D4AA 50%, transparent 100%);
+  }
+</style>
+</head>
+<body>
+  <div class="stripes"></div>
+  <div class="glow-right"></div>
+  <div class="glow-bottom"></div>
+  <div class="top-border"></div>
+
+  <div class="top-label">
+    <div class="label-pill">Outbound Playbook</div>
+    <div class="label-rule"></div>
+  </div>
+
+  <div class="the-word">THE</div>
+  <div class="cold-word">COLD</div>
+  <div class="email-word">EMAIL</div>
+  <div class="playbook-word">PLAYBOOK</div>
+
+  <div class="desc-row">
+    <div class="description">From zero replies to booked meetings. 6 proven frameworks. 87% margin. Zero ad spend to start.</div>
+    <div class="price-block">
+      <div class="price-from">GET IT FOR</div>
+      <div class="price-amount">$27</div>
+      <div class="price-desc">one-time</div>
+    </div>
+  </div>
+
+  <div class="brand">PRINTMAXX</div>
+</body>
+</html>

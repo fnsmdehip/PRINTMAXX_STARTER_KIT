@@ -86,3 +86,27 @@
 [07:02:50] [INFO] CYCLE COMPLETE — 2 missions in 5s
 [07:02:50] [INFO] ============================================================
 [07:02:50] [INFO] Sleeping 3429s until 08:00
+[08:01:23] [INFO] ============================================================
+[08:01:23] [INFO] AGENT CYCLE START — 2026-03-07 08:01
+[08:01:23] [INFO] Disk: 59.6GB free | Missions completed: 37 | Failed: 0
+[08:01:23] [INFO] ============================================================
+[08:01:23] [INFO] MISSION: Scan opportunities
+[08:06:02] [INFO]   [SUCCESS] scan_opps: 3/4 scanners completed (279.7s)
+[08:06:02] [INFO] ============================================================
+[08:06:02] [INFO] CYCLE COMPLETE — 1 missions in 280s
+[08:06:02] [INFO] ============================================================
+[08:06:02] [INFO] Sleeping 3237s until 09:00
+[09:03:53] [INFO] ============================================================
+[09:03:53] [INFO] AGENT CYCLE START — 2026-03-07 09:03
+[09:03:53] [INFO] Disk: 59.2GB free | Missions completed: 38 | Failed: 0
+[09:03:53] [INFO] ============================================================
+[09:03:53] [INFO] MISSION: Health & heal
+[09:03:56] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (2.5s)
+[09:03:56] [INFO] MISSION: Process & decide
+[09:03:56] [INFO]   [SUCCESS] process_decide: Decisions made. 17 response drafts, 17 listing drafts (0.3s)
+[09:03:56] [INFO] MISSION: Research & scrape
+[09:09:56] [INFO]   [FAILED] research: 0/3 scrapers completed (360.0s)
+[09:09:56] [INFO] ============================================================
+[09:09:56] [INFO] CYCLE COMPLETE — 3 missions in 363s
+[09:09:56] [INFO] ============================================================
+[09:09:56] [INFO] Sleeping 3003s until 10:00
