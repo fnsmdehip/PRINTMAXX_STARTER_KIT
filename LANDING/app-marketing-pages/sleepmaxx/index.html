@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SleepMaxx - Your Sleep Sucks. This Fixes It.</title>
 <meta name="description" content="SleepMaxx optimizes your sleep with scoring, wind-down routines, blue light reminders, and sleep debt tracking. No $300 mattress needed.">
+<meta name="keywords" content="sleep tracker app, sleep optimization app, sleep score app, wind down routine app, blue light reminder, sleep debt tracker, sleep quality app, better sleep app">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SleepMaxx">
+<meta property="og:title" content="SleepMaxx - Your Sleep Sucks. This Fixes It.">
+<meta property="og:description" content="SleepMaxx optimizes your sleep with scoring, wind-down routines, blue light reminders, and sleep debt tracking. No $300 mattress needed.">
+<meta property="og:url" content="https://sleepmaxx-web.surge.sh/">
+<meta property="og:image" content="https://sleepmaxx-web.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="SleepMaxx - Your Sleep Sucks. This Fixes It.">
+<meta name="twitter:description" content="Sleep scoring, wind-down routines, blue light reminders, sleep debt tracking. No $300 mattress needed.">
+<meta name="twitter:image" content="https://sleepmaxx-web.surge.sh/og-image.png">
+<link rel="canonical" href="https://sleepmaxx-web.surge.sh/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"SleepMaxx","description":"SleepMaxx optimizes your sleep with scoring, wind-down routines, blue light reminders, and sleep debt tracking.","url":"https://sleepmaxx-web.surge.sh/","applicationCategory":"HealthApplication","operatingSystem":"iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"keywords":"sleep tracker, sleep optimization, sleep score, wind down routine, blue light, sleep debt"}
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--accent:#8b5cf6;--accent2:#7c3aed;--text:#e5e5e5;--muted:#888;--border:#222}
@@ -60,10 +77,41 @@ nav a.cta-sm:hover{background:var(--accent2)}
 .final-cta p{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
 footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
 footer p{font-size:0.8rem;color:var(--muted)}
+/* pro upgrade */
+.pro-section{padding:80px 0;border-top:1px solid var(--border);text-align:center}
+.pro-badge{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:20px}
+.pro-section h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:12px}
+.pro-section p{color:var(--muted);max-width:480px;margin:0 auto 32px;font-size:0.95rem;line-height:1.7}
+.pro-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:0 auto 36px}
+.pro-feat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 20px;text-align:left;font-size:0.85rem;color:var(--text)}
+.pro-feat::before{content:'+ ';color:var(--accent);font-weight:700}
+.pro-btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 36px;border-radius:8px;font-size:1rem;font-weight:700;transition:transform 0.2s,background 0.2s}
+.pro-btn:active{background:var(--accent2);transform:translateY(-2px)}
+/* email capture */
+.email-section{padding:80px 0;border-top:1px solid var(--border);text-align:center;background:var(--surface)}
+.email-section h2{font-size:1.6rem;font-weight:700;letter-spacing:-0.8px;margin-bottom:10px}
+.email-section p{color:var(--muted);font-size:0.9rem;margin-bottom:28px}
+.email-form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.email-form input[type=email]{flex:1;min-width:220px;background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:8px;font-size:0.9rem;outline:none;transition:border-color 0.2s}
+.email-form input[type=email]:focus{border-color:var(--accent)}
+.email-form input[type=email]::placeholder{color:var(--muted)}
+.email-form button{background:var(--accent);color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:0.9rem;font-weight:700;cursor:pointer;transition:background 0.2s}
+.email-form button:active{background:var(--accent2)}
+.email-fine{margin-top:12px;font-size:0.75rem;color:var(--muted)}
+/* cross-promo */
+.xpromo{padding:60px 0;border-top:1px solid var(--border)}
+.xpromo h3{font-size:1rem;font-weight:600;color:var(--muted);text-align:center;margin-bottom:28px;text-transform:uppercase;letter-spacing:0.5px}
+.xpromo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:800px;margin:0 auto}
+.xpromo-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 16px;text-align:center;transition:border-color 0.2s;text-decoration:none;display:block}
+.xpromo-card:active{border-color:var(--accent)}
+.xpromo-card .xi{font-size:1.8rem;margin-bottom:8px}
+.xpromo-card .xn{font-size:0.85rem;font-weight:700;color:var(--text);display:block;margin-bottom:4px}
+.xpromo-card .xd{font-size:0.75rem;color:var(--muted)}
 @media(max-width:640px){
   .stats .container{grid-template-columns:1fr;gap:24px}
   .hero{padding:60px 0 50px}
   .features,.score-demo,.social-proof,.problem{padding:50px 0}
+  .pro-section,.email-section,.xpromo{padding:50px 0}
 }
 </style>
 </head>

@@ -402,3 +402,35 @@ Sales died.
 
 The one thing that made him money stopped working
 
+
+
+---
+
+## Pending Enhancement (ALPHA16578, Score: 30)
+
+**Source:** @weswinder (high-signal-accounts) | **URL:** https://x.com/weswinder/status/2029922403124474050
+**Added:** 2026-03-07T05:00:52-05:00
+
+reminder: it's okay to build something that only 50 people need
+
+50 people paying $30/mo is $18k/year
+
+that's life changing money for most people on earth
+
+
+
+---
+
+## Pending Enhancement (ALPHA16596, Score: 40)
+
+**Source:** @damianplayer (high-signal-accounts) | **URL:** https://x.com/damianplayer/status/2029530745073500331
+**Added:** 2026-03-07T05:00:52-05:00
+
+Kevin O’Leary just named the two BIGGEST opportunities for the next decade.
+
+AI implementation AND data centers. bookmark and read 2x!
+
+1) SMBs doing $1M-$40M+ a year are desperate to adopt AI. 
+
+they have money. they have urgency. they have nobody who knows how to start. so step
+

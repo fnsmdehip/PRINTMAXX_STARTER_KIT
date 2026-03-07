@@ -1,0 +1,32 @@
+{
+  "cycle_start": "2026-03-07T05:00:44.172194",
+  "cycle_end": "2026-03-07T05:00:44.176442",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 1,
+  "new_intel_rows_written": 1,
+  "alerts_generated": 1,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I spent &gt; $60K/month on PR agencies at a startup that raised $680M. Here's what I learned about getting press as an e",
+      "subreddit": "startups",
+      "score": 32,
+      "url": "https://www.reddit.com/r/startups/comments/1rn45nz/i_spent_60kmonth_on_pr_agencies_at_a_startup_that/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "I spent &gt; $60K/month on PR agencies at a startup that raised $680M. Here's what I learned about getting press as an e",
+      "subreddit": "startups",
+      "score": 32,
+      "comments": 9,
+      "url": "https://www.reddit.com/r/startups/comments/1rn45nz/i_spent_60kmonth_on_pr_agencies_at_a_startup_that/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA16945"
+    }
+  ]
+}

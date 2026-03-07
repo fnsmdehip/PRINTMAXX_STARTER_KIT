@@ -28,3 +28,8 @@
 {"ts": "2026-03-07T01:25:36.598634", "mission": "safety_night", "result": "success", "duration_s": 7.4, "output": "Git safety commit"}
 {"ts": "2026-03-07T03:00:03.032062", "mission": "health_heal", "result": "success", "duration_s": 2.9, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-07T03:00:03.308095", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 14 response drafts, 17 listing drafts"}
+{"ts": "2026-03-07T05:00:03.401689", "mission": "health_heal", "result": "success", "duration_s": 3.3, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-07T05:00:03.669344", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 14 response drafts, 17 listing drafts"}
+{"ts": "2026-03-07T05:03:50.462736", "mission": "scan_opps", "result": "success", "duration_s": 226.8, "output": "3/4 scanners completed"}
+{"ts": "2026-03-07T05:09:50.119295", "mission": "research", "result": "partial", "duration_s": 359.7, "output": "1/3 scrapers completed"}
+{"ts": "2026-03-07T05:10:04.154964", "mission": "screen_alpha", "result": "success", "duration_s": 14.0, "output": "Screened batch from 78147 pending entries"}

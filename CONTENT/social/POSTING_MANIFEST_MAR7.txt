@@ -1,0 +1,84 @@
+PRINTMAXX MANUAL POSTING MANIFEST — 2026-03-07
+Account: @PRINTMAXXER | Platform: Twitter/X
+Method: Manual copy-paste (no API keys configured)
+Generated: 2026-03-07 05:00
+
+===================================================
+TODAY'S 4 POSTS — COPY-PASTE READY
+===================================================
+
+POST 1 — 07:30
+-------------------------------------------------------
+340 customers from reddit. zero ad spend. everyone says reddit marketing is dead. they're wrong. the trick is not marketing at all. just be useful in the right threads and the traffic follows.
+-------------------------------------------------------
+Chars: 195 | Source: ALPHA1414 | File: twitter_PRINTMAXXER_mar7_0730.txt
+
+POST 2 — 11:00
+-------------------------------------------------------
+cold email reality check: ran 464k emails last year across clients. tested every list source out there. apollo, zoominfo, paid databases, manual scraping. buying lists is dead. here's what actually works.
+-------------------------------------------------------
+Chars: 242 | Source: ALPHA1433 | File: twitter_PRINTMAXXER_mar7_1100.txt
+
+POST 3 — 14:30
+-------------------------------------------------------
+inbox placement shifted from opens to engagement depth. reply rates doubled when we stopped tracking opens and started writing emails people actually respond to. stop spraying and praying.
+-------------------------------------------------------
+Chars: 205 | Source: APPROVED_POSTS_MAR6.csv | File: twitter_PRINTMAXXER_mar7_1430.txt
+
+POST 4 — 18:00
+-------------------------------------------------------
+intent-based timing gets 2-4x reply rates. send outreach when someone just posted a hiring tweet, just launched something, just complained about a problem you solve. timing is the whole game.
+-------------------------------------------------------
+Chars: 234 | Source: APPROVED_POSTS_MAR6.csv | File: twitter_PRINTMAXXER_mar7_1800.txt
+
+===================================================
+FULL QUEUE SUMMARY (Mar 7 - Mar 13)
+===================================================
+
+Twitter @PRINTMAXXER:
+  Mar 7  — 4 posts (07:30, 11:00, 14:30, 18:00) READY
+  Mar 8  — 4 posts (07:30, 11:00, 14:30, 18:00) READY
+  Mar 9  — 4 posts (07:30, 11:00, 14:30, 18:00) READY
+  Mar 10 — 4 posts (07:30, 11:00, 14:30, 18:00) READY
+  Mar 11 — 4 posts (07:30, 11:00, 14:30, 18:00) READY
+  Mar 12 — 4 posts (07:30, 11:00, 14:30, 18:00) READY [cycle2 content]
+  Mar 13 — 1 post  (07:30) READY [cycle2 content]
+  TOTAL:  25 posts queued
+
+LinkedIn @PRINTMAXXER:
+  Mar 12 — 2 posts (09:00, 14:00) READY [pricing data, GEO intel]
+  Mar 13 — 1 post  (09:00) READY [RevenueCat subscription data]
+  TOTAL:  3 posts queued
+
+All queue files in: CONTENT/social/posting_queue/
+
+===================================================
+PIPELINE FLAGS — ACTION REQUIRED
+===================================================
+
+1. BUFFER_UPLOAD_MAR7.csv — DO NOT POST
+   Bug: tool names extracted as single words ("No", "mCP", "AI" as standalone tokens)
+   Bug: cross-account template contamination (wrong wrapper phrases per account)
+   Fix: tweet_drafter.py token parsing needs regex fix before next auto-batch
+   Status: BLOCKED
+
+2. CONTENT_QUEUE.csv — still PENDING_REVIEW (no quality gate approval)
+   Contains 50+ posts from Feb 2026 pipeline run
+   Action: needs /review-alpha pass before any posts can be queued
+
+===================================================
+HOW TO POST (manual, no API)
+===================================================
+
+Option A — Direct:
+  1. Open each queue file in CONTENT/social/posting_queue/
+  2. Copy text below the "---" separator
+  3. Paste into Twitter/LinkedIn
+  4. Post at scheduled time
+
+Option B — Buffer:
+  1. Import APPROVED_POSTS_MAR6.csv directly into Buffer
+  2. Set Buffer to @PRINTMAXXER account
+  3. Schedule will auto-populate
+
+After posting: update post_log.json — change "status" to "posted" and add "posted_at" timestamp

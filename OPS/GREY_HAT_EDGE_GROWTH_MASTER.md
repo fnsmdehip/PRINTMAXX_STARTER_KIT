@@ -4711,3 +4711,20 @@ If you know how to code and have distribution,
 
 congrats, you are a millionaire.
 
+
+
+---
+
+## Pending Enhancement (ALPHA16563, Score: 30)
+
+**Source:** @zach_yadegari (high-signal-accounts) | **URL:** https://x.com/zach_yadegari/status/2028522220801159272
+**Added:** 2026-03-07T05:00:52-05:00
+
+Free million dollar app idea for someone to build:
+
+Semantic search for instagram followers.
+
+“Show me only blonde girls”
+
+“Show me people I follow who don’t follow me back”
+

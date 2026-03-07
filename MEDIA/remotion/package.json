@@ -8,7 +8,8 @@
     "render:social": "remotion render src/index.ts SocialHook out/social_hook.mp4",
     "render:stats": "remotion render src/index.ts StatsDashboard out/stats_dashboard.mp4",
     "render:quote": "remotion render src/index.ts QuoteCard out/quote_card.mp4",
-    "render:all": "npm run render:social && npm run render:stats && npm run render:quote"
+    "render:pressure": "remotion render src/index.ts PipelinePressure out/pipeline_pressure.mp4",
+    "render:all": "npm run render:social && npm run render:stats && npm run render:quote && npm run render:pressure"
   },
   "keywords": [],
   "author": "",

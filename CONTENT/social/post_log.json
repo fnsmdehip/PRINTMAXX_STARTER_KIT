@@ -1,9 +1,9 @@
 {
   "log": [
-    {"id": "pm-mar7-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_0730.txt", "chars": 192, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
-    {"id": "pm-mar7-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1100.txt", "chars": 204, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
-    {"id": "pm-mar7-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1430.txt", "chars": 188, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
-    {"id": "pm-mar7-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1800.txt", "chars": 191, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar7-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_0730.txt", "chars": 195, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar7-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1100.txt", "chars": 242, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar7-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1430.txt", "chars": 205, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar7-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-07T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar7_1800.txt", "chars": 234, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
     {"id": "pm-mar8-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-08T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_0730.txt", "chars": 181, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
     {"id": "pm-mar8-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-08T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1100.txt", "chars": 217, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
     {"id": "pm-mar8-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-08T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar8_1430.txt", "chars": 167, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
@@ -19,19 +19,27 @@
     {"id": "pm-mar11-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_0730.txt", "chars": 209, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
     {"id": "pm-mar11-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1100.txt", "chars": 212, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
     {"id": "pm-mar11-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1430.txt", "chars": 206, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
-    {"id": "pm-mar11-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1800.txt", "chars": 221, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null}
+    {"id": "pm-mar11-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-11T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1800.txt", "chars": 221, "source": "APPROVED_POSTS_MAR6.csv", "posted_at": null},
+    {"id": "pm-mar12-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-12T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_0730.txt", "chars": 245, "source": "generated_20260307_cycle2", "posted_at": null},
+    {"id": "pm-mar12-02", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-12T11:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_1100.txt", "chars": 230, "source": "generated_20260307_cycle2", "posted_at": null},
+    {"id": "pm-mar12-03", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-12T14:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_1430.txt", "chars": 265, "source": "generated_20260307_cycle2", "posted_at": null},
+    {"id": "pm-mar12-04", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-12T18:00:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_1800.txt", "chars": 215, "source": "generated_20260307_cycle2", "posted_at": null},
+    {"id": "pm-mar13-01", "platform": "twitter", "account": "@PRINTMAXXER", "scheduled": "2026-03-13T07:30:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar13_0730.txt", "chars": 207, "source": "generated_20260307_cycle2", "posted_at": null},
+    {"id": "li-mar12-01", "platform": "linkedin", "account": "@PRINTMAXXER", "scheduled": "2026-03-12T09:00:00", "status": "queued", "queue_file": "linkedin_PRINTMAXXER_mar12_0900.txt", "chars": 792, "source": "generated_20260307_cycle2", "posted_at": null},
+    {"id": "li-mar12-02", "platform": "linkedin", "account": "@PRINTMAXXER", "scheduled": "2026-03-12T14:00:00", "status": "queued", "queue_file": "linkedin_PRINTMAXXER_mar12_1400.txt", "chars": 786, "source": "generated_20260307_cycle2", "posted_at": null},
+    {"id": "li-mar13-01", "platform": "linkedin", "account": "@PRINTMAXXER", "scheduled": "2026-03-13T09:00:00", "status": "queued", "queue_file": "linkedin_PRINTMAXXER_mar13_0900.txt", "chars": 715, "source": "generated_20260307_cycle2", "posted_at": null}
   ],
   "summary": {
     "total_posted": 0,
-    "total_queued": 20,
+    "total_queued": 28,
     "last_post_date": null,
     "platforms": {
-      "twitter": {"posted": 0, "queued": 20},
-      "linkedin": {"posted": 0, "queued": 0},
+      "twitter": {"posted": 0, "queued": 25},
+      "linkedin": {"posted": 0, "queued": 3},
       "reddit": {"posted": 0, "queued": 0}
     }
   },
-  "pipeline_bug_notes": "auto-generation pipeline has token parsing bug: tool names extracted as single words. fix needed in tweet_drafter before next batch. also: cross-account template contamination between @repscheme/@selahmoments/@PRINTMAXXER.",
+  "pipeline_bug_notes": "BUFFER_UPLOAD_MAR7.csv has token parsing bug: tool names extracted as single words (e.g. 'No' for no-code, 'mCP' for MCP). Also cross-account template contamination between @repscheme/@selahmoments/@drifthour/@PRINTMAXXER. DO NOT post from BUFFER_UPLOAD_MAR7.csv until fixed. Fix needed in tweet_drafter before next auto-batch.",
   "created": "2026-03-07T00:00:00Z",
-  "last_updated": "2026-03-07T00:00:00Z"
+  "last_updated": "2026-03-07T05:00:00Z"
 }
