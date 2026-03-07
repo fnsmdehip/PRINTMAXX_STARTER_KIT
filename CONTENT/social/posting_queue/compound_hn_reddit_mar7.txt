@@ -7,7 +7,7 @@ CATEGORY: show_hn + building_in_public
 
 ---
 
-HN POST — SHOW HN / ASK HN STYLE
+HN POST: SHOW HN / ASK HN STYLE
 
 Title: I ran 32 autonomous AI agents for 30 days as a solopreneur. Revenue: $0. Lessons learned.
 
@@ -27,7 +27,7 @@ After 30 days, the system had autonomously produced:
 
 Revenue: $0.
 
-The interesting part: my swarm brain agent analyzed the situation and throttled 12 of the 32 agents. Its reasoning was that building more assets had negative ROI because the bottleneck was human account creation (Stripe, Gumroad, Fiverr) — something no agent could automate.
+The interesting part: my swarm brain agent analyzed the situation and throttled 12 of the 32 agents. Its reasoning was that building more assets had negative ROI because the bottleneck was human account creation (Stripe, Gumroad, Fiverr). No agent could automate that.
 
 It calculated: 60 minutes of human work would activate $3,400/mo in pipeline value. Unlimited additional agent compute would add $0.
 
@@ -35,15 +35,15 @@ Lessons:
 1. AI agents are force multipliers, not replacement workers. They multiply zero into zero if the human doesn't take the first step.
 2. The swarm brain correctly identified that the system was over-optimized for production and under-optimized for distribution.
 3. Building feels like progress. Distribution is actual progress.
-4. The most valuable output wasn't any product — it was the brain's self-diagnosis that the system should stop building.
+4. The most valuable output wasn't any product. It was the brain's self-diagnosis that the system should stop building.
 
 Stack: Python, Claude (Opus for strategy, Sonnet for execution), cron/launchd, Playwright for scraping, surge.sh for deploys.
 
 ---
 
-REDDIT r/SideProject POST
+REDDIT POST: r/SideProject
 
-Title: 131 products built, $0 revenue — the most productive month of zero income I've ever had
+Title: 131 products built, $0 revenue. the most productive month of zero income I've ever had
 
 Body:
 
@@ -61,7 +61,7 @@ Posting this as accountability. If I don't have at least 3 products listed for s
 
 ---
 
-REDDIT r/Entrepreneur POST
+REDDIT POST: r/Entrepreneur
 
 Title: Calculated the ROI of my time vs my AI agents' time. The result was uncomfortable.
 

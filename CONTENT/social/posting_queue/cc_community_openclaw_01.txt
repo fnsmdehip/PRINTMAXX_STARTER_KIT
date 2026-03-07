@@ -1,0 +1,20 @@
+PLATFORM: indie hacker communities (r/SideProject, r/EntrepreneurRideAlong, Indie Hackers)
+TOPIC: OpenClaw local biz case study
+
+built a system that scrapes local businesses, grades their websites, and generates replacement sites automatically.
+
+first city: Nashville.
+
+results:
+- 30 businesses discovered via Google Maps API
+- 15 graded (8 scored A-, 3 scored B+, 2 scored D, 2 scored F)
+- 2 preview replacement sites built and deployed to surge.sh in under 2 hours
+- 2 cold emails drafted referencing specific problems (no SSL, not mobile-friendly, 9.6 second load times)
+
+the D and F graded businesses are the leads. their sites are objectively bad. the cold email writes itself: "your site takes 9.6 seconds to load. here's a replacement i already built. it loads in 0.8 seconds."
+
+next city: Memphis.
+
+stack: Python scraper, Google PageSpeed API for grading, HTML templates, surge.sh for instant deployment, Claude for email drafts.
+
+total cost: $0. everything runs locally.

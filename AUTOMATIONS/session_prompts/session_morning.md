@@ -1,22 +1,22 @@
-# PRINTMAXX Morning Briefing — 2026-03-04 14:06
+# PRINTMAXX Morning Briefing — 2026-03-07 07:00
 
 ## System Snapshot
 ```
-# HEARTBEAT — 2026-03-03 14:31:20
+# HEARTBEAT — 2026-03-07 07:00:00
 Leads: 142,200/1,454,245 analyzed | 12,948 hot | 74,798 warm | 488,922 pipeline
 Revenue: $0 total | 2 entries
-Content: 5 CSVs ready | 323 pending QA
+Content: 5 CSVs ready | 324 pending QA
 Apps: 8 built | 6/6 live (OPS/DEPLOYMENT_URLS.md)
 Products: gumroad_drafts=16 | fiverr_drafts=12 | etsy_copy=1
-Alpha: 278 pending review
+Alpha: 66 pending review
 Accounts: 0/48 active (BLOCKER: need platform signups)
-Scripts: 210 automation scripts
+Scripts: 273 automation scripts
 Blocker: Account creation → `OPS/ACCOUNT_CREATION_NOW.md`
 Next: `python3 AUTOMATIONS/closed_loop_pipeline.py --cycles 5 --batch 2000 --workers 30`
 ```
 Pipeline: 12948 hot | 74798 warm | 142200 analyzed
-Alpha: 278 pending | 618 approved
-Revenue: $0 | Disk: 47.3GB
+Alpha: 66 pending | 501 approved
+Revenue: $0 | Disk: 58.7GB
 Checkpoints: 0 pending
 
 ## Overnight Results
@@ -29,7 +29,13 @@ Checkpoints: 0 pending
 (none)
 ```
 
-## TASKS (execute all, write files directly)
+## ROUTING RULES (conditional branching)
+- After each task, write a 1-line status to OPS/session_progress.json: {"task": N, "result": "done|skipped|failed", "note": "..."}
+- If Task 2 (alpha review) finds 0 pending entries → SKIP Task 4 (content squeeze), route time to Task 3 (daily TODO) with extra detail
+- If overnight log shows 0 failures → SKIP "failed scripts to fix" in Task 3
+- If checkpoints pending > 0 → PRIORITIZE Task 5 (flag checkpoints) before Task 4
+
+## TASKS (execute in order, apply routing rules)
 
 ### 1. Update HEARTBEAT
 Read latest data. Rewrite OPS/HEARTBEAT.md with current numbers. Keep under 12 lines.
@@ -41,7 +47,7 @@ Add reviewer_notes column with 1-line reason.
 Follow .claude/rules/alpha-review.md strictly.
 
 ### 3. Daily TODO
-Write OPS/DAILY_TODO_2026_03_04.md:
+Write OPS/DAILY_TODO_2026_03_07.md:
 - Top 5 revenue-impact actions
 - Failed overnight scripts to fix
 - New hot leads worth contacting
@@ -49,7 +55,7 @@ Write OPS/DAILY_TODO_2026_03_04.md:
 
 ### 4. Content Squeeze (3 tweets + 1 thread)
 From overnight data, generate @PRINTMAXXER content.
-Save to CONTENT/social/auto_generated/morning_2026_03_04.md
+Save to CONTENT/social/auto_generated/morning_2026_03_07.md
 Voice: .claude/rules/copy-style.md — consequence-first, specific numbers, no AI slop.
 
 ### 5. Flag Checkpoints

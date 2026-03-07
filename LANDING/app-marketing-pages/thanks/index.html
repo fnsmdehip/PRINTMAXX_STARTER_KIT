@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>you're in. - PRINTMAXX</title>
+<meta name="description" content="Thanks for joining PRINTMAXX. Check your inbox and grab your free tools.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="you're in. - PRINTMAXX">
+<meta property="og:description" content="Check your inbox. Free tools below.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@printmaxxer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#111;
+  --surface2:#1a1a1a;
+  --surface3:#161616;
+  --accent:#f97316;
+  --accent2:#ea580c;
+  --green:#22c55e;
+  --green2:#16a34a;
+  --cyan:#06b6d4;
+  --purple:#a855f7;
+  --text:#e5e5e5;
+  --muted:#888;
+  --border:#222;
+  --border2:#2a2a2a;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.1rem;font-weight:700;letter-spacing:-0.5px;color:var(--text)}
+.logo span{color:var(--accent)}
+.nav-link{font-size:0.85rem;color:var(--muted);transition:color 0.2s}
+.nav-link:hover{color:var(--text);text-decoration:none}
+
+/* confirmation hero */
+.confirm{padding:80px 0 60px;text-align:center}
+.confirm-icon{
+  width:72px;height:72px;
+  background:rgba(34,197,94,0.12);
+  border:2px solid rgba(34,197,94,0.3);
+  border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:2rem;
+  margin-bottom:28px;
+  animation:pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.confirm h1{
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:800;
+  letter-spacing:-1.5px;
+  margin-bottom:16px;
+  line-height:1.1;
+}
+.confirm h1 span{color:var(--green)}
+.confirm p{font-size:1.05rem;color:var(--muted);max-width:480px;margin:0 auto 12px;line-height:1.7}
+.confirm-sub{font-size:0.85rem;color:var(--muted);opacity:0.7}
+
+/* divider */
+.divider{border:none;border-top:1px solid var(--border);margin:0}
+
+/* section headers */
+.section-label{
+  font-size:0.75rem;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.section-title{
+  font-size:1.4rem;
+  font-weight:700;
+  letter-spacing:-0.5px;
+  margin-bottom:6px;
+}
+.section-sub{font-size:0.9rem;color:var(--muted);margin-bottom:32px}
+
+/* free tools */
+.tools{padding:64px 0}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:20px}
+.tool-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:28px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition:border-color 0.2s,transform 0.2s;
+  position:relative;
+  overflow:hidden;
+}
+.tool-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.tool-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  opacity:0;
+  transition:opacity 0.2s;
+}
+.tool-card:hover::before{opacity:1}
+.tool-badge{
+  display:inline-block;
+  background:rgba(34,197,94,0.12);
+  border:1px solid rgba(34,197,94,0.25);
+  color:var(--green);
+  font-size:0.7rem;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:3px 10px;
+  border-radius:20px;
+  width:fit-content;
+}
+.tool-icon{font-size:1.6rem;margin-bottom:4px}
+.tool-card h3{font-size:1rem;font-weight:700;letter-spacing:-0.3px}
+.tool-card p{font-size:0.875rem;color:var(--muted);line-height:1.6}
+.tool-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:var(--accent);
+  color:#000;
+  font-size:0.82rem;
+  font-weight:700;
+  padding:8px 18px;
+  border-radius:6px;
+  margin-top:4px;
+  width:fit-content;
+  transition:background 0.2s;
+}
+.tool-link:hover{background:var(--accent2);text-decoration:none}
+.tool-link-ghost{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--border2);
+  font-size:0.82rem;
+  font-weight:600;
+  padding:8px 18px;
+  border-radius:6px;
+  margin-top:4px;
+  width:fit-content;
+  transition:border-color 0.2s,color 0.2s;
+}
+.tool-link-ghost:hover{border-color:var(--accent);color:var(--accent2);text-decoration:none}
+
+/* all tools row */
+.all-tools-row{
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.all-tools-row p{font-size:0.9rem;color:var(--muted)}
+.all-tools-row p strong{color:var(--text)}
+
+/* apps */
+.apps{padding:64px 0;border-top:1px solid var(--border)}
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.app-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:24px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.app-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.app-icon{
+  width:52px;height:52px;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;
+  flex-shrink:0;
+  margin-bottom:4px;
+}
+.icon-orange{background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.2)}
+.icon-cyan{background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.2)}
+.icon-indigo{background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.2)}
+.icon-green{background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.2)}
+.icon-yellow{background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.2)}
+.icon-purple{background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.2)}
+.icon-blue{background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.2)}
+.app-card h3{font-size:0.95rem;font-weight:700;letter-spacing:-0.3px}
+.app-card p{font-size:0.8rem;color:var(--muted);line-height:1.5;flex:1}
+.app-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-size:0.78rem;
+  font-weight:600;
+  color:var(--accent);
+  padding:6px 0;
+  border-bottom:1px solid transparent;
+  transition:border-color 0.2s;
+  width:fit-content;
+}
+.app-cta:hover{border-color:var(--accent);text-decoration:none}
+
+/* storefront */
+.storefront{padding:64px 0;border-top:1px solid var(--border)}
+.storefront-card{
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:48px 40px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.storefront-card::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(249,115,22,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.storefront-card h2{font-size:1.6rem;font-weight:800;letter-spacing:-0.8px;margin-bottom:12px}
+.storefront-card p{color:var(--muted);max-width:500px;margin:0 auto 28px;font-size:0.95rem;line-height:1.7}
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--accent);
+  color:#000;
+  padding:13px 32px;
+  border-radius:8px;
+  font-size:0.95rem;
+  font-weight:700;
+  transition:background 0.2s,transform 0.2s;
+}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-1px);text-decoration:none}
+
+/* share + affiliate row */
+.bottom-row{padding:64px 0;border-top:1px solid var(--border)}
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+.share-card,.affiliate-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:32px 28px;
+}
+.share-card h3,.affiliate-card h3{
+  font-size:1.05rem;
+  font-weight:700;
+  letter-spacing:-0.3px;
+  margin-bottom:10px;
+}
+.share-card p,.affiliate-card p{
+  font-size:0.875rem;
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:20px;
+}
+.btn-twitter{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#000;
+  color:#fff;
+  border:1px solid #333;
+  padding:10px 22px;
+  border-radius:8px;
+  font-size:0.85rem;
+  font-weight:600;
+  transition:background 0.2s,border-color 0.2s;
+}
+.btn-twitter:hover{background:#111;border-color:#555;text-decoration:none}
+.btn-stack{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--surface2);
+  color:var(--text);
+  border:1px solid var(--border2);
+  padding:10px 22px;
+  border-radius:8px;
+  font-size:0.85rem;
+  font-weight:600;
+  transition:background 0.2s;
+}
+.btn-stack:hover{background:#222;text-decoration:none}
+
+/* footer */
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
+footer p{font-size:0.8rem;color:var(--muted)}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--text)}
+
+/* mobile */
+@media(max-width:640px){
+  .confirm{padding:52px 0 44px}
+  .tools,.apps,.storefront,.bottom-row{padding:48px 0}
+  .tools-grid{grid-template-columns:1fr}
+  .apps-grid{grid-template-columns:1fr 1fr}
+  .bottom-grid{grid-template-columns:1fr}
+  .storefront-card{padding:32px 24px}
+  .all-tools-row{flex-direction:column;align-items:flex-start;gap:12px}
+}
+@media(max-width:400px){
+  .apps-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+  <div class="logo">print<span>maxx</span></div>
+  <a href="https://printmaxx-apps.surge.sh" class="nav-link" target="_blank" rel="noopener">all tools</a>
+</div>
+</nav>
+
+<!-- confirmation -->
+<section class="confirm">
+<div class="container">
+  <div class="confirm-icon">&#10003;</div>
+  <h1>you're in. <span>check your inbox.</span></h1>
+  <p>first email is on its way. while you wait, here's what you can use right now. no paywall, no signup required.</p>
+  <div class="confirm-sub">didn't get it? check spam. then check your email is typed correctly.</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- free tools -->
+<section class="tools">
+<div class="container">
+  <div class="section-label">free tools</div>
+  <div class="section-title">use these right now</div>
+  <div class="section-sub">no login, no credit card, no friction</div>
+
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <div class="tool-badge">free</div>
+      <div class="tool-icon">&#128172;</div>
+      <h3>cold email ROI calculator</h3>
+      <p>plug in your numbers. see exactly what a 2% reply rate is worth to your business. most people are leaving $40k+ on the table.</p>
+      <a href="https://printmaxx-lead-magnets.surge.sh/cold-email-roi-calculator.html" class="tool-link" target="_blank" rel="noopener">open calculator &#8599;</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-badge">free</div>
+      <div class="tool-icon">&#9790;</div>
+      <h3>ramadan daily planner</h3>
+      <p>suhoor, iftar, prayer times, and a daily goals block in one printable. runs in the browser. works offline after first load.</p>
+      <a href="https://printmaxx-lead-magnets.surge.sh/ramadan-daily-planner.html" class="tool-link" target="_blank" rel="noopener">open planner &#8599;</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-badge">free</div>
+      <div class="tool-icon">&#128295;</div>
+      <h3>all PRINTMAXX tools</h3>
+      <p>every free tool we've built in one place. cold email, productivity, faith, fitness. more added every week.</p>
+      <a href="https://printmaxx-apps.surge.sh" class="tool-link" target="_blank" rel="noopener">browse all tools &#8599;</a>
+    </div>
+
+  </div>
+
+  <div class="all-tools-row">
+    <p><strong>printmaxx-apps.surge.sh</strong> has everything. bookmark it. we drop new tools weekly.</p>
+    <a href="https://printmaxx-apps.surge.sh" class="tool-link-ghost" target="_blank" rel="noopener">go there now &#8599;</a>
+  </div>
+</div>
+</section>
+
+<!-- app showcase -->
+<section class="apps">
+<div class="container">
+  <div class="section-label">apps</div>
+  <div class="section-title">7 apps. all free to try.</div>
+  <div class="section-sub">built for people who actually want to build things and not just scroll</div>
+
+  <div class="apps-grid">
+
+    <div class="app-card">
+      <div class="app-icon icon-cyan">&#128172;</div>
+      <h3>coldmaxx</h3>
+      <p>cold email toolkit. AIDA, PAS, BAB frameworks. spam score checker. follow-up sequences built in.</p>
+      <a href="https://coldmaxx-web.surge.sh" class="app-cta" target="_blank" rel="noopener">try coldmaxx &#8599;</a>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon icon-orange">&#128274;</div>
+      <h3>focuslock</h3>
+      <p>locks your phone during work sessions. pomodoro timers. shame counter for emergency unlocks. ships more.</p>
+      <a href="https://focuslock-web.surge.sh" class="app-cta" target="_blank" rel="noopener">try focuslock &#8599;</a>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon icon-indigo">&#128164;</div>
+      <h3>sleepmaxx</h3>
+      <p>sleep optimizer built around your schedule. wind-down routines, sleep score tracking, no premium nonsense.</p>
+      <a href="https://sleepmaxx-web.surge.sh" class="app-cta" target="_blank" rel="noopener">try sleepmaxx &#8599;</a>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon icon-green">&#127828;</div>
+      <h3>mealmaxx</h3>
+      <p>meal prep planner. generates a week of meals from your calories and macros. shopping list included.</p>
+      <a href="https://mealmaxx-web.surge.sh" class="app-cta" target="_blank" rel="noopener">try mealmaxx &#8599;</a>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon icon-yellow">&#128694;</div>
+      <h3>walktounlock</h3>
+      <p>phone stays locked until you hit your step count. the only app blocker that actually works long-term.</p>
+      <a href="https://walktounlock-web.surge.sh" class="app-cta" target="_blank" rel="noopener">try walktounlock &#8599;</a>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon icon-purple">&#128591;</div>
+      <h3>prayerlock</h3>
+      <p>prayer times, qibla direction, and a screen lock that blocks the phone at salah time. no ads.</p>
+      <a href="https://prayerlock-web.surge.sh" class="app-cta" target="_blank" rel="noopener">try prayerlock &#8599;</a>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon icon-blue">&#9790;</div>
+      <h3>hilal</h3>
+      <p>moon sighting tool for islamic calendar dates. based on your location. no signup, no ads, instant result.</p>
+      <a href="https://hilal-app.surge.sh" class="app-cta" target="_blank" rel="noopener">try hilal &#8599;</a>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- storefront -->
+<section class="storefront">
+<div class="container">
+  <div class="storefront-card">
+    <div class="section-label" style="text-align:center;margin-bottom:12px">digital products</div>
+    <h2>browse all digital products</h2>
+    <p>templates, toolkits, and systems built for solopreneurs. one-time purchase. instant download. no subscriptions.</p>
+    <a href="https://printmaxx-store.surge.sh" class="btn-primary" target="_blank" rel="noopener">go to the store &#8599;</a>
+  </div>
+</div>
+</section>
+
+<!-- share + affiliate -->
+<section class="bottom-row">
+<div class="container">
+  <div class="bottom-grid">
+
+    <div class="share-card">
+      <h3>know someone who needs this?</h3>
+      <p>if you signed up because this looked useful, odds are someone in your circle needs it too. one tweet is enough.</p>
+      <a
+        href="https://twitter.com/intent/tweet?text=just+signed+up+for+printmaxx.+free+tools+for+solopreneurs+%E2%80%94+cold+email+ROI+calc%2C+focus+apps%2C+meal+planning%2C+and+more.+all+free+to+try.+https%3A%2F%2Fprintmaxx-apps.surge.sh"
+        class="btn-twitter"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.743l7.733-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        share on x
+      </a>
+    </div>
+
+    <div class="affiliate-card">
+      <h3>the full solopreneur stack</h3>
+      <p>the exact AI tools, hosting, and software we use to build and ship everything. curated list, honest recommendations.</p>
+      <a href="https://ai-stack-2026.surge.sh" class="btn-stack" target="_blank" rel="noopener">
+        see the stack &#8599;
+      </a>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+  <p>printmaxx &mdash; built by solopreneurs, for solopreneurs &nbsp;&middot;&nbsp; <a href="https://printmaxx-store.surge.sh" target="_blank" rel="noopener">store</a> &nbsp;&middot;&nbsp; <a href="https://printmaxx-apps.surge.sh" target="_blank" rel="noopener">tools</a></p>
+</div>
+</footer>
+
+</body>
+</html>

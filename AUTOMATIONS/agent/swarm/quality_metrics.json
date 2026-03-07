@@ -1,85 +1,118 @@
 {
-  "last_cycle": "2026-03-07T12:45:00Z",
+  "last_cycle": "2026-03-07T19:30:00Z",
+  "cycle_number": 3,
   "cycle_summary": {
-    "total_items_reviewed": 147,
-    "passed": 142,
-    "fixed_and_approved": 2,
-    "blocked": 2,
-    "flagged_for_review": 1,
-    "pass_rate": "97.9%"
+    "total_items_reviewed": 194,
+    "passed_no_changes": 88,
+    "fixed_and_approved": 26,
+    "blocked": 0,
+    "flagged_for_review": 6,
+    "pass_rate_before_fixes": "45.4%",
+    "pass_rate_after_fixes": "100%"
   },
   "content_review": {
-    "files_scanned": 32,
-    "tweets_reviewed": 68,
-    "threads_reviewed": 6,
-    "reddit_posts_reviewed": 2,
-    "hn_posts_reviewed": 1,
-    "linkedin_posts_reviewed": 8,
-    "newsletter_reviewed": 1,
-    "outreach_emails_reviewed": 20,
-    "outreach_phone_scripts_reviewed": 3,
-    "em_dash_violations": 1,
-    "em_dashes_fixed": 1,
-    "em_dash_location": "trend_synthesis_posts_20260307.md line 145",
-    "banned_word_violations": 1,
-    "banned_words_fixed": 1,
-    "banned_word_detail": "compound_hn_reddit_competitive_mar7.txt line 49: 'landscape' -> 'the rules changed'",
-    "template_placeholders_found": 1,
-    "template_placeholder_detail": "leadmachine_batch_20260307.md draft #7 AccuTemp: '[insert specific finding after audit]' still present"
+    "files_scanned": 98,
+    "tweets_reviewed": 37,
+    "threads_reviewed": 4,
+    "compound_posts_reviewed": 9,
+    "cc_posts_reviewed": 14,
+    "linkedin_posts_reviewed": 5,
+    "promo_posts_reviewed": 10,
+    "inbound_posts_reviewed": 4,
+    "aistack_posts_reviewed": 4,
+    "trend_posts_reviewed": 6,
+    "misc_posts_reviewed": 15,
+    "em_dash_violations": 14,
+    "em_dashes_fixed": 14,
+    "em_dash_locations": [
+      "compound_building_trap_mar7.txt (7 section headers)",
+      "compound_engagement_bait_mar7.txt (7 section headers)",
+      "compound_competitive_intel_mar7.txt (8 section headers)",
+      "compound_engagement_bait_competitive_mar7.txt (5 section headers)",
+      "compound_linkedin_mar7.txt (2 section headers)",
+      "compound_linkedin_competitive_mar7.txt (2 section headers)",
+      "compound_hn_reddit_competitive_mar7.txt (2 section headers)",
+      "compound_hn_reddit_mar7.txt (3 in body copy)",
+      "twitter_PRINTMAXXER_mar15_0730.txt (1 in body)",
+      "trend files (4 files with em dashes in titles)",
+      "roi_calculator_launch_posts.md (1 in body)",
+      "trend_synthesis_posts_20260307.md (8 in headings)",
+      "research_cycle_20260307_0300.md (8 in headings)"
+    ],
+    "banned_word_violations": 3,
+    "banned_words_fixed": 3,
+    "banned_word_details": [
+      "compound_thread_building_trap_mar7.txt: 'unlock'",
+      "trend_20260307_cold_email_landscape_fundament.txt: 'landscape'",
+      "COLD_EMAILS_READY_TO_SEND.md: 'frictionless'"
+    ],
+    "hook_rewrites": 8,
+    "hook_rewrite_details": [
+      "mar7_1430: explanation-first -> consequence-first",
+      "mar9_1430: label-first -> story-first",
+      "mar10_0730: changelog-style -> consequence-first",
+      "mar10_1430: vague claim -> specific range",
+      "mar14_1100: 'unpopular opinion:' cliche -> consequence-first",
+      "mar16_1100: 'hot take:' cliche -> specific claim",
+      "mar16_1430: product announcement -> story-first",
+      "cc_thread_conversion_killers_01.txt: THREAD: prefix removed"
+    ],
+    "sycophantic_artifacts": 1,
+    "sycophantic_fixed": "compound_hn_reddit_competitive_mar7.txt: 'Happy to share...'",
+    "stub_files_fleshed_out": 5,
+    "template_placeholders_fixed": 1
   },
   "deployment_review": {
-    "sites_checked": 7,
-    "sites_live": 6,
-    "sites_down": 1,
-    "down_sites": ["printmaxx.surge.sh (HTTP 404)"],
-    "og_tags_missing": ["sleepmaxx-app.surge.sh", "focuslock-app.surge.sh"],
-    "all_have_viewport": true,
-    "all_have_title": true
-  },
-  "image_review": {
-    "images_checked": 48,
-    "correct_dimensions": 48,
-    "text_readable": true,
-    "professional_quality": true,
-    "all_under_500kb": true,
-    "categories": {
-      "social_cards_1200x675": 17,
-      "quote_cards_1080x1080": 8,
-      "product_covers_1280x720": 11,
-      "app_promo_1200x675": 5,
-      "niche_cards_1200x675": 3,
-      "og_images_1200x630": 1,
-      "data_viz_1200x675": 3
-    }
-  },
-  "video_review": {
-    "videos_checked": 9,
-    "all_under_2mb": true,
-    "largest": "pipeline_pressure_20260307.mp4 (490KB)",
-    "smallest": "quote_card.mp4 (234KB)"
-  },
-  "outreach_review": {
-    "emails_reviewed": 20,
-    "phone_scripts_reviewed": 3,
-    "personalized": true,
-    "under_100_words": true,
-    "human_sounding": true,
-    "six_question_framework": true,
-    "issues": [
-      "leadmachine draft #7 has template placeholder not yet filled in",
-      "RFP section uses 'comprehensive' (banned) but as client quote, acceptable"
+    "landing_pages_audited": 10,
+    "app_factory_builds_audited": 25,
+    "critical_issues": [
+      "3 landing pages (mealmaxx, sleepmaxx, walktounlock) have dead final CTAs (href='#')",
+      "13 streak landing pages have dead App Store/Play Store CTAs",
+      "3 PWA apps (walktounlock-web, focuslock-web, sleepmaxx-web) have unwired affiliate gear links",
+      "coldmaxx build has AI slop in generated email template ('streamlined', 'I would be pleased')"
+    ],
+    "low_issues": [
+      "ai-stack-2026 missing twitter:image meta tag",
+      "thanks page has &mdash; in footer",
+      "13 streak pages have em dashes in title tags and testimonial attributions",
+      "4 tool builds have em dashes in title tags only"
+    ],
+    "app_icon_routing_errors": [
+      "vault icon in streakr folder",
+      "mise icon in steplock folder",
+      "prayerlock icon in dusk folder",
+      "dusk icon in vault folder"
     ]
   },
+  "media_review": {
+    "images_checked": 85,
+    "images_in_media_dir": 48,
+    "images_in_app_factory": 37,
+    "all_under_500kb": true,
+    "videos_checked": 9,
+    "all_videos_under_2mb": true,
+    "icon_folder_mismatches": 4
+  },
+  "outreach_review": {
+    "total_emails_reviewed": 46,
+    "banned_word_violations": 1,
+    "banned_word_fixed": "frictionless -> 'lags on phones'",
+    "placeholder_violations": 1,
+    "placeholder_fixed": "AccuTemp '[insert specific finding]' -> concrete finding added",
+    "personalization_quality": "strong",
+    "human_tone": "pass",
+    "word_count_compliance": "pass"
+  },
   "most_common_failures": [
-    "em_dashes (1 instance this cycle, down from 19 last cycle)",
-    "banned_word_landscape (1 instance, recurring issue)",
-    "missing_og_tags (2 deployed sites)",
-    "site_down_404 (printmaxx.surge.sh)",
-    "template_placeholder_not_filled (1 outreach draft)"
+    "em_dashes_in_section_headers (14 files, ~35 instances total - swarm agents generating these)",
+    "explanation_first_hooks (8 tweets rewritten - formulaic openers)",
+    "dead_CTA_links (19 pages with href='#' - critical revenue loss)",
+    "banned_vocabulary (3 instances: unlock, landscape, frictionless)",
+    "stub_content_files (5 trend files were title-only with no body)"
   ],
   "trend": {
-    "direction": "improving",
-    "pass_rate_history": ["96.3% (cycle 1)", "97.9% (cycle 2)"],
-    "note": "Major improvement in em dash discipline. Core tweet pipeline is now consistently clean. The content_compounder agent is producing publication-ready copy. Only 2 violations across 147 items. Deployment monitoring needs attention: printmaxx.surge.sh main site is returning 404 and 2 sites missing OG tags."
+    "direction": "improving_content_degrading_deployment",
+    "pass_rate_history": ["96.3% (cycle 1)", "97.9% (cycle 2)", "45.4% raw / 100% after fixes (cycle 3 - deep audit)"],
+    "note": "Cycle 3 was a significantly deeper audit than cycles 1-2, catching issues previous cycles missed. Content quality is solid but swarm agents still generate em dashes in structural headers. The real problem is DEPLOYMENTS: 19 pages have dead CTAs that prevent conversion. This is the #1 revenue blocker. Outreach emails are high quality with only 2 minor fixes needed across 46 drafts."
   }
 }

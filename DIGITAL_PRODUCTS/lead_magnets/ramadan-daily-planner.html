@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramadan Daily Planner — build your schedule around prayer times</title>
+<meta name="description" content="plug in your timezone. get a full daily schedule built around suhoor, fajr, iftar, and taraweeh. track goals across all 30 days.">
+<meta property="og:title" content="Ramadan Daily Planner">
+<meta property="og:description" content="your daily schedule built around prayer times. 30-day tracker. works offline. free.">
+<meta property="og:type" content="website">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a12;
+  --surface:#0f0f1e;
+  --card:#14142a;
+  --card2:#1a1a35;
+  --accent:#7c3aed;
+  --accent2:#6d28d9;
+  --gold:#f59e0b;
+  --gold2:#d97706;
+  --green:#10b981;
+  --red:#ef4444;
+  --text:#e8e8f0;
+  --muted:#7070a0;
+  --border:#1e1e40;
+  --border2:#2a2a50;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:700px;margin:0 auto;padding:0 20px}
+
+header{padding:36px 0 28px;text-align:center;border-bottom:1px solid var(--border)}
+.badge{display:inline-block;background:var(--card2);border:1px solid var(--border2);padding:5px 14px;border-radius:20px;font-size:0.75rem;color:var(--muted);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px}
+header h1{font-size:clamp(1.7rem,5vw,2.4rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:8px}
+header h1 span{color:var(--gold)}
+header p{color:var(--muted);font-size:0.95rem;max-width:480px;margin:0 auto}
+
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-top:28px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:12px 20px;font-size:0.85rem;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color 0.2s,border-color 0.2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab:hover:not(.active){color:var(--text)}
+
+.panel{display:none;padding:28px 0}
+.panel.active{display:block}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px}
+.card h2{font-size:0.8rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+.card-gold h2{color:var(--gold)}
+
+.input-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+.input-row:last-child{border-bottom:none}
+.input-label{font-size:0.9rem;color:var(--text);flex:1}
+.input-label small{display:block;color:var(--muted);font-size:0.75rem;margin-top:2px}
+.input-field{width:150px;text-align:right;background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:8px 12px;color:var(--text);font-family:inherit;font-size:0.9rem;outline:none;transition:border-color 0.2s}
+.input-field:focus{border-color:var(--accent)}
+select.input-field{width:180px;cursor:pointer}
+
+.schedule-grid{display:flex;flex-direction:column;gap:8px}
+.schedule-item{display:flex;align-items:center;gap:14px;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 16px}
+.schedule-item.prayer{border-left:3px solid var(--accent)}
+.schedule-item.meal{border-left:3px solid var(--gold)}
+.schedule-item.work{border-left:3px solid var(--green)}
+.schedule-item.sleep{border-left:3px solid var(--muted)}
+.schedule-item.iftar{border-left:3px solid var(--gold);background:rgba(245,158,11,0.06)}
+.s-time{font-size:0.85rem;font-weight:700;color:var(--muted);min-width:52px;font-variant-numeric:tabular-nums}
+.s-icon{font-size:1.1rem;min-width:24px;text-align:center}
+.s-content{flex:1}
+.s-name{font-size:0.9rem;font-weight:600;color:var(--text)}
+.s-desc{font-size:0.75rem;color:var(--muted);margin-top:2px}
+.s-dur{font-size:0.75rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:4px;padding:2px 7px;white-space:nowrap;flex-shrink:0}
+
+.btn{display:block;width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:10px;padding:13px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:inherit;transition:opacity 0.2s,transform 0.1s;text-align:center;margin-top:8px}
+.btn:hover{opacity:0.92;transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+
+.day-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.day-nav button{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 14px;color:var(--text);cursor:pointer;font-family:inherit;font-size:0.85rem;transition:background 0.2s}
+.day-nav button:hover{background:var(--border)}
+.day-nav .day-display{font-size:1.1rem;font-weight:700;letter-spacing:-0.5px}
+
+.goal-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.goal-row:last-child{border-bottom:none}
+.goal-icon{font-size:1.1rem;min-width:24px;text-align:center}
+.goal-label{flex:1;font-size:0.9rem;color:var(--text)}
+.goal-label small{display:block;color:var(--muted);font-size:0.75rem}
+.goal-controls{display:flex;align-items:center;gap:8px}
+.goal-btn{width:28px;height:28px;border-radius:6px;border:1px solid var(--border2);background:var(--card2);color:var(--text);cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;font-family:inherit;transition:background 0.2s}
+.goal-btn:active{background:var(--border2)}
+.goal-val{min-width:28px;text-align:center;font-weight:700;font-size:0.95rem;font-variant-numeric:tabular-nums}
+
+.progress-section{margin-top:4px}
+.progress-row{margin-bottom:12px}
+.progress-header{display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:5px}
+.progress-label{color:var(--muted)}
+.progress-pct{font-weight:600;color:var(--text)}
+.progress-bar{height:6px;background:var(--card2);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;border-radius:3px;transition:width 0.4s ease}
+.fill-purple{background:linear-gradient(90deg,var(--accent),#a855f7)}
+.fill-gold{background:linear-gradient(90deg,var(--gold),#fbbf24)}
+.fill-green{background:linear-gradient(90deg,var(--green),#34d399)}
+
+.prayer-checks{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:4px}
+.prayer-check{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 4px;background:var(--card2);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:background 0.2s,border-color 0.2s;user-select:none}
+.prayer-check.done{background:rgba(124,58,237,0.15);border-color:var(--accent)}
+.prayer-check .p-name{font-size:0.7rem;color:var(--muted);text-align:center}
+.prayer-check .p-icon{font-size:1.1rem}
+.prayer-check.done .p-name{color:var(--accent)}
+
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.stat-box{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.stat-num{font-size:1.6rem;font-weight:800;letter-spacing:-1px;color:var(--gold)}
+.stat-lbl{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.3px;margin-top:2px}
+
+.month-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-top:8px}
+.day-cell{aspect-ratio:1;border-radius:5px;border:1px solid var(--border);background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--muted);cursor:pointer;transition:all 0.2s;font-weight:600}
+.day-cell.current{border-color:var(--gold);color:var(--gold)}
+.day-cell.complete{background:rgba(124,58,237,0.2);border-color:var(--accent);color:var(--accent)}
+.day-cell.partial{background:rgba(245,158,11,0.1);border-color:var(--gold2);color:var(--gold2)}
+.day-cell.future{opacity:0.4}
+
+.cta-section{padding:40px 0 48px;border-top:1px solid var(--border);text-align:center}
+.cta-section h3{font-size:1.4rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:6px}
+.cta-section p{color:var(--muted);font-size:0.9rem;max-width:400px;margin:0 auto 20px}
+.email-form{max-width:360px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.email-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.email-form input[type="email"]:focus{border-color:var(--gold)}
+.email-form input[type="email"]::placeholder{color:var(--muted)}
+.email-form button{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;border:none;border-radius:8px;padding:13px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:inherit;transition:opacity 0.2s}
+.email-form button:hover{opacity:0.9}
+.fine{font-size:0.75rem;color:var(--muted);margin-top:2px}
+
+.tip-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.tip-list li{display:flex;gap:10px;font-size:0.875rem;color:var(--muted);line-height:1.5}
+.tip-list li::before{content:"-->";color:var(--gold);flex-shrink:0;margin-top:1px;font-weight:700}
+
+.note-text{font-size:0.85rem;color:var(--muted);line-height:1.7}
+
+footer{padding:24px 0;text-align:center;border-top:1px solid var(--border)}
+footer p{color:var(--muted);font-size:0.78rem}
+
+@media(max-width:500px){
+  .input-row{flex-direction:column;align-items:flex-start;gap:6px}
+  .input-field,select.input-field{width:100%;text-align:left}
+  .month-grid{grid-template-columns:repeat(6,1fr)}
+  .s-dur{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">ramadan 1446 / 2025</div>
+    <h1>ramadan daily <span>planner</span></h1>
+    <p>plug in your timezone. get your full day built around prayer times. track goals across all 30 days. no account needed.</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" id="tab-schedule" onclick="switchTab('schedule',this)">daily schedule</button>
+    <button class="tab" id="tab-tracker" onclick="switchTab('tracker',this)">30-day tracker</button>
+    <button class="tab" id="tab-tips" onclick="switchTab('tips',this)">ramadan tips</button>
+  </div>
+
+  <!-- SCHEDULE PANEL -->
+  <div class="panel active" id="panel-schedule">
+
+    <div class="card">
+      <h2>your setup</h2>
+      <div class="input-row">
+        <div class="input-label">
+          timezone
+          <small>pick your UTC offset</small>
+        </div>
+        <select class="input-field" id="tz-select" onchange="generateSchedule()">
+          <option value="-12">UTC-12 (Baker Island)</option>
+          <option value="-11">UTC-11 (American Samoa)</option>
+          <option value="-10">UTC-10 (Hawaii)</option>
+          <option value="-9">UTC-9 (Alaska)</option>
+          <option value="-8">UTC-8 (Los Angeles, Vancouver)</option>
+          <option value="-7">UTC-7 (Denver, Phoenix)</option>
+          <option value="-6">UTC-6 (Chicago, Mexico City)</option>
+          <option value="-5">UTC-5 (New York, Toronto)</option>
+          <option value="-4">UTC-4 (Santiago, Caracas)</option>
+          <option value="-3">UTC-3 (Buenos Aires, Sao Paulo)</option>
+          <option value="-1">UTC-1 (Cape Verde)</option>
+          <option value="0">UTC+0 (London, Dublin)</option>
+          <option value="1">UTC+1 (Paris, Berlin, Lagos)</option>
+          <option value="2">UTC+2 (Cairo, Johannesburg)</option>
+          <option value="3" selected>UTC+3 (Riyadh, Istanbul, Nairobi)</option>
+          <option value="4">UTC+4 (Dubai, Baku)</option>
+          <option value="5">UTC+5 (Karachi, Tashkent)</option>
+          <option value="5.5">UTC+5:30 (Mumbai, Delhi)</option>
+          <option value="6">UTC+6 (Dhaka, Almaty)</option>
+          <option value="7">UTC+7 (Jakarta, Bangkok)</option>
+          <option value="8">UTC+8 (Kuala Lumpur, Singapore)</option>
+          <option value="9">UTC+9 (Tokyo, Seoul)</option>
+          <option value="10">UTC+10 (Sydney, Melbourne)</option>
+          <option value="12">UTC+12 (Auckland)</option>
+        </select>
+      </div>
+      <div class="input-row">
+        <div class="input-label">
+          ramadan day
+          <small>day 1 through 30</small>
+        </div>
+        <input type="number" class="input-field" id="ram-day" value="1" min="1" max="30" onchange="generateSchedule()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">
+          work start time
+          <small>when your workday normally begins</small>
+        </div>
+        <select class="input-field" id="work-start" onchange="generateSchedule()">
+          <option value="7">7:00 AM</option>
+          <option value="8">8:00 AM</option>
+          <option value="9" selected>9:00 AM</option>
+          <option value="10">10:00 AM</option>
+          <option value="11">11:00 AM</option>
+        </select>
+      </div>
+      <button class="btn" onclick="generateSchedule()">build my schedule</button>
+    </div>
+
+    <div class="card card-gold" id="schedule-output" style="display:none">
+      <h2>your day, ramadan day <span id="day-label">1</span></h2>
+      <div class="schedule-grid" id="schedule-grid"></div>
+    </div>
+
+    <div class="card" id="schedule-notes" style="display:none">
+      <h2>how these times work</h2>
+      <p class="note-text">
+        prayer times are estimated from your UTC offset using standard astronomical formulas for mid-latitude cities (~35N) during Ramadan 2025 (late Feb to late March). actual times vary by latitude. for precise times, check a local mosque or an app like Athan Pro. adjust the blocks to match your real prayer times.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- TRACKER PANEL -->
+  <div class="panel" id="panel-tracker">
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num" id="stat-streak">0</div>
+        <div class="stat-lbl">day streak</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="stat-prayers">0</div>
+        <div class="stat-lbl">prayers logged</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="stat-pages">0</div>
+        <div class="stat-lbl">quran pages</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="day-nav">
+        <button onclick="changeDay(-1)">prev</button>
+        <div class="day-display">day <span id="current-day-label">1</span></div>
+        <button onclick="changeDay(1)">next</button>
+      </div>
+
+      <h2>prayers completed today</h2>
+      <div class="prayer-checks">
+        <div class="prayer-check" onclick="togglePrayer('fajr')" id="p-fajr">
+          <span class="p-icon">🌙</span>
+          <span class="p-name">fajr</span>
+        </div>
+        <div class="prayer-check" onclick="togglePrayer('dhuhr')" id="p-dhuhr">
+          <span class="p-icon">☀️</span>
+          <span class="p-name">dhuhr</span>
+        </div>
+        <div class="prayer-check" onclick="togglePrayer('asr')" id="p-asr">
+          <span class="p-icon">🌤</span>
+          <span class="p-name">asr</span>
+        </div>
+        <div class="prayer-check" onclick="togglePrayer('maghrib')" id="p-maghrib">
+          <span class="p-icon">🌅</span>
+          <span class="p-name">maghrib</span>
+        </div>
+        <div class="prayer-check" onclick="togglePrayer('isha')" id="p-isha">
+          <span class="p-icon">🌠</span>
+          <span class="p-name">isha</span>
+        </div>
+      </div>
+
+      <div style="height:16px"></div>
+      <h2>daily goals</h2>
+
+      <div class="goal-row">
+        <span class="goal-icon">📖</span>
+        <div class="goal-label">
+          quran pages read
+          <small>target: 20 pages/day = full quran by day 30</small>
+        </div>
+        <div class="goal-controls">
+          <button class="goal-btn" onclick="adjustGoal('quran',-1)">-</button>
+          <span class="goal-val" id="val-quran">0</span>
+          <button class="goal-btn" onclick="adjustGoal('quran',1)">+</button>
+        </div>
+      </div>
+
+      <div class="goal-row">
+        <span class="goal-icon">🤲</span>
+        <div class="goal-label">
+          duas made
+          <small>morning, evening, iftar, before sleep</small>
+        </div>
+        <div class="goal-controls">
+          <button class="goal-btn" onclick="adjustGoal('duas',-1)">-</button>
+          <span class="goal-val" id="val-duas">0</span>
+          <button class="goal-btn" onclick="adjustGoal('duas',1)">+</button>
+        </div>
+      </div>
+
+      <div class="goal-row">
+        <span class="goal-icon">💰</span>
+        <div class="goal-label">
+          sadaqah given ($)
+          <small>daily charity. even $1 counts.</small>
+        </div>
+        <div class="goal-controls">
+          <button class="goal-btn" onclick="adjustGoal('sadaqah',-1)">-</button>
+          <span class="goal-val" id="val-sadaqah">0</span>
+          <button class="goal-btn" onclick="adjustGoal('sadaqah',1)">+</button>
+        </div>
+      </div>
+
+      <div class="goal-row">
+        <span class="goal-icon">🕌</span>
+        <div class="goal-label">
+          taraweeh rakats
+          <small>standard is 8 or 20 rakats</small>
+        </div>
+        <div class="goal-controls">
+          <button class="goal-btn" onclick="adjustGoal('taraweeh',-2)">-</button>
+          <span class="goal-val" id="val-taraweeh">0</span>
+          <button class="goal-btn" onclick="adjustGoal('taraweeh',2)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>30-day progress</h2>
+      <div class="progress-section">
+        <div class="progress-row">
+          <div class="progress-header">
+            <span class="progress-label">prayers logged (total)</span>
+            <span class="progress-pct" id="pct-prayers">0%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill fill-purple" id="bar-prayers" style="width:0%"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="progress-header">
+            <span class="progress-label">quran completion (of 604 pages)</span>
+            <span class="progress-pct" id="pct-quran">0%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill fill-gold" id="bar-quran" style="width:0%"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="progress-header">
+            <span class="progress-label">charity days completed</span>
+            <span class="progress-pct" id="pct-sadaqah">0%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill fill-green" id="bar-sadaqah" style="width:0%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>all 30 days</h2>
+      <p style="font-size:0.78rem;color:var(--muted);margin-bottom:12px">purple = full day. gold = partial. click to jump.</p>
+      <div class="month-grid" id="month-grid"></div>
+    </div>
+
+  </div>
+
+  <!-- TIPS PANEL -->
+  <div class="panel" id="panel-tips">
+
+    <div class="card">
+      <h2>suhoor strategy</h2>
+      <ul class="tip-list">
+        <li>eat slow-digesting carbs: oats, sweet potato, whole grain bread. they hold you 12+ hours.</li>
+        <li>2 glasses of water minimum. add electrolytes if you're in a hot climate or exercising.</li>
+        <li>set your alarm 25 minutes before fajr, not 5. rushed suhoor means a worse fast.</li>
+        <li>protein + fat slows glucose absorption. eggs + cheese + whole grain beats cereal.</li>
+        <li>avoid salty foods. they pull water out of cells and you'll feel thirsty by noon.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>staying productive while fasting</h2>
+      <ul class="tip-list">
+        <li>schedule deep work 2-3 hours after fajr. energy peaks here before hunger hits hard.</li>
+        <li>2pm to 4pm is the danger zone. use it for admin, emails, calls. not creative work.</li>
+        <li>naps are sunnah. 20 minutes after dhuhr makes the rest of the day manageable.</li>
+        <li>caffeine withdrawal hits days 1-3. wean down the week before Ramadan starts.</li>
+        <li>break large tasks into 25-minute blocks. fasting reduces working memory, smaller chunks help.</li>
+        <li>keep a notepad nearby. capture thoughts, then return to the task. don't chase ideas mid-fast.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>quran completion plan</h2>
+      <ul class="tip-list">
+        <li>the Quran is 604 pages. 20 pages a day = full completion by day 30.</li>
+        <li>split it: 5 after fajr, 5 after dhuhr, 5 after asr, 5 after taraweeh.</li>
+        <li>if you miss a day, don't try to double-up next day. add 2-3 pages across the following week instead.</li>
+        <li>listening while commuting counts. follow along with audio for passive progress.</li>
+        <li>understanding one ayah deeply beats reading 20 pages you don't process.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>iftar done right</h2>
+      <ul class="tip-list">
+        <li>break fast with 1-3 dates and water. simple sugar signals the body to start digestion.</li>
+        <li>wait 10-15 minutes before the main meal. your stomach shrinks during the fast. give it time.</li>
+        <li>avoid deep-fried foods right at iftar. they sit heavy and wreck taraweeh concentration.</li>
+        <li>soup or broth before the meal helps hydration and primes the stomach for solid food.</li>
+        <li>stop at 2/3 full. the sunnah is 1/3 food, 1/3 water, 1/3 air. it's physiologically correct.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>the last 10 nights</h2>
+      <ul class="tip-list">
+        <li>days 21-30 are the high-value nights. laylatul qadr is worth 1,000 months of worship.</li>
+        <li>odd nights (21, 23, 25, 27, 29) are most likely. if you can only go all-in on one, go on the 27th.</li>
+        <li>plan now: request PTO, prep easy batch meals, tell your family your intentions.</li>
+        <li>sleep 6pm to midnight. pray midnight to fajr. nap after fajr. repeat.</li>
+        <li>simple duas repeated with full attention beat elaborate ones you don't fully understand.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h3>want the full ramadan productivity system?</h3>
+    <p>30-day prayer schedule, meal prep templates, and charity tracker. sent to your inbox.</p>
+    <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="[Ramadan Planner] Lead Magnet Signup">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+      <input type="email" name="email" placeholder="your email" required>
+      <button type="submit">send me the full system</button>
+      <p class="fine">no spam. one email with the full system. unsubscribe anytime.</p>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>ramadan mubarak. built to be useful, not impressive.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+'use strict';
+
+// ─── State ────────────────────────────────────────────────────────────────────
+var STORAGE_KEY = 'ramadan_planner_v1';
+var state = { currentDay: 1, days: {} };
+
+function getDay(d) {
+  if (!state.days[d]) {
+    state.days[d] = {
+      prayers: { fajr: false, dhuhr: false, asr: false, maghrib: false, isha: false },
+      quran: 0, duas: 0, sadaqah: 0, taraweeh: 0
+    };
+  }
+  return state.days[d];
+}
+
+function saveState() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+}
+
+function loadState() {
+  try {
+    var raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) { state = JSON.parse(raw); }
+  } catch(e) {}
+}
+
+// ─── Time helpers ─────────────────────────────────────────────────────────────
+function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
+
+function minutesToTime(totalMinutes) {
+  totalMinutes = ((totalMinutes % 1440) + 1440) % 1440;
+  var h = Math.floor(totalMinutes / 60);
+  var m = totalMinutes % 60;
+  var ampm = h < 12 ? 'am' : 'pm';
+  var h12 = h === 0 ? 12 : h > 12 ? h - 12 : h;
+  return h12 + ':' + pad(m) + ampm;
+}
+
+function getPrayerTimes(tzOffset, ramadanDay) {
+  // Approximate times for mid-latitude (~35N) during Ramadan 2025 (late Feb to late March)
+  // Base times in local minutes at UTC+3 baseline
+  var dayProgress = (ramadanDay - 1) / 29;
+  var baseFajr    = 4 * 60 + 30;
+  var baseSunrise = 6 * 60 + 0;
+  var baseDhuhr   = 12 * 60 + 15;
+  var baseAsr     = 15 * 60 + 30;
+  var baseMaghrib = 18 * 60 + 10;
+  var baseIsha    = 19 * 60 + 30;
+
+  // Days get longer through the month: fajr earlier, maghrib later
+  var fajrShift    = -dayProgress * 15;
+  var maghribShift =  dayProgress * 20;
+  var tzDiff = (parseFloat(tzOffset) - 3) * 60;
+
+  return {
+    suhoorEnd:   baseFajr + fajrShift + tzDiff - 10,
+    fajr:        baseFajr + fajrShift + tzDiff,
+    sunrise:     baseSunrise + fajrShift * 0.5 + tzDiff,
+    dhuhr:       baseDhuhr + tzDiff,
+    asr:         baseAsr + tzDiff,
+    maghrib:     baseMaghrib + maghribShift + tzDiff,
+    isha:        baseIsha + maghribShift * 0.7 + tzDiff,
+    taraweehEnd: baseIsha + maghribShift * 0.7 + tzDiff + 90
+  };
+}
+
+// ─── Schedule DOM builder ────────────────────────────────────────────────────
+function makeScheduleItem(timeStr, icon, name, desc, dur, typeClass) {
+  var item = document.createElement('div');
+  item.className = 'schedule-item ' + typeClass;
+
+  var timeEl = document.createElement('span');
+  timeEl.className = 's-time';
+  timeEl.textContent = timeStr;
+
+  var iconEl = document.createElement('span');
+  iconEl.className = 's-icon';
+  iconEl.textContent = icon;
+
+  var content = document.createElement('div');
+  content.className = 's-content';
+
+  var nameEl = document.createElement('div');
+  nameEl.className = 's-name';
+  nameEl.textContent = name;
+  content.appendChild(nameEl);
+
+  if (desc) {
+    var descEl = document.createElement('div');
+    descEl.className = 's-desc';
+    descEl.textContent = desc;
+    content.appendChild(descEl);
+  }
+
+  item.appendChild(timeEl);
+  item.appendChild(iconEl);
+  item.appendChild(content);
+
+  if (dur) {
+    var durEl = document.createElement('span');
+    durEl.className = 's-dur';
+    durEl.textContent = dur;
+    item.appendChild(durEl);
+  }
+
+  return item;
+}
+
+// ─── Schedule generation ──────────────────────────────────────────────────────
+function generateSchedule() {
+  var tz = document.getElementById('tz-select').value;
+  var day = parseInt(document.getElementById('ram-day').value, 10) || 1;
+  var workStart = parseInt(document.getElementById('work-start').value, 10) || 9;
+  var workStartMin = workStart * 60;
+  var t = getPrayerTimes(tz, day);
+
+  document.getElementById('day-label').textContent = day;
+
+  var grid = document.getElementById('schedule-grid');
+  // Clear children safely
+  while (grid.firstChild) { grid.removeChild(grid.firstChild); }
+
+  var items = [
+    [minutesToTime(t.suhoorEnd - 40), '🍽', 'wake for suhoor', 'pre-dawn meal. eat slow carbs + protein + 2 glasses water.', '~40 min', 'meal'],
+    [minutesToTime(t.suhoorEnd), '⏱', 'suhoor ends (imsak)', 'stop eating. make your niyyah for the fast.', '', 'meal'],
+    [minutesToTime(t.fajr), '🌙', 'fajr prayer', '2 rakats sunnah + 2 rakats fard. fajr adhan.', '~15 min', 'prayer'],
+    [minutesToTime(t.fajr + 20), '📖', 'quran + morning adhkar', 'best time for quran. aim 5 pages before sunrise.', '~40 min', 'work'],
+    [minutesToTime(t.sunrise + 15), '😴', 'sleep window (optional)', 'if you need rest. set alarm for 2h before work.', 'until work', 'sleep'],
+    [minutesToTime(workStartMin), '💼', 'morning work block', 'deep work here. brain is sharpest before hunger peaks.', minutesToTime(t.dhuhr - 30) + ' end', 'work'],
+    [minutesToTime(t.dhuhr), '☀️', 'dhuhr prayer', '4 sunnah + 4 fard + 2 sunnah.', '~20 min', 'prayer'],
+    [minutesToTime(t.dhuhr + 25), '🛌', 'qailulah nap (sunnah)', '20-30 min power nap. makes the afternoon manageable.', '20-30 min', 'sleep'],
+    [minutesToTime(t.dhuhr + 60), '💼', 'afternoon work block', 'admin, emails, meetings. avoid deep creative work here.', minutesToTime(t.asr - 15) + ' end', 'work'],
+    [minutesToTime(t.asr), '🌤', 'asr prayer', '4 rakats sunnah + 4 fard.', '~15 min', 'prayer'],
+    [minutesToTime(t.asr + 20), '📖', 'wind down + quran', 'second quran session. prep iftar. dua before maghrib.', minutesToTime(t.maghrib - 15) + ' end', 'work'],
+    [minutesToTime(t.maghrib - 15), '🤲', 'iftar dua window', 'best time for dua is right before the adhan. make it count.', '~15 min', 'prayer'],
+    [minutesToTime(t.maghrib), '🌅', 'maghrib / iftar', 'break fast with dates + water. wait 10 min. then main meal.', '~45 min', 'iftar'],
+    [minutesToTime(t.maghrib + 50), '👨‍👩‍👧', 'family time / rest', 'wind down. light social. step away from screens.', '~40 min', 'sleep'],
+    [minutesToTime(t.isha), '🌠', 'isha + taraweeh', '4 sunnah + 4 fard isha. then taraweeh 8 or 20 rakats. witr to close.', '~90 min', 'prayer'],
+    [minutesToTime(t.taraweehEnd), '🛏', 'sleep', 'set alarm for suhoor with buffer.', 'until suhoor', 'sleep']
+  ];
+
+  for (var i = 0; i < items.length; i++) {
+    var row = items[i];
+    grid.appendChild(makeScheduleItem(row[0], row[1], row[2], row[3], row[4], row[5]));
+  }
+
+  document.getElementById('schedule-output').style.display = 'block';
+  document.getElementById('schedule-notes').style.display = 'block';
+}
+
+// ─── Tab switching ────────────────────────────────────────────────────────────
+window.switchTab = function(name, el) {
+  document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+  el.classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+  if (name === 'tracker') { renderTracker(); }
+};
+
+// ─── Tracker ─────────────────────────────────────────────────────────────────
+window.changeDay = function(delta) {
+  state.currentDay = Math.max(1, Math.min(30, state.currentDay + delta));
+  saveState();
+  renderTracker();
+};
+
+window.togglePrayer = function(name) {
+  var d = getDay(state.currentDay);
+  d.prayers[name] = !d.prayers[name];
+  saveState();
+  renderTracker();
+};
+
+window.adjustGoal = function(key, delta) {
+  var d = getDay(state.currentDay);
+  d[key] = Math.max(0, (d[key] || 0) + delta);
+  saveState();
+  renderTracker();
+};
+
+window.jumpToDay = function(d) {
+  state.currentDay = d;
+  saveState();
+  renderTracker();
+};
+
+function setText(id, val) {
+  var el = document.getElementById(id);
+  if (el) { el.textContent = val; }
+}
+
+function setWidth(id, pct) {
+  var el = document.getElementById(id);
+  if (el) { el.style.width = pct + '%'; }
+}
+
+function renderTracker() {
+  var day = state.currentDay;
+  var d = getDay(day);
+
+  setText('current-day-label', day);
+
+  // Prayer checkboxes
+  ['fajr','dhuhr','asr','maghrib','isha'].forEach(function(p) {
+    var el = document.getElementById('p-' + p);
+    if (el) { el.classList.toggle('done', !!d.prayers[p]); }
+  });
+
+  // Goal values
+  ['quran','duas','sadaqah','taraweeh'].forEach(function(k) {
+    setText('val-' + k, d[k] || 0);
+  });
+
+  // Aggregate stats
+  var totalPrayers = 0, totalQuran = 0, totalSadaqahDays = 0, streak = 0, streakBroken = false;
+  for (var i = 1; i <= 30; i++) {
+    var dd = state.days[i];
+    if (!dd) { if (i < day) streakBroken = true; continue; }
+    var pCount = Object.values(dd.prayers).filter(Boolean).length;
+    totalPrayers += pCount;
+    totalQuran += (dd.quran || 0);
+    if ((dd.sadaqah || 0) > 0) totalSadaqahDays++;
+    if (!streakBroken) {
+      if (pCount >= 5) streak++;
+      else if (i < day) streakBroken = true;
+    }
+  }
+
+  setText('stat-streak', streak);
+  setText('stat-prayers', totalPrayers);
+  setText('stat-pages', totalQuran);
+
+  var pPrayers = Math.min(100, Math.round(totalPrayers / (30 * 5) * 100));
+  var pQuran = Math.min(100, Math.round(totalQuran / 604 * 100));
+  var pSadaqah = Math.min(100, Math.round(totalSadaqahDays / 30 * 100));
+
+  setWidth('bar-prayers', pPrayers);
+  setText('pct-prayers', pPrayers + '%');
+  setWidth('bar-quran', pQuran);
+  setText('pct-quran', pQuran + '%');
+  setWidth('bar-sadaqah', pSadaqah);
+  setText('pct-sadaqah', pSadaqah + '%');
+
+  // Month grid
+  var grid = document.getElementById('month-grid');
+  while (grid.firstChild) { grid.removeChild(grid.firstChild); }
+
+  for (var j = 1; j <= 30; j++) {
+    (function(dayNum) {
+      var cell = document.createElement('div');
+      cell.className = 'day-cell';
+      cell.textContent = dayNum;
+      cell.onclick = function() { window.jumpToDay(dayNum); };
+
+      if (dayNum === day) {
+        cell.classList.add('current');
+      } else {
+        var dd = state.days[dayNum];
+        if (dd) {
+          var pCount = Object.values(dd.prayers).filter(Boolean).length;
+          if (pCount >= 5 && (dd.quran || 0) >= 15) {
+            cell.classList.add('complete');
+          } else if (pCount > 0 || (dd.quran || 0) > 0) {
+            cell.classList.add('partial');
+          }
+        } else if (dayNum > day) {
+          cell.classList.add('future');
+        }
+      }
+      grid.appendChild(cell);
+    })(j);
+  }
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+loadState();
+generateSchedule();
+renderTracker();
+
+// Expose for inline onchange handlers
+window.generateSchedule = generateSchedule;
+
+})();
+</script>
+</body>
+</html>

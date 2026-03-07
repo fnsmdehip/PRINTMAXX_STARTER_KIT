@@ -1,330 +1,385 @@
 #!/usr/bin/env python3
 """
-PRINTMAXX Playwright Site Tester
-Tests all deployed surge.sh sites for status, load time, content, and console errors.
+PRINTMAXX Playwright Site Tester (async/concurrent)
+Tests all deployed surge.sh sites for uptime, content, and errors.
 Outputs: screenshots + test_report_{date}.md + quality_alerts.txt
+Concurrency: 8 parallel tabs — full test in ~2 min vs 20+ min serial.
 """
 
+import asyncio
 import json
-import os
+import re
 import sys
 import time
 from datetime import datetime
 from pathlib import Path
 
-PROJECT_ROOT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeout
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
+PROJECT_ROOT    = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
 SCREENSHOTS_DIR = PROJECT_ROOT / "AUTOMATIONS/agent/swarm/screenshots"
-REPORTS_DIR = PROJECT_ROOT / "AUTOMATIONS/agent/swarm/reports"
+REPORTS_DIR     = PROJECT_ROOT / "AUTOMATIONS/agent/swarm/reports"
 DEPLOYED_ASSETS = PROJECT_ROOT / "AUTOMATIONS/agent/swarm/deployed_assets.json"
+ALERTS_PATH     = PROJECT_ROOT / "AUTOMATIONS/agent/swarm/quality_alerts.txt"
 
 SCREENSHOTS_DIR.mkdir(parents=True, exist_ok=True)
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
-TODAY = datetime.now().strftime("%Y%m%d")
+TODAY       = datetime.now().strftime("%Y%m%d")
 REPORT_PATH = REPORTS_DIR / f"test_report_{TODAY}.md"
-ALERTS_PATH = PROJECT_ROOT / "AUTOMATIONS/agent/swarm/quality_alerts.txt"
 
-# All surge.sh deployments from the live surge list
+CONCURRENCY = 8       # parallel browser tabs
+TIMEOUT_MS  = 15_000  # ms per site
+
+# ── Full site list (deployed_assets.json + new surge deployments) ─────────────
 ALL_SITES = [
-    # Recently deployed (< 1 hour)
-    ("FocusLock App (new)", "https://focuslock-app.surge.sh", "app"),
-    ("ColdMailer App (new)", "https://coldmaxx-app.surge.sh", "app"),
-    ("PrayerLock App (new)", "https://prayerlock-app.surge.sh", "app"),
-    ("Handyman Matters Jacksonville", "https://handyman-matters-jacksonville-jacksonville-fl.surge.sh", "local_biz"),
-    ("Jacksonville Emergency Plumber", "https://jacksonville-emergency-plumber-jacksonville-fl.surge.sh", "local_biz"),
-    ("Professional Plumbing Memphis", "https://professional-plumbing-heating-cooling-memphis-tn.surge.sh", "local_biz"),
-    ("South Tampa Locksmith", "https://south-tampa-locksmith-tampa-fl.surge.sh", "local_biz"),
-    ("PrintMaxx Services", "https://printmaxx-services.surge.sh", "hub"),
-    # Streak apps (2 hours ago)
-    ("Torah Streak", "https://torah-streak-app.surge.sh", "streak"),
-    ("Guru Streak", "https://guru-streak-app.surge.sh", "streak"),
-    ("Quran Streak", "https://quran-streak-app.surge.sh", "streak"),
-    ("Scripture Streak LDS", "https://scripture-streak-lds.surge.sh", "streak"),
-    ("Gita Streak", "https://gita-streak-app.surge.sh", "streak"),
-    ("Sutra Streak", "https://sutra-streak-app.surge.sh", "streak"),
-    ("Reading Streak", "https://reading-streak-app.surge.sh", "streak"),
-    ("Meditation Streak", "https://meditation-streak-app.surge.sh", "streak"),
-    ("Language Streak", "https://language-streak-app.surge.sh", "streak"),
-    ("Journal Streak", "https://journal-streak-app.surge.sh", "streak"),
-    ("Fitness Streak", "https://fitness-streak-app.surge.sh", "streak"),
-    ("Coding Streak", "https://coding-streak-app.surge.sh", "streak"),
-    ("Art Streak", "https://art-streak-app.surge.sh", "streak"),
-    # Local biz OpenClaw pages
-    ("Local Plumbing Miami", "https://local-plumbing-miami-fl.surge.sh", "local_biz"),
-    ("Local Plumbing Miami (zip)", "https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh", "local_biz"),
-    ("Plumbers Miami (zip code)", "https://plumbers-just-enter-your-zip-code-miami-fl.surge.sh", "local_biz"),
-    ("Best Dentist Austin", "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh", "local_biz"),
-    ("Find Plumbers Houston", "https://find-plumbers-in-houston-texas-meetaplumber-com-houston-tx.surge.sh", "local_biz"),
-    ("Plumbers Houston (zip)", "https://plumbers-just-enter-your-zip-code-houston-tx.surge.sh", "local_biz"),
-    ("Local Plumbing Houston", "https://local-plumbing-experts-replace-plumbing-houston-tx.surge.sh", "local_biz"),
-    # Core apps (2 days ago)
-    ("PrintMaxx Apps Hub", "https://printmaxx-apps.surge.sh", "hub"),
-    ("Social Dashboard", "https://social-dashboard-pm.surge.sh", "tool"),
-    ("WalkToUnlock App", "https://walktounlock-app.surge.sh", "app"),
-    ("SleepMaxx App", "https://sleepmaxx-app.surge.sh", "app"),
-    ("Hilal App", "https://hilal-app.surge.sh", "app"),
-    ("MealMaxx App", "https://mealmaxx-app.surge.sh", "app"),
-    ("Content Calendar", "https://contentcalendar.surge.sh", "tool"),
-    ("Website Audit Tool", "https://website-audit-tool.surge.sh", "tool"),
-    ("Invoice Tracker", "https://invoicetracker.surge.sh", "tool"),
-    ("ProspectMaxx", "https://prospectmaxx.surge.sh", "tool"),
-    ("ROI Calc", "https://roicalc.surge.sh", "tool"),
-    ("Page Scorer", "https://pagescorer.surge.sh", "tool"),
-    ("StackMaxx", "https://stackmaxx.surge.sh", "tool"),
-    ("Invoice Forge", "https://invoiceforge.surge.sh", "tool"),
-    ("Pitch Deck", "https://pitchdeck.surge.sh", "tool"),
-    ("MCP Hub", "https://mcphub.surge.sh", "hub"),
-    ("ColdMaxx", "https://coldmaxx.surge.sh", "app"),
-    ("FocusLock", "https://focuslock.surge.sh", "app"),
-    ("Ramadan Tracker", "https://ramadan-tracker.surge.sh", "app"),
-    ("PrayerLock", "https://prayerlock.surge.sh", "app"),
-    ("WalkToUnlock", "https://walktounlock.surge.sh", "app"),
-    ("SleepMaxx", "https://sleepmaxx.surge.sh", "app"),
-    ("MealMaxx", "https://mealmaxx.surge.sh", "app"),
-    ("PrayerLock Web", "https://prayerlock-web.surge.sh", "app"),
-    # Older deployments (2 weeks - 3 weeks)
-    ("PrintMaxx Demos", "https://printmaxx-demos.surge.sh", "hub"),
-    ("ShopMetrics Dashboard", "https://shopmetrics-dashboard.surge.sh", "tool"),
-    ("FlowStack Demo", "https://flowstack-demo.surge.sh", "demo"),
-    ("PrintMaxx Dashboard", "https://printmaxx-dashboard.surge.sh", "hub"),
-    ("SiteScore Analyzer", "https://sitescore-analyzer.surge.sh", "tool"),
-    ("SiteScore App", "https://sitescore-app.surge.sh", "tool"),
-    ("PrintMaxx SEO", "https://printmaxx-seo.surge.sh", "hub"),
-    ("WalkToUnlock Web", "https://walktounlock-web.surge.sh", "app"),
-    ("SleepMaxx Web", "https://sleepmaxx-web.surge.sh", "app"),
-    ("MealMaxx Web", "https://mealmaxx-web.surge.sh", "app"),
-    ("HabitForge Web", "https://habitforge-web.surge.sh", "app"),
-    ("FocusLock Web", "https://focuslock-web.surge.sh", "app"),
-    ("PrintMaxx Command", "https://printmaxx-command.surge.sh", "hub"),
-    ("PrintMaxx Portfolio", "https://printmaxx-portfolio.surge.sh", "hub"),
-    ("PrintMaxx Analyzer", "https://printmaxx-analyzer.surge.sh", "tool"),
-    ("PrintMaxx Local Demos", "https://printmaxx-local-demos.surge.sh", "demo"),
-    ("HabitForge App", "https://habitforge-app.surge.sh", "app"),
-    ("Restaurant Motion", "https://restaurant-motion.surge.sh", "demo"),
-    ("Realtor Motion", "https://realtor-motion.surge.sh", "demo"),
-    ("Dental Motion", "https://dental-motion.surge.sh", "demo"),
-    ("Restaurant Site Demo", "https://restaurant-site-demo.surge.sh", "demo"),
-    ("Hilal Ramadan", "https://hilal-ramadan.surge.sh", "app"),
-    ("Realtor Demo", "https://realtor-demo.surge.sh", "demo"),
-    ("Plumber Demo", "https://plumber-demo.surge.sh", "demo"),
-    ("Legal Demo", "https://legal-demo.surge.sh", "demo"),
-    ("Fitness Demo", "https://fitness-demo.surge.sh", "demo"),
-    ("Dental Demo", "https://dental-demo.surge.sh", "demo"),
+    # Core apps
+    ("PrayerLock App",        "https://prayerlock-app.surge.sh",     "core_apps"),
+    ("FocusLock App",         "https://focuslock-app.surge.sh",      "core_apps"),
+    ("Hilal App",             "https://hilal-app.surge.sh",           "core_apps"),
+    ("MealMaxx App",          "https://mealmaxx-app.surge.sh",        "core_apps"),
+    ("ColdMaxx App",          "https://coldmaxx-app.surge.sh",        "core_apps"),
+    ("SleepMaxx App",         "https://sleepmaxx-app.surge.sh",       "core_apps"),
+    ("WalkToUnlock App",      "https://walktounlock-app.surge.sh",    "core_apps"),
+    ("HabitForge App",        "https://habitforge-app.surge.sh",      "core_apps"),
+    # Streak apps (app pages)
+    ("Art Streak App",        "https://art-streak-app.surge.sh",      "streak_apps"),
+    ("Coding Streak App",     "https://coding-streak-app.surge.sh",   "streak_apps"),
+    ("Fitness Streak App",    "https://fitness-streak-app.surge.sh",  "streak_apps"),
+    ("Journal Streak App",    "https://journal-streak-app.surge.sh",  "streak_apps"),
+    ("Language Streak App",   "https://language-streak-app.surge.sh", "streak_apps"),
+    ("Meditation Streak App", "https://meditation-streak-app.surge.sh","streak_apps"),
+    ("Reading Streak App",    "https://reading-streak-app.surge.sh",  "streak_apps"),
+    ("Sutra Streak App",      "https://sutra-streak-app.surge.sh",    "streak_apps"),
+    ("Gita Streak App",       "https://gita-streak-app.surge.sh",     "streak_apps"),
+    ("Scripture Streak LDS",  "https://scripture-streak-lds.surge.sh","streak_apps"),
+    ("Quran Streak App",      "https://quran-streak-app.surge.sh",    "streak_apps"),
+    ("Guru Streak App",       "https://guru-streak-app.surge.sh",     "streak_apps"),
+    ("Torah Streak App",      "https://torah-streak-app.surge.sh",    "streak_apps"),
+    ("Mormon Streak App",     "https://mormon-streak-app.surge.sh",   "streak_apps"),
+    ("Sikh Streak App",       "https://sikh-streak-app.surge.sh",     "streak_apps"),
+    # Streak landing pages (new today)
+    ("Art Streak Landing",        "https://art-streak.surge.sh",         "streak_landing"),
+    ("Coding Streak Landing",     "https://coding-streak.surge.sh",      "streak_landing"),
+    ("Fitness Streak Landing",    "https://fitness-streak.surge.sh",     "streak_landing"),
+    ("Journal Streak Landing",    "https://journal-streak.surge.sh",     "streak_landing"),
+    ("Language Streak Landing",   "https://language-streak.surge.sh",    "streak_landing"),
+    ("Meditation Streak Landing", "https://meditation-streak.surge.sh",  "streak_landing"),
+    ("Reading Streak Landing",    "https://reading-streak.surge.sh",     "streak_landing"),
+    ("Quran Streak Landing",      "https://quran-streak.surge.sh",       "streak_landing"),
+    ("Gita Streak Landing",       "https://gita-streak.surge.sh",        "streak_landing"),
+    ("Torah Streak Landing",      "https://torah-streak.surge.sh",       "streak_landing"),
+    ("Sikh Streak Landing",       "https://sikh-streak.surge.sh",        "streak_landing"),
+    ("Mormon Streak Landing",     "https://mormon-streak.surge.sh",      "streak_landing"),
+    ("Buddhist Streak Landing",   "https://buddhist-streak.surge.sh",    "streak_landing"),
+    # Web marketing pages
+    ("PrayerLock Web",   "https://prayerlock-web.surge.sh",   "web_marketing"),
+    ("FocusLock Web",    "https://focuslock-web.surge.sh",    "web_marketing"),
+    ("WalkToUnlock Web", "https://walktounlock-web.surge.sh", "web_marketing"),
+    ("SleepMaxx Web",    "https://sleepmaxx-web.surge.sh",    "web_marketing"),
+    ("MealMaxx Web",     "https://mealmaxx-web.surge.sh",     "web_marketing"),
+    ("HabitForge Web",   "https://habitforge-web.surge.sh",   "web_marketing"),
+    ("ColdMaxx",         "https://coldmaxx.surge.sh",         "web_marketing"),
+    ("FocusLock",        "https://focuslock.surge.sh",        "web_marketing"),
+    ("Ramadan Tracker",  "https://ramadan-tracker.surge.sh",  "web_marketing"),
+    ("PrayerLock",       "https://prayerlock.surge.sh",       "web_marketing"),
+    ("WalkToUnlock",     "https://walktounlock.surge.sh",     "web_marketing"),
+    ("SleepMaxx",        "https://sleepmaxx.surge.sh",        "web_marketing"),
+    ("MealMaxx",         "https://mealmaxx.surge.sh",         "web_marketing"),
+    ("Hilal Ramadan",    "https://hilal-ramadan.surge.sh",    "web_marketing"),
+    # New this session
+    ("PrintMaxx Content Calendar", "https://printmaxx-content-calendar.surge.sh", "new_tools"),
+    ("PrintMaxx Website Audit",    "https://printmaxx-website-audit.surge.sh",    "new_tools"),
+    ("PrintMaxx Invoice Tracker",  "https://printmaxx-invoice-tracker.surge.sh",  "new_tools"),
+    ("PrintMaxx Compare",          "https://printmaxx-compare.surge.sh",           "new_tools"),
+    ("PrintMaxx Store",            "https://printmaxx-store.surge.sh",             "new_tools"),
+    ("AI Stack 2026",              "https://ai-stack-2026.surge.sh",               "new_tools"),
+    ("Reliable Fence Nashville",   "https://reliable-fence-nashville.surge.sh",    "new_tools"),
+    ("Accurate Auto Nashville",    "https://accurate-auto-nashville.surge.sh",     "new_tools"),
+    # Hubs
+    ("PrintMaxx Apps Hub",   "https://printmaxx-apps.surge.sh",      "hubs"),
+    ("PrintMaxx Services",   "https://printmaxx-services.surge.sh",  "hubs"),
+    ("PrintMaxx Portfolio",  "https://printmaxx-portfolio.surge.sh", "hubs"),
+    ("PrintMaxx Dashboard",  "https://printmaxx-dashboard.surge.sh", "hubs"),
+    # Tools / SaaS
+    ("InvoiceForge",        "https://invoiceforge.surge.sh",                "tools_saas"),
+    ("ROI Calc",            "https://roicalc.surge.sh",                     "tools_saas"),
+    ("StackMaxx",           "https://stackmaxx.surge.sh",                   "tools_saas"),
+    ("PageScorer",          "https://pagescorer.surge.sh",                  "tools_saas"),
+    ("ProspectMaxx",        "https://prospectmaxx.surge.sh",                "tools_saas"),
+    ("PitchDeck",           "https://pitchdeck.surge.sh",                   "tools_saas"),
+    ("MCP Hub",             "https://mcphub.surge.sh",                      "tools_saas"),
+    ("Website Audit Tool",  "https://website-audit-tool.surge.sh",          "tools_saas"),
+    ("Invoice Tracker",     "https://invoicetracker.surge.sh",              "tools_saas"),
+    ("Content Calendar",    "https://contentcalendar.surge.sh",             "tools_saas"),
+    ("SiteScore Analyzer",  "https://sitescore-analyzer.surge.sh",          "tools_saas"),
+    ("SiteScore App",       "https://sitescore-app.surge.sh",               "tools_saas"),
+    ("Fiverr Services PM",  "https://fiverr-services-pm.surge.sh",          "tools_saas"),
+    ("SiteScore Pro",       "https://sitescore-pro.surge.sh",               "tools_saas"),
+    ("SiteScore Free",      "https://sitescore-free.surge.sh",              "tools_saas"),
+    ("PrintMaxx Flowstack", "https://printmaxx-flowstack.surge.sh",         "tools_saas"),
+    ("PrintMaxx Digital Services","https://printmaxx-digital-services.surge.sh","tools_saas"),
+    ("ShopMetrics Pro",     "https://shopmetrics-pro.surge.sh",             "tools_saas"),
+    ("PrintMaxx SEO",       "https://printmaxx-seo.surge.sh",               "tools_saas"),
+    ("PrintMaxx Analyzer",  "https://printmaxx-analyzer.surge.sh",          "tools_saas"),
+    ("PrintMaxx Command",   "https://printmaxx-command.surge.sh",           "tools_saas"),
+    ("Social Dashboard PM", "https://social-dashboard-pm.surge.sh",         "tools_saas"),
+    ("Cold Email Calc",     "https://cold-email-calc.surge.sh",             "tools_saas"),
+    # Local Biz / OpenClaw
+    ("Plumber Houston MeetAPlumber","https://find-plumbers-in-houston-texas-meetaplumber-com-houston-tx.surge.sh","local_biz"),
+    ("Plumber Houston ZIP",         "https://plumbers-just-enter-your-zip-code-houston-tx.surge.sh",              "local_biz"),
+    ("Plumber Houston Local",       "https://local-plumbing-experts-replace-plumbing-houston-tx.surge.sh",        "local_biz"),
+    ("Plumber Miami ZIP",           "https://plumbers-just-enter-your-zip-code-miami-fl.surge.sh",               "local_biz"),
+    ("Plumber Miami Local",         "https://local-plumbing-miami-fl.surge.sh",                                  "local_biz"),
+    ("Plumber Miami ZIP2",          "https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh","local_biz"),
+    ("Dentist Austin",              "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh","local_biz"),
+    ("Handyman Jacksonville",       "https://handyman-matters-jacksonville-jacksonville-fl.surge.sh",             "local_biz"),
+    ("Emergency Plumber Jacksonville","https://jacksonville-emergency-plumber-jacksonville-fl.surge.sh",          "local_biz"),
+    ("Plumbing HVAC Memphis",       "https://professional-plumbing-heating-cooling-memphis-tn.surge.sh",         "local_biz"),
+    ("Locksmith Tampa",             "https://south-tampa-locksmith-tampa-fl.surge.sh",                           "local_biz"),
+    ("Miami Plumbing ZIP",          "https://miami-plumbing-zip.surge.sh",                                      "local_biz"),
+    ("PrintMaxx Local Demos",       "https://printmaxx-local-demos.surge.sh",                                   "local_biz"),
+    # Demos
+    ("Restaurant Motion",    "https://restaurant-motion.surge.sh",    "demos"),
+    ("Realtor Motion",       "https://realtor-motion.surge.sh",       "demos"),
+    ("Dental Motion",        "https://dental-motion.surge.sh",        "demos"),
+    ("Restaurant Site Demo", "https://restaurant-site-demo.surge.sh", "demos"),
+    ("Realtor Demo",         "https://realtor-demo.surge.sh",         "demos"),
+    ("Plumber Demo",         "https://plumber-demo.surge.sh",         "demos"),
+    ("Legal Demo",           "https://legal-demo.surge.sh",           "demos"),
+    ("Fitness Demo",         "https://fitness-demo.surge.sh",         "demos"),
+    ("Dental Demo",          "https://dental-demo.surge.sh",          "demos"),
+    ("FlowStack Demo",       "https://flowstack-demo.surge.sh",       "demos"),
+    ("ShopMetrics Dashboard","https://shopmetrics-dashboard.surge.sh","demos"),
+    ("PrintMaxx Demos",      "https://printmaxx-demos.surge.sh",     "demos"),
+    ("Mike's HVAC Demo",     "https://mikes-hvac-demo.surge.sh",      "demos"),
+    ("Elite Fitness Demo",   "https://elite-fitness-demo.surge.sh",   "demos"),
+    ("Smith Dentistry Demo", "https://smith-dentistry-demo.surge.sh", "demos"),
+    ("Perfect Lawn Demo",    "https://perfect-lawn-demo.surge.sh",    "demos"),
+    ("Bella's Salon Demo",   "https://bellas-salon-demo.surge.sh",    "demos"),
+    ("Tony's Restaurant Demo","https://tonys-restaurant-demo.surge.sh","demos"),
+    ("Joe's Plumbing Demo",  "https://joes-plumbing-demo.surge.sh",  "demos"),
 ]
 
-def sanitize_filename(url):
-    return url.replace("https://", "").replace("/", "_").replace(".", "_")[:60]
-
-def test_site(page, name, url):
-    result = {
-        "name": name,
-        "url": url,
-        "status": None,
-        "load_time_ms": None,
-        "console_errors": [],
-        "has_content": False,
-        "title": "",
-        "screenshot": None,
-        "grade": "RED",
-        "notes": [],
-    }
-
-    console_errors = []
-    page.on("console", lambda msg: console_errors.append(msg.text) if msg.type == "error" else None)
-
-    try:
-        start = time.time()
-        response = page.goto(url, timeout=15000, wait_until="domcontentloaded")
-        load_time = int((time.time() - start) * 1000)
-
-        result["load_time_ms"] = load_time
-        result["status"] = response.status if response else 0
-
-        # Wait for body content
-        try:
-            page.wait_for_selector("body", timeout=5000)
-        except Exception:
-            pass
-
-        # Get title
-        result["title"] = page.title() or ""
-
-        # Check content
-        body_text = page.inner_text("body") if page.query_selector("body") else ""
-        result["has_content"] = len(body_text.strip()) > 50
-
-        result["console_errors"] = console_errors[:5]  # cap at 5
-
-        # Screenshot
-        safe_name = sanitize_filename(url)
-        screenshot_path = str(SCREENSHOTS_DIR / f"{safe_name}.png")
-        page.screenshot(path=screenshot_path, full_page=False)
-        result["screenshot"] = screenshot_path
-
-        # Grading
-        if result["status"] == 200 and result["has_content"]:
-            if load_time > 5000:
-                result["grade"] = "YELLOW"
-                result["notes"].append(f"Slow load: {load_time}ms")
-            elif console_errors:
-                result["grade"] = "YELLOW"
-                result["notes"].append(f"{len(console_errors)} console error(s)")
-            else:
-                result["grade"] = "GREEN"
-        elif result["status"] == 200 and not result["has_content"]:
-            result["grade"] = "YELLOW"
-            result["notes"].append("200 OK but page appears blank/empty")
-        else:
-            result["grade"] = "RED"
-            result["notes"].append(f"HTTP {result['status']}")
-
-    except Exception as e:
-        result["grade"] = "RED"
-        result["notes"].append(f"Exception: {str(e)[:120]}")
-
-    return result
+# Deduplicate by URL
+_seen: set[str] = set()
+SITES: list[tuple[str, str, str]] = []
+for entry in ALL_SITES:
+    if entry[1] not in _seen:
+        _seen.add(entry[1])
+        SITES.append(entry)
 
 
-def run_tests():
-    from playwright.sync_api import sync_playwright
+def _slug(url: str) -> str:
+    return re.sub(r"[^\w]", "_", url.replace("https://", "").rstrip("/"))[:80]
 
-    results = []
-    total = len(ALL_SITES)
 
-    print(f"\n{'='*60}")
-    print(f"PRINTMAXX PLAYWRIGHT TESTER — {TODAY}")
-    print(f"Testing {total} sites...")
-    print(f"{'='*60}\n")
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
+async def test_site(sem: asyncio.Semaphore, browser, name: str, url: str, category: str) -> dict:
+    async with sem:
+        result: dict = {
+            "name": name, "url": url, "category": category,
+            "status": None, "load_time_ms": None, "title": "",
+            "has_content": False, "console_errors": [],
+            "screenshot": None, "grade": "RED", "notes": [],
+        }
+        ctx  = await browser.new_context(
             viewport={"width": 1280, "height": 800},
-            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+            user_agent=(
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/122.0.0.0 Safari/537.36"
+            )
         )
+        page = await ctx.new_page()
+        errs: list[str] = []
+        page.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
 
-        for i, (name, url, category) in enumerate(ALL_SITES, 1):
-            page = context.new_page()
-            print(f"[{i:02d}/{total}] Testing: {name} ({url})")
-            r = test_site(page, name, url)
-            r["category"] = category
-            results.append(r)
-            grade_icon = {"GREEN": "✓", "YELLOW": "⚠", "RED": "✗"}.get(r["grade"], "?")
-            notes = " | ".join(r["notes"]) if r["notes"] else ""
-            print(f"         {grade_icon} {r['grade']} | {r['status']} | {r['load_time_ms']}ms | {notes}")
-            page.close()
+        try:
+            t0       = time.monotonic()
+            resp     = await page.goto(url, wait_until="domcontentloaded", timeout=TIMEOUT_MS)
+            load_ms  = int((time.monotonic() - t0) * 1000)
 
-        context.close()
-        browser.close()
+            result["status"]       = resp.status if resp else 0
+            result["load_time_ms"] = load_ms
+            result["title"]        = (await page.title()) or ""
+            result["console_errors"] = errs[:5]
 
-    return results
+            body = await page.evaluate("document.body ? document.body.innerText.trim() : ''")
+            result["has_content"] = len(body) > 50
+
+            shot_path = str(SCREENSHOTS_DIR / f"{_slug(url)}.png")
+            await page.screenshot(path=shot_path, full_page=False)
+            result["screenshot"] = shot_path
+
+            ok = result["status"] == 200
+            if ok and result["has_content"]:
+                if load_ms > 5000:
+                    result["grade"] = "YELLOW"
+                    result["notes"].append(f"slow: {load_ms}ms")
+                elif errs:
+                    result["grade"] = "YELLOW"
+                    result["notes"].append(f"{len(errs)} console error(s)")
+                else:
+                    result["grade"] = "GREEN"
+            elif ok:
+                result["grade"] = "YELLOW"
+                result["notes"].append("200 OK but page blank/empty")
+            else:
+                result["notes"].append(f"HTTP {result['status']}")
+
+        except PlaywrightTimeout:
+            result["notes"].append("timeout >15s")
+        except Exception as exc:
+            result["notes"].append(str(exc)[:120])
+        finally:
+            await ctx.close()
+
+        icon = {"GREEN": "✓", "YELLOW": "~", "RED": "✗"}.get(result["grade"], "?")
+        notes_str = " | " + ", ".join(result["notes"]) if result["notes"] else ""
+        print(f"  [{icon}] {result['grade']:6}  {str(result['load_time_ms'] or '?'):>5}ms  {name}{notes_str}")
+        return result
 
 
-def write_report(results):
-    green = [r for r in results if r["grade"] == "GREEN"]
+async def run_all() -> list[dict]:
+    sem = asyncio.Semaphore(CONCURRENCY)
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(headless=True)
+        tasks   = [test_site(sem, browser, name, url, cat) for name, url, cat in SITES]
+        results = await asyncio.gather(*tasks)
+        await browser.close()
+    return list(results)
+
+
+def write_report(results: list[dict]) -> None:
+    green  = [r for r in results if r["grade"] == "GREEN"]
     yellow = [r for r in results if r["grade"] == "YELLOW"]
-    red = [r for r in results if r["grade"] == "RED"]
+    red    = [r for r in results if r["grade"] == "RED"]
 
-    avg_load = sum(r["load_time_ms"] for r in results if r["load_time_ms"]) / max(len(results), 1)
+    avg_load = int(sum(r["load_time_ms"] for r in results if r["load_time_ms"]) /
+                   max(len([r for r in results if r["load_time_ms"]]), 1))
+    pass_pct = f"{len(green)/len(results)*100:.1f}%" if results else "0%"
 
     lines = [
         f"# PRINTMAXX Site Test Report — {datetime.now().strftime('%Y-%m-%d %H:%M')}",
         "",
         "## Summary",
         "",
-        f"| Metric | Value |",
-        f"|--------|-------|",
-        f"| Total Sites | {len(results)} |",
+        "| Metric | Value |",
+        "|--------|-------|",
+        f"| Total sites | {len(results)} |",
         f"| GREEN (passing) | {len(green)} |",
         f"| YELLOW (warnings) | {len(yellow)} |",
         f"| RED (broken) | {len(red)} |",
-        f"| Pass Rate | {len(green)/len(results)*100:.1f}% |",
-        f"| Avg Load Time | {avg_load:.0f}ms |",
+        f"| Pass rate | {pass_pct} |",
+        f"| Avg load time | {avg_load}ms |",
         "",
     ]
 
     if red:
-        lines += ["## 🔴 RED — Broken Sites (Fix Immediately)", ""]
+        lines += ["## RED — Broken Sites (Fix Immediately)", ""]
         for r in red:
-            lines.append(f"### {r['name']}")
-            lines.append(f"- **URL:** {r['url']}")
-            lines.append(f"- **Status:** {r['status']}")
-            lines.append(f"- **Issues:** {' | '.join(r['notes'])}")
-            lines.append("")
+            lines += [
+                f"### {r['name']}",
+                f"- **URL:** {r['url']}",
+                f"- **HTTP:** {r['status']}",
+                f"- **Issues:** {' | '.join(r['notes'])}",
+                "",
+            ]
 
     if yellow:
-        lines += ["## 🟡 YELLOW — Sites with Warnings", ""]
+        lines += ["## YELLOW — Sites with Warnings", ""]
         for r in yellow:
-            lines.append(f"### {r['name']}")
-            lines.append(f"- **URL:** {r['url']}")
-            lines.append(f"- **Status:** {r['status']} | Load: {r['load_time_ms']}ms")
-            lines.append(f"- **Warnings:** {' | '.join(r['notes'])}")
-            lines.append("")
+            lines += [
+                f"### {r['name']}",
+                f"- **URL:** {r['url']}",
+                f"- **HTTP:** {r['status']} | Load: {r['load_time_ms']}ms",
+                f"- **Warnings:** {' | '.join(r['notes'])}",
+                "",
+            ]
 
-    lines += ["## 🟢 GREEN — All Passing Sites", ""]
-    lines.append("| Site | URL | Load Time | Title |")
-    lines.append("|------|-----|-----------|-------|")
+    lines += ["## GREEN — All Passing", "",
+              "| Site | URL | Load ms | Title |",
+              "|------|-----|---------|-------|"]
     for r in green:
-        title = r["title"][:40] if r["title"] else "(no title)"
-        lines.append(f"| {r['name']} | {r['url']} | {r['load_time_ms']}ms | {title} |")
-    lines.append("")
+        lines.append(f"| {r['name']} | {r['url']} | {r['load_time_ms']} | {r['title'][:40]} |")
 
     lines += [
+        "",
         "## Full Results",
         "",
-        "| # | Site | Category | Grade | Status | Load (ms) | Notes |",
-        "|---|------|----------|-------|--------|-----------|-------|",
+        "| # | Site | Category | Grade | HTTP | Load ms | Notes |",
+        "|---|------|----------|-------|------|---------|-------|",
     ]
     for i, r in enumerate(results, 1):
-        grade_badge = {"GREEN": "🟢", "YELLOW": "🟡", "RED": "🔴"}.get(r["grade"], "⚪")
-        notes = "; ".join(r["notes"])[:60] if r["notes"] else ""
-        lines.append(f"| {i} | {r['name']} | {r['category']} | {grade_badge} {r['grade']} | {r['status']} | {r['load_time_ms']} | {notes} |")
+        badge = {"GREEN": "GREEN", "YELLOW": "YELLOW", "RED": "RED"}.get(r["grade"], r["grade"])
+        notes = "; ".join(r["notes"])[:70] if r["notes"] else ""
+        lines.append(
+            f"| {i} | {r['name']} | {r['category']} | {badge} | "
+            f"{r['status']} | {r['load_time_ms']} | {notes} |"
+        )
 
     lines += [
         "",
-        f"*Generated by PRINTMAXX Playwright Tester — {datetime.now().isoformat()}*",
-        f"*Screenshots saved to: AUTOMATIONS/agent/swarm/screenshots/*",
+        f"*Generated: {datetime.now().isoformat()}*",
+        "*Screenshots: AUTOMATIONS/agent/swarm/screenshots/*",
     ]
 
-    report_text = "\n".join(lines)
-    REPORT_PATH.write_text(report_text)
-    print(f"\n✓ Report written: {REPORT_PATH}")
-    return report_text
+    REPORT_PATH.write_text("\n".join(lines))
+    print(f"\n  Report  → {REPORT_PATH}")
 
 
-def write_alerts(results):
+def write_alerts(results: list[dict]) -> None:
     red = [r for r in results if r["grade"] == "RED"]
     if not red:
         return
-
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-    alert_lines = [f"\n[{timestamp}] QUALITY ALERT — {len(red)} RED site(s) detected:"]
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M")
+    lines = [f"\n[{ts}] PLAYWRIGHT ALERT — {len(red)} RED site(s):"]
     for r in red:
-        alert_lines.append(f"  ✗ {r['name']} | {r['url']} | {' | '.join(r['notes'])}")
-
+        lines.append(f"  ✗ {r['name']} | {r['url']} | {' | '.join(r['notes'])}")
     with open(ALERTS_PATH, "a") as f:
-        f.write("\n".join(alert_lines) + "\n")
-    print(f"✓ Alerts written: {ALERTS_PATH}")
+        f.write("\n".join(lines) + "\n")
+    print(f"  Alerts  → {ALERTS_PATH}")
 
 
-def main():
-    results = run_tests()
+def update_deployed_assets(results: list[dict]) -> None:
+    try:
+        data = json.loads(DEPLOYED_ASSETS.read_text())
+        data["last_updated"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+        data["live_test"] = {
+            "tested_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+            "total":  len(results),
+            "green":  len([r for r in results if r["grade"] == "GREEN"]),
+            "yellow": len([r for r in results if r["grade"] == "YELLOW"]),
+            "red":    len([r for r in results if r["grade"] == "RED"]),
+        }
+        DEPLOYED_ASSETS.write_text(json.dumps(data, indent=2))
+        print(f"  Assets  → {DEPLOYED_ASSETS} updated")
+    except Exception as e:
+        print(f"  [warn] deployed_assets.json not updated: {e}")
+
+
+async def main() -> int:
+    print(f"\nPRINTMAXX Playwright Tester — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Testing {len(SITES)} sites | concurrency={CONCURRENCY} | timeout={TIMEOUT_MS}ms\n")
+
+    results = await run_all()
+
+    green  = [r for r in results if r["grade"] == "GREEN"]
+    yellow = [r for r in results if r["grade"] == "YELLOW"]
+    red    = [r for r in results if r["grade"] == "RED"]
+
+    print(f"\n{'─'*60}")
+    print(f"  GREEN:  {len(green)}/{len(results)}")
+    print(f"  YELLOW: {len(yellow)}/{len(results)}")
+    print(f"  RED:    {len(red)}/{len(results)}")
+
     write_report(results)
     write_alerts(results)
+    update_deployed_assets(results)
 
-    green = sum(1 for r in results if r["grade"] == "GREEN")
-    yellow = sum(1 for r in results if r["grade"] == "YELLOW")
-    red = sum(1 for r in results if r["grade"] == "RED")
-
-    print(f"\n{'='*60}")
-    print(f"DONE — {len(results)} sites tested")
-    print(f"  GREEN:  {green}")
-    print(f"  YELLOW: {yellow}")
-    print(f"  RED:    {red}")
-    print(f"{'='*60}")
-
-    return 0 if red == 0 else 1
+    return 0 if not red else 1
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(asyncio.run(main()))

@@ -18,6 +18,7 @@ Templates: landing, dashboard, portfolio, restaurant, saas, agency
 import argparse
 import os
 import re
+import subprocess
 import sys
 from pathlib import Path
 from datetime import datetime
@@ -146,7 +147,7 @@ def cmd_deploy(slug):
 
     domain = f"{slug}-preview.surge.sh"
     print(f"Deploying {slug} to {domain}...")
-    result = os.system(f"cd {sample_dir} && npx surge . {domain}")
+    result = subprocess.run(["npx", "surge", ".", domain], cwd=str(sample_dir)).returncode
 
     if result == 0:
         print(f"\nLIVE: https://{domain}")

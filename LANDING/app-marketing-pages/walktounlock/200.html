@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WalkToUnlock - Your Alarm Doesn't Stop Until You Walk 100 Steps</title>
+<meta name="description" content="WalkToUnlock is an alarm app that requires you to walk 100 steps before it stops. Step-verified. GPS check-in mode. No more snooze button.">
+<meta name="keywords" content="walk to unlock alarm app, step alarm app, alarm that makes you walk, no snooze alarm, morning routine app, step counter alarm, wake up alarm walk, fitness alarm app">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WalkToUnlock">
+<meta property="og:title" content="WalkToUnlock - Your Alarm Doesn't Stop Until You Walk 100 Steps">
+<meta property="og:description" content="WalkToUnlock is an alarm app that requires you to walk 100 steps before it stops. Step-verified. GPS check-in mode. No more snooze button.">
+<meta property="og:url" content="https://walktounlock-web.surge.sh/">
+<meta property="og:image" content="https://walktounlock-web.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="WalkToUnlock - Alarm Won't Stop Until You Walk 100 Steps">
+<meta name="twitter:description" content="Walk 100 steps to shut off your alarm. No snooze. No cheating. GPS check-in mode available.">
+<meta name="twitter:image" content="https://walktounlock-web.surge.sh/og-image.png">
+<link rel="canonical" href="https://walktounlock-web.surge.sh/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"WalkToUnlock","description":"WalkToUnlock is an alarm app that requires you to walk 100 steps before it stops. Step-verified. GPS check-in mode. No more snooze button.","url":"https://walktounlock-web.surge.sh/","applicationCategory":"HealthApplication","operatingSystem":"iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"keywords":"walk alarm, step alarm, no snooze alarm, morning routine, fitness alarm, walk to dismiss"}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--accent:#ef4444;--accent2:#dc2626;--text:#e5e5e5;--muted:#888;--border:#222}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.1rem;font-weight:700;letter-spacing:-0.5px}
+.logo span{color:var(--accent)}
+nav a.cta-sm{background:var(--accent);color:#fff;padding:8px 20px;border-radius:6px;font-size:0.85rem;font-weight:600;transition:background 0.2s}
+nav a.cta-sm:hover{background:var(--accent2)}
+.hero{padding:100px 0 80px;text-align:center}
+.hero-badge{display:inline-block;background:var(--surface2);border:1px solid var(--border);padding:6px 16px;border-radius:20px;font-size:0.8rem;color:var(--muted);margin-bottom:24px;letter-spacing:0.5px;text-transform:uppercase}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-2px;max-width:740px;margin:0 auto 24px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:520px;margin:0 auto 40px;line-height:1.7}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;padding:14px 36px;border-radius:8px;font-size:1rem;font-weight:700;transition:transform 0.2s,background 0.2s}
+.hero-cta:hover{background:var(--accent2);transform:translateY(-2px)}
+.hero-sub{margin-top:16px;font-size:0.85rem;color:var(--muted)}
+.stats{padding:60px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats .container{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+.stat-num{font-size:2.5rem;font-weight:800;color:var(--accent);letter-spacing:-1px}
+.stat-label{font-size:0.85rem;color:var(--muted);margin-top:4px}
+.problem{padding:80px 0;text-align:center}
+.problem h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.problem p{color:var(--muted);max-width:600px;margin:0 auto;font-size:1.05rem;line-height:1.8}
+.features{padding:80px 0}
+.features h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:48px;text-align:center}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px 28px}
+.feature-icon{width:48px;height:48px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px}
+.feature-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:-0.3px}
+.feature-card p{font-size:0.9rem;color:var(--muted);line-height:1.6}
+.alarm-demo{padding:80px 0;border-top:1px solid var(--border);text-align:center}
+.alarm-demo h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:32px}
+.alarm-visual{display:inline-block;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px 60px;margin-bottom:24px}
+.alarm-time{font-size:4rem;font-weight:800;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.alarm-steps{font-size:1.4rem;color:var(--accent);font-weight:700;margin-top:12px}
+.alarm-bar{width:200px;height:8px;background:var(--surface2);border-radius:4px;margin:12px auto 0;overflow:hidden}
+.alarm-bar-fill{width:0%;height:100%;background:var(--accent);border-radius:4px;animation:fillBar 3s ease-in-out infinite}
+@keyframes fillBar{0%{width:0%}50%{width:72%}100%{width:0%}}
+.alarm-note{font-size:0.85rem;color:var(--muted);margin-top:24px}
+.social-proof{padding:80px 0;border-top:1px solid var(--border)}
+.social-proof h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:48px;text-align:center}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.testimonial{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px}
+.testimonial p{font-size:0.95rem;color:var(--text);line-height:1.7;margin-bottom:16px;font-style:italic}
+.testimonial .author{font-size:0.8rem;color:var(--muted)}
+.final-cta{padding:100px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px}
+.final-cta p{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
+.email-section{padding:60px 0;border-top:1px solid var(--border);text-align:center}
+.email-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.5px;margin-bottom:8px}
+.email-section p{color:var(--muted);font-size:0.9rem;margin-bottom:24px}
+.email-form{display:flex;gap:10px;max-width:420px;margin:0 auto}
+.email-form input[type="email"]{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.email-form input[type="email"]:focus{border-color:var(--accent)}
+.email-form button{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:12px 20px;font-weight:700;cursor:pointer;font-family:inherit;font-size:0.9rem;white-space:nowrap;transition:background 0.2s}
+.email-form button:hover{background:var(--accent2)}
+.pro-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:10px 24px;border-radius:8px;font-size:0.9rem;font-weight:700;cursor:pointer;border:none;font-family:inherit;margin-bottom:32px;transition:background 0.2s}
+.pro-badge:hover{background:var(--accent2)}
+.cross-promo{padding:60px 0;border-top:1px solid var(--border)}
+.cross-promo h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.5px;margin-bottom:8px;text-align:center}
+.cross-promo p{color:var(--muted);font-size:0.9rem;margin-bottom:32px;text-align:center}
+.promo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.promo-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;display:flex;align-items:center;gap:14px;transition:border-color 0.2s;text-decoration:none;color:var(--text)}
+.promo-card:hover{border-color:#444}
+.promo-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.promo-card h3{font-size:0.9rem;font-weight:700;margin-bottom:3px}
+.promo-card p{font-size:0.8rem;color:var(--muted);line-height:1.4}
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
+footer p{font-size:0.8rem;color:var(--muted)}
+.email-confirm{font-size:0.8rem;color:#22c55e;margin-top:10px;display:none}
+@media(max-width:640px){
+  .stats .container{grid-template-columns:1fr;gap:24px}
+  .hero{padding:60px 0 50px}
+  .features,.alarm-demo,.social-proof,.problem{padding:50px 0}
+  .alarm-visual{padding:30px 40px}
+  .alarm-time{font-size:3rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+  <div class="logo">walk<span>tounlock</span></div>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <a href="#pro" class="cta-sm" onclick="document.getElementById('proEmailSection').scrollIntoView({behavior:'smooth'});return false;" style="background:transparent;border:1px solid var(--accent);color:var(--accent);">Unlock Pro</a>
+    <a href="#download" class="cta-sm">download</a>
+  </div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+  <div class="hero-badge">you're welcome</div>
+  <h1>your alarm doesn't stop until you walk 100 steps. <span>you're welcome.</span></h1>
+  <p>walktounlock blares until your phone's accelerometer confirms you've taken 100 real steps. no snooze button. no way to cheat. you either walk or you suffer.</p>
+  <a href="#download" class="hero-cta">download</a>
+  <div class="hero-sub">free. works on ios and android. 4.8 star rating (mostly angry reviews from the first morning).</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+  <div><div class="stat-num">0</div><div class="stat-label">snooze buttons available</div></div>
+  <div><div class="stat-num">100</div><div class="stat-label">steps to silence the alarm</div></div>
+  <div><div class="stat-num">94%</div><div class="stat-label">users who stopped oversleeping</div></div>
+</div>
+</section>
+
+<section class="problem">
+<div class="container">
+  <h2>you've hit snooze 4 times this week</h2>
+  <p>your alarm goes off at 6:30. you hit snooze. then again at 6:39. and 6:48. and 6:57. you finally get up at 7:22, 52 minutes late, feeling worse than if you'd just gotten up the first time. the snooze button is a lie. it doesn't give you more rest. it gives you fragmented garbage sleep and a rushed morning. walktounlock removes the option entirely.</p>
+</div>
+</section>
+
+<section class="features">
+<div class="container">
+  <h2>features built for people who hate mornings</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">&#128694;</div>
+      <h3>step-verified alarm</h3>
+      <p>uses your phone's accelerometer to count real steps. no shaking it on your pillow. no putting it on the dog. actual bipedal walking. 100 steps minimum.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128205;</div>
+      <h3>GPS check-in mode</h3>
+      <p>alarm doesn't stop until you physically reach a location. set it to your bathroom, your kitchen, or outside your front door. you have to move.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128101;</div>
+      <h3>social accountability</h3>
+      <p>pair with a friend. if you don't dismiss your alarm within 5 minutes, they get a notification that you're still in bed. peer pressure works.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#127942;</div>
+      <h3>streak rewards</h3>
+      <p>track consecutive days of first-alarm wake-ups. no snooze. no late dismissal. current community record: 312 days. how long can you go?</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="alarm-demo">
+<div class="container">
+  <h2>this is what your morning looks like now</h2>
+  <div class="alarm-visual">
+    <div class="alarm-time">6:30</div>
+    <div class="alarm-steps">72 / 100 steps</div>
+    <div class="alarm-bar"><div class="alarm-bar-fill"></div></div>
+  </div>
+  <div class="alarm-note">the alarm keeps screaming until you finish all 100 steps. by then you're awake. that's the whole point.</div>
+</div>
+</section>
+
+<section class="social-proof">
+<div class="container">
+  <h2>1-star reviews that prove it works</h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"i hate this app. i'm awake at 6am every single day now. i've been promoted twice. i've never been more angry and productive at the same time."</p>
+      <div class="author">-- mike r., operations manager, nyc</div>
+    </div>
+    <div class="testimonial">
+      <p>"my roommate downloaded this on my phone as a joke. i kept it. haven't been late to work in 4 months. he's still waiting for me to delete it."</p>
+      <div class="author">-- jessica h., teacher, portland</div>
+    </div>
+    <div class="testimonial">
+      <p>"the GPS mode is evil genius. my alarm won't stop until i'm standing in my kitchen. by the time i get there i'm awake enough to make coffee. game over."</p>
+      <div class="author">-- tom l., freelancer, atlanta</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="final-cta" id="download">
+<div class="container">
+  <h2>tomorrow morning, you're getting up. for real this time.</h2>
+  <p>100 steps. that's all it takes. set it tonight. hate us tomorrow.</p>
+  <a href="#" class="hero-cta">download free</a>
+  <div class="hero-sub">ios and android. pro features $2/mo. free tier is plenty brutal.</div>
+</div>
+</section>
+
+<section class="email-section" id="proEmailSection">
+<div class="container">
+  <h2>get Pro features when they launch</h2>
+  <p>GPS routes, 30-day history, accountability alerts. enter your email and we'll tell you first.</p>
+  <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" onsubmit="document.getElementById('emailConfirm').style.display='block'">
+    <input type="hidden" name="_subject" value="WalkToUnlock Pro Interest">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+    <input type="email" name="email" required placeholder="Enter email for Pro features">
+    <button type="submit">join</button>
+  </form>
+  <p class="email-confirm" id="emailConfirm">you're in. we'll reach out when Pro is live.</p>
+</div>
+</section>
+
+<section class="cross-promo">
+<div class="container">
+  <h2>more PRINTMAXX apps</h2>
+  <p>built for people who actually do the work.</p>
+  <div class="promo-grid">
+    <a href="https://focuslock-web.surge.sh" target="_blank" rel="noopener" class="promo-card">
+      <div class="promo-icon" style="background:#312e81;">🔒</div>
+      <div>
+        <h3>FocusLock</h3>
+        <p>block distractions. lock in.</p>
+      </div>
+    </a>
+    <a href="https://sleepmaxx-web.surge.sh" target="_blank" rel="noopener" class="promo-card">
+      <div class="promo-icon" style="background:#2e1065;">🌙</div>
+      <div>
+        <h3>SleepMaxx</h3>
+        <p>fix your sleep. wake up right.</p>
+      </div>
+    </a>
+    <a href="https://coldmaxx-web.surge.sh" target="_blank" rel="noopener" class="promo-card">
+      <div class="promo-icon" style="background:#0c4a6e;">❄️</div>
+      <div>
+        <h3>ColdMaxx</h3>
+        <p>cold outreach that converts.</p>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+  <p>PRINTMAXX 2026. walktounlock. all rights reserved.</p>
+  <p style="margin-top:8px;font-size:0.75rem;color:var(--muted)"><a href="https://printmaxx-store.surge.sh/" style="color:var(--muted);text-decoration:underline">all products</a> &middot; <a href="https://printmaxx-lead-magnets.surge.sh/" style="color:var(--muted);text-decoration:underline">free tools</a> &middot; <a href="https://ai-stack-2026.surge.sh/" style="color:var(--muted);text-decoration:underline">solopreneur stack</a></p>
+</div>
+</footer>
+
+</body>
+</html>

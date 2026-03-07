@@ -1,0 +1,44 @@
+{
+  "ecom_total": 3491,
+  "ecom_today": 0,
+  "ecom_high_margin": 462,
+  "freelance_total": 15098,
+  "alpha_total": 16400,
+  "alpha_pending": 66,
+  "trend_total": 625,
+  "app_builds": 24,
+  "apps_deployed": 43,
+  "arb_listings_count": 424,
+  "content_auto_count": 31,
+  "asset_count": 38,
+  "accounts_created": 0,
+  "products_listed": 0,
+  "emails_sent": 0,
+  "emails_ready": 489282,
+  "revenue": 0.0,
+  "report_generated": "2026-03-07 06:30:00",
+  "asset_results": {
+    "generated": 10,
+    "errors": 0,
+    "results": [],
+    "browser_pending": 0,
+    "mode": "hybrid"
+  },
+  "deploy_results": {
+    "deployed": 0,
+    "skipped": "surge_not_installed"
+  },
+  "listing_results": {
+    "generated": 20,
+    "file": "PRODUCTS/ARB_LISTINGS/ARB_LISTINGS_2026-03-07.md"
+  },
+  "content_results": {
+    "tweets_drafted": 0,
+    "content_moved": 0,
+    "alpha_converted": 0,
+    "auto_generated_files": 31,
+    "pending": 122,
+    "ready": 0,
+    "posted": 0
+  }
+}

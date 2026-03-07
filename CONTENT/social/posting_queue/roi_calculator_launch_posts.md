@@ -35,7 +35,7 @@ stack: vanilla HTML/CSS/JS. no framework. no build step. single file. 15KB total
 
 the interesting part is the math engine. it cascades: emails sent → replies → positive replies → meetings → deals → revenue. then subtracts tool costs + time costs to give you net profit and ROI.
 
-also added industry benchmarks at the bottom (cold email CPL vs paid ads CPL — the difference is wild).
+also added industry benchmarks at the bottom (cold email CPL vs paid ads CPL. the difference is wild).
 
 try it: https://cold-email-calc.surge.sh
 

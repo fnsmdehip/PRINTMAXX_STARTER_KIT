@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX - Digital Products That Print</title>
+<meta name="description" content="13 digital products for solopreneurs. Cold email playbooks, AI automation toolkits, growth systems. No fluff. No theory. Tools that print.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="PRINTMAXX Digital Products">
+<meta property="og:description" content="tools that print. no fluff. no theory.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://printmaxx-store.surge.sh/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PRINTMAXX Digital Products">
+<meta name="twitter:description" content="13 tools for solopreneurs. cold email, AI automation, growth systems. no fluff.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#080808;
+  --surface:#111111;
+  --surface2:#181818;
+  --surface3:#1f1f1f;
+  --text:#e8e8e8;
+  --muted:#777;
+  --muted2:#555;
+  --border:#222;
+  --border2:#2a2a2a;
+  --accent:#f0f0f0;
+  --green:#22c55e;
+  --yellow:#eab308;
+  --orange:#f97316;
+  --red:#ef4444;
+}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{color:inherit;text-decoration:none}
+
+/* ---- NAV ---- */
+nav{
+  padding:18px 0;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  background:rgba(8,8,8,0.94);
+  backdrop-filter:blur(12px);
+  z-index:100;
+}
+nav .inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:1rem;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.logo span{
+  color:var(--muted);
+  font-weight:400;
+  letter-spacing:0;
+  margin-left:6px;
+  text-transform:none;
+  font-size:0.8rem;
+}
+.nav-email{
+  font-size:0.78rem;
+  color:var(--muted);
+  border:1px solid var(--border);
+  padding:6px 14px;
+  border-radius:6px;
+  transition:border-color 0.2s,color 0.2s;
+}
+.nav-email:hover{border-color:#444;color:var(--text)}
+
+/* ---- HERO ---- */
+.hero{
+  max-width:1100px;
+  margin:0 auto;
+  padding:90px 24px 60px;
+  text-align:center;
+}
+.hero-kicker{
+  font-size:0.72rem;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:20px;
+}
+.hero h1{
+  font-size:clamp(2.4rem,6.5vw,4.2rem);
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:-2px;
+  margin-bottom:20px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--muted);
+}
+.hero-sub{
+  font-size:1.1rem;
+  color:var(--muted);
+  max-width:480px;
+  margin:0 auto 40px;
+  line-height:1.7;
+}
+.hero-stats{
+  display:flex;
+  justify-content:center;
+  gap:36px;
+  flex-wrap:wrap;
+}
+.stat{
+  text-align:center;
+}
+.stat-num{
+  font-size:1.6rem;
+  font-weight:800;
+  letter-spacing:-1px;
+  display:block;
+}
+.stat-label{
+  font-size:0.72rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/* ---- SECTION LABEL ---- */
+.section{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 24px 100px;
+}
+.section-label{
+  font-size:0.7rem;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--muted2);
+  margin-bottom:20px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+
+/* ---- GRID ---- */
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+@media(min-width:640px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:960px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ---- BUNDLE CARD (full width) ---- */
+.bundle-wrap{
+  margin-bottom:14px;
+}
+.bundle-card{
+  background:var(--surface2);
+  border:1px solid #2d2d2d;
+  border-radius:14px;
+  padding:36px 40px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  transition:border-color 0.2s;
+}
+.bundle-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,#f97316,#eab308,#22c55e);
+}
+.bundle-card:hover{border-color:#3a3a3a}
+.bundle-badge{
+  display:inline-block;
+  background:#f97316;
+  color:#000;
+  font-size:0.65rem;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:3px 10px;
+  border-radius:4px;
+  margin-bottom:12px;
+}
+.bundle-card h2{
+  font-size:1.5rem;
+  font-weight:800;
+  letter-spacing:-0.5px;
+  margin-bottom:8px;
+}
+.bundle-card p{
+  font-size:0.88rem;
+  color:var(--muted);
+  line-height:1.6;
+  max-width:500px;
+}
+.bundle-card p strong{
+  color:var(--text);
+  font-weight:600;
+}
+.bundle-price-block{
+  text-align:right;
+  flex-shrink:0;
+}
+.bundle-original{
+  font-size:0.8rem;
+  color:var(--muted);
+  text-decoration:line-through;
+  margin-bottom:4px;
+}
+.bundle-price{
+  font-size:2.4rem;
+  font-weight:800;
+  letter-spacing:-2px;
+  line-height:1;
+  margin-bottom:16px;
+}
+.bundle-savings{
+  font-size:0.72rem;
+  color:var(--green);
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.btn-bundle{
+  display:inline-block;
+  background:var(--text);
+  color:#000;
+  font-size:0.82rem;
+  font-weight:800;
+  letter-spacing:0.5px;
+  padding:12px 28px;
+  border-radius:8px;
+  transition:background 0.15s,transform 0.15s;
+  white-space:nowrap;
+}
+.btn-bundle:hover{background:#fff;transform:translateY(-1px)}
+.btn-bundle:active{transform:translateY(0)}
+
+@media(max-width:640px){
+  .bundle-card{
+    grid-template-columns:1fr;
+    padding:28px 24px;
+  }
+  .bundle-price-block{text-align:left}
+  .bundle-price{font-size:2rem}
+}
+
+/* ---- PRODUCT CARD ---- */
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:28px 26px;
+  display:flex;
+  flex-direction:column;
+  transition:border-color 0.2s,transform 0.2s;
+  position:relative;
+  overflow:hidden;
+}
+.card:hover{
+  border-color:#333;
+  transform:translateY(-3px);
+}
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:14px;
+}
+.card-price{
+  font-size:1.4rem;
+  font-weight:800;
+  letter-spacing:-1px;
+  flex-shrink:0;
+}
+.card-price.free{color:var(--green)}
+.card-price.tier1{color:var(--text)}
+.card-price.tier2{color:var(--text)}
+.card-price.tier3{color:var(--orange)}
+.card-price.tier4{color:var(--yellow)}
+
+.card-tag{
+  font-size:0.62rem;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--muted2);
+  padding:3px 8px;
+  border:1px solid var(--border2);
+  border-radius:4px;
+  white-space:nowrap;
+}
+.card h3{
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:-0.3px;
+  line-height:1.3;
+  margin-bottom:10px;
+}
+.card-desc{
+  font-size:0.82rem;
+  color:var(--muted);
+  line-height:1.6;
+  flex:1;
+  margin-bottom:22px;
+}
+
+/* Free lead magnet form */
+.lead-form{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:auto;
+}
+.lead-form input[type="email"]{
+  background:var(--surface2);
+  border:1px solid var(--border2);
+  border-radius:7px;
+  color:var(--text);
+  font-size:0.82rem;
+  padding:10px 14px;
+  outline:none;
+  transition:border-color 0.2s;
+  width:100%;
+  font-family:inherit;
+}
+.lead-form input[type="email"]::placeholder{color:var(--muted2)}
+.lead-form input[type="email"]:focus{border-color:#444}
+.lead-form input[type="hidden"]{}
+
+.btn-free{
+  background:var(--green);
+  color:#000;
+  border:none;
+  border-radius:7px;
+  font-size:0.8rem;
+  font-weight:800;
+  letter-spacing:0.5px;
+  padding:11px 0;
+  cursor:pointer;
+  transition:background 0.15s,transform 0.15s;
+  font-family:inherit;
+  width:100%;
+}
+.btn-free:hover{background:#16a34a;transform:translateY(-1px)}
+.btn-free:active{transform:translateY(0)}
+
+/* Paid CTA */
+.btn-get{
+  display:block;
+  background:var(--surface2);
+  color:var(--text);
+  border:1px solid var(--border2);
+  border-radius:7px;
+  font-size:0.8rem;
+  font-weight:700;
+  letter-spacing:0.5px;
+  padding:11px 0;
+  text-align:center;
+  margin-top:auto;
+  transition:background 0.15s,border-color 0.15s,transform 0.15s;
+}
+.btn-get:hover{
+  background:var(--surface3);
+  border-color:#3a3a3a;
+  transform:translateY(-1px);
+}
+.btn-get:active{transform:translateY(0)}
+
+/* Featured accent line */
+.card.featured::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:var(--yellow);
+}
+
+/* ---- FOOTER ---- */
+footer{
+  border-top:1px solid var(--border);
+  padding:60px 0 40px;
+}
+footer .inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 24px;
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  margin-bottom:48px;
+}
+@media(max-width:600px){
+  .footer-top{grid-template-columns:1fr;gap:32px}
+}
+.footer-brand p{
+  font-size:0.82rem;
+  color:var(--muted);
+  margin-top:10px;
+  line-height:1.6;
+  max-width:280px;
+}
+.footer-label{
+  font-size:0.68rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--muted2);
+  margin-bottom:14px;
+}
+.footer-apps{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.footer-app-link{
+  font-size:0.82rem;
+  color:var(--muted);
+  transition:color 0.2s;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.footer-app-link::before{
+  content:'';
+  display:inline-block;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--border2);
+  flex-shrink:0;
+}
+.footer-app-link:hover{color:var(--text)}
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  padding-top:28px;
+  border-top:1px solid var(--border);
+}
+.footer-copy{
+  font-size:0.75rem;
+  color:var(--muted2);
+}
+.footer-contact{
+  font-size:0.75rem;
+  color:var(--muted);
+  transition:color 0.2s;
+}
+.footer-contact:hover{color:var(--text)}
+
+/* ---- HOW IT WORKS ---- */
+.how{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+.how-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.how-step{
+  background:var(--bg);
+  padding:28px 24px;
+}
+.step-num{
+  font-size:0.7rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:var(--muted2);
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.step-title{
+  font-size:0.95rem;
+  font-weight:700;
+  margin-bottom:6px;
+}
+.step-desc{
+  font-size:0.78rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* ---- NOTICE BANNER ---- */
+.notice{
+  background:var(--surface2);
+  border:1px solid var(--border2);
+  border-radius:10px;
+  padding:16px 20px;
+  margin-bottom:32px;
+  font-size:0.8rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+.notice strong{color:var(--text)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="inner">
+    <div class="logo">PRINTMAXX <span>digital products</span></div>
+    <a class="nav-email" href="mailto:printmaxxweb@gmail.com">printmaxxweb@gmail.com</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-kicker">13 products &mdash; tools that actually work</div>
+  <h1>PRINTMAXX<br><em>Digital Products</em></h1>
+  <p class="hero-sub">tools that print. no fluff. no theory. built by a solopreneur for solopreneurs.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">13</span>
+      <span class="stat-label">products</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">$7</span>
+      <span class="stat-label">starts at</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">$197</span>
+      <span class="stat-label">bundle deal</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">0</span>
+      <span class="stat-label">fluff pages</span>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="how">
+  <div class="how-grid">
+    <div class="how-step">
+      <div class="step-num">step 01</div>
+      <div class="step-title">Pick a product</div>
+      <div class="step-desc">Click "Get It" on anything below. Opens your email app pre-filled.</div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">step 02</div>
+      <div class="step-title">Send the email</div>
+      <div class="step-desc">Hit send. Takes 5 seconds. Nothing else to fill out.</div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">step 03</div>
+      <div class="step-title">Get your download</div>
+      <div class="step-desc">We reply with a download link within 24 hours. Usually faster.</div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">step 04</div>
+      <div class="step-title">Start using it</div>
+      <div class="step-desc">All products are PDF or text. Open immediately. No apps needed.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS SECTION -->
+<div class="section">
+  <div class="section-label">all products &mdash; sorted by price</div>
+
+  <!-- NOTICE -->
+  <div class="notice">
+    <strong>How ordering works:</strong> Click any "Get It" button to open a pre-filled email. Send it, and we reply with your download link within 24 hours. Payments are handled via PayPal, Venmo, or Zelle after you email us. Questions? <a href="mailto:printmaxxweb@gmail.com" style="color:var(--text)">printmaxxweb@gmail.com</a>
+  </div>
+
+  <!-- BUNDLE - full width -->
+  <div class="bundle-wrap">
+    <div class="bundle-card">
+      <div class="bundle-info">
+        <div class="bundle-badge">best value</div>
+        <h2>BUNDLE: All 12 Products</h2>
+        <p>Every paid product in the catalog. Cold email, AI automation, content systems, growth playbooks, tweet templates. <strong>Save $180+ vs buying individually.</strong> One email, one payment, everything delivered.</p>
+      </div>
+      <div class="bundle-price-block">
+        <div class="bundle-original">$443 separately</div>
+        <div class="bundle-price">$197</div>
+        <div class="bundle-savings">save $246</div>
+        <a class="btn-bundle" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20All%20Products%20Bundle&body=Hi%2C%20I%27d%20like%20to%20order%20the%20BUNDLE%3A%20All%20Products%20for%20%24197.%0A%0APlease%20send%20payment%20instructions.">Get the Bundle</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div class="grid">
+
+    <!-- FREE - Lead Magnet -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price free">FREE</div>
+        <div class="card-tag">lead magnet</div>
+      </div>
+      <h3>Free AI Prompt Pack</h3>
+      <p class="card-desc">30 copy-paste prompts for cold email, content, and client work. what I use daily. enter your email and get the download link instantly.</p>
+      <form class="lead-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Free AI Prompt Pack Download">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://printmaxx-store.surge.sh/?downloaded=1">
+        <input type="email" name="email" placeholder="your@email.com" required>
+        <button class="btn-free" type="submit">Get Free Pack</button>
+      </form>
+    </div>
+
+    <!-- $7 -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier1">$7</div>
+        <div class="card-tag">guide</div>
+      </div>
+      <h3>Funnel Teardown Guide</h3>
+      <p class="card-desc">I tore down 12 high-converting funnels. what they do at each stage, why it works, and how to copy the structure for your own offer.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Funnel%20Teardown%20Guide%20%247&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Funnel%20Teardown%20Guide%20for%20%247.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $17 - Sleep -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier1">$17</div>
+        <div class="card-tag">starter kit</div>
+      </div>
+      <h3>Sleep YouTube Starter Kit</h3>
+      <p class="card-desc">full setup for a faceless sleep content channel. niche selection, 30 video ideas, script template, thumbnail formula, upload schedule.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Sleep%20YouTube%20Starter%20Kit%20%2417&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Sleep%20YouTube%20Starter%20Kit%20for%20%2417.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $17 - Tech Stack -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier1">$17</div>
+        <div class="card-tag">guide</div>
+      </div>
+      <h3>Solopreneur Tech Stack Guide</h3>
+      <p class="card-desc">exactly what tools I use, what they cost, and what they replace. no affiliate fluff. total stack runs $47/month. every tool earns its spot.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Solopreneur%20Tech%20Stack%20Guide%20%2417&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Solopreneur%20Tech%20Stack%20Guide%20for%20%2417.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $19 -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier1">$19</div>
+        <div class="card-tag">templates</div>
+      </div>
+      <h3>50 Viral Tweet Templates</h3>
+      <p class="card-desc">50 tweet structures that reliably get engagement. sorted by format: hot takes, threads, loops, confessions, contrarians. fill in your niche, post.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%2050%20Viral%20Tweet%20Templates%20%2419&body=Hi%2C%20I%27d%20like%20to%20purchase%2050%20Viral%20Tweet%20Templates%20for%20%2419.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $27 - Cold Email Playbook -->
+    <div class="card featured">
+      <div class="card-top">
+        <div class="card-price tier2">$27</div>
+        <div class="card-tag">playbook</div>
+      </div>
+      <h3>Cold Email Playbook</h3>
+      <p class="card-desc">domain setup, warmup, 10 templates by industry, subject line formulas, follow-up sequences. tested on 14,000+ sends. 42% open rate, 12% reply rate.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Cold%20Email%20Playbook%20%2427&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Cold%20Email%20Playbook%20for%20%2427.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $27 - Twitter -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier2">$27</div>
+        <div class="card-tag">playbook</div>
+      </div>
+      <h3>Twitter/X Growth Playbook</h3>
+      <p class="card-desc">the exact system for growing from 0 to 10K followers in a niche. content cadence, engagement loops, follow/unfollow timing, what to post and when.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Twitter%20X%20Growth%20Playbook%20%2427&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Twitter%2FX%20Growth%20Playbook%20for%20%2427.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $29 -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier2">$29</div>
+        <div class="card-tag">swipe file</div>
+      </div>
+      <h3>73 Cold Email Subject Lines That Get Opens</h3>
+      <p class="card-desc">73 subject lines sorted by industry and goal. each one battle-tested. open rates listed next to each. copy-paste into your sequences today.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%2073%20Cold%20Email%20Subject%20Lines%20%2429&body=Hi%2C%20I%27d%20like%20to%20purchase%2073%20Cold%20Email%20Subject%20Lines%20for%20%2429.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $39 -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier3">$39</div>
+        <div class="card-tag">script pack</div>
+      </div>
+      <h3>Local Biz Cold Email Script Pack</h3>
+      <p class="card-desc">20 scripts for restaurants, gyms, med spas, contractors, and more. each script has 3 follow-ups. reply rates averaged 18% across 6,000 sends.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Local%20Biz%20Cold%20Email%20Script%20Pack%20%2439&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Local%20Biz%20Cold%20Email%20Script%20Pack%20for%20%2439.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $47 - AI Content -->
+    <div class="card featured">
+      <div class="card-top">
+        <div class="card-price tier3">$47</div>
+        <div class="card-tag">blueprint</div>
+      </div>
+      <h3>AI Content Farm Blueprint</h3>
+      <p class="card-desc">how to run a content operation that produces 30 pieces/week with 2 hours of work. exact prompts, tools, scheduling, and monetization angles.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20AI%20Content%20Farm%20Blueprint%20%2447&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20AI%20Content%20Farm%20Blueprint%20for%20%2447.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $47 - Vibe Coding -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier3">$47</div>
+        <div class="card-tag">playbook</div>
+      </div>
+      <h3>Vibe Coding Playbook</h3>
+      <p class="card-desc">how to build SaaS, apps, and tools with AI without knowing how to code. the exact workflow, prompting patterns, and debugging process that actually works.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Vibe%20Coding%20Playbook%20%2447&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Vibe%20Coding%20Playbook%20for%20%2447.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $47 - Automation Toolkit -->
+    <div class="card">
+      <div class="card-top">
+        <div class="card-price tier3">$47</div>
+        <div class="card-tag">toolkit</div>
+      </div>
+      <h3>AI Automation Toolkit</h3>
+      <p class="card-desc">20 automation workflows that replace a 5-person team. each workflow: what it automates, exact tools, step-by-step setup, time saved. total tool cost: $47-150/month.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20AI%20Automation%20Toolkit%20%2447&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20AI%20Automation%20Toolkit%20for%20%2447.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+    <!-- $97 -->
+    <div class="card featured">
+      <div class="card-top">
+        <div class="card-price tier4">$97</div>
+        <div class="card-tag">system</div>
+      </div>
+      <h3>Local Biz Client Machine</h3>
+      <p class="card-desc">end-to-end system for landing local business clients at $1-3K/month. prospecting, outreach, sales scripts, onboarding, delivery, and recurring billing setup.</p>
+      <a class="btn-get" href="mailto:printmaxxweb@gmail.com?subject=ORDER%3A%20Local%20Biz%20Client%20Machine%20%2497&body=Hi%2C%20I%27d%20like%20to%20purchase%20the%20Local%20Biz%20Client%20Machine%20for%20%2497.%0A%0APlease%20send%20payment%20instructions.">Get It &rarr;</a>
+    </div>
+
+  </div><!-- end .grid -->
+</div><!-- end .section -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">PRINTMAXX</div>
+        <p>tools that print. no fluff. no theory. solopreneur-built for solopreneurs.</p>
+      </div>
+      <div class="footer-apps-col">
+        <div class="footer-label">our apps</div>
+        <div class="footer-apps">
+          <a class="footer-app-link" href="https://prayerlock-app.surge.sh" target="_blank" rel="noopener">PrayerLock &mdash; prayer time phone locker</a>
+          <a class="footer-app-link" href="https://coldmaxx-app.surge.sh" target="_blank" rel="noopener">ColdMaxx &mdash; cold outreach tracker</a>
+          <a class="footer-app-link" href="https://focuslock-app.surge.sh" target="_blank" rel="noopener">FocusLock &mdash; distraction blocker</a>
+          <a class="footer-app-link" href="https://sleepmaxx-web.surge.sh" target="_blank" rel="noopener">SleepMaxx &mdash; sleep optimizer</a>
+          <a class="footer-app-link" href="https://walktounlock-web.surge.sh" target="_blank" rel="noopener">WalkToUnlock &mdash; step gate</a>
+          <a class="footer-app-link" href="https://mealmaxx-web.surge.sh" target="_blank" rel="noopener">MealMaxx &mdash; meal prep planner</a>
+          <a class="footer-app-link" href="https://hilal-app.surge.sh" target="_blank" rel="noopener">Hilal &mdash; moon sighting network</a>
+        </div>
+        <div class="footer-label" style="margin-top:12px">free tools</div>
+        <div class="footer-apps">
+          <a class="footer-app-link" href="https://printmaxx-lead-magnets.surge.sh/cold-email-roi-calculator.html" target="_blank" rel="noopener">Cold Email ROI Calculator</a>
+          <a class="footer-app-link" href="https://printmaxx-lead-magnets.surge.sh/ramadan-daily-planner.html" target="_blank" rel="noopener">Ramadan Daily Planner</a>
+          <a class="footer-app-link" href="https://ai-stack-2026.surge.sh/" target="_blank" rel="noopener">AI Solopreneur Stack 2026</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">2026 PRINTMAXX. all rights reserved.</div>
+      <a class="footer-contact" href="mailto:printmaxxweb@gmail.com">printmaxxweb@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Download confirmation toast -->
+<script>
+(function(){
+  if(window.location.search.includes('downloaded=1')){
+    var t=document.createElement('div');
+    t.style.cssText='position:fixed;bottom:24px;right:24px;background:#22c55e;color:#000;padding:14px 20px;border-radius:10px;font-size:0.85rem;font-weight:700;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.4)';
+    t.textContent='Download link sent to your email.';
+    document.body.appendChild(t);
+    setTimeout(function(){t.style.opacity='0';t.style.transition='opacity 0.5s';setTimeout(function(){t.remove()},500)},4000);
+    history.replaceState(null,'',window.location.pathname);
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Research Cycle Content — 2026-03-07 03:00
+# Research Cycle Content - 2026-03-07 03:00
 
 Status: PENDING_REVIEW
 Generated from: Alpha Intelligence research cycle
@@ -6,7 +6,7 @@ Sources: HN, Reddit, IndieHackers, web research
 
 ---
 
-## TWEET 1 — Portfolio Model (printmaxxer)
+## TWEET 1 - Portfolio Model (printmaxxer)
 
 tony dinh makes $45K/mo from 4 tiny apps. not one big bet. a portfolio.
 
@@ -21,7 +21,7 @@ the app factory model works. stop going all-in on one idea.
 
 ---
 
-## TWEET 2 — Virtual Pet Retention Hack (printmaxxer)
+## TWEET 2 - Virtual Pet Retention Hack (printmaxxer)
 
 finch self-care app: 5.0 stars. 652,000 ratings.
 
@@ -33,7 +33,7 @@ retention hack so obvious nobody's copying it. every streak app should have a co
 
 ---
 
-## TWEET 3 — Premium Pricing (printmaxxer)
+## TWEET 3 - Premium Pricing (printmaxxer)
 
 relax melodies charges $99.99/year for a sleep app.
 
@@ -45,7 +45,7 @@ the market will pay premium for sleep. everyone racing to $0 is leaving money on
 
 ---
 
-## TWEET 4 — LLM Acceptance Criteria (drifthour)
+## TWEET 4 - LLM Acceptance Criteria (drifthour)
 
 172 points on HN right now: "LLMs work best when the user defines acceptance criteria first"
 
@@ -57,7 +57,7 @@ your prompts are inputs. your acceptance criteria are the actual instructions. f
 
 ---
 
-## TWEET 5 — McKinsey Solopreneur Data (printmaxxer)
+## TWEET 5 - McKinsey Solopreneur Data (printmaxxer)
 
 McKinsey studied 2,400 one-person businesses.
 
@@ -69,7 +69,7 @@ your competition isn't other founders. it's founders who automated everything 6 
 
 ---
 
-## THREAD — The $45K/mo Portfolio Blueprint (printmaxxer)
+## THREAD - The $45K/mo Portfolio Blueprint (printmaxxer)
 
 **Tweet 1 (Hook):**
 tony dinh went from $500/mo to $45K/mo in 2 years. not with one product. with four.
@@ -128,7 +128,7 @@ you don't need one great idea. you need four decent ones and the discipline to s
 
 ---
 
-## TWEET 6 — Validation-First (printmaxxer)
+## TWEET 6 - Validation-First (printmaxxer)
 
 samuel rondot's first "SaaS" was humans in bangladesh behind a wordpress page pretending to be automation.
 
@@ -140,7 +140,7 @@ build the landing page. sell the thing. THEN build it.
 
 ---
 
-## TWEET 7 — 60-Year-Old Claude Code (drifthour)
+## TWEET 7 - 60-Year-Old Claude Code (drifthour)
 
 386 points on HN right now: "I'm 60 years old. Claude Code has re-ignited a passion"
 

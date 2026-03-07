@@ -16,6 +16,7 @@ Usage:
 
 import os
 import re
+import subprocess
 import sys
 from pathlib import Path
 from datetime import datetime, timedelta
@@ -30,7 +31,7 @@ try:
     from rich.progress import Progress, BarColumn, TextColumn
     from rich import box
 except ImportError:
-    os.system("pip3 install rich")
+    subprocess.run(["pip3", "install", "rich"], check=True)
     from rich.console import Console
     from rich.table import Table
     from rich.panel import Panel

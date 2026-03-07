@@ -74,8 +74,28 @@ nav a.cta-sm:hover{background:var(--accent2)}
 .final-cta{padding:100px 0;text-align:center;border-top:1px solid var(--border)}
 .final-cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px}
 .final-cta p{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
+.email-section{padding:60px 0;border-top:1px solid var(--border);text-align:center}
+.email-section h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.5px;margin-bottom:8px}
+.email-section p{color:var(--muted);font-size:0.9rem;margin-bottom:24px}
+.email-form{display:flex;gap:10px;max-width:420px;margin:0 auto}
+.email-form input[type="email"]{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.email-form input[type="email"]:focus{border-color:var(--accent)}
+.email-form button{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:12px 20px;font-weight:700;cursor:pointer;font-family:inherit;font-size:0.9rem;white-space:nowrap;transition:background 0.2s}
+.email-form button:hover{background:var(--accent2)}
+.pro-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:10px 24px;border-radius:8px;font-size:0.9rem;font-weight:700;cursor:pointer;border:none;font-family:inherit;margin-bottom:32px;transition:background 0.2s}
+.pro-badge:hover{background:var(--accent2)}
+.cross-promo{padding:60px 0;border-top:1px solid var(--border)}
+.cross-promo h2{font-size:1.3rem;font-weight:700;letter-spacing:-0.5px;margin-bottom:8px;text-align:center}
+.cross-promo p{color:var(--muted);font-size:0.9rem;margin-bottom:32px;text-align:center}
+.promo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.promo-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;display:flex;align-items:center;gap:14px;transition:border-color 0.2s;text-decoration:none;color:var(--text)}
+.promo-card:hover{border-color:#444}
+.promo-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.promo-card h3{font-size:0.9rem;font-weight:700;margin-bottom:3px}
+.promo-card p{font-size:0.8rem;color:var(--muted);line-height:1.4}
 footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
 footer p{font-size:0.8rem;color:var(--muted)}
+.email-confirm{font-size:0.8rem;color:#22c55e;margin-top:10px;display:none}
 @media(max-width:640px){
   .stats .container{grid-template-columns:1fr;gap:24px}
   .hero{padding:60px 0 50px}
@@ -90,7 +110,10 @@ footer p{font-size:0.8rem;color:var(--muted)}
 <nav>
 <div class="container">
   <div class="logo">walk<span>tounlock</span></div>
-  <a href="#download" class="cta-sm">download</a>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <a href="#pro" class="cta-sm" onclick="document.getElementById('proEmailSection').scrollIntoView({behavior:'smooth'});return false;" style="background:transparent;border:1px solid var(--accent);color:var(--accent);">Unlock Pro</a>
+    <a href="#download" class="cta-sm">download</a>
+  </div>
 </div>
 </nav>
 
@@ -188,9 +211,55 @@ footer p{font-size:0.8rem;color:var(--muted)}
 </div>
 </section>
 
+<section class="email-section" id="proEmailSection">
+<div class="container">
+  <h2>get Pro features when they launch</h2>
+  <p>GPS routes, 30-day history, accountability alerts. enter your email and we'll tell you first.</p>
+  <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" onsubmit="document.getElementById('emailConfirm').style.display='block'">
+    <input type="hidden" name="_subject" value="WalkToUnlock Pro Interest">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+    <input type="email" name="email" required placeholder="your email for GPS routes + 30-day stats">
+    <button type="submit">join</button>
+  </form>
+  <p class="email-confirm" id="emailConfirm">you're in. we'll reach out when Pro is live.</p>
+</div>
+</section>
+
+<section class="cross-promo">
+<div class="container">
+  <h2>more PRINTMAXX apps</h2>
+  <p>built for people who actually do the work.</p>
+  <div class="promo-grid">
+    <a href="https://focuslock-web.surge.sh" target="_blank" rel="noopener" class="promo-card">
+      <div class="promo-icon" style="background:#312e81;">🔒</div>
+      <div>
+        <h3>FocusLock</h3>
+        <p>block distractions. lock in.</p>
+      </div>
+    </a>
+    <a href="https://sleepmaxx-web.surge.sh" target="_blank" rel="noopener" class="promo-card">
+      <div class="promo-icon" style="background:#2e1065;">🌙</div>
+      <div>
+        <h3>SleepMaxx</h3>
+        <p>fix your sleep. wake up right.</p>
+      </div>
+    </a>
+    <a href="https://coldmaxx-web.surge.sh" target="_blank" rel="noopener" class="promo-card">
+      <div class="promo-icon" style="background:#0c4a6e;">❄️</div>
+      <div>
+        <h3>ColdMaxx</h3>
+        <p>cold outreach that converts.</p>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
 <footer>
 <div class="container">
   <p>PRINTMAXX 2026. walktounlock. all rights reserved.</p>
+  <p style="margin-top:8px;font-size:0.75rem;color:var(--muted)"><a href="https://printmaxx-store.surge.sh/" style="color:var(--muted);text-decoration:underline">all products</a> &middot; <a href="https://printmaxx-lead-magnets.surge.sh/" style="color:var(--muted);text-decoration:underline">free tools</a> &middot; <a href="https://ai-stack-2026.surge.sh/" style="color:var(--muted);text-decoration:underline">solopreneur stack</a></p>
 </div>
 </footer>
 

@@ -96,3 +96,39 @@
 
   STATS: 147 items reviewed | 97.9% pass rate | 2 fixes applied | 0 rejected
   TREND: Pass rate improving (96.3% -> 97.9%). Em dash discipline dramatically better (19 -> 1). Content pipeline is producing clean output. Deployment monitoring is the weak link this cycle.
+
+[2026-03-07 07:36] PLAYWRIGHT ALERT — 12 RED site(s):
+  ✗ FocusLock App | https://focuslock-app.surge.sh | HTTP 504
+  ✗ Journal Streak Landing | https://journal-streak.surge.sh | HTTP 504
+  ✗ Language Streak Landing | https://language-streak.surge.sh | HTTP 504
+  ✗ Meditation Streak Landing | https://meditation-streak.surge.sh | HTTP 504
+  ✗ Quran Streak Landing | https://quran-streak.surge.sh | HTTP 504
+  ✗ Mormon Streak Landing | https://mormon-streak.surge.sh | HTTP 504
+  ✗ FocusLock Web | https://focuslock-web.surge.sh | HTTP 504
+  ✗ PrintMaxx Invoice Tracker | https://printmaxx-invoice-tracker.surge.sh | HTTP 504
+  ✗ PrintMaxx Store | https://printmaxx-store.surge.sh | HTTP 504
+  ✗ Accurate Auto Nashville | https://accurate-auto-nashville.surge.sh | HTTP 504
+  ✗ Cold Email Calc | https://cold-email-calc.surge.sh | HTTP 504
+  ✗ Plumber Miami ZIP2 | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
+
+=== PLAYWRIGHT TESTER SUMMARY 2026-03-07 07:45 ===
+  117 sites tested | 95 GREEN | 10 YELLOW | 12 initial RED → 2 true RED
+
+  TRUE RED (needs human action):
+    ✗ accurate-auto-nashville.surge.sh — 404, wrong surge account (permission denied)
+    ✗ local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh — DNS impossible (65-char label > 63 limit)
+
+  FIXED this session:
+    ✓ quran-streak.surge.sh — redeployed from builds/quran-streak-landing
+
+  TRANSIENT (CDN propagation — all now 200):
+    ~ focuslock-app, journal-streak, meditation-streak, language-streak,
+      mormon-streak, focuslock-web, printmaxx-invoice-tracker,
+      printmaxx-store, cold-email-calc
+
+  YELLOW (warnings, no action needed):
+    ~ WalkToUnlock Web + Restaurant Site Demo — 1 console error each (investigate)
+    ~ 7 slow loaders (5-6s) — surge CDN cold starts, not code bugs
+    ~ hilal-ramadan — false positive (JS-rendered, actually fine)
+
+  Full report: AUTOMATIONS/agent/swarm/reports/test_report_20260307.md

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reliable Fence Company | Nashville's Trusted Fence Contractor</title>
+<meta name="description" content="Nashville's trusted fence company. Wood, aluminum, chain link, vinyl, and farm fencing. Free estimates. Family-owned. Licensed and insured.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2d5016;--accent:#b8860b;--light:#f5f7f2;--dark:#1a2e0a;--text:#333;--radius:12px}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#1a3a08 100%);color:#fff;padding:80px 20px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:var(--light);clip-path:ellipse(55% 100% at 50% 100%)}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:12px;letter-spacing:-0.02em}
+.hero .tagline{font-size:1.15rem;opacity:0.9;margin-bottom:32px;max-width:620px;margin-left:auto;margin-right:auto}
+.hero .badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:6px 16px;border-radius:100px;font-size:0.85rem;font-weight:500;margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:16px 36px;border-radius:var(--radius);font-weight:700;font-size:1.05rem;transition:transform 0.2s,box-shadow 0.2s;border:none;cursor:pointer}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,134,11,0.35)}
+.cta-secondary{background:transparent;border:2px solid #fff;margin-left:12px}
+.cta-secondary:hover{background:rgba(255,255,255,0.1)}
+.trust-bar{background:var(--light);padding:40px 20px;text-align:center}
+.trust-items{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-weight:600;font-size:0.95rem;color:var(--primary)}
+.trust-icon{width:40px;height:40px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.services{padding:80px 20px;background:#fff}
+.section-title{text-align:center;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:12px;color:var(--dark)}
+.section-sub{text-align:center;color:#666;margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.service-card{background:var(--light);border-radius:var(--radius);padding:32px 28px;transition:transform 0.2s,box-shadow 0.2s;border:1px solid #dde5d4}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
+.service-card .icon{font-size:2rem;margin-bottom:16px}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px;color:var(--dark)}
+.service-card p{color:#555;font-size:0.95rem}
+.process{padding:80px 20px;background:var(--light)}
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;max-width:1100px;margin:0 auto}
+.process-step{text-align:center;padding:24px}
+.process-step .step-num{width:56px;height:56px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;margin:0 auto 16px}
+.process-step h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.process-step p{color:#555;font-size:0.9rem}
+.gallery{padding:80px 20px;background:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;max-width:1100px;margin:0 auto}
+.gallery-item{background:linear-gradient(135deg,#e8ede2,#d4dcc8);border-radius:var(--radius);height:220px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-weight:600;font-size:0.95rem;border:2px dashed #b5c4a5}
+.testimonials{padding:80px 20px;background:var(--light)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.testimonial{background:#fff;border-radius:var(--radius);padding:32px;border-left:4px solid var(--accent)}
+.testimonial .stars{color:#f1c40f;font-size:1.2rem;margin-bottom:12px}
+.testimonial p{font-style:italic;color:#444;margin-bottom:16px}
+.testimonial .author{font-weight:700;color:var(--dark);font-size:0.9rem}
+.cta-banner{padding:60px 20px;background:var(--accent);color:#fff;text-align:center}
+.cta-banner h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:12px}
+.cta-banner p{font-size:1.1rem;margin-bottom:24px;opacity:0.9}
+.cta-banner .cta-btn{background:#fff;color:var(--accent)}
+.contact{padding:80px 20px;background:var(--primary);color:#fff}
+.contact .section-title{color:#fff}
+.contact .section-sub{color:rgba(255,255,255,0.8)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1100px;margin:0 auto;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-row{display:flex;gap:16px;align-items:flex-start}
+.contact-row .ci{width:44px;height:44px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.contact-row h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;opacity:0.7;margin-bottom:4px}
+.contact-row p{font-size:1.05rem;font-weight:500}
+.contact-form{background:rgba(255,255,255,0.1);border-radius:var(--radius);padding:32px;backdrop-filter:blur(10px)}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:14px 16px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:16px;outline:none;transition:border 0.2s}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--accent)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,0.5)}
+.contact-form select{appearance:none;color:rgba(255,255,255,0.7)}
+.contact-form select option{background:var(--primary);color:#fff}
+.contact-form .cta-btn{width:100%;text-align:center}
+.form-success{text-align:center;padding:40px;font-size:1.2rem;color:#fff}
+footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:32px 20px;text-align:center;font-size:0.85rem}
+@media(max-width:768px){
+.hero{padding:60px 16px 48px}
+.trust-items{gap:24px}
+.contact-grid{grid-template-columns:1fr}
+.cta-secondary{margin-left:0;margin-top:12px}
+.hero .buttons{display:flex;flex-direction:column;align-items:center;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="badge">Nashville's Trusted Fence Contractor</div>
+<h1>The Right Fence Changes<br>Everything</h1>
+<p class="tagline">Privacy. Security. Curb appeal. We build fences that last in Nashville's weather, on Nashville's budget. Free estimates in 24 hours.</p>
+<div class="buttons">
+<a href="tel:6152883360" class="cta-btn">Call (615) 288-3360</a>
+<a href="#contact" class="cta-btn cta-secondary">Free Estimate</a>
+</div>
+</section>
+
+<div class="trust-bar">
+<div class="trust-items">
+<div class="trust-item"><div class="trust-icon">&#10003;</div> Licensed & Insured</div>
+<div class="trust-item"><div class="trust-icon">&#9733;</div> Family Owned</div>
+<div class="trust-item"><div class="trust-icon">&#128205;</div> Nashville Local</div>
+<div class="trust-item"><div class="trust-icon">&#128176;</div> Free Estimates</div>
+</div>
+</div>
+
+<section class="services">
+<div class="container">
+<h2 class="section-title">Fence Types We Install</h2>
+<p class="section-sub">Every property is different. We match the right fence to your needs and budget.</p>
+<div class="services-grid">
+<div class="service-card"><div class="icon">&#127795;</div><h3>Wood Privacy Fencing</h3><p>Cedar and pressure-treated pine privacy fences. 6-foot standard. Custom heights available. The most popular choice for Nashville backyards.</p></div>
+<div class="service-card"><div class="icon">&#9878;</div><h3>Ornamental Aluminum</h3><p>Elegant aluminum fencing that never rusts. Great for front yards, pools, and property lines. Multiple styles and colors available.</p></div>
+<div class="service-card"><div class="icon">&#128279;</div><h3>Chain Link Fencing</h3><p>Commercial-grade chain link for yards, businesses, and sports areas. The most affordable option per linear foot.</p></div>
+<div class="service-card"><div class="icon">&#9632;</div><h3>Vinyl / PVC Fencing</h3><p>Zero-maintenance vinyl fencing that won't rot, warp, or fade. Lifetime warranty on most products. Set it and forget it.</p></div>
+<div class="service-card"><div class="icon">&#128004;</div><h3>Farm & Ranch Fencing</h3><p>Board fencing, barbed wire, high-tensile wire. We handle rural properties throughout Middle Tennessee.</p></div>
+<div class="service-card"><div class="icon">&#128737;</div><h3>Ornamental Steel</h3><p>Heavy-duty steel fencing for maximum security. Powder-coated finish. Perfect for commercial properties.</p></div>
+</div>
+</div>
+</section>
+
+<section class="process">
+<div class="container">
+<h2 class="section-title">How It Works</h2>
+<p class="section-sub">From call to finished fence in as little as 1 week.</p>
+<div class="process-grid">
+<div class="process-step"><div class="step-num">1</div><h3>Free Estimate</h3><p>Call or fill out our form. We come to your property within 24 hours to measure and quote.</p></div>
+<div class="process-step"><div class="step-num">2</div><h3>Pick Your Fence</h3><p>Choose material, style, and height. We help you pick the best option for your property and budget.</p></div>
+<div class="process-step"><div class="step-num">3</div><h3>We Build It</h3><p>Our crew installs your fence. Most residential jobs done in 1-3 days. We clean up after ourselves.</p></div>
+<div class="process-step"><div class="step-num">4</div><h3>You Love It</h3><p>Walk your property. We don't leave until you're 100% satisfied. That's the Reliable Fence guarantee.</p></div>
+</div>
+</div>
+</section>
+
+<section class="gallery">
+<div class="container">
+<h2 class="section-title">Our Recent Work</h2>
+<p class="section-sub">Some of our favorite builds around Nashville.</p>
+<div class="gallery-grid">
+<div class="gallery-item">Cedar Privacy Fence<br>East Nashville</div>
+<div class="gallery-item">Aluminum Pool Fence<br>Brentwood</div>
+<div class="gallery-item">Board & Batten<br>Franklin</div>
+<div class="gallery-item">Commercial Chain Link<br>Antioch</div>
+</div>
+</div>
+</section>
+
+<section class="testimonials">
+<div class="container">
+<h2 class="section-title">What Nashville Says About Us</h2>
+<div class="testimonial-grid">
+<div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Reliable Fence lives up to their name. Rosie is such an amazing voice on the phone with fantastic ethics. Quality behind the job is an understatement. At the top of my list to refer to anyone needing a fence."</p><div class="author">- Betty Bass Robinson</div></div>
+<div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Got quotes from 4 fence companies. Reliable was the most responsive and gave us the fairest price. Fence looks amazing. Neighbors have already asked who did it."</p><div class="author">- Nashville Homeowner</div></div>
+<div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They replaced 200 feet of old chain link with cedar privacy fence. Crew was professional, fast, and cleaned up everything. Couldn't be happier."</p><div class="author">- Hermitage Customer</div></div>
+</div>
+</div>
+</section>
+
+<section class="cta-banner">
+<h2>Ready for Your New Fence?</h2>
+<p>Free estimates. No pressure. We show up on time.</p>
+<a href="#contact" class="cta-btn">Get Your Free Quote</a>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="section-title">Get Your Free Estimate</h2>
+<p class="section-sub">Tell us about your project. We'll have a quote ready within 24 hours.</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-row"><div class="ci">&#128222;</div><div><h4>Call Us</h4><p>(615) 288-3360</p></div></div>
+<div class="contact-row"><div class="ci">&#128222;</div><div><h4>Alternate</h4><p>(615) 685-4338</p></div></div>
+<div class="contact-row"><div class="ci">&#128205;</div><div><h4>Service Area</h4><p>Nashville, TN & All of Middle Tennessee<br>Davidson, Williamson, Rutherford, Wilson, Sumner Counties</p></div></div>
+<div class="contact-row"><div class="ci">&#128339;</div><div><h4>Hours</h4><p>Mon-Fri: 7:00 AM - 5:00 PM<br>Sat: By Appointment</p></div></div>
+</div>
+<div class="contact-form" id="quoteForm">
+<input type="text" placeholder="Your Name" id="cf-name" required>
+<input type="tel" placeholder="Phone Number" id="cf-phone" required>
+<input type="email" placeholder="Email Address" id="cf-email">
+<select id="cf-type" required>
+<option value="" disabled selected>Fence Type</option>
+<option>Wood Privacy</option>
+<option>Ornamental Aluminum</option>
+<option>Chain Link</option>
+<option>Vinyl / PVC</option>
+<option>Farm / Ranch</option>
+<option>Ornamental Steel</option>
+<option>Not Sure - Need Advice</option>
+</select>
+<input type="text" placeholder="Approx. Linear Feet (if known)" id="cf-feet">
+<textarea rows="4" placeholder="Tell us about your project..." id="cf-msg"></textarea>
+<button type="button" class="cta-btn" id="submitBtn">Get My Free Estimate</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>Sample website created by OpenClaw Web Services</p>
+</footer>
+
+<script>
+document.getElementById('submitBtn').addEventListener('click', function() {
+  var name = document.getElementById('cf-name').value;
+  var phone = document.getElementById('cf-phone').value;
+  if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+  var form = document.getElementById('quoteForm');
+  while (form.firstChild) form.removeChild(form.firstChild);
+  var msg = document.createElement('p');
+  msg.className = 'form-success';
+  msg.textContent = 'Thanks! We will call you back within 24 hours with your free estimate.';
+  form.appendChild(msg);
+});
+</script>
+</body>
+</html>
