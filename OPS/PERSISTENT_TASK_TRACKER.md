@@ -2,6 +2,17 @@
 # Status: ACTIVE — READ THIS EVERY SESSION START, AFTER EVERY COMPACTION
 # Updated: 2026-03-07
 
+### AFFILIATE FUNNELS MONETIZATION CYCLE — 2026-03-07 (autonomy agent)
+- **Status:** DONE
+- **Critical fix:** ai-stack-2026.surge.sh had ALL generic links (zero commissions earned). Added affiliate tracking + UTM params + GoatCounter click events.
+- **Built:** ConvertKit vs Beehiiv comparison funnel page (comparison pages convert 4x higher than listicles)
+- **Deployed:** https://convertkit-vs-beehiiv.surge.sh + redeployed https://ai-stack-2026.surge.sh
+- **Content queued:** 5 tweets + 1 thread + 1 Reddit post -> `CONTENT/social/affiliate_funnel_posts_mar7.md` (PENDING_REVIEW)
+- **Setup guide:** `OPS/AFFILIATE_LINK_SETUP.md` (affiliate program signup links + sed commands to replace placeholder IDs)
+- **Revenue potential:** ConvertKit 30% recurring + Beehiiv 20% recurring = ~$185/mo at 10 referrals each
+- **BLOCKER (human):** Sign up for ConvertKit + Beehiiv affiliate programs, replace placeholder IDs, redeploy. See `OPS/AFFILIATE_LINK_SETUP.md`.
+- **Next cycle:** Build "Cursor vs Claude Code" comparison page, check GoatCounter click data, add ThriveCart page
+
 ### APP FACTORY CYCLE — 2026-03-07 (autonomy agent)
 - **Status:** DONE
 - **Gap found:** "ADHD habit tracker" — rapidly rising keyword, Very Low competition, r/ADHD 1.2M members complain existing apps fail them

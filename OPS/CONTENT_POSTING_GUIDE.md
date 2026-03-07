@@ -1515,3 +1515,22 @@ Then, we compile the top 3 and turned into The TikTok Hall of Fame.
 
 Complete with engagement data and revenue
 
+
+
+---
+
+## Pending Enhancement (ALPHA17479, Score: 26)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/alexcooldev/status/2030300530506145989
+**Added:** 2026-03-07T17:37:12-05:00
+
+Bro 
+@ErnestoSOFTWARE
+ was right.
+
+AI fitness influencers are working insanely well on TikTok and Instagram.
+
+Today I randomly got a recommended video from an AI influencer account only a few videos posted and it’s already very viral.
+
+They’re selling simple products for $22.99.
+

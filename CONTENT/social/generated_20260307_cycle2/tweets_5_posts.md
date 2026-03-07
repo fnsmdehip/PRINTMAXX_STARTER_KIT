@@ -67,7 +67,7 @@ mckinsey says $750B in consumer spending will route through AI discovery. positi
 
 pricing optimization is 2-4x more impactful than customer acquisition.
 
-let that sink in. you're spending 80% of your time getting new users. but the 25-60% revenue increase is sitting in your pricing page.
+read that again. you're spending 80% of your time getting new users. but the 25-60% revenue increase is sitting in your pricing page.
 
 per-seat pricing is dying. credit-based models grew 126% yoy. gartner says 40% of SaaS will be outcome-based by end of 2026.
 

@@ -760,13 +760,24 @@
   ],
   "summary": {
     "total_posted": 0,
-    "total_queued": 67,
+    "total_queued": 95,
     "last_post_date": null,
-    "coverage_through": "2026-03-22",
+    "coverage_through": "2026-03-30",
+    "new_content_added_mar7_cycle6": {
+      "sources": [
+        "competitor_counter_content_cycle4_20260307.md (5 standalones + 1 thread + 1 reply bait + 1 community bait)",
+        "generated_20260307_cycle2/tweets_5_posts.md (5 standalones)",
+        "printmaxxer/HN_AND_TWEETSTORMS_2026-03-07.md (4 threads: Storm 1-4)",
+        "GENERATED_MAR7_RESEARCH_CYCLE.md (6 standalones + 1 thread + 1 reply bait)",
+        "brain_insight_20260307_0/1/2 (3 standalones)"
+      ],
+      "new_slots_created": 28,
+      "coverage_extended_by_days": 8
+    },
     "platforms": {
       "twitter": {
         "posted": 0,
-        "queued": 64
+        "queued": 92
       },
       "linkedin": {
         "posted": 0,
@@ -779,6 +790,19 @@
     }
   },
   "pipeline_bug_notes": "BUFFER_UPLOAD_MAR7.csv has token parsing bug: tool names extracted as single words (e.g. 'No' for no-code, 'mCP' for MCP). Also cross-account template contamination between @repscheme/@selahmoments/@drifthour/@PRINTMAXXER. DO NOT post from BUFFER_UPLOAD_MAR7.csv until fixed. Fix needed in tweet_drafter before next auto-batch.",
+  "pending_review_not_queued": [
+    "alpha_review_mar7_tweet1.txt (PENDING_REVIEW — 7-day free trial 5x conversion)",
+    "alpha_review_mar7_tweet2.txt (PENDING_REVIEW — personalized email 18% CTR)",
+    "alpha_review_mar7_tweet3.txt (PENDING_REVIEW — email channel conversion tracking)",
+    "alpha_review_mar7_tweet4.txt (PENDING_REVIEW — 400 signups $0 revenue positioning)",
+    "alpha_review_mar7_tweet5.txt (PENDING_REVIEW — 3 founders turned down $2.5M VC)",
+    "compounder_mar7_tweet1-7.txt (PENDING_REVIEW — content_compounder cycle output)"
+  ],
+  "hn_submissions_ready": [
+    "Show HN #1: 13 streak-tracking PWAs for niche communities ($0 hosting)",
+    "Show HN #2: SiteScore — audit any website in 10 seconds, free, no signup",
+    "Show HN #3: PrayerLock — 55KB PWA that intercepts your phone before you scroll"
+  ],
   "created": "2026-03-07T00:00:00Z",
-  "last_updated": "2026-03-07T12:00:00Z"
+  "last_updated": "2026-03-07T17:00:00Z"
 }

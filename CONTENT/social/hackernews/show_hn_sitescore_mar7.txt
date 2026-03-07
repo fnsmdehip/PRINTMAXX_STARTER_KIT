@@ -1,0 +1,26 @@
+PLATFORM: Hacker News
+TYPE: Show HN
+STATUS: READY_TO_POST
+SOURCE: HN_AND_TWEETSTORMS_2026-03-07.md | APPROVED cycle 6
+QUALITY_GATE: PASSED
+WORD_COUNT: 185
+NOTE: Post on a different day from the PWA post. Space Show HN submissions 1+ week apart.
+
+---
+
+TITLE:
+Show HN: SiteScore – audit any website in 10 seconds, free, no signup
+
+URL:
+sitescore-app.surge.sh
+
+BODY:
+I built this because I kept paying for Lighthouse-adjacent tools that wrapped the same free APIs I could hit directly.
+
+SiteScore aggregates 4 free public data sources into one score: Google PageSpeed Insights API (performance + CWVs), SSL Labs API (cert grade), SecurityHeaders.io (header audit), and Mozilla Observatory (security score). No backend. The browser calls the APIs directly. No data leaves to my server because there is no server. Static HTML + vanilla JS on surge.sh.
+
+The result is a single 0-100 score with a breakdown by category. Takes 8-12 seconds depending on API response times.
+
+Honest limitations: SSL Labs can queue for 30-60s on uncached domains. SecurityHeaders rate-limits at 10 req/hr per IP. For personal use it's fine. For CI/CD pipelines it breaks fast.
+
+The broader point is API arbitrage: most "premium" site audit tools charge $50-200/mo for something you can build in a weekend by gluing free public APIs together. The value they add is mostly UI.
