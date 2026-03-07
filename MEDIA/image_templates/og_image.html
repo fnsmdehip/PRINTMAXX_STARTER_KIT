@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f23 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 80px;
+    overflow: hidden;
+    position: relative;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+  }
+  .site-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+    max-width: 900px;
+  }
+  .title .highlight {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .description {
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    max-width: 700px;
+    line-height: 1.5;
+  }
+  .brand {
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  .url {
+    position: absolute;
+    bottom: 38px;
+    left: 80px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.25);
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="site-name">PRINTMAXX</div>
+  <div class="title">
+    build. <span class="highlight">print.</span> compound.
+  </div>
+  <div class="description">
+    tools, tactics, and systems for indie hackers who ship
+  </div>
+  <div class="url">printmaxx.dev</div>
+  <div class="brand">PRINTMAXX</div>
+</body>
+</html>

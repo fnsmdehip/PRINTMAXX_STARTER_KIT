@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Email ROI Calculator — how much is your outreach actually worth?</title>
+<meta name="description" content="plug in your numbers. see exactly how much revenue cold email should generate. no fluff, just math.">
+<meta property="og:title" content="Cold Email ROI Calculator">
+<meta property="og:description" content="plug in your numbers. see exactly how much revenue cold email should generate.">
+<meta property="og:type" content="website">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1a;--surface:#111827;--card:#1a2332;--accent:#3b82f6;--accent2:#2563eb;--green:#10b981;--red:#ef4444;--yellow:#f59e0b;--text:#e5e5e5;--muted:#6b7280;--border:#1f2937}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:680px;margin:0 auto;padding:0 20px}
+
+header{padding:32px 0 24px;text-align:center;border-bottom:1px solid var(--border)}
+header h1{font-size:clamp(1.6rem,5vw,2.2rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:8px}
+header p{color:var(--muted);font-size:0.95rem}
+
+.calc-section{padding:32px 0}
+.calc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;margin-bottom:20px}
+.calc-card h2{font-size:1.1rem;font-weight:700;margin-bottom:20px;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;font-size:0.85rem}
+
+.input-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+.input-row:last-child{border-bottom:none}
+.input-label{font-size:0.9rem;color:var(--text);flex:1}
+.input-label small{display:block;color:var(--muted);font-size:0.75rem;margin-top:2px}
+.input-field{width:120px;text-align:right;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 12px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.input-field:focus{border-color:var(--accent)}
+
+.results{background:linear-gradient(135deg,#0f172a,#1e293b);border:1px solid var(--accent);border-radius:14px;padding:28px 24px;margin-top:24px}
+.results h2{font-size:0.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:20px}
+
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.result-row:last-child{border-bottom:none}
+.result-label{font-size:0.9rem;color:var(--muted)}
+.result-value{font-size:1.1rem;font-weight:700;font-variant-numeric:tabular-nums}
+.result-value.positive{color:var(--green)}
+.result-value.negative{color:var(--red)}
+.result-value.neutral{color:var(--yellow)}
+
+.big-number{text-align:center;padding:24px 0;margin:16px 0;border-top:1px solid rgba(255,255,255,0.05)}
+.big-number .label{font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+.big-number .value{font-size:2.5rem;font-weight:800;letter-spacing:-2px}
+.big-number .sub{font-size:0.85rem;color:var(--muted);margin-top:4px}
+
+.verdict{text-align:center;padding:20px;margin-top:16px;border-radius:10px;font-weight:600;font-size:0.95rem}
+.verdict.go{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:var(--green)}
+.verdict.caution{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--yellow)}
+.verdict.stop{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:var(--red)}
+
+.cta-section{padding:40px 0;text-align:center;border-top:1px solid var(--border);margin-top:24px}
+.cta-section h3{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.cta-section p{color:var(--muted);font-size:0.9rem;margin-bottom:20px;max-width:400px;margin-left:auto;margin-right:auto}
+
+.email-form{max-width:360px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.email-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.email-form input[type="email"]:focus{border-color:var(--accent)}
+.email-form button{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:inherit;transition:opacity 0.2s}
+.email-form button:hover{opacity:0.9}
+.email-form .fine{font-size:0.75rem;color:var(--muted);margin-top:4px}
+
+.benchmarks{margin-top:24px}
+.bench-row{display:flex;justify-content:space-between;padding:8px 0;font-size:0.85rem}
+.bench-label{color:var(--muted)}
+.bench-value{font-weight:600}
+
+footer{padding:24px 0;text-align:center;border-top:1px solid var(--border);margin-top:40px}
+footer p{color:var(--muted);font-size:0.8rem}
+
+@media(max-width:480px){
+  .input-row{flex-direction:column;align-items:flex-start;gap:8px}
+  .input-field{width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>cold email ROI calculator</h1>
+    <p>plug in your numbers. see if cold outreach is worth your time.</p>
+  </header>
+
+  <div class="calc-section">
+    <div class="calc-card">
+      <h2>your outreach volume</h2>
+      <div class="input-row">
+        <div class="input-label">emails sent per day<small>most tools send 30-50/day per inbox</small></div>
+        <input type="number" class="input-field" id="emailsPerDay" value="40" min="1" max="500" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">sending days per month<small>weekdays only = 22, 7 days = 30</small></div>
+        <input type="number" class="input-field" id="daysPerMonth" value="22" min="1" max="31" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">number of inboxes<small>more inboxes = more volume</small></div>
+        <input type="number" class="input-field" id="numInboxes" value="3" min="1" max="50" oninput="calculate()">
+      </div>
+    </div>
+
+    <div class="calc-card">
+      <h2>your conversion rates</h2>
+      <div class="input-row">
+        <div class="input-label">reply rate %<small>good: 3-8%. great: 8-15%</small></div>
+        <input type="number" class="input-field" id="replyRate" value="5" min="0.1" max="100" step="0.1" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">positive reply % (of replies)<small>typically 30-60% of replies are positive</small></div>
+        <input type="number" class="input-field" id="positiveRate" value="40" min="1" max="100" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">meeting book rate % (of positive)<small>how many positive replies become calls</small></div>
+        <input type="number" class="input-field" id="meetingRate" value="50" min="1" max="100" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">close rate % (of meetings)<small>service businesses: 20-40%</small></div>
+        <input type="number" class="input-field" id="closeRate" value="25" min="1" max="100" oninput="calculate()">
+      </div>
+    </div>
+
+    <div class="calc-card">
+      <h2>your deal economics</h2>
+      <div class="input-row">
+        <div class="input-label">average deal value ($)<small>one-time or first month revenue</small></div>
+        <input type="number" class="input-field" id="dealValue" value="2500" min="1" max="1000000" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">monthly cost per inbox ($)<small>Google Workspace: $6. Instantly: $30/seat</small></div>
+        <input type="number" class="input-field" id="inboxCost" value="36" min="0" max="500" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">tool cost per month ($)<small>Instantly/Smartlead/Apollo etc</small></div>
+        <input type="number" class="input-field" id="toolCost" value="97" min="0" max="1000" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">hours per week on outreach<small>prospecting + writing + following up</small></div>
+        <input type="number" class="input-field" id="hoursPerWeek" value="5" min="0.5" max="80" step="0.5" oninput="calculate()">
+      </div>
+      <div class="input-row">
+        <div class="input-label">your hourly rate ($)<small>what's your time worth?</small></div>
+        <input type="number" class="input-field" id="hourlyRate" value="50" min="1" max="1000" oninput="calculate()">
+      </div>
+    </div>
+
+    <div class="results" id="results">
+      <h2>your cold email math</h2>
+
+      <div class="result-row">
+        <span class="result-label">emails sent / month</span>
+        <span class="result-value" id="r_totalEmails">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">total replies</span>
+        <span class="result-value" id="r_totalReplies">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">positive replies</span>
+        <span class="result-value" id="r_positiveReplies">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">meetings booked</span>
+        <span class="result-value" id="r_meetings">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">deals closed</span>
+        <span class="result-value positive" id="r_deals">—</span>
+      </div>
+
+      <div class="big-number">
+        <div class="label">projected monthly revenue</div>
+        <div class="value positive" id="r_revenue">—</div>
+        <div class="sub" id="r_revenueSub">—</div>
+      </div>
+
+      <div class="result-row">
+        <span class="result-label">total monthly cost (tools + inboxes)</span>
+        <span class="result-value" id="r_hardCost">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">time cost (your hours x rate)</span>
+        <span class="result-value" id="r_timeCost">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">total cost (tools + time)</span>
+        <span class="result-value" id="r_totalCost">—</span>
+      </div>
+
+      <div class="big-number">
+        <div class="label">net profit / month</div>
+        <div class="value" id="r_profit">—</div>
+        <div class="sub" id="r_profitSub">—</div>
+      </div>
+
+      <div class="result-row">
+        <span class="result-label">ROI</span>
+        <span class="result-value" id="r_roi">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">cost per deal</span>
+        <span class="result-value" id="r_costPerDeal">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">revenue per email sent</span>
+        <span class="result-value" id="r_revPerEmail">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">effective hourly rate</span>
+        <span class="result-value" id="r_effectiveHourly">—</span>
+      </div>
+
+      <div class="verdict" id="r_verdict"></div>
+
+      <div class="benchmarks">
+        <h2 style="font-size:0.8rem;color:var(--muted);margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px">industry benchmarks</h2>
+        <div class="bench-row"><span class="bench-label">avg cold email reply rate</span><span class="bench-value">3-8%</span></div>
+        <div class="bench-row"><span class="bench-label">agency close rate</span><span class="bench-value">20-35%</span></div>
+        <div class="bench-row"><span class="bench-label">SaaS close rate</span><span class="bench-value">10-20%</span></div>
+        <div class="bench-row"><span class="bench-label">cost per lead (paid ads avg)</span><span class="bench-value">$50-200</span></div>
+        <div class="bench-row"><span class="bench-label">cost per lead (cold email avg)</span><span class="bench-value">$5-30</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h3>want the full cold email playbook?</h3>
+    <p>73 proven subject lines, 4-email sequences, deliverability setup, and the exact scripts that book meetings.</p>
+    <form class="email-form" action="https://formsubmit.co/printmaxxstudio@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="[ROI Calculator] Lead Magnet Signup">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://printmaxx-apps.surge.sh">
+      <input type="email" name="email" required placeholder="your@email.com">
+      <button type="submit">send me the playbook</button>
+      <p class="fine">free preview + early access pricing. no spam.</p>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 PRINTMAXX &middot; <a href="https://printmaxx-apps.surge.sh">all tools</a></p>
+  </footer>
+</div>
+
+<script>
+function $(id) { return document.getElementById(id); }
+function val(id) { return parseFloat($(id).value) || 0; }
+function fmt(n) { return n >= 1000 ? '$' + n.toLocaleString('en-US', {maximumFractionDigits: 0}) : '$' + n.toFixed(n < 10 ? 2 : 0); }
+
+function calculate() {
+  var emailsPerDay = val('emailsPerDay');
+  var daysPerMonth = val('daysPerMonth');
+  var numInboxes = val('numInboxes');
+  var replyRate = val('replyRate') / 100;
+  var positiveRate = val('positiveRate') / 100;
+  var meetingRate = val('meetingRate') / 100;
+  var closeRate = val('closeRate') / 100;
+  var dealValue = val('dealValue');
+  var inboxCost = val('inboxCost');
+  var toolCost = val('toolCost');
+  var hoursPerWeek = val('hoursPerWeek');
+  var hourlyRate = val('hourlyRate');
+
+  var totalEmails = emailsPerDay * daysPerMonth * numInboxes;
+  var totalReplies = totalEmails * replyRate;
+  var positiveReplies = totalReplies * positiveRate;
+  var meetings = positiveReplies * meetingRate;
+  var deals = meetings * closeRate;
+  var revenue = deals * dealValue;
+
+  var hardCost = (inboxCost * numInboxes) + toolCost;
+  var timeCost = hoursPerWeek * 4.33 * hourlyRate;
+  var totalCost = hardCost + timeCost;
+  var profit = revenue - totalCost;
+  var roi = totalCost > 0 ? ((revenue - totalCost) / totalCost) * 100 : 0;
+  var costPerDeal = deals > 0 ? totalCost / deals : 0;
+  var revPerEmail = totalEmails > 0 ? revenue / totalEmails : 0;
+  var effectiveHourly = hoursPerWeek > 0 ? profit / (hoursPerWeek * 4.33) : 0;
+
+  $('r_totalEmails').textContent = totalEmails.toLocaleString();
+  $('r_totalReplies').textContent = totalReplies.toFixed(1);
+  $('r_positiveReplies').textContent = positiveReplies.toFixed(1);
+  $('r_meetings').textContent = meetings.toFixed(1);
+  $('r_deals').textContent = deals.toFixed(1);
+
+  $('r_revenue').textContent = fmt(revenue);
+  $('r_revenue').className = 'value ' + (revenue > 0 ? 'positive' : 'neutral');
+  $('r_revenueSub').textContent = fmt(revenue * 12) + '/year at this pace';
+
+  $('r_hardCost').textContent = fmt(hardCost);
+  $('r_timeCost').textContent = fmt(timeCost);
+  $('r_totalCost').textContent = fmt(totalCost);
+
+  $('r_profit').textContent = fmt(Math.abs(profit));
+  $('r_profit').className = 'value ' + (profit > 0 ? 'positive' : 'negative');
+  $('r_profitSub').textContent = profit > 0
+    ? fmt(profit * 12) + '/year. ' + (profit / totalCost * 100).toFixed(0) + '% margin.'
+    : 'you are losing money. fix your rates or volume.';
+
+  $('r_roi').textContent = roi.toFixed(0) + '%';
+  $('r_roi').className = 'result-value ' + (roi > 200 ? 'positive' : roi > 0 ? 'neutral' : 'negative');
+
+  $('r_costPerDeal').textContent = deals > 0 ? fmt(costPerDeal) : 'n/a';
+  $('r_costPerDeal').className = 'result-value ' + (costPerDeal < dealValue * 0.3 ? 'positive' : 'neutral');
+
+  $('r_revPerEmail').textContent = '$' + revPerEmail.toFixed(2);
+  $('r_revPerEmail').className = 'result-value ' + (revPerEmail > 0.5 ? 'positive' : 'neutral');
+
+  $('r_effectiveHourly').textContent = fmt(effectiveHourly) + '/hr';
+  $('r_effectiveHourly').className = 'result-value ' + (effectiveHourly > hourlyRate ? 'positive' : effectiveHourly > 0 ? 'neutral' : 'negative');
+
+  var v = $('r_verdict');
+  if (roi > 500) {
+    v.className = 'verdict go';
+    v.textContent = 'this is a money printer. ' + roi.toFixed(0) + '% ROI. scale immediately.';
+  } else if (roi > 200) {
+    v.className = 'verdict go';
+    v.textContent = 'strong ROI. cold email is working for you. add more inboxes to scale.';
+  } else if (roi > 50) {
+    v.className = 'verdict caution';
+    v.textContent = 'positive but thin margins. optimize reply rate or raise deal value to scale.';
+  } else if (roi > 0) {
+    v.className = 'verdict caution';
+    v.textContent = 'barely breaking even. fix your offer, subject lines, or targeting before scaling.';
+  } else {
+    v.className = 'verdict stop';
+    v.textContent = 'negative ROI. stop scaling. fix fundamentals: offer, list quality, or deal value.';
+  }
+}
+
+calculate();
+</script>
+
+</body>
+</html>

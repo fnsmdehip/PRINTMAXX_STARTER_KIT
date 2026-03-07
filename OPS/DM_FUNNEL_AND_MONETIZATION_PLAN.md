@@ -378,3 +378,27 @@ Let's see what you do have money for:
 > $150/month on drinks every weekend
 > $60/month on a phone
 
+
+
+---
+
+## Pending Enhancement (ALPHA16353, Score: 32)
+
+**Source:** @jasoncfox (high-signal-accounts) | **URL:** https://x.com/jasoncfox/status/2029602451687461107
+**Added:** 2026-03-07T02:16:23-05:00
+
+A friend of mine was making $500k/mo.
+
+He was running a single IG strategy that was crushing. 
+
+Money was pouring in.
+
+The algo changed, the format didn't work as well.
+
+Within weeks:
+Reach dropped. 
+Views tanked. 
+Sales died.
+
+The one thing that made him money stopped working
+

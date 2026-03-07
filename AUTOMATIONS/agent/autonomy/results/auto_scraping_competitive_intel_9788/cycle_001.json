@@ -1,0 +1,419 @@
+{
+  "cycle_start": "2026-03-07T02:50:55.785571",
+  "cycle_end": "2026-03-07T02:53:04.902458",
+  "version_changes_detected": 13,
+  "reddit_signals_found": 20,
+  "new_intel_rows_written": 33,
+  "alerts_generated": 11,
+  "alerts": [
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Glorify",
+      "category": "faith",
+      "change": "2.166.0 -> 2.169.0",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+3) - active development",
+      "action": "Check Glorify App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Opal",
+      "category": "screen_time",
+      "change": "3.149 -> 3.151",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+2) - active development",
+      "action": "Check Opal App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Knowunity",
+      "category": "study",
+      "change": "6.7.1 -> 6.9.1",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+2) - active development",
+      "action": "Check Knowunity App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Quizlet",
+      "category": "study",
+      "change": "10.24 -> 10.26",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+2) - active development",
+      "action": "Check Quizlet App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "FitBod",
+      "category": "fitness",
+      "change": "8.2.0 -> 8.7.0",
+      "threat_level": "UNKNOWN",
+      "note": "Large minor jump (+5) - rapid iteration signal",
+      "action": "Check FitBod App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Forest",
+      "category": "productivity",
+      "change": "5.6.0 -> 5.9.0",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+3) - active development",
+      "action": "Check Forest App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I'm 3 years old and just sold my SaaS for $1.2B (here's what I learned)",
+      "subreddit": "micro_saas",
+      "score": 132,
+      "url": "https://reddit.com/r/micro_saas/comments/1rmh44d/im_3_years_old_and_just_sold_my_saas_for_12b/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "It's so fking hard to juggle a 9-5, family, and build a SaaS",
+      "subreddit": "SideProject",
+      "score": 40,
+      "url": "https://reddit.com/r/SideProject/comments/1rmb5lt/its_so_fking_hard_to_juggle_a_95_family_and_build/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I got 400 signups in 30 days and made $0. Two months later, developers are finally paying. Here's what changed.",
+      "subreddit": "SaaS",
+      "score": 29,
+      "url": "https://reddit.com/r/SaaS/comments/1rmarjk/i_got_400_signups_in_30_days_and_made_0_two/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "BEST IPTV USA in 2026 \u2013 After Testing Multiple IPTV Services, This One Finally Worked",
+      "subreddit": "SaaS",
+      "score": 22,
+      "url": "https://reddit.com/r/SaaS/comments/1rmdqj2/best_iptv_usa_in_2026_after_testing_multiple_iptv/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I added a free trial and my paid conversion went from 2% to 11%. Here's the exact setup.",
+      "subreddit": "SideProject",
+      "score": 16,
+      "url": "https://reddit.com/r/SideProject/comments/1rmed0k/i_added_a_free_trial_and_my_paid_conversion_went/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [
+    {
+      "app": "Hallow",
+      "from_version": "12.18.0",
+      "to_version": "12.19.1",
+      "price": "Free",
+      "rating": 4.89,
+      "ratings_count": 353096,
+      "category": "faith",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Pray.com",
+      "from_version": "2.131.0",
+      "to_version": "2.132.5",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 188460,
+      "category": "faith",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Glorify",
+      "from_version": "2.166.0",
+      "to_version": "2.169.0",
+      "price": "Free",
+      "rating": 4.93,
+      "ratings_count": 90318,
+      "category": "faith",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+3) - active development"
+    },
+    {
+      "app": "Opal",
+      "from_version": "3.149",
+      "to_version": "3.151",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 68087,
+      "category": "screen_time",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+2) - active development"
+    },
+    {
+      "app": "BePresent",
+      "from_version": "0.18.56",
+      "to_version": "0.18.61",
+      "price": "Free",
+      "rating": 4.85,
+      "ratings_count": 38609,
+      "category": "screen_time",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Knowunity",
+      "from_version": "6.7.1",
+      "to_version": "6.9.1",
+      "price": "Free",
+      "rating": 4.63,
+      "ratings_count": 3915,
+      "category": "study",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+2) - active development"
+    },
+    {
+      "app": "Quizlet",
+      "from_version": "10.24",
+      "to_version": "10.26",
+      "price": "Free",
+      "rating": 4.78,
+      "ratings_count": 1053229,
+      "category": "study",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+2) - active development"
+    },
+    {
+      "app": "FitBod",
+      "from_version": "8.2.0",
+      "to_version": "8.7.0",
+      "price": "Free",
+      "rating": 4.82,
+      "ratings_count": 265407,
+      "category": "fitness",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Large minor jump (+5) - rapid iteration signal"
+    },
+    {
+      "app": "Streaks Workout",
+      "from_version": "7.1.3",
+      "to_version": "7.2.1",
+      "price": "$4.99",
+      "rating": 4.76,
+      "ratings_count": 6946,
+      "category": "fitness",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Forest",
+      "from_version": "5.6.0",
+      "to_version": "5.9.0",
+      "price": "Free",
+      "rating": 4.82,
+      "ratings_count": 47465,
+      "category": "productivity",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+3) - active development"
+    },
+    {
+      "app": "Focus Keeper",
+      "from_version": "4.2.9",
+      "to_version": "4.2.11",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 31183,
+      "category": "productivity",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Sleep Cycle",
+      "from_version": "6.26.6",
+      "to_version": "6.26.8",
+      "price": "Free",
+      "rating": 4.66,
+      "ratings_count": 20832,
+      "category": "sleep",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Pillow",
+      "from_version": "6.2.7",
+      "to_version": "6.2.8",
+      "price": "Free",
+      "rating": 4.37,
+      "ratings_count": 95315,
+      "category": "sleep",
+      "scan_date": "2026-03-07T02:41:20.791477",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    }
+  ],
+  "top_reddit_signals": [
+    {
+      "title": "I'm 3 years old and just sold my SaaS for $1.2B (here's what I learned)",
+      "subreddit": "micro_saas",
+      "score": 132,
+      "comments": 33,
+      "url": "https://reddit.com/r/micro_saas/comments/1rmh44d/im_3_years_old_and_just_sold_my_saas_for_12b/",
+      "keyword_hits": 4,
+      "roi": "HIGHEST",
+      "post_id": "1rmh44d"
+    },
+    {
+      "title": "It's so fking hard to juggle a 9-5, family, and build a SaaS",
+      "subreddit": "SideProject",
+      "score": 40,
+      "comments": 66,
+      "url": "https://reddit.com/r/SideProject/comments/1rmb5lt/its_so_fking_hard_to_juggle_a_95_family_and_build/",
+      "keyword_hits": 3,
+      "roi": "HIGHEST",
+      "post_id": "1rmb5lt"
+    },
+    {
+      "title": "I got 400 signups in 30 days and made $0. Two months later, developers are finally paying. Here's what changed.",
+      "subreddit": "SaaS",
+      "score": 29,
+      "comments": 26,
+      "url": "https://reddit.com/r/SaaS/comments/1rmarjk/i_got_400_signups_in_30_days_and_made_0_two/",
+      "keyword_hits": 6,
+      "roi": "HIGHEST",
+      "post_id": "1rmarjk"
+    },
+    {
+      "title": "BEST IPTV USA in 2026 \u2013 After Testing Multiple IPTV Services, This One Finally Worked",
+      "subreddit": "SaaS",
+      "score": 22,
+      "comments": 142,
+      "url": "https://reddit.com/r/SaaS/comments/1rmdqj2/best_iptv_usa_in_2026_after_testing_multiple_iptv/",
+      "keyword_hits": 3,
+      "roi": "HIGHEST",
+      "post_id": "1rmdqj2"
+    },
+    {
+      "title": "I added a free trial and my paid conversion went from 2% to 11%. Here's the exact setup.",
+      "subreddit": "SideProject",
+      "score": 16,
+      "comments": 26,
+      "url": "https://reddit.com/r/SideProject/comments/1rmed0k/i_added_a_free_trial_and_my_paid_conversion_went/",
+      "keyword_hits": 6,
+      "roi": "HIGHEST",
+      "post_id": "1rmed0k"
+    }
+  ],
+  "intel_engine": {
+    "apps_scanned": 140,
+    "scan_date": "2026-03-07",
+    "paid_outliers": [
+      {
+        "app": "Relax Melodies",
+        "category": "sleep",
+        "price": "$99.99",
+        "rating": 4.8,
+        "ratings": 6430,
+        "signal": "ONLY paid sleep app. Premium pricing validated at high rating. Gap: nobody else charges."
+      },
+      {
+        "app": "AnkiMobile",
+        "category": "study",
+        "price": "$24.99",
+        "rating": 4.1,
+        "ratings": 2207,
+        "signal": "Paid study app with 4.1* only \u2014 weak moat. Our study apps could undercut with better UX."
+      },
+      {
+        "app": "Streaks Workout",
+        "category": "fitness",
+        "price": "$4.99",
+        "rating": 4.8,
+        "ratings": 6945,
+        "signal": "Only paid fitness app. Low price, high rating = premium tier viable in fitness."
+      },
+      {
+        "app": "Things 3",
+        "category": "productivity",
+        "price": "$9.99",
+        "rating": 4.8,
+        "ratings": 27384,
+        "signal": "Only paid productivity app with 27K ratings. Market accepts premium for quality."
+      }
+    ],
+    "top_rated_by_category": {
+      "faith": {
+        "app": "Bible",
+        "rating": 4.9,
+        "ratings": 13000170
+      },
+      "faith_niche": {
+        "app": "Hallow",
+        "rating": 4.9,
+        "ratings": 352524
+      },
+      "journal": {
+        "app": "Finch",
+        "rating": 5.0,
+        "ratings": 652496
+      },
+      "sleep": {
+        "app": "BetterSleep",
+        "rating": 4.8,
+        "ratings": 389035
+      },
+      "study": {
+        "app": "Gauth",
+        "rating": 4.8,
+        "ratings": 1334020
+      },
+      "fitness": {
+        "app": "Forest",
+        "rating": 4.8,
+        "ratings": 47450
+      },
+      "productivity": {
+        "app": "Things 3",
+        "rating": 4.8,
+        "ratings": 27384
+      }
+    },
+    "pricing_model": {
+      "free_pct": 97,
+      "paid_count": 4,
+      "insight": "97% Free model dominates. Premium pricing ($4.99-$99.99) viable only for outlier apps with 4.8+ ratings."
+    }
+  },
+  "status": "COMPLETE"
+}

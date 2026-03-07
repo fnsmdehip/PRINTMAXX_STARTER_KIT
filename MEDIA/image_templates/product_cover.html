@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px;
+    height: 720px;
+    background: linear-gradient(160deg, #0a0a0a 0%, #0f0f23 40%, #1a1a2e 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 90px;
+    overflow: hidden;
+    position: relative;
+  }
+  .corner-glow {
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(102,126,234,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .bottom-glow {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(118,75,162,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+    width: fit-content;
+  }
+  .title {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    max-width: 900px;
+  }
+  .title .accent {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .description {
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    max-width: 700px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+  .stats-row {
+    display: flex;
+    gap: 40px;
+    margin-top: auto;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+  }
+  .brand {
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="corner-glow"></div>
+  <div class="bottom-glow"></div>
+  <div class="badge">DIGITAL PRODUCT</div>
+  <div class="title">
+    73 Cold Email <span class="accent">Subject Lines</span>
+  </div>
+  <div class="description">
+    battle-tested subject lines that get 40%+ open rates
+  </div>
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-value">73</div>
+      <div class="stat-label">Subject Lines</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">40%+</div>
+      <div class="stat-label">Open Rate</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">$0</div>
+      <div class="stat-label">Ad Spend</div>
+    </div>
+  </div>
+  <div class="brand">PRINTMAXX</div>
+</body>
+</html>
