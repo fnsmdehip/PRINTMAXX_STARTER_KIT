@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-07T03:30:00",
-  "total_deployments": 85,
+  "last_updated": "2026-03-07T06:00:00",
+  "total_deployments": 90,
   "all_200": true,
   "summary": {
     "apps": 20,
     "streak_landing_pages": 15,
     "local_biz_openclaw": 12,
-    "tools_saas": 13,
+    "tools_saas": 18,
     "demos": 19,
     "hubs": 4,
     "other": 2
@@ -112,6 +112,11 @@
       {"name": "Joe's Plumbing Demo", "url": "https://joes-plumbing-demo.surge.sh", "status": 200, "deployed": "2026-03-07"}
     ],
     "seo_tools": [
+      {"name": "SiteScore Pro (SEO Analyzer)", "url": "https://sitescore-pro.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "SiteScore Free (Perf Analyzer)", "url": "https://sitescore-free.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "PrintMaxx Flowstack (SaaS Demo)", "url": "https://printmaxx-flowstack.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "PrintMaxx Digital Services (50 Cities)", "url": "https://printmaxx-digital-services.surge.sh", "status": 200, "deployed": "2026-03-07"},
+      {"name": "ShopMetrics Pro (Analytics Dashboard)", "url": "https://shopmetrics-pro.surge.sh", "status": 200, "deployed": "2026-03-07"},
       {"name": "PrintMaxx SEO", "url": "https://printmaxx-seo.surge.sh", "status": 200, "deployed": "2026-02-21"},
       {"name": "PrintMaxx Analyzer", "url": "https://printmaxx-analyzer.surge.sh", "status": 200, "deployed": "2026-02-21"},
       {"name": "PrintMaxx Command", "url": "https://printmaxx-command.surge.sh", "status": 200, "deployed": "2026-02-21"},

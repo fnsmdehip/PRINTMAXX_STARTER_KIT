@@ -96,14 +96,22 @@ def load_competitor_changes():
         })
     return changes
 
+def _is_alpha_format(post):
+    """Detect whether a post dict is alpha-processed format vs raw Reddit post."""
+    return 'alpha_id' in post or 'tactic' in post
+
 def load_reddit_top_signals():
-    """Load the latest Reddit scrape and return top HIGHEST/HIGH signals."""
+    """Load the latest Reddit scrape and return top competitive signals.
+
+    Handles two formats:
+    - Raw Reddit post: keys = title, score, selftext, num_comments, subreddit, url, post_id
+    - Alpha-processed: keys = alpha_id, tactic, category, roi_potential, source, source_url, notes
+    """
     if not ALPHA_STAGING_REDDIT:
         return []
     latest_file = ALPHA_STAGING_REDDIT[-1]
     with open(latest_file, errors='replace') as f:
         posts = json.load(f)
-    # Reddit deep scraper stores raw posts - score them for competitive intel
     competitive_keywords = [
         'competitor', 'alternative', 'vs ', 'versus', 'compared to', 'pricing',
         'subscription', 'revenue', 'MRR', 'ARR', 'raised', 'funding', 'launch',
@@ -112,24 +120,60 @@ def load_reddit_top_signals():
     ]
     signals = []
     for post in posts:
-        title = (post.get('title') or '').lower()
-        text = (post.get('selftext') or '').lower()
-        combined = title + ' ' + text
-        keyword_hits = sum(1 for kw in competitive_keywords if kw in combined)
-        score = post.get('score', 0)
-        comments = post.get('num_comments', 0)
-        if keyword_hits >= 1 and (score >= 50 or comments >= 5):
-            roi = 'HIGHEST' if (keyword_hits >= 3 or score >= 500) else 'HIGH' if (keyword_hits >= 2 or score >= 100) else 'MEDIUM'
-            signals.append({
-                'title': post.get('title', '')[:120],
-                'subreddit': post.get('subreddit', ''),
-                'score': score,
-                'comments': comments,
-                'url': f"https://reddit.com{post.get('url','')}" if not post.get('url','').startswith('http') else post.get('url',''),
-                'keyword_hits': keyword_hits,
-                'roi': roi,
-                'post_id': post.get('post_id', ''),
-            })
+        if _is_alpha_format(post):
+            # Alpha-processed format from background_reddit_scraper.py
+            tactic = (post.get('tactic') or '').lower()
+            notes = (post.get('notes') or '').lower()
+            category = (post.get('category') or '').lower()
+            combined = tactic + ' ' + notes + ' ' + category
+            keyword_hits = sum(1 for kw in competitive_keywords if kw in combined)
+            roi_raw = post.get('roi_potential', 'MEDIUM')
+            # Map roi_potential directly; require at least 1 keyword OR HIGH+ roi
+            roi = roi_raw if roi_raw in ('HIGHEST', 'HIGH') else 'MEDIUM'
+            if keyword_hits >= 1 or roi_raw in ('HIGHEST', 'HIGH'):
+                source = post.get('source', '')
+                url = post.get('source_url', '')
+                post_id = post.get('alpha_id', url)
+                # Extract score from notes field ("Score: 60, Comments: 50")
+                score_match = re.search(r'Score:\s*(\d+)', post.get('notes', ''))
+                comments_match = re.search(r'Comments:\s*(\d+)', post.get('notes', ''))
+                score = int(score_match.group(1)) if score_match else 0
+                comments = int(comments_match.group(1)) if comments_match else 0
+                # Recalculate roi based on keywords + score now that we have them
+                if keyword_hits >= 3 or score >= 500 or roi_raw == 'HIGHEST':
+                    roi = 'HIGHEST'
+                elif keyword_hits >= 2 or score >= 100 or roi_raw == 'HIGH':
+                    roi = 'HIGH'
+                signals.append({
+                    'title': post.get('tactic', '')[:120],
+                    'subreddit': source.lstrip('r/').split('/')[0] if source.startswith('r/') else source,
+                    'score': score,
+                    'comments': comments,
+                    'url': url,
+                    'keyword_hits': keyword_hits,
+                    'roi': roi,
+                    'post_id': post_id,
+                })
+        else:
+            # Raw Reddit post format
+            title = (post.get('title') or '').lower()
+            text = (post.get('selftext') or '').lower()
+            combined = title + ' ' + text
+            keyword_hits = sum(1 for kw in competitive_keywords if kw in combined)
+            score = post.get('score', 0)
+            comments = post.get('num_comments', 0)
+            if keyword_hits >= 1 and (score >= 50 or comments >= 5):
+                roi = 'HIGHEST' if (keyword_hits >= 3 or score >= 500) else 'HIGH' if (keyword_hits >= 2 or score >= 100) else 'MEDIUM'
+                signals.append({
+                    'title': post.get('title', '')[:120],
+                    'subreddit': post.get('subreddit', ''),
+                    'score': score,
+                    'comments': comments,
+                    'url': f"https://reddit.com{post.get('url','')}" if not post.get('url','').startswith('http') else post.get('url',''),
+                    'keyword_hits': keyword_hits,
+                    'roi': roi,
+                    'post_id': post.get('post_id', ''),
+                })
     signals.sort(key=lambda x: (x['roi'] == 'HIGHEST', x['score']), reverse=True)
     return signals[:20]
 

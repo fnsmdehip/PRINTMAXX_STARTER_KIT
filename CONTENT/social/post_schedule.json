@@ -19,6 +19,10 @@
     "linkedin": "no_api_keys",
     "reddit": "no_api_keys"
   },
+  "pipeline_flags": {
+    "BUFFER_UPLOAD_MAR7_csv": "DO_NOT_POST — pipeline bug: tool names extracted as single words (\"No\", \"mCP\"), cross-account template contamination. Fix tweet_drafter token parsing before next auto-batch.",
+    "CONTENT_QUEUE_csv": "PENDING_REVIEW — source pool, not approved for posting"
+  },
   "accounts": {
     "@PRINTMAXXER": {
       "platform": "twitter",
@@ -43,9 +47,23 @@
         {"date": "2026-03-11", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_0730.txt"},
         {"date": "2026-03-11", "time": "11:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1100.txt"},
         {"date": "2026-03-11", "time": "14:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1430.txt"},
-        {"date": "2026-03-11", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1800.txt"}
+        {"date": "2026-03-11", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar11_1800.txt"},
+        {"date": "2026-03-12", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_0730.txt"},
+        {"date": "2026-03-12", "time": "11:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_1100.txt"},
+        {"date": "2026-03-12", "time": "14:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_1430.txt"},
+        {"date": "2026-03-12", "time": "18:00", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar12_1800.txt"},
+        {"date": "2026-03-13", "time": "07:30", "status": "queued", "queue_file": "twitter_PRINTMAXXER_mar13_0730.txt"}
+      ]
+    },
+    "@PRINTMAXXER_linkedin": {
+      "platform": "linkedin",
+      "approved_source": "generated_20260307_cycle2/linkedin_adaptations.md",
+      "schedule": [
+        {"date": "2026-03-12", "time": "09:00", "status": "queued", "queue_file": "linkedin_PRINTMAXXER_mar12_0900.txt"},
+        {"date": "2026-03-12", "time": "14:00", "status": "queued", "queue_file": "linkedin_PRINTMAXXER_mar12_1400.txt"},
+        {"date": "2026-03-13", "time": "09:00", "status": "queued", "queue_file": "linkedin_PRINTMAXXER_mar13_0900.txt"}
       ]
     }
   },
-  "last_updated": "2026-03-07T00:00:00Z"
+  "last_updated": "2026-03-07T05:00:00Z"
 }

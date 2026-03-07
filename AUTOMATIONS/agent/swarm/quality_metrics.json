@@ -1,67 +1,85 @@
 {
-  "last_cycle": "2026-03-07T09:15:00Z",
+  "last_cycle": "2026-03-07T12:45:00Z",
   "cycle_summary": {
-    "total_items_reviewed": 82,
-    "passed": 73,
-    "fixed_and_approved": 6,
-    "blocked": 1,
-    "flagged_for_review": 2,
-    "pass_rate": "96.3%"
+    "total_items_reviewed": 147,
+    "passed": 142,
+    "fixed_and_approved": 2,
+    "blocked": 2,
+    "flagged_for_review": 1,
+    "pass_rate": "97.9%"
   },
   "content_review": {
-    "files_scanned": 20,
-    "tweets_reviewed": 49,
-    "threads_reviewed": 4,
-    "reddit_posts_reviewed": 8,
-    "linkedin_posts_reviewed": 5,
-    "outreach_emails_reviewed": 10,
-    "em_dash_violations": 19,
-    "em_dashes_fixed": 19,
+    "files_scanned": 32,
+    "tweets_reviewed": 68,
+    "threads_reviewed": 6,
+    "reddit_posts_reviewed": 2,
+    "hn_posts_reviewed": 1,
+    "linkedin_posts_reviewed": 8,
+    "newsletter_reviewed": 1,
+    "outreach_emails_reviewed": 20,
+    "outreach_phone_scripts_reviewed": 3,
+    "em_dash_violations": 1,
+    "em_dashes_fixed": 1,
+    "em_dash_location": "trend_synthesis_posts_20260307.md line 145",
     "banned_word_violations": 1,
     "banned_words_fixed": 1,
-    "false_quality_gate_pass": 1,
-    "note": "reddit_posts_20260307.md claimed [x] Zero em dashes but had 18 em dashes in body text"
+    "banned_word_detail": "compound_hn_reddit_competitive_mar7.txt line 49: 'landscape' -> 'the rules changed'",
+    "template_placeholders_found": 1,
+    "template_placeholder_detail": "leadmachine_batch_20260307.md draft #7 AccuTemp: '[insert specific finding after audit]' still present"
   },
   "deployment_review": {
-    "sites_checked": 5,
-    "sites_live": 4,
+    "sites_checked": 7,
+    "sites_live": 6,
     "sites_down": 1,
-    "down_sites": ["scripture-streak.surge.sh (HTTP 404)"],
-    "meta_tags_verified": ["coldmaxx-app.surge.sh", "prayerlock-app.surge.sh"],
-    "meta_tags_pass": true
+    "down_sites": ["printmaxx.surge.sh (HTTP 404)"],
+    "og_tags_missing": ["sleepmaxx-app.surge.sh", "focuslock-app.surge.sh"],
+    "all_have_viewport": true,
+    "all_have_title": true
   },
   "image_review": {
-    "images_checked": 21,
-    "correct_dimensions": 21,
+    "images_checked": 48,
+    "correct_dimensions": 48,
     "text_readable": true,
     "professional_quality": true,
     "all_under_500kb": true,
     "categories": {
-      "product_covers_1280x720": 5,
-      "social_cards_1200x675": 5,
-      "quote_cards_1080x1080": 3,
+      "social_cards_1200x675": 17,
+      "quote_cards_1080x1080": 8,
+      "product_covers_1280x720": 11,
+      "app_promo_1200x675": 5,
       "niche_cards_1200x675": 3,
       "og_images_1200x630": 1,
-      "misc": 4
-    },
-    "minor_issues": ["quote_publish_gap.png has excess bottom whitespace"]
+      "data_viz_1200x675": 3
+    }
+  },
+  "video_review": {
+    "videos_checked": 9,
+    "all_under_2mb": true,
+    "largest": "pipeline_pressure_20260307.mp4 (490KB)",
+    "smallest": "quote_card.mp4 (234KB)"
   },
   "outreach_review": {
-    "emails_reviewed": 10,
+    "emails_reviewed": 20,
+    "phone_scripts_reviewed": 3,
     "personalized": true,
     "under_100_words": true,
     "human_sounding": true,
-    "em_dashes_in_emails": 15,
-    "note": "Em dashes used throughout outreach emails. Lower priority than social but should be cleaned in next cycle."
+    "six_question_framework": true,
+    "issues": [
+      "leadmachine draft #7 has template placeholder not yet filled in",
+      "RFP section uses 'comprehensive' (banned) but as client quote, acceptable"
+    ]
   },
   "most_common_failures": [
-    "em_dashes_in_published_copy (19 instances across 3 files)",
-    "false_checklist_pass (1 file claimed zero em dashes, had 18)",
-    "banned_word_landscape (1 instance in opp_scanner_posts)",
-    "site_down_404 (scripture-streak.surge.sh)"
+    "em_dashes (1 instance this cycle, down from 19 last cycle)",
+    "banned_word_landscape (1 instance, recurring issue)",
+    "missing_og_tags (2 deployed sites)",
+    "site_down_404 (printmaxx.surge.sh)",
+    "template_placeholder_not_filled (1 outreach draft)"
   ],
   "trend": {
     "direction": "improving",
-    "note": "Generated tweet content (5 files, 49 tweets) was clean on first pass. Issues concentrated in reddit/linkedin distribution copy. The core content pipeline is producing quality output. Distribution formatting is the weak link."
+    "pass_rate_history": ["96.3% (cycle 1)", "97.9% (cycle 2)"],
+    "note": "Major improvement in em dash discipline. Core tweet pipeline is now consistently clean. The content_compounder agent is producing publication-ready copy. Only 2 violations across 147 items. Deployment monitoring needs attention: printmaxx.surge.sh main site is returning 404 and 2 sites missing OG tags."
   }
 }

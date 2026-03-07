@@ -19,7 +19,7 @@ REMOTION_DIR = Path(__file__).parent
 OUT_DIR = REMOTION_DIR / "out"
 ENTRY = "src/index.ts"
 
-COMPOSITIONS = ["SocialHook", "StatsDashboard", "QuoteCard"]
+COMPOSITIONS = ["SocialHook", "StatsDashboard", "QuoteCard", "PipelinePressure"]
 
 
 def render(comp_id: str, props: dict | None = None, output: str | None = None) -> bool:

@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {SocialHook} from './compositions/SocialHook';
 import {StatsDashboard} from './compositions/StatsDashboard';
 import {QuoteCard} from './compositions/QuoteCard';
+import {PipelinePressure} from './compositions/PipelinePressure';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -48,6 +49,24 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           quote: 'stop overthinking this. just set up the alerts and start watching.',
           attribution: 'PRINTMAXX',
+        }}
+      />
+      <Composition
+        id="PipelinePressure"
+        component={PipelinePressure}
+        durationInFrames={180}
+        fps={30}
+        width={1200}
+        height={675}
+        defaultProps={{
+          headline: 'pipeline status — day 32 at $0 revenue',
+          stats: [
+            {value: '131', label: 'Products Built', color: '#667eea'},
+            {value: '32', label: 'Agents Running', color: '#764ba2'},
+            {value: '$3.4K', label: 'Monthly Pipeline', color: '#f093fb'},
+            {value: '0', label: 'Listed', color: '#f5576c'},
+          ],
+          punchline: 'the swarm is a loaded gun. someone needs to pull the trigger.',
         }}
       />
     </>

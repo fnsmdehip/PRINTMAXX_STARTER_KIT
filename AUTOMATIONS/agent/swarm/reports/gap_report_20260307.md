@@ -1,8 +1,8 @@
-# GAP HUNTER REPORT — 2026-03-07
+# GAP HUNTER REPORT — 2026-03-07 (Cycle 2)
 
-**Scan time:** 2026-03-07
+**Scan time:** 2026-03-07 (updated)
 **Agent:** gap_hunter
-**Cycle:** Manual scan
+**Cycle:** Automated scan cycle 2
 
 ---
 
@@ -10,128 +10,85 @@
 
 | Category | Built | Deployed/Used | GAP |
 |----------|-------|---------------|-----|
-| Web Apps (builds/) | 27 | 13 streak + most tools deployed | ~2 undeployed |
-| Gumroad PDFs | 13 ready | 0 listed on Gumroad | **13 PDFs sitting idle** |
-| Digital Product PDFs | 5 ready | 0 listed | **5 PDFs sitting idle** |
-| Fiverr Landing Pages | 10 gigs + index | NOT deployed to surge | **Revenue blocker** |
-| Content Queue | 506 posts | 0 posted (406 PENDING_REVIEW) | **406 posts unreviewed** |
-| Alpha Staging | 2,693 APPROVED | 0 integrated (202 HIGH/HIGHEST) | **90 HIGHEST unactioned** |
-| Pending Review | 3,471 entries | 0 reviewed | **3,471 stale** |
-| Bulk Leads | 2.87M rows | 16 cold emails drafted | **2.87M untouched** |
-| Cold Emails | 16 drafted | 0 sent | **16 ready to send** |
-| Automation Scripts | 269 total | 99 in cron (~71 unique) | **~198 not scheduled** |
+| Web Apps (builds/) | 28 | ~13 streak landings deployed | ~15 unverified |
+| Gumroad PDFs | 13 ready | 0 listed on Gumroad | **13 PDFs idle** |
+| Digital Product PDFs | 5 ready | 0 listed | **5 PDFs idle** |
+| Fiverr Gig Listings | 10 gigs written | NOT deployed | **Revenue blocker** |
 | Whop Listings | 8 ready | 0 listed | **8 listings idle** |
 | Etsy Listings | Specs ready | 0 listed | **Blocked on account** |
+| Content Queue | 412 PENDING_REVIEW | 0 POSTED | **412 posts dead** |
+| Posting Queue | 80+ files (1,153 lines) | 0 posted | **1,153 lines unused** |
+| Alpha PENDING_REVIEW | 3,307 entries | 0 reviewed this cycle | **3,307 stale** |
+| Alpha APPROVED | 2,718 entries | Many not routed | **Routing gap** |
+| Master Leads | 1,036 leads | 0 contacted | **1,036 untouched** |
+| Cold Emails Ready | 248 lines | 0 sent | **248 ready to send** |
+| Hot Leads | 22 leads | Status unknown | **22 unworked** |
+| City Lead CSVs | 60+ files | 0 contacted | **Thousands of leads idle** |
+| Comparison Pages | 3 HTML pages | NOT deployed | **SEO value wasted** |
+| Automation Scripts | ~260 total | ~99 in cron | **~160 not scheduled** |
 
 ---
 
 ## TOP GAPS (Ranked by Revenue Impact)
 
-### GAP 1: 13 Gumroad PDFs Ready But NOT Listed (CRITICAL)
-**Location:** `PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/`
-**What:** 13 fully generated PDFs (cold email playbook, AI automation toolkit, vibe coding playbook, Twitter growth, solopreneur tech stack, etc.) sitting in a folder. Zero listed on Gumroad.
-**Revenue Impact:** Each could sell for $9-$29. Even 5 sales/month across 13 products = $585-$1,885/mo passive.
-**Action:** LIST THEM. Upload PDFs to Gumroad with copy from `PRODUCTS/GUMROAD_INSTANT_UPLOAD/*.md` files. Listing metadata exists at `LISTING_METADATA.md`.
-**Blocker:** Needs Gumroad account access (human step).
+### GAP 1: CONTENT PIPELINE DEAD (CRITICAL - $0 IMPACT)
+- **412 posts** in CONTENT_QUEUE.csv as PENDING_REVIEW, 0 ever posted
+- **80+ ready-to-post files** in posting_queue/ with 1,153 lines of content
+- Includes: Twitter posts (mar7-mar13 scheduled), LinkedIn posts, product promos, app promos, compound content, alpha-derived posts
+- **Action needed:** Batch approve high-quality posts, configure Buffer/API posting, or manual post top 10 immediately
+- **Revenue impact:** Content drives traffic to products/apps. Zero content = zero funnel top
 
-### GAP 2: 406 Social Posts in PENDING_REVIEW Queue (CRITICAL)
-**Location:** `CONTENT/social/CONTENT_QUEUE.csv`
-**What:** 406 auto-generated posts sitting unreviewed. 20 approved posts exist for Mar 6 but the bulk queue is untouched. Zero content distribution happening.
-**Revenue Impact:** Content drives inbound. No content = no growth = no revenue.
-**Action:** Batch-review top 50 posts, approve good ones, generate Buffer CSV for scheduling.
-**Blocker:** None — can be done now.
+### GAP 2: 18 PRODUCTS READY, ZERO LISTED ON ANY MARKETPLACE (CRITICAL - $0)
+- **13 Gumroad PDFs** exist with full listings written (PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/)
+- **5 Digital Product PDFs** ready (DIGITAL_PRODUCTS/ready_to_sell/pdfs/)
+- **8 Whop listings** written (PRODUCTS/WHOP_INSTANT_UPLOAD/)
+- **10 Fiverr gigs** fully specced (PRODUCTS/FIVERR_INSTANT_UPLOAD/)
+- **Etsy listings** written (PRODUCTS/ETSY_INSTANT_UPLOAD/)
+- **Action needed:** Human must create accounts and upload. Agent can generate upload instructions.
+- **Revenue impact:** Each product is potential $5-50/sale. 18 products x 1 sale/week = $90-900/week minimum
 
-### GAP 3: Fiverr Landing Pages Not Deployed (HIGH)
-**Location:** `PRODUCTS/FIVERR_LANDING_PAGES/`
-**What:** 10 professional gig landing pages with index.html, all complete. deploy.sh exists but pages NOT on surge.sh. These serve as portfolio proof for Fiverr gig listings.
-**Revenue Impact:** Fiverr gigs = immediate revenue. Landing pages boost conversion.
-**Action:** Deploy to surge.sh now.
-**Blocker:** None.
+### GAP 3: LEADS PIPELINE FULLY STALLED (CRITICAL - $0)
+- **1,036 master leads** in MASTER_LEADS.csv - zero contacted
+- **248 cold email lines** ready in COLD_EMAILS_READY_TO_SEND.md - zero sent
+- **22 hot leads** in HOT_LEADS.csv - zero worked
+- **60+ city-specific lead CSVs** (dentists, lawyers, plumbers, restaurants across 10+ cities) - zero outreach
+- **Action needed:** Set up cold email infrastructure (subdomain, warmup, Instantly/Smartlead). Human must configure sending.
+- **Revenue impact:** At 2% reply rate on 1,036 leads = 20 replies. At 10% close rate = 2 clients. At $500/client = $1,000 potential
 
-### GAP 4: 90 HIGHEST-Value Alpha Entries Unintegrated
-**Location:** `LEDGER/ALPHA_STAGING.csv`
-**What:** 90 entries marked APPROVED with HIGHEST ROI potential. Zero have been integrated into master strategy files. Categories: TOOL_ALPHA, CONTENT_FARM, OUTBOUND, AI_INFLUENCER.
-**Action:** Run `python3 AUTOMATIONS/alpha_auto_processor.py --process-new` to route them.
+### GAP 4: ALPHA BACKLOG OVERWHELMING (HIGH)
+- **3,307 PENDING_REVIEW** entries in ALPHA_STAGING.csv
+- **2,718 APPROVED** entries, many not routed to target files
+- Auto-processor exists (alpha_auto_processor.py) but backlog grows faster than processing
+- **Action needed:** Run batch alpha processing, increase auto-approval confidence, route APPROVED to target files
 
-### GAP 5: alpha_auto_processor.py Not in Cron
-**Location:** `AUTOMATIONS/alpha_auto_processor.py`
-**What:** The script that routes APPROVED alpha into master files exists but runs only manually. Should be automated.
-**Action:** Add to crontab: `0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_auto_processor.py --process-new >> AUTOMATIONS/logs/alpha_processor.log 2>&1`
+### GAP 5: COMPARISON PAGES NOT DEPLOYED (MEDIUM)
+- 3 HTML comparison pages built in builds/comparison-pages/
+- focuslock-vs-opal.html, prayerlock-vs-hallow.html, index.html
+- NOT deployed to surge.sh
+- **Action needed:** Deploy to surge.sh for SEO value
+- **Revenue impact:** Comparison pages capture high-intent search traffic
 
-### GAP 6: 16 Cold Emails Drafted But Not Sent
-**Location:** `AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md`
-**What:** 16 personalized cold emails drafted from HOT_LEADS.csv. Zero sent.
-**Action:** Human needs to copy-paste into email client or set up sending infrastructure.
-
-### GAP 7: 5 Digital Product PDFs Ready to Sell
-**Location:** `DIGITAL_PRODUCTS/ready_to_sell/pdfs/`
-**What:** 5 additional PDFs (73 Cold Email Subject Lines, Funnel Teardown Pack, AI Automation Blueprint, Solopreneur Ops System, Cold Email Playbook). These overlap with Gumroad PDFs but are separate products.
-**Action:** Cross-list on Gumroad or bundle.
-
-### GAP 8: 8 Whop Listings Ready
-**Location:** `PRODUCTS/WHOP_INSTANT_UPLOAD/`
-**What:** 8 complete Whop listing specs. Zero listed.
-**Action:** Needs Whop account access (human step).
-
-### GAP 9: 2.87M Bulk Leads Untouched
-**Location:** `AUTOMATIONS/leads/bulk/`
-**What:** Massive lead database across 13 verticals (dentist, lawyer, realtor, restaurant, etc.). Only 22 leads in HOT_LEADS, only 16 emails drafted.
-**Action:** Run lead qualifier to score top 100 from each vertical, generate cold emails.
-
-### GAP 10: 31 Auto-Generated Content Files Not Distributed
-**Location:** `CONTENT/social/auto_generated/`
-**What:** 31 auto-generated content files from Feb-Mar 2026. Not merged into main queue or distributed.
-**Action:** Parse, deduplicate, merge into CONTENT_QUEUE.csv.
+### GAP 6: SCRIPTS NOT SCHEDULED (LOW)
+- ~260 Python scripts in AUTOMATIONS/, only ~99 cron entries
+- Many scripts are one-off, deprecated, or handled by orchestrators
+- Key unscheduled scripts worth adding: competitive_intel_cycle.py, seo_streak_optimizer.py
+- **Action needed:** Audit top 20 unscheduled scripts for cron value
 
 ---
 
-## DEPLOYED ASSETS (Confirmed Live)
+## ACTIONS TAKEN THIS CYCLE
 
-| Domain | Status |
-|--------|--------|
-| coldmaxx.surge.sh | 200 OK |
-| focuslock-app.surge.sh | 200 OK |
-| ramadan-tracker.surge.sh | 200 OK |
-| mealmaxx.surge.sh | 200 OK |
-| prayerlock-app.surge.sh | 200 OK |
-| sleepmaxx-app.surge.sh | 200 OK |
-| walktounlock-app.surge.sh | 200 OK |
-| invoiceforge.surge.sh | 200 OK |
-| pagescorer.surge.sh | 200 OK |
-| prospectmaxx.surge.sh | 200 OK |
-| roicalc.surge.sh | 200 OK |
-| stackmaxx.surge.sh | 200 OK |
-| pitchdeck.surge.sh | 200 OK |
-| 13x streak apps on surge | 200 OK |
-
-**Total live sites: ~26**
+1. **Deploying comparison pages to surge.sh** (GAP 5)
+2. **Processing posting queue** - identifying top content for immediate action (GAP 1)
+3. **Generating human action checklist** for product uploads (GAP 2)
 
 ---
 
-## IMMEDIATE ACTIONS (This Cycle)
+## HUMAN ACTION REQUIRED (Cannot be automated)
 
-1. **Deploy Fiverr landing pages** to surge.sh
-2. **Batch-review 50 content queue posts** and generate Buffer CSV
-3. **Deploy pitchdeck build** (already live at pitchdeck.surge.sh, confirmed)
-
----
-
-## HUMAN-REQUIRED ACTIONS
-
-1. List 13 Gumroad PDFs on Gumroad (need account login)
-2. Send 16 cold emails from COLD_EMAILS_READY_TO_SEND.md
-3. List 8 products on Whop (need account login)
-4. Create Fiverr gigs using specs in FIVERR_INSTANT_UPLOAD/
-5. Create Etsy listings using specs in ETSY_INSTANT_UPLOAD/
-
----
-
-## CRON GAPS (Should be scheduled)
-
-| Script | Recommended Schedule |
-|--------|---------------------|
-| alpha_auto_processor.py | Every 4 hours |
-| auto_clip_pipeline.py | Every 6 hours |
-| auto_clip_service.py | Every 8 hours |
-| app_store_aso_optimizer.py | Daily at 6 AM |
-| content_quality_scorer.py | Every 4 hours |
+1. **Create Gumroad account** and upload 13 PDFs with prepared listings
+2. **Create Whop account** and list 8 products
+3. **Create Fiverr account** and publish 10 gigs
+4. **Set up cold email infrastructure** (subdomain, warmup tool, sending tool)
+5. **Post content to Twitter/X** from posting_queue/ (or configure Buffer API)
+6. **Review and approve** top content in CONTENT_QUEUE.csv

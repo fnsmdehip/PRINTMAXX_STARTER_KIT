@@ -239,3 +239,18 @@ Long-running agents get dramatically more useful when they can both follow proce
 - Add negative examples to all .claude/commands/ skill files (tip #2)
 - Treat ralph loops as Pattern B implementations
 - Use file-based handoff (/mnt/data equivalent = our LEDGER/ and OPS/ directories)
+
+
+---
+
+## Pending Enhancement (ALPHA16920, Score: 23)
+
+**Source:** @iPullRank (high-signal-accounts) | **URL:** https://x.com/oliviscusAI/status/2029872358194876535
+**Added:** 2026-03-07T05:35:17-05:00
+
+This OpenClaw skill literally cuts token usage by 95% 
+
+It uses "quantized message delivery" to compress how the agent thinks and communicates.
+
+We are talking 20x cheaper agents overnight..
+

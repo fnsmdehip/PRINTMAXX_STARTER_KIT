@@ -54,3 +54,45 @@
   ✓ focuslock-app.surge.sh — sw.js missing → added and redeployed
   ✓ focuslock-web.surge.sh — sw.js missing → added and redeployed
   ✓ printmaxx-local-demos.surge.sh — 404 → rebuilt hub page and redeployed
+
+[2026-03-07 12:45] QUALITY GATE CYCLE 2 — Results:
+
+  CRITICAL:
+  ✗ printmaxx.surge.sh returns HTTP 404
+    Impact: MAIN LANDING PAGE IS DOWN. This is the primary domain.
+    Action: REDEPLOY IMMEDIATELY. Check if surge.sh project name changed or deployment was overwritten.
+
+  DEPLOYMENT WARNINGS:
+  ! sleepmaxx-app.surge.sh — missing OG meta tags (og:title, og:image)
+    Impact: Social sharing shows no preview image/title. Twitter cards broken.
+    Action: Add OG tags to index.html and redeploy.
+  ! focuslock-app.surge.sh — missing OG meta tags
+    Impact: Same as above. Social sharing broken.
+    Action: Add OG tags to index.html and redeploy.
+
+  CONTENT FIXED (2 violations caught and corrected):
+  ✓ compound_hn_reddit_competitive_mar7.txt: "landscape" (banned) -> "the rules changed"
+  ✓ trend_synthesis_posts_20260307.md: em dash removed from line 145
+
+  CONTENT FLAGGED (not blocking but needs attention):
+  ! leadmachine_batch_20260307.md draft #7 (AccuTemp Refrigeration): contains "[insert specific finding after audit]" placeholder. DO NOT SEND until filled with actual audit data.
+
+  ALL PASSED (no fixes needed):
+  ✓ 5 scheduled Twitter posts (mar12-13) CLEAN
+  ✓ 3 scheduled LinkedIn posts (mar12-13) CLEAN
+  ✓ compound_competitive_intel_mar7.txt (8 tweets) CLEAN
+  ✓ compound_engagement_bait_competitive_mar7.txt (5 tweets) CLEAN
+  ✓ compound_linkedin_competitive_mar7.txt (2 posts) CLEAN
+  ✓ generated_20260307_cycle2/tweets_5_posts.md (5 posts) CLEAN
+  ✓ generated_20260307_cycle2/thread_ai_saas_pricing.md (7-tweet thread) CLEAN
+  ✓ generated_20260307_cycle2/cross_niche_adaptations.md (4 posts) CLEAN
+  ✓ generated_20260307_cycle2/linkedin_adaptations.md (3 posts) CLEAN
+  ✓ generated_20260307_cycle2/newsletter_weekly_alpha.md CLEAN
+  ✓ trend_synthesis_posts_20260307.md (7 posts, 1 fixed) CLEAN AFTER FIX
+  ✓ batch_20260307.md (10 outreach emails) CLEAN
+  ✓ leadmachine_batch_20260307.md (9/10 outreach pieces) CLEAN
+  ✓ All 48 generated images: correct dimensions, under 500KB, readable
+  ✓ All 9 Remotion videos: under 500KB, proper format
+
+  STATS: 147 items reviewed | 97.9% pass rate | 2 fixes applied | 0 rejected
+  TREND: Pass rate improving (96.3% -> 97.9%). Em dash discipline dramatically better (19 -> 1). Content pipeline is producing clean output. Deployment monitoring is the weak link this cycle.

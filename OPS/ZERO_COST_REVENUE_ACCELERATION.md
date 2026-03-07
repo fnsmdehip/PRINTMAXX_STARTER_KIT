@@ -1428,3 +1428,34 @@ $80,000/mo profit
 
 ANDURIL EXPECTS TO ROUGHLY DOUBLE REVENUE THIS YEAR TO ABOUT $4.3 BILLION - THE INFORMATION
 
+
+
+---
+
+## Pending Enhancement (ALPHA16605, Score: 41)
+
+**Source:** @whale_alert (high-signal-accounts) | **URL:** https://x.com/StratoForceAI/status/2027191597604176043/analytics
+**Added:** 2026-03-07T05:00:52-05:00
+
+Clari: $310/user. Gong: $150/user. Salesforce Revenue Intelligence: $395/user.
+StratoForce: $25/user. Same pipeline scoring. Same conversation intelligence. Same forecasting.
+The difference? We're 100% native Salesforce. 
+First 50 orgs get lifetime Enterprise access — free.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16929, Score: 24)
+
+**Source:** @thomasbcn (high-signal-accounts) | **URL:** https://x.com/HHaandr/status/2029990308755251461
+**Added:** 2026-03-07T05:35:17-05:00
+
+ Subscription apps are officially a winner-takes-most game
+
+We analyzed $16B in revenue from 115,000+ apps ( the world's largest dataset of its kind) for our 2026 State of Subscription Apps report
+
+The data is wild
+
+And a little scary
+

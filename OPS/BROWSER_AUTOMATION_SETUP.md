@@ -1529,3 +1529,31 @@ Just viral content, being tested at scale.
 
 Manus to find viral content ideas, Claude to research & design, Arcads to generate the
 
+
+
+---
+
+## Pending Enhancement (ALPHA16898, Score: 46)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://github.com/claude-market/marketplace
+**Added:** 2026-03-07T05:35:17-05:00
+
+Build and sell premium MCP servers + Claude Code plugins. 10K+ free servers but zero paid premium tier. Claude Market + mcpmarket.com as distribution. $19-49/server or $99/bundle.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16900, Score: 34)
+
+**Source:** @kloss_xyz (high-signal-accounts) | **URL:** https://x.com/kloss_xyz/status/2028237936848994369
+**Added:** 2026-03-07T05:35:17-05:00
+
+Stop what you’re doing right now.
+
+Anthropic just dropped a free AI academy with 13 courses and official certificates across MCP, APIs, Claude Code, and fluency.
+
+People used to pay $2k for bootcamps teaching worse versions of these topics.
+
+Now it costs $0. Save it. Start today.
+
