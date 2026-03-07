@@ -35,3 +35,7 @@
 {"ts": "2026-03-07T05:10:04.154964", "mission": "screen_alpha", "result": "success", "duration_s": 14.0, "output": "Screened batch from 78147 pending entries"}
 {"ts": "2026-03-07T07:02:50.170801", "mission": "health_heal", "result": "success", "duration_s": 4.9, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-07T07:02:50.590546", "mission": "process_decide", "result": "success", "duration_s": 0.4, "output": "Decisions made. 17 response drafts, 17 listing drafts"}
+{"ts": "2026-03-07T08:06:02.966668", "mission": "scan_opps", "result": "success", "duration_s": 279.7, "output": "3/4 scanners completed"}
+{"ts": "2026-03-07T09:03:56.487884", "mission": "health_heal", "result": "success", "duration_s": 2.5, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-07T09:03:56.765877", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 17 response drafts, 17 listing drafts"}
+{"ts": "2026-03-07T09:09:56.797773", "mission": "research", "result": "failed", "duration_s": 360.0, "output": "0/3 scrapers completed"}

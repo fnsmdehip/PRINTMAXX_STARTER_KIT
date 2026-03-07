@@ -1433,3 +1433,23 @@ but they spend 99% of their time and budget advertising on tiktok & instagram
 
 The person who can authorize 10k-50k has never once in their life
 
+
+
+---
+
+## Pending Enhancement (ALPHA17139, Score: 20)
+
+**Source:** @franci__ugc (high-signal-accounts) | **URL:** https://x.com/franci__ugc/status/2018342418886590717
+**Added:** 2026-03-07T09:48:10-05:00
+
+tiktok's 2026 algorithm change nobody's talking about:
+
+"comment part 2" replies now get 4x the initial push of fresh posts.
+
+why? it signals conversation. algorithm sees engagement loop.
+
+your workflow should be:
+1. post video
+2. wait for comments
+3. reply to best comment with
+

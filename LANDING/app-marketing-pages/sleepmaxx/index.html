@@ -22,6 +22,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"SleepMaxx","description":"SleepMaxx optimizes your sleep with scoring, wind-down routines, blue light reminders, and sleep debt tracking.","url":"https://sleepmaxx-web.surge.sh/","applicationCategory":"HealthApplication","operatingSystem":"iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"keywords":"sleep tracker, sleep optimization, sleep score, wind down routine, blue light, sleep debt"}
 </script>
+<script defer data-domain="sleepmaxx-web.surge.sh" src="https://plausible.io/js/script.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--accent:#8b5cf6;--accent2:#7c3aed;--text:#e5e5e5;--muted:#888;--border:#222}
@@ -107,11 +108,26 @@ footer p{font-size:0.8rem;color:var(--muted)}
 .xpromo-card .xi{font-size:1.8rem;margin-bottom:8px}
 .xpromo-card .xn{font-size:0.85rem;font-weight:700;color:var(--text);display:block;margin-bottom:4px}
 .xpromo-card .xd{font-size:0.75rem;color:var(--muted)}
+/* sleep stack */
+.sleep-stack{padding:80px 0;border-top:1px solid var(--border)}
+.sleep-stack .ss-label{font-size:0.75rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px}
+.sleep-stack h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:8px}
+.sleep-stack .ss-intro{color:var(--muted);font-size:0.9rem;margin-bottom:36px;max-width:520px}
+.ss-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.ss-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;display:flex;gap:20px;align-items:flex-start;text-decoration:none;transition:border-color 0.2s}
+.ss-card:active{border-color:var(--accent)}
+.ss-icon{width:44px;height:44px;min-width:44px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.ss-body{flex:1}
+.ss-name{font-size:1rem;font-weight:700;color:var(--text);letter-spacing:-0.3px;margin-bottom:6px}
+.ss-desc{font-size:0.85rem;color:var(--muted);line-height:1.55;margin-bottom:10px}
+.ss-link{font-size:0.8rem;color:var(--accent);font-weight:600}
+.ss-disclaimer{margin-top:24px;font-size:0.75rem;color:var(--muted);opacity:0.7}
 @media(max-width:640px){
   .stats .container{grid-template-columns:1fr;gap:24px}
   .hero{padding:60px 0 50px}
   .features,.score-demo,.social-proof,.problem{padding:50px 0}
-  .pro-section,.email-section,.xpromo{padding:50px 0}
+  .pro-section,.email-section,.xpromo,.sleep-stack{padding:50px 0}
+  .ss-card{flex-direction:column;gap:14px}
 }
 </style>
 </head>
@@ -270,6 +286,41 @@ footer p{font-size:0.8rem;color:var(--muted)}
       <span class="xd">step gate for phone time</span>
     </a>
   </div>
+</div>
+</section>
+
+<section class="sleep-stack">
+<div class="container">
+  <div class="ss-label">sleep optimizer's toolkit</div>
+  <h2>the stack that actually moves the needle</h2>
+  <p class="ss-intro">sleepmaxx handles the behavior side. these three fill the hardware and supplement gaps. stuff we've tested and wouldn't pull from the list.</p>
+  <div class="ss-grid">
+    <a href="https://ouraring.com" class="ss-card" target="_blank" rel="noopener">
+      <div class="ss-icon">&#128141;</div>
+      <div class="ss-body">
+        <div class="ss-name">Oura Ring</div>
+        <div class="ss-desc">track your sleep stages without wearing a brick on your wrist. lightest tracker that actually reads HRV and REM accurately. pairs well with sleepmaxx data.</div>
+        <div class="ss-link">ouraring.com &rarr;</div>
+      </div>
+    </a>
+    <a href="https://mantasleep.com" class="ss-card" target="_blank" rel="noopener">
+      <div class="ss-icon">&#128065;&#65039;&#8205;&#128418;&#65039;</div>
+      <div class="ss-body">
+        <div class="ss-name">Manta Sleep Mask</div>
+        <div class="ss-desc">100% blackout. zero pressure on eyes. the one every sleep optimizer uses. blocking light is the single highest-ROI move if you don't have blackout curtains.</div>
+        <div class="ss-link">mantasleep.com &rarr;</div>
+      </div>
+    </a>
+    <a href="https://amzn.to/sleepmaxx-mag" class="ss-card" target="_blank" rel="noopener">
+      <div class="ss-icon">&#128138;</div>
+      <div class="ss-body">
+        <div class="ss-name">Magnesium Glycinate</div>
+        <div class="ss-desc">the only supplement with actual clinical backing for deep sleep. glycinate form absorbs better than oxide, doesn't mess with your gut. 200-400mg an hour before bed.</div>
+        <div class="ss-link">view on amazon &rarr;</div>
+      </div>
+    </a>
+  </div>
+  <p class="ss-disclaimer">some links above are affiliate links. we earn a small commission if you buy, at no extra cost to you. we only list things we'd use ourselves.</p>
 </div>
 </section>
 

@@ -4745,3 +4745,56 @@ It's honestly kind of addicting.
 
 It will one shot a whole new product company in 10 minutes. Here are some kids toys companies it one-shotted:
 
+
+
+---
+
+## Pending Enhancement (ALPHA17070, Score: 30)
+
+**Source:** @jasoncfox (high-signal-accounts) | **URL:** https://x.com/jasoncfox/status/2030267627243802733
+**Added:** 2026-03-07T09:48:10-05:00
+
+What's working for me right now:
+
+Direct Offers in email and posts
+Long-Form videos with CTAs
+Connecting with old clients
+
+What's not working:
+Volume DMs (at least not right now)
+Growth Content for followers
+
+I'm locked in on my current audience and making better offers...
+
+
+
+---
+
+## Pending Enhancement (ALPHA17106, Score: 34)
+
+**Source:** @pounddz (high-signal-accounts) | **URL:** https://x.com/pounddz/status/2029701011367989565
+**Added:** 2026-03-07T09:48:10-05:00
+
+Here’s a practical way you can use this to actually make tons of money that I’ve made money from (not theory) 
+
+build multiple TT pages using one consistent character 
+
+take slideshows that are already going viral for example “how to glow up for broke girls” works well 
+
+Take all
+
+
+
+---
+
+## Pending Enhancement (ALPHA17108, Score: 22)
+
+**Source:** @pounddz (high-signal-accounts) | **URL:** https://x.com/pounddz/status/2029151922859503994
+**Added:** 2026-03-07T09:48:10-05:00
+
+There’s an opportunity in the AI video gold rush no one’s seeing 
+
+if you learn how to make amazing AI UGC + how to go viral and basic marketing 
+
+you can partner with app developers or someone who has an app already and get percent equity with them where you handle all the
+

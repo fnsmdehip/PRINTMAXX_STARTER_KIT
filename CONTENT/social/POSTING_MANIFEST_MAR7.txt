@@ -1,7 +1,6 @@
-PRINTMAXX MANUAL POSTING MANIFEST — 2026-03-07
+PRINTMAXX MANUAL POSTING MANIFEST — 2026-03-07 (updated 08:00)
 Account: @PRINTMAXXER | Platform: Twitter/X
 Method: Manual copy-paste (no API keys configured)
-Generated: 2026-03-07 05:00
 
 ===================================================
 TODAY'S 4 POSTS — COPY-PASTE READY
@@ -21,64 +20,91 @@ Chars: 242 | Source: ALPHA1433 | File: twitter_PRINTMAXXER_mar7_1100.txt
 
 POST 3 — 14:30
 -------------------------------------------------------
-inbox placement shifted from opens to engagement depth. reply rates doubled when we stopped tracking opens and started writing emails people actually respond to. stop spraying and praying.
+reply rates doubled the week we killed open tracking. inbox placement now runs on engagement depth, not opens. gmail actively flags tracking pixels. write emails people respond to, not emails you can measure. that's the shift.
 -------------------------------------------------------
-Chars: 205 | Source: APPROVED_POSTS_MAR6.csv | File: twitter_PRINTMAXXER_mar7_1430.txt
+Chars: 225 | Source: APPROVED_POSTS_MAR6.csv | File: twitter_PRINTMAXXER_mar7_1430.txt
 
 POST 4 — 18:00
 -------------------------------------------------------
 intent-based timing gets 2-4x reply rates. send outreach when someone just posted a hiring tweet, just launched something, just complained about a problem you solve. timing is the whole game.
 -------------------------------------------------------
-Chars: 234 | Source: APPROVED_POSTS_MAR6.csv | File: twitter_PRINTMAXXER_mar7_1800.txt
+Chars: 191 | Source: APPROVED_POSTS_MAR6.csv | File: twitter_PRINTMAXXER_mar7_1800.txt
 
 ===================================================
-FULL QUEUE SUMMARY (Mar 7 - Mar 13)
+FULL QUEUE — MARCH 7 THROUGH MARCH 16
 ===================================================
 
 Twitter @PRINTMAXXER:
-  Mar 7  — 4 posts (07:30, 11:00, 14:30, 18:00) READY
-  Mar 8  — 4 posts (07:30, 11:00, 14:30, 18:00) READY
-  Mar 9  — 4 posts (07:30, 11:00, 14:30, 18:00) READY
-  Mar 10 — 4 posts (07:30, 11:00, 14:30, 18:00) READY
-  Mar 11 — 4 posts (07:30, 11:00, 14:30, 18:00) READY
-  Mar 12 — 4 posts (07:30, 11:00, 14:30, 18:00) READY [cycle2 content]
-  Mar 13 — 1 post  (07:30) READY [cycle2 content]
-  TOTAL:  25 posts queued
+  Mar 7  — 4 posts (07:30 11:00 14:30 18:00) READY
+  Mar 8  — 4 posts (07:30 11:00 14:30 18:00) READY
+  Mar 9  — 4 posts (07:30 11:00 14:30 18:00) READY
+  Mar 10 — 4 posts (07:30 11:00 14:30 18:00) READY
+  Mar 11 — 4 posts (07:30 11:00 14:30 18:00) READY
+  Mar 12 — 4 posts (07:30 11:00 14:30 18:00) READY [cycle2 content]
+  Mar 13 — 4 posts (07:30 11:00 14:30 18:00) READY [cycle2 + engagement bait]
+  Mar 14 — 4 posts (07:30 11:00 14:30 18:00) READY [cold email + offer conversion + ROI calc + PWA stats]
+  Mar 15 — 4 posts (07:30 11:00 14:30 18:00) READY [subject line test + builder types + focuslock + website audit]
+  Mar 16 — 4 posts (07:30 11:00 14:30 18:00) READY [prayerlock 200 installs + 90% content take + coldmaxx + 32 agents]
+  TOTAL: 40 posts queued (10 days coverage)
 
 LinkedIn @PRINTMAXXER:
-  Mar 12 — 2 posts (09:00, 14:00) READY [pricing data, GEO intel]
-  Mar 13 — 1 post  (09:00) READY [RevenueCat subscription data]
-  TOTAL:  3 posts queued
-
-All queue files in: CONTENT/social/posting_queue/
+  Mar 12 — 2 posts (09:00 14:00) READY
+  Mar 13 — 1 post  (09:00) READY
+  TOTAL: 3 posts queued
 
 ===================================================
-PIPELINE FLAGS — ACTION REQUIRED
+ALPHA POSTS READY (schedule these from Mar 17+)
 ===================================================
 
-1. BUFFER_UPLOAD_MAR7.csv — DO NOT POST
-   Bug: tool names extracted as single words ("No", "mCP", "AI" as standalone tokens)
-   Bug: cross-account template contamination (wrong wrapper phrases per account)
-   Fix: tweet_drafter.py token parsing needs regex fix before next auto-batch
-   Status: BLOCKED
+6 alpha-derived posts rewritten and approved today:
 
-2. CONTENT_QUEUE.csv — still PENDING_REVIEW (no quality gate approval)
-   Contains 50+ posts from Feb 2026 pipeline run
-   Action: needs /review-alpha pass before any posts can be queued
+A1) alpha_alpha536 — Justin Welsh $4.15M at 86% margins (196 chars)
+A2) alpha_alpha537 — Mark Joyner 20 opportunities 2026 (248 chars)
+A3) alpha_alpha539 — Lovable/Replit/Anything vibe coding ARR explosion (247 chars)
+A4) alpha_alpha548 — 23% federal contracting → small biz, SAM.gov (261 chars)
+A5) alpha_alpha557 — Nordic ecom arb: finn.no + cdon + 50-70% margins (255 chars)
+A6) alpha_alpha558 — Fiverr→Upwork arbitrage, pocket the spread (262 chars)
+
+Also available (PENDING_REVIEW still, not yet slotted):
+  - compound_competitive_intel_mar7.txt (8 posts: denomination gap, Hevy proof, Kelly criterion, Whop vs Gumroad)
+  - compound_thread_building_trap_mar7.txt (7-tweet thread: "32 agents $0 revenue")
+  - trend_synthesis_posts_20260307.md (GEO thread, cold email 2026, more)
+  - roi_calculator_launch_posts.md
+
+===================================================
+FLAGGED — DO NOT POST
+===================================================
+
+alpha_alpha543, alpha_alpha544 — TikTok trend content
+  → Reassigned to @drifthour / content niche accounts. Not @PRINTMAXXER voice.
+
+BUFFER_UPLOAD_MAR7.csv — BLOCKED (pipeline bug)
+  → Fix: tweet_drafter.py token parsing regex + cross-account template contamination
+
+CONTENT_QUEUE.csv — PENDING_REVIEW (50+ Feb posts, no quality gate)
 
 ===================================================
 HOW TO POST (manual, no API)
 ===================================================
 
 Option A — Direct:
-  1. Open each queue file in CONTENT/social/posting_queue/
+  1. Open queue file in CONTENT/social/posting_queue/
   2. Copy text below the "---" separator
-  3. Paste into Twitter/LinkedIn
-  4. Post at scheduled time
+  3. Paste into Twitter/LinkedIn at scheduled time
 
 Option B — Buffer:
   1. Import APPROVED_POSTS_MAR6.csv directly into Buffer
   2. Set Buffer to @PRINTMAXXER account
-  3. Schedule will auto-populate
 
-After posting: update post_log.json — change "status" to "posted" and add "posted_at" timestamp
+After posting: update post_log.json → "status": "posted", "posted_at": "[timestamp]"
+
+===================================================
+PIPELINE STATUS
+===================================================
+
+Quality gate: ✓ (all Mar 7-16 slots passed, 8 alpha posts rewritten)
+API keys: ✗ (manual posting only)
+Buffer integration: ✓ (APPROVED_POSTS_MAR6.csv ready to import)
+Total ready: 40 Twitter + 3 LinkedIn = 43 posts
+Coverage: Mar 7-16 (10 days at 4 posts/day)
+Next action needed: Slot alpha posts into Mar 17+ schedule

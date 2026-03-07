@@ -1605,3 +1605,35 @@ That’s it
 No complicated strategy
 No expensive
 
+
+
+---
+
+## Pending Enhancement (ALPHA17113, Score: 29)
+
+**Source:** @gregisenberg (high-signal-accounts) | **URL:** https://x.com/gregisenberg/status/2029302809611649024
+**Added:** 2026-03-07T09:48:10-05:00
+
+a company just posted a $10k/month job where they are hiring an ai agent (not a human) and the interview process involves interviewing the agent itself
+
+the new normal?
+
+
+
+---
+
+## Pending Enhancement (ALPHA17141, Score: 20)
+
+**Source:** @franci__ugc (high-signal-accounts) | **URL:** https://x.com/franci__ugc/status/2029653941731086344
+**Added:** 2026-03-07T09:48:10-05:00
+
+everyone's talking about AI replacing creators
+
+nobody's talking about AI replacing the 6 hours i used to spend finding them
+
+we connected an AI agent to our CRM and now every creator application gets:
+> portfolio scraped
+> engagement rate checked
+> past brand deals found
+>
+
