@@ -1453,3 +1453,65 @@ your workflow should be:
 2. wait for comments
 3. reply to best comment with
 
+
+
+---
+
+## Pending Enhancement (ALPHA17164, Score: 24)
+
+**Source:** @simonecanciello (high-signal-accounts) | **URL:** https://x.com/simonecanciello/status/2029997643858903132
+**Added:** 2026-03-07T10:14:56-05:00
+
+you can just build a $39.99/year alarm app and post this faceless format in bulk.
+
+i’d build a niche one, still untapped.
+
+
+
+---
+
+## Pending Enhancement (ALPHA17171, Score: 24)
+
+**Source:** @simonecanciello (high-signal-accounts) | **URL:** https://x.com/simonecanciello/status/2029230665212834264
+**Added:** 2026-03-07T10:14:56-05:00
+
+you can create a $59.99/year tanning app and post these shorts in bulk.
+
+summer is coming, don’t miss this.
+
+
+
+---
+
+## Pending Enhancement (ALPHA17250, Score: 23)
+
+**Source:** @wannercashcow (high-signal-accounts) | **URL:** https://x.com/wannercashcow/status/2030267221876846957
+**Added:** 2026-03-07T10:14:56-05:00
+
+Check out this valuable interview with our student Eric where we leaked his channel that made him $17K+ in ONE month
+
+And if you want to scale your own faceless channel to $10K+/month, then book a free discovery call here: 
+http://
+join.wannercashcow.com/74807ae3
+
+
+
+---
+
+## Pending Enhancement (ALPHA17294, Score: 22)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2030282350169629072
+**Added:** 2026-03-07T10:44:04-05:00
+
+We looked at the all-time best content from 40+ consumer apps.
+
+The videos that measurably drove downloads and revenue.
+
+Then, we compile the top 3 and turned into The TikTok Hall of Fame.
+
+> 120+ viral videos
+> formats
+> hook structures
+
+Complete with engagement data and revenue
+

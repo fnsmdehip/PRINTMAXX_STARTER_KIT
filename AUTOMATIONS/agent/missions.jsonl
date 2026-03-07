@@ -39,3 +39,8 @@
 {"ts": "2026-03-07T09:03:56.487884", "mission": "health_heal", "result": "success", "duration_s": 2.5, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-07T09:03:56.765877", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 17 response drafts, 17 listing drafts"}
 {"ts": "2026-03-07T09:09:56.797773", "mission": "research", "result": "failed", "duration_s": 360.0, "output": "0/3 scrapers completed"}
+{"ts": "2026-03-07T10:01:43.261606", "mission": "gen_content", "result": "success", "duration_s": 92.7, "output": "Generated content from 2 sources, saved to AGENT_CONTENT_20260307.md"}
+{"ts": "2026-03-07T10:03:43.291125", "mission": "upgrade_content", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-07T10:03:43.404264", "mission": "schedule", "result": "success", "duration_s": 0.1, "output": "Scheduled 42 slots across 7 days"}
+{"ts": "2026-03-07T11:31:51.707918", "mission": "health_heal", "result": "success", "duration_s": 4.6, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-07T11:31:51.986980", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 17 response drafts, 17 listing drafts"}

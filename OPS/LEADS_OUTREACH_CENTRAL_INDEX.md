@@ -806,3 +806,14 @@ don’t you dare miss
 
 Tech employment crisis worse than 2008/2020. 929pts 609 comments. MASSIVE market of laid-off devs needing income. Perfect cold outreach target: "build your own SaaS instead of job hunting" angle. Sell toolkits/courses to displaced tech workers.
 
+
+
+---
+
+## Pending Enhancement (TW_INTEL_20260307_001, Score: 24)
+
+**Source:** twitter_accounts_scraper | **URL:** https://twitter.com/dimitarangg
+**Added:** 2026-03-07T10:44:04-05:00
+
+@dimitarangg: 59 B2B calls booked in 16 days - leaked entire cold outreach system. 666 engagement.
+

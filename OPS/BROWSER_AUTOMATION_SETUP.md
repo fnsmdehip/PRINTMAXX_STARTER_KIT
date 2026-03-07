@@ -1637,3 +1637,83 @@ we connected an AI agent to our CRM and now every creator application gets:
 > past brand deals found
 >
 
+
+
+---
+
+## Pending Enhancement (ALPHA17206, Score: 20)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/alexcooldev/status/2029427486342488226
+**Added:** 2026-03-07T10:14:56-05:00
+
+I have a million-dollar idea:
+
+Build Duolingo for Agentic AI.
+
+Most people want to learn AI agents but get stuck between:
+- complicated docs
+- random YouTube tutorials
+- messy GitHub repos
+
+What if learning agents felt like Duolingo?
+
+Day 1: Build your first simple agent
+Day 3:
+
+
+
+---
+
+## Pending Enhancement (ALPHA17229, Score: 30)
+
+**Source:** @WorkflowWhisper (high-signal-accounts) | **URL:** https://x.com/WorkflowWhisper/status/2029893602654953521
+**Added:** 2026-03-07T10:14:56-05:00
+
+a company just posted a $10K/month job listing
+for an AI agent. not a human.
+
+an openclaw agent on anthropic opus
+literally applied for and almost landed a real job this week.
+
+meanwhile most businesses are still paying humans $60K/year
+to copy data between spreadsheets.
+
+you
+
+
+
+---
+
+## Pending Enhancement (ALPHA17240, Score: 23)
+
+**Source:** @WorkflowWhisper (high-signal-accounts) | **URL:** https://x.com/WorkflowWhisper/status/2028084284951515232
+**Added:** 2026-03-07T10:14:56-05:00
+
+saas stocks are down 33% since november.
+
+salesforce. servicenow. hubspot. all getting crushed.
+
+why? ai agents don't need per-seat licenses.
+
+one workflow replaces 5 tools and the $12,000/year you spend on them.
+
+the entire automation consulting industry
+built their business on
+
+
+
+---
+
+## Pending Enhancement (ALPHA17323, Score: 36)
+
+**Source:** @WorkflowWhisper (high-signal-accounts) | **URL:** https://x.com/WorkflowWhisper/status/2030273578835509411
+**Added:** 2026-03-07T10:44:04-05:00
+
+a company just posted a $10K/month job listing for an AI agent.
+not a human. an AI agent.
+
+an openclaw bot on anthropic opus almost landed a real job this week.
+the hiring manager only rejected it because the writing was "too AI obvious."
+
+meanwhile most small businesses are
+

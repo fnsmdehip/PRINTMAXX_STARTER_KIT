@@ -163,9 +163,23 @@ def search_businesses(city, niche, limit=20):
                          "nextdoor.com", "healthgrades.com", "zocdoc.com",
                          "homeadvisor.com", "groupon.com", "duckduckgo.com",
                          "bing.com", "bestprosintown.com", "airtasker.com",
-                         "buildzoom.com", "threebestrated.com"]
+                         "buildzoom.com", "threebestrated.com",
+                         "homeguide.com", "expertise.com", "carfax.com",
+                         "preferredmechanic.com", "plumbing.com",
+                         "meetaplumber.com", "bark.com", "taskrabbit.com",
+                         "porch.com", "houzz.com", "manta.com",
+                         "superpages.com", "merchantcircle.com",
+                         "chamberofcommerce.com", "toprated.com",
+                         "todayshomeowner.com", "promatcher.com",
+                         "promptloop.com", "networx.com"]
             domain = urllib.parse.urlparse(actual).hostname or ""
             if any(d in domain for d in dominated):
+                continue
+            # skip aggregator/directory titles
+            title_lower = title.lower()
+            agg_patterns = ["best ", "top ", " near me", " rated ", "10 best",
+                            "19 best", "list of", "directory"]
+            if any(p in title_lower for p in agg_patterns):
                 continue
 
             results.append({"name": title, "url": actual, "domain": domain})

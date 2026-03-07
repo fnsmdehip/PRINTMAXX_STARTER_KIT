@@ -1459,3 +1459,16 @@ The data is wild
 
 And a little scary
 
+
+
+---
+
+## Pending Enhancement (ALPHA17168, Score: 30)
+
+**Source:** @simonecanciello (high-signal-accounts) | **URL:** https://x.com/simonecanciello/status/2029681304527163823
+**Added:** 2026-03-07T10:14:56-05:00
+
+oops it looks like i thought this app was alarmy ($600k/month) but it’s actually a copy
+
+here are the revenue of alarmy, they’re doing the same distribution!
+

@@ -1,5 +1,5 @@
 # ROI Calculator Launch Posts
-Generated: 2026-03-07 | Status: PENDING_REVIEW | Lead Magnet: cold-email-calc.surge.sh
+Generated: 2026-03-07 | Status: APPROVED | Lead Magnet: cold-email-calc.surge.sh
 
 ---
 
