@@ -41,7 +41,7 @@
 - **Revenue:** $50-$1000/mo
 - **Time to first dollar:** 7-30 days
 - **Next action:** Join Medium Partner Program (free). Publish existing articles from CONTENT/medium_articles/. Optimize titles for SEO. Publish 3-5x/week for first month.
-- **Existing assets:** CONTENT/medium_articles/ (3 articles), CONTENT/substack_posts/, LEDGER/buffer_import_*.csv (12 CSVs ready for Buffer upload)
+- **Existing assets:** CONTENT/medium_articles/ (4 articles), CONTENT/substack_posts/, LEDGER/buffer_import_*.csv (12 CSVs ready for Buffer upload)
 - **Blockers:** Need Medium account with Partner Program enabled
 
 ### Product Hunt Launch (PrayerLock)
