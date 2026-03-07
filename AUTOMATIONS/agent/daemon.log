@@ -163,3 +163,36 @@
 [14:00:00] [INFO] Disk: 59.7GB free | Missions completed: 48 | Failed: 1
 [14:00:00] [INFO] ============================================================
 [14:00:00] [INFO] MISSION: Factory run
+[14:05:00] [INFO]   [FAILED] factory: TIMEOUT after 300s (300.0s)
+[14:05:00] [INFO] MISSION: Compliance check
+[14:05:30] [INFO]   [FAILED] compliance: tttt/OPS/COMPLIANCE_SCAN_2026_03_07.md
+JSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/compliance_scan_2026_03_07.json
+
+22 CRITICAL issues found. Fix before publishing.
+ (30.0s)
+[14:05:30] [INFO] MISSION: Proactive opportunity hunt
+[14:07:00] [INFO]   [PARTIAL] proactive_hunt: Searched but results were thin (90.0s)
+[14:07:00] [INFO] ============================================================
+[14:07:00] [INFO] CYCLE COMPLETE — 3 missions in 420s
+[14:07:00] [INFO] ============================================================
+[14:07:00] [INFO] Sleeping 3179s until 15:00
+[15:40:02] [INFO] ============================================================
+[15:40:02] [INFO] AGENT CYCLE START — 2026-03-07 15:40
+[15:40:02] [INFO] Disk: 59.7GB free | Missions completed: 49 | Failed: 3
+[15:40:02] [INFO] ============================================================
+[15:40:02] [INFO] MISSION: Health & heal
+[15:40:15] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (12.8s)
+[15:40:15] [INFO] MISSION: Process & decide
+[15:40:16] [INFO]   [SUCCESS] process_decide: Decisions made. 17 response drafts, 17 listing drafts (0.5s)
+[15:40:16] [INFO] ============================================================
+[15:40:16] [INFO] CYCLE COMPLETE — 2 missions in 13s
+[15:40:16] [INFO] ============================================================
+[15:40:16] [INFO] Sleeping 1184s until 16:00
+[16:16:38] [INFO] ============================================================
+[16:16:38] [INFO] AGENT CYCLE START — 2026-03-07 16:16
+[16:16:38] [INFO] Disk: 59.6GB free | Missions completed: 51 | Failed: 3
+[16:16:38] [INFO] ============================================================
+[16:16:38] [INFO] ============================================================
+[16:16:38] [INFO] CYCLE COMPLETE — 0 missions in 0s
+[16:16:38] [INFO] ============================================================
+[16:16:38] [INFO] Sleeping 2602s until 17:00

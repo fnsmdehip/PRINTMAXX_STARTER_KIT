@@ -47,3 +47,8 @@
 {"ts": "2026-03-07T13:46:47.594293", "mission": "health_heal", "result": "success", "duration_s": 4.7, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-07T13:46:47.832050", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 17 response drafts, 17 listing drafts"}
 {"ts": "2026-03-07T13:47:40.721032", "mission": "gen_content", "result": "success", "duration_s": 52.9, "output": "Generated content from 2 sources, saved to AGENT_CONTENT_20260307.md"}
+{"ts": "2026-03-07T14:05:00.155835", "mission": "factory", "result": "failed", "duration_s": 300.0, "output": "TIMEOUT after 300s"}
+{"ts": "2026-03-07T14:05:30.225048", "mission": "compliance", "result": "failed", "duration_s": 30.0, "output": "tttt/OPS/COMPLIANCE_SCAN_2026_03_07.md\nJSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/compliance_scan_2026_03_07.json\n\n22 CRITICAL issues found. Fix before publishing.\n"}
+{"ts": "2026-03-07T14:07:00.253595", "mission": "proactive_hunt", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
+{"ts": "2026-03-07T15:40:15.658043", "mission": "health_heal", "result": "success", "duration_s": 12.8, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-07T15:40:16.181074", "mission": "process_decide", "result": "success", "duration_s": 0.5, "output": "Decisions made. 17 response drafts, 17 listing drafts"}

@@ -4819,3 +4819,14 @@ A strong content game = organic growth & brand authority.
 
 (18/18)
 
+
+
+---
+
+## Pending Enhancement (ALPHA17412, Score: 37)
+
+**Source:** hackernews | **URL:** https://www.techdirt.com/2026/03/06/were-training-students-to-write-worse-to-prove-theyre-not-robots-and-its-pushing-them-to-use-more-ai/
+**Added:** 2026-03-07T15:25:10-05:00
+
+Schools training students to write worse to prove not AI — creates demand for human-first writing services
+

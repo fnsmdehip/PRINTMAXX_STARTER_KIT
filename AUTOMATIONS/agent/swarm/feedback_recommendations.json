@@ -1,34 +1,94 @@
 {
-  "generated": "2026-03-07T03:21:31.378583",
+  "generated": "2026-03-07T16:56:40.401273",
   "recommendations": [
     {
       "decision": "boost_agent",
+      "agent": "gap_hunter",
+      "reason": "High effectiveness (240.0%) over 3 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
       "agent": "asset_deployer",
-      "reason": "High effectiveness (116.7%) over 3 runs",
+      "reason": "High effectiveness (150.0%) over 4 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
       "agent": "content_compounder",
-      "reason": "High effectiveness (140.0%) over 3 runs",
+      "reason": "High effectiveness (175.0%) over 4 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
-      "agent": "system_healer",
-      "reason": "High effectiveness (140.0%) over 3 runs",
+      "agent": "lead_machine",
+      "reason": "High effectiveness (160.0%) over 3 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
-      "agent": "quality_gate",
+      "agent": "cross_pollinator",
       "reason": "High effectiveness (300.0%) over 3 runs",
       "source": "feedback_loop"
     },
     {
       "decision": "boost_agent",
-      "agent": "meta_executor",
+      "agent": "system_healer",
+      "reason": "High effectiveness (175.0%) over 4 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "distribution_engine",
+      "reason": "High effectiveness (160.0%) over 3 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "inbound_maximizer",
+      "reason": "High effectiveness (673.3%) over 3 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "swarm_brain",
       "reason": "High effectiveness (120.0%) over 3 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "image_factory",
+      "reason": "High effectiveness (160.0%) over 3 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "quality_gate",
+      "reason": "High effectiveness (610.0%) over 4 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "playwright_tester",
+      "reason": "High effectiveness (253.3%) over 3 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "alert_dispatcher",
+      "reason": "High effectiveness (115.0%) over 4 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "social_poster",
+      "reason": "High effectiveness (140.0%) over 3 runs",
+      "source": "feedback_loop"
+    },
+    {
+      "decision": "boost_agent",
+      "agent": "meta_executor",
+      "reason": "High effectiveness (205.0%) over 4 runs",
       "source": "feedback_loop"
     }
   ]
