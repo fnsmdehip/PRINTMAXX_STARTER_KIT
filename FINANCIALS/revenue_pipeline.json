@@ -1,22 +1,24 @@
 {
-  "last_updated": "2026-03-07T23:00:00Z",
+  "last_updated": "2026-03-08T02:00:00Z",
   "total_revenue": 0,
-  "days_at_zero_revenue": 32,
-  "total_pipeline_value_monthly": 3550,
+  "days_at_zero_revenue": 33,
+  "total_pipeline_value_monthly": 3750,
   "pipeline_summary": {
-    "assets_built": 63,
-    "assets_deployed": 98,
-    "assets_monetized": 7,
+    "assets_built": 65,
+    "assets_deployed": 140,
+    "assets_monetized": 8,
     "assets_generating_revenue": 0,
     "bottleneck": "HUMAN ACCOUNT CREATION - Stripe + Gumroad + Fiverr + Affiliate Signups required",
-    "agent_actions_today": "META EXECUTOR session 3: Created OPS/FIRST_DOLLAR_ACTION_PLAN.md (unified revenue guide), updated weekly targets, launched app audit + cover generation agents, created Gumroad launch tweets, wrote session report",
+    "agent_actions_today": "META EXECUTOR session 4: Created OPS/GUMROAD_SPEED_UPLOAD.md (30-min upload guide), added email capture to ADHD streak, drafted 10 new Austin cold emails, updated all tracking, verified 13 denomination streak apps have email capture locally, confirmed 8 core apps live with formsubmit",
     "first_dollar_guide": "OPS/FIRST_DOLLAR_ACTION_PLAN.md",
-    "surge_sites_deployed": 98,
-    "content_pieces_in_queue": 132,
-    "cold_emails_drafted": 16,
+    "speed_upload_guide": "OPS/GUMROAD_SPEED_UPLOAD.md",
+    "surge_sites_deployed": 140,
+    "content_pieces_in_queue": 191,
+    "cold_emails_drafted": 26,
     "affiliate_page_fixed": true,
-    "apps_verified_live": ["prayerlock-app", "coldmaxx-app", "focuslock-app", "walktounlock-app", "sleepmaxx-app", "mealmaxx-app", "printmaxx-store"],
-    "apps_needing_email_capture": ["invoiceforge", "pagescorer", "pitchdeck", "prospectmaxx", "roicalc", "stackmaxx", "biomaxx-sdk54", "hilal"]
+    "apps_verified_live_with_email": ["prayerlock-app", "coldmaxx-app", "focuslock-app", "walktounlock-app", "sleepmaxx-app", "mealmaxx-app", "printmaxx-store", "hilal-app"],
+    "denomination_streaks_with_email_local": ["catholic-streak", "orthodox-streak", "protestant-streak", "baptist-streak", "methodist-streak", "lutheran-streak", "episcopal-streak", "pentecostal-streak", "evangelical-streak", "anglican-streak", "presbyterian-streak", "sunni-streak", "shia-streak"],
+    "adhd_streak_email_capture": "in_progress"
   },
   "categories": {
     "gumroad_products": {

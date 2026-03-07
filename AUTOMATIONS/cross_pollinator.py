@@ -692,7 +692,7 @@ def wire_trends_to_content():
         if conf < 85:
             continue
 
-        slug = f"trend_{date_part}_{title.lower().replace(' ', '_')[:30]}"
+        slug = f"trend_{date_part}_{title.lower().replace(' ', '_').replace('/', '_').replace('=', '').replace('(', '').replace(')', '')[:30]}"
         if slug in existing_posts:
             continue
 
@@ -798,6 +798,379 @@ def wire_intel_to_outreach_context():
     return new_cats + len(context) - 1  # -1 for updated_at key
 
 
+# ─── CONNECTION 16: Swarm Brain Decisions → Venture Config ────────────────
+# Brain interval decisions auto-adjust venture intervals in autonomy_state
+def wire_brain_decisions_to_ventures():
+    decisions_path = AUTOMATIONS / "agent" / "swarm" / "brain_decisions.jsonl"
+    if not decisions_path.exists():
+        return 0
+
+    state_path = AUTOMATIONS / "agent" / "autonomy" / "autonomy_state.json"
+    state = load_json(state_path)
+    if not state or "ventures" not in state:
+        return 0
+
+    # Map agent names to venture IDs
+    agent_to_venture = {
+        "lead_machine": "auto_outbound_cold_outreach_engine_9569",
+        "content_compounder": "auto_content_niche_content_farm_9569",
+        "trend_synthesizer": "auto_research_alpha_intelligence_9565",
+        "cross_pollinator": None,  # meta agent, not a venture
+        "image_factory": None,
+        "video_factory": None,
+    }
+
+    lines = decisions_path.read_text().strip().split("\n")
+    applied = 0
+
+    for line in lines:
+        try:
+            dec = json.loads(line)
+        except (json.JSONDecodeError, ValueError):
+            continue
+
+        if dec.get("decision") != "adjust_interval":
+            continue
+
+        agent = dec.get("agent", "")
+        new_interval = dec.get("new_interval", "")
+        if not new_interval:
+            continue
+
+        # Parse interval string (e.g. "4h" -> 4)
+        hours = 0
+        if new_interval.endswith("h"):
+            try:
+                hours = int(new_interval[:-1])
+            except ValueError:
+                continue
+
+        if hours <= 0:
+            continue
+
+        # Find matching venture
+        venture_id = agent_to_venture.get(agent)
+        if not venture_id or venture_id not in state["ventures"]:
+            continue
+
+        current = state["ventures"][venture_id].get("interval_hours", 0)
+        if current != hours:
+            state["ventures"][venture_id]["interval_hours"] = hours
+            applied += 1
+
+    if applied > 0:
+        safe_path(state_path).write_text(json.dumps(state, indent=2))
+
+    return applied
+
+
+# ─── CONNECTION 17: Gap Report → Human Action Queue ──────────────────────
+# Parse gap report into a concise, prioritized action file for the human
+def wire_gap_report_to_action_queue():
+    import re
+    report_files = sorted(REPORTS.glob("gap_report_*.md"), reverse=True)
+    if not report_files:
+        return 0
+
+    latest = report_files[0]
+    text = latest.read_text(encoding="utf-8")
+
+    # Extract GAP sections with revenue impact
+    gaps = re.findall(
+        r'### GAP (\d+): (.+?) \((\w+)\)\n(.*?)(?=### GAP|\Z)',
+        text, re.DOTALL
+    )
+
+    if not gaps:
+        return 0
+
+    action_queue = []
+    for gap_num, title, severity, body in gaps:
+        # Extract action line
+        action_match = re.search(r'\*\*Action:\*\* (.+)', body)
+        revenue_match = re.search(r'\*\*Revenue impact:\*\* (.+)', body)
+        action = action_match.group(1).strip() if action_match else "See gap report"
+        revenue = revenue_match.group(1).strip() if revenue_match else ""
+
+        action_queue.append({
+            "priority": int(gap_num),
+            "title": title.strip(),
+            "severity": severity,
+            "action": action,
+            "revenue_impact": revenue,
+            "source": latest.name
+        })
+
+    if action_queue:
+        queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "human_action_queue.json")
+        queue_path.parent.mkdir(parents=True, exist_ok=True)
+
+        existing = []
+        if queue_path.exists():
+            try:
+                existing = json.loads(queue_path.read_text())
+            except (json.JSONDecodeError, ValueError):
+                existing = []
+
+        existing_titles = {a.get("title", "") for a in existing}
+        new_actions = [a for a in action_queue if a["title"] not in existing_titles]
+
+        if new_actions:
+            all_actions = existing + new_actions
+            all_actions.sort(key=lambda x: x.get("priority", 99))
+            queue_path.write_text(json.dumps(all_actions, indent=2))
+
+        return len(new_actions)
+    return 0
+
+
+# ─── CONNECTION 18: Monetization Audit → Deployment Tasks ────────────────
+# Parse monetization audit into agent-executable deployment tasks
+def wire_monetization_audit_to_tasks():
+    import re
+    audit_files = sorted(REPORTS.glob("app_monetization_audit_*.md"), reverse=True)
+    if not audit_files:
+        return 0
+
+    latest = audit_files[0]
+    text = latest.read_text(encoding="utf-8")
+
+    # Extract "WHAT AGENT CAN DO NOW" section
+    agent_section = re.search(
+        r'## WHAT AGENT CAN DO NOW.*?\n(.*?)(?=\n##|\Z)',
+        text, re.DOTALL
+    )
+
+    tasks = []
+    if agent_section:
+        lines = agent_section.group(1).strip().split("\n")
+        for line in lines:
+            line = line.strip().lstrip("- ")
+            if line and len(line) > 10:
+                tasks.append({
+                    "task": line,
+                    "source": "monetization_audit",
+                    "status": "PENDING",
+                    "created_at": datetime.now().isoformat()
+                })
+
+    # Also extract PRIORITY FIXES
+    fix_section = re.search(
+        r'## PRIORITY FIXES\n(.*?)(?=\n##|\Z)',
+        text, re.DOTALL
+    )
+    if fix_section:
+        lines = fix_section.group(1).strip().split("\n")
+        for line in lines:
+            line = line.strip().lstrip("0123456789. ")
+            if line and len(line) > 10:
+                blocked = "blocked" in line.lower()
+                tasks.append({
+                    "task": line,
+                    "source": "monetization_audit",
+                    "status": "BLOCKED" if blocked else "PENDING",
+                    "created_at": datetime.now().isoformat()
+                })
+
+    if tasks:
+        task_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "monetization_tasks.json")
+        task_path.parent.mkdir(parents=True, exist_ok=True)
+
+        existing = []
+        if task_path.exists():
+            try:
+                existing = json.loads(task_path.read_text())
+            except (json.JSONDecodeError, ValueError):
+                existing = []
+
+        existing_tasks = {t.get("task", "") for t in existing}
+        new_tasks = [t for t in tasks if t["task"] not in existing_tasks]
+
+        if new_tasks:
+            task_path.write_text(json.dumps(existing + new_tasks, indent=2))
+
+        return len(new_tasks)
+    return 0
+
+
+# ─── CONNECTION 19: Reddit Pain Points → Product Demand Signals ──────────
+# Aggregate Reddit complaints into product demand signals for Digital Products
+def wire_reddit_to_product_demand():
+    reddit_dir = safe_path(REDDIT_OUTPUT)
+    if not reddit_dir.exists():
+        return 0
+
+    json_files = sorted(
+        [f for f in reddit_dir.iterdir() if f.name.startswith("reddit_") and f.suffix == ".json"],
+        key=lambda x: x.stat().st_mtime,
+        reverse=True
+    )[:3]  # Last 3 scrapes
+
+    if not json_files:
+        return 0
+
+    pain_categories = {}
+    pain_keywords = {
+        "slow": "performance", "broken": "reliability", "expensive": "pricing",
+        "complicated": "ux", "confusing": "ux", "wish": "feature_gap",
+        "alternative": "competitor_gap", "hate": "frustration",
+        "switched from": "churn_signal", "looking for": "demand",
+        "need": "demand", "frustrated": "frustration", "annoying": "ux",
+        "overpriced": "pricing", "cheaper": "pricing", "free": "pricing",
+    }
+
+    for jf in json_files:
+        try:
+            with open(jf) as f:
+                posts = json.load(f)
+        except (json.JSONDecodeError, ValueError):
+            continue
+
+        if not isinstance(posts, list):
+            continue
+
+        for post in posts:
+            if not isinstance(post, dict):
+                continue
+            text = f"{post.get('title', '')} {post.get('selftext', '')}".lower()
+            sub = post.get("subreddit", "")
+            score = post.get("score", 0)
+
+            for keyword, category in pain_keywords.items():
+                if keyword in text:
+                    if category not in pain_categories:
+                        pain_categories[category] = {"count": 0, "examples": [], "subreddits": set()}
+                    pain_categories[category]["count"] += 1
+                    pain_categories[category]["subreddits"].add(sub)
+                    if len(pain_categories[category]["examples"]) < 3 and score > 5:
+                        pain_categories[category]["examples"].append({
+                            "title": post.get("title", "")[:100],
+                            "sub": sub,
+                            "score": score
+                        })
+
+    if not pain_categories:
+        return 0
+
+    # Convert sets to lists for JSON
+    for cat in pain_categories:
+        pain_categories[cat]["subreddits"] = list(pain_categories[cat]["subreddits"])
+
+    demand_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "product_demand_signals.json")
+    demand_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing = {}
+    if demand_path.exists():
+        try:
+            existing = json.loads(demand_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing = {}
+
+    # Merge: increment counts, add new examples
+    for cat, data in pain_categories.items():
+        if cat in existing:
+            existing[cat]["count"] = existing[cat].get("count", 0) + data["count"]
+            existing[cat]["subreddits"] = list(set(existing[cat].get("subreddits", []) + data["subreddits"]))
+            ex_titles = {e.get("title", "") for e in existing[cat].get("examples", [])}
+            for ex in data["examples"]:
+                if ex["title"] not in ex_titles and len(existing[cat].get("examples", [])) < 5:
+                    existing[cat].setdefault("examples", []).append(ex)
+        else:
+            existing[cat] = data
+
+    existing["updated_at"] = datetime.now().isoformat()
+    demand_path.write_text(json.dumps(existing, indent=2))
+
+    return len(pain_categories)
+
+
+# ─── CONNECTION 20: Content Farm → App Traffic (inject app URLs) ─────────
+# Scan posting queue for app-related content and inject live app URLs
+def wire_content_to_app_traffic():
+    pipeline = load_json(PROJECT_ROOT / "FINANCIALS" / "revenue_pipeline.json")
+    apps = pipeline.get("categories", {}).get("apps_deployed", {})
+    app_urls = apps.get("urls", {})
+
+    if not app_urls:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    if not queue_dir.exists():
+        return 0
+
+    # Map keywords to app URLs
+    app_keywords = {}
+    for app_name, url in app_urls.items():
+        keywords = app_name.lower().replace("-", " ").replace("_", " ").split()
+        for kw in keywords:
+            if len(kw) > 3:
+                app_keywords[kw] = {"name": app_name, "url": url}
+
+    injected = 0
+    for post_file in queue_dir.iterdir():
+        if post_file.suffix != ".txt":
+            continue
+
+        content = post_file.read_text(encoding="utf-8")
+        if "surge.sh" in content or "http" in content:
+            continue  # Already has URLs
+
+        content_lower = content.lower()
+        for kw, info in app_keywords.items():
+            if kw in content_lower and info["url"] not in content:
+                content += f"\n\n{info['url']}"
+                post_file.write_text(content, encoding="utf-8")
+                injected += 1
+                break
+
+    return injected
+
+
+# ─── CONNECTION 21: Brain Priority Shifts → Content Farm ─────────────────
+# Brain strategic decisions become "building in public" content
+def wire_brain_insights_to_content():
+    decisions_path = AUTOMATIONS / "agent" / "swarm" / "brain_decisions.jsonl"
+    if not decisions_path.exists():
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    lines = decisions_path.read_text().strip().split("\n")
+    created = 0
+
+    for line in lines:
+        try:
+            dec = json.loads(line)
+        except (json.JSONDecodeError, ValueError):
+            continue
+
+        if dec.get("decision") != "priority_shift":
+            continue
+
+        reason = dec.get("reason", "")
+        ts = dec.get("ts", "")
+        date_part = ts[:10].replace("-", "") if ts else "unknown"
+
+        slug = f"brain_insight_{date_part}_{created}"
+        if slug in existing_posts:
+            continue
+
+        # Extract key numbers from the reason
+        tweet = reason[:280].replace("ENTIRE", "entire").replace("ALL", "all").replace("STOP", "stop")
+        tweet = f"swarm brain cycle insight:\n\n{tweet}\n\nthis is what happens when you let AI agents manage themselves. they figure out what matters."
+
+        if len(tweet) > 500:
+            tweet = tweet[:497] + "..."
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        created += 1
+
+    return created
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -823,6 +1196,12 @@ def run_cycle():
         ("Trend Synthesis → Content Farm", wire_trends_to_content),
         ("Revenue Urgency → Content Farm", wire_revenue_urgency_to_content),
         ("Competitive Intel → Outreach Context", wire_intel_to_outreach_context),
+        ("Brain Decisions → Venture Config", wire_brain_decisions_to_ventures),
+        ("Gap Report → Human Action Queue", wire_gap_report_to_action_queue),
+        ("Monetization Audit → Deployment Tasks", wire_monetization_audit_to_tasks),
+        ("Reddit Pain Points → Product Demand", wire_reddit_to_product_demand),
+        ("Content Farm → App Traffic URLs", wire_content_to_app_traffic),
+        ("Brain Insights → Content Farm", wire_brain_insights_to_content),
     ]
 
     total_wired = 0

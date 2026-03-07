@@ -1,7 +1,8 @@
 {
-  "last_updated": "2026-03-07T11:30:00",
-  "total_deployments": 129,
+  "last_updated": "2026-03-07T20:00:00",
+  "total_deployments": 149,
   "all_200": true,
+  "notes": "printmaxx-site.surge.sh needs Vercel (has API routes, cannot static export)",
   "summary": {
     "apps": 20,
     "streak_landing_pages": 24,
@@ -10,12 +11,61 @@
     "tools_saas": 21,
     "demos": 19,
     "hubs": 4,
-    "lead_magnets": 1,
+    "lead_magnets": 3,
+    "comparison_pages": 3,
     "storefront": 1,
     "thanks": 1,
     "other": 2
   },
   "deployments": {
+    "lead_magnets_deployed": [
+      {
+        "name": "Solopreneur Launch Checklist",
+        "url": "https://solopreneur-launch-checklist.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "Ship Your First App in 7 Days - 47-step interactive checklist",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/solopreneur-launch-checklist.html"
+      },
+      {
+        "name": "Ramadan Daily Planner",
+        "url": "https://ramadan-daily-planner.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "Build your Ramadan schedule around prayer times",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/ramadan-daily-planner.html"
+      },
+      {
+        "name": "Cold Email ROI Calculator",
+        "url": "https://cold-email-calc.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "Cold email ROI calculator tool"
+      }
+    ],
+    "comparison_pages": [
+      {
+        "name": "PRINTMAXX App Comparisons Hub",
+        "url": "https://printmaxx-comparisons.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "Hub page linking all app comparison pages"
+      },
+      {
+        "name": "PrayerLock vs Hallow",
+        "url": "https://prayerlock-vs-hallow.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "SEO comparison landing page: PrayerLock vs Hallow app"
+      },
+      {
+        "name": "FocusLock vs Opal",
+        "url": "https://focuslock-vs-opal.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "SEO comparison landing page: FocusLock vs Opal app"
+      }
+    ],
     "core_apps": [
       {
         "name": "PrayerLock App",
@@ -64,6 +114,13 @@
         "url": "https://habitforge-app.surge.sh",
         "status": 200,
         "deployed": "2026-02-21"
+      },
+      {
+        "name": "ADHD Streak",
+        "url": "https://adhd-streak.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: missing PWA icons (icon-192.png, favicon.ico)"
       }
     ],
     "streak_app_pages": [
@@ -646,6 +703,73 @@
         "url": "https://printmaxx-local-demos.surge.sh",
         "status": 200,
         "deployed": "2026-02-21"
+      },
+      {
+        "name": "Magnolia Cafe Austin",
+        "url": "https://magnolia-cafe-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: slow load 4.9s"
+      },
+      {
+        "name": "Kelly Personal Training Austin",
+        "url": "https://kelly-personal-training-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: slow load 6.0s"
+      },
+      {
+        "name": "Galaxia Dental Austin",
+        "url": "https://galaxia-dental-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07"
+      },
+      {
+        "name": "Barton Springs Saloon Austin",
+        "url": "https://barton-springs-saloon-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07"
+      },
+      {
+        "name": "Zax Pints & Plates Austin",
+        "url": "https://zax-pints-plates-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: slow load 3.7s"
+      },
+      {
+        "name": "Artz Rib House Austin",
+        "url": "https://artz-rib-house-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: slow load 5.9s"
+      },
+      {
+        "name": "Memphis Plumbing Preview",
+        "url": "https://memphis-plumbing-preview.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: slow load 3.7s"
+      },
+      {
+        "name": "Jax Emergency Plumber Preview",
+        "url": "https://jax-emergency-plumber-preview.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: slow load 4.3s"
+      },
+      {
+        "name": "South Tampa Locksmith Preview",
+        "url": "https://south-tampa-locksmith-preview.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "note": "YELLOW: slow load 5.6s"
+      },
+      {
+        "name": "Atlanta Roofing Company Preview",
+        "url": "https://atlanta-roofing-company-preview.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07"
       }
     ],
     "demos": [
@@ -839,11 +963,11 @@
     ]
   },
   "live_test": {
-    "tested_at": "2026-03-07T09:40:00",
-    "total": 116,
-    "green": 116,
-    "yellow": 0,
-    "red": 0,
-    "note": "Full reconciliation pass. All 3 new deployments confirmed 200. 20+ entries added that were deployed but missing from catalog."
+    "tested_at": "2026-03-07T18:18:00",
+    "total": 147,
+    "green": 134,
+    "yellow": 11,
+    "red": 1,
+    "note": "Cycle 2 playwright test. 1 permanent RED (DNS label too long). 3 transient 504s recovered. Broken footer link on hilal+prayerlock (printmaxx-lead-magnets 404). 11 new sites added to catalog."
   }
 }

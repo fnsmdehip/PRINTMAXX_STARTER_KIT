@@ -1,0 +1,32 @@
+{
+  "cycle_start": "2026-03-07T13:42:44.636733",
+  "cycle_end": "2026-03-07T13:42:44.641094",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 1,
+  "new_intel_rows_written": 1,
+  "alerts_generated": 1,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Accidentally made $100 and a little mad about it",
+      "subreddit": "passive_income",
+      "score": 128,
+      "url": "https://www.reddit.com/r/passive_income/comments/1rl6gta/accidentally_made_100_and_a_little_mad_about_it/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "Accidentally made $100 and a little mad about it",
+      "subreddit": "passive_income",
+      "score": 128,
+      "comments": 40,
+      "url": "https://www.reddit.com/r/passive_income/comments/1rl6gta/accidentally_made_100_and_a_little_mad_about_it/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA17399"
+    }
+  ]
+}

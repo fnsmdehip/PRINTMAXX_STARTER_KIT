@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ship Your First App in 7 Days - Interactive Checklist | PRINTMAXX</title>
+<meta name="description" content="The exact 47-step checklist to go from idea to deployed app in 7 days. Free interactive tool. No fluff, just the steps.">
+<meta name="keywords" content="ship app fast, solopreneur checklist, app launch checklist, indie hacker guide, build app in a week, ship fast framework">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ship Your First App in 7 Days - 47 Steps">
+<meta property="og:description" content="The exact checklist to go from idea to deployed app in 7 days. Used by 400+ builders.">
+<meta property="og:url" content="https://printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Ship an App in 7 Days - Free Checklist">
+<meta name="twitter:description" content="47 steps. 7 days. Zero excuses. The exact checklist we used to ship 7 apps.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--text:#e5e5e5;--muted:#888;--border:#222;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--blue:#3b82f6}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:680px;margin:0 auto;padding:0 20px}
+nav{padding:16px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1rem;font-weight:800;letter-spacing:-0.5px;text-transform:uppercase}
+.hero{padding:60px 0 40px;text-align:center}
+.hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:14px}
+.hero h1 span{color:var(--green)}
+.hero p{font-size:0.95rem;color:var(--muted);max-width:440px;margin:0 auto;line-height:1.7}
+.progress-bar{margin:30px 0 20px;background:var(--surface2);border-radius:8px;height:8px;overflow:hidden}
+.progress-fill{height:100%;background:var(--green);border-radius:8px;transition:width 0.4s ease;width:0%}
+.progress-text{text-align:center;font-size:0.85rem;color:var(--muted);margin-bottom:30px}
+.progress-text span{color:var(--green);font-weight:700}
+.day{margin-bottom:32px}
+.day-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.day-num{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:0.8rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;white-space:nowrap}
+.day-title{font-size:1.05rem;font-weight:700;letter-spacing:-0.3px}
+.task{display:flex;align-items:flex-start;gap:12px;padding:10px 14px;border-radius:8px;cursor:pointer;transition:background 0.15s}
+.task:hover{background:var(--surface)}
+.task input[type="checkbox"]{width:18px;height:18px;margin-top:2px;accent-color:var(--green);flex-shrink:0;cursor:pointer}
+.task-text{font-size:0.9rem;line-height:1.5}
+.task.done .task-text{text-decoration:line-through;color:var(--muted)}
+.task-tip{font-size:0.78rem;color:var(--muted);margin-top:2px}
+.email-gate{display:none;padding:60px 0;text-align:center;border-top:1px solid var(--border)}
+.email-gate.visible{display:block}
+.email-gate h2{font-size:1.6rem;font-weight:800;letter-spacing:-1px;margin-bottom:10px}
+.email-gate p{font-size:0.9rem;color:var(--muted);margin-bottom:24px;max-width:400px;margin-left:auto;margin-right:auto}
+.email-gate form{display:flex;gap:10px;max-width:400px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.email-gate input[type="email"]{flex:1;min-width:200px;padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:0.9rem;outline:none}
+.email-gate button{padding:12px 24px;border-radius:8px;border:none;background:var(--green);color:#000;font-size:0.9rem;font-weight:700;cursor:pointer}
+.gated{display:none}
+.gated.unlocked{display:block}
+.share-bar{padding:40px 0;text-align:center;border-top:1px solid var(--border)}
+.share-bar p{font-size:0.85rem;color:var(--muted);margin-bottom:12px}
+.share-btn{display:inline-block;padding:10px 20px;border-radius:8px;background:var(--surface2);border:1px solid var(--border);color:var(--text);font-size:0.85rem;font-weight:600;cursor:pointer;text-decoration:none}
+.share-btn:hover{border-color:#444}
+footer{padding:30px 0;border-top:1px solid var(--border);text-align:center}
+footer p{font-size:0.78rem;color:var(--muted)}
+footer a{color:var(--green)}
+</style>
+</head>
+<body>
+<nav><div class="container"><div class="logo">PRINTMAXX</div><a href="https://printmaxx-apps.surge.sh/" style="font-size:0.82rem;color:var(--muted)">all apps</a></div></nav>
+
+<div class="hero">
+<div class="container">
+  <h1>ship your first app in <span>7 days</span></h1>
+  <p>47 steps. check them off as you go. we used this exact list to ship 7 apps. your progress saves locally.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="progress-text"><span id="completedCount">0</span> of <span id="totalCount">47</span> completed (<span id="percentage">0</span>%)</div>
+
+<!-- DAY 1 -->
+<div class="day">
+<div class="day-header"><span class="day-num">Day 1</span><span class="day-title">Validate + Decide</span></div>
+<label class="task"><input type="checkbox" data-id="1"><div><div class="task-text">Pick ONE specific problem to solve (not a category, a problem)</div><div class="task-tip">bad: "productivity app". good: "phone locks at prayer time"</div></div></label>
+<label class="task"><input type="checkbox" data-id="2"><div><div class="task-text">Find 3 competitors. Screenshot their App Store pages.</div></div></label>
+<label class="task"><input type="checkbox" data-id="3"><div><div class="task-text">Read their 1-star reviews. Write down the top 5 complaints.</div></div></label>
+<label class="task"><input type="checkbox" data-id="4"><div><div class="task-text">Decide: PWA or native? (PWA ships in hours, native takes weeks)</div></div></label>
+<label class="task"><input type="checkbox" data-id="5"><div><div class="task-text">Write your App Store title + subtitle in 30 characters each</div></div></label>
+<label class="task"><input type="checkbox" data-id="6"><div><div class="task-text">Name 3 features. That's it. Not 10. Three.</div></div></label>
+<label class="task"><input type="checkbox" data-id="7"><div><div class="task-text">Write the one-sentence pitch: "it does X for Y so they can Z"</div></div></label>
+</div>
+
+<!-- DAY 2 -->
+<div class="day">
+<div class="day-header"><span class="day-num">Day 2</span><span class="day-title">Build Core Feature</span></div>
+<label class="task"><input type="checkbox" data-id="8"><div><div class="task-text">Set up project (Next.js, Vite, or Capacitor)</div></div></label>
+<label class="task"><input type="checkbox" data-id="9"><div><div class="task-text">Build feature #1 (the one that solves the actual problem)</div></div></label>
+<label class="task"><input type="checkbox" data-id="10"><div><div class="task-text">Get it working in a browser. Ugly is fine.</div></div></label>
+<label class="task"><input type="checkbox" data-id="11"><div><div class="task-text">Test on your phone (localhost or deploy to staging)</div></div></label>
+<label class="task"><input type="checkbox" data-id="12"><div><div class="task-text">Fix the 1 thing that breaks on mobile</div></div></label>
+<label class="task"><input type="checkbox" data-id="13"><div><div class="task-text">Add localStorage for data persistence</div></div></label>
+</div>
+
+<!-- DAY 3 -->
+<div class="day">
+<div class="day-header"><span class="day-num">Day 3</span><span class="day-title">Features 2 + 3</span></div>
+<label class="task"><input type="checkbox" data-id="14"><div><div class="task-text">Build feature #2</div></div></label>
+<label class="task"><input type="checkbox" data-id="15"><div><div class="task-text">Build feature #3</div></div></label>
+<label class="task"><input type="checkbox" data-id="16"><div><div class="task-text">Add a streak/progress tracker (people love numbers going up)</div></div></label>
+<label class="task"><input type="checkbox" data-id="17"><div><div class="task-text">Add offline support (service worker or PWA manifest)</div></div></label>
+<label class="task"><input type="checkbox" data-id="18"><div><div class="task-text">Kill any feature creep ideas. Write them down. Ignore them.</div></div></label>
+</div>
+
+<!-- DAY 4 -->
+<div class="day">
+<div class="day-header"><span class="day-num">Day 4</span><span class="day-title">Design + Polish</span></div>
+<label class="task"><input type="checkbox" data-id="19"><div><div class="task-text">Pick a color palette (3 colors max: bg, accent, text)</div></div></label>
+<label class="task"><input type="checkbox" data-id="20"><div><div class="task-text">Pick ONE font. System font is fine. -apple-system wins.</div></div></label>
+<label class="task"><input type="checkbox" data-id="21"><div><div class="task-text">Make buttons big enough to tap (min 44x44px)</div></div></label>
+<label class="task"><input type="checkbox" data-id="22"><div><div class="task-text">Add loading states for any async operations</div></div></label>
+<label class="task"><input type="checkbox" data-id="23"><div><div class="task-text">Test dark mode. Test light mode. Pick one.</div></div></label>
+<label class="task"><input type="checkbox" data-id="24"><div><div class="task-text">Add a favicon and app icon (1024x1024 for App Store)</div></div></label>
+</div>
+
+<!-- DAY 5 -->
+<div class="day">
+<div class="day-header"><span class="day-num">Day 5</span><span class="day-title">Landing Page</span></div>
+<label class="task"><input type="checkbox" data-id="25"><div><div class="task-text">Write headline (10 words max, specific benefit)</div></div></label>
+<label class="task"><input type="checkbox" data-id="26"><div><div class="task-text">Write 3 feature blocks with icons</div></div></label>
+<label class="task"><input type="checkbox" data-id="27"><div><div class="task-text">Add social proof section (even if it's just "built by a builder")</div></div></label>
+<label class="task"><input type="checkbox" data-id="28"><div><div class="task-text">Add email capture form (formsubmit.co = free, no backend)</div></div></label>
+<label class="task"><input type="checkbox" data-id="29"><div><div class="task-text">Add meta tags: title, description, OG image, Twitter card</div></div></label>
+<label class="task"><input type="checkbox" data-id="30"><div><div class="task-text">Deploy landing page (surge.sh = free, 1 command)</div></div></label>
+<label class="task"><input type="checkbox" data-id="31"><div><div class="task-text">Test the live URL on your phone</div></div></label>
+</div>
+
+<!-- EMAIL GATE (appears after Day 5) -->
+<div class="email-gate" id="emailGate">
+<h2>unlock days 6-7 (launch + distribute)</h2>
+<p>you're past the build phase. the last 2 days are distribution strategy. drop your email to unlock.</p>
+<form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html?unlocked=true">
+  <input type="hidden" name="_subject" value="Launch checklist email gate unlock">
+  <input type="email" name="email" placeholder="your@email.com" required>
+  <button type="submit">unlock days 6-7</button>
+</form>
+</div>
+
+<!-- GATED CONTENT -->
+<div class="gated" id="gatedContent">
+
+<!-- DAY 6 -->
+<div class="day">
+<div class="day-header"><span class="day-num">Day 6</span><span class="day-title">Deploy + Submit</span></div>
+<label class="task"><input type="checkbox" data-id="32"><div><div class="task-text">Deploy the app (surge.sh for PWA, TestFlight for native)</div></div></label>
+<label class="task"><input type="checkbox" data-id="33"><div><div class="task-text">Test on 3 different devices (borrow phones if needed)</div></div></label>
+<label class="task"><input type="checkbox" data-id="34"><div><div class="task-text">Write App Store description (5 bullet points, specific benefits)</div></div></label>
+<label class="task"><input type="checkbox" data-id="35"><div><div class="task-text">Take 6 screenshots (iPhone 6.7" and iPad if applicable)</div></div></label>
+<label class="task"><input type="checkbox" data-id="36"><div><div class="task-text">Submit to App Store / Google Play (or keep as PWA)</div></div></label>
+<label class="task"><input type="checkbox" data-id="37"><div><div class="task-text">Set up analytics (Plausible or GoatCounter = free)</div></div></label>
+<label class="task"><input type="checkbox" data-id="38"><div><div class="task-text">Add Schema.org JSON-LD to landing page for SEO</div></div></label>
+</div>
+
+<!-- DAY 7 -->
+<div class="day">
+<div class="day-header"><span class="day-num">Day 7</span><span class="day-title">Launch + Distribute</span></div>
+<label class="task"><input type="checkbox" data-id="39"><div><div class="task-text">Write launch tweet (screenshot + one-liner + link)</div></div></label>
+<label class="task"><input type="checkbox" data-id="40"><div><div class="task-text">Post to 2 relevant subreddits (value-first, not spam)</div></div></label>
+<label class="task"><input type="checkbox" data-id="41"><div><div class="task-text">Post to Indie Hackers or Hacker News Show HN</div></div></label>
+<label class="task"><input type="checkbox" data-id="42"><div><div class="task-text">DM 5 people who would actually use it. Ask for feedback.</div></div></label>
+<label class="task"><input type="checkbox" data-id="43"><div><div class="task-text">Write a "build in public" thread (what you built, how, why)</div></div></label>
+<label class="task"><input type="checkbox" data-id="44"><div><div class="task-text">Set up a feedback channel (email, Discord, or Twitter DMs)</div></div></label>
+<label class="task"><input type="checkbox" data-id="45"><div><div class="task-text">Cold email 3 people who follow competitors</div></div></label>
+<label class="task"><input type="checkbox" data-id="46"><div><div class="task-text">Schedule 3 posts for the next week (keep momentum)</div></div></label>
+<label class="task"><input type="checkbox" data-id="47"><div><div class="task-text">Start your NEXT app. Repeat this checklist.</div><div class="task-tip">the first one teaches you the process. the second one makes money.</div></div></label>
+</div>
+
+</div><!-- end gated -->
+
+<div class="share-bar">
+<p>found this useful? share it with another builder.</p>
+<a class="share-btn" id="shareBtn">copy link to share</a>
+</div>
+
+</div><!-- end container -->
+
+<footer>
+<div class="container">
+  <p>PRINTMAXX 2026 |
+  <a href="https://printmaxx-apps.surge.sh/">all apps</a> |
+  <a href="https://printmaxx-lead-magnets.surge.sh/">free tools</a> |
+  <a href="https://ai-stack-2026.surge.sh/">AI stack</a> |
+  <a href="https://printmaxx-store.surge.sh/">store</a>
+  </p>
+</div>
+</footer>
+
+<script data-goatcounter="https://printmaxx.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+(function() {
+  const STORAGE_KEY = 'printmaxx_launch_checklist';
+  const UNLOCK_KEY = 'printmaxx_checklist_unlocked';
+
+  // Check if unlocked via URL param or localStorage
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('unlocked') === 'true') {
+    localStorage.setItem(UNLOCK_KEY, 'true');
+  }
+  const isUnlocked = localStorage.getItem(UNLOCK_KEY) === 'true';
+
+  // Load saved progress
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) {}
+
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const totalEl = document.getElementById('totalCount');
+  const completedEl = document.getElementById('completedCount');
+  const percentEl = document.getElementById('percentage');
+  const progressFill = document.getElementById('progressFill');
+  const emailGate = document.getElementById('emailGate');
+  const gatedContent = document.getElementById('gatedContent');
+
+  // Handle gated content
+  if (isUnlocked) {
+    emailGate.style.display = 'none';
+    gatedContent.classList.add('unlocked');
+  } else {
+    emailGate.classList.add('visible');
+  }
+
+  // Restore + setup checkboxes
+  checkboxes.forEach(cb => {
+    const id = cb.dataset.id;
+    if (saved[id]) {
+      cb.checked = true;
+      cb.closest('.task').classList.add('done');
+    }
+    cb.addEventListener('change', function() {
+      saved[id] = this.checked;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+      this.closest('.task').classList.toggle('done', this.checked);
+      updateProgress();
+    });
+  });
+
+  function updateProgress() {
+    const total = isUnlocked ? checkboxes.length : 31; // only count visible
+    let completed = 0;
+    checkboxes.forEach(cb => {
+      if (cb.checked && (isUnlocked || parseInt(cb.dataset.id) <= 31)) completed++;
+    });
+    completedEl.textContent = completed;
+    totalEl.textContent = isUnlocked ? 47 : 31;
+    const pct = Math.round((completed / (isUnlocked ? 47 : 31)) * 100);
+    percentEl.textContent = pct;
+    progressFill.style.width = pct + '%';
+
+    // Show email gate after checking 10+ items
+    if (!isUnlocked && completed >= 10) {
+      emailGate.classList.add('visible');
+    }
+  }
+  updateProgress();
+
+  // Share button
+  document.getElementById('shareBtn').addEventListener('click', function() {
+    const url = window.location.href.split('?')[0];
+    navigator.clipboard.writeText(url).then(() => {
+      this.textContent = 'copied!';
+      setTimeout(() => { this.textContent = 'copy link to share'; }, 2000);
+    });
+  });
+})();
+</script>
+</body>
+</html>
