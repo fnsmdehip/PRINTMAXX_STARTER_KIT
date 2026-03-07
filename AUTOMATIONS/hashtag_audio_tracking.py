@@ -32,6 +32,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, identity",
 }
 
 # Our niches for cross-referencing
@@ -44,14 +45,14 @@ NICHES = {
 }
 
 # Reddit subs for trending content
-TRENDING_SUBS = ["TikTokTrending", "TikTokCreators", "Instagram", "socialmedia", "youtube"]
+TRENDING_SUBS = ["TikTokTrending", "TikTok", "Instagram", "socialmedia", "NewTubers"]
 
 # Search queries for trending hashtags and audio
 TRENDING_QUERIES = [
-    "trending TikTok hashtags february 2026",
-    "trending TikTok sounds february 2026",
-    "trending Instagram reels hashtags 2026",
-    "trending YouTube shorts hashtags 2026",
+    "trending TikTok hashtags this week",
+    "trending TikTok sounds this week",
+    "trending Instagram reels hashtags this week",
+    "trending YouTube shorts hashtags this week",
     "viral TikTok audio this week",
     "trending hashtags social media today",
     "TikTok creative center trending",
@@ -127,13 +128,25 @@ def scrape_reddit_trending(session, existing):
     """Scrape Reddit for trending hashtag/audio discussions."""
     results = []
     for sub in TRENDING_SUBS:
+        sub_count = 0
         url = f"https://www.reddit.com/r/{sub}/search.json?q=trending+hashtag+OR+trending+audio+OR+trending+sound&restrict_sr=1&sort=new&limit=15&t=week"
         try:
-            time.sleep(2)
-            resp = session.get(url, headers={**HEADERS, "User-Agent": "PRINTMAXX-HashtagTracker/1.0"}, timeout=15)
-            if resp.status_code != 200:
-                print(f"  [-] r/{sub}: HTTP {resp.status_code}")
+            resp = None
+            for attempt in range(3):
+                time.sleep(1.5 + attempt)
+                resp = session.get(url, headers={**HEADERS, "User-Agent": "PRINTMAXX-HashtagTracker/1.0"}, timeout=15)
+                if resp.status_code == 429:
+                    wait = 2 ** (attempt + 1)
+                    print(f"  [!] r/{sub}: rate limited (429), retrying in {wait}s")
+                    time.sleep(wait)
+                    continue
+                break
+
+            if resp is None or resp.status_code != 200:
+                code = resp.status_code if resp is not None else "NO_RESPONSE"
+                print(f"  [-] r/{sub}: HTTP {code}")
                 continue
+
             data = resp.json()
             posts = data.get("data", {}).get("children", [])
             for post in posts:
@@ -162,8 +175,9 @@ def scrape_reddit_trending(session, existing):
                         "relevant_niches": "|".join(niches),
                         "use_recommendation": generate_recommendation(tag.lower(), niches, "hashtag"),
                     })
+                    sub_count += 1
 
-            print(f"  [+] r/{sub}: found {len(results)} hashtags/audio")
+            print(f"  [+] r/{sub}: found {sub_count} hashtags/audio")
         except Exception as e:
             print(f"  [-] r/{sub} error: {e}")
     return results
@@ -174,11 +188,22 @@ def search_brave_trending(query, session, existing):
     results = []
     search_url = f"https://search.brave.com/search?q={quote_plus(query)}&source=web"
     try:
-        time.sleep(2)
-        resp = session.get(search_url, headers=HEADERS, timeout=15)
-        if resp.status_code != 200:
-            print(f"  [-] Brave '{query}': HTTP {resp.status_code}")
+        resp = None
+        for attempt in range(3):
+            time.sleep(1.5 + attempt)
+            resp = session.get(search_url, headers=HEADERS, timeout=20)
+            if resp.status_code == 429:
+                wait = 2 ** (attempt + 1)
+                print(f"  [!] Brave '{query}': rate limited (429), retrying in {wait}s")
+                time.sleep(wait)
+                continue
+            break
+
+        if resp is None or resp.status_code != 200:
+            code = resp.status_code if resp is not None else "NO_RESPONSE"
+            print(f"  [-] Brave '{query}': HTTP {code}")
             return results
+
         soup = BeautifulSoup(resp.text, "html.parser")
 
         for result in soup.select(".snippet")[:8]:

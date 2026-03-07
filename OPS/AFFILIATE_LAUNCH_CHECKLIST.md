@@ -555,3 +555,19 @@ I told him to ride this one until the wheels fall off.
 
 Didn't listen. Went on to split his focus across 4 products. Lost the original winner, trying to find another
 
+
+
+---
+
+## Pending Enhancement (ALPHA15787, Score: 34)
+
+**Source:** @stockMKTnewz (high-signal-accounts) | **URL:** https://x.com/StockMKTNewz/status/2029356871207829607
+**Added:** 2026-03-06T18:05:17-05:00
+
+The Robinhood Platinum card will have a $695 fee and will include 
+
+- 5% cash back and a annual $250 DoorDash and a $250 restaurant credit
+- 5% cash back on travel and 10% on hotels 
+- Unlimited lounge access at 1.800 airports, plus global entry/TSA pre check
+- Health memberships
+

@@ -407,23 +407,23 @@ class BrokenCronFixer:
 
     KNOWN_ISSUES = {
         "sam_gov_monitor.py": {
-            "symptom": "HTTP 404 on every keyword",
-            "fix": "Need SAM_GOV_API_KEY env var. Get free key at https://api.data.gov/signup/",
-            "severity": "LOW",  # Gov contracts are long-term play
+            "symptom": "Historically returned HTTP 404 on legacy SAM endpoint",
+            "fix": "Patched 2026-03-06 to use sam.gov public search API endpoint",
+            "severity": "LOW",
         },
         "hashtag_audio_tracking.py": {
-            "symptom": "brotli decode error on Brave search, subreddit 403/404",
-            "fix": "Install brotli: pip3 install brotli. Fix subreddit names (r/TikTokTrending doesn't exist)",
+            "symptom": "Historically had brotli decode errors and subreddit 404s",
+            "fix": "Patched 2026-03-06 with gzip/identity encoding, retries, and valid subreddit list",
             "severity": "MEDIUM",
         },
         "trend_aggregator.py": {
-            "symptom": "5 of 6 daily runs produce 0 signals",
-            "fix": "Rate limiting. Reduce frequency from every 4h to every 8h. Add retry with backoff.",
+            "symptom": "Historically produced 0 signals when run with no mode flags",
+            "fix": "Patched 2026-03-06 so no-flag and --hourly runs default to full scan",
             "severity": "MEDIUM",
         },
         "platform_algo_detection.py": {
-            "symptom": "Brave search fails with brotli error",
-            "fix": "Same brotli fix. Install: pip3 install brotli",
+            "symptom": "Historically had Brave brotli decode failures and stale subreddit targets",
+            "fix": "Patched 2026-03-06 with gzip/identity encoding, retries, and updated subreddit list",
             "severity": "LOW",
         },
     }
@@ -466,9 +466,30 @@ class BrokenCronFixer:
 class CronOptimizer:
     """Analyze and optimize cron schedule."""
 
+    def __init__(self):
+        self.last_check_error = None
+        self.last_check_performed = False
+
+    def _read_crontab(self):
+        """Read active crontab text safely (may be unavailable in restricted envs)."""
+        try:
+            result = subprocess.run(["crontab", "-l"], capture_output=True, text=True)
+        except (PermissionError, FileNotFoundError, OSError) as e:
+            self.last_check_error = str(e)
+            return None
+
+        if result.returncode != 0:
+            stderr = (result.stderr or "").strip()
+            self.last_check_error = stderr or "crontab unavailable"
+            return None
+
+        return result.stdout
+
     def analyze(self):
         """Check which action scripts exist but aren't in cron."""
         missing_from_cron = []
+        self.last_check_error = None
+        self.last_check_performed = False
 
         action_scripts = [
             ("auto_freelance_responder.py", "Responds to hot freelance posts", "*/3"),
@@ -477,12 +498,17 @@ class CronOptimizer:
             ("ecom_autopilot.py", "Auto-manages ecom pipeline", "*/4"),
         ]
 
+        crontab_text = self._read_crontab()
+        if crontab_text is None:
+            log(f"Cron check skipped: {self.last_check_error}", "WARN")
+            return missing_from_cron
+
+        self.last_check_performed = True
+
         for script, desc, freq in action_scripts:
             path = PROJECT_ROOT / "AUTOMATIONS" / script
             if path.exists():
-                # Check if it's in active crontab
-                result = subprocess.run(["crontab", "-l"], capture_output=True, text=True)
-                if script not in result.stdout:
+                if script not in crontab_text:
                     missing_from_cron.append({
                         "script": script,
                         "description": desc,
@@ -597,18 +623,24 @@ def show_status():
         decisions = count_csv_rows(DECISION_LEDGER)
         print(f"\nDECISIONS LOGGED: {decisions}")
 
-    # Broken cron diagnosis
-    print("\nBROKEN CRON JOBS:")
+    # Cron watchlist
+    print("\nCRON WATCHLIST (historical issues + patch notes):")
     fixer = BrokenCronFixer()
     for script, info in fixer.KNOWN_ISSUES.items():
         print(f"  {script}: {info['symptom']} [{info['severity']}]")
+        print(f"    {info['fix']}")
 
     # Missing action scripts in cron
     print("\nMISSING FROM CRON (exist but not scheduled):")
     optimizer = CronOptimizer()
     missing = optimizer.analyze()
-    if not missing:
+    if optimizer.last_check_error:
+        print(f"  Skipped cron check: {optimizer.last_check_error}")
+    elif not missing:
         print("  All action scripts are in cron")
+    else:
+        for item in missing:
+            print(f"  {item['script']} ({item['suggested_frequency']}): {item['description']}")
 
     print("=" * 60)
 
