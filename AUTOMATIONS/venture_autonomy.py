@@ -170,11 +170,16 @@ def send_bus_message(body, to_agent="ceo"):
 # VENTURE TYPES — Each type defines its autonomy pipeline
 # ══════════════════════════════════════════════════════════════════════════
 
+# Model routing: Opus for strategy/content/decisions, Sonnet for execution/bulk
+MODEL_OPUS = "claude-opus-4-6"
+MODEL_SONNET = "claude-sonnet-4-6"
+
 VENTURE_TYPES = {
     "OUTBOUND": {
         "description": "Cold outreach ventures — email, DM, LinkedIn, etc.",
         "pipeline": ["prospect", "qualify", "build_asset", "outreach", "followup", "track"],
         "interval_hours": 4,
+        "model": MODEL_OPUS,  # outreach copy is external-facing, needs best quality
         "scripts": {
             "prospect": ("printmaxx_agent.py", "--mission outreach-prospect"),
             "qualify": ("printmaxx_agent.py", "--mission outreach-qualify"),
@@ -208,6 +213,7 @@ VENTURE_TYPES = {
         "description": "Content creation ventures — social, blog, video scripts, newsletters.",
         "pipeline": ["find_topics", "generate", "format", "schedule", "distribute", "track"],
         "interval_hours": 6,
+        "model": MODEL_OPUS,  # content is external-facing, needs best quality
         "scripts": {
             "find_topics": ("printmaxx_agent.py", "--mission content-topics"),
             "generate": ("printmaxx_agent.py", "--mission content"),
@@ -241,6 +247,7 @@ VENTURE_TYPES = {
         "description": "App factory ventures — PWAs, tools, micro-SaaS.",
         "pipeline": ["find_gap", "spec", "build", "deploy", "aso", "track"],
         "interval_hours": 12,
+        "model": MODEL_SONNET,  # code generation — Sonnet handles well
         "scripts": {
             "find_gap": ("printmaxx_agent.py", "--mission apps-research"),
             "build": ("printmaxx_agent.py", "--mission apps"),
@@ -269,6 +276,7 @@ VENTURE_TYPES = {
         "description": "Local business outreach — find businesses, build sites, pitch.",
         "pipeline": ["discover", "grade", "build_preview", "deploy", "outreach", "track"],
         "interval_hours": 4,
+        "model": MODEL_OPUS,  # outreach copy + business evaluation = strategic
         "scripts": {
             "discover": ("openclaw_local_biz.py", '--discover "{city}" {niche}'),
             "build_preview": ("openclaw_local_biz.py", "--build"),
@@ -299,6 +307,7 @@ VENTURE_TYPES = {
         "description": "Research & alpha — scrape, analyze, score, route to actions.",
         "pipeline": ["scrape", "analyze", "score", "route", "compound"],
         "interval_hours": 2,
+        "model": MODEL_OPUS,  # analysis + scoring = needs deep reasoning
         "scripts": {
             "scrape": ("twitter_alpha_scraper.py", "--all"),
             "analyze": ("alpha_auto_processor.py", "--process-new"),
@@ -327,6 +336,7 @@ VENTURE_TYPES = {
         "description": "Monetization ventures — affiliate, digital products, funnels.",
         "pipeline": ["find_offers", "create_funnel", "build_page", "deploy", "distribute", "track"],
         "interval_hours": 8,
+        "model": MODEL_OPUS,  # funnel copy + offer evaluation = strategic
         "scripts": {
             "find_offers": ("printmaxx_agent.py", "--mission monetize-research"),
             "create_funnel": ("printmaxx_agent.py", "--mission monetize"),
@@ -357,6 +367,7 @@ VENTURE_TYPES = {
         "description": "Digital product ventures — ebooks, courses, templates, tools.",
         "pipeline": ["find_demand", "create", "listing", "launch", "distribute", "track"],
         "interval_hours": 24,
+        "model": MODEL_OPUS,  # product creation + listing copy = needs best model
         "scripts": {
             "find_demand": ("printmaxx_agent.py", "--mission product-research"),
             "create": ("printmaxx_agent.py", "--mission product-create"),
@@ -385,6 +396,7 @@ VENTURE_TYPES = {
         "description": "Data scraping ventures — competitive intel, lead gen, market data.",
         "pipeline": ["configure", "scrape", "clean", "analyze", "store", "alert"],
         "interval_hours": 2,
+        "model": MODEL_SONNET,  # scraping is execution, Sonnet handles it
         "scripts": {
             "scrape": ("twitter_alpha_scraper.py", "--all"),
             "analyze": ("alpha_auto_processor.py", "--process-new"),
@@ -649,9 +661,10 @@ class VentureAutonomyEngine:
             f"Do the minimum viable version of this step and save results."
         )
 
+        model = vtype.get("model", MODEL_SONNET)
         cmd = (
             f'unset CLAUDECODE && claude -p --dangerously-skip-permissions '
-            f'--model claude-sonnet-4-6 '
+            f'--model {model} '
             f'"{prompt}"'
         )
 
@@ -735,6 +748,7 @@ class VentureAutonomyEngine:
                           .replace("'", "'\\''")
                           .replace("\n", " "))
 
+        model = vtype.get("model", MODEL_SONNET)
         home = str(Path.home())
         log_path = f"{home}/.claude/logs/{venture_id}.log"
 
@@ -748,7 +762,7 @@ class VentureAutonomyEngine:
     <array>
         <string>/bin/bash</string>
         <string>-c</string>
-        <string>cd "{PROJECT}" &amp;&amp; claude -p "{prompt_escaped}" --dangerously-skip-permissions --model claude-sonnet-4-6 >> "{log_path}" 2>&amp;1</string>
+        <string>cd "{PROJECT}" &amp;&amp; claude -p "{prompt_escaped}" --dangerously-skip-permissions --model {model} >> "{log_path}" 2>&amp;1</string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>

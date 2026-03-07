@@ -1198,3 +1198,81 @@ Here's how to turn your views into leads:
 
 22 engagement farming hacks for TikTok/ Reels
 
+
+
+---
+
+## Pending Enhancement (ALPHA15848, Score: 56)
+
+**Source:** @alexxgrowth (daily scraper) | **URL:** https://x.com/alexxgrowth/status/1970847940823400467
+**Added:** 2026-03-06T23:00:01-05:00
+
+autistic content hack:
+
+sharing YOUR LOSSES makes more money than sharing wins
+
+i told my clippers to post two identical product launches:
+
+version A:
+"made $100k this month!"
+
+version B:
+"lost $30k but learned this..."
+
+version A:
+123k views, 13 sales
+
+version B:
+5.4M views, 1450 sales
+
+losing stories convert 49x better
+
+here's the psychology:
+
+winners create distance
+
+but
+
+
+
+---
+
+## Pending Enhancement (ALPHA15857, Score: 30)
+
+**Source:** @fromzerotomill (daily scraper) | **URL:** https://x.com/fromzerotomill/status/1921895790206730369
+**Added:** 2026-03-06T23:00:01-05:00
+
+There’s a guy in Romania
+
+Runs a faceless AI +18 disney IG profiles
+
+Auto-generates content with Midjourney + GPT
+
+Voice with ElevenLabs
+
+$300K/month
+
+Zero human contact
+
+Just ChatGPT, Stripe, and a MacBook
+
+Reply w/'AI' and ill send you guide on how to do it
+
+
+
+---
+
+## Pending Enhancement (ALPHA15906, Score: 37)
+
+**Source:** @mikey_starts (bookmarks) | **URL:** https://x.com/mikey_starts/status/2028516389590368583
+**Added:** 2026-03-06T23:00:01-05:00
+
+2026 guide to >$100M exit
+
+> target niche dominated by slow incumbents
+> rebuild core feature AI-first
+> hire 100s of gen z students to run ambassador accounts
+> copy most viral formats every single week
+> cross-post to Tiktok, IG, YT & Facebook
+> pay based on performance and not
+

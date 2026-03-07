@@ -1,0 +1,58 @@
+{
+  "week_start": "2026-03-06",
+  "week_end": "2026-03-12",
+  "targets": {
+    "gumroad_products_listed": {
+      "target": 13,
+      "actual": 0,
+      "owner": "HUMAN",
+      "guide": "OPS/GUMROAD_UPLOAD_NOW.md",
+      "priority": "P0"
+    },
+    "fiverr_gigs_listed": {
+      "target": 10,
+      "actual": 0,
+      "owner": "HUMAN",
+      "guide": "OPS/FIVERR_UPLOAD_NOW.md",
+      "priority": "P0"
+    },
+    "cold_emails_sent": {
+      "target": 22,
+      "actual": 0,
+      "owner": "HUMAN",
+      "guide": "AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md",
+      "priority": "P1",
+      "note": "Requires Instantly.ai signup + 2 week warmup"
+    },
+    "content_posts_published": {
+      "target": 20,
+      "actual": 0,
+      "owner": "HUMAN",
+      "guide": "CONTENT/social/APPROVED_POSTS_MAR6.csv",
+      "priority": "P1"
+    },
+    "etsy_listings_posted": {
+      "target": 20,
+      "actual": 0,
+      "owner": "HUMAN",
+      "priority": "P2"
+    },
+    "whop_products_listed": {
+      "target": 8,
+      "actual": 0,
+      "owner": "HUMAN",
+      "priority": "P2"
+    },
+    "apps_with_email_capture": {
+      "target": 3,
+      "actual": 0,
+      "owner": "AGENT",
+      "priority": "P2",
+      "apps": ["prayerlock-app.surge.sh", "focuslock-app.surge.sh", "coldmaxx-app.surge.sh"]
+    }
+  },
+  "last_week_results": {
+    "note": "First week of tracking. No prior targets to compare against.",
+    "revenue_generated": 0
+  }
+}
