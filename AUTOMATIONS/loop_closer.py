@@ -175,6 +175,11 @@ def adjust_interval(agent_id, params, dry_run):
         content
     )
     if updated == content:
+        # Check if already at target interval
+        import re as re2
+        match = re2.search(r'<integer>(\d+)</integer>', content[content.find('StartInterval'):])
+        if match and int(match.group(1)) == new_seconds:
+            return True, f"{agent_id} already at {new_hours}h — no change needed"
         return False, "Could not find StartInterval in plist"
 
     plist.write_text(updated)
@@ -457,14 +462,15 @@ def execute_decisions(dry_run=False):
     log(f"  Found {len(decisions)} pending decisions")
     executed = 0
 
-    # Load already-executed decisions to avoid re-execution
+    # Load successfully-executed decisions to avoid re-execution (skip FAILEDs so they can retry)
     executed_ids = set()
     if LOOP_LOG.exists():
         with open(LOOP_LOG) as f:
             for line in f:
                 try:
                     entry = json.loads(line.strip())
-                    executed_ids.add(f"{entry.get('action')}:{entry.get('target')}")
+                    if entry.get("result") == "OK":
+                        executed_ids.add(f"{entry.get('action')}:{entry.get('target')}")
                 except (json.JSONDecodeError, KeyError):
                     pass
 

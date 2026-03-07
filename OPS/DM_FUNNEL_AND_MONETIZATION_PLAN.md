@@ -453,3 +453,16 @@ Anyone can build a $10,000 writing side hustle.
 
 Click here to grab my FREE 5-day crash course to start making money ghostwriting on 𝕏:
 
+
+
+---
+
+## Pending Enhancement (ALPHA17490, Score: 24)
+
+**Source:** @joelhooks (high-signal-accounts) | **URL:** https://x.com/joelhooks/status/2030321859494121789
+**Added:** 2026-03-07T17:37:12-05:00
+
+13 years of making educational content we've taken $0 in sponsorship revenue
+
+between that and not selling at peak when pluralsight (remember them?) was buying up everything i often wonder how much fuck you money i could have had
+

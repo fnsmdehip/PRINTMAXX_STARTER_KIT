@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-03-07T20:00:00",
-  "total_deployments": 149,
+  "last_updated": "2026-03-07T17:06:27.535463",
+  "total_deployments": 152,
   "all_200": true,
-  "notes": "printmaxx-site.surge.sh needs Vercel (has API routes, cannot static export)",
+  "notes": "printmaxx-site.surge.sh fixed (was 404). 2 new tools deployed.",
   "summary": {
     "apps": 20,
     "streak_landing_pages": 24,
     "streak_web_pages": 28,
     "local_biz_openclaw": 14,
-    "tools_saas": 21,
+    "tools_saas": 23,
     "demos": 19,
     "hubs": 4,
     "lead_magnets": 3,
@@ -960,7 +960,34 @@
         "deployed": "2026-03-07",
         "note": "Post-purchase/opt-in thank you page"
       }
-    ]
+    ],
+    "printmaxx-site.surge.sh": {
+      "url": "https://printmaxx-site.surge.sh",
+      "title": "PRINTMAXX - Apps That Fix Real Problems",
+      "source": "LANDING/app-marketing-pages/",
+      "type": "hub",
+      "status": 200,
+      "deployed": "2026-03-07T17:06:27.535463",
+      "note": "FIXED: was 404, redeployed from app-marketing-pages/"
+    },
+    "printmaxx-control-panel.surge.sh": {
+      "url": "https://printmaxx-control-panel.surge.sh",
+      "title": "PRINTMAXX Control Panel",
+      "source": "output/dashboard/",
+      "type": "tools_saas",
+      "status": 200,
+      "deployed": "2026-03-07T17:06:27.535463",
+      "note": "NEW: Control panel dashboard, Mar 4 build"
+    },
+    "website-analyzer-pm.surge.sh": {
+      "url": "https://website-analyzer-pm.surge.sh",
+      "title": "Website Analyzer | PRINTMAXX",
+      "source": "output/website-analyzer/",
+      "type": "tools_saas",
+      "status": 200,
+      "deployed": "2026-03-07T17:06:27.535463",
+      "note": "NEW: Website analyzer tool, distinct from audit tool"
+    }
   },
   "live_test": {
     "tested_at": "2026-03-07T18:18:00",
@@ -969,5 +996,12 @@
     "yellow": 11,
     "red": 1,
     "note": "Cycle 2 playwright test. 1 permanent RED (DNS label too long). 3 transient 504s recovered. Broken footer link on hilal+prayerlock (printmaxx-lead-magnets 404). 11 new sites added to catalog."
-  }
+  },
+  "new_this_cycle": [
+    "printmaxx-control-panel.surge.sh",
+    "website-analyzer-pm.surge.sh"
+  ],
+  "fixed_this_cycle": [
+    "printmaxx-site.surge.sh"
+  ]
 }

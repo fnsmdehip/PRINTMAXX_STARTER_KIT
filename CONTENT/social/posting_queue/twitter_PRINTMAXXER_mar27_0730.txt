@@ -1,0 +1,78 @@
+PLATFORM: Twitter/X
+ACCOUNT: @PRINTMAXXER
+SCHEDULED: 2026-03-27 07:30
+CHARACTER_COUNT: thread (7 tweets)
+THREAD: yes
+IMAGE: none
+STATUS: READY_TO_POST
+SOURCE: printmaxxer/HN_AND_TWEETSTORMS_2026-03-07.md | Storm 1 | APPROVED cycle 6
+QUALITY_GATE: PASSED
+
+---
+
+[TWEET 1 — post first]
+I deployed 77 websites last week.
+
+hosting cost: $0
+time to deploy all 77: under 20 minutes
+
+here's exactly how.
+
+[TWEET 2 — reply to tweet 1]
+surge.sh is the answer most people skip over.
+
+static site hosting. free tier is unlimited projects. custom subdomains. deploys in seconds from CLI.
+
+`surge ./my-site my-site.surge.sh`
+
+that's the whole deploy command.
+
+[TWEET 3 — reply to tweet 2]
+I wrote one bash loop.
+
+for dir in sites/*/; do
+  name=$(basename "$dir")
+  surge "$dir" "${name}.surge.sh"
+done
+
+77 folders. 77 deploys. one loop. 18 minutes.
+
+no Vercel. no Netlify. no AWS. no credit card.
+
+[TWEET 4 — reply to tweet 3]
+the template system is what makes 77 sites possible.
+
+one base HTML template. swap the title, the color, the niche keyword. write it to a folder. repeat.
+
+python script. 40 lines. generates a new site in 0.3 seconds.
+
+i have 131 more assets ready to deploy the same way.
+
+[TWEET 5 — reply to tweet 4]
+"but how do you manage 77 sites"
+
+you don't manage them. that's the point.
+
+static HTML doesn't go down. doesn't need updates. doesn't need patches. doesn't need a sysadmin.
+
+set it. leave it. let it compound.
+
+[TWEET 6 — reply to tweet 5]
+the full stack for $0/month:
+
+- surge.sh (hosting)
+- vanilla JS (no npm, no build step)
+- Service Workers (offline capability)
+- localStorage (data persistence)
+- GitHub (version control, free)
+
+zero SaaS subscriptions. zero recurring cost.
+
+[TWEET 7 — reply to tweet 6]
+77 live sites. $0 hosting. 20 minutes of work.
+
+the only thing stopping you from doing the same is overthinking the stack.
+
+surge.sh + bash loop + one template. that's it.
+
+what's your current monthly hosting bill? #buildinpublic

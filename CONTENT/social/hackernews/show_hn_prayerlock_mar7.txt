@@ -1,0 +1,26 @@
+PLATFORM: Hacker News
+TYPE: Show HN
+STATUS: READY_TO_POST
+SOURCE: HN_AND_TWEETSTORMS_2026-03-07.md | APPROVED cycle 6
+QUALITY_GATE: PASSED
+WORD_COUNT: 172
+NOTE: Ramadan timing — post before April 1. High relevance window right now.
+
+---
+
+TITLE:
+Show HN: PrayerLock – 55KB PWA that intercepts your phone before you scroll
+
+URL:
+prayerlock-app.surge.sh
+
+BODY:
+The app is 55KB total. No dependencies. No framework. No tracking. No analytics. No backend.
+
+The concept: when you open your phone, PrayerLock fires a prayer prompt before you get to your feed. It uses the Page Visibility API to detect when the tab regains focus, then surfaces a short prayer or scripture. You pray, you dismiss, you continue. Or you don't. No guilt loop.
+
+It's a PWA so it installs to your home screen on Android in 2 taps (iOS requires the manual "Add to Home Screen" step, which kills casual adoption but the target user is motivated enough to do it). Offline-capable via Service Worker. Works with zero signal.
+
+I made it deliberately small. The production build is one HTML file, one CSS file, one JS file. The whole thing fits in a single HTTP request if you inline it.
+
+The constraint that produced the 55KB target: I wanted it to load on a 3G connection before the user changed their mind.

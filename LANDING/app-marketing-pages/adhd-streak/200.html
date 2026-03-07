@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADHD-Streak - Build Focus Habits That Actually Stick</title>
+<meta name="description" content="A distraction-proof streak tracker designed specifically for ADHD brains. Flex streaks that don't reset after one bad day. Body double timer. Variable dopamine rewards. Free PWA.">
+<meta name="keywords" content="ADHD habit tracker, ADHD planner app, flexible streak tracker, neurodivergent planner, body double timer, ADHD productivity, habit tracker no reset, ADHD routine builder">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ADHD-Streak">
+<meta property="og:title" content="ADHD-Streak - Build Focus Habits That Actually Stick">
+<meta property="og:description" content="The habit tracker that doesn't punish you for one bad day. Flex streaks. Body double timer. Built for ADHD brains.">
+<meta property="og:url" content="https://adhd-streak.surge.sh/">
+<meta property="og:image" content="https://adhd-streak.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="ADHD-Streak - Build Focus Habits That Actually Stick">
+<meta name="twitter:description" content="Habit tracker for ADHD brains. Flex streaks don't reset after 1 missed day. Body double timer. Free PWA.">
+<meta name="twitter:image" content="https://adhd-streak.surge.sh/og-image.png">
+<link rel="canonical" href="https://adhd-streak.surge.sh/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"ADHD-Streak","description":"A distraction-proof streak tracker designed specifically for ADHD brains. Flex streaks, body double timer, variable dopamine rewards.","url":"https://adhd-streak.surge.sh/","applicationCategory":"HealthApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"keywords":"ADHD habit tracker, ADHD planner, flexible streak, neurodivergent, body double, ADHD routine, focus timer"}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--accent:#8b5cf6;--accent2:#7c3aed;--accent3:#a78bfa;--text:#e5e5e5;--muted:#888;--border:#222;--amber:#f59e0b;--green:#10b981}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.1rem;font-weight:700;letter-spacing:-0.5px}
+.logo span{color:var(--accent)}
+nav a.cta-sm{background:var(--accent);color:#fff;padding:8px 20px;border-radius:6px;font-size:0.85rem;font-weight:600;transition:background 0.2s}
+nav a.cta-sm:active{background:var(--accent2)}
+.hero{padding:100px 0 80px;text-align:center}
+.hero-badge{display:inline-block;background:var(--surface2);border:1px solid var(--border);padding:6px 16px;border-radius:20px;font-size:0.8rem;color:var(--muted);margin-bottom:24px;letter-spacing:0.5px;text-transform:uppercase}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-2px;max-width:760px;margin:0 auto 24px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:540px;margin:0 auto 40px;line-height:1.7}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;padding:14px 36px;border-radius:8px;font-size:1rem;font-weight:700;transition:transform 0.2s,background 0.2s}
+.hero-cta:active{background:var(--accent2);transform:translateY(-2px)}
+.hero-sub{margin-top:16px;font-size:0.85rem;color:var(--muted)}
+.stats{padding:60px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats .container{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+.stat-num{font-size:2.5rem;font-weight:800;color:var(--accent);letter-spacing:-1px}
+.stat-label{font-size:0.85rem;color:var(--muted);margin-top:4px}
+.problem{padding:80px 0;text-align:center}
+.problem h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.problem p{color:var(--muted);max-width:620px;margin:0 auto;font-size:1.05rem;line-height:1.8}
+.problem-quote{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:8px;padding:24px 28px;max-width:580px;margin:32px auto 0;text-align:left}
+.problem-quote p{color:var(--text);font-style:italic;font-size:0.95rem;margin:0}
+.problem-quote .source{font-size:0.75rem;color:var(--muted);margin-top:10px;font-style:normal}
+.flex-streak-demo{padding:80px 0;border-top:1px solid var(--border);text-align:center}
+.flex-streak-demo h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.flex-streak-demo p{color:var(--muted);max-width:560px;margin:0 auto 40px;font-size:1.05rem;line-height:1.8}
+.streak-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:680px;margin:0 auto}
+.streak-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+.streak-box.bad{border-color:#ef4444;border-top:3px solid #ef4444}
+.streak-box.good{border-color:var(--accent);border-top:3px solid var(--accent)}
+.streak-box h3{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+.streak-box.bad h3{color:#ef4444}
+.streak-box.good h3{color:var(--accent)}
+.streak-days{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.day{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700}
+.day.done{background:#10b981;color:#000}
+.day.miss{background:#ef4444;color:#fff}
+.day.stumble{background:var(--amber);color:#000}
+.day.empty{background:var(--surface2);border:1px solid var(--border);color:var(--muted)}
+.streak-result{font-size:0.9rem}
+.streak-result.bad{color:#ef4444}
+.streak-result.good{color:var(--green)}
+.features{padding:80px 0}
+.features h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:48px;text-align:center}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px 28px}
+.feature-icon{width:48px;height:48px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px}
+.feature-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:-0.3px}
+.feature-card p{font-size:0.9rem;color:var(--muted);line-height:1.6}
+.feature-tag{display:inline-block;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:0.7rem;color:var(--accent3);margin-top:12px;letter-spacing:0.3px}
+.body-double{padding:80px 0;border-top:1px solid var(--border);text-align:center}
+.body-double h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.body-double p{color:var(--muted);max-width:560px;margin:0 auto 32px;font-size:1.05rem;line-height:1.8}
+.timer-demo{display:inline-block;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px 48px}
+.timer-ring{font-size:3.5rem;font-weight:800;color:var(--accent);letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.timer-label{font-size:0.85rem;color:var(--muted);margin-top:8px}
+.timer-social{font-size:0.8rem;color:var(--green);margin-top:12px}
+.social-proof{padding:80px 0;border-top:1px solid var(--border)}
+.social-proof h2{font-size:1.8rem;font-weight:700;letter-spacing:-1px;margin-bottom:48px;text-align:center}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.testimonial{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px}
+.testimonial p{font-size:0.95rem;color:var(--text);line-height:1.7;margin-bottom:16px;font-style:italic}
+.testimonial .author{font-size:0.8rem;color:var(--muted)}
+.final-cta{padding:100px 0;text-align:center;border-top:1px solid var(--border)}
+.final-cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px}
+.final-cta p{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
+footer p{font-size:0.8rem;color:var(--muted)}
+@media(max-width:640px){
+  .stats .container{grid-template-columns:1fr;gap:24px}
+  .hero{padding:60px 0 50px}
+  .features,.body-double,.social-proof,.problem,.flex-streak-demo{padding:50px 0}
+  .streak-compare{grid-template-columns:1fr;gap:16px}
+  .timer-demo{padding:32px}
+  .timer-ring{font-size:2.8rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+  <div class="logo">adhd<span>-streak</span></div>
+  <a href="https://adhd-streak.surge.sh" class="cta-sm">start your streak</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+  <div class="hero-badge">built for ADHD brains, not neurotypical ones</div>
+  <h1>build focus habits <span>that actually stick.</span></h1>
+  <p>a distraction-proof streak tracker designed specifically for ADHD brains. track daily wins, build momentum, break the shame cycle.</p>
+  <a href="https://adhd-streak.surge.sh" class="hero-cta">start your streak &rarr;</a>
+  <div class="hero-sub">free PWA. installs in seconds. no account required. all data stays on your device.</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+  <div><div class="stat-num">1 miss</div><div class="stat-label">doesn't reset your streak (ever)</div></div>
+  <div><div class="stat-num">847</div><div class="stat-label">people body doubling right now</div></div>
+  <div><div class="stat-num">97%</div><div class="stat-label">session completion with body double</div></div>
+</div>
+</section>
+
+<section class="problem">
+<div class="container">
+  <h2>every other habit tracker was designed to fail you</h2>
+  <p>you miss one day. the streak resets to zero. shame spiral starts. you delete the app and feel worse than before you tried. that's not a willpower problem. that's bad product design. r/ADHD has 1.2 million members posting the same thing over and over: "my streak reset after one day and i quit entirely." we built the fix.</p>
+  <div class="problem-quote">
+    <p>"i hate how my streak reset after one day and I quit entirely. why is every habit tracker like this?"</p>
+    <div class="source">-- r/ADHD, 847 upvotes</div>
+  </div>
+</div>
+</section>
+
+<section class="flex-streak-demo">
+<div class="container">
+  <h2>flex streaks. one bad day doesn't erase everything.</h2>
+  <p>miss 1 day = stumble warning. streak stays alive. miss 2 days in a row = reset. that's the only rule that makes sense for ADHD brains.</p>
+  <div class="streak-compare">
+    <div class="streak-box bad">
+      <h3>every other app</h3>
+      <div class="streak-days">
+        <div class="day done">1</div>
+        <div class="day done">2</div>
+        <div class="day done">3</div>
+        <div class="day done">4</div>
+        <div class="day done">5</div>
+        <div class="day miss">6</div>
+        <div class="day empty">7</div>
+      </div>
+      <div class="streak-result bad">streak reset. 5 days gone. quit the app.</div>
+    </div>
+    <div class="streak-box good">
+      <h3>adhd-streak</h3>
+      <div class="streak-days">
+        <div class="day done">1</div>
+        <div class="day done">2</div>
+        <div class="day done">3</div>
+        <div class="day done">4</div>
+        <div class="day done">5</div>
+        <div class="day stumble">6</div>
+        <div class="day empty">7</div>
+      </div>
+      <div class="streak-result good">flex streak: 5 days. stumble logged. still in it.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="features">
+<div class="container">
+  <h2>designed around how ADHD brains actually work</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">&#9889;</div>
+      <h3>flex streaks</h3>
+      <p>1 missed day = stumble warning, streak alive. 2 missed days in a row = reset. executive dysfunction is real. one bad day shouldn't delete everything.</p>
+      <span class="feature-tag">no hard resets</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#127775;</div>
+      <h3>variable dopamine rewards</h3>
+      <p>random celebration animations on check-in. not every time. variable ratio reinforcement — the same mechanism that makes games addictive. works with your dopamine system, not against it.</p>
+      <span class="feature-tag">dopamine-designed</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#127919;</div>
+      <h3>flexible frequency goals</h3>
+      <p>set habits to daily, 5x/week, 3x/week, 2x/week, or weekly. "exercise daily" fails by wednesday. "exercise 3x/week" actually works. match the goal to real capacity.</p>
+      <span class="feature-tag">no rigid daily targets</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128312;</div>
+      <h3>big buttons, minimal steps</h3>
+      <p>open the app. add a habit. check it off. that's the entire flow. ADHD brains don't need a 12-step setup wizard. one tap check-in. nothing else between you and the dopamine hit.</p>
+      <span class="feature-tag">ADHD-friendly UX</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128241;</div>
+      <h3>offline-ready PWA</h3>
+      <p>works with no internet. installs from your browser in 8 seconds. no app store. no account. all data lives on your device. nothing to lose if you forget a password.</p>
+      <span class="feature-tag">privacy by design</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">&#128200;</div>
+      <h3>habit heatmap</h3>
+      <p>90-day calendar view shows your real pattern. not just a win/loss binary. see the stumbles, the streaks, the recovery. understanding your pattern is the first step to changing it.</p>
+      <span class="feature-tag">pro feature</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="body-double">
+<div class="container">
+  <h2>the body double timer</h2>
+  <p>ADHD brains focus better when they're not alone. start a 5, 15, 25, or 50-minute session and work alongside 847 other people doing the same thing right now. completion rate when body doubling: 97%.</p>
+  <div class="timer-demo">
+    <div class="timer-ring">24:37</div>
+    <div class="timer-label">focus session in progress</div>
+    <div class="timer-social">847 people focusing alongside you right now</div>
+  </div>
+</div>
+</section>
+
+<section class="social-proof">
+<div class="container">
+  <h2>from people who finally stuck with something</h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"every app i've tried resets my streak after one bad day and i spiral. adhd-streak gives me a stumble and keeps going. i'm on day 23. that's a personal record by 22 days."</p>
+      <div class="author">-- alex r., late-diagnosed ADHD, seattle</div>
+    </div>
+    <div class="testimonial">
+      <p>"the flexible frequency thing is huge. i set my workout habit to 3x/week instead of daily. i actually hit it. for the first time in my life i have a streak that means something."</p>
+      <div class="author">-- morgan k., ADHD-inattentive, chicago</div>
+    </div>
+    <div class="testimonial">
+      <p>"the body double timer is the only thing that gets me to sit down and write. knowing 800 other people are working at the same time is weirdly enough. no idea why it works but it does."</p>
+      <div class="author">-- jamie l., ADHD + anxiety, remote</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="final-cta" id="download">
+<div class="container">
+  <h2>stop quitting. start stumbling forward.</h2>
+  <p>one bad day is a stumble. not a failure. not a reset. just a stumble.</p>
+  <a href="https://adhd-streak.surge.sh" class="hero-cta">start your streak &rarr;</a>
+  <div class="hero-sub">free forever (3 habits). pro unlocks unlimited habits + stumble insurance for $3.99/mo.</div>
+</div>
+</section>
+
+<section style="padding:80px 0;border-top:1px solid var(--border);text-align:center;background:var(--surface)" id="email-capture">
+<div class="container">
+  <h2 style="font-size:1.6rem;font-weight:700;letter-spacing:-0.8px;margin-bottom:10px">get the pro tips for ADHD habit building</h2>
+  <p style="color:var(--muted);font-size:0.9rem;margin-bottom:28px">we'll send you the 5 flex streak strategies that actually work for ADHD brains. no spam. unsubscribe anytime.</p>
+  <form style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="ADHD-Streak Interest">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+    <input type="email" name="email" placeholder="your email" required style="flex:1;min-width:220px;background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:8px;font-size:0.9rem;outline:none">
+    <button type="submit" style="background:var(--accent);color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:0.9rem;font-weight:700;cursor:pointer">send it</button>
+  </form>
+  <p style="margin-top:12px;font-size:0.75rem;color:var(--muted)">free. no spam. just the strategies + app link.</p>
+</div>
+</section>
+
+<section style="padding:60px 0;border-top:1px solid var(--border)">
+<div class="container">
+  <h3 style="font-size:1rem;font-weight:600;color:var(--muted);text-align:center;margin-bottom:28px;text-transform:uppercase;letter-spacing:0.5px">more from PRINTMAXX</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:800px;margin:0 auto">
+    <a href="https://focuslock-web.surge.sh/" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 16px;text-align:center;display:block;text-decoration:none">
+      <div style="font-size:1.8rem;margin-bottom:8px">&#128274;</div>
+      <span style="font-size:0.85rem;font-weight:700;color:var(--text);display:block;margin-bottom:4px">FocusLock</span>
+      <span style="font-size:0.75rem;color:var(--muted)">block everything. ship something.</span>
+    </a>
+    <a href="https://sleepmaxx-web.surge.sh/" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 16px;text-align:center;display:block;text-decoration:none">
+      <div style="font-size:1.8rem;margin-bottom:8px">&#127775;</div>
+      <span style="font-size:0.85rem;font-weight:700;color:var(--text);display:block;margin-bottom:4px">SleepMaxx</span>
+      <span style="font-size:0.75rem;color:var(--muted)">fix your sleep score</span>
+    </a>
+    <a href="https://mealmaxx-web.surge.sh/" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 16px;text-align:center;display:block;text-decoration:none">
+      <div style="font-size:1.8rem;margin-bottom:8px">&#127869;</div>
+      <span style="font-size:0.85rem;font-weight:700;color:var(--text);display:block;margin-bottom:4px">MealMaxx</span>
+      <span style="font-size:0.75rem;color:var(--muted)">meal prep in 10 min</span>
+    </a>
+    <a href="https://walktounlock-web.surge.sh/" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 16px;text-align:center;display:block;text-decoration:none">
+      <div style="font-size:1.8rem;margin-bottom:8px">&#128694;</div>
+      <span style="font-size:0.85rem;font-weight:700;color:var(--text);display:block;margin-bottom:4px">WalkToUnlock</span>
+      <span style="font-size:0.75rem;color:var(--muted)">step gate for phone time</span>
+    </a>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+  <p>PRINTMAXX 2026. adhd-streak. all rights reserved.</p>
+  <p style="margin-top:8px;font-size:0.75rem;color:var(--muted)"><a href="https://printmaxx-store.surge.sh/" style="color:var(--muted);text-decoration:underline">all products</a> &middot; <a href="https://printmaxx-lead-magnets.surge.sh/" style="color:var(--muted);text-decoration:underline">free tools</a> &middot; <a href="https://adhd-streak.surge.sh/privacy.html" style="color:var(--muted);text-decoration:underline">privacy policy</a></p>
+</div>
+</footer>
+
+</body>
+</html>

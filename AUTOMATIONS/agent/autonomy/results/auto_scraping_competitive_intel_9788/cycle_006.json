@@ -1,0 +1,32 @@
+{
+  "cycle_start": "2026-03-07T17:30:02.215853",
+  "cycle_end": "2026-03-07T17:30:02.226781",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 1,
+  "new_intel_rows_written": 1,
+  "alerts_generated": 1,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "We said no to $2.5m vc money and I'm still kinda shocked we did it lol",
+      "subreddit": "growthhacking",
+      "score": 10,
+      "url": "https://www.reddit.com/r/GrowthHacking/comments/1rn286d/we_said_no_to_25m_vc_money_and_im_still_kinda/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "We said no to $2.5m vc money and I'm still kinda shocked we did it lol",
+      "subreddit": "growthhacking",
+      "score": 10,
+      "comments": 7,
+      "url": "https://www.reddit.com/r/GrowthHacking/comments/1rn286d/we_said_no_to_25m_vc_money_and_im_still_kinda/",
+      "keyword_hits": 0,
+      "roi": "HIGH",
+      "post_id": "ALPHA17523"
+    }
+  ]
+}

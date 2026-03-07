@@ -52,3 +52,5 @@
 {"ts": "2026-03-07T14:07:00.253595", "mission": "proactive_hunt", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
 {"ts": "2026-03-07T15:40:15.658043", "mission": "health_heal", "result": "success", "duration_s": 12.8, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-07T15:40:16.181074", "mission": "process_decide", "result": "success", "duration_s": 0.5, "output": "Decisions made. 17 response drafts, 17 listing drafts"}
+{"ts": "2026-03-07T17:29:22.691713", "mission": "health_heal", "result": "success", "duration_s": 5.1, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-07T17:29:22.996413", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 17 response drafts, 17 listing drafts"}

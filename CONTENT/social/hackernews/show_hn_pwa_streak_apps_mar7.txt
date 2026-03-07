@@ -1,0 +1,28 @@
+PLATFORM: Hacker News
+TYPE: Show HN
+STATUS: READY_TO_POST
+SOURCE: HN_AND_TWEETSTORMS_2026-03-07.md | APPROVED cycle 6
+QUALITY_GATE: PASSED
+WORD_COUNT: 178
+NOTE: Best time to post Show HN: weekdays 8-10am ET. Aim for Mon-Wed for max visibility.
+
+---
+
+TITLE:
+Show HN: I built 13 streak-tracking PWAs for niche communities (all live, $0/mo hosting)
+
+URL:
+(use any live app as primary — e.g. quranstreak-app.surge.sh or prayerlock-app.surge.sh)
+
+BODY:
+I got tired of paying for infrastructure on side projects that might never make money. So I stripped everything out.
+
+13 apps. All streak trackers. Each one targets a different micro-community: Quran readers, Torah learners, Sikh practitioners, Catholics, Mormons, Lutherans, Anglicans, meditators, runners, coders, artists. All live on surge.sh right now.
+
+Tech: vanilla JS, Web App Manifest, Service Worker with cache-first strategy, localStorage for state, IndexedDB for streak history. No backend. No database. No server. The whole thing runs in the browser.
+
+The tradeoff is obvious: no cross-device sync, no push notifications on iOS (PWA limitation), no accounts. I made that call deliberately. The target user opens the app once a day on the same phone. They don't need an account. They need a streak counter that works offline.
+
+Deploying 13 apps took about 4 minutes total. One bash loop, one surge token, 13 subdomains.
+
+I'm curious if anyone else has pushed the no-backend PWA approach this far, and what the actual adoption ceiling looks like before the offline-only constraint kills retention.
