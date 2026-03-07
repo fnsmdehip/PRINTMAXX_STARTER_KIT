@@ -1,0 +1,11 @@
+found an email capture form on one of my pages that was storing every email in localStorage.
+
+client-side only. nothing went to a server. nothing went to a database. nothing went anywhere.
+
+the form worked perfectly. green checkmark. "thanks for signing up!" the user felt great.
+
+zero emails were ever captured.
+
+it had been live for weeks.
+
+if you're using any kind of form on your site, go verify RIGHT NOW that submissions are actually arriving somewhere. open your email. check your database. don't trust the UI.

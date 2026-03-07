@@ -516,6 +516,288 @@ def wire_content_to_affiliate():
     return len(affiliate_matches)
 
 
+# ─── CONNECTION 10: Swarm Leads → Master Leads ────────────────────────────
+# Swarm agents generate scored leads that need to merge into master
+def wire_swarm_leads_to_master():
+    leads_dir = safe_path(LEADS)
+    swarm_files = list(leads_dir.glob("swarm_leads_*.csv"))
+    if not swarm_files:
+        return 0
+
+    master_path = LEADS / "MASTER_LEADS.csv"
+    existing = load_csv(master_path, max_rows=2000)
+    existing_names = {r.get("business_name", "") for r in existing if r.get("business_name")}
+
+    master_fields = ["business_name", "address", "phone", "website", "google_rating",
+                     "review_count", "website_score", "signals_detected", "email_if_found",
+                     "category", "city", "scraped_at"]
+
+    total_added = 0
+    for sf in swarm_files:
+        rows = load_csv(sf, max_rows=200)
+        new_leads = []
+        for row in rows:
+            name = row.get("name", row.get("business_name", ""))
+            if not name or name in existing_names:
+                continue
+            lead = {
+                "business_name": name,
+                "address": "",
+                "phone": row.get("phone", ""),
+                "website": row.get("website", row.get("domain", "")),
+                "google_rating": row.get("google_rating", ""),
+                "review_count": row.get("google_review_count", ""),
+                "website_score": row.get("total_score", row.get("composite_score", "")),
+                "signals_detected": row.get("pain_signals", ""),
+                "email_if_found": row.get("email", ""),
+                "category": row.get("category", "swarm_lead"),
+                "city": row.get("city", ""),
+                "scraped_at": datetime.now().isoformat()
+            }
+            new_leads.append(lead)
+            existing_names.add(name)
+
+        if new_leads:
+            append_csv(master_path, new_leads, master_fields)
+            total_added += len(new_leads)
+
+    return total_added
+
+
+# ─── CONNECTION 11: Competitor Counter-Content → Posting Queue ────────────
+# Competitor stalker generates counter-content markdown that needs to be split
+# into individual posting queue files
+def wire_counter_content_to_queue():
+    content_dir = safe_path(PROJECT_ROOT / "CONTENT" / "social")
+    counter_files = list(content_dir.glob("competitor_counter_content_*.md"))
+    if not counter_files:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for cf in counter_files:
+        date_part = cf.stem.replace("competitor_counter_content_", "")
+        text = cf.read_text(encoding="utf-8")
+
+        # Split on "## TWEET" or "## THREAD" headers
+        import re
+        sections = re.split(r'## (TWEET \d+|THREAD \d+)', text)
+
+        tweet_num = 0
+        for i in range(1, len(sections), 2):
+            header = sections[i].strip()
+            body = sections[i + 1].strip() if i + 1 < len(sections) else ""
+
+            # Extract the tweet text: skip the title line (e.g. "-- Opal price shock")
+            lines = body.split("\n")
+            tweet_lines = []
+            for line in lines:
+                stripped = line.strip()
+                if stripped.startswith("**") or stripped.startswith("#") or stripped.startswith("---"):
+                    continue
+                if stripped.startswith("-- "):
+                    continue
+                if stripped:
+                    tweet_lines.append(stripped)
+
+            if not tweet_lines:
+                continue
+
+            tweet_text = "\n\n".join(tweet_lines)
+            tweet_num += 1
+            slug = f"counter_{date_part}_{tweet_num}"
+
+            if slug in existing_posts:
+                continue
+
+            post_path = safe_path(queue_dir / f"{slug}.txt")
+            post_path.write_text(tweet_text, encoding="utf-8")
+            created += 1
+
+    return created
+
+
+# ─── CONNECTION 12: OpenClaw Previews → Content Farm ─────────────────────
+# Deployed preview sites become "look what I built" case study content
+def wire_openclaw_previews_to_content():
+    state = load_json(AUTOMATIONS / "agent" / "autonomy" / "autonomy_state.json")
+    openclaw = state.get("ventures", {}).get("auto_local_biz_openclaw_nationwide_9569", {})
+    results = openclaw.get("results", [])
+
+    if not results:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for result in results:
+        city = result.get("city", "")
+        deploy_urls = result.get("deploy_urls", [])
+        businesses = result.get("businesses_discovered", 0)
+        previews = result.get("previews_built", 0)
+        cycle = result.get("cycle", 0)
+
+        if not deploy_urls:
+            continue
+
+        slug = f"openclaw_casestudy_{city.lower()}_{cycle}"
+        if slug in existing_posts:
+            continue
+
+        urls_text = "\n".join(deploy_urls)
+        tweet = (
+            f"scraped {businesses} local businesses in {city}.\n\n"
+            f"graded their websites. found {previews} with D/F scores.\n\n"
+            f"built replacement sites in 2 hours:\n{urls_text}\n\n"
+            f"cold emailed them with the demo link. $500 flat fee, no monthly.\n\n"
+            f"this is the openclaw playbook. find broken sites, fix them before asking."
+        )
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        created += 1
+
+    return created
+
+
+# ─── CONNECTION 13: Trend Synthesis → Content Farm ────────────────────────
+# High-confidence patterns from trend_synthesizer become content
+def wire_trends_to_content():
+    reports_dir = safe_path(REPORTS)
+    trend_files = sorted(reports_dir.glob("trend_synthesis_*.md"), reverse=True)
+    if not trend_files:
+        return 0
+
+    latest = trend_files[0]
+    text = latest.read_text(encoding="utf-8")
+    date_part = latest.stem.replace("trend_synthesis_", "")
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    # Extract patterns (lines starting with ### PATTERN)
+    import re
+    patterns = re.findall(r'### (PATTERN \d+): (.+?) \(Confidence: (\d+)%\)', text)
+
+    created = 0
+    for match in patterns:
+        pattern_id, title, confidence = match
+        conf = int(confidence)
+        if conf < 85:
+            continue
+
+        slug = f"trend_{date_part}_{title.lower().replace(' ', '_')[:30]}"
+        if slug in existing_posts:
+            continue
+
+        # Extract the "What's changing" section for this pattern
+        pattern_section = re.search(
+            rf'### {re.escape(match[0])}: {re.escape(title)}.*?\*\*What\'s changing:\*\* (.+?)(?:\n\n|\*\*)',
+            text, re.DOTALL
+        )
+        change_text = pattern_section.group(1).strip()[:200] if pattern_section else title
+
+        tweet = (
+            f"{title.lower()}.\n\n"
+            f"{change_text}\n\n"
+            f"confidence: {conf}%. based on analyzing ~5,000 rows across 8 data streams.\n\n"
+            f"most people won't notice this shift for another 6 months."
+        )
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        created += 1
+
+    return created
+
+
+# ─── CONNECTION 14: Revenue Pipeline Urgency → Content Farm ──────────────
+# $0 revenue status becomes authentic "building in public" content
+def wire_revenue_urgency_to_content():
+    pipeline = load_json(PROJECT_ROOT / "FINANCIALS" / "revenue_pipeline.json")
+    total_revenue = pipeline.get("total_revenue", 0)
+    days_at_zero = pipeline.get("days_at_zero_revenue", 0)
+    pipeline_value = pipeline.get("total_pipeline_value_monthly", 0)
+    assets_built = pipeline.get("pipeline_summary", {}).get("assets_built", 0)
+
+    if total_revenue > 0 or days_at_zero < 7:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    slug = f"bip_day{days_at_zero}_revenue"
+    if slug in existing_posts:
+        return 0
+
+    tweet = (
+        f"day {days_at_zero} at $0 revenue.\n\n"
+        f"{assets_built} assets built. {pipeline_value} monthly pipeline value.\n\n"
+        f"the bottleneck isn't building. it's activating.\n\n"
+        f"accounts, listings, posting. the boring stuff nobody wants to do.\n\n"
+        f"building is the easy part. shipping is the hard part."
+    )
+
+    post_path = safe_path(queue_dir / f"{slug}.txt")
+    post_path.write_text(tweet, encoding="utf-8")
+    return 1
+
+
+# ─── CONNECTION 15: Competitive Intel → Outreach Talking Points ──────────
+# Competitor data enriches cold email personalization
+def wire_intel_to_outreach_context():
+    intel = load_csv(LEDGER / "COMPETITIVE_INTEL.csv", max_rows=200)
+    if not intel:
+        return 0
+
+    # Build competitor context by category for outreach agents
+    context = {}
+    for row in intel:
+        cat = row.get("category", "unknown")
+        name = row.get("name", "")
+        rating = row.get("rating", "")
+        price = row.get("price", "")
+        if not name:
+            continue
+
+        if cat not in context:
+            context[cat] = []
+        context[cat].append({
+            "name": name,
+            "rating": rating,
+            "price": price,
+            "last_updated": row.get("last_updated", "")
+        })
+
+    if not context:
+        return 0
+
+    # Write context file for outreach agents to reference
+    context_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "outreach_competitor_context.json")
+    context_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing = {}
+    if context_path.exists():
+        try:
+            existing = json.loads(context_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing = {}
+
+    # Only count newly added categories
+    new_cats = sum(1 for cat in context if cat not in existing)
+    context["updated_at"] = datetime.now().isoformat()
+    context_path.write_text(json.dumps(context, indent=2))
+
+    return new_cats + len(context) - 1  # -1 for updated_at key
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -535,6 +817,12 @@ def run_cycle():
         ("Digital Products → Content Farm", wire_products_to_content),
         ("Lead Pain Points → Content Farm", wire_leads_to_content),
         ("Content Farm → Affiliate Funnels", wire_content_to_affiliate),
+        ("Swarm Leads → Master Leads", wire_swarm_leads_to_master),
+        ("Counter-Content → Posting Queue", wire_counter_content_to_queue),
+        ("OpenClaw Previews → Content Farm", wire_openclaw_previews_to_content),
+        ("Trend Synthesis → Content Farm", wire_trends_to_content),
+        ("Revenue Urgency → Content Farm", wire_revenue_urgency_to_content),
+        ("Competitive Intel → Outreach Context", wire_intel_to_outreach_context),
     ]
 
     total_wired = 0

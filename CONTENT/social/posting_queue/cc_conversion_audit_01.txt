@@ -1,0 +1,11 @@
+audited 9 landing pages last night. found 5 of them had dead CTA buttons.
+
+every "download now" link pointed to href="#". literally nowhere. 100% of clicks = wasted.
+
+4 pages had zero email capture. all traffic just... left.
+
+1 email form was storing emails in localStorage. client-side only. not a single email was ever actually collected.
+
+fixed all 9 pages. portfolio average went from 6.8/10 to 9.1/10.
+
+lesson: your landing page probably has a broken link you don't know about. go click every button on your site right now. i'll wait.

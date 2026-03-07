@@ -1,7 +1,7 @@
-# TREND SYNTHESIS CONTENT — 2026-03-07
+# TREND SYNTHESIS CONTENT - 2026-03-07
 # Generated from trend_synthesis cycle. PENDING_REVIEW.
 
-## POST 1 — GEO Thread (Twitter/X)
+## POST 1 - GEO Thread (Twitter/X)
 ---
 status: PENDING_REVIEW
 platform: twitter
@@ -33,7 +33,7 @@ the tools that helped me figure this out: Averi AI citation benchmarks, Princeto
 
 ---
 
-## POST 2 — Cold Email 2026 (Twitter/X)
+## POST 2 - Cold Email 2026 (Twitter/X)
 ---
 status: PENDING_REVIEW
 platform: twitter
@@ -52,7 +52,7 @@ warmup timeline = 14-21 days (was 7-14).
 
 ---
 
-## POST 3 — UGC Cost Collapse (Twitter/X)
+## POST 3 - UGC Cost Collapse (Twitter/X)
 ---
 status: PENDING_REVIEW
 platform: twitter
@@ -70,7 +70,7 @@ the brands still paying $500/video for human UGC creators are about to get disru
 
 ---
 
-## POST 4 — Phone Addiction Niche (Twitter/X)
+## POST 4 - Phone Addiction Niche (Twitter/X)
 ---
 status: PENDING_REVIEW
 platform: twitter
@@ -86,7 +86,7 @@ hot niche. abandoned competitors. validated demand. that's the trifecta.
 
 ---
 
-## POST 5 — Pricing Psychology (Twitter/X)
+## POST 5 - Pricing Psychology (Twitter/X)
 ---
 status: PENDING_REVIEW
 platform: twitter
@@ -102,7 +102,7 @@ per-seat pricing is dying. usage/credit models grew 126% YoY. if you're still ch
 
 ---
 
-## POST 6 — Platform Algorithm Convergence (Twitter/X)
+## POST 6 - Platform Algorithm Convergence (Twitter/X)
 ---
 status: PENDING_REVIEW
 platform: twitter
@@ -130,7 +130,7 @@ if you're not making tutorials, you're fighting the algorithm.
 
 ---
 
-## POST 7 — Reply Bait (Twitter/X)
+## POST 7 - Reply Bait (Twitter/X)
 ---
 status: PENDING_REVIEW
 platform: twitter

@@ -75,10 +75,41 @@ nav a.cta-sm:hover{background:var(--accent2)}
 .final-cta p{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
 footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
 footer p{font-size:0.8rem;color:var(--muted)}
+/* pro upgrade */
+.pro-section{padding:80px 0;border-top:1px solid var(--border);text-align:center}
+.pro-badge{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#000;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:20px}
+.pro-section h2{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:12px}
+.pro-section p{color:var(--muted);max-width:480px;margin:0 auto 32px;font-size:0.95rem;line-height:1.7}
+.pro-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:0 auto 36px}
+.pro-feat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 20px;text-align:left;font-size:0.85rem;color:var(--text)}
+.pro-feat::before{content:'+ ';color:var(--accent);font-weight:700}
+.pro-btn{display:inline-block;background:var(--accent);color:#000;padding:14px 36px;border-radius:8px;font-size:1rem;font-weight:700;transition:transform 0.2s,background 0.2s}
+.pro-btn:active{background:var(--accent2);transform:translateY(-2px)}
+/* email capture */
+.email-section{padding:80px 0;border-top:1px solid var(--border);text-align:center;background:var(--surface)}
+.email-section h2{font-size:1.6rem;font-weight:700;letter-spacing:-0.8px;margin-bottom:10px}
+.email-section p{color:var(--muted);font-size:0.9rem;margin-bottom:28px}
+.email-form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.email-form input[type=email]{flex:1;min-width:220px;background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:8px;font-size:0.9rem;outline:none;transition:border-color 0.2s}
+.email-form input[type=email]:focus{border-color:var(--accent)}
+.email-form input[type=email]::placeholder{color:var(--muted)}
+.email-form button{background:var(--accent);color:#000;border:none;padding:12px 24px;border-radius:8px;font-size:0.9rem;font-weight:700;cursor:pointer;transition:background 0.2s}
+.email-form button:active{background:var(--accent2)}
+.email-fine{margin-top:12px;font-size:0.75rem;color:var(--muted)}
+/* cross-promo */
+.xpromo{padding:60px 0;border-top:1px solid var(--border)}
+.xpromo h3{font-size:1rem;font-weight:600;color:var(--muted);text-align:center;margin-bottom:28px;text-transform:uppercase;letter-spacing:0.5px}
+.xpromo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:800px;margin:0 auto}
+.xpromo-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 16px;text-align:center;transition:border-color 0.2s;text-decoration:none;display:block}
+.xpromo-card:active{border-color:var(--accent)}
+.xpromo-card .xi{font-size:1.8rem;margin-bottom:8px}
+.xpromo-card .xn{font-size:0.85rem;font-weight:700;color:var(--text);display:block;margin-bottom:4px}
+.xpromo-card .xd{font-size:0.75rem;color:var(--muted)}
 @media(max-width:640px){
   .stats .container{grid-template-columns:1fr;gap:24px}
   .hero{padding:60px 0 50px}
   .features,.math,.social-proof,.problem{padding:50px 0}
+  .pro-section,.email-section,.xpromo{padding:50px 0}
 }
 </style>
 </head>
@@ -184,6 +215,66 @@ footer p{font-size:0.8rem;color:var(--muted)}
 </div>
 </section>
 
+<section class="pro-section" id="pro">
+<div class="container">
+  <div class="pro-badge">Pro</div>
+  <h2>unlock pro features</h2>
+  <p>the free plan builds your week. pro personalizes it down to your bloodwork, tracks your savings vs takeout in real time, and auto-swaps meals you hate.</p>
+  <div class="pro-features">
+    <div class="pro-feat">custom dietary filters (keto, vegan, FODMAP)</div>
+    <div class="pro-feat">real-time takeout savings tracker</div>
+    <div class="pro-feat">recipe swap with one tap</div>
+    <div class="pro-feat">store-specific grocery routing</div>
+    <div class="pro-feat">family mode (up to 6 people)</div>
+    <div class="pro-feat">monthly nutrition reports</div>
+  </div>
+  <a href="#email-capture" class="pro-btn">unlock pro features</a>
+</div>
+</section>
+
+<section class="email-section" id="email-capture">
+<div class="container">
+  <h2>save $340/mo on food. starting this week.</h2>
+  <p>pro early access + weekly high-protein meals under $60. no spam. one-click unsubscribe.</p>
+  <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="MealMaxx Pro Interest">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+    <input type="email" name="email" placeholder="your email to save $340/mo on food" required>
+    <button type="submit">get access</button>
+  </form>
+  <div class="email-fine">free. no card. takes 10 seconds.</div>
+</div>
+</section>
+
+<section class="xpromo">
+<div class="container">
+  <h3>more from PRINTMAXX</h3>
+  <div class="xpromo-grid">
+    <a href="https://sleepmaxx-web.surge.sh/" class="xpromo-card">
+      <div class="xi">&#127775;</div>
+      <span class="xn">SleepMaxx</span>
+      <span class="xd">fix your sleep score</span>
+    </a>
+    <a href="https://focuslock-web.surge.sh/" class="xpromo-card">
+      <div class="xi">&#127919;</div>
+      <span class="xn">FocusLock</span>
+      <span class="xd">deep work on demand</span>
+    </a>
+    <a href="https://habitforge-web.surge.sh/" class="xpromo-card">
+      <div class="xi">&#128293;</div>
+      <span class="xn">HabitForge</span>
+      <span class="xd">streaks that actually stick</span>
+    </a>
+    <a href="https://walktounlock-web.surge.sh/" class="xpromo-card">
+      <div class="xi">&#128694;</div>
+      <span class="xn">WalkToUnlock</span>
+      <span class="xd">step gate for phone time</span>
+    </a>
+  </div>
+</div>
+</section>
+
 <section class="final-cta" id="download">
 <div class="container">
   <h2>your kitchen is right there. use it.</h2>
@@ -196,6 +287,7 @@ footer p{font-size:0.8rem;color:var(--muted)}
 <footer>
 <div class="container">
   <p>PRINTMAXX 2026. mealmaxx. all rights reserved.</p>
+  <p style="margin-top:8px;font-size:0.75rem;color:var(--muted)"><a href="https://printmaxx-store.surge.sh/" style="color:var(--muted);text-decoration:underline">all products</a> &middot; <a href="https://printmaxx-lead-magnets.surge.sh/" style="color:var(--muted);text-decoration:underline">free tools</a> &middot; <a href="https://ai-stack-2026.surge.sh/" style="color:var(--muted);text-decoration:underline">solopreneur stack</a></p>
 </div>
 </footer>
 

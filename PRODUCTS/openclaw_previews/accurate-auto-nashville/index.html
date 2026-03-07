@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accurate Automotive Repair | Honda & Acura Specialists | LaVergne, TN</title>
+<meta name="description" content="Nashville's trusted Honda and Acura repair specialists. Family-owned since day one. Expert diagnostics, transmission work, and full-service maintenance in LaVergne, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a5c;--accent:#c0392b;--light:#f8f9fa;--dark:#1a1a2e;--text:#333;--radius:12px}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#0d2137 100%);color:#fff;padding:80px 20px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:var(--light);clip-path:ellipse(55% 100% at 50% 100%)}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:12px;letter-spacing:-0.02em}
+.hero .tagline{font-size:1.15rem;opacity:0.9;margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.hero .badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:6px 16px;border-radius:100px;font-size:0.85rem;font-weight:500;margin-bottom:24px}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:16px 36px;border-radius:var(--radius);font-weight:700;font-size:1.05rem;transition:transform 0.2s,box-shadow 0.2s;border:none;cursor:pointer}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(192,57,43,0.35)}
+.cta-secondary{background:transparent;border:2px solid #fff;margin-left:12px}
+.cta-secondary:hover{background:rgba(255,255,255,0.1)}
+.trust-bar{background:var(--light);padding:40px 20px;text-align:center}
+.trust-items{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-weight:600;font-size:0.95rem;color:var(--primary)}
+.trust-icon{width:40px;height:40px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.services{padding:80px 20px;background:#fff}
+.section-title{text-align:center;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:12px;color:var(--dark)}
+.section-sub{text-align:center;color:#666;margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.service-card{background:var(--light);border-radius:var(--radius);padding:32px 28px;transition:transform 0.2s,box-shadow 0.2s;border:1px solid #e8e8e8}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
+.service-card .icon{font-size:2rem;margin-bottom:16px}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px;color:var(--dark)}
+.service-card p{color:#555;font-size:0.95rem}
+.why-us{padding:80px 20px;background:var(--light)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;max-width:1100px;margin:0 auto}
+.why-item{text-align:center;padding:24px}
+.why-item .number{font-size:2.5rem;font-weight:800;color:var(--accent);margin-bottom:8px}
+.why-item h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.why-item p{color:#555;font-size:0.9rem}
+.testimonials{padding:80px 20px;background:#fff}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.testimonial{background:var(--light);border-radius:var(--radius);padding:32px;border-left:4px solid var(--accent)}
+.testimonial .stars{color:#f1c40f;font-size:1.2rem;margin-bottom:12px}
+.testimonial p{font-style:italic;color:#444;margin-bottom:16px}
+.testimonial .author{font-weight:700;color:var(--dark);font-size:0.9rem}
+.contact{padding:80px 20px;background:var(--primary);color:#fff}
+.contact .section-title{color:#fff}
+.contact .section-sub{color:rgba(255,255,255,0.8)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1100px;margin:0 auto;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-row{display:flex;gap:16px;align-items:flex-start}
+.contact-row .ci{width:44px;height:44px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.contact-row h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;opacity:0.7;margin-bottom:4px}
+.contact-row p{font-size:1.05rem;font-weight:500}
+.contact-form{background:rgba(255,255,255,0.1);border-radius:var(--radius);padding:32px;backdrop-filter:blur(10px)}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:14px 16px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:16px;outline:none;transition:border 0.2s}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--accent)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,0.5)}
+.contact-form select{appearance:none;color:rgba(255,255,255,0.7)}
+.contact-form select option{background:var(--primary);color:#fff}
+.contact-form .cta-btn{width:100%;text-align:center}
+.form-success{text-align:center;padding:40px;font-size:1.2rem;color:#fff}
+footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:32px 20px;text-align:center;font-size:0.85rem}
+@media(max-width:768px){
+.hero{padding:60px 16px 48px}
+.trust-items{gap:24px}
+.contact-grid{grid-template-columns:1fr}
+.cta-secondary{margin-left:0;margin-top:12px}
+.hero .buttons{display:flex;flex-direction:column;align-items:center;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="badge">Honda & Acura Specialists Since Day One</div>
+<h1>Your Honda Deserves Better<br>Than a Dealership</h1>
+<p class="tagline">Independent experts who know your Honda or Acura inside out. Faster turnaround. Lower prices. No upselling.</p>
+<div class="buttons">
+<a href="tel:6152200333" class="cta-btn">Call (615) 220-0333</a>
+<a href="#contact" class="cta-btn cta-secondary">Get a Free Quote</a>
+</div>
+</section>
+
+<div class="trust-bar">
+<div class="trust-items">
+<div class="trust-item"><div class="trust-icon">&#9733;</div> Locally Owned & Independent</div>
+<div class="trust-item"><div class="trust-icon">&#9881;</div> Honda & Acura Only</div>
+<div class="trust-item"><div class="trust-icon">&#128736;</div> Former Dealership Techs</div>
+<div class="trust-item"><div class="trust-icon">&#10003;</div> ASE Certified</div>
+</div>
+</div>
+
+<section class="services">
+<div class="container">
+<h2 class="section-title">What We Fix</h2>
+<p class="section-sub">Everything your Honda or Acura needs, done right the first time.</p>
+<div class="services-grid">
+<div class="service-card"><div class="icon">&#9881;</div><h3>Engine Diagnostics & Repair</h3><p>Check engine light? Rough idle? We pinpoint the problem with factory-level diagnostic tools and fix it at independent shop prices.</p></div>
+<div class="service-card"><div class="icon">&#128260;</div><h3>Transmission Service</h3><p>Manual or automatic, we handle transmission rebuilds, fluid flushes, and clutch replacements for all Honda and Acura models.</p></div>
+<div class="service-card"><div class="icon">&#128663;</div><h3>Brake Service</h3><p>Pads, rotors, calipers, fluid flushes. We use OEM-equivalent parts and get you back on the road same day in most cases.</p></div>
+<div class="service-card"><div class="icon">&#127777;</div><h3>AC & Heating</h3><p>Recharge, compressor replacement, heater core repair. Stay comfortable in Tennessee summers and winters.</p></div>
+<div class="service-card"><div class="icon">&#128267;</div><h3>Electrical Systems</h3><p>Alternator, starter, battery, wiring. We trace and fix electrical gremlins that other shops can't figure out.</p></div>
+<div class="service-card"><div class="icon">&#128736;</div><h3>Routine Maintenance</h3><p>Oil changes, timing belts, spark plugs, fluid services. Keep your Honda running past 200K with proper maintenance.</p></div>
+</div>
+</div>
+</section>
+
+<section class="why-us">
+<div class="container">
+<h2 class="section-title">Why Nashville Trusts Us</h2>
+<p class="section-sub">Numbers that speak louder than words.</p>
+<div class="why-grid">
+<div class="why-item"><div class="number">20+</div><h3>Years in Business</h3><p>Serving LaVergne and the Nashville area since the beginning.</p></div>
+<div class="why-item"><div class="number">100%</div><h3>Honda & Acura Focus</h3><p>We don't try to be everything. We specialize so you get expert service.</p></div>
+<div class="why-item"><div class="number">30-50%</div><h3>Less Than Dealership</h3><p>Same quality parts. Same expertise. Significantly lower prices.</p></div>
+<div class="why-item"><div class="number">4.8</div><h3>Average Google Rating</h3><p>Real reviews from real Honda and Acura owners in Nashville.</p></div>
+</div>
+</div>
+</section>
+
+<section class="testimonials">
+<div class="container">
+<h2 class="section-title">What Our Customers Say</h2>
+<p class="section-sub">Real reviews from Nashville Honda and Acura owners.</p>
+<div class="testimonial-grid">
+<div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Brought my 2018 Accord in for a transmission issue the dealership wanted $3,800 to fix. Accurate did it for $2,100 and it runs perfectly. These guys know Hondas better than Honda."</p><div class="author">- Nashville Customer</div></div>
+<div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I've been taking my Acura TL here for 8 years. They always explain what's wrong in plain English and never try to upsell me on stuff I don't need."</p><div class="author">- LaVergne Customer</div></div>
+<div class="testimonial"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Quick turnaround on my CR-V brake job. In and out in 3 hours. Fair price. Clean shop. These are the kind of mechanics you hold onto."</p><div class="author">- Murfreesboro Customer</div></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="section-title">Get Your Free Quote</h2>
+<p class="section-sub">Tell us what's going on with your Honda or Acura. We'll get back to you within 2 hours.</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-row"><div class="ci">&#128222;</div><div><h4>Call Us</h4><p>(615) 220-0333</p></div></div>
+<div class="contact-row"><div class="ci">&#128205;</div><div><h4>Visit Us</h4><p>LaVergne, TN<br>Serving all of Nashville & Middle Tennessee</p></div></div>
+<div class="contact-row"><div class="ci">&#128339;</div><div><h4>Hours</h4><p>Mon-Fri: 7:30 AM - 5:30 PM<br>Sat: By Appointment</p></div></div>
+<div class="contact-row"><div class="ci">&#128663;</div><div><h4>We Service</h4><p>All Honda & Acura Models<br>Civic, Accord, CR-V, Pilot, TLX, MDX, RDX & more</p></div></div>
+</div>
+<div class="contact-form" id="quoteForm">
+<input type="text" placeholder="Your Name" id="cf-name" required>
+<input type="tel" placeholder="Phone Number" id="cf-phone" required>
+<input type="email" placeholder="Email Address" id="cf-email">
+<select id="cf-make" required>
+<option value="" disabled selected>Vehicle Make</option>
+<option>Honda</option>
+<option>Acura</option>
+</select>
+<input type="text" placeholder="Year & Model (e.g. 2019 Accord)" id="cf-model">
+<textarea rows="4" placeholder="What's going on with your car?" id="cf-msg"></textarea>
+<button type="button" class="cta-btn" id="submitBtn">Send Quote Request</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>Sample website created by OpenClaw Web Services</p>
+</footer>
+
+<script>
+document.getElementById('submitBtn').addEventListener('click', function() {
+  var name = document.getElementById('cf-name').value;
+  var phone = document.getElementById('cf-phone').value;
+  if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+  var form = document.getElementById('quoteForm');
+  while (form.firstChild) form.removeChild(form.firstChild);
+  var msg = document.createElement('p');
+  msg.className = 'form-success';
+  msg.textContent = 'Thanks! We will call you back within 2 hours.';
+  form.appendChild(msg);
+});
+</script>
+</body>
+</html>

@@ -19,6 +19,7 @@ Usage:
 
 import csv
 import os
+import subprocess
 import sys
 import json
 import time
@@ -39,7 +40,7 @@ try:
     from bs4 import BeautifulSoup
 except ImportError:
     print("Installing required packages...")
-    os.system("pip3 install requests beautifulsoup4 --quiet")
+    subprocess.run(["pip3", "install", "requests", "beautifulsoup4", "--quiet"], check=True)
     import requests
     from bs4 import BeautifulSoup
 

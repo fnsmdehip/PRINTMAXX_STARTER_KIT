@@ -1377,3 +1377,59 @@ This crazy TikTok trend from December is soooo back
 > 1.5 million bookmarks
 > 238,400 comments
 
+
+
+---
+
+## Pending Enhancement (ALPHA16967, Score: 26)
+
+**Source:** @wannercashcow (high-signal-accounts) | **URL:** https://x.com/wannercashcow/status/2029376379155018201
+**Added:** 2026-03-07T07:18:48-05:00
+
+I went from $0 to $522K in a single month with faceless YouTube
+
+Over $8 million total generated across all my channels
+
+Here's the full story (wins, losses, and lessons) 
+
+
+
+---
+
+## Pending Enhancement (ALPHA16981, Score: 24)
+
+**Source:** @Jahjiren (high-signal-accounts) | **URL:** https://x.com/Jahjiren/status/2029711455273025755
+**Added:** 2026-03-07T07:18:48-05:00
+
+Seasonal apps could be a huge money grab
+but only if done correctly 
+
+Some UV Index apps make $10k+/mo
+
+Spring break and summer are 
+around the corner
+
+Building this in 3 days then mass distributing 
+could be the method
+
+4 TikTok’s & reels a day
+across 6 TikTok/IG accounts
+using
+
+
+
+---
+
+## Pending Enhancement (ALPHA16991, Score: 29)
+
+**Source:** @yegormethod (high-signal-accounts) | **URL:** https://x.com/yegormethod/status/2030015816637313114
+**Added:** 2026-03-07T07:18:48-05:00
+
+I'm going to drop some crazy sauce for anyone selling an offer over $1000:
+
+Every B2B founder wants predictable client acquisition...
+
+but they spend 99% of their time and budget advertising on tiktok & instagram
+
+The person who can authorize 10k-50k has never once in their life
+

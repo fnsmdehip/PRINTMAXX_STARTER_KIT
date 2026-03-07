@@ -1557,3 +1557,51 @@ People used to pay $2k for bootcamps teaching worse versions of these topics.
 
 Now it costs $0. Save it. Start today.
 
+
+
+---
+
+## Pending Enhancement (ALPHA16986, Score: 30)
+
+**Source:** @AntonioEscudero (high-signal-accounts) | **URL:** https://x.com/AntonioEscudero/status/2030192004164972977
+**Added:** 2026-03-07T07:18:48-05:00
+
+Bye Bye Web developers...
+
+I just surpassed $3k in revenue and 2,400 users with my fully vibecoded SaaS
+
+RankInPublic was completely vibecoded using Claude Opus 4.6
+
+It took 7 days to develop, 12 hours a day.
+
+The stack I used:
+
+- Convex for the backend and db
+- Dodo Payments as
+
+
+
+---
+
+## Pending Enhancement (ALPHA17006, Score: 22)
+
+**Source:** @KCodes7777 (high-signal-accounts) | **URL:** https://x.com/KCodes7777/status/2029696157790728516
+**Added:** 2026-03-07T07:18:48-05:00
+
+1.8M views on my pregnancy niche page
+
+This is what 30 days of consistency looks like 
+
+→ 1 post a day
+→ Posted at 12pm
+→ 6 second video (
+http://
+pexels.com)
+→ Long caption (ChatGPT)
+→ Viral sound (IG viral sound library)
+
+That’s it
+
+No complicated strategy
+No expensive
+
