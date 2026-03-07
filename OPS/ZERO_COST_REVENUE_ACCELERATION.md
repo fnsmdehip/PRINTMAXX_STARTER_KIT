@@ -1361,3 +1361,21 @@ UpRock Creator Program is live:
 • Direct line to the team
 • 30% revenue share (lifetime per customer)
 
+
+
+---
+
+## Pending Enhancement (ALPHA15785, Score: 37)
+
+**Source:** @financialjuice (high-signal-accounts) | **URL:** https://x.com/financialjuice/status/2029305140478345534
+**Added:** 2026-03-06T18:05:17-05:00
+
+$AVGO Broadcom Q1 Earnings
+
+Adjusted EPS $2.05, est. $2.03
+Adjusted revenue $19.31B, est. $19.26B
+Semiconductor solutions revenue $12.52B, est. $12.31B
+Sees Q2 revenue about $22.0B, est. $20.53B
+Sees Q2 adjusted EBITDA about 68% of projected revenue
+Expects AI semiconductor
+

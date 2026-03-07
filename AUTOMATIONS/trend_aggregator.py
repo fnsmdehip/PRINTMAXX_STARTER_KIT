@@ -122,11 +122,20 @@ def scan_reddit_trends(limit=15):
     for sub, signal_type in PRODUCT_SUBREDDITS:
         try:
             url = f"https://www.reddit.com/r/{sub}/hot.json?limit={limit}"
-            resp = requests.get(url, headers={
-                'User-Agent': 'PRINTMAXX-TrendAgg/1.0'
-            }, timeout=15)
+            resp = None
+            for attempt in range(3):
+                resp = requests.get(
+                    url,
+                    headers={'User-Agent': 'PRINTMAXX-TrendAgg/1.0'},
+                    timeout=15,
+                )
+                if resp.status_code == 429:
+                    wait = 2 ** (attempt + 1)
+                    time.sleep(wait)
+                    continue
+                break
 
-            if resp.status_code == 200:
+            if resp is not None and resp.status_code == 200:
                 posts = resp.json().get('data', {}).get('children', [])
                 for post in posts:
                     p = post.get('data', {})
@@ -143,8 +152,8 @@ def scan_reddit_trends(limit=15):
                         'signal_type': signal_type,
                         'url': f"https://reddit.com{p.get('permalink', '')}",
                         'comments': p.get('num_comments', 0),
-                        'age_hours': round((time.time() - p.get('created_utc', 0)) / 3600, 1),
-                    })
+                            'age_hours': round((time.time() - p.get('created_utc', 0)) / 3600, 1),
+                        })
 
             time.sleep(random.uniform(1.5, 3.0))
         except Exception as e:
@@ -350,6 +359,12 @@ def main():
     parser.add_argument('--match', action='store_true', help='Match trends to products')
     parser.add_argument('--hourly', action='store_true', help='Cron mode')
     args = parser.parse_args()
+
+    # Default behavior for cron/manual runs with no source flag: run full scan.
+    if not any([args.scan, args.reddit, args.rising, args.report, args.match, args.hourly]):
+        args.scan = True
+    if args.hourly and not any([args.scan, args.reddit, args.rising]):
+        args.scan = True
 
     if args.report:
         print_report()

@@ -32,11 +32,12 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, identity",
 }
 
 # Reddit subreddits to monitor
 REDDIT_SUBS = {
-    "TikTok": ["TikTokCreators", "Tiktokhelp", "socialmediamarketing"],
+    "TikTok": ["TikTok", "TikTokTrending", "socialmediamarketing"],
     "Instagram": ["Instagram", "InstagramMarketing", "socialmediamarketing"],
     "YouTube": ["youtube", "youtubers", "NewTubers"],
     "X/Twitter": ["Twitter", "socialmediamarketing"],
@@ -44,13 +45,13 @@ REDDIT_SUBS = {
 
 # Search queries for algorithm changes
 ALGO_QUERIES = [
-    "TikTok algorithm change 2026",
-    "Instagram algorithm update 2026",
-    "YouTube algorithm change 2026",
-    "Twitter X algorithm update 2026",
-    "TikTok reach dropping 2026",
-    "Instagram reels algorithm 2026",
-    "YouTube shorts algorithm 2026",
+    "TikTok algorithm change this week",
+    "Instagram algorithm update this week",
+    "YouTube algorithm change this week",
+    "Twitter X algorithm update this week",
+    "TikTok reach dropping this week",
+    "Instagram reels algorithm this week",
+    "YouTube shorts algorithm this week",
 ]
 
 # Keywords that signal algorithm changes
@@ -149,11 +150,22 @@ def scrape_reddit_sub(subreddit, session, existing_urls):
     results = []
     url = f"https://www.reddit.com/r/{subreddit}/new.json?limit=25"
     try:
-        time.sleep(2)  # Rate limit
-        resp = session.get(url, headers={**HEADERS, "User-Agent": "PRINTMAXX-AlgoDetector/1.0"}, timeout=15)
-        if resp.status_code != 200:
-            print(f"  [-] Reddit r/{subreddit}: HTTP {resp.status_code}")
+        resp = None
+        for attempt in range(3):
+            time.sleep(1.5 + attempt)
+            resp = session.get(url, headers={**HEADERS, "User-Agent": "PRINTMAXX-AlgoDetector/1.0"}, timeout=15)
+            if resp.status_code == 429:
+                wait = 2 ** (attempt + 1)
+                print(f"  [!] Reddit r/{subreddit}: rate limited (429), retrying in {wait}s")
+                time.sleep(wait)
+                continue
+            break
+
+        if resp is None or resp.status_code != 200:
+            code = resp.status_code if resp is not None else "NO_RESPONSE"
+            print(f"  [-] Reddit r/{subreddit}: HTTP {code}")
             return results
+
         data = resp.json()
         posts = data.get("data", {}).get("children", [])
         for post in posts:
@@ -205,11 +217,22 @@ def search_brave(query, session, existing_urls):
     results = []
     search_url = f"https://search.brave.com/search?q={quote_plus(query)}&source=web"
     try:
-        time.sleep(2)
-        resp = session.get(search_url, headers=HEADERS, timeout=15)
-        if resp.status_code != 200:
-            print(f"  [-] Brave search for '{query}': HTTP {resp.status_code}")
+        resp = None
+        for attempt in range(3):
+            time.sleep(1.5 + attempt)
+            resp = session.get(search_url, headers=HEADERS, timeout=20)
+            if resp.status_code == 429:
+                wait = 2 ** (attempt + 1)
+                print(f"  [!] Brave '{query}': rate limited (429), retrying in {wait}s")
+                time.sleep(wait)
+                continue
+            break
+
+        if resp is None or resp.status_code != 200:
+            code = resp.status_code if resp is not None else "NO_RESPONSE"
+            print(f"  [-] Brave search for '{query}': HTTP {code}")
             return results
+
         soup = BeautifulSoup(resp.text, "html.parser")
 
         # Parse search results

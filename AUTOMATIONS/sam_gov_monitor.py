@@ -17,6 +17,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -28,9 +29,8 @@ BASE_DIR = Path(__file__).parent.parent
 OUTPUT_CSV = BASE_DIR / "LEDGER" / "GOV_OPPORTUNITIES.csv"
 LOG_FILE = BASE_DIR / "AUTOMATIONS" / "logs" / "sam_gov_monitor.log"
 
-# SAM.gov opportunities API endpoint.
-# NOTE: As of 2026, the canonical base includes `/prod/`.
-SAM_API_BASE = "https://api.sam.gov/prod/opportunities/v2/search"
+# SAM.gov search endpoint (public search API used by sam.gov web app).
+SAM_SEARCH_API_BASE = "https://sam.gov/api/prod/sgs/v1/search/"
 
 # NAICS codes we can fulfill with Claude Code
 NAICS_CODES = [
@@ -85,23 +85,51 @@ def log(msg):
         f.write(log_msg + "\n")
 
 
+def strip_html(text):
+    """Remove basic HTML tags from API snippets."""
+    if not text:
+        return ""
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def parse_iso_date(date_str):
+    if not date_str:
+        return ""
+    return date_str[:10]
+
+
+def extract_agency(organization_hierarchy):
+    """Pick the most specific org name available."""
+    if not isinstance(organization_hierarchy, list):
+        return ""
+    for org in reversed(organization_hierarchy):
+        name = org.get("name", "")
+        if name:
+            return name
+    return ""
+
+
 def search_sam_gov(keyword, limit=25, posted_from=None, api_key=None):
-    """Search SAM.gov opportunities API."""
-    if posted_from is None:
-        posted_from = (datetime.now() - timedelta(days=30)).strftime("%m/%d/%Y")
+    """Search SAM.gov active opportunities using the public search API."""
 
     params = {
-        "postedFrom": posted_from,
-        "keyword": keyword,
-        "limit": str(limit),
-        "offset": "0",
-        "ptype": "o",  # opportunities
+        "index": "opp",
+        "page": "0",
+        "sort": "-modifiedDate",
+        "size": str(limit),
+        "mode": "search",
+        "is_active": "true",
+        "q": keyword,
     }
-    if api_key:
-        params["api_key"] = api_key
 
-    url = f"{SAM_API_BASE}?{urlencode(params)}"
-    headers = {"Accept": "application/json", "User-Agent": "PRINTMAXX-Monitor/1.0"}
+    url = f"{SAM_SEARCH_API_BASE}?{urlencode(params)}"
+    headers = {
+        "Accept": "application/json, text/plain, */*",
+        "User-Agent": "PRINTMAXX-Monitor/1.0",
+        "Origin": "https://sam.gov",
+        "Referer": "https://sam.gov/search/",
+    }
 
     try:
         req = Request(url, headers=headers)
@@ -109,8 +137,11 @@ def search_sam_gov(keyword, limit=25, posted_from=None, api_key=None):
             data = json.loads(response.read().decode())
             return data
     except HTTPError as e:
-        if e.code == 403:
-            log(f"SAM.gov API key required or rate limited for keyword: {keyword}")
+        if e.code == 429:
+            log(f"SAM.gov rate-limited for keyword: {keyword}")
+            return None
+        if e.code in (403, 404):
+            log(f"SAM.gov search API unavailable (HTTP {e.code}) for keyword: {keyword}")
             return None
         log(f"HTTP error {e.code} for keyword: {keyword}")
         return None
@@ -244,12 +275,45 @@ def run_sam_search(keywords=None, state=None, limit=25, api_key=None):
     for keyword in keywords:
         log(f"Searching: '{keyword}'...")
 
-        # Try API first
+        # Try SAM.gov search API first
         result = search_sam_gov(keyword, limit=limit, api_key=api_key)
 
-        if result and "opportunitiesData" in result:
+        if result and "_embedded" in result and "results" in result["_embedded"]:
+            opps = result["_embedded"]["results"]
+            log(f"  Found {len(opps)} opportunities via SAM search API")
+            for opp in opps:
+                opp_id = opp.get("_id", "")
+                if opp_id in existing:
+                    continue
+
+                desc_raw = ""
+                descs = opp.get("descriptions", [])
+                if isinstance(descs, list) and descs:
+                    desc_raw = descs[0].get("content", "")
+
+                opportunity = {
+                    "opportunity_id": opp_id,
+                    "title": opp.get("title", ""),
+                    "agency": extract_agency(opp.get("organizationHierarchy", [])),
+                    "posted_date": parse_iso_date(opp.get("publishDate", "")),
+                    "response_deadline": parse_iso_date(opp.get("responseDate", "")),
+                    "set_aside": "",
+                    "naics": "",
+                    "estimated_value": "",
+                    "description": strip_html(desc_raw)[:500],
+                    "url": f"https://sam.gov/opp/{opp_id}/view",
+                    "source": "SAM.gov Search API",
+                    "keyword_match": keyword,
+                    "found_date": datetime.now().strftime("%Y-%m-%d"),
+                    "status": "NEW",
+                    "notes": "",
+                }
+                all_opportunities.append(opportunity)
+                existing.add(opp_id)
+                total_found += 1
+        elif result and "opportunitiesData" in result:
             opps = result["opportunitiesData"]
-            log(f"  Found {len(opps)} opportunities via API")
+            log(f"  Found {len(opps)} opportunities via legacy API")
             for opp in opps:
                 opp_id = opp.get("noticeId", "")
                 if opp_id in existing:
@@ -265,7 +329,7 @@ def run_sam_search(keywords=None, state=None, limit=25, api_key=None):
                     "estimated_value": "",
                     "description": (opp.get("description", "") or "")[:500],
                     "url": f"https://sam.gov/opp/{opp_id}/view",
-                    "source": "SAM.gov API",
+                    "source": "SAM.gov Legacy API",
                     "keyword_match": keyword,
                     "found_date": datetime.now().strftime("%Y-%m-%d"),
                     "status": "NEW",
@@ -418,7 +482,7 @@ def main():
     print(f"Source: @pipelineabuser + ALPHA015 + MM071")
     print(f"{'='*60}")
     print(f"Searching {len(keywords)} keywords...")
-    print(f"API key: {'SET' if api_key else 'NOT SET (get free at api.data.gov)'}")
+    print(f"API key (legacy endpoint only): {'SET' if api_key else 'NOT SET'}")
     print()
 
     # Search SAM.gov
@@ -441,9 +505,6 @@ def main():
     print(f"{'='*60}")
     print(f"New opportunities found: {total}")
     print(f"Output: {OUTPUT_CSV}")
-    if not api_key:
-        print(f"\nNOTE: Get a FREE SAM.gov API key at https://api.data.gov/signup/")
-        print(f"Set it as SAM_GOV_API_KEY env var for better results.")
     print(f"\nNext steps:")
     print(f"  1. Review opportunities in {OUTPUT_CSV}")
     print(f"  2. Register on SAM.gov (https://sam.gov) if not done")
