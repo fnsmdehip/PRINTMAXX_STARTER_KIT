@@ -1529,6 +1529,20 @@ def run_ceo_cycle(dry_run=False):
                 state.data["self_manage_actions"] = sm_actions
                 state.save()
                 log(f"  Self-management: {sm_actions} actions")
+
+                # Phase 15c: Swarm health check — ensure all swarm agents are running
+                log("Phase 15c: Agent Swarm health check...")
+                swarm_script = PROJECT / "AUTOMATIONS" / "agent_swarm.py"
+                if swarm_script.exists():
+                    ok3, out3 = run_script("agent_swarm.py", "--health",
+                                           timeout_sec=60, label="swarm:health")
+                    state.data["last_swarm_check"] = datetime.now().isoformat()
+                    if out3 and "issues found" in out3:
+                        # Auto-redeploy to fix
+                        log("  Swarm has issues — auto-redeploying...")
+                        run_script("agent_swarm.py", "--deploy",
+                                   timeout_sec=120, label="swarm:redeploy")
+                    state.save()
             else:
                 log("  Autonomy engine script not found — skipping", "WARN")
         else:
@@ -1576,6 +1590,7 @@ def show_status():
     print(f"Last openclaw:    {state.data.get('last_openclaw', 'never')}")
     print(f"Last autonomy:    {state.data.get('last_autonomy_run', 'never')}")
     print(f"Last self-manage: {state.data.get('last_self_manage', 'never')} ({state.data.get('self_manage_actions', 0)} actions)")
+    print(f"Last swarm check: {state.data.get('last_swarm_check', 'never')}")
     oc_idx = state.data.get("openclaw_city_index", 0)
     if oc_idx < len(OPENCLAW_CITIES):
         next_city, next_niche = OPENCLAW_CITIES[oc_idx]

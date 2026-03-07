@@ -1121,3 +1121,113 @@ here's how:
 - use GPT Podcast Script Generator to create natural podcast script (empowerment, inspiration, anything broad)
 - use Elevenlabs for
 
+
+
+---
+
+## Pending Enhancement (ALPHA15821, Score: 24)
+
+**Source:** @GlassNode (daily scraper) | **URL:** https://x.com/glassnode/status/2029222685587214753
+**Added:** 2026-03-06T23:00:01-05:00
+
+Unsteady Ground, Room to Bounce
+
+#Bitcoin breaks above 70k as improving spot demand signals an uncertain market. ETF flows show early stabilization while derivatives stay cautious. Options data suggests fading downside fear and upside interest around $75k.
+
+Read the full Week
+
+
+
+---
+
+## Pending Enhancement (ALPHA15824, Score: 30)
+
+**Source:** @GlassNode (daily scraper) | **URL:** https://x.com/glassnode/status/2028831948194382055
+**Added:** 2026-03-06T23:00:01-05:00
+
+UPDATE:
+
+The $70k ceiling holds! 
+
+Feb 19 → Feb 25 → Mar 03, 02:00 UTC.
+
+Each time the 12HR-SMA of Net Realized P&L spiked above $5M/hr, price stalled and reversed at the $69.4k range high. This region continues to cap every recovery attempt. The asymmetry reflects the fragility of the current demand structure.
+
+Until this level of profit-taking can be absorbed without triggering rejection
+
+
+
+---
+
+## Pending Enhancement (ALPHA15827, Score: 36)
+
+**Source:** @0xROAS (daily scraper) | **URL:** https://x.com/0xROAS/status/1982057501190152362
+**Added:** 2026-03-06T23:00:01-05:00
+
+here's how to do this in 2 minutes:
+
+- go to nano banana
+- write "A hyper-realistic 3D medical visualization of the [digestive system, etc...]
+- image to video with kling 2.5
+- that's it
+
+congrats you just saved $10k and 3 weeks of waiting on an animation.
+
+
+
+---
+
+## Pending Enhancement (ALPHA15828, Score: 20)
+
+**Source:** @0xROAS (daily scraper) | **URL:** https://x.com/0xROAS/status/1970869332734275971
+**Added:** 2026-03-06T23:00:01-05:00
+
+my AI UGC ads are PRINTING like crazy right now.
+
+i found a stupidly simple way to reverse engineer viral ads and pump out winners in minutes.
+
+i just made a step-by-step guide that breaks down the entire workflow.
+
+like + rt + reply 'workflow' and I’ll send it over
+
+(must be following so i can dm)
+
+
+
+---
+
+## Pending Enhancement (ALPHA15842, Score: 20)
+
+**Source:** @pounddz (daily scraper) | **URL:** https://x.com/pounddz/status/1979517055029100972
+**Added:** 2026-03-06T23:00:01-05:00
+
+How to actually go viral (slideshow edition) 
+
+Simply algorithm rewards how many slides the viewer gets through + amount of time spent on the slideshow. 
+
+You can achieve this by: 
+- having more slides 
+- having longer text on each slide 
+There is a sweet spot of about 5-7 slides (if your not taking advantage of a viral trend) 
+
+People are going to stay on your slide for either - value or
+
+
+
+---
+
+## Pending Enhancement (ALPHA15887, Score: 41)
+
+**Source:** @LCSeekers (bookmarks) | **URL:** https://x.com/LCSeekers/status/2029243343327088942
+**Added:** 2026-03-06T23:00:01-05:00
+
+I fed secret quant data to my Claude and my Polymarket trading bot performance jumped 30%
+
+$3,100/day. $21,700/week. $87,000/month. $1,050,000/year
+
+Here's what changed:
+
+Most people build bots on vibes and YouTube tutorials
+
+I fed Claude the exact math that Jane Street quants
+

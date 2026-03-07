@@ -148,6 +148,8 @@ Save to `CONTENT/social/` or `OPS/CONTENT_QA_QUEUE/` as PENDING_REVIEW.
 - Quant: `python3 AUTOMATIONS/printmaxx_quant_terminal.py --summary`
 - Health: `python3 AUTOMATIONS/system_health_monitor.py --quick`
 - Ventures: `python3 AUTOMATIONS/venture_performance_tracker.py --recommend`
+- Autonomy: `python3 AUTOMATIONS/venture_autonomy.py --status` (8 venture agents)
+- Swarm: `python3 AUTOMATIONS/agent_swarm.py --status` (16 operational agents)
 - Memory: `python3 AUTOMATIONS/memory_manager.py --full`
 - Research: `python3 AUTOMATIONS/daily_research_orchestrator.py --full`
 - Quality gate: `python3 AUTOMATIONS/quality_gate.py --gate`
@@ -268,6 +270,28 @@ Native Claude Code subconscious powered by your Max plan:
 
 **State:** `AUTOMATIONS/agent/autonomy/autonomy_state.json`
 
+### Agent Swarm (16 operational agents)
+| Command | What it does |
+|---------|-------------|
+| `python3 AUTOMATIONS/agent_swarm.py --status` | Show all swarm agents + health |
+| `python3 AUTOMATIONS/agent_swarm.py --deploy` | Deploy ALL 16 swarm agents to launchd |
+| `python3 AUTOMATIONS/agent_swarm.py --health` | Health check all agents |
+| `python3 AUTOMATIONS/agent_swarm.py --list` | List all available agents by category |
+| `python3 AUTOMATIONS/agent_swarm.py --kill-all` | Emergency stop all swarm agents |
+| `python3 AUTOMATIONS/agent_swarm.py --logs AGENT` | View recent logs for an agent |
+
+**Categories:** META (swarm_brain) | DISCOVERY (gap_hunter, opportunity_scanner, competitor_stalker) | ACTION (asset_deployer, content_compounder, lead_machine) | MEDIA (video_factory, image_factory) | OPTIMIZE (seo_aso_optimizer, conversion_optimizer, quality_enforcer) | QUALITY (quality_gate, playwright_tester) | INTELLIGENCE (trend_synthesizer, cross_pollinator, revenue_tracker) | MAINTENANCE (system_healer, data_janitor) | GROWTH (distribution_engine, inbound_maximizer, social_poster) | NOTIFICATION (alert_dispatcher)
+
+**Total autonomous agents:** 8 venture + 23 swarm = 31 agents running 24/7 via launchd.
+
+**Model routing:** Opus for strategy/intelligence/content/decisions/quality (16 agents). Sonnet for execution/maintenance/scraping/testing (7 agents). The `swarm_brain` (Opus, every 4h) is the LLM-managed meta-agent that reads all other agents' output and makes strategic decisions about the swarm.
+
+**Quality pipeline:** quality_gate (Opus, every 2h) is a HARD gate — blocks slop before deployment, rewrites bad content, rejects low-quality assets. playwright_tester auto-tests all deployed sites.
+
+**Media pipeline:** image_factory uses Playwright HTML-to-image (zero cost, pixel-perfect). video_factory uses Remotion (React-based programmatic video). Templates in `MEDIA/image_templates/`.
+
+**State:** `AUTOMATIONS/agent/swarm/swarm_state.json` | **Reports:** `AUTOMATIONS/agent/swarm/reports/`
+
 ---
 
 ## ALPHA & LEDGER
@@ -291,6 +315,9 @@ All findings → `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Never create sepa
 | CEO agent | `AUTOMATIONS/ceo_agent.py` (15-phase orchestrator) |
 | Venture autonomy | `AUTOMATIONS/venture_autonomy.py` (8 venture types, self-managing) |
 | Autonomy state | `AUTOMATIONS/agent/autonomy/` (state, schedules, results) |
+| Agent swarm | `AUTOMATIONS/agent_swarm.py` (16 operational agents, 6 categories) |
+| Swarm reports | `AUTOMATIONS/agent/swarm/reports/` (auto-generated intel) |
+| Media pipeline | `MEDIA/` (image_templates/, generated_images/, remotion/) |
 | Copy style | `.claude/rules/copy-style.md` |
 | Alpha review | `.claude/rules/alpha-review.md` |
 | App factory | `MONEY_METHODS/APP_FACTORY/` |

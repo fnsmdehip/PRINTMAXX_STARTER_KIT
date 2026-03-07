@@ -1,9 +1,9 @@
 # Guardian Improvement Report — 2026-03-06
-Generated: 18:05:02
+Generated: 23:00:00
 
 ## Gaps Found
 
-1. Alpha backlog: 372 PENDING_REVIEW entries
+1. Alpha backlog: 274 PENDING_REVIEW entries
 2. Revenue still $0 — shipping is blocked
 3. Only 0 active accounts — #1 blocker
 

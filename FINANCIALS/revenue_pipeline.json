@@ -1,0 +1,163 @@
+{
+  "last_updated": "2026-03-06",
+  "total_revenue": 0,
+  "total_pipeline_value_monthly": 3400,
+  "pipeline_summary": {
+    "assets_built": 58,
+    "assets_deployed": 45,
+    "assets_monetized": 0,
+    "assets_generating_revenue": 0,
+    "bottleneck": "MONETIZE - Everything is built but nothing is listed for sale"
+  },
+  "categories": {
+    "gumroad_products": {
+      "status": "BLOCKED_AT_UPLOAD",
+      "count": 13,
+      "pdfs_ready": 13,
+      "listed_on_gumroad": 0,
+      "estimated_monthly_revenue": 500,
+      "blocker": "Human must create Gumroad account and upload products",
+      "action_file": "OPS/GUMROAD_UPLOAD_NOW.md",
+      "time_to_unblock": "45-60 minutes",
+      "products": [
+        {"name": "5 AI Prompts (Lead Magnet)", "price": 0, "file": "10_free_lead_magnet.pdf", "status": "PDF_READY"},
+        {"name": "Funnel Teardown Guide", "price": 7, "file": "09_funnel_teardown_guide.pdf", "status": "PDF_READY"},
+        {"name": "Sleep YouTube Starter Kit", "price": 17, "file": "08_sleep_youtube_starter.pdf", "status": "PDF_READY"},
+        {"name": "Solopreneur Tech Stack", "price": 17, "file": "07_solopreneur_tech_stack.pdf", "status": "PDF_READY"},
+        {"name": "50 Viral Tweet Templates", "price": 19, "file": "12_viral_tweet_templates.pdf", "status": "PDF_READY"},
+        {"name": "Cold Email Playbook", "price": 27, "file": "05_cold_email_playbook.pdf", "status": "PDF_READY"},
+        {"name": "Twitter/X Growth Playbook", "price": 27, "file": "06_twitter_growth_playbook.pdf", "status": "PDF_READY"},
+        {"name": "73 Cold Email Subject Lines", "price": 29, "file": "11_cold_email_subject_lines.pdf", "status": "PDF_READY"},
+        {"name": "Local Biz Cold Email Pack", "price": 39, "file": "13_local_biz_cold_email_pack.pdf", "status": "PDF_READY"},
+        {"name": "AI Content Farm Blueprint", "price": 47, "file": "04_ai_content_farm_blueprint.pdf", "status": "PDF_READY"},
+        {"name": "Vibe Coding Playbook", "price": 47, "file": "03_vibe_coding_playbook.pdf", "status": "PDF_READY"},
+        {"name": "AI Automation Toolkit", "price": 47, "file": "02_ai_automation_toolkit.pdf", "status": "PDF_READY"},
+        {"name": "Local Biz Client Machine", "price": 97, "file": "01_local_biz_client_system.pdf", "status": "PDF_READY"}
+      ]
+    },
+    "fiverr_gigs": {
+      "status": "BLOCKED_AT_UPLOAD",
+      "count": 10,
+      "listed_on_fiverr": 0,
+      "estimated_monthly_revenue": 800,
+      "blocker": "Human must create Fiverr account and list gigs",
+      "action_file": "OPS/FIVERR_UPLOAD_NOW.md",
+      "time_to_unblock": "30-45 minutes",
+      "gigs": [
+        {"name": "Website Design", "price_range": "$75-750", "status": "COPY_READY"},
+        {"name": "Landing Page", "price_range": "$50-500", "status": "COPY_READY"},
+        {"name": "Cold Email", "price_range": "$50-300", "status": "COPY_READY"},
+        {"name": "Web Scraping", "price_range": "$50-400", "status": "COPY_READY"},
+        {"name": "Automation", "price_range": "$75-500", "status": "COPY_READY"},
+        {"name": "SEO Pages", "price_range": "$50-300", "status": "COPY_READY"},
+        {"name": "Content Writing", "price_range": "$25-200", "status": "COPY_READY"},
+        {"name": "App Development", "price_range": "$100-1000", "status": "COPY_READY"},
+        {"name": "AI Chatbot", "price_range": "$75-500", "status": "COPY_READY"},
+        {"name": "Data Analysis", "price_range": "$50-300", "status": "COPY_READY"}
+      ]
+    },
+    "etsy_listings": {
+      "status": "BLOCKED_AT_UPLOAD",
+      "count": 20,
+      "listed_on_etsy": 0,
+      "estimated_monthly_revenue": 200,
+      "blocker": "Human must create Etsy account and list products",
+      "time_to_unblock": "60 minutes"
+    },
+    "whop_products": {
+      "status": "BLOCKED_AT_UPLOAD",
+      "count": 8,
+      "listed_on_whop": 0,
+      "estimated_monthly_revenue": 300,
+      "blocker": "Human must create Whop account and list products",
+      "time_to_unblock": "30 minutes"
+    },
+    "cold_outreach": {
+      "status": "BLOCKED_AT_SEND",
+      "leads_scraped": 7433456,
+      "hot_leads": 22,
+      "emails_drafted": 0,
+      "emails_sent": 0,
+      "estimated_monthly_revenue": 1500,
+      "blocker": "Need email sending infrastructure (warmup inbox). Emails being drafted now.",
+      "action_file": "AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md",
+      "time_to_unblock": "1-2 weeks (email warmup)"
+    },
+    "content_distribution": {
+      "status": "BLOCKED_AT_APPROVAL",
+      "posts_in_queue": 406,
+      "posts_approved": 0,
+      "posts_posted": 0,
+      "estimated_monthly_revenue": 0,
+      "blocker": "406 posts pending review. Agent approving top 20 now.",
+      "time_to_unblock": "30 minutes (Buffer upload)"
+    },
+    "apps_deployed": {
+      "status": "NO_MONETIZATION",
+      "count": 14,
+      "monetized": 0,
+      "estimated_monthly_revenue": 100,
+      "blocker": "No ads, premium tiers, email capture, or affiliate links on any app",
+      "apps": [
+        "PrayerLock", "FocusLock", "ColdMaxx", "WalkToUnlock", "SleepMaxx",
+        "Hilal", "MealMaxx", "ProspectMaxx", "ContentCalendar", "WebsiteAuditTool",
+        "InvoiceTracker", "ROICalc", "PageScorer", "StackMaxx"
+      ]
+    },
+    "plumber_sites": {
+      "status": "DEPLOYED_NO_TRAFFIC",
+      "count": 3,
+      "estimated_monthly_revenue": 0,
+      "blocker": "No SEO, no Google Business Profile, no traffic source"
+    }
+  },
+  "priority_actions": [
+    {
+      "rank": 1,
+      "action": "Upload 13 products to Gumroad",
+      "owner": "HUMAN",
+      "time": "45-60 min",
+      "revenue_impact": "$500/mo",
+      "guide": "OPS/GUMROAD_UPLOAD_NOW.md"
+    },
+    {
+      "rank": 2,
+      "action": "Upload 10 gigs to Fiverr",
+      "owner": "HUMAN",
+      "time": "30-45 min",
+      "revenue_impact": "$800/mo",
+      "guide": "OPS/FIVERR_UPLOAD_NOW.md"
+    },
+    {
+      "rank": 3,
+      "action": "Set up cold email infrastructure (Instantly.ai or Smartlead)",
+      "owner": "HUMAN",
+      "time": "2 hours + 2 week warmup",
+      "revenue_impact": "$1,500/mo",
+      "guide": "AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md"
+    },
+    {
+      "rank": 4,
+      "action": "Upload approved content to Buffer and connect Twitter",
+      "owner": "HUMAN",
+      "time": "20 min",
+      "revenue_impact": "Traffic driver",
+      "guide": "CONTENT/social/APPROVED_POSTS_MAR6.csv"
+    },
+    {
+      "rank": 5,
+      "action": "Upload 20 listings to Etsy",
+      "owner": "HUMAN",
+      "time": "60 min",
+      "revenue_impact": "$200/mo"
+    }
+  ],
+  "weekly_targets": {
+    "week_of": "2026-03-06",
+    "gumroad_products_listed": {"target": 13, "actual": 0},
+    "fiverr_gigs_listed": {"target": 10, "actual": 0},
+    "cold_emails_sent": {"target": 22, "actual": 0},
+    "content_posts_published": {"target": 20, "actual": 0},
+    "apps_monetized": {"target": 3, "actual": 0}
+  }
+}
