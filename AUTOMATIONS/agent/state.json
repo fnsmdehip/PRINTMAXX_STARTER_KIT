@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-06T20:08:28.461124",
-  "cycles_run": 11,
-  "missions_completed": 22,
+  "last_cycle": "2026-03-07T02:00:00.113434",
+  "cycles_run": 13,
+  "missions_completed": 28,
   "missions_failed": 0,
   "last_mission_results": {
     "health_heal": "success",
@@ -13,7 +13,7 @@
     "content": "success",
     "research_night": "partial",
     "upgrade_night": "partial",
-    "hunt_night": "success",
+    "hunt_night": "partial",
     "safety_night": "success"
   },
   "active_priorities": [],
@@ -21,17 +21,17 @@
   "blockers": [
     "account_creation"
   ],
-  "disk_gb_free": 68.1,
+  "disk_gb_free": 59.2,
   "last_run_times": {
-    "health_heal": "2026-03-06T05:00:02.327895",
-    "process_decide": "2026-03-06T05:00:02.602173",
+    "health_heal": "2026-03-07T01:15:58.990012",
+    "process_decide": "2026-03-07T01:15:59.282301",
     "scan_opps_eve": "2026-03-05T23:33:10.816592",
     "gen_content_eve": "2026-03-05T23:34:03.929884",
     "safety_commit": "2026-03-05T23:34:06.216629",
     "screen_alpha_night": "2026-03-05T23:34:40.089415",
-    "research_night": "2026-03-06T05:06:00.826281",
-    "upgrade_night": "2026-03-06T04:02:00.119095",
-    "hunt_night": "2026-03-06T05:07:20.943299",
-    "safety_night": "2026-03-06T04:02:01.790394"
+    "research_night": "2026-03-07T01:21:58.972311",
+    "upgrade_night": "2026-03-07T01:23:59.051279",
+    "hunt_night": "2026-03-07T01:25:29.212959",
+    "safety_night": "2026-03-07T01:25:36.599181"
   }
 }
