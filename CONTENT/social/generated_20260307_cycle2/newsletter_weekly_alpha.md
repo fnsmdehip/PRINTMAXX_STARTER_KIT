@@ -1,5 +1,5 @@
 # Newsletter Draft — Weekly Alpha Digest
-# STATUS: PENDING_REVIEW
+# STATUS: APPROVED
 # DATE: 2026-03-07
 # SOURCE: ALPHA_STAGING.csv cross-section
 # SUBJECT LINES (test 3):

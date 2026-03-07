@@ -583,3 +583,21 @@ Join → discord(dot)com/invite/bulk
 • Post content
 • Work
 
+
+
+---
+
+## Pending Enhancement (ALPHA17230, Score: 41)
+
+**Source:** @WorkflowWhisper (high-signal-accounts) | **URL:** https://x.com/WorkflowWhisper/status/2029613914514936104
+**Added:** 2026-03-07T10:14:56-05:00
+
+openclaw has 199k github stars.
+
+what nobody's mentioning:
+
+→ 12% of community skills contain malicious code
+→ 50,000+ instances exposed with remote code execution vulns
+→ the creator literally said "i ship code i don't read"
+→ crypto scammers launched a fake $16M token off
+

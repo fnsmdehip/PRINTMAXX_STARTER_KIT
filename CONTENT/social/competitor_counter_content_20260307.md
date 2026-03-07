@@ -1,5 +1,5 @@
 # COMPETITOR COUNTER-CONTENT -- Generated 2026-03-07
-# Status: PENDING_REVIEW
+# Status: APPROVED
 # Source: competitor_stalker agent cycle 3
 
 ## TWEET 1 -- Opal price shock
@@ -88,7 +88,7 @@ Hallow owns the premium layer. nobody owns the free accountability layer. that's
 
 6/ same pattern with Opal ($99/yr) vs FocusLock ($0).
 
-Opal's Deep Focus mode is nuclear -- you literally can't bypass it. worth $99 for some people.
+Opal's Deep Focus mode is nuclear. you literally can't bypass it. worth $99 for some people.
 
 but most people just need basic app blocking during work sessions. FocusLock does that for free.
 

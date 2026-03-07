@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-07T09:09:56.799763",
-  "cycles_run": 20,
-  "missions_completed": 40,
+  "last_cycle": "2026-03-07T12:00:00.105018",
+  "cycles_run": 23,
+  "missions_completed": 45,
   "missions_failed": 1,
   "last_mission_results": {
     "health_heal": "success",
@@ -17,17 +17,20 @@
     "safety_night": "success",
     "scan_opps": "success",
     "research": "failed",
-    "screen_alpha": "success"
+    "screen_alpha": "success",
+    "gen_content": "success",
+    "upgrade_content": "partial",
+    "schedule": "success"
   },
   "active_priorities": [],
   "learnings": [],
   "blockers": [
     "account_creation"
   ],
-  "disk_gb_free": 59.2,
+  "disk_gb_free": 59.8,
   "last_run_times": {
-    "health_heal": "2026-03-07T09:03:56.491200",
-    "process_decide": "2026-03-07T09:03:56.766310",
+    "health_heal": "2026-03-07T11:31:51.710697",
+    "process_decide": "2026-03-07T11:31:51.987547",
     "scan_opps_eve": "2026-03-05T23:33:10.816592",
     "gen_content_eve": "2026-03-05T23:34:03.929884",
     "safety_commit": "2026-03-05T23:34:06.216629",
@@ -38,6 +41,9 @@
     "safety_night": "2026-03-07T01:25:36.599181",
     "scan_opps": "2026-03-07T08:06:02.969083",
     "research": "2026-03-07T09:09:56.799481",
-    "screen_alpha": "2026-03-07T05:10:04.155516"
+    "screen_alpha": "2026-03-07T05:10:04.155516",
+    "gen_content": "2026-03-07T10:01:43.263802",
+    "upgrade_content": "2026-03-07T10:03:43.295766",
+    "schedule": "2026-03-07T10:03:43.404778"
   }
 }

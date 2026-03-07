@@ -146,15 +146,26 @@
 - **Action:** Reply to this thread with our data-first methodology. Link to printmaxxer. High engagement window.
 - **Priority:** P1
 
-### Cycle 2 Stats:
+### [ALERT-C2-7] HIGHEST: @dimitarangg — 59 B2B Calls in 16 Days Cold System
+- **Signal:** Twitter (666 engagement): leaked entire cold outreach system that booked 59 calls in 16 days for B2B agency.
+- **Action:** Read full thread. Reverse-engineer into MM007_COLD_OUTBOUND pipeline. Adapt immediately.
+- **Priority:** P0 — HIGHEST ROI signal this cycle
+
+### [ALERT-C2-8] HIGH: Read2Speak Digital Ebooks — Printing Money in Saturated Market
+- **Signal:** Twitter (@xivy0k, 163 engagement): store absolutely printing money on ebooks in saturated category.
+- **Action:** Research Read2Speak positioning angle. Apply to our Gumroad/digital product stack.
+- **Priority:** P1
+
+### Cycle 2 Stats (incl. Twitter):
 | Metric | Value |
 |--------|-------|
 | New app records | 38 (38 deduped from 52 raw) |
 | New pain points stored | 25 |
-| New alpha entries | 6 COMPETITIVE_INTEL entries |
-| CRITICAL threats found | 7 (vs 2 in Cycle 1) |
+| New Twitter alpha entries | 4 (1 HIGHEST, 2 HIGH, 1 MEDIUM) |
+| New COMPETITIVE_INTEL alphas | 6 |
+| CRITICAL app threats found | 7 (vs 2 in Cycle 1) |
 | Ramadan-branded active apps | 5 |
-| New P0 actions | 3 |
+| New P0 actions | 4 (added @dimitarangg cold system) |
 
 ---
 

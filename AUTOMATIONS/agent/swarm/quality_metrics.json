@@ -1,118 +1,104 @@
 {
-  "last_cycle": "2026-03-07T19:30:00Z",
-  "cycle_number": 3,
+  "last_cycle": "2026-03-07T22:15:00Z",
+  "cycle_number": 4,
   "cycle_summary": {
-    "total_items_reviewed": 194,
-    "passed_no_changes": 88,
-    "fixed_and_approved": 26,
-    "blocked": 0,
-    "flagged_for_review": 6,
-    "pass_rate_before_fixes": "45.4%",
+    "total_items_reviewed": 72,
+    "passed_no_changes": 68,
+    "fixed_and_approved": 3,
+    "blocked": 1,
+    "flagged_for_review": 0,
+    "pass_rate_before_fixes": "94.4%",
     "pass_rate_after_fixes": "100%"
   },
   "content_review": {
-    "files_scanned": 98,
-    "tweets_reviewed": 37,
+    "files_scanned": 11,
+    "tweets_reviewed": 28,
     "threads_reviewed": 4,
-    "compound_posts_reviewed": 9,
-    "cc_posts_reviewed": 14,
-    "linkedin_posts_reviewed": 5,
-    "promo_posts_reviewed": 10,
-    "inbound_posts_reviewed": 4,
-    "aistack_posts_reviewed": 4,
-    "trend_posts_reviewed": 6,
-    "misc_posts_reviewed": 15,
-    "em_dash_violations": 14,
-    "em_dashes_fixed": 14,
+    "linkedin_posts_reviewed": 3,
+    "newsletter_drafts_reviewed": 1,
+    "cross_niche_posts_reviewed": 4,
+    "reddit_posts_reviewed": 3,
+    "hn_posts_reviewed": 1,
+    "competitor_counter_posts_reviewed": 6,
+    "roi_calculator_posts_reviewed": 10,
+    "em_dash_violations": 1,
+    "em_dashes_fixed": 1,
     "em_dash_locations": [
-      "compound_building_trap_mar7.txt (7 section headers)",
-      "compound_engagement_bait_mar7.txt (7 section headers)",
-      "compound_competitive_intel_mar7.txt (8 section headers)",
-      "compound_engagement_bait_competitive_mar7.txt (5 section headers)",
-      "compound_linkedin_mar7.txt (2 section headers)",
-      "compound_linkedin_competitive_mar7.txt (2 section headers)",
-      "compound_hn_reddit_competitive_mar7.txt (2 section headers)",
-      "compound_hn_reddit_mar7.txt (3 in body copy)",
-      "twitter_PRINTMAXXER_mar15_0730.txt (1 in body)",
-      "trend files (4 files with em dashes in titles)",
-      "roi_calculator_launch_posts.md (1 in body)",
-      "trend_synthesis_posts_20260307.md (8 in headings)",
-      "research_cycle_20260307_0300.md (8 in headings)"
+      "competitor_counter_content_20260307.md line 91: double-dash in tweet content -> period"
     ],
-    "banned_word_violations": 3,
-    "banned_words_fixed": 3,
-    "banned_word_details": [
-      "compound_thread_building_trap_mar7.txt: 'unlock'",
-      "trend_20260307_cold_email_landscape_fundament.txt: 'landscape'",
-      "COLD_EMAILS_READY_TO_SEND.md: 'frictionless'"
-    ],
-    "hook_rewrites": 8,
-    "hook_rewrite_details": [
-      "mar7_1430: explanation-first -> consequence-first",
-      "mar9_1430: label-first -> story-first",
-      "mar10_0730: changelog-style -> consequence-first",
-      "mar10_1430: vague claim -> specific range",
-      "mar14_1100: 'unpopular opinion:' cliche -> consequence-first",
-      "mar16_1100: 'hot take:' cliche -> specific claim",
-      "mar16_1430: product announcement -> story-first",
-      "cc_thread_conversion_killers_01.txt: THREAD: prefix removed"
-    ],
-    "sycophantic_artifacts": 1,
-    "sycophantic_fixed": "compound_hn_reddit_competitive_mar7.txt: 'Happy to share...'",
-    "stub_files_fleshed_out": 5,
-    "template_placeholders_fixed": 1
+    "banned_word_violations": 0,
+    "sycophantic_artifacts": 0,
+    "hook_rewrites": 0,
+    "note": "Content quality significantly improved from cycle 3. Swarm agents no longer generating em dashes in body copy. The cycle 2 generated content (tweets_5_posts, thread_ai_saas_pricing, cross_niche, linkedin, newsletter, research_cycle) is clean across all checks."
+  },
+  "outreach_review": {
+    "total_emails_reviewed": 30,
+    "files_reviewed": 3,
+    "sycophantic_artifacts": 2,
+    "sycophantic_fixed": "leadmachine_cycle2_20260307.md: 'happy to scope' x2 -> 'can we scope'",
+    "banned_word_violations": 0,
+    "personalization_quality": "strong",
+    "human_tone": "pass",
+    "word_count_compliance": "pass",
+    "note": "Outreach quality is high. ADA compliance angle is strong and legally grounded. Only 2 'happy to' sycophantic artifacts found and fixed across 30 emails."
   },
   "deployment_review": {
-    "landing_pages_audited": 10,
-    "app_factory_builds_audited": 25,
+    "sites_status_checked": 5,
+    "sites_returning_200": 4,
+    "sites_returning_404": 1,
+    "sites_404": ["printmaxx-site.surge.sh"],
+    "dead_cta_count": 17,
+    "dead_cta_pages": [
+      "sleepmaxx", "walktounlock", "mealmaxx",
+      "episcopal-streak", "orthodox-streak", "evangelical-streak",
+      "methodist-streak", "presbyterian-streak", "catholic-streak",
+      "lutheran-streak", "shia-streak", "baptist-streak",
+      "protestant-streak", "pentecostal-streak", "sunni-streak",
+      "anglican-streak", "ai-stack-2026"
+    ],
     "critical_issues": [
-      "3 landing pages (mealmaxx, sleepmaxx, walktounlock) have dead final CTAs (href='#')",
-      "13 streak landing pages have dead App Store/Play Store CTAs",
-      "3 PWA apps (walktounlock-web, focuslock-web, sleepmaxx-web) have unwired affiliate gear links",
-      "coldmaxx build has AI slop in generated email template ('streamlined', 'I would be pleased')"
+      "printmaxx-site.surge.sh returning 404 (main site DOWN)",
+      "17 landing pages still have dead CTAs (href='#') preventing conversion",
+      "BUFFER_UPLOAD_MAR7.csv BLOCKED: cross-account contamination + truncation bugs in tweet_drafter.py"
     ],
-    "low_issues": [
-      "ai-stack-2026 missing twitter:image meta tag",
-      "thanks page has &mdash; in footer",
-      "13 streak pages have em dashes in title tags and testimonial attributions",
-      "4 tool builds have em dashes in title tags only"
-    ],
-    "app_icon_routing_errors": [
-      "vault icon in streakr folder",
-      "mise icon in steplock folder",
-      "prayerlock icon in dusk folder",
-      "dusk icon in vault folder"
+    "fixed_since_last_cycle": [
+      "focuslock landing page: dead CTA fixed (was 1, now 0)"
     ]
   },
   "media_review": {
-    "images_checked": 85,
-    "images_in_media_dir": 48,
-    "images_in_app_factory": 37,
-    "all_under_500kb": true,
-    "videos_checked": 9,
-    "all_videos_under_2mb": true,
-    "icon_folder_mismatches": 4
+    "new_images_since_last_cycle": 59,
+    "images_over_500kb": 1,
+    "over_500kb_details": "gumroad_cover_4.png (561KB) - minor, Gumroad asset not web-deployed",
+    "new_videos_since_last_cycle": 0,
+    "all_within_size_limits": true
   },
-  "outreach_review": {
-    "total_emails_reviewed": 46,
-    "banned_word_violations": 1,
-    "banned_word_fixed": "frictionless -> 'lags on phones'",
-    "placeholder_violations": 1,
-    "placeholder_fixed": "AccuTemp '[insert specific finding]' -> concrete finding added",
-    "personalization_quality": "strong",
-    "human_tone": "pass",
-    "word_count_compliance": "pass"
+  "buffer_csv_review": {
+    "status": "BLOCKED",
+    "file": "BUFFER_UPLOAD_MAR7.csv",
+    "issues": [
+      "Cross-account contamination: identical content posted to @PRINTMAXXER, @repscheme, @finance, @selahmoments with only prefix changes",
+      "@drifthour posts: formulaic slop (aesthetic phrases prepended to data points, no original content)",
+      "@repscheme posts: formulaic slop (fitness metaphors prepended to unrelated data points)",
+      "@PRINTMAXXER tool posts: truncation bugs ('46.9% hours', 'been using No for a week')",
+      "Same earnings timeline posted 4x to different accounts"
+    ],
+    "root_cause": "tweet_drafter.py token parsing regex + cross-account template engine",
+    "action": "Keep blocked. Fix tweet_drafter.py before regenerating."
   },
   "most_common_failures": [
-    "em_dashes_in_section_headers (14 files, ~35 instances total - swarm agents generating these)",
-    "explanation_first_hooks (8 tweets rewritten - formulaic openers)",
-    "dead_CTA_links (19 pages with href='#' - critical revenue loss)",
-    "banned_vocabulary (3 instances: unlock, landscape, frictionless)",
-    "stub_content_files (5 trend files were title-only with no body)"
+    "dead_CTA_links (17 pages, persistent since cycle 3 - REVENUE BLOCKER)",
+    "buffer_csv_cross_contamination (pipeline bug in tweet_drafter.py)",
+    "sycophantic_artifacts_in_outreach (2 instances of 'happy to')",
+    "em_dash_in_competitor_content (1 instance, double-dash)"
   ],
   "trend": {
-    "direction": "improving_content_degrading_deployment",
-    "pass_rate_history": ["96.3% (cycle 1)", "97.9% (cycle 2)", "45.4% raw / 100% after fixes (cycle 3 - deep audit)"],
-    "note": "Cycle 3 was a significantly deeper audit than cycles 1-2, catching issues previous cycles missed. Content quality is solid but swarm agents still generate em dashes in structural headers. The real problem is DEPLOYMENTS: 19 pages have dead CTAs that prevent conversion. This is the #1 revenue blocker. Outreach emails are high quality with only 2 minor fixes needed across 46 drafts."
+    "direction": "content_improving_deployment_stalled",
+    "pass_rate_history": [
+      "96.3% (cycle 1)",
+      "97.9% (cycle 2)",
+      "45.4% raw / 100% after fixes (cycle 3 - deep audit)",
+      "94.4% raw / 100% after fixes (cycle 4)"
+    ],
+    "note": "Content quality is now solid. Swarm agents stopped generating em dashes in body copy (14 violations in cycle 3, down to 1 in cycle 4). Outreach quality consistently strong. REAL problem remains DEPLOYMENTS: 17 dead CTAs + 1 site returning 404. This is the #1 revenue blocker. BUFFER_UPLOAD_MAR7.csv still blocked due to tweet_drafter.py pipeline bug."
   }
 }
