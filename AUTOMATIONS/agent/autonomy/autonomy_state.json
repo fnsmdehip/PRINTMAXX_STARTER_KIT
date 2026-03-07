@@ -1,0 +1,423 @@
+{
+  "ventures": {
+    "auto_research_alpha_intelligence_9565": {
+      "id": "auto_research_alpha_intelligence_9565",
+      "name": "Alpha Intelligence",
+      "type": "RESEARCH",
+      "status": "ACTIVE",
+      "pipeline": [
+        "scrape",
+        "analyze",
+        "score",
+        "route",
+        "compound"
+      ],
+      "interval_hours": 2,
+      "config": {},
+      "created_at": "2026-03-06T21:12:45.215928",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "scrape": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "analyze": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "score": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "route": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "compound": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    },
+    "auto_content_niche_content_farm_9569": {
+      "id": "auto_content_niche_content_farm_9569",
+      "name": "Niche Content Farm",
+      "type": "CONTENT",
+      "status": "ACTIVE",
+      "pipeline": [
+        "find_topics",
+        "generate",
+        "format",
+        "schedule",
+        "distribute",
+        "track"
+      ],
+      "interval_hours": 6,
+      "config": {},
+      "created_at": "2026-03-06T21:12:49.219844",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "find_topics": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "generate": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "format": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "schedule": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "distribute": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "track": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    },
+    "auto_outbound_cold_outreach_engine_9569": {
+      "id": "auto_outbound_cold_outreach_engine_9569",
+      "name": "Cold Outreach Engine",
+      "type": "OUTBOUND",
+      "status": "ACTIVE",
+      "pipeline": [
+        "prospect",
+        "qualify",
+        "build_asset",
+        "outreach",
+        "followup",
+        "track"
+      ],
+      "interval_hours": 4,
+      "config": {},
+      "created_at": "2026-03-06T21:12:49.295222",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "prospect": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "qualify": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "build_asset": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "outreach": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "followup": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "track": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    },
+    "auto_local_biz_openclaw_nationwide_9569": {
+      "id": "auto_local_biz_openclaw_nationwide_9569",
+      "name": "OpenClaw Nationwide",
+      "type": "LOCAL_BIZ",
+      "status": "ACTIVE",
+      "pipeline": [
+        "discover",
+        "grade",
+        "build_preview",
+        "deploy",
+        "outreach",
+        "track"
+      ],
+      "interval_hours": 4,
+      "config": {},
+      "created_at": "2026-03-06T21:12:49.502027",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "discover": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "grade": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "build_preview": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "deploy": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "outreach": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "track": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    },
+    "auto_monetize_affiliate_funnels_9569": {
+      "id": "auto_monetize_affiliate_funnels_9569",
+      "name": "Affiliate Funnels",
+      "type": "MONETIZE",
+      "status": "ACTIVE",
+      "pipeline": [
+        "find_offers",
+        "create_funnel",
+        "build_page",
+        "deploy",
+        "distribute",
+        "track"
+      ],
+      "interval_hours": 8,
+      "config": {},
+      "created_at": "2026-03-06T21:12:49.570509",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "find_offers": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "create_funnel": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "build_page": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "deploy": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "distribute": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "track": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    },
+    "auto_app_app_factory_9788": {
+      "id": "auto_app_app_factory_9788",
+      "name": "App Factory",
+      "type": "APP",
+      "status": "ACTIVE",
+      "pipeline": [
+        "find_gap",
+        "spec",
+        "build",
+        "deploy",
+        "aso",
+        "track"
+      ],
+      "interval_hours": 12,
+      "config": {
+        "stack": "nextjs,pwa"
+      },
+      "created_at": "2026-03-06T21:16:28.937694",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "find_gap": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "spec": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "build": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "deploy": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "aso": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "track": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    },
+    "auto_product_digital_products_9788": {
+      "id": "auto_product_digital_products_9788",
+      "name": "Digital Products",
+      "type": "PRODUCT",
+      "status": "ACTIVE",
+      "pipeline": [
+        "find_demand",
+        "create",
+        "listing",
+        "launch",
+        "distribute",
+        "track"
+      ],
+      "interval_hours": 24,
+      "config": {
+        "types": "templates,ebooks,tools"
+      },
+      "created_at": "2026-03-06T21:16:28.940901",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "find_demand": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "create": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "listing": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "launch": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "distribute": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "track": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    },
+    "auto_scraping_competitive_intel_9788": {
+      "id": "auto_scraping_competitive_intel_9788",
+      "name": "Competitive Intel",
+      "type": "SCRAPING",
+      "status": "ACTIVE",
+      "pipeline": [
+        "configure",
+        "scrape",
+        "clean",
+        "analyze",
+        "store",
+        "alert"
+      ],
+      "interval_hours": 2,
+      "config": {
+        "targets": "competitors,trends,pricing"
+      },
+      "created_at": "2026-03-06T21:16:28.943305",
+      "last_run": null,
+      "cycles_run": 0,
+      "results": [],
+      "pipeline_stats": {
+        "configure": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "scrape": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "clean": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "analyze": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "store": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        },
+        "alert": {
+          "runs": 0,
+          "successes": 0,
+          "last_run": null
+        }
+      }
+    }
+  },
+  "total_cycles": 0,
+  "total_pipeline_runs": 0,
+  "created_at": "2026-03-06T21:12:45.215910"
+}

@@ -59,3 +59,6 @@ timestamp,source,action,reasoning,outcome
 2026-03-06T01:00:04.055029,ecom_arb,listing_draft:led_face_mask,"Margin 40.8% >= 25% threshold, action=LIST",PENDING
 2026-03-06T01:00:04.055320,ecom_arb,listing_draft:posture_corrector,"Margin 30.5% >= 25% threshold, action=LIST",PENDING
 2026-03-06T01:00:04.055598,ecom_arb,listing_draft:gua_sha_tool,"Margin 52.1% >= 25% threshold, action=LIST",PENDING
+2026-03-06T20:07:03.663080,freelance_demand,draft_response:[Hiring]_Looking_for_a_improving_on_my_current_log,Score 80.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-06T20:07:03.663378,freelance_demand,draft_response:[HIRING]_Senior_Software_Engineer_-_Python_Java_Ex,Score 65.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-06T20:07:03.663641,freelance_demand,draft_response:[hiring]_cold_callers_$300-600_deal,Score 75.0 >= 60 threshold. Subreddit: unknown,PENDING

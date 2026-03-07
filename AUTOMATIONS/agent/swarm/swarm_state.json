@@ -1,0 +1,70 @@
+{
+  "agents": {
+    "gap_hunter": {
+      "installed_at": "2026-03-06T21:58:01.127111",
+      "status": "ACTIVE"
+    },
+    "opportunity_scanner": {
+      "installed_at": "2026-03-06T21:58:01.138670",
+      "status": "ACTIVE"
+    },
+    "competitor_stalker": {
+      "installed_at": "2026-03-06T21:58:01.149061",
+      "status": "ACTIVE"
+    },
+    "asset_deployer": {
+      "installed_at": "2026-03-06T21:58:01.163098",
+      "status": "ACTIVE"
+    },
+    "content_compounder": {
+      "installed_at": "2026-03-06T21:58:01.179583",
+      "status": "ACTIVE"
+    },
+    "lead_machine": {
+      "installed_at": "2026-03-06T21:58:01.193263",
+      "status": "ACTIVE"
+    },
+    "seo_aso_optimizer": {
+      "installed_at": "2026-03-06T21:58:01.203837",
+      "status": "ACTIVE"
+    },
+    "conversion_optimizer": {
+      "installed_at": "2026-03-06T21:58:01.214667",
+      "status": "ACTIVE"
+    },
+    "quality_enforcer": {
+      "installed_at": "2026-03-06T21:58:01.225307",
+      "status": "ACTIVE"
+    },
+    "trend_synthesizer": {
+      "installed_at": "2026-03-06T21:58:01.245373",
+      "status": "ACTIVE"
+    },
+    "cross_pollinator": {
+      "installed_at": "2026-03-06T21:58:01.257944",
+      "status": "ACTIVE"
+    },
+    "revenue_tracker": {
+      "installed_at": "2026-03-06T21:58:01.271184",
+      "status": "ACTIVE"
+    },
+    "system_healer": {
+      "installed_at": "2026-03-06T21:58:01.293347",
+      "status": "ACTIVE"
+    },
+    "data_janitor": {
+      "installed_at": "2026-03-06T21:58:01.306557",
+      "status": "ACTIVE"
+    },
+    "distribution_engine": {
+      "installed_at": "2026-03-06T21:58:01.330574",
+      "status": "ACTIVE"
+    },
+    "inbound_maximizer": {
+      "installed_at": "2026-03-06T21:58:01.353420",
+      "status": "ACTIVE"
+    }
+  },
+  "deployed_at": "2026-03-06T21:58:01.353826",
+  "total_runs": 0
+}

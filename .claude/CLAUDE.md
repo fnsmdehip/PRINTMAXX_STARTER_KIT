@@ -224,6 +224,52 @@ Native Claude Code subconscious powered by your Max plan:
 
 ---
 
+## AGENT INFRASTRUCTURE (READ THIS — agents already exist)
+
+**Root:** `AUTOMATIONS/agent/` — All agent orchestration, state, and inter-agent communication lives here.
+
+### Core Agent Scripts
+| Script | Purpose |
+|--------|---------|
+| `AUTOMATIONS/ceo_agent.py` | 24/7 CEO orchestrator — 15 phases, xlsx scoring, git failsafes |
+| `AUTOMATIONS/venture_autonomy.py` | Universal autonomy engine — 8 venture types, self-managing schedules |
+| `AUTOMATIONS/agent/monitor.py` | Command Center dashboard at localhost:7777 |
+| `AUTOMATIONS/agent/interagent.py` | Inter-agent message bus (Claude/Codex communication) |
+| `AUTOMATIONS/agent/llm_bridge.py` | Auto-relay between Claude and GPT |
+| `AUTOMATIONS/agent/llm_chat.py` | LLM chat functionality |
+| `AUTOMATIONS/agent/llm_relay.py` | LLM relay system |
+
+### Agent State & Communication
+| File | Purpose |
+|------|---------|
+| `AUTOMATIONS/agent/state.json` | Agent cycle count, mission stats |
+| `AUTOMATIONS/agent/missions.jsonl` | Shared mission log (visible in Command Center) |
+| `AUTOMATIONS/agent/message_bus.jsonl` | Inter-agent messages (JSONL bus) |
+| `AUTOMATIONS/agent/ceo_agent/ceo_state.json` | CEO agent state (cycles, decisions, timestamps) |
+| `AUTOMATIONS/agent/ceo_agent/decisions.jsonl` | CEO decision audit trail |
+| `AUTOMATIONS/agent/ceo_agent/audit.jsonl` | Regression detection audit log |
+| `AUTOMATIONS/agent/ops_manager/ops_state.json` | Ops manager state |
+| `AUTOMATIONS/agent/ops_manager/venture_log.jsonl` | Venture execution log |
+
+### Venture Autonomy Engine
+| Command | What it does |
+|---------|-------------|
+| `python3 AUTOMATIONS/venture_autonomy.py --status` | Show all autonomous ventures + schedules |
+| `python3 AUTOMATIONS/venture_autonomy.py --run-all` | Run all active venture pipelines |
+| `python3 AUTOMATIONS/venture_autonomy.py --self-manage` | Auto-install/fix/adjust/prune schedules |
+| `python3 AUTOMATIONS/venture_autonomy.py --create TYPE NAME` | Create new venture (OUTBOUND/CONTENT/APP/LOCAL_BIZ/RESEARCH/MONETIZE/PRODUCT/SCRAPING) |
+| `python3 AUTOMATIONS/venture_autonomy.py --bootstrap` | Create all 8 core ventures |
+| `python3 AUTOMATIONS/venture_autonomy.py --install-all` | Install LLM launchd for all ventures |
+| `python3 AUTOMATIONS/venture_autonomy.py --daemon` | Run forever (cycles + self-management) |
+
+**Self-managing:** The `SelfManager` class auto-installs missing schedules, fixes broken ones, adjusts intervals (speed up winners, slow down losers), creates ventures from CEO discoveries, and prunes dead ventures after 10 failed cycles.
+
+**Schedule configs:** `AUTOMATIONS/agent/autonomy/schedules/` — launchd plists, Cowork prompts, cron entries, Ralph prompts per venture.
+
+**State:** `AUTOMATIONS/agent/autonomy/autonomy_state.json`
+
+---
+
 ## ALPHA & LEDGER
 
 All findings → `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Never create separate research files.
@@ -241,6 +287,10 @@ All findings → `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Never create sepa
 | What | Where |
 |------|-------|
 | Agent playbook | `OPS/AGENT_DAILY_PLAYBOOK.md` |
+| Agent infrastructure | `AUTOMATIONS/agent/` (monitor, interagent, llm_bridge, llm_chat, llm_relay) |
+| CEO agent | `AUTOMATIONS/ceo_agent.py` (15-phase orchestrator) |
+| Venture autonomy | `AUTOMATIONS/venture_autonomy.py` (8 venture types, self-managing) |
+| Autonomy state | `AUTOMATIONS/agent/autonomy/` (state, schedules, results) |
 | Copy style | `.claude/rules/copy-style.md` |
 | Alpha review | `.claude/rules/alpha-review.md` |
 | App factory | `MONEY_METHODS/APP_FACTORY/` |
