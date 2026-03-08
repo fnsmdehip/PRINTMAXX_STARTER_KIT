@@ -1,0 +1,2526 @@
+{
+  "generated": "2026-03-08T01:33:51.475922",
+  "project": "PRINTMAXX",
+  "total_scripts": 20,
+  "scripts": {
+    "ceo_agent.py": {
+      "desc": "24/7 orchestrator \u2014 scores ops, makes PROMOTE/ENHANCE/CREATE/KILL/DISCOVER decisions, delegates to ventures",
+      "lines": 2023,
+      "classes": [
+        {
+          "name": "GitGuard",
+          "methods": [
+            "__init__()",
+            "snapshot(label)",
+            "rollback()",
+            "post_change_commit(summary)"
+          ]
+        },
+        {
+          "name": "XlsxIntel",
+          "methods": [
+            "__init__()",
+            "_find_xlsx()",
+            "_load()",
+            "get_all_ops()",
+            "get_auto_status()",
+            "get_priority_launch()",
+            "get_synergy_stacks()",
+            "get_venture_map()",
+            "get_expansion_queue()",
+            "get_op_by_id(op_id)",
+            "get_ops_by_category(category)",
+            "get_ready_ops()",
+            "get_blocked_ops()"
+          ]
+        },
+        {
+          "name": "CEOState",
+          "methods": [
+            "__init__()",
+            "_load()",
+            "_default()",
+            "save()",
+            "log_decision(decision)",
+            "log_audit(audit_entry)",
+            "is_protected(op_id)",
+            "protect_op(op_id)",
+            "get_score_trend(op_id, periods)"
+          ]
+        },
+        {
+          "name": "VentureScorer",
+          "methods": [
+            "__init__(xlsx, state)",
+            "score_all()",
+            "_score_op(op, auto_status, venture_info, synergies)",
+            "_parse_revenue_score(rev_str)"
+          ]
+        },
+        {
+          "name": "CEOBrain",
+          "methods": [
+            "__init__(scorer, xlsx, state)",
+            "_get_strategic_intelligence()",
+            "analyze_and_decide(dry_run)"
+          ]
+        },
+        {
+          "name": "VentureRunner",
+          "methods": [
+            "__init__(state, xlsx)",
+            "execute_decisions(decisions)",
+            "_execute_promote(decision)",
+            "_execute_enhance(decision)",
+            "_execute_create(decision)",
+            "_execute_kill(decision)",
+            "_execute_discover(decision)",
+            "run_dynamic_ventures()",
+            "_try_auto_fix(op_id, blocker)",
+            "run_existing_ventures()"
+          ]
+        },
+        {
+          "name": "AuditTrail",
+          "methods": [
+            "__init__(state)",
+            "capture_baseline()",
+            "check_regression(results)"
+          ]
+        },
+        {
+          "name": "LockGuard",
+          "methods": [
+            "__init__()",
+            "acquire()",
+            "release()"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "safe_path",
+          "args": [
+            "p"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "safe_command",
+          "args": [
+            "cmd_str"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "disk_free_gb",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "ts",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "log",
+          "args": [
+            "msg",
+            "level"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "run_script",
+          "args": [
+            "script_path",
+            "args",
+            "timeout_sec",
+            "label"
+          ],
+          "doc": "Run a PRINTMAXX script with guardrails. Returns (success, output)."
+        },
+        {
+          "name": "_hours_since",
+          "args": [
+            "iso_ts"
+          ],
+          "doc": "Return hours elapsed since an ISO timestamp string. Returns float('inf') if None"
+        },
+        {
+          "name": "run_ceo_cycle",
+          "args": [
+            "dry_run"
+          ],
+          "doc": "Run one full CEO cycle: score \u2192 decide \u2192 snapshot \u2192 execute \u2192 audit."
+        },
+        {
+          "name": "show_status",
+          "args": [],
+          "doc": "Show full CEO agent status dashboard."
+        },
+        {
+          "name": "run_daemon",
+          "args": [],
+          "doc": "Run the CEO agent 24/7."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--status",
+        "--daemon",
+        "--score",
+        "--decide",
+        "--run",
+        "--protect",
+        "--rollback",
+        "--alpha",
+        "--research",
+        "--content",
+        "--health",
+        "--decision-engine",
+        "--ventures",
+        "--cron-list",
+        "--cron-add"
+      ],
+      "state_files": [
+        "LOCK_FILE",
+        "ceo_state.json",
+        "STATE_FILE"
+      ],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "BLOCKED_COMMANDS = [...] (6 items)",
+        "MAX_CHANGES_PER_CYCLE = 5",
+        "KILL_THRESHOLD = 15",
+        "PROTECT_THRESHOLD = 60",
+        "PROMOTE_THRESHOLD = 70",
+        "CYCLE_INTERVAL_HOURS = 1",
+        "DISCOVER_INTERVAL_HOURS = 4",
+        "ALPHA_INTERVAL_HOURS = 2",
+        "RESEARCH_INTERVAL_HOURS = 24",
+        "CONTENT_INTERVAL_HOURS = 6",
+        "HEALTH_INTERVAL_HOURS = 1",
+        "OPENCLAW_INTERVAL_HOURS = 4",
+        "AUTONOMY_INTERVAL_HOURS = 2",
+        "GIT_SNAPSHOT_BEFORE_CHANGES = True",
+        "OPENCLAW_CITIES = [...] (30 items)",
+        "XLSX_PATTERNS = [...] (2 items)"
+      ]
+    },
+    "agent_swarm.py": {
+      "desc": "22 operational agents \u2014 generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection",
+      "lines": 1415,
+      "classes": [
+        {
+          "name": "SwarmState",
+          "methods": [
+            "__init__()",
+            "save()",
+            "update_agent(agent_id, updates)"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "safe_path",
+          "args": [
+            "p"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "ts",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "log",
+          "args": [
+            "msg",
+            "level"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "get_agent_intelligence",
+          "args": [
+            "agent_id"
+          ],
+          "doc": "Query intelligence router for this agent's venture context."
+        },
+        {
+          "name": "generate_plist",
+          "args": [
+            "agent_id",
+            "agent_def"
+          ],
+          "doc": "Generate a launchd plist for a swarm agent."
+        },
+        {
+          "name": "install_agent",
+          "args": [
+            "agent_id"
+          ],
+          "doc": "Generate plist and install via launchctl."
+        },
+        {
+          "name": "uninstall_agent",
+          "args": [
+            "agent_id"
+          ],
+          "doc": "Unload and remove a swarm agent."
+        },
+        {
+          "name": "list_installed",
+          "args": [],
+          "doc": "List all installed swarm agents."
+        },
+        {
+          "name": "show_status",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "deploy_all",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "kill_all",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "show_logs",
+          "args": [
+            "agent_id"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "health_check",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--status",
+        "--deploy",
+        "--list",
+        "--kill",
+        "--kill-all",
+        "--logs",
+        "--health",
+        "--run"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "MODEL_OPUS = 'claude-opus-4-6'",
+        "MODEL_SONNET = 'claude-sonnet-4-6'",
+        "SWARM_AGENTS = {...} (24 keys)",
+        "AGENT_VENTURE_MAP = {...} (22 keys)"
+      ]
+    },
+    "venture_autonomy.py": {
+      "desc": "8 venture types \u2014 universal execution engine, self-managing schedules, SelfManager auto-adjusts",
+      "lines": 1634,
+      "classes": [
+        {
+          "name": "AutonomyState",
+          "methods": [
+            "__init__()",
+            "_load()",
+            "save()",
+            "get_venture(venture_id)",
+            "add_venture(venture_id, venture_def)",
+            "update_venture(venture_id, updates)",
+            "get_active_ventures()"
+          ]
+        },
+        {
+          "name": "VentureAutonomyEngine",
+          "methods": [
+            "__init__(state)",
+            "create_venture(venture_type, name, config)",
+            "run_venture(venture_id)",
+            "run_all_active()",
+            "_get_venture_intelligence(venture_type, step)",
+            "_run_with_claude(venture_id, venture, step, vtype)",
+            "_save_step_result(venture_id, step, success, output)",
+            "_generate_schedule_configs(venture_id, venture_def)",
+            "_generate_llm_launchd_plist(venture_id, venture_def, vtype, interval_hours)",
+            "_generate_script_launchd_plist(venture_id, venture_def, interval_hours)",
+            "_generate_cowork_prompt(venture_id, venture_def, vtype)",
+            "_generate_cron_entry(venture_id, interval_hours)",
+            "_generate_ralph_prompt(venture_id, venture_def, vtype)",
+            "import_from_ceo_ventures()"
+          ]
+        },
+        {
+          "name": "SchedulerManager",
+          "methods": [
+            "install_launchd(venture_id, mode)",
+            "uninstall_launchd(venture_id)",
+            "install_all_llm()",
+            "install_cron(venture_id)",
+            "list_installed()"
+          ]
+        },
+        {
+          "name": "SelfManager",
+          "methods": [
+            "__init__(state, engine)",
+            "run_self_management_cycle()",
+            "_ensure_all_scheduled()",
+            "_fix_broken_schedules()",
+            "_adjust_intervals()",
+            "_create_from_opportunities()",
+            "_prune_dead_ventures()"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "_sig",
+          "args": [
+            "s",
+            "f"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "safe_path",
+          "args": [
+            "p"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "ts",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "log",
+          "args": [
+            "msg",
+            "level"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "run_cmd",
+          "args": [
+            "cmd",
+            "timeout_sec",
+            "label"
+          ],
+          "doc": "Run a command with guardrails. Returns (success, output)."
+        },
+        {
+          "name": "run_script",
+          "args": [
+            "script_name",
+            "args",
+            "timeout_sec",
+            "label"
+          ],
+          "doc": "Run a PRINTMAXX automation script."
+        },
+        {
+          "name": "_hours_since",
+          "args": [
+            "iso_ts"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "log_mission",
+          "args": [
+            "mission_name",
+            "result",
+            "duration_s",
+            "output"
+          ],
+          "doc": "Log to the shared agent mission log (same format as monitor.py expects)."
+        },
+        {
+          "name": "send_bus_message",
+          "args": [
+            "body",
+            "to_agent"
+          ],
+          "doc": "Send a message on the shared inter-agent bus."
+        },
+        {
+          "name": "show_status",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "list_types",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "run_daemon",
+          "args": [],
+          "doc": "Run the autonomy engine forever, cycling all active ventures."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--status",
+        "--run",
+        "--run-all",
+        "--create",
+        "--list-types",
+        "--schedule",
+        "--install-launchd",
+        "--install-script-launchd",
+        "--install-cron",
+        "--install-all",
+        "--import-ceo",
+        "--daemon",
+        "--pause",
+        "--resume-venture",
+        "--bootstrap",
+        "--self-manage"
+      ],
+      "state_files": [
+        "LOG_FILE",
+        "autonomy_state.json",
+        "STATE_FILE"
+      ],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "MODEL_OPUS = 'claude-opus-4-6'",
+        "MODEL_SONNET = 'claude-sonnet-4-6'",
+        "VENTURE_TYPES = {...} (8 keys)"
+      ]
+    },
+    "intelligence_router.py": {
+      "desc": "central intelligence hub \u2014 484 docs, 14,799 alpha, 16 CSVs across 9 ventures",
+      "lines": 1609,
+      "classes": [],
+      "functions": [
+        {
+          "name": "safe_path",
+          "args": [
+            "p"
+          ],
+          "doc": "Verify path is within project root. Raises ValueError if not."
+        },
+        {
+          "name": "ts",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "load_catalog",
+          "args": [],
+          "doc": "Load INTELLIGENCE_CATALOG.json if it exists, merge with hardcoded map."
+        },
+        {
+          "name": "query_alpha",
+          "args": [
+            "venture_type",
+            "top"
+          ],
+          "doc": "Query alpha_query.py for top alpha entries relevant to a venture."
+        },
+        {
+          "name": "find_existing_docs",
+          "args": [
+            "venture_type"
+          ],
+          "doc": "Return list of (path, description, exists) for a venture's docs."
+        },
+        {
+          "name": "find_existing_dirs",
+          "args": [
+            "venture_type"
+          ],
+          "doc": "Return list of (dir_path, description, file_count, files) for directories."
+        },
+        {
+          "name": "find_existing_csvs",
+          "args": [
+            "venture_type"
+          ],
+          "doc": "Return list of (path, description, exists, row_count) for LEDGER CSVs."
+        },
+        {
+          "name": "find_swarm_reports",
+          "args": [
+            "venture_type",
+            "max_reports"
+          ],
+          "doc": "Find the most recent swarm reports relevant to a venture type."
+        },
+        {
+          "name": "find_task_docs",
+          "args": [
+            "venture_type",
+            "task_type"
+          ],
+          "doc": "Get the most relevant docs for a specific task within a venture."
+        },
+        {
+          "name": "extract_doc_summary",
+          "args": [
+            "doc_path",
+            "max_lines"
+          ],
+          "doc": "Extract key sections from a doc (headers + first few lines under each)."
+        },
+        {
+          "name": "get_intelligence",
+          "args": [
+            "venture_type",
+            "task_type",
+            "include_summaries",
+            "alpha_count"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "compute_stats",
+          "args": [],
+          "doc": "Compute coverage statistics across all venture types."
+        },
+        {
+          "name": "format_human_output",
+          "args": [
+            "intel",
+            "mode"
+          ],
+          "doc": "Format intelligence for human-readable CLI output."
+        },
+        {
+          "name": "format_stats_output",
+          "args": [
+            "stats"
+          ],
+          "doc": "Format stats for human-readable output."
+        },
+        {
+          "name": "format_catalog_output",
+          "args": [],
+          "doc": "Show the full document-to-venture mapping."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--venture",
+        "--task",
+        "--json",
+        "--brief",
+        "--full",
+        "--stats",
+        "--catalog",
+        "--list-ventures",
+        "--alpha-count"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "VENTURE_TYPES = [...] (9 items)",
+        "TASK_TYPES = {...} (9 keys)",
+        "INTELLIGENCE_MAP = {...} (9 keys)",
+        "SWARM_REPORT_KEYWORDS = {...} (9 keys)"
+      ]
+    },
+    "daily_engagement_planner.py": {
+      "desc": "warmup-aware daily action plan \u2014 posts, replies, likes, follows with timing",
+      "lines": 602,
+      "classes": [],
+      "functions": [
+        {
+          "name": "load_warmup_state",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "get_phase",
+          "args": [
+            "day"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "get_system_metrics",
+          "args": [],
+          "doc": "Pull real metrics from the system for use in reply templates."
+        },
+        {
+          "name": "get_todays_posts",
+          "args": [
+            "phase_config",
+            "state"
+          ],
+          "doc": "Get warmup-safe posts for today from posting queue."
+        },
+        {
+          "name": "get_intelligence_brief",
+          "args": [
+            "venture",
+            "task"
+          ],
+          "doc": "Pull intelligence brief for the plan."
+        },
+        {
+          "name": "populate_reply_template",
+          "args": [
+            "hook_key",
+            "metrics"
+          ],
+          "doc": "Fill a reply hook template with real metrics."
+        },
+        {
+          "name": "generate_plan",
+          "args": [
+            "day_override",
+            "save"
+          ],
+          "doc": "Generate the daily engagement plan."
+        },
+        {
+          "name": "show_metrics",
+          "args": [],
+          "doc": "Show current system metrics that would be used in replies."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--save",
+        "--tomorrow",
+        "--metrics"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "PHASES = {...} (5 keys)",
+        "TIER1_REPLY_TARGETS = [...] (5 items)",
+        "TIER2_REPLY_TARGETS = [...] (4 items)",
+        "SWEETSPOT_TARGETS = [...] (11 items)",
+        "LIKE_TARGETS = [...] (15 items)",
+        "FOLLOW_TARGETS_POOL = [...] (7 items)",
+        "REPLY_HOOKS = {...} (6 keys)"
+      ]
+    },
+    "twitter_warmup_poster.py": {
+      "desc": "21-day warmup poster \u2014 5 phases (LURK/ENGAGE/SOFT_POST/RAMP/FULL_OPS)",
+      "lines": 365,
+      "classes": [],
+      "functions": [
+        {
+          "name": "load_state",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "save_state",
+          "args": [
+            "state"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "get_phase",
+          "args": [
+            "day"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "load_approved_posts",
+          "args": [],
+          "doc": "Load all approved posts from CSV files, newest first."
+        },
+        {
+          "name": "filter_for_warmup",
+          "args": [
+            "posts",
+            "phase_config",
+            "state"
+          ],
+          "doc": "Filter posts based on warmup phase rules."
+        },
+        {
+          "name": "pick_posts",
+          "args": [
+            "filtered",
+            "max_count"
+          ],
+          "doc": "Pick posts to send, with some randomization for natural feel."
+        },
+        {
+          "name": "show_status",
+          "args": [
+            "state"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "do_post",
+          "args": [
+            "state",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "log_post",
+          "args": [
+            "text",
+            "post_meta"
+          ],
+          "doc": "Log posted content to POSTED_LOG.csv"
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--status",
+        "--post",
+        "--dry-run",
+        "--set-day",
+        "--advance"
+      ],
+      "state_files": [
+        "AUTOMATIONS",
+        "STATE_FILE"
+      ],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "WARMUP_PHASES = {...} (5 keys)"
+      ]
+    },
+    "daily_digest.py": {
+      "desc": "human-readable system activity summary \u2014 alpha, content, agents, changes",
+      "lines": 254,
+      "classes": [],
+      "functions": [
+        {
+          "name": "get_date_range",
+          "args": [
+            "days"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "alpha_summary",
+          "args": [
+            "dates"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "content_summary",
+          "args": [
+            "dates"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "agent_summary",
+          "args": [
+            "dates"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "blocker_summary",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "improvements_summary",
+          "args": [
+            "dates"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--days",
+        "--save"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "ROI_ORDER = {...} (4 keys)"
+      ]
+    },
+    "alpha_query.py": {
+      "desc": "venture-based alpha queries with ROI normalization \u2014 search/filter 14,799 entries",
+      "lines": 375,
+      "classes": [],
+      "functions": [
+        {
+          "name": "normalize_roi",
+          "args": [
+            "val"
+          ],
+          "doc": "Fix corrupted ROI values from CSV misalignment."
+        },
+        {
+          "name": "load_alpha",
+          "args": [],
+          "doc": "Load all alpha entries from CSV, fixing known data quality issues."
+        },
+        {
+          "name": "score_entry",
+          "args": [
+            "entry",
+            "venture_config"
+          ],
+          "doc": "Score how relevant an alpha entry is to a venture type."
+        },
+        {
+          "name": "query_venture",
+          "args": [
+            "entries",
+            "venture_type",
+            "status_filter",
+            "limit"
+          ],
+          "doc": "Query alpha entries relevant to a venture type."
+        },
+        {
+          "name": "keyword_search",
+          "args": [
+            "entries",
+            "query",
+            "limit"
+          ],
+          "doc": "Full-text keyword search across all alpha fields."
+        },
+        {
+          "name": "query_by_category",
+          "args": [
+            "entries",
+            "category",
+            "limit"
+          ],
+          "doc": "Query by exact category match."
+        },
+        {
+          "name": "top_alpha",
+          "args": [
+            "entries",
+            "limit"
+          ],
+          "doc": "Get top alpha entries by ROI potential."
+        },
+        {
+          "name": "show_stats",
+          "args": [
+            "entries"
+          ],
+          "doc": "Show alpha distribution stats."
+        },
+        {
+          "name": "format_result",
+          "args": [
+            "score",
+            "entry",
+            "verbose"
+          ],
+          "doc": "Format a single result for display."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--venture",
+        "--category",
+        "--search",
+        "--top",
+        "--status",
+        "--stats",
+        "--untagged",
+        "--json",
+        "--verbose"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "VENTURE_ALPHA_MAP = {...} (8 keys)",
+        "ROI_ORDER = {...} (4 keys)",
+        "VALID_ROI = [...] (4 items)",
+        "VALID_STATUS = [...] (15 items)"
+      ]
+    },
+    "loop_closer.py": {
+      "desc": "closes open loops \u2014 decision execution, feedback tracking, pipeline advancement",
+      "lines": 886,
+      "classes": [],
+      "functions": [
+        {
+          "name": "log",
+          "args": [
+            "msg",
+            "level"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "log_action",
+          "args": [
+            "action_type",
+            "target",
+            "result",
+            "details"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "load_state",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "save_state",
+          "args": [
+            "state"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "run_cmd",
+          "args": [
+            "cmd",
+            "timeout",
+            "label"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "adjust_interval",
+          "args": [
+            "agent_id",
+            "params",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "kill_agent",
+          "args": [
+            "agent_id",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "deploy_agent",
+          "args": [
+            "agent_id",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "create_venture",
+          "args": [
+            "venture_type",
+            "params",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "boost_agent",
+          "args": [
+            "agent_id",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "throttle_agent",
+          "args": [
+            "agent_id",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "run_script_action",
+          "args": [
+            "script",
+            "params",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "process_alpha",
+          "args": [
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "execute_weekly_target",
+          "args": [
+            "target_key",
+            "params",
+            "dry_run"
+          ],
+          "doc": "Execute an agent-owned weekly target by triggering the relevant swarm agent."
+        },
+        {
+          "name": "generate_content",
+          "args": [
+            "target",
+            "params",
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "parse_decisions_from_reports",
+          "args": [],
+          "doc": "Parse structured decisions from swarm agent reports."
+        },
+        {
+          "name": "execute_decisions",
+          "args": [
+            "dry_run"
+          ],
+          "doc": "Read all pending decisions and execute safe ones."
+        },
+        {
+          "name": "update_feedback",
+          "args": [
+            "state",
+            "dry_run"
+          ],
+          "doc": "Track downstream impact of each agent's work."
+        },
+        {
+          "name": "advance_pipeline",
+          "args": [
+            "state",
+            "dry_run"
+          ],
+          "doc": "Check for stuck pipeline items and push them forward."
+        },
+        {
+          "name": "show_status",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "run_cycle",
+          "args": [
+            "dry_run"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--cycle",
+        "--decisions",
+        "--feedback",
+        "--pipeline",
+        "--status",
+        "--dry-run"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "MAX_ACTIONS_PER_CYCLE = 10",
+        "REQUIRES_HUMAN = [...] (4 items)",
+        "ACTION_REGISTRY = {...} (10 keys)"
+      ]
+    },
+    "decision_engine.py": {
+      "desc": "closed-loop decision processing \u2014 pending data \u2192 actions",
+      "lines": 673,
+      "classes": [
+        {
+          "name": "FreelancePipeline",
+          "methods": [
+            "analyze(dry_run)",
+            "_generate_responses(opportunities)"
+          ]
+        },
+        {
+          "name": "EcomArbPipeline",
+          "methods": [
+            "analyze(dry_run)",
+            "_generate_listings(products)"
+          ]
+        },
+        {
+          "name": "AlphaPipeline",
+          "methods": [
+            "analyze(dry_run)",
+            "_escalate_scale_items(items)"
+          ]
+        },
+        {
+          "name": "ContentIntegrationPipeline",
+          "methods": [
+            "analyze(dry_run)",
+            "_integrate_outputs(dirs, marker_file, already_done)"
+          ]
+        },
+        {
+          "name": "BrokenCronFixer",
+          "methods": [
+            "diagnose()",
+            "fix(dry_run)"
+          ]
+        },
+        {
+          "name": "CronOptimizer",
+          "methods": [
+            "__init__()",
+            "_read_crontab()",
+            "analyze()"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "safe_path",
+          "args": [
+            "target"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "log",
+          "args": [
+            "msg",
+            "level"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "log_decision",
+          "args": [
+            "source",
+            "action",
+            "reasoning",
+            "outcome"
+          ],
+          "doc": "Append to decisions ledger for full audit trail."
+        },
+        {
+          "name": "read_csv_tail",
+          "args": [
+            "filepath",
+            "n"
+          ],
+          "doc": "Read last N rows of a CSV file."
+        },
+        {
+          "name": "count_csv_rows",
+          "args": [
+            "filepath"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "run_cycle",
+          "args": [
+            "dry_run"
+          ],
+          "doc": "Run one full decision cycle across all pipelines."
+        },
+        {
+          "name": "run_daemon",
+          "args": [],
+          "doc": "Run continuously, one cycle every 30 minutes."
+        },
+        {
+          "name": "show_status",
+          "args": [],
+          "doc": "Show current pipeline status."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--cycle",
+        "--daemon",
+        "--status",
+        "--dry-run",
+        "--fix-broken"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": []
+    },
+    "alpha_auto_processor.py": {
+      "desc": "auto-processes ALPHA_STAGING.csv \u2014 routes to ventures/OPS/cron/archive",
+      "lines": 796,
+      "classes": [],
+      "functions": [
+        {
+          "name": "now_iso",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "log",
+          "args": [
+            "msg"
+          ],
+          "doc": "Append to log file and print to stderr."
+        },
+        {
+          "name": "safe_path",
+          "args": [
+            "target"
+          ],
+          "doc": "Verify path is within project root."
+        },
+        {
+          "name": "text_hash",
+          "args": [
+            "text"
+          ],
+          "doc": "Short hash for dedup."
+        },
+        {
+          "name": "build_ops_index",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "_kw_score",
+          "args": [
+            "text",
+            "keywords",
+            "max_pts"
+          ],
+          "doc": "Count how many keyword patterns match, scale to max_pts."
+        },
+        {
+          "name": "score_alpha",
+          "args": [
+            "row"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "check_redundancy",
+          "args": [
+            "row",
+            "seen_hashes",
+            "ops_index"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "find_ops_match",
+          "args": [
+            "row",
+            "ops_index"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "detect_timeframe",
+          "args": [
+            "text"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "route_alpha",
+          "args": [
+            "row",
+            "score",
+            "ops_index"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "create_venture_stub",
+          "args": [
+            "row",
+            "score",
+            "dry_run"
+          ],
+          "doc": "Create a stub OPS file for a new venture opportunity."
+        },
+        {
+          "name": "bolster_existing",
+          "args": [
+            "row",
+            "target_path",
+            "score",
+            "dry_run"
+          ],
+          "doc": "Append alpha intelligence to an existing OPS file."
+        },
+        {
+          "name": "add_cron_entry",
+          "args": [
+            "row",
+            "cron_schedule",
+            "dry_run"
+          ],
+          "doc": "Append a cron entry specification."
+        },
+        {
+          "name": "add_to_high_value_queue",
+          "args": [
+            "row",
+            "score",
+            "dry_run"
+          ],
+          "doc": "Add entry to the high-value queue for human review."
+        },
+        {
+          "name": "read_alpha_csv",
+          "args": [],
+          "doc": "Read ALPHA_STAGING.csv, return (fieldnames, rows)."
+        },
+        {
+          "name": "write_alpha_csv",
+          "args": [
+            "fieldnames",
+            "rows"
+          ],
+          "doc": "Write back the full CSV."
+        },
+        {
+          "name": "process_batch",
+          "args": [
+            "rows",
+            "ops_index",
+            "dry_run",
+            "batch_size",
+            "process_all"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "show_status",
+          "args": [],
+          "doc": "Show current alpha pipeline stats."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [],
+      "state_files": [
+        "LOG_FILE",
+        "CRON_ENTRIES_FILE"
+      ],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "PROCESSABLE_STATUSES = [...] (3 items)",
+        "ENGAGEMENT_KEYWORDS = [...] (10 items)",
+        "SPECIFICITY_KEYWORDS = [...] (12 items)",
+        "ACTIONABILITY_KEYWORDS = [...] (14 items)",
+        "REVENUE_KEYWORDS = [...] (13 items)",
+        "LOW_VALUE_SIGNALS = [...] (6 items)",
+        "TIMEFRAME_PATTERNS = [...] (8 items)",
+        "CATEGORY_OPS_MAP = {...} (13 keys)",
+        "HIGH_VALUE_CATEGORIES = [...] (5 items)"
+      ]
+    },
+    "system_health_monitor.py": {
+      "desc": "health checks \u2014 agents, cron, disk, processes",
+      "lines": 858,
+      "classes": [],
+      "functions": [
+        {
+          "name": "_now",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "_file_age_h",
+          "args": [
+            "p"
+          ],
+          "doc": "Hours since file was last modified. Returns inf if missing."
+        },
+        {
+          "name": "_newest_in_dir",
+          "args": [
+            "directory",
+            "pattern"
+          ],
+          "doc": "Age in hours of newest file matching pattern in directory. inf if none."
+        },
+        {
+          "name": "_newest_matching",
+          "args": [
+            "base_dir",
+            "pattern"
+          ],
+          "doc": "Age of newest file matching glob pattern under base_dir."
+        },
+        {
+          "name": "_csv_rows",
+          "args": [
+            "p"
+          ],
+          "doc": "Count data rows in CSV (excludes header). 0 if missing."
+        },
+        {
+          "name": "_http_status",
+          "args": [
+            "url",
+            "timeout"
+          ],
+          "doc": "HTTP status code for url. 0 on failure. Uses curl, then urllib fallback."
+        },
+        {
+          "name": "_crontab_text",
+          "args": [],
+          "doc": "Return current crontab contents as string, empty on error."
+        },
+        {
+          "name": "_sev",
+          "args": [
+            "age_h",
+            "amber",
+            "red"
+          ],
+          "doc": "Map age to severity: GREEN / AMBER / RED."
+        },
+        {
+          "name": "_status_word",
+          "args": [
+            "sev"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "_fmt_age",
+          "args": [
+            "h"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "check_01_cron_jobs",
+          "args": [],
+          "doc": "Cron job freshness: entries installed + key logs producing output."
+        },
+        {
+          "name": "check_02_pipeline_freshness",
+          "args": [],
+          "doc": "Pipeline freshness: ANALYZED_LEADS, HOT_LEADS_QUALIFIED, progress.json."
+        },
+        {
+          "name": "check_03_live_sites",
+          "args": [],
+          "doc": "Live site uptime: check all 16 surge.sh sites return 200."
+        },
+        {
+          "name": "check_04_memory_system",
+          "args": [],
+          "doc": "Memory system: HEARTBEAT.md + active-tasks.md freshness."
+        },
+        {
+          "name": "check_05_lead_growth",
+          "args": [],
+          "doc": "Lead pipeline growth: row counts across lead files."
+        },
+        {
+          "name": "check_06_cold_email",
+          "args": [],
+          "doc": "Cold email generation: outreach/ directory freshness + row counts."
+        },
+        {
+          "name": "check_07_demo_generation",
+          "args": [],
+          "doc": "Demo generation: output/personalized_demos/ directory."
+        },
+        {
+          "name": "check_08_dashboard_freshness",
+          "args": [],
+          "doc": "Dashboard freshness: output/dashboard/index.html."
+        },
+        {
+          "name": "check_09_ecom_arb",
+          "args": [],
+          "doc": "Ecom arb scanner: LEDGER/ECOM_ARB_OPPORTUNITIES.csv + dated logs."
+        },
+        {
+          "name": "check_10_freelance_demand",
+          "args": [],
+          "doc": "Freelance demand scanner: LEDGER/FREELANCE_DEMAND_SCAN.csv + logs."
+        },
+        {
+          "name": "check_11_trend_aggregator",
+          "args": [],
+          "doc": "Trend aggregator: LEDGER/TREND_SIGNALS.csv + logs."
+        },
+        {
+          "name": "check_12_daily_logs",
+          "args": [],
+          "doc": "Daily log freshness: AUTOMATIONS/logs/daily/ directory."
+        },
+        {
+          "name": "check_13_running_processes",
+          "args": [],
+          "doc": "Running processes: check for key background automations."
+        },
+        {
+          "name": "check_14_disk_space",
+          "args": [],
+          "doc": "Disk space check."
+        },
+        {
+          "name": "check_15_new_pipelines",
+          "args": [],
+          "doc": "New pipeline freshness: content_trend, app_clone, tweet_drafter, quote_scanner l"
+        },
+        {
+          "name": "_result",
+          "args": [
+            "check",
+            "severity",
+            "detail"
+          ],
+          "doc": "Build a standardized check result dict."
+        },
+        {
+          "name": "run_all",
+          "args": [
+            "skip_sites"
+          ],
+          "doc": "Execute all 14 health checks."
+        },
+        {
+          "name": "compute_summary",
+          "args": [
+            "results"
+          ],
+          "doc": "Overall health percentage and grade."
+        },
+        {
+          "name": "write_report",
+          "args": [
+            "results",
+            "summary"
+          ],
+          "doc": "Write JSON report to AUTOMATIONS/logs/system_health_YYYY-MM-DD.json."
+        },
+        {
+          "name": "_use_color",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "_sev_badge",
+          "args": [
+            "sev",
+            "color"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "print_full",
+          "args": [
+            "results",
+            "summary",
+            "report_path"
+          ],
+          "doc": "Print formatted 14-point health table."
+        },
+        {
+          "name": "print_quick",
+          "args": [
+            "summary"
+          ],
+          "doc": "Single summary line."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--check",
+        "--quick",
+        "--json",
+        "--skip-sites"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "AMBER_H = 24",
+        "RED_H = 48",
+        "LIVE_SITES = [...] (16 items)",
+        "CRON_MARKERS = [...] (10 items)",
+        "_GRN = '\\x1b[32m'",
+        "_YEL = '\\x1b[33m'",
+        "_RED = '\\x1b[31m'",
+        "_CYN = '\\x1b[36m'",
+        "_BLD = '\\x1b[1m'",
+        "_RST = '\\x1b[0m'",
+        "ALL_CHECKS = [...] (15 items)"
+      ]
+    },
+    "daily_research_orchestrator.py": {
+      "desc": "research pipeline \u2014 scrapers, alpha review, content generation",
+      "lines": 1054,
+      "classes": [],
+      "functions": [
+        {
+          "name": "acquire_lock",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "release_lock",
+          "args": [],
+          "doc": ""
+        },
+        {
+          "name": "fetch_json",
+          "args": [
+            "url",
+            "timeout"
+          ],
+          "doc": "Fetch JSON from URL with rate limiting and error handling."
+        },
+        {
+          "name": "fetch_text",
+          "args": [
+            "url",
+            "timeout"
+          ],
+          "doc": "Fetch raw text/HTML from URL."
+        },
+        {
+          "name": "content_hash",
+          "args": [
+            "text"
+          ],
+          "doc": "MD5 hash of normalized text for deduplication."
+        },
+        {
+          "name": "load_existing_hashes",
+          "args": [],
+          "doc": "Load content hashes from existing ALPHA_STAGING entries to avoid duplicates."
+        },
+        {
+          "name": "is_duplicate",
+          "args": [
+            "text",
+            "url"
+          ],
+          "doc": "Check if content already exists in ALPHA_STAGING."
+        },
+        {
+          "name": "mark_seen",
+          "args": [
+            "text",
+            "url"
+          ],
+          "doc": "Mark content as seen for this run."
+        },
+        {
+          "name": "get_next_alpha_id",
+          "args": [],
+          "doc": "Get the next alpha_id number from ALPHA_STAGING.csv."
+        },
+        {
+          "name": "append_alpha_entries",
+          "args": [
+            "entries",
+            "dry_run"
+          ],
+          "doc": "Append entries to ALPHA_STAGING.csv. Returns count appended."
+        },
+        {
+          "name": "categorize_finding",
+          "args": [
+            "text"
+          ],
+          "doc": "Categorize a finding based on keyword matching."
+        },
+        {
+          "name": "score_finding",
+          "args": [
+            "text",
+            "upvotes",
+            "comments"
+          ],
+          "doc": "Score a finding 0-100 for relevance and quality."
+        },
+        {
+          "name": "score_to_status",
+          "args": [
+            "score"
+          ],
+          "doc": "Convert score to alpha status."
+        },
+        {
+          "name": "score_to_roi",
+          "args": [
+            "score"
+          ],
+          "doc": "Convert score to ROI potential."
+        },
+        {
+          "name": "run_existing_scrapers",
+          "args": [],
+          "doc": "Run existing scraper scripts via subprocess. Returns run results."
+        },
+        {
+          "name": "scan_hacker_news",
+          "args": [],
+          "doc": "Scan Hacker News for relevant stories using Algolia API."
+        },
+        {
+          "name": "scan_subreddit",
+          "args": [
+            "sub",
+            "sort",
+            "limit"
+          ],
+          "doc": "Scan a single subreddit via Reddit public JSON API."
+        },
+        {
+          "name": "scan_expanded_subreddits",
+          "args": [],
+          "doc": "Scan 30+ subreddits for alpha using Reddit JSON API."
+        },
+        {
+          "name": "scan_product_hunt_daily",
+          "args": [],
+          "doc": "Scan Product Hunt daily top launches via RSS/Atom feed and front page."
+        },
+        {
+          "name": "build_alpha_entries",
+          "args": [
+            "findings",
+            "start_id"
+          ],
+          "doc": "Convert raw findings into ALPHA_STAGING.csv rows."
+        },
+        {
+          "name": "generate_daily_digest",
+          "args": [
+            "scraper_results",
+            "hn_findings",
+            "reddit_findings",
+            "ph_findings",
+            "total_appended",
+            "dry_run"
+          ],
+          "doc": "Generate a markdown digest of daily research results."
+        },
+        {
+          "name": "save_state",
+          "args": [
+            "data"
+          ],
+          "doc": "Save run state for --status queries."
+        },
+        {
+          "name": "load_state",
+          "args": [],
+          "doc": "Load last run state."
+        },
+        {
+          "name": "show_status",
+          "args": [],
+          "doc": "Display last run status."
+        },
+        {
+          "name": "run_full",
+          "args": [
+            "dry_run",
+            "gaps_only"
+          ],
+          "doc": "Run the full daily research orchestration."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--full",
+        "--gaps-only",
+        "--dry-run",
+        "--status"
+      ],
+      "state_files": [
+        "LOG_FILE",
+        "LOCK_FILE",
+        "daily_research_orchestrator_state.json",
+        "STATE_FILE"
+      ],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "MAX_LOCK_AGE_MINUTES = 180",
+        "USER_AGENT = 'PRINTMAXX-Research/1.0 (research bot; contact: ad",
+        "RATE_LIMIT_DELAY = 2.0",
+        "ALPHA_HEADER = [...] (20 items)",
+        "NICHE_KEYWORDS = {...} (10 keys)",
+        "EXISTING_SCRIPTS = {...} (5 keys)",
+        "HN_ALGOLIA_BASE = 'https://hn.algolia.com/api/v1'",
+        "EXPANDED_SUBREDDITS = [...] (41 items)"
+      ]
+    },
+    "quality_gate.py": {
+      "desc": "hard quality gate \u2014 blocks slop before deployment, rewrites bad content",
+      "lines": 1445,
+      "classes": [
+        {
+          "name": "AppQualityScorer",
+          "methods": [
+            "__init__()",
+            "score_all()",
+            "_score_app(name, files)",
+            "_aggregate_fixes(items)"
+          ]
+        },
+        {
+          "name": "ContentQualityScorer",
+          "methods": [
+            "__init__()",
+            "score_all()",
+            "_score_content_file(path)",
+            "_aggregate_fixes(items)"
+          ]
+        },
+        {
+          "name": "EmailQualityScorer",
+          "methods": [
+            "__init__()",
+            "score_all()",
+            "_score_email_file(path)",
+            "_extract_emails(content, path)",
+            "_score_single_email(email_text)",
+            "_fix_for_dimension(dim, score, content)",
+            "_aggregate_fixes(items)"
+          ]
+        },
+        {
+          "name": "ListingQualityScorer",
+          "methods": [
+            "__init__()",
+            "score_all()",
+            "_score_listing(path)",
+            "_aggregate_fixes(items)"
+          ]
+        },
+        {
+          "name": "ScriptQualityScorer",
+          "methods": [
+            "__init__()",
+            "score_all()",
+            "_score_script(path)",
+            "_aggregate_fixes(items)"
+          ]
+        },
+        {
+          "name": "QualityGate",
+          "methods": [
+            "__init__()",
+            "score_dimension(dim)",
+            "score_all()",
+            "gate_check()",
+            "overall_score()",
+            "print_summary()",
+            "_score_bar(score, width)",
+            "generate_report()",
+            "to_json()"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "rating",
+          "args": [
+            "score"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "rating_symbol",
+          "args": [
+            "score"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "collect_files",
+          "args": [
+            "dirs",
+            "extensions",
+            "recursive"
+          ],
+          "doc": "Collect files from multiple directories, handling missing dirs gracefully."
+        },
+        {
+          "name": "safe_read",
+          "args": [
+            "path",
+            "max_bytes"
+          ],
+          "doc": "Read file content safely, handling encoding errors."
+        },
+        {
+          "name": "count_pattern",
+          "args": [
+            "text",
+            "pattern",
+            "case_insensitive"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "find_slop_words",
+          "args": [
+            "text"
+          ],
+          "doc": "Find banned AI slop words in text. Returns (word, count) pairs."
+        },
+        {
+          "name": "find_spam_words",
+          "args": [
+            "text"
+          ],
+          "doc": "Find spam trigger words in text."
+        },
+        {
+          "name": "count_em_dashes",
+          "args": [
+            "text"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--score-all",
+        "--score-apps",
+        "--score-content",
+        "--score-emails",
+        "--score-listings",
+        "--score-scripts",
+        "--gate",
+        "--report",
+        "--api-json"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "THRESHOLDS = {...} (4 keys)",
+        "BANNED_AI_SLOP = [...] (35 items)",
+        "EXTRA_BANNED = [...] (14 items)",
+        "SPAM_TRIGGER_WORDS = [...] (62 items)",
+        "IOS_REJECTION_REASONS = [...] (14 items)",
+        "APP_DIRS = [...] (5 items)",
+        "CONTENT_DIRS = [...] (4 items)",
+        "EMAIL_DIRS = [...] (3 items)",
+        "LISTING_DIRS = [...] (3 items)",
+        "SCRIPT_DIRS = [...] (1 items)",
+        "EXCLUDED_DIRS = [...] (20 items)"
+      ]
+    },
+    "twitter_alpha_scraper.py": {
+      "desc": "scrapes 133 Twitter accounts via Brave cookies + Playwright",
+      "lines": 1014,
+      "classes": [
+        {
+          "name": "TwitterScraper",
+          "methods": [
+            "__init__(deep, download_media, meme_mode, days)",
+            "_load_alpha_fieldnames()",
+            "_load_copy_style_handles()",
+            "_parse_ts(ts)",
+            "_load_existing_urls()",
+            "_get_next_alpha_id()",
+            "_is_signal_content(text)",
+            "_categorize(text)",
+            "_estimate_roi(tweet)",
+            "save_to_csv(tweets, source_type)",
+            "save_to_copy_corpus(tweets, source_type)",
+            "load_high_signal_accounts()"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "extract_brave_cookies",
+          "args": [
+            "domain_filter"
+          ],
+          "doc": "Extract and decrypt cookies from Brave's cookie database."
+        }
+      ],
+      "cli": [
+        "--bookmarks",
+        "--accounts",
+        "--handles",
+        "--all",
+        "--meme",
+        "--deep",
+        "--download-media",
+        "--limit",
+        "--days",
+        "--max-scrolls",
+        "--visible"
+      ],
+      "state_files": [
+        "CREDS_FILE",
+        "COPY_STYLE_HANDLES_FILE",
+        "BRAVE_KEY_FILE"
+      ],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "ALPHA_FIELDS = [...] (20 items)",
+        "EXTRACT_TWEETS_JS = '\\n() => {\\n    const results = [];\\n    const art",
+        "EXTRACT_REPLIES_JS = '\\n() => {\\n    const results = [];\\n    // Skip t"
+      ]
+    },
+    "background_reddit_scraper.py": {
+      "desc": "Reddit JSON API scraper \u2014 no auth needed",
+      "lines": 278,
+      "classes": [],
+      "functions": [
+        {
+          "name": "load_subreddits",
+          "args": [
+            "limit"
+          ],
+          "doc": "Load subreddits marked for auto-monitoring"
+        },
+        {
+          "name": "get_next_alpha_id",
+          "args": [],
+          "doc": "Get next available ALPHA ID"
+        },
+        {
+          "name": "load_existing_urls",
+          "args": [],
+          "doc": "Load existing URLs to avoid duplicates"
+        },
+        {
+          "name": "estimate_roi",
+          "args": [
+            "text",
+            "upvotes"
+          ],
+          "doc": "Estimate ROI potential"
+        },
+        {
+          "name": "has_signal",
+          "args": [
+            "title"
+          ],
+          "doc": "Check if title has business/alpha signal"
+        },
+        {
+          "name": "scrape_subreddits",
+          "args": [
+            "subreddits"
+          ],
+          "doc": "Scrape subreddits using Reddit JSON API - runs in background"
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--scrape",
+        "--full",
+        "--limit"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": []
+    },
+    "compliance_scanner.py": {
+      "desc": "FTC/platform compliance auditing",
+      "lines": 511,
+      "classes": [
+        {
+          "name": "ComplianceIssue",
+          "methods": [
+            "__init__(category, severity, file_path, line_num, text, rule, fix_suggestion)",
+            "to_dict()",
+            "__str__()"
+          ]
+        },
+        {
+          "name": "ComplianceScanner",
+          "methods": [
+            "__init__(project_root)",
+            "scan_file(file_path)",
+            "scan_directory(dir_path, extensions)",
+            "scan_content()",
+            "scan_emails()",
+            "audit_all()",
+            "generate_report(issues)",
+            "save_report(issues, output_dir)"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--scan-content",
+        "--scan-emails",
+        "--scan-file",
+        "--audit-all",
+        "--json",
+        "--save"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "FTC_AFFILIATE_PATTERNS = [...] (6 items)",
+        "FTC_DISCLOSURE_PATTERNS = [...] (8 items)",
+        "INCOME_CLAIM_PATTERNS = [...] (7 items)",
+        "INCOME_DISCLAIMER_PATTERNS = [...] (6 items)",
+        "HEALTH_CLAIM_PATTERNS = [...] (5 items)",
+        "FAKE_SOCIAL_PROOF = [...] (4 items)",
+        "PII_PATTERNS = [...] (3 items)",
+        "CANSPAM_REQUIRED = [...] (3 items)",
+        "PLATFORM_RED_FLAGS = [...] (4 items)"
+      ]
+    },
+    "memory_manager.py": {
+      "desc": "filesystem-based memory management",
+      "lines": 464,
+      "classes": [],
+      "functions": [
+        {
+          "name": "count_csv",
+          "args": [
+            "path"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "count_files",
+          "args": [
+            "pattern"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "read_json",
+          "args": [
+            "path"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "file_age_hours",
+          "args": [
+            "path"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "safe_read_csv_column",
+          "args": [
+            "path",
+            "col"
+          ],
+          "doc": ""
+        },
+        {
+          "name": "update_heartbeat",
+          "args": [],
+          "doc": "Generate HEARTBEAT.md \u2014 the system pulse check."
+        },
+        {
+          "name": "update_active_tasks",
+          "args": [],
+          "doc": "Refresh active-tasks.md with current system state."
+        },
+        {
+          "name": "log_to_daily",
+          "args": [
+            "message"
+          ],
+          "doc": "Append a message to today's daily log."
+        },
+        {
+          "name": "generate_daily_summary",
+          "args": [],
+          "doc": "Generate end-of-day summary from daily log entries."
+        },
+        {
+          "name": "check_venture_health",
+          "args": [],
+          "doc": "Quick health check across all ventures."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--heartbeat",
+        "--active-tasks",
+        "--daily-summary",
+        "--log",
+        "--health",
+        "--full"
+      ],
+      "state_files": [],
+      "reads": [
+        "ETSY_LISTINGS_COMPLETE.md",
+        "progress.json",
+        "ACCOUNTS.csv",
+        "REVENUE_TRACKER.csv"
+      ],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": []
+    },
+    "wire_missed_intelligence.py": {
+      "desc": "parses MISSED_INTELLIGENCE_SCAN.md \u2192 updates catalog",
+      "lines": 258,
+      "classes": [],
+      "functions": [
+        {
+          "name": "classify_path",
+          "args": [
+            "path"
+          ],
+          "doc": "Classify a file path into a venture type."
+        },
+        {
+          "name": "parse_scan_file",
+          "args": [
+            "scan_path"
+          ],
+          "doc": "Parse MISSED_INTELLIGENCE_SCAN.md and extract all file entries."
+        },
+        {
+          "name": "get_existing_paths",
+          "args": [
+            "catalog"
+          ],
+          "doc": "Get all paths already in the catalog across all ventures."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "CLASSIFICATION_RULES = [...] (30 items)",
+        "ROOT_KEYWORDS = {...} (9 keys)"
+      ]
+    },
+    "build_codebase_grammar.py": {
+      "desc": "LLM-optimized codebase representation \u2014 AST parsing, 100x+ compression",
+      "lines": 342,
+      "classes": [],
+      "functions": [
+        {
+          "name": "extract_script_grammar",
+          "args": [
+            "script_path",
+            "description"
+          ],
+          "doc": "Extract a compact grammar representation of a Python script."
+        },
+        {
+          "name": "build_grammar",
+          "args": [],
+          "doc": "Build the full codebase grammar."
+        },
+        {
+          "name": "render_markdown",
+          "args": [
+            "grammar"
+          ],
+          "doc": "Render grammar as compact markdown for LLM consumption."
+        },
+        {
+          "name": "main",
+          "args": [],
+          "doc": ""
+        }
+      ],
+      "cli": [
+        "--json",
+        "--stats"
+      ],
+      "state_files": [],
+      "reads": [],
+      "writes": [],
+      "calls_scripts": [],
+      "constants": [
+        "CORE_SCRIPTS = {...} (20 keys)"
+      ]
+    }
+  },
+  "data_flows": [],
+  "execution_hierarchy": {
+    "level_0_orchestrator": [
+      "ceo_agent.py"
+    ],
+    "level_1_engines": [
+      "venture_autonomy.py",
+      "agent_swarm.py",
+      "decision_engine.py"
+    ],
+    "level_2_intelligence": [
+      "intelligence_router.py",
+      "alpha_query.py",
+      "daily_digest.py"
+    ],
+    "level_3_execution": [
+      "twitter_warmup_poster.py",
+      "daily_engagement_planner.py",
+      "alpha_auto_processor.py",
+      "daily_research_orchestrator.py"
+    ],
+    "level_4_collection": [
+      "twitter_alpha_scraper.py",
+      "background_reddit_scraper.py"
+    ],
+    "level_5_quality": [
+      "quality_gate.py",
+      "compliance_scanner.py",
+      "system_health_monitor.py"
+    ],
+    "level_6_maintenance": [
+      "loop_closer.py",
+      "memory_manager.py",
+      "wire_missed_intelligence.py",
+      "build_codebase_grammar.py"
+    ]
+  },
+  "state_topology": {
+    "ceo_state": "AUTOMATIONS/agent/ceo_agent/ceo_state.json",
+    "swarm_state": "AUTOMATIONS/agent/swarm/swarm_state.json",
+    "autonomy_state": "AUTOMATIONS/agent/autonomy/autonomy_state.json",
+    "warmup_state": "AUTOMATIONS/agent/twitter_warmup_state.json",
+    "alpha_staging": "LEDGER/ALPHA_STAGING.csv",
+    "intelligence_catalog": "OPS/INTELLIGENCE_CATALOG.json",
+    "decisions_log": "AUTOMATIONS/agent/ceo_agent/decisions.jsonl",
+    "missions_log": "AUTOMATIONS/agent/missions.jsonl",
+    "message_bus": "AUTOMATIONS/agent/message_bus.jsonl"
+  },
+  "cron_schedule": {
+    "6:00 AM": "twitter_alpha_scraper (133 accounts)",
+    "6:15 AM": "background_reddit_scraper",
+    "6:30 AM": "alpha_auto_processor --process-new",
+    "6:45 AM": "daily_digest --days 1 --save",
+    "7:00 AM": "daily_engagement_planner --save",
+    "midnight": "twitter_warmup_poster --advance",
+    "every 2h": "ceo_agent cycle, loop_closer --cycle",
+    "every 4h": "agent_swarm swarm_brain cycle"
+  }
+}

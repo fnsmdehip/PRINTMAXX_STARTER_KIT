@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Side Project Revenue Estimator</title>
+<meta name="description" content="plug in your numbers. get a real revenue estimate for your side project in 30 seconds. no fluff, just math.">
+<meta property="og:title" content="Side Project Revenue Estimator">
+<meta property="og:description" content="find out if your idea prints money or burns time. real numbers, not vibes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://side-project-estimator.surge.sh">
+<meta property="og:image" content="https://side-project-estimator.surge.sh/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Side Project Revenue Estimator">
+<meta name="twitter:description" content="find out if your idea prints money or burns time.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}:root{--b:#0a0a0a;--s:#111;--c:rgba(255,255,255,.05);--a:#00ff88;--ad:rgba(0,255,136,.15);--ag:rgba(0,255,136,.3);--t:#e5e5e5;--m:#777;--r:rgba(255,255,255,.08)}body{font-family:system-ui,-apple-system,sans-serif;background:var(--b);color:var(--t);line-height:1.6;min-height:100vh;overflow-x:hidden}a{color:var(--a);text-decoration:none}a:hover{text-decoration:underline}.ctr{max-width:640px;margin:0 auto;padding:0 20px}header{padding:40px 0 28px;text-align:center}header h1{font-size:clamp(1.5rem,5vw,2rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:8px}header h1 span{color:var(--a)}header p{color:var(--m);font-size:.92rem;max-width:380px;margin:0 auto}.cd{background:var(--c);border:1px solid var(--r);border-radius:14px;padding:24px;margin-bottom:16px;backdrop-filter:blur(10px);transition:border-color .3s}.cd:hover{border-color:rgba(255,255,255,.12)}.cd h2{font-size:.78rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}.fd{margin-bottom:18px}.fd:last-child{margin-bottom:0}.fd label{display:block;font-size:.88rem;margin-bottom:6px}.fd label small{color:var(--m);font-weight:400}.fd select,.fd input[type="text"]{width:100%;background:var(--s);border:1px solid var(--r);border-radius:8px;padding:10px 14px;color:var(--t);font-family:inherit;font-size:.92rem;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}.fd select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23777'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}.fd select:focus,.fd input[type="text"]:focus{border-color:var(--a)}.fd select option{background:#111;color:#e5e5e5}.sr{display:flex;align-items:center;gap:12px}.sr input[type="range"]{flex:1;-webkit-appearance:none;appearance:none;height:6px;background:var(--r);border-radius:3px;outline:none;cursor:pointer}.sr input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--a);cursor:pointer;box-shadow:0 0 10px var(--ag)}.sr input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--a);cursor:pointer;border:none;box-shadow:0 0 10px var(--ag)}.sv{min-width:72px;text-align:right;font-weight:700;font-size:.95rem;font-variant-numeric:tabular-nums;color:var(--a)}.chs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cl{display:flex;align-items:center;gap:8px;font-size:.85rem;cursor:pointer;padding:8px 10px;border-radius:8px;border:1px solid var(--r);transition:all .2s;user-select:none}.cl:hover{border-color:rgba(255,255,255,.15)}.cl input{display:none}.ck{width:18px;height:18px;border-radius:4px;border:2px solid var(--r);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}.cl input:checked~.ck{background:var(--a);border-color:var(--a)}.cl input:checked~.ck::after{content:'';display:block;width:5px;height:9px;border:solid #0a0a0a;border-width:0 2px 2px 0;transform:rotate(45deg);margin-top:-2px}.cl input:checked~.cn{color:var(--a)}.btn{width:100%;background:var(--a);color:#0a0a0a;border:none;border-radius:10px;padding:14px;font-weight:800;font-size:1rem;cursor:pointer;font-family:inherit;transition:all .2s;letter-spacing:-.3px;margin-top:8px}.btn:hover{box-shadow:0 0 24px var(--ag);transform:translateY(-1px)}.btn:active{transform:translateY(0)}.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}#res{display:none;animation:fu .4s ease}@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}.rw{display:flex;justify-content:center;padding:20px 0}.rc{position:relative;width:180px;height:180px}.rc svg{transform:rotate(-90deg)}.rb{fill:none;stroke:var(--r);stroke-width:8}.rf{fill:none;stroke:var(--a);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1s ease,stroke .5s ease}.rx{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}.ra{font-size:1.8rem;font-weight:800;letter-spacing:-2px;color:var(--a);transition:color .5s}.rl{font-size:.72rem;color:var(--m);text-transform:uppercase;letter-spacing:.5px}.mg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}.mt{background:rgba(255,255,255,.03);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--r)}.mt .v{font-size:1.15rem;font-weight:800;letter-spacing:-.5px;margin-bottom:2px}.mt .l{font-size:.72rem;color:var(--m);text-transform:uppercase;letter-spacing:.5px}.tb{display:inline-block;padding:6px 14px;border-radius:20px;font-weight:700;font-size:.82rem;letter-spacing:.3px;margin:12px auto;text-align:center}.cb{margin:16px 0 8px}.cb .bt{height:6px;background:var(--r);border-radius:3px;overflow:hidden}.cb .bf{height:100%;border-radius:3px;transition:width .8s ease,background .5s}.cb .bl{display:flex;justify-content:space-between;font-size:.75rem;margin-top:4px}.cb .bl span:first-child{color:var(--m)}.cb .bl span:last-child{font-weight:700}.rcs{margin-top:16px}.rcs h3{font-size:.78rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}.re{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--r);font-size:.88rem}.re:last-child{border-bottom:none}.rn{color:var(--a);font-weight:800;flex-shrink:0;width:20px}.gt{display:none;animation:fu .4s ease}.gi{text-align:center;padding:20px 0}.gi h3{font-size:1.2rem;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}.gi p{color:var(--m);font-size:.88rem;margin-bottom:20px;max-width:340px;margin-left:auto;margin-right:auto}.gf{max-width:320px;margin:0 auto}.gf input[type="email"]{width:100%;background:var(--s);border:1px solid var(--r);border-radius:8px;padding:12px 14px;color:var(--t);font-family:inherit;font-size:.92rem;outline:none;margin-bottom:10px;transition:border-color .2s}.gf input[type="email"]:focus{border-color:var(--a)}.gf button{width:100%;background:var(--a);color:#0a0a0a;border:none;border-radius:8px;padding:12px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit;transition:all .2s}.gf button:hover{box-shadow:0 0 20px var(--ag)}.gf .fn{font-size:.72rem;color:var(--m);margin-top:8px}.um{display:none;text-align:center;padding:14px;background:var(--ad);border:1px solid rgba(0,255,136,.2);border-radius:10px;margin-bottom:16px;font-size:.88rem;font-weight:600;color:var(--a);animation:fu .4s ease}.cs{margin-top:24px;padding-top:24px;border-top:1px solid var(--r)}.cs h3{font-size:.78rem;font-weight:700;color:var(--m);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;text-align:center}.pd{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border:1px solid var(--r);border-radius:10px;margin-bottom:8px;transition:border-color .2s;text-decoration:none;color:var(--t)}.pd:hover{border-color:var(--a);text-decoration:none}.pi{flex:1}.pn{font-size:.88rem;font-weight:700}.pp{font-size:.75rem;color:var(--m)}.pr{font-weight:800;color:var(--a);font-size:.92rem;margin-left:12px}footer{padding:28px 0;text-align:center;border-top:1px solid var(--r);margin-top:32px}footer p{color:var(--m);font-size:.75rem}@media(max-width:480px){.chs{grid-template-columns:1fr}.rc{width:150px;height:150px}.ra{font-size:1.5rem}.cd{padding:18px}}
+</style>
+<script defer data-domain="side-project-estimator.surge.sh" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+<div class="ctr">
+<header>
+<h1>side project <span>revenue estimator</span></h1>
+<p>find out if your idea prints money or burns time. real numbers, not vibes.</p>
+</header>
+<div style="padding-top:24px">
+<div class="um" id="uM">you're in. unlimited estimates unlocked.</div>
+<div class="cd">
+<h2>your project</h2>
+<div class="fd">
+<label>project type</label>
+<select id="pT"><option value="saas">SaaS</option><option value="app">Mobile App</option><option value="digital">Digital Product</option><option value="freelance">Freelance Service</option><option value="content">Content / Newsletter</option><option value="ecom">Ecom / POD</option></select>
+</div>
+<div class="fd">
+<label>niche <small>(what you're building for)</small></label>
+<input type="text" id="ni" placeholder="e.g. fitness coaches, dev tools, pet owners">
+</div>
+</div>
+<div class="cd">
+<h2>the numbers</h2>
+<div class="fd"><label>monthly traffic</label><div class="sr"><input type="range" id="tS" min="100" max="100000" value="5000" step="100"><span class="sv" id="tV">5,000</span></div></div>
+<div class="fd"><label>conversion rate</label><div class="sr"><input type="range" id="cS" min="0.5" max="10" value="2" step="0.1"><span class="sv" id="cV">2.0%</span></div></div>
+<div class="fd"><label>average price point</label><div class="sr"><input type="range" id="pS" min="5" max="500" value="29" step="1"><span class="sv" id="pV">$29</span></div></div>
+</div>
+<div class="cd">
+<h2>distribution channels</h2>
+<div class="chs">
+<label class="cl"><input type="checkbox" name="ch" value="seo"><span class="ck"></span><span class="cn">SEO</span></label>
+<label class="cl"><input type="checkbox" name="ch" value="social" checked><span class="ck"></span><span class="cn">Social</span></label>
+<label class="cl"><input type="checkbox" name="ch" value="cold-email"><span class="ck"></span><span class="cn">Cold Email</span></label>
+<label class="cl"><input type="checkbox" name="ch" value="paid-ads"><span class="ck"></span><span class="cn">Paid Ads</span></label>
+<label class="cl"><input type="checkbox" name="ch" value="community"><span class="ck"></span><span class="cn">Community</span></label>
+<label class="cl"><input type="checkbox" name="ch" value="referral"><span class="ck"></span><span class="cn">Referral</span></label>
+</div>
+</div>
+<button class="btn" id="cB" onclick="calc()">get your full revenue breakdown</button>
+<div id="res">
+<div class="cd" style="border-color:rgba(0,255,136,.2);margin-top:16px">
+<h2>your estimate</h2>
+<div class="rw"><div class="rc"><svg viewBox="0 0 180 180" width="100%" height="100%"><circle class="rb" cx="90" cy="90" r="78"/><circle class="rf" id="rF" cx="90" cy="90" r="78" stroke-dasharray="490" stroke-dashoffset="490"/></svg><div class="rx"><div class="ra" id="mR">$0</div><div class="rl">per month</div></div></div></div>
+<div class="mg"><div class="mt"><div class="v" id="aR">$0</div><div class="l">annual revenue</div></div><div class="mt"><div class="v" id="cC">0</div><div class="l">customers/mo</div></div></div>
+<div style="text-align:center"><div class="tb" id="tB">-</div></div>
+<div class="cb"><div class="bt"><div class="bf" id="cF" style="width:0%"></div></div><div class="bl"><span>confidence</span><span id="cT">-</span></div></div>
+<div class="rcs"><h3>top moves to increase revenue</h3><div id="rL"></div></div>
+</div>
+</div>
+<div class="gt" id="eG">
+<div class="cd" style="border-color:rgba(0,255,136,.2);margin-top:16px">
+<div class="gi">
+<h3>you used your 2 free estimates</h3>
+<p>drop your email for unlimited access. takes 5 seconds. no spam, just tools.</p>
+<div class="gf">
+<form id="gF" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" target="_blank">
+<input type="hidden" name="_subject" value="Revenue Estimator - Email Gate Unlock">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="source" value="side-project-revenue-estimator">
+<input type="email" name="email" placeholder="your@email.com" required>
+<button type="submit">unlock unlimited estimates</button>
+</form>
+<p class="fn">no spam. unsubscribe anytime. we send tools, not fluff.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="cs" id="xS" style="display:none">
+<h3>want the full playbook?</h3>
+<a class="pd" href="https://printmaxx.gumroad.com/l/vibe-coding-playbook" target="_blank"><div class="pi"><div class="pn">Vibe Coding Playbook</div><div class="pp">ship apps fast without a CS degree. the exact process.</div></div><div class="pr">$19</div></a>
+<a class="pd" href="https://printmaxx.gumroad.com/l/cold-email-playbook" target="_blank"><div class="pi"><div class="pn">Cold Email Playbook</div><div class="pp">50+ templates that actually get replies. tested on 10K+ sends.</div></div><div class="pr">$14</div></a>
+<a class="pd" href="https://printmaxx.gumroad.com/l/solopreneur-launch-kit" target="_blank"><div class="pi"><div class="pn">Solopreneur Launch Kit</div><div class="pp">from idea to first dollar. checklists, scripts, templates.</div></div><div class="pr">$24</div></a>
+</div>
+</div>
+<footer><p>built by <a href="https://twitter.com/printmaxxer" target="_blank">@printmaxxer</a>. no fluff, just math.</p></footer>
+</div>
+<script>
+(function(){var K='spr_cc',U='spr_ul',cc=+localStorage.getItem(K)||0,ul=localStorage.getItem(U)==='true',tS=document.getElementById('tS'),cS=document.getElementById('cS'),pS=document.getElementById('pS'),tV=document.getElementById('tV'),cVe=document.getElementById('cV'),pVe=document.getElementById('pV');function $(i){return document.getElementById(i)}function f(n){return n>=1e6?'$'+(n/1e6).toFixed(1)+'M':n>=1e4?'$'+Math.round(n/1e3)+'K':n>=1e3?'$'+(n/1e3).toFixed(1)+'K':'$'+Math.round(n).toLocaleString()}function fn(n){return n.toLocaleString()}tS.oninput=function(){tV.textContent=fn(+this.value)};cS.oninput=function(){cVe.textContent=(+this.value).toFixed(1)+'%'};pS.oninput=function(){pVe.textContent='$'+parseInt(this.value)};if(ul)$('uM').style.display='block';$('gF').onsubmit=function(){localStorage.setItem(U,'true');ul=true;setTimeout(function(){$('eG').style.display='none';$('uM').style.display='block';$('cB').disabled=false;$('cB').textContent='get your full revenue breakdown'},500)};function mk(n,t){var d=document.createElement('div');d.className='re';var a=document.createElement('span');a.className='rn';a.textContent=n;var b=document.createElement('span');b.textContent=t;d.appendChild(a);d.appendChild(b);return d}window.calc=function(){if(!ul&&cc>=2){$('res').style.display='none';$('xS').style.display='none';$('eG').style.display='block';$('cB').disabled=true;$('cB').textContent='unlock more estimates above';return}cc++;localStorage.setItem(K,cc);var ty=$('pT').value,ni=$('ni').value||'general',tr=+tS.value,cv=+cS.value/100,pr=+pS.value,ch=document.querySelectorAll('input[name="ch"]:checked'),nc=ch.length,cv2=[];ch.forEach(function(c){cv2.push(c.value)});var tm={saas:1.1,app:.7,digital:.9,freelance:1.3,content:.6,ecom:.85},m=tm[ty]||1,cu=Math.round(tr*cv),mo=Math.round(cu*pr*m),an=mo*12;var co=30;co+=tr<=1e3?5:tr<=1e4?15:tr<=5e4?10:5;co+=cv<=.03?15:cv<=.05?10:5;co+=pr<=50?10:pr<=150?8:3;co+=nc>=3?15:nc>=2?10:nc>=1?5:0;if(ni.length>3)co+=10;if(ty==='saas'&&cv>.05)co-=10;if(ty==='ecom'&&pr>200)co-=10;if(tr>5e4&&nc<2)co-=10;co=Math.max(10,Math.min(95,co));var ti,tc,tb;if(mo<500){ti='ramen profitable';tc='#ffaa00';tb='rgba(255,170,0,.1)'}else if(mo<2e3){ti='side income';tc='#4488ff';tb='rgba(68,136,255,.1)'}else if(mo<5e3){ti='full-time viable';tc='#00ff88';tb='rgba(0,255,136,.1)'}else if(mo<2e4){ti='scaling';tc='#00ff88';tb='rgba(0,255,136,.15)'}else{ti='printing money';tc='#00ff88';tb='rgba(0,255,136,.2)'}var rf=$('rF'),p=Math.min(mo/5e4,1);rf.style.strokeDashoffset=490-p*490;rf.style.stroke=tc;$('mR').textContent=f(mo);$('mR').style.color=tc;$('aR').textContent=f(an);$('cC').textContent=fn(cu);var bd=$('tB');bd.textContent=ti;bd.style.color=tc;bd.style.background=tb;bd.style.border='1px solid '+tc;var cf=$('cF');cf.style.width=co+'%';cf.style.background=co>70?'#00ff88':co>40?'#ffaa00':'#ff4444';$('cT').textContent=co+'% '+(co>70?'high':co>40?'medium':'low');$('cT').style.color=co>70?'#00ff88':co>40?'#ffaa00':'#ff4444';var rc=[],h=function(x){return cv2.indexOf(x)===-1};if(tr<2e3){if(h('seo'))rc.push('add SEO. you have '+fn(tr)+' monthly visitors. even basic keyword targeting on 5 pages could 3x that in 90 days.');if(h('community'))rc.push('post in 3 niche communities daily. at '+fn(tr)+' traffic, organic community posts are your cheapest growth channel.')}if(tr>=2e3&&tr<2e4){if(h('cold-email'))rc.push('add cold email outreach. you have enough traffic to prove the offer works. now push it to people who need it.');if(h('referral'))rc.push('add a referral program. your '+fn(cu)+' customers/mo can each bring 1 more. that doubles revenue at zero cost.')}if(tr>=2e4&&h('paid-ads'))rc.push('test paid ads with $500. at '+fn(tr)+' organic traffic, you know the offer converts. paid just scales what already works.');if(cv<.02)rc.push('your '+(cv*100).toFixed(1)+'% conversion rate is below average. add social proof to your landing page.');if(cv<.03&&ty==='digital')rc.push('add a free sample or preview. digital products convert 2-3x better when people can taste the value first.');if(cv>=.05)rc.push('your '+(cv*100).toFixed(1)+'% conversion is solid. focus on traffic, not conversion. double visitors = double revenue.');if(pr<20&&ty!=='content')rc.push('test a higher price. at $'+pr+', raising to $'+pr*2+' loses maybe 20% of buyers but doubles revenue per sale. net positive.');if(pr>100&&ty==='digital')rc.push('at $'+pr+' for a digital product, add a payment plan. $'+Math.round(pr/3)+'/mo for 3 months converts 40% more buyers.');if(ty==='saas'&&pr<30)rc.push('SaaS at $'+pr+'/mo is hard to sustain. consider a $'+pr*3+'/mo pro tier. 20% of users will upgrade.');if(ty==='freelance'&&pr<100)rc.push('freelance at $'+pr+' per project is underpriced. package it as a $'+pr*5+' service with a clear deliverable.');if(nc<2)rc.push('you only have '+nc+' distribution channel. one channel dying = your revenue dies. add at least 2 more.');if(ty==='app'&&h('paid-ads')&&tr>5e3)rc.push('mobile apps grow fastest with paid UA. test Apple Search Ads at $20/day.');if(ty==='ecom'&&h('social'))rc.push('ecom without social is leaving money on the table. UGC short videos on TikTok/Reels drive the cheapest ecom traffic.');if(rc.length<3)rc.push('track your actual numbers weekly. most solopreneurs guess wrong on conversion rates. real data changes everything.');rc=rc.slice(0,3);var rl=$('rL');while(rl.firstChild)rl.removeChild(rl.firstChild);rc.forEach(function(t,i){rl.appendChild(mk(''+(i+1),t))});$('eG').style.display='none';$('res').style.display='block';$('xS').style.display='block';$('res').scrollIntoView({behavior:'smooth',block:'start'});if(!ul&&cc<2)$('cB').textContent='get your full revenue breakdown ('+(2-cc)+' free left)';else if(!ul)$('cB').textContent='get your full revenue breakdown (last free one used)'}})();
+</script>
+</body>
+</html>

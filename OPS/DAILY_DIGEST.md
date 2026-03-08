@@ -1,59 +1,53 @@
-# DAILY DIGEST — 2026-03-07 20:39
-Covering: 2026-03-05 to 2026-03-07
-Revenue: $0 | Day 34 at zero
+# DAILY DIGEST — 2026-03-08 01:33
+Covering: 2026-03-08 to 2026-03-08
+Revenue: $0 | Day 35 at zero
 
 ---
 
 ### Alpha Intelligence
-- **1857 new entries** scraped
-- Actionable: 280
-- Archived/low-value: 1371
-- Flagged for human review: 138
+- **84 new entries** scraped
+- Actionable: 24
+- Archived/low-value: 54
+- Flagged for human review: 0
 
-**Top categories:** GENERAL (708), MONETIZATION (417), TOOL_ALPHA (273), GROWTH_HACK (91), APP_FACTORY (79)
+**Top categories:** TOOL_ALPHA (41), GENERAL (13), MONETIZATION (11), APP_FACTORY (8), CONTENT_FORMAT (4)
 
 **Best finds:**
-- [ALPHA15495] MONETIZATION | ROI:HIGHEST | @WatcherGuru (high-signal-acco
-  JUST IN: Goldman Sachs says oil could rise 30% to $100 a barrel if Strait of Hormuz remains closed.
-- [ALPHA15787] MONETIZATION | ROI:HIGHEST | @stockMKTnewz (high-signal-acc
-  The Robinhood Platinum card will have a $695 fee and will include - 5% cash back and a annual $250 DoorDash and a $250 restaurant credit- 5% cash back
-- [ALPHA15892] MONETIZATION | ROI:HIGHEST | @obscicron (bookmarks)
-  > be anon> studies probability theory since 14> gets into MIT> recruited by Jane Street> 2 years, $350k/yr, 80hr weeks> discovers people bet on 15-min
-- [ALPHA16308] MONETIZATION | ROI:HIGHEST | Twitter/ideabrowser.com
-  Claude Migration as a Service playbook: Pick vertical (car dealerships/CRE brokerages). Record workflows with Wispr Flow. Turn SOPs into Claude skills
-- [ALPHA16309] TOOL_ALPHA | ROI:HIGHEST | Twitter/@DCinfoscaling
-  Chief of Staff Claude Code system built by non-programmer in 36 hours: Overnight auto-scans calendar for drive times + triages email to Todoist. AM Sw
-- [ALPHA16322] MONETIZATION | ROI:HIGHEST | @levelsio (high-signal-account
-  http://photoai.com is a 40,870 line file called index.php$105,000/mo revenue$80,000/mo profit
-- [ALPHA16391] TOOL_ALPHA | ROI:HIGHEST | HackerNews
-  Context-compact: summarize agent context instead of truncating. Open source.
-- [ALPHA16410] OUTBOUND | ROI:HIGHEST | IndieHackers
-  Vibe code your existing WordPress site. $50k/mo Feb 2026. AI code generation applied to the world's largest CMS. 40% of the internet is WordPress.
+- [HN_003] APP_FACTORY | ROI:HIGHEST | HackerNews Show HN
+  Running 4 AI-driven companies from terminal via agent orchestration (auto-co-meta). Solopreneur-AI hybrid model: one person + agent swarm = multi-comp
+- [PH_20260308_STITCH_BY_GOOGL] TOOL_ALPHA | ROI:HIGHEST | ProductHunt
+  Stitch by Google: Turn napkin sketches into production-ready UI in seconds. | 635 PH votes | Topics: Design Tools, Developer Tools, Artificial Intelli
+- [ALPHA_REDDIT_APP002] APP_FACTORY | ROI:HIGHEST | r/AppBusiness post - FocusBudd
+  Pomodoro iOS app. Solo dev. $0 ad spend. 23 days to $300 MRR. 2.8K downloads. 4 tactics: (1) 20+ language localization Day 1 for non-US App Store long
+- [ALPHA_REDDIT_SAAS001] APP_FACTORY | ROI:HIGHEST | r/SaaS post - Dental complianc
+  Niche B2B SaaS: automated compliance reminders for dental/vet offices. Stack: Next.js + Supabase + Stripe + Vercel at $8.11/mo. Outreach: scraped Goog
+- [ALPHA_REDDIT_001] SEO_CONTENT | ROI:HIGHEST | Reddit r/GrowthHacking
+  SEO + programmatic SEO flywheel. Ahrefs $149M ARR with no SDRs/BDRs. Hunt low-competition high-intent keywords (best X alternative, X pricing). Use AI
+- [ALPHA_REDDIT_002] CONTENT_FORMAT | ROI:HIGHEST | Reddit r/SaaS
+  YouTube as search engine not audience engine. 100-200 view videos generating $12k/month and 1400 paying subscribers. 63% of views from search. 26% fro
+- [ALPHA_BIBLECHAT_001] APP_FACTORY | ROI:HIGHEST | Reddit r/AppBusiness + Appfigu
+  BibleChat (Romanian 2-man studio pivot) reached $750K/mo net revenue in March 2025. 1.5M downloads that month. Tech: React Native + RAG on scripture c
+- [HN_001] TOOL_ALPHA | ROI:HIGH | HackerNews Show HN
+  MCP server giving Claude persistent memory + local RAG. Zero-cost memory layer for AI agents. Direct relevance to ralph loop infrastructure and agent 
 
 ### Content Pipeline
-- **APPROVED_POSTS_MAR7.csv**: 20 posts ready
-- **BUFFER_UPLOAD_MAR7.csv**: 50 posts ready
-- **APPROVED_POSTS_MAR6.csv**: 20 posts ready
-- **BUFFER_UPLOAD_MAR5.csv**: 498 posts ready
-- Total content files: 669
-- Auto-generated folder: 31 files total
+- Total content files: 711
+- Auto-generated folder: 32 files total
 
 ### Agent Activity
-- **30 reports** generated
-  - inbound_report: 4
-  - meta_executor: 4
-  - cross_pollination: 3
-  - swarm_brain: 3
-  - revenue_report: 2
-  - trend_synthesis: 2
-  - alpha_cycle3_hn_ph_ih: 1
-  - app_monetization_audit: 1
-  - competitor_intel: 1
-  - competitor_intel_cycle2: 1
-- **5 CEO decisions** made
-  - PROMOTE: 5
+- **4 reports** generated
+  - gap_report: 1
+  - health_report: 1
+  - meta_executor: 1
+  - swarm_brain: 1
 
 ### What Changed / Improved
+- **36 assets** updated
+  - ADHD-Streak (DEPLOYED): PWA streak tracker. Email capture active. OG image generated. Needs native mobil
+  - PrayerLock (DEPLOYED): PWA prayer tracker. Email capture active. OG image generated.
+  - FocusLock (DEPLOYED): PWA focus timer. Email capture active. OG image generated.
+  - SleepMaxx (DEPLOYED): PWA sleep tracker. Email capture active. OG image generated.
+  - MealMaxx (DEPLOYED): PWA meal tracker. Email capture active. OG image generated.
 
 ### HUMAN REQUIRED (only you can do these)
 

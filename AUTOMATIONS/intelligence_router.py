@@ -34,6 +34,8 @@ Usage (Module):
     # intel["brief"] = one-paragraph summary
 """
 
+from __future__ import annotations
+
 import argparse
 import csv
 import json
@@ -44,6 +46,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
+from typing import Any, Optional
 
 # ── Paths & Guardrails ─────────────────────────────────────────────────
 PROJECT = Path(__file__).resolve().parent.parent
@@ -68,7 +71,7 @@ ALPHA_QUERY = AUTOMATIONS / "alpha_query.py"
 PYTHON = sys.executable
 
 
-def safe_path(p):
+def safe_path(p: str | Path) -> Path:
     """Verify path is within project root. Raises ValueError if not."""
     resolved = Path(p).resolve()
     if not str(resolved).startswith(str(PROJECT.resolve())):
@@ -76,7 +79,7 @@ def safe_path(p):
     return resolved
 
 
-def ts():
+def ts() -> str:
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
@@ -840,7 +843,7 @@ SWARM_REPORT_KEYWORDS = {
 
 # ── Core Intelligence Functions ────────────────────────────────────────
 
-def load_catalog():
+def load_catalog() -> Optional[dict[str, Any]]:
     """Load INTELLIGENCE_CATALOG.json if it exists, merge with hardcoded map."""
     if CATALOG_PATH.exists():
         try:
@@ -852,7 +855,7 @@ def load_catalog():
     return None
 
 
-def query_alpha(venture_type, top=10):
+def query_alpha(venture_type: str, top: int = 10) -> list[dict[str, Any]]:
     """Query alpha_query.py for top alpha entries relevant to a venture."""
     if not ALPHA_QUERY.exists():
         return []
@@ -886,7 +889,7 @@ def query_alpha(venture_type, top=10):
     return []
 
 
-def find_existing_docs(venture_type):
+def find_existing_docs(venture_type: str) -> list[tuple[str, str, bool]]:
     """Return list of (path, description, exists) for a venture's docs.
     Merges hardcoded INTELLIGENCE_MAP with INTELLIGENCE_CATALOG.json."""
     venture_type = venture_type.upper()
@@ -925,7 +928,7 @@ def find_existing_docs(venture_type):
     return results
 
 
-def find_existing_dirs(venture_type):
+def find_existing_dirs(venture_type: str) -> list[tuple[str, str, int, list[str]]]:
     """Return list of (dir_path, description, file_count, files) for directories."""
     venture_type = venture_type.upper()
     if venture_type not in INTELLIGENCE_MAP:
@@ -952,7 +955,7 @@ def find_existing_dirs(venture_type):
     return results
 
 
-def find_existing_csvs(venture_type):
+def find_existing_csvs(venture_type: str) -> list[tuple[str, str, bool, int]]:
     """Return list of (path, description, exists, row_count) for LEDGER CSVs."""
     venture_type = venture_type.upper()
     if venture_type not in INTELLIGENCE_MAP:
@@ -978,7 +981,7 @@ def find_existing_csvs(venture_type):
     return results
 
 
-def find_swarm_reports(venture_type, max_reports=5):
+def find_swarm_reports(venture_type: str, max_reports: int = 5) -> list[tuple[str, str]]:
     """Find the most recent swarm reports relevant to a venture type."""
     venture_type = venture_type.upper()
     keywords = SWARM_REPORT_KEYWORDS.get(venture_type, [])
@@ -1007,7 +1010,7 @@ def find_swarm_reports(venture_type, max_reports=5):
     return [(path, name) for _, path, name in relevant[:max_reports]]
 
 
-def find_task_docs(venture_type, task_type):
+def find_task_docs(venture_type: str, task_type: Optional[str]) -> list[tuple[str, bool]]:
     """Get the most relevant docs for a specific task within a venture."""
     venture_type = venture_type.upper()
     task_type = task_type.lower() if task_type else None
@@ -1031,7 +1034,7 @@ def find_task_docs(venture_type, task_type):
     return []
 
 
-def extract_doc_summary(doc_path, max_lines=30):
+def extract_doc_summary(doc_path: str, max_lines: int = 30) -> Optional[str]:
     """Extract key sections from a doc (headers + first few lines under each)."""
     try:
         p = Path(doc_path)
@@ -1077,8 +1080,8 @@ def extract_doc_summary(doc_path, max_lines=30):
 
 # ── Main Intelligence Gatherer ─────────────────────────────────────────
 
-def get_intelligence(venture_type, task_type=None, include_summaries=False,
-                     alpha_count=10):
+def get_intelligence(venture_type: str, task_type: Optional[str] = None, include_summaries: bool = False,
+                     alpha_count: int = 10) -> dict[str, Any]:
     """
     Main intelligence function. Returns a dict with all relevant intelligence
     for a venture type and optional task type.
@@ -1215,7 +1218,7 @@ def get_intelligence(venture_type, task_type=None, include_summaries=False,
 
 # ── Statistics & Coverage ──────────────────────────────────────────────
 
-def compute_stats():
+def compute_stats() -> dict[str, Any]:
     """Compute coverage statistics across all venture types."""
     stats = {}
     total_docs = 0
@@ -1291,7 +1294,7 @@ def compute_stats():
 
 # ── CLI Formatting ─────────────────────────────────────────────────────
 
-def format_human_output(intel, mode="default"):
+def format_human_output(intel: dict[str, Any], mode: str = "default") -> str:
     """Format intelligence for human-readable CLI output."""
     venture = intel["meta"]["venture_type"]
     task = intel["meta"].get("task_type") or "general"
@@ -1417,7 +1420,7 @@ def format_human_output(intel, mode="default"):
     return "\n".join(lines)
 
 
-def format_stats_output(stats):
+def format_stats_output(stats: dict[str, Any]) -> str:
     """Format stats for human-readable output."""
     lines = []
     lines.append(f"\n{'='*70}")
@@ -1458,7 +1461,7 @@ def format_stats_output(stats):
     return "\n".join(lines)
 
 
-def format_catalog_output():
+def format_catalog_output() -> str:
     """Show the full document-to-venture mapping."""
     lines = []
     lines.append(f"\n{'='*70}")
@@ -1501,7 +1504,7 @@ def format_catalog_output():
 
 # ── CLI Entry Point ────────────────────────────────────────────────────
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Intelligence Router — pull all relevant intel for any venture/task",
         formatter_class=argparse.RawDescriptionHelpFormatter,

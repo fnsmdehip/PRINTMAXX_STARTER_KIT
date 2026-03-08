@@ -67,3 +67,8 @@
 {"ts": "2026-03-08T00:09:23.916646", "mission": "research_night", "result": "failed", "duration_s": 360.1, "output": "0/3 scrapers completed"}
 {"ts": "2026-03-08T00:11:23.960783", "mission": "upgrade_night", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}
 {"ts": "2026-03-08T00:12:53.990257", "mission": "hunt_night", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
+{"ts": "2026-03-08T00:12:55.907569", "mission": "safety_night", "result": "success", "duration_s": 1.9, "output": "Git safety commit"}
+{"ts": "2026-03-08T01:05:43.531995", "mission": "health_heal", "result": "success", "duration_s": 1.2, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-08T01:05:44.029097", "mission": "process_decide", "result": "success", "duration_s": 0.5, "output": "Decisions made. 27 response drafts, 28 listing drafts"}
+{"ts": "2026-03-08T03:00:01.199396", "mission": "health_heal", "result": "success", "duration_s": 1.1, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-08T03:00:01.448567", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 27 response drafts, 28 listing drafts"}

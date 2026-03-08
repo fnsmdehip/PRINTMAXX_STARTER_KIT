@@ -90,3 +90,8 @@ timestamp,source,action,reasoning,outcome
 2026-03-08T00:00:05.762915,ecom_arb,listing_draft:gua_sha_tool,"Margin 52.1% >= 25% threshold, action=LIST",PENDING
 2026-03-08T00:00:05.763481,ecom_arb,listing_draft:wireless_earbuds,"Margin 66.0% >= 25% threshold, action=LIST",PENDING
 2026-03-08T00:03:23.532658,freelance_demand,draft_response:[Hiring]_Looking_for_a_improving_on_my_current_log,Score 65.0 >= 60 threshold. Subreddit: unknown,PENDING
+2026-03-08T01:00:01.072243,ecom_arb,listing_draft:jump_rope_weighted,"Margin 64.2% >= 25% threshold, action=LIST",PENDING
+2026-03-08T01:00:01.072897,ecom_arb,listing_draft:lash_serum,"Margin 49.4% >= 25% threshold, action=LIST",PENDING
+2026-03-08T01:00:01.073267,ecom_arb,listing_draft:cat_water_fountain,"Margin 43.7% >= 25% threshold, action=LIST",PENDING
+2026-03-08T01:00:01.073552,ecom_arb,listing_draft:shower_head_filter,"Margin 37.6% >= 25% threshold, action=LIST",PENDING
+2026-03-08T01:00:01.074026,ecom_arb,listing_draft:phone_projector,"Margin 58.3% >= 25% threshold, action=LIST",PENDING

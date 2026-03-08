@@ -6,7 +6,7 @@
     "LETTA_MODE": "full",
     "LETTA_AGENT_ID": "agent-20a5d095-6945-49d6-8489-0d36a02941d7"
   },
-  "model": "sonnet",
+  "model": "opus",
   "hooks": {
     "SessionStart": [
       {
@@ -21,6 +21,11 @@
             "type": "command",
             "command": "bash /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/subconscious/session_start_injector.sh",
             "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "bash /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/check_cron_critical_agents.sh",
+            "timeout": 5
           },
           {
             "type": "command",
@@ -41,7 +46,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'Validating file operation...'"
+            "command": "bash /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/validate_path.sh",
+            "timeout": 5
           }
         ]
       },
@@ -84,7 +90,28 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'File modified: $FILE_PATH'"
+            "command": "bash /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/py_compile_check.sh",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "bash /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/secret_detector.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/check_safe_path_discard.py",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/check_file_handle_leaks.py",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/check_type_hints.py",
+            "timeout": 5
           }
         ]
       }

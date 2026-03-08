@@ -48,6 +48,8 @@ Usage:
   python3 AUTOMATIONS/ceo_agent.py --cron-add "..."   # Add a cron entry
 """
 
+from __future__ import annotations
+
 import argparse
 import csv
 import json
@@ -59,7 +61,7 @@ import shutil
 import fcntl
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 # === GUARDRAILS (inherited from ops_manager) ===
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
@@ -113,7 +115,7 @@ XLSX_PATTERNS = [
 ]
 
 
-def safe_path(p):
+def safe_path(p: str | Path) -> Path:
     resolved = Path(p).resolve()
     project_resolved = PROJECT.resolve()
     if not str(resolved).startswith(str(project_resolved)):
@@ -124,14 +126,14 @@ def safe_path(p):
     return resolved
 
 
-def safe_command(cmd_str):
+def safe_command(cmd_str: str) -> None:
     lower = cmd_str.lower()
     for bad in BLOCKED_COMMANDS:
         if bad in lower:
             raise ValueError(f"GUARDRAIL BLOCKED: {bad}")
 
 
-def disk_free_gb():
+def disk_free_gb() -> float:
     try:
         st = os.statvfs("/")
         return round(st.f_bavail * st.f_frsize / (1024**3), 1)
@@ -139,11 +141,11 @@ def disk_free_gb():
         return -1
 
 
-def ts():
+def ts() -> str:
     return datetime.now().strftime("%H:%M:%S")
 
 
-def log(msg, level="INFO"):
+def log(msg: str, level: str = "INFO") -> None:
     line = f"[{ts()}] [CEO] [{level}] {msg}"
     print(line)
     log_path = PROJECT / "AUTOMATIONS" / "logs" / "ceo_agent.log"
@@ -155,7 +157,7 @@ def log(msg, level="INFO"):
         pass
 
 
-def run_script(script_path, args="", timeout_sec=300, label=None):
+def run_script(script_path: str, args: str = "", timeout_sec: int = 300, label: Optional[str] = None) -> tuple[bool, str]:
     """Run a PRINTMAXX script with guardrails. Returns (success, output)."""
     full_path = PROJECT / "AUTOMATIONS" / script_path if "/" not in script_path else PROJECT / script_path
     if not full_path.exists():
@@ -189,7 +191,7 @@ def run_script(script_path, args="", timeout_sec=300, label=None):
         return False, str(e)[:500]
 
 
-def _hours_since(iso_ts):
+def _hours_since(iso_ts: Optional[str]) -> float:
     """Return hours elapsed since an ISO timestamp string. Returns float('inf') if None/invalid."""
     if not iso_ts:
         return float('inf')
@@ -206,11 +208,11 @@ def _hours_since(iso_ts):
 class GitGuard:
     """Git-based failsafe. Snapshots state before CEO makes changes."""
 
-    def __init__(self):
-        self.last_snapshot_hash = None
-        self.snapshot_tag = None
+    def __init__(self) -> None:
+        self.last_snapshot_hash: Optional[str] = None
+        self.snapshot_tag: Optional[str] = None
 
-    def snapshot(self, label="ceo_pre_change"):
+    def snapshot(self, label: str = "ceo_pre_change") -> bool:
         """Commit current state before CEO makes changes."""
         if not GIT_SNAPSHOT_BEFORE_CHANGES:
             return True
@@ -244,7 +246,7 @@ class GitGuard:
             log(f"Git snapshot failed: {e}", "WARN")
             return False
 
-    def rollback(self):
+    def rollback(self) -> bool:
         """Rollback to last snapshot. Only used if post-audit detects regression."""
         if not self.last_snapshot_hash:
             log("No snapshot hash to rollback to", "WARN")
@@ -264,7 +266,7 @@ class GitGuard:
             log(f"Rollback exception: {e}", "ERROR")
             return False
 
-    def post_change_commit(self, summary):
+    def post_change_commit(self, summary: str) -> bool:
         """Commit after CEO changes, with a descriptive message."""
         try:
             subprocess.run(
@@ -290,12 +292,12 @@ class GitGuard:
 class XlsxIntel:
     """Reads the PRINTMAXX master xlsx to get all 182 ops and their metadata."""
 
-    def __init__(self):
-        self.xlsx_path = self._find_xlsx()
-        self._cache = {}
-        self._cache_time = None
+    def __init__(self) -> None:
+        self.xlsx_path: Optional[Path] = self._find_xlsx()
+        self._cache: dict[str, Any] = {}
+        self._cache_time: Optional[datetime] = None
 
-    def _find_xlsx(self):
+    def _find_xlsx(self) -> Optional[Path]:
         """Find the latest master xlsx."""
         for pattern in XLSX_PATTERNS:
             matches = sorted(PROJECT.glob(pattern), key=lambda p: p.stat().st_mtime, reverse=True)
@@ -303,7 +305,7 @@ class XlsxIntel:
                 return matches[0]
         return None
 
-    def _load(self):
+    def _load(self) -> dict[str, Any]:
         """Load xlsx data with caching (reload every 5 min)."""
         if self._cache and self._cache_time and (datetime.now() - self._cache_time).seconds < 300:
             return self._cache
@@ -340,53 +342,53 @@ class XlsxIntel:
             log(f"xlsx load error: {e}", "ERROR")
             return {}
 
-    def get_all_ops(self):
+    def get_all_ops(self) -> list[dict[str, Any]]:
         """Get all ops from ALL OPS MASTER sheet."""
         data = self._load()
         return data.get("ALL OPS MASTER", [])
 
-    def get_auto_status(self):
+    def get_auto_status(self) -> list[dict[str, Any]]:
         """Get automation status for all ops."""
         data = self._load()
         return data.get("AUTO_STATUS_LIVE", [])
 
-    def get_priority_launch(self):
+    def get_priority_launch(self) -> list[dict[str, Any]]:
         """Get priority-ranked ops for launch."""
         data = self._load()
         return data.get("PRIORITY LAUNCH", [])
 
-    def get_synergy_stacks(self):
+    def get_synergy_stacks(self) -> list[dict[str, Any]]:
         """Get synergy combos with revenue multipliers."""
         data = self._load()
         return data.get("SYNERGY STACKS", [])
 
-    def get_venture_map(self):
+    def get_venture_map(self) -> list[dict[str, Any]]:
         """Get venture-to-automation mapping."""
         data = self._load()
         return data.get("VENTURE_AUTOMATION_MAP", [])
 
-    def get_expansion_queue(self):
+    def get_expansion_queue(self) -> list[dict[str, Any]]:
         """Get expansion queue for scaling ops."""
         data = self._load()
         return data.get("ETC_EXPANSION_QUEUE", [])
 
-    def get_op_by_id(self, op_id):
+    def get_op_by_id(self, op_id: str) -> Optional[dict[str, Any]]:
         """Find a specific op by its ID."""
         for op in self.get_all_ops():
             if op.get("OP_ID") == op_id:
                 return op
         return None
 
-    def get_ops_by_category(self, category):
+    def get_ops_by_category(self, category: str) -> list[dict[str, Any]]:
         """Get all ops in a category."""
         return [op for op in self.get_all_ops() if op.get("CATEGORY", "").upper() == category.upper()]
 
-    def get_ready_ops(self):
+    def get_ready_ops(self) -> list[dict[str, Any]]:
         """Get ops marked as READY in auto status."""
         return [op for op in self.get_auto_status()
                 if str(op.get("READINESS", "")).upper() == "READY"]
 
-    def get_blocked_ops(self):
+    def get_blocked_ops(self) -> list[dict[str, Any]]:
         """Get ops with blockers."""
         return [op for op in self.get_auto_status()
                 if op.get("BLOCKER_KEY") and str(op.get("BLOCKER_KEY")).strip()]
@@ -399,11 +401,11 @@ class XlsxIntel:
 class CEOState:
     """Persistent state for the CEO agent."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         CEO_DIR.mkdir(parents=True, exist_ok=True)
-        self.data = self._load()
+        self.data: dict[str, Any] = self._load()
 
-    def _load(self):
+    def _load(self) -> dict[str, Any]:
         if STATE_FILE.exists():
             try:
                 return json.loads(STATE_FILE.read_text())
@@ -411,7 +413,7 @@ class CEOState:
                 return self._default()
         return self._default()
 
-    def _default(self):
+    def _default(self) -> dict[str, Any]:
         return {
             "last_cycle": None,
             "cycles_run": 0,
@@ -445,11 +447,11 @@ class CEOState:
             }
         }
 
-    def save(self):
+    def save(self) -> None:
         safe_path(STATE_FILE)
         STATE_FILE.write_text(json.dumps(self.data, indent=2, default=str))
 
-    def log_decision(self, decision):
+    def log_decision(self, decision: dict[str, Any]) -> None:
         """Append a decision to the JSONL log."""
         decision["ts"] = datetime.now().isoformat()
         safe_path(DECISION_LOG)
@@ -457,25 +459,25 @@ class CEOState:
             f.write(json.dumps(decision, default=str) + "\n")
         self.data["total_decisions"] += 1
 
-    def log_audit(self, audit_entry):
+    def log_audit(self, audit_entry: dict[str, Any]) -> None:
         """Append an audit entry."""
         audit_entry["ts"] = datetime.now().isoformat()
         safe_path(AUDIT_LOG)
         with open(AUDIT_LOG, "a") as f:
             f.write(json.dumps(audit_entry, default=str) + "\n")
 
-    def is_protected(self, op_id):
+    def is_protected(self, op_id: str) -> bool:
         """Check if an op is protected from auto-kill."""
         return op_id in self.data.get("protected_ops", [])
 
-    def protect_op(self, op_id):
+    def protect_op(self, op_id: str) -> None:
         """Add op to protected list."""
         if op_id not in self.data["protected_ops"]:
             self.data["protected_ops"].append(op_id)
             self.save()
             log(f"Protected op: {op_id}")
 
-    def get_score_trend(self, op_id, periods=5):
+    def get_score_trend(self, op_id: str, periods: int = 5) -> list[dict[str, Any]]:
         """Get recent score trend for an op."""
         history = self.data.get("op_history", {}).get(op_id, [])
         return history[-periods:]
@@ -488,11 +490,11 @@ class CEOState:
 class VentureScorer:
     """Scores all ops using xlsx data + runtime metrics."""
 
-    def __init__(self, xlsx: XlsxIntel, state: CEOState):
+    def __init__(self, xlsx: XlsxIntel, state: CEOState) -> None:
         self.xlsx = xlsx
         self.state = state
 
-    def score_all(self):
+    def score_all(self) -> list[dict[str, Any]]:
         """Score every op in the xlsx. Returns sorted list of scored ops."""
         all_ops = self.xlsx.get_all_ops()
         auto_status = {op.get("OP_ID"): op for op in self.xlsx.get_auto_status()}
@@ -529,7 +531,7 @@ class VentureScorer:
         self.state.save()
         return scored
 
-    def _score_op(self, op, auto_status, venture_info, synergies):
+    def _score_op(self, op: dict[str, Any], auto_status: dict[str, Any], venture_info: dict[str, Any], synergies: list[dict[str, Any]]) -> dict[str, Any]:
         """Score a single op across multiple dimensions."""
         op_id = op.get("OP_ID", "")
 
@@ -587,7 +589,7 @@ class VentureScorer:
             "is_protected": self.state.is_protected(op_id),
         }
 
-    def _parse_revenue_score(self, rev_str):
+    def _parse_revenue_score(self, rev_str: str) -> float:
         """Parse revenue range string into a 0-15 score."""
         if not rev_str or rev_str == "$0":
             return 0
@@ -618,12 +620,12 @@ class VentureScorer:
 class CEOBrain:
     """Makes strategic decisions about ventures."""
 
-    def __init__(self, scorer: VentureScorer, xlsx: XlsxIntel, state: CEOState):
+    def __init__(self, scorer: VentureScorer, xlsx: XlsxIntel, state: CEOState) -> None:
         self.scorer = scorer
         self.xlsx = xlsx
         self.state = state
 
-    def _get_strategic_intelligence(self):
+    def _get_strategic_intelligence(self) -> str:
         """Pull multi-venture intelligence briefing + buried gold for CEO decisions."""
         parts = []
 
@@ -675,7 +677,7 @@ class CEOBrain:
 
         return "\n\n".join(parts) if parts else ""
 
-    def analyze_and_decide(self, dry_run=False):
+    def analyze_and_decide(self, dry_run: bool = False) -> list[dict[str, Any]]:
         """
         Run full CEO analysis cycle. Returns list of decisions.
 
@@ -831,11 +833,11 @@ class CEOBrain:
 class VentureRunner:
     """Executes CEO decisions by delegating to venture agents."""
 
-    def __init__(self, state: CEOState, xlsx: XlsxIntel):
+    def __init__(self, state: CEOState, xlsx: XlsxIntel) -> None:
         self.state = state
         self.xlsx = xlsx
 
-    def execute_decisions(self, decisions):
+    def execute_decisions(self, decisions: list[dict[str, Any]]) -> list[dict[str, Any]]:
         """Execute a list of CEO decisions. Returns execution results."""
         results = []
         for decision in decisions:
@@ -863,7 +865,7 @@ class VentureRunner:
 
         return results
 
-    def _execute_promote(self, decision):
+    def _execute_promote(self, decision: dict[str, Any]) -> dict[str, str]:
         """Promote a winning op — create a focused run config."""
         op_id = decision["op_id"]
         op_name = decision["name"]
@@ -897,7 +899,7 @@ class VentureRunner:
         log(f"PROMOTED {op_id} ({op_name}) — score {decision['score']}")
         return {"status": "success", "action": "promoted and protected"}
 
-    def _execute_enhance(self, decision):
+    def _execute_enhance(self, decision: dict[str, Any]) -> dict[str, str]:
         """Enhance an underperforming op by addressing its blocker."""
         op_id = decision["op_id"]
         blocker = decision.get("blocker", "unknown")
@@ -934,7 +936,7 @@ class VentureRunner:
         log(f"ENHANCED {op_id} — plan written, blocker: {blocker}")
         return {"status": "success", "action": f"enhancement plan for blocker {blocker}"}
 
-    def _execute_create(self, decision):
+    def _execute_create(self, decision: dict[str, Any]) -> dict[str, str]:
         """Create a new dynamic venture from xlsx op data."""
         op_id = decision["op_id"]
         op_name = decision["name"]
@@ -973,7 +975,7 @@ class VentureRunner:
         log(f"CREATED venture {op_id} ({op_name}) — lane: {lane}")
         return {"status": "success", "action": f"venture created: {op_name}"}
 
-    def _execute_kill(self, decision):
+    def _execute_kill(self, decision: dict[str, Any]) -> dict[str, str]:
         """Sunset a dead op. Does NOT delete anything — just deprioritizes."""
         op_id = decision["op_id"]
 
@@ -1010,7 +1012,7 @@ class VentureRunner:
         log(f"KILLED {op_id} ({decision['name']}) — score {decision['score']}")
         return {"status": "success", "action": "deprioritized (files preserved)"}
 
-    def _execute_discover(self, decision):
+    def _execute_discover(self, decision: dict[str, Any]) -> dict[str, str]:
         """Research a discovered opportunity."""
         op_id = decision["op_id"]
 
@@ -1035,7 +1037,7 @@ class VentureRunner:
         log(f"DISCOVERED {op_id} ({decision['name']})")
         return {"status": "success", "action": "discovery logged for evaluation"}
 
-    def run_dynamic_ventures(self):
+    def run_dynamic_ventures(self) -> list[dict[str, Any]]:
         """Read CEO-created venture JSON files and run relevant scripts for them."""
         venture_dir = CEO_DIR / "ventures"
         if not venture_dir.exists():
@@ -1132,7 +1134,7 @@ class VentureRunner:
         log(f"Dynamic ventures: ran {len(results)} tasks across {len(venture_files)} ventures")
         return results
 
-    def _try_auto_fix(self, op_id, blocker):
+    def _try_auto_fix(self, op_id: str, blocker: str) -> None:
         """Attempt to automatically fix a blocker."""
         # Map common blockers to scripts
         auto_fixes = {
@@ -1155,7 +1157,7 @@ class VentureRunner:
                         log(f"Auto-fix failed for {op_id}: {e}", "WARN")
                 break
 
-    def run_existing_ventures(self):
+    def run_existing_ventures(self) -> tuple[bool, str]:
         """Run existing venture classes from ops_manager."""
         try:
             # Import at runtime to avoid circular deps
@@ -1180,10 +1182,10 @@ class VentureRunner:
 class AuditTrail:
     """Detects regressions after CEO changes."""
 
-    def __init__(self, state: CEOState):
+    def __init__(self, state: CEOState) -> None:
         self.state = state
 
-    def capture_baseline(self):
+    def capture_baseline(self) -> dict[str, Any]:
         """Capture performance baseline before changes."""
         baseline = {
             "ts": datetime.now().isoformat(),
@@ -1197,7 +1199,7 @@ class AuditTrail:
         self.state.save()
         return baseline
 
-    def check_regression(self, results):
+    def check_regression(self, results: list[dict[str, Any]]) -> list[str]:
         """Check if CEO decisions caused any regression."""
         issues = []
 
@@ -1245,10 +1247,10 @@ class AuditTrail:
 class LockGuard:
     """Prevents concurrent CEO cycles."""
 
-    def __init__(self):
-        self.lock_fd = None
+    def __init__(self) -> None:
+        self.lock_fd: Any = None
 
-    def acquire(self):
+    def acquire(self) -> bool:
         CEO_DIR.mkdir(parents=True, exist_ok=True)
         try:
             self.lock_fd = open(LOCK_FILE, "w")
@@ -1263,7 +1265,7 @@ class LockGuard:
                 self.lock_fd = None
             return False
 
-    def release(self):
+    def release(self) -> None:
         if self.lock_fd:
             try:
                 fcntl.flock(self.lock_fd, fcntl.LOCK_UN)
@@ -1278,7 +1280,7 @@ class LockGuard:
 # MAIN CEO CYCLE
 # ============================================================================
 
-def run_ceo_cycle(dry_run=False):
+def run_ceo_cycle(dry_run: bool = False) -> None:
     """Run one full CEO cycle: score → decide → snapshot → execute → audit."""
     lock = LockGuard()
     if not lock.acquire():
@@ -1672,7 +1674,7 @@ def run_ceo_cycle(dry_run=False):
 # STATUS DASHBOARD
 # ============================================================================
 
-def show_status():
+def show_status() -> None:
     """Show full CEO agent status dashboard."""
     state = CEOState()
     xlsx = XlsxIntel()
@@ -1843,7 +1845,7 @@ def show_status():
 # DAEMON MODE — 24/7 operation
 # ============================================================================
 
-def run_daemon():
+def run_daemon() -> None:
     """Run the CEO agent 24/7."""
     log("CEO AGENT DAEMON STARTING — 24/7 autonomous mode")
     log(f"Cycle every {CYCLE_INTERVAL_HOURS}h | Discover every {DISCOVER_INTERVAL_HOURS}h")
@@ -1869,7 +1871,7 @@ def run_daemon():
 # CLI
 # ============================================================================
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="PRINTMAXX CEO Agent")
     parser.add_argument("--status", action="store_true", help="Show status dashboard")
     parser.add_argument("--daemon", action="store_true", help="Run 24/7")

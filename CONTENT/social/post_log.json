@@ -887,6 +887,48 @@
       }
     }
   },
+  "social_poster_cycle_mar8": {
+    "ran": "2026-03-08T00:00:00Z",
+    "warmup_status": "LURK Day 2 — ZERO posts today. Hard blocked.",
+    "mar8_slots_status": "BLOCKED_LURK — 4 files ready but not posted. Content held for warmup progression.",
+    "new_files_created": [
+      "twitter_PRINTMAXXER_apr1_0730.txt (cycle5: 32 agents vibe shipping)",
+      "twitter_PRINTMAXXER_apr1_1100.txt (cycle5: real cost cold email tools)",
+      "twitter_PRINTMAXXER_apr1_1430.txt (MAR7: faith app scrape Hallow)",
+      "twitter_PRINTMAXXER_apr1_1800.txt (MAR7: Hevy $600K bootstrapped)",
+      "twitter_PRINTMAXXER_apr2_0730.txt (MAR7: 8 projects data pipeline)",
+      "twitter_PRINTMAXXER_apr2_1100.txt (MAR7: Kelly Criterion 87.4% margins)",
+      "twitter_PRINTMAXXER_apr2_1430.txt (MAR7: Gumroad vs Whop fees)",
+      "twitter_PRINTMAXXER_apr2_1800.txt (MAR7: abandoned apps = product spec)",
+      "twitter_PRINTMAXXER_apr7_0730.txt (alpha308: Bible GPT $300k/mo)",
+      "twitter_PRINTMAXXER_apr7_1100.txt (alpha308: YouTube 100 views $12k/mo)",
+      "twitter_PRINTMAXXER_apr7_1430.txt (alpha308: vibe coding $1K MRR 25 days)",
+      "twitter_PRINTMAXXER_apr7_1800.txt (alpha308: MicroSaaS $25k-$50k pattern)",
+      "twitter_PRINTMAXXER_apr8_0730.txt (alpha308: $149M ARR zero CAC)",
+      "twitter_PRINTMAXXER_apr8_1100.txt (alpha308: dental SaaS 2.3x referral)",
+      "twitter_PRINTMAXXER_apr8_1430.txt (alpha308: YouTube flywheel intercepting buyers)",
+      "twitter_PRINTMAXXER_apr8_1800.txt (alpha308: App Store localization arbitrage)",
+      "twitter_PRINTMAXXER_apr9_0730.txt (alpha308: referral loops > cold outreach)",
+      "twitter_PRINTMAXXER_apr9_1100_THREAD.txt (alpha308: 5-tweet thread 3 patterns)"
+    ],
+    "mar31_files_restored": [
+      "twitter_PRINTMAXXER_mar31_0730.txt (RESTORED: 7-tweet faith app tracker thread)",
+      "twitter_PRINTMAXXER_mar31_1100.txt (RESTORED: Hallow #1 standalone)",
+      "twitter_PRINTMAXXER_mar31_1430.txt (RESTORED: Muslim Pro 180M standalone)",
+      "twitter_PRINTMAXXER_mar31_1800.txt (RESTORED: Durable price hike counter)"
+    ],
+    "sources_processed": ["alpha_research_20260308.md (12 pieces → 9 queued + 1 thread)"],
+    "pending_still_unqueued": [
+      "alpha_research_20260308.md Tweet 6-8 (mid-thread) — consumed in thread format",
+      "alpha_review_mar7_tweet1-5.txt (PENDING_REVIEW — still not cleared)",
+      "CYCLE5_OVERFLOW Apr 3-6 queue files still need creation (24 files pending)"
+    ],
+    "coverage_extended_to": "2026-04-09",
+    "pipeline_flags": {
+      "LURK_BLOCK": "Mar 8 = Day 2. Mar 8-11 queue files will not be posted. Warmup must progress first.",
+      "APR3_APR6_FILES_MISSING": "CYCLE5_OVERFLOW has content for Apr 3-6 (24 slots) but .txt files not yet created. Do this on next social_poster run."
+    }
+  },
   "pipeline_bug_notes": "BUFFER_UPLOAD_MAR7.csv has token parsing bug: tool names extracted as single words (e.g. 'No' for no-code, 'mCP' for MCP). Also cross-account template contamination between @repscheme/@selahmoments/@drifthour/@PRINTMAXXER. DO NOT post from BUFFER_UPLOAD_MAR7.csv until fixed. Fix needed in tweet_drafter before next auto-batch.",
   "pending_review_not_queued": [
     "alpha_review_mar7_tweet1.txt (PENDING_REVIEW — 7-day free trial 5x conversion)",
