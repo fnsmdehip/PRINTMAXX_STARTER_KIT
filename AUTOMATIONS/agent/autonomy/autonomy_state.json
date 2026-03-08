@@ -458,8 +458,8 @@
         "targets": "competitors,trends,pricing"
       },
       "created_at": "2026-03-06T21:16:28.943305",
-      "last_run": "2026-03-07T18:00:00.000000",
-      "cycles_run": 4,
+      "last_run": "2026-03-07T20:30:00.000000",
+      "cycles_run": 5,
       "results": [
         {
           "cycle": 1,
@@ -550,6 +550,37 @@
           "content_generated": "CONTENT/social/competitor_counter_content_cycle4_20260307.md",
           "cold_email_template": "AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/cold_email_template_v2_durable_angle.md",
           "status": "SUCCESS"
+        },
+        {
+          "cycle": 5,
+          "timestamp": "2026-03-07T20:30:00.000000",
+          "type": "evening_delta_with_ramadan_fix",
+          "web_searches": 10,
+          "ventures_analyzed": 8,
+          "competitors_profiled": 35,
+          "data_corrections": 4,
+          "key_findings": [
+            "Hallow hit #1 OVERALL on App Store (Feb 18 Ash Wednesday), 2M+ installs",
+            "Muslim Pro: 180M downloads, $300K/mo revenue, 4.7M downloads/month",
+            "Ramadan is LIVE (day 8 of 30). Quran-streak had broken isRamadan() checking April",
+            "Whop corrected: 14.2M users (not 18.4M), $2.67B cumulative (not $3B annual)",
+            "Instantly corrected: $37/mo base (not $30), real cost 3-5x advertised",
+            "MS Store PWA auto-publish NOT reliable, need PWABuilder manual submission",
+            "Vibe coding: r/vibecoding 87K+ members, Collins Word of Year 2025, 84% dev adoption",
+            "Durable confirmed $25/mo ($22/mo annual), ChilledSites at L29/yr is cheapest",
+            "Sanctum (Growth Shop) still very new, no traction data",
+            "Athan renamed to 'Athan: Ramadan 2026' for seasonal ASO"
+          ],
+          "counter_moves_executed": [
+            "Fixed quran-streak isRamadan() to detect Feb 28 - Mar 29 2026 (was checking April)",
+            "Added Laylatul Qadr detection + Last 10 Nights flag + 2 more Ramadan duas",
+            "Fixed Islamic holidays table for 2025-2027 with correct Gregorian dates",
+            "Generated 5 counter-content tweets + 1 thread (7 tweets) + 2 community posts"
+          ],
+          "report_written": "AUTOMATIONS/agent/swarm/reports/competitor_intel_cycle5_20260307.md",
+          "content_generated": "CONTENT/social/competitor_counter_content_cycle5_20260307.md",
+          "code_fix": "app factory/app-factory/religious-apps/quran-streak/src/lib/ayahs.ts (isRamadan + holidays)",
+          "status": "SUCCESS"
         }
       ],
       "pipeline_stats": {
@@ -586,7 +617,7 @@
       }
     }
   },
-  "total_cycles": 5,
-  "total_pipeline_runs": 5,
+  "total_cycles": 6,
+  "total_pipeline_runs": 6,
   "created_at": "2026-03-06T21:12:45.215910"
 }

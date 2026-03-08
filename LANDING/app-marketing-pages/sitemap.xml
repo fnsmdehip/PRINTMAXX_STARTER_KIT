@@ -257,4 +257,160 @@
     <priority>0.8</priority>
     <lastmod>2026-03-07</lastmod>
   </url>
+
+  <!-- ADHD Streak -->
+  <url>
+    <loc>https://adhd-streak.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+
+  <!-- App Store Landing Pages (app subdomain variants) -->
+  <url>
+    <loc>https://prayerlock-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://focuslock-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://hilal-app.surge.sh/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://walktounlock-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sleepmaxx-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://mealmaxx-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+
+  <!-- Comparison Pages -->
+  <url>
+    <loc>https://printmaxx-comparisons.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://prayerlock-vs-hallow.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://focuslock-vs-opal.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+
+  <!-- Lead Magnets -->
+  <url>
+    <loc>https://solopreneur-launch-checklist.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://ramadan-daily-planner.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://subject-line-grader-pm.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+
+  <!-- Additional Tools/SaaS -->
+  <url>
+    <loc>https://stackmaxx.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sitescore-pro.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sitescore-free.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://printmaxx-portfolio.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://printmaxx-magnets.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://printmaxx-storefront.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+
+  <!-- Streak App Store Pages -->
+  <url>
+    <loc>https://art-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://coding-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://fitness-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sunni-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://catholic-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
 </urlset>

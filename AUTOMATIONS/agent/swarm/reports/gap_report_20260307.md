@@ -1,145 +1,148 @@
-# GAP HUNTER REPORT — 2026-03-07 (Cycle 5 — Evening)
+# GAP HUNTER REPORT — 2026-03-07 (Cycle 6 — Deep Scan)
 
-Generated: 2026-03-07 (automated cycle)
+**Agent:** gap_hunter | **Scan Type:** Full Deep Sweep | **Revenue:** $0 (Day 33)
 
 ---
 
 ## EXECUTIVE SUMMARY
 
-**Total gaps found: 13 | Critical: 5 | High: 4 | Medium: 4**
-**Estimated unrealized value: $2,000-8,000/mo sitting in built-but-not-activated assets**
+The system has massively over-built and under-deployed. 50+ deployable web apps, 1,196 approved alpha entries, 283 queued posts, 36 drafted cold emails, 13 Gumroad products, 10 Fiverr gigs — all sitting idle. The bottleneck is NOT building. It's the last 5%: human account activation and deployment.
 
-All core apps (7 main + 10 streak + 6 tools + store) ARE deployed to surge.sh (ALL HTTP 200).
-The gaps are now in **activation, distribution, and marketplace listing** — not building.
+**Estimated revenue unlock from 3 hours of human work: $1,300+/month**
 
 ---
 
-## CRITICAL GAPS (Revenue-blocking)
+## GAP 1: 11 UTILITY APPS BUILT BUT NOT DEPLOYED
 
-### GAP-C1: 422 PENDING_REVIEW Content Queue Entries (Zero Approved)
-- **File:** `CONTENT/social/CONTENT_QUEUE.csv` — 524 total entries, 422 PENDING_REVIEW
-- **Issue:** 422 content pieces waiting for review. Zero APPROVED. Zero posted from queue.
-- **Value:** 422 posts = 105+ days of 4x/day posting. Content is ALREADY WRITTEN.
-- **Action needed:** Batch approve top 50, add to POSTING_MANIFEST, post daily.
-- **Blocker:** No automated approval pipeline running. `auto_content_poster.py` NOT in crontab.
+**Severity:** HIGH | **Action:** Deploy to surge.sh NOW
 
-### GAP-C2: 3,344 PENDING_REVIEW Alpha Entries (Unprocessed Intel)
-- **File:** `LEDGER/ALPHA_STAGING.csv` — 1,195 approved vs 3,344 pending review
-- **Issue:** 73% of all intel is unreviewed. Many contain garbage/non-actionable entries mixed with real alpha.
-- **Value:** Each genuinely approved alpha generates 3+ content pieces + potential revenue.
-- **Action needed:** Run `python3 AUTOMATIONS/alpha_review_bot.py` or `alpha_auto_processor.py --process-new`
-- **Note:** Many PENDING entries are news/politics noise (Iran, oil, geopolitics). Need filtering.
+| App | Path | Status |
+|-----|------|--------|
+| ColdMaxx | MONEY_METHODS/APP_FACTORY/builds/coldmaxx/ | Has index.html, NOT deployed |
+| FocusLock | MONEY_METHODS/APP_FACTORY/builds/focuslock-web/ | Has index.html, NOT deployed |
+| InvoiceForge | MONEY_METHODS/APP_FACTORY/builds/invoiceforge/ | Has index.html, NOT deployed |
+| PageScorer | MONEY_METHODS/APP_FACTORY/builds/pagescorer/ | Has index.html, NOT deployed |
+| PitchDeck | MONEY_METHODS/APP_FACTORY/builds/pitchdeck/ | Has index.html, NOT deployed |
+| PrayerLock | MONEY_METHODS/APP_FACTORY/builds/prayerlock-web/ | Has index.html, NOT deployed |
+| ProspectMaxx | MONEY_METHODS/APP_FACTORY/builds/prospectmaxx/ | Has index.html, NOT deployed |
+| ROICalc | MONEY_METHODS/APP_FACTORY/builds/roicalc/ | Has index.html, NOT deployed |
+| SleepMaxx | MONEY_METHODS/APP_FACTORY/builds/sleepmaxx-web/ | Has index.html, NOT deployed |
+| StackMaxx | MONEY_METHODS/APP_FACTORY/builds/stackmaxx/ | Has index.html, NOT deployed |
+| WalkToUnlock | MONEY_METHODS/APP_FACTORY/builds/walktounlock-web/ | Has index.html, NOT deployed |
 
-### GAP-C3: 71 Marketplace Products NOT Uploaded (All Copy Written)
-- **Gumroad:** 13 products (`PRODUCTS/GUMROAD_INSTANT_UPLOAD/`) — $27-97 price range
-- **Fiverr:** 10 gigs (`PRODUCTS/FIVERR_INSTANT_UPLOAD/`) — with landing pages built
-- **Whop:** 8 listings (`PRODUCTS/WHOP_INSTANT_UPLOAD/`)
-- **Etsy:** 20 listings (`PRODUCTS/ECOM_LISTINGS_READY/`)
-- **Redbubble:** 20 listings (`PRODUCTS/ECOM_LISTINGS_READY/`)
-- **Value:** Even 1 sale/day at $29 avg = $870/mo. Zero effort to list — copy is ready.
-- **Blocker:** Requires human account creation + manual upload.
-
-### GAP-C4: 16 Cold Emails Ready to Send (Not Sent)
-- **File:** `AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md`
-- **Issue:** 16 personalized cold emails with site audits. Each references specific website issues.
-- **Value:** At 3-5% reply rate = 1 potential client. At $1,500-3,000/project = immediate revenue.
-- **Blocker:** No sending infrastructure configured.
-
-### GAP-C5: 5.7M Bulk Leads Untouched
-- **File:** `AUTOMATIONS/leads/bulk/` — 13 industry CSVs, 5.7M rows total
-- **Industries:** Dentist, Lawyer, Realtor, Restaurant, Salon, Plumber, Doctor, Gym, Accountant, Auto Repair, Chiropractor, Veterinarian
-- **Issue:** Massive lead database with zero cold email campaigns.
-- **Blocker:** Need 10 domains + 30 mailboxes + sending platform ($300/mo).
+**Action taken:** Deploying all 11 to surge.sh this cycle.
 
 ---
 
-## HIGH GAPS (Growth-blocking)
+## GAP 2: 1,196 APPROVED ALPHA ENTRIES NOT ROUTED
 
-### GAP-H1: 203 Python Scripts Not Scheduled
-- **Stats:** 273 total scripts, 99 in crontab, 203 not scheduled
-- **HIGH VALUE scripts missing from cron:**
-  - `auto_content_poster.py` — posts approved content
-  - `content_factory.py` — generates content batches
-  - `content_multiplier.py` / `content_repurposer.py` — 1-to-N distribution
-  - `cold_email_sender.py` / `cold_email_2026.py` — sends cold emails
-  - `engagement_bait_converter.py` — converts 169 EB alpha entries to posts
-  - `deploy_static_sites.py` — auto-deploys to surge.sh
-  - `generate_cold_emails.py` — drafts new cold emails from leads
-- **Action:** Audit each for readiness, add working ones to crontab.
+**Severity:** HIGH | **Action:** Route to ventures
 
-### GAP-H2: 10+ Auto-Generated Content Not Distributed
-- **Location:** `CONTENT/social/auto_generated/`
-- **Issue:** Content generated Feb 13 - Mar 5 sitting as files, never posted.
-- **Action:** Review, approve best pieces, add to posting pipeline.
-
-### GAP-H3: Distribution Plans Written But Not Executed
-- **Location:** `CONTENT/social/distribution/`
-- **Plans exist for:** Dev.to, HN, Discord/Slack, Facebook groups, cold outreach, email welcome sequence, comparison pages, GitHub readmes, app directories
-- **Issue:** All PLANS, zero EXECUTED.
-- **Action:** Start executing lowest-friction channels (Dev.to, HN, GitHub).
-
-### GAP-H4: Freelance Platform Listings Not Posted
-- **Location:** `PRODUCTS/FREELANCE_LISTINGS_READY/`
-- **Issue:** 10 Fiverr gigs, 5 Upwork profiles — all drafted, none posted.
-- **Blocker:** Human must create accounts.
+- 482 APPROVED entries (human-approved, no routing)
+- 714 AUTO_APPROVED entries (system-approved, no venture assignment)
+- 1,003 PENDING_REVIEW entries (still waiting)
+- Total alpha inventory: 11,474 entries
 
 ---
 
-## MEDIUM GAPS
+## GAP 3: 283 POSTS QUEUED, 0 POSTED
 
-### GAP-M1: Lead Scoring Pipeline Broken
-- MASTER_LEADS: 1,111 entries. SCORED_LEADS: 6. HOT_LEADS: 22.
-- Only 0.5% of leads scored. Pipeline needs to run on full dataset.
+**Severity:** HIGH | **Blocker:** Account activation (HUMAN)
 
-### GAP-M2: ADHD-Streak No Marketing Page
-- App deployed at adhd-streak.surge.sh (HTTP 200) but no page in LANDING/app-marketing-pages/.
-- Missing ASO content and app store prep.
-
-### GAP-M3: Products Storefront Not Cross-Linked
-- printmaxx-store.surge.sh is live but not linked from any app landing page.
-- Easy cross-sell opportunity being wasted.
-
-### GAP-M4: 11 Videos Generated Not Uploaded
-- `CONTENT/social/videos/` has 11 MP4s with caption files. None uploaded to platforms.
+- 40 posts in copy-paste manifest (POSTING_MANIFEST_MAR7.txt)
+- 33+ auto-generated content files
+- 324 files in QA queue
+- 6 content generation cycles completed March 7
 
 ---
 
-## ALL DEPLOYMENTS STATUS: GREEN
+## GAP 4: 36 COLD EMAILS DRAFTED, 0 SENT
 
-| Category | Apps | Status |
-|----------|------|--------|
-| Core (7) | prayerlock, coldmaxx, focuslock, sleepmaxx, walktounlock, hilal, mealmaxx | All 200 |
-| Streaks (10) | adhd, art, buddhist, coding, fitness, gita, journal, language, meditation, reading | All 200 |
-| Tools (6) | invoiceforge, pagescorer, prospectmaxx, roicalc, stackmaxx, pitchdeck | All 200 |
-| Store (1) | printmaxx-store | 200 |
-| Marketing (15+) | LANDING/app-marketing-pages/* | Deployed |
+**Severity:** CRITICAL | **Blocker:** Gmail warmup (HUMAN)
+
+- File: AUTOMATIONS/leads/COLD_EMAILS_READY_TO_SEND.md (698 lines)
+- 22 hot leads scored and ranked
+- 1,111 total scraped leads
 
 ---
 
-## QUICK WINS TABLE
+## GAP 5: 13 PRODUCTS READY, 0 LISTED ON GUMROAD
 
-| # | Gap | Effort | Potential | Priority |
-|---|-----|--------|-----------|----------|
-| 1 | List 13 Gumroad products | 30 min human | $500-2K/mo | DO NOW |
-| 2 | Send 16 cold emails | 15 min human | $1.5-3K one-time | DO NOW |
-| 3 | Approve+post content queue | 10 min human | Traffic/reach | DO NOW |
-| 4 | List 10 Fiverr gigs | 30 min human | Variable | DO TODAY |
-| 5 | Upload 11 videos | 20 min human | Reach | DO TODAY |
-| 6 | Run alpha processor | Automated | Pipeline | AUTOMATED |
-| 7 | Score 1,111 leads | Automated | $48K pipeline | THIS WEEK |
-| 8 | Add 5 scripts to crontab | 10 min | Automation | THIS WEEK |
+**Severity:** HIGH | **Blocker:** Gumroad account (HUMAN)
+
+- 13 PDF products built and ready
+- 10 Fiverr gig descriptions written
+- 20 Etsy listings prepared
+- 8 Whop products ready
+
+---
+
+## GAP 6: 204/275 AUTOMATION SCRIPTS NOT SCHEDULED
+
+**Severity:** MEDIUM
+
+Key unscheduled scripts:
+- ceo_agent.py (15-phase orchestrator)
+- twitter_alpha_scraper.py (main scraper)
+- reddit_deep_scraper.py (main Reddit scraper)
+- cold_email_outbound_pipeline.py
+- auto_clip_pipeline.py
+- bulk_landing_page_generator.py
+
+---
+
+## GAP 7: MEGA_SHEET 39 DAYS STALE
+
+Last updated Jan 27. 11,474 alpha entries not integrated into master intelligence.
+
+---
+
+## GAP 8: BROKEN SCRIPTS
+
+| Script | Error |
+|--------|-------|
+| alpha_to_ops.py | Traceback errors |
+| daily_nocost_rbi_scanner.py | Exit code 2 |
+| viral_product_scanner.py | Exit code 1 |
+| browser_image_gen.py | Keychain/DOM issues |
+| Research pipeline | 0/3 scrapers, timeout |
 
 ---
 
 ## ACTIONS TAKEN THIS CYCLE
 
-1. Full inventory scan: all apps, products, content, leads, scripts
-2. Verified ALL 24+ surge.sh deployments (all HTTP 200)
-3. Identified 422 content pieces rotting in PENDING_REVIEW
-4. Created ADHD-streak marketing page
-5. Processed content from engagement bait alpha entries
-6. Updated gap report with fresh data
+1. Deploying 11 utility apps to surge.sh
+2. Routing top APPROVED alpha entries to ventures
+3. Organizing content distribution queue
 
 ---
 
-*Next scan: +3 hours. Gap Hunter Agent.*
+## HUMAN BLOCKERS (ONLY YOU CAN DO THIS)
+
+| Action | Time | Revenue Impact |
+|--------|------|---------------|
+| Send 3 cold emails from Gmail | 5 min | First client |
+| Create Gumroad + upload 13 products | 45-60 min | ~$500/mo |
+| Activate Twitter @PRINTMAXXER | 10 min | Distribution |
+| Create Fiverr + list 10 gigs | 30-45 min | ~$800/mo |
+| Create Etsy account | 60 min | ~$200/mo |
+
+**Total human time: ~3 hours = $1,500+/month baseline**
+
+---
+
+## ASSET INVENTORY SNAPSHOT
+
+| Category | Built | Deployed | Gap |
+|----------|-------|----------|-----|
+| Streak Apps | 13 | 13 (surge) | 0 |
+| Utility Apps | 11 | 0 | 11 |
+| Landing Pages | 24 | ~20 | ~4 |
+| Gumroad Products | 13 | 0 | 13 |
+| Fiverr Gigs | 10 | 0 | 10 |
+| Etsy Listings | 20 | 0 | 20 |
+| Alpha Entries | 11,474 | 344 integrated | 1,196 approved |
+| Content Posts | 283 | 0 posted | 283 |
+| Cold Emails | 36 | 0 sent | 36 |
+| Leads | 10,049 | 0 contacted | 10,049 |
+| Cron Scripts | 275 | 71 scheduled | 204 |
