@@ -467,3 +467,9 @@
 {"timestamp": "2026-03-05T21:59:54.029521", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
 {"timestamp": "2026-03-05T21:59:54.200467", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
 {"timestamp": "2026-03-05T21:59:54.205179", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-03-08T00:30:02.585399", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-03-08T00:30:03.005604", "event": "STATE_TRANSITION", "op_id": "M01", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-03-08T00:30:03.006091", "event": "STATE_TRANSITION", "op_id": "M06", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-03-08T00:30:03.006579", "event": "STATE_TRANSITION", "op_id": "N03", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
+{"timestamp": "2026-03-08T00:30:03.011877", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-03-08T00:30:03.026175", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 3, "queue_size": 208, "total_ops": 208}}

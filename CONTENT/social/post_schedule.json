@@ -711,5 +711,36 @@
       ]
     }
   },
-  "last_updated": "2026-03-07T17:00:00Z"
+  "last_updated": "2026-03-08T00:00:00Z",
+  "warmup_override": {
+    "active": true,
+    "current_phase": "LURK",
+    "current_day": 2,
+    "warmup_started": "2026-03-07",
+    "phase_schedule": {
+      "LURK": "Mar 7-11 (Days 1-5) — ZERO posting",
+      "ENGAGE": "Mar 12-16 (Days 6-10) — replies only, NO posts",
+      "SOFT_LAUNCH": "Mar 17-26 (Days 11-20) — 1-2 posts/day max",
+      "GROWTH": "Mar 27+ (Days 21+) — full 5/day posting"
+    },
+    "note": "Warmup phase OVERRIDES all posting schedule. Do not post regardless of queue status until phase allows it."
+  },
+  "mar8_blocked": {
+    "reason": "LURK Day 2 — hard limit 0 posts",
+    "files_held": [
+      "twitter_PRINTMAXXER_mar8_0730.txt",
+      "twitter_PRINTMAXXER_mar8_1100.txt",
+      "twitter_PRINTMAXXER_mar8_1430.txt",
+      "twitter_PRINTMAXXER_mar8_1800.txt"
+    ],
+    "next_check": "2026-03-17 (SOFT_LAUNCH phase begins)"
+  },
+  "new_coverage_apr2026": {
+    "apr1": "cycle5 overflow (32-agents, cold email tools, faith app scrape, Hevy)",
+    "apr2": "MAR7 approved (8-project pipeline, Kelly Criterion, Gumroad vs Whop, abandoned apps)",
+    "apr3_apr6": "PENDING_FILE_CREATION — content in CYCLE5_OVERFLOW_APR1_5.md",
+    "apr7": "alpha_research_20260308 (Bible GPT, YouTube 100-view, vibe coding, MicroSaaS doubling)",
+    "apr8": "alpha_research_20260308 ($149M ARR, dental SaaS, YouTube flywheel, App Store localization)",
+    "apr9": "alpha_research_20260308 (referral loops, 5-tweet thread)"
+  }
 }

@@ -18,6 +18,8 @@ Usage:
     python3 loop_closer.py --dry-run        # Show what would be done without doing it
 """
 
+from __future__ import annotations
+
 import argparse
 import json
 import os
@@ -25,6 +27,7 @@ import subprocess
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
+from typing import Any, Optional
 
 PROJECT = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
@@ -40,12 +43,12 @@ MAX_ACTIONS_PER_CYCLE = 10
 REQUIRES_HUMAN = {"delete_venture", "kill_all_agents", "spend_money", "send_email_blast"}
 
 
-def log(msg, level="INFO"):
+def log(msg: str, level: str = "INFO") -> None:
     ts = datetime.now().strftime("%H:%M:%S")
     print(f"[{ts}] [LOOP] [{level}] {msg}")
 
 
-def log_action(action_type, target, result, details=""):
+def log_action(action_type: str, target: str, result: str, details: str = "") -> None:
     entry = {
         "ts": datetime.now().isoformat(),
         "action": action_type,
@@ -57,9 +60,9 @@ def log_action(action_type, target, result, details=""):
         f.write(json.dumps(entry) + "\n")
 
 
-def load_state():
+def load_state() -> dict[str, Any]:
     if LOOP_STATE.exists():
-        return json.load(open(LOOP_STATE))
+        return json.loads(LOOP_STATE.read_text())
     return {
         "last_decision_cycle": None,
         "last_feedback_cycle": None,
@@ -71,13 +74,13 @@ def load_state():
     }
 
 
-def save_state(state):
+def save_state(state: dict[str, Any]) -> None:
     LOOP_STATE.parent.mkdir(parents=True, exist_ok=True)
     with open(LOOP_STATE, "w") as f:
         json.dump(state, f, indent=2)
 
 
-def run_cmd(cmd, timeout=60, label=""):
+def run_cmd(cmd: str, timeout: int = 60, label: str = "") -> tuple[bool, str]:
     try:
         result = subprocess.run(
             cmd, shell=True, capture_output=True, text=True,
@@ -152,7 +155,7 @@ ACTION_REGISTRY = {
 }
 
 
-def adjust_interval(agent_id, params, dry_run):
+def adjust_interval(agent_id: str, params: dict[str, Any], dry_run: bool) -> tuple[bool, str]:
     new_hours = params.get("hours", params.get("interval_hours"))
     if not new_hours or not isinstance(new_hours, (int, float)):
         return False, "Missing or invalid 'hours' parameter"
@@ -191,21 +194,21 @@ def adjust_interval(agent_id, params, dry_run):
     return True, f"Adjusted {agent_id} to every {new_hours}h and reloaded"
 
 
-def kill_agent(agent_id, dry_run):
+def kill_agent(agent_id: str, dry_run: bool) -> tuple[bool, str]:
     if dry_run:
         return True, f"Would kill agent: {agent_id}"
     ok, out = run_cmd(f"python3 AUTOMATIONS/agent_swarm.py --kill {agent_id}", label=f"kill:{agent_id}")
     return ok, out or f"Killed {agent_id}"
 
 
-def deploy_agent(agent_id, dry_run):
+def deploy_agent(agent_id: str, dry_run: bool) -> tuple[bool, str]:
     if dry_run:
         return True, f"Would deploy agent: {agent_id}"
     ok, out = run_cmd(f"python3 AUTOMATIONS/agent_swarm.py --deploy {agent_id}", label=f"deploy:{agent_id}")
     return ok, out or f"Deployed {agent_id}"
 
 
-def create_venture(venture_type, params, dry_run):
+def create_venture(venture_type: str, params: dict[str, Any], dry_run: bool) -> tuple[bool, str]:
     name = params.get("name", f"auto_{venture_type.lower()}")
     if dry_run:
         return True, f"Would create venture: {venture_type} '{name}'"
@@ -216,7 +219,7 @@ def create_venture(venture_type, params, dry_run):
     return ok, out or f"Created venture {venture_type} '{name}'"
 
 
-def boost_agent(agent_id, dry_run):
+def boost_agent(agent_id: str, dry_run: bool) -> tuple[bool, str]:
     # Halve the interval (min 1h)
     plist = Path.home() / f"Library/LaunchAgents/com.printmaxx.swarm.{agent_id}.plist"
     if not plist.exists():
@@ -232,7 +235,7 @@ def boost_agent(agent_id, dry_run):
     return adjust_interval(agent_id, {"hours": new_hours}, dry_run)
 
 
-def throttle_agent(agent_id, dry_run):
+def throttle_agent(agent_id: str, dry_run: bool) -> tuple[bool, str]:
     # Double the interval (max 24h)
     plist = Path.home() / f"Library/LaunchAgents/com.printmaxx.swarm.{agent_id}.plist"
     if not plist.exists():
@@ -248,7 +251,7 @@ def throttle_agent(agent_id, dry_run):
     return adjust_interval(agent_id, {"hours": new_hours}, dry_run)
 
 
-def run_script_action(script, params, dry_run):
+def run_script_action(script: str, params: dict[str, Any], dry_run: bool) -> tuple[bool, str]:
     # Safety: only scripts within AUTOMATIONS/
     if not script.startswith("AUTOMATIONS/"):
         return False, f"Blocked: script must be in AUTOMATIONS/, got {script}"
@@ -262,7 +265,7 @@ def run_script_action(script, params, dry_run):
     return ok, out[:500] if out else "no output"
 
 
-def process_alpha(dry_run):
+def process_alpha(dry_run: bool) -> tuple[bool, str]:
     if dry_run:
         return True, "Would process pending alpha entries"
     ok, out = run_cmd(
@@ -272,7 +275,7 @@ def process_alpha(dry_run):
     return ok, out[:500] if out else "no output"
 
 
-def execute_weekly_target(target_key, params, dry_run):
+def execute_weekly_target(target_key: str, params: dict[str, Any], dry_run: bool) -> tuple[bool, str]:
     """Execute an agent-owned weekly target by triggering the relevant swarm agent."""
     # Map target keys to the agent that should handle them
     target_agent_map = {
@@ -297,7 +300,7 @@ def execute_weekly_target(target_key, params, dry_run):
     return False, f"Failed to trigger {agent}: {result.stderr}"
 
 
-def generate_content(target, params, dry_run):
+def generate_content(target: str, params: dict[str, Any], dry_run: bool) -> tuple[bool, str]:
     content_type = params.get("type", "social")
     if dry_run:
         return True, f"Would generate {content_type} content for: {target}"
@@ -317,7 +320,7 @@ def generate_content(target, params, dry_run):
     return ok, out or "triggered"
 
 
-def parse_decisions_from_reports():
+def parse_decisions_from_reports() -> list[dict[str, Any]]:
     """Parse structured decisions from swarm agent reports."""
     decisions = []
     reports_dir = SWARM_DIR / "reports"
@@ -390,7 +393,7 @@ def parse_decisions_from_reports():
     recs_file = SWARM_DIR / "feedback_recommendations.json"
     if recs_file.exists():
         try:
-            recs = json.load(open(recs_file))
+            recs = json.loads(recs_file.read_text())
             for rec in recs.get("recommendations", []):
                 rec["source"] = "feedback_loop"
                 decisions.append(rec)
@@ -423,7 +426,7 @@ def parse_decisions_from_reports():
     swarm_state_file = SWARM_DIR / "swarm_state.json"
     if swarm_state_file.exists():
         try:
-            ss = json.load(open(swarm_state_file))
+            ss = json.loads(swarm_state_file.read_text())
             for agent_id, adata in ss.get("agents", {}).items():
                 if adata.get("status") == "ERROR":
                     decisions.append({
@@ -437,7 +440,7 @@ def parse_decisions_from_reports():
     # Read weekly targets for agent-executable items
     targets_file = SWARM_DIR / "weekly_targets.json"
     if targets_file.exists():
-        targets = json.load(open(targets_file))
+        targets = json.loads(targets_file.read_text())
         for key, val in targets.get("targets", {}).items():
             if val.get("owner") == "AGENT" and val.get("actual", 0) < val.get("target", 0):
                 decisions.append({
@@ -450,7 +453,7 @@ def parse_decisions_from_reports():
     return decisions
 
 
-def execute_decisions(dry_run=False):
+def execute_decisions(dry_run: bool = False) -> int:
     """Read all pending decisions and execute safe ones."""
     log("LOOP 1: Decision Execution")
     decisions = parse_decisions_from_reports()
@@ -551,7 +554,7 @@ def execute_decisions(dry_run=False):
 # Tracks whether agent output led to downstream results
 # ═══════════════════════════════════════════════════════════════
 
-def update_feedback(state, dry_run=False):
+def update_feedback(state: dict[str, Any], dry_run: bool = False) -> int:
     """Track downstream impact of each agent's work."""
     log("LOOP 2: Feedback Tracking")
 
@@ -561,7 +564,7 @@ def update_feedback(state, dry_run=False):
         log("  No swarm state found")
         return 0
 
-    swarm_state = json.load(open(swarm_state_file))
+    swarm_state = json.loads(swarm_state_file.read_text())
     agents = swarm_state.get("agents", {})
     updates = 0
 
@@ -651,7 +654,7 @@ def update_feedback(state, dry_run=False):
 # Moves stuck assets forward through the business cycle
 # ═══════════════════════════════════════════════════════════════
 
-def advance_pipeline(state, dry_run=False):
+def advance_pipeline(state: dict[str, Any], dry_run: bool = False) -> int:
     """Check for stuck pipeline items and push them forward."""
     log("LOOP 3: Pipeline Advancement")
     advances = 0
@@ -663,7 +666,7 @@ def advance_pipeline(state, dry_run=False):
         return 0
 
     try:
-        pipeline = json.load(open(pipeline_file))
+        pipeline = json.loads(pipeline_file.read_text())
     except (json.JSONDecodeError, FileNotFoundError):
         log("  Could not read revenue pipeline")
         return 0
@@ -732,7 +735,7 @@ def advance_pipeline(state, dry_run=False):
 # STATUS DISPLAY
 # ═══════════════════════════════════════════════════════════════
 
-def show_status():
+def show_status() -> None:
     state = load_state()
     print("=" * 66)
     print("LOOP CLOSER — STATUS")
@@ -802,7 +805,7 @@ def show_status():
 # MAIN
 # ═══════════════════════════════════════════════════════════════
 
-def run_cycle(dry_run=False):
+def run_cycle(dry_run: bool = False) -> None:
     log("=" * 50)
     log("LOOP CLOSER — Full Cycle")
     log("=" * 50)
@@ -843,7 +846,7 @@ def run_cycle(dry_run=False):
             f.write(json.dumps(msg) + "\n")
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="PRINTMAXX Loop Closer — closes open agent loops")
     parser.add_argument("--cycle", action="store_true", help="Run all three loops")
     parser.add_argument("--decisions", action="store_true", help="Execute pending decisions only")

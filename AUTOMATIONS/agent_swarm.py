@@ -23,6 +23,8 @@ Usage:
   python3 agent_swarm.py --health          # Health check all agents
 """
 
+from __future__ import annotations
+
 import argparse
 import json
 import os
@@ -30,6 +32,7 @@ import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
+from typing import Any, Optional
 
 # ── Paths ────────────────────────────────────────────────────────────────
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
@@ -39,26 +42,25 @@ SWARM_STATE = SWARM_DIR / "swarm_state.json"
 LOG_DIR = Path.home() / ".claude" / "logs"
 LA_DIR = Path.home() / "Library" / "LaunchAgents"
 
-def safe_path(p):
+def safe_path(p: str | Path) -> Path:
     resolved = Path(p).resolve()
     if not str(resolved).startswith(str(PROJECT.resolve())):
         raise ValueError(f"BLOCKED: {resolved} outside {PROJECT}")
     return resolved
 
-def ts():
+def ts() -> str:
     return datetime.now().strftime("%H:%M:%S")
 
-def log(msg, level="INFO"):
+def log(msg: str, level: str = "INFO") -> None:
     print(f"[{ts()}] [SWARM] [{level}] {msg}")
 
 # ══════════════════════════════════════════════════════════════════════════
 # SWARM AGENT DEFINITIONS
 # ══════════════════════════════════════════════════════════════════════════
 
-# Model routing: Opus for strategy/intelligence/content, Sonnet for execution/maintenance
-# User rule: "Opus for all decisions, analysis, content, and strategy. Sonnet only for bulk repetitive tasks."
+# Model routing: ALL agents use Opus on Max plan. Zero API cost, max quality everywhere.
+# User rule: "ensure best output" — no Sonnet for anything, Opus handles all.
 MODEL_OPUS = "claude-opus-4-6"
-MODEL_SONNET = "claude-sonnet-4-6"
 
 SWARM_AGENTS = {
     # ── DISCOVERY AGENTS (Find what's missing, find opportunities) ────────
@@ -131,7 +133,7 @@ Rules: All files stay in {project}. Real competitors, real data.""",
         "category": "ACTION",
         "description": "Takes built apps/sites/products and deploys them to surge, vercel, gumroad, etc.",
         "interval_hours": 2,
-        "model": MODEL_SONNET,  # execution task — deploy what's built
+        "model": MODEL_OPUS,  # deploy what's built
         "prompt": """You are the ASSET DEPLOYER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -222,7 +224,7 @@ Rules: All files stay in {project}. Real businesses, real contact info. No spam 
         "category": "OPTIMIZE",
         "description": "Continuously optimizes all deployed assets for search discovery",
         "interval_hours": 6,
-        "model": MODEL_SONNET,  # SEO is pattern-matching, Sonnet handles it
+        "model": MODEL_OPUS,  # SEO keyword strategy + implementation
         "prompt": """You are the SEO/ASO OPTIMIZER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -405,7 +407,7 @@ Rules: All files stay in {project}. Real numbers only. $0 is a real number — b
         "category": "MAINTENANCE",
         "description": "Finds and fixes broken crons, dead processes, failed deploys, stale locks",
         "interval_hours": 2,
-        "model": MODEL_SONNET,  # infrastructure maintenance, Sonnet is fine
+        "model": MODEL_OPUS,  # infrastructure maintenance + root cause analysis
         "prompt": """You are the SYSTEM HEALER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -438,7 +440,7 @@ Rules: All files stay in {project} (except launchd/cron which are system-level).
         "category": "MAINTENANCE",
         "description": "Deduplicates CSVs, cleans stale data, archives old logs, maintains data hygiene",
         "interval_hours": 12,
-        "model": MODEL_SONNET,  # data cleanup is bulk work
+        "model": MODEL_OPUS,  # data quality + dedup decisions
         "prompt": """You are the DATA JANITOR agent for PRINTMAXX.
 Working directory: {project}
 
@@ -877,7 +879,7 @@ Rules: All files stay in {project}.""",
         "category": "QUALITY",
         "description": "Automated Playwright testing of all deployed sites — catches broken deploys, 404s, rendering issues",
         "interval_hours": 4,
-        "model": MODEL_SONNET,  # test execution is mechanical
+        "model": MODEL_OPUS,  # test execution + failure analysis
         "prompt": """You are the PLAYWRIGHT TESTER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -932,7 +934,7 @@ Rules: All files stay in {project}. Test with real URLs. Screenshot every site."
         "category": "NOTIFICATION",
         "description": "Sends macOS push notifications for high-value events — new leads, revenue, broken deploys, opportunities",
         "interval_hours": 1,
-        "model": MODEL_SONNET,  # notification routing is mechanical
+        "model": MODEL_OPUS,  # event classification + priority routing
         "prompt": """You are the ALERT DISPATCHER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -965,11 +967,62 @@ Rules: All files stay in {project}. Maximum 5 notifications per hour (don't spam
 
     # ── SOCIAL POSTER (Actually posts content) ───────────────────────────
 
+    "growth_strategist": {
+        "category": "GROWTH",
+        "description": "Creates detailed growth strategies per venture from intelligence",
+        "interval_hours": 24,
+        "model": MODEL_OPUS,  # strategic thinking needs best model
+        "prompt": """You are the GROWTH STRATEGIST agent for PRINTMAXX.
+Working directory: {project}
+
+Your job: synthesize ALL intelligence sources into detailed, venture-specific growth strategies. Daily.
+
+You are NOT a distributor or poster. You CREATE the growth STRATEGY that other agents execute.
+
+INTELLIGENCE (QUERY FIRST):
+  python3 AUTOMATIONS/intelligence_router.py --stats
+  python3 AUTOMATIONS/intelligence_router.py --venture GROWTH --full
+
+RUN THE STRATEGIST:
+  python3 AUTOMATIONS/growth_strategist.py
+
+This generates a full growth strategy report covering all 8 ventures:
+  CONTENT, OUTBOUND, APP_FACTORY, LOCAL_BIZ, MONETIZATION, PRODUCT, RESEARCH, SCRAPING
+
+For each venture it synthesizes:
+  - Top alpha tactics with source references
+  - Grey growth edge tactics (medium aggression)
+  - Platform-specific tactics per channel
+  - Content distribution plans
+  - Engagement farming opportunities
+  - Multi-account strategy considerations
+  - KPIs and success metrics
+  - Specific weekly actions
+
+CYCLE:
+1. Run: python3 AUTOMATIONS/growth_strategist.py
+   This queries intelligence_router.py and alpha_query.py for each venture,
+   reads growth docs from CONTENT/growth/ and 06_OPERATIONS/growth/,
+   reads LEDGER/MARKETING_CHANNELS_MASTER.csv and OPS/INTELLIGENCE_CATALOG.json,
+   and generates a comprehensive strategy report.
+
+2. REVIEW the output at AUTOMATIONS/agent/swarm/reports/growth_strategy_{{date}}.md
+
+3. COMPARE with previous strategies — what changed? What's new? What failed?
+
+4. HIGHLIGHT the top 3 cross-venture opportunities (where Venture A feeds Venture B).
+
+5. WRITE an executive summary (< 300 words) appended to the strategy report with
+   the single most important growth action for the next 24 hours.
+
+Rules: All files stay in {project}. Base everything on real intelligence data, not generic advice.""",
+    },
+
     "social_poster": {
         "category": "GROWTH",
         "description": "Posts APPROVED content to social platforms — currently queues to drafts, posts when API access available",
         "interval_hours": 3,
-        "model": MODEL_SONNET,  # posting is execution
+        "model": MODEL_OPUS,  # content quality + platform optimization
         "prompt": """You are the SOCIAL POSTER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -1017,19 +1070,20 @@ Rules: All files stay in {project}. Follow copy-style.md. NEVER post without qua
 # ══════════════════════════════════════════════════════════════════════════
 
 class SwarmState:
-    def __init__(self):
+    def __init__(self) -> None:
         SWARM_DIR.mkdir(parents=True, exist_ok=True)
         (SWARM_DIR / "reports").mkdir(exist_ok=True)
         (SWARM_DIR / "opportunities").mkdir(exist_ok=True)
+        self.data: dict[str, Any]
         if SWARM_STATE.exists():
             self.data = json.loads(SWARM_STATE.read_text())
         else:
             self.data = {"agents": {}, "deployed_at": None, "total_runs": 0}
 
-    def save(self):
+    def save(self) -> None:
         SWARM_STATE.write_text(json.dumps(self.data, indent=2, default=str))
 
-    def update_agent(self, agent_id, updates):
+    def update_agent(self, agent_id: str, updates: dict[str, Any]) -> None:
         if agent_id not in self.data["agents"]:
             self.data["agents"][agent_id] = {}
         self.data["agents"][agent_id].update(updates)
@@ -1051,6 +1105,7 @@ AGENT_VENTURE_MAP = {
     "asset_deployer": ("PRODUCT", "deploy"),
     "distribution_engine": ("GROWTH", "distribution"),
     "inbound_maximizer": ("GROWTH", "inbound"),
+    "growth_strategist": ("GROWTH", "strategy"),
     "trend_synthesizer": ("RESEARCH", "trends"),
     "cross_pollinator": ("RESEARCH", "cross_pollination"),
     "image_factory": ("CONTENT", "image"),
@@ -1066,7 +1121,7 @@ AGENT_VENTURE_MAP = {
 }
 
 
-def get_agent_intelligence(agent_id):
+def get_agent_intelligence(agent_id: str) -> str:
     """Query intelligence router for this agent's venture context."""
     mapping = AGENT_VENTURE_MAP.get(agent_id)
     if not mapping:
@@ -1086,13 +1141,13 @@ def get_agent_intelligence(agent_id):
     return ""
 
 
-def generate_plist(agent_id, agent_def):
+def generate_plist(agent_id: str, agent_def: dict[str, Any]) -> tuple[str, str]:
     """Generate a launchd plist for a swarm agent."""
     label = f"com.printmaxx.swarm.{agent_id}"
     interval_seconds = agent_def["interval_hours"] * 3600
     log_path = str(LOG_DIR / f"swarm_{agent_id}.log")
     error_log = str(LOG_DIR / f"swarm_{agent_id}.error.log")
-    model = agent_def.get("model", MODEL_SONNET)
+    model = agent_def.get("model", MODEL_OPUS)
 
     # Inject intelligence briefing for agents that have venture mappings
     intel_briefing = get_agent_intelligence(agent_id)
@@ -1141,7 +1196,7 @@ def generate_plist(agent_id, agent_def):
     return plist, label
 
 
-def install_agent(agent_id):
+def install_agent(agent_id: str) -> bool:
     """Generate plist and install via launchctl."""
     if agent_id not in SWARM_AGENTS:
         log(f"Unknown agent: {agent_id}", "ERROR")
@@ -1172,7 +1227,7 @@ def install_agent(agent_id):
         return False
 
 
-def uninstall_agent(agent_id):
+def uninstall_agent(agent_id: str) -> bool:
     """Unload and remove a swarm agent."""
     label = f"com.printmaxx.swarm.{agent_id}"
     plist_path = LA_DIR / f"{label}.plist"
@@ -1187,7 +1242,7 @@ def uninstall_agent(agent_id):
         return False
 
 
-def list_installed():
+def list_installed() -> list[tuple[str, str]]:
     """List all installed swarm agents."""
     installed = []
     try:
@@ -1208,7 +1263,7 @@ def list_installed():
 # COMMANDS
 # ══════════════════════════════════════════════════════════════════════════
 
-def show_status():
+def show_status() -> None:
     state = SwarmState()
     installed = list_installed()
     installed_ids = {a[0] for a in installed}
@@ -1253,7 +1308,7 @@ def show_status():
                 print(f"    {r.name:<50} {age_h:.1f}h ago")
 
 
-def deploy_all():
+def deploy_all() -> None:
     state = SwarmState()
     success = 0
     failed = 0
@@ -1273,7 +1328,7 @@ def deploy_all():
     print(f"Total launchd agents: {success} swarm + 8 venture = {success + 8} autonomous agents")
 
 
-def kill_all():
+def kill_all() -> None:
     for agent_id in SWARM_AGENTS:
         uninstall_agent(agent_id)
     state = SwarmState()
@@ -1282,7 +1337,7 @@ def kill_all():
     print(f"All {len(SWARM_AGENTS)} swarm agents uninstalled.")
 
 
-def show_logs(agent_id):
+def show_logs(agent_id: str) -> None:
     log_path = LOG_DIR / f"swarm_{agent_id}.log"
     if log_path.exists():
         # Show last 50 lines
@@ -1294,7 +1349,7 @@ def show_logs(agent_id):
         print(f"Expected: {log_path}")
 
 
-def health_check():
+def health_check() -> None:
     installed = list_installed()
     installed_ids = {a[0]: a[1] for a in installed}
     issues = []
@@ -1347,7 +1402,7 @@ def health_check():
 # CLI
 # ══════════════════════════════════════════════════════════════════════════
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="PRINTMAXX Agent Swarm — Army of Autonomous Agents")
     parser.add_argument("--status", action="store_true", help="Show swarm status")
     parser.add_argument("--deploy", nargs="?", const="ALL", help="Deploy all or specific agent")

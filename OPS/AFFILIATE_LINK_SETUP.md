@@ -103,3 +103,22 @@ Note: These compound. By month 12, your month-1 referrals are still paying. Recu
 4. Redeploy pages (1 min)
 5. Post distribution content from `CONTENT/social/affiliate_funnel_posts_mar7.md`
 6. Monitor GoatCounter for click data
+
+
+---
+
+## Pending Enhancement (ALPHA18110, Score: 24)
+
+**Source:** @whale_alert (high-signal-accounts) | **URL:** https://x.com/TradeZella/status/2023081699437867471/analytics
+**Added:** 2026-03-08T01:09:41-05:00
+
+If I could restart trading, I’d follow these:
+
+This alone would’ve saved me $14K and 2 years of pain:
+
+1. Pick one setup and trade it 100 times before judging it.
+
+2. Risk so small that losses feel like nothing. Size up after proof, not confidence.
+
+3. Grade every trade A, B, or
+

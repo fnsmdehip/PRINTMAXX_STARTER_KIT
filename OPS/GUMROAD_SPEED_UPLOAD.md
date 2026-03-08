@@ -151,3 +151,18 @@ about
 
 Whop Marketplace digital product portfolio. Whop has organic discovery (Gumroad doesn't). $2B+ sold. 6% fees vs Gumroad 10%. List existing products for free traffic. Brazilian creators 4.79% breakout rate. Supports communities + courses + downloads.
 
+
+
+---
+
+## Pending Enhancement (ALPHA18094, Score: 24)
+
+**Source:** @xivy0k (high-signal-accounts) | **URL:** https://x.com/xivy0k/status/2019777513719828931
+**Added:** 2026-03-08T01:09:41-05:00
+
+Guys, this digital excel brand is doing $44K/month selling digital excel 
+
+and get this  he's running the same ads from 2023. doesn't even run a lot of ads, just 16 ads total but they've been running since 2023
+
+just by looking at the products i'm sharing you can see what's
+

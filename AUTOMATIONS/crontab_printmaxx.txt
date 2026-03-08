@@ -15,6 +15,9 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 # 2:00 AM - Master overnight runner (all scrapers + analyzers)
 0 2 * * * cd $BASE && bash AUTOMATIONS/overnight_master_runner.sh >> AUTOMATIONS/logs/cron_overnight.log 2>&1
 
+# 5:00 AM - Growth strategist (creates venture growth strategies from intelligence, before morning chain)
+0 5 * * * cd $BASE && $PYTHON AUTOMATIONS/growth_strategist.py >> AUTOMATIONS/logs/growth_strategist.log 2>&1
+
 # 6:00 AM - Twitter signal account scraper
 0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/daily_twitter_scraper.py >> AUTOMATIONS/logs/scraper_daily.log 2>&1
 

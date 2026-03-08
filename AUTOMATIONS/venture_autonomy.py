@@ -33,6 +33,8 @@ Usage:
   python3 venture_autonomy.py --daemon               # Run forever cycling all ventures
 """
 
+from __future__ import annotations
+
 import argparse
 import csv
 import json
@@ -43,6 +45,7 @@ import sys
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
+from typing import Any, Optional
 
 # ── paths & guardrails ───────────────────────────────────────────────────
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
@@ -59,7 +62,7 @@ AGENT_STATE = AUTOMATIONS / "agent" / "state.json"
 PYTHON = sys.executable
 
 _shutdown = False
-def _sig(s, f):
+def _sig(s: int, f: Any) -> None:
     global _shutdown
     _shutdown = True
     print("\n[!] Shutdown requested.")
@@ -67,18 +70,18 @@ signal.signal(signal.SIGINT, _sig)
 signal.signal(signal.SIGTERM, _sig)
 
 
-def safe_path(p):
+def safe_path(p: str | Path) -> Path:
     resolved = Path(p).resolve()
     if not str(resolved).startswith(str(PROJECT.resolve())):
         raise ValueError(f"BLOCKED: {resolved} outside {PROJECT}")
     return resolved
 
 
-def ts():
+def ts() -> str:
     return datetime.now().strftime("%H:%M:%S")
 
 
-def log(msg, level="INFO"):
+def log(msg: str, level: str = "INFO") -> None:
     line = f"[{ts()}] [AUTONOMY] [{level}] {msg}"
     print(line)
     try:
@@ -89,7 +92,7 @@ def log(msg, level="INFO"):
         pass
 
 
-def run_cmd(cmd, timeout_sec=300, label=None):
+def run_cmd(cmd: str, timeout_sec: int = 300, label: Optional[str] = None) -> tuple[bool, str]:
     """Run a command with guardrails. Returns (success, output)."""
     tag = label or cmd[:60]
     log(f"Running: {tag}")
@@ -114,7 +117,7 @@ def run_cmd(cmd, timeout_sec=300, label=None):
         return False, str(e)[:500]
 
 
-def run_script(script_name, args="", timeout_sec=300, label=None):
+def run_script(script_name: str, args: str = "", timeout_sec: int = 300, label: Optional[str] = None) -> tuple[bool, str]:
     """Run a PRINTMAXX automation script."""
     script_path = AUTOMATIONS / script_name
     if not script_path.exists():
@@ -124,7 +127,7 @@ def run_script(script_name, args="", timeout_sec=300, label=None):
     return run_cmd(cmd, timeout_sec, label or script_name)
 
 
-def _hours_since(iso_ts):
+def _hours_since(iso_ts: Optional[str]) -> float:
     if not iso_ts:
         return float('inf')
     try:
@@ -133,7 +136,7 @@ def _hours_since(iso_ts):
         return float('inf')
 
 
-def log_mission(mission_name, result, duration_s, output=""):
+def log_mission(mission_name: str, result: str, duration_s: float, output: str = "") -> None:
     """Log to the shared agent mission log (same format as monitor.py expects)."""
     entry = {
         "ts": datetime.now().isoformat(),
@@ -149,7 +152,7 @@ def log_mission(mission_name, result, duration_s, output=""):
         pass
 
 
-def send_bus_message(body, to_agent="ceo"):
+def send_bus_message(body: str, to_agent: str = "ceo") -> None:
     """Send a message on the shared inter-agent bus."""
     msg = {
         "ts": datetime.now().isoformat(),
@@ -425,13 +428,13 @@ VENTURE_TYPES = {
 class AutonomyState:
     """Persistent state for all autonomous ventures."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         AUTONOMY_DIR.mkdir(parents=True, exist_ok=True)
         SCHEDULES_DIR.mkdir(parents=True, exist_ok=True)
         RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-        self.data = self._load()
+        self.data: dict[str, Any] = self._load()
 
-    def _load(self):
+    def _load(self) -> dict[str, Any]:
         if STATE_FILE.exists():
             try:
                 return json.loads(STATE_FILE.read_text())
@@ -444,23 +447,23 @@ class AutonomyState:
             "created_at": datetime.now().isoformat(),
         }
 
-    def save(self):
+    def save(self) -> None:
         safe_path(STATE_FILE)
         STATE_FILE.write_text(json.dumps(self.data, indent=2, default=str))
 
-    def get_venture(self, venture_id):
+    def get_venture(self, venture_id: str) -> Optional[dict[str, Any]]:
         return self.data["ventures"].get(venture_id)
 
-    def add_venture(self, venture_id, venture_def):
+    def add_venture(self, venture_id: str, venture_def: dict[str, Any]) -> None:
         self.data["ventures"][venture_id] = venture_def
         self.save()
 
-    def update_venture(self, venture_id, updates):
+    def update_venture(self, venture_id: str, updates: dict[str, Any]) -> None:
         if venture_id in self.data["ventures"]:
             self.data["ventures"][venture_id].update(updates)
             self.save()
 
-    def get_active_ventures(self):
+    def get_active_ventures(self) -> dict[str, dict[str, Any]]:
         return {
             vid: v for vid, v in self.data["ventures"].items()
             if v.get("status") not in ("PAUSED", "KILLED")
@@ -474,10 +477,10 @@ class AutonomyState:
 class VentureAutonomyEngine:
     """Runs the full autonomy pipeline for any venture type."""
 
-    def __init__(self, state: AutonomyState):
+    def __init__(self, state: AutonomyState) -> None:
         self.state = state
 
-    def create_venture(self, venture_type, name, config=None):
+    def create_venture(self, venture_type: str, name: str, config: Optional[dict[str, Any]] = None) -> Optional[str]:
         """Create a new autonomous venture."""
         if venture_type not in VENTURE_TYPES:
             log(f"Unknown venture type: {venture_type}. Available: {list(VENTURE_TYPES.keys())}", "ERROR")
@@ -521,7 +524,7 @@ class VentureAutonomyEngine:
 
         return venture_id
 
-    def run_venture(self, venture_id):
+    def run_venture(self, venture_id: str) -> bool:
         """Run the full autonomy pipeline for a venture."""
         venture = self.state.get_venture(venture_id)
         if not venture:
@@ -644,7 +647,7 @@ class VentureAutonomyEngine:
         log(f"Venture cycle complete: {venture['name']} — {successes}/{total} steps succeeded")
         return True
 
-    def run_all_active(self):
+    def run_all_active(self) -> None:
         """Run all active ventures that are due."""
         active = self.state.get_active_ventures()
         if not active:
@@ -661,7 +664,7 @@ class VentureAutonomyEngine:
 
         log(f"Ran {ran}/{len(active)} ventures this cycle")
 
-    def _get_venture_intelligence(self, venture_type, step=None):
+    def _get_venture_intelligence(self, venture_type: str, step: Optional[str] = None) -> str:
         """Query intelligence router for venture-specific context."""
         cmd = [sys.executable, str(AUTOMATIONS / "intelligence_router.py"),
                "--venture", venture_type, "--brief"]
@@ -676,7 +679,7 @@ class VentureAutonomyEngine:
             pass
         return ""
 
-    def _run_with_claude(self, venture_id, venture, step, vtype):
+    def _run_with_claude(self, venture_id: str, venture: dict[str, Any], step: str, vtype: dict[str, Any]) -> str:
         """Use Claude CLI to execute a pipeline step that has no script."""
         # Get intelligence briefing for this venture + step
         intel = self._get_venture_intelligence(venture.get("type", ""), step)
@@ -707,7 +710,7 @@ class VentureAutonomyEngine:
         ok, output = run_cmd(cmd, timeout_sec=180, label=f"claude:{venture_id}:{step}")
         return "ok" if ok else "failed"
 
-    def _save_step_result(self, venture_id, step, success, output):
+    def _save_step_result(self, venture_id: str, step: str, success: bool, output: str) -> None:
         """Save step results to venture results directory."""
         result_dir = AUTONOMY_DIR / venture_id / "output"
         result_dir.mkdir(parents=True, exist_ok=True)
@@ -724,7 +727,7 @@ class VentureAutonomyEngine:
         except Exception as e:
             log(f"Failed to save step result: {e}", "WARN")
 
-    def _generate_schedule_configs(self, venture_id, venture_def):
+    def _generate_schedule_configs(self, venture_id: str, venture_def: dict[str, Any]) -> None:
         """Generate launchd plist and Cowork prompt for a venture."""
         vtype = VENTURE_TYPES.get(venture_def["type"], {})
         interval = venture_def.get("interval_hours", 4)
@@ -761,7 +764,7 @@ class VentureAutonomyEngine:
 
         log(f"Generated schedule configs: llm-launchd + script-launchd + cowork + cron + ralph for {venture_id}")
 
-    def _generate_llm_launchd_plist(self, venture_id, venture_def, vtype, interval_hours):
+    def _generate_llm_launchd_plist(self, venture_id: str, venture_def: dict[str, Any], vtype: dict[str, Any], interval_hours: int) -> str:
         """Generate launchd plist that runs Claude's brain (claude -p) on a schedule.
 
         This is the KEY differentiator — each scheduled task gets Claude's full
@@ -816,7 +819,7 @@ class VentureAutonomyEngine:
 </dict>
 </plist>"""
 
-    def _generate_script_launchd_plist(self, venture_id, venture_def, interval_hours):
+    def _generate_script_launchd_plist(self, venture_id: str, venture_def: dict[str, Any], interval_hours: int) -> str:
         """Generate launchd plist that runs the Python script (no LLM, lighter weight)."""
         interval_seconds = interval_hours * 3600
         return f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -847,7 +850,7 @@ class VentureAutonomyEngine:
 </dict>
 </plist>"""
 
-    def _generate_cowork_prompt(self, venture_id, venture_def, vtype):
+    def _generate_cowork_prompt(self, venture_id: str, venture_def: dict[str, Any], vtype: dict[str, Any]) -> str:
         """Generate a Cowork scheduled task prompt."""
         name = venture_def.get("name", venture_id)
         interval = venture_def.get("interval_hours", 4)
@@ -881,7 +884,7 @@ class VentureAutonomyEngine:
 - Generated by venture_autonomy.py on {datetime.now().strftime('%Y-%m-%d')}
 """
 
-    def _generate_cron_entry(self, venture_id, interval_hours):
+    def _generate_cron_entry(self, venture_id: str, interval_hours: int) -> str:
         """Generate a cron entry for this venture."""
         # Convert interval to cron schedule
         if interval_hours <= 1:
@@ -908,7 +911,7 @@ class VentureAutonomyEngine:
 {schedule} {cmd} >> {log_path} 2>&1
 """
 
-    def _generate_ralph_prompt(self, venture_id, venture_def, vtype):
+    def _generate_ralph_prompt(self, venture_id: str, venture_def: dict[str, Any], vtype: dict[str, Any]) -> str:
         """Generate a ralph loop PROMPT.md for this venture."""
         name = venture_def.get("name", venture_id)
         pipeline = venture_def.get("pipeline", [])
@@ -933,7 +936,7 @@ Interval: {interval}h
 Working dir: {PROJECT}
 """
 
-    def import_from_ceo_ventures(self):
+    def import_from_ceo_ventures(self) -> int:
         """Import existing CEO-created ventures into the autonomy engine."""
         if not VENTURES_DIR.exists():
             log("No CEO ventures directory found")
@@ -986,7 +989,7 @@ class SchedulerManager:
     """Manages launchd and cron installations for ventures."""
 
     @staticmethod
-    def install_launchd(venture_id, mode="llm"):
+    def install_launchd(venture_id: str, mode: str = "llm") -> bool:
         """Install a launchd plist for a venture (macOS only).
 
         mode='llm' — Claude's brain runs on schedule (claude -p)
@@ -1039,7 +1042,7 @@ class SchedulerManager:
             return False
 
     @staticmethod
-    def uninstall_launchd(venture_id):
+    def uninstall_launchd(venture_id: str) -> bool:
         """Uninstall all launchd plists for a venture."""
         la_dir = Path.home() / "Library" / "LaunchAgents"
         removed = 0
@@ -1060,7 +1063,7 @@ class SchedulerManager:
         return removed > 0
 
     @staticmethod
-    def install_all_llm():
+    def install_all_llm() -> int:
         """Install LLM-powered launchd agents for ALL active ventures."""
         state = AutonomyState()
         active = state.get_active_ventures()
@@ -1073,7 +1076,7 @@ class SchedulerManager:
         return installed
 
     @staticmethod
-    def install_cron(venture_id):
+    def install_cron(venture_id: str) -> bool:
         """Add cron entry for a venture."""
         cron_src = SCHEDULES_DIR / f"cron_{venture_id}.txt"
         if not cron_src.exists():
@@ -1118,7 +1121,7 @@ class SchedulerManager:
             return False
 
     @staticmethod
-    def list_installed():
+    def list_installed() -> dict[str, list[str]]:
         """List all installed PRINTMAXX scheduled tasks."""
         installed = {"launchd_llm": [], "launchd_script": [], "cron": []}
 
@@ -1168,11 +1171,11 @@ class SelfManager:
     - Ensure all schedules are running and healthy
     """
 
-    def __init__(self, state: AutonomyState, engine: VentureAutonomyEngine):
+    def __init__(self, state: AutonomyState, engine: VentureAutonomyEngine) -> None:
         self.state = state
         self.engine = engine
 
-    def run_self_management_cycle(self):
+    def run_self_management_cycle(self) -> list[str]:
         """Full self-management cycle — call this from CEO agent or cron."""
         log("=" * 60)
         log("SELF-MANAGEMENT CYCLE")
@@ -1193,7 +1196,7 @@ class SelfManager:
 
         return actions
 
-    def _ensure_all_scheduled(self):
+    def _ensure_all_scheduled(self) -> list[str]:
         """Auto-install launchd for any active venture missing a schedule."""
         actions = []
         installed = SchedulerManager.list_installed()
@@ -1212,7 +1215,7 @@ class SelfManager:
 
         return actions
 
-    def _fix_broken_schedules(self):
+    def _fix_broken_schedules(self) -> list[str]:
         """Detect and fix broken scheduled tasks."""
         actions = []
         la_dir = Path.home() / "Library" / "LaunchAgents"
@@ -1254,7 +1257,7 @@ class SelfManager:
 
         return actions
 
-    def _adjust_intervals(self):
+    def _adjust_intervals(self) -> list[str]:
         """Speed up winners, slow down losers."""
         actions = []
 
@@ -1299,7 +1302,7 @@ class SelfManager:
 
         return actions
 
-    def _create_from_opportunities(self):
+    def _create_from_opportunities(self) -> list[str]:
         """Check CEO agent discoveries and alpha staging for new venture opportunities."""
         actions = []
 
@@ -1350,7 +1353,7 @@ class SelfManager:
 
         return actions
 
-    def _prune_dead_ventures(self):
+    def _prune_dead_ventures(self) -> list[str]:
         """Pause ventures that have been consistently failing for 10+ cycles."""
         actions = []
 
@@ -1388,7 +1391,7 @@ class SelfManager:
 # STATUS DISPLAY
 # ══════════════════════════════════════════════════════════════════════════
 
-def show_status():
+def show_status() -> None:
     state = AutonomyState()
     ventures = state.data.get("ventures", {})
     installed = SchedulerManager.list_installed()
@@ -1450,7 +1453,7 @@ def show_status():
             print(f"  {v.get('name', vid)[:30]}: {step_str}")
 
 
-def list_types():
+def list_types() -> None:
     print("=" * 70)
     print("VENTURE TYPES — Available Autonomy Templates")
     print("=" * 70)
@@ -1467,7 +1470,7 @@ def list_types():
 # DAEMON MODE — run forever cycling all ventures
 # ══════════════════════════════════════════════════════════════════════════
 
-def run_daemon():
+def run_daemon() -> None:
     """Run the autonomy engine forever, cycling all active ventures."""
     log("VENTURE AUTONOMY DAEMON STARTING")
     state = AutonomyState()
@@ -1504,7 +1507,7 @@ def run_daemon():
 # CLI
 # ══════════════════════════════════════════════════════════════════════════
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="PRINTMAXX Venture Autonomy Engine")
     parser.add_argument("--status", action="store_true", help="Show status dashboard")
     parser.add_argument("--run", type=str, help="Run a specific venture by ID")

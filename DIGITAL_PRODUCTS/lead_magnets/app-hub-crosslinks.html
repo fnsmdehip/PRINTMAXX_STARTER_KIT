@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX Tools & Apps — 46 free tools built by one person</title>
+<meta name="description" content="46 free tools. zero cost. productivity apps, faith trackers, business tools, lead magnets. all built by one person with Claude Code.">
+<meta property="og:title" content="PRINTMAXX Tools & Apps">
+<meta property="og:description" content="46 free tools. zero cost. built by one person with Claude Code.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://printmaxx-tools.surge.sh">
+<script defer data-domain="printmaxx-tools.surge.sh" src="https://plausible.io/js/script.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#111;--card:#161616;--accent:#00ff88;--accent-dim:#00cc6a;--text:#e5e5e5;--muted:#777;--border:#222}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.5;min-height:100vh}
+a{color:var(--accent);text-decoration:none;transition:opacity .15s}
+a:hover{opacity:.8}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+/* hero */
+.hero{padding:48px 0 40px;text-align:center;border-bottom:1px solid var(--border)}
+.hero h1{font-size:clamp(1.5rem,4.5vw,2.4rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:10px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);font-size:.95rem;max-width:500px;margin:0 auto 24px}
+.stats{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.stat{text-align:center}
+.stat .n{font-size:1.6rem;font-weight:800;color:var(--accent);letter-spacing:-1px}
+.stat .l{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+/* email capture */
+.capture{max-width:420px;margin:0 auto}
+.capture-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px}
+.capture-box p{font-size:.85rem;color:var(--muted);margin-bottom:12px}
+.capture-form{display:flex;gap:8px}
+.capture-form input[type="email"]{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:10px 12px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none}
+.capture-form input[type="email"]:focus{border-color:var(--accent)}
+.capture-form button{background:var(--accent);color:#0a0a0a;border:none;border-radius:6px;padding:10px 16px;font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit;white-space:nowrap;transition:background .15s}
+.capture-form button:hover{background:var(--accent-dim)}
+.capture-fine{font-size:.7rem;color:var(--muted);margin-top:8px;text-align:center}
+
+/* nav */
+.jump-nav{padding:20px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.jump-nav a{font-size:.75rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:4px;padding:4px 10px;transition:all .15s}
+.jump-nav a:hover{color:var(--accent);border-color:var(--accent)}
+
+/* sections */
+.section{padding:36px 0;border-bottom:1px solid var(--border)}
+.section:last-of-type{border-bottom:none}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
+.section-head h2{font-size:1.15rem;font-weight:700;letter-spacing:-.5px}
+.section-head .count{font-size:.75rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:4px;padding:2px 8px}
+
+/* cards grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s;display:flex;flex-direction:column}
+.card:hover{border-color:var(--accent)}
+.card h3{font-size:.95rem;font-weight:700;margin-bottom:4px;letter-spacing:-.3px}
+.card h3 a{color:var(--text)}
+.card h3 a:hover{color:var(--accent)}
+.card p{font-size:.8rem;color:var(--muted);margin-bottom:10px;flex:1}
+.card .tag{font-size:.65rem;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+
+/* storefront cta */
+.store-cta{background:linear-gradient(135deg,#0a1a0f,#0f1a0a);border:1px solid var(--accent);border-radius:10px;padding:28px;text-align:center;margin:36px 0}
+.store-cta h3{font-size:1.2rem;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+.store-cta p{color:var(--muted);font-size:.85rem;margin-bottom:16px}
+.store-cta a.btn{display:inline-block;background:var(--accent);color:#0a0a0a;font-weight:700;padding:10px 24px;border-radius:6px;font-size:.9rem;transition:background .15s}
+.store-cta a.btn:hover{background:var(--accent-dim);opacity:1}
+
+/* footer */
+footer{padding:24px 0;text-align:center;border-top:1px solid var(--border)}
+footer p{color:var(--muted);font-size:.75rem}
+footer a{color:var(--accent)}
+
+@media(max-width:520px){
+  .capture-form{flex-direction:column}
+  .grid{grid-template-columns:1fr}
+  .stats{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <h1>46 free tools. <span>zero cost.</span></h1>
+  <p>built by one person with Claude Code. productivity apps, faith trackers, business tools, lead magnets. all free, all live.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">46</div><div class="l">tools live</div></div>
+    <div class="stat"><div class="n">8</div><div class="l">PWA apps</div></div>
+    <div class="stat"><div class="n">13</div><div class="l">faith trackers</div></div>
+    <div class="stat"><div class="n">7</div><div class="l">biz tools</div></div>
+    <div class="stat"><div class="n">4</div><div class="l">lead magnets</div></div>
+  </div>
+  <div class="capture">
+    <div class="capture-box">
+      <p>get notified when we launch new tools (shipping weekly)</p>
+      <form class="capture-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="App Hub: new subscriber">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://printmaxx-tools.surge.sh">
+        <input type="email" name="email" placeholder="your email" required>
+        <button type="submit">notify me</button>
+      </form>
+      <div class="capture-fine">no spam. just tool drops.</div>
+    </div>
+  </div>
+</section>
+
+<!-- JUMP NAV -->
+<nav class="jump-nav">
+  <a href="#productivity">productivity</a>
+  <a href="#health">health</a>
+  <a href="#faith">faith</a>
+  <a href="#faith-extended">faith extended</a>
+  <a href="#lifestyle">lifestyle streaks</a>
+  <a href="#biz-tools">biz tools</a>
+  <a href="#lead-magnets">free calculators</a>
+  <a href="#store">store</a>
+</nav>
+
+<!-- PRODUCTIVITY APPS -->
+<section class="section" id="productivity">
+  <div class="section-head">
+    <h2>productivity</h2>
+    <span class="count">4 apps</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://focuslock-app.surge.sh" target="_blank">FocusLock</a></h3>
+      <p>pomodoro timer that locks your phone until the session ends</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://adhd-streak.surge.sh" target="_blank">ADHD-Streak</a></h3>
+      <p>daily streak tracker built for brains that forget everything</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://coding-streak-app.surge.sh" target="_blank">Coding Streak</a></h3>
+      <p>track your daily coding habit. don't break the chain.</p>
+      <span class="tag">streak app</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://journal-streak-app.surge.sh" target="_blank">Journal Streak</a></h3>
+      <p>daily journaling tracker with streak accountability</p>
+      <span class="tag">streak app</span>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH & WELLNESS -->
+<section class="section" id="health">
+  <div class="section-head">
+    <h2>health & wellness</h2>
+    <span class="count">5 apps</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://mealmaxx-app.surge.sh" target="_blank">MealMaxx</a></h3>
+      <p>meal tracking without the calorie counting nonsense</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://coldmaxx.surge.sh" target="_blank">ColdMaxx</a></h3>
+      <p>cold exposure tracker. log showers, ice baths, streaks.</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://sleepmaxx-app.surge.sh" target="_blank">SleepMaxx</a></h3>
+      <p>sleep quality tracker. find out why you feel like garbage.</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://walktounlock-app.surge.sh" target="_blank">WalkToUnlock</a></h3>
+      <p>locks your phone until you hit your step goal</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://fitness-streak-app.surge.sh" target="_blank">Fitness Streak</a></h3>
+      <p>daily workout streak tracker. visual accountability.</p>
+      <span class="tag">streak app</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAITH TRACKERS (core) -->
+<section class="section" id="faith">
+  <div class="section-head">
+    <h2>faith trackers</h2>
+    <span class="count">3 apps</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://prayerlock-app.surge.sh" target="_blank">PrayerLock</a></h3>
+      <p>daily prayer tracker with streak counter and reminders</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://hilal-app.surge.sh" target="_blank">Hilal</a></h3>
+      <p>ramadan tracker. fasting times, duas, daily progress.</p>
+      <span class="tag">PWA</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://meditation-streak-app.surge.sh" target="_blank">Meditation Streak</a></h3>
+      <p>daily meditation habit tracker. streak-based.</p>
+      <span class="tag">streak app</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAITH EXTENDED (denomination streaks) -->
+<section class="section" id="faith-extended">
+  <div class="section-head">
+    <h2>denomination-specific streaks</h2>
+    <span class="count">19 apps</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://anglican-streak.surge.sh" target="_blank">Anglican Streak</a></h3>
+      <p>daily devotional tracker for anglicans</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://baptist-streak.surge.sh" target="_blank">Baptist Streak</a></h3>
+      <p>scripture reading tracker for baptists</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://catholic-streak.surge.sh" target="_blank">Catholic Streak</a></h3>
+      <p>daily rosary and devotion tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://episcopal-streak.surge.sh" target="_blank">Episcopal Streak</a></h3>
+      <p>daily office and prayer tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://evangelical-streak.surge.sh" target="_blank">Evangelical Streak</a></h3>
+      <p>quiet time and bible study tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://lutheran-streak.surge.sh" target="_blank">Lutheran Streak</a></h3>
+      <p>daily devotion tracker for lutherans</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://methodist-streak.surge.sh" target="_blank">Methodist Streak</a></h3>
+      <p>daily prayer and study tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://orthodox-streak.surge.sh" target="_blank">Orthodox Streak</a></h3>
+      <p>prayer rule and fasting tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://pentecostal-streak.surge.sh" target="_blank">Pentecostal Streak</a></h3>
+      <p>daily devotion and prayer tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://presbyterian-streak.surge.sh" target="_blank">Presbyterian Streak</a></h3>
+      <p>daily scripture and catechism tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://protestant-streak.surge.sh" target="_blank">Protestant Streak</a></h3>
+      <p>daily bible reading and prayer tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://shia-streak.surge.sh" target="_blank">Shia Streak</a></h3>
+      <p>daily prayer and dua tracker for shia muslims</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://sunni-streak.surge.sh" target="_blank">Sunni Streak</a></h3>
+      <p>salah tracker and daily sunnah streak</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://quran-streak-app.surge.sh" target="_blank">Quran Streak</a></h3>
+      <p>daily quran reading tracker with juz progress</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://torah-streak-app.surge.sh" target="_blank">Torah Streak</a></h3>
+      <p>daily torah study tracker with parsha progress</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://sutra-streak-app.surge.sh" target="_blank">Sutra Streak</a></h3>
+      <p>daily buddhist practice and sutra reading tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://gita-streak-app.surge.sh" target="_blank">Gita Streak</a></h3>
+      <p>daily bhagavad gita study tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://guru-streak-app.surge.sh" target="_blank">Guru Streak</a></h3>
+      <p>daily gurbani and sikh practice tracker</p>
+      <span class="tag">faith</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://scripture-streak-lds.surge.sh" target="_blank">Scripture Streak</a></h3>
+      <p>daily scripture study for latter-day saints</p>
+      <span class="tag">faith</span>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE STREAKS -->
+<section class="section" id="lifestyle">
+  <div class="section-head">
+    <h2>lifestyle streaks</h2>
+    <span class="count">4 apps</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://art-streak-app.surge.sh" target="_blank">Art Streak</a></h3>
+      <p>daily creative practice tracker for artists</p>
+      <span class="tag">streak app</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://language-streak-app.surge.sh" target="_blank">Language Streak</a></h3>
+      <p>daily language learning tracker. don't lose the streak.</p>
+      <span class="tag">streak app</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://reading-streak-app.surge.sh" target="_blank">Reading Streak</a></h3>
+      <p>daily reading habit tracker with page logging</p>
+      <span class="tag">streak app</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://ramadan-tracker.surge.sh" target="_blank">Ramadan Tracker</a></h3>
+      <p>bilingual EN/AR ramadan planner with fasting times</p>
+      <span class="tag">PWA</span>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS TOOLS -->
+<section class="section" id="biz-tools">
+  <div class="section-head">
+    <h2>business tools</h2>
+    <span class="count">7 apps</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://invoiceforge-app.surge.sh" target="_blank">InvoiceForge</a></h3>
+      <p>generate clean invoices in 30 seconds. no signup.</p>
+      <span class="tag">tool</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://pagescorer-app.surge.sh" target="_blank">PageScorer</a></h3>
+      <p>audit any landing page. get a score + fix list.</p>
+      <span class="tag">tool</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://pitchdeck-app.surge.sh" target="_blank">PitchDeck</a></h3>
+      <p>generate a pitch deck from a one-liner description</p>
+      <span class="tag">tool</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://prospectmaxx-app.surge.sh" target="_blank">ProspectMaxx</a></h3>
+      <p>find leads by industry and location. export CSV.</p>
+      <span class="tag">tool</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://roicalc-app.surge.sh" target="_blank">ROICalc</a></h3>
+      <p>plug in your numbers. see if the math works.</p>
+      <span class="tag">tool</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://stackmaxx-app.surge.sh" target="_blank">StackMaxx</a></h3>
+      <p>portfolio builder for freelancers and agencies</p>
+      <span class="tag">tool</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://coldmaxx-app.surge.sh" target="_blank">ColdMaxx Tool</a></h3>
+      <p>cold email sequence builder with templates</p>
+      <span class="tag">tool</span>
+    </div>
+  </div>
+</section>
+
+<!-- FREE CALCULATORS / LEAD MAGNETS -->
+<section class="section" id="lead-magnets">
+  <div class="section-head">
+    <h2>free calculators & checklists</h2>
+    <span class="count">4 tools</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://cold-email-calc.surge.sh" target="_blank">Cold Email ROI Calculator</a></h3>
+      <p>plug in send volume + close rate. see real revenue math.</p>
+      <span class="tag">calculator</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://printmaxx-tools.surge.sh/subject-line-grader.html" target="_blank">Subject Line Grader</a></h3>
+      <p>paste your subject line. get a score + improvement tips.</p>
+      <span class="tag">grader</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://solopreneur-launch-checklist.surge.sh" target="_blank">Solopreneur Launch Checklist</a></h3>
+      <p>47-step checklist from idea to first dollar</p>
+      <span class="tag">checklist</span>
+    </div>
+    <div class="card">
+      <h3><a href="https://printmaxx-tools.surge.sh/ramadan-daily-planner.html" target="_blank">Ramadan Daily Planner</a></h3>
+      <p>printable daily ramadan schedule with imsak + iftar</p>
+      <span class="tag">planner</span>
+    </div>
+  </div>
+</section>
+
+<!-- STOREFRONT CTA -->
+<div class="store-cta" id="store">
+  <h3>want the full toolkit?</h3>
+  <p>digital products, templates, cold email kits, and more. all priced for solopreneurs.</p>
+  <a href="https://printmaxx-storefront.surge.sh" target="_blank" class="btn">browse the store</a>
+</div>
+
+<!-- BOTTOM EMAIL CAPTURE -->
+<section class="section" style="border:none;padding-bottom:24px">
+  <div class="capture">
+    <div class="capture-box">
+      <p>shipping new tools weekly. get notified.</p>
+      <form class="capture-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="App Hub Bottom: new subscriber">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://printmaxx-tools.surge.sh">
+        <input type="email" name="email" placeholder="your email" required>
+        <button type="submit">notify me</button>
+      </form>
+      <div class="capture-fine">no spam. just tool drops.</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>built by <a href="https://printmaxx.surge.sh" target="_blank">PRINTMAXX</a> with Claude Code. 46 tools, $0 hosting, surge.sh + PWA.</p>
+</footer>
+
+</body>
+</html>
