@@ -36,3 +36,20 @@
 [20:00:00] [LOOP] [INFO] LOOP 3: Pipeline Advancement
 [20:00:00] [LOOP] [INFO]   1 lead files ready for outreach
 [20:00:00] [LOOP] [INFO] Cycle complete: 0 decisions, 24 feedback updates, 0 pipeline advances
+[22:00:08] [LOOP] [INFO] ==================================================
+[22:00:08] [LOOP] [INFO] LOOP CLOSER — Full Cycle
+[22:00:08] [LOOP] [INFO] ==================================================
+[22:00:08] [LOOP] [INFO] LOOP 1: Decision Execution
+[22:00:08] [LOOP] [INFO]   Found 125 pending decisions
+[22:00:08] [LOOP] [INFO]   SKIP: Unknown action 'priority_shift' from swarm_brain:structured
+[22:00:08] [LOOP] [INFO] LOOP 2: Feedback Tracking
+[22:00:08] [LOOP] [INFO]   Agent effectiveness rankings:
+[22:00:08] [LOOP] [INFO]     inbound_maximizer         604.6% effective (7 runs, 5 outputs)
+[22:00:08] [LOOP] [INFO]     trend_synthesizer         484.0% effective (5 runs, 5 outputs)
+[22:00:08] [LOOP] [INFO]     cross_pollinator          451.4% effective (7 runs, 7 outputs)
+[22:00:08] [LOOP] [INFO]     revenue_tracker           436.0% effective (5 runs, 5 outputs)
+[22:00:08] [LOOP] [INFO]     conversion_optimizer      400.0% effective (5 runs, 5 outputs)
+[22:00:08] [LOOP] [INFO]   Wrote 24 recommendations to feedback_recommendations.json
+[22:00:08] [LOOP] [INFO] LOOP 3: Pipeline Advancement
+[22:00:08] [LOOP] [INFO]   1 lead files ready for outreach
+[22:00:08] [LOOP] [INFO] Cycle complete: 0 decisions, 24 feedback updates, 0 pipeline advances

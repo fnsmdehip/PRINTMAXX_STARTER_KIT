@@ -1499,3 +1499,86 @@ $KBAB $BABA
  
 @alibaba_cloud
 
+
+
+---
+
+## Pending Enhancement (ALPHA17776, Score: 35)
+
+**Source:** 2026-03-07 | **URL:** @levelsio
+**Added:** 2026-03-07T21:45:20-05:00
+
+http://
+photoai.com is a 40,870 line file called index.php
+
+$105,000/mo revenue
+
+$80,000/mo profit
+
+
+
+---
+
+## Pending Enhancement (ALPHA17833, Score: 36)
+
+**Source:** 2026-03-07 | **URL:** @whale_alert
+**Added:** 2026-03-07T21:45:20-05:00
+
+Clari: $310/user. Gong: $150/user. Salesforce Revenue Intelligence: $395/user.
+StratoForce: $25/user. Same pipeline scoring. Same conversation intelligence. Same forecasting.
+The difference? We're 100% native Salesforce. 
+First 50 orgs get lifetime Enterprise access — free.
+
+
+
+---
+
+## Pending Enhancement (ALPHA17917, Score: 36)
+
+**Source:** 2026-03-07 | **URL:** @financialjuice
+**Added:** 2026-03-07T21:45:21-05:00
+
+$AVGO Broadcom Q1 Earnings
+
+Adjusted EPS $2.05, est. $2.03
+Adjusted revenue $19.31B, est. $19.26B
+Semiconductor solutions revenue $12.52B, est. $12.31B
+Sees Q2 revenue about $22.0B, est. $20.53B
+Sees Q2 adjusted EBITDA about 68% of projected revenue
+Expects AI semiconductor
+
+
+
+---
+
+## Pending Enhancement (ALPHA17971, Score: 46)
+
+**Source:** 2026-03-07 | **URL:** @pounddz
+**Added:** 2026-03-07T21:45:21-05:00
+
+I made $5k from a slideshow that got 650k views once 
+
+nothing special about what I did the offers just converted so high 
+
+and regularly I can make $3k+ from a million views 
+
+can confirm nothing has come close to sweeps when it comes to views to revenue generated
+
+
+
+---
+
+## Pending Enhancement (ALPHA18063, Score: 36)
+
+**Source:** 2026-03-07 | **URL:** r/buildinpublic
+**Added:** 2026-03-07T21:45:21-05:00
+
+1,850 visitors, $113 in revenue, and 30 days of zero motivation. We see a lot of "up and to the right" graphs here, so I wanted to share what my messy journey looks like right now.  
+I’m building mybets.gg. It’s a bet tracker for sports bettors.  
+Here is the transparent reality of my metrics:
+
+* MRR: $60 (4 active subs)
+* Total Revenue: $113
+* Total Traffic: 1,850 visitors
+* Google Clicks:
+

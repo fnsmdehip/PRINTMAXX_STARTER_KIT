@@ -1763,3 +1763,141 @@ Zine (kirkmarple): Built AI-powered team search app in 8 weeks solo using own pl
 
 Aident AI Beta 2 (March 5 2026): 410 upvotes on ProductHunt. Open-world automations managed in plain English. Top launch of the day. Natural language automation builder for non-technical users. Indicates strong market demand for AI-powered automation tools that require zero coding.
 
+
+
+---
+
+## Pending Enhancement (ALPHA17621, Score: 35)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47293119
+**Added:** 2026-03-07T21:45:20-05:00
+
+Cloud VM Benchmarks 2026: 44 VM types across 7 providers (AWS GCP Azure Oracle Hetzner DigitalOcean). Hetzner CPX22 = best price/performance but just bumped prices 30%. GCP AMD Turin strong but $130/mo for 8vcpu spot. Self-hosting AMD EPYC 4565P ($500 processor) delivers 2x single-core vs GCP at fraction of cost. Key for solopreneurs: Hetzner for EU hosting or self-host for CI/CD breaks even in mo
+
+
+
+---
+
+## Pending Enhancement (ALPHA17622, Score: 29)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47285876
+**Added:** 2026-03-07T21:45:20-05:00
+
+µJS: 5KB zero-dependency alternative to htmx (16KB) and Turbo (25KB). 114 HN upvotes 50 comments. Features: AJAX nav + DOM morphing + SSE + hover prefetch + polling + full HTTP verbs. Server-side HTML generation approach = perfect for solopreneurs who know backend but not React. Single script tag + mu.init() to add. Added to htmx official alternatives page. Created by Amaury Bouchard.
+
+
+
+---
+
+## Pending Enhancement (ALPHA17623, Score: 28)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47285616
+**Added:** 2026-03-07T21:45:20-05:00
+
+OculOS: Any desktop app as JSON API via OS accessibility tree. Rust-based. REST API + MCP server for AI agents (Claude/GPT/Gemini). Reads accessibility tree and assigns UUIDs to every UI element. Built-in dashboard with element inspector and recorder. No screenshots or pixel coords needed. MIT licensed. Works on macOS/Windows/Linux. 14 HN upvotes. Enables automating ANY desktop app without officia
+
+
+
+---
+
+## Pending Enhancement (ALPHA17749, Score: 30)
+
+**Source:** 2026-03-07 | **URL:** @AntonioEscudero
+**Added:** 2026-03-07T21:45:20-05:00
+
+Bye Bye Web developers...
+
+I just surpassed $3k in revenue and 2,400 users with my fully vibecoded SaaS
+
+RankInPublic was completely vibecoded using Claude Opus 4.6
+
+It took 7 days to develop, 12 hours a day.
+
+The stack I used:
+
+- Convex for the backend and db
+- Dodo Payments as
+
+
+
+---
+
+## Pending Enhancement (ALPHA17763, Score: 29)
+
+**Source:** 2026-03-07 | **URL:** @kloss_xyz
+**Added:** 2026-03-07T21:45:20-05:00
+
+Stop what you’re doing right now.
+
+Anthropic just dropped a free AI academy with 13 courses and official certificates across MCP, APIs, Claude Code, and fluency.
+
+People used to pay $2k for bootcamps teaching worse versions of these topics.
+
+Now it costs $0. Save it. Start today.
+
+
+
+---
+
+## Pending Enhancement (ALPHA17775, Score: 31)
+
+**Source:** 2026-03-07 | **URL:** @levikov
+**Added:** 2026-03-07T21:45:20-05:00
+
+Women aged 35-55 are the most profitable and most ignored audience on the entire internet and the numbers on this are actually insane…
+
+This demographic controls 85% of household purchasing decisions in the US. They spend more online per capita than any other age group. They
+
+
+
+---
+
+## Pending Enhancement (ALPHA17949, Score: 20)
+
+**Source:** 2026-03-07 | **URL:** @0xrahulweb3
+**Added:** 2026-03-07T21:45:21-05:00
+
+Web3 Jobs
+
+1. Sapience 
+
+https://
+docs.google.com/forms/d/e/1FAI
+pQLScsJwd1ymKgQdbZO1I0Uii1JOuwWRJ-kv12ylQszsAALReqTA/viewform
+…
+
+2. Green Dots ($ 1000 - $2000 )
+
+https://
+greendots.typeform.com/ctwriter
+
+3. Sei Labs 
+
+https://
+jobs.ashbyhq.com/sei-labs/4042f
+56c-681b-4309-bb5c-40da489b38e5?utm_source=findweb3.com
+…
+
+CC : 
+@0xvietnguyen
+
+
+
+---
+
+## Pending Enhancement (ALPHA18036, Score: 50)
+
+**Source:** 2026-03-07 | **URL:** r/SaaS
+**Added:** 2026-03-07T21:45:21-05:00
+
+Hit $60 MRR, then ghosted my own SaaS for a month. I’ve realized that building the product is only 20% of the work.  
+A few months ago, I launched [mybets.gg](http://mybets.gg), a bet tracker designed to help sports bettors manage their bankroll and log their bets easier.
+
+The Stats so far:
+
+* Total Revenue: $113
+* MRR: $60
+* Active Subs: 4
+* Total Visitors: 1,850
+* Organic Clicks (Google
+

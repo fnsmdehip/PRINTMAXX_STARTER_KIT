@@ -43,5 +43,60 @@
     "url": "https://github.com/trending",
     "name": "GitHub Trending",
     "category": "trends"
+  },
+  {
+    "url": "https://apps.apple.com/us/charts/iphone/top-free-apps",
+    "name": "App Store Top Free",
+    "category": "app_trends"
+  },
+  {
+    "url": "https://apps.apple.com/us/charts/iphone/top-grossing-apps",
+    "name": "App Store Top Grossing",
+    "category": "app_trends"
+  },
+  {
+    "url": "https://www.hallow.com/pricing",
+    "name": "Hallow Pricing",
+    "category": "faith_competitor"
+  },
+  {
+    "url": "https://www.calm.com/pricing",
+    "name": "Calm Pricing",
+    "category": "sleep_competitor"
+  },
+  {
+    "url": "https://www.headspace.com/plans",
+    "name": "Headspace Pricing",
+    "category": "sleep_competitor"
+  },
+  {
+    "url": "https://opal.so/pricing",
+    "name": "Opal Screen Time Pricing",
+    "category": "screen_time_competitor"
+  },
+  {
+    "url": "https://www.tiimo.app/pricing",
+    "name": "Tiimo ADHD Pricing",
+    "category": "adhd_competitor"
+  },
+  {
+    "url": "https://focusmate.com/pricing",
+    "name": "Focusmate Pricing",
+    "category": "adhd_competitor"
+  },
+  {
+    "url": "https://www.sleepfoundation.org/best-sleep-apps",
+    "name": "Sleep Apps Roundup",
+    "category": "sleep_competitor"
+  },
+  {
+    "url": "https://www.producthunt.com/topics/health-fitness",
+    "name": "PH Health Fitness",
+    "category": "trends"
+  },
+  {
+    "url": "https://www.producthunt.com/topics/productivity",
+    "name": "PH Productivity",
+    "category": "trends"
   }
 ]

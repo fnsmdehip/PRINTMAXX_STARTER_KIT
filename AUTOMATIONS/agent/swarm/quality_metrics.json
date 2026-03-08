@@ -1,80 +1,113 @@
 {
-  "last_cycle": "2026-03-07T19:10:00Z",
-  "cycle_number": 7,
+  "last_cycle": "2026-03-07T21:15:00Z",
+  "cycle_number": 8,
   "cycle_summary": {
-    "total_items_reviewed": 27,
-    "passed_no_changes": 22,
-    "fixed_and_approved": 5,
-    "blocked": 0,
+    "total_items_reviewed": 51,
+    "breakdown": {
+      "social_content_files": 10,
+      "distribution_files": 7,
+      "outreach_emails": 34
+    },
+    "passed_no_changes": 15,
+    "fixed_and_approved": 14,
+    "blocked": 22,
     "flagged_for_review": 0,
-    "pass_rate_before_fixes": "81.5%",
-    "pass_rate_after_fixes": "100%"
+    "pass_rate_before_fixes": "29.4%",
+    "pass_rate_after_fixes": "56.9%"
   },
   "content_review": {
-    "files_scanned": 8,
-    "tweets_reviewed": 38,
-    "threads_reviewed": 4,
-    "outreach_emails_reviewed": 20,
+    "files_scanned": 10,
+    "files_passed": 5,
+    "files_failed": 5,
+    "total_violations_found": 10,
+    "violations_fixed": 10,
     "fixes_applied": [
-      "APPROVED_POSTS_MAR7.csv line 17: 'reply rates doubled' (vague) -> specific numbers (3.2% to 6.8%)",
-      "APPROVED_POSTS_MAR7.csv lines 18-19: near-duplicate 'intent-based timing 2-4x' openings -> differentiated (one=triggers, one=results)",
-      "APPROVED_POSTS_MAR7.csv line 20: 'mCP' capitalization error -> 'MCP' + added specifics",
-      "APPROVED_POSTS_MAR7.csv line 21: 'aI' capitalization error -> 'AI' + added specifics (3 deploys/week to 3/day)",
-      "affiliate_funnel_posts_mar7.md: promoted PENDING_REVIEW -> APPROVED",
-      "alpha_cycle3_mar7_posts.md: promoted PENDING_REVIEW -> APPROVED",
-      "launch_checklist_promo_posts.md: promoted PENDING_REVIEW -> APPROVED",
-      "twitter_subject_line_grader_promo.txt: promoted PENDING_REVIEW -> APPROVED"
+      "linkedin_adaptations.md: hedging 'it might be time' -> direct claim with 30-40% number",
+      "linkedin_adaptations.md: sycophantic engagement closer -> direct value statement",
+      "GENERATED_MAR7_RESEARCH_CYCLE.md: process-first thread hook -> consequence-first (SaaS moat finding)",
+      "GENERATED_MAR7_RESEARCH_CYCLE.md: vague 'the gurus' attribution -> removed",
+      "affiliate_funnel_posts_mar7.md: banned phrase 'deep dives' -> 'feature breakdowns'",
+      "affiliate_funnel_posts_mar7.md: sycophantic 'curious what community prefers' -> direct CTA",
+      "competitor_counter_cycle4.md: unsourced '$31.5B projection' -> observable market fact",
+      "competitor_counter_cycle5.md: chatbot artifact 'Happy to share specifics' -> direct value delivery",
+      "competitor_counter_cycle5.md: vague 'subscription fatigue is real' -> specific '$264/yr' data point",
+      "competitor_counter_cycle5.md: generic 'growth hack' -> 'distribution lever'"
     ],
     "em_dash_violations": 0,
-    "banned_word_violations": 0,
-    "capitalization_errors": 2,
-    "capitalization_fixed": 2,
-    "near_duplicate_tweets": 1,
-    "near_duplicates_fixed": 1,
-    "vague_claims": 1,
-    "vague_claims_fixed": 1,
-    "generic_filler_phrases": 0,
-    "sycophantic_artifacts": 0,
-    "note": "Content pipeline is producing CLEAN output consistently. Zero em dashes, zero banned words for 3rd consecutive cycle. Main issues this cycle were mechanical (capitalization bugs 'mCP'/'aI' suggesting automated pipeline has a case-mangling bug) and a near-duplicate tweet pair. All 4 PENDING_REVIEW files passed first-read inspection. affiliate_funnel_posts are exceptionally well-structured with FTC compliance notes. alpha_cycle3 posts have named developers with verified revenue numbers. Outreach drafts continue to be the highest-quality output in the pipeline."
+    "banned_word_violations": 2,
+    "banned_words_fixed": 2,
+    "chatbot_artifacts": 3,
+    "chatbot_artifacts_fixed": 3,
+    "vague_claims": 3,
+    "vague_claims_fixed": 3,
+    "hedging_violations": 2,
+    "hedging_fixed": 2,
+    "note": "Content pipeline quality is DEGRADING in community post closers. 3 of 5 failing files had chatbot artifacts ('Happy to share', 'curious what community prefers'). This is a systematic agent behavior - the content generators are appending sycophantic engagement questions. Need to patch content generation prompts. Core tweet/thread quality remains high."
+  },
+  "distribution_review": {
+    "files_scanned": 7,
+    "clean_pass": 2,
+    "conditional_pass": 4,
+    "fail": 1,
+    "fixes_applied": [
+      "hn_producthunt_cycle6.md: removed 'Happy to talk about' chatbot artifact",
+      "TIKTOK_LAUNCH_SCRIPTS.md: fixed em dash + rewrote generic hook to consequence-first",
+      "TIKTOK_VIRAL_STRATEGY_2026.md: removed 4x 'journey', fixed 'goldmine', rewrote weak curiosity gap hooks",
+      "devto_linkedin_cycle6.md: fixed title case in LI post 2, replaced vague superlative in LI post 5"
+    ],
+    "note": "Distribution content is platform-appropriate across Reddit/HN/LinkedIn/dev.to. Reddit posts are the strongest - genuine community voice with honest metrics. TikTok strategy doc had most violations (internal template doc leaking banned words into hook examples)."
   },
   "outreach_review": {
-    "total_emails_reviewed": 20,
-    "files_reviewed": 2,
-    "sycophantic_artifacts": 0,
-    "banned_word_violations": 0,
-    "em_dash_violations": 0,
-    "personalization_quality": "excellent",
-    "human_tone": "pass",
-    "word_count_compliance": "pass (legal emails justified over 100w)",
-    "note": "ADA compliance and school district outreach continues at high quality. Specific lawsuit references, attorney names (Kravets), settlement amounts ($10-20K), student enrollment numbers. The FL restaurant emails reference specific news articles and CEO quotes. TX school district emails reference specific DOJ settlements and April 24 deadline. This is the best outreach the project has produced."
+    "total_emails_reviewed": 34,
+    "files_reviewed": 4,
+    "passed": 8,
+    "failed": 26,
+    "pass_rate": "23.5%",
+    "failure_breakdown": {
+      "word_count_over_100": 20,
+      "no_individual_name": 14,
+      "unfilled_template_placeholders": 3,
+      "em_dash_in_subject": 2,
+      "vague_attribution": 2,
+      "non_consequence_first_hook": 1
+    },
+    "em_dash_violations": 2,
+    "em_dashes_fixed": 2,
+    "subject_line_fixes": 1,
+    "blocked_emails": "ALL emails in leadmachine_cycle2 and cycle3 BLOCKED until word count cut and names added",
+    "critical_blocks": [
+      "3 emails have unfilled template placeholders (TO: field is a comment) - CANNOT SEND",
+      "1 email has [link] placeholder for portfolio URL - CANNOT SEND"
+    ],
+    "note": "Outreach quality collapsed between batch_20260307 (60% pass) and cycles 2-3 (0% pass). Root cause: shift to government/school district vertical added legal context that inflated word counts to 110-152 words. Personalization also degraded - cluster/bulk emails have no recipient names. The dental batch (emails 1,2,4,5,9,10) is the best outreach the project has produced. B2G outreach may need a formally approved 150-word exception."
   },
   "deployment_review": {
     "sites_spot_checked": 2,
     "results": {
-      "printmaxx.surge.sh": "200 - RECOVERED (was 404 for 15+ hours, now live)",
+      "printmaxx.surge.sh": "200 - live",
       "printmaxx-site.surge.sh": "200 - OK"
     },
     "persistent_critical": [
       "17 landing pages still have dead CTAs (href='#') - REVENUE BLOCKER",
       "BUFFER_UPLOAD_MAR7.csv pipeline bug (tweet_drafter.py)",
       "Capitalization bug in content pipeline (mCP/aI) - investigate tweet_drafter or content generator"
-    ],
-    "improvement": "printmaxx.surge.sh RECOVERED from 404 to 200. Major milestone - main site back online after 15+ hours down."
+    ]
   },
   "media_review": {
-    "images_in_pipeline": 290,
+    "images_in_pipeline": 297,
     "videos_in_pipeline": 15,
     "spot_check": "all from today (Mar 7), template-generated, correct formats",
     "oversized": "gumroad_cover_4.png (561KB, minor overage vs 500KB target)"
   },
   "most_common_failures": [
-    "capitalization_errors (2 - 'mCP'/'aI' - likely pipeline bug in content generator)",
-    "near_duplicate_tweets (1 - two tweets with identical opening)",
-    "vague_claims (1 - 'doubled' without baseline numbers)",
+    "word_count_over_100 (20 emails - 77% of outreach failures, systemic in B2G vertical)",
+    "no_individual_name_addressed (14 emails - 54% of outreach failures, cluster/bulk degradation)",
+    "chatbot_artifacts (3 content files - 'Happy to share', 'curious what community prefers')",
+    "vague_claims_without_source (3 instances across content + outreach)",
     "dead_CTA_links (17 pages persistent - REVENUE BLOCKER)"
   ],
   "trend": {
-    "direction": "content_quality_high_deployment_recovering",
+    "direction": "content_stable_outreach_degrading",
     "pass_rate_history": [
       "96.3% (cycle 1)",
       "97.9% (cycle 2)",
@@ -82,8 +115,9 @@
       "94.4% raw / 100% after fixes (cycle 4)",
       "52.6% raw / 97.4% after fixes (cycle 5)",
       "81.8% raw / 95.5% after fixes (cycle 6)",
-      "81.5% raw / 100% after fixes (cycle 7)"
+      "81.5% raw / 100% after fixes (cycle 7)",
+      "29.4% raw / 56.9% after fixes (cycle 8)"
     ],
-    "note": "3rd consecutive cycle with zero em dashes and zero banned words. Cookie-cutter template violations eliminated since cycle 5. Capitalization bugs are NEW this cycle - investigate automated content pipeline for case-mangling. printmaxx.surge.sh recovery is the biggest win: main site back online. Content quality is now HIGH and STABLE. Remaining bottleneck: 17 dead CTAs blocking ALL conversion. Revenue blocked by distribution infrastructure, not content quality."
+    "note": "Cycle 8 is the deepest audit yet (51 items vs 27 in cycle 7). Raw pass rate dropped because this is the first cycle to audit ALL outreach drafts including cycles 2-3, which have systemic word count violations. Content quality is holding steady - tweet/thread copy is clean. The gap is in outreach (word count + personalization collapse in later cycles) and community post closers (chatbot artifacts). 22 items remain BLOCKED pending human action (name research, word count cuts, placeholder fills)."
   }
 }

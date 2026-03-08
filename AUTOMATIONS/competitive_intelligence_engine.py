@@ -242,6 +242,18 @@ APP_CATEGORIES = {
             "Morning Routine Planner", "Balance Meditation",
         ],
     },
+    "adhd": {
+        "our_app": "ADHD-Streak",
+        "competitors": [
+            "Routinery Habit Routine", "Focusmate Body Double", "Tiimo ADHD Planner",
+            "Sunsama Daily Planner", "Llama Life ADHD Tasks", "Brain Focus Timer",
+            "Goblin Tools ADHD", "Due Reminders", "Streaks Habit Tracker",
+            "Done Habit Tracker", "Habitify Habit Tracker", "Productive Habit Tracker",
+            "Way of Life Habit", "Beeper Habit Tracker", "Momentum Habit Tracker",
+            "Loop Habit Tracker", "Daylio Mood Tracker", "Structured Day Planner",
+            "Focusplan Task Board", "ADHD Planner Daily",
+        ],
+    },
 }
 
 def scan_app_competitor(search_term, category):
@@ -887,6 +899,8 @@ def run_gap_analysis(history):
                   "sleep score", "snore detection", "heart rate", "apple watch", "widget"],
         "journal": ["daily prompts", "mood tracking", "photo journal", "templates", "export",
                     "encryption", "search", "tags", "calendar view", "streak tracking"],
+        "adhd": ["flexible streaks", "body double timer", "variable rewards", "flexible frequency",
+                 "no shame resets", "focus mode", "dopamine hooks", "simple UI", "reminders", "widget"],
     }
 
     for cat, features in common_features_by_cat.items():

@@ -21,7 +21,7 @@ a prayer app.
 
 they did it with one move: a 40-day lent challenge. 2M downloads in a week.
 
-seasonal calendar events are the most underrated growth hack in mobile. every religion has them. most devs ignore them.
+seasonal calendar events are the most underrated distribution lever in mobile. every religion has them. most devs ignore them.
 
 ---
 
@@ -43,7 +43,7 @@ meanwhile i'm cold emailing local businesses with a live preview of their new we
 
 after 7 months, durable costs MORE than my one-time price. every month after that is pure waste for the business owner.
 
-subscription fatigue is real. "pay once, own forever" wins.
+small businesses paid $264 last year for a durable site they don't own. "pay once, own forever" closes that conversation.
 
 ---
 
@@ -167,7 +167,7 @@ What surprised me: the bottleneck isn't building. It's selling. I have 22 apps a
 
 Lesson: ship first, build second.
 
-Happy to share specifics on the agent architecture if anyone's interested.
+The full agent architecture is in the comments: scraper loop, content gen loop, deploy loop, and how they hand off state between iterations.
 
 ---
 

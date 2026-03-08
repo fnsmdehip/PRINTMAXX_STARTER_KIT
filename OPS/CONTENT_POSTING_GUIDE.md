@@ -1534,3 +1534,109 @@ Today I randomly got a recommended video from an AI influencer account only a fe
 
 They’re selling simple products for $22.99.
 
+
+
+---
+
+## Pending Enhancement (ALPHA17676, Score: 43)
+
+**Source:** 2026-03-07 | **URL:** @gregisenberg
+**Added:** 2026-03-07T21:45:20-05:00
+
+this is one of those stories that sounds fake but is inspirational 
+
+teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead of fundraising, grow to ~15m downloads and $30m+ in revenue, and sell to
+
+
+
+---
+
+## Pending Enhancement (ALPHA17786, Score: 36)
+
+**Source:** 2026-03-07 | **URL:** @maverickecom
+**Added:** 2026-03-07T21:45:20-05:00
+
+We launched a 7 figure Amazon brand on tiktok shop and did $20k with human UGC creators this week
+
+Good team and good systems >
+
+Takeaway:
+
+- launch with human UGC. We use plug and play method to connect brands to high GMV creators in a mix of low retainers and commission only
+
+-
+
+
+
+---
+
+## Pending Enhancement (ALPHA17836, Score: 42)
+
+**Source:** 2026-03-07 | **URL:** @affprinter
+**Added:** 2026-03-07T21:45:20-05:00
+
+I Made $4,884 today
+
+no product, no face, no prior audience
+just making viral TikTok slideshows
+
+if you won't pull at least $1K in the first 7 days there is literally 0 hope for you man
+
+Retweet & Comment “TikTok” (must be following) and ill send you a free guide on how to do it
+
+
+
+---
+
+## Pending Enhancement (ALPHA17919, Score: 26)
+
+**Source:** 2026-03-07 | **URL:** @affprinter
+**Added:** 2026-03-07T21:45:21-05:00
+
+Tiktok organic + affiliate sweep offers = easiest way to make $7k/week
+
+its so simple but people just dont have the right guidance
+
+so I made a free guide for you guys so you can print $20k/months
+
+Just comment "sweeps" and retweet and ill send it over (must follow for auto dm)
+
+
+
+---
+
+## Pending Enhancement (ALPHA17920, Score: 20)
+
+**Source:** 2026-03-07 | **URL:** @affprinter
+**Added:** 2026-03-07T21:45:21-05:00
+
+I made $2342 today from ai TikTok slideshows
+
+This is the easiest way to make money in 2026
+
+All organic, 0 Ads
+
+want the breakdown?
+
+Deleting in 24 hours....
+
+Retweet & Comment “Slides” and I’ll dm you a free guide on how to start. (Must be following for auto dm)
+
+
+
+---
+
+## Pending Enhancement (ALPHA17967, Score: 41)
+
+**Source:** 2026-03-07 | **URL:** @alexxgrowth
+**Added:** 2026-03-07T21:45:21-05:00
+
+how to make get rich off of ROBLOX:  
+
+1/ find a brainrotted niche 
+2/ ask chatgpt for enjoyable gameplay loops
+3/ hire and fire a dev to do it for $10-$20 
+4/ use content rewards to market it 
+5/ add pay to win gamepasses for 99-999 robux 
+6/ profit $100k/mo minimum
+

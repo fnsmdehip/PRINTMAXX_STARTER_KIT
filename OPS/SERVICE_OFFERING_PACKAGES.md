@@ -195,3 +195,16 @@ The playbook IS the sales page. The data IS the credibility. The service IS the 
 
 social media followers. any business owner here that needs followers to make their fb page look more trusted, credible and attractive to clients/customer? i have a promo of ₱700/$20 for 10k followers. i'm a service first bef
 
+
+
+---
+
+## Pending Enhancement (ALPHA18071, Score: 26)
+
+**Source:** 2026-03-07 | **URL:** r/Solopreneur
+**Added:** 2026-03-07T21:45:21-05:00
+
+Spent $10,500 assuming I knew where my customers were. I didn't. I run an ops as a service business where I help founders of small service companies get out of the weeds so they can actually run their business instead of being stuck in it.
+
+A few months ago I made a confident decision: my audience is on LinkedIn, so I hired a content agency and an outreach specialist. About $3,500 a month. Now i
+
