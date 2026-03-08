@@ -1901,3 +1901,25 @@ The Stats so far:
 * Total Visitors: 1,850
 * Organic Clicks (Google
 
+
+
+---
+
+## Pending Enhancement (HN_006, Score: 34)
+
+**Source:** HackerNews Show HN | **URL:** https://news.ycombinator.com/item?id=47276604
+**Added:** 2026-03-08T00:10:14-05:00
+
+Claude-replay — video-like player for Claude Code sessions. 97pts. Developer tool for sharing/reviewing AI coding sessions. Content angle: record PRINTMAXX build sessions and publish as content.
+
+
+
+---
+
+## Pending Enhancement (PH_20260308_SUPERX, Score: 45)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/superx
+**Added:** 2026-03-08T00:11:57-05:00
+
+SuperX: All-in-one growth OS for serious 𝕏 creators | 873 PH votes | Topics: Social Media, SaaS, Artificial Intelligence
+

@@ -1,0 +1,9 @@
+{
+  "name": "printmaxx-starter-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PRINTMAXX root workspace — individual apps live in subdirectories",
+  "scripts": {
+    "status": "python3 AUTOMATIONS/printmaxx.py status"
+  }
+}
