@@ -70,3 +70,21 @@
 [00:00:05] [LOOP] [INFO] LOOP 3: Pipeline Advancement
 [00:00:05] [LOOP] [INFO]   1 lead files ready for outreach
 [00:00:05] [LOOP] [INFO] Cycle complete: 0 decisions, 24 feedback updates, 0 pipeline advances
+[04:00:00] [LOOP] [INFO] ==================================================
+[04:00:00] [LOOP] [INFO] LOOP CLOSER — Full Cycle
+[04:00:00] [LOOP] [INFO] ==================================================
+[04:00:00] [LOOP] [INFO] LOOP 1: Decision Execution
+[04:00:00] [LOOP] [INFO]   Found 140 pending decisions
+[04:00:00] [LOOP] [INFO]   Executing: priority_shift → ALL (from swarm_brain:structured)
+[04:00:00] [LOOP] [INFO]     FAILED: Plist not found for ALL
+[04:00:00] [LOOP] [INFO] LOOP 2: Feedback Tracking
+[04:00:00] [LOOP] [INFO]   Agent effectiveness rankings:
+[04:00:00] [LOOP] [INFO]     inbound_maximizer         596.8% effective (9 runs, 7 outputs)
+[04:00:00] [LOOP] [INFO]     trend_synthesizer         477.1% effective (7 runs, 7 outputs)
+[04:00:00] [LOOP] [INFO]     cross_pollinator          466.7% effective (9 runs, 9 outputs)
+[04:00:00] [LOOP] [INFO]     revenue_tracker           434.3% effective (7 runs, 7 outputs)
+[04:00:00] [LOOP] [INFO]     competitor_stalker        408.6% effective (7 runs, 7 outputs)
+[04:00:00] [LOOP] [INFO]   Wrote 24 recommendations to feedback_recommendations.json
+[04:00:00] [LOOP] [INFO] LOOP 3: Pipeline Advancement
+[04:00:00] [LOOP] [INFO]   1 lead files ready for outreach
+[04:00:00] [LOOP] [INFO] Cycle complete: 1 decisions, 24 feedback updates, 0 pipeline advances
