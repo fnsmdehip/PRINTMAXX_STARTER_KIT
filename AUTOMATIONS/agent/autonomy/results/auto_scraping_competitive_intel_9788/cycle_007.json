@@ -1,0 +1,108 @@
+{
+  "cycle_start": "2026-03-07T21:35:14.060237",
+  "cycle_end": "2026-03-07T21:35:14.135083",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 13,
+  "new_intel_rows_written": 13,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Sold my SaaS for $6M. After talking to 30 buyers, here's what actually mattered in the sale.",
+      "subreddit": "SaaS",
+      "score": 261,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rnaefi/sold_my_saas_for_6m_after_talking_to_30_buyers/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I'm 3 years old and just sold my SaaS for $1.2B (here's what I learned)",
+      "subreddit": "micro_saas",
+      "score": 171,
+      "url": "https://www.reddit.com/r/micro_saas/comments/1rmh44d/im_3_years_old_and_just_sold_my_saas_for_12b/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "My SaaS finally hit $1K+ MRR!! \ud83e\udd73",
+      "subreddit": "MicroSaas",
+      "score": 50,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rk9y1a/my_saas_finally_hit_1k_mrr/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "Tailwind CSS is more popular than ever. Revenue is down 80%. This is the AI paradox every founder needs to understand.",
+      "subreddit": "SaaS",
+      "score": 313,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rltbbg/tailwind_css_is_more_popular_than_ever_revenue_is/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "Our SaaS stock is down 45% this year. Revenue is up 23%. I don't understand markets anymore.",
+      "subreddit": "SaaS",
+      "score": 142,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rm75en/our_saas_stock_is_down_45_this_year_revenue_is_up/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "Sold my SaaS for $6M. After talking to 30 buyers, here's what actually mattered in the sale.",
+      "subreddit": "SaaS",
+      "score": 261,
+      "comments": 57,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rnaefi/sold_my_saas_for_6m_after_talking_to_30_buyers/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA17630"
+    },
+    {
+      "title": "I'm 3 years old and just sold my SaaS for $1.2B (here's what I learned)",
+      "subreddit": "micro_saas",
+      "score": 171,
+      "comments": 35,
+      "url": "https://www.reddit.com/r/micro_saas/comments/1rmh44d/im_3_years_old_and_just_sold_my_saas_for_12b/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA17649"
+    },
+    {
+      "title": "My SaaS finally hit $1K+ MRR!! \ud83e\udd73",
+      "subreddit": "MicroSaas",
+      "score": 50,
+      "comments": 42,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rk9y1a/my_saas_finally_hit_1k_mrr/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA17641"
+    },
+    {
+      "title": "Tailwind CSS is more popular than ever. Revenue is down 80%. This is the AI paradox every founder needs to understand.",
+      "subreddit": "SaaS",
+      "score": 313,
+      "comments": 86,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rltbbg/tailwind_css_is_more_popular_than_ever_revenue_is/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA17629"
+    },
+    {
+      "title": "Our SaaS stock is down 45% this year. Revenue is up 23%. I don't understand markets anymore.",
+      "subreddit": "SaaS",
+      "score": 142,
+      "comments": 93,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rm75en/our_saas_stock_is_down_45_this_year_revenue_is_up/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA17632"
+    }
+  ]
+}

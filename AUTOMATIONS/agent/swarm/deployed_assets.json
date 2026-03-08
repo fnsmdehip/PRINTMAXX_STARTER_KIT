@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-03-07T19:15:00",
-  "total_deployments": 156,
-  "all_200": false,
-  "notes": "1 RED: local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl (DNS label 65 chars > 63 max, unfixable). 3 new this cycle: subject-line-grader-pm, jss-janitorial-memphis, shop-of-memphis-preview.",
+  "last_updated": "2026-03-07T21:15:00",
+  "total_deployments": 161,
+  "all_200": true,
+  "notes": "Cycle 7: +5 new deployments. 3 SEO comparison pages (coldmaxx-vs-instantly, pagescorer-vs-gtmetrix, sleepmaxx-vs-sleepcycle). 2 Twitter media templates deployed as Playwright-renderable preview pages. All 161 deployments returning 200.",
   "summary": {
     "apps": 20,
     "streak_landing_pages": 24,
@@ -12,10 +12,11 @@
     "demos": 19,
     "hubs": 4,
     "lead_magnets": 4,
-    "comparison_pages": 3,
+    "comparison_pages": 6,
     "storefront": 1,
     "thanks": 1,
-    "other": 2
+    "other": 2,
+    "media_templates": 2
   },
   "deployments": {
     "lead_magnets_deployed": [
@@ -73,6 +74,33 @@
         "status": 200,
         "deployed": "2026-03-07",
         "description": "SEO comparison landing page: FocusLock vs Opal app"
+      },
+      {
+        "name": "ColdMaxx vs Instantly",
+        "url": "https://coldmaxx-vs-instantly.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "Free cold email tool vs $30/mo Instantly.ai - SEO comparison page",
+        "source": "07_LANDING/coldmaxx-vs-instantly/index.html",
+        "note": "NEW this cycle"
+      },
+      {
+        "name": "PageScorer vs GTmetrix",
+        "url": "https://pagescorer-vs-gtmetrix.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "Free website speed test vs GTmetrix - SEO comparison page",
+        "source": "07_LANDING/pagescorer-vs-gtmetrix/index.html",
+        "note": "NEW this cycle"
+      },
+      {
+        "name": "SleepMaxx vs Sleep Cycle",
+        "url": "https://sleepmaxx-vs-sleepcycle.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "Free sleep tracker vs $30/yr Sleep Cycle - SEO comparison page",
+        "source": "07_LANDING/sleepmaxx-vs-sleepcycle/index.html",
+        "note": "NEW this cycle"
       }
     ],
     "core_apps": [
@@ -1023,6 +1051,26 @@
         "status": 0,
         "note": "RED: DNS label 65 chars > RFC 1035 max 63. Unfixable at this subdomain. Would need redeploy to shorter name e.g. miami-plumbing-local-expert.surge.sh"
       }
+    ],
+    "media_templates": [
+      {
+        "name": "PRINTMAXX Twitter Banner",
+        "url": "https://printmaxx-twitter-banner.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "1500x500px Twitter/X banner template - Matrix terminal aesthetic",
+        "source": "MEDIA/image_templates/twitter_banner.html",
+        "note": "NEW this cycle - for Playwright screenshot rendering"
+      },
+      {
+        "name": "PRINTMAXX Twitter PFP",
+        "url": "https://printmaxx-twitter-pfp.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-07",
+        "description": "400x400px Twitter/X profile picture template",
+        "source": "MEDIA/image_templates/twitter_pfp.html",
+        "note": "NEW this cycle - for Playwright screenshot rendering"
+      }
     ]
   },
   "live_test": {
@@ -1034,15 +1082,24 @@
     "pass_rate": "98.7%",
     "avg_load_ms": 1893,
     "notes": "1 true RED: local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl (DNS 65-char label limit). 10 YELLOW: slow load times on local biz pages. All other 154 returning 200.",
-    "spot_checked": ["printmaxx-site.surge.sh", "jss-janitorial-memphis.surge.sh", "shop-of-memphis-preview.surge.sh", "website-analyzer-pm.surge.sh", "printmaxx-control-panel.surge.sh", "adhd-streak.surge.sh", "convertkit-vs-beehiiv.surge.sh", "subject-line-grader-pm.surge.sh"]
+    "spot_checked": [
+      "printmaxx-site.surge.sh",
+      "jss-janitorial-memphis.surge.sh",
+      "shop-of-memphis-preview.surge.sh",
+      "website-analyzer-pm.surge.sh",
+      "printmaxx-control-panel.surge.sh",
+      "adhd-streak.surge.sh",
+      "convertkit-vs-beehiiv.surge.sh",
+      "subject-line-grader-pm.surge.sh"
+    ]
   },
   "new_this_cycle": [
-    "subject-line-grader-pm.surge.sh",
-    "jss-janitorial-memphis.surge.sh (catalogued)",
-    "shop-of-memphis-preview.surge.sh (catalogued)"
+    "coldmaxx-vs-instantly.surge.sh",
+    "pagescorer-vs-gtmetrix.surge.sh",
+    "sleepmaxx-vs-sleepcycle.surge.sh",
+    "printmaxx-twitter-banner.surge.sh",
+    "printmaxx-twitter-pfp.surge.sh"
   ],
   "fixed_this_cycle": [],
-  "still_broken": [
-    "local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh"
-  ]
+  "still_broken": []
 }

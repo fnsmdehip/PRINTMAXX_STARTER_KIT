@@ -80,7 +80,7 @@ $264/year for a site with no custom code, no real SEO, and generic templates.
 here's why that pricing model is broken (and what I do instead):
 
 ### Tweet 2
-the AI website builder market is projected to hit $31.5B by 2033.
+wix, squarespace, durable, and a dozen new AI builders all share the same model: monthly subscription for a site you never own.
 
 everyone's racing to charge small businesses monthly subscriptions for sites they could own outright.
 

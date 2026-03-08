@@ -1,6 +1,6 @@
 # PRINTMAXX Arb Listings - 2026-03-07
 
-**Generated:** 2026-03-07 13:30:01
+**Generated:** 2026-03-07 21:00:01
 **Products:** 20 (min margin: 25%)
 
 ---

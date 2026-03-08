@@ -613,3 +613,14 @@ he nails the biggest truths we shall all admit:
 - most do not fail on product, but because distribution was hard
 - launch fast, test traction day 1 (if no
 
+
+
+---
+
+## Pending Enhancement (ALPHA17626, Score: 51)
+
+**Source:** IndieHackers | **URL:** https://www.indiehackers.com/post/tech/taking-the-leap-and-building-a-6-figure-arr-portfolio-8Gc6h3b74cjmNEgOgY3L
+**Added:** 2026-03-07T21:45:20-05:00
+
+Pauline Clavelloux: 4-SaaS portfolio to €100K+ ARR. Products: IACrea (AI real estate photo staging) + Feedbask (customer feedback widget) + Subclip (auto video subtitles/translation) + Refindie (affiliate mgmt for SaaS). Stack: Next.js + Supabase + Stripe + Vercel. Goal: €30K MRR per product. Ex-IBM 9.5 years. Key tactic: build fast even if ugly + launch early + improve only what matters + quit if
+

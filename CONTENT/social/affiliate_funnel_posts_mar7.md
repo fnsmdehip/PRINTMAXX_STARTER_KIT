@@ -131,7 +131,7 @@ ConvertKit wins on features.
 pick based on what you need, not $20/mo.
 
 TWEET 5:
-full comparison with head-to-head table, deep dives, and a decision tree:
+full comparison with head-to-head table, feature breakdowns, and a decision tree:
 
 https://convertkit-vs-beehiiv.surge.sh
 
@@ -161,7 +161,7 @@ Both have free tiers. Beehiiv is more generous (2,500 vs 1,000 free subs). At sc
 
 I wrote up a full comparison with a head-to-head table and decision tree: [link]
 
-What are you using for email? curious what this community prefers.
+Pick the one that matches your business model and start building your list today.
 
 ---
 

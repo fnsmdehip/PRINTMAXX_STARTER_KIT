@@ -1,12 +1,17 @@
 # PRINTMAXX PRODUCTION REPORT
-## 2026-03-07 | Generated 2026-03-07 13:30:01
+## 2026-03-07 | Generated 2026-03-07 21:00:01
 
 ---
 
 ## FACTORY OUTPUT TODAY
 
-### Assets Generated
-- **Status:** Not run this cycle (no Gemini API key or --assets not used)
+### Assets Generated (Gemini/Nano Banana)
+- **Images created:** 0
+- **Errors:** 0
+
+### Apps Deployed (surge.sh)
+- **Deployed:** 0
+- **Skipped:** surge_not_installed
 
 ### Ecom Listings Generated
 - **Listings created:** 20
@@ -14,7 +19,7 @@
 
 ### Content Pipeline
 - **Tweets drafted today:** 0
-- **Pending review:** 155
+- **Pending review:** 160
 - **Ready to post:** 1
 - **Posted:** 0
 - **Auto-generated files total:** 31
@@ -26,8 +31,8 @@
 ### Scanning Layer (WORKING)
 - **Ecom arb opportunities:** 3491 total, 0 added today
 - **High-margin products (>30%):** 462
-- **Freelance demand posts:** 15146 total
-- **Alpha entries:** 10532 total, 0 pending review
+- **Freelance demand posts:** 15191 total
+- **Alpha entries:** 10788 total, 0 pending review
 - **Trend signals:** 625 total
 
 ### Production Layer (THIS FACTORY)
@@ -35,7 +40,7 @@
 - **Apps deployed (surge.sh):** 43
 - **Arb listings generated:** 424
 - **Content files generated:** 31
-- **Generated assets:** 38
+- **Generated assets:** 46
 
 ### Execution Layer (NEEDS HUMAN)
 - **Platform accounts created:** 0/45+

@@ -21,7 +21,7 @@ The shift happening right now: per-seat pricing is declining. Credit-based and o
 
 Charge for results, not access.
 
-What's the biggest pricing mistake you've seen in your space?
+The 25-60% revenue increase most founders are missing is sitting in their pricing page, not their growth budget.
 
 ---
 
@@ -43,7 +43,7 @@ The practical difference:
 
 McKinsey estimates $750B in consumer spending will route through AI-powered discovery.
 
-If your content strategy is still 100% traditional SEO, it might be time to diversify.
+A content strategy stuck on 100% traditional SEO is leaving 30-40% of AI-driven visibility on the table.
 
 ---
 

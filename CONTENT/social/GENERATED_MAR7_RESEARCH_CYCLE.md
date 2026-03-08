@@ -73,9 +73,9 @@
 **Format:** Value thread, reply bait in final tweet
 
 **Tweet 1/5:**
-> spent 3 hours scraping 20 subreddits, hacker news, and indie hackers this morning.
+> the SaaS moat is dead. app portfolios beat single-product bets. vibe-coded apps ship with open security holes. tech employment is worse than 2008.
 >
-> here's what the internet is actually telling you about making money right now. most of it contradicts what the gurus say.
+> 20 subreddits, hacker news, indie hackers — all saying the same thing today. here's the breakdown:
 
 **Tweet 2/5:**
 > finding #1: the SaaS moat is dead.
