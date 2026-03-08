@@ -1,0 +1,50 @@
+THREAD: Vibe Coding Changed How I Build
+
+1/5
+karpathy coined "vibe coding" and it got 31K likes and 5.3M views.
+
+I've been doing it for 6 weeks. here's what actually happened to my output:
+
+---
+
+2/5
+before vibe coding: 1 app per month. polished. tested. documented. shipped to 0 users.
+
+after vibe coding: 7 apps in 6 weeks. rough edges. minimal tests. shipped to real users who gave real feedback.
+
+the feedback from real users was 100x more useful than the tests I wrote for imaginary users.
+
+---
+
+3/5
+the 4-day SaaS build is real. saw a dev ship a complete SaaS with Stripe integration in 4 days using Gemini Flash.
+
+key decisions:
+- stripe on day 1 (not day 30)
+- auth on day 1 (not optional)
+- deploy on day 1 (not "when it's ready")
+
+everything else is iteration. if you can't charge on day 1, you don't have a product. you have a project.
+
+---
+
+4/5
+the risk nobody talks about: vibe coded apps have worse code quality. period.
+
+my mitigations:
+- test the happy path only (covers 80% of real usage)
+- deploy behind feature flags
+- monitor error rates, not code coverage
+- if it breaks and nobody complains, it didn't matter
+
+perfectionism is the enemy of revenue. but negligence is the enemy of retention. find the line.
+
+---
+
+5/5
+bottom line: vibe coding is not about writing bad code. it's about shipping to market before the market moves.
+
+6 weeks ago I had 0 apps deployed.
+today I have 7 apps, 3 with paying users, and more signal than 2 years of planning would have given me.
+
+the code is worse. the business is better. I'll take that trade every time.
