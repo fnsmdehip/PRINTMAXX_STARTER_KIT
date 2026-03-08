@@ -56,3 +56,6 @@
 {"ts": "2026-03-07T17:29:22.996413", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 17 response drafts, 17 listing drafts"}
 {"ts": "2026-03-07T18:03:52.089843", "mission": "scan_opps_eve", "result": "success", "duration_s": 232.0, "output": "3/4 scanners completed"}
 {"ts": "2026-03-07T18:05:38.491451", "mission": "gen_content_eve", "result": "success", "duration_s": 106.4, "output": "Generated content from 2 sources, saved to AGENT_CONTENT_20260307.md"}
+{"ts": "2026-03-07T18:05:40.268356", "mission": "safety_commit", "result": "success", "duration_s": 1.8, "output": "Git safety commit"}
+{"ts": "2026-03-07T19:00:11.200620", "mission": "health_heal", "result": "success", "duration_s": 11.0, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-07T19:00:11.479520", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 20 response drafts, 17 listing drafts"}

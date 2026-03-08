@@ -99,7 +99,7 @@ Fixed 3 critical inbound bottlenecks that were killing lead conversion across th
 
 ### Ramadan Daily Planner Lead Magnet
 - **Location:** DIGITAL_PRODUCTS/lead_magnets/ramadan-daily-planner.html (building)
-- **Deploy to:** printmaxx-lead-magnets.surge.sh
+- **Deploy to:** printmaxx-magnets.surge.sh
 - **Contains:** interactive daily planner, prayer time schedule, Quran tracker, 30-day streak, email capture
 - **Status:** BUILDING (agent in progress)
 - **Timing:** Ramadan active NOW (started Feb 28). ~22 days remaining. Time-critical.
@@ -130,7 +130,7 @@ cd LANDING/app-marketing-pages/walktounlock && npx surge . walktounlock-web.surg
 cd LANDING/app-marketing-pages/ai-stack-2026 && npx surge . ai-stack-2026.surge.sh
 
 # 3. Redeploy lead magnets
-cd DIGITAL_PRODUCTS/lead_magnets && npx surge . printmaxx-lead-magnets.surge.sh
+cd DIGITAL_PRODUCTS/lead_magnets && npx surge . printmaxx-magnets.surge.sh
 
 # 4. Redeploy storefront
 cd PRODUCTS/storefront && npx surge . printmaxx-store.surge.sh

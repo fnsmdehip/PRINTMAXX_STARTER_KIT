@@ -193,8 +193,8 @@
     Action: surge teardown [domain] && redeploy as miami-local-plumbing-experts.surge.sh
 
 === NEW YELLOW (Broken Cross-Site Links — HIGH PRIORITY) ===
-  ⚠ hilal.surge.sh — footer links to printmaxx-lead-magnets.surge.sh (404)
-  ⚠ prayerlock-app.surge.sh — footer links to printmaxx-lead-magnets.surge.sh (404)
+  ⚠ hilal.surge.sh — footer links to printmaxx-magnets.surge.sh (404)
+  ⚠ prayerlock-app.surge.sh — footer links to printmaxx-magnets.surge.sh (404)
     Correct URL: printmaxx-magnets.surge.sh (200 OK)
     Impact: 2 flagship Ramadan apps (time-critical — 25 days left in Ramadan) have broken outbound links
     Action: Edit footer HTML + redeploy both sites
@@ -263,7 +263,7 @@
   !! printmaxx.surge.sh AND printmaxx-site.surge.sh returning 404. MAIN SITE DOWN 10+ HOURS.
   !! 17 landing pages with dead CTAs (href='#'). ZERO conversion possible on these pages.
   !! BUFFER_UPLOAD_MAR7.csv still blocked (tweet_drafter.py pipeline bug).
-  !! hilal.surge.sh + prayerlock-app.surge.sh broken footer links (printmaxx-lead-magnets.surge.sh -> should be printmaxx-magnets.surge.sh).
+  !! hilal.surge.sh + prayerlock-app.surge.sh broken footer links (printmaxx-magnets.surge.sh -> should be printmaxx-magnets.surge.sh).
 
   SYSTEMIC ISSUE IDENTIFIED (NEW):
   >>> AUTOMATED AGENT CONTENT HAS A TEMPLATE PROBLEM <<<
@@ -296,7 +296,7 @@
   + 15 Remotion videos: all under 620KB
 
   FLAGGED (attention needed, not blocking):
-  ! twitter_inbound_ramadan_1.txt: links to printmaxx-lead-magnets.surge.sh (known broken URL, should be printmaxx-magnets.surge.sh). Fix URL before posting.
+  ! twitter_inbound_ramadan_1.txt: links to printmaxx-magnets.surge.sh (known broken URL, should be printmaxx-magnets.surge.sh). Fix URL before posting.
   ! compound_cycle2_crossniche tweet F2 (from cycle 5): "middle east tensions" framing still flagged. Verify this was addressed.
   ! compound_cycle2_crossniche tweet D4 (from cycle 5): "GPT-5.3 dropping tomorrow" — TIME-SENSITIVE. If March 8 passed without GPT-5.3, this post is misinformation. DO NOT POST if date has passed.
 
@@ -320,3 +320,33 @@
 
   STATS: 22 items reviewed | 81.8% raw pass rate | 3 fixes applied | 0 blocked | 1 flagged
   TREND: Content quality STABILIZED. Cookie-cutter template fix from cycle 5 eliminated that failure class entirely. Deployment blockers remain the critical path to revenue.
+
+[2026-03-07 18:49] PLAYWRIGHT ALERT — 4 RED site(s):
+  ✗ WalkToUnlock Web | https://walktounlock-web.surge.sh | HTTP 504
+  ✗ Plumber Miami ZIP2 | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
+  ✗ Pentecostal Streak | https://pentecostal-streak.surge.sh | HTTP 504
+  ✗ Methodist Streak | https://methodist-streak.surge.sh | HTTP 504
+
+[2026-03-07 18:55] PLAYWRIGHT ALERT — CORRECTED after investigation:
+  3 of 4 initial RED sites were false positives (transient CDN 504 during bulk test burst).
+  Confirmed GREEN on retest: walktounlock-web, pentecostal-streak, methodist-streak.
+  hilal-ramadan: confirmed working PWA (JS-rendered, not truly blank).
+
+  1 TRUE PERMANENT RED:
+  ✗ Plumber Miami ZIP2 | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh
+    DNS FAILURE — 65-char subdomain exceeds 63-char DNS label limit. UNFIXABLE at this URL.
+    ACTION: redeploy to shorter domain (e.g. miami-local-plumbers.surge.sh)
+
+  YELLOW sites to watch (surge.sh CDN edge latency, not code issues):
+  ~ PrayerLock Web: 5737ms (200 OK)
+  ~ MealMaxx Web: 5840ms (200 OK)
+  ~ SleepMaxx Web: 6296ms (200 OK)
+  ~ Hilal App: 5848ms (200 OK)
+  ~ PrintMaxx Apps Hub: 5040ms (200 OK)
+  ~ Sunni Streak: 5268ms (200 OK)
+  ~ Anglican Streak: 5485ms (200 OK)
+  ~ Baptist Streak: 5581ms (200 OK)
+  ~ Protestant Streak: 6033ms (200 OK)
+  ~ Restaurant Site Demo: 1 console error
+
+  FINAL: 150/161 GREEN (93.2%) | 10 YELLOW | 1 RED

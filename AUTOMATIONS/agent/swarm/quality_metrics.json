@@ -55,7 +55,7 @@
       "printmaxx.surge.sh returning 404 (MAIN SITE DOWN since cycle 2, 15+ hours)",
       "17 landing pages still have dead CTAs (href='#') - ZERO conversion possible",
       "BUFFER_UPLOAD_MAR7.csv still blocked (tweet_drafter.py pipeline bug)",
-      "hilal.surge.sh and prayerlock-app.surge.sh broken footer links (printmaxx-lead-magnets.surge.sh -> should be printmaxx-magnets.surge.sh)"
+      "hilal.surge.sh and prayerlock-app.surge.sh broken footer links (printmaxx-magnets.surge.sh -> should be printmaxx-magnets.surge.sh)"
     ],
     "improvement": "printmaxx-site.surge.sh RECOVERED from 404 to 200 since last cycle"
   },

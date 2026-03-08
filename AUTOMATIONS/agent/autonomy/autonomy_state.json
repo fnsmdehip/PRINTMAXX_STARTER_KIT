@@ -166,10 +166,10 @@
       "interval_hours": 4,
       "config": {
         "cities_completed": [
-          "Nashville"
+          "Nashville",
+          "Memphis"
         ],
         "cities_queued": [
-          "Memphis",
           "Knoxville",
           "Chattanooga",
           "Birmingham",
@@ -190,11 +190,11 @@
           "cleaning",
           "handyman"
         ],
-        "current_city_index": 1
+        "current_city_index": 2
       },
       "created_at": "2026-03-06T21:12:49.502027",
-      "last_run": "2026-03-07T06:48:08.535280",
-      "cycles_run": 1,
+      "last_run": "2026-03-07T17:45:00.000000",
+      "cycles_run": 2,
       "results": [
         {
           "cycle": 1,
@@ -219,37 +219,63 @@
           "leads_csv": "AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/nashville_leads.csv",
           "emails_file": "AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/nashville_cycle1_emails.md",
           "status": "SUCCESS"
+        },
+        {
+          "cycle": 2,
+          "timestamp": "2026-03-07T17:45:00.000000",
+          "city": "Memphis",
+          "state": "TN",
+          "businesses_discovered": 35,
+          "websites_graded": 12,
+          "grade_distribution": {
+            "A-": 1,
+            "B+": 5,
+            "B": 2,
+            "B-": 1,
+            "C+": 2,
+            "D": 1
+          },
+          "previews_built": 2,
+          "previews_deployed": 2,
+          "deploy_urls": [
+            "https://shop-of-memphis-preview.surge.sh",
+            "https://jss-janitorial-memphis.surge.sh"
+          ],
+          "emails_drafted": 2,
+          "leads_csv": "AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/memphis_leads.csv",
+          "emails_file": "AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/memphis_cycle2_emails.md",
+          "status": "SUCCESS"
         }
       ],
       "pipeline_stats": {
         "discover": {
-          "runs": 1,
-          "successes": 1,
-          "last_run": "2026-03-07T06:48:08.535280"
+          "runs": 2,
+          "successes": 2,
+          "last_run": "2026-03-07T17:45:00.000000"
         },
         "grade": {
-          "runs": 1,
-          "successes": 1,
-          "last_run": "2026-03-07T06:48:08.535280"
+          "runs": 2,
+          "successes": 2,
+          "last_run": "2026-03-07T17:45:00.000000"
         },
         "build_preview": {
-          "runs": 1,
-          "successes": 1,
-          "last_run": "2026-03-07T06:48:08.535280"
+          "runs": 2,
+          "successes": 2,
+          "last_run": "2026-03-07T17:45:00.000000"
         },
         "deploy": {
-          "runs": 1,
-          "successes": 1,
-          "last_run": "2026-03-07T06:48:08.535280"
+          "runs": 2,
+          "successes": 2,
+          "last_run": "2026-03-07T17:45:00.000000"
         },
         "outreach": {
-          "runs": 1,
-          "successes": 1,
-          "last_run": "2026-03-07T06:48:08.535280"
+          "runs": 2,
+          "successes": 2,
+          "last_run": "2026-03-07T17:45:00.000000"
         },
         "track": {
-          "runs": 0,
-          "successes": 0,
+          "runs": 1,
+          "successes": 1,
           "last_run": null
         }
       }

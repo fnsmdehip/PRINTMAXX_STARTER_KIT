@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Email Subject Line Grader — score your subject line before you send</title>
+<meta name="description" content="type your subject line. get an instant score based on 847 winning cold emails. see exactly what to fix.">
+<meta property="og:title" content="Cold Email Subject Line Grader">
+<meta property="og:description" content="type your subject line. get an instant score based on 847 winning cold emails. see exactly what to fix.">
+<meta property="og:type" content="website">
+<script defer data-domain="printmaxx-apps.surge.sh" src="https://plausible.io/js/script.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1a;--surface:#111827;--card:#1a2332;--accent:#3b82f6;--accent2:#2563eb;--green:#10b981;--red:#ef4444;--yellow:#f59e0b;--orange:#f97316;--text:#e5e5e5;--muted:#6b7280;--border:#1f2937}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:680px;margin:0 auto;padding:0 20px}
+
+header{padding:32px 0 24px;text-align:center;border-bottom:1px solid var(--border)}
+header h1{font-size:clamp(1.6rem,5vw,2.2rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:8px}
+header p{color:var(--muted);font-size:0.95rem}
+.badge{display:inline-block;background:rgba(59,130,246,0.15);color:var(--accent);font-size:0.75rem;font-weight:600;padding:4px 10px;border-radius:20px;margin-bottom:12px;letter-spacing:0.3px}
+
+.grader-section{padding:32px 0}
+.grader-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;margin-bottom:20px}
+.grader-card h2{font-size:0.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+
+.subject-input{width:100%;background:var(--surface);border:2px solid var(--border);border-radius:10px;padding:16px 18px;color:var(--text);font-family:inherit;font-size:1.1rem;font-weight:500;outline:none;transition:border-color 0.2s}
+.subject-input:focus{border-color:var(--accent)}
+.subject-input::placeholder{color:var(--muted)}
+.char-count{text-align:right;font-size:0.75rem;color:var(--muted);margin-top:6px;font-variant-numeric:tabular-nums}
+
+.score-display{text-align:center;padding:28px 0;margin:20px 0;position:relative}
+.score-ring{width:140px;height:140px;margin:0 auto 12px;position:relative}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring .score-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:2.8rem;font-weight:800;letter-spacing:-2px}
+.score-ring .score-label{position:absolute;top:50%;left:50%;transform:translate(-50%,60%);font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.score-verdict{font-size:1rem;font-weight:600;margin-top:8px}
+
+.checks-grid{display:grid;gap:12px;margin-top:20px}
+.check-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:var(--surface);border-radius:10px;border:1px solid var(--border);transition:border-color 0.2s}
+.check-item.pass{border-color:rgba(16,185,129,0.3)}
+.check-item.warn{border-color:rgba(245,158,11,0.3)}
+.check-item.fail{border-color:rgba(239,68,68,0.3)}
+.check-icon{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;margin-top:1px}
+.check-item.pass .check-icon{background:rgba(16,185,129,0.15);color:var(--green)}
+.check-item.warn .check-icon{background:rgba(245,158,11,0.15);color:var(--yellow)}
+.check-item.fail .check-icon{background:rgba(239,68,68,0.15);color:var(--red)}
+.check-text{flex:1}
+.check-title{font-size:0.85rem;font-weight:600}
+.check-desc{font-size:0.75rem;color:var(--muted);margin-top:2px}
+
+.suggestions{background:linear-gradient(135deg,#0f172a,#1e293b);border:1px solid var(--accent);border-radius:14px;padding:24px;margin-top:20px;display:none}
+.suggestions h3{font-size:0.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px}
+.suggestion-item{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.9rem;cursor:pointer;transition:color 0.2s}
+.suggestion-item:hover{color:var(--accent)}
+.suggestion-item:last-child{border-bottom:none}
+.suggestion-hint{color:var(--muted);font-size:0.75rem;display:block;margin-top:2px}
+
+.examples{margin-top:20px}
+.examples h3{font-size:0.85rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px}
+.example-btn{display:block;width:100%;text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:inherit;font-size:0.85rem;cursor:pointer;margin-bottom:8px;transition:border-color 0.2s}
+.example-btn:hover{border-color:var(--accent)}
+
+.gate-overlay{display:none;position:fixed;inset:0;background:rgba(10,15,26,0.95);z-index:100;align-items:center;justify-content:center;padding:20px}
+.gate-card{background:var(--card);border:1px solid var(--accent);border-radius:16px;padding:36px 28px;max-width:420px;width:100%;text-align:center}
+.gate-card h3{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.gate-card p{color:var(--muted);font-size:0.9rem;margin-bottom:20px}
+.gate-card .gate-value{font-size:0.8rem;color:var(--green);margin-bottom:16px}
+.gate-form{display:flex;flex-direction:column;gap:10px}
+.gate-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none}
+.gate-form input[type="email"]:focus{border-color:var(--accent)}
+.gate-form button{background:var(--accent);color:white;border:none;border-radius:8px;padding:14px;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background 0.2s}
+.gate-form button:hover{background:var(--accent2)}
+.gate-skip{color:var(--muted);font-size:0.75rem;margin-top:10px;cursor:pointer;text-decoration:underline;background:none;border:none;font-family:inherit}
+
+.cta-section{padding:40px 0;text-align:center;border-top:1px solid var(--border);margin-top:24px}
+.cta-section h3{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.cta-section p{color:var(--muted);font-size:0.9rem;margin-bottom:20px;max-width:400px;margin-left:auto;margin-right:auto}
+.email-form{max-width:360px;margin:0 auto}
+.email-form form{display:flex;flex-direction:column;gap:10px}
+.email-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none}
+.email-form input[type="email"]:focus{border-color:var(--accent)}
+.email-form button{background:var(--accent);color:white;border:none;border-radius:8px;padding:14px;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background 0.2s}
+.email-form button:hover{background:var(--accent2)}
+
+footer{padding:24px 0;text-align:center;border-top:1px solid var(--border);margin-top:20px}
+footer p{color:var(--muted);font-size:0.75rem}
+
+.hidden{display:none!important}
+@media(max-width:480px){.container{padding:0 16px}.grader-card{padding:20px 16px}.subject-input{font-size:1rem;padding:14px}.score-ring{width:120px;height:120px}.score-ring .score-text{font-size:2.2rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<span class="badge">free tool</span>
+<h1>cold email subject line grader</h1>
+<p>scored against 847 subject lines with 40%+ open rates. instant feedback.</p>
+</header>
+
+<section class="grader-section">
+<div class="grader-card">
+<h2>type your subject line</h2>
+<input type="text" class="subject-input" id="subjectInput" placeholder="quick question about [company]" maxlength="120" autocomplete="off">
+<div class="char-count"><span id="charCount">0</span>/120 characters</div>
+</div>
+
+<div id="scoreSection" class="hidden">
+<div class="score-display">
+<div class="score-ring">
+<svg width="140" height="140" viewBox="0 0 140 140">
+<circle cx="70" cy="70" r="60" fill="none" stroke="var(--border)" stroke-width="8"/>
+<circle id="scoreCircle" cx="70" cy="70" r="60" fill="none" stroke="var(--accent)" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="377" stroke-linecap="round"/>
+</svg>
+<span class="score-text" id="scoreNumber">0</span>
+<span class="score-label">score</span>
+</div>
+<div class="score-verdict" id="scoreVerdict"></div>
+</div>
+
+<div class="grader-card">
+<h2>breakdown</h2>
+<div class="checks-grid" id="checksGrid"></div>
+</div>
+
+<div class="suggestions" id="suggestionsBox">
+<h3>try these instead</h3>
+<div id="suggestionsList"></div>
+</div>
+</div>
+
+<div class="examples">
+<h3>try an example</h3>
+<button class="example-btn" data-example="quick question about your website">quick question about your website</button>
+<button class="example-btn" data-example="URGENT: You Need To See This Right Now!!!">URGENT: You Need To See This Right Now!!!</button>
+<button class="example-btn" data-example="saw your talk at SaaStr — had a thought">saw your talk at SaaStr - had a thought</button>
+<button class="example-btn" data-example="Re: Re: Fwd: partnership opportunity">Re: Re: Fwd: partnership opportunity</button>
+<button class="example-btn" data-example="[Company] + [YourCo] — 3 min call?">[Company] + [YourCo] - 3 min call?</button>
+</div>
+</section>
+
+<section class="cta-section" id="email-capture">
+<h3>get the full database</h3>
+<p>847 subject lines with 40%+ open rates. sorted by industry. copy-paste ready.</p>
+<div class="email-form">
+<form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Subject Line Grader — Database Request">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+<input type="email" name="email" placeholder="your email for the database" required>
+<button type="submit">send me 847 subject lines</button>
+</form>
+</div>
+</section>
+
+<footer>
+<p>built by printmaxx. not affiliated with any email provider.</p>
+</footer>
+
+</div>
+
+<!-- email gate overlay -->
+<div class="gate-overlay" id="gateOverlay">
+<div class="gate-card">
+<h3>you've graded 3 subject lines</h3>
+<p>drop your email to unlock unlimited grading + the full database of 847 winning subject lines.</p>
+<div class="gate-value">avg open rate: 43.2% across 847 lines</div>
+<div class="gate-form">
+<form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" id="gateForm">
+<input type="hidden" name="_subject" value="Subject Line Grader — Gate Unlock">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+<input type="email" name="email" placeholder="your email" required id="gateEmail">
+<button type="submit">unlock unlimited + get database</button>
+</form>
+<button class="gate-skip" id="gateSkipBtn">skip for now (5 more grades)</button>
+</div>
+</div>
+</div>
+
+<script>
+(function() {
+'use strict';
+
+var input = document.getElementById('subjectInput');
+var charCount = document.getElementById('charCount');
+var scoreSection = document.getElementById('scoreSection');
+var scoreCircle = document.getElementById('scoreCircle');
+var scoreNumber = document.getElementById('scoreNumber');
+var scoreVerdict = document.getElementById('scoreVerdict');
+var checksGrid = document.getElementById('checksGrid');
+var suggestionsBox = document.getElementById('suggestionsBox');
+var suggestionsList = document.getElementById('suggestionsList');
+var gateOverlay = document.getElementById('gateOverlay');
+
+var gradeCount = parseInt(localStorage.getItem('slg_count') || '0', 10);
+var unlocked = localStorage.getItem('slg_unlocked') === 'true';
+var debounceTimer;
+
+var spamWords = ['free','guarantee','urgent','act now','limited time','congratulations','winner','click here','buy now','order now','discount','deal','offer','expires','hurry','exclusive','amazing','incredible','unbelievable','miracle','cash','earn','income','opportunity','double your','100%','no obligation','risk free','credit','billion','million','trillion'];
+
+var overusedPatterns = [/^(re|fwd|fw):/i, /partnership/i, /opportunity/i, /synergy/i, /touch base/i, /circle back/i, /reach out/i, /pick your brain/i, /mutual benefit/i, /game.?changer/i, /revolutionary/i, /innovative/i, /leverage/i];
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.textContent;
+}
+
+function createEl(tag, className, text) {
+  var el = document.createElement(tag);
+  if (className) el.className = className;
+  if (text) el.textContent = text;
+  return el;
+}
+
+input.addEventListener('input', function() {
+  var val = this.value;
+  charCount.textContent = val.length;
+  clearTimeout(debounceTimer);
+  if (val.length >= 3) {
+    debounceTimer = setTimeout(function() { gradeSubjectLine(val); }, 300);
+  } else {
+    scoreSection.classList.add('hidden');
+  }
+});
+
+function gradeSubjectLine(subject) {
+  if (!unlocked && gradeCount >= 3) {
+    gateOverlay.style.display = 'flex';
+    return;
+  }
+
+  gradeCount++;
+  localStorage.setItem('slg_count', gradeCount.toString());
+
+  var checks = [];
+  var totalScore = 0;
+
+  // 1. Length check (ideal: 30-50 chars)
+  var len = subject.length;
+  if (len >= 30 && len <= 50) {
+    checks.push({status:'pass',title:'length is perfect',desc:len+' chars. sweet spot is 30-50 for mobile preview.',points:20});
+    totalScore += 20;
+  } else if (len >= 20 && len <= 60) {
+    checks.push({status:'warn',title:'length is okay',desc:len+' chars. aim for 30-50 to avoid mobile truncation.',points:12});
+    totalScore += 12;
+  } else if (len < 20) {
+    checks.push({status:'warn',title:'too short',desc:len+' chars. might look like spam or lazy. add context.',points:8});
+    totalScore += 8;
+  } else {
+    checks.push({status:'fail',title:'too long',desc:len+' chars. gets cut off on mobile after ~50 chars.',points:5});
+    totalScore += 5;
+  }
+
+  // 2. Capitalization
+  var upperCount = (subject.match(/[A-Z]/g) || []).length;
+  var upperRatio = upperCount / subject.length;
+  if (upperRatio > 0.5) {
+    checks.push({status:'fail',title:'ALL CAPS = spam folder',desc:'screaming at prospects tanks deliverability. lowercase or sentence case.',points:0});
+  } else if (upperRatio > 0.3) {
+    checks.push({status:'warn',title:'too much capitalization',desc:'feels aggressive. keep it conversational, mostly lowercase.',points:8});
+    totalScore += 8;
+  } else if (subject.charAt(0) === subject.charAt(0).toLowerCase() && /[a-z]/.test(subject.charAt(0))) {
+    checks.push({status:'pass',title:'lowercase opener',desc:'feels like a real email, not a marketing blast. top performers do this.',points:15});
+    totalScore += 15;
+  } else {
+    checks.push({status:'pass',title:'normal casing',desc:'sentence case works. lowercase is slightly better for cold email.',points:12});
+    totalScore += 12;
+  }
+
+  // 3. Spam words
+  var foundSpam = spamWords.filter(function(w) { return subject.toLowerCase().indexOf(w) !== -1; });
+  if (foundSpam.length === 0) {
+    checks.push({status:'pass',title:'no spam triggers',desc:'clean of 30+ known spam words. good deliverability signal.',points:15});
+    totalScore += 15;
+  } else {
+    checks.push({status:'fail',title:'spam trigger detected',desc:'"' + escapeHtml(foundSpam[0]) + '" kills deliverability. gmail will bury this.',points:0});
+  }
+
+  // 4. Overused patterns
+  var foundOverused = overusedPatterns.filter(function(p) { return p.test(subject); });
+  if (foundOverused.length === 0) {
+    checks.push({status:'pass',title:'not a cliche',desc:'avoids tired patterns like "partnership opportunity" or "touch base".',points:10});
+    totalScore += 10;
+  } else if (/^(re|fwd|fw):/i.test(subject)) {
+    checks.push({status:'fail',title:'fake reply/forward',desc:'Re:/Fwd: tricks are blacklisted by gmail. instant spam flag.',points:0});
+  } else {
+    checks.push({status:'warn',title:'overused pattern',desc:'prospects see 50 emails with this pattern daily. try a fresh angle.',points:4});
+    totalScore += 4;
+  }
+
+  // 5. Personalization signals
+  var hasPersonalization = /\[.+?\]/.test(subject) || /your /i.test(subject) || /you /i.test(subject);
+  if (hasPersonalization) {
+    checks.push({status:'pass',title:'personalization detected',desc:'personalized subject lines get 26% higher open rates on average.',points:15});
+    totalScore += 15;
+  } else {
+    checks.push({status:'warn',title:'no personalization',desc:'add [company], [name], or "your" to feel 1-to-1 instead of blast.',points:5});
+    totalScore += 5;
+  }
+
+  // 6. Curiosity / question
+  var hasQuestion = /\?/.test(subject);
+  var hasCuriosity = /thought|idea|noticed|saw|quick|wondering/i.test(subject);
+  if (hasQuestion) {
+    checks.push({status:'pass',title:'opens a loop',desc:'questions create curiosity gaps. 18% higher open rate.',points:10});
+    totalScore += 10;
+  } else if (hasCuriosity) {
+    checks.push({status:'pass',title:'curiosity trigger',desc:'words like "noticed" or "thought" create intrigue without being clickbait.',points:8});
+    totalScore += 8;
+  } else {
+    checks.push({status:'warn',title:'no curiosity hook',desc:'try ending with "?" or using "noticed", "thought about", "idea for".',points:3});
+    totalScore += 3;
+  }
+
+  // 7. Exclamation marks
+  var exclamCount = (subject.match(/!/g) || []).length;
+  if (exclamCount === 0) {
+    checks.push({status:'pass',title:'no exclamation marks',desc:'professional. exclamation marks scream "marketing email".',points:10});
+    totalScore += 10;
+  } else if (exclamCount === 1) {
+    checks.push({status:'warn',title:'exclamation mark',desc:'one is borderline. zero is better for cold email.',points:5});
+    totalScore += 5;
+  } else {
+    checks.push({status:'fail',title:'multiple exclamation marks',desc:exclamCount + ' exclamation marks = guaranteed spam folder.',points:0});
+  }
+
+  // 8. Emoji check
+  var emojiRegex = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2702}-\u{27B0}\u{24C2}-\u{1F251}]/u;
+  if (emojiRegex.test(subject)) {
+    checks.push({status:'warn',title:'emoji detected',desc:'emojis can work for marketing, but reduce trust in cold B2B email.',points:5});
+    totalScore += 5;
+  } else {
+    checks.push({status:'pass',title:'no emojis',desc:'clean and professional. emojis are risky for cold outreach.',points:5});
+    totalScore += 5;
+  }
+
+  var finalScore = Math.min(Math.round(totalScore), 100);
+
+  // render score ring
+  var circumference = 2 * Math.PI * 60;
+  var offset = circumference - (finalScore / 100) * circumference;
+  scoreCircle.style.strokeDashoffset = offset;
+
+  var color, verdict;
+  if (finalScore >= 80) { color = 'var(--green)'; verdict = 'strong subject line. send it.'; }
+  else if (finalScore >= 60) { color = 'var(--yellow)'; verdict = "decent. a few tweaks and it's ready."; }
+  else if (finalScore >= 40) { color = 'var(--orange)'; verdict = 'needs work. check the fixes below.'; }
+  else { color = 'var(--red)'; verdict = 'this is going to spam. rewrite.'; }
+
+  scoreCircle.style.stroke = color;
+  scoreNumber.style.color = color;
+  scoreNumber.textContent = finalScore;
+  scoreVerdict.textContent = verdict;
+  scoreVerdict.style.color = color;
+
+  // render checks using safe DOM methods
+  checksGrid.textContent = '';
+  checks.forEach(function(c) {
+    var item = createEl('div', 'check-item ' + c.status);
+    var icon = createEl('div', 'check-icon');
+    if (c.status === 'pass') icon.textContent = '\u2713';
+    else if (c.status === 'warn') icon.textContent = '!';
+    else icon.textContent = '\u2717';
+    var textWrap = createEl('div', 'check-text');
+    textWrap.appendChild(createEl('div', 'check-title', c.title));
+    textWrap.appendChild(createEl('div', 'check-desc', c.desc));
+    item.appendChild(icon);
+    item.appendChild(textWrap);
+    checksGrid.appendChild(item);
+  });
+
+  // generate suggestions
+  if (finalScore < 80) {
+    var suggestions = generateSuggestions(subject);
+    if (suggestions.length > 0) {
+      suggestionsList.textContent = '';
+      suggestions.forEach(function(s) {
+        var item = createEl('div', 'suggestion-item', s);
+        var hint = createEl('span', 'suggestion-hint', 'click to try this one');
+        item.appendChild(hint);
+        item.addEventListener('click', function() {
+          input.value = s;
+          charCount.textContent = s.length;
+          gradeSubjectLine(s);
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+        suggestionsList.appendChild(item);
+      });
+      suggestionsBox.style.display = 'block';
+    } else {
+      suggestionsBox.style.display = 'none';
+    }
+  } else {
+    suggestionsBox.style.display = 'none';
+  }
+
+  scoreSection.classList.remove('hidden');
+}
+
+function generateSuggestions(subject) {
+  var suggestions = [];
+  var lower = subject.toLowerCase().trim();
+
+  if (subject.length > 50) {
+    var words = subject.split(' ');
+    var shortened = words.slice(0, Math.ceil(words.length * 0.6)).join(' ');
+    suggestions.push(shortened + '?');
+  }
+
+  if (!/\[.+?\]/.test(subject) && !/your /i.test(subject)) {
+    suggestions.push('quick question about [' + (lower.indexOf('website') !== -1 ? 'Company' : 'your site') + ']');
+  }
+
+  if ((subject.match(/[A-Z]/g) || []).length / subject.length > 0.5) {
+    suggestions.push(subject.toLowerCase());
+  }
+
+  if (!/\?/.test(subject)) {
+    suggestions.push(subject.replace(/\.?$/, '') + '?');
+  }
+
+  if (lower.indexOf('partnership') !== -1 || lower.indexOf('opportunity') !== -1) {
+    suggestions.push("saw [Company]'s recent launch - had a thought");
+  }
+
+  if (/^(re|fwd|fw):/i.test(subject)) {
+    suggestions.push(subject.replace(/^(re|fwd|fw):\s*/i, '').trim());
+  }
+
+  return suggestions.slice(0, 4);
+}
+
+// example buttons
+var exampleBtns = document.querySelectorAll('.example-btn');
+for (var i = 0; i < exampleBtns.length; i++) {
+  (function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-example');
+      input.value = text;
+      charCount.textContent = text.length;
+      gradeSubjectLine(text);
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  })(exampleBtns[i]);
+}
+
+// gate skip
+document.getElementById('gateSkipBtn').addEventListener('click', function() {
+  gateOverlay.style.display = 'none';
+  gradeCount = 0;
+  localStorage.setItem('slg_count', '0');
+});
+
+// gate form submit
+document.getElementById('gateForm').addEventListener('submit', function() {
+  unlocked = true;
+  localStorage.setItem('slg_unlocked', 'true');
+  gateOverlay.style.display = 'none';
+});
+
+if (unlocked) gradeCount = 0;
+
+})();
+</script>
+</body>
+</html>

@@ -140,3 +140,14 @@ skool.com/aimvpbuilders/
 about
 …
 
+
+
+---
+
+## Pending Enhancement (ALPHA17539, Score: 52)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://whop.com
+**Added:** 2026-03-07T19:03:36-05:00
+
+Whop Marketplace digital product portfolio. Whop has organic discovery (Gumroad doesn't). $2B+ sold. 6% fees vs Gumroad 10%. List existing products for free traffic. Brazilian creators 4.79% breakout rate. Supports communities + courses + downloads.
+
