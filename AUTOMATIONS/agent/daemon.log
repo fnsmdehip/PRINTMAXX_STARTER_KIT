@@ -256,3 +256,14 @@ JSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/c
 [21:00:08] [INFO] CYCLE COMPLETE — 3 missions in 9s
 [21:00:08] [INFO] ============================================================
 [21:00:08] [INFO] Sleeping 3591s until 22:00
+[00:03:22] [INFO] AGENT DAEMON STARTING — Ctrl+C to stop
+[00:03:22] [INFO] Cycle interval: 60 minutes (missions self-throttle by frequency)
+[00:03:22] [INFO] ============================================================
+[00:03:22] [INFO] AGENT CYCLE START — 2026-03-08 00:03
+[00:03:22] [INFO] Disk: 26.0GB free | Missions completed: 61 | Failed: 3
+[00:03:22] [INFO] ============================================================
+[00:03:22] [INFO] MISSION: Health & heal
+[00:03:23] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (1.1s)
+[00:03:23] [INFO] MISSION: Process & decide
+[00:03:23] [INFO]   [SUCCESS] process_decide: Decisions made. 27 response drafts, 23 listing drafts (0.5s)
+[00:03:23] [INFO] MISSION: Research & scrape

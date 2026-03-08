@@ -162,6 +162,15 @@ Working directory: {project}
 
 Your job: turn EVERYTHING into content. Every piece of work = 5+ content pieces across channels. Every 2 hours.
 
+INTELLIGENCE (QUERY FIRST):
+  python3 AUTOMATIONS/intelligence_router.py --venture CONTENT --task repurpose --brief
+Key docs for content compounding:
+  - CONTENT/growth/buildout/G01_G15_growth/cross_pollination_playbook.md (one input to 4+ output channels across 3 pillars)
+  - 06_OPERATIONS/growth/ENGAGEMENT_FARMING_TACTICS.md (reply bait + engagement farming patterns)
+  - CONTENT/growth/buildout/N_series/build_in_public.md (3-5x conversion from documenting the build)
+  - 06_OPERATIONS/growth/NICHE_POSTING_STRATEGY.md (niche-specific templates for tech/faith/fitness)
+  - 06_OPERATIONS/growth/TWITTER_META_JANUARY_2026.md (current viral formats: vibe coding, revenue screenshots)
+
 CYCLE:
 1. SCAN FOR RAW MATERIAL: Check these for new content sources:
    - AUTOMATIONS/agent/swarm/reports/ — any new reports = content
@@ -459,6 +468,17 @@ Working directory: {project}
 
 Your job: maximize the surface area of everything we've built. Every 3 hours.
 
+INTELLIGENCE (QUERY FIRST):
+  python3 AUTOMATIONS/intelligence_router.py --venture GROWTH --task distribution --brief
+Key growth docs to check for distribution tactics:
+  - 06_OPERATIONS/growth/DM_FUNNEL_PLAYBOOK.md (keyword DM funnels, 15-30% reply rate)
+  - CONTENT/growth/buildout/N_series/clipper_army_sop.md (10x distribution via secondary accounts)
+  - CONTENT/growth/buildout/N_series/swarm_promotion.md (4-layer coordinated launch)
+  - CONTENT/growth/buildout/N_series/product_hunt_playbook.md (top 5 = 500-2000 signups/24h)
+  - CONTENT/growth/buildout/N_series/github_trending.md (50-200 stars/24h = trending)
+  - CONTENT/growth/buildout/N_series/medium_substack_strategy.md (Medium DA 95 for SEO, Substack for monetization)
+  - CONTENT/growth/buildout/G01_G15_growth/cross_pollination_playbook.md (one input to 4+ output channels)
+
 CYCLE:
 1. INVENTORY: List all distributable assets:
    - Deployed websites/apps (from surge list or deployed_assets.json)
@@ -493,6 +513,18 @@ Rules: All files stay in {project}. Follow copy-style.md. Platform-native conten
 Working directory: {project}
 
 Your job: create a firehose of inbound leads and opportunities. Every 4 hours.
+
+INTELLIGENCE (QUERY FIRST):
+  python3 AUTOMATIONS/intelligence_router.py --venture GROWTH --task engagement --brief
+  python3 AUTOMATIONS/intelligence_router.py --venture CONTENT --task engagement --brief
+Key growth docs for inbound:
+  - 06_OPERATIONS/growth/ENGAGEMENT_FARMING_TACTICS.md (1 reply = 4x value of like, reply guy 5-touch)
+  - 06_OPERATIONS/growth/TWITTER_META_JANUARY_2026.md (vibe coding 150K+ views, reply guy 3.1M impressions)
+  - CONTENT/growth/buildout/N_series/reply_guy_strategy.md (500-2000 followers/month at $0)
+  - CONTENT/growth/buildout/N_series/build_in_public.md (3-5x conversion vs cold launch)
+  - 06_OPERATIONS/growth/LANDING_PAGE_OPTIMIZATION_GUIDE.md (5-second test, 80% conversions above-fold)
+  - 06_OPERATIONS/growth/SEO_GEO_ASO_TACTICS_2026.md (E-E-A-T, AI Overview optimization)
+  - CONTENT/growth/buildout/N_series/entity_seo.md (build entity in Google Knowledge Graph)
 
 CYCLE:
 1. AUDIT INBOUND: Check all inbound channels:
@@ -532,8 +564,33 @@ Working directory: {project}
 
 You are NOT a worker agent. You are the MANAGER. You read what all other agents produced, evaluate their performance, and make strategic decisions about the swarm.
 
+INTELLIGENCE SYSTEM (USE THIS FIRST):
+Before making ANY strategic decision, query the intelligence router:
+  python3 AUTOMATIONS/intelligence_router.py --stats (coverage overview)
+  python3 AUTOMATIONS/intelligence_router.py --venture GROWTH --full (growth tactics, edge methods, grey hat status)
+  python3 AUTOMATIONS/intelligence_router.py --venture GROWTH --task grey_hat --full (grey hat tactics: what's dead/alive/dying)
+  python3 AUTOMATIONS/intelligence_router.py --venture GROWTH --task engagement --full (engagement farming, reply guy, platform algo notes)
+  python3 AUTOMATIONS/intelligence_router.py --venture CONTENT --task engagement --brief (engagement intel)
+  python3 AUTOMATIONS/intelligence_router.py --venture OUTBOUND --task outreach --brief (outbound intel)
+The router aggregates 250+ docs, 14,797+ alpha entries, 31 growth docs, swarm reports, and method CSVs.
+
+CRITICAL GROWTH/EDGE DOCS (read when making growth or content decisions):
+  06_OPERATIONS/growth/EDGE_GROWTH_TACTICS.md — Instagram/TikTok/X safe limits by account age, mobile proxies required
+  06_OPERATIONS/growth/GREY_HAT_UPDATE_JAN_2026.md — follow/unfollow DEAD, pods DYING, warming ESSENTIAL, X Premium mandatory
+  06_OPERATIONS/growth/ENGAGEMENT_FARMING_TACTICS.md — reply guy 5-touch rule, 1 reply = 4x value of like
+  06_OPERATIONS/growth/TWITTER_META_JANUARY_2026.md — vibe coding 150K+ views, reply guy validated 3.1M impressions
+  06_OPERATIONS/growth/PLATFORM_AUTOMATION_LIMITS_2026.md — hourly/daily limits per platform, ban recovery protocols
+  06_OPERATIONS/growth/PLATFORM_UPDATES_JAN_2026.md — TikTok Oracle algo, IG carousel 2.33%, declining rates YoY
+  CONTENT/growth/buildout/G01_G15_growth/grey_hat_legal.md — ALLOWED/RISKY/ILLEGAL per tactic
+  CONTENT/growth/buildout/G01_G15_growth/multi_account_warmup.md — 21-30 day warmup SOP
+  CONTENT/growth/buildout/N_series/reply_guy_strategy.md — 500-2000 followers/month at $0
+  CONTENT/growth/buildout/N_series/clipper_army_sop.md — 10x distribution via 5-10 secondary accounts
+  CONTENT/growth/buildout/N_series/swarm_promotion.md — 4-layer coordinated launch system
+Also check OPS/INTELLIGENCE_CATALOG.json for the buried gold summary — products ready to sell, leads not contacted, content not posted.
+Also read OPS/DAILY_DIGEST.md for what happened since your last cycle.
+
 CYCLE:
-1. READ ALL REPORTS: Read every file in AUTOMATIONS/agent/swarm/reports/ from the last 24 hours. Read AUTOMATIONS/agent/autonomy/autonomy_state.json for venture agent status. Read AUTOMATIONS/agent/swarm/swarm_state.json for swarm agent status.
+1. READ ALL REPORTS: Read every file in AUTOMATIONS/agent/swarm/reports/ from the last 24 hours. Read AUTOMATIONS/agent/autonomy/autonomy_state.json for venture agent status. Read AUTOMATIONS/agent/swarm/swarm_state.json for swarm agent status. Read OPS/DAILY_DIGEST.md and OPS/INTELLIGENCE_CATALOG.json for buried gold.
 
 2. EVALUATE EACH AGENT: For each agent that ran recently, answer:
    - Did it produce actionable output or just filler?
@@ -580,6 +637,15 @@ Working directory: {project}
 
 You are the ONLY agent that thinks about COMPLETE BUSINESS CYCLES. Every other agent does one job. YOUR job is to make sure those jobs CONNECT into revenue.
 
+INTELLIGENCE SYSTEM (QUERY BEFORE EVERY CYCLE):
+  python3 AUTOMATIONS/intelligence_router.py --venture MONETIZATION --full
+  python3 AUTOMATIONS/intelligence_router.py --venture PRODUCT --task deploy --brief
+  python3 AUTOMATIONS/intelligence_router.py --venture GROWTH --task distribution --brief
+  cat OPS/INTELLIGENCE_CATALOG.json | python3 -c "import json,sys; d=json.load(sys.stdin); [print(f'  {k}: {len(v) if isinstance(v,list) else v}') for k,v in d.get('high_value_summary',d.get('buried_gold_summary',{})).items()]"
+  cat OPS/DAILY_DIGEST.md
+The intelligence router has 250+ indexed docs across 9 ventures, 14,797+ alpha entries, 31 growth/edge/grey hat docs, and a buried_gold_summary showing EXACTLY what's ready to sell but not listed.
+Growth intel includes: platform automation limits (ban prevention), DM funnel playbooks (15-30% reply rate), engagement farming tactics, Product Hunt launch playbook, and distribution amplification strategies.
+
 EXISTING ASSETS YOU MUST KNOW ABOUT:
 - 18+ sites deployed on surge.sh (run `surge list` to see all)
 - Apps: FocusLock, ColdMaxx, WalkToUnlock, SleepMaxx, Hilal, PrayerLock, MealMaxx, ProspectMaxx, ContentCalendar, WebsiteAuditTool, InvoiceTracker, ROICalc, PageScorer, StackMaxx
@@ -588,11 +654,12 @@ EXISTING ASSETS YOU MUST KNOW ABOUT:
 - ETSY_INSTANT_UPLOAD/ — listings ready for Etsy
 - DIGITAL_PRODUCTS/ — ebooks, playbooks, templates, tools ready to sell
 - PRODUCTS/ — physical products, POD designs ready to list
-- 75,000+ rows in LEDGER/ALPHA_STAGING.csv — intelligence not yet acted on
+- 14,797+ rows in LEDGER/ALPHA_STAGING.csv — query via: python3 AUTOMATIONS/alpha_query.py --venture TYPE --json
 - MONEY_METHODS/APP_FACTORY/ — app specs, ASO data, marketing pages
 - AUTOMATIONS/leads/ — lead lists that may not be contacted
-- CONTENT/social/ — content that may not be distributed
-- OpenClaw plumber sites already deployed (Houston TX)
+- CONTENT/social/ — 588 posts generated, 100+ ready to post
+- 06_OPERATIONS/growth/ — 27 growth playbooks including edge tactics, grey hat methods, engagement farming
+- OpenClaw plumber sites already deployed (Houston TX, Memphis TN)
 
 THE BUSINESS CYCLE (every asset must complete this):
   DISCOVER → BUILD → DEPLOY → MONETIZE → DISTRIBUTE → REVENUE → COMPOUND
@@ -908,6 +975,15 @@ Working directory: {project}
 
 You take APPROVED content and prepare it for posting.
 
+INTELLIGENCE (CHECK FIRST):
+  python3 AUTOMATIONS/intelligence_router.py --venture CONTENT --task posting --brief
+Key docs for posting strategy:
+  - 06_OPERATIONS/growth/NICHE_POSTING_STRATEGY.md (reply bait patterns, niche-specific templates)
+  - 06_OPERATIONS/growth/PLATFORM_AUTOMATION_LIMITS_2026.md (safe daily limits per platform)
+  - 06_OPERATIONS/growth/GREY_HAT_UPDATE_JAN_2026.md (what's dead: engagement bait phrases, hashtag stuffing)
+  - 06_OPERATIONS/growth/TWITTER_META_JANUARY_2026.md (current meta: vibe coding, revenue screenshots)
+  - CONTENT/growth/buildout/G01_G15_growth/platform_algorithm_notes.md (reply bait outperforms RT bait 3x)
+
 CYCLE:
 1. FIND APPROVED CONTENT: Scan CONTENT/social/ for files with status APPROVED or marked as approved by quality_gate.
 
@@ -964,6 +1040,52 @@ class SwarmState:
 # PLIST GENERATION + INSTALLATION
 # ══════════════════════════════════════════════════════════════════════════
 
+AGENT_VENTURE_MAP = {
+    "content_compounder": ("CONTENT", "posting"),
+    "social_poster": ("CONTENT", "distribution"),
+    "lead_machine": ("OUTBOUND", "outreach"),
+    "gap_hunter": ("RESEARCH", None),
+    "competitor_stalker": ("RESEARCH", "competitive_intel"),
+    "seo_aso_optimizer": ("GROWTH", "seo"),
+    "revenue_tracker": ("MONETIZATION", None),
+    "asset_deployer": ("PRODUCT", "deploy"),
+    "distribution_engine": ("GROWTH", "distribution"),
+    "inbound_maximizer": ("GROWTH", "inbound"),
+    "trend_synthesizer": ("RESEARCH", "trends"),
+    "cross_pollinator": ("RESEARCH", "cross_pollination"),
+    "image_factory": ("CONTENT", "image"),
+    "video_factory": ("CONTENT", "video"),
+    "conversion_optimizer": ("GROWTH", "conversion"),
+    "system_healer": ("MAINTENANCE", None),
+    "data_janitor": ("MAINTENANCE", None),
+    "alert_dispatcher": ("NOTIFICATION", None),
+    "swarm_brain": ("META", "strategy"),
+    "meta_executor": ("META", "execution"),
+    "quality_gate": ("QUALITY", "review"),
+    "playwright_tester": ("QUALITY", "testing"),
+}
+
+
+def get_agent_intelligence(agent_id):
+    """Query intelligence router for this agent's venture context."""
+    mapping = AGENT_VENTURE_MAP.get(agent_id)
+    if not mapping:
+        return ""
+    venture, task = mapping
+    cmd = [sys.executable, str(AUTOMATIONS / "intelligence_router.py"),
+           "--venture", venture, "--brief"]
+    if task:
+        cmd.extend(["--task", task])
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30,
+                                cwd=str(PROJECT))
+        if result.returncode == 0 and result.stdout.strip():
+            return f"\n\n--- INTELLIGENCE BRIEFING ---\n{result.stdout.strip()}\n--- END BRIEFING ---\n\n"
+    except Exception:
+        pass
+    return ""
+
+
 def generate_plist(agent_id, agent_def):
     """Generate a launchd plist for a swarm agent."""
     label = f"com.printmaxx.swarm.{agent_id}"
@@ -972,8 +1094,11 @@ def generate_plist(agent_id, agent_def):
     error_log = str(LOG_DIR / f"swarm_{agent_id}.error.log")
     model = agent_def.get("model", MODEL_SONNET)
 
+    # Inject intelligence briefing for agents that have venture mappings
+    intel_briefing = get_agent_intelligence(agent_id)
+
     # Build the prompt — escape for XML
-    prompt = agent_def["prompt"].format(
+    prompt = intel_briefing + agent_def["prompt"].format(
         project=str(PROJECT),
         date=datetime.now().strftime("%Y%m%d"),
     )

@@ -550,6 +550,21 @@ class VentureAutonomyEngine:
         log(f"Type: {vtype_key} | Pipeline: {' → '.join(venture['pipeline'])}")
         log(f"{'='*60}")
 
+        # INTELLIGENCE-FIRST: Query intelligence for this venture type
+        intel_brief = ""
+        try:
+            import subprocess as _sp
+            _intel_cmd = [
+                "python3", str(PROJECT / "AUTOMATIONS" / "intelligence_router.py"),
+                "--venture", vtype_key, "--json"
+            ]
+            _intel_result = _sp.run(_intel_cmd, capture_output=True, text=True, timeout=30)
+            if _intel_result.returncode == 0 and _intel_result.stdout.strip():
+                intel_brief = _intel_result.stdout.strip()[:1000]
+                log(f"  Intelligence loaded: {len(intel_brief)} chars for {vtype_key}")
+        except Exception as _ie:
+            log(f"  Intelligence query failed (non-fatal): {_ie}", "WARN")
+
         cycle_results = {}
         scripts = vtype.get("scripts", {})
         config = venture.get("config", {})
@@ -646,8 +661,27 @@ class VentureAutonomyEngine:
 
         log(f"Ran {ran}/{len(active)} ventures this cycle")
 
+    def _get_venture_intelligence(self, venture_type, step=None):
+        """Query intelligence router for venture-specific context."""
+        cmd = [sys.executable, str(AUTOMATIONS / "intelligence_router.py"),
+               "--venture", venture_type, "--brief"]
+        if step:
+            cmd.extend(["--task", step])
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True,
+                                    timeout=30, cwd=str(PROJECT))
+            if result.returncode == 0 and result.stdout.strip():
+                return result.stdout.strip()
+        except Exception:
+            pass
+        return ""
+
     def _run_with_claude(self, venture_id, venture, step, vtype):
         """Use Claude CLI to execute a pipeline step that has no script."""
+        # Get intelligence briefing for this venture + step
+        intel = self._get_venture_intelligence(venture.get("type", ""), step)
+        intel_block = f"\n\nINTELLIGENCE BRIEFING:\n{intel}\n\n" if intel else ""
+
         # Build a focused prompt for this specific step
         prompt = (
             f"Execute step '{step}' for venture '{venture['name']}' "
@@ -658,6 +692,8 @@ class VentureAutonomyEngine:
             f"This is step {venture['pipeline'].index(step) + 1} of "
             f"{len(venture['pipeline'])} in the pipeline: "
             f"{' → '.join(venture['pipeline'])}. "
+            f"{intel_block}"
+            f"Use the intelligence briefing above to inform your decisions. "
             f"Do the minimum viable version of this step and save results."
         )
 

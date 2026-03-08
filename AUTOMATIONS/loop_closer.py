@@ -510,6 +510,10 @@ def execute_decisions(dry_run=False):
             "execute_target": "execute_target",
             "boost": "boost_agent",
             "throttle": "throttle_agent",
+            "priority_shift": "boost_agent",
+            "prioritize": "boost_agent",
+            "deprioritize": "throttle_agent",
+            "generate_content": "generate_content",
         }
 
         registry_key = action_map.get(action_type)

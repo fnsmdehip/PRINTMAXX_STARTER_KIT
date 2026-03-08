@@ -623,6 +623,58 @@ class CEOBrain:
         self.xlsx = xlsx
         self.state = state
 
+    def _get_strategic_intelligence(self):
+        """Pull multi-venture intelligence briefing + buried gold for CEO decisions."""
+        parts = []
+
+        # 1. Growth/edge/grey hat intelligence
+        for venture in ["GROWTH", "MONETIZATION", "CONTENT"]:
+            try:
+                result = subprocess.run(
+                    [sys.executable, str(AUTOMATIONS / "intelligence_router.py"),
+                     "--venture", venture, "--brief"],
+                    capture_output=True, text=True, timeout=15, cwd=str(PROJECT)
+                )
+                if result.returncode == 0 and result.stdout.strip():
+                    parts.append(result.stdout.strip())
+            except Exception:
+                pass
+
+        # 2. Buried gold summary from catalog
+        catalog_path = OPS / "INTELLIGENCE_CATALOG.json"
+        if catalog_path.exists():
+            try:
+                import json as _json
+                catalog = _json.loads(catalog_path.read_text())
+                gold = catalog.get("high_value_summary", catalog.get("buried_gold_summary", {}))
+                if gold:
+                    gold_lines = ["BURIED GOLD (ready to monetize):"]
+                    # Handle both formats: {category: [items]} and {total: N, top_buried_gold: [...]}
+                    top_gold = gold.get("top_buried_gold", [])
+                    if top_gold:
+                        gold_lines.append(f"  {len(top_gold)} top items ready to monetize")
+                        for item in top_gold[:5]:
+                            if isinstance(item, dict):
+                                gold_lines.append(f"  - {item.get('path', '?')}: {item.get('why', '')[:100]}")
+                    else:
+                        for category, items in gold.items():
+                            if isinstance(items, list) and items:
+                                gold_lines.append(f"  {category}: {len(items)} items")
+                    parts.append("\n".join(gold_lines))
+            except Exception:
+                pass
+
+        # 3. Daily digest
+        digest_path = OPS / "DAILY_DIGEST.md"
+        if digest_path.exists():
+            try:
+                digest = digest_path.read_text()[:500]
+                parts.append(f"DAILY DIGEST:\n{digest}")
+            except Exception:
+                pass
+
+        return "\n\n".join(parts) if parts else ""
+
     def analyze_and_decide(self, dry_run=False):
         """
         Run full CEO analysis cycle. Returns list of decisions.
@@ -634,6 +686,11 @@ class CEOBrain:
           KILL     — sunset dead ops (score < kill_threshold, not protected)
           DISCOVER — find entirely new opportunities
         """
+        # Pull strategic intelligence before making decisions
+        intel_brief = self._get_strategic_intelligence()
+        if intel_brief:
+            log(f"  Intelligence briefing loaded ({len(intel_brief)} chars)")
+
         scores = self.scorer.score_all()
         decisions = []
         changes_budget = self.state.data["config"]["max_changes"]
@@ -1276,6 +1333,36 @@ def run_ceo_cycle(dry_run=False):
             log("Phase 3: Git snapshot before changes...")
             audit.capture_baseline()
             git.snapshot("ceo_pre_decisions")
+
+            # 3.5. INTELLIGENCE-FIRST: Query intelligence for decisions about to be executed
+            log("Phase 3.5: Querying intelligence router for decision context...")
+            for d in decisions:
+                op_id = d.get("op_id", "")
+                # Map decision types to venture types for intelligence lookup
+                _venture_type = "RESEARCH"  # default
+                if "APP" in op_id.upper():
+                    _venture_type = "APP"
+                elif "CONTENT" in op_id.upper() or "SOCIAL" in op_id.upper():
+                    _venture_type = "CONTENT"
+                elif "OUTBOUND" in op_id.upper() or "LEAD" in op_id.upper():
+                    _venture_type = "OUTBOUND"
+                elif "LOCAL" in op_id.upper() or "OPENCLAW" in op_id.upper():
+                    _venture_type = "LOCAL_BIZ"
+                elif "MONETIZ" in op_id.upper() or "REVENUE" in op_id.upper():
+                    _venture_type = "MONETIZATION"
+                elif "PRODUCT" in op_id.upper():
+                    _venture_type = "PRODUCT"
+                try:
+                    _intel_cmd = [
+                        "python3", str(AUTOMATIONS / "intelligence_router.py"),
+                        "--venture", _venture_type, "--task", d.get("type", "").lower(), "--brief"
+                    ]
+                    _intel_r = subprocess.run(_intel_cmd, capture_output=True, text=True, timeout=30)
+                    if _intel_r.returncode == 0 and _intel_r.stdout.strip():
+                        d["intelligence_brief"] = _intel_r.stdout.strip()[:500]
+                        log(f"  Intel loaded for {op_id} ({_venture_type}): {len(d['intelligence_brief'])} chars")
+                except Exception as _ie:
+                    log(f"  Intel query for {op_id} failed (non-fatal): {_ie}", "WARN")
 
             # 4. Execute decisions
             log("Phase 4: Executing decisions...")

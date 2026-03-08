@@ -56,6 +56,13 @@ MONEY_METHODS = PROJECT / "MONEY_METHODS"
 DIGITAL_PRODUCTS = PROJECT / "DIGITAL_PRODUCTS"
 PRODUCTS = PROJECT / "PRODUCTS"
 SWARM_REPORTS = AUTOMATIONS / "agent" / "swarm" / "reports"
+STRATEGY = PROJECT / "01_STRATEGY"
+OPS_GTM = PROJECT / "06_OPERATIONS" / "gtm"
+OPS_RESEARCH = PROJECT / "06_OPERATIONS" / "research"
+TREND_INTEL = PROJECT / "06_OPERATIONS" / "trend_intel" / "analyses"
+EMAIL = PROJECT / "EMAIL"
+RESEARCH_DIR = PROJECT / "RESEARCH"
+RALPH = PROJECT / "ralph"
 CATALOG_PATH = OPS / "INTELLIGENCE_CATALOG.json"
 ALPHA_QUERY = AUTOMATIONS / "alpha_query.py"
 PYTHON = sys.executable
@@ -97,7 +104,7 @@ TASK_TYPES = {
     "RESEARCH": ["scraping", "analysis", "scoring", "routing", "monitoring"],
     "SCRAPING": ["setup", "monitoring", "extraction", "analysis", "alerting"],
     "GROWTH": ["acquisition", "retention", "viral", "referral", "seo",
-               "distribution", "partnerships"],
+               "distribution", "partnerships", "engagement", "warmup", "grey_hat"],
 }
 
 # ── Document Mapping ───────────────────────────────────────────────────
@@ -143,6 +150,18 @@ INTELLIGENCE_MAP = {
              "Twitter profile optimization spec — bio, banner, pinned"),
             (PROJECT / "ralph" / "loops" / "social_setup" / "output" / "T5_warmup_schedule.md",
              "Account warmup schedule — day-by-day posting ramp"),
+            (MONEY_METHODS / "CONTENT_FARM" / "FB_REELS_GTM.md",
+             "FB Reels 440x RPM arbitrage vs YouTube Shorts — same content, 100-440x more revenue, day-by-day execution"),
+            (MONEY_METHODS / "CONTENT_FARM" / "YOUTUBE_AI_AUTOMATION_PLAYBOOK.md",
+             "Full YouTube AI automation ops — per-video cost $1.15-2.50, July 2025 crackdown details, $1K-3K/mo target"),
+            (MONEY_METHODS / "AI_CONTENT_AFFILIATE" / "AI_CONTENT_AFFILIATE_PLAYBOOK.md",
+             "Seedance 2.0 + free AI video tools + affiliate = $250-1000/day, $0 stack for 5-8 videos/day"),
+            (MONEY_METHODS / "AI_INFLUENCER" / "AI_VIDEO_TOOLS_COMPARISON.md",
+             "Feb 2026 AI video tool comparison — 8 tools ranked by quality, Veo 3.1 (9.5/10), free tier specs, paid pricing"),
+            (PROJECT / "NICHE_CONTENT_RESEARCH_2025_2026.md",
+             "36KB niche content research — viral tweet formats per niche, platform monetization rates, AI UGC tools, pricing benchmarks"),
+            (OPS_RESEARCH / "COPY_PSYCHOLOGY_MASTER_REFERENCE.md",
+             "Battle-tested psychological frameworks — reply bait Comment Keyword funnel, comments boost reach 10x vs likes"),
         ],
         "dirs": [
             (CONTENT / "growth" / "buildout",
@@ -165,19 +184,29 @@ INTELLIGENCE_MAP = {
                 PROJECT / "ralph" / "loops" / "social_setup" / "output" / "T5_warmup_schedule.md",
                 GROWTH_OPS / "PLATFORM_AUTOMATION_LIMITS_2026.md",
                 GROWTH_OPS / "GREY_HAT_UPDATE_JAN_2026.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "multi_account_warmup.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "grey_hat_legal.md",
             ],
             "engagement": [
                 GROWTH_OPS / "ENGAGEMENT_FARMING_TACTICS.md",
                 CONTENT / "social" / "REPLY_ENGAGEMENT_STRATEGY.md",
                 GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
+                GROWTH_OPS / "TWITTER_META_JANUARY_2026.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "reply_guy_strategy.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "platform_algorithm_notes.md",
             ],
             "distribution": [
                 GROWTH_OPS / "TWITTER_GROWTH_PLAYBOOK_2026.md",
                 GROWTH_OPS / "DM_FUNNEL_PLAYBOOK.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "clipper_army_sop.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "swarm_promotion.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "cross_pollination_playbook.md",
             ],
             "repurpose": [
                 GROWTH_OPS / "NICHE_POSTING_STRATEGY.md",
                 GROWTH_OPS / "TWITTER_GROWTH_PLAYBOOK_2026.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "cross_pollination_playbook.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "medium_substack_strategy.md",
             ],
             "video": [
                 CONTENT / "social" / "TIKTOK_VIRAL_STRATEGY_2026.md",
@@ -191,15 +220,31 @@ INTELLIGENCE_MAP = {
             (GROWTH_OPS / "DM_FUNNEL_PLAYBOOK.md",
              "DM funnel playbook — sequence templates, timing, conversion"),
             (GROWTH_OPS / "LINKEDIN_GROWTH_PLAYBOOK_2026.md",
-             "LinkedIn growth playbook — connection strategy, content, DMs"),
+             "LinkedIn growth playbook — connection strategy, content, DMs, Depth Score algo"),
             (GROWTH_OPS / "LINKEDIN_ALGORITHM_RESEARCH_2025.md",
              "LinkedIn algorithm research — what gets distribution"),
+            (GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
+             "Edge growth tactics — cold email warmup protocols, automation safe limits"),
+            (GROWTH_OPS / "GREY_HAT_UPDATE_JAN_2026.md",
+             "Grey hat update — cold email warmup tools (MailReach, Warmup Inbox $15/inbox), 2-4 weeks minimum"),
+            (GROWTH_OPS / "PLATFORM_AUTOMATION_LIMITS_2026.md",
+             "Platform limits — LinkedIn 10-20 connections/day (new), email 25-30/day per inbox, ban recovery"),
             (GROWTH_OPS / "LANDING_PAGE_OPTIMIZATION_GUIDE.md",
              "Landing page optimization — for outbound traffic conversion"),
             (GROWTH_OPS / "GTM_OPTIMIZATION_CHECKLIST.md",
              "GTM optimization checklist — go-to-market readiness"),
             (AUTOMATIONS / "leads" / "COLD_EMAILS_READY_TO_SEND.md",
              "Cold emails ready to deploy — pre-written sequences"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "linkedin_automation.md",
+             "LinkedIn automation guide — what's ALLOWED vs PROHIBITED, systematic manual outreach SOP"),
+            (MONEY_METHODS / "COLD_OUTBOUND" / "TIER1_COLD_EMAIL_SEQUENCES.md",
+             "3 vertical cold email sequences (healthcare, SaaS, ecom) — @pipelineabuser style, 6-question framework, case studies with ROI math"),
+            (MONEY_METHODS / "COLD_OUTBOUND" / "AUSTIN_LOCAL_BIZ_COLD_EMAIL_SEQUENCES.md",
+             "Austin-specific local business cold email sequences — geo-targeted outreach templates"),
+            (EMAIL / "GOV_CONTRACT_COLD_EMAIL.md",
+             "Government contract cold email templates — Direct Undercut for losing bidders, 6-question framework, A/B subject lines"),
+            (EMAIL / "triggering_events" / "competitor_layoff_template.txt",
+             "Triggering event cold email — competitor layoff signal, ready-to-send with merge fields"),
         ],
         "dirs": [
             (AUTOMATIONS / "leads",
@@ -208,6 +253,10 @@ INTELLIGENCE_MAP = {
              "Email templates — cold outreach, follow-up, closing sequences"),
             (AUTOMATIONS / "freelance_response_templates",
              "Freelance response templates — pre-written proposal responses"),
+            (EMAIL / "triggering_events",
+             "Triggering event email templates — layoffs, Glassdoor spikes, leadership changes, SEC filings"),
+            (EMAIL,
+             "All email templates — gov contract, ecom outreach, launch/welcome/reengagement sequences"),
         ],
         "csvs": [
             (LEDGER / "MARKETING_CHANNELS_MASTER.csv",
@@ -225,9 +274,18 @@ INTELLIGENCE_MAP = {
             "email": [
                 GROWTH_OPS / "DM_FUNNEL_PLAYBOOK.md",
                 AUTOMATIONS / "leads" / "COLD_EMAILS_READY_TO_SEND.md",
+                GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
+                GROWTH_OPS / "GREY_HAT_UPDATE_JAN_2026.md",
+            ],
+            "dm": [
+                GROWTH_OPS / "DM_FUNNEL_PLAYBOOK.md",
+                GROWTH_OPS / "LINKEDIN_GROWTH_PLAYBOOK_2026.md",
+                GROWTH_OPS / "PLATFORM_AUTOMATION_LIMITS_2026.md",
             ],
             "prospecting": [
                 GROWTH_OPS / "LINKEDIN_GROWTH_PLAYBOOK_2026.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "linkedin_automation.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "competitive_intel_reports.md",
             ],
             "qualifying": [
                 GROWTH_OPS / "GTM_OPTIMIZATION_CHECKLIST.md",
@@ -251,6 +309,16 @@ INTELLIGENCE_MAP = {
              "Push notification strategy — retention and re-engagement"),
             (GROWTH_OPS / "GROWTH_EXPERIMENTS_FRAMEWORK.md",
              "Growth experiments framework — systematic A/B testing"),
+            (MONEY_METHODS / "APP_FACTORY" / "APP_CLONE_REBRAND_STRATEGY.md",
+             "Clone-and-localize strategy — regional arbitrage into Arabic/Spanish/Hindi, 30-app portfolio = $15K-60K/mo"),
+            (MONEY_METHODS / "APP_FACTORY" / "COMPETITOR_GTM_TACTICS.md",
+             "How Forest/Strava/Duolingo/Calm got first 10K users — real acquisition strategies with real numbers"),
+            (MONEY_METHODS / "APP_FACTORY" / "ARB_OPPORTUNITIES_10.md",
+             "10 validated app arbitrage opportunities — Arabic Ramadan tracker $30K-200K first year, zero competition gaps"),
+            (MONEY_METHODS / "APP_FACTORY" / "APP_DISCOVERY_ENGINE.md",
+             "Systematic app discovery engine — finding high-value clone/localize targets at scale"),
+            (MONEY_METHODS / "APP_FACTORY" / "TOP_APP_AUDIT.md",
+             "Top app audit with revenue data — competitive benchmarks for monetization and retention"),
         ],
         "dirs": [
             (MONEY_METHODS / "APP_FACTORY",
@@ -270,6 +338,8 @@ INTELLIGENCE_MAP = {
             "launch": [
                 GROWTH_OPS / "SEO_GEO_ASO_ACTION_PLAN_2026.md",
                 GROWTH_OPS / "GROWTH_EXPERIMENTS_FRAMEWORK.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "product_hunt_playbook.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "build_in_public.md",
             ],
             "aso": [
                 GROWTH_OPS / "SEO_GEO_ASO_TACTICS_2026.md",
@@ -304,10 +374,18 @@ INTELLIGENCE_MAP = {
              "Local biz pipeline — full find-build-pitch-close automation"),
             (AUTOMATIONS / "leads" / "COLD_EMAILS_READY_TO_SEND.md",
              "Cold emails ready to send — local biz outreach templates"),
+            (MONEY_METHODS / "LOCAL_BIZ" / "NATIONWIDE_LEAD_GEN_SYSTEM.md",
+             "$500 setup + $99/mo per client recurring — 6 auto-personalized templates, 100 clients = $130K/year"),
+            (MONEY_METHODS / "LOCAL_BIZ" / "AI_CALL_OUTREACH.md",
+             "AI voice call outreach via Bland.ai ($0.09/min) and Vapi.ai ($0.06-0.08/min) — 2-5% incremental conversion, 200 calls/day = $28/day"),
+            (MONEY_METHODS / "LOCAL_BIZ" / "COLD_EMAIL_DEMO_TEMPLATE.md",
+             "Cold email with pre-built demo link — show-don't-tell outreach for local biz"),
         ],
         "dirs": [
             (AUTOMATIONS / "leads",
              "Lead database — dentist, contractor, local biz leads by city"),
+            (MONEY_METHODS / "LOCAL_BIZ",
+             "Local biz method docs — lead gen, AI calling, motion upsell, agency website"),
         ],
         "csvs": [
             (LEDGER / "MARKETING_CHANNELS_MASTER.csv",
@@ -347,6 +425,22 @@ INTELLIGENCE_MAP = {
              "GTM checklist — go-to-market readiness for monetization"),
             (GROWTH_OPS / "PUSH_NOTIFICATION_STRATEGY.md",
              "Push notifications — re-engagement for subscription revenue"),
+            (STRATEGY / "HEDGE_FUND_INTELLIGENCE_REPORT.md",
+             "Top 5 highest-ROI moves ranked — Notion templates $500-10K/mo, app portfolio $5K-185K/mo, tier 1-4 time-to-revenue"),
+            (STRATEGY / "METHOD_STACKING_PLAYBOOK.md",
+             "10 method stack blueprints with synergy scores 85-95 — revenue multiplier formula 1.3-2.5x synergy x 1.0-3.0x automation"),
+            (STRATEGY / "ULTRATHINK_CAPITAL_STACKS.md",
+             "Non-obvious stacking — flash sale email hack $15-45K in 48h from 200 subs, 500-clipper network at $0 marginal cost"),
+            (MONEY_METHODS / "SKOOL_COMMUNITY" / "SKOOL_LAUNCH_PLAN.md",
+             "PRINTMAXX Inner Circle Skool — 3 tiers $0/47/97, ship or get out positioning, week-by-week launch"),
+            (MONEY_METHODS / "NEWSLETTER" / "NEWSLETTER_LAUNCH_PLAN.md",
+             "The Print Run newsletter on Beehiiv — weekly format, phase 1-3 growth, revenue from boosts + flash sales"),
+            (OPS_GTM / "FIRST_1K_REVENUE_PLAN.md",
+             "Tactical 7-day sprint to $1,000 — hour-by-hour Day 1, zero budget required"),
+            (OPS_GTM / "FASTEST_REVENUE_PATHS_FEB_2026.md",
+             "Complete asset inventory ready to sell — 5 Notion templates, Paywall Playbook $27, 105+ posts, 20+ email sequences"),
+            (MONEY_METHODS / "SYNERGY_PACKAGES" / "SYNERGY_PACKAGE_COLD_EMAIL_EMPIRE.md",
+             "8 synergy stacks scores 85-96 — combined $5K-55K/mo, Clay+Apollo+Instantly, flash sale backend, FOIA lead gen"),
         ],
         "dirs": [
             (MONEY_METHODS,
@@ -355,6 +449,12 @@ INTELLIGENCE_MAP = {
              "Digital products — Gumroad listings, lead magnets, micro products"),
             (PRODUCTS,
              "Products — ARB listings, Etsy, Fiverr, Gumroad ready uploads"),
+            (STRATEGY,
+             "Strategic planning — capital genesis, method stacking, hedge fund intel"),
+            (OPS_GTM,
+             "GTM plans — fastest revenue paths, first $1K sprint, Gumroad product specs"),
+            (MONEY_METHODS / "SYNERGY_PACKAGES",
+             "Synergy package playbooks — cross-method stacking with scored combos"),
         ],
         "csvs": [
             (LEDGER / "ACTIVE_INVESTMENTS.csv",
@@ -397,6 +497,18 @@ INTELLIGENCE_MAP = {
              "Referral programs — viral loops for product distribution"),
             (GROWTH_OPS / "GROWTH_EXPERIMENTS_FRAMEWORK.md",
              "Growth experiments — test pricing, offers, bundles"),
+            (PRODUCTS / "GUMROAD_INSTANT_UPLOAD" / "LISTING_METADATA.md",
+             "Gumroad instant upload — 13 product specs with listing metadata, ready to upload"),
+            (PRODUCTS / "FIVERR_INSTANT_UPLOAD",
+             "Fiverr instant upload — 10 gigs with full specs (website, landing page, cold email, scraping, AI chatbot)"),
+            (PRODUCTS / "KDP_JOURNALS_10.md",
+             "10 KDP journal specs ready to upload — passive income print products"),
+            (PRODUCTS / "WHOP_INSTANT_UPLOAD",
+             "Whop instant upload — 8 listing specs ready to deploy"),
+            (PRODUCTS / "ETSY_INSTANT_UPLOAD" / "ETSY_LISTINGS_ALL.md",
+             "All Etsy listings ready — instant upload specs for Etsy storefront"),
+            (PRODUCTS / "ECOM_UPLOAD_CHECKLIST.md",
+             "Ecom upload checklist — cross-platform listing readiness tracker"),
         ],
         "dirs": [
             (MONEY_METHODS / "POD",
@@ -407,6 +519,18 @@ INTELLIGENCE_MAP = {
              "Digital products — ready-to-sell assets, listings, magnets"),
             (PRODUCTS,
              "Products — all product listings and uploads"),
+            (PRODUCTS / "GUMROAD_INSTANT_UPLOAD",
+             "Gumroad instant upload — 13 product specs, AI automation kit, cold email playbook, lead machine"),
+            (PRODUCTS / "FIVERR_INSTANT_UPLOAD",
+             "Fiverr instant upload — 10 gig specs ready to list"),
+            (PRODUCTS / "WHOP_INSTANT_UPLOAD",
+             "Whop instant upload — 8 listing specs ready to deploy"),
+            (PRODUCTS / "ETSY_INSTANT_UPLOAD",
+             "Etsy instant upload — all Etsy listings ready"),
+            (PRODUCTS / "ECOM_LISTINGS_READY",
+             "Ecom listings ready — 15 auto listings, Etsy complete, Redbubble, Gumroad enhanced"),
+            (PRODUCTS / "FREELANCE_LISTINGS_READY",
+             "Freelance listings ready — 10 Fiverr gigs, multi-platform, 5 Upwork profiles"),
         ],
         "csvs": [],
         "task_docs": {
@@ -439,12 +563,56 @@ INTELLIGENCE_MAP = {
              "Platform updates — latest changes across all platforms"),
             (GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
              "Edge growth tactics — aggressive research-driven plays"),
+            (TREND_INTEL / "CLAVVICULAR_FUNNEL_BREAKDOWN.md",
+             "$50-100K/mo reverse-engineered funnel — 750+ clipper army, Framer VSSL to $49/mo Skool to high-ticket"),
+            (TREND_INTEL / "COMPETITIVE_LANDSCAPE_MAP.md",
+             "Full competitive landscape mapping — competitor positioning and gaps"),
+            (OPS_RESEARCH / "YOUTUBE_2026_TACTICS_AND_COMPLIANCE.md",
+             "YouTube 2026 inauthentic content crackdown — AI as tool = allowed, AI as entire process = NOT monetizable"),
+            (TREND_INTEL / "TREND002_nicksaraev.md",
+             "Nick Saraev breakdown — automation agency model, revenue, and tactics"),
+            (TREND_INTEL / "TREND007_studytok_productivity_timers.md",
+             "StudyTok productivity timer trend — app opportunity analysis"),
+            (TREND_INTEL / "TREND008_senada_greca.md",
+             "Senada Greca fitness influencer breakdown — funnel and revenue model"),
+            (TREND_INTEL / "TREND011_aliabdaal.md",
+             "Ali Abdaal funnel breakdown — content to course revenue ladder"),
+            (TREND_INTEL / "TREND013_dankoe.md",
+             "Dan Koe business model — one-person business, content, digital products"),
+            (TREND_INTEL / "TREND014_marclou.md",
+             "Marc Lou indie hacker breakdown — rapid shipping model"),
+            (TREND_INTEL / "TREND015_tonydinh.md",
+             "Tony Dinh indie hacker breakdown — micro-SaaS portfolio"),
+            (TREND_INTEL / "TREND016_levelsio.md",
+             "Levelsio revenue breakdown — solo founder, multiple products"),
+            (TREND_INTEL / "TREND021_waitlist_funnel.md",
+             "Waitlist funnel tactics — pre-launch demand generation"),
+            (TREND_INTEL / "TREND023_clipping_agency.md",
+             "Clipping agency business model — content repurposing as service"),
+            (TREND_INTEL / "TREND026_circle_community_model.md",
+             "Circle community model — paid community revenue"),
+            (TREND_INTEL / "TREND029_skool_case_study.md",
+             "Skool case study — community platform revenue deep dive"),
+            (TREND_INTEL / "TREND031_pipelineabuser.md",
+             "@pipelineabuser tactics breakdown — cold email, scraping, automation"),
+            (TREND_INTEL / "TREND033_gregisenberg.md",
+             "Greg Isenberg business model — startup studio, community"),
+            (TREND_INTEL / "TREND034_dickiebush_nicolascole.md",
+             "Dickie Bush/Nicolas Cole writing model — Ship 30, Premium Ghostwriting Academy"),
+            (TREND_INTEL / "TREND035_dannypostmaa.md",
+             "Danny Postma indie hacker model — AI-powered products"),
+            (TREND_INTEL / "TREND036_codyschneiderxx.md",
+             "Cody Schneider tactics — programmatic SEO, cold email, rapid experimentation"),
+            (TREND_INTEL / "TREND040_tier2_condensed.md",
+             "Tier 2 creator breakdowns condensed — multiple secondary creator analyses"),
         ],
         "dirs": [
             (LEDGER / "GROWTH_OPPORTUNITIES",
              "Growth opportunities — dated research findings"),
             (AUTOMATIONS / "research_pipeline_output",
              "Research pipeline output — automated research results"),
+            (TREND_INTEL,
+             "Trend intelligence analyses — 30+ creator/funnel breakdowns, competitive landscape, tactics"),
         ],
         "csvs": [
             (LEDGER / "ALPHA_RESEARCH_RESULTS.csv",
@@ -470,6 +638,20 @@ INTELLIGENCE_MAP = {
              "Platform updates — API changes, new restrictions"),
             (GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
              "Edge tactics — scraping at scale without detection"),
+            (RALPH / ".swarm" / "SWARM_RESEARCH_SUMMARY_FEB2026.md",
+             "Feb 2026 swarm research summary — aggregated findings from all scraping tasks"),
+            (RALPH / ".swarm" / "output" / "T1_TWITTER_ALPHA.csv",
+             "Swarm output — Twitter alpha scraped data"),
+            (RALPH / ".swarm" / "output" / "T2_REDDIT_ALPHA.csv",
+             "Swarm output — Reddit alpha scraped data"),
+            (RALPH / ".swarm" / "output" / "T3_ECOM_ARB.csv",
+             "Swarm output — Ecom arbitrage opportunities data"),
+            (RALPH / ".swarm" / "output" / "T4_POD_TRENDS.csv",
+             "Swarm output — POD trends data"),
+            (RALPH / ".swarm" / "output" / "T5_PLATFORM_ARB.csv",
+             "Swarm output — Platform arbitrage data"),
+            (RALPH / ".swarm" / "output" / "T6_AI_TOOLS_ALPHA.csv",
+             "Swarm output — AI tools alpha data"),
         ],
         "dirs": [
             (AUTOMATIONS / "scraper_output",
@@ -478,6 +660,8 @@ INTELLIGENCE_MAP = {
              "Reddit scraper output — subreddit scraping data"),
             (AUTOMATIONS / "twitter_scraper_output",
              "Twitter scraper output — timeline/bookmark scraping"),
+            (RALPH / ".swarm" / "output",
+             "Ralph swarm output — 6 research CSVs (Twitter, Reddit, Ecom, POD, Platform arb, AI tools)"),
         ],
         "csvs": [
             (LEDGER / "BREAKTHROUGH_TOOLS_FEB2026.csv",
@@ -495,38 +679,72 @@ INTELLIGENCE_MAP = {
 
     "GROWTH": {
         "docs": [
-            (GROWTH_OPS / "TWITTER_GROWTH_PLAYBOOK_2026.md",
-             "Twitter growth playbook — full strategy"),
-            (GROWTH_OPS / "ENGAGEMENT_FARMING_TACTICS.md",
-             "Engagement farming tactics"),
             (GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
-             "Edge growth tactics"),
+             "Aggressive grey-hat growth tactics — Instagram/TikTok/X safe limits, mobile proxies, warmup protocols"),
+            (GROWTH_OPS / "GREY_HAT_UPDATE_JAN_2026.md",
+             "Grey hat update Jan 2026 — what's DEAD (follow/unfollow), what's ALIVE (warming), what's DYING (pods)"),
+            (GROWTH_OPS / "ENGAGEMENT_FARMING_TACTICS.md",
+             "Engagement farming — reply guy strategy, reply bait patterns, 1 reply = 4x value of like"),
+            (GROWTH_OPS / "TWITTER_GROWTH_PLAYBOOK_2026.md",
+             "Twitter growth playbook — Grok-based algo scoring, Premium 4x visibility, small account boost"),
+            (GROWTH_OPS / "TWITTER_META_JANUARY_2026.md",
+             "Twitter meta Jan 2026 — vibe coding 150K+ views, reply guy validated 3.1M impressions, revenue screenshots viral"),
             (GROWTH_OPS / "DM_FUNNEL_PLAYBOOK.md",
-             "DM funnel playbook"),
+             "DM funnel playbook — keyword funnels 15-30% reply rate, Telegram 5-15% join"),
             (GROWTH_OPS / "LINKEDIN_GROWTH_PLAYBOOK_2026.md",
-             "LinkedIn growth playbook"),
+             "LinkedIn growth 2026 — Depth Score, reach down 50%, first 90 min = 70% reach"),
+            (GROWTH_OPS / "PLATFORM_AUTOMATION_LIMITS_2026.md",
+             "Platform automation limits — hourly/daily limits for IG/TikTok/X/LinkedIn/YouTube/Email, ban recovery"),
+            (GROWTH_OPS / "PLATFORM_UPDATES_JAN_2026.md",
+             "Platform updates Jan 2026 — TikTok Oracle algo, IG carousel 2.33% engagement, declining rates"),
             (GROWTH_OPS / "SEO_GEO_ASO_TACTICS_2026.md",
-             "SEO/GEO/ASO tactics"),
+             "SEO/GEO/ASO tactics — E-E-A-T, AI Overview optimization, topic authority clusters"),
             (GROWTH_OPS / "SEO_GEO_ASO_ACTION_PLAN_2026.md",
-             "SEO/GEO/ASO action plan"),
+             "SEO/GEO/ASO action plan — week-by-week execution, quick wins first"),
             (GROWTH_OPS / "GROWTH_EXPERIMENTS_FRAMEWORK.md",
-             "Growth experiments framework"),
+             "Growth experiments — ICE scoring, 30+ experiments, 8.0+ = run immediately"),
             (GROWTH_OPS / "REFERRAL_PROGRAM_TEMPLATES.md",
-             "Referral program templates"),
+             "Referral program templates — viral loop mechanics, fraud prevention"),
             (GROWTH_OPS / "LANDING_PAGE_OPTIMIZATION_GUIDE.md",
-             "Landing page optimization"),
+             "Landing page optimization — 5-second test, 80% conversions above-fold"),
             (GROWTH_OPS / "PUSH_NOTIFICATION_STRATEGY.md",
-             "Push notification strategy"),
+             "Push notification strategy — app-specific timing, day-of-week patterns"),
             (GROWTH_OPS / "GTM_OPTIMIZATION_CHECKLIST.md",
-             "GTM optimization checklist"),
+             "GTM optimization checklist — ASO/SEO/GEO per money method"),
             (GROWTH_OPS / "NICHE_POSTING_STRATEGY.md",
-             "Niche posting strategy"),
+             "Niche posting strategy — reply bait, DM funnel triggers, tech/faith/fitness templates"),
             (GROWTH_OPS / "PARTNERSHIP_OPPORTUNITIES.md",
-             "Partnership opportunities"),
+             "Partnership opportunities — POD/design/ecom partners"),
+            (GROWTH_OPS / "X_ALGORITHM_OPTIMIZATION.md",
+             "X algorithm optimization — Grok model, Thunder/Phoenix/Home Mixer"),
+            (GROWTH_OPS / "SEO_KEYWORD_RESEARCH_GUIDE.md",
+             "SEO keyword research — intent types, difficulty assessment, keyword research workflow"),
+            (CONTENT / "growth" / "buildout" / "G01_G15_growth" / "grey_hat_legal.md",
+             "Grey hat legal guide — ALLOWED/RISKY/ILLEGAL classification per tactic"),
+            (CONTENT / "growth" / "buildout" / "G01_G15_growth" / "cross_pollination_playbook.md",
+             "Cross-pollination matrix — one input to 4+ output channels across 3 niche pillars"),
+            (CONTENT / "growth" / "buildout" / "G01_G15_growth" / "platform_algorithm_notes.md",
+             "Platform algorithm notes March 2026 — X 1500 candidates, reply=Very High, link clicks=Very Low"),
+            (CONTENT / "growth" / "buildout" / "G01_G15_growth" / "multi_account_warmup.md",
+             "Multi-account warmup SOP — 21-30 days, device/IP separation, platform risk rankings"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "reply_guy_strategy.md",
+             "Reply guy strategy — 500-2000 followers/month at $0, 45-60 min/day, tiered target list"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "clipper_army_sop.md",
+             "Clipper army SOP — 5-10 secondary accounts for 10x distribution, $0-47/mo"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "swarm_promotion.md",
+             "Swarm promotion — 4-layer coordinated launch creating FOMO + social proof"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "entity_seo.md",
+             "Entity SEO — build PRINTMAXX as Google Knowledge Graph entity, 60-90 days to recognition"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "product_hunt_playbook.md",
+             "Product Hunt launch — top 5 Product of Day drives 500-2000 signups in 24h"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "github_trending.md",
+             "GitHub trending — 50-200 stars/24h = trending, drives newsletter features + Twitter virality"),
+            (CONTENT / "growth" / "buildout" / "N_series" / "build_in_public.md",
+             "Build in public — 3-5x conversion vs cold launch, content from free"),
         ],
         "dirs": [
-            (GROWTH_OPS, "All growth playbooks"),
-            (CONTENT / "growth", "Content growth docs"),
+            (GROWTH_OPS, "All growth playbooks and edge tactics"),
+            (CONTENT / "growth", "Content growth buildout docs — warmup SOPs, cross-pollination, grey hat legal"),
             (LEDGER / "GROWTH_OPPORTUNITIES", "Growth opportunities research"),
         ],
         "csvs": [
@@ -542,15 +760,20 @@ INTELLIGENCE_MAP = {
                 GROWTH_OPS / "TWITTER_GROWTH_PLAYBOOK_2026.md",
                 GROWTH_OPS / "LINKEDIN_GROWTH_PLAYBOOK_2026.md",
                 GROWTH_OPS / "SEO_GEO_ASO_TACTICS_2026.md",
+                GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "reply_guy_strategy.md",
             ],
             "retention": [
                 GROWTH_OPS / "PUSH_NOTIFICATION_STRATEGY.md",
                 GROWTH_OPS / "GROWTH_EXPERIMENTS_FRAMEWORK.md",
+                GROWTH_OPS / "REFERRAL_PROGRAM_TEMPLATES.md",
             ],
             "viral": [
                 GROWTH_OPS / "ENGAGEMENT_FARMING_TACTICS.md",
                 GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
                 GROWTH_OPS / "REFERRAL_PROGRAM_TEMPLATES.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "clipper_army_sop.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "swarm_promotion.md",
             ],
             "referral": [
                 GROWTH_OPS / "REFERRAL_PROGRAM_TEMPLATES.md",
@@ -560,10 +783,40 @@ INTELLIGENCE_MAP = {
                 GROWTH_OPS / "SEO_GEO_ASO_TACTICS_2026.md",
                 GROWTH_OPS / "SEO_GEO_ASO_ACTION_PLAN_2026.md",
                 GROWTH_OPS / "SEO_KEYWORD_RESEARCH_GUIDE.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "entity_seo.md",
             ],
             "distribution": [
                 GROWTH_OPS / "DM_FUNNEL_PLAYBOOK.md",
                 GROWTH_OPS / "NICHE_POSTING_STRATEGY.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "clipper_army_sop.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "swarm_promotion.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "product_hunt_playbook.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "github_trending.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "medium_substack_strategy.md",
+            ],
+            "partnerships": [
+                GROWTH_OPS / "PARTNERSHIP_OPPORTUNITIES.md",
+                GROWTH_OPS / "REFERRAL_PROGRAM_TEMPLATES.md",
+            ],
+            "engagement": [
+                GROWTH_OPS / "ENGAGEMENT_FARMING_TACTICS.md",
+                GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
+                GROWTH_OPS / "TWITTER_META_JANUARY_2026.md",
+                CONTENT / "growth" / "buildout" / "N_series" / "reply_guy_strategy.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "platform_algorithm_notes.md",
+            ],
+            "warmup": [
+                GROWTH_OPS / "PLATFORM_AUTOMATION_LIMITS_2026.md",
+                GROWTH_OPS / "GREY_HAT_UPDATE_JAN_2026.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "multi_account_warmup.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "grey_hat_legal.md",
+            ],
+            "grey_hat": [
+                GROWTH_OPS / "EDGE_GROWTH_TACTICS.md",
+                GROWTH_OPS / "GREY_HAT_UPDATE_JAN_2026.md",
+                GROWTH_OPS / "PLATFORM_AUTOMATION_LIMITS_2026.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "grey_hat_legal.md",
+                CONTENT / "growth" / "buildout" / "G01_G15_growth" / "multi_account_warmup.md",
             ],
         },
     },
@@ -634,20 +887,40 @@ def query_alpha(venture_type, top=10):
 
 
 def find_existing_docs(venture_type):
-    """Return list of (path, description, exists) for a venture's docs."""
+    """Return list of (path, description, exists) for a venture's docs.
+    Merges hardcoded INTELLIGENCE_MAP with INTELLIGENCE_CATALOG.json."""
     venture_type = venture_type.upper()
-    if venture_type not in INTELLIGENCE_MAP:
-        return []
 
-    config = INTELLIGENCE_MAP[venture_type]
     results = []
+    seen_paths = set()
 
-    for path, desc in config.get("docs", []):
-        try:
-            p = safe_path(path)
-            results.append((str(p), desc, p.exists()))
-        except ValueError:
-            continue
+    # 1. Hardcoded docs from INTELLIGENCE_MAP
+    if venture_type in INTELLIGENCE_MAP:
+        config = INTELLIGENCE_MAP[venture_type]
+        for path, desc in config.get("docs", []):
+            try:
+                p = safe_path(path)
+                results.append((str(p), desc, p.exists()))
+                seen_paths.add(str(p))
+            except ValueError:
+                continue
+
+    # 2. Merge docs from INTELLIGENCE_CATALOG.json (if it exists)
+    catalog = load_catalog()
+    if catalog:
+        venture_data = catalog.get("ventures", {}).get(venture_type, {})
+        for doc in venture_data.get("docs", []):
+            doc_path = doc.get("path", "")
+            if not doc_path:
+                continue
+            try:
+                full_path = safe_path(PROJECT / doc_path)
+                if str(full_path) not in seen_paths:
+                    desc = doc.get("summary", doc_path)
+                    results.append((str(full_path), desc, full_path.exists()))
+                    seen_paths.add(str(full_path))
+            except ValueError:
+                continue
 
     return results
 
