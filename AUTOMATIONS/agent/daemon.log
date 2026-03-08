@@ -267,3 +267,9 @@ JSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/c
 [00:03:23] [INFO] MISSION: Process & decide
 [00:03:23] [INFO]   [SUCCESS] process_decide: Decisions made. 27 response drafts, 23 listing drafts (0.5s)
 [00:03:23] [INFO] MISSION: Research & scrape
+[00:09:23] [INFO]   [FAILED] research_night: 0/3 scrapers completed (360.1s)
+[00:09:23] [INFO] MISSION: Upgrade content (recursive)
+[00:11:23] [INFO]   [PARTIAL] upgrade_night: Upgrade attempt for C01_tiktok: failed (120.0s)
+[00:11:23] [INFO] MISSION: Proactive opportunity hunt
+[00:12:53] [INFO]   [PARTIAL] hunt_night: Searched but results were thin (90.0s)
+[00:12:54] [INFO] MISSION: Safety commit

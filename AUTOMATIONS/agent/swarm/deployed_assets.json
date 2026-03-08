@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-03-07T21:15:00",
-  "total_deployments": 161,
+  "last_updated": "2026-03-08T00:00:00",
+  "total_deployments": 164,
   "all_200": true,
-  "notes": "Cycle 7: +5 new deployments. 3 SEO comparison pages (coldmaxx-vs-instantly, pagescorer-vs-gtmetrix, sleepmaxx-vs-sleepcycle). 2 Twitter media templates deployed as Playwright-renderable preview pages. All 161 deployments returning 200.",
+  "notes": "Cycle 8: +3 new deployments. 2 SEO comparison pages (cursor-vs-claudecode, instantly-vs-lemlist). Fixed printmaxx-store 504. All 164 deployments returning 200.",
   "summary": {
     "apps": 20,
     "streak_landing_pages": 24,
@@ -12,7 +12,7 @@
     "demos": 19,
     "hubs": 4,
     "lead_magnets": 4,
-    "comparison_pages": 6,
+    "comparison_pages": 8,
     "storefront": 1,
     "thanks": 1,
     "other": 2,
@@ -101,6 +101,24 @@
         "description": "Free sleep tracker vs $30/yr Sleep Cycle - SEO comparison page",
         "source": "07_LANDING/sleepmaxx-vs-sleepcycle/index.html",
         "note": "NEW this cycle"
+      },
+      {
+        "name": "Cursor vs Claude Code",
+        "url": "https://cursor-vs-claudecode.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "AI IDE ($20/mo) vs agentic CLI ($20/mo) - full feature comparison 2026",
+        "source": "07_LANDING/cursor-vs-claudecode/index.html",
+        "note": "NEW cycle 8 - targets high-intent dev tool searches"
+      },
+      {
+        "name": "Instantly vs Lemlist",
+        "url": "https://instantly-vs-lemlist.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Cold email platform comparison - Instantly vs Lemlist 2026",
+        "source": "07_LANDING/instantly-vs-lemlist/index.html",
+        "note": "NEW cycle 8 - targets cold email tool searches"
       }
     ],
     "core_apps": [

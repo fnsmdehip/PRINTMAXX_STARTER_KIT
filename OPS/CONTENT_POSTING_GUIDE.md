@@ -1640,3 +1640,25 @@ how to make get rich off of ROBLOX:
 5/ add pay to win gamepasses for 99-999 robux 
 6/ profit $100k/mo minimum
 
+
+
+---
+
+## Pending Enhancement (HN_008, Score: 20)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47291513
+**Added:** 2026-03-08T00:10:14-05:00
+
+LLM Writing Tropes.md — 129pts crowdsourced list of LLM writing tells. High engagement signal: everyone hates AI slop. Content angle: tweet thread on avoiding LLM tropes = guaranteed engagement.
+
+
+
+---
+
+## Pending Enhancement (HN_010, Score: 20)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47292485
+**Added:** 2026-03-08T00:10:14-05:00
+
+Put the zip code first — 385pts UX micro-optimization. Single-page site about one UX insight that went viral. Model for solopreneur content: one specific insight, sharp domain, instant share.
+
