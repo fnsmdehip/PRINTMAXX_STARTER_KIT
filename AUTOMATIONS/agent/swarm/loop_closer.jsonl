@@ -19,3 +19,4 @@
 {"ts": "2026-03-07T17:35:34.155999", "action": "adjust_interval", "target": "cross_pollinator", "result": "OK", "details": "Adjusted cross_pollinator to every 12.0h and reloaded"}
 {"ts": "2026-03-07T18:00:01.697512", "action": "adjust_interval", "target": "gap_hunter", "result": "OK", "details": "gap_hunter already at 3.0h \u2014 no change needed"}
 {"ts": "2026-03-07T18:00:01.743270", "action": "adjust_interval", "target": "system_healer", "result": "OK", "details": "system_healer already at 2.0h \u2014 no change needed"}
+{"ts": "2026-03-08T04:00:00.668714", "action": "priority_shift", "target": "ALL", "result": "FAILED", "details": "Plist not found for ALL"}
