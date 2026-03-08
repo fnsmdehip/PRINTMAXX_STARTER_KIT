@@ -134,6 +134,38 @@ Save to `CONTENT/social/` or `OPS/CONTENT_QA_QUEUE/` as PENDING_REVIEW.
 
 5 independent items = 5 simultaneous agents. Never ask permission to parallelize. Use `run_in_background: true`. 200K token budget — USE IT.
 
+### 11. CEO SANITY CHECK — "AM I BEING STUPID?"
+
+User directive: "there should just be like a common sense loop double check thing at the end that you do as like a meta analysis of everything you're doing and making sure you're not overlooking something that is obvious"
+
+**Before finishing ANY session or major task, run this checklist:**
+
+1. **TRACK EVERYTHING** — Did I update the ledger/spreadsheet? If I built something, is it tracked in `LEDGER/ASSET_TRACKER.csv`? If I spent money or found revenue, is it in `FINANCIALS/`? If alpha became a product, is the chain tracked? No untracked assets. No ghost products.
+
+2. **AM I BUILDING OR SELLING?** — Day 33+ at $0 revenue. If the answer is "building more stuff," STOP. The system has 140+ sites, 22 apps, 283 posts, 1,111 leads, 13 Gumroad PDFs. The bottleneck is LISTING and SELLING, not building. Ask: "Does this task move $0 → $1?" If no, deprioritize it.
+
+3. **WHAT'S THE OBVIOUS THING?** — Step back. If a CEO looked at this operation, what would they say? "Why do you have 11,474 alpha entries and $0 revenue?" "Why are 13 products sitting unlisted?" "Why are 283 posts queued and 0 posted?" Do the obvious thing first.
+
+4. **ALPHA → ASSET → TRACKING** — Every alpha entry that becomes something must be tracked:
+   - Alpha found → log in `LEDGER/ALPHA_STAGING.csv` (already working)
+   - Alpha approved → route to method CSV (already working)
+   - Alpha becomes an asset (app, product, listing, content) → log in `LEDGER/ASSET_TRACKER.csv` with columns: `asset_id, alpha_source, asset_type, name, status, deploy_url, revenue, created_date, last_updated`
+   - Revenue from asset → log in `FINANCIALS/REVENUE_TRACKER.csv`
+   - **If you can't trace from alpha → asset → revenue, the pipeline is broken.**
+
+5. **FINANCIAL HYGIENE** — Update `FINANCIALS/P_AND_L_MONTHLY.csv` when money moves. Track expenses. Track revenue. If revenue is $0, say so honestly. No paper trades pretending to be real.
+
+6. **MASTER OPS FRESHNESS** — If the latest `PRINTMAXX_MASTER_OPS_ENHANCED` xlsx is more than 3 days old, flag it. The master spreadsheet is the source of truth for all 182 ops. Stale ops = stale decisions.
+
+7. **HUMAN BLOCKERS SURFACED** — At session end, always surface what ONLY the human can do (accounts, payments, API keys, posting). Don't bury it. Make it a clear, short, actionable list with time estimates.
+
+**Anti-patterns this rule prevents:**
+- Building 50 more landing pages when 0 are monetized
+- 11,474 alpha entries with no tracking of what became of them
+- Agents generating 27 reports nobody reads
+- Financial tracking that's 5 days stale
+- Overlooking the obvious ($0 revenue for 33 days = stop building, start selling)
+
 ---
 
 ## TECHNICAL QUICK REFERENCE
@@ -154,6 +186,12 @@ Save to `CONTENT/social/` or `OPS/CONTENT_QA_QUEUE/` as PENDING_REVIEW.
 - Research: `python3 AUTOMATIONS/daily_research_orchestrator.py --full`
 - Quality gate: `python3 AUTOMATIONS/quality_gate.py --gate`
 - Unified CLI: `python3 AUTOMATIONS/printmaxx.py status`
+
+**Alpha intelligence (query BEFORE building anything):**
+- By venture: `python3 AUTOMATIONS/alpha_query.py --venture APP_FACTORY --json` (APP_FACTORY|OUTBOUND|CONTENT|LOCAL_BIZ|MONETIZATION|RESEARCH|PRODUCT|SCRAPING)
+- Keyword search: `python3 AUTOMATIONS/alpha_query.py --search "mobile app pricing" --json`
+- Stats: `python3 AUTOMATIONS/alpha_query.py --stats`
+- **MANDATORY:** Before building ANY asset, query relevant alpha first. Base decisions on accumulated intelligence, not default LLM knowledge.
 
 **Scrapers (run every session):**
 - Twitter: `python3 AUTOMATIONS/twitter_alpha_scraper.py --all` (Brave cookies)
