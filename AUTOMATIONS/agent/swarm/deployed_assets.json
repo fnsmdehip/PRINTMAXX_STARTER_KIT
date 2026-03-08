@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-07T17:06:27.535463",
+  "last_updated": "2026-03-07T18:49:58",
   "total_deployments": 152,
   "all_200": true,
   "notes": "printmaxx-site.surge.sh fixed (was 404). 2 new tools deployed.",
@@ -990,12 +990,16 @@
     }
   },
   "live_test": {
-    "tested_at": "2026-03-07T18:18:00",
-    "total": 147,
-    "green": 134,
-    "yellow": 11,
+    "tested_at": "2026-03-07T18:54:12.092692",
+    "total": 161,
+    "green": 150,
+    "yellow": 10,
     "red": 1,
-    "note": "Cycle 2 playwright test. 1 permanent RED (DNS label too long). 3 transient 504s recovered. Broken footer link on hilal+prayerlock (printmaxx-lead-magnets 404). 11 new sites added to catalog."
+    "pass_rate": "93.2%",
+    "avg_load_ms": 1893,
+    "corrected": true,
+    "notes": "3 initial RED were transient CDN 504s. 1 true RED: local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl (DNS fail, 65-char label exceeds limit).",
+    "report": "AUTOMATIONS/agent/swarm/reports/test_report_20260307.md"
   },
   "new_this_cycle": [
     "printmaxx-control-panel.surge.sh",

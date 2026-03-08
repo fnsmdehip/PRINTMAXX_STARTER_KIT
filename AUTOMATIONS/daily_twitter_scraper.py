@@ -219,7 +219,7 @@ def save_to_csv(all_tweets):
 
     # Write back
     with open(ALPHA_STAGING, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore", restval="")
         writer.writeheader()
         writer.writerows(rows)
 

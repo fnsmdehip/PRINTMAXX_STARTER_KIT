@@ -54,5 +54,13 @@
     "action": "Deployed this cycle. hilal.surge.sh now returns 200.",
     "revenue_impact": "Ramadan tracker marketing page accessible during Ramadan.",
     "source": "gap_report_20260307_cycle4"
+  },
+  {
+    "priority": 2,
+    "title": "4 OPENCLAW PREVIEW EMAILS READY - MEMPHIS + NASHVILLE",
+    "severity": "CRITICAL",
+    "action": "Memphis (2 emails with confirmed addresses): Send emails from AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/memphis_cycle2_emails.md to service@theshopofmemphis.com and jstory@serviceclean.net. Nashville (2 leads): Need to find emails first - call (615) 220-0333 (Accurate Auto) and (615) 288-3360 (Reliable Fence/Rosie) to get email, then send from nashville_cycle1_emails.md.",
+    "revenue_impact": "$149-299 per close. Memphis leads are HIGH probability - specific pain points (expired SSL, broken contact form) with live demos deployed.",
+    "source": "openclaw_cycle2_memphis"
   }
 ]

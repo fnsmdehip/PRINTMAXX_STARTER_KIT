@@ -1,7 +1,7 @@
 # Launch Checklist Promo Posts
 # Account: @PRINTMAXXER
 # Status: PENDING_REVIEW
-# Lead magnet: printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html
+# Lead magnet: printmaxx-magnets.surge.sh/solopreneur-launch-checklist.html
 # Generated: 2026-03-07
 
 ---
@@ -16,7 +16,7 @@ the last 10% is the hardest part: app store screenshots, privacy policy, pricing
 
 i tracked every step across 7 apps i shipped. 47 steps total. put them in a free interactive checklist so you can stop dying at day 3.
 
-printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html
+printmaxx-magnets.surge.sh/solopreneur-launch-checklist.html
 
 days 1-5 are free. days 6-7 (actual launch + distribution) are behind email. your call.
 
@@ -40,7 +40,7 @@ days 6-7 are where most people drop off. that's also where the first 100 users c
 
 free interactive checklist. progress saves in browser. check boxes as you go.
 
-printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html
+printmaxx-magnets.surge.sh/solopreneur-launch-checklist.html
 
 ---
 
@@ -56,7 +56,7 @@ i've bought the courses. they helped once and then sat in a folder. the checklis
 
 it's 47 steps across 7 days. free for days 1-5. days 6-7 behind email because that's the launch mechanics and distribution playbook... and that's the part that actually matters.
 
-printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html
+printmaxx-magnets.surge.sh/solopreneur-launch-checklist.html
 
 stop overthinking it. just open the checklist and do step 1.
 
@@ -72,7 +72,7 @@ after app 4 i documented every step that mattered. 47 of them. 7 days.
 
 that's the checklist. it's free and interactive (checkboxes save in your browser).
 
-printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html
+printmaxx-magnets.surge.sh/solopreneur-launch-checklist.html
 
 days 1-5 open right now. days 6-7 behind email. that's where the launch mechanics live.
 
@@ -92,7 +92,7 @@ e) something else
 
 asking because i see the same 4 blockers kill 90% of apps before launch. i mapped out the exact steps to get past all of them. 47 steps. 7 days.
 
-free checklist if you want it: printmaxx-lead-magnets.surge.sh/solopreneur-launch-checklist.html
+free checklist if you want it: printmaxx-magnets.surge.sh/solopreneur-launch-checklist.html
 
 drop your answer below. curious what's actually in the way.
 

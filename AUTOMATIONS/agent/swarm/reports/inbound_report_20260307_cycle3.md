@@ -99,7 +99,7 @@
 - Gated content (Days 6-7) is the highest-value section (launch + distribution)
 - Shareable (viral loop potential)
 
-**Deployment needed:** Deploy to printmaxx-lead-magnets.surge.sh
+**Deployment needed:** Deploy to printmaxx-magnets.surge.sh
 
 ---
 

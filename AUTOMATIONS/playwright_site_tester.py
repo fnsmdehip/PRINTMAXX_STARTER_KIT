@@ -160,6 +160,60 @@ ALL_SITES = [
     ("Bella's Salon Demo",   "https://bellas-salon-demo.surge.sh",    "demos"),
     ("Tony's Restaurant Demo","https://tonys-restaurant-demo.surge.sh","demos"),
     ("Joe's Plumbing Demo",  "https://joes-plumbing-demo.surge.sh",  "demos"),
+    # ── New deployments (added this cycle) ─────────────────────────────────────
+    # Main hub + hubs
+    ("PrintMaxx Main",          "https://printmaxx.surge.sh",                  "hubs"),
+    ("PrintMaxx Site",          "https://printmaxx-site.surge.sh",             "hubs"),
+    ("PrintMaxx Control Panel", "https://printmaxx-control-panel.surge.sh",    "hubs"),
+    ("PrintMaxx Thanks",        "https://printmaxx-thanks.surge.sh",           "hubs"),
+    ("PrintMaxx Magnets",       "https://printmaxx-magnets.surge.sh",          "lead_magnets"),
+    ("PrintMaxx Storefront",    "https://printmaxx-storefront.surge.sh",       "hubs"),
+    # Comparison pages
+    ("ConvertKit vs Beehiiv",   "https://convertkit-vs-beehiiv.surge.sh",      "comparison_pages"),
+    ("PrayerLock vs Hallow",    "https://prayerlock-vs-hallow.surge.sh",       "comparison_pages"),
+    ("FocusLock vs Opal",       "https://focuslock-vs-opal.surge.sh",          "comparison_pages"),
+    ("PrintMaxx Comparisons",   "https://printmaxx-comparisons.surge.sh",      "comparison_pages"),
+    # Tools
+    ("Website Analyzer PM",     "https://website-analyzer-pm.surge.sh",        "tools_saas"),
+    # Lead magnets
+    ("ADHD Streak Landing",     "https://adhd-streak.surge.sh",                "streak_landing"),
+    ("Solopreneur Checklist",   "https://solopreneur-launch-checklist.surge.sh","lead_magnets"),
+    ("Ramadan Daily Planner",   "https://ramadan-daily-planner.surge.sh",      "lead_magnets"),
+    ("Hilal Ramadan App",       "https://hilal.surge.sh",                      "apps"),
+    # New streak landing variants
+    ("Fitness Streak Landing2", "https://fitness-streak-landing.surge.sh",     "streak_landing"),
+    ("Coding Streak Landing2",  "https://coding-streak-landing.surge.sh",      "streak_landing"),
+    ("Buddhist Streak Landing2","https://buddhist-streak-landing.surge.sh",    "streak_landing"),
+    ("Art Streak Landing2",     "https://art-streak-landing.surge.sh",         "streak_landing"),
+    # Religious denomination streaks
+    ("Sunni Streak",            "https://sunni-streak.surge.sh",               "streak_landing"),
+    ("Shia Streak",             "https://shia-streak.surge.sh",                "streak_landing"),
+    ("Presbyterian Streak",     "https://presbyterian-streak.surge.sh",        "streak_landing"),
+    ("Anglican Streak",         "https://anglican-streak.surge.sh",            "streak_landing"),
+    ("Evangelical Streak",      "https://evangelical-streak.surge.sh",         "streak_landing"),
+    ("Pentecostal Streak",      "https://pentecostal-streak.surge.sh",         "streak_landing"),
+    ("Episcopal Streak",        "https://episcopal-streak.surge.sh",           "streak_landing"),
+    ("Lutheran Streak",         "https://lutheran-streak.surge.sh",            "streak_landing"),
+    ("Methodist Streak",        "https://methodist-streak.surge.sh",           "streak_landing"),
+    ("Baptist Streak",          "https://baptist-streak.surge.sh",             "streak_landing"),
+    ("Protestant Streak",       "https://protestant-streak.surge.sh",          "streak_landing"),
+    ("Orthodox Streak",         "https://orthodox-streak.surge.sh",            "streak_landing"),
+    ("Catholic Streak",         "https://catholic-streak.surge.sh",            "streak_landing"),
+    # Austin local biz
+    ("Magnolia Cafe Austin",    "https://magnolia-cafe-austin.surge.sh",       "local_biz"),
+    ("Kelly Personal Training", "https://kelly-personal-training-austin.surge.sh","local_biz"),
+    ("Galaxia Dental Austin",   "https://galaxia-dental-austin.surge.sh",      "local_biz"),
+    ("Barton Springs Saloon",   "https://barton-springs-saloon-austin.surge.sh","local_biz"),
+    ("Zax Pints Plates Austin", "https://zax-pints-plates-austin.surge.sh",    "local_biz"),
+    ("Artz Rib House Austin",   "https://artz-rib-house-austin.surge.sh",      "local_biz"),
+    # Preview sites
+    ("Memphis Plumbing Preview","https://memphis-plumbing-preview.surge.sh",   "local_biz"),
+    ("JAX Emergency Plumber",   "https://jax-emergency-plumber-preview.surge.sh","local_biz"),
+    ("S Tampa Locksmith Preview","https://south-tampa-locksmith-preview.surge.sh","local_biz"),
+    ("Atlanta Roofing Preview", "https://atlanta-roofing-company-preview.surge.sh","local_biz"),
+    # New local biz
+    ("JSS Janitorial Memphis",  "https://jss-janitorial-memphis.surge.sh",     "local_biz"),
+    ("Shop of Memphis Preview", "https://shop-of-memphis-preview.surge.sh",    "local_biz"),
 ]
 
 # Deduplicate by URL

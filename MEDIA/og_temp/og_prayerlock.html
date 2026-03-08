@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0a1a1a 50%, #0a1510 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 80px;
+    overflow: hidden;
+    position: relative;
+  }
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #2dd4a8, #5eead4, #2dd4a8);
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(45, 212, 168, 0.12);
+    border: 1px solid rgba(45, 212, 168, 0.3);
+    padding: 8px 20px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5eead4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    width: fit-content;
+  }
+  .title {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+    max-width: 900px;
+  }
+  .title .highlight {
+    background: linear-gradient(90deg, #2dd4a8, #5eead4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .description {
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    max-width: 700px;
+    line-height: 1.5;
+  }
+  .icon-area {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, #2dd4a8, #14b88a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    box-shadow: 0 20px 60px rgba(45, 212, 168, 0.3);
+  }
+  .url {
+    position: absolute;
+    bottom: 38px;
+    left: 80px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.25);
+  }
+  .brand {
+    position: absolute;
+    bottom: 35px;
+    right: 80px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.15);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <div class="badge">Salah Focus</div>
+  <div class="title">
+    <span class="highlight">PrayerLock</span><br>
+    Your Phone Locks Itself at Prayer Time
+  </div>
+  <div class="description">
+    Auto-locks at adhan time. No willpower needed. Built for Muslim professionals who protect their salah.
+  </div>
+  <div class="icon-area">&#9770;</div>
+  <div class="url">prayerlock-web.surge.sh</div>
+  <div class="brand">PRINTMAXX</div>
+</body>
+</html>
