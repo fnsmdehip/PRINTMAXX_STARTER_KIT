@@ -167,6 +167,20 @@ User directive: "there should just be like a common sense loop double check thin
 - Financial tracking that's 5 days stale
 - Overlooking the obvious ($0 revenue for 33 days = stop building, start selling)
 
+### 12. INTELLIGENCE-FIRST — QUERY BEFORE EVERY ACTION
+
+Before building, deploying, posting, or executing ANY task, query the intelligence router for that venture+task. Use the brief for human sessions, JSON for automated agents. This ensures every action is informed by ALL accumulated intelligence, not just default LLM knowledge.
+
+```bash
+# Human sessions
+python3 AUTOMATIONS/intelligence_router.py --venture CONTENT --task posting --brief
+
+# Automated agents
+python3 AUTOMATIONS/intelligence_router.py --venture OUTBOUND --task outreach --json
+```
+
+Every agent, venture, and the CEO agent itself queries intelligence_router.py before execution. No action should be taken on default LLM knowledge when 10,000+ alpha entries, 25+ growth playbooks, and real competitive intel exist in the system.
+
 ---
 
 ## TECHNICAL QUICK REFERENCE
@@ -193,6 +207,13 @@ User directive: "there should just be like a common sense loop double check thin
 - Keyword search: `python3 AUTOMATIONS/alpha_query.py --search "mobile app pricing" --json`
 - Stats: `python3 AUTOMATIONS/alpha_query.py --stats`
 - **MANDATORY:** Before building ANY asset, query relevant alpha first. Base decisions on accumulated intelligence, not default LLM knowledge.
+
+**Intelligence Router (MANDATORY before any build/execute):**
+- `python3 AUTOMATIONS/intelligence_router.py --venture TYPE --task TASK --brief` (human sessions)
+- `python3 AUTOMATIONS/intelligence_router.py --venture TYPE --task TASK --json` (agent consumption)
+- `python3 AUTOMATIONS/intelligence_router.py --stats` (index health)
+- `python3 AUTOMATIONS/intelligence_router.py --catalog` (all indexed docs)
+- Aggregates alpha entries, strategy docs, swarm reports, method CSVs, and growth tactics into a single intelligence brief per venture+task.
 
 **Scrapers (run every session):**
 - Twitter: `python3 AUTOMATIONS/twitter_alpha_scraper.py --all` (Brave cookies)

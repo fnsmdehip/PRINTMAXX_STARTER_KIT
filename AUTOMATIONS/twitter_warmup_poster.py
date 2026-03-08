@@ -214,6 +214,16 @@ def show_status(state):
 
 
 def do_post(state, dry_run=False):
+    # INTELLIGENCE-FIRST: Get engagement intelligence before posting
+    import subprocess as _sp
+    _intel_result = _sp.run(
+        ["python3", str(Path(__file__).parent / "intelligence_router.py"),
+         "--venture", "CONTENT", "--task", "posting", "--brief"],
+        capture_output=True, text=True, timeout=30
+    )
+    if _intel_result.returncode == 0 and _intel_result.stdout.strip():
+        print(f"\nINTELLIGENCE BRIEF:\n{_intel_result.stdout.strip()[:500]}\n")
+
     today = datetime.now().strftime("%Y-%m-%d")
     day = state.get("current_day", 0)
 
