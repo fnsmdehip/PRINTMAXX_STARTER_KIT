@@ -1,0 +1,345 @@
+{
+  "reviewed": 128,
+  "approved": 61,
+  "engagement_bait": 14,
+  "repurpose_only": 22,
+  "rejected": 28,
+  "exaggerated_but_signal": 3,
+  "top_5_approved": [
+    {
+      "tactic": "Enabled fp8 training for +4.3% improvement to \"time to GPT-2\", down to 2.91 hours now. Also worth noting that if you use 8XH100 spot instance prices, ",
+      "category": "TOOL_ALPHA",
+      "extracted_method": "Tool/technique alpha. Summary: Enabled fp8 training for +4.3% improvement to \"time to GPT-2\", down to 2.91 hours now. Also worth noting that if you use 8XH100 spot instance prices, this GPT-2 repro really only costs ~$20. So this is exciting -GPT-2 (7 years ago): too dangerous to release.GPT-2 (toda"
+    },
+    {
+      "tactic": "nanochat can now train GPT-2 grade LLM for <<$100 (~$73, 3 hours on a single 8XH100 node).GPT-2 is just my favorite LLM because it's the first time th",
+      "category": "TOOL_ALPHA",
+      "extracted_method": "Tool/technique alpha. Summary: nanochat can now train GPT-2 grade LLM for <<$100 (~$73, 3 hours on a single 8XH100 node).GPT-2 is just my favorite LLM because it's the first time the LLM stack comes together in a recognizably modern form. So it has become a bit of a weird & lasting obsession of mine"
+    },
+    {
+      "tactic": "1 hours a day spent marketing my app (making + posting 6 videos)30,000 downloads with this routine last month, 100% free.you too can grow any b2c app ",
+      "category": "ALPHA_GENERAL",
+      "extracted_method": "Extracted signal: 1 hours a day spent marketing my app (making + posting 6 videos)30,000 downloads with this routine last month, 100% free.you too can grow any b2c app for absolutely free, no paid ads.yes YOU CAN. YOU READING THIS.HERE IS HOW TO GET 1000S OF DOWNLOADS THIS MONTH TO YOUR"
+    },
+    {
+      "tactic": "We added $88k in MRR to a B2B ecommerce SaaS in 1 month. And productized the system into an AI platform",
+      "category": "BETA_TESTING",
+      "extracted_method": "Case study with real numbers. Analyze full post for replicable method. Summary: We added $88k in MRR to a B2B ecommerce SaaS in 1 month. And productized the system into an AI platform"
+    },
+    {
+      "tactic": "\"how do I actually find clients for this?\"the market: $19.5B in 2025. $55B by 2035. 11% annual growth. most people in it charge $20/hr on fiverr. don'",
+      "category": "MONETIZATION",
+      "extracted_method": "Monetization method. Summary: \"how do I actually find clients for this?\"the market: $19.5B in 2025. $55B by 2035. 11% annual growth. most people in it charge $20/hr on fiverr. don't be them.pricing ladder:- $15-50/hr = task work. burnout in 3 months.- $1,500-3,000/mo = commodity VA. crowded. low mar"
+    }
+  ],
+  "review_timestamp": "2026-03-08T16:00:00",
+  "reviewer": "alpha_review_high_roi_batch",
+  "criteria": "UNCHECKED status + HIGH/HIGHEST roi_potential",
+  "all_approved": [
+    {
+      "alpha_id": "ALPHA1116",
+      "category": "AFFILIATE_SEO",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1175",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1176",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1255",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1275",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1276",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1318",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1334",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1335",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1340",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1344",
+      "category": "ALPHA_GENERAL",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1347",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGHEST"
+    },
+    {
+      "alpha_id": "ALPHA1349",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGHEST"
+    },
+    {
+      "alpha_id": "ALPHA1368",
+      "category": "ALPHA_GENERAL",
+      "roi": "HIGHEST"
+    },
+    {
+      "alpha_id": "ALPHA1376",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1386",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1416",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1423",
+      "category": "ALPHA_GENERAL",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1429",
+      "category": "ALPHA_GENERAL",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1431",
+      "category": "ALPHA_GENERAL",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1516",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1517",
+      "category": "ALPHA_GENERAL",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1520",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1600",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1655",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1681",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1696",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1697",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA1751",
+      "category": "TOOL_ALPHA",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA2671",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA2716",
+      "category": "SAAS",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA4269",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA4274",
+      "category": "STARTUP_EXECUTION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA4284",
+      "category": "ALPHA_GENERAL",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA4302",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA4323",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA4333",
+      "category": "MONETIZATION",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA4343",
+      "category": "BETA_TESTING",
+      "roi": "HIGHEST"
+    },
+    {
+      "alpha_id": "ALPHA8148",
+      "category": "JOURNEY_CASE_STUDIES",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA8180",
+      "category": "AFFILIATE_MARKETING",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA8266",
+      "category": "SIDE_INCOME",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA8267",
+      "category": "SIDE_INCOME",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA8901",
+      "category": "JOURNEY_CASE_STUDIES",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA11438",
+      "category": "AFFILIATE_SEO",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA13794",
+      "category": "AFFILIATE_MARKETING",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA13814",
+      "category": "EMAIL_DELIVERABILITY",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA16065",
+      "category": "SIDE_INCOME",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA17523",
+      "category": "GROWTH_TACTICS",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA17637",
+      "category": "SIDE_INCOME",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18441",
+      "category": "JOURNEY_CASE_STUDIES",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18452",
+      "category": "LLM Writing Tropes.md | 256pts on LLM writing tropes detection. Direct relevance to our copy-style rules. This is EXACTLY what we fight against. Could build a 'LLM slop detector' tool/lead magnet. Massive engagement on anti-",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18453",
+      "category": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI | AI coding agents evaluated on CI maintenance. 101pts. Agent-based code maintenance is hot. Relevant to our agent swarm architecture. Content angle: 'I run 33 AI agents 24/7, here's what actually works",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18454",
+      "category": "Claude struggles to cope with ChatGPT exodus | 86pts, 79 comments. Claude capacity issues from ChatGPT users migrating. HUGE content angle: 'Claude vs ChatGPT migration guide' landing page. Trend signal for AI tool comparison pages.",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18458",
+      "category": "GetMimic | AI mockup generator for social/chat content. Direct competitor research for content creation tools. Could build similar with our Playwright HTML-to-image pipeline. Affiliate or alternative comparison",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18459",
+      "category": "Claude Marketplace | AI tool marketplace launching. Validates demand for curated AI tool directories. We could list our tools/templates here. Also validates 'AI tool comparison' content strategy.",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18460",
+      "category": "21st Agents SDK | SDK for embedding Claude Code agents in apps. DIRECTLY relevant to our agent infrastructure. Could use this to productize our 33-agent swarm as an embeddable service. Partnership/integration opportuni",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18462",
+      "category": "TestSprite 2.1 | Agentic testing tool. Validates AI-native development tooling market. Could use for our own QA pipeline. Affiliate review opportunity.",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18463",
+      "category": "Context Gateway | Claude Code optimization tool, backed by Garry Tan. HUGE signal. Context management for coding agents is a pain point. Could build comparison content. Direct relevance to our Ralph loops context manag",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18464",
+      "category": "Coursekit | Course-to-AI-agents converter. Validates educational AI market. Could potentially convert our digital products into AI agent experiences. Content angle for education niche.",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18466",
+      "category": "Vet | AI code quality tool for coding agents. Validates 'agent quality assurance' as a category. Relevant to our quality_gate agent. Comparison content opportunity.",
+      "roi": "HIGH"
+    },
+    {
+      "alpha_id": "ALPHA18467",
+      "category": "Vois | Local TTS and voice cloning. Content creation tool. Could use for audio versions of our digital products. Potential affiliate or integration.",
+      "roi": "HIGH"
+    }
+  ]
+}

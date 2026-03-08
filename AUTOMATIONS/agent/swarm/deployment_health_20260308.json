@@ -1,0 +1,385 @@
+{
+  "checked_at": "2026-03-08T17:53:54",
+  "sites": [
+    {
+      "url": "https://ramadan-tracker.surge.sh",
+      "status": 200,
+      "response_ms": 970,
+      "content_bytes": 16776,
+      "issues": []
+    },
+    {
+      "url": "https://focuslock-web.surge.sh",
+      "status": 200,
+      "response_ms": 919,
+      "content_bytes": 15581,
+      "issues": []
+    },
+    {
+      "url": "https://habitforge-web.surge.sh",
+      "status": 200,
+      "response_ms": 1152,
+      "content_bytes": 81516,
+      "issues": []
+    },
+    {
+      "url": "https://mealmaxx-web.surge.sh",
+      "status": 200,
+      "response_ms": 901,
+      "content_bytes": 18567,
+      "issues": []
+    },
+    {
+      "url": "https://sleepmaxx-web.surge.sh",
+      "status": 200,
+      "response_ms": 939,
+      "content_bytes": 22511,
+      "issues": []
+    },
+    {
+      "url": "https://walktounlock-web.surge.sh",
+      "status": 200,
+      "response_ms": 1166,
+      "content_bytes": 42272,
+      "issues": []
+    },
+    {
+      "url": "https://coreday.surge.sh",
+      "status": 200,
+      "response_ms": 1129,
+      "content_bytes": 48135,
+      "issues": []
+    },
+    {
+      "url": "https://printmaxx-apps.surge.sh",
+      "status": 200,
+      "response_ms": 996,
+      "content_bytes": 11606,
+      "issues": []
+    },
+    {
+      "url": "https://printmaxx-site.surge.sh",
+      "status": 200,
+      "response_ms": 999,
+      "content_bytes": 11606,
+      "issues": []
+    },
+    {
+      "url": "https://adhd-streak.surge.sh",
+      "status": 200,
+      "response_ms": 927,
+      "content_bytes": 20927,
+      "issues": []
+    },
+    {
+      "url": "https://ai-stack-2026.surge.sh",
+      "status": 200,
+      "response_ms": 892,
+      "content_bytes": 30734,
+      "issues": []
+    },
+    {
+      "url": "https://anglican-streak.surge.sh",
+      "status": 200,
+      "response_ms": 904,
+      "content_bytes": 10174,
+      "issues": []
+    },
+    {
+      "url": "https://baptist-streak.surge.sh",
+      "status": 200,
+      "response_ms": 976,
+      "content_bytes": 9859,
+      "issues": []
+    },
+    {
+      "url": "https://catholic-streak.surge.sh",
+      "status": 200,
+      "response_ms": 860,
+      "content_bytes": 11052,
+      "issues": []
+    },
+    {
+      "url": "https://coldmaxx.surge.sh",
+      "status": 200,
+      "response_ms": 876,
+      "content_bytes": 22443,
+      "issues": []
+    },
+    {
+      "url": "https://convertkit-vs-beehiiv.surge.sh",
+      "status": 200,
+      "response_ms": 987,
+      "content_bytes": 25685,
+      "issues": []
+    },
+    {
+      "url": "https://episcopal-streak.surge.sh",
+      "status": 200,
+      "response_ms": 960,
+      "content_bytes": 8417,
+      "issues": []
+    },
+    {
+      "url": "https://evangelical-streak.surge.sh",
+      "status": 200,
+      "response_ms": 1604,
+      "content_bytes": 10214,
+      "issues": []
+    },
+    {
+      "url": "https://hilal-app.surge.sh",
+      "status": 200,
+      "response_ms": 917,
+      "content_bytes": 18061,
+      "issues": []
+    },
+    {
+      "url": "https://lutheran-streak.surge.sh",
+      "status": 200,
+      "response_ms": 921,
+      "content_bytes": 8423,
+      "issues": []
+    },
+    {
+      "url": "https://methodist-streak.surge.sh",
+      "status": 200,
+      "response_ms": 914,
+      "content_bytes": 8405,
+      "issues": []
+    },
+    {
+      "url": "https://orthodox-streak.surge.sh",
+      "status": 200,
+      "response_ms": 915,
+      "content_bytes": 10127,
+      "issues": []
+    },
+    {
+      "url": "https://pentecostal-streak.surge.sh",
+      "status": 200,
+      "response_ms": 1004,
+      "content_bytes": 8484,
+      "issues": []
+    },
+    {
+      "url": "https://prayerlock-web.surge.sh",
+      "status": 200,
+      "response_ms": 914,
+      "content_bytes": 16101,
+      "issues": []
+    },
+    {
+      "url": "https://presbyterian-streak.surge.sh",
+      "status": 200,
+      "response_ms": 944,
+      "content_bytes": 10272,
+      "issues": []
+    },
+    {
+      "url": "https://protestant-streak.surge.sh",
+      "status": 200,
+      "response_ms": 996,
+      "content_bytes": 9931,
+      "issues": []
+    },
+    {
+      "url": "https://shia-streak.surge.sh",
+      "status": 200,
+      "response_ms": 875,
+      "content_bytes": 10087,
+      "issues": []
+    },
+    {
+      "url": "https://sunni-streak.surge.sh",
+      "status": 200,
+      "response_ms": 985,
+      "content_bytes": 10071,
+      "issues": []
+    },
+    {
+      "url": "https://printmaxx-thanks.surge.sh",
+      "status": 200,
+      "response_ms": 922,
+      "content_bytes": 17280,
+      "issues": []
+    },
+    {
+      "url": "https://printmaxx-local-demos.surge.sh",
+      "status": 200,
+      "response_ms": 1006,
+      "content_bytes": 9924,
+      "issues": []
+    },
+    {
+      "url": "https://art-streak-app.surge.sh",
+      "status": 200,
+      "response_ms": 902,
+      "content_bytes": 10179,
+      "issues": []
+    },
+    {
+      "url": "https://sutra-streak-app.surge.sh",
+      "status": 200,
+      "response_ms": 995,
+      "content_bytes": 10222,
+      "issues": []
+    },
+    {
+      "url": "https://coldmaxx-vs-instantly.surge.sh",
+      "status": 200,
+      "response_ms": 903,
+      "content_bytes": 28881,
+      "issues": []
+    },
+    {
+      "url": "https://cursor-vs-claudecode.surge.sh",
+      "status": 200,
+      "response_ms": 927,
+      "content_bytes": 30308,
+      "issues": []
+    },
+    {
+      "url": "https://instantly-vs-lemlist.surge.sh",
+      "status": 200,
+      "response_ms": 1022,
+      "content_bytes": 29245,
+      "issues": []
+    },
+    {
+      "url": "https://pagescorer-vs-gtmetrix.surge.sh",
+      "status": 200,
+      "response_ms": 1040,
+      "content_bytes": 26351,
+      "issues": []
+    },
+    {
+      "url": "https://sleepmaxx-vs-sleepcycle.surge.sh",
+      "status": 200,
+      "response_ms": 987,
+      "content_bytes": 27690,
+      "issues": []
+    },
+    {
+      "url": "https://printmaxx-lead-magnets.surge.sh",
+      "status": 404,
+      "response_ms": 2356,
+      "content_bytes": 8253,
+      "issues": [
+        "HTTP 404"
+      ]
+    }
+  ],
+  "landing_pages_reviewed": [
+    {
+      "file": "LANDING/app-marketing-pages/coldmaxx/index.html",
+      "status": "PASS",
+      "issues": [
+        "none"
+      ]
+    },
+    {
+      "file": "LANDING/app-marketing-pages/sleepmaxx/index.html",
+      "status": "PASS",
+      "issues": [
+        "none"
+      ]
+    },
+    {
+      "file": "LANDING/app-marketing-pages/walktounlock/index.html",
+      "status": "PASS",
+      "issues": [
+        "none - \"unlock\" is the app name, not AI slop"
+      ]
+    },
+    {
+      "file": "LANDING/app-marketing-pages/mealmaxx/index.html",
+      "status": "PASS",
+      "issues": [
+        "none"
+      ]
+    },
+    {
+      "file": "LANDING/app-marketing-pages/baptist-streak/index.html",
+      "status": "ISSUES_FOUND",
+      "issues": [
+        "MISSING: og:image"
+      ]
+    },
+    {
+      "file": "LANDING/app-marketing-pages/convertkit-vs-beehiiv/index.html",
+      "status": "ISSUES_FOUND",
+      "issues": [
+        "MISSING: og:image"
+      ]
+    },
+    {
+      "file": "07_LANDING/coldmaxx-vs-instantly/index.html",
+      "status": "PASS",
+      "issues": [
+        "none"
+      ]
+    },
+    {
+      "file": "07_LANDING/cursor-vs-claudecode/index.html",
+      "status": "ISSUES_FOUND",
+      "issues": [
+        "COPY STYLE: banned AI words found: ['paradigm']"
+      ]
+    },
+    {
+      "file": "07_LANDING/sleepmaxx-vs-sleepcycle/index.html",
+      "status": "PASS",
+      "issues": [
+        "none"
+      ]
+    },
+    {
+      "file": "07_LANDING/pagescorer-vs-gtmetrix/index.html",
+      "status": "PASS",
+      "issues": [
+        "none"
+      ]
+    }
+  ],
+  "total_up": 37,
+  "total_down": 1,
+  "total_sites_checked": 38,
+  "avg_response_ms": 979,
+  "critical_issues": [
+    {
+      "url": "https://printmaxx-lead-magnets.surge.sh",
+      "type": "site_down",
+      "detail": "HTTP 404"
+    },
+    {
+      "url": "LANDING/app-marketing-pages/baptist-streak/index.html",
+      "type": "seo_missing",
+      "detail": "MISSING: og:image"
+    },
+    {
+      "url": "LANDING/app-marketing-pages/convertkit-vs-beehiiv/index.html",
+      "type": "seo_missing",
+      "detail": "MISSING: og:image"
+    },
+    {
+      "url": "07_LANDING/cursor-vs-claudecode/index.html",
+      "type": "copy_style",
+      "detail": "COPY STYLE: banned AI words found: ['paradigm']"
+    }
+  ],
+  "summary": {
+    "uptime_pct": 97.4,
+    "sites_checked": 38,
+    "landing_pages_reviewed": 10,
+    "landing_pages_passing": 7,
+    "landing_pages_with_issues": 3,
+    "notes": [
+      "printmaxx-lead-magnets.surge.sh returns 404 - not deployed or wrong domain",
+      "baptist-streak and convertkit-vs-beehiiv missing og:image meta tag",
+      "cursor-vs-claudecode uses banned word \"paradigm\" in body copy",
+      "All 37 other sites healthy with sub-2s response times",
+      "All reviewed landing pages have proper title, description, canonical, structured data, and twitter card tags"
+    ]
+  }
+}

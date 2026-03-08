@@ -36,13 +36,13 @@ If you're still interested in content distribution systems, here's what you miss
 - Added Descript for video repurposing
 - Killed 3 subscriptions (saved $67/month)
 
-**Results from last 30 days:**
-- 4,200 email subscribers (up from 847)
-- $8,100 revenue (up from $3,247)
-- 2 new products shipped
-- Still working 3 hours/week
+**What I shipped in the last 30 days:**
+- 7 apps live (PWAs on surge.sh)
+- 6 new lead magnets capturing emails
+- 13 digital products ready to buy
+- 140+ pages deployed
 
-The system is compounding. Everything I told you would work is working.
+The system is compounding. More assets every week, all from the same distribution workflows.
 
 If you want back in, just open this email. You'll stay on the list.
 
@@ -58,7 +58,7 @@ P.S. Hit reply if you want to stay but prefer different content. I can move you 
 
 **Subject:** Here's what's working now
 
-**Preview:** 3 new systems. 1 app launch. $8k/month. Here's the breakdown.
+**Preview:** 3 new systems. 1 app launch. Here's what I built.
 
 **Body:**
 
@@ -71,42 +71,33 @@ Here's what's new since you last opened:
 **System 1: The Content Flywheel**
 - Create 1 truth page per week
 - Run through 3 distribution workflows
-- Get 200+ pieces per month
-- Capture 300+ emails per month
-- Convert 3-5% to buyers
+- Get 40-70 pieces from each one
+- Capture emails via lead magnets
+- Stack content across 6 platforms
 
-Revenue from this alone: $2,400/month
+I have 283 posts queued and ready to distribute right now.
 
 **System 2: Lead Magnet Factory**
-- Built 5 lead magnets in 30 days
-- Calculator format converts best (8% opt-in)
-- Swipe files second (6% opt-in)
-- Checklists third (4% opt-in)
-
-Email growth from this: 1,200 new subscribers/month
+- Built 6 lead magnets in 30 days
+- Calculator format gets the most engagement
+- Swipe files second
+- Checklists third
+- All deployed and capturing emails
 
 **System 3: Product Ladder**
-- Entry: $27 product (faith journal)
-- Mid: $47 product (AI stack, fitness program)
+- Entry: $7-17 products (funnel teardown, tech stack)
+- Mid: $27-47 products (cold email playbook, AI toolkit)
 - Top: $97 product (PRINTMAXX OS)
-- Upsell: $197 (coming soon)
+- Bundle: $197 all-access
+- 13 products built and ready
 
-Revenue breakdown:
-- $27 tier: $1,890/month
-- $47 tier: $3,760/month
-- $97 tier: $2,425/month
-
-Total: $8,075/month
-
-**App I launched:**
+**Apps I shipped:**
 - PrayerLock (faith streak app)
-- iOS only for now
-- $4.99 one-time or $9.99/year subscription
-- In review (ships next week)
+- ColdMaxx (cold email tool)
+- SleepMaxx, WalkToUnlock, MealMaxx, FocusLock
+- 7 PWAs live on surge.sh
 
-All of this in 90 days. Still working 3 hours/week on maintenance.
-
-The rest? Automated.
+All of this built with a $200/month Claude Max budget. No team. No funding.
 
 If you want to see how I did it, everything's documented in PRINTMAXX OS.
 
@@ -148,7 +139,7 @@ But before I remove you, here's an offer.
 
 [GET PRINTMAXX OS - $67]
 
-This is the complete distribution system. Everything I use to make $8k/month in 3 hours/week.
+This is the complete distribution system. Every workflow, template, and SOP I use daily.
 
 If you don't want it, that's fine too.
 

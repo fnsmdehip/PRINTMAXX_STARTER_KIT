@@ -415,3 +415,14 @@ So I am building a cool AI project, which is solving a real problem and have sha
   
 Being pre-revenue and in build phase gives a sense of comfort of high ambition, and going to revenue seems like there is 
 
+
+
+---
+
+## Pending Enhancement (ALPHA9035, Score: 36)
+
+**Source:** r/AppBusiness (Reddit) | **URL:** https://i.redd.it/ce7h1zuv1nng1.png
+**Added:** 2026-03-08T04:05:02-04:00
+
+1.3k users, but only $35 MRR. Is it time to kill my project? [Score: 23]
+

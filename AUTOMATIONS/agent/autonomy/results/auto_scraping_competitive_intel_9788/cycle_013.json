@@ -1,0 +1,51 @@
+{
+  "cycle_start": "2026-03-08T14:43:00.294400",
+  "cycle_end": "2026-03-08T14:43:00.298640",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 2,
+  "new_intel_rows_written": 2,
+  "alerts_generated": 2,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I built an app with my son so we're not always late getting out the door",
+      "subreddit": "SideProject",
+      "score": 113,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rmuggo/i_built_an_app_with_my_son_so_were_not_always/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I Got Paid $25k to Build an AI Ad System with Claude Code",
+      "subreddit": "EntrepreneurRideAlong",
+      "score": 10,
+      "url": "https://www.reddit.com/r/EntrepreneurRideAlong/comments/1rmj68s/i_got_paid_25k_to_build_an_ai_ad_system_with/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "I built an app with my son so we're not always late getting out the door",
+      "subreddit": "SideProject",
+      "score": 113,
+      "comments": 55,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rmuggo/i_built_an_app_with_my_son_so_were_not_always/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA18440"
+    },
+    {
+      "title": "I Got Paid $25k to Build an AI Ad System with Claude Code",
+      "subreddit": "EntrepreneurRideAlong",
+      "score": 10,
+      "comments": 23,
+      "url": "https://www.reddit.com/r/EntrepreneurRideAlong/comments/1rmj68s/i_got_paid_25k_to_build_an_ai_ad_system_with/",
+      "keyword_hits": 0,
+      "roi": "HIGH",
+      "post_id": "ALPHA18441"
+    }
+  ]
+}

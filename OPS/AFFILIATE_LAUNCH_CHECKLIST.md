@@ -624,3 +624,58 @@ he nails the biggest truths we shall all admit:
 
 Pauline Clavelloux: 4-SaaS portfolio to €100K+ ARR. Products: IACrea (AI real estate photo staging) + Feedbask (customer feedback widget) + Subclip (auto video subtitles/translation) + Refindie (affiliate mgmt for SaaS). Stack: Next.js + Supabase + Stripe + Vercel. Goal: €30K MRR per product. Ex-IBM 9.5 years. Key tactic: build fast even if ugly + launch early + improve only what matters + quit if
 
+
+
+---
+
+## Pending Enhancement (ALPHA18292, Score: 41)
+
+**Source:** market_research_agent | **URL:** https://convertkit.com/affiliate
+**Added:** 2026-03-08T10:20:11-04:00
+
+Kit (ConvertKit) affiliate: 50% recurring 12mo + 10-20% lifetime tail. 60-90 day cookie. $29-59/mo plans. Better long-term economics than Beehiiv due to lifetime tail.
+
+
+
+---
+
+## Pending Enhancement (ALPHA18293, Score: 49)
+
+**Source:** market_research_agent | **URL:** https://www.smartlead.ai/affiliate-partners
+**Added:** 2026-03-08T10:20:11-04:00
+
+Smartlead affiliate: 20-35% lifetime recurring. $39-94/mo plans. Tiered structure rewards volume. Competes directly with Instantly. No comparison page built yet -- opportunity to build smartlead-vs-instantly page.
+
+
+
+---
+
+## Pending Enhancement (ALPHA18294, Score: 43)
+
+**Source:** market_research_agent | **URL:** https://www.semrush.com/lp/affiliate-program/en/
+**Added:** 2026-03-08T10:20:11-04:00
+
+SEMrush affiliate: $200-350 per sale (tiered). $10 per trial sign-up. 120-DAY COOKIE (best in class). Plans $140-500/mo. Via Impact.com. Build semrush-vs-ahrefs comparison page.
+
+
+
+---
+
+## Pending Enhancement (ALPHA18295, Score: 43)
+
+**Source:** market_research_agent | **URL:** https://www.saleshandy.com/affiliate-program/
+**Added:** 2026-03-08T10:20:11-04:00
+
+Saleshandy affiliate: 25% lifetime recurring. 90-DAY COOKIE. $36-99/mo plans. Bonus structure ($25 for 5 customers/mo). PayPal payout. Position as budget Instantly alternative.
+
+
+
+---
+
+## Pending Enhancement (ALPHA18305, Score: 61)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://highpayingaffiliateprograms.com/
+**Added:** 2026-03-08T11:32:51-04:00
+
+Scale existing 5 comparison pages to 50+ AI tool affiliate review network. Elementor 65% commission. Semrush $200/sale. AppSumo 100% new customers. Lenso.ai 30% recurring. Zero new infra needed. Template exists. Programmatic SEO site exists. Deploy to surge.sh $0.
+

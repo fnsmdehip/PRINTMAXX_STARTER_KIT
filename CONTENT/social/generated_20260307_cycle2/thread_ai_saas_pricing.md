@@ -38,7 +38,7 @@ that's 2-4x more impactful than customer acquisition.
 
 most founders spend 80% of time on growth and 5% on pricing. the data says flip that ratio.
 
-your pricing page is the highest-leverage asset in your business.
+your pricing page is the highest-impact asset in your business.
 
 ---
 

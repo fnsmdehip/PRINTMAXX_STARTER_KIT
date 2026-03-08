@@ -122,7 +122,7 @@ curious what friction points you've hit with other habit apps. might be able to 
 
 been doing a build-in-public sprint. 140+ sites across a bunch of niches in 30 days.
 
-most of them are niche tools and micro-apps. this one is the one i'm most personally invested in because i actually use it.
+most of them are niche tools and micro-apps. this one i actually use daily.
 
 ADHD Streak: a habit tracker for ADHD brains. https://adhd-streak.surge.sh
 

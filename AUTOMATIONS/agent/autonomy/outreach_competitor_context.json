@@ -125,12 +125,6 @@
       "rating": "4.88",
       "price": "Free",
       "last_updated": "2026-03-04"
-    },
-    {
-      "name": "Bible Chat: AI Bible Q&A",
-      "rating": "4.93",
-      "price": "Free",
-      "last_updated": "2026-02-27"
     }
   ],
   "screen_time": [
@@ -305,12 +299,6 @@
       "last_updated": "2026-03-04"
     },
     {
-      "name": "Structured - Daily Planner",
-      "rating": "4.8",
-      "price": "Free",
-      "last_updated": "2026-02-19"
-    },
-    {
       "name": "Calendars: Schedule Planner",
       "rating": "4.72",
       "price": "Free",
@@ -448,7 +436,7 @@
       "name": "Brilliant: Learn by doing",
       "rating": "4.74",
       "price": "Free",
-      "last_updated": "2026-03-02"
+      "last_updated": "2026-03-06"
     },
     {
       "name": "WolframAlpha",
@@ -583,12 +571,116 @@
       "rating": "4.64",
       "price": "Free",
       "last_updated": "2026-03-02"
+    }
+  ],
+  "adhd": [
+    {
+      "name": "Structured - Daily Planner",
+      "rating": "4.8",
+      "price": "Free",
+      "last_updated": "2026-02-19"
     },
     {
-      "name": "Hevy - Workout Tracker",
-      "rating": "4.92",
-      "price": "Free (Pro $4.99/mo)",
+      "name": "Daylio Journal - Mood Tracker",
+      "rating": "4.77",
+      "price": "Free",
+      "last_updated": "2026-03-04"
+    },
+    {
+      "name": "Routine Planner, Habit Tracker",
+      "rating": "4.72",
+      "price": "Free",
+      "last_updated": "2026-02-24"
+    },
+    {
+      "name": "Beside: Body Doubling Focus",
+      "rating": "0",
+      "price": "Free",
+      "last_updated": "2026-02-25"
+    },
+    {
+      "name": "Tiimo: Daily To Do AI Planner",
+      "rating": "4.57",
+      "price": "Free",
+      "last_updated": "2026-03-02"
+    },
+    {
+      "name": "Planner & To Do List Journal",
+      "rating": "4.77",
+      "price": "Free",
+      "last_updated": "2026-02-27"
+    },
+    {
+      "name": "ADHD Organizer: Llama Life",
+      "rating": "4.56",
+      "price": "Free",
+      "last_updated": "2026-02-25"
+    },
+    {
+      "name": "Focus - Timer for Productivity",
+      "rating": "4.43",
+      "price": "Free",
+      "last_updated": "2026-02-02"
+    },
+    {
+      "name": "Goblin Tools",
+      "rating": "4.81",
+      "price": "$2.99",
+      "last_updated": "2023-06-23"
+    },
+    {
+      "name": "Due - Reminders & Timers",
+      "rating": "4.67",
+      "price": "$7.99",
+      "last_updated": "2026-02-03"
+    },
+    {
+      "name": "Streaks",
+      "rating": "4.82",
+      "price": "$5.99",
+      "last_updated": "2026-03-05"
+    },
+    {
+      "name": "Done: Habit Tracker",
+      "rating": "0",
+      "price": "Free",
+      "last_updated": "2026-02-03"
+    },
+    {
+      "name": "Habitify: Habit Tracker",
+      "rating": "4.6",
+      "price": "Free",
+      "last_updated": "2026-02-04"
+    },
+    {
+      "name": "Productive - Habit Tracker",
+      "rating": "4.6",
+      "price": "Free",
+      "last_updated": "2025-12-10"
+    },
+    {
+      "name": "Way of Life - Habit Tracker",
+      "rating": "4.82",
+      "price": "Free",
+      "last_updated": "2026-02-14"
+    },
+    {
+      "name": "Habit Tracker",
+      "rating": "4.8",
+      "price": "Free",
       "last_updated": "2026-03-06"
+    },
+    {
+      "name": "Loop Habit Tracker*",
+      "rating": "3.54",
+      "price": "Free",
+      "last_updated": "2025-08-06"
+    },
+    {
+      "name": "Google Tasks: Get Things Done",
+      "rating": "4.8",
+      "price": "Free",
+      "last_updated": "2026-03-04"
     }
   ],
   "sleep": [
@@ -769,12 +861,6 @@
       "last_updated": "2026-02-03"
     },
     {
-      "name": "Daylio Journal - Mood Tracker",
-      "rating": "4.77",
-      "price": "Free",
-      "last_updated": "2026-03-04"
-    },
-    {
       "name": "Momento: Private Journal Diary",
       "rating": "4.11",
       "price": "Free",
@@ -821,12 +907,6 @@
       "rating": "4.87",
       "price": "Free",
       "last_updated": "2026-02-18"
-    },
-    {
-      "name": "Routine Planner, Habit Tracker",
-      "rating": "4.72",
-      "price": "Free",
-      "last_updated": "2026-02-24"
     },
     {
       "name": "Balance: Meditation & Sleep",
@@ -1029,229 +1109,181 @@
       "last_updated": ""
     }
   ],
-  "competitive_intel": [
+  "I just got my first paid customer , 2 days after the launch !!": [
     {
-      "name": "I'm 3 years old and just sold my SaaS for $1.2B (here's what I learned)",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "It's so fking hard to juggle a 9-5, family, and build a SaaS",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "I got 400 signups in 30 days and made $0. Two months later, developers are final",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "BEST IPTV USA in 2026 \u2013 After Testing Multiple IPTV Services, This One Finally W",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "I added a free trial and my paid conversion went from 2% to 11%. Here's the exac",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "just launched my first React Native app. how did you get your first 100 users?",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "Hit $60 MRR, then ghosted my own SaaS for a month.",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "I just made my first sale!",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "Building a Clay alternative for lead enrichment, would love feedback from agency",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "I built TerraInk, an open-source tool for instant and fully customizable map pos",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "shopify really said \u2018what if we just charged more\u2019 huh",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "Took a 10-day vacation and nothing broke. That scared me more than if it had.",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "BEST IPTV USA in 2026: After Testing Multiple Services, Here\u2019s What Works",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "We said no to $2.5m vc money and I'm still kinda shocked we did it lol",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "2k users, $800 with a Habit Tracker - I can't explain how good this feels",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "Bootstrapped Ex-founders, how much money did you end up losing on your previous ",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "BEST IPTV UK, USA & CANADA in 2026 \u2013 After Testing Multiple Services: vizwriting",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "i just launched my app on Product Hunt, a tool that turns flat content into 3d e",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "I set up 6 AI agents that sell web services 24/7 (full breakdown)",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "Lesson I learned this year that doubled my income, I will not promote",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T02:50:55"
-    },
-    {
-      "name": "I spent &gt; $60K/month on PR agencies at a startup that raised $680M. Here's wh",
-      "rating": "",
-      "price": "",
-      "last_updated": "2026-03-07T05:00:44"
-    }
-  ],
-  "digital_products": [
-    {
-      "name": "Gumroad",
-      "rating": "",
-      "price": "Free (10%+$0.50/sale)",
-      "last_updated": ""
-    },
-    {
-      "name": "Whop",
-      "rating": "",
-      "price": "Free (2.7%+$0.30/sale)",
+      "name": "REVENUE_SIGNAL",
+      "rating": "23",
+      "price": "SideProject",
       "last_updated": ""
     }
   ],
-  "cold_email": [
+  "Simplest Way I Turn My SaaS Demos Into Real Users (Small workflow that started working for me)": [
     {
-      "name": "Instantly.ai",
-      "rating": "",
-      "price": "$30-$97/mo",
-      "last_updated": ""
-    },
-    {
-      "name": "Hunter.io",
-      "rating": "",
-      "price": "$34/mo+",
+      "name": "REVENUE_SIGNAL",
+      "rating": "5",
+      "price": "SideProject",
       "last_updated": ""
     }
   ],
-  "local_biz": [
+  "I built a sports app with 500k+ active users. AMA.": [
     {
-      "name": "Durable.co",
-      "rating": "",
-      "price": "$12/mo",
+      "name": "REVENUE_SIGNAL",
+      "rating": "23",
+      "price": "AppBusiness",
       "last_updated": ""
     }
   ],
-  "freelance": [
+  "1.3k users, but only $35 MRR. Is it time to kill my project?": [
     {
-      "name": "Fiverr Web Design",
-      "rating": "",
-      "price": "$30-$419 (avg $261)",
+      "name": "REVENUE_SIGNAL",
+      "rating": "21",
+      "price": "AppBusiness",
       "last_updated": ""
     }
   ],
-  "entrepreneurridealong": [
+  "Got my first paid customer today!": [
     {
-      "name": "Update: I\u2019m the 16yo who posted about making my first $500. Thanks to you, I jus",
-      "rating": "",
-      "price": "",
-      "last_updated": ""
-    },
-    {
-      "name": "Entrepreneurs on Reddit, what is your current AI stack in 2026?",
-      "rating": "",
-      "price": "",
-      "last_updated": ""
-    },
-    {
-      "name": "You don\u2019t need a ton of money to buy a small business",
-      "rating": "",
-      "price": "",
-      "last_updated": ""
-    },
-    {
-      "name": "Google ads suspended my account for misrepresenting business location",
-      "rating": "",
-      "price": "",
-      "last_updated": ""
-    },
-    {
-      "name": "7 months of \"vibe coding\" a SaaS and here's what nobody tells you",
-      "rating": "",
-      "price": "",
-      "last_updated": ""
-    },
-    {
-      "name": "Spent 8 months building a faceless YouTube channel about personal finance, here'",
-      "rating": "",
-      "price": "",
-      "last_updated": ""
-    },
-    {
-      "name": "Way to own SaaS",
-      "rating": "",
-      "price": "",
+      "name": "REVENUE_SIGNAL",
+      "rating": "12",
+      "price": "AppBusiness",
       "last_updated": ""
     }
   ],
-  "coldemail": [
+  "Which Social Networks Convert Best for Early Paid Users?": [
     {
-      "name": "i mastered cold email and now my lead gen agency generates 100+ leads every day.",
-      "rating": "",
-      "price": "",
+      "name": "REVENUE_SIGNAL",
+      "rating": "7",
+      "price": "Entrepreneur",
       "last_updated": ""
     }
   ],
-  "updated_at": "2026-03-07T13:39:09.191074"
+  "Sold my SaaS for $6M. After talking to 30 buyers, here's what actually mattered in the sale.": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "323",
+      "price": "SaaS",
+      "last_updated": ""
+    }
+  ],
+  "How did you get your first paying customer?": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "10",
+      "price": "SaaS",
+      "last_updated": ""
+    }
+  ],
+  "How I Added 16 New Customers in 30 Days (+31% MRR)": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "7",
+      "price": "SaaS",
+      "last_updated": ""
+    }
+  ],
+  "How does your team figure out why users are dropping off?": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "7",
+      "price": "SaaS",
+      "last_updated": ""
+    }
+  ],
+  "Day 200. Just hit $12k in revenue. It still feels unreal.": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "13",
+      "price": "MicroSaas",
+      "last_updated": ""
+    }
+  ],
+  "I'm watching an AI agent try to build a real physical product company.": [
+    {
+      "name": "PRODUCT_INTEL",
+      "rating": "114",
+      "price": "passive_income",
+      "last_updated": ""
+    }
+  ],
+  "I made a digital product in one day and listed it for $17. Here's the honest breakdown of what I built and why that pric": [
+    {
+      "name": "PRODUCT_INTEL",
+      "rating": "22",
+      "price": "passive_income",
+      "last_updated": ""
+    }
+  ],
+  "Online Passive income": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "20",
+      "price": "passive_income",
+      "last_updated": ""
+    }
+  ],
+  "Passive income really possible?": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "7",
+      "price": "passive_income",
+      "last_updated": ""
+    }
+  ],
+  "My first app just got its first paying user \ud83e\udd73": [
+    {
+      "name": "PRODUCT_INTEL",
+      "rating": "26",
+      "price": "buildinpublic",
+      "last_updated": ""
+    }
+  ],
+  "Built the code, loved the logic, but now I'm staring at a '0 Users' dashboard and I'm paralyzed.": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "5",
+      "price": "buildinpublic",
+      "last_updated": ""
+    }
+  ],
+  "How long did it take you to get your first user and your first paying customer?": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "13",
+      "price": "micro_saas",
+      "last_updated": ""
+    }
+  ],
+  "client paid me $1800 for a project. my tool cost was $0.53. feeling like a goddamn genius rn": [
+    {
+      "name": "REVENUE_SIGNAL",
+      "rating": "24",
+      "price": "Solopreneur",
+      "last_updated": ""
+    }
+  ],
+  "REDDIT_APP_ANALYSIS": [
+    {
+      "name": "963k iOS Apps Market Analysis",
+      "rating": "18",
+      "price": "SaaS",
+      "last_updated": "Crowded markets trap. Look for \"hate this but need it\" demand. Crowded niche = death. Frustration + captive spend = opportunity."
+    }
+  ],
+  "REDDIT_SAAS_EXIT": [
+    {
+      "name": "SaaS $6M Sale \u2014 What Buyers Actually Care About",
+      "rating": "12",
+      "price": "SaaS",
+      "last_updated": "Top 5 customers >40% revenue = buyers walk. 95% net retention critical. Competitive defensibility > growth rate. Founder dependency = #2 concern."
+    }
+  ],
+  "REDDIT_COMPETITOR_INTEL": [
+    {
+      "name": "Habitum \u2014 Gamified Habit Tracker First Paying User",
+      "rating": "11",
+      "price": "buildinpublic",
+      "last_updated": "Habitum = gamified habit tracker, direct competitor. First paying user via organic subreddit engagement. No paid ads used."
+    }
+  ],
+  "updated_at": "2026-03-08T11:11:04.872497"
 }

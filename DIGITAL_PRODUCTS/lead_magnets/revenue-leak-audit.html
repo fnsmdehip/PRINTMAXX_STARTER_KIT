@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Leak Audit | Find Where You're Losing Money</title>
+<meta name="description" content="12 questions. 90 seconds. find every hole in your revenue funnel. most solopreneurs leak $1,200-4,850/mo without knowing it.">
+<meta name="keywords" content="revenue leak audit, solopreneur revenue, revenue optimization, business audit tool, revenue calculator, money leaks business">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://revenue-leak-audit.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Revenue Leak Audit | Find Where You're Losing Money">
+<meta property="og:description" content="12 questions. 90 seconds. find every hole in your revenue funnel.">
+<meta property="og:url" content="https://revenue-leak-audit.surge.sh">
+<meta property="og:image" content="https://revenue-leak-audit.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Revenue Leak Audit: Find Where You're Losing $1,200-4,850/mo">
+<meta name="twitter:description" content="12 questions. 90 seconds. find every hole in your revenue funnel.">
+<meta name="twitter:image" content="https://revenue-leak-audit.surge.sh/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Revenue Leak Audit","url":"https://revenue-leak-audit.surge.sh","description":"Interactive audit tool that identifies revenue leaks in solopreneur businesses across traffic, conversion, monetization, and distribution","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#111111;
+  --card:#161616;
+  --card-hover:#1c1c1c;
+  --accent:#22c55e;
+  --accent-dim:rgba(34,197,94,0.12);
+  --accent-border:rgba(34,197,94,0.3);
+  --red:#ef4444;
+  --red-dim:rgba(239,68,68,0.1);
+  --red-border:rgba(239,68,68,0.25);
+  --yellow:#f59e0b;
+  --yellow-dim:rgba(245,158,11,0.1);
+  --yellow-border:rgba(245,158,11,0.25);
+  --text:#e5e5e5;
+  --muted:#6b7280;
+  --muted-bright:#9ca3af;
+  --border:#1f1f1f;
+  --border-bright:#2a2a2a;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:700px;margin:0 auto;padding:0 20px}
+
+header{padding:40px 0 32px;text-align:center}
+.badge{display:inline-block;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+header h1{font-size:clamp(1.8rem,5.5vw,2.6rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px}
+header h1 .highlight{color:var(--accent)}
+header .sub{color:var(--muted-bright);font-size:1rem;margin-bottom:24px}
+.stats-bar{display:flex;justify-content:center;gap:32px;padding:16px 24px;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:8px}
+.stat-item{text-align:center}
+.stat-item .num{font-size:1.3rem;font-weight:800;color:var(--accent);letter-spacing:-0.5px}
+.stat-item .lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+
+.progress-wrap{margin:28px 0 24px}
+.progress-label{display:flex;justify-content:space-between;font-size:0.8rem;color:var(--muted);margin-bottom:8px}
+.progress-label span:last-child{color:var(--accent);font-weight:700}
+.progress-bar{height:4px;background:var(--border-bright);border-radius:99px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),#16a34a);border-radius:99px;transition:width 0.4s ease;width:0%}
+
+.category{margin-bottom:28px}
+.category-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.category-icon{width:28px;height:28px;background:var(--accent-dim);border:1px solid var(--accent-border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:var(--accent)}
+.category-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted-bright)}
+.category-leak{margin-left:auto;font-size:0.72rem;color:var(--red);font-weight:600}
+
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:10px;transition:border-color 0.2s,background 0.2s}
+.q-card:hover{background:var(--card-hover)}
+.q-card.answered-yes{border-color:var(--accent-border);background:rgba(34,197,94,0.04)}
+.q-card.answered-no{border-color:var(--red-border);background:rgba(239,68,68,0.04)}
+.q-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.q-text{font-size:0.92rem;color:var(--text);flex:1;line-height:1.5}
+.q-leak{font-size:0.72rem;color:var(--muted);margin-top:4px}
+.q-leak.active{color:var(--red)}
+
+.toggle-wrap{display:flex;gap:6px;flex-shrink:0;margin-top:2px}
+.toggle-btn{padding:6px 14px;border-radius:7px;border:1px solid var(--border-bright);background:transparent;color:var(--muted-bright);font-family:inherit;font-size:0.8rem;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap}
+.toggle-btn:active{transform:scale(0.97)}
+.toggle-btn.yes-btn.active{background:var(--accent-dim);border-color:var(--accent-border);color:var(--accent)}
+.toggle-btn.no-btn.active{background:var(--red-dim);border-color:var(--red-border);color:var(--red)}
+
+.fix-hint{margin-top:12px;padding:10px 14px;background:rgba(239,68,68,0.06);border-left:3px solid var(--red);border-radius:0 8px 8px 0;font-size:0.82rem;color:var(--muted-bright);display:none;line-height:1.5}
+.q-card.answered-no .fix-hint{display:block}
+.fix-hint strong{color:var(--red);font-weight:600}
+
+.score-panel{background:var(--surface);border:1px solid var(--border-bright);border-radius:14px;padding:24px;margin-bottom:28px;display:none}
+.score-panel.visible{display:block}
+.score-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.score-grade{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;letter-spacing:-1px}
+.grade-a{background:rgba(34,197,94,0.15);color:var(--accent)}
+.grade-b{background:rgba(34,197,94,0.08);color:#86efac}
+.grade-c{background:var(--yellow-dim);color:var(--yellow)}
+.grade-d{background:rgba(239,68,68,0.08);color:#fca5a5}
+.grade-f{background:var(--red-dim);color:var(--red)}
+.score-nums{text-align:right}
+.score-leak-total{font-size:2rem;font-weight:900;letter-spacing:-1.5px;color:var(--red);line-height:1}
+.score-leak-label{font-size:0.75rem;color:var(--muted);margin-top:2px}
+.score-answered{font-size:0.78rem;color:var(--muted);margin-top:8px}
+.score-answered span{color:var(--accent);font-weight:700}
+
+.category-scores{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.cat-score-item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.cat-score-name{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+.cat-score-val{font-size:0.95rem;font-weight:700}
+.cat-score-val.clean{color:var(--accent)}
+.cat-score-val.leaking{color:var(--red)}
+
+.results-panel{background:linear-gradient(135deg,#0d0d0d,#111);border:1px solid var(--border-bright);border-radius:14px;padding:28px 24px;margin:8px 0 28px;display:none}
+.results-panel.visible{display:block}
+.results-header{margin-bottom:24px}
+.results-header h2{font-size:1.25rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:6px}
+.results-header p{font-size:0.88rem;color:var(--muted-bright)}
+
+.leak-breakdown{margin-bottom:24px}
+.leak-breakdown h3{font-size:0.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px}
+.leak-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.leak-row:last-child{border-bottom:none}
+.leak-row-label{font-size:0.88rem;color:var(--muted-bright)}
+.leak-row-val{font-size:0.92rem;font-weight:700}
+.leak-row-val.zero{color:var(--accent)}
+.leak-row-val.leaking{color:var(--red)}
+
+.big-leak{text-align:center;padding:20px 0;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);margin:20px 0}
+.big-leak .label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px}
+.big-leak .amount{font-size:2.8rem;font-weight:900;letter-spacing:-2px;color:var(--red);line-height:1}
+.big-leak .sub{font-size:0.82rem;color:var(--muted);margin-top:6px}
+
+.verdict-box{padding:16px 20px;border-radius:10px;font-size:0.9rem;font-weight:600;margin-bottom:24px;line-height:1.5}
+.verdict-box.grade-a{background:rgba(34,197,94,0.1);border:1px solid var(--accent-border);color:#86efac}
+.verdict-box.grade-b{background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);color:#86efac}
+.verdict-box.grade-c{background:var(--yellow-dim);border:1px solid var(--yellow-border);color:var(--yellow)}
+.verdict-box.grade-d{background:rgba(239,68,68,0.08);border:1px solid var(--red-border);color:#fca5a5}
+.verdict-box.grade-f{background:var(--red-dim);border:1px solid var(--red-border);color:var(--red)}
+
+.email-gate{background:var(--card);border:1px solid var(--border-bright);border-radius:12px;padding:24px;margin-top:24px}
+.email-gate h3{font-size:1.05rem;font-weight:800;letter-spacing:-0.3px;margin-bottom:6px}
+.email-gate p{font-size:0.85rem;color:var(--muted-bright);margin-bottom:18px;line-height:1.5}
+.gate-items{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+.gate-item{font-size:0.8rem;color:var(--muted-bright);padding:6px 10px;background:var(--surface);border-radius:6px;border:1px solid var(--border)}
+.email-form{display:flex;flex-direction:column;gap:10px}
+.email-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border-bright);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.email-form input[type="email"]:focus{border-color:var(--accent)}
+.email-form button{background:linear-gradient(135deg,var(--accent),#16a34a);color:#000;border:none;border-radius:8px;padding:13px;font-weight:800;font-size:0.92rem;cursor:pointer;font-family:inherit;transition:opacity 0.2s;letter-spacing:-0.3px}
+.email-form button:active{opacity:0.9}
+.email-form .fine{font-size:0.73rem;color:var(--muted);text-align:center}
+
+.fixes-section{margin-top:28px;display:none}
+.fixes-section.visible{display:block}
+.fixes-section h3{font-size:0.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:14px}
+
+.fix-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:10px}
+.fix-card-meta{font-size:0.72rem;color:var(--muted);margin-bottom:6px}
+.fix-card-meta .leak-amt{color:var(--red);font-weight:600}
+.fix-card-label{font-size:0.82rem;color:var(--accent);font-weight:700;margin-bottom:4px}
+.fix-card-action{font-size:0.88rem;color:var(--muted-bright);line-height:1.5}
+
+.share-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.share-btn{flex:1;min-width:120px;padding:10px 16px;border-radius:8px;border:1px solid var(--border-bright);background:transparent;color:var(--muted-bright);font-family:inherit;font-size:0.82rem;font-weight:600;cursor:pointer;text-align:center;transition:all 0.15s}
+.share-btn:active{transform:scale(0.98)}
+.share-btn.twitter{border-color:rgba(29,161,242,0.3);color:#1da1f2}
+.share-btn.copy.copied{border-color:var(--accent-border);color:var(--accent)}
+
+footer{padding:28px 0;text-align:center;border-top:1px solid var(--border);margin-top:40px}
+footer p{color:var(--muted);font-size:0.78rem}
+footer a{color:var(--muted-bright)}
+
+@media(max-width:560px){
+  .stats-bar{gap:16px;flex-wrap:wrap}
+  .q-top{flex-direction:column;gap:10px}
+  .toggle-wrap{align-self:flex-start}
+  .category-scores{grid-template-columns:1fr}
+  .gate-items{grid-template-columns:1fr}
+  .share-row{flex-direction:column}
+}
+</style>
+<script defer data-domain="revenue-leak-audit.surge.sh" src="https://plausible.io/js/script.js"></script>
+<script data-goatcounter="https://printmaxx.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">free audit tool</div>
+    <h1>you're leaking <span class="highlight">$1,200-4,850/mo</span>.<br>here's exactly where.</h1>
+    <p class="sub">12 questions. 90 seconds. find every hole in your revenue funnel.</p>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="num">12</div>
+        <div class="lbl">leak checks</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">4</div>
+        <div class="lbl">categories</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">$4,850</div>
+        <div class="lbl">max monthly leak</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">90s</div>
+        <div class="lbl">to complete</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LIVE SCORE (appears after first answer) -->
+  <div class="score-panel" id="scorePanel">
+    <div class="score-top">
+      <div class="score-grade grade-a" id="gradeBox">A</div>
+      <div class="score-nums">
+        <div class="score-leak-total" id="totalLeakDisplay">$0</div>
+        <div class="score-leak-label">est. monthly leak</div>
+        <div class="score-answered">answered: <span id="answeredCount">0</span>/12</div>
+      </div>
+    </div>
+    <div class="category-scores">
+      <div class="cat-score-item">
+        <div class="cat-score-name">traffic</div>
+        <div class="cat-score-val" id="catTraffic">3 unchecked</div>
+      </div>
+      <div class="cat-score-item">
+        <div class="cat-score-name">conversion</div>
+        <div class="cat-score-val" id="catConversion">3 unchecked</div>
+      </div>
+      <div class="cat-score-item">
+        <div class="cat-score-name">monetization</div>
+        <div class="cat-score-val" id="catMonetization">3 unchecked</div>
+      </div>
+      <div class="cat-score-item">
+        <div class="cat-score-name">distribution</div>
+        <div class="cat-score-val" id="catDistribution">3 unchecked</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span>audit progress</span>
+      <span id="progressText">0 of 12 answered</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <!-- TRAFFIC LEAKS -->
+  <div class="category">
+    <div class="category-header">
+      <div class="category-icon">T</div>
+      <div class="category-title">traffic leaks</div>
+      <div class="category-leak">up to $1,000/mo leaking</div>
+    </div>
+
+    <div class="q-card" id="q1-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">do you have analytics running on all your sites and pages?</div>
+          <div class="q-leak" id="q1-leak">if no: $50-200/mo in blind optimization spend</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(1,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(1,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this in 10 minutes:</strong> install goatcounter.com (free, no cookies) on every page. one script tag. you'll finally see where traffic dies and which pages convert.
+      </div>
+    </div>
+
+    <div class="q-card" id="q2-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">do all your pages have meta descriptions and OG tags?</div>
+          <div class="q-leak" id="q2-leak">if no: $100-300/mo in lost organic click-throughs</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(2,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(2,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this in 30 minutes:</strong> write one 155-char meta description per page. add og:title, og:description, og:image. missing OG tags tank CTR when shared on Twitter/LinkedIn by 60%+.
+      </div>
+    </div>
+
+    <div class="q-card" id="q3-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">are you collecting emails on every page you own?</div>
+          <div class="q-leak" id="q3-leak">if no: $200-500/mo in leads you'll never see again</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(3,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(3,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this today:</strong> add a formsubmit.co form to every page. even a bottom "get updates" field captures 1-3% of visitors. 1,000 visitors/mo with no email capture = 10-30 leads/mo gone forever.
+      </div>
+    </div>
+  </div>
+
+  <!-- CONVERSION LEAKS -->
+  <div class="category">
+    <div class="category-header">
+      <div class="category-icon">C</div>
+      <div class="category-title">conversion leaks</div>
+      <div class="category-leak">up to $650/mo leaking</div>
+    </div>
+
+    <div class="q-card" id="q4-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">do all your CTAs use specific action verbs ("get the template" vs "submit")?</div>
+          <div class="q-leak" id="q4-leak">if no: $100-200/mo in lost clicks from weak CTAs</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(4,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(4,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this in 15 minutes:</strong> audit every button on your sites. replace "submit", "click here", "learn more" with specific verbs. "get the free calculator", "send me the playbook". A/B tests show 30-90% CTR lifts from this alone.
+      </div>
+    </div>
+
+    <div class="q-card" id="q5-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">do you have a thank-you page with a clear next step after someone opts in?</div>
+          <div class="q-leak" id="q5-leak">if no: $50-150/mo in missed upsell moments</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(5,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(5,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this in 20 minutes:</strong> build one thank-you page. confirm delivery, offer one relevant next step (product, community, or related tool). someone just gave you their email. that's the highest-intent moment you'll ever get. use it.
+      </div>
+    </div>
+
+    <div class="q-card" id="q6-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">are your lead magnets specific to the page topic (not just a generic freebie)?</div>
+          <div class="q-leak" id="q6-leak">if no: $100-300/mo in low conversion from offer mismatch</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(6,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(6,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this over a week:</strong> match the offer to the page intent. cold email page gets a subject line swipe file. sleep app page gets a sleep score quiz. generic "newsletter" offers convert at 0.5-1%. specific ones hit 3-8%.
+      </div>
+    </div>
+  </div>
+
+  <!-- MONETIZATION LEAKS -->
+  <div class="category">
+    <div class="category-header">
+      <div class="category-icon">M</div>
+      <div class="category-title">monetization leaks</div>
+      <div class="category-leak">up to $1,300/mo leaking</div>
+    </div>
+
+    <div class="q-card" id="q7-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">do you have affiliate links with tracking codes on all your content?</div>
+          <div class="q-leak" id="q7-leak">if no: $200-500/mo in untracked commissions</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(7,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(7,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this in 2 hours:</strong> join impact.com (SaaS tools), gumroad affiliates, Amazon Associates. add tracking params to every link (?ref=yourname). you're recommending tools anyway. get paid for it.
+      </div>
+    </div>
+
+    <div class="q-card" id="q8-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">do you have FTC disclosures on all pages with affiliate links?</div>
+          <div class="q-leak" id="q8-leak">if no: $43,000+ per violation risk (FTC enforcement)</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(8,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(8,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this today, non-negotiable:</strong> add "this page contains affiliate links. I earn a commission if you buy, at no cost to you." to every affiliate page. $43,000 per violation is the FTC fine. 10 minutes to fix. just do it.
+      </div>
+    </div>
+
+    <div class="q-card" id="q9-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">is your email list connected to an autoresponder with a nurture sequence?</div>
+          <div class="q-leak" id="q9-leak">if no: $300-800/mo in unconverted subscribers</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(9,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(9,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this in 3 hours:</strong> set up beehiiv (free to 2,500 subs) with a 5-email welcome sequence. email 1 delivers the freebie. email 2 shares your best content. email 3 tells your story. email 4 surfaces a product. email 5 asks what they need. this is where 60%+ of email revenue comes from.
+      </div>
+    </div>
+  </div>
+
+  <!-- DISTRIBUTION LEAKS -->
+  <div class="category">
+    <div class="category-header">
+      <div class="category-icon">D</div>
+      <div class="category-title">distribution leaks</div>
+      <div class="category-leak">up to $2,700/mo leaking</div>
+    </div>
+
+    <div class="q-card" id="q10-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">are you posting content at least 3 times per week on at least one platform?</div>
+          <div class="q-leak" id="q10-leak">if no: $200-400/mo in lost organic reach</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(10,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(10,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this with a system:</strong> batch 9 posts on Sunday. schedule Mon/Wed/Fri on buffer.com ($15/mo). 2 hours per week = 12 posts/mo = compounding organic reach. one platform first. the accounts posting 5x/week are the ones getting inbound leads.
+      </div>
+    </div>
+
+    <div class="q-card" id="q11-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">are you cross-linking between all your properties (sites, tools, lead magnets)?</div>
+          <div class="q-leak" id="q11-leak">if no: $100-300/mo in internal traffic you're not capturing</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(11,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(11,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this in 1 hour:</strong> every tool should link to 2 other tools. every lead magnet should link to a product. every blog post should end with a relevant CTA. someone visits one property but has no idea you have 10 others. fix that.
+      </div>
+    </div>
+
+    <div class="q-card" id="q12-card">
+      <div class="q-top">
+        <div>
+          <div class="q-text">do you have a cold outreach system running (even 5-10 emails/week)?</div>
+          <div class="q-leak" id="q12-leak">if no: $500-2,000/mo in outbound revenue sitting on the table</div>
+        </div>
+        <div class="toggle-wrap">
+          <button class="toggle-btn yes-btn" onclick="answer(12,'yes')">yes</button>
+          <button class="toggle-btn no-btn" onclick="answer(12,'no')">no</button>
+        </div>
+      </div>
+      <div class="fix-hint">
+        <strong>fix this this week:</strong> you don't need Instantly or Apollo to start. 5 manual emails/week to people who would benefit from your product. 20/mo. at 5% reply rate = 1 reply. at 30% close rate = 0.3 clients/mo. even fractional outbound beats zero outbound.
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS PANEL -->
+  <div class="results-panel" id="resultsPanel">
+    <div class="results-header">
+      <h2 id="resultsHeadline">your revenue leak report</h2>
+      <p id="resultsSubline">based on your answers</p>
+    </div>
+
+    <div class="big-leak">
+      <div class="label">estimated monthly revenue leak</div>
+      <div class="amount" id="bigLeakAmount">$0</div>
+      <div class="sub" id="bigLeakSub">that's $0/year you're not capturing</div>
+    </div>
+
+    <div class="verdict-box grade-a" id="verdictBox">all checks pass</div>
+
+    <div class="leak-breakdown">
+      <h3>category breakdown</h3>
+      <div class="leak-row">
+        <span class="leak-row-label">traffic leaks</span>
+        <span class="leak-row-val zero" id="res-traffic">no leaks found</span>
+      </div>
+      <div class="leak-row">
+        <span class="leak-row-label">conversion leaks</span>
+        <span class="leak-row-val zero" id="res-conversion">no leaks found</span>
+      </div>
+      <div class="leak-row">
+        <span class="leak-row-label">monetization leaks</span>
+        <span class="leak-row-val zero" id="res-monetization">no leaks found</span>
+      </div>
+      <div class="leak-row">
+        <span class="leak-row-label">distribution leaks</span>
+        <span class="leak-row-val zero" id="res-distribution">no leaks found</span>
+      </div>
+    </div>
+
+    <!-- EMAIL GATE -->
+    <div class="email-gate" id="emailGate">
+      <h3>get the specific fixes for your leaks</h3>
+      <p>you found your holes. now get the exact steps to plug them. enter your email for the full priority fix plan + the PRINTMAXX revenue ops guide (normally $47).</p>
+      <div class="gate-items">
+        <div class="gate-item">exact tool for each leak</div>
+        <div class="gate-item">time estimate per fix</div>
+        <div class="gate-item">priority order (fix this first)</div>
+        <div class="gate-item">revenue ops guide PDF</div>
+      </div>
+      <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" onsubmit="handleFormSubmit()">
+        <input type="hidden" name="_subject" value="[Revenue Leak Audit] Fix Plan Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://printmaxx-store.surge.sh/?ref=revenue-leak-audit">
+        <input type="hidden" name="audit_score" id="hidden_score" value="">
+        <input type="hidden" name="estimated_leak" id="hidden_leak" value="">
+        <input type="email" name="email" required placeholder="your@email.com">
+        <button type="submit">send me the fix plan</button>
+        <p class="fine">no spam. just the fixes. unsubscribe any time.</p>
+      </form>
+    </div>
+
+    <!-- FIXES (ungated after email submit) -->
+    <div class="fixes-section" id="fixesSection">
+      <h3>your fixes, sorted by revenue impact</h3>
+      <div id="fixesList"></div>
+      <div class="share-row">
+        <button class="share-btn twitter" onclick="shareTwitter()">share on twitter</button>
+        <button class="share-btn copy" id="copyBtn" onclick="copyResult()">copy results</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 PRINTMAXX &middot; <a href="https://printmaxx-store.surge.sh/">all tools</a> &middot; <a href="https://coldmaxx-web.surge.sh/">coldmaxx</a> &middot; <a href="https://cold-email-roi-calculator.surge.sh/">cold email calculator</a></p>
+  </footer>
+</div>
+
+<script>
+// All question data is static constants. No user input is ever interpolated into DOM.
+// innerHTML in showFixes() uses only these constants + a formatted number. Safe from XSS.
+var QUESTIONS = [
+  {id:1,  cat:'traffic',       min:50,   max:200,   label:'analytics on all sites',               fix:'install goatcounter.com on every page. one script tag, 10 minutes total. you\'ll finally see where traffic drops off.'},
+  {id:2,  cat:'traffic',       min:100,  max:300,   label:'meta descriptions and OG tags',         fix:'write 155-char meta descriptions + og:title/description/image for every page. missing OG tags kill CTR by 60%+ when content is shared.'},
+  {id:3,  cat:'traffic',       min:200,  max:500,   label:'email capture on every page',           fix:'add a formsubmit.co form to every page. 1,000 visitors/mo with no email field = 10-30 leads gone forever every month.'},
+  {id:4,  cat:'conversion',    min:100,  max:200,   label:'specific CTA action verbs',             fix:'replace every "submit/click here/learn more" with specific verbs. "get the template", "start my audit". A/B tests show 30-90% CTR lifts from this alone.'},
+  {id:5,  cat:'conversion',    min:50,   max:150,   label:'thank-you page with next step',         fix:'build one thank-you page. confirm delivery, then offer one relevant next step. someone just gave you their email. highest-intent moment you\'ll ever get. use it.'},
+  {id:6,  cat:'conversion',    min:100,  max:300,   label:'topic-specific lead magnets',           fix:'match the offer to the page. cold email page gets subject line swipe file. sleep page gets sleep score quiz. specific offers convert at 3-8% vs 0.5-1% for generic.'},
+  {id:7,  cat:'monetization',  min:200,  max:500,   label:'affiliate links with tracking codes',   fix:'join impact.com + gumroad affiliates. add ?ref=yourname to every tool link. you recommend tools anyway. get the commission.'},
+  {id:8,  cat:'monetization',  min:0,    max:43000, label:'FTC disclosures on affiliate pages',    fix:'add "this page contains affiliate links. I earn a commission if you buy, at no cost to you." to every affiliate page. $43,000 per violation fine. 10 minutes to be compliant.'},
+  {id:9,  cat:'monetization',  min:300,  max:800,   label:'email list with nurture sequence',      fix:'set up beehiiv (free to 2,500 subs) with a 5-email welcome sequence. 60%+ of email revenue comes from the welcome series, not the newsletters.'},
+  {id:10, cat:'distribution',  min:200,  max:400,   label:'posting content 3x+ per week',          fix:'batch 9 posts on Sunday. schedule Mon/Wed/Fri on buffer.com ($15/mo). 2 hours/week = 12 posts/mo = compounding inbound over time.'},
+  {id:11, cat:'distribution',  min:100,  max:300,   label:'cross-linking between properties',      fix:'every tool links to 2 others. every lead magnet links to a product. build a cross-link map and run it. visitors to one property have no idea you have 10 others.'},
+  {id:12, cat:'distribution',  min:500,  max:2000,  label:'cold outreach system running',          fix:'start with 5 manual emails/week to people who would benefit from your product. 20/mo at 5% reply rate = 1 reply. even fractional outbound beats zero outbound.'}
+];
+
+var answers = {};
+
+function answer(qId, val) {
+  answers[qId] = val;
+  var card = document.getElementById('q' + qId + '-card');
+  card.className = 'q-card answered-' + val;
+  var btns = card.querySelectorAll('.toggle-btn');
+  btns[0].className = 'toggle-btn yes-btn' + (val === 'yes' ? ' active' : '');
+  btns[1].className = 'toggle-btn no-btn' + (val === 'no' ? ' active' : '');
+  var leakEl = document.getElementById('q' + qId + '-leak');
+  if (leakEl) {
+    leakEl.className = 'q-leak' + (val === 'no' ? ' active' : '');
+  }
+  update();
+}
+
+function avgLeak(q) {
+  return Math.round((q.min + q.max) / 2);
+}
+
+function update() {
+  var answered = Object.keys(answers).length;
+  var totalLeak = 0;
+  var catLeaks = {traffic:0, conversion:0, monetization:0, distribution:0};
+  var catAnswered = {traffic:0, conversion:0, monetization:0, distribution:0};
+  var noIds = [];
+
+  QUESTIONS.forEach(function(q) {
+    var a = answers[q.id];
+    if (a !== undefined) {
+      catAnswered[q.cat]++;
+      if (a === 'no') {
+        var leak = avgLeak(q);
+        totalLeak += leak;
+        catLeaks[q.cat] += leak;
+        noIds.push(q.id);
+      }
+    }
+  });
+
+  var pct = Math.round((answered / 12) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = answered + ' of 12 answered';
+
+  if (answered > 0) {
+    document.getElementById('scorePanel').style.display = 'block';
+    document.getElementById('scorePanel').classList.add('visible');
+  }
+
+  document.getElementById('answeredCount').textContent = answered;
+  document.getElementById('totalLeakDisplay').textContent = fmtMoney(totalLeak);
+  document.getElementById('hidden_score').value = gradeLetter(noIds.length);
+  document.getElementById('hidden_leak').value = fmtMoney(totalLeak) + '/mo';
+
+  updateGradeBox(noIds.length);
+  updateCatDisplay(catLeaks, catAnswered);
+
+  if (answered === 12) {
+    showResults(totalLeak, catLeaks, noIds);
+  }
+}
+
+function gradeLetter(noCount) {
+  if (noCount === 0)  return 'A';
+  if (noCount <= 2)   return 'B';
+  if (noCount <= 5)   return 'C';
+  if (noCount <= 8)   return 'D';
+  return 'F';
+}
+
+function updateGradeBox(noCount) {
+  var letter = gradeLetter(noCount);
+  var box = document.getElementById('gradeBox');
+  box.textContent = letter;
+  box.className = 'score-grade grade-' + letter.toLowerCase();
+}
+
+function updateCatDisplay(catLeaks, catAnswered) {
+  var cats = ['traffic','conversion','monetization','distribution'];
+  cats.forEach(function(cat) {
+    var capCat = cat.charAt(0).toUpperCase() + cat.slice(1);
+    var el = document.getElementById('cat' + capCat);
+    if (!el) return;
+    if (catAnswered[cat] === 0) {
+      el.textContent = '3 unchecked';
+      el.className = 'cat-score-val';
+    } else if (catLeaks[cat] === 0) {
+      el.textContent = 'clean';
+      el.className = 'cat-score-val clean';
+    } else {
+      el.textContent = fmtMoney(catLeaks[cat]) + '/mo leak';
+      el.className = 'cat-score-val leaking';
+    }
+  });
+}
+
+function showResults(totalLeak, catLeaks, noIds) {
+  var panel = document.getElementById('resultsPanel');
+  panel.style.display = 'block';
+  panel.classList.add('visible');
+  setTimeout(function(){ panel.scrollIntoView({behavior:'smooth',block:'start'}); }, 80);
+
+  document.getElementById('bigLeakAmount').textContent = fmtMoney(totalLeak);
+  document.getElementById('bigLeakSub').textContent = 'that\'s ' + fmtMoney(totalLeak * 12) + '/year you\'re not capturing';
+
+  var cats = ['traffic','conversion','monetization','distribution'];
+  cats.forEach(function(cat) {
+    var el = document.getElementById('res-' + cat);
+    if (!el) return;
+    if (catLeaks[cat] === 0) {
+      el.textContent = 'no leaks found';
+      el.className = 'leak-row-val zero';
+    } else {
+      el.textContent = fmtMoney(catLeaks[cat]) + '/mo';
+      el.className = 'leak-row-val leaking';
+    }
+  });
+
+  var noCount = noIds.length;
+  var letter = gradeLetter(noCount);
+  var verdictText;
+
+  if (noCount === 0) {
+    verdictText = 'all 12 checks pass. rare. if you\'re not at $10k/mo yet, the gap is execution speed, not infrastructure. go faster.';
+  } else if (noCount <= 2) {
+    verdictText = 'leaking ' + fmtMoney(totalLeak) + '/mo from ' + noCount + ' issue' + (noCount > 1 ? 's' : '') + '. all fixable in under a day. get the fix plan below and close this out.';
+  } else if (noCount <= 5) {
+    verdictText = 'you\'re missing ' + fmtMoney(totalLeak) + '/mo from ' + noCount + ' gaps. prioritize by biggest leak first. some of these fixes take 10 minutes. get the priority order below.';
+  } else if (noCount <= 8) {
+    verdictText = noCount + ' gaps in your operation. ' + fmtMoney(totalLeak) + '/mo is the cost of ignoring this. before you spend another dollar on ads or content, plug these leaks first.';
+  } else {
+    verdictText = noCount + ' gaps = ' + fmtMoney(totalLeak) + '/mo. these are all common and fixable. the priority fix plan sorts them by impact. work the list top to bottom.';
+  }
+
+  var vbox = document.getElementById('verdictBox');
+  vbox.textContent = verdictText;
+  vbox.className = 'verdict-box grade-' + letter.toLowerCase();
+
+  if (localStorage.getItem('rla_submitted') === '1') {
+    showFixes(noIds);
+  }
+}
+
+function showFixes(noIds) {
+  document.getElementById('emailGate').style.display = 'none';
+  var section = document.getElementById('fixesSection');
+  section.style.display = 'block';
+  section.classList.add('visible');
+  var list = document.getElementById('fixesList');
+
+  // Sort by avg leak descending (biggest leak first)
+  var sorted = noIds.slice().sort(function(a, b) {
+    var qa = QUESTIONS.find(function(q){ return q.id === a; });
+    var qb = QUESTIONS.find(function(q){ return q.id === b; });
+    return avgLeak(qb) - avgLeak(qa);
+  });
+
+  if (sorted.length === 0) {
+    // Safe: static text only, no user input
+    var emptyCard = document.createElement('div');
+    emptyCard.className = 'fix-card';
+    var emptyAction = document.createElement('div');
+    emptyAction.className = 'fix-card-action';
+    emptyAction.textContent = 'no fixes needed. you passed every check. go faster.';
+    emptyCard.appendChild(emptyAction);
+    list.appendChild(emptyCard);
+    return;
+  }
+
+  list.textContent = '';
+
+  sorted.forEach(function(id, i) {
+    var q = QUESTIONS.find(function(q){ return q.id === id; });
+    var leak = avgLeak(q);
+
+    // Build card using DOM methods (safe, no user input in any value)
+    var card = document.createElement('div');
+    card.className = 'fix-card';
+
+    var meta = document.createElement('div');
+    meta.className = 'fix-card-meta';
+    meta.textContent = '#' + (i + 1) + ' priority fix  \u00b7  ' + q.cat + '  \u00b7  ';
+    var leakSpan = document.createElement('span');
+    leakSpan.className = 'leak-amt';
+    leakSpan.textContent = fmtMoney(leak) + '/mo leak';
+    meta.appendChild(leakSpan);
+
+    var labelEl = document.createElement('div');
+    labelEl.className = 'fix-card-label';
+    labelEl.textContent = q.label;
+
+    var actionEl = document.createElement('div');
+    actionEl.className = 'fix-card-action';
+    actionEl.textContent = q.fix;
+
+    card.appendChild(meta);
+    card.appendChild(labelEl);
+    card.appendChild(actionEl);
+    list.appendChild(card);
+  });
+}
+
+function handleFormSubmit() {
+  localStorage.setItem('rla_submitted', '1');
+}
+
+function fmtMoney(n) {
+  if (n >= 1000) return '$' + n.toLocaleString('en-US', {maximumFractionDigits:0});
+  return '$' + Math.round(n);
+}
+
+function shareTwitter() {
+  var noCount = 0;
+  var totalLeak = 0;
+  QUESTIONS.forEach(function(q) {
+    if (answers[q.id] === 'no') {
+      noCount++;
+      totalLeak += avgLeak(q);
+    }
+  });
+  var text = 'just ran the revenue leak audit.\n\nfound ' + noCount + ' holes in my funnel = ' + fmtMoney(totalLeak) + '/mo leaking out.\n\ntook 90 seconds: https://revenue-leak-audit.surge.sh\n\ncheck yours.';
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
+}
+
+function copyResult() {
+  var noCount = 0;
+  var totalLeak = 0;
+  QUESTIONS.forEach(function(q) {
+    if (answers[q.id] === 'no') {
+      noCount++;
+      totalLeak += avgLeak(q);
+    }
+  });
+  var letter = gradeLetter(noCount);
+  var text = 'Revenue Leak Audit Results\n\nGrade: ' + letter + '\nEstimated monthly leak: ' + fmtMoney(totalLeak) + '\nLeaks found: ' + noCount + '/12\n\nCheck yours at: https://revenue-leak-audit.surge.sh';
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.getElementById('copyBtn');
+    btn.textContent = 'copied.';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent = 'copy results'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+// On load: if previously submitted and somehow all questions are already answered, surface fixes
+window.addEventListener('load', function() {
+  if (localStorage.getItem('rla_submitted') === '1') {
+    var gate = document.getElementById('emailGate');
+    if (gate) {
+      gate.querySelector('p').textContent = 'complete the audit above to see your specific fix plan.';
+    }
+  }
+});
+</script>
+
+</body>
+</html>

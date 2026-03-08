@@ -1,178 +1,178 @@
 {
-  "last_decision_cycle": "2026-03-08T04:00:00.668937",
-  "last_feedback_cycle": "2026-03-08T04:00:00.906858",
-  "last_pipeline_cycle": "2026-03-08T04:00:00.907923",
-  "decisions_executed": 22,
-  "feedback_updates": 240,
+  "last_decision_cycle": "2026-03-08T16:30:00.751600",
+  "last_feedback_cycle": "2026-03-08T16:30:00.816309",
+  "last_pipeline_cycle": "2026-03-08T16:30:00.817915",
+  "decisions_executed": 25,
+  "feedback_updates": 360,
   "pipeline_advances": 0,
   "agent_scores": {
     "gap_hunter": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 48,
+      "total_runs": 14,
+      "produced_output": 14,
+      "led_to_action": 68,
       "led_to_revenue": 0,
-      "effectiveness": 360.0
+      "effectiveness": 331.4
     },
     "opportunity_scanner": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 13,
-      "led_to_revenue": 0,
-      "effectiveness": 126.7
-    },
-    "competitor_stalker": {
-      "total_runs": 7,
-      "produced_output": 7,
-      "led_to_action": 43,
-      "led_to_revenue": 0,
-      "effectiveness": 408.6
-    },
-    "asset_deployer": {
-      "total_runs": 10,
-      "produced_output": 9,
+      "total_runs": 14,
+      "produced_output": 14,
       "led_to_action": 33,
       "led_to_revenue": 0,
-      "effectiveness": 256.0
+      "effectiveness": 181.4
+    },
+    "competitor_stalker": {
+      "total_runs": 12,
+      "produced_output": 12,
+      "led_to_action": 68,
+      "led_to_revenue": 0,
+      "effectiveness": 380.0
+    },
+    "asset_deployer": {
+      "total_runs": 15,
+      "produced_output": 14,
+      "led_to_action": 50,
+      "led_to_revenue": 0,
+      "effectiveness": 251.6
     },
     "content_compounder": {
-      "total_runs": 10,
-      "produced_output": 10,
-      "led_to_action": 31,
+      "total_runs": 15,
+      "produced_output": 15,
+      "led_to_action": 45,
       "led_to_revenue": 0,
-      "effectiveness": 226.0
+      "effectiveness": 220.0
     },
     "lead_machine": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 34,
-      "led_to_revenue": 0,
-      "effectiveness": 266.7
-    },
-    "seo_aso_optimizer": {
-      "total_runs": 7,
-      "produced_output": 7,
-      "led_to_action": 29,
-      "led_to_revenue": 0,
-      "effectiveness": 288.6
-    },
-    "conversion_optimizer": {
-      "total_runs": 7,
-      "produced_output": 7,
-      "led_to_action": 42,
-      "led_to_revenue": 0,
-      "effectiveness": 400.0
-    },
-    "quality_enforcer": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 13,
-      "led_to_revenue": 0,
-      "effectiveness": 126.7
-    },
-    "trend_synthesizer": {
-      "total_runs": 7,
-      "produced_output": 7,
-      "led_to_action": 51,
-      "led_to_revenue": 0,
-      "effectiveness": 477.1
-    },
-    "cross_pollinator": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 64,
-      "led_to_revenue": 0,
-      "effectiveness": 466.7
-    },
-    "revenue_tracker": {
-      "total_runs": 7,
-      "produced_output": 7,
-      "led_to_action": 46,
-      "led_to_revenue": 0,
-      "effectiveness": 434.3
-    },
-    "system_healer": {
-      "total_runs": 10,
-      "produced_output": 10,
-      "led_to_action": 38,
-      "led_to_revenue": 0,
-      "effectiveness": 268.0
-    },
-    "data_janitor": {
-      "total_runs": 7,
-      "produced_output": 7,
-      "led_to_action": 12,
-      "led_to_revenue": 0,
-      "effectiveness": 142.9
-    },
-    "distribution_engine": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 28,
-      "led_to_revenue": 0,
-      "effectiveness": 226.7
-    },
-    "inbound_maximizer": {
-      "total_runs": 9,
-      "produced_output": 7,
-      "led_to_action": 66,
-      "led_to_revenue": 0,
-      "effectiveness": 596.8
-    },
-    "swarm_brain": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 24,
-      "led_to_revenue": 0,
-      "effectiveness": 200.0
-    },
-    "video_factory": {
-      "total_runs": 7,
-      "produced_output": 7,
-      "led_to_action": 22,
+      "total_runs": 14,
+      "produced_output": 14,
+      "led_to_action": 44,
       "led_to_revenue": 0,
       "effectiveness": 228.6
     },
-    "image_factory": {
-      "total_runs": 9,
-      "produced_output": 9,
-      "led_to_action": 34,
+    "seo_aso_optimizer": {
+      "total_runs": 12,
+      "produced_output": 12,
+      "led_to_action": 43,
       "led_to_revenue": 0,
-      "effectiveness": 266.7
+      "effectiveness": 255.0
     },
-    "quality_gate": {
-      "total_runs": 10,
-      "produced_output": 7,
-      "led_to_action": 38,
+    "conversion_optimizer": {
+      "total_runs": 12,
+      "produced_output": 12,
+      "led_to_action": 69,
       "led_to_revenue": 0,
-      "effectiveness": 353.7
+      "effectiveness": 385.0
     },
-    "playwright_tester": {
-      "total_runs": 9,
-      "produced_output": 7,
-      "led_to_action": 27,
+    "quality_enforcer": {
+      "total_runs": 14,
+      "produced_output": 14,
+      "led_to_action": 29,
       "led_to_revenue": 0,
-      "effectiveness": 262.5
+      "effectiveness": 164.3
     },
-    "alert_dispatcher": {
+    "trend_synthesizer": {
+      "total_runs": 12,
+      "produced_output": 12,
+      "led_to_action": 67,
+      "led_to_revenue": 0,
+      "effectiveness": 375.0
+    },
+    "cross_pollinator": {
+      "total_runs": 14,
+      "produced_output": 14,
+      "led_to_action": 82,
+      "led_to_revenue": 0,
+      "effectiveness": 391.4
+    },
+    "revenue_tracker": {
+      "total_runs": 12,
+      "produced_output": 12,
+      "led_to_action": 66,
+      "led_to_revenue": 0,
+      "effectiveness": 370.0
+    },
+    "system_healer": {
+      "total_runs": 15,
+      "produced_output": 15,
+      "led_to_action": 58,
+      "led_to_revenue": 0,
+      "effectiveness": 272.0
+    },
+    "data_janitor": {
       "total_runs": 10,
       "produced_output": 10,
-      "led_to_action": 28,
+      "led_to_action": 20,
       "led_to_revenue": 0,
-      "effectiveness": 208.0
+      "effectiveness": 160.0
     },
-    "social_poster": {
+    "distribution_engine": {
+      "total_runs": 14,
+      "produced_output": 14,
+      "led_to_action": 45,
+      "led_to_revenue": 0,
+      "effectiveness": 232.9
+    },
+    "inbound_maximizer": {
+      "total_runs": 14,
+      "produced_output": 12,
+      "led_to_action": 92,
+      "led_to_revenue": 0,
+      "effectiveness": 494.3
+    },
+    "swarm_brain": {
+      "total_runs": 14,
+      "produced_output": 14,
+      "led_to_action": 35,
+      "led_to_revenue": 0,
+      "effectiveness": 190.0
+    },
+    "video_factory": {
       "total_runs": 9,
       "produced_output": 9,
-      "led_to_action": 27,
+      "led_to_action": 41,
+      "led_to_revenue": 0,
+      "effectiveness": 313.3
+    },
+    "image_factory": {
+      "total_runs": 12,
+      "produced_output": 12,
+      "led_to_action": 49,
+      "led_to_revenue": 0,
+      "effectiveness": 285.0
+    },
+    "quality_gate": {
+      "total_runs": 15,
+      "produced_output": 12,
+      "led_to_action": 60,
+      "led_to_revenue": 0,
+      "effectiveness": 332.0
+    },
+    "playwright_tester": {
+      "total_runs": 14,
+      "produced_output": 12,
+      "led_to_action": 44,
+      "led_to_revenue": 0,
+      "effectiveness": 254.3
+    },
+    "alert_dispatcher": {
+      "total_runs": 15,
+      "produced_output": 15,
+      "led_to_action": 39,
+      "led_to_revenue": 0,
+      "effectiveness": 196.0
+    },
+    "social_poster": {
+      "total_runs": 14,
+      "produced_output": 14,
+      "led_to_action": 42,
       "led_to_revenue": 0,
       "effectiveness": 220.0
     },
     "meta_executor": {
-      "total_runs": 10,
-      "produced_output": 10,
-      "led_to_action": 57,
+      "total_runs": 15,
+      "produced_output": 15,
+      "led_to_action": 78,
       "led_to_revenue": 0,
-      "effectiveness": 382.0
+      "effectiveness": 352.0
     }
   }
 }

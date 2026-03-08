@@ -6,9 +6,9 @@
 
 ---
 
-## APR 1 — Twitter (@PRINTMAXXER)
+## APR 1 - Twitter (@PRINTMAXXER)
 
-### 07:30 — cycle5 Tweet 2 (32 agents stack)
+### 07:30 - cycle5 Tweet 2 (32 agents stack)
 FILE: twitter_PRINTMAXXER_apr1_0730.txt
 CHARS: ~265
 
@@ -20,7 +20,7 @@ the agents scrape competitors, generate content, find leads, deploy landing page
 
 ---
 
-### 11:00 — cycle5 Tweet 5 (cold email tool real cost)
+### 11:00 - cycle5 Tweet 5 (cold email tool real cost)
 FILE: twitter_PRINTMAXXER_apr1_1100.txt
 CHARS: ~268
 
@@ -34,7 +34,7 @@ before you pick a cold email tool, multiply the price by 3.
 
 ---
 
-### 14:30 — MAR7.csv overflow (faith app scrape)
+### 14:30 - MAR7.csv overflow (faith app scrape)
 FILE: twitter_PRINTMAXXER_apr1_1430.txt
 CHARS: ~220
 SOURCE: APPROVED_POSTS_MAR7.csv row 2
@@ -43,7 +43,7 @@ scraped every prayer app in the App Store. Hallow: Catholic only. $33.4M/year. n
 
 ---
 
-### 18:00 — MAR7.csv overflow (Hevy bootstrap)
+### 18:00 - MAR7.csv overflow (Hevy bootstrap)
 FILE: twitter_PRINTMAXXER_apr1_1800.txt
 CHARS: ~195
 SOURCE: APPROVED_POSTS_MAR7.csv row 3
@@ -52,9 +52,9 @@ Hevy: $600K/month. bootstrapped. no funding. no paid marketing. pure organic fro
 
 ---
 
-## APR 2 — Twitter (@PRINTMAXXER)
+## APR 2 - Twitter (@PRINTMAXXER)
 
-### 07:30 — MAR7 (8 projects data pipeline)
+### 07:30 - MAR7 (8 projects data pipeline)
 FILE: twitter_PRINTMAXXER_apr2_0730.txt
 CHARS: ~245
 SOURCE: APPROVED_POSTS_MAR7.csv row 4
@@ -63,7 +63,7 @@ ran an experiment: connected 8 indie projects into one data pipeline. 58 items w
 
 ---
 
-### 11:00 — MAR7 (Kelly Criterion cold outbound)
+### 11:00 - MAR7 (Kelly Criterion cold outbound)
 FILE: twitter_PRINTMAXXER_apr2_1100.txt
 CHARS: ~280
 SOURCE: APPROVED_POSTS_MAR7.csv row 5
@@ -72,7 +72,7 @@ ran Kelly Criterion analysis on revenue channels. cold outbound: 87.4% margins a
 
 ---
 
-### 14:30 — MAR7 (Gumroad vs Whop fees)
+### 14:30 - MAR7 (Gumroad vs Whop fees)
 FILE: twitter_PRINTMAXXER_apr2_1430.txt
 CHARS: ~245
 SOURCE: APPROVED_POSTS_MAR7.csv row 6
@@ -81,7 +81,7 @@ Gumroad takes 10% + $0.50. Whop takes 2.7% + $0.30. 73% lower fees. on $1K/month
 
 ---
 
-### 18:00 — MAR7 (abandoned apps = product spec)
+### 18:00 - MAR7 (abandoned apps = product spec)
 FILE: twitter_PRINTMAXXER_apr2_1800.txt
 CHARS: ~265
 SOURCE: APPROVED_POSTS_MAR7.csv row 7
@@ -90,9 +90,9 @@ found 2 abandoned apps: Verses (Bible Memory) last updated 2020. SPACE (screen t
 
 ---
 
-## APR 3 — Twitter (@PRINTMAXXER)
+## APR 3 - Twitter (@PRINTMAXXER)
 
-### 07:30 — MAR7 (building vs selling psychology)
+### 07:30 - MAR7 (building vs selling psychology)
 FILE: twitter_PRINTMAXXER_apr3_0730.txt
 CHARS: ~240
 SOURCE: APPROVED_POSTS_MAR7.csv row 8
@@ -101,7 +101,7 @@ unpopular opinion: building 14 apps is easier than listing 1 product on gumroad.
 
 ---
 
-### 11:00 — MAR7 (AI agents made me worse)
+### 11:00 - MAR7 (AI agents made me worse)
 FILE: twitter_PRINTMAXXER_apr3_1100.txt
 CHARS: ~255
 SOURCE: APPROVED_POSTS_MAR7.csv row 9
@@ -110,7 +110,7 @@ AI agents made me worse at business. before AI: built 1 thing and sold it. after
 
 ---
 
-### 14:30 — MAR7 (cold email 58% first email)
+### 14:30 - MAR7 (cold email 58% first email)
 FILE: twitter_PRINTMAXXER_apr3_1430.txt
 CHARS: ~245
 SOURCE: APPROVED_POSTS_MAR7.csv row 10
@@ -119,7 +119,7 @@ SOURCE: APPROVED_POSTS_MAR7.csv row 10
 
 ---
 
-### 18:00 — MAR7 (cold email short version)
+### 18:00 - MAR7 (cold email short version)
 FILE: twitter_PRINTMAXXER_apr3_1800.txt
 CHARS: ~215
 SOURCE: APPROVED_POSTS_MAR7.csv row 11
@@ -128,9 +128,9 @@ cold email: 58% replies from email 1. first name tokens trigger spam. business c
 
 ---
 
-## APR 4 — Twitter (@PRINTMAXXER)
+## APR 4 - Twitter (@PRINTMAXXER)
 
-### 07:30 — MAR7 (RevenueCat AI apps)
+### 07:30 - MAR7 (RevenueCat AI apps)
 FILE: twitter_PRINTMAXXER_apr4_0730.txt
 CHARS: ~200
 SOURCE: APPROVED_POSTS_MAR7.csv row 12
@@ -139,7 +139,7 @@ RevenueCat 100K apps 1B transactions: AI apps convert 40% better, churn 30% fast
 
 ---
 
-### 11:00 — MAR7 (GEO over SEO)
+### 11:00 - MAR7 (GEO over SEO)
 FILE: twitter_PRINTMAXXER_apr4_1100.txt
 CHARS: ~205
 SOURCE: APPROVED_POSTS_MAR7.csv row 13
@@ -148,7 +148,7 @@ SEO dying. GEO eating it. 680M citations analyzed. 43% more brands cited by Chat
 
 ---
 
-### 14:30 — MAR7 (pricing vs acquisition)
+### 14:30 - MAR7 (pricing vs acquisition)
 FILE: twitter_PRINTMAXXER_apr4_1430.txt
 CHARS: ~215
 SOURCE: APPROVED_POSTS_MAR7.csv row 14
@@ -157,7 +157,7 @@ pricing optimization 2-4x more impactful than acquisition. 25-60% revenue increa
 
 ---
 
-### 18:00 — MAR7 (1 piece = 20 content)
+### 18:00 - MAR7 (1 piece = 20 content)
 FILE: twitter_PRINTMAXXER_apr4_1800.txt
 CHARS: ~195
 SOURCE: APPROVED_POSTS_MAR7.csv row 15
@@ -166,9 +166,9 @@ SOURCE: APPROVED_POSTS_MAR7.csv row 15
 
 ---
 
-## APR 5 — Twitter (@PRINTMAXXER)
+## APR 5 - Twitter (@PRINTMAXXER)
 
-### 07:30 — MAR7 (SEO audit 0% to 100%)
+### 07:30 - MAR7 (SEO audit 0% to 100%)
 FILE: twitter_PRINTMAXXER_apr5_0730.txt
 CHARS: ~240
 SOURCE: APPROVED_POSTS_MAR7.csv row 16
@@ -177,7 +177,7 @@ audited 85 deployed pages. OG image tags: 0%. Twitter card tags: 0%. no wonder s
 
 ---
 
-### 11:00 — MAR7 (killed open tracking)
+### 11:00 - MAR7 (killed open tracking)
 FILE: twitter_PRINTMAXXER_apr5_1100.txt
 CHARS: ~240
 SOURCE: APPROVED_POSTS_MAR7.csv row 17
@@ -186,7 +186,7 @@ killed open tracking on cold emails. reply rate went from 3.2% to 6.8% in one we
 
 ---
 
-### 14:30 — MAR7 (intent-based timing)
+### 14:30 - MAR7 (intent-based timing)
 FILE: twitter_PRINTMAXXER_apr5_1430.txt
 CHARS: ~255
 SOURCE: APPROVED_POSTS_MAR7.csv row 18
@@ -195,7 +195,7 @@ intent-based timing gets 2-4x reply rates. send outreach when they just posted a
 
 ---
 
-### 18:00 — MAR7 (200 cold emails 6.8% reply)
+### 18:00 - MAR7 (200 cold emails 6.8% reply)
 FILE: twitter_PRINTMAXXER_apr5_1800.txt
 CHARS: ~260
 SOURCE: APPROVED_POSTS_MAR7.csv row 19
@@ -204,9 +204,9 @@ sent 200+ cold emails this week using intent signals. 6.8% reply rate vs 1.7% in
 
 ---
 
-## APR 6 — Twitter (@PRINTMAXXER)
+## APR 6 - Twitter (@PRINTMAXXER)
 
-### 07:30 — MAR7 (MCP multi-server pipeline)
+### 07:30 - MAR7 (MCP multi-server pipeline)
 FILE: twitter_PRINTMAXXER_apr6_0730.txt
 CHARS: ~255
 SOURCE: APPROVED_POSTS_MAR7.csv row 20
@@ -215,7 +215,7 @@ MCP multi-server automation changed my workflow. wired 5 tools into one pipeline
 
 ---
 
-### 11:00 — MAR7 (AI CI/CD)
+### 11:00 - MAR7 (AI CI/CD)
 FILE: twitter_PRINTMAXXER_apr6_1100.txt
 CHARS: ~245
 SOURCE: APPROVED_POSTS_MAR7.csv row 21
@@ -226,14 +226,14 @@ AI CI/CD is underrated. push code, agents run tests, fix linting, deploy to stag
 
 ## REDDIT POSTS (cycle5 community content)
 
-### r/vibecoding — Apr 1 or 2
+### r/vibecoding - Apr 1 or 2
 TITLE: I built 22 apps and 140+ websites with Claude Code in 30 days. Here's my full autonomous stack.
-[See competitor_counter_content_cycle5_20260307.md — Community Post 1]
+[See competitor_counter_content_cycle5_20260307.md - Community Post 1]
 NOTE: No self-promotion feeling. Value-first. Ends with "Happy to share specifics."
 
-### r/indiehackers or r/SideProject — Apr 1 or 2
+### r/indiehackers or r/SideProject - Apr 1 or 2
 TITLE: Faith apps are a $51.4M/yr market and 99% of denominations have zero dedicated apps
-[See competitor_counter_content_cycle5_20260307.md — Community Post 2]
+[See competitor_counter_content_cycle5_20260307.md - Community Post 2]
 NOTE: Timely Eid angle. Data-first framing.
 
 ---

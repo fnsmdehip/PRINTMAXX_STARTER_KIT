@@ -1,0 +1,472 @@
+[
+  {
+    "source": "HN_FRONT",
+    "url": "https://unsloth.ai",
+    "title": "How to run Qwen 3.5 locally",
+    "finding": "Unsloth guide on running Qwen 3.5 locally. 360 pts, 111 comments. Local LLM tooling keeps trending. Unsloth enables 2x faster fine-tuning with 50% less memory. Direct competitor signal for anyone building AI-powered tools: local models are becoming viable alternatives to API-based solutions. Relevant to our agent infrastructure and potential Gumroad product on local LLM setup guides.",
+    "category": "AI_TOOLS",
+    "roi_potential": "HIGH",
+    "score": 360,
+    "comments": 111
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://ecuadors.net",
+    "title": "Cloud VM benchmarks 2026",
+    "finding": "Comprehensive cloud VM benchmarks for 2026. 298 pts, 134 comments. Direct actionable intel for anyone deploying SaaS or apps. Know which cloud provider gives best price/performance. Useful for our deployment decisions and could be repurposed into content about cheapest ways to host solopreneur projects.",
+    "category": "TOOL_ALPHA",
+    "roi_potential": "MEDIUM",
+    "score": 298,
+    "comments": 134
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://madalitso.me/notes/why-everyone-is-talking-about-filesystems/",
+    "title": "Files are the interface humans and agents interact with",
+    "finding": "274 pts, 130 comments. Thesis: files are becoming the primary interface between humans and AI agents. Validates our filesystem-as-memory architecture (Ralph loops, state.json, missions.jsonl). Content opportunity: thread on why file-based AI agent architectures beat databases for solopreneurs.",
+    "category": "AI_TOOLS",
+    "roi_potential": "HIGH",
+    "score": 274,
+    "comments": 130
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://ki-editor.org/",
+    "title": "Ki Editor - an editor that operates on the AST",
+    "finding": "AST-based code editor. 409 pts, 142 comments. Massive traction. Dev tools continue to be high-interest HN category. Signal that developer productivity tools still have huge demand. Potential content angle: 'tools that change how you code in 2026'.",
+    "category": "DEV_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 409,
+    "comments": 142
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://github.com/karpathy/autoresearch",
+    "title": "Autoresearch: Agents researching on single-GPU nanochat training automatically",
+    "finding": "Karpathy's autoresearch project. 158 pts, 44 comments. AI agents doing autonomous research with minimal compute. Validates our autonomous agent swarm approach. Alpha for anyone building research automation. Could repurpose into 'how to build your own research agent' content.",
+    "category": "AI_TOOLS",
+    "roi_potential": "HIGH",
+    "score": 158,
+    "comments": 44
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://arxiv.org",
+    "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI",
+    "finding": "95 pts, 33 comments. Benchmarking AI coding agents on real CI/CD tasks. Signal: AI agents maintaining codebases is becoming measurable and competitive. Relevant to our agent infrastructure and content about AI-powered development.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 95,
+    "comments": 33
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://github.com/ataraxy-labs",
+    "title": "Sem - Semantic version control. Entity-level diffs on top of Git",
+    "finding": "66 pts, 9 comments. Entity-level diffs on top of Git. Dev tool alpha. Shows continued demand for better git tooling. Content angle: 'git tools most devs don't know about'.",
+    "category": "DEV_TOOLS",
+    "roi_potential": "LOW",
+    "score": 66,
+    "comments": 9
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://github.com/gritzko",
+    "title": "Beagle - source code management system that stores AST trees",
+    "finding": "39 pts, 14 comments. Alternative SCM using AST storage. Niche dev tool. Content repurpose opportunity for dev audience.",
+    "category": "DEV_TOOLS",
+    "roi_potential": "LOW",
+    "score": 39,
+    "comments": 14
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://microsoft.com",
+    "title": "Phi-4-reasoning-vision and lessons of training multimodal reasoning model",
+    "finding": "61 pts, 4 comments. Microsoft's Phi-4 multimodal reasoning model. Small model doing vision + reasoning. Signal: small specialized models continue to improve, making local AI more viable for solopreneurs. Relevant to building AI features in apps without expensive API calls.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 61,
+    "comments": 4
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://thehustle.co/originals/how-big-diaper-absorbs-billions-of-extra-dollars-from-american-parents",
+    "title": "How Big Diaper absorbs billions of extra dollars from American parents",
+    "finding": "96 pts, 144 comments. Market analysis of overpriced consumer goods. Content angle: 'industries ripping off consumers = opportunities for disruptive products'. Pattern: find overpriced monopoly markets, build cheaper alternatives.",
+    "category": "MONETIZATION",
+    "roi_potential": "MEDIUM",
+    "score": 96,
+    "comments": 144
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://github.com/Abelo9996/Aivaro",
+    "title": "Aivaro - Open-source AI alternative to Zapier",
+    "finding": "4 pts (early). Open-source AI Zapier alternative. Direct competitor intelligence for automation tools market. If this gains traction, validates demand for AI-powered automation that's cheaper than Zapier. Could be useful in our own stack or as content comparing automation tools.",
+    "category": "AI_TOOLS",
+    "roi_potential": "HIGH",
+    "score": 4,
+    "comments": 0
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://llmtest.dev",
+    "title": "LLMTest - The pytest for LLMs with 22 built-in assertions",
+    "finding": "4 pts (early). Testing framework for LLM outputs. Growing need as more people build LLM-powered products. Tool alpha: could use this to test our own AI-generated content quality. Content angle: 'how to QA your AI outputs'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 4,
+    "comments": 0
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://db9.ai/",
+    "title": "DB9 - Postgres, but for Agents",
+    "finding": "2 pts (brand new). Database designed specifically for AI agents. Validates that agent infrastructure is becoming its own product category. Relevant to our 33-agent swarm architecture. Could evaluate as potential upgrade from our file-based state management.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 2,
+    "comments": 0
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://github.com/rustykuntz/termix",
+    "title": "Termix - One dashboard for all your AI coding agents",
+    "finding": "4 pts, 1 comment. Dashboard for managing multiple AI coding agents. Directly relevant to our multi-agent setup. Could study their approach for our own agent monitor at localhost:7777. Content: 'managing multiple AI agents as a solopreneur'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 4,
+    "comments": 1
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://github.com/Pringled/agentcheck",
+    "title": "Agentcheck - Check what an AI agent can access before you run it",
+    "finding": "3 pts (early). Security tool for AI agents. Shows growing concern about agent safety/permissions. Relevant to our guardrails system. Content angle: 'how to safely run autonomous AI agents'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 3,
+    "comments": 0
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://github.com/nagisanzenin/skyclaw",
+    "title": "SkyClaw - Self-healing LLM agent runtime in Rust with task checkpointing",
+    "finding": "4 pts, 1 comment. Self-healing agent runtime with checkpointing. Directly relevant to our agent resilience architecture. Validates demand for robust agent infrastructure. Could study their checkpointing approach.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 4,
+    "comments": 1
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://github.com/log-bell/avakill",
+    "title": "AvaKill - Deterministic safety firewall for AI agents",
+    "finding": "2 pts, 1 comment. Sub-1ms safety firewall for AI agents without ML. Relevant to our guardrails.py system. Shows that agent safety tooling is becoming a category. Content: 'building guardrails for your AI agents'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 2,
+    "comments": 1
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://mujs.org",
+    "title": "uJS - a 5KB alternative to Htmx and Turbo with zero dependencies",
+    "finding": "143 pts, 72 comments. Massive traction for a tiny JS framework. Signal: developers want lightweight alternatives to heavy frameworks. Relevant for our landing pages and PWAs. Could reduce bundle sizes. Content: 'build faster landing pages with 5KB of JS'.",
+    "category": "DEV_TOOLS",
+    "roi_potential": "HIGH",
+    "score": 143,
+    "comments": 72
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://utter.to/",
+    "title": "Utter - a local-first dictation app for Mac and iPhone",
+    "finding": "5 pts, 6 comments. Local-first dictation app. Competitor analysis for productivity tools. Shows demand for privacy-focused, local-first apps. Content: 'best dictation tools for content creators in 2026'.",
+    "category": "PRODUCTIVITY",
+    "roi_potential": "LOW",
+    "score": 5,
+    "comments": 6
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://www.sayit.chat/",
+    "title": "SayIt - AI that helps you prepare for difficult conversations",
+    "finding": "2 pts (early). AI conversation prep tool. Interesting niche: preparing for difficult conversations (sales calls, negotiations, confrontations). Could be a micro-SaaS idea. Content: 'AI tools for better cold calls'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 2,
+    "comments": 0
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://pulsefeedback.io/",
+    "title": "Pulse detection from browser video - no hardware needed",
+    "finding": "108 pts, 45 comments. Browser-based pulse detection using just webcam. Strong traction. Health/wellness tech signal. Validates browser-based health tools market. Relevant to our health app vertical (SleepMaxx). Content angle: 'browser-based health tools anyone can build'.",
+    "category": "HEALTH_TECH",
+    "roi_potential": "MEDIUM",
+    "score": 108,
+    "comments": 45
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://github.com/Diyarbekoralbaev/tunn",
+    "title": "Tunn - open-source ngrok alternative built on QUIC, 4x faster",
+    "finding": "5 pts, 3 comments. Open-source ngrok alternative. Dev tool for exposing local servers. Useful for our own development workflow. Content: 'free ngrok alternatives for indie hackers'.",
+    "category": "DEV_TOOLS",
+    "roi_potential": "LOW",
+    "score": 5,
+    "comments": 3
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://gitlab.com/usecaliper/caliper-python-sdk",
+    "title": "Caliper - Auto Instrumented LLM Observability with Custom Metadata",
+    "finding": "2 pts (early). LLM observability SDK. Growing category as more people deploy LLM-powered apps. Could be useful for monitoring our own agent swarm. Content: 'how to monitor your AI agents in production'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "LOW",
+    "score": 2,
+    "comments": 0
+  },
+  {
+    "source": "HN_SHOW",
+    "url": "https://sladge.net/",
+    "title": "Sladge.net - The AI Slop Self-Declaration Badge",
+    "finding": "3 pts (early). Badge system for declaring AI-generated content. Meta-signal: 'AI slop' detection/labeling is becoming a thing. Content angle: how AI content labeling affects content creators and marketers.",
+    "category": "CONTENT",
+    "roi_potential": "LOW",
+    "score": 3,
+    "comments": 0
+  },
+  {
+    "source": "HN_FRONT",
+    "url": "https://github.com/kantord",
+    "title": "CLI RSS/Atom feed reader inspired by Taskwarrior, synced using Git",
+    "finding": "37 pts, 13 comments. Git-synced RSS reader for CLI. Tool for monitoring content sources. Could integrate into our research pipeline for monitoring competitor blogs and industry news. Lightweight alternative to full RSS apps.",
+    "category": "TOOL_ALPHA",
+    "roi_potential": "LOW",
+    "score": 37,
+    "comments": 13
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/getmimic",
+    "title": "GetMimic - Generate viral social & chat mockups in seconds with AI",
+    "finding": "AI tool for generating social media mockups. Direct competitor/tool for our content creation pipeline. Could use for creating fake social proof screenshots for marketing (with FTC compliance). Validates demand for AI-powered social content tools.",
+    "category": "CONTENT",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/gretabyquestera",
+    "title": "Vibe Marketplace by Greta - Sell what you ship, instantly",
+    "finding": "Marketplace for selling vibe-coded projects. Signal: 'vibe coding' is becoming its own market category. People want to buy/sell AI-generated projects. Validates our Vibe Coding Playbook Gumroad product. Content: 'sell your vibe-coded projects on dedicated marketplaces'.",
+    "category": "MONETIZATION",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/hooklens",
+    "title": "HookLens - Know exactly where your ad fails",
+    "finding": "Ad analysis tool that shows where viewer attention drops. Directly relevant to our content optimization. Could use for testing video hooks and ad creatives. Content: 'tools that tell you exactly why your ads fail'.",
+    "category": "CONTENT",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/coursekit",
+    "title": "Coursekit - Turn your course into embeddable AI agents",
+    "finding": "Convert course content into AI agents. Relevant for our digital products strategy: could turn Gumroad PDFs into interactive AI agents. Monetization angle: courses-as-agents could be a new product format.",
+    "category": "MONETIZATION",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/21st-dev-the-npm-for-design-engineers",
+    "title": "21st Agents SDK - SDK to add a Claude Code AI agent to your app",
+    "finding": "SDK for embedding Claude Code agents into apps. Directly relevant to our agent infrastructure. Could use to embed AI agents into our PWAs for interactive features. Validates Claude Code agent ecosystem is growing.",
+    "category": "AI_TOOLS",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/context-gateway",
+    "title": "Context Gateway - Make Claude Code faster and cheaper without losing context",
+    "finding": "Context optimization for Claude Code. Directly relevant to our operations (we run on Claude Max). Could reduce token usage across 33 agents. Tool alpha for our own infrastructure.",
+    "category": "AI_TOOLS",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/parsewise",
+    "title": "Parsewise - Cursor for document work",
+    "finding": "AI-powered document processing tool positioned as 'Cursor for documents'. Shows that the 'X for Y' product positioning continues to work in AI space. Content: 'AI tools replacing manual document work'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/vois",
+    "title": "Vois - Studio-quality text-to-speech and voice cloning, fully local",
+    "finding": "Local TTS and voice cloning. Relevant to our content pipeline: could generate voiceovers for video content without API costs. Local = zero marginal cost per generation. Tool alpha for our media pipeline.",
+    "category": "CONTENT",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/sheet-monkey",
+    "title": "Tailwind Form Builder - Create responsive HTML forms in minutes, no login",
+    "finding": "No-login form builder with Tailwind CSS. Validates demand for quick form generation tools. Could use for our lead magnets and landing pages. Similar to our existing lead magnet forms but with Tailwind styling.",
+    "category": "DEV_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/testsprite",
+    "title": "TestSprite 2.1 - Agentic testing for AI-native teams",
+    "finding": "AI-powered testing framework for AI-native teams. Shows that AI-first development tooling is becoming a distinct category. Relevant to our playwright_tester and quality_gate agents.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/getbeel",
+    "title": "GetBeel - AI invoice collection and reconciliation",
+    "finding": "AI-powered accounting/invoicing automation. B2B SaaS niche with clear revenue model. Content angle: 'AI tools replacing accountants'. Validates that boring B2B automation tools still launch on PH.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/thinking-line",
+    "title": "Thinking Line - AI-powered doodle video and vector generator",
+    "finding": "AI doodle video generator. Content creation tool. Could use for creating explainer-style video content at zero cost. Relevant to our video_factory agent and content pipeline.",
+    "category": "CONTENT",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/supa-social-by-once-ui",
+    "title": "Supa Social - Self-host your community platform",
+    "finding": "Self-hosted community platform. Alternative to Circle, Discord for building communities. Relevant if we launch a paid community. Zero recurring cost since self-hosted.",
+    "category": "TOOL_ALPHA",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/aident-ai",
+    "title": "Aident AI Beta 2 - Open-world automations, managed in plain English",
+    "finding": "Natural language automation tool. Another entrant in the 'AI automation' space alongside Aivaro (HN). Market is getting crowded but demand is validated by multiple launches in same day. Content: 'the automation tool wars of 2026'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/itsyconnect",
+    "title": "ItsyConnect - Manage App Store Connect from macOS desktop",
+    "finding": "Desktop app for App Store Connect management. Relevant to our app factory operations. Could streamline managing multiple apps in App Store. Niche developer tool with clear use case.",
+    "category": "DEV_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/spoke-hold-speak-done",
+    "title": "Spoke - Private voice-to-text for macOS. Hold, speak, done",
+    "finding": "Privacy-focused voice-to-text for Mac. Competitor to Utter (also launched today on HN). Validates demand for local/private dictation. Two launches same day = hot market. Content creation speedup tool.",
+    "category": "PRODUCTIVITY",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/willow-voice",
+    "title": "Willow Voice for Teams - Kill the keyboard for voice AI",
+    "finding": "Voice-first team productivity tool. Another voice AI product. Triple signal today (Utter, Spoke, Willow Voice) = voice interfaces trending. Content: 'why everyone is building voice AI tools right now'.",
+    "category": "AI_TOOLS",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/ltx-desktop",
+    "title": "LTX Desktop - Local open-source LTX video editor optimized for GPUs",
+    "finding": "Local open-source video editor. Relevant to our video_factory pipeline. Could replace or complement Remotion for video generation. Zero cost, GPU-optimized.",
+    "category": "CONTENT",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/products/variant-2",
+    "title": "Variant - Endless designs for your ideas, just scroll",
+    "finding": "AI design generation tool. Could use for generating landing page designs, social media graphics, product mockups. Relevant to our image_factory agent.",
+    "category": "CONTENT",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "META_SIGNAL",
+    "url": "https://news.ycombinator.com/show",
+    "title": "AI Agent Infrastructure is becoming its own product category",
+    "finding": "TODAY'S META-SIGNAL: At least 8 products across HN Show and ProductHunt are agent infrastructure tools (DB9, SkyClaw, AvaKill, Agentcheck, Termix, Caliper, 21st Agents SDK, Context Gateway). This is no longer a niche - it's a product category. Our 33-agent swarm architecture is ahead of the curve but we're not monetizing the knowledge. HIGH PRIORITY: Package our agent orchestration patterns into a Gumroad product or paid course.",
+    "category": "MONETIZATION",
+    "roi_potential": "HIGHEST",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "META_SIGNAL",
+    "url": "https://news.ycombinator.com/show",
+    "title": "Voice AI triple signal: 3 voice products launched same day",
+    "finding": "Three voice-to-text/voice-AI products launched today: Utter (HN), Spoke (PH), Willow Voice (PH). Strong signal that voice interfaces are a hot market. Our content pipeline could benefit from voice-to-text tools for faster content creation. Potential product idea: voice-first content creation workflow guide.",
+    "category": "CONTENT",
+    "roi_potential": "MEDIUM",
+    "score": 0,
+    "comments": 0
+  },
+  {
+    "source": "META_SIGNAL",
+    "url": "https://www.producthunt.com",
+    "title": "Vibe coding marketplace validates our playbook product",
+    "finding": "Vibe Marketplace by Greta (PH) is specifically for selling vibe-coded projects. This directly validates our Gumroad product 'Vibe Coding Playbook'. The fact that an entire marketplace is being built around vibe coding means the trend has legs. IMMEDIATE ACTION: update our Vibe Coding Playbook to reference this marketplace as a distribution channel.",
+    "category": "MONETIZATION",
+    "roi_potential": "HIGH",
+    "score": 0,
+    "comments": 0
+  }
+]

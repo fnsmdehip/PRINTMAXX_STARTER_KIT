@@ -9,7 +9,7 @@ import os
 import sys
 from collections import OrderedDict
 
-BASE = "/Users/macbookpro/Documents/PRINTMAXX_STARTER_KIT/LEDGER"
+BASE = "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER"
 OUT = os.path.join(BASE, "MEGA_SHEET")
 os.makedirs(OUT, exist_ok=True)
 

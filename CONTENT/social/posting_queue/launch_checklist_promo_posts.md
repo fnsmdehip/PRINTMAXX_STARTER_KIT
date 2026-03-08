@@ -6,7 +6,7 @@
 
 ---
 
-## POST 1 — Problem-first hook (builders who never ship)
+## POST 1 - Problem-first hook (builders who never ship)
 
 most builders i know have 4 half-finished apps on their machine right now.
 
@@ -22,7 +22,7 @@ days 1-5 are free. days 6-7 (actual launch + distribution) are behind email. you
 
 ---
 
-## POST 2 — Numbers hook (47 steps, 7 days, 7 apps shipped)
+## POST 2 - Numbers hook (47 steps, 7 days, 7 apps shipped)
 
 7 apps shipped. 47 steps. 7 days.
 
@@ -44,7 +44,7 @@ printmaxx-magnets.surge.sh/solopreneur-launch-checklist.html
 
 ---
 
-## POST 3 — Contrarian take (you don't need a course, you need a checklist)
+## POST 3 - Contrarian take (you don't need a course, you need a checklist)
 
 you don't need another $497 course on shipping apps.
 
@@ -62,7 +62,7 @@ stop overthinking it. just open the checklist and do step 1.
 
 ---
 
-## POST 4 — Build in public angle (this is what we actually used)
+## POST 4 - Build in public angle (this is what we actually used)
 
 shipping app #8 this week. using the same 47-step checklist i built after apps 1-3 failed at launch.
 
@@ -78,7 +78,7 @@ days 1-5 open right now. days 6-7 behind email. that's where the launch mechanic
 
 ---
 
-## POST 5 — Reply bait (what's stopping you from shipping?)
+## POST 5 - Reply bait (what's stopping you from shipping?)
 
 genuine question for builders in my feed...
 

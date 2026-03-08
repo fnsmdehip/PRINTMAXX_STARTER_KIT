@@ -16,6 +16,14 @@
     "source": "gap_report_20260307_cycle4"
   },
   {
+    "priority": 2,
+    "title": "4 OPENCLAW PREVIEW EMAILS READY - MEMPHIS + NASHVILLE",
+    "severity": "CRITICAL",
+    "action": "Memphis (2 emails with confirmed addresses): Send emails from AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/memphis_cycle2_emails.md to service@theshopofmemphis.com and jstory@serviceclean.net. Nashville (2 leads): Need to find emails first - call (615) 220-0333 (Accurate Auto) and (615) 288-3360 (Reliable Fence/Rosie) to get email, then send from nashville_cycle1_emails.md.",
+    "revenue_impact": "$149-299 per close. Memphis leads are HIGH probability - specific pain points (expired SSL, broken contact form) with live demos deployed.",
+    "source": "openclaw_cycle2_memphis"
+  },
+  {
     "priority": 3,
     "title": "210 SOCIAL POSTS IN QUEUE - NOT DISTRIBUTED",
     "severity": "CRITICAL",
@@ -56,11 +64,51 @@
     "source": "gap_report_20260307_cycle4"
   },
   {
-    "priority": 2,
-    "title": "4 OPENCLAW PREVIEW EMAILS READY - MEMPHIS + NASHVILLE",
-    "severity": "CRITICAL",
-    "action": "Memphis (2 emails with confirmed addresses): Send emails from AUTOMATIONS/leads/auto_local_biz_openclaw_nationwide_9569/memphis_cycle2_emails.md to service@theshopofmemphis.com and jstory@serviceclean.net. Nashville (2 leads): Need to find emails first - call (615) 220-0333 (Accurate Auto) and (615) 288-3360 (Reliable Fence/Rosie) to get email, then send from nashville_cycle1_emails.md.",
-    "revenue_impact": "$149-299 per close. Memphis leads are HIGH probability - specific pain points (expired SSL, broken contact form) with live demos deployed.",
-    "source": "openclaw_cycle2_memphis"
+    "priority": 9,
+    "title": "1,628 ENGAGEMENT_BAIT ENTRIES \u2192 ZERO CONTENT",
+    "severity": "NEW",
+    "action": "Batch-convert 10 entries/day \u2192 30 posts/day using content_factory.py",
+    "revenue_impact": "",
+    "source": "gap_report_20260308.md"
+  },
+  {
+    "priority": 10,
+    "title": "700 ECOM ARB PRODUCTS MARKED LIST, ZERO LISTED",
+    "severity": "CONFIRMED",
+    "action": "See gap report",
+    "revenue_impact": "",
+    "source": "gap_report_20260308.md"
+  },
+  {
+    "priority": 11,
+    "title": "31KB COLD EMAIL DOC READY, ZERO SENDS",
+    "severity": "NEW",
+    "action": "Requires email sending infrastructure (Instantly/Lemlist)",
+    "revenue_impact": "",
+    "source": "gap_report_20260308.md"
+  },
+  {
+    "priority": 12,
+    "title": "19 SCORE-100 OPPORTUNITIES UNACTED",
+    "severity": "NEW",
+    "action": "Evaluate top 3 for immediate implementation",
+    "revenue_impact": "",
+    "source": "gap_report_20260308.md"
+  },
+  {
+    "priority": 13,
+    "title": "54K FREELANCE OPPORTUNITIES, ZERO RESPONSES SENT",
+    "severity": "NEW",
+    "action": "See gap report",
+    "revenue_impact": "",
+    "source": "gap_report_20260308.md"
+  },
+  {
+    "priority": 14,
+    "title": "DENTIST/LAWYER LEADS 25 DAYS STALE",
+    "severity": "NEW",
+    "action": "Refresh or deprioritize. Gov tender leads (1,500+) are more recent.",
+    "revenue_impact": "",
+    "source": "gap_report_20260308.md"
   }
 ]

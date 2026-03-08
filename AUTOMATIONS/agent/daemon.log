@@ -309,3 +309,177 @@ JSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/c
 [04:00:00] [INFO] MISSION: Upgrade content (recursive)
 [04:00:04] [INFO]   [PARTIAL] upgrade_night: Upgrade attempt for C01_tiktok: failed (3.7s)
 [04:00:04] [INFO] MISSION: Safety commit
+[04:00:04] [INFO]   [SUCCESS] safety_night: Git safety commit (0.9s)
+[04:00:04] [INFO] ============================================================
+[04:00:04] [INFO] CYCLE COMPLETE — 2 missions in 5s
+[04:00:04] [INFO] ============================================================
+[04:00:04] [INFO] Sleeping 3595s until 05:00
+[05:00:00] [INFO] ============================================================
+[05:00:00] [INFO] AGENT CYCLE START — 2026-03-08 05:00
+[05:00:00] [INFO] Disk: 58.6GB free | Missions completed: 72 | Failed: 4
+[05:00:00] [INFO] ============================================================
+[05:00:00] [INFO] MISSION: Health & heal
+[05:00:04] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (4.1s)
+[05:00:04] [INFO] MISSION: Process & decide
+[05:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 27 response drafts, 28 listing drafts (0.2s)
+[05:00:04] [INFO] MISSION: Scan opportunities
+[05:03:50] [INFO]   [SUCCESS] scan_opps: 3/4 scanners completed (226.6s)
+[05:03:50] [INFO] MISSION: Research & scrape
+[05:09:49] [INFO]   [PARTIAL] research: 1/3 scrapers completed (358.6s)
+[05:09:49] [INFO] MISSION: Screen alpha
+[05:09:49] [INFO]   [SUCCESS] screen_alpha: Screened batch from 15477 pending entries (0.3s)
+[05:09:49] [INFO] ============================================================
+[05:09:49] [INFO] CYCLE COMPLETE — 5 missions in 590s
+[05:09:49] [INFO] ============================================================
+[05:09:49] [INFO] Sleeping 3010s until 06:00
+[06:00:00] [INFO] ============================================================
+[06:00:00] [INFO] AGENT CYCLE START — 2026-03-08 06:00
+[06:00:00] [INFO] Disk: 58.4GB free | Missions completed: 77 | Failed: 4
+[06:00:00] [INFO] ============================================================
+[06:00:00] [INFO] ============================================================
+[06:00:00] [INFO] CYCLE COMPLETE — 0 missions in 0s
+[06:00:00] [INFO] ============================================================
+[06:00:00] [INFO] Sleeping 3600s until 07:00
+[07:00:00] [INFO] ============================================================
+[07:00:00] [INFO] AGENT CYCLE START — 2026-03-08 07:00
+[07:00:00] [INFO] Disk: 58.4GB free | Missions completed: 77 | Failed: 4
+[07:00:00] [INFO] ============================================================
+[07:00:00] [INFO] MISSION: Health & heal
+[07:00:03] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (3.7s)
+[07:00:03] [INFO] MISSION: Process & decide
+[07:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 28 response drafts, 28 listing drafts (0.2s)
+[07:00:04] [INFO] ============================================================
+[07:00:04] [INFO] CYCLE COMPLETE — 2 missions in 4s
+[07:00:04] [INFO] ============================================================
+[07:00:04] [INFO] Sleeping 3596s until 08:00
+[07:59:59] [INFO] ============================================================
+[08:00:00] [INFO] AGENT CYCLE START — 2026-03-08 08:00
+[08:00:00] [INFO] Disk: 58.3GB free | Missions completed: 79 | Failed: 4
+[08:00:00] [INFO] ============================================================
+[08:00:00] [INFO] MISSION: Scan opportunities
+[08:03:51] [INFO]   [SUCCESS] scan_opps: 3/4 scanners completed (231.8s)
+[08:03:51] [INFO] ============================================================
+[08:03:51] [INFO] CYCLE COMPLETE — 1 missions in 232s
+[08:03:51] [INFO] ============================================================
+[08:03:51] [INFO] Sleeping 3368s until 09:00
+[09:00:00] [INFO] ============================================================
+[09:00:00] [INFO] AGENT CYCLE START — 2026-03-08 09:00
+[09:00:00] [INFO] Disk: 58.2GB free | Missions completed: 80 | Failed: 4
+[09:00:00] [INFO] ============================================================
+[09:00:00] [INFO] MISSION: Health & heal
+[09:00:04] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (4.0s)
+[09:00:04] [INFO] MISSION: Process & decide
+[09:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 28 response drafts, 28 listing drafts (0.3s)
+[09:00:04] [INFO] MISSION: Research & scrape
+[09:06:04] [INFO]   [FAILED] research: 0/3 scrapers completed (360.0s)
+[09:06:04] [INFO] ============================================================
+[09:06:04] [INFO] CYCLE COMPLETE — 3 missions in 364s
+[09:06:04] [INFO] ============================================================
+[09:06:04] [INFO] Sleeping 3236s until 10:00
+[10:00:00] [INFO] ============================================================
+[10:00:00] [INFO] AGENT CYCLE START — 2026-03-08 10:00
+[10:00:00] [INFO] Disk: 58.2GB free | Missions completed: 82 | Failed: 5
+[10:00:00] [INFO] ============================================================
+[10:00:00] [INFO] MISSION: Generate content
+[10:00:30] [INFO]   [SUCCESS] gen_content: Generated content from 3 sources, saved to AGENT_CONTENT_20260308.md (30.6s)
+[10:00:30] [INFO] MISSION: Upgrade content (recursive)
+[10:02:30] [INFO]   [PARTIAL] upgrade_content: Upgrade attempt for C01_tiktok: failed (120.0s)
+[10:02:30] [INFO] MISSION: Schedule content
+[10:02:30] [INFO]   [SUCCESS] schedule: Scheduled 42 slots across 7 days (0.1s)
+[10:02:30] [INFO] ============================================================
+[10:02:30] [INFO] CYCLE COMPLETE — 3 missions in 151s
+[10:02:30] [INFO] ============================================================
+[10:02:30] [INFO] Sleeping 3449s until 11:00
+[10:59:59] [INFO] ============================================================
+[11:00:00] [INFO] AGENT CYCLE START — 2026-03-08 11:00
+[11:00:00] [INFO] Disk: 58.2GB free | Missions completed: 85 | Failed: 5
+[11:00:00] [INFO] ============================================================
+[11:00:00] [INFO] MISSION: Health & heal
+[11:00:04] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (4.2s)
+[11:00:04] [INFO] MISSION: Process & decide
+[11:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 28 response drafts, 30 listing drafts (0.2s)
+[11:00:04] [INFO] ============================================================
+[11:00:04] [INFO] CYCLE COMPLETE — 2 missions in 4s
+[11:00:04] [INFO] ============================================================
+[11:00:04] [INFO] Sleeping 3596s until 12:00
+[12:00:00] [INFO] ============================================================
+[12:00:00] [INFO] AGENT CYCLE START — 2026-03-08 12:00
+[12:00:00] [INFO] Disk: 58.0GB free | Missions completed: 87 | Failed: 5
+[12:00:00] [INFO] ============================================================
+[12:00:00] [INFO] ============================================================
+[12:00:00] [INFO] CYCLE COMPLETE — 0 missions in 0s
+[12:00:00] [INFO] ============================================================
+[12:00:00] [INFO] Sleeping 3600s until 13:00
+[13:00:00] [INFO] ============================================================
+[13:00:00] [INFO] AGENT CYCLE START — 2026-03-08 13:00
+[13:00:00] [INFO] Disk: 57.3GB free | Missions completed: 87 | Failed: 5
+[13:00:00] [INFO] ============================================================
+[13:00:00] [INFO] MISSION: Health & heal
+[13:00:04] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (4.0s)
+[13:00:04] [INFO] MISSION: Process & decide
+[13:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 28 response drafts, 32 listing drafts (0.2s)
+[13:00:04] [INFO] ============================================================
+[13:00:04] [INFO] CYCLE COMPLETE — 2 missions in 4s
+[13:00:04] [INFO] ============================================================
+[13:00:04] [INFO] Sleeping 3596s until 14:00
+[14:00:00] [INFO] ============================================================
+[14:00:00] [INFO] AGENT CYCLE START — 2026-03-08 14:00
+[14:00:00] [INFO] Disk: 57.7GB free | Missions completed: 89 | Failed: 5
+[14:00:00] [INFO] ============================================================
+[14:00:00] [INFO] MISSION: Generate content
+[14:00:25] [INFO]   [SUCCESS] gen_content: Generated content from 3 sources, saved to AGENT_CONTENT_20260308.md (25.7s)
+[14:00:25] [INFO] MISSION: Factory run
+[14:05:25] [INFO]   [FAILED] factory: TIMEOUT after 300s (300.0s)
+[14:05:25] [INFO] MISSION: Compliance check
+[14:05:58] [INFO]   [FAILED] compliance: tttt/OPS/COMPLIANCE_SCAN_2026_03_08.md
+JSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/compliance_scan_2026_03_08.json
+
+29 CRITICAL issues found. Fix before publishing.
+ (32.2s)
+[14:05:58] [INFO] MISSION: Proactive opportunity hunt
+[14:07:28] [INFO]   [PARTIAL] proactive_hunt: Searched but results were thin (90.0s)
+[14:07:28] [INFO] ============================================================
+[14:07:28] [INFO] CYCLE COMPLETE — 4 missions in 448s
+[14:07:28] [INFO] ============================================================
+[14:07:28] [INFO] Sleeping 3152s until 15:00
+[15:00:00] [INFO] ============================================================
+[15:00:00] [INFO] AGENT CYCLE START — 2026-03-08 15:00
+[15:00:00] [INFO] Disk: 56.9GB free | Missions completed: 91 | Failed: 7
+[15:00:00] [INFO] ============================================================
+[15:00:00] [INFO] MISSION: Health & heal
+[15:00:03] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (3.8s)
+[15:00:03] [INFO] MISSION: Process & decide
+[15:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 28 response drafts, 32 listing drafts (0.2s)
+[15:00:04] [INFO] ============================================================
+[15:00:04] [INFO] CYCLE COMPLETE — 2 missions in 4s
+[15:00:04] [INFO] ============================================================
+[15:00:04] [INFO] Sleeping 3596s until 16:00
+[16:00:00] [INFO] ============================================================
+[16:00:00] [INFO] AGENT CYCLE START — 2026-03-08 16:00
+[16:00:00] [INFO] Disk: 57.2GB free | Missions completed: 93 | Failed: 7
+[16:00:00] [INFO] ============================================================
+[16:00:00] [INFO] ============================================================
+[16:00:00] [INFO] CYCLE COMPLETE — 0 missions in 0s
+[16:00:00] [INFO] ============================================================
+[16:00:00] [INFO] Sleeping 3600s until 17:00
+[17:00:00] [INFO] ============================================================
+[17:00:00] [INFO] AGENT CYCLE START — 2026-03-08 17:00
+[17:00:00] [INFO] Disk: 56.6GB free | Missions completed: 93 | Failed: 7
+[17:00:00] [INFO] ============================================================
+[17:00:00] [INFO] MISSION: Health & heal
+[17:00:04] [INFO]   [SUCCESS] health_heal: Health checked. Healed issues. (3.8s)
+[17:00:04] [INFO] MISSION: Process & decide
+[17:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 32 response drafts, 32 listing drafts (0.2s)
+[17:00:04] [INFO] ============================================================
+[17:00:04] [INFO] CYCLE COMPLETE — 2 missions in 4s
+[17:00:04] [INFO] ============================================================
+[17:00:04] [INFO] Sleeping 3596s until 18:00
+[18:00:00] [INFO] ============================================================
+[18:00:00] [INFO] AGENT CYCLE START — 2026-03-08 18:00
+[18:00:00] [INFO] Disk: 57.0GB free | Missions completed: 95 | Failed: 7
+[18:00:00] [INFO] ============================================================
+[18:00:00] [INFO] MISSION: Scan opportunities
+[18:03:53] [INFO]   [SUCCESS] scan_opps_eve: 3/4 scanners completed (233.4s)
+[18:03:53] [INFO] MISSION: Generate content
+[18:04:22] [INFO]   [SUCCESS] gen_content_eve: Generated content from 2 sources, saved to AGENT_CONTENT_20260308.md (29.2s)
+[18:04:22] [INFO] MISSION: Safety commit

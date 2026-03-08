@@ -1,0 +1,141 @@
+{
+  "cycle_date": "2026-03-08",
+  "cycle_id": "monetization_affiliate_funnels_mar8",
+  "goatcounter_status": "reachable_400",
+  "goatcounter_url": "https://printmaxx.goatcounter.com",
+  "goatcounter_note": "Returns HTTP 400 on bare curl (expected - dashboard requires browser auth). Tracking script embedded in pages fires events on affiliate link clicks.",
+  "pages_live": [
+    "https://ai-stack-2026.surge.sh",
+    "https://coldmaxx-vs-instantly.surge.sh",
+    "https://sleepmaxx-vs-sleepcycle.surge.sh",
+    "https://cursor-vs-claudecode.surge.sh",
+    "https://pagescorer-vs-gtmetrix.surge.sh",
+    "https://printmaxx.surge.sh",
+    "https://sleepmaxx.surge.sh",
+    "https://coldmaxx.surge.sh",
+    "https://walktounlock.surge.sh",
+    "https://mealmaxx.surge.sh"
+  ],
+  "pages_down": [
+    "https://convertkit-vs-beehiiv.surge.sh",
+    "https://instantly-vs-lemlist.surge.sh"
+  ],
+  "pages_live_count": 10,
+  "pages_down_count": 2,
+  "pages_built_this_cycle": 0,
+  "offers_identified": [
+    {
+      "rank": 1,
+      "program": "ConvertKit",
+      "commission": "30% recurring lifetime",
+      "signup_url": "https://convertkit.com/affiliate",
+      "status": "PLACEHOLDER_ID",
+      "priority": "HIGHEST"
+    },
+    {
+      "rank": 2,
+      "program": "Beehiiv",
+      "commission": "20% recurring",
+      "signup_url": "https://www.beehiiv.com/partners",
+      "status": "PLACEHOLDER_ID",
+      "priority": "HIGH"
+    },
+    {
+      "rank": 3,
+      "program": "Gumroad",
+      "commission": "10-30% varies",
+      "signup_url": "https://gumroad.com/affiliates",
+      "status": "PLACEHOLDER_ID",
+      "priority": "MEDIUM"
+    },
+    {
+      "rank": 4,
+      "program": "Instantly.ai",
+      "commission": "30% recurring",
+      "signup_url": "https://instantly.ai/affiliate",
+      "status": "NOT_SIGNED_UP",
+      "priority": "HIGH"
+    },
+    {
+      "rank": 5,
+      "program": "Lemlist",
+      "commission": "20% recurring",
+      "signup_url": "https://www.lemlist.com/affiliate",
+      "status": "NOT_SIGNED_UP",
+      "priority": "MEDIUM"
+    },
+    {
+      "rank": 6,
+      "program": "Cursor",
+      "commission": "varies",
+      "signup_url": "https://cursor.sh",
+      "status": "NOT_SIGNED_UP",
+      "priority": "MEDIUM"
+    },
+    {
+      "rank": 7,
+      "program": "Sleep Cycle",
+      "commission": "varies",
+      "signup_url": "https://www.sleepcycle.com",
+      "status": "NOT_SIGNED_UP",
+      "priority": "LOW"
+    },
+    {
+      "rank": 8,
+      "program": "GTmetrix",
+      "commission": "varies",
+      "signup_url": "https://gtmetrix.com",
+      "status": "NOT_SIGNED_UP",
+      "priority": "LOW"
+    },
+    {
+      "rank": 9,
+      "program": "Claude / Anthropic",
+      "commission": "N/A - no public affiliate program",
+      "signup_url": null,
+      "status": "NO_PROGRAM",
+      "priority": "MONITOR"
+    },
+    {
+      "rank": 10,
+      "program": "Surge.sh / Vercel",
+      "commission": "varies",
+      "signup_url": "https://vercel.com/partners",
+      "status": "NOT_SIGNED_UP",
+      "priority": "LOW"
+    }
+  ],
+  "blocker": "Human affiliate program signups required. All live funnel pages have PLACEHOLDER affiliate IDs. No clicks generate commissions until real IDs are inserted. See OPS/AFFILIATE_LINK_SETUP.md for exact steps (< 15 min total).",
+  "content_generated": 343,
+  "content_note": "343 posts in CONTENT/social/posting_queue/. Includes app promos, product promos, trend posts, and scheduled tweets through April 2026.",
+  "revenue_current": 0,
+  "revenue_current_note": "REVENUE_TRACKER.csv shows $0 real revenue. Two paper trades logged (MM007 cold outbound $398 paper, MM010 dropship $80 paper). No affiliate commissions recorded.",
+  "revenue_projected_90day": 150,
+  "revenue_projected_90day_note": "Conservative estimate assuming: affiliate signups completed within 1 week, 10 live comparison/funnel pages driving organic traffic, avg 50-100 visits/mo per page, 2-3% conversion rate, $29-49 avg product price, 20-30% commission. Upside to $500+/mo if SEO traction and content distribution ramp.",
+  "infrastructure_health": {
+    "goatcounter": "active",
+    "surge_hosting": "10 of 12 pages live",
+    "affiliate_ids": "ALL PLACEHOLDER - zero earning capacity",
+    "comparison_pages": "5 built (3 live, 2 down)",
+    "app_marketing_pages": "5 live",
+    "content_pipeline": "343 posts queued, 0 posted"
+  },
+  "next_actions": [
+    "HUMAN: Sign up for ConvertKit affiliate program (5 min) - https://convertkit.com/affiliate",
+    "HUMAN: Sign up for Beehiiv partner program (5 min) - https://www.beehiiv.com/partners",
+    "HUMAN: Sign up for Instantly.ai affiliate program (3 min) - https://instantly.ai/affiliate",
+    "HUMAN: Replace placeholder IDs in all funnel pages using sed commands in OPS/AFFILIATE_LINK_SETUP.md",
+    "HUMAN: Redeploy updated pages to surge.sh",
+    "AGENT: Investigate and fix convertkit-vs-beehiiv.surge.sh (returning 000/connection refused)",
+    "AGENT: Investigate and fix instantly-vs-lemlist.surge.sh (returning 000/connection refused)",
+    "AGENT: Add GoatCounter tracking to any comparison pages missing it",
+    "AGENT: Start distributing comparison page URLs through content queue (Reddit, Twitter, HN)",
+    "AGENT: Build backlinks to comparison pages via directory submissions",
+    "AGENT: Create 3 more comparison pages for high-search-volume tool matchups",
+    "AGENT: Post queued affiliate-related content from CONTENT/social/posting_queue/"
+  ],
+  "decisions_related": {
+    "affiliate_content_integration": "F01_F05_affiliate - 5 files moved to content pipeline (2026-03-05)",
+    "ecom_arb_opportunities": "11 products identified with 25-66% margins, all PENDING listing"
+  }
+}

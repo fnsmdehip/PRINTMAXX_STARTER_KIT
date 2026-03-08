@@ -1,10 +1,10 @@
-# Trend Synthesis Cycle 2 — Content Output
+# Trend Synthesis Cycle 2 - Content Output
 # Generated: 2026-03-07 11:30
 # Status: PENDING_REVIEW
 
 ---
 
-## TWEET 1 — Building During Chaos (BIP)
+## TWEET 1 - Building During Chaos (BIP)
 
 tech is melting. MSFT -15%. TSLA -12%.
 
@@ -16,7 +16,7 @@ today i start sending.
 
 ---
 
-## TWEET 2 — Agent Swarm Flex
+## TWEET 2 - Agent Swarm Flex
 
 13 AI agents ran overnight. they improved 23 pages, scored 1,081 leads, tested 79 websites, and generated 132 posts.
 
@@ -26,7 +26,7 @@ because i haven't sent a single email or listed a single product. the agents are
 
 ---
 
-## TWEET 3 — Anti-Pattern
+## TWEET 3 - Anti-Pattern
 
 saw a post on reddit: "6 months. 3 apps. 9 USD MRR."
 
@@ -38,7 +38,7 @@ the lesson: stop building. start activating. every additional app at $0 is just 
 
 ---
 
-## TWEET 4 — Cold Email Alpha
+## TWEET 4 - Cold Email Alpha
 
 @dimitarangg booked 59 B2B calls in 16 days and leaked the entire system.
 
@@ -48,7 +48,7 @@ zero sent. the gap between "ready" and "done" is embarrassing.
 
 ---
 
-## TWEET 5 — GEO is the New SEO
+## TWEET 5 - GEO is the New SEO
 
 GEO (generative engine optimization) is replacing SEO.
 
@@ -58,7 +58,7 @@ i have 601 SEO pages deployed. zero optimized for AI citations. fixing that this
 
 ---
 
-## THREAD — "My AI Agents Outwork Me" (7 tweets)
+## THREAD - "My AI Agents Outwork Me" (7 tweets)
 
 ### 1/7
 i run 32 autonomous AI agents from my laptop. 8 venture agents, 24 swarm agents. they run 24/7.

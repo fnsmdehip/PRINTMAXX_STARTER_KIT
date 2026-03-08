@@ -4,959 +4,395 @@ date,platform,content_type,views,revenue,rpm_calculated,rpm_benchmark_low,rpm_be
 2026-02-04,YouTube Shorts,short_form,0,0,0,0.01,0.50,0,Lowest paying. Use for growth not revenue.
 2026-02-04,X/Twitter,long_form,0,0,0,0,0,0,Doubled revenue pool Jan 2026. $1M article prize.
 2026-02-04,Kick,streaming,0,0,0,0,0,0,95/5 split vs Twitch 50/50. $16/hr incentive program.
-2026-02-10,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-10,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-10,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-10,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-10,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-10,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-10,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-10,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-10,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-10,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-10,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-10,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-10,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-10,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-10,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-10,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-10,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-10,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-10,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-10,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-10,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-10,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-10,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-10,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-10,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-10,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-10,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-10,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-10,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-10,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-10,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-10,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-10,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-10,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-10,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-10,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-10,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-10,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-10,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-10,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-10,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-10,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-10,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-10,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-10,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-10,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-10,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-10,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-10,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-10,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-10,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-10,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-10,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-10,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-10,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-10,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-10,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-10,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-10,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-10,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-10,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-10,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-10,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-10,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-10,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-10,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-10,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-10,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-10,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-10,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-10,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-10,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-10,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-10,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-10,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-10,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-10,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-10,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-10,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-10,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-10,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-10,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-10,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-10,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-10,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-10,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-10,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-10,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-10,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-10,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-10,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-10,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-10,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-10,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-10,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-10,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-10,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-10,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-10,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-10,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-11,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-11,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-11,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-11,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-11,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-11,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-11,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-11,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-11,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-11,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-11,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-11,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-11,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-11,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-11,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-11,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-11,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-11,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-11,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-11,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-11,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-11,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-11,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-11,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-11,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-11,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-11,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-11,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-11,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-11,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-11,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-11,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-11,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-11,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-11,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-11,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-11,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-11,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-11,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-11,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-11,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-11,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-11,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-11,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-11,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-11,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-11,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-11,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-11,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-11,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-12,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-12,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-12,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-12,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-12,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-12,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-12,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-12,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-12,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-12,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-12,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-12,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-12,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-12,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-12,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-12,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-12,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-12,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-12,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-12,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-12,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-12,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-12,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-12,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-12,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-12,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-12,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-12,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-12,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-12,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-12,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-12,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-12,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-12,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-12,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-12,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-12,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-12,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-12,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-12,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-12,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-12,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-12,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-12,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-12,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-12,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-12,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-12,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-12,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-12,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-12,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-12,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-12,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-12,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-12,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-12,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-12,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-12,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-12,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-12,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-12,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-12,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-12,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-12,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-12,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-12,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-12,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-12,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-12,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-12,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-12,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-12,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-12,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-12,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-12,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-12,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-12,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-12,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-12,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-12,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-12,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-12,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-12,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-12,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-12,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-12,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-12,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-12,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-12,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-12,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-12,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-12,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-12,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-12,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-12,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-12,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-12,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-12,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-12,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-12,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-13,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-13,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-13,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-13,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-13,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-13,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-13,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-13,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-13,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-13,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-13,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-13,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-13,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-13,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-13,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-13,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-13,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-13,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-13,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-13,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-13,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-13,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-13,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-13,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-13,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-13,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-13,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-13,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-13,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-13,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-13,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-13,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-13,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-13,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-13,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-13,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-13,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-13,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-13,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-13,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-13,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-13,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-13,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-13,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-13,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-13,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-13,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-13,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-13,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-13,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-14,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-14,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-14,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-14,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-14,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-14,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-14,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-14,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-14,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-14,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-14,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-14,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-14,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-14,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-14,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-14,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-14,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-14,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-14,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-14,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-14,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-14,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-14,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-14,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-14,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-14,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-14,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-14,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-14,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-14,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-14,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-14,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-14,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-14,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-14,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-14,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-14,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-14,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-14,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-14,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-14,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-14,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-14,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-14,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-14,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-14,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-14,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-14,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-14,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-14,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-15,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-15,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-15,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-15,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-15,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-15,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-15,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-15,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-15,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-15,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-15,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-15,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-15,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-15,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-15,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-15,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-15,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-15,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-15,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-15,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-15,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-15,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-15,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-15,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-15,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-15,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-15,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-15,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-15,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-15,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-15,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-15,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-15,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-15,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-15,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-15,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-15,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-15,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-15,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-15,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-15,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-15,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-15,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-15,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-15,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-15,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-15,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-15,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-15,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-15,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-16,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-16,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-16,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-16,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-16,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-16,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-16,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-16,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-16,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-16,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-16,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-16,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-16,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-16,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-16,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-16,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-16,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-16,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-16,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-16,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-16,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-16,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-16,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-16,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-16,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-16,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-16,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-16,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-16,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-16,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-16,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-16,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-16,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-16,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-16,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-16,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-16,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-16,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-16,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-16,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-16,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-16,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-16,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-16,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-16,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-16,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-16,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-16,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-16,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-16,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-16,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-16,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-16,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-16,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-16,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-16,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-16,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-16,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-16,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-16,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-16,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-16,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-16,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-16,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-16,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-16,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-16,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-16,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-16,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-16,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-16,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-16,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-17,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-17,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-17,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-17,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-17,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-17,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-17,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-17,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-17,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-17,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-17,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-17,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-17,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-17,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-17,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-17,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-17,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-17,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-17,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-17,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-17,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-17,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-17,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-17,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-17,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-17,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-17,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-17,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-17,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-17,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-17,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-17,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-17,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-17,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-17,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-17,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-17,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-17,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-17,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-17,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-17,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-17,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-17,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-17,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-17,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-17,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-17,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-17,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-18,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-18,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-18,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-18,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-18,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-18,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-18,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-18,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-18,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-18,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-18,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-18,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-18,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-18,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-18,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-18,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-18,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-18,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-18,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-18,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-18,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-18,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-18,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-18,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-18,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-18,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-18,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-18,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-18,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-18,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-18,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-18,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-18,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-18,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-18,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-18,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-18,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-18,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-18,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-18,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-18,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-18,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-18,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-18,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-18,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-18,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-18,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-18,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-18,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-18,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-21,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-21,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-21,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-21,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-21,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-21,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-21,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-21,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-21,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-21,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-21,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-21,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-21,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-21,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-21,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-21,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-21,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-21,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-21,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-21,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-21,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-21,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-21,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-21,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-21,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-21,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-21,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-21,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-21,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-21,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-21,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-21,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-21,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-21,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-21,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-21,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-21,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-21,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-21,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-21,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-21,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-21,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-21,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-21,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-21,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-21,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-21,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-21,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-23,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-23,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-23,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-23,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-23,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-23,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-23,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-23,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-23,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-23,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-23,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-23,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-23,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-23,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-23,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-23,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-23,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-23,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-23,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-23,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-23,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-23,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-23,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-23,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-23,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-23,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-23,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-23,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-23,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-23,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-23,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-23,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-23,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-23,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-23,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-23,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-23,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-23,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-23,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-23,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-23,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-23,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-23,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-23,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-23,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-23,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-23,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-23,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-23,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-23,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.
-2026-02-24,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-24,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-24,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-24,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-24,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-24,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-24,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-24,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-24,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-24,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-24,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-24,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-24,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-24,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-24,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-24,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-24,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-24,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-24,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-24,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-24,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-24,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-24,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-24,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-24,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-24,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-24,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-24,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-24,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-24,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-24,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-24,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-24,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-24,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-24,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-24,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-24,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-24,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-24,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-24,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-24,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-24,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-24,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-24,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-24,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-24,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-24,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-24,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-27,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-27,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-27,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-27,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-27,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-27,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-27,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-27,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-27,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-27,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-27,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-27,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-27,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-27,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-27,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-27,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-27,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-27,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-27,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-27,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-27,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-27,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-27,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-27,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-27,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-27,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-27,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-27,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-27,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-27,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-27,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-27,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-27,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-27,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-27,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-27,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-27,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-27,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-27,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-27,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-27,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-27,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-27,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-27,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-27,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-27,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-27,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-27,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-28,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-28,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-28,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-28,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-28,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-28,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-28,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-28,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-28,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-28,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-28,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-28,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-28,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-28,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-28,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-28,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-28,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-28,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-28,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-28,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-28,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-28,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-28,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-28,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-02-28,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-02-28,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-02-28,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-02-28,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-02-28,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-02-28,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-02-28,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-02-28,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-02-28,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-02-28,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-02-28,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-02-28,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-02-28,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-02-28,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-02-28,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-02-28,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-02-28,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-02-28,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-02-28,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-02-28,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-02-28,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-02-28,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-02-28,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-02-28,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-03-01,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-03-01,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-03-01,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-03-01,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-03-01,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-03-01,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-03-01,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-03-01,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-03-01,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-03-01,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-03-01,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-03-01,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-03-01,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-03-01,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-03-01,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-03-01,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-03-01,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-03-01,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-03-01,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-03-01,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-03-01,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-03-01,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-03-01,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-03-01,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-03-01,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-03-01,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-03-01,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-03-01,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-03-01,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-03-01,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-03-01,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-03-01,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-03-01,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-03-01,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-03-01,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-03-01,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-03-01,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-03-01,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-03-01,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-03-01,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-03-01,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-03-01,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-03-01,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-03-01,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-03-01,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-03-01,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-03-01,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-03-01,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-03-05,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-03-05,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-03-05,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-03-05,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-03-05,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-03-05,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-03-05,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-03-05,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-03-05,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-03-05,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-03-05,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-03-05,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-03-05,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-03-05,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-03-05,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-03-05,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-03-05,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-03-05,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-03-05,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-03-05,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-03-05,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-03-05,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-03-05,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-03-05,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-03-05,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-03-05,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-03-05,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-03-05,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-03-05,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-03-05,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-03-05,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-03-05,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-03-05,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-03-05,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-03-05,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-03-05,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-03-05,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-03-05,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-03-05,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-03-05,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-03-05,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-03-05,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-03-05,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-03-05,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-03-05,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-03-05,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-03-05,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-03-05,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-03-05,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-03-05,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-03-05,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-03-05,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-03-05,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-03-05,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-03-05,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-03-05,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-03-05,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-03-05,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-03-05,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-03-05,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-03-05,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-03-05,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-03-05,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-03-05,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-03-05,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-03-05,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-03-05,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-03-05,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-03-05,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-03-05,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-03-05,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-03-05,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
-2026-03-05,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.
-2026-03-05,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.
-2026-03-05,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.
-2026-03-05,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.
-2026-03-05,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.
-2026-03-05,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.
-2026-03-05,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM."
-2026-03-05,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.
-2026-03-05,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.
-2026-03-05,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.
-2026-03-05,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.
-2026-03-05,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.
-2026-03-05,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.
-2026-03-05,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM."
-2026-03-05,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased."
-2026-03-05,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.
-2026-03-05,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.
-2026-03-05,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.
-2026-03-05,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.
-2026-03-05,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.
-2026-03-05,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.
-2026-03-05,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.
-2026-03-05,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.
-2026-03-05,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.
+2026-02-10,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-10,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-10,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-10,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-10,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-10,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-10,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-10,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-10,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-10,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-10,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-10,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-10,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-10,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-10,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-10,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-10,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-10,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-10,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-10,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-10,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-10,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-10,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-10,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-10,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-11,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-11,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-11,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-11,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-11,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-11,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-11,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-11,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-11,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-11,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-11,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-11,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-11,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-11,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-11,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-11,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-11,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-11,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-11,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-11,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-11,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-11,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-11,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-11,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-11,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-12,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-12,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-12,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-12,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-12,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-12,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-12,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-12,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-12,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-12,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-12,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-12,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-12,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-12,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-12,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-12,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-12,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-12,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-12,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-12,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-12,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-12,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-12,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-12,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-12,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-13,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-13,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-13,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-13,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-13,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-13,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-13,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-13,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-13,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-13,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-13,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-13,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-13,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-13,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-13,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-13,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-13,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-13,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-13,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-13,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-13,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-13,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-13,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-13,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-13,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-14,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-14,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-14,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-14,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-14,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-14,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-14,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-14,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-14,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-14,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-14,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-14,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-14,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-14,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-14,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-14,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-14,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-14,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-14,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-14,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-14,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-14,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-14,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-14,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-14,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-15,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-15,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-15,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-15,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-15,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-15,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-15,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-15,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-15,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-15,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-15,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-15,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-15,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-15,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-15,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-15,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-15,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-15,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-15,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-15,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-15,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-15,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-15,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-15,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-15,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-16,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-16,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-16,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-16,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-16,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-16,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-16,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-16,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-16,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-16,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-16,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-16,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-16,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-16,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-16,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-16,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-16,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-16,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-16,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-16,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-16,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-16,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-16,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-16,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-17,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-17,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-17,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-17,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-17,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-17,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-17,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-17,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-17,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-17,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-17,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-17,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-17,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-17,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-17,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-17,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-17,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-17,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-17,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-17,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-17,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-17,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-17,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-17,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-18,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-18,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-18,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-18,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-18,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-18,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-18,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-18,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-18,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-18,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-18,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-18,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-18,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-18,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-18,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-18,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-18,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-18,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-18,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-18,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-18,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-18,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-18,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-18,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-18,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-21,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-21,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-21,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-21,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-21,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-21,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-21,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-21,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-21,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-21,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-21,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-21,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-21,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-21,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-21,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-21,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-21,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-21,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-21,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-21,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-21,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-21,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-21,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-21,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-23,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-23,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-23,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-23,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-23,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-23,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-23,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-23,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-23,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-23,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-23,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-23,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-23,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-23,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-23,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-23,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-23,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-23,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-23,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-23,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-23,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-23,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-23,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-23,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-23,Unknown,general,2.63,2.63,2.63,reddit.com/r/blogging,My blog made $298 in January 2026 from AdSense.,,
+2026-02-24,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-24,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-24,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-24,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-24,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-24,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-24,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-24,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-24,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-24,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-24,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-24,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-24,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-24,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-24,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-24,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-24,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-24,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-24,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-24,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-24,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-24,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-24,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-24,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-27,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-27,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-27,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-27,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-27,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-27,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-27,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-27,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-27,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-27,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-27,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-27,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-27,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-27,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-27,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-27,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-27,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-27,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-27,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-27,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-27,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-27,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-27,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-27,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-02-28,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-02-28,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-02-28,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-02-28,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-02-28,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-02-28,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-02-28,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-02-28,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-02-28,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-02-28,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-02-28,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-02-28,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-02-28,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-02-28,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-02-28,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-02-28,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-02-28,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-02-28,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-02-28,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-02-28,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-02-28,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-02-28,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-02-28,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-02-28,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-03-01,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-03-01,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-03-01,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-03-01,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-03-01,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-03-01,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-03-01,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-03-01,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-03-01,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-03-01,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-03-01,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-03-01,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-03-01,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-03-01,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-03-01,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-03-01,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-03-01,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-03-01,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-03-01,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-03-01,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-03-01,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-03-01,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-03-01,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-03-01,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,
+2026-03-05,YouTube,general,2.0,12.0,5.0,industry_baseline_feb2026,Standard AdSense RPM. Varies hugely by niche.,,
+2026-03-05,YouTube,finance,10.0,40.0,20.0,industry_baseline_feb2026,Highest RPM niche on YouTube.,,
+2026-03-05,YouTube,tech,5.0,20.0,10.0,industry_baseline_feb2026,Good RPM. Software/SaaS ads pay well.,,
+2026-03-05,YouTube,fitness,3.0,12.0,6.0,industry_baseline_feb2026,Supplement and fitness product ads.,,
+2026-03-05,YouTube,faith,1.5,8.0,3.5,industry_baseline_feb2026,Lower RPM but high engagement and loyalty.,,
+2026-03-05,YouTube,sleep,3.0,15.0,7.0,industry_baseline_feb2026,Sleep product/mattress ads pay well.,,
+2026-03-05,YouTube,entertainment,1.0,5.0,2.5,industry_baseline_feb2026,"High volume, low RPM.",,
+2026-03-05,YouTube Shorts,general,0.01,0.1,0.04,industry_baseline_feb2026,Shorts RPM is 10-50x lower than long-form.,,
+2026-03-05,YouTube Shorts,tech,0.03,0.15,0.07,industry_baseline_feb2026,Slightly higher for tech shorts.,,
+2026-03-05,YouTube Shorts,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness shorts perform average.,,
+2026-03-05,TikTok,general,0.02,0.1,0.05,industry_baseline_feb2026,Creativity Program Beta. Must have 10K+ followers.,,
+2026-03-05,TikTok,tech,0.03,0.12,0.06,industry_baseline_feb2026,Tech niche slightly above average.,,
+2026-03-05,TikTok,fitness,0.02,0.08,0.04,industry_baseline_feb2026,Fitness content average RPM.,,
+2026-03-05,TikTok,entertainment,0.01,0.05,0.02,industry_baseline_feb2026,"High volume, lowest RPM.",,
+2026-03-05,Instagram Reels,general,0.01,0.05,0.02,industry_baseline_feb2026,"Reels Play Bonus program. Invite-only, being phased.",,
+2026-03-05,Instagram Reels,fitness,0.01,0.06,0.03,industry_baseline_feb2026,Fitness reels can earn through brand deals instead.,,
+2026-03-05,Medium,general,50.0,500.0,150.0,industry_baseline_feb2026,Per 1000 reads. Partner Program. Highly variable.,,
+2026-03-05,Medium,tech,80.0,800.0,200.0,industry_baseline_feb2026,Tech/programming articles perform well.,,
+2026-03-05,Medium,finance,100.0,1000.0,300.0,industry_baseline_feb2026,Finance articles have highest Medium RPM.,,
+2026-03-05,Substack,general,0.0,0.0,0.0,industry_baseline_feb2026,No ad RPM. Revenue from paid subscriptions. Avg $5-15/mo per subscriber.,,
+2026-03-05,Substack,tech,0.0,0.0,0.0,industry_baseline_feb2026,Tech newsletters avg $10/mo. Conversion 5-10% free to paid.,,
+2026-03-05,X/Twitter,general,0.5,5.0,2.0,industry_baseline_feb2026,X Premium revenue sharing. Per 1M impressions.,,
+2026-03-05,X/Twitter,tech,1.0,8.0,3.0,industry_baseline_feb2026,Tech content premium rate.,,
+2026-03-05,Beehiiv,general,0.0,0.0,0.0,industry_baseline_feb2026,No native RPM. Revenue from Beehiiv Ad Network or paid subs. Ad network ~$2-5 CPM.,,

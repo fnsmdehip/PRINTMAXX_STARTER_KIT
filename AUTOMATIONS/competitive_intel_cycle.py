@@ -56,7 +56,7 @@ def load_existing_intel_keys():
     if COMPETITIVE_INTEL_CSV.exists():
         with open(COMPETITIVE_INTEL_CSV, newline='', errors='replace') as f:
             for row in csv.DictReader(f):
-                key = f"{row.get('type','')}__{row.get('name','')}__{row.get('scan_date','')[:10]}"
+                key = f"{row.get('type','')}__{row.get('name','')}__{(row.get('scan_date') or '')[:10]}"
                 keys.add(key)
     return keys
 

@@ -552,8 +552,8 @@ class AlphaValidator:
                     reader = csv.DictReader(f)
                     for row in reader:
                         backtest_scores[row.get('alpha_id')] = row
-            except:
-                pass
+            except Exception:
+                pass  # Backtest file may be malformed; continue without it
 
         # Update scores based on validation
         updates = []

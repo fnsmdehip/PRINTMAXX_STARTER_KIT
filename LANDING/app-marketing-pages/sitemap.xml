@@ -309,7 +309,7 @@
     <loc>https://printmaxx-comparisons.surge.sh/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
     <loc>https://prayerlock-vs-hallow.surge.sh/</loc>
@@ -320,6 +320,42 @@
   <url>
     <loc>https://focuslock-vs-opal.surge.sh/</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://coldmaxx-vs-instantly.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://cursor-vs-claudecode.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://instantly-vs-lemlist.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://pagescorer-vs-gtmetrix.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://sleepmaxx-vs-sleepcycle.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://convertkit-vs-beehiiv.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <lastmod>2026-03-07</lastmod>
   </url>
@@ -382,6 +418,56 @@
     <lastmod>2026-03-07</lastmod>
   </url>
 
+  <!-- Cycle 8-9 New Deployments -->
+  <url>
+    <loc>https://printmaxx-tools.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://cold-email-roi-calculator.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://side-project-estimator.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://financial-dashboard-pm.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-stack-2026.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://fiverr-services-pm.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://shopmetrics-pro.surge.sh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://printmaxx-store.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+
   <!-- Streak App Store Pages -->
   <url>
     <loc>https://art-streak-app.surge.sh/</loc>
@@ -409,6 +495,78 @@
   </url>
   <url>
     <loc>https://catholic-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://journal-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://language-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://meditation-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://reading-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sutra-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://gita-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://quran-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://guru-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://torah-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://mormon-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sikh-streak-app.surge.sh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://adhd-streak.surge.sh/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-03-07</lastmod>

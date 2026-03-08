@@ -48,6 +48,8 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Any, Optional
 
+from agent_resilience import locked_file
+
 # ── Paths & Guardrails ─────────────────────────────────────────────────
 PROJECT = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
@@ -68,6 +70,7 @@ RESEARCH_DIR = PROJECT / "RESEARCH"
 RALPH = PROJECT / "ralph"
 CATALOG_PATH = OPS / "INTELLIGENCE_CATALOG.json"
 ALPHA_QUERY = AUTOMATIONS / "alpha_query.py"
+SQLITE_ALPHA_INDEX = AUTOMATIONS / "sqlite_alpha_index.py"
 PYTHON = sys.executable
 
 
@@ -847,7 +850,7 @@ def load_catalog() -> Optional[dict[str, Any]]:
     """Load INTELLIGENCE_CATALOG.json if it exists, merge with hardcoded map."""
     if CATALOG_PATH.exists():
         try:
-            with open(CATALOG_PATH, "r") as f:
+            with locked_file(CATALOG_PATH, mode="r") as f:
                 catalog = json.load(f)
             return catalog
         except Exception:
@@ -856,11 +859,10 @@ def load_catalog() -> Optional[dict[str, Any]]:
 
 
 def query_alpha(venture_type: str, top: int = 10) -> list[dict[str, Any]]:
-    """Query alpha_query.py for top alpha entries relevant to a venture."""
-    if not ALPHA_QUERY.exists():
-        return []
+    """Query alpha entries relevant to a venture.
 
-    # Map some venture types to alpha_query venture names
+    Tries SQLite FTS5 index first (33ms), falls back to alpha_query.py (slower).
+    """
     alpha_venture_map = {
         "APP_FACTORY": "APP_FACTORY",
         "OUTBOUND": "OUTBOUND",
@@ -870,11 +872,28 @@ def query_alpha(venture_type: str, top: int = 10) -> list[dict[str, Any]]:
         "RESEARCH": "RESEARCH",
         "PRODUCT": "PRODUCT",
         "SCRAPING": "SCRAPING",
-        "GROWTH": "CONTENT",  # Growth pulls from content alpha as baseline
+        "GROWTH": "CONTENT",
     }
-
     alpha_venture = alpha_venture_map.get(venture_type.upper(), venture_type.upper())
 
+    # Try SQLite FTS5 index first (much faster)
+    if SQLITE_ALPHA_INDEX.exists():
+        try:
+            result = subprocess.run(
+                [PYTHON, str(SQLITE_ALPHA_INDEX),
+                 "--venture", alpha_venture, "--status", "APPROVED",
+                 "--top", str(top), "--json"],
+                capture_output=True, text=True, cwd=str(PROJECT),
+                timeout=10
+            )
+            if result.returncode == 0 and result.stdout.strip():
+                return json.loads(result.stdout)
+        except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception):
+            pass
+
+    # Fallback to alpha_query.py
+    if not ALPHA_QUERY.exists():
+        return []
     try:
         result = subprocess.run(
             [PYTHON, str(ALPHA_QUERY),

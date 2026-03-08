@@ -197,16 +197,14 @@ def generate_response(row, services):
             our_price = max(svc["price_floor"], int(budget_num * 0.85))
             price_note = f"\n\ni can do this for ${our_price}. delivery in {svc['delivery']}."
         except ValueError:
-            price_note = f"\n\nhappy to discuss pricing. typically {svc['delivery']} delivery."
+            price_note = f"\n\npricing depends on scope. typically {svc['delivery']} delivery."
     else:
-        price_note = f"\n\nhappy to discuss pricing. typically {svc['delivery']} delivery."
+        price_note = f"\n\npricing depends on scope. typically {svc['delivery']} delivery."
 
-    # the response (following copy-style rules - no AI slop)
+    # the response (following copy-style rules - no AI slop, no chatbot artifacts)
     response = f"""hey, {svc['pitch_angle']}.{portfolio_links}{price_note}
 
-dm me if you want to see a quick sample before committing. i can put something together in a few hours so you know exactly what you're getting.
-
-happy to answer any questions about the process."""
+dm me if you want to see a quick sample before committing. i can put something together in a few hours so you know exactly what you're getting."""
 
     return response.strip()
 

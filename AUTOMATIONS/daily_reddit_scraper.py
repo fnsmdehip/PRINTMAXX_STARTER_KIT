@@ -86,8 +86,8 @@ async def scrape_subreddit(page, subreddit):
                                 comment_text = await comment_text_elem.text_content()
                                 if len(comment_text) > 50:
                                     comments.append(comment_text)
-                        except:
-                            pass
+                        except Exception:
+                            pass  # Comment element extraction is best-effort
 
                     # Go back
                     await page.go_back()

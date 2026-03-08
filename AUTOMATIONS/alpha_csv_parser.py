@@ -207,8 +207,8 @@ def print_summary(entries, parse_errors, format_stats):
         try:
             num = int(e['alpha_id'].replace('ALPHA', ''))
             ids.append(num)
-        except:
-            pass
+        except Exception:
+            pass  # Skip entries with non-numeric alpha_id
 
     if ids:
         print(f"\n--- ALPHA ID RANGE ---")

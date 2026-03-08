@@ -10,7 +10,7 @@ QUALITY_GATE: PASSED
 
 ---
 
-[TWEET 1 — post first]
+[TWEET 1 - post first]
 everyone talks about their $100/mo Vercel bill.
 
 mine is $0.
@@ -19,14 +19,14 @@ not because i'm cheap. because the stack i use doesn't need it.
 
 here's the whole thing.
 
-[TWEET 2 — reply to tweet 1]
+[TWEET 2 - reply to tweet 1]
 hosting: surge.sh
 
 free. unlimited projects. custom domains. deploys from CLI in one command. no cold starts. no edge functions you don't need. just static files on a CDN.
 
 most solopreneur apps don't need a server. they need to stop pretending they do.
 
-[TWEET 3 — reply to tweet 2]
+[TWEET 3 - reply to tweet 2]
 frontend: vanilla JS
 
 no React. no Next.js. no npm. no build step. no 300MB node_modules folder.
@@ -35,7 +35,7 @@ one HTML file. one CSS file. one JS file.
 
 loads in under 1 second on 3G. works offline via Service Worker. installs to home screen as a PWA.
 
-[TWEET 4 — reply to tweet 3]
+[TWEET 4 - reply to tweet 3]
 data layer: localStorage + IndexedDB
 
 for a streak tracker, a habit app, a timer, a prayer reminder: you don't need a database.
@@ -44,14 +44,14 @@ the user's phone IS the database.
 
 zero GDPR headaches. zero breach liability. zero monthly cost.
 
-[TWEET 5 — reply to tweet 4]
+[TWEET 5 - reply to tweet 4]
 the tradeoff is real and i'm not hiding it.
 
 no cross-device sync. no server-side analytics. no push notifications on iOS.
 
 if your app needs those things, pay for the server. but most apps people build don't need them. they add them because it feels more "real."
 
-[TWEET 6 — reply to tweet 5]
+[TWEET 6 - reply to tweet 5]
 the $0 stack in full:
 
 - surge.sh: hosting
@@ -64,7 +64,7 @@ monthly cost: $0
 deploy time: 4 minutes
 apps live right now: 77
 
-[TWEET 7 — reply to tweet 6]
+[TWEET 7 - reply to tweet 6]
 the $100/mo Vercel bill is optional.
 
 most people pay it because they copy the stack from tutorials, not because their app needs it.

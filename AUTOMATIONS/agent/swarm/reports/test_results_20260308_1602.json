@@ -1,0 +1,2554 @@
+{
+  "tested_at": "2026-03-08T16:02:08.229189",
+  "total": 258,
+  "green": 215,
+  "yellow": 19,
+  "red": 24,
+  "pass_rate": "90.7%",
+  "avg_load_ms": 1349,
+  "max_load_ms": 5785,
+  "min_load_ms": 726,
+  "red_sites": [
+    {
+      "url": "a-b-landscaping-inc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "accurate-lawn-landscaping-inc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "bob-ray-company-inc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "complete-home-services-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "david-fox-roofer-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "er-tree-care-llc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "garrett-s-presure-washing-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "good-maintenance-cleaning-inc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "jeff-reed-logging-tree-service-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "junk-king-louisville-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "kings-hands-llc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh",
+      "error": "Error: label empty or too long",
+      "status": 0
+    },
+    {
+      "url": "mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "error": "Error: label empty or too long",
+      "status": 0
+    },
+    {
+      "url": "naturescape-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "new-leaf-tree-service-llc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "new-seasons-auction-and-estates-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "printmaxx-openclaw-fix-test-001.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "spindletop-draperies-inc-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "error": "Error: label empty or too long",
+      "status": 0
+    },
+    {
+      "url": "the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh",
+      "error": "HTTP 504: Gateway Time-out",
+      "status": 504
+    },
+    {
+      "url": "top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "error": "Error: label empty or too long",
+      "status": 0
+    },
+    {
+      "url": "window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "error": "Error: label empty or too long",
+      "status": 0
+    }
+  ],
+  "yellow_sites": [
+    {
+      "url": "a-1-aluminum-inc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 4602
+    },
+    {
+      "url": "a-1-concrete-leveling-louisville-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 5744
+    },
+    {
+      "url": "bright-hauling-and-junk-removal-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 3355
+    },
+    {
+      "url": "certapro-painters-of-louisville-metro-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 3249
+    },
+    {
+      "url": "climb-ax-tree-crane-service-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 3078
+    },
+    {
+      "url": "dave-s-tree-surgeons-inc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 4221
+    },
+    {
+      "url": "down-to-earth-sealcoating-inc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 3459
+    },
+    {
+      "url": "greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 5343
+    },
+    {
+      "url": "handyman-services-in-las-vegas-nv-89121-las-vegas-nv.surge.sh",
+      "error": null,
+      "load_ms": 3286
+    },
+    {
+      "url": "jd-contractors-and-lawnscaping-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 3276
+    },
+    {
+      "url": "mr-fix-it-solutions-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 3345
+    },
+    {
+      "url": "printmaxx-nested-test-001.surge.sh",
+      "error": "Very small response body (possibly blank)",
+      "load_ms": 3069
+    },
+    {
+      "url": "printmaxx-test-debug-deploy-001.surge.sh",
+      "error": "Very small response body (possibly blank)",
+      "load_ms": 3220
+    },
+    {
+      "url": "skyrockett-construction-renovation-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 5016
+    },
+    {
+      "url": "square-it-away-contracting-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 3288
+    },
+    {
+      "url": "the-maids-in-southern-louisville-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 4731
+    },
+    {
+      "url": "top-rated-auto-repair-near-orlando-fl-carfax-orlando-fl.surge.sh",
+      "error": null,
+      "load_ms": 3197
+    },
+    {
+      "url": "whitehouse-residential-commercial-painting-co-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 5785
+    },
+    {
+      "url": "wildcat-moving-llc-louisville-ky.surge.sh",
+      "error": null,
+      "load_ms": 5384
+    }
+  ],
+  "all_results": [
+    {
+      "url": "a-1-aluminum-inc-louisville-ky.surge.sh",
+      "full_url": "https://a-1-aluminum-inc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 4602,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3484
+    },
+    {
+      "url": "a-1-concrete-leveling-louisville-louisville-ky.surge.sh",
+      "full_url": "https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 5744,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3482
+    },
+    {
+      "url": "a-b-landscaping-inc-louisville-ky.surge.sh",
+      "full_url": "https://a-b-landscaping-inc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5957,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "accurate-auto-nashville.surge.sh",
+      "full_url": "https://accurate-auto-nashville.surge.sh",
+      "status": 200,
+      "load_time_ms": 1202,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 12998
+    },
+    {
+      "url": "accurate-lawn-landscaping-inc-louisville-ky.surge.sh",
+      "full_url": "https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 6112,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "adhd-streak.surge.sh",
+      "full_url": "https://adhd-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 1172,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 20929
+    },
+    {
+      "url": "ai-stack-2026.surge.sh",
+      "full_url": "https://ai-stack-2026.surge.sh",
+      "status": 200,
+      "load_time_ms": 1205,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 30734
+    },
+    {
+      "url": "anglican-streak-landing.surge.sh",
+      "full_url": "https://anglican-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 948,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10440
+    },
+    {
+      "url": "anglican-streak.surge.sh",
+      "full_url": "https://anglican-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 949,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10197
+    },
+    {
+      "url": "art-streak-app.surge.sh",
+      "full_url": "https://art-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 946,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10196
+    },
+    {
+      "url": "art-streak-landing.surge.sh",
+      "full_url": "https://art-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 910,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10196
+    },
+    {
+      "url": "art-streak.surge.sh",
+      "full_url": "https://art-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 970,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10196
+    },
+    {
+      "url": "artz-rib-house-austin.surge.sh",
+      "full_url": "https://artz-rib-house-austin.surge.sh",
+      "status": 200,
+      "load_time_ms": 962,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 4517
+    },
+    {
+      "url": "atlanta-roofing-company-preview.surge.sh",
+      "full_url": "https://atlanta-roofing-company-preview.surge.sh",
+      "status": 200,
+      "load_time_ms": 892,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3379
+    },
+    {
+      "url": "baptist-streak-landing.surge.sh",
+      "full_url": "https://baptist-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1229,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10748
+    },
+    {
+      "url": "baptist-streak.surge.sh",
+      "full_url": "https://baptist-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 1020,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9881
+    },
+    {
+      "url": "barton-springs-saloon-austin.surge.sh",
+      "full_url": "https://barton-springs-saloon-austin.surge.sh",
+      "status": 200,
+      "load_time_ms": 922,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 4537
+    },
+    {
+      "url": "bellas-salon-demo.surge.sh",
+      "full_url": "https://bellas-salon-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1167,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 33826
+    },
+    {
+      "url": "best-cold-email-tools.surge.sh",
+      "full_url": "https://best-cold-email-tools.surge.sh",
+      "status": 200,
+      "load_time_ms": 1381,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 44807
+    },
+    {
+      "url": "best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh",
+      "full_url": "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh",
+      "status": 200,
+      "load_time_ms": 953,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3406
+    },
+    {
+      "url": "bob-ray-company-inc-louisville-ky.surge.sh",
+      "full_url": "https://bob-ray-company-inc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 6053,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "bright-hauling-and-junk-removal-llc-louisville-ky.surge.sh",
+      "full_url": "https://bright-hauling-and-junk-removal-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 3355,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3456
+    },
+    {
+      "url": "buddhist-streak-landing.surge.sh",
+      "full_url": "https://buddhist-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 973,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10240
+    },
+    {
+      "url": "buddhist-streak.surge.sh",
+      "full_url": "https://buddhist-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 907,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10240
+    },
+    {
+      "url": "catholic-streak-landing.surge.sh",
+      "full_url": "https://catholic-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1179,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 14521
+    },
+    {
+      "url": "catholic-streak.surge.sh",
+      "full_url": "https://catholic-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 1111,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 11085
+    },
+    {
+      "url": "certapro-painters-of-louisville-metro-louisville-ky.surge.sh",
+      "full_url": "https://certapro-painters-of-louisville-metro-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 3249,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3495
+    },
+    {
+      "url": "climb-ax-tree-crane-service-louisville-ky.surge.sh",
+      "full_url": "https://climb-ax-tree-crane-service-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 3078,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3425
+    },
+    {
+      "url": "coding-streak-app.surge.sh",
+      "full_url": "https://coding-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 950,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8163
+    },
+    {
+      "url": "coding-streak-landing.surge.sh",
+      "full_url": "https://coding-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 887,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10259
+    },
+    {
+      "url": "coding-streak.surge.sh",
+      "full_url": "https://coding-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 907,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10259
+    },
+    {
+      "url": "coit-cleaning-restoration-louisville-ky.surge.sh",
+      "full_url": "https://coit-cleaning-restoration-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 726,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3477
+    },
+    {
+      "url": "cold-email-calc.surge.sh",
+      "full_url": "https://cold-email-calc.surge.sh",
+      "status": 200,
+      "load_time_ms": 1129,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17303
+    },
+    {
+      "url": "cold-email-roi-calculator.surge.sh",
+      "full_url": "https://cold-email-roi-calculator.surge.sh",
+      "status": 200,
+      "load_time_ms": 1164,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 18835
+    },
+    {
+      "url": "coldmaxx-app.surge.sh",
+      "full_url": "https://coldmaxx-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1436,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 39206
+    },
+    {
+      "url": "coldmaxx-vs-instantly.surge.sh",
+      "full_url": "https://coldmaxx-vs-instantly.surge.sh",
+      "status": 200,
+      "load_time_ms": 1188,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 28881
+    },
+    {
+      "url": "coldmaxx.surge.sh",
+      "full_url": "https://coldmaxx.surge.sh",
+      "status": 200,
+      "load_time_ms": 1174,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 22443
+    },
+    {
+      "url": "complete-home-services-louisville-ky.surge.sh",
+      "full_url": "https://complete-home-services-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5947,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "contentcalendar.surge.sh",
+      "full_url": "https://contentcalendar.surge.sh",
+      "status": 200,
+      "load_time_ms": 1198,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 23305
+    },
+    {
+      "url": "convertkit-vs-beehiiv.surge.sh",
+      "full_url": "https://convertkit-vs-beehiiv.surge.sh",
+      "status": 200,
+      "load_time_ms": 1182,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 25685
+    },
+    {
+      "url": "coreday.surge.sh",
+      "full_url": "https://coreday.surge.sh",
+      "status": 200,
+      "load_time_ms": 1190,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 48145
+    },
+    {
+      "url": "cursor-vs-claudecode.surge.sh",
+      "full_url": "https://cursor-vs-claudecode.surge.sh",
+      "status": 200,
+      "load_time_ms": 1112,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 30308
+    },
+    {
+      "url": "dave-s-tree-surgeons-inc-louisville-ky.surge.sh",
+      "full_url": "https://dave-s-tree-surgeons-inc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 4221,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3419
+    },
+    {
+      "url": "david-fox-roofer-louisville-ky.surge.sh",
+      "full_url": "https://david-fox-roofer-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5957,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "dental-demo.surge.sh",
+      "full_url": "https://dental-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1234,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 38241
+    },
+    {
+      "url": "dental-motion.surge.sh",
+      "full_url": "https://dental-motion.surge.sh",
+      "status": 200,
+      "load_time_ms": 969,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 19412
+    },
+    {
+      "url": "down-to-earth-sealcoating-inc-louisville-ky.surge.sh",
+      "full_url": "https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 3459,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3471
+    },
+    {
+      "url": "elite-fitness-demo.surge.sh",
+      "full_url": "https://elite-fitness-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1145,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 33955
+    },
+    {
+      "url": "episcopal-streak-landing.surge.sh",
+      "full_url": "https://episcopal-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 968,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9335
+    },
+    {
+      "url": "episcopal-streak.surge.sh",
+      "full_url": "https://episcopal-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 971,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8440
+    },
+    {
+      "url": "er-tree-care-llc-louisville-ky.surge.sh",
+      "full_url": "https://er-tree-care-llc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5935,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "evangelical-streak-landing.surge.sh",
+      "full_url": "https://evangelical-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 939,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10481
+    },
+    {
+      "url": "evangelical-streak.surge.sh",
+      "full_url": "https://evangelical-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 872,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10238
+    },
+    {
+      "url": "financial-dashboard-pm.surge.sh",
+      "full_url": "https://financial-dashboard-pm.surge.sh",
+      "status": 200,
+      "load_time_ms": 1210,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 27055
+    },
+    {
+      "url": "find-plumbers-in-houston-texas-meetaplumber-com-houston-tx.surge.sh",
+      "full_url": "https://find-plumbers-in-houston-texas-meetaplumber-com-houston-tx.surge.sh",
+      "status": 200,
+      "load_time_ms": 968,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3408
+    },
+    {
+      "url": "fitness-demo.surge.sh",
+      "full_url": "https://fitness-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1229,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 39297
+    },
+    {
+      "url": "fitness-streak-app.surge.sh",
+      "full_url": "https://fitness-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1036,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8142
+    },
+    {
+      "url": "fitness-streak-landing.surge.sh",
+      "full_url": "https://fitness-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 985,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10245
+    },
+    {
+      "url": "fitness-streak.surge.sh",
+      "full_url": "https://fitness-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 900,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10245
+    },
+    {
+      "url": "fiverr-services-pm.surge.sh",
+      "full_url": "https://fiverr-services-pm.surge.sh",
+      "status": 200,
+      "load_time_ms": 960,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10298
+    },
+    {
+      "url": "flowstack-demo.surge.sh",
+      "full_url": "https://flowstack-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1456,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 65380
+    },
+    {
+      "url": "focuslock-app.surge.sh",
+      "full_url": "https://focuslock-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1261,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 44726
+    },
+    {
+      "url": "focuslock-vs-opal.surge.sh",
+      "full_url": "https://focuslock-vs-opal.surge.sh",
+      "status": 200,
+      "load_time_ms": 926,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 1941
+    },
+    {
+      "url": "focuslock-web.surge.sh",
+      "full_url": "https://focuslock-web.surge.sh",
+      "status": 200,
+      "load_time_ms": 1194,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 15581
+    },
+    {
+      "url": "focuslock.surge.sh",
+      "full_url": "https://focuslock.surge.sh",
+      "status": 200,
+      "load_time_ms": 1668,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 86392
+    },
+    {
+      "url": "galaxia-dental-austin.surge.sh",
+      "full_url": "https://galaxia-dental-austin.surge.sh",
+      "status": 200,
+      "load_time_ms": 918,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 4564
+    },
+    {
+      "url": "garrett-s-presure-washing-louisville-ky.surge.sh",
+      "full_url": "https://garrett-s-presure-washing-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5931,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "gita-streak-app.surge.sh",
+      "full_url": "https://gita-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 977,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8145
+    },
+    {
+      "url": "gita-streak-landing.surge.sh",
+      "full_url": "https://gita-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 916,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10229
+    },
+    {
+      "url": "gita-streak.surge.sh",
+      "full_url": "https://gita-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 895,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10229
+    },
+    {
+      "url": "good-maintenance-cleaning-inc-louisville-ky.surge.sh",
+      "full_url": "https://good-maintenance-cleaning-inc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5930,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh",
+      "full_url": "https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 5343,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3449
+    },
+    {
+      "url": "guru-streak-app.surge.sh",
+      "full_url": "https://guru-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 893,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8111
+    },
+    {
+      "url": "habitforge-app.surge.sh",
+      "full_url": "https://habitforge-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1294,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 81866
+    },
+    {
+      "url": "habitforge-web.surge.sh",
+      "full_url": "https://habitforge-web.surge.sh",
+      "status": 200,
+      "load_time_ms": 1470,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 81866
+    },
+    {
+      "url": "handyman-matters-jacksonville-jacksonville-fl.surge.sh",
+      "full_url": "https://handyman-matters-jacksonville-jacksonville-fl.surge.sh",
+      "status": 200,
+      "load_time_ms": 1006,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3412
+    },
+    {
+      "url": "handyman-services-in-las-vegas-nv-89121-las-vegas-nv.surge.sh",
+      "full_url": "https://handyman-services-in-las-vegas-nv-89121-las-vegas-nv.surge.sh",
+      "status": 200,
+      "load_time_ms": 3286,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3424
+    },
+    {
+      "url": "hilal-app.surge.sh",
+      "full_url": "https://hilal-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1183,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 18061
+    },
+    {
+      "url": "hilal-ramadan.surge.sh",
+      "full_url": "https://hilal-ramadan.surge.sh",
+      "status": 200,
+      "load_time_ms": 1398,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 80876
+    },
+    {
+      "url": "hilal.surge.sh",
+      "full_url": "https://hilal.surge.sh",
+      "status": 200,
+      "load_time_ms": 1237,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 18066
+    },
+    {
+      "url": "instantly-vs-lemlist.surge.sh",
+      "full_url": "https://instantly-vs-lemlist.surge.sh",
+      "status": 200,
+      "load_time_ms": 1194,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 29245
+    },
+    {
+      "url": "invoiceforge-app.surge.sh",
+      "full_url": "https://invoiceforge-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1428,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 43899
+    },
+    {
+      "url": "invoiceforge.surge.sh",
+      "full_url": "https://invoiceforge.surge.sh",
+      "status": 200,
+      "load_time_ms": 1373,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 43899
+    },
+    {
+      "url": "invoicetracker.surge.sh",
+      "full_url": "https://invoicetracker.surge.sh",
+      "status": 200,
+      "load_time_ms": 1106,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17849
+    },
+    {
+      "url": "jacksonville-emergency-plumber-jacksonville-fl.surge.sh",
+      "full_url": "https://jacksonville-emergency-plumber-jacksonville-fl.surge.sh",
+      "status": 200,
+      "load_time_ms": 907,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3415
+    },
+    {
+      "url": "jax-emergency-plumber-preview.surge.sh",
+      "full_url": "https://jax-emergency-plumber-preview.surge.sh",
+      "status": 200,
+      "load_time_ms": 962,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3415
+    },
+    {
+      "url": "jd-contractors-and-lawnscaping-llc-louisville-ky.surge.sh",
+      "full_url": "https://jd-contractors-and-lawnscaping-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 3276,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3499
+    },
+    {
+      "url": "jeff-reed-logging-tree-service-louisville-ky.surge.sh",
+      "full_url": "https://jeff-reed-logging-tree-service-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 6167,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "joes-plumbing-demo.surge.sh",
+      "full_url": "https://joes-plumbing-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1240,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 33876
+    },
+    {
+      "url": "journal-streak-app.surge.sh",
+      "full_url": "https://journal-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 936,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8117
+    },
+    {
+      "url": "journal-streak-landing.surge.sh",
+      "full_url": "https://journal-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 918,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10215
+    },
+    {
+      "url": "journal-streak.surge.sh",
+      "full_url": "https://journal-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 910,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10215
+    },
+    {
+      "url": "jss-janitorial-memphis.surge.sh",
+      "full_url": "https://jss-janitorial-memphis.surge.sh",
+      "status": 200,
+      "load_time_ms": 1431,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 43106
+    },
+    {
+      "url": "junk-king-louisville-louisville-ky.surge.sh",
+      "full_url": "https://junk-king-louisville-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5955,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "kelly-personal-training-austin.surge.sh",
+      "full_url": "https://kelly-personal-training-austin.surge.sh",
+      "status": 200,
+      "load_time_ms": 1002,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 4544
+    },
+    {
+      "url": "kings-hands-llc-louisville-ky.surge.sh",
+      "full_url": "https://kings-hands-llc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5893,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "language-streak-app.surge.sh",
+      "full_url": "https://language-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 933,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8235
+    },
+    {
+      "url": "language-streak-landing.surge.sh",
+      "full_url": "https://language-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 918,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10380
+    },
+    {
+      "url": "language-streak.surge.sh",
+      "full_url": "https://language-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 956,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10380
+    },
+    {
+      "url": "legal-demo.surge.sh",
+      "full_url": "https://legal-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1221,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 35891
+    },
+    {
+      "url": "local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh",
+      "full_url": "https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh",
+      "status": 0,
+      "load_time_ms": 0,
+      "error": "Error: label empty or too long",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "local-plumbing-experts-replace-plumbing-houston-tx.surge.sh",
+      "full_url": "https://local-plumbing-experts-replace-plumbing-houston-tx.surge.sh",
+      "status": 200,
+      "load_time_ms": 955,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3381
+    },
+    {
+      "url": "local-plumbing-miami-fl.surge.sh",
+      "full_url": "https://local-plumbing-miami-fl.surge.sh",
+      "status": 200,
+      "load_time_ms": 912,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3422
+    },
+    {
+      "url": "lutheran-streak-landing.surge.sh",
+      "full_url": "https://lutheran-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 920,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9307
+    },
+    {
+      "url": "lutheran-streak.surge.sh",
+      "full_url": "https://lutheran-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 918,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8446
+    },
+    {
+      "url": "magnolia-cafe-austin.surge.sh",
+      "full_url": "https://magnolia-cafe-austin.surge.sh",
+      "status": 200,
+      "load_time_ms": 933,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 4521
+    },
+    {
+      "url": "mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh",
+      "full_url": "https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 6197,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "mcphub.surge.sh",
+      "full_url": "https://mcphub.surge.sh",
+      "status": 200,
+      "load_time_ms": 1198,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 26784
+    },
+    {
+      "url": "mealmaxx-app.surge.sh",
+      "full_url": "https://mealmaxx-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1002,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17577
+    },
+    {
+      "url": "mealmaxx-web.surge.sh",
+      "full_url": "https://mealmaxx-web.surge.sh",
+      "status": 200,
+      "load_time_ms": 1139,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 18567
+    },
+    {
+      "url": "mealmaxx.surge.sh",
+      "full_url": "https://mealmaxx.surge.sh",
+      "status": 200,
+      "load_time_ms": 1405,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 54804
+    },
+    {
+      "url": "meditation-streak-app.surge.sh",
+      "full_url": "https://meditation-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 882,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8146
+    },
+    {
+      "url": "meditation-streak-landing.surge.sh",
+      "full_url": "https://meditation-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 968,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10290
+    },
+    {
+      "url": "meditation-streak.surge.sh",
+      "full_url": "https://meditation-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 899,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10290
+    },
+    {
+      "url": "memphis-plumbing-preview.surge.sh",
+      "full_url": "https://memphis-plumbing-preview.surge.sh",
+      "status": 200,
+      "load_time_ms": 933,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3418
+    },
+    {
+      "url": "methodist-streak-landing.surge.sh",
+      "full_url": "https://methodist-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 891,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9295
+    },
+    {
+      "url": "methodist-streak.surge.sh",
+      "full_url": "https://methodist-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 956,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8432
+    },
+    {
+      "url": "miami-plumbing-zip.surge.sh",
+      "full_url": "https://miami-plumbing-zip.surge.sh",
+      "status": 200,
+      "load_time_ms": 941,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3422
+    },
+    {
+      "url": "mikes-hvac-demo.surge.sh",
+      "full_url": "https://mikes-hvac-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1158,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 33777
+    },
+    {
+      "url": "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "full_url": "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "status": 0,
+      "load_time_ms": 0,
+      "error": "Error: label empty or too long",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "mormon-streak-app.surge.sh",
+      "full_url": "https://mormon-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 889,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8998
+    },
+    {
+      "url": "mormon-streak-landing.surge.sh",
+      "full_url": "https://mormon-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 869,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10244
+    },
+    {
+      "url": "mormon-streak.surge.sh",
+      "full_url": "https://mormon-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 883,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10244
+    },
+    {
+      "url": "mr-fix-it-solutions-llc-louisville-ky.surge.sh",
+      "full_url": "https://mr-fix-it-solutions-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 3345,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3423
+    },
+    {
+      "url": "naturescape-louisville-ky.surge.sh",
+      "full_url": "https://naturescape-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 6193,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "new-leaf-tree-service-llc-louisville-ky.surge.sh",
+      "full_url": "https://new-leaf-tree-service-llc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5988,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "new-seasons-auction-and-estates-louisville-ky.surge.sh",
+      "full_url": "https://new-seasons-auction-and-estates-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5959,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "orthodox-streak-landing.surge.sh",
+      "full_url": "https://orthodox-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1117,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 11096
+    },
+    {
+      "url": "orthodox-streak.surge.sh",
+      "full_url": "https://orthodox-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 979,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10151
+    },
+    {
+      "url": "pagescorer-app.surge.sh",
+      "full_url": "https://pagescorer-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1293,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 20763
+    },
+    {
+      "url": "pagescorer-vs-gtmetrix.surge.sh",
+      "full_url": "https://pagescorer-vs-gtmetrix.surge.sh",
+      "status": 200,
+      "load_time_ms": 1164,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 26351
+    },
+    {
+      "url": "pagescorer.surge.sh",
+      "full_url": "https://pagescorer.surge.sh",
+      "status": 200,
+      "load_time_ms": 1218,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 20763
+    },
+    {
+      "url": "pentecostal-streak-landing.surge.sh",
+      "full_url": "https://pentecostal-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 928,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9379
+    },
+    {
+      "url": "pentecostal-streak.surge.sh",
+      "full_url": "https://pentecostal-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 882,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8512
+    },
+    {
+      "url": "perfect-lawn-demo.surge.sh",
+      "full_url": "https://perfect-lawn-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1241,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 34019
+    },
+    {
+      "url": "pitchdeck-app.surge.sh",
+      "full_url": "https://pitchdeck-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1445,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 35829
+    },
+    {
+      "url": "pitchdeck.surge.sh",
+      "full_url": "https://pitchdeck.surge.sh",
+      "status": 200,
+      "load_time_ms": 1431,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 35829
+    },
+    {
+      "url": "plumber-demo.surge.sh",
+      "full_url": "https://plumber-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1225,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 47812
+    },
+    {
+      "url": "plumbers-just-enter-your-zip-code-houston-tx.surge.sh",
+      "full_url": "https://plumbers-just-enter-your-zip-code-houston-tx.surge.sh",
+      "status": 200,
+      "load_time_ms": 952,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3363
+    },
+    {
+      "url": "plumbers-just-enter-your-zip-code-miami-fl.surge.sh",
+      "full_url": "https://plumbers-just-enter-your-zip-code-miami-fl.surge.sh",
+      "status": 200,
+      "load_time_ms": 961,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3347
+    },
+    {
+      "url": "prayerlock-app.surge.sh",
+      "full_url": "https://prayerlock-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1565,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 79028
+    },
+    {
+      "url": "prayerlock-vs-hallow.surge.sh",
+      "full_url": "https://prayerlock-vs-hallow.surge.sh",
+      "status": 200,
+      "load_time_ms": 983,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 1941
+    },
+    {
+      "url": "prayerlock-web.surge.sh",
+      "full_url": "https://prayerlock-web.surge.sh",
+      "status": 200,
+      "load_time_ms": 1196,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 16101
+    },
+    {
+      "url": "prayerlock.surge.sh",
+      "full_url": "https://prayerlock.surge.sh",
+      "status": 200,
+      "load_time_ms": 1441,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 74396
+    },
+    {
+      "url": "presbyterian-streak-landing.surge.sh",
+      "full_url": "https://presbyterian-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 970,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10546
+    },
+    {
+      "url": "presbyterian-streak.surge.sh",
+      "full_url": "https://presbyterian-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 917,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10303
+    },
+    {
+      "url": "printmaxx-ai-chatbot.surge.sh",
+      "full_url": "https://printmaxx-ai-chatbot.surge.sh",
+      "status": 200,
+      "load_time_ms": 1125,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 16964
+    },
+    {
+      "url": "printmaxx-analyzer.surge.sh",
+      "full_url": "https://printmaxx-analyzer.surge.sh",
+      "status": 200,
+      "load_time_ms": 1220,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 23626
+    },
+    {
+      "url": "printmaxx-app-development.surge.sh",
+      "full_url": "https://printmaxx-app-development.surge.sh",
+      "status": 200,
+      "load_time_ms": 1191,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 15653
+    },
+    {
+      "url": "printmaxx-apps.surge.sh",
+      "full_url": "https://printmaxx-apps.surge.sh",
+      "status": 200,
+      "load_time_ms": 1135,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 11606
+    },
+    {
+      "url": "printmaxx-automation.surge.sh",
+      "full_url": "https://printmaxx-automation.surge.sh",
+      "status": 200,
+      "load_time_ms": 1218,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 15589
+    },
+    {
+      "url": "printmaxx-cold-email.surge.sh",
+      "full_url": "https://printmaxx-cold-email.surge.sh",
+      "status": 200,
+      "load_time_ms": 1227,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 16217
+    },
+    {
+      "url": "printmaxx-command.surge.sh",
+      "full_url": "https://printmaxx-command.surge.sh",
+      "status": 200,
+      "load_time_ms": 1389,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 38583
+    },
+    {
+      "url": "printmaxx-compare.surge.sh",
+      "full_url": "https://printmaxx-compare.surge.sh",
+      "status": 200,
+      "load_time_ms": 986,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 1941
+    },
+    {
+      "url": "printmaxx-comparisons.surge.sh",
+      "full_url": "https://printmaxx-comparisons.surge.sh",
+      "status": 200,
+      "load_time_ms": 977,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 1941
+    },
+    {
+      "url": "printmaxx-content-calendar.surge.sh",
+      "full_url": "https://printmaxx-content-calendar.surge.sh",
+      "status": 200,
+      "load_time_ms": 1241,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 24885
+    },
+    {
+      "url": "printmaxx-content-writing.surge.sh",
+      "full_url": "https://printmaxx-content-writing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1214,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 16239
+    },
+    {
+      "url": "printmaxx-control-panel.surge.sh",
+      "full_url": "https://printmaxx-control-panel.surge.sh",
+      "status": 200,
+      "load_time_ms": 1476,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 42135
+    },
+    {
+      "url": "printmaxx-dashboard.surge.sh",
+      "full_url": "https://printmaxx-dashboard.surge.sh",
+      "status": 200,
+      "load_time_ms": 1454,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 38583
+    },
+    {
+      "url": "printmaxx-data-analysis.surge.sh",
+      "full_url": "https://printmaxx-data-analysis.surge.sh",
+      "status": 200,
+      "load_time_ms": 1209,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17682
+    },
+    {
+      "url": "printmaxx-demos.surge.sh",
+      "full_url": "https://printmaxx-demos.surge.sh",
+      "status": 200,
+      "load_time_ms": 1474,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 56129
+    },
+    {
+      "url": "printmaxx-digital-services.surge.sh",
+      "full_url": "https://printmaxx-digital-services.surge.sh",
+      "status": 200,
+      "load_time_ms": 1418,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 47000
+    },
+    {
+      "url": "printmaxx-flowstack.surge.sh",
+      "full_url": "https://printmaxx-flowstack.surge.sh",
+      "status": 200,
+      "load_time_ms": 1453,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 65380
+    },
+    {
+      "url": "printmaxx-invoice-tracker.surge.sh",
+      "full_url": "https://printmaxx-invoice-tracker.surge.sh",
+      "status": 200,
+      "load_time_ms": 1143,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 19383
+    },
+    {
+      "url": "printmaxx-landing-page.surge.sh",
+      "full_url": "https://printmaxx-landing-page.surge.sh",
+      "status": 200,
+      "load_time_ms": 1139,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 15088
+    },
+    {
+      "url": "printmaxx-local-demos.surge.sh",
+      "full_url": "https://printmaxx-local-demos.surge.sh",
+      "status": 200,
+      "load_time_ms": 931,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9959
+    },
+    {
+      "url": "printmaxx-magnets.surge.sh",
+      "full_url": "https://printmaxx-magnets.surge.sh",
+      "status": 200,
+      "load_time_ms": 1220,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17447
+    },
+    {
+      "url": "printmaxx-nested-test-001.surge.sh",
+      "full_url": "https://printmaxx-nested-test-001.surge.sh",
+      "status": 200,
+      "load_time_ms": 3069,
+      "error": "Very small response body (possibly blank)",
+      "category": "YELLOW",
+      "content_length": 20
+    },
+    {
+      "url": "printmaxx-openclaw-fix-test-001.surge.sh",
+      "full_url": "https://printmaxx-openclaw-fix-test-001.surge.sh",
+      "status": 504,
+      "load_time_ms": 5923,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "printmaxx-portfolio.surge.sh",
+      "full_url": "https://printmaxx-portfolio.surge.sh",
+      "status": 200,
+      "load_time_ms": 1405,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 49580
+    },
+    {
+      "url": "printmaxx-seo-pages.surge.sh",
+      "full_url": "https://printmaxx-seo-pages.surge.sh",
+      "status": 200,
+      "load_time_ms": 1206,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 15209
+    },
+    {
+      "url": "printmaxx-seo.surge.sh",
+      "full_url": "https://printmaxx-seo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1226,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 47000
+    },
+    {
+      "url": "printmaxx-services.surge.sh",
+      "full_url": "https://printmaxx-services.surge.sh",
+      "status": 200,
+      "load_time_ms": 976,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10298
+    },
+    {
+      "url": "printmaxx-site.surge.sh",
+      "full_url": "https://printmaxx-site.surge.sh",
+      "status": 200,
+      "load_time_ms": 1148,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 11606
+    },
+    {
+      "url": "printmaxx-store.surge.sh",
+      "full_url": "https://printmaxx-store.surge.sh",
+      "status": 200,
+      "load_time_ms": 1249,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 27286
+    },
+    {
+      "url": "printmaxx-storefront.surge.sh",
+      "full_url": "https://printmaxx-storefront.surge.sh",
+      "status": 200,
+      "load_time_ms": 1220,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 26541
+    },
+    {
+      "url": "printmaxx-test-debug-deploy-001.surge.sh",
+      "full_url": "https://printmaxx-test-debug-deploy-001.surge.sh",
+      "status": 200,
+      "load_time_ms": 3220,
+      "error": "Very small response body (possibly blank)",
+      "category": "YELLOW",
+      "content_length": 20
+    },
+    {
+      "url": "printmaxx-thanks.surge.sh",
+      "full_url": "https://printmaxx-thanks.surge.sh",
+      "status": 200,
+      "load_time_ms": 1144,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17280
+    },
+    {
+      "url": "printmaxx-tools.surge.sh",
+      "full_url": "https://printmaxx-tools.surge.sh",
+      "status": 200,
+      "load_time_ms": 1222,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 21104
+    },
+    {
+      "url": "printmaxx-twitter-banner.surge.sh",
+      "full_url": "https://printmaxx-twitter-banner.surge.sh",
+      "status": 200,
+      "load_time_ms": 969,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 4383
+    },
+    {
+      "url": "printmaxx-twitter-pfp.surge.sh",
+      "full_url": "https://printmaxx-twitter-pfp.surge.sh",
+      "status": 200,
+      "load_time_ms": 984,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 915
+    },
+    {
+      "url": "printmaxx-web-scraping.surge.sh",
+      "full_url": "https://printmaxx-web-scraping.surge.sh",
+      "status": 200,
+      "load_time_ms": 1201,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 15133
+    },
+    {
+      "url": "printmaxx-website-audit.surge.sh",
+      "full_url": "https://printmaxx-website-audit.surge.sh",
+      "status": 200,
+      "load_time_ms": 1219,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 20117
+    },
+    {
+      "url": "printmaxx-website-design.surge.sh",
+      "full_url": "https://printmaxx-website-design.surge.sh",
+      "status": 200,
+      "load_time_ms": 1188,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 15345
+    },
+    {
+      "url": "printmaxx.surge.sh",
+      "full_url": "https://printmaxx.surge.sh",
+      "status": 200,
+      "load_time_ms": 1228,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 11611
+    },
+    {
+      "url": "professional-plumbing-heating-cooling-memphis-tn.surge.sh",
+      "full_url": "https://professional-plumbing-heating-cooling-memphis-tn.surge.sh",
+      "status": 200,
+      "load_time_ms": 974,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3418
+    },
+    {
+      "url": "prospectmaxx-app.surge.sh",
+      "full_url": "https://prospectmaxx-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1277,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 22870
+    },
+    {
+      "url": "prospectmaxx.surge.sh",
+      "full_url": "https://prospectmaxx.surge.sh",
+      "status": 200,
+      "load_time_ms": 1224,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 22870
+    },
+    {
+      "url": "protestant-streak-landing.surge.sh",
+      "full_url": "https://protestant-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1227,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10839
+    },
+    {
+      "url": "protestant-streak.surge.sh",
+      "full_url": "https://protestant-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 991,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9955
+    },
+    {
+      "url": "quran-streak-app.surge.sh",
+      "full_url": "https://quran-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 964,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8140
+    },
+    {
+      "url": "quran-streak-landing.surge.sh",
+      "full_url": "https://quran-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 957,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10235
+    },
+    {
+      "url": "quran-streak.surge.sh",
+      "full_url": "https://quran-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 907,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10217
+    },
+    {
+      "url": "ramadan-daily-planner.surge.sh",
+      "full_url": "https://ramadan-daily-planner.surge.sh",
+      "status": 200,
+      "load_time_ms": 1469,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 36064
+    },
+    {
+      "url": "ramadan-tracker.surge.sh",
+      "full_url": "https://ramadan-tracker.surge.sh",
+      "status": 200,
+      "load_time_ms": 967,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 16776
+    },
+    {
+      "url": "reading-streak-app.surge.sh",
+      "full_url": "https://reading-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 918,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8183
+    },
+    {
+      "url": "reading-streak-landing.surge.sh",
+      "full_url": "https://reading-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1011,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10284
+    },
+    {
+      "url": "reading-streak.surge.sh",
+      "full_url": "https://reading-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 889,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10284
+    },
+    {
+      "url": "realtor-demo.surge.sh",
+      "full_url": "https://realtor-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1204,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 46077
+    },
+    {
+      "url": "realtor-motion.surge.sh",
+      "full_url": "https://realtor-motion.surge.sh",
+      "status": 200,
+      "load_time_ms": 976,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 30692
+    },
+    {
+      "url": "reliable-fence-nashville.surge.sh",
+      "full_url": "https://reliable-fence-nashville.surge.sh",
+      "status": 200,
+      "load_time_ms": 1195,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 14774
+    },
+    {
+      "url": "restaurant-motion.surge.sh",
+      "full_url": "https://restaurant-motion.surge.sh",
+      "status": 200,
+      "load_time_ms": 981,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 27023
+    },
+    {
+      "url": "restaurant-site-demo.surge.sh",
+      "full_url": "https://restaurant-site-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1214,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 35691
+    },
+    {
+      "url": "revenue-leak-audit.surge.sh",
+      "full_url": "https://revenue-leak-audit.surge.sh",
+      "status": 200,
+      "load_time_ms": 1212,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 41842
+    },
+    {
+      "url": "right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh",
+      "full_url": "https://right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 5890,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "roicalc-app.surge.sh",
+      "full_url": "https://roicalc-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1199,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 13561
+    },
+    {
+      "url": "roicalc.surge.sh",
+      "full_url": "https://roicalc.surge.sh",
+      "status": 200,
+      "load_time_ms": 1202,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 13561
+    },
+    {
+      "url": "saas-stack-audit.surge.sh",
+      "full_url": "https://saas-stack-audit.surge.sh",
+      "status": 200,
+      "load_time_ms": 960,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 28273
+    },
+    {
+      "url": "scripture-streak-lds.surge.sh",
+      "full_url": "https://scripture-streak-lds.surge.sh",
+      "status": 200,
+      "load_time_ms": 979,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8104
+    },
+    {
+      "url": "shia-streak-landing.surge.sh",
+      "full_url": "https://shia-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1202,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 12000
+    },
+    {
+      "url": "shia-streak.surge.sh",
+      "full_url": "https://shia-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 978,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10113
+    },
+    {
+      "url": "shop-of-memphis-preview.surge.sh",
+      "full_url": "https://shop-of-memphis-preview.surge.sh",
+      "status": 200,
+      "load_time_ms": 1361,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 41011
+    },
+    {
+      "url": "shopmetrics-dashboard.surge.sh",
+      "full_url": "https://shopmetrics-dashboard.surge.sh",
+      "status": 200,
+      "load_time_ms": 1413,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 45324
+    },
+    {
+      "url": "shopmetrics-pro.surge.sh",
+      "full_url": "https://shopmetrics-pro.surge.sh",
+      "status": 200,
+      "load_time_ms": 1361,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 45324
+    },
+    {
+      "url": "side-project-estimator.surge.sh",
+      "full_url": "https://side-project-estimator.surge.sh",
+      "status": 200,
+      "load_time_ms": 1199,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 20360
+    },
+    {
+      "url": "sikh-streak-app.surge.sh",
+      "full_url": "https://sikh-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 931,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 9007
+    },
+    {
+      "url": "sikh-streak-landing.surge.sh",
+      "full_url": "https://sikh-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 943,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10180
+    },
+    {
+      "url": "sikh-streak.surge.sh",
+      "full_url": "https://sikh-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 1023,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10180
+    },
+    {
+      "url": "sitescore-analyzer.surge.sh",
+      "full_url": "https://sitescore-analyzer.surge.sh",
+      "status": 200,
+      "load_time_ms": 1186,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17019
+    },
+    {
+      "url": "sitescore-app.surge.sh",
+      "full_url": "https://sitescore-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1171,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 12069
+    },
+    {
+      "url": "sitescore-free.surge.sh",
+      "full_url": "https://sitescore-free.surge.sh",
+      "status": 200,
+      "load_time_ms": 1139,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 12069
+    },
+    {
+      "url": "sitescore-pro.surge.sh",
+      "full_url": "https://sitescore-pro.surge.sh",
+      "status": 200,
+      "load_time_ms": 1178,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 17019
+    },
+    {
+      "url": "skyrockett-construction-renovation-llc-louisville-ky.surge.sh",
+      "full_url": "https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 5016,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3513
+    },
+    {
+      "url": "sleepmaxx-app.surge.sh",
+      "full_url": "https://sleepmaxx-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1233,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 44567
+    },
+    {
+      "url": "sleepmaxx-vs-sleepcycle.surge.sh",
+      "full_url": "https://sleepmaxx-vs-sleepcycle.surge.sh",
+      "status": 200,
+      "load_time_ms": 1174,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 27690
+    },
+    {
+      "url": "sleepmaxx-web.surge.sh",
+      "full_url": "https://sleepmaxx-web.surge.sh",
+      "status": 200,
+      "load_time_ms": 1130,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 22511
+    },
+    {
+      "url": "sleepmaxx.surge.sh",
+      "full_url": "https://sleepmaxx.surge.sh",
+      "status": 200,
+      "load_time_ms": 1341,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 63187
+    },
+    {
+      "url": "smith-dentistry-demo.surge.sh",
+      "full_url": "https://smith-dentistry-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1139,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 34017
+    },
+    {
+      "url": "social-dashboard-pm.surge.sh",
+      "full_url": "https://social-dashboard-pm.surge.sh",
+      "status": 200,
+      "load_time_ms": 1348,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 40587
+    },
+    {
+      "url": "solopreneur-launch-checklist.surge.sh",
+      "full_url": "https://solopreneur-launch-checklist.surge.sh",
+      "status": 200,
+      "load_time_ms": 1181,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 18801
+    },
+    {
+      "url": "south-tampa-locksmith-preview.surge.sh",
+      "full_url": "https://south-tampa-locksmith-preview.surge.sh",
+      "status": 200,
+      "load_time_ms": 953,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3438
+    },
+    {
+      "url": "south-tampa-locksmith-tampa-fl.surge.sh",
+      "full_url": "https://south-tampa-locksmith-tampa-fl.surge.sh",
+      "status": 200,
+      "load_time_ms": 927,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 3438
+    },
+    {
+      "url": "spindletop-draperies-inc-louisville-ky.surge.sh",
+      "full_url": "https://spindletop-draperies-inc-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 6155,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "square-it-away-contracting-llc-louisville-ky.surge.sh",
+      "full_url": "https://square-it-away-contracting-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 3288,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3474
+    },
+    {
+      "url": "stackmaxx-app.surge.sh",
+      "full_url": "https://stackmaxx-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1199,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 25082
+    },
+    {
+      "url": "stackmaxx.surge.sh",
+      "full_url": "https://stackmaxx.surge.sh",
+      "status": 200,
+      "load_time_ms": 1109,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 25082
+    },
+    {
+      "url": "subject-line-grader-pm.surge.sh",
+      "full_url": "https://subject-line-grader-pm.surge.sh",
+      "status": 200,
+      "load_time_ms": 1165,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 24238
+    },
+    {
+      "url": "sunni-streak-landing.surge.sh",
+      "full_url": "https://sunni-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 1136,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 11983
+    },
+    {
+      "url": "sunni-streak.surge.sh",
+      "full_url": "https://sunni-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 878,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10099
+    },
+    {
+      "url": "sutra-streak-app.surge.sh",
+      "full_url": "https://sutra-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 912,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10240
+    },
+    {
+      "url": "the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "full_url": "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "status": 0,
+      "load_time_ms": 1,
+      "error": "Error: label empty or too long",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh",
+      "full_url": "https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh",
+      "status": 504,
+      "load_time_ms": 6149,
+      "error": "HTTP 504: Gateway Time-out",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "the-maids-in-southern-louisville-llc-louisville-ky.surge.sh",
+      "full_url": "https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 4731,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3547
+    },
+    {
+      "url": "tonys-restaurant-demo.surge.sh",
+      "full_url": "https://tonys-restaurant-demo.surge.sh",
+      "status": 200,
+      "load_time_ms": 1168,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 33940
+    },
+    {
+      "url": "top-rated-auto-repair-near-orlando-fl-carfax-orlando-fl.surge.sh",
+      "full_url": "https://top-rated-auto-repair-near-orlando-fl-carfax-orlando-fl.surge.sh",
+      "status": 200,
+      "load_time_ms": 3197,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3351
+    },
+    {
+      "url": "top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "full_url": "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "status": 0,
+      "load_time_ms": 0,
+      "error": "Error: label empty or too long",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "torah-streak-app.surge.sh",
+      "full_url": "https://torah-streak-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1380,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 8210
+    },
+    {
+      "url": "torah-streak-landing.surge.sh",
+      "full_url": "https://torah-streak-landing.surge.sh",
+      "status": 200,
+      "load_time_ms": 914,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10303
+    },
+    {
+      "url": "torah-streak.surge.sh",
+      "full_url": "https://torah-streak.surge.sh",
+      "status": 200,
+      "load_time_ms": 970,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 10303
+    },
+    {
+      "url": "walktounlock-app.surge.sh",
+      "full_url": "https://walktounlock-app.surge.sh",
+      "status": 200,
+      "load_time_ms": 1230,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 42359
+    },
+    {
+      "url": "walktounlock-web.surge.sh",
+      "full_url": "https://walktounlock-web.surge.sh",
+      "status": 200,
+      "load_time_ms": 1335,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 42359
+    },
+    {
+      "url": "walktounlock.surge.sh",
+      "full_url": "https://walktounlock.surge.sh",
+      "status": 200,
+      "load_time_ms": 1489,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 50701
+    },
+    {
+      "url": "website-analyzer-pm.surge.sh",
+      "full_url": "https://website-analyzer-pm.surge.sh",
+      "status": 200,
+      "load_time_ms": 1116,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 23626
+    },
+    {
+      "url": "website-audit-tool.surge.sh",
+      "full_url": "https://website-audit-tool.surge.sh",
+      "status": 200,
+      "load_time_ms": 1185,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 18540
+    },
+    {
+      "url": "whitehouse-residential-commercial-painting-co-llc-louisville-ky.surge.sh",
+      "full_url": "https://whitehouse-residential-commercial-painting-co-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 5785,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3553
+    },
+    {
+      "url": "wildcat-moving-llc-louisville-ky.surge.sh",
+      "full_url": "https://wildcat-moving-llc-louisville-ky.surge.sh",
+      "status": 200,
+      "load_time_ms": 5384,
+      "error": null,
+      "category": "YELLOW",
+      "content_length": 3452
+    },
+    {
+      "url": "window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "full_url": "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "status": 0,
+      "load_time_ms": 0,
+      "error": "Error: label empty or too long",
+      "category": "RED",
+      "content_length": 0
+    },
+    {
+      "url": "zax-pints-plates-austin.surge.sh",
+      "full_url": "https://zax-pints-plates-austin.surge.sh",
+      "status": 200,
+      "load_time_ms": 897,
+      "error": null,
+      "category": "GREEN",
+      "content_length": 4539
+    }
+  ]
+}

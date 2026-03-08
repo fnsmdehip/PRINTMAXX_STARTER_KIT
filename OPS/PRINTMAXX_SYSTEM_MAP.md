@@ -60,6 +60,9 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── quality_gate.py               #   L5 quality. Hard gate — blocks slop, rewrites bad content.
 │   ├── system_health_monitor.py      #   L5 quality. Health checks: agents, cron, disk, processes.
 │   ├── compliance_scanner.py         #   L5 quality. FTC/platform compliance auditing.
+│   ├── prompt_meta_review.py         #   L2 intelligence. Analyzes user prompts for lost threads, patterns, forgotten goals.
+│   ├── session_briefing.py           #   L2 intelligence. Auto session-start briefing: agent reports, changes, queue.
+│   ├── actionable_aggregator.py      #   L3 execution. Scans 6 sources → prioritized P0-P3 action queue.
 │   ├── memory_manager.py             #   L6 maintenance. Filesystem-based memory management.
 │   ├── wire_missed_intelligence.py   #   L6 maintenance. Parses scan results → updates intelligence catalog.
 │   ├── build_codebase_grammar.py     #   L6 maintenance. AST-based 118x compression for LLM context.
@@ -96,6 +99,9 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── INTELLIGENCE_CATALOG.json     #   487 docs crawled, 127 HIGH value, buried gold
 │   ├── CODEBASE_GRAMMAR.md           #   118x compressed system grammar (auto 5:45 AM)
 │   ├── PERSISTENT_TASK_TRACKER.md    #   Every task, status, blocker. Survives compaction.
+│   ├── SESSION_BRIEFING.md           #   Auto session-start: agent reports, changes, queue, lost threads
+│   ├── ACTIONABLE_QUEUE.md           #   Prioritized P0-P3 from 6 sources (auto 7:30 AM)
+│   ├── PROMPT_META_REVIEW.md         #   48h prompt analysis: intent, lost threads, patterns (auto every 2 days)
 │   ├── MULTI_ACCOUNT_INFRASTRUCTURE.md # Antidetect browser, proxy, account architecture
 │   ├── GROWTH_ALPHA_SOURCES.md       #   Forums, growth sources, proxy/payment comparisons
 │   ├── NAV_INDEX.md                  #   632-line "Where is..." navigation index
@@ -269,6 +275,7 @@ decisions.jsonl         CEO decision audit trail
 missions.jsonl          Shared mission log
 message_bus.jsonl       Inter-agent messages
 feedback_recommendations.json  Loop closer → swarm adjustments
+USER_PROMPTS.jsonl      Every user prompt timestamped (hook captures on submit)
 ```
 
 ---

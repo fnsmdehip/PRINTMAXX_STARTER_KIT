@@ -3,9 +3,9 @@
 # Must be extremely fast (<1s). Receives JSON on stdin with "message" field.
 
 PROJECT_ROOT="/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt"
-OUT="$PROJECT_ROOT/LEDGER/USER_PROMPTS.jsonl"
+OUT="${PROJECT_ROOT}/LEDGER/USER_PROMPTS.jsonl"
 
-# Pipe stdin directly to python3 for safe JSON handling (no shell variable escaping issues)
+# Pipe stdin directly to python3 for safe JSON handling
 python3 -c "
 import json, sys, os
 from datetime import datetime
@@ -22,7 +22,7 @@ if not msg:
 
 sid = os.environ.get('CLAUDE_SESSION_ID', '')
 if not sid:
-    sid = f'session_{os.getppid()}_{datetime.now().strftime(\"%Y%m%d\")}'
+    sid = 'session_' + str(os.getppid()) + '_' + datetime.now().strftime('%Y%m%d')
 
 entry = {
     'ts': datetime.now().isoformat(timespec='seconds'),
@@ -30,9 +30,9 @@ entry = {
     'session_id': sid
 }
 
-with open('$OUT', 'a') as f:
+outpath = '${OUT}'
+with open(outpath, 'a') as f:
     f.write(json.dumps(entry, ensure_ascii=False) + '\n')
-" 2>/dev/null &
+" 2>/dev/null
 
-# Fire and forget -- don't block the prompt
 exit 0

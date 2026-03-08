@@ -2,10 +2,10 @@ IMAGE: MEDIA/generated_images/app_coldmaxx.png
 
 ---
 
-built ColdMaxx in one session with claude code.
+ColdMaxx: cold email calculator that tells you exactly how many emails to send to hit your revenue target.
 
-55KB. offline-capable. zero dependencies.
+plug in your reply rate, close rate, deal size. it does the math. free. no signup. works offline.
 
-the app store charges $99/yr for a developer account. surge.sh is free. PWAs are free. your users don't care about the wrapper.
+cold-email-calc.surge.sh
 
-ship the thing.
+built it because every cold emailer I know guesses their volume. stop guessing.

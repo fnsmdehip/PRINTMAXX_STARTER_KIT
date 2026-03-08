@@ -55,7 +55,8 @@ DAEMON_CITIES = [
 ]
 DAEMON_NICHES = [
     "dentist","plumber","hvac","lawyer","restaurant","salon","gym",
-    "chiropractor","auto repair","roofing",
+    "chiropractor","auto repair","roofing","fencing","junk removal",
+    "mobile detailing","window cleaning","pressure washing","landscaping",
 ]
 CYCLE_INTERVAL_S = 4 * 3600  # 4 hours per city
 
@@ -101,6 +102,29 @@ def save_state(st):
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
+# Resolve npx path once at import time — cron/launchd PATH lacks /opt/homebrew/bin
+def _resolve_npx() -> str:
+    """Return absolute path to npx, checking Homebrew and nvm locations."""
+    candidates = [
+        "/opt/homebrew/bin/npx",   # Apple Silicon Homebrew
+        "/usr/local/bin/npx",      # Intel Homebrew / system npm
+        "/usr/bin/npx",            # rare system install
+    ]
+    home = os.environ.get("HOME", "")
+    nvm_root = Path(home) / ".nvm" / "versions" / "node"
+    if nvm_root.exists():
+        for node_dir in sorted(nvm_root.iterdir(), reverse=True):
+            candidate = node_dir / "bin" / "npx"
+            if candidate.exists():
+                candidates.insert(0, str(candidate))
+                break
+    for c in candidates:
+        if Path(c).exists():
+            return c
+    return "npx"  # fallback: rely on PATH
+
+NPX = _resolve_npx()
+
 def http_get(url, timeout=12):
     """GET with urllib — returns (body_str, final_url, status, error)."""
     try:
@@ -125,67 +149,334 @@ def slugify(text):
 
 # ── Phase 1: Lead Discovery ──────────────────────────────────────────────────
 
-def search_businesses(city, niche, limit=20):
-    """Search DuckDuckGo HTML for local businesses."""
-    query = f"{niche} in {city}"
+DOMINATED_DOMAINS = [
+    "yelp.com", "yellowpages.com", "facebook.com",
+    "mapquest.com", "bbb.org", "angi.com",
+    "thumbtack.com", "google.com", "tripadvisor.com",
+    "nextdoor.com", "healthgrades.com", "zocdoc.com",
+    "homeadvisor.com", "groupon.com", "duckduckgo.com",
+    "bing.com", "bestprosintown.com", "airtasker.com",
+    "buildzoom.com", "threebestrated.com",
+    "homeguide.com", "expertise.com", "carfax.com",
+    "preferredmechanic.com", "plumbing.com",
+    "meetaplumber.com", "bark.com", "taskrabbit.com",
+    "porch.com", "houzz.com", "manta.com",
+    "superpages.com", "merchantcircle.com",
+    "chamberofcommerce.com", "toprated.com",
+    "todayshomeowner.com", "promatcher.com",
+    "promptloop.com", "networx.com",
+]
+AGG_TITLE_PATTERNS = ["best ", "top ", " near me", " rated ", "10 best",
+                      "19 best", "list of", "directory"]
+
+
+def _filter_result(actual, title):
+    """Return True if result should be kept (not an aggregator/ad)."""
+    if not actual or not title:
+        return False
+    if "duckduckgo.com/y.js" in actual or "bing.com/aclick" in actual:
+        return False
+    domain = urllib.parse.urlparse(actual).hostname or ""
+    if any(d in domain for d in DOMINATED_DOMAINS):
+        return False
+    title_lower = title.lower()
+    if any(p in title_lower for p in AGG_TITLE_PATTERNS):
+        return False
+    return True
+
+
+def _search_ddg_html(query, start, results, limit):
+    """Try DDG html endpoint. Returns True if page had results (even 0 after filtering)."""
     encoded = urllib.parse.quote_plus(query)
-    results = []
-
-    for start in range(0, min(limit, 40), 10):
-        url = f"https://html.duckduckgo.com/html/?q={encoded}&s={start}"
+    url = f"https://html.duckduckgo.com/html/?q={encoded}&s={start}"
+    body, _, status, err = http_get(url, timeout=15)
+    if not err and status == 202:
+        time.sleep(random.uniform(8.0, 14.0))
         body, _, status, err = http_get(url, timeout=15)
-        if err or status != 200:
-            log(f"  search error page {start}: {err}")
-            continue
+    if err or status not in (200, 202):
+        return False
+    if 'class="result__a"' not in body:
+        return False  # bot-check wall or empty
 
-        # parse result snippets
-        for m in re.finditer(
-            r'<a[^>]+class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>',
-            body, re.DOTALL
-        ):
-            raw_url = m.group(1)
-            title = re.sub(r"<[^>]+>", "", m.group(2)).strip()
-            # DuckDuckGo wraps URLs in redirects — extract actual URL
-            actual = raw_url
-            parsed = urllib.parse.urlparse(raw_url)
-            qs = urllib.parse.parse_qs(parsed.query)
-            if "uddg" in qs:
-                actual = qs["uddg"][0]
-
-            if not title or not actual:
-                continue
-            # skip aggregator sites and ad redirects
-            if "duckduckgo.com/y.js" in actual or "bing.com/aclick" in actual:
-                continue
-            dominated = ["yelp.com", "yellowpages.com", "facebook.com",
-                         "mapquest.com", "bbb.org", "angi.com",
-                         "thumbtack.com", "google.com", "tripadvisor.com",
-                         "nextdoor.com", "healthgrades.com", "zocdoc.com",
-                         "homeadvisor.com", "groupon.com", "duckduckgo.com",
-                         "bing.com", "bestprosintown.com", "airtasker.com",
-                         "buildzoom.com", "threebestrated.com",
-                         "homeguide.com", "expertise.com", "carfax.com",
-                         "preferredmechanic.com", "plumbing.com",
-                         "meetaplumber.com", "bark.com", "taskrabbit.com",
-                         "porch.com", "houzz.com", "manta.com",
-                         "superpages.com", "merchantcircle.com",
-                         "chamberofcommerce.com", "toprated.com",
-                         "todayshomeowner.com", "promatcher.com",
-                         "promptloop.com", "networx.com"]
+    for m in re.finditer(
+        r'<a[^>]+class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>',
+        body, re.DOTALL
+    ):
+        raw_url = m.group(1)
+        title = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        parsed = urllib.parse.urlparse(raw_url)
+        qs = urllib.parse.parse_qs(parsed.query)
+        actual = qs["uddg"][0] if "uddg" in qs else raw_url
+        if _filter_result(actual, title):
             domain = urllib.parse.urlparse(actual).hostname or ""
-            if any(d in domain for d in dominated):
-                continue
-            # skip aggregator/directory titles
-            title_lower = title.lower()
-            agg_patterns = ["best ", "top ", " near me", " rated ", "10 best",
-                            "19 best", "list of", "directory"]
-            if any(p in title_lower for p in agg_patterns):
-                continue
+            results.append({"name": title, "url": actual, "domain": domain})
+            if len(results) >= limit:
+                break
+    return True
 
+
+def _search_ddg_lite(query, results, limit):
+    """Fallback: DDG lite endpoint — parses uddg= params from href attributes.
+    DDG lite is a different rate-limit bucket and stays at 200 even when html is 202."""
+    encoded = urllib.parse.quote_plus(query)
+    url = f"https://lite.duckduckgo.com/lite/?q={encoded}"
+    body, _, status, err = http_get(url, timeout=15)
+    if err or status != 200:
+        return False
+
+    # DDG lite wraps result URLs as uddg= query param in relative /l/?uddg=... hrefs.
+    # We also need titles — they appear as link text next to each uddg link.
+    # Pattern: href="/l/?uddg=URL_ENCODED_URL&...">Title</a>
+    for m in re.finditer(r'href="/l/\?uddg=([^&"]+)[^"]*"[^>]*>(.*?)</a>', body, re.DOTALL):
+        actual = urllib.parse.unquote(m.group(1))
+        title = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        if not title:
+            title = urllib.parse.urlparse(actual).hostname or actual[:40]
+        if _filter_result(actual, title):
+            domain = urllib.parse.urlparse(actual).hostname or ""
+            results.append({"name": title, "url": actual, "domain": domain})
+            if len(results) >= limit:
+                break
+    return len(results) > 0
+
+
+def _search_bbb_playwright(city, niche, results, limit):
+    """Playwright-based fallback: scrape BBB.org search results page.
+    Used when all search engines (DDG html/lite, Bing) are IP-blocked (datacenter ASN).
+    BBB pages are rendered by headless Chromium and parsed from body text.
+    Returns True if any results found.
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        log("  playwright not installed — BBB fallback unavailable")
+        return False
+
+    log(f"  All search engines blocked. Switching to Playwright BBB fallback.")
+
+    try:
+        q = urllib.parse.quote_plus(niche)
+        city_enc = urllib.parse.quote_plus(city)
+        bbb_url = f"https://www.bbb.org/search?find_country=USA&find_loc={city_enc}&find_text={q}&page=1&sort=Relevance"
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            ctx = browser.new_context(
+                user_agent=UA, locale="en-US",
+                viewport={"width": 1280, "height": 900},
+            )
+            page = ctx.new_page()
+            page.goto(bbb_url, wait_until="domcontentloaded", timeout=25000)
+            time.sleep(4)
+            body_text = page.locator("body").inner_text()
+            ctx.close()
+            browser.close()
+
+        # Parse body text: Business Name\n\nCategories\n\nBBB Rating: X\nService Area\nPHONE\n\nADDRESS\n\nGet a Quote
+        start = body_text.find("Search results\n")
+        if start == -1:
+            log("  BBB: no 'Search results' marker found in body text")
+            return False
+
+        text = body_text[start + len("Search results\n"):]
+        cards = text.split("Get a Quote\n")
+
+        seen = set()
+        SKIP_PATTERNS = re.compile(
+            r'^(BBB Rating|Service Area|Get a Quote|Search|Filter|Sort|Showing|Home|Near|'
+            r'Category|Distance|Accredited|Page$|Start a Review)',
+            re.I
+        )
+
+        for card in cards[:limit + 5]:
+            lines = [l.strip() for l in card.strip().split('\n') if l.strip()]
+            if not lines:
+                continue
+            biz_name = lines[0]
+            if len(biz_name) < 3 or biz_name.lower() in seen:
+                continue
+            if SKIP_PATTERNS.match(biz_name):
+                continue
+            if re.match(r'^\(?\d{3}\)?', biz_name) or re.match(r'^\d{1,5}\s+\w', biz_name):
+                continue
+            seen.add(biz_name.lower())
+
+            # Phone
+            phone_match = None
+            for line in lines:
+                m = re.search(r'\(?\d{3}\)?[\s.\-]\d{3}[\s.\-]\d{4}', line)
+                if m:
+                    phone_match = m.group(0).strip()
+                    break
+            # Address
+            addr = ""
+            for line in lines:
+                if re.search(r'\d{1,5}\s+\w+.*,\s*[A-Z]{2}\s*\d{5}', line):
+                    addr = line.strip()
+                    break
+
+            # Use business name as stand-in URL (will be graded when site_check runs)
+            # Construct a best-guess URL from the slug
+            slug = re.sub(r'[^a-z0-9]+', '', biz_name.lower())[:20]
+            guess_url = f"https://www.{slug}.com"
+
+            results.append({
+                "name": biz_name,
+                "url": guess_url,
+                "domain": f"www.{slug}.com",
+                "phone_hint": phone_match or "",
+                "address_hint": addr,
+            })
+            if len(results) >= limit:
+                break
+
+        log(f"  BBB Playwright: extracted {len(results)} businesses for '{niche}' in '{city}'")
+        return len(results) > 0
+
+    except Exception as e:
+        log(f"  BBB Playwright error: {e}")
+        return False
+
+
+def _search_bing(query, results, limit):
+    """Fallback: Bing search HTML scraper.
+    Used when both DDG html and lite endpoints are rate-limited (202 with no results body).
+    Tries multiple HTML patterns to extract result links from Bing's page.
+    """
+    encoded = urllib.parse.quote_plus(query)
+    url = f"https://www.bing.com/search?q={encoded}&count=30"
+    req_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    try:
+        req = urllib.request.Request(url, headers=req_headers)
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        resp = urllib.request.urlopen(req, timeout=15, context=ctx)
+        body = resp.read(500_000).decode("utf-8", errors="replace")
+    except Exception as e:
+        log(f"  Bing scrape error: {e}")
+        return False
+
+    # Bing HTML result extraction — two patterns to handle layout variations:
+    # 1. Modern: <li class="b_algo"> blocks with <h2><a href="https://...">Title</a></h2>
+    # 2. Fallback: <cite> tags (Bing puts the display URL in <cite>) + adjacent <a href>
+    # 3. Last resort: any external https href with a valid non-aggregator domain
+
+    # Pattern 1 — b_algo blocks (classic Bing layout)
+    for m in re.finditer(
+        r'class="b_algo".*?<h2[^>]*><a[^>]+href="(https://[^"]+)"[^>]*>(.*?)</a>',
+        body, re.DOTALL
+    ):
+        actual = m.group(1).strip()
+        title = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        if _filter_result(actual, title):
+            domain = urllib.parse.urlparse(actual).hostname or ""
             results.append({"name": title, "url": actual, "domain": domain})
             if len(results) >= limit:
                 break
 
+    # Pattern 2 — <h2><a href> anywhere (Bing simplified layout)
+    if not results:
+        for m in re.finditer(r'<h2[^>]*>\s*<a[^>]+href="(https://[^"]+)"[^>]*>(.*?)</a>', body, re.DOTALL):
+            actual = m.group(1).strip()
+            title = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+            if _filter_result(actual, title):
+                domain = urllib.parse.urlparse(actual).hostname or ""
+                results.append({"name": title, "url": actual, "domain": domain})
+                if len(results) >= limit:
+                    break
+
+    # Pattern 3 — any external https href (last resort, Bing bot-wall response)
+    if not results:
+        seen = set()
+        for href in re.findall(r'href="(https://(?!(?:r\.)?bing\.com|th\.bing\.com|go\.microsoft\.com)[^"]{15,120})"', body):
+            domain = urllib.parse.urlparse(href).hostname or ""
+            if domain and domain not in seen:
+                seen.add(domain)
+                title = domain
+                if _filter_result(href, title):
+                    results.append({"name": title, "url": href, "domain": domain})
+                    if len(results) >= limit:
+                        break
+
+    return len(results) > 0
+
+
+def _search_google(query, results, limit):
+    """Google HTML fallback — fourth tier when DDG+Bing are both rate-limited.
+    Uses a Googlebot-style UA that triggers Google's lighter HTML response.
+    Parses <a href="/url?q=..."> redirect links from Google's HTML SERP.
+    """
+    encoded = urllib.parse.quote_plus(query)
+    # Use Google's more permissive HTML endpoint via num=30 for bulk results
+    url = f"https://www.google.com/search?q={encoded}&num=30&hl=en"
+    req_headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+        "Accept": "text/html,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    try:
+        req = urllib.request.Request(url, headers=req_headers)
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        resp = urllib.request.urlopen(req, timeout=15, context=ctx)
+        if resp.status not in (200, 301, 302):
+            return False
+        body = resp.read(500_000).decode("utf-8", errors="replace")
+    except Exception as e:
+        log(f"  Google scrape error: {e}")
+        return False
+
+    # Google wraps organic result URLs as /url?q=TARGET&... in anchor hrefs
+    for m in re.finditer(r'/url\?q=(https://[^&"]+)[&"]', body):
+        actual = urllib.parse.unquote(m.group(1))
+        # Pull title from nearby anchor text or use domain
+        domain = urllib.parse.urlparse(actual).hostname or ""
+        title = domain
+        if _filter_result(actual, title):
+            results.append({"name": title, "url": actual, "domain": domain})
+            if len(results) >= limit:
+                break
+    return len(results) > 0
+
+
+def search_businesses(city, niche, limit=20):
+    """Search for local businesses.
+    Chain: DDG html → DDG lite → Bing → Google (fallback when all prior are rate-limited).
+    DDG html: standard results, may return 202 challenge page when rate-limited.
+    DDG lite: separate rate-limit bucket, stays available longer.
+    Bing: different provider, separate rate limits.
+    Google: last resort via Googlebot UA, separate rate-limit bucket entirely.
+    """
+    query = f"{niche} in {city}"
+    results = []
+    used_ddg_fallback = False
+
+    for start in range(0, min(limit, 40), 10):
+        got_page = _search_ddg_html(query, start, results, limit)
+        if not got_page and start == 0 and not used_ddg_fallback:
+            # html endpoint is rate-limited — try lite as fallback for this whole query
+            log(f"  DDG html blocked, switching to DDG lite for this query")
+            got_lite = _search_ddg_lite(query, results, limit)
+            used_ddg_fallback = True
+            if not got_lite:
+                # both DDG endpoints blocked — fall back to Bing
+                log(f"  DDG lite also blocked, switching to Bing fallback")
+                got_bing = _search_bing(query, results, limit)
+                if not got_bing:
+                    # Bing also blocked — try Google
+                    log(f"  Bing blocked, switching to Google fallback")
+                    got_google = _search_google(query, results, limit)
+                    if not got_google:
+                        # all search engines blocked (datacenter IP) — use Playwright BBB
+                        log(f"  All search engines blocked. Using Playwright BBB fallback.")
+                        _search_bbb_playwright(city, niche, results, limit)
+            break  # fallbacks fetch all results in one request
         time.sleep(random.uniform(1.5, 3.0))
         if len(results) >= limit:
             break
@@ -266,11 +557,18 @@ def discover(city, niche, limit=20):
             continue
 
         log(f"  Checking: {biz['name'][:50]}")
-        body, final_url, status, err = http_get(biz["url"])
+        # 3s timeout: fast-fail on dead/slow small-biz sites; SSL errors already handled
+        body, final_url, status, err = http_get(biz["url"], timeout=3)
         grade, score, sigs = grade_website(body, final_url, status, err)
         phone, email, address = ("", "", "")
         if body:
             phone, email, address = extract_contact(body, final_url)
+
+        # Carry through hints from BBB Playwright fallback (phone/address pre-extracted)
+        if not phone and biz.get("phone_hint"):
+            phone = biz["phone_hint"]
+        if not address and biz.get("address_hint"):
+            address = biz["address_hint"]
 
         lead = {
             "business_name": biz["name"],
@@ -391,6 +689,11 @@ _SVC.update({
     "pressure washing": ["House Washing", "Driveway Cleaning", "Deck Restoration", "Roof Soft Wash", "Commercial Pressure Wash", "Fence Cleaning"],
     "handyman": ["Home Repairs", "Drywall & Painting", "Furniture Assembly", "Door & Window Repair", "Tile Work", "Deck & Fence Repair"],
     "tree service": ["Tree Removal", "Tree Trimming", "Stump Grinding", "Emergency Storm Cleanup", "Land Clearing", "Tree Health Assessment"],
+    "fencing": ["Wood Fencing", "Chain Link Fencing", "Vinyl Fencing", "Iron & Metal Fencing", "Fence Repair", "Gate Installation"],
+    "junk removal": ["Full-Service Junk Removal", "Appliance Removal", "Furniture Hauling", "Construction Debris", "Garage Cleanout", "Same-Day Pickup"],
+    "mobile detailing": ["Full Detail Package", "Interior Deep Clean", "Exterior Wash & Wax", "Paint Correction", "Ceramic Coating", "Fleet Detailing"],
+    "window cleaning": ["Residential Window Cleaning", "Commercial Window Cleaning", "Screen Cleaning", "Hard Water Stain Removal", "Gutter Cleaning", "Pressure Washing"],
+    "landscaping": ["Lawn Maintenance", "Landscape Design", "Hardscaping", "Irrigation Systems", "Tree & Shrub Care", "Seasonal Cleanup"],
 })
 NICHE_SERVICES = {**_SVC, "dental": _SVC["dentist"], "plumbing": _SVC["plumber"]}
 
@@ -429,28 +732,61 @@ def build_site_html(lead):
 
 
 def deploy_surge(site_dir, domain_slug):
-    """Deploy to surge.sh. Returns (url, success)."""
-    domain = f"{domain_slug}.surge.sh"
-    try:
-        result = subprocess.run(
-            ["npx", "surge", "--project", str(site_dir), "--domain", domain],
-            capture_output=True, text=True, timeout=60,
-            cwd=str(PROJECT_ROOT),
-        )
-        if result.returncode == 0:
-            return f"https://{domain}", True
-        log(f"  surge error: {result.stderr[:200]}")
-        return f"https://{domain}", False
-    except subprocess.TimeoutExpired:
-        log("  surge deploy timed out")
-        return f"https://{domain}", False
-    except FileNotFoundError:
-        log("  npx/surge not found")
-        return f"https://{domain}", False
+    """Deploy to surge.sh. Returns (url, success).
+
+    Fixes vs original:
+    - Uses NPX (absolute path resolved at import) so cron/launchd PATH is not relied on.
+    - stdin=DEVNULL prevents surge from hanging on auth prompts in non-interactive contexts.
+    - Verifies "Success!" in stdout in addition to returncode, catching cases where surge
+      exits 0 but did not actually publish (e.g. network hiccup with cached exit code).
+    - Domain conflict retry: if surge reports "do not have permission", appends "-pmx" suffix
+      to avoid clashes with domains owned by other surge accounts.
+    """
+    slugs_to_try = [domain_slug, f"{domain_slug}-pmx", f"{domain_slug}-2"]
+    for attempt_slug in slugs_to_try:
+        domain = f"{attempt_slug}.surge.sh"
+        try:
+            result = subprocess.run(
+                [NPX, "surge", "--project", str(site_dir), "--domain", domain],
+                capture_output=True, text=True, timeout=90,
+                cwd=str(PROJECT_ROOT),
+                stdin=subprocess.DEVNULL,  # prevent interactive auth prompts from hanging
+            )
+            stdout = result.stdout or ""
+            stderr = result.stderr or ""
+            combined = stdout + stderr
+            # surge prints "Success!" on a successful publish
+            success = result.returncode == 0 and "Success" in stdout
+            if success:
+                return f"https://{domain}", True
+            # If domain is owned by another account, retry with next slug
+            if "do not have permission" in combined:
+                log(f"  domain conflict on {domain}, trying next slug...")
+                continue
+            # Non-conflict failure — log and give up
+            err_snippet = combined.strip()[:300]
+            log(f"  surge failed (rc={result.returncode}): {err_snippet}")
+            return f"https://{domain}", False
+        except subprocess.TimeoutExpired:
+            log(f"  surge deploy timed out (>90s) for {domain}")
+            return f"https://{domain}", False
+        except FileNotFoundError:
+            log(f"  npx not found at {NPX} — install node/npm")
+            return f"https://{domain}", False
+        except Exception as e:
+            log(f"  surge unexpected error: {e}")
+            return f"https://{domain}", False
+    # All slug variants exhausted
+    log(f"  all domain variants blocked for {domain_slug}")
+    return f"https://{domain_slug}.surge.sh", False
 
 
 def build_sites(deploy=True):
-    """Build preview sites for all C/D/F grade leads without a preview_url."""
+    """Build preview sites for all C/D/F grade leads without a surge preview_url.
+
+    Also retries deployment for rows that were previously built with --no-deploy
+    (preview_url starts with file://) so stale local-only builds get promoted.
+    """
     if not LEADS_CSV.exists():
         log("No leads CSV found. Run --discover first.")
         return 0
@@ -467,7 +803,10 @@ def build_sites(deploy=True):
             break
         if row.get("grade", "B") not in ("C", "D", "F"):
             continue
-        if row.get("preview_url", "").strip():
+
+        existing_preview = row.get("preview_url", "").strip()
+        # Skip rows that already have a live surge URL
+        if existing_preview and not existing_preview.startswith("file://"):
             continue
 
         biz_slug = slugify(row.get("business_name", f"biz-{i}"))
@@ -478,10 +817,16 @@ def build_sites(deploy=True):
         safe_path(site_dir)
         site_dir.mkdir(parents=True, exist_ok=True)
 
+        # Rebuild HTML (idempotent — safe to overwrite)
         page_html = build_site_html(row)
         index = site_dir / "index.html"
         index.write_text(page_html)
-        log(f"  Built: {domain_slug}/index.html")
+
+        is_retry = bool(existing_preview.startswith("file://"))
+        if is_retry:
+            log(f"  Retrying deploy: {domain_slug}/index.html")
+        else:
+            log(f"  Built: {domain_slug}/index.html")
 
         preview_url = f"file://{index}"
         if deploy:

@@ -39,3 +39,4 @@
 - All apps work offline after first visit
 - No backend required - all data in browser localStorage
 - **Ramadan Tracker is HIGHEST PRIORITY** - Ramadan starts Feb 28, 2026
+| coreday-web | https://coreday.surge.sh | LIVE |

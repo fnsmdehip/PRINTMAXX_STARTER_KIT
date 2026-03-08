@@ -1,0 +1,5 @@
+automated 8 different projects to run themselves. 6 of them haven't actually run a single cycle in 30+ hours.
+
+automation that doesn't execute is just documentation with extra steps.
+
+check your cron jobs. check your launchd plists. if the logs are empty, nothing is running. fix it or kill it.

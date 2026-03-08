@@ -1,0 +1,124 @@
+### TWEET 1 - Boring App Portfolio (from ALPHA18297)
+STATUS: APPROVED
+SCHEDULED: next available slot
+SOURCE: r/AppBusiness ALPHA18297
+
+someone built 65 "boring" utility apps. none went viral.
+
+together they make $4,200/mo.
+
+the playbook:
+- find long-tail keywords with terrible existing apps
+- build a 48-hour MVP that does ONE thing better
+- spend 80% of time on ASO (title, subtitle, screenshots)
+- zero paid ads. zero content marketing.
+
+avg $65/app/month. portfolio > unicorn.
+
+stop trying to build the next $1M ARR SaaS. build 50 donkeys instead.
+
+---
+
+### TWEET 2 - Filesystem as Agent Memory (from ALPHA18301)
+STATUS: APPROVED
+SCHEDULED: next available slot
+SOURCE: HackerNews ALPHA18301
+
+263 HN points on "files are the interface humans and agents interact with"
+
+been running this pattern for months. my agent loops:
+1. fresh context every iteration
+2. read state from filesystem
+3. do ONE task
+4. write state back
+5. exit
+
+no database. no vector store. no fancy infra. just files.
+
+the filesystem is the universal agent memory layer. context windows are disposable scratchpads.
+
+---
+
+### TWEET 3 - Agent-Run Company (from ALPHA18299)
+STATUS: APPROVED
+SCHEDULED: next available slot
+SOURCE: HackerNews ALPHA18299
+
+someone on HN running their entire one-person company with AI agents. $0/mo cost on Gemini free tier.
+
+I run 33 autonomous agents on Claude Max ($200/mo). 8 venture agents + 25 swarm agents. they scrape, analyze, score, route, and compound findings 24/7.
+
+the gap between "I use ChatGPT" and "I have 33 agents running my business" is about 3 weekends of setup.
+
+most people won't do it. that's the moat.
+
+---
+
+### THREAD - The Boring App Factory Model (from ALPHA18297 deep dive)
+STATUS: APPROVED
+SCHEDULED: next available slot
+SOURCE: r/AppBusiness ALPHA18297
+
+TWEET 1/6:
+I found someone making $4,200/mo from 65 "boring" apps.
+
+none went viral. most make $10-120/mo each.
+
+here's the exact playbook (and why it validates the approach I've been building):
+
+TWEET 2/6:
+step 1: the "boring keyword" hunt
+
+look for highly specific long-tail keywords with:
+- decent search volume
+- terrible existing apps
+
+think "PDF compressor for [niche]" or "unit converter for [specific industry]"
+
+the uglier the competition, the better your odds.
+
+TWEET 3/6:
+step 2: the 48-hour MVP
+
+if it takes more than a few days, drop it.
+
+the app does ONE thing slightly better than the outdated garbage currently ranking.
+
+no feature creep. no "V2 roadmap." ship it.
+
+TWEET 4/6:
+step 3: pure ASO
+
+spend 80% of time on:
+- title optimization
+- subtitle with keywords
+- screenshot design
+
+that's the entire marketing strategy. publish, tweak keywords once a month, forget about it.
+
+no paid ads. no TikTok. no content marketing.
+
+TWEET 5/6:
+the math:
+
+65 apps × $65/mo avg = $4,200/mo
+
+even if half die, 32 apps × $65 = $2,080/mo passive income
+
+even if numbers are inflated by 50%, the MODEL works:
+- near-zero marginal cost per app
+- compound portfolio over time
+- ASO = free distribution
+
+TWEET 6/6:
+the takeaway most people miss:
+
+this is a hedge fund approach to apps. diversification > concentration.
+
+you don't need one $4K/mo app. you need forty $100/mo apps.
+
+same math. way less risk. way less drama.
+
+I'm building this exact model. 22 apps live. targeting 50 by Q3.
+
+stop chasing unicorns. build donkeys.

@@ -1,10 +1,10 @@
-# Alpha Cycle 4 — Content Generated 2026-03-07 21:45
+# Alpha Cycle 4 - Content Generated 2026-03-07 21:45
 # Status: PENDING_REVIEW
 # Source: Reddit scrape cycle 4 + cumulative day findings
 
 ---
 
-## TWEET 1 — Reply Bait (Email Pricing Pain)
+## TWEET 1 - Reply Bait (Email Pricing Pain)
 
 your email tool charges you more the second your list grows.
 
@@ -18,12 +18,12 @@ what email tool actually scales without punishing you?
 
 ---
 
-## TWEET 2 — Sauce Drop (Solo Ad Creative Workflow)
+## TWEET 2 - Sauce Drop (Solo Ad Creative Workflow)
 
 solo marketer ad creative workflow that actually works in 2026:
 
 1. build a simple brand system first (colors, fonts, constraints)
-2. gethookd AI — feed it your product/existing ad, it generates variations
+2. gethookd AI - feed it your product/existing ad, it generates variations
 3. figma auto-layout + AI resize for every format and size
 4. chatgpt to spin headline variants from one core angle
 
@@ -31,7 +31,7 @@ canva is for amateurs. this stack is for operators.
 
 ---
 
-## TWEET 3 — Contrarian Take (Productivity Paradox)
+## TWEET 3 - Contrarian Take (Productivity Paradox)
 
 cancel half your meetings tomorrow.
 
@@ -43,7 +43,7 @@ busyness is the productivity killer nobody talks about because being busy feels 
 
 ---
 
-## TWEET 4 — Data Drop (Freelance Market Signal)
+## TWEET 4 - Data Drop (Freelance Market Signal)
 
 just scraped reddit for freelance gigs.
 
@@ -59,7 +59,7 @@ the gigs are there. you're just not looking.
 
 ---
 
-## TWEET 5 — Ecom Alpha (Margin Data)
+## TWEET 5 - Ecom Alpha (Margin Data)
 
 scraped ecom arbitrage margins today.
 
@@ -74,7 +74,7 @@ being rich isn't sexy either. it's just math.
 
 ---
 
-## THREAD — Solo Ad Creative Stack (5 tweets)
+## THREAD - Solo Ad Creative Stack (5 tweets)
 
 ### Tweet 1/5 (Hook)
 i asked 11 solo marketers what tools they use for ad creative in 2026.
@@ -88,7 +88,7 @@ step 1: build a brand system FIRST.
 
 colors. fonts. constraints. grid.
 
-sounds boring. but this is why your ads look like everyone else's — you skip this part and every output looks random.
+sounds boring. but this is why your ads look like everyone else's - you skip this part and every output looks random.
 
 30 minutes of brand setup saves 30 hours of creative tweaking.
 
@@ -118,7 +118,7 @@ one angle. infinite hooks. that's the game.
 
 ---
 
-## REPLY BAIT — Cancel Meetings Challenge
+## REPLY BAIT - Cancel Meetings Challenge
 
 reply with how many meetings you have this week.
 

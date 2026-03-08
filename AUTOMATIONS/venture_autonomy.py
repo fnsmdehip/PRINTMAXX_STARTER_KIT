@@ -47,6 +47,12 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Optional
 
+from agent_resilience import (
+    sanitize_for_prompt, locked_file, TrajectoryLogger,
+)
+
+_trajectory = TrajectoryLogger("venture_autonomy")
+
 # ── paths & guardrails ───────────────────────────────────────────────────
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
@@ -146,7 +152,7 @@ def log_mission(mission_name: str, result: str, duration_s: float, output: str =
         "output": str(output)[:200],
     }
     try:
-        with open(MISSION_LOG, "a") as f:
+        with locked_file(MISSION_LOG, mode="a") as f:
             f.write(json.dumps(entry) + "\n")
     except Exception:
         pass
@@ -163,7 +169,7 @@ def send_bus_message(body: str, to_agent: str = "ceo") -> None:
         "read": False,
     }
     try:
-        with open(MESSAGE_BUS, "a") as f:
+        with locked_file(MESSAGE_BUS, mode="a") as f:
             f.write(json.dumps(msg) + "\n")
     except Exception:
         pass
@@ -437,7 +443,8 @@ class AutonomyState:
     def _load(self) -> dict[str, Any]:
         if STATE_FILE.exists():
             try:
-                return json.loads(STATE_FILE.read_text())
+                with locked_file(STATE_FILE, mode="r") as f:
+                    return json.load(f)
             except Exception:
                 pass
         return {
@@ -449,7 +456,8 @@ class AutonomyState:
 
     def save(self) -> None:
         safe_path(STATE_FILE)
-        STATE_FILE.write_text(json.dumps(self.data, indent=2, default=str))
+        with locked_file(STATE_FILE, mode="w") as f:
+            json.dump(self.data, f, indent=2, default=str)
 
     def get_venture(self, venture_id: str) -> Optional[dict[str, Any]]:
         return self.data["ventures"].get(venture_id)
@@ -674,7 +682,9 @@ class VentureAutonomyEngine:
             result = subprocess.run(cmd, capture_output=True, text=True,
                                     timeout=30, cwd=str(PROJECT))
             if result.returncode == 0 and result.stdout.strip():
-                return result.stdout.strip()
+                return sanitize_for_prompt(
+                    result.stdout.strip(), field_name=f"venture_intel_{venture_type}_{step or 'general'}"
+                )
         except Exception:
             pass
         return ""
@@ -707,7 +717,13 @@ class VentureAutonomyEngine:
             f'"{prompt}"'
         )
 
+        import time as _time
+        _start = _time.time()
         ok, output = run_cmd(cmd, timeout_sec=180, label=f"claude:{venture_id}:{step}")
+        if ok:
+            _trajectory.log_success(f"claude:{venture_id}:{step}", _start)
+        else:
+            _trajectory.log_failure(f"claude:{venture_id}:{step}", error=output[:200], start=_start)
         return "ok" if ok else "failed"
 
     def _save_step_result(self, venture_id: str, step: str, success: bool, output: str) -> None:

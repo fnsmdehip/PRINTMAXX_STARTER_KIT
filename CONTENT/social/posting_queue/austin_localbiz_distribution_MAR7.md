@@ -1,4 +1,4 @@
-# Austin Local Biz — Distribution Content
+# Austin Local Biz - Distribution Content
 # Generated: 2026-03-07
 # Status: PENDING_REVIEW
 # Covers: LinkedIn (2), Twitter/X (3), Reddit (1), Facebook (1)
@@ -9,9 +9,9 @@
 
 ---
 
-### LinkedIn Post 1 — Case Study Angle
+### LinkedIn Post 1 - Case Study Angle
 **Target:** LinkedIn feed, solopreneur/agency audience
-**Tone:** @pipelineabuser energy — consequence-first, specific numbers
+**Tone:** @pipelineabuser energy - consequence-first, specific numbers
 
 ---
 
@@ -44,7 +44,7 @@ the game: build fast, send the link, let the demo do the selling.
 
 ---
 
-### LinkedIn Post 2 — Austin Specific
+### LinkedIn Post 2 - Austin Specific
 **Target:** Austin business audience, local services
 **Tone:** Direct value, specific names, no fluff
 
@@ -74,19 +74,19 @@ if none of them respond, i'll build 6 more for Houston this week.
 
 ---
 
-### Tweet 1 — Austin Specifics + Social Proof
+### Tweet 1 - Austin Specifics + Social Proof
 
 built 6 austin local biz websites this morning. magnolia cafe, kelly personal training, galaxia dental, barton springs saloon, zax pints and plates, artz rib house. none of them asked me to. DM for yours.
 
 ---
 
-### Tweet 2 — Scale Signal + 8-City Reach
+### Tweet 2 - Scale Signal + 8-City Reach
 
 20+ local business demo websites across 8 cities. houston, miami, nashville, jacksonville, memphis, tampa, atlanta, austin. i build your website before you even know you need one. $500 if you want to own it.
 
 ---
 
-### Tweet 3 — Price Anchor + Volume Signal
+### Tweet 3 - Price Anchor + Volume Signal
 
 $500 for a website that loads in 2 seconds, works offline, and looks better than your competitor's $5K site. cold emailing 100 local businesses this week. 3 of them will say yes. that's $1,500 from a method that costs $0 to start.
 
@@ -101,7 +101,7 @@ $500 for a website that loads in 2 seconds, works offline, and looks better than
 
 ---
 
-**Title:** Built free website demos for 6 Austin small businesses — here's what I found
+**Title:** Built free website demos for 6 Austin small businesses - here's what I found
 
 Hey Austin,
 
@@ -122,7 +122,7 @@ A few things I noticed while doing this research:
 
 Most Austin restaurant sites fail Google's mobile test. The average load time on mobile for the local restaurants I looked at was over 4 seconds. Google recommends under 2.5 seconds. Anything above 3 gets penalized in local search rankings.
 
-Almost none of them have structured data (schema markup). This is what tells Google — and AI search tools like ChatGPT and Perplexity — what your business actually does, your hours, and your menu. Without it, you're invisible to a growing slice of search traffic.
+Almost none of them have structured data (schema markup). This is what tells Google - and AI search tools like ChatGPT and Perplexity - what your business actually does, your hours, and your menu. Without it, you're invisible to a growing slice of search traffic.
 
 I'm not here to spam anyone. If you're one of these business owners or know them, these demos are live and free to look at. I charge $500 if they want to own the site, but looking is free.
 
@@ -161,7 +161,7 @@ Most fail Google's mobile PageSpeed test (target is 90+, average I saw was aroun
 
 If you own a local Austin business and want me to take a look at your site and build a free demo, comment below or DM me. No cost to look.
 
-If you're one of the 6 businesses above and saw this — the demo is yours if you want it. Happy to talk through it.
+If you're one of the 6 businesses above and saw this - the demo is yours if you want it. Happy to talk through it.
 
 ---
 

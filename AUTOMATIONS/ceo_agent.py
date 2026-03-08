@@ -63,6 +63,12 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Optional
 
+from agent_resilience import (
+    sanitize_for_prompt, locked_file, TrajectoryLogger,
+)
+
+_trajectory = TrajectoryLogger("ceo_agent")
+
 # === GUARDRAILS (inherited from ops_manager) ===
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
 CEO_DIR = PROJECT / "AUTOMATIONS" / "agent" / "ceo_agent"
@@ -70,6 +76,9 @@ STATE_FILE = CEO_DIR / "ceo_state.json"
 DECISION_LOG = CEO_DIR / "decisions.jsonl"
 AUDIT_LOG = CEO_DIR / "audit.jsonl"
 LOCK_FILE = CEO_DIR / "ceo.lock"
+CHECKPOINT_FILE = CEO_DIR / "checkpoint.json"
+CHECKPOINT_HISTORY = CEO_DIR / "checkpoint_history.jsonl"
+CHECKPOINT_STALE_HOURS = 2.0  # checkpoints older than this are stale
 PYTHON = sys.executable
 
 BLOCKED_DIRS = [
@@ -408,7 +417,8 @@ class CEOState:
     def _load(self) -> dict[str, Any]:
         if STATE_FILE.exists():
             try:
-                return json.loads(STATE_FILE.read_text())
+                with locked_file(STATE_FILE, mode="r") as f:
+                    return json.load(f)
             except Exception:
                 return self._default()
         return self._default()
@@ -449,13 +459,14 @@ class CEOState:
 
     def save(self) -> None:
         safe_path(STATE_FILE)
-        STATE_FILE.write_text(json.dumps(self.data, indent=2, default=str))
+        with locked_file(STATE_FILE, mode="w") as f:
+            json.dump(self.data, f, indent=2, default=str)
 
     def log_decision(self, decision: dict[str, Any]) -> None:
         """Append a decision to the JSONL log."""
         decision["ts"] = datetime.now().isoformat()
         safe_path(DECISION_LOG)
-        with open(DECISION_LOG, "a") as f:
+        with locked_file(DECISION_LOG, mode="a") as f:
             f.write(json.dumps(decision, default=str) + "\n")
         self.data["total_decisions"] += 1
 
@@ -463,7 +474,7 @@ class CEOState:
         """Append an audit entry."""
         audit_entry["ts"] = datetime.now().isoformat()
         safe_path(AUDIT_LOG)
-        with open(AUDIT_LOG, "a") as f:
+        with locked_file(AUDIT_LOG, mode="a") as f:
             f.write(json.dumps(audit_entry, default=str) + "\n")
 
     def is_protected(self, op_id: str) -> bool:
@@ -638,7 +649,7 @@ class CEOBrain:
                     capture_output=True, text=True, timeout=15, cwd=str(PROJECT)
                 )
                 if result.returncode == 0 and result.stdout.strip():
-                    parts.append(result.stdout.strip())
+                    parts.append(sanitize_for_prompt(result.stdout.strip(), field_name=f"ceo_strategic_{venture}"))
             except Exception:
                 pass
 
@@ -1277,11 +1288,162 @@ class LockGuard:
 
 
 # ============================================================================
+# CYCLE CHECKPOINT — crash-resume for 16-phase cycles
+# ============================================================================
+
+class CycleCheckpoint:
+    """Persists progress through the 16-phase CEO cycle so a crash at phase N
+    resumes from phase N+1 instead of restarting from phase 1."""
+
+    def __init__(self, cycle_number: int) -> None:
+        self.cycle_id: str = f"cycle_{cycle_number}_{datetime.now().strftime('%Y%m%d_%H%M')}"
+        self.cycle_number: int = cycle_number
+        self.last_completed_phase: int = 0
+        self.phase_results: dict[int, Any] = {}
+        self.started_at: str = datetime.now().isoformat()
+        self.resumed: bool = False
+        self._load_existing()
+
+    # -- persistence ----------------------------------------------------------
+
+    def _load_existing(self) -> None:
+        """If a valid (non-stale) checkpoint exists, adopt its state."""
+        if not CHECKPOINT_FILE.exists():
+            return
+        try:
+            raw = json.loads(CHECKPOINT_FILE.read_text())
+        except (json.JSONDecodeError, OSError):
+            log("Checkpoint file corrupt — starting fresh cycle", "WARN")
+            self._remove_checkpoint()
+            return
+
+        cp_ts = raw.get("started_at")
+        if not cp_ts:
+            self._remove_checkpoint()
+            return
+
+        age_h = _hours_since(cp_ts)
+        if age_h >= CHECKPOINT_STALE_HOURS:
+            log(f"Stale checkpoint ({age_h:.1f}h old) — archiving and starting fresh", "WARN")
+            self._archive(raw, reason="stale")
+            self._remove_checkpoint()
+            return
+
+        # Valid checkpoint — resume
+        self.cycle_id = raw.get("cycle_id", self.cycle_id)
+        self.cycle_number = raw.get("cycle_number", self.cycle_number)
+        self.last_completed_phase = raw.get("last_completed_phase", 0)
+        self.phase_results = {int(k): v for k, v in raw.get("phase_results", {}).items()}
+        self.started_at = cp_ts
+        self.resumed = True
+        log(f"RESUMING from checkpoint — last completed phase {self.last_completed_phase} "
+            f"(cycle {self.cycle_id})")
+
+    def save(self) -> None:
+        """Atomically persist checkpoint to disk with file locking."""
+        cp = {
+            "cycle_id": self.cycle_id,
+            "cycle_number": self.cycle_number,
+            "last_completed_phase": self.last_completed_phase,
+            "phase_results": self.phase_results,
+            "started_at": self.started_at,
+            "updated_at": datetime.now().isoformat(),
+        }
+        tmp_path = safe_path(CHECKPOINT_FILE.with_suffix(".tmp"))
+        target = safe_path(CHECKPOINT_FILE)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        fd = None
+        try:
+            fd = open(tmp_path, "w")
+            fcntl.flock(fd, fcntl.LOCK_EX)
+            json.dump(cp, fd, indent=2, default=str)
+            fd.flush()
+            os.fsync(fd.fileno())
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            fd.close()
+            fd = None
+            os.replace(str(tmp_path), str(target))
+        except Exception as e:
+            log(f"Checkpoint save failed: {e}", "ERROR")
+            if fd:
+                try:
+                    fcntl.flock(fd, fcntl.LOCK_UN)
+                    fd.close()
+                except Exception:
+                    pass
+
+    def should_skip(self, phase: int) -> bool:
+        """Return True if *phase* was already completed in a prior run."""
+        return phase <= self.last_completed_phase
+
+    def record_phase(self, phase: int, result: Any = None) -> None:
+        """Mark *phase* as completed, optionally store its result, and persist."""
+        self.last_completed_phase = phase
+        self.phase_results[phase] = result
+        self.save()
+
+    def get_phase_result(self, phase: int) -> Any:
+        """Retrieve stored result for a previously completed phase."""
+        return self.phase_results.get(phase)
+
+    def finish_cycle(self) -> None:
+        """Archive the completed checkpoint and remove the active file."""
+        try:
+            cp = {
+                "cycle_id": self.cycle_id,
+                "cycle_number": self.cycle_number,
+                "last_completed_phase": self.last_completed_phase,
+                "phase_results": self.phase_results,
+                "started_at": self.started_at,
+                "finished_at": datetime.now().isoformat(),
+                "reason": "completed",
+            }
+            self._archive(cp, reason="completed")
+        except Exception as e:
+            log(f"Checkpoint archive failed: {e}", "WARN")
+        self._remove_checkpoint()
+
+    # -- internal helpers -----------------------------------------------------
+
+    def _archive(self, data: dict[str, Any], reason: str = "") -> None:
+        """Append checkpoint data to the history JSONL file."""
+        if reason:
+            data["archive_reason"] = reason
+        data["archived_at"] = datetime.now().isoformat()
+        history = safe_path(CHECKPOINT_HISTORY)
+        history.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            with open(history, "a") as f:
+                fcntl.flock(f, fcntl.LOCK_EX)
+                f.write(json.dumps(data, default=str) + "\n")
+                f.flush()
+                fcntl.flock(f, fcntl.LOCK_UN)
+        except Exception as e:
+            log(f"Checkpoint history append failed: {e}", "WARN")
+
+    @staticmethod
+    def _remove_checkpoint() -> None:
+        try:
+            CHECKPOINT_FILE.unlink(missing_ok=True)
+            tmp = CHECKPOINT_FILE.with_suffix(".tmp")
+            if tmp.exists():
+                tmp.unlink(missing_ok=True)
+        except Exception:
+            pass
+
+
+# ============================================================================
 # MAIN CEO CYCLE
 # ============================================================================
 
 def run_ceo_cycle(dry_run: bool = False) -> None:
-    """Run one full CEO cycle: score → decide → snapshot → execute → audit."""
+    """Run one full CEO cycle: score -> decide -> snapshot -> execute -> audit.
+
+    Supports checkpoint-resume: if the process crashed mid-cycle, the next
+    invocation picks up where it left off instead of redoing completed phases.
+    Checkpoint phases 1-17 map to the original Phase 1 through Phase 16
+    (Phase 3.5 occupies checkpoint slot 4, shifting later phases by one).
+    """
     lock = LockGuard()
     if not lock.acquire():
         return
@@ -1295,377 +1457,469 @@ def run_ceo_cycle(dry_run: bool = False) -> None:
         runner = VentureRunner(state, xlsx)
         audit = AuditTrail(state)
 
+        cycle_num = state.data["cycles_run"] + 1
+        cp = CycleCheckpoint(cycle_num)
+
         disk = disk_free_gb()
         log("=" * 70)
-        log(f"CEO CYCLE #{state.data['cycles_run'] + 1} — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+        if cp.resumed:
+            log(f"CEO CYCLE #{cycle_num} RESUMED from phase {cp.last_completed_phase} "
+                f"-- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+        else:
+            log(f"CEO CYCLE #{cycle_num} -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
         log(f"Disk: {disk}GB | Decisions so far: {state.data['total_decisions']}")
         log("=" * 70)
 
         if disk < 2:
-            log("DISK CRITICAL < 2GB — CEO cycle paused", "WARN")
+            log("DISK CRITICAL < 2GB -- CEO cycle paused", "WARN")
             return
 
-        # 1. Score all ops
-        log("Phase 1: Scoring all ops from xlsx...")
-        scores = scorer.score_all()
-        top5 = scores[:5]
-        log(f"  Top 5: {', '.join(f'{s['op_id']}={s['total_score']}' for s in top5)}")
+        # -- Checkpoint phase 1: Score all ops --------------------------------
+        if not cp.should_skip(1):
+            log("Phase 1: Scoring all ops from xlsx...")
+            scores = scorer.score_all()
+            top5 = scores[:5]
+            log(f"  Top 5: {', '.join(f'{s['op_id']}={s['total_score']}' for s in top5)}")
+            cp.record_phase(1, {"count": len(scores), "top5": [s["op_id"] for s in top5]})
+        else:
+            log("Phase 1: Scoring -- restored from checkpoint")
+            scores = scorer.score_all()  # re-score is cheap and idempotent
 
-        # 2. CEO decisions
-        log("Phase 2: CEO making strategic decisions...")
-        decisions = brain.analyze_and_decide(dry_run=dry_run)
+        # -- Checkpoint phase 2: CEO decisions --------------------------------
+        if not cp.should_skip(2):
+            log("Phase 2: CEO making strategic decisions...")
+            decisions = brain.analyze_and_decide(dry_run=dry_run)
+            _dec_summary = [
+                {"type": d.get("type"), "op_id": d.get("op_id"), "name": d.get("name"),
+                 "reason": d.get("reason")}
+                for d in (decisions or [])
+            ]
+            cp.record_phase(2, {"decisions": _dec_summary})
+        else:
+            log("Phase 2: Decisions -- restored from checkpoint")
+            decisions = brain.analyze_and_decide(dry_run=dry_run)
 
-        issues = []  # track issues across all phases
+        issues: list[str] = []  # track issues across all phases
 
         if not decisions:
-            log("No strategic decisions needed this cycle — all ops stable")
+            log("No strategic decisions needed this cycle -- all ops stable")
         else:
             # Log decisions
             for d in decisions:
                 log(f"  [{d['type']}] {d['op_id']} ({d['name']}): {d['reason']}")
 
             if dry_run:
-                log("DRY RUN — decisions not executed")
+                log("DRY RUN -- decisions not executed")
                 state.data["last_cycle"] = datetime.now().isoformat()
                 state.data["cycles_run"] += 1
                 state.save()
+                cp.finish_cycle()
                 return
 
-            # 3. Git snapshot BEFORE changes
-            log("Phase 3: Git snapshot before changes...")
-            audit.capture_baseline()
-            git.snapshot("ceo_pre_decisions")
-
-            # 3.5. INTELLIGENCE-FIRST: Query intelligence for decisions about to be executed
-            log("Phase 3.5: Querying intelligence router for decision context...")
-            for d in decisions:
-                op_id = d.get("op_id", "")
-                # Map decision types to venture types for intelligence lookup
-                _venture_type = "RESEARCH"  # default
-                if "APP" in op_id.upper():
-                    _venture_type = "APP"
-                elif "CONTENT" in op_id.upper() or "SOCIAL" in op_id.upper():
-                    _venture_type = "CONTENT"
-                elif "OUTBOUND" in op_id.upper() or "LEAD" in op_id.upper():
-                    _venture_type = "OUTBOUND"
-                elif "LOCAL" in op_id.upper() or "OPENCLAW" in op_id.upper():
-                    _venture_type = "LOCAL_BIZ"
-                elif "MONETIZ" in op_id.upper() or "REVENUE" in op_id.upper():
-                    _venture_type = "MONETIZATION"
-                elif "PRODUCT" in op_id.upper():
-                    _venture_type = "PRODUCT"
-                try:
-                    _intel_cmd = [
-                        "python3", str(AUTOMATIONS / "intelligence_router.py"),
-                        "--venture", _venture_type, "--task", d.get("type", "").lower(), "--brief"
-                    ]
-                    _intel_r = subprocess.run(_intel_cmd, capture_output=True, text=True, timeout=30)
-                    if _intel_r.returncode == 0 and _intel_r.stdout.strip():
-                        d["intelligence_brief"] = _intel_r.stdout.strip()[:500]
-                        log(f"  Intel loaded for {op_id} ({_venture_type}): {len(d['intelligence_brief'])} chars")
-                except Exception as _ie:
-                    log(f"  Intel query for {op_id} failed (non-fatal): {_ie}", "WARN")
-
-            # 4. Execute decisions
-            log("Phase 4: Executing decisions...")
-            results = runner.execute_decisions(decisions)
-
-            for r in results:
-                d = r.get("decision", {})
-                status = r.get("status", "unknown")
-                log(f"  [{status.upper()}] {d.get('type', '?')} {d.get('op_id', '?')}")
-
-            # 5. Post-decision audit
-            log("Phase 5: Post-decision audit...")
-            issues = audit.check_regression(results)
-
-            if issues and any("failed" in i.lower() for i in issues):
-                log("REGRESSION DETECTED — considering rollback", "WARN")
-                # Only rollback if multiple failures
-                failed_count = sum(1 for r in results if r.get("status") == "failed")
-                if failed_count > 2:
-                    log("ROLLING BACK — too many failures", "ERROR")
-                    git.rollback()
-                else:
-                    log("Minor failures — proceeding without rollback")
-
-            # 6. Post-change commit
-            summary_parts = []
-            for dtype in ["PROMOTE", "ENHANCE", "CREATE", "KILL", "DISCOVER"]:
-                count = sum(1 for d in decisions if d["type"] == dtype)
-                if count:
-                    summary_parts.append(f"{count} {dtype.lower()}")
-            summary = ", ".join(summary_parts) if summary_parts else "no changes"
-            git.post_change_commit(summary)
-
-        # 7. Optionally run existing venture cycles
-        # (only every other CEO cycle to avoid overload)
-        if state.data["cycles_run"] % 2 == 0:
-            log("Phase 6: Running existing venture sub-agents...")
-            ok, msg = runner.run_existing_ventures()
-            log(f"  Ventures: {'OK' if ok else 'FAILED'} — {msg[:80]}")
-
-        # ======================================================================
-        # NEW ORCHESTRATION PHASES — CEO as full system orchestrator
-        # ======================================================================
-
-        # Phase 7: Alpha Pipeline Integration
-        # Run scrapers + alpha processor (max every ALPHA_INTERVAL_HOURS)
-        hours_since_alpha = _hours_since(state.data.get("last_alpha_scrape"))
-        if hours_since_alpha >= ALPHA_INTERVAL_HOURS:
-            log("Phase 7: Alpha Pipeline — scraping + processing...")
-            alpha_results = {}
-
-            # Twitter alpha scraper
-            ok, out = run_script("twitter_alpha_scraper.py", "--all",
-                                 timeout_sec=300, label="alpha:twitter")
-            alpha_results["twitter_scraper"] = "ok" if ok else "failed"
-
-            # Reddit scraper
-            ok, out = run_script("background_reddit_scraper.py", "--scrape",
-                                 timeout_sec=300, label="alpha:reddit")
-            alpha_results["reddit_scraper"] = "ok" if ok else "failed"
-
-            # Alpha auto processor — processes scraped data into actionable items
-            ok, out = run_script("alpha_auto_processor.py", "--process-new",
-                                 timeout_sec=180, label="alpha:processor")
-            alpha_results["alpha_processor"] = "ok" if ok else "failed"
-
-            state.data["last_alpha_scrape"] = datetime.now().isoformat()
-            state.data["alpha_pipeline_results"] = alpha_results
-            state.save()
-            successes = sum(1 for v in alpha_results.values() if v == "ok")
-            log(f"  Alpha pipeline: {successes}/{len(alpha_results)} succeeded")
-        else:
-            log(f"Phase 7: Alpha Pipeline — skipped ({hours_since_alpha:.1f}h < {ALPHA_INTERVAL_HOURS}h interval)")
-
-        # Phase 8: Research Orchestration (once per day)
-        hours_since_research = _hours_since(state.data.get("last_research"))
-        if hours_since_research >= RESEARCH_INTERVAL_HOURS:
-            log("Phase 8: Daily Research Orchestration...")
-            ok, out = run_script("daily_research_orchestrator.py", "--full",
-                                 timeout_sec=600, label="research:daily")
-            state.data["last_research"] = datetime.now().isoformat()
-            state.save()
-            log(f"  Research: {'OK' if ok else 'FAILED'}")
-        else:
-            log(f"Phase 8: Research — skipped ({hours_since_research:.1f}h < {RESEARCH_INTERVAL_HOURS}h interval)")
-
-        # Phase 9: Decision Engine — closed-loop processing
-        log("Phase 9: Decision Engine — processing pending data into actions...")
-        ok, out = run_script("decision_engine.py", "--cycle",
-                             timeout_sec=300, label="decision:engine")
-        state.data["last_decision_engine"] = datetime.now().isoformat()
-        state.save()
-        log(f"  Decision engine: {'OK' if ok else 'FAILED'}")
-
-        # Phase 10: Content Generation (every CONTENT_INTERVAL_HOURS)
-        hours_since_content = _hours_since(state.data.get("last_content_gen"))
-        if hours_since_content >= CONTENT_INTERVAL_HOURS:
-            log("Phase 10: Content Generation from intelligence...")
-            content_results = {}
-
-            ok, out = run_script("printmaxx_agent.py", "--mission content",
-                                 timeout_sec=300, label="content:generate")
-            content_results["content_gen"] = "ok" if ok else "failed"
-
-            ok, out = run_script("printmaxx_agent.py", "--mission upgrade",
-                                 timeout_sec=300, label="content:upgrade")
-            content_results["upgrade"] = "ok" if ok else "failed"
-
-            state.data["last_content_gen"] = datetime.now().isoformat()
-            state.save()
-            successes = sum(1 for v in content_results.values() if v == "ok")
-            log(f"  Content: {successes}/{len(content_results)} succeeded")
-        else:
-            log(f"Phase 10: Content — skipped ({hours_since_content:.1f}h < {CONTENT_INTERVAL_HOURS}h interval)")
-
-        # Phase 11: System Health Monitor
-        hours_since_health = _hours_since(state.data.get("last_health_check"))
-        if hours_since_health >= HEALTH_INTERVAL_HOURS:
-            log("Phase 11: System Health Check...")
-            ok, out = run_script("system_health_monitor.py", "--quick",
-                                 timeout_sec=120, label="health:check")
-            state.data["last_health_check"] = datetime.now().isoformat()
-
-            # Parse health output for issues and attempt auto-fix
-            if ok and out:
-                # Look for lines containing FAIL, ERROR, BROKEN, DOWN
-                health_issues = []
-                for line in out.split("\n"):
-                    line_upper = line.upper()
-                    if any(kw in line_upper for kw in ["FAIL", "ERROR", "BROKEN", "DOWN", "DEAD"]):
-                        health_issues.append(line.strip()[:200])
-                state.data["health_issues"] = health_issues[-20:]  # keep last 20
-
-                if health_issues:
-                    log(f"  Health issues found: {len(health_issues)}")
-                    # Attempt auto-fix by re-running health monitor with fix flag
-                    fix_ok, fix_out = run_script("system_health_monitor.py", "--quick --fix",
-                                                  timeout_sec=120, label="health:autofix")
-                    if fix_ok:
-                        log("  Auto-fix attempted")
-                    else:
-                        log("  Auto-fix failed or not supported", "WARN")
-                else:
-                    log("  System healthy — no issues detected")
+            # -- Checkpoint phase 3: Git snapshot BEFORE changes --------------
+            if not cp.should_skip(3):
+                log("Phase 3: Git snapshot before changes...")
+                audit.capture_baseline()
+                git.snapshot("ceo_pre_decisions")
+                cp.record_phase(3, "snapshot_taken")
             else:
-                log(f"  Health check: {'OK' if ok else 'FAILED'}")
+                log("Phase 3: Git snapshot -- skipped (already checkpointed)")
 
-            state.save()
-        else:
-            log(f"Phase 11: Health — skipped ({hours_since_health:.1f}h < {HEALTH_INTERVAL_HOURS}h interval)")
-
-        # Phase 12: Dynamic Ventures — run CEO-created venture agents
-        if state.data["cycles_run"] % 3 == 0:  # every 3rd cycle to avoid overload
-            log("Phase 12: Running dynamic venture agents...")
-            dv_results = runner.run_dynamic_ventures()
-            dv_success = sum(1 for r in dv_results if r.get("status") == "success")
-            log(f"  Dynamic ventures: {dv_success}/{len(dv_results)} succeeded")
-
-        # Phase 13: OpenClaw Local Biz Pipeline — autonomous lead gen + site building
-        hours_since_openclaw = _hours_since(state.data.get("last_openclaw"))
-        if hours_since_openclaw >= OPENCLAW_INTERVAL_HOURS:
-            log("Phase 13: OpenClaw Local Biz Pipeline...")
-            openclaw_script = PROJECT / "AUTOMATIONS" / "openclaw_local_biz.py"
-            if openclaw_script.exists():
-                # Rotate through cities
-                city_idx = state.data.get("openclaw_city_index", 0) % len(OPENCLAW_CITIES)
-                city, niche = OPENCLAW_CITIES[city_idx]
-                log(f"  OpenClaw: discovering {niche} in {city} (rotation #{city_idx + 1}/{len(OPENCLAW_CITIES)})")
-
-                # Step 1: Discover leads
-                ok, out = run_script("openclaw_local_biz.py", f'--discover "{city}" {niche}',
-                                     timeout_sec=120, label=f"openclaw:discover:{city}:{niche}")
-                openclaw_results = {"discover": "ok" if ok else "failed", "city": city, "niche": niche}
-
-                # Step 2: Build preview sites for F-grade leads
-                if ok:
-                    ok2, out2 = run_script("openclaw_local_biz.py", "--build",
-                                           timeout_sec=180, label="openclaw:build")
-                    openclaw_results["build"] = "ok" if ok2 else "failed"
-
-                    # Step 3: Generate outreach
-                    ok3, out3 = run_script("openclaw_local_biz.py", "--outreach",
-                                           timeout_sec=60, label="openclaw:outreach")
-                    openclaw_results["outreach"] = "ok" if ok3 else "failed"
-
-                state.data["last_openclaw"] = datetime.now().isoformat()
-                state.data["openclaw_city_index"] = (city_idx + 1) % len(OPENCLAW_CITIES)
-                state.data["openclaw_stats"] = openclaw_results
-                state.save()
-                successes = sum(1 for v in openclaw_results.values() if v == "ok")
-                log(f"  OpenClaw: {successes}/{len(openclaw_results)} phases succeeded ({city} {niche})")
+            # -- Checkpoint phase 4: Intelligence enrichment (orig Phase 3.5) -
+            if not cp.should_skip(4):
+                log("Phase 3.5: Querying intelligence router for decision context...")
+                for d in decisions:
+                    op_id = d.get("op_id", "")
+                    # Map decision types to venture types for intelligence lookup
+                    _venture_type = "RESEARCH"  # default
+                    if "APP" in op_id.upper():
+                        _venture_type = "APP"
+                    elif "CONTENT" in op_id.upper() or "SOCIAL" in op_id.upper():
+                        _venture_type = "CONTENT"
+                    elif "OUTBOUND" in op_id.upper() or "LEAD" in op_id.upper():
+                        _venture_type = "OUTBOUND"
+                    elif "LOCAL" in op_id.upper() or "OPENCLAW" in op_id.upper():
+                        _venture_type = "LOCAL_BIZ"
+                    elif "MONETIZ" in op_id.upper() or "REVENUE" in op_id.upper():
+                        _venture_type = "MONETIZATION"
+                    elif "PRODUCT" in op_id.upper():
+                        _venture_type = "PRODUCT"
+                    try:
+                        _intel_cmd = [
+                            "python3", str(AUTOMATIONS / "intelligence_router.py"),
+                            "--venture", _venture_type, "--task", d.get("type", "").lower(), "--brief"
+                        ]
+                        _intel_r = subprocess.run(_intel_cmd, capture_output=True, text=True, timeout=30)
+                        if _intel_r.returncode == 0 and _intel_r.stdout.strip():
+                            d["intelligence_brief"] = sanitize_for_prompt(
+                                _intel_r.stdout.strip()[:500], field_name=f"ceo_intel_{op_id}"
+                            )
+                            log(f"  Intel loaded for {op_id} ({_venture_type}): {len(d['intelligence_brief'])} chars")
+                    except Exception as _ie:
+                        log(f"  Intel query for {op_id} failed (non-fatal): {_ie}", "WARN")
+                cp.record_phase(4, "intel_loaded")
             else:
-                log("  OpenClaw script not found — skipping", "WARN")
-        else:
-            log(f"Phase 13: OpenClaw — skipped ({hours_since_openclaw:.1f}h < {OPENCLAW_INTERVAL_HOURS}h interval)")
+                log("Phase 3.5: Intelligence -- skipped (already checkpointed)")
 
-        # Phase 14: Scheduled Task Management — sync cron state
-        log("Phase 14: Cron/scheduled task sync...")
-        try:
-            cron_result = subprocess.run(
-                ["crontab", "-l"], capture_output=True, text=True, timeout=10
-            )
-            if cron_result.returncode == 0:
-                cron_lines = [
-                    line.strip() for line in cron_result.stdout.split("\n")
-                    if line.strip() and not line.strip().startswith("#")
+            # -- Checkpoint phase 5: Execute decisions (orig Phase 4) ---------
+            if not cp.should_skip(5):
+                log("Phase 4: Executing decisions...")
+                results = runner.execute_decisions(decisions)
+
+                for r in results:
+                    d = r.get("decision", {})
+                    status = r.get("status", "unknown")
+                    log(f"  [{status.upper()}] {d.get('type', '?')} {d.get('op_id', '?')}")
+
+                _res_summary = [
+                    {"op_id": r.get("decision", {}).get("op_id"), "status": r.get("status")}
+                    for r in results
                 ]
-                state.data["managed_crons"] = cron_lines[-50:]  # track last 50 entries
-                log(f"  Cron: {len(cron_lines)} active entries tracked")
+                cp.record_phase(5, {"results": _res_summary})
             else:
-                log("  Cron: no crontab found (empty or not set)")
-                state.data["managed_crons"] = []
-        except Exception as e:
-            log(f"  Cron sync failed: {e}", "WARN")
+                log("Phase 4: Executing decisions -- skipped (already checkpointed)")
+                results = []
 
-        state.save()
+            # -- Checkpoint phase 6: Post-decision audit (orig Phase 5+6) -----
+            if not cp.should_skip(6):
+                log("Phase 5: Post-decision audit...")
+                issues = audit.check_regression(results)
 
-        # Phase 15: Venture Autonomy Engine — run all autonomous venture pipelines
-        hours_since_autonomy = _hours_since(state.data.get("last_autonomy_run"))
-        if hours_since_autonomy >= AUTONOMY_INTERVAL_HOURS:
-            log("Phase 15: Venture Autonomy Engine — running all autonomous ventures...")
-            autonomy_script = PROJECT / "AUTOMATIONS" / "venture_autonomy.py"
-            if autonomy_script.exists():
-                ok, out = run_script("venture_autonomy.py", "--run-all",
-                                     timeout_sec=600, label="autonomy:run-all")
-                state.data["last_autonomy_run"] = datetime.now().isoformat()
+                if issues and any("failed" in i.lower() for i in issues):
+                    log("REGRESSION DETECTED -- considering rollback", "WARN")
+                    failed_count = sum(1 for r in results if r.get("status") == "failed")
+                    if failed_count > 2:
+                        log("ROLLING BACK -- too many failures", "ERROR")
+                        git.rollback()
+                    else:
+                        log("Minor failures -- proceeding without rollback")
 
-                # Parse output for stats
-                autonomy_stats = {"status": "ok" if ok else "failed"}
-                if ok and out:
-                    for line in out.split("\n"):
-                        if "Ran" in line and "ventures" in line:
-                            autonomy_stats["summary"] = line.strip()[:200]
-                state.data["autonomy_stats"] = autonomy_stats
-                state.save()
-                log(f"  Autonomy engine: {'OK' if ok else 'FAILED'}")
-
-                # Self-management: auto-install missing, fix broken, adjust intervals, prune dead
-                log("Phase 15b: Self-management — auto-install/fix/adjust/prune...")
-                ok2, out2 = run_script("venture_autonomy.py", "--self-manage",
-                                       timeout_sec=300, label="autonomy:self-manage")
-                sm_actions = 0
-                if ok2 and out2:
-                    for line in out2.split("\n"):
-                        if "actions taken" in line:
-                            try:
-                                sm_actions = int(line.split(":")[1].strip().split()[0])
-                            except Exception:
-                                pass
-                state.data["last_self_manage"] = datetime.now().isoformat()
-                state.data["self_manage_actions"] = sm_actions
-                state.save()
-                log(f"  Self-management: {sm_actions} actions")
-
-                # Phase 15c: Swarm health check — ensure all swarm agents are running
-                log("Phase 15c: Agent Swarm health check...")
-                swarm_script = PROJECT / "AUTOMATIONS" / "agent_swarm.py"
-                if swarm_script.exists():
-                    ok3, out3 = run_script("agent_swarm.py", "--health",
-                                           timeout_sec=60, label="swarm:health")
-                    state.data["last_swarm_check"] = datetime.now().isoformat()
-                    if out3 and "issues found" in out3:
-                        # Auto-redeploy to fix
-                        log("  Swarm has issues — auto-redeploying...")
-                        run_script("agent_swarm.py", "--deploy",
-                                   timeout_sec=120, label="swarm:redeploy")
-                    state.save()
+                # 6. Post-change commit
+                summary_parts = []
+                for dtype in ["PROMOTE", "ENHANCE", "CREATE", "KILL", "DISCOVER"]:
+                    count = sum(1 for d in decisions if d["type"] == dtype)
+                    if count:
+                        summary_parts.append(f"{count} {dtype.lower()}")
+                summary = ", ".join(summary_parts) if summary_parts else "no changes"
+                git.post_change_commit(summary)
+                cp.record_phase(6, {"issues": issues, "summary": summary})
             else:
-                log("  Autonomy engine script not found — skipping", "WARN")
+                log("Phase 5-6: Audit + commit -- skipped (already checkpointed)")
+                _p6 = cp.get_phase_result(6)
+                issues = _p6.get("issues", []) if isinstance(_p6, dict) else []
+
+        # -- Checkpoint phase 7: Existing venture sub-agents (orig Phase 6) ---
+        if not cp.should_skip(7):
+            if state.data["cycles_run"] % 2 == 0:
+                log("Phase 6: Running existing venture sub-agents...")
+                ok, msg = runner.run_existing_ventures()
+                log(f"  Ventures: {'OK' if ok else 'FAILED'} -- {msg[:80]}")
+                cp.record_phase(7, {"ran": True, "ok": ok})
+            else:
+                cp.record_phase(7, {"ran": False, "reason": "odd_cycle"})
         else:
-            log(f"Phase 15: Autonomy — skipped ({hours_since_autonomy:.1f}h < {AUTONOMY_INTERVAL_HOURS}h interval)")
+            log("Phase 6: Venture sub-agents -- skipped (already checkpointed)")
 
-        # Phase 16: Loop Closer — close decision/feedback/pipeline loops
-        log("Phase 16: Loop Closer — closing decision/feedback/pipeline loops...")
-        loop_script = PROJECT / "AUTOMATIONS" / "loop_closer.py"
-        if loop_script.exists():
-            ok_loop, out_loop = run_script("loop_closer.py", "--cycle",
-                                           timeout_sec=120, label="loop_closer:cycle")
-            state.data["last_loop_closer"] = datetime.now().isoformat()
-            if out_loop:
-                # Parse decisions/feedback/pipeline counts from output
-                for line in out_loop.split("\n"):
-                    if "Cycle complete:" in line:
-                        log(f"  {line.strip()}")
+        # ======================================================================
+        # NEW ORCHESTRATION PHASES -- CEO as full system orchestrator
+        # ======================================================================
+
+        # -- Checkpoint phase 8: Alpha Pipeline (orig Phase 7) ----------------
+        if not cp.should_skip(8):
+            hours_since_alpha = _hours_since(state.data.get("last_alpha_scrape"))
+            if hours_since_alpha >= ALPHA_INTERVAL_HOURS:
+                log("Phase 7: Alpha Pipeline -- scraping + processing...")
+                alpha_results = {}
+
+                ok, out = run_script("twitter_alpha_scraper.py", "--all",
+                                     timeout_sec=300, label="alpha:twitter")
+                alpha_results["twitter_scraper"] = "ok" if ok else "failed"
+
+                ok, out = run_script("background_reddit_scraper.py", "--scrape",
+                                     timeout_sec=300, label="alpha:reddit")
+                alpha_results["reddit_scraper"] = "ok" if ok else "failed"
+
+                ok, out = run_script("alpha_auto_processor.py", "--process-new",
+                                     timeout_sec=180, label="alpha:processor")
+                alpha_results["alpha_processor"] = "ok" if ok else "failed"
+
+                state.data["last_alpha_scrape"] = datetime.now().isoformat()
+                state.data["alpha_pipeline_results"] = alpha_results
+                state.save()
+                successes = sum(1 for v in alpha_results.values() if v == "ok")
+                log(f"  Alpha pipeline: {successes}/{len(alpha_results)} succeeded")
+                cp.record_phase(8, alpha_results)
+            else:
+                log(f"Phase 7: Alpha Pipeline -- skipped ({hours_since_alpha:.1f}h < {ALPHA_INTERVAL_HOURS}h interval)")
+                cp.record_phase(8, "interval_skip")
+        else:
+            log("Phase 7: Alpha Pipeline -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 9: Research (orig Phase 8) ----------------------
+        if not cp.should_skip(9):
+            hours_since_research = _hours_since(state.data.get("last_research"))
+            if hours_since_research >= RESEARCH_INTERVAL_HOURS:
+                log("Phase 8: Daily Research Orchestration...")
+                ok, out = run_script("daily_research_orchestrator.py", "--full",
+                                     timeout_sec=600, label="research:daily")
+                state.data["last_research"] = datetime.now().isoformat()
+                state.save()
+                log(f"  Research: {'OK' if ok else 'FAILED'}")
+                cp.record_phase(9, "ok" if ok else "failed")
+            else:
+                log(f"Phase 8: Research -- skipped ({hours_since_research:.1f}h < {RESEARCH_INTERVAL_HOURS}h interval)")
+                cp.record_phase(9, "interval_skip")
+        else:
+            log("Phase 8: Research -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 10: Decision Engine (orig Phase 9) --------------
+        if not cp.should_skip(10):
+            log("Phase 9: Decision Engine -- processing pending data into actions...")
+            ok, out = run_script("decision_engine.py", "--cycle",
+                                 timeout_sec=300, label="decision:engine")
+            state.data["last_decision_engine"] = datetime.now().isoformat()
             state.save()
+            log(f"  Decision engine: {'OK' if ok else 'FAILED'}")
+            cp.record_phase(10, "ok" if ok else "failed")
         else:
-            log("  Loop closer script not found — skipping", "WARN")
+            log("Phase 9: Decision Engine -- skipped (already checkpointed)")
 
-        # Update state
+        # -- Checkpoint phase 11: Content Generation (orig Phase 10) ----------
+        if not cp.should_skip(11):
+            hours_since_content = _hours_since(state.data.get("last_content_gen"))
+            if hours_since_content >= CONTENT_INTERVAL_HOURS:
+                log("Phase 10: Content Generation from intelligence...")
+                content_results = {}
+
+                ok, out = run_script("printmaxx_agent.py", "--mission content",
+                                     timeout_sec=300, label="content:generate")
+                content_results["content_gen"] = "ok" if ok else "failed"
+
+                ok, out = run_script("printmaxx_agent.py", "--mission upgrade",
+                                     timeout_sec=300, label="content:upgrade")
+                content_results["upgrade"] = "ok" if ok else "failed"
+
+                state.data["last_content_gen"] = datetime.now().isoformat()
+                state.save()
+                successes = sum(1 for v in content_results.values() if v == "ok")
+                log(f"  Content: {successes}/{len(content_results)} succeeded")
+                cp.record_phase(11, content_results)
+            else:
+                log(f"Phase 10: Content -- skipped ({hours_since_content:.1f}h < {CONTENT_INTERVAL_HOURS}h interval)")
+                cp.record_phase(11, "interval_skip")
+        else:
+            log("Phase 10: Content -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 12: System Health (orig Phase 11) ---------------
+        if not cp.should_skip(12):
+            hours_since_health = _hours_since(state.data.get("last_health_check"))
+            if hours_since_health >= HEALTH_INTERVAL_HOURS:
+                log("Phase 11: System Health Check...")
+                ok, out = run_script("system_health_monitor.py", "--quick",
+                                     timeout_sec=120, label="health:check")
+                state.data["last_health_check"] = datetime.now().isoformat()
+
+                if ok and out:
+                    health_issues = []
+                    for line in out.split("\n"):
+                        line_upper = line.upper()
+                        if any(kw in line_upper for kw in ["FAIL", "ERROR", "BROKEN", "DOWN", "DEAD"]):
+                            health_issues.append(line.strip()[:200])
+                    state.data["health_issues"] = health_issues[-20:]
+
+                    if health_issues:
+                        log(f"  Health issues found: {len(health_issues)}")
+                        fix_ok, fix_out = run_script("system_health_monitor.py", "--quick --fix",
+                                                      timeout_sec=120, label="health:autofix")
+                        if fix_ok:
+                            log("  Auto-fix attempted")
+                        else:
+                            log("  Auto-fix failed or not supported", "WARN")
+                    else:
+                        log("  System healthy -- no issues detected")
+                else:
+                    log(f"  Health check: {'OK' if ok else 'FAILED'}")
+
+                state.save()
+                cp.record_phase(12, "ok" if ok else "failed")
+            else:
+                log(f"Phase 11: Health -- skipped ({hours_since_health:.1f}h < {HEALTH_INTERVAL_HOURS}h interval)")
+                cp.record_phase(12, "interval_skip")
+        else:
+            log("Phase 11: Health -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 13: Dynamic Ventures (orig Phase 12) ------------
+        if not cp.should_skip(13):
+            if state.data["cycles_run"] % 3 == 0:
+                log("Phase 12: Running dynamic venture agents...")
+                dv_results = runner.run_dynamic_ventures()
+                dv_success = sum(1 for r in dv_results if r.get("status") == "success")
+                log(f"  Dynamic ventures: {dv_success}/{len(dv_results)} succeeded")
+                cp.record_phase(13, {"ran": True, "success": dv_success, "total": len(dv_results)})
+            else:
+                cp.record_phase(13, {"ran": False, "reason": "cycle_skip"})
+        else:
+            log("Phase 12: Dynamic ventures -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 14: OpenClaw (orig Phase 13) --------------------
+        if not cp.should_skip(14):
+            hours_since_openclaw = _hours_since(state.data.get("last_openclaw"))
+            if hours_since_openclaw >= OPENCLAW_INTERVAL_HOURS:
+                log("Phase 13: OpenClaw Local Biz Pipeline...")
+                openclaw_script = PROJECT / "AUTOMATIONS" / "openclaw_local_biz.py"
+                if openclaw_script.exists():
+                    city_idx = state.data.get("openclaw_city_index", 0) % len(OPENCLAW_CITIES)
+                    city, niche = OPENCLAW_CITIES[city_idx]
+                    log(f"  OpenClaw: discovering {niche} in {city} (rotation #{city_idx + 1}/{len(OPENCLAW_CITIES)})")
+
+                    ok, out = run_script("openclaw_local_biz.py", f'--discover "{city}" {niche}',
+                                         timeout_sec=120, label=f"openclaw:discover:{city}:{niche}")
+                    openclaw_results = {"discover": "ok" if ok else "failed", "city": city, "niche": niche}
+
+                    if ok:
+                        ok2, out2 = run_script("openclaw_local_biz.py", "--build",
+                                               timeout_sec=180, label="openclaw:build")
+                        openclaw_results["build"] = "ok" if ok2 else "failed"
+
+                        ok3, out3 = run_script("openclaw_local_biz.py", "--outreach",
+                                               timeout_sec=60, label="openclaw:outreach")
+                        openclaw_results["outreach"] = "ok" if ok3 else "failed"
+
+                    state.data["last_openclaw"] = datetime.now().isoformat()
+                    state.data["openclaw_city_index"] = (city_idx + 1) % len(OPENCLAW_CITIES)
+                    state.data["openclaw_stats"] = openclaw_results
+                    state.save()
+                    successes = sum(1 for v in openclaw_results.values() if v == "ok")
+                    log(f"  OpenClaw: {successes}/{len(openclaw_results)} phases succeeded ({city} {niche})")
+                    cp.record_phase(14, openclaw_results)
+                else:
+                    log("  OpenClaw script not found -- skipping", "WARN")
+                    cp.record_phase(14, "script_missing")
+            else:
+                log(f"Phase 13: OpenClaw -- skipped ({hours_since_openclaw:.1f}h < {OPENCLAW_INTERVAL_HOURS}h interval)")
+                cp.record_phase(14, "interval_skip")
+        else:
+            log("Phase 13: OpenClaw -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 15: Cron sync (orig Phase 14) -------------------
+        if not cp.should_skip(15):
+            log("Phase 14: Cron/scheduled task sync...")
+            try:
+                cron_result = subprocess.run(
+                    ["crontab", "-l"], capture_output=True, text=True, timeout=10
+                )
+                if cron_result.returncode == 0:
+                    cron_lines = [
+                        line.strip() for line in cron_result.stdout.split("\n")
+                        if line.strip() and not line.strip().startswith("#")
+                    ]
+                    state.data["managed_crons"] = cron_lines[-50:]
+                    log(f"  Cron: {len(cron_lines)} active entries tracked")
+                else:
+                    log("  Cron: no crontab found (empty or not set)")
+                    state.data["managed_crons"] = []
+            except Exception as e:
+                log(f"  Cron sync failed: {e}", "WARN")
+
+            state.save()
+            cp.record_phase(15, "synced")
+        else:
+            log("Phase 14: Cron sync -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 16: Venture Autonomy (orig Phase 15) -----------
+        if not cp.should_skip(16):
+            hours_since_autonomy = _hours_since(state.data.get("last_autonomy_run"))
+            if hours_since_autonomy >= AUTONOMY_INTERVAL_HOURS:
+                log("Phase 15: Venture Autonomy Engine -- running all autonomous ventures...")
+                autonomy_script = PROJECT / "AUTOMATIONS" / "venture_autonomy.py"
+                if autonomy_script.exists():
+                    ok, out = run_script("venture_autonomy.py", "--run-all",
+                                         timeout_sec=600, label="autonomy:run-all")
+                    state.data["last_autonomy_run"] = datetime.now().isoformat()
+
+                    autonomy_stats = {"status": "ok" if ok else "failed"}
+                    if ok and out:
+                        for line in out.split("\n"):
+                            if "Ran" in line and "ventures" in line:
+                                autonomy_stats["summary"] = line.strip()[:200]
+                    state.data["autonomy_stats"] = autonomy_stats
+                    state.save()
+                    log(f"  Autonomy engine: {'OK' if ok else 'FAILED'}")
+
+                    log("Phase 15b: Self-management -- auto-install/fix/adjust/prune...")
+                    ok2, out2 = run_script("venture_autonomy.py", "--self-manage",
+                                           timeout_sec=300, label="autonomy:self-manage")
+                    sm_actions = 0
+                    if ok2 and out2:
+                        for line in out2.split("\n"):
+                            if "actions taken" in line:
+                                try:
+                                    sm_actions = int(line.split(":")[1].strip().split()[0])
+                                except Exception:
+                                    pass
+                    state.data["last_self_manage"] = datetime.now().isoformat()
+                    state.data["self_manage_actions"] = sm_actions
+                    state.save()
+                    log(f"  Self-management: {sm_actions} actions")
+
+                    log("Phase 15c: Agent Swarm health check...")
+                    swarm_script = PROJECT / "AUTOMATIONS" / "agent_swarm.py"
+                    if swarm_script.exists():
+                        ok3, out3 = run_script("agent_swarm.py", "--health",
+                                               timeout_sec=60, label="swarm:health")
+                        state.data["last_swarm_check"] = datetime.now().isoformat()
+                        if out3 and "issues found" in out3:
+                            log("  Swarm has issues -- auto-redeploying...")
+                            run_script("agent_swarm.py", "--deploy",
+                                       timeout_sec=120, label="swarm:redeploy")
+                        state.save()
+                    cp.record_phase(16, autonomy_stats)
+                else:
+                    log("  Autonomy engine script not found -- skipping", "WARN")
+                    cp.record_phase(16, "script_missing")
+            else:
+                log(f"Phase 15: Autonomy -- skipped ({hours_since_autonomy:.1f}h < {AUTONOMY_INTERVAL_HOURS}h interval)")
+                cp.record_phase(16, "interval_skip")
+        else:
+            log("Phase 15: Autonomy -- skipped (already checkpointed)")
+
+        # -- Checkpoint phase 17: Loop Closer (orig Phase 16) ----------------
+        if not cp.should_skip(17):
+            log("Phase 16: Loop Closer -- closing decision/feedback/pipeline loops...")
+            loop_script = PROJECT / "AUTOMATIONS" / "loop_closer.py"
+            if loop_script.exists():
+                ok_loop, out_loop = run_script("loop_closer.py", "--cycle",
+                                               timeout_sec=120, label="loop_closer:cycle")
+                state.data["last_loop_closer"] = datetime.now().isoformat()
+                if out_loop:
+                    for line in out_loop.split("\n"):
+                        if "Cycle complete:" in line:
+                            log(f"  {line.strip()}")
+                state.save()
+                cp.record_phase(17, "ok" if ok_loop else "failed")
+            else:
+                log("  Loop closer script not found -- skipping", "WARN")
+                cp.record_phase(17, "script_missing")
+        else:
+            log("Phase 16: Loop Closer -- skipped (already checkpointed)")
+
+        # -- Cycle complete: update state and archive checkpoint ---------------
         state.data["last_cycle"] = datetime.now().isoformat()
         state.data["cycles_run"] += 1
         state.save()
 
+        cp.finish_cycle()
+
         log("=" * 70)
-        log(f"CEO CYCLE COMPLETE — {len(decisions)} decisions, {len(issues)} issues")
+        log(f"CEO CYCLE COMPLETE -- {len(decisions)} decisions, {len(issues)} issues")
         log("=" * 70)
 
     except Exception as e:
         log(f"CEO CYCLE FATAL ERROR: {e}", "ERROR")
         import traceback
         log(traceback.format_exc(), "ERROR")
+        # Checkpoint is NOT deleted on crash -- next run will resume from
+        # last_completed_phase + 1
     finally:
         lock.release()
 

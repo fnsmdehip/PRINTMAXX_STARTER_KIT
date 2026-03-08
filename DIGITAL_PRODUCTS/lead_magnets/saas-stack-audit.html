@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Stack Audit | How Much Are You Burning on Tools?</title>
+<meta name="description" content="Add your tools. See your real monthly burn. Get free alternatives that do the same thing. Most solopreneurs waste $200-800/mo on tools they don't need.">
+<meta name="keywords" content="saas stack audit, solopreneur tools cost, saas spend calculator, tool stack optimization, free alternatives saas, reduce saas costs">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saas-stack-audit.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SaaS Stack Audit | How Much Are You Burning on Tools?">
+<meta property="og:description" content="Add your tools. See your real monthly burn. Get free alternatives that do the same thing.">
+<meta property="og:url" content="https://saas-stack-audit.surge.sh">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="SaaS Stack Audit: How Much Are You Burning on Tools?">
+<meta name="twitter:description" content="Most solopreneurs waste $200-800/mo on tools they don't need. Find out in 60 seconds.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SaaS Stack Audit","url":"https://saas-stack-audit.surge.sh","description":"Interactive tool that audits your SaaS stack, shows total burn rate, and finds free alternatives","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;--surface:#111;--card:#161616;--card-hover:#1c1c1c;
+  --accent:#3b82f6;--accent-dim:rgba(59,130,246,0.12);--accent-border:rgba(59,130,246,0.3);
+  --green:#22c55e;--green-dim:rgba(34,197,94,0.1);--green-border:rgba(34,197,94,0.25);
+  --red:#ef4444;--red-dim:rgba(239,68,68,0.1);--red-border:rgba(239,68,68,0.25);
+  --yellow:#f59e0b;--yellow-dim:rgba(245,158,11,0.1);
+  --text:#e5e5e5;--muted:#6b7280;--muted-bright:#9ca3af;
+  --border:#1f1f1f;--border-bright:#2a2a2a;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:700px;margin:0 auto;padding:0 20px}
+
+header{padding:40px 0 32px;text-align:center}
+.badge{display:inline-block;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+header h1{font-size:clamp(1.8rem,5.5vw,2.6rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px}
+header h1 .highlight{color:var(--red)}
+header .sub{color:var(--muted-bright);font-size:1rem;margin-bottom:24px}
+.stats-bar{display:flex;justify-content:center;gap:32px;padding:16px 24px;background:var(--surface);border:1px solid var(--border);border-radius:12px}
+.stat-item{text-align:center}
+.stat-item .num{font-size:1.3rem;font-weight:800;color:var(--accent);letter-spacing:-0.5px}
+.stat-item .lbl{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+
+.tool-section{padding:32px 0}
+.section-title{font-size:0.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+
+.quick-add{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.quick-btn{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:8px 14px;color:var(--muted-bright);font-size:0.8rem;cursor:pointer;transition:all 0.2s;font-family:inherit}
+.quick-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+.quick-btn.added{background:var(--accent-dim);border-color:var(--accent-border);color:var(--accent)}
+
+.custom-add{display:flex;gap:8px;margin-bottom:24px}
+.custom-add input{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:inherit;font-size:0.9rem;outline:none;transition:border-color 0.2s}
+.custom-add input:focus{border-color:var(--accent)}
+.custom-add input[type="number"]{width:100px;flex:none;text-align:right}
+.custom-add button{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:10px 16px;font-weight:700;font-size:0.85rem;cursor:pointer;font-family:inherit;white-space:nowrap;transition:opacity 0.2s}
+.custom-add button:hover{opacity:0.9}
+
+.tool-list{margin-bottom:24px}
+.tool-item{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;transition:all 0.2s}
+.tool-item:hover{border-color:var(--border-bright)}
+.tool-info{display:flex;align-items:center;gap:12px;flex:1}
+.tool-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;color:#fff;flex-shrink:0}
+.tool-name{font-weight:600;font-size:0.9rem}
+.tool-cat{font-size:0.7rem;color:var(--muted)}
+.tool-cost{font-weight:700;font-size:0.95rem;margin:0 16px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tool-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.1rem;padding:4px 8px;border-radius:6px;transition:all 0.2s}
+.tool-remove:hover{color:var(--red);background:var(--red-dim)}
+
+.results{background:linear-gradient(135deg,#0f172a,#1e293b);border:1px solid var(--accent-border);border-radius:14px;padding:28px 24px;margin-top:24px}
+.results h2{font-size:0.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:20px}
+
+.big-number{text-align:center;padding:24px 0;margin:0 0 20px}
+.big-number .label{font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+.big-number .value{font-size:2.8rem;font-weight:800;letter-spacing:-2px}
+.big-number .value.red{color:var(--red)}
+.big-number .sub{font-size:0.85rem;color:var(--muted);margin-top:4px}
+
+.breakdown{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.breakdown-item{background:rgba(255,255,255,0.03);border-radius:10px;padding:16px;text-align:center}
+.breakdown-item .bk-label{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+.breakdown-item .bk-value{font-size:1.2rem;font-weight:700;font-variant-numeric:tabular-nums}
+
+.verdict{text-align:center;padding:16px 20px;border-radius:10px;font-weight:600;font-size:0.95rem;margin-top:16px}
+.verdict.lean{background:var(--green-dim);border:1px solid var(--green-border);color:var(--green)}
+.verdict.moderate{background:var(--yellow-dim);border:1px solid rgba(245,158,11,0.25);color:var(--yellow)}
+.verdict.bloated{background:var(--red-dim);border:1px solid var(--red-border);color:var(--red)}
+
+.gate-section{padding:40px 0;text-align:center;border-top:1px solid var(--border);margin-top:32px}
+.gate-section h3{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.gate-section p{color:var(--muted);font-size:0.9rem;margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto}
+.gate-preview{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:0 auto 20px;max-width:400px;text-align:left}
+.gate-preview li{font-size:0.85rem;color:var(--muted-bright);padding:4px 0;list-style:none}
+.gate-preview li:before{content:"";display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;margin-right:10px;vertical-align:middle}
+.email-form{max-width:360px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.email-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.email-form input[type="email"]:focus{border-color:var(--accent)}
+.email-form button{background:linear-gradient(135deg,var(--accent),#2563eb);color:#fff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:inherit;transition:opacity 0.2s}
+.email-form button:hover{opacity:0.9}
+.email-form .fine{font-size:0.75rem;color:var(--muted);margin-top:4px}
+
+.alt-section{padding:32px 0;display:none}
+.alt-section.visible{display:block}
+.alt-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
+.alt-left{flex:1}
+.alt-current{font-size:0.8rem;color:var(--muted);text-decoration:line-through}
+.alt-name{font-weight:700;font-size:0.95rem;margin:2px 0}
+.alt-desc{font-size:0.8rem;color:var(--muted-bright)}
+.alt-save{text-align:right}
+.alt-save .save-amount{font-size:1.1rem;font-weight:800;color:var(--green)}
+.alt-save .save-label{font-size:0.7rem;color:var(--muted)}
+
+.share-section{padding:24px 0;text-align:center;border-top:1px solid var(--border);margin-top:24px}
+.share-btn{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 20px;color:var(--text);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s}
+.share-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+.crosslinks{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:24px 0;border-top:1px solid var(--border);margin-top:16px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:0.75rem;color:var(--muted-bright);transition:all 0.2s;text-decoration:none}
+.pill:hover{border-color:var(--accent);color:var(--accent)}
+
+footer{padding:24px 0;text-align:center;border-top:1px solid var(--border);margin-top:24px}
+footer p{color:var(--muted);font-size:0.8rem}
+
+.empty-state{text-align:center;padding:40px 20px;color:var(--muted)}
+.empty-state .icon{font-size:2rem;margin-bottom:12px}
+.empty-state p{font-size:0.9rem}
+
+@media(max-width:480px){
+  .stats-bar{gap:16px;padding:12px 16px}
+  .breakdown{grid-template-columns:1fr}
+  .custom-add{flex-direction:column}
+  .custom-add input[type="number"]{width:100%}
+  .tool-item{flex-wrap:wrap;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">free tool</div>
+    <h1>saas stack <span class="highlight">audit</span></h1>
+    <p class="sub">add your tools. see the real burn. most solopreneurs waste $200-800/mo on stuff they don't need.</p>
+    <div class="stats-bar">
+      <div class="stat-item"><div class="num" id="toolCount">0</div><div class="lbl">tools added</div></div>
+      <div class="stat-item"><div class="num" id="monthlyBurn">$0</div><div class="lbl">monthly burn</div></div>
+      <div class="stat-item"><div class="num" id="yearlyBurn">$0</div><div class="lbl">yearly burn</div></div>
+    </div>
+  </header>
+
+  <div class="tool-section">
+    <div class="section-title">quick add (click to add)</div>
+    <div class="quick-add" id="quickAdd"></div>
+
+    <div class="section-title" style="margin-top:24px">or add your own</div>
+    <div class="custom-add">
+      <input type="text" id="customName" placeholder="Tool name (e.g. Notion)" maxlength="50">
+      <input type="number" id="customCost" placeholder="$/mo" min="0" max="9999" step="1">
+      <button onclick="addCustomTool()">add</button>
+    </div>
+
+    <div id="toolList" class="tool-list">
+      <div class="empty-state" id="emptyState">
+        <div class="icon">+</div>
+        <p>click tools above or add your own to start the audit</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="results" id="results" style="display:none">
+    <h2>your saas burn rate</h2>
+    <div class="big-number">
+      <div class="label">monthly tool spend</div>
+      <div class="value red" id="resultMonthly">$0</div>
+      <div class="sub" id="resultYearly">$0/year</div>
+    </div>
+
+    <div class="breakdown">
+      <div class="breakdown-item">
+        <div class="bk-label">tool count</div>
+        <div class="bk-value" id="bkCount">0</div>
+      </div>
+      <div class="breakdown-item">
+        <div class="bk-label">avg cost/tool</div>
+        <div class="bk-value" id="bkAvg">$0</div>
+      </div>
+      <div class="breakdown-item">
+        <div class="bk-label">most expensive</div>
+        <div class="bk-value" id="bkMax">-</div>
+      </div>
+      <div class="breakdown-item">
+        <div class="bk-label">potential savings</div>
+        <div class="bk-value" style="color:var(--green)" id="bkSave">$0</div>
+      </div>
+    </div>
+
+    <div class="verdict" id="verdict"></div>
+  </div>
+
+  <div class="gate-section" id="gateSection" style="display:none">
+    <h3>want the free alternatives?</h3>
+    <p>for every tool you listed, we found a free or cheaper alternative. get the full list with links.</p>
+    <div class="gate-preview">
+      <li>free alternative for each paid tool</li>
+      <li>exact monthly savings per swap</li>
+      <li>migration difficulty rating (easy/medium/hard)</li>
+      <li>the $0/mo solopreneur stack I actually use</li>
+    </div>
+    <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="SaaS Stack Audit Lead">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://saas-stack-audit.surge.sh?unlocked=1">
+      <input type="hidden" name="audit_data" id="auditData">
+      <input type="email" name="email" placeholder="your email" required>
+      <button type="submit" id="unlockBtn">send me the free alternatives</button>
+      <div class="fine">no spam. just the list. unsubscribe anytime.</div>
+    </form>
+  </div>
+
+  <div class="alt-section" id="altSection">
+    <div class="section-title">free alternatives for your stack</div>
+    <div id="altList"></div>
+
+    <div class="share-section">
+      <button class="share-btn" onclick="shareOnX()">share your audit on X</button>
+    </div>
+  </div>
+
+  <div class="crosslinks">
+    <a href="https://cold-email-roi-calculator.surge.sh" class="pill">cold email ROI calculator</a>
+    <a href="https://revenue-leak-audit.surge.sh" class="pill">revenue leak audit</a>
+    <a href="https://side-project-revenue-estimator.surge.sh" class="pill">side project estimator</a>
+    <a href="https://subject-line-grader.surge.sh" class="pill">subject line grader</a>
+  </div>
+
+  <footer>
+    <p>built by <a href="https://x.com/printmaxxer">@printmaxxer</a></p>
+  </footer>
+</div>
+
+<script>
+// XSS protection: escape all user input before DOM insertion
+function esc(str) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+const TOOLS_DB = [
+  {name:"Notion",cost:10,cat:"Productivity",color:"#000",alt:{name:"Obsidian",cost:0,diff:"easy",note:"Local-first, Markdown files. Free forever."}},
+  {name:"Slack",cost:8,cat:"Communication",color:"#4A154B",alt:{name:"Discord",cost:0,diff:"easy",note:"Free for teams. Better for async + communities."}},
+  {name:"Zoom",cost:13,cat:"Communication",color:"#2D8CFF",alt:{name:"Google Meet",cost:0,diff:"easy",note:"Free with Google account. No time limit 1:1."}},
+  {name:"Canva Pro",cost:13,cat:"Design",color:"#7B2FF2",alt:{name:"Canva Free + Figma",cost:0,diff:"easy",note:"Canva free tier + Figma free covers 95% of needs."}},
+  {name:"Ahrefs",cost:99,cat:"SEO",color:"#FF6B35",alt:{name:"Ubersuggest Free + GSC",cost:0,diff:"medium",note:"Free tier + Google Search Console for basics."}},
+  {name:"Semrush",cost:130,cat:"SEO",color:"#FF642D",alt:{name:"Mangools",cost:29,diff:"medium",note:"KWFinder at $29/mo covers 80% of Semrush use cases."}},
+  {name:"Mailchimp",cost:20,cat:"Email",color:"#FFE01B",alt:{name:"Beehiiv Free",cost:0,diff:"easy",note:"Free up to 2,500 subs. Built for newsletters."}},
+  {name:"ConvertKit",cost:29,cat:"Email",color:"#FB6970",alt:{name:"Beehiiv Free",cost:0,diff:"easy",note:"Free up to 2,500 subs with monetization built in."}},
+  {name:"Calendly",cost:10,cat:"Scheduling",color:"#006BFF",alt:{name:"Cal.com",cost:0,diff:"easy",note:"Open source. Free self-hosted or free tier."}},
+  {name:"Zapier",cost:20,cat:"Automation",color:"#FF4A00",alt:{name:"n8n (self-hosted)",cost:0,diff:"hard",note:"Open source automation. Free if you self-host."}},
+  {name:"Buffer",cost:6,cat:"Social Media",color:"#168EEA",alt:{name:"Typefully Free",cost:0,diff:"easy",note:"Free plan handles scheduling. Limited analytics."}},
+  {name:"Hootsuite",cost:99,cat:"Social Media",color:"#143059",alt:{name:"Buffer Free",cost:0,diff:"easy",note:"Buffer free + native platform scheduling."}},
+  {name:"Loom",cost:13,cat:"Video",color:"#625DF5",alt:{name:"OBS + Streamable",cost:0,diff:"medium",note:"OBS records free. Upload to Streamable or YouTube."}},
+  {name:"Grammarly",cost:12,cat:"Writing",color:"#15C39A",alt:{name:"Claude / ChatGPT",cost:0,diff:"easy",note:"AI handles grammar + rewrites. Already paying for it."}},
+  {name:"Jasper",cost:49,cat:"AI Writing",color:"#0C0C0C",alt:{name:"Claude",cost:20,diff:"easy",note:"Claude Max at $20/mo is better at everything."}},
+  {name:"Webflow",cost:18,cat:"Website",color:"#4353FF",alt:{name:"Surge.sh + HTML",cost:0,diff:"medium",note:"Free hosting. Static HTML loads faster anyway."}},
+  {name:"Squarespace",cost:16,cat:"Website",color:"#000",alt:{name:"Carrd",cost:0,diff:"easy",note:"Free for single page sites. $19/yr for pro."}},
+  {name:"Shopify",cost:39,cat:"E-commerce",color:"#96BF48",alt:{name:"Gumroad",cost:0,diff:"easy",note:"Free to list. 10% fee on sales only. No monthly."}},
+  {name:"1Password",cost:3,cat:"Security",color:"#0072EC",alt:{name:"Bitwarden",cost:0,diff:"easy",note:"Free and open source. Premium is $10/year."}},
+  {name:"Typeform",cost:25,cat:"Forms",color:"#262627",alt:{name:"Tally.so",cost:0,diff:"easy",note:"Free, unlimited forms and responses. No branding."}},
+  {name:"Intercom",cost:74,cat:"Support",color:"#1F8DED",alt:{name:"Crisp Free",cost:0,diff:"medium",note:"Free for 2 seats. Live chat + basic CRM."}},
+  {name:"Hotjar",cost:32,cat:"Analytics",color:"#FF3C00",alt:{name:"PostHog Free",cost:0,diff:"medium",note:"Free up to 1M events. Open source. Session replay."}},
+  {name:"Mixpanel",cost:25,cat:"Analytics",color:"#7856FF",alt:{name:"Plausible / PostHog",cost:0,diff:"medium",note:"Plausible self-hosted free. PostHog free tier generous."}},
+  {name:"GitHub Copilot",cost:10,cat:"Dev Tools",color:"#000",alt:{name:"Codeium Free",cost:0,diff:"easy",note:"Free AI code completion. Supports all major IDEs."}},
+  {name:"Vercel Pro",cost:20,cat:"Hosting",color:"#000",alt:{name:"Vercel Hobby",cost:0,diff:"easy",note:"Free tier handles most solo projects. 100GB bandwidth."}},
+  {name:"Figma",cost:15,cat:"Design",color:"#A259FF",alt:{name:"Figma Free",cost:0,diff:"easy",note:"Free for 3 projects. Enough for solopreneurs."}},
+  {name:"ChatGPT Plus",cost:20,cat:"AI",color:"#74AA9C",alt:{name:"Claude Free + Perplexity",cost:0,diff:"easy",note:"Free tiers combined cover most use cases."}},
+  {name:"Cursor Pro",cost:20,cat:"Dev Tools",color:"#000",alt:{name:"Claude Code",cost:0,diff:"medium",note:"Claude Max includes Claude Code. One sub covers both."}},
+  {name:"Beehiiv Scale",cost:49,cat:"Email",color:"#000",alt:{name:"Beehiiv Free",cost:0,diff:"easy",note:"Free up to 2,500 subs. Scale only needed at 2,500+."}},
+  {name:"Linear",cost:8,cat:"Project Mgmt",color:"#5E6AD2",alt:{name:"GitHub Issues",cost:0,diff:"easy",note:"Free with GitHub. Clean enough for solo/small teams."}},
+  {name:"Monday.com",cost:9,cat:"Project Mgmt",color:"#FF3D57",alt:{name:"Notion Free",cost:0,diff:"easy",note:"Notion free tier handles project management fine."}},
+  {name:"Dropbox",cost:12,cat:"Storage",color:"#0061FF",alt:{name:"Google Drive",cost:0,diff:"easy",note:"15GB free. Shared with Gmail but enough for most."}}
+];
+
+let addedTools = [];
+let unlocked = new URLSearchParams(window.location.search).get('unlocked') === '1';
+
+function init() {
+  const quickAdd = document.getElementById('quickAdd');
+  TOOLS_DB.forEach((tool, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quick-btn';
+    btn.textContent = tool.name + ' $' + tool.cost + '/mo';
+    btn.dataset.index = i;
+    btn.onclick = () => toggleQuickTool(i, btn);
+    quickAdd.appendChild(btn);
+  });
+  if (unlocked) showAlternatives();
+}
+
+function toggleQuickTool(index, btn) {
+  const tool = TOOLS_DB[index];
+  const existing = addedTools.findIndex(t => t.name === tool.name);
+  if (existing >= 0) {
+    addedTools.splice(existing, 1);
+    btn.classList.remove('added');
+  } else {
+    addedTools.push({name: tool.name, cost: tool.cost, cat: tool.cat, color: tool.color, dbIndex: index});
+    btn.classList.add('added');
+  }
+  render();
+}
+
+function addCustomTool() {
+  const nameEl = document.getElementById('customName');
+  const costEl = document.getElementById('customCost');
+  const name = nameEl.value.trim().slice(0, 50);
+  const cost = Math.min(Math.max(parseFloat(costEl.value) || 0, 0), 9999);
+  if (!name) return;
+  addedTools.push({name, cost, cat: 'Custom', color: '#555', dbIndex: -1});
+  nameEl.value = '';
+  costEl.value = '';
+  render();
+}
+
+document.getElementById('customCost').addEventListener('keydown', e => {
+  if (e.key === 'Enter') addCustomTool();
+});
+document.getElementById('customName').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('customCost').focus();
+});
+
+function renderToolItem(tool, index) {
+  const div = document.createElement('div');
+  div.className = 'tool-item';
+
+  const info = document.createElement('div');
+  info.className = 'tool-info';
+
+  const icon = document.createElement('div');
+  icon.className = 'tool-icon';
+  icon.style.background = tool.color;
+  icon.textContent = tool.name[0];
+
+  const details = document.createElement('div');
+  const nameEl = document.createElement('div');
+  nameEl.className = 'tool-name';
+  nameEl.textContent = tool.name;
+  const catEl = document.createElement('div');
+  catEl.className = 'tool-cat';
+  catEl.textContent = tool.cat;
+  details.appendChild(nameEl);
+  details.appendChild(catEl);
+
+  info.appendChild(icon);
+  info.appendChild(details);
+
+  const costEl = document.createElement('div');
+  costEl.className = 'tool-cost';
+  costEl.textContent = '$' + tool.cost + '/mo';
+
+  const removeBtn = document.createElement('button');
+  removeBtn.className = 'tool-remove';
+  removeBtn.textContent = '\u00D7';
+  removeBtn.onclick = () => removeTool(index);
+
+  div.appendChild(info);
+  div.appendChild(costEl);
+  div.appendChild(removeBtn);
+  return div;
+}
+
+function render() {
+  const list = document.getElementById('toolList');
+  const empty = document.getElementById('emptyState');
+  const results = document.getElementById('results');
+  const gate = document.getElementById('gateSection');
+
+  if (addedTools.length === 0) {
+    list.innerHTML = '';
+    list.appendChild(empty);
+    empty.style.display = 'block';
+    results.style.display = 'none';
+    gate.style.display = 'none';
+    updateHeader(0, 0);
+    return;
+  }
+
+  empty.style.display = 'none';
+  list.innerHTML = '';
+  addedTools.forEach((tool, i) => list.appendChild(renderToolItem(tool, i)));
+
+  const monthly = addedTools.reduce((s, t) => s + t.cost, 0);
+  const yearly = monthly * 12;
+  const avg = addedTools.length ? Math.round(monthly / addedTools.length) : 0;
+  const max = addedTools.reduce((m, t) => t.cost > m.cost ? t : m, {cost:0, name:'-'});
+  const potentialSavings = addedTools.reduce((s, t) => {
+    if (t.dbIndex >= 0) return s + (t.cost - TOOLS_DB[t.dbIndex].alt.cost);
+    return s + Math.round(t.cost * 0.5);
+  }, 0);
+
+  updateHeader(addedTools.length, monthly);
+  document.getElementById('resultMonthly').textContent = '$' + monthly;
+  document.getElementById('resultYearly').textContent = '$' + yearly.toLocaleString() + '/year';
+  document.getElementById('bkCount').textContent = addedTools.length;
+  document.getElementById('bkAvg').textContent = '$' + avg;
+  document.getElementById('bkMax').textContent = max.name + ' ($' + max.cost + ')';
+  document.getElementById('bkSave').textContent = '$' + potentialSavings + '/mo';
+
+  const verdict = document.getElementById('verdict');
+  if (monthly <= 50) {
+    verdict.className = 'verdict lean';
+    verdict.textContent = '$' + monthly + '/mo is lean. running tight. respect.';
+  } else if (monthly <= 200) {
+    verdict.className = 'verdict moderate';
+    verdict.textContent = '$' + monthly + '/mo is moderate. could trim $' + potentialSavings + '/mo with free alternatives.';
+  } else {
+    verdict.className = 'verdict bloated';
+    verdict.textContent = '$' + monthly + '/mo is bloated. save $' + potentialSavings + '/mo ($' + (potentialSavings*12) + '/yr). that\'s real money.';
+  }
+
+  document.getElementById('auditData').value = JSON.stringify({
+    tools: addedTools.map(t => ({name: t.name, cost: t.cost})),
+    monthly, yearly, savings: potentialSavings
+  });
+
+  results.style.display = 'block';
+  gate.style.display = unlocked ? 'none' : 'block';
+  if (unlocked) showAlternatives();
+}
+
+function removeTool(index) {
+  const tool = addedTools[index];
+  if (tool.dbIndex >= 0) {
+    document.querySelectorAll('.quick-btn').forEach(btn => {
+      if (parseInt(btn.dataset.index) === tool.dbIndex) btn.classList.remove('added');
+    });
+  }
+  addedTools.splice(index, 1);
+  render();
+}
+
+function updateHeader(count, monthly) {
+  document.getElementById('toolCount').textContent = count;
+  document.getElementById('monthlyBurn').textContent = '$' + monthly;
+  document.getElementById('yearlyBurn').textContent = '$' + (monthly * 12).toLocaleString();
+}
+
+function renderAltCard(tool) {
+  let alt;
+  if (tool.dbIndex >= 0) {
+    alt = TOOLS_DB[tool.dbIndex].alt;
+  } else {
+    alt = {name:'Open source / free tier',cost:0,diff:'varies',note:'Search GitHub for open source alternatives.'};
+  }
+  const save = tool.cost - alt.cost;
+  const card = document.createElement('div');
+  card.className = 'alt-card';
+
+  const left = document.createElement('div');
+  left.className = 'alt-left';
+  const cur = document.createElement('div');
+  cur.className = 'alt-current';
+  cur.textContent = tool.name + ' ($' + tool.cost + '/mo)';
+  const altName = document.createElement('div');
+  altName.className = 'alt-name';
+  altName.textContent = alt.name + (alt.cost > 0 ? ' ($' + alt.cost + '/mo)' : ' (free)');
+  const desc = document.createElement('div');
+  desc.className = 'alt-desc';
+  desc.textContent = alt.note + ' Migration: ' + alt.diff + '.';
+  left.appendChild(cur);
+  left.appendChild(altName);
+  left.appendChild(desc);
+
+  const right = document.createElement('div');
+  right.className = 'alt-save';
+  const amount = document.createElement('div');
+  amount.className = 'save-amount';
+  amount.textContent = save > 0 ? '-$' + save : '$0';
+  const label = document.createElement('div');
+  label.className = 'save-label';
+  label.textContent = '/mo saved';
+  right.appendChild(amount);
+  right.appendChild(label);
+
+  card.appendChild(left);
+  card.appendChild(right);
+  return card;
+}
+
+function showAlternatives() {
+  if (addedTools.length === 0) return;
+  const section = document.getElementById('altSection');
+  const list = document.getElementById('altList');
+  section.classList.add('visible');
+  list.innerHTML = '';
+  addedTools.forEach(tool => list.appendChild(renderAltCard(tool)));
+}
+
+function shareOnX() {
+  const monthly = addedTools.reduce((s, t) => s + t.cost, 0);
+  const count = addedTools.length;
+  const text = 'just audited my SaaS stack.\n\n' + count + ' tools. $' + monthly + '/mo burn. $' + (monthly*12).toLocaleString() + '/yr.\n\naudit yours free:';
+  const url = 'https://saas-stack-audit.surge.sh';
+  window.open('https://x.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank');
+}
+
+init();
+</script>
+
+</body>
+</html>

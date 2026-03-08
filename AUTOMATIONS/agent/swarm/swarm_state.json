@@ -76,7 +76,10 @@
     },
     "video_factory": {
       "installed_at": "2026-03-06T23:06:18.197386",
-      "status": "ACTIVE"
+      "status": "KILLED",
+      "killed_at": "2026-03-08T11:15:00Z",
+      "killed_by": "swarm_brain_cycle6",
+      "reason": "Zero distribution channels (no YouTube/TikTok/Instagram). 15 videos in pipeline with no path to audience. Token waste. Reinstate when video account created."
     },
     "image_factory": {
       "installed_at": "2026-03-06T23:06:18.222274",
@@ -105,9 +108,15 @@
   },
   "deployed_at": "2026-03-06T23:06:18.311187",
   "total_runs": 0,
-  "brain_cycles": 5,
-  "last_brain_cycle": "2026-03-08T03:15:00Z",
-  "active_agents": 22,
-  "killed_agents": 2,
-  "conservation_mode": true
+  "brain_cycles": 7,
+  "last_brain_cycle": "2026-03-08T15:30:00Z",
+  "active_agents": 21,
+  "killed_agents": 3,
+  "hibernated_agents": 5,
+  "conservation_mode": true,
+  "cycle7_theme": "STOP_PRODUCING_START_FIXING",
+  "mandates_issued": 4,
+  "mandates_pending": ["fix_dead_ctas", "fix_generators", "cloudflare_migration_poc", "fix_openclaw_pipeline"],
+  "daily_runs_target": 48,
+  "feedback_loop_overrides": 5
 }

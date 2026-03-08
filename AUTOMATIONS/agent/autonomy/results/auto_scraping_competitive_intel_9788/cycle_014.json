@@ -1,0 +1,213 @@
+{
+  "cycle": 14,
+  "cycle_start": "2026-03-08T16:48:16.927113",
+  "cycle_end": "2026-03-08T16:48:16.930151",
+  "sources_scraped": [
+    "reddit_155305",
+    "twitter_162130",
+    "hn_ph_132100"
+  ],
+  "raw_items_loaded": 89,
+  "filtered_by_score": 17,
+  "new_intel_rows_written": 17,
+  "alerts_generated": 8,
+  "version_changes_detected": 0,
+  "top_signals": [
+    {
+      "text": "How to run Qwen 3.5 locally Unsloth guide on running Qwen 3.5 locally. 360 pts, 111 comments. Local LLM tooling keeps trending. Unsloth enables 2x faster fine-tuning with 50% less memory. Direct compe",
+      "source": "HN_FRONT",
+      "url": "https://unsloth.ai",
+      "score": 15,
+      "category": "HIGH_VALUE_INTEL",
+      "keywords": [
+        "competitor",
+        "gumroad"
+      ],
+      "engagement": 360
+    },
+    {
+      "text": "CLI RSS/Atom feed reader inspired by Taskwarrior, synced using Git 37 pts, 13 comments. Git-synced RSS reader for CLI. Tool for monitoring content sources. Could integrate into our research pipeline f",
+      "source": "HN_FRONT",
+      "url": "https://github.com/kantord",
+      "score": 15,
+      "category": "HIGH_VALUE_INTEL",
+      "keywords": [
+        "competitor",
+        "arr"
+      ],
+      "engagement": 37
+    },
+    {
+      "text": "GetMimic - Generate viral social & chat mockups in seconds with AI AI tool for generating social media mockups. Direct competitor/tool for our content creation pipeline. Could use for creating fake so",
+      "source": "PRODUCTHUNT",
+      "url": "https://www.producthunt.com/products/getmimic",
+      "score": 14,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "competitor",
+        "viral",
+        "ai tool"
+      ],
+      "engagement": 0
+    },
+    {
+      "text": "Phi-4-reasoning-vision and lessons of training multimodal reasoning model 61 pts, 4 comments. Microsoft's Phi-4 multimodal reasoning model. Small model doing vision + reasoning. Signal: small speciali",
+      "source": "HN_FRONT",
+      "url": "https://microsoft.com",
+      "score": 12,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "aso",
+        "solopreneur"
+      ],
+      "engagement": 61
+    },
+    {
+      "text": "Aivaro - Open-source AI alternative to Zapier 4 pts (early). Open-source AI Zapier alternative. Direct competitor intelligence for automation tools market. If this gains traction, validates demand for",
+      "source": "HN_SHOW",
+      "url": "https://github.com/Abelo9996/Aivaro",
+      "score": 12,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "competitor",
+        "automation"
+      ],
+      "engagement": 4
+    },
+    {
+      "text": "Utter - a local-first dictation app for Mac and iPhone 5 pts, 6 comments. Local-first dictation app. Competitor analysis for productivity tools. Shows demand for privacy-focused, local-first apps. Con",
+      "source": "HN_SHOW",
+      "url": "https://utter.to/",
+      "score": 10,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "competitor"
+      ],
+      "engagement": 5
+    },
+    {
+      "text": "Coursekit - Turn your course into embeddable AI agents Convert course content into AI agents. Relevant for our digital products strategy: could turn Gumroad PDFs into interactive AI agents. Monetizati",
+      "source": "PRODUCTHUNT",
+      "url": "https://www.producthunt.com/products/coursekit",
+      "score": 10,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "gumroad",
+        "digital product"
+      ],
+      "engagement": 0
+    },
+    {
+      "text": "ItsyConnect - Manage App Store Connect from macOS desktop Desktop app for App Store Connect management. Relevant to our app factory operations. Could streamline managing multiple apps in App Store. Ni",
+      "source": "PRODUCTHUNT",
+      "url": "https://www.producthunt.com/products/itsyconnect",
+      "score": 10,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "app store"
+      ],
+      "engagement": 0
+    },
+    {
+      "text": "Spoke - Private voice-to-text for macOS. Hold, speak, done Privacy-focused voice-to-text for Mac. Competitor to Utter (also launched today on HN). Validates demand for local/private dictation. Two lau",
+      "source": "PRODUCTHUNT",
+      "url": "https://www.producthunt.com/products/spoke-hold-speak-done",
+      "score": 10,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "competitor"
+      ],
+      "engagement": 0
+    }
+  ],
+  "p0_alerts": [
+    {
+      "text": "How to run Qwen 3.5 locally Unsloth guide on running Qwen 3.5 locally. 360 pts, 111 comments. Local LLM tooling keeps trending. Unsloth enables 2x faster fine-tuning with 50% less memory. Direct compe",
+      "source": "HN_FRONT",
+      "url": "https://unsloth.ai",
+      "score": 15,
+      "category": "HIGH_VALUE_INTEL",
+      "keywords": [
+        "competitor",
+        "gumroad"
+      ],
+      "engagement": 360
+    },
+    {
+      "text": "CLI RSS/Atom feed reader inspired by Taskwarrior, synced using Git 37 pts, 13 comments. Git-synced RSS reader for CLI. Tool for monitoring content sources. Could integrate into our research pipeline f",
+      "source": "HN_FRONT",
+      "url": "https://github.com/kantord",
+      "score": 15,
+      "category": "HIGH_VALUE_INTEL",
+      "keywords": [
+        "competitor",
+        "arr"
+      ],
+      "engagement": 37
+    },
+    {
+      "text": "GetMimic - Generate viral social & chat mockups in seconds with AI AI tool for generating social media mockups. Direct competitor/tool for our content creation pipeline. Could use for creating fake so",
+      "source": "PRODUCTHUNT",
+      "url": "https://www.producthunt.com/products/getmimic",
+      "score": 14,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "competitor",
+        "viral",
+        "ai tool"
+      ],
+      "engagement": 0
+    },
+    {
+      "text": "Aivaro - Open-source AI alternative to Zapier 4 pts (early). Open-source AI Zapier alternative. Direct competitor intelligence for automation tools market. If this gains traction, validates demand for",
+      "source": "HN_SHOW",
+      "url": "https://github.com/Abelo9996/Aivaro",
+      "score": 12,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "competitor",
+        "automation"
+      ],
+      "engagement": 4
+    },
+    {
+      "text": "Utter - a local-first dictation app for Mac and iPhone 5 pts, 6 comments. Local-first dictation app. Competitor analysis for productivity tools. Shows demand for privacy-focused, local-first apps. Con",
+      "source": "HN_SHOW",
+      "url": "https://utter.to/",
+      "score": 10,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "competitor"
+      ],
+      "engagement": 5
+    }
+  ],
+  "p1_alerts": [
+    {
+      "text": "Phi-4-reasoning-vision and lessons of training multimodal reasoning model 61 pts, 4 comments. Microsoft's Phi-4 multimodal reasoning model. Small model doing vision + reasoning. Signal: small speciali",
+      "source": "HN_FRONT",
+      "url": "https://microsoft.com",
+      "score": 12,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "aso",
+        "solopreneur"
+      ],
+      "engagement": 61
+    }
+  ],
+  "p2_alerts": [
+    {
+      "text": "Coursekit - Turn your course into embeddable AI agents Convert course content into AI agents. Relevant for our digital products strategy: could turn Gumroad PDFs into interactive AI agents. Monetizati",
+      "source": "PRODUCTHUNT",
+      "url": "https://www.producthunt.com/products/coursekit",
+      "score": 10,
+      "category": "MARKET_SIGNAL",
+      "keywords": [
+        "gumroad",
+        "digital product"
+      ],
+      "engagement": 0
+    }
+  ]
+}

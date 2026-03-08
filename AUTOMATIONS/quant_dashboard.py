@@ -386,8 +386,8 @@ class AlertsPanel(Static):
                     age_str = f"{int(age.total_seconds() / 86400)}d ago"
                 log.write_line(f"───────────────────────")
                 log.write_line(f"Last rebalance: {age_str}")
-            except:
-                pass
+            except Exception:
+                pass  # Age display is cosmetic; ignore stat errors
 
         except Exception as e:
             log.write_line(f"Error loading recommendations: {str(e)}")

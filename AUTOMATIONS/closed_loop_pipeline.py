@@ -552,8 +552,8 @@ def show_status():
                 if m.get("step") == "metrics":
                     print(f"  [{m['timestamp'][:16]}] analyzed={m['analyzed']:,} hot={m['hot_leads']:,} "
                           f"warm={m['warm_leads']:,} pipeline={m['pipeline_entries']:,}")
-            except:
-                pass
+            except Exception:
+                pass  # Skip malformed metrics lines
 
 
 # ---------------------------------------------------------------------------

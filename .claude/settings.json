@@ -29,6 +29,11 @@
           },
           {
             "type": "command",
+            "command": "python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/session_briefing.py --save",
+            "timeout": 25
+          },
+          {
+            "type": "command",
             "command": "node /Users/macbookpro/.claude/plugins/cache/claude-subconscious/hooks/silent-npx.cjs tsx /Users/macbookpro/.claude/plugins/cache/claude-subconscious/scripts/session_start.ts",
             "timeout": 10
           },
@@ -76,6 +81,11 @@
       {
         "matcher": "*",
         "hooks": [
+          {
+            "type": "command",
+            "command": "bash /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/log_user_prompts.sh",
+            "timeout": 3
+          },
           {
             "type": "command",
             "command": "node /Users/macbookpro/.claude/plugins/cache/claude-subconscious/hooks/silent-npx.cjs tsx /Users/macbookpro/.claude/plugins/cache/claude-subconscious/scripts/sync_letta_memory.ts",

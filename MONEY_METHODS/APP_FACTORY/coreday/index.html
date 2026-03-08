@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#10B981">
+<meta name="description" content="CoreDay: Pick your 3 non-negotiables. Do all 3 = Win Day. Build a streak. Anti-habit-tracker for people who hate habit trackers.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CoreDay">
+<meta property="og:title" content="CoreDay — 3 non-negotiables. Daily.">
+<meta property="og:description" content="Stop tracking 10 habits. Pick 3 non-negotiables. Do all 3 = Win Day. That's it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coreday.surge.sh">
+<title>CoreDay — Your 3 Non-Negotiables</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<script defer data-domain="coreday.surge.sh" src="https://plausible.io/js/script.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080D0A;--bg2:#0E1510;--card:#131C14;--card2:#192118;--card3:#1E2920;
+  --green:#10B981;--green-light:#34D399;--green-bright:#6EE7B7;--green-dim:#0A2C1E;
+  --green-glow:rgba(16,185,129,0.15);--amber:#F59E0B;--amber-dim:#2A1F06;
+  --red:#EF4444;--blue:#3B82F6;--purple:#8B5CF6;
+  --text:#ECFDF5;--text2:#6EE7B7;--text3:#374D3F;--text4:#2A3B2F;
+  --border:#1A2E22;--border2:#22403A;
+  --radius:18px;--radius-sm:12px;--radius-xs:8px;
+  --safe-bottom:env(safe-area-inset-bottom,0px);
+}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{max-width:430px;margin:0 auto;position:relative;min-height:100vh}
+.screen{display:none;flex-direction:column;min-height:100vh;padding-bottom:calc(72px + var(--safe-bottom))}
+.screen.active{display:flex}
+.header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,var(--bg) 80%,transparent);padding:52px 20px 12px;display:flex;align-items:center;justify-content:space-between}
+.header-logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:34px;height:34px;background:var(--green-dim);border:1px solid var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.logo-text{font-size:1.15rem;font-weight:700;letter-spacing:-.3px}
+.logo-text span{color:var(--green-light)}
+.header-action{background:var(--card);border:1px solid var(--border);color:var(--text2);height:36px;padding:0 14px;border-radius:50px;display:flex;align-items:center;gap:6px;cursor:pointer;font-size:.85rem;font-weight:600;transition:background .15s}
+.header-action:active{background:var(--card2)}
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(13,21,16,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;z-index:100;padding-bottom:var(--safe-bottom)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;padding:10px 4px;cursor:pointer;transition:all .15s;border:none;background:none;color:var(--text3);-webkit-tap-highlight-color:transparent}
+.nav-item.active{color:var(--green-light)}
+.nav-item svg{width:22px;height:22px;margin-bottom:3px}
+.nav-item span{font-size:10px;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.nav-item:active{transform:scale(.9)}
+.content{flex:1;padding:0 16px 16px}
+.card{background:var(--card);border-radius:var(--radius);padding:16px;border:1px solid var(--border)}
+.card+.card{margin-top:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;border:none;transition:all .15s;width:100%;-webkit-tap-highlight-color:transparent;letter-spacing:-.2px}
+.btn:active{transform:scale(.96)}
+.btn-primary{background:var(--green);color:#030A06}
+.btn-primary:active{background:var(--green-light)}
+.btn-secondary{background:var(--card2);color:var(--text);border:1px solid var(--border)}
+.btn-ghost{background:transparent;color:var(--text2);padding:12px;font-weight:500}
+.btn-sm{padding:10px 20px;font-size:.875rem}
+.btn-danger{background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2)}
+.core-card{background:var(--card);border-radius:var(--radius);border:2px solid var(--border);display:flex;gap:14px;align-items:center;padding:18px 16px;cursor:pointer;transition:all .2s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent;user-select:none}
+.core-card+.core-card{margin-top:12px}
+.core-card:active{transform:scale(.97)}
+.core-card.done{border-color:var(--green);background:var(--green-dim)}
+.core-card.done::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,var(--green-glow) 0%,transparent 70%);pointer-events:none}
+.core-emoji-wrap{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;background:var(--card2);border:1px solid var(--border);transition:all .2s}
+.core-card.done .core-emoji-wrap{background:rgba(16,185,129,.15);border-color:var(--green)}
+.core-info{flex:1;min-width:0}
+.core-name{font-size:1.05rem;font-weight:700;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.core-sub{font-size:.78rem;color:var(--text3);margin-top:3px;font-weight:500}
+.core-card.done .core-sub{color:var(--green)}
+.core-check{width:32px;height:32px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .25s cubic-bezier(.34,1.56,.64,1);background:transparent}
+.core-card.done .core-check{background:var(--green);border-color:var(--green);box-shadow:0 0 12px rgba(16,185,129,.4)}
+.core-check svg{width:16px;height:16px;opacity:0;transition:opacity .2s}
+.core-card.done .core-check svg{opacity:1}
+.win-banner{border-radius:var(--radius);overflow:hidden;position:relative;background:linear-gradient(135deg,#0A2C1E 0%,#0D3825 50%,#0A2C1E 100%);border:1px solid var(--green);padding:20px;text-align:center;margin-bottom:10px}
+.win-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(16,185,129,.2) 0%,transparent 60%);pointer-events:none}
+.win-title{font-size:1.4rem;font-weight:800;color:var(--green-light);letter-spacing:-.5px}
+.win-subtitle{font-size:.9rem;color:var(--green);margin-top:4px}
+.win-streak-num{font-size:3rem;font-weight:900;color:var(--green-bright);line-height:1;margin:8px 0 2px}
+.win-streak-label{font-size:.8rem;color:var(--green);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.progress-section{display:flex;align-items:center;justify-content:center;margin:12px 0 20px}
+.progress-ring-wrap{position:relative;width:120px;height:120px}
+.progress-ring-wrap svg{transform:rotate(-90deg)}
+.progress-ring-bg{fill:none;stroke:var(--border);stroke-width:8}
+.progress-ring-fill{fill:none;stroke:var(--green);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset .5s ease}
+.progress-ring-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.progress-count{font-size:2.2rem;font-weight:900;color:var(--text);line-height:1}
+.progress-label{font-size:.72rem;color:var(--text3);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-top:2px}
+.progress-info{margin-left:24px}
+.progress-stat{margin-bottom:10px}
+.progress-stat-num{font-size:1.6rem;font-weight:800;color:var(--text);line-height:1}
+.progress-stat-label{font-size:.75rem;color:var(--text3);font-weight:500;margin-top:1px}
+.progress-stat-num .unit{font-size:1rem;font-weight:600;color:var(--text3)}
+.progress-stat-num.green{color:var(--green-light)}
+.date-section{text-align:center;padding:0 0 16px}
+.date-day{font-size:1.1rem;font-weight:700;color:var(--text)}
+.date-sub{font-size:.8rem;color:var(--text3);margin-top:2px}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;margin-top:20px}
+.section-title{font-size:.8rem;font-weight:700;color:var(--text3);letter-spacing:1px;text-transform:uppercase}
+.section-action{font-size:.8rem;color:var(--green);font-weight:600;cursor:pointer}
+.heatmap-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.heatmap-day-label{font-size:.65rem;font-weight:600;color:var(--text3);text-align:center;padding-bottom:4px;text-transform:uppercase}
+.heatmap-cell{aspect-ratio:1;border-radius:6px;background:var(--card2);cursor:pointer;transition:transform .1s;position:relative;display:flex;align-items:center;justify-content:center}
+.heatmap-cell:active{transform:scale(.9)}
+.heatmap-cell.win{background:var(--green)}
+.heatmap-cell.partial{background:rgba(16,185,129,.3)}
+.heatmap-cell.today{box-shadow:0 0 0 2px var(--green-light)}
+.heatmap-cell.future{background:var(--card);opacity:.3}
+.heatmap-cell.empty{background:transparent}
+.heatmap-cell-num{font-size:.6rem;color:var(--text3);font-weight:700}
+.heatmap-cell.win .heatmap-cell-num{color:rgba(255,255,255,.7)}
+.heatmap-cell.today .heatmap-cell-num{color:var(--green-light)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 10px;text-align:center}
+.stat-num{font-size:1.6rem;font-weight:900;color:var(--text);line-height:1}
+.stat-num.green{color:var(--green-light)}
+.stat-label{font-size:.68rem;color:var(--text3);font-weight:600;margin-top:4px;letter-spacing:.4px}
+.history-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.history-item:last-child{border-bottom:none}
+.history-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;background:var(--card2);border:2px solid var(--border)}
+.history-dot.win{background:var(--green);border-color:var(--green);box-shadow:0 0 6px rgba(16,185,129,.4)}
+.history-dot.partial{background:var(--amber);border-color:var(--amber)}
+.history-date{flex:1;font-size:.875rem;font-weight:600;color:var(--text)}
+.history-score{font-size:.8rem;color:var(--text3);font-weight:500}
+.history-score.win{color:var(--green);font-weight:700}
+.settings-section{margin-top:20px}
+.settings-title{font-size:.75rem;font-weight:700;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.settings-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.settings-row{display:flex;align-items:center;padding:14px 16px;border-bottom:1px solid var(--border);gap:12px;cursor:pointer;transition:background .1s;-webkit-tap-highlight-color:transparent}
+.settings-row:last-child{border-bottom:none}
+.settings-row:active{background:var(--card2)}
+.settings-icon{font-size:20px;width:32px;text-align:center;flex-shrink:0}
+.settings-label{flex:1;font-size:.95rem;font-weight:600;color:var(--text)}
+.settings-value{font-size:.85rem;color:var(--text3)}
+.settings-arrow{font-size:.85rem;color:var(--text3)}
+.pro-badge{background:linear-gradient(135deg,#F59E0B,#D97706);color:#000;font-size:.65rem;font-weight:800;padding:2px 7px;border-radius:20px;letter-spacing:.5px}
+.core-editor{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;-webkit-tap-highlight-color:transparent}
+.core-editor:last-child{border-bottom:none}
+.core-editor:active{background:var(--card2)}
+.core-editor-num{width:28px;height:28px;border-radius:50%;background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--text3);flex-shrink:0}
+.core-editor-emoji{font-size:22px;width:36px;text-align:center}
+.core-editor-name{flex:1;font-size:.95rem;font-weight:600;color:var(--text)}
+.core-editor-edit{font-size:.8rem;color:var(--text3)}
+.onboarding-screen{position:fixed;inset:0;z-index:200;background:var(--bg);display:flex;flex-direction:column;max-width:430px;margin:0 auto;padding:60px 24px 40px;overflow-y:auto}
+.onboarding-screen.hidden{display:none}
+.onboarding-top{text-align:center;margin-bottom:32px}
+.onboarding-icon{font-size:56px;margin-bottom:16px}
+.onboarding-title{font-size:1.9rem;font-weight:900;letter-spacing:-.8px;line-height:1.1;margin-bottom:10px}
+.onboarding-title .highlight{color:var(--green-light)}
+.onboarding-sub{font-size:.95rem;color:var(--text3);line-height:1.6;max-width:280px;margin:0 auto}
+.onboarding-cores{margin:24px 0}
+.onboarding-core-label{font-size:.75rem;font-weight:700;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.onboarding-core-row{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:10px;cursor:pointer;transition:border-color .15s}
+.onboarding-core-row:active{border-color:var(--green)}
+.onboarding-emoji-btn{width:42px;height:42px;border-radius:12px;background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;flex-shrink:0}
+.onboarding-input{flex:1;background:transparent;border:none;outline:none;font-size:1rem;font-weight:600;color:var(--text);font-family:inherit}
+.onboarding-input::placeholder{color:var(--text3);font-weight:500}
+.onboarding-hint{font-size:.8rem;color:var(--text3);text-align:center;margin-bottom:20px;line-height:1.5}
+.onboarding-skip{text-align:center;margin-top:16px}
+.onboarding-skip a{color:var(--text3);font-size:.85rem;cursor:pointer}
+.modal-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-sheet{background:var(--card);border-radius:24px 24px 0 0;padding:20px 20px calc(24px + var(--safe-bottom));width:100%;max-width:430px;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,.72,0,1)}
+.modal-overlay.open .modal-sheet{transform:translateY(0)}
+.modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 20px}
+.modal-title{font-size:1.1rem;font-weight:700;margin-bottom:16px;text-align:center}
+.emoji-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:16px}
+.emoji-btn{aspect-ratio:1;font-size:1.4rem;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--card2);border:2px solid transparent;cursor:pointer;transition:all .1s;-webkit-tap-highlight-color:transparent}
+.emoji-btn:active{transform:scale(.85)}
+.emoji-btn.selected{border-color:var(--green);background:var(--green-dim)}
+.modal-input-wrap{margin-bottom:14px}
+.modal-input{width:100%;background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 14px;font-size:1rem;font-weight:600;color:var(--text);font-family:inherit;outline:none}
+.modal-input:focus{border-color:var(--green)}
+.modal-input::placeholder{color:var(--text3);font-weight:500}
+.confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:999;opacity:0;transition:opacity .3s}
+.confetti-canvas.show{opacity:1}
+.pro-gate{background:linear-gradient(135deg,var(--card) 0%,var(--card2) 100%);border:1px solid rgba(245,158,11,.3);border-radius:var(--radius);padding:20px;text-align:center;margin-top:10px}
+.toast{position:fixed;bottom:calc(80px + var(--safe-bottom) + 8px);left:50%;transform:translateX(-50%) translateY(20px);z-index:500;background:var(--card2);border:1px solid var(--border);border-radius:50px;padding:10px 20px;font-size:.875rem;font-weight:600;color:var(--text);opacity:0;transition:all .25s;white-space:nowrap;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.green{background:var(--green-dim);border-color:var(--green);color:var(--green-bright)}
+.empty-state{text-align:center;padding:40px 20px}
+.empty-icon{font-size:3rem;margin-bottom:12px}
+.empty-title{font-size:1rem;font-weight:700;margin-bottom:6px}
+.empty-sub{font-size:.875rem;color:var(--text3);line-height:1.5}
+.mt4{margin-top:4px}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt20{margin-top:20px}
+.flex-row{display:flex;align-items:center;gap:8px}
+.flex-between{display:flex;align-items:center;justify-content:space-between}
+.text-green{color:var(--green-light)}.text-dim{color:var(--text3)}.text-sm{font-size:.85rem}.fw7{font-weight:700}.center{text-align:center}
+</style>
+</head>
+<body>
+<div class="onboarding-screen" id="onboarding">
+  <div class="onboarding-top">
+    <div class="onboarding-icon">&#127919;</div>
+    <h1 class="onboarding-title">Pick your <span class="highlight">3 non-negotiables</span></h1>
+    <p class="onboarding-sub">Do all 3 = a Win Day. Build a streak. That's the whole app.</p>
+  </div>
+  <div class="onboarding-cores" id="onboarding-cores"></div>
+  <p class="onboarding-hint">Pick 3 things that, if you do them, make today a success. Simple.</p>
+  <button class="btn btn-primary" id="onboarding-start">Start Tracking &#8594;</button>
+  <div class="onboarding-skip"><a id="onboarding-skip">skip — use defaults</a></div>
+</div>
+
+<div class="screen" id="screen-today">
+  <div class="header">
+    <div class="header-logo">
+      <div class="logo-icon">&#127919;</div>
+      <div class="logo-text">Core<span>Day</span></div>
+    </div>
+    <button class="header-action" id="share-btn">Share &#8599;</button>
+  </div>
+  <div class="content" id="today-content"></div>
+</div>
+
+<div class="screen" id="screen-history">
+  <div class="header">
+    <div class="header-logo">
+      <div class="logo-icon">&#127919;</div>
+      <div class="logo-text">Core<span>Day</span></div>
+    </div>
+  </div>
+  <div class="content" id="history-content"></div>
+</div>
+
+<div class="screen" id="screen-settings">
+  <div class="header">
+    <div class="header-logo">
+      <div class="logo-icon">&#127919;</div>
+      <div class="logo-text">Core<span>Day</span></div>
+    </div>
+  </div>
+  <div class="content" id="settings-content"></div>
+</div>
+
+<nav class="bottom-nav" id="bottom-nav">
+  <button class="nav-item active" data-screen="today">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    <span>Today</span>
+  </button>
+  <button class="nav-item" data-screen="history">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    <span>History</span>
+  </button>
+  <button class="nav-item" data-screen="settings">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06-.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    <span>Settings</span>
+  </button>
+</nav>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal-sheet" id="modal-sheet">
+    <div class="modal-handle"></div>
+    <div id="modal-content"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<canvas class="confetti-canvas" id="confetti"></canvas>
+
+<script>
+// STATE
+const DEFAULTS={cores:[{id:1,emoji:'\u{1F4AA}',name:'Exercise'},{id:2,emoji:'\u{1F4DA}',name:'Read 30 min'},{id:3,emoji:'\u{1F4A7}',name:'Drink 2L water'}],log:{},setupDone:false,isPro:false,proEmailCaptured:false};
+
+function loadState(){try{const r=localStorage.getItem('coreday_v1');return r?{...DEFAULTS,...JSON.parse(r)}:{...DEFAULTS}}catch{return{...DEFAULTS}}}
+function saveState(){localStorage.setItem('coreday_v1',JSON.stringify(state))}
+let state=loadState();
+
+// DATE UTILS
+function getToday(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function dateStr(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function parseDate(s){const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)}
+function getDayLabel(s){const d=parseDate(s),today=new Date();today.setHours(0,0,0,0);const t=new Date(d);t.setHours(0,0,0,0);const diff=(today-t)/86400000;if(diff===0)return'Today';if(diff===1)return'Yesterday';return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}
+function formatDateHeader(){const d=new Date();return{day:d.toLocaleDateString('en-US',{weekday:'long'}),date:d.toLocaleDateString('en-US',{month:'long',day:'numeric'})}}
+
+// STREAK
+function isWinDay(k){const l=state.log[k];return l&&l.completed&&l.completed.length>=state.cores.length}
+function calculateCurrentStreak(){let streak=0,d=new Date(),todayWin=isWinDay(getToday());if(todayWin){let c=dateStr(d);while(isWinDay(c)){streak++;d.setDate(d.getDate()-1);c=dateStr(d)}}else{d.setDate(d.getDate()-1);let c=dateStr(d);while(isWinDay(c)){streak++;d.setDate(d.getDate()-1);c=dateStr(d)}}return streak}
+function calculateBestStreak(){const keys=Object.keys(state.log).sort();if(!keys.length)return 0;let best=0,current=0,prev=null;for(const k of keys){if(!isWinDay(k)){best=Math.max(best,current);current=0;prev=null;continue}if(!prev){current=1;prev=k;continue}const diff=(parseDate(k)-parseDate(prev))/86400000;if(diff===1)current++;else{best=Math.max(best,current);current=1}prev=k}return Math.max(best,current)}
+function getMonthWinRate(){const d=new Date();let wins=0,total=0;for(let i=0;i<d.getDate();i++){const day=new Date(d.getFullYear(),d.getMonth(),i+1);const key=dateStr(day);if(key<=getToday()){total++;if(isWinDay(key))wins++}}return total>0?Math.round(wins/total*100):0}
+
+// ESCAPE
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+// TODAY
+function renderToday(){
+  const today=getToday(),log=state.log[today]||{completed:[]},completed=log.completed||[];
+  const total=state.cores.length,done=completed.length,allDone=done>=total;
+  const streak=calculateCurrentStreak(),{day,date}=formatDateHeader();
+  const C=2*Math.PI*44,offset=C*(1-done/total);
+  const el=document.getElementById('today-content');
+
+  // Build DOM safely
+  el.innerHTML='';
+
+  // Date header
+  const dateDiv=document.createElement('div');dateDiv.className='date-section';
+  const dayEl=document.createElement('div');dayEl.className='date-day';dayEl.textContent=day;
+  const dateEl=document.createElement('div');dateEl.className='date-sub';dateEl.textContent=date;
+  dateDiv.appendChild(dayEl);dateDiv.appendChild(dateEl);el.appendChild(dateDiv);
+
+  if(allDone){
+    // Win banner
+    const banner=document.createElement('div');banner.className='win-banner';
+    banner.innerHTML=`<div class="win-title">&#127942; Win Day!</div><div class="win-streak-num">${streak}</div><div class="win-streak-label">day streak</div><div class="win-subtitle" style="margin-top:8px">All ${total} cores done. You showed up.</div>`;
+    el.appendChild(banner);
+  }else{
+    // Progress ring
+    const ps=document.createElement('div');ps.className='progress-section';
+    ps.innerHTML=`<div class="progress-ring-wrap"><svg width="120" height="120" viewBox="0 0 120 120"><circle class="progress-ring-bg" cx="60" cy="60" r="44"/><circle class="progress-ring-fill" cx="60" cy="60" r="44" stroke-dasharray="${C}" stroke-dashoffset="${offset}"/></svg><div class="progress-ring-inner"><div class="progress-count">${done}/${total}</div><div class="progress-label">Cores</div></div></div><div class="progress-info"><div class="progress-stat"><div class="progress-stat-num ${streak>0?'green':''}">${streak}<span class="unit"> days</span></div><div class="progress-stat-label">Current streak</div></div><div class="progress-stat"><div class="progress-stat-num">${getMonthWinRate()}<span class="unit">%</span></div><div class="progress-stat-label">Win rate</div></div></div>`;
+    el.appendChild(ps);
+  }
+
+  // Section header
+  const sh=document.createElement('div');sh.className='section-header';
+  const st=document.createElement('div');st.className='section-title';st.textContent='Non-Negotiables';
+  const sa=document.createElement('div');sa.className='section-action text-dim text-sm';sa.textContent='tap to complete';
+  sh.appendChild(st);sh.appendChild(sa);el.appendChild(sh);
+
+  // Core cards
+  for(const core of state.cores){
+    const isDone=completed.includes(core.id);
+    const card=document.createElement('div');
+    card.className=`core-card${isDone?' done':''}`;
+    card.dataset.coreId=core.id;
+    card.innerHTML=`<div class="core-emoji-wrap">${core.emoji}</div><div class="core-info"><div class="core-name">${esc(core.name)}</div><div class="core-sub">${isDone?'&#10003; Done today':'Tap to mark complete'}</div></div><div class="core-check"><svg fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>`;
+    card.addEventListener('click',()=>toggleCore(core.id));
+    el.appendChild(card);
+  }
+
+  if(!allDone){
+    const rem=document.createElement('p');rem.className='center text-dim text-sm mt16';rem.textContent=`${total-done} more to make it a Win Day`;el.appendChild(rem);
+  }
+}
+
+function toggleCore(id){
+  const today=getToday();
+  if(!state.log[today])state.log[today]={completed:[]};
+  const log=state.log[today];
+  const idx=log.completed.indexOf(id);
+  const wasAllDone=log.completed.length>=state.cores.length;
+  if(idx>=0)log.completed.splice(idx,1);
+  else{log.completed.push(id);if(navigator.vibrate)navigator.vibrate(10)}
+  const isNowAllDone=log.completed.length>=state.cores.length;
+  saveState();renderToday();
+  if(isNowAllDone&&!wasAllDone){setTimeout(()=>celebrate(),100);showToast('&#127942; Win Day! Streak continues.','green')}
+}
+
+// HISTORY
+function renderHistory(){
+  const best=calculateBestStreak(),current=calculateCurrentStreak(),winRate=getMonthWinRate();
+  const today=new Date(),todayStr=getToday();
+  const startDay=new Date(today);startDay.setDate(startDay.getDate()-34);
+  const firstDOW=startDay.getDay();
+  const padding=firstDOW===0?6:firstDOW-1;
+  const el=document.getElementById('history-content');el.innerHTML='';
+
+  // Stats row
+  const sr=document.createElement('div');sr.className='stats-row';
+  sr.innerHTML=`<div class="stat-card"><div class="stat-num ${current>0?'green':''}">${current}</div><div class="stat-label">Current Streak</div></div><div class="stat-card"><div class="stat-num">${best}</div><div class="stat-label">Best Streak</div></div><div class="stat-card"><div class="stat-num">${winRate}%</div><div class="stat-label">Win Rate</div></div>`;
+  el.appendChild(sr);
+
+  // Heatmap header
+  const shEl=document.createElement('div');shEl.className='section-header';
+  const stEl=document.createElement('div');stEl.className='section-title';stEl.textContent='5-Week Heatmap';
+  shEl.appendChild(stEl);el.appendChild(shEl);
+
+  // Heatmap card
+  const hcard=document.createElement('div');hcard.className='card';hcard.style.cssText='padding:14px 10px';
+  let hhtml='<div class="heatmap-grid">';
+  ['M','T','W','T','F','S','S'].forEach(l=>{hhtml+=`<div class="heatmap-day-label">${l}</div>`});
+  for(let i=0;i<padding;i++)hhtml+='<div class="heatmap-cell empty"></div>';
+  for(let i=0;i<35;i++){
+    const d=new Date(startDay);d.setDate(d.getDate()+i);
+    if(d>today){hhtml+=`<div class="heatmap-cell future"><span class="heatmap-cell-num">${d.getDate()}</span></div>`;continue}
+    const key=dateStr(d);
+    const log=state.log[key];
+    const comp=log?(log.completed||[]).length:0;
+    const win=comp>=state.cores.length,partial=comp>0&&!win,isT=key===todayStr;
+    hhtml+=`<div class="heatmap-cell${win?' win':partial?' partial':''}${isT?' today':''}"><span class="heatmap-cell-num">${d.getDate()}</span></div>`;
+  }
+  hhtml+='</div>';hcard.innerHTML=hhtml;el.appendChild(hcard);
+
+  // Recent history
+  const recentKeys=Object.keys(state.log).filter(k=>k<=todayStr).sort((a,b)=>b.localeCompare(a)).slice(0,14);
+  if(recentKeys.length>0){
+    const rh=document.createElement('div');rh.className='section-header';
+    const rt=document.createElement('div');rt.className='section-title';rt.textContent='Recent Days';
+    rh.appendChild(rt);el.appendChild(rh);
+    const rcard=document.createElement('div');rcard.className='card';rcard.style.cssText='padding:4px 16px';
+    let rhtml='';
+    for(const key of recentKeys){const log=state.log[key];const done=(log.completed||[]).length;const win=done>=state.cores.length;rhtml+=`<div class="history-item"><div class="history-dot ${win?'win':done>0?'partial':''}"></div><div class="history-date">${getDayLabel(key)}</div><div class="history-score${win?' win':''}">${win?'&#127942; Win Day':`${done}/${state.cores.length} cores`}</div></div>`}
+    rcard.innerHTML=rhtml;el.appendChild(rcard);
+  }else{
+    const empty=document.createElement('div');empty.className='empty-state';
+    empty.innerHTML='<div class="empty-icon">&#128197;</div><div class="empty-title">No history yet</div><div class="empty-sub">Complete your cores today to start building your record.</div>';
+    el.appendChild(empty);
+  }
+}
+
+// SETTINGS
+function renderSettings(){
+  const el=document.getElementById('settings-content');el.innerHTML='';
+
+  // Cores section
+  const s1=document.createElement('div');s1.className='settings-section';
+  const t1=document.createElement('div');t1.className='settings-title';t1.textContent='Your Cores';
+  const c1=document.createElement('div');c1.className='settings-card';
+  state.cores.forEach((core,i)=>{
+    const row=document.createElement('div');row.className='core-editor';
+    row.innerHTML=`<div class="core-editor-num">${i+1}</div><div class="core-editor-emoji">${core.emoji}</div><div class="core-editor-name">${esc(core.name)}</div><div class="core-editor-edit">Edit &#8250;</div>`;
+    row.addEventListener('click',()=>openCoreEditor(i));c1.appendChild(row);
+  });
+  if(!state.isPro){
+    const proRow=document.createElement('div');proRow.className='core-editor';
+    proRow.innerHTML='<div class="core-editor-num" style="opacity:.3">4</div><div class="core-editor-emoji" style="opacity:.4">&#128274;</div><div class="core-editor-name" style="color:var(--text3)">4th core <span class="pro-badge">PRO</span></div><div class="core-editor-edit">Unlock &#8250;</div>';
+    proRow.addEventListener('click',openProGate);c1.appendChild(proRow);
+  }
+  s1.appendChild(t1);s1.appendChild(c1);el.appendChild(s1);
+
+  // Stats section
+  const streak=calculateCurrentStreak(),best=calculateBestStreak(),winRate=getMonthWinRate();
+  const s2=document.createElement('div');s2.className='settings-section';
+  const t2=document.createElement('div');t2.className='settings-title';t2.textContent='Stats';
+  const c2=document.createElement('div');c2.className='settings-card';
+  c2.innerHTML=`<div class="settings-row" style="cursor:default"><div class="settings-icon">&#128293;</div><div class="settings-label">Current streak</div><div class="settings-value" style="color:var(--green-light);font-weight:700">${streak} days</div></div><div class="settings-row" style="cursor:default"><div class="settings-icon">&#127942;</div><div class="settings-label">Best streak</div><div class="settings-value">${best} days</div></div><div class="settings-row" style="cursor:default"><div class="settings-icon">&#128202;</div><div class="settings-label">Win rate (month)</div><div class="settings-value">${winRate}%</div></div>`;
+  s2.appendChild(t2);s2.appendChild(c2);el.appendChild(s2);
+
+  // App section
+  const s3=document.createElement('div');s3.className='settings-section';
+  const t3=document.createElement('div');t3.className='settings-title';t3.textContent='App';
+  const c3=document.createElement('div');c3.className='settings-card';
+
+  const proRow=document.createElement('div');proRow.className='settings-row';
+  proRow.innerHTML='<div class="settings-icon">&#11088;</div><div class="settings-label">Go Pro</div><div class="settings-value"><span class="pro-badge">PRO</span></div><div class="settings-arrow">&#8250;</div>';
+  proRow.addEventListener('click',openProGate);c3.appendChild(proRow);
+
+  const shareRow=document.createElement('div');shareRow.className='settings-row';
+  shareRow.innerHTML='<div class="settings-icon">&#128228;</div><div class="settings-label">Share CoreDay</div><div class="settings-arrow">&#8250;</div>';
+  shareRow.addEventListener('click',shareApp);c3.appendChild(shareRow);
+
+  const exportRow=document.createElement('div');exportRow.className='settings-row';
+  exportRow.innerHTML='<div class="settings-icon">&#128190;</div><div class="settings-label">Export data (CSV)</div><div class="settings-arrow">&#8250;</div>';
+  exportRow.addEventListener('click',exportData);c3.appendChild(exportRow);
+
+  const privRow=document.createElement('a');privRow.href='/privacy.html';privRow.style.textDecoration='none';
+  const privInner=document.createElement('div');privInner.className='settings-row';
+  privInner.innerHTML='<div class="settings-icon">&#128271;</div><div class="settings-label">Privacy policy</div><div class="settings-arrow">&#8250;</div>';
+  privRow.appendChild(privInner);c3.appendChild(privRow);
+
+  s3.appendChild(t3);s3.appendChild(c3);el.appendChild(s3);
+
+  // Danger
+  const s4=document.createElement('div');s4.className='settings-section';
+  const t4=document.createElement('div');t4.className='settings-title';t4.textContent='Danger zone';
+  const c4=document.createElement('div');c4.className='settings-card';
+  const resetRow=document.createElement('div');resetRow.className='settings-row';
+  resetRow.innerHTML='<div class="settings-icon">&#128465;&#65039;</div><div class="settings-label" style="color:var(--red)">Reset all data</div><div class="settings-arrow">&#8250;</div>';
+  resetRow.addEventListener('click',confirmReset);c4.appendChild(resetRow);
+  s4.appendChild(t4);s4.appendChild(c4);el.appendChild(s4);
+
+  const version=document.createElement('p');version.className='center text-dim text-sm mt16';version.style.paddingBottom='8px';version.textContent='CoreDay v1.0 — All data stays on your device.';el.appendChild(version);
+}
+
+// CORE EDITOR
+const EMOJIS=['&#x1F4AA;','&#x1F4DA;','&#x1F4A7;','&#x1F9D8;','&#x1F3C3;','&#x1F957;','&#x1F634;','&#x270D;&#xFE0F;','&#x1F3AF;','&#x1F48A;','&#x1F6C1;','&#x1F64F;','&#x1F3B8;','&#x1F3A8;','&#x1F4BB;','&#x1F4D6;','&#x1F331;','&#x2600;&#xFE0F;','&#x1F319;','&#x2764;&#xFE0F;','&#x1F9E0;','&#x1F3CB;&#xFE0F;','&#x1F6B4;','&#x1F938;','&#x1F34E;','&#x2615;','&#x26A1;','&#x1F525;','&#x2705;','&#x1F31F;','&#x1F4A1;','&#x1F38A;','&#x1F3C6;'];
+const EMOJI_CHARS=['\u{1F4AA}','\u{1F4DA}','\u{1F4A7}','\u{1F9D8}','\u{1F3C3}','\u{1F957}','\u{1F634}','\u270D\uFE0F','\u{1F3AF}','\u{1F48A}','\u{1F6C1}','\u{1F64F}','\u{1F3B8}','\u{1F3A8}','\u{1F4BB}','\u{1F4D6}','\u{1F331}','\u2600\uFE0F','\u{1F319}','\u2764\uFE0F','\u{1F9E0}','\u{1F3CB}\uFE0F','\u{1F6B4}','\u{1F938}','\u{1F34E}','\u2615','\u26A1','\u{1F525}','\u2705','\u{1F31F}','\u{1F4A1}','\u{1F38A}','\u{1F3C6}'];
+let editingCoreIdx=null,editingEmoji=null;
+
+function openCoreEditor(idx){
+  editingCoreIdx=idx;editingEmoji=EMOJI_CHARS[idx]||state.cores[idx].emoji;
+  const el=document.getElementById('modal-content');el.innerHTML='';
+
+  const title=document.createElement('div');title.className='modal-title';title.textContent=`Edit Core ${idx+1}`;el.appendChild(title);
+
+  const inputWrap=document.createElement('div');inputWrap.className='modal-input-wrap';
+  const input=document.createElement('input');input.className='modal-input';input.type='text';input.maxLength=30;input.placeholder="What's your non-negotiable?";input.value=state.cores[idx].name;input.id='core-name-input';
+  inputWrap.appendChild(input);el.appendChild(inputWrap);
+
+  const gridLabel=document.createElement('div');gridLabel.className='section-title';gridLabel.style.cssText='margin-bottom:10px;font-size:.72rem;font-weight:700;color:var(--text3);letter-spacing:1px;text-transform:uppercase';gridLabel.textContent='Pick an emoji';el.appendChild(gridLabel);
+
+  const grid=document.createElement('div');grid.className='emoji-grid';
+  EMOJI_CHARS.forEach((em,i)=>{const btn=document.createElement('div');btn.className='emoji-btn';if(em===state.cores[idx].emoji)btn.classList.add('selected');btn.innerHTML=EMOJIS[i];btn.addEventListener('click',()=>{editingEmoji=em;document.querySelectorAll('.emoji-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected')});grid.appendChild(btn)});
+  el.appendChild(grid);
+
+  const saveBtn=document.createElement('button');saveBtn.className='btn btn-primary';saveBtn.textContent='Save Core';saveBtn.addEventListener('click',saveCoreEdit);el.appendChild(saveBtn);
+
+  document.getElementById('modal').classList.add('open');
+  setTimeout(()=>document.getElementById('core-name-input')?.focus(),300);
+}
+
+function saveCoreEdit(){
+  const name=document.getElementById('core-name-input')?.value?.trim();
+  if(!name){showToast('Give this core a name');return}
+  state.cores[editingCoreIdx].name=name;
+  state.cores[editingCoreIdx].emoji=editingEmoji||state.cores[editingCoreIdx].emoji;
+  saveState();closeModal();renderSettings();renderToday();showToast('Core updated \u2713','green');
+}
+
+// PRO GATE
+function openProGate(){
+  const el=document.getElementById('modal-content');el.innerHTML='';
+  const title=document.createElement('div');title.className='modal-title';title.textContent='CoreDay Pro';el.appendChild(title);
+
+  const gate=document.createElement('div');gate.className='pro-gate';gate.style.margin='0 0 16px';
+  gate.innerHTML='<div style="font-size:2rem;margin-bottom:8px">&#11088;</div><div style="font-size:1rem;font-weight:700;margin-bottom:6px">Unlock your full potential</div><div style="font-size:.85rem;color:var(--text3);margin-bottom:14px;line-height:1.5">4th &amp; 5th cores &bull; Day notes &bull; 90-day history &bull; Custom colors &bull; CSV export</div>';
+  el.appendChild(gate);
+
+  const moCard=document.createElement('div');moCard.className='card';moCard.style.cssText='margin-bottom:12px;padding:12px 16px';
+  moCard.innerHTML='<div class="flex-between"><div><div class="fw7">Monthly</div><div class="text-dim text-sm">Cancel anytime</div></div><div style="font-size:1.1rem;font-weight:800">$2.99<span style="font-size:.75rem;font-weight:500;color:var(--text3)">/mo</span></div></div>';
+  el.appendChild(moCard);
+
+  const ltCard=document.createElement('div');ltCard.className='card';ltCard.style.cssText='margin-bottom:16px;padding:12px 16px;border-color:var(--green)';
+  ltCard.innerHTML='<div class="flex-between"><div><div class="fw7 text-green">Lifetime</div><div class="text-dim text-sm">One-time, yours forever</div></div><div style="font-size:1.1rem;font-weight:800;color:var(--green-light)">$9.99</div></div>';
+  el.appendChild(ltCard);
+
+  const emailWrap=document.createElement('div');emailWrap.style.marginBottom='12px';
+  const emailIn=document.createElement('input');emailIn.id='pro-email';emailIn.className='modal-input';emailIn.type='email';emailIn.placeholder='your@email.com — get early access';
+  emailWrap.appendChild(emailIn);el.appendChild(emailWrap);
+
+  const btn=document.createElement('button');btn.className='btn btn-primary';btn.textContent='Join waitlist \u2192 get 50% off';btn.addEventListener('click',captureProEmail);el.appendChild(btn);
+
+  const note=document.createElement('p');note.className='center text-dim text-sm mt12';note.textContent='Payment coming soon. Join the list to be first.';el.appendChild(note);
+
+  document.getElementById('modal').classList.add('open');
+}
+
+function captureProEmail(){
+  const email=document.getElementById('pro-email')?.value?.trim();
+  if(!email||!email.includes('@')){showToast('Enter a valid email');return}
+  state.proEmailCaptured=true;state.proEmail=email;saveState();closeModal();
+  showToast('\u{1F389} On the list! We\'ll reach out soon.','green');
+}
+
+// SHARE
+function shareApp(){
+  const streak=calculateCurrentStreak(),winRate=getMonthWinRate();
+  const text=`I track just 3 non-negotiables per day. ${streak>0?`${streak}-day streak`:`${winRate}% win rate this month`}. No 10-habit grids. CoreDay: https://coreday.surge.sh`;
+  if(navigator.share)navigator.share({title:'CoreDay',text,url:'https://coreday.surge.sh'}).catch(()=>{});
+  else navigator.clipboard.writeText(text).then(()=>showToast('Copied to clipboard \u2713','green'));
+}
+document.getElementById('share-btn').addEventListener('click',shareApp);
+
+// EXPORT
+function exportData(){
+  const rows=['Date,Win Day,Cores Completed,Total Cores'];
+  Object.keys(state.log).sort().forEach(k=>{const l=state.log[k];const done=(l.completed||[]).length;rows.push(`${k},${done>=state.cores.length},${done},${state.cores.length}`)});
+  const blob=new Blob([rows.join('\n')],{type:'text/csv'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='coreday-export.csv';a.click();
+  showToast('Data exported \u2713','green');
+}
+
+// RESET
+function confirmReset(){
+  const el=document.getElementById('modal-content');el.innerHTML='';
+  const title=document.createElement('div');title.className='modal-title';title.style.color='var(--red)';title.textContent='Reset all data?';el.appendChild(title);
+  const p=document.createElement('p');p.style.cssText='text-align:center;margin-bottom:20px;line-height:1.5;color:var(--text3)';p.textContent='This will delete all your streaks, history, and cores. Cannot be undone.';el.appendChild(p);
+  const del=document.createElement('button');del.className='btn btn-danger';del.textContent='Yes, delete everything';del.addEventListener('click',doReset);el.appendChild(del);
+  const cancel=document.createElement('button');cancel.className='btn btn-ghost';cancel.style.marginTop='8px';cancel.textContent='Cancel';cancel.addEventListener('click',closeModal);el.appendChild(cancel);
+  document.getElementById('modal').classList.add('open');
+}
+
+function doReset(){localStorage.removeItem('coreday_v1');state={...DEFAULTS};closeModal();showOnboarding()}
+
+// ONBOARDING
+let onboardingCores=[{id:1,emoji:'\u{1F4AA}',name:''},{id:2,emoji:'\u{1F4DA}',name:''},{id:3,emoji:'\u{1F4A7}',name:''}];
+const PLACEHOLDERS=['Exercise, meditate, journal...','Read 30 min, call mom...','Drink 2L water, eat healthy...'];
+const OB_EMOJIS=['\u{1F4AA}','\u{1F4DA}','\u{1F4A7}'];
+
+function renderOnboardingCores(){
+  const container=document.getElementById('onboarding-cores');container.innerHTML='';
+  onboardingCores.forEach((core,i)=>{
+    const label=document.createElement('div');label.className='onboarding-core-label';label.textContent=`Core ${i+1}`;
+    const row=document.createElement('div');row.className='onboarding-core-row';
+    const emojiBtn=document.createElement('div');emojiBtn.className='onboarding-emoji-btn';emojiBtn.textContent=core.emoji;
+    emojiBtn.addEventListener('click',()=>openOnboardingEmoji(i));
+    const inp=document.createElement('input');inp.className='onboarding-input';inp.type='text';inp.maxLength=30;inp.placeholder=PLACEHOLDERS[i];inp.value=core.name;
+    inp.addEventListener('input',()=>{onboardingCores[i].name=inp.value});
+    row.appendChild(emojiBtn);row.appendChild(inp);container.appendChild(label);container.appendChild(row);
+  });
+}
+
+function openOnboardingEmoji(idx){
+  const el=document.getElementById('modal-content');el.innerHTML='';
+  const title=document.createElement('div');title.className='modal-title';title.textContent=`Pick emoji for Core ${idx+1}`;el.appendChild(title);
+  const grid=document.createElement('div');grid.className='emoji-grid';
+  EMOJI_CHARS.forEach((em,i)=>{
+    const btn=document.createElement('div');btn.className='emoji-btn';if(em===onboardingCores[idx].emoji)btn.classList.add('selected');btn.innerHTML=EMOJIS[i];
+    btn.addEventListener('click',()=>{onboardingCores[idx].emoji=em;renderOnboardingCores();closeModal()});grid.appendChild(btn)});
+  el.appendChild(grid);document.getElementById('modal').classList.add('open');
+}
+
+document.getElementById('onboarding-start').addEventListener('click',()=>{
+  onboardingCores=onboardingCores.map((c,i)=>({...c,name:c.name.trim()||DEFAULTS.cores[i].name}));
+  state.cores=onboardingCores.map((c,i)=>({id:i+1,emoji:c.emoji,name:c.name}));
+  state.setupDone=true;saveState();hideOnboarding();renderToday();switchScreen('today');
+});
+
+document.getElementById('onboarding-skip').addEventListener('click',()=>{
+  state.cores=[...DEFAULTS.cores];state.setupDone=true;saveState();hideOnboarding();renderToday();switchScreen('today');
+});
+
+function showOnboarding(){document.getElementById('onboarding').classList.remove('hidden');renderOnboardingCores()}
+function hideOnboarding(){document.getElementById('onboarding').classList.add('hidden')}
+
+// NAV
+let currentScreen='today';
+function switchScreen(name){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(`screen-${name}`).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`[data-screen="${name}"]`)?.classList.add('active');
+  currentScreen=name;
+  if(name==='today')renderToday();
+  if(name==='history')renderHistory();
+  if(name==='settings')renderSettings();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('.nav-item').forEach(btn=>btn.addEventListener('click',()=>switchScreen(btn.dataset.screen)));
+
+// MODAL
+function openModal(content){document.getElementById('modal-content').innerHTML=content;document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===document.getElementById('modal'))closeModal()});
+
+// TOAST
+let toastTimeout;
+function showToast(msg,type=''){const t=document.getElementById('toast');t.innerHTML=msg;t.className=`toast ${type} show`;clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>t.classList.remove('show'),2500)}
+
+// CELEBRATE
+function celebrate(){
+  const canvas=document.getElementById('confetti');const ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;canvas.height=window.innerHeight;canvas.classList.add('show');
+  const colors=['#10B981','#34D399','#6EE7B7','#F59E0B','#FBBF24','#FCD34D'];
+  const particles=Array.from({length:60},()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height*.5,vx:(Math.random()-.5)*4,vy:Math.random()*-6-2,size:Math.random()*8+4,color:colors[Math.floor(Math.random()*6)],rotation:Math.random()*360,rotSpeed:(Math.random()-.5)*8,opacity:1}));
+  let frame;
+  function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);let alive=false;for(const p of particles){p.x+=p.vx;p.y+=p.vy;p.vy+=.15;p.rotation+=p.rotSpeed;p.opacity-=.012;if(p.opacity>0){alive=true;ctx.save();ctx.globalAlpha=Math.max(0,p.opacity);ctx.translate(p.x,p.y);ctx.rotate(p.rotation*Math.PI/180);ctx.fillStyle=p.color;ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*.6);ctx.restore()}}if(alive)frame=requestAnimationFrame(draw);else{canvas.classList.remove('show');cancelAnimationFrame(frame)}}
+  draw();
+}
+
+// INIT
+function init(){
+  if(!state.setupDone){showOnboarding();switchScreen('today')}
+  else{hideOnboarding();switchScreen('today')}
+  if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(()=>{});
+}
+init();
+</script>
+</body>
+</html>

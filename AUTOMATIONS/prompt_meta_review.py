@@ -27,6 +27,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Optional
 
+from agent_resilience import sanitize_for_prompt
+
 PROJECT = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
 LEDGER = PROJECT / "LEDGER"
@@ -139,9 +141,8 @@ def build_analysis_prompt(sessions: list[dict[str, Any]], days: int) -> str:
         lines.append(f"=== SESSION {i} ({sess['start'].strftime('%Y-%m-%d %H:%M')} - {sess['end'].strftime('%H:%M')}, {duration:.0f} min, {len(sess['prompts'])} prompts) ===")
         for j, p in enumerate(sess["prompts"], 1):
             prompt_text = p.get("prompt", "")
-            # Truncate very long prompts for analysis
-            if len(prompt_text) > 2000:
-                prompt_text = prompt_text[:2000] + "... [truncated]"
+            # Sanitize + truncate user prompts before injection into analysis
+            prompt_text = sanitize_for_prompt(prompt_text, max_length=2000)
             lines.append(f"  [{j}] {prompt_text}")
         lines.append("")
 

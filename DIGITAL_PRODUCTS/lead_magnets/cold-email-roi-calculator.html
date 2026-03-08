@@ -3,11 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cold Email ROI Calculator — how much is your outreach actually worth?</title>
-<meta name="description" content="plug in your numbers. see exactly how much revenue cold email should generate. no fluff, just math.">
-<meta property="og:title" content="Cold Email ROI Calculator">
-<meta property="og:description" content="plug in your numbers. see exactly how much revenue cold email should generate.">
+<title>Cold Email ROI Calculator: Free Revenue Estimator</title>
+<meta name="description" content="Plug in your numbers. See exactly how much revenue cold email should generate. No fluff, just math.">
+<meta name="keywords" content="cold email roi calculator, cold outreach roi, email marketing calculator, cold email revenue estimator, outbound roi tool">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cold-email-roi-calculator.surge.sh">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Cold Email ROI Calculator: Free Revenue Estimator">
+<meta property="og:description" content="Plug in your numbers. See exactly how much revenue cold email should generate.">
+<meta property="og:url" content="https://cold-email-roi-calculator.surge.sh">
+<meta property="og:image" content="https://cold-email-roi-calculator.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Cold Email ROI Calculator: Free Tool">
+<meta name="twitter:description" content="Plug in your numbers. See exactly how much revenue cold email generates.">
+<meta name="twitter:image" content="https://cold-email-roi-calculator.surge.sh/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Cold Email ROI Calculator","url":"https://cold-email-roi-calculator.surge.sh","description":"Calculate the revenue potential of your cold email outreach","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0a0f1a;--surface:#111827;--card:#1a2332;--accent:#3b82f6;--accent2:#2563eb;--green:#10b981;--red:#ef4444;--yellow:#f59e0b;--text:#e5e5e5;--muted:#6b7280;--border:#1f2937}
@@ -189,6 +200,21 @@ footer p{color:var(--muted);font-size:0.8rem}
         <span class="result-value" id="r_totalCost">—</span>
       </div>
 
+      <div id="roiGate" class="verdict caution" style="cursor:pointer;margin-top:16px" onclick="document.getElementById('roiGateForm').style.display='block';this.style.display='none'">
+        get the full breakdown: net profit, ROI, cost per deal, effective hourly rate, and verdict. drop your email below.
+      </div>
+      <div id="roiGateForm" style="display:none;padding:20px 0;text-align:center">
+        <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" style="max-width:320px;margin:0 auto">
+          <input type="hidden" name="_subject" value="[ROI Calculator] Full Results Unlock">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://cold-email-roi-calculator.surge.sh/?k=roi47full">
+          <input type="email" name="email" placeholder="your email" required>
+          <button type="submit">unlock full results</button>
+          <p class="fine">free. 280+ cold emailers already have it. no spam.</p>
+        </form>
+      </div>
+
+      <div id="roiDetailed" style="display:none">
       <div class="big-number">
         <div class="label">net profit / month</div>
         <div class="value" id="r_profit">—</div>
@@ -223,15 +249,16 @@ footer p{color:var(--muted);font-size:0.8rem}
         <div class="bench-row"><span class="bench-label">cost per lead (cold email avg)</span><span class="bench-value">$5-30</span></div>
       </div>
     </div>
+    </div><!-- end roiDetailed -->
   </div>
 
   <div class="cta-section">
     <h3>want the full cold email playbook?</h3>
     <p>73 proven subject lines, 4-email sequences, deliverability setup, and the exact scripts that book meetings.</p>
-    <form class="email-form" action="https://formsubmit.co/printmaxxstudio@gmail.com" method="POST">
+    <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="[ROI Calculator] Lead Magnet Signup">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+      <input type="hidden" name="_next" value="https://printmaxx-store.surge.sh/?ref=cold-email-calculator">
       <input type="email" name="email" required placeholder="your@email.com">
       <button type="submit">send me the playbook</button>
       <p class="fine">free preview + early access pricing. no spam.</p>
@@ -247,6 +274,17 @@ footer p{color:var(--muted);font-size:0.8rem}
 function $(id) { return document.getElementById(id); }
 function val(id) { return parseFloat($(id).value) || 0; }
 function fmt(n) { return n >= 1000 ? '$' + n.toLocaleString('en-US', {maximumFractionDigits: 0}) : '$' + n.toFixed(n < 10 ? 2 : 0); }
+
+// Gate logic
+var ROI_UNLOCK_KEY = 'roi_calc_unlocked';
+var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('k') === 'roi47full') { localStorage.setItem(ROI_UNLOCK_KEY, 'true'); }
+var roiUnlocked = localStorage.getItem(ROI_UNLOCK_KEY) === 'true';
+if (roiUnlocked) {
+  $('roiDetailed').style.display = 'block';
+  $('roiGate').style.display = 'none';
+  if ($('roiGateForm')) $('roiGateForm').style.display = 'none';
+}
 
 function calculate() {
   var emailsPerDay = val('emailsPerDay');

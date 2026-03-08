@@ -29,6 +29,10 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Optional
 
+from agent_resilience import locked_file, TrajectoryLogger
+
+_trajectory = TrajectoryLogger("loop_closer")
+
 PROJECT = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
 SWARM_DIR = AUTOMATIONS / "agent" / "swarm"
@@ -56,13 +60,17 @@ def log_action(action_type: str, target: str, result: str, details: str = "") ->
         "result": result,
         "details": details
     }
-    with open(LOOP_LOG, "a") as f:
+    with locked_file(LOOP_LOG, mode="a") as f:
         f.write(json.dumps(entry) + "\n")
 
 
 def load_state() -> dict[str, Any]:
     if LOOP_STATE.exists():
-        return json.loads(LOOP_STATE.read_text())
+        try:
+            with locked_file(LOOP_STATE, mode="r") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError, TimeoutError):
+            pass
     return {
         "last_decision_cycle": None,
         "last_feedback_cycle": None,
@@ -76,7 +84,7 @@ def load_state() -> dict[str, Any]:
 
 def save_state(state: dict[str, Any]) -> None:
     LOOP_STATE.parent.mkdir(parents=True, exist_ok=True)
-    with open(LOOP_STATE, "w") as f:
+    with locked_file(LOOP_STATE, mode="w") as f:
         json.dump(state, f, indent=2)
 
 
@@ -639,7 +647,7 @@ def update_feedback(state: dict[str, Any], dry_run: bool = False) -> int:
     if recommendations and not dry_run:
         # Write recommendations for next decision execution cycle
         recs_file = SWARM_DIR / "feedback_recommendations.json"
-        with open(recs_file, "w") as f:
+        with locked_file(recs_file, mode="w") as f:
             json.dump({
                 "generated": datetime.now().isoformat(),
                 "recommendations": recommendations
@@ -725,7 +733,7 @@ def advance_pipeline(state: dict[str, Any], dry_run: bool = False) -> int:
             "body": f"Pipeline: {len(stuck_items)} stuck items, {advances} advanced",
             "read": False
         }
-        with open(MSG_BUS, "a") as f:
+        with locked_file(MSG_BUS, mode="a") as f:
             f.write(json.dumps(msg) + "\n")
 
     return advances
@@ -806,6 +814,8 @@ def show_status() -> None:
 # ═══════════════════════════════════════════════════════════════
 
 def run_cycle(dry_run: bool = False) -> None:
+    import time as _time
+    _start = _time.time()
     log("=" * 50)
     log("LOOP CLOSER — Full Cycle")
     log("=" * 50)
@@ -831,6 +841,7 @@ def run_cycle(dry_run: bool = False) -> None:
         save_state(state)
 
     log(f"Cycle complete: {decisions} decisions, {feedback} feedback updates, {pipeline} pipeline advances")
+    _trajectory.log_success("run_cycle", _start, decisions=decisions, feedback=feedback, pipeline=pipeline)
 
     # Post summary to message bus
     if not dry_run:
@@ -842,7 +853,7 @@ def run_cycle(dry_run: bool = False) -> None:
             "body": f"Loop closer: {decisions} decisions executed, {feedback} feedback updates, {pipeline} pipeline advances",
             "read": False
         }
-        with open(MSG_BUS, "a") as f:
+        with locked_file(MSG_BUS, mode="a") as f:
             f.write(json.dumps(msg) + "\n")
 
 

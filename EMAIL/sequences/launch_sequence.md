@@ -145,41 +145,34 @@ Ships today.
 
 ---
 
-## Email 3: Social Proof (Day 4)
+## Email 3: Use Case Walkthrough (Day 4)
 
-**Subject:** What people are building with this
+**Subject:** 3 ways to use PRINTMAXX OS this week
 
-**Preview:** 47 people bought in first 48 hours. Here's what they're shipping.
+**Preview:** Pick one workflow. Run it once. See what happens.
 
 **Body:**
 
 [NAME],
 
-47 people bought PRINTMAXX OS in the first 48 hours.
+Here's what the system looks like in practice.
 
-Here's what they're building:
+**If you're a coach or consultant:**
+Use the truth page workflow. Write 1 article about your expertise. Run it through the distribution system. Get 40-70 social posts scheduled for 2 weeks. Attach a lead magnet. Capture emails while you sleep.
 
-**Alex (fitness coach):**
-Used the truth page workflow. Turned 1 article into 63 social posts. Scheduled for 3 weeks. First lead magnet went live yesterday. 12 email captures in 24 hours.
+**If you're a developer:**
+Use the repurpose workflow. Take your best GitHub project. Turn the README into an X thread, a blog post, and a LinkedIn breakdown. Build in public without creating from scratch every day.
 
-**Maya (AI consultant):**
-Copied the lead magnet blueprint. Built a calculator in 4 hours. 47 email signups in first week. Launched first product today. $340 revenue.
+**If you're building a niche site:**
+Use the longtail workflow. Generate 10-15 SEO pages from one pillar topic. Each one targets a specific long-tail keyword. Stack them over a month. Watch organic traffic build.
 
-**Jordan (developer):**
-Used the distribution workflows. Repurposed 1 GitHub project into 15 X threads, 5 blog posts, 3 YouTube scripts. Got 200 new followers. 2 freelance clients from DMs.
+The pattern is always the same:
 
-**Sam (productivity niche):**
-Duplicated the Notion workspace. Set up content calendar in 30 minutes. Ran first workflow yesterday. Got 40 pieces from 1 post. First time they've posted consistently in months.
-
-These aren't fake testimonials. These are real people who bought, used it, and reported back.
-
-The pattern? They all did the same thing:
-
-1. Duplicated the system
-2. Followed one workflow
-3. Shipped fast
-4. Measured results
-5. Repeated
+1. Create 1 thing
+2. Run a workflow
+3. Get 40-70 pieces
+4. Schedule and forget
+5. Repeat next week
 
 That's it. No magic. Just systems.
 
@@ -191,7 +184,7 @@ Last call coming Sunday.
 
 - PRINTMAXXER
 
-P.S. All testimonials are from real buyers. I can share X handles if you want to verify.
+P.S. Reply with what you're building. I'll tell you which workflow to start with.
 
 ---
 
@@ -246,7 +239,7 @@ Questions? Hit reply.
 
 - PRINTMAXXER
 
-P.S. 73 people have bought so far. If you want to see what they're building, search X for "printmaxx os" (people are posting screenshots).
+P.S. If you have questions, reply to this email. I read every one.
 
 ---
 

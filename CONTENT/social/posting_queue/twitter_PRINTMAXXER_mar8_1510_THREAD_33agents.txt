@@ -1,0 +1,95 @@
+THREAD: 33 Autonomous AI Agents (8 tweets)
+Status: APPROVED
+Priority: P0 (vibe coding mainstream media window)
+SCHEDULED: 2026-03-27 09:00 (THREAD - morning slot for max engagement)
+QUALITY_GATE: PASSED 2026-03-08 (copy-style clean, authentic, honest $0 revenue, strong build-in-public thread)
+
+---
+
+1/8
+33 autonomous AI agents. 35 days straight. $200/mo total.
+
+they scrape competitors, build sites, generate content, and deploy while i sleep.
+
+scientific american just published a piece on vibe coding. i'm past that. here's the honest breakdown:
+
+---
+
+2/8
+the stack:
+- Claude Max ($200/mo). runs ALL 33 agents
+- surge.sh (free). deploys 168 sites
+- PWAs (free). 22 apps built
+- Python + cron (free). orchestration
+- zero employees. zero VAs. zero API costs.
+
+that's the entire budget.
+
+---
+
+3/8
+what the agents actually do:
+
+8 venture agents manage entire business lines (cold outreach, apps, content, research, local biz, monetization, products, scraping)
+
+25 swarm agents handle operations (gap hunting, SEO, quality control, content compounding, competitor stalking, deployment)
+
+they run 24/7 via launchd.
+
+---
+
+4/8
+the filesystem is the database.
+
+every agent reads state from JSON files, does ONE task, writes results back, exits.
+
+no context window dependency. no vector databases. no fancy memory systems.
+
+just files on disk.
+
+239 points on HN confirmed this pattern last week.
+
+---
+
+5/8
+what actually works:
+- automated competitor monitoring (200+ pages tracked)
+- Reddit pain point detection across 41 subreddits
+- content generation from raw intelligence
+- deployment pipelines (one command = live site)
+
+what doesn't:
+- revenue ($0 for 35 days)
+- the part where humans need to create accounts
+
+---
+
+6/8
+the real bottleneck isn't building. it's selling.
+
+22 apps built. 168 sites deployed. 13 Gumroad products drafted. 283 social posts queued.
+
+zero listed. zero posted. zero revenue.
+
+agents can build everything except Stripe accounts.
+
+---
+
+7/8
+what I'd do differently:
+
+1. create all platform accounts BEFORE building anything
+2. list one product on day 1, not day 35
+3. spend 80% of time on distribution, 20% on building
+4. don't fall in love with the infrastructure
+
+the system is beautiful. and broke.
+
+---
+
+8/8
+the full stack is open. every script, every agent prompt, every cron job.
+
+building in public because nobody else is running 33 agents on a single Claude Max subscription and being honest about the $0 revenue.
+
+if you're vibe coding, what's your stack?
