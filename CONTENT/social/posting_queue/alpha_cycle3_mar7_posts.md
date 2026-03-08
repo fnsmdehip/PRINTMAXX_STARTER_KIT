@@ -1,4 +1,4 @@
-# Alpha Intelligence Cycle #3 — Generated Content
+# Alpha Intelligence Cycle #3 - Generated Content
 # Date: 2026-03-07
 # Status: APPROVED (quality gate cycle 7, 2026-03-07)
 # Source: ALPHA17604-17617, ALPHA17527, ALPHA17543

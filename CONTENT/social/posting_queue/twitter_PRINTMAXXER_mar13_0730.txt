@@ -1,12 +1,12 @@
 PLATFORM: Twitter/X
 ACCOUNT: @PRINTMAXXER
 SCHEDULED: 2026-03-13 07:30
-CHARACTER_COUNT: 207
+CHARACTER_COUNT: 234
 IMAGE: MEDIA/generated_images/social_hub_spoke.png
 STATUS: READY_TO_POST
 SOURCE: generated_20260307_cycle2/tweets_5_posts.md (Post 5) | ALPHA271 + ALPHA269
-QUALITY_GATE: PASSED — concrete framework (1-to-20), platform-specific, on-voice, <280 chars
+QUALITY_GATE: REWRITTEN - failed: no consequence-first hook, generic strategy jargon ("hub-and-spoke model"), filler ("every single time"). rewritten in PRINTMAXXER voice with specific numbers.
 
 ---
 
-1 piece of content should become 20. every single time. hub-and-spoke model. one hub asset. 20 spoke assets. AI handles the transformation. each platform has its own rules. same content, different packaging.
+wrote 1 blog post yesterday. turned it into 20 assets in 40 minutes. tweet thread. linkedin carousel. 4 short clips. newsletter section. 3 reddit comments. email sequence. AI did 90% of the reformatting. same ideas, 6 platforms.

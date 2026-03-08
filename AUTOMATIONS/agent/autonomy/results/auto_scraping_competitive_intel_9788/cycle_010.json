@@ -1,0 +1,21 @@
+{
+  "cycle_start": "2026-03-08T08:13:00",
+  "cycle_end": "2026-03-08T08:18:12.066902",
+  "cycle_num": 10,
+  "phase": "FULL_CYCLE",
+  "app_store_scanned": 160,
+  "reddit_signals_found": 1,
+  "new_intel_rows_written": 5,
+  "faith_competitor_count": 21,
+  "top_threat": "Bible (13M ratings), Hallow (353K)",
+  "alerts_generated": 5,
+  "gaps_flagged": 8,
+  "bug_fixed": "competitive_intel_cycle.py line 59 NoneType subscript on null scan_date",
+  "alerts": [
+    "[P0][HIGHEST] Google Play gap = 45% addressable market \u2014 Capacitor Android wrap priority",
+    "[P1][HIGH] Streaks v11.2.3 Mar 5 \u2014 trophy dopamine hook missing from adhd-streak",
+    "[P1][HIGH] Hallow v12.19.1 Mar 4 \u2014 target 1-star reviews for feature gaps",
+    "[P1][HIGH] Sleep niche $37.66 avg paid price \u2014 do not freemium-trap sleepmaxx",
+    "[P2][MEDIUM] Faith newsletter gap \u2014 no major competitor running Beehiiv/Substack"
+  ]
+}

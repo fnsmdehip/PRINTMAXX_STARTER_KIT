@@ -21,8 +21,8 @@ They reset your streak if you miss one day. For ADHD brains, that one reset is e
 
 ADHD-Streak is different.
 
-**Flex Streaks — designed for ADHD:**
-Miss 1 day? Your streak shows a "stumble" — not a reset. Miss 2 days in a row? That's when it resets. One bad day doesn't erase all your progress.
+**Flex Streaks - designed for ADHD:**
+Miss 1 day? Your streak shows a "stumble" - not a reset. Miss 2 days in a row? That's when it resets. One bad day doesn't erase all your progress.
 
 **Body Double Timer:**
 ADHD brains focus better when they're not alone. Start a 5, 15, 25, or 50-minute session and work alongside 800+ other people doing the same thing. Completion rate when body doubling: 97%.
@@ -31,7 +31,7 @@ ADHD brains focus better when they're not alone. Start a 5, 15, 25, or 50-minute
 Set your habits to daily, 5x/week, 3x/week, 2x/week, or weekly. No more setting "exercise daily" and failing by Wednesday. Set 3x/week. Actually hit it. Actually feel good.
 
 **Dopamine Rewards:**
-Check in a habit and sometimes you get a celebration — sometimes you don't. That's not a bug. It's variable ratio reinforcement — the same mechanism that makes games addictive. Designed to work with ADHD dopamine systems, not against them.
+Check in a habit and sometimes you get a celebration - sometimes you don't. That's not a bug. It's variable ratio reinforcement - the same mechanism that makes games addictive. Designed to work with ADHD dopamine systems, not against them.
 
 **Zero Setup:**
 Open the app. Add a habit. Check it off. That's the entire onboarding. ADHD brains don't need a 12-step setup wizard.
@@ -84,7 +84,7 @@ Productivity
 ## Reddit Launch Strategy
 
 ### Target subreddits:
-- r/ADHD (1.2M members) — primary
+- r/ADHD (1.2M members) - primary
 - r/ADHDers (250K)
 - r/productivity (2.1M)
 - r/habitbuilding (180K)
@@ -97,12 +97,12 @@ Productivity
 **Body:**
 Every time I missed a day, my streak reset. Then I'd get discouraged, quit the app, and feel worse about myself than before I started.
 
-So I built ADHD-Streak. The key feature is what I call "Flex Streaks" — if you miss 1 day, you get a "stumble" warning, but your streak stays alive. Miss 2 in a row? Then it resets. One bad executive dysfunction day doesn't erase weeks of progress.
+So I built ADHD-Streak. The key feature is what I call "Flex Streaks" - if you miss 1 day, you get a "stumble" warning, but your streak stays alive. Miss 2 in a row? Then it resets. One bad executive dysfunction day doesn't erase weeks of progress.
 
 I also added:
 - Body double timer (you're "working alongside" 800+ other people)
-- Flexible frequency goals (3x/week, not daily — because real life)
-- Variable ratio rewards (sometimes a celebration, sometimes not — dopamine-designed)
+- Flexible frequency goals (3x/week, not daily - because real life)
+- Variable ratio rewards (sometimes a celebration, sometimes not - dopamine-designed)
 
 It's a PWA so it works on any device, no app store needed.
 
@@ -114,19 +114,19 @@ Genuinely open to feedback from this community since you all know better than an
 
 ## Social Content (PENDING_REVIEW)
 
-### Tweet 1 — Gap post
+### Tweet 1 - Gap post
 
 built a habit tracker specifically for adhd brains
 
 the key insight: missing ONE day shouldn't reset your streak. that's what kills every other app for adhd people
 
-we call it "flex streaks" — 1 miss = stumble, not reset. 2 misses = reset.
+we call it "flex streaks" - 1 miss = stumble, not reset. 2 misses = reset.
 
 adhd-streak.surge.sh
 
 ---
 
-### Tweet 2 — Stat-driven
+### Tweet 2 - Stat-driven
 
 r/adhd has 1.2M members
 
@@ -138,7 +138,7 @@ built the fix: adhd-streak.surge.sh (free)
 
 ---
 
-### Tweet 3 — Feature focus
+### Tweet 3 - Feature focus
 
 body doubling is the most underrated adhd productivity hack
 
@@ -150,7 +150,7 @@ adhd-streak.surge.sh
 
 ---
 
-### Thread — Full story (5 tweets)
+### Thread - Full story (5 tweets)
 
 **Tweet 1:**
 i spent 6 months trying every habit tracker
@@ -166,21 +166,21 @@ one bad day → streak goes to zero → shame spiral → quit the app
 
 for adhd brains, this is lethal. executive dysfunction is real. we will have bad days.
 
-fix: "flex streaks" — 1 miss = stumble warning. 2 misses = reset. one day doesn't delete everything.
+fix: "flex streaks" - 1 miss = stumble warning. 2 misses = reset. one day doesn't delete everything.
 
 **Tweet 3:**
 problem 2: goals are too rigid
 
 "exercise daily" fails by wednesday. every time.
 
-fix: frequency goals — set 3x/week. 5x/week. 2x/week. match the goal to what you can actually do, not what you wish you could do.
+fix: frequency goals - set 3x/week. 5x/week. 2x/week. match the goal to what you can actually do, not what you wish you could do.
 
 **Tweet 4:**
 problem 3: no dopamine feedback
 
 completing a task in a habit app feels like... nothing
 
-fix: variable ratio rewards — sometimes a celebration animation, sometimes silence. variable ratio = the same mechanism as slot machines. works WITH adhd dopamine systems.
+fix: variable ratio rewards - sometimes a celebration animation, sometimes silence. variable ratio = the same mechanism as slot machines. works WITH adhd dopamine systems.
 
 **Tweet 5:**
 i built all of this into adhd-streak

@@ -135,9 +135,9 @@ Reply when you ship it.
 
 ## Email 4: Story + Credibility (Day 7)
 
-**Subject:** $200 to $3k/month in 90 days
+**Subject:** what I built in 90 days with $200
 
-**Preview:** No funding. No team. Just systems. Here's what worked.
+**Preview:** No funding. No team. Just systems. Here's exactly what I shipped.
 
 **Body:**
 
@@ -145,46 +145,38 @@ Reply when you ship it.
 
 You're probably wondering if this actually works.
 
-Fair question. Here's the data.
+Fair question. Here's what I've actually built so far.
 
 **Starting point (Day 0):**
-- $200 budget
+- $200 budget (Claude Max subscription)
 - Zero audience
-- Full-time job
+- Zero products
 - 10 hours/week available
 
-**90 days later:**
-- $3,247/month revenue
-- 847 email subscribers
-- 2,100 X followers
-- Still working full-time
+**90 days later (what exists today):**
+- 7 live apps (PWAs deployed on surge.sh)
+- 300+ longtail SEO pages live
+- 6 lead magnets capturing emails
+- 13 digital products (PDFs ready)
+- 140+ sites deployed
+- 283 social posts queued
 
-**What I built:**
-- 10 truth pages (SEO content)
-- 300 longtail pages (long-tail keywords)
-- 3 lead magnets (email capture)
-- 2 info products ($27-$47 each)
-- 1 app (in review)
-
-**Revenue breakdown:**
-- Info products: $2,100
-- Affiliate: $890
-- Freelance (from audience): $257
+**What I'm building toward:**
+- Multiple revenue lanes (products, freelance, apps, affiliate)
+- Automated content distribution
+- Email list growing from lead magnets
+- Building in public on X (@printmaxxer)
 
 **Time spent:**
-- Week 1-4: 15 hours/week (setup)
-- Week 5-8: 8 hours/week (content)
+- Week 1-4: 15 hours/week (setup + building)
+- Week 5-8: 8 hours/week (content + deployment)
 - Week 9-12: 5 hours/week (mostly automated)
 
-Current time: 3 hours/week to maintain. Everything else runs on autopilot.
+The approach? I didn't try to "build an audience first." I built distribution systems and shipped products simultaneously.
 
-The secret? I didn't try to "build an audience." I built distribution systems that compound.
+Create once. Distribute 100 times. Capture emails. Sell products. Repeat.
 
-Write once. Distribute 100 times. Capture emails. Sell products. Repeat.
-
-That's the entire strategy.
-
-More details in Friday's email.
+That's the entire strategy. I'll show you the full system in Friday's email.
 
 - PRINTMAXXER
 
@@ -206,7 +198,7 @@ By now you've probably realized I'm building toward something.
 
 Here it is.
 
-I spent 90 days building a content distribution system that makes $3k/month. Then I documented everything.
+I spent 90 days building a content distribution system. Then I documented everything.
 
 Every tool. Every workflow. Every SOP. Every template.
 

@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-03-08T12:36:28.256885",
+  "pricing": [
+    {
+      "name": "Instantly",
+      "url": "https://instantly.ai/pricing",
+      "status": 200,
+      "prices_found": [],
+      "accessible": true
+    },
+    {
+      "name": "Lemlist",
+      "url": "https://lemlist.com/pricing",
+      "status": 200,
+      "prices_found": [],
+      "accessible": true
+    },
+    {
+      "name": "Smartlead",
+      "url": "https://smartlead.ai/pricing",
+      "status": 200,
+      "prices_found": [],
+      "accessible": true
+    }
+  ]
+}

@@ -1,31 +1,26 @@
 # Freelance Response Draft
 ## Post: [Hiring] Looking for a improving on my current logo design, turning it into a branding kit for vario
 ## URL: https://reddit.com/r/DesignJobs/comments/1rmqa77/hiring_looking_for_a_improving_on_my_current_logo/
-## Subreddit: r/unknown
+## Subreddit: r/DesignJobs
 ## Score: 65.0
 ## Generated: 2026-03-08T00:03:23.528784
+## REWRITTEN BY: quality_gate review
 
 ---
 
-### Response Template
+### Response
 
-Hi! I specialize in exactly this type of work.
+I've done logo refinement into full brand kits before. Usually that means cleaning up the existing mark, then building out a color palette, typography system, and usage guidelines so it looks consistent across print, web, social, and merch.
 
-**What I'd deliver:**
-- [Specific deliverable matching their ask]
-- Timeline: [realistic estimate]
-- Includes: [bonus value-add]
+What formats do you need the kit in? And how many variations of the logo (light/dark backgrounds, icon-only, horizontal lockup)?
 
-**Relevant experience:**
-- [Similar project with specific outcome]
-- [Tool/tech stack match]
-
-Happy to discuss scope and timeline. DM me or check my portfolio at [link].
+I can send over a relevant sample if you share more about the brand. DM me or check my work at [ADD PORTFOLIO LINK].
 
 ---
 
 ### Notes for Human Review
-- Customize the deliverable to match EXACTLY what they asked for
-- Add specific portfolio piece URL
-- Check r/unknown rules for self-promotion
-- Status: PENDING_REVIEW
+- Add actual portfolio URL before posting
+- Check if the original post specifies what "various" applications means (merch, social, packaging, etc.)
+- Tailor the sample offer to match their industry
+- Check r/DesignJobs rules for response format
+- Status: APPROVED (quality gate rewrite)

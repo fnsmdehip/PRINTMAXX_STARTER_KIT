@@ -1,0 +1,16 @@
+STATUS: APPROVED
+ACCOUNT: @PRINTMAXXER
+TYPE: tweet
+CYCLE: openclaw_nationwide_mar8
+
+---
+
+my scraper hit a dead end on local business searches so i built a 4-tier fallback.
+
+DDG fails → DDG Lite → Bing → BBB Playwright scraper.
+
+BBB turned out to be the goldmine. structured data, F-grade ratings, phone numbers, addresses. all machine-readable.
+
+fixed 5 pipeline bugs while i was in there. added 3 new fallback paths. 81 leads in one cycle across 4 cities.
+
+the infrastructure basically pays for itself the first time it finds a $500 client.

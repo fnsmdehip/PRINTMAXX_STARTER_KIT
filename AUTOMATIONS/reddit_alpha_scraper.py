@@ -458,8 +458,8 @@ def get_next_alpha_id() -> int:
                     try:
                         num = int(alpha_id.replace('ALPHA', ''))
                         max_id = max(max_id, num)
-                    except:
-                        pass
+                    except Exception:
+                        pass  # Non-numeric alpha_id suffix; skip
     return max_id + 1
 
 

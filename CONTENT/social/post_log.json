@@ -694,7 +694,7 @@
       "thread": true,
       "tweet_count": 2,
       "source": "cc_reply_bait_building_01",
-      "note": "reply bait — high engagement expected",
+      "note": "reply bait \u2014 high engagement expected",
       "posted_at": null
     },
     {
@@ -766,7 +766,7 @@
       "queue_file": "twitter_PRINTMAXXER_mar23_0730.txt",
       "chars": 163,
       "source": "build_in_public_day33",
-      "note": "Day 33 $0 revenue — 140 sites, 22 apps, the gap is 30 min",
+      "note": "Day 33 $0 revenue \u2014 140 sites, 22 apps, the gap is 30 min",
       "posted_at": null
     },
     {
@@ -778,7 +778,7 @@
       "queue_file": "twitter_PRINTMAXXER_mar23_1100.txt",
       "chars": 181,
       "source": "build_in_public_day33",
-      "note": "32 agents, 140 sites, $0 infrastructure — bottleneck is distribution",
+      "note": "32 agents, 140 sites, $0 infrastructure \u2014 bottleneck is distribution",
       "posted_at": null
     },
     {
@@ -803,7 +803,7 @@
       "thread": true,
       "tweet_count": 6,
       "source": "build_in_public_day33",
-      "note": "THREAD: 33 days lessons — production solved, distribution is the game",
+      "note": "THREAD: 33 days lessons \u2014 production solved, distribution is the game",
       "posted_at": null
     },
     {
@@ -816,7 +816,7 @@
       "thread": true,
       "tweet_count": 7,
       "source": "competitor_counter_content_cycle5_20260307.md",
-      "note": "THREAD: 30 days tracking faith apps — 7 tweets, Eid timing",
+      "note": "THREAD: 30 days tracking faith apps \u2014 7 tweets, Eid timing",
       "posted_at": null
     },
     {
@@ -828,7 +828,7 @@
       "queue_file": "twitter_PRINTMAXXER_mar31_1100.txt",
       "chars": 254,
       "source": "competitor_counter_content_cycle5_20260307.md",
-      "note": "Hallow #1 on app store — seasonal calendar events growth hack",
+      "note": "Hallow #1 on app store \u2014 seasonal calendar events growth hack",
       "posted_at": null
     },
     {
@@ -840,7 +840,7 @@
       "queue_file": "twitter_PRINTMAXXER_mar31_1430.txt",
       "chars": 264,
       "source": "competitor_counter_content_cycle5_20260307.md",
-      "note": "Muslim Pro 180M downloads — 4,000+ empty denomination niches",
+      "note": "Muslim Pro 180M downloads \u2014 4,000+ empty denomination niches",
       "posted_at": null
     },
     {
@@ -852,15 +852,207 @@
       "queue_file": "twitter_PRINTMAXXER_mar31_1800.txt",
       "chars": 245,
       "source": "competitor_counter_content_cycle5_20260307.md",
-      "note": "Durable $22/mo price hike — pay once own forever counter",
+      "note": "Durable $22/mo price hike \u2014 pay once own forever counter",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr3-0730",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-03T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr3_0730.txt",
+      "chars": 210,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr3-1100",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-03T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr3_1100.txt",
+      "chars": 225,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr3-1430",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-03T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr3_1430.txt",
+      "chars": 198,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr3-1800",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-03T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr3_1800.txt",
+      "chars": 237,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr4-0730",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-04T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr4_0730.txt",
+      "chars": 215,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr4-1100",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-04T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr4_1100.txt",
+      "chars": 242,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr4-1430",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-04T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr4_1430.txt",
+      "chars": 189,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr4-1800",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-04T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr4_1800.txt",
+      "chars": 231,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr5-0730",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-05T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr5_0730.txt",
+      "chars": 204,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr5-1100",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-05T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr5_1100.txt",
+      "chars": 219,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr5-1430",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-05T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr5_1430.txt",
+      "chars": 196,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr5-1800",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-05T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr5_1800.txt",
+      "chars": 248,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr6-0730",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-06T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr6_0730.txt",
+      "chars": 208,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr6-1100",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-06T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr6_1100.txt",
+      "chars": 234,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr6-1430",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-06T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr6_1430.txt",
+      "chars": 192,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
+      "posted_at": null
+    },
+    {
+      "id": "pm-apr6-1800",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-04-06T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_apr6_1800.txt",
+      "chars": 226,
+      "source": "CYCLE5_OVERFLOW_APR1_5.md",
+      "note": "CYCLE5_OVERFLOW gap fill",
       "posted_at": null
     }
   ],
   "summary": {
     "total_posted": 0,
-    "total_queued": 104,
+    "total_queued": 154,
     "last_post_date": null,
-    "coverage_through": "2026-03-31",
+    "coverage_through": "2026-04-15",
     "new_content_added_mar7_cycle6": {
       "sources": [
         "competitor_counter_content_cycle4_20260307.md (5 standalones + 1 thread + 1 reply bait + 1 community bait)",
@@ -875,7 +1067,7 @@
     "platforms": {
       "twitter": {
         "posted": 0,
-        "queued": 101
+        "queued": 151
       },
       "linkedin": {
         "posted": 0,
@@ -889,8 +1081,8 @@
   },
   "social_poster_cycle_mar8": {
     "ran": "2026-03-08T00:00:00Z",
-    "warmup_status": "LURK Day 2 — ZERO posts today. Hard blocked.",
-    "mar8_slots_status": "BLOCKED_LURK — 4 files ready but not posted. Content held for warmup progression.",
+    "warmup_status": "LURK Day 2 \u2014 ZERO posts today. Hard blocked.",
+    "mar8_slots_status": "BLOCKED_LURK \u2014 4 files ready but not posted. Content held for warmup progression.",
     "new_files_created": [
       "twitter_PRINTMAXXER_apr1_0730.txt (cycle5: 32 agents vibe shipping)",
       "twitter_PRINTMAXXER_apr1_1100.txt (cycle5: real cost cold email tools)",
@@ -917,34 +1109,35 @@
       "twitter_PRINTMAXXER_mar31_1430.txt (RESTORED: Muslim Pro 180M standalone)",
       "twitter_PRINTMAXXER_mar31_1800.txt (RESTORED: Durable price hike counter)"
     ],
-    "sources_processed": ["alpha_research_20260308.md (12 pieces → 9 queued + 1 thread)"],
+    "sources_processed": [
+      "alpha_research_20260308.md (12 pieces \u2192 9 queued + 1 thread)"
+    ],
     "pending_still_unqueued": [
-      "alpha_research_20260308.md Tweet 6-8 (mid-thread) — consumed in thread format",
-      "alpha_review_mar7_tweet1-5.txt (PENDING_REVIEW — still not cleared)",
-      "CYCLE5_OVERFLOW Apr 3-6 queue files still need creation (24 files pending)"
+      "alpha_review_mar7_tweet1-5.txt (PENDING_REVIEW \u2014 still not cleared)",
+      "APR3_APR6 RESOLVED \u2014 16 files created"
     ],
     "coverage_extended_to": "2026-04-09",
     "pipeline_flags": {
       "LURK_BLOCK": "Mar 8 = Day 2. Mar 8-11 queue files will not be posted. Warmup must progress first.",
-      "APR3_APR6_FILES_MISSING": "CYCLE5_OVERFLOW has content for Apr 3-6 (24 slots) but .txt files not yet created. Do this on next social_poster run."
+      "APR3_APR6_FILES_MISSING": "RESOLVED \u2014 16 files created in social_poster_cycle_mar8_0942"
     }
   },
   "pipeline_bug_notes": "BUFFER_UPLOAD_MAR7.csv has token parsing bug: tool names extracted as single words (e.g. 'No' for no-code, 'mCP' for MCP). Also cross-account template contamination between @repscheme/@selahmoments/@drifthour/@PRINTMAXXER. DO NOT post from BUFFER_UPLOAD_MAR7.csv until fixed. Fix needed in tweet_drafter before next auto-batch.",
   "pending_review_not_queued": [
-    "alpha_review_mar7_tweet1.txt (PENDING_REVIEW — 7-day free trial 5x conversion)",
-    "alpha_review_mar7_tweet2.txt (PENDING_REVIEW — personalized email 18% CTR)",
-    "alpha_review_mar7_tweet3.txt (PENDING_REVIEW — email channel conversion tracking)",
-    "alpha_review_mar7_tweet4.txt (PENDING_REVIEW — 400 signups $0 revenue positioning)",
-    "alpha_review_mar7_tweet5.txt (PENDING_REVIEW — 3 founders turned down $2.5M VC)",
-    "compounder_mar7_tweet1-7.txt (PENDING_REVIEW — content_compounder cycle output)"
+    "alpha_review_mar7_tweet1.txt (PENDING_REVIEW \u2014 7-day free trial 5x conversion)",
+    "alpha_review_mar7_tweet2.txt (PENDING_REVIEW \u2014 personalized email 18% CTR)",
+    "alpha_review_mar7_tweet3.txt (PENDING_REVIEW \u2014 email channel conversion tracking)",
+    "alpha_review_mar7_tweet4.txt (PENDING_REVIEW \u2014 400 signups $0 revenue positioning)",
+    "alpha_review_mar7_tweet5.txt (PENDING_REVIEW \u2014 3 founders turned down $2.5M VC)",
+    "compounder_mar7_tweet1-7.txt (PENDING_REVIEW \u2014 content_compounder cycle output)"
   ],
   "hn_submissions_ready": [
     "Show HN #1: 13 streak-tracking PWAs for niche communities ($0 hosting)",
-    "Show HN #2: SiteScore — audit any website in 10 seconds, free, no signup",
-    "Show HN #3: PrayerLock — 55KB PWA that intercepts your phone before you scroll"
+    "Show HN #2: SiteScore \u2014 audit any website in 10 seconds, free, no signup",
+    "Show HN #3: PrayerLock \u2014 55KB PWA that intercepts your phone before you scroll"
   ],
   "created": "2026-03-07T00:00:00Z",
-  "last_updated": "2026-03-07T20:00:00Z",
+  "last_updated": "2026-03-08T09:42:00Z",
   "social_poster_cycle_mar7": {
     "ran": "2026-03-07T20:00:00Z",
     "new_files_created": [
@@ -952,16 +1145,83 @@
       "twitter_PRINTMAXXER_mar31_1100.txt (Hallow #1 standalone)",
       "twitter_PRINTMAXXER_mar31_1430.txt (Muslim Pro standalone)",
       "twitter_PRINTMAXXER_mar31_1800.txt (Durable counter)",
-      "CYCLE5_OVERFLOW_APR1_5.md (Apr 1-6 batch — 18 tweets + 2 Reddit)"
+      "CYCLE5_OVERFLOW_APR1_5.md (Apr 1-6 batch \u2014 18 tweets + 2 Reddit)"
     ],
     "entries_logged": 9,
-    "sources_approved": ["competitor_counter_content_cycle5_20260307.md"],
-    "sources_tracked_unqueued": ["APPROVED_POSTS_MAR7.csv (20 tweets, queued in CYCLE5_OVERFLOW_APR1_5.md)"],
+    "sources_approved": [
+      "competitor_counter_content_cycle5_20260307.md"
+    ],
+    "sources_tracked_unqueued": [
+      "APPROVED_POSTS_MAR7.csv (20 tweets, queued in CYCLE5_OVERFLOW_APR1_5.md)"
+    ],
     "coverage_extended_to": "2026-03-31",
     "overflow_tracked_through": "2026-04-06",
     "pipeline_flags": {
-      "BUFFER_UPLOAD_MAR7_csv": "STILL DO NOT POST — token parsing bug not fixed",
+      "BUFFER_UPLOAD_MAR7_csv": "STILL DO NOT POST \u2014 token parsing bug not fixed",
       "CYCLE5_OVERFLOW_APR1_5": "Ready to create individual .txt files on next social_poster run"
     }
+  },
+  "social_poster_cycle_mar8_0942": {
+    "ran": "2026-03-08T09:42:00Z",
+    "action": "gap_fill_apr3_6",
+    "files_created": 16,
+    "date_range": "2026-04-03 to 2026-04-06",
+    "source": "CYCLE5_OVERFLOW_APR1_5.md",
+    "slots_filled": "4 per day x 4 days = 16 slots",
+    "quality_gate_results": {
+      "approved": [
+        "tweet1",
+        "thread_conversion",
+        "newsletter"
+      ],
+      "need_rewrite": 10,
+      "rewrite_status": "being_fixed",
+      "threads_approved": [
+        "compounder_swarm_thread"
+      ],
+      "threads_approved_count": 2
+    },
+    "new_total_queued": 120,
+    "coverage_after": "2026-04-09"
+  },
+  "social_poster_cycle_mar8_1250": {
+    "timestamp": "2026-03-08T12:50:00Z",
+    "action": "schedule_new_content",
+    "warmup_phase": "LURK (Day 2) — zero posting",
+    "new_content_scanned": {
+      "brain_insights": 4,
+      "alpha_extractions": 8,
+      "cycle2_tweets": 4,
+      "cycle2_thread": 1,
+      "research_cycle": 1,
+      "inbound_audit": 1,
+      "affiliate_funnel": 1,
+      "cross_channel": 2
+    },
+    "voice_quality_check": "ALL PASS — zero em dashes, consequence-first hooks, specific numbers, PRINTMAXXER voice confirmed",
+    "files_created": 19,
+    "dates_covered": "Apr 11-15 (19 slots: Apr 11 x3, Apr 12-15 x4 each)",
+    "sources_used": [
+      "brain_insight_20260308_0-3",
+      "alpha_alpha314/316/334/346/347/349/352/358",
+      "twitter_PRINTMAXXER_mar8_cycle2_0800-1800",
+      "twitter_PRINTMAXXER_mar8_cycle2_THREAD",
+      "affiliate_funnel_distribution_mar8",
+      "cc_hevy_bootstrap_01"
+    ],
+    "schedule_updated": true,
+    "new_total_queued": 139,
+    "coverage_after": "2026-04-15",
+    "remaining_unscheduled": [
+      "twitter_PRINTMAXXER_mar8_research_cycle.txt (3 tweets + thread)",
+      "twitter_PRINTMAXXER_inbound_audit_mar8.txt (3 tweets + thread)",
+      "content_cycle_mar8_autonomy.md (5 tweets + thread + newsletter + LinkedIn)",
+      "AGENT_CONTENT_20260308.md (multi-piece)",
+      "cc_linkedin_agent_swarm_01.txt (LinkedIn)",
+      "counter_cycle5_20260307_1-5.txt (5 pieces)",
+      "bip_day33_revenue.txt",
+      "openclaw_casestudy_memphis_2.txt"
+    ],
+    "notes": "22+ additional pieces available for Apr 16+ scheduling in next cycle"
   }
 }

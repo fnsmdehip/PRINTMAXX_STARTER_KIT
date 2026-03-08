@@ -204,8 +204,14 @@ def wire_competitive_intel_to_app_factory():
     # Find gaps: apps with low ratings, old versions, or missing features
     gaps = []
     for row in intel:
-        rating = float(row.get("rating", "0") or "0")
-        rating_count = int(row.get("rating_count", "0") or "0")
+        try:
+            rating = float(row.get("rating", "0") or "0")
+        except (ValueError, TypeError):
+            rating = 0.0
+        try:
+            rating_count = int(row.get("rating_count", "0") or "0")
+        except (ValueError, TypeError):
+            rating_count = 0
         name = row.get("name", "")
         category = row.get("category", "")
         notes = row.get("notes", "")
@@ -1171,6 +1177,313 @@ def wire_brain_insights_to_content():
     return created
 
 
+# ─── CONNECTION 22: Posting Queue → Buffer CSV ────────────────────────────
+# Auto-formats queued posts into a Buffer-compatible CSV for scheduled posting
+def wire_posting_queue_to_buffer():
+    queue_dir = safe_path(POSTING_QUEUE)
+    if not queue_dir.exists():
+        return 0
+
+    buffer_path = safe_path(CONTENT / "printmaxxer" / "BUFFER_EXPORT_20260308.csv")
+    existing_slugs = set()
+    if buffer_path.exists():
+        existing = load_csv(buffer_path, max_rows=1000)
+        existing_slugs = {r.get("slug", "") for r in existing}
+
+    new_rows = []
+    for f in sorted(queue_dir.iterdir()):
+        if f.suffix != ".txt":
+            continue
+        if f.stem in existing_slugs:
+            continue
+        text = f.read_text(encoding="utf-8", errors="replace").strip()
+        if not text or len(text) < 20:
+            continue
+        # Truncate to 280 chars for single tweets
+        tweet_text = text[:280] if "\n\n" not in text[:100] else text
+        new_rows.append({
+            "slug": f.stem,
+            "text": tweet_text[:500],
+            "platform": "twitter",
+            "status": "READY",
+            "source_file": str(f.name),
+            "added_at": datetime.now().isoformat()
+        })
+
+    if new_rows:
+        fieldnames = ["slug", "text", "platform", "status", "source_file", "added_at"]
+        append_csv(buffer_path, new_rows, fieldnames)
+
+    return len(new_rows)
+
+
+# ─── CONNECTION 23: Monetization Tasks → Asset Deployer Queue ─────────────
+# Reads PENDING monetization tasks and creates an agent-executable task queue
+def wire_monetization_tasks_to_deployer():
+    tasks_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "monetization_tasks.json")
+    if not tasks_path.exists():
+        return 0
+
+    try:
+        tasks = json.loads(tasks_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    if not isinstance(tasks, list):
+        return 0
+
+    deployer_queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "deployer_task_queue.json")
+    existing_tasks = []
+    if deployer_queue_path.exists():
+        try:
+            existing_tasks = json.loads(deployer_queue_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing_tasks = []
+    existing_ids = {t.get("task_id", "") for t in existing_tasks}
+
+    new_tasks = []
+    for task in tasks:
+        status = task.get("status", "")
+        task_id = task.get("task_id", task.get("task", "")[:40])
+        if status == "PENDING" and task_id not in existing_ids:
+            new_tasks.append({
+                "task_id": task_id,
+                "description": task.get("task", task.get("description", "")),
+                "source": "monetization_audit",
+                "priority": task.get("priority", "MEDIUM"),
+                "status": "QUEUED",
+                "queued_at": datetime.now().isoformat()
+            })
+
+    if new_tasks:
+        all_tasks = existing_tasks + new_tasks
+        deployer_queue_path.write_text(json.dumps(all_tasks, indent=2))
+
+    return len(new_tasks)
+
+
+# ─── CONNECTION 24: Product Demand Signals → Digital Products Config ──────
+# Feeds demand signals into Digital Products venture config for find_demand step
+def wire_demand_signals_to_products():
+    signals_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "product_demand_signals.json")
+    if not signals_path.exists():
+        return 0
+
+    try:
+        signals = json.loads(signals_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    # Read autonomy state, inject demand signals into Digital Products config
+    state_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "autonomy_state.json")
+    if not state_path.exists():
+        return 0
+
+    try:
+        state = json.loads(state_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    product_venture = state.get("ventures", {}).get("auto_product_digital_products_9788", {})
+    config = product_venture.get("config", {})
+
+    # Inject top demand categories into config
+    demand_categories = []
+    if isinstance(signals, dict):
+        for cat, items in signals.items():
+            if isinstance(items, list):
+                demand_categories.append({
+                    "category": cat,
+                    "signal_count": len(items),
+                    "top_signal": items[0] if items else ""
+                })
+    elif isinstance(signals, list):
+        demand_categories = signals[:10]
+
+    if not demand_categories:
+        return 0
+
+    existing_demand = config.get("demand_signals", [])
+    existing_cats = {d.get("category", "") if isinstance(d, dict) else str(d) for d in existing_demand}
+    new_demand = [d for d in demand_categories
+                  if (d.get("category", "") if isinstance(d, dict) else str(d)) not in existing_cats]
+
+    if new_demand:
+        config["demand_signals"] = existing_demand + new_demand
+        config["demand_updated"] = datetime.now().isoformat()
+        product_venture["config"] = config
+        state["ventures"]["auto_product_digital_products_9788"] = product_venture
+        state_path.write_text(json.dumps(state, indent=2))
+
+    return len(new_demand)
+
+
+# ─── CONNECTION 25: Trend Signals → Cold Outreach Angles ─────────────────
+# Hot trends become outreach angle briefs for the Cold Outreach Engine
+def wire_trends_to_outreach():
+    trends = load_csv(LEDGER / "TREND_SIGNALS.csv", max_rows=100)
+    if not trends:
+        return 0
+
+    angles_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "outreach_trend_angles.json")
+    existing_angles = []
+    if angles_path.exists():
+        try:
+            existing_angles = json.loads(angles_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing_angles = []
+    existing_signals = {a.get("signal", "") for a in existing_angles}
+
+    new_angles = []
+    for row in trends:
+        score = 0
+        try:
+            score = int(row.get("score", "0") or "0")
+        except (ValueError, TypeError):
+            pass
+        signal = row.get("signal", "")
+        source = row.get("source", "")
+        signal_type = row.get("signal_type", "")
+
+        if score < 55 or not signal:
+            continue
+        if signal[:60] in existing_signals:
+            continue
+        # Filter for business-relevant subreddits via source
+        biz_sources = {"smallbusiness", "entrepreneur", "saas", "sideproject",
+                       "indiehackers", "webdev", "startups", "passive_income",
+                       "microsaas", "freelance", "affiliatemarketing", "forhire",
+                       "digitalnomad", "dropship"}
+        source_lower = source.lower()
+        is_biz = any(s in source_lower for s in biz_sources)
+        if not is_biz:
+            continue
+
+        # Convert trend into outreach angle
+        new_angles.append({
+            "signal": signal[:60],
+            "full_signal": signal[:200],
+            "source": source,
+            "signal_type": signal_type,
+            "score": score,
+            "outreach_angle": f"Re: {signal[:80]} — we build tools for this",
+            "detected_at": datetime.now().isoformat()
+        })
+
+    if new_angles:
+        all_angles = existing_angles + new_angles[-20:]  # cap at 20 new per cycle
+        angles_path.parent.mkdir(parents=True, exist_ok=True)
+        angles_path.write_text(json.dumps(all_angles, indent=2))
+
+    return len(new_angles[:20])
+
+
+# ─── CONNECTION 26: Alpha Clusters → Product Specs ───────────────────────
+# When 10+ alpha entries share a topic, auto-generate a Gumroad product spec
+def wire_alpha_clusters_to_product_specs():
+    alpha = load_csv(LEDGER / "ALPHA_STAGING.csv", max_rows=500)
+    if len(alpha) < 10:
+        return 0
+
+    # Cluster by category/tags
+    clusters = {}
+    for row in alpha:
+        status = row.get("status", "")
+        if status not in ("APPROVED", "ENGAGEMENT_BAIT", "REPURPOSE_ONLY"):
+            continue
+        category = row.get("category", row.get("route_target", "general"))
+        if not category:
+            category = "general"
+        clusters.setdefault(category, []).append(row)
+
+    specs_dir = safe_path(AUTOMATIONS / "agent" / "autonomy" / "product_specs")
+    specs_dir.mkdir(parents=True, exist_ok=True)
+
+    new_specs = 0
+    for cat, items in clusters.items():
+        if len(items) < 10:
+            continue
+
+        slug = cat.lower().replace(" ", "_").replace("/", "_")[:30]
+        spec_path = specs_dir / f"spec_{slug}.json"
+        if spec_path.exists():
+            continue
+
+        # Generate product spec from alpha cluster
+        sample_titles = [
+            (r.get("tactic", "") or r.get("extracted_method", "") or
+             r.get("title", "") or r.get("signal", "") or r.get("reviewer_notes", ""))[:80]
+            for r in items[:10]
+        ]
+        sample_titles = [s for s in sample_titles if s.strip()]
+        spec = {
+            "category": cat,
+            "alpha_count": len(items),
+            "sample_entries": sample_titles,
+            "suggested_product": f"The Ultimate {cat.replace('_', ' ').title()} Playbook",
+            "format": "PDF guide + templates",
+            "price_range": "$19-39",
+            "platform": "gumroad",
+            "status": "SPEC_GENERATED",
+            "generated_at": datetime.now().isoformat()
+        }
+        spec_path.write_text(json.dumps(spec, indent=2))
+        new_specs += 1
+
+    return new_specs
+
+
+# ─── CONNECTION 27: Scored Leads → Content Farm Case Studies ──────────────
+# High-scoring leads with deployed previews become case study content
+def wire_leads_to_case_studies():
+    leads = load_csv(LEADS / "SCORED_LEADS.csv", max_rows=200)
+    if not leads:
+        # Try master leads
+        leads = load_csv(LEADS / "MASTER_LEADS.csv", max_rows=200)
+    if not leads:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"}
+
+    new_posts = 0
+    for row in leads:
+        biz_name = row.get("business_name", row.get("name", ""))
+        city = row.get("city", "")
+        grade = row.get("grade", row.get("website_grade", ""))
+        deploy_url = row.get("deploy_url", row.get("preview_url", ""))
+
+        if not biz_name or not city:
+            continue
+
+        slug = f"case_study_{biz_name}_{city}".replace(" ", "_").replace("/", "_")[:60].lower()
+        if slug in existing_posts:
+            continue
+
+        # Only create case studies for leads where we built a preview
+        if not deploy_url:
+            continue
+
+        tweet = (
+            f"found a {grade or 'D'}-grade website for a {city} business.\n\n"
+            f"rebuilt it in 20 minutes with ai. side by side comparison:\n\n"
+            f"{deploy_url}\n\n"
+            f"most local businesses have terrible websites and don't know it. "
+            f"that's the opportunity."
+        )
+
+        post_path = queue_dir / f"{slug}.txt"
+        post_path.write_text(tweet, encoding="utf-8")
+        new_posts += 1
+
+        if new_posts >= 5:
+            break
+
+    return new_posts
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -1202,6 +1515,12 @@ def run_cycle():
         ("Reddit Pain Points → Product Demand", wire_reddit_to_product_demand),
         ("Content Farm → App Traffic URLs", wire_content_to_app_traffic),
         ("Brain Insights → Content Farm", wire_brain_insights_to_content),
+        ("Posting Queue → Buffer CSV", wire_posting_queue_to_buffer),
+        ("Monetization Tasks → Deployer Queue", wire_monetization_tasks_to_deployer),
+        ("Demand Signals → Products Config", wire_demand_signals_to_products),
+        ("Trend Signals → Outreach Angles", wire_trends_to_outreach),
+        ("Alpha Clusters → Product Specs", wire_alpha_clusters_to_product_specs),
+        ("Scored Leads → Case Studies", wire_leads_to_case_studies),
     ]
 
     total_wired = 0

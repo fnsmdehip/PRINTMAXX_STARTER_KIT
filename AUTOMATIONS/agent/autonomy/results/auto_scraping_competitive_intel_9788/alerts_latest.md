@@ -1,114 +1,85 @@
-# Competitive Intel Cycle 005 — 2026-03-07
-**Time:** 13:42 | **Reddit signals (new):** 7 | **App Store:** 140 apps scanned | **New intel rows:** 1 | **Total COMPETITIVE_INTEL rows:** 377
+# Competitive Intel Alerts — Cycle 014
+**Generated:** 2026-03-08 16:48
+**COMPETITIVE_INTEL.csv rows:** ~275 (17 new this cycle)
 
 ---
 
-## [!!] HIGHEST PRIORITY ALERTS
+## P0 — ACT NOW
 
-### REDDIT_SIGNAL: Accidentally made $100 and a little mad about it
-- **Subreddit:** r/passive_income | **Score:** 128 | **Comments:** 40
-- **Alpha ID:** ALPHA17399
-- **Signal:** "Accidental" monetization framing drives outsized engagement. Relatable frustration at small wins outperforms celebration hooks. Copy pattern: frame success as surprising/annoying, not triumphant.
-- **Action:** Write PrayerLock and Hilal monetization posts using this hook. "I accidentally made $X from a prayer app during Ramadan" > "My app made $X."
-- **URL:** https://www.reddit.com/r/passive_income/comments/1rl6gta/accidentally_made_100_and_a_little_mad_about_it/
+### HIGH_VALUE_INTEL (score:15)
+How to run Qwen 3.5 locally Unsloth guide on running Qwen 3.5 locally. 360 pts, 111 comments. Local LLM tooling keeps trending. Unsloth enables 2x faster fine-tuning with 50% less memory. Direct compe
+- Keywords: competitor, gumroad
+- Engagement: 360
+- URL: https://unsloth.ai
 
----
+### HIGH_VALUE_INTEL (score:15)
+CLI RSS/Atom feed reader inspired by Taskwarrior, synced using Git 37 pts, 13 comments. Git-synced RSS reader for CLI. Tool for monitoring content sources. Could integrate into our research pipeline f
+- Keywords: competitor, arr
+- Engagement: 37
+- URL: https://github.com/kantord
 
-## New Reddit Alpha (7 entries, cycle 5)
+### MARKET_SIGNAL (score:14)
+GetMimic - Generate viral social & chat mockups in seconds with AI AI tool for generating social media mockups. Direct competitor/tool for our content creation pipeline. Could use for creating fake so
+- Keywords: competitor, viral, ai tool
+- Engagement: 0
+- URL: https://www.producthunt.com/products/getmimic
 
-| Alpha ID | ROI | Source | Signal |
-|----------|-----|--------|--------|
-| ALPHA17399 | HIGHEST | r/passive_income | "Accidental $100" hook — copy pattern for monetization content |
-| ALPHA17398 | MEDIUM | r/productivity | "What small habit helps you breathe easier" — community engagement bait template |
-| ALPHA17400 | MEDIUM | r/productivity | "I cannot work at all" pain point thread — streak app target audience |
-| ALPHA17397 | LOW | r/indiehackers | Photofy 3-direction product story — build-in-public format study |
-| ALPHA17401 | LOW | r/AppBusiness | App live after 1.5yr — social proof format to study |
-| ALPHA17402 | LOW | r/startups | Lesson that doubled income — engagement bait, no method to extract |
-| ALPHA17403 | LOW | r/InternetIsBeautiful | Casino bankroll sim — off-niche, skip |
+### MARKET_SIGNAL (score:12)
+Aivaro - Open-source AI alternative to Zapier 4 pts (early). Open-source AI Zapier alternative. Direct competitor intelligence for automation tools market. If this gains traction, validates demand for
+- Keywords: competitor, automation
+- Engagement: 4
+- URL: https://github.com/Abelo9996/Aivaro
 
----
-
-## App Store Intel (140 apps scanned, cycle 5)
-
-### Top Competitors by Rating (unchanged from cycle 4)
-| App | Stars | Price | Threat Level |
-|-----|-------|-------|--------------|
-| Finch: Self-Care Pet | 4.95 | Free | HIGH |
-| Glorify: Devotional & Prayer | 4.93 | Free | HIGH — faith niche direct |
-| Bible Chat: Daily Devotional | 4.93 | Free | HIGH — AI in faith, direct competitor |
-| Bible Chat: AI Bible Q&A | 4.93 | Free | HIGH — AI in faith, direct competitor |
-| Bible (Life.Church) | 4.92 | Free | HIGH |
-| Amen: Catholic Bible & Prayers | 4.92 | Free | MEDIUM |
-| Gratitude: Self-Care Journal | 4.9 | Free | MEDIUM |
-| Balance: Meditation & Sleep | 4.9 | Free | LOW |
-| Hevy - Workout Tracker Gym Log | 4.92 | Free | MEDIUM |
-
-### Version Changes (cycle 5)
-- 0 new version changes detected (stable since cycle 4 at 07:14)
-- Last changes logged: Forest 5.6.0→5.9.0 (HIGH threat), Sleep Cycle + Pillow minor updates
+### MARKET_SIGNAL (score:10)
+Utter - a local-first dictation app for Mac and iPhone 5 pts, 6 comments. Local-first dictation app. Competitor analysis for productivity tools. Shows demand for privacy-focused, local-first apps. Con
+- Keywords: competitor
+- Engagement: 5
+- URL: https://utter.to/
 
 ---
 
-## Unactioned Intel Carried Forward (MUST ACT)
+## P1 — HIGH VALUE
 
-**Priority 1 — Revenue impact, act within 48h:**
+### AI_MARKET_SIGNAL: Local AI models gaining HN traction (360pts)
+Qwen 3.5 local deployment guide: 360 upvotes, 111 comments. Local AI = cost-zero intelligence. Aligns with PRINTMAXX Max plan strategy.
+- **Action:** Content angle: "Running AI agents for $0/month locally vs $200 Claude Max - real comparison"
+- URL: https://unsloth.ai
 
-1. **AI Q&A in faith apps is proven** — Bible Chat at 4.93★ with 311K ratings. Build a minimal AI prayer suggestions feature into PrayerLock. Even a simple "AI prayer" button moves the needle vs. competitors.
+### COMPETITOR_TOOL: GetMimic: AI Viral Social Mockup Generator
+Product Hunt launch. AI generates viral chat/social mockups. Content marketing angle for affiliate products.
+- **Action:** Test for creating proof-of-concept social content for ColdMaxx and streak apps.
+- URL: https://www.producthunt.com/products/getmimic
 
-2. **Free trial → 11% conversion** — Multiple independent sources confirm this. Current streak apps have no trial. Add 7-day free trial to PrayerLock and Hilal. Expected: 2-11x conversion uplift.
+### AUTOMATION_INTEL: Aivaro: Open-Source AI Zapier Alternative
+Early HN post. Open-source AI workflow automation. Direct competition to paid Zapier workflows.
+- **Action:** Monitor for adoption. Content angle: "Why I switched from Zapier to open-source AI automation".
+- URL: https://github.com/Abelo9996/Aivaro
 
-3. **Pricing gap: $2-3/mo is leaving money** — Utility/habit apps testing $9.99/mo with same or better conversion. Queue A/B test immediately.
+### PRODUCT_INTEL: Coursekit: Courses → Embeddable AI Agents
+Product Hunt launch. Converts course content into AI agents. Digital products angle: PRINTMAXX digital products could be agent-ified.
+- **Action:** Evaluate: Can PRINTMAXX digital products (cold email guides, funnel teardowns) become AI agents? Revenue play.
+- URL: https://www.producthunt.com/products/coursekit
 
-**Priority 2 — Risk mitigation, act within 24h:**
-
-4. **Email compliance: Remove "Last Chance" subjects** — FTC/ESP compliance risk confirmed. $1,500/send exposure. Remove from `MONEY_METHODS/COLD_OUTBOUND/AUSTIN_LOCAL_BIZ_COLD_EMAIL_SEQUENCES.md` now.
-
-**Priority 3 — Growth, act this week:**
-
-5. **Monday App Store submissions** — Queue next PrayerLock/Hilal update for Mon 2026-03-10 for best editorial window.
-
-6. **Hevy ASO playbook** — Bootstrapped to $600K/mo with zero paid marketing. Pure ASO + community. Extract keyword strategy for journal-streak apps.
-
-7. **Auto-clip pipeline** — Existing pipeline at `AUTOMATIONS/auto_clip_pipeline.py`. Publish as free tool. YouTube clipper signal score 55.
-
----
-
-## Cross-Pollinator Results (cycle 5)
-- **Competitive Intel → Outreach Context:** 27 items wired
-- **Content Farm → Affiliate Funnels:** 70 items wired
-- **Swarm Leads → Master Leads:** 14 items wired
-- **Reddit Pain Points → Product Demand:** 5 items wired
-- **Brain Decisions → Venture Config:** 1 item wired
-- **Total wired this cycle:** 117 items
+### TOOL_INTELLIGENCE: ItsyConnect: Desktop App Store Connect Manager
+New tool for managing App Store Connect from macOS desktop. Product Hunt launch. Direct relevance: app factory pipeline tooling.
+- **Action:** Review for app factory workflow integration. Could speed up ASO updates across 15+ streak apps.
+- URL: https://www.producthunt.com/products/itsyconnect
 
 ---
 
-## LEDGER State After Cycle 5
-| File | Rows |
-|------|------|
-| COMPETITIVE_INTEL.csv | 377 (+1) |
-| COMPETITOR_CHANGES.csv | 39 (unchanged) |
-| ALPHA_STAGING.csv | 38,481 (+7) |
+## P2 — MARKET PULSE
+
+### TWITTER INTEL (16:21 scrape)
+- [@vasuman | 17❤] Looking for a 2 bed apartment in SF starting March 15/April 1 onwards
+
+Would greatly appreciate any leads!
+- [@emollick | 13❤] Here is the key table showing the 30 day effects (which they misreport in the paper) & which apparently uses a completel
+- [@financialjuice | 11❤] AI agents can run businesses. Book meetings. Audit invoices. Process claims etc. So why doesn’t anyone fully trust them 
 
 ---
 
-## Cycle 4 High-Score Reddit Archive (preserved)
+## COMPETITOR APP STATUS
+_(App store monitoring: no new version changes detected this cycle)_
 
-High-score posts from cycle 4 for reference:
-- **[1523]** I generated $1.5M in less than 3 years. Here's exactly what I did. (r/reddit)
-- **[753]** Accidentally built a boring/weird side hustle that now pays me $1k–$3k/month (r/reddit)
-- **[382]** From the corner of my 9-5 office - project just crossed 2,600 signups (r/reddit)
-- **[346]** I deleted my to-do list apps. I'm 10x more productive now (r/reddit) — streak app opportunity
-- **[268]** The 7 apps that actually stuck after I tried (and deleted) 50 others in 2025 (r/reddit)
-- **[221]** I hit $27k MRR without a personal brand or cold DMs. Here is the playbook. (r/reddit)
-- **[152]** Making $10k in a Month on my Mobile App Finally Happened (r/reddit)
-- **[120]** Entrepreneurs on Reddit, what is your current AI stack in 2026? (r/reddit)
-
----
-
-## Next Cycle Targets (cycle 6, ~15:42)
-- Re-scan App Store: faith niche focus (PrayerLock, Glorify, Bible Chat) with keyword overlap analysis
-- Reddit scan: faith-adjacent subs (r/islam, r/Christianity, r/ramadan) for Hilal/PrayerLock positioning
-- Nationwide scraper: dentists/HVAC/lawyers in Austin (cold outreach pipeline)
-- Monitor: Forest, Glorify, Bible Chat for version updates
-- Action check: confirm "Last Chance" removed from email sequences
+**Cycle stats:** 89 items scanned → 17 new intel rows
+**COMPETITIVE_INTEL.csv total:** ~275 rows

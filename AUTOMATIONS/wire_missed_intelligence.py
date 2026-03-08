@@ -12,6 +12,8 @@ import re
 import sys
 from pathlib import Path
 
+from agent_resilience import locked_file
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 SCAN_PATH = PROJECT_ROOT / "OPS" / "MISSED_INTELLIGENCE_SCAN.md"
@@ -177,9 +179,9 @@ def main():
     entries = parse_scan_file(SCAN_PATH)
     print(f"Parsed {len(entries)} file entries from scan")
 
-    # Read catalog
+    # Read catalog (under lock to prevent concurrent corruption)
     print(f"Reading catalog: {CATALOG_PATH}")
-    with open(CATALOG_PATH, "r", encoding="utf-8") as f:
+    with locked_file(CATALOG_PATH, mode="r") as f:
         catalog = json.load(f)
 
     existing_paths = get_existing_paths(catalog)
@@ -246,8 +248,8 @@ def main():
     catalog["total_docs"] = total
     print(f"\nTotal docs in catalog: {total}")
 
-    # Save
-    with open(CATALOG_PATH, "w", encoding="utf-8") as f:
+    # Save (under lock to prevent concurrent corruption)
+    with locked_file(CATALOG_PATH, mode="w") as f:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
 
     print(f"\nSaved updated catalog to {CATALOG_PATH}")

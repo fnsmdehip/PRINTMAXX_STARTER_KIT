@@ -1,0 +1,7 @@
+your project folder is smarter than your chat history.
+
+saw someone juggling 6 AI accounts to maintain context. $200+/mo. constant drift.
+
+the fix: write state to a markdown file. read it at session start. every AI tool becomes interchangeable. no lock-in. no drift. $20/mo instead of $200.
+
+your filesystem is the memory layer. the LLM is disposable.

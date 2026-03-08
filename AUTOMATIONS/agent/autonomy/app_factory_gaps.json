@@ -158,5 +158,31 @@
     "signal": "Last updated 2024-10-24 - possibly abandoned",
     "opportunity": "Clone Moodnotes - Mood Tracker's value prop with modern stack",
     "detected_at": "2026-03-07T03:15:24.527773"
+  },
+  {
+    "competitor": "Focus - Timer for Productivity",
+    "category": "adhd",
+    "gap_type": "LOW_SATISFACTION",
+    "signal": "Rating 4.43/5 with 1750 reviews = user pain",
+    "opportunity": "Build better adhd app targeting Focus - Timer for Productivity's unhappy users",
+    "detected_at": "2026-03-08T11:09:00.001686"
+  },
+  {
+    "competitor": "Goblin Tools",
+    "category": "adhd",
+    "gap_type": "ABANDONED_APP",
+    "signal": "Last updated 2023-06-23 - possibly abandoned",
+    "opportunity": "Clone Goblin Tools's value prop with modern stack",
+    "detected_at": "2026-03-08T11:09:00.001687"
+  },
+  {
+    "competitor": "HabitSwipe / Streaks / Habitica",
+    "category": "habit_tracker",
+    "gap_type": "MARKET_GAP",
+    "signal": "Reddit r/productivity 307 upvotes on minimum viable day concept + HabitSwipe $800/2mo with 2500 users",
+    "opportunity": "Built CoreDay - anti-habit-tracker focused on 3 non-negotiables = Win Day",
+    "status": "DEPLOYED",
+    "url": "https://coreday.surge.sh",
+    "deployed_at": "2026-03-08T14:21:00"
   }
 ]

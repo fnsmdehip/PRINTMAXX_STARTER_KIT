@@ -1,6 +1,6 @@
 {
   "generated": "2026-03-07",
-  "total_docs": 425,
+  "total_docs": 427,
   "catalog_version": "2.0",
   "notes": "Comprehensive intelligence catalog of all actionable documents in PRINTMAXX project. Paths are relative to project root. Focused on buried gold: specific revenue tactics, pricing, proven methods, and ready-to-use templates. Files were actually read and classified based on content, not just filename.",
   "ventures": {
@@ -3083,6 +3083,23 @@
           "source": "missed_scan_2026-03-07"
         }
       ]
+    },
+    "ALL": {
+      "docs": [
+        {
+          "path": "OPS/AGENT_ECOSYSTEM_ANALYSIS.md",
+          "category": "STRATEGY",
+          "value": "HIGH",
+          "high_value_summary": "Venture-by-venture ADOPT/WATCH/SKIP mapping of 75+ open-source automation tools with integration steps. Top infra: n8n, Crawl4AI, Postiz."
+        },
+        {
+          "path": "OPS/GITHUB_AUTOMATION_TOOLS_CATALOG.md",
+          "category": "RESEARCH",
+          "value": "HIGH",
+          "high_value_summary": "75+ repos across 10 categories. Security rated GREEN/YELLOW/RED. Tier 1-3 deployment priority."
+        }
+      ],
+      "doc_count": 2
     }
   },
   "cross_venture": {

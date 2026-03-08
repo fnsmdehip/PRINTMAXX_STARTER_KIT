@@ -133,7 +133,7 @@ perfectionism is the enemy of revenue. but negligence is the enemy of retention.
 
 ### Tweet 5/5
 
-bottom line: vibe coding is not about writing bad code. it's about shipping to market before the market moves.
+bottom line: vibe coding lets you ship to market before the market moves. the code quality tradeoff is real, but the speed advantage is bigger.
 
 6 weeks ago I had 0 apps deployed.
 today I have 7 apps, 3 with paying users, and more signal than 2 years of planning would have given me.

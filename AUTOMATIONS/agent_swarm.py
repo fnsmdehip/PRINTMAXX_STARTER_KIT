@@ -34,6 +34,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
+from agent_resilience import (
+    sanitize_for_prompt, locked_file, TrajectoryLogger,
+)
+
+_trajectory = TrajectoryLogger("agent_swarm")
+
 # ── Paths ────────────────────────────────────────────────────────────────
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
@@ -1074,14 +1080,20 @@ class SwarmState:
         SWARM_DIR.mkdir(parents=True, exist_ok=True)
         (SWARM_DIR / "reports").mkdir(exist_ok=True)
         (SWARM_DIR / "opportunities").mkdir(exist_ok=True)
-        self.data: dict[str, Any]
+        self.data: dict[str, Any] = self._load()
+
+    def _load(self) -> dict[str, Any]:
         if SWARM_STATE.exists():
-            self.data = json.loads(SWARM_STATE.read_text())
-        else:
-            self.data = {"agents": {}, "deployed_at": None, "total_runs": 0}
+            try:
+                with locked_file(SWARM_STATE, mode="r") as f:
+                    return json.load(f)
+            except (json.JSONDecodeError, OSError, TimeoutError):
+                return {"agents": {}, "deployed_at": None, "total_runs": 0}
+        return {"agents": {}, "deployed_at": None, "total_runs": 0}
 
     def save(self) -> None:
-        SWARM_STATE.write_text(json.dumps(self.data, indent=2, default=str))
+        with locked_file(SWARM_STATE, mode="w") as f:
+            json.dump(self.data, f, indent=2, default=str)
 
     def update_agent(self, agent_id: str, updates: dict[str, Any]) -> None:
         if agent_id not in self.data["agents"]:
@@ -1135,7 +1147,8 @@ def get_agent_intelligence(agent_id: str) -> str:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30,
                                 cwd=str(PROJECT))
         if result.returncode == 0 and result.stdout.strip():
-            return f"\n\n--- INTELLIGENCE BRIEFING ---\n{result.stdout.strip()}\n--- END BRIEFING ---\n\n"
+            clean = sanitize_for_prompt(result.stdout.strip(), field_name=f"intel_{agent_id}")
+            return f"\n\n--- INTELLIGENCE BRIEFING ---\n{clean}\n--- END BRIEFING ---\n\n"
     except Exception:
         pass
     return ""
@@ -1309,6 +1322,8 @@ def show_status() -> None:
 
 
 def deploy_all() -> None:
+    import time as _time
+    _start = _time.time()
     state = SwarmState()
     success = 0
     failed = 0
@@ -1319,11 +1334,14 @@ def deploy_all() -> None:
                 "status": "ACTIVE"
             })
             success += 1
+            _trajectory.log_success(f"deploy:{agent_id}", _start)
         else:
             failed += 1
+            _trajectory.log_failure(f"deploy:{agent_id}", error="install_agent returned False", start=_start)
 
     state.data["deployed_at"] = datetime.now().isoformat()
     state.save()
+    _trajectory.log_success("deploy_all", _start, deployed=success, failed=failed)
     print(f"\nDeployed: {success} agents ({failed} failed)")
     print(f"Total launchd agents: {success} swarm + 8 venture = {success + 8} autonomous agents")
 

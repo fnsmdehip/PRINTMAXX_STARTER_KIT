@@ -1,0 +1,108 @@
+{
+  "cycle": 11,
+  "timestamp": "2026-03-08T10:31:05.530399",
+  "venture": "SCRAPING_competitive_intel",
+  "scrape_summary": {
+    "reddit_posts_scraped": 2,
+    "reddit_posts_analyzed": 121,
+    "twitter_tweets_analyzed": 158,
+    "app_store_competitors_checked": 19,
+    "app_store_changes": 0,
+    "new_competitive_intel_rows": 8,
+    "alpha_items_already_staged": 5,
+    "app_store_apps_full_scan": 160,
+    "app_store_version_changes_bg": 0
+  },
+  "top_intel_this_cycle": [
+    {
+      "priority": "P0",
+      "roi": "HIGHEST",
+      "signal": "@seanb2b cold email framing: outcome-first + risk-reversal. Status: ARCHIVED in staging (needs re-review)",
+      "action": "Apply to coldmaxx copy immediately. Pattern: [Outcome] in [Timeframe] or you dont pay."
+    },
+    {
+      "priority": "P0",
+      "roi": "HIGH",
+      "signal": "963k iOS app analysis \u2014 crowded niches = death. Find frustrated+paying users. Status: APPROVED",
+      "action": "Audit streak apps vs crowded markets. Walk to Unlock = good (captive + frustrated). Faith apps = good."
+    },
+    {
+      "priority": "P1",
+      "roi": "HIGH",
+      "signal": "Tydal.co: Reddit thread monitoring = $12K/200 days. Reply to threads where people ask for your product.",
+      "action": "Set up manual Reddit monitoring for WalkToUnlock/SleepMaxx/ColdMaxx keywords. Reply authentically."
+    },
+    {
+      "priority": "P1",
+      "roi": "HIGH",
+      "signal": "Habitum gamified habit tracker = direct competitor. Got first paying user via organic Reddit.",
+      "action": "Monitor Habitum reviews for feature gaps. Differentiate streak apps with features Habitum lacks."
+    },
+    {
+      "priority": "P2",
+      "roi": "HIGH",
+      "signal": "$6M SaaS sale: customer concentration <40%, 95%+ NRR, defensibility > growth rate for acquirers.",
+      "action": "Architecture note for long-term: diversify app revenue across apps, not one dominant."
+    },
+    {
+      "priority": "P2",
+      "roi": "HIGH",
+      "signal": "Digital Excel templates $44K/mo with only 16 evergreen ads since 2023.",
+      "action": "Digital products: once ad creative works, do NOT rotate. Let it run. Applies to printmaxx digital products."
+    }
+  ],
+  "app_store_status": "No version changes detected. 19 competitors stable.",
+  "reddit_rows_staged": 2,
+  "app_changes_detected": 0,
+  "total_new_rows": 8,
+  "alerts": [
+    "[P0][HIGHEST] @seanb2b outcome-first cold email framing \u2014 apply to ColdMaxx copy NOW",
+    "[P0][HIGH] 963k iOS app analysis confirms: crowded niches = death, frustrated+paying = opportunity \u2014 validates walk/sleep/faith niche selection",
+    "[P1][HIGH] Habitum (gamified habit tracker) = direct competitor \u2014 monitor reviews for feature gaps",
+    "[P1][HIGH] Reddit thread reply strategy = $12K/200 days \u2014 Tydal.co pattern applicable now",
+    "[P2][HIGH] Evergreen ad creative: 16 ads since 2023, $44K/mo \u2014 do NOT rotate working creatives",
+    "[P1][HIGH] Faith niche: Glorify 4.93/5, Bible Chat 4.93/5, Hallow 4.89/5 = high quality bar. BUT denomination-specific apps (Amen = Catholic) shows the gap model works \u2014 Baptist/Methodist/Orthodox = open lanes",
+    "[P1][MEDIUM] StepBet = closest WalkToUnlock competitor (22K reviews, 4.8/5) \u2014 study their App Store positioning and 1-star reviews for gap intel"
+  ],
+  "next_run": "2026-03-08T12:31:05.530408",
+  "app_store_scan": {
+    "apps_scanned": 160,
+    "errors": 0,
+    "version_changes": 0,
+    "top_competitors_by_niche": {
+      "FAITH_PRAYER": [
+        "Glorify: Devotional & Prayer \u2014 4.93/5 (90K reviews) Free v2.169.0",
+        "Bible Chat: Daily Devotional \u2014 4.93/5 (312K reviews) Free v4.2.9",
+        "Hallow: Prayer & Meditation \u2014 4.89/5 (353K reviews) Free",
+        "Amen: Catholic Bible & Prayers \u2014 4.92/5 (45K reviews) Free v1.29.0"
+      ],
+      "HABIT_STREAK": [
+        "Streaks \u2014 4.82/5 (27K reviews) $5.99 v11.2.3 (PAID leader)",
+        "Habit Tracker (Beeper/Momentum) \u2014 4.8/5 (137K reviews) Free",
+        "Daylio Journal \u2014 4.77/5 (58K reviews) Free",
+        "Way of Life \u2014 4.82/5 (5K reviews) Free (less crowded sub-niche)"
+      ],
+      "SLEEP": [
+        "Headspace \u2014 4.84/5 (974K reviews) \u2014 dominant but large target",
+        "Balance: Meditation & Sleep \u2014 4.88/5 (119K reviews)",
+        "Rain Rain Sleep Sounds \u2014 4.85/5 (134K reviews) Free"
+      ],
+      "FOCUS": [
+        "BePresent \u2014 4.85/5 (39K reviews)",
+        "one sec \u2014 4.83/5 (22K reviews)",
+        "Forest \u2014 4.82/5 (47K reviews)",
+        "Opal \u2014 4.79/5 (68K reviews)"
+      ],
+      "WALK_STEP": [
+        "Strava \u2014 4.81/5 (353K reviews) (too large to compete)",
+        "StepBet \u2014 4.8/5 (22K reviews) Free (closest competitor to WalkToUnlock)"
+      ]
+    },
+    "feature_gaps_detected": {
+      "faith_apps": "Missing: offline mode, push notification reliability, group prayer features",
+      "screen_time": "one sec adding conversational reflection \u2014 differentiation needed for FocusLock",
+      "walk": "StepBet = closest competitor. WalkToUnlock differentiator: gamified lock mechanic vs just rewards"
+    },
+    "key_insight": "Faith niche: all top apps have 4.89-4.93 ratings with 45K-353K reviews. High bar. BUT: all are general prayer/bible. Denomination-specific (Catholic Amen, Baptist Streak etc) = clear gap market."
+  }
+}

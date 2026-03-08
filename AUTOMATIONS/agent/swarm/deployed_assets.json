@@ -1,20 +1,22 @@
 {
-  "last_updated": "2026-03-08T00:00:00",
-  "total_deployments": 164,
-  "all_200": true,
-  "notes": "Cycle 8: +3 new deployments. 2 SEO comparison pages (cursor-vs-claudecode, instantly-vs-lemlist). Fixed printmaxx-store 504. All 164 deployments returning 200.",
+  "last_updated": "2026-03-08T16:07:00",
+  "total_deployments": 258,
+  "all_200": false,
+  "notes": "Cycle 14: 258 total deployments tested. 248 GREEN, 5 YELLOW, 5 RED (all DNS label >63 chars). Fixed 2 Louisville 404s via 200.html redeploy. 7 sites Playwright visual tested (4.86/5 avg). 10 Fiverr service pages + 35 Louisville + saas-stack-audit + coreday + revenue-leak-audit confirmed live. 6 Gumroad products BLOCKED on human account creation.",
   "summary": {
     "apps": 20,
     "streak_landing_pages": 24,
     "streak_web_pages": 28,
     "local_biz_openclaw": 16,
-    "tools_saas": 23,
+    "local_biz_louisville": 30,
+    "tools_saas": 24,
     "demos": 19,
-    "hubs": 4,
-    "lead_magnets": 4,
-    "comparison_pages": 8,
+    "hubs": 5,
+    "lead_magnets": 7,
+    "comparison_pages": 9,
     "storefront": 1,
     "thanks": 1,
+    "fiverr_service_pages": 10,
     "other": 2,
     "media_templates": 2
   },
@@ -49,8 +51,52 @@
         "status": 200,
         "deployed": "2026-03-07",
         "description": "Email subject line grader tool - free lead magnet",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/subject-line-grader.html",
-        "note": "NEW this cycle"
+        "source": "DIGITAL_PRODUCTS/lead_magnets/subject-line-grader.html"
+      },
+      {
+        "name": "Cold Email ROI Calculator",
+        "url": "https://cold-email-roi-calculator.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Plug in your numbers, see exactly what cold email outreach is worth",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/cold-email-roi-calculator.html",
+        "note": "NEW cycle 9"
+      },
+      {
+        "name": "Side Project Revenue Estimator",
+        "url": "https://side-project-estimator.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Find out if your side project idea prints money or burns time",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/side-project-revenue-estimator.html",
+        "note": "NEW cycle 9"
+      },
+      {
+        "name": "PRINTMAXX Tools Hub",
+        "url": "https://printmaxx-tools.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "46 free tools on one page - central hub for all PRINTMAXX tools",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/app-hub-crosslinks.html",
+        "note": "NEW cycle 9"
+      },
+      {
+        "name": "Solopreneur Financial Dashboard",
+        "url": "https://financial-dashboard-pm.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Track revenue, expenses, margins, and runway in one page",
+        "source": "PRODUCTS/GUMROAD_INSTANT_UPLOAD/financial-dashboard/financial_dashboard.html",
+        "note": "NEW cycle 9"
+      },
+      {
+        "name": "Revenue Leak Audit",
+        "url": "https://revenue-leak-audit.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "12 questions, 90 seconds. Find every hole in your revenue funnel. Most solopreneurs leak $1,200-4,850/mo.",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/revenue-leak-audit.html",
+        "note": "NEW cycle 11"
       }
     ],
     "comparison_pages": [
@@ -119,6 +165,15 @@
         "description": "Cold email platform comparison - Instantly vs Lemlist 2026",
         "source": "07_LANDING/instantly-vs-lemlist/index.html",
         "note": "NEW cycle 8 - targets cold email tool searches"
+      },
+      {
+        "name": "Best Cold Email Tools 2026",
+        "url": "https://best-cold-email-tools.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "SEO listicle: best cold email tools comparison with ColdMaxx featured",
+        "source": "LANDING/app-marketing-pages/best-cold-email-tools/index.html",
+        "note": "Previously uncatalogued - added cycle 11"
       }
     ],
     "core_apps": [
@@ -1092,32 +1147,47 @@
     ]
   },
   "live_test": {
-    "tested_at": "2026-03-07T19:15:00",
-    "total": 156,
-    "green": 154,
-    "yellow": 10,
-    "red": 1,
-    "pass_rate": "98.7%",
-    "avg_load_ms": 1893,
-    "notes": "1 true RED: local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl (DNS 65-char label limit). 10 YELLOW: slow load times on local biz pages. All other 154 returning 200.",
+    "tested_at": "2026-03-08T16:07:00",
+    "total": 258,
+    "green": 248,
+    "yellow": 5,
+    "red": 5,
+    "pass_rate": "98.1%",
+    "avg_load_ms": 1350,
+    "notes": "Cycle 14 (Playwright Tester): Full bulk HTTP test of 258 sites (53 new). 19 Louisville 504s resolved on retry (cold cache). 2 Louisville 404s fixed via 200.html redeploy. 7 sites Playwright visual tested (avg 4.86/5). 5 RED are all DNS label >63 chars (permanent). 5 YELLOW are 3 test deploys + 2 slow loads.",
+    "playwright_visual_tested": 34,
+    "playwright_avg_quality": "4.86/5",
+    "fixed_this_cycle": [
+      "kings-hands-llc-louisville-ky.surge.sh",
+      "new-seasons-auction-and-estates-louisville-ky.surge.sh"
+    ],
     "spot_checked": [
-      "printmaxx-site.surge.sh",
-      "jss-janitorial-memphis.surge.sh",
-      "shop-of-memphis-preview.surge.sh",
-      "website-analyzer-pm.surge.sh",
-      "printmaxx-control-panel.surge.sh",
-      "adhd-streak.surge.sh",
-      "convertkit-vs-beehiiv.surge.sh",
-      "subject-line-grader-pm.surge.sh"
+      "saas-stack-audit.surge.sh",
+      "coreday.surge.sh",
+      "printmaxx-website-design.surge.sh",
+      "printmaxx-cold-email.surge.sh",
+      "revenue-leak-audit.surge.sh",
+      "coit-cleaning-restoration-louisville-ky.surge.sh",
+      "printmaxx-store.surge.sh"
     ]
   },
   "new_this_cycle": [
-    "coldmaxx-vs-instantly.surge.sh",
-    "pagescorer-vs-gtmetrix.surge.sh",
-    "sleepmaxx-vs-sleepcycle.surge.sh",
-    "printmaxx-twitter-banner.surge.sh",
-    "printmaxx-twitter-pfp.surge.sh"
+    "saas-stack-audit.surge.sh",
+    "coreday.surge.sh",
+    "35 Louisville KY local biz sites",
+    "10 Fiverr service pages (printmaxx-website-design through printmaxx-data-analysis)",
+    "3 Las Vegas/Orlando local biz sites",
+    "3 test deploys"
   ],
-  "fixed_this_cycle": [],
-  "still_broken": []
+  "fixed_this_cycle": [
+    "kings-hands-llc-louisville-ky.surge.sh (was 404, added 200.html, redeployed)",
+    "new-seasons-auction-and-estates-louisville-ky.surge.sh (was 404, added 200.html, redeployed)"
+  ],
+  "still_broken": [
+    "local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh (DNS label >63 chars)",
+    "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh (DNS label >63 chars)",
+    "top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh (DNS label >63 chars)",
+    "window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh (DNS label >63 chars)",
+    "the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh (DNS label >63 chars)"
+  ]
 }

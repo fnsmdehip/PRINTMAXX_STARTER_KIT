@@ -1,0 +1,205 @@
+{
+  "cycle": 12,
+  "timestamp": "2026-03-08T12:38:10.825314",
+  "venture": "SCRAPING_competitive_intel",
+  "scrape_summary": {
+    "reddit_posts_fresh": 41,
+    "reddit_actionable": 19,
+    "app_store_checked": 13,
+    "new_rows_written": 31,
+    "alerts_generated": 15
+  },
+  "top_intel_this_cycle": [
+    {
+      "priority": "P0",
+      "roi": "HIGHEST",
+      "signal": "I stopped tracking 10 habits and started defining a \u201cminimum viable day.\u201d It\u2019s working better than I",
+      "action": "Extract specific complaints, build differentiating features in streak apps"
+    },
+    {
+      "priority": "P0",
+      "roi": "HIGH",
+      "signal": "8 months of failed dropshipping launches before i understood what i was actually doing wrong",
+      "action": "Extract specific complaints, build differentiating features in streak apps"
+    },
+    {
+      "priority": "P0",
+      "roi": "HIGH",
+      "signal": "Do we really need all these AI startups? I will not promote",
+      "action": "Extract specific complaints, build differentiating features in streak apps"
+    },
+    {
+      "priority": "P0",
+      "roi": "HIGH",
+      "signal": "Tiny habits vs big goals: what actually works for staying consistent?",
+      "action": "Extract specific complaints, build differentiating features in streak apps"
+    },
+    {
+      "priority": "P0",
+      "roi": "HIGH",
+      "signal": "There's a snowball effect in your habits \u2013 you just don't see it yet",
+      "action": "Extract specific complaints, build differentiating features in streak apps"
+    },
+    {
+      "priority": "P1",
+      "roi": "HIGHEST",
+      "signal": "$20k MRR to $191K MRR for supplement brand (I will not promote)",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures"
+    },
+    {
+      "priority": "P1",
+      "roi": "HIGH",
+      "signal": "Went from $0 to $1k MRR. If I started my SaaS over, here's exactly what I'd do",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures"
+    },
+    {
+      "priority": "P1",
+      "roi": "HIGH",
+      "signal": "2k users, $800 with a Habit Tracker - I can't explain how good this feels",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures"
+    }
+  ],
+  "alerts": [
+    {
+      "priority": "P0",
+      "type": "USER_PAIN_POINT",
+      "signal": "I stopped tracking 10 habits and started defining a \u201cminimum viable day.\u201d It\u2019s working better than I",
+      "action": "Extract specific complaints, build differentiating features in streak apps",
+      "roi": "HIGHEST",
+      "source": "r/productivity",
+      "url": "https://reddit.com/r/productivity/comments/1rb5xkx/i_stopped_tracking_10_habits_and_started_defining/"
+    },
+    {
+      "priority": "P0",
+      "type": "USER_PAIN_POINT",
+      "signal": "8 months of failed dropshipping launches before i understood what i was actually doing wrong",
+      "action": "Extract specific complaints, build differentiating features in streak apps",
+      "roi": "HIGH",
+      "source": "r/passive_income",
+      "url": "https://reddit.com/r/passive_income/comments/1rimts8/8_months_of_failed_dropshipping_launches_before_i/"
+    },
+    {
+      "priority": "P0",
+      "type": "USER_PAIN_POINT",
+      "signal": "Do we really need all these AI startups? I will not promote",
+      "action": "Extract specific complaints, build differentiating features in streak apps",
+      "roi": "HIGH",
+      "source": "r/startups",
+      "url": "https://reddit.com/r/startups/comments/1r7zfp0/do_we_really_need_all_these_ai_startups_i_will/"
+    },
+    {
+      "priority": "P0",
+      "type": "USER_PAIN_POINT",
+      "signal": "Tiny habits vs big goals: what actually works for staying consistent?",
+      "action": "Extract specific complaints, build differentiating features in streak apps",
+      "roi": "HIGH",
+      "source": "r/productivity",
+      "url": "https://reddit.com/r/productivity/comments/1r8sl4n/tiny_habits_vs_big_goals_what_actually_works_for/"
+    },
+    {
+      "priority": "P0",
+      "type": "USER_PAIN_POINT",
+      "signal": "There's a snowball effect in your habits \u2013 you just don't see it yet",
+      "action": "Extract specific complaints, build differentiating features in streak apps",
+      "roi": "HIGH",
+      "source": "r/productivity",
+      "url": "https://reddit.com/r/productivity/comments/1qxdsqc/theres_a_snowball_effect_in_your_habits_you_just/"
+    },
+    {
+      "priority": "P1",
+      "type": "REVENUE_INTEL",
+      "signal": "$20k MRR to $191K MRR for supplement brand (I will not promote)",
+      "snippet": "heres every step of how we took a wellness brand from $20K MRR to $191K MRR in 7 months. It wasn\u2019t all sunshine and rainbows but right now with AI you can get serious productivity gains. Hope this hel",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures",
+      "roi": "HIGHEST",
+      "source": "r/startups",
+      "url": "https://reddit.com/r/startups/comments/1rkxawc/20k_mrr_to_191k_mrr_for_supplement_brand_i_will/"
+    },
+    {
+      "priority": "P1",
+      "type": "REVENUE_INTEL",
+      "signal": "Went from $0 to $1k MRR. If I started my SaaS over, here's exactly what I'd do",
+      "snippet": "After going from $0 to $1K MRR, I've learned that what you focus on matters, but the order you focus on it matters even more.\n\nHere are the 7 steps, in the exact sequence I'd follow if I started over:",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures",
+      "roi": "HIGH",
+      "source": "r/indiehackers",
+      "url": "https://reddit.com/r/indiehackers/comments/1riyr34/went_from_0_to_1k_mrr_if_i_started_my_saas_over/"
+    },
+    {
+      "priority": "P1",
+      "type": "REVENUE_INTEL",
+      "signal": "2k users, $800 with a Habit Tracker - I can't explain how good this feels",
+      "snippet": "App name - [HabitSwipe](http://www.habitswipe.app) \n\nPlatform - Android &amp; iOS\n\nNumber of users  - 2500\n\nTotal Revenue in last 2 months - $799\n\nTotal Reviews - 120 \n\n**Story**\n\nI've crossed 2k inst",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures",
+      "roi": "HIGH",
+      "source": "r/passive_income",
+      "url": "https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/"
+    },
+    {
+      "priority": "P1",
+      "type": "REVENUE_INTEL",
+      "signal": "LinkedIn outreach is dead and my offer isn't sexy. What's the move?",
+      "snippet": "I run a small B2B bookkeeping practice and cold outreach is just not converting anymore.\n\nSent around 200 LinkedIn messages this quarter. Tried the \"quick question\" openers, tried leading with pain po",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures",
+      "roi": "HIGH",
+      "source": "r/smallbusiness",
+      "url": "https://reddit.com/r/smallbusiness/comments/1rm76wj/linkedin_outreach_is_dead_and_my_offer_isnt_sexy/"
+    },
+    {
+      "priority": "P1",
+      "type": "REVENUE_INTEL",
+      "signal": "Founders of service businesses - what actually worked for getting your first clients?",
+      "snippet": "I\u2019m trying to get a small B2B service business off the ground alongside a full-time job and struggling with the \u201cfirst client\u201d problem.\n\nThe service is aimed at helping established businesses improve ",
+      "action": "Extract revenue pattern, adapt for PRINTMAXX ventures",
+      "roi": "HIGH",
+      "source": "r/smallbusiness",
+      "url": "https://reddit.com/r/smallbusiness/comments/1rgulh5/founders_of_service_businesses_what_actually/"
+    },
+    {
+      "priority": "P1",
+      "type": "COMPETITOR_STATUS",
+      "signal": "Productive: 4.59685\u2605 (91,128 ratings) | v3.26.38",
+      "action": "Our streak apps target underserved niche vs generic Productive. Use ASO gap: faith/walk/sleep angle.",
+      "roi": "MEDIUM",
+      "source": "itunes_api"
+    },
+    {
+      "priority": "P0",
+      "type": "MONETIZATION_BENCHMARK",
+      "signal": "HabitSwipe: 2.5k users \u2192 $800 revenue. Conversion rate ~1%. Android+iOS.",
+      "action": "Benchmark: our apps need 2.5k+ users for $800/mo. Walk To Unlock + Sleep/Faith streak apps need immediate ASO push.",
+      "roi": "HIGHEST",
+      "source": "r/passive_income",
+      "url": "https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/"
+    },
+    {
+      "priority": "P1",
+      "type": "CONTENT_OPPORTUNITY",
+      "signal": "307 upvote post: \"stopped tracking 10 habits, started defining minimum viable day\"",
+      "action": "Tweet thread: \"habit trackers are broken. i track 1 thing. minimum viable day framework.\" \u2014 high engagement content.",
+      "roi": "HIGH",
+      "source": "r/productivity",
+      "url": "https://reddit.com/r/productivity/comments/1rb5xkx/i_stopped_tracking_10_habits_and_started_defining/"
+    },
+    {
+      "priority": "P1",
+      "type": "MARKET_SIGNAL",
+      "signal": "LinkedIn outreach dying for B2B bookkeeping. Cold email still valid when personalized.",
+      "action": "ColdMaxx positioning: \"LinkedIn is dead. Email still works when you do it right.\" \u2014 use as comparison page hook.",
+      "roi": "HIGH",
+      "source": "r/smallbusiness",
+      "url": "https://reddit.com/r/smallbusiness/comments/1rm76wj/linkedin_outreach_is_dead_and_my_offer_isnt_sexy/"
+    },
+    {
+      "priority": "P1",
+      "type": "FRAMEWORK_INTEL",
+      "signal": "High-engagement post: $0 \u2192 $1k MRR framework. 189 comments = lots of pain.",
+      "snippet": "After going from $0 to $1K MRR, I've learned that what you focus on matters, but the order you focus on it matters even more.\n\nHere are the 7 steps, in the exact sequence I'd follow if I started over:",
+      "action": "Read comments for specific tactics. Compare to our current approach. Gap hunt.",
+      "roi": "HIGH",
+      "source": "r/indiehackers",
+      "url": "https://reddit.com/r/indiehackers/comments/1riyr34/went_from_0_to_1k_mrr_if_i_started_my_saas_over/"
+    }
+  ],
+  "status": "SUCCESS"
+}

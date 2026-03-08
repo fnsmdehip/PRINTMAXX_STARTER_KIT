@@ -64,8 +64,8 @@ async def scrape_account(page, handle, batch_num):
                         });
                     }
                 """)
-            except:
-                pass
+            except Exception:
+                pass  # "Show more" buttons may not exist; safe to ignore
 
             await page.wait_for_timeout(500)
 

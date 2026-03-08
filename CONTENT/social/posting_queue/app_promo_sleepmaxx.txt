@@ -2,10 +2,8 @@ IMAGE: MEDIA/generated_images/app_sleepmaxx.png
 
 ---
 
-built SleepMaxx in one session with claude code.
+SleepMaxx: tracks your sleep without a wearable. just log when you sleep and wake up. it does the math.
 
-55KB. offline-capable. zero dependencies.
+no subscription. no Bluetooth pairing. no "sync your Apple Watch" nonsense.
 
-the app store charges $99/yr for a developer account. surge.sh is free. PWAs are free. your users don't care about the wrapper.
-
-ship the thing.
+sleepmaxx.surge.sh. free. the sleep tracking market is $4.5B and most of it is overthinking a simple problem.

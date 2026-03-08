@@ -56,14 +56,12 @@ The PRINTMAXX system operates as a **hedge fund of revenue lanes**, not a single
 The #1 failure mode is building systems instead of deploying them. 90+ scripts, 30+ listings, 1,278 posts, 7 apps built. Deploy what exists before building new things.
 
 **Session start (10 min max):**
-1. Read `OPS/PERSISTENT_TASK_TRACKER.md`
-2. Read `OPS/DAILY_DIGEST.md` (what the system did since last session)
-3. `python3 AUTOMATIONS/decision_engine.py --cycle` (process all pending data → actions)
-4. Deploy anything deployable. Run scrapers in background.
-5. Check `OPS/HEARTBEAT.md` for system pulse
-6. Refresh digest: `python3 AUTOMATIONS/daily_digest.py --days 1 --save`
-7. Generate engagement plan: `python3 AUTOMATIONS/daily_engagement_planner.py --save` (warmup-safe daily action plan)
-8. Read `OPS/DAILY_TACTICAL_PLAN.md` (today's tactical plan — auto-generated at 7:15 AM)
+1. Read `OPS/SESSION_BRIEFING.md` (auto-generated at session start — automation report, changes, actionable queue, lost threads)
+2. Read `OPS/PERSISTENT_TASK_TRACKER.md`
+3. Read `OPS/DAILY_TACTICAL_PLAN.md` (today's tactical plan — auto-generated at 7:15 AM)
+4. `python3 AUTOMATIONS/decision_engine.py --cycle` (process all pending data → actions)
+5. Deploy anything deployable. Run scrapers in background.
+6. Check `OPS/ACTIONABLE_QUEUE.md` (prioritized P0-P3 items from all sources — auto-generated 7:30 AM)
 
 ### 2. EXECUTE, LOG, AND CLOSE THE LOOP — NO ORPHAN DOCUMENTS
 

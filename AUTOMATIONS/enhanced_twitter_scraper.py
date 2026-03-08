@@ -61,8 +61,8 @@ async def analyze_tweet_replies(page, tweet_url, original_handle):
                     });
                 }
             """)
-        except:
-            pass
+        except Exception:
+            pass  # "Show more" buttons may not exist; safe to ignore
 
         await page.wait_for_timeout(1000)
 
@@ -168,8 +168,8 @@ async def scrape_account_with_replies(page, handle, batch_num):
                         });
                     }
                 """)
-            except:
-                pass
+            except Exception:
+                pass  # "Show more" buttons may not exist; safe to ignore
 
             await page.wait_for_timeout(500)
 

@@ -105,8 +105,8 @@ def safe_read_csv_column(path: Path, col: str) -> list:
                 v = row.get(col, "").strip()
                 if v:
                     vals.append(v)
-    except:
-        pass
+    except Exception:
+        pass  # CSV may be corrupt or locked; return what we got
     return vals
 
 

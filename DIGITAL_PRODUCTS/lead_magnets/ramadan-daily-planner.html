@@ -3,11 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramadan Daily Planner — build your schedule around prayer times</title>
-<meta name="description" content="plug in your timezone. get a full daily schedule built around suhoor, fajr, iftar, and taraweeh. track goals across all 30 days.">
-<meta property="og:title" content="Ramadan Daily Planner">
-<meta property="og:description" content="your daily schedule built around prayer times. 30-day tracker. works offline. free.">
+<title>Ramadan Daily Planner: Prayer Times + 30-Day Tracker</title>
+<meta name="description" content="Plug in your timezone. Get a daily schedule built around suhoor, fajr, iftar, and taraweeh. Track goals across all 30 days.">
+<meta name="keywords" content="ramadan daily planner 2026, ramadan schedule maker, prayer times planner, ramadan tracker free, iftar schedule, suhoor schedule">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ramadan-daily-planner.surge.sh">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Ramadan Daily Planner: Prayer Times + 30-Day Tracker">
+<meta property="og:description" content="Your daily schedule built around prayer times. 30-day tracker. Works offline. Free.">
+<meta property="og:url" content="https://ramadan-daily-planner.surge.sh">
+<meta property="og:image" content="https://ramadan-daily-planner.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Ramadan Daily Planner: Free Prayer Schedule">
+<meta name="twitter:description" content="Daily schedule built around suhoor, fajr, iftar, taraweeh. 30-day goal tracker. Works offline.">
+<meta name="twitter:image" content="https://ramadan-daily-planner.surge.sh/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ramadan Daily Planner","url":"https://ramadan-daily-planner.surge.sh","description":"Build your Ramadan schedule around prayer times with 30-day goal tracking","applicationCategory":"LifestyleApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -120,6 +131,12 @@ select.input-field{width:180px;cursor:pointer}
 .day-cell.partial{background:rgba(245,158,11,0.1);border-color:var(--gold2);color:var(--gold2)}
 .day-cell.future{opacity:0.4}
 
+.tracker-gate{text-align:center;padding:40px 0}
+.tracker-gate h3{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.tracker-gate p{color:var(--muted);font-size:0.9rem;max-width:380px;margin:0 auto 20px}
+.tracker-gate .gate-btn{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;border:none;border-radius:8px;padding:13px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:inherit;width:100%}
+#panel-tracker.locked .stats-row,#panel-tracker.locked .card{display:none}
+#panel-tracker:not(.locked) .tracker-gate{display:none}
 .cta-section{padding:40px 0 48px;border-top:1px solid var(--border);text-align:center}
 .cta-section h3{font-size:1.4rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:6px}
 .cta-section p{color:var(--muted);font-size:0.9rem;max-width:400px;margin:0 auto 20px}
@@ -152,7 +169,7 @@ footer p{color:var(--muted);font-size:0.78rem}
 
 <div class="container">
   <header>
-    <div class="badge">ramadan 1446 / 2025</div>
+    <div class="badge">ramadan 1447 / 2026</div>
     <h1>ramadan daily <span>planner</span></h1>
     <p>plug in your timezone. get your full day built around prayer times. track goals across all 30 days. no account needed.</p>
   </header>
@@ -231,14 +248,27 @@ footer p{color:var(--muted);font-size:0.78rem}
     <div class="card" id="schedule-notes" style="display:none">
       <h2>how these times work</h2>
       <p class="note-text">
-        prayer times are estimated from your UTC offset using standard astronomical formulas for mid-latitude cities (~35N) during Ramadan 2025 (late Feb to late March). actual times vary by latitude. for precise times, check a local mosque or an app like Athan Pro. adjust the blocks to match your real prayer times.
+        prayer times are estimated from your UTC offset using standard astronomical formulas for mid-latitude cities (~35N) during Ramadan 1447 (late Feb to late March 2026). actual times vary by latitude. for precise times, check a local mosque or an app like Athan Pro. adjust the blocks to match your real prayer times.
       </p>
     </div>
 
   </div>
 
   <!-- TRACKER PANEL -->
-  <div class="panel" id="panel-tracker">
+  <div class="panel locked" id="panel-tracker">
+
+    <div class="tracker-gate">
+      <h3>unlock the 30-day tracker</h3>
+      <p>you built your schedule. now track prayers, quran pages, and charity across all 30 days. 340+ people are using this.</p>
+      <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="[Ramadan Planner] Tracker Unlock">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://ramadan-daily-planner.surge.sh/?k=rm47track">
+        <input type="email" name="email" placeholder="your email" required>
+        <button type="submit" class="gate-btn">unlock 30-day tracker</button>
+        <p class="fine">free. takes 5 seconds. no spam.</p>
+      </form>
+    </div>
 
     <div class="stats-row">
       <div class="stat-box">
@@ -445,7 +475,7 @@ footer p{color:var(--muted);font-size:0.78rem}
     <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="[Ramadan Planner] Lead Magnet Signup">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://printmaxx-thanks.surge.sh/">
+      <input type="hidden" name="_next" value="https://printmaxx-store.surge.sh/?ref=ramadan-planner">
       <input type="email" name="email" placeholder="your email" required>
       <button type="submit">send me the full system</button>
       <p class="fine">no spam. one email with the full system. unsubscribe anytime.</p>
@@ -735,6 +765,17 @@ function renderTracker() {
       grid.appendChild(cell);
     })(j);
   }
+}
+
+// ─── Tracker gate ────────────────────────────────────────────────────────────
+var TRACKER_UNLOCK_KEY = 'ramadan_tracker_unlocked';
+var trackerPanel = document.getElementById('panel-tracker');
+var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('k') === 'rm47track') {
+  localStorage.setItem(TRACKER_UNLOCK_KEY, 'true');
+}
+if (localStorage.getItem(TRACKER_UNLOCK_KEY) === 'true') {
+  trackerPanel.classList.remove('locked');
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────────

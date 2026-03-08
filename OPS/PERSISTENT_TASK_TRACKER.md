@@ -1,6 +1,52 @@
 # PERSISTENT TASK TRACKER
 # Status: ACTIVE — READ THIS EVERY SESSION START, AFTER EVERY COMPACTION
-# Updated: 2026-03-07
+# Updated: 2026-03-08
+
+### COMPETITIVE INTEL SWEEP -- 2026-03-08
+- **Status:** DONE (research). HUMAN ACTION REQUIRED (3 items below).
+- **Report:** `OPS/TREND_INTEL/analyses/COMPETITIVE_INTEL_REPORT_20260308.md` -- 10 research vectors, 80+ data points
+- **Alpha entries:** ALPHA18533-18539 (7 new entries logged as PENDING_REVIEW)
+- **Competitor changes:** 7 new entries in COMPETITOR_CHANGES.csv
+- **TOP 5 FINDINGS:**
+  1. X Premium gives 10x reach -- free accounts get 0% link engagement (Buffer 18.8M post study)
+  2. Whop: $1.6B valuation, 14.2M users, 30K affiliates. Gumroad losing merchants.
+  3. Claude Code overtook Copilot. $2.5B ARR. 29M VS Code daily installs.
+  4. 30-app portfolio at $22K/month validates app factory thesis ($733/app avg).
+  5. Vibe coding had Super Bowl ad (Base44/Wix). r/vibecoding at 153K subscribers.
+- **HUMAN ACTIONS NEEDED:**
+  - P0 (5 min): Subscribe to X Premium on @PRINTMAXXER -- without it, link posts get 0% engagement
+  - P1 (30 min): Create Whop seller account and start migrating 13 Gumroad products
+  - P2 (15 min): Review and approve 7 new ALPHA entries (ALPHA18533-18539) for routing
+
+### AFFILIATE PROGRAM RESEARCH -- 2026-03-08
+- **Status:** DONE (research). HUMAN ACTION REQUIRED (sign-ups).
+- **Report:** `OPS/AFFILIATE_OPPORTUNITIES_MAR08.md` -- top 10 programs ranked by revenue potential
+- **Alpha entries:** ALPHA18290-18295 (top 6 logged to ALPHA_STAGING.csv as PENDING_REVIEW)
+- **Top 3 by revenue:** Instantly (20-40% recurring, pages exist), Beehiiv (50% first year, page exists), Kit (50% + lifetime tail)
+- **Key arbitrage:** SEMrush 120-day cookie ($200-350/sale), Saleshandy 90-day cookie + lifetime recurring
+- **Existing pages that need affiliate IDs:** instantly-vs-lemlist, coldmaxx-vs-instantly, convertkit-vs-beehiiv
+- **New pages to build:** smartlead-vs-instantly, semrush-vs-ahrefs
+- **HUMAN ACTION (45-60 min total):** Sign up for 10 affiliate programs. URLs and steps in OPS/AFFILIATE_OPPORTUNITIES_MAR08.md.
+- **Projected revenue (base):** $4,194/yr. Bull: $16,776/yr. Bear: $1,678/yr.
+
+### AGENT RESILIENCE + RESEARCH BUILD — 2026-03-08
+- **Status:** DONE
+- **Built:**
+  - `AUTOMATIONS/agent_resilience.py` — shared resilience module (retry/backoff, file locking, circuit breaker, sanitization, trajectory logging)
+  - `AUTOMATIONS/sqlite_alpha_index.py` — SQLite FTS5 index for 15K+ alpha entries (sub-second search)
+  - `AUTOMATIONS/security_audit.py` — 6-category automated security scanner
+  - CEO checkpoint-resume in `ceo_agent.py` (crash recovery for 16-phase cycles)
+- **Wired resilience into:** agent_swarm.py, ceo_agent.py, venture_autonomy.py, loop_closer.py, intelligence_router.py, wire_missed_intelligence.py (sanitization, file locking, trajectory logging)
+- **Research completed:**
+  - `OPS/GITHUB_AUTOMATION_TOOLS_CATALOG.md` — 75+ repos across 10 categories with security ratings
+  - `OPS/alpha_research/OPEN_SOURCE_MONEY_TOOLS_2026-03-08.md` — 35 monetization tools
+  - `OPS/AGENT_ECOSYSTEM_ANALYSIS.md` — venture-by-venture mapping with ADOPT/WATCH/SKIP decisions
+- **Cron added:** SQLite FTS rebuild (3:30 AM daily), Security audit (4:30 AM Sunday)
+- **All files compile clean.** All agents importing from agent_resilience verified.
+- **Sonnet → Opus:** ALL 25 swarm agents now use MODEL_OPUS. Zero Sonnet.
+- **Rule 2 rewritten:** "No Orphan Documents" — every doc must have a consumer
+- **Capital Genesis ethos:** Baked into CLAUDE.md + System Map
+- **Prompt pipeline built:** log_user_prompts.sh → prompt_meta_review.py → actionable_aggregator.py → session_briefing.py
 
 ### ALPHA INTELLIGENCE CYCLE #4 — 2026-03-07 21:45 UTC-5
 - **Status:** DONE

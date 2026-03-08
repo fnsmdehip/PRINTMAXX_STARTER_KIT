@@ -1,0 +1,401 @@
+{
+  "scrape_metadata": {
+    "timestamp": "2026-03-08T15:54:43.932349",
+    "sources": [
+      "hacker_news",
+      "product_hunt"
+    ],
+    "hn_stories_scraped": 20,
+    "ph_products_scraped": 12,
+    "total_findings": 32,
+    "high_relevance": 16,
+    "medium_relevance": 10,
+    "low_relevance": 6
+  },
+  "top_alpha_signals": [
+    {
+      "signal": "Local LLM demand exploding",
+      "evidence": "Qwen 3.5 local guide at 405pts (top HN story). Vois launching local TTS on PH.",
+      "action": "Build 'run AI locally' comparison page. Affiliate links to GPU providers, local AI tools.",
+      "priority": "P1"
+    },
+    {
+      "signal": "AI agent tooling is THE hot category",
+      "evidence": "5 of 12 PH launches are agent-related (21st Agents SDK, TestSprite, Context Gateway, Aident AI, Vet). SWE-CI paper at 101pts on HN.",
+      "action": "Content: 'I run 33 AI agents 24/7' thread. Productize agent swarm as service/template. Review/affiliate for agent tools.",
+      "priority": "P0"
+    },
+    {
+      "signal": "Claude vs ChatGPT migration wave",
+      "evidence": "Forbes article on Claude capacity issues from ChatGPT exodus at 86pts/79 comments. Claude Marketplace and Context Gateway launching on PH.",
+      "action": "Build 'Claude vs ChatGPT migration guide' comparison page ASAP. SEO for 'claude alternative' 'switch from chatgpt to claude'.",
+      "priority": "P0"
+    },
+    {
+      "signal": "Anti-AI-slop content resonates massively",
+      "evidence": "LLM Writing Tropes at 256pts, 121 comments. Huge engagement on identifying AI-generated text patterns.",
+      "action": "Build 'AI slop detector' lead magnet tool. Content: 'these are the 24 AI writing tells' (we already have this in copy-style.md).",
+      "priority": "P1"
+    },
+    {
+      "signal": "OSINT/intelligence tools trending",
+      "evidence": "Shadowbroker OSINT dashboard on Show HN. Codex Security on PH. Intelligence tooling demand rising.",
+      "action": "Content about our competitive intelligence pipeline. Potential productization of scraping/monitoring tools.",
+      "priority": "P2"
+    }
+  ],
+  "findings": [
+    {
+      "source": "hn",
+      "title": "How to run Qwen 3.5 locally",
+      "url": "https://unsloth.ai/docs/models/qwen3.5",
+      "points": 405,
+      "comments": 134,
+      "relevance": "LOW",
+      "category": "AI_TOOLS",
+      "extracted_insight": "Qwen 3.5 local running guide from Unsloth hitting 405pts. Local LLM demand massive. Unsloth optimized inference = potential content angle for 'run AI locally' guides. Tool affiliate opportunity.",
+      "scraped_at": "2026-03-08T15:54:43.932194"
+    },
+    {
+      "source": "hn",
+      "title": "I ported Linux to the PS5 and turned it into a Steam Machine",
+      "url": "https://xcancel.com/theflow0/status/2030011206040256841",
+      "points": 266,
+      "comments": 105,
+      "relevance": "LOW",
+      "category": "GENERAL_TECH",
+      "extracted_insight": "266pts, 105 comments. General tech content, limited direct monetization relevance.",
+      "scraped_at": "2026-03-08T15:54:43.932212"
+    },
+    {
+      "source": "hn",
+      "title": "LLM Writing Tropes.md",
+      "url": "https://tropes.fyi/tropes-md",
+      "points": 256,
+      "comments": 121,
+      "relevance": "HIGH",
+      "category": "AI_TOOLS",
+      "extracted_insight": "256pts on LLM writing tropes detection. Direct relevance to our copy-style rules. This is EXACTLY what we fight against. Could build a 'LLM slop detector' tool/lead magnet. Massive engagement on anti-AI-slop content.",
+      "scraped_at": "2026-03-08T15:54:43.932216"
+    },
+    {
+      "source": "hn",
+      "title": "FrameBook",
+      "url": "https://fb.edoo.gg",
+      "points": 231,
+      "comments": 41,
+      "relevance": "LOW",
+      "category": "GENERAL_TECH",
+      "extracted_insight": "231pts. Social/creative platform launch getting massive HN traction. Study their launch strategy.",
+      "scraped_at": "2026-03-08T15:54:43.932223"
+    },
+    {
+      "source": "hn",
+      "title": "LibreOffice: Request to European Commission to adhere to own guidances",
+      "url": "https://blog.documentfoundation.org/blog/2026/03/05/cra-guidances/",
+      "points": 217,
+      "comments": 34,
+      "relevance": "LOW",
+      "category": "OPEN_SOURCE",
+      "extracted_insight": "217pts, 34 comments. General tech content, limited direct monetization relevance.",
+      "scraped_at": "2026-03-08T15:54:43.932232"
+    },
+    {
+      "source": "hn",
+      "title": "Notes on writing Rust-based Wasm",
+      "url": "https://notes.brooklynzelenka.com/Blog/Notes-on-Writing-Wasm",
+      "points": 162,
+      "comments": 76,
+      "relevance": "MEDIUM",
+      "category": "DEVELOPER_TOOLS",
+      "extracted_insight": "162pts. Rust+Wasm combo very hot. Technical content demand signal.",
+      "scraped_at": "2026-03-08T15:54:43.932237"
+    },
+    {
+      "source": "hn",
+      "title": "LibreOffice Writer now supports Markdown",
+      "url": "https://blog.documentfoundation.org/blog/2026/02/04/libreoffice-26-2-is-here/",
+      "points": 131,
+      "comments": 33,
+      "relevance": "MEDIUM",
+      "category": "OPEN_SOURCE",
+      "extracted_insight": "131pts. Markdown support in LibreOffice signals continued demand for plain-text workflows. Content angle for productivity content.",
+      "scraped_at": "2026-03-08T15:54:43.932244"
+    },
+    {
+      "source": "hn",
+      "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI",
+      "url": "https://arxiv.org/abs/2603.03823",
+      "points": 101,
+      "comments": 35,
+      "relevance": "HIGH",
+      "category": "AI_TOOLS",
+      "extracted_insight": "AI coding agents evaluated on CI maintenance. 101pts. Agent-based code maintenance is hot. Relevant to our agent swarm architecture. Content angle: 'I run 33 AI agents 24/7, here's what actually works.'",
+      "scraped_at": "2026-03-08T15:54:43.932246"
+    },
+    {
+      "source": "hn",
+      "title": "Claude struggles to cope with ChatGPT exodus",
+      "url": "https://www.forbes.com/sites/barrycollins/2026/03/06/claude-struggles-to-cope-with-chatgpt-exodus/",
+      "points": 86,
+      "comments": 79,
+      "relevance": "HIGH",
+      "category": "AI_TOOLS",
+      "extracted_insight": "86pts, 79 comments. Claude capacity issues from ChatGPT users migrating. HUGE content angle: 'Claude vs ChatGPT migration guide' landing page. Trend signal for AI tool comparison pages.",
+      "scraped_at": "2026-03-08T15:54:43.932249"
+    },
+    {
+      "source": "hn",
+      "title": "Beagle - source code management storing AST trees",
+      "url": "https://github.com/gritzko/librdx/tree/master/be",
+      "points": 61,
+      "comments": 32,
+      "relevance": "MEDIUM",
+      "category": "GENERAL_TECH",
+      "extracted_insight": "61pts, 32 comments. General tech content, limited direct monetization relevance.",
+      "scraped_at": "2026-03-08T15:54:43.932257"
+    },
+    {
+      "source": "hn",
+      "title": "Show HN: Eyot - programming language where GPU is just another thread",
+      "url": "https://cowleyforniastudios.com/2026/03/08/announcing-eyot/",
+      "points": 58,
+      "comments": 11,
+      "relevance": "MEDIUM",
+      "category": "SHOW_HN_LAUNCH",
+      "extracted_insight": "58pts. Novel GPU programming approach. Developer tool launch getting good Show HN traction.",
+      "scraped_at": "2026-03-08T15:54:43.932263"
+    },
+    {
+      "source": "hn",
+      "title": "AI doesn't replace white collar work",
+      "url": "https://www.marble.onl/posts/ai_doesnt_replace_work.html",
+      "points": 38,
+      "comments": 41,
+      "relevance": "HIGH",
+      "category": "AI_TOOLS",
+      "extracted_insight": "38pts, 41 comments (high comment ratio = controversial). Counter-narrative content angle. Good for engagement farming: 'unpopular opinion: AI doesn't replace work, it changes work.'",
+      "scraped_at": "2026-03-08T15:54:43.932266"
+    },
+    {
+      "source": "hn",
+      "title": "Show HN: Skir - like Protocol Buffer but better",
+      "url": "https://skir.build/",
+      "points": 21,
+      "comments": 23,
+      "relevance": "MEDIUM",
+      "category": "DEVELOPER_TOOLS",
+      "extracted_insight": "New serialization protocol. Developer tool launch pattern to study. 21pts on Show HN = decent traction for niche dev tool.",
+      "scraped_at": "2026-03-08T15:54:43.932272"
+    },
+    {
+      "source": "hn",
+      "title": "Show HN: Real-time OSINT dashboard pulling 15 live global feeds",
+      "url": "https://github.com/BigBodyCobain/Shadowbroker",
+      "points": 18,
+      "comments": 11,
+      "relevance": "MEDIUM",
+      "category": "SHOW_HN_LAUNCH",
+      "extracted_insight": "Real-time OSINT dashboard on GitHub. 18pts but rising. Competitive intel tool potential. Could fork/adapt for business intelligence monitoring.",
+      "scraped_at": "2026-03-08T15:54:43.932278"
+    },
+    {
+      "source": "hn",
+      "title": "CLI RSS/Atom feed reader synced using Git",
+      "url": "https://github.com/kantord/blogtato",
+      "points": 50,
+      "comments": 15,
+      "relevance": "MEDIUM",
+      "category": "DEVELOPER_TOOLS",
+      "extracted_insight": "Git-synced RSS reader. 50pts. Developer tool with unique angle (Git sync). Pattern: take boring tool + add unique sync mechanism = differentiation.",
+      "scraped_at": "2026-03-08T15:54:43.932284"
+    },
+    {
+      "source": "hn",
+      "title": "WSL Manager",
+      "url": "https://github.com/bostrot/wsl2-distro-manager",
+      "points": 12,
+      "comments": 3,
+      "relevance": "LOW",
+      "category": "GENERAL_TECH",
+      "extracted_insight": "12pts. Windows dev tooling. Niche but real demand for WSL management tools.",
+      "scraped_at": "2026-03-08T15:54:43.932290"
+    },
+    {
+      "source": "hn",
+      "title": "Living human brain cells play DOOM on CL1",
+      "url": "https://www.youtube.com/watch?v=yRV8fSw6HaE",
+      "points": 72,
+      "comments": 67,
+      "relevance": "HIGH",
+      "category": "AI_TOOLS",
+      "extracted_insight": "72pts, 67 comments. General tech content, limited direct monetization relevance.",
+      "scraped_at": "2026-03-08T15:54:43.932293"
+    },
+    {
+      "source": "hn",
+      "title": "Google gave Sundar Pichai a $692M pay package",
+      "url": "https://techcrunch.com/2026/03/07/google-just-gave-sundar-pichai-a-692m-pay-package/",
+      "points": 93,
+      "comments": 115,
+      "relevance": "HIGH",
+      "category": "AI_TOOLS",
+      "extracted_insight": "93pts, 115 comments. CEO comp discourse = engagement bait content. Anti-corporate solopreneur angle: '$692M for one CEO vs $0 for 10,000 indie hackers.'",
+      "scraped_at": "2026-03-08T15:54:43.932295"
+    },
+    {
+      "source": "hn",
+      "title": "My grand vision for Rust",
+      "url": "https://blog.yoshuawuyts.com/a-grand-vision-for-rust/",
+      "points": 58,
+      "comments": 51,
+      "relevance": "MEDIUM",
+      "category": "GENERAL_TECH",
+      "extracted_insight": "58pts, 51 comments. General tech content, limited direct monetization relevance.",
+      "scraped_at": "2026-03-08T15:54:43.932302"
+    },
+    {
+      "source": "hn",
+      "title": "Why can't you tune your guitar? (2019)",
+      "url": "https://www.ethanhein.com/wp/2019/why-cant-you-tune-your-guitar/",
+      "points": 110,
+      "comments": 93,
+      "relevance": "LOW",
+      "category": "GENERAL_TECH",
+      "extracted_insight": "110pts, 93 comments. General tech content, limited direct monetization relevance.",
+      "scraped_at": "2026-03-08T15:54:43.932310"
+    },
+    {
+      "source": "ph",
+      "title": "GetMimic",
+      "url": "https://www.producthunt.com/posts/getmimic",
+      "points": 0,
+      "tagline": "Generate viral social & chat mockups in seconds with AI",
+      "relevance": "HIGH",
+      "category": "AI_DESIGN",
+      "extracted_insight": "AI mockup generator for social/chat content. Direct competitor research for content creation tools. Could build similar with our Playwright HTML-to-image pipeline. Affiliate or alternative comparison page opportunity.",
+      "scraped_at": "2026-03-08T15:54:43.932317"
+    },
+    {
+      "source": "ph",
+      "title": "Claude Marketplace",
+      "url": "https://www.producthunt.com/posts/claude-marketplace",
+      "points": 0,
+      "tagline": "Helping companies easily get the AI tools they need",
+      "relevance": "HIGH",
+      "category": "AI_MARKETPLACE",
+      "extracted_insight": "AI tool marketplace launching. Validates demand for curated AI tool directories. We could list our tools/templates here. Also validates 'AI tool comparison' content strategy.",
+      "scraped_at": "2026-03-08T15:54:43.932321"
+    },
+    {
+      "source": "ph",
+      "title": "21st Agents SDK",
+      "url": "https://www.producthunt.com/posts/21st-agents-sdk",
+      "points": 0,
+      "tagline": "SDK to add a Claude Code AI agent to your app",
+      "relevance": "HIGH",
+      "category": "DEVELOPER_TOOLS",
+      "extracted_insight": "SDK for embedding Claude Code agents in apps. DIRECTLY relevant to our agent infrastructure. Could use this to productize our 33-agent swarm as an embeddable service. Partnership/integration opportunity.",
+      "scraped_at": "2026-03-08T15:54:43.932323"
+    },
+    {
+      "source": "ph",
+      "title": "LTX Desktop",
+      "url": "https://www.producthunt.com/posts/ltx-desktop",
+      "points": 0,
+      "tagline": "Local open-source LTX video editor optimized for GPUs",
+      "relevance": "MEDIUM",
+      "category": "VIDEO_TOOLS",
+      "extracted_insight": "Local GPU-optimized video editor, open source. Content creation tool signal. Could be used in our video factory pipeline as alternative to Remotion for local rendering.",
+      "scraped_at": "2026-03-08T15:54:43.932327"
+    },
+    {
+      "source": "ph",
+      "title": "Codex Security",
+      "url": "https://www.producthunt.com/posts/codex-security",
+      "points": 0,
+      "tagline": "Our application security agent",
+      "relevance": "HIGH",
+      "category": "SECURITY_AI",
+      "extracted_insight": "Application security AI agent. Validates demand for AI security tools. Content angle: 'I audit my code with AI agents' thread.",
+      "scraped_at": "2026-03-08T15:54:43.932329"
+    },
+    {
+      "source": "ph",
+      "title": "TestSprite 2.1",
+      "url": "https://www.producthunt.com/posts/testsprite-2.1",
+      "points": 0,
+      "tagline": "Agentic testing for the AI-native team",
+      "relevance": "HIGH",
+      "category": "DEVELOPER_TOOLS",
+      "extracted_insight": "Agentic testing tool. Validates AI-native development tooling market. Could use for our own QA pipeline. Affiliate review opportunity.",
+      "scraped_at": "2026-03-08T15:54:43.932331"
+    },
+    {
+      "source": "ph",
+      "title": "Context Gateway",
+      "url": "https://www.producthunt.com/posts/context-gateway",
+      "points": 0,
+      "tagline": "Make Claude Code faster and cheaper without losing context",
+      "relevance": "HIGH",
+      "category": "DEVELOPER_TOOLS",
+      "extracted_insight": "Claude Code optimization tool, backed by Garry Tan. HUGE signal. Context management for coding agents is a pain point. Could build comparison content. Direct relevance to our Ralph loops context management.",
+      "scraped_at": "2026-03-08T15:54:43.932333"
+    },
+    {
+      "source": "ph",
+      "title": "Parsewise",
+      "url": "https://www.producthunt.com/posts/parsewise",
+      "points": 0,
+      "tagline": "Cursor for document work",
+      "relevance": "MEDIUM",
+      "category": "AI_PRODUCTIVITY",
+      "extracted_insight": "Document AI tool positioned as 'Cursor for documents.' Validates AI-for-X positioning pattern. Content angle: comparison page 'Parsewise vs alternatives.'",
+      "scraped_at": "2026-03-08T15:54:43.932336"
+    },
+    {
+      "source": "ph",
+      "title": "Coursekit",
+      "url": "https://www.producthunt.com/posts/coursekit",
+      "points": 0,
+      "tagline": "Turn your course into a full suite of embeddable AI agents",
+      "relevance": "HIGH",
+      "category": "EDUCATION_AI",
+      "extracted_insight": "Course-to-AI-agents converter. Validates educational AI market. Could potentially convert our digital products into AI agent experiences. Content angle for education niche.",
+      "scraped_at": "2026-03-08T15:54:43.932338"
+    },
+    {
+      "source": "ph",
+      "title": "Aident AI Beta 2",
+      "url": "https://www.producthunt.com/posts/aident-ai-beta-2",
+      "points": 0,
+      "tagline": "Open-world automations, managed in plain English",
+      "relevance": "HIGH",
+      "category": "AUTOMATION",
+      "extracted_insight": "Plain English automation tool. Directly competes with our automation philosophy. Study their positioning. Content angle: 'I built 33 automation agents, here is what I learned.'",
+      "scraped_at": "2026-03-08T15:54:43.932340"
+    },
+    {
+      "source": "ph",
+      "title": "Vet",
+      "url": "https://www.producthunt.com/posts/vet",
+      "points": 0,
+      "tagline": "Keep your coding agents honest",
+      "relevance": "HIGH",
+      "category": "DEVELOPER_TOOLS",
+      "extracted_insight": "AI code quality tool for coding agents. Validates 'agent quality assurance' as a category. Relevant to our quality_gate agent. Comparison content opportunity.",
+      "scraped_at": "2026-03-08T15:54:43.932343"
+    },
+    {
+      "source": "ph",
+      "title": "Vois",
+      "url": "https://www.producthunt.com/posts/vois",
+      "points": 0,
+      "tagline": "Studio-quality text-to-speech and voice cloning, fully local",
+      "relevance": "HIGH",
+      "category": "AI_VOICE",
+      "extracted_insight": "Local TTS and voice cloning. Content creation tool. Could use for audio versions of our digital products. Potential affiliate or integration.",
+      "scraped_at": "2026-03-08T15:54:43.932345"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# DAILY ENGAGEMENT PLAN — March 08, 2026
+# DAILY ENGAGEMENT PLAN - March 08, 2026
 # @PRINTMAXXER | Warmup Day 2 | Phase: LURK
 # Auto-generated at 01:33 by daily_engagement_planner.py
 
@@ -42,9 +42,9 @@ Lurk phase. Zero likes, zero follows. Just browse.
 ## 4. TIMING SCHEDULE
 
 ```
-  7:30-8:00 AM  — Browse timeline. Read 20 tweets. Close app.
-  12:00-12:15 PM — Browse again. Note which accounts get replies.
-  6:00-6:15 PM  — Final browse. Observe evening posting patterns.
+  7:30-8:00 AM  - Browse timeline. Read 20 tweets. Close app.
+  12:00-12:15 PM - Browse again. Note which accounts get replies.
+  6:00-6:15 PM  - Final browse. Observe evening posting patterns.
 ```
 
 ---
@@ -90,7 +90,7 @@ DO NOT:
   Data points:     11516
   Posts generated: 588
   Assets deployed: 36
-  Revenue:         $0 (transparent — this IS the angle)
+  Revenue:         $0 (transparent - this IS the angle)
   Alpha entries:   11516
 ```
 

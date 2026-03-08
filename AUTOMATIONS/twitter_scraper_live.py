@@ -128,8 +128,8 @@ class TwitterScraperLive:
         finally:
             try:
                 os.unlink(tmp_path)
-            except:
-                pass
+            except Exception:
+                pass  # Temp file cleanup is best-effort
 
     async def scrape_account(self, page, handle):
         """Scrape recent posts from a Twitter account"""

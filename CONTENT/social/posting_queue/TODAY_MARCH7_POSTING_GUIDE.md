@@ -1,10 +1,10 @@
-# TODAY'S POSTING GUIDE — March 7, 2026
+# TODAY'S POSTING GUIDE - March 7, 2026
 # Account: @PRINTMAXXER (Twitter/X)
-# Status: 4 tweets READY. All from APPROVED_POSTS_MAR6.csv. Zero API keys — post manually.
+# Status: 4 tweets READY. All from APPROVED_POSTS_MAR6.csv. Zero API keys - post manually.
 
 ---
 
-## 07:30 AM — POST THIS NOW (if past 7:30, post immediately)
+## 07:30 AM - POST THIS NOW (if past 7:30, post immediately)
 
 Copy-paste verbatim into Twitter:
 
@@ -12,7 +12,7 @@ Copy-paste verbatim into Twitter:
 340 customers from reddit. zero ad spend. everyone says reddit marketing is dead. they're wrong. the trick is not marketing at all. just be useful in the right threads and the traffic follows.
 ```
 
-Image: twitter_PRINTMAXXER_mar7_0730.png (in posting_queue/ if it exists — attach if present)
+Image: twitter_PRINTMAXXER_mar7_0730.png (in posting_queue/ if it exists - attach if present)
 Chars: 195 / 280 ✅
 
 ---
@@ -25,7 +25,7 @@ cold email reality check: ran 464k emails last year across clients. tested every
 
 Image: twitter_PRINTMAXXER_mar7_1100.png
 Chars: 202 / 280 ✅
-NOTE: This is a hook tweet — leave it open-ended. Don't add more text.
+NOTE: This is a hook tweet - leave it open-ended. Don't add more text.
 
 ---
 
@@ -73,7 +73,7 @@ how many of you are sitting on products you haven't listed anywhere?
 
 ---
 
-## NO API KEYS — MANUAL POSTING CHECKLIST
+## NO API KEYS - MANUAL POSTING CHECKLIST
 
 - [ ] 07:30: Tweet 1 (reddit 340 customers)
 - [ ] 11:00: Tweet 2 (cold email 464k reality check)
@@ -81,18 +81,18 @@ how many of you are sitting on products you haven't listed anywhere?
 - [ ] 18:00: Tweet 4 (intent-based timing 2-4x)
 
 Use Buffer, Typefully, or post directly from Twitter.
-DO NOT use BUFFER_UPLOAD_MAR7.csv — it has a token parsing bug.
+DO NOT use BUFFER_UPLOAD_MAR7.csv - it has a token parsing bug.
 
 ---
 
 ## WHAT'S COMING TOMORROW (March 8)
 
-- 07:30: gmail tracking pixels warning — deliverability angle
+- 07:30: gmail tracking pixels warning - deliverability angle
 - 11:00: what it actually costs to send 2500 cold emails/day ($300/mo, agencies charge $10K)
 - 14:30: MCP/automation stack angle
 - 18:00: domain warming math
 
-All files in posting_queue/ — check twitter_PRINTMAXXER_mar8_*.txt
+All files in posting_queue/ - check twitter_PRINTMAXXER_mar8_*.txt
 
 ---
 
@@ -110,9 +110,9 @@ All files in posting_queue/ — check twitter_PRINTMAXXER_mar8_*.txt
 
 ## PIPELINE FLAGS
 
-- BUFFER_UPLOAD_MAR7.csv: DO NOT USE — token parsing bug
+- BUFFER_UPLOAD_MAR7.csv: DO NOT USE - token parsing bug
 - APPROVED_POSTS_MAR7.csv: 20 tweets mapped to Apr 1-6 (see overflow file)
-- competitor_counter_content_cycle5_20260307.md: APPROVED ✅ — queued to Mar 31 + overflow
+- competitor_counter_content_cycle5_20260307.md: APPROVED ✅ - queued to Mar 31 + overflow
 - HN submissions: 3 ready (see post_log.json → hn_submissions_ready)
 
 ---

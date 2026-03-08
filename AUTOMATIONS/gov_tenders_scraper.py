@@ -969,8 +969,8 @@ def print_top_opportunities(opportunities, n=5):
         if opp.get("award_amount"):
             try:
                 s += min(float(str(opp["award_amount"]).replace(",", "")), 1000000) / 10000
-            except:
-                pass
+            except Exception:
+                pass  # Non-numeric award_amount; skip bonus
         return s
 
     sorted_opps = sorted(opportunities, key=score_opp, reverse=True)
