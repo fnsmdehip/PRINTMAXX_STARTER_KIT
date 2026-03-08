@@ -37,10 +37,11 @@ The #1 failure mode is building systems instead of deploying them. 90+ scripts, 
 
 **Session start (5 min max):**
 1. Read `OPS/PERSISTENT_TASK_TRACKER.md`
-2. `python3 AUTOMATIONS/daily_agent_runner.py --status`
+2. Read `OPS/DAILY_DIGEST.md` (what the system did since last session)
 3. `python3 AUTOMATIONS/decision_engine.py --cycle` (process all pending data → actions)
 4. Deploy anything deployable. Run scrapers in background.
 5. Check `OPS/HEARTBEAT.md` for system pulse
+6. Refresh digest: `python3 AUTOMATIONS/daily_digest.py --days 1 --save`
 
 ### 2. EXECUTE, DON'T DOCUMENT
 

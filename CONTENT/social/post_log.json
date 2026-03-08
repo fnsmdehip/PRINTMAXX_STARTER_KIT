@@ -756,13 +756,111 @@
       "tweet_count": 3,
       "source": "cc_geo_seo_01",
       "posted_at": null
+    },
+    {
+      "id": "pm-mar23-01",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-23T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar23_0730.txt",
+      "chars": 163,
+      "source": "build_in_public_day33",
+      "note": "Day 33 $0 revenue — 140 sites, 22 apps, the gap is 30 min",
+      "posted_at": null
+    },
+    {
+      "id": "pm-mar23-02",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-23T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar23_1100.txt",
+      "chars": 181,
+      "source": "build_in_public_day33",
+      "note": "32 agents, 140 sites, $0 infrastructure — bottleneck is distribution",
+      "posted_at": null
+    },
+    {
+      "id": "pm-mar23-03",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-23T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar23_1430.txt",
+      "chars": 196,
+      "source": "build_in_public_day33",
+      "note": "13 products, only thing stopping revenue = Gumroad account creation",
+      "posted_at": null
+    },
+    {
+      "id": "pm-mar23-04",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-23T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar23_1800.txt",
+      "thread": true,
+      "tweet_count": 6,
+      "source": "build_in_public_day33",
+      "note": "THREAD: 33 days lessons — production solved, distribution is the game",
+      "posted_at": null
+    },
+    {
+      "id": "pm-mar31-01",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-31T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar31_0730.txt",
+      "thread": true,
+      "tweet_count": 7,
+      "source": "competitor_counter_content_cycle5_20260307.md",
+      "note": "THREAD: 30 days tracking faith apps — 7 tweets, Eid timing",
+      "posted_at": null
+    },
+    {
+      "id": "pm-mar31-02",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-31T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar31_1100.txt",
+      "chars": 254,
+      "source": "competitor_counter_content_cycle5_20260307.md",
+      "note": "Hallow #1 on app store — seasonal calendar events growth hack",
+      "posted_at": null
+    },
+    {
+      "id": "pm-mar31-03",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-31T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar31_1430.txt",
+      "chars": 264,
+      "source": "competitor_counter_content_cycle5_20260307.md",
+      "note": "Muslim Pro 180M downloads — 4,000+ empty denomination niches",
+      "posted_at": null
+    },
+    {
+      "id": "pm-mar31-04",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-31T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar31_1800.txt",
+      "chars": 245,
+      "source": "competitor_counter_content_cycle5_20260307.md",
+      "note": "Durable $22/mo price hike — pay once own forever counter",
+      "posted_at": null
     }
   ],
   "summary": {
     "total_posted": 0,
-    "total_queued": 95,
+    "total_queued": 104,
     "last_post_date": null,
-    "coverage_through": "2026-03-30",
+    "coverage_through": "2026-03-31",
     "new_content_added_mar7_cycle6": {
       "sources": [
         "competitor_counter_content_cycle4_20260307.md (5 standalones + 1 thread + 1 reply bait + 1 community bait)",
@@ -777,7 +875,7 @@
     "platforms": {
       "twitter": {
         "posted": 0,
-        "queued": 92
+        "queued": 101
       },
       "linkedin": {
         "posted": 0,
@@ -804,5 +902,24 @@
     "Show HN #3: PrayerLock — 55KB PWA that intercepts your phone before you scroll"
   ],
   "created": "2026-03-07T00:00:00Z",
-  "last_updated": "2026-03-07T17:00:00Z"
+  "last_updated": "2026-03-07T20:00:00Z",
+  "social_poster_cycle_mar7": {
+    "ran": "2026-03-07T20:00:00Z",
+    "new_files_created": [
+      "twitter_PRINTMAXXER_mar31_0730.txt (THREAD 7t faith app tracker)",
+      "twitter_PRINTMAXXER_mar31_1100.txt (Hallow #1 standalone)",
+      "twitter_PRINTMAXXER_mar31_1430.txt (Muslim Pro standalone)",
+      "twitter_PRINTMAXXER_mar31_1800.txt (Durable counter)",
+      "CYCLE5_OVERFLOW_APR1_5.md (Apr 1-6 batch — 18 tweets + 2 Reddit)"
+    ],
+    "entries_logged": 9,
+    "sources_approved": ["competitor_counter_content_cycle5_20260307.md"],
+    "sources_tracked_unqueued": ["APPROVED_POSTS_MAR7.csv (20 tweets, queued in CYCLE5_OVERFLOW_APR1_5.md)"],
+    "coverage_extended_to": "2026-03-31",
+    "overflow_tracked_through": "2026-04-06",
+    "pipeline_flags": {
+      "BUFFER_UPLOAD_MAR7_csv": "STILL DO NOT POST — token parsing bug not fixed",
+      "CYCLE5_OVERFLOW_APR1_5": "Ready to create individual .txt files on next social_poster run"
+    }
+  }
 }
