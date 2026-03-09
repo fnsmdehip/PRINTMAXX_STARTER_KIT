@@ -59,3 +59,14 @@ He also cut the odds of a “melt-up” rally to 5%, citing rising energy costs 
 
 JUST IN:  Over $900 billion wiped out from US stock market at open.
 
+
+
+---
+
+## Pending Enhancement (ALPHA19967, Score: 35)
+
+**Source:** @DeItaone (high-signal-accounts) | **URL:** https://x.com/DeItaone/status/2031050792577515990
+**Added:** 2026-03-09T15:25:24-04:00
+
+Oil’s extreme intraday moves are challenging conventional bull and bear market labels. West Texas Intermediate (WTI) crude, the U.S. benchmark, recently dipped to around $95 a barrel, over 20% below its intraday peak above $119.
+

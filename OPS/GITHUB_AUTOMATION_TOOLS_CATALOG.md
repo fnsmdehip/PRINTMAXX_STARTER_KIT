@@ -748,3 +748,202 @@ Claude Code and OpenClaw can now create designs 10x easier...
 11:48 Building the React app
 13:37
 
+
+
+---
+
+## Pending Enhancement (ALPHA19546, Score: 30)
+
+**Source:** 2026-03-09 | **URL:** @AntonioEscudero
+**Added:** 2026-03-09T12:20:03-04:00
+
+Bye Bye Web developers...
+
+I just surpassed $3k in revenue and 2,400 users with my fully vibecoded SaaS
+
+RankInPublic was completely vibecoded using Claude Opus 4.6
+
+It took 7 days to develop, 12 hours a day.
+
+The stack I used:
+
+- Convex for the backend and db
+- Dodo Payments as
+
+
+
+---
+
+## Pending Enhancement (ALPHA19560, Score: 29)
+
+**Source:** 2026-03-09 | **URL:** @kloss_xyz
+**Added:** 2026-03-09T12:20:03-04:00
+
+Stop what you’re doing right now.
+
+Anthropic just dropped a free AI academy with 13 courses and official certificates across MCP, APIs, Claude Code, and fluency.
+
+People used to pay $2k for bootcamps teaching worse versions of these topics.
+
+Now it costs $0. Save it. Start today.
+
+
+
+---
+
+## Pending Enhancement (ALPHA19746, Score: 20)
+
+**Source:** 2026-03-09 | **URL:** @0xrahulweb3
+**Added:** 2026-03-09T12:20:03-04:00
+
+Web3 Jobs
+
+1. Sapience 
+
+https://
+docs.google.com/forms/d/e/1FAI
+pQLScsJwd1ymKgQdbZO1I0Uii1JOuwWRJ-kv12ylQszsAALReqTA/viewform
+…
+
+2. Green Dots ($ 1000 - $2000 )
+
+https://
+greendots.typeform.com/ctwriter
+
+3. Sei Labs 
+
+https://
+jobs.ashbyhq.com/sei-labs/4042f
+56c-681b-4309-bb5c-40da489b38e5?utm_source=findweb3.com
+…
+
+CC : 
+@0xvietnguyen
+
+
+
+---
+
+## Pending Enhancement (ALPHA19810, Score: 36)
+
+**Source:** 2026-03-09 | **URL:** r/SaaS
+**Added:** 2026-03-09T12:20:04-04:00
+
+Building SaaS in 2026? My best advice * Offer Google login. Most people won't bother making an account otherwise.
+* Paying users = real demand. If no one has paid yet then it's not validated. 
+* Building an MVP is a sprint, the business and the customers is a marathon. Pace yourself accordingly.
+* Post-launch is 80% marketing, 20% product. Launching isn’t the end.
+* Market shamelessly. Talk about 
+
+
+
+---
+
+## Pending Enhancement (ALPHA19823, Score: 26)
+
+**Source:** 2026-03-09 | **URL:** r/Emailmarketing
+**Added:** 2026-03-09T12:20:04-04:00
+
+email marketing tools really said “what if we just charged more” huh sooo… just noticed something while checking a few email marketing tools this week and… bruh.
+
+a lot of them quietly raise the price the moment your list grows a little.
+
+like you start paying $20–$30/month thinking it’s fine… then your list hits a few thousand subscribers and suddenly it’s $80… $120… $200/month.
+
+and the funny pa
+
+
+
+---
+
+## Pending Enhancement (ALPHA19836, Score: 43)
+
+**Source:** 2026-03-09 | **URL:** r/micro_saas
+**Added:** 2026-03-09T12:21:41-04:00
+
+Stop building useless sh*t "Check out my SaaS directory list" - no one cares
+
+
+
+"I Hit 10k MRR in 30 Days: Here's How" - stop lying
+
+
+
+"I created an AI-powered chatbot" - no, you didn't create anything
+
+
+
+Most project we see here are totally useless and won't exist for more than a few months.
+
+
+
+And the culprit is you. Yes, you, who thought you'd get rich by starting a new SaaS entirely "coded" wi
+
+
+
+---
+
+## Pending Enhancement (ALPHA19881, Score: 50)
+
+**Source:** 2026-03-09 | **URL:** r/SaaS
+**Added:** 2026-03-09T12:21:41-04:00
+
+Hit $60 MRR, then ghosted my own SaaS for a month. I’ve realized that building the product is only 20% of the work.  
+A few months ago, I launched [mybets.gg](http://mybets.gg), a bet tracker designed to help sports bettors manage their bankroll and log their bets easier.
+
+The Stats so far:
+
+* Total Revenue: $113
+* MRR: $60
+* Active Subs: 4
+* Total Visitors: 1,850
+* Organic Clicks (Google): 46
+
+Af
+
+
+
+---
+
+## Pending Enhancement (ALPHA19930, Score: 34)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47311657
+**Added:** 2026-03-09T15:25:24-04:00
+
+Terminal Use (YC W26): Vercel for filesystem-based agents. Launch HN. YC-backed. Infrastructure for running AI agents that work with files. Directly relevant to our Ralph loops and agent infrastructure. Study their approach for architecture improvements.
+
+
+
+---
+
+## Pending Enhancement (ALPHA20014, Score: 36)
+
+**Source:** @matteo_spada (high-signal-accounts) | **URL:** https://x.com/matteo_spada/status/2031037422721782121
+**Added:** 2026-03-09T15:45:00-04:00
+
+I just grabbed the top 50 keywords in ranking from Bitepal that's making:
+
+-  $1m/month
+-  400k/month
+
+This was all automated thanks to the MCP server in 
+@TryAstroApp
+
+
+Find the prompts I used in the next post 
+
+
+
+---
+
+## Pending Enhancement (ALPHA20034, Score: 20)
+
+**Source:** @randfish (high-signal-accounts) | **URL:** https://x.com/randfish/status/2031070760572424220
+**Added:** 2026-03-09T15:45:00-04:00
+
+97% of visitors to Google perform a search
+56% of visitors to ChatGPT enter a prompt
+And only 35% of visitors to Yahoo perform a search
+
+Using this data (from last week's report), we updated SparkToro to better show which search & AI tools your audience uses 
+

@@ -5634,3 +5634,81 @@ and got the video full video done in couple of minutes
 
 you bet i'll be running this across 10 ig/tt accounts 
 
+
+
+---
+
+## Pending Enhancement (ALPHA19765, Score: 26)
+
+**Source:** 2026-03-09 | **URL:** @eptwts
+**Added:** 2026-03-09T12:20:03-04:00
+
+I fired my $5k/mth SEO agency.
+I built RankLoop instead - it publishes SEO content and earns relevant BACKLINKS while I sleep.
+
+
+
+---
+
+## Pending Enhancement (ALPHA19805, Score: 44)
+
+**Source:** 2026-03-09 | **URL:** r/AppBusiness
+**Added:** 2026-03-09T12:20:04-04:00
+
+1.3k users, but only $35 MRR. Is it time to kill my project? I've been running **RankMyCV** for a few months now. The growth actually surprised me—I just hit **1,356 total users** and I'm getting around 400-500 new signups per month.
+
+However, the revenue is... depressing.
+
+* Total users: 1,356
+* CVs analyzed: 813 (only 28 were paid)
+* **MRR: $35** (3 active subs)
+
+It seems people love the free to
+
+
+
+---
+
+## Pending Enhancement (ALPHA19820, Score: 32)
+
+**Source:** 2026-03-09 | **URL:** r/growthhacking
+**Added:** 2026-03-09T12:20:04-04:00
+
+We said no to $2.5m vc money and I'm still kinda shocked we did it lol Three founders here, plus one assistant who deserves a raise, no full-time hires yet, and the saas is already covering our bills nicely. It feels surreal most days.
+
+We launched our sass six months back. Almost no paid ads at the start just built something useful and watched LinkedIn and seo take off.
+
+Stats right now that stil
+
+
+
+---
+
+## Pending Enhancement (ALPHA19851, Score: 32)
+
+**Source:** 2026-03-09 | **URL:** r/SaaS
+**Added:** 2026-03-09T12:21:41-04:00
+
+what I actually did in the first 10 days to make Google notice my product When I launched my SaaS, I had:
+
+* A brand-new domain
+* Zero backlinks
+* No blog/ No authority /No traffic
+
+Most founders immediately start writing blog posts.I didn’t.Because here’s the truth:
+
+Google can’t rank what it doesn’t notice. so my only goal in the first 10 days was simple:Get Google to crawl, index, and trust my 
+
+
+
+---
+
+## Pending Enhancement (ALPHA19855, Score: 28)
+
+**Source:** 2026-03-09 | **URL:** r/SEO
+**Added:** 2026-03-09T12:21:41-04:00
+
+ChatGPT and Ecommerce SEO **ChatGPT pulls from Google Shopping for product results**
+
+When you ask ChatGPT for product recommendations, it runs encoded "fan-out" queries through Google Shopping in the background to build its product carousel. Google's ecosystem is simply too vast to ignore — it has 27+ years of pricing data, availability info, and reviews. So if your product ranks well on Google S
+

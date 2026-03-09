@@ -426,3 +426,37 @@ Being pre-revenue and in build phase gives a sense of comfort of high ambition, 
 
 1.3k users, but only $35 MRR. Is it time to kill my project? [Score: 23]
 
+
+
+---
+
+## Pending Enhancement (ALPHA19834, Score: 30)
+
+**Source:** 2026-03-09 | **URL:** r/buildinpublic
+**Added:** 2026-03-09T12:20:04-04:00
+
+How I got my first paying user. Here's the unfiltered truth. **Project:** Email paywall service —Fastpass . email  charge people to contact you  
+**Revenue:** €0 → \~$85 in 24h (from 1 user)  
+**Status:** Proof of concept validated ✅  
+  
+When I first thought of this idea, I almost scrapped it. Everyone around me said, *“No one will ever pay to send an email.”*
+
+But the more I looked at my own inb
+
+
+
+---
+
+## Pending Enhancement (ALPHA19905, Score: 30)
+
+**Source:** 2026-03-09 | **URL:** r/ycombinator
+**Added:** 2026-03-09T12:21:41-04:00
+
+I am scared to face the R word. Revenue. 
+
+  
+So I am building a cool AI project, which is solving a real problem and have shared it with a bunch of friends, although I am scared to post on forums like producthunt, reddit and do more widescale marketing for the same. 
+
+  
+Being pre-revenue and in build phase gives a sense of comfort of high ambition, and going to revenue seems like there is no way
+
