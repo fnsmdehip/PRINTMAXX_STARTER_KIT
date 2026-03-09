@@ -50,6 +50,12 @@ from typing import Any, Optional
 
 from agent_resilience import locked_file
 
+try:
+    from master_ops_bridge import MasterOpsBridge
+    _BRIDGE_AVAILABLE = True
+except ImportError:
+    _BRIDGE_AVAILABLE = False
+
 # ── Paths & Guardrails ─────────────────────────────────────────────────
 PROJECT = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT / "AUTOMATIONS"
@@ -1097,6 +1103,114 @@ def extract_doc_summary(doc_path: str, max_lines: int = 30) -> Optional[str]:
         return None
 
 
+# ── Master Ops Enrichment ──────────────────────────────────────────────
+
+def _enrich_with_master_ops(venture_type: str, brief: dict) -> dict:
+    """Enrich an intelligence brief with Master Ops xlsx data.
+
+    Uses the MasterOpsBridge to pull ops, synergy stacks, alpha theses,
+    priority launches, and blocker summaries relevant to the given venture.
+    Wrapped in try/except — never breaks existing functionality.
+    """
+    if not _BRIDGE_AVAILABLE:
+        return brief
+
+    try:
+        bridge = MasterOpsBridge()  # Uses cached JSON, fast
+
+        # Map venture types to xlsx categories
+        venture_to_category = {
+            "CONTENT": "CONTENT",
+            "OUTBOUND": "SERVICE",
+            "APP_FACTORY": "APP",
+            "LOCAL_BIZ": "SERVICE",
+            "MONETIZATION": "DIGITAL_PRODUCT",
+            "PRODUCT": "DIGITAL_PRODUCT",
+            "RESEARCH": "RESEARCH",
+            "SCRAPING": "DATA",
+            "GROWTH": "CONTENT",
+        }
+        category = venture_to_category.get(venture_type.upper(), venture_type.upper())
+
+        # Get relevant ops
+        ops = bridge.get_ops_by_category(category)
+        ready_ops = [op for op in ops if op.get("READINESS") == "READY"]
+
+        # Get synergy stacks that include these ops
+        op_ids = {op.get("OP_ID") for op in ops}
+        synergies = [s for s in bridge.get_synergy_stacks()
+                     if any(oid in s.get("METHODS_COMBINED", "") for oid in op_ids if oid)]
+
+        # Get alpha theses for this lane
+        venture_map = bridge.get_venture_map() if hasattr(bridge, 'get_venture_map') else []
+        lane_map = {op.get("OP_ID"): op.get("LANE", "") for op in venture_map}
+        relevant_lanes = {lane_map.get(oid, "") for oid in op_ids} - {""}
+        theses = [t for t in bridge.get_alpha_theses()
+                  if t.get("LANE") in relevant_lanes]
+
+        # Get priority launches for these ops
+        priority = [p for p in bridge.get_priority_launch()
+                    if p.get("OP_ID") in op_ids]
+
+        # Get blocker summary
+        blockers = bridge.get_blocker_summary() if hasattr(bridge, 'get_blocker_summary') else []
+        relevant_blockers = [b for b in blockers
+                            if any(oid in b.get("ventures_affected", []) for oid in op_ids if oid)]
+
+        # Build enrichment
+        brief["master_ops"] = {
+            "total_ops_in_category": len(ops),
+            "ready_ops": len(ready_ops),
+            "ready_op_names": [op.get("OP_NAME", "") for op in ready_ops[:5]],
+            "blocked_ops": len(ops) - len(ready_ops),
+            "synergy_stacks": [{
+                "name": s.get("NAME"),
+                "score": s.get("SYNERGY_SCORE"),
+                "multiplier": s.get("REVENUE_MULTIPLIER"),
+                "methods": s.get("METHODS_COMBINED")
+            } for s in synergies[:3]],
+            "alpha_theses": [{
+                "opportunity": t.get("OPPORTUNITY"),
+                "edge_duration": t.get("EDGE_DURATION"),
+                "why_llm_edge": (t.get("WHY_LLM_EDGE", "") or "")[:100]
+            } for t in theses[:3]],
+            "priority_launches": [{
+                "rank": p.get("RANK"),
+                "name": p.get("OP_NAME"),
+                "revenue": p.get("REVENUE_POTENTIAL"),
+                "time_to_first_dollar": p.get("TIME_TO_FIRST_$")
+            } for p in priority],
+            "active_blockers": [{
+                "key": b.get("blocker"),
+                "count": b.get("count"),
+            } for b in relevant_blockers],
+        }
+
+        # Add to brief text if it's a human-readable brief
+        if "text" in brief or "brief" in brief:
+            ops_text = f"\n\n## MASTER OPS INTELLIGENCE\n"
+            ops_text += f"- {len(ops)} ops in {category}, {len(ready_ops)} READY\n"
+            if synergies:
+                ops_text += f"- Top synergy: {synergies[0].get('NAME')} ({synergies[0].get('REVENUE_MULTIPLIER')}x multiplier)\n"
+            if priority:
+                ops_text += f"- Priority launch: {priority[0].get('OP_NAME')} (time to first $: {priority[0].get('TIME_TO_FIRST_$')})\n"
+            if theses:
+                ops_text += f"- Alpha edge: {theses[0].get('OPPORTUNITY')} (edge: {theses[0].get('EDGE_DURATION')})\n"
+            if relevant_blockers:
+                ops_text += f"- Blockers: {', '.join(b.get('blocker','') for b in relevant_blockers[:3])}\n"
+
+            # Append to whichever key holds the brief text
+            for key in ["text", "brief", "content", "summary"]:
+                if key in brief and isinstance(brief[key], str):
+                    brief[key] += ops_text
+                    break
+
+        return brief
+    except Exception:
+        # Never break existing functionality
+        return brief
+
+
 # ── Main Intelligence Gatherer ─────────────────────────────────────────
 
 def get_intelligence(venture_type: str, task_type: Optional[str] = None, include_summaries: bool = False,
@@ -1205,7 +1319,7 @@ def get_intelligence(venture_type: str, task_type: Optional[str] = None, include
         "valid_tasks": TASK_TYPES.get(venture_type, []),
     }
 
-    return {
+    result = {
         "alpha": alpha,
         "docs": [
             {"path": p, "description": d, "exists": e,
@@ -1233,6 +1347,11 @@ def get_intelligence(venture_type: str, task_type: Optional[str] = None, include
         "meta": meta,
         **({"doc_summaries": doc_summaries} if doc_summaries else {}),
     }
+
+    # Enrich with Master Ops xlsx data (if bridge module is available)
+    result = _enrich_with_master_ops(venture_type, result)
+
+    return result
 
 
 # ── Statistics & Coverage ──────────────────────────────────────────────
@@ -1296,7 +1415,27 @@ def compute_stats() -> dict[str, Any]:
     except Exception:
         pass
 
-    return {
+    # Query Master Ops stats (if bridge module is available)
+    master_ops_stats = {}
+    if _BRIDGE_AVAILABLE:
+        try:
+            bridge = MasterOpsBridge()
+            all_ops = bridge.get_all_ops() if hasattr(bridge, 'get_all_ops') else []
+            synergy_stacks = bridge.get_synergy_stacks() if hasattr(bridge, 'get_synergy_stacks') else []
+            alpha_theses = bridge.get_alpha_theses() if hasattr(bridge, 'get_alpha_theses') else []
+            priority_launch = bridge.get_priority_launch() if hasattr(bridge, 'get_priority_launch') else []
+            master_ops_stats = {
+                "total_ops": len(all_ops),
+                "synergy_stacks": len(synergy_stacks),
+                "alpha_theses": len(alpha_theses),
+                "priority_launches": len(priority_launch),
+                "ready_ops": sum(1 for op in all_ops if op.get("READINESS") == "READY"),
+                "blocked_ops": sum(1 for op in all_ops if op.get("READINESS") != "READY"),
+            }
+        except Exception:
+            pass
+
+    result = {
         "ventures": stats,
         "totals": {
             "venture_types": len(INTELLIGENCE_MAP),
@@ -1309,6 +1448,11 @@ def compute_stats() -> dict[str, Any]:
         },
         "gaps": gaps,
     }
+
+    if master_ops_stats:
+        result["master_ops"] = master_ops_stats
+
+    return result
 
 
 # ── CLI Formatting ─────────────────────────────────────────────────────
@@ -1431,6 +1575,39 @@ def format_human_output(intel: dict[str, Any], mode: str = "default") -> str:
             for sline in summary.split("\n")[:10]:
                 lines.append(f"  {sline}")
 
+    # Master Ops intelligence (if enriched)
+    master_ops = intel.get("master_ops", {})
+    if master_ops:
+        lines.append(f"\n  MASTER OPS INTELLIGENCE")
+        lines.append(f"  {'-'*50}")
+        lines.append(f"  Ops in category:    {master_ops.get('total_ops_in_category', 0)} total, "
+                     f"{master_ops.get('ready_ops', 0)} READY, "
+                     f"{master_ops.get('blocked_ops', 0)} blocked")
+        ready_names = master_ops.get("ready_op_names", [])
+        if ready_names:
+            lines.append(f"  Ready ops:          {', '.join(ready_names)}")
+        synergies = master_ops.get("synergy_stacks", [])
+        if synergies:
+            lines.append(f"  Synergy stacks:")
+            for s in synergies:
+                lines.append(f"    - {s.get('name')} (score: {s.get('score')}, {s.get('multiplier')}x multiplier)")
+        theses = master_ops.get("alpha_theses", [])
+        if theses:
+            lines.append(f"  Alpha theses:")
+            for t in theses:
+                lines.append(f"    - {t.get('opportunity')} (edge: {t.get('edge_duration')})")
+        priority = master_ops.get("priority_launches", [])
+        if priority:
+            lines.append(f"  Priority launches:")
+            for p in priority:
+                lines.append(f"    - #{p.get('rank')} {p.get('name')} "
+                             f"(revenue: {p.get('revenue')}, time to $: {p.get('time_to_first_dollar')})")
+        blockers = master_ops.get("active_blockers", [])
+        if blockers:
+            lines.append(f"  Active blockers:")
+            for b in blockers:
+                lines.append(f"    - {b.get('key')} (affects {b.get('count')} ops)")
+
     # Brief at the end
     lines.append(f"\n  BRIEF: {intel['brief']}")
     lines.append(f"\n  Valid tasks for {venture}: {', '.join(intel['meta'].get('valid_tasks', []))}")
@@ -1475,6 +1652,18 @@ def format_stats_output(stats: dict[str, Any]) -> str:
         for vt, gap_type, missing in gaps:
             for m in missing:
                 lines.append(f"  [{vt:<15s}] {gap_type}: {m}")
+
+    # Master Ops xlsx stats (if bridge module is available)
+    master_ops = stats.get("master_ops", {})
+    if master_ops:
+        lines.append(f"\n  MASTER OPS (xlsx bridge):")
+        lines.append(f"  {'-'*50}")
+        lines.append(f"    Total ops:              {master_ops.get('total_ops', 0)}")
+        lines.append(f"    Ready ops:              {master_ops.get('ready_ops', 0)}")
+        lines.append(f"    Blocked ops:            {master_ops.get('blocked_ops', 0)}")
+        lines.append(f"    Synergy stacks:         {master_ops.get('synergy_stacks', 0)}")
+        lines.append(f"    Alpha theses:           {master_ops.get('alpha_theses', 0)}")
+        lines.append(f"    Priority launches:      {master_ops.get('priority_launches', 0)}")
 
     lines.append("")
     return "\n".join(lines)

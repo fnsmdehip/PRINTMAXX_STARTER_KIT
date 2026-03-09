@@ -1,10 +1,16 @@
-# ACTIONABLE QUEUE -- 2026-03-08 07:30
-Total items: 21 (deduplicated from all sources)
+# ACTIONABLE QUEUE -- 2026-03-09 07:30
+Total items: 39 (deduplicated from all sources)
 
 ---
 
-## [P0] CRITICAL -- Revenue-blocking human actions (9 items)
+## [P0] CRITICAL -- Revenue-blocking human actions (15 items)
 
+- [ ] - **Status:** DONE (product built). HUMAN ACTION: List on Gumroad/Whop when accounts created. [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **BLOCKER (human):** Create Gumroad/Whop account to list this product [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (45-60 min total):** Sign up for 10 affiliate programs. URLs and steps in OPS/AFFILIATE_OPPORTUNITIES_MAR08.md. [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **BLOCKER (human):** Sign up for ConvertKit + Beehiiv affiliate programs, replace placeholder IDs, redeploy. See `OPS/AFFILIATE_LINK_SETUP.md`. [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Remaining blocker:** Human account creation (Gumroad/Fiverr/Stripe). 32 days, zero credentials configured. [HUMAN]
@@ -12,6 +18,10 @@ Total items: 21 (deduplicated from all sources)
 - [ ] - **Blocker:** Human needs to create accounts manually [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Priority:** P0 — unblocks meme page + NSFW account [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - [ ] **[HIGH] Vibe Marketplace by Greta (441 PH votes):** New channel to sell vibe-coded products instantly. Sign up: https://www.producthunt.com/posts/vibe-marketplace-by-greta [HUMAN: review + sign up] [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - P0 (5 min): Subscribe to X Premium on @PRINTMAXXER -- without it, link posts get 0% engagement
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Priority:** P0 — #1 BLOCKER for all revenue
       Source: PERSISTENT_TASK_TRACKER
@@ -23,8 +33,10 @@ Total items: 21 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Loop 3:** ralph/loops/spreadsheet_buildout/ — FULL 181-op buildout from master spreadsheet (41 task batches covering ALL C01-C20, E01-E10, D01-D12, S01-S18, A01-A12, P01-P12, I01-I05, M01-M06, F01-F05, G01-G15, N-series)
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - [P0] Facebook keyword scraper - $500 budget (r/forhire)
+      Source: PERSISTENT_TASK_TRACKER
 
-## [P1] HIGH -- System improvements with high ROI (5 items)
+## [P1] HIGH -- System improvements with high ROI (6 items)
 
 - [ ] - **Prompt pipeline built:** log_user_prompts.sh → prompt_meta_review.py → actionable_aggregator.py → session_briefing.py
       Source: PERSISTENT_TASK_TRACKER
@@ -36,13 +48,25 @@ Total items: 21 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **PageScorer:** pagescorer.surge.sh — landing page audit tool, conversion scoring, actionable fixes
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - 168 deployed pages × $0 organic traffic = total SEO waste
+      Source: swarm/trend_synthesis_20260308.md
 
-## [P2] MEDIUM -- Nice-to-have optimizations (7 items)
+## [P2] MEDIUM -- Nice-to-have optimizations (16 items)
 
+- [ ] - **HUMAN ACTIONS NEEDED:** [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Next action (human):** Post to r/ADHD using the thread template in ASO_AND_CONTENT.md [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Proof:** 126 entries across 8 accounts (@ecomchasedimond, @takeactionD, @heyshrutimishra, @IronSage_, @TheSelfLab, @DeepPsycho_HQ, @BowTiedUM, @JamesEbringer) [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - **ACTION NEEDED:** Respond with portfolio + quote. We can build this with Playwright in 2-4 hours. [HUMAN - time-sensitive] [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **Time: 2 minutes** [HUMAN] [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - [ ] **[MEDIUM] Rork Max:** No-code iOS app builder direct competition. Review pricing + differentiate. URL: https://www.producthunt.com/posts/rork-max [HUMAN: review] [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - None: blocking None ventures [HUMAN]
+      Source: DAILY_TACTICAL_PLAN
 - [ ] - `OPS/FIRST_DOLLAR_ACTION_PLAN.md` — unified 2.5-hour path to first revenue
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Twitter scraper:** Running in background (cookie extraction)
@@ -53,7 +77,24 @@ Total items: 21 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Actions needed:**
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - **ACTION:** Add URL verification step to swarm scanner before marking anything HIGHEST
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - 1 REJECTED (pure price action news)
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - Comparison pages (8) with proper schema, FAQ, cross-links = ready but invisible
+      Source: swarm/trend_synthesis_20260308.md
+- [ ] - All longtail SEO pages = zero indexing
+      Source: swarm/trend_synthesis_20260308.md
+
+## [P3] LOW -- Research/exploration (2 items)
+
+- [ ] - **Status:** DONE (research). HUMAN ACTION REQUIRED (3 items below). [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **Status:** DONE (research). HUMAN ACTION REQUIRED (sign-ups). [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 
 ---
 ### Sources
-- PERSISTENT_TASK_TRACKER: 21 items
+- PERSISTENT_TASK_TRACKER: 35 items
+- swarm: 3 items
+- DAILY_TACTICAL_PLAN: 1 items

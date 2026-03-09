@@ -768,3 +768,10 @@ If context was compacted and you lost track:
 - [ ] **[MEDIUM] Rork Max:** No-code iOS app builder direct competition. Review pricing + differentiate. URL: https://www.producthunt.com/posts/rork-max [HUMAN: review]
 - [ ] **[MEDIUM] beanhoard.com model:** Ultra-niche ETL + Discord alerts = $6/mo. Template: [niche] + inventory alerts + Discord. Immediately cloneable. [AUTOMATED: can build 3 variants]
 
+
+
+### AGGREGATOR FINDINGS -- 2026-03-09 07:30
+- [P1] 168 deployed pages × $0 organic traffic = total SEO waste (source: swarm/trend_synthesis_20260308.md)
+- [P2] [HUMAN] None: blocking None ventures (source: DAILY_TACTICAL_PLAN)
+- [P2] Comparison pages (8) with proper schema, FAQ, cross-links = ready but invisible (source: swarm/trend_synthesis_20260308.md)
+- [P2] All longtail SEO pages = zero indexing (source: swarm/trend_synthesis_20260308.md)

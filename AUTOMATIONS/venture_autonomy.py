@@ -51,6 +51,12 @@ from agent_resilience import (
     sanitize_for_prompt, locked_file, TrajectoryLogger,
 )
 
+try:
+    from master_ops_bridge import MasterOpsBridge
+    _BRIDGE_AVAILABLE = True
+except ImportError:
+    _BRIDGE_AVAILABLE = False
+
 _trajectory = TrajectoryLogger("venture_autonomy")
 
 # ── paths & guardrails ───────────────────────────────────────────────────
@@ -576,6 +582,14 @@ class VentureAutonomyEngine:
         except Exception as _ie:
             log(f"  Intelligence query failed (non-fatal): {_ie}", "WARN")
 
+        # XLSX INTELLIGENCE: Get Master Ops context for this venture
+        xlsx_ctx = self._get_venture_xlsx_context(vtype_key)
+        if xlsx_ctx:
+            log(f"  xlsx context: {xlsx_ctx.get('total_ops', 0)} ops, "
+                f"{xlsx_ctx.get('ready_count', 0)} ready, "
+                f"{len(xlsx_ctx.get('synergies', []))} synergies, "
+                f"{len(xlsx_ctx.get('blockers', []))} blockers")
+
         cycle_results = {}
         scripts = vtype.get("scripts", {})
         config = venture.get("config", {})
@@ -671,6 +685,50 @@ class VentureAutonomyEngine:
                 ran += 1
 
         log(f"Ran {ran}/{len(active)} ventures this cycle")
+
+    def _get_venture_xlsx_context(self, venture_type: str) -> dict:
+        """Get xlsx intelligence for a specific venture's execution."""
+        if not _BRIDGE_AVAILABLE:
+            return {}
+        try:
+            bridge = MasterOpsBridge()
+
+            # Get venture automation map entries
+            vmap = bridge.get_ventures_by_lane(venture_type.lower())
+            if not vmap:
+                # Try category match
+                ops = bridge.get_ops_by_category(venture_type)
+            else:
+                ops = bridge.get_ops_by_category(vmap[0].get("VENTURE_NAME", venture_type) if vmap else venture_type)
+
+            # Get readiness info
+            ready_ops = [op for op in bridge.get_ready_ops() if any(
+                op.get("OP_ID") == o.get("OP_ID") for o in ops
+            )]
+
+            # Get relevant synergies
+            op_ids = {o.get("OP_ID") for o in ops}
+            synergies = [s for s in bridge.get_synergy_stacks()
+                         if any(oid in s.get("METHODS_COMBINED", "") for oid in op_ids)]
+
+            # Get blockers
+            blockers = [b for b in bridge.get_blocker_summary()
+                        if any(oid in b.get("ventures_affected", []) for oid in op_ids)]
+
+            # Get alpha theses
+            theses = bridge.get_alpha_by_lane(venture_type.lower())
+
+            return {
+                "total_ops": len(ops),
+                "ready_count": len(ready_ops),
+                "ready_ops": [{"id": o.get("OP_ID"), "name": o.get("OP_NAME"), "auto_score": o.get("AUTOMATION_SCORE_100")} for o in ready_ops[:5]],
+                "synergies": [{"name": s.get("NAME"), "multiplier": s.get("REVENUE_MULTIPLIER")} for s in synergies[:3]],
+                "blockers": [b.get("blocker") for b in blockers],
+                "alpha_edges": [{"opp": t.get("OPPORTUNITY"), "duration": t.get("EDGE_DURATION")} for t in theses[:3]],
+                "has_playbooks": any(bridge.get_playbook_for_op(o.get("OP_ID", "")) for o in ops[:10]),
+            }
+        except Exception:
+            return {}
 
     def _get_venture_intelligence(self, venture_type: str, step: Optional[str] = None) -> str:
         """Query intelligence router for venture-specific context."""
@@ -1295,10 +1353,27 @@ class SelfManager:
 
             avg_success = sum(success_rates) / len(success_rates)
             current_interval = venture.get("interval_hours", 4)
+            venture_type = venture.get("type", "")
+
+            # xlsx-aware adjustment factors
+            boost_factor = 1.0
+            slow_factor = 1.0
+            if _BRIDGE_AVAILABLE:
+                try:
+                    xlsx_ctx = self.engine._get_venture_xlsx_context(venture_type)
+                    # If venture has READY ops with high automation scores, speed up
+                    if xlsx_ctx.get("ready_count", 0) > 3:
+                        boost_factor = 1.2
+                    # If all ops are blocked, slow down
+                    if xlsx_ctx.get("ready_count", 0) == 0 and xlsx_ctx.get("blockers"):
+                        slow_factor = 0.5  # Run less often if everything's blocked
+                except Exception:
+                    pass
 
             # Winners: if >80% success, halve the interval (min 1h)
             if avg_success > 0.8 and current_interval > 1:
-                new_interval = max(1, current_interval // 2)
+                new_interval = max(1, int(current_interval // 2 / boost_factor))
+                new_interval = max(1, new_interval)
                 venture["interval_hours"] = new_interval
                 self.state.update_venture(vid, venture)
                 self.engine._generate_schedule_configs(vid, venture)
@@ -1308,7 +1383,7 @@ class SelfManager:
 
             # Losers: if <20% success, double the interval (max 48h)
             elif avg_success < 0.2 and current_interval < 48:
-                new_interval = min(48, current_interval * 2)
+                new_interval = min(48, int(current_interval * 2 / slow_factor))
                 venture["interval_hours"] = new_interval
                 self.state.update_venture(vid, venture)
                 self.engine._generate_schedule_configs(vid, venture)

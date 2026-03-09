@@ -22,6 +22,13 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
+# === Master Ops xlsx bridge ===
+try:
+    from master_ops_bridge import MasterOpsBridge
+    _BRIDGE_AVAILABLE = True
+except ImportError:
+    _BRIDGE_AVAILABLE = False
+
 PROJECT = Path(__file__).resolve().parent.parent
 AUTO = PROJECT / "AUTOMATIONS"
 OPS = PROJECT / "OPS"
@@ -214,6 +221,69 @@ def gen_venture_actions(intel: dict[str, str], autonomy: list[dict[str, Any]], c
             actions.append({"type": vt, "name": VENTURE_NAMES.get(vt, vt), "actions": acts})
     return actions
 
+# ─── Master Ops Intelligence ─────────────────────────────────────────
+
+def _get_master_ops_priorities() -> str:
+    """Get priority actions from Master Ops xlsx for today's plan."""
+    if not _BRIDGE_AVAILABLE:
+        return ""
+    try:
+        bridge = MasterOpsBridge()
+
+        sections = []
+
+        # Priority launches that are READY
+        priority = bridge.get_priority_launch()
+        ready_ids = {op.get("OP_ID") for op in bridge.get_ready_ops()}
+        actionable = [p for p in priority if p.get("OP_ID") in ready_ids]
+
+        if actionable:
+            sections.append("### PRIORITY LAUNCHES (READY NOW)")
+            for p in actionable[:5]:
+                sections.append(
+                    f"- [{p.get('OP_ID')}] {p.get('OP_NAME')} "
+                    f"— Revenue: {p.get('REVENUE_POTENTIAL')} "
+                    f"— First $: {p.get('TIME_TO_FIRST_$')} "
+                    f"— Step: {str(p.get('FIRST_STEP', ''))[:80]}"
+                )
+
+        # Top synergy opportunities
+        synergies = bridge.get_top_synergies(3)
+        if synergies:
+            sections.append("\n### TOP SYNERGY STACKS")
+            for s in synergies:
+                sections.append(
+                    f"- {s.get('NAME')} (score: {s.get('SYNERGY_SCORE')}, "
+                    f"{s.get('REVENUE_MULTIPLIER')}x) — {s.get('METHODS_COMBINED')}"
+                )
+
+        # Current blockers to surface
+        blockers = bridge.get_blocker_summary()
+        if blockers:
+            sections.append("\n### ACTIVE BLOCKERS (HUMAN ACTION NEEDED)")
+            for b in blockers[:5]:
+                sections.append(f"- {b.get('blocker')}: blocking {b.get('count')} ventures")
+
+        # Ops with playbooks available
+        ready_with_playbook = []
+        for op in bridge.get_ready_ops()[:20]:
+            playbook = bridge.get_playbook_for_op(op.get("OP_ID", ""))
+            if playbook:
+                ready_with_playbook.append(op)
+
+        if ready_with_playbook:
+            sections.append("\n### READY OPS WITH PLAYBOOKS")
+            for op in ready_with_playbook[:5]:
+                sections.append(
+                    f"- [{op.get('OP_ID')}] {op.get('OP_NAME')} "
+                    f"— {op.get('LANE')} — Auto score: {op.get('AUTOMATION_SCORE_100')}/100"
+                )
+
+        return "\n".join(sections)
+    except Exception:
+        return ""
+
+
 # ─── Build Plan ───────────────────────────────────────────────────────
 
 def build_plan() -> str:
@@ -311,6 +381,11 @@ def build_plan() -> str:
         w("")
     w("---", "")
 
+    # MASTER OPS INTELLIGENCE
+    master_ops_section = _get_master_ops_priorities()
+    if master_ops_section:
+        w("## MASTER OPS INTELLIGENCE", "", master_ops_section, "", "---", "")
+
     # OVERNIGHT TARGETS
     w("## OVERNIGHT TARGETS", "", "```",
       "# Scrapers", "python3 AUTOMATIONS/twitter_alpha_scraper.py --all        # 6:00 AM",
@@ -342,6 +417,31 @@ def build_json() -> dict[str, Any]:
     swm = gather_swarm()
     wrm = gather_warmup()
     va = gen_venture_actions(vi, aut, cat)
+    # Master Ops xlsx intelligence
+    master_ops = {}
+    if _BRIDGE_AVAILABLE:
+        try:
+            bridge = MasterOpsBridge()
+            ready = bridge.get_ready_ops()
+            priority = bridge.get_priority_launch()
+            blocked_ops = bridge.get_blocked_ops()
+            ready_ids = {op.get("OP_ID") for op in ready}
+            actionable_priority = [p for p in priority if p.get("OP_ID") in ready_ids]
+            master_ops = {
+                "ready_count": len(ready),
+                "priority_launches": len(priority),
+                "actionable_priority": [
+                    {"op_id": p.get("OP_ID"), "name": p.get("OP_NAME"),
+                     "revenue": p.get("REVENUE_POTENTIAL")}
+                    for p in actionable_priority[:5]
+                ],
+                "blocked_count": len(blocked_ops),
+                "blocker_summary": bridge.get_blocker_summary()[:5],
+                "top_synergies": bridge.get_top_synergies(3),
+            }
+        except Exception:
+            pass
+
     return {
         "date": datetime.now().strftime("%Y-%m-%d"),
         "pulse": {"ceo": ceo["cycles"], "swarm": swm["active"], "ventures": len(aut),
@@ -351,6 +451,7 @@ def build_json() -> dict[str, Any]:
         "pipeline": {"top_ops": ceo["top_ops"],
                      "stuck": [v for v in aut if v["stuck"]],
                      "never_ran": [v for v in aut if v["cycles"] == 0]},
+        "master_ops": master_ops,
     }
 
 

@@ -33,6 +33,13 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# === MASTER OPS BRIDGE (xlsx intelligence) ===
+try:
+    from master_ops_bridge import MasterOpsBridge
+    _BRIDGE_AVAILABLE = True
+except ImportError:
+    _BRIDGE_AVAILABLE = False
+
 # === SAFETY ===
 PROJECT_ROOT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
 DECISION_LOG = PROJECT_ROOT / "AUTOMATIONS" / "logs" / "decision_engine.log"
@@ -68,6 +75,68 @@ def log_decision(source, action, reasoning, outcome="PENDING"):
         if not exists:
             w.writeheader()
         w.writerow(row)
+
+
+# === MASTER OPS SCORING ===
+
+def _get_ops_weight(op_id_or_venture: str) -> dict:
+    """Get xlsx-based scoring weights for a decision."""
+    if not _BRIDGE_AVAILABLE:
+        return {}
+    try:
+        bridge = MasterOpsBridge()
+        # Check if it's an op ID (like C01) or venture type
+        op = bridge.get_op(op_id_or_venture)
+        if not op:
+            # Try matching by venture/category
+            ops = bridge.get_ops_by_category(op_id_or_venture)
+            if not ops:
+                return {}
+            op = ops[0]
+
+        auto_status = {o.get("OP_ID"): o for o in bridge.get_ready_ops() + bridge.get_blocked_ops()}
+        status = auto_status.get(op.get("OP_ID"), {})
+
+        return {
+            "automation_score": int(status.get("AUTOMATION_SCORE_100", 50)),
+            "readiness": status.get("READINESS", "UNKNOWN"),
+            "signal_count": int(status.get("SIGNAL_COUNT", 0)),
+            "is_priority_launch": any(p.get("OP_ID") == op.get("OP_ID") for p in bridge.get_priority_launch()),
+            "synergy_count": len(bridge.get_synergy_for_op(op.get("OP_ID", ""))),
+            "has_blocker": bool(status.get("BLOCKER_KEY")),
+            "blocker_key": status.get("BLOCKER_KEY", ""),
+        }
+    except Exception:
+        return {}
+
+
+def apply_ops_boost(base_score: float, op_id_or_venture: str) -> float:
+    """Apply xlsx-informed boosts/penalties to a base score.
+
+    Boosts:
+      - PRIORITY_LAUNCH: +20%
+      - READY status: +15%
+      - Each synergy stack: +10%
+    Penalties:
+      - BLOCKED: -30%
+    """
+    weights = _get_ops_weight(op_id_or_venture)
+    if not weights:
+        return base_score
+    try:
+        score = base_score
+        if weights.get("is_priority_launch"):
+            score *= 1.20
+        if weights.get("readiness") == "READY":
+            score *= 1.15
+        synergy_count = weights.get("synergy_count", 0)
+        if synergy_count > 0:
+            score *= (1 + 0.10 * synergy_count)
+        if weights.get("has_blocker"):
+            score *= 0.70
+        return score
+    except Exception:
+        return base_score
 
 
 # === DATA READERS ===
@@ -992,6 +1061,22 @@ def run_cycle(dry_run=False):
         except Exception as e:
             log(f"{name}: ERROR — {e}", "ERROR")
             results[name] = {"error": str(e)}
+
+    # Master Ops xlsx awareness
+    if _BRIDGE_AVAILABLE:
+        try:
+            bridge = MasterOpsBridge()
+            ready_ops = bridge.get_ready_ops()
+            priority = bridge.get_priority_launch()
+            blocked = bridge.get_blocked_ops()
+            log(f"Master Ops: {len(ready_ops)} READY ops, {len(priority)} priority launches, {len(blocked)} blocked")
+            results["master_ops"] = {
+                "ready": len(ready_ops),
+                "priority_launches": len(priority),
+                "blocked": len(blocked),
+            }
+        except Exception as e:
+            log(f"Master Ops: bridge error — {e}", "WARN")
 
     # Summary
     log("=" * 60)

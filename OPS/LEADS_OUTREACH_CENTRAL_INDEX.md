@@ -817,3 +817,25 @@ Tech employment crisis worse than 2008/2020. 929pts 609 comments. MASSIVE market
 
 @dimitarangg: 59 B2B calls booked in 16 days - leaked entire cold outreach system. 666 engagement.
 
+
+
+---
+
+## Pending Enhancement (ALPHA19233, Score: 23)
+
+**Source:** Reddit/r/coldemail | **URL:** https://www.reddit.com/r/coldemail
+**Added:** 2026-03-09T07:47:13-04:00
+
+Cold email system from scratch: exact framework for building a cold email machine today. Community thread with real practitioners sharing current working systems. High signal for current deliverability tactics.
+
+
+
+---
+
+## Pending Enhancement (ALPHA19234, Score: 20)
+
+**Source:** Reddit/r/growthhacking | **URL:** https://www.reddit.com/r/growthhacking
+**Added:** 2026-03-09T07:47:13-04:00
+
+How startups land top-tier publications (Business Insider, Yahoo Finance). Community thread reveals PR strategies. Key: HARO responses, PR Newswire alternatives, cold pitching journalists directly vs wire services.
+

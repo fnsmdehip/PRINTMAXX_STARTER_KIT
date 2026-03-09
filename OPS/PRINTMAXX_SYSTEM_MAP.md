@@ -152,6 +152,89 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 
 ---
 
+## MASTER OPS ENHANCED (182 ops across 19 sheets)
+
+Source: `PRINTMAXX_MASTER_OPS_ENHANCED_*.xlsx` (latest dated version)
+Bridge: `AUTOMATIONS/master_ops_bridge.py` → cache at `AUTOMATIONS/master_ops_cache.json`
+Dashboard: `http://localhost:9999` → Ops Intel tab
+
+### Sheets & Contents
+
+| Sheet | Rows | Purpose |
+|-------|------|---------|
+| ALL OPS MASTER | 182 | Every op: ID, category, revenue range, automation level, status, platforms |
+| AUTO_STATUS_LIVE | 180 | Real-time readiness (READY/BUILD/BLOCKED), automation scores 0-100, signal counts |
+| PRIORITY LAUNCH | 18 | Ranked by urgency: op, effort, revenue potential, first step, time-to-first-$ |
+| PRIORITY_AUTOMATION_EXEC | 18 | Automation-ready items with command templates |
+| SYNERGY STACKS | 26 | Synergy combos: score 85-97, revenue multipliers 4.5x-8.7x |
+| VENTURE_AUTOMATION_MAP | 55 | Venture→lane→blocker→command mappings |
+| ALPHA_THESIS_INDEX | 38 | Alpha opportunities with edge durations (6-36 months) |
+| DEEP_PLAYBOOK_INDEX | 1,470 | Step-by-step instructions for 37 ops |
+| VIDEO & MEDIA STACK | 28 | Tools: Kling, Veo, Remotion, Nano Banana + quality ratings |
+| HOSTING & DEPLOY | 14 | Netlify, Cloudflare, Vercel, GitHub Pages + commercial use |
+| LEAD GEN STACK | 33 | Bland AI, Instantly, Clay, Apollo + automation levels |
+| EXISTING INFRA | 60 | What's built: scrapers, pipelines, dashboards, agents |
+| RBI SYSTEM | 19 | Audit types: daily/weekly/monthly health checks |
+| ETC_EXPANSION_QUEUE | 32 | Expansion candidates ranked by automation score |
+| BROWSER & PROXY STACK | 60 | Browser automation fallback chain + stealth levels |
+| DEEP PLAYBOOK | 2,999 | Raw playbook text for 37 ops (unstructured) |
+| LLM ALPHA THESIS | 79 | Raw alpha thesis text (unstructured) |
+| NSFW COMPLIANCE | 13 | Platform requirements for adult content ops |
+| SYSTEM_EVIDENCE | 11 | Build metadata and approval counts |
+
+### Op Categories (from ALL OPS MASTER)
+
+```
+CONTENT (C01-C20)     — TikTok, YouTube, Instagram, X, Podcast, Newsletter
+SERVICE (S01-S08)     — Freelance, Local Biz, Agency, Cold Email, AI Services
+APP (A01-A04)         — Portfolio Apps, Vertical SaaS, Chrome Extensions
+DIGITAL_PRODUCT (D01-D12) — Gumroad PDFs, Courses, Templates, Notion Packs
+ECOM (E01-E07)        — Trending Product Arb, Print-on-Demand, Dropship
+NICHE (N61-N68)       — Ramadan Tracker, Local Biz Redesign, specialty apps
+PERSONA (P01-P12)     — AI Persona content ops (compliance-critical)
+```
+
+### Synergy Multiplier System
+
+Ops don't exist in isolation. SYNERGY STACKS define which ops compound:
+
+```
+SYN351: Voice AI + Vertical SaaS              — 97 score, 4.5x multiplier
+SYN352: Clipper + TikTok Double Monetization   — 96 score, 6.5x multiplier
+SYN353: Content Farm + TikTok + FB Reels Arb   — 96 score, 6.2x multiplier
+SYN354: Portfolio Apps + Paywall Optimization   — 95 score, 8.7x multiplier
+```
+
+Revenue formula: Stacked = Sum(Individual) × Synergy Multiplier × Automation Factor
+
+### Blocker Keys (what's stopping ops)
+
+```
+X_MULTI_ACCOUNT_STACK     — Antidetect browser + proxy setup (blocks 15+ content ops)
+STORE_ACCOUNT_AND_PAYMENT — App Store + payment processor (blocks app factory)
+FIVERR_UPWORK_ACCOUNT     — Freelance platform accounts (blocks service ops)
+EMAIL_INFRA               — Email sending infrastructure (blocks outbound)
+GUMROAD_ACCOUNT           — Gumroad seller setup (blocks digital products)
+STRIPE_ACCOUNT            — Payment processing (blocks direct sales)
+```
+
+### Integration Map (who consumes xlsx data)
+
+```
+master_ops_bridge.py ─── cache ──→ master_ops_cache.json
+         │
+         ├──→ intelligence_router.py    (enriches ALL agent briefs)
+         ├──→ ceo_agent.py              (VentureScorer uses xlsx for PROMOTE/KILL)
+         ├──→ decision_engine.py        (xlsx-weighted decision scoring)
+         ├──→ daily_tactical_engine.py  (priority launches in daily plans)
+         ├──→ venture_autonomy.py       (venture context + blocker awareness)
+         ├──→ growth_strategist.py      (synergy strategies + tool recommendations)
+         ├──→ loop_closer.py            (blocker tracking + pipeline advancement)
+         └──→ control_panel.py          (Ops Intel tab at localhost:9999)
+```
+
+---
+
 ## EXECUTION HIERARCHY
 
 ```
@@ -164,6 +247,7 @@ L1 ENGINES          venture_autonomy.py ──────────── Eve
 L2 INTELLIGENCE     intelligence_router.py ────────── On demand. 484 docs + 15K alpha → briefing.
                     alpha_query.py ────────────────── On demand. Search/filter/score alpha.
                     daily_digest.py ───────────────── 6:45 AM. What happened overnight.
+                    master_ops_bridge.py ─────────── On demand. 182 ops + synergy + playbooks from xlsx.
                          │
 L3 EXECUTION        daily_tactical_engine.py ──────── 7:15 AM. "Do exactly this today."
                     daily_engagement_planner.py ───── 7:00 AM. Twitter warmup-safe plan.
@@ -206,6 +290,14 @@ DECISIONS ──→ decision_engine ──→ DECISIONS.csv
          loop_closer ──→ executes decisions, tracks feedback, advances pipeline
                     │
          ceo_agent ──→ PROMOTE/ENHANCE/CREATE/KILL ──→ venture_autonomy adjusts
+
+PRINTMAXX_MASTER_OPS_ENHANCED.xlsx ──→ master_ops_bridge.py ──→ master_ops_cache.json
+         │
+         ├──→ intelligence_router (enriches all briefs)
+         ├──→ ceo_agent (VentureScorer)
+         ├──→ decision_engine (weighted scoring)
+         ├──→ daily_tactical_engine (priority launches)
+         └──→ control_panel (Ops Intel tab)
 ```
 
 ---
@@ -276,6 +368,9 @@ missions.jsonl          Shared mission log
 message_bus.jsonl       Inter-agent messages
 feedback_recommendations.json  Loop closer → swarm adjustments
 USER_PROMPTS.jsonl      Every user prompt timestamped (hook captures on submit)
+master_ops_cache.json   Bridge JSON cache of xlsx (182 ops, 19 sheets, 12h TTL)
+throttle_state.json     Current throttle mode and agent overrides
+throttle_config.json    Agent tier config (efficient/high intervals)
 ```
 
 ---
@@ -287,7 +382,7 @@ The bottleneck is human activation of payment/distribution channels.
 
 **Unblocked in ~85 min:** Stripe (5min) + Gmail MCP (5min) + Twitter profile (10min) + Gumroad 13 products (30min) + TikTok (30min) + Cloudflare (5min).
 
-**Pipeline ready:** 13 digital products built. 40 posts queued. 1,110 leads. 16 live sites. 20 ecom arb products (27-66% margins). 12 freelance opps.
+**Pipeline ready:** 13 digital products built. 40 posts queued. 1,110 leads. 16 live sites. 20 ecom arb products (27-66% margins). 12 freelance opps. 182 ops mapped with automation scores.
 
 ---
 
@@ -296,6 +391,18 @@ The bottleneck is human activation of payment/distribution channels.
 PreToolUse Write|Edit: path validation (blocks writes outside project)
 PostToolUse Write|Edit: py_compile (syntax), secret detector, safe_path discard check, file handle leak check, type hint check
 SessionStart: cron check, subconscious injection, warm-start context
+
+---
+
+## CONTROL PANEL (localhost:9999)
+
+Unified dashboard replacing 8 scattered UIs. Auto-launches on session start.
+
+**Tabs:** Dashboard (real-time charts) | Agents (throttle controls) | System Tree (L0-L6 hierarchy) | Actions (quick triggers) | Blockers (P0 human items) | Ops Intel (full xlsx intelligence)
+
+**Desktop app:** `AUTOMATIONS/PrintmaxxPanel.app` — neon green P icon, launches server + browser.
+
+**Endpoints:** `/api/status`, `/api/agents`, `/api/system-tree`, `/api/realtime`, `/api/ventures`, `/api/pipeline`, `/api/master-ops`, `/api/actions`, `/api/blockers`
 
 ---
 

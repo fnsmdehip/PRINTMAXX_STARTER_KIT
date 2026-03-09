@@ -306,3 +306,14 @@ bro i was doing research last night and i found this guy medschoolbro he's just 
 
 and
 
+
+
+---
+
+## Pending Enhancement (ALPHA18815, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rov7px/market_research_whats_your_postdownload_workflow/
+**Added:** 2026-03-09T05:49:50-04:00
+
+[ACQUISITION] [Market Research] What’s your "Post-Download" workflow for video lectures?
+
