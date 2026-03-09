@@ -1,7 +1,7 @@
 {
-  "cycle_id": "cycle_2_20260309_0800",
+  "cycle_id": "cycle_2_20260309_1200",
   "cycle_number": 2,
-  "last_completed_phase": 1,
+  "last_completed_phase": 3,
   "phase_results": {
     "1": {
       "count": 179,
@@ -12,8 +12,43 @@
         "C16",
         "E01"
       ]
-    }
+    },
+    "2": {
+      "decisions": [
+        {
+          "type": "PROMOTE",
+          "op_id": "M03",
+          "name": "Telegram VIP Channel",
+          "reason": "Score 82.2 above promote threshold 70"
+        },
+        {
+          "type": "PROMOTE",
+          "op_id": "N19",
+          "name": "Cross-Platform Content Arbitrage",
+          "reason": "Score 82.2 above promote threshold 70"
+        },
+        {
+          "type": "PROMOTE",
+          "op_id": "C06",
+          "name": "Podcast Factory (AI Host)",
+          "reason": "Score 80.7 above promote threshold 70"
+        },
+        {
+          "type": "PROMOTE",
+          "op_id": "C05",
+          "name": "Newsletter Empire",
+          "reason": "Score 80.5 above promote threshold 70"
+        },
+        {
+          "type": "PROMOTE",
+          "op_id": "M02",
+          "name": "Skool Community",
+          "reason": "Score 80.5 above promote threshold 70"
+        }
+      ]
+    },
+    "3": "snapshot_taken"
   },
-  "started_at": "2026-03-09T08:00:01.031117",
-  "updated_at": "2026-03-09T08:00:03.297255"
+  "started_at": "2026-03-09T12:00:01.155862",
+  "updated_at": "2026-03-09T12:00:06.450473"
 }
