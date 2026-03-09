@@ -1704,3 +1704,20 @@ Day 4-7: Find 3 products already selling on TikTok with 1M+
 
 AGI goalposts debate: 315 HN pts + 208 comments. OpenAI charter analysis. Massive engagement on AI skepticism content. Content farming angle: contrarian AI takes drive huge engagement. Write anti-hype AI content for niche accounts.
 
+
+
+---
+
+## Pending Enhancement (ALPHA19327, Score: 24)
+
+**Source:** @SimonasDip (high-signal-accounts) | **URL:** https://x.com/SimonasDip/status/2031004284544844139
+**Added:** 2026-03-09T12:00:09-04:00
+
+another viral podcast page printing MILLIONS of views
+
+i actually think some videos are real (if they're not, insane job well done)
+
+my guess is they're promoting their real podcast, which is the same name as the tiktok page
+
+P.s. the reason all these videos have B&W filters is
+
