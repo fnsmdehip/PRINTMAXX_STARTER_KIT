@@ -33,3 +33,29 @@
 
 [ACQUISITION] Show HN: I built a simple book tracker because I kept buying books I owned
 
+
+
+---
+
+## Pending Enhancement (ALPHA19286, Score: 29)
+
+**Source:** @DeItaone (high-signal-accounts) | **URL:** https://x.com/DeItaone/status/2030989311592530068
+**Added:** 2026-03-09T12:00:09-04:00
+
+IRAN WAR LIFTS MARKET MELTDOWN RISK
+
+Ed Yardeni has raised the chance of a U.S. stock market meltdown to 35%, up from 20%, as the Iran war pushes oil above $100 and clouds the outlook.
+
+He also cut the odds of a “melt-up” rally to 5%, citing rising energy costs and reduced
+
+
+
+---
+
+## Pending Enhancement (ALPHA19290, Score: 23)
+
+**Source:** @WatcherGuru (high-signal-accounts) | **URL:** https://x.com/WatcherGuru/status/2031005818007519262
+**Added:** 2026-03-09T12:00:09-04:00
+
+JUST IN:  Over $900 billion wiped out from US stock market at open.
+
