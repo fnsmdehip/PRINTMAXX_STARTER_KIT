@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRINTMAXX Control Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg2: #0d0d14;
+  --panel: rgba(17,25,40,0.75);
+  --panel-solid: #111118;
+  --panel2: rgba(17,25,40,0.5);
+  --border: rgba(255,255,255,0.125);
+  --border-hover: rgba(255,255,255,0.25);
+  --accent: #00ff88;
+  --accent-dim: rgba(0,255,136,0.15);
+  --accent-glow: 0 0 5px rgba(0,255,136,0.3), 0 0 15px rgba(0,255,136,0.1);
+  --warn: #ff6b35;
+  --warn-dim: rgba(255,107,53,0.15);
+  --danger: #ff3355;
+  --danger-dim: rgba(255,51,85,0.15);
+  --blue: #4488ff;
+  --blue-dim: rgba(68,136,255,0.15);
+  --purple: #8b5cf6;
+  --purple-dim: rgba(139,92,246,0.15);
+  --yellow: #eab308;
+  --yellow-dim: rgba(234,179,8,0.15);
+  --text: #e8e8ee;
+  --text-dim: #8888a0;
+  --text-muted: #555566;
+  --tier1: #00ff88;
+  --tier2: #ff6b35;
+  --tier3: #666;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --glass-bg: rgba(17,25,40,0.75);
+  --glass-blur: blur(16px);
+  --glass-border: 1px solid rgba(255,255,255,0.125);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* --- GLASSMORPHISM CARDS --- */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+.glass-card:hover {
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* --- PULSE ANIMATION --- */
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0,255,136,0.4); }
+  50% { opacity: 0.85; box-shadow: 0 0 0 6px rgba(0,255,136,0); }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: var(--accent-glow); }
+  50% { box-shadow: 0 0 10px rgba(0,255,136,0.5), 0 0 30px rgba(0,255,136,0.15); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- HEADER --- */
+.header {
+  background: linear-gradient(135deg, #0a0a0f 0%, #111827 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(0,255,136,0.3), 0 0 40px rgba(0,255,136,0.1);
+  text-transform: uppercase;
+}
+
+.header-clock {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.mode-badge-header {
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+.mode-efficient-badge {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(0,255,136,0.3);
+  box-shadow: var(--accent-glow);
+}
+.mode-high-badge {
+  background: var(--warn-dim);
+  color: var(--warn);
+  border: 1px solid rgba(255,107,53,0.3);
+  box-shadow: 0 0 5px rgba(255,107,53,0.3), 0 0 15px rgba(255,107,53,0.1);
+}
+.mode-unknown-badge {
+  background: rgba(85,85,102,0.2);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+
+/* --- TOP STATS BAR --- */
+.stats-bar {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  animation: countUp 0.4s ease-out;
+}
+
+.stat-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+/* --- TABS --- */
+.tabs {
+  display: flex;
+  background: linear-gradient(180deg, rgba(17,25,40,0.6) 0%, rgba(10,10,15,0.9) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 12px 22px;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tab i { font-size: 15px; }
+.tab:hover { color: var(--text); background: rgba(255,255,255,0.02); }
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: rgba(0,255,136,0.03);
+}
+
+/* --- CONTENT --- */
+.content { padding: 24px 28px; max-width: 1600px; margin: 0 auto; }
+.tab-content { display: none; animation: fadeInUp 0.3s ease-out; }
+.tab-content.active { display: block; }
+
+/* --- DASHBOARD TAB --- */
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.dash-grid-full {
+  grid-column: 1 / -1;
+}
+
+.card-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title i { font-size: 16px; color: var(--accent); }
+
+/* --- PIPELINE FUNNEL --- */
+.pipeline-funnel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 50px;
+}
+.pipeline-stage {
+  flex: 1;
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+.pipeline-stage:hover {
+  transform: scaleY(1.05);
+}
+.pipeline-stage-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.pipeline-stage-label {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+.pipeline-arrow {
+  color: var(--text-muted);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* --- VENTURE GRID --- */
+.venture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+.venture-card {
+  background: var(--panel2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+.venture-card:hover {
+  border-color: rgba(0,255,136,0.3);
+  box-shadow: 0 0 15px rgba(0,255,136,0.08);
+  transform: translateY(-2px);
+}
+.venture-type {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.venture-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.venture-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.venture-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.venture-status-dot.active {
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+  animation: pulse 2s infinite;
+}
+.venture-status-dot.inactive {
+  background: var(--danger);
+}
+.venture-detail {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* --- AGENT TAB --- */
+.mode-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mode-btn {
+  padding: 10px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--panel2);
+  backdrop-filter: blur(8px);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+.mode-btn:hover { border-color: var(--accent); color: var(--accent); }
+.mode-btn.active-efficient {
+  border-color: rgba(0,255,136,0.5);
+  background: var(--accent-dim);
+  color: var(--accent);
+  box-shadow: var(--accent-glow);
+}
+.mode-btn.active-high {
+  border-color: rgba(255,107,53,0.5);
+  background: var(--warn-dim);
+  color: var(--warn);
+  box-shadow: 0 0 5px rgba(255,107,53,0.3);
+}
+.mode-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.mode-info {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tier-section { margin-bottom: 24px; }
+
+.tier-header {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+}
+.tier-1 { color: var(--tier1); border-left: 3px solid var(--tier1); background: rgba(0,255,136,0.04); }
+.tier-2 { color: var(--tier2); border-left: 3px solid var(--tier2); background: rgba(255,107,53,0.04); }
+.tier-3 { color: var(--tier3); border-left: 3px solid var(--tier3); background: rgba(102,102,102,0.04); }
+
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.agent-card {
+  background: rgba(17,25,40,0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.agent-card:hover {
+  border-color: rgba(0,255,136,0.3);
+  box-shadow: 0 0 15px rgba(0,255,136,0.08);
+  transform: translateY(-2px);
+}
+.agent-card.disabled { opacity: 0.35; }
+
+.status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dot-green { background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2s infinite; }
+.dot-red { background: var(--danger); box-shadow: 0 0 6px var(--danger); }
+.dot-grey { background: #444; }
+
+.agent-info { flex: 1; min-width: 0; }
+.agent-name {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Inter', sans-serif;
+}
+.agent-meta {
+  font-size: 10px;
+  color: var(--text-dim);
+  display: flex;
+  gap: 8px;
+  margin-top: 3px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.agent-sparkline {
+  width: 60px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.category-badge {
+  font-size: 8px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.06);
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.toggle { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
+.toggle input { opacity: 0; width: 0; height: 0; }
+.toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.toggle .slider:before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background: #555;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.toggle input:checked + .slider { background: var(--accent); box-shadow: 0 0 8px rgba(0,255,136,0.3); }
+.toggle input:checked + .slider:before { transform: translateX(16px); background: #fff; }
+
+.detail-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 16px;
+  display: none;
+}
+.detail-panel.visible { display: block; animation: fadeInUp 0.2s ease-out; }
+
+.log-output {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1.7;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: var(--text-dim);
+  margin-top: 12px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.interval-input {
+  width: 55px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  padding: 5px 8px;
+  text-align: center;
+}
+.interval-input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 8px rgba(0,255,136,0.15); }
+
+/* --- ACTIONS TAB --- */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.action-btn {
+  background: var(--panel2);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+.action-btn:hover {
+  border-color: rgba(0,255,136,0.3);
+  color: var(--accent);
+  box-shadow: 0 0 12px rgba(0,255,136,0.06);
+  transform: translateY(-1px);
+}
+.action-btn:disabled { opacity: 0.5; cursor: wait; }
+.action-cat {
+  font-size: 8px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.output-panel {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1.7;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  display: none;
+  color: var(--text-dim);
+}
+.output-panel.visible { display: block; animation: fadeInUp 0.2s ease-out; }
+
+/* --- COMMANDS TAB --- */
+.cmd-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.cmd-item {
+  background: var(--panel2);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+}
+.cmd-item:hover { border-color: rgba(0,255,136,0.2); }
+.cmd-name {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.cmd-desc { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
+
+/* --- BLOCKERS TAB --- */
+.blocker-item {
+  background: var(--danger-dim);
+  border: 1px solid rgba(255,51,85,0.2);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.7;
+  transition: all 0.2s ease;
+}
+.blocker-item:hover { border-color: rgba(255,51,85,0.4); }
+
+/* --- SYSTEM TREE TAB --- */
+.tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tree-layer {
+  position: relative;
+}
+
+.tree-layer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.tree-layer-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.tree-layer-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.tree-nodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.tree-nodes::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 1px;
+}
+
+.tree-node {
+  position: relative;
+  padding: 12px 16px;
+  background: rgba(17,25,40,0.5);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--layer-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.tree-node:hover {
+  background: rgba(17,25,40,0.8);
+  transform: translateX(3px);
+}
+
+.tree-node::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+}
+
+.tree-node-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.tree-node-desc {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 3px;
+  line-height: 1.5;
+}
+.tree-node-schedule {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tree-node-status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+.tree-node-status.active { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+.tree-node-status.idle { background: var(--yellow); box-shadow: 0 0 4px var(--yellow); }
+.tree-node-status.stale { background: var(--danger); }
+.tree-node-status.unknown { background: var(--text-muted); }
+
+/* --- DATA FLOW SECTION --- */
+.flow-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.flow-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(17,25,40,0.3);
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s ease;
+}
+.flow-item:hover { background: rgba(17,25,40,0.6); }
+.flow-from { color: var(--blue); font-weight: 600; min-width: 160px; }
+.flow-arrow { color: var(--accent); font-size: 14px; }
+.flow-to { color: var(--purple); font-weight: 600; min-width: 160px; }
+.flow-label { color: var(--text-dim); font-size: 10px; flex: 1; }
+
+/* --- CRON HEATMAP --- */
+.cron-section { margin-top: 20px; }
+.cron-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cron-slot {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+.cron-slot:hover { transform: translateY(-1px); }
+.cron-time {
+  font-weight: 700;
+  display: block;
+}
+.cron-script {
+  font-size: 9px;
+  opacity: 0.7;
+  display: block;
+  margin-top: 2px;
+}
+
+/* --- TOAST --- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 14px 22px;
+  font-size: 12px;
+  color: var(--accent);
+  z-index: 1000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: var(--accent-glow);
+}
+.toast.visible { transform: translateY(0); opacity: 1; }
+.toast.error { border-color: var(--danger); color: var(--danger); box-shadow: 0 0 10px rgba(255,51,85,0.2); }
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .dash-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .header { padding: 12px 16px; }
+  .content { padding: 16px; }
+  .tabs { padding: 0 16px; }
+  .agent-grid { grid-template-columns: 1fr; }
+  .action-grid { grid-template-columns: 1fr; }
+  .stats-bar { gap: 14px; }
+  .stat-value { font-size: 16px; }
+  .venture-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .tree-nodes { grid-template-columns: 1fr; }
+  .dash-grid { grid-template-columns: 1fr; }
+  .pipeline-funnel { flex-direction: column; height: auto; gap: 4px; }
+  .pipeline-stage { width: 100%; height: 36px; flex-direction: row; gap: 8px; }
+  .pipeline-arrow { transform: rotate(90deg); }
+}
+
+/* --- AGENT TOPOLOGY SECTION --- */
+.topology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+.topology-cat {
+  padding: 12px 14px;
+  background: rgba(17,25,40,0.4);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.topology-cat-name {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.topology-agent {
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 2px 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* --- OPS INTEL TAB --- */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+.ops-row {
+  display: grid;
+  grid-template-columns: 40px 50px 1fr 120px 100px;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  font-size: 11px;
+}
+@media (max-width: 768px) {
+  .ops-row { grid-template-columns: 40px 50px 1fr; }
+  .ops-row > :nth-child(4),
+  .ops-row > :nth-child(5) { display: none; }
+}
+
+.ops-rank-badge {
+  background: var(--accent-dim);
+  color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.ops-id {
+  color: var(--blue);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+
+.ops-cat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.ops-cat-name {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.ops-count-badge {
+  background: var(--blue-dim);
+  color: var(--blue);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ops-cat-ops {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.synergy-card {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.synergy-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.synergy-score {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.synergy-multiplier {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.synergy-desc {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.synergy-methods {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 2px;
+}
+
+.thesis-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.thesis-id {
+  background: var(--purple-dim);
+  color: var(--purple);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.thesis-edge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.ops-blocker-row {
+  margin-bottom: 8px;
+}
+
+.ops-blocker-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.ops-blocker-name {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ops-blocker-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.ops-progress-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.ops-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.tool-card {
+  padding: 8px 12px;
+  background: rgba(17,25,40,0.4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+
+.tool-name {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.tool-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 3px;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.tool-quality-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.venture-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.venture-map-card {
+  background: rgba(17,25,40,0.5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  transition: all 0.2s ease;
+}
+
+.venture-map-card:hover {
+  border-color: rgba(0,255,136,0.3);
+  transform: translateY(-2px);
+}
+
+.venture-map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.venture-map-name {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.readiness-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.readiness-READY {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.readiness-BUILD {
+  background: var(--yellow-dim);
+  color: var(--yellow);
+}
+
+.readiness-BLOCKED {
+  background: var(--danger-dim);
+  color: var(--danger);
+}
+
+.lane-badge {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--purple-dim);
+  color: var(--purple);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.5px;
+}
+
+.automation-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.automation-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.venture-map-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 10px;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* --- SYSTEM TREE ENHANCEMENTS --- */
+.state-file-row {
+  display: grid;
+  grid-template-columns: 8px 1fr 2fr 60px 100px;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 11px;
+}
+@media (max-width: 768px) {
+  .state-file-row { grid-template-columns: 8px 1fr 1fr; }
+  .state-file-row > :nth-child(4),
+  .state-file-row > :nth-child(5) { display: none; }
+}
+
+.state-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.state-dot-exists {
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.state-dot-missing {
+  background: var(--danger);
+  box-shadow: 0 0 4px var(--danger);
+}
+
+.dir-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 11px;
+}
+
+.dir-icon {
+  font-size: 16px;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+.dir-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 140px;
+}
+
+.dir-desc {
+  color: var(--text-dim);
+}
+
+.hook-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 11px;
+}
+
+.hook-event-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--warn-dim);
+  color: var(--warn);
+  white-space: nowrap;
+}
+
+.hook-matcher {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--blue);
+  min-width: 120px;
+}
+
+.hook-desc {
+  color: var(--text-dim);
+  font-size: 10px;
+}
+
+.revenue-big {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.revenue-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.revenue-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.revenue-label {
+  color: var(--text-dim);
+}
+
+.revenue-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo">PRINTMAXX</div>
+    <span id="h-mode-badge" class="mode-badge-header mode-unknown-badge">---</span>
+    <span class="header-clock" id="h-clock">--:--:--</span>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-pill">
+      <div class="stat-value" id="h-revenue" style="color:var(--accent)">$0</div>
+      <div class="stat-label">Revenue</div>
+    </div>
+    <div class="stat-pill">
+      <div class="stat-value" id="h-day" style="color:var(--text)">--</div>
+      <div class="stat-label">Day #</div>
+    </div>
+    <div class="stat-pill">
+      <div class="stat-value" id="h-daily" style="color:var(--blue)">--</div>
+      <div class="stat-label">Burns/Day</div>
+    </div>
+    <div class="stat-pill">
+      <div class="stat-value" id="h-reset" style="color:var(--warn)">--</div>
+      <div class="stat-label">Token Reset</div>
+    </div>
+    <div class="stat-pill">
+      <div class="stat-value" id="h-alpha" style="color:var(--purple)">--</div>
+      <div class="stat-label">Alpha Total</div>
+    </div>
+    <div class="stat-pill">
+      <div class="stat-value" id="h-agents" style="color:var(--text-dim)">--</div>
+      <div class="stat-label">Active Agents</div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" data-tab="dashboard"><i class="ti ti-dashboard"></i>Dashboard</div>
+  <div class="tab" data-tab="agents"><i class="ti ti-robot"></i>Agents</div>
+  <div class="tab" data-tab="tree"><i class="ti ti-binary-tree-2"></i>System Tree</div>
+  <div class="tab" data-tab="actions"><i class="ti ti-bolt"></i>Actions</div>
+  <div class="tab" data-tab="blockers"><i class="ti ti-alert-triangle"></i>Blockers</div>
+  <div class="tab" data-tab="ops"><i class="ti ti-chart-treemap"></i>Ops Intel</div>
+</div>
+
+<div class="content">
+
+  <!-- ====== DASHBOARD TAB ====== -->
+  <div class="tab-content active" id="tab-dashboard">
+    <!-- Real-time chart -->
+    <div class="glass-card dash-grid-full" style="margin-bottom:16px">
+      <div class="card-title"><i class="ti ti-chart-area-line"></i>Agent Activity (24h)</div>
+      <div id="chart-activity"></div>
+    </div>
+
+    <div class="dash-grid">
+      <!-- Pipeline funnel -->
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-filter"></i>Pipeline Funnel</div>
+        <div class="pipeline-funnel" id="pipeline-funnel"></div>
+      </div>
+
+      <!-- Recent events -->
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-activity"></i>Recent Events</div>
+        <div id="recent-events" style="max-height:180px; overflow-y:auto;"></div>
+      </div>
+    </div>
+
+    <!-- Ventures -->
+    <div class="glass-card" style="margin-top:16px">
+      <div class="card-title"><i class="ti ti-rocket"></i>Venture Status</div>
+      <div class="venture-grid" id="venture-grid"></div>
+    </div>
+  </div>
+
+  <!-- ====== AGENTS TAB ====== -->
+  <div class="tab-content" id="tab-agents">
+    <div class="mode-controls">
+      <button class="mode-btn" id="btn-efficient" onclick="setMode('efficient')">
+        <i class="ti ti-leaf" style="margin-right:4px"></i>Efficient (~45/day)
+      </button>
+      <button class="mode-btn" id="btn-high" onclick="setMode('high')">
+        <i class="ti ti-flame" style="margin-right:4px"></i>High Effort (~193/day)
+      </button>
+      <span class="mode-info" id="mode-info"></span>
+    </div>
+    <div id="tier-1-section" class="tier-section">
+      <div class="tier-header tier-1"><i class="ti ti-star"></i>Tier 1 -- Productive</div>
+      <div class="agent-grid" id="tier-1-grid"></div>
+    </div>
+    <div id="tier-2-section" class="tier-section">
+      <div class="tier-header tier-2"><i class="ti ti-lock"></i>Tier 2 -- Blocked on Human</div>
+      <div class="agent-grid" id="tier-2-grid"></div>
+    </div>
+    <div id="tier-3-section" class="tier-section">
+      <div class="tier-header tier-3"><i class="ti ti-tools"></i>Tier 3 -- Support</div>
+      <div class="agent-grid" id="tier-3-grid"></div>
+    </div>
+    <div class="detail-panel" id="agent-detail">
+      <div class="detail-header">
+        <div>
+          <strong id="detail-name" style="font-size:14px;"></strong>
+          <span id="detail-meta" style="color:var(--text-dim); font-size:11px; margin-left:10px; font-family:'JetBrains Mono',monospace;"></span>
+        </div>
+        <div>
+          <label style="font-size:11px; color:var(--text-dim); font-family:'JetBrains Mono',monospace;">Interval (h):
+            <input type="number" class="interval-input" id="detail-interval" min="1" max="168" step="1" onchange="setInterval_()">
+          </label>
+        </div>
+      </div>
+      <div class="log-output" id="detail-log"></div>
+    </div>
+  </div>
+
+  <!-- ====== SYSTEM TREE TAB ====== -->
+  <div class="tab-content" id="tab-tree">
+    <div class="dash-grid" style="margin-bottom:20px;">
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-hierarchy-3"></i>Execution Hierarchy</div>
+        <div class="tree-container" id="tree-hierarchy"></div>
+      </div>
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-arrows-transfer-down"></i>Data Flow</div>
+        <div class="flow-container" id="tree-flow"></div>
+      </div>
+    </div>
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="card-title"><i class="ti ti-network"></i>Agent Topology (33 agents)</div>
+      <div class="topology-grid" id="tree-topology"></div>
+    </div>
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-clock"></i>Cron Schedule (109 entries)</div>
+      <div id="cron-sections"></div>
+    </div>
+
+    <!-- State Files -->
+    <div class="glass-card" style="margin-bottom:16px; margin-top:16px;">
+      <div class="card-title"><i class="ti ti-database"></i>State Files (Source of Truth)</div>
+      <div id="tree-state-files"></div>
+    </div>
+
+    <!-- Directory Overview -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="card-title"><i class="ti ti-folder"></i>Directory Structure</div>
+      <div id="tree-directories"></div>
+    </div>
+
+    <!-- Two column: Hooks + Revenue Status -->
+    <div class="dash-grid">
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-webhook"></i>Active Hooks</div>
+        <div id="tree-hooks"></div>
+      </div>
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-cash"></i>Revenue Status</div>
+        <div id="tree-revenue"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== ACTIONS TAB ====== -->
+  <div class="tab-content" id="tab-actions">
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-bolt"></i>Quick Actions</div>
+      <div class="action-grid" id="actions-grid"></div>
+    </div>
+    <div class="output-panel" id="action-output"></div>
+  </div>
+
+  <!-- ====== BLOCKERS TAB ====== -->
+  <div class="tab-content" id="tab-blockers">
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-alert-triangle"></i>P0 Revenue Blockers (Human Required)</div>
+      <div id="blockers-list"></div>
+    </div>
+  </div>
+
+  <!-- ====== OPS INTEL TAB ====== -->
+  <div class="tab-content" id="tab-ops">
+    <!-- Summary row: 4 metric cards -->
+    <div class="metric-row" id="ops-metrics"></div>
+
+    <!-- Priority Launch table -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="card-title"><i class="ti ti-rocket"></i>Priority Launch Queue</div>
+      <div id="ops-priority"></div>
+    </div>
+
+    <!-- Two column: Categories + Synergy Stacks -->
+    <div class="dash-grid" style="margin-bottom:16px;">
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-category-2"></i>Ops by Category</div>
+        <div id="ops-categories"></div>
+      </div>
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-arrows-shuffle"></i>Synergy Stacks</div>
+        <div id="ops-synergy"></div>
+      </div>
+    </div>
+
+    <!-- Two column: Alpha Thesis + Blocker Summary -->
+    <div class="dash-grid" style="margin-bottom:16px;">
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-bulb"></i>LLM Alpha Thesis</div>
+        <div id="ops-alpha-thesis"></div>
+      </div>
+      <div class="glass-card">
+        <div class="card-title"><i class="ti ti-lock"></i>Blocker Map</div>
+        <div id="ops-blockers"></div>
+      </div>
+    </div>
+
+    <!-- Tool Stacks -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="card-title"><i class="ti ti-tools"></i>Tool Stacks</div>
+      <div class="dash-grid" style="grid-template-columns:repeat(3,1fr);" id="ops-tools"></div>
+    </div>
+
+    <!-- Venture Automation Map -->
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-map-2"></i>Venture Automation Map</div>
+      <div id="ops-venture-map"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API = '';
+let currentAgent = null;
+let agentData = {};
+let activityChart = null;
+
+// ---------- Safe DOM helpers ----------
+function el(tag, attrs, children) {
+  const node = document.createElement(tag);
+  if (attrs) {
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === 'className') node.className = v;
+      else if (k === 'onclick') node.onclick = v;
+      else if (k === 'onchange') node.onchange = v;
+      else if (k === 'disabled') node.disabled = v;
+      else if (k.startsWith('data-')) node.setAttribute(k, v);
+      else if (k === 'style') node.style.cssText = v;
+      else node.setAttribute(k, v);
+    }
+  }
+  if (children != null) {
+    if (typeof children === 'string') node.textContent = children;
+    else if (Array.isArray(children)) children.forEach(function(c) { if (c != null) node.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    else node.appendChild(children);
+  }
+  return node;
+}
+
+function clearEl(id) {
+  var e = document.getElementById(id);
+  if (!e) return document.createElement('div');
+  while (e.firstChild) e.removeChild(e.firstChild);
+  return e;
+}
+
+// ---------- Live Clock ----------
+function updateClock() {
+  var now = new Date();
+  var h = String(now.getHours()).padStart(2, '0');
+  var m = String(now.getMinutes()).padStart(2, '0');
+  var s = String(now.getSeconds()).padStart(2, '0');
+  document.getElementById('h-clock').textContent = h + ':' + m + ':' + s;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// ---------- Tabs ----------
+document.querySelectorAll('.tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+    tab.classList.add('active');
+    var target = document.getElementById('tab-' + tab.dataset.tab);
+    if (target) target.classList.add('active');
+    if (tab.dataset.tab === 'dashboard') loadDashboard();
+    if (tab.dataset.tab === 'agents') loadStatus();
+    if (tab.dataset.tab === 'tree') loadSystemTree();
+    if (tab.dataset.tab === 'actions') loadActions();
+    if (tab.dataset.tab === 'blockers') loadBlockers();
+    if (tab.dataset.tab === 'ops') loadOpsIntel();
+  });
+});
+
+function toast(msg, isError) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast visible' + (isError ? ' error' : '');
+  setTimeout(function() { t.className = 'toast'; }, 3000);
+}
+
+function formatName(id) {
+  return id.replace(/^auto_/, '').replace(/_\d+$/, '').replace(/_/g, ' ');
+}
+
+// ---------- Activity Chart (ApexCharts) ----------
+function initActivityChart(data) {
+  var series = [{
+    name: 'Agent Invocations',
+    data: data.map(function(d) { return [d.timestamp, d.invocations]; })
+  }];
+
+  var options = {
+    chart: {
+      type: 'area',
+      height: 200,
+      sparkline: { enabled: false },
+      toolbar: { show: false },
+      background: 'transparent',
+      foreColor: '#888',
+      fontFamily: 'JetBrains Mono, monospace',
+      animations: { enabled: true, easing: 'easeinout', speed: 600 }
+    },
+    series: series,
+    colors: ['#00ff88'],
+    fill: {
+      type: 'gradient',
+      gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05, stops: [0, 95, 100] }
+    },
+    stroke: { curve: 'smooth', width: 2 },
+    grid: { borderColor: 'rgba(255,255,255,0.06)', padding: { left: 10, right: 10 } },
+    xaxis: {
+      type: 'datetime',
+      labels: { style: { colors: '#555', fontSize: '9px' } },
+      axisBorder: { show: false },
+      axisTicks: { show: false }
+    },
+    yaxis: {
+      labels: { style: { colors: '#555', fontSize: '10px' } },
+      min: 0
+    },
+    theme: { mode: 'dark' },
+    tooltip: {
+      theme: 'dark',
+      style: { fontSize: '11px' },
+      x: { format: 'HH:mm' }
+    },
+    dataLabels: { enabled: false }
+  };
+
+  if (activityChart) {
+    activityChart.updateSeries(series);
+  } else {
+    activityChart = new ApexCharts(document.getElementById('chart-activity'), options);
+    activityChart.render();
+  }
+}
+
+// ---------- DASHBOARD ----------
+async function loadDashboard() {
+  try {
+    var [statusR, realtimeR, pipelineR, ventureR] = await Promise.all([
+      fetch(API + '/api/status'),
+      fetch(API + '/api/realtime'),
+      fetch(API + '/api/pipeline'),
+      fetch(API + '/api/ventures')
+    ]);
+
+    var statusData = await statusR.json();
+    var realtimeData = await realtimeR.json();
+    var pipelineData = await pipelineR.json();
+    var ventureData = await ventureR.json();
+
+    updateHeader(statusData);
+
+    // Activity chart
+    if (realtimeData.agent_activity) {
+      initActivityChart(realtimeData.agent_activity);
+    }
+
+    // Pipeline funnel
+    renderPipeline(pipelineData);
+
+    // Recent events
+    renderEvents(realtimeData.recent_events || []);
+
+    // Ventures
+    renderVentures(ventureData.ventures || []);
+
+  } catch (e) {
+    console.error('Dashboard load failed:', e);
+  }
+}
+
+function updateHeader(data) {
+  var throttle = data.throttle || {};
+  var system = data.system || {};
+  var mode = throttle.mode || 'unknown';
+  var summary = throttle.summary || {};
+
+  // Mode badge
+  var badge = document.getElementById('h-mode-badge');
+  badge.textContent = mode.toUpperCase();
+  badge.className = 'mode-badge-header ' + (mode === 'efficient' ? 'mode-efficient-badge' : mode === 'high' ? 'mode-high-badge' : 'mode-unknown-badge');
+
+  // Stats
+  document.getElementById('h-revenue').textContent = system.revenue || '$0';
+  document.getElementById('h-day').textContent = system.day_number || '--';
+  document.getElementById('h-daily').textContent = summary.total_daily_invocations || '--';
+  document.getElementById('h-reset').textContent = (data.days_until_reset || '--') + 'd';
+  document.getElementById('h-alpha').textContent = (system.alpha_total || 0).toLocaleString();
+  document.getElementById('h-agents').textContent = summary.total_agents || '--';
+}
+
+function renderPipeline(data) {
+  var funnel = clearEl('pipeline-funnel');
+  var stages = [
+    { key: 'pending', label: 'Pending', color: 'rgba(68,136,255,0.6)', border: 'rgba(68,136,255,0.3)' },
+    { key: 'approved', label: 'Approved', color: 'rgba(139,92,246,0.6)', border: 'rgba(139,92,246,0.3)' },
+    { key: 'routed', label: 'Routed', color: 'rgba(234,179,8,0.6)', border: 'rgba(234,179,8,0.3)' },
+    { key: 'deployed', label: 'Deployed', color: 'rgba(0,255,136,0.5)', border: 'rgba(0,255,136,0.3)' },
+    { key: 'revenue', label: 'Revenue', color: 'rgba(255,51,85,0.5)', border: 'rgba(255,51,85,0.3)' }
+  ];
+
+  stages.forEach(function(stage, i) {
+    if (i > 0) {
+      funnel.appendChild(el('span', { className: 'pipeline-arrow' }, '\u2192'));
+    }
+    var stageEl = el('div', {
+      className: 'pipeline-stage',
+      style: 'background:' + stage.color + '; border: 1px solid ' + stage.border + ';'
+    }, [
+      el('div', { className: 'pipeline-stage-value' }, String(data[stage.key] || 0)),
+      el('div', { className: 'pipeline-stage-label' }, stage.label)
+    ]);
+    funnel.appendChild(stageEl);
+  });
+}
+
+function renderEvents(events) {
+  var container = clearEl('recent-events');
+  if (!events.length) {
+    container.appendChild(el('div', { style: 'color:var(--text-muted); font-size:11px; padding:8px;' }, 'No recent events'));
+    return;
+  }
+  events.forEach(function(ev) {
+    container.appendChild(el('div', {
+      style: 'display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.04); font-size:11px;'
+    }, [
+      el('span', { style: 'font-family:JetBrains Mono,monospace; color:var(--text);' }, ev.name),
+      el('span', { style: 'color:var(--text-muted); font-family:JetBrains Mono,monospace; font-size:10px;' }, ev.ago)
+    ]));
+  });
+}
+
+function renderVentures(ventures) {
+  var grid = clearEl('venture-grid');
+  if (!ventures.length) {
+    grid.appendChild(el('div', { style: 'color:var(--text-muted); font-size:11px; padding:8px;' }, 'No venture data available'));
+    return;
+  }
+  ventures.forEach(function(v) {
+    var isActive = v.status === 'ACTIVE';
+    var card = el('div', { className: 'venture-card' }, [
+      el('div', { className: 'venture-type' }, v.type),
+      el('div', { className: 'venture-name' }, v.name),
+      el('div', { className: 'venture-meta' }, [
+        el('div', { style: 'display:flex; align-items:center; gap:6px;' }, [
+          el('span', { className: 'venture-status-dot ' + (isActive ? 'active' : 'inactive') }),
+          el('span', { className: 'venture-detail' }, v.status)
+        ]),
+        el('span', { className: 'venture-detail' }, v.last_run_ago)
+      ])
+    ]);
+    grid.appendChild(card);
+  });
+}
+
+// ---------- AGENTS ----------
+async function loadStatus() {
+  try {
+    var r = await fetch(API + '/api/status');
+    var data = await r.json();
+    var throttle = data.throttle || {};
+    var system = data.system || {};
+    var mode = throttle.mode || 'unknown';
+    var summary = throttle.summary || {};
+    var agents = throttle.agents || {};
+
+    updateHeader(data);
+
+    // Mode buttons
+    document.getElementById('btn-efficient').className = 'mode-btn' + (mode === 'efficient' ? ' active-efficient' : '');
+    document.getElementById('btn-high').className = 'mode-btn' + (mode === 'high' ? ' active-high' : '');
+    document.getElementById('mode-info').textContent = mode.toUpperCase() + '  |  ' + (summary.total_daily_invocations || '?') + ' invocations/day';
+
+    agentData = agents;
+    var byTier = {1: [], 2: [], 3: []};
+    for (var id in agents) {
+      var agent = agents[id];
+      var tier = agent.tier || 3;
+      byTier[tier].push(Object.assign({id: id}, agent));
+    }
+
+    [1, 2, 3].forEach(function(tier) {
+      var grid = clearEl('tier-' + tier + '-grid');
+      var sorted = byTier[tier].sort(function(a, b) { return a.id.localeCompare(b.id); });
+      sorted.forEach(function(agent) {
+        var dotClass = agent.disabled ? 'dot-grey' : agent.loaded ? 'dot-green' : 'dot-red';
+        var interval = agent.current_interval_hours ? agent.current_interval_hours + 'h' : '?';
+        var runs = agent.daily_runs || 0;
+
+        var toggleLabel = el('label', { className: 'toggle', onclick: function(e) { e.stopPropagation(); } }, [
+          (function() {
+            var inp = el('input', { type: 'checkbox' });
+            inp.checked = !agent.disabled;
+            inp.onchange = function() { toggleAgent(agent.id, this.checked); };
+            return inp;
+          })(),
+          el('span', { className: 'slider' })
+        ]);
+
+        var card = el('div', {
+          className: 'agent-card' + (agent.disabled ? ' disabled' : ''),
+          onclick: function() { selectAgent(agent.id); }
+        }, [
+          el('div', { className: 'status-dot ' + dotClass }),
+          el('div', { className: 'agent-info' }, [
+            el('div', { className: 'agent-name' }, formatName(agent.id)),
+            el('div', { className: 'agent-meta' }, [
+              el('span', {}, interval),
+              el('span', {}, runs.toFixed(1) + '/day'),
+              el('span', { className: 'category-badge' }, agent.category || '?')
+            ])
+          ]),
+          toggleLabel
+        ]);
+        grid.appendChild(card);
+      });
+    });
+  } catch (e) {
+    console.error('Status load failed:', e);
+  }
+}
+
+async function selectAgent(agentId) {
+  currentAgent = agentId;
+  var agent = agentData[agentId] || {};
+  var panel = document.getElementById('agent-detail');
+  panel.classList.add('visible');
+  document.getElementById('detail-name').textContent = formatName(agentId);
+  document.getElementById('detail-meta').textContent =
+    agentId + ' | T' + (agent.tier||'?') + ' | ' + (agent.category||'?') + ' | ' + (agent.loaded ? 'LOADED' : 'UNLOADED') + ' | ' + (agent.daily_runs != null ? agent.daily_runs.toFixed(1) : '?') + '/day';
+  document.getElementById('detail-interval').value = agent.current_interval_hours || 24;
+  document.getElementById('detail-log').textContent = 'Loading logs...';
+  try {
+    var r = await fetch(API + '/api/logs/' + agentId);
+    var data = await r.json();
+    document.getElementById('detail-log').textContent = data.log || 'No logs available';
+  } catch (e) {
+    document.getElementById('detail-log').textContent = 'Failed to load logs: ' + e.message;
+  }
+}
+
+async function setInterval_() {
+  if (!currentAgent) return;
+  var hours = parseFloat(document.getElementById('detail-interval').value);
+  if (!hours || hours <= 0) return;
+  try {
+    var r = await fetch(API + '/api/agent/' + currentAgent + '/interval', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({hours: hours})
+    });
+    var data = await r.json();
+    if (data.success) { toast(formatName(currentAgent) + ' set to ' + hours + 'h'); loadStatus(); }
+    else toast('Failed: ' + (data.error || 'unknown'), true);
+  } catch (e) { toast('Error: ' + e.message, true); }
+}
+
+async function toggleAgent(agentId, enabled) {
+  try {
+    var r = await fetch(API + '/api/agent/' + agentId + '/toggle', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({enabled: enabled})
+    });
+    var data = await r.json();
+    if (data.success) { toast(formatName(agentId) + ' ' + (enabled ? 'enabled' : 'disabled')); loadStatus(); }
+    else toast('Failed: ' + (data.error || 'unknown'), true);
+  } catch (e) { toast('Error: ' + e.message, true); }
+}
+
+async function setMode(mode) {
+  document.getElementById('btn-efficient').disabled = true;
+  document.getElementById('btn-high').disabled = true;
+  document.getElementById('mode-info').textContent = 'Switching...';
+  try {
+    var r = await fetch(API + '/api/mode', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({mode: mode})
+    });
+    var data = await r.json();
+    if (data.success) toast('Switched to ' + mode.toUpperCase());
+    else toast('Failed: ' + (data.error || data.output || 'unknown'), true);
+  } catch (e) { toast('Error: ' + e.message, true); }
+  document.getElementById('btn-efficient').disabled = false;
+  document.getElementById('btn-high').disabled = false;
+  loadStatus();
+}
+
+// ---------- SYSTEM TREE ----------
+async function loadSystemTree() {
+  try {
+    var r = await fetch(API + '/api/system-tree');
+    var data = await r.json();
+    renderHierarchy(data.hierarchy || []);
+    renderDataFlow(data.data_flow || []);
+    renderTopology(data.agent_topology || {});
+    renderCronSchedule(data.cron_schedule || {});
+    renderStateFiles(data.state_files || []);
+    renderDirectories(data.directory_overview || []);
+    renderHooks(data.hooks || []);
+    renderRevenueStatus(data.revenue_status || {});
+  } catch (e) {
+    console.error('Tree load failed:', e);
+  }
+}
+
+function renderHierarchy(hierarchy) {
+  var container = clearEl('tree-hierarchy');
+  hierarchy.forEach(function(layer) {
+    var layerEl = el('div', { className: 'tree-layer' }, [
+      el('div', { className: 'tree-layer-header' }, [
+        el('span', {
+          className: 'tree-layer-badge',
+          style: 'background:' + layer.color + '22; color:' + layer.color + '; border:1px solid ' + layer.color + '44;'
+        }, layer.level),
+        el('span', {
+          className: 'tree-layer-name',
+          style: 'color:' + layer.color + ';'
+        }, layer.name)
+      ])
+    ]);
+
+    var nodesContainer = el('div', { className: 'tree-nodes' });
+    (layer.scripts || []).forEach(function(script) {
+      var statusClass = script.status || 'unknown';
+      var node = el('div', {
+        className: 'tree-node',
+        style: '--layer-color:' + layer.color + ';'
+      }, [
+        el('div', { style: 'display:flex; align-items:center;' }, [
+          el('span', { className: 'tree-node-status ' + statusClass }),
+          el('span', { className: 'tree-node-name' }, script.name)
+        ]),
+        el('div', { className: 'tree-node-desc' }, script.desc),
+        el('div', { className: 'tree-node-schedule' }, [
+          el('i', { className: 'ti ti-clock', style: 'font-size:11px;' }),
+          document.createTextNode(' ' + script.schedule)
+        ])
+      ]);
+      nodesContainer.appendChild(node);
+    });
+    layerEl.appendChild(nodesContainer);
+    container.appendChild(layerEl);
+  });
+}
+
+function renderDataFlow(flows) {
+  var container = clearEl('tree-flow');
+  flows.forEach(function(f) {
+    container.appendChild(el('div', { className: 'flow-item' }, [
+      el('span', { className: 'flow-from' }, f.from),
+      el('span', { className: 'flow-arrow' }, '\u2192'),
+      el('span', { className: 'flow-to' }, f.to),
+      el('span', { className: 'flow-label' }, f.label)
+    ]));
+  });
+}
+
+function renderTopology(topology) {
+  var container = clearEl('tree-topology');
+  // Venture agents
+  var ventureCard = el('div', { className: 'topology-cat' }, [
+    el('div', { className: 'topology-cat-name' }, 'Venture Agents (8)')
+  ]);
+  (topology.venture_agents || []).forEach(function(v) {
+    ventureCard.appendChild(el('div', { className: 'topology-agent' }, v.name + ' (' + v.interval + ')'));
+  });
+  container.appendChild(ventureCard);
+
+  // Swarm agents by category
+  var swarm = topology.swarm_agents || {};
+  for (var cat in swarm) {
+    var catCard = el('div', { className: 'topology-cat' }, [
+      el('div', { className: 'topology-cat-name' }, cat + ' (' + swarm[cat].length + ')')
+    ]);
+    swarm[cat].forEach(function(a) {
+      catCard.appendChild(el('div', { className: 'topology-agent' }, a));
+    });
+    container.appendChild(catCard);
+  }
+}
+
+function renderCronSchedule(cron) {
+  var container = clearEl('cron-sections');
+
+  var sections = [
+    { key: 'morning_chain', label: 'Morning Chain (Sequential)', color: 'var(--accent)', bg: 'var(--accent-dim)' },
+    { key: 'continuous', label: 'Continuous Cycles', color: 'var(--blue)', bg: 'var(--blue-dim)' },
+    { key: 'daily', label: 'Daily', color: 'var(--purple)', bg: 'var(--purple-dim)' },
+    { key: 'weekly', label: 'Weekly', color: 'var(--warn)', bg: 'var(--warn-dim)' }
+  ];
+
+  sections.forEach(function(sec) {
+    var items = cron[sec.key] || [];
+    if (!items.length) return;
+
+    var sectionEl = el('div', { className: 'cron-section' }, [
+      el('div', {
+        style: 'font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:' + sec.color + '; margin-bottom:10px;'
+      }, sec.label)
+    ]);
+
+    var timeline = el('div', { className: 'cron-timeline' });
+    items.forEach(function(item) {
+      var slot = el('div', {
+        className: 'cron-slot',
+        style: 'background:' + sec.bg + '; border:1px solid ' + sec.color + '33;'
+      }, [
+        el('span', { className: 'cron-time', style: 'color:' + sec.color + ';' }, item.time || item.interval || ''),
+        el('span', { className: 'cron-script' }, item.script)
+      ]);
+      timeline.appendChild(slot);
+    });
+
+    sectionEl.appendChild(timeline);
+    container.appendChild(sectionEl);
+  });
+}
+
+// ---------- ACTIONS ----------
+async function loadActions() {
+  var grid = clearEl('actions-grid');
+  try {
+    var r = await fetch(API + '/api/actions');
+    var data = await r.json();
+    (data.actions || []).forEach(function(action) {
+      var btn = el('button', {
+        className: 'action-btn',
+        onclick: function() { runAction(action.id, this); }
+      }, [
+        el('div', { style: 'font-weight:600;' }, action.name),
+        el('div', { className: 'action-cat' }, action.category)
+      ]);
+      grid.appendChild(btn);
+    });
+  } catch (e) {
+    grid.appendChild(el('p', { style: 'color:var(--danger)' }, 'Failed to load actions'));
+  }
+}
+
+async function runAction(actionId, btn) {
+  var origText = btn.querySelector('div').textContent;
+  btn.disabled = true;
+  btn.querySelector('div').textContent = 'Running...';
+  var output = document.getElementById('action-output');
+  output.classList.add('visible');
+  output.textContent = 'Running ' + actionId + '...';
+  try {
+    var r = await fetch(API + '/api/action/' + actionId, { method: 'POST' });
+    var data = await r.json();
+    output.textContent = data.output || data.error || 'No output';
+    toast(actionId + (data.success ? ' completed' : ' failed'), !data.success);
+  } catch (e) {
+    output.textContent = 'Error: ' + e.message;
+    toast('Error: ' + e.message, true);
+  }
+  btn.disabled = false;
+  btn.querySelector('div').textContent = origText;
+}
+
+// ---------- BLOCKERS ----------
+async function loadBlockers() {
+  var list = clearEl('blockers-list');
+  try {
+    var r = await fetch(API + '/api/blockers');
+    var data = await r.json();
+    if (!data.blockers || data.blockers.length === 0) {
+      list.appendChild(el('p', { style: 'color:var(--accent); padding:8px;' }, 'No P0 blockers'));
+      return;
+    }
+    data.blockers.forEach(function(b) {
+      list.appendChild(el('div', { className: 'blocker-item' }, b));
+    });
+  } catch (e) {
+    list.appendChild(el('p', { style: 'color:var(--danger)' }, 'Failed to load blockers'));
+  }
+}
+
+// ---------- OPS INTEL ----------
+async function loadOpsIntel() {
+  try {
+    var r = await fetch(API + '/api/master-ops');
+    var data = await r.json();
+    if (data.error) {
+      var container = document.getElementById('ops-metrics');
+      if (container) {
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(el('p', {style:'color:var(--warn);padding:12px;'}, 'Master Ops xlsx not found or failed to parse: ' + data.error));
+      }
+      return;
+    }
+    renderOpsMetrics(data);
+    renderOpsPriority(data.priority_launch || []);
+    renderOpsCategories(data.categories || []);
+    renderOpsSynergy(data.synergy_stacks || []);
+    renderOpsAlphaThesis(data.alpha_thesis || []);
+    renderOpsBlockers(data.blocker_summary || []);
+    renderOpsTools(data.tool_stacks || {});
+    renderOpsVentureMap(data.venture_map || []);
+  } catch(e) {
+    console.error('Ops Intel load failed:', e);
+  }
+}
+
+function renderOpsMetrics(data) {
+  var container = clearEl('ops-metrics');
+  var readiness = data.readiness || {};
+  var metrics = [
+    { label: 'Total Ops', value: String(data.total_ops || 0), color: 'var(--accent)' },
+    { label: 'Ready to Launch', value: String(readiness.READY || 0), color: 'var(--accent)' },
+    { label: 'Blocked', value: String(readiness.BLOCKED || 0), color: 'var(--danger)' },
+    { label: 'Synergy Stacks', value: String((data.synergy_stacks || []).length), color: 'var(--purple)' }
+  ];
+  metrics.forEach(function(m) {
+    container.appendChild(el('div', {className:'stat-card glass-card', style:'text-align:center; padding:16px;'}, [
+      el('div', {className:'stat-label'}, m.label),
+      el('div', {className:'stat-value', style:'color:' + m.color + ';'}, m.value)
+    ]));
+  });
+}
+
+function renderOpsPriority(items) {
+  var container = clearEl('ops-priority');
+  if (!items.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No priority items'));
+    return;
+  }
+  // Header row
+  container.appendChild(el('div', {className:'ops-row', style:'border-bottom:2px solid var(--border); font-weight:700; font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;'}, [
+    el('span', {}, '#'),
+    el('span', {}, 'ID'),
+    el('span', {}, 'Name'),
+    el('span', {}, 'Revenue'),
+    el('span', {}, 'Time to $')
+  ]));
+  items.forEach(function(item) {
+    var row = el('div', {className:'ops-row'}, [
+      el('span', {className:'ops-rank-badge'}, String(item.rank)),
+      el('span', {className:'ops-id'}, item.op_id || ''),
+      el('span', {style:'font-weight:500;'}, item.name || ''),
+      el('span', {style:'color:var(--accent); font-size:11px;'}, item.revenue || ''),
+      el('span', {style:'color:var(--text-dim); font-size:11px;'}, item.time_to_first || '')
+    ]);
+    if (item.first_step) {
+      var step = item.first_step.length > 60 ? item.first_step.substring(0, 60) + '...' : item.first_step;
+      row.appendChild(el('div', {style:'grid-column:1/-1; font-size:10px; color:var(--text-muted); padding:2px 0 0 50px;'}, step));
+    }
+    container.appendChild(row);
+  });
+}
+
+function renderOpsCategories(categories) {
+  var container = clearEl('ops-categories');
+  if (!categories.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No category data'));
+    return;
+  }
+  categories.forEach(function(cat) {
+    var topOps = (cat.ops || []).slice(0, 3).join(', ');
+    var row = el('div', {className:'ops-cat-row'}, [
+      el('div', {}, [
+        el('span', {className:'ops-cat-name'}, cat.name || ''),
+        el('div', {className:'ops-cat-ops'}, topOps)
+      ]),
+      el('span', {className:'ops-count-badge'}, String(cat.count || 0))
+    ]);
+    container.appendChild(row);
+  });
+}
+
+function renderOpsSynergy(stacks) {
+  var container = clearEl('ops-synergy');
+  if (!stacks.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No synergy data'));
+    return;
+  }
+  stacks.forEach(function(s) {
+    var score = s.score || 0;
+    var scoreColor, scoreBg;
+    if (score > 95) { scoreColor = 'var(--accent)'; scoreBg = 'var(--accent-dim)'; }
+    else if (score > 90) { scoreColor = 'var(--blue)'; scoreBg = 'var(--blue-dim)'; }
+    else { scoreColor = 'var(--purple)'; scoreBg = 'var(--purple-dim)'; }
+
+    var card = el('div', {className:'synergy-card'}, [
+      el('div', {className:'synergy-header'}, [
+        el('span', {className:'synergy-score', style:'color:' + scoreColor + '; background:' + scoreBg + ';'}, String(score)),
+        el('span', {style:'font-weight:600; font-size:12px;'}, s.name || ''),
+        el('span', {className:'synergy-multiplier'}, s.multiplier || '')
+      ]),
+      el('div', {className:'synergy-methods'}, s.methods || ''),
+      el('div', {className:'synergy-desc'}, s.description || '')
+    ]);
+    container.appendChild(card);
+  });
+}
+
+function renderOpsAlphaThesis(theses) {
+  var container = clearEl('ops-alpha-thesis');
+  if (!theses.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No alpha thesis data'));
+    return;
+  }
+  theses.forEach(function(t) {
+    var edgeDuration = t.edge_duration || '';
+    var edgeMonths = parseInt(edgeDuration) || 0;
+    var edgeColor, edgeBg;
+    if (edgeMonths < 12) { edgeColor = 'var(--danger)'; edgeBg = 'var(--danger-dim)'; }
+    else if (edgeMonths <= 24) { edgeColor = 'var(--warn)'; edgeBg = 'var(--warn-dim)'; }
+    else { edgeColor = 'var(--accent)'; edgeBg = 'var(--accent-dim)'; }
+
+    var whyText = t.why_llm_edge || '';
+    if (whyText.length > 80) whyText = whyText.substring(0, 80) + '...';
+
+    var row = el('div', {className:'thesis-row'}, [
+      el('span', {className:'thesis-id'}, t.id || ''),
+      el('span', {style:'font-weight:500; font-size:12px; flex:1;'}, t.opportunity || ''),
+      el('span', {className:'thesis-edge', style:'color:' + edgeColor + '; background:' + edgeBg + ';'}, edgeDuration),
+      el('span', {style:'color:var(--text-dim); font-size:10px; flex:1;'}, whyText)
+    ]);
+    container.appendChild(row);
+  });
+}
+
+function renderOpsBlockers(blockers) {
+  var container = clearEl('ops-blockers');
+  if (!blockers.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No blocker data'));
+    return;
+  }
+  var maxCount = 1;
+  blockers.forEach(function(b) { if ((b.count || 0) > maxCount) maxCount = b.count; });
+
+  blockers.forEach(function(b) {
+    var name = (b.name || '').replace(/_/g, ' ');
+    name = name.replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+    var pct = Math.round(((b.count || 0) / maxCount) * 100);
+
+    var row = el('div', {className:'ops-blocker-row'}, [
+      el('div', {className:'ops-blocker-label'}, [
+        el('span', {className:'ops-blocker-name'}, name),
+        el('span', {className:'ops-blocker-count'}, String(b.count || 0) + ' ventures')
+      ]),
+      el('div', {className:'ops-progress-bar'}, [
+        el('div', {className:'ops-progress-fill', style:'width:' + pct + '%; background:var(--danger);'})
+      ])
+    ]);
+    container.appendChild(row);
+  });
+}
+
+function renderOpsTools(stacks) {
+  var container = clearEl('ops-tools');
+  var stackTypes = Object.keys(stacks);
+  if (!stackTypes.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No tool stack data'));
+    return;
+  }
+  var icons = { video: 'ti-video', hosting: 'ti-server', lead_gen: 'ti-users', email: 'ti-mail', analytics: 'ti-chart-bar', design: 'ti-palette' };
+  stackTypes.forEach(function(type) {
+    var tools = stacks[type] || [];
+    var section = el('div', {}, [
+      el('div', {style:'display:flex; align-items:center; gap:6px; margin-bottom:8px;'}, [
+        el('i', {className:'ti ' + (icons[type] || 'ti-tool'), style:'font-size:14px; color:var(--accent);'}),
+        el('span', {style:'font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-dim);'}, type.replace(/_/g, ' '))
+      ])
+    ]);
+    tools.forEach(function(tool) {
+      var qualityColor = 'var(--text-muted)';
+      var qualityBg = 'rgba(255,255,255,0.06)';
+      if (tool.quality === 'A' || tool.quality === 'S') { qualityColor = 'var(--accent)'; qualityBg = 'var(--accent-dim)'; }
+      else if (tool.quality === 'B') { qualityColor = 'var(--blue)'; qualityBg = 'var(--blue-dim)'; }
+      else if (tool.quality === 'C') { qualityColor = 'var(--warn)'; qualityBg = 'var(--warn-dim)'; }
+
+      var card = el('div', {className:'tool-card'}, [
+        el('div', {className:'tool-name'}, tool.name || ''),
+        el('div', {className:'tool-meta'}, [
+          el('span', {}, tool.type || ''),
+          el('span', {}, tool.free_tier || ''),
+          el('span', {className:'tool-quality-badge', style:'color:' + qualityColor + '; background:' + qualityBg + ';'}, tool.quality || '?')
+        ])
+      ]);
+      section.appendChild(card);
+    });
+    container.appendChild(section);
+  });
+}
+
+function renderOpsVentureMap(ventures) {
+  var container = clearEl('ops-venture-map');
+  if (!ventures.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No venture map data'));
+    return;
+  }
+  var grid = el('div', {className:'venture-map-grid'});
+  ventures.forEach(function(v) {
+    var readiness = v.readiness || 'BUILD';
+    var autoScore = v.automation_score || 0;
+    var blockerText = v.blocker_key ? v.blocker_key.replace(/_/g, ' ') : '';
+
+    var card = el('div', {className:'venture-map-card'}, [
+      el('div', {className:'venture-map-header'}, [
+        el('div', {}, [
+          el('span', {style:'font-family:JetBrains Mono,monospace; font-size:10px; color:var(--blue); margin-right:6px;'}, v.venture_id || ''),
+          el('span', {className:'venture-map-name'}, v.name || '')
+        ]),
+        el('span', {className:'readiness-badge readiness-' + readiness}, readiness)
+      ]),
+      el('div', {style:'display:flex; align-items:center; gap:8px; margin-top:4px;'}, [
+        el('span', {className:'lane-badge'}, v.lane || ''),
+        blockerText ? el('span', {style:'font-size:10px; color:var(--danger);'}, blockerText) : document.createTextNode('')
+      ]),
+      el('div', {className:'automation-bar'}, [
+        el('div', {className:'automation-fill', style:'width:' + autoScore + '%;'})
+      ]),
+      el('div', {className:'venture-map-meta'}, [
+        el('span', {}, 'Auto: ' + autoScore + '%'),
+        el('span', {}, 'Signals: ' + (v.signal_count || 0))
+      ])
+    ]);
+    grid.appendChild(card);
+  });
+  container.appendChild(grid);
+}
+
+// ---------- SYSTEM TREE ENHANCEMENTS ----------
+function renderStateFiles(files) {
+  var container = clearEl('tree-state-files');
+  if (!files.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No state file data'));
+    return;
+  }
+  files.forEach(function(f) {
+    var dotClass = f.exists ? 'state-dot-exists' : 'state-dot-missing';
+    var row = el('div', {className:'state-file-row'}, [
+      el('span', {className:'state-dot ' + dotClass}),
+      el('span', {style:'font-family:JetBrains Mono,monospace; font-weight:600; color:var(--text); font-size:11px;'}, f.name || ''),
+      el('span', {style:'color:var(--text-dim); font-size:10px;'}, f.description || ''),
+      el('span', {style:'font-family:JetBrains Mono,monospace; font-size:10px; color:var(--text-muted);'}, f.size || ''),
+      el('span', {style:'font-family:JetBrains Mono,monospace; font-size:10px; color:var(--text-muted);'}, f.last_modified || '')
+    ]);
+    container.appendChild(row);
+  });
+}
+
+function renderDirectories(dirs) {
+  var container = clearEl('tree-directories');
+  if (!dirs.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No directory data'));
+    return;
+  }
+  dirs.forEach(function(d) {
+    var row = el('div', {className:'dir-row'}, [
+      el('i', {className:'ti ti-folder dir-icon'}),
+      el('span', {className:'dir-name'}, d.name || ''),
+      el('span', {className:'dir-desc'}, d.description || '')
+    ]);
+    container.appendChild(row);
+  });
+}
+
+function renderHooks(hooks) {
+  var container = clearEl('tree-hooks');
+  if (!hooks.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No hook data'));
+    return;
+  }
+  hooks.forEach(function(h) {
+    var row = el('div', {className:'hook-row'}, [
+      el('span', {className:'hook-event-badge'}, h.event || ''),
+      el('span', {className:'hook-matcher'}, h.matcher || ''),
+      el('span', {className:'hook-desc'}, h.description || '')
+    ]);
+    container.appendChild(row);
+  });
+}
+
+function renderRevenueStatus(status) {
+  var container = clearEl('tree-revenue');
+  if (!status.current_revenue && status.current_revenue !== 0) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); font-size:11px; padding:8px;'}, 'No revenue data'));
+    return;
+  }
+  container.appendChild(el('div', {className:'revenue-big'}, status.current_revenue || '$0'));
+  var details = el('div', {className:'revenue-detail'});
+  var rows = [
+    { label: 'Day Number', value: String(status.day_number || '--') },
+    { label: 'Pipeline Ready', value: status.pipeline_ready || '--' },
+    { label: 'Time to Unblock', value: status.time_to_unblock || '--' }
+  ];
+  rows.forEach(function(r) {
+    details.appendChild(el('div', {className:'revenue-row'}, [
+      el('span', {className:'revenue-label'}, r.label),
+      el('span', {className:'revenue-value'}, r.value)
+    ]));
+  });
+  container.appendChild(details);
+}
+
+// ---------- AUTO REFRESH ----------
+loadDashboard();
+setInterval(function() {
+  var activeTab = document.querySelector('.tab.active');
+  if (!activeTab) return;
+  var tab = activeTab.dataset.tab;
+  if (tab === 'dashboard') loadDashboard();
+  else if (tab === 'agents') loadStatus();
+}, 30000);
+</script>
+</body>
+</html>

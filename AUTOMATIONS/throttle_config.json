@@ -1,0 +1,308 @@
+{
+  "agents": {
+    "gap_hunter": {
+      "plist": "com.printmaxx.swarm.gap_hunter.plist",
+      "label": "com.printmaxx.swarm.gap_hunter",
+      "tier": 1,
+      "category": "DISCOVERY",
+      "description": "Finds gaps in market/product coverage for new opportunities",
+      "high_interval_hours": 3,
+      "efficient_interval_hours": 6
+    },
+    "auto_research_alpha_intelligence_9565": {
+      "plist": "com.claude.schedule.auto_research_alpha_intelligence_9565.plist",
+      "label": "com.claude.schedule.auto_research_alpha_intelligence_9565",
+      "tier": 1,
+      "category": "DISCOVERY",
+      "description": "Alpha intelligence research pipeline, discovers monetizable signals",
+      "high_interval_hours": 2,
+      "efficient_interval_hours": 4
+    },
+    "auto_scraping_competitive_intel_9788": {
+      "plist": "com.claude.schedule.auto_scraping_competitive_intel_9788.plist",
+      "label": "com.claude.schedule.auto_scraping_competitive_intel_9788",
+      "tier": 1,
+      "category": "SCRAPING",
+      "description": "Scrapes competitor data and market intelligence feeds",
+      "high_interval_hours": 2,
+      "efficient_interval_hours": 6
+    },
+    "system_healer": {
+      "plist": "com.printmaxx.swarm.system_healer.plist",
+      "label": "com.printmaxx.swarm.system_healer",
+      "tier": 1,
+      "category": "INFRA",
+      "description": "Detects and repairs broken plists, stale files, crashed agents",
+      "high_interval_hours": 2,
+      "efficient_interval_hours": 8
+    },
+    "quality_gate": {
+      "plist": "com.printmaxx.swarm.quality_gate.plist",
+      "label": "com.printmaxx.swarm.quality_gate",
+      "tier": 1,
+      "category": "MONITORING",
+      "description": "Validates output quality across all agent deliverables",
+      "high_interval_hours": 2,
+      "efficient_interval_hours": 12
+    },
+    "alert_dispatcher": {
+      "plist": "com.printmaxx.swarm.alert_dispatcher.plist",
+      "label": "com.printmaxx.swarm.alert_dispatcher",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Dispatches alerts on revenue/errors -- blocked, no alert channels configured",
+      "high_interval_hours": 1,
+      "efficient_interval_hours": 24
+    },
+    "asset_deployer": {
+      "plist": "com.printmaxx.swarm.asset_deployer.plist",
+      "label": "com.printmaxx.swarm.asset_deployer",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Deploys digital assets to storefronts -- blocked, no Cloudflare/hosting",
+      "high_interval_hours": 2,
+      "efficient_interval_hours": 24
+    },
+    "distribution_engine": {
+      "plist": "com.printmaxx.swarm.distribution_engine.plist",
+      "label": "com.printmaxx.swarm.distribution_engine",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Distributes content across channels -- blocked, no platform accounts",
+      "high_interval_hours": 3,
+      "efficient_interval_hours": 24
+    },
+    "social_poster": {
+      "plist": "com.printmaxx.swarm.social_poster.plist",
+      "label": "com.printmaxx.swarm.social_poster",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Posts to social media -- blocked, warmup phase / no API tokens",
+      "high_interval_hours": 3,
+      "efficient_interval_hours": 24
+    },
+    "content_compounder": {
+      "plist": "com.printmaxx.swarm.content_compounder.plist",
+      "label": "com.printmaxx.swarm.content_compounder",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Repurposes content across formats -- blocked, no distribution channels",
+      "high_interval_hours": 8,
+      "efficient_interval_hours": 24
+    },
+    "conversion_optimizer": {
+      "plist": "com.printmaxx.swarm.conversion_optimizer.plist",
+      "label": "com.printmaxx.swarm.conversion_optimizer",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Optimizes funnels/landing pages -- blocked, no live funnels",
+      "high_interval_hours": 8,
+      "efficient_interval_hours": 24
+    },
+    "revenue_tracker": {
+      "plist": "com.printmaxx.swarm.revenue_tracker.plist",
+      "label": "com.printmaxx.swarm.revenue_tracker",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Tracks revenue across channels -- blocked, $0 revenue, no Stripe",
+      "high_interval_hours": 8,
+      "efficient_interval_hours": 24
+    },
+    "lead_machine": {
+      "plist": "com.printmaxx.swarm.lead_machine.plist",
+      "label": "com.printmaxx.swarm.lead_machine",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Generates leads from inbound/outbound -- blocked, no email/CRM",
+      "high_interval_hours": 12,
+      "efficient_interval_hours": 24
+    },
+    "inbound_maximizer": {
+      "plist": "com.printmaxx.swarm.inbound_maximizer.plist",
+      "label": "com.printmaxx.swarm.inbound_maximizer",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Maximizes inbound traffic -- blocked, no live web properties",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    },
+    "meta_executor": {
+      "plist": "com.printmaxx.swarm.meta_executor.plist",
+      "label": "com.printmaxx.swarm.meta_executor",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Executes meta-level strategy decisions -- blocked, no execution targets",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    },
+    "opportunity_scanner": {
+      "plist": "com.printmaxx.swarm.opportunity_scanner.plist",
+      "label": "com.printmaxx.swarm.opportunity_scanner",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Scans for revenue opportunities -- blocked, cannot act on findings",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    },
+    "playwright_tester": {
+      "plist": "com.printmaxx.swarm.playwright_tester.plist",
+      "label": "com.printmaxx.swarm.playwright_tester",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Browser tests on deployed sites -- blocked, nothing deployed",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    },
+    "seo_aso_optimizer": {
+      "plist": "com.printmaxx.swarm.seo_aso_optimizer.plist",
+      "label": "com.printmaxx.swarm.seo_aso_optimizer",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "SEO/ASO optimization -- blocked, no live sites or app listings",
+      "high_interval_hours": 6,
+      "efficient_interval_hours": 24
+    },
+    "swarm_brain": {
+      "plist": "com.printmaxx.swarm.swarm_brain.plist",
+      "label": "com.printmaxx.swarm.swarm_brain",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Swarm coordination/meta-decisions -- blocked, most agents idle",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    },
+    "auto_content_niche_content_farm_9569": {
+      "plist": "com.claude.schedule.auto_content_niche_content_farm_9569.plist",
+      "label": "com.claude.schedule.auto_content_niche_content_farm_9569",
+      "tier": 2,
+      "category": "CONTENT",
+      "description": "Generates niche content -- blocked, no publishing channels",
+      "high_interval_hours": 6,
+      "efficient_interval_hours": 24
+    },
+    "auto_local_biz_openclaw_nationwide_9569": {
+      "plist": "com.claude.schedule.auto_local_biz_openclaw_nationwide_9569.plist",
+      "label": "com.claude.schedule.auto_local_biz_openclaw_nationwide_9569",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Local business lead gen -- blocked, no outreach channels",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    },
+    "auto_monetize_affiliate_funnels_9569": {
+      "plist": "com.claude.schedule.auto_monetize_affiliate_funnels_9569.plist",
+      "label": "com.claude.schedule.auto_monetize_affiliate_funnels_9569",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Affiliate funnel builder -- blocked, no affiliate accounts",
+      "high_interval_hours": 8,
+      "efficient_interval_hours": 24
+    },
+    "auto_outbound_cold_outreach_engine_9569": {
+      "plist": "com.claude.schedule.auto_outbound_cold_outreach_engine_9569.plist",
+      "label": "com.claude.schedule.auto_outbound_cold_outreach_engine_9569",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Cold outreach automation -- blocked, no email/LinkedIn",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    },
+    "auto_product_digital_products_9788": {
+      "plist": "com.claude.schedule.auto_product_digital_products_9788.plist",
+      "label": "com.claude.schedule.auto_product_digital_products_9788",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "Digital product creation -- blocked, no Gumroad/storefront",
+      "high_interval_hours": 24,
+      "efficient_interval_hours": 24
+    },
+    "auto_app_app_factory_9788": {
+      "plist": "com.claude.schedule.auto_app_app_factory_9788.plist",
+      "label": "com.claude.schedule.auto_app_app_factory_9788",
+      "tier": 2,
+      "category": "BLOCKED",
+      "description": "App factory builder -- blocked, no deployment infra",
+      "high_interval_hours": 12,
+      "efficient_interval_hours": 24
+    },
+    "competitor_stalker": {
+      "plist": "com.printmaxx.swarm.competitor_stalker.plist",
+      "label": "com.printmaxx.swarm.competitor_stalker",
+      "tier": 3,
+      "category": "SCRAPING",
+      "description": "Monitors competitor moves, pricing changes, new launches",
+      "high_interval_hours": 6,
+      "efficient_interval_hours": 12
+    },
+    "cross_pollinator": {
+      "plist": "com.printmaxx.swarm.cross_pollinator.plist",
+      "label": "com.printmaxx.swarm.cross_pollinator",
+      "tier": 3,
+      "category": "INFRA",
+      "description": "Cross-pollinates insights between ventures and agents",
+      "high_interval_hours": 12,
+      "efficient_interval_hours": 24
+    },
+    "data_janitor": {
+      "plist": "com.printmaxx.swarm.data_janitor.plist",
+      "label": "com.printmaxx.swarm.data_janitor",
+      "tier": 3,
+      "category": "INFRA",
+      "description": "Cleans stale data, deduplicates files, prunes logs",
+      "high_interval_hours": 12,
+      "efficient_interval_hours": 24
+    },
+    "trend_synthesizer": {
+      "plist": "com.printmaxx.swarm.trend_synthesizer.plist",
+      "label": "com.printmaxx.swarm.trend_synthesizer",
+      "tier": 3,
+      "category": "DISCOVERY",
+      "description": "Synthesizes trends from scraped data into actionable signals",
+      "high_interval_hours": 12,
+      "efficient_interval_hours": 24
+    },
+    "image_factory": {
+      "plist": "com.printmaxx.swarm.image_factory.plist",
+      "label": "com.printmaxx.swarm.image_factory",
+      "tier": 3,
+      "category": "CONTENT",
+      "description": "Generates images for social/products -- already daily cadence",
+      "high_interval_hours": 24,
+      "efficient_interval_hours": 24
+    },
+    "video_factory": {
+      "plist": "com.printmaxx.swarm.video_factory.plist",
+      "label": "com.printmaxx.swarm.video_factory",
+      "tier": 3,
+      "category": "CONTENT",
+      "description": "Generates video content for TikTok/YouTube -- already daily cadence",
+      "high_interval_hours": 24,
+      "efficient_interval_hours": 24
+    },
+    "quality_enforcer": {
+      "plist": "com.printmaxx.swarm.quality_enforcer.plist",
+      "label": "com.printmaxx.swarm.quality_enforcer",
+      "tier": 3,
+      "category": "MONITORING",
+      "description": "Enforces quality standards across agent outputs",
+      "high_interval_hours": 4,
+      "efficient_interval_hours": 24
+    }
+  },
+  "modes": {
+    "efficient": {
+      "description": "~45 invocations/day, stretches tokens -- blocked agents drop to 1x/day, productive agents stay semi-frequent"
+    },
+    "high": {
+      "description": "~193 invocations/day, full burn -- all agents at maximum configured frequency"
+    }
+  },
+  "meta": {
+    "total_agents": 32,
+    "tier_1_count": 5,
+    "tier_2_count": 20,
+    "tier_3_count": 7,
+    "created": "2026-03-09",
+    "notes": "Tier 2 agents are blocked on human action (accounts, API keys, payments). Switch to HIGH only after unblocking revenue channels."
+  }
+}

@@ -34,6 +34,11 @@
           },
           {
             "type": "command",
+            "command": "bash /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/launch_control_panel.sh",
+            "timeout": 8
+          },
+          {
+            "type": "command",
             "command": "node /Users/macbookpro/.claude/plugins/cache/claude-subconscious/hooks/silent-npx.cjs tsx /Users/macbookpro/.claude/plugins/cache/claude-subconscious/scripts/session_start.ts",
             "timeout": 10
           },

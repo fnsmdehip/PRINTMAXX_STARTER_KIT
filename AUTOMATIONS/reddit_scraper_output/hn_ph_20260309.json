@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "scraped_at": "2026-03-09",
+    "sources": ["hackernews", "producthunt"],
+    "hn_stories_fetched": 50,
+    "ph_products_fetched": 19,
+    "hn_ask_comments_fetched": 29,
+    "total_findings": 42,
+    "notes": "HN via firebase API. PH via HTML scrape (Apollo SSR + regex extraction). Ask HN thread comments included for solopreneur project signal."
+  },
+  "findings": [
+
+    {
+      "source": "hackernews",
+      "title": "Agent Safehouse – macOS-native sandboxing for local agents",
+      "url": "https://news.ycombinator.com/item?id=47301085",
+      "score": 415,
+      "relevance": "HIGH",
+      "category": "TOOL",
+      "summary": "macOS app that sandboxes local AI agents so they can't access your full filesystem — directly addresses the security concern killing mainstream AI agent adoption. Any solopreneur selling agent-based tools or automation services should note this as both a trust-building angle and a potential distribution partner."
+    },
+    {
+      "source": "hackernews",
+      "title": "Show HN: I built a real-time OSINT dashboard pulling 15 live global feeds",
+      "url": "https://github.com/BigBodyCobain/Shadowbroker",
+      "score": 191,
+      "relevance": "HIGH",
+      "category": "TOOL",
+      "summary": "Open-source real-time OSINT aggregator (Flightradar, MarineTraffic, Twitter, etc.) in one dashboard. Strong signal: high engagement from HN builder community. Template for a paid SaaS OSINT/monitoring tool — same architecture (15 live feeds, local-first) could be monetized via Gumroad or Whop as a niche intelligence dashboard."
+    },
+    {
+      "source": "hackernews",
+      "title": "LLM Writing Tropes.md",
+      "url": "https://news.ycombinator.com/item?id=47301663",
+      "score": 322,
+      "relevance": "HIGH",
+      "category": "GROWTH",
+      "summary": "322-upvote discussion on detectable AI writing patterns — the community is actively cataloguing AI slop. Direct intel for content creators: avoid these patterns or get filtered. Also opportunity: a tool that audits content for AI tropes before publishing would have paying customers today (freelancers, agencies)."
+    },
+    {
+      "source": "hackernews",
+      "title": "FrameBook",
+      "url": "https://fb.edoo.gg",
+      "score": 381,
+      "relevance": "HIGH",
+      "category": "TOOL",
+      "summary": "381 upvotes, 65 comments — strong HN signal. A bookmarking/framing tool that hit the front page. Validates demand for personal knowledge management tools. The engagement pattern (high upvotes, high comments) suggests the market for focused productivity tools for developers/makers is active."
+    },
+    {
+      "source": "hackernews",
+      "title": "LibreOffice Writer now supports Markdown",
+      "url": "https://news.ycombinator.com/item?id=47301241",
+      "score": 301,
+      "relevance": "MEDIUM",
+      "category": "TOOL",
+      "summary": "LibreOffice adding Markdown support got 301 upvotes — signals strong demand for document tools that meet developers where they work. Content creators and technical writers who sell courses/templates can leverage Markdown-native workflows. Also: free alternative to Notion for indie hackers building doc-heavy products."
+    },
+    {
+      "source": "hackernews",
+      "title": "The changing goalposts of AGI and timelines",
+      "url": "https://news.ycombinator.com/item?id=47291876",
+      "score": 351,
+      "relevance": "MEDIUM",
+      "category": "GROWTH",
+      "summary": "351-upvote piece on AGI timeline debates. Solopreneur angle: the goalpost-shifting narrative is a content goldmine for niche accounts in AI/tech space. Also signals: uncertainty = fear = products that offer 'AI-proof' skills or concrete near-term automation wins convert better than AGI hype."
+    },
+    {
+      "source": "hackernews",
+      "title": "WSL Manager",
+      "url": "https://github.com/bostrot/wsl2-distro-manager",
+      "score": 81,
+      "relevance": "MEDIUM",
+      "category": "TOOL",
+      "summary": "GUI manager for WSL2 distros on Windows. Signals persistent demand for developer tooling that smooths Windows/Linux dev workflows. Market: Windows developers who vibe-code or build apps. Adjacent opportunity: similar GUI wrappers for developer tools (Docker, agents, local LLMs) have clear paid tiers."
+    },
+    {
+      "source": "hackernews",
+      "title": "Blacksky AppView",
+      "url": "https://github.com/blacksky-algorithms/atproto",
+      "score": 113,
+      "relevance": "MEDIUM",
+      "category": "DISTRIBUTION",
+      "summary": "Bluesky/AT Protocol AppView implementation — 113 upvotes, 72 comments signals growing developer interest in building on decentralized social. Distribution opportunity: apps and tools built on AT Protocol reach early-adopter communities before the platform gets crowded."
+    },
+    {
+      "source": "hackernews",
+      "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI",
+      "url": "https://news.ycombinator.com/item?id=47295537",
+      "score": 112,
+      "relevance": "MEDIUM",
+      "category": "AI",
+      "summary": "Research on AI agents doing CI maintenance tasks — signals that autonomous coding agents are being stress-tested seriously. For solopreneurs: CI-integrated AI agents are the next wave, tooling and templates around 'agentic CI' pipelines is an underserved market today."
+    },
+    {
+      "source": "hackernews",
+      "title": "Ask HN: What Are You Working On? (March 2026)",
+      "url": "https://news.ycombinator.com/item?id=47303111",
+      "score": 75,
+      "relevance": "HIGH",
+      "category": "GROWTH",
+      "summary": "184 builders sharing live projects. Key signal: AI agent tooling, SQLite-native dev tools, niche SaaS (invoicing, coffee aggregation, itinerary converters), and vibe-coding side projects dominate. Several building monetizable microsaas in <1 week. Full comment thread mined separately below."
+    },
+
+    {
+      "source": "hackernews_ask_thread",
+      "title": "llmpm.co — npm for LLM models (install/run 10,000+ open source LLMs)",
+      "url": "https://llmpm.co",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "TOOL",
+      "summary": "Package manager for local LLMs: `llmpm install llama3` runs any open-source model like a dependency. Zero competition in this exact niche. If this gets traction, builders shipping local-LLM apps will use it as infrastructure — strong distribution angle for adjacent tools."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "taxmax.dev — AI tax agent for spend classification, looking for design partners",
+      "url": "https://taxmax.dev",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "TOOL",
+      "summary": "AI agent that classifies business spend for tax optimization. Actively recruiting design partners for free reports — classic early-stage B2B SaaS GTM. The 'free report' hook for design partners is a proven outbound strategy worth copying for any AI tool targeting SMBs."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "trypixie.com — legally employ your child, save taxes, fund their Roth IRA",
+      "url": "https://trypixie.com",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "PRICING",
+      "summary": "Microsaas helping self-employed parents legally put their kids on payroll for tax benefits. Extremely specific niche with genuine financial upside for users. Also building keepfiled.com (save emails to Google Drive). Shows the pattern: hyper-niche tools with clear financial ROI convert at premium pricing."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "keepfiled.com — microsaas to save emails/attachments to Google Drive",
+      "url": "https://www.keepfiled.com",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "TOOL",
+      "summary": "Simple email-to-Google-Drive connector — extremely narrow scope. Built alongside another product by the same solo founder. Pattern: one-feature tools with a clear workflow need still sell. Proof that microsaas with a 10-minute use case can exist alongside a bigger app in the same founder's portfolio."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "Context Bonsai — plugin that lets LLM self-edit its own context window",
+      "url": "https://news.ycombinator.com/item?id=47303111",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "OpenCode plugin where the LLM picks which messages to compress/retrieve, avoiding full-context wipes. Directly addresses the /compact problem in Claude Code (confirmed broken). Strong alpha: whoever builds this as a standalone tool or Claude Code skill wins mindshare among power users now."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "SQLite production monitoring/safety layer microsaas",
+      "url": "https://news.ycombinator.com/item?id=47303111",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "TOOL",
+      "summary": "Solo dev building observability for production SQLite (unexpected writes, schema drift, background job intrusion detection). Zero existing tools in this exact niche. SQLite usage in production is exploding (Turso, Cloudflare D1, Litestream) — this solves a real gap. Early-mover advantage is real here."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "beanhoard.com — coffee roaster aggregation ETL, $6/mo for instant notifications",
+      "url": "https://beanhoard.com",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "PRICING",
+      "summary": "Niche ETL that aggregates coffee roaster inventory + Discord DM alerts for $6/mo. Launched, charging real money, doubting interest — but the model (aggregator + real-time push notifications for a passionate niche) is exactly the playbook for dozens of other passionate verticals."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "itinerary.projects.jaygoel.com — converts Fora travel itineraries to Google Calendar .ics",
+      "url": "https://itinerary.projects.jaygoel.com",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "TOOL",
+      "summary": "Single-purpose converter tool built for one specific workflow (Fora travel agent software). Shows that niche B2B connectors for workflow software (Fora has thousands of travel agent users) can be built quickly and monetized as a paid add-on."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "Vibe-coded YouTrack CLI in under 1 hour",
+      "url": "https://github.com/keithn/yt",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "GROWTH",
+      "summary": "Developer built a YouTrack CLI tool in <1 hour via vibe-coding and open-sourced it. Pattern: quick vibe-coded CLI tools for enterprise software (YouTrack, Jira, Linear) build GitHub stars fast and funnel to paid consulting or premium features. Low effort, high distribution ceiling."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "mu.xyz — app for everything: blog, news, chat, video, mail, web — no ads, no algorithms",
+      "url": "https://mu.xyz",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "DISTRIBUTION",
+      "summary": "All-in-one app without ads/algorithms — solo dev building for a year. Also built Reminder.dev (Quran app and API). Shows the market for algorithm-free platforms is being explored. The Quran app vertical is validated by PRINTMAXX app factory data — developer is already in that space."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "std_slop — SQLite-centric coding agent with git email workflow as agentic loop",
+      "url": "https://github.com/hsaliak/std_slop",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "Coding agent where all context lives in SQLite and uses git email workflow (plan -> code -> review) as the agentic loop. You become 'Linus' reviewing patches. Directly relevant: this is a solved architecture for the ralph loop pattern PRINTMAXX already uses. Fork or adapt immediately."
+    },
+    {
+      "source": "hackernews_ask_thread",
+      "title": "LLM agents iterating over academic research for trading backtests — 450GB dataset",
+      "url": "https://news.ycombinator.com/item?id=47303111",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "AI",
+      "summary": "Solo dev using TimescaleDB + LLM agents to backtest academic trading strategies on 450GB of options data. Described as 'addictive slot machine' — 999/1000 'winning' models are lookahead bias. Pattern: LLM-assisted systematic research is becoming accessible to solopreneurs. Quant tools angle."
+    },
+
+    {
+      "source": "producthunt",
+      "title": "Wispr Flow — Speak naturally, write perfectly & 4x faster in every app",
+      "url": "https://www.producthunt.com/posts/wispr-flow",
+      "score": 1885,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "Voice-to-text tool with 1,885 votes — dominant PH launch. Works in every app, 4x speed claim. Market validation that AI voice input has massive demand. Solopreneur angle: dictation tools for content creators and cold emailers are underserved — a niche version (e.g., for cold email, for Twitter threads) could carve out a segment."
+    },
+    {
+      "source": "producthunt",
+      "title": "TestSprite 2.1 — Agentic testing for the AI-native team",
+      "url": "https://www.producthunt.com/posts/testsprite",
+      "score": 454,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "454 votes for autonomous AI testing agent. Signals that agentic QA is a real product category now, not just research. For solopreneurs shipping apps: automated testing as a service (white-label agentic QA) is a high-margin B2B offering. TestSprite proves the market exists at scale."
+    },
+    {
+      "source": "producthunt",
+      "title": "Vibe Marketplace by Greta — Sell what you ship, instantly",
+      "url": "https://www.producthunt.com/posts/vibe-marketplace-by-greta",
+      "score": 441,
+      "relevance": "HIGH",
+      "category": "DISTRIBUTION",
+      "summary": "441 votes for a marketplace purpose-built for vibe-coders to instantly sell what they ship. Direct distribution channel for the app factory strategy. List PRINTMAXX apps here immediately — this is a live channel for indie app monetization with an audience already buying."
+    },
+    {
+      "source": "producthunt",
+      "title": "Copperlane — Turn hours of loan processing into seconds",
+      "url": "https://www.producthunt.com/posts/copperlane",
+      "score": 311,
+      "relevance": "MEDIUM",
+      "category": "AI",
+      "summary": "AI for loan document processing — 311 votes. Validates that AI automation for highly regulated, document-heavy industries (lending, insurance, legal) is a high-value wedge. B2B AI tools with a clear 'hours to seconds' pitch command premium pricing."
+    },
+    {
+      "source": "producthunt",
+      "title": "Codex Security — Application security agent",
+      "url": "https://www.producthunt.com/posts/codex-security",
+      "score": 302,
+      "relevance": "MEDIUM",
+      "category": "AI",
+      "summary": "302 votes for an AI security agent for codebases. Validates AI-assisted security scanning as a growing category. Solopreneurs can sell security audits powered by tools like this — white-label AI security scans for SMBs is a services angle."
+    },
+    {
+      "source": "producthunt",
+      "title": "FasterGH — Fast GitHub browsing experience",
+      "url": "https://www.producthunt.com/posts/fastergh",
+      "score": 251,
+      "relevance": "MEDIUM",
+      "category": "TOOL",
+      "summary": "251 votes for a faster GitHub UI. Proves that developer tool UX improvements get significant PH traction. Pattern: take a popular tool (GitHub, Notion, Figma) and make it faster/simpler — strong launch formula. Build time: likely <1 week for a similar browser extension."
+    },
+    {
+      "source": "producthunt",
+      "title": "GetMimic — Generate viral social & chat mockups in seconds with AI",
+      "url": "https://www.producthunt.com/posts/getmimic",
+      "score": 241,
+      "relevance": "HIGH",
+      "category": "GROWTH",
+      "summary": "241 votes for AI-generated viral social mockups (fake chat conversations, viral tweet screenshots, etc.). Direct content marketing tool — social proof mockups drive conversion. For PRINTMAXX content accounts: this is a production tool. Also a product template: mockup generators for specific niches (sales, faith, fitness) monetize well."
+    },
+    {
+      "source": "producthunt",
+      "title": "Pulldog — Mac app to keep code reviews organized",
+      "url": "https://www.producthunt.com/posts/pulldog",
+      "score": 212,
+      "relevance": "MEDIUM",
+      "category": "TOOL",
+      "summary": "Mac native app for PR/code review management — 212 votes. Validates that single-platform native apps (macOS-only) still get PH traction. Native app positioning vs Electron is a differentiator solopreneurs can exploit — smaller, faster, cheaper to build native Mac tools."
+    },
+    {
+      "source": "producthunt",
+      "title": "21st Agents SDK — SDK to add a Claude Code AI agent to your app",
+      "url": "https://www.producthunt.com/posts/21st-agents-sdk",
+      "score": 204,
+      "relevance": "HIGH",
+      "category": "TOOL",
+      "summary": "204 votes for an SDK to embed Claude Code-style agents directly into apps. Direct infrastructure for the app factory — apps that ship with AI coding agents as a feature command 3-5x higher pricing. This SDK reduces the build time for that feature to near zero."
+    },
+    {
+      "source": "producthunt",
+      "title": "KiloClaw — Hosted OpenClaw. No Mac mini required.",
+      "url": "https://www.producthunt.com/posts/kiloclaw",
+      "score": 195,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "Hosted version of OpenClaw (the open-source Claude agent framework) — no hardware required. PRINTMAXX already uses OpenClaw patterns. This is a direct competitor/partner. Cloud-hosted agent infrastructure as a service is a validated market. Also: the 'No Mac mini required' positioning is sharp copywriting."
+    },
+    {
+      "source": "producthunt",
+      "title": "Stitch by Google — Turn napkin sketches into production-ready UI in seconds",
+      "url": "https://www.producthunt.com/posts/stitch",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "Google's new sketch-to-UI tool — directly competes with Figma, Lovable, and Bolt. Signal: sketch-to-code is becoming commoditized fast. Solopreneurs should use this immediately to cut design time. Also: Google entering this space will increase mainstream awareness and drive more customers toward vibe-coding tools."
+    },
+    {
+      "source": "producthunt",
+      "title": "Rork Max — Best AI for iOS apps. Website that replaces Xcode",
+      "url": "https://www.producthunt.com/posts/rork-max",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "AI that generates iOS apps without Xcode — direct competition for the PRINTMAXX app factory. Monitor closely: if Rork Max significantly lowers iOS app build barriers, it changes the competitive landscape for App Store strategies. Also: potential distribution channel — submit PRINTMAXX-built apps through Rork."
+    },
+    {
+      "source": "producthunt",
+      "title": "SuperX — All-in-one growth OS for serious X creators",
+      "url": "https://www.producthunt.com/posts/superx",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "GROWTH",
+      "summary": "Twitter/X growth tool suite featured on PH. Validates that X creator tools still have active buyers. Solopreneur angle: instead of a full 'growth OS', a niche X growth tool (specifically for indie hackers, or for faith content, or for AI accounts) has a clearer ICP and lower CAC."
+    },
+    {
+      "source": "producthunt",
+      "title": "Superset — Run an army of Claude Code, Codex, etc. on your machine",
+      "url": "https://www.producthunt.com/posts/superset",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "AI",
+      "summary": "Runs multiple AI coding agents in parallel on your local machine. Direct infrastructure for multi-agent workflows PRINTMAXX already uses. The positioning ('army of agents') signals this is moving mainstream — parallel agent execution is now a product category, not just a power-user hack."
+    },
+    {
+      "source": "producthunt",
+      "title": "happycapy — The agent-native computer, for the rest of us",
+      "url": "https://www.producthunt.com/posts/happycapy",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "AI",
+      "summary": "Agent-native computing environment positioned for non-technical users — 'for the rest of us' riffs on original Mac positioning. Signals the next wave: AI agents packaged for mainstream users, not just developers. PRINTMAXX app factory apps should be building toward this audience."
+    },
+    {
+      "source": "producthunt",
+      "title": "Siteline — Growth analytics for the agentic web",
+      "url": "https://www.producthunt.com/posts/siteline",
+      "score": 0,
+      "relevance": "MEDIUM",
+      "category": "AI",
+      "summary": "Analytics platform built for AI agent traffic — tracking how AI agents browse your site. Emerging category: as more traffic comes from agents (not humans), standard analytics tools miss the signal. Early mover opportunity in agentic analytics tooling."
+    },
+    {
+      "source": "producthunt",
+      "title": "Claude Marketplace — Helping companies easily get AI tools they need",
+      "url": "https://www.producthunt.com/posts/claude-marketplace",
+      "score": 0,
+      "relevance": "HIGH",
+      "category": "DISTRIBUTION",
+      "summary": "Anthropic's own marketplace for Claude-based tools and integrations. CRITICAL distribution channel: listing PRINTMAXX AI tools here puts them in front of enterprise buyers looking for Claude-powered solutions. Submit any Claude-integrated tools immediately for early-mover advantage."
+    }
+  ]
+}

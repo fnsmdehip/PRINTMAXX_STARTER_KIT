@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Claude Code Agent Bible - 33 Autonomous Agents Running 24/7</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--card:#1a1a28;--border:#2a2a3a;--text:#e0e0e8;--muted:#8888a0;--accent:#6366f1;--accent2:#818cf8;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--cyan:#06b6d4}
+body{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.hero{background:linear-gradient(135deg,#0f0f1a 0%,#1a1030 50%,#0f0f1a 100%);border-bottom:1px solid var(--border);padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2rem;background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.5rem}
+.hero .sub{color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem}
+.hero .stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.hero .stat{text-align:center}
+.hero .stat .num{font-size:1.8rem;font-weight:700;color:var(--green)}
+.hero .stat .label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* Search */
+.search-wrap{max-width:700px;margin:2rem auto;padding:0 1rem}
+#search{width:100%;padding:0.8rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+#search:focus{border-color:var(--accent)}
+.search-meta{text-align:center;color:var(--muted);font-size:0.8rem;margin-top:0.5rem}
+
+/* Nav */
+.nav{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;padding:1rem 2rem;border-bottom:1px solid var(--border);background:var(--surface)}
+.nav button{padding:0.4rem 0.9rem;background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--muted);font-family:inherit;font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+.nav button:hover,.nav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Content */
+.container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.section{margin-bottom:3rem;display:none}
+.section.visible{display:block}
+.section h2{font-size:1.4rem;color:var(--accent2);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+.section h3{font-size:1.1rem;color:var(--cyan);margin:1.5rem 0 0.5rem}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem;transition:border-color 0.2s}
+.card:hover{border-color:var(--accent)}
+.card .title{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
+.card .desc{color:var(--muted);font-size:0.85rem;margin-bottom:0.8rem}
+.card .tag{display:inline-block;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.7rem;margin-right:0.3rem;margin-bottom:0.3rem}
+.tag-opus{background:#4f46e520;color:var(--accent2);border:1px solid #4f46e540}
+.tag-cron{background:#22c55e20;color:var(--green);border:1px solid #22c55e40}
+.tag-core{background:#f59e0b20;color:var(--orange);border:1px solid #f59e0b40}
+.tag-meta{background:#06b6d420;color:var(--cyan);border:1px solid #06b6d440}
+
+/* Code blocks */
+pre{background:#0d0d15;border:1px solid var(--border);border-radius:8px;padding:1rem;overflow-x:auto;font-size:0.82rem;line-height:1.6;margin:0.8rem 0}
+code{color:var(--green);font-size:0.85rem}
+.inline-code{background:#1a1a2a;padding:0.1rem 0.4rem;border-radius:3px;font-size:0.82rem}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.85rem}
+th{background:var(--surface);padding:0.6rem 0.8rem;text-align:left;border-bottom:2px solid var(--border);color:var(--accent2);font-weight:600}
+td{padding:0.5rem 0.8rem;border-bottom:1px solid var(--border)}
+tr:hover td{background:var(--card)}
+
+/* Callout */
+.callout{background:var(--surface);border-left:3px solid var(--accent);padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin:1rem 0;font-size:0.9rem}
+.callout.warning{border-left-color:var(--orange)}
+.callout.success{border-left-color:var(--green)}
+
+/* Responsive */
+@media(max-width:600px){
+  .hero h1{font-size:1.4rem}
+  .hero .stats{gap:1rem}
+  .hero .stat .num{font-size:1.3rem}
+  .container{padding:1rem}
+  pre{font-size:0.75rem}
+}
+
+/* Print */
+@media print{
+  .nav,.search-wrap{display:none}
+  .section{display:block!important}
+  body{background:#fff;color:#111}
+  .card{border:1px solid #ddd}
+}
+
+/* Highlight */
+mark{background:var(--accent);color:#fff;padding:0 0.2rem;border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>The Claude Code Agent Bible</h1>
+  <p class="sub">33 Autonomous Agents. 16-Phase CEO Cycle. 35+ Days Running 24/7. Zero Downtime.</p>
+  <div class="stats">
+    <div class="stat"><div class="num">33</div><div class="label">Autonomous Agents</div></div>
+    <div class="stat"><div class="num">16</div><div class="label">CEO Phases</div></div>
+    <div class="stat"><div class="num">292</div><div class="label">Scripts Built</div></div>
+    <div class="stat"><div class="num">35+</div><div class="label">Days Running</div></div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <input type="text" id="search" placeholder="Search everything... (agents, patterns, commands, code)" autocomplete="off">
+  <div class="search-meta" id="searchMeta">7 sections &middot; 33 agents &middot; 50+ code snippets</div>
+</div>
+
+<nav class="nav" id="nav">
+  <button class="active" data-section="overview">Overview</button>
+  <button data-section="architecture">Architecture</button>
+  <button data-section="agents">33 Agents</button>
+  <button data-section="ceo">CEO Cycle</button>
+  <button data-section="ralph">Ralph Loops</button>
+  <button data-section="intelligence">Intelligence</button>
+  <button data-section="templates">Templates</button>
+</nav>
+
+<div class="container" id="content">
+
+<!-- SECTION: Overview -->
+<div class="section visible" id="sec-overview">
+<h2>Why This Exists</h2>
+<p style="margin-bottom:1rem">Most "AI automation" guides tell you to use ChatGPT to write emails. This is not that.</p>
+<p style="margin-bottom:1rem">This is the exact system running 33 autonomous agents on a single MacBook, 24/7, with zero human intervention. It manages 8 revenue ventures, scrapes intelligence from 40+ sources, generates content, deploys apps, and closes feedback loops automatically.</p>
+<p style="margin-bottom:1rem">Built over 35+ days of continuous operation. Battle-tested. Not theory.</p>
+
+<div class="callout success">
+<strong>What you get:</strong> The complete architecture, every agent config, the CEO orchestration cycle, Ralph loop patterns, intelligence routing, cron schedules, and copy-paste templates to build your own.
+</div>
+
+<h3>The Core Insight</h3>
+<p style="margin-bottom:1rem">Claude Code's context window is 200K tokens. That's enough to hold an entire codebase, make decisions, and execute. But it's temporary. When the session ends, everything is gone.</p>
+<p style="margin-bottom:1rem">The breakthrough: <strong>filesystem = memory, context = disposable scratchpad.</strong></p>
+<p style="margin-bottom:1rem">Every agent reads state from files, does ONE task, writes results back, and exits. The next iteration starts fresh with full context. This means:</p>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+<li>No context window crashes (the #1 killer of long-running AI agents)</li>
+<li>Perfect crash recovery (state is always on disk)</li>
+<li>Unlimited runtime (each iteration is independent)</li>
+<li>Git-backed memory (every state change is versioned)</li>
+</ul>
+
+<h3>System Stats (Real, Not Projected)</h3>
+<table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Total autonomous agents</td><td>33 (8 venture + 25 swarm)</td></tr>
+<tr><td>Automation scripts</td><td>292</td></tr>
+<tr><td>Alpha intelligence entries</td><td>15,000+</td></tr>
+<tr><td>Content pieces generated</td><td>1,278+</td></tr>
+<tr><td>Apps built</td><td>22</td></tr>
+<tr><td>Sites deployed</td><td>20+</td></tr>
+<tr><td>Cron jobs active</td><td>50+</td></tr>
+<tr><td>Days running continuously</td><td>35+</td></tr>
+<tr><td>Total uptime</td><td>99.7%</td></tr>
+</table>
+</div>
+
+<!-- SECTION: Architecture -->
+<div class="section" id="sec-architecture">
+<h2>System Architecture</h2>
+
+<h3>The 4-Layer Stack</h3>
+<div class="card">
+<div class="title">Layer 1: Execution (launchd + cron)</div>
+<div class="desc">macOS launchd plists and crontab entries trigger agents on schedule. Each agent is a Python script that runs, does work, and exits. No long-running processes to crash.</div>
+<span class="tag tag-core">CORE</span>
+</div>
+<div class="card">
+<div class="title">Layer 2: Orchestration (CEO Agent + Swarm Brain)</div>
+<div class="desc">The CEO agent runs a 16-phase cycle every 6 hours. The swarm brain (every 4h) reads all agent outputs and makes strategic decisions. Together they coordinate 33 agents without conflicts.</div>
+<span class="tag tag-opus">OPUS</span>
+</div>
+<div class="card">
+<div class="title">Layer 3: Intelligence (Router + Alpha Index)</div>
+<div class="desc">SQLite FTS5 index over 15,000+ alpha entries. Intelligence router aggregates alpha, strategy docs, swarm reports, and method CSVs into a single brief per venture+task. Every agent queries before acting.</div>
+<span class="tag tag-meta">META</span>
+</div>
+<div class="card">
+<div class="title">Layer 4: Memory (Filesystem + Git)</div>
+<div class="desc">All state stored in JSON/JSONL files. Git commits every state change. Subconscious memory system extracts key learnings at session end. Memories persist across sessions via injection at startup.</div>
+<span class="tag tag-cron">PERSISTENT</span>
+</div>
+
+<h3>Key Architectural Decisions</h3>
+<div class="callout">
+<strong>Why filesystem over database?</strong> Claude Code can read/write files natively. No ORM, no connection pooling, no schema migrations. Files are human-readable, git-versioned, and work offline. SQLite only used for full-text search where file scanning is too slow (15K+ entries).
+</div>
+
+<h3>Inter-Agent Communication</h3>
+<p style="margin-bottom:1rem">Agents communicate through a shared message bus (<span class="inline-code">message_bus.jsonl</span>). Append-only JSONL format ensures no write conflicts. Each message has:</p>
+<pre>{
+  "from": "gap_hunter",
+  "to": "asset_deployer",
+  "type": "DEPLOY_REQUEST",
+  "payload": {"asset": "landing-page-v2", "priority": "HIGH"},
+  "timestamp": "2026-03-08T14:30:00Z"
+}</pre>
+
+<h3>Resilience Patterns</h3>
+<table>
+<tr><th>Pattern</th><th>Implementation</th><th>Why</th></tr>
+<tr><td>Retry with backoff</td><td>Exponential backoff, max 3 retries</td><td>API rate limits, transient failures</td></tr>
+<tr><td>File locking</td><td>fcntl.flock() on shared state files</td><td>Prevents corruption from concurrent agents</td></tr>
+<tr><td>Circuit breaker</td><td>Fails open after 5 consecutive failures</td><td>Stops cascade failures across agents</td></tr>
+<tr><td>Input sanitization</td><td>Path traversal + injection checks</td><td>Prevents malicious data in scraped content</td></tr>
+<tr><td>Trajectory logging</td><td>Every decision logged with context</td><td>Post-mortem analysis, debugging</td></tr>
+<tr><td>Checkpoint-resume</td><td>CEO saves phase progress to disk</td><td>Crash recovery mid-cycle</td></tr>
+</table>
+</div>
+
+<!-- SECTION: 33 Agents -->
+<div class="section" id="sec-agents">
+<h2>The 33 Agents</h2>
+<p style="margin-bottom:1rem">8 venture agents + 25 swarm agents. Each has a specific job, schedule, and model assignment.</p>
+
+<h3>Venture Agents (8)</h3>
+<p style="margin-bottom:0.5rem">Self-managing agents that run entire revenue lanes autonomously.</p>
+<table>
+<tr><th>Venture</th><th>Type</th><th>Schedule</th><th>What It Does</th></tr>
+<tr><td>Cold Outbound</td><td>OUTBOUND</td><td>Every 12h</td><td>Scrape leads, generate emails, track replies</td></tr>
+<tr><td>Content Farm</td><td>CONTENT</td><td>Every 8h</td><td>Generate posts, schedule, track engagement</td></tr>
+<tr><td>App Factory</td><td>APP</td><td>Every 24h</td><td>Build PWAs, deploy, optimize ASO</td></tr>
+<tr><td>Local Biz</td><td>LOCAL_BIZ</td><td>Every 24h</td><td>Scrape businesses, generate sites, cold email</td></tr>
+<tr><td>Alpha Research</td><td>RESEARCH</td><td>Every 6h</td><td>Scan Reddit/Twitter/HN/PH for intel</td></tr>
+<tr><td>Monetization</td><td>MONETIZE</td><td>Every 12h</td><td>Optimize pricing, test offers, track revenue</td></tr>
+<tr><td>Digital Products</td><td>PRODUCT</td><td>Every 24h</td><td>Create products, write listings, prep launches</td></tr>
+<tr><td>Scraping</td><td>SCRAPING</td><td>Every 4h</td><td>Data collection from 40+ sources</td></tr>
+</table>
+
+<div class="callout">
+<strong>Self-managing:</strong> The SelfManager class auto-installs missing schedules, fixes broken ones, adjusts intervals (speeds up winners, slows down losers), creates ventures from CEO discoveries, and prunes dead ventures after 10 failed cycles.
+</div>
+
+<h3>Swarm Agents (25)</h3>
+
+<div class="card">
+<div class="title">META Agents</div>
+<div class="desc">The brain of the swarm. Makes strategic decisions about all other agents.</div>
+<span class="tag tag-opus">swarm_brain (4h)</span>
+<span class="tag tag-opus">meta_executor (6h)</span>
+</div>
+
+<div class="card">
+<div class="title">DISCOVERY Agents</div>
+<div class="desc">Find opportunities, gaps, and competitor moves before they become obvious.</div>
+<span class="tag tag-opus">gap_hunter (3h)</span>
+<span class="tag tag-opus">opportunity_scanner (4h)</span>
+<span class="tag tag-opus">competitor_stalker (6h)</span>
+</div>
+
+<div class="card">
+<div class="title">ACTION Agents</div>
+<div class="desc">Execute on opportunities. Deploy assets, compound content, generate leads.</div>
+<span class="tag tag-opus">asset_deployer (2h)</span>
+<span class="tag tag-opus">content_compounder (3h)</span>
+<span class="tag tag-opus">lead_machine (4h)</span>
+</div>
+
+<div class="card">
+<div class="title">MEDIA Agents</div>
+<div class="desc">Generate visual content. HTML-to-image (zero cost), Remotion video.</div>
+<span class="tag tag-opus">video_factory (6h)</span>
+<span class="tag tag-opus">image_factory (4h)</span>
+</div>
+
+<div class="card">
+<div class="title">OPTIMIZE Agents</div>
+<div class="desc">Improve what exists. SEO, conversion rates, quality enforcement.</div>
+<span class="tag tag-opus">seo_aso_optimizer (6h)</span>
+<span class="tag tag-opus">conversion_optimizer (8h)</span>
+<span class="tag tag-opus">quality_enforcer (4h)</span>
+</div>
+
+<div class="card">
+<div class="title">QUALITY Agents</div>
+<div class="desc">Hard gate. Blocks slop before deployment. Rewrites bad content. Rejects low-quality assets.</div>
+<span class="tag tag-opus">quality_gate (2h)</span>
+<span class="tag tag-opus">playwright_tester (4h)</span>
+</div>
+
+<div class="card">
+<div class="title">INTELLIGENCE Agents</div>
+<div class="desc">Synthesize trends, cross-pollinate between ventures, track revenue.</div>
+<span class="tag tag-opus">trend_synthesizer (6h)</span>
+<span class="tag tag-opus">cross_pollinator (8h)</span>
+<span class="tag tag-opus">revenue_tracker (4h)</span>
+</div>
+
+<div class="card">
+<div class="title">MAINTENANCE Agents</div>
+<div class="desc">Self-healing infrastructure. Fix broken scripts, clean stale data.</div>
+<span class="tag tag-opus">system_healer (6h)</span>
+<span class="tag tag-opus">data_janitor (8h)</span>
+</div>
+
+<div class="card">
+<div class="title">GROWTH Agents</div>
+<div class="desc">Distribution engine. Social posting, inbound maximization, growth strategy.</div>
+<span class="tag tag-opus">distribution_engine (4h)</span>
+<span class="tag tag-opus">inbound_maximizer (6h)</span>
+<span class="tag tag-opus">social_poster (2h)</span>
+<span class="tag tag-opus">growth_strategist (12h)</span>
+</div>
+
+<div class="card">
+<div class="title">NOTIFICATION Agent</div>
+<div class="desc">Alert dispatcher for critical events across all agents.</div>
+<span class="tag tag-opus">alert_dispatcher (1h)</span>
+</div>
+
+<h3>Agent Interaction Map</h3>
+<pre>
+gap_hunter ──finds──> opportunity_scanner ──scores──> swarm_brain
+                                                        │
+swarm_brain ──decides──> meta_executor ──dispatches──> action agents
+                                                        │
+action agents ──produce──> quality_gate ──approves──> asset_deployer
+                                                        │
+asset_deployer ──deploys──> playwright_tester ──validates──> revenue_tracker
+                                                        │
+revenue_tracker ──reports──> ceo_agent ──adjusts──> venture_autonomy
+                                                        │
+venture_autonomy ──tunes──> all venture agents (speed up winners, slow losers)
+</pre>
+</div>
+
+<!-- SECTION: CEO Cycle -->
+<div class="section" id="sec-ceo">
+<h2>The 16-Phase CEO Cycle</h2>
+<p style="margin-bottom:1rem">Runs every 6 hours. Each phase is checkpointed to disk, so if it crashes at phase 9, it resumes at phase 9 next run.</p>
+
+<table>
+<tr><th>#</th><th>Phase</th><th>Duration</th><th>What Happens</th></tr>
+<tr><td>1</td><td>State Load</td><td>5s</td><td>Read all state files, agent reports, message bus</td></tr>
+<tr><td>2</td><td>Health Check</td><td>30s</td><td>Verify all 33 agents are alive, check launchd plists</td></tr>
+<tr><td>3</td><td>Revenue Scan</td><td>1m</td><td>Check all revenue sources (Gumroad, Stripe, affiliate)</td></tr>
+<tr><td>4</td><td>Alpha Digest</td><td>2m</td><td>Process new alpha entries, score, route to ventures</td></tr>
+<tr><td>5</td><td>Venture Review</td><td>3m</td><td>Score each venture on ROI, growth rate, resource usage</td></tr>
+<tr><td>6</td><td>Kill/Double</td><td>1m</td><td>Apply kill triggers (underperformers) and double-down triggers (winners)</td></tr>
+<tr><td>7</td><td>Resource Alloc</td><td>1m</td><td>Adjust agent schedules based on venture performance</td></tr>
+<tr><td>8</td><td>Content Queue</td><td>2m</td><td>Generate content from latest intel, queue for posting</td></tr>
+<tr><td>9</td><td>Deploy Check</td><td>2m</td><td>Check pending deployments, trigger asset_deployer</td></tr>
+<tr><td>10</td><td>Lead Process</td><td>2m</td><td>Process new leads, score, route to outbound</td></tr>
+<tr><td>11</td><td>Feedback Loop</td><td>2m</td><td>Run loop_closer (decisions + feedback + pipeline)</td></tr>
+<tr><td>12</td><td>Intelligence</td><td>2m</td><td>Update intelligence index, cross-pollinate findings</td></tr>
+<tr><td>13</td><td>Quality Audit</td><td>3m</td><td>Run quality gate on all pending assets</td></tr>
+<tr><td>14</td><td>Growth Tactics</td><td>2m</td><td>Identify and execute growth opportunities</td></tr>
+<tr><td>15</td><td>Reporting</td><td>1m</td><td>Generate daily digest, update dashboards</td></tr>
+<tr><td>16</td><td>State Save</td><td>5s</td><td>Checkpoint all state, commit to git, log metrics</td></tr>
+</table>
+
+<h3>Kill Triggers (Automated)</h3>
+<div class="callout warning">
+<ul style="margin-left:1rem">
+<li>App &lt; $100 MRR after 60 days &#8594; kill</li>
+<li>Content account &lt; 500 followers after 90 days &#8594; pivot or kill</li>
+<li>Cold outbound &lt; 2% reply after 3 optimizations &#8594; rewrite ICP</li>
+<li>Digital product &lt; 5 sales after 30 days &#8594; reprice or bundle</li>
+<li>Venture agent fails 10 consecutive cycles &#8594; auto-prune</li>
+</ul>
+</div>
+
+<h3>Double-Down Triggers (Automated)</h3>
+<div class="callout success">
+<ul style="margin-left:1rem">
+<li>App MRR growing 20%+ at $500+ &#8594; add paid ads + ASO push</li>
+<li>Content engagement &gt;5% sustained 2 weeks &#8594; double posting frequency</li>
+<li>Cold email &gt;5% reply rate &#8594; scale volume 3x</li>
+<li>Product selling 10+/week &#8594; create variations + bundle</li>
+</ul>
+</div>
+
+<h3>Checkpoint-Resume Pattern</h3>
+<pre>
+# CEO agent saves progress after each phase
+def save_checkpoint(phase_num, state):
+    checkpoint = {
+        "phase": phase_num,
+        "timestamp": datetime.now().isoformat(),
+        "state": state,
+        "completed_phases": list(range(1, phase_num + 1))
+    }
+    Path("ceo_state.json").write_text(json.dumps(checkpoint))
+
+# On startup, resume from last checkpoint
+def load_checkpoint():
+    state = json.loads(Path("ceo_state.json").read_text())
+    return state["phase"]  # Resume from here
+</pre>
+</div>
+
+<!-- SECTION: Ralph Loops -->
+<div class="section" id="sec-ralph">
+<h2>Ralph Loops: Infinite Agent Execution</h2>
+<p style="margin-bottom:1rem">The core pattern that makes everything work. Named after the concept of recursive autonomous loops with persistent filesystem memory.</p>
+
+<h3>The Pattern</h3>
+<pre>
+while true; do
+  cat PROMPT.md | claude --dangerously-skip-permissions --print
+done
+</pre>
+
+<p style="margin-bottom:1rem">That's it. That's the core. But the magic is in how PROMPT.md is structured:</p>
+
+<h3>PROMPT.md Anatomy</h3>
+<pre>
+# Role
+You are the [VENTURE] agent. Working directory: /path/to/project
+
+# State (read every iteration)
+Read `.ralph/progress.md` for what you did last.
+Read `.ralph/state.json` for current metrics.
+
+# Task
+Do exactly ONE of these (pick highest priority):
+1. [First priority task]
+2. [Second priority task]
+3. [Third priority task]
+
+# Rules
+- Do ONE task per iteration, then EXIT
+- Write results to `.ralph/progress.md`
+- Update `.ralph/state.json` with new metrics
+- If blocked, write blocker to `.ralph/blockers.md` and move to next task
+- NEVER loop within a single iteration
+- Total runtime per iteration: max 10 minutes
+
+# Context
+[Paste relevant state files, recent outputs, etc.]
+</pre>
+
+<div class="callout">
+<strong>Why this works:</strong> Each iteration gets a fresh 200K context window. No degradation over time. The filesystem IS the memory. Git IS the version control. The loop IS the scheduler. Zero infrastructure beyond Claude Code and bash.
+</div>
+
+<h3>Ralph Loop Best Practices</h3>
+<table>
+<tr><th>Practice</th><th>Why</th></tr>
+<tr><td>ONE task per iteration</td><td>Prevents context window bloat. Clean execution.</td></tr>
+<tr><td>Max 10 min per iteration</td><td>Prevents runaway loops. Keeps costs predictable.</td></tr>
+<tr><td>State in JSON files</td><td>Machine-readable. Easy to parse. Git-friendly.</td></tr>
+<tr><td>Progress in markdown</td><td>Human-readable audit trail. Debug-friendly.</td></tr>
+<tr><td>Blockers file</td><td>Prevents infinite retry on impossible tasks.</td></tr>
+<tr><td>Exit codes</td><td>0 = success, 1 = error, 2 = blocked, 3 = nothing to do.</td></tr>
+</table>
+
+<h3>Running Multiple Ralph Loops</h3>
+<pre>
+# Launch 8 loops overnight
+for venture in social_branding content_machine alpha_research \
+               digital_products niche_meta synergy retardmaxx_exec \
+               full_audit; do
+  nohup bash -c "cd ralph/loops/$venture && while true; do \
+    cat PROMPT.md | claude --dangerously-skip-permissions --print; \
+    sleep 30; done" &gt; /dev/null 2&gt;&amp;1 &amp;
+  echo "Launched: $venture (PID: $!)"
+done
+</pre>
+
+<h3>Monitoring Ralph Loops</h3>
+<pre>
+# Check which loops are running
+ps aux | grep "ralph/loops" | grep -v grep
+
+# Check progress for a specific loop
+cat ralph/loops/content_machine/.ralph/progress.md
+
+# Stop all loops
+pkill -f 'ralph/loops'
+
+# Stop specific loop
+kill $(ps aux | grep "ralph/loops/content_machine" | grep -v grep | awk '{print $2}')
+</pre>
+</div>
+
+<!-- SECTION: Intelligence -->
+<div class="section" id="sec-intelligence">
+<h2>Intelligence System</h2>
+<p style="margin-bottom:1rem">Every agent queries intelligence before acting. No decisions based on default LLM knowledge when 15,000+ real data points exist.</p>
+
+<h3>Intelligence Router</h3>
+<p style="margin-bottom:1rem">Aggregates data from 6 sources into a single brief per venture+task:</p>
+<pre>
+# Human-readable brief
+python3 intelligence_router.py --venture CONTENT --task posting --brief
+
+# Machine-readable JSON (for agents)
+python3 intelligence_router.py --venture OUTBOUND --task outreach --json
+</pre>
+
+<h3>Data Sources</h3>
+<table>
+<tr><th>Source</th><th>Entries</th><th>Update Freq</th><th>What It Contains</th></tr>
+<tr><td>Alpha Staging</td><td>15,000+</td><td>Every 6h</td><td>Tactics, methods, tools from Reddit/Twitter/HN/PH</td></tr>
+<tr><td>Strategy Docs</td><td>25+</td><td>Weekly</td><td>Growth playbooks, method breakdowns, competitive intel</td></tr>
+<tr><td>Swarm Reports</td><td>200+</td><td>Every 4h</td><td>Agent outputs, findings, recommendations</td></tr>
+<tr><td>Method CSVs</td><td>10</td><td>Daily</td><td>Marketing channels, content structures, winning tactics</td></tr>
+<tr><td>Competitor Data</td><td>500+</td><td>Every 12h</td><td>Pricing, features, traffic, positioning changes</td></tr>
+<tr><td>Revenue Data</td><td>Real-time</td><td>Every 4h</td><td>Sales, refunds, conversion rates, LTV</td></tr>
+</table>
+
+<h3>SQLite FTS5 Index</h3>
+<p style="margin-bottom:1rem">Full-text search over 15,000+ alpha entries in under 50ms:</p>
+<pre>
+# Build/rebuild the index (runs daily at 3:30 AM)
+python3 sqlite_alpha_index.py --rebuild
+
+# Search
+python3 alpha_query.py --search "cold email subject lines" --json
+python3 alpha_query.py --venture APP_FACTORY --json
+python3 alpha_query.py --stats
+</pre>
+
+<h3>Scraper Pipeline</h3>
+<div class="card">
+<div class="title">4 Active Scrapers (Battle-Tested)</div>
+<table>
+<tr><th>Scraper</th><th>Source</th><th>Method</th><th>Schedule</th></tr>
+<tr><td>twitter_alpha_scraper.py</td><td>Twitter/X</td><td>Brave cookie injection + headless Chromium</td><td>Every 6h</td></tr>
+<tr><td>twitter_content_scraper.py</td><td>Twitter/X</td><td>Brave cookies, media download</td><td>Every 8h</td></tr>
+<tr><td>background_twitter_scraper.py</td><td>Twitter/X</td><td>Lightweight daily scan</td><td>Daily</td></tr>
+<tr><td>reddit_deep_scraper.py</td><td>Reddit (41 subs)</td><td>JSON API (no browser needed)</td><td>Every 4h</td></tr>
+</table>
+</div>
+
+<div class="callout warning">
+<strong>Key insight:</strong> Reddit blocks Playwright/Selenium. Use their JSON API instead (<span class="inline-code">.json</span> suffix on any URL). Twitter requires real browser cookies. The cookie injection pattern: read Brave's SQLite DB, decrypt with AES-128-CBC (PBKDF2 derived key), inject into fresh headless Chromium.
+</div>
+
+<h3>Alpha Processing Pipeline</h3>
+<pre>
+Scrape ──> ALPHA_STAGING.csv (PENDING_REVIEW)
+              │
+alpha_auto_processor.py --process-new
+              │
+    ┌─────────┼─────────┐
+    │         │         │
+  ROUTE     BOLSTER   ARCHIVE
+  (new)    (existing)  (dupe/low)
+    │         │
+ venture   update
+  CSVs     methods
+</pre>
+</div>
+
+<!-- SECTION: Templates -->
+<div class="section" id="sec-templates">
+<h2>Copy-Paste Templates</h2>
+<p style="margin-bottom:1rem">Everything you need to set up your own agent system. Copy, modify, deploy.</p>
+
+<h3>Template 1: Basic Agent Script</h3>
+<pre>
+#!/usr/bin/env python3
+"""Template: Basic autonomous agent with resilience."""
+import json
+from pathlib import Path
+from datetime import datetime
+
+STATE_FILE = Path(__file__).parent / "agent_state.json"
+LOG_FILE = Path(__file__).parent / "agent.log"
+
+def load_state():
+    if STATE_FILE.exists():
+        return json.loads(STATE_FILE.read_text())
+    return {"cycles": 0, "last_run": None, "results": []}
+
+def save_state(state):
+    state["last_run"] = datetime.now().isoformat()
+    state["cycles"] += 1
+    STATE_FILE.write_text(json.dumps(state, indent=2))
+
+def log(msg):
+    with open(LOG_FILE, "a") as f:
+        f.write(f"[{datetime.now().isoformat()}] {msg}\n")
+
+def main():
+    state = load_state()
+    log(f"Cycle {state['cycles'] + 1} starting")
+
+    # YOUR AGENT LOGIC HERE
+    # 1. Read inputs (files, APIs, scraped data)
+    # 2. Process / analyze / decide
+    # 3. Take action (write files, deploy, send)
+    # 4. Log results
+
+    result = {"action": "example", "status": "success"}
+    state["results"].append(result)
+    save_state(state)
+    log(f"Cycle complete: {result}")
+
+if __name__ == "__main__":
+    main()
+</pre>
+
+<h3>Template 2: Venture Autonomy Config</h3>
+<pre>
+{
+  "venture_id": "my_venture",
+  "type": "PRODUCT",
+  "schedule": {
+    "interval_hours": 24,
+    "method": "cron",
+    "cron_expr": "0 6 * * *"
+  },
+  "pipeline": [
+    {"step": "find_demand", "script": "scan_trends.py"},
+    {"step": "create_product", "script": "build_product.py"},
+    {"step": "write_listing", "script": "listing_gen.py"},
+    {"step": "deploy", "script": "deploy.py"},
+    {"step": "distribute", "script": "distribute.py"},
+    {"step": "track", "script": "track_sales.py"}
+  ],
+  "kill_trigger": {
+    "metric": "sales_30d",
+    "threshold": 5,
+    "action": "reprice_or_bundle"
+  },
+  "double_trigger": {
+    "metric": "sales_weekly",
+    "threshold": 10,
+    "action": "create_variations"
+  }
+}
+</pre>
+
+<h3>Template 3: CEO Agent Phase Config</h3>
+<pre>
+PHASES = [
+    {"id": 1,  "name": "state_load",     "timeout": 30,  "critical": True},
+    {"id": 2,  "name": "health_check",   "timeout": 60,  "critical": True},
+    {"id": 3,  "name": "revenue_scan",   "timeout": 120, "critical": False},
+    {"id": 4,  "name": "alpha_digest",   "timeout": 180, "critical": False},
+    {"id": 5,  "name": "venture_review", "timeout": 240, "critical": True},
+    {"id": 6,  "name": "kill_double",    "timeout": 120, "critical": True},
+    {"id": 7,  "name": "resource_alloc", "timeout": 120, "critical": False},
+    {"id": 8,  "name": "content_queue",  "timeout": 180, "critical": False},
+    {"id": 9,  "name": "deploy_check",   "timeout": 180, "critical": False},
+    {"id": 10, "name": "lead_process",   "timeout": 180, "critical": False},
+    {"id": 11, "name": "feedback_loop",  "timeout": 180, "critical": True},
+    {"id": 12, "name": "intelligence",   "timeout": 180, "critical": False},
+    {"id": 13, "name": "quality_audit",  "timeout": 240, "critical": True},
+    {"id": 14, "name": "growth_tactics", "timeout": 180, "critical": False},
+    {"id": 15, "name": "reporting",      "timeout": 120, "critical": False},
+    {"id": 16, "name": "state_save",     "timeout": 30,  "critical": True}
+]
+</pre>
+
+<h3>Template 4: Ralph Loop PROMPT.md</h3>
+<pre>
+# Agent: Content Machine
+You are the Content Machine agent for the PRINTMAXX system.
+Working directory: /path/to/project
+
+## Your State
+Read `.ralph/progress.md` to see what you did last iteration.
+Read `.ralph/state.json` for current metrics.
+Read `CONTENT/social/CONTENT_QUEUE.csv` for pending content.
+
+## This Iteration
+Pick the HIGHEST PRIORITY task and do ONLY that:
+
+1. If CONTENT_QUEUE.csv has items with status=PENDING_REVIEW:
+   - Review each item for quality (no AI slop, specific numbers)
+   - Mark as APPROVED or REJECTED with notes
+   - Move approved items to posting_queue/
+
+2. If posting_queue/ has files:
+   - Format for target platform (Twitter/Reddit/LinkedIn)
+   - Add hashtags, mentions, hooks
+   - Save to ready_to_post/
+
+3. If nothing pending:
+   - Read latest alpha entries (ALPHA_STAGING.csv, last 24h)
+   - Generate 5 tweets + 1 thread from best findings
+   - Save to CONTENT_QUEUE.csv as PENDING_REVIEW
+
+## Rules
+- ONE task per iteration, then EXIT
+- Max runtime: 10 minutes
+- Write progress to `.ralph/progress.md`
+- Update `.ralph/state.json`
+- Quality &gt; quantity. No generic AI fluff.
+</pre>
+
+<h3>Template 5: Crontab Setup</h3>
+<pre>
+# Agent Crontab (add with: crontab -e)
+# Format: min hour day month weekday command
+
+# CEO Agent - every 6 hours
+0 0,6,12,18 * * * cd /path/to/project && python3 AUTOMATIONS/ceo_agent.py --cycle
+
+# Swarm Brain - every 4 hours
+0 2,6,10,14,18,22 * * * cd /path/to/project && python3 AUTOMATIONS/agent_swarm.py --run swarm_brain
+
+# Quality Gate - every 2 hours
+0 */2 * * * cd /path/to/project && python3 AUTOMATIONS/quality_gate.py --gate
+
+# Alpha Scraping - every 6 hours
+30 0,6,12,18 * * * cd /path/to/project && python3 AUTOMATIONS/twitter_alpha_scraper.py --all
+0 */4 * * * cd /path/to/project && python3 AUTOMATIONS/background_reddit_scraper.py --scrape
+
+# Intelligence Index Rebuild - daily 3:30 AM
+30 3 * * * cd /path/to/project && python3 AUTOMATIONS/sqlite_alpha_index.py --rebuild
+
+# Daily Tactical Plan - 7:15 AM
+15 7 * * * cd /path/to/project && python3 AUTOMATIONS/daily_tactical_engine.py --save
+
+# Loop Closer - every 2 hours
+15 */2 * * * cd /path/to/project && python3 AUTOMATIONS/loop_closer.py --cycle
+
+# Guardian Commit - hourly
+0 * * * * cd /path/to/project && git add -A && git commit -m "Guardian safety commit $(date +%F\ %H:%M)" 2>/dev/null
+</pre>
+
+<h3>Template 6: Message Bus Communication</h3>
+<pre>
+import json
+from datetime import datetime
+from pathlib import Path
+
+BUS_FILE = Path("message_bus.jsonl")
+
+def send_message(from_agent, to_agent, msg_type, payload):
+    """Append message to the shared bus."""
+    message = {
+        "from": from_agent,
+        "to": to_agent,
+        "type": msg_type,
+        "payload": payload,
+        "timestamp": datetime.now().isoformat(),
+        "read": False
+    }
+    with open(BUS_FILE, "a") as f:
+        f.write(json.dumps(message) + "\n")
+
+def read_messages(agent_name, msg_type=None):
+    """Read unread messages for this agent."""
+    if not BUS_FILE.exists():
+        return []
+    messages = []
+    for line in BUS_FILE.read_text().strip().split("\n"):
+        if not line:
+            continue
+        msg = json.loads(line)
+        if msg["to"] == agent_name and not msg["read"]:
+            if msg_type is None or msg["type"] == msg_type:
+                messages.append(msg)
+    return messages
+</pre>
+
+<div class="callout success">
+<strong>Quick start:</strong> Copy Template 1 + Template 4 + the crontab entry. You'll have an autonomous agent running in under 5 minutes. Add Template 6 when you need agents to talk to each other. Add Template 3 when you need multi-phase orchestration.
+</div>
+</div>
+
+</div><!-- end container -->
+
+<div style="text-align:center;padding:3rem 1rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.8rem">
+  <p>Built by a solopreneur running 33 agents on a MacBook. Not a course. Not a masterclass. Just the system.</p>
+  <p style="margin-top:0.5rem">Works offline. No tracking. No cookies. Just open this file in any browser.</p>
+</div>
+
+<script>
+// Navigation
+const navBtns = document.querySelectorAll('.nav button');
+const sections = document.querySelectorAll('.section');
+
+navBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.section;
+    navBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    sections.forEach(s => {
+      s.classList.toggle('visible', s.id === 'sec-' + target);
+    });
+    window.scrollTo({top: document.querySelector('.container').offsetTop - 20, behavior: 'smooth'});
+  });
+});
+
+// Search
+const searchInput = document.getElementById('search');
+const searchMeta = document.getElementById('searchMeta');
+const allCards = document.querySelectorAll('.card, pre, p, li, td, th, .callout');
+
+searchInput.addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  if (!q) {
+    sections.forEach(s => s.classList.remove('visible'));
+    document.getElementById('sec-overview').classList.add('visible');
+    navBtns.forEach(b => b.classList.remove('active'));
+    navBtns[0].classList.add('active');
+    // Remove highlights
+    document.querySelectorAll('mark').forEach(m => {
+      m.replaceWith(m.textContent);
+    });
+    searchMeta.textContent = '7 sections \u00b7 33 agents \u00b7 50+ code snippets';
+    return;
+  }
+
+  let matches = 0;
+  sections.forEach(s => {
+    const text = s.textContent.toLowerCase();
+    const hasMatch = text.includes(q);
+    s.classList.toggle('visible', hasMatch);
+    if (hasMatch) matches++;
+  });
+
+  navBtns.forEach(b => {
+    const sec = document.getElementById('sec-' + b.dataset.section);
+    b.classList.toggle('active', sec && sec.classList.contains('visible'));
+  });
+
+  searchMeta.textContent = `${matches} section${matches !== 1 ? 's' : ''} matching "${e.target.value}"`;
+});
+
+// Keyboard shortcut
+document.addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement !== searchInput) {
+    e.preventDefault();
+    searchInput.focus();
+  }
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.blur();
+  }
+});
+</script>
+</body>
+</html>

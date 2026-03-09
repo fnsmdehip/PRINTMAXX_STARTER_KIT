@@ -1,0 +1,54 @@
+STATUS: PENDING_REVIEW
+TYPE: thread (6 tweets)
+SOURCE: ALPHA_REDDIT_0309_011 + ALPHA_REDDIT_0309_005 + ALPHA_REDDIT_0309_006
+
+---TWEET 1---
+the biggest mistake app devs make with ratings:
+
+asking for reviews before the user gets any value
+
+one dev changed WHEN they ask. not what they ask. 3.2 stars jumped to 4.0
+
+here's the playbook for app store ratings that most devs ignore:
+
+---TWEET 2---
+the default: prompt for review on first launch or after 3 sessions
+
+the problem: the user has no emotional connection to your app yet. you're asking a stranger for a favor
+
+the fix: prompt AFTER the user hits a value moment (completed a streak, finished a workout, logged 7 days)
+
+---TWEET 3---
+why 0.8 stars matters more than you think:
+
+- 3.2 stars = nobody downloads your app
+- 4.0 stars = you pass the trust threshold
+- 4.5+ stars = algorithm pushes you
+
+the difference between invisible and discoverable is often one timing change in your review prompt
+
+---TWEET 4---
+real data from indie devs building habit apps right now:
+
+HabitSwipe: 2500 users, $799 in 2 months ($0.32/user)
+Ban It: first paying user discovered unexpected use case
+
+small numbers. real revenue. the pattern: ship simple, find PMF in user behavior
+
+---TWEET 5---
+the review prompt timing checklist:
+
+1. identify your app's value moment (first completed task, first result, first streak)
+2. trigger review prompt 2-3 seconds after that moment
+3. never prompt during onboarding
+4. never prompt more than once per 30 days
+5. test different value moments and track conversion
+
+---TWEET 6---
+this is the kind of stuff that separates apps making $0 from apps making $800/mo
+
+not a new feature. not a redesign. not more marketing spend
+
+just asking the right question at the right time
+
+apply this to every app you build. the ROI is absurd for zero code changes

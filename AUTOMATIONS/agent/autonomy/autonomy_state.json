@@ -691,8 +691,8 @@
         "targets": "competitors,trends,pricing"
       },
       "created_at": "2026-03-06T21:16:28.943305",
-      "last_run": "2026-03-08T20:58:09.564909",
-      "cycles_run": 9,
+      "last_run": "2026-03-09T00:20:03.243386",
+      "cycles_run": 10,
       "results": [
         {
           "cycle": 4,
@@ -801,38 +801,50 @@
             "alert": "ok"
           },
           "success_rate": "2/6"
+        },
+        {
+          "ts": "2026-03-09T00:20:03.243392",
+          "steps": {
+            "configure": "failed",
+            "scrape": "failed",
+            "clean": "failed",
+            "analyze": "ok",
+            "store": "failed",
+            "alert": "ok"
+          },
+          "success_rate": "2/6"
         }
       ],
       "pipeline_stats": {
         "configure": {
-          "runs": 4,
+          "runs": 5,
           "successes": 1,
-          "last_run": "2026-03-08T16:15:23.521212"
+          "last_run": "2026-03-09T00:15:01.837285"
         },
         "scrape": {
-          "runs": 4,
+          "runs": 5,
           "successes": 1,
-          "last_run": "2026-03-08T16:20:23.547400"
+          "last_run": "2026-03-09T00:20:01.810854"
         },
         "clean": {
-          "runs": 4,
+          "runs": 5,
           "successes": 1,
-          "last_run": "2026-03-08T16:20:23.770453"
+          "last_run": "2026-03-09T00:20:02.020676"
         },
         "analyze": {
-          "runs": 4,
-          "successes": 4,
-          "last_run": "2026-03-08T16:20:24.049835"
+          "runs": 5,
+          "successes": 5,
+          "last_run": "2026-03-09T00:20:02.322116"
         },
         "store": {
-          "runs": 4,
+          "runs": 5,
           "successes": 1,
-          "last_run": "2026-03-08T16:20:24.569685"
+          "last_run": "2026-03-09T00:20:02.908775"
         },
         "alert": {
-          "runs": 4,
-          "successes": 4,
-          "last_run": "2026-03-08T16:20:24.978671"
+          "runs": 5,
+          "successes": 5,
+          "last_run": "2026-03-09T00:20:03.243369"
         }
       },
       "cycle_count": 16,
@@ -863,9 +875,25 @@
       "status": "ACTIVE",
       "last_alert_count": 8,
       "last_new_intel_rows": 12
+    },
+    "alpha_intelligence": {
+      "last_run": "2026-03-09T00:27:53.755674",
+      "total_cycles": 1,
+      "last_results": {
+        "reddit_posts_scraped": 166,
+        "subreddits_scanned": 20,
+        "high_signal_posts": 25,
+        "alpha_processed": 31,
+        "new_ventures_identified": 1,
+        "existing_bolstered": 1,
+        "freelance_leads_found": 2,
+        "ecom_products_listable": 18,
+        "content_pieces_generated": 9,
+        "hn_ph_scrape": "running"
+      }
     }
   },
-  "total_cycles": 24,
-  "total_pipeline_runs": 103,
+  "total_cycles": 25,
+  "total_pipeline_runs": 109,
   "created_at": "2026-03-06T21:12:45.215910"
 }

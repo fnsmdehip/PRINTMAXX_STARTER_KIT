@@ -702,3 +702,14 @@
 
 n8n: $2.3B valuation. $40M+ ARR. Self-hosted = 150K executions/month for $50 vs $600+ on Zapier. McKinsey: automated solopreneurs earn $127/hour vs $31/hour manual. 70-90% cost savings vs SaaS.
 
+
+
+---
+
+## Pending Enhancement (ALPHA18687, Score: 67)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://veloxthemes.com/blog/polar-vs-lemonsqueezy-vs-gumroad
+**Added:** 2026-03-09T00:20:02-04:00
+
+Polar.sh - open source merchant of record. 4% + $0.40 per transaction = cheapest MoR option. Developer-focused. GitHub integration for OSS monetization. Growing fast post-Gumroad fee increases. Full MoR handles taxes and compliance. Perfect for indie hacker audience.
+

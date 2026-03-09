@@ -1046,8 +1046,7 @@
       "source": "CYCLE5_OVERFLOW_APR1_5.md",
       "note": "CYCLE5_OVERFLOW gap fill",
       "posted_at": null
-    }
-    ,
+    },
     {
       "id": "pm-alpha-mar8-01",
       "platform": "twitter",
@@ -1158,6 +1157,136 @@
       "chars": 274,
       "source": "alpha_content_2026_03_08.md",
       "note": "OVERFLOW: Service pricing ladder",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0309-01",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-09T21:00:00",
+      "status": "queued",
+      "queue_file": "engagement_bait_20260309_1.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0310-02",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-10T07:30:00",
+      "status": "queued",
+      "queue_file": "alpha_research_20260309_3.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0310-03",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-10T11:00:00",
+      "status": "queued",
+      "queue_file": "engagement_bait_20260309_2.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0310-04",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-10T14:30:00",
+      "status": "queued",
+      "queue_file": "alpha_research_20260309_2.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0310-05",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-10T18:00:00",
+      "status": "queued",
+      "queue_file": "alpha_research_20260309_1.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0310-06",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-10T21:00:00",
+      "status": "queued",
+      "queue_file": "alpha_research_20260309_5.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0311-07",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-11T07:30:00",
+      "status": "queued",
+      "queue_file": "alpha_research_20260309_4.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0311-08",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-11T11:00:00",
+      "status": "queued",
+      "queue_file": "alpha_research_thread_20260309.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0311-09",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-11T14:30:00",
+      "status": "queued",
+      "queue_file": "engagement_bait_20260309_3.txt",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0311-10",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-11T18:00:00",
+      "status": "queued",
+      "queue_file": "PIPELINE_TWEETS_2026-03-09.md#tweet1",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0312-11",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-12T07:30:00",
+      "status": "queued",
+      "queue_file": "PIPELINE_TWEETS_2026-03-09.md#tweet2",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0312-12",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-12T11:00:00",
+      "status": "queued",
+      "queue_file": "PIPELINE_TWEETS_2026-03-09.md#thread",
+      "source": "alpha_research_pipeline_20260309",
+      "posted_at": null
+    },
+    {
+      "id": "pm-0312-13",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-12T14:30:00",
+      "status": "queued",
+      "queue_file": "PIPELINE_TWEETS_2026-03-09.md#tweet3",
+      "source": "alpha_research_pipeline_20260309",
       "posted_at": null
     }
   ],
@@ -1300,7 +1429,7 @@
   "social_poster_cycle_mar8_1250": {
     "timestamp": "2026-03-08T12:50:00Z",
     "action": "schedule_new_content",
-    "warmup_phase": "LURK (Day 2) — zero posting",
+    "warmup_phase": "LURK (Day 2) \u2014 zero posting",
     "new_content_scanned": {
       "brain_insights": 4,
       "alpha_extractions": 8,
@@ -1311,7 +1440,7 @@
       "affiliate_funnel": 1,
       "cross_channel": 2
     },
-    "voice_quality_check": "ALL PASS — zero em dashes, consequence-first hooks, specific numbers, PRINTMAXXER voice confirmed",
+    "voice_quality_check": "ALL PASS \u2014 zero em dashes, consequence-first hooks, specific numbers, PRINTMAXXER voice confirmed",
     "files_created": 19,
     "dates_covered": "Apr 11-15 (19 slots: Apr 11 x3, Apr 12-15 x4 each)",
     "sources_used": [
@@ -1345,7 +1474,10 @@
     "quality_gate_results": {
       "approved": 10,
       "flagged": 2,
-      "flags": ["apr17_1100 $2.5B ARR unverified", "Athan tweet needs X Premium"]
+      "flags": [
+        "apr17_1100 $2.5B ARR unverified",
+        "Athan tweet needs X Premium"
+      ]
     },
     "files_created": 10,
     "dates_covered": "Apr 16-18",
