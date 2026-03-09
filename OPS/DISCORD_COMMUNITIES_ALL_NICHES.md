@@ -2802,3 +2802,14 @@ Ready to launch Discord communities? Here's your checklist:
 **Expected annual revenue per community: $10K-$300K+ depending on growth velocity and niche demand.**
 
 **Key insight: Discord engagement → paid tiers → recurring revenue stream → scalable business.**
+
+
+---
+
+## Pending Enhancement (ALPHA_HNPH_47302037, Score: 30)
+
+**Source:** hackernews_ask_thread | **URL:** https://beanhoard.com
+**Added:** 2026-03-09T00:32:08-04:00
+
+Niche ETL that aggregates coffee roaster inventory + Discord DM alerts for $6/mo. Launched; charging real money; doubting interest — but the model (aggregator + real-time push notifications for a passionate niche) is exactly the playbook for dozens of other passionate verticals.
+

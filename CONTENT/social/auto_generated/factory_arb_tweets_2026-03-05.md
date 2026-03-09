@@ -1,5 +1,7 @@
 # Factory Arb Tweets - 2026-03-05
-Status: PENDING_REVIEW
+Status: BLOCKED_BY_QUALITY_GATE
+Quality Gate Cycle: 17 | 2026-03-09
+REASON: Every tweet identical template. Zero variation across 17 products. Bot-detectable. DO NOT POST.
 Source: autonomous_factory.py from 17 high-margin finds
 
 ---

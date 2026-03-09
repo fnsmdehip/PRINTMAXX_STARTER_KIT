@@ -1,4 +1,130 @@
 ========================================
+QUALITY GATE ALERT - CYCLE 17 (UPDATED)
+2026-03-09 00:35 UTC
+========================================
+
+>> CONTENT_QUEUE.csv BULK BLOCK (460 entries)
+   Source: auto_content_20260213_185306.csv (Feb 13 batch)
+   Pattern: 5 lazy prefix templates + raw alpha paste
+   Prefixes: "growth hack that actually works.", "tool find that saves hours.",
+             "signal worth paying attention to.", "app store alpha that nobody talks about.",
+             "content format that's working right now."
+   Cross-account duplication: Same content across @PRINTMAXXER, @repscheme, @finance, @selahmoments
+   Result: ALL 460 entries BLOCKED_QUALITY_GATE_C17
+   Impact: CONTENT_QUEUE.csv now has ZERO postable content
+   Action needed: Regenerate with Opus LLM rewrite pass or manual curation
+
+>> MEDIA PIPELINE AUDIT (338 images, 20 videos)
+   Images: 338 PNGs in MEDIA/generated_images/ (75K-272K, proper dimensions)
+   Videos: 20 MP4s in MEDIA/remotion/out/ (234K-602K, 15-30 sec)
+   Templates: 11 HTML templates (Playwright-based, working)
+   ISSUE: approved_media/ directory is EMPTY. No approval/tracking workflow exists.
+   ISSUE: 338 images generated but ZERO reviewed for quality.
+   ISSUE: 41 images scattered across CONTENT/social/ niche subdirs, orphaned from pipeline.
+   Result: FLAGGED -- generation works, distribution pipeline missing.
+   Action needed: Create approval_queue.csv, review images, connect to posting automation.
+
+---
+ORIGINAL CYCLE 17 ALERT (00:25 UTC below)
+
+SEVERITY: CRITICAL — 4 FILES BLOCKED, ~110 CONTENT PIECES SLOP
+
+THE auto_generated/ DIRECTORY IS A SLOP FACTORY.
+Previous cycles focused on posting_queue/ and missed this entirely.
+
+BLOCKED (4 files, ~110 pieces):
+
+1. auto_content_20260307_212910.csv (30 pieces)
+   ISSUE: Every tweet uses 1 of 5 lazy prefixes pasted before raw alpha text.
+   Templates: "tool find that saves hours." / "every hustle needs purpose."
+   / "discipline compounds." / "built this." / "alpha:"
+   Then raw alpha text copy-pasted after.
+   NOT consequence-first. NOT voice-matched. NOT human-sounding.
+   Would @pipelineabuser post this? ABSOLUTELY NOT.
+   2 em dashes found.
+
+2. factory_arb_tweets_2026-03-05.md (17 pieces)
+   ISSUE: EVERY tweet is identical template with different product name:
+   "found a [product] selling for $[X]. source price $[Y]. that's [Z]%
+   margin before platform fees. the arb scanner catches these every 2 hours.
+   just need accounts to start listing."
+   17 tweets. 17 identical structures. Bot-detectable.
+
+3. factory_arb_tweets_2026-03-06.md (13 pieces)
+   ISSUE: Same identical template as above. 13 more copies.
+   Combined with file above = 30 identical tweets. Account suicide.
+
+4. alpha_content_2026_03_05.md (~50 pieces across 8 alpha entries)
+   ISSUE: Industrial template slop. WORST offender.
+   Every alpha entry generates:
+   - 3 tweets with SAME 3 endings ("stop overthinking and just run it" /
+     "if you're not on this you're leaving money on the table" /
+     "most people sleep on this. the ones who don't are printing")
+   - 7-tweet thread where tweets 2-7 are COPY-PASTED across ALL 8 entries
+   - Identical Reddit post (same "I screened 14423+ alpha entries" x8)
+   - Identical newsletter section
+   BANNED PHRASE: "leaving money on the table" (used 8+ times)
+   "I screened 14423+ alpha entries" repeated identically 8 times
+
+APPROVED (1 file, 8 posts):
+
+1. reddit_distribution_posts_streak_apps.md (8 Reddit posts)
+   RESULT: HIGH QUALITY. Passes all checks.
+   - Zero em dashes
+   - Zero banned AI vocabulary
+   - Consequence-first hooks throughout
+   - Specific numbers (13 apps, 77 sites, $0, 55KB, 400 emails, etc.)
+   - Would @pipelineabuser post this? YES
+   - Unique, deeply written, technically accurate
+   - Minor flag: "leaving money on the table" in Post 5 (acceptable in
+     context — describing local businesses, not as CTA pattern)
+   STATUS: APPROVED — ready for posting
+
+FLAGGED (3 files):
+
+1-3. QA carousel wrappers (Mar 3 carousels)
+   ISSUE: These are empty review wrappers, not content.
+   Status contradiction: header says "APPROVED" but body says "PENDING_REVIEW"
+   reviewed_by: "auto" — rubber-stamped without reading content.
+   ACTION: QA auto-reviewer needs to actually read source files.
+
+ROOT CAUSE — SYSTEMIC GENERATOR FAILURE:
+
+Three generators are producing industrial template slop:
+
+1. CSV auto-generator (auto_content_*.csv)
+   - Uses 5 prefix templates + raw alpha text paste
+   - Zero voice treatment, zero hook variation
+
+2. autonomous_factory.py (factory_arb_tweets_*.md)
+   - Single template for all products
+   - Zero variation = bot-detectable
+
+3. scale_verdict_to_content.py (alpha_content_*.md)
+   - WORST: generates identical 3+7+reddit+newsletter for EVERY alpha
+   - Thread tweets 2-7 literally copy-pasted
+   - Uses banned phrases as standard templates
+
+FIX REQUIRED:
+- Option A: Add 10+ template variants per generator with random selection
+- Option B: Add Opus LLM rewrite pass after template fill
+- Option C: Kill generators, use manual Opus-quality content only
+- RECOMMENDED: Option B (maintains automation, adds quality)
+
+PASS RATE: 8/119 first-pass (6.7%) — WORST CYCLE EVER
+  But this is because auto_generated/ was never properly scanned before.
+  posting_queue/ quality remains at 100% (cycle 16 level).
+
+PERSISTENT BLOCKERS (unchanged from cycle 16):
+1. cold-maxx.surge.sh 404
+2. 5 DNS-too-long surge.sh sites
+3. 4 streak pages missing OG tags
+4. HUMAN: 400+ approved posts, 0 posted, Day 36 at $0
+5. NEW: 3 content generators producing template slop
+
+========================================
+
+========================================
 QUALITY GATE ALERT - CYCLE 16
 2026-03-08 22:15 UTC
 ========================================
@@ -378,6 +504,12 @@ ACTION NEEDED:
 
 
 [2026-03-08 20:14] PLAYWRIGHT ALERT — 4 RED site(s):
+  ✗ Plumber Miami Local (broken - DNS) | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
+  ✗ OKC Mobile Detailing | https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-c
+  ✗ OKC Car Detailing | https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-c
+  ✗ Portland Window Cleaning | https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.s
+
+[2026-03-09 00:18] PLAYWRIGHT ALERT — 4 RED site(s):
   ✗ Plumber Miami Local (broken - DNS) | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
   ✗ OKC Mobile Detailing | https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-c
   ✗ OKC Car Detailing | https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-c

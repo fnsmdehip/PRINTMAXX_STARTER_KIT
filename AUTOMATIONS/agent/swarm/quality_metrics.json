@@ -1,103 +1,115 @@
 {
-  "last_cycle": "2026-03-08T22:15:00Z",
-  "cycle_number": 16,
+  "last_cycle": "2026-03-09T00:25:00Z",
+  "cycle_number": 17,
   "cycle_summary": {
-    "total_items_reviewed": 42,
+    "total_items_reviewed": 579,
     "breakdown": {
-      "pending_review_content_files": 3,
-      "content_pieces_in_files": 34,
-      "ready_to_post_verified": 8,
-      "banned_word_full_scan": true
+      "auto_generated_content_files": 4,
+      "auto_generated_content_pieces": 110,
+      "content_queue_csv_entries": 460,
+      "reddit_distribution_posts": 8,
+      "qa_carousel_wrappers": 3,
+      "banned_word_full_scan": true,
+      "em_dash_scan": true
     },
-    "passed_first_time": 42,
+    "passed_first_time": 8,
     "rewritten_and_fixed": 0,
-    "blocked": 0,
-    "flagged_for_verification": 0,
-    "pass_rate_before_fixes": "100%",
-    "pass_rate_after_fixes": "100%"
+    "blocked": 570,
+    "flagged_for_investigation": 3,
+    "pass_rate_before_fixes": "1.4%",
+    "pass_rate_after_fixes": "1.4%",
+    "note": "Full audit of auto_generated/ AND CONTENT_QUEUE.csv. 460 template slop entries in queue bulk-blocked (same Feb 13 auto-generation batch, lazy prefix + raw alpha paste). posting_queue quality still 100%. The 1.4% rate reflects massive accumulated slop from broken generators."
   },
   "content_review": {
-    "pending_review_files": {
-      "files_reviewed": 3,
-      "all_approved": true,
-      "details": [
-        {
-          "file": "CONTENT/social/alpha_content_2026_03_08.md",
-          "pieces": 12,
-          "result": "APPROVED",
-          "notes": "5 tweets + 7-tweet thread + 3 cross-niche. Zero violations. Strong numbers, consequence-first, pipelineabuser energy."
-        },
-        {
-          "file": "CONTENT/social/posting_queue/inbound_audit_tweets_mar8.txt",
-          "pieces": 5,
-          "result": "APPROVED",
-          "notes": "Bug story, deliverability thread, tool stack, FormSubmit tip, self-roast. All clean."
-        },
-        {
-          "file": "CONTENT/social/posting_queue/COMPOUND_CYCLE_MAR8_1510.md",
-          "pieces": 17,
-          "result": "APPROVED",
-          "notes": "2 threads (13 tweets) + 10 standalone + 3 cross-niche + product spec + newsletter draft. Previous quality gate already caught fabricated cold email claim. Rewrite is clean."
-        }
-      ]
-    },
-    "ready_to_post_verified": {
-      "files_checked": 8,
-      "all_clean": true,
-      "details": "Mar 8 (4 tweets) and Mar 9 (4 tweets) all pass copy-style checklist."
-    },
-    "full_library_banned_word_scan": {
-      "scope": "CONTENT/social/ entire directory",
-      "total_grep_hits": 100,
-      "false_positives": 85,
-      "real_violations_in_older_content": 7,
-      "real_violations": [
-        "TIKTOK_VIRAL_STRATEGY_2026.md: Comprehensive in title + journey 4x",
-        "newsletter_launch_draft_20260307.md: journey 2x",
-        "pinterest_pins_20260307.md: Track your Ramadan journey",
-        "LINKEDIN_POSTS_30.md: journey 2x (lines 900-902)",
-        "devto_quora_cycle5_20260307.md: comprehensive crawling (describing competitor)"
-      ],
-      "violations_in_recent_content": 0
+    "blocked_files": [
+      {
+        "file": "CONTENT/social/auto_generated/auto_content_20260307_212910.csv",
+        "pieces": 30,
+        "result": "BLOCKED",
+        "failure_type": "TEMPLATE_SLOP",
+        "notes": "5 lazy prefix templates pasted before raw alpha text. Not voice-matched. 2 em dashes."
+      },
+      {
+        "file": "CONTENT/social/auto_generated/factory_arb_tweets_2026-03-05.md",
+        "pieces": 17,
+        "result": "BLOCKED",
+        "failure_type": "TEMPLATE_SLOP",
+        "notes": "Every tweet identical template with different product name. Zero variation. Bot-detectable."
+      },
+      {
+        "file": "CONTENT/social/auto_generated/factory_arb_tweets_2026-03-06.md",
+        "pieces": 13,
+        "result": "BLOCKED",
+        "failure_type": "TEMPLATE_SLOP",
+        "notes": "Same identical template as 03-05 file. 13 more copies."
+      },
+      {
+        "file": "CONTENT/social/auto_generated/alpha_content_2026_03_05.md",
+        "pieces": 50,
+        "result": "BLOCKED",
+        "failure_type": "TEMPLATE_SLOP",
+        "notes": "Industrial template slop. 8 alpha entries with IDENTICAL tweet/thread/reddit/newsletter. Banned phrase used 8+ times."
+      }
+    ],
+    "approved_files": [
+      {
+        "file": "OPS/CONTENT_QA_QUEUE/reddit_distribution_posts_streak_apps.md",
+        "pieces": 8,
+        "result": "APPROVED",
+        "notes": "HIGH QUALITY. Zero violations. Consequence-first. Specific numbers. Unique per post. Ready for posting."
+      }
+    ],
+    "flagged_files": [
+      {
+        "file": "OPS/CONTENT_QA_QUEUE/QA_2026-03-03_*-20260303-100124.md (3 files)",
+        "result": "FLAGGED",
+        "notes": "Empty QA wrappers. Auto-approved without reading source content. Status contradiction."
+      }
+    ],
+    "banned_word_scan": {
+      "auto_generated_dir": {
+        "banned_words_found": 0,
+        "em_dashes_found": 2,
+        "template_slop_detected": true
+      },
+      "qa_queue_dir": {
+        "total_grep_hits": 368,
+        "estimated_false_positives": 324,
+        "files_with_2plus_matches": 35,
+        "note": "Most hits from QA template checklist mentioning banned words. 35 files with 2+ matches likely have real violations."
+      }
     }
   },
+  "generator_health": {
+    "csv_auto_generator": {"status": "BROKEN", "issue": "Prefix template + raw paste", "fix_priority": "P1"},
+    "autonomous_factory": {"status": "BROKEN", "issue": "Single template for all products", "fix_priority": "P1"},
+    "scale_verdict_to_content": {"status": "BROKEN", "issue": "Identical templates for every alpha entry", "fix_priority": "P0"},
+    "alpha_content_generator": {"status": "FIXED", "note": "Holding since cycle 12"},
+    "ecom_listing_generator": {"status": "FIXED", "note": "Fixed cycle 14"},
+    "freelance_response_generator": {"status": "FIXED", "note": "Fixed cycle 14"}
+  },
   "most_common_failures": [
-    "fabricated_metrics (0 this cycle, 3 blocked last cycle -- improving)",
-    "banned_word_journey (7 in older content, 0 in new)",
-    "banned_word_landscape (3 last cycle, 0 this cycle)"
+    "template_slop (570 pieces total: 110 auto_generated + 460 CONTENT_QUEUE.csv)",
+    "copy_paste_threads (8 identical threads in one file)",
+    "banned_phrase_leaving_money_on_table (8 occurrences)",
+    "fake_consistent_stat (14423 repeated identically 8 times)"
   ],
   "trend": {
-    "direction": "improving",
+    "direction": "mixed — posting_queue excellent, auto_generated broken",
     "pass_rate_history": [
-      "96.3% (cycle 1)",
-      "97.9% (cycle 2)",
-      "45.4% / 100% (cycle 3)",
-      "94.4% / 100% (cycle 4)",
-      "52.6% / 97.4% (cycle 5)",
-      "81.8% / 95.5% (cycle 6)",
-      "81.5% / 100% (cycle 7)",
-      "29.4% / 56.9% (cycle 8)",
-      "73.7% / 73.7% (cycle 9)",
-      "65.6% / 100% (cycle 10)",
-      "86.4% / 100% (cycle 11)",
-      "91.7% / 100% (cycle 12)",
-      "71.2% / 100% (cycle 13)",
-      "89.9% / 100% (cycle 14)",
-      "89.5% / 96.1% (cycle 15)",
-      "100% / 100% (cycle 16) -- CLEANEST CYCLE"
-    ],
-    "key_findings_cycle_16": [
-      "100% first-pass rate -- best ever across 16 cycles",
-      "Zero fabricated metrics (cycle 15 blocks holding)",
-      "Zero banned words in recent content",
-      "Content generators producing consistently clean output",
-      "Self-policing working: COMPOUND_CYCLE had inline quality block before review"
+      "96.3% (cycle 1)", "97.9% (cycle 2)", "45.4%/100% (cycle 3)",
+      "94.4%/100% (cycle 4)", "52.6%/97.4% (cycle 5)", "81.8%/95.5% (cycle 6)",
+      "81.5%/100% (cycle 7)", "29.4%/56.9% (cycle 8)", "73.7%/73.7% (cycle 9)",
+      "65.6%/100% (cycle 10)", "86.4%/100% (cycle 11)", "91.7%/100% (cycle 12)",
+      "71.2%/100% (cycle 13)", "89.9%/100% (cycle 14)", "89.5%/96.1% (cycle 15)",
+      "100%/100% (cycle 16)", "1.4%/1.4% (cycle 17) -- full auto_generated + CONTENT_QUEUE audit"
     ],
     "remaining_persistent": [
       "cold-maxx.surge.sh 404",
-      "5 DNS-too-long surge.sh sites need shorter subdomains",
+      "5 DNS-too-long surge.sh sites",
       "4 streak pages missing OG tags",
-      "HUMAN BLOCKER: 400+ approved posts, 0 posted, Day 35 at $0"
+      "HUMAN: 400+ approved posts, 0 posted, Day 36 at $0",
+      "3 content generators need template variation or LLM rewrite"
     ]
   }
 }

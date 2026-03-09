@@ -25,7 +25,7 @@ This is the single source of truth for every product and listing in the PRINTMAX
 
 | Platform | Products Ready | Status | Est. Revenue/mo | Account Created? |
 |----------|---------------|--------|-----------------|------------------|
-| Gumroad | 13 products + 3 bundles | READY | $800-3,000 | NO |
+| Gumroad | 14 products + 3 bundles | READY | $900-3,500 | NO |
 | Whop | 8 products | READY | $200-800 | NO |
 | Etsy | 20 listings | READY | $300-1,200 | NO |
 | Redbubble | 20 POD designs | READY | $100-500 | NO |
@@ -65,6 +65,7 @@ This is the single source of truth for every product and listing in the PRINTMAX
 | 11 | 73 Cold Email Subject Lines | $29 | $15 | Business | `GUMROAD_INSTANT_UPLOAD/11_cold_email_subject_lines.md` | READY |
 | 12 | 50 Viral Tweet Templates | $19 | $9 | Marketing | `GUMROAD_INSTANT_UPLOAD/12_viral_tweet_templates.md` | READY |
 | 13 | Local Biz Cold Email Script Pack | $39 | $19 | Business | `GUMROAD_INSTANT_UPLOAD/13_local_biz_cold_email_pack.md` | READY |
+| 14 | The Claude Code Agent Bible | $49 | $29 | Software | `ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html` | READY |
 
 **Bundles (create after individual products):**
 
