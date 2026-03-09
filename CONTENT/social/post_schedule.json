@@ -1151,6 +1151,38 @@
     ],
     "bug_found": "competitive_intel_mar8.md reports background_reddit_scraper.py writes date_found to status column — alpha_auto_processor finds 0 PENDING_REVIEW. Schema fix needed."
   },
+  "social_poster_cycle_mar8_2213": {
+    "timestamp": "2026-03-08T22:13:00Z",
+    "action": "quality_gate_review_alpha_content_mar8_batch",
+    "warmup_phase": "LURK (Day 2)",
+    "new_content_scanned": {
+      "alpha_content_2026_03_08.md": "5 tweets + 1 thread (7t) + 3 cross-niche adaptations - APPROVED"
+    },
+    "quality_gate": {
+      "approved": 9,
+      "flagged": 0,
+      "notes": [
+        "$300k/mo Bible GPT claim: earnings_verified FALSE, method extraction solid",
+        "VA market $19.5B: real data, actionable pricing ladder",
+        "All pass copy-style.md: consequence-first, specific numbers, no AI slop, no em dashes"
+      ]
+    },
+    "new_files_created": 9,
+    "files": [
+      "twitter_PRINTMAXXER_mar19_0730_biblegpt.txt",
+      "twitter_PRINTMAXXER_mar19_1100_linkedin.txt",
+      "twitter_PRINTMAXXER_mar19_1430_zerocac.txt",
+      "twitter_PRINTMAXXER_mar19_1800_vamarket.txt",
+      "twitter_PRINTMAXXER_mar20_0730_famewall.txt",
+      "twitter_PRINTMAXXER_mar20_1100_THREAD_religiousapps.txt",
+      "twitter_PRINTMAXXER_mar20_1430_faith_angle.txt",
+      "twitter_PRINTMAXXER_mar20_1800_indiehacker.txt",
+      "twitter_PRINTMAXXER_mar21_0730_pricingladder.txt"
+    ],
+    "scheduling_note": "Mar 19-21 already has 4 slots/day from prior cycles. SOFT_LAUNCH allows 1-2/day. These files are OVERFLOW — post during GROWTH phase (Mar 27+) in gap dates (Mar 31, Apr 1-2) or as extra daily posts when 5/day is allowed.",
+    "source": "alpha_content_2026_03_08.md",
+    "new_total_queued": 182
+  },
   "content_autonomy_cycle3_mar8_2020": {
     "timestamp": "2026-03-08T20:20:00Z",
     "action": "content_autonomy_cycle3_generate_and_schedule",

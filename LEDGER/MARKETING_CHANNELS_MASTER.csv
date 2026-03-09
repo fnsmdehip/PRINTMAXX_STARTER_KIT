@@ -34,3 +34,7 @@ CH021,Email Automation - Brevo+Supabase (ALPHA16761),Email,Automated,322 users t
 CH022,Channel ROI Tracking (ALPHA16768),Multi,Analytics,N/A,28%/8%/6% conversion,$39 product,TBD,HIGH,Low,HIGH,READY,"Channel ROI for $39 digital product. Email 28%, Twitter 8%, Reddit 6% conversion. Most channels send traffic not buyers. Track channel ROI not traffic."
 CH023,OpenClaw Stack Replacement (ALPHA16321),Web,Infrastructure,N/A,N/A,Replaces $15k/mo stack,TBD,HIGHEST,High,HIGH,READY,OpenClaw replaces $15k/mo ops + marketing stack. Real setup from r/growthhacking. Directly relevant to our infrastructure.
 COLD_EMAIL_MICRO_COMMITMENTS,ALPHA18442,cold_email,HIGH,"One pain point per sequence. Micro-commitment CTA (reply yes/no) instead of direct-ask CTA (book a call). 8/10 actionability. Apply to all outbound sequences.",2026-03-08,ACTIVE
+
+ALPHA1136,LinkedIn High-Intent Targeting,OUTBOUND,"LinkedIn for B2B lead gen instead of cold email. Higher intent signals. $15k MRR claimed (UNVERIFIED). Method: target high-intent LinkedIn users with content + DM sequences. Less saturated than cold email.",HIGHEST,2026-03-08 21:33
+
+ALPHA1138,Community-Led Growth Zero CAC,GROWTH,"$149M ARR with near-zero CAC (SKEPTICAL - likely inflated). Core method: community-led or content flywheel growth. Build community first then monetize. Works for SaaS and info products.",HIGH,2026-03-08 21:33

@@ -1047,12 +1047,125 @@
       "note": "CYCLE5_OVERFLOW gap fill",
       "posted_at": null
     }
+    ,
+    {
+      "id": "pm-alpha-mar8-01",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-19T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar19_0730_biblegpt.txt",
+      "chars": 247,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: Bible GPT $300k/mo",
+      "earnings_verified": false,
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-02",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-19T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar19_1100_linkedin.txt",
+      "chars": 232,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: LinkedIn buyer-intent arbitrage",
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-03",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-19T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar19_1430_zerocac.txt",
+      "chars": 230,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: $149M ARR zero CAC",
+      "earnings_verified": false,
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-04",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-19T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar19_1800_vamarket.txt",
+      "chars": 280,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: VA market $19.5B pricing ladder",
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-05",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-20T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar20_0730_famewall.txt",
+      "chars": 262,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: Famewall $1K MRR testimonials",
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-06",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-20T11:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar20_1100_THREAD_religiousapps.txt",
+      "thread": true,
+      "tweet_count": 7,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW THREAD: Religious app market nobody talks about",
+      "earnings_verified": false,
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-07",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-20T14:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar20_1430_faith_angle.txt",
+      "chars": 278,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: Faith niche accountability gap",
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-08",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-20T18:00:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar20_1800_indiehacker.txt",
+      "chars": 272,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: Indie hacker wrong niches",
+      "posted_at": null
+    },
+    {
+      "id": "pm-alpha-mar8-09",
+      "platform": "twitter",
+      "account": "@PRINTMAXXER",
+      "scheduled": "2026-03-21T07:30:00",
+      "status": "queued",
+      "queue_file": "twitter_PRINTMAXXER_mar21_0730_pricingladder.txt",
+      "chars": 274,
+      "source": "alpha_content_2026_03_08.md",
+      "note": "OVERFLOW: Service pricing ladder",
+      "posted_at": null
+    }
   ],
   "summary": {
     "total_posted": 0,
-    "total_queued": 164,
+    "total_queued": 173,
     "last_post_date": null,
-    "coverage_through": "2026-04-18",
+    "coverage_through": "2026-04-21",
     "new_content_added_mar7_cycle6": {
       "sources": [
         "competitor_counter_content_cycle4_20260307.md (5 standalones + 1 thread + 1 reply bait + 1 community bait)",
