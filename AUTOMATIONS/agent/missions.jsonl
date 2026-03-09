@@ -132,3 +132,8 @@
 {"ts": "2026-03-08T23:00:04.040730", "mission": "health_heal", "result": "success", "duration_s": 3.9, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-08T23:00:04.221086", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 34 response drafts, 32 listing drafts"}
 {"ts": "2026-03-08T23:00:33.357776", "mission": "gen_content_eve", "result": "success", "duration_s": 29.1, "output": "Generated content from 3 sources, saved to AGENT_CONTENT_20260308.md"}
+{"ts": "2026-03-08T23:00:34.535131", "mission": "safety_commit", "result": "success", "duration_s": 1.2, "output": "Git safety commit"}
+{"ts": "2026-03-08T23:00:36.542157", "mission": "screen_alpha_night", "result": "success", "duration_s": 2.0, "output": "Screened batch from 12905 pending entries"}
+{"ts": "2026-03-09T00:06:00.244706", "mission": "research_night", "result": "failed", "duration_s": 360.0, "output": "0/3 scrapers completed"}
+{"ts": "2026-03-09T00:08:00.278784", "mission": "upgrade_night", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-09T00:09:30.316293", "mission": "hunt_night", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}

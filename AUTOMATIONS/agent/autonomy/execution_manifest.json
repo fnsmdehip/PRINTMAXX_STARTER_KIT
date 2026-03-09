@@ -1,0 +1,56 @@
+[
+  {
+    "task_id": "Add analytics script to all pages",
+    "description": "Add analytics script to all pages",
+    "source": "monetization_audit",
+    "priority": "MEDIUM",
+    "status": "READY_FOR_EXECUTION",
+    "assigned_agent": "asset_deployer",
+    "created_at": "2026-03-08T23:17:33.384676"
+  },
+  {
+    "task_id": "Add affiliate links to SleepMaxx, ColdMa",
+    "description": "Add affiliate links to SleepMaxx, ColdMaxx, MealMaxx",
+    "source": "monetization_audit",
+    "priority": "MEDIUM",
+    "status": "READY_FOR_EXECUTION",
+    "assigned_agent": "asset_deployer",
+    "created_at": "2026-03-08T23:17:33.384680"
+  },
+  {
+    "task_id": "Redeploy updated pages to surge.sh",
+    "description": "Redeploy updated pages to surge.sh",
+    "source": "monetization_audit",
+    "priority": "MEDIUM",
+    "status": "READY_FOR_EXECUTION",
+    "assigned_agent": "asset_deployer",
+    "created_at": "2026-03-08T23:17:33.384681"
+  },
+  {
+    "task_id": "Analytics: Add Plausible/GA to all 7 pag",
+    "description": "Analytics: Add Plausible/GA to all 7 pages",
+    "source": "monetization_audit",
+    "priority": "MEDIUM",
+    "status": "READY_FOR_EXECUTION",
+    "assigned_agent": "asset_deployer",
+    "created_at": "2026-03-08T23:17:33.384683"
+  },
+  {
+    "task_id": "SleepMaxx: Add affiliate links for WHOOP",
+    "description": "SleepMaxx: Add affiliate links for WHOOP, Oura Ring",
+    "source": "monetization_audit",
+    "priority": "MEDIUM",
+    "status": "READY_FOR_EXECUTION",
+    "assigned_agent": "asset_deployer",
+    "created_at": "2026-03-08T23:17:33.384684"
+  },
+  {
+    "task_id": "MealMaxx + SleepMaxx: Replace email CTAs",
+    "description": "MealMaxx + SleepMaxx: Replace email CTAs with payment links on Pro sections",
+    "source": "monetization_audit",
+    "priority": "MEDIUM",
+    "status": "READY_FOR_EXECUTION",
+    "assigned_agent": "asset_deployer",
+    "created_at": "2026-03-08T23:17:33.384685"
+  }
+]

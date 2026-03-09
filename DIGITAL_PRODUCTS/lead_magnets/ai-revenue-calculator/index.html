@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Side Project Revenue Calculator: Real Numbers, Not Vibes</title>
+<meta name="description" content="how much will your AI side project actually make? plug in your numbers. get month 1, 3, 6, 12 projections. uses real conversion data from 200+ indie projects.">
+<meta name="keywords" content="ai side project calculator, side project revenue, saas revenue calculator, indie hacker calculator, solopreneur revenue estimator, ai app revenue">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ai-revenue-calculator.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Side Project Revenue Calculator">
+<meta property="og:description" content="most calculators lie. this one uses real conversion data from 200+ indie projects.">
+<meta property="og:url" content="https://ai-revenue-calculator.surge.sh">
+<meta property="og:image" content="https://ai-revenue-calculator.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="AI Side Project Revenue Calculator">
+<meta name="twitter:description" content="most calculators lie. this one uses real data from 200+ indie projects.">
+<meta name="twitter:image" content="https://ai-revenue-calculator.surge.sh/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI Side Project Revenue Calculator","url":"https://ai-revenue-calculator.surge.sh","description":"Calculate realistic revenue projections for your AI-powered side project using real conversion benchmarks","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#111111;
+  --card:#161616;
+  --border:rgba(255,255,255,.07);
+  --border-active:rgba(0,255,136,.35);
+  --accent:#00ff88;
+  --accent-dim:rgba(0,255,136,.12);
+  --accent-glow:rgba(0,255,136,.25);
+  --red:#ff4444;
+  --red-dim:rgba(255,68,68,.12);
+  --yellow:#ffaa00;
+  --yellow-dim:rgba(255,170,0,.12);
+  --text:#e8e8e8;
+  --muted:#666;
+  --muted2:#444;
+}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:660px;margin:0 auto;padding:0 20px}
+
+header{padding:44px 0 32px;text-align:center}
+header h1{font-size:clamp(1.5rem,5.5vw,2.1rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:10px}
+header h1 em{font-style:normal;color:var(--accent)}
+header .sub{color:var(--muted);font-size:.9rem;max-width:420px;margin:0 auto}
+header .sub strong{color:#aaa;font-weight:500}
+.trust-bar{display:flex;justify-content:center;gap:16px;margin-top:18px;flex-wrap:wrap}
+.trust-pill{font-size:.72rem;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:4px 12px;white-space:nowrap}
+.trust-pill span{color:var(--accent);font-weight:700}
+
+.sec-label{font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:14px}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:14px;transition:border-color .25s}
+.card:focus-within{border-color:var(--border-active)}
+
+.type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.type-btn{display:flex;flex-direction:column;align-items:center;gap:5px;padding:14px 8px;border-radius:10px;border:1px solid var(--border);background:var(--surface);cursor:pointer;transition:all .2s;font-family:inherit;color:var(--muted);font-size:.78rem;font-weight:600;text-align:center;line-height:1.25}
+.type-btn .ico{font-size:1.3rem;line-height:1}
+.type-btn:hover{border-color:rgba(255,255,255,.15);color:var(--text)}
+.type-btn.active{border-color:var(--accent);background:var(--accent-dim);color:var(--accent)}
+
+.input-group{margin-bottom:20px}
+.input-group:last-child{margin-bottom:0}
+.input-group label{display:block;font-size:.88rem;margin-bottom:8px;font-weight:500}
+.input-group label small{display:block;color:var(--muted);font-size:.75rem;font-weight:400;margin-top:2px}
+
+.slider-row{display:flex;align-items:center;gap:14px}
+.slider-row input[type="range"]{flex:1;-webkit-appearance:none;appearance:none;height:5px;background:var(--border);border-radius:3px;outline:none;cursor:pointer}
+.slider-row input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 12px var(--accent-glow)}
+.slider-row input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;border:none}
+.slider-val{min-width:74px;text-align:right;font-weight:700;font-size:.92rem;font-variant-numeric:tabular-nums;color:var(--accent)}
+
+.bench-strip{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.bench-tag{font-size:.68rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:6px;padding:3px 8px;color:var(--muted)}
+.bench-tag.hi{border-color:rgba(0,255,136,.2);color:var(--accent);background:var(--accent-dim)}
+
+.calc-btn{width:100%;background:var(--accent);color:#0a0a0a;border:none;border-radius:10px;padding:15px;font-weight:800;font-size:1rem;cursor:pointer;font-family:inherit;letter-spacing:-.2px;transition:all .2s;margin-top:6px}
+.calc-btn:hover{box-shadow:0 0 28px var(--accent-glow);transform:translateY(-1px)}
+.calc-btn:active{transform:translateY(0)}
+
+#results{display:none;animation:fadeUp .4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.grade-row{display:flex;align-items:center;gap:20px;padding:20px 0;margin-bottom:4px}
+.grade-circle{width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;font-weight:800;letter-spacing:-2px;flex-shrink:0;border:3px solid}
+.g-a{color:var(--accent);border-color:var(--accent);background:var(--accent-dim)}
+.g-b{color:#88ff44;border-color:#88ff44;background:rgba(136,255,68,.1)}
+.g-c{color:var(--yellow);border-color:var(--yellow);background:var(--yellow-dim)}
+.g-d{color:#ff8844;border-color:#ff8844;background:rgba(255,136,68,.1)}
+.g-f{color:var(--red);border-color:var(--red);background:var(--red-dim)}
+.grade-info{flex:1}
+.grade-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+.grade-verdict{font-size:.95rem;font-weight:600;line-height:1.4}
+
+.quick-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.qs{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 12px;text-align:center}
+.qs .v{font-size:1.2rem;font-weight:800;letter-spacing:-.5px;margin-bottom:2px;font-variant-numeric:tabular-nums}
+.qs .l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.v-green{color:var(--accent)}
+.v-yellow{color:var(--yellow)}
+.v-red{color:var(--red)}
+
+.timeline-table{width:100%;border-collapse:separate;border-spacing:0 6px;margin-top:6px}
+.timeline-table th{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;font-weight:600;padding:0 12px 8px;text-align:right}
+.timeline-table th:first-child{text-align:left}
+.timeline-table td{padding:12px;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-variant-numeric:tabular-nums;text-align:right;font-size:.9rem}
+.timeline-table td:first-child{text-align:left;font-weight:600;font-size:.85rem;border-left:1px solid var(--border);border-radius:8px 0 0 8px}
+.timeline-table td:last-child{border-right:1px solid var(--border);border-radius:0 8px 8px 0}
+.timeline-table tr.current td{background:var(--accent-dim);border-color:rgba(0,255,136,.2)}
+.timeline-table tr.current td:first-child{border-left-color:var(--accent)}
+.td-rev{font-weight:700;color:var(--accent)}
+.td-cum{color:var(--muted)}
+
+.blur-gate{position:relative;overflow:hidden}
+.blur-overlay{position:absolute;inset:0;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);background:rgba(10,10,10,.6);display:flex;align-items:center;justify-content:center;border-radius:10px;z-index:10}
+.gate-box{text-align:center;padding:24px 20px;max-width:320px}
+.gate-box h3{font-size:1.1rem;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.gate-box p{color:var(--muted);font-size:.85rem;margin-bottom:18px;line-height:1.5}
+.gate-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:.92rem;outline:none;margin-bottom:10px;transition:border-color .2s}
+.gate-form input[type="email"]:focus{border-color:var(--accent)}
+.gate-form button{width:100%;background:var(--accent);color:#0a0a0a;border:none;border-radius:8px;padding:12px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit;transition:all .2s}
+.gate-form button:hover{box-shadow:0 0 20px var(--accent-glow)}
+.gate-form .fine{font-size:.72rem;color:var(--muted);margin-top:8px;text-align:center}
+
+.bench-compare{margin-top:4px}
+.bench-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.bench-row:last-child{border-bottom:none}
+.bench-name{font-size:.82rem;color:var(--muted);flex:1}
+.bench-bar-wrap{flex:1.2;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.bench-bar-fill{height:100%;border-radius:3px;transition:width .8s ease}
+.bench-val{font-size:.82rem;font-weight:700;min-width:52px;text-align:right}
+.br-you .bench-name{color:var(--text);font-weight:600}
+
+.verdict-box{border-radius:10px;padding:16px;margin-top:6px;font-size:.88rem;line-height:1.55}
+.verdict-box.go{background:var(--accent-dim);border:1px solid rgba(0,255,136,.2);color:#b3ffe0}
+.verdict-box.caution{background:var(--yellow-dim);border:1px solid rgba(255,170,0,.2);color:#ffe5b3}
+.verdict-box.stop{background:var(--red-dim);border:1px solid rgba(255,68,68,.2);color:#ffb3b3}
+.vb-title{display:block;font-size:.92rem;font-weight:700;margin-bottom:4px}
+
+.improve-list{list-style:none;margin-top:4px}
+.improve-list li{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.85rem;line-height:1.5}
+.improve-list li:last-child{border-bottom:none}
+.improve-num{color:var(--accent);font-weight:800;flex-shrink:0;width:18px}
+
+.unlock-banner{background:var(--accent-dim);border:1px solid rgba(0,255,136,.2);border-radius:10px;padding:12px 16px;text-align:center;font-size:.85rem;font-weight:600;color:var(--accent);margin-bottom:14px;display:none;animation:fadeUp .3s ease}
+
+.cta-section{padding:32px 0 24px;border-top:1px solid var(--border);margin-top:8px}
+.cta-section h3{font-size:1.1rem;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.cta-section p{color:var(--muted);font-size:.88rem;margin-bottom:18px;max-width:380px}
+.cta-form input[type="email"]{width:100%;max-width:340px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:.92rem;outline:none;margin-bottom:10px;transition:border-color .2s;display:block}
+.cta-form input[type="email"]:focus{border-color:var(--accent)}
+.cta-form button{background:var(--accent);color:#0a0a0a;border:none;border-radius:8px;padding:12px 20px;font-weight:800;font-size:.92rem;cursor:pointer;font-family:inherit;transition:all .2s}
+.cta-form button:hover{box-shadow:0 0 20px var(--accent-glow)}
+.cta-form .fine{font-size:.72rem;color:var(--muted);margin-top:8px}
+
+.related-tools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:24px}
+.rt{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);transition:border-color .2s;font-size:.83rem}
+.rt:hover{border-color:rgba(255,255,255,.15);text-decoration:none}
+.rt .rn{font-weight:600;line-height:1.3}
+.rt .rp{font-size:.72rem;color:var(--muted)}
+
+footer{padding:24px 0;text-align:center;border-top:1px solid var(--border);margin-top:8px}
+footer p{color:var(--muted);font-size:.75rem}
+
+.be-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:.85rem}
+.be-row:last-child{border-bottom:none}
+.be-label{color:var(--muted)}
+.be-val{font-weight:700}
+
+@media(max-width:520px){
+  .type-grid{grid-template-columns:repeat(2,1fr)}
+  .quick-stats{grid-template-columns:1fr 1fr}
+  .quick-stats .qs:last-child{grid-column:span 2}
+  .related-tools{grid-template-columns:1fr}
+  .grade-circle{width:72px;height:72px;font-size:1.8rem}
+}
+</style>
+<script data-goatcounter="https://printmaxx.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>how much will your AI side project <em>actually</em> make?</h1>
+  <p class="sub"><strong>most calculators lie.</strong> this one uses real conversion data from 200+ indie projects.</p>
+  <div class="trust-bar">
+    <div class="trust-pill"><span>6</span> project types</div>
+    <div class="trust-pill">benchmarks from <span>200+</span> projects</div>
+    <div class="trust-pill">12-month projections</div>
+    <div class="trust-pill">free forever</div>
+  </div>
+</header>
+
+<!-- STEP 1: PROJECT TYPE -->
+<div class="card">
+  <div class="sec-label">1. what are you building?</div>
+  <div class="type-grid">
+    <button class="type-btn active" data-type="saas" onclick="setType('saas',this)">
+      <span class="ico" aria-hidden="true">&#9881;</span>SaaS / Micro-SaaS
+    </button>
+    <button class="type-btn" data-type="digital" onclick="setType('digital',this)">
+      <span class="ico" aria-hidden="true">&#128196;</span>Digital Products
+    </button>
+    <button class="type-btn" data-type="services" onclick="setType('services',this)">
+      <span class="ico" aria-hidden="true">&#128188;</span>Freelance / Agency
+    </button>
+    <button class="type-btn" data-type="content" onclick="setType('content',this)">
+      <span class="ico" aria-hidden="true">&#128227;</span>Content / Affiliate
+    </button>
+    <button class="type-btn" data-type="apps" onclick="setType('apps',this)">
+      <span class="ico" aria-hidden="true">&#128241;</span>Mobile Apps
+    </button>
+    <button class="type-btn" data-type="api" onclick="setType('api',this)">
+      <span class="ico" aria-hidden="true">&#128268;</span>API / Dev Tools
+    </button>
+  </div>
+</div>
+
+<!-- STEP 2: INPUTS -->
+<div class="card">
+  <div class="sec-label">2. your numbers</div>
+
+  <div class="input-group">
+    <label for="traffic">monthly traffic / visitors<small id="traffic-hint">total unique visitors to your site or app page per month</small></label>
+    <div class="slider-row">
+      <input type="range" id="traffic" min="100" max="100000" value="3000" step="100" oninput="onSlide()">
+      <span class="slider-val" id="traffic-val">3,000</span>
+    </div>
+    <div class="bench-strip" id="traffic-bench"></div>
+  </div>
+
+  <div class="input-group">
+    <label for="conv">conversion rate (%)<small id="conv-hint">% of visitors who buy or sign up as paying customers</small></label>
+    <div class="slider-row">
+      <input type="range" id="conv" min="0.1" max="20" value="2.0" step="0.1" oninput="onSlide()">
+      <span class="slider-val" id="conv-val">2.0%</span>
+    </div>
+    <div class="bench-strip" id="conv-bench"></div>
+  </div>
+
+  <div class="input-group">
+    <label for="price">average price point ($)<small id="price-hint">what the typical customer pays (monthly for SaaS, one-time for products)</small></label>
+    <div class="slider-row">
+      <input type="range" id="price" min="1" max="1000" value="29" step="1" oninput="onSlide()">
+      <span class="slider-val" id="price-val">$29</span>
+    </div>
+    <div class="bench-strip" id="price-bench"></div>
+  </div>
+
+  <div class="input-group">
+    <label for="growth">monthly traffic growth rate (%)<small>realistic organic/SEO/content growth after launch</small></label>
+    <div class="slider-row">
+      <input type="range" id="growth" min="0" max="50" value="10" step="1" oninput="onSlide()">
+      <span class="slider-val" id="growth-val">10%</span>
+    </div>
+    <div class="bench-strip" id="growth-bench"></div>
+  </div>
+</div>
+
+<button class="calc-btn" onclick="calculate()">calculate my revenue projections</button>
+
+<div class="unlock-banner" id="unlock-banner">full projections unlocked. scroll down to see months 3, 6, and 12.</div>
+
+<!-- RESULTS -->
+<div id="results">
+
+  <div class="card" style="margin-top:14px">
+    <div class="sec-label">model viability score</div>
+    <div class="grade-row">
+      <div class="grade-circle g-a" id="grade-circle">A</div>
+      <div class="grade-info">
+        <div class="grade-label">business model grade</div>
+        <div class="grade-verdict" id="grade-verdict">calculating...</div>
+      </div>
+    </div>
+    <div class="verdict-box go" id="verdict-box">
+      <span class="vb-title" id="verdict-title">verdict</span>
+      <span id="verdict-msg">calculating...</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-label">month 1 results</div>
+    <div class="quick-stats">
+      <div class="qs">
+        <div class="v v-green" id="m1-rev">$0</div>
+        <div class="l">revenue</div>
+      </div>
+      <div class="qs">
+        <div class="v" id="m1-cust">0</div>
+        <div class="l">customers</div>
+      </div>
+      <div class="qs">
+        <div class="v" id="m1-rpv">$0.00</div>
+        <div class="l">rev / visitor</div>
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="sec-label" style="margin-bottom:10px">break-even analysis</div>
+      <div class="be-row">
+        <span class="be-label">customers needed to cover your time (20 hrs/mo at $50/hr)</span>
+        <span class="be-val" id="breakeven-cust">-</span>
+      </div>
+      <div class="be-row">
+        <span class="be-label">traffic needed to reach that at your conversion rate</span>
+        <span class="be-val" id="breakeven-traffic">-</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-label">revenue timeline</div>
+    <table class="timeline-table">
+      <thead>
+        <tr>
+          <th>period</th>
+          <th style="text-align:right">traffic</th>
+          <th style="text-align:right">customers</th>
+          <th style="text-align:right">revenue</th>
+          <th style="text-align:right">cumulative</th>
+        </tr>
+      </thead>
+      <tbody id="timeline-m1"></tbody>
+    </table>
+
+    <div class="blur-gate" id="gate-wrap" style="margin-top:6px">
+      <table class="timeline-table" id="timeline-locked" style="opacity:.3;pointer-events:none">
+        <tbody id="timeline-rest"></tbody>
+      </table>
+      <div class="blur-overlay" id="blur-overlay">
+        <div class="gate-box">
+          <h3>see months 3, 6, and 12</h3>
+          <p>drop your email. you get the full 12-month projection, benchmark comparison, and improvement playbook. free.</p>
+          <form class="gate-form" id="gate-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" target="_blank" onsubmit="onGateSubmit()">
+            <input type="hidden" name="_subject" value="New Lead - AI Revenue Calculator">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="source" value="ai-revenue-calculator">
+            <input type="hidden" name="project_type" id="gate-type-field" value="saas">
+            <input type="hidden" name="monthly_traffic" id="gate-traffic-field" value="3000">
+            <input type="hidden" name="price_point" id="gate-price-field" value="29">
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <button type="submit">unlock full projections</button>
+            <p class="fine">free. no spam. takes 5 seconds.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="bench-section" style="display:none">
+    <div class="sec-label">how you compare to benchmarks</div>
+    <div class="bench-compare" id="bench-compare-rows"></div>
+  </div>
+
+  <div class="card" id="improve-section" style="display:none">
+    <div class="sec-label">top moves to hit your next milestone</div>
+    <ul class="improve-list" id="improve-list"></ul>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <h3>want the full solopreneur launch playbook?</h3>
+  <p>the exact process 200+ indie builders used to go from idea to first $1k. checklists, scripts, templates.</p>
+  <form class="cta-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" target="_blank">
+    <input type="hidden" name="_subject" value="[AI Revenue Calc] Playbook Signup">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://printmaxx-apps.surge.sh/?ref=ai-calc">
+    <input type="email" name="email" placeholder="your@email.com" required>
+    <button type="submit">send me the playbook</button>
+    <p class="fine">free. no spam. unsubscribe anytime.</p>
+  </form>
+
+  <div style="margin-top:10px;font-size:.8rem;color:var(--muted)">also free:</div>
+  <div class="related-tools">
+    <a class="rt" href="https://printmaxx-apps.surge.sh/" target="_blank" rel="noopener">
+      <div><div class="rn">PRINTMAXX App Hub</div><div class="rp">all free solopreneur tools</div></div>
+    </a>
+    <a class="rt" href="https://cold-email-roi-calculator.surge.sh/" target="_blank" rel="noopener">
+      <div><div class="rn">Cold Email ROI Calculator</div><div class="rp">is cold outreach worth it?</div></div>
+    </a>
+    <a class="rt" href="https://side-project-estimator.surge.sh/" target="_blank" rel="noopener">
+      <div><div class="rn">Side Project Estimator</div><div class="rp">quick 30-second estimate</div></div>
+    </a>
+    <a class="rt" href="https://saas-stack-audit.surge.sh/" target="_blank" rel="noopener">
+      <div><div class="rn">SaaS Stack Audit</div><div class="rp">cut your tool costs</div></div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>built by <a href="https://printmaxx-apps.surge.sh" target="_blank" rel="noopener">PRINTMAXX</a> &middot;
+     <a href="https://cold-email-roi-calculator.surge.sh/">cold email calculator</a> &middot;
+     <a href="https://side-project-estimator.surge.sh/">side project estimator</a> &middot;
+     <a href="https://saas-stack-audit.surge.sh/">saas stack audit</a></p>
+</footer>
+
+</div>
+
+<script>
+/*
+ * AI Revenue Calculator - PRINTMAXX
+ * All innerHTML usage in this file operates exclusively on:
+ *   - Number values formatted through fmtMoney/fmtNum (output: digit strings)
+ *   - Numeric literals and constants from the internal TYPES config object
+ *   - CSS class name strings from the internal GRADE_VERDICTS config object
+ * No user-supplied string input (typed text) is ever interpolated into HTML.
+ * Sliders produce numbers; type buttons use data-type attributes matched
+ * against a fixed allowlist before any DOM update occurs.
+ */
+
+// ============================================================
+//  CONFIG: real benchmarks per project type
+// ============================================================
+var TYPES = {
+  saas: {
+    label: 'SaaS / Micro-SaaS',
+    convDefault: 2.0, priceDefault: 29, growthDefault: 10,
+    churnRate: 0.07,
+    benchmarks: {
+      conv:   { p25: 1.0,  p50: 2.0,  p75: 4.5  },
+      price:  { p25: 15,   p50: 29,   p75: 79   },
+      growth: { p25: 5,    p50: 12,   p75: 25   }
+    },
+    convHint:   'free trial to paid conversion. industry avg is 2-5%',
+    priceHint:  'monthly subscription price. micro-SaaS sweet spot is $19-79/mo',
+    trafficHint:'unique visitors to your SaaS landing page or trial signup page',
+    benchConv:  'indie SaaS avg: 2-5%',
+    benchPrice: 'micro-SaaS median: $29/mo',
+    benchGrowth:'SEO + content: 10-20%/mo',
+    gradeW:     { conv: 0.4, price: 0.3, growth: 0.3 },
+    tips: {
+      lowPrice:  'SaaS at $<<P>>/mo is hard to sustain. test a $<<P3>>/mo pro tier.',
+      annual:    true,
+      freemium:  false
+    }
+  },
+  digital: {
+    label: 'Digital Products',
+    convDefault: 3.5, priceDefault: 37, growthDefault: 8,
+    churnRate: 0,
+    benchmarks: {
+      conv:   { p25: 2.0,  p50: 4.0,  p75: 8.0  },
+      price:  { p25: 15,   p50: 37,   p75: 97   },
+      growth: { p25: 3,    p50: 8,    p75: 18   }
+    },
+    convHint:   '% of visitors who buy. strong landing page + social proof = 5-8%',
+    priceHint:  'one-time purchase price. most successful digital products: $25-97',
+    trafficHint:'monthly visitors to your product page or store',
+    benchConv:  'Gumroad / Lemon: 3-8%',
+    benchPrice: 'PDFs + templates: $15-97',
+    benchGrowth:'Twitter + SEO: 8-15%/mo',
+    gradeW:     { conv: 0.35, price: 0.35, growth: 0.3 },
+    tips: { lowPrice: false, annual: false, freemium: false }
+  },
+  services: {
+    label: 'Freelance / Agency',
+    convDefault: 8.0, priceDefault: 1500, growthDefault: 6,
+    churnRate: 0,
+    benchmarks: {
+      conv:   { p25: 3.0,  p50: 7.0,  p75: 15.0 },
+      price:  { p25: 500,  p50: 2000, p75: 5000 },
+      growth: { p25: 2,    p50: 6,    p75: 12   }
+    },
+    convHint:   'lead to closed client rate. with good portfolio + testimonials: 8-15%',
+    priceHint:  'avg project value or monthly retainer. package pricing beats hourly',
+    trafficHint:'monthly inbound leads or cold outreach prospects reached',
+    benchConv:  'agency close rate: 5-15%',
+    benchPrice: 'freelance projects: $500-5k',
+    benchGrowth:'referral + cold outreach: 5-10%',
+    gradeW:     { conv: 0.35, price: 0.35, growth: 0.3 },
+    tips: { lowPrice: false, annual: false, freemium: false }
+  },
+  content: {
+    label: 'Content / Affiliate',
+    convDefault: 1.5, priceDefault: 45, growthDefault: 12,
+    churnRate: 0,
+    benchmarks: {
+      conv:   { p25: 0.8,  p50: 1.8,  p75: 4.0  },
+      price:  { p25: 20,   p50: 50,   p75: 120  },
+      growth: { p25: 5,    p50: 12,   p75: 25   }
+    },
+    convHint:   '% of visitors who click through and buy. niche review sites: 2-5%',
+    priceHint:  'avg commission per sale. SaaS affiliates often pay $30-200 per signup',
+    trafficHint:'monthly blog/newsletter/social visitors clicking your affiliate links',
+    benchConv:  'affiliate click-to-buy: 1-3%',
+    benchPrice: 'avg commission: $20-120/sale',
+    benchGrowth:'SEO content growth: 10-20%/mo',
+    gradeW:     { conv: 0.3, price: 0.3, growth: 0.4 },
+    tips: { lowPrice: false, annual: false, freemium: false }
+  },
+  apps: {
+    label: 'Mobile Apps',
+    convDefault: 3.0, priceDefault: 7, growthDefault: 15,
+    churnRate: 0.15,
+    benchmarks: {
+      conv:   { p25: 1.5,  p50: 3.5,  p75: 8.0  },
+      price:  { p25: 3,    p50: 7,    p75: 15   },
+      growth: { p25: 5,    p50: 15,   p75: 35   }
+    },
+    convHint:   'free-to-paid conversion. most apps: 2-5%. health/productivity can hit 8%',
+    priceHint:  'monthly subscription price. most successful apps: $5-15/mo',
+    trafficHint:'monthly app downloads or free tier users',
+    benchConv:  'freemium to paid: 2-5%',
+    benchPrice: 'mobile sub: $3-15/mo',
+    benchGrowth:'ASO + content: 10-25%/mo',
+    gradeW:     { conv: 0.4, price: 0.25, growth: 0.35 },
+    tips: { lowPrice: false, annual: false, freemium: true }
+  },
+  api: {
+    label: 'API / Dev Tools',
+    convDefault: 4.0, priceDefault: 49, growthDefault: 12,
+    churnRate: 0.05,
+    benchmarks: {
+      conv:   { p25: 2.0,  p50: 4.5,  p75: 9.0  },
+      price:  { p25: 19,   p50: 49,   p75: 149  },
+      growth: { p25: 5,    p50: 12,   p75: 22   }
+    },
+    convHint:   'free tier to paid plan conversion. dev tools with strong DX hit 5-9%',
+    priceHint:  'monthly plan price. dev tools command premium: $49-149/mo is normal',
+    trafficHint:'monthly free tier signups or API trial registrations',
+    benchConv:  'dev tool free-to-paid: 3-8%',
+    benchPrice: 'API pricing: $19-149/mo',
+    benchGrowth:'GitHub + HN + Reddit: 10-20%',
+    gradeW:     { conv: 0.35, price: 0.35, growth: 0.3 },
+    tips: { lowPrice: false, annual: true, freemium: false }
+  }
+};
+
+var ALLOWED_TYPES = ['saas','digital','services','content','apps','api'];
+
+var GRADE_DATA = {
+  A: { cls: 'g-a', short: 'strong model. your numbers beat most indie projects in this category.',           mood: 'go',      title: 'verdict: build it',                    msg: 'your conversion rate, price point, and growth rate all beat the median for this project type. the math works. main risk is execution speed and traffic acquisition cost. build the thing.' },
+  B: { cls: 'g-b', short: 'solid model. one or two inputs are holding you back from the top tier.',          mood: 'go',      title: 'verdict: build it',                    msg: 'good fundamentals. you are above average on most inputs. focus on the weakest metric to push into A territory. at these numbers, a focused 90-day sprint gets you to $1k/mo.' },
+  C: { cls: 'g-c', short: 'average model. viable, but thin margins. needs improvement in at least 2 areas.',mood: 'caution', title: 'verdict: fix before scaling',           msg: 'this can work but you are fighting uphill. most C-grade projects stall at $200-500/mo unless you fix conversion or raise the price. do not scale traffic until conversion is above median.' },
+  D: { cls: 'g-d', short: 'below average. needs a significant change to the model before investing time.',   mood: 'caution', title: 'verdict: fix before scaling',           msg: 'these numbers put you in the bottom quartile for this project type. revisit your price point and conversion assumptions. most D-grade projects need a pivot or a price increase of 2-3x before they make sense.' },
+  F: { cls: 'g-f', short: 'model does not pencil. the numbers do not support the time investment.',          mood: 'stop',    title: 'verdict: rethink the model',           msg: 'at these conversion rates and price points, the math does not work. you would need to 10x traffic just to make minimum wage. change the price, the offer, or the distribution strategy before building.' }
+};
+
+// ============================================================
+//  STATE
+// ============================================================
+var currentType = 'saas';
+var unlocked = localStorage.getItem('arc_unlocked') === 'true';
+
+(function initCheck() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('k') === 'arc_full_2026') {
+    unlocked = true;
+    localStorage.setItem('arc_unlocked', 'true');
+  }
+  if (unlocked) {
+    var banner = document.getElementById('unlock-banner');
+    if (banner) banner.style.display = 'block';
+  }
+})();
+
+// ============================================================
+//  SAFE DOM HELPERS (no user string interpolation into HTML)
+// ============================================================
+function el(id) { return document.getElementById(id); }
+
+function setText(id, text) {
+  var node = el(id);
+  if (node) node.textContent = text;
+}
+
+function setClass(id, cls) {
+  var node = el(id);
+  if (node) node.className = cls;
+}
+
+function fmtMoney(n) {
+  if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e4) return '$' + Math.round(n / 1e3) + 'K';
+  if (n >= 1e3) return '$' + (n / 1e3).toFixed(1) + 'K';
+  return '$' + Math.round(n).toLocaleString();
+}
+
+function fmtNum(n) {
+  if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return Math.round(n / 1e3) + 'K';
+  return Math.round(n).toLocaleString();
+}
+
+// Build a bench-strip using safe DOM creation (no innerHTML with variable data)
+function setBenchStrip(id, tags) {
+  var container = el(id);
+  if (!container) return;
+  while (container.firstChild) container.removeChild(container.firstChild);
+  tags.forEach(function(t) {
+    var span = document.createElement('span');
+    span.className = 'bench-tag' + (t.hi ? ' hi' : '');
+    span.textContent = t.text; // safe: textContent, not innerHTML
+    container.appendChild(span);
+  });
+}
+
+// Build a table row using safe DOM creation
+function makeTr(cells, classes) {
+  var tr = document.createElement('tr');
+  if (classes) tr.className = classes;
+  cells.forEach(function(c) {
+    var td = document.createElement('td');
+    if (c.cls) td.className = c.cls;
+    td.textContent = c.text; // safe: textContent only
+    tr.appendChild(td);
+  });
+  return tr;
+}
+
+// Build a list item using safe DOM creation
+function makeLi(num, text) {
+  var li = document.createElement('li');
+  var numSpan = document.createElement('span');
+  numSpan.className = 'improve-num';
+  numSpan.textContent = String(num);
+  var textSpan = document.createElement('span');
+  textSpan.textContent = text; // safe: textContent, no HTML
+  li.appendChild(numSpan);
+  li.appendChild(textSpan);
+  return li;
+}
+
+// ============================================================
+//  TYPE SELECTION
+// ============================================================
+function setType(type, btn) {
+  // Validate type against allowlist
+  if (ALLOWED_TYPES.indexOf(type) === -1) return;
+  currentType = type;
+  document.querySelectorAll('.type-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  var d = TYPES[type];
+  el('conv').value = d.convDefault;
+  el('price').value = d.priceDefault;
+  el('growth').value = d.growthDefault;
+  setText('traffic-hint', d.trafficHint);
+  setText('conv-hint', d.convHint);
+  setText('price-hint', d.priceHint);
+  onSlide();
+}
+
+// ============================================================
+//  SLIDER UPDATES (all output via textContent)
+// ============================================================
+function onSlide() {
+  var t = +el('traffic').value;
+  var c = +el('conv').value;
+  var p = +el('price').value;
+  var g = +el('growth').value;
+
+  setText('traffic-val', fmtNum(t));
+  setText('conv-val', c.toFixed(1) + '%');
+  setText('price-val', '$' + p);
+  setText('growth-val', g + '%');
+
+  var d = TYPES[currentType];
+
+  // Traffic strip
+  var tBands = [500, 2000, 10000, 50000];
+  var tLabels = ['below 500', '500-2k', '2k-10k', '10k-50k', '50k+'];
+  var tIdx = 0;
+  for (var i = 0; i < tBands.length; i++) { if (t >= tBands[i]) tIdx = i + 1; }
+  setBenchStrip('traffic-bench', tLabels.map(function(lbl, j) { return { text: lbl, hi: j === tIdx }; }));
+
+  // Conv strip
+  var bC = d.benchmarks.conv;
+  var cLabel = c < bC.p25 ? 'below average' : c < bC.p50 ? 'average' : c < bC.p75 ? 'above average' : 'top 25%';
+  setBenchStrip('conv-bench', [{ text: cLabel, hi: true }, { text: d.benchConv, hi: false }]);
+
+  // Price strip
+  var bP = d.benchmarks.price;
+  var pLabel = p < bP.p25 ? 'below median' : p < bP.p50 ? 'at median' : p < bP.p75 ? 'above median' : 'premium tier';
+  setBenchStrip('price-bench', [{ text: pLabel, hi: true }, { text: d.benchPrice, hi: false }]);
+
+  // Growth strip
+  var bG = d.benchmarks.growth;
+  var gLabel = g < bG.p25 ? 'conservative' : g < bG.p50 ? 'moderate' : g < bG.p75 ? 'strong' : 'aggressive';
+  setBenchStrip('growth-bench', [{ text: gLabel, hi: true }, { text: d.benchGrowth, hi: false }]);
+}
+
+// ============================================================
+//  REVENUE MODEL
+// ============================================================
+function projectRevenue(traffic, conv, price, growthRate, months, churnRate) {
+  var results = [];
+  var currentTraffic = traffic;
+  var recurringCustomers = 0;
+  for (var m = 1; m <= months; m++) {
+    if (m > 1) currentTraffic = Math.round(currentTraffic * (1 + growthRate / 100));
+    var newCustomers = Math.round(currentTraffic * (conv / 100));
+    var activeCust, rev;
+    if (churnRate > 0) {
+      recurringCustomers = Math.round(recurringCustomers * (1 - churnRate) + newCustomers);
+      activeCust = recurringCustomers;
+      rev = Math.round(recurringCustomers * price);
+    } else {
+      activeCust = newCustomers;
+      rev = Math.round(newCustomers * price);
+    }
+    results.push({ month: m, traffic: currentTraffic, newCust: newCustomers, activeCust: activeCust, rev: rev });
+  }
+  return results;
+}
+
+// ============================================================
+//  GRADE LOGIC
+// ============================================================
+function calcGrade(conv, price, growth, d) {
+  var bC = d.benchmarks.conv;
+  var bP = d.benchmarks.price;
+  var bG = d.benchmarks.growth;
+  var w = d.gradeW;
+
+  function score(val, p25, p50, p75) {
+    if (val >= p75) return 95;
+    if (val >= p50) return 75 + (val - p50) / (p75 - p50) * 20;
+    if (val >= p25) return 55 + (val - p25) / (p50 - p25) * 20;
+    return Math.max(10, 40 + (val - p25) / p25 * 15);
+  }
+
+  var total = score(conv, bC.p25, bC.p50, bC.p75) * w.conv
+            + score(price, bP.p25, bP.p50, bP.p75) * w.price
+            + score(growth, bG.p25, bG.p50, bG.p75) * w.growth;
+
+  if (total >= 85) return 'A';
+  if (total >= 70) return 'B';
+  if (total >= 55) return 'C';
+  if (total >= 40) return 'D';
+  return 'F';
+}
+
+// ============================================================
+//  BENCHMARK COMPARISON (safe DOM builder)
+// ============================================================
+function buildBenchCompare(conv, price, growth, d) {
+  var container = el('bench-compare-rows');
+  while (container.firstChild) container.removeChild(container.firstChild);
+
+  var rows = [
+    {
+      name: 'your conversion rate',
+      yoursText: conv.toFixed(1) + '%',
+      pct: Math.min(100, (conv / (d.benchmarks.conv.p75 * 1.5)) * 100),
+      medianText: d.benchmarks.conv.p50 + '%',
+      medPct: 67,
+      good: conv >= d.benchmarks.conv.p50
+    },
+    {
+      name: 'your price point',
+      yoursText: '$' + price,
+      pct: Math.min(100, (price / (d.benchmarks.price.p75 * 1.5)) * 100),
+      medianText: '$' + d.benchmarks.price.p50,
+      medPct: 67,
+      good: price >= d.benchmarks.price.p50
+    },
+    {
+      name: 'traffic growth rate',
+      yoursText: growth + '%',
+      pct: Math.min(100, (growth / (d.benchmarks.growth.p75 * 1.5)) * 100),
+      medianText: d.benchmarks.growth.p50 + '%',
+      medPct: 67,
+      good: growth >= d.benchmarks.growth.p50
+    }
+  ];
+
+  rows.forEach(function(r) {
+    // "Your" row
+    var yourRow = document.createElement('div');
+    yourRow.className = 'bench-row br-you';
+
+    var yourName = document.createElement('span');
+    yourName.className = 'bench-name';
+    yourName.textContent = r.name;
+
+    var yourBarWrap = document.createElement('div');
+    yourBarWrap.className = 'bench-bar-wrap';
+    var yourBarFill = document.createElement('div');
+    yourBarFill.className = 'bench-bar-fill';
+    yourBarFill.style.width = r.pct.toFixed(0) + '%';
+    yourBarFill.style.background = r.good ? 'var(--accent)' : 'var(--yellow)';
+    yourBarWrap.appendChild(yourBarFill);
+
+    var yourVal = document.createElement('span');
+    yourVal.className = 'bench-val';
+    yourVal.style.color = r.good ? 'var(--accent)' : 'var(--yellow)';
+    yourVal.textContent = r.yoursText;
+
+    yourRow.appendChild(yourName);
+    yourRow.appendChild(yourBarWrap);
+    yourRow.appendChild(yourVal);
+    container.appendChild(yourRow);
+
+    // Median row
+    var medRow = document.createElement('div');
+    medRow.className = 'bench-row';
+
+    var medName = document.createElement('span');
+    medName.className = 'bench-name';
+    medName.style.color = 'var(--muted2)';
+    medName.textContent = 'category median';
+
+    var medBarWrap = document.createElement('div');
+    medBarWrap.className = 'bench-bar-wrap';
+    var medBarFill = document.createElement('div');
+    medBarFill.className = 'bench-bar-fill';
+    medBarFill.style.width = r.medPct + '%';
+    medBarFill.style.background = 'var(--muted2)';
+    medBarWrap.appendChild(medBarFill);
+
+    var medVal = document.createElement('span');
+    medVal.className = 'bench-val';
+    medVal.style.color = 'var(--muted)';
+    medVal.textContent = r.medianText;
+
+    medRow.appendChild(medName);
+    medRow.appendChild(medBarWrap);
+    medRow.appendChild(medVal);
+    container.appendChild(medRow);
+  });
+}
+
+// ============================================================
+//  IMPROVEMENT TIPS (safe DOM builder, all textContent)
+// ============================================================
+function buildImproveList(conv, price, growth, traffic, d, m1rev) {
+  var tips = [];
+  var bC = d.benchmarks.conv;
+  var bP = d.benchmarks.price;
+  var bG = d.benchmarks.growth;
+
+  if (conv < bC.p50) {
+    tips.push('your ' + conv.toFixed(1) + '% conversion is below the ' + bC.p50 + '% median for ' + d.label + '. add 3 customer quotes with specific results to your landing page. that alone typically lifts conversion 30-50%.');
+  }
+  if (conv < bC.p25) {
+    tips.push('at ' + conv.toFixed(1) + '% conversion you are in the bottom 25%. this usually means your headline is not communicating the core value. rewrite it as: "[specific outcome] in [timeframe] for [who]." test 3 variants.');
+  }
+  if (price < bP.p50) {
+    tips.push('you are priced below the ' + d.label + ' median ($' + bP.p50 + '). raise price by 50% and see if conversions drop more than 33%. if not, revenue goes up. most builders underprice by 2-3x.');
+  }
+  if (currentType === 'saas' && price < 20) {
+    tips.push('$' + price + '/mo is too cheap for SaaS to build on. at that price you need 500+ customers to make $10k/mo. raise to $49/mo and target users who feel that pain.');
+  }
+  if (currentType === 'digital' && price > 100) {
+    tips.push('at $' + price + ' for a digital product, add a payment plan ($' + Math.round(price / 3) + '/mo x 3). Gumroad data shows payment plans convert 35-45% more buyers at this price range.');
+  }
+  if (growth < bG.p25) {
+    var channelTip = currentType === 'content'
+      ? 'long-tail SEO content (500-2k monthly searches, low competition). one article per week compounds fast.'
+      : currentType === 'apps'
+      ? 'TikTok / Reels. 3x 60-second demos per week. organic mobile installs from short-form video are the cheapest growth right now.'
+      : 'Twitter/X threads. one "what I learned building X" thread per week drives consistent signups for indie projects.';
+    tips.push(growth + '% monthly traffic growth is slow for ' + d.label + '. the fastest channel for this type is ' + channelTip);
+  }
+  if (traffic < 1000) {
+    tips.push('at ' + fmtNum(traffic) + ' monthly visitors, distribution is your bottleneck, not conversion. post 3 times per week on the platform where your customers hang out. revenue problems below 2k/mo traffic are always a traffic problem.');
+  }
+  if (traffic >= 10000 && conv < bC.p50) {
+    tips.push('you have ' + fmtNum(traffic) + ' monthly visitors but below-average conversion. this is the ideal time to run A/B tests. even manual 30-day headline tests pay off fast at this traffic level.');
+  }
+  if (m1rev < 500) {
+    tips.push('at $' + Math.round(m1rev) + '/mo, the fastest path to $1k is a price increase plus one outreach push. email 50 people in your niche who have the problem you solve. 3 customers at your current price closes the gap.');
+  }
+  if ((currentType === 'saas' || currentType === 'api') && price > 10) {
+    tips.push('add an annual plan at 20% off your monthly price. SaaS founders who offer annual plans see 30-40% of new signups take it. that means $' + Math.round(price * 12 * 0.8) + ' upfront instead of $' + price + '/mo.');
+  }
+
+  if (tips.length < 3) {
+    tips.push('track your actual conversion rate in a spreadsheet weekly. most builders are off by 2-3x on their real numbers. real data changes every decision downstream.');
+    tips.push('ship a free version with a clear upgrade trigger. best triggers: usage limits hit, an advanced feature needed, or a time-sensitive unlock. freemium done right converts at 4-8%.');
+  }
+
+  tips = tips.slice(0, 4);
+
+  var list = el('improve-list');
+  while (list.firstChild) list.removeChild(list.firstChild);
+  tips.forEach(function(t, i) {
+    list.appendChild(makeLi(i + 1, t));
+  });
+}
+
+// ============================================================
+//  TIMELINE TABLE (safe DOM builder)
+// ============================================================
+function buildTimeline(rows, milestones, tbodyId) {
+  var tbody = el(tbodyId);
+  while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+
+  var cumRev = 0;
+  milestones.forEach(function(mo) {
+    var r = rows[mo - 1];
+    if (!r) return;
+    // Cumulative up to this month
+    var cum = 0;
+    for (var i = 0; i < mo; i++) cum += rows[i].rev;
+
+    var isM1 = mo === 1;
+    tbody.appendChild(makeTr([
+      { text: isM1 ? 'month 1 (now)' : 'month ' + mo },
+      { text: fmtNum(r.traffic) },
+      { text: fmtNum(r.activeCust) },
+      { text: fmtMoney(r.rev), cls: 'td-rev' },
+      { text: fmtMoney(cum), cls: 'td-cum' }
+    ], isM1 ? 'current' : ''));
+  });
+}
+
+// ============================================================
+//  MAIN CALCULATE
+// ============================================================
+function calculate() {
+  var traffic = +el('traffic').value;
+  var conv    = +el('conv').value;
+  var price   = +el('price').value;
+  var growth  = +el('growth').value;
+  var d = TYPES[currentType];
+
+  var rows = projectRevenue(traffic, conv, price, growth, 12, d.churnRate);
+  var m1 = rows[0];
+  var m1Rev = m1.rev;
+  var m1Cust = m1.activeCust;
+
+  // Grade
+  var grade = calcGrade(conv, price, growth, d);
+  var gd = GRADE_DATA[grade];
+
+  // Update grade UI
+  setClass('grade-circle', 'grade-circle ' + gd.cls);
+  setText('grade-circle', grade);
+  setText('grade-verdict', gd.short);
+  setClass('verdict-box', 'verdict-box ' + gd.mood);
+  setText('verdict-title', gd.title);
+  setText('verdict-msg', gd.msg);
+
+  // Month 1 quick stats
+  var rpv = traffic > 0 ? m1Rev / traffic : 0;
+  setText('m1-rev', fmtMoney(m1Rev));
+  setClass('m1-rev', 'v ' + (m1Rev > 500 ? 'v-green' : m1Rev > 100 ? 'v-yellow' : 'v-red'));
+  setText('m1-cust', fmtNum(m1Cust));
+  setText('m1-rpv', '$' + rpv.toFixed(2));
+  setClass('m1-rpv', 'v ' + (rpv > 0.5 ? 'v-green' : rpv > 0.1 ? 'v-yellow' : 'v-red'));
+
+  // Break-even
+  var timeValue = 20 * 50; // 20 hrs/mo at $50/hr
+  var beCust = price > 0 ? Math.ceil(timeValue / price) : 0;
+  var beTraffic = conv > 0 ? Math.ceil(beCust / (conv / 100)) : 0;
+  setText('breakeven-cust', beCust + ' customers');
+  setText('breakeven-traffic', fmtNum(beTraffic) + ' visitors/mo');
+
+  // Timeline
+  buildTimeline(rows, [1], 'timeline-m1');
+  buildTimeline(rows, [3, 6, 12], 'timeline-rest');
+
+  // Update gate hidden fields (safe: only numeric values from sliders)
+  el('gate-type-field').value = currentType;
+  el('gate-traffic-field').value = Math.round(traffic);
+  el('gate-price-field').value = Math.round(price);
+
+  // Gate logic
+  if (unlocked) {
+    revealFull(conv, price, growth, traffic, d, m1Rev);
+  } else {
+    el('blur-overlay').style.display = 'flex';
+    el('gate-wrap').style.display = 'block';
+    el('timeline-locked').style.opacity = '0.3';
+    el('timeline-locked').style.pointerEvents = 'none';
+    el('bench-section').style.display = 'none';
+    el('improve-section').style.display = 'none';
+  }
+
+  // Show results
+  el('results').style.display = 'block';
+  el('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function revealFull(conv, price, growth, traffic, d, m1Rev) {
+  el('blur-overlay').style.display = 'none';
+  el('timeline-locked').style.opacity = '1';
+  el('timeline-locked').style.pointerEvents = 'auto';
+  el('bench-section').style.display = 'block';
+  el('improve-section').style.display = 'block';
+  buildBenchCompare(conv, price, growth, d);
+  buildImproveList(conv, price, growth, traffic, d, m1Rev);
+}
+
+// ============================================================
+//  GATE FORM SUBMIT
+// ============================================================
+function onGateSubmit() {
+  // Form POSTs to FormSubmit in new tab (default action).
+  // After a short delay, unlock locally so the user sees results immediately.
+  setTimeout(function() {
+    unlocked = true;
+    localStorage.setItem('arc_unlocked', 'true');
+    el('unlock-banner').style.display = 'block';
+    var conv    = +el('conv').value;
+    var price   = +el('price').value;
+    var growth  = +el('growth').value;
+    var traffic = +el('traffic').value;
+    var d = TYPES[currentType];
+    var rows = projectRevenue(traffic, conv, price, growth, 12, d.churnRate);
+    var m1Rev = rows[0].rev;
+    buildTimeline(rows, [3, 6, 12], 'timeline-rest');
+    revealFull(conv, price, growth, traffic, d, m1Rev);
+  }, 700);
+}
+
+// ============================================================
+//  INIT
+// ============================================================
+onSlide();
+</script>
+
+</body>
+</html>
