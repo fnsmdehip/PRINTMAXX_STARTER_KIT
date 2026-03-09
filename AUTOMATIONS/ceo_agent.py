@@ -71,6 +71,8 @@ _trajectory = TrajectoryLogger("ceo_agent")
 
 # === GUARDRAILS (inherited from ops_manager) ===
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
+OPS = PROJECT / "OPS"
+AUTOMATIONS = PROJECT / "AUTOMATIONS"
 CEO_DIR = PROJECT / "AUTOMATIONS" / "agent" / "ceo_agent"
 STATE_FILE = CEO_DIR / "ceo_state.json"
 DECISION_LOG = CEO_DIR / "decisions.jsonl"
