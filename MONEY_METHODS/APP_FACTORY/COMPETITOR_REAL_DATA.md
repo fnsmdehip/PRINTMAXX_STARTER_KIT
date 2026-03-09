@@ -1,9 +1,9 @@
 # Competitor Real Data: Verified Pricing, Revenue, Features (Feb 2026)
 
-**Date:** 2026-02-12 (UPDATED with Sensor Tower revenue data, Business of Apps stats, verified pricing)
-**Method:** Web searches, App Store listings, Business of Apps, Sensor Tower estimates, CNBC/TechCrunch reporting, company press releases
+**Date:** 2026-03-08 (UPDATED with March 2026 Sensor Tower data, fitness/streak tracker category, screen time updates, blur app intel)
+**Method:** Web searches, App Store listings, Business of Apps, Sensor Tower estimates, Speedinvest, Starter Story, PaywallScreens, company press releases
 **Purpose:** Real verified data for every competitor app in our target categories. No speculation. Sourced and dated.
-**Supersedes:** Previous version from 2026-02-12 (added revenue/month data, market signals, pricing matrix)
+**Supersedes:** Previous version from 2026-02-12
 
 ---
 
@@ -138,11 +138,15 @@
 | Metric | Verified Data | Source |
 |--------|--------------|--------|
 | **Current Price** | $3.99 one-time (iOS), Free (Android with IAP) | App Store, Google Play |
-| **Users** | 4M+ active, 2M+ paying | forestapp.cc |
+| **Users** | 2M+ paying, 44M lifetime downloads | forestapp.cc (March 2026) |
 | **Trees Planted** | 1.5M+ real trees since 2016 | Trees for the Future partnership |
-| **App Store Rating** | 4.7 stars (170K+ ratings iOS) | App Store |
+| **App Store Rating** | 4.82 stars (47K+ ratings iOS) | App Store (March 2026 scan) |
+| **Revenue Model** | Freemium + one-time purchase (iOS), IAP Time Crystals | forestapp.cc |
 | **Revenue Est** | $200-500K/month | Industry estimates |
 | **Key Mechanic** | Plant virtual tree during focus. Leave app = tree dies. | forestapp.cc |
+| **Countries Ranked** | Top productivity app in 136 countries | forestapp.cc |
+| **Latest Version** | 5.9.0 (updated March 4, 2026) | App Store |
+| **New Feature** | Forest Plus (launched Dec 2025) | forestapp.cc |
 | **Platform** | iOS + Android + Chrome Extension | forestapp.cc |
 
 **User Complaints:**
@@ -160,11 +164,12 @@
 
 | Metric | Verified Data | Source |
 |--------|--------------|--------|
-| **Current Price** | $9.99/week OR $99.99/year | opal.so/pricing |
+| **Current Price** | $20/month OR $100/year OR $400 lifetime | opal.so/pricing (March 2026) |
+| **Student Plan** | $9.99/week OR $99.99/year | opal.so |
 | **Monthly Downloads** | 200K/month | Sensor Tower |
-| **Monthly Revenue** | $400K/month | Sensor Tower (Sept 2024) |
-| **Team Size** | 11 people | Speedinvest |
-| **Revenue Est** | ~$10M ARR | Speedinvest |
+| **Revenue 2024** | $10.3M (up from $6.3M in 2023, +63% YoY) | Latka/Speedinvest |
+| **Team Size** | 11 people (was 66 in Latka data) | Speedinvest |
+| **App Store Rating** | 4.79 stars (68K+ ratings) | App Store (March 2026 scan) |
 | **Key Features** | Focus sessions, smart schedules, app limits, weekly reports, collectible gems, Deep Focus (can't stop early) | opal.so |
 | **Free Tier** | Very limited: 1 recurring session only | opal.so |
 | **Platform** | iOS and macOS only (no Android) | opal.so |
@@ -173,9 +178,9 @@
 - "$100/yr is expensive for a focus app"
 - Free version very limited
 - iOS/macOS only limits reach
-- Android version has battery drain (8GB+ data usage)
+- "Most expensive screen time app" (2-3x competitors)
 
-**Key insight:** 11 people, $10M ARR. Proves premium screen time pricing works with aggressive performance marketing.
+**Key insight:** 11 people, $10.3M revenue. 63% YoY growth. Premium pricing ($100/yr) works with Deep Focus lock-in mechanic. Proves aggressive screen time pricing viable.
 
 ---
 
@@ -201,10 +206,14 @@
 | Metric | Verified Data | Source |
 |--------|--------------|--------|
 | **Current Price** | $5.99 one-time (iOS only) | App Store |
+| **Monthly Downloads** | 10K/month | Sensor Tower (March 2026) |
+| **Monthly Revenue** | $30K/month ($360K ARR) | Sensor Tower (March 2026) |
 | **Habit Limit** | Up to 24 tasks (was 12, increased) | streaksapp.com |
 | **Key Features** | 78 color themes, 600+ task icons, Apple Watch, Health integration, negative habits, Siri Shortcuts, Vision Pro support | streaksapp.com |
 | **Awards** | Apple Design Award 2016 | App Store |
-| **App Store Rating** | 4.8 stars (20K+ ratings) | App Store |
+| **App Store Rating** | 4.82 stars (27K+ ratings) | App Store (March 2026 scan) |
+| **Latest Version** | 11.2.3 (updated March 5, 2026) | App Store |
+| **Developer** | Crunchy Bagel Pty Ltd (Adelaide, Australia) | App Store |
 | **Platform** | Apple ecosystem only (iPhone, iPad, Apple Watch, Mac, Vision Pro) | streaksapp.com |
 
 **User Complaints:**
@@ -213,7 +222,7 @@
 - No detailed statistics
 - Can't set different schedules easily
 
-**Our edge for Streakr:** Cross-platform. Better stats. Community features. Social accountability. GitHub heatmap visualization.
+**Our edge for Streakr:** Cross-platform. Better stats. Community features. Social accountability. GitHub heatmap visualization. $30K/mo on a $5.99 one-time purchase = loyal base. We can beat this with subscription model.
 
 ---
 
@@ -236,15 +245,16 @@
 | Metric | Verified Data | Source |
 |--------|--------------|--------|
 | **Current Price** | $9.99/month OR $69.99/year (Finch Plus) | finchcare.com |
-| **Monthly Downloads (iOS)** | 600K/month | Sensor Tower (Feb 2026) |
-| **Monthly Downloads (Android)** | 500K/month | Sensor Tower (Feb 2026) |
-| **Monthly Revenue (iOS)** | $2M/month | Sensor Tower |
-| **Monthly Revenue (Android)** | $1M/month | Sensor Tower |
-| **Total Revenue** | ~$36M ARR ($3M/month combined) | Sensor Tower |
-| **App Store Rating** | 4.9 stars (300K+ ratings) | App Store |
+| **Monthly Downloads (iOS)** | 400K/month | Sensor Tower (March 2026) |
+| **Monthly Downloads (Android)** | 300K/month | Sensor Tower (March 2026) |
+| **Monthly Revenue (iOS)** | $2M/month | Sensor Tower (March 2026) |
+| **Monthly Revenue (Android)** | $900K/month | Sensor Tower (March 2026) |
+| **Total Revenue** | ~$34.8M ARR ($2.9M/month combined) | Sensor Tower (March 2026) |
+| **App Store Rating** | 4.95 stars (653K+ ratings) | App Store (March 2026 scan) |
+| **Latest Version** | 3.73.135 (updated March 5, 2026) | App Store |
 | **Key Features** | Virtual pet care, self-care journeys, daily check-ins, mood tracking, breathing exercises, guided reflections, sleep routine | finchcare.com |
 
-**CRITICAL INSIGHT:** Finch is a $36M ARR self-care PET app. 1.1M downloads/month. Virtual pet mechanic is incredibly powerful for retention. Consider adding companion/pet element to our apps.
+**CRITICAL INSIGHT:** Finch is a ~$35M ARR self-care PET app. 700K downloads/month. 4.95 stars with 653K ratings (near-perfect). Virtual pet mechanic is incredibly powerful for retention. Consider adding companion/pet element to our apps. Paywall documented at $900K/mo on Google Play alone.
 
 ---
 
@@ -363,7 +373,126 @@
 
 ---
 
-## VERIFIED PRICING COMPARISON MATRIX (Feb 2026)
+## FITNESS/WORKOUT TRACKER CATEGORY (Added March 2026)
+
+### 19. Hevy
+
+| Metric | Verified Data | Source |
+|--------|--------------|--------|
+| **Current Price** | $8.99/month OR $59.99/year (Pro) | hevy.com/pricing (March 2026) |
+| **Historical Price** | Was $3.99/mo, $23.99/yr, $74.99 lifetime | BoringCashCow (2022 data) |
+| **Users** | 10M+ (up from 1.5M in late 2023) | hevyapp.com |
+| **Monthly Downloads** | 400K/month | Sensor Tower (March 2026) |
+| **Monthly Revenue** | $600K/month (~$7.2M ARR) | Sensor Tower (March 2026) |
+| **MRR** | $160K (as of April 2024) | Starter Story |
+| **Team Size** | 13 people (was 8 in 2022) | Starter Story/Latka |
+| **App Store Rating** | 4.92 stars (60K+ ratings) | App Store (March 2026 scan) |
+| **Founders** | Guillem Ros + Desmond McNamee (founded 2019) | RevenueCAT podcast |
+| **Tech Stack** | React Native | BoringCashCow |
+| **Growth** | 0 to 2M downloads with no paid marketing, 77% traffic organic/SEO | RevenueCAT, BoringCashCow |
+| **Free Tier** | Unlimited workout logging, limited analytics | hevy.com |
+| **Latest Version** | 3.0.1 (updated March 6, 2026) | App Store |
+| **Coach Product** | Hevy Coach: separate B2B product for personal trainers | hevycoach.com |
+| **Platform** | iOS + Android + Web | hevy.com |
+
+**Key insight:** Hevy grew from $40K/mo to $600K/mo in ~2 years. 10M users with zero paid marketing. Price increased 2.5x ($3.99 to $8.99/mo) as they scaled. React Native build = fast cross-platform. Coach product = B2B revenue lane.
+
+---
+
+### 20. Strong
+
+| Metric | Verified Data | Source |
+|--------|--------------|--------|
+| **Current Price** | $4.99/month OR $29.99/year (Pro) | App Store |
+| **Monthly Downloads** | 100K/month | Sensor Tower (March 2026) |
+| **Monthly Revenue** | $500K/month (~$6M ARR) | Sensor Tower (March 2026) |
+| **Team Size** | 19 employees | PitchBook |
+| **App Store Rating** | 4.86 stars (108K+ ratings) | App Store (March 2026 scan) |
+| **Founded** | 2017 (Singapore) | PitchBook |
+| **Latest Version** | 6.2.8 (updated Feb 23, 2026) | App Store |
+| **Platform** | iOS + Android | App Store, Google Play |
+
+**User Complaints (2026 reviews):**
+- Interface feels dated compared to Hevy
+- No AI coaching or workout generation
+- Lacks smart recommendations
+- "Showing its age in 2026"
+
+**Key insight:** $500K/mo on a dated app. Vulnerable to disruption from AI-powered alternatives. Strong's weakness = our opportunity for AI-first workout tracker.
+
+---
+
+### 21. Fitbod
+
+| Metric | Verified Data | Source |
+|--------|--------------|--------|
+| **Current Price** | $15.99/month OR $95.99/year | App Store (March 2026) |
+| **Free Trial** | 3 free workouts | App Store |
+| **App Store Rating** | 4.82 stars (265K+ ratings) | App Store (March 2026 scan) |
+| **Key Features** | AI algorithm for personalized workouts, progressive overload, recovery-aware programming, equipment profiles, Apple Watch | fitbod.me |
+| **Latest Version** | 8.7.0 (updated March 6, 2026) | App Store |
+| **2026 Updates** | Smarter recovery programming, better volume/fatigue management, improved exercise substitutions | Fitness Drum review |
+| **Platform** | iOS + Android | fitbod.me |
+
+**Key insight:** Highest-priced workout tracker at $95.99/yr. Positions as AI-first. Premium pricing works when AI delivers real value (personalized plans, not just logging).
+
+---
+
+## SCREEN TIME / FOCUS CATEGORY (Updated March 2026)
+
+### 22. one sec
+
+| Metric | Verified Data | Source |
+|--------|--------------|--------|
+| **Current Price** | $19/year (Pro) | one-sec.app |
+| **Free Tier** | Basic features, free download | App Store |
+| **App Store Rating** | 4.83 stars (22K+ ratings) | App Store (March 2026 scan) |
+| **Developer** | Frederik Riedel (indie dev, riedel.wtf apps S.L.) | one-sec.app |
+| **Key Mechanic** | Breathing exercise intervention before opening target apps | one-sec.app |
+| **Results** | 50%+ average screen time reduction | one-sec.app |
+| **Latest Version** | 5.1 (updated Dec 17, 2025) | App Store |
+| **Intervention Types** | Immediate (blocks before app opens), Delayed (short use then block), Always Ask | one-sec.app |
+| **Platform** | iOS + Android + Desktop | one-sec.app |
+
+**Key insight:** Cheapest screen time app at $19/yr. Intervention-based approach (pause before opening) is psychologically distinct from blocking. Indie dev, not a corporation. Lean operation = high margins.
+
+---
+
+### 23. ScreenZen
+
+| Metric | Verified Data | Source |
+|--------|--------------|--------|
+| **App Store Rating** | 4.85 stars (33K+ ratings) | App Store (March 2026 scan) |
+| **Key Features** | Mindful prompts before opening apps, daily limits per app, math problems as interventions, website blocking, to-do list integration | screenzen.co |
+| **Latest Version** | 1.2.175 (updated Feb 6, 2026) | App Store |
+| **New 2026 Features** | Global Lock Settings (single lock timer + passcode), Halo device blocking (physical proximity-based) | App Store |
+| **Dynamic Island** | Unlock countdown in Dynamic Island, one-tap relock | App Store (2026 update) |
+| **Platform** | iOS + Android | screenzen.co |
+
+**Key insight:** ScreenZen added hardware (Halo device) for physical proximity-based blocking. Hardware + software play in screen time is emerging. Their "math problems as intervention" mechanic is clever.
+
+---
+
+### 24. Monocle (Desktop Focus / Blur App)
+
+| Metric | Verified Data | Source |
+|--------|--------------|--------|
+| **Current Price** | $9 one-time (1 seat) OR $20 (3 seats) | Gumroad |
+| **Free Trial** | 7-day trial | Gumroad |
+| **Developer** | Dominik Kandravy (solo indie dev, built with AI/Cursor) | Product Hunt |
+| **Product Hunt** | 323 upvotes (Monocle 2.0 launch) | Product Hunt |
+| **Reddit r/SideProject** | 149 upvotes, 31 comments on blur focus post | Reddit (March 2026) |
+| **Version** | 3.0.3 | Gumroad |
+| **Key Mechanic** | Blur everything except active window. Shake cursor to activate. | Gumroad/Product Hunt |
+| **Blur Modes** | Gradient (keeps context) + Fullscreen (max immersion) | mactreasure.com |
+| **Platform** | macOS 14.6+ only | Gumroad |
+| **Built With** | Zero coding experience, AI + Cursor, restarted 3x before v1.0 | Product Hunt |
+
+**Threat assessment:** LOW threat to our focus/productivity apps. Monocle is desktop-only (macOS), our apps are mobile PWAs. Different modality entirely. However, the "blur distractions" concept validates demand for visual focus tools. Could be a feature inside Vault (blur notifications, dim background on lock screen).
+
+---
+
+## VERIFIED PRICING COMPARISON MATRIX (March 2026)
 
 | App | Monthly | Annual | Lifetime | One-Time | Revenue/Mo |
 |-----|---------|--------|----------|----------|-----------|
@@ -373,11 +502,11 @@
 | Calm | $16.99 | $69.99 | $399.99 | N/A | ~$25M |
 | Headspace | $12.99 | $69.99 | $399.99 | N/A | ~$17M |
 | Forest | N/A | N/A | N/A | $3.99 iOS | $200-500K est |
-| Opal | ~$40/mo | $99.99 | N/A | N/A | $400K |
+| Opal | $20.00 | $100.00 | $400.00 | N/A | ~$860K est |
 | Structured | $1.49 | $19.99 | $64.99 | $29.99 Pro | $200K |
-| Streaks | N/A | N/A | N/A | $5.99 | $50-100K est |
-| Habitify | $7.49 | $39.99 | $89.99 | N/A | ~$100K est |
-| Finch | $9.99 | $69.99 | N/A | N/A | $3M |
+| Streaks | N/A | N/A | N/A | $5.99 | $30K |
+| Habitify | $7.49 | $39.99 | $89.99 | N/A | ~$21K |
+| Finch | $9.99 | $69.99 | N/A | N/A | $2.9M |
 | Fabulous | N/A | $39.99 | N/A | N/A | $100K |
 | Cal AI | $10.00 | $30.00 | N/A | N/A | $4M |
 | Noom | $17-59 | $209 | N/A | N/A | ~$83M |
@@ -385,6 +514,12 @@
 | Strava | $11.99 | $79.99 | N/A | N/A | ~$23M |
 | Muslim Pro | varies | varies | N/A | N/A | $2.5-4M est |
 | Athan | varies | varies | varies | N/A | $332K |
+| **Hevy** | $8.99 | $59.99 | N/A | N/A | $600K |
+| **Strong** | $4.99 | $29.99 | N/A | N/A | $500K |
+| **Fitbod** | $15.99 | $95.99 | N/A | N/A | N/A |
+| **one sec** | N/A | $19.00 | N/A | N/A | N/A |
+| **ScreenZen** | N/A | N/A | N/A | N/A | N/A |
+| **Monocle** | N/A | N/A | N/A | $9.00 | N/A |
 
 ---
 
@@ -402,7 +537,7 @@
 
 ---
 
-## KEY MARKET SIGNALS (Feb 2026)
+## KEY MARKET SIGNALS (March 2026)
 
 ### 1. AI Features Are Now Table Stakes
 - Noom: AI Face Scan + Future Me visualization (2025)
@@ -454,6 +589,34 @@
 - Separate meal planner at premium tier
 - **Implication:** Market validates standalone meal planning as a premium feature. Mise at $24.99/yr undercuts by 75%.
 
+### 11. Hevy Scaled From $40K/mo to $600K/mo With Zero Paid Marketing
+- 10M users, React Native, 77% organic/SEO traffic
+- Price increased 2.5x as they scaled ($3.99 to $8.99/mo)
+- Launched B2B coach product (hevycoach.com)
+- **Implication:** Workout tracking is massive. SEO + community (subreddit) drives organic growth. B2B coach tier = second revenue lane from same codebase.
+
+### 12. Fitness App Market = $13.8B in 2026, Growing to $45B by 2035
+- CAGR: 14.15% through 2035
+- Habit tracker market: $1.9B in 2025, growing to $5.5B by 2033
+- **Implication:** Both markets have enormous headroom. Even 0.01% market share = $1.38M/yr.
+
+### 13. Screen Time Apps Commanding Premium Pricing
+- Opal: $100/yr (grew 63% YoY to $10.3M revenue)
+- one sec: $19/yr (cheapest, indie dev, still growing)
+- ScreenZen: Adding hardware (Halo device) for physical blocking
+- **Implication:** Screen time is one of few categories where $100/yr pricing works. Hardware add-ons emerging as premium tier.
+
+### 14. Desktop Focus Tools Validated (Monocle)
+- Solo indie dev, built with AI/Cursor, zero coding experience
+- 323 Product Hunt upvotes, 149 Reddit upvotes
+- $9 one-time purchase
+- **Implication:** Desktop focus tools are an underserved niche. AI-buildable. Low competition. Could be a quick win for Chrome extension version of Vault.
+
+### 15. Strong App "Showing Its Age" in 2026
+- $500K/mo revenue but reviewers say interface feels dated
+- No AI coaching, no workout generation, no smart recommendations
+- **Implication:** Incumbent weakness. AI-first workout tracker could steal their market share.
+
 ---
 
 ## FEATURE GAP ANALYSIS (What Competitors Miss)
@@ -473,6 +636,10 @@
 | Cross-platform availability | Streaks/Opal/Session = Apple only | All apps: PWA = works everywhere |
 | Phone locking mechanic | NO competitor in ANY category | PrayerLock, Vault, Steplock unique differentiator |
 | Gender-specific faith features | Athan added menstrual mode (new) | PrayerLock: consider gender-specific adaptations |
+| AI workout generation at budget price | Fitbod = $96/yr, Hevy/Strong = no AI | AI-powered workout tracker at $29.99/yr = 70% undercut |
+| Desktop visual focus (blur) | Monocle = macOS only, $9 | Chrome extension that dims/blurs tabs = cross-platform, free tier |
+| Intervention-based screen time | one sec = breathing only | Multiple intervention types (math, quotes, gratitude, prayer) per niche |
+| Hardware + software focus combo | ScreenZen Halo = emerging | Too early to compete, but monitor closely |
 
 ---
 

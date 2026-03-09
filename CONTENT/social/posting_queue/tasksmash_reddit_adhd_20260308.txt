@@ -1,0 +1,34 @@
+PLATFORM: Reddit r/ADHD
+STATUS: PENDING_REVIEW
+
+---
+
+TITLE: Free tool that breaks overwhelming tasks into tiny steps (no account, no paywall)
+
+BODY:
+I kept staring at my to-do list and not doing anything because every task felt too big. "Clean the apartment" might as well have been "build a rocket."
+
+So I built a tool that takes any task and breaks it into small, checkable steps. You type "clean the apartment" and it gives you:
+
+1. Set a timer for 10 minutes
+2. Pick ONE room
+3. Grab a trash bag and throw away obvious garbage
+4. Wipe down surfaces
+...and so on.
+
+It also has:
+- A detail slider (4 steps vs 16 steps depending on your brain that day)
+- An ADHD-adjusted time estimator (adds buffer for transition time and executive function overhead)
+- A tone checker for emails you're anxious about sending
+
+It's a PWA so it works offline, runs entirely in your browser, and there's no account or paywall.
+
+I built it because Goblin Tools (which did something similar) hasn't been updated since 2023 and costs $2.99. This is free.
+
+Link: tasksmash.surge.sh
+
+If there's a task type it doesn't handle well, let me know and I'll add it.
+
+---
+
+NOTES: r/ADHD has 1.8M+ subscribers. Post during weekday morning for max visibility. Don't be salesy. This is genuine tool sharing. Respond to every comment.

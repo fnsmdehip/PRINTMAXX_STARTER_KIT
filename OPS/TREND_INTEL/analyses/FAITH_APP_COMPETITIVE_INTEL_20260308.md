@@ -266,6 +266,81 @@ Our window: denomination-specific streak apps fill a gap NONE of these players a
 
 ---
 
+## FINDING 11: DEEP DIVE DATA (Added Mar 8 Evening -- Web Research)
+
+### Bible Chat Deep Dive (Tech.eu source, June 2025)
+- Romanian startup (T-Me Studios), founded by serial entrepreneur
+- Previous venture: T-Me Studios scaled to 100+ employees and "tens of millions in revenue"
+- EUR 13.4M raised in February 2025
+- 5M MAU achieved in roughly 1 year after launch
+- At peak, was 5th most-downloaded app WORLDWIDE (outpacing WhatsApp and Instagram)
+- 70% of users are in the US
+- 97% of users are free. Only 3% pay for premium
+- Supports "over a dozen" Bible translations across major denominations
+- Founder's stated goal: reach 1 billion Christians (half the global Christian population)
+- Self-described as "fastest-growing faith-based app ever"
+
+### Hallow Deep Dive (Contrary Research)
+- Founded April 1, 2018 in Chicago, Illinois
+- Public benefit corporation (not standard C-corp)
+- $105M total funding across 6 rounds (Tracxn says $157M -- discrepancy likely includes debt/grants)
+- Series C: $50M (May 2023) led by Goodwater Capital
+- 10M downloads as of May 2023; current monthly at ~1M/month = likely 30M+ total now
+- 600M+ prayers completed (Aug 2024)
+- 150K+ five-star reviews
+- Available in 150 countries
+- 40% of users are non-Catholic (broader than expected)
+- Student pricing: $2.50/month (targeting youth market)
+- Educator discount: 50% off
+- Family plan: $119.99/year for up to 6 accounts
+- Revenue growth was 500% YoY as of Sept 2021
+
+### Pray.com Deep Dive
+- $11M annual revenue with 78 employees = $141K revenue per head
+- 18M+ lifetime downloads
+- First religious app to reach 100M podcast downloads
+- 2.5B+ total prayer minutes
+- iHeartMedia partnership: all podcasts distributed via iHeartPodcasts
+- Palantir Technologies partnership (Dec 2024): AI-powered translation using Palantir's OSDK, achieving "native speaker quality" translations
+- INDYCAR partnership: sponsoring driver Sting Ray Robb (Feb 2024, targeting younger demographics)
+- M&A Offer raised April 2025 per PitchBook -- company may be exploring sale/acquisition
+- If acquired, could mean: a) new resources and faster growth, or b) integration into larger platform losing independent identity
+
+### Muslim Pro Updated Numbers
+- Now at 180M+ downloads worldwide (up from 110M in our Feb data -- 70M delta likely includes historical undercounting)
+- 51-200 employees at Bitsmedia Pte Ltd (Singapore headquarters)
+- $300K/month revenue is App Store US only -- global revenue across both platforms likely $1-2M+/month
+- Ramadan 2026 new features: Ramadan Companion, Deen Mode, Ummah community feed, Inspiration section
+- CEO recently addressed data privacy concerns (April 2025) with "enhanced security measures" -- still dealing with 2020 scandal fallout
+
+### Broader Market Context
+- YouVersion (Bible app) has 760M+ downloads worldwide; 14% user growth in North America 2025-2026
+- Spiritual wellness apps market: $2.52B (2025) -> $2.89B (2026) -> $9.91B (2035)
+- CAGR: 14.66% from 2026-2035
+- North America holds majority market share; Asia Pacific fastest-growing region
+- Singapore expected to be fastest-growing CAGR in Asia Pacific
+- 90% of churches now operate on hybrid (in-person + online) model by 2026
+- Gloo platform serves 140,000+ churches with AI administrative assistance
+- VR worship experiences exist (Virtual Reality Church led by DJ Soto)
+- Faith-based social media platforms positioning as alternatives to "spiritually draining" mainstream networks
+
+---
+
+## UPDATED REVENUE LEADERBOARD (Faith Apps, Mar 2026)
+
+| Rank | App | Est. Monthly Revenue | Est. ARR | Downloads/Mo | Source |
+|------|-----|---------------------|----------|-------------|--------|
+| 1 | **Hallow** | $1M+ (Sensor Tower) to $4.3M (Latka) | $12-51M | 1M | Sensor Tower, Latka |
+| 2 | **Bible Chat** | ~$1M | ~$12M | 1M | Sensor Tower |
+| 3 | **Pray.com** | ~$917K | $11M | N/A | Latka |
+| 4 | **Muslim Pro** | $300K (US App Store only) | $3.6M+ (US only) | 900K | Sensor Tower |
+| 5 | **Athan** | $332K | ~$4M | 811K | Appstor.io |
+| 6 | **Glorify** | Unknown | Unknown | Unknown | No public data |
+
+**Combined faith app revenue tracked: $35-80M ARR.** This is a fraction of the $2.89B spiritual wellness market. Massive whitespace.
+
+---
+
 ## MARKET OPPORTUNITY SCORE
 
 | Factor | Score (1-10) | Notes |
@@ -276,3 +351,40 @@ Our window: denomination-specific streak apps fill a gap NONE of these players a
 | Our Readiness | 6 | Apps built but need deployment + ASO |
 | Revenue Potential | 7 | Muslim Pro prints $300K/mo, even 1% of that = $3K/mo |
 | **OVERALL** | **8.0** | **Strong go. Deploy now, optimize later.** |
+
+---
+
+## SOURCES (Added Mar 8 Evening)
+
+### Hallow
+- [Contrary Research Business Breakdown](https://research.contrary.com/company/hallow)
+- [Tracxn Company Profile](https://tracxn.com/d/companies/hallow/__KTAm122vA7UhIoIBJEq8-DwcfbdA9OICMot6EdRuxfs)
+- [10M Downloads Press Release](https://www.prnewswire.com/news-releases/hallow-app-crosses-10-million-downloads-tops-app-store-and-closes-50-million-series-c-fundraise-301828490.html)
+- [Hallow Pricing](https://help.hallow.com/en/articles/2880438-how-much-does-the-subscription-cost)
+- [Fox Business: Hallow #1](https://www.foxbusiness.com/technology/prayer-app-hallow-top-spot-apple-store)
+- [Super Bowl 2024 Ad](https://www.catholicnewsagency.com/news/256811/after-super-bowl-ad-catholic-prayer-app-hallow-sees-biggest-spike-in-its-history)
+
+### Bible Chat
+- [Tech.eu: Bible Chat Global Phenomenon](https://tech.eu/2025/06/20/how-romanian-startup-bible-chat-turned-ai-and-faith-into-a-global-phenomenon/)
+- [Sensor Tower](https://app.sensortower.com/overview/6448849666?country=US)
+
+### Glorify
+- [TechCrunch: $40M a16z funding](https://techcrunch.com/2021/12/02/glorify-an-ambitious-app-for-christians-just-landed-40-million-in-series-a-funding-led-by-a16z/)
+- [a16z: Investing in Glorify](https://a16z.com/announcement/investing-in-glorify/)
+- [Tracxn](https://tracxn.com/d/companies/glorify/__jYZe4FPt7DCeSTq2lUeKbMLCc2SVK3K-8Knfv4bElpQ)
+
+### Pray.com
+- [Latka: $11M Revenue](https://getlatka.com/companies/pray.com)
+- [Yahoo Finance: 100M Podcast Downloads](https://finance.yahoo.com/news/pray-com-first-religious-app-180000970.html)
+- [Investing.com: Palantir Partnership](https://www.investing.com/news/company-news/praycom-enhances-translation-with-palantir-ai-tech-93CH-3779054)
+
+### Muslim Pro
+- [Muslim Pro Official](https://www.muslimpro.com/about-us/)
+- [SME Asia: 150M Downloads](https://sme.asia/muslim-pro-celebrates-14-years-of-service-and-150-million-downloads-globally/)
+- [Sensor Tower](https://app.sensortower.com/overview/388389451?country=US)
+
+### Market Size
+- [Towards Healthcare: Spiritual Wellness Apps](https://www.towardshealthcare.com/insights/spiritual-wellness-apps-market-sizing)
+- [GM Insights: Religious Products Market](https://www.gminsights.com/industry-analysis/religious-and-spiritual-products-market)
+- [Tracxn: Religion Tech](https://tracxn.com/d/sectors/religion-tech/__zoUc_tzTKyj4dgdbfl2vmRShRz6jHqicZlKpOuwP-NM)
+- [ConfideIn: Christian Tech Trends 2026](https://www.confidein.com/blog/general/christian-tech-trends-2026)

@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-02-15 14:28:13
+**Last updated:** 2026-03-09 00:10:00
 
 ---
 
@@ -14,13 +14,15 @@
 | mealmaxx-web | https://mealmaxx-web.surge.sh | LIVE |
 | sleepmaxx-web | https://sleepmaxx-web.surge.sh | LIVE |
 | walktounlock-web | https://walktounlock-web.surge.sh | LIVE |
+| tasksmash-web | https://tasksmash.surge.sh | LIVE |
+| coreday-web | https://coreday.surge.sh | LIVE |
 
 ---
 
 ## Summary
 
-- **Deployed:** 6/6
-- **Timestamp:** 2026-02-15 14:28:13
+- **Deployed:** 8/8
+- **Timestamp:** 2026-03-08 23:50:00
 
 ## App Details
 
@@ -32,14 +34,36 @@
 | mealmaxx-web | MealMaxx | Meal planning and nutrition tracking |
 | sleepmaxx-web | Dusk | Sleep tracking and optimization |
 | walktounlock-web | WalkToUnlock | Walking incentive and step tracking |
+| tasksmash-web | TaskSmash | ADHD task breakdown - free Goblin Tools alternative |
+| coreday-web | CoreDay | Anti-habit-tracker - 3 non-negotiables = Win Day |
 
 ## Notes
 
 - All apps are single-file PWAs (index.html + manifest.json + sw.js)
 - All apps work offline after first visit
 - No backend required - all data in browser localStorage
-- **Ramadan Tracker is HIGHEST PRIORITY** - Ramadan starts Feb 28, 2026
-| coreday-web | https://coreday.surge.sh | LIVE |
+- **Ramadan Tracker is HIGHEST PRIORITY** - Ramadan started Feb 28, 2026 (Eid ~March 29-30)
+- CoreDay deployed at https://coreday.surge.sh
+
+## Lead Magnets
+
+Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/`
+
+| Lead Magnet | URL | Status | Source File |
+|-------------|-----|--------|-------------|
+| Cold Email ROI Calculator | https://cold-email-roi-calculator.surge.sh | LIVE | index.html |
+| Ramadan Daily Planner | https://ramadan-daily-planner.surge.sh | LIVE | ramadan-daily-planner.html |
+| Revenue Leak Audit | https://revenue-leak-audit.surge.sh | LIVE | revenue-leak-audit.html |
+| Solopreneur Launch Checklist | https://solopreneur-launch-checklist.surge.sh | LIVE | solopreneur-launch-checklist.html |
+| Subject Line Grader | https://subject-line-grader.surge.sh | LIVE | subject-line-grader.html |
+| Side Project Revenue Estimator | https://side-project-revenue-estimator.surge.sh | LIVE | side-project-revenue-estimator.html |
+| App Hub Crosslinks | https://app-hub-crosslinks.surge.sh | LIVE | app-hub-crosslinks.html |
+| $200/Day Calculator | https://200-day-calculator.surge.sh | LIVE | 200.html |
+| Cold Email Deliverability Checklist | https://cold-email-deliverability-checklist.surge.sh | LIVE (prev deployed) | cold-email-deliverability-checklist.html |
+| SaaS Stack Audit | https://saas-stack-audit.surge.sh | LIVE (prev deployed) | saas-stack-audit.html |
+| Lead Magnets Hub | https://printmaxx-lead-magnets.surge.sh | LIVE (prev deployed) | hub |
+
+---
 
 ## Affiliate Pages
 

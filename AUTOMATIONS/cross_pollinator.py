@@ -1484,6 +1484,338 @@ def wire_leads_to_case_studies():
     return new_posts
 
 
+# ─── CONNECTION 28: Product Specs → Digital Products Pipeline ─────────────
+# Auto-generated product specs feed the Digital Products venture's find_demand step
+def wire_product_specs_to_digital_products():
+    specs_dir = safe_path(AUTOMATIONS / "agent" / "autonomy" / "product_specs")
+    if not specs_dir.exists():
+        return 0
+
+    spec_files = list(specs_dir.glob("spec_*.json"))
+    if not spec_files:
+        return 0
+
+    state_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "autonomy_state.json")
+    if not state_path.exists():
+        return 0
+
+    try:
+        state = json.loads(state_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    product_venture = state.get("ventures", {}).get("auto_product_digital_products_9788", {})
+    config = product_venture.get("config", {})
+    existing_specs = config.get("product_specs", [])
+    existing_names = {s.get("suggested_product", "") for s in existing_specs if isinstance(s, dict)}
+
+    new_specs = []
+    for sf in spec_files:
+        try:
+            spec = json.loads(sf.read_text())
+        except (json.JSONDecodeError, ValueError):
+            continue
+        name = spec.get("suggested_product", "")
+        if name and name not in existing_names:
+            new_specs.append({
+                "suggested_product": name,
+                "category": spec.get("category", ""),
+                "alpha_count": spec.get("alpha_count", 0),
+                "price_range": spec.get("price_range", "$19-39"),
+                "format": spec.get("format", "PDF"),
+                "spec_file": sf.name
+            })
+            existing_names.add(name)
+
+    if new_specs:
+        config["product_specs"] = existing_specs + new_specs
+        config["specs_updated"] = datetime.now().isoformat()
+        product_venture["config"] = config
+        state["ventures"]["auto_product_digital_products_9788"] = product_venture
+        state_path.write_text(json.dumps(state, indent=2))
+
+    return len(new_specs)
+
+
+# ─── CONNECTION 29: Deployer Queue → Execution Manifest ──────────────────
+# Reads deployer task queue and creates an execution manifest for asset_deployer
+def wire_deployer_queue_to_manifest():
+    queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "deployer_task_queue.json")
+    if not queue_path.exists():
+        return 0
+
+    try:
+        tasks = json.loads(queue_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    if not isinstance(tasks, list):
+        return 0
+
+    queued = [t for t in tasks if t.get("status") == "QUEUED"]
+    if not queued:
+        return 0
+
+    manifest_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "execution_manifest.json")
+    existing_manifest = []
+    if manifest_path.exists():
+        try:
+            existing_manifest = json.loads(manifest_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing_manifest = []
+    existing_ids = {m.get("task_id", "") for m in existing_manifest}
+
+    new_entries = []
+    for task in queued:
+        tid = task.get("task_id", "")
+        if tid and tid not in existing_ids:
+            new_entries.append({
+                "task_id": tid,
+                "description": task.get("description", ""),
+                "source": task.get("source", ""),
+                "priority": task.get("priority", "MEDIUM"),
+                "status": "READY_FOR_EXECUTION",
+                "assigned_agent": "asset_deployer",
+                "created_at": datetime.now().isoformat()
+            })
+
+    if new_entries:
+        all_entries = existing_manifest + new_entries
+        manifest_path.write_text(json.dumps(all_entries, indent=2))
+
+    return len(new_entries)
+
+
+# ─── CONNECTION 30: Compound Content → Posting Queue ─────────────────────
+# Splits compound_content_*.md files into individual posting queue entries
+def wire_compound_content_to_queue():
+    import re
+    content_dir = safe_path(PROJECT_ROOT / "CONTENT" / "social")
+    compound_files = list(content_dir.glob("compound_content_*.md"))
+    if not compound_files:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for cf in compound_files:
+        date_part = cf.stem.replace("compound_content_", "")
+        text = cf.read_text(encoding="utf-8")
+
+        # Split on ### Tweet headers
+        tweet_sections = re.split(r'### Tweet \d+', text)
+        tweet_num = 0
+
+        for section in tweet_sections[1:]:
+            tweet_num += 1
+            lines = section.strip().split("\n")
+            tweet_lines = []
+            past_title = False
+            for line in lines:
+                stripped = line.strip()
+                if not stripped:
+                    if past_title:
+                        tweet_lines.append("")
+                    continue
+                if stripped.startswith("- ") and not past_title:
+                    past_title = True
+                    continue
+                if stripped.startswith("#") or stripped.startswith("---"):
+                    break
+                past_title = True
+                tweet_lines.append(stripped)
+
+            tweet_text = "\n\n".join([l for l in tweet_lines if l]).strip()
+            if not tweet_text or len(tweet_text) < 30:
+                continue
+
+            slug = f"compound_{date_part}_{tweet_num}"
+            if slug in existing_posts:
+                continue
+
+            post_path = safe_path(queue_dir / f"{slug}.txt")
+            post_path.write_text(tweet_text, encoding="utf-8")
+            created += 1
+
+    return created
+
+
+# ─── CONNECTION 31: Qualified Leads → OpenClaw Priority Queue ────────────
+# High-score qualified leads with emails feed OpenClaw for targeted preview builds
+def wire_qualified_leads_to_openclaw():
+    qualified_path = LEADS / "auto_outbound_cold_outreach_engine_9569" / "qualified.csv"
+    if not qualified_path.exists():
+        return 0
+
+    qualified = load_csv(qualified_path, max_rows=100)
+    if not qualified:
+        return 0
+
+    hot_targets = []
+    for row in qualified:
+        email = row.get("email", "")
+        score = 0
+        try:
+            score = float(row.get("composite_score", "0") or "0")
+        except (ValueError, TypeError):
+            pass
+        if email and score >= 7.5:
+            hot_targets.append({
+                "business_name": row.get("business_name", ""),
+                "website": row.get("website", ""),
+                "city": row.get("city", ""),
+                "state": row.get("state", ""),
+                "category": row.get("category", ""),
+                "email": email,
+                "composite_score": score,
+                "issues": row.get("issues", ""),
+                "estimated_value": row.get("estimated_value", ""),
+                "source": "qualified_leads_crossfeed"
+            })
+
+    if not hot_targets:
+        return 0
+
+    priority_path = safe_path(LEADS / "auto_local_biz_openclaw_nationwide_9569" / "priority_targets.json")
+    priority_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing_targets = []
+    if priority_path.exists():
+        try:
+            existing_targets = json.loads(priority_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing_targets = []
+    existing_websites = {t.get("website", "") for t in existing_targets}
+
+    new_targets = [t for t in hot_targets if t["website"] and t["website"] not in existing_websites]
+
+    if new_targets:
+        all_targets = existing_targets + new_targets
+        all_targets.sort(key=lambda x: x.get("composite_score", 0), reverse=True)
+        priority_path.write_text(json.dumps(all_targets, indent=2))
+
+    return len(new_targets)
+
+
+# ─── CONNECTION 32: Trend Synthesis → Venture Cross-Pollination Angles ───
+# Extract cross-pollination directives from trend synthesis reports
+def wire_trend_synthesis_to_ventures():
+    import re
+    reports_dir = safe_path(REPORTS)
+    trend_files = sorted(reports_dir.glob("trend_synthesis_*.md"), reverse=True)
+    if not trend_files:
+        return 0
+
+    latest = trend_files[0]
+    text = latest.read_text(encoding="utf-8")
+
+    cross_sections = re.findall(
+        r'\*\*Cross-pollination:\*\*\s*(.+?)(?:\n\n|\n---|\n##)',
+        text, re.DOTALL
+    )
+
+    if not cross_sections:
+        return 0
+
+    angles_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "trend_cross_pollination.json")
+    existing = []
+    if angles_path.exists():
+        try:
+            existing = json.loads(angles_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing = []
+    existing_texts = {a.get("directive", "")[:60] for a in existing}
+
+    new_angles = []
+    for section in cross_sections:
+        directives = [line.strip().lstrip("- ").lstrip("0123456789. ")
+                      for line in section.strip().split("\n")
+                      if line.strip() and len(line.strip()) > 20]
+
+        for directive in directives:
+            if directive[:60] not in existing_texts:
+                affected = []
+                lower = directive.lower()
+                if any(kw in lower for kw in ["app", "build", "pwa"]):
+                    affected.append("APP_FACTORY")
+                if any(kw in lower for kw in ["content", "post", "thread", "tweet"]):
+                    affected.append("CONTENT")
+                if any(kw in lower for kw in ["product", "gumroad", "playbook"]):
+                    affected.append("PRODUCT")
+                if any(kw in lower for kw in ["outreach", "cold", "email", "client"]):
+                    affected.append("OUTBOUND")
+                if any(kw in lower for kw in ["monetiz", "affiliat", "revenue", "pricing"]):
+                    affected.append("MONETIZE")
+
+                new_angles.append({
+                    "directive": directive[:200],
+                    "affected_ventures": affected or ["ALL"],
+                    "source": latest.name,
+                    "detected_at": datetime.now().isoformat()
+                })
+                existing_texts.add(directive[:60])
+
+    if new_angles:
+        all_angles = (existing + new_angles)[-50:]
+        angles_path.parent.mkdir(parents=True, exist_ok=True)
+        angles_path.write_text(json.dumps(all_angles, indent=2))
+
+    return len(new_angles)
+
+
+# ─── CONNECTION 33: Alpha Content Cycles → Posting Queue ─────────────────
+# Splits alpha_content_*.md and alpha_research_*.md into individual queue entries
+def wire_alpha_content_to_queue():
+    import re
+    content_dir = safe_path(PROJECT_ROOT / "CONTENT" / "social")
+    alpha_files = list(content_dir.glob("alpha_content_*.md")) + list(content_dir.glob("alpha_research_*.md"))
+    if not alpha_files:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for af in alpha_files:
+        date_part = af.stem.replace("alpha_content_", "").replace("alpha_research_", "").replace("cycle_", "")
+        text = af.read_text(encoding="utf-8")
+
+        sections = re.split(r'###?\s+(?:Tweet|Post|TWEET|POST)\s*\d*', text)
+        tweet_num = 0
+
+        for section in sections[1:]:
+            tweet_num += 1
+            lines = section.strip().split("\n")
+            tweet_lines = []
+            for line in lines:
+                stripped = line.strip()
+                if not stripped:
+                    tweet_lines.append("")
+                    continue
+                if stripped.startswith("#") or stripped.startswith("---") or stripped.startswith("**Status"):
+                    break
+                if stripped.startswith("- ") and len(stripped) < 50:
+                    continue
+                tweet_lines.append(stripped)
+
+            tweet_text = "\n\n".join([l for l in tweet_lines if l]).strip()
+            if not tweet_text or len(tweet_text) < 30:
+                continue
+
+            slug = f"alphacontent_{date_part}_{tweet_num}"
+            if slug in existing_posts:
+                continue
+
+            post_path = safe_path(queue_dir / f"{slug}.txt")
+            post_path.write_text(tweet_text, encoding="utf-8")
+            created += 1
+
+    return created
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -1521,6 +1853,12 @@ def run_cycle():
         ("Trend Signals → Outreach Angles", wire_trends_to_outreach),
         ("Alpha Clusters → Product Specs", wire_alpha_clusters_to_product_specs),
         ("Scored Leads → Case Studies", wire_leads_to_case_studies),
+        ("Product Specs → Digital Products", wire_product_specs_to_digital_products),
+        ("Deployer Queue → Execution Manifest", wire_deployer_queue_to_manifest),
+        ("Compound Content → Posting Queue", wire_compound_content_to_queue),
+        ("Qualified Leads → OpenClaw Priority", wire_qualified_leads_to_openclaw),
+        ("Trend Synthesis → Venture Angles", wire_trend_synthesis_to_ventures),
+        ("Alpha Content → Posting Queue", wire_alpha_content_to_queue),
     ]
 
     total_wired = 0

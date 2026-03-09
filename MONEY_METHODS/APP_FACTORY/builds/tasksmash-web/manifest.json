@@ -1,0 +1,19 @@
+{
+  "name": "TaskSmash - Break Any Task Into Tiny Steps",
+  "short_name": "TaskSmash",
+  "description": "Free ADHD task breakdown tool. Paste any overwhelming task, get tiny actionable steps.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "categories": ["productivity", "utilities", "health"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230f172a' width='512' height='512' rx='80'/><text y='360' x='256' text-anchor='middle' font-size='280'>🔨</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

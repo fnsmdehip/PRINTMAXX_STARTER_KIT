@@ -173,6 +173,10 @@
     "gap_type": "ABANDONED_APP",
     "signal": "Last updated 2023-06-23 - possibly abandoned",
     "opportunity": "Clone Goblin Tools's value prop with modern stack",
+    "status": "DEPLOYED",
+    "our_app": "TaskSmash",
+    "url": "https://tasksmash.surge.sh",
+    "deployed_at": "2026-03-08T23:50:00",
     "detected_at": "2026-03-08T11:09:00.001687"
   },
   {
@@ -184,5 +188,13 @@
     "status": "DEPLOYED",
     "url": "https://coreday.surge.sh",
     "deployed_at": "2026-03-08T14:21:00"
+  },
+  {
+    "competitor": "REMOTE AIR",
+    "category": "adhd",
+    "gap_type": "ABANDONED_APP",
+    "signal": "Last updated 2023-05-20 - possibly abandoned",
+    "opportunity": "Clone REMOTE AIR's value prop with modern stack",
+    "detected_at": "2026-03-08T23:17:33.326516"
   }
 ]
