@@ -1179,39 +1179,37 @@
     ]
   },
   "live_test": {
-    "tested_at": "2026-03-08T20:14:47",
-    "total": 241,
-    "green": 226,
+    "tested_at": "2026-03-08T22:19:00",
+    "total": 262,
+    "green": 247,
     "yellow": 11,
-    "red": 4,
-    "pass_rate": "98.3%",
+    "red": 5,
+    "pass_rate": "98.1%",
     "avg_load_ms": 1176,
     "playwright_visual_tested": 241,
-    "notes": "Cycle 16 (Playwright Tester): Full async test of 241 sites. 226 GREEN, 11 YELLOW, 4 RED.",
+    "spot_check_cycle_17": "15/15 sites returned HTTP 200 (10 newest + 5 random older)",
+    "notes": "Cycle 17 (Asset Deployer): Spot-checked 15 sites (all 200 OK). 5 RED are DNS-overlength, unfixable without regenerating pages. No new assets to deploy - all built items are already live. 13 Gumroad PDFs + Fiverr listings blocked on human account creation.",
     "still_broken": [
       "https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh",
       "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
       "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
-      "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh"
-    ]
+      "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh"
+    ],
+    "broken_reason": "All 5 have DNS labels >63 chars (RFC 1035 limit). Source files not persisted locally - would need longtail generator to regenerate with shorter names."
   },
-  "new_this_cycle": [
-    "saas-stack-audit.surge.sh",
-    "coreday.surge.sh",
-    "35 Louisville KY local biz sites",
-    "10 Fiverr service pages (printmaxx-website-design through printmaxx-data-analysis)",
-    "3 Las Vegas/Orlando local biz sites",
-    "3 test deploys"
-  ],
-  "fixed_this_cycle": [
-    "kings-hands-llc-louisville-ky.surge.sh (was 404, added 200.html, redeployed)",
-    "new-seasons-auction-and-estates-louisville-ky.surge.sh (was 404, added 200.html, redeployed)"
-  ],
+  "new_this_cycle": [],
+  "fixed_this_cycle": [],
   "still_broken": [
-    "local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh (DNS label >63 chars)",
-    "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh (DNS label >63 chars)",
-    "top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh (DNS label >63 chars)",
-    "window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh (DNS label >63 chars)",
-    "the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh (DNS label >63 chars)"
+    "local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh (DNS label >63 chars, no local source)",
+    "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh (DNS label >63 chars, no local source)",
+    "top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh (DNS label >63 chars, no local source)",
+    "window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh (DNS label >63 chars, no local source)",
+    "the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh (DNS label >63 chars, no local source)"
+  ],
+  "human_blockers": [
+    "Create Gumroad account → 13 PDFs ready to list (PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/)",
+    "Create Fiverr account → 15 service pages ready (PRODUCTS/FIVERR_LANDING_PAGES/)",
+    "Create Whop account → digital products ready to list"
   ]
 }

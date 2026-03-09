@@ -4,13 +4,16 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: CCBot
+User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://coldmaxx.surge.sh/sitemap.xml
