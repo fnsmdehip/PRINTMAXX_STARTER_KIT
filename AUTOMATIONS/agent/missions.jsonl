@@ -176,3 +176,15 @@
 {"ts": "2026-03-09T10:15:13.943248", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
 {"ts": "2026-03-09T12:00:04.368242", "mission": "health_heal", "result": "success", "duration_s": 4.2, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-09T12:00:04.539695", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 41 response drafts, 38 listing drafts"}
+{"ts": "2026-03-09T12:16:04.564797", "mission": "content", "result": "partial", "duration_s": 0.0, "output": "Claude returned error, output length: 45"}
+{"ts": "2026-03-09T12:16:04.623830", "mission": "upgrade", "result": "partial", "duration_s": 0.0, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-09T12:20:05.865098", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-09T12:21:43.628194", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-09T14:00:04.147934", "mission": "health_heal", "result": "success", "duration_s": 3.9, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-09T14:00:04.342802", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 41 response drafts, 38 listing drafts"}
+{"ts": "2026-03-09T14:00:36.779347", "mission": "gen_content", "result": "success", "duration_s": 32.4, "output": "Generated content from 3 sources, saved to AGENT_CONTENT_20260309.md"}
+{"ts": "2026-03-09T14:05:36.804924", "mission": "factory", "result": "failed", "duration_s": 300.0, "output": "TIMEOUT after 300s"}
+{"ts": "2026-03-09T14:06:13.426122", "mission": "compliance", "result": "failed", "duration_s": 36.6, "output": "tttt/OPS/COMPLIANCE_SCAN_2026_03_09.md\nJSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/compliance_scan_2026_03_09.json\n\n41 CRITICAL issues found. Fix before publishing.\n"}
+{"ts": "2026-03-09T14:07:43.452410", "mission": "proactive_hunt", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
+{"ts": "2026-03-09T16:00:04.041035", "mission": "health_heal", "result": "success", "duration_s": 4.0, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-09T16:00:04.223044", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 41 response drafts, 38 listing drafts"}

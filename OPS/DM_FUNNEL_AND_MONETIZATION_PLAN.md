@@ -466,3 +466,21 @@ Click here to grab my FREE 5-day crash course to start making money ghostwriting
 
 between that and not selling at peak when pluralsight (remember them?) was buying up everything i often wonder how much fuck you money i could have had
 
+
+
+---
+
+## Pending Enhancement (ALPHA19929, Score: 32)
+
+**Source:** @lottsnomad (high-signal-accounts) | **URL:** https://x.com/lottsnomad/status/2031053225353216439
+**Added:** 2026-03-09T15:25:24-04:00
+
+If I had to make money with apps again from zero:
+
+• go to sensor tower
+• find 2-3 apps doing $100k+/mo
+• copy the core idea
+• change the audience or wrapper
+
+done
+

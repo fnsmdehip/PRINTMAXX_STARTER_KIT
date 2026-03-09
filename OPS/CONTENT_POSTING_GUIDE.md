@@ -1721,3 +1721,146 @@ my guess is they're promoting their real podcast, which is the same name as the 
 
 P.s. the reason all these videos have B&W filters is
 
+
+
+---
+
+## Pending Enhancement (ALPHA19473, Score: 43)
+
+**Source:** 2026-03-09 | **URL:** @gregisenberg
+**Added:** 2026-03-09T12:20:03-04:00
+
+this is one of those stories that sounds fake but is inspirational 
+
+teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead of fundraising, grow to ~15m downloads and $30m+ in revenue, and sell to
+
+
+
+---
+
+## Pending Enhancement (ALPHA19583, Score: 36)
+
+**Source:** 2026-03-09 | **URL:** @maverickecom
+**Added:** 2026-03-09T12:20:03-04:00
+
+We launched a 7 figure Amazon brand on tiktok shop and did $20k with human UGC creators this week
+
+Good team and good systems >
+
+Takeaway:
+
+- launch with human UGC. We use plug and play method to connect brands to high GMV creators in a mix of low retainers and commission only
+
+-
+
+
+
+---
+
+## Pending Enhancement (ALPHA19633, Score: 42)
+
+**Source:** 2026-03-09 | **URL:** @affprinter
+**Added:** 2026-03-09T12:20:03-04:00
+
+I Made $4,884 today
+
+no product, no face, no prior audience
+just making viral TikTok slideshows
+
+if you won't pull at least $1K in the first 7 days there is literally 0 hope for you man
+
+Retweet & Comment “TikTok” (must be following) and ill send you a free guide on how to do it
+
+
+
+---
+
+## Pending Enhancement (ALPHA19716, Score: 26)
+
+**Source:** 2026-03-09 | **URL:** @affprinter
+**Added:** 2026-03-09T12:20:03-04:00
+
+Tiktok organic + affiliate sweep offers = easiest way to make $7k/week
+
+its so simple but people just dont have the right guidance
+
+so I made a free guide for you guys so you can print $20k/months
+
+Just comment "sweeps" and retweet and ill send it over (must follow for auto dm)
+
+
+
+---
+
+## Pending Enhancement (ALPHA19717, Score: 20)
+
+**Source:** 2026-03-09 | **URL:** @affprinter
+**Added:** 2026-03-09T12:20:03-04:00
+
+I made $2342 today from ai TikTok slideshows
+
+This is the easiest way to make money in 2026
+
+All organic, 0 Ads
+
+want the breakdown?
+
+Deleting in 24 hours....
+
+Retweet & Comment “Slides” and I’ll dm you a free guide on how to start. (Must be following for auto dm)
+
+
+
+---
+
+## Pending Enhancement (ALPHA19764, Score: 41)
+
+**Source:** 2026-03-09 | **URL:** @alexxgrowth
+**Added:** 2026-03-09T12:20:03-04:00
+
+how to make get rich off of ROBLOX:  
+
+1/ find a brainrotted niche 
+2/ ask chatgpt for enjoyable gameplay loops
+3/ hire and fire a dev to do it for $10-$20 
+4/ use content rewards to market it 
+5/ add pay to win gamepasses for 99-999 robux 
+6/ profit $100k/mo minimum
+
+
+
+---
+
+## Pending Enhancement (ALPHA19790, Score: 24)
+
+**Source:** 2026-03-09 | **URL:** r/startups
+**Added:** 2026-03-09T12:20:03-04:00
+
+$20k MRR to $191K MRR for supplement brand (I will not promote) heres every step of how we took a wellness brand from $20K MRR to $191K MRR in 7 months. It wasn’t all sunshine and rainbows but right now with AI you can get serious productivity gains. Hope this helps.
+
+Tbh smaller DTC brands have an insane advantage compared to legacy companies now and it’s not even close.
+
+My advice: take this and
+
+
+
+---
+
+## Pending Enhancement (ALPHA19941, Score: 29)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2031033313729630550
+**Added:** 2026-03-09T15:25:24-04:00
+
+I just launched a brand on tiktok shop and added $45K GMV in under 2 months 
+
+Here’s how:
+
+- insider creating method
+- plug and play method 
+
+If you want to see my full playbook to scale brands on tiktok shop:
+
+Comment SCALE and I’ll send it over 
+
+(Must be following for me to
+

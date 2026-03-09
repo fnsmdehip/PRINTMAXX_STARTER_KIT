@@ -1,87 +1,77 @@
 {
-  "last_cycle": "2026-03-09T00:25:00Z",
-  "cycle_number": 17,
+  "last_cycle": "2026-03-09T13:45:00Z",
+  "cycle_number": 18,
   "cycle_summary": {
-    "total_items_reviewed": 579,
+    "total_items_reviewed": 55,
     "breakdown": {
-      "auto_generated_content_files": 4,
-      "auto_generated_content_pieces": 110,
-      "content_queue_csv_entries": 460,
-      "reddit_distribution_posts": 8,
-      "qa_carousel_wrappers": 3,
-      "banned_word_full_scan": true,
-      "em_dash_scan": true
+      "auto_generated_content_pieces": 25,
+      "pipeline_tweets": 10,
+      "buffer_export_entries": 3,
+      "outreach_drafts": 20,
+      "content_queue_csv_carryover": "460 (already blocked C17)"
     },
-    "passed_first_time": 8,
+    "passed_first_time": 30,
     "rewritten_and_fixed": 0,
-    "blocked": 570,
-    "flagged_for_investigation": 3,
-    "pass_rate_before_fixes": "1.4%",
-    "pass_rate_after_fixes": "1.4%",
-    "note": "Full audit of auto_generated/ AND CONTENT_QUEUE.csv. 460 template slop entries in queue bulk-blocked (same Feb 13 auto-generation batch, lazy prefix + raw alpha paste). posting_queue quality still 100%. The 1.4% rate reflects massive accumulated slop from broken generators."
+    "blocked": 25,
+    "flagged_for_investigation": 0,
+    "pass_rate_before_fixes": "54.5%",
+    "pass_rate_after_fixes": "54.5%",
+    "note": "25 auto-generated pieces BLOCKED (same template slop generator bug). 10 pipeline tweets APPROVED (excellent quality, real data, @pipelineabuser voice). 20 outreach drafts APPROVED (strong personalization, specific pain points). Buffer export has formatting leaks but not new content."
   },
   "content_review": {
     "blocked_files": [
       {
-        "file": "CONTENT/social/auto_generated/auto_content_20260307_212910.csv",
-        "pieces": 30,
+        "file": "CONTENT/social/auto_generated/auto_content_20260309_121720.csv",
+        "pieces": 25,
         "result": "BLOCKED",
         "failure_type": "TEMPLATE_SLOP",
-        "notes": "5 lazy prefix templates pasted before raw alpha text. Not voice-matched. 2 em dashes."
-      },
-      {
-        "file": "CONTENT/social/auto_generated/factory_arb_tweets_2026-03-05.md",
-        "pieces": 17,
-        "result": "BLOCKED",
-        "failure_type": "TEMPLATE_SLOP",
-        "notes": "Every tweet identical template with different product name. Zero variation. Bot-detectable."
-      },
-      {
-        "file": "CONTENT/social/auto_generated/factory_arb_tweets_2026-03-06.md",
-        "pieces": 13,
-        "result": "BLOCKED",
-        "failure_type": "TEMPLATE_SLOP",
-        "notes": "Same identical template as 03-05 file. 13 more copies."
-      },
-      {
-        "file": "CONTENT/social/auto_generated/alpha_content_2026_03_05.md",
-        "pieces": 50,
-        "result": "BLOCKED",
-        "failure_type": "TEMPLATE_SLOP",
-        "notes": "Industrial template slop. 8 alpha entries with IDENTICAL tweet/thread/reddit/newsletter. Banned phrase used 8+ times."
+        "notes": "Same broken generator. 5 lazy prefix templates ('tool find that saves hours.', 'cold email alpha.', 'content format that's working right now.', 'monetization angle worth testing.', 'signal worth paying attention to.') pasted before raw alpha text. Cross-niche variants use 'built this.', 'alpha:', 'every hustle needs purpose.', 'discipline compounds.' Zero voice matching. Typo: 'i analyses' should be 'i analyzed'. Content truncated with '..' endings."
       }
     ],
     "approved_files": [
       {
-        "file": "OPS/CONTENT_QA_QUEUE/reddit_distribution_posts_streak_apps.md",
-        "pieces": 8,
+        "file": "CONTENT/social/printmaxxer/PIPELINE_TWEETS_2026-03-09.md",
+        "pieces": 10,
         "result": "APPROVED",
-        "notes": "HIGH QUALITY. Zero violations. Consequence-first. Specific numbers. Unique per post. Ready for posting."
-      }
-    ],
-    "flagged_files": [
+        "notes": "EXCELLENT. 3 standalone tweets + 7-tweet thread. All building-in-public with real pipeline data (1.45M domains, 156,700 analyzed, 14,216 hot leads, 989,204 emails drafted, $0 cost). Consequence-first hooks. @pipelineabuser voice. Zero banned words. Zero em dashes. Ready to post."
+      },
       {
-        "file": "OPS/CONTENT_QA_QUEUE/QA_2026-03-03_*-20260303-100124.md (3 files)",
-        "result": "FLAGGED",
-        "notes": "Empty QA wrappers. Auto-approved without reading source content. Status contradiction."
+        "file": "AUTOMATIONS/leads/outreach_drafts/leadmachine_20260308.md",
+        "pieces": 10,
+        "result": "APPROVED",
+        "notes": "4 Upwork proposals + 6 local biz cold call scripts. Strong personalization (mentions specific business names, URLs, locations, pain points). Realistic scope estimates. Clear ROI framing. No AI slop."
+      },
+      {
+        "file": "AUTOMATIONS/leads/outreach_drafts/leadmachine_cycle2_20260308.md",
+        "pieces": 10,
+        "result": "APPROVED",
+        "notes": "3 local biz cold emails + 2 freelance proposals + 5 HN applications. Cold emails are standout quality: mention specific broken things on real URLs (no SSL, mobile broken, missing contact forms). Under 100 words. Human voice."
       }
     ],
+    "flagged_files": [],
     "banned_word_scan": {
-      "auto_generated_dir": {
+      "auto_generated_20260309": {
         "banned_words_found": 0,
-        "em_dashes_found": 2,
+        "em_dashes_found": 0,
         "template_slop_detected": true
       },
-      "qa_queue_dir": {
-        "total_grep_hits": 368,
-        "estimated_false_positives": 324,
-        "files_with_2plus_matches": 35,
-        "note": "Most hits from QA template checklist mentioning banned words. 35 files with 2+ matches likely have real violations."
+      "pipeline_tweets_20260309": {
+        "banned_words_found": 0,
+        "em_dashes_found": 0,
+        "template_slop_detected": false
       }
     }
   },
+  "outreach_review": {
+    "total_drafts": 20,
+    "passed": 20,
+    "blocked": 0,
+    "notes": "Both lead machine batches are high quality. Local biz cold emails are particularly strong - real business names, specific website issues, clear ROI math. Upwork proposals show technical depth without over-promising. HN applications are appropriate format."
+  },
   "generator_health": {
-    "csv_auto_generator": {"status": "BROKEN", "issue": "Prefix template + raw paste", "fix_priority": "P1"},
+    "csv_auto_generator": {"status": "BROKEN", "issue": "Prefix template + raw paste. 18 cycles and still producing slop.", "fix_priority": "P0"},
+    "pipeline_tweet_generator": {"status": "WORKING", "note": "Real data, proper voice. Best content source."},
+    "lead_machine_generator": {"status": "WORKING", "note": "Strong personalization, proper format."},
     "autonomous_factory": {"status": "BROKEN", "issue": "Single template for all products", "fix_priority": "P1"},
     "scale_verdict_to_content": {"status": "BROKEN", "issue": "Identical templates for every alpha entry", "fix_priority": "P0"},
     "alpha_content_generator": {"status": "FIXED", "note": "Holding since cycle 12"},
@@ -89,27 +79,28 @@
     "freelance_response_generator": {"status": "FIXED", "note": "Fixed cycle 14"}
   },
   "most_common_failures": [
-    "template_slop (570 pieces total: 110 auto_generated + 460 CONTENT_QUEUE.csv)",
-    "copy_paste_threads (8 identical threads in one file)",
-    "banned_phrase_leaving_money_on_table (8 occurrences)",
-    "fake_consistent_stat (14423 repeated identically 8 times)"
+    "template_slop (25 new pieces from csv_auto_generator, same bug as C14-C17)",
+    "lazy_prefix_pattern ('tool find that saves hours.' before raw alpha paste)",
+    "cross_niche_zero_effort ('built this.' / 'alpha:' / 'discipline compounds.' prefixes)",
+    "typos_in_generated_content ('i analyses' instead of 'i analyzed')",
+    "content_truncation (posts end with '..' instead of complete thoughts)"
   ],
   "trend": {
-    "direction": "mixed — posting_queue excellent, auto_generated broken",
+    "direction": "STABLE — approved sources excellent, auto_generator still broken",
     "pass_rate_history": [
-      "96.3% (cycle 1)", "97.9% (cycle 2)", "45.4%/100% (cycle 3)",
-      "94.4%/100% (cycle 4)", "52.6%/97.4% (cycle 5)", "81.8%/95.5% (cycle 6)",
-      "81.5%/100% (cycle 7)", "29.4%/56.9% (cycle 8)", "73.7%/73.7% (cycle 9)",
-      "65.6%/100% (cycle 10)", "86.4%/100% (cycle 11)", "91.7%/100% (cycle 12)",
-      "71.2%/100% (cycle 13)", "89.9%/100% (cycle 14)", "89.5%/96.1% (cycle 15)",
-      "100%/100% (cycle 16)", "1.4%/1.4% (cycle 17) -- full auto_generated + CONTENT_QUEUE audit"
+      "96.3% (C1)", "97.9% (C2)", "45.4%/100% (C3)",
+      "94.4%/100% (C4)", "52.6%/97.4% (C5)", "81.8%/95.5% (C6)",
+      "81.5%/100% (C7)", "29.4%/56.9% (C8)", "73.7%/73.7% (C9)",
+      "65.6%/100% (C10)", "86.4%/100% (C11)", "91.7%/100% (C12)",
+      "71.2%/100% (C13)", "89.9%/100% (C14)", "89.5%/96.1% (C15)",
+      "100%/100% (C16)", "1.4%/1.4% (C17)", "54.5%/54.5% (C18)"
     ],
     "remaining_persistent": [
+      "csv_auto_generator STILL BROKEN after 18 cycles — P0 fix needed",
       "cold-maxx.surge.sh 404",
       "5 DNS-too-long surge.sh sites",
-      "4 streak pages missing OG tags",
-      "HUMAN: 400+ approved posts, 0 posted, Day 36 at $0",
-      "3 content generators need template variation or LLM rewrite"
+      "HUMAN: 400+ approved posts, 0 posted, Day 37 at $0",
+      "HUMAN: Outreach drafts approved but no email domain/mailbox configured"
     ]
   }
 }

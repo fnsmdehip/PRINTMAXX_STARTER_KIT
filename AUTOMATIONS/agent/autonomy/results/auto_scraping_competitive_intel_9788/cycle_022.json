@@ -1,0 +1,61 @@
+{
+  "cycle": 22,
+  "timestamp": "2026-03-09T13:52:33.881966",
+  "venture": "SCRAPING_competitive_intel",
+  "phases_completed": [
+    "CONFIGURE",
+    "SCRAPE",
+    "CLEAN",
+    "ANALYZE",
+    "STORE",
+    "ALERT"
+  ],
+  "scrape": {
+    "reddit_posts_scraped": 3,
+    "reddit_files_today": 6,
+    "alpha_staging_new_today": 711,
+    "high_signal_today": 506,
+    "competitor_apps_scanned": 19,
+    "version_changes": 0
+  },
+  "store": {
+    "competitive_intel_new_rows": 8,
+    "competitive_intel_total": 202,
+    "alpha_staging_appended": 3
+  },
+  "alerts": {
+    "p0_count": 2,
+    "p1_count": 3,
+    "p2_count": 3,
+    "alert_file": "AUTOMATIONS/logs/competitive_intel_alerts_20260309.md",
+    "top_alert": "ASO review timing hack: +0.8 stars by changing SKStoreReviewRequest to post-streak trigger"
+  },
+  "top_signals": [
+    {
+      "roi": "HIGHEST",
+      "cat": "ASO",
+      "signal": "Review prompt timing: +0.8 stars"
+    },
+    {
+      "roi": "HIGH",
+      "cat": "APP_FACTORY",
+      "signal": "HabitSwipe 2500 users /2mo validates habit app niche"
+    },
+    {
+      "roi": "HIGH",
+      "cat": "OUTBOUND",
+      "signal": "LinkedIn DMs confirmed dead (200 msgs = 0)"
+    },
+    {
+      "roi": "HIGH",
+      "cat": "CONTENT",
+      "signal": "k/mo no-BS content angle viraling on Reddit"
+    },
+    {
+      "roi": "HIGH",
+      "cat": "COLD_OUTBOUND",
+      "signal": "Cold email exact framework thread high engagement"
+    }
+  ],
+  "status": "SUCCESS"
+}

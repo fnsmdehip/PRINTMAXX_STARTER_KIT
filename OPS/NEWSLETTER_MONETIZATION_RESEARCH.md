@@ -317,3 +317,23 @@ and
 
 [ACQUISITION] [Market Research] What’s your "Post-Download" workflow for video lectures?
 
+
+
+---
+
+## Pending Enhancement (ALPHA19932, Score: 43)
+
+**Source:** @purpdevvv (high-signal-accounts) | **URL:** https://x.com/RaananTz/status/2030661093350392177/analytics
+**Added:** 2026-03-09T15:25:24-04:00
+
+Agencies charge $5K-$15K for what Anymark gives you for $189:
+
+- Full brand kit & logo
+- Brand positioning
+- Target audience research
+- Messaging framework
+- Campaign copy you can actually ship
+- 25+ page brandbook
+
+All built from market demand signals.
+

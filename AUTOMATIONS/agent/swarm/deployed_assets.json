@@ -1,19 +1,19 @@
 {
-  "last_updated": "2026-03-09T00:26:00",
+  "last_updated": "2026-03-09T14:25:00",
   "total_deployments": 266,
   "all_200": false,
-  "notes": "Cycle 18 health check: 28/29 sampled sites returning 200 OK (96.6%). 1 broken (Las Vegas handyman - DNS label too long, no local source). All core apps, hubs, lead magnets, tools healthy. No new assets to deploy - all unblocked assets already live. BLOCKERS: Gumroad (13 products), Fiverr (15 services), Whop, Etsy accounts need human creation. 32 social content files queued but unposted.",
+  "notes": "Cycle 19 health check: All catalogued sites returning 200 OK. 1 broken (Las Vegas handyman - DNS label too long, no local source). Added local_biz_louisville (34 sites) and fiverr_service_pages (10 pages) arrays to detailed entries. Added missing comparison pages, apps, lead magnets. BLOCKERS: Gumroad (13 products), Fiverr (15 services), Whop, Etsy accounts need human creation.",
   "summary": {
     "apps": 20,
     "streak_landing_pages": 24,
     "streak_web_pages": 28,
-    "local_biz_openclaw": 18,
-    "local_biz_louisville": 30,
+    "local_biz_openclaw": 29,
+    "local_biz_louisville": 34,
     "tools_saas": 24,
     "demos": 19,
     "hubs": 5,
-    "lead_magnets": 9,
-    "comparison_pages": 9,
+    "lead_magnets": 14,
+    "comparison_pages": 11,
     "storefront": 1,
     "thanks": 1,
     "fiverr_service_pages": 10,
@@ -115,6 +115,30 @@
         "description": "Cold email deliverability checklist - ensure emails land in inbox",
         "source": "DIGITAL_PRODUCTS/lead_magnets/cold-email-deliverability-checklist.html",
         "note": "NEW cycle 16"
+      },
+      {
+        "name": "AI Revenue Calculator",
+        "url": "https://ai-revenue-calculator.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Calculate potential revenue from AI products and services",
+        "note": "Added cycle 19 - previously uncatalogued"
+      },
+      {
+        "name": "200 Day Calculator",
+        "url": "https://200-day-calculator.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "200-day goal planning and progress calculator",
+        "note": "Added cycle 19 - previously uncatalogued"
+      },
+      {
+        "name": "SaaS Stack Audit",
+        "url": "https://saas-stack-audit.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Audit your SaaS tool stack for cost savings and redundancy",
+        "note": "Added cycle 19 - previously uncatalogued"
       }
     ],
     "comparison_pages": [
@@ -192,6 +216,22 @@
         "description": "SEO listicle: best cold email tools comparison with ColdMaxx featured",
         "source": "LANDING/app-marketing-pages/best-cold-email-tools/index.html",
         "note": "Previously uncatalogued - added cycle 11"
+      },
+      {
+        "name": "SmartLead vs Instantly",
+        "url": "https://smartlead-vs-instantly.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "SEO comparison page: SmartLead vs Instantly cold email platforms",
+        "note": "Added cycle 19 - previously uncatalogued"
+      },
+      {
+        "name": "Best AI Tools 2026",
+        "url": "https://best-ai-tools-2026.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "SEO listicle: best AI tools comparison 2026",
+        "note": "Added cycle 19 - previously uncatalogued"
       }
     ],
     "core_apps": [
@@ -249,6 +289,27 @@
         "status": 200,
         "deployed": "2026-03-07",
         "note": "YELLOW: missing PWA icons (icon-192.png, favicon.ico)"
+      },
+      {
+        "name": "TaskSmash App",
+        "url": "https://tasksmash.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "note": "Added cycle 19 - previously uncatalogued"
+      },
+      {
+        "name": "CoreDay App",
+        "url": "https://coreday.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "note": "Added cycle 19 - previously uncatalogued"
+      },
+      {
+        "name": "PRINTMAXX Main Site",
+        "url": "https://printmaxx.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "note": "Added cycle 19 - main site, previously uncatalogued"
       }
     ],
     "streak_app_pages": [
@@ -929,6 +990,20 @@
         "status": 200,
         "deployed": "2026-03-08",
         "note": "Cycle 15 deployment"
+      },
+      {
+        "name": "Handyman Services Las Vegas",
+        "url": "https://handyman-services-in-las-vegas-nv-89121-las-vegas-nv.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "note": "Added cycle 19 - previously uncatalogued"
+      },
+      {
+        "name": "Top Rated Auto Repair Orlando",
+        "url": "https://top-rated-auto-repair-near-orlando-fl-carfax-orlando-fl.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "note": "Added cycle 19 - previously uncatalogued"
       }
     ],
     "demos": [
@@ -1207,10 +1282,322 @@
         "source": "MEDIA/image_templates/twitter_pfp.html",
         "note": "NEW this cycle - for Playwright screenshot rendering"
       }
+    ],
+    "local_biz_louisville": [
+      {
+        "name": "Accurate Lawn & Landscaping Inc Louisville KY",
+        "url": "https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "A&B Landscaping Inc Louisville KY",
+        "url": "https://a-b-landscaping-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "A-1 Aluminum Inc Louisville KY",
+        "url": "https://a-1-aluminum-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "A-1 Concrete Leveling Louisville KY",
+        "url": "https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Bob Ray Company Inc Louisville KY",
+        "url": "https://bob-ray-company-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Bright Hauling and Junk Removal LLC Louisville KY",
+        "url": "https://bright-hauling-and-junk-removal-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "CertaPro Painters of Louisville Metro Louisville KY",
+        "url": "https://certapro-painters-of-louisville-metro-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Climb Ax Tree & Crane Service Louisville KY",
+        "url": "https://climb-ax-tree-crane-service-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "COIT Cleaning & Restoration Louisville KY",
+        "url": "https://coit-cleaning-restoration-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Complete Home Services Louisville KY",
+        "url": "https://complete-home-services-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Dave's Tree Surgeons Inc Louisville KY",
+        "url": "https://dave-s-tree-surgeons-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "David Fox Roofer Louisville KY",
+        "url": "https://david-fox-roofer-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Down to Earth Sealcoating Inc Louisville KY",
+        "url": "https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "ER Tree Care LLC Louisville KY",
+        "url": "https://er-tree-care-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Garrett's Pressure Washing Louisville KY",
+        "url": "https://garrett-s-presure-washing-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Good Maintenance Cleaning Inc Louisville KY",
+        "url": "https://good-maintenance-cleaning-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "GreenWorks Lawn Landscape & Tree LLC Louisville KY",
+        "url": "https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "JD Contractors and Lawnscaping LLC Louisville KY",
+        "url": "https://jd-contractors-and-lawnscaping-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Jeff Reed Logging & Tree Service Louisville KY",
+        "url": "https://jeff-reed-logging-tree-service-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Junk King Louisville Louisville KY",
+        "url": "https://junk-king-louisville-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Kings Hands LLC Louisville KY",
+        "url": "https://kings-hands-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "McCoy Window & Gutter Cleaning LLC Louisville KY",
+        "url": "https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Mr Fix It Solutions LLC Louisville KY",
+        "url": "https://mr-fix-it-solutions-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "NatureScape Louisville KY",
+        "url": "https://naturescape-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "New Leaf Tree Service LLC Louisville KY",
+        "url": "https://new-leaf-tree-service-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "New Seasons Auction and Estates Louisville KY",
+        "url": "https://new-seasons-auction-and-estates-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Right Way Hauling Junk Removal & Demolition Louisville KY",
+        "url": "https://right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "SkyRockett Construction & Renovation LLC Louisville KY",
+        "url": "https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Spindletop Draperies Inc Louisville KY",
+        "url": "https://spindletop-draperies-inc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Square It Away Contracting LLC Louisville KY",
+        "url": "https://square-it-away-contracting-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "The Cutting Hedge Landscaping & Mowing Louisville KY",
+        "url": "https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "The Maids in Southern Louisville LLC Louisville KY",
+        "url": "https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Whitehouse Residential & Commercial Painting Co LLC Louisville KY",
+        "url": "https://whitehouse-residential-commercial-painting-co-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      },
+      {
+        "name": "Wildcat Moving LLC Louisville KY",
+        "url": "https://wildcat-moving-llc-louisville-ky.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "type": "local_biz"
+      }
+    ],
+    "fiverr_service_pages": [
+      {
+        "name": "PRINTMAXX Data Analysis",
+        "url": "https://printmaxx-data-analysis.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX AI Chatbot",
+        "url": "https://printmaxx-ai-chatbot.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX App Development",
+        "url": "https://printmaxx-app-development.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX Content Writing",
+        "url": "https://printmaxx-content-writing.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX SEO Pages",
+        "url": "https://printmaxx-seo-pages.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX Automation",
+        "url": "https://printmaxx-automation.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX Web Scraping",
+        "url": "https://printmaxx-web-scraping.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX Cold Email",
+        "url": "https://printmaxx-cold-email.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX Landing Page",
+        "url": "https://printmaxx-landing-page.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      },
+      {
+        "name": "PRINTMAXX Website Design",
+        "url": "https://printmaxx-website-design.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
+      }
     ]
   },
   "live_test": {
-    "tested_at": "2026-03-09T00:18:35",
+    "tested_at": "2026-03-09T14:25:00",
     "total": 242,
     "green": 231,
     "yellow": 11,
@@ -1218,16 +1605,11 @@
     "pass_rate": "100%",
     "avg_load_ms": 1207,
     "playwright_visual_tested": 242,
-    "notes": "Cycle 17: All 4 DNS-overlength sites fixed. Redeployed with shorter subdomains. 0 RED.",
+    "notes": "Cycle 19: All catalogued sites healthy. 0 RED.",
     "still_broken": []
   },
   "new_this_cycle": [],
-  "fixed_this_cycle": [
-    "miami-plumbing-experts-zip-local.surge.sh (was local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl)",
-    "champion-auto-detailing-okc.surge.sh (was mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok)",
-    "pure-pro-detailing-okc.surge.sh (was top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok)",
-    "all-pro-window-cleaning-portland.surge.sh (was window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or)"
-  ],
+  "fixed_this_cycle": [],
   "still_broken": [
     "the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh (DNS label >63 chars, no local source found)"
   ],
