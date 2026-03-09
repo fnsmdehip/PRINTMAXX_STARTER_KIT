@@ -15,6 +15,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
+try:
+    from master_ops_bridge import MasterOpsBridge
+    _BRIDGE_AVAILABLE = True
+except ImportError:
+    _BRIDGE_AVAILABLE = False
+
 PROJECT = Path(__file__).resolve().parent.parent
 AUTO = PROJECT / "AUTOMATIONS"
 REPORTS = AUTO / "agent" / "swarm" / "reports"
@@ -106,6 +112,55 @@ def _section(title: str, items: list[str]) -> list[str]:
     out.append("")
     return out
 
+def _get_synergy_context(venture_type: str) -> str:
+    """Get synergy and tool recommendations from Master Ops."""
+    if not _BRIDGE_AVAILABLE:
+        return ""
+    try:
+        bridge = MasterOpsBridge()
+        sections = []
+
+        # Synergy stacks
+        ops = bridge.get_ops_by_category(venture_type)
+        op_ids = {o.get("OP_ID") for o in ops}
+        synergies = [s for s in bridge.get_synergy_stacks()
+                     if any(oid in s.get("METHODS_COMBINED", "") for oid in op_ids)]
+
+        if synergies:
+            sections.append("SYNERGY OPPORTUNITIES:")
+            for s in synergies[:5]:
+                sections.append(f"  - {s.get('NAME')}: score {s.get('SYNERGY_SCORE')}, {s.get('REVENUE_MULTIPLIER')}x multiplier")
+                sections.append(f"    Methods: {s.get('METHODS_COMBINED')}")
+                sections.append(f"    {s.get('DESCRIPTION', '')[:100]}")
+
+        # Tool recommendations
+        tools = bridge.get_all_tool_stacks()
+        if venture_type.upper() in ("CONTENT", "MEDIA"):
+            relevant_tools = tools.get("video", [])
+            if relevant_tools:
+                sections.append("\nRECOMMENDED TOOLS (VIDEO/MEDIA):")
+                for t in relevant_tools[:5]:
+                    sections.append(f"  - {t.get('TOOL')}: {t.get('FREE_TIER', 'N/A')} free | Quality: {t.get('QUALITY', '?')}")
+        elif venture_type.upper() in ("OUTBOUND", "LOCAL_BIZ", "SERVICE"):
+            relevant_tools = tools.get("lead_gen", [])
+            if relevant_tools:
+                sections.append("\nRECOMMENDED TOOLS (LEAD GEN):")
+                for t in relevant_tools[:5]:
+                    sections.append(f"  - {t.get('TOOL')}: {t.get('FREE_TIER', 'N/A')} free | Automation: {t.get('AUTOMATION_LEVEL', '?')}")
+
+        # Alpha thesis edge durations
+        theses = bridge.get_alpha_by_lane(venture_type.lower())
+        if theses:
+            sections.append("\nALPHA EDGE ANALYSIS:")
+            for t in theses[:3]:
+                sections.append(f"  - {t.get('OPPORTUNITY')}")
+                sections.append(f"    Edge duration: {t.get('EDGE_DURATION')} | {t.get('WHY_LLM_EDGE', '')[:80]}")
+
+        return "\n".join(sections)
+    except Exception:
+        return ""
+
+
 def gen_venture(venture: str, intel: dict, alpha: list, gdocs: dict,
                 channels: list, edge_only: bool = False) -> str:
     focus, platforms, kpis = VCTX.get(venture, ("", [], []))
@@ -179,6 +234,11 @@ def gen_venture(venture: str, intel: dict, alpha: list, gdocs: dict,
     else:
         L += ["   - 21-30 day warmup SOP per account", "   - Mobile proxies required", "   - Separate browser profiles", "   - Stagger posting times"]
     L.append("")
+
+    # Master Ops synergy & tool intelligence
+    synergy_ctx = _get_synergy_context(venture)
+    if synergy_ctx:
+        L += [f"### MASTER OPS SYNERGY & TOOLS", synergy_ctx, ""]
 
     # KPIs
     L += _section("KPIs", [f"- {k}" for k in kpis])

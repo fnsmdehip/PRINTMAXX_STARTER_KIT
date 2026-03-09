@@ -73,3 +73,15 @@ Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/`
 | Best AI Tools 2026 | https://best-ai-tools-2026.surge.sh | LIVE (placeholder IDs) |
 | AI Stack 2026 | https://ai-stack-2026.surge.sh | LIVE (placeholder IDs) |
 | ConvertKit vs Beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE (placeholder IDs) |
+
+## Comparison Pages
+
+Deployed 2026-03-09 by GAP HUNTER agent.
+
+| Page | URL | Status |
+|------|-----|--------|
+| ColdMaxx vs Instantly | https://coldmaxx-vs-instantly.surge.sh | LIVE |
+| Cursor vs Claude Code | https://cursor-vs-claudecode.surge.sh | LIVE |
+| Instantly vs Lemlist | https://instantly-vs-lemlist.surge.sh | LIVE |
+| PageScorer vs GTmetrix | https://pagescorer-vs-gtmetrix.surge.sh | LIVE |
+| SleepMaxx vs Sleep Cycle | https://sleepmaxx-vs-sleepcycle.surge.sh | LIVE |

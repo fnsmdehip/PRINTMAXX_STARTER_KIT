@@ -11,3 +11,25 @@
 - $15,000+/mo = fractional COO/CTO. requires track record.
 
 **Action:** Position our outbound as $5k+/mo automation partnerships, not hourly task work.
+
+
+---
+
+## Pending Enhancement (ALPHA18822, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rorcmp/you_build_i_market_it_deal/
+**Added:** 2026-03-09T06:15:00-04:00
+
+[ACQUISITION] You Build I Market it? Deal?
+
+
+
+---
+
+## Pending Enhancement (ALPHA18838, Score: 24)
+
+**Source:** HackerNews | **URL:** https://www.seniorease.eu/
+**Added:** 2026-03-09T06:15:00-04:00
+
+[ACQUISITION] Show HN: I built a simple book tracker because I kept buying books I owned
+

@@ -1,38 +1,30 @@
 # Pipeline Building-in-Public Content — 2026-03-09
 
 Generated from real pipeline metrics. @PRINTMAXXER voice.
-Status: APPROVED — Scheduled Mar 12
+Status: PENDING_REVIEW
 
 ## Tweets (pick 1-2 per day)
 
 ### Tweet 1
 ```
-pipeline update:
-
-• 153,700 websites analyzed
-• 13,936 hot leads (bad site + high budget industry)
-• 79,408 warm leads
-• 949,541 cold emails generated
-• 582,963 in outreach pipeline
-
-runs autonomously. cron job at 3am. crash recovery built in. this is the way.
+analyzed 154,700 business websites last night while sleeping. 14,045 have garbage sites that need rebuilding. cold emails already drafted. this is what automation looks like.
 ```
 
 ### Tweet 2
 ```
-most people manually find leads one at a time. I downloaded 2.87 million from Overture Maps, deduped to 1.45M unique domains, and built a closed-loop pipeline that qualifies → emails → tracks automatically. 13,936 hot leads so far.
+14,045 local businesses with outdated websites identified. personalized cold emails with live demo links generated automatically. the pipeline runs at 3am. I wake up to qualified leads.
 ```
 
 ### Tweet 3
 ```
-13,936 local businesses with outdated websites identified. personalized cold emails with live demo links generated automatically. the pipeline runs at 3am. I wake up to qualified leads.
+1.45 million business domains in the queue. 154,700 analyzed so far (10.6%). 14,045 hot leads. 962,762 cold emails drafted. the machine runs 24/7 via cron. I just check the dashboard.
 ```
 
 ## Thread (7 tweets)
 
 ### 1/7
 ```
-I built a system that finds local businesses with garbage websites and cold emails them with live demos of what their site COULD look like. here's exactly how it works (and the numbers so far).
+I built a system that finds local businesses with garbage websites and cold emails them with live demos of what their site COULD look like. here's exactly how it works (and the numbers so far). 🧵
 ```
 
 ### 2/7
@@ -80,9 +72,9 @@ qualify → email → track → repeat. no human in the loop.
 ```
 current numbers:
 
-• 153,700 websites analyzed (of 1.45M)
-• 13,936 hot leads identified
-• 949,541 cold emails generated
+• 154,700 websites analyzed (of 1.45M)
+• 14,045 hot leads identified
+• 962,762 cold emails generated
 • 16 live demo sites
 • 6 industry templates
 

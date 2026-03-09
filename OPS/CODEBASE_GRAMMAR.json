@@ -1,11 +1,11 @@
 {
-  "generated": "2026-03-08T01:33:51.475922",
+  "generated": "2026-03-09T05:45:00.472468",
   "project": "PRINTMAXX",
   "total_scripts": 20,
   "scripts": {
     "ceo_agent.py": {
       "desc": "24/7 orchestrator \u2014 scores ops, makes PROMOTE/ENHANCE/CREATE/KILL/DISCOVER decisions, delegates to ventures",
-      "lines": 2023,
+      "lines": 2279,
       "classes": [
         {
           "name": "GitGuard",
@@ -95,6 +95,20 @@
             "acquire()",
             "release()"
           ]
+        },
+        {
+          "name": "CycleCheckpoint",
+          "methods": [
+            "__init__(cycle_number)",
+            "_load_existing()",
+            "save()",
+            "should_skip(phase)",
+            "record_phase(phase, result)",
+            "get_phase_result(phase)",
+            "finish_cycle()",
+            "_archive(data, reason)",
+            "_remove_checkpoint()"
+          ]
         }
       ],
       "functions": [
@@ -152,7 +166,7 @@
           "args": [
             "dry_run"
           ],
-          "doc": "Run one full CEO cycle: score \u2192 decide \u2192 snapshot \u2192 execute \u2192 audit."
+          "doc": "Run one full CEO cycle: score -> decide -> snapshot -> execute -> audit."
         },
         {
           "name": "show_status",
@@ -188,14 +202,16 @@
         "--cron-add"
       ],
       "state_files": [
-        "LOCK_FILE",
+        "STATE_FILE",
         "ceo_state.json",
-        "STATE_FILE"
+        "CHECKPOINT_FILE",
+        "LOCK_FILE"
       ],
       "reads": [],
       "writes": [],
       "calls_scripts": [],
       "constants": [
+        "CHECKPOINT_STALE_HOURS = 2.0",
         "BLOCKED_COMMANDS = [...] (6 items)",
         "MAX_CHANGES_PER_CYCLE = 5",
         "KILL_THRESHOLD = 15",
@@ -216,12 +232,13 @@
     },
     "agent_swarm.py": {
       "desc": "22 operational agents \u2014 generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection",
-      "lines": 1415,
+      "lines": 1488,
       "classes": [
         {
           "name": "SwarmState",
           "methods": [
             "__init__()",
+            "_load()",
             "save()",
             "update_agent(agent_id, updates)"
           ]
@@ -331,14 +348,13 @@
       "calls_scripts": [],
       "constants": [
         "MODEL_OPUS = 'claude-opus-4-6'",
-        "MODEL_SONNET = 'claude-sonnet-4-6'",
-        "SWARM_AGENTS = {...} (24 keys)",
-        "AGENT_VENTURE_MAP = {...} (22 keys)"
+        "SWARM_AGENTS = {...} (25 keys)",
+        "AGENT_VENTURE_MAP = {...} (23 keys)"
       ]
     },
     "venture_autonomy.py": {
       "desc": "8 venture types \u2014 universal execution engine, self-managing schedules, SelfManager auto-adjusts",
-      "lines": 1634,
+      "lines": 1728,
       "classes": [
         {
           "name": "AutonomyState",
@@ -359,6 +375,7 @@
             "create_venture(venture_type, name, config)",
             "run_venture(venture_id)",
             "run_all_active()",
+            "_get_venture_xlsx_context(venture_type)",
             "_get_venture_intelligence(venture_type, step)",
             "_run_with_claude(venture_id, venture, step, vtype)",
             "_save_step_result(venture_id, step, success, output)",
@@ -507,9 +524,9 @@
         "--self-manage"
       ],
       "state_files": [
-        "LOG_FILE",
         "autonomy_state.json",
-        "STATE_FILE"
+        "STATE_FILE",
+        "LOG_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -522,7 +539,7 @@
     },
     "intelligence_router.py": {
       "desc": "central intelligence hub \u2014 484 docs, 14,799 alpha, 16 CSVs across 9 ventures",
-      "lines": 1609,
+      "lines": 1820,
       "classes": [],
       "functions": [
         {
@@ -548,7 +565,7 @@
             "venture_type",
             "top"
           ],
-          "doc": "Query alpha_query.py for top alpha entries relevant to a venture."
+          "doc": "Query alpha entries relevant to a venture."
         },
         {
           "name": "find_existing_docs",
@@ -594,6 +611,14 @@
             "max_lines"
           ],
           "doc": "Extract key sections from a doc (headers + first few lines under each)."
+        },
+        {
+          "name": "_enrich_with_master_ops",
+          "args": [
+            "venture_type",
+            "brief"
+          ],
+          "doc": "Enrich an intelligence brief with Master Ops xlsx data."
         },
         {
           "name": "get_intelligence",
@@ -660,7 +685,7 @@
     },
     "daily_engagement_planner.py": {
       "desc": "warmup-aware daily action plan \u2014 posts, replies, likes, follows with timing",
-      "lines": 602,
+      "lines": 604,
       "classes": [],
       "functions": [
         {
@@ -1005,7 +1030,7 @@
     },
     "loop_closer.py": {
       "desc": "closes open loops \u2014 decision execution, feedback tracking, pipeline advancement",
-      "lines": 886,
+      "lines": 970,
       "classes": [],
       "functions": [
         {
@@ -1046,6 +1071,11 @@
             "label"
           ],
           "doc": ""
+        },
+        {
+          "name": "_get_blocker_intelligence",
+          "args": [],
+          "doc": "Get current blocker state from Master Ops for loop closing."
         },
         {
           "name": "adjust_interval",
@@ -1197,12 +1227,14 @@
     },
     "decision_engine.py": {
       "desc": "closed-loop decision processing \u2014 pending data \u2192 actions",
-      "lines": 673,
+      "lines": 1206,
       "classes": [
         {
           "name": "FreelancePipeline",
           "methods": [
             "analyze(dry_run)",
+            "_match_service(opp)",
+            "_build_price_line(opp, svc)",
             "_generate_responses(opportunities)"
           ]
         },
@@ -1210,6 +1242,7 @@
           "name": "EcomArbPipeline",
           "methods": [
             "analyze(dry_run)",
+            "_get_product_data(prod)",
             "_generate_listings(products)"
           ]
         },
@@ -1268,6 +1301,21 @@
             "outcome"
           ],
           "doc": "Append to decisions ledger for full audit trail."
+        },
+        {
+          "name": "_get_ops_weight",
+          "args": [
+            "op_id_or_venture"
+          ],
+          "doc": "Get xlsx-based scoring weights for a decision."
+        },
+        {
+          "name": "apply_ops_boost",
+          "args": [
+            "base_score",
+            "op_id_or_venture"
+          ],
+          "doc": "Apply xlsx-informed boosts/penalties to a base score."
         },
         {
           "name": "read_csv_tail",
@@ -1927,10 +1975,10 @@
         "--status"
       ],
       "state_files": [
-        "LOG_FILE",
-        "LOCK_FILE",
+        "STATE_FILE",
         "daily_research_orchestrator_state.json",
-        "STATE_FILE"
+        "LOG_FILE",
+        "LOCK_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2155,9 +2203,9 @@
         "--visible"
       ],
       "state_files": [
+        "BRAVE_KEY_FILE",
         "CREDS_FILE",
-        "COPY_STYLE_HANDLES_FILE",
-        "BRAVE_KEY_FILE"
+        "COPY_STYLE_HANDLES_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2370,10 +2418,10 @@
       ],
       "state_files": [],
       "reads": [
-        "ETSY_LISTINGS_COMPLETE.md",
+        "REVENUE_TRACKER.csv",
         "progress.json",
-        "ACCOUNTS.csv",
-        "REVENUE_TRACKER.csv"
+        "ETSY_LISTINGS_COMPLETE.md",
+        "ACCOUNTS.csv"
       ],
       "writes": [],
       "calls_scripts": [],
@@ -2381,7 +2429,7 @@
     },
     "wire_missed_intelligence.py": {
       "desc": "parses MISSED_INTELLIGENCE_SCAN.md \u2192 updates catalog",
-      "lines": 258,
+      "lines": 260,
       "classes": [],
       "functions": [
         {
@@ -2423,9 +2471,16 @@
     },
     "build_codebase_grammar.py": {
       "desc": "LLM-optimized codebase representation \u2014 AST parsing, 100x+ compression",
-      "lines": 342,
+      "lines": 353,
       "classes": [],
       "functions": [
+        {
+          "name": "_safe_path",
+          "args": [
+            "target"
+          ],
+          "doc": "Verify path is within project root. Raises ValueError if not."
+        },
         {
           "name": "extract_script_grammar",
           "args": [

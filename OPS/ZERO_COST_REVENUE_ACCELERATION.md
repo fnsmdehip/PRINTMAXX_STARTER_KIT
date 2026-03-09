@@ -1626,3 +1626,32 @@ Did you know that Robinhood $HOOD and Palantir $PLTR both brought in $4.5 Billio
 
 Done-For-You AI Cold Email Service. Charge $2K-5K/mo retainers. Use Smartlead $39/mo. AI personalization commands $5-15K/mo premium. McKinsey: AI ops = 4.2x revenue/hr ($127 vs $31). Kelly Criterion: 87.4% margins on cold outbound. Sell OUTPUT not tools.
 
+
+
+---
+
+## Pending Enhancement (ALPHA18745, Score: 30)
+
+**Source:** @saimagnate (high-signal-accounts) | **URL:** https://x.com/saimagnate/status/2030875524080558350
+**Added:** 2026-03-09T06:45:01-04:00
+
+You can make 2x revenue if you listen to feedback
+
+comments tell you exactly what's stopping you from making more money
+
+learn to read 
+learn to implement
+
+
+
+---
+
+## Pending Enhancement (ALPHA18747, Score: 38)
+
+**Source:** @dimitarangg (high-signal-accounts) | **URL:** https://x.com/dimitarangg/status/2030914523532505210
+**Added:** 2026-03-09T06:45:01-04:00
+
+the entire "niche down or die" movement exists to sell you courses not to make you money, and you can prove this by looking at who's actually printing revenue
+
+every guru making $1 million+ annually serves the broadest possible market while preaching hyper-specific niching to
+

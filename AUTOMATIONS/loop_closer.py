@@ -31,6 +31,12 @@ from typing import Any, Optional
 
 from agent_resilience import locked_file, TrajectoryLogger
 
+try:
+    from master_ops_bridge import MasterOpsBridge
+    _BRIDGE_AVAILABLE = True
+except ImportError:
+    _BRIDGE_AVAILABLE = False
+
 _trajectory = TrajectoryLogger("loop_closer")
 
 PROJECT = Path(__file__).resolve().parent.parent
@@ -101,6 +107,36 @@ def run_cmd(cmd: str, timeout: int = 60, label: str = "") -> tuple[bool, str]:
     except Exception as e:
         log(f"  Error: {label or cmd[:60]}: {e}", "ERROR")
         return False, str(e)
+
+
+def _get_blocker_intelligence() -> dict:
+    """Get current blocker state from Master Ops for loop closing."""
+    if not _BRIDGE_AVAILABLE:
+        return {}
+    try:
+        bridge = MasterOpsBridge()
+
+        blockers = bridge.get_blocker_summary()
+        ready = bridge.get_ready_ops()
+        priority = bridge.get_priority_launch()
+
+        # Find ops that are ready but not advancing (stuck in pipeline)
+        ready_ids = {op.get("OP_ID") for op in ready}
+        priority_ids = {p.get("OP_ID") for p in priority}
+        stuck = ready_ids & priority_ids  # Priority items that are ready should be advancing
+
+        return {
+            "total_blockers": len(blockers),
+            "blocker_details": blockers[:10],
+            "ready_count": len(ready),
+            "stuck_priority_items": list(stuck),
+            "blocked_revenue_potential": sum(
+                float(p.get("REVENUE_POTENTIAL", "0").replace("$", "").replace(",", "").split("-")[0].split("/")[0])
+                for p in priority if p.get("OP_ID") in ready_ids
+            )
+        }
+    except Exception:
+        return {}
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -808,6 +844,24 @@ def show_status() -> None:
         print(f"    {name:<25} {status}")
     print()
 
+    # Master Ops blocker intelligence
+    if _BRIDGE_AVAILABLE:
+        try:
+            blocker_intel = _get_blocker_intelligence()
+            if blocker_intel:
+                print("  MASTER OPS BLOCKERS:")
+                print(f"    {blocker_intel.get('total_blockers', 0)} active blocker keys")
+                print(f"    {blocker_intel.get('ready_count', 0)} ops READY to advance")
+                stuck = blocker_intel.get('stuck_priority_items', [])
+                if stuck:
+                    print(f"    STUCK PRIORITY ITEMS: {', '.join(str(s) for s in stuck)}")
+                rev = blocker_intel.get('blocked_revenue_potential', 0)
+                if rev:
+                    print(f"    Blocked revenue potential: ${rev:,.0f}")
+                print()
+        except Exception:
+            pass
+
 
 # ═══════════════════════════════════════════════════════════════
 # MAIN
@@ -843,6 +897,22 @@ def run_cycle(dry_run: bool = False) -> None:
     log(f"Cycle complete: {decisions} decisions, {feedback} feedback updates, {pipeline} pipeline advances")
     _trajectory.log_success("run_cycle", _start, decisions=decisions, feedback=feedback, pipeline=pipeline)
 
+    # Master Ops blocker awareness
+    blocker_summary = ""
+    if _BRIDGE_AVAILABLE:
+        try:
+            blocker_intel = _get_blocker_intelligence()
+            if blocker_intel:
+                total_b = blocker_intel.get('total_blockers', 0)
+                ready_c = blocker_intel.get('ready_count', 0)
+                stuck = blocker_intel.get('stuck_priority_items', [])
+                blocker_summary = f" | Blockers: {total_b}, Ready: {ready_c}"
+                if stuck:
+                    blocker_summary += f", Stuck priority: {len(stuck)}"
+                log(f"Master Ops: {total_b} blocker keys, {ready_c} ops ready, {len(stuck)} stuck priority items")
+        except Exception:
+            pass
+
     # Post summary to message bus
     if not dry_run:
         msg = {
@@ -850,7 +920,7 @@ def run_cycle(dry_run: bool = False) -> None:
             "from": "loop_closer",
             "to": "ceo",
             "type": "cycle_complete",
-            "body": f"Loop closer: {decisions} decisions executed, {feedback} feedback updates, {pipeline} pipeline advances",
+            "body": f"Loop closer: {decisions} decisions executed, {feedback} feedback updates, {pipeline} pipeline advances{blocker_summary}",
             "read": False
         }
         with locked_file(MSG_BUS, mode="a") as f:

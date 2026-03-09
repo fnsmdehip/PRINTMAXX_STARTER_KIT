@@ -2,3 +2,18 @@ product_name,source,source_price,selling_platform,estimated_sell_price,fees,ship
 Example Wireless Earbuds,Walmart,15.0,facebook,30.0,1.5,5.0,8.5,28.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
 Example Wireless Earbuds,Walmart,15.0,mercari,30.0,3.0,5.0,7.0,23.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
 Example Wireless Earbuds,Walmart,15.0,ebay,30.0,3.98,5.0,6.02,20.08,https://walmart.com/clearance/electronics,electronics,API integration required for live data
+2026-03-09T06:03:15.208521,yoga mat,fitness,25.19,7.0,FB Marketplace,12.43,49.3,50,53.4,LIST,1.26,0.0,4.5,0.0,12.76,amazon,light
+2026-03-09T06:04:29.674137,led candles,home,6.99,3.5,FB Marketplace,-1.36,-19.4,50,5.2,SKIP,0.35,0.0,4.5,0.0,8.35,amazon,light
+2026-03-09T06:01:03.879537,dermaplaning tool,beauty,4.98,2.0,FB Marketplace,-1.77,-35.5,50,-1.9,SKIP,0.25,0.0,4.5,0.0,6.75,amazon,light
+2026-03-09T06:00:23.797051,ice roller face,health,5.38,2.75,FB Marketplace,-2.14,-39.8,50,-4.1,SKIP,0.27,0.0,4.5,0.0,7.52,amazon,light
+2026-03-09T06:02:05.237553,electric lunch box,kitchen,12.55,8.5,FB Marketplace,-4.58,-36.5,50,-6.5,SKIP,0.63,0.0,8.0,0.0,17.13,amazon,medium
+2026-03-09T06:01:46.081181,air fryer liner,kitchen,4.49,2.0,FB Marketplace,-2.23,-49.8,50,-8.3,SKIP,0.22,0.0,4.5,0.0,6.72,amazon,light
+2026-03-09T06:04:42.449121,shoe rack,home,11.99,8.5,FB Marketplace,-5.11,-42.6,50,-9.7,SKIP,0.6,0.0,8.0,0.0,17.1,amazon,medium
+2026-03-09T06:00:17.273309,posture corrector,health,7.59,4.25,FB Marketplace,-5.04,-66.4,50,-19.1,SKIP,0.38,0.0,8.0,0.0,12.63,amazon,medium
+2026-03-09T06:01:38.989180,portable blender,kitchen,9.59,8.5,FB Marketplace,-7.39,-77.1,50,-26.9,SKIP,0.48,0.0,8.0,0.0,16.98,amazon,medium
+2026-03-09T06:00:57.306705,led face mask,beauty,14.49,16.5,FB Marketplace,-10.73,-74.1,50,-30.7,SKIP,0.72,0.0,8.0,0.0,25.22,amazon,medium
+2026-03-09T06:03:41.607690,dog puzzle toy,pet,6.99,5.5,FB Marketplace,-6.86,-98.1,50,-34.5,SKIP,0.35,0.0,8.0,0.0,13.85,amazon,medium
+2026-03-09T06:00:36.581901,neck stretcher,health,6.79,5.5,FB Marketplace,-7.05,-103.8,50,-37.1,SKIP,0.34,0.0,8.0,0.0,13.84,amazon,medium
+2026-03-09T06:02:25.838962,phone projector,tech,10.0,14.0,FB Marketplace,-12.5,-125.0,50,-53.8,SKIP,0.5,0.0,8.0,0.0,22.5,amazon,medium
+2026-03-09T06:03:48.911463,cat water fountain,pet,6.88,8.5,FB Marketplace,-9.96,-144.8,50,-57.9,SKIP,0.34,0.0,8.0,0.0,16.84,amazon,medium
+2026-03-09T06:00:42.839553,scalp massager,health,2.46,2.75,FB Marketplace,-8.41,-342.0,50,-134.4,SKIP,0.12,0.0,8.0,0.0,10.87,amazon,medium

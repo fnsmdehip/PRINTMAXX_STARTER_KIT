@@ -206,7 +206,7 @@ User directive: "there should just be like a common sense loop double check thin
 
 5. **FINANCIAL HYGIENE** — Update `FINANCIALS/P_AND_L_MONTHLY.csv` when money moves. Track expenses. Track revenue. If revenue is $0, say so honestly. No paper trades pretending to be real.
 
-6. **MASTER OPS FRESHNESS** — If the latest `PRINTMAXX_MASTER_OPS_ENHANCED` xlsx is more than 3 days old, flag it. The master spreadsheet is the source of truth for all 182 ops. Stale ops = stale decisions.
+6. **MASTER OPS FRESHNESS** — If the latest `PRINTMAXX_MASTER_OPS_ENHANCED` xlsx is more than 3 days old, flag it. Run `python3 AUTOMATIONS/master_ops_bridge.py --stats` to check cache health. The bridge cache powers all 33 agent briefs — stale cache = stale decisions system-wide.
 
 7. **HUMAN BLOCKERS SURFACED** — At session end, always surface what ONLY the human can do (accounts, payments, API keys, posting). Don't bury it. Make it a clear, short, actionable list with time estimates.
 
@@ -227,9 +227,12 @@ python3 AUTOMATIONS/intelligence_router.py --venture CONTENT --task posting --br
 
 # Automated agents
 python3 AUTOMATIONS/intelligence_router.py --venture OUTBOUND --task outreach --json
+
+# Master Ops context (ops, synergies, blockers, playbooks)
+python3 AUTOMATIONS/master_ops_bridge.py --brief VENTURE_TYPE
 ```
 
-Every agent, venture, and the CEO agent itself queries intelligence_router.py before execution. No action should be taken on default LLM knowledge when 10,000+ alpha entries, 25+ growth playbooks, and real competitive intel exist in the system.
+Every agent, venture, and the CEO agent itself queries intelligence_router.py before execution (which now auto-enriches with Master Ops xlsx data via the bridge). No action should be taken on default LLM knowledge when 10,000+ alpha entries, 182 ops with automation scores, 26 synergy stacks, and real competitive intel exist in the system.
 
 ---
 
@@ -254,6 +257,20 @@ Every agent, venture, and the CEO agent itself queries intelligence_router.py be
 - Growth strategy: `python3 AUTOMATIONS/growth_strategist.py` (venture growth strategies, 5 AM cron)
 - Codebase grammar: `python3 AUTOMATIONS/build_codebase_grammar.py` (LLM-optimized grammar, 5:45 AM cron)
 - Unified CLI: `python3 AUTOMATIONS/printmaxx.py status`
+- Control panel: `python3 AUTOMATIONS/control_panel.py` (localhost:9999, auto-launches on session start)
+- Throttle: `python3 AUTOMATIONS/throttle_toggle.py --status` (EFFICIENT/HIGH mode)
+
+**Master Ops Bridge (xlsx intelligence for all agents):**
+- Rebuild cache: `python3 AUTOMATIONS/master_ops_bridge.py --rebuild`
+- Stats: `python3 AUTOMATIONS/master_ops_bridge.py --stats`
+- Query by category: `python3 AUTOMATIONS/master_ops_bridge.py --query CONTENT`
+- Ready ops: `python3 AUTOMATIONS/master_ops_bridge.py --ready`
+- Synergy stacks: `python3 AUTOMATIONS/master_ops_bridge.py --synergy`
+- Blockers: `python3 AUTOMATIONS/master_ops_bridge.py --blockers`
+- Intelligence brief: `python3 AUTOMATIONS/master_ops_bridge.py --brief VENTURE_TYPE`
+- Playbook for op: `python3 AUTOMATIONS/master_ops_bridge.py --playbook C01`
+- Indexes 19 sheets (182 ops, 26 synergies, 38 alpha theses, 1470 playbook steps, tool stacks, venture maps). Cache at `AUTOMATIONS/master_ops_cache.json` (12h TTL, cron 5:15 AM).
+- Wired into: intelligence_router, ceo_agent, decision_engine, daily_tactical_engine, venture_autonomy, growth_strategist, loop_closer, control_panel.
 
 **Alpha intelligence (query BEFORE building anything):**
 - By venture: `python3 AUTOMATIONS/alpha_query.py --venture APP_FACTORY --json` (APP_FACTORY|OUTBOUND|CONTENT|LOCAL_BIZ|MONETIZATION|RESEARCH|PRODUCT|SCRAPING)
@@ -525,6 +542,10 @@ All findings → `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Never create sepa
 | Leads | `AUTOMATIONS/leads/` |
 | Content | `CONTENT/social/` |
 | Financial tracking | `FINANCIALS/` |
-| Master ops | `PRINTMAXX_MASTER_OPS.xlsx` |
+| Master ops xlsx | `PRINTMAXX_MASTER_OPS_ENHANCED_*.xlsx` (latest date = source of truth) |
+| Master ops bridge | `AUTOMATIONS/master_ops_bridge.py` (shared xlsx API, 30+ methods) |
+| Master ops cache | `AUTOMATIONS/master_ops_cache.json` (auto-rebuilt JSON, 12h TTL) |
+| Control panel | `AUTOMATIONS/control_panel.py` + `control_panel.html` (localhost:9999) |
+| Throttle config | `AUTOMATIONS/throttle_config.json` + `throttle_state.json` |
 | All quant tools | `OPS/QUANT_TOOLS_AND_INFRASTRUCTURE.md` |
 | Full nav | `OPS/NAV_INDEX.md` |
