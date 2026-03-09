@@ -32,189 +32,123 @@ REPORT_PATH = REPORTS_DIR / f"test_report_{TODAY}.md"
 CONCURRENCY = 8       # parallel browser tabs
 TIMEOUT_MS  = 15_000  # ms per site
 
-# ── Full site list (deployed_assets.json + new surge deployments) ─────────────
-ALL_SITES = [
-    # Core apps
-    ("PrayerLock App",        "https://prayerlock-app.surge.sh",     "core_apps"),
-    ("FocusLock App",         "https://focuslock-app.surge.sh",      "core_apps"),
-    ("Hilal App",             "https://hilal-app.surge.sh",           "core_apps"),
-    ("MealMaxx App",          "https://mealmaxx-app.surge.sh",        "core_apps"),
-    ("ColdMaxx App",          "https://coldmaxx-app.surge.sh",        "core_apps"),
-    ("SleepMaxx App",         "https://sleepmaxx-app.surge.sh",       "core_apps"),
-    ("WalkToUnlock App",      "https://walktounlock-app.surge.sh",    "core_apps"),
-    ("HabitForge App",        "https://habitforge-app.surge.sh",      "core_apps"),
-    # Streak apps (app pages)
-    ("Art Streak App",        "https://art-streak-app.surge.sh",      "streak_apps"),
-    ("Coding Streak App",     "https://coding-streak-app.surge.sh",   "streak_apps"),
-    ("Fitness Streak App",    "https://fitness-streak-app.surge.sh",  "streak_apps"),
-    ("Journal Streak App",    "https://journal-streak-app.surge.sh",  "streak_apps"),
-    ("Language Streak App",   "https://language-streak-app.surge.sh", "streak_apps"),
-    ("Meditation Streak App", "https://meditation-streak-app.surge.sh","streak_apps"),
-    ("Reading Streak App",    "https://reading-streak-app.surge.sh",  "streak_apps"),
-    ("Sutra Streak App",      "https://sutra-streak-app.surge.sh",    "streak_apps"),
-    ("Gita Streak App",       "https://gita-streak-app.surge.sh",     "streak_apps"),
-    ("Scripture Streak LDS",  "https://scripture-streak-lds.surge.sh","streak_apps"),
-    ("Quran Streak App",      "https://quran-streak-app.surge.sh",    "streak_apps"),
-    ("Guru Streak App",       "https://guru-streak-app.surge.sh",     "streak_apps"),
-    ("Torah Streak App",      "https://torah-streak-app.surge.sh",    "streak_apps"),
-    ("Mormon Streak App",     "https://mormon-streak-app.surge.sh",   "streak_apps"),
-    ("Sikh Streak App",       "https://sikh-streak-app.surge.sh",     "streak_apps"),
-    # Streak landing pages (new today)
-    ("Art Streak Landing",        "https://art-streak.surge.sh",         "streak_landing"),
-    ("Coding Streak Landing",     "https://coding-streak.surge.sh",      "streak_landing"),
-    ("Fitness Streak Landing",    "https://fitness-streak.surge.sh",     "streak_landing"),
-    ("Journal Streak Landing",    "https://journal-streak.surge.sh",     "streak_landing"),
-    ("Language Streak Landing",   "https://language-streak.surge.sh",    "streak_landing"),
-    ("Meditation Streak Landing", "https://meditation-streak.surge.sh",  "streak_landing"),
-    ("Reading Streak Landing",    "https://reading-streak.surge.sh",     "streak_landing"),
-    ("Quran Streak Landing",      "https://quran-streak.surge.sh",       "streak_landing"),
-    ("Gita Streak Landing",       "https://gita-streak.surge.sh",        "streak_landing"),
-    ("Torah Streak Landing",      "https://torah-streak.surge.sh",       "streak_landing"),
-    ("Sikh Streak Landing",       "https://sikh-streak.surge.sh",        "streak_landing"),
-    ("Mormon Streak Landing",     "https://mormon-streak.surge.sh",      "streak_landing"),
-    ("Buddhist Streak Landing",   "https://buddhist-streak.surge.sh",    "streak_landing"),
-    # Web marketing pages
-    ("PrayerLock Web",   "https://prayerlock-web.surge.sh",   "web_marketing"),
-    ("FocusLock Web",    "https://focuslock-web.surge.sh",    "web_marketing"),
-    ("WalkToUnlock Web", "https://walktounlock-web.surge.sh", "web_marketing"),
-    ("SleepMaxx Web",    "https://sleepmaxx-web.surge.sh",    "web_marketing"),
-    ("MealMaxx Web",     "https://mealmaxx-web.surge.sh",     "web_marketing"),
-    ("HabitForge Web",   "https://habitforge-web.surge.sh",   "web_marketing"),
-    ("ColdMaxx",         "https://coldmaxx.surge.sh",         "web_marketing"),
-    ("FocusLock",        "https://focuslock.surge.sh",        "web_marketing"),
-    ("Ramadan Tracker",  "https://ramadan-tracker.surge.sh",  "web_marketing"),
-    ("PrayerLock",       "https://prayerlock.surge.sh",       "web_marketing"),
-    ("WalkToUnlock",     "https://walktounlock.surge.sh",     "web_marketing"),
-    ("SleepMaxx",        "https://sleepmaxx.surge.sh",        "web_marketing"),
-    ("MealMaxx",         "https://mealmaxx.surge.sh",         "web_marketing"),
-    ("Hilal Ramadan",    "https://hilal-ramadan.surge.sh",    "web_marketing"),
-    # New this session
-    ("PrintMaxx Content Calendar", "https://printmaxx-content-calendar.surge.sh", "new_tools"),
-    ("PrintMaxx Website Audit",    "https://printmaxx-website-audit.surge.sh",    "new_tools"),
-    ("PrintMaxx Invoice Tracker",  "https://printmaxx-invoice-tracker.surge.sh",  "new_tools"),
-    ("PrintMaxx Compare",          "https://printmaxx-compare.surge.sh",           "new_tools"),
-    ("PrintMaxx Store",            "https://printmaxx-store.surge.sh",             "new_tools"),
-    ("AI Stack 2026",              "https://ai-stack-2026.surge.sh",               "new_tools"),
-    ("Reliable Fence Nashville",   "https://reliable-fence-nashville.surge.sh",    "new_tools"),
-    ("Accurate Auto Nashville",    "https://accurate-auto-nashville.surge.sh",     "new_tools"),
-    # Hubs
-    ("PrintMaxx Apps Hub",   "https://printmaxx-apps.surge.sh",      "hubs"),
-    ("PrintMaxx Services",   "https://printmaxx-services.surge.sh",  "hubs"),
-    ("PrintMaxx Portfolio",  "https://printmaxx-portfolio.surge.sh", "hubs"),
-    ("PrintMaxx Dashboard",  "https://printmaxx-dashboard.surge.sh", "hubs"),
-    # Tools / SaaS
-    ("InvoiceForge",        "https://invoiceforge.surge.sh",                "tools_saas"),
-    ("ROI Calc",            "https://roicalc.surge.sh",                     "tools_saas"),
-    ("StackMaxx",           "https://stackmaxx.surge.sh",                   "tools_saas"),
-    ("PageScorer",          "https://pagescorer.surge.sh",                  "tools_saas"),
-    ("ProspectMaxx",        "https://prospectmaxx.surge.sh",                "tools_saas"),
-    ("PitchDeck",           "https://pitchdeck.surge.sh",                   "tools_saas"),
-    ("MCP Hub",             "https://mcphub.surge.sh",                      "tools_saas"),
-    ("Website Audit Tool",  "https://website-audit-tool.surge.sh",          "tools_saas"),
-    ("Invoice Tracker",     "https://invoicetracker.surge.sh",              "tools_saas"),
-    ("Content Calendar",    "https://contentcalendar.surge.sh",             "tools_saas"),
-    ("SiteScore Analyzer",  "https://sitescore-analyzer.surge.sh",          "tools_saas"),
-    ("SiteScore App",       "https://sitescore-app.surge.sh",               "tools_saas"),
-    ("Fiverr Services PM",  "https://fiverr-services-pm.surge.sh",          "tools_saas"),
-    ("SiteScore Pro",       "https://sitescore-pro.surge.sh",               "tools_saas"),
-    ("SiteScore Free",      "https://sitescore-free.surge.sh",              "tools_saas"),
-    ("PrintMaxx Flowstack", "https://printmaxx-flowstack.surge.sh",         "tools_saas"),
-    ("PrintMaxx Digital Services","https://printmaxx-digital-services.surge.sh","tools_saas"),
-    ("ShopMetrics Pro",     "https://shopmetrics-pro.surge.sh",             "tools_saas"),
-    ("PrintMaxx SEO",       "https://printmaxx-seo.surge.sh",               "tools_saas"),
-    ("PrintMaxx Analyzer",  "https://printmaxx-analyzer.surge.sh",          "tools_saas"),
-    ("PrintMaxx Command",   "https://printmaxx-command.surge.sh",           "tools_saas"),
-    ("Social Dashboard PM", "https://social-dashboard-pm.surge.sh",         "tools_saas"),
-    ("Cold Email Calc",     "https://cold-email-calc.surge.sh",             "tools_saas"),
-    # Local Biz / OpenClaw
-    ("Plumber Houston MeetAPlumber","https://find-plumbers-in-houston-texas-meetaplumber-com-houston-tx.surge.sh","local_biz"),
-    ("Plumber Houston ZIP",         "https://plumbers-just-enter-your-zip-code-houston-tx.surge.sh",              "local_biz"),
-    ("Plumber Houston Local",       "https://local-plumbing-experts-replace-plumbing-houston-tx.surge.sh",        "local_biz"),
-    ("Plumber Miami ZIP",           "https://plumbers-just-enter-your-zip-code-miami-fl.surge.sh",               "local_biz"),
-    ("Plumber Miami Local",         "https://local-plumbing-miami-fl.surge.sh",                                  "local_biz"),
-    ("Plumber Miami ZIP2",          "https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh","local_biz"),
-    ("Dentist Austin",              "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh","local_biz"),
-    ("Handyman Jacksonville",       "https://handyman-matters-jacksonville-jacksonville-fl.surge.sh",             "local_biz"),
-    ("Emergency Plumber Jacksonville","https://jacksonville-emergency-plumber-jacksonville-fl.surge.sh",          "local_biz"),
-    ("Plumbing HVAC Memphis",       "https://professional-plumbing-heating-cooling-memphis-tn.surge.sh",         "local_biz"),
-    ("Locksmith Tampa",             "https://south-tampa-locksmith-tampa-fl.surge.sh",                           "local_biz"),
-    ("Miami Plumbing ZIP",          "https://miami-plumbing-zip.surge.sh",                                      "local_biz"),
-    ("PrintMaxx Local Demos",       "https://printmaxx-local-demos.surge.sh",                                   "local_biz"),
-    # Demos
-    ("Restaurant Motion",    "https://restaurant-motion.surge.sh",    "demos"),
-    ("Realtor Motion",       "https://realtor-motion.surge.sh",       "demos"),
-    ("Dental Motion",        "https://dental-motion.surge.sh",        "demos"),
-    ("Restaurant Site Demo", "https://restaurant-site-demo.surge.sh", "demos"),
-    ("Realtor Demo",         "https://realtor-demo.surge.sh",         "demos"),
-    ("Plumber Demo",         "https://plumber-demo.surge.sh",         "demos"),
-    ("Legal Demo",           "https://legal-demo.surge.sh",           "demos"),
-    ("Fitness Demo",         "https://fitness-demo.surge.sh",         "demos"),
-    ("Dental Demo",          "https://dental-demo.surge.sh",          "demos"),
-    ("FlowStack Demo",       "https://flowstack-demo.surge.sh",       "demos"),
-    ("ShopMetrics Dashboard","https://shopmetrics-dashboard.surge.sh","demos"),
-    ("PrintMaxx Demos",      "https://printmaxx-demos.surge.sh",     "demos"),
-    ("Mike's HVAC Demo",     "https://mikes-hvac-demo.surge.sh",      "demos"),
-    ("Elite Fitness Demo",   "https://elite-fitness-demo.surge.sh",   "demos"),
-    ("Smith Dentistry Demo", "https://smith-dentistry-demo.surge.sh", "demos"),
-    ("Perfect Lawn Demo",    "https://perfect-lawn-demo.surge.sh",    "demos"),
-    ("Bella's Salon Demo",   "https://bellas-salon-demo.surge.sh",    "demos"),
-    ("Tony's Restaurant Demo","https://tonys-restaurant-demo.surge.sh","demos"),
-    ("Joe's Plumbing Demo",  "https://joes-plumbing-demo.surge.sh",  "demos"),
-    # ── New deployments (added this cycle) ─────────────────────────────────────
-    # Main hub + hubs
-    ("PrintMaxx Main",          "https://printmaxx.surge.sh",                  "hubs"),
-    ("PrintMaxx Site",          "https://printmaxx-site.surge.sh",             "hubs"),
-    ("PrintMaxx Control Panel", "https://printmaxx-control-panel.surge.sh",    "hubs"),
-    ("PrintMaxx Thanks",        "https://printmaxx-thanks.surge.sh",           "hubs"),
-    ("PrintMaxx Magnets",       "https://printmaxx-magnets.surge.sh",          "lead_magnets"),
-    ("PrintMaxx Storefront",    "https://printmaxx-storefront.surge.sh",       "hubs"),
-    # Comparison pages
-    ("ConvertKit vs Beehiiv",   "https://convertkit-vs-beehiiv.surge.sh",      "comparison_pages"),
-    ("PrayerLock vs Hallow",    "https://prayerlock-vs-hallow.surge.sh",       "comparison_pages"),
-    ("FocusLock vs Opal",       "https://focuslock-vs-opal.surge.sh",          "comparison_pages"),
-    ("PrintMaxx Comparisons",   "https://printmaxx-comparisons.surge.sh",      "comparison_pages"),
-    # Tools
-    ("Website Analyzer PM",     "https://website-analyzer-pm.surge.sh",        "tools_saas"),
+# ── Dynamic site list: loads from deployed_assets.json + hardcoded extras ──────
+def _load_sites_from_json() -> list[tuple[str, str, str]]:
+    """Load all URLs from deployed_assets.json."""
+    sites = []
+    try:
+        data = json.loads(DEPLOYED_ASSETS.read_text())
+        deployments = data.get("deployments", {})
+        for category, items in deployments.items():
+            if isinstance(items, list):
+                for item in items:
+                    url = item.get("url", "")
+                    name = item.get("name", item.get("title", url))
+                    if url:
+                        sites.append((name, url, category))
+    except Exception as e:
+        print(f"  [warn] Could not load deployed_assets.json: {e}")
+    return sites
+
+# Extra sites from surge list not yet in deployed_assets.json
+EXTRA_SITES = [
+    # New cycle 15+ deployments
+    ("SmartLead vs Instantly",  "https://smartlead-vs-instantly.surge.sh",  "comparison_pages"),
+    ("Best AI Tools 2026",     "https://best-ai-tools-2026.surge.sh",      "comparison_pages"),
+    ("SaaS Stack Audit",       "https://saas-stack-audit.surge.sh",        "tools_saas"),
+    ("CoreDay",                "https://coreday.surge.sh",                  "apps"),
+    # Fiverr service pages
+    ("PM Website Design",      "https://printmaxx-website-design.surge.sh", "fiverr_services"),
+    ("PM Landing Page",        "https://printmaxx-landing-page.surge.sh",   "fiverr_services"),
+    ("PM Cold Email",          "https://printmaxx-cold-email.surge.sh",     "fiverr_services"),
+    ("PM Web Scraping",        "https://printmaxx-web-scraping.surge.sh",   "fiverr_services"),
+    ("PM Automation",          "https://printmaxx-automation.surge.sh",     "fiverr_services"),
+    ("PM SEO Pages",           "https://printmaxx-seo-pages.surge.sh",     "fiverr_services"),
+    ("PM Content Writing",     "https://printmaxx-content-writing.surge.sh","fiverr_services"),
+    ("PM App Development",     "https://printmaxx-app-development.surge.sh","fiverr_services"),
+    ("PM AI Chatbot",          "https://printmaxx-ai-chatbot.surge.sh",    "fiverr_services"),
+    ("PM Data Analysis",       "https://printmaxx-data-analysis.surge.sh", "fiverr_services"),
+    # Louisville KY local biz (35 sites)
+    ("Coit Cleaning Louisville",    "https://coit-cleaning-restoration-louisville-ky.surge.sh",  "local_biz_louisville"),
+    ("Whitehouse Painting Louisville","https://whitehouse-residential-commercial-painting-co-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("A1 Concrete Louisville",      "https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Down To Earth Sealcoating",   "https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("CertaPro Painters Louisville","https://certapro-painters-of-louisville-metro-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Skyrockett Construction",     "https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Garretts Pressure Washing",   "https://garrett-s-presure-washing-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Good Maintenance Cleaning",   "https://good-maintenance-cleaning-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("A1 Aluminum Louisville",      "https://a-1-aluminum-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("The Maids Louisville",        "https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("McCoy Window Cleaning",       "https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Square It Away Contracting",  "https://square-it-away-contracting-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Spindletop Draperies",        "https://spindletop-draperies-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Naturescape Louisville",      "https://naturescape-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Cutting Hedge Landscaping",   "https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Greenworks Lawn Louisville",  "https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Accurate Lawn Louisville",    "https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Daves Tree Surgeons",         "https://dave-s-tree-surgeons-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Bob Ray Company",             "https://bob-ray-company-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("AB Landscaping Louisville",   "https://a-b-landscaping-inc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("ER Tree Care Louisville",     "https://er-tree-care-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Climb Ax Tree Service",       "https://climb-ax-tree-crane-service-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Bright Hauling Louisville",   "https://bright-hauling-and-junk-removal-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Mr Fix It Louisville",        "https://mr-fix-it-solutions-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Complete Home Services",      "https://complete-home-services-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Wildcat Moving Louisville",   "https://wildcat-moving-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Right Way Hauling Louisville","https://right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh","local_biz_louisville"),
+    ("JD Contractors Louisville",   "https://jd-contractors-and-lawnscaping-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("New Seasons Auction",         "https://new-seasons-auction-and-estates-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Kings Hands LLC",             "https://kings-hands-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("New Leaf Tree Service",       "https://new-leaf-tree-service-llc-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Jeff Reed Logging",           "https://jeff-reed-logging-tree-service-louisville-ky.surge.sh","local_biz_louisville"),
+    ("Junk King Louisville",        "https://junk-king-louisville-louisville-ky.surge.sh","local_biz_louisville"),
+    ("David Fox Roofer",            "https://david-fox-roofer-louisville-ky.surge.sh","local_biz_louisville"),
+    # Las Vegas / Orlando local biz
+    ("Handyman Las Vegas",          "https://handyman-services-in-las-vegas-nv-89121-las-vegas-nv.surge.sh","local_biz_other"),
+    ("Auto Repair Orlando",         "https://top-rated-auto-repair-near-orlando-fl-carfax-orlando-fl.surge.sh","local_biz_other"),
+    ("OKC Mobile Detailing",        "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh","local_biz_other"),
+    ("OKC Car Detailing",           "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh","local_biz_other"),
+    ("Portland Window Cleaning",    "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh","local_biz_other"),
+    # Streak landing page variants
+    ("Sunni Streak Landing",       "https://sunni-streak-landing.surge.sh",      "streak_landing"),
+    ("Shia Streak Landing",        "https://shia-streak-landing.surge.sh",       "streak_landing"),
+    ("Presbyterian Streak Landing","https://presbyterian-streak-landing.surge.sh","streak_landing"),
+    ("Anglican Streak Landing",    "https://anglican-streak-landing.surge.sh",   "streak_landing"),
+    ("Evangelical Streak Landing", "https://evangelical-streak-landing.surge.sh","streak_landing"),
+    ("Pentecostal Streak Landing", "https://pentecostal-streak-landing.surge.sh","streak_landing"),
+    ("Episcopal Streak Landing",   "https://episcopal-streak-landing.surge.sh",  "streak_landing"),
+    ("Lutheran Streak Landing",    "https://lutheran-streak-landing.surge.sh",   "streak_landing"),
+    ("Methodist Streak Landing",   "https://methodist-streak-landing.surge.sh",  "streak_landing"),
+    ("Baptist Streak Landing",     "https://baptist-streak-landing.surge.sh",    "streak_landing"),
+    ("Protestant Streak Landing",  "https://protestant-streak-landing.surge.sh", "streak_landing"),
+    ("Orthodox Streak Landing",    "https://orthodox-streak-landing.surge.sh",   "streak_landing"),
+    ("Catholic Streak Landing",    "https://catholic-streak-landing.surge.sh",   "streak_landing"),
     # Lead magnets
-    ("ADHD Streak Landing",     "https://adhd-streak.surge.sh",                "streak_landing"),
-    ("Solopreneur Checklist",   "https://solopreneur-launch-checklist.surge.sh","lead_magnets"),
-    ("Ramadan Daily Planner",   "https://ramadan-daily-planner.surge.sh",      "lead_magnets"),
-    ("Hilal Ramadan App",       "https://hilal.surge.sh",                      "apps"),
-    # New streak landing variants
-    ("Fitness Streak Landing2", "https://fitness-streak-landing.surge.sh",     "streak_landing"),
-    ("Coding Streak Landing2",  "https://coding-streak-landing.surge.sh",      "streak_landing"),
-    ("Buddhist Streak Landing2","https://buddhist-streak-landing.surge.sh",    "streak_landing"),
-    ("Art Streak Landing2",     "https://art-streak-landing.surge.sh",         "streak_landing"),
-    # Religious denomination streaks
-    ("Sunni Streak",            "https://sunni-streak.surge.sh",               "streak_landing"),
-    ("Shia Streak",             "https://shia-streak.surge.sh",                "streak_landing"),
-    ("Presbyterian Streak",     "https://presbyterian-streak.surge.sh",        "streak_landing"),
-    ("Anglican Streak",         "https://anglican-streak.surge.sh",            "streak_landing"),
-    ("Evangelical Streak",      "https://evangelical-streak.surge.sh",         "streak_landing"),
-    ("Pentecostal Streak",      "https://pentecostal-streak.surge.sh",         "streak_landing"),
-    ("Episcopal Streak",        "https://episcopal-streak.surge.sh",           "streak_landing"),
-    ("Lutheran Streak",         "https://lutheran-streak.surge.sh",            "streak_landing"),
-    ("Methodist Streak",        "https://methodist-streak.surge.sh",           "streak_landing"),
-    ("Baptist Streak",          "https://baptist-streak.surge.sh",             "streak_landing"),
-    ("Protestant Streak",       "https://protestant-streak.surge.sh",          "streak_landing"),
-    ("Orthodox Streak",         "https://orthodox-streak.surge.sh",            "streak_landing"),
-    ("Catholic Streak",         "https://catholic-streak.surge.sh",            "streak_landing"),
-    # Austin local biz
-    ("Magnolia Cafe Austin",    "https://magnolia-cafe-austin.surge.sh",       "local_biz"),
-    ("Kelly Personal Training", "https://kelly-personal-training-austin.surge.sh","local_biz"),
-    ("Galaxia Dental Austin",   "https://galaxia-dental-austin.surge.sh",      "local_biz"),
-    ("Barton Springs Saloon",   "https://barton-springs-saloon-austin.surge.sh","local_biz"),
-    ("Zax Pints Plates Austin", "https://zax-pints-plates-austin.surge.sh",    "local_biz"),
-    ("Artz Rib House Austin",   "https://artz-rib-house-austin.surge.sh",      "local_biz"),
-    # Preview sites
-    ("Memphis Plumbing Preview","https://memphis-plumbing-preview.surge.sh",   "local_biz"),
-    ("JAX Emergency Plumber",   "https://jax-emergency-plumber-preview.surge.sh","local_biz"),
-    ("S Tampa Locksmith Preview","https://south-tampa-locksmith-preview.surge.sh","local_biz"),
-    ("Atlanta Roofing Preview", "https://atlanta-roofing-company-preview.surge.sh","local_biz"),
-    # New local biz
-    ("JSS Janitorial Memphis",  "https://jss-janitorial-memphis.surge.sh",     "local_biz"),
-    ("Shop of Memphis Preview", "https://shop-of-memphis-preview.surge.sh",    "local_biz"),
+    ("Cold Email ROI Calculator",  "https://cold-email-roi-calculator.surge.sh", "lead_magnets"),
+    ("Side Project Estimator",     "https://side-project-estimator.surge.sh",    "lead_magnets"),
+    ("Revenue Leak Audit",         "https://revenue-leak-audit.surge.sh",        "lead_magnets"),
+    ("PrintMaxx Lead Magnets Hub", "https://printmaxx-lead-magnets.surge.sh",    "lead_magnets"),
+    # Instantly vs Lemlist
+    ("Instantly vs Lemlist",       "https://instantly-vs-lemlist.surge.sh",       "comparison_pages"),
+    ("Cursor vs Claude Code",     "https://cursor-vs-claudecode.surge.sh",       "comparison_pages"),
+    ("ColdMaxx vs Instantly",     "https://coldmaxx-vs-instantly.surge.sh",      "comparison_pages"),
+    ("PageScorer vs GTmetrix",    "https://pagescorer-vs-gtmetrix.surge.sh",     "comparison_pages"),
+    ("SleepMaxx vs Sleep Cycle",  "https://sleepmaxx-vs-sleepcycle.surge.sh",    "comparison_pages"),
+    # Test deploys
+    ("Test Deploy 001",            "https://printmaxx-test-debug-deploy-001.surge.sh","test_deploys"),
+    ("Nested Test 001",            "https://printmaxx-nested-test-001.surge.sh",      "test_deploys"),
+    ("OpenClaw Fix Test 001",      "https://printmaxx-openclaw-fix-test-001.surge.sh","test_deploys"),
+    # Media templates
+    ("Twitter Banner",             "https://printmaxx-twitter-banner.surge.sh",  "media"),
+    ("Twitter PFP",                "https://printmaxx-twitter-pfp.surge.sh",     "media"),
+    # Cold email deliverability
+    ("Cold Email Deliverability",  "https://best-cold-email-tools.surge.sh",     "lead_magnets"),
+    # ATX new cycle 15
+    ("ATX Food Co Austin",         "https://atx-food-co-austin.surge.sh",        "local_biz"),
+    ("Dailey Company Inc Austin",  "https://dailey-company-inc-austin.surge.sh", "local_biz"),
 ]
+
+ALL_SITES = _load_sites_from_json() + EXTRA_SITES
 
 # Deduplicate by URL
 _seen: set[str] = set()
@@ -400,12 +334,25 @@ def update_deployed_assets(results: list[dict]) -> None:
     try:
         data = json.loads(DEPLOYED_ASSETS.read_text())
         data["last_updated"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+        g = len([r for r in results if r["grade"] == "GREEN"])
+        y = len([r for r in results if r["grade"] == "YELLOW"])
+        r_count = len([r for r in results if r["grade"] == "RED"])
+        total = len(results)
+        loads = [r["load_time_ms"] for r in results if r.get("load_time_ms") and r["load_time_ms"] > 0]
+        avg_load = int(sum(loads) / len(loads)) if loads else 0
+        pass_pct = f"{(g + y) / total * 100:.1f}%" if total > 0 else "0%"
+        red_sites = [r["url"] for r in results if r["grade"] == "RED"]
         data["live_test"] = {
             "tested_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
-            "total":  len(results),
-            "green":  len([r for r in results if r["grade"] == "GREEN"]),
-            "yellow": len([r for r in results if r["grade"] == "YELLOW"]),
-            "red":    len([r for r in results if r["grade"] == "RED"]),
+            "total": total,
+            "green": g,
+            "yellow": y,
+            "red": r_count,
+            "pass_rate": pass_pct,
+            "avg_load_ms": avg_load,
+            "playwright_visual_tested": total,
+            "notes": f"Cycle 16 (Playwright Tester): Full async test of {total} sites. {g} GREEN, {y} YELLOW, {r_count} RED.",
+            "still_broken": red_sites[:10],
         }
         DEPLOYED_ASSETS.write_text(json.dumps(data, indent=2))
         print(f"  Assets  → {DEPLOYED_ASSETS} updated")

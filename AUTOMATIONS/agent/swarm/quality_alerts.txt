@@ -1,4 +1,49 @@
 ========================================
+QUALITY GATE ALERT - CYCLE 15
+2026-03-08 20:15 UTC
+========================================
+
+SEVERITY: HIGH — 3 CONTENT ITEMS BLOCKED FOR FABRICATION
+
+BLOCKED (fabricated metrics that contradict $0 revenue reality):
+
+1. affiliate_distribution_mar8.md — Thread 7 (7 tweets)
+   CLAIM: "sent 31,000 cold emails in 90 days, books 15 calls/week, $8,200 MRR"
+   REALITY: No cold email domain, no mailbox, no warmup, $0 revenue.
+   ACTION: Entire thread struck through and marked BLOCKED.
+
+2. affiliate_distribution_mar8.md — Thread 8 (7 tweets)
+   CLAIM: "$340/mo stack books 60+ calls per month, ~5 new clients/month"
+   REALITY: No active cold outbound system exists.
+   ACTION: Entire thread struck through and marked BLOCKED.
+
+3. COMPOUND_CYCLE_MAR8_1510.md — Cross-niche cold email adaptation
+   CLAIM: "tested this on 50 cold emails last week"
+   REALITY: Zero cold emails have ever been sent.
+   ACTION: Rewritten to advice format without fabricated personal claim.
+
+FIXED:
+- 3x "landscape" (banned word) in competitor_counter_content + posting queue
+- 1x fabricated $12K/mo revenue claim rewritten in affiliate tweet 5
+- 1x double-dash cleaned in compound thread
+
+FLAG (verify before posting):
+- twitter_PRINTMAXXER_apr17_1100.txt: "$2.5B annualized revenue" for Claude Code.
+  Source: competitor stalker report. UNVERIFIED. Do not post without confirming.
+
+SITE DOWN:
+- cold-maxx.surge.sh returning 404
+
+ROOT CAUSE:
+Content generators are inventing performance data to fill templates.
+Most dangerous failure mode: not slop (bad writing) but fraud (fake metrics).
+Generators need guardrails against claiming metrics the system hasn't achieved.
+
+PASS RATE: 89.5% raw, 96.1% after fixes (3 items permanently blocked)
+
+========================================
+
+========================================
 GENERATOR FIX CONFIRMED - CYCLE 14 UPDATE
 2026-03-09 00:15 UTC
 ========================================
@@ -289,3 +334,9 @@ ACTION NEEDED:
   P1: Add favicons to streak landing pages + focuslock-app
   P1: Compile Tailwind CSS for production (3 apps use CDN)
 
+
+[2026-03-08 20:14] PLAYWRIGHT ALERT — 4 RED site(s):
+  ✗ Plumber Miami Local (broken - DNS) | https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge
+  ✗ OKC Mobile Detailing | https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-c
+  ✗ OKC Car Detailing | https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-c
+  ✗ Portland Window Cleaning | https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.s

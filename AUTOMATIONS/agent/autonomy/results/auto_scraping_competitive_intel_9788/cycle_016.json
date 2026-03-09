@@ -1,0 +1,42 @@
+{
+  "cycle_start": "2026-03-08T20:56:07.783310",
+  "cycle_end": "2026-03-08T20:56:07.788314",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 2,
+  "new_intel_rows_written": 2,
+  "alerts_generated": 1,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I built an app to blur everything except the active window so I can stop getting distracted",
+      "subreddit": "SideProject",
+      "score": 149,
+      "url": "https://www.reddit.com/r/SideProject/comments/1ro5qyx/i_built_an_app_to_blur_everything_except_the/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "I built an app to blur everything except the active window so I can stop getting distracted",
+      "subreddit": "SideProject",
+      "score": 149,
+      "comments": 31,
+      "url": "https://www.reddit.com/r/SideProject/comments/1ro5qyx/i_built_an_app_to_blur_everything_except_the/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA18450"
+    },
+    {
+      "title": "I built a nuclear escalation simulator using real 2026 alliance data \u2014 Dead Hand protocol included. Try Iran \u2192 Paris or ",
+      "subreddit": "InternetIsBeautiful",
+      "score": 0,
+      "comments": 0,
+      "url": "https://www.reddit.com/r/InternetIsBeautiful/comments/1rnqurl/i_built_a_nuclear_escalation_simulator_using_real/",
+      "keyword_hits": 1,
+      "roi": "MEDIUM",
+      "post_id": "ALPHA18451"
+    }
+  ]
+}

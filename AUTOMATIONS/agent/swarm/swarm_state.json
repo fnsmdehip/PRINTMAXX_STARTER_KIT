@@ -33,7 +33,10 @@
     },
     "conversion_optimizer": {
       "installed_at": "2026-03-06T23:06:17.998608",
-      "status": "ACTIVE"
+      "status": "KILLED",
+      "killed_at": "2026-03-08T19:30:00Z",
+      "killed_by": "swarm_brain_cycle8",
+      "reason": "7 cycles mandated to fix 17 dead CTAs, 0 fixed. Only produced conversion score reports. MCR: 0%. Replaced by meta_executor."
     },
     "quality_enforcer": {
       "installed_at": "2026-03-06T23:06:18.019490",
@@ -108,15 +111,23 @@
   },
   "deployed_at": "2026-03-06T23:06:18.311187",
   "total_runs": 0,
-  "brain_cycles": 7,
-  "last_brain_cycle": "2026-03-08T15:30:00Z",
-  "active_agents": 21,
-  "killed_agents": 3,
-  "hibernated_agents": 5,
+  "brain_cycles": 8,
+  "last_brain_cycle": "2026-03-08T19:30:00Z",
+  "active_agents": 12,
+  "killed_agents": 4,
+  "hibernated_agents": 9,
   "conservation_mode": true,
-  "cycle7_theme": "STOP_PRODUCING_START_FIXING",
+  "survival_mode": true,
+  "cycle8_theme": "ACCEPT_REALITY_STOP_PRETENDING",
   "mandates_issued": 4,
   "mandates_pending": ["fix_dead_ctas", "fix_generators", "cloudflare_migration_poc", "fix_openclaw_pipeline"],
-  "daily_runs_target": 48,
-  "feedback_loop_overrides": 5
+  "mandates_completed": 0,
+  "mandate_compliance_rate": "0%",
+  "mandate_execution_gap": "structural - cron agents cannot edit code",
+  "daily_runs_target": 36,
+  "feedback_loop_overrides": 6,
+  "feedback_loop_status": "DEFUNCT",
+  "agents_killed_cycle8": ["conversion_optimizer"],
+  "agents_hibernated_cycle8": ["trend_synthesizer", "content_compounder", "inbound_maximizer", "asset_deployer"],
+  "agents_deepened_cycle8": ["social_poster", "alert_dispatcher", "distribution_engine", "lead_machine"]
 }

@@ -223,12 +223,10 @@ function trackAff(tool){
   if(typeof goatcounter!=='undefined')goatcounter.count({path:'aff/'+tool});
 }
 function handleCapture(e){
-  e.preventDefault();
   var em=document.getElementById('capture-email').value;
-  if(!em||!em.includes('@'))return;
+  if(!em||!em.includes('@')){e.preventDefault();return;}
   gtag('event','lead_capture',{'page':'best-cold-email-tools','email':em});
-  document.getElementById('capture-form').style.display='none';
-  document.getElementById('capture-success').style.display='block';
+  if(typeof goatcounter!=='undefined')goatcounter.count({path:'lead/best-cold-email-tools',event:true});
 }
 </script>
 </head>
@@ -811,8 +809,11 @@ function handleCapture(e){
   <h2>get the free cold email starter kit</h2>
   <p>7 email templates, a warmup checklist, and the exact SMTP setup we use to hit 90%+ inbox placement. no fluff. sent once.</p>
   <div id="capture-form">
-    <form class="email-form" onsubmit="handleCapture(event)">
-      <input type="email" id="capture-email" placeholder="your@email.com" required>
+    <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" onsubmit="handleCapture(event)">
+      <input type="hidden" name="_subject" value="New lead from best-cold-email-tools">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://best-cold-email-tools.surge.sh">
+      <input type="email" name="email" id="capture-email" placeholder="your@email.com" required>
       <button type="submit">send it</button>
     </form>
     <p class="email-note">no spam. one email. unsubscribe any time.</p>

@@ -5428,3 +5428,34 @@ Play the game on offense or you’ll lose
 
 Thanks for 4,000 followers on X
 
+
+
+---
+
+## Pending Enhancement (ALPHA18503, Score: 30)
+
+**Source:** @nicolascole77 (high-signal-accounts) | **URL:** https://x.com/Nicolascole77/status/2030622812726349848
+**Added:** 2026-03-08T18:45:01-04:00
+
+Doomers on this platform will have you believe AI is taking over the world.
+
+It's not.
+
+Everyone's just figured out that the more AI Fear they post about, the more likes, followers, and clout they get.
+
+Here's my honest take on where this is all actually heading:
+
+—
+ The good
+
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47301808, Score: 28)
+
+**Source:** hackernews | **URL:** https://github.com/blacksky-algorithms/atproto
+**Added:** 2026-03-08T19:02:45-04:00
+
+Blacksky AppView: custom AT Protocol (Bluesky) app view. 46 HN pts. Bluesky ecosystem growing. Building custom feeds/views on AT Protocol = early mover advantage for content distribution. New channel beyond Twitter for content syndication.
+

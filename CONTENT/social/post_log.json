@@ -1050,9 +1050,9 @@
   ],
   "summary": {
     "total_posted": 0,
-    "total_queued": 154,
+    "total_queued": 164,
     "last_post_date": null,
-    "coverage_through": "2026-04-15",
+    "coverage_through": "2026-04-18",
     "new_content_added_mar7_cycle6": {
       "sources": [
         "competitor_counter_content_cycle4_20260307.md (5 standalones + 1 thread + 1 reply bait + 1 community bait)",
@@ -1067,7 +1067,7 @@
     "platforms": {
       "twitter": {
         "posted": 0,
-        "queued": 151
+        "queued": 161
       },
       "linkedin": {
         "posted": 0,
@@ -1137,7 +1137,7 @@
     "Show HN #3: PrayerLock \u2014 55KB PWA that intercepts your phone before you scroll"
   ],
   "created": "2026-03-07T00:00:00Z",
-  "last_updated": "2026-03-08T09:42:00Z",
+  "last_updated": "2026-03-08T19:05:00Z",
   "social_poster_cycle_mar7": {
     "ran": "2026-03-07T20:00:00Z",
     "new_files_created": [
@@ -1223,5 +1223,34 @@
       "openclaw_casestudy_memphis_2.txt"
     ],
     "notes": "22+ additional pieces available for Apr 16+ scheduling in next cycle"
+  },
+  "social_poster_cycle_mar8_1905": {
+    "timestamp": "2026-03-08T19:05:00Z",
+    "action": "quality_gate_new_content_extend_coverage",
+    "warmup_phase": "LURK (Day 2)",
+    "new_content_reviewed": 3,
+    "quality_gate_results": {
+      "approved": 10,
+      "flagged": 2,
+      "flags": ["apr17_1100 $2.5B ARR unverified", "Athan tweet needs X Premium"]
+    },
+    "files_created": 10,
+    "dates_covered": "Apr 16-18",
+    "sources": [
+      "alpha_content_cycle_20260308_1900.md",
+      "competitor_counter_content_cycle7_20260308.md",
+      "competitive_intel_mar8.md"
+    ],
+    "new_total_queued": 164,
+    "coverage_after": "2026-04-18",
+    "still_unscheduled": [
+      "$7B vibe coding market thread (7 tweets)",
+      "Athan paywall counter (conditional X Premium)",
+      "Reddit r/vibecoding post",
+      "Reddit r/islam ramadan tracker",
+      "HN Day 35 learnings post",
+      "22+ pieces from prior cycles"
+    ],
+    "bug_reported": "reddit scraper schema mismatch: date_found in status column breaks alpha_auto_processor"
   }
 }
