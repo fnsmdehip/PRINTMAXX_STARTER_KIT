@@ -1,0 +1,142 @@
+[
+  {
+    "service_type": "automation",
+    "demand_count": 193,
+    "total_budget_seen": 11290,
+    "max_score": 90,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'automation' service into SaaS/tool (seen 193 times on r/forhire)",
+    "examples": [
+      "[HIRING] UX/Website Designer, emphasis on design. Delivery: HTML/CSS files.",
+      "[Hiring] Email specialist{ Earn $50-$90/hr}",
+      "[HIRING] User Interface Software Developer [\ud83d\udcb0 $120,000 - 130,000 / year]"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532933"
+  },
+  {
+    "service_type": "website",
+    "demand_count": 148,
+    "total_budget_seen": 8579,
+    "max_score": 85,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'website' service into SaaS/tool (seen 148 times on r/forhire)",
+    "examples": [
+      "[HIRING] UX/Website Designer, emphasis on design. Delivery: HTML/CSS files.",
+      "[HIRING] [US] 30 Remote Javascript jobs",
+      "[Hiring] Need a graphic designer for a logo rebrand (paid)"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532942"
+  },
+  {
+    "service_type": "data_entry",
+    "demand_count": 110,
+    "total_budget_seen": 5246,
+    "max_score": 85,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'data_entry' service into SaaS/tool (seen 110 times on r/forhire)",
+    "examples": [
+      "Title: [Hiring] Operations Assistant \u2013 Admin Tasks &amp; Reporting ($20 per hour",
+      "[HIRING] [US] 30 Remote Javascript jobs",
+      "[hiring] Looking for outreach / lead generation partners (remote, commission bas"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532944"
+  },
+  {
+    "service_type": "social_media",
+    "demand_count": 103,
+    "total_budget_seen": 9002,
+    "max_score": 90,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'social_media' service into SaaS/tool (seen 103 times on r/forhire)",
+    "examples": [
+      "[offer] art slave for a month! get as many commissions as you want from me.",
+      "[TASK] Looking for a Twitch Stream Clipper (Short-Form) \u2013 $80/month + Bonuses (L",
+      "[Hiring]| Hiring Full Time Video Editor (Reels and Brand Content) | STELORA MEDI"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532945"
+  },
+  {
+    "service_type": "logo",
+    "demand_count": 77,
+    "total_budget_seen": 4621,
+    "max_score": 85,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'logo' service into SaaS/tool (seen 77 times on r/forhire)",
+    "examples": [
+      "[HIRING] Needing Instagram Carousel Templates for Tech Company - $100-500 pay de",
+      "[Hiring] Need a graphic designer for a logo rebrand (paid)",
+      "[HIRING] Looking for a graphic designer with editorial collage design skills"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532946"
+  },
+  {
+    "service_type": "video_editing",
+    "demand_count": 35,
+    "total_budget_seen": 2317,
+    "max_score": 70,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'video_editing' service into SaaS/tool (seen 35 times on r/forhire)",
+    "examples": [
+      "[TASK] Looking for a Twitch Stream Clipper (Short-Form) \u2013 $80/month + Bonuses (L",
+      "[Hiring]| Hiring Full Time Video Editor (Reels and Brand Content) | STELORA MEDI",
+      "[hiring] Looking for outreach / lead generation partners (remote, commission bas"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532948"
+  },
+  {
+    "service_type": "cold_email",
+    "demand_count": 33,
+    "total_budget_seen": 1955,
+    "max_score": 80,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'cold_email' service into SaaS/tool (seen 33 times on r/forhire)",
+    "examples": [
+      "[Hiring] Remote Lead Generators \u2013 Earn $100 Per Qualified Lead (No Sales, Simple",
+      "[hiring] Looking for outreach / lead generation partners (remote, commission bas",
+      "[Hiring] Remote Lead Gen / Scouters \u2013 Earn $100 Per Landlord Referral (Simple So"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532949"
+  },
+  {
+    "service_type": "presentation",
+    "demand_count": 25,
+    "total_budget_seen": 2999,
+    "max_score": 65,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'presentation' service into SaaS/tool (seen 25 times on r/forhire)",
+    "examples": [
+      "[Hiring] Commission Sales \u2013 Software Dev Contracts",
+      "[Hiring] Remote Web Dev Sales Rep \u2013 $20/hr Base + 25-40% Commission ($3k-6k/mo P",
+      "[Hiring] Remote Web Dev Sales Rep \u2013 $20/hr Base + 25-40% Commission ($3k-6k/mo P"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532950"
+  },
+  {
+    "service_type": "copywriting",
+    "demand_count": 11,
+    "total_budget_seen": 750,
+    "max_score": 90,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'copywriting' service into SaaS/tool (seen 11 times on r/forhire)",
+    "examples": [
+      "[Hiring] Content Research Assistant \u2013 Remote ($20-30 per hour)",
+      "[Offer] SEO Content Writer | 30+ Blogs Written | Need Work This Week | Fast Deli",
+      "[HIRING] social media manager / graphic design"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532951"
+  },
+  {
+    "service_type": "seo",
+    "demand_count": 11,
+    "total_budget_seen": 405,
+    "max_score": 70,
+    "gap_type": "FREELANCE_DEMAND",
+    "opportunity": "Productize 'seo' service into SaaS/tool (seen 11 times on r/forhire)",
+    "examples": [
+      "[Hiring] Social Media Manager (Reddit &amp; LinkedIn) for B2B Ad Agency | Remote",
+      "[Hiring] Social Media Manager (Reddit &amp; LinkedIn) for B2B Ad Agency | Remote",
+      "[Hiring] Remote Media Buyer (USA/Canada Preferred) \u2013 B2B SaaS Agency \u2013 $15\u2013$20/h"
+    ],
+    "detected_at": "2026-03-09T16:25:11.532952"
+  }
+]

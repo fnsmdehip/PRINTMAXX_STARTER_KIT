@@ -115,9 +115,14 @@ header .sub{color:var(--muted-bright);font-size:1rem;margin-bottom:24px}
 .share-btn{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 20px;color:var(--text);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s}
 .share-btn:hover{border-color:var(--accent);color:var(--accent)}
 
-.crosslinks{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:24px 0;border-top:1px solid var(--border);margin-top:16px}
-.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:0.75rem;color:var(--muted-bright);transition:all 0.2s;text-decoration:none}
-.pill:hover{border-color:var(--accent);color:var(--accent)}
+.crosslinks{padding:32px 0;border-top:1px solid var(--border);margin-top:32px}
+.crosslinks h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:16px}
+.crosslinks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.crosslink-card{background:var(--card,#161616);border:1px solid var(--border,#1f1f1f);border-radius:10px;padding:14px;transition:border-color .15s;text-decoration:none;display:block;color:var(--text)}
+.crosslink-card:hover{border-color:var(--accent,#3b82f6)}
+.crosslink-card .cl-title{font-weight:700;font-size:.9rem;margin-bottom:4px}
+.crosslink-card .cl-desc{font-size:.75rem;color:var(--muted,#6b7280)}
+.crosslinks .see-all{display:inline-block;margin-top:16px;font-size:.85rem;color:var(--accent,#3b82f6);font-weight:600}
 
 footer{padding:24px 0;text-align:center;border-top:1px solid var(--border);margin-top:24px}
 footer p{color:var(--muted);font-size:0.8rem}
@@ -228,10 +233,14 @@ footer p{color:var(--muted);font-size:0.8rem}
   </div>
 
   <div class="crosslinks">
-    <a href="https://cold-email-roi-calculator.surge.sh" class="pill">cold email ROI calculator</a>
-    <a href="https://revenue-leak-audit.surge.sh" class="pill">revenue leak audit</a>
-    <a href="https://side-project-revenue-estimator.surge.sh" class="pill">side project estimator</a>
-    <a href="https://subject-line-grader.surge.sh" class="pill">subject line grader</a>
+    <h3>more free tools</h3>
+    <div class="crosslinks-grid">
+      <a href="https://revenue-leak-audit.surge.sh" class="crosslink-card"><div class="cl-title">Revenue Leak Audit</div><div class="cl-desc">find where you're losing $1,200-4,850/mo</div></a>
+      <a href="https://side-project-revenue-estimator.surge.sh" class="crosslink-card"><div class="cl-title">Revenue Estimator</div><div class="cl-desc">see if your side project prints money or burns time</div></a>
+      <a href="https://200-day-calculator.surge.sh" class="crosslink-card"><div class="cl-title">$200/Day Calculator</div><div class="cl-desc">map out the math to hit $200/day online</div></a>
+      <a href="https://ai-revenue-calculator.surge.sh" class="crosslink-card"><div class="cl-title">AI Revenue Calculator</div><div class="cl-desc">month 1-12 projections based on real data</div></a>
+    </div>
+    <a href="https://app-hub-crosslinks.surge.sh" class="see-all">see all 11 tools &rarr;</a>
   </div>
 
   <footer>

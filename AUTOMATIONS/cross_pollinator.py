@@ -1816,6 +1816,381 @@ def wire_alpha_content_to_queue():
     return created
 
 
+# ─── CONNECTION 34: Freelance Responses → Content Farm ────────────────────
+# Freelance response drafts become proof-of-work content for social
+def wire_freelance_responses_to_content():
+    responses_dir = safe_path(PROJECT_ROOT / "CONTENT" / "freelance_responses")
+    if not responses_dir.exists():
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for resp_file in sorted(responses_dir.glob("response_*.md"))[-20:]:
+        # Extract job title from filename
+        name = resp_file.stem.replace("response_", "")
+        date_part = name[-8:] if len(name) > 8 else ""
+        title_part = name[:-9] if len(name) > 9 else name
+        title_clean = title_part.replace("_", " ").strip()[:80]
+
+        slug = f"freelance_proof_{date_part}_{hash(title_part) % 10000}"
+        if slug in existing_posts:
+            continue
+
+        # Read first 200 chars to extract the gist
+        try:
+            content = resp_file.read_text(encoding="utf-8")[:500]
+        except Exception:
+            continue
+
+        is_hiring = "[HIRING]" in title_clean.upper() or "[Hiring]" in title_clean
+        if is_hiring:
+            tweet = (
+                f"spotted a live gig on reddit: {title_clean[:60]}\n\n"
+                f"drafted a response in 3 minutes with ai-assisted portfolio generation.\n\n"
+                f"most freelancers spend 30 min per application. i batch 10 in the same time.\n\n"
+                f"the game is speed + volume + quality samples."
+            )
+        else:
+            tweet = (
+                f"another freelance opportunity processed: {title_clean[:60]}\n\n"
+                f"automated pipeline: scrape → qualify → draft response → attach sample.\n\n"
+                f"while other freelancers are manually browsing job boards, "
+                f"my system surfaces and responds to opportunities automatically."
+            )
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        existing_posts.add(slug)
+        created += 1
+
+        if created >= 5:
+            break
+
+    return created
+
+
+# ─── CONNECTION 35: Freelance Demand Scan → App Factory Gaps ──────────────
+# What people pay for on r/forhire informs app factory about real demand
+def wire_freelance_demand_to_app_factory():
+    demand = load_csv(LEDGER / "FREELANCE_DEMAND_SCAN.csv", max_rows=500)
+    if not demand:
+        return 0
+
+    # Aggregate demand signals by service type
+    service_demand = {}
+    for row in demand:
+        services = row.get("matched_services", "")
+        budget = row.get("budget", "0")
+        score = row.get("score", "0")
+        title = row.get("title", "")
+        try:
+            budget_num = int(str(budget).replace("$", "").replace(",", "").strip() or "0")
+        except (ValueError, TypeError):
+            budget_num = 0
+        try:
+            score_num = int(str(score).strip() or "0")
+        except (ValueError, TypeError):
+            score_num = 0
+
+        for svc in services.split(","):
+            svc = svc.strip()
+            if not svc:
+                continue
+            if svc not in service_demand:
+                service_demand[svc] = {"count": 0, "total_budget": 0, "max_score": 0, "examples": []}
+            service_demand[svc]["count"] += 1
+            service_demand[svc]["total_budget"] += budget_num
+            service_demand[svc]["max_score"] = max(service_demand[svc]["max_score"], score_num)
+            if len(service_demand[svc]["examples"]) < 3:
+                service_demand[svc]["examples"].append(title[:80])
+
+    if not service_demand:
+        return 0
+
+    # Convert to app factory gaps
+    gaps = []
+    for svc, data in sorted(service_demand.items(), key=lambda x: x[1]["count"], reverse=True):
+        if data["count"] >= 3:  # At least 3 demand signals
+            gaps.append({
+                "service_type": svc,
+                "demand_count": data["count"],
+                "total_budget_seen": data["total_budget"],
+                "max_score": data["max_score"],
+                "gap_type": "FREELANCE_DEMAND",
+                "opportunity": f"Productize '{svc}' service into SaaS/tool (seen {data['count']} times on r/forhire)",
+                "examples": data["examples"],
+                "detected_at": datetime.now().isoformat()
+            })
+
+    if not gaps:
+        return 0
+
+    gap_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "freelance_demand_gaps.json")
+    gap_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing = []
+    if gap_path.exists():
+        try:
+            existing = json.loads(gap_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing = []
+
+    existing_services = {g.get("service_type", "") for g in existing}
+    new_gaps = [g for g in gaps if g["service_type"] not in existing_services]
+
+    if new_gaps:
+        all_gaps = existing + new_gaps
+        gap_path.write_text(json.dumps(all_gaps, indent=2))
+
+    return len(new_gaps)
+
+
+# ─── CONNECTION 36: Auto-Ops App Specs → App Factory Queue ────────────────
+# Auto-generated app specs feed into app factory's build queue
+def wire_auto_ops_specs_to_app_factory():
+    specs_dir = safe_path(AUTOMATIONS / "auto_ops" / "app_specs")
+    if not specs_dir.exists():
+        return 0
+
+    spec_files = list(specs_dir.glob("APP_SPEC_*.md"))
+    if not spec_files:
+        return 0
+
+    queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json")
+    queue_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing_queue = []
+    if queue_path.exists():
+        try:
+            existing_queue = json.loads(queue_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing_queue = []
+    existing_files = {e.get("source_file", "") for e in existing_queue}
+
+    new_specs = []
+    for sf in spec_files:
+        if sf.name in existing_files:
+            continue
+
+        try:
+            content = sf.read_text(encoding="utf-8")[:1000]
+        except Exception:
+            continue
+
+        # Extract title from first heading
+        title = sf.name
+        for line in content.split("\n"):
+            if line.startswith("# "):
+                title = line[2:].strip()
+                break
+
+        new_specs.append({
+            "source_file": sf.name,
+            "title": title[:100],
+            "status": "QUEUED",
+            "priority": "MEDIUM",
+            "added_at": datetime.now().isoformat()
+        })
+
+    if new_specs:
+        all_specs = existing_queue + new_specs
+        queue_path.write_text(json.dumps(all_specs, indent=2))
+
+    return len(new_specs)
+
+
+# ─── CONNECTION 37: Auto-Ops Email Templates → Cold Outreach ─────────────
+# Email templates feed into outreach engine's template library
+def wire_auto_ops_emails_to_outreach():
+    templates_dir = safe_path(AUTOMATIONS / "auto_ops" / "email_templates")
+    if not templates_dir.exists():
+        return 0
+
+    template_files = list(templates_dir.glob("EMAIL_*.md"))
+    if not template_files:
+        return 0
+
+    library_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "email_template_library.json")
+    library_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing_lib = []
+    if library_path.exists():
+        try:
+            existing_lib = json.loads(library_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing_lib = []
+    existing_files = {e.get("source_file", "") for e in existing_lib}
+
+    new_templates = []
+    for tf in template_files:
+        if tf.name in existing_files:
+            continue
+
+        try:
+            content = tf.read_text(encoding="utf-8")[:2000]
+        except Exception:
+            continue
+
+        # Extract subject line if present
+        subject = ""
+        for line in content.split("\n"):
+            lower = line.lower().strip()
+            if lower.startswith("subject:") or lower.startswith("**subject"):
+                subject = line.split(":", 1)[-1].strip().strip("*").strip()
+                break
+
+        new_templates.append({
+            "source_file": tf.name,
+            "subject": subject[:120] if subject else f"Template from {tf.name}",
+            "content_preview": content[:300],
+            "status": "AVAILABLE",
+            "added_at": datetime.now().isoformat()
+        })
+
+    if new_templates:
+        all_templates = existing_lib + new_templates
+        library_path.write_text(json.dumps(all_templates, indent=2))
+
+    return len(new_templates)
+
+
+# ─── CONNECTION 38: Auto-Ops Tool Evals → Content Farm ───────────────────
+# Tool evaluations become "tool of the day" social content
+def wire_tool_evals_to_content():
+    evals_dir = safe_path(AUTOMATIONS / "auto_ops" / "tool_evals")
+    if not evals_dir.exists():
+        return 0
+
+    eval_files = list(evals_dir.glob("TOOL_*.md"))
+    if not eval_files:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for ef in sorted(eval_files, key=lambda x: x.stat().st_mtime, reverse=True)[:10]:
+        slug = f"tooleval_{ef.stem}".lower()[:60]
+        if slug in existing_posts:
+            continue
+
+        try:
+            content = ef.read_text(encoding="utf-8")[:1500]
+        except Exception:
+            continue
+
+        # Extract tool name from content
+        tool_name = ef.stem.replace("TOOL_", "")
+        first_heading = ""
+        for line in content.split("\n"):
+            if line.startswith("# "):
+                first_heading = line[2:].strip()
+                break
+
+        display_name = first_heading if first_heading else tool_name
+
+        tweet = (
+            f"evaluated a new tool: {display_name[:60]}\n\n"
+            f"i review 5-10 tools per week across scraping, automation, content, and monetization.\n\n"
+            f"most tools people hype are mid. the ones that actually save time are the boring ones nobody talks about.\n\n"
+            f"full eval in the vault."
+        )
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        existing_posts.add(slug)
+        created += 1
+
+        if created >= 5:
+            break
+
+    return created
+
+
+# ─── CONNECTION 39: Freelance Demand → Digital Products ──────────────────
+# High-demand freelance services inform productized service/template creation
+def wire_freelance_demand_to_products():
+    demand = load_csv(LEDGER / "FREELANCE_DEMAND_SCAN.csv", max_rows=500)
+    if not demand:
+        return 0
+
+    # Find recurring high-budget categories
+    category_stats = {}
+    for row in demand:
+        services = row.get("matched_services", "")
+        budget = row.get("budget", "0")
+        score = row.get("score", "0")
+        typical_high = row.get("typical_price_high", "0")
+
+        try:
+            budget_num = int(str(budget).replace("$", "").replace(",", "").strip() or "0")
+        except (ValueError, TypeError):
+            budget_num = 0
+        try:
+            typical_high_num = int(str(typical_high).replace("$", "").replace(",", "").strip() or "0")
+        except (ValueError, TypeError):
+            typical_high_num = 0
+        try:
+            score_num = int(str(score).strip() or "0")
+        except (ValueError, TypeError):
+            score_num = 0
+
+        for svc in services.split(","):
+            svc = svc.strip()
+            if not svc:
+                continue
+            if svc not in category_stats:
+                category_stats[svc] = {"count": 0, "total_budget": 0, "max_price": 0, "avg_score": 0}
+            category_stats[svc]["count"] += 1
+            category_stats[svc]["total_budget"] += budget_num
+            category_stats[svc]["max_price"] = max(category_stats[svc]["max_price"], typical_high_num)
+
+    # Only productize services with 5+ demand signals
+    product_ideas = []
+    for svc, stats in sorted(category_stats.items(), key=lambda x: x[1]["count"], reverse=True):
+        if stats["count"] < 5:
+            continue
+
+        avg_budget = stats["total_budget"] // stats["count"] if stats["count"] > 0 else 0
+        product_ideas.append({
+            "service_type": svc,
+            "demand_signals": stats["count"],
+            "avg_budget": avg_budget,
+            "max_price_seen": stats["max_price"],
+            "product_suggestion": f"Productized {svc} template/toolkit",
+            "price_point": f"${min(avg_budget, 49)}" if avg_budget > 0 else "$19-39",
+            "format": "Template + tutorial + automation script",
+            "source": "FREELANCE_DEMAND_SCAN",
+            "detected_at": datetime.now().isoformat()
+        })
+
+    if not product_ideas:
+        return 0
+
+    ideas_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "freelance_product_ideas.json")
+    ideas_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing = []
+    if ideas_path.exists():
+        try:
+            existing = json.loads(ideas_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing = []
+
+    existing_types = {e.get("service_type", "") for e in existing}
+    new_ideas = [i for i in product_ideas if i["service_type"] not in existing_types]
+
+    if new_ideas:
+        all_ideas = existing + new_ideas
+        ideas_path.write_text(json.dumps(all_ideas, indent=2))
+
+    return len(new_ideas)
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -1859,6 +2234,12 @@ def run_cycle():
         ("Qualified Leads → OpenClaw Priority", wire_qualified_leads_to_openclaw),
         ("Trend Synthesis → Venture Angles", wire_trend_synthesis_to_ventures),
         ("Alpha Content → Posting Queue", wire_alpha_content_to_queue),
+        ("Freelance Responses → Content Farm", wire_freelance_responses_to_content),
+        ("Freelance Demand → App Factory Gaps", wire_freelance_demand_to_app_factory),
+        ("Auto-Ops Specs → App Factory Queue", wire_auto_ops_specs_to_app_factory),
+        ("Auto-Ops Emails → Outreach Templates", wire_auto_ops_emails_to_outreach),
+        ("Tool Evals → Content Farm", wire_tool_evals_to_content),
+        ("Freelance Demand → Digital Products", wire_freelance_demand_to_products),
     ]
 
     total_wired = 0

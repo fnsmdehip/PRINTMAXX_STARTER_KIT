@@ -1864,3 +1864,14 @@ Comment SCALE and I’ll send it over
 
 (Must be following for me to
 
+
+
+---
+
+## Pending Enhancement (ALPHA_SCRAPE_20260309_1626_8114, Score: 39)
+
+**Source:** reddit_r/SideProject_scrape | **URL:** https://reddit.com/r/SideProject
+**Added:** 2026-03-09T16:26:45-04:00
+
+Anti-AI positioning thread gets 610+ upvotes and 1518 comments on r/SideProject (vs typical 50-100). Contrarian angle "Not-AI" + physical product = massive engagement. Hardware startup with iF Design Award. Shows market fatigue with AI-only products.
+

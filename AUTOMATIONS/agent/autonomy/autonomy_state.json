@@ -302,8 +302,8 @@
         "current_city_index": 2
       },
       "created_at": "2026-03-06T21:12:49.502027",
-      "last_run": "2026-03-09T10:15:13.936275",
-      "cycles_run": 8,
+      "last_run": "2026-03-09T16:15:11.997378",
+      "cycles_run": 9,
       "results": [
         {
           "cycle": 1,
@@ -426,38 +426,50 @@
             "track": "failed"
           },
           "success_rate": "3/6"
+        },
+        {
+          "ts": "2026-03-09T16:15:11.997390",
+          "steps": {
+            "discover": "ok",
+            "grade": "failed",
+            "build_preview": "ok",
+            "deploy": "failed",
+            "outreach": "ok",
+            "track": "failed"
+          },
+          "success_rate": "3/6"
         }
       ],
       "pipeline_stats": {
         "discover": {
-          "runs": 8,
-          "successes": 8,
-          "last_run": "2026-03-09T10:15:12.384847"
+          "runs": 9,
+          "successes": 9,
+          "last_run": "2026-03-09T16:15:10.654212"
         },
         "grade": {
-          "runs": 8,
+          "runs": 9,
           "successes": 2,
-          "last_run": "2026-03-09T10:15:12.716800"
+          "last_run": "2026-03-09T16:15:10.930490"
         },
         "build_preview": {
-          "runs": 8,
-          "successes": 8,
-          "last_run": "2026-03-09T10:15:13.015437"
+          "runs": 9,
+          "successes": 9,
+          "last_run": "2026-03-09T16:15:11.160877"
         },
         "deploy": {
-          "runs": 8,
+          "runs": 9,
           "successes": 2,
-          "last_run": "2026-03-09T10:15:13.402234"
+          "last_run": "2026-03-09T16:15:11.513581"
         },
         "outreach": {
-          "runs": 8,
-          "successes": 8,
-          "last_run": "2026-03-09T10:15:13.566923"
+          "runs": 9,
+          "successes": 9,
+          "last_run": "2026-03-09T16:15:11.674095"
         },
         "track": {
-          "runs": 7,
+          "runs": 8,
           "successes": 1,
-          "last_run": "2026-03-09T10:15:13.936243"
+          "last_run": "2026-03-09T16:15:11.997358"
         }
       }
     },
@@ -477,8 +489,8 @@
       "interval_hours": 8,
       "config": {},
       "created_at": "2026-03-06T21:12:49.570509",
-      "last_run": "2026-03-09T08:15:01.627760",
-      "cycles_run": 4,
+      "last_run": "2026-03-09T16:15:12.794770",
+      "cycles_run": 5,
       "results": [
         {
           "ts": "2026-03-08T04:05:20.002156",
@@ -527,38 +539,50 @@
             "track": "ok"
           },
           "success_rate": "4/6"
+        },
+        {
+          "ts": "2026-03-09T16:15:12.794780",
+          "steps": {
+            "find_offers": "ok",
+            "create_funnel": "ok",
+            "build_page": "failed",
+            "deploy": "ok",
+            "distribute": "failed",
+            "track": "ok"
+          },
+          "success_rate": "4/6"
         }
       ],
       "pipeline_stats": {
         "find_offers": {
-          "runs": 4,
-          "successes": 4,
-          "last_run": "2026-03-09T08:15:00.976236"
+          "runs": 5,
+          "successes": 5,
+          "last_run": "2026-03-09T16:15:12.217783"
         },
         "create_funnel": {
-          "runs": 4,
-          "successes": 4,
-          "last_run": "2026-03-09T08:15:01.068426"
+          "runs": 5,
+          "successes": 5,
+          "last_run": "2026-03-09T16:15:12.291196"
         },
         "build_page": {
-          "runs": 4,
+          "runs": 5,
           "successes": 0,
-          "last_run": "2026-03-09T08:15:01.198428"
+          "last_run": "2026-03-09T16:15:12.443513"
         },
         "deploy": {
-          "runs": 4,
-          "successes": 4,
-          "last_run": "2026-03-09T08:15:01.333771"
+          "runs": 5,
+          "successes": 5,
+          "last_run": "2026-03-09T16:15:12.552011"
         },
         "distribute": {
-          "runs": 4,
+          "runs": 5,
           "successes": 0,
-          "last_run": "2026-03-09T08:15:01.496605"
+          "last_run": "2026-03-09T16:15:12.695410"
         },
         "track": {
-          "runs": 4,
-          "successes": 4,
-          "last_run": "2026-03-09T08:15:01.627719"
+          "runs": 5,
+          "successes": 5,
+          "last_run": "2026-03-09T16:15:12.794682"
         }
       }
     },
@@ -793,8 +817,8 @@
         "targets": "competitors,trends,pricing"
       },
       "created_at": "2026-03-06T21:16:28.943305",
-      "last_run": "2026-03-09T12:21:43.624905",
-      "cycles_run": 13,
+      "last_run": "2026-03-09T16:20:16.161075",
+      "cycles_run": 14,
       "results": [
         {
           "cycle": 4,
@@ -951,38 +975,50 @@
             "alert": "ok"
           },
           "success_rate": "2/6"
+        },
+        {
+          "ts": "2026-03-09T16:20:16.161084",
+          "steps": {
+            "configure": "failed",
+            "scrape": "failed",
+            "clean": "failed",
+            "analyze": "ok",
+            "store": "failed",
+            "alert": "ok"
+          },
+          "success_rate": "2/6"
         }
       ],
       "pipeline_stats": {
         "configure": {
-          "runs": 8,
+          "runs": 9,
           "successes": 1,
-          "last_run": "2026-03-09T12:16:41.097123"
+          "last_run": "2026-03-09T16:15:13.386225"
         },
         "scrape": {
-          "runs": 8,
+          "runs": 9,
           "successes": 1,
-          "last_run": "2026-03-09T12:21:41.117590"
+          "last_run": "2026-03-09T16:20:13.468759"
         },
         "clean": {
-          "runs": 8,
+          "runs": 9,
           "successes": 1,
-          "last_run": "2026-03-09T12:21:41.371552"
+          "last_run": "2026-03-09T16:20:13.661717"
         },
         "analyze": {
-          "runs": 8,
-          "successes": 8,
-          "last_run": "2026-03-09T12:21:42.119422"
+          "runs": 9,
+          "successes": 9,
+          "last_run": "2026-03-09T16:20:14.220040"
         },
         "store": {
-          "runs": 8,
+          "runs": 9,
           "successes": 1,
-          "last_run": "2026-03-09T12:21:43.095788"
+          "last_run": "2026-03-09T16:20:15.623944"
         },
         "alert": {
-          "runs": 8,
-          "successes": 8,
-          "last_run": "2026-03-09T12:21:43.624882"
+          "runs": 9,
+          "successes": 9,
+          "last_run": "2026-03-09T16:20:16.161045"
         }
       },
       "cycle_count": 16,
@@ -1007,7 +1043,7 @@
       }
     },
     "SCRAPING_competitive_intel": {
-      "last_run": "2026-03-08T23:30:00.000000",
+      "last_run": "2026-03-09T16:25:18.594808",
       "cycle_count": 16,
       "last_cycle": 16,
       "status": "ACTIVE",
@@ -1020,10 +1056,39 @@
         "analyze",
         "report"
       ],
-      "interval_hours": 6
+      "interval_hours": 6,
+      "pipeline_stats": {
+        "scrape": {
+          "runs": 1,
+          "successes": 0,
+          "last_run": "2026-03-09T16:25:16.564518"
+        },
+        "analyze": {
+          "runs": 1,
+          "successes": 1,
+          "last_run": "2026-03-09T16:25:17.027512"
+        },
+        "report": {
+          "runs": 1,
+          "successes": 0,
+          "last_run": "2026-03-09T16:25:18.594798"
+        }
+      },
+      "cycles_run": 1,
+      "results": [
+        {
+          "ts": "2026-03-09T16:25:18.594811",
+          "steps": {
+            "scrape": "failed",
+            "analyze": "ok",
+            "report": "failed"
+          },
+          "success_rate": "1/3"
+        }
+      ]
     },
     "alpha_intelligence": {
-      "last_run": "2026-03-09T00:27:53.755674",
+      "last_run": "2026-03-09T16:30:22.262602",
       "total_cycles": 1,
       "last_results": {
         "reddit_posts_scraped": 166,
@@ -1044,11 +1109,40 @@
         "analyze",
         "report"
       ],
-      "interval_hours": 4
+      "interval_hours": 4,
+      "pipeline_stats": {
+        "scrape": {
+          "runs": 1,
+          "successes": 0,
+          "last_run": "2026-03-09T16:30:19.347512"
+        },
+        "analyze": {
+          "runs": 1,
+          "successes": 1,
+          "last_run": "2026-03-09T16:30:20.077465"
+        },
+        "report": {
+          "runs": 1,
+          "successes": 0,
+          "last_run": "2026-03-09T16:30:22.262567"
+        }
+      },
+      "cycles_run": 1,
+      "results": [
+        {
+          "ts": "2026-03-09T16:30:22.262609",
+          "steps": {
+            "scrape": "failed",
+            "analyze": "ok",
+            "report": "failed"
+          },
+          "success_rate": "1/3"
+        }
+      ]
     }
   },
-  "total_cycles": 35,
-  "total_pipeline_runs": 168,
+  "total_cycles": 40,
+  "total_pipeline_runs": 192,
   "created_at": "2026-03-06T21:12:45.215910",
   "RESEARCH": {
     "last_cycle": "2026-03-09T10:25:38.188614",

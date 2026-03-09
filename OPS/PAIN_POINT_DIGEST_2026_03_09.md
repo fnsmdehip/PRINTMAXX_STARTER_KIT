@@ -1,28 +1,49 @@
 # Reddit Pain Point Digest
 
-Generated: 2026-03-09 09:03:55
+Generated: 2026-03-09 18:03:54
 
-Total pain points found: 18
+Total pain points found: 17
 
 ---
 
-## HIGH Opportunity (11 posts, score >= 70)
+## HIGH Opportunity (10 posts, score >= 70)
 
-### [92/100] r/productivity (0↑ 19💬)
+### [100/100] r/SaaS (2↑ 11💬)
+**Is there ACTUAL need for your product? Drop your product link**
+Pattern: willing_to_pay | Categories: willing_to_pay
+> Okay, so we are devs but most devs end up making products that either they feel are a real pain point or they think it’s cool. But the brutal reality is that only a very few products actually make mon
+Link: https://reddit.com/r/SaaS/comments/1rpcqth/is_there_actual_need_for_your_product_drop_your/
+
+### [100/100] r/SideProject (3↑ 24💬)
+**I built a site where you pay to put your message on the homepage - and someone has to outbid you to take it down**
+Pattern: willing_to_pay | Categories: willing_to_pay
+> About a year ago I was doom-scrolling through Instagram and had one of those "shower thought" moments: what if there was a place online where visibility wasn't determined by an algorithm, but by how m
+Link: https://reddit.com/r/SideProject/comments/1rpbpsz/i_built_a_site_where_you_pay_to_put_your_message/
+
+### [92/100] r/productivity (0↑ 22💬)
 **is there an app that reminds me every hour?**
 Pattern: looking_for | Categories: looking_for
 > I just need it to send me simple messages like "drink water, check posture, stretch" every hour, 24/7, nonstop constantly.
 Link: https://reddit.com/r/productivity/comments/1rosa40/is_there_an_app_that_reminds_me_every_hour/
 
-### [90/100] r/SideProject (5↑ 4💬)
-**I built my dream tool for building products - free licenses for reviews / feedback**
-Pattern: wish_existed | Categories: wish_existed
-> Hey all,
-
-I'm a designer and engineer for the last 28 years. I started shipping side projects in the days of angelfire, geocities, and have designed and built many websites, apps over the years both p
-Link: https://reddit.com/r/SideProject/comments/1roystk/i_built_my_dream_tool_for_building_products_free/
-
 ### [80/100] r/productivity (1↑ 1💬)
+**Does anyone know a tool to make a personal medical record?**
+Pattern: looking_for | Categories: looking_for
+> Hi, does anyone know if there’s somewhere online where I can quickly make a personal medical record book?
+
+I’ve got quite a complex medical history and want something I can bring to doctor appointment
+Link: https://reddit.com/r/productivity/comments/1rpb6fg/does_anyone_know_a_tool_to_make_a_personal/
+
+### [80/100] r/productivity (2↑ 4💬)
+**Looking for an App to track my chores**
+Pattern: looking_for | Categories: looking_for
+> Hi all,
+
+  
+Per title, I'm looking for an app to track my chores for a better way to boost my dopamine of doing things and remembering. Something like a calendar that I can look at or find by chore/ch
+Link: https://reddit.com/r/productivity/comments/1rp6ayz/looking_for_an_app_to_track_my_chores/
+
+### [80/100] r/productivity (1↑ 2💬)
 **app reccomendations for chores in a flat**
 Pattern: looking_for | Categories: looking_for
 > I am head tenant in a flat with 9 people. It’s hard to keep on top of a chore chart, and I don’t want the admin every week of chasing people up. 
@@ -38,7 +59,7 @@ Pattern: frustrated_with | Categories: frustrated_with
 But after testi
 Link: https://reddit.com/r/Affiliatemarketing/comments/1rluh1z/a_complete_beginnerfriendly_guide_to_earning_more/
 
-### [78/100] r/Entrepreneur (15↑ 52💬)
+### [78/100] r/Entrepreneur (14↑ 65💬)
 **I'm building a social platform for students, how do I get my first real users?**
 Pattern: need_help | Categories: need_help
 > **The Backstory:**
@@ -48,43 +69,13 @@ I'm a 17 year old guy who is highly introverted. I quit traditional studying rou
 Things were going fine but as the exam pre
 Link: https://reddit.com/r/Entrepreneur/comments/1roqp0f/im_building_a_social_platform_for_students_how_do/
 
-### [78/100] r/productivity (81↑ 43💬)
-**I moved to another continent to chase my ambitions… but now I spend my days scrolling and doing nothing. What’s wrong wi**
-Pattern: need_help | Categories: need_help
-> I’m struggling with something and I’d genuinely like honest advice.
-
-I’ve always had big ambitions for my life. I want to build something meaningful, be successful, and become the kind of man people r
-Link: https://reddit.com/r/productivity/comments/1ro34xm/i_moved_to_another_continent_to_chase_my/
-
-### [78/100] r/loseit (0↑ 30💬)
-**I need help with weight loss as a 19 year old girl (no calorie counting)**
-Pattern: need_help | Categories: need_help
-> I’m 19, female, 5’11 and about 235 pounds. I always gain like 10 pounds over the winter (live in Maine) but my overall weight gain has gotten ridiculous since I’ve gone to college. I have incredibly m
-Link: https://reddit.com/r/loseit/comments/1ropg54/i_need_help_with_weight_loss_as_a_19_year_old/
-
-### [78/100] r/ecommerce (4↑ 26💬)
-**Need help with google ads and extremely weird traffic**
-Pattern: need_help | Categories: need_help
-> So my new store has been experiencing something extremely odd customer interactions the last 2-3 weeks. Almost everyday I will check the abandoned cart section and there will be someone adding absurd 
-Link: https://reddit.com/r/ecommerce/comments/1rmofmp/need_help_with_google_ads_and_extremely_weird/
-
-### [70/100] r/microsaas (1↑ 2💬)
-**UptimeRobot charged me for webhooks. So I built my own — free for early adopters**
-Pattern: frustrated_with | Categories: frustrated_with
-> Hey r/microsaas ,
-
-We're a small software house team. We built UptimeDuty because we needed to monitor our own clients' apps — and we got tired of paying for features that should just be basic.
-
-Uptim
-Link: https://reddit.com/r/microsaas/comments/1rowu5q/uptimerobot_charged_me_for_webhooks_so_i_built_my/
-
 ### [70/100] r/juststart (5↑ 1💬)
 **I Tested Dozens of Survey Apps… The Real Money Came From One Thing: Affiliate Referrals**
 Pattern: frustrated_with | Categories: frustrated_with
 > Over the past couple months I started experimenting with [**survey apps**](https://attapoll.app/join/znjuz) just to see if they were actually worth it. Like most people, I assumed they were a waste of
 Link: https://reddit.com/r/juststart/comments/1rm2lnz/i_tested_dozens_of_survey_apps_the_real_money/
 
-### [70/100] r/Affiliatemarketing (1↑ 2💬)
+### [70/100] r/Affiliatemarketing (3↑ 3💬)
 **What happened when I started focusing on one niche as an affiliate !**
 Pattern: frustrated_with | Categories: frustrated_with
 > I've been around affiliate marketing communities for a while and most of them seemed to be a waste of time so I would drop them halfway through. About 6 months ago I decided to actually commit to one 
@@ -92,25 +83,27 @@ Link: https://reddit.com/r/Affiliatemarketing/comments/1roz8sx/what_happened_whe
 
 ## MEDIUM Opportunity (7 posts, score 50-69)
 
+- [69] r/ADHD: I hate the double-standards for ADHD (need_help)
+- [69] r/Biohackers: Anybody tried DSIP For Sleep Aid? (need_help)
+- [69] r/ecommerce: Spending 10k/month on ads but cart abandonment is killing me. What’s the best  B (need_help)
 - [60] r/AppIdeas: Sick of seeing founders build stuff nobody wants. What if there was a "Tinder fo (need_help)
-- [60] r/ADHD: Thoughts on the phrase "too much of a good thing is bad" (or similar)? (need_help)
-- [60] r/ADHD: Coping with always having assignments in university (need_help)
-- [60] r/sleep: What actually fixed your sleep schedule (need_help)
-- [60] r/islam: Advice for a Muslim revert struggling with mental health (need_help)
-- [60] r/smallbusiness: Anyone using premium Irish hampers for corporate or employee appreciation gifts  (need_help)
-- [60] r/ecommerce: Spending 10k/month on ads but cart abandonment is killing me. What’s the best  B (need_help)
+- [60] r/Christianity: I need someone to talk to💔💔 (need_help)
+- [57] r/ADHD: I hate that I don't understand things (feature_request)
+- [51] r/sleep: How do people with ADHD keep their sleep schedule from drifting later and later? (need_help)
 
 ## Pattern Breakdown
 
 | Pattern | Count | Signal |
 |---------|-------|--------|
-| need_help | 11 | 60/100 |
-| frustrated_with | 4 | 70/100 |
-| looking_for | 2 | 80/100 |
-| wish_existed | 1 | 90/100 |
+| need_help | 7 | 60/100 |
+| looking_for | 4 | 80/100 |
+| frustrated_with | 3 | 70/100 |
+| willing_to_pay | 2 | 100/100 |
+| feature_request | 1 | 50/100 |
 
 ## Recommended Actions
 
-1. REPLY to 11 high-opportunity posts with value-first content
+1. REPLY to 10 high-opportunity posts with value-first content
 2. Cross-reference with existing app features to find product-market fit signals
+3. URGENT: 2 posts express willingness to pay - validate demand
 4. Competitor weakness detected - check frustrated posts for feature gap opportunities

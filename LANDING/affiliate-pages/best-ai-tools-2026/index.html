@@ -253,5 +253,35 @@ function trackClick(label){
   });
 })();
 </script>
+
+<!-- Exit Intent Popup -->
+<div id="exitPopup" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);transition:opacity .3s;opacity:0">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--surface,#1a2332);border:1px solid var(--accent,#10b981);border-radius:16px;padding:32px;max-width:420px;width:90%;text-align:center">
+<button onclick="document.getElementById('exitPopup').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;color:var(--muted,#6b7280);font-size:1.5rem;cursor:pointer">&times;</button>
+<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px;letter-spacing:-.5px">wait. before you go.</h3>
+<p style="color:var(--muted,#6b7280);font-size:.9rem;margin-bottom:20px">paying for tools you don't need? get the SaaS stack audit. find out which subscriptions are costing you money and which ones actually pay for themselves.</p>
+<form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:10px">
+<input type="hidden" name="_subject" value="Exit popup lead: best-ai-tools-2026">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://saas-stack-audit.surge.sh">
+<input type="email" name="email" placeholder="your email" required style="background:var(--bg,#0a0f1a);border:1px solid var(--border,#1f2937);border-radius:8px;padding:12px;color:var(--text,#e5e5e5);font-family:inherit;font-size:.95rem;outline:none">
+<button type="submit" style="background:var(--accent,#10b981);color:#fff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit">get the SaaS stack audit</button>
+</form>
+<p style="font-size:.7rem;color:var(--muted,#6b7280);margin-top:8px">no spam. just the audit tool.</p>
+</div>
+</div>
+<script>
+(function(){
+if(localStorage.getItem('exitShown_aiTools'))return;
+document.addEventListener('mouseout',function(e){
+if(e.clientY<0&&!localStorage.getItem('exitShown_aiTools')){
+localStorage.setItem('exitShown_aiTools','1');
+var p=document.getElementById('exitPopup');
+p.style.display='block';
+setTimeout(function(){p.style.opacity='1'},10);
+}
+});
+})();
+</script>
 </body>
 </html>

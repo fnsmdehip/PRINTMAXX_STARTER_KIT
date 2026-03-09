@@ -1,6 +1,6 @@
 {
-  "last_cycle": "2026-03-06T01:24:05.456070",
-  "cycles_run": 6,
+  "last_cycle": "2026-03-09T16:11:58.848982",
+  "cycles_run": 7,
   "venture_scores": {
     "services": {
       "name": "services",
@@ -191,7 +191,74 @@
       "compliance_notes": []
     }
   },
-  "venture_status": {},
+  "venture_status": {
+    "services": {
+      "last_result": "success",
+      "last_run": "2026-03-09T16:00:42.257058",
+      "last_summary": "3/3 service ops",
+      "duration": 30.9
+    },
+    "edge_tactics": {
+      "last_result": "partial",
+      "last_run": "2026-03-09T16:00:42.262631",
+      "last_summary": "Edge tactics generation thin",
+      "duration": 0.0
+    },
+    "content_farm": {
+      "last_result": "success",
+      "last_run": "2026-03-09T16:00:42.910953",
+      "last_summary": "3/3 content ops completed",
+      "duration": 0.6
+    },
+    "adult_content": {
+      "last_result": "failed",
+      "last_run": "2026-03-09T16:00:43.015982",
+      "last_summary": "Both intel and content generation failed",
+      "duration": 0.1
+    },
+    "viral_content": {
+      "last_result": "partial",
+      "last_run": "2026-03-09T16:00:43.024268",
+      "last_summary": "Viral content generation thin",
+      "duration": 0.0
+    },
+    "competitive_intel": {
+      "last_result": "partial",
+      "last_run": "2026-03-09T16:00:43.030651",
+      "last_summary": "Intel gathering thin",
+      "duration": 0.0
+    },
+    "growth": {
+      "last_result": "success",
+      "last_run": "2026-03-09T16:05:43.181148",
+      "last_summary": "1/2 growth ops",
+      "duration": 300.1
+    },
+    "ecom": {
+      "last_result": "success",
+      "last_run": "2026-03-09T16:07:43.475905",
+      "last_summary": "1/2 ecom ops",
+      "duration": 120.3
+    },
+    "digital_products": {
+      "last_result": "success",
+      "last_run": "2026-03-09T16:07:43.814862",
+      "last_summary": "Product pipeline processed",
+      "duration": 0.3
+    },
+    "affiliate": {
+      "last_result": "success",
+      "last_run": "2026-03-09T16:07:44.231358",
+      "last_summary": "Affiliate pipeline ran",
+      "duration": 0.4
+    },
+    "apps": {
+      "last_result": "success",
+      "last_run": "2026-03-09T16:11:58.848742",
+      "last_summary": "Factory cycle ran",
+      "duration": 254.6
+    }
+  },
   "revenue": {
     "total": 0,
     "by_venture": {}
@@ -211,6 +278,6 @@
   ],
   "killed_ventures": [],
   "pending_ventures": [],
-  "last_prioritization": "2026-03-06T20:06:35.946803",
-  "disk_gb_free": 65.5
+  "last_prioritization": "2026-03-09T16:00:11.354506",
+  "disk_gb_free": 55.4
 }
