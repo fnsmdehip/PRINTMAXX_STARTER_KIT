@@ -145,3 +145,4 @@
 {"ts": "2026-03-09T01:00:04.261092", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 37 response drafts, 38 listing drafts"}
 {"ts": "2026-03-09T03:00:04.249712", "mission": "health_heal", "result": "success", "duration_s": 4.1, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-09T03:00:04.420803", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 37 response drafts, 38 listing drafts"}
+{"ts": "2026-03-09T04:02:00.274243", "mission": "upgrade_night", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}
