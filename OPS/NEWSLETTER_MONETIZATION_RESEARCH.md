@@ -291,3 +291,18 @@ The perfect platform for beginners—nothing beats it.
 
 But if I had to build a new writing business from scratch today:
 
+
+
+---
+
+## Pending Enhancement (ALPHA18511, Score: 32)
+
+**Source:** @xivy0k (high-signal-accounts) | **URL:** https://x.com/xivy0k/status/2030656516659790139
+**Added:** 2026-03-08T18:45:01-04:00
+
+bro i was doing research last night and i found this guy medschoolbro he's just a med student who started making study guides for other med students and now he's doing $100k a month easy
+
+849k followers on facebook, 100k visitors a month on his site, 91 ads running right now
+
+and
+

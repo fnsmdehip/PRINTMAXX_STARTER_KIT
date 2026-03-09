@@ -20,7 +20,7 @@ here's the honest breakdown:
 
 **2/8**
 the stack:
-- Claude Max ($200/mo) -- runs ALL 33 agents
+- Claude Max ($200/mo). runs ALL 33 agents
 - surge.sh (free) -- deploys 168 sites
 - PWAs (free) -- 22 apps built
 - Python + cron (free) -- orchestration
@@ -287,15 +287,18 @@ boring niche + simple app + zero competition = $64/month/app.
 
 65 of those = $4,200/mo.
 
-### COLD EMAIL NICHE: Outcome Framing
+### COLD EMAIL NICHE: Outcome Framing — BLOCKED (Quality Gate: "tested this on 50 cold emails last week" is fabricated. No cold email infra exists. Rewrite below.)
 **Platform:** LinkedIn or Twitter cold email community
 
-tested this on 50 cold emails last week:
+~~tested this on 50 cold emails last week:~~
 
-old subject: "web design services for [company]"
-new subject: "15 leads/month from a site that loads in 0.8s"
+**REWRITE:**
+the difference between cold emails that get opened and cold emails that get deleted:
 
-open rate went from 12% to 34%.
+bad subject: "web design services for [company]"
+good subject: "15 leads/month from a site that loads in 0.8s"
+
+one describes a service. the other describes a result.
 
 stop selling services. sell the outcome the service produces.
 

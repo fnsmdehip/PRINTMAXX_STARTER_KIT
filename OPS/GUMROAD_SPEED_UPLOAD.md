@@ -199,3 +199,57 @@ TODAY'S META-SIGNAL: At least 8 products across HN Show and ProductHunt are agen
 
 Vibe Marketplace by Greta (PH) is specifically for selling vibe-coded projects. This directly validates our Gumroad product 'Vibe Coding Playbook'. The fact that an entire marketplace is being built around vibe coding means the trend has legs. IMMEDIATE ACTION: update our Vibe Coding Playbook to reference this marketplace as a distribution channel.
 
+
+
+---
+
+## Pending Enhancement (ALPHA18467, Score: 35)
+
+**Source:** @0xROAS (high-signal-accounts) | **URL:** https://x.com/0xROAS/status/2030727919216017615
+**Added:** 2026-03-08T18:45:00-04:00
+
+here's how to do this in 2 minutes w/ AI:
+
+- generate image with nano banana pro
+- generate the voice with minimax audio
+- lipsync with infinite talk or hedra avatar ($0.04/s)
+- that's it
+
+congrats you just saved $10k by not hiring an actor
+
+
+
+---
+
+## Pending Enhancement (ALPHA18524, Score: 30)
+
+**Source:** @fromzerotomill (high-signal-accounts) | **URL:** https://x.com/fromzerotomill/status/2030729593930572208
+**Added:** 2026-03-08T18:45:01-04:00
+
+here's how i find $10k/month niches in 20 minutes:
+
+go to reddit
+
+find a subreddit with 50k+ members
+
+sort by top posts this month
+
+read the top 10 complaints
+
+if 3+ complaints are about the same problem — that's your niche
+
+the product writes itself
+
+and while you're spending
+
+
+
+---
+
+## Pending Enhancement (ALPHA18535, Score: 43)
+
+**Source:** competitive_intel_march8 | **URL:** https://sacra.com/research/whop-at-142m-revenue/
+**Added:** 2026-03-08T18:45:01-04:00
+
+Whop: $2.67B lifetime GMV. 14.2M users. 183K sellers. $1.6B valuation (Tether $200M investment Feb 2026). 30K active affiliates. Fitness creators avg $1170/month. Gumroad losing 48 merchants/90 days.
+

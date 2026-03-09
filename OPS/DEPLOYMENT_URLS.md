@@ -40,3 +40,12 @@
 - No backend required - all data in browser localStorage
 - **Ramadan Tracker is HIGHEST PRIORITY** - Ramadan starts Feb 28, 2026
 | coreday-web | https://coreday.surge.sh | LIVE |
+
+## Affiliate Pages
+
+| Page | URL | Status |
+|------|-----|--------|
+| Smartlead vs Instantly | https://smartlead-vs-instantly.surge.sh | LIVE (placeholder IDs) |
+| Best AI Tools 2026 | https://best-ai-tools-2026.surge.sh | LIVE (placeholder IDs) |
+| AI Stack 2026 | https://ai-stack-2026.surge.sh | LIVE (placeholder IDs) |
+| ConvertKit vs Beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE (placeholder IDs) |

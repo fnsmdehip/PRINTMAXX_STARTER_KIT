@@ -1678,3 +1678,29 @@ Put the zip code first — 385pts UX micro-optimization. Single-page site about 
 - This App Creates Your Virtual (Monetized) Twin
 - AI Quran Tutor Hits
 
+
+
+---
+
+## Pending Enhancement (ALPHA18489, Score: 24)
+
+**Source:** @HamptonAc_ (high-signal-accounts) | **URL:** https://x.com/HamptonAc_/status/2030704587988996228
+**Added:** 2026-03-08T18:45:00-04:00
+
+If I had to start over with $500 and 90 days to make $10K, here's exactly what I'd do:
+
+Day 1-3: Pick a niche with desperate buyers (health, wealth, relationships). Not "cool" products. Problems people lose sleep over.
+
+Day 4-7: Find 3 products already selling on TikTok with 1M+
+
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47299009, Score: 26)
+
+**Source:** hackernews | **URL:** https://mlumiste.com/general/openai-charter/
+**Added:** 2026-03-08T19:02:44-04:00
+
+AGI goalposts debate: 315 HN pts + 208 comments. OpenAI charter analysis. Massive engagement on AI skepticism content. Content farming angle: contrarian AI takes drive huge engagement. Write anti-hype AI content for niche accounts.
+

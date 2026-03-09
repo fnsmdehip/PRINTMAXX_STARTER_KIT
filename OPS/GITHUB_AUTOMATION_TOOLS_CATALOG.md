@@ -691,3 +691,14 @@
 - [best-of-algorithmic-trading](https://github.com/merovinh/best-of-algorithmic-trading)
 - [awesome-opensource-boilerplates](https://github.com/EinGuterWaran/awesome-opensource-boilerplates)
 - [awesome-saas-boilerplates](https://github.com/smirnov-am/awesome-saas-boilerplates)
+
+
+---
+
+## Pending Enhancement (ALPHA18539, Score: 47)
+
+**Source:** competitive_intel_march8 | **URL:** https://hackceleration.com/n8n-review/
+**Added:** 2026-03-08T18:45:01-04:00
+
+n8n: $2.3B valuation. $40M+ ARR. Self-hosted = 150K executions/month for $50 vs $600+ on Zapier. McKinsey: automated solopreneurs earn $127/hour vs $31/hour manual. 70-90% cost savings vs SaaS.
+

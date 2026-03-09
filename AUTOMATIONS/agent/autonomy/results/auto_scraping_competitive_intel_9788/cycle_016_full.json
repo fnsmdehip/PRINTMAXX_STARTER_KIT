@@ -1,0 +1,66 @@
+{
+  "cycle": 16,
+  "timestamp": "2026-03-08T20:58:05.979436",
+  "phase": "SCRAPE \u2192 CLEAN \u2192 ANALYZE \u2192 STORE \u2192 ALERT",
+  "sources_checked": {
+    "app_store_competitors": 19,
+    "reddit_signals": 2,
+    "twitter_signals": 69,
+    "ecom_arb_listings": 10
+  },
+  "findings": {
+    "version_changes": 0,
+    "new_intel_rows": 2,
+    "profitable_arb": [
+      {
+        "product": "yoga mat",
+        "margin_pct": 66.2,
+        "action": "LIST"
+      },
+      {
+        "product": "led face mask",
+        "margin_pct": 60.0,
+        "action": "LIST"
+      },
+      {
+        "product": "gua sha tool",
+        "margin_pct": 49.2,
+        "action": "LIST"
+      },
+      {
+        "product": "ice roller face",
+        "margin_pct": 46.7,
+        "action": "LIST"
+      }
+    ],
+    "competitor_pricing": {
+      "streaks_workout": 4.99,
+      "autosleep": 8.99,
+      "most_faith_apps": "freemium",
+      "opal_screen_time": "freemium"
+    }
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "REDDIT_SIGNAL",
+      "insight": "Focus-blur app getting traction (149 score, 31 comments) - validate vs our WalkToUnlock/FocusLock positioning"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PRICING_INTEL",
+      "insight": "AutoSleep at $8.99 one-time confirms premium sleep app pricing viable. SleepMaxx under-priced."
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "ECOM_ARB",
+      "insight": "4 profitable ecom arb items today (yoga mat 66%, led face mask 60%, gua sha 49%, ice roller 47%)"
+    }
+  ],
+  "recommendations": [
+    "FocusLock: monitor blur-window app (r/SideProject viral) - potential competitor or partnership",
+    "SleepMaxx: test $7.99-$8.99 one-time price point (AutoSleep benchmark)",
+    "Ecom arb: list yoga mat + led face mask today - highest margin items",
+    "Faith app niche: all 4 competitors are freemium - premium faith app gap exists"
+  ]
+}

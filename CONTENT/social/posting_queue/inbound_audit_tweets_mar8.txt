@@ -1,0 +1,79 @@
+# Tweets from Inbound Audit — 2026-03-08
+# Source: inbound_report_20260308_cycle7.md
+# Status: PENDING_REVIEW
+
+---
+
+## Tweet 1 — Bug Horror Story (Reply Bait)
+
+audited all my landing pages today.
+
+found one where the email capture form showed "success! check your inbox" to every visitor.
+
+the email went nowhere. the JavaScript function only fired a Google Analytics event. it never actually sent the email to any backend.
+
+every lead from that page = gone.
+
+check your forms.
+
+---
+
+## Tweet 2 — Cold Email Deliverability Thread Opener
+
+23 things that determine if your cold email lands in inbox or spam.
+
+i built a free checklist that scores your setup out of 100.
+
+DNS, warmup, sending limits, content.
+
+most people skip DMARC and wonder why they're at 40% inbox placement.
+
+link in reply.
+
+---
+
+## Tweet 3 — Solopreneur Tool Stack (Engagement Bait)
+
+9 free tools i built instead of paying for SaaS:
+
+1. cold email ROI calculator
+2. subject line grader (scored against 847 winners)
+3. deliverability checklist (23 checks)
+4. landing page scorer
+5. side project revenue estimator
+6. saas stack audit
+7. solopreneur launch checklist
+8. revenue leak audit
+9. ramadan daily planner
+
+all free. all static HTML. $0/mo hosting on surge.sh.
+
+---
+
+## Tweet 4 — FormSubmit.co Tip (Value Post)
+
+if you're building static landing pages and need email capture without a backend:
+
+formsubmit.co
+
+add this to your form tag:
+action="https://formsubmit.co/your@email.com"
+method="POST"
+
+add hidden fields for subject line and redirect URL.
+
+emails go straight to your inbox. free tier. no signup. works on any static host.
+
+i use it on 13 pages.
+
+---
+
+## Tweet 5 — Self-Roast (Authentic)
+
+35 days. $0 revenue. 9 lead magnets deployed. 13 pages with email capture. 369 content pieces queued.
+
+the bottleneck isn't building. it's listing. it's posting. it's signing up for the marketplace accounts.
+
+i automated everything except the 2.5 hours of human work that would actually make money.
+
+the irony is not lost on me.

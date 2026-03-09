@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-03-08T16:07:00",
-  "total_deployments": 258,
+  "last_updated": "2026-03-08T20:20:00",
+  "total_deployments": 262,
   "all_200": false,
-  "notes": "Cycle 14: 258 total deployments tested. 248 GREEN, 5 YELLOW, 5 RED (all DNS label >63 chars). Fixed 2 Louisville 404s via 200.html redeploy. 7 sites Playwright visual tested (4.86/5 avg). 10 Fiverr service pages + 35 Louisville + saas-stack-audit + coreday + revenue-leak-audit confirmed live. 6 Gumroad products BLOCKED on human account creation.",
+  "notes": "Cycle 16: 262 total deployments (+1 new). Deployed cold-email-deliverability-checklist.surge.sh. All 10 sampled high-value sites confirmed 200. 4 DNS-overlength sites flagged. 6 Gumroad products BLOCKED on human account creation.",
   "summary": {
     "apps": 20,
     "streak_landing_pages": 24,
     "streak_web_pages": 28,
-    "local_biz_openclaw": 16,
+    "local_biz_openclaw": 18,
     "local_biz_louisville": 30,
     "tools_saas": 24,
     "demos": 19,
     "hubs": 5,
-    "lead_magnets": 7,
+    "lead_magnets": 9,
     "comparison_pages": 9,
     "storefront": 1,
     "thanks": 1,
@@ -97,6 +97,24 @@
         "description": "12 questions, 90 seconds. Find every hole in your revenue funnel. Most solopreneurs leak $1,200-4,850/mo.",
         "source": "DIGITAL_PRODUCTS/lead_magnets/revenue-leak-audit.html",
         "note": "NEW cycle 11"
+      },
+      {
+        "name": "PRINTMAXX Lead Magnets Hub",
+        "url": "https://printmaxx-lead-magnets.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Central hub page for all PRINTMAXX digital product lead magnets",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/index.html",
+        "note": "NEW cycle 15"
+      },
+      {
+        "name": "Cold Email Deliverability Checklist",
+        "url": "https://cold-email-deliverability-checklist.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "description": "Cold email deliverability checklist - ensure emails land in inbox",
+        "source": "DIGITAL_PRODUCTS/lead_magnets/cold-email-deliverability-checklist.html",
+        "note": "NEW cycle 16"
       }
     ],
     "comparison_pages": [
@@ -897,6 +915,20 @@
         "deployed": "2026-03-07",
         "description": "Local biz OpenClaw demo: retail shop Memphis TN",
         "note": "Previously uncatalogued"
+      },
+      {
+        "name": "ATX Food Co Austin",
+        "url": "https://atx-food-co-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "note": "Cycle 15 deployment"
+      },
+      {
+        "name": "Dailey Company Inc Austin",
+        "url": "https://dailey-company-inc-austin.surge.sh",
+        "status": 200,
+        "deployed": "2026-03-08",
+        "note": "Cycle 15 deployment"
       }
     ],
     "demos": [
@@ -1147,28 +1179,20 @@
     ]
   },
   "live_test": {
-    "tested_at": "2026-03-08T16:07:00",
-    "total": 258,
-    "green": 248,
-    "yellow": 5,
-    "red": 5,
-    "pass_rate": "98.1%",
-    "avg_load_ms": 1350,
-    "notes": "Cycle 14 (Playwright Tester): Full bulk HTTP test of 258 sites (53 new). 19 Louisville 504s resolved on retry (cold cache). 2 Louisville 404s fixed via 200.html redeploy. 7 sites Playwright visual tested (avg 4.86/5). 5 RED are all DNS label >63 chars (permanent). 5 YELLOW are 3 test deploys + 2 slow loads.",
-    "playwright_visual_tested": 34,
-    "playwright_avg_quality": "4.86/5",
-    "fixed_this_cycle": [
-      "kings-hands-llc-louisville-ky.surge.sh",
-      "new-seasons-auction-and-estates-louisville-ky.surge.sh"
-    ],
-    "spot_checked": [
-      "saas-stack-audit.surge.sh",
-      "coreday.surge.sh",
-      "printmaxx-website-design.surge.sh",
-      "printmaxx-cold-email.surge.sh",
-      "revenue-leak-audit.surge.sh",
-      "coit-cleaning-restoration-louisville-ky.surge.sh",
-      "printmaxx-store.surge.sh"
+    "tested_at": "2026-03-08T20:14:47",
+    "total": 241,
+    "green": 226,
+    "yellow": 11,
+    "red": 4,
+    "pass_rate": "98.3%",
+    "avg_load_ms": 1176,
+    "playwright_visual_tested": 241,
+    "notes": "Cycle 16 (Playwright Tester): Full async test of 241 sites. 226 GREEN, 11 YELLOW, 4 RED.",
+    "still_broken": [
+      "https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh",
+      "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh"
     ]
   },
   "new_this_cycle": [

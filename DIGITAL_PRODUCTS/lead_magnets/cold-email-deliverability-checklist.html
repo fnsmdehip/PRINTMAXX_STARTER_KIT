@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Email Deliverability Checklist: 23-Point Inbox Audit</title>
+<meta name="description" content="23-point checklist to get your cold emails out of spam and into the inbox. SPF, DKIM, DMARC, warmup, sending limits, content checks. Free, interactive, instant score.">
+<meta name="keywords" content="cold email deliverability checklist, email deliverability audit, cold email spam fix, SPF DKIM DMARC setup, email warmup checklist, cold outreach deliverability, inbox placement guide">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cold-email-checklist.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cold Email Deliverability Checklist: 23-Point Inbox Audit">
+<meta property="og:description" content="23-point checklist. SPF, DKIM, DMARC, warmup, sending limits, content. free instant score.">
+<meta property="og:url" content="https://cold-email-checklist.surge.sh">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Cold Email Deliverability Checklist: 23-Point Audit">
+<meta name="twitter:description" content="23 checks to get your cold emails out of spam. free tool. instant score.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x2709;</text></svg>">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Cold Email Deliverability Checklist","url":"https://cold-email-checklist.surge.sh","description":"23-point interactive checklist to audit your cold email deliverability and fix inbox placement issues","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1a;--surface:#111827;--card:#1a2332;--accent:#10b981;--accent2:#059669;--accent-glow:rgba(16,185,129,0.1);--green:#22c55e;--yellow:#eab308;--red:#ef4444;--orange:#f97316;--text:#e5e5e5;--muted:#6b7280;--border:#1f2937}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:720px;margin:0 auto;padding:0 20px}
+
+header{padding:32px 0 24px;text-align:center;border-bottom:1px solid var(--border)}
+header h1{font-size:clamp(1.5rem,4.5vw,2rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:8px}
+header h1 span{color:var(--accent)}
+header p{color:var(--muted);font-size:0.92rem;max-width:520px;margin:0 auto}
+.badge{display:inline-block;background:var(--accent-glow);border:1px solid var(--accent);color:var(--accent);font-size:0.72rem;padding:4px 12px;border-radius:16px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px}
+
+.score-bar{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:24px 0;text-align:center;position:sticky;top:8px;z-index:10}
+.score-num{font-size:2.2rem;font-weight:800;letter-spacing:-1px;transition:color 0.3s}
+.score-label{font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.score-meter{height:8px;background:var(--card);border-radius:4px;margin-top:12px;overflow:hidden}
+.score-fill{height:100%;border-radius:4px;transition:width 0.5s ease,background 0.3s}
+.score-grade{font-size:0.85rem;margin-top:8px;font-weight:600}
+
+.section{margin:32px 0}
+.section-title{font-size:1.1rem;font-weight:700;letter-spacing:-0.5px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.section-icon{font-size:1.2rem}
+
+.check-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:10px;cursor:pointer;transition:border-color 0.2s,background 0.2s;user-select:none}
+.check-item:hover{border-color:#374151}
+.check-item.checked{border-color:var(--accent);background:rgba(16,185,129,0.05)}
+.check-item.checked .check-box{background:var(--accent);border-color:var(--accent)}
+.check-item.checked .check-box::after{content:"\2713";color:#fff;font-size:0.8rem;font-weight:700}
+.check-top{display:flex;align-items:flex-start;gap:12px}
+.check-box{width:22px;height:22px;min-width:22px;border:2px solid var(--border);border-radius:5px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;margin-top:1px}
+.check-label{font-size:0.92rem;font-weight:600;letter-spacing:-0.2px}
+.check-detail{font-size:0.82rem;color:var(--muted);margin-top:4px;line-height:1.6;padding-left:34px}
+.check-weight{font-size:0.68rem;color:var(--muted);background:var(--surface);padding:2px 8px;border-radius:8px;margin-left:auto;white-space:nowrap}
+
+.result-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;margin:32px 0;text-align:center;display:none}
+.result-box h2{font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.result-box p{color:var(--muted);font-size:0.88rem;line-height:1.7;max-width:500px;margin:0 auto}
+
+.cta-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;margin:32px 0;text-align:center}
+.cta-section h2{font-size:1.2rem;font-weight:700;margin-bottom:6px;letter-spacing:-0.5px}
+.cta-section p{color:var(--muted);font-size:0.88rem;margin-bottom:20px;max-width:460px;margin-left:auto;margin-right:auto}
+.email-form{display:flex;gap:8px;max-width:420px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.email-form input[type=email]{flex:1;min-width:200px;padding:12px 16px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:0.9rem;outline:none;transition:border-color 0.2s}
+.email-form input[type=email]:focus{border-color:var(--accent)}
+.email-form input[type=email]::placeholder{color:var(--muted)}
+.email-form button{padding:12px 24px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:0.88rem;font-weight:700;cursor:pointer;transition:background 0.2s}
+.email-form button:hover{background:var(--accent2)}
+.email-note{font-size:0.72rem;color:var(--muted);margin-top:8px}
+
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:24px 0}
+.tool-link{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;transition:border-color 0.2s}
+.tool-link:hover{border-color:var(--accent);text-decoration:none}
+.tool-link h3{font-size:0.9rem;font-weight:700;margin-bottom:4px}
+.tool-link p{font-size:0.78rem;color:var(--muted)}
+
+.disclosure{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:0.72rem;color:var(--muted);text-align:center;margin:24px 0;line-height:1.6}
+
+footer{padding:20px 0;border-top:1px solid var(--border);text-align:center;font-size:0.75rem;color:var(--muted)}
+
+@media(max-width:600px){
+  .email-form{flex-direction:column}
+  .email-form input[type=email],.email-form button{width:100%}
+  .score-bar{position:static}
+}
+</style>
+</head>
+<body>
+
+<header><div class="container">
+  <span class="badge">free tool / 23 checks</span>
+  <h1>cold email <span>deliverability</span> checklist</h1>
+  <p>23 checks across DNS, warmup, sending, and content. check each one off. get an instant deliverability score. fix what's broken before your next campaign.</p>
+</div></header>
+
+<div class="container">
+
+<div class="score-bar" id="scoreBar">
+  <div class="score-label">deliverability score</div>
+  <div class="score-num" id="scoreNum">0 / 100</div>
+  <div class="score-meter"><div class="score-fill" id="scoreFill" style="width:0%;background:var(--red)"></div></div>
+  <div class="score-grade" id="scoreGrade" style="color:var(--red)">not started</div>
+</div>
+
+<!-- Section 1: DNS & Authentication -->
+<div class="section">
+  <div class="section-title"><span class="section-icon">&#x1F512;</span> DNS and Authentication (35 points)</div>
+
+  <div class="check-item" data-points="8" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">SPF record configured</span><span class="check-weight">8 pts</span></div>
+    <div class="check-detail">TXT record: v=spf1 include:_spf.google.com ~all (or your ESP). check at mxtoolbox.com/spf.aspx</div>
+  </div>
+
+  <div class="check-item" data-points="8" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">DKIM signing enabled</span><span class="check-weight">8 pts</span></div>
+    <div class="check-detail">DKIM adds a cryptographic signature to every email. your ESP should provide the DNS record. verify at dkimvalidator.com</div>
+  </div>
+
+  <div class="check-item" data-points="7" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">DMARC policy set</span><span class="check-weight">7 pts</span></div>
+    <div class="check-detail">TXT record at _dmarc.yourdomain.com: v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com. start with p=none, move to p=quarantine after 2 weeks.</div>
+  </div>
+
+  <div class="check-item" data-points="5" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Custom tracking domain</span><span class="check-weight">5 pts</span></div>
+    <div class="check-detail">don't use shared tracking domains from your ESP. set up track.yourdomain.com or links.yourdomain.com as a CNAME.</div>
+  </div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">MX records valid</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">your sending domain needs valid MX records even if you only send from it. receiving mail proves domain legitimacy.</div>
+  </div>
+
+  <div class="check-item" data-points="3" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Reverse DNS (PTR) set</span><span class="check-weight">3 pts</span></div>
+    <div class="check-detail">IP address resolves back to your domain. usually handled by your ESP. check at mxtoolbox.com/ReverseLookup.aspx</div>
+  </div>
+</div>
+
+<!-- Section 2: Warmup -->
+<div class="section">
+  <div class="section-title"><span class="section-icon">&#x1F525;</span> Warmup Protocol (25 points)</div>
+
+  <div class="check-item" data-points="6" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Warmup tool active (14+ days)</span><span class="check-weight">6 pts</span></div>
+    <div class="check-detail">use Instantly or Smartlead's built-in warmup. minimum 14 days before any cold sends. 21 days is safer for new domains.</div>
+  </div>
+
+  <div class="check-item" data-points="5" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Warmup volume: 30-50/day</span><span class="check-weight">5 pts</span></div>
+    <div class="check-detail">start at 5-10 warmup emails/day, ramp to 30-50 over 2 weeks. don't rush. inbox providers track send velocity.</div>
+  </div>
+
+  <div class="check-item" data-points="5" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Inbox placement > 85%</span><span class="check-weight">5 pts</span></div>
+    <div class="check-detail">check your warmup dashboard. if inbox rate is below 85%, pause cold sends and keep warming. 90%+ is the goal.</div>
+  </div>
+
+  <div class="check-item" data-points="5" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Keep warmup ON during campaigns</span><span class="check-weight">5 pts</span></div>
+    <div class="check-detail">never turn off warmup when you start cold sending. it maintains your sender reputation while real campaigns run.</div>
+  </div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Domain age > 30 days</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">new domains get extra scrutiny. buy domains at least 30 days before you need them. 60+ days is better.</div>
+  </div>
+</div>
+
+<!-- Section 3: Sending -->
+<div class="section">
+  <div class="section-title"><span class="section-icon">&#x1F4E8;</span> Sending Setup (25 points)</div>
+
+  <div class="check-item" data-points="5" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Daily limit: 30-50 per account</span><span class="check-weight">5 pts</span></div>
+    <div class="check-detail">max 30-50 cold emails per mailbox per day. more = spam folder. scale with more mailboxes, not more volume per box.</div>
+  </div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Multiple sending accounts (3+)</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">rotate across 3+ mailboxes minimum. 10+ is ideal for serious outbound. each on a different domain or subdomain.</div>
+  </div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Send window: business hours only</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">send between 8am-6pm in the recipient's timezone. no weekends. no holidays. humans send during business hours.</div>
+  </div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Random delays between sends</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">60-300 second random delay between emails. consistent timing = bot detection. your tool should handle this.</div>
+  </div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">List verified (bounce rate < 3%)</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">run every list through a verification tool (ZeroBounce, NeverBounce) before sending. bounces over 3% = reputation killer.</div>
+  </div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Unsubscribe link included</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">required by CAN-SPAM. add a plain text unsubscribe line at the bottom. looks more human than a fancy button.</div>
+  </div>
+</div>
+
+<!-- Section 4: Content -->
+<div class="section">
+  <div class="section-title"><span class="section-icon">&#x270D;&#xFE0F;</span> Email Content (15 points)</div>
+
+  <div class="check-item" data-points="4" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">No spam trigger words</span><span class="check-weight">4 pts</span></div>
+    <div class="check-detail">avoid: "free," "guaranteed," "act now," "limited time," "click here," "make money," excessive caps, multiple exclamation marks.</div>
+  </div>
+
+  <div class="check-item" data-points="3" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Plain text format (no HTML)</span><span class="check-weight">3 pts</span></div>
+    <div class="check-detail">plain text emails have higher deliverability than HTML. no images, no fancy formatting. looks like a real person wrote it.</div>
+  </div>
+
+  <div class="check-item" data-points="3" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Max 1 link per email</span><span class="check-weight">3 pts</span></div>
+    <div class="check-detail">multiple links = marketing email = spam filter. first email: zero links. follow-ups: max one link. calendly link is fine.</div>
+  </div>
+
+  <div class="check-item" data-points="3" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Personalization variables</span><span class="check-weight">3 pts</span></div>
+    <div class="check-detail">use {{firstName}}, {{company}}, {{something specific}}. merge tags aren't optional. personalized emails get 2x reply rates.</div>
+  </div>
+
+  <div class="check-item" data-points="2" onclick="toggleCheck(this)">
+    <div class="check-top"><div class="check-box"></div><span class="check-label">Under 120 words</span><span class="check-weight">2 pts</span></div>
+    <div class="check-detail">shorter emails get more replies. aim for 50-120 words. if you can't explain the value in 3 sentences, you don't have a clear offer.</div>
+  </div>
+</div>
+
+<!-- Result box -->
+<div class="result-box" id="resultBox">
+  <h2 id="resultTitle">your deliverability grade</h2>
+  <p id="resultText"></p>
+</div>
+
+<!-- Email capture CTA -->
+<div class="cta-section">
+  <h2>get the full cold email starter kit</h2>
+  <p>7 proven email templates, SMTP setup guide, and the warmup schedule we use to hit 94% inbox placement. one email, no spam.</p>
+  <form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New lead from cold-email-checklist">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://cold-email-checklist.surge.sh">
+    <input type="email" name="email" placeholder="your@email.com" required>
+    <button type="submit">send the kit</button>
+  </form>
+  <p class="email-note">no spam. one email with the kit. unsubscribe link included.</p>
+</div>
+
+<!-- Cross-links to other tools -->
+<div class="section">
+  <div class="section-title">more free tools</div>
+  <div class="tools-grid">
+    <a href="https://cold-email-roi-calculator.surge.sh" class="tool-link">
+      <h3>ROI Calculator</h3>
+      <p>see how much revenue cold email should generate</p>
+    </a>
+    <a href="https://subject-line-grader-pm.surge.sh" class="tool-link">
+      <h3>Subject Line Grader</h3>
+      <p>score your subject line against 847 winners</p>
+    </a>
+    <a href="https://pagescorer.surge.sh" class="tool-link">
+      <h3>PageScorer</h3>
+      <p>audit any landing page for conversion leaks</p>
+    </a>
+  </div>
+</div>
+
+<div class="disclosure">
+  Disclosure: this page may contain affiliate links. we earn a commission if you sign up through them, at no extra cost to you. we only recommend tools we use. <a href="https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers">FTC info</a>
+</div>
+
+</div>
+
+<footer><div class="container">PRINTMAXX 2026. built with cold email and caffeine.</div></footer>
+
+<script>
+var totalPoints=100;
+var currentScore=0;
+
+function toggleCheck(el){
+  el.classList.toggle('checked');
+  recalcScore();
+}
+
+function recalcScore(){
+  currentScore=0;
+  document.querySelectorAll('.check-item.checked').forEach(function(el){
+    currentScore+=parseInt(el.dataset.points)||0;
+  });
+  updateDisplay();
+}
+
+function updateDisplay(){
+  var pct=Math.round((currentScore/totalPoints)*100);
+  document.getElementById('scoreNum').textContent=currentScore+' / '+totalPoints;
+  document.getElementById('scoreFill').style.width=pct+'%';
+
+  var grade,color;
+  if(pct>=90){grade='excellent. you should be landing in inbox.';color='var(--green)';}
+  else if(pct>=75){grade='good. a few fixes and you are solid.';color='var(--accent)';}
+  else if(pct>=50){grade='needs work. fix the unchecked items before sending.';color='var(--yellow)';}
+  else if(pct>=25){grade='poor. high spam risk. fix DNS and warmup first.';color='var(--orange)';}
+  else if(pct>0){grade='critical. do not send cold emails yet.';color='var(--red)';}
+  else{grade='not started';color='var(--muted)';}
+
+  document.getElementById('scoreGrade').textContent=grade;
+  document.getElementById('scoreGrade').style.color=color;
+  document.getElementById('scoreNum').style.color=color;
+  document.getElementById('scoreFill').style.background=color;
+
+  var resultBox=document.getElementById('resultBox');
+  if(currentScore>=50){
+    resultBox.style.display='block';
+    if(pct>=90){
+      document.getElementById('resultTitle').textContent='score: '+currentScore+'/100. inbox ready.';
+      document.getElementById('resultText').textContent='your setup looks solid. make sure warmup stays on during campaigns. monitor bounce rates weekly. if inbox placement drops below 85%, pause and investigate.';
+    }else if(pct>=75){
+      document.getElementById('resultTitle').textContent='score: '+currentScore+'/100. almost there.';
+      document.getElementById('resultText').textContent='you are close. scroll up, find the unchecked items, and fix them before your next campaign. the DNS and warmup sections have the biggest impact on deliverability.';
+    }else{
+      document.getElementById('resultTitle').textContent='score: '+currentScore+'/100. needs attention.';
+      document.getElementById('resultText').textContent='sending cold emails with this setup will hurt your domain reputation. fix the unchecked items, especially DNS authentication and warmup. come back and re-check after.';
+    }
+  }else{
+    resultBox.style.display='none';
+  }
+}
+</script>
+<script data-goatcounter="https://printmaxx.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

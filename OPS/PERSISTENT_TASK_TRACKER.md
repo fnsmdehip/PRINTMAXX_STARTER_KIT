@@ -688,3 +688,24 @@ If context was compacted and you lost track:
 4. Read SECRETS/created_accounts.json for creation history
 5. Check LEDGER/ALPHA_STAGING.csv for latest alpha entries
 6. Run the session checklist above
+
+### HOT FREELANCE LEAD (2026-03-08 19:00)
+- **[Hiring] Facebook keyword posts scraper - $500 budget**
+- URL: https://reddit.com/r/forhire/comments/1ro9sgo/hiring_developer_to_build_a_facebook_keyword/
+- Score: 80/100 | Budget: $500 | Delivery: 2-6 hours
+- **Matched service:** automation (scraper)
+- **ACTION NEEDED:** Respond with portfolio + quote. We can build this with Playwright in 2-4 hours. [HUMAN - time-sensitive]
+
+### HUMAN VERIFY (2026-03-08 19:05)
+- **Fiverr Vibe Coding category** — Check if https://www.fiverr.com/categories/programming-tech/vibe-coding exists
+- Open URL in browser, confirm category is live, check seller count and pricing
+- If real: list 3 gigs immediately (first-mover window). If fake: mark ALPHA18447 as FALSE.
+- **Time: 2 minutes** [HUMAN]
+
+### SWARM SCANNER QUALITY FLAG (2026-03-08 19:05)
+- Swarm opportunity scanner (AUTOMATIONS/agent_swarm.py) has quality issues:
+  - Cited wrong source URLs (reclaim.ai doesn't mention AppSumo)
+  - Fabricated "Amazon Ads MCP Server open beta" — no such official product exists
+  - Omitted commission caps ($50/sale cap on AppSumo, not unlimited)
+  - Marked entries as HIGHEST without source verification
+- **ACTION:** Add URL verification step to swarm scanner before marking anything HIGHEST

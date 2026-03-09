@@ -1,29 +1,33 @@
 {
-  "last_cycle": "2026-03-08T23:37:00Z",
-  "cycle_count": 10,
+  "last_cycle": "2026-03-08T20:49:00Z",
+  "cycle_count": 11,
   "summary": {
     "total_assets": 277,
-    "total_channels_mapped": 42,
-    "total_content_pieces_created": 416,
-    "total_coverage_gaps": 16,
-    "gaps_addressed_this_cycle": 6,
-    "gaps_addressed_cumulative": 276,
-    "remaining_gaps_requiring_human": 9,
-    "distribution_files_total": 58,
-    "total_lines_of_content": 23500,
+    "total_channels_mapped": 46,
+    "total_content_pieces_created": 458,
+    "total_coverage_gaps": 12,
+    "gaps_addressed_this_cycle": 10,
+    "gaps_addressed_cumulative": 286,
+    "remaining_gaps_requiring_human": 8,
+    "distribution_files_total": 62,
+    "total_lines_of_content": 25652,
     "new_channels_opened": [
-      "Dev.to (2 articles drafted)",
+      "Dev.to (5 articles total)",
       "Medium (2 articles drafted)",
       "Facebook Groups (6 group types)",
       "Discord servers (4 communities)",
-      "Product Hunt (3 launch posts)",
-      "Quora (8 new answers, 12 total)"
+      "Product Hunt (6 launch posts total)",
+      "Quora (12 answers total)",
+      "AlternativeTo (4 submissions ready)",
+      "BetaList (2 submissions ready)",
+      "SaaSHub (2 submissions ready)",
+      "LinkedIn (8 posts total)"
     ],
     "new_content_this_cycle": [
-      "devto_medium_cycle10_mar8.md (4 articles: 258-sites-stack, free-SaaS-replacements, Claude-Code-PWAs, $0-cold-email-stack)",
-      "facebook_discord_cycle10_mar8.md (6 FB group posts + 4 Discord posts across solopreneur/sales/webdev/ADHD/Muslim/SMB communities)",
-      "new_assets_cycle10_mar8.md (6 tweets + 1 thread + 6 Reddit posts for CoreDay, Revenue Leak Audit, SaaS Stack Audit, comparison pages)",
-      "quora_producthunt_cycle10_mar8.md (8 Quora answers + 3 Product Hunt launch descriptions)"
+      "reddit_distribution_mar8.md (13 posts across 9 subreddits: r/SideProject, r/Entrepreneur, r/webdev, r/SaaS, r/coldoutreach, r/indiehackers, r/islam, r/MuslimLounge)",
+      "hn_indiehackers_mar8.md (4 Show HN posts + 3 IndieHackers posts)",
+      "twitter_threads_directories_mar8.md (3 Twitter threads + 3 ProductHunt + 4 AlternativeTo + 2 BetaList + 2 SaaSHub submissions)",
+      "devto_linkedin_mar8.md (3 Dev.to articles with code examples + 4 LinkedIn posts)"
     ],
     "ramadan_urgency": {
       "days_remaining": 19,
@@ -47,27 +51,31 @@
     },
     "new_assets_since_last_cycle": 0,
     "comparison_pages_deployed": 6,
-    "cycle_9_gap_analysis": {
-      "total_assets_deployed": 180,
-      "total_queued_posts": 395,
+    "cycle_11_gap_analysis": {
+      "total_assets_deployed": 262,
+      "total_queued_posts": 458,
       "actually_posted": 0,
       "warmup_mode": true,
-      "new_subreddits_covered": ["r/nosurf", "r/selfhosted", "r/digitalnomad", "r/productivity", "r/SaaS"],
+      "new_subreddits_covered": ["r/SideProject", "r/Entrepreneur", "r/webdev", "r/SaaS", "r/coldoutreach", "r/indiehackers", "r/islam", "r/MuslimLounge"],
       "channel_status": {
-        "reddit": {"presence": 0, "content_ready_for_subreddits": 12, "new_this_cycle": 5},
-        "hacker_news": {"presence": 0, "show_hn_posts_ready": 6},
-        "indiehackers": {"presence": 0, "posts_ready": 4},
-        "linkedin": {"existing_posts": 3, "new_posts_ready": 9, "total": 12},
-        "directories": {"submissions_done": 0, "templates_ready": 13},
-        "twitter": {"queued": "135+", "blocked_until": "2026-03-12", "reason": "warmup period"},
-        "product_hunt": {"launch_copy_ready": 1, "upcoming_scheduled": 0}
+        "reddit": {"presence": 0, "content_ready_for_subreddits": 17, "new_this_cycle": 9, "posts_ready": 13},
+        "hacker_news": {"presence": 0, "show_hn_posts_ready": 10, "new_this_cycle": 4},
+        "indiehackers": {"presence": 0, "posts_ready": 7, "new_this_cycle": 3},
+        "linkedin": {"existing_posts": 4, "new_posts_ready": 4, "total": 8},
+        "devto": {"articles_ready": 5, "new_this_cycle": 3, "with_code_examples": true},
+        "directories": {"submissions_done": 0, "templates_ready": 24, "new_this_cycle": 11, "platforms": ["ProductHunt", "AlternativeTo", "BetaList", "SaaSHub"]},
+        "twitter": {"queued": "164+", "threads_ready": 3, "new_threads_this_cycle": 3, "blocked_until": "2026-03-12", "reason": "warmup period"},
+        "product_hunt": {"launch_copy_ready": 6, "new_this_cycle": 3, "upcoming_scheduled": 0}
       },
       "highest_roi_gaps_remaining": [
-        "Actually post Reddit content (human: create/warm accounts)",
-        "Submit to AlternativeTo, SaaSHub, BetaList (human: create accounts)",
-        "Schedule Product Hunt launch for PageScorer (human: create account)",
-        "Post LinkedIn content (human: login and post)",
-        "Ramadan distribution to Muslim communities (human: 19 days remaining)"
+        "Post Reddit content to 9 subreddits (human: ~30 min total)",
+        "Submit 4 Show HN posts (human: HN account required, ~10 min)",
+        "Post 3 IH transparency reports (human: IH account, ~15 min)",
+        "Publish 3 Dev.to articles (human: Dev.to account, ~20 min)",
+        "Submit to AlternativeTo, SaaSHub, BetaList (human: accounts, ~30 min)",
+        "Post 4 LinkedIn posts (human: login and paste, ~10 min)",
+        "Schedule Product Hunt launches (human: PH account, ~20 min)",
+        "Ramadan distribution to Muslim communities (human: 19 days remaining, URGENT)"
       ]
     }
   },
