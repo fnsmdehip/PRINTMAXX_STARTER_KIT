@@ -1,0 +1,112 @@
+[
+  {
+    "service_type": "automation",
+    "demand_signals": 193,
+    "avg_budget": 58,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized automation template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557018"
+  },
+  {
+    "service_type": "website",
+    "demand_signals": 148,
+    "avg_budget": 57,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized website template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557026"
+  },
+  {
+    "service_type": "data_entry",
+    "demand_signals": 110,
+    "avg_budget": 47,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized data_entry template/toolkit",
+    "price_point": "$47",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557029"
+  },
+  {
+    "service_type": "social_media",
+    "demand_signals": 103,
+    "avg_budget": 87,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized social_media template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557030"
+  },
+  {
+    "service_type": "logo",
+    "demand_signals": 77,
+    "avg_budget": 60,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized logo template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557031"
+  },
+  {
+    "service_type": "video_editing",
+    "demand_signals": 35,
+    "avg_budget": 66,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized video_editing template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557033"
+  },
+  {
+    "service_type": "cold_email",
+    "demand_signals": 33,
+    "avg_budget": 59,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized cold_email template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557034"
+  },
+  {
+    "service_type": "presentation",
+    "demand_signals": 25,
+    "avg_budget": 119,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized presentation template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557035"
+  },
+  {
+    "service_type": "copywriting",
+    "demand_signals": 11,
+    "avg_budget": 68,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized copywriting template/toolkit",
+    "price_point": "$49",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557036"
+  },
+  {
+    "service_type": "seo",
+    "demand_signals": 11,
+    "avg_budget": 36,
+    "max_price_seen": 500,
+    "product_suggestion": "Productized seo template/toolkit",
+    "price_point": "$36",
+    "format": "Template + tutorial + automation script",
+    "source": "FREELANCE_DEMAND_SCAN",
+    "detected_at": "2026-03-09T16:25:11.557038"
+  }
+]

@@ -167,6 +167,15 @@ footer{padding:28px 0;text-align:center;border-top:1px solid var(--border);margi
 footer p{color:var(--muted);font-size:0.78rem}
 footer a{color:var(--muted-bright)}
 
+.crosslinks{padding:32px 0;border-top:1px solid var(--border);margin-top:32px}
+.crosslinks h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:16px}
+.crosslinks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.crosslink-card{background:var(--card,#161616);border:1px solid var(--border,#1f1f1f);border-radius:10px;padding:14px;transition:border-color .15s;text-decoration:none;display:block;color:var(--text)}
+.crosslink-card:hover{border-color:var(--accent,#22c55e)}
+.crosslink-card .cl-title{font-weight:700;font-size:.9rem;margin-bottom:4px}
+.crosslink-card .cl-desc{font-size:.75rem;color:var(--muted,#6b7280)}
+.crosslinks .see-all{display:inline-block;margin-top:16px;font-size:.85rem;color:var(--accent,#22c55e);font-weight:600}
+
 @media(max-width:560px){
   .stats-bar{gap:16px;flex-wrap:wrap}
   .q-top{flex-direction:column;gap:10px}
@@ -541,6 +550,17 @@ footer a{color:var(--muted-bright)}
         <button class="share-btn copy" id="copyBtn" onclick="copyResult()">copy results</button>
       </div>
     </div>
+  </div>
+
+  <div class="crosslinks">
+    <h3>more free tools</h3>
+    <div class="crosslinks-grid">
+      <a href="https://cold-email-roi-calculator.surge.sh" class="crosslink-card"><div class="cl-title">Cold Email ROI Calculator</div><div class="cl-desc">see how much revenue cold outreach generates</div></a>
+      <a href="https://saas-stack-audit.surge.sh" class="crosslink-card"><div class="cl-title">SaaS Stack Audit</div><div class="cl-desc">see how much you're burning on tools</div></a>
+      <a href="https://side-project-revenue-estimator.surge.sh" class="crosslink-card"><div class="cl-title">Revenue Estimator</div><div class="cl-desc">see if your side project prints money or burns time</div></a>
+      <a href="https://200-day-calculator.surge.sh" class="crosslink-card"><div class="cl-title">$200/Day Calculator</div><div class="cl-desc">map out the math to hit $200/day online</div></a>
+    </div>
+    <a href="https://app-hub-crosslinks.surge.sh" class="see-all">see all 11 tools &rarr;</a>
   </div>
 
   <footer>

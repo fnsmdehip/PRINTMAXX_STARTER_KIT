@@ -452,3 +452,14 @@ Been vibe-coding something small:
 - All human-designed
 - $69 for a full brand kit
 
+
+
+---
+
+## Pending Enhancement (ALPHA_OPP042, Score: 65)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://www.vibecodors.com/
+**Added:** 2026-03-09T16:26:45-04:00
+
+Vibe Codors + Greta Marketplace (441 PH votes). Sell existing built apps (20+ PWAs and templates). No fees on Vibe Codors. $39-299 per listing. We have PrayerLock + FocusLock + HabitForge + 6 local biz demos + SaaS templates all built and deployed. Package and list. $2-8K first month.
+

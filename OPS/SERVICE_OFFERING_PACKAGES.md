@@ -221,3 +221,14 @@ Spent $10,500 assuming I knew where my customers were. I didn't. I run an ops as
 
 A few months ago I made a confident decision: my audience is on LinkedIn, so I hired a content agency and an outreach specialist. About $3,500 a month. Now in 
 
+
+
+---
+
+## Pending Enhancement (ALPHA_OPP043, Score: 49)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://www.upwork.com/research/in-demand-skills-2026
+**Added:** 2026-03-09T16:26:45-04:00
+
+AI video editing demand up 329% on Upwork (Feb 2026 report). Offer clip extraction service using our Remotion + auto-clip pipeline (yt-dlp + whisper + ffmpeg). Packages $150-1500. 95% margins. B2B webinar-to-clips is underserved goldmine. $0 startup. $2-8K/mo at 5-10 clients.
+
