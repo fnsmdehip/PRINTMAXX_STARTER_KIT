@@ -1,7 +1,7 @@
 {
   "cycle_id": "cycle_5_20260310_0000",
   "cycle_number": 5,
-  "last_completed_phase": 5,
+  "last_completed_phase": 6,
   "phase_results": {
     "1": {
       "count": 179,
@@ -72,8 +72,12 @@
           "status": "success"
         }
       ]
+    },
+    "6": {
+      "issues": [],
+      "summary": "5 promote"
     }
   },
   "started_at": "2026-03-10T00:00:01.330853",
-  "updated_at": "2026-03-10T00:00:07.802051"
+  "updated_at": "2026-03-10T00:00:09.447666"
 }
