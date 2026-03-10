@@ -1,7 +1,7 @@
 {
-  "cycle_id": "cycle_7_20260310_0800",
-  "cycle_number": 7,
-  "last_completed_phase": 5,
+  "cycle_id": "cycle_8_20260310_1200",
+  "cycle_number": 8,
+  "last_completed_phase": 3,
   "phase_results": {
     "1": {
       "count": 179,
@@ -17,63 +17,38 @@
       "decisions": [
         {
           "type": "PROMOTE",
-          "op_id": "C17",
-          "name": "LinkedIn Content Strategy",
+          "op_id": "N03",
+          "name": "Skool Community Platform",
           "reason": "Score 70.5 above promote threshold 70"
         },
         {
-          "type": "PROMOTE",
-          "op_id": "M01",
-          "name": "Paid Discord Community",
-          "reason": "Score 70.5 above promote threshold 70"
+          "type": "CREATE",
+          "op_id": "C01",
+          "name": "TikTok Content Farm",
+          "reason": "READY status, score 82.2, not yet running"
         },
         {
-          "type": "PROMOTE",
-          "op_id": "M04",
-          "name": "Patreon Community",
-          "reason": "Score 70.5 above promote threshold 70"
+          "type": "CREATE",
+          "op_id": "C02",
+          "name": "YouTube Automation (Faceless)",
+          "reason": "READY status, score 72.2, not yet running"
         },
         {
-          "type": "PROMOTE",
-          "op_id": "M05",
-          "name": "Newsletter Community (Paid)",
-          "reason": "Score 70.5 above promote threshold 70"
+          "type": "CREATE",
+          "op_id": "C03",
+          "name": "Instagram Content Network",
+          "reason": "READY status, score 72.2, not yet running"
         },
         {
-          "type": "PROMOTE",
-          "op_id": "M06",
-          "name": "Whop Community",
-          "reason": "Score 70.5 above promote threshold 70"
+          "type": "CREATE",
+          "op_id": "C06",
+          "name": "Podcast Factory (AI Host)",
+          "reason": "READY status, score 80.7, not yet running"
         }
       ]
     },
-    "3": "snapshot_taken",
-    "4": "intel_loaded",
-    "5": {
-      "results": [
-        {
-          "op_id": "C17",
-          "status": "success"
-        },
-        {
-          "op_id": "M01",
-          "status": "success"
-        },
-        {
-          "op_id": "M04",
-          "status": "success"
-        },
-        {
-          "op_id": "M05",
-          "status": "success"
-        },
-        {
-          "op_id": "M06",
-          "status": "success"
-        }
-      ]
-    }
+    "3": "snapshot_taken"
   },
-  "started_at": "2026-03-10T08:00:00.479644",
-  "updated_at": "2026-03-10T08:00:08.480681"
+  "started_at": "2026-03-10T12:00:01.554588",
+  "updated_at": "2026-03-10T12:00:07.501905"
 }
