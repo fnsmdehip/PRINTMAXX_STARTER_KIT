@@ -471,3 +471,18 @@ Being pre-revenue and in build phase gives a sense of comfort of high ambition, 
 
 AI agent custom build service. High-ticket $2500-15000/project. SMBs need autonomous agents not ChatGPT wrappers. We run 33 agents 24/7 in PRINTMAXX (proof). Target SaaS startups + agencies + ecommerce. 90% margins. Portfolio IS the case study. 71% chatbot dev demand growth Upwork.
 
+
+
+---
+
+## Pending Enhancement (ALPHA20733, Score: 29)
+
+**Source:** @steipete (high-signal-accounts) | **URL:** https://x.com/swyx/status/2031071059307601944
+**Added:** 2026-03-10T14:23:34-04:00
+
+btw if you can build a category leader open source project in ai engineering right now the market acquihire rate is ~$10-$100m per ai engineer.
+
+you do not need to figure out a business model, you do not need GTM, you do not need funding.
+
+just build things clankers want.
+

@@ -1942,3 +1942,18 @@ If you want to build your own
 
 [r/SaaS] Tested 6 marketing channels to scale a B2C SaaS to 6-figure MRR. One channel hit 500M+ views. One was a complete waste of money. Full breakdown w resources below
 
+
+
+---
+
+## Pending Enhancement (ALPHA20677, Score: 24)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2031349689472205081
+**Added:** 2026-03-10T14:23:33-04:00
+
+anyone could have a tiktok shop brand that adds $100k/mo easily
+
+Sadly, most think it takes years to build 
+
+Here’s how you can do it in the next 6 weeks:
+
