@@ -1,7 +1,7 @@
 {
   "last_cycle": "2026-03-09T16:28:42.540659",
   "cycles_run": 3,
-  "total_decisions": 14,
+  "total_decisions": 18,
   "op_scores": {
     "C01": {
       "op_id": "C01",
@@ -17384,7 +17384,12 @@
     "C15",
     "N26",
     "C04",
-    "C02"
+    "C02",
+    "C03",
+    "C07",
+    "C08",
+    "C10",
+    "C14"
   ],
   "killed_ops": [],
   "promoted_ops": [
@@ -17402,7 +17407,12 @@
     "C15",
     "N26",
     "C04",
-    "C02"
+    "C02",
+    "C03",
+    "C07",
+    "C08",
+    "C10",
+    "C14"
   ],
   "created_ventures": [],
   "enhanced_ops": [],
