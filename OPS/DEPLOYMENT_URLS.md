@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-09 00:10:00
+**Last updated:** 2026-03-09 22:15:00
 
 ---
 
@@ -21,8 +21,10 @@
 
 ## Summary
 
-- **Deployed:** 8/8
-- **Timestamp:** 2026-03-08 23:50:00
+- **Total Deployments:** 267 (tracked in deployed_assets.json)
+- **PWAs:** 8/8 LIVE
+- **Health Check (Cycle 21):** 10/10 key sites returning 200 OK
+- **Timestamp:** 2026-03-09 22:15:00
 
 ## App Details
 
@@ -91,3 +93,12 @@ Deployed 2026-03-09 by GAP HUNTER agent.
 | Product | URL | Status |
 |---------|-----|--------|
 | Claude Code Agent Bible | https://claude-code-agent-bible.surge.sh | LIVE |
+| Scripture Streak | https://scripture-streak.surge.sh | LIVE |
+| PrayerLock App | https://prayerlock-app.surge.sh | LIVE |
+| TaskSmash Web | https://tasksmash-web.surge.sh | LIVE |
+| AI Revenue Calculator | https://ai-revenue-calculator.surge.sh | LIVE |
+
+## Recent Local Business Pages (Louisville, KY batch)
+
+267 total surge.sh deployments. Full catalog in `AUTOMATIONS/agent/swarm/deployed_assets.json`.
+Key categories: 8 PWAs, 11 lead magnets, 5 comparison pages, 4 affiliate pages, 13+ denomination streak landing pages, 60+ local business pages, 10+ service landing pages.
