@@ -1,80 +1,80 @@
 {
   "agents": {
     "gap_hunter": {
-      "installed_at": "2026-03-09T16:28:33.369944",
+      "installed_at": "2026-03-09T20:11:26.081927",
       "status": "ACTIVE"
     },
     "opportunity_scanner": {
-      "installed_at": "2026-03-09T16:28:33.406295",
+      "installed_at": "2026-03-09T20:11:26.179222",
       "status": "ACTIVE",
       "killed_at": "2026-03-08T02:00:10Z",
       "killed_by": "swarm_brain_cycle4",
       "reason": "70% effectiveness, redundant with gap_hunter/trend_synthesizer"
     },
     "competitor_stalker": {
-      "installed_at": "2026-03-09T16:28:34.140601",
+      "installed_at": "2026-03-09T20:11:26.571251",
       "status": "ACTIVE"
     },
     "asset_deployer": {
-      "installed_at": "2026-03-09T16:28:34.925965",
+      "installed_at": "2026-03-09T20:11:26.907205",
       "status": "ACTIVE"
     },
     "content_compounder": {
-      "installed_at": "2026-03-09T16:28:35.627568",
+      "installed_at": "2026-03-09T20:11:27.237966",
       "status": "ACTIVE"
     },
     "lead_machine": {
-      "installed_at": "2026-03-09T16:28:36.396402",
+      "installed_at": "2026-03-09T20:11:27.606879",
       "status": "ACTIVE"
     },
     "seo_aso_optimizer": {
-      "installed_at": "2026-03-09T16:28:36.974164",
+      "installed_at": "2026-03-09T20:11:27.956149",
       "status": "ACTIVE"
     },
     "conversion_optimizer": {
-      "installed_at": "2026-03-09T16:28:37.660485",
+      "installed_at": "2026-03-09T20:11:28.276067",
       "status": "ACTIVE",
       "killed_at": "2026-03-08T19:30:00Z",
       "killed_by": "swarm_brain_cycle8",
       "reason": "7 cycles mandated to fix 17 dead CTAs, 0 fixed. Only produced conversion score reports. MCR: 0%. Replaced by meta_executor."
     },
     "quality_enforcer": {
-      "installed_at": "2026-03-09T16:28:37.681579",
+      "installed_at": "2026-03-09T20:11:28.303128",
       "status": "ACTIVE",
       "killed_at": "2026-03-08T03:15:00Z",
       "killed_by": "swarm_brain_cycle5",
       "reason": "Redundant with quality_gate (436% effectiveness). Launchd plist unloaded. PID 29049 terminated."
     },
     "trend_synthesizer": {
-      "installed_at": "2026-03-09T16:28:38.824967",
+      "installed_at": "2026-03-09T20:11:28.635811",
       "status": "ACTIVE"
     },
     "cross_pollinator": {
-      "installed_at": "2026-03-09T16:28:39.667251",
+      "installed_at": "2026-03-09T20:11:28.976046",
       "status": "ACTIVE"
     },
     "revenue_tracker": {
-      "installed_at": "2026-03-09T16:28:40.789312",
+      "installed_at": "2026-03-09T20:11:29.613512",
       "status": "ACTIVE"
     },
     "system_healer": {
-      "installed_at": "2026-03-09T16:28:40.991490",
+      "installed_at": "2026-03-09T20:11:29.803221",
       "status": "ACTIVE"
     },
     "data_janitor": {
-      "installed_at": "2026-03-09T16:28:41.109015",
+      "installed_at": "2026-03-09T20:11:29.932053",
       "status": "ACTIVE"
     },
     "distribution_engine": {
-      "installed_at": "2026-03-09T16:28:41.562659",
+      "installed_at": "2026-03-09T20:11:30.295997",
       "status": "ACTIVE"
     },
     "inbound_maximizer": {
-      "installed_at": "2026-03-09T16:28:41.996885",
+      "installed_at": "2026-03-09T20:11:30.644350",
       "status": "ACTIVE"
     },
     "swarm_brain": {
-      "installed_at": "2026-03-09T16:28:42.112646",
+      "installed_at": "2026-03-09T20:11:30.743399",
       "status": "ACTIVE"
     },
     "video_factory": {

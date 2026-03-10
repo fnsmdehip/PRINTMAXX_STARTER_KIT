@@ -991,3 +991,16 @@ Timestamps
 0:22:23 - Decreasing price of intelligence
 0:3
 
+
+
+---
+
+## Pending Enhancement (ALPHA20235, Score: 20)
+
+**Source:** @weswinder (high-signal-accounts) | **URL:** https://x.com/weswinder/status/2031163911479701531
+**Added:** 2026-03-09T20:59:13-04:00
+
+i really don't understand why you would pay $25 for claude to review a SINGLE pr when opus 4.6 isn't even the best model for deep code review
+
+gpt 5.4 is the only model i trust for reviews rn
+

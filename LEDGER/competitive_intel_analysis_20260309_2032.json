@@ -1,0 +1,138 @@
+{
+  "run_ts": "2026-03-09T20:32:55.789159",
+  "app_rows_analyzed": 221,
+  "gap_opportunities": 23,
+  "top_threats": [],
+  "reddit_rows": 139,
+  "high_value_reddit": 59,
+  "top_gaps": [
+    {
+      "name": "Lectio 365: Daily Bible Prayer",
+      "niche": "faith",
+      "rating": "4.78",
+      "count": "987",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "Catholic Answers",
+      "niche": "faith",
+      "rating": "4.89",
+      "count": "2149",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "PrayerMate - Christian Prayer",
+      "niche": "faith",
+      "rating": "4.81",
+      "count": "412",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "Roots: Screen Time Control",
+      "niche": "screen_time",
+      "rating": "4.76",
+      "count": "1518",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "ClearSpace: Reduce Screen Time",
+      "niche": "screen_time",
+      "rating": "4.74",
+      "count": "8235",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "Be Focused \u2013 Deep Focus Timer",
+      "niche": "screen_time",
+      "rating": "4.71",
+      "count": "4287",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "Socratic AI - Homework Helper",
+      "niche": "study",
+      "rating": "4.74",
+      "count": "4687",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "Notion Calendar",
+      "niche": "study",
+      "rating": "4.75",
+      "count": "6120",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "RemNote - Notes & Flashcards",
+      "niche": "study",
+      "rating": "4.84",
+      "count": "1199",
+      "flag": "EARLY_MOVER_GAP"
+    },
+    {
+      "name": "Streaks Workout",
+      "niche": "fitness",
+      "rating": "4.76",
+      "count": "6946",
+      "flag": "EARLY_MOVER_GAP"
+    }
+  ],
+  "top_reddit": [
+    {
+      "title": "I'm making a roguelike but each time you die, time skips forward 10 years. Do you think this concept works?",
+      "score": "3834",
+      "sub": "indiegaming",
+      "signal": "",
+      "url": "https://reddit.com/r/IndieGaming/comments/1rniq82/im_making_a_roguelike_but_each_time_you_die_time/"
+    },
+    {
+      "title": "Training a custom neural network to erase the cage from fight footage \u2013 still rough, but promising",
+      "score": "3439",
+      "sub": "SideProject",
+      "signal": "",
+      "url": "https://reddit.com/r/SideProject/comments/1rluzt2/training_a_custom_neural_network_to_erase_the/"
+    },
+    {
+      "title": "Made a game where you play as Karen and destroy a mall. Steam page just went live.",
+      "score": "3342",
+      "sub": "indiegaming",
+      "signal": "made",
+      "url": "https://reddit.com/r/IndieGaming/comments/1rjo5ne/made_a_game_where_you_play_as_karen_and_destroy_a/"
+    },
+    {
+      "title": "We're building a survival RPG where Orcs rebuild their civilization. Thoughts?",
+      "score": "1170",
+      "sub": "indiegaming",
+      "signal": "",
+      "url": "https://reddit.com/r/IndieGaming/comments/1rml2nv/were_building_a_survival_rpg_where_orcs_rebuild/"
+    },
+    {
+      "title": "Oh My Doug!",
+      "score": "913",
+      "sub": "indiegaming",
+      "signal": "",
+      "url": "https://reddit.com/r/IndieGaming/comments/1rlt3xg/oh_my_doug/"
+    },
+    {
+      "title": "Realizing my game won't make millions and I'll have to find a job",
+      "score": "887",
+      "sub": "indiegaming",
+      "signal": "",
+      "url": "https://reddit.com/r/IndieGaming/comments/1rkhf1j/realizing_my_game_wont_make_millions_and_ill_have/"
+    },
+    {
+      "title": "I built TerraInk, an open-source tool for instant and fully customizable map posters rendering",
+      "score": "796",
+      "sub": "SideProject",
+      "signal": "",
+      "url": "https://reddit.com/r/SideProject/comments/1rmt78d/i_built_terraink_an_opensource_tool_for_instant/"
+    },
+    {
+      "title": "What is a skill you can learn within 30 days that can actually make money?",
+      "score": "727",
+      "sub": "Entrepreneur",
+      "signal": "",
+      "url": "https://reddit.com/r/Entrepreneur/comments/1rm7ktk/what_is_a_skill_you_can_learn_within_30_days_that/"
+    }
+  ]
+}

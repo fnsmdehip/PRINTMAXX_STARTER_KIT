@@ -207,3 +207,6 @@
 {"ts": "2026-03-09T19:01:24.905183", "mission": "factory", "result": "success", "duration_s": 84.9, "output": "Factory cycle complete"}
 {"ts": "2026-03-09T20:00:03.872501", "mission": "health_heal", "result": "success", "duration_s": 3.8, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-09T20:00:04.051870", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 44 response drafts, 38 listing drafts"}
+{"ts": "2026-03-09T20:05:59.210080", "mission": "content", "result": "partial", "duration_s": 0.0, "output": "Claude returned error, output length: 45"}
+{"ts": "2026-03-09T20:05:59.318688", "mission": "upgrade", "result": "partial", "duration_s": 0.0, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-09T20:11:25.231930", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}

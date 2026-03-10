@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-09T20:00:04.052395",
-  "cycles_run": 77,
-  "missions_completed": 150,
+  "last_cycle": "2026-03-09T20:05:59.319899",
+  "cycles_run": 79,
+  "missions_completed": 152,
   "missions_failed": 11,
   "last_mission_results": {
     "health_heal": "success",
@@ -10,7 +10,7 @@
     "gen_content_eve": "success",
     "safety_commit": "success",
     "screen_alpha_night": "success",
-    "content": "success",
+    "content": "partial",
     "research_night": "partial",
     "upgrade_night": "partial",
     "hunt_night": "partial",
@@ -23,7 +23,8 @@
     "schedule": "success",
     "factory": "success",
     "compliance": "failed",
-    "proactive_hunt": "partial"
+    "proactive_hunt": "partial",
+    "upgrade": "partial"
   },
   "active_priorities": [],
   "learnings": [],
