@@ -85,3 +85,9 @@ Deployed 2026-03-09 by GAP HUNTER agent.
 | Instantly vs Lemlist | https://instantly-vs-lemlist.surge.sh | LIVE |
 | PageScorer vs GTmetrix | https://pagescorer-vs-gtmetrix.surge.sh | LIVE |
 | SleepMaxx vs Sleep Cycle | https://sleepmaxx-vs-sleepcycle.surge.sh | LIVE |
+
+## Product Pages
+
+| Product | URL | Status |
+|---------|-----|--------|
+| Claude Code Agent Bible | https://claude-code-agent-bible.surge.sh | LIVE |

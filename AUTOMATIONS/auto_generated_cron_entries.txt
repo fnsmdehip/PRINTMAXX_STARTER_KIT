@@ -570,3 +570,25 @@ paywall rig...
 # Added: 2026-03-09T16:26:45-04:00
 # 0 6 1 * *  # TODO: create monitoring script for this
 
+# ALPHA20067: i heard about a guy in a small town in england who turned his openclaw into a sh...
+# Source: https://x.com/gregisenberg/status/2031107609852325980
+# Added: 2026-03-09T18:15:01-04:00
+# 0 6 * * *  # TODO: create monitoring script for this
+
+
+# GAP HUNTER additions 2026-03-09 19:30
+# Every 4h - Agent swarm health check + self-healing
+30 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/agent_swarm.py --health >> AUTOMATIONS/logs/agent_swarm.log 2>&1
+# Every 3h - Route approved alpha entries to venture-specific ops
+45 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_to_ops.py >> AUTOMATIONS/logs/alpha_to_ops.log 2>&1
+# Every 6h - Account safety / algorithm ban prevention audit
+0 1,7,13,19 * * * cd $BASE && $PYTHON AUTOMATIONS/algo_ban_prevention.py >> AUTOMATIONS/logs/algo_ban_prevention.log 2>&1
+# ALPHA20147: GTM engineering
+
+how to automate weekly facebook ads client reporting 
+
+analyze ...
+# Source: https://x.com/codyschneiderxx/status/2031082654372708429
+# Added: 2026-03-09T19:57:42-04:00
+# 0 6 * * 1  # TODO: create monitoring script for this
+

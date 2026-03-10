@@ -431,7 +431,8 @@ def scan_fiverr_category(category_name, query):
     html = fetch_url(url, min_delay=3.0)
     if not html:
         return {"source": "fiverr", "category": category_name, "query": query,
-                "status": "fetch_failed", "gigs": [], "scan_date": datetime.now().isoformat()}
+                "status": "fetch_failed", "gigs": [], "scan_date": datetime.now().isoformat(),
+                "price_min": None, "price_max": None, "price_median": None, "price_count": 0}
 
     # Extract gig pricing from HTML
     gig_prices = []

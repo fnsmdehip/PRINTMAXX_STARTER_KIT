@@ -5712,3 +5712,22 @@ ChatGPT and Ecommerce SEO **ChatGPT pulls from Google Shopping for product resul
 
 When you ask ChatGPT for product recommendations, it runs encoded "fan-out" queries through Google Shopping in the background to build its product carousel. Google's ecosystem is simply too vast to ignore — it has 27+ years of pricing data, availability info, and reviews. So if your product ranks well on Google S
 
+
+
+---
+
+## Pending Enhancement (ALPHA20179, Score: 22)
+
+**Source:** @karpathy (high-signal-accounts) | **URL:** https://x.com/karpathy/status/2031137476438548874
+**Added:** 2026-03-09T19:57:42-04:00
+
+oh yeah i should have linked autoresearch probably
+
+https://
+github.com/karpathy/autor
+esearch
+…
+(you don't "use it" directly, it's just a recipe/idea - give it to your agent and apply to what you care about.)
+
+and the tweet about it that went mini-viral over the weekend with more context
+
