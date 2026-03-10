@@ -1,7 +1,7 @@
 {
   "cycle_id": "cycle_8_20260310_1200",
   "cycle_number": 8,
-  "last_completed_phase": 3,
+  "last_completed_phase": 5,
   "phase_results": {
     "1": {
       "count": 179,
@@ -47,8 +47,33 @@
         }
       ]
     },
-    "3": "snapshot_taken"
+    "3": "snapshot_taken",
+    "4": "intel_loaded",
+    "5": {
+      "results": [
+        {
+          "op_id": "N03",
+          "status": "success"
+        },
+        {
+          "op_id": "C01",
+          "status": "success"
+        },
+        {
+          "op_id": "C02",
+          "status": "success"
+        },
+        {
+          "op_id": "C03",
+          "status": "success"
+        },
+        {
+          "op_id": "C06",
+          "status": "success"
+        }
+      ]
+    }
   },
   "started_at": "2026-03-10T12:00:01.554588",
-  "updated_at": "2026-03-10T12:00:07.501905"
+  "updated_at": "2026-03-10T12:00:10.901583"
 }
