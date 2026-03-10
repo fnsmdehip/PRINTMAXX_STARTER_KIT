@@ -1754,3 +1754,31 @@ That's just how much of a difference
 
 [ACQUISITION] From basically zero to 147K impressions &amp; $1.1K revenue in 4-5 months – my niche site's early SEO progress [rev: $$1.1]
 
+
+
+---
+
+## Pending Enhancement (ALPHA20675, Score: 24)
+
+**Source:** @purpdevvv (high-signal-accounts) | **URL:** https://x.com/purpdevvv/status/2010996799431942602
+**Added:** 2026-03-10T14:23:33-04:00
+
+why trench or deploy
+
+when you can just watch $SPSC run to $100m while doing nothing
+
+
+
+---
+
+## Pending Enhancement (ALPHA20687, Score: 20)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2031339352182370475
+**Added:** 2026-03-10T14:23:34-04:00
+
+Here's a lesson on hooks that:
+
+> feel natural
+> spark conversations
+> drive views, downloads and revenue 
+

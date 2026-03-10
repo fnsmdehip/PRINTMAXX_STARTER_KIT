@@ -275,3 +275,22 @@ you can just become an affiliate for a brand and get paid $500 - 2k retainers pe
 
 learn marketing + AI UGC and you’ll have so many opportunities
 
+
+
+---
+
+## Pending Enhancement (ALPHA20672, Score: 30)
+
+**Source:** @purpdevvv (high-signal-accounts) | **URL:** https://x.com/purpdevvv/status/2012437590968803685
+**Added:** 2026-03-10T14:23:33-04:00
+
+if you buy 10 of my deploys, 9 of them will nuke
+
+"failed ideas" will nuke to zero, doesn't make it a rug
+
+don't buy if you're scared, the market decides what is a good narrative not me
+
+no virgins crying over loosing $10 please, made it very clear
+
+lets print
+

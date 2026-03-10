@@ -1,0 +1,171 @@
+{
+  "ecom_total": 40,
+  "ecom_today": 0,
+  "ecom_high_margin": 27,
+  "freelance_total": 1709,
+  "alpha_total": 12692,
+  "alpha_pending": 127,
+  "trend_total": 1265,
+  "app_builds": 25,
+  "apps_deployed": 43,
+  "arb_listings_count": 464,
+  "content_auto_count": 35,
+  "asset_count": 91,
+  "accounts_created": 0,
+  "products_listed": 0,
+  "emails_sent": 0,
+  "emails_ready": 712902,
+  "revenue": 0.0,
+  "report_generated": "2026-03-10 14:00:08",
+  "asset_results": {
+    "generated": 18,
+    "errors": 0,
+    "results": [],
+    "browser_pending": 0,
+    "mode": "hybrid"
+  },
+  "deploy_results": {
+    "deployed": 0,
+    "skipped": 25,
+    "apps": [
+      {
+        "name": "art-streak-landing",
+        "url": "https://art-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "buddhist-streak-landing",
+        "url": "https://buddhist-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "coding-streak-landing",
+        "url": "https://coding-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "coldmaxx",
+        "url": "https://coldmaxx.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "fitness-streak-landing",
+        "url": "https://fitness-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "focuslock-web",
+        "url": "https://focuslock-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "gita-streak-landing",
+        "url": "https://gita-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "invoiceforge",
+        "url": "https://invoiceforge.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "journal-streak-landing",
+        "url": "https://journal-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "language-streak-landing",
+        "url": "https://language-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "meditation-streak-landing",
+        "url": "https://meditation-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "mormon-streak-landing",
+        "url": "https://mormon-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "pagescorer",
+        "url": "https://pagescorer.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "pitchdeck",
+        "url": "https://pitchdeck.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "prayerlock-web",
+        "url": "https://prayerlock-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "prospectmaxx",
+        "url": "https://prospectmaxx.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "quran-streak-landing",
+        "url": "https://quran-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "reading-streak-landing",
+        "url": "https://reading-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "roicalc",
+        "url": "https://roicalc.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "sikh-streak-landing",
+        "url": "https://sikh-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "sleepmaxx-web",
+        "url": "https://sleepmaxx-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "stackmaxx",
+        "url": "https://stackmaxx.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "tasksmash-web",
+        "url": "https://tasksmash-web.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "torah-streak-landing",
+        "url": "https://torah-streak-landing.surge.sh",
+        "status": "already_live"
+      },
+      {
+        "name": "walktounlock-web",
+        "url": "https://walktounlock-web.surge.sh",
+        "status": "already_live"
+      }
+    ]
+  },
+  "listing_results": {
+    "generated": 20,
+    "file": "PRODUCTS/ARB_LISTINGS/ARB_LISTINGS_2026-03-10.md"
+  },
+  "content_results": {
+    "tweets_drafted": 0,
+    "content_moved": 0,
+    "alpha_converted": 0,
+    "auto_generated_files": 35,
+    "pending": 220,
+    "ready": 2,
+    "posted": 0
+  }
+}
