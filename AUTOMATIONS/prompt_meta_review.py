@@ -142,7 +142,7 @@ def build_analysis_prompt(sessions: list[dict[str, Any]], days: int) -> str:
         for j, p in enumerate(sess["prompts"], 1):
             prompt_text = p.get("prompt", "")
             # Sanitize + truncate user prompts before injection into analysis
-            prompt_text = sanitize_for_prompt(prompt_text, max_length=2000)
+            prompt_text = sanitize_for_prompt(prompt_text, field_name="user_prompt")[:2000]
             lines.append(f"  [{j}] {prompt_text}")
         lines.append("")
 

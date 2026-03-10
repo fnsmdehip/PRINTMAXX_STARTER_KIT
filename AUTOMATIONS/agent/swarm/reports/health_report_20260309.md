@@ -113,7 +113,52 @@ All swarm agents and scheduled ventures running with exit 0.
 ---
 
 ## Next Cycle Checks
-- [ ] Verify competitive_intel.log runs clean after KeyError fix (next run: 4 AM Mar 10)
-- [ ] Monitor ceo_agent swarm:redeploy failures
+- [x] Verify competitive_intel.log runs clean after KeyError fix — **CONFIRMED**: 19:58 run completed, 160 apps scanned, 0 errors
+- [ ] Monitor ceo_agent swarm:redeploy failures — 20:11 cycle: `swarm:redeploy FAIL (rc=1)` but CEO cycle completed 5 decisions, 0 issues
 - [ ] Check backup_system.py tracebacks
-- [ ] Verify log rotation running (log_rotator.py, 4 AM daily)
+- [x] Verify log rotation running — cron entry present, log_rotator.py exists
+
+---
+
+# Cycle 2 — 2026-03-09 22:11
+
+## Fixes Applied
+
+### 1. prompt_meta_review.py TypeError (FIXED)
+- **Bug**: Line 145 called `sanitize_for_prompt(prompt_text, max_length=2000)` but function signature is `(text, field_name="input")`
+- **Root cause**: `max_length` is not a valid kwarg for `sanitize_for_prompt()` in `agent_resilience.py`
+- **Fix**: Changed to `sanitize_for_prompt(prompt_text, field_name="user_prompt")[:2000]` — sanitizes then truncates
+- **Verified**: Script compiles clean
+
+### 2. Stale lock file removed
+- `logs/ship_captain.lock` — 6 days old (Mar 3), process long dead. Removed.
+
+## New Findings (since 18:30 cycle)
+
+| Check | Status | Delta |
+|-------|--------|-------|
+| Cron scripts | OK (57/57) | +3 scripts verified (gap_hunter additions) |
+| Launchd agents | YELLOW | content_compounder now EXIT=1 (was running at 18:30, now finished with `Not logged in` error) |
+| CEO agent | OK | 20:11 cycle completed: 5 decisions, 0 issues. 8 AM `OPS not defined` error not repeated. |
+| Daemon PID 13218 | ALIVE | Still running |
+| Disk | 51GB free | Stable |
+
+## Content Compounder Status
+- Generated 6 content pieces (5 solo tweets + 1 thread) + 3 cross-niche + 1 newsletter draft
+- Added CQ641-CQ646 to CONTENT_QUEUE.csv
+- Failed at end with `Not logged in` — Claude CLI auth expired
+- **HUMAN ACTION**: Run `claude login` (1 min)
+
+## Human Action Items (Updated)
+
+| Priority | Action | Time | Status |
+|----------|--------|------|--------|
+| P1 | Grant Full Disk Access to Terminal.app | 2 min | STILL PENDING from cycle 1 |
+| P1 | Run `claude login` in terminal | 1 min | NEW — fixes content_compounder |
+
+## System Verdict: YELLOW
+- 36/38 launchd agents healthy
+- 65 cron entries, all scripts exist
+- 1 bug fixed (prompt_meta_review.py)
+- 1 stale lock removed
+- 2 human actions still pending (Full Disk Access + claude login)

@@ -1,46 +1,41 @@
-# Agent-Generated Content — 2026-03-09 18:04
+# Agent-Generated Content — 2026-03-09 23:00
 
-no LinkedIn energy.
-`─────────────────────────────────────────────────`
-
----
-
-scanned 17 pain points across reddit today. one pattern keeps showing up: devs building products nobody asked for. the thread with 11 comments literally says "is there ACTUAL need for your product?" most of you already know the answer. you just don't want to hear it.
+ 13 reddit pain points today. one post on r/productivity has 22 comments asking for an app that sends "drink water, check posture, stretch" reminders every hour. 92/100 opportunity score. the app takes 4 hours to build as a PWA. the demand is sitting right there begging.
 
 ---
 
-someone built a site where you pay to put your message on the homepage. someone else has to outbid you to take it down. it's basically the million dollar homepage but with pvp. 24 comments deep and people are actually paying. the dumbest ideas always print.
+ran the RBI scanner this morning. 33 opportunities. $4,100-$50,750/mo combined revenue potential. 11 ready to launch today. 6 are P0 priority. most people spend months "validating ideas." i have a python script that finds 33 of them before breakfast.
 
 ---
 
-33 rbi opportunities in today's scan. $4,100-$50,750/mo total potential. 11 ready to launch. 6 marked do-today. the one that keeps coming back: local business website audits. $99 audit, $499 audit + action plan. run a scanner on 50 prospects, cold email the worst-scoring ones with a free preview. pipeline already built. just need to turn it on.
+the local biz website audit play is embarrassingly simple. run an automated audit script on 50 local businesses. cold email the ones scoring worst with a free preview of everything broken. $99 audit. $499 audit + action plan. $500-$5,000/mo. the script already exists. the leads already exist. nobody's emailing them.
 
 ---
 
-meal prep pain point showed up 3x in today's scan. $300-500/mo retainer per client. batch 4-5 clients same day and it's a logistics play not a service. nobody's doing this with route optimization yet. the margins are disgusting because the hard part is planning not cooking.
+someone on r/productivity is asking for a tool to make a personal medical record they can bring to doctor appointments. 80/100 score. complex medical history people have ZERO good options right now. notion template + export to PDF. charge $19. build it in 2 hours. the post has the exact feature spec in the comments for free.
 
 ---
 
-500 cold emails per day. free. gmail. no warmup tool needed. 3 accounts. warm for 7 days sending 10-20 normal emails. ramp to 100/day by week 2. $500-$5000/mo range depending on your offer. everyone's paying $200/mo for smartlead when the free version works fine for the first $5k.
+gmail gives you 500 emails per day for free. 3 accounts = 1,500 cold emails daily. warm for 7 days sending 10-20 normal emails. ramp to 100/day by week 2. $500-$5,000/mo pipeline. no mailgun. no sendgrid. no $200/mo email tool. just gmail and a spreadsheet. people overcomplicate this on purpose so they can sell you their course.
 
 ---
 
 THREAD:
 
-day 35 of building printmaxx. $0 revenue. 296 automation scripts. 8 apps live. 200+ landing pages deployed. 13 products sitting in gumroad drafts. here's what i learned about the gap between building and selling. it's embarrassing.
+i scan reddit every day with a python script that scores pain points 0-100. today it found 13. here's what $0 market research actually looks like when you stop paying for surveys.
 
 ---
 
-the system scans reddit, twitter, hacker news, product hunt, app store every single day. 17 pain points found today alone. 33 revenue opportunities scored and ranked. 11 ready to launch. the pipeline is genuinely insane. the problem was never finding opportunities.
+pain point #1 (92/100): r/productivity post asking for hourly reminder app. 22 comments. people want "drink water, check posture, stretch" on repeat. the entire product spec is in the thread. users are literally writing your feature list in the comments. for free.
 
 ---
 
-the problem is i have 13 products drafted on gumroad with $0 listed. 283 social posts queued with 0 posted. 1,111 leads scraped with 0 contacted. i built a ferrari engine and forgot to put wheels on it. classic dev brain. "one more feature" syndrome but for the entire business.
+pain point #2 (80/100): personal medical record tool. people with complex histories want something clean they can hand a doctor. nobody's built this well. notion template with PDF export = $19 product. custom PWA = $4.99/mo subscription. the TAM is anyone who's been to more than 3 specialists.
 
 ---
 
-the fix is stupid simple. stop building. start listing. today's scan found 6 do-today opportunities worth $500-$5000/mo each. the local biz website audit alone has a built script that scores sites automatically. cold email the ugly ones with a free preview. the automation already exists. i just need to press send.
+the RBI scanner found 33 total opportunities today. 11 ready to launch. the local biz website audit alone is $500-$5,000/mo. you run an automated scoring script on local businesses, cold email the worst ones with a free preview of what's broken, then sell the fix. the audit tool already exists as open source. you're just the delivery mechanism.
 
 ---
 
-if you're reading this and you have more github repos than customers, more notion docs than invoices, more "almost ready" projects than dollars in your stripe account. you already know what to do. you're just addicted to building because shipping feels like risk and building feels like progress. it's not. ship the ugly version today.
+stop "looking for ideas." build a scanner that finds pain points while you sleep. mine runs daily, scores by comment volume + specificity + existing solutions + monetization potential. today: 13 pain points, 33 RBI opportunities, $4,100-$50,750/mo sitting there. the scanner cost me one afternoon to build. it's printed opportunities every day since.

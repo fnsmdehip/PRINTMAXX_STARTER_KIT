@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-09T20:05:59.319899",
+  "last_cycle": "2026-03-09T22:03:48.396424",
   "cycles_run": 79,
-  "missions_completed": 152,
+  "missions_completed": 154,
   "missions_failed": 11,
   "last_mission_results": {
     "health_heal": "success",
@@ -10,7 +10,7 @@
     "gen_content_eve": "success",
     "safety_commit": "success",
     "screen_alpha_night": "success",
-    "content": "partial",
+    "content": "success",
     "research_night": "partial",
     "upgrade_night": "partial",
     "hunt_night": "partial",
@@ -23,21 +23,20 @@
     "schedule": "success",
     "factory": "success",
     "compliance": "failed",
-    "proactive_hunt": "partial",
-    "upgrade": "partial"
+    "proactive_hunt": "partial"
   },
   "active_priorities": [],
   "learnings": [],
   "blockers": [
     "account_creation"
   ],
-  "disk_gb_free": 53.6,
+  "disk_gb_free": 51.1,
   "last_run_times": {
-    "health_heal": "2026-03-09T20:00:03.873028",
-    "process_decide": "2026-03-09T20:00:04.052282",
-    "scan_opps_eve": "2026-03-09T18:03:54.852347",
+    "health_heal": "2026-03-09T22:00:05.145601",
+    "process_decide": "2026-03-09T22:00:05.441151",
+    "scan_opps_eve": "2026-03-09T22:03:48.396104",
     "gen_content_eve": "2026-03-09T18:04:23.774248",
-    "safety_commit": "2026-03-09T18:04:25.080410",
+    "safety_commit": "2026-03-09T21:00:01.684500",
     "screen_alpha_night": "2026-03-08T23:00:36.542600",
     "research_night": "2026-03-09T05:06:05.080980",
     "upgrade_night": "2026-03-09T04:02:00.278271",

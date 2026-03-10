@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-03-09 20:28
-Last session: 2026-03-09 20:28 (0.0h ago)
+# SESSION BRIEFING -- 2026-03-09 23:00
+Last session: 2026-03-09 22:12 (0.8h ago)
 
 ---
 
@@ -9,8 +9,11 @@ Last session: 2026-03-09 20:28 (0.0h ago)
 Revenue: $0 | Day 35 at zero
 - **84 new entries** scraped
 
+### Agent Reports (1 since last session)
+- health_report_20260309.md
+
 ### System Heartbeat
-Leads: 157,700/1,454,245 analyzed | 14,315 hot | 80,860 warm | 639,676 pipeline
+Leads: 158,700/1,454,245 analyzed | 14,410 hot | 81,227 warm | 654,086 pipeline
 Revenue: $0 total | 2 entries
 Content: 5 CSVs ready | 324 pending QA
 Apps: 8 built | 8/8 live (OPS/DEPLOYMENT_URLS.md)
@@ -86,3 +89,7 @@ Total items: 39 (deduplicated from all sources)
 - [ ] - **Next action (human):** Post to r/ADHD using the thread template in ASO_AND_CONTENT.md [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Proof:** 126 entries across 8 accounts (@ecomchasedimond, @takeactionD, @heyshrutimishra, @IronSage_, @TheSelfLab, @DeepPsycho_HQ, @BowTiedUM, @JamesEbringer) [HUMAN]
+
+## Recently Updated State
+
+- Autonomy state (updated 22:20)
