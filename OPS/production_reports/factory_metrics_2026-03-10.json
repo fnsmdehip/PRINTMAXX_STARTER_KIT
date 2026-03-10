@@ -1,11 +1,11 @@
 {
-  "ecom_total": 40,
+  "ecom_total": 54,
   "ecom_today": 0,
-  "ecom_high_margin": 27,
-  "freelance_total": 1709,
+  "ecom_high_margin": 41,
+  "freelance_total": 1786,
   "alpha_total": 12692,
-  "alpha_pending": 127,
-  "trend_total": 1265,
+  "alpha_pending": 0,
+  "trend_total": 1323,
   "app_builds": 25,
   "apps_deployed": 43,
   "arb_listings_count": 464,
@@ -16,13 +16,11 @@
   "emails_sent": 0,
   "emails_ready": 712902,
   "revenue": 0.0,
-  "report_generated": "2026-03-10 14:00:08",
+  "report_generated": "2026-03-10 16:08:49",
   "asset_results": {
-    "generated": 18,
+    "generated": 0,
     "errors": 0,
-    "results": [],
-    "browser_pending": 0,
-    "mode": "hybrid"
+    "results": []
   },
   "deploy_results": {
     "deployed": 0,

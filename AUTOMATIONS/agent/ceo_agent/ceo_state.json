@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-10T12:17:05.283305",
-  "cycles_run": 8,
-  "total_decisions": 43,
+  "last_cycle": "2026-03-10T16:33:07.462629",
+  "cycles_run": 9,
+  "total_decisions": 44,
   "op_scores": {
     "C01": {
       "op_id": "C01",
@@ -20196,22 +20196,22 @@
     "protect_threshold": 60,
     "promote_threshold": 70
   },
-  "last_alpha_scrape": "2026-03-10T12:06:04.851942",
+  "last_alpha_scrape": "2026-03-10T16:15:15.079746",
   "alpha_pipeline_results": {
     "twitter_scraper": "failed",
     "reddit_scraper": "ok",
     "alpha_processor": "ok"
   },
-  "last_research": "2026-03-09T12:16:04.008199",
-  "last_decision_engine": "2026-03-10T12:06:05.267837",
+  "last_research": "2026-03-10T16:25:15.191512",
+  "last_decision_engine": "2026-03-10T16:25:15.505870",
   "last_content_gen": "2026-03-10T12:06:25.217845",
-  "last_health_check": "2026-03-10T12:06:50.366028",
-  "last_openclaw": "2026-03-10T08:20:02.792187",
-  "openclaw_city_index": 4,
+  "last_health_check": "2026-03-10T16:25:39.832845",
+  "last_openclaw": "2026-03-10T16:25:57.108500",
+  "openclaw_city_index": 5,
   "openclaw_stats": {
     "discover": "ok",
     "city": "Houston TX",
-    "niche": "dentist",
+    "niche": "plumber",
     "build": "ok",
     "outreach": "ok"
   },
@@ -20267,12 +20267,13 @@
     "45 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_to_ops.py >> AUTOMATIONS/logs/alpha_to_ops.log 2>&1",
     "0 1,7,13,19 * * * cd $BASE && $PYTHON AUTOMATIONS/algo_ban_prevention.py >> AUTOMATIONS/logs/algo_ban_prevention.log 2>&1"
   ],
-  "last_autonomy_run": "2026-03-10T12:16:50.519765",
+  "last_autonomy_run": "2026-03-10T16:33:01.282181",
   "autonomy_stats": {
-    "status": "failed"
+    "status": "ok",
+    "summary": "[16:33:01] [AUTONOMY] [INFO] Ran 1/10 ventures this cycle"
   },
-  "last_self_manage": "2026-03-10T12:16:51.168137",
+  "last_self_manage": "2026-03-10T16:33:01.440411",
   "self_manage_actions": 0,
-  "last_swarm_check": "2026-03-10T12:16:51.833177",
-  "last_loop_closer": "2026-03-10T12:17:05.254820"
+  "last_swarm_check": "2026-03-10T16:33:01.560885",
+  "last_loop_closer": "2026-03-10T16:33:07.439107"
 }
