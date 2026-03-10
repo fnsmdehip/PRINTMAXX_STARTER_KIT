@@ -1,7 +1,7 @@
 {
   "cycle_id": "cycle_7_20260310_0800",
   "cycle_number": 7,
-  "last_completed_phase": 2,
+  "last_completed_phase": 5,
   "phase_results": {
     "1": {
       "count": 179,
@@ -46,8 +46,34 @@
           "reason": "Score 70.5 above promote threshold 70"
         }
       ]
+    },
+    "3": "snapshot_taken",
+    "4": "intel_loaded",
+    "5": {
+      "results": [
+        {
+          "op_id": "C17",
+          "status": "success"
+        },
+        {
+          "op_id": "M01",
+          "status": "success"
+        },
+        {
+          "op_id": "M04",
+          "status": "success"
+        },
+        {
+          "op_id": "M05",
+          "status": "success"
+        },
+        {
+          "op_id": "M06",
+          "status": "success"
+        }
+      ]
     }
   },
   "started_at": "2026-03-10T08:00:00.479644",
-  "updated_at": "2026-03-10T08:00:03.927531"
+  "updated_at": "2026-03-10T08:00:08.480681"
 }
