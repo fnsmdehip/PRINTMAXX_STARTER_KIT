@@ -915,3 +915,5 @@ JSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/c
 [04:00:04] [INFO] MISSION: Process & decide
 [04:00:04] [INFO]   [SUCCESS] process_decide: Decisions made. 49 response drafts, 38 listing drafts (0.2s)
 [04:00:04] [INFO] MISSION: Upgrade content (recursive)
+[04:00:08] [INFO]   [PARTIAL] upgrade_night: Upgrade attempt for C01_tiktok: failed (4.5s)
+[04:00:08] [INFO] MISSION: Safety commit
