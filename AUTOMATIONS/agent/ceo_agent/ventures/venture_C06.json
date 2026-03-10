@@ -1,0 +1,14 @@
+{
+  "op_id": "C06",
+  "name": "Podcast Factory (AI Host)",
+  "category": "CONTENT",
+  "lane": "rbi_intent_sniping",
+  "created": "2026-03-10T12:00:10.843275",
+  "score": 80.7,
+  "revenue_range": "$200-5K/mo",
+  "description": "AI-hosted podcasts using ElevenLabs voices. Niche commentary, interviews with AI personas.",
+  "automation_level": "High",
+  "status": "CREATED",
+  "cycles_run": 0,
+  "last_cycle": null
+}
