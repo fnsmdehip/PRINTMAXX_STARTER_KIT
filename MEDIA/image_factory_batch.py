@@ -437,6 +437,333 @@ IMAGES = [
         ),
     },
 
+    # === VIDEO THUMBNAILS (1200x675) ===
+    {
+        "id": "vid_thumb_ai_agents_33",
+        "width": 1200, "height": 675,
+        "category": "Video Thumbnails (1200x675)",
+        "template": "custom",
+        "html_fn": lambda: """<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    width: 1200px; height: 675px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0f0f1a 50%, #0a0a0a 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #fff; display: flex; flex-direction: column; justify-content: center;
+    padding: 80px; overflow: hidden; position: relative;
+}
+.grid-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(102,126,234,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102,126,234,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.big-number {
+    font-size: 140px; font-weight: 900;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    line-height: 1; letter-spacing: -4px; margin-bottom: 12px; position: relative; z-index: 1;
+}
+.context {
+    font-size: 38px; font-weight: 700; line-height: 1.3; max-width: 900px;
+    margin-bottom: 16px; position: relative; z-index: 1;
+}
+.detail {
+    font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.4);
+    max-width: 700px; line-height: 1.5; position: relative; z-index: 1;
+}
+.brand {
+    position: absolute; bottom: 35px; right: 55px; font-size: 16px;
+    font-weight: 700; color: rgba(255,255,255,0.15); letter-spacing: 4px;
+    text-transform: uppercase; z-index: 1;
+}
+.glow {
+    position: absolute; top: 50%; left: -80px; transform: translateY(-50%);
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(102,126,234,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.stat-row {
+    display: flex; gap: 48px; margin-top: 24px; position: relative; z-index: 1;
+}
+.stat-item { display: flex; flex-direction: column; }
+.stat-val {
+    font-size: 24px; font-weight: 800;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.stat-label {
+    font-size: 12px; color: rgba(255,255,255,0.3); text-transform: uppercase;
+    letter-spacing: 1.5px; margin-top: 4px;
+}
+</style></head><body>
+<div class="grid-overlay"></div>
+<div class="glow"></div>
+<div class="big-number">33</div>
+<div class="context">AI agents running 24/7. $200/mo.</div>
+<div class="detail">no team. no office. no VC. just Claude Code and a figure-it-the-fuck-out attitude.</div>
+<div class="stat-row">
+    <div class="stat-item"><div class="stat-val">287</div><div class="stat-label">Scripts</div></div>
+    <div class="stat-item"><div class="stat-val">262</div><div class="stat-label">Sites</div></div>
+    <div class="stat-item"><div class="stat-val">22</div><div class="stat-label">Apps</div></div>
+</div>
+<div class="brand">PRINTMAXX</div>
+</body></html>""",
+    },
+    {
+        "id": "vid_thumb_gumroad_vs_whop",
+        "width": 1200, "height": 675,
+        "category": "Video Thumbnails (1200x675)",
+        "template": "custom",
+        "html_fn": lambda: """<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    width: 1200px; height: 675px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a1a 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+}
+.vs-container { display: flex; align-items: center; gap: 60px; z-index: 1; }
+.platform { display: flex; flex-direction: column; align-items: center; width: 340px; }
+.platform-name { font-size: 48px; font-weight: 800; margin-bottom: 24px; letter-spacing: -1px; }
+.platform-stat { font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 8px; text-align: center; line-height: 1.6; }
+.platform-stat strong { color: #fff; font-weight: 700; }
+.loser .platform-name { color: #ef4444; }
+.loser .platform-stat strong { color: #ef4444; }
+.winner .platform-name {
+    background: linear-gradient(90deg, #22c55e, #4ade80);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.winner .platform-stat strong { color: #22c55e; }
+.vs { font-size: 72px; font-weight: 900; color: rgba(255,255,255,0.1); letter-spacing: -2px; }
+.verdict {
+    position: absolute; bottom: 50px; left: 0; right: 0; text-align: center;
+    font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.5); z-index: 1;
+}
+.verdict span { color: #22c55e; font-weight: 800; }
+.brand {
+    position: absolute; bottom: 35px; right: 55px; font-size: 16px;
+    font-weight: 700; color: rgba(255,255,255,0.15); letter-spacing: 4px;
+    text-transform: uppercase; z-index: 1;
+}
+.glow-red {
+    position: absolute; top: 30%; left: 10%; width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(239,68,68,0.06) 0%, transparent 70%); border-radius: 50%;
+}
+.glow-green {
+    position: absolute; top: 30%; right: 10%; width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(34,197,94,0.06) 0%, transparent 70%); border-radius: 50%;
+}
+</style></head><body>
+<div class="glow-red"></div><div class="glow-green"></div>
+<div class="vs-container">
+    <div class="platform loser">
+        <div class="platform-name">Gumroad</div>
+        <div class="platform-stat"><strong>10% + $0.50</strong> per sale</div>
+        <div class="platform-stat"><strong>-48</strong> merchants in 90 days</div>
+        <div class="platform-stat">no affiliate network</div>
+    </div>
+    <div class="vs">VS</div>
+    <div class="platform winner">
+        <div class="platform-name">Whop</div>
+        <div class="platform-stat"><strong>5.7%</strong> flat fee</div>
+        <div class="platform-stat"><strong>30K</strong> affiliates sell for you</div>
+        <div class="platform-stat"><strong>$1.6B</strong> valuation</div>
+    </div>
+</div>
+<div class="verdict">the platform war is over. <span>whop wins.</span></div>
+<div class="brand">PRINTMAXX</div>
+</body></html>""",
+    },
+    {
+        "id": "vid_thumb_vibecoding_superbowl",
+        "width": 1200, "height": 675,
+        "category": "Video Thumbnails (1200x675)",
+        "template": "custom",
+        "html_fn": lambda: """<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    width: 1200px; height: 675px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0f0f1a 50%, #0a0a0a 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #fff; display: flex; flex-direction: column; justify-content: center;
+    padding: 80px; overflow: hidden; position: relative;
+}
+.grid-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(102,126,234,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102,126,234,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.big-number {
+    font-size: 120px; font-weight: 900;
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #f59e0b 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    line-height: 1; letter-spacing: -4px; margin-bottom: 12px; position: relative; z-index: 1;
+}
+.context { font-size: 36px; font-weight: 700; line-height: 1.3; max-width: 900px; margin-bottom: 16px; position: relative; z-index: 1; }
+.context .dim { color: rgba(255,255,255,0.4); }
+.detail { font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.4); max-width: 700px; line-height: 1.5; position: relative; z-index: 1; }
+.brand { position: absolute; bottom: 35px; right: 55px; font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.15); letter-spacing: 4px; text-transform: uppercase; z-index: 1; }
+.glow { position: absolute; top: 40%; right: -50px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%); border-radius: 50%; }
+</style></head><body>
+<div class="grid-overlay"></div><div class="glow"></div>
+<div class="big-number">$7B</div>
+<div class="context">vibe coding market. <span class="dim">they spent millions on a Super Bowl ad.</span></div>
+<div class="detail">i built 22 apps for $200/mo. 33 agents. 262 sites. one MacBook. this is the other side.</div>
+<div class="brand">PRINTMAXX</div>
+</body></html>""",
+    },
+    {
+        "id": "vid_thumb_platform_shifts",
+        "width": 1200, "height": 675,
+        "category": "Video Thumbnails (1200x675)",
+        "template": "custom",
+        "html_fn": lambda: """<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    width: 1200px; height: 675px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #fff; display: flex; flex-direction: column; justify-content: center;
+    padding: 80px; overflow: hidden; position: relative;
+}
+.accent-bar { width: 60px; height: 4px; background: linear-gradient(90deg, #ef4444, #f59e0b); border-radius: 2px; margin-bottom: 32px; }
+.hook { font-size: 52px; font-weight: 800; line-height: 1.15; letter-spacing: -1px; margin-bottom: 32px; max-width: 900px; }
+.hook .highlight { background: linear-gradient(90deg, #ef4444, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.shifts { display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 1; }
+.shift-item { font-size: 17px; color: rgba(255,255,255,0.55); display: flex; align-items: center; gap: 12px; }
+.shift-num { font-weight: 800; font-size: 14px; color: rgba(255,255,255,0.2); min-width: 24px; }
+.shift-item strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+.brand { position: absolute; bottom: 35px; right: 55px; font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.15); letter-spacing: 4px; text-transform: uppercase; z-index: 1; }
+</style></head><body>
+<div class="accent-bar"></div>
+<div class="hook"><span class="highlight">5 platform shifts</span> costing you money right now</div>
+<div class="shifts">
+    <div class="shift-item"><span class="shift-num">01</span><strong>Whop</strong> hit $1.6B. 30K affiliates.</div>
+    <div class="shift-item"><span class="shift-num">02</span><strong>Gumroad</strong> lost 48 merchants in 90 days.</div>
+    <div class="shift-item"><span class="shift-num">03</span><strong>X Free</strong> is dead. 0% link engagement.</div>
+    <div class="shift-item"><span class="shift-num">04</span><strong>Vibe Marketplace</strong> by Greta. new channel.</div>
+    <div class="shift-item"><span class="shift-num">05</span><strong>Reddit monitoring</strong> = $12K validated revenue.</div>
+</div>
+<div class="brand">PRINTMAXX</div>
+</body></html>""",
+    },
+    {
+        "id": "vid_thumb_ai_babysitting",
+        "width": 1200, "height": 675,
+        "category": "Video Thumbnails (1200x675)",
+        "template": "custom",
+        "html_fn": lambda: """<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    width: 1200px; height: 675px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0a1a0a 50%, #0a0a0a 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+    color: #fff; display: flex; flex-direction: column; justify-content: center;
+    padding: 80px; overflow: hidden; position: relative;
+}
+.grid-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(34,197,94,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,197,94,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.quote-mark { font-size: 100px; font-weight: 900; color: rgba(34,197,94,0.15); line-height: 0.6; margin-bottom: 8px; position: relative; z-index: 1; }
+.hook { font-size: 44px; font-weight: 800; line-height: 1.2; letter-spacing: -1px; margin-bottom: 24px; max-width: 900px; position: relative; z-index: 1; }
+.hook .highlight { background: linear-gradient(90deg, #22c55e, #4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.proof { font-size: 18px; color: rgba(255,255,255,0.4); margin-bottom: 16px; position: relative; z-index: 1; }
+.proof strong { color: #22c55e; font-weight: 700; }
+.detail { font-size: 20px; font-weight: 400; color: rgba(255,255,255,0.5); max-width: 700px; line-height: 1.5; position: relative; z-index: 1; }
+.brand { position: absolute; bottom: 35px; right: 55px; font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.15); letter-spacing: 4px; text-transform: uppercase; z-index: 1; }
+.glow { position: absolute; bottom: -100px; right: -100px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(34,197,94,0.06) 0%, transparent 70%); border-radius: 50%; }
+</style></head><body>
+<div class="grid-overlay"></div><div class="glow"></div>
+<div class="quote-mark">&ldquo;</div>
+<div class="hook">the real AI gold rush isn't <span class="highlight">building</span> AI tools. it's <span class="highlight">babysitting</span> them.</div>
+<div class="proof"><strong>241 upvotes</strong> on r/Entrepreneur. <strong>126 comments.</strong> everyone agrees.</div>
+<div class="detail">$1,800/project for 25 min of work. the gap between "AI can do this" and "nobody knows how" is your business.</div>
+<div class="brand">PRINTMAXX</div>
+</body></html>""",
+    },
+
+    # === CLAUDE CODE AGENT BIBLE PRODUCT COVER (1280x720) ===
+    {
+        "id": "product_claude_code_agent_bible",
+        "width": 1280, "height": 720,
+        "category": "Product Covers (1280x720)",
+        "template": "product_cover.html",
+        "html_fn": lambda: build_product_cover(
+            "DIGITAL PRODUCT",
+            'The Claude Code <span class="accent">Agent Bible</span>',
+            "33 autonomous agents running 24/7. the exact blueprints, prompts, and architecture.",
+            [
+                {"value": "33", "label": "Agents"},
+                {"value": "287", "label": "Scripts"},
+                {"value": "24/7", "label": "Autonomous"},
+                {"value": "$200/mo", "label": "Total Cost"},
+            ],
+        ),
+    },
+
+    # === ALPHA SOCIAL CARDS (1200x675) — from 2026-03-09 alpha content ===
+    {
+        "id": "social_mcp_persistent_memory",
+        "width": 1200, "height": 675,
+        "category": "Social Cards (1200x675)",
+        "template": "social_card.html",
+        "html_fn": lambda: build_social_card(
+            'MCP server giving Claude <span class="highlight">persistent memory</span> + local RAG',
+            "zero-cost memory layer for AI agents. most people sleep on this."
+        ),
+    },
+    {
+        "id": "social_govcon_saas",
+        "width": 1200, "height": 675,
+        "category": "Social Cards (1200x675)",
+        "template": "social_card.html",
+        "html_fn": lambda: build_social_card(
+            'daily <span class="highlight">SAM.gov</span> contract digest. B2B SaaS monetization angle.',
+            "GovConToday matched to NAICS codes. the money is in boring B2B."
+        ),
+    },
+    {
+        "id": "social_4_ai_companies_terminal",
+        "width": 1200, "height": 675,
+        "category": "Social Cards (1200x675)",
+        "template": "social_card.html",
+        "html_fn": lambda: build_social_card(
+            '<span class="highlight">4 AI-driven companies</span> from one terminal. agent orchestration.',
+            "solopreneur-AI hybrid model. one person + agent swarm = multi-company operation."
+        ),
+    },
+    {
+        "id": "social_karpathy_autoresearch",
+        "width": 1200, "height": 675,
+        "category": "Social Cards (1200x675)",
+        "template": "social_card.html",
+        "html_fn": lambda: build_social_card(
+            '<span class="highlight">Karpathy\'s Autoresearch.</span> agents auto-research ML on a single GPU.',
+            "autonomous research agent that writes papers. maps to intelligence gathering."
+        ),
+    },
+    {
+        "id": "social_superx_growth_os",
+        "width": 1200, "height": 675,
+        "category": "Social Cards (1200x675)",
+        "template": "social_card.html",
+        "html_fn": lambda: build_social_card(
+            '<span class="highlight">SuperX.</span> all-in-one growth OS for X creators. 873 PH votes.',
+            "social media SaaS with serious traction. the tool creators are using to scale."
+        ),
+    },
+
     # === DATA VIZ (1200x675) ===
     {
         "id": "data_viz_competitive",

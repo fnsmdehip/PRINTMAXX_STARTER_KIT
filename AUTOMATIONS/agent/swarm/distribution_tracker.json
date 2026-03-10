@@ -1,22 +1,35 @@
 {
-  "last_updated": "2026-03-09T19:30:00Z",
-  "cycle": 14,
+  "last_updated": "2026-03-09T23:15:00Z",
+  "cycle": 15,
   "total_assets": 267,
-  "total_content_pieces": 646,
-  "content_ready": 145,
-  "content_pending_review": 289,
+  "total_content_pieces": 680,
+  "content_ready": 165,
+  "content_pending_review": 303,
   "content_blocked_qa": 212,
+  "new_this_cycle": {
+    "assets_covered": [
+      "Claude Code Agent Bible",
+      "Scripture Streak",
+      "cursor-vs-claudecode",
+      "sleepmaxx-vs-sleepcycle",
+      "instantly-vs-lemlist",
+      "coldmaxx-vs-instantly"
+    ],
+    "content_pieces_created": 34,
+    "platforms_targeted": ["twitter", "reddit", "hackernews", "devto", "indiehackers"],
+    "file": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+  },
   "distribution_channels": {
     "twitter": {
       "status": "active",
       "account": "@PRINTMAXXER",
-      "posts_queued": 139,
+      "posts_queued": 149,
       "posts_distributed": 0,
       "notes": "Account exists, X Premium needed for link posts"
     },
     "reddit": {
       "status": "content_ready",
-      "posts_created": 12,
+      "posts_created": 22,
       "posts_distributed": 0,
       "target_subs": [
         "r/SideProject",
@@ -26,17 +39,21 @@
         "r/islam",
         "r/ADHD",
         "r/getdisciplined",
-        "r/digitalminimalism"
+        "r/digitalminimalism",
+        "r/ClaudeAI",
+        "r/LocalLLaMA",
+        "r/quantifiedself",
+        "r/muslimtechnet"
       ]
     },
     "hackernews": {
       "status": "content_ready",
-      "posts_created": 2,
+      "posts_created": 4,
       "posts_distributed": 0
     },
     "devto": {
       "status": "content_ready",
-      "articles_created": 1,
+      "articles_created": 3,
       "articles_distributed": 0
     },
     "linkedin": {
@@ -46,7 +63,7 @@
     },
     "indie_hackers": {
       "status": "content_ready",
-      "posts_created": 1,
+      "posts_created": 3,
       "posts_distributed": 0
     },
     "quora": {
@@ -79,90 +96,122 @@
   },
   "top_distributable_assets": [
     {
-      "name": "PageScorer",
-      "url": "pagescorer.surge.sh",
-      "channels_covered": ["twitter"],
-      "channels_pending": ["reddit", "hackernews", "devto", "producthunt"]
+      "name": "Claude Code Agent Bible",
+      "url": "claude-code-agent-bible.surge.sh",
+      "channels_covered": ["twitter", "reddit", "hackernews", "devto", "indiehackers"],
+      "channels_pending": ["linkedin", "producthunt"],
+      "priority": "HIGHEST",
+      "notes": "Developer community high signal. Best candidate for HN front page."
     },
     {
-      "name": "FocusLock",
-      "url": "focuslock-web.surge.sh",
-      "channels_covered": ["twitter"],
-      "channels_pending": ["reddit", "producthunt", "quora"]
+      "name": "TaskSmash",
+      "url": "tasksmash.surge.sh",
+      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers", "devto"],
+      "channels_pending": ["linkedin", "producthunt"],
+      "priority": "HIGHEST",
+      "notes": "ADHD market is massive. r/ADHD post is strongest piece."
     },
     {
-      "name": "PrayerLock",
-      "url": "prayerlock.surge.sh",
-      "channels_covered": ["twitter"],
-      "channels_pending": ["reddit_islam", "muslim_communities"]
+      "name": "CoreDay",
+      "url": "coreday.surge.sh",
+      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers"],
+      "channels_pending": ["linkedin", "devto", "producthunt"],
+      "priority": "HIGH",
+      "notes": "Contrarian angle resonates in r/productivity and r/digitalminimalism"
     },
     {
       "name": "Hilal",
       "url": "ramadan-tracker.surge.sh",
-      "channels_covered": [],
-      "channels_pending": ["reddit", "twitter", "muslim_communities"],
+      "channels_covered": ["twitter", "reddit", "facebook", "discord", "whatsapp"],
+      "channels_pending": [],
       "time_sensitive": true,
-      "notes": "Ramadan active NOW"
+      "priority": "HIGH",
+      "notes": "Ramadan active NOW, ~20 days left. Content exists, needs posting."
     },
     {
-      "name": "Cold Email Playbook",
-      "url": "N/A",
-      "channels_covered": [],
-      "channels_pending": ["gumroad", "twitter_launch"],
-      "blocker": "Gumroad account"
+      "name": "Scripture Streak",
+      "url": "scripture-streak.surge.sh",
+      "channels_covered": ["twitter", "reddit"],
+      "channels_pending": ["hackernews", "indiehackers"],
+      "priority": "MEDIUM"
+    },
+    {
+      "name": "Cursor vs Claude Code",
+      "url": "cursor-vs-claudecode.surge.sh",
+      "channels_covered": ["twitter", "reddit", "hackernews"],
+      "channels_pending": ["devto", "indiehackers"],
+      "priority": "HIGH",
+      "notes": "Hot topic in developer communities"
+    },
+    {
+      "name": "Lead Magnet Bundle (5 tools)",
+      "url": "multiple",
+      "channels_covered": ["twitter", "reddit"],
+      "channels_pending": ["linkedin", "indiehackers"],
+      "priority": "MEDIUM"
+    },
+    {
+      "name": "PrayerLock",
+      "url": "prayerlock.surge.sh",
+      "channels_covered": ["twitter", "reddit", "facebook", "discord", "whatsapp"],
+      "channels_pending": [],
+      "priority": "HIGH",
+      "notes": "Ramadan time-sensitive"
     }
   ],
   "coverage_gaps": [
-    "Zero posts actually distributed to any platform (all queued, none posted)",
+    "680+ content pieces created across 15 cycles. 0 posted anywhere.",
     "No DM funnel active on any account",
     "No clipper/secondary accounts created",
     "No Medium articles published",
     "No Substack newsletter swaps initiated",
     "No Product Hunt launch scheduled",
-    "Hilal/Ramadan tracker not distributed despite time-sensitivity",
-    "289 content pieces stuck in PENDING_REVIEW",
-    "X Premium not subscribed (link posts get 0% engagement)"
+    "289+ content pieces stuck in PENDING_REVIEW",
+    "X Premium not subscribed (link posts get 0% engagement)",
+    "HabitForge, MealMaxx, WalkToUnlock, Dusk have minimal coverage",
+    "pagescorer-vs-gtmetrix comparison page has no distribution content"
   ],
   "human_actions_required": [
     {
-      "action": "Post Reddit content (12 posts across 8 subs)",
-      "time_est": "45 min",
-      "priority": "P0",
-      "content_location": "CONTENT/social/distribution/reddit_distribution_20260309.md"
-    },
-    {
-      "action": "Post HN Show posts (2 posts)",
-      "time_est": "10 min",
-      "priority": "P0",
-      "content_location": "CONTENT/social/distribution/reddit_distribution_20260309.md"
-    },
-    {
-      "action": "Post Twitter threads (2 threads + 5 tweets)",
-      "time_est": "20 min",
-      "priority": "P0",
-      "content_location": "CONTENT/social/distribution/twitter_distribution_20260309.md"
-    },
-    {
       "action": "Subscribe to X Premium on @PRINTMAXXER",
       "time_est": "5 min",
-      "priority": "P0"
+      "priority": "P0",
+      "impact": "Unblocks link posts. Without it, 149 tweets with URLs get 0% reach."
     },
     {
-      "action": "Create Gumroad account + list 5 products",
+      "action": "Post top 5 Reddit posts (r/ADHD TaskSmash, r/ClaudeAI Agent Bible, r/productivity CoreDay, r/islam Scripture Streak, r/webdev Cursor vs Claude Code)",
+      "time_est": "25 min",
+      "priority": "P0",
+      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+    },
+    {
+      "action": "Post 2 Show HN posts (Agent Bible + Cursor vs Claude Code)",
+      "time_est": "10 min",
+      "priority": "P0",
+      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+    },
+    {
+      "action": "Post Dev.to article (Filesystem-as-memory pattern)",
+      "time_est": "15 min",
+      "priority": "P1",
+      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+    },
+    {
+      "action": "Post Indie Hackers post (Running autonomous agents 24/7)",
+      "time_est": "10 min",
+      "priority": "P1",
+      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+    },
+    {
+      "action": "Create Gumroad account + list top 5 products",
       "time_est": "60 min",
       "priority": "P0"
     },
     {
-      "action": "Publish Dev.to article",
-      "time_est": "15 min",
-      "priority": "P1",
-      "content_location": "CONTENT/social/distribution/cross_platform_20260309.md"
-    },
-    {
-      "action": "Post LinkedIn + IndieHackers content",
-      "time_est": "15 min",
-      "priority": "P1",
-      "content_location": "CONTENT/social/distribution/cross_platform_20260309.md"
+      "action": "Post Twitter threads (Agent Bible thread + standalone tweets)",
+      "time_est": "20 min",
+      "priority": "P0",
+      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
     }
   ]
 }
