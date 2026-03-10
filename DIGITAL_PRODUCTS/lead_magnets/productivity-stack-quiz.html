@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>what's your productivity type? free quiz</title>
+<meta name="description" content="5 questions. find out which free productivity tool matches your workflow. no signup required.">
+<meta name="keywords" content="productivity quiz, productivity type, free productivity tools, focus app, habit tracker, task manager">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://productivity-stack-quiz.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="what's your productivity type? free quiz">
+<meta property="og:description" content="5 questions. find the free tool that actually fits how you work.">
+<meta property="og:url" content="https://productivity-stack-quiz.surge.sh">
+<meta property="og:image" content="https://productivity-stack-quiz.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="what's your productivity type? free quiz">
+<meta name="twitter:description" content="5 questions. find out which free tool matches how you actually work.">
+<meta name="twitter:image" content="https://productivity-stack-quiz.surge.sh/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"what's your productivity type?","description":"5 questions to find your productivity type and get matched to a free tool that fits how you work","url":"https://productivity-stack-quiz.surge.sh","educationalLevel":"beginner","author":{"@type":"Organization","name":"PRINTMAXX"},"hasPart":[{"@type":"Question","text":"what kills your productivity most?","suggestedAnswer":[{"@type":"Answer","text":"distractions"},{"@type":"Answer","text":"no routine"},{"@type":"Answer","text":"bad sleep or energy"},{"@type":"Answer","text":"overwhelm, too many tasks"}]},{"@type":"Question","text":"ideal work session length?","suggestedAnswer":[{"@type":"Answer","text":"25-minute sprints"},{"@type":"Answer","text":"full day blocks"},{"@type":"Answer","text":"it varies"},{"@type":"Answer","text":"what's a work session"}]},{"@type":"Question","text":"biggest win would be...","suggestedAnswer":[{"@type":"Answer","text":"staying focused for 2 hours straight"},{"@type":"Answer","text":"not breaking a 30-day streak"},{"@type":"Answer","text":"tracking my meals and energy"},{"@type":"Answer","text":"breaking a big project into pieces"}]},{"@type":"Question","text":"your phone is mostly for...","suggestedAnswer":[{"@type":"Answer","text":"doom scrolling"},{"@type":"Answer","text":"fitness and health apps"},{"@type":"Answer","text":"productivity tools"},{"@type":"Answer","text":"random stuff"}]},{"@type":"Question","text":"when you fail a goal, you...","suggestedAnswer":[{"@type":"Answer","text":"forget about it"},{"@type":"Answer","text":"restart immediately"},{"@type":"Answer","text":"adjust the goal"},{"@type":"Answer","text":"never set goals"}]}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1a;--surface:#111827;--card:#1a2332;--accent:#3b82f6;--accent2:#2563eb;--green:#10b981;--red:#ef4444;--yellow:#f59e0b;--purple:#8b5cf6;--text:#e5e5e5;--muted:#6b7280;--border:#1f2937}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px 16px 48px}
+a{color:var(--accent);text-decoration:none}
+.wrap{width:100%;max-width:560px}
+
+.hdr{text-align:center;padding-bottom:28px}
+.hdr-badge{display:inline-block;background:rgba(59,130,246,0.12);color:var(--accent);font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:14px}
+.hdr h1{font-size:clamp(1.5rem,6vw,2rem);font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:8px}
+.hdr p{color:var(--muted);font-size:0.9rem}
+
+.progress-wrap{margin-bottom:24px}
+.progress-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:0.75rem;color:var(--muted)}
+.progress-bar{height:4px;background:var(--border);border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:4px;transition:width 0.4s cubic-bezier(0.4,0,0.2,1)}
+
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 24px;animation:fadeIn 0.28s ease}
+.q-num{font-size:0.7rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px}
+.q-text{font-size:1.15rem;font-weight:700;letter-spacing:-0.3px;margin-bottom:22px;line-height:1.35}
+
+.options{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color 0.15s,background 0.15s;-webkit-tap-highlight-color:transparent;text-align:left;width:100%;color:var(--text);font-family:inherit;font-size:inherit}
+.opt:active,.opt:focus-visible{background:rgba(59,130,246,0.08);border-color:var(--accent);outline:none}
+.opt-letter{width:28px;height:28px;border-radius:8px;background:var(--border);color:var(--muted);font-size:0.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.15s,color 0.15s}
+.opt-text{font-size:0.9rem;font-weight:500;line-height:1.35}
+.opt.selected{border-color:var(--accent);background:rgba(59,130,246,0.08)}
+.opt.selected .opt-letter{background:var(--accent);color:#fff}
+
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px 24px;animation:fadeIn 0.32s ease;display:none}
+.result-card.show{display:block}
+.result-badge{display:inline-flex;align-items:center;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;padding:4px 12px;border-radius:20px;margin-bottom:18px}
+.result-title{font-size:1.6rem;font-weight:800;letter-spacing:-0.8px;margin-bottom:10px}
+.result-desc{color:var(--muted);font-size:0.9rem;line-height:1.55;margin-bottom:24px}
+
+.app-rec{background:var(--surface);border:1.5px solid var(--accent);border-radius:12px;padding:20px;margin-bottom:24px}
+.app-rec-label{font-size:0.7rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:10px}
+.app-rec-name{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+.app-rec-why{font-size:0.85rem;color:var(--muted);margin-bottom:16px;line-height:1.45}
+.btn-primary{display:block;width:100%;background:var(--accent);color:#fff;font-weight:700;font-size:0.95rem;padding:14px;border-radius:10px;text-align:center;cursor:pointer;border:none;font-family:inherit;transition:background 0.15s;text-decoration:none}
+.btn-primary:active{background:var(--accent2)}
+
+.email-gate{background:linear-gradient(135deg,#0f172a,#1a2940);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:16px}
+.email-gate h3{font-size:0.95rem;font-weight:700;margin-bottom:4px}
+.email-gate p{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+.email-form{display:flex;gap:8px;flex-wrap:wrap}
+.email-input{flex:1;min-width:180px;background:var(--card);border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;color:var(--text);font-family:inherit;font-size:0.9rem;outline:none;transition:border-color 0.15s}
+.email-input:focus{border-color:var(--accent)}
+.email-input::placeholder{color:var(--muted)}
+.btn-email{background:var(--green);color:#fff;font-weight:700;font-size:0.85rem;padding:11px 18px;border-radius:8px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;transition:opacity 0.15s}
+.btn-email:active{opacity:0.85}
+
+.share-row{display:flex;gap:8px;align-items:center}
+.btn-share{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--surface);border:1.5px solid var(--border);color:var(--text);font-weight:600;font-size:0.85rem;padding:11px;border-radius:8px;cursor:pointer;border-style:solid;font-family:inherit;transition:border-color 0.15s}
+.btn-share:active{border-color:var(--accent)}
+.btn-restart{background:transparent;border:1.5px solid var(--border);color:var(--muted);font-size:0.8rem;padding:11px 16px;border-radius:8px;cursor:pointer;font-family:inherit;white-space:nowrap;border-style:solid;transition:border-color 0.15s,color 0.15s}
+.btn-restart:active{border-color:var(--muted);color:var(--text)}
+
+.footer{text-align:center;padding-top:32px;font-size:0.75rem;color:var(--muted)}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:400px){
+  .q-card,.result-card{padding:22px 18px}
+  .q-text{font-size:1.05rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div class="hdr-badge">free quiz</div>
+    <h1>what's your productivity type?</h1>
+    <p>5 questions. find the free tool that fits how you actually work.</p>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-label">
+      <span id="progressText">question 1 of 5</span>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+
+  <div class="q-card" id="qCard">
+    <div class="q-num" id="qNum">question 1</div>
+    <div class="q-text" id="qText"></div>
+    <div class="options" id="options"></div>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <div class="result-badge" id="resultBadge"></div>
+    <div class="result-title" id="resultTitle"></div>
+    <div class="result-desc" id="resultDesc"></div>
+    <div class="app-rec" id="appRec">
+      <div class="app-rec-label">your free tool match</div>
+      <div class="app-rec-name" id="appName"></div>
+      <div class="app-rec-why" id="appWhy"></div>
+      <a class="btn-primary" id="appLink" href="#" target="_blank" rel="noopener noreferrer">try it free, no account needed</a>
+    </div>
+    <div class="email-gate">
+      <h3>want a personalized productivity plan?</h3>
+      <p>get a short action plan based on your type, straight to your inbox. no spam.</p>
+      <form class="email-form" id="emailForm" action="#" method="post">
+        <input class="email-input" id="emailInput" type="email" name="email" placeholder="your email" required autocomplete="email">
+        <button class="btn-email" id="emailBtn" type="submit">send it</button>
+      </form>
+    </div>
+    <div class="share-row">
+      <button class="btn-share" id="shareBtn" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        share your type
+      </button>
+      <button class="btn-restart" id="restartBtn" type="button">retake</button>
+    </div>
+  </div>
+
+  <div class="footer">free tool. no account. no paywall.</div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var QUESTIONS = [
+    {
+      text: 'what kills your productivity most?',
+      opts: [
+        'distractions, i lose focus constantly',
+        'no routine, i drift all day',
+        'bad sleep or energy crashes',
+        'overwhelm, too many tasks at once'
+      ],
+      scores: [[3,0,0,0],[0,3,0,0],[0,0,3,0],[0,0,0,3]]
+    },
+    {
+      text: 'ideal work session length?',
+      opts: [
+        '25-minute sprints, then breaks',
+        'full day blocks, no interruptions',
+        'it varies depending on my energy',
+        "what's a work session"
+      ],
+      scores: [[3,0,0,0],[0,1,0,1],[0,0,2,1],[0,0,0,3]]
+    },
+    {
+      text: 'biggest win would be...',
+      opts: [
+        'staying focused for 2 hours straight',
+        'not breaking a 30-day streak',
+        'tracking my meals and energy all week',
+        'breaking a big project into pieces and finishing it'
+      ],
+      scores: [[3,0,0,0],[0,3,0,0],[0,0,3,0],[0,0,0,3]]
+    },
+    {
+      text: 'your phone is mostly for...',
+      opts: [
+        'doom scrolling (be honest)',
+        'fitness and health tracking',
+        'productivity tools and timers',
+        'random stuff, no real pattern'
+      ],
+      scores: [[2,0,0,1],[0,0,2,1],[2,1,0,0],[0,1,0,2]]
+    },
+    {
+      text: 'when you fail a goal, you...',
+      opts: [
+        'forget about it and move on',
+        'restart immediately, same goal',
+        'adjust the goal and try again',
+        'never set goals in the first place'
+      ],
+      scores: [[1,0,1,1],[0,3,0,0],[0,1,2,0],[0,0,0,3]]
+    }
+  ];
+
+  // index maps to score array position: 0=sprinter 1=habit 2=optimizer 3=overwhelmed
+  var RESULTS = [
+    {
+      type: 'sprinter',
+      badgeText: 'focus mode',
+      badgeColor: '#3b82f6',
+      badgeBg: 'rgba(59,130,246,0.12)',
+      title: 'the sprinter',
+      desc: "you work in short, intense bursts. the second something competes for your attention, you're done. long blocks don't work for you. what works: 25 minutes on, hard stop, reset. you need a timer that gets out of your way and just runs.",
+      appName: 'vault — focus timer',
+      appWhy: 'vault is a no-noise countdown timer built for sprinters. open it, set the time, lock in. nothing else on the screen. free, no account.',
+      appLink: 'https://focuslock-web.surge.sh'
+    },
+    {
+      type: 'habit-builder',
+      badgeText: 'streak mode',
+      badgeColor: '#10b981',
+      badgeBg: 'rgba(16,185,129,0.12)',
+      title: 'the habit builder',
+      desc: "you're not missing motivation. you're missing accountability. you do well when there's a streak on the line. when there's nothing tracking you, you drift. what works: a simple daily check-in that shows you exactly how many days you've held it together.",
+      appName: 'habitforge — streak tracker',
+      appWhy: "habitforge tracks your streaks and sends you a nudge when you're about to break one. no complicated habit system. just: did you do it today? free, no account.",
+      appLink: 'https://habitforge-web.surge.sh'
+    },
+    {
+      type: 'optimizer',
+      badgeText: 'systems mode',
+      badgeColor: '#f59e0b',
+      badgeBg: 'rgba(245,158,11,0.12)',
+      title: 'the optimizer',
+      desc: "you think in systems. you want to see your energy, your habits, your output in one place. you're not lazy, you're flying blind. what works: strip everything down to 3 daily non-negotiables and actually track whether you hit them.",
+      appName: 'coreday — daily essentials tracker',
+      appWhy: 'coreday cuts your day down to 3 things that actually matter. track them, nothing else. no bloated dashboards. free, no account.',
+      appLink: 'https://coreday.surge.sh'
+    },
+    {
+      type: 'overwhelmed',
+      badgeText: 'clarity mode',
+      badgeColor: '#8b5cf6',
+      badgeBg: 'rgba(139,92,246,0.12)',
+      title: 'the overwhelmed',
+      desc: "your problem isn't discipline. it's that everything feels equally urgent and equally impossible. you open your task list and close it 30 seconds later. what works: one task, broken into the smallest possible steps, with clear start points.",
+      appName: 'tasksmash — task breaker',
+      appWhy: "tasksmash takes one task you've been avoiding and breaks it into steps so small you'd feel stupid not starting. free, no account.",
+      appLink: 'https://tasksmash.surge.sh'
+    }
+  ];
+
+  var LETTERS = ['A','B','C','D'];
+
+  var state = {
+    scores: [0,0,0,0],
+    current: 0,
+    resultIdx: null
+  };
+
+  // DOM refs
+  var qCard = document.getElementById('qCard');
+  var resultCard = document.getElementById('resultCard');
+  var progressWrap = document.getElementById('progressWrap');
+  var progressFill = document.getElementById('progressFill');
+  var progressText = document.getElementById('progressText');
+  var progressPct = document.getElementById('progressPct');
+  var qNum = document.getElementById('qNum');
+  var qText = document.getElementById('qText');
+  var optionsEl = document.getElementById('options');
+  var resultBadge = document.getElementById('resultBadge');
+  var resultTitle = document.getElementById('resultTitle');
+  var resultDesc = document.getElementById('resultDesc');
+  var appName = document.getElementById('appName');
+  var appWhy = document.getElementById('appWhy');
+  var appLink = document.getElementById('appLink');
+  var emailForm = document.getElementById('emailForm');
+  var emailInput = document.getElementById('emailInput');
+  var emailBtn = document.getElementById('emailBtn');
+  var shareBtn = document.getElementById('shareBtn');
+  var restartBtn = document.getElementById('restartBtn');
+
+  function setProgress(step) {
+    var pct = Math.round((step / QUESTIONS.length) * 100);
+    progressFill.style.width = pct + '%';
+    progressText.textContent = 'question ' + (step + 1) + ' of ' + QUESTIONS.length;
+    progressPct.textContent = pct + '%';
+  }
+
+  function renderQuestion() {
+    var q = QUESTIONS[state.current];
+    qNum.textContent = 'question ' + (state.current + 1);
+    qText.textContent = q.text;
+    setProgress(state.current);
+
+    // clear and rebuild options using safe DOM methods
+    while (optionsEl.firstChild) { optionsEl.removeChild(optionsEl.firstChild); }
+
+    q.opts.forEach(function(optText, i) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'opt';
+
+      var letterSpan = document.createElement('span');
+      letterSpan.className = 'opt-letter';
+      letterSpan.textContent = LETTERS[i];
+
+      var textSpan = document.createElement('span');
+      textSpan.className = 'opt-text';
+      textSpan.textContent = optText;
+
+      btn.appendChild(letterSpan);
+      btn.appendChild(textSpan);
+
+      btn.addEventListener('click', function() { selectAnswer(i); });
+      optionsEl.appendChild(btn);
+    });
+  }
+
+  function selectAnswer(idx) {
+    var opts = optionsEl.querySelectorAll('.opt');
+    opts.forEach(function(o) { o.classList.remove('selected'); });
+    opts[idx].classList.add('selected');
+
+    var q = QUESTIONS[state.current];
+    q.scores[idx].forEach(function(s, i) { state.scores[i] += s; });
+
+    setTimeout(function() {
+      state.current++;
+      if (state.current < QUESTIONS.length) {
+        qCard.style.animation = 'none';
+        void qCard.offsetHeight;
+        qCard.style.animation = '';
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    }, 220);
+  }
+
+  function showResult() {
+    var max = -1, winner = 0;
+    state.scores.forEach(function(s, i) { if (s > max) { max = s; winner = i; } });
+    state.resultIdx = winner;
+
+    var r = RESULTS[winner];
+
+    resultBadge.textContent = r.badgeText;
+    resultBadge.style.background = r.badgeBg;
+    resultBadge.style.color = r.badgeColor;
+    resultTitle.textContent = r.title;
+    resultDesc.textContent = r.desc;
+    appName.textContent = r.appName;
+    appWhy.textContent = r.appWhy;
+    appLink.href = r.appLink;
+
+    try {
+      localStorage.setItem('pq_result', JSON.stringify({type: r.type, title: r.title, date: Date.now()}));
+    } catch(e) {}
+
+    qCard.style.display = 'none';
+    progressWrap.style.display = 'none';
+    resultCard.classList.add('show');
+
+    progressFill.style.width = '100%';
+  }
+
+  function handleEmail(e) {
+    e.preventDefault();
+    emailBtn.textContent = 'sent!';
+    emailBtn.style.background = '#10b981';
+    emailBtn.disabled = true;
+    emailInput.disabled = true;
+  }
+
+  function shareResult() {
+    var r = RESULTS[state.resultIdx !== null ? state.resultIdx : 0];
+    var text = 'i\'m "' + r.title + '" on the productivity type quiz. take it: https://productivity-stack-quiz.surge.sh';
+    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
+    window.open(url, '_blank', 'noopener,noreferrer,width=550,height=420');
+  }
+
+  function restartQuiz() {
+    state.scores = [0,0,0,0];
+    state.current = 0;
+    state.resultIdx = null;
+
+    resultCard.classList.remove('show');
+    qCard.style.display = 'block';
+    progressWrap.style.display = 'block';
+
+    emailForm.reset();
+    emailBtn.textContent = 'send it';
+    emailBtn.style.background = '';
+    emailBtn.disabled = false;
+    emailInput.disabled = false;
+
+    renderQuestion();
+  }
+
+  function init() {
+    try {
+      var saved = localStorage.getItem('pq_result');
+      if (saved) {
+        var data = JSON.parse(saved);
+        if (data && data.type && (Date.now() - data.date) < 7 * 24 * 60 * 60 * 1000) {
+          var idx = -1;
+          RESULTS.forEach(function(r, i) { if (r.type === data.type) idx = i; });
+          if (idx >= 0) {
+            state.resultIdx = idx;
+            state.scores[idx] = 15;
+            showResult();
+            return;
+          }
+        }
+      }
+    } catch(e) {}
+    renderQuestion();
+  }
+
+  emailForm.addEventListener('submit', handleEmail);
+  shareBtn.addEventListener('click', shareResult);
+  restartBtn.addEventListener('click', restartQuiz);
+
+  init();
+}());
+</script>
+</body>
+</html>

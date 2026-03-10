@@ -20,14 +20,26 @@ These files were extracted from CLAUDE.md to save tokens. Read them ONLY when yo
 |---|---|
 | **Need session history?** | `OPS/SESSION_LOG.md` (session-by-session changelog) |
 | **Need current status?** | `OPS/CURRENT_STATUS.md` (what's deployed, what's built, what's next) |
+| **Need live system map?** | `OPS/PRINTMAXX_SYSTEM_MAP.md` (canonical current topology: agents, queues, control surfaces, data flow) |
 | **Need handoff/versions?** | `OPS/HANDOFF_AND_VERSION_TRACKER.md` (latest handoff + XLSX versions) |
 | **Need quant tools?** | `OPS/QUANT_TOOLS_AND_INFRASTRUCTURE.md` (all CLI tools + folder hierarchy) |
 | **Need codebase overview?** | `OPS/CODEBASE_GRAMMAR.md` (118x compressed system grammar, auto-generated 5:45 AM) |
 | **Need today's plan?** | `OPS/DAILY_TACTICAL_PLAN.md` (unified tactical plan, auto-generated 7:15 AM) |
-| **Need architecture docs?** | `OPS/AUTONOMOUS_SYSTEM_ARCHITECTURE.md` (OpenClaw patterns, memory layers) |
+| **Need architecture patterns?** | `OPS/AUTONOMOUS_SYSTEM_ARCHITECTURE.md` (OpenClaw patterns, memory layers) |
 | **Need research pipeline?** | `OPS/DAILY_RESEARCH_PIPELINE_REF.md` (all scrapers + cron schedule) |
 | **Need workflows?** | `OPS/WORKFLOWS_AND_PATTERNS.md` (content gen, validation, deployment) |
 | **Need strategic docs?** | `OPS/STRATEGIC_AND_CONTENT_REF.md` (intel docs + content calendar) |
+
+---
+
+## CANONICAL SYSTEM MAP — KEEP IT CURRENT
+
+`OPS/PRINTMAXX_SYSTEM_MAP.md` is the canonical live architecture map for PRINTMAXX.
+
+**Mandatory when changes are made:**
+- If you add, remove, rename, or rewire agents, automations, schedules, launchd plists, cron jobs, queues, dashboards, memory layers, control surfaces, key folders, or system data flow, update `OPS/PRINTMAXX_SYSTEM_MAP.md` in the same session before finishing.
+- If the change also affects navigation, session-start guidance, or standing agent instructions, update `.claude/CLAUDE.md` in the same session too.
+- Do not leave architecture drift. The map must describe the live system, not the intended system.
 
 ---
 

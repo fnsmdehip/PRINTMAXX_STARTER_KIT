@@ -48,6 +48,9 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Any, Optional
 
+# Ensure sibling modules are importable when run from project root
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 from agent_resilience import locked_file
 
 try:

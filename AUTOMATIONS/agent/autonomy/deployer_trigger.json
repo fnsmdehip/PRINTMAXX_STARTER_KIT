@@ -1,0 +1,44 @@
+[
+  {
+    "task_id": "Add analytics script to all pages",
+    "description": "Add analytics script to all pages",
+    "priority": "MEDIUM",
+    "status": "TRIGGERED",
+    "triggered_at": "2026-03-10T00:14:44.880215"
+  },
+  {
+    "task_id": "Add affiliate links to SleepMaxx, ColdMa",
+    "description": "Add affiliate links to SleepMaxx, ColdMaxx, MealMaxx",
+    "priority": "MEDIUM",
+    "status": "TRIGGERED",
+    "triggered_at": "2026-03-10T00:14:44.880217"
+  },
+  {
+    "task_id": "Redeploy updated pages to surge.sh",
+    "description": "Redeploy updated pages to surge.sh",
+    "priority": "MEDIUM",
+    "status": "TRIGGERED",
+    "triggered_at": "2026-03-10T00:14:44.880219"
+  },
+  {
+    "task_id": "Analytics: Add Plausible/GA to all 7 pag",
+    "description": "Analytics: Add Plausible/GA to all 7 pages",
+    "priority": "MEDIUM",
+    "status": "TRIGGERED",
+    "triggered_at": "2026-03-10T00:14:44.880220"
+  },
+  {
+    "task_id": "SleepMaxx: Add affiliate links for WHOOP",
+    "description": "SleepMaxx: Add affiliate links for WHOOP, Oura Ring",
+    "priority": "MEDIUM",
+    "status": "TRIGGERED",
+    "triggered_at": "2026-03-10T00:14:44.880221"
+  },
+  {
+    "task_id": "MealMaxx + SleepMaxx: Replace email CTAs",
+    "description": "MealMaxx + SleepMaxx: Replace email CTAs with payment links on Pro sections",
+    "priority": "MEDIUM",
+    "status": "TRIGGERED",
+    "triggered_at": "2026-03-10T00:14:44.880222"
+  }
+]

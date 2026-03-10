@@ -480,3 +480,6 @@
 {"timestamp": "2026-03-09T02:25:27.605659", "event": "STATE_TRANSITION", "op_id": "M05", "details": {"from": "DORMANT", "to": "SCOUTING", "reason": "priority_score=61 > 60"}}
 {"timestamp": "2026-03-09T02:25:27.606902", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
 {"timestamp": "2026-03-09T02:25:27.614523", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 1, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-03-10T02:25:33.507889", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-03-10T02:25:33.628181", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-03-10T02:25:33.638624", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}

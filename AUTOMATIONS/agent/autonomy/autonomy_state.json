@@ -311,7 +311,234 @@
           "cleaning",
           "handyman"
         ],
-        "current_city_index": 2
+        "current_city_index": 2,
+        "priority_targets": [
+          {
+            "business_name": "Dentists of Houston",
+            "website": "dentistsofhouston.com",
+            "city": "Houston",
+            "category": "dentist",
+            "composite_score": 9.5,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "JC Automotive Service",
+            "website": "jcautomotive.com",
+            "city": "St Petersburg",
+            "category": "auto_repair",
+            "composite_score": 9.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "East Portland Dentistry",
+            "website": "eastportlanddentistry.com",
+            "city": "Portland",
+            "category": "dentist",
+            "composite_score": 8.5,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Shorewood Family Chiro",
+            "website": "shorewoodfamilychiro.com",
+            "city": "Milwaukee",
+            "category": "chiropractor",
+            "composite_score": 8.5,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Pope Family Chiropractic",
+            "website": "doctorpope.net",
+            "city": "Milwaukee",
+            "category": "chiropractor",
+            "composite_score": 8.5,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "The Healing Touch Chiropractic",
+            "website": "fixmyback.com",
+            "city": "Sacramento",
+            "category": "chiropractor",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "ACME Chiropractic",
+            "website": "acmechiro.com",
+            "city": "Sacramento",
+            "category": "chiropractor",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Martinez Family Dental",
+            "website": "mandmfamilydental.com",
+            "city": "Mason",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Progressive Dental Care",
+            "website": "pdcc.pro",
+            "city": "Hanover",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "David N. Trujillo, DDS, PC",
+            "website": "smilehighdentistry.com",
+            "city": "La Junta",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Wellness Dental",
+            "website": "wellnessdentalpdx.com",
+            "city": "Portland",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Villalobos Law",
+            "website": "villaloboslaw.com",
+            "city": "Chicago",
+            "category": "lawyer",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Smile Village NYC",
+            "website": "smilevillage.nyc",
+            "city": "New York",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Higgins Law Office",
+            "website": "higginslawoffice.com",
+            "city": "Phoenix",
+            "category": "lawyer",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Dental Care Seattle",
+            "website": "dentalcareseattle.com",
+            "city": "Seattle",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "West Seattle Dental Center",
+            "website": "westseattledentalcenter.com",
+            "city": "Seattle",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Tyler Allen Law Firm",
+            "website": "allenlawaz.com",
+            "city": "Phoenix",
+            "category": "lawyer",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Downing Street Dental",
+            "website": "downingstreetdental.com",
+            "city": "Denver",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "209 NYC Dental",
+            "website": "209nycdental.com",
+            "city": "New York",
+            "category": "dentist",
+            "composite_score": 8.0,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Windy City Landlord",
+            "website": "windycitylandlord.com",
+            "city": "Chicago",
+            "category": "real_estate",
+            "composite_score": 7.8,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Appraisal Limited",
+            "website": "appraisalsltd.com",
+            "city": "Carriere",
+            "category": "real_estate",
+            "composite_score": 7.8,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Marcos & Marcos DDS",
+            "website": "marcosandmarcosdds.com",
+            "city": "San Carlos",
+            "category": "dentist",
+            "composite_score": 7.8,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Mia Edrozo, Realtor",
+            "website": "miaedrozo.com",
+            "city": "Scottsdale",
+            "category": "real_estate",
+            "composite_score": 7.8,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "United Country RE Professionals",
+            "website": "unitedcountrypro.com",
+            "city": "Chanute",
+            "category": "real_estate",
+            "composite_score": 7.8,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Stonestown Medical Dental",
+            "website": "stonestowndental.com",
+            "city": "San Francisco",
+            "category": "dentist",
+            "composite_score": 7.8,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Dee for Dentist",
+            "website": "deefordentist.com",
+            "city": "Las Vegas",
+            "category": "dentist",
+            "composite_score": 7.5,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Apps Chiropractic",
+            "website": "appschiropractic.com",
+            "city": "Milwaukee",
+            "category": "chiropractor",
+            "composite_score": 7.5,
+            "source": "cross_pollinator_priority"
+          },
+          {
+            "business_name": "Beaver Farm Landscaping",
+            "website": "beaverfarmlandscaping.com",
+            "city": "Richmond",
+            "category": "landscaping",
+            "composite_score": 7.5,
+            "source": "cross_pollinator_priority"
+          }
+        ],
+        "priority_updated": "2026-03-10T00:14:44.880720"
       },
       "created_at": "2026-03-06T21:12:49.502027",
       "last_run": "2026-03-09T22:15:14.336563",
@@ -513,8 +740,8 @@
       "interval_hours": 8,
       "config": {},
       "created_at": "2026-03-06T21:12:49.570509",
-      "last_run": "2026-03-09T16:15:12.794770",
-      "cycles_run": 5,
+      "last_run": "2026-03-10T00:23:06.275004",
+      "cycles_run": 6,
       "results": [
         {
           "ts": "2026-03-08T04:05:20.002156",
@@ -575,38 +802,50 @@
             "track": "ok"
           },
           "success_rate": "4/6"
+        },
+        {
+          "ts": "2026-03-10T00:23:06.275008",
+          "steps": {
+            "find_offers": "ok",
+            "create_funnel": "ok",
+            "build_page": "failed",
+            "deploy": "ok",
+            "distribute": "failed",
+            "track": "ok"
+          },
+          "success_rate": "4/6"
         }
       ],
       "pipeline_stats": {
         "find_offers": {
-          "runs": 5,
-          "successes": 5,
-          "last_run": "2026-03-09T16:15:12.217783"
+          "runs": 6,
+          "successes": 6,
+          "last_run": "2026-03-10T00:23:05.967263"
         },
         "create_funnel": {
-          "runs": 5,
-          "successes": 5,
-          "last_run": "2026-03-09T16:15:12.291196"
+          "runs": 6,
+          "successes": 6,
+          "last_run": "2026-03-10T00:23:06.019047"
         },
         "build_page": {
-          "runs": 5,
+          "runs": 6,
           "successes": 0,
-          "last_run": "2026-03-09T16:15:12.443513"
+          "last_run": "2026-03-10T00:23:06.088412"
         },
         "deploy": {
-          "runs": 5,
-          "successes": 5,
-          "last_run": "2026-03-09T16:15:12.552011"
+          "runs": 6,
+          "successes": 6,
+          "last_run": "2026-03-10T00:23:06.146405"
         },
         "distribute": {
-          "runs": 5,
+          "runs": 6,
           "successes": 0,
-          "last_run": "2026-03-09T16:15:12.695410"
+          "last_run": "2026-03-10T00:23:06.220929"
         },
         "track": {
-          "runs": 5,
-          "successes": 5,
-          "last_run": "2026-03-09T16:15:12.794682"
+          "runs": 6,
+          "successes": 6,
+          "last_run": "2026-03-10T00:23:06.274991"
         }
       }
     },
@@ -625,7 +864,150 @@
       ],
       "interval_hours": 12,
       "config": {
-        "stack": "nextjs,pwa"
+        "stack": "nextjs,pwa",
+        "spec_queue": [
+          {
+            "source_file": "APP_SPEC_ALPHA1464.md",
+            "title": "App Spec: ALPHA1464",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883517"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA18873.md",
+            "title": "App Spec: ALPHA18873",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883525"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA9796.md",
+            "title": "App Spec: ALPHA9796",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883527"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA9837.md",
+            "title": "App Spec: ALPHA9837",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883528"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA2283.md",
+            "title": "App Spec: ALPHA2283",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883529"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA3039.md",
+            "title": "App Spec: ALPHA3039",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883530"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA12871.md",
+            "title": "App Spec: ALPHA12871",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883531"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA1815.md",
+            "title": "App Spec: ALPHA1815",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883532"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA19859.md",
+            "title": "App Spec: ALPHA19859",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883533"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA3864.md",
+            "title": "App Spec: ALPHA3864",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883534"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA4094.md",
+            "title": "App Spec: ALPHA4094",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883535"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA11286.md",
+            "title": "App Spec: ALPHA11286",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883536"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA3870.md",
+            "title": "App Spec: ALPHA3870",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883537"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA12865.md",
+            "title": "App Spec: ALPHA12865",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883538"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA2211.md",
+            "title": "App Spec: ALPHA2211",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883539"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA15235.md",
+            "title": "App Spec: ALPHA15235",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883540"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA9543.md",
+            "title": "App Spec: ALPHA9543",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883541"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA3108.md",
+            "title": "App Spec: ALPHA3108",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883542"
+          },
+          {
+            "source_file": "APP_SPEC_ALPHA9485.md",
+            "title": "App Spec: ALPHA9485",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883543"
+          },
+          {
+            "source_file": "APP_SPEC_HN_003.md",
+            "title": "App Spec: HN_003",
+            "priority": "MEDIUM",
+            "status": "AVAILABLE_FOR_BUILD",
+            "queued_at": "2026-03-10T00:14:44.883545"
+          }
+        ],
+        "spec_queue_updated": "2026-03-10T00:14:44.883546"
       },
       "created_at": "2026-03-06T21:16:28.937694",
       "last_run": "2026-03-09T18:15:05.299407",
@@ -769,9 +1151,90 @@
             "price_range": "$19-39",
             "format": "PDF guide + templates",
             "spec_file": "spec_tool_alpha.json"
+          },
+          {
+            "suggested_product": "Productized automation template/toolkit",
+            "category": "automation",
+            "alpha_count": 193,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_automation"
+          },
+          {
+            "suggested_product": "Productized website template/toolkit",
+            "category": "website",
+            "alpha_count": 148,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_website"
+          },
+          {
+            "suggested_product": "Productized data_entry template/toolkit",
+            "category": "data_entry",
+            "alpha_count": 110,
+            "price_range": "$47",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_data_entry"
+          },
+          {
+            "suggested_product": "Productized social_media template/toolkit",
+            "category": "social_media",
+            "alpha_count": 103,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_social_media"
+          },
+          {
+            "suggested_product": "Productized logo template/toolkit",
+            "category": "logo",
+            "alpha_count": 77,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_logo"
+          },
+          {
+            "suggested_product": "Productized video_editing template/toolkit",
+            "category": "video_editing",
+            "alpha_count": 35,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_video_editing"
+          },
+          {
+            "suggested_product": "Productized cold_email template/toolkit",
+            "category": "cold_email",
+            "alpha_count": 33,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_cold_email"
+          },
+          {
+            "suggested_product": "Productized presentation template/toolkit",
+            "category": "presentation",
+            "alpha_count": 25,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_presentation"
+          },
+          {
+            "suggested_product": "Productized copywriting template/toolkit",
+            "category": "copywriting",
+            "alpha_count": 11,
+            "price_range": "$49",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_copywriting"
+          },
+          {
+            "suggested_product": "Productized seo template/toolkit",
+            "category": "seo",
+            "alpha_count": 11,
+            "price_range": "$36",
+            "format": "Template + tutorial + automation script",
+            "spec_file": "freelance_seo"
           }
         ],
-        "specs_updated": "2026-03-08T23:17:33.384002"
+        "specs_updated": "2026-03-08T23:17:33.384002",
+        "freelance_specs_updated": "2026-03-10T00:14:44.881859"
       },
       "created_at": "2026-03-06T21:16:28.940901",
       "last_run": "2026-03-09T04:21:06.790502",
@@ -853,8 +1316,8 @@
         "targets": "competitors,trends,pricing"
       },
       "created_at": "2026-03-06T21:16:28.943305",
-      "last_run": "2026-03-09T20:35:22.980301",
-      "cycles_run": 15,
+      "last_run": "2026-03-10T00:20:04.770719",
+      "cycles_run": 16,
       "results": [
         {
           "cycle": 4,
@@ -1051,38 +1514,50 @@
           "gaps_found": 39,
           "reddit_posts": 139,
           "app_rows": 251
+        },
+        {
+          "ts": "2026-03-10T00:20:04.770724",
+          "steps": {
+            "configure": "failed",
+            "scrape": "failed",
+            "clean": "failed",
+            "analyze": "ok",
+            "store": "failed",
+            "alert": "ok"
+          },
+          "success_rate": "2/6"
         }
       ],
       "pipeline_stats": {
         "configure": {
-          "runs": 1,
+          "runs": 2,
           "successes": 1,
-          "last_run": "2026-03-09T20:35:22.980301"
+          "last_run": "2026-03-10T00:15:02.371282"
         },
         "scrape": {
-          "runs": 1,
+          "runs": 2,
           "successes": 1,
-          "last_run": "2026-03-09T20:35:22.980301"
+          "last_run": "2026-03-10T00:20:02.421195"
         },
         "clean": {
-          "runs": 1,
+          "runs": 2,
           "successes": 1,
-          "last_run": "2026-03-09T20:35:22.980301"
+          "last_run": "2026-03-10T00:20:03.066878"
         },
         "analyze": {
-          "runs": 1,
-          "successes": 1,
-          "last_run": "2026-03-09T20:35:22.980301"
+          "runs": 2,
+          "successes": 2,
+          "last_run": "2026-03-10T00:20:03.448414"
         },
         "store": {
-          "runs": 1,
+          "runs": 2,
           "successes": 1,
-          "last_run": "2026-03-09T20:35:22.980301"
+          "last_run": "2026-03-10T00:20:04.354965"
         },
         "alert": {
-          "runs": 1,
-          "successes": 1,
-          "last_run": "2026-03-09T20:35:22.980301"
+          "runs": 2,
+          "successes": 2,
+          "last_run": "2026-03-10T00:20:04.770703"
         }
       },
       "cycle_count": 17,
@@ -1245,8 +1720,8 @@
       ]
     }
   },
-  "total_cycles": 45,
-  "total_pipeline_runs": 219,
+  "total_cycles": 47,
+  "total_pipeline_runs": 231,
   "created_at": "2026-03-06T21:12:45.215910",
   "RESEARCH": {
     "last_cycle": "2026-03-09T10:25:38.188614",

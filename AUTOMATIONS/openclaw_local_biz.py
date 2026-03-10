@@ -125,6 +125,23 @@ def _resolve_npx() -> str:
 
 NPX = _resolve_npx()
 
+# Full PATH for subprocess calls — ensures node/npm/surge work even in cron/launchd
+# where the default PATH is minimal (/usr/bin:/bin only).
+_SUBPROCESS_PATH = ":".join([
+    "/opt/homebrew/bin",       # Apple Silicon Homebrew (node, npm, npx, surge)
+    "/usr/local/bin",          # Intel Homebrew / system tools
+    "/usr/bin",
+    "/bin",
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin",
+    os.path.expanduser("~/.local/bin"),  # claude CLI
+])
+
+def _subprocess_env():
+    """Return a copy of os.environ with a guaranteed-correct PATH."""
+    env = os.environ.copy()
+    env["PATH"] = _SUBPROCESS_PATH
+    return env
+
 def http_get(url, timeout=12):
     """GET with urllib — returns (body_str, final_url, status, error)."""
     try:
@@ -751,6 +768,7 @@ def deploy_surge(site_dir, domain_slug):
                 capture_output=True, text=True, timeout=90,
                 cwd=str(PROJECT_ROOT),
                 stdin=subprocess.DEVNULL,  # prevent interactive auth prompts from hanging
+                env=_subprocess_env(),     # ensure node/npm on PATH for cron/launchd
             )
             stdout = result.stdout or ""
             stderr = result.stderr or ""

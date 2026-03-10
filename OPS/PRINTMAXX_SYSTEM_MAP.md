@@ -1,12 +1,23 @@
 # PRINTMAXX — COMPLETE SYSTEM MAP
+# Canonical live architecture map. Update this file in the same session whenever the system changes.
 # One solopreneur. Zero revenue. 33 autonomous agents. 298 Python scripts. 109 cron jobs. 27GB.
 # Goal: $0 → hedge fund capital management via recursive automation.
 
 ---
 
+## CANONICAL STATUS
+
+This is the live system map for PRINTMAXX.
+
+- Update this file immediately when agents, automations, schedules, queues, dashboards, memory layers, control surfaces, key directories, or data flow change.
+- If the change also affects navigation or standing instructions, update `.claude/CLAUDE.md` in the same session.
+- Latest verified control-surface update: 2026-03-10.
+
+---
+
 ## WHAT IT IS
 
-A fully autonomous solopreneur operations system that scrapes intelligence, generates content, manages ventures, deploys assets, and makes strategic decisions 24/7 without human input — all running on a $200/mo Claude Max plan via `claude -p` CLI calls through launchd and cron.
+A fully autonomous solopreneur operations system that scrapes intelligence, generates content, manages ventures, deploys assets, and makes strategic decisions 24/7 without human input — running primarily on a $200/mo Claude Max plan via `claude -p` CLI calls through launchd and cron, with a Codex automation layer handling recurring meta-planning and task-queue generation.
 
 The human does: account creation, payments, API keys, posting from personal accounts.
 The system does: everything else.
@@ -52,6 +63,7 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── alpha_query.py                #   L2 intelligence. Venture-based alpha search with ROI normalization.
 │   ├── growth_strategist.py          #   L3 execution. Creates growth strategies per venture from intelligence.
 │   ├── loop_closer.py                #   L6 maintenance. 3 loops: decision execution, feedback tracking, pipeline advancement.
+│   ├── meta_planner.py               #   L2/L3 planning. Reads MASTER_OPS, maps automation gaps, writes META_PLAN.json + AUTONOMOUS_TASK_QUEUE.jsonl.
 │   ├── twitter_warmup_poster.py      #   L3 execution. 21-day warmup (LURK/ENGAGE/SOFT_POST/RAMP/FULL_OPS).
 │   ├── twitter_alpha_scraper.py      #   L4 collection. 133 Twitter accounts via Brave cookies + Playwright.
 │   ├── background_reddit_scraper.py  #   L4 collection. Reddit JSON API, no auth.
@@ -101,7 +113,9 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── PERSISTENT_TASK_TRACKER.md    #   Every task, status, blocker. Survives compaction.
 │   ├── SESSION_BRIEFING.md           #   Auto session-start: agent reports, changes, queue, lost threads
 │   ├── ACTIONABLE_QUEUE.md           #   Prioritized P0-P3 from 6 sources (auto 7:30 AM)
+│   ├── AUTONOMOUS_TASK_QUEUE.jsonl   #   System-wide queued work generated from MASTER_OPS wiring
 │   ├── PROMPT_META_REVIEW.md         #   48h prompt analysis: intent, lost threads, patterns (auto every 2 days)
+│   ├── META_PLAN.json                #   MASTER_OPS-derived gap map and execution plan
 │   ├── MULTI_ACCOUNT_INFRASTRUCTURE.md # Antidetect browser, proxy, account architecture
 │   ├── GROWTH_ALPHA_SOURCES.md       #   Forums, growth sources, proxy/payment comparisons
 │   ├── NAV_INDEX.md                  #   632-line "Where is..." navigation index
@@ -149,6 +163,24 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 ├── .claude/CLAUDE.md                 # 490-line master rules file (14 rules + infrastructure docs)
 └── pyrightconfig.json                # Type checking config (basic mode, AUTOMATIONS only)
 ```
+
+---
+
+## CONTROL SURFACES AND CANONICAL STATE
+
+| Surface | File | Role |
+|---------|------|------|
+| Claude operating manual | `.claude/CLAUDE.md` | Session rules, navigation, standing instructions |
+| Canonical live system map | `OPS/PRINTMAXX_SYSTEM_MAP.md` | Current topology, control surfaces, data flow. Update on change. |
+| Architecture patterns | `OPS/AUTONOMOUS_SYSTEM_ARCHITECTURE.md` | Stable battle-tested patterns and memory model |
+| Codex automation config | `$CODEX_HOME/automations/printmaxx/automation.toml` | Recurring Codex automation definition |
+| Codex automation memory | `$CODEX_HOME/automations/printmaxx/memory.md` | Run log and prior automation decisions |
+| Meta planning outputs | `OPS/META_PLAN.json`, `OPS/AUTONOMOUS_TASK_QUEUE.jsonl` | Latest MASTER_OPS-derived plan and queued work |
+
+**Latest verified Codex layer (2026-03-10):**
+- `meta_planner` ran against `PRINTMAXX_MASTER_OPS_ENHANCED_2026-03-03.xlsx`.
+- It produced `OPS/META_PLAN.json` and queued 507 tasks into `OPS/AUTONOMOUS_TASK_QUEUE.jsonl`.
+- Coverage snapshot: 518 actionable ops, with 101 scripted, 62 LLM tasks, and 355 remaining gaps.
 
 ---
 

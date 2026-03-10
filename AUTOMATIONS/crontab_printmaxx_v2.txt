@@ -11,7 +11,7 @@
 # All scripts have proper paths, error handling via stderr redirect, log rotation
 
 SHELL=/bin/bash
-PATH=/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin
+PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/macbookpro/.local/bin
 BASE=/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt
 PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 

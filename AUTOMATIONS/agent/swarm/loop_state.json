@@ -1,52 +1,52 @@
 {
-  "last_decision_cycle": "2026-03-09T22:30:00.627634",
-  "last_feedback_cycle": "2026-03-09T22:30:00.665158",
-  "last_pipeline_cycle": "2026-03-09T22:30:00.666510",
+  "last_decision_cycle": "2026-03-10T02:30:00.930525",
+  "last_feedback_cycle": "2026-03-10T02:30:00.955216",
+  "last_pipeline_cycle": "2026-03-10T02:30:00.956391",
   "decisions_executed": 25,
-  "feedback_updates": 792,
+  "feedback_updates": 864,
   "pipeline_advances": 0,
   "agent_scores": {
     "gap_hunter": {
-      "total_runs": 32,
-      "produced_output": 32,
-      "led_to_action": 116,
+      "total_runs": 35,
+      "produced_output": 35,
+      "led_to_action": 137,
       "led_to_revenue": 0,
-      "effectiveness": 257.5
+      "effectiveness": 274.9
     },
     "opportunity_scanner": {
-      "total_runs": 32,
-      "produced_output": 32,
+      "total_runs": 35,
+      "produced_output": 35,
       "led_to_action": 96,
       "led_to_revenue": 0,
-      "effectiveness": 220.0
+      "effectiveness": 204.6
     },
     "competitor_stalker": {
       "total_runs": 30,
       "produced_output": 30,
-      "led_to_action": 151,
+      "led_to_action": 154,
       "led_to_revenue": 0,
-      "effectiveness": 342.0
+      "effectiveness": 348.0
     },
     "asset_deployer": {
-      "total_runs": 33,
-      "produced_output": 32,
-      "led_to_action": 104,
+      "total_runs": 36,
+      "produced_output": 35,
+      "led_to_action": 113,
       "led_to_revenue": 0,
-      "effectiveness": 233.8
+      "effectiveness": 232.6
     },
     "content_compounder": {
-      "total_runs": 33,
-      "produced_output": 33,
-      "led_to_action": 99,
+      "total_runs": 36,
+      "produced_output": 36,
+      "led_to_action": 105,
       "led_to_revenue": 0,
-      "effectiveness": 220.0
+      "effectiveness": 215.0
     },
     "lead_machine": {
-      "total_runs": 32,
-      "produced_output": 32,
-      "led_to_action": 92,
+      "total_runs": 35,
+      "produced_output": 35,
+      "led_to_action": 98,
       "led_to_revenue": 0,
-      "effectiveness": 212.5
+      "effectiveness": 208.0
     },
     "seo_aso_optimizer": {
       "total_runs": 29,
@@ -63,25 +63,25 @@
       "effectiveness": 304.0
     },
     "quality_enforcer": {
-      "total_runs": 20,
-      "produced_output": 20,
+      "total_runs": 23,
+      "produced_output": 23,
       "led_to_action": 84,
       "led_to_revenue": 0,
-      "effectiveness": 292.0
+      "effectiveness": 259.1
     },
     "trend_synthesizer": {
       "total_runs": 30,
       "produced_output": 30,
-      "led_to_action": 142,
+      "led_to_action": 145,
       "led_to_revenue": 0,
-      "effectiveness": 324.0
+      "effectiveness": 330.0
     },
     "cross_pollinator": {
-      "total_runs": 32,
-      "produced_output": 32,
-      "led_to_action": 155,
+      "total_runs": 35,
+      "produced_output": 35,
+      "led_to_action": 167,
       "led_to_revenue": 0,
-      "effectiveness": 330.6
+      "effectiveness": 326.3
     },
     "revenue_tracker": {
       "total_runs": 30,
@@ -91,11 +91,11 @@
       "effectiveness": 268.0
     },
     "system_healer": {
-      "total_runs": 33,
-      "produced_output": 33,
-      "led_to_action": 119,
+      "total_runs": 36,
+      "produced_output": 36,
+      "led_to_action": 131,
       "led_to_revenue": 0,
-      "effectiveness": 256.4
+      "effectiveness": 258.3
     },
     "data_janitor": {
       "total_runs": 22,
@@ -105,74 +105,74 @@
       "effectiveness": 130.0
     },
     "distribution_engine": {
-      "total_runs": 32,
-      "produced_output": 32,
-      "led_to_action": 95,
+      "total_runs": 35,
+      "produced_output": 35,
+      "led_to_action": 101,
       "led_to_revenue": 0,
-      "effectiveness": 218.1
+      "effectiveness": 213.1
     },
     "inbound_maximizer": {
-      "total_runs": 32,
-      "produced_output": 30,
-      "led_to_action": 150,
+      "total_runs": 35,
+      "produced_output": 33,
+      "led_to_action": 159,
       "led_to_revenue": 0,
-      "effectiveness": 337.5
+      "effectiveness": 326.8
     },
     "swarm_brain": {
-      "total_runs": 32,
-      "produced_output": 32,
-      "led_to_action": 74,
+      "total_runs": 35,
+      "produced_output": 35,
+      "led_to_action": 77,
       "led_to_revenue": 0,
-      "effectiveness": 178.8
+      "effectiveness": 172.0
     },
     "video_factory": {
-      "total_runs": 24,
-      "produced_output": 24,
-      "led_to_action": 103,
-      "led_to_revenue": 0,
-      "effectiveness": 297.5
-    },
-    "image_factory": {
       "total_runs": 27,
       "produced_output": 27,
-      "led_to_action": 90,
+      "led_to_action": 103,
       "led_to_revenue": 0,
-      "effectiveness": 240.0
+      "effectiveness": 268.9
+    },
+    "image_factory": {
+      "total_runs": 30,
+      "produced_output": 30,
+      "led_to_action": 93,
+      "led_to_revenue": 0,
+      "effectiveness": 226.0
     },
     "quality_gate": {
-      "total_runs": 33,
-      "produced_output": 30,
-      "led_to_action": 121,
+      "total_runs": 36,
+      "produced_output": 33,
+      "led_to_action": 124,
       "led_to_revenue": 0,
-      "effectiveness": 278.4
+      "effectiveness": 262.1
     },
     "playwright_tester": {
-      "total_runs": 32,
-      "produced_output": 30,
+      "total_runs": 33,
+      "produced_output": 31,
       "led_to_action": 80,
       "led_to_revenue": 0,
-      "effectiveness": 197.5
+      "effectiveness": 192.4
     },
     "alert_dispatcher": {
-      "total_runs": 33,
-      "produced_output": 33,
+      "total_runs": 36,
+      "produced_output": 36,
       "led_to_action": 75,
       "led_to_revenue": 0,
-      "effectiveness": 176.4
+      "effectiveness": 165.0
     },
     "social_poster": {
-      "total_runs": 32,
-      "produced_output": 32,
-      "led_to_action": 107,
+      "total_runs": 35,
+      "produced_output": 35,
+      "led_to_action": 116,
       "led_to_revenue": 0,
-      "effectiveness": 240.6
+      "effectiveness": 238.9
     },
     "meta_executor": {
-      "total_runs": 33,
-      "produced_output": 33,
-      "led_to_action": 138,
+      "total_runs": 34,
+      "produced_output": 34,
+      "led_to_action": 144,
       "led_to_revenue": 0,
-      "effectiveness": 290.9
+      "effectiveness": 294.1
     }
   }
 }

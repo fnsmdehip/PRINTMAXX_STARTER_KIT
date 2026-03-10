@@ -2191,6 +2191,319 @@ def wire_freelance_demand_to_products():
     return len(new_ideas)
 
 
+# ─── CONNECTION 40: Execution Manifest → Asset Deployer Trigger ──────────
+# Asset deployer reads execution manifest on cycle start and marks tasks in-progress
+def wire_execution_manifest_to_deployer():
+    manifest_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "execution_manifest.json")
+    if not manifest_path.exists():
+        return 0
+
+    try:
+        manifest = json.loads(manifest_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    if not isinstance(manifest, list):
+        return 0
+
+    ready_tasks = [t for t in manifest if t.get("status") == "READY_FOR_EXECUTION"]
+    if not ready_tasks:
+        return 0
+
+    # Create deployer trigger file that asset_deployer reads on startup
+    trigger_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "deployer_trigger.json")
+    existing_triggers = []
+    if trigger_path.exists():
+        try:
+            existing_triggers = json.loads(trigger_path.read_text())
+        except (json.JSONDecodeError, ValueError):
+            existing_triggers = []
+    existing_ids = {t.get("task_id", "") for t in existing_triggers}
+
+    new_triggers = []
+    for task in ready_tasks:
+        tid = task.get("task_id", "")
+        if tid and tid not in existing_ids:
+            new_triggers.append({
+                "task_id": tid,
+                "description": task.get("description", ""),
+                "priority": task.get("priority", "MEDIUM"),
+                "status": "TRIGGERED",
+                "triggered_at": datetime.now().isoformat()
+            })
+
+    if new_triggers:
+        all_triggers = existing_triggers + new_triggers
+        trigger_path.write_text(json.dumps(all_triggers, indent=2))
+
+    return len(new_triggers)
+
+
+# ─── CONNECTION 41: OpenClaw Priority Queue → Preview Build Trigger ──────
+# High-score qualified leads feed OpenClaw's discover step as priority targets
+def wire_priority_queue_to_openclaw_config():
+    priority_path = safe_path(LEADS / "auto_local_biz_openclaw_nationwide_9569" / "priority_targets.json")
+    if not priority_path.exists():
+        return 0
+
+    try:
+        targets = json.loads(priority_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    if not isinstance(targets, list) or not targets:
+        return 0
+
+    # Inject priority cities into OpenClaw's config
+    state_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "autonomy_state.json")
+    if not state_path.exists():
+        return 0
+
+    try:
+        state = json.loads(state_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    openclaw = state.get("ventures", {}).get("auto_local_biz_openclaw_nationwide_9569", {})
+    config = openclaw.get("config", {})
+    existing_priority = config.get("priority_targets", [])
+    existing_websites = {t.get("website", "") for t in existing_priority if isinstance(t, dict)}
+
+    new_priority = []
+    for target in targets:
+        website = target.get("website", "")
+        if website and website not in existing_websites:
+            new_priority.append({
+                "business_name": target.get("business_name", ""),
+                "website": website,
+                "city": target.get("city", ""),
+                "category": target.get("category", ""),
+                "composite_score": target.get("composite_score", 0),
+                "source": "cross_pollinator_priority"
+            })
+            existing_websites.add(website)
+
+    if new_priority:
+        config["priority_targets"] = existing_priority + new_priority
+        config["priority_updated"] = datetime.now().isoformat()
+        openclaw["config"] = config
+        state["ventures"]["auto_local_biz_openclaw_nationwide_9569"] = openclaw
+        state_path.write_text(json.dumps(state, indent=2))
+
+    return len(new_priority)
+
+
+# ─── CONNECTION 42: Freelance Product Ideas → Digital Products Config ────
+# Wire freelance-derived product ideas into Digital Products venture config
+def wire_freelance_ideas_to_products_config():
+    ideas_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "freelance_product_ideas.json")
+    if not ideas_path.exists():
+        return 0
+
+    try:
+        ideas = json.loads(ideas_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    if not isinstance(ideas, list) or not ideas:
+        return 0
+
+    state_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "autonomy_state.json")
+    if not state_path.exists():
+        return 0
+
+    try:
+        state = json.loads(state_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    product_venture = state.get("ventures", {}).get("auto_product_digital_products_9788", {})
+    config = product_venture.get("config", {})
+    existing_specs = config.get("product_specs", [])
+    existing_names = {s.get("suggested_product", "") for s in existing_specs if isinstance(s, dict)}
+
+    new_specs = []
+    for idea in ideas:
+        name = idea.get("product_suggestion", "")
+        if name and name not in existing_names:
+            new_specs.append({
+                "suggested_product": name,
+                "category": idea.get("service_type", "FREELANCE"),
+                "alpha_count": idea.get("demand_signals", 0),
+                "price_range": idea.get("price_point", "$19-39"),
+                "format": idea.get("format", "Template + tutorial"),
+                "spec_file": f"freelance_{idea.get('service_type', 'general').lower()}"
+            })
+            existing_names.add(name)
+
+    if new_specs:
+        config["product_specs"] = existing_specs + new_specs
+        config["freelance_specs_updated"] = datetime.now().isoformat()
+        product_venture["config"] = config
+        state["ventures"]["auto_product_digital_products_9788"] = product_venture
+        state_path.write_text(json.dumps(state, indent=2))
+
+    return len(new_specs)
+
+
+# ─── CONNECTION 43: App Factory Spec Queue → App Factory Config ──────────
+# Wire queued app specs into App Factory's find_gap step so it picks from queue
+def wire_spec_queue_to_app_factory_config():
+    queue_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_factory_spec_queue.json")
+    if not queue_path.exists():
+        return 0
+
+    try:
+        queue = json.loads(queue_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    if not isinstance(queue, list) or not queue:
+        return 0
+
+    queued_specs = [s for s in queue if s.get("status") == "QUEUED"]
+    if not queued_specs:
+        return 0
+
+    state_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "autonomy_state.json")
+    if not state_path.exists():
+        return 0
+
+    try:
+        state = json.loads(state_path.read_text())
+    except (json.JSONDecodeError, ValueError):
+        return 0
+
+    app_venture = state.get("ventures", {}).get("auto_app_app_factory_9788", {})
+    config = app_venture.get("config", {})
+    existing_queue = config.get("spec_queue", [])
+    existing_files = {s.get("source_file", "") for s in existing_queue if isinstance(s, dict)}
+
+    new_queued = []
+    for spec in queued_specs[:20]:  # Cap at 20 per cycle
+        sf = spec.get("source_file", "")
+        if sf and sf not in existing_files:
+            new_queued.append({
+                "source_file": sf,
+                "title": spec.get("title", ""),
+                "priority": spec.get("priority", "MEDIUM"),
+                "status": "AVAILABLE_FOR_BUILD",
+                "queued_at": datetime.now().isoformat()
+            })
+            existing_files.add(sf)
+
+    if new_queued:
+        config["spec_queue"] = existing_queue + new_queued
+        config["spec_queue_updated"] = datetime.now().isoformat()
+        app_venture["config"] = config
+        state["ventures"]["auto_app_app_factory_9788"] = app_venture
+        state_path.write_text(json.dumps(state, indent=2))
+
+    return len(new_queued)
+
+
+# ─── CONNECTION 44: Gap Reports → Content Farm ──────────────────────────
+# Gap report findings become data-rich "building in public" content
+def wire_gap_reports_to_content():
+    import re
+    reports_dir = safe_path(REPORTS)
+    gap_files = sorted(reports_dir.glob("gap_report_*.md"), reverse=True)
+    if not gap_files:
+        return 0
+
+    latest = gap_files[0]
+    text = latest.read_text(encoding="utf-8")
+    date_part = latest.stem.replace("gap_report_", "")
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    # Extract gap summaries
+    gaps = re.findall(
+        r'### GAP (\d+): (.+?) \((\w+)\)\n(.*?)(?=### GAP|\Z)',
+        text, re.DOTALL
+    )
+
+    created = 0
+    for gap_num, title, severity, body in gaps:
+        if severity not in ("CRITICAL", "HIGH"):
+            continue
+
+        slug = f"gap_insight_{date_part}_{gap_num}"
+        if slug in existing_posts:
+            continue
+
+        # Extract revenue impact
+        revenue_match = re.search(r'\*\*Revenue impact:\*\* (.+)', body)
+        revenue = revenue_match.group(1).strip()[:100] if revenue_match else ""
+
+        tweet = (
+            f"ran an automated gap analysis on our portfolio.\n\n"
+            f"finding: {title.lower()[:80]}\n\n"
+        )
+        if revenue:
+            tweet += f"revenue impact: {revenue.lower()}\n\n"
+        tweet += (
+            f"the system scans for gaps every 4 hours. "
+            f"most founders don't know what's broken until revenue drops. "
+            f"we know before it breaks."
+        )
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        created += 1
+
+        if created >= 3:
+            break
+
+    return created
+
+
+# ─── CONNECTION 45: Alpha Scoring → Content Farm ────────────────────────
+# Alpha scoring sessions become "how I evaluate opportunities" content
+def wire_alpha_scoring_to_content():
+    import re
+    reports_dir = safe_path(REPORTS)
+    scoring_files = sorted(reports_dir.glob("alpha_scoring_*.md"), reverse=True)
+    if not scoring_files:
+        return 0
+
+    latest = scoring_files[0]
+    text = latest.read_text(encoding="utf-8")
+    date_part = latest.stem.replace("alpha_scoring_", "")
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    slug = f"alpha_scoring_{date_part}"
+    if slug in existing_posts:
+        return 0
+
+    # Extract key stats from scoring report
+    total_match = re.search(r'(\d+)\s*(?:entries|items|alpha)', text)
+    approved_match = re.search(r'(\d+)\s*(?:approved|APPROVED)', text)
+    rejected_match = re.search(r'(\d+)\s*(?:rejected|REJECTED)', text)
+
+    total = total_match.group(1) if total_match else "?"
+    approved = approved_match.group(1) if approved_match else "?"
+    rejected = rejected_match.group(1) if rejected_match else "?"
+
+    tweet = (
+        f"just scored {total} alpha entries.\n\n"
+        f"{approved} approved. {rejected} rejected.\n\n"
+        f"every entry gets: bot detection, earnings verification, method extraction, "
+        f"ROI scoring, and venture routing.\n\n"
+        f"most people bookmark stuff and forget it. "
+        f"we have an automated pipeline that turns bookmarks into products."
+    )
+
+    post_path = safe_path(queue_dir / f"{slug}.txt")
+    post_path.write_text(tweet, encoding="utf-8")
+    return 1
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -2240,6 +2553,12 @@ def run_cycle():
         ("Auto-Ops Emails → Outreach Templates", wire_auto_ops_emails_to_outreach),
         ("Tool Evals → Content Farm", wire_tool_evals_to_content),
         ("Freelance Demand → Digital Products", wire_freelance_demand_to_products),
+        ("Execution Manifest → Deployer Trigger", wire_execution_manifest_to_deployer),
+        ("Priority Queue → OpenClaw Config", wire_priority_queue_to_openclaw_config),
+        ("Freelance Ideas → Products Config", wire_freelance_ideas_to_products_config),
+        ("Spec Queue → App Factory Config", wire_spec_queue_to_app_factory_config),
+        ("Gap Reports → Content Farm", wire_gap_reports_to_content),
+        ("Alpha Scoring → Content Farm", wire_alpha_scoring_to_content),
     ]
 
     total_wired = 0
