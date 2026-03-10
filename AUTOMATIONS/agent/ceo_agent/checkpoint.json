@@ -1,7 +1,7 @@
 {
-  "cycle_id": "cycle_6_20260310_0400",
-  "cycle_number": 6,
-  "last_completed_phase": 7,
+  "cycle_id": "cycle_7_20260310_0800",
+  "cycle_number": 7,
+  "last_completed_phase": 2,
   "phase_results": {
     "1": {
       "count": 179,
@@ -17,71 +17,37 @@
       "decisions": [
         {
           "type": "PROMOTE",
-          "op_id": "N30",
-          "name": "AI Music Production",
-          "reason": "Score 72.2 above promote threshold 70"
+          "op_id": "C17",
+          "name": "LinkedIn Content Strategy",
+          "reason": "Score 70.5 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "N31",
-          "name": "Thread Repurpose Engine",
-          "reason": "Score 72.2 above promote threshold 70"
+          "op_id": "M01",
+          "name": "Paid Discord Community",
+          "reason": "Score 70.5 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "N46",
-          "name": "Medium/Substack Cross-Post Strategy",
-          "reason": "Score 72.2 above promote threshold 70"
+          "op_id": "M04",
+          "name": "Patreon Community",
+          "reason": "Score 70.5 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "N55",
-          "name": "Chrome Extension Arbitrage",
-          "reason": "Score 72.2 above promote threshold 70"
+          "op_id": "M05",
+          "name": "Newsletter Community (Paid)",
+          "reason": "Score 70.5 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "C13",
-          "name": "Truth Pages / Authority Content",
+          "op_id": "M06",
+          "name": "Whop Community",
           "reason": "Score 70.5 above promote threshold 70"
         }
       ]
-    },
-    "3": "snapshot_taken",
-    "4": "intel_loaded",
-    "5": {
-      "results": [
-        {
-          "op_id": "N30",
-          "status": "success"
-        },
-        {
-          "op_id": "N31",
-          "status": "success"
-        },
-        {
-          "op_id": "N46",
-          "status": "success"
-        },
-        {
-          "op_id": "N55",
-          "status": "success"
-        },
-        {
-          "op_id": "C13",
-          "status": "success"
-        }
-      ]
-    },
-    "6": {
-      "issues": [],
-      "summary": "5 promote"
-    },
-    "7": {
-      "ran": false,
-      "reason": "odd_cycle"
     }
   },
-  "started_at": "2026-03-10T04:00:01.140606",
-  "updated_at": "2026-03-10T04:00:09.299532"
+  "started_at": "2026-03-10T08:00:00.479644",
+  "updated_at": "2026-03-10T08:00:03.927531"
 }
