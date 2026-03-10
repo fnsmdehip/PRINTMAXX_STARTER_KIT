@@ -1,7 +1,7 @@
 {
-  "cycle_id": "cycle_5_20260310_0000",
-  "cycle_number": 5,
-  "last_completed_phase": 6,
+  "cycle_id": "cycle_6_20260310_0400",
+  "cycle_number": 6,
+  "last_completed_phase": 3,
   "phase_results": {
     "1": {
       "count": 179,
@@ -17,67 +17,38 @@
       "decisions": [
         {
           "type": "PROMOTE",
-          "op_id": "C18",
-          "name": "Viral Content Repurposer",
+          "op_id": "N30",
+          "name": "AI Music Production",
           "reason": "Score 72.2 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "C19",
-          "name": "ASMR AI Content Channel",
+          "op_id": "N31",
+          "name": "Thread Repurpose Engine",
           "reason": "Score 72.2 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "C20",
-          "name": "Sports/Gaming Clips Channel",
+          "op_id": "N46",
+          "name": "Medium/Substack Cross-Post Strategy",
           "reason": "Score 72.2 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "N01",
-          "name": "Meme Page Repurpose Strategy",
+          "op_id": "N55",
+          "name": "Chrome Extension Arbitrage",
           "reason": "Score 72.2 above promote threshold 70"
         },
         {
           "type": "PROMOTE",
-          "op_id": "N06",
-          "name": "Telegram Channel Monetization",
-          "reason": "Score 72.2 above promote threshold 70"
+          "op_id": "C13",
+          "name": "Truth Pages / Authority Content",
+          "reason": "Score 70.5 above promote threshold 70"
         }
       ]
     },
-    "3": "snapshot_taken",
-    "4": "intel_loaded",
-    "5": {
-      "results": [
-        {
-          "op_id": "C18",
-          "status": "success"
-        },
-        {
-          "op_id": "C19",
-          "status": "success"
-        },
-        {
-          "op_id": "C20",
-          "status": "success"
-        },
-        {
-          "op_id": "N01",
-          "status": "success"
-        },
-        {
-          "op_id": "N06",
-          "status": "success"
-        }
-      ]
-    },
-    "6": {
-      "issues": [],
-      "summary": "5 promote"
-    }
+    "3": "snapshot_taken"
   },
-  "started_at": "2026-03-10T00:00:01.330853",
-  "updated_at": "2026-03-10T00:00:09.447666"
+  "started_at": "2026-03-10T04:00:01.140606",
+  "updated_at": "2026-03-10T04:00:06.010740"
 }

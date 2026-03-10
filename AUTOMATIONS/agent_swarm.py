@@ -34,6 +34,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
+# Ensure sibling modules are importable when run from project root
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 from agent_resilience import (
     sanitize_for_prompt, locked_file, TrajectoryLogger,
 )

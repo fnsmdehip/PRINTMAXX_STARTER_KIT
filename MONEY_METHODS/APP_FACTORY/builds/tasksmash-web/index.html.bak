@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0f172a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TaskSmash">
+<meta name="description" content="Free ADHD task breakdown tool. Paste any overwhelming task, get tiny actionable steps. No account, no paywall.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f172a' width='100' height='100' rx='20'/><text y='70' x='50' text-anchor='middle' font-size='55'>🔨</text></svg>">
+<title>TaskSmash - Break Any Task Into Tiny Steps</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        smash: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+        dark: { 800: '#0f172a', 900: '#0c1322', 950: '#080e1b' },
+        mint: { 400: '#34d399', 500: '#10b981' }
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-behavior: none; background: #0f172a; color: #e2e8f0; margin: 0; }
+
+.app-bg {
+  background: #0f172a;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(14,165,233,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(16,185,129,0.04) 0%, transparent 50%);
+  min-height: 100dvh;
+}
+
+.glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); }
+.glass-hover:hover { background: rgba(255,255,255,0.07); }
+
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.step-appear { animation: stepSlide 0.35s ease forwards; opacity: 0; }
+@keyframes stepSlide { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+
+.pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 15px rgba(14,165,233,0.15); } 50% { box-shadow: 0 0 30px rgba(14,165,233,0.3); } }
+
+.smash-btn {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  transition: all 0.2s ease;
+}
+.smash-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(14,165,233,0.3); }
+.smash-btn:active { transform: translateY(0); }
+.smash-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.tool-tab { transition: all 0.2s ease; cursor: pointer; }
+.tool-tab.active { background: rgba(14,165,233,0.15); border-color: rgba(14,165,233,0.4); color: #7dd3fc; }
+.tool-tab:not(.active) { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); color: #64748b; }
+.tool-tab:not(.active):hover { background: rgba(255,255,255,0.06); color: #94a3b8; }
+
+.spiciness-dot { width: 10px; height: 10px; border-radius: 50%; transition: all 0.2s; cursor: pointer; }
+.spiciness-dot.active { background: #0ea5e9; box-shadow: 0 0 8px rgba(14,165,233,0.4); }
+.spiciness-dot.inactive { background: rgba(14,165,233,0.15); }
+
+.check-done { text-decoration: line-through; opacity: 0.5; }
+
+textarea { resize: none; }
+textarea:focus, input:focus { outline: none; border-color: rgba(14,165,233,0.5); box-shadow: 0 0 0 3px rgba(14,165,233,0.1); }
+
+.loading-dots span { animation: dotPulse 1.4s infinite ease-in-out both; }
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dotPulse { 0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; } 40% { transform: scale(1); opacity: 1; } }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+.history-item { transition: all 0.2s; }
+.history-item:hover { background: rgba(255,255,255,0.06); }
+</style>
+</head>
+<body>
+<div id="app" class="app-bg">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">🔨</span>
+      <h1 class="text-lg font-bold text-smash-300">TaskSmash</h1>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="toggleHistory()" class="text-sm text-slate-400 hover:text-smash-300 transition-colors" title="History">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </button>
+      <button onclick="showAbout()" class="text-sm text-slate-400 hover:text-smash-300 transition-colors">About</button>
+    </div>
+  </header>
+
+  <!-- Tool Tabs -->
+  <div class="px-4 pt-4 pb-2 flex gap-2 overflow-x-auto" id="toolTabs">
+    <button class="tool-tab active rounded-lg px-3 py-2 text-sm font-medium border whitespace-nowrap" data-tool="smash" onclick="switchTool('smash')">
+      🔨 Task Smash
+    </button>
+    <button class="tool-tab rounded-lg px-3 py-2 text-sm font-medium border whitespace-nowrap" data-tool="formalizer" onclick="switchTool('formalizer')">
+      👔 Formalizer
+    </button>
+    <button class="tool-tab rounded-lg px-3 py-2 text-sm font-medium border whitespace-nowrap" data-tool="estimator" onclick="switchTool('estimator')">
+      ⏱️ Estimator
+    </button>
+    <button class="tool-tab rounded-lg px-3 py-2 text-sm font-medium border whitespace-nowrap" data-tool="judge" onclick="switchTool('judge')">
+      ⚖️ Tone Judge
+    </button>
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="px-4 pb-24">
+
+    <!-- TOOL: Task Smash (main) -->
+    <div id="tool-smash" class="tool-panel fade-in">
+      <div class="mt-2 mb-3">
+        <p class="text-slate-400 text-sm">Paste any overwhelming task. Get tiny, doable steps.</p>
+      </div>
+
+      <!-- Spiciness (detail level) -->
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs text-slate-500 uppercase tracking-wider">Detail:</span>
+        <div class="flex gap-2 items-center">
+          <button class="spiciness-dot active" data-level="1" onclick="setSpiciness(1)" title="Simple"></button>
+          <button class="spiciness-dot inactive" data-level="2" onclick="setSpiciness(2)" title="Medium"></button>
+          <button class="spiciness-dot active" data-level="3" onclick="setSpiciness(3)" title="Detailed"></button>
+          <button class="spiciness-dot inactive" data-level="4" onclick="setSpiciness(4)" title="Very Detailed"></button>
+          <button class="spiciness-dot inactive" data-level="5" onclick="setSpiciness(5)" title="Maximum"></button>
+        </div>
+        <span class="text-xs text-slate-500" id="spicinessLabel">Detailed</span>
+      </div>
+
+      <!-- Input -->
+      <div class="glass rounded-xl p-1 mb-3">
+        <textarea
+          id="taskInput"
+          class="w-full bg-transparent text-white p-3 rounded-lg text-base placeholder-slate-600"
+          rows="3"
+          placeholder="e.g. Clean my entire apartment before guests arrive tomorrow"
+          maxlength="500"
+        ></textarea>
+      </div>
+
+      <!-- Smash Button -->
+      <button id="smashBtn" onclick="smashTask()" class="smash-btn w-full py-3 rounded-xl text-white font-bold text-base flex items-center justify-center gap-2">
+        <span>🔨</span> SMASH IT
+      </button>
+
+      <!-- Output -->
+      <div id="smashOutput" class="mt-4 hidden">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-smash-300 font-semibold text-sm uppercase tracking-wider">Your Steps</h3>
+          <div class="flex gap-2">
+            <button onclick="copySteps()" class="text-xs text-slate-400 hover:text-smash-300 transition-colors px-2 py-1 glass rounded-lg">Copy</button>
+            <button onclick="clearOutput()" class="text-xs text-slate-400 hover:text-red-400 transition-colors px-2 py-1 glass rounded-lg">Clear</button>
+          </div>
+        </div>
+        <div id="stepsList" class="space-y-2"></div>
+        <div id="progressBar" class="mt-4 glass rounded-full h-2 overflow-hidden">
+          <div id="progressFill" class="h-full bg-gradient-to-r from-smash-500 to-mint-500 rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+        <p id="progressText" class="text-xs text-slate-500 mt-1 text-center">0 of 0 completed</p>
+      </div>
+
+      <!-- Loading State -->
+      <div id="loadingState" class="mt-6 hidden text-center">
+        <div class="loading-dots flex justify-center gap-2 mb-2">
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+        </div>
+        <p class="text-slate-400 text-sm">Breaking it down...</p>
+      </div>
+    </div>
+
+    <!-- TOOL: Formalizer -->
+    <div id="tool-formalizer" class="tool-panel hidden fade-in">
+      <div class="mt-2 mb-3">
+        <p class="text-slate-400 text-sm">Rewrite text in a different tone. Casual to formal, formal to casual, or anywhere between.</p>
+      </div>
+      <div class="flex gap-2 mb-3 flex-wrap">
+        <button class="tone-btn tool-tab active rounded-lg px-3 py-1.5 text-xs font-medium border" data-tone="casual" onclick="setTone('casual')">Casual</button>
+        <button class="tone-btn tool-tab rounded-lg px-3 py-1.5 text-xs font-medium border" data-tone="professional" onclick="setTone('professional')">Professional</button>
+        <button class="tone-btn tool-tab rounded-lg px-3 py-1.5 text-xs font-medium border" data-tone="friendly" onclick="setTone('friendly')">Friendly</button>
+        <button class="tone-btn tool-tab rounded-lg px-3 py-1.5 text-xs font-medium border" data-tone="assertive" onclick="setTone('assertive')">Assertive</button>
+        <button class="tone-btn tool-tab rounded-lg px-3 py-1.5 text-xs font-medium border" data-tone="pirate" onclick="setTone('pirate')">Pirate</button>
+      </div>
+      <div class="glass rounded-xl p-1 mb-3">
+        <textarea id="formalizeInput" class="w-full bg-transparent text-white p-3 rounded-lg text-base placeholder-slate-600" rows="3" placeholder="e.g. Hey can u plz fix the bug its broken again thx" maxlength="500"></textarea>
+      </div>
+      <button onclick="formalize()" class="smash-btn w-full py-3 rounded-xl text-white font-bold text-base">Rewrite</button>
+      <div id="formalizeOutput" class="mt-4 hidden">
+        <div class="glass rounded-xl p-4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-smash-300 uppercase tracking-wider font-semibold">Rewritten</span>
+            <button onclick="copyFormalized()" class="text-xs text-slate-400 hover:text-smash-300 transition-colors">Copy</button>
+          </div>
+          <p id="formalizedText" class="text-white leading-relaxed"></p>
+        </div>
+      </div>
+      <div id="formalizeLoading" class="mt-6 hidden text-center">
+        <div class="loading-dots flex justify-center gap-2 mb-2">
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+        </div>
+        <p class="text-slate-400 text-sm">Rewriting...</p>
+      </div>
+    </div>
+
+    <!-- TOOL: Estimator -->
+    <div id="tool-estimator" class="tool-panel hidden fade-in">
+      <div class="mt-2 mb-3">
+        <p class="text-slate-400 text-sm">Get a realistic time estimate for any task. Accounts for ADHD time blindness.</p>
+      </div>
+      <div class="glass rounded-xl p-1 mb-3">
+        <textarea id="estimateInput" class="w-full bg-transparent text-white p-3 rounded-lg text-base placeholder-slate-600" rows="3" placeholder="e.g. Write a 2000-word essay about climate change" maxlength="500"></textarea>
+      </div>
+      <button onclick="estimate()" class="smash-btn w-full py-3 rounded-xl text-white font-bold text-base">Estimate</button>
+      <div id="estimateOutput" class="mt-4 hidden"></div>
+      <div id="estimateLoading" class="mt-6 hidden text-center">
+        <div class="loading-dots flex justify-center gap-2 mb-2">
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+        </div>
+        <p class="text-slate-400 text-sm">Calculating...</p>
+      </div>
+    </div>
+
+    <!-- TOOL: Tone Judge -->
+    <div id="tool-judge" class="tool-panel hidden fade-in">
+      <div class="mt-2 mb-3">
+        <p class="text-slate-400 text-sm">Check if your message sounds the way you think it does. Catches unintentional tone.</p>
+      </div>
+      <div class="glass rounded-xl p-1 mb-3">
+        <textarea id="judgeInput" class="w-full bg-transparent text-white p-3 rounded-lg text-base placeholder-slate-600" rows="3" placeholder="e.g. Per my last email, I wanted to follow up on the deliverables." maxlength="500"></textarea>
+      </div>
+      <button onclick="judge()" class="smash-btn w-full py-3 rounded-xl text-white font-bold text-base">Judge It</button>
+      <div id="judgeOutput" class="mt-4 hidden"></div>
+      <div id="judgeLoading" class="mt-6 hidden text-center">
+        <div class="loading-dots flex justify-center gap-2 mb-2">
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-smash-400 inline-block"></span>
+        </div>
+        <p class="text-slate-400 text-sm">Analyzing tone...</p>
+      </div>
+    </div>
+
+    <!-- History Panel (hidden by default) -->
+    <div id="historyPanel" class="hidden fixed inset-0 z-50 bg-dark-950/90 backdrop-blur-sm">
+      <div class="max-w-lg mx-auto h-full flex flex-col">
+        <div class="flex items-center justify-between p-4">
+          <h2 class="text-lg font-bold text-smash-300">History</h2>
+          <button onclick="toggleHistory()" class="text-slate-400 hover:text-white text-2xl">&times;</button>
+        </div>
+        <div id="historyList" class="flex-1 overflow-y-auto px-4 pb-4 space-y-2">
+          <p class="text-slate-500 text-sm text-center mt-8">No history yet. Smash some tasks!</p>
+        </div>
+        <div class="p-4">
+          <button onclick="clearHistory()" class="w-full py-2 glass rounded-xl text-red-400 text-sm font-medium hover:bg-red-500/10 transition-colors">Clear All History</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="hidden fixed inset-0 z-50 bg-dark-950/90 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="glass rounded-2xl p-6 max-w-sm w-full fade-in">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl">🔨</span>
+          <div>
+            <h2 class="text-lg font-bold text-white">TaskSmash</h2>
+            <p class="text-xs text-slate-400">v1.0 - Free Forever</p>
+          </div>
+        </div>
+        <div class="space-y-3 text-sm text-slate-300">
+          <p>Built for brains that freeze when tasks feel too big.</p>
+          <p>Goblin Tools charged $2.99 and hasn't been updated since 2023. TaskSmash is free, works offline, and runs entirely in your browser.</p>
+          <div class="glass rounded-lg p-3">
+            <p class="text-xs text-slate-400 mb-1">What's included:</p>
+            <ul class="text-xs text-slate-300 space-y-1">
+              <li>Task Smash - break any task into steps</li>
+              <li>Formalizer - rewrite in any tone</li>
+              <li>Estimator - realistic time estimates</li>
+              <li>Tone Judge - check how you sound</li>
+            </ul>
+          </div>
+          <p class="text-xs text-slate-500">No account. No paywall. No data leaves your device.</p>
+        </div>
+        <button onclick="closeAbout()" class="mt-4 w-full py-2 glass rounded-xl text-smash-300 text-sm font-medium hover:bg-smash-500/10 transition-colors">Got it</button>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+// State
+let currentTool = 'smash';
+let spiciness = 3;
+let currentTone = 'casual';
+let history = JSON.parse(localStorage.getItem('tasksmash_history') || '[]');
+let steps = [];
+
+const spicinessLabels = ['', 'Simple', 'Medium', 'Detailed', 'Very Detailed', 'Maximum'];
+
+// Tool switching
+function switchTool(tool) {
+  currentTool = tool;
+  document.querySelectorAll('.tool-panel').forEach(function(p) { p.classList.add('hidden'); });
+  var panel = document.getElementById('tool-' + tool);
+  panel.classList.remove('hidden');
+  panel.classList.add('fade-in');
+  document.querySelectorAll('#toolTabs .tool-tab').forEach(function(t) {
+    t.classList.toggle('active', t.dataset.tool === tool);
+  });
+}
+
+// Spiciness
+function setSpiciness(level) {
+  spiciness = level;
+  document.querySelectorAll('.spiciness-dot').forEach(function(d) {
+    var dl = parseInt(d.dataset.level);
+    d.classList.toggle('active', dl <= level);
+    d.classList.toggle('inactive', dl > level);
+  });
+  document.getElementById('spicinessLabel').textContent = spicinessLabels[level];
+}
+
+// Tone
+function setTone(tone) {
+  currentTone = tone;
+  document.querySelectorAll('.tone-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.tone === tone);
+  });
+}
+
+// === TASK SMASH (Core Feature) ===
+function smashTask() {
+  var input = document.getElementById('taskInput').value.trim();
+  if (!input) return;
+
+  var btn = document.getElementById('smashBtn');
+  btn.disabled = true;
+  document.getElementById('loadingState').classList.remove('hidden');
+  document.getElementById('smashOutput').classList.add('hidden');
+
+  setTimeout(function() {
+    steps = breakdownTask(input, spiciness);
+    renderSteps(steps);
+    saveToHistory('smash', input, steps);
+
+    document.getElementById('loadingState').classList.add('hidden');
+    document.getElementById('smashOutput').classList.remove('hidden');
+    btn.disabled = false;
+  }, 600 + Math.random() * 400);
+}
+
+function breakdownTask(task, detail) {
+  var lower = task.toLowerCase();
+
+  var patterns = [
+    { match: /(clean|tidy|organize|declutter)/, generate: generateCleaningSteps },
+    { match: /(write|essay|paper|report|document|blog)/, generate: generateWritingSteps },
+    { match: /(email|message|reply|respond|send)/, generate: generateCommSteps },
+    { match: /(study|learn|read|research|homework)/, generate: generateStudySteps },
+    { match: /(cook|meal|dinner|lunch|breakfast|recipe|food)/, generate: generateCookingSteps },
+    { match: /(exercise|workout|gym|run|jog|fitness)/, generate: generateExerciseSteps },
+    { match: /(laundry|wash|clothes|iron)/, generate: generateLaundrySteps },
+    { match: /(shop|buy|groceries|store|purchase)/, generate: generateShoppingSteps },
+    { match: /(move|pack|unpack|relocate)/, generate: generateMovingSteps },
+    { match: /(call|phone|appointment|schedule|book)/, generate: generateSchedulingSteps },
+    { match: /(project|build|create|make|develop|code|program)/, generate: generateProjectSteps },
+    { match: /(tax|finance|bill|pay|budget|money)/, generate: generateFinanceSteps }
+  ];
+
+  for (var i = 0; i < patterns.length; i++) {
+    if (patterns[i].match.test(lower)) {
+      return patterns[i].generate(task, detail);
+    }
+  }
+  return generateGenericSteps(task, detail);
+}
+
+function generateCleaningSteps(task, detail) {
+  var base = [
+    'Set a timer for 10 minutes (you only need to start, not finish)',
+    'Pick ONE room or area to focus on first',
+    'Grab a trash bag and throw away obvious garbage',
+    'Put items that belong in other rooms into a basket',
+    'Wipe down surfaces with a damp cloth',
+    'Sweep or vacuum the floor',
+    'Take out the trash bag'
+  ];
+  return scaleSteps(base, detail, [
+    'Put on music or a podcast you like (makes it way easier)',
+    'Clear the kitchen sink first (visual progress = motivation)',
+    'Sort the basket items by room',
+    'Deliver basket items to their rooms',
+    'Clean bathroom mirror and toilet (2 min each)',
+    'Fluff couch pillows and fold blankets',
+    'Light a candle or spray air freshener (reward yourself)',
+    'Take a 5-minute break (you earned it)',
+    'Do a final walkthrough and adjust anything that bugs you'
+  ]);
+}
+
+function generateWritingSteps(task, detail) {
+  var base = [
+    'Open a blank document (don\'t stare at it, just open it)',
+    'Write ONE sentence about what the main point is',
+    'Brain dump: type every thought about the topic for 5 min (no editing)',
+    'Pick the 3 strongest points from your brain dump',
+    'Write a rough paragraph for each point',
+    'Add an intro sentence and a closing sentence',
+    'Read through once and fix obvious errors'
+  ];
+  return scaleSteps(base, detail, [
+    'Set a 25-minute timer (Pomodoro) to start writing',
+    'Outline with bullet points before writing paragraphs',
+    'Add specific examples or evidence to each point',
+    'Read it out loud to catch awkward phrasing',
+    'Check word count and adjust if needed',
+    'Ask someone to read it or step away for 10 min then re-read',
+    'Format headings, spacing, and fonts',
+    'Save and submit/send'
+  ]);
+}
+
+function generateCommSteps(task, detail) {
+  var base = [
+    'Open the message/email (just open it, don\'t respond yet)',
+    'Read it once to understand what they actually need',
+    'Write the key point of your response in one sentence',
+    'Add any necessary details (keep it short)',
+    'Read it once, hit send'
+  ];
+  return scaleSteps(base, detail, [
+    'Take 3 deep breaths before reading (reduces anxiety)',
+    'Highlight the actual question or request they\'re making',
+    'Draft your response without sending',
+    'Check if you sound too apologetic (remove unnecessary "sorry")',
+    'Add a clear next step or timeline',
+    'Proofread for tone (use the Tone Judge tab!)'
+  ]);
+}
+
+function generateStudySteps(task, detail) {
+  var base = [
+    'Gather your materials (textbook, notes, laptop)',
+    'Set a 25-minute timer (you\'re only doing 25 min)',
+    'Read the first section/chapter headings to get the overview',
+    'Take notes in your own words (don\'t just highlight)',
+    'After 25 min, take a 5-minute break (actually break)',
+    'Quiz yourself on what you just learned'
+  ];
+  return scaleSteps(base, detail, [
+    'Turn phone on Do Not Disturb and put it face down',
+    'Write 3 questions you want to answer from this material',
+    'Use active recall: close the book and write what you remember',
+    'Create flashcards for key terms',
+    'Teach the concept to an imaginary person out loud',
+    'Review weak spots for 10 min before stopping',
+    'Plan when your next study session will be'
+  ]);
+}
+
+function generateCookingSteps(task, detail) {
+  var base = [
+    'Decide what you\'re making (pick something simple)',
+    'Check if you have the ingredients (make a list of what\'s missing)',
+    'Clear counter space and get a cutting board out',
+    'Prep all ingredients first (chop, measure, open cans)',
+    'Follow the recipe step by step (don\'t skip ahead)',
+    'Clean as you go (wash a dish while something simmers)',
+    'Plate it, eat it, feel accomplished'
+  ];
+  return scaleSteps(base, detail, [
+    'Pick a recipe with 5 ingredients or fewer',
+    'Read the full recipe before starting',
+    'Preheat oven if needed (people always forget this)',
+    'Set timers for each cooking step',
+    'Taste as you cook and adjust seasoning',
+    'Put leftovers in containers before sitting down',
+    'Load the dishwasher or soak pans immediately'
+  ]);
+}
+
+function generateExerciseSteps(task, detail) {
+  var base = [
+    'Put on workout clothes (that\'s step one, just clothes)',
+    'Fill a water bottle',
+    'Do 2 minutes of stretching (just 2 min)',
+    'Start with your easiest exercise (build momentum)',
+    'Do the main workout (any duration counts)',
+    'Cool down with light stretching'
+  ];
+  return scaleSteps(base, detail, [
+    'Set out your clothes the night before',
+    'Pick a playlist or podcast',
+    'Warm up: 5 min walk or jumping jacks',
+    'Track your workout (app or paper)',
+    'Hydrate between sets',
+    'Shower and change (you\'ll feel amazing)',
+    'Log how you feel afterward (builds habit loop)'
+  ]);
+}
+
+function generateLaundrySteps(task, detail) {
+  var base = [
+    'Gather all dirty clothes into one pile',
+    'Sort into lights and darks',
+    'Load the washing machine and start it',
+    'Set a timer so you don\'t forget to switch it',
+    'Move to dryer or hang to dry',
+    'Fold and put away immediately (don\'t let it sit)'
+  ];
+  return scaleSteps(base, detail, [
+    'Check all pockets before washing',
+    'Treat any stains before washing',
+    'Wash delicates separately or in a mesh bag',
+    'Remove from dryer while still slightly warm (fewer wrinkles)',
+    'Fold while watching something (makes it less boring)',
+    'Put hangers in closet, folded items in drawers',
+    'Iron anything that needs it (or throw it back in the dryer for 5 min)'
+  ]);
+}
+
+function generateShoppingSteps(task, detail) {
+  var base = [
+    'Write a list (check fridge/pantry first)',
+    'Group items by store section (produce, dairy, etc.)',
+    'Grab bags and your wallet',
+    'Go to the store (don\'t browse, follow the list)',
+    'Unpack and put everything away when you get home'
+  ];
+  return scaleSteps(base, detail, [
+    'Check what you already have to avoid duplicates',
+    'Set a budget before going',
+    'Eat something before shopping (don\'t shop hungry)',
+    'Start with non-perishables, end with frozen/cold items',
+    'Check expiration dates on dairy and meat',
+    'Look for sales but only on items you actually need',
+    'Put refrigerated items away first when home'
+  ]);
+}
+
+function generateMovingSteps(task, detail) {
+  var base = [
+    'Get boxes and packing tape',
+    'Start with one room (NOT the whole house)',
+    'Pack items you rarely use first',
+    'Label every box with room and contents',
+    'Pack essentials bag last (charger, toiletries, change of clothes)',
+    'Load heaviest boxes first in the vehicle',
+    'Unpack essentials first at new place'
+  ];
+  return scaleSteps(base, detail, [
+    'Make a moving checklist 2 weeks before',
+    'Declutter before packing (donate/trash what you don\'t need)',
+    'Take photos of electronics wiring before unplugging',
+    'Wrap fragile items in clothes to save on bubble wrap',
+    'Number boxes and keep an inventory list',
+    'Set up bed and bathroom first at new place',
+    'Update your address with postal service, bank, subscriptions',
+    'Deep clean old place before handing over keys'
+  ]);
+}
+
+function generateSchedulingSteps(task, detail) {
+  var base = [
+    'Decide exactly what you need to schedule',
+    'Look up the phone number or booking page',
+    'Check your calendar for available times',
+    'Make the call or book online (just do it, 2 min max)',
+    'Add it to your calendar with a reminder'
+  ];
+  return scaleSteps(base, detail, [
+    'Write down what you need to say/ask before calling',
+    'Have your insurance/ID info ready if medical',
+    'Book the earliest available slot (less time to dread it)',
+    'Set a reminder for the day before',
+    'Prepare anything you need to bring'
+  ]);
+}
+
+function generateProjectSteps(task, detail) {
+  var base = [
+    'Write down what "done" looks like in one sentence',
+    'List the 3-5 major pieces this breaks into',
+    'Start with the smallest, easiest piece first',
+    'Work on that piece for 25 minutes (just 25 min)',
+    'Save your work and take a break',
+    'Move to the next piece when ready',
+    'Review the whole thing when all pieces are done'
+  ];
+  return scaleSteps(base, detail, [
+    'Research similar projects for inspiration (15 min max)',
+    'Set up your workspace (close other tabs, phone away)',
+    'Create a project folder or document',
+    'Set milestones with rough deadlines',
+    'Build a rough version before polishing',
+    'Get feedback from someone before finalizing',
+    'Test everything works as expected',
+    'Document what you built (future you will thank you)',
+    'Ship it / submit it / publish it'
+  ]);
+}
+
+function generateFinanceSteps(task, detail) {
+  var base = [
+    'Open your bank account or financial document',
+    'List all income sources this month',
+    'List all bills and their due dates',
+    'Calculate: income minus bills = what\'s left',
+    'Set up auto-pay for recurring bills if possible',
+    'Allocate remaining money (savings, spending, etc.)'
+  ];
+  return scaleSteps(base, detail, [
+    'Gather all financial documents in one place',
+    'Check for any overdue bills or late fees',
+    'Review subscriptions you might not be using',
+    'Set up a simple spreadsheet or use a free budgeting app',
+    'Create a "sinking fund" for irregular expenses (car repair, gifts)',
+    'Set a calendar reminder to review finances monthly',
+    'Move savings to a separate account so you don\'t spend it'
+  ]);
+}
+
+function generateGenericSteps(task, detail) {
+  var base = [
+    'Decide what "done" looks like for this task',
+    'Break it into 3 parts: what to do first, middle, and last',
+    'Start the first part right now (set a 10 min timer)',
+    'When the timer goes off, assess progress',
+    'Continue to the next part (another 10 min timer)',
+    'Finish up and review what you\'ve done',
+    'Celebrate completing it (seriously, acknowledge yourself)'
+  ];
+  return scaleSteps(base, detail, [
+    'Remove all distractions (phone on DND, close extra tabs)',
+    'Set up your workspace with everything you need',
+    'If you get stuck, take a 2-minute walk and come back',
+    'Ask for help if you\'ve been stuck more than 15 minutes',
+    'Take notes on what worked for next time',
+    'If it\'s not done, write down exactly where you left off'
+  ]);
+}
+
+function scaleSteps(base, detail, extras) {
+  if (detail <= 1) return base.slice(0, 4);
+  if (detail <= 2) return base;
+  if (detail <= 3) return base.concat(extras.slice(0, 3));
+  if (detail <= 4) return base.concat(extras.slice(0, 6));
+  return base.concat(extras);
+}
+
+function renderSteps(stepsArr) {
+  var list = document.getElementById('stepsList');
+  list.textContent = '';
+  checkedSteps.clear();
+  for (var i = 0; i < stepsArr.length; i++) {
+    var div = document.createElement('div');
+    div.className = 'step-appear flex items-start gap-3 glass rounded-xl p-3 cursor-pointer';
+    div.style.animationDelay = (i * 0.06) + 's';
+
+    var btn = document.createElement('button');
+    btn.className = 'mt-0.5 w-5 h-5 rounded border-2 border-slate-600 flex-shrink-0 flex items-center justify-center text-xs transition-colors hover:border-smash-400';
+    btn.id = 'check-' + i;
+    btn.setAttribute('data-idx', i);
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleStep(parseInt(this.getAttribute('data-idx')));
+    });
+
+    var span = document.createElement('span');
+    span.className = 'text-sm text-slate-200 leading-relaxed';
+    span.id = 'step-text-' + i;
+    span.textContent = stepsArr[i];
+
+    div.appendChild(btn);
+    div.appendChild(span);
+    div.setAttribute('data-idx', i);
+    div.addEventListener('click', function() {
+      toggleStep(parseInt(this.getAttribute('data-idx')));
+    });
+    list.appendChild(div);
+  }
+  updateProgress();
+}
+
+var checkedSteps = new Set();
+function toggleStep(i) {
+  var checkEl = document.getElementById('check-' + i);
+  var textEl = document.getElementById('step-text-' + i);
+  if (checkedSteps.has(i)) {
+    checkedSteps.delete(i);
+    checkEl.textContent = '';
+    checkEl.classList.remove('bg-smash-500', 'border-smash-500');
+    checkEl.classList.add('border-slate-600');
+    textEl.classList.remove('check-done');
+  } else {
+    checkedSteps.add(i);
+    checkEl.textContent = '\u2713';
+    checkEl.classList.add('bg-smash-500', 'border-smash-500');
+    checkEl.classList.remove('border-slate-600');
+    textEl.classList.add('check-done');
+  }
+  updateProgress();
+}
+
+function updateProgress() {
+  var total = steps.length;
+  var done = checkedSteps.size;
+  var pct = total > 0 ? (done / total) * 100 : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = done + ' of ' + total + ' completed';
+  if (done === total && total > 0) {
+    document.getElementById('progressText').textContent = 'All done! You crushed it';
+    document.getElementById('progressFill').style.background = 'linear-gradient(90deg, #10b981, #34d399)';
+  } else {
+    document.getElementById('progressFill').style.background = '';
+  }
+}
+
+function copySteps() {
+  var lines = steps.map(function(s, i) {
+    return (checkedSteps.has(i) ? '[x] ' : '[ ] ') + s;
+  });
+  navigator.clipboard.writeText(lines.join('\n')).then(function() {
+    showToast('Steps copied!');
+  });
+}
+
+function clearOutput() {
+  document.getElementById('smashOutput').classList.add('hidden');
+  document.getElementById('taskInput').value = '';
+  steps = [];
+  checkedSteps.clear();
+}
+
+// === FORMALIZER ===
+function formalize() {
+  var input = document.getElementById('formalizeInput').value.trim();
+  if (!input) return;
+
+  document.getElementById('formalizeLoading').classList.remove('hidden');
+  document.getElementById('formalizeOutput').classList.add('hidden');
+
+  setTimeout(function() {
+    var result = rewriteText(input, currentTone);
+    document.getElementById('formalizedText').textContent = result;
+    document.getElementById('formalizeLoading').classList.add('hidden');
+    document.getElementById('formalizeOutput').classList.remove('hidden');
+    saveToHistory('formalizer', input, result);
+  }, 500 + Math.random() * 300);
+}
+
+function rewriteText(text, tone) {
+  var transforms = {
+    casual: function(t) {
+      var r = t
+        .replace(/\bplease\b/gi, 'pls')
+        .replace(/\bthank you\b/gi, 'thanks')
+        .replace(/\bI would like to\b/gi, 'I wanna')
+        .replace(/\bPer my last email,?\s*/gi, 'Like I said, ')
+        .replace(/\bAs per our discussion,?\s*/gi, 'So we talked about this, ')
+        .replace(/\bI wanted to follow up\b/gi, 'Just checking in')
+        .replace(/\bPlease advise\b/gi, 'Lmk what you think')
+        .replace(/\bat your earliest convenience\b/gi, 'when you get a chance')
+        .replace(/\bregarding\b/gi, 'about')
+        .replace(/\bfurthermore\b/gi, 'also')
+        .replace(/\bin accordance with\b/gi, 'based on')
+        .replace(/\bI am writing to\b/gi, 'Hey, just wanted to')
+        .replace(/\bnotwithstanding\b/gi, 'even though')
+        .replace(/\bsubsequently\b/gi, 'then')
+        .replace(/\.$/g, '');
+      if (!r.toLowerCase().startsWith('hey') && !r.toLowerCase().startsWith('yo') && !r.toLowerCase().startsWith('hi')) {
+        r = 'hey, ' + r.charAt(0).toLowerCase() + r.slice(1);
+      }
+      return r;
+    },
+    professional: function(t) {
+      var r = t
+        .replace(/\bhey\b/gi, 'Hello')
+        .replace(/\bhi\b/gi, 'Hello')
+        .replace(/\bpls\b/gi, 'please')
+        .replace(/\bthanks\b/gi, 'Thank you')
+        .replace(/\bthx\b/gi, 'Thank you')
+        .replace(/\bgonna\b/gi, 'going to')
+        .replace(/\bwanna\b/gi, 'would like to')
+        .replace(/\bcan u\b/gi, 'could you')
+        .replace(/\bu\b/gi, 'you')
+        .replace(/\br\b/gi, 'are')
+        .replace(/\bLike I said\b/gi, 'As previously discussed')
+        .replace(/\blmk\b/gi, 'please let me know')
+        .replace(/\bbtw\b/gi, 'Additionally')
+        .replace(/\bkinda\b/gi, 'somewhat')
+        .replace(/\bstuff\b/gi, 'items')
+        .replace(/\bgotta\b/gi, 'need to')
+        .replace(/\bcuz\b/gi, 'because')
+        .replace(/\b(lol|haha|lmao)\b/gi, '');
+      if (!r.endsWith('.') && !r.endsWith('?') && !r.endsWith('!')) r += '.';
+      r = r.charAt(0).toUpperCase() + r.slice(1);
+      return r;
+    },
+    friendly: function(t) {
+      var r = t
+        .replace(/\bPer my last email,?\s*/gi, 'Just circling back on this! ')
+        .replace(/\bPlease advise\b/gi, 'Would love to hear your thoughts!')
+        .replace(/\bI wanted to follow up\b/gi, 'Hope you\'re doing well! Just wanted to check in')
+        .replace(/\.$/g, '!');
+      if (!r.startsWith('Hi') && !r.startsWith('Hey')) {
+        r = 'Hi there! ' + r;
+      }
+      if (!r.endsWith('!') && !r.endsWith('?')) r += '!';
+      return r;
+    },
+    assertive: function(t) {
+      var r = t
+        .replace(/\bcould you\b/gi, 'I need you to')
+        .replace(/\bwould you mind\b/gi, 'Please')
+        .replace(/\bmaybe\b/gi, '')
+        .replace(/\bI think\b/gi, 'I\'m confident')
+        .replace(/\bperhaps\b/gi, '')
+        .replace(/\bsorry but\b/gi, '')
+        .replace(/\bI was wondering if\b/gi, '')
+        .replace(/\bkind of\b/gi, '')
+        .replace(/\bsort of\b/gi, '')
+        .replace(/\bif that\'s okay\b/gi, '')
+        .replace(/\bno worries if not\b/gi, '')
+        .replace(/\bjust\b/gi, '');
+      r = r.replace(/\s{2,}/g, ' ').trim();
+      if (!r.endsWith('.')) r += '.';
+      r = r.charAt(0).toUpperCase() + r.slice(1);
+      return r;
+    },
+    pirate: function(t) {
+      var r = t
+        .replace(/\bhello\b/gi, 'Ahoy')
+        .replace(/\bhi\b/gi, 'Ahoy')
+        .replace(/\bhey\b/gi, 'Ahoy')
+        .replace(/\byes\b/gi, 'Aye')
+        .replace(/\bmy\b/gi, 'me')
+        .replace(/\byou\b/gi, 'ye')
+        .replace(/\byour\b/gi, 'yer')
+        .replace(/\bis\b/gi, 'be')
+        .replace(/\bare\b/gi, 'be')
+        .replace(/\bfriend\b/gi, 'matey')
+        .replace(/\bpeople\b/gi, 'scallywags')
+        .replace(/\bmoney\b/gi, 'doubloons')
+        .replace(/\beveryone\b/gi, 'all ye scallywags')
+        .replace(/\bboss\b/gi, 'captain');
+      if (r.indexOf('Ahoy') === -1) r = 'Ahoy! ' + r;
+      r = r.replace(/[.!]?\s*$/g, ', yarr!');
+      return r;
+    }
+  };
+
+  return (transforms[tone] || transforms.casual)(text);
+}
+
+function copyFormalized() {
+  navigator.clipboard.writeText(document.getElementById('formalizedText').textContent).then(function() { showToast('Copied!'); });
+}
+
+// === ESTIMATOR ===
+function estimate() {
+  var input = document.getElementById('estimateInput').value.trim();
+  if (!input) return;
+
+  document.getElementById('estimateLoading').classList.remove('hidden');
+  document.getElementById('estimateOutput').classList.add('hidden');
+
+  setTimeout(function() {
+    var result = estimateTime(input);
+    renderEstimate(result);
+    document.getElementById('estimateLoading').classList.add('hidden');
+    document.getElementById('estimateOutput').classList.remove('hidden');
+    saveToHistory('estimator', input, 'estimate');
+  }, 500 + Math.random() * 300);
+}
+
+function estimateTime(task) {
+  var lower = task.toLowerCase();
+  var baseMin = 30, baseMax = 60;
+  var tips = [];
+
+  var estimates = [
+    { match: /(clean|tidy|organize)/, min: 20, max: 90, tips: ['Start with the most visible area for quick motivation', 'Set a timer - cleaning expands to fill available time'] },
+    { match: /(write|essay|paper|report|blog)/, min: 45, max: 180, tips: ['Break into outline (15m), draft (60m), edit (30m)', 'The hardest part is starting - commit to just 10 minutes'] },
+    { match: /(email|reply|message)/, min: 5, max: 20, tips: ['Keep it to 5 sentences or fewer', 'Don\'t overthink it - done is better than perfect'] },
+    { match: /(study|learn|read|research)/, min: 25, max: 90, tips: ['Use 25min Pomodoro intervals', 'Active recall beats re-reading every time'] },
+    { match: /(cook|meal|dinner|recipe)/, min: 20, max: 90, tips: ['Prep time is often longer than cooking time', 'Read the full recipe before starting'] },
+    { match: /(exercise|workout|gym)/, min: 30, max: 75, tips: ['Include 5-10 min warmup and cooldown', 'A 20-minute workout beats no workout'] },
+    { match: /(laundry)/, min: 15, max: 25, tips: ['Active time is ~15 min, waiting time is 1-2 hours', 'Fold immediately to avoid the laundry chair'] },
+    { match: /(grocery|shop)/, min: 30, max: 60, tips: ['Organize list by store section to cut time in half', 'Go during off-peak hours (weekday mornings)'] },
+    { match: /(call|phone|appointment)/, min: 5, max: 15, tips: ['Write down what you need to say first', 'The call itself is usually 2-3 minutes'] },
+    { match: /(project|build|create|develop|code)/, min: 60, max: 240, tips: ['Break into 1-hour sessions across multiple days', 'Ship a rough version first, polish later'] },
+    { match: /(tax|bill|budget)/, min: 30, max: 120, tips: ['Gather all documents before starting', 'Use a checklist to track what\'s done'] }
+  ];
+
+  // Check for word count in writing tasks
+  var wordMatch = lower.match(/(write|essay).*?(\d+)\s*word/);
+  if (wordMatch) {
+    var words = parseInt(wordMatch[2]);
+    baseMin = Math.round(words / 500 * 60 * 0.8);
+    baseMax = Math.round(words / 300 * 60 * 1.3);
+    tips = ['Most people write 300-500 words per hour', 'Don\'t edit while writing - draft first, edit later'];
+  } else {
+    var matched = false;
+    for (var i = 0; i < estimates.length; i++) {
+      if (estimates[i].match.test(lower)) {
+        baseMin = estimates[i].min;
+        baseMax = estimates[i].max;
+        tips = estimates[i].tips;
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) {
+      tips = ['Break it into 3 parts and estimate each separately', 'Whatever you think, add 50% more time (planning fallacy)'];
+    }
+  }
+
+  var adhdMin = Math.round(baseMin * 1.3);
+  var adhdMax = Math.round(baseMax * 1.8);
+
+  return { baseMin: baseMin, baseMax: baseMax, adhdMin: adhdMin, adhdMax: adhdMax, tips: tips };
+}
+
+function formatTime(mins) {
+  if (mins < 60) return mins + ' min';
+  var h = Math.floor(mins / 60);
+  var m = mins % 60;
+  return m > 0 ? h + 'h ' + m + 'm' : h + 'h';
+}
+
+function renderEstimate(data) {
+  var container = document.getElementById('estimateOutput');
+  container.textContent = '';
+
+  var wrapper = document.createElement('div');
+  wrapper.className = 'glass rounded-xl p-4 space-y-4';
+
+  // Base estimate
+  var baseSection = document.createElement('div');
+  var baseLabel = document.createElement('span');
+  baseLabel.className = 'text-xs text-smash-300 uppercase tracking-wider font-semibold';
+  baseLabel.textContent = 'Estimated Time';
+  baseSection.appendChild(baseLabel);
+
+  var baseRow = document.createElement('div');
+  baseRow.className = 'mt-2 flex items-center gap-3';
+  var baseTime = document.createElement('div');
+  baseTime.className = 'text-2xl font-bold text-white';
+  baseTime.textContent = formatTime(data.baseMin) + ' - ' + formatTime(data.baseMax);
+  var baseNote = document.createElement('span');
+  baseNote.className = 'text-xs text-slate-500';
+  baseNote.textContent = 'neurotypical estimate';
+  baseRow.appendChild(baseTime);
+  baseRow.appendChild(baseNote);
+  baseSection.appendChild(baseRow);
+  wrapper.appendChild(baseSection);
+
+  // ADHD adjusted
+  var adhdSection = document.createElement('div');
+  adhdSection.className = 'glass rounded-lg p-3';
+  var adhdHeader = document.createElement('div');
+  adhdHeader.className = 'flex items-center gap-2 mb-1';
+  var adhdLabel = document.createElement('span');
+  adhdLabel.className = 'text-xs text-smash-300 font-semibold';
+  adhdLabel.textContent = 'ADHD-Adjusted';
+  adhdHeader.appendChild(adhdLabel);
+  adhdSection.appendChild(adhdHeader);
+
+  var adhdTime = document.createElement('div');
+  adhdTime.className = 'text-xl font-bold text-smash-200';
+  adhdTime.textContent = formatTime(data.adhdMin) + ' - ' + formatTime(data.adhdMax);
+  adhdSection.appendChild(adhdTime);
+
+  var adhdNote = document.createElement('p');
+  adhdNote.className = 'text-xs text-slate-500 mt-1';
+  adhdNote.textContent = 'Accounts for transition time, hyperfocus potential, and executive function overhead';
+  adhdSection.appendChild(adhdNote);
+  wrapper.appendChild(adhdSection);
+
+  // Tips
+  if (data.tips.length > 0) {
+    var tipsSection = document.createElement('div');
+    var tipsLabel = document.createElement('span');
+    tipsLabel.className = 'text-xs text-slate-500 uppercase tracking-wider';
+    tipsLabel.textContent = 'Tips';
+    tipsSection.appendChild(tipsLabel);
+
+    var tipsList = document.createElement('ul');
+    tipsList.className = 'mt-1 space-y-1';
+    data.tips.forEach(function(tip) {
+      var li = document.createElement('li');
+      li.className = 'text-xs text-slate-400 flex items-start gap-2';
+      var marker = document.createElement('span');
+      marker.className = 'text-smash-400 mt-0.5';
+      marker.textContent = '+';
+      li.appendChild(marker);
+      var tipText = document.createTextNode(' ' + tip);
+      li.appendChild(tipText);
+      tipsList.appendChild(li);
+    });
+    tipsSection.appendChild(tipsList);
+    wrapper.appendChild(tipsSection);
+  }
+
+  container.appendChild(wrapper);
+}
+
+// === TONE JUDGE ===
+function judge() {
+  var input = document.getElementById('judgeInput').value.trim();
+  if (!input) return;
+
+  document.getElementById('judgeLoading').classList.remove('hidden');
+  document.getElementById('judgeOutput').classList.add('hidden');
+
+  setTimeout(function() {
+    var result = judgeTone(input);
+    renderJudge(result);
+    document.getElementById('judgeLoading').classList.add('hidden');
+    document.getElementById('judgeOutput').classList.remove('hidden');
+    saveToHistory('judge', input, 'judge');
+  }, 500 + Math.random() * 300);
+}
+
+function judgeTone(text) {
+  var tones = [];
+
+  var passiveAggressive = [
+    /per my last email/i, /as (i|we) (previously|already) (discussed|mentioned|stated)/i,
+    /just to clarify/i, /going forward/i, /as per/i, /i trust/i,
+    /with all due respect/i, /no offense,?\s*but/i, /not sure if you saw/i,
+    /as i mentioned/i, /just a reminder/i, /correct me if i'm wrong/i,
+    /i was under the impression/i, /for future reference/i
+  ];
+  var paCount = passiveAggressive.filter(function(p) { return p.test(text); }).length;
+  if (paCount > 0) tones.push({ label: 'Passive Aggressive', score: Math.min(paCount * 35, 95), color: '#f87171' });
+
+  var apologies = (text.match(/\b(sorry|apologize|apologies|forgive me|my bad|pardon)\b/gi) || []).length;
+  if (apologies > 0) tones.push({ label: 'Apologetic', score: Math.min(apologies * 30, 90), color: '#fbbf24' });
+
+  var confident = [/\bi need\b/i, /\bplease (ensure|make sure|confirm)\b/i, /\bexpect\b/i, /\bmust\b/i, /\bwill\b/i];
+  var confCount = confident.filter(function(p) { return p.test(text); }).length;
+  if (confCount > 0) tones.push({ label: 'Confident', score: Math.min(confCount * 25, 85), color: '#34d399' });
+
+  var friendly = [/\bhope you('re| are) (doing )?(well|great|good)\b/i, /\bthanks?\b/i, /\bhappy to\b/i, /\blooking forward\b/i];
+  var friendlyCount = friendly.filter(function(p) { return p.test(text); }).length;
+  if (friendlyCount > 0) tones.push({ label: 'Friendly', score: Math.min(friendlyCount * 20, 80), color: '#60a5fa' });
+
+  var urgent = [/\basap\b/i, /\burgent\b/i, /\bimmediately\b/i, /\bright now\b/i, /!{2,}/g, /\bdeadline\b/i, /\bcritical\b/i];
+  var urgentCount = urgent.filter(function(p) { return p.test(text); }).length;
+  if (urgentCount > 0) tones.push({ label: 'Urgent', score: Math.min(urgentCount * 30, 90), color: '#f97316' });
+
+  if (tones.length === 0) tones.push({ label: 'Neutral', score: 60, color: '#94a3b8' });
+
+  tones.sort(function(a, b) { return b.score - a.score; });
+
+  var primary = tones[0];
+  var verdict = '', suggestion = '';
+  if (primary.label === 'Passive Aggressive') {
+    verdict = 'This might come across as passive aggressive.';
+    suggestion = 'Try being more direct about what you need. Replace indirect phrases with clear requests.';
+  } else if (primary.label === 'Apologetic') {
+    verdict = 'You\'re over-apologizing. This can undermine your message.';
+    suggestion = 'Remove unnecessary "sorry"s. Save apologies for when you actually did something wrong.';
+  } else if (primary.label === 'Urgent') {
+    verdict = 'This reads as very urgent/demanding.';
+    suggestion = 'Make sure the urgency is warranted. If it is, pair it with a clear deadline and reason.';
+  } else if (primary.label === 'Confident') {
+    verdict = 'This sounds confident and clear.';
+    suggestion = 'Good tone. Make sure confidence doesn\'t tip into demanding.';
+  } else if (primary.label === 'Friendly') {
+    verdict = 'This comes across as warm and approachable.';
+    suggestion = 'Nice tone. Make sure friendliness doesn\'t dilute your main point.';
+  } else {
+    verdict = 'This reads as fairly neutral.';
+    suggestion = 'Neutral is fine for factual communication. Add warmth if it\'s to someone you know.';
+  }
+
+  return { tones: tones, verdict: verdict, suggestion: suggestion };
+}
+
+function renderJudge(data) {
+  var container = document.getElementById('judgeOutput');
+  container.textContent = '';
+
+  var wrapper = document.createElement('div');
+  wrapper.className = 'glass rounded-xl p-4 space-y-4';
+
+  // Tone bars
+  var barsSection = document.createElement('div');
+  var barsLabel = document.createElement('span');
+  barsLabel.className = 'text-xs text-smash-300 uppercase tracking-wider font-semibold';
+  barsLabel.textContent = 'Tone Analysis';
+  barsSection.appendChild(barsLabel);
+
+  var barsContainer = document.createElement('div');
+  barsContainer.className = 'mt-3 space-y-3';
+
+  data.tones.forEach(function(t) {
+    var toneDiv = document.createElement('div');
+
+    var labelRow = document.createElement('div');
+    labelRow.className = 'flex items-center justify-between mb-1';
+    var nameSpan = document.createElement('span');
+    nameSpan.className = 'text-sm text-slate-200';
+    nameSpan.textContent = t.label;
+    var scoreSpan = document.createElement('span');
+    scoreSpan.className = 'text-xs text-slate-400';
+    scoreSpan.textContent = t.score + '%';
+    labelRow.appendChild(nameSpan);
+    labelRow.appendChild(scoreSpan);
+    toneDiv.appendChild(labelRow);
+
+    var barBg = document.createElement('div');
+    barBg.className = 'h-2 rounded-full bg-slate-800 overflow-hidden';
+    var barFill = document.createElement('div');
+    barFill.className = 'h-full rounded-full transition-all duration-500';
+    barFill.style.width = t.score + '%';
+    barFill.style.background = t.color;
+    barBg.appendChild(barFill);
+    toneDiv.appendChild(barBg);
+
+    barsContainer.appendChild(toneDiv);
+  });
+
+  barsSection.appendChild(barsContainer);
+  wrapper.appendChild(barsSection);
+
+  // Verdict
+  var verdictSection = document.createElement('div');
+  verdictSection.className = 'glass rounded-lg p-3';
+  var verdictText = document.createElement('p');
+  verdictText.className = 'text-sm text-white font-medium mb-1';
+  verdictText.textContent = data.verdict;
+  var suggestionText = document.createElement('p');
+  suggestionText.className = 'text-xs text-slate-400';
+  suggestionText.textContent = data.suggestion;
+  verdictSection.appendChild(verdictText);
+  verdictSection.appendChild(suggestionText);
+  wrapper.appendChild(verdictSection);
+
+  container.appendChild(wrapper);
+}
+
+// === HISTORY ===
+function saveToHistory(tool, input, output) {
+  history.unshift({ tool: tool, input: input.slice(0, 200), timestamp: Date.now() });
+  if (history.length > 50) history = history.slice(0, 50);
+  localStorage.setItem('tasksmash_history', JSON.stringify(history));
+}
+
+function toggleHistory() {
+  var panel = document.getElementById('historyPanel');
+  panel.classList.toggle('hidden');
+  if (!panel.classList.contains('hidden')) renderHistory();
+}
+
+function renderHistory() {
+  var list = document.getElementById('historyList');
+  list.textContent = '';
+  if (history.length === 0) {
+    var emptyMsg = document.createElement('p');
+    emptyMsg.className = 'text-slate-500 text-sm text-center mt-8';
+    emptyMsg.textContent = 'No history yet. Smash some tasks!';
+    list.appendChild(emptyMsg);
+    return;
+  }
+  var toolEmojis = { smash: 'Task Smash', formalizer: 'Formalizer', estimator: 'Estimator', judge: 'Tone Judge' };
+  history.forEach(function(h, i) {
+    var div = document.createElement('div');
+    div.className = 'history-item glass rounded-xl p-3 cursor-pointer';
+    div.setAttribute('data-idx', i);
+    div.addEventListener('click', function() {
+      loadFromHistory(parseInt(this.getAttribute('data-idx')));
+    });
+
+    var header = document.createElement('div');
+    header.className = 'flex items-center gap-2 mb-1';
+    var toolName = document.createElement('span');
+    toolName.className = 'text-xs text-smash-300 capitalize';
+    toolName.textContent = toolEmojis[h.tool] || h.tool;
+    var timeEl = document.createElement('span');
+    timeEl.className = 'text-xs text-slate-600 ml-auto';
+    timeEl.textContent = timeAgo(h.timestamp);
+    header.appendChild(toolName);
+    header.appendChild(timeEl);
+    div.appendChild(header);
+
+    var preview = document.createElement('p');
+    preview.className = 'text-xs text-slate-400 truncate';
+    preview.textContent = h.input;
+    div.appendChild(preview);
+
+    list.appendChild(div);
+  });
+}
+
+function loadFromHistory(i) {
+  var h = history[i];
+  switchTool(h.tool);
+  var inputMap = { smash: 'taskInput', formalizer: 'formalizeInput', estimator: 'estimateInput', judge: 'judgeInput' };
+  var el = document.getElementById(inputMap[h.tool]);
+  if (el) el.value = h.input;
+  toggleHistory();
+}
+
+function clearHistory() {
+  history = [];
+  localStorage.removeItem('tasksmash_history');
+  renderHistory();
+}
+
+function timeAgo(ts) {
+  var diff = Date.now() - ts;
+  var mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return mins + 'm ago';
+  var hrs = Math.floor(mins / 60);
+  if (hrs < 24) return hrs + 'h ago';
+  var days = Math.floor(hrs / 24);
+  return days + 'd ago';
+}
+
+// === UTILITIES ===
+function showToast(msg) {
+  var toast = document.createElement('div');
+  toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 glass rounded-xl px-4 py-2 text-sm text-smash-300 font-medium fade-in z-50';
+  toast.textContent = msg;
+  document.body.appendChild(toast);
+  setTimeout(function() { toast.remove(); }, 2000);
+}
+
+function showAbout() {
+  document.getElementById('aboutModal').classList.remove('hidden');
+}
+
+function closeAbout() {
+  document.getElementById('aboutModal').classList.add('hidden');
+}
+
+// Init
+setSpiciness(3);
+
+// Keyboard shortcuts
+document.getElementById('taskInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); smashTask(); }
+});
+document.getElementById('formalizeInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); formalize(); }
+});
+document.getElementById('estimateInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); estimate(); }
+});
+document.getElementById('judgeInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); judge(); }
+});
+
+// Register service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(function() {});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1c1917">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FocusLock">
+<meta name="description" content="Pomodoro timer with ambient sounds, task tracking, and focus streaks. Lock in and get things done.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231c1917' width='100' height='100' rx='20'/><text y='70' x='50' text-anchor='middle' font-size='55'>🎯</text></svg>">
+<title>FocusLock - Lock In, Get It Done</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        warm: { 800: '#1c1917', 900: '#171412', 950: '#0f0d0b' },
+        ember: { 300: '#fdba74', 400: '#fb923c', 500: '#f97316', 600: '#ea580c' },
+        flame: { 300: '#fca5a5', 400: '#f87171', 500: '#ef4444' },
+        focus: { amber: '#f59e0b', copper: '#b45309', rust: '#92400e' }
+      }
+    }
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-behavior: none; background: #1c1917; color: #e2e8f0; }
+
+.warm-bg {
+  background: #1c1917;
+  background-image:
+    radial-gradient(ellipse at 30% 20%, rgba(249,115,22,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(245,158,11,0.03) 0%, transparent 50%);
+}
+
+.glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); }
+.glass-hover:hover { background: rgba(255,255,255,0.07); }
+
+.tab-active { border-bottom: 2px solid #f97316; color: #fdba74; }
+.tab-inactive { border-bottom: 2px solid transparent; color: #64748b; }
+
+.timer-ring-bg { stroke: rgba(249,115,22,0.12); }
+.timer-ring-work { stroke: #f97316; transition: stroke-dashoffset 1s linear; }
+.timer-ring-break { stroke: #22c55e; transition: stroke-dashoffset 1s linear; }
+
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.focus-glow { animation: focusGlow 2s ease-in-out infinite; }
+@keyframes focusGlow { 0%, 100% { box-shadow: 0 0 20px rgba(249,115,22,0.2); } 50% { box-shadow: 0 0 40px rgba(249,115,22,0.4); } }
+
+.break-glow { animation: breakGlow 2s ease-in-out infinite; }
+@keyframes breakGlow { 0%, 100% { box-shadow: 0 0 20px rgba(34,197,94,0.2); } 50% { box-shadow: 0 0 40px rgba(34,197,94,0.4); } }
+
+.streak-fire { animation: firePulse 1.5s ease-in-out infinite; }
+@keyframes firePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+
+.bar-grow { animation: barGrow 0.6s ease-out; }
+@keyframes barGrow { from { height: 0; } }
+
+.sound-btn { transition: all 0.2s ease; }
+.sound-active { background: rgba(249,115,22,0.2); border-color: rgba(249,115,22,0.4); color: #fdba74; }
+.sound-inactive { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); color: #94a3b8; }
+
+.task-done { text-decoration: line-through; opacity: 0.5; }
+
+.pomo-dot { width: 10px; height: 10px; border-radius: 50%; }
+.pomo-completed { background: #f97316; }
+.pomo-empty { background: rgba(249,115,22,0.15); }
+
+.breathing-ring { animation: breathe 4s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.15); opacity: 0.6; } }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(249,115,22,0.3); border-radius: 2px; }
+</style>
+</head>
+<body class="warm-bg min-h-screen">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 glass px-4 py-3">
+  <div class="max-w-lg mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">🎯</span>
+      <h1 class="text-lg font-bold bg-gradient-to-r from-ember-300 to-ember-500 bg-clip-text text-transparent">FocusLock</h1>
+    </div>
+    <div class="flex items-center gap-3">
+      <span id="streakBadge" class="text-sm font-semibold px-2 py-1 rounded-full glass hidden">
+        <span class="streak-fire inline-block">🔥</span> <span id="streakCount">0</span>
+      </span>
+      <span id="pomoCount" class="text-sm font-semibold text-ember-400">0 🍅</span>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav class="sticky top-[52px] z-40 glass">
+  <div class="max-w-lg mx-auto flex">
+    <button onclick="switchTab('timer')" id="tab-timer" class="flex-1 py-3 text-sm font-medium text-center tab-active transition-all">Timer</button>
+    <button onclick="switchTab('tasks')" id="tab-tasks" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Tasks</button>
+    <button onclick="switchTab('sounds')" id="tab-sounds" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Sounds</button>
+    <button onclick="switchTab('stats')" id="tab-stats" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Stats</button>
+    <button onclick="switchTab('tools')" id="tab-tools" class="flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all">Tools</button>
+  </div>
+</nav>
+
+<main class="max-w-lg mx-auto px-4 pb-8">
+
+  <!-- TIMER TAB -->
+  <section id="panel-timer" class="py-6 fade-in">
+    <!-- Timer Circle -->
+    <div class="flex flex-col items-center mb-6">
+      <div class="relative w-72 h-72 mb-4">
+        <div class="absolute inset-4 rounded-full border border-ember-500/10 breathing-ring"></div>
+        <svg class="w-full h-full -rotate-90" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="88" fill="none" stroke-width="6" class="timer-ring-bg"/>
+          <circle id="timerRing" cx="100" cy="100" r="88" fill="none" stroke-width="6" class="timer-ring-work"
+            stroke-linecap="round" stroke-dasharray="553" stroke-dashoffset="0"/>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <div id="timerLabel" class="text-xs font-semibold uppercase tracking-widest text-ember-400 mb-2">Focus Time</div>
+          <div id="timerDisplay" class="text-6xl font-light tracking-tight text-white">25:00</div>
+          <div id="sessionLabel" class="text-sm text-slate-400 mt-2">Session #1</div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex gap-3 mb-4">
+        <button id="startBtn" onclick="toggleTimer()"
+          class="px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 focus-glow bg-gradient-to-r from-ember-500 to-ember-400 text-warm-900 active:scale-95">
+          Start Focus
+        </button>
+        <button onclick="resetTimer()"
+          class="w-14 h-14 rounded-2xl glass flex items-center justify-center text-slate-400 hover:text-white transition-colors active:scale-95">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </button>
+      </div>
+
+      <!-- Today's Pomodoros -->
+      <div class="flex gap-2 items-center">
+        <span class="text-xs text-slate-500">Today:</span>
+        <div class="flex gap-1.5" id="pomoDots"></div>
+      </div>
+    </div>
+
+    <!-- Timer Settings -->
+    <div class="glass rounded-2xl p-5 mb-4">
+      <h3 class="font-semibold text-ember-300 mb-3">Timer settings</h3>
+      <div class="grid grid-cols-3 gap-3">
+        <div>
+          <label class="text-xs text-slate-400 block mb-1">Focus</label>
+          <div class="flex items-center gap-1">
+            <button onclick="adjustTime('work', -5)" class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white active:scale-90">-</button>
+            <span id="workTimeDisplay" class="text-lg font-bold text-white flex-1 text-center">25</span>
+            <button onclick="adjustTime('work', 5)" class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white active:scale-90">+</button>
+          </div>
+          <span class="text-xs text-slate-500 block text-center">min</span>
+        </div>
+        <div>
+          <label class="text-xs text-slate-400 block mb-1">Short break</label>
+          <div class="flex items-center gap-1">
+            <button onclick="adjustTime('short', -1)" class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white active:scale-90">-</button>
+            <span id="shortTimeDisplay" class="text-lg font-bold text-white flex-1 text-center">5</span>
+            <button onclick="adjustTime('short', 1)" class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white active:scale-90">+</button>
+          </div>
+          <span class="text-xs text-slate-500 block text-center">min</span>
+        </div>
+        <div>
+          <label class="text-xs text-slate-400 block mb-1">Long break</label>
+          <div class="flex items-center gap-1">
+            <button onclick="adjustTime('long', -5)" class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white active:scale-90">-</button>
+            <span id="longTimeDisplay" class="text-lg font-bold text-white flex-1 text-center">15</span>
+            <button onclick="adjustTime('long', 5)" class="w-8 h-8 rounded-lg glass flex items-center justify-center text-slate-400 hover:text-white active:scale-90">+</button>
+          </div>
+          <span class="text-xs text-slate-500 block text-center">min</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Focus Mode -->
+    <div class="glass rounded-2xl p-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="font-semibold text-ember-300">Screen Wake Lock</h3>
+          <p class="text-xs text-slate-400 mt-1">Keeps screen on during focus sessions</p>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="wakeLockToggle" class="sr-only peer" onchange="toggleWakeLock()">
+          <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-ember-500"></div>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASKS TAB -->
+  <section id="panel-tasks" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-ember-300">Task List</h2>
+
+    <!-- Add Task -->
+    <div class="glass rounded-2xl p-5 mb-6">
+      <div class="flex gap-2 mb-3">
+        <input type="text" id="newTaskInput" placeholder="What are you working on?"
+          class="flex-1 bg-warm-900 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500"
+          onkeydown="if(event.key==='Enter')addTask()">
+        <button onclick="addTask()" class="px-4 py-2.5 rounded-xl bg-ember-500/20 text-ember-300 font-medium text-sm hover:bg-ember-500/30 transition-all active:scale-95">Add</button>
+      </div>
+      <div class="flex items-center gap-3">
+        <label class="text-xs text-slate-400">Estimated pomodoros:</label>
+        <div class="flex gap-1">
+          <button onclick="setEstimate(1)" id="est1" class="w-7 h-7 rounded-md glass text-xs font-medium text-slate-400 hover:text-ember-300 active:scale-90">1</button>
+          <button onclick="setEstimate(2)" id="est2" class="w-7 h-7 rounded-md glass text-xs font-medium text-slate-400 hover:text-ember-300 active:scale-90">2</button>
+          <button onclick="setEstimate(3)" id="est3" class="w-7 h-7 rounded-md glass text-xs font-medium text-slate-400 hover:text-ember-300 active:scale-90">3</button>
+          <button onclick="setEstimate(4)" id="est4" class="w-7 h-7 rounded-md glass text-xs font-medium text-slate-400 hover:text-ember-300 active:scale-90">4</button>
+          <button onclick="setEstimate(5)" id="est5" class="w-7 h-7 rounded-md glass text-xs font-medium text-slate-400 hover:text-ember-300 active:scale-90">5</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <div id="taskList" class="space-y-2">
+      <p class="text-sm text-slate-500 text-center py-8">No tasks yet. Add one above to get started.</p>
+    </div>
+
+    <!-- Clear Completed -->
+    <button onclick="clearCompletedTasks()" id="clearDoneBtn" class="w-full mt-4 py-2.5 rounded-xl glass text-slate-400 text-sm font-medium hover:text-white transition-colors hidden">
+      Clear completed tasks
+    </button>
+  </section>
+
+  <!-- SOUNDS TAB -->
+  <section id="panel-sounds" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-2 text-ember-300">Ambient Sounds</h2>
+    <p class="text-sm text-slate-400 mb-6">Background sounds to help you focus.</p>
+
+    <div class="grid grid-cols-2 gap-3" id="soundGrid">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- Volume -->
+    <div class="glass rounded-2xl p-5 mt-6">
+      <div class="flex items-center justify-between mb-2">
+        <h3 class="font-semibold text-white text-sm">Volume</h3>
+        <span id="volumeDisplay" class="text-sm text-slate-400">50%</span>
+      </div>
+      <input type="range" id="volumeSlider" min="0" max="100" value="50" oninput="changeVolume()"
+        class="w-full h-2 rounded-lg appearance-none cursor-pointer bg-warm-900 accent-ember-500">
+    </div>
+
+    <!-- Mix -->
+    <div class="glass rounded-2xl p-5 mt-4">
+      <h3 class="font-semibold text-white text-sm mb-2">Sound mixing</h3>
+      <p class="text-xs text-slate-400">Tap multiple sounds to layer them together. Adjust volume to blend.</p>
+    </div>
+  </section>
+
+  <!-- STATS TAB -->
+  <section id="panel-stats" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-4 text-ember-300">Productivity Stats</h2>
+
+    <!-- Daily Chart -->
+    <div class="glass rounded-2xl p-5 mb-6">
+      <h3 class="font-semibold mb-4 text-white">This week (pomodoros)</h3>
+      <div class="flex items-end justify-between gap-2" style="height: 160px;" id="weeklyChart"></div>
+      <div class="flex justify-between mt-2 text-xs text-slate-500" id="weeklyLabels"></div>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="grid grid-cols-2 gap-3 mb-6">
+      <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-ember-400" id="totalPomos">0</div>
+        <div class="text-xs text-slate-500">Total pomodoros</div>
+      </div>
+      <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-focus-amber" id="totalHours">0</div>
+        <div class="text-xs text-slate-500">Total focus hours</div>
+      </div>
+    </div>
+
+    <!-- Streak -->
+    <div class="glass rounded-2xl p-5">
+      <h3 class="font-semibold mb-3 text-white">Focus streak</h3>
+      <div class="flex items-center gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-ember-400" id="statsCurrentStreak">0</div>
+          <div class="text-xs text-slate-500">Current</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-focus-amber" id="statsBestStreak">0</div>
+          <div class="text-xs text-slate-500">Best ever</div>
+        </div>
+        <div class="w-px h-10 bg-white/10"></div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-green-400" id="statsTotalDays">0</div>
+          <div class="text-xs text-slate-500">Days tracked</div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">Streak counts consecutive days completing 4+ pomodoros</p>
+    </div>
+  </section>
+
+  <!-- TOOLS TAB -->
+  <section id="panel-tools" class="py-6 fade-in hidden">
+    <h2 class="text-xl font-bold mb-2 text-ember-300">Productivity Tools</h2>
+    <p class="text-sm text-slate-400 mb-6">Recommended tools and gear for deep work.</p>
+
+    <div class="space-y-4">
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-ember-500/20 flex items-center justify-center text-2xl shrink-0">🎧</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Sony WH-1000XM5</h3>
+          <p class="text-xs text-slate-400">Industry-leading noise cancellation, 30hr battery</p>
+          <span class="text-xs text-ember-400 font-medium">$278 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-focus-amber/20 flex items-center justify-center text-2xl shrink-0">📓</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Leuchtturm1917 Notebook</h3>
+          <p class="text-xs text-slate-400">Dotted pages, numbered, 249 pages, task planning</p>
+          <span class="text-xs text-ember-400 font-medium">$19.95 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-green-500/20 flex items-center justify-center text-2xl shrink-0">☕</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Matcha Powder (Ceremonial)</h3>
+          <p class="text-xs text-slate-400">L-theanine + caffeine for calm, sustained focus</p>
+          <span class="text-xs text-ember-400 font-medium">$29.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-ember-500/20 flex items-center justify-center text-2xl shrink-0">💡</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Desk Lamp (Warm Light)</h3>
+          <p class="text-xs text-slate-400">Adjustable color temp, USB charging, eye-care LED</p>
+          <span class="text-xs text-ember-400 font-medium">$45.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-focus-amber/20 flex items-center justify-center text-2xl shrink-0">⏳</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Physical Sand Timer (25 min)</h3>
+          <p class="text-xs text-slate-400">Visual countdown, no screens, satisfying to watch</p>
+          <span class="text-xs text-ember-400 font-medium">$14.99 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a href="#" class="glass rounded-2xl p-5 flex items-center gap-4 glass-hover block transition-all active:scale-[0.98]">
+        <div class="w-14 h-14 rounded-xl bg-green-500/20 flex items-center justify-center text-2xl shrink-0">🧠</div>
+        <div class="flex-1 min-w-0">
+          <h3 class="font-semibold text-white text-sm">Lion's Mane Supplement</h3>
+          <p class="text-xs text-slate-400">Cognitive support, dual extract, 60 capsules</p>
+          <span class="text-xs text-ember-400 font-medium">$23.95 on Amazon</span>
+        </div>
+        <svg class="w-5 h-5 text-slate-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <p class="text-xs text-slate-500 text-center mt-6">Links may include affiliate partnerships. We only recommend tools we trust.</p>
+  </section>
+
+</main>
+
+<script>
+// ==================== STATE ====================
+const STORAGE_KEY = 'focuslock_data';
+let state = loadState();
+let timerInterval = null;
+let timeRemaining = 0;
+let wakeLock = null;
+let audioContext = null;
+let activeOscillators = {};
+
+function defaultState() {
+  return {
+    workTime: 25,
+    shortBreak: 5,
+    longBreak: 15,
+    days: {},
+    tasks: [],
+    bestStreak: 0,
+    isRunning: false,
+    mode: 'work',
+    sessionNumber: 1,
+    activeSounds: [],
+    volume: 50
+  };
+}
+
+function loadState() {
+  try {
+    const s = localStorage.getItem(STORAGE_KEY);
+    if (s) return { ...defaultState(), ...JSON.parse(s) };
+  } catch(e) {}
+  return defaultState();
+}
+
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function today() { return new Date().toISOString().split('T')[0]; }
+
+function getTodayData() {
+  if (!state.days[today()]) state.days[today()] = { pomodoros: 0, focusMinutes: 0 };
+  return state.days[today()];
+}
+
+// ==================== TABS ====================
+function switchTab(tab) {
+  const tabs = ['timer', 'tasks', 'sounds', 'stats', 'tools'];
+  tabs.forEach(t => {
+    document.getElementById('panel-' + t).classList.toggle('hidden', t !== tab);
+    document.getElementById('tab-' + t).className = t === tab
+      ? 'flex-1 py-3 text-sm font-medium text-center tab-active transition-all'
+      : 'flex-1 py-3 text-sm font-medium text-center tab-inactive transition-all';
+  });
+  if (tab === 'stats') renderStats();
+  if (tab === 'tasks') renderTasks();
+  if (tab === 'sounds') renderSounds();
+}
+
+// ==================== TIMER ====================
+function toggleTimer() {
+  if (state.isRunning) {
+    pauseTimer();
+  } else {
+    startTimer();
+  }
+}
+
+function startTimer() {
+  if (timeRemaining <= 0) {
+    const minutes = state.mode === 'work' ? state.workTime
+      : state.mode === 'short' ? state.shortBreak
+      : state.longBreak;
+    timeRemaining = minutes * 60;
+  }
+
+  state.isRunning = true;
+  saveState();
+  updateTimerDisplay();
+
+  timerInterval = setInterval(() => {
+    timeRemaining--;
+    if (timeRemaining <= 0) {
+      completeSession();
+    } else {
+      updateTimerDisplay();
+    }
+  }, 1000);
+
+  const btn = document.getElementById('startBtn');
+  btn.textContent = 'Pause';
+  btn.classList.remove('focus-glow');
+  if (state.mode === 'work') {
+    btn.classList.add('focus-glow');
+  } else {
+    btn.classList.add('break-glow');
+  }
+}
+
+function pauseTimer() {
+  state.isRunning = false;
+  saveState();
+  clearInterval(timerInterval);
+  timerInterval = null;
+  const btn = document.getElementById('startBtn');
+  btn.textContent = 'Resume';
+  btn.classList.remove('focus-glow', 'break-glow');
+}
+
+function resetTimer() {
+  state.isRunning = false;
+  state.mode = 'work';
+  saveState();
+  clearInterval(timerInterval);
+  timerInterval = null;
+  timeRemaining = 0;
+  updateTimerDisplay();
+  const btn = document.getElementById('startBtn');
+  btn.textContent = 'Start Focus';
+  btn.classList.remove('break-glow');
+  btn.classList.add('focus-glow');
+  btn.classList.remove('from-green-500', 'to-emerald-400');
+  btn.classList.add('from-ember-500', 'to-ember-400');
+  document.getElementById('timerLabel').textContent = 'Focus Time';
+  document.getElementById('timerRing').classList.remove('timer-ring-break');
+  document.getElementById('timerRing').classList.add('timer-ring-work');
+}
+
+function completeSession() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  state.isRunning = false;
+
+  if (state.mode === 'work') {
+    const d = getTodayData();
+    d.pomodoros++;
+    d.focusMinutes += state.workTime;
+    state.sessionNumber++;
+    saveState();
+    updatePomoCount();
+    renderPomoDots();
+
+    playCompletionSound();
+    if (Notification.permission === 'granted') {
+      new Notification('FocusLock', { body: 'Great work! Time for a break.', icon: '🎯' });
+    }
+
+    if (d.pomodoros % 4 === 0) {
+      state.mode = 'long';
+      document.getElementById('timerLabel').textContent = 'Long Break';
+    } else {
+      state.mode = 'short';
+      document.getElementById('timerLabel').textContent = 'Short Break';
+    }
+
+    const btn = document.getElementById('startBtn');
+    btn.textContent = 'Start Break';
+    btn.classList.remove('focus-glow', 'from-ember-500', 'to-ember-400');
+    btn.classList.add('break-glow', 'from-green-500', 'to-emerald-400');
+    document.getElementById('timerRing').classList.remove('timer-ring-work');
+    document.getElementById('timerRing').classList.add('timer-ring-break');
+  } else {
+    state.mode = 'work';
+    document.getElementById('timerLabel').textContent = 'Focus Time';
+
+    if (Notification.permission === 'granted') {
+      new Notification('FocusLock', { body: 'Break over. Time to focus!', icon: '🎯' });
+    }
+
+    const btn = document.getElementById('startBtn');
+    btn.textContent = 'Start Focus';
+    btn.classList.remove('break-glow', 'from-green-500', 'to-emerald-400');
+    btn.classList.add('focus-glow', 'from-ember-500', 'to-ember-400');
+    document.getElementById('timerRing').classList.remove('timer-ring-break');
+    document.getElementById('timerRing').classList.add('timer-ring-work');
+  }
+
+  timeRemaining = 0;
+  updateTimerDisplay();
+  saveState();
+  updateStreakBadge();
+}
+
+function updateTimerDisplay() {
+  const totalSeconds = state.mode === 'work' ? state.workTime * 60
+    : state.mode === 'short' ? state.shortBreak * 60
+    : state.longBreak * 60;
+
+  const displayTime = timeRemaining > 0 ? timeRemaining : totalSeconds;
+  const mins = Math.floor(displayTime / 60);
+  const secs = displayTime % 60;
+  document.getElementById('timerDisplay').textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+  const progress = timeRemaining > 0 ? (totalSeconds - timeRemaining) / totalSeconds : 0;
+  const offset = 553 * (1 - progress);
+  document.getElementById('timerRing').style.strokeDashoffset = offset;
+
+  document.getElementById('sessionLabel').textContent = `Session #${state.sessionNumber}`;
+}
+
+function adjustTime(type, delta) {
+  if (state.isRunning) return;
+  if (type === 'work') {
+    state.workTime = Math.max(5, Math.min(60, state.workTime + delta));
+    document.getElementById('workTimeDisplay').textContent = state.workTime;
+  } else if (type === 'short') {
+    state.shortBreak = Math.max(1, Math.min(15, state.shortBreak + delta));
+    document.getElementById('shortTimeDisplay').textContent = state.shortBreak;
+  } else {
+    state.longBreak = Math.max(5, Math.min(30, state.longBreak + delta));
+    document.getElementById('longTimeDisplay').textContent = state.longBreak;
+  }
+  saveState();
+  if (timeRemaining <= 0) updateTimerDisplay();
+}
+
+// ==================== POMODORO DOTS ====================
+function renderPomoDots() {
+  const d = getTodayData();
+  const dots = document.getElementById('pomoDots');
+  let html = '';
+  for (let i = 0; i < Math.max(d.pomodoros, 8); i++) {
+    html += `<div class="pomo-dot ${i < d.pomodoros ? 'pomo-completed' : 'pomo-empty'}"></div>`;
+  }
+  dots.innerHTML = html;
+}
+
+function updatePomoCount() {
+  const d = getTodayData();
+  document.getElementById('pomoCount').textContent = d.pomodoros + ' 🍅';
+}
+
+// ==================== TASKS ====================
+let taskEstimate = 1;
+
+function setEstimate(n) {
+  taskEstimate = n;
+  for (let i = 1; i <= 5; i++) {
+    document.getElementById('est' + i).classList.toggle('text-ember-300', i === n);
+    document.getElementById('est' + i).classList.toggle('bg-ember-500/20', i === n);
+  }
+}
+
+function addTask() {
+  const input = document.getElementById('newTaskInput');
+  const text = input.value.trim();
+  if (!text) return;
+  state.tasks.push({ text, estimate: taskEstimate, completed: 0, done: false });
+  input.value = '';
+  taskEstimate = 1;
+  setEstimate(1);
+  saveState();
+  renderTasks();
+}
+
+function renderTasks() {
+  const list = document.getElementById('taskList');
+  if (state.tasks.length === 0) {
+    list.innerHTML = '<p class="text-sm text-slate-500 text-center py-8">No tasks yet. Add one above to get started.</p>';
+    document.getElementById('clearDoneBtn').classList.add('hidden');
+    return;
+  }
+
+  list.innerHTML = state.tasks.map((task, i) => {
+    const pomoDots = Array.from({length: task.estimate}, (_, j) => {
+      return `<div class="w-2 h-2 rounded-full ${j < task.completed ? 'bg-ember-500' : 'bg-white/10'}"></div>`;
+    }).join('');
+
+    return `
+      <div class="glass rounded-xl p-4 flex items-center gap-3 ${task.done ? 'opacity-40' : ''}">
+        <button onclick="toggleTask(${i})"
+          class="w-6 h-6 rounded-md border-2 ${task.done ? 'bg-ember-500 border-ember-500' : 'border-white/20'} flex items-center justify-center shrink-0 transition-all active:scale-90">
+          ${task.done ? '<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>' : ''}
+        </button>
+        <div class="flex-1 min-w-0">
+          <span class="text-sm ${task.done ? 'line-through text-slate-500' : 'text-white'}">${task.text}</span>
+          <div class="flex gap-1 mt-1">${pomoDots}</div>
+        </div>
+        <button onclick="incrementTaskPomo(${i})" class="text-xs px-2 py-1 rounded glass text-slate-400 hover:text-ember-300 transition-colors ${task.done ? 'hidden' : ''}">+🍅</button>
+        <button onclick="deleteTask(${i})" class="text-slate-600 hover:text-red-400 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    `;
+  }).join('');
+
+  const hasDone = state.tasks.some(t => t.done);
+  document.getElementById('clearDoneBtn').classList.toggle('hidden', !hasDone);
+}
+
+function toggleTask(i) {
+  state.tasks[i].done = !state.tasks[i].done;
+  saveState();
+  renderTasks();
+}
+
+function incrementTaskPomo(i) {
+  if (state.tasks[i].completed < state.tasks[i].estimate) {
+    state.tasks[i].completed++;
+    if (state.tasks[i].completed >= state.tasks[i].estimate) {
+      state.tasks[i].done = true;
+    }
+    saveState();
+    renderTasks();
+  }
+}
+
+function deleteTask(i) {
+  state.tasks.splice(i, 1);
+  saveState();
+  renderTasks();
+}
+
+function clearCompletedTasks() {
+  state.tasks = state.tasks.filter(t => !t.done);
+  saveState();
+  renderTasks();
+}
+
+// ==================== SOUNDS ====================
+const sounds = [
+  { id: 'rain', emoji: '🌧️', name: 'Rain', type: 'brown', freq: 200 },
+  { id: 'cafe', emoji: '☕', name: 'Cafe', type: 'pink', freq: 300 },
+  { id: 'white', emoji: '📻', name: 'White Noise', type: 'white', freq: 0 },
+  { id: 'forest', emoji: '🌲', name: 'Forest', type: 'brown', freq: 150 },
+  { id: 'ocean', emoji: '🌊', name: 'Ocean Waves', type: 'pink', freq: 100 },
+  { id: 'fire', emoji: '🔥', name: 'Fireplace', type: 'brown', freq: 80 },
+  { id: 'wind', emoji: '💨', name: 'Wind', type: 'pink', freq: 250 },
+  { id: 'thunder', emoji: '⛈️', name: 'Thunder Storm', type: 'brown', freq: 60 },
+];
+
+function renderSounds() {
+  const grid = document.getElementById('soundGrid');
+  grid.innerHTML = sounds.map(s => {
+    const active = state.activeSounds.includes(s.id);
+    return `
+      <button onclick="toggleSound('${s.id}')" class="sound-btn glass rounded-2xl p-5 text-center border ${active ? 'sound-active' : 'sound-inactive'} active:scale-95">
+        <div class="text-3xl mb-2">${s.emoji}</div>
+        <div class="text-sm font-medium">${s.name}</div>
+      </button>
+    `;
+  }).join('');
+}
+
+function getAudioContext() {
+  if (!audioContext) {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  return audioContext;
+}
+
+function toggleSound(id) {
+  const idx = state.activeSounds.indexOf(id);
+  if (idx >= 0) {
+    state.activeSounds.splice(idx, 1);
+    stopSound(id);
+  } else {
+    state.activeSounds.push(id);
+    playSound(id);
+  }
+  saveState();
+  renderSounds();
+}
+
+function playSound(id) {
+  const ctx = getAudioContext();
+  const sound = sounds.find(s => s.id === id);
+  if (!sound) return;
+
+  const bufferSize = 4096;
+  const node = ctx.createScriptProcessor(bufferSize, 1, 1);
+  const gainNode = ctx.createGain();
+  gainNode.gain.value = state.volume / 200;
+
+  let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+
+  node.onaudioprocess = function(e) {
+    const output = e.outputBuffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      const white = Math.random() * 2 - 1;
+
+      if (sound.type === 'white') {
+        output[i] = white * 0.3;
+      } else if (sound.type === 'pink') {
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.05;
+        b6 = white * 0.115926;
+      } else {
+        b0 = (b0 + (0.02 * white)) / 1.02;
+        output[i] = b0 * 3.5;
+      }
+    }
+  };
+
+  node.connect(gainNode);
+  gainNode.connect(ctx.destination);
+  activeOscillators[id] = { node, gainNode };
+}
+
+function stopSound(id) {
+  if (activeOscillators[id]) {
+    activeOscillators[id].node.disconnect();
+    activeOscillators[id].gainNode.disconnect();
+    delete activeOscillators[id];
+  }
+}
+
+function changeVolume() {
+  state.volume = parseInt(document.getElementById('volumeSlider').value);
+  document.getElementById('volumeDisplay').textContent = state.volume + '%';
+  Object.keys(activeOscillators).forEach(id => {
+    if (activeOscillators[id] && activeOscillators[id].gainNode) {
+      activeOscillators[id].gainNode.gain.value = state.volume / 200;
+    }
+  });
+  saveState();
+}
+
+// ==================== COMPLETION SOUND ====================
+function playCompletionSound() {
+  try {
+    const ctx = getAudioContext();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+    osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.15);
+    osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.3);
+    gain.gain.setValueAtTime(0.3, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.5);
+  } catch(e) {}
+}
+
+// ==================== WAKE LOCK ====================
+async function toggleWakeLock() {
+  const enabled = document.getElementById('wakeLockToggle').checked;
+  if (enabled && 'wakeLock' in navigator) {
+    try {
+      wakeLock = await navigator.wakeLock.request('screen');
+    } catch(e) {}
+  } else if (wakeLock) {
+    wakeLock.release();
+    wakeLock = null;
+  }
+}
+
+// ==================== STATS ====================
+function renderStats() {
+  renderWeeklyChart();
+  const streak = calculateStreak();
+  if (streak > state.bestStreak) { state.bestStreak = streak; saveState(); }
+  document.getElementById('statsCurrentStreak').textContent = streak;
+  document.getElementById('statsBestStreak').textContent = state.bestStreak;
+  document.getElementById('statsTotalDays').textContent = Object.keys(state.days).length;
+
+  const totalPomos = Object.values(state.days).reduce((s, d) => s + d.pomodoros, 0);
+  const totalMins = Object.values(state.days).reduce((s, d) => s + d.focusMinutes, 0);
+  document.getElementById('totalPomos').textContent = totalPomos;
+  document.getElementById('totalHours').textContent = (totalMins / 60).toFixed(1);
+}
+
+function renderWeeklyChart() {
+  const chart = document.getElementById('weeklyChart');
+  const labels = document.getElementById('weeklyLabels');
+  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const days = getLast7Days();
+  const maxPomos = Math.max(...days.map(d => state.days[d] ? state.days[d].pomodoros : 0), 8);
+
+  let barsHtml = '';
+  let labelsHtml = '';
+  days.forEach(d => {
+    const pomos = state.days[d] ? state.days[d].pomodoros : 0;
+    const pct = Math.max((pomos / maxPomos) * 100, 4);
+    const hit4 = pomos >= 4;
+    const color = pomos === 0 ? 'bg-white/5' : hit4 ? 'bg-gradient-to-t from-ember-500 to-focus-amber' : 'bg-gradient-to-t from-ember-600/60 to-ember-400/60';
+    const dt = new Date(d);
+    barsHtml += `<div class="flex-1 flex flex-col items-center justify-end h-full">
+      <span class="text-xs font-medium mb-1 ${pomos === 0 ? 'text-slate-600' : 'text-slate-300'}">${pomos > 0 ? pomos : ''}</span>
+      <div class="w-full max-w-[32px] rounded-t-md ${color} bar-grow" style="height: ${pct}%"></div>
+    </div>`;
+    labelsHtml += `<span class="flex-1 text-center">${dayNames[dt.getDay()]}</span>`;
+  });
+  chart.innerHTML = barsHtml;
+  labels.innerHTML = labelsHtml;
+}
+
+function getLast7Days() {
+  const days = [];
+  const t = new Date();
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(t);
+    d.setDate(d.getDate() - i);
+    days.push(d.toISOString().split('T')[0]);
+  }
+  return days;
+}
+
+// ==================== STREAKS ====================
+function calculateStreak() {
+  let streak = 0;
+  const t = new Date();
+  for (let i = 0; i < 365; i++) {
+    const d = new Date(t);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    const dayData = state.days[dateStr];
+    if (dayData && dayData.pomodoros >= 4) {
+      streak++;
+    } else {
+      if (i === 0) continue;
+      break;
+    }
+  }
+  return streak;
+}
+
+function updateStreakBadge() {
+  const streak = calculateStreak();
+  document.getElementById('streakCount').textContent = streak;
+  document.getElementById('streakBadge').classList.toggle('hidden', streak === 0);
+}
+
+// ==================== INIT ====================
+function init() {
+  document.getElementById('workTimeDisplay').textContent = state.workTime;
+  document.getElementById('shortTimeDisplay').textContent = state.shortBreak;
+  document.getElementById('longTimeDisplay').textContent = state.longBreak;
+  document.getElementById('volumeSlider').value = state.volume;
+  document.getElementById('volumeDisplay').textContent = state.volume + '%';
+
+  updateTimerDisplay();
+  updatePomoCount();
+  renderPomoDots();
+  updateStreakBadge();
+  setEstimate(1);
+
+  if (Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+
+  // Restart active sounds
+  state.activeSounds.forEach(id => playSound(id));
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+
+init();
+</script>
+
+<!-- ===== PRO BADGE ===== -->
+<a href="https://printmaxx.gumroad.com" target="_blank" rel="noopener" style="
+  position:fixed;bottom:20px;right:16px;z-index:999;
+  background:linear-gradient(135deg,#f97316,#ea580c);
+  color:#fff;font-family:'Inter',system-ui,sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:.5px;
+  padding:6px 12px;border-radius:20px;text-decoration:none;
+  box-shadow:0 2px 12px rgba(249,115,22,.45);
+  display:flex;align-items:center;gap:5px;
+  transition:transform .15s,box-shadow .15s;
+" onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 18px rgba(249,115,22,.65)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(249,115,22,.45)'">
+  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+  Upgrade to Pro
+</a>
+
+<!-- ===== EMAIL CAPTURE MODAL ===== -->
+<div id="flEmailOverlay" style="
+  position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;
+  display:none;align-items:center;justify-content:center;padding:20px;
+">
+  <div style="
+    background:#1c1917;border:1px solid rgba(249,115,22,.2);
+    border-radius:20px;padding:28px 24px;max-width:380px;width:100%;
+    box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 40px rgba(249,115,22,.05);
+    position:relative;animation:flSlideUp .3s ease;
+    box-sizing:border-box;
+  ">
+    <button id="flEmailClose" aria-label="Close" style="
+      position:absolute;top:12px;right:14px;background:none;border:none;
+      color:#64748b;cursor:pointer;font-size:20px;line-height:1;padding:4px;
+    ">&times;</button>
+
+    <div style="font-size:30px;margin-bottom:10px;text-align:center;">🎯</div>
+    <h2 style="
+      font-family:'Inter',system-ui,sans-serif;font-size:17px;font-weight:700;
+      color:#f1f5f9;text-align:center;margin:0 0 8px;line-height:1.35;
+    ">Get the focus accountability system</h2>
+    <p style="
+      font-family:'Inter',system-ui,sans-serif;font-size:13px;color:#94a3b8;
+      text-align:center;margin:0 0 20px;line-height:1.6;
+    ">Join 300+ builders who ship daily. Weekly focus breakdowns, deep work protocols, and what's actually working.</p>
+
+    <form action="https://formsubmit.co/printmaxxstudio@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:10px;">
+      <input type="hidden" name="_subject" value="[FocusLock] Email Signup">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://focuslock.surge.sh">
+      <input type="email" name="email" required placeholder="your@email.com" style="
+        width:100%;background:#171412;border:1px solid rgba(255,255,255,.08);
+        border-radius:12px;padding:13px 14px;color:#f1f5f9;
+        font-family:'Inter',system-ui,sans-serif;font-size:15px;outline:none;
+        box-sizing:border-box;transition:border-color .15s;
+      " onfocus="this.style.borderColor='rgba(249,115,22,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.08)'">
+      <button type="submit" style="
+        width:100%;background:linear-gradient(135deg,#f97316,#ea580c);
+        color:#1c1917;border:none;border-radius:12px;padding:13px;
+        font-family:'Inter',system-ui,sans-serif;font-size:15px;font-weight:700;
+        cursor:pointer;transition:opacity .15s;
+      " onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+        Send me the system
+      </button>
+    </form>
+    <p style="font-family:'Inter',system-ui,sans-serif;font-size:11px;color:#475569;text-align:center;margin:12px 0 0;">No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<style>
+@keyframes flSlideUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+</style>
+
+<script>
+(function(){
+  var FL_DISMISS_KEY = 'focuslock_email_dismiss';
+  function shouldShow() {
+    var ts = localStorage.getItem(FL_DISMISS_KEY);
+    if (!ts) return true;
+    return (Date.now() - parseInt(ts, 10)) > 7 * 24 * 60 * 60 * 1000;
+  }
+  function dismiss() {
+    localStorage.setItem(FL_DISMISS_KEY, String(Date.now()));
+    document.getElementById('flEmailOverlay').style.display = 'none';
+  }
+  if (shouldShow()) {
+    setTimeout(function() {
+      var overlay = document.getElementById('flEmailOverlay');
+      overlay.style.display = 'flex';
+      document.getElementById('flEmailClose').addEventListener('click', dismiss);
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) dismiss();
+      });
+    }, 30000);
+  }
+})();
+</script>
+</body>
+</html>

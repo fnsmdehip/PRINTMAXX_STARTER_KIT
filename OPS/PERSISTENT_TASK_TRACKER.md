@@ -1,6 +1,29 @@
 # PERSISTENT TASK TRACKER
 # Status: ACTIVE — READ THIS EVERY SESSION START, AFTER EVERY COMPACTION
-# Updated: 2026-03-09
+# Updated: 2026-03-10
+
+### INBOUND MAXIMIZER CYCLE 9 — 2026-03-10
+- **Cross-promo footers:** Injected into ALL 8 PWA source files. Each app now links to all others + has email capture.
+  - Script: `AUTOMATIONS/inject_cross_promo.py` (idempotent, safe to re-run)
+  - **NEEDS REDEPLOY:** `surge` deploy each PWA dir to go live
+- **New lead magnet:** Productivity Stack Quiz (5 questions → app recommendation)
+  - File: `DIGITAL_PRODUCTS/lead_magnets/productivity-stack-quiz.html`
+  - Deploy: `surge DIGITAL_PRODUCTS/lead_magnets/ productivity-stack-quiz.surge.sh`
+- **App promo tweets:** 12 tweets generated at `CONTENT/social/APP_PROMO_TWEETS_MAR10.csv` (PENDING_REVIEW)
+- **Sitemap updated** with new quiz + missing pages
+- **Report:** `AUTOMATIONS/agent/swarm/reports/inbound_report_20260310.md`
+- **KEY STAT:** Inbound capture pages went from 22 → 30+. Cross-linked PWAs: 0/8 → 8/8.
+- **HUMAN ACTIONS:** Deploy PWAs (~10 min), post tweets (~15 min), wire email forms to Beehiiv (~15 min)
+
+### SWARM BRAIN CYCLE 11 — 2026-03-10
+- **Mode:** DEEP CONSERVATION. 3 agents active (system_healer, cross_pollinator, gap_hunter). 7+ hibernated.
+- **Key metric:** 20,214 alpha entries, 51 products, 538 posts, 10,132+ leads. ALL built, ZERO activated. Day 36 at $0.
+- **Decisions:** 13 total. Hibernated trend_synthesizer, social_poster, image_factory. Throttled gap_hunter (3h→8h), competitor_stalker (→24h), alpha_intelligence (→12h). Redirected meta_executor to activation packaging. Archived stale "3 cold emails" recommendation after 9 cycles.
+- **OpenClaw PATH fix:** Executing (automated). Reactivates highest-value venture.
+- **Token budget:** 15 runs/day (down from 100+ peak, 28 at Cycle 10). 60-70% savings.
+- **Exit condition:** First $1 earned → GROWTH mode → reactivate all agents.
+- **HUMAN BLOCKERS (75 min total):** Gumroad (45m), X Premium (5m), Buffer CSV import (5m), affiliate signup (15m), paste 3 emails (5m). Unlocks $850-5,300/mo pipeline.
+- **Full report:** `AUTOMATIONS/agent/swarm/reports/swarm_brain_20260310.md`
 
 ### DIGITAL PRODUCT CYCLE — 2026-03-09 (autonomy agent)
 - **Status:** DONE (product built). HUMAN ACTION: List on Gumroad/Whop when accounts created.
