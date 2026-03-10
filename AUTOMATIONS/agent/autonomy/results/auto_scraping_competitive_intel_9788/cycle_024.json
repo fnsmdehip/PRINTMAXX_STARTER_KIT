@@ -1,0 +1,80 @@
+{
+  "cycle_start": "2026-03-09T19:56:44.664648",
+  "cycle_end": "2026-03-09T19:56:44.668683",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 4,
+  "new_intel_rows_written": 4,
+  "alerts_generated": 3,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "public access to all government cctv feeds globally",
+      "subreddit": "SideProject",
+      "score": 136,
+      "url": "https://www.reddit.com/r/SideProject/comments/1roggx6/public_access_to_all_government_cctv_feeds/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "How I hit $20k last month just by asking for feedback (and why building for free was the secret sauce)",
+      "subreddit": "MicroSaas",
+      "score": 51,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rjprgw/how_i_hit_20k_last_month_just_by_asking_for/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "Need $1000 per month, securely, no bull.",
+      "subreddit": "thesidehustle",
+      "score": 11,
+      "url": "https://www.reddit.com/r/thesidehustle/comments/1roh6o0/need_1000_per_month_securely_no_bull/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "public access to all government cctv feeds globally",
+      "subreddit": "SideProject",
+      "score": 136,
+      "comments": 36,
+      "url": "https://www.reddit.com/r/SideProject/comments/1roggx6/public_access_to_all_government_cctv_feeds/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA18845"
+    },
+    {
+      "title": "How I hit $20k last month just by asking for feedback (and why building for free was the secret sauce)",
+      "subreddit": "MicroSaas",
+      "score": 51,
+      "comments": 41,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rjprgw/how_i_hit_20k_last_month_just_by_asking_for/",
+      "keyword_hits": 0,
+      "roi": "HIGH",
+      "post_id": "ALPHA19337"
+    },
+    {
+      "title": "Need $1000 per month, securely, no bull.",
+      "subreddit": "thesidehustle",
+      "score": 11,
+      "comments": 18,
+      "url": "https://www.reddit.com/r/thesidehustle/comments/1roh6o0/need_1000_per_month_securely_no_bull/",
+      "keyword_hits": 0,
+      "roi": "HIGH",
+      "post_id": "ALPHA18858"
+    },
+    {
+      "title": "I built a SEMrush alternative and made it opensource. You can focus on SEO for free!",
+      "subreddit": "juststart",
+      "score": 1,
+      "comments": 2,
+      "url": "https://www.reddit.com/r/juststart/comments/1roz9f3/i_built_a_semrush_alternative_and_made_it/",
+      "keyword_hits": 1,
+      "roi": "MEDIUM",
+      "post_id": "ALPHA19254"
+    }
+  ]
+}

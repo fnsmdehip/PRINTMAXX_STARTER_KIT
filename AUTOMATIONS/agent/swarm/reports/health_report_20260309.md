@@ -1,72 +1,119 @@
-# System Healer Report — 2026-03-09 14:25 (Cycle 2)
+# System Healer Report — 2026-03-09 18:30
 
 ## Summary
 
-| Category | Status |
-|----------|--------|
-| Cron scripts | 54/54 scripts exist |
-| Log freshness | Active, 7+ logs updated in last 2h |
-| Launchd agents | 30 agents, 1 error (claude-sessions exit 126) |
-| Processes | 3 swarm agents running, 0 zombies |
-| Disk | 55GB free (1.8% used) — healthy |
-| Logs size | 39MB total — no rotation needed |
-| Lock files | 1 stale lock removed (research_orchestrator PID 50115 dead) |
+| Category | Status | Details |
+|----------|--------|---------|
+| Cron scripts | OK | 54/54 scripts exist |
+| Script syntax | OK | 16/16 critical scripts compile clean |
+| Disk space | OK | 54GB free (6% used on 926GB) |
+| Log dir size | OK | 39MB total |
+| Active logs (2h) | OK | 26/23 checked logs updated recently |
+| Agent daemon | OK | PID 13218 alive |
+| Lock files | OK | 4 locks, all <15min old (normal) |
+| Launchd agents | WARN | 1 agent failing (exit 126) |
+| Dead PIDs | FIXED | 3 stale PID files removed |
+| Code bugs | FIXED | 1 KeyError in competitive_intelligence_engine.py |
 
-## Issues Found & Fixed This Cycle
+---
 
-### 1. Stale Lock File — daily_research_orchestrator
-- **File:** `AUTOMATIONS/logs/daily_research_orchestrator.lock` (PID 50115, dead since ~12:06)
-- **Fix:** Removed stale lock. Next cron run will proceed normally.
+## Fixes Applied This Cycle
 
-### 2. Malformed Ventures — KeyError: 'name' crash
-- **Crash:** `venture_autonomy.py:566` — `KeyError: 'name'` killing the entire venture cycle
-- **Root cause:** Two ventures (`SCRAPING_competitive_intel`, `alpha_intelligence`) were added to `autonomy_state.json` without required `name` and `pipeline` fields
-- **Fix:** Patched both ventures with missing fields:
-  - `SCRAPING_competitive_intel`: name="Competitive Intel Scraping", pipeline=["scrape","analyze","report"], interval=6h
-  - `alpha_intelligence`: name="Alpha Intelligence Research", pipeline=["scrape","analyze","report"], interval=4h
-- **Impact:** HIGH — was crashing venture_autonomy every 2h cycle, blocking all 10 ventures from running
+### 1. Dead PID files removed (3)
+- `05_AUTOMATION/ralph/loops/mega/.ralph/mega.pid` (PID 10549 dead)
+- `logs/ship_captain_daemon.pid` (PID 32852 dead)
+- `logs/ollama_serve.pid` (PID 41357 dead)
 
-## Previous Fixes Still Holding (from Cycle 1, 09:45)
+### 2. competitive_intelligence_engine.py KeyError fix
+- **Bug**: Line 553 accessed `result["price_min"]` but the early-return dict at line 433 (fetch_failed case) didn't include `price_min`, `price_max`, `price_median`, or `price_count` keys.
+- **Root cause**: Fiverr returning 403 Forbidden, triggering fetch_failed path which returned incomplete dict.
+- **Fix**: Added missing keys (`price_min`, `price_max`, `price_median`, `price_count`) to the fetch_failed return dict.
+- **Verified**: Script compiles clean after fix.
 
-- CEO agent `NameError: OPS not defined` — FIXED, still running clean
-- Missing log files (4) — created, all now receiving data
-- Stale `INTELLIGENCE_CATALOG.json.lock` — removed, no recurrence
+---
 
-## Log Errors (Last 2 Hours)
+## Launchd Agents (38 total)
 
-| Log | Error | Severity | Status |
-|-----|-------|----------|--------|
-| venture_autonomy.log | KeyError: 'name' | HIGH | FIXED |
-| ecom_arb_engine.log | Google Trends 429 rate limit (5 batches) | LOW | Expected, auto-retries |
-| launchd_claude_err.log | "Operation not permitted" x20 | MEDIUM | macOS permission (not fixable by agent) |
-| factory_2026-03-09.log | "Element not attached to DOM" | LOW | Playwright timing, intermittent |
-| agent.log | "Claude returned error, length: 45" | LOW | Transient API error |
+### Healthy (exit code 0): 35 agents
+All swarm agents and scheduled ventures running with exit 0.
 
-## Known Issues (Not Auto-Fixable)
+### Running (PID active): 3 agents
+- `com.printmaxx.swarm.asset_deployer` (PID 91913)
+- `com.printmaxx.swarm.content_compounder` (PID 91918)
+- `com.printmaxx.swarm.system_healer` (PID 91973)
 
-### com.printmaxx.claude-sessions — Exit Code 126
-- macOS Full Disk Access not granted to `/bin/bash` for launchd execution
-- User needs: System Settings > Privacy & Security > Full Disk Access > add `/bin/bash`
-- Impact: LOW — scheduled Claude sessions don't auto-launch, user launches manually
+### Failing: 1 agent
+- **`com.printmaxx.claude-sessions`** — Exit code 126 (permission denied)
+  - Error: "Operation not permitted" — macOS Full Disk Access not granted to `/bin/bash` for launchd context
+  - **HUMAN ACTION REQUIRED**: System Settings > Privacy & Security > Full Disk Access > add Terminal.app (or the bash binary)
+  - Affects: Scheduled morning/midday/evening Claude Code sessions (7 AM, 1 PM, 6 PM)
 
-### Google Trends 429 Rate Limiting
-- Affects `ecom_arb_engine.py` trend scoring batches
-- Self-resolves with time. Non-critical for core operations.
+---
 
-### Missing Plist Files (2 ventures)
-- `com.printmaxx.script.SCRAPING_competitive_intel.plist` and `com.claude.schedule.alpha_intelligence.plist`
-- These ventures run via cron anyway. Low priority.
+## Error Log Analysis
 
-## System Health
+### Critical (crashes/tracebacks)
+| Log | Errors | Root Cause | Status |
+|-----|--------|------------|--------|
+| competitive_intel.log | 53 | Fiverr 403 + KeyError | **FIXED** |
+| ceo_agent.log | 8 | swarm:redeploy FAIL (rc=1) | Non-blocking, CEO cycle completes |
+| scraper_daily.log | 10 | Tracebacks in twitter scraper | Scraper still produces 425 tweets, functional |
 
-- **Cron:** 54/54 scripts present, logs actively growing
-- **LaunchD:** 29/30 healthy, 3 actively running (asset_deployer, content_compounder, system_healer)
-- **Disk:** 926GB total, 55GB free — no concerns
-- **Logs:** 39MB total, largest: decision_engine.log 1.2MB. Rotation running daily 4 AM.
-- **Processes:** 4 PRINTMAXX processes active, 0 zombies, 0 stuck PIDs
+### Rate-Limiting (external API blocks)
+| Log | Errors | Root Cause | Action |
+|-----|--------|------------|--------|
+| indeed_hiring.log | 680 | DuckDuckGo rate-limiting | Expected, scraper has backoff logic |
+| uk_contracts.log | 26 | contracts.gov.uk rate-limiting | Expected, weekly schedule sufficient |
+| pain_miner.log | 9 | Reddit API rate-limiting | Expected, JSON API fallback works |
 
-## Next Cycle
+### Non-Critical
+| Log | Errors | Root Cause | Action |
+|-----|--------|------------|--------|
+| voice_render.log | 6 | Tracebacks (likely missing deps) | Low priority, not revenue-blocking |
+| browser_image_gen | 2 | Element detached from DOM | Intermittent Playwright issue, retries handle it |
+| guardrails_backup.log | 4 | Tracebacks during backup | Check backup_system.py next cycle |
 
-- Verify venture_autonomy runs clean at 16:15 (next cron trigger) with fixed state
-- Monitor ecom_arb_engine Google Trends rate limiting
-- claude-sessions exit 126 persists until user grants Full Disk Access
+---
+
+## Venture Autonomy Health
+
+- 10 ventures registered, running on schedule
+- Last cycle: 1/10 ventures ran (others within interval cooldown — correct behavior)
+- App Factory: 4/6 steps succeeded (ASO step failing with rc=127 — `claude` CLI not in PATH for launchd)
+- **Note**: rc=127 on ASO = command not found. Same FDA/PATH issue as claude-sessions.
+
+---
+
+## Cron Health
+
+- **Crontab**: Full v2 installed (last updated Mar 5)
+- **All scripts exist**: 54/54
+- **Log freshness**: Most logs updated today (Mar 9)
+- **Stale logs** (>24h): None of the critical ones
+
+---
+
+## Disk & Storage
+
+- Total disk: 926GB
+- Used: 17GB (root partition)
+- Free: 54GB available
+- Log dir: 39MB (healthy)
+- Largest log: decision_engine.log (1.5MB) — consider rotation at 5MB
+
+---
+
+## Human Action Items
+
+1. **[P1] Grant Full Disk Access** to Terminal.app / bash in macOS System Settings
+   - Fixes: com.printmaxx.claude-sessions (exit 126) + venture ASO steps (exit 127)
+   - Time: ~2 minutes
+   - Path: System Settings > Privacy & Security > Full Disk Access > + > Terminal.app
+
+---
+
+## Next Cycle Checks
+- [ ] Verify competitive_intel.log runs clean after KeyError fix (next run: 4 AM Mar 10)
+- [ ] Monitor ceo_agent swarm:redeploy failures
+- [ ] Check backup_system.py tracebacks
+- [ ] Verify log rotation running (log_rotator.py, 4 AM daily)

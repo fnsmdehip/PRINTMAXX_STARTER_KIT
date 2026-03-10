@@ -1,1487 +1,168 @@
 {
-  "last_cycle": "2026-03-09T15:30:00Z",
-  "cycle_count": 13,
-  "summary": {
-    "total_assets": 277,
-    "total_channels_mapped": 52,
-    "total_content_pieces_created": 560,
-    "total_coverage_gaps": 6,
-    "gaps_addressed_this_cycle": 11,
-    "gaps_addressed_cumulative": 311,
-    "remaining_gaps_requiring_human": 6,
-    "distribution_files_total": 77,
-    "total_lines_of_content": 31000,
-    "new_channels_opened": [
-      "Dev.to (5 articles total)",
-      "Medium (2 articles drafted)",
-      "Facebook Groups (6 group types)",
-      "Discord servers (4 communities)",
-      "Product Hunt (6 launch posts total)",
-      "Quora (12 answers total)",
-      "AlternativeTo (4 submissions ready)",
-      "BetaList (3 submissions ready)",
-      "SaaSHub (3 submissions ready)",
-      "LinkedIn (10 posts total)",
-      "Email welcome sequences (3 sequences drafted)",
-      "WhatsApp broadcast (Ramadan content)"
-    ],
-    "new_content_this_cycle": [
-      "ramadan_reddit_posts_cycle13.md — 3 channels: r/islam, r/Ramadan, r/MuslimLounge (value-first Ramadan tracking posts)",
-      "ramadan_twitter_blitz_cycle13.md — Twitter: 5 standalone + 1 thread (DM funnel CTA: 'RAMADAN')",
-      "ramadan_community_posts_cycle13.md — 3 channels: Facebook Muslim groups, Discord, WhatsApp broadcast",
-      "hackernews_show_posts_cycle13.md — 3 Show HN posts: PageScorer, Cold Email ROI Calc, Side Project Revenue Estimator",
-      "reddit_solopreneur_posts_cycle13.md — 3 channels: r/SideProject, r/Entrepreneur, r/SaaS",
-      "twitter_tools_blitz_cycle13.md — Twitter: 5 standalone + 1 thread '7 free tools for solopreneurs'",
-      "linkedin_posts_cycle13.md — 2 LinkedIn posts: PageScorer + Cold Email Calculator",
-      "indiehackers_posts_cycle13.md — 2 IH posts: 'I built X' format with technical details",
-      "directory_submissions_cycle13.md — ProductHunt (3 apps), AlternativeTo (2), BetaList (1), SaaSHub (1)",
-      "product_launch_tweets_cycle13.md — 5 tweets + 1 thread for Gumroad products (ready when accounts live)",
-      "email_sequences_cycle13.md — 3-email welcome sequence for lead magnet signups"
-    ],
-    "ramadan_urgency": {
-      "days_remaining": 18,
-      "apps_ready": [
-        "PrayerLock",
-        "Hilal",
-        "Ramadan Tracker",
-        "Quran Streak"
-      ],
-      "channels_prepped": [
-        "r/islam",
-        "r/MuslimLounge",
-        "r/Ramadan",
-        "Facebook groups",
-        "Discord",
-        "Product Hunt",
-        "Twitter",
-        "WhatsApp broadcast"
-      ],
-      "distribution_done": 0,
-      "status": "CRITICAL - Fresh cycle 13 content ready for 8 channels. 0 posted. Human must post NOW. 18 days remaining. New files: ramadan_reddit_posts_cycle13.md, ramadan_twitter_blitz_cycle13.md, ramadan_community_posts_cycle13.md"
-    },
-    "new_assets_since_last_cycle": 0,
-    "comparison_pages_deployed": 11,
-    "cycle_13_gap_analysis": {
-      "total_assets_deployed": 266,
-      "total_queued_posts": 640,
-      "actually_posted": 0,
-      "warmup_mode": true,
-      "quality_gate_blocked": 376,
-      "channel_status": {
-        "reddit": {"presence": 0, "content_ready_for_subreddits": 20, "new_this_cycle": 6, "posts_ready": 19},
-        "hacker_news": {"presence": 0, "show_hn_posts_ready": 13, "new_this_cycle": 3},
-        "indiehackers": {"presence": 0, "posts_ready": 9, "new_this_cycle": 2},
-        "linkedin": {"existing_posts": 8, "new_posts_ready": 2, "total": 10},
-        "devto": {"articles_ready": 5, "new_this_cycle": 0, "with_code_examples": true},
-        "directories": {"submissions_done": 0, "templates_ready": 31, "new_this_cycle": 7, "platforms": ["ProductHunt", "AlternativeTo", "BetaList", "SaaSHub"]},
-        "twitter": {"queued": "640+", "threads_ready": 6, "new_threads_this_cycle": 3, "blocked_until": "2026-03-12", "reason": "warmup period"},
-        "product_hunt": {"launch_copy_ready": 9, "new_this_cycle": 3, "upcoming_scheduled": 0},
-        "email": {"sequences_ready": 1, "new_this_cycle": 1, "type": "3-email welcome sequence"},
-        "whatsapp": {"broadcasts_ready": 1, "new_this_cycle": 1, "type": "Ramadan community"}
-      },
-      "highest_roi_gaps_remaining": [
-        "Post Ramadan content to r/islam, r/Ramadan, r/MuslimLounge (human: ~20 min, URGENT 18 days left)",
-        "Post Reddit solopreneur content to r/SideProject, r/Entrepreneur, r/SaaS (human: ~20 min)",
-        "Submit 3 Show HN posts (human: HN account required, ~10 min)",
-        "Post 2 IH transparency reports (human: IH account, ~10 min)",
-        "Post 2 LinkedIn posts (human: login and paste, ~5 min)",
-        "Submit to directories: ProductHunt, AlternativeTo, BetaList, SaaSHub (human: ~30 min)"
-      ]
-    }
-  },
-  "assets": {
-    "deployed_websites": {
-      "count": 122,
-      "categories": {
-        "streak_apps": {
-          "count": 28,
-          "urls": [
-            "scripture-streak-lds.surge.sh",
-            "torah-streak-app.surge.sh",
-            "quran-streak-app.surge.sh",
-            "gita-streak-app.surge.sh",
-            "guru-streak-app.surge.sh",
-            "sutra-streak-app.surge.sh",
-            "fitness-streak-app.surge.sh",
-            "coding-streak-app.surge.sh",
-            "art-streak-app.surge.sh",
-            "meditation-streak-app.surge.sh",
-            "reading-streak-app.surge.sh",
-            "language-streak-app.surge.sh",
-            "journal-streak-app.surge.sh"
-          ]
-        },
-        "saas_tools": {
-          "count": 10,
-          "urls": [
-            "sitescore-app.surge.sh",
-            "shopmetrics-dashboard.surge.sh",
-            "flowstack-demo.surge.sh",
-            "coldmaxx-app.surge.sh",
-            "coldmaxx.surge.sh",
-            "website-audit-tool.surge.sh",
-            "prospectmaxx.surge.sh",
-            "roicalc.surge.sh",
-            "pagescorer.surge.sh",
-            "stackmaxx.surge.sh"
-          ]
-        },
-        "local_biz_demos": {
-          "count": 24,
-          "urls": [
-            "dental-demo.surge.sh",
-            "restaurant-site-demo.surge.sh",
-            "fitness-demo.surge.sh",
-            "legal-demo.surge.sh",
-            "plumber-demo.surge.sh",
-            "realtor-demo.surge.sh",
-            "perfect-lawn-demo.surge.sh",
-            "bellas-salon-demo.surge.sh",
-            "mikes-hvac-demo.surge.sh",
-            "tonys-restaurant-demo.surge.sh",
-            "joes-plumbing-demo.surge.sh",
-            "smith-dentistry-demo.surge.sh",
-            "elite-fitness-demo.surge.sh",
-            "printmaxx-local-demos.surge.sh"
-          ]
-        },
-        "motion_upsells": {
-          "count": 3,
-          "urls": [
-            "dental-motion.surge.sh",
-            "realtor-motion.surge.sh",
-            "restaurant-motion.surge.sh"
-          ]
-        },
-        "ramadan_faith": {
-          "count": 5,
-          "urls": [
-            "prayerlock-app.surge.sh",
-            "prayerlock.surge.sh",
-            "hilal-app.surge.sh",
-            "ramadan-tracker.surge.sh",
-            "hilal-ramadan.surge.sh"
-          ]
-        },
-        "productivity_apps": {
-          "count": 5,
-          "urls": [
-            "focuslock-app.surge.sh",
-            "habitforge-app.surge.sh",
-            "mealmaxx-app.surge.sh",
-            "sleepmaxx-app.surge.sh",
-            "walktounlock-app.surge.sh"
-          ]
-        },
-        "comparison_pages": {
-          "count": 2,
-          "urls_pending_deploy": [
-            "builds/comparison-pages/focuslock-vs-opal.html",
-            "builds/comparison-pages/prayerlock-vs-hallow.html"
-          ],
-          "note": "Built but need surge deploy"
-        },
-        "programmatic_seo": {
-          "count": 1,
-          "urls_pending_deploy": [
-            "builds/programmatic_seo/"
-          ],
-          "note": "Full SEO site with services pages, sitemap, robots.txt"
-        },
-        "portfolio_meta": {
-          "count": 7,
-          "urls": [
-            "printmaxx-apps.surge.sh",
-            "printmaxx-services.surge.sh",
-            "printmaxx-portfolio.surge.sh",
-            "printmaxx-demos.surge.sh",
-            "printmaxx-local-demos.surge.sh",
-            "printmaxx-command.surge.sh",
-            "printmaxx-dashboard.surge.sh"
-          ]
-        },
-        "seo_pages": {
-          "count": 1,
-          "urls": [
-            "printmaxx-seo.surge.sh"
-          ]
-        },
-        "local_geo_sites": {
-          "count": 14,
-          "urls": [
-            "reliable-fence-nashville.surge.sh",
-            "accurate-auto-nashville.surge.sh",
-            "miami-plumbing-zip.surge.sh",
-            "handyman-matters-jacksonville-jacksonville-fl.surge.sh",
-            "jacksonville-emergency-plumber-jacksonville-fl.surge.sh",
-            "professional-plumbing-heating-cooling-memphis-tn.surge.sh",
-            "south-tampa-locksmith-tampa-fl.surge.sh",
-            "local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh"
-          ],
-          "note": "Nashville, Jacksonville, Memphis, Tampa, Miami geo-targeted sites + 6 older Houston/Miami sites"
-        },
-        "other": {
-          "count": 20,
-          "note": "Includes invoicetracker, contentcalendar, mcphub, pitchdeck, social-dashboard, etc."
-        }
-      }
-    },
-    "marketplace_products": {
-      "count": 131,
-      "platforms": {
-        "gumroad": {
-          "count": 13,
-          "status": "READY",
-          "account_created": false
-        },
-        "whop": {
-          "count": 8,
-          "status": "READY",
-          "account_created": false
-        },
-        "etsy": {
-          "count": 20,
-          "status": "READY",
-          "account_created": false
-        },
-        "fiverr": {
-          "count": 10,
-          "status": "READY",
-          "account_created": false
-        },
-        "redbubble": {
-          "count": 20,
-          "status": "READY",
-          "account_created": false
-        },
-        "kdp": {
-          "count": 15,
-          "status": "READY",
-          "account_created": false
-        },
-        "teespring": {
-          "count": 10,
-          "status": "READY",
-          "account_created": false
-        },
-        "ebay_mercari": {
-          "count": 10,
-          "status": "DRAFT",
-          "account_created": false
-        },
-        "upwork": {
-          "count": 5,
-          "status": "READY",
-          "account_created": false
-        },
-        "system_products": {
-          "count": 20,
-          "status": "NEEDS_CLEANUP",
-          "account_created": false
-        }
-      }
-    },
-    "digital_products_ready": {
-      "pdfs": 5,
-      "micro_products": 3,
-      "files": [
-        "DIGITAL_PRODUCTS/ready_to_sell/01_73_COLD_EMAIL_SUBJECT_LINES.md",
-        "DIGITAL_PRODUCTS/ready_to_sell/02_FUNNEL_TEARDOWN_PACK.md",
-        "DIGITAL_PRODUCTS/ready_to_sell/03_AI_AUTOMATION_BLUEPRINT.md",
-        "DIGITAL_PRODUCTS/ready_to_sell/04_SOLOPRENEUR_OPS_SYSTEM.md",
-        "DIGITAL_PRODUCTS/ready_to_sell/05_COLD_EMAIL_PLAYBOOK.md",
-        "DIGITAL_PRODUCTS/micro_products/PRODUCT_1_73_cold_email_subject_lines.md",
-        "DIGITAL_PRODUCTS/micro_products/PRODUCT_2_50_viral_tweet_templates.md",
-        "DIGITAL_PRODUCTS/micro_products/PRODUCT_3_local_biz_cold_email_script_pack.md"
-      ]
-    },
-    "content_library": {
-      "reddit_posts_ready": 79,
-      "linkedin_posts_ready": 40,
-      "tweet_batches": 11,
-      "launch_posts": 6,
-      "reply_templates": 100,
-      "product_hunt_drafts": 3,
-      "indie_hackers_posts": 3,
-      "app_directory_submissions": 13,
-      "newsletter_drafts": 1,
-      "community_seed_templates": 6,
-      "comparison_distribution": 6,
-      "devto_articles": 3,
-      "facebook_group_posts": 8,
-      "cold_outreach_templates": 5,
-      "quora_answers": 28,
-      "github_readmes": 3
-    }
-  },
-  "channels": {
-    "twitter_x": {
-      "status": "CONTENT_READY",
-      "account_exists": true,
-      "handle": "@printmaxxer",
-      "content_pieces": 10,
-      "content_files": [
-        "CONTENT/social/distribution/hn_tweetstorms_20260307.md",
-        "CONTENT/social/distribution/ramadan_community_distribution_20260307.md",
-        "CONTENT/social/distribution/comparison_seo_distribution_20260307.md",
-        "CONTENT/social/generated_20260307/",
-        "CONTENT/social/generated_20260307_cycle2/",
-        "CONTENT/social/posting_queue/"
-      ]
+  "last_updated": "2026-03-09T19:30:00Z",
+  "cycle": 14,
+  "total_assets": 267,
+  "total_content_pieces": 646,
+  "content_ready": 145,
+  "content_pending_review": 289,
+  "content_blocked_qa": 212,
+  "distribution_channels": {
+    "twitter": {
+      "status": "active",
+      "account": "@PRINTMAXXER",
+      "posts_queued": 139,
+      "posts_distributed": 0,
+      "notes": "Account exists, X Premium needed for link posts"
     },
     "reddit": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 14,
-      "subreddits_targeted": [
+      "status": "content_ready",
+      "posts_created": 12,
+      "posts_distributed": 0,
+      "target_subs": [
         "r/SideProject",
-        "r/webdev",
-        "r/EntrepreneurRideAlong",
-        "r/islam",
-        "r/Entrepreneur",
-        "r/nocode",
-        "r/digitalnomad",
-        "r/MuslimLounge",
         "r/productivity",
-        "r/Ramadan"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/reddit_posts_20260307.md",
-        "CONTENT/social/distribution/ramadan_community_distribution_20260307.md",
-        "CONTENT/social/distribution/comparison_seo_distribution_20260307.md",
-        "CONTENT/social/reddit/REDDIT_POSTS_30.md",
-        "CONTENT/social/reddit/REDDIT_POSTS_R2_30.md"
+        "r/webdev",
+        "r/Entrepreneur",
+        "r/islam",
+        "r/ADHD",
+        "r/getdisciplined",
+        "r/digitalminimalism"
       ]
+    },
+    "hackernews": {
+      "status": "content_ready",
+      "posts_created": 2,
+      "posts_distributed": 0
+    },
+    "devto": {
+      "status": "content_ready",
+      "articles_created": 1,
+      "articles_distributed": 0
     },
     "linkedin": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 7,
-      "content_files": [
-        "CONTENT/social/distribution/linkedin_posts_20260307.md",
-        "CONTENT/social/distribution/comparison_seo_distribution_20260307.md",
-        "CONTENT/social/linkedin/LINKEDIN_POSTS_30.md"
-      ]
-    },
-    "hacker_news": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 3,
-      "content_files": [
-        "CONTENT/social/distribution/hn_tweetstorms_20260307.md"
-      ]
-    },
-    "product_hunt": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 3,
-      "priority": "HIGH",
-      "best_assets": [
-        "PrayerLock",
-        "PageScorer",
-        "Streak Apps (13-bundle)"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/product_hunt_launches_20260307.md"
-      ],
-      "blocker": "HUMAN: Create PH account, find hunter"
+      "status": "content_ready",
+      "posts_created": 1,
+      "posts_distributed": 0
     },
     "indie_hackers": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 3,
-      "priority": "HIGH",
-      "content_files": [
-        "CONTENT/social/distribution/indiehackers_posts_20260307.md"
-      ],
-      "blocker": "HUMAN: Create IH account"
-    },
-    "app_directories": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 13,
-      "directories": [
-        "AlternativeTo",
-        "SaaSHub",
-        "BetaList",
-        "Startups.fyi",
-        "MicroLaunch",
-        "ToolsFinder"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/app_directory_submissions_20260307.md"
-      ],
-      "blocker": "HUMAN: Create accounts on each directory"
-    },
-    "newsletter": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 1,
-      "platform_options": [
-        "Substack",
-        "Beehiiv"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/newsletter_launch_draft_20260307.md"
-      ],
-      "blocker": "HUMAN: Create Substack/Beehiiv account"
-    },
-    "discord_slack": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 6,
-      "target_communities_identified": true,
-      "content_files": [
-        "CONTENT/social/distribution/discord_slack_community_seeds_20260307.md"
-      ],
-      "blocker": "HUMAN: Join communities, lurk 2 weeks before posting"
-    },
-    "muslim_communities": {
-      "status": "CONTENT_READY",
-      "content_pieces": 18,
-      "urgency": "CRITICAL_RAMADAN_20_DAYS_LEFT",
-      "days_remaining": 20,
-      "content_files": [
-        "CONTENT/social/distribution/ramadan_community_distribution_20260307.md",
-        "CONTENT/social/distribution/ramadan_urgent_push_cycle5_20260307.md"
-      ],
-      "channels": [
-        "r/islam",
-        "r/MuslimLounge",
-        "Islamic Discord",
-        "Muslim Facebook groups",
-        "Twitter Islamic tech",
-        "WhatsApp groups",
-        "Telegram channels"
-      ],
-      "blocker": "HUMAN: Post to Reddit + join Discord/FB groups"
-    },
-    "comparison_seo": {
-      "status": "CONTENT_READY",
-      "content_pieces": 6,
-      "pages_built": 2,
-      "pages_needed": 5,
-      "content_files": [
-        "CONTENT/social/distribution/comparison_seo_distribution_20260307.md"
-      ],
-      "blocker": "Deploy comparison pages to surge.sh, then distribute"
-    },
-    "gumroad_marketplace": {
-      "status": "BLOCKED",
-      "blocker": "No Stripe account, no Gumroad account",
-      "content_pieces": 13,
-      "priority": "CRITICAL"
-    },
-    "devto_hashnode": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 5,
-      "articles": [
-        "122 websites zero hosting costs",
-        "PWA factory pattern",
-        "free website audit tool vs $99/mo SaaS",
-        "Website audit tool no backend",
-        "$0 SaaS stack 23 tools"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/devto_articles_20260307.md",
-        "CONTENT/social/distribution/devto_quora_cycle5_20260307.md"
-      ],
-      "blocker": "HUMAN: Create dev.to and Hashnode accounts",
-      "seo_value": "HIGH - backlinks + developer credibility"
-    },
-    "facebook_groups": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 8,
-      "group_types": [
-        "local biz owners",
-        "Muslim/Ramadan",
-        "solopreneur/indie hacker",
-        "productivity/self-improvement"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/facebook_group_posts_20260307.md"
-      ],
-      "blocker": "HUMAN: Join relevant FB groups"
-    },
-    "cold_email_outreach": {
-      "status": "CONTENT_READY",
-      "content_pieces": 5,
-      "templates": [
-        "I already built your website",
-        "competitor comparison",
-        "3-day followup",
-        "free audit + demo",
-        "breakup email"
-      ],
-      "geo_demos_count": 14,
-      "content_files": [
-        "CONTENT/social/distribution/cold_outreach_geo_demos_20260307.md"
-      ],
-      "blocker": "HUMAN: Set up email sending (Instantly, Smartlead, or manual)"
+      "status": "content_ready",
+      "posts_created": 1,
+      "posts_distributed": 0
     },
     "quora": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 28,
-      "content_files": [
-        "CONTENT/social/quora/QUORA_ANSWERS_20.md",
-        "CONTENT/social/distribution/quora_answers_new_tools_20260307.md"
-      ],
-      "seo_value": "HIGH - high-intent search queries",
-      "blocker": "HUMAN: Create Quora account"
-    },
-    "pinterest": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 15,
-      "boards_planned": 7,
-      "content_files": [
-        "CONTENT/social/distribution/pinterest_pins_20260307.md"
-      ],
-      "blocker": "HUMAN: Create Pinterest Business account",
-      "new_in_cycle": 4,
-      "notes": "High-value for: productivity apps, faith apps, habit trackers. Pins compound over 6 months vs 24-hour tweet lifespan."
-    },
-    "youtube_shorts_tiktok_reels": {
-      "status": "SCRIPTS_READY",
-      "account_exists": false,
-      "content_pieces": 6,
-      "scripts": [
-        "ShopMetrics spy tool",
-        "140 sites $0 hosting",
-        "ADHD habit tracker",
-        "Website audit 5 seconds",
-        "Ramadan prayer tracker",
-        "Cold outreach local biz"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/youtube_shorts_scripts_20260307.md"
-      ],
-      "blocker": "HUMAN: Create YouTube/TikTok accounts + record screen demos",
-      "new_in_cycle": 4,
-      "notes": "Cross-post to all 3 platforms. 1 video/day schedule."
-    },
-    "medium": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 3,
-      "articles": [
-        "140+ websites free hosting",
-        "PWA habit trackers for religions",
-        "Free website audit vs $99/mo SaaS"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/medium_crossposts_20260307.md"
-      ],
-      "blocker": "HUMAN: Create Medium account",
-      "new_in_cycle": 4,
-      "seo_value": "HIGH - Medium has strong domain authority"
-    },
-    "email_drip": {
-      "status": "CONTENT_READY",
-      "account_exists": false,
-      "content_pieces": 5,
-      "sequence": [
-        "Welcome",
-        "The $0 stack",
-        "The $8K/mo plan",
-        "5 best free tools",
-        "The ask"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/email_welcome_sequence_20260307.md"
-      ],
-      "blocker": "HUMAN: Create Substack/Beehiiv + set up automation",
-      "new_in_cycle": 4
-    },
-    "github_open_source": {
-      "status": "CONTENT_READY",
-      "content_pieces": 3,
-      "repos_planned": [
-        "streak-app-factory",
-        "site-scorer",
-        "surge-deploy-factory"
-      ],
-      "content_files": [
-        "CONTENT/social/distribution/github_readme_templates_20260307.md"
-      ],
-      "seo_value": "HIGH - developer traffic, stars compound over time",
-      "blocker": "HUMAN: Create GitHub repos, push code, add READMEs"
-    }
-  },
-  "coverage_matrix": {
-    "twitter": {
-      "status": "ACTIVE",
-      "content_ready": 524,
-      "content_posted": "unknown - no tracking",
-      "account_exists": true,
-      "blocker": null
-    },
-    "reddit": {
-      "status": "CONTENT_READY",
-      "content_ready": 86,
-      "content_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create Reddit account + 2-week warmup"
-    },
-    "hacker_news": {
-      "status": "CONTENT_READY",
-      "content_ready": 8,
-      "content_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create HN account"
+      "status": "content_ready",
+      "answers_created": 3,
+      "answers_distributed": 0
     },
     "product_hunt": {
-      "status": "CONTENT_READY",
-      "content_ready": 5,
-      "content_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create PH account + find hunter"
-    },
-    "linkedin": {
-      "status": "CONTENT_READY",
-      "content_ready": 13,
-      "content_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create LinkedIn profile"
-    },
-    "indie_hackers": {
-      "status": "CONTENT_READY",
-      "content_ready": 10,
-      "content_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create IH account"
+      "status": "not_started",
+      "notes": "Need 3-week runway for launch prep"
     },
     "gumroad": {
       "status": "BLOCKED",
-      "products_ready": 13,
-      "products_listed": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create Stripe + Gumroad account"
+      "products_ready": 5,
+      "blocker": "Account creation needed"
     },
     "fiverr": {
       "status": "BLOCKED",
-      "gigs_ready": 18,
-      "gigs_listed": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create Fiverr account"
+      "services_ready": 15,
+      "blocker": "Account creation needed"
     },
-    "upwork": {
-      "status": "BLOCKED",
-      "gigs_ready": 5,
-      "gigs_listed": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create Upwork account"
+    "medium": {
+      "status": "not_started",
+      "notes": "Repurpose newsletter content"
     },
-    "devto_hashnode_medium": {
-      "status": "CONTENT_READY",
-      "articles_ready": 9,
-      "articles_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create dev.to/Hashnode/Medium accounts"
-    },
-    "quora": {
-      "status": "CONTENT_READY",
-      "answers_ready": 28,
-      "answers_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create Quora account"
-    },
-    "alternativeto": {
-      "status": "CONTENT_READY",
-      "submissions_ready": 3,
-      "submissions_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create AlternativeTo account"
-    },
-    "betalist": {
-      "status": "CONTENT_READY",
-      "submissions_ready": 1,
-      "submissions_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Submit via BetaList form"
-    },
-    "saashub": {
-      "status": "CONTENT_READY",
-      "listings_ready": 3,
-      "listings_posted": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create SaaSHub account"
-    },
-    "cold_email": {
-      "status": "BLOCKED",
-      "templates_ready": 8,
-      "emails_sent": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Set up cold email domain + warmup (Instantly/Smartlead)"
-    },
-    "newsletter": {
-      "status": "CONTENT_READY",
-      "issues_ready": 5,
-      "subscribers": 0,
-      "account_exists": false,
-      "blocker": "HUMAN: Create Beehiiv/Substack account"
+    "substack": {
+      "status": "not_started",
+      "notes": "Newsletter swap opportunity"
     }
   },
-  "cycle_2_content_created": {
-    "product_hunt_launches": {
-      "count": 3,
-      "assets": [
-        "PrayerLock",
-        "PageScorer",
-        "Streak Apps"
-      ],
-      "file": "CONTENT/social/distribution/product_hunt_launches_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "indie_hackers_posts": {
-      "count": 3,
-      "topics": [
-        "77 sites $0 revenue milestone",
-        "PWA factory pattern",
-        "Ramadan apps launch"
-      ],
-      "file": "CONTENT/social/distribution/indiehackers_posts_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "app_directory_submissions": {
-      "count": 13,
-      "directories": [
-        "AlternativeTo (5)",
-        "SaaSHub (3)",
-        "BetaList (2)",
-        "ToolsFinder/MicroLaunch/Startups.fyi (3)"
-      ],
-      "file": "CONTENT/social/distribution/app_directory_submissions_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "ramadan_community_posts": {
-      "count": 6,
-      "channels": [
-        "r/islam",
-        "r/MuslimLounge",
-        "r/Ramadan",
-        "Islamic Discord",
-        "Muslim Facebook",
-        "Twitter Islamic"
-      ],
-      "file": "CONTENT/social/distribution/ramadan_community_distribution_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "newsletter_draft": {
-      "count": 1,
-      "topic": "77 sites $0 revenue, 30-day distribution plan",
-      "file": "CONTENT/social/distribution/newsletter_launch_draft_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "comparison_distribution": {
-      "count": 6,
-      "channels": [
-        "Reddit r/productivity",
-        "Reddit r/islam",
-        "Twitter (3 tweets)",
-        "LinkedIn"
-      ],
-      "file": "CONTENT/social/distribution/comparison_seo_distribution_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "discord_slack_seeds": {
-      "count": 6,
-      "community_types": [
-        "Indie Hackers",
-        "SaaS",
-        "Productivity",
-        "Religious",
-        "Web Dev",
-        "Local Biz"
-      ],
-      "file": "CONTENT/social/distribution/discord_slack_community_seeds_20260307.md",
-      "status": "PENDING_REVIEW"
-    }
-  },
-  "cycle_3_content_created": {
-    "devto_articles": {
-      "count": 3,
-      "topics": [
-        "122 websites zero hosting costs",
-        "PWA factory pattern",
-        "free website audit vs $99/mo SaaS"
-      ],
-      "file": "CONTENT/social/distribution/devto_articles_20260307.md",
-      "status": "PENDING_REVIEW",
-      "cross_post_to": [
-        "dev.to",
-        "Hashnode",
-        "Medium"
-      ]
-    },
-    "facebook_group_posts": {
-      "count": 8,
-      "group_types": [
-        "local biz owners (2)",
-        "Muslim/Ramadan (2)",
-        "solopreneur (2)",
-        "productivity (2)"
-      ],
-      "file": "CONTENT/social/distribution/facebook_group_posts_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "cold_outreach_templates": {
-      "count": 5,
-      "templates": [
-        "I already built your website",
-        "competitor comparison",
-        "3-day followup",
-        "free audit + demo",
-        "breakup email"
-      ],
-      "file": "CONTENT/social/distribution/cold_outreach_geo_demos_20260307.md",
-      "status": "READY_TO_SEND",
-      "geo_demos_leveraged": 14
-    },
-    "twitter_threads_new_saas": {
-      "count": 4,
-      "tools": [
-        "ShopMetrics Pro",
-        "SiteScore Pro",
-        "Cold Email Calculator",
-        "FlowStack"
-      ],
-      "file": "CONTENT/social/distribution/twitter_threads_new_saas_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "quora_answers_new_tools": {
-      "count": 8,
-      "topics": [
-        "free website analysis",
-        "Shopify store checker",
-        "Ramadan tracker",
-        "cold email ROI",
-        "free productivity apps",
-        "small biz website cost",
-        "habit tracking app",
-        "competitor Shopify spy"
-      ],
-      "file": "CONTENT/social/distribution/quora_answers_new_tools_20260307.md",
-      "status": "PENDING_REVIEW"
-    },
-    "github_readme_templates": {
-      "count": 3,
-      "repos": [
-        "streak-app-factory",
-        "site-scorer",
-        "surge-deploy-factory"
-      ],
-      "file": "CONTENT/social/distribution/github_readme_templates_20260307.md",
-      "status": "PENDING_REVIEW"
-    }
-  },
-  "cycle_4_content_created": {
-    "adhd_streak_distribution": {
-      "count": 17,
-      "channels": [
-        "Reddit (r/ADHD, r/adhdmeme, r/productivity, r/SideProject, r/webdev)",
-        "Twitter (5 tweets)",
-        "Facebook (3 posts)",
-        "Quora (3 answers)",
-        "Dev.to (1 article)"
-      ],
-      "file": "CONTENT/social/printmaxxer/ADHD_STREAK_LAUNCH_DISTRIBUTION.md",
-      "status": "PENDING_REVIEW",
-      "priority": "HIGH",
-      "notes": "ADHD niche has massive engaged community, high shareability"
-    },
-    "denomination_apps_distribution": {
-      "count": 17,
-      "channels": [
-        "Reddit (r/Catholicism, r/OrthodoxChristianity, r/Baptist, r/Christianity, r/islam, r/MuslimLounge)",
-        "Twitter (4 tweets)",
-        "Facebook (4 posts)",
-        "Quora (3 answers)"
-      ],
-      "files": [
-        "CONTENT/social/printmaxxer/DENOMINATION_APPS_TWEETS_MAR7.md",
-        "CONTENT/social/reddit/DENOMINATION_APPS_REDDIT_POSTS_MAR7.md",
-        "CONTENT/social/faith/DENOMINATION_APPS_FACEBOOK_MAR7.md",
-        "CONTENT/social/faith/DENOMINATION_APPS_QUORA_MAR7.md"
-      ],
-      "status": "PENDING_REVIEW"
-    },
-    "austin_cold_outreach": {
-      "count": 24,
-      "channels": [
-        "Cold email (18 emails: 3-email sequence x 6 businesses)",
-        "LinkedIn (2 posts)",
-        "Twitter (3 tweets)",
-        "Reddit (1 post)",
-        "Facebook (1 post)"
-      ],
-      "file": "CONTENT/social/posting_queue/austin_localbiz_distribution_MAR7.md",
-      "status": "PENDING_REVIEW"
-    },
-    "new_saas_tools": {
-      "count": 23,
-      "channels": [
-        "Twitter (5 tweets + 10-tweet thread)",
-        "Reddit (3 posts)",
-        "HN Show (2 posts)",
-        "IndieHackers (2 posts)",
-        "Dev.to (1 article)"
-      ],
-      "files": [
-        "CONTENT/social/printmaxxer/SAAS_LAUNCH_DISTRIBUTION_MAR7.md",
-        "CONTENT/social/printmaxxer/BUILDER_CREDIBILITY_THREAD_MAR7.md",
-        "CONTENT/social/reddit/SAAS_LAUNCH_REDDIT_MAR7.md",
-        "CONTENT/social/hackernews/SHOW_HN_POSTS_MAR7.md",
-        "CONTENT/social/indiehackers/IH_POSTS_MAR7.md",
-        "CONTENT/medium_articles/DEVTO_SURGE_DEPLOYMENT_MAR7.md"
-      ],
-      "status": "PENDING_REVIEW"
-    },
-    "comparison_pages_launch": {
-      "count": 8,
-      "channels": [
-        "Twitter (3 tweets)",
-        "Reddit (3 posts)",
-        "LinkedIn (1 post)",
-        "Quora (2 answers)"
-      ],
-      "file": "CONTENT/social/distribution/comparison_pages_launch_20260307.md",
-      "status": "PENDING_REVIEW",
-      "pages_deployed": [
-        "focuslock-vs-opal.surge.sh",
-        "prayerlock-vs-hallow.surge.sh",
-        "printmaxx-comparisons.surge.sh"
-      ]
-    },
-    "pinterest_pins": {
-      "count": 15,
-      "channels": [
-        "Pinterest (15 pins across 7 boards)"
-      ],
-      "file": "CONTENT/social/distribution/pinterest_pins_20260307.md",
-      "status": "PENDING_REVIEW",
-      "new_channel": true,
-      "boards": [
-        "Free Productivity Apps",
-        "Free Faith & Prayer Apps",
-        "Ramadan 2026",
-        "Free Business Tools",
-        "Small Business Web Design",
-        "ADHD Productivity",
-        "Habit Tracking"
-      ]
-    },
-    "medium_crossposts": {
-      "count": 3,
-      "channels": [
-        "Medium (3 articles cross-posted from dev.to)"
-      ],
-      "file": "CONTENT/social/distribution/medium_crossposts_20260307.md",
-      "status": "PENDING_REVIEW",
-      "articles": [
-        "140+ websites free hosting",
-        "PWA habit trackers for every religion",
-        "Free website audit vs $99/mo SaaS"
-      ],
-      "new_channel": true
-    },
-    "youtube_shorts_scripts": {
-      "count": 6,
-      "channels": [
-        "YouTube Shorts (6 scripts)",
-        "TikTok (cross-post)",
-        "Instagram Reels (cross-post)"
-      ],
-      "file": "CONTENT/social/distribution/youtube_shorts_scripts_20260307.md",
-      "status": "PENDING_REVIEW",
-      "new_channel": true,
-      "scripts": [
-        "Shopify spy tool",
-        "140 websites $0 hosting",
-        "ADHD habit tracker",
-        "Free website audit",
-        "Ramadan prayer tracker",
-        "I built your website cold outreach"
-      ]
-    },
-    "email_welcome_sequence": {
-      "count": 5,
-      "channels": [
-        "Email (5-email drip sequence)"
-      ],
-      "file": "CONTENT/social/distribution/email_welcome_sequence_20260307.md",
-      "status": "PENDING_REVIEW",
-      "emails": [
-        "Welcome + portfolio",
-        "The $0 hosting stack",
-        "The $8K/mo plan",
-        "5 best free tools",
-        "The ask (share one tool)"
-      ]
-    }
-  },
-  "cycle_5_content_created": {
-    "twitter_fresh_angles": {
-      "count": 25,
-      "assets_covered": [
-        "ConvertKit vs Beehiiv",
-        "Cold Email ROI Calculator",
-        "AI Stack 2026",
-        "152-site portfolio flex",
-        "Ramadan countdown"
-      ],
-      "file": "CONTENT/social/distribution/twitter_cycle5_fresh_angles_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 381
-    },
-    "reddit_expanded_subreddits": {
-      "count": 7,
-      "subreddits": [
-        "r/ADHD",
-        "r/selfimprovement",
-        "r/productivity",
-        "r/nocode",
-        "r/Islam",
-        "r/digitalnomad",
-        "r/WorkOnline"
-      ],
-      "file": "CONTENT/social/distribution/reddit_expanded_subreddits_cycle5_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 467,
-      "notes": "7 new subreddits not covered in prior cycles. Each post includes self-reply comments for value stacking."
-    },
-    "linkedin_hn": {
-      "count": 5,
-      "channels": [
-        "LinkedIn (3 posts)",
-        "Hacker News (2 Show HN posts)"
-      ],
-      "file": "CONTENT/social/distribution/linkedin_hn_cycle5_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 237,
-      "linkedin_topics": [
-        "152 sites $0 revenue honest post",
-        "23 free SaaS tools",
-        "$0 local biz pipeline"
-      ],
-      "hn_topics": [
-        "SiteScore free website audit",
-        "13 streak-tracking PWAs open source template"
-      ]
-    },
-    "ramadan_urgent_push": {
-      "count": 12,
-      "channels": [
-        "Twitter (4 tweets)",
-        "Reddit r/islam (1)",
-        "Reddit r/MuslimLounge (1)",
-        "Facebook (2)",
-        "WhatsApp/Telegram (2)",
-        "Instagram/TikTok captions (2)"
-      ],
-      "file": "CONTENT/social/distribution/ramadan_urgent_push_cycle5_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 304,
-      "urgency": "TIME-CRITICAL: ~20 days of Ramadan remaining",
-      "apps": [
-        "prayerlock-app.surge.sh",
-        "hilal-app.surge.sh"
-      ]
-    },
-    "devto_quora": {
-      "count": 7,
-      "channels": [
-        "Dev.to/Hashnode (2 articles)",
-        "Quora (5 answers)"
-      ],
-      "file": "CONTENT/social/distribution/devto_quora_cycle5_20260307.md",
-      "status": "PENDING_REVIEW",
-      "devto_topics": [
-        "Website audit tool no backend",
-        "$0 SaaS stack 23 tools"
-      ],
-      "quora_topics": [
-        "Free Notion alternatives",
-        "Build PWA from scratch",
-        "Best Muslim prayer app",
-        "Freelancing with no portfolio",
-        "Free SEO audit tools"
-      ]
-    }
-  },
-  "gaps_remaining": [
+  "top_distributable_assets": [
     {
-      "gap": "All marketplace listings blocked (Gumroad, Whop, Etsy, Fiverr, etc.)",
-      "priority": "CRITICAL",
-      "blocker": "HUMAN: Create Stripe + platform accounts",
-      "revenue_blocked": "$6K-22K/mo estimated",
-      "cycles_blocked": 6
+      "name": "PageScorer",
+      "url": "pagescorer.surge.sh",
+      "channels_covered": ["twitter"],
+      "channels_pending": ["reddit", "hackernews", "devto", "producthunt"]
     },
     {
-      "gap": "Product Hunt launch execution",
-      "priority": "HIGH",
-      "blocker": "HUMAN: Create PH account, schedule launch",
-      "content_status": "READY - 3 full launch drafts prepared"
+      "name": "FocusLock",
+      "url": "focuslock-web.surge.sh",
+      "channels_covered": ["twitter"],
+      "channels_pending": ["reddit", "producthunt", "quora"]
     },
     {
-      "gap": "IndieHackers posting",
-      "priority": "HIGH",
-      "blocker": "HUMAN: Create IH account",
-      "content_status": "READY"
+      "name": "PrayerLock",
+      "url": "prayerlock.surge.sh",
+      "channels_covered": ["twitter"],
+      "channels_pending": ["reddit_islam", "muslim_communities"]
     },
     {
-      "gap": "App directory submissions",
-      "priority": "MEDIUM",
-      "blocker": "HUMAN: Create accounts on 6 directories",
-      "content_status": "READY"
+      "name": "Hilal",
+      "url": "ramadan-tracker.surge.sh",
+      "channels_covered": [],
+      "channels_pending": ["reddit", "twitter", "muslim_communities"],
+      "time_sensitive": true,
+      "notes": "Ramadan active NOW"
     },
     {
-      "gap": "Newsletter launch + welcome sequence ready",
-      "priority": "HIGH",
-      "blocker": "HUMAN: Create Substack/Beehiiv account",
-      "content_status": "READY + 5-email drip written"
-    },
-    {
-      "gap": "Discord/Slack community seeding",
-      "priority": "LOW",
-      "blocker": "HUMAN: Join communities + 2-week warmup",
-      "content_status": "READY"
-    },
-    {
-      "gap": "Pinterest account + pin posting",
-      "priority": "MEDIUM",
-      "blocker": "HUMAN: Create Pinterest Business account",
-      "content_status": "15 pins ready with specs"
-    },
-    {
-      "gap": "YouTube/TikTok/Reels account + recording",
-      "priority": "MEDIUM",
-      "blocker": "HUMAN: Create accounts + record screen demos",
-      "content_status": "6 scripts ready"
-    },
-    {
-      "gap": "Medium + Hashnode accounts for cross-posts",
-      "priority": "LOW",
-      "blocker": "HUMAN: Create Medium + Hashnode accounts",
-      "content_status": "3 articles ready each + cycle 6 added 3 more"
+      "name": "Cold Email Playbook",
+      "url": "N/A",
+      "channels_covered": [],
+      "channels_pending": ["gumroad", "twitter_launch"],
+      "blocker": "Gumroad account"
     }
   ],
-  "human_action_required_summary": {
-    "total_accounts_needed": 16,
-    "accounts_created": 1,
-    "revenue_blocked_by": "Stripe + Gumroad + Fiverr + Upwork accounts",
-    "time_sensitive": "Ramadan content expires in ~19 days (PrayerLock, Hilal, Quran Streak)",
-    "estimated_time": "3-4 hours total for all account creation",
-    "priority_order": [
-      "1. Stripe account (unblocks ALL paid products) - 15 min",
-      "2. Gumroad account (13 products ready to list) - 10 min",
-      "3. Reddit account (86 posts ready, warmup needed) - 5 min",
-      "4. Fiverr account (18 gigs ready) - 15 min",
-      "5. HN account (8 submissions ready) - 5 min",
-      "6. Product Hunt account (5 launch packs ready) - 5 min",
-      "7. LinkedIn profile (13 posts ready) - 15 min",
-      "8. dev.to account (9 articles ready) - 5 min",
-      "9. Quora account (28 answers ready) - 5 min",
-      "10. Cold email setup (Instantly + domain + warmup) - 30 min"
-    ]
-  },
-  "next_cycle_priorities": [
-    "ESCALATE (6 CYCLES BLOCKED): Marketplace revenue STILL $0. HUMAN must create Stripe + Gumroad. 275 content pieces ready, 0 posted. $6K-22K/mo sitting idle.",
-    "ESCALATE (EXPIRES IN ~19 DAYS): Ramadan content ready across 7 channels. HUMAN must post NOW or content expires worthless.",
-    "ESCALATE: Twitter is STILL the ONLY active channel. 55+ fresh tweets ready (cycle 5 + 6). Post immediately.",
-    "NEW: 3 comparison pages just deployed (pagescorer-vs-gtmetrix, coldmaxx-vs-instantly, sleepmaxx-vs-sleepcycle). Create distribution tweets for these.",
-    "NEW: 10 Reddit posts for new subreddits ready to post. HUMAN needs Reddit account warmup.",
-    "NEW: 3 dev.to articles ready to cross-post to Hashnode + Medium.",
-    "NEW: 4 HN Show HN posts ready. Schedule 1/week starting with SiteScore.",
-    "Build AppSumo-style lifetime deal landing pages for SaaS tools",
-    "Create Product Hunt ship page for pre-launch email collection",
-    "Generate pin images (1000x1500) for all 15 Pinterest pins",
-    "Create Telegram channel for solopreneur community",
-    "Build automated cold email pipeline (Instantly or Smartlead integration)",
-    "Content saturation: nearly all channels have content ready. Distribution is now 100% a human-action bottleneck."
+  "coverage_gaps": [
+    "Zero posts actually distributed to any platform (all queued, none posted)",
+    "No DM funnel active on any account",
+    "No clipper/secondary accounts created",
+    "No Medium articles published",
+    "No Substack newsletter swaps initiated",
+    "No Product Hunt launch scheduled",
+    "Hilal/Ramadan tracker not distributed despite time-sensitivity",
+    "289 content pieces stuck in PENDING_REVIEW",
+    "X Premium not subscribed (link posts get 0% engagement)"
   ],
-  "cycle_6_content_created": {
-    "twitter_fresh": {
-      "count": 30,
-      "categories": [
-        "tool_announcements(10)",
-        "portfolio_flex(5)",
-        "streak_factory(5)",
-        "comparison_pages(5)",
-        "reply_bait(5)"
-      ],
-      "file": "CONTENT/social/distribution/twitter_cycle6_fresh_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 365
+  "human_actions_required": [
+    {
+      "action": "Post Reddit content (12 posts across 8 subs)",
+      "time_est": "45 min",
+      "priority": "P0",
+      "content_location": "CONTENT/social/distribution/reddit_distribution_20260309.md"
     },
-    "reddit_new_subreddits": {
-      "count": 10,
-      "subreddits": [
-        "r/SideProject",
-        "r/webdev",
-        "r/Entrepreneur",
-        "r/MuslimLounge",
-        "r/ADHD",
-        "r/nocode",
-        "r/Frugal",
-        "r/selfimprovement",
-        "r/startups",
-        "r/EntrepreneurRideAlong"
-      ],
-      "file": "CONTENT/social/distribution/reddit_cycle6_new_subreddits_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 1098,
-      "notes": "10 new subreddits not covered in prior cycles. Each includes self-reply comments."
+    {
+      "action": "Post HN Show posts (2 posts)",
+      "time_est": "10 min",
+      "priority": "P0",
+      "content_location": "CONTENT/social/distribution/reddit_distribution_20260309.md"
     },
-    "devto_linkedin": {
-      "count": 8,
-      "channels": [
-        "Dev.to/Hashnode/Medium (3 articles)",
-        "LinkedIn (5 posts)"
-      ],
-      "file": "CONTENT/social/distribution/devto_linkedin_cycle6_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 701,
-      "devto_topics": [
-        "10 Free SaaS Tools Zero Backend",
-        "Streak Factory 28 Apps One Template",
-        "Comparison Pages SEO Strategy"
-      ],
-      "linkedin_topics": [
-        "170 sites 33 days /bin/zsh lesson",
-        "/bin/zsh SaaS stack",
-        "Demo-first local biz selling",
-        "Factory vs Artisan",
-        "Comparison page playbook"
-      ]
+    {
+      "action": "Post Twitter threads (2 threads + 5 tweets)",
+      "time_est": "20 min",
+      "priority": "P0",
+      "content_location": "CONTENT/social/distribution/twitter_distribution_20260309.md"
     },
-    "hn_producthunt": {
-      "count": 7,
-      "channels": [
-        "Hacker News Show HN (4 posts)",
-        "Product Hunt (3 launches)"
-      ],
-      "file": "CONTENT/social/distribution/hn_producthunt_cycle6_20260307.md",
-      "status": "PENDING_REVIEW",
-      "lines": 223,
-      "hn_topics": [
-        "SiteScore client-side audit",
-        "Streak Factory 28 PWAs",
-        "InvoiceForge no-backend invoices",
-        "ColdMaxx free cold email"
-      ],
-      "ph_topics": [
-        "SiteScore launch",
-        "Streak Factory launch",
-        "PrayerLock Ramadan launch"
-      ]
+    {
+      "action": "Subscribe to X Premium on @PRINTMAXXER",
+      "time_est": "5 min",
+      "priority": "P0"
     },
-    "comparison_pages_deployed": {
-      "count": 3,
-      "pages": [
-        {
-          "name": "PageScorer vs GTmetrix",
-          "url": "pagescorer-vs-gtmetrix.surge.sh",
-          "status": "DEPLOYED"
-        },
-        {
-          "name": "ColdMaxx vs Instantly",
-          "url": "coldmaxx-vs-instantly.surge.sh",
-          "status": "DEPLOYED"
-        },
-        {
-          "name": "SleepMaxx vs Sleep Cycle",
-          "url": "sleepmaxx-vs-sleepcycle.surge.sh",
-          "status": "DEPLOYED"
-        }
-      ]
+    {
+      "action": "Create Gumroad account + list 5 products",
+      "time_est": "60 min",
+      "priority": "P0"
+    },
+    {
+      "action": "Publish Dev.to article",
+      "time_est": "15 min",
+      "priority": "P1",
+      "content_location": "CONTENT/social/distribution/cross_platform_20260309.md"
+    },
+    {
+      "action": "Post LinkedIn + IndieHackers content",
+      "time_est": "15 min",
+      "priority": "P1",
+      "content_location": "CONTENT/social/distribution/cross_platform_20260309.md"
     }
-  },
-  "execution_disconnect": {
-    "severity": "CRITICAL",
-    "content_queue_size": 524,
-    "content_posted": 0,
-    "content_performance_tracked": 0,
-    "api_keys_configured": 0,
-    "niche_accounts_active": "0/12",
-    "leads_ready": "282K+",
-    "leads_contacted": 0,
-    "channels_with_content": 24,
-    "channels_actively_posting": 2,
-    "assessment": "Content engine is running at max. Execution engine is at zero. 524 items in queue, 0 posted. This is not a content problem. This is an execution problem."
-  },
-  "broken_feedback_loops": [
-    "CONTENT_POSTED.csv is empty (79 bytes) - no tracking of what was posted",
-    "CONTENT_PERFORMANCE.csv is empty (338 bytes) - no engagement data",
-    "CONTENT_WINNERS.csv is empty (158 bytes) - no winner identification",
-    "posted_at column empty across all 524 CONTENT_QUEUE.csv entries",
-    "No feedback from posting \u2192 content quality optimization"
-  ],
-  "automation_scripts_ready_but_idle": {
-    "auto_content_poster.py": "Twitter multi-account posting - NEEDS API KEY",
-    "reddit_poster.py": "Reddit subreddit posting - NEEDS EXECUTION",
-    "distribution_engine.py": "Multi-platform formatting + Buffer CSV export - READY",
-    "platform_posting_optimizer.py": "TikTok/YouTube/IG algo specs - NEEDS ACCOUNTS",
-    "clip_post_scheduler.py": "Video clip scheduling - NEEDS ACCOUNTS"
-  },
-  "cycle_7_distribution_engine": {
-    "timestamp": "2026-03-08T08:25:50Z",
-    "files_created": [
-      "twitter_distribution_cycle_mar8.md (10 tweets + 2 threads + 3 reply bait)",
-      "twitter_tool_showcase_mar8.md (5 tool-of-the-day tweets)",
-      "reddit_distribution_cycle7_mar8.md (7 subreddit posts + self-reply templates)",
-      "hn_directories_cycle7_mar8.md (4 HN submissions + PH + AlternativeTo + BetaList + SaaSHub)",
-      "linkedin_email_cycle7_mar8.md (5 LinkedIn posts + 3 cold email templates + 3 bonus tweets)"
-    ],
-    "content_pieces": 30,
-    "channels_covered": [
-      "Twitter/X (15 tweets + 2 threads)",
-      "Reddit (7 subreddits: SideProject, webdev, ADHD, islam, Entrepreneur, ClaudeAI, IndieHackers)",
-      "Hacker News (4 Show HN posts)",
-      "Product Hunt (2 launch packs)",
-      "AlternativeTo (3 submissions)",
-      "BetaList (1 submission)",
-      "SaaSHub (3 listings)",
-      "LinkedIn (5 posts)",
-      "Cold Email (3 templates)"
-    ],
-    "assets_distributed": [
-      "PRINTMAXX Tools Hub (46 tools)",
-      "PageScorer",
-      "PrayerLock (Ramadan - TIME SENSITIVE)",
-      "Hilal (Ramadan tracker)",
-      "FocusLock",
-      "InvoiceForge",
-      "ProspectMaxx",
-      "StackMaxx",
-      "OpenClaw local biz demos (14 sites)",
-      "Cold Email Subject Lines pack",
-      "Digital products (5 PDFs)"
-    ]
-  },
-  "cycle_8_content_created": {
-    "timestamp": "2026-03-08T15:30:00Z",
-    "reddit_distribution": {
-      "count": 7,
-      "subreddits": [
-        "r/SideProject",
-        "r/webdev",
-        "r/Entrepreneur",
-        "r/islam",
-        "r/ADHD",
-        "r/coldEmail",
-        "r/IndieHackers"
-      ],
-      "file": "CONTENT/social/distribution/reddit_distribution_cycle8_mar8.md",
-      "status": "PENDING_REVIEW",
-      "notes": "7 subreddit-specific posts. Reddit presence currently 0. These are the first targeted posts."
-    },
-    "hn_indiehackers": {
-      "count": 5,
-      "channels": [
-        "Hacker News Show HN (3 posts)",
-        "IndieHackers (2 posts)"
-      ],
-      "file": "CONTENT/social/distribution/hn_indiehackers_cycle8_mar8.md",
-      "status": "PENDING_REVIEW",
-      "hn_topics": [
-        "Show HN: PageScorer",
-        "Show HN: Streak Factory PWAs",
-        "Show HN: ColdMaxx cold email toolkit"
-      ],
-      "ih_topics": [
-        "Build-in-public: 168 sites from $0",
-        "PWA streak app factory approach"
-      ],
-      "notes": "HN and IH presence both at 0. PageScorer is strongest standalone tool for Show HN."
-    },
-    "linkedin_directories": {
-      "count": 12,
-      "channels": [
-        "LinkedIn (5 posts)",
-        "Directory submissions (7 templates)"
-      ],
-      "file": "CONTENT/social/distribution/linkedin_directories_cycle8_mar8.md",
-      "status": "PENDING_REVIEW",
-      "linkedin_topics": [
-        "168 sites portfolio honest post",
-        "PWA factory system breakdown",
-        "Ramadan app launch story",
-        "Cold email tools comparison",
-        "Build-in-public monthly update"
-      ],
-      "directory_submissions": [
-        "AlternativeTo",
-        "BetaList",
-        "SaaSHub",
-        "Product Hunt Ship",
-        "SaaSWorthy",
-        "GetApp",
-        "Capterra"
-      ],
-      "notes": "LinkedIn at 3 posts, now 8 total. Directories at 0 submissions, 7 templates ready. Passive discovery channel."
-    },
-    "priority_channels": [
-      {
-        "channel": "Reddit r/islam",
-        "priority": "P0",
-        "reason": "Ramadan time-sensitive, 19 days left. PrayerLock + Hilal ready.",
-        "blocker": "HUMAN must post, no Reddit account warmup started"
-      },
-      {
-        "channel": "Reddit r/SideProject",
-        "priority": "P0",
-        "reason": "Build-in-public engagement, high-signal community for solopreneurs",
-        "blocker": "HUMAN must post, no Reddit account warmup started"
-      },
-      {
-        "channel": "HN Show HN: PageScorer",
-        "priority": "P1",
-        "reason": "Strongest standalone tool, fits HN audience perfectly",
-        "blocker": "HUMAN must confirm HN account exists"
-      },
-      {
-        "channel": "Directory submissions",
-        "priority": "P1",
-        "reason": "Passive discovery, no maintenance after submission, long-tail SEO",
-        "blocker": "HUMAN must create accounts on 7 directories"
-      },
-      {
-        "channel": "LinkedIn posts",
-        "priority": "P2",
-        "reason": "Professional audience, B2B lead potential for local biz services",
-        "blocker": "HUMAN must post from personal LinkedIn"
-      },
-      {
-        "channel": "IndieHackers",
-        "priority": "P2",
-        "reason": "Community engagement, build-in-public audience overlap",
-        "blocker": "HUMAN must create IH account"
-      }
-    ],
-    "blockers": [
-      "All distribution requires HUMAN to post (no API access configured for any platform)",
-      "Twitter warmup blocks posting until Mar 12 (117+ tweets queued)",
-      "No Reddit account warmup started (need 2+ weeks karma building before self-promotion)",
-      "No HN account confirmed (need established account for Show HN visibility)",
-      "Total content pieces ready: 364 queued. Total posted: 0. Execution gap is critical."
-    ]
-  },
-  "next_cycle_priorities": [
-    "ESCALATE (8 CYCLES BLOCKED): Marketplace revenue STILL $0. HUMAN must create Stripe + Gumroad. 364 content pieces ready, 0 posted.",
-    "ESCALATE (EXPIRES IN ~19 DAYS): Ramadan content for r/islam and 6 other channels. Post NOW or PrayerLock/Hilal window closes.",
-    "P0: Reddit r/islam Ramadan push - time-critical, 19 days remaining",
-    "P0: Reddit r/SideProject build-in-public post - high engagement potential",
-    "P1: HN Show HN: PageScorer - strongest standalone tool for HN audience",
-    "P1: Directory submissions (7 templates ready) - passive discovery, no maintenance",
-    "P2: LinkedIn professional posts (5 new ready, 8 total)",
-    "P2: IndieHackers community engagement (2 posts ready)",
-    "BLOCKED: Twitter posting until Mar 12 warmup complete (117+ tweets queued)",
-    "BLOCKED: All posting requires HUMAN - no API access configured for any platform",
-    "BLOCKED: Reddit account needs warmup (2+ weeks karma building before self-promo)",
-    "Content saturation: nearly all channels have content ready. Distribution is now 100% a human-action bottleneck."
   ]
 }

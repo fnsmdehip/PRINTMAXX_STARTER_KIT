@@ -1875,3 +1875,37 @@ Comment SCALE and I’ll send it over
 
 Anti-AI positioning thread gets 610+ upvotes and 1518 comments on r/SideProject (vs typical 50-100). Contrarian angle "Not-AI" + physical product = massive engagement. Hardware startup with iF Design Award. Shows market fatigue with AI-only products.
 
+
+
+---
+
+## Pending Enhancement (ALPHA20153, Score: 24)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2031124127700893862
+**Added:** 2026-03-09T19:57:42-04:00
+
+Here’s the full breakdown of how my agency added $45k GMV in 7 weeks for an Ecom brand
+
+Every TikTok shop brand should be stealing my exact strategies lol
+
+
+
+---
+
+## Pending Enhancement (ALPHA20200, Score: 24)
+
+**Source:** @wannercashcow (high-signal-accounts) | **URL:** https://x.com/wannercashcow/status/2031136331171295278
+**Added:** 2026-03-09T19:57:42-04:00
+
+Student Phiri just got the $50K role added
+
+And he started last year..
+
+But he already made more than $57,000 from faceless YouTube
+
+He's just a normal guy who's willing to put in the work and DOESN'T give up
+
+How would $10K+/month change YOUR life?
+
+If you want to build your own
+

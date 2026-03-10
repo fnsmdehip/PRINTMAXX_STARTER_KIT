@@ -1,11 +1,31 @@
 # PRINTMAXX Arb Listings - 2026-03-09
 
-**Generated:** 2026-03-09 16:07:44
+**Generated:** 2026-03-09 19:00:00
 **Products:** 20 (min margin: 25%)
 
 ---
 
 ## 1. Unknown Product
+- **Sell Price:** N/A
+- **Source Price:** beauty
+- **Net Profit:** -1.8
+- **Margin:** 56%
+- **Best Platform:** eBay
+- **Listing Title:** Unknown Product - Premium Quality, Fast Shipping
+- **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
+- **Tags:** skip, unknown, fast shipping, new, trending
+
+## 2. Unknown Product
+- **Sell Price:** N/A
+- **Source Price:** kitchen
+- **Net Profit:** -231.9
+- **Margin:** 52%
+- **Best Platform:** eBay
+- **Listing Title:** Unknown Product - Premium Quality, Fast Shipping
+- **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
+- **Tags:** skip, unknown, fast shipping, new, trending
+
+## 3. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** fitness
 - **Net Profit:** 49.3
@@ -15,7 +35,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: LIST.
 - **Tags:** list, unknown, fast shipping, new, trending
 
-## 2. Unknown Product
+## 4. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** home
 - **Net Profit:** -19.4
@@ -25,7 +45,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 3. Unknown Product
+## 5. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** beauty
 - **Net Profit:** -35.5
@@ -35,7 +55,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 4. Unknown Product
+## 6. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** health
 - **Net Profit:** -39.8
@@ -45,7 +65,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 5. Unknown Product
+## 7. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** kitchen
 - **Net Profit:** -36.5
@@ -55,7 +75,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 6. Unknown Product
+## 8. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** kitchen
 - **Net Profit:** -49.8
@@ -65,7 +85,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 7. Unknown Product
+## 9. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** home
 - **Net Profit:** -42.6
@@ -75,7 +95,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 8. Unknown Product
+## 10. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** health
 - **Net Profit:** -66.4
@@ -85,7 +105,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 9. Unknown Product
+## 11. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** kitchen
 - **Net Profit:** -77.1
@@ -95,7 +115,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 10. Unknown Product
+## 12. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** beauty
 - **Net Profit:** -74.1
@@ -105,7 +125,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 11. Unknown Product
+## 13. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** pet
 - **Net Profit:** -98.1
@@ -115,7 +135,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 12. Unknown Product
+## 14. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** health
 - **Net Profit:** -103.8
@@ -125,7 +145,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 13. Unknown Product
+## 15. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** tech
 - **Net Profit:** -125.0
@@ -135,7 +155,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 14. Unknown Product
+## 16. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** pet
 - **Net Profit:** -144.8
@@ -145,7 +165,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 15. Unknown Product
+## 17. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** health
 - **Net Profit:** -342.0
@@ -155,7 +175,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 16. Unknown Product
+## 18. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** beauty
 - **Net Profit:** 50.2
@@ -165,7 +185,7 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: LIST.
 - **Tags:** list, unknown, fast shipping, new, trending
 
-## 17. Unknown Product
+## 19. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** kitchen
 - **Net Profit:** -35.3
@@ -175,30 +195,10 @@
 - **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
 - **Tags:** skip, unknown, fast shipping, new, trending
 
-## 18. Unknown Product
-- **Sell Price:** N/A
-- **Source Price:** home
-- **Net Profit:** -38.6
-- **Margin:** 50%
-- **Best Platform:** eBay
-- **Listing Title:** Unknown Product - Premium Quality, Fast Shipping
-- **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
-- **Tags:** skip, unknown, fast shipping, new, trending
-
-## 19. Unknown Product
-- **Sell Price:** N/A
-- **Source Price:** kitchen
-- **Net Profit:** -32.0
-- **Margin:** 50%
-- **Best Platform:** eBay
-- **Listing Title:** Unknown Product - Premium Quality, Fast Shipping
-- **Description:** Brand new Unknown Product. Ships within 24 hours. Top-rated seller. Returns accepted within 30 days. Category: SKIP.
-- **Tags:** skip, unknown, fast shipping, new, trending
-
 ## 20. Unknown Product
 - **Sell Price:** N/A
 - **Source Price:** home
-- **Net Profit:** -42.6
+- **Net Profit:** -38.6
 - **Margin:** 50%
 - **Best Platform:** eBay
 - **Listing Title:** Unknown Product - Premium Quality, Fast Shipping

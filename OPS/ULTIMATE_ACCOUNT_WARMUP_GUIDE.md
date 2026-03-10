@@ -698,3 +698,20 @@ Forever: Maintain warmup 20-30 → Cold 30-50 max
 ---
 
 **This is the single source of truth for all account warming. Update this file when new tactics are discovered via daily research.**
+
+
+---
+
+## Pending Enhancement (ALPHA20047, Score: 28)
+
+**Source:** @every (daily scraper) | **URL:** https://x.com/TrySpiral/status/2031088396660318324
+**Added:** 2026-03-09T18:15:01-04:00
+
+Spiral now connects to your X/Twitter account. 
+
+Spiral scans your last thousand tweets, weights them by engagement, and builds a style guide around the writing that actually moves your audience.
+
+Try it out: 
+http://
+writewithspiral.com
+

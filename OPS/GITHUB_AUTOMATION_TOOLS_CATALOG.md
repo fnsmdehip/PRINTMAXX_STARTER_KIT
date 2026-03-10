@@ -947,3 +947,47 @@ And only 35% of visitors to Yahoo perform a search
 
 Using this data (from last week's report), we updated SparkToro to better show which search & AI tools your audience uses 
 
+
+
+---
+
+## Pending Enhancement (ALPHA20046, Score: 30)
+
+**Source:** @GlassNode (daily scraper) | **URL:** https://x.com/glassnode/status/2031084418689810872
+**Added:** 2026-03-09T18:15:01-04:00
+
+#Bitcoin pulled back from $74k but internals are stabilizing. Momentum, ETF inflows, and profitability metrics improved modestly, though capital flows and conviction remain weak.
+
+Read more in this week’s Market Pulse
+
+https://
+glassno.de/3OXCaqR
+
+
+
+---
+
+## Pending Enhancement (ALPHA20049, Score: 20)
+
+**Source:** @dwarkesh_sp (daily scraper) | **URL:** https://x.com/dwarkesh_sp/status/1892245713452741059
+**Added:** 2026-03-09T18:15:01-04:00
+
+.
+@satyanadella
+ on:
+
+- why he doesn’t believe in AGI but does believe in 10% economic growth
+
+- Microsoft’s new topological qubit breakthrough and gaming world models
+
+- whether Office commoditizes LLMs or the other way around
+
+Links below. Enjoy!
+
+Timestamps
+0:00:00 - Intro
+0:05:48 - AI won't be winner-take-all
+0:16:02 - World economy growing by 10%
+0:22:23 - Decreasing price of intelligence
+0:3
+

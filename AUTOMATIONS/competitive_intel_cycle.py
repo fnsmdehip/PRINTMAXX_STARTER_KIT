@@ -101,7 +101,7 @@ def _is_alpha_format(post):
     return 'alpha_id' in post or 'tactic' in post
 
 def load_reddit_top_signals():
-    """Load the latest Reddit scrape and return top competitive signals.
+    """Load ALL Reddit scrapes from today and return top competitive signals.
 
     Handles two formats:
     - Raw Reddit post: keys = title, score, selftext, num_comments, subreddit, url, post_id
@@ -109,9 +109,20 @@ def load_reddit_top_signals():
     """
     if not ALPHA_STAGING_REDDIT:
         return []
-    latest_file = ALPHA_STAGING_REDDIT[-1]
-    with open(latest_file, errors='replace') as f:
-        posts = json.load(f)
+    # Load ALL files from today, not just the latest — signals spread across multiple runs
+    today = datetime.now().strftime("%Y%m%d")
+    today_files = [f for f in ALPHA_STAGING_REDDIT if today in f.name]
+    files_to_load = today_files if today_files else [ALPHA_STAGING_REDDIT[-1]]
+    posts = []
+    seen_ids = set()
+    for fp in files_to_load:
+        with open(fp, errors='replace') as f:
+            batch = json.load(f)
+        for item in batch:
+            uid = item.get('alpha_id') or item.get('post_id') or item.get('source_url', '')
+            if uid not in seen_ids:
+                seen_ids.add(uid)
+                posts.append(item)
     competitive_keywords = [
         'competitor', 'alternative', 'vs ', 'versus', 'compared to', 'pricing',
         'subscription', 'revenue', 'MRR', 'ARR', 'raised', 'funding', 'launch',
