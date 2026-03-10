@@ -1,11 +1,11 @@
 {
-  "generated": "2026-03-09T05:45:00.472468",
+  "generated": "2026-03-10T05:45:00.995835",
   "project": "PRINTMAXX",
   "total_scripts": 20,
   "scripts": {
     "ceo_agent.py": {
       "desc": "24/7 orchestrator \u2014 scores ops, makes PROMOTE/ENHANCE/CREATE/KILL/DISCOVER decisions, delegates to ventures",
-      "lines": 2279,
+      "lines": 2284,
       "classes": [
         {
           "name": "GitGuard",
@@ -202,9 +202,9 @@
         "--cron-add"
       ],
       "state_files": [
-        "STATE_FILE",
         "ceo_state.json",
         "CHECKPOINT_FILE",
+        "STATE_FILE",
         "LOCK_FILE"
       ],
       "reads": [],
@@ -232,7 +232,7 @@
     },
     "agent_swarm.py": {
       "desc": "22 operational agents \u2014 generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection",
-      "lines": 1488,
+      "lines": 1491,
       "classes": [
         {
           "name": "SwarmState",
@@ -354,7 +354,7 @@
     },
     "venture_autonomy.py": {
       "desc": "8 venture types \u2014 universal execution engine, self-managing schedules, SelfManager auto-adjusts",
-      "lines": 1728,
+      "lines": 1731,
       "classes": [
         {
           "name": "AutonomyState",
@@ -524,9 +524,9 @@
         "--self-manage"
       ],
       "state_files": [
-        "autonomy_state.json",
+        "LOG_FILE",
         "STATE_FILE",
-        "LOG_FILE"
+        "autonomy_state.json"
       ],
       "reads": [],
       "writes": [],
@@ -539,7 +539,7 @@
     },
     "intelligence_router.py": {
       "desc": "central intelligence hub \u2014 484 docs, 14,799 alpha, 16 CSVs across 9 ventures",
-      "lines": 1820,
+      "lines": 1823,
       "classes": [],
       "functions": [
         {
@@ -1030,7 +1030,7 @@
     },
     "loop_closer.py": {
       "desc": "closes open loops \u2014 decision execution, feedback tracking, pipeline advancement",
-      "lines": 970,
+      "lines": 973,
       "classes": [],
       "functions": [
         {
@@ -1975,9 +1975,9 @@
         "--status"
       ],
       "state_files": [
-        "STATE_FILE",
-        "daily_research_orchestrator_state.json",
         "LOG_FILE",
+        "daily_research_orchestrator_state.json",
+        "STATE_FILE",
         "LOCK_FILE"
       ],
       "reads": [],
@@ -2203,9 +2203,9 @@
         "--visible"
       ],
       "state_files": [
-        "BRAVE_KEY_FILE",
+        "COPY_STYLE_HANDLES_FILE",
         "CREDS_FILE",
-        "COPY_STYLE_HANDLES_FILE"
+        "BRAVE_KEY_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2418,10 +2418,10 @@
       ],
       "state_files": [],
       "reads": [
-        "REVENUE_TRACKER.csv",
-        "progress.json",
         "ETSY_LISTINGS_COMPLETE.md",
-        "ACCOUNTS.csv"
+        "REVENUE_TRACKER.csv",
+        "ACCOUNTS.csv",
+        "progress.json"
       ],
       "writes": [],
       "calls_scripts": [],
@@ -2429,7 +2429,7 @@
     },
     "wire_missed_intelligence.py": {
       "desc": "parses MISSED_INTELLIGENCE_SCAN.md \u2192 updates catalog",
-      "lines": 260,
+      "lines": 263,
       "classes": [],
       "functions": [
         {

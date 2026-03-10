@@ -1909,3 +1909,36 @@ How would $10K+/month change YOUR life?
 
 If you want to build your own
 
+
+
+---
+
+## Pending Enhancement (ALPHA20585, Score: 26)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rpjv1r/youtube_is_using_bots_when_you_use_advertising/
+**Added:** 2026-03-10T06:45:01-04:00
+
+[r/NewTubers] Youtube is using Bots when you use advertising with them!! This is So illegal!!!
+
+
+
+---
+
+## Pending Enhancement (ALPHA20597, Score: 26)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rprcef/results_one_week_of_posting_shorts_about_history/
+**Added:** 2026-03-10T06:45:01-04:00
+
+[r/NewTubers] Results: One week of posting shorts about history.
+
+
+
+---
+
+## Pending Enhancement (ALPHA20599, Score: 22)
+
+**Source:** r/SaaS | **URL:** https://reddit.com/r/SaaS/comments/1rplpyh/tested_6_marketing_channels_to_scale_a_b2c_saas/
+**Added:** 2026-03-10T06:45:01-04:00
+
+[r/SaaS] Tested 6 marketing channels to scale a B2C SaaS to 6-figure MRR. One channel hit 500M+ views. One was a complete waste of money. Full breakdown w resources below
+

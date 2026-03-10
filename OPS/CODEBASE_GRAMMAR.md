@@ -1,5 +1,5 @@
 # PRINTMAXX CODEBASE GRAMMAR
-# Generated: 2026-03-09T05:45:00.472468
+# Generated: 2026-03-10T05:45:00.995835
 # 20 scripts | Instant system understanding
 
 ## EXECUTION HIERARCHY
@@ -34,7 +34,7 @@
 
 ## SCRIPTS
 
-### ceo_agent.py (2279L) — 24/7 orchestrator — scores ops, makes PROMOTE/ENHANCE/CREATE/KILL/DISCOVER decisions, delegates to ventures
+### ceo_agent.py (2284L) — 24/7 orchestrator — scores ops, makes PROMOTE/ENHANCE/CREATE/KILL/DISCOVER decisions, delegates to ventures
   class GitGuard: [__init__(), snapshot(label), rollback(), post_change_commit(summary)]
   class XlsxIntel: [__init__(), _find_xlsx(), _load(), get_all_ops(), get_auto_status(), get_priority_launch(), get_synergy_stacks(), get_venture_map(), get_expansion_queue(), get_op_by_id(op_id)]
   class CEOState: [__init__(), _load(), _default(), save(), log_decision(decision), log_audit(audit_entry), is_protected(op_id), protect_op(op_id), get_score_trend(op_id, periods)]
@@ -47,12 +47,12 @@
   fn: safe_path(p) | safe_command(cmd_str) | disk_free_gb() | ts() | log(msg, level) | run_script(script_path, args, timeout_sec, label) — Run a PRINTMAXX script with guardrails. Returns (success, output). | _hours_since(iso_ts) — Return hours elapsed since an ISO timestamp string. Returns float('inf') if None | run_ceo_cycle(dry_run) — Run one full CEO cycle: score -> decide -> snapshot -> execute -> audit. | show_status() — Show full CEO agent status dashboard. | run_daemon() — Run the CEO agent 24/7. | main()
   cli: --status --daemon --score --decide --run --protect --rollback --alpha --research --content --health --decision-engine --ventures --cron-list --cron-add
 
-### agent_swarm.py (1488L) — 22 operational agents — generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection
+### agent_swarm.py (1491L) — 22 operational agents — generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection
   class SwarmState: [__init__(), _load(), save(), update_agent(agent_id, updates)]
   fn: safe_path(p) | ts() | log(msg, level) | get_agent_intelligence(agent_id) — Query intelligence router for this agent's venture context. | generate_plist(agent_id, agent_def) — Generate a launchd plist for a swarm agent. | install_agent(agent_id) — Generate plist and install via launchctl. | uninstall_agent(agent_id) — Unload and remove a swarm agent. | list_installed() — List all installed swarm agents. | show_status() | deploy_all() | kill_all() | show_logs(agent_id) | health_check() | main()
   cli: --status --deploy --list --kill --kill-all --logs --health --run
 
-### venture_autonomy.py (1728L) — 8 venture types — universal execution engine, self-managing schedules, SelfManager auto-adjusts
+### venture_autonomy.py (1731L) — 8 venture types — universal execution engine, self-managing schedules, SelfManager auto-adjusts
   class AutonomyState: [__init__(), _load(), save(), get_venture(venture_id), add_venture(venture_id, venture_def), update_venture(venture_id, updates), get_active_ventures()]
   class VentureAutonomyEngine: [__init__(state), create_venture(venture_type, name, config), run_venture(venture_id), run_all_active(), _get_venture_xlsx_context(venture_type), _get_venture_intelligence(venture_type, step), _run_with_claude(venture_id, venture, step, vtype), _save_step_result(venture_id, step, success, output), _generate_schedule_configs(venture_id, venture_def), _generate_llm_launchd_plist(venture_id, venture_def, vtype, interval_hours)]
   class SchedulerManager: [install_launchd(venture_id, mode), uninstall_launchd(venture_id), install_all_llm(), install_cron(venture_id), list_installed()]
@@ -60,7 +60,7 @@
   fn: _sig(s, f) | safe_path(p) | ts() | log(msg, level) | run_cmd(cmd, timeout_sec, label) — Run a command with guardrails. Returns (success, output). | run_script(script_name, args, timeout_sec, label) — Run a PRINTMAXX automation script. | _hours_since(iso_ts) | log_mission(mission_name, result, duration_s, output) — Log to the shared agent mission log (same format as monitor.py expects). | send_bus_message(body, to_agent) — Send a message on the shared inter-agent bus. | show_status() | list_types() | run_daemon() — Run the autonomy engine forever, cycling all active ventures. | main()
   cli: --status --run --run-all --create --list-types --schedule --install-launchd --install-script-launchd --install-cron --install-all --import-ceo --daemon --pause --resume-venture --bootstrap --self-manage
 
-### intelligence_router.py (1820L) — central intelligence hub — 484 docs, 14,799 alpha, 16 CSVs across 9 ventures
+### intelligence_router.py (1823L) — central intelligence hub — 484 docs, 14,799 alpha, 16 CSVs across 9 ventures
   fn: safe_path(p) — Verify path is within project root. Raises ValueError if not. | ts() | load_catalog() — Load INTELLIGENCE_CATALOG.json if it exists, merge with hardcoded map. | query_alpha(venture_type, top) — Query alpha entries relevant to a venture. | find_existing_docs(venture_type) — Return list of (path, description, exists) for a venture's docs. | find_existing_dirs(venture_type) — Return list of (dir_path, description, file_count, files) for directories. | find_existing_csvs(venture_type) — Return list of (path, description, exists, row_count) for LEDGER CSVs. | find_swarm_reports(venture_type, max_reports) — Find the most recent swarm reports relevant to a venture type. | find_task_docs(venture_type, task_type) — Get the most relevant docs for a specific task within a venture. | extract_doc_summary(doc_path, max_lines) — Extract key sections from a doc (headers + first few lines under each). | _enrich_with_master_ops(venture_type, brief) — Enrich an intelligence brief with Master Ops xlsx data. | get_intelligence(venture_type, task_type, include_summaries, alpha_count) | compute_stats() — Compute coverage statistics across all venture types. | format_human_output(intel, mode) — Format intelligence for human-readable CLI output. | format_stats_output(stats) — Format stats for human-readable output.
   cli: --venture --task --json --brief --full --stats --catalog --list-ventures --alpha-count
 
@@ -80,7 +80,7 @@
   fn: normalize_roi(val) — Fix corrupted ROI values from CSV misalignment. | load_alpha() — Load all alpha entries from CSV, fixing known data quality issues. | score_entry(entry, venture_config) — Score how relevant an alpha entry is to a venture type. | query_venture(entries, venture_type, status_filter, limit) — Query alpha entries relevant to a venture type. | keyword_search(entries, query, limit) — Full-text keyword search across all alpha fields. | query_by_category(entries, category, limit) — Query by exact category match. | top_alpha(entries, limit) — Get top alpha entries by ROI potential. | show_stats(entries) — Show alpha distribution stats. | format_result(score, entry, verbose) — Format a single result for display. | main()
   cli: --venture --category --search --top --status --stats --untagged --json --verbose
 
-### loop_closer.py (970L) — closes open loops — decision execution, feedback tracking, pipeline advancement
+### loop_closer.py (973L) — closes open loops — decision execution, feedback tracking, pipeline advancement
   fn: log(msg, level) | log_action(action_type, target, result, details) | load_state() | save_state(state) | run_cmd(cmd, timeout, label) | _get_blocker_intelligence() — Get current blocker state from Master Ops for loop closing. | adjust_interval(agent_id, params, dry_run) | kill_agent(agent_id, dry_run) | deploy_agent(agent_id, dry_run) | create_venture(venture_type, params, dry_run) | boost_agent(agent_id, dry_run) | throttle_agent(agent_id, dry_run) | run_script_action(script, params, dry_run) | process_alpha(dry_run) | execute_weekly_target(target_key, params, dry_run) — Execute an agent-owned weekly target by triggering the relevant swarm agent.
   cli: --cycle --decisions --feedback --pipeline --status --dry-run
 
@@ -133,9 +133,9 @@
 ### memory_manager.py (464L) — filesystem-based memory management
   fn: count_csv(path) | count_files(pattern) | read_json(path) | file_age_hours(path) | safe_read_csv_column(path, col) | update_heartbeat() — Generate HEARTBEAT.md — the system pulse check. | update_active_tasks() — Refresh active-tasks.md with current system state. | log_to_daily(message) — Append a message to today's daily log. | generate_daily_summary() — Generate end-of-day summary from daily log entries. | check_venture_health() — Quick health check across all ventures. | main()
   cli: --heartbeat --active-tasks --daily-summary --log --health --full
-  reads: REVENUE_TRACKER.csv, progress.json, ETSY_LISTINGS_COMPLETE.md, ACCOUNTS.csv
+  reads: ETSY_LISTINGS_COMPLETE.md, REVENUE_TRACKER.csv, ACCOUNTS.csv, progress.json
 
-### wire_missed_intelligence.py (260L) — parses MISSED_INTELLIGENCE_SCAN.md → updates catalog
+### wire_missed_intelligence.py (263L) — parses MISSED_INTELLIGENCE_SCAN.md → updates catalog
   fn: classify_path(path) — Classify a file path into a venture type. | parse_scan_file(scan_path) — Parse MISSED_INTELLIGENCE_SCAN.md and extract all file entries. | get_existing_paths(catalog) — Get all paths already in the catalog across all ventures. | main()
 
 ### build_codebase_grammar.py (353L) — LLM-optimized codebase representation — AST parsing, 100x+ compression

@@ -383,3 +383,14 @@ Sent a discount code to all the people who supported your product during the tou
 
 See you tomorrow :)
 
+
+
+---
+
+## Pending Enhancement (ALPHA20395, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rps1jm/i_built_a_platform_that_lets_consultants_create/
+**Added:** 2026-03-10T06:15:02-04:00
+
+[ACQUISITION] I built a platform that lets consultants create and sell AI document products through their own branded portal
+

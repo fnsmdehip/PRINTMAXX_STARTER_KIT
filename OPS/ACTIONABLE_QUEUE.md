@@ -1,10 +1,12 @@
-# ACTIONABLE QUEUE -- 2026-03-09 07:30
-Total items: 39 (deduplicated from all sources)
+# ACTIONABLE QUEUE -- 2026-03-10 07:30
+Total items: 42 (deduplicated from all sources)
 
 ---
 
-## [P0] CRITICAL -- Revenue-blocking human actions (15 items)
+## [P0] CRITICAL -- Revenue-blocking human actions (16 items)
 
+- [ ] - **HUMAN BLOCKERS (75 min total):** Gumroad (45m), X Premium (5m), Buffer CSV import (5m), affiliate signup (15m), paste 3 emails (5m). Unlocks $850-5,300/mo pipeline. [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Status:** DONE (product built). HUMAN ACTION: List on Gumroad/Whop when accounts created. [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **BLOCKER (human):** Create Gumroad/Whop account to list this product [HUMAN]
@@ -36,8 +38,10 @@ Total items: 39 (deduplicated from all sources)
 - [ ] - [P0] Facebook keyword scraper - $500 budget (r/forhire)
       Source: PERSISTENT_TASK_TRACKER
 
-## [P1] HIGH -- System improvements with high ROI (6 items)
+## [P1] HIGH -- System improvements with high ROI (7 items)
 
+- [ ] - **HUMAN ACTIONS:** Deploy PWAs (~10 min), post tweets (~15 min), wire email forms to Beehiiv (~15 min) [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Prompt pipeline built:** log_user_prompts.sh → prompt_meta_review.py → actionable_aggregator.py → session_briefing.py
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - Research pipeline: running in background (twitter + reddit + alpha extraction)
@@ -51,7 +55,7 @@ Total items: 39 (deduplicated from all sources)
 - [ ] - 168 deployed pages × $0 organic traffic = total SEO waste
       Source: swarm/trend_synthesis_20260308.md
 
-## [P2] MEDIUM -- Nice-to-have optimizations (16 items)
+## [P2] MEDIUM -- Nice-to-have optimizations (17 items)
 
 - [ ] - **HUMAN ACTIONS NEEDED:** [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
@@ -64,6 +68,8 @@ Total items: 39 (deduplicated from all sources)
 - [ ] - **Time: 2 minutes** [HUMAN] [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - [ ] **[MEDIUM] Rork Max:** No-code iOS app builder direct competition. Review pricing + differentiate. URL: https://www.producthunt.com/posts/rork-max [HUMAN: review] [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - [P2] [HUMAN] None: blocking None ventures (source: DAILY_TACTICAL_PLAN) [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - None: blocking None ventures [HUMAN]
       Source: DAILY_TACTICAL_PLAN
@@ -95,6 +101,6 @@ Total items: 39 (deduplicated from all sources)
 
 ---
 ### Sources
-- PERSISTENT_TASK_TRACKER: 35 items
+- PERSISTENT_TASK_TRACKER: 38 items
 - swarm: 3 items
 - DAILY_TACTICAL_PLAN: 1 items

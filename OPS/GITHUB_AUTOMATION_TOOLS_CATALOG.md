@@ -1004,3 +1004,29 @@ i really don't understand why you would pay $25 for claude to review a SINGLE pr
 
 gpt 5.4 is the only model i trust for reviews rn
 
+
+
+---
+
+## Pending Enhancement (ALPHA20304, Score: 25)
+
+**Source:** @gudanglifehack (bookmarks) | **URL:** https://x.com/gudanglifehack/status/2031204227847172587
+**Added:** 2026-03-10T04:21:18-04:00
+
+BREAKING: Claude can now run your entire social media strategy like a $500/hour social media manager. For free.
+
+Here are 7 prompts you should be using right now:￼
+
+Save this before it goes viral.
+
+
+
+---
+
+## Pending Enhancement (ALPHA20450, Score: 25)
+
+**Source:** r/entrepreneur | **URL:** https://reddit.com/r/Entrepreneur/comments/1rpowo2/how_many_of_you_people_stopped_using_chatgpt/
+**Added:** 2026-03-10T06:15:02-04:00
+
+[r/entrepreneur] How many of you people stopped using ChatGPT?
+

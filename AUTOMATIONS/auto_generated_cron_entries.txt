@@ -592,3 +592,13 @@ analyze ...
 # Added: 2026-03-09T19:57:42-04:00
 # 0 6 * * 1  # TODO: create monitoring script for this
 
+# ALPHA20457: [r/ClaudeAI] Claude Pro Weekly Limits: Pro Plan is Objectively Worse Than Free...
+# Source: https://reddit.com/r/ClaudeAI/comments/1rplxbv/claude_pro_weekly_limits_pro_plan_is_objectively/
+# Added: 2026-03-10T06:15:02-04:00
+# 0 6 * * 1  # TODO: create monitoring script for this
+
+# ALPHA20583: [r/AmazonFBA] £47K Monthly Sales - 22% Profit Margin in Low-Priced Supplements...
+# Source: https://reddit.com/r/AmazonFBA/comments/1rpfrc2/47k_monthly_sales_22_profit_margin_in_lowpriced/
+# Added: 2026-03-10T06:45:01-04:00
+# 0 6 1 * *  # TODO: create monitoring script for this
+
