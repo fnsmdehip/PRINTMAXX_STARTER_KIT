@@ -595,3 +595,4 @@
 {"ts": "2026-03-14T06:17:12.841754", "mission": "autonomy:auto_product_digital_products_", "result": "partial", "duration_s": 6, "output": "Digital Products: 4/6 steps OK"}
 {"ts": "2026-03-14T06:23:17.253463", "mission": "autonomy:alpha_intelligence", "result": "partial", "duration_s": 3, "output": "Alpha Intelligence Research: 1/3 steps OK"}
 {"ts": "2026-03-14T08:00:04.431441", "mission": "health_heal", "result": "success", "duration_s": 4.1, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-14T08:00:04.626876", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 84 response drafts, 38 listing drafts"}
