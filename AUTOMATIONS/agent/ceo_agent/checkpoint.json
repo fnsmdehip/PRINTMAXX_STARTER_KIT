@@ -1,7 +1,7 @@
 {
   "cycle_id": "cycle_22_20260314_1600",
   "cycle_number": 22,
-  "last_completed_phase": 2,
+  "last_completed_phase": 5,
   "phase_results": {
     "1": {
       "count": 179,
@@ -46,8 +46,34 @@
           "reason": "READY status, score 60.9, not yet running"
         }
       ]
+    },
+    "3": "snapshot_taken",
+    "4": "intel_loaded",
+    "5": {
+      "results": [
+        {
+          "op_id": "D02",
+          "status": "success"
+        },
+        {
+          "op_id": "D06",
+          "status": "success"
+        },
+        {
+          "op_id": "F04",
+          "status": "success"
+        },
+        {
+          "op_id": "N11",
+          "status": "success"
+        },
+        {
+          "op_id": "N58",
+          "status": "success"
+        }
+      ]
     }
   },
   "started_at": "2026-03-14T16:00:01.461600",
-  "updated_at": "2026-03-14T16:00:10.357151"
+  "updated_at": "2026-03-14T16:00:16.694277"
 }
