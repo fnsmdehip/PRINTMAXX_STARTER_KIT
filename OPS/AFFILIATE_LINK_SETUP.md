@@ -144,3 +144,15 @@ How I’d use OpenClaw to replace a $15k/mo ops + marketing stack (real setup, n
 
 White-label AI chatbot platforms now start at $70-99/mo (Trillet $99/mo 3 sub-accounts, BotSailor $70/mo). Build VERTICAL-SPECIFIC packages: RoofBot, DentalAssist AI, LegalIntake AI. Charge $199-499/mo per client + $499 setup. 50-85% margins. Live Upwork demand confirmed.
 
+
+
+---
+
+## Pending Enhancement (ALPHA25364, Score: 29)
+
+**Source:** @mattpocockuk (high-signal-accounts) | **URL:** https://x.com/Salad_Chefs/status/2032135402052825312/analytics
+**Added:** 2026-03-14T09:45:01-04:00
+
+90% cheaper. 5 min setup. $0 token fees.
+SaladCloud saves you lettuce.
+

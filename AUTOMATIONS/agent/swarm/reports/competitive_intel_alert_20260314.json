@@ -1,0 +1,68 @@
+{
+  "cycle_time": "2026-03-14T08:51:12.195449",
+  "venture": "Competitive Intel",
+  "scraper_cycle": "2h",
+  "sources_hit": [
+    "Reddit/SaaS",
+    "Reddit/Solopreneur",
+    "Reddit/indiehackers",
+    "Reddit/SideProject",
+    "Reddit/MicroSaas",
+    "ProductHunt"
+  ],
+  "total_posts_scraped": 13,
+  "high_signal_count": 5,
+  "new_alpha_added": 13,
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "signal": 7,
+      "title": "We're profitable at $40k MRR and i have zero interest in growing faster",
+      "url": "https://reddit.com/r/SaaS/comments/1rtg69f/were_profitable_at_40k_mrr_and_i_have_zero/",
+      "subreddit": "SaaS",
+      "score": 39,
+      "comments": 36,
+      "action": "Mine for tactics + repurpose as content + check for outreach opportunities"
+    },
+    {
+      "priority": "HIGH",
+      "signal": 7,
+      "title": "Spent $3,200 on a growth consultant last year. Built this instead. 3 free AI prompts for SaaS founders.",
+      "url": "https://reddit.com/r/SaaS/comments/1rtd3ba/spent_3200_on_a_growth_consultant_last_year_built/",
+      "subreddit": "SaaS",
+      "score": 7,
+      "comments": 23,
+      "action": "Mine for tactics + repurpose as content + check for outreach opportunities"
+    },
+    {
+      "priority": "MEDIUM",
+      "signal": 5,
+      "title": "Bootstrapped to $12K MRR with zero funding. The exact 4-decision framework I used to avoid burning cash on the wrong things",
+      "url": "https://reddit.com/r/SaaS/comments/1rtcuje/bootstrapped_to_12k_mrr_with_zero_funding_the/",
+      "subreddit": "SaaS",
+      "score": 25,
+      "comments": 15,
+      "action": "Mine for tactics + repurpose as content + check for outreach opportunities"
+    },
+    {
+      "priority": "MEDIUM",
+      "signal": 5,
+      "title": "My saas hit $4k MRR as a solo founder. Here are the 3 channels that actually worked and the 4 that were pure waste of time.",
+      "url": "https://reddit.com/r/Solopreneur/comments/1rt522h/my_saas_hit_4k_mrr_as_a_solo_founder_here_are_the/",
+      "subreddit": "Solopreneur",
+      "score": 14,
+      "comments": 4,
+      "action": "Mine for tactics + repurpose as content + check for outreach opportunities"
+    },
+    {
+      "priority": "MEDIUM",
+      "signal": 5,
+      "title": "How I got my first 10 customers without spending a $",
+      "url": "https://reddit.com/r/microsaas/comments/1rtbzk8/how_i_got_my_first_10_customers_without_spending_a/",
+      "subreddit": "MicroSaas",
+      "score": 16,
+      "comments": 6,
+      "action": "Mine for tactics + repurpose as content + check for outreach opportunities"
+    }
+  ]
+}

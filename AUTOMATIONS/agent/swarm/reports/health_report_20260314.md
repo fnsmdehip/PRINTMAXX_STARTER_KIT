@@ -1,39 +1,52 @@
-# SYSTEM HEALTH REPORT — 2026-03-14 06:55 (Cycle 2)
+# SYSTEM HEALTH REPORT — 2026-03-14 10:10 (Cycle 3)
 
-Previous cycle: 04:30 (10 agents fixed). This cycle: 3 additional fixes.
+Previous cycles: 04:30 (10 agents fixed), 06:55 (3 fixes). This cycle: 3 fixes + 2 human blockers identified.
 
 ## Summary
-- **Overall Status:** HEALTHY
-- **Disk:** 51GB free / 926GB — no concerns
-- **Logs:** 46MB total — no cleanup needed
-- **Daemon:** PID 13218 (printmaxx_agent.py) — RUNNING
-- **Cron:** 247 lines, 55 scripts, all exist
-- **Launchd:** 35 agents — 30 idle, 3 running, 3 failed (expected)
+- **Overall Status:** YELLOW (operational, OAuth token expired blocks 4 agents)
+- **Disk:** 51GB free / 926GB — healthy
+- **Logs:** 47MB total (240 files) — no cleanup needed
+- **Cron:** 247 lines, 53 scripts, all exist (100%)
+- **Launchd:** 36 agents — 31 healthy, 4 OAuth-expired, 1 fixed this cycle
+- **Processes:** 8 claude -p sessions, 5 swarm processes, 0 zombies
 
 ---
 
 ## FIXES APPLIED THIS CYCLE
 
-### 1. FIXED: Stale git index.lock (HIGH)
-- **Issue:** `.git/index.lock` existed since March 10 (4 days stale), blocking all git commits
-- **Symptoms:** `fatal: Unable to create .git/index.lock: File exists` in perpetual_guardian and ceo_agent logs
-- **Fix:** Removed stale lock file. Git operations restored.
+### 1. FIXED: Stale research orchestrator lock (MEDIUM)
+- **Issue:** `AUTOMATIONS/logs/daily_research_orchestrator.lock` was 6 hours old (created 04:20 AM)
+- **Impact:** Research orchestrator blocked at 5:30 AM with "Could not acquire lock. Another instance may be running."
+- **Fix:** Removed stale lock. Next scheduled run will succeed.
 
-### 2. FIXED: Cron argument mismatch — engagement_optimizer (MEDIUM)
-- **Issue:** Crontab used `--weekly-schedule` but script expects `--schedule-week`
-- **Impact:** Weekly engagement schedule generation silently failing every Monday 6 AM
-- **Fix:** Updated `crontab_printmaxx_v2.txt` line 79 and reinstalled crontab (247 lines)
+### 2. FIXED: Stale intelligence catalog lock (LOW)
+- **Issue:** `AUTOMATIONS/locks/INTELLIGENCE_CATALOG.json.lock` was 1.5 hours old
+- **Impact:** Could block intelligence routing
+- **Fix:** Removed lock.
 
-### 3. IDENTIFIED: auto_freelance_responder argument mismatch (LOW)
-- **Issue:** Some log entries show `--respond` used but script expects `--scan-and-respond`
-- **Impact:** Not in current crontab — likely from manual/agent invocations. No cron fix needed.
+### 3. FIXED: claude-sessions launchd agent (MEDIUM)
+- **Issue:** `com.printmaxx.claude-sessions` had exit code 126 (permission denied)
+- **Fix:** Reloaded agent. Now exit 0.
 
 ---
 
-## Previous Cycle Fixes (04:30)
-- 7 swarm agents fixed (bash syntax in plists — prompts extracted to files)
-- 3 schedule agents fixed (same root cause)
-- claude-sessions permission fixed (chmod +x)
+## NEW FINDINGS THIS CYCLE
+
+### OAuth Token Expired (HIGH — HUMAN BLOCKER)
+- **Root cause:** `claude -p` sessions fail with `401: OAuth token has expired`
+- **Affected agents (all exit 1):**
+  - `com.claude.schedule.auto_app_app_factory_9788`
+  - `com.claude.schedule.auto_local_biz_openclaw_nationwide_9569`
+  - `com.claude.schedule.auto_monetize_affiliate_funnels_9569`
+  - `com.claude.schedule.auto_research_alpha_intelligence_9565`
+- **Fix:** HUMAN ACTION — run `claude login` (2 min)
+
+### Research Agent Sandbox Issue (LOW)
+- **Issue:** macOS blocks `cat` of prompt file when run via launchd
+- **Error:** `Operation not permitted` on prompt file read
+- **Fix options:**
+  1. Inline prompt into plist (like other agents)
+  2. Grant Full Disk Access to `/bin/bash` in System Preferences
 
 ---
 
@@ -42,57 +55,76 @@ Previous cycle: 04:30 (10 agents fixed). This cycle: 3 additional fixes.
 | Metric | Value |
 |--------|-------|
 | Total entries | 65 active (247 lines incl. comments) |
-| Scripts exist | 55/55 (100%) |
+| Scripts exist | 53/53 (100%) |
 | Missing scripts | 0 |
-| Critical scripts syntax | 5/5 OK (ceo_agent, venture_autonomy, loop_closer, decision_engine, cross_pollinator) |
+
+**Active today (verified by log timestamps):**
+- CEO Agent: 08:06 (5 decisions, 0 issues)
+- Venture Autonomy: 08:15 (0/10 ran, all within interval)
+- Freelance Scanner: 09:00 (42 scanned, 19 hot)
+- Ecom Arb: 10:04 (20 scanned, 2 listed)
+- Inbound Leads: 08:30 (53 new leads)
+- Cross Pollinator: 880 items wired
+- Alpha Processor: running
+- Research Pipeline: 04:31 (797 alpha entries)
+- RBI Scanner: 08:00 (33 opportunities)
 
 ---
 
-## LAUNCHD AGENTS (35 total)
+## LAUNCHD AGENTS (36 total)
 
 | Status | Count | Details |
 |--------|-------|---------|
-| IDLE | 30 | Normal — waiting for next scheduled run |
-| RUNNING | 3 | asset_deployer (3142), content_compounder (3145), system_healer (3198) |
-| FAILED (exit=1) | 3 | Nested Claude session conflict (expected) |
-
-**Failed agents:** auto_monetize_affiliate_funnels, auto_local_biz_openclaw, auto_app_app_factory — all use `claude -p` which fails when a Claude session is already active. Will self-heal on next run.
+| Exit 0 (healthy) | 31 | Normal operation |
+| Exit 1 (OAuth expired) | 4 | Need `claude login` |
+| Running (PID) | 3 | asset_deployer (27780), content_compounder (27785), system_healer (27849) |
 
 ---
 
 ## LOCK FILES
 
-| Lock File | Age | Status |
-|-----------|-----|--------|
-| autonomy_state.json.lock | 28 min | Normal |
-| feedback_recommendations.json.lock | 23 min | Normal |
-| loop_state.json.lock | 23 min | Normal |
-| message_bus.jsonl.lock | 23 min | Normal |
-
-No stale locks. All from most recent cron cycle.
+No stale locks remaining (2 removed this cycle).
 
 ---
 
-## ERROR LOG ANALYSIS
+## ERROR LOG ANALYSIS (Today)
 
-| Error | Severity | Status |
-|-------|----------|--------|
-| git index.lock blocking commits | HIGH | **FIXED** |
-| engagement_optimizer wrong arg | MEDIUM | **FIXED** |
-| Claude nested session errors | LOW | Expected behavior |
-| Google Trends 429 rate limit | LOW | External, no fix |
-| cross_pollinator lock contention | LOW | Self-resolved |
+| Error | Count | Severity | Status |
+|-------|-------|----------|--------|
+| OAuth token expired | 4 agents | HIGH | HUMAN BLOCKER |
+| Stale research lock | 1 | MEDIUM | **FIXED** |
+| Fiverr/Upwork 403 | 14 | LOW | Expected (bot detection) |
+| Google Trends 429 | 3 | LOW | External rate limit |
+| Research sandbox block | 1 | LOW | Needs plist fix |
 
 ---
 
-## CROSS-POLLINATOR
-- Total items wired: 860
-- Last successful run: 06:40 today
-- New items this cycle: 8 (5 freelance + 3 competitor pricing)
+## HUMAN BLOCKERS
+
+| Priority | Action | Time | Impact |
+|----------|--------|------|--------|
+| P0 | Run `claude login` to refresh OAuth token | 2 min | Unblocks 4 autonomous agents |
+| P2 | Grant Full Disk Access to /bin/bash (System Prefs > Privacy) | 3 min | Fixes research agent sandbox |
+
+---
+
+## PIPELINE HEALTH SCORES
+
+| Pipeline | Score | Notes |
+|----------|-------|-------|
+| Scraping | 9/10 | All scrapers active, minor rate limits |
+| Intelligence | 8/10 | 797 alpha today, routing working |
+| CEO Orchestration | 10/10 | Clean cycle, 5 decisions |
+| Lead Generation | 9/10 | 53 new leads, 19 hot freelance |
+| Content | 8/10 | Queues active, no posting (needs accounts) |
+| Venture Autonomy | 7/10 | Running but 4 agents blocked by OAuth |
 
 ---
 
 ## NEXT CYCLE
-1. Verify engagement_optimizer runs successfully next Monday with `--schedule-week`
-2. Monitor 3 failed launchd agents — should succeed when no active Claude session
-3. All systems healthy, no urgent action required
+1. Verify research orchestrator lock doesn't reoccur
+2. Check if OAuth token gets refreshed (human action)
+3. Monitor swarm agent health
+4. All Python cron scripts operational
+
+*Generated by system_healer swarm agent — next cycle in 2h*
