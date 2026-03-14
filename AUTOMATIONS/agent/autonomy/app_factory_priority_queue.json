@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-03-14 11:13:50",
+  "generated_at": "2026-03-14 15:45:04",
   "sources": {
-    "alpha_staging_candidates": 3025,
+    "alpha_staging_candidates": 3112,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
     "existing_specs_detected": 81
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3000,
+    "total_candidates": 3086,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 80,
+      "ITERATE_EXISTING_NOW": 81,
       "BUILD_NEW_NOW": 65,
       "SPEC_AND_TEST": 145,
-      "PARK": 2703,
+      "PARK": 2788,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
       "faith": 72,
-      "focus": 425,
-      "habits": 179,
-      "ai_utility": 2011,
-      "fitness": 180,
-      "sleep": 113,
-      "meal": 20
+      "focus": 442,
+      "habits": 186,
+      "ai_utility": 2066,
+      "fitness": 182,
+      "sleep": 117,
+      "meal": 21
     }
   },
   "queue": [
@@ -958,6 +958,68 @@
       "rank": 15
     },
     {
+      "candidate_id": "ALPHA16827",
+      "title": "2k users, $800 with a Habit Tracker - I can't explain how good this feels | App name - [HabitSwipe](http://www.habitswipe.app)",
+      "source": "r/passive_income",
+      "source_url": "https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "SOON",
+      "status": "ROUTED_TO_VENTURE",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "",
+      "applicable_niches": "2026-03-07T02:47:34.666647",
+      "applicable_methods": "N/A",
+      "evidence": "2k users, $800 with a Habit Tracker - I can't explain how good this feels | App name - [HabitSwipe](http://www.habitswipe.app)",
+      "compliance_notes": "",
+      "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA16827_monetization.md",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA16827",
+        "source": "r/passive_income",
+        "source_url": "https://reddit.com/r/passive_income/comments/1rmcm56/2k_users_800_with_a_habit_tracker_i_cant_explain/",
+        "category": "MONETIZATION",
+        "tactic": "2k users, $800 with a Habit Tracker - I can't explain how good this feels | App name - [HabitSwipe](http://www.habitswipe.app)",
+        "roi_potential": "HIGHEST",
+        "priority": "SOON",
+        "status": "ROUTED_TO_VENTURE",
+        "applicable_methods": "N/A",
+        "applicable_niches": "2026-03-07T02:47:34.666647",
+        "synergy_score": "[FRESH] score=54 comments=27 ratio=88% | NUMBERS: dollar_amounts: $800, $799; user_counts: 2k users, 2k installs, 2500 users; time_frames: 2 months",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA16827_monetization.md",
+        "created_at": "",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 108,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 16
+    },
+    {
       "candidate_id": "ALPHA18479",
       "title": "HabitSwipe hit 2,500 users and $799 revenue in 2 months. Minimalist 2-screen app. 120 reviews. Built for personal use then shared on Reddit. Key: swipe-based UX (like Tinder for habits). Cross-platform Android + iOS.",
       "source": "r/passive_income",
@@ -1017,7 +1079,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 16
+      "rank": 17
     },
     {
       "candidate_id": "ALPHA25040",
@@ -1079,7 +1141,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 17
+      "rank": 18
     },
     {
       "candidate_id": "ALPHA18483",
@@ -1141,7 +1203,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 18
+      "rank": 19
     },
     {
       "candidate_id": "ALPHA25276",
@@ -1203,7 +1265,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 19
+      "rank": 20
     },
     {
       "candidate_id": "ALPHA25041",
@@ -1265,7 +1327,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 20
+      "rank": 21
     },
     {
       "candidate_id": "ALPHA18678",
@@ -1327,7 +1389,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 21
+      "rank": 22
     },
     {
       "candidate_id": "ALPHA17429",
@@ -1389,7 +1451,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 23
     },
     {
       "candidate_id": "ALPHA18535",
@@ -1451,7 +1513,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 24
     },
     {
       "candidate_id": "ALPHA_REDDIT_0309_001",
@@ -1513,7 +1575,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA15286",
@@ -1556,7 +1618,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA18170",
@@ -1618,7 +1680,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA544",
@@ -1680,7 +1742,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA17028",
@@ -1742,7 +1804,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 29
     },
     {
       "candidate_id": "HN_003",
@@ -1804,7 +1866,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA18679",
@@ -1866,7 +1928,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 31
     },
     {
       "candidate_id": "RF_001",
@@ -1935,7 +1997,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA25039",
@@ -1997,7 +2059,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA18306",
@@ -2059,7 +2121,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA18478",
@@ -2121,7 +2183,7 @@
         "monetization: paid upfront vs free trial subscription"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA229",
@@ -2183,7 +2245,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA17338",
@@ -2245,7 +2307,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA18487",
@@ -2307,7 +2369,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA228",
@@ -2369,7 +2431,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA_CI_20260309_1627_3442",
@@ -2431,68 +2493,6 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 10,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA406",
-      "title": "Specific numbers + clear method. High signal.",
-      "source": "r/AppBusiness",
-      "source_url": "https://www.reddit.com/r/AppBusiness/comments/1qy8oh8/built_a_fitness_app_that_converts_videos_into/",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGHEST",
-      "priority": "PENDING_REVIEW",
-      "status": "APPROVED",
-      "engagement_authenticity": "",
-      "earnings_verified": "",
-      "applicable_niches": "2026-02-10T10:07:37.453753",
-      "applicable_methods": "N/A",
-      "evidence": "Specific numbers + clear method. High signal.",
-      "compliance_notes": "",
-      "reviewer_notes": "Specific numbers + clear method. High signal.",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA406",
-        "source": "r/AppBusiness",
-        "source_url": "https://www.reddit.com/r/AppBusiness/comments/1qy8oh8/built_a_fitness_app_that_converts_videos_into/",
-        "category": "Built a fitness app that converts videos into workout routines. Made $300 in first month.",
-        "tactic": "APP_MONETIZATION",
-        "roi_potential": "HIGHEST",
-        "priority": "PENDING_REVIEW",
-        "status": "APPROVED",
-        "applicable_methods": "N/A",
-        "applicable_niches": "2026-02-10T10:07:37.453753",
-        "synergy_score": "Score: 135, Comments: 72",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "",
-        "earnings_verified": "",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "Specific numbers + clear method. High signal.",
-        "created_at": "",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 89,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
       "rank": 40
     }
   ]

@@ -1,41 +1,41 @@
-# Agent-Generated Content — 2026-03-14 10:00
+# Agent-Generated Content — 2026-03-14 14:00
 
-guy missed a job interview because he can't wake up. 36 comments deep and everyone has the same problem. accountability alarm app with a penalty system. $5/mo. 10,000 people searching "how to wake up early" monthly. the pain point literally scores 100/100 in today's scan. someone build this before i do.
-
----
-
-33 rbi opportunities showed up in today's scan. $4,100-$50,750/mo total addressable. 11 ready to launch right now. 6 tagged P0 do-today. and people are still "brainstorming business ideas" in the shower. the data is screaming at you. you're just not running the scanner.
+scanned 10 pain points on reddit today. top scorer at 100/100: someone who missed a job interview because they can't wake up. 36 upvotes. 36 comments. that's not a reddit post. that's a product brief. alarm apps are a $400M market and the accountability angle is wide open.
 
 ---
 
-local business website audits. $99 basic. $499 audit + action plan. run a crawler on 50 local businesses, email the 15 worst-scoring ones a free preview of what's broken. close 3 at $499. that's $1,497 before lunch and you didn't even build anything. the audit tool already exists. the leads already exist. you're just not sending the email.
+someone posted "i lose track of all my conversations" on r/SaaS today. 2 comments. low engagement. but the pain is real. every founder i know has 4 inboxes, 3 DM platforms, and zero system. conversation CRM for solopreneurs. $19/mo. the market is begging for it in plain text.
 
 ---
 
-lost in the sauce of reddit DMs and the post has 2 comments. but that's the signal. low engagement + real frustration = underserved market. conversation tracker across platforms. CRM for people who talk to too many people. $10/mo solves it. nobody's building for the chronically online yet.
+ran the daily RBI scanner. 33 opportunities. $4,100-$50,750/mo in potential. 11 ready to launch today. 6 are P0 priority. the one that keeps showing up: local business website audits. $99 audit. $499 audit + action plan. run a script on 50 prospects. cold email the ones with broken sites. they already know their site sucks. you're just the first person to show them the score.
 
 ---
 
-500 cold emails per day. free. gmail. no fancy tools. 3 accounts. warm for 7 days at 20 normal sends. ramp to 100/day by week 2. $500-5,000/mo pipeline from something that costs $0. the cold outreach meta right now is absurd. everyone's paying $200/mo for instantly when the free version works at low volume.
+gmail gives you 500 free outbound emails per day. 3 accounts = 1,500/day. warm for 7 days sending 10-20 normal emails. ramp to 100/day by week 2. $500-5000/mo pipeline from a free tool that's already on your phone. the cold outreach game is not a cost problem. it's a "just do it" problem.
+
+---
+
+meal prep pain point showed up 3x in today's scan. everyone's looking for someone to solve their food logistics. batch 4-5 clients on the same route. $300-500/mo retainer each. that's $1,500-2,500/mo running errands you'd optimize with google maps anyway. nobody's pairing this with route optimization software yet.
 
 ---
 
 THREAD:
 
-today's pain point scan pulled 10 opportunities from reddit. here's the one that scored 100 out of 100 and why it prints.
+i scan reddit every morning for product ideas. not vibes. actual pain points with scores. here's what today's data looks like and how i turn a reddit post into revenue.
 
 ---
 
-r/productivity. 36 upvotes. 36 comments. guy says "i wish somebody could wake me up in the morning." missed a job interview because he turned off his alarm. goes to sleep late. no motivation to get out of bed. the comments are all "same."
+step 1: automated scraper hits 41 subreddits. scores each post on a 0-100 scale based on upvotes, comment count, pain language, and "wish_existed" patterns. today it found 10 pain points. 5 scored above 70. top one hit 100/100.
 
 ---
 
-this is a $5/mo app that already has product-market fit before you write a line of code. accountability wake-up service. you set a time. if you don't confirm you're up by scanning a QR code in your bathroom, it calls your emergency contact. or charges you $5 to a charity you hate.
+step 2: the 100/100 post. r/productivity. "i wish somebody could wake me up in the morning." 36 upvotes. 36 comments. the person missed a job interview. the comments are full of people with the same problem. that's not a complaint thread. that's demand validation with zero ad spend.
 
 ---
 
-the deeper play: bundle it. alarm app is the wedge. upsell morning routine tracker at $12/mo. upsell accountability partner matching at $25/mo. one reddit post with 36 comments just mapped out a 3-tier pricing model for you.
+step 3: cross-reference with RBI scanner. 33 monetizable opportunities found today. 11 are ready to launch. i match the pain points to existing assets. local biz website audits already have a script built. cold outreach already has a pipeline. the gap is always the same: listing the service and sending the first email.
 
 ---
 
-i scan 41 subreddits daily. automated. no browser needed. json api pulls every post with pain point language. scores them 0-100. routes the winners into a build queue. today's scan found 33 opportunities worth $4,100-$50,750/mo combined. you don't need ideas. you need a scanner and the discipline to actually build the top scorer. stop brainstorming. start scanning.
+the system found $4,100-$50,750/mo in potential today. none of it requires a new app. none of it requires funding. it requires a fiverr listing, 3 gmail accounts, and the willingness to email strangers about their broken website. the data is free. the tools are free. the bottleneck is you.

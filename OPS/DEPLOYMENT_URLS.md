@@ -106,6 +106,9 @@ Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/` (updated 2026-03-13)
 | SaaS Stack Audit | https://saas-stack-audit.surge.sh | LIVE (prev deployed) | saas-stack-audit.html |
 | Lead Magnets Hub | https://printmaxx-lead-magnets.surge.sh | LIVE (prev deployed) | hub |
 | Productivity Stack Quiz | https://productivity-stack-quiz.surge.sh | LIVE | productivity-stack-quiz.html |
+| Vibe Coding Profit Calculator | https://vibe-coding-profit-calculator.surge.sh | LIVE | vibe-coding-profit-calculator.html |
+| SaaS Stack Audit (200) | https://saas-stack-audit-200.surge.sh | LIVE | saas-stack-audit-200.html |
+| Local Demos Hub | https://printmaxx-local-demos.surge.sh | LIVE | printmaxx-local-demos/index.html |
 
 ---
 

@@ -6186,3 +6186,112 @@ if the habit unlocks the reward, engagement spikes
 
 we tested this with pray screen and hit 60% retention on day 30
 
+
+
+---
+
+## Pending Enhancement (ALPHA16854, Score: 20)
+
+**Source:** r/startup | **URL:** https://reddit.com/r/startup/comments/1rmhftx/launched_an_ai_product_for_car_dealers_on/
+**Added:** 2026-03-14T12:48:45-04:00
+
+Launched an AI product for car dealers on ProductHunt today! | I Built Instacars because I kept seeing the same thing, ppl researching cars online for weeks, visiting the same dealer's website over and over, then still walking in with basic questions. The website just couldn't talk to them.
+
+
+
+---
+
+## Pending Enhancement (ALPHA16866, Score: 20)
+
+**Source:** r/buildinpublic | **URL:** https://reddit.com/r/buildinpublic/comments/1rmyqo1/its_friday_lets_share_what_we_are_building_and/
+**Added:** 2026-03-14T12:48:46-04:00
+
+It’s Friday! Let’s share what we are building and promote eachother. | I am building a community rather than a product for founders to support eachother during launches. We have more than 600 members as of now!
+
+
+
+---
+
+## Pending Enhancement (ALPHA18173, Score: 20)
+
+**Source:** r/buildinpublic | **URL:** https://reddit.com/r/buildinpublic/comments/1rnj6sy/has_reddit_actually_driven_real_growth_for_your/
+**Added:** 2026-03-14T12:48:46-04:00
+
+Has Reddit actually driven real growth for your product? What are the biggest hurdles? | I keep seeing people talk about Reddit as this untapped goldmine for early-stage growth. Founders posting in niche subreddits, answering questions, building credibility over time.
+
+
+
+---
+
+## Pending Enhancement (ALPHA18174, Score: 20)
+
+**Source:** r/buildinpublic | **URL:** https://reddit.com/r/buildinpublic/comments/1rnjez0/built_the_code_loved_the_logic_but_now_im_staring/
+**Added:** 2026-03-14T12:48:46-04:00
+
+Built the code, loved the logic, but now I'm staring at a '0 Users' dashboard and I'm paralyzed. | I’ve spent months on [CreatrAI](http://creatr-ai.com). The coding was pure flow state, but now that it's "live", I realize I have no idea how to talk to people about it. I know the product is solid, but the thought of marketing feels like a chore compared to debugging.
+
+
+
+---
+
+## Pending Enhancement (ALPHA25440, Score: 30)
+
+**Source:** @iamgdsa (high-signal-accounts) | **URL:** https://x.com/iamgdsa/status/2032865593972478419
+**Added:** 2026-03-14T13:53:42-04:00
+
+You do not “automate” marketing. Fools and charlatans will tell you to do so either to sell you info or their “spamming” product or strategy. Average views don’t matter. Only viral content is net positive as an acquisition strategy. And viral content isn’t random. You’ll only get
+
+
+
+---
+
+## Pending Enhancement (ALPHA25447, Score: 30)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2032819800641253583
+**Added:** 2026-03-14T13:53:42-04:00
+
+- Top 10 in 12 Countries, Stuck at 20K Downloads
+- Sports Trivia App Turns One Format Into 15M Views & 7K Downloads
+- 5-Month-Old Recipe Saver App Gathers 30+ Creators
+- The Danger of Going Viral in the Wrong Niche
+- Viral Videos Farming Github Stars for an Open Source Repo
+- How
+
+
+
+---
+
+## Pending Enhancement (ALPHA25498, Score: 28)
+
+**Source:** @Jahjiren (high-signal-accounts) | **URL:** https://x.com/Jahjiren/status/2032854286250500181
+**Added:** 2026-03-14T13:53:42-04:00
+
+it 100% is the most important part of apps 
+and nothing else comes close 
+
+You can have a terrible app loop 
+bad paywall and even unclear marketing 
+
+and still have users willing to pay 
+from there fix the app 
+
+> check the 1-2 star reviews 
+> fix quick 
+> focus on distribution
+
+
+
+---
+
+## Pending Enhancement (ALPHA25506, Score: 22)
+
+**Source:** @yegormethod (high-signal-accounts) | **URL:** https://x.com/yegormethod/status/2032874657037058455
+**Added:** 2026-03-14T13:53:42-04:00
+
+People will read shit like this, go “viral”, and realize they started with zero and still have zero
+
+let me make this clear. Going viral is EASY. 
+CHILDREN go viral all the time. fat chuds like the rizzler are viral.
+
+anyone 110 iq + is concered with how to run organic marketing
+

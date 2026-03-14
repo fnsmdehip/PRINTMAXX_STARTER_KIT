@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe Coding Profit Calculator: Does Your App Idea Print Money?</title>
+<meta name="description" content="plug in your app idea. find out if it prints money or wastes API credits. calculates build cost, monthly revenue at 3 scenarios, time to profit, and vibe score. 30 seconds.">
+<meta name="keywords" content="vibe coding calculator, app idea profit calculator, cursor ai revenue, claude code revenue estimator, indie app profit, solopreneur app calculator, vibe coding roi">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vibe-profit-calc.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vibe Coding Profit Calculator: Does Your App Idea Print Money?">
+<meta property="og:description" content="plug in your app idea. find out if it prints money or wastes API credits. 30 seconds.">
+<meta property="og:url" content="https://vibe-profit-calc.surge.sh">
+<meta property="og:image" content="https://vibe-profit-calc.surge.sh/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Vibe Coding Profit Calculator">
+<meta name="twitter:description" content="plug in your app idea. find out if it prints money or wastes API credits. 30 seconds.">
+<meta name="twitter:image" content="https://vibe-profit-calc.surge.sh/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Vibe Coding Profit Calculator","url":"https://vibe-profit-calc.surge.sh","description":"Calculate the revenue potential of your vibe-coded app idea","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
+<script defer data-domain="vibe-profit-calc.surge.sh" src="https://plausible.io/js/script.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--b:#0a0a0a;--s:#111;--c:rgba(255,255,255,.05);--a:#00ff88;--ad:rgba(0,255,136,.15);--ag:rgba(0,255,136,.3);--t:#e5e5e5;--m:#777;--r:rgba(255,255,255,.08);--yellow:#f59e0b;--red:#ef4444;--green:#00ff88}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--b);color:var(--t);line-height:1.6;min-height:100vh;overflow-x:hidden}
+a{color:var(--a);text-decoration:none}
+a:hover{text-decoration:underline}
+.ctr{max-width:660px;margin:0 auto;padding:0 20px}
+header{padding:40px 0 28px;text-align:center}
+header h1{font-size:clamp(1.5rem,5vw,2.1rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:8px}
+header h1 span{color:var(--a)}
+header p{color:var(--m);font-size:.92rem;max-width:400px;margin:0 auto}
+.cd{background:var(--c);border:1px solid var(--r);border-radius:14px;padding:24px;margin-bottom:16px;transition:border-color .3s}
+.cd:hover{border-color:rgba(255,255,255,.12)}
+.cd h2{font-size:.78rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}
+.fd{margin-bottom:18px}
+.fd:last-child{margin-bottom:0}
+.fd label{display:block;font-size:.88rem;margin-bottom:6px}
+.fd label small{color:var(--m);font-weight:400}
+.fd select,.fd input[type="number"]{width:100%;background:var(--s);border:1px solid var(--r);border-radius:8px;padding:10px 14px;color:var(--t);font-family:inherit;font-size:.92rem;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.fd select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23777'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+.fd select:focus,.fd input[type="number"]:focus{border-color:var(--a)}
+.fd select option{background:#111;color:#e5e5e5}
+.fd input[type="number"]::-webkit-inner-spin-button,.fd input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none}
+.chs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cl{display:flex;align-items:center;gap:8px;font-size:.85rem;cursor:pointer;padding:8px 10px;border-radius:8px;border:1px solid var(--r);transition:all .2s;user-select:none}
+.cl:hover{border-color:rgba(255,255,255,.15)}
+.cl input{display:none}
+.ck{width:18px;height:18px;border-radius:4px;border:2px solid var(--r);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.cl input:checked~.ck{background:var(--a);border-color:var(--a)}
+.cl input:checked~.ck::after{content:'';display:block;width:5px;height:9px;border:solid #0a0a0a;border-width:0 2px 2px 0;transform:rotate(45deg);margin-top:-2px}
+.cl input:checked~.cn{color:var(--a)}
+.btn{width:100%;background:var(--a);color:#0a0a0a;border:none;border-radius:10px;padding:14px;font-weight:800;font-size:1rem;cursor:pointer;font-family:inherit;transition:all .2s;letter-spacing:-.3px;margin-top:8px}
+.btn:hover{box-shadow:0 0 24px var(--ag);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+#res{display:none;animation:fu .4s ease}
+@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.score-wrap{display:flex;justify-content:center;padding:20px 0}
+.score-ring{position:relative;width:180px;height:180px}
+.score-ring svg{transform:rotate(-90deg)}
+.sr-bg{fill:none;stroke:var(--r);stroke-width:8}
+.sr-fill{fill:none;stroke:var(--a);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1s ease,stroke .5s ease}
+.score-inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.score-num{font-size:2rem;font-weight:800;letter-spacing:-2px;color:var(--a);transition:color .5s}
+.score-lbl{font-size:.68rem;color:var(--m);text-transform:uppercase;letter-spacing:.5px}
+.vibe-badge{display:inline-block;padding:6px 16px;border-radius:20px;font-weight:700;font-size:.82rem;letter-spacing:.3px;margin:12px auto;text-align:center}
+.scenarios{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:16px 0}
+.scenario{background:rgba(255,255,255,.03);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--r)}
+.scenario .sv{font-size:1.1rem;font-weight:800;letter-spacing:-.5px;margin-bottom:2px}
+.scenario .sl{font-size:.7rem;color:var(--m);text-transform:uppercase;letter-spacing:.5px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.stat{background:rgba(255,255,255,.03);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--r)}
+.stat .sv{font-size:1.1rem;font-weight:800;letter-spacing:-.5px;margin-bottom:2px}
+.stat .sl{font-size:.7rem;color:var(--m);text-transform:uppercase;letter-spacing:.5px}
+.cbar{margin:16px 0 8px}
+.cbar .bt{height:6px;background:var(--r);border-radius:3px;overflow:hidden}
+.cbar .bf{height:100%;border-radius:3px;transition:width .8s ease,background .5s}
+.cbar .bl{display:flex;justify-content:space-between;font-size:.75rem;margin-top:4px}
+.cbar .bl span:first-child{color:var(--m)}
+.cbar .bl span:last-child{font-weight:700}
+.recs-list,.stories-list{list-style:none}
+.rec-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--r);font-size:.88rem}
+.rec-item:last-child{border-bottom:none}
+.rec-n{color:var(--a);font-weight:800;flex-shrink:0;width:20px}
+.story-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--r);font-size:.85rem}
+.story-item:last-child{border-bottom:none}
+.story-dot{width:8px;height:8px;border-radius:50%;background:var(--a);flex-shrink:0;margin-top:5px}
+.story-name{color:var(--t);font-weight:700}
+.story-detail{color:var(--m)}
+.gt{display:none;animation:fu .4s ease}
+.gi{text-align:center;padding:20px 0}
+.gi h3{font-size:1.2rem;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.gi p{color:var(--m);font-size:.88rem;margin-bottom:20px;max-width:340px;margin-left:auto;margin-right:auto}
+.gf{max-width:320px;margin:0 auto}
+.gf input[type="email"]{width:100%;background:var(--s);border:1px solid var(--r);border-radius:8px;padding:12px 14px;color:var(--t);font-family:inherit;font-size:.92rem;outline:none;margin-bottom:10px;transition:border-color .2s}
+.gf input[type="email"]:focus{border-color:var(--a)}
+.gf button{width:100%;background:var(--a);color:#0a0a0a;border:none;border-radius:8px;padding:12px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit;transition:all .2s}
+.gf button:hover{box-shadow:0 0 20px var(--ag)}
+.gf .fn{font-size:.72rem;color:var(--m);margin-top:8px}
+.um{display:none;text-align:center;padding:14px;background:var(--ad);border:1px solid rgba(0,255,136,.2);border-radius:10px;margin-bottom:16px;font-size:.88rem;font-weight:600;color:var(--a);animation:fu .4s ease}
+.cta-form-wrap{max-width:320px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.cta-form-wrap input[type="email"]{width:100%;background:var(--s);border:1px solid var(--r);border-radius:8px;padding:12px 14px;color:var(--t);font-family:inherit;font-size:.92rem;outline:none}
+.cta-form-wrap button{background:var(--a);color:#0a0a0a;border:none;border-radius:8px;padding:12px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit;transition:all .2s}
+.cta-form-wrap button:hover{box-shadow:0 0 20px var(--ag)}
+.crosslinks{padding:32px 0;border-top:1px solid var(--r);margin-top:32px}
+.crosslinks h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.5px;color:var(--m);margin-bottom:16px}
+.crosslinks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.crosslink-card{background:var(--c);border:1px solid var(--r);border-radius:10px;padding:14px;transition:border-color .15s;text-decoration:none;display:block;color:var(--t)}
+.crosslink-card:hover{border-color:var(--a);text-decoration:none}
+.crosslink-card .cl-title{font-weight:700;font-size:.9rem;margin-bottom:4px}
+.crosslink-card .cl-desc{font-size:.75rem;color:var(--m)}
+footer{padding:28px 0;text-align:center;border-top:1px solid var(--r);margin-top:32px}
+footer p{color:var(--m);font-size:.75rem}
+@media(max-width:520px){
+  .chs{grid-template-columns:1fr}
+  .scenarios{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .score-ring{width:150px;height:150px}
+  .score-num{font-size:1.6rem}
+  .cd{padding:18px}
+}
+</style>
+</head>
+<body>
+<div class="ctr">
+
+<header>
+  <h1>vibe coding <span>profit calculator</span></h1>
+  <p>plug in your app idea. find out if it prints money or wastes API credits. 30 seconds.</p>
+</header>
+
+<div style="padding-top:8px">
+
+<div class="um" id="uM">you're in. unlimited calculations unlocked.</div>
+
+<div class="cd">
+  <h2>what are you building?</h2>
+  <div class="fd">
+    <label>app type</label>
+    <select id="appType" onchange="onInputChange()">
+      <option value="saas">SaaS (web app)</option>
+      <option value="mobile">mobile app (iOS / Android)</option>
+      <option value="chrome">Chrome extension</option>
+      <option value="shopify">Shopify app</option>
+      <option value="api">API / dev tool</option>
+      <option value="nocode">no-code tool (Bubble, Webflow, etc.)</option>
+    </select>
+  </div>
+  <div class="fd">
+    <label>monetization model</label>
+    <select id="monModel" onchange="onInputChange()">
+      <option value="subscription">subscription (monthly/annual)</option>
+      <option value="onetime">one-time purchase</option>
+      <option value="freemium">freemium (free + paid tier)</option>
+      <option value="ads">ads / sponsored</option>
+      <option value="marketplace">marketplace / commission</option>
+    </select>
+  </div>
+  <div class="fd">
+    <label>target market size <small>(total addressable users)</small></label>
+    <select id="marketSize" onchange="onInputChange()">
+      <option value="5000">niche (under 10K users)</option>
+      <option value="50000">small (10K - 100K users)</option>
+      <option value="500000" selected>medium (100K - 1M users)</option>
+      <option value="5000000">large (1M - 10M users)</option>
+      <option value="50000000">mass market (10M+ users)</option>
+    </select>
+  </div>
+  <div class="fd">
+    <label>average price per user ($) <small>monthly for subscription, flat for one-time</small></label>
+    <input type="number" id="avgPrice" value="29" min="1" max="9999" onchange="onInputChange()" oninput="onInputChange()">
+  </div>
+</div>
+
+<div class="cd">
+  <h2>your AI stack</h2>
+  <div class="fd">
+    <label>primary AI coding tool</label>
+    <select id="aiTool" onchange="onInputChange()">
+      <option value="cursor">Cursor ($20/mo)</option>
+      <option value="windsurf">Windsurf ($15/mo)</option>
+      <option value="claude">Claude Code ($20/mo)</option>
+      <option value="bolt">Bolt ($20/mo)</option>
+      <option value="lovable">Lovable ($20/mo)</option>
+      <option value="v0">v0 by Vercel ($20/mo)</option>
+      <option value="replit">Replit ($25/mo)</option>
+      <option value="free">free tier only ($0/mo)</option>
+    </select>
+  </div>
+  <div class="fd">
+    <label>estimated build time</label>
+    <select id="buildTime" onchange="onInputChange()">
+      <option value="1">1 day (simple MVP)</option>
+      <option value="3">2-3 days</option>
+      <option value="7" selected>1 week</option>
+      <option value="14">2 weeks</option>
+      <option value="30">1 month</option>
+      <option value="90">2-3 months</option>
+    </select>
+  </div>
+  <div class="fd">
+    <label>distribution channels <small>(select all you will use)</small></label>
+    <div class="chs">
+      <label class="cl"><input type="checkbox" name="ch" value="seo"><span class="ck"></span><span class="cn">SEO</span></label>
+      <label class="cl"><input type="checkbox" name="ch" value="social" checked><span class="ck"></span><span class="cn">social media</span></label>
+      <label class="cl"><input type="checkbox" name="ch" value="producthunt"><span class="ck"></span><span class="cn">Product Hunt</span></label>
+      <label class="cl"><input type="checkbox" name="ch" value="marketplace"><span class="ck"></span><span class="cn">app marketplace</span></label>
+      <label class="cl"><input type="checkbox" name="ch" value="coldemail"><span class="ck"></span><span class="cn">cold email</span></label>
+      <label class="cl"><input type="checkbox" name="ch" value="community"><span class="ck"></span><span class="cn">community / Reddit</span></label>
+    </div>
+  </div>
+</div>
+
+<div class="cd">
+  <h2>market conditions</h2>
+  <div class="fd">
+    <label>competition level</label>
+    <select id="competition" onchange="onInputChange()">
+      <option value="low">low (few direct competitors)</option>
+      <option value="medium" selected>medium (some players in space)</option>
+      <option value="high">high (crowded, lots of alternatives)</option>
+    </select>
+  </div>
+  <div class="fd">
+    <label>target audience specificity</label>
+    <select id="nicheDepth" onchange="onInputChange()">
+      <option value="very_niche">very niche (1 specific job, 1 audience)</option>
+      <option value="niche" selected>niche (clear audience, specific problem)</option>
+      <option value="broad">broad (lots of different users)</option>
+    </select>
+  </div>
+</div>
+
+<button class="btn" id="calcBtn" onclick="runCalc()">calculate my vibe profit</button>
+
+<!-- EMAIL GATE -->
+<div class="gt" id="eG">
+  <div class="cd" style="border-color:rgba(0,255,136,.2);margin-top:16px">
+    <div class="gi">
+      <h3>you used your 2 free calculations</h3>
+      <p>drop your email for unlimited access. takes 5 seconds. no spam, just tools.</p>
+      <div class="gf">
+        <form id="gF" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" target="_blank">
+          <input type="hidden" name="_subject" value="Vibe Coding Profit Calculator - Email Gate Unlock">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="source" value="vibe-coding-profit-calculator">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">unlock unlimited calculations</button>
+        </form>
+        <p class="fn">no spam. unsubscribe anytime. we send tools, not fluff.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="res">
+
+  <div class="cd" style="border-color:rgba(0,255,136,.2);margin-top:16px">
+    <h2>your vibe score</h2>
+    <div class="score-wrap">
+      <div class="score-ring">
+        <svg viewBox="0 0 180 180" width="100%" height="100%">
+          <circle class="sr-bg" cx="90" cy="90" r="78"/>
+          <circle class="sr-fill" id="srFill" cx="90" cy="90" r="78" stroke-dasharray="490" stroke-dashoffset="490"/>
+        </svg>
+        <div class="score-inner">
+          <div class="score-num" id="vibeNum">0</div>
+          <div class="score-lbl">vibe score</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <div class="vibe-badge" id="vibeBadge">calculating...</div>
+    </div>
+  </div>
+
+  <div class="cd" style="border-color:rgba(0,255,136,.2)">
+    <h2>monthly revenue scenarios</h2>
+    <div class="scenarios">
+      <div class="scenario">
+        <div class="sv" id="revCon" style="color:var(--red)">$0</div>
+        <div class="sl">conservative</div>
+      </div>
+      <div class="scenario">
+        <div class="sv" id="revReal" style="color:var(--yellow)">$0</div>
+        <div class="sl">realistic</div>
+      </div>
+      <div class="scenario">
+        <div class="sv" id="revOpt" style="color:var(--green)">$0</div>
+        <div class="sl">optimistic</div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="sv" id="buildCost">$0/mo</div>
+        <div class="sl">build cost / mo</div>
+      </div>
+      <div class="stat">
+        <div class="sv" id="timeToProfit">—</div>
+        <div class="sl">time to profit</div>
+      </div>
+      <div class="stat">
+        <div class="sv" id="profitMargin">0%</div>
+        <div class="sl">profit margin</div>
+      </div>
+      <div class="stat">
+        <div class="sv" id="annualProj" style="color:var(--a)">$0</div>
+        <div class="sl">annual (realistic)</div>
+      </div>
+    </div>
+    <div class="cbar">
+      <div class="bt"><div class="bf" id="confBar" style="width:0%"></div></div>
+      <div class="bl"><span>idea confidence</span><span id="confLabel">—</span></div>
+    </div>
+  </div>
+
+  <div class="cd">
+    <h2>top 3 moves to maximize profit</h2>
+    <ul class="recs-list" id="recsList"></ul>
+  </div>
+
+  <div class="cd">
+    <h2>apps that already did it</h2>
+    <ul class="stories-list" id="storiesList"></ul>
+  </div>
+
+</div>
+
+<!-- CTA BLOCK -->
+<div id="ctaBlock" style="display:none">
+  <div class="cd" style="border-color:rgba(0,255,136,.15);margin-top:16px;text-align:center">
+    <h2 style="text-align:center;margin-bottom:12px">want the vibe coding playbook?</h2>
+    <p style="color:var(--m);font-size:.88rem;margin-bottom:20px;max-width:380px;margin-left:auto;margin-right:auto">the exact process to go from idea to $1K MRR in 30 days. tools, prompts, distribution, pricing. no fluff.</p>
+    <form class="cta-form-wrap" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Vibe Coding Profit Calculator - Playbook Signup">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://printmaxx.surge.sh/?ref=vibe-calc">
+      <input type="hidden" name="source" value="vibe-coding-profit-calculator-cta">
+      <input type="email" name="email" required placeholder="your@email.com">
+      <button type="submit">send me the playbook</button>
+      <p style="font-size:.72rem;color:var(--m)">free preview + early access pricing. no spam.</p>
+    </form>
+  </div>
+</div>
+
+</div>
+
+<!-- CROSSLINKS -->
+<div class="crosslinks">
+  <h3>more free tools</h3>
+  <div class="crosslinks-grid">
+    <a href="https://side-project-estimator.surge.sh" class="crosslink-card">
+      <div class="cl-title">Side Project Revenue Estimator</div>
+      <div class="cl-desc">find out if your idea prints money or burns time</div>
+    </a>
+    <a href="https://ai-slop-detector.surge.sh" class="crosslink-card">
+      <div class="cl-title">AI Slop Detector</div>
+      <div class="cl-desc">score your content before it tanks your credibility</div>
+    </a>
+    <a href="https://saas-stack-audit.surge.sh" class="crosslink-card">
+      <div class="cl-title">SaaS Stack Audit</div>
+      <div class="cl-desc">see how much you're burning on tools every month</div>
+    </a>
+    <a href="https://cold-email-roi.surge.sh" class="crosslink-card">
+      <div class="cl-title">Cold Email ROI Calculator</div>
+      <div class="cl-desc">see how much revenue cold outreach should generate</div>
+    </a>
+    <a href="https://revenue-leak-audit.surge.sh" class="crosslink-card">
+      <div class="cl-title">Revenue Leak Audit</div>
+      <div class="cl-desc">find where you're losing $1,200-4,850/mo</div>
+    </a>
+    <a href="https://solopreneur-launch.surge.sh" class="crosslink-card">
+      <div class="cl-title">Solopreneur Launch Checklist</div>
+      <div class="cl-desc">54-step launch checklist so nothing gets skipped</div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>built by <a href="https://printmaxx.surge.sh" target="_blank">PRINTMAXX</a> &middot; no fluff, just math.</p>
+</footer>
+
+</div>
+
+<script>
+(function() {
+
+  /* ── constants ── */
+  var CC_KEY = 'vibe_calc_cc';
+  var UL_KEY = 'vibe_calc_ul';
+  var TOOL_COSTS = {cursor:20,windsurf:15,claude:20,bolt:20,lovable:20,v0:20,replit:25,free:0};
+
+  /* ── state ── */
+  var cc = +localStorage.getItem(CC_KEY) || 0;
+  var ul = localStorage.getItem(UL_KEY) === 'true';
+
+  /* ── utils ── */
+  function g(id) { return document.getElementById(id); }
+  function sv(id) { return g(id).value; }
+  function nv(id) { return parseFloat(g(id).value) || 0; }
+
+  function fmtMoney(n) {
+    if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+    if (n >= 1e4) return '$' + Math.round(n / 1e3) + 'K';
+    if (n >= 1e3) return '$' + (n / 1e3).toFixed(1) + 'K';
+    return '$' + Math.round(n).toLocaleString();
+  }
+
+  function fmtMonths(months) {
+    if (months <= 0) return 'immediate';
+    if (months < 1) return 'under 1 month';
+    if (months < 1.5) return '~1 month';
+    if (months < 12) return Math.round(months) + ' months';
+    return (months / 12).toFixed(1) + ' years';
+  }
+
+  function setColor(el, color) { el.style.color = color; }
+  function setText(id, text) { g(id).textContent = text; }
+
+  /* ── restore unlock state ── */
+  if (ul) g('uM').style.display = 'block';
+
+  /* ── gate form ── */
+  g('gF').onsubmit = function() {
+    localStorage.setItem(UL_KEY, 'true');
+    ul = true;
+    setTimeout(function() {
+      g('eG').style.display = 'none';
+      g('uM').style.display = 'block';
+      var btn = g('calcBtn');
+      btn.disabled = false;
+      btn.textContent = 'calculate my vibe profit';
+    }, 500);
+  };
+
+  /* ── live re-calc when inputs change after first run ── */
+  window.onInputChange = function() {
+    if (g('res').style.display === 'block') runCalc(true);
+  };
+
+  /* ── helpers: DOM node builders ── */
+  function makeRecItem(num, text) {
+    var li = document.createElement('li');
+    li.className = 'rec-item';
+    var nSpan = document.createElement('span');
+    nSpan.className = 'rec-n';
+    nSpan.textContent = String(num);
+    var tSpan = document.createElement('span');
+    tSpan.textContent = text;
+    li.appendChild(nSpan);
+    li.appendChild(tSpan);
+    return li;
+  }
+
+  function makeStoryItem(name, detail) {
+    var li = document.createElement('li');
+    li.className = 'story-item';
+    var dot = document.createElement('div');
+    dot.className = 'story-dot';
+    var body = document.createElement('div');
+    var nameEl = document.createElement('span');
+    nameEl.className = 'story-name';
+    nameEl.textContent = name;
+    var sep = document.createTextNode(' — ');
+    var detailEl = document.createElement('span');
+    detailEl.className = 'story-detail';
+    detailEl.textContent = detail;
+    body.appendChild(nameEl);
+    body.appendChild(sep);
+    body.appendChild(detailEl);
+    li.appendChild(dot);
+    li.appendChild(body);
+    return li;
+  }
+
+  function clearList(id) {
+    var el = g(id);
+    while (el.firstChild) el.removeChild(el.firstChild);
+  }
+
+  /* ── main calculation ── */
+  window.runCalc = function(silent) {
+
+    /* gate */
+    if (!ul && cc >= 2) {
+      g('res').style.display = 'none';
+      g('ctaBlock').style.display = 'none';
+      g('eG').style.display = 'block';
+      var btn = g('calcBtn');
+      btn.disabled = true;
+      btn.textContent = 'unlock more calculations above';
+      return;
+    }
+
+    if (!silent) {
+      cc++;
+      localStorage.setItem(CC_KEY, cc);
+    }
+
+    /* read inputs */
+    var appType     = sv('appType');
+    var monModel    = sv('monModel');
+    var marketSize  = +sv('marketSize');
+    var avgPrice    = nv('avgPrice');
+    var aiTool      = sv('aiTool');
+    var buildTime   = +sv('buildTime');
+    var competition = sv('competition');
+    var nicheDepth  = sv('nicheDepth');
+    var checked     = document.querySelectorAll('input[name="ch"]:checked');
+    var nChannels   = checked.length;
+    var chanVals    = [];
+    var i;
+    for (i = 0; i < checked.length; i++) chanVals.push(checked[i].value);
+
+    /* ── build cost ── */
+    var toolCost    = TOOL_COSTS[aiTool] !== undefined ? TOOL_COSTS[aiTool] : 20;
+    var hostCost    = appType === 'api' ? 20 : appType === 'mobile' ? 10 : 7;
+    var domainCost  = 1;
+    var monthlyCost = toolCost + hostCost + domainCost;
+
+    /* ── multipliers ── */
+    var monMult  = {subscription:1.0,onetime:0.7,freemium:0.5,ads:0.3,marketplace:0.6}[monModel] || 0.7;
+    var typeMult = {saas:1.0,mobile:0.8,chrome:0.9,shopify:1.1,api:0.7,nocode:0.75}[appType] || 0.9;
+    var compMult = {low:1.2,medium:1.0,high:0.7}[competition] || 1.0;
+    var nichMult = {very_niche:1.1,niche:1.0,broad:0.85}[nicheDepth] || 1.0;
+
+    /* ── revenue scenarios ── */
+    var conservative = marketSize * 0.001 * avgPrice * 0.5  * typeMult * compMult * nichMult;
+    var realistic    = marketSize * 0.003 * avgPrice * 0.7  * typeMult * compMult * nichMult * monMult;
+    var optimistic   = marketSize * 0.01  * avgPrice * 0.85 * typeMult * compMult * nichMult;
+
+    /* ── time to profit ── */
+    var monthlyProfit    = realistic - monthlyCost;
+    var initialInvest    = monthlyCost * (buildTime / 30);
+    var ttp              = monthlyProfit > 0 ? initialInvest / monthlyProfit : 999;
+    var margin           = realistic > 0 ? ((realistic - monthlyCost) / realistic) * 100 : 0;
+
+    /* ── vibe score ── */
+    var score = 50;
+    if (marketSize >= 5000000) score += 10;
+    else if (marketSize >= 500000) score += 7;
+    else if (marketSize >= 50000) score += 3;
+    else score -= 5;
+
+    if (monModel === 'subscription') score += 15;
+    else if (monModel === 'marketplace') score += 5;
+    else if (monModel === 'freemium') score += 3;
+    else if (monModel === 'ads') score -= 10;
+
+    if (nChannels >= 4) score += 10;
+    else if (nChannels >= 3) score += 7;
+    else if (nChannels >= 2) score += 4;
+    else score -= 5;
+
+    if (competition === 'low') score += 10;
+    else if (competition === 'high') score -= 15;
+
+    if (nicheDepth === 'very_niche') score += 10;
+    else if (nicheDepth === 'broad') score -= 5;
+
+    if (monthlyCost < 30) score += 5;
+    else if (monthlyCost > 80) score -= 10;
+
+    if (appType === 'shopify') score += 5;
+    if (appType === 'mobile') {
+      var hasMarket = false;
+      for (i = 0; i < chanVals.length; i++) { if (chanVals[i] === 'marketplace') { hasMarket = true; break; } }
+      if (!hasMarket) score -= 5;
+    }
+
+    var hasPH = false;
+    for (i = 0; i < chanVals.length; i++) { if (chanVals[i] === 'producthunt') { hasPH = true; break; } }
+    if (hasPH) score += 5;
+
+    if (avgPrice < 5) score -= 10;
+    if (avgPrice > 200 && appType !== 'saas') score -= 5;
+
+    score = Math.max(0, Math.min(100, score));
+
+    /* ── score ring ── */
+    var srFill = g('srFill');
+    srFill.style.strokeDashoffset = String(490 - (score / 100) * 490);
+    var ringColor = score >= 70 ? '#00ff88' : score >= 40 ? '#f59e0b' : '#ef4444';
+    srFill.style.stroke = ringColor;
+    setText('vibeNum', String(score));
+    setColor(g('vibeNum'), ringColor);
+
+    /* ── badge ── */
+    var badge = g('vibeBadge');
+    var badgeLabel, badgeBg;
+    if (score >= 80)      { badgeLabel = 'high probability printer'; badgeBg = 'rgba(0,255,136,.15)'; }
+    else if (score >= 70) { badgeLabel = 'worth building';           badgeBg = 'rgba(0,255,136,.1)';  }
+    else if (score >= 55) { badgeLabel = 'viable with execution';    badgeBg = 'rgba(245,158,11,.1)'; }
+    else if (score >= 40) { badgeLabel = 'risky, needs validation';  badgeBg = 'rgba(245,158,11,.1)'; }
+    else                  { badgeLabel = 'high risk, rethink model'; badgeBg = 'rgba(239,68,68,.1)';  }
+    badge.textContent     = badgeLabel;
+    badge.style.color     = ringColor;
+    badge.style.background = badgeBg;
+    badge.style.border    = '1px solid ' + ringColor;
+
+    /* ── revenue ── */
+    setText('revCon',  fmtMoney(conservative));
+    setText('revReal', fmtMoney(realistic));
+    setText('revOpt',  fmtMoney(optimistic));
+
+    var bcEl = g('buildCost');
+    bcEl.textContent = fmtMoney(monthlyCost) + '/mo';
+    setColor(bcEl, monthlyCost < 50 ? '#00ff88' : monthlyCost < 100 ? '#f59e0b' : '#ef4444');
+
+    var ttpEl = g('timeToProfit');
+    ttpEl.textContent = ttp >= 99 ? 'never at this rate' : fmtMonths(ttp);
+    setColor(ttpEl, ttp < 2 ? '#00ff88' : ttp < 6 ? '#f59e0b' : '#ef4444');
+
+    var mgEl = g('profitMargin');
+    mgEl.textContent = margin > 0 ? Math.round(margin) + '%' : '0%';
+    setColor(mgEl, margin > 60 ? '#00ff88' : margin > 30 ? '#f59e0b' : '#ef4444');
+
+    setText('annualProj', fmtMoney(realistic * 12));
+
+    /* ── confidence bar ── */
+    var conf = Math.min(95, Math.max(10, score));
+    var confBar = g('confBar');
+    confBar.style.width = conf + '%';
+    var confColor = conf > 70 ? '#00ff88' : conf > 40 ? '#f59e0b' : '#ef4444';
+    confBar.style.background = confColor;
+    var confLbl = g('confLabel');
+    confLbl.textContent = conf + '% ' + (conf > 70 ? 'high' : conf > 40 ? 'medium' : 'low');
+    setColor(confLbl, confColor);
+
+    /* ── recommendations ── */
+    var recs = [];
+
+    var hasSub = monModel === 'subscription';
+    if (!hasSub) {
+      recs.push('switch to subscription pricing. one-time sales require constant new customers. subscriptions compound. even $' + Math.round(avgPrice * 0.3) + '/mo recurring beats $' + avgPrice + ' one-time within 4 months.');
+    }
+    if (nChannels < 3) {
+      var missing = [];
+      var hasSeo = false, hasCE = false, hasComm = false;
+      for (i = 0; i < chanVals.length; i++) {
+        if (chanVals[i] === 'seo') hasSeo = true;
+        if (chanVals[i] === 'coldemail') hasCE = true;
+        if (chanVals[i] === 'community') hasComm = true;
+      }
+      if (!hasSeo) missing.push('SEO');
+      if (!hasCE) missing.push('cold email outreach');
+      if (!hasComm && missing.length < 2) missing.push('Reddit / community posts');
+      recs.push('add ' + (missing.length > 0 ? missing.slice(0, 2).join(' and ') : '2 more channels') + '. single-channel distribution is a single point of failure. diversify before you need to.');
+    }
+    if (competition === 'high') {
+      recs.push('the market is crowded. find a micro-niche inside it. "project management for solo consultants" beats "project management app." niching down converts 3x better on average.');
+    }
+    if (avgPrice < 15 && monModel === 'subscription') {
+      recs.push('$' + avgPrice + '/mo is hard to justify. raise to $' + Math.max(19, Math.round(avgPrice * 2)) + '/mo and position as a professional tool. most solopreneurs price 50-70% too low on first launch.');
+    }
+    if (appType === 'mobile') {
+      var noMarket = true;
+      for (i = 0; i < chanVals.length; i++) { if (chanVals[i] === 'marketplace') { noMarket = false; break; } }
+      if (noMarket) recs.push('check App Store and Play Store search. mobile apps live or die by store search. ASO is the highest-leverage thing you can do before launch.');
+    }
+    if (buildTime >= 30) {
+      recs.push('cut scope. get something live in ' + Math.round(buildTime / 4) + ' days instead of ' + buildTime + '. use vibe coding to ship an MVP, then sell it. build more after you have paying users.');
+    }
+    if (recs.length < 3) {
+      var noCE = true;
+      for (i = 0; i < chanVals.length; i++) { if (chanVals[i] === 'coldemail') { noCE = false; break; } }
+      if (noCE && appType !== 'mobile') recs.push('add cold email. for B2B apps, a 3-5% reply rate on 500 emails/week means 15-25 qualified leads monthly. fastest channel for early traction without a following.');
+      if (recs.length < 3) recs.push('talk to 10 potential users before writing a line of code. ask what they pay for today. build exactly that. saves 80% of wasted build time.');
+    }
+    recs = recs.slice(0, 3);
+
+    clearList('recsList');
+    var recsList = g('recsList');
+    for (i = 0; i < recs.length; i++) {
+      recsList.appendChild(makeRecItem(i + 1, recs[i]));
+    }
+
+    /* ── success stories ── */
+    var stories = [
+      { name: 'photoai.com by @levelsio',  detail: 'vibe-coded photo AI tool. $100K+/mo. built by one person.' },
+      { name: 'shipped.club',              detail: 'built with Cursor in 2 weeks. $3K MRR in first 30 days.' },
+      { name: 'prayerlock app',            detail: '55KB PWA. built in 1 session. 0 to deployed in hours.' },
+      { name: 'internalsearch.com',        detail: 'built with Claude Code. hit 1,000 users in week 1.' }
+    ];
+
+    var sorted = stories.slice();
+    if (appType === 'mobile') {
+      sorted = [stories[2]].concat(stories.filter(function(s, idx) { return idx !== 2; }));
+    } else if (appType === 'saas') {
+      sorted = [stories[0]].concat(stories.filter(function(s, idx) { return idx !== 0; }));
+    }
+
+    clearList('storiesList');
+    var sList = g('storiesList');
+    for (i = 0; i < sorted.length; i++) {
+      sList.appendChild(makeStoryItem(sorted[i].name, sorted[i].detail));
+    }
+
+    /* ── show results ── */
+    g('eG').style.display = 'none';
+    g('res').style.display = 'block';
+    g('ctaBlock').style.display = 'block';
+
+    if (!silent) {
+      g('res').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var calcBtn = g('calcBtn');
+      if (!ul && cc < 2) calcBtn.textContent = 'recalculate (' + (2 - cc) + ' free left)';
+      else if (!ul && cc >= 2) calcBtn.textContent = 'recalculate (last free one used)';
+    }
+  };
+
+})();
+</script>
+</body>
+</html>

@@ -1324,18 +1324,38 @@ def show_status() -> None:
                 print(f"    {r.name:<50} {age_h:.1f}h ago")
 
 
-def deploy_all() -> None:
+def deploy_all(force: bool = False) -> None:
+    """Deploy swarm agents respecting brain state.
+
+    By default, skips agents that the swarm brain has KILLED or HIBERNATED.
+    Use force=True (--force-deploy) to override and deploy everything.
+    """
     import time as _time
     _start = _time.time()
     state = SwarmState()
     success = 0
     failed = 0
+    skipped = 0
+    skip_statuses = {"KILLED", "HIBERNATED"}
+
     for agent_id in SWARM_AGENTS:
+        agent_state = state.data.get("agents", {}).get(agent_id, {})
+        current_status = agent_state.get("status", "").upper()
+        has_killed = "killed_at" in agent_state
+        has_hibernated = "hibernated_at" in agent_state
+
+        if not force and (current_status in skip_statuses or has_killed or has_hibernated):
+            skipped += 1
+            log(f"Skipped {agent_id} (status={current_status}, killed={has_killed}, hibernated={has_hibernated}) — use --force-deploy to override")
+            continue
+
         if install_agent(agent_id):
-            state.update_agent(agent_id, {
-                "installed_at": datetime.now().isoformat(),
-                "status": "ACTIVE"
-            })
+            # Preserve existing state fields (interval, reason, etc.) — only update install time and status
+            preserved = {k: v for k, v in agent_state.items()
+                         if k not in ("installed_at", "status", "killed_at", "killed_by", "hibernated_at", "hibernated_by")}
+            preserved["installed_at"] = datetime.now().isoformat()
+            preserved["status"] = "ACTIVE"
+            state.update_agent(agent_id, preserved)
             success += 1
             _trajectory.log_success(f"deploy:{agent_id}", _start)
         else:
@@ -1344,8 +1364,11 @@ def deploy_all() -> None:
 
     state.data["deployed_at"] = datetime.now().isoformat()
     state.save()
-    _trajectory.log_success("deploy_all", _start, deployed=success, failed=failed)
-    print(f"\nDeployed: {success} agents ({failed} failed)")
+    _trajectory.log_success("deploy_all", _start, deployed=success, failed=failed, skipped=skipped)
+    print(f"\nDeployed: {success} agents ({failed} failed, {skipped} skipped by brain state)")
+    if skipped > 0:
+        print(f"Skipped agents have KILLED/HIBERNATED status from swarm brain decisions.")
+        print(f"Use --force-deploy to override and deploy all agents.")
     print(f"Total launchd agents: {success} swarm + 8 venture = {success + 8} autonomous agents")
 
 
@@ -1432,6 +1455,7 @@ def main() -> None:
     parser.add_argument("--kill-all", action="store_true", help="Uninstall all swarm agents")
     parser.add_argument("--logs", type=str, help="Show logs for an agent")
     parser.add_argument("--health", action="store_true", help="Health check all agents")
+    parser.add_argument("--force-deploy", action="store_true", help="Deploy ALL agents ignoring brain state (KILLED/HIBERNATED)")
     parser.add_argument("--run", type=str, help="Trigger immediate run of an agent via launchctl kickstart")
 
     args = parser.parse_args()
@@ -1440,7 +1464,7 @@ def main() -> None:
         show_status()
     elif args.deploy:
         if args.deploy == "ALL":
-            deploy_all()
+            deploy_all(force=args.force_deploy)
         else:
             if install_agent(args.deploy):
                 state = SwarmState()

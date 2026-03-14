@@ -1,97 +1,94 @@
-# COMPOUND ACTIONS — Swarm Brain Cycle 12
-Generated: 2026-03-13 15:35 | Revenue: $0 (Day 38) | Mode: EMERGENCY CONSERVATION
+# COMPOUND ACTIONS — Swarm Brain Cycle 13
+Generated: 2026-03-14 12:12 | Revenue: $0 (Day 36) | Mode: CONSERVATION + INFRASTRUCTURE FIX
 
 ---
 
-## EMERGENCY: Deploy Override Regression
+## INFRASTRUCTURE FIXES COMPLETED THIS CYCLE
 
-All Cycle 10-11 decisions were wiped by `agent_swarm.py --deploy` at 08:29 today. Every killed/hibernated agent was reset to ACTIVE. Alpha entries doubled to 40,604. Disk dropped 55GB→24GB. This cycle's #1 priority is damage control.
+### Fix 1: Deploy Regression Bug (RESOLVED)
+- **Bug:** `agent_swarm.py --deploy` blindly set ALL agents to ACTIVE, wiping brain decisions
+- **Fix:** `deploy_all()` now reads `swarm_state.json`. Killed/hibernated agents are skipped. Added `--force-deploy` flag for intentional overrides. Preserves existing state fields (interval, reason, mandate).
+- **Impact:** Prevents future regressions. Every `--deploy` now respects weeks of optimization. This was the #1 infrastructure bug since Cycle 4.
 
----
-
-## Compound Action 1: DISK TRIAGE (system_healer + data_janitor)
-
-**Problem:** 24GB free. Losing ~10GB/day. Disk full in ~2 days.
-
-**Action chain:**
-1. Compress reddit/twitter scraper JSON files older than 3 days (`gzip`, ~80% size reduction)
-2. Deduplicate generated_assets/ (same icons regenerated daily — keep only latest)
-3. Compress test_report/test_results JSON in swarm/reports/ (150KB+ each, 5+ files)
-4. Archive ALPHA_STAGING.csv entries older than 30 days to `.csv.gz`
-5. Clean daemon.log and other growing logs
-
-**Target:** Recover 15GB minimum. Reduce daily burn to <1GB.
+### Fix 2: Zombie Cleanup (RESOLVED)
+- **Action:** Uninstalled 11 zombie agents from launchd (10 prior kills/hibernations + meta_executor)
+- **Impact:** Saves ~30 token-consuming launchd invocations per day. Prevents resource waste.
 
 ---
 
-## Compound Action 2: ACTIVATION PACKAGE (asset_deployer redirected)
+## Compound Action 1: HUMAN ACTIVATION SPRINT (77 min, updated)
 
-**Carried from Cycle 11 — still the #1 revenue unlock.**
+**This is the ONLY action that changes $0 to $1.** Repeated for 5 brain cycles. Opportunity cost: $28-177/day.
 
-| # | Action | Time | Potential |
-|---|--------|------|-----------|
-| 1 | Gumroad account + upload 13 products | 45 min | $200-2K/mo |
-| 2 | X Premium ($8) | 5 min | 10x content reach |
-| 3 | Import Buffer CSV (700+ rows ready) | 5 min | 700 posts scheduled |
-| 4 | ConvertKit + Beehiiv affiliate signup | 15 min | $150-300/mo passive |
-| 5 | Paste 3 cold emails from drafts | 5 min | $500-3K/close |
+| # | Action | Time | Unlock |
+|---|--------|------|--------|
+| 1 | Run `claude login` in terminal | 2 min | Unblocks 4 venture agents (app_factory, openclaw, affiliate, alpha) |
+| 2 | Gumroad account + upload 13 products | 45 min | $200-2K/mo digital product revenue |
+| 3 | X Premium ($8) | 5 min | 10x content reach for 771 queued posts |
+| 4 | Import Buffer CSV (621 posts wired and ready) | 5 min | Auto-scheduled content distribution |
+| 5 | ConvertKit + Beehiiv affiliate signup | 15 min | $150-300/mo passive affiliate income |
+| 6 | Paste 3 cold emails from draft templates | 5 min | $500-3K/close |
 
-**75 minutes unlocks $850-5,300/mo pipeline.** This has been repeated for 4 brain cycles. The opportunity cost of each day without accounts: $28-177/day.
+**NEW this cycle:** `claude login` (2 min) added as #1. OAuth expired for 4 venture agents.
 
-**New in Cycle 12:** asset_deployer creates `AUTOMATIONS/activate.sh` script that opens all URLs, copies text to clipboard, and walks human through in sequence.
-
----
-
-## Compound Action 3: ALPHA BEST-OF DIGEST
-
-**Problem:** 40,604 entries. Human will never review them. 99.5% is noise.
-
-**Action:** cross_pollinator + meta_executor filter TOP 50 by: has revenue numbers + has replicable method + matches current stack. Package as `OPS/ALPHA_BEST_OF_TOP50.md`. Human scans in 10 min instead of reviewing 40K entries.
+**Total: ~77 min to unblock $850-5,300/mo pipeline.**
 
 ---
 
-## Compound Action 4: DEPLOY STATE PERSISTENCE FIX
+## Compound Action 2: ALPHA BEST-OF DIGEST (cross_pollinator mandate)
 
-**Problem:** `agent_swarm.py --deploy` ignores brain state. Every deploy = regression to Cycle 0.
+**Problem:** 49,373 alpha entries. meta_executor was mandated to create top 50 digest. Dead for 6 days.
 
-**Fix:** Patch deploy to read `swarm_state.json`. Skip installing agents with status KILLED/HIBERNATED. Add `--force-deploy` for intentional full resets.
+**New assignment:** cross_pollinator creates `OPS/ALPHA_BEST_OF_TOP50.md` by filtering:
+- Has specific revenue numbers (not "make money")
+- Has replicable method (3+ concrete steps)
+- Matches current stack (Python, Node, Next.js, PWA, surge.sh)
+- ROI rated HIGHEST or HIGH
+- Not duplicate of existing knowledge
 
-**Value:** Prevents future 3-day regressions. Saves ~$200/mo in zombie agent tokens.
-
----
-
-## Compound Action 5: COMPLIANCE TRIAGE
-
-80 CRITICAL compliance issues found. Categorize into:
-- **Revenue-blocking** (FTC disclosures on affiliate links, missing privacy policies) → fix now
-- **Nice-to-have** (formatting, non-blocking) → defer to post-revenue
+**Target:** 50 entries max. Human reviews in 10 min instead of scrolling 49K rows.
 
 ---
 
-## ACTIVE AGENTS (Cycle 12 — 4 regular)
+## Compound Action 3: LANDING PAGE SEO UNLOCK
 
-| Agent | Interval | Purpose | PID |
-|-------|----------|---------|-----|
-| cross_pollinator | 4h | Compound value (star agent) | 16306 |
-| system_healer | 2h | Infrastructure + disk cleanup | 16604 |
-| inbound_maximizer | 8h | Maintain deployed apps | 16323 |
-| asset_deployer | 8h | Activation packaging (redirected) | 16628 |
+**New asset from this cycle:** gap_hunter deployed 14 new streak landing pages to surge.sh.
 
-## KILLED/HIBERNATED (10 agents)
+**Compound chain:**
+1. gap_hunter deployed the pages (DONE)
+2. seo_aso_optimizer removes robots.txt Disallow from these 14 pages
+3. cross_pollinator wires URLs into Buffer CSV as announcement posts
+4. inbound_maximizer verifies email capture forms on all 14
 
-opportunity_scanner (RE-KILL), content_compounder (RE-KILL), trend_synthesizer (RE-HIBERNATE), social_poster (RE-HIBERNATE), image_factory (RE-HIBERNATE), alert_dispatcher (RE-HIBERNATE), video_factory (CONFIRM KILL), quality_enforcer (KILLED Cycle 5), conversion_optimizer (KILLED Cycle 8), competitive_intel (KILLED Cycle 10)
+**Value:** 14 new SEO surfaces targeting niche religious/habit keywords. 62+ total deployed sites.
 
-## 24H THROTTLED (5 agents)
-
-gap_hunter, competitor_stalker, lead_machine, seo_aso_optimizer, alpha_intelligence
-
-## DEFUNCT SYSTEMS
-
-feedback_loop — recommends "boost" for ALL agents including killed ones. Meaningless metric. Swarm brain manual eval replaces it.
+**Brain directive to seo_aso_optimizer:** Create whitelist of indexable sites. Remove Disallow for streak apps + landing pages. Keep Disallow for test/staging only.
 
 ---
 
-## NEXT CYCLE
+## Compound Action 4: VENTURE FAILURE REMEDIATION
 
-Target: 2026-03-14 03:35 UTC (12h interval in conservation mode)
-Exit condition: First $1 earned → GROWTH mode → reactivate agents progressively
+**Alpha Intelligence:** 2/5 success. **Alpha Research:** 1/3. **Competitive Intel:** 2/6.
+
+**Root cause:** OAuth expired + macOS sandbox blocks.
+
+**Fix chain:**
+1. Human runs `claude login` (2 min) -> OAuth refreshed
+2. system_healer fixes sandbox permission (identified in health report)
+3. If still failing post-OAuth: reduce to weekly. 49K alpha = daily scraping has negative marginal value.
+
+---
+
+## Pipeline Status (Cycle 13)
+
+| Stage | Count | Delta vs C12 | Blocker |
+|-------|-------|-------------|---------|
+| Alpha entries | 49,373 | +8,769 | No reviewer (digest assigned) |
+| Queued posts | 771 | +76 | No social accounts |
+| Buffer-ready | 621 | NEW | No Buffer import |
+| Leads | 10,296 | +37 | No outreach accounts |
+| Products | 51 | +0 | No Gumroad |
+| Deployed sites | 62+ | +14 | robots.txt blocks SEO |
+| Revenue | $0 | +$0 | All above |
+
+*Cycle 13 compound actions complete. Next brain cycle: ~2026-03-15 00:12 UTC.*

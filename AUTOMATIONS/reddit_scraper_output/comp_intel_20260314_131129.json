@@ -1,0 +1,61 @@
+{
+  "cycle": "COMP_INTEL_CYCLE_2",
+  "timestamp": "2026-03-14T13:11:29.363690",
+  "sources_scraped": 7,
+  "subreddits": [
+    "SaaS",
+    "MicroSaas",
+    "AppBusiness",
+    "iOSProgramming",
+    "growthhacking",
+    "indiehackers",
+    "Affiliatemarketing"
+  ],
+  "new_intel_items": 65,
+  "high_alert_count": 8,
+  "alpha_staged": 3,
+  "alpha_ids": [
+    "ALPHA25427",
+    "ALPHA25428",
+    "ALPHA25429"
+  ],
+  "top_signals": [
+    {
+      "score": 69,
+      "title": "Profitable at $40k MRR with 15%/yr growth - team of 4",
+      "signal": "GENERAL"
+    },
+    {
+      "score": 21,
+      "title": "Bootstrapped to $12K MRR - 4-decision framework",
+      "signal": "APP_FACTORY"
+    },
+    {
+      "score": 18,
+      "title": "App organic channel: 120 downloads/week in 3 months",
+      "signal": "APP_FACTORY"
+    },
+    {
+      "score": 15,
+      "title": "$4k MRR solo: Reddit = 60% of signups",
+      "signal": "CONTENT"
+    },
+    {
+      "score": 16,
+      "title": "Competitor copied product + halved price",
+      "signal": "SAAS_COMPETITOR"
+    }
+  ],
+  "key_insights": [
+    "Reddit specificity > generic advice. Real data posts = 553 upvotes + 1400 signups",
+    "App web funnel: DA 18 + 10 blog posts = 120 downloads/week. 3x retention vs ASO",
+    "4-decision framework: charge before building, kill in 60 days, pick distribution first",
+    "Indie SaaS $40k MRR sustainable at 15%/yr growth - validation for target range"
+  ],
+  "alert_for_human": false,
+  "immediate_actions": [
+    "Review ALPHA25427-25429 and approve if valid",
+    "Consider building web landing page funnel for app factory apps (ALPHA25428)",
+    "Apply 4-decision framework to current app builds (ALPHA25429)"
+  ]
+}

@@ -211,10 +211,13 @@ def scrape_subreddits(subreddits):
                         'alpha_id': f'ALPHA{next_id}',
                         'source': f"r/{name}",
                         'source_url': post['url'],
-                        'tactic': post['title'][:500],
                         'category': sub['category'],
+                        'tactic': post['title'][:500],
                         'roi_potential': estimate_roi(post['title'], post['score']),
+                        'priority': 'SOON',
                         'status': 'PENDING_REVIEW',
+                        'applicable_methods': 'UNCHECKED',
+                        'applicable_niches': 'N/A',
                         'engagement_authenticity': 'AUTHENTIC' if post['score'] > 10 else 'UNCHECKED',
                         'earnings_verified': 'N/A',
                         'created_at': datetime.now().isoformat(),
@@ -233,9 +236,13 @@ def scrape_subreddits(subreddits):
 
     # Save results
     if new_entries:
-        fieldnames = ['alpha_id', 'source', 'source_url', 'tactic', 'category',
-                      'roi_potential', 'status', 'engagement_authenticity',
-                      'earnings_verified', 'created_at', 'notes']
+        fieldnames = ['alpha_id', 'source', 'source_url', 'category', 'tactic',
+                      'roi_potential', 'priority', 'status', 'applicable_methods',
+                      'applicable_niches', 'synergy_score', 'cross_sell_products',
+                      'implementation_priority', 'engagement_authenticity',
+                      'earnings_verified', 'extracted_method', 'compliance_notes',
+                      'reviewer_notes', 'created_at', 'ops_generated',
+                      'quality_issues', 'date_added']
 
         file_exists = ALPHA_STAGING.exists()
         with open(ALPHA_STAGING, 'a', newline='', encoding='utf-8') as f:

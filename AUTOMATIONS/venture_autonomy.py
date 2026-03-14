@@ -782,6 +782,12 @@ class VentureAutonomyEngine:
         )
 
         # Build a focused prompt for this specific step
+        # Resilient pipeline handling: if pipeline is a dict (corrupted), use its keys
+        pipeline = venture.get('pipeline', [])
+        if isinstance(pipeline, dict):
+            pipeline = list(pipeline.keys())
+            venture['pipeline'] = pipeline  # auto-repair
+        step_num = (pipeline.index(step) + 1) if step in pipeline else "?"
         prompt = (
             f"{venture_context_block}"
             f"Execute step '{step}' for venture '{venture['name']}' "
@@ -789,9 +795,9 @@ class VentureAutonomyEngine:
             f"Working directory: {PROJECT}. "
             f"Venture data directory: {AUTONOMY_DIR / venture_id}/. "
             f"Save all outputs there. "
-            f"This is step {venture['pipeline'].index(step) + 1} of "
-            f"{len(venture['pipeline'])} in the pipeline: "
-            f"{' → '.join(venture['pipeline'])}. "
+            f"This is step {step_num} of "
+            f"{len(pipeline)} in the pipeline: "
+            f"{' → '.join(pipeline)}. "
             f"{intel_block}"
             f"Use the intelligence briefing above to inform your decisions. "
             f"Use the venture operating context above as standing instructions. "
