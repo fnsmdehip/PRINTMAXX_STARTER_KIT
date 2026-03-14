@@ -245,3 +245,18 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 # Runs at 8:30 AM after scrapers have completed their 6 AM runs
 # =============================================================================
 30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/inbound_lead_tracker.py --scan >> AUTOMATIONS/logs/inbound_lead_tracker.log 2>&1
+
+# =============================================================================
+# GAP HUNTER ADDITIONS (2026-03-14) — high-value scrapers + app factory autopilot
+# =============================================================================
+# Twitter deep scraper - bookmarks + high-signal accounts via Brave cookie injection
+# Runs at 7:00 AM (after daily_twitter_scraper at 6:05 AM)
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/twitter_alpha_scraper.py --all >> AUTOMATIONS/logs/twitter_alpha_scraper.log 2>&1
+
+# Reddit deep scraper - 41+ subreddits via JSON API, deep comment scraping
+# Runs at 7:15 AM (after daily_reddit_scraper at 6:15 AM)
+15 7 * * * cd $BASE && $PYTHON AUTOMATIONS/reddit_deep_scraper.py --all >> AUTOMATIONS/logs/reddit_deep_scraper.log 2>&1
+
+# App factory autopilot - bookmarks/accounts scrape + auto-approve + spec gen + queue refresh
+# Runs at 8:45 AM (after alpha_staging refreshed by alpha_auto_processor at 8:00 AM)
+45 8 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_autopilot.py --run >> AUTOMATIONS/logs/app_factory_autopilot.log 2>&1

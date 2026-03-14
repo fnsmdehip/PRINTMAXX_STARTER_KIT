@@ -1,0 +1,71 @@
+⚡ COMPETITIVE INTEL ALERT — 2026-03-14 10:55
+
+CYCLE: 2h Competitive Intel autonomy run
+SCRAPE: Reddit (20 subreddits) + Twitter (109 accounts)
+NEW ALPHA: 7 entries (ALPHA25405–ALPHA25411)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRITICAL: APP FACTORY ACTIONS (DO TODAY)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ALPHA25405] HIGHEST — Apple commission cliff
+  → $80K/month iOS dev warns: Small Business Program = 15% til $1M, then 30%
+  → Google Play = flat 15% past $1M
+  → Action: Set per-app revenue tracking. Plan Google Play cross-list before $1M
+
+[ALPHA25406] HIGHEST — Adapty 2026: weekly plans are the play
+  → Weekly plans = 55% of all app revenue industry-wide
+  → Weekly + trial = strongest 12-month LTV of any config
+  → iOS weekly converts 6x better than Android
+  → Action: ALL app factory apps get weekly + trial subscription. Ship this week.
+
+[ALPHA25407] HIGH — ASO wins: keyword in title + territory localization
+  → $100 in 6 weeks: move keyword INTO title
+  → Stop repeating title words in keyword field (100 chars wasted)
+  → App Store Connect: add UK + Australian English metadata = free extra markets
+  → Apple Search Ads tool = free long-tail keyword discovery
+  → Action: Apply ASO checklist to all 20 live apps. No dev work needed.
+
+[ALPHA25411] HIGH — App organic channel: 120 downloads/day
+  → App store ASO alone = ceiling of 15-20 downloads/week
+  → Build web landing page per app → rank organically → 120+ downloads/day
+  → Directory submissions → backlinks → SEO the landing page
+  → Action: Each of our 20+ apps needs a dedicated SEO landing page
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HIGH VALUE: CONTENT + DISTRIBUTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ALPHA25409] HIGH — Reddit is #1 growth channel for SaaS
+  → $4.2K MRR, 10 months: Reddit = single clearest driver
+  → Format: specific insight from real data, useful without clicking
+  → 40-50 posts across r/SaaS r/Entrepreneur r/microsaas r/Solopreneur
+  → We should be doing this NOW. Content exists. Just needs posting.
+
+[ALPHA25408] HIGH — SEO compounds. Paid ads stop.
+  → $7.8K MRR, $2100 start, zero ads, 94% organic search
+  → Forced constraint = better outcome (compound vs stop-when-broke)
+
+[ALPHA25410] HIGH — When competitor undercuts at half price: don't flinch
+  → Support + docs + relationships = moat they can't copy
+  → Premium customers stay. Discount-seekers were bad customers anyway.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HUMAN ACTION REQUIRED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. [5 min] Update all live app subscription configs to weekly + trial
+   → App Store Connect > Subscriptions > add weekly duration + free trial
+   
+2. [30 min] ASO sweep all 20 live apps
+   → Move primary keyword into app title
+   → Clear keyword field, replace with new long-tail (no repeats)
+   → Add UK + AUS English metadata in App Store Connect
+
+3. [10 min] Post first Reddit content batch (posts exist in CONTENT/social/)
+   → r/SaaS + r/Entrepreneur + r/microsaas
+   → Format: specific insight, useful standalone
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Next scrape: 2h from now (~12:55)
+Stored: LEDGER/ALPHA_STAGING.csv (ALPHA25405-25411)

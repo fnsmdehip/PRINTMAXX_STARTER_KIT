@@ -28,15 +28,43 @@
 | invoice-tracker | https://invoice-tracker.surge.sh | LIVE |
 | website-audit | https://website-audit.surge.sh | LIVE |
 | mcp-marketplace | https://mcp-marketplace.surge.sh | LIVE |
+| adhd-streak | https://adhd-streak.surge.sh | LIVE |
+| art-streak-landing | https://art-streak-landing.surge.sh | LIVE |
+| buddhist-streak-landing | https://buddhist-streak-landing.surge.sh | LIVE |
+| coding-streak-landing | https://coding-streak-landing.surge.sh | LIVE |
+| fitness-streak-landing | https://fitness-streak-landing.surge.sh | LIVE |
+| gita-streak-landing | https://gita-streak-landing.surge.sh | LIVE |
+| journal-streak-landing | https://journal-streak-landing.surge.sh | LIVE |
+| language-streak-landing | https://language-streak-landing.surge.sh | LIVE |
+| meditation-streak-landing | https://meditation-streak-landing.surge.sh | LIVE |
+| mormon-streak-landing | https://mormon-streak-landing.surge.sh | LIVE |
+| quran-streak-landing | https://quran-streak-landing.surge.sh | LIVE |
+| reading-streak-landing | https://reading-streak-landing.surge.sh | LIVE |
+| sikh-streak-landing | https://sikh-streak-landing.surge.sh | LIVE |
+| torah-streak-landing | https://torah-streak-landing.surge.sh | LIVE |
+| anglican-streak-marketing | https://anglican-streak-marketing.surge.sh | LIVE |
+| baptist-streak-marketing | https://baptist-streak-marketing.surge.sh | LIVE |
+| best-cold-email-tools-marketing | https://best-cold-email-tools-marketing.surge.sh | LIVE |
+| catholic-streak-marketing | https://catholic-streak-marketing.surge.sh | LIVE |
+| episcopal-streak-marketing | https://episcopal-streak-marketing.surge.sh | LIVE |
+| evangelical-streak-marketing | https://evangelical-streak-marketing.surge.sh | LIVE |
+| lutheran-streak-marketing | https://lutheran-streak-marketing.surge.sh | LIVE |
+| methodist-streak-marketing | https://methodist-streak-marketing.surge.sh | LIVE |
+| orthodox-streak-marketing | https://orthodox-streak-marketing.surge.sh | LIVE |
+| pentecostal-streak-marketing | https://pentecostal-streak-marketing.surge.sh | LIVE |
+| presbyterian-streak-marketing | https://presbyterian-streak-marketing.surge.sh | LIVE |
+| protestant-streak-marketing | https://protestant-streak-marketing.surge.sh | LIVE |
+| shia-streak-marketing | https://shia-streak-marketing.surge.sh | LIVE |
+| sunni-streak-marketing | https://sunni-streak-marketing.surge.sh | LIVE |
 
 ---
 
 ## Summary
 
-- **Total Deployments:** 354 (tracked in deployed_assets.json)
-- **PWAs:** 10/10 LIVE
-- **Health Check:** 12/12 key sites returning 200 OK
-- **Timestamp:** 2026-03-14 10:52:00
+- **Total Deployments:** 382 (tracked in deployed_assets.json)
+- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages
+- **Health Check:** All new deployments returning 200 OK
+- **Timestamp:** 2026-03-14 11:20:00
 
 ## App Details
 

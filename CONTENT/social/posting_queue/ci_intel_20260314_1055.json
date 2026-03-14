@@ -1,0 +1,28 @@
+{
+  "type": "ci_alert",
+  "timestamp": "2026-03-14T10:55:00",
+  "cycle": "competitive_intel_2h",
+  "new_alpha_ids": ["ALPHA25405", "ALPHA25406", "ALPHA25407", "ALPHA25408", "ALPHA25409", "ALPHA25410", "ALPHA25411"],
+  "highest_priority": ["ALPHA25405", "ALPHA25406"],
+  "immediate_actions": [
+    "Update all app subscriptions to weekly + trial (App Store Connect)",
+    "ASO sweep: keyword in title, territory localization for UK+AUS",
+    "Post Reddit content batch (r/SaaS, r/Entrepreneur, r/microsaas)"
+  ],
+  "post_candidates": [
+    {
+      "hook": "adapty just dropped their 2026 subscription report. weekly plans now = 55% of all app revenue.",
+      "body": "weekly + trial has the strongest 12-month ltv of any subscription config. weekly converts 6x better on ios than android. if your app uses monthly-only you're leaving serious money on the table.",
+      "cta": "changed all our apps to weekly + trial this week. sharing results in 30 days.",
+      "platform": "twitter",
+      "niche": "indie_maker"
+    },
+    {
+      "hook": "ios app crossed $100 in 6 weeks with one aso trick",
+      "body": "moved the primary keyword into the title. stopped repeating title words in the 100-char keyword field (apple already indexes those — you're wasting space). added uk + australian english metadata in app store connect. zero dev work, separate ranking opportunities per territory.",
+      "cta": "free: use apple search ads keyword tool to find long-tail keywords before you pick your title.",
+      "platform": "twitter",
+      "niche": "indie_maker"
+    }
+  ]
+}

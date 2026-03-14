@@ -1,4 +1,5 @@
-# GAP HUNTER REPORT - 2026-03-14 07:55
+# GAP HUNTER REPORT - 2026-03-14 11:15
+# Cycle 2 (previous cycle: 07:55)
 
 **Agent:** gap_hunter | **Cycle:** scan + deploy + report
 **Revenue:** $0 | **Day:** 35
@@ -7,197 +8,251 @@
 
 ## EXECUTIVE SUMMARY
 
-Found and acted on critical deployment gaps. 8 apps + 1 lead magnet were built but sitting undeployed. Deployed all 9 immediately. Remaining gaps: massive content pipeline backlog (753 posts), 1,263 approved alpha entries unacted on, and 244 automation scripts not in crontab.
+Found 14 undeployed streak landing pages + adhd-streak PWA sitting in builds directory. All 14 deployed to surge.sh and verified. Ran alpha auto-processor on 1,305 new entries from today. Content pipeline continues to grow (771 queued posts, up from 753). Lead pipeline remains frozen at $0 outbound. Product listing blocked by no Gumroad account.
 
 ---
 
-## GAP 1: UNDEPLOYED APPS [RESOLVED]
+## GAP 1: 14 STREAK LANDING PAGES UNDEPLOYED [RESOLVED]
 
-**8 apps with index.html were built but NOT on surge.sh.**
+**13 niche-specific streak app landing pages + 1 ADHD streak PWA were built but NOT deployed.**
 
-| App | Size | URL | Status |
-|-----|------|-----|--------|
-| coldmaxx | 39KB | https://coldmaxx.surge.sh | DEPLOYED NOW |
-| invoiceforge | 44KB | https://invoiceforge.surge.sh | DEPLOYED NOW |
-| pagescorer | 21KB | https://pagescorer.surge.sh | DEPLOYED NOW |
-| pitchdeck | 36KB | https://pitchdeck.surge.sh | DEPLOYED NOW |
-| prayerlock-web | 79KB | https://prayerlock-web.surge.sh | DEPLOYED NOW |
-| prospectmaxx | 23KB | https://prospectmaxx.surge.sh | DEPLOYED NOW |
-| roicalc | 14KB | https://roicalc.surge.sh | DEPLOYED NOW |
-| stackmaxx | 25KB | https://stackmaxx.surge.sh | DEPLOYED NOW |
+| App | URL | HTTP | Status |
+|-----|-----|------|--------|
+| adhd-streak | https://adhd-streak.surge.sh | 200 | DEPLOYED NOW |
+| art-streak-landing | https://art-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| buddhist-streak-landing | https://buddhist-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| coding-streak-landing | https://coding-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| fitness-streak-landing | https://fitness-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| gita-streak-landing | https://gita-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| journal-streak-landing | https://journal-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| language-streak-landing | https://language-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| meditation-streak-landing | https://meditation-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| mormon-streak-landing | https://mormon-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| quran-streak-landing | https://quran-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| reading-streak-landing | https://reading-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| sikh-streak-landing | https://sikh-streak-landing.surge.sh | 200 | DEPLOYED NOW |
+| torah-streak-landing | https://torah-streak-landing.surge.sh | 200 | DEPLOYED NOW |
 
-**Root cause:** These apps were built by APP_FACTORY but never ran through the deployment pipeline. The builds existed in `MONEY_METHODS/APP_FACTORY/builds/` with valid `index.html` files but were not tracked in `OPS/DEPLOYMENT_URLS.md`.
+**Root cause:** These landing pages were built as part of the app factory expanded-apps pipeline but the deployment step was never triggered. Each is ~10KB HTML with app-specific content.
 
-**Action taken:** All 8 deployed to surge.sh. DEPLOYMENT_URLS.md updated.
-
----
-
-## GAP 2: UNDEPLOYED LEAD MAGNET [RESOLVED]
-
-**1 lead magnet existed but was not deployed:**
-
-| Lead Magnet | URL | Status |
-|-------------|-----|--------|
-| Productivity Stack Quiz | https://productivity-stack-quiz.surge.sh | DEPLOYED NOW |
-
-**14 total lead magnets now, 13 were deployed, 1 was missing.** Fixed.
+**Impact:** 14 new SEO surfaces. Each targets a specific religious/habit niche keyword. Combined with existing streak apps, this creates a long-tail landing page network.
 
 ---
 
-## GAP 3: CONTENT PIPELINE BACKLOG [UNRESOLVED - HUMAN BLOCKER]
+## GAP 2: CONTENT PIPELINE GROWING FASTER THAN DISTRIBUTION [UNRESOLVED]
 
-**753 posts sitting in `CONTENT/social/posting_queue/` unposted.**
+**771 files in posting queue (up from 753 at last cycle, +18 in 7 hours).**
 
-Breakdown:
-- ~120 freelance proof posts
-- ~50 tool evaluation posts
-- ~30 engagement bait posts
-- ~15 compound content posts
-- ~500+ other queued content
+New content generated today:
+- 6 tool evaluation posts (tooleval_tool_alpha24967-25032)
+- 5 freelance proof posts
+- 2 competitive intel posts (ci_intel_20260314)
+- 2 compound content posts
+- 1 cross-niche post
+- 1 research alpha post
+- 1 agent content post (AGENT_CONTENT_20260314.md)
 
-**Blocker:** No X Premium subscription on @PRINTMAXXER. Without it, link posts get 0% engagement. Also no Buffer/Typefully connected for scheduled posting.
-
-**Human action needed:**
-1. Subscribe to X Premium ($8/mo) on @PRINTMAXXER
-2. Import CSV exports from `CONTENT/social/printmaxxer/BUFFER_EXPORT_*.csv` to Buffer
-3. Manually post high-priority content from posting_queue
+**Blocker:** Same as before - no X Premium, no Buffer connected, no scheduled posting.
 
 ---
 
-## GAP 4: ALPHA STAGING BACKLOG [UNRESOLVED - AGENT WORK NEEDED]
+## GAP 3: ALPHA STAGING - 1,305 NEW ENTRIES TODAY [PARTIALLY RESOLVED]
 
-**48,832 total alpha entries:**
-- 1,263 APPROVED but not acted on (methods not integrated, no assets created)
-- 3,674 PENDING_REVIEW (need review cycle)
-- Rest: processed/rejected/archived
+**Total alpha entries:** 48,832+ (17,616 in CSV after dedup)
+**Today's new entries:** 1,305
+**Today's breakdown:**
+- 878 unclassified (raw scraper output, no status)
+- 36 APPROVED
+- 12 PENDING_REVIEW
+- 73 ARCHIVED
+- 58 ENGAGEMENT_BAIT
 
-**Action needed:** Run `/review-alpha` to process pending entries. For APPROVED entries, run the intelligence router to match them to ventures and create actionable tasks.
+**Action taken:** Ran alpha_auto_processor.py. Processed 7 entries: 2 routed to new ventures, 1 bolstered existing, 1 research task, 3 archived (deduped).
 
----
+**Key APPROVED alpha from today (high-value, actionable NOW):**
+1. **ALPHA25406:** Weekly subscription plans drive 55% of all app revenue (Adapty 2026 data). Weekly + trial = strongest LTV. Apply to ALL app factory apps.
+2. **ALPHA25407:** ASO tactics - keyword in title, no keyword repetition, UK/AUS English localization = free additional ranking.
+3. **ALPHA25409:** $4,200 MRR solo founder used Reddit posts (40-50 across 4 subs) as #1 growth channel.
+4. **ALPHA25411:** 120 downloads/day via parallel web landing pages + directory submissions for backlinks.
+5. **ALPHA25039/25262:** SaaS pricing - $9/mo = 0 conversions, $29/mo = people started paying. Lower price kills perceived value.
 
-## GAP 5: AUTOMATION SCRIPTS NOT SCHEDULED [LOW PRIORITY]
-
-**310 Python scripts in AUTOMATIONS/, only 66 cron entries.**
-
-Most unscheduled scripts are helper functions, one-time tools, or support libraries (not meant to be cron'd). However, some valuable scripts could benefit from scheduling:
-
-**Should consider scheduling:**
-- `app_factory_autopilot.py` - app factory pipeline (high value, periodic)
-- `auto_content_poster.py` - content distribution (if accounts exist)
-- `auto_freelance_responder.py` - freelance lead responses (time-sensitive)
-- `inbound_lead_tracker.py` - lead monitoring (periodic)
-- `compliance_scanner.py` - compliance audits (weekly)
-
-**Not needed in cron (helper/support scripts):**
-- `_common.py`, `alpha_query.py`, `alpha_csv_parser.py` etc. are libraries/tools called by other scripts
+**These 5 alpha entries should be integrated into APP_FACTORY and CONTENT strategy immediately.**
 
 ---
 
-## GAP 6: DIGITAL PRODUCTS NOT LISTED [HUMAN BLOCKER]
+## GAP 4: LEADS PIPELINE FROZEN [HUMAN BLOCKER]
 
-**16 Gumroad-ready products exist in `DIGITAL_PRODUCTS/`:**
-- 5 ready-to-sell products (cold email subject lines, funnel teardown, AI blueprint, ops system, cold email playbook)
-- 1 Claude Code Agent Bible (HTML, deployable)
-- 3 micro products with specs
-- 4 Gumroad listings drafted
+- 120 inbound leads (LEDGER/INBOUND_LEADS.csv)
+- 3,600+ local biz leads across 9 cities (dentists, lawyers, plumbers, restaurants)
+- 1,224 master outbound leads
+- 248 cold emails drafted
+- **Zero sent. Zero contacted. Zero revenue.**
 
-**Blocker:** No Gumroad account created. Products cannot be listed.
-
-**Human action needed:** Create Gumroad account (20-30 min), then upload the 5 ready products using `DIGITAL_PRODUCTS/GUMROAD_LAUNCH_EXECUTION_GUIDE.md`.
+**Blocker:** No cold email domain, no mailbox, no warmup.
 
 ---
 
-## GAP 7: LEADS NOT CONTACTED [HUMAN BLOCKER]
+## GAP 5: 16 DIGITAL PRODUCTS READY, ZERO LISTED [HUMAN BLOCKER]
 
-Per system heartbeat: 173,700/1,454,245 leads analyzed, 15,826 hot, 87,677 warm.
+- 13 Gumroad PDFs in PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/
+- 5 ready-to-sell products in DIGITAL_PRODUCTS/ready_to_sell/
+- 4 Gumroad listing drafts in DIGITAL_PRODUCTS/listings/
+- 1 Claude Code Agent Bible (HTML, deployed to surge but not monetized)
 
-**Zero outreach sent.** Blockers:
-- No cold email domain purchased
-- No mailbox configured
-- No warmup done
-- No Gumroad/Fiverr/Stripe accounts for receiving payment
-
----
-
-## PRIORITY RANKING
-
-| Priority | Gap | Impact | Blocker |
-|----------|-----|--------|---------|
-| P0 | Content posting (753 queued) | Revenue from engagement/traffic | HUMAN: X Premium + Buffer |
-| P0 | Product listing (16 ready) | Direct revenue | HUMAN: Gumroad account |
-| P0 | Lead outreach (15K+ hot) | Client revenue | HUMAN: Email domain + mailbox |
-| P1 | Alpha processing (1,263 approved) | Better intelligence | AGENT: review-alpha cycle |
-| P2 | App monetization (8 just deployed) | App revenue | HUMAN: RevenueCat + Stripe |
-| P3 | Script scheduling | Automation coverage | AGENT: selective cron additions |
+**Potential: 12 paid products x 10 sales/mo x $15 avg = $1,800/mo**
+**Blocker:** No Gumroad account created.
 
 ---
 
-## GAP 8: MICRO_SAAS APPS UNDEPLOYED [RESOLVED]
+## GAP 6: SCRAPER OUTPUT NOT FULLY PROCESSED [AGENT WORK]
 
-**3 micro-SaaS apps in MONEY_METHODS/MICRO_SAAS/ were built but not deployed:**
+Today's scraper output:
+- 6 Reddit scrape files (4 AM - 10:55 AM)
+- 4 Twitter scrape files (4:24 AM - 9:21 AM)
+- 1 ProductHunt raw HTML
 
-| App | Size | URL | Status |
-|-----|------|-----|--------|
-| content-calendar | 25KB | https://content-calendar.surge.sh | DEPLOYED NOW |
-| invoice-tracker | 19KB | https://invoice-tracker.surge.sh | DEPLOYED NOW |
-| website-audit | 20KB | https://website-audit.surge.sh | DEPLOYED NOW |
+Most are being auto-processed by cron, but the Reddit scrapes at 8:06 and 10:55 returned only 503-576 bytes (likely errors or rate limits). Twitter scrape at 9:21 was 57KB (good data).
 
----
-
-## GAP 9: MCP MARKETPLACE NOT DEPLOYED [RESOLVED]
-
-| Page | Size | URL | Status |
-|------|------|-----|--------|
-| MCP Marketplace Hub | 28KB | https://mcp-marketplace.surge.sh | DEPLOYED NOW |
-
----
-
-## GAP 10: 13 GUMROAD PDFs READY BUT UNLISTED [HUMAN BLOCKER]
-
-**Full products with PDFs generated, sitting in `PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/`:**
-
-1. Local Biz Client System ($9-27)
-2. AI Automation Toolkit ($9-27)
-3. Vibe Coding Playbook ($9-27)
-4. AI Content Farm Blueprint ($9-27)
-5. Cold Email Playbook ($9-27)
-6. Twitter Growth Playbook ($9-27)
-7. Solopreneur Tech Stack ($9-27)
-8. Sleep YouTube Starter ($9-27)
-9. Funnel Teardown Guide ($9-27)
-10. Free Lead Magnet ($0 - list builder)
-11. Cold Email Subject Lines ($9-27)
-12. Viral Tweet Templates ($9-27)
-13. Local Biz Cold Email Pack ($9-27)
-
-**Potential: 12 paid products x 10 sales/mo x $15 avg = $1,800/mo blocked by no Gumroad account.**
+**Action needed:** Check Reddit scraper health. Recent scrapes returning near-empty responses.
 
 ---
 
 ## ACTIONS TAKEN THIS CYCLE
 
-1. Deployed 8 apps to surge.sh (coldmaxx, invoiceforge, pagescorer, pitchdeck, prayerlock-web, prospectmaxx, roicalc, stackmaxx)
-2. Deployed 1 lead magnet (productivity-stack-quiz)
-3. Deployed 3 micro-SaaS apps (content-calendar, invoice-tracker, website-audit)
-4. Deployed 1 MCP marketplace hub
-5. Updated OPS/DEPLOYMENT_URLS.md with 13 new entries
-6. All 13 deployments verified HTTP 200
-7. Generated this gap report
+1. Deployed 14 apps to surge.sh (13 streak landing pages + adhd-streak PWA)
+2. Verified all 14 returning HTTP 200
+3. Updated OPS/DEPLOYMENT_URLS.md with 14 new entries
+4. Ran alpha_auto_processor.py - processed 7 entries, routed 4 to action
+5. Identified 5 high-value APPROVED alpha entries for immediate integration
+6. Generated this gap report
+
+---
+
+## PRIORITY RANKING (Updated)
+
+| Priority | Gap | Impact | Blocker |
+|----------|-----|--------|---------|
+| P0 | Product listing (16 ready) | $1,800/mo potential | HUMAN: Gumroad account (30 min) |
+| P0 | Content posting (771 queued) | Traffic/engagement/revenue | HUMAN: X Premium + Buffer (15 min) |
+| P0 | Lead outreach (3,600+ leads) | $5K-20K/mo potential | HUMAN: Email domain + mailbox (4 hrs) |
+| P1 | Alpha integration (5 high-value today) | Better app factory strategy | AGENT: integrate into APP_FACTORY |
+| P1 | App monetization (34 deployed) | In-app revenue | HUMAN: RevenueCat + Stripe |
+| P2 | Reddit scraper health | Data pipeline quality | AGENT: debug small responses |
+| P3 | Launchd plist cleanup | Reduce confusion | AGENT: remove 18 dead plists |
+
+---
+
+## REVENUE UNLOCK ESTIMATE (Updated)
+
+| Action | Time | Revenue Potential |
+|--------|------|-------------------|
+| Create Gumroad account + upload 13 PDFs | 30 min | $500-1,800/mo |
+| Subscribe X Premium + import Buffer CSVs | 15 min | Traffic + engagement |
+| Cold email 3,600 leads (need email domain) | 4 hrs setup | $5K-20K/mo |
+| Apply weekly subscription model to apps | 2 hrs agent work | Higher LTV per user |
+| Submit apps to directories for backlinks | 1 hr agent work | 120+ downloads/day |
+| **Total human time needed** | **~5 hours** | **$5.5K-22K/mo** |
 
 ---
 
 ## TOTAL DEPLOYED ASSETS (Post-cycle)
 
-- **PWAs:** 20 (was 8, +12 new)
-- **Streak Apps:** 13
-- **Lead Magnets:** 13 (was 12, +1)
+- **PWAs:** 34 (was 20, +14 new)
+- **Streak Apps:** 13 (core)
+- **Streak Landing Pages:** 13 (NEW - deployed this cycle)
+- **ADHD Streak:** 1 (NEW - deployed this cycle)
+- **Lead Magnets:** 14
 - **Affiliate Pages:** 4
 - **Comparison Pages:** 7
 - **Product Pages:** 5
 - **Landing Pages:** 7
-- **Marketplace:** 1 (new)
-- **Total:** ~70+ live surge.sh deployments
+- **Marketplace:** 1
+- **Micro-SaaS:** 3
+- **Total:** ~84+ live surge.sh deployments
 
 ---
 
-*Next cycle: 3 hours. Focus on alpha processing and content distribution pipeline.*
+---
+
+## DEEP DATA SCAN (Cycle 2 — Updated Numbers)
+
+### Alpha Pipeline (49,372 total entries)
+- 29,803 UNCHECKED (60.4% - never reviewed at all)
+- 903 ENGAGEMENT_BAIT
+- 659 PENDING_REVIEW
+- 533 APPROVED + ROUTED (no post-routing tracking confirms action taken)
+- 489 FLAGGED_FOR_HUMAN
+- 449 INTEGRATED
+- 402 REPURPOSE_ONLY
+- 184 BACKLOG (never scheduled)
+
+### Lead Pipeline (1.56M total leads)
+- 1,454,254 raw scraped (PREFILTERED_LEADS.csv)
+- 88,227 warm qualified
+- 15,938 hot qualified
+- 61 NEW inbound leads (never contacted)
+- 48 RESPONDED inbound (no close tracking)
+- **Zero outreach active on any pool**
+
+### Content Pipeline (4,963 total queued)
+- 771 files in posting_queue (up 18 since last cycle)
+- 4,192 Buffer-imported posts across 12 accounts (faith/tech/fitness x twitter/ig/linkedin/tiktok)
+- POST_THESE_NOW files from Mar 7-8 still unposted (7+ days old)
+- Content generation rate: ~18 new files per 7 hours (outpacing distribution by infinity)
+
+### Dormant Intelligence Datasets (77,657 rows unactioned)
+- CONTENT_FACTORY_QUEUE.csv: 8,183 topics
+- FREELANCE_DEMAND_SCAN.csv: 10,238 opportunities
+- MEGA_SHEET: 15,695 consolidated rows (no daemon reads it)
+- SHIP_CAPTAIN_RUNS.csv: 34,538 execution logs
+- COMMUNITY_INTEL.csv: 2,536 signals
+- TREND_SIGNALS.csv: 1,971 market signals
+- CONTENT_CALENDAR_30DAY.csv: 1,009 editorial items
+- BACKTEST_PRIORITY_QUEUE.csv: 732 ranked ops
+
+### Root Causes
+1. **Generation >> Distribution** - System produces data/content 10x faster than it distributes
+2. **No post-routing validation** - 533 alpha entries marked "routed" with no confirmation of action
+3. **Leads qualified but never contacted** - 104K+ qualified leads with zero active outreach
+4. **MEGA_SHEET orphaned** - 15,695 consolidated intelligence rows with no agent daemon consuming them
+5. **Buffer status unknown** - 4,192 posts imported but unclear if actually scheduled/posting
+
+---
+
+---
+
+## AUTOMATION INFRASTRUCTURE SCAN (Cycle 2)
+
+### Crontab Health: 57 scripts scheduled, ALL valid (no broken refs)
+### Orphaned Scripts: 310 of 429 Python scripts (72.3%) NOT scheduled
+
+**Orphaned script categories (sampling):**
+- Content generation: 30+ scripts (content_factory.py, content_repurposer.py, carousel_factory.py, etc.)
+- Outreach & sales: 25+ scripts (mass_outreach.py, cold_email_sender.py, auto_freelance_responder.py)
+- Product building: 40+ scripts (app_clone_finder.py, micro_info_product_builder.py, gumroad_auto_list.py)
+- Analysis & intelligence: 80+ scripts (market_scanner.py, competitor_monitor.py, opportunity_scanner.py)
+- Most are utility/library scripts that don't need cron. ~50 would benefit from scheduling.
+
+### Swarm State: Deploy Override Incident (March 13)
+- agent_swarm.py --deploy wiped kill/hibernation decisions on March 13
+- Killed agents reset to ACTIVE, doubled alpha entries (20K -> 40K)
+- 5 agents actually running (cross_pollinator, system_healer, asset_deployer, inbound_maximizer, meta_executor)
+- 18 agents marked ACTIVE but many are dead/killed/hibernated
+- **Needs fix:** agent_swarm.py must check state before deploying
+
+### Venture Autonomy: 10 ventures, 3 in critical condition
+- Healthy: competitive_intel (10 cycles, 100%), cold_outreach (7 cycles, 83%)
+- Stalled: niche_content_farm (6 cycles, 67%), digital_products (6 cycles, 67%), app_factory (10 cycles, 67%)
+- Critical: alpha_intelligence (13 cycles, 33% success), openclaw_nationwide (22 cycles, 50%)
+- All 10 ran today (good sign) but need 50+ cycles to stabilize
+
+### Disk Status (CORRECTED)
+- **50GB free** (not 24GB as stale state file suggested)
+- Project size: 28GB total
+- Largest: app factory/ (5.3GB), models/ (4.2GB), AUTOMATIONS/ (2GB)
+- ML caches (.uv-cache, .venv-qwen3-tts, .hf-cache) add ~3-4GB
+- Not emergency, but project bloat needs periodic cleanup
+
+---
+
+*Next cycle: 3 hours. Focus on swarm state fix + Reddit scraper health + APP_FACTORY alpha integration.*

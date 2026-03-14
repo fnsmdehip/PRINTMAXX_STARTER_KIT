@@ -1,7 +1,7 @@
 {
-  "cycle_id": "cycle_20_20260314_0800",
-  "cycle_number": 20,
-  "last_completed_phase": 5,
+  "cycle_id": "cycle_21_20260314_1200",
+  "cycle_number": 21,
+  "last_completed_phase": 2,
   "phase_results": {
     "1": {
       "count": 179,
@@ -17,63 +17,37 @@
       "decisions": [
         {
           "type": "CREATE",
-          "op_id": "N37",
-          "name": "AI Workflow Marketplace",
-          "reason": "READY status, score 52.4, not yet running"
-        },
-        {
-          "type": "CREATE",
-          "op_id": "N38",
-          "name": "Bluesky AT Protocol Apps",
-          "reason": "READY status, score 52.4, not yet running"
-        },
-        {
-          "type": "CREATE",
-          "op_id": "N54",
-          "name": "API Wrapper Products",
-          "reason": "READY status, score 52.4, not yet running"
-        },
-        {
-          "type": "CREATE",
-          "op_id": "N63",
-          "name": "Dusk - Sleep Tracker PWA",
+          "op_id": "N65",
+          "name": "Streakr - Habit Tracker PWA",
           "reason": "READY status, score 42.4, not yet running"
         },
         {
           "type": "CREATE",
-          "op_id": "N64",
-          "name": "Vault - Pomodoro Timer PWA",
+          "op_id": "N66",
+          "name": "Mise - Meal Planner PWA",
           "reason": "READY status, score 42.4, not yet running"
-        }
-      ]
-    },
-    "3": "snapshot_taken",
-    "4": "intel_loaded",
-    "5": {
-      "results": [
-        {
-          "op_id": "N37",
-          "status": "success"
         },
         {
-          "op_id": "N38",
-          "status": "success"
+          "type": "CREATE",
+          "op_id": "N67",
+          "name": "Steplock - Walk Tracker PWA",
+          "reason": "READY status, score 42.4, not yet running"
         },
         {
-          "op_id": "N54",
-          "status": "success"
+          "type": "CREATE",
+          "op_id": "N68",
+          "name": "Ramadan Fasting Tracker PWA",
+          "reason": "READY status, score 49.4, not yet running"
         },
         {
-          "op_id": "N63",
-          "status": "success"
-        },
-        {
-          "op_id": "N64",
-          "status": "success"
+          "type": "CREATE",
+          "op_id": "D01",
+          "name": "Gumroad Product Portfolio",
+          "reason": "READY status, score 51.9, not yet running"
         }
       ]
     }
   },
-  "started_at": "2026-03-14T08:00:00.666038",
-  "updated_at": "2026-03-14T08:00:10.098278"
+  "started_at": "2026-03-14T12:00:01.471295",
+  "updated_at": "2026-03-14T12:00:09.385930"
 }
