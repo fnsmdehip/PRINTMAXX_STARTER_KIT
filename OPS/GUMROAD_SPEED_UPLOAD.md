@@ -500,3 +500,31 @@ move slow, bill more, repeat.
 
 Anduril gets paid to move fast, build better, and keep pushing. palmer luckey turned speed into the profit margin.  x.com/damianplayer/s…
 
+
+
+---
+
+## Pending Enhancement (ALPHA17282, Score: 20)
+
+**Source:** r/smallbusiness | **URL:** https://reddit.com/r/smallbusiness/comments/1rn89a6/is_it_a_good_idea_to_switch_sourcing_platform_for/
+**Added:** 2026-03-14T12:48:46-04:00
+
+Is it a good idea to switch sourcing platform for your Made-in-China products after a little growth? | I’ve been slowly building a small product-based business over the past couple of years (2 years actually). Nothing massive yet, but it’s been growing steadily and I’ve learned a lot through trial and error probably the most painful lessons were around sourcing.
+
+
+
+---
+
+## Pending Enhancement (ALPHA25461, Score: 23)
+
+**Source:** @lookonchain (high-signal-accounts) | **URL:** https://x.com/lookonchain/status/2032856913407541715
+**Added:** 2026-03-14T13:53:42-04:00
+
+The #EthereumFoundation transferred 5,000 $ETH($10.38M) to a new wallet 30 minutes ago.
+
+
+https://
+intel.arkm.com/explorer/entit
+y/ethereum-foundation
+…
+

@@ -1030,3 +1030,20 @@ The Ramadan tracker has a massive seasonal multiplier. 1.8 billion Muslims world
 4. **AlternativeTo is passive but compounding** -- it ranks well on Google for "[app] alternatives" searches. Long-term SEO value.
 5. **BetaList has a queue** -- submit early (Feb 20) to be approved before Ramadan starts.
 6. **Every directory submission = a backlink** -- even low-traffic directories provide SEO value through backlinks.
+
+
+---
+
+## Pending Enhancement (ALPHA25503, Score: 36)
+
+**Source:** @AntonioEscudero (high-signal-accounts) | **URL:** https://x.com/AntonioEscudero/status/2032582011194585223
+**Added:** 2026-03-14T13:53:42-04:00
+
+Day 7 of growing RankInPublic to $10k a month:
+
+Reached 2,800 users
+
+Increased the DR to 44
+
+Added a list of the directories we submit to on the directory submission seevice
+

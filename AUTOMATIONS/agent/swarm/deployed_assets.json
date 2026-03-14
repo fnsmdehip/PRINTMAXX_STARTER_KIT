@@ -1,39 +1,61 @@
 {
-  "last_updated": "2026-03-14T14:08:00.000000",
-  "last_cycle": "asset_deployer_cycle_2026-03-14_1408",
-  "total_surge_deployments": 354,
+  "last_updated": "2026-03-14T18:23:00.000000",
+  "last_cycle": "asset_deployer_cycle_2026-03-14_1823",
+  "total_surge_deployments": 355,
   "health_status": "ALL_HEALTHY",
   "health_check_results": {
-    "checked": 20,
-    "passed": 20,
+    "checked": 25,
+    "passed": 25,
     "failed": 0,
-    "last_checked": "2026-03-14T14:08:00",
+    "last_checked": "2026-03-14T18:23:00",
     "sites_verified": [
       "printmaxx.surge.sh",
       "printmaxx-site.surge.sh",
       "printmaxx-store.surge.sh",
       "printmaxx-apps.surge.sh",
+      "printmaxx-tools.surge.sh",
+      "printmaxx-services.surge.sh",
+      "printmaxx-lead-magnets.surge.sh",
       "mcp-marketplace.surge.sh",
-      "scripture-streak.surge.sh",
-      "prayerlock-app.surge.sh",
       "prayerlock-web.surge.sh",
+      "scripture-streak-landing.surge.sh",
+      "ai-slop-detector.surge.sh",
+      "sunni-streak-marketing.surge.sh",
+      "catholic-streak-marketing.surge.sh",
+      "best-cold-email-tools-marketing.surge.sh",
+      "adhd-streak.surge.sh",
+      "walktounlock-landing.surge.sh",
+      "focuslock-landing.surge.sh",
+      "sleepmaxx-landing.surge.sh",
+      "hilal-landing.surge.sh",
+      "coldmaxx.surge.sh",
+      "coreday.surge.sh",
+      "erase-the-case-pllc-miami-fl.surge.sh",
+      "tasksmash.surge.sh",
       "sleepmaxx-web.surge.sh",
-      "focuslock-web.surge.sh",
       "walktounlock-web.surge.sh",
       "mealmaxx-web.surge.sh",
-      "hilal-app.surge.sh",
+      "habitforge-web.surge.sh",
       "ramadan-tracker.surge.sh",
-      "coldmaxx-app.surge.sh",
-      "ai-slop-detector.surge.sh",
+      "website-audit.surge.sh",
+      "content-calendar.surge.sh",
+      "invoice-tracker.surge.sh",
       "claude-code-agent-bible.surge.sh",
-      "stackmaxx.surge.sh",
-      "roicalc.surge.sh",
-      "prospectmaxx.surge.sh"
+      "ai-stack-2026.surge.sh",
+      "best-ai-tools-2026.surge.sh",
+      "vibe-coding-profit-calculator.surge.sh"
     ]
   },
   "redeployments_this_cycle": [],
-  "new_deployments_this_cycle": [],
-  "cycle_notes": "Health verification cycle. 20/20 core sites returning 200 OK. No new deployable web assets found. biomaxx-sdk54 (docs only) and robloxmaxx (Roblox game, needs Creator Hub) remain non-deployable. 5 PDF products ready but blocked by Gumroad account. 354 total surge deployments confirmed.",
+  "new_deployments_this_cycle": [
+    {
+      "url": "https://vibe-coding-profit-calculator.surge.sh",
+      "type": "lead_magnet",
+      "source": "DIGITAL_PRODUCTS/lead_magnets/vibe-coding-profit-calculator.html",
+      "deployed_at": "2026-03-14T18:23:00"
+    }
+  ],
+  "cycle_notes": "Asset deployer cycle 2026-03-14 18:23. 25/25 sites health-checked, all returning 200 OK. 1 new deployment: vibe-coding-profit-calculator.surge.sh (lead magnet). App factory generated_assets contain icon PNGs only (dusk, mise, steplock, streakr, vault) - not deployable sites. 355 total surge deployments confirmed.",
   "by_category": {
     "pwa_apps": {
       "count": 10,
@@ -76,7 +98,7 @@
       ]
     },
     "lead_magnets": {
-      "count": 11,
+      "count": 12,
       "status": "ALL_LIVE",
       "urls": [
         "cold-email-roi-calculator.surge.sh",
@@ -89,7 +111,8 @@
         "200-day-calculator.surge.sh",
         "cold-email-deliverability-checklist.surge.sh",
         "saas-stack-audit.surge.sh",
-        "printmaxx-lead-magnets.surge.sh"
+        "printmaxx-lead-magnets.surge.sh",
+        "vibe-coding-profit-calculator.surge.sh"
       ]
     },
     "denomination_streak_apps": {
@@ -179,7 +202,7 @@
   "human_blockers": [
     "Gumroad account needed to list 14+ digital products",
     "Affiliate partner signups needed for 4 comparison pages",
-    "Buffer/X Premium needed for 491 pending social posts",
+    "Buffer/X Premium needed for 787 pending social posts",
     "Apple Developer account needed for App Store submissions",
     "Roblox Creator account needed for tycoon game upload"
   ],
@@ -246,7 +269,14 @@
       "type": "lead_magnet",
       "deployed_by": "gap_hunter",
       "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "vibe-coding-profit-calculator",
+      "url": "https://vibe-coding-profit-calculator.surge.sh",
+      "type": "lead_magnet",
+      "deployed_by": "asset_deployer",
+      "deployed_at": "2026-03-14T18:23:00.000000"
     }
   ],
-  "total_count": 9
+  "total_count": 10
 }

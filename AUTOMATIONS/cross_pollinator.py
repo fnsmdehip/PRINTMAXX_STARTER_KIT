@@ -2637,6 +2637,207 @@ def wire_competitor_pricing_to_outreach():
     return created
 
 
+# ─── CONNECTION 49: RBI Audit → Cold Outreach ─────────────────────────────
+# Daily RBI scans find ready-to-launch revenue methods. Wire P0 items to outreach.
+def wire_rbi_audit_to_outreach():
+    today = datetime.now().strftime("%Y-%m-%d")
+    rbi_path = LEDGER / "RBI_AUDITS" / f"rbi_scan_{today}.csv"
+    rows = load_csv(rbi_path, max_rows=100)
+    if not rows:
+        return 0
+
+    outreach_dir = safe_path(AUTOMATIONS / "leads" / "rbi_outreach_angles")
+    outreach_dir.mkdir(parents=True, exist_ok=True)
+    existing = {f.stem for f in outreach_dir.iterdir() if f.suffix == ".json"} if outreach_dir.exists() else set()
+    created = 0
+
+    for row in rows:
+        if row.get("priority") not in ("P0", "P1"):
+            continue
+        if row.get("category") != "cold_email":
+            continue
+        slug = f"rbi_{row.get('category', 'unk')}_{today}".replace("-", "").replace(" ", "_")[:60]
+        if slug in existing:
+            continue
+
+        angle = {
+            "source": "rbi_audit",
+            "method": row.get("category", ""),
+            "description": row.get("name", ""),
+            "revenue_range": row.get("est_revenue_range", ""),
+            "next_action": row.get("next_action", ""),
+            "generated_at": datetime.now().isoformat()
+        }
+        path = safe_path(outreach_dir / f"{slug}.json")
+        path.write_text(json.dumps(angle, indent=2))
+        created += 1
+
+    return created
+
+
+# ─── CONNECTION 50: Competitive Intel Alerts → Content Farm ───────────────
+# High-signal competitor moves from swarm JSON alerts become content posts.
+def wire_ci_alerts_to_content():
+    alert_path = AUTOMATIONS / "agent" / "swarm" / "reports" / f"competitive_intel_alert_{datetime.now().strftime('%Y%m%d')}.json"
+    if not alert_path.exists():
+        return 0
+
+    data = load_json(alert_path)
+    alerts = data.get("alerts", [])
+    if not alerts:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+    created = 0
+
+    for alert in alerts:
+        if alert.get("priority") != "HIGH":
+            continue
+        title = alert.get("title", "")[:80]
+        slug = f"ci_alert_{title[:40]}_{datetime.now().strftime('%Y%m%d')}".lower().replace(" ", "_").replace("/", "").replace("'", "")[:80]
+        if slug in existing:
+            continue
+
+        subreddit = alert.get("subreddit", "")
+        score = alert.get("score", 0)
+        post_content = (
+            f"spotted on r/{subreddit} ({score} upvotes):\n\n"
+            f"\"{title}\"\n\n"
+            f"this is the kind of post that tells you exactly where the market is going. "
+            f"save this and study the comments.\n\n"
+            f"#indiehacker #saas #buildinpublic"
+        )
+        path = safe_path(queue_dir / f"{slug}.txt")
+        path.write_text(post_content)
+        created += 1
+
+    return created
+
+
+# ─── CONNECTION 51: Growth Strategy → Content Farm ────────────────────────
+# Growth strategy recommendations become "here's what I'm trying next" posts.
+def wire_growth_strategy_to_content():
+    report_path = REPORTS / f"growth_strategy_{datetime.now().strftime('%Y%m%d')}.md"
+    if not report_path.exists():
+        return 0
+
+    content = report_path.read_text()
+    if not content:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    slug = f"growth_strategy_digest_{datetime.now().strftime('%Y%m%d')}"
+    existing = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+    if slug in existing:
+        return 0
+
+    # Extract top tactics (look for "1." pattern in growth report)
+    tactics = []
+    for line in content.split("\n"):
+        stripped = line.strip()
+        if stripped.startswith("**1.") or stripped.startswith("**2.") or stripped.startswith("**3."):
+            tactic = stripped.replace("**", "").strip()
+            if len(tactic) > 10:
+                tactics.append(tactic)
+
+    if not tactics:
+        return 0
+
+    post = "today's growth strategy audit surfaced these:\n\n"
+    for i, t in enumerate(tactics[:3], 1):
+        post += f"{i}. {t}\n"
+    post += "\nthe gap between knowing tactics and executing them is where 99% of solopreneurs die.\n\n#buildinpublic #solopreneur"
+
+    path = safe_path(queue_dir / f"{slug}.txt")
+    path.write_text(post)
+    return 1
+
+
+# ─── CONNECTION 52: Platform Algo Changes → Content Strategy ──────────────
+# Algorithm changes inform what content types to prioritize or avoid.
+def wire_algo_changes_to_content():
+    rows = load_csv(LEDGER / "PLATFORM_ALGO_CHANGES.csv", max_rows=50)
+    if not rows:
+        return 0
+
+    # Filter for HIGH/CRITICAL impact changes only
+    high_impact = [r for r in rows if r.get("impact_level", "").upper() in ("HIGH", "CRITICAL")]
+    if not high_impact:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+    created = 0
+
+    for change in high_impact[-5:]:
+        platform = change.get("platform", "unknown")
+        desc = change.get("description", "")[:200]
+        slug = f"algo_change_{platform}_{datetime.now().strftime('%Y%m%d')}".lower().replace(" ", "_")[:60]
+        if slug in existing:
+            continue
+
+        post = (
+            f"{platform} just changed something important:\n\n"
+            f"\"{desc}\"\n\n"
+            f"if you're posting on {platform}, adjust now. "
+            f"most creators won't notice for weeks. that's your edge.\n\n"
+            f"#contentcreator #{platform.lower()}"
+        )
+        path = safe_path(queue_dir / f"{slug}.txt")
+        path.write_text(post)
+        created += 1
+
+    return created
+
+
+# ─── CONNECTION 53: Gap Reports → CEO Decision Feed ──────────────────────
+# Gap hunter findings feed into CEO agent decisions for next cycle.
+def wire_gap_reports_to_ceo():
+    report_path = REPORTS / f"gap_report_{datetime.now().strftime('%Y%m%d')}.md"
+    if not report_path.exists():
+        return 0
+
+    content = report_path.read_text()
+    if not content:
+        return 0
+
+    # Extract gaps (lines with "GAP" in them)
+    gaps = []
+    for line in content.split("\n"):
+        if "## GAP" in line:
+            gap_title = line.replace("##", "").strip()
+            gaps.append(gap_title)
+
+    if not gaps:
+        return 0
+
+    ceo_inbox = safe_path(AUTOMATIONS / "agent" / "ceo_agent" / "inbox")
+    ceo_inbox.mkdir(parents=True, exist_ok=True)
+
+    today = datetime.now().strftime("%Y%m%d")
+    slug = f"gap_findings_{today}"
+    inbox_path = safe_path(ceo_inbox / f"{slug}.json")
+    if inbox_path.exists():
+        return 0
+
+    message = {
+        "source": "gap_hunter",
+        "type": "GAP_FINDINGS",
+        "timestamp": datetime.now().isoformat(),
+        "gaps_found": len(gaps),
+        "gap_titles": gaps,
+        "action_required": "Review gaps and allocate resources to fix highest-impact ones",
+        "report_path": str(report_path)
+    }
+
+    inbox_path.write_text(json.dumps(message, indent=2))
+    return len(gaps)
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -2695,6 +2896,11 @@ def run_cycle():
         ("Engagement Bait → Niche Content", wire_engagement_bait_to_content),
         ("Viral Scans → Content Farm", wire_viral_scans_to_content),
         ("Competitor Pricing → Outreach Angles", wire_competitor_pricing_to_outreach),
+        ("RBI Audit → Cold Outreach", wire_rbi_audit_to_outreach),
+        ("CI Alerts → Content Farm", wire_ci_alerts_to_content),
+        ("Growth Strategy → Content Farm", wire_growth_strategy_to_content),
+        ("Platform Algo Changes → Content", wire_algo_changes_to_content),
+        ("Gap Reports → CEO Decisions", wire_gap_reports_to_ceo),
     ]
 
     total_wired = 0

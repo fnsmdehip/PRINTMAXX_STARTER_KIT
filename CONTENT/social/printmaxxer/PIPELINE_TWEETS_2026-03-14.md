@@ -7,25 +7,25 @@ Status: PENDING_REVIEW
 
 ### Tweet 1
 ```
-1.45 million business domains in the queue. 174,700 analyzed so far (12.0%). 15,937 hot leads. 1,227,182 cold emails drafted. the machine runs 24/7 via cron. I just check the dashboard.
-```
-
-### Tweet 2
-```
 pipeline update:
 
-• 174,700 websites analyzed
-• 15,937 hot leads (bad site + high budget industry)
-• 88,226 warm leads
-• 1,227,182 cold emails generated
-• 897,201 in outreach pipeline
+• 175,700 websites analyzed
+• 16,149 hot leads (bad site + high budget industry)
+• 88,545 warm leads
+• 1,240,403 cold emails generated
+• 913,350 in outreach pipeline
 
 runs autonomously. cron job at 3am. crash recovery built in. this is the way.
 ```
 
+### Tweet 2
+```
+most people manually find leads one at a time. I downloaded 2.87 million from Overture Maps, deduped to 1.45M unique domains, and built a closed-loop pipeline that qualifies → emails → tracks automatically. 16,149 hot leads so far.
+```
+
 ### Tweet 3
 ```
-most people manually find leads one at a time. I downloaded 2.87 million from Overture Maps, deduped to 1.45M unique domains, and built a closed-loop pipeline that qualifies → emails → tracks automatically. 15,937 hot leads so far.
+1.45 million business domains in the queue. 175,700 analyzed so far (12.1%). 16,149 hot leads. 1,240,403 cold emails drafted. the machine runs 24/7 via cron. I just check the dashboard.
 ```
 
 ## Thread (7 tweets)
@@ -80,9 +80,9 @@ qualify → email → track → repeat. no human in the loop.
 ```
 current numbers:
 
-• 174,700 websites analyzed (of 1.45M)
-• 15,937 hot leads identified
-• 1,227,182 cold emails generated
+• 175,700 websites analyzed (of 1.45M)
+• 16,149 hot leads identified
+• 1,240,403 cold emails generated
 • 16 live demo sites
 • 6 industry templates
 

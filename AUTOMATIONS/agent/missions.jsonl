@@ -605,3 +605,18 @@
 {"ts": "2026-03-14T10:17:29.359481", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
 {"ts": "2026-03-14T12:00:04.273315", "mission": "health_heal", "result": "success", "duration_s": 4.1, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-14T12:00:04.478308", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 84 response drafts, 38 listing drafts"}
+{"ts": "2026-03-14T12:01:22.697577", "mission": "content", "result": "partial", "duration_s": 13.4, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T12:01:34.982191", "mission": "upgrade", "result": "partial", "duration_s": 12.2, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-14T12:01:35.302536", "mission": "schedule", "result": "success", "duration_s": 0.2, "output": "Scheduled 42 slots across 7 days"}
+{"ts": "2026-03-14T12:07:29.475663", "mission": "hunt", "result": "partial", "duration_s": 12.7, "output": "Searched but results were thin"}
+{"ts": "2026-03-14T12:20:35.769194", "mission": "content", "result": "partial", "duration_s": 12.2, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T12:20:49.417681", "mission": "upgrade", "result": "partial", "duration_s": 13.6, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-14T12:23:31.425810", "mission": "autonomy:auto_monetize_affiliate_funnel", "result": "partial", "duration_s": 6, "output": "Affiliate Funnels: 4/6 steps OK"}
+{"ts": "2026-03-14T14:00:04.211702", "mission": "health_heal", "result": "success", "duration_s": 4.0, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-14T14:00:04.415455", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 85 response drafts, 38 listing drafts"}
+{"ts": "2026-03-14T14:00:43.537959", "mission": "gen_content", "result": "success", "duration_s": 39.1, "output": "Generated content from 3 sources, saved to AGENT_CONTENT_20260314.md"}
+{"ts": "2026-03-14T14:01:45.013092", "mission": "factory", "result": "success", "duration_s": 61.5, "output": "Factory cycle complete"}
+{"ts": "2026-03-14T14:02:40.353205", "mission": "compliance", "result": "failed", "duration_s": 55.3, "output": "tttt/OPS/COMPLIANCE_SCAN_2026_03_14.md\nJSON saved to: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/compliance_scan_2026_03_14.json\n\n96 CRITICAL issues found. Fix before publishing.\n"}
+{"ts": "2026-03-14T14:04:10.335823", "mission": "proactive_hunt", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
+{"ts": "2026-03-14T16:00:04.014070", "mission": "health_heal", "result": "success", "duration_s": 3.8, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-14T16:00:04.211114", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 85 response drafts, 38 listing drafts"}

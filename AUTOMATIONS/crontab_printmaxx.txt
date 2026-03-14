@@ -72,3 +72,14 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 
 # Alpha screening on new entries
 30 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/alpha_screening.py --pending >> AUTOMATIONS/logs/alpha_screen.log 2>&1
+
+# === GAP HUNTER ADDITIONS (2026-03-14) ===
+
+# Agent swarm health check every 4 hours
+0 */4 * * * cd $BASE && $PYTHON AUTOMATIONS/agent_swarm.py --health >> AUTOMATIONS/logs/agent_swarm_cron.log 2>&1
+
+# Observer agent inbound lead monitoring every 2 hours
+30 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/observer_agent.py --cycle >> AUTOMATIONS/logs/observer_agent_cron.log 2>&1
+
+# Shakespeare agent content generation every 4 hours (offset from swarm)
+15 1,5,9,13,17,21 * * * cd $BASE && $PYTHON AUTOMATIONS/shakespeare_agent.py --generate >> AUTOMATIONS/logs/shakespeare_agent_cron.log 2>&1

@@ -1851,3 +1851,20 @@ $BRCC --
 
 The Undercovered.
 
+
+
+---
+
+## Pending Enhancement (ALPHA25450, Score: 32)
+
+**Source:** @venturetwins (high-signal-accounts) | **URL:** https://x.com/AbacusGM/status/2032203728875376904/analytics
+**Added:** 2026-03-14T13:53:42-04:00
+
+Abacus Global Management $ABX Reports Fourth Quarter and Full Year 2025 Results | Press Release
+
+• Company Delivers Another Record Quarter, Beating Average Consensus by 20%
+
+• Marks 11 Consecutive Quarters of Strong Earnings Growth
+
+• Fourth Quarter and Full Year 2025 Revenue
+

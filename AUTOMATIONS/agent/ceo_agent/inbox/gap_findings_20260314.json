@@ -1,0 +1,16 @@
+{
+  "source": "gap_hunter",
+  "type": "GAP_FINDINGS",
+  "timestamp": "2026-03-14T12:10:05.009717",
+  "gaps_found": 6,
+  "gap_titles": [
+    "GAP 1: 14 STREAK LANDING PAGES UNDEPLOYED [RESOLVED]",
+    "GAP 2: CONTENT PIPELINE GROWING FASTER THAN DISTRIBUTION [UNRESOLVED]",
+    "GAP 3: ALPHA STAGING - 1,305 NEW ENTRIES TODAY [PARTIALLY RESOLVED]",
+    "GAP 4: LEADS PIPELINE FROZEN [HUMAN BLOCKER]",
+    "GAP 5: 16 DIGITAL PRODUCTS READY, ZERO LISTED [HUMAN BLOCKER]",
+    "GAP 6: SCRAPER OUTPUT NOT FULLY PROCESSED [AGENT WORK]"
+  ],
+  "action_required": "Review gaps and allocate resources to fix highest-impact ones",
+  "report_path": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/agent/swarm/reports/gap_report_20260314.md"
+}

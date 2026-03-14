@@ -1,0 +1,108 @@
+{
+  "cycle_start": "2026-03-14T15:12:56.555553",
+  "cycle_end": "2026-03-14T15:12:56.563850",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 11,
+  "new_intel_rows_written": 5,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Built a SaaS that makes $8K/month. Turned down an offer to acqui-hire me for $400K. Everyone thinks I'm crazy.",
+      "subreddit": "SaaS",
+      "score": 111,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rp8bfj/built_a_saas_that_makes_8kmonth_turned_down_an/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "We're profitable at $40k MRR and i have zero interest in growing faster",
+      "subreddit": "SaaS",
+      "score": 94,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rtg69f/were_profitable_at_40k_mrr_and_i_have_zero/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "My micro SaaS hit $0 MRR for 5 straight months. Then one positioning change took it to $4,800 MRR in 6 weeks.",
+      "subreddit": "MicroSaas",
+      "score": 33,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rsglbi/my_micro_saas_hit_0_mrr_for_5_straight_months/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "My saas hit $4k MRR as a solo founder. Here are the 3 channels that actually worked and the 4 that were pure waste of ti",
+      "subreddit": "Solopreneur",
+      "score": 18,
+      "url": "https://www.reddit.com/r/Solopreneur/comments/1rt522h/my_saas_hit_4k_mrr_as_a_solo_founder_here_are_the/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I built a free Android TV remote app (no ads, no premium) as a side project",
+      "subreddit": "SideProject",
+      "score": 120,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rsebx7/i_built_a_free_android_tv_remote_app_no_ads_no/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "Built a SaaS that makes $8K/month. Turned down an offer to acqui-hire me for $400K. Everyone thinks I'm crazy.",
+      "subreddit": "SaaS",
+      "score": 111,
+      "comments": 104,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rp8bfj/built_a_saas_that_makes_8kmonth_turned_down_an/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA24228"
+    },
+    {
+      "title": "We're profitable at $40k MRR and i have zero interest in growing faster",
+      "subreddit": "SaaS",
+      "score": 94,
+      "comments": 74,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rtg69f/were_profitable_at_40k_mrr_and_i_have_zero/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA25418"
+    },
+    {
+      "title": "My micro SaaS hit $0 MRR for 5 straight months. Then one positioning change took it to $4,800 MRR in 6 weeks.",
+      "subreddit": "MicroSaas",
+      "score": 33,
+      "comments": 12,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rsglbi/my_micro_saas_hit_0_mrr_for_5_straight_months/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA24234"
+    },
+    {
+      "title": "My saas hit $4k MRR as a solo founder. Here are the 3 channels that actually worked and the 4 that were pure waste of ti",
+      "subreddit": "Solopreneur",
+      "score": 18,
+      "comments": 5,
+      "url": "https://www.reddit.com/r/Solopreneur/comments/1rt522h/my_saas_hit_4k_mrr_as_a_solo_founder_here_are_the/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA25425"
+    },
+    {
+      "title": "I built a free Android TV remote app (no ads, no premium) as a side project",
+      "subreddit": "SideProject",
+      "score": 120,
+      "comments": 43,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rsebx7/i_built_a_free_android_tv_remote_app_no_ads_no/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA24199"
+    }
+  ]
+}

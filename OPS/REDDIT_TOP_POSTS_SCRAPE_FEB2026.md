@@ -431,3 +431,14 @@ Data-backed winning themes for TikTok content.
 
 [ACQUISITION] I hit $1K ARR by analyzing 23 million Reddit posts. It started with my fantasy soccer league. [rev: $$1]
 
+
+
+---
+
+## Pending Enhancement (ALPHA15251, Score: 26)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rj6o74/i_analyzed_23_million_reddit_posts_rsideproject/
+**Added:** 2026-03-14T12:48:40-04:00
+
+I analyzed 23 million Reddit posts. r/SideProject gets 661 posts per day. Here's how to actually get seen.
+
