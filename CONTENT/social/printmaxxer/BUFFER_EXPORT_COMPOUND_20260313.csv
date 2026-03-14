@@ -1,0 +1,83 @@
+Text,Link,Image,Scheduled Date,Scheduled Time,Profile
+"33 autonomous agents running on my macbook right now. CEO agent makes portfolio decisions every 4 hours. venture agents execute. swarm agents hunt gaps.
+
+total monthly cost: $200 (claude max plan).
+
+no server. no team. no meetings. just cron jobs and filesystem state.",,,2026-03-15,07:30,printmaxxer Twitter
+"day 35. revenue: $0.
+
+but here's what exists:
+- 171,700 websites analyzed
+- 15,586 hot leads scored
+- 302 automation scripts
+- 8 apps built and deployed
+- 16 live demo sites
+- 1.45M domains in pipeline
+
+the infrastructure is insane. the revenue is not. yet.
+
+shipping the monetization layer this week.",,,2026-03-15,12:30,printmaxxer Twitter
+"unpopular opinion: most ""AI automation"" accounts are running $0 in actual revenue with $200/mo in AI subscriptions.
+
+I know because I'm one of them.
+
+the difference is I'm not pretending otherwise. day 35 at zero. infrastructure first, revenue second. watch.",,,2026-03-15,18:00,printmaxxer Twitter
+"woke up to 84 new alpha entries scraped overnight. system found a $280M failed acquisition story on r/Entrepreneur (88 upvotes, 43 comments) and auto-routed it to my content pipeline.
+
+I didn't do anything. the cron job did.",,,2026-03-16,07:30,printmaxxer Twitter
+"129-point crowdsourced list of AI writing tells hit the front page of HN yesterday.
+
+I already have 24 of those patterns banned in my copy-style config. every piece of content my system generates gets filtered through it automatically.
+
+most people manually edit AI slop. I automated the filter.",,,2026-03-16,12:30,printmaxxer Twitter
+"genuine question: would you rather have
+
+A) 1 app making $5k/mo
+B) 10 apps each making $500/mo
+
+same total revenue. completely different risk profiles. I chose B. here's why that might be wrong.",,,2026-03-16,18:00,printmaxxer Twitter
+"my autonomous agent stack:
+
+- ceo_agent.py: 16-phase decision cycle, xlsx scoring
+- venture_autonomy.py: 8 venture types, self-managing schedules
+- agent_swarm.py: 25 operational agents across 6 categories
+- loop_closer.py: closes open loops between agents automatically
+
+all running via launchd. filesystem is the memory. context window is disposable.
+
+total infra cost: $0/mo (runs on my laptop).",,,2026-03-17,07:30,printmaxxer Twitter
+"the gap between ""I built a lot of stuff"" and ""I make money"" is the widest gap in tech.
+
+302 scripts. 8 apps. 16 demo sites. 1.45M leads in pipeline.
+
+revenue: $0.
+
+the build is the easy part. the sell is where most people (including me) get stuck.",,,2026-03-17,12:30,printmaxxer Twitter
+"how many of you are running autonomous agents right now?
+
+not ""I use chatgpt sometimes."" I mean actual cron jobs, actual decision loops, actual agents that execute without you.
+
+curious what the real number is. reply with your stack.",,,2026-03-17,18:00,printmaxxer Twitter
+"the most underrated pattern in AI agent design:
+
+while true:
+  read state from filesystem
+  do ONE thing
+  write state back
+  exit
+
+no persistent memory. no vector stores. no embeddings. the filesystem IS the memory. context window is a disposable scratchpad.
+
+we call it the ralph loop. it's stupid simple and it works.",,,2026-03-17,21:00,printmaxxer Twitter
+"filesystem as database. launchd as orchestrator. git as backup. jsonl as message bus.
+
+no postgres. no kubernetes. no redis. no docker.
+
+33 agents running on a macbook pro. sometimes the simplest architecture is the best one.",,,2026-03-18,07:30,printmaxxer Twitter
+"claude code with opus changed how I build software.
+
+not ""it writes code for me."" it literally runs my business.
+
+CEO agent makes portfolio decisions. content agents generate posts. scraper agents find leads. quality agents block slop.
+
+$200/mo. no API costs. the max plan is criminally underpriced for what it enables.",,,2026-03-18,12:30,printmaxxer Twitter

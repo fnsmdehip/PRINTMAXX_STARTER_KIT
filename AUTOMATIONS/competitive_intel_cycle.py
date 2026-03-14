@@ -51,13 +51,17 @@ def safe_path(p):
 # ── PHASE 1: CLEAN ──────────────────────────────────────────────────────────
 
 def load_existing_intel_keys():
-    """Load set of (type+name+scan_date) to deduplicate new rows."""
+    """Load set of dedup keys from existing rows. Matches both URL-based and name-based keys."""
     keys = set()
     if COMPETITIVE_INTEL_CSV.exists():
         with open(COMPETITIVE_INTEL_CSV, newline='', errors='replace') as f:
             for row in csv.DictReader(f):
-                key = f"{row.get('type','')}__{row.get('name','')}__{(row.get('scan_date') or '')[:10]}"
-                keys.add(key)
+                # Name-based key (original format)
+                keys.add(f"{row.get('type','')}__{row.get('name','')}__{(row.get('scan_date') or '')[:10]}")
+                # URL-based key (matches store_intel_rows writer key)
+                url = row.get('url', '')
+                if url:
+                    keys.add(f"reddit_signal__{url}__{(row.get('scan_date') or '')[:10]}")
     return keys
 
 def load_competitor_changes():
@@ -273,7 +277,8 @@ def store_intel_rows(changes, reddit_signals, existing_keys):
                         'source','url','metric_1','metric_2','notes','scan_date'])
         # Store Reddit signals as intel rows
         for sig in reddit_signals:
-            key = f"reddit_signal__{sig['post_id']}__{today[:10]}"
+            # Use URL as the stable dedup key (matches load_existing_intel_keys)
+            key = f"reddit_signal__{sig['url']}__{today[:10]}"
             if key in existing_keys:
                 continue
             w.writerow([

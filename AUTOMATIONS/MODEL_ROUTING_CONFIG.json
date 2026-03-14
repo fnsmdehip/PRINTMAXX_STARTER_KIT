@@ -1,0 +1,23 @@
+{
+  "evaluator_writer": "claude-sonnet-4-6",
+  "evaluator_reviewer": "claude-opus-4-6",
+  "challenger_agents": "claude-opus-4-6",
+  "shakespeare_agent": "claude-sonnet-4-6",
+  "observer_agent": "claude-haiku-4-5-20251001",
+  "quinn_agent": "claude-sonnet-4-6",
+  "content_compounder": "claude-opus-4-6",
+  "ceo_agent": "claude-opus-4-6",
+  "swarm_brain": "claude-opus-4-6",
+  "quality_gate": "claude-opus-4-6",
+  "default": "claude-opus-4-6",
+  "budget": {
+    "per_task_usd": 2.00,
+    "per_session_usd": 20.00,
+    "warning_threshold_pct": 80
+  },
+  "cross_model_review": {
+    "enabled": true,
+    "rule": "writer_model != reviewer_model",
+    "fallback": "claude-opus-4-6"
+  }
+}

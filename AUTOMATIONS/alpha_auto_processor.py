@@ -27,6 +27,7 @@ import csv
 import hashlib
 import os
 import re
+import subprocess
 import sys
 import textwrap
 from collections import Counter
@@ -44,6 +45,7 @@ LOG_DIR = PROJECT_ROOT / "AUTOMATIONS" / "logs"
 LOG_FILE = LOG_DIR / "alpha_processor.log"
 OPS_DIR = PROJECT_ROOT / "OPS"
 LAST_RUN_MARKER = PROJECT_ROOT / "AUTOMATIONS" / ".alpha_processor_last_run"
+APP_FACTORY_COMMAND_CENTER = PROJECT_ROOT / "AUTOMATIONS" / "app_factory_command_center.py"
 
 # Statuses we process
 PROCESSABLE_STATUSES = {"PENDING_REVIEW", "NEW", ""}
@@ -699,6 +701,22 @@ def show_status() -> None:
             print(f"  {line}")
 
 
+def refresh_app_factory_queue() -> None:
+    """Keep the app-factory queue current after live alpha routing."""
+    if not APP_FACTORY_COMMAND_CENTER.exists():
+        return
+    try:
+        subprocess.run(
+            [sys.executable, str(APP_FACTORY_COMMAND_CENTER), "--refresh", "--top", "5", "--limit", "40"],
+            capture_output=True,
+            text=True,
+            timeout=120,
+            cwd=PROJECT_ROOT,
+        )
+    except Exception as exc:
+        log(f"App factory queue refresh failed: {exc}")
+
+
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
@@ -767,6 +785,7 @@ def main() -> None:
         write_alpha_csv(fieldnames, rows)
         # Update last run marker
         safe_path(LAST_RUN_MARKER).write_text(now_iso())
+        refresh_app_factory_queue()
         log("CSV updated and last-run marker saved")
 
     # Report

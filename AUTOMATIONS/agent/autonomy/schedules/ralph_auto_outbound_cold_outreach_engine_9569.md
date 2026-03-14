@@ -12,6 +12,7 @@ After completing the step:
 3. Log to AUTOMATIONS/logs/venture_auto_outbound_cold_outreach_engine_9569.log
 4. Exit cleanly so the next loop iteration gets fresh context
 
+
 Type: OUTBOUND
-Interval: 4h
+Interval: 12h
 Working dir: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt

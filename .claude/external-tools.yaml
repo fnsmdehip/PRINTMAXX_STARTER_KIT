@@ -1,0 +1,27 @@
+# PRINTMAXX External Model Routing — T013 Restructure V2
+# Cross-model adversarial review: writer != reviewer
+# Stub config — enable adapters when CLI tools are available
+
+adapters:
+  codex:
+    enabled: false  # Enable when Codex CLI available
+    model: "codex-latest"
+    timeout_seconds: 120
+    sandbox: none
+  gemini:
+    enabled: false  # Enable when Gemini CLI available
+    model: "gemini-2.0-flash"
+    timeout_seconds: 120
+    sandbox: none
+
+routing:
+  default_reviewer: "claude-opus-4-6"
+  fallback_reviewer: "claude-opus-4-6"
+  evaluator_writer: "claude-sonnet-4-6"
+  evaluator_reviewer: "claude-opus-4-6"
+  challenger_agents: "claude-opus-4-6"
+
+budget:
+  per_task_usd: 2.00
+  per_session_usd: 20.00
+  warning_threshold: 0.80

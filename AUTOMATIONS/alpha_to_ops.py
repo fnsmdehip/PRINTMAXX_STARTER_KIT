@@ -26,6 +26,7 @@ import fcntl
 import hashlib
 import os
 import re
+import subprocess
 import sys
 import textwrap
 import time
@@ -258,12 +259,151 @@ def _extract_insight(alpha: dict) -> str:
     )
 
 
+APP_FACTORY_CLUSTER_CONFIG = {
+    "faith": {
+        "keywords": ["faith", "bible", "prayer", "ramadan", "quran", "scripture"],
+        "target": "Hilal / PrayerLock / Scripture Streak",
+        "aesthetic": "midnight blue, warm gold, soft motion, modern-reverent typography",
+        "onboarding": "belief or practice selector -> cadence setup -> first devotional win -> reminder permission -> paywall",
+        "paywall": "after first devotional value moment, annual-first anchor",
+        "monetization": "subscription with 7-day trial, annual-first pricing",
+        "secondary": "books, study tools, or adjacent faith affiliates only after retention exists",
+    },
+    "habits": {
+        "keywords": ["habit", "streak", "minimum viable day", "routine", "discipline"],
+        "target": "Streakr",
+        "aesthetic": "warm ivory, emerald progress rings, satisfying completion states",
+        "onboarding": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+        "paywall": "after first completion, show streak preview and annual plan",
+        "monetization": "subscription with 7-day trial and annual anchor",
+        "secondary": "light affiliate add-ons only if they reinforce the streak outcome",
+    },
+    "fitness": {
+        "keywords": ["fitness", "workout", "walk", "step", "health", "gym"],
+        "target": "Steplock",
+        "aesthetic": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress",
+        "onboarding": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
+        "paywall": "after plan preview or first logged action",
+        "monetization": "subscription with 7-day trial and annual-first pricing",
+        "secondary": "gear or wellness affiliates after the core conversion path works",
+    },
+    "sleep": {
+        "keywords": ["sleep", "circadian", "bedtime", "wind down"],
+        "target": "Dusk",
+        "aesthetic": "navy, moonlight teal, blur layers, slow transitions",
+        "onboarding": "sleep issue quiz -> bedtime target -> tonight preview -> reminder permission -> paywall",
+        "paywall": "after personalized sleep plan preview",
+        "monetization": "subscription with annual anchor",
+        "secondary": "audio pack or wellness affiliate tests only after activation",
+    },
+    "focus": {
+        "keywords": ["focus", "productivity", "deep work", "pomodoro", "lock"],
+        "target": "Vault",
+        "aesthetic": "graphite base, one bright accent, dense information, tactile controls",
+        "onboarding": "attention problem selector -> session goal -> first focus win -> reminder -> paywall",
+        "paywall": "after first completed work session",
+        "monetization": "subscription with annual anchor",
+        "secondary": "paid-upfront test if the app is privacy-first and local-only",
+    },
+    "meal": {
+        "keywords": ["meal", "nutrition", "recipe", "shopping list", "food waste"],
+        "target": "Mise",
+        "aesthetic": "paper white, herb green, strong food imagery, calendar-first layout",
+        "onboarding": "dietary quiz -> household size -> weekly preview -> recipe preview -> paywall",
+        "paywall": "after weekly meal plan preview",
+        "monetization": "subscription with annual anchor",
+        "secondary": "grocery or kitchen affiliates after retention exists",
+    },
+    "ai_utility": {
+        "keywords": ["ai", "gpt", "wrapper", "pdf", "resume", "chat", "detector", "local", "privacy"],
+        "target": "NEW_BUILD",
+        "aesthetic": "clean white or ink black, one sharp accent, no fake futuristic chrome",
+        "onboarding": "drop input -> show first useful result fast -> personalize -> paywall",
+        "paywall": "after the first clear output, never before time-to-value",
+        "monetization": "subscription with fast time-to-value and annual anchor",
+        "secondary": "paid-upfront test for privacy-first local tools; avoid ads unless usage is massive",
+    },
+}
+
+
+def _app_blob(alpha: dict) -> str:
+    return " ".join([
+        clean_for_voice(alpha.get("tactic", "") or ""),
+        clean_for_voice(alpha.get("extracted_method", "") or ""),
+        clean_for_voice(alpha.get("reviewer_notes", "") or ""),
+        clean_for_voice(alpha.get("applicable_niches", "") or ""),
+        clean_for_voice(alpha.get("source", "") or ""),
+    ]).lower()
+
+
+def _app_cluster(alpha: dict) -> str:
+    blob = _app_blob(alpha)
+    best = "ai_utility"
+    best_score = 0
+    for cluster, config in APP_FACTORY_CLUSTER_CONFIG.items():
+        score = sum(1 for keyword in config["keywords"] if keyword in blob)
+        if score > best_score:
+            best = cluster
+            best_score = score
+    return best
+
+
+def _app_target(cluster: str, alpha: dict) -> str:
+    blob = _app_blob(alpha)
+    if cluster == "faith" and any(token in blob for token in ("ai", "gpt", "wrapper", "chat")):
+        return "PrayerLock / Scripture Streak AI layer"
+    return APP_FACTORY_CLUSTER_CONFIG[cluster]["target"]
+
+
+def _app_price_test(cluster: str, alpha: dict) -> str:
+    blob = _app_blob(alpha)
+    if cluster == "ai_utility" and any(token in blob for token in ("privacy", "local", "offline")):
+        return "$9.99 to $29.99 upfront, plus optional pro unlock"
+    if cluster == "ai_utility":
+        return "$6.99 to $9.99/mo and $39.99 to $59.99/yr"
+    return "$24.99 to $39.99/yr first test"
+
+
+def _app_route(cluster: str, alpha: dict) -> str:
+    target = _app_target(cluster, alpha)
+    blob = _app_blob(alpha)
+    if any(token in blob for token in ("adult", "nsfw", "findom", "onlyfans")):
+        return "VALIDATE_FIRST"
+    if target != "NEW_BUILD":
+        return "ITERATE_EXISTING_FIRST"
+    if cluster == "ai_utility":
+        return "BUILD_NEW_UTILITY"
+    return "SPEC_AND_TEST"
+
+
+def _app_experiments(cluster: str, alpha: dict) -> list[str]:
+    blob = _app_blob(alpha)
+    experiments = [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never a day-one pop-up",
+    ]
+    if cluster in {"faith", "fitness", "meal"}:
+        experiments.append("affiliate placement: post-conversion home tab vs no affiliate module")
+    elif cluster == "ai_utility" and any(token in blob for token in ("privacy", "local", "offline")):
+        experiments.append("monetization: paid upfront vs free-trial subscription")
+    else:
+        experiments.append("onboarding length: 3-screen fast path vs 5-screen personalized path")
+    return experiments
+
+
 def gen_app_factory(alpha: dict) -> str:
     insight = _extract_insight(alpha)
     aid = alpha["alpha_id"]
     source = alpha.get("source", "")
     roi = alpha.get("roi_potential", "MEDIUM")
     niches = alpha.get("applicable_niches", "") or "faith, fitness, tech, finance"
+    cluster = _app_cluster(alpha)
+    config = APP_FACTORY_CLUSTER_CONFIG[cluster]
+    target = _app_target(cluster, alpha)
+    route = _app_route(cluster, alpha)
+    price_test = _app_price_test(cluster, alpha)
+    experiments = "\n".join([f"- {item}" for item in _app_experiments(cluster, alpha)])
     return clean_for_voice(f"""# App Spec: {aid}
 ## source: {source}
 ## generated: {now_iso()}
@@ -272,10 +412,19 @@ def gen_app_factory(alpha: dict) -> str:
 ## core insight
 {insight}
 
-## app concept
-build a focused utility app around this insight. single-purpose, solves one problem well.
+## execution route
+- route: {route}
+- portfolio target: {target}
+- cluster: {cluster}
+- if this maps cleanly to an existing app, upgrade that app before greenfield work
 
-### target niches
+## market thesis
+- target niches: {niches}
+- build a focused app around this insight. one painful problem, one obvious promise.
+- use live category leaders as the quality bar, not current internal PWA quality.
+- if the product cannot produce a clear first win inside 60 seconds, the concept is too broad.
+
+## concept direction
 {niches}
 
 ### suggested name direction
@@ -284,10 +433,23 @@ build a focused utility app around this insight. single-purpose, solves one prob
 - 1-2 words max. lowercase energy.
 
 ### monetization model
-- freemium with 7-day trial
-- $4.99/mo or $29.99/yr subscription via RevenueCat
-- affiliate links to relevant physical products (supplements, books, gear)
-- apple now allows external payment links. use them.
+- primary: {config["monetization"]}
+- secondary: {config["secondary"]}
+- first price test: {price_test}
+- use RevenueCat or a real billing path. no fake localStorage subscriptions.
+
+### onboarding model
+- {config["onboarding"]}
+- paywall placement: {config["paywall"]}
+- review prompt timing: ask only after a real value moment or streak milestone
+
+### visual direction
+- {config["aesthetic"]}
+- pull color and motion patterns from MONEY_METHODS/APP_FACTORY/AGGREGATE_DESIGN_SYSTEM.md
+- study top category competitors before finalizing visuals
+
+### monetization and onboarding experiments
+{experiments}
 
 ### ASO keywords (research and expand)
 - extract 5-10 keywords from the insight
@@ -300,13 +462,19 @@ build a focused utility app around this insight. single-purpose, solves one prob
 - that gap is the product.
 
 ### implementation
-- PWA first (ships fastest), wrap with Capacitor for iOS
-- use aggregate design system v2 (MONEY_METHODS/APP_FACTORY/AGGREGATE_DESIGN_SYSTEM_V2.md)
-- 4-screen onboarding minimum
+- do not ship another single-file HTML monolith
+- use App Factory standards from:
+  - MONEY_METHODS/APP_FACTORY/APP_FACTORY_CENTRAL_INDEX.md
+  - MONEY_METHODS/APP_FACTORY/APP_DISCOVERY_ENGINE.md
+  - MONEY_METHODS/APP_FACTORY/ONBOARDING_PLAYBOOK.md
+- required before App Store submission: native-feeling interactions, haptics, privacy URL, real billing, real review-prompt timing
+- PWA can be a prototype, not the final quality bar
 - lighthouse score > 90 before submission
 
 ### next action
-build MVP in one session. test in simulator. deploy to surge.sh. wrap for iOS.
+1. refresh the ranked queue: `python3 AUTOMATIONS/app_factory_command_center.py --refresh`
+2. confirm whether this should upgrade `{target}` or become a new app
+3. build the narrowest version that creates a real first win and supports monetization testing
 """)
 
 
@@ -990,6 +1158,41 @@ def mark_alpha_processed(rows: list[dict], processed_ids: set[str], fieldnames: 
     return updated
 
 
+def refresh_app_factory_command_center(dry_run: bool = False) -> None:
+    """Rebuild the ranked APP_FACTORY queue after generating new app specs."""
+    if dry_run:
+        print("\nskipping app factory command center refresh in dry-run mode")
+        return
+
+    script_path = safe_path(os.path.join(PROJECT_ROOT, "AUTOMATIONS", "app_factory_command_center.py"))
+    if not os.path.exists(script_path):
+        print("\nwarning: app_factory_command_center.py not found; queue refresh skipped")
+        return
+
+    cmd = [sys.executable, script_path, "--refresh", "--top", "5"]
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=120,
+            cwd=PROJECT_ROOT,
+        )
+    except Exception as exc:
+        print(f"\nwarning: failed to refresh app factory command center: {exc}")
+        return
+
+    if result.returncode == 0:
+        print("\napp factory command center refreshed")
+        if result.stdout.strip():
+            print(result.stdout.strip())
+        return
+
+    print("\nwarning: app factory command center refresh failed")
+    if result.stderr.strip():
+        print(result.stderr.strip())
+
+
 # ---------------------------------------------------------------------------
 # CLI commands
 # ---------------------------------------------------------------------------
@@ -1042,6 +1245,8 @@ def cmd_process(args):
     if not dry_run and processed_set:
         updated = mark_alpha_processed(rows, processed_set, fieldnames)
         print(f"\nupdated {updated} alpha entries with ops_generated=TRUE")
+        if by_category.get("APP_FACTORY"):
+            refresh_app_factory_command_center(dry_run=False)
 
     # Summary
     print(f"\n=== SUMMARY ===")

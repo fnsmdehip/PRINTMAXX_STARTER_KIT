@@ -1,0 +1,70 @@
+Text,Scheduled Date,Scheduled Time,Profile
+"7 of my autonomous agents were silently failing for days.
+
+root cause: unescaped parentheses in launchd plist files. bash couldn't parse the inline prompts.
+
+fix: extracted all prompts to separate .md files. agents now read from files instead of inline strings.
+
+30 minutes of debugging. 7 agents resurrected.
+
+the lesson nobody talks about with AI agents: 80% of failures are infra, not AI.",2026-03-14,09:00,@PRINTMAXXER
+"my AI CEO agent created 20 new ventures while I was sleeping.
+
+Quora answer marketing (score: 80.5)
+Walmart clearance arbitrage (score: 69.2)
+Claude Code freelance arbitrage (score: 61.5)
+AI wrapper apps (score: 61.4)
+
+...plus 14 more. all scored, categorized, ready to execute.
+
+I woke up to 20 new business lanes I didn't start.",2026-03-14,12:00,@PRINTMAXXER
+"saw a post on r/SideProject get 610 upvotes and 1,518 comments.
+
+the hook: ""not another AI app."" physical product. contrarian positioning.
+
+typical post on that sub gets 50-100 upvotes.
+
+anti-AI sentiment is the engagement multiplier nobody's using.
+
+if you're building with AI, positioning AGAINST AI in your marketing is the move right now.",2026-03-14,15:00,@PRINTMAXXER
+"claude code freelance arbitrage is the simplest play nobody's running.
+
+1. find ""I need a developer"" posts on reddit/upwork
+2. scope the work (usually 2-4 hours of actual coding)
+3. quote $500-3,000
+4. build it in 45 minutes with claude code
+5. deliver next day
+
+margin: 85-95%.
+
+the bottleneck isn't finding clients. it's having accounts set up to reply.",2026-03-14,18:00,@PRINTMAXXER
+"genuine question: what's the right number of autonomous agents for a solo operation?
+
+I went from 0 to 33. killed 7. created 20 more. now at 46.
+
+at what point does ""orchestrating agents"" become its own full-time job that defeats the purpose?
+
+asking because I might be there.",2026-03-14,21:00,@PRINTMAXXER
+"went to sleep. woke up with 20 new business opportunities scored, ranked, and ready to execute.
+
+the CEO agent created ventures for freelance arbitrage, clearance arbitrage, answer marketing, print-on-demand, AI wrapper apps.
+
+I didn't ask it to. it found them in the intelligence pipeline and decided they met threshold.
+
+this is what autonomous means.",2026-03-15,09:00,@PRINTMAXXER
+"the most boring part of running AI agents that nobody posts about:
+
+debugging bash syntax errors in launchd plist XML files at 5am because an unescaped parenthesis in a prompt caused 7 agents to silently fail for 3 days.
+
+the AI revolution is 10% AI and 90% XML escaping.",2026-03-15,12:00,@PRINTMAXXER
+"solopreneur stack in 2026:
+
+$200/mo: claude max (runs all agents)
+$0: surge.sh (hosts all sites)
+$0: python + cron (runs all automation)
+$0: overture maps (1.45M business leads)
+$0: git (version control = agent memory)
+
+total: $200/mo running 46 agents, 20 ventures, 310 scripts.
+
+the infrastructure is free. the execution is the bottleneck.",2026-03-15,15:00,@PRINTMAXXER

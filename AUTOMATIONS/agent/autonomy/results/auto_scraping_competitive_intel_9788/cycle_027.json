@@ -1,0 +1,70 @@
+{
+  "cycle_start": "2026-03-14T04:37:57.197044",
+  "cycle_end": "2026-03-14T04:37:57.197111",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 3,
+  "app_store_signals_found": 9,
+  "new_intel_rows_written": 6,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "type": "COMPETITOR_GAP",
+      "priority": "HIGH",
+      "venture": "APP_FACTORY",
+      "title": "Fabulous habit tracker \u26054.45 with 87K ratings \u2014 below 4.5 = beatable",
+      "action": "PrayerLock/Streakr positioning: target \"Fabulous for faith\" angle. Their rating gap is the opening.",
+      "data": {
+        "app": "Fabulous: Daily Habit Tracker",
+        "rating": 4.45,
+        "reviews": 87055,
+        "opportunity": "LOW_RATING"
+      },
+      "scan_date": "2026-03-14T04:37:57.197044"
+    },
+    {
+      "type": "COMPETITOR_GAP",
+      "priority": "HIGH",
+      "venture": "APP_FACTORY",
+      "title": "Onrise Habit Tracker: only 2,317 reviews at \u26054.84 \u2014 low review count = can outrank with review strategy",
+      "action": "New habit app can hit 2K reviews in 90 days with aggressive ask-for-review strategy. Onrise is beatable.",
+      "data": {
+        "app": "Onrise: Habit Tracker & Focus",
+        "rating": 4.84,
+        "reviews": 2317,
+        "opportunity": "LOW_REVIEWS"
+      },
+      "scan_date": "2026-03-14T04:37:57.197044"
+    },
+    {
+      "type": "PRICING_SIGNAL",
+      "priority": "HIGHEST",
+      "venture": "APP_FACTORY",
+      "title": "Reddit: SaaS at /mo had zero conversions \u2192 raised to  and people started paying",
+      "action": "Pricing insight for PrayerLock: price at .99-.99/yr not .99. Lower anchors kill conversions.",
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1rr7b4t/",
+      "scan_date": "2026-03-14T04:37:57.197044"
+    },
+    {
+      "type": "MARKET_SIGNAL",
+      "priority": "HIGH",
+      "venture": "APP_FACTORY",
+      "title": "Muslim Pro: Ramadan 2026 at \u26054.70 with 589K reviews \u2014 Ramadan timing confirmed as high-value window",
+      "action": "PrayerLock Ramadan angle: 25 days left in Ramadan. Push for App Store featuring NOW before window closes.",
+      "data": {
+        "app": "Muslim Pro: Ramadan 2026",
+        "rating": 4.7,
+        "reviews": 588950
+      },
+      "scan_date": "2026-03-14T04:37:57.197044"
+    },
+    {
+      "type": "REVENUE_BENCHMARK",
+      "priority": "HIGH",
+      "venture": "APP_FACTORY",
+      "title": "App benchmark: $240 revenue + 370 installs in 10 days of launch (r/AppBusiness)",
+      "action": "Realistic launch target for PrayerLock: 300-400 installs week 1, aim for + first week revenue.",
+      "url": "https://www.reddit.com/r/AppBusiness/comments/1rro8ta/",
+      "scan_date": "2026-03-14T04:37:57.197044"
+    }
+  ]
+}

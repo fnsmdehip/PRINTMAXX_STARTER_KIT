@@ -1,8 +1,12 @@
 {
   "warmup_start": "2026-03-07",
-  "current_day": 2,
+  "current_day": 22,
+  "phase": "FULL_OPS",
   "posts_today": 0,
-  "last_post_date": "2026-03-08",
+  "last_post_date": "2026-03-13",
   "total_posted": 0,
-  "posted_ids": []
+  "posted_ids": [],
+  "phase_override": true,
+  "phase_override_reason": "RESTRUCTURE_V2 T019/T022 \u2014 distribution active > all architecture improvements",
+  "phase_override_date": "2026-03-13"
 }

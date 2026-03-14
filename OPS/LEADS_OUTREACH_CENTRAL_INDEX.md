@@ -853,3 +853,56 @@ just got back from an industry conference and genuinely feel like i lit $4k on f
   
 i went in wit
 
+
+
+---
+
+## Pending Enhancement (ALPHA22512, Score: 20)
+
+**Source:** @codyschneiderxx (high-signal-accounts) | **URL:** https://x.com/codyschneiderxx/status/2031882923394171169
+**Added:** 2026-03-12T02:14:17-04:00
+
+another friendly reminder you can scrape millions of creators emails from google for free with 
+
+site:instagram .com "
+@gmail
+ .com" + {KEYWORD}
+
+regex the emails 
+
+verify with millionverifier
+
+cold email with instantly ai
+
+ask for post costs
+
+work with cheapest
+
+track results with
+
+
+
+---
+
+## Pending Enhancement (ALPHA22834, Score: 20)
+
+**Source:** r/emailmarketing | **URL:** https://reddit.com/r/Emailmarketing/comments/1rphl8x/huge_list_advice/
+**Added:** 2026-03-12T06:15:02-04:00
+
+[r/emailmarketing] Huge list advice?
+
+
+
+---
+
+## Pending Enhancement (ALPHA22996, Score: 24)
+
+**Source:** @benjaminprinter (bookmarks) | **URL:** https://x.com/benjaminprinter/status/2031759015756046774
+**Added:** 2026-03-12T08:00:07-04:00
+
+There are 47,000 agencies offering “cold email outbound” to SaaS companies doing $500K ARR
+
+Every single one charges $2K-$5K per month, runs the same Clay + Instantly stack, and fights for the same 350 founders who all think they're too smart to need help
+
+So every conversation
+

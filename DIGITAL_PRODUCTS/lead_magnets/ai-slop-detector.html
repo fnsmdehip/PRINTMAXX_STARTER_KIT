@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Slop Detector - is your copy written by a robot?</title>
+<meta name="description" content="paste your copy. get a slop score. find out exactly which phrases make you sound like ChatGPT. free, instant, no signup required.">
+<meta property="og:title" content="AI Slop Detector">
+<meta property="og:description" content="paste your copy. get a slop score. find out which phrases scream 'AI wrote this'.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Slop Detector">
+<meta name="twitter:description" content="paste your copy. get a slop score. 0 = human. 100 = full robot.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI Slop Detector","description":"Paste your copy and get an instant AI slop score. Detects 50+ AI writing patterns.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"PRINTMAXX"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1a;--surface:#111827;--card:#1a2332;--accent:#ef4444;--accent2:#dc2626;--green:#10b981;--yellow:#f59e0b;--text:#e5e5e5;--muted:#6b7280;--border:#1f2937;--purple:#8b5cf6}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--purple);text-decoration:none}
+.container{max-width:720px;margin:0 auto;padding:0 20px}
+
+header{padding:32px 0 24px;text-align:center;border-bottom:1px solid var(--border)}
+header h1{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;letter-spacing:-2px;line-height:1.1;margin-bottom:8px}
+header h1 span{color:var(--accent)}
+header p{color:var(--muted);font-size:0.95rem;max-width:480px;margin:0 auto}
+
+.input-section{padding:32px 0}
+.input-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px}
+.input-card h2{font-size:0.85rem;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+textarea{width:100%;min-height:180px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;color:var(--text);font-family:inherit;font-size:0.95rem;line-height:1.6;resize:vertical;outline:none;transition:border-color 0.2s}
+textarea:focus{border-color:var(--purple)}
+textarea::placeholder{color:var(--muted)}
+.char-count{text-align:right;font-size:0.75rem;color:var(--muted);margin-top:6px}
+
+.btn-scan{display:block;width:100%;padding:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer;font-family:inherit;transition:opacity 0.2s;letter-spacing:-0.5px}
+.btn-scan:hover{opacity:0.9}
+.btn-scan:disabled{opacity:0.5;cursor:not-allowed}
+
+.results{display:none;padding:0 0 32px}
+.score-display{text-align:center;padding:32px 0;margin-bottom:24px}
+.score-ring{width:160px;height:160px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;position:relative}
+.score-ring::before{content:'';position:absolute;inset:0;border-radius:50%;border:6px solid var(--border)}
+.score-number{font-size:3.5rem;font-weight:800;letter-spacing:-3px;z-index:1}
+.score-label{font-size:0.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+.verdict-text{font-size:1.2rem;font-weight:700;margin-top:12px}
+
+.breakdown{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px}
+.breakdown h3{font-size:0.85rem;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px}
+.flag-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.flag-item:last-child{border-bottom:none}
+.flag-severity{font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;margin-top:2px}
+.flag-severity.high{background:rgba(239,68,68,0.15);color:var(--accent)}
+.flag-severity.medium{background:rgba(245,158,11,0.15);color:var(--yellow)}
+.flag-severity.low{background:rgba(139,92,246,0.15);color:var(--purple)}
+.flag-text{font-size:0.9rem}
+.flag-text .matched{color:var(--accent);font-weight:600}
+.flag-text .suggestion{color:var(--muted);font-size:0.8rem;display:block;margin-top:2px}
+.no-flags{color:var(--green);font-size:0.95rem;padding:16px 0;text-align:center}
+
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.stat-value{font-size:1.5rem;font-weight:800;letter-spacing:-1px}
+.stat-label{font-size:0.75rem;color:var(--muted);margin-top:2px}
+
+.share-section{text-align:center;padding:24px;background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:24px}
+.share-section h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.share-section p{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+.share-btn{display:inline-block;padding:10px 24px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-weight:600;font-size:0.9rem;cursor:pointer;transition:background 0.2s;font-family:inherit}
+.share-btn:hover{background:var(--card)}
+.copied{color:var(--green);font-size:0.8rem;margin-top:8px;display:none}
+
+.cta-section{padding:32px 24px;text-align:center;background:linear-gradient(135deg,#0f172a,#1e293b);border:1px solid var(--purple);border-radius:14px;margin-bottom:32px}
+.cta-section h3{font-size:1.3rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:6px}
+.cta-section p{color:var(--muted);font-size:0.9rem;margin-bottom:16px;max-width:420px;margin-left:auto;margin-right:auto}
+.email-form{max-width:360px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.email-form input[type="email"]{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none}
+.email-form input[type="email"]:focus{border-color:var(--purple)}
+.email-form button{background:linear-gradient(135deg,var(--purple),#7c3aed);color:#fff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:inherit}
+.email-form .fine{font-size:0.75rem;color:var(--muted);margin-top:4px}
+
+.how-section{padding:32px 0;border-top:1px solid var(--border)}
+.how-section h3{font-size:1.1rem;font-weight:700;margin-bottom:16px}
+.pattern-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.pattern-tag{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:0.8rem;display:flex;justify-content:space-between;align-items:center}
+.pattern-tag .word{color:var(--accent);font-weight:600}
+.pattern-tag .fix{color:var(--green);font-size:0.75rem}
+
+.crosslinks{padding:24px 0;border-top:1px solid var(--border);margin-top:16px}
+.crosslinks h3{font-size:0.85rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px}
+.crosslinks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.crosslinks-grid a{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:0.85rem;color:var(--text);transition:border-color 0.2s;display:block}
+.crosslinks-grid a:hover{border-color:var(--purple)}
+.crosslinks-grid a small{display:block;color:var(--muted);font-size:0.75rem;margin-top:2px}
+
+footer{padding:24px 0;text-align:center;border-top:1px solid var(--border);margin-top:32px}
+footer p{color:var(--muted);font-size:0.8rem}
+
+@media(max-width:640px){
+.stats-row{grid-template-columns:1fr}
+.pattern-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<h1>AI <span>slop</span> detector</h1>
+<p>paste your copy. get a score from 0 (human) to 100 (full robot). finds the exact phrases that make readers think "AI wrote this."</p>
+</header>
+
+<div class="input-section">
+<div class="input-card">
+<h2>paste your copy</h2>
+<textarea id="inputText" placeholder="paste your blog post, tweet, email, landing page copy, LinkedIn post... anything you want checked.
+
+minimum 50 characters for accurate scoring."></textarea>
+<div class="char-count"><span id="charCount">0</span> characters</div>
+</div>
+<button class="btn-scan" id="scanBtn" onclick="analyze()">scan for AI slop</button>
+</div>
+
+<div class="results" id="results">
+<div class="score-display">
+<div class="score-ring" id="scoreRing">
+<span class="score-number" id="scoreNum">0</span>
+</div>
+<div class="score-label">slop score</div>
+<div class="verdict-text" id="verdict"></div>
+</div>
+
+<div class="stats-row">
+<div class="stat-card">
+<div class="stat-value" id="flagCount">0</div>
+<div class="stat-label">patterns found</div>
+</div>
+<div class="stat-card">
+<div class="stat-value" id="wordCount">0</div>
+<div class="stat-label">total words</div>
+</div>
+<div class="stat-card">
+<div class="stat-value" id="density">0%</div>
+<div class="stat-label">slop density</div>
+</div>
+</div>
+
+<div class="breakdown" id="breakdown">
+<h3>flagged patterns</h3>
+<div id="flagList"></div>
+</div>
+
+<div class="share-section">
+<h3>share your score</h3>
+<p>post it. compare with friends. shame your coworkers.</p>
+<button class="share-btn" onclick="copyShare()">copy share text</button>
+<div class="copied" id="copiedMsg">copied to clipboard</div>
+</div>
+
+<div class="cta-section">
+<h3>write copy that doesn't sound like a robot</h3>
+<p>weekly teardowns of real copy. what works, what's slop, and exactly how to fix it. no AI fluff.</p>
+<form class="email-form" action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Lead from AI Slop Detector">
+<input type="hidden" name="_next" value="https://ai-slop-detector.surge.sh">
+<input type="email" name="email" placeholder="your@email.com" required>
+<button type="submit">send me the teardowns</button>
+<div class="fine">no spam. unsubscribe anytime. one email per week max.</div>
+</form>
+</div>
+</div>
+
+<div class="how-section">
+<h3>50+ AI patterns we detect</h3>
+<div class="pattern-grid" id="patternGrid"></div>
+</div>
+
+<div class="crosslinks">
+<h3>more free tools</h3>
+<div class="crosslinks-grid">
+<a href="https://cold-email-roi-calculator.surge.sh">Cold Email ROI Calculator<small>see if your outreach math works</small></a>
+<a href="https://subject-line-grader.surge.sh">Subject Line Grader<small>score your email subjects</small></a>
+<a href="https://revenue-leak-audit.surge.sh">Revenue Leak Audit<small>find where you're losing money</small></a>
+<a href="https://side-project-revenue-estimator.surge.sh">Revenue Estimator<small>project your side project income</small></a>
+<a href="https://solopreneur-launch-checklist.surge.sh">Launch Checklist<small>pre-launch audit for solopreneurs</small></a>
+<a href="https://200-day-calculator.surge.sh">$200/Day Calculator<small>reverse-engineer your daily income</small></a>
+</div>
+</div>
+
+</div>
+
+<footer>
+<p>built by PRINTMAXX. detects 50+ AI writing patterns from the crowdsourced LLM tropes list.</p>
+</footer>
+
+<script>
+const PATTERNS = [
+  {rx:/\badditionally\b/gi, sev:'high', label:'additionally', fix:'use "also" or "and"', pts:4},
+  {rx:/\bmoreover\b/gi, sev:'high', label:'moreover', fix:'use "also" or just start the sentence', pts:4},
+  {rx:/\bfurthermore\b/gi, sev:'high', label:'furthermore', fix:'use "also" or "and"', pts:4},
+  {rx:/\btestament\b/gi, sev:'high', label:'testament', fix:'drop it entirely', pts:4},
+  {rx:/\blandscape\b/gi, sev:'high', label:'landscape', fix:'say what you actually mean', pts:3},
+  {rx:/\bparadigm\b/gi, sev:'high', label:'paradigm', fix:'just say "approach" or "method"', pts:4},
+  {rx:/\bleverage\b/gi, sev:'high', label:'leverage', fix:'say "use"', pts:4},
+  {rx:/\butilize\b/gi, sev:'high', label:'utilize', fix:'say "use"', pts:4},
+  {rx:/\bdelve\b/gi, sev:'high', label:'delve', fix:'say "look at" or "explain"', pts:5},
+  {rx:/\bcomprehensive\b/gi, sev:'high', label:'comprehensive', fix:'delete it', pts:3},
+  {rx:/\brobust\b/gi, sev:'medium', label:'robust', fix:'say "strong" or "solid"', pts:3},
+  {rx:/\binnovative\b/gi, sev:'high', label:'innovative', fix:'say "new" or delete it', pts:4},
+  {rx:/\bseamless(ly)?\b/gi, sev:'high', label:'seamless', fix:'say "smooth" or delete it', pts:4},
+  {rx:/\bstreamlined?\b/gi, sev:'medium', label:'streamlined', fix:'say "simple"', pts:3},
+  {rx:/\bempower(s|ed|ing)?\b/gi, sev:'high', label:'empower', fix:'say "help" or "let"', pts:4},
+  {rx:/\bgame.?changer\b/gi, sev:'high', label:'game-changer', fix:'rewrite the sentence', pts:5},
+  {rx:/\bunlock(s|ed|ing)?\b/gi, sev:'medium', label:'unlock', fix:'say "get" or "enable"', pts:3},
+  {rx:/\belevate(s|d)?\b/gi, sev:'medium', label:'elevate', fix:'say "improve" or "raise"', pts:3},
+  {rx:/\bcutting.?edge\b/gi, sev:'high', label:'cutting-edge', fix:'say "new" or "latest"', pts:4},
+  {rx:/\bfrictionless\b/gi, sev:'high', label:'frictionless', fix:'say "easy" or "smooth"', pts:4},
+  {rx:/\bjourney\b/gi, sev:'medium', label:'journey (non-travel)', fix:'say "process" or "experience"', pts:2},
+  {rx:/\bdive into\b/gi, sev:'medium', label:'dive into', fix:'say "look at" or "explain"', pts:3},
+  {rx:/\bunpack\b/gi, sev:'medium', label:'unpack', fix:'say "explain"', pts:3},
+  {rx:/\bfoster(s|ed|ing)?\b/gi, sev:'medium', label:'foster', fix:'say "build" or "encourage"', pts:3},
+  {rx:/\bnavigate\b/gi, sev:'low', label:'navigate', fix:'only use for actual navigation', pts:2},
+  {rx:/\btransformative\b/gi, sev:'high', label:'transformative', fix:'delete it or use specifics', pts:4},
+  {rx:/\bpivotal\b/gi, sev:'medium', label:'pivotal', fix:'say "important" or "key"', pts:3},
+  {rx:/\bensure\b/gi, sev:'low', label:'ensure', fix:'say "make sure"', pts:1},
+  {rx:/\bin today'?s\b/gi, sev:'medium', label:"in today's [X]", fix:'just start with the point', pts:3},
+  {rx:/it'?s not just .+?,? it'?s/gi, sev:'high', label:'"it\'s not just X, it\'s Y"', fix:'just say it\'s Y', pts:5},
+  {rx:/\bin (this|today'?s) (rapidly )?(evolving|changing|dynamic) /gi, sev:'high', label:'"in today\'s rapidly evolving..."', fix:'delete the entire phrase', pts:6},
+  {rx:/\bwhether you'?re .+ or .+/gi, sev:'medium', label:'"whether you\'re X or Y"', fix:'just address your actual audience', pts:3},
+  {rx:/I hope this (helps|email finds you)/gi, sev:'high', label:'"I hope this helps/finds you well"', fix:'delete it', pts:5},
+  {rx:/\bLet me know if you have (any )?(further |additional )?questions/gi, sev:'high', label:'chatbot sign-off', fix:'delete it', pts:5},
+  {rx:/\bhappy to (help|assist)/gi, sev:'high', label:'"happy to help/assist"', fix:'delete it', pts:4},
+  {rx:/\bGreat question/gi, sev:'high', label:'"Great question!"', fix:'just answer the question', pts:5},
+  {rx:/\bThat'?s (a |an )?(great|excellent|insightful|wonderful) (question|point|observation)/gi, sev:'high', label:'sycophantic opener', fix:'just answer', pts:5},
+  {rx:/\bin order to\b/gi, sev:'medium', label:'in order to', fix:'say "to"', pts:2},
+  {rx:/\bdue to the fact that\b/gi, sev:'medium', label:'due to the fact that', fix:'say "because"', pts:3},
+  {rx:/\bat this point in time\b/gi, sev:'medium', label:'at this point in time', fix:'say "now"', pts:3},
+  {rx:/\bin terms of\b/gi, sev:'low', label:'in terms of', fix:'rephrase or delete', pts:2},
+  {rx:/\bit'?s important to note that\b/gi, sev:'medium', label:"it's important to note that", fix:'delete, just state it', pts:3},
+  {rx:/\bit goes without saying\b/gi, sev:'medium', label:'it goes without saying', fix:"then don't say it", pts:3},
+  {rx:/\bas of my last (update|training)/gi, sev:'high', label:'AI cutoff disclaimer', fix:'delete or find current source', pts:6},
+  {rx:/\u2014/g, sev:'low', label:'em dash', fix:'use comma or period', pts:1},
+  {rx:/[\u201C\u201D]/g, sev:'low', label:'curly quotes', fix:'use straight quotes', pts:1},
+  {rx:/\b(might|could|may) (possibly|potentially|perhaps)\b/gi, sev:'medium', label:'double hedge', fix:'one qualifier max per sentence', pts:3},
+  {rx:/\bIn conclusion,?\b/gi, sev:'medium', label:'"In conclusion"', fix:'end with action or fact, not summary', pts:3},
+  {rx:/\bworld.?class\b/gi, sev:'medium', label:'world-class', fix:'use specific metric instead', pts:3},
+  {rx:/\bstate.?of.?the.?art\b/gi, sev:'medium', label:'state-of-the-art', fix:'use specific metric', pts:3},
+  {rx:/\bnext.?gen(eration)?\b/gi, sev:'low', label:'next-gen', fix:'say what makes it new', pts:2},
+  {rx:/\brevolution(ary|ize)?\b/gi, sev:'high', label:'revolutionary', fix:'use specifics', pts:4}
+];
+
+function esc(s) {
+  var d = document.createElement('div');
+  d.textContent = s;
+  return d.textContent;
+}
+
+var ta = document.getElementById('inputText');
+var cc = document.getElementById('charCount');
+ta.addEventListener('input', function() { cc.textContent = ta.value.length; });
+
+function analyze() {
+  var text = ta.value.trim();
+  if (text.length < 50) { alert('need at least 50 characters for accurate scoring.'); return; }
+
+  var words = text.split(/\s+/).length;
+  var flags = [];
+  var totalPts = 0;
+
+  PATTERNS.forEach(function(p) {
+    var matches = text.match(p.rx);
+    if (matches) {
+      matches.forEach(function(m) {
+        flags.push({ label: p.label, fix: p.fix, sev: p.sev, matched: m, pts: p.pts });
+        totalPts += p.pts;
+      });
+    }
+  });
+
+  var densityRaw = (totalPts / Math.max(words, 1)) * 100;
+  var score = Math.min(100, Math.round(densityRaw * 5));
+
+  var sevOrder = { high: 0, medium: 1, low: 2 };
+  flags.sort(function(a, b) { return sevOrder[a.sev] - sevOrder[b.sev]; });
+
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('scoreNum').textContent = score;
+  document.getElementById('flagCount').textContent = flags.length;
+  document.getElementById('wordCount').textContent = words;
+  document.getElementById('density').textContent = (flags.length / Math.max(words, 1) * 100).toFixed(1) + '%';
+
+  var ring = document.getElementById('scoreRing');
+  var scoreEl = document.getElementById('scoreNum');
+  if (score <= 15) {
+    ring.style.background = 'radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%)';
+    scoreEl.style.color = '#10b981';
+  } else if (score <= 40) {
+    ring.style.background = 'radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%)';
+    scoreEl.style.color = '#f59e0b';
+  } else {
+    ring.style.background = 'radial-gradient(circle, rgba(239,68,68,0.1) 0%, transparent 70%)';
+    scoreEl.style.color = '#ef4444';
+  }
+
+  var v = document.getElementById('verdict');
+  if (score === 0) { v.textContent = 'clean. no AI patterns detected.'; v.style.color = '#10b981'; }
+  else if (score <= 10) { v.textContent = 'mostly human. minor tells.'; v.style.color = '#10b981'; }
+  else if (score <= 25) { v.textContent = 'some AI patterns. fixable in 5 min.'; v.style.color = '#f59e0b'; }
+  else if (score <= 50) { v.textContent = 'reads like AI with human editing.'; v.style.color = '#f59e0b'; }
+  else if (score <= 75) { v.textContent = 'heavy AI vibes. needs rewrite.'; v.style.color = '#ef4444'; }
+  else { v.textContent = 'full robot. ChatGPT default energy.'; v.style.color = '#ef4444'; }
+
+  // Build flag list using safe DOM methods
+  var list = document.getElementById('flagList');
+  while (list.firstChild) list.removeChild(list.firstChild);
+
+  if (flags.length === 0) {
+    var noF = document.createElement('div');
+    noF.className = 'no-flags';
+    noF.textContent = 'no AI patterns found. your copy is clean.';
+    list.appendChild(noF);
+  } else {
+    flags.forEach(function(f) {
+      var item = document.createElement('div');
+      item.className = 'flag-item';
+
+      var sev = document.createElement('span');
+      sev.className = 'flag-severity ' + f.sev;
+      sev.textContent = f.sev;
+
+      var textDiv = document.createElement('div');
+      textDiv.className = 'flag-text';
+
+      var prefix = document.createTextNode('found "');
+      var matchSpan = document.createElement('span');
+      matchSpan.className = 'matched';
+      matchSpan.textContent = f.matched;
+      var suffix = document.createTextNode('" (' + f.label + ')');
+
+      var suggestion = document.createElement('span');
+      suggestion.className = 'suggestion';
+      suggestion.textContent = 'fix: ' + f.fix;
+
+      textDiv.appendChild(prefix);
+      textDiv.appendChild(matchSpan);
+      textDiv.appendChild(suffix);
+      textDiv.appendChild(suggestion);
+
+      item.appendChild(sev);
+      item.appendChild(textDiv);
+      list.appendChild(item);
+    });
+  }
+
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function copyShare() {
+  var score = document.getElementById('scoreNum').textContent;
+  var flagsN = document.getElementById('flagCount').textContent;
+  var text = 'my AI slop score: ' + score + '/100 (' + flagsN + ' patterns found)\n\ntest yours: https://ai-slop-detector.surge.sh';
+  navigator.clipboard.writeText(text).then(function() {
+    var msg = document.getElementById('copiedMsg');
+    msg.style.display = 'block';
+    setTimeout(function() { msg.style.display = 'none'; }, 2000);
+  });
+}
+
+// Populate pattern grid using safe DOM methods
+var grid = document.getElementById('patternGrid');
+var shown = [
+  ['leverage','use'],['utilize','use'],['delve','look at'],['comprehensive','(delete)'],
+  ['innovative','new'],['seamless','smooth'],['empower','help'],['game-changer','rewrite'],
+  ['robust','solid'],['paradigm','approach'],['cutting-edge','latest'],['furthermore','also'],
+  ['moreover','also'],['testament','(delete)'],['landscape','be specific'],['streamlined','simple'],
+  ['frictionless','easy'],['unlock','get'],['elevate','improve'],['transformative','(delete)'],
+  ['navigate','(literal only)'],['foster','build'],['pivotal','key'],['in order to','to'],
+  ['dive into','look at'],['unpack','explain'],['journey','process'],['world-class','(be specific)'],
+  ['additionally','also'],["it's not just...",'just say it']
+];
+shown.forEach(function(pair) {
+  var tag = document.createElement('div');
+  tag.className = 'pattern-tag';
+  var w = document.createElement('span');
+  w.className = 'word';
+  w.textContent = pair[0];
+  var f = document.createElement('span');
+  f.className = 'fix';
+  f.textContent = pair[1];
+  tag.appendChild(w);
+  tag.appendChild(f);
+  grid.appendChild(tag);
+});
+</script>
+
+</body>
+</html>

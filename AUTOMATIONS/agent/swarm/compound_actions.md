@@ -1,104 +1,97 @@
-# COMPOUND ACTIONS — Swarm Brain Cycle 11
-Generated: 2026-03-10 00:15 | Revenue: $0 (Day 36) | Mode: DEEP CONSERVATION
+# COMPOUND ACTIONS — Swarm Brain Cycle 12
+Generated: 2026-03-13 15:35 | Revenue: $0 (Day 38) | Mode: EMERGENCY CONSERVATION
 
 ---
 
-## Status: DEEP CONSERVATION MODE
+## EMERGENCY: Deploy Override Regression
 
-The swarm has crossed the diminishing returns threshold. 20,214 alpha entries, 51 products, 538 posts, 10,132+ leads — all built, zero activated. Every additional build cycle has negative marginal value.
-
-**Compound actions focus exclusively on: reducing human activation friction.**
+All Cycle 10-11 decisions were wiped by `agent_swarm.py --deploy` at 08:29 today. Every killed/hibernated agent was reset to ACTIVE. Alpha entries doubled to 40,604. Disk dropped 55GB→24GB. This cycle's #1 priority is damage control.
 
 ---
 
-## Compound Action 1: ALPHA + APP PRICING VALIDATION
+## Compound Action 1: DISK TRIAGE (system_healer + data_janitor)
 
-**Inputs:**
-- Alpha ALPHA_BIBLECHAT_001: BibleChat $750K/mo, 1.5M downloads, React Native + RAG
-- Alpha ALPHA_REDDIT_APP002: FocusBudd $300 MRR in 23 days, 2.8K downloads
-- Our apps: PrayerLock (Ramadan, 21 days left), FocusLock, ADHD-Streak
+**Problem:** 24GB free. Losing ~10GB/day. Disk full in ~2 days.
 
-**Compound insight:**
-- BibleChat proves faith+AI is $750K/mo category. PrayerLock has 21 days of Ramadan momentum.
-- FocusBudd proves $300 MRR in 23 days with: 20+ language localization, non-US App Store longtail, $0 ad spend
-- FocusLock and ADHD-Streak should copy FocusBudd's 4 tactics
+**Action chain:**
+1. Compress reddit/twitter scraper JSON files older than 3 days (`gzip`, ~80% size reduction)
+2. Deduplicate generated_assets/ (same icons regenerated daily — keep only latest)
+3. Compress test_report/test_results JSON in swarm/reports/ (150KB+ each, 5+ files)
+4. Archive ALPHA_STAGING.csv entries older than 30 days to `.csv.gz`
+5. Clean daemon.log and other growing logs
 
-**Action:** App pricing $9.99/mo (FocusBudd validated). Localization to 20+ languages is 1-session task.
-**Blocked by:** App Store developer account ($99/yr)
+**Target:** Recover 15GB minimum. Reduce daily burn to <1GB.
 
 ---
 
-## Compound Action 2: HOT LEADS + 6-QUESTION FRAMEWORK = PASTE-READY EMAILS
+## Compound Action 2: ACTIVATION PACKAGE (asset_deployer redirected)
 
-**Inputs:**
-- 22 HOT leads in HOT_LEADS.csv
-- Cold email 6-question framework (Alpha ALPHA175, @seanb2b, 2.1K likes)
-- 6 drafted emails per outbound cycle
-
-**Compound:** Top 5 leads with emails in `AUTOMATIONS/leads/outreach_drafts/`. Human: Gmail > paste > send. 2 min/email.
-**Blocked by:** Gmail (5 min to open and paste)
-
----
-
-## Compound Action 3: BUFFER CSV = INSTANT 538-POST DISTRIBUTION
-
-**Inputs:**
-- 1,276 Buffer CSV rows (BUFFER_EXPORT_20260309.csv)
-- 700 Tweetlio JSON rows (TWEETLIO_EXPORT_20260309.json)
-
-**Compound:** CSV formatted for Buffer's exact import schema. Import file > done.
-**Blocked by:** X Premium ($8/mo) + Buffer account
-
----
-
-## Compound Action 4: COMPETITOR PRICING GAP
-
-**Inputs:**
-- Durable raised prices $12 to $22/mo
-- Microsoft auto-listing PWAs to app stores
-
-**Compound:** Durable's price hike creates $12-22 gap OpenClaw can undercut. Our 22 PWAs may already be in Windows Store (search to check).
-
----
-
-## Compound Action 5: GUMROAD UPSELL CHAIN = REVENUE DAY 1
-
-**Inputs:**
-- 13 products in GUMROAD_INSTANT_UPLOAD/ with covers, copy, pricing ($0-$97)
-- Upsell chain: Free magnet > $27 > $39 > $97. LTV $150-250/customer.
-
-**Compound:** Upload free magnet first (traffic) > chain activates automatically.
-**Blocked by:** Gumroad account (45 min)
-
----
-
-## ACTIVE AGENTS (3 regular + maintenance)
-
-| Agent | Interval | Purpose |
-|-------|----------|---------|
-| system_healer | 2h | Infrastructure, fix Twitter scraper, factory TIMEOUT |
-| cross_pollinator | 4h | Compound value from existing assets |
-| gap_hunter | 8h | Drift detection (gaps are stable/human-blocked) |
-
-## HIBERNATED AGENTS (reactivate at first $1 revenue)
-
-trend_synthesizer, social_poster, image_factory, content_compounder, video_factory, quality_enforcer, opportunity_scanner, conversion_optimizer
-
-## HUMAN ACTIVATION (75 min total)
+**Carried from Cycle 11 — still the #1 revenue unlock.**
 
 | # | Action | Time | Potential |
 |---|--------|------|-----------|
-| 1 | Gumroad + 13 products | 45 min | $200-2K/mo |
-| 2 | X Premium ($8) | 5 min | 10x reach |
-| 3 | Import Buffer CSV | 5 min | 538 posts scheduled |
-| 4 | ConvertKit + Beehiiv affiliate signup | 15 min | $150-300/mo |
-| 5 | Paste 3 emails in Gmail | 5 min | $500-3K/close |
+| 1 | Gumroad account + upload 13 products | 45 min | $200-2K/mo |
+| 2 | X Premium ($8) | 5 min | 10x content reach |
+| 3 | Import Buffer CSV (700+ rows ready) | 5 min | 700 posts scheduled |
+| 4 | ConvertKit + Beehiiv affiliate signup | 15 min | $150-300/mo passive |
+| 5 | Paste 3 cold emails from drafts | 5 min | $500-3K/close |
 
-**75 minutes unlocks $850-5,300/mo pipeline.**
+**75 minutes unlocks $850-5,300/mo pipeline.** This has been repeated for 4 brain cycles. The opportunity cost of each day without accounts: $28-177/day.
+
+**New in Cycle 12:** asset_deployer creates `AUTOMATIONS/activate.sh` script that opens all URLs, copies text to clipboard, and walks human through in sequence.
+
+---
+
+## Compound Action 3: ALPHA BEST-OF DIGEST
+
+**Problem:** 40,604 entries. Human will never review them. 99.5% is noise.
+
+**Action:** cross_pollinator + meta_executor filter TOP 50 by: has revenue numbers + has replicable method + matches current stack. Package as `OPS/ALPHA_BEST_OF_TOP50.md`. Human scans in 10 min instead of reviewing 40K entries.
+
+---
+
+## Compound Action 4: DEPLOY STATE PERSISTENCE FIX
+
+**Problem:** `agent_swarm.py --deploy` ignores brain state. Every deploy = regression to Cycle 0.
+
+**Fix:** Patch deploy to read `swarm_state.json`. Skip installing agents with status KILLED/HIBERNATED. Add `--force-deploy` for intentional full resets.
+
+**Value:** Prevents future 3-day regressions. Saves ~$200/mo in zombie agent tokens.
+
+---
+
+## Compound Action 5: COMPLIANCE TRIAGE
+
+80 CRITICAL compliance issues found. Categorize into:
+- **Revenue-blocking** (FTC disclosures on affiliate links, missing privacy policies) → fix now
+- **Nice-to-have** (formatting, non-blocking) → defer to post-revenue
+
+---
+
+## ACTIVE AGENTS (Cycle 12 — 4 regular)
+
+| Agent | Interval | Purpose | PID |
+|-------|----------|---------|-----|
+| cross_pollinator | 4h | Compound value (star agent) | 16306 |
+| system_healer | 2h | Infrastructure + disk cleanup | 16604 |
+| inbound_maximizer | 8h | Maintain deployed apps | 16323 |
+| asset_deployer | 8h | Activation packaging (redirected) | 16628 |
+
+## KILLED/HIBERNATED (10 agents)
+
+opportunity_scanner (RE-KILL), content_compounder (RE-KILL), trend_synthesizer (RE-HIBERNATE), social_poster (RE-HIBERNATE), image_factory (RE-HIBERNATE), alert_dispatcher (RE-HIBERNATE), video_factory (CONFIRM KILL), quality_enforcer (KILLED Cycle 5), conversion_optimizer (KILLED Cycle 8), competitive_intel (KILLED Cycle 10)
+
+## 24H THROTTLED (5 agents)
+
+gap_hunter, competitor_stalker, lead_machine, seo_aso_optimizer, alpha_intelligence
+
+## DEFUNCT SYSTEMS
+
+feedback_loop — recommends "boost" for ALL agents including killed ones. Meaningless metric. Swarm brain manual eval replaces it.
 
 ---
 
 ## NEXT CYCLE
 
-Target: 2026-03-10 12:00 UTC (12h in conservation mode)
-Exit condition: First $1 earned > reactivate all agents > GROWTH mode
+Target: 2026-03-14 03:35 UTC (12h interval in conservation mode)
+Exit condition: First $1 earned → GROWTH mode → reactivate agents progressively

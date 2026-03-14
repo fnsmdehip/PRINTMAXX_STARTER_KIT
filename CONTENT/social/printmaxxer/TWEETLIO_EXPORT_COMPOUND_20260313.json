@@ -1,0 +1,153 @@
+[
+  {
+    "content": "33 autonomous agents running on my macbook right now. CEO agent makes portfolio decisions every 4 hours. venture agents execute. swarm agents hunt gaps.\n\ntotal monthly cost: $200 (claude max plan).\n\nno server. no team. no meetings. just cron jobs and filesystem state.",
+    "scheduledDate": "2026-03-15T07:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "build_in_public",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "day 35. revenue: $0.\n\nbut here's what exists:\n- 171,700 websites analyzed\n- 15,586 hot leads scored\n- 302 automation scripts\n- 8 apps built and deployed\n- 16 live demo sites\n- 1.45M domains in pipeline\n\nthe infrastructure is insane. the revenue is not. yet.\n\nshipping the monetization layer this week.",
+    "scheduledDate": "2026-03-15T12:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "honest_revenue",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "unpopular opinion: most \"AI automation\" accounts are running $0 in actual revenue with $200/mo in AI subscriptions.\n\nI know because I'm one of them.\n\nthe difference is I'm not pretending otherwise. day 35 at zero. infrastructure first, revenue second. watch.",
+    "scheduledDate": "2026-03-15T18:00:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "reply_bait",
+      "theme": "controversial_honesty",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "woke up to 84 new alpha entries scraped overnight. system found a $280M failed acquisition story on r/Entrepreneur (88 upvotes, 43 comments) and auto-routed it to my content pipeline.\n\nI didn't do anything. the cron job did.",
+    "scheduledDate": "2026-03-16T07:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "automation_proof",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "129-point crowdsourced list of AI writing tells hit the front page of HN yesterday.\n\nI already have 24 of those patterns banned in my copy-style config. every piece of content my system generates gets filtered through it automatically.\n\nmost people manually edit AI slop. I automated the filter.",
+    "scheduledDate": "2026-03-16T12:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "anti_ai_slop",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "genuine question: would you rather have\n\nA) 1 app making $5k/mo\nB) 10 apps each making $500/mo\n\nsame total revenue. completely different risk profiles. I chose B. here's why that might be wrong.",
+    "scheduledDate": "2026-03-16T18:00:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "reply_bait",
+      "theme": "portfolio_debate",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "my autonomous agent stack:\n\n- ceo_agent.py: 16-phase decision cycle, xlsx scoring\n- venture_autonomy.py: 8 venture types, self-managing schedules\n- agent_swarm.py: 25 operational agents across 6 categories\n- loop_closer.py: closes open loops between agents automatically\n\nall running via launchd. filesystem is the memory. context window is disposable.\n\ntotal infra cost: $0/mo (runs on my laptop).",
+    "scheduledDate": "2026-03-17T07:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "nerd_bait",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "the gap between \"I built a lot of stuff\" and \"I make money\" is the widest gap in tech.\n\n302 scripts. 8 apps. 16 demo sites. 1.45M leads in pipeline.\n\nrevenue: $0.\n\nthe build is the easy part. the sell is where most people (including me) get stuck.",
+    "scheduledDate": "2026-03-17T12:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "reply_bait",
+      "theme": "relatable_pain",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "how many of you are running autonomous agents right now?\n\nnot \"I use chatgpt sometimes.\" I mean actual cron jobs, actual decision loops, actual agents that execute without you.\n\ncurious what the real number is. reply with your stack.",
+    "scheduledDate": "2026-03-17T18:00:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "reply_bait",
+      "theme": "community_engagement",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "the most underrated pattern in AI agent design:\n\nwhile true:\n  read state from filesystem\n  do ONE thing\n  write state back\n  exit\n\nno persistent memory. no vector stores. no embeddings. the filesystem IS the memory. context window is a disposable scratchpad.\n\nwe call it the ralph loop. it's stupid simple and it works.",
+    "scheduledDate": "2026-03-17T21:00:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "technical_alpha",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "filesystem as database. launchd as orchestrator. git as backup. jsonl as message bus.\n\nno postgres. no kubernetes. no redis. no docker.\n\n33 agents running on a macbook pro. sometimes the simplest architecture is the best one.",
+    "scheduledDate": "2026-03-18T07:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "anti_overengineering",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "claude code with opus changed how I build software.\n\nnot \"it writes code for me.\" it literally runs my business.\n\nCEO agent makes portfolio decisions. content agents generate posts. scraper agents find leads. quality agents block slop.\n\n$200/mo. no API costs. the max plan is criminally underpriced for what it enables.",
+    "scheduledDate": "2026-03-18T12:30:00",
+    "type": "tweet",
+    "metadata": {
+      "slot_type": "value_tweet",
+      "theme": "tool_alpha",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  },
+  {
+    "content": "I have 33 autonomous agents running 24/7 on a macbook. they scrape, analyze, decide, build, and deploy without me touching anything.\n\ntotal infrastructure cost: $0/mo beyond my claude max subscription.\n\nhere's the full architecture.",
+    "scheduledDate": "2026-03-16T10:00:00",
+    "type": "thread_start",
+    "thread": [
+      "layer 1: CEO agent.\n\nruns every 4 hours via launchd. reads all venture performance data, alpha intelligence, and swarm reports. makes portfolio decisions: promote winners, kill losers, create new ventures.\n\n16-phase cycle. xlsx scoring. git failsafes so it can't corrupt state.",
+      "layer 2: venture autonomy engine.\n\n8 venture types: outbound, content, app factory, local biz, research, monetization, product, scraping.\n\neach venture self-manages its own schedule. winners get faster cycles. losers slow down. dead ventures auto-prune after 10 failed runs.",
+      "layer 3: agent swarm.\n\n25 specialized agents across 6 categories:\n- discovery: gap_hunter, opportunity_scanner, competitor_stalker\n- action: asset_deployer, content_compounder, lead_machine\n- intelligence: trend_synthesizer, cross_pollinator\n- quality: quality_gate (hard blocks slop before deployment)\n\neach agent has its own launchd plist and schedule.",
+      "layer 4: loop closer.\n\nthe biggest problem with multi-agent systems: open loops. agent A discovers something, agent B never acts on it.\n\nloop_closer.py runs every 2 hours. reads all agent decisions. executes safe actions. tracks which agents produce output that leads to downstream action. ranks them by effectiveness.\n\nunderperforming agents get throttled. productive ones get boosted.",
+      "the memory model:\n\nfilesystem = long-term memory (survives forever)\ncontext window = scratchpad (disposable)\n\nevery agent reads state from JSON files, does ONE thing, writes results back, exits. next run: fresh context, reads state, continues.\n\nno vector databases. no embeddings. just files and git.",
+      "current results after 35 days:\n\n- 302 automation scripts\n- 171,700 websites analyzed\n- 15,586 hot leads identified\n- 8 apps built and deployed\n- 11,474 alpha intelligence entries\n- $0 revenue (the honest part)\n\nthe system builds. I need to flip the switch to selling.\n\nall of this runs on a macbook with a $200/mo subscription. no AWS. no team. no meetings."
+    ],
+    "metadata": {
+      "slot_type": "thread",
+      "theme": "architecture_deep_dive",
+      "source_file": "COMPOUND_CONTENT_2026-03-13.md",
+      "account": "printmaxxer"
+    }
+  }
+]

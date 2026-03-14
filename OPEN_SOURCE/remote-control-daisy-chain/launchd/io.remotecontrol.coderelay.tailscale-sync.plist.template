@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>io.remotecontrol.coderelay.tailscale-sync</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>__REPO__/OPEN_SOURCE/remote-control-daisy-chain/scripts/coderelay_tailscale_sync.py</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>CODERELAY_TAILSCALE_SOCKET</key>
+    <string>__HOME__/.tailscale-remote-control/tailscaled.socket</string>
+    <key>CODERELAY_CONFIG_PATH</key>
+    <string>__HOME__/.coderelay/config.json</string>
+    <key>CODERELAY_PLIST_PATH</key>
+    <string>__HOME__/Library/LaunchAgents/com.coderelay.plist</string>
+    <key>CODERELAY_REMOTE_STATE_FILE</key>
+    <string>__HOME__/.remote_access_state.json</string>
+    <key>CODERELAY_TAILSCALE_HOSTNAME</key>
+    <string>control-node</string>
+    <key>CODERELAY_TAILSCALE_OPERATOR</key>
+    <string>macuser</string>
+    <key>CODERELAY_LOCAL_URL</key>
+    <string>http://127.0.0.1:8790</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>60</integer>
+  <key>StandardOutPath</key>
+  <string>__HOME__/.tailscale-remote-control/coderelay_tailscale_sync.log</string>
+  <key>StandardErrorPath</key>
+  <string>__HOME__/.tailscale-remote-control/coderelay_tailscale_sync.log</string>
+</dict>
+</plist>

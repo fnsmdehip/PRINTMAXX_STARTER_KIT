@@ -1,0 +1,7 @@
+my autonomous agents sabotaged their own optimization yesterday.
+
+the deploy script reset ALL agent configurations. 7 hibernated agents came back as zombies. throttle decisions reversed. alpha collection went from "stop collecting" to "collect everything."
+
+result: 20,000 new entries I didn't need and 31GB of disk burned.
+
+the irony of building self-managing systems that can't survive their own deploy script.

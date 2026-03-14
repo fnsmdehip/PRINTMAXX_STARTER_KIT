@@ -121,7 +121,10 @@ a{color:var(--accent);text-decoration:none}
     <div class="email-gate">
       <h3>want a personalized productivity plan?</h3>
       <p>get a short action plan based on your type, straight to your inbox. no spam.</p>
-      <form class="email-form" id="emailForm" action="#" method="post">
+      <form class="email-form" id="emailForm" action="https://formsubmit.co/printmaxxweb@gmail.com" method="post">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Lead from Productivity Stack Quiz">
+        <input type="hidden" name="_next" value="https://productivity-stack-quiz.surge.sh">
         <input class="email-input" id="emailInput" type="email" name="email" placeholder="your email" required autocomplete="email">
         <button class="btn-email" id="emailBtn" type="submit">send it</button>
       </form>

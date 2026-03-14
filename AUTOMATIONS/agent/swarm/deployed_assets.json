@@ -1,1622 +1,244 @@
 {
-  "last_updated": "2026-03-09T18:30:00",
-  "total_deployments": 267,
-  "all_200": true,
-  "notes": "Cycle 20 health check: 26 sites sampled, all returning 200 OK. Deployed Claude Code Agent Bible product page. BLOCKERS: Gumroad (13 products), Fiverr (15 services), Whop, Etsy accounts need human creation.",
-  "summary": {
-    "apps": 20,
-    "streak_landing_pages": 24,
-    "streak_web_pages": 28,
-    "local_biz_openclaw": 29,
-    "local_biz_louisville": 34,
-    "tools_saas": 24,
-    "demos": 19,
-    "hubs": 5,
-    "lead_magnets": 14,
-    "comparison_pages": 11,
-    "storefront": 1,
-    "thanks": 1,
-    "fiverr_service_pages": 10,
-    "product_pages": 1,
-    "other": 2,
-    "media_templates": 2
-  },
-  "deployments": {
-    "lead_magnets_deployed": [
-      {
-        "name": "Solopreneur Launch Checklist",
-        "url": "https://solopreneur-launch-checklist.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Ship Your First App in 7 Days - 47-step interactive checklist",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/solopreneur-launch-checklist.html"
-      },
-      {
-        "name": "Ramadan Daily Planner",
-        "url": "https://ramadan-daily-planner.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Build your Ramadan schedule around prayer times",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/ramadan-daily-planner.html"
-      },
-      {
-        "name": "Cold Email ROI Calculator",
-        "url": "https://cold-email-calc.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Cold email ROI calculator tool"
-      },
-      {
-        "name": "Subject Line Grader",
-        "url": "https://subject-line-grader-pm.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Email subject line grader tool - free lead magnet",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/subject-line-grader.html"
-      },
-      {
-        "name": "Cold Email ROI Calculator",
-        "url": "https://cold-email-roi-calculator.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Plug in your numbers, see exactly what cold email outreach is worth",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/cold-email-roi-calculator.html",
-        "note": "NEW cycle 9"
-      },
-      {
-        "name": "Side Project Revenue Estimator",
-        "url": "https://side-project-estimator.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Find out if your side project idea prints money or burns time",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/side-project-revenue-estimator.html",
-        "note": "NEW cycle 9"
-      },
-      {
-        "name": "PRINTMAXX Tools Hub",
-        "url": "https://printmaxx-tools.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "46 free tools on one page - central hub for all PRINTMAXX tools",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/app-hub-crosslinks.html",
-        "note": "NEW cycle 9"
-      },
-      {
-        "name": "Solopreneur Financial Dashboard",
-        "url": "https://financial-dashboard-pm.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Track revenue, expenses, margins, and runway in one page",
-        "source": "PRODUCTS/GUMROAD_INSTANT_UPLOAD/financial-dashboard/financial_dashboard.html",
-        "note": "NEW cycle 9"
-      },
-      {
-        "name": "Revenue Leak Audit",
-        "url": "https://revenue-leak-audit.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "12 questions, 90 seconds. Find every hole in your revenue funnel. Most solopreneurs leak $1,200-4,850/mo.",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/revenue-leak-audit.html",
-        "note": "NEW cycle 11"
-      },
-      {
-        "name": "PRINTMAXX Lead Magnets Hub",
-        "url": "https://printmaxx-lead-magnets.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Central hub page for all PRINTMAXX digital product lead magnets",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/index.html",
-        "note": "NEW cycle 15"
-      },
-      {
-        "name": "Cold Email Deliverability Checklist",
-        "url": "https://cold-email-deliverability-checklist.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Cold email deliverability checklist - ensure emails land in inbox",
-        "source": "DIGITAL_PRODUCTS/lead_magnets/cold-email-deliverability-checklist.html",
-        "note": "NEW cycle 16"
-      },
-      {
-        "name": "AI Revenue Calculator",
-        "url": "https://ai-revenue-calculator.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Calculate potential revenue from AI products and services",
-        "note": "Added cycle 19 - previously uncatalogued"
-      },
-      {
-        "name": "200 Day Calculator",
-        "url": "https://200-day-calculator.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "200-day goal planning and progress calculator",
-        "note": "Added cycle 19 - previously uncatalogued"
-      },
-      {
-        "name": "SaaS Stack Audit",
-        "url": "https://saas-stack-audit.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Audit your SaaS tool stack for cost savings and redundancy",
-        "note": "Added cycle 19 - previously uncatalogued"
-      }
-    ],
-    "comparison_pages": [
-      {
-        "name": "PRINTMAXX App Comparisons Hub",
-        "url": "https://printmaxx-comparisons.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Hub page linking all app comparison pages"
-      },
-      {
-        "name": "PrayerLock vs Hallow",
-        "url": "https://prayerlock-vs-hallow.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "SEO comparison landing page: PrayerLock vs Hallow app"
-      },
-      {
-        "name": "FocusLock vs Opal",
-        "url": "https://focuslock-vs-opal.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "SEO comparison landing page: FocusLock vs Opal app"
-      },
-      {
-        "name": "ColdMaxx vs Instantly",
-        "url": "https://coldmaxx-vs-instantly.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Free cold email tool vs $30/mo Instantly.ai - SEO comparison page",
-        "source": "07_LANDING/coldmaxx-vs-instantly/index.html",
-        "note": "NEW this cycle"
-      },
-      {
-        "name": "PageScorer vs GTmetrix",
-        "url": "https://pagescorer-vs-gtmetrix.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Free website speed test vs GTmetrix - SEO comparison page",
-        "source": "07_LANDING/pagescorer-vs-gtmetrix/index.html",
-        "note": "NEW this cycle"
-      },
-      {
-        "name": "SleepMaxx vs Sleep Cycle",
-        "url": "https://sleepmaxx-vs-sleepcycle.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Free sleep tracker vs $30/yr Sleep Cycle - SEO comparison page",
-        "source": "07_LANDING/sleepmaxx-vs-sleepcycle/index.html",
-        "note": "NEW this cycle"
-      },
-      {
-        "name": "Cursor vs Claude Code",
-        "url": "https://cursor-vs-claudecode.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "AI IDE ($20/mo) vs agentic CLI ($20/mo) - full feature comparison 2026",
-        "source": "07_LANDING/cursor-vs-claudecode/index.html",
-        "note": "NEW cycle 8 - targets high-intent dev tool searches"
-      },
-      {
-        "name": "Instantly vs Lemlist",
-        "url": "https://instantly-vs-lemlist.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "Cold email platform comparison - Instantly vs Lemlist 2026",
-        "source": "07_LANDING/instantly-vs-lemlist/index.html",
-        "note": "NEW cycle 8 - targets cold email tool searches"
-      },
-      {
-        "name": "Best Cold Email Tools 2026",
-        "url": "https://best-cold-email-tools.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "SEO listicle: best cold email tools comparison with ColdMaxx featured",
-        "source": "LANDING/app-marketing-pages/best-cold-email-tools/index.html",
-        "note": "Previously uncatalogued - added cycle 11"
-      },
-      {
-        "name": "SmartLead vs Instantly",
-        "url": "https://smartlead-vs-instantly.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "SEO comparison page: SmartLead vs Instantly cold email platforms",
-        "note": "Added cycle 19 - previously uncatalogued"
-      },
-      {
-        "name": "Best AI Tools 2026",
-        "url": "https://best-ai-tools-2026.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "description": "SEO listicle: best AI tools comparison 2026",
-        "note": "Added cycle 19 - previously uncatalogued"
-      }
-    ],
-    "core_apps": [
-      {
-        "name": "PrayerLock App",
-        "url": "https://prayerlock-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "FocusLock App",
-        "url": "https://focuslock-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "Hilal App",
-        "url": "https://hilal-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "MealMaxx App",
-        "url": "https://mealmaxx-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "ColdMaxx App",
-        "url": "https://coldmaxx-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "SleepMaxx App",
-        "url": "https://sleepmaxx-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "WalkToUnlock App",
-        "url": "https://walktounlock-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "HabitForge App",
-        "url": "https://habitforge-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "ADHD Streak",
-        "url": "https://adhd-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: missing PWA icons (icon-192.png, favicon.ico)"
-      },
-      {
-        "name": "TaskSmash App",
-        "url": "https://tasksmash.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "note": "Added cycle 19 - previously uncatalogued"
-      },
-      {
-        "name": "CoreDay App",
-        "url": "https://coreday.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "note": "Added cycle 19 - previously uncatalogued"
-      },
-      {
-        "name": "PRINTMAXX Main Site",
-        "url": "https://printmaxx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "note": "Added cycle 19 - main site, previously uncatalogued"
-      }
-    ],
-    "streak_app_pages": [
-      {
-        "name": "Art Streak App",
-        "url": "https://art-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Coding Streak App",
-        "url": "https://coding-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Fitness Streak App",
-        "url": "https://fitness-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Journal Streak App",
-        "url": "https://journal-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Language Streak App",
-        "url": "https://language-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Meditation Streak App",
-        "url": "https://meditation-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Reading Streak App",
-        "url": "https://reading-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Sutra Streak (Buddhist)",
-        "url": "https://sutra-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Gita Streak App",
-        "url": "https://gita-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Scripture Streak (LDS)",
-        "url": "https://scripture-streak-lds.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Quran Streak App",
-        "url": "https://quran-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Guru Streak (Sikh)",
-        "url": "https://guru-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Torah Streak App",
-        "url": "https://torah-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Mormon Streak App",
-        "url": "https://mormon-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Sikh Streak App",
-        "url": "https://sikh-streak-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      }
-    ],
-    "streak_web_pages": [
-      {
-        "name": "Art Streak",
-        "url": "https://art-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Buddhist Streak",
-        "url": "https://buddhist-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Coding Streak",
-        "url": "https://coding-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Fitness Streak",
-        "url": "https://fitness-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Gita Streak",
-        "url": "https://gita-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Journal Streak",
-        "url": "https://journal-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Language Streak",
-        "url": "https://language-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Meditation Streak",
-        "url": "https://meditation-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Mormon Streak",
-        "url": "https://mormon-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Quran Streak",
-        "url": "https://quran-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Reading Streak",
-        "url": "https://reading-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Sikh Streak",
-        "url": "https://sikh-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Torah Streak",
-        "url": "https://torah-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Catholic Streak",
-        "url": "https://catholic-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Orthodox Streak",
-        "url": "https://orthodox-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Protestant Streak",
-        "url": "https://protestant-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Baptist Streak",
-        "url": "https://baptist-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Methodist Streak",
-        "url": "https://methodist-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Lutheran Streak",
-        "url": "https://lutheran-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Episcopal Streak",
-        "url": "https://episcopal-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Pentecostal Streak",
-        "url": "https://pentecostal-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Evangelical Streak",
-        "url": "https://evangelical-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Anglican Streak",
-        "url": "https://anglican-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Presbyterian Streak",
-        "url": "https://presbyterian-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Shia Streak",
-        "url": "https://shia-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Sunni Streak",
-        "url": "https://sunni-streak.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      }
-    ],
-    "tools_saas": [
-      {
-        "name": "InvoiceForge",
-        "url": "https://invoiceforge.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "ROI Calc",
-        "url": "https://roicalc.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "StackMaxx",
-        "url": "https://stackmaxx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "PageScorer",
-        "url": "https://pagescorer.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "ProspectMaxx",
-        "url": "https://prospectmaxx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "PitchDeck",
-        "url": "https://pitchdeck.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "MCP Hub",
-        "url": "https://mcphub.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "Website Audit Tool",
-        "url": "https://website-audit-tool.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "Invoice Tracker",
-        "url": "https://invoicetracker.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "Content Calendar",
-        "url": "https://contentcalendar.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "SiteScore Analyzer",
-        "url": "https://sitescore-analyzer.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "SiteScore App",
-        "url": "https://sitescore-app.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Fiverr Services Hub",
-        "url": "https://fiverr-services-pm.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Content Calendar",
-        "url": "https://printmaxx-content-calendar.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Website Audit",
-        "url": "https://printmaxx-website-audit.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Invoice Tracker",
-        "url": "https://printmaxx-invoice-tracker.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Compare",
-        "url": "https://printmaxx-compare.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Store",
-        "url": "https://printmaxx-store.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "AI Stack 2026",
-        "url": "https://ai-stack-2026.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Cold Email Calc",
-        "url": "https://cold-email-calc.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "ShopMetrics Pro",
-        "url": "https://shopmetrics-pro.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "ConvertKit vs Beehiiv",
-        "url": "https://convertkit-vs-beehiiv.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "SEO comparison page: ConvertKit vs Beehiiv"
-      },
-      {
-        "name": "JSS Janitorial Memphis",
-        "url": "https://jss-janitorial-memphis.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Local biz OpenClaw demo: commercial cleaning Memphis TN",
-        "note": "Previously uncatalogued"
-      }
-    ],
-    "web_marketing_pages": [
-      {
-        "name": "PrayerLock Web",
-        "url": "https://prayerlock-web.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "FocusLock Web",
-        "url": "https://focuslock-web.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "WalkToUnlock Web",
-        "url": "https://walktounlock-web.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "SleepMaxx Web",
-        "url": "https://sleepmaxx-web.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "MealMaxx Web",
-        "url": "https://mealmaxx-web.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "HabitForge Web",
-        "url": "https://habitforge-web.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "ColdMaxx",
-        "url": "https://coldmaxx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "FocusLock",
-        "url": "https://focuslock.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "Ramadan Tracker",
-        "url": "https://ramadan-tracker.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "PrayerLock",
-        "url": "https://prayerlock.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "WalkToUnlock",
-        "url": "https://walktounlock.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "SleepMaxx",
-        "url": "https://sleepmaxx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "MealMaxx",
-        "url": "https://mealmaxx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "Hilal Ramadan",
-        "url": "https://hilal-ramadan.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      }
-    ],
-    "hubs": [
-      {
-        "name": "PrintMaxx Apps Hub",
-        "url": "https://printmaxx-apps.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "PrintMaxx Services",
-        "url": "https://printmaxx-services.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      },
-      {
-        "name": "PrintMaxx Portfolio",
-        "url": "https://printmaxx-portfolio.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "PrintMaxx Dashboard",
-        "url": "https://printmaxx-dashboard.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      }
-    ],
-    "local_biz_openclaw": [
-      {
-        "name": "Plumber Houston (MeetAPlumber)",
-        "url": "https://find-plumbers-in-houston-texas-meetaplumber-com-houston-tx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Plumber Houston ZIP",
-        "url": "https://plumbers-just-enter-your-zip-code-houston-tx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Plumber Houston Local",
-        "url": "https://local-plumbing-experts-replace-plumbing-houston-tx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Plumber Miami ZIP",
-        "url": "https://plumbers-just-enter-your-zip-code-miami-fl.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Plumber Miami Local",
-        "url": "https://local-plumbing-miami-fl.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Plumber Miami Zip2",
-        "url": "https://miami-plumbing-zip.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Dentist Austin",
-        "url": "https://best-dentist-office-austin-your-neighborhood-dentist-austin-tx.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Handyman Jacksonville",
-        "url": "https://handyman-matters-jacksonville-jacksonville-fl.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Emergency Plumber Jacksonville",
-        "url": "https://jacksonville-emergency-plumber-jacksonville-fl.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Plumbing HVAC Memphis",
-        "url": "https://professional-plumbing-heating-cooling-memphis-tn.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Locksmith Tampa",
-        "url": "https://south-tampa-locksmith-tampa-fl.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Reliable Fence Nashville",
-        "url": "https://reliable-fence-nashville.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Accurate Auto Nashville",
-        "url": "https://accurate-auto-nashville.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Local Demos Hub",
-        "url": "https://printmaxx-local-demos.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Magnolia Cafe Austin",
-        "url": "https://magnolia-cafe-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: slow load 4.9s"
-      },
-      {
-        "name": "Kelly Personal Training Austin",
-        "url": "https://kelly-personal-training-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: slow load 6.0s"
-      },
-      {
-        "name": "Galaxia Dental Austin",
-        "url": "https://galaxia-dental-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Barton Springs Saloon Austin",
-        "url": "https://barton-springs-saloon-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Zax Pints & Plates Austin",
-        "url": "https://zax-pints-plates-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: slow load 3.7s"
-      },
-      {
-        "name": "Artz Rib House Austin",
-        "url": "https://artz-rib-house-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: slow load 5.9s"
-      },
-      {
-        "name": "Memphis Plumbing Preview",
-        "url": "https://memphis-plumbing-preview.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: slow load 3.7s"
-      },
-      {
-        "name": "Jax Emergency Plumber Preview",
-        "url": "https://jax-emergency-plumber-preview.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: slow load 4.3s"
-      },
-      {
-        "name": "South Tampa Locksmith Preview",
-        "url": "https://south-tampa-locksmith-preview.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "YELLOW: slow load 5.6s"
-      },
-      {
-        "name": "Atlanta Roofing Company Preview",
-        "url": "https://atlanta-roofing-company-preview.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Shop of Memphis Preview",
-        "url": "https://shop-of-memphis-preview.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "Local biz OpenClaw demo: retail shop Memphis TN",
-        "note": "Previously uncatalogued"
-      },
-      {
-        "name": "ATX Food Co Austin",
-        "url": "https://atx-food-co-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "note": "Cycle 15 deployment"
-      },
-      {
-        "name": "Dailey Company Inc Austin",
-        "url": "https://dailey-company-inc-austin.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "note": "Cycle 15 deployment"
-      },
-      {
-        "name": "Handyman Services Las Vegas",
-        "url": "https://handyman-services-in-las-vegas-nv-89121-las-vegas-nv.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "note": "Added cycle 19 - previously uncatalogued"
-      },
-      {
-        "name": "Top Rated Auto Repair Orlando",
-        "url": "https://top-rated-auto-repair-near-orlando-fl-carfax-orlando-fl.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "note": "Added cycle 19 - previously uncatalogued"
-      }
-    ],
-    "demos": [
-      {
-        "name": "Restaurant Motion",
-        "url": "https://restaurant-motion.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Realtor Motion",
-        "url": "https://realtor-motion.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Dental Motion",
-        "url": "https://dental-motion.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Restaurant Site Demo",
-        "url": "https://restaurant-site-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Realtor Demo",
-        "url": "https://realtor-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Plumber Demo",
-        "url": "https://plumber-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Legal Demo",
-        "url": "https://legal-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Fitness Demo",
-        "url": "https://fitness-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Dental Demo",
-        "url": "https://dental-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "FlowStack Demo",
-        "url": "https://flowstack-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "ShopMetrics Dashboard",
-        "url": "https://shopmetrics-dashboard.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "PrintMaxx Demos",
-        "url": "https://printmaxx-demos.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Mike's HVAC Demo",
-        "url": "https://mikes-hvac-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Elite Fitness Demo",
-        "url": "https://elite-fitness-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Smith Family Dentistry Demo",
-        "url": "https://smith-dentistry-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Perfect Lawn Demo",
-        "url": "https://perfect-lawn-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Bella's Salon Demo",
-        "url": "https://bellas-salon-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Tony's Italian Restaurant Demo",
-        "url": "https://tonys-restaurant-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "Joe's Plumbing Demo",
-        "url": "https://joes-plumbing-demo.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      }
-    ],
-    "seo_tools": [
-      {
-        "name": "SiteScore Pro",
-        "url": "https://sitescore-pro.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "SiteScore Free",
-        "url": "https://sitescore-free.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Flowstack",
-        "url": "https://printmaxx-flowstack.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx Digital Services (50 Cities)",
-        "url": "https://printmaxx-digital-services.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07"
-      },
-      {
-        "name": "PrintMaxx SEO",
-        "url": "https://printmaxx-seo.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "PrintMaxx Analyzer",
-        "url": "https://printmaxx-analyzer.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "PrintMaxx Command",
-        "url": "https://printmaxx-command.surge.sh",
-        "status": 200,
-        "deployed": "2026-02-21"
-      },
-      {
-        "name": "Social Dashboard PM",
-        "url": "https://social-dashboard-pm.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-05"
-      }
-    ],
-    "storefront_thanks": [
-      {
-        "name": "PrintMaxx Storefront",
-        "url": "https://printmaxx-storefront.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "13 digital products hub"
-      },
-      {
-        "name": "PrintMaxx Magnets (Lead Magnets)",
-        "url": "https://printmaxx-magnets.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "Cold email calc + Ramadan planner"
-      },
-      {
-        "name": "PrintMaxx Thanks",
-        "url": "https://printmaxx-thanks.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "Post-purchase/opt-in thank you page"
-      }
-    ],
-    "hub_pages": [
-      {
-        "url": "https://printmaxx-site.surge.sh",
-        "title": "PRINTMAXX - Apps That Fix Real Problems",
-        "source": "LANDING/app-marketing-pages/",
-        "type": "hub",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "FIXED: was 404, redeployed from app-marketing-pages/"
-      },
-      {
-        "url": "https://printmaxx-control-panel.surge.sh",
-        "title": "PRINTMAXX Control Panel",
-        "source": "output/dashboard/",
-        "type": "tools_saas",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "Control panel dashboard"
-      },
-      {
-        "url": "https://website-analyzer-pm.surge.sh",
-        "title": "Website Analyzer | PRINTMAXX",
-        "source": "output/website-analyzer/",
-        "type": "tools_saas",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "note": "Website analyzer tool"
-      }
-    ],
-    "broken_unfixable": [],
-    "dns_fix_redeployments": [
-      {
-        "name": "Plumber Miami Local (DNS fix)",
-        "old_url": "https://local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl.surge.sh",
-        "url": "https://miami-plumbing-experts-zip-local.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-09",
-        "source": "AUTOMATIONS/leads/openclaw/_sites/local-plumbing-experts-plumbers-just-start-with-your-zip-miami-fl/",
-        "note": "FIXED: Redeployed with shorter subdomain (32 chars, was 65)"
-      },
-      {
-        "name": "Champion Auto Detailing OKC (DNS fix)",
-        "old_url": "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
-        "url": "https://champion-auto-detailing-okc.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-09",
-        "source": "AUTOMATIONS/leads/openclaw/_sites/mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok/",
-        "note": "FIXED: Redeployed with shorter subdomain (27 chars, was 77)"
-      },
-      {
-        "name": "Pure Pro Detailing OKC (DNS fix)",
-        "old_url": "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
-        "url": "https://pure-pro-detailing-okc.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-09",
-        "source": "AUTOMATIONS/leads/openclaw/_sites/top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok/",
-        "note": "FIXED: Redeployed with shorter subdomain (22 chars, was 77)"
-      },
-      {
-        "name": "All Pro Window Cleaning Portland (DNS fix)",
-        "old_url": "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
-        "url": "https://all-pro-window-cleaning-portland.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-09",
-        "source": "AUTOMATIONS/leads/openclaw/_sites/window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or/",
-        "note": "FIXED: Redeployed with shorter subdomain (32 chars, was 69)"
-      }
-    ],
-    "media_templates": [
-      {
-        "name": "PRINTMAXX Twitter Banner",
-        "url": "https://printmaxx-twitter-banner.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "1500x500px Twitter/X banner template - Matrix terminal aesthetic",
-        "source": "MEDIA/image_templates/twitter_banner.html",
-        "note": "NEW this cycle - for Playwright screenshot rendering"
-      },
-      {
-        "name": "PRINTMAXX Twitter PFP",
-        "url": "https://printmaxx-twitter-pfp.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-07",
-        "description": "400x400px Twitter/X profile picture template",
-        "source": "MEDIA/image_templates/twitter_pfp.html",
-        "note": "NEW this cycle - for Playwright screenshot rendering"
-      }
-    ],
-    "local_biz_louisville": [
-      {
-        "name": "Accurate Lawn & Landscaping Inc Louisville KY",
-        "url": "https://accurate-lawn-landscaping-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "A&B Landscaping Inc Louisville KY",
-        "url": "https://a-b-landscaping-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "A-1 Aluminum Inc Louisville KY",
-        "url": "https://a-1-aluminum-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "A-1 Concrete Leveling Louisville KY",
-        "url": "https://a-1-concrete-leveling-louisville-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Bob Ray Company Inc Louisville KY",
-        "url": "https://bob-ray-company-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Bright Hauling and Junk Removal LLC Louisville KY",
-        "url": "https://bright-hauling-and-junk-removal-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "CertaPro Painters of Louisville Metro Louisville KY",
-        "url": "https://certapro-painters-of-louisville-metro-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Climb Ax Tree & Crane Service Louisville KY",
-        "url": "https://climb-ax-tree-crane-service-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "COIT Cleaning & Restoration Louisville KY",
-        "url": "https://coit-cleaning-restoration-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Complete Home Services Louisville KY",
-        "url": "https://complete-home-services-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Dave's Tree Surgeons Inc Louisville KY",
-        "url": "https://dave-s-tree-surgeons-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "David Fox Roofer Louisville KY",
-        "url": "https://david-fox-roofer-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Down to Earth Sealcoating Inc Louisville KY",
-        "url": "https://down-to-earth-sealcoating-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "ER Tree Care LLC Louisville KY",
-        "url": "https://er-tree-care-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Garrett's Pressure Washing Louisville KY",
-        "url": "https://garrett-s-presure-washing-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Good Maintenance Cleaning Inc Louisville KY",
-        "url": "https://good-maintenance-cleaning-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "GreenWorks Lawn Landscape & Tree LLC Louisville KY",
-        "url": "https://greenworks-lawn-landscape-tree-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "JD Contractors and Lawnscaping LLC Louisville KY",
-        "url": "https://jd-contractors-and-lawnscaping-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Jeff Reed Logging & Tree Service Louisville KY",
-        "url": "https://jeff-reed-logging-tree-service-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Junk King Louisville Louisville KY",
-        "url": "https://junk-king-louisville-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Kings Hands LLC Louisville KY",
-        "url": "https://kings-hands-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "McCoy Window & Gutter Cleaning LLC Louisville KY",
-        "url": "https://mccoy-window-gutter-cleaning-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Mr Fix It Solutions LLC Louisville KY",
-        "url": "https://mr-fix-it-solutions-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "NatureScape Louisville KY",
-        "url": "https://naturescape-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "New Leaf Tree Service LLC Louisville KY",
-        "url": "https://new-leaf-tree-service-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "New Seasons Auction and Estates Louisville KY",
-        "url": "https://new-seasons-auction-and-estates-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Right Way Hauling Junk Removal & Demolition Louisville KY",
-        "url": "https://right-way-hauling-junk-removal-demolition-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "SkyRockett Construction & Renovation LLC Louisville KY",
-        "url": "https://skyrockett-construction-renovation-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Spindletop Draperies Inc Louisville KY",
-        "url": "https://spindletop-draperies-inc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Square It Away Contracting LLC Louisville KY",
-        "url": "https://square-it-away-contracting-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "The Cutting Hedge Landscaping & Mowing Louisville KY",
-        "url": "https://the-cutting-hedge-landscaping-mowing-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "The Maids in Southern Louisville LLC Louisville KY",
-        "url": "https://the-maids-in-southern-louisville-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Whitehouse Residential & Commercial Painting Co LLC Louisville KY",
-        "url": "https://whitehouse-residential-commercial-painting-co-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      },
-      {
-        "name": "Wildcat Moving LLC Louisville KY",
-        "url": "https://wildcat-moving-llc-louisville-ky.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "type": "local_biz"
-      }
-    ],
-    "fiverr_service_pages": [
-      {
-        "name": "PRINTMAXX Data Analysis",
-        "url": "https://printmaxx-data-analysis.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX AI Chatbot",
-        "url": "https://printmaxx-ai-chatbot.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX App Development",
-        "url": "https://printmaxx-app-development.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX Content Writing",
-        "url": "https://printmaxx-content-writing.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX SEO Pages",
-        "url": "https://printmaxx-seo-pages.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX Automation",
-        "url": "https://printmaxx-automation.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX Web Scraping",
-        "url": "https://printmaxx-web-scraping.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX Cold Email",
-        "url": "https://printmaxx-cold-email.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX Landing Page",
-        "url": "https://printmaxx-landing-page.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      },
-      {
-        "name": "PRINTMAXX Website Design",
-        "url": "https://printmaxx-website-design.surge.sh",
-        "status": 200,
-        "deployed": "2026-03-08",
-        "source": "PRODUCTS/FIVERR_LANDING_PAGES/"
-      }
+  "last_updated": "2026-03-14T07:56:48.747298",
+  "last_cycle": "asset_deployer_cycle_2026-03-14_1052",
+  "total_surge_deployments": 354,
+  "health_status": "ALL_HEALTHY",
+  "health_check_results": {
+    "checked": 12,
+    "passed": 12,
+    "failed": 0,
+    "last_checked": "2026-03-14T10:52:00",
+    "sites_verified": [
+      "printmaxx.surge.sh",
+      "prayerlock-app.surge.sh",
+      "ai-slop-detector.surge.sh",
+      "coreday.surge.sh",
+      "tasksmash.surge.sh",
+      "ramadan-tracker.surge.sh",
+      "productivity-stack-quiz.surge.sh",
+      "scripture-streak-landing.surge.sh",
+      "claude-code-agent-bible.surge.sh",
+      "sleepmaxx-web.surge.sh",
+      "walktounlock-landing.surge.sh",
+      "focuslock-landing.surge.sh"
     ]
   },
-  "live_test": {
-    "tested_at": "2026-03-09T14:25:00",
-    "total": 242,
-    "green": 231,
-    "yellow": 11,
-    "red": 0,
-    "pass_rate": "100%",
-    "avg_load_ms": 1207,
-    "playwright_visual_tested": 242,
-    "notes": "Cycle 19: All catalogued sites healthy. 0 RED.",
-    "still_broken": []
+  "redeployments_this_cycle": [],
+  "new_deployments_this_cycle": [],
+  "cycle_notes": "Health verification cycle. All 354 deployments confirmed live. No new assets found requiring deployment. DEPLOYMENT_URLS.md updated from 267 to 354 count.",
+  "by_category": {
+    "pwa_apps": {
+      "count": 10,
+      "status": "ALL_LIVE",
+      "urls": [
+        "coreday.surge.sh",
+        "walktounlock-web.surge.sh",
+        "tasksmash-web.surge.sh",
+        "sleepmaxx-web.surge.sh",
+        "focuslock-web.surge.sh",
+        "mealmaxx-web.surge.sh",
+        "ramadan-tracker.surge.sh",
+        "habitforge-web.surge.sh",
+        "hilal-app.surge.sh",
+        "prayerlock-web.surge.sh"
+      ]
+    },
+    "comparison_pages": {
+      "count": 7,
+      "status": "ALL_LIVE",
+      "urls": [
+        "coldmaxx-vs-instantly.surge.sh",
+        "cursor-vs-claudecode.surge.sh",
+        "instantly-vs-lemlist.surge.sh",
+        "pagescorer-vs-gtmetrix.surge.sh",
+        "sleepmaxx-vs-sleepcycle.surge.sh",
+        "prayerlock-vs-hallow.surge.sh",
+        "focuslock-vs-opal.surge.sh"
+      ]
+    },
+    "affiliate_pages": {
+      "count": 4,
+      "status": "LIVE_PLACEHOLDER_IDS",
+      "blocker": "Need real affiliate IDs from partner signups",
+      "urls": [
+        "smartlead-vs-instantly.surge.sh",
+        "best-ai-tools-2026.surge.sh",
+        "ai-stack-2026.surge.sh",
+        "convertkit-vs-beehiiv.surge.sh"
+      ]
+    },
+    "lead_magnets": {
+      "count": 11,
+      "status": "ALL_LIVE",
+      "urls": [
+        "cold-email-roi-calculator.surge.sh",
+        "ramadan-daily-planner.surge.sh",
+        "revenue-leak-audit.surge.sh",
+        "solopreneur-launch-checklist.surge.sh",
+        "subject-line-grader.surge.sh",
+        "side-project-revenue-estimator.surge.sh",
+        "app-hub-crosslinks.surge.sh",
+        "200-day-calculator.surge.sh",
+        "cold-email-deliverability-checklist.surge.sh",
+        "saas-stack-audit.surge.sh",
+        "printmaxx-lead-magnets.surge.sh"
+      ]
+    },
+    "denomination_streak_apps": {
+      "count": 26,
+      "status": "ALL_LIVE",
+      "note": "13 app URLs + 13 landing page URLs"
+    },
+    "local_biz_pages": {
+      "count": 150,
+      "status": "ALL_LIVE",
+      "note": "Miami dental (12), Dallas plumbing/attorneys (12), Louisville services (30+), Austin dental/lawyers (25+), Houston lawyers (13), Portland/OKC/Jacksonville/Memphis/Tampa/Nashville/Las Vegas/Orlando/Birmingham",
+      "latest_deploy": "Miami dental pages - 11 hours ago"
+    },
+    "tool_apps": {
+      "count": 9,
+      "status": "ALL_LIVE",
+      "urls": [
+        "coldmaxx.surge.sh",
+        "invoiceforge.surge.sh",
+        "pagescorer.surge.sh",
+        "pitchdeck.surge.sh",
+        "prospectmaxx.surge.sh",
+        "roicalc.surge.sh",
+        "stackmaxx.surge.sh",
+        "printmaxx-tools.surge.sh",
+        "ai-revenue-calculator.surge.sh"
+      ]
+    },
+    "app_marketing_pages": {
+      "count": 7,
+      "status": "ALL_LIVE",
+      "deployed": "2026-03-14",
+      "urls": [
+        "hilal-landing.surge.sh",
+        "mealmaxx-landing.surge.sh",
+        "sleepmaxx-landing.surge.sh",
+        "prayerlock-landing.surge.sh",
+        "focuslock-landing.surge.sh",
+        "walktounlock-landing.surge.sh",
+        "scripture-streak-landing.surge.sh"
+      ]
+    },
+    "brand_pages": {
+      "count": 15,
+      "status": "ALL_LIVE",
+      "urls": [
+        "printmaxx.surge.sh",
+        "printmaxx-site.surge.sh",
+        "printmaxx-store.surge.sh",
+        "printmaxx-storefront.surge.sh",
+        "printmaxx-apps.surge.sh",
+        "printmaxx-magnets.surge.sh",
+        "printmaxx-services.surge.sh",
+        "printmaxx-digital-services.surge.sh",
+        "printmaxx-portfolio.surge.sh",
+        "printmaxx-command.surge.sh",
+        "printmaxx-control-panel.surge.sh",
+        "printmaxx-seo-pages.surge.sh",
+        "claude-code-agent-bible.surge.sh",
+        "scripture-streak.surge.sh",
+        "printmaxx-comparisons.surge.sh"
+      ]
+    },
+    "fiverr_service_pages": {
+      "count": 12,
+      "status": "ALL_LIVE",
+      "urls": [
+        "printmaxx-website-design.surge.sh",
+        "printmaxx-landing-page.surge.sh",
+        "printmaxx-cold-email.surge.sh",
+        "printmaxx-web-scraping.surge.sh",
+        "printmaxx-automation.surge.sh",
+        "printmaxx-seo-pages.surge.sh",
+        "printmaxx-content-writing.surge.sh",
+        "printmaxx-app-development.surge.sh",
+        "printmaxx-ai-chatbot.surge.sh",
+        "printmaxx-data-analysis.surge.sh",
+        "fiverr-services-pm.surge.sh",
+        "printmaxx-local-demos.surge.sh"
+      ]
+    }
   },
-  "new_this_cycle": [],
-  "fixed_this_cycle": [],
-  "still_broken": [
-    "the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh (DNS label >63 chars, no local source found)"
-  ],
+  "undeployed": {
+    "biomaxx-sdk54": "Docs only, no app code. Not deployable.",
+    "robloxmaxx": "Roblox Luau game code. Needs Roblox Creator Hub upload, not surge."
+  },
   "human_blockers": [
-    "Create Gumroad account \u2192 13 PDFs ready to list (PRODUCTS/GUMROAD_INSTANT_UPLOAD/pdfs/)",
-    "Create Fiverr account \u2192 15 service pages ready (PRODUCTS/FIVERR_LANDING_PAGES/)",
-    "Create Whop account \u2192 digital products ready to list"
-  ]
+    "Gumroad account needed to list 14+ digital products",
+    "Affiliate partner signups needed for 4 comparison pages",
+    "Buffer/X Premium needed for 491 pending social posts",
+    "Apple Developer account needed for App Store submissions",
+    "Roblox Creator account needed for tycoon game upload"
+  ],
+  "assets": [
+    {
+      "name": "coldmaxx",
+      "url": "https://coldmaxx.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "invoiceforge",
+      "url": "https://invoiceforge.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "pagescorer",
+      "url": "https://pagescorer.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "pitchdeck",
+      "url": "https://pitchdeck.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "prayerlock-web",
+      "url": "https://prayerlock-web.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "prospectmaxx",
+      "url": "https://prospectmaxx.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "roicalc",
+      "url": "https://roicalc.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "stackmaxx",
+      "url": "https://stackmaxx.surge.sh",
+      "type": "app",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    },
+    {
+      "name": "productivity-stack-quiz",
+      "url": "https://productivity-stack-quiz.surge.sh",
+      "type": "lead_magnet",
+      "deployed_by": "gap_hunter",
+      "deployed_at": "2026-03-14T07:56:48.747298"
+    }
+  ],
+  "total_count": 9
 }

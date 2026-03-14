@@ -12,6 +12,7 @@ After completing the step:
 3. Log to AUTOMATIONS/logs/venture_auto_scraping_competitive_intel_9788.log
 4. Exit cleanly so the next loop iteration gets fresh context
 
+
 Type: SCRAPING
 Interval: 2h
 Working dir: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt

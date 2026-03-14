@@ -2504,6 +2504,139 @@ def wire_alpha_scoring_to_content():
     return 1
 
 
+# ─── CONNECTION 46: Engagement Bait Alpha → Niche Content ────────────────
+# ENGAGEMENT_BAIT alpha entries are tagged "good for engagement" but never
+# routed to content farm. This wire converts them into niche account posts.
+def wire_engagement_bait_to_content():
+    alpha_path = LEDGER / "ALPHA_STAGING.csv"
+    if not alpha_path.exists():
+        return 0
+
+    all_rows = load_csv(alpha_path, max_rows=500)
+    bait = [r for r in all_rows if r.get("status") == "ENGAGEMENT_BAIT"]
+    if not bait:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for row in bait[-15:]:  # Last 15 engagement bait entries
+        alpha_id = row.get("alpha_id", "")
+        tactic = row.get("tactic", "") or row.get("extracted_method", "") or row.get("signal", "")
+        source = row.get("source", "")
+
+        slug = f"engbait_{alpha_id}".lower()
+        if slug in existing_posts or not tactic:
+            continue
+
+        # Format as engagement-first niche post (reply bait style)
+        hook = tactic[:140].rstrip(".")
+        tweet = f"{hook}\n\nmost people won't do this. that's why most people stay broke."
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        created += 1
+
+    return created
+
+
+# ─── CONNECTION 47: Viral Scan History → Content Farm ────────────────────
+# Viral content scans identify trending formats. Route to content creation.
+def wire_viral_scans_to_content():
+    scan_dir = safe_path(AUTOMATIONS / "viral_content" / "scan_history")
+    if not scan_dir.exists():
+        return 0
+
+    scans = sorted(scan_dir.glob("scan_*.json"), reverse=True)
+    if not scans:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    existing = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"} if queue_dir.exists() else set()
+
+    created = 0
+    for scan_file in scans[:3]:  # Last 3 scans
+        data = load_json(scan_file)
+        trends = data.get("trends", data.get("viral_content", []))
+        if isinstance(trends, dict):
+            trends = list(trends.values())
+        if not isinstance(trends, list):
+            continue
+
+        date_part = scan_file.stem.replace("scan_", "")
+        for i, trend in enumerate(trends[:5]):
+            slug = f"viral_{date_part}_{i}"
+            if slug in existing:
+                continue
+
+            if isinstance(trend, dict):
+                topic = trend.get("topic", trend.get("title", trend.get("format", "")))
+                engagement = trend.get("engagement", trend.get("views", ""))
+            elif isinstance(trend, str):
+                topic = trend
+                engagement = ""
+            else:
+                continue
+
+            if not topic:
+                continue
+
+            tweet = (
+                f"this format is blowing up right now: {str(topic)[:120]}\n\n"
+                f"{'engagement: ' + str(engagement) + '. ' if engagement else ''}"
+                f"adapt it to your niche before everyone copies it."
+            )
+            post_path = safe_path(queue_dir / f"{slug}.txt")
+            post_path.write_text(tweet, encoding="utf-8")
+            created += 1
+
+    return created
+
+
+# ─── CONNECTION 48: Competitor Pricing → Outreach Angles ─────────────────
+# When competitors change pricing, use that as a cold outreach hook.
+def wire_competitor_pricing_to_outreach():
+    changes = load_csv(LEDGER / "COMPETITOR_CHANGES.csv", max_rows=200)
+    if not changes:
+        return 0
+
+    pricing_changes = [c for c in changes if "price" in (c.get("change_type", "") + c.get("field", "")).lower()]
+    if not pricing_changes:
+        return 0
+
+    outreach_dir = safe_path(AUTOMATIONS / "leads" / "pricing_angles")
+    outreach_dir.mkdir(parents=True, exist_ok=True)
+
+    existing = {f.stem for f in outreach_dir.iterdir() if f.suffix == ".json"} if outreach_dir.exists() else set()
+    created = 0
+
+    for change in pricing_changes[-10:]:
+        competitor = change.get("competitor", change.get("app", "unknown"))
+        old_price = change.get("old_value", change.get("old_price", "?"))
+        new_price = change.get("new_value", change.get("new_price", "?"))
+        slug = f"price_{competitor}_{datetime.now().strftime('%Y%m%d')}".lower().replace(" ", "_")[:60]
+
+        if slug in existing:
+            continue
+
+        angle = {
+            "competitor": competitor,
+            "old_price": old_price,
+            "new_price": new_price,
+            "outreach_angle": f"{competitor} just changed pricing from {old_price} to {new_price}. Their users might be looking for alternatives.",
+            "target_audience": f"Users of {competitor} who are price-sensitive",
+            "generated_at": datetime.now().isoformat()
+        }
+
+        path = safe_path(outreach_dir / f"{slug}.json")
+        path.write_text(json.dumps(angle, indent=2))
+        created += 1
+
+    return created
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -2559,6 +2692,9 @@ def run_cycle():
         ("Spec Queue → App Factory Config", wire_spec_queue_to_app_factory_config),
         ("Gap Reports → Content Farm", wire_gap_reports_to_content),
         ("Alpha Scoring → Content Farm", wire_alpha_scoring_to_content),
+        ("Engagement Bait → Niche Content", wire_engagement_bait_to_content),
+        ("Viral Scans → Content Farm", wire_viral_scans_to_content),
+        ("Competitor Pricing → Outreach Angles", wire_competitor_pricing_to_outreach),
     ]
 
     total_wired = 0

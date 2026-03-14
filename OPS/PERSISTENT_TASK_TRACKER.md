@@ -1,6 +1,114 @@
 # PERSISTENT TASK TRACKER
 # Status: ACTIVE — READ THIS EVERY SESSION START, AFTER EVERY COMPACTION
-# Updated: 2026-03-10
+# Updated: 2026-03-14
+
+### LEAD MACHINE CYCLE — 2026-03-14 (07:51 AM)
+- **Status:** OUTREACH READY — NEEDS HUMAN TO SEND
+- **Leads scored:** 15 new from HN March 2026 + Reddit r/forhire + r/webdev
+- **Files:**
+  - Scored leads: `AUTOMATIONS/leads/swarm_leads_20260314.csv`
+  - Outreach drafts: `AUTOMATIONS/leads/outreach_drafts/leadmachine_20260314.md`
+- **HUMAN ACTION (P0, 15 min):** Send 6 cold emails to HN leads with direct founder emails:
+  1. Breezy (AI Product Engineer) — jobs+mar26@getbreezyapp.com — $120-150K
+  2. Marker Learning (Lead Full-Stack) — lucie@markerlearning.com — $185-250K
+  3. Deep Core Technology (First Hire!) — jeff@deepcoretech.com — equity-heavy
+  4. River (Senior/Staff) — alex@river.com — $150-250K
+  5. CiceroAI (Founding FDE) — founders@ciceroailaw.com — equity
+  6. Spruce (Lead Full Stack) — nick@spruce.eco — £85-120K
+- **HUMAN ACTION (P1, 10 min):** Post 4 Reddit DMs to r/forhire leads:
+  1. SWE Experts ($70-150/hr Python) — https://reddit.com/r/forhire/comments/1rsczkf/
+  2. Prompt Writers ($60-80/hr) — https://reddit.com/r/forhire/comments/1rrgqlr/
+  3. SaaS Frontend Dev — https://reddit.com/r/webdev/comments/1rpfy1w/
+  4. TikTok Clippers (£400/week) — https://reddit.com/r/forhire/comments/1rsfoa9/
+- **Top 3 scores:** 38/40 (Breezy), 38/40 (Marker Learning), 38/40 (Deep Core Tech)
+- **All email/DM drafts are in the outreach file — just copy-paste and send**
+
+### LIVE APP ALPHA + ANYWHERE REMOTE CONTROL STACK — 2026-03-13
+- **Status:** IN_PROGRESS
+- **Live app-alpha ingest completed:**
+  - `python3 AUTOMATIONS/twitter_alpha_scraper.py --accounts --limit 12 --days 30`
+  - Result: 38 new high-signal account entries saved as `ALPHA22483-ALPHA22520`
+  - Files:
+    - `LEDGER/ALPHA_STAGING.csv`
+    - `AUTOMATIONS/twitter_scraper_output/scrape_20260312_021212.json`
+- **Live app-factory routing completed after scrape:**
+  - `python3 AUTOMATIONS/app_factory_autopilot.py --run --skip-accounts --approval-max 120 --processor-batch 120 --queue-limit 60`
+  - Steps OK: bookmarks scrape, auto-approve, auto-process, `alpha_to_ops.py`, queue rebuild
+  - Top queue remains:
+    1. `PrayerLock / Scripture Streak` AI layer
+    2. `Vault` monetization/localization upgrade
+    3. `Streakr` review-timing + habit UX upgrades
+- **CodeRelay installed and verified locally:**
+  - Install dir: `~/.coderelay/app`
+  - CLI: `~/.coderelay/bin/coderelay`
+  - Config: `~/.coderelay/config.json`
+  - Launch agent: `~/Library/LaunchAgents/com.coderelay.plist`
+  - Local URL: `http://127.0.0.1:8790`
+  - Health verified: `/health` OK, `/admin/status` OK
+  - Bridge verified: `anchor.log` shows Orbit connection; Codex provider reports healthy in local-orbit status
+- **Same-Wi-Fi pairing bridge added:**
+  - Relay script: `AUTOMATIONS/coderelay_lan_proxy.py`
+  - Relay process forwards `0.0.0.0:8791` -> `127.0.0.1:8790`
+  - This is now the fallback path only; canonical public origin moved back to the tailnet URL
+  - Fresh pairing links now mint against `http://192.168.1.172:8791/pair?code=<short-lived-code>`
+  - Constraint: same Wi-Fi only. This is a LAN bridge, not full remote internet access.
+- **Off-Wi-Fi private transport upgraded:**
+  - Userspace Tailscale daemon installed at `~/Library/LaunchAgents/com.tailscale.userspace.plist`
+  - Live node: `printmaxx-control.tail16dddb.ts.net`
+  - Live tailnet IP: `100.70.237.42`
+  - SSH capability requested via `tailscale up --ssh`
+  - Serve helper added: `AUTOMATIONS/coderelay_tailscale_sync.py`
+  - Sync launch agent added: `~/Library/LaunchAgents/com.coderelay.tailscale-sync.plist`
+  - `tailscale serve status` now confirms `https://printmaxx-control.tail16dddb.ts.net (tailnet only)` proxying `http://127.0.0.1:8790`
+  - `python3 AUTOMATIONS/coderelay_tailscale_sync.py` ran clean and confirmed CodeRelay origin alignment to the tailnet URL
+- **Full GUI fallback added:**
+  - RustDesk installed to `~/Applications/RustDesk.app`
+  - RustDesk launch agent added: `~/Library/LaunchAgents/com.rustdesk.client.plist`
+  - Current RustDesk ID: stored in `~/.printmaxx_remote_access.json`
+  - Blockers:
+    - permanent password could not be set by CLI because admin/service install is still required
+    - macOS Screen Recording and Accessibility permissions still need manual approval
+- **Private state file added:**
+  - `~/.printmaxx_remote_access.json`
+  - `AUTOMATIONS/coderelay_tailscale_sync.py` now keeps the Tailscale + CodeRelay sections fresh automatically
+  - `AUTOMATIONS/remote_access_status.py` can snapshot the full Tailscale + CodeRelay + RustDesk stack on demand
+- **Sanitized carve-out staged for open source:**
+  - `OPS/REMOTE_CONTROL_DAISY_CHAIN.md`
+  - `OPEN_SOURCE/remote-control-daisy-chain/`
+  - Contains generic scripts, launchd templates, docs, and example state with no PRINTMAXX business data
+- **Remaining blocker for mobile/iPhone access:**
+  - Install/login Tailscale on the iPhone with the same tailnet account so `https://printmaxx-control.tail16dddb.ts.net` resolves off Wi-Fi
+  - Grant RustDesk macOS permissions if you want full GUI/app control from iPhone
+  - If you want unattended RustDesk with a permanent password, complete the app/service install path manually on the Mac
+- **Human actions required next:**
+  - P0: Install or open the Tailscale iPhone app and log into the same account so the tailnet URL works from anywhere
+  - P0: Test CodeRelay from the iPhone against `https://printmaxx-control.tail16dddb.ts.net`
+  - P0: Open RustDesk on the Mac and grant Screen Recording + Accessibility if prompted
+  - P1: If you want unattended GUI login, finish RustDesk’s password/service setup in-app
+  - P1: Test Tailscale SSH from a second device as the terminal-rescue layer
+  - P1: Keep Brave/X logged in so the live app-alpha scrape path stays usable
+
+### APP FACTORY AUTOPILOT BOOST — 2026-03-12
+- **Status:** IN_PROGRESS
+- **Built:** Ranked app queue + autopilot chain
+  - `AUTOMATIONS/app_factory_autopilot.py` -> bookmarks/accounts scrape -> auto-approve -> auto-process -> `alpha_to_ops.py` -> queue refresh
+  - `AUTOMATIONS/app_factory_command_center.py` -> ranked app build/upgrade queue
+  - `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md` -> human-readable execution brief
+- **Fastest practical ship order:**
+  1. `Streakr` upgrades: post-value review prompt timing, HabitSwipe swipe UX, Minimum Viable Day mode
+  2. `PrayerLock / Scripture Streak` AI layer: BibleChat-style chat/RAG + soft paywall + annual-first pricing
+  3. `Vault` upgrade: localization + stronger paywall/pricing + narrative launch framing
+  4. New build lane: privacy-first local utility app (PDF/local tool class)
+- **Execution specs created:**
+  - `AUTOMATIONS/auto_ops/app_specs/APP_SPEC_STREAKR_ENHANCEMENT_20260312.md`
+  - `AUTOMATIONS/auto_ops/app_specs/APP_SPEC_PRAYERLOCK_AI_LAYER_20260312.md`
+  - `AUTOMATIONS/auto_ops/app_specs/APP_SPEC_VAULT_GTM_UPGRADE_20260312.md`
+- **Human actions required:**
+  - P0 (5-15 min): Keep X/Brave logged in so the bookmark/account scrapers can run live
+  - P0 (5 min): Leave automation privacy permission on `Documents`; `Desktop` and network volumes not required unless you intentionally use them
+  - P0 (20-40 min): Create/finish Apple Developer + App Store Connect + RevenueCat + Stripe path. This is still the app-factory bottleneck
+  - P1 (10 min): Review the live queue in `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md` and confirm `Streakr` as first ship target if you want the default sequence
+  - P1 (15 min): If you want live distribution immediately after upgrades, create/finish X Premium and any missing posting accounts
 
 ### INBOUND MAXIMIZER CYCLE 9 — 2026-03-10
 - **Cross-promo footers:** Injected into ALL 8 PWA source files. Each app now links to all others + has email capture.

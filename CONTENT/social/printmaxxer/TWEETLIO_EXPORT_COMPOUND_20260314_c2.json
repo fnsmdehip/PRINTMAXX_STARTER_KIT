@@ -1,0 +1,50 @@
+[
+  {
+    "text": "7 of my autonomous agents were silently failing for days.\n\nroot cause: unescaped parentheses in launchd plist files. bash couldn't parse the inline prompts.\n\nfix: extracted all prompts to separate .md files. agents now read from files instead of inline strings.\n\n30 minutes of debugging. 7 agents resurrected.\n\nthe lesson nobody talks about with AI agents: 80% of failures are infra, not AI.",
+    "scheduledDate": "2026-03-14T09:00:00",
+    "category": "build-in-public",
+    "source": "health_report_20260314"
+  },
+  {
+    "text": "my AI CEO agent created 20 new ventures while I was sleeping.\n\nQuora answer marketing (score: 80.5)\nWalmart clearance arbitrage (score: 69.2)\nClaude Code freelance arbitrage (score: 61.5)\nAI wrapper apps (score: 61.4)\n\n...plus 14 more. all scored, categorized, ready to execute.\n\nI woke up to 20 new business lanes I didn't start.",
+    "scheduledDate": "2026-03-14T12:00:00",
+    "category": "build-in-public",
+    "source": "ceo_decisions_20260314"
+  },
+  {
+    "text": "saw a post on r/SideProject get 610 upvotes and 1,518 comments.\n\nthe hook: \"not another AI app.\" physical product. contrarian positioning.\n\ntypical post on that sub gets 50-100 upvotes.\n\nanti-AI sentiment is the engagement multiplier nobody's using.\n\nif you're building with AI, positioning AGAINST AI in your marketing is the move right now.",
+    "scheduledDate": "2026-03-14T15:00:00",
+    "category": "alpha-signal",
+    "source": "growth_strategy_20260314"
+  },
+  {
+    "text": "claude code freelance arbitrage is the simplest play nobody's running.\n\n1. find \"I need a developer\" posts on reddit/upwork\n2. scope the work (usually 2-4 hours of actual coding)\n3. quote $500-3,000\n4. build it in 45 minutes with claude code\n5. deliver next day\n\nmargin: 85-95%.\n\nthe bottleneck isn't finding clients. it's having accounts set up to reply.",
+    "scheduledDate": "2026-03-14T18:00:00",
+    "category": "method-drop",
+    "source": "ceo_venture_S01"
+  },
+  {
+    "text": "genuine question: what's the right number of autonomous agents for a solo operation?\n\nI went from 0 to 33. killed 7. created 20 more. now at 46.\n\nat what point does \"orchestrating agents\" become its own full-time job that defeats the purpose?\n\nasking because I might be there.",
+    "scheduledDate": "2026-03-14T21:00:00",
+    "category": "reply-bait",
+    "source": "compound_cycle2"
+  },
+  {
+    "text": "went to sleep. woke up with 20 new business opportunities scored, ranked, and ready to execute.\n\nthe CEO agent created ventures for freelance arbitrage, clearance arbitrage, answer marketing, print-on-demand, AI wrapper apps.\n\nI didn't ask it to. it found them in the intelligence pipeline and decided they met threshold.\n\nthis is what autonomous means.",
+    "scheduledDate": "2026-03-15T09:00:00",
+    "category": "engagement-farming",
+    "source": "compound_cycle2"
+  },
+  {
+    "text": "the most boring part of running AI agents that nobody posts about:\n\ndebugging bash syntax errors in launchd plist XML files at 5am because an unescaped parenthesis in a prompt caused 7 agents to silently fail for 3 days.\n\nthe AI revolution is 10% AI and 90% XML escaping.",
+    "scheduledDate": "2026-03-15T12:00:00",
+    "category": "engagement-farming",
+    "source": "health_report_20260314"
+  },
+  {
+    "text": "solopreneur stack in 2026:\n\n$200/mo: claude max (runs all agents)\n$0: surge.sh (hosts all sites)\n$0: python + cron (runs all automation)\n$0: overture maps (1.45M business leads)\n$0: git (version control = agent memory)\n\ntotal: $200/mo running 46 agents, 20 ventures, 310 scripts.\n\nthe infrastructure is free. the execution is the bottleneck.",
+    "scheduledDate": "2026-03-15T15:00:00",
+    "category": "engagement-farming",
+    "source": "compound_cycle2"
+  }
+]

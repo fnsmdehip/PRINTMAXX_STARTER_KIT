@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>io.remotecontrol.coderelay.lan-proxy</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>__REPO__/OPEN_SOURCE/remote-control-daisy-chain/scripts/coderelay_lan_proxy.py</string>
+    <string>--listen-host</string>
+    <string>0.0.0.0</string>
+    <string>--listen-port</string>
+    <string>8791</string>
+    <string>--target-host</string>
+    <string>127.0.0.1</string>
+    <string>--target-port</string>
+    <string>8790</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>__HOME__/.tailscale-remote-control/coderelay_lan_proxy.log</string>
+  <key>StandardErrorPath</key>
+  <string>__HOME__/.tailscale-remote-control/coderelay_lan_proxy.log</string>
+</dict>
+</plist>

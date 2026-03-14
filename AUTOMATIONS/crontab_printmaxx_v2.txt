@@ -76,7 +76,7 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 15 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/trending_products_scanner.py >> AUTOMATIONS/logs/trending_products.log 2>&1
 
 # 6:00 AM Monday - [NEW] Engagement optimizer weekly schedule
-0 6 * * 1 cd $BASE && $PYTHON AUTOMATIONS/engagement_optimizer.py --weekly-schedule >> AUTOMATIONS/logs/engagement_optimizer.log 2>&1
+0 6 * * 1 cd $BASE && $PYTHON AUTOMATIONS/engagement_optimizer.py --schedule-week >> AUTOMATIONS/logs/engagement_optimizer.log 2>&1
 
 # =============================================================================
 # EVERY 2-4 HOURS (recurring scans)
@@ -239,3 +239,9 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 
 # Daily outreach queue refresh: generates emails for any newly deployed sites
 15 6 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --outreach >> AUTOMATIONS/logs/openclaw_outreach.log 2>&1
+
+# =============================================================================
+# INBOUND LEAD TRACKER — daily scan of Reddit + Twitter + freelance responses
+# Runs at 8:30 AM after scrapers have completed their 6 AM runs
+# =============================================================================
+30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/inbound_lead_tracker.py --scan >> AUTOMATIONS/logs/inbound_lead_tracker.log 2>&1

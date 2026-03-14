@@ -5990,3 +5990,199 @@ MAVERICKCREATIVE.NET
 
 [r/wallstreetbets] Who bought these puts? $104k yoinked from yall
 
+
+
+---
+
+## Pending Enhancement (ALPHA21500, Score: 22)
+
+**Source:** @iamgdsa (high-signal-accounts) | **URL:** https://x.com/iamgdsa/status/2031423425810661416
+**Added:** 2026-03-10T21:45:01-04:00
+
+literally figure out how to fit your product into a relationship or cheating story and go viral
+
+
+
+---
+
+## Pending Enhancement (ALPHA21518, Score: 22)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2031410786552189306
+**Added:** 2026-03-10T21:45:01-04:00
+
+Full tutorial for ecom brand viral ai UGC scaling
+
+
+
+---
+
+## Pending Enhancement (ALPHA22509, Score: 30)
+
+**Source:** @jasoncfox (high-signal-accounts) | **URL:** https://x.com/jasoncfox/status/2031738340161056870
+**Added:** 2026-03-12T02:14:17-04:00
+
+I've always been drawn to platforms where you can force growth.
+
+Facebook in the early days:
+
+- Add 50 people a day.
+- Invite people to your FB group.
+- Grow your followers and group.
+- Build an audience fast.
+
+It worked.
+
+X/Twitter:
+
+- Run a giveaway.
+- Get a flood of followers
+
+
+
+---
+
+## Pending Enhancement (ALPHA22694, Score: 32)
+
+**Source:** r/wallstreetbets | **URL:** https://reddit.com/r/wallstreetbets/comments/1rqs3ah/nbis_up_10_with_announcement_of_2billion/
+**Added:** 2026-03-12T06:15:01-04:00
+
+[r/wallstreetbets] $NBIS up 10% with announcement of $2billion investment from NVIDIA
+
+
+
+---
+
+## Pending Enhancement (ALPHA22852, Score: 22)
+
+**Source:** r/nextjs | **URL:** https://reddit.com/r/nextjs/comments/1rqt900/vercel_image_optimization_nearly_doubled_our/
+**Added:** 2026-03-12T06:25:34-04:00
+
+[r/nextjs] Vercel image optimization nearly doubled our infrastructure bill
+
+
+
+---
+
+## Pending Enhancement (ALPHA22986, Score: 28)
+
+**Source:** r/cryptomarkets | **URL:** https://reddit.com/r/CryptoMarkets/comments/1rqoeq4/fake_police_raid_in_france_ends_with_a_1_million/
+**Added:** 2026-03-12T06:31:31-04:00
+
+[r/cryptomarkets] Fake Police Raid In France Ends With a $1 Million BTC Loot
+
+
+
+---
+
+## Pending Enhancement (ALPHA23878, Score: 31)
+
+**Source:** @jasoncfox (high-signal-accounts) | **URL:** https://x.com/jasoncfox/status/2032069234004529277
+**Added:** 2026-03-13T05:07:31-04:00
+
+The worst clients come from viral content
+
+Your goal on social media is to:
+
+- Get Engagement
+- Get Followers
+- Get Paid
+
+The issue is when you go "viral" or focus exclusively on building followers you'll get leads who
+
+Comment on everything.
+DM you regularly with questions.
+And
+
+
+
+---
+
+## Pending Enhancement (ALPHA23957, Score: 30)
+
+**Source:** @lilyraynyc (high-signal-accounts) | **URL:** https://x.com/lilyraynyc/status/2032521902481190913
+**Added:** 2026-03-13T16:50:42-04:00
+
+I love how the viral BS posts get 1,000 likes on here, but posts like this that speak the truth? 
+
+Good representation of the state of our industry right now actually
+
+
+
+---
+
+## Pending Enhancement (ALPHA24168, Score: 24)
+
+**Source:** @alexxgrowth (high-signal-accounts) | **URL:** https://x.com/alexxgrowth/status/2032088794099290346
+**Added:** 2026-03-13T16:50:56-04:00
+
+this is where things get tricky
+
+a data point i like to look at is audience demographics
+
+most of the time, these viral videos will have different demographics than others (Canada, US, UK)
+
+you can link that data back to the conversion data where u can attribute UK conversions
+
+
+
+---
+
+## Pending Enhancement (ALPHA24170, Score: 30)
+
+**Source:** @alexxgrowth (high-signal-accounts) | **URL:** https://x.com/alexxgrowth/status/2031918446737289555
+**Added:** 2026-03-13T16:50:56-04:00
+
+this is how i track conversions for my clipping campaigns
+
+1: get a viral video
+2: overlay the graph of the viral video to the conversion graph w/ same time frames
+3: calculate ROI from there & assume it's the same for all videos
+
+for example, u get 1m views and in that timeframe
+
+
+
+---
+
+## Pending Enhancement (ALPHA24173, Score: 22)
+
+**Source:** @alexxgrowth (high-signal-accounts) | **URL:** https://x.com/alexxgrowth/status/2031736903582789667
+**Added:** 2026-03-13T16:50:56-04:00
+
+bros reaction when i ask him to comment "VIRAL" on my post for the 6th time this week
+
+
+
+---
+
+## Pending Enhancement (ALPHA24221, Score: 31)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2032100708749594890
+**Added:** 2026-03-14T04:24:41-04:00
+
+@Primal_Thrive The unemployed are followers of the Cult of Hare. The Hare that abides no eternal prisons and no infinite plastic cells. 
+The Hare is cunning. 
+It leaps and bounds and hides.
+Its ears are always erect.
+Its Ruby eye is always aware.
+The Hare resists the false sun. https://t.co/pIheua8TcU
+
+
+
+---
+
+## Pending Enhancement (ALPHA24224, Score: 22)
+
+**Source:** @lottsnomad (high-signal-accounts) | **URL:** https://x.com/lottsnomad/status/2032594849308754308
+**Added:** 2026-03-14T04:24:41-04:00
+
+retention hack:
+
+don’t rely on willpower
+
+block the apps
+
+if the habit unlocks the reward, engagement spikes
+
+we tested this with pray screen and hit 60% retention on day 30
+

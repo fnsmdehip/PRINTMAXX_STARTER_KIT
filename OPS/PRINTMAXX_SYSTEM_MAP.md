@@ -11,7 +11,7 @@ This is the live system map for PRINTMAXX.
 
 - Update this file immediately when agents, automations, schedules, queues, dashboards, memory layers, control surfaces, key directories, or data flow change.
 - If the change also affects navigation or standing instructions, update `.claude/CLAUDE.md` in the same session.
-- Latest verified control-surface update: 2026-03-10.
+- Latest verified control-surface update: 2026-03-13 03:14 EDT.
 
 ---
 
@@ -69,6 +69,8 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── background_reddit_scraper.py  #   L4 collection. Reddit JSON API, no auth.
 │   ├── alpha_auto_processor.py       #   L3 execution. Routes ALPHA_STAGING.csv → ventures/OPS/cron/archive.
 │   ├── daily_research_orchestrator.py#   L3 execution. Research pipeline: scrapers → alpha review → content gen.
+│   ├── app_factory_autopilot.py      #   L3 execution. Bookmarks + app alpha scrape + auto-approve + auto-process + queue rebuild.
+│   ├── app_factory_command_center.py #   L3 execution. Scores app alpha → ranked app queue + OPS app command center.
 │   ├── quality_gate.py               #   L5 quality. Hard gate — blocks slop, rewrites bad content.
 │   ├── system_health_monitor.py      #   L5 quality. Health checks: agents, cron, disk, processes.
 │   ├── compliance_scanner.py         #   L5 quality. FTC/platform compliance auditing.
@@ -82,7 +84,7 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   │
 │   ├── agent/                        #   Agent state, communication, orchestration
 │   │   ├── ceo_agent/                #     CEO state, decisions.jsonl, audit.jsonl
-│   │   ├── autonomy/                 #     Venture state, schedules, launchd plists, results
+│   │   ├── autonomy/                 #     Venture state, schedules, launchd plists, results, app_factory_priority_queue.json, app_factory_autopilot_status.json
 │   │   ├── swarm/                    #     Swarm state, reports/ (gap, health, alpha, SEO, competitor intel)
 │   │   ├── missions.jsonl            #     Shared mission log (visible in Command Center)
 │   │   └── message_bus.jsonl         #     Inter-agent communication bus
@@ -116,6 +118,7 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── AUTONOMOUS_TASK_QUEUE.jsonl   #   System-wide queued work generated from MASTER_OPS wiring
 │   ├── PROMPT_META_REVIEW.md         #   48h prompt analysis: intent, lost threads, patterns (auto every 2 days)
 │   ├── META_PLAN.json                #   MASTER_OPS-derived gap map and execution plan
+│   ├── APP_FACTORY_ALPHA_COMMAND_CENTER.md # Ranked app build/upgrade queue + hard gates
 │   ├── MULTI_ACCOUNT_INFRASTRUCTURE.md # Antidetect browser, proxy, account architecture
 │   ├── GROWTH_ALPHA_SOURCES.md       #   Forums, growth sources, proxy/payment comparisons
 │   ├── NAV_INDEX.md                  #   632-line "Where is..." navigation index
@@ -173,14 +176,32 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 | Claude operating manual | `.claude/CLAUDE.md` | Session rules, navigation, standing instructions |
 | Canonical live system map | `OPS/PRINTMAXX_SYSTEM_MAP.md` | Current topology, control surfaces, data flow. Update on change. |
 | Architecture patterns | `OPS/AUTONOMOUS_SYSTEM_ARCHITECTURE.md` | Stable battle-tested patterns and memory model |
+| App factory autopilot | `AUTOMATIONS/app_factory_autopilot.py`, `AUTOMATIONS/agent/autonomy/app_factory_autopilot_status.json` | End-to-end APP alpha ingest and queue refresh chain |
+| App factory command center | `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md`, `AUTOMATIONS/agent/autonomy/app_factory_priority_queue.json` | Ranked app build/upgrade queue and execution gates |
 | Codex automation config | `$CODEX_HOME/automations/printmaxx/automation.toml` | Recurring Codex automation definition |
 | Codex automation memory | `$CODEX_HOME/automations/printmaxx/memory.md` | Run log and prior automation decisions |
 | Meta planning outputs | `OPS/META_PLAN.json`, `OPS/AUTONOMOUS_TASK_QUEUE.jsonl` | Latest MASTER_OPS-derived plan and queued work |
+| CodeRelay local remote bridge | `~/.coderelay/config.json`, `~/.coderelay/bin/coderelay`, `~/Library/LaunchAgents/com.coderelay.plist`, `AUTOMATIONS/coderelay_lan_proxy.py` | Agent-native remote control surface for Codex via Orbit/Anchor. Canonical public origin now points to the tailnet URL; LAN relay on `:8791` remains the same-Wi-Fi fallback for first-run pairing and local rescue. |
+| Tailscale userspace transport | `~/Library/LaunchAgents/com.tailscale.userspace.plist`, `AUTOMATIONS/coderelay_tailscale_sync.py`, `~/Library/LaunchAgents/com.coderelay.tailscale-sync.plist` | Private remote-access transport for anywhere access. Userspace daemon + sync loop keep SSH, Serve, and CodeRelay public origin aligned to the live MagicDNS URL. |
+| Full GUI fallback | `~/Applications/RustDesk.app`, `~/Library/LaunchAgents/com.rustdesk.client.plist` | Full remote desktop/app control layer for “act like I am on the laptop” fallback |
+| Remote access doctor | `AUTOMATIONS/remote_access_status.py`, `~/.printmaxx_remote_access.json` | On-demand snapshot of Tailscale, CodeRelay, and RustDesk status. Sync loop now refreshes the private state file automatically. |
+| Sanitized carve-out note | `OPS/REMOTE_CONTROL_DAISY_CHAIN.md` | Open-source extraction boundary and operating pattern for the remote-control daisy chain |
+| Sanitized open-source kit | `OPEN_SOURCE/remote-control-daisy-chain/` | Repo-ready carve-out with generic scripts, launchd templates, docs, and example state |
 
-**Latest verified Codex layer (2026-03-10):**
+**Latest verified Codex layer (2026-03-13):**
 - `meta_planner` ran against `PRINTMAXX_MASTER_OPS_ENHANCED_2026-03-03.xlsx`.
 - It produced `OPS/META_PLAN.json` and queued 507 tasks into `OPS/AUTONOMOUS_TASK_QUEUE.jsonl`.
 - Coverage snapshot: 518 actionable ops, with 101 scripted, 62 LLM tasks, and 355 remaining gaps.
+- `twitter_alpha_scraper.py --accounts --limit 12 --days 30` completed live with Brave cookies + Playwright under elevated browser permissions and saved 38 new high-signal entries (`ALPHA22483-ALPHA22520`) to `LEDGER/ALPHA_STAGING.csv`.
+- `app_factory_autopilot.py --run --skip-accounts --approval-max 120 --processor-batch 120 --queue-limit 60` completed live and refreshed approval, routing, specs, and the ranked app queue.
+- CodeRelay is installed locally at `~/.coderelay`, with `http://127.0.0.1:8790/health` and `/admin/status` verified and Anchor connected to Orbit.
+- CodeRelay `publicOrigin` now resolves to `https://printmaxx-control.tail16dddb.ts.net` via `python3 AUTOMATIONS/coderelay_tailscale_sync.py`, and the LAN relay at `AUTOMATIONS/coderelay_lan_proxy.py` remains available as the same-Wi-Fi fallback on `http://192.168.1.172:8791`.
+- Latest verified same-Wi-Fi pairing path: `http://192.168.1.172:8791/pair?code=<short-lived-code>` generated successfully at 2026-03-12 03:47 local. Codes are one-time and expire quickly, so mint fresh ones from `/admin` when needed.
+- Tailscale userspace transport is live under `com.tailscale.userspace`. Node authenticated as `printmaxx-control.tail16dddb.ts.net` with Tailscale IP `100.70.237.42`, and `tailscale serve status` now confirms `https://printmaxx-control.tail16dddb.ts.net (tailnet only) -> http://127.0.0.1:8790`.
+- `AUTOMATIONS/coderelay_tailscale_sync.py` plus `com.coderelay.tailscale-sync` now auto-finish Serve/origin wiring after login and keep `~/.printmaxx_remote_access.json` fresh.
+- `AUTOMATIONS/remote_access_status.py` was added as an on-demand doctor for the full remote-control stack.
+- RustDesk `1.4.6` is installed in `~/Applications/RustDesk.app` and launched at login via `com.rustdesk.client`, but unattended password/service setup still needs admin-level or manual in-app completion and macOS screen recording/accessibility permissions.
+- Sanitized extraction work now lives at `OPEN_SOURCE/remote-control-daisy-chain/` so the daisy-chain concept can be split out without leaking PRINTMAXX business state or private identifiers.
 
 ---
 
@@ -305,6 +326,9 @@ L6 MAINTENANCE      loop_closer.py ───────────────
 
 ```
 SCRAPE ──→ ALPHA_STAGING.csv ──→ alpha_auto_processor ──→ Method CSVs + Venture routing
+BOOKMARKS/HIGH-SIGNAL ──→ app_factory_autopilot.py ──→ alpha_auto_approver.py ──→ alpha_auto_processor.py ──→ alpha_to_ops.py
+                                 │
+                                 └──→ app_factory_command_center.py ──→ app_factory_priority_queue.json + OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md
                                                               │
 INTELLIGENCE_CATALOG.json ◄── wire_missed_intelligence ◄── filesystem scan
          │
@@ -401,8 +425,18 @@ message_bus.jsonl       Inter-agent messages
 feedback_recommendations.json  Loop closer → swarm adjustments
 USER_PROMPTS.jsonl      Every user prompt timestamped (hook captures on submit)
 master_ops_cache.json   Bridge JSON cache of xlsx (182 ops, 19 sheets, 12h TTL)
+app_factory_priority_queue.json  Ranked app alpha queue for APP_FACTORY autonomy
+app_factory_autopilot_status.json  Last autopilot chain result and queue snapshot
 throttle_state.json     Current throttle mode and agent overrides
 throttle_config.json    Agent tier config (efficient/high intervals)
+printmaxx_gates.db      Blocking gate states + task graph (SQLite, survives restart)
+MODEL_ROUTING_CONFIG.json  Cross-model routing (writer != reviewer)
+INBOUND_LEADS.csv       Observer agent lead captures (score, platform, engagement)
+OUTREACH_QUEUE.csv      Quinn agent warm outreach queue
+DECISION_REVIEWS.jsonl  Challenger agent review logs
+PENDING_HUMAN_APPROVAL.jsonl  Items needing human action
+worktree_state.json     Active git worktrees for parallel agents
+SOUL.md                 Behavioral identity for all agents
 ```
 
 ---
@@ -435,6 +469,108 @@ Unified dashboard replacing 8 scattered UIs. Auto-launches on session start.
 **Desktop app:** `AUTOMATIONS/PrintmaxxPanel.app` — neon green P icon, launches server + browser.
 
 **Endpoints:** `/api/status`, `/api/agents`, `/api/system-tree`, `/api/realtime`, `/api/ventures`, `/api/pipeline`, `/api/master-ops`, `/api/actions`, `/api/blockers`
+
+---
+
+## RESTRUCTURE V2 — NEW COMPONENTS (2026-03-13)
+
+Source: PRINTMAXX_RESTRUCTURE_V2.xlsx — gap analysis from metaswarm, Swan AI, OpenClaw, IH patterns, ccswarm, wshobson/agents
+
+### SOUL.md (Behavioral Identity)
+```
+AUTOMATIONS/SOUL.md — behavioral directives for all agents
+  Injected via: intelligence_router.py → get_intelligence() → result["soul_directives"]
+  Also: _common.py → get_soul() for direct reads
+  Core: "be resourceful before asking", "execute don't deliberate", "every output has a consumer"
+```
+
+### Blocking State Gates (T014 — BEADS pattern)
+```
+AUTOMATIONS/gates.py — deterministic state machine for pipeline quality control
+  States: PENDING → IMPLEMENTING → VALIDATING → REVIEWING → APPROVED | REJECTED | HUMAN_REQUIRED
+  DB: LEDGER/printmaxx_gates.db (SQLite, survives session restart)
+  Rule: NO path from REJECTED → APPROVED without human_override=True
+  Consumers: content pipeline, lead outreach, ecomm arb, CEO agent
+```
+
+### Cross-Model Adversarial Review (T013)
+```
+.claude/external-tools.yaml — model routing config (Codex/Gemini stubs)
+AUTOMATIONS/MODEL_ROUTING_CONFIG.json — evaluator_writer=Sonnet, evaluator_reviewer=Opus
+  Rule: agent that writes output NEVER reviews own output
+  Budget: $2/task, $20/session caps
+```
+
+### Swan AI GTM Agents (T015)
+```
+AUTOMATIONS/shakespeare_agent.py — content gen (Sonnet, daily 8am)
+  Arc: Attack Outdated Belief → Evidence → New Framework → Data → CTA
+  Output: CONTENT/linkedin/ + CONTENT/social/posting_queue/
+
+AUTOMATIONS/observer_agent.py — engagement monitoring (Haiku, every 2h)
+  Scoring: agency founder (10) → agency employee (7) → consultant (5) → other (2)
+  Output: LEDGER/INBOUND_LEADS.csv (score > 7 = lead, score > 9 = immediate alert)
+
+AUTOMATIONS/quinn_agent.py — warm outreach gen (Sonnet, triggered by observer)
+  Output: LEDGER/OUTREACH_QUEUE.csv (warm messages referencing specific engagement)
+  A/B: 50% Quinn warm vs 50% standard cold
+```
+
+### Task Dependency Graph (T016)
+```
+AUTOMATIONS/task_graph.py — DAG-based dependency chains
+  CHAIN_ALPHA_PIPELINE: scraper → alpha_processor → intel_router → ceo_agent
+  CHAIN_CONTENT: shakespeare → evaluator → cross_model_reviewer → social_poster
+  CHAIN_LEAD: observer → quinn → lead_machine → compliance_scanner → send
+  CHAIN_ARB: ecomm_arb → evaluator → HUMAN_GATE → asset_deployer
+  State: LEDGER/printmaxx_gates.db (task_graph table)
+```
+
+### Git Worktree Isolation (T017)
+```
+AUTOMATIONS/worktree_manager.py — parallel agent file isolation
+  Creates: ../printmaxx-{name}/ worktrees
+  Strategies: last-write-wins (content), human-review (revenue files)
+  State: AUTOMATIONS/agent/worktree_state.json
+```
+
+### Parallel Challenger Review (T023)
+```
+AUTOMATIONS/challenger_agents.py — adversarial review of CEO decisions
+  Devil's Advocate | Risk Assessor | Market Reality Checker
+  Trigger: MAJOR decisions (PROMOTE > $100, KILL > 30d active, CREATE > 10h build)
+  2+ OBJECTIONs → PENDING_HUMAN_APPROVAL.jsonl
+  Log: LEDGER/DECISION_REVIEWS.jsonl
+```
+
+### Agent Skills Marketplace (T018)
+```
+skills/printmaxx-intelligence-router/SKILL.md
+skills/printmaxx-ceo-orchestrator/SKILL.md
+skills/printmaxx-compliance-scanner/SKILL.md
+skills/printmaxx-alpha-processor/SKILL.md
+skills/printmaxx-revenue-tracker/SKILL.md
+  Monetization: free basic + $49 pro bundle on Gumroad
+```
+
+### Human Approval Queue
+```
+OPS/PENDING_HUMAN_APPROVAL.jsonl — items needing human action
+  HAG001: Reddit r/entrepreneur post (15 min)
+  HAG002: LinkedIn EAS company + founder page (20 min)
+  HAG003: Discord PRINTMAXX community server (30 min)
+  HAG004: Public GitHub repo printmaxx-architecture (10 min)
+  HAG005: Public GitHub repo printmaxx-skills (10 min)
+```
+
+### Distribution Status
+```
+Twitter: FULL_OPS (Day 22, advanced from Day 2 per T019/T022)
+  40 posts queued, 10/day limit, links OK, threads OK
+  Next cron run will post from full ops queue
+LinkedIn: CONTENT/linkedin/ created, pending human account setup
+Build-in-Public: CONTENT/build_in_public/ created
+```
 
 ---
 

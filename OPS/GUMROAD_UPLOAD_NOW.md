@@ -502,3 +502,28 @@ JUST IN: Brent crude oil surges to $115, up 25% today.
 
 [ACQUISITION] Launched on Product Hunt today – Sentence, a screen time blocker you unlock by writing a sentence by hand
 
+
+
+---
+
+## Pending Enhancement (ALPHA22592, Score: 29)
+
+**Source:** @lookonchain (high-signal-accounts) | **URL:** https://x.com/lookonchain/status/2031908580165894595
+**Added:** 2026-03-12T06:31:32-04:00
+
+Whale 0x8E34, who bought 44,888 $ETH($92.97M) yesterday, bought another 18,436 $ETH($38.36M) today.
+
+
+
+
+---
+
+## Pending Enhancement (ALPHA23905, Score: 30)
+
+**Source:** @WatcherGuru (daily scraper) | **URL:** https://x.com/WatcherGuru/status/2032204924549783993
+**Added:** 2026-03-13T06:45:01-04:00
+
+Earlier today, a user attempted to buy AAVE using $50M USDT through the Aave interface.
+
+Given the unusually large size of the single order, the Aave interface, like most trading interfaces, warned the user about extraordinary slippage and required confirmation via a checkbox.
+

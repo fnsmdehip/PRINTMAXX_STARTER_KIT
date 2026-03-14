@@ -1,0 +1,14 @@
+{
+  "op_id": "N45",
+  "name": "Walmart Clearance Arbitrage",
+  "category": "ECOM",
+  "lane": "rbi_intent_sniping",
+  "created": "2026-03-13T04:00:07.657122",
+  "score": 69.2,
+  "revenue_range": "$100-2K/mo",
+  "description": "Retail arbitrage protected by First Sale Doctrine. Buy clearance, sell on eBay/Amazon.",
+  "automation_level": "Low",
+  "status": "CREATED",
+  "cycles_run": 0,
+  "last_cycle": null
+}

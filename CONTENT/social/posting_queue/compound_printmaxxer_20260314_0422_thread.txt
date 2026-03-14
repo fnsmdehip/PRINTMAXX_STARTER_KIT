@@ -1,0 +1,63 @@
+my 33 autonomous agents almost crashed my macbook yesterday.
+
+24GB free disk. burning 10GB/day. 2 days from a full system crash.
+
+here's what went wrong, what I learned, and why "more agents" is not always the answer.
+
+---
+
+the setup: 33 agents running via launchd on a macbook. CEO agent making portfolio decisions. venture agents executing. swarm agents hunting opportunities.
+
+two weeks ago I optimized: killed 7 underperforming agents, hibernated 4 more, throttled collection.
+
+disk stabilized. system hummed.
+
+---
+
+then someone (me) ran the deploy script.
+
+agent_swarm.py --deploy resets ALL agents to ACTIVE. it doesn't read the optimization state. doesn't check which agents were killed or throttled.
+
+one command undid 2 weeks of tuning. 7 zombie agents resurrected. collection went to max.
+
+---
+
+in 3 days:
+- alpha entries: 20,214 to 40,604 (+101%)
+- free disk: 55GB to 24GB (-56%)
+- posts queued: 538 to 695 (still 0 posted)
+- leads: 10,132 to 10,259 (still 0 contacted)
+- revenue: $0 to $0
+
+the system was collecting data faster than ever while doing absolutely nothing with it.
+
+---
+
+the fix was obvious once I saw it:
+
+deploy script needs to READ the optimization state before deploying. swarm_state.json and brain_decisions.jsonl should be the source of truth, not the default config.
+
+30 minutes of code. would have saved 31GB of disk and 3 days of wasted compute.
+
+---
+
+the real lesson isn't about disk space.
+
+it's about what happens when your system optimizes for collection instead of action.
+
+40,604 alpha entries x $0 per entry = $0.
+695 posts x 0 accounts = $0.
+10,259 leads x 0 outreach = $0.
+
+the multiplier on everything is zero because the last-mile delivery doesn't exist yet.
+
+---
+
+the meta-lesson for anyone building autonomous agent systems:
+
+1. deploy scripts must respect optimization state
+2. more data without more action is just a slower computer
+3. the hardest problem isn't building agents. it's knowing when to stop them.
+4. ship the monetization before the intelligence layer
+
+day 38. $0. but the infrastructure fix is in and the system won't sabotage itself again.

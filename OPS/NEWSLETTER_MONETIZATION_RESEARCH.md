@@ -337,3 +337,20 @@ Agencies charge $5K-$15K for what Anymark gives you for $189:
 
 All built from market demand signals.
 
+
+
+---
+
+## Pending Enhancement (ALPHA25121, Score: 23)
+
+**Source:** @kloss_xyz (high-signal-accounts) | **URL:** https://x.com/kloss_xyz/status/2032638527524192308
+**Added:** 2026-03-14T06:15:02-04:00
+
+imagine you’re Travis Kalanick
+
+you built Uber from nothing into a $70 billion company and changed how every city on earth moves
+
+then in the worst three weeks of your life, family tragedies hit, and five of your investors hand you a letter demanding you resign
+
+so you step down
+

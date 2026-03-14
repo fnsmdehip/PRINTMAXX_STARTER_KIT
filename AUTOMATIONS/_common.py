@@ -55,6 +55,15 @@ def run_script(script_name: str, args: list[str] | None = None, timeout: int = 6
     except Exception as e:
         return False, str(e)
 
+SOUL_PATH = PROJECT / "AUTOMATIONS" / "SOUL.md"
+
+def get_soul(max_chars: int = 2000) -> str:
+    """Read SOUL.md behavioral directives. Returns empty string if missing."""
+    try:
+        return SOUL_PATH.read_text(encoding="utf-8")[:max_chars]
+    except Exception:
+        return ""
+
 VENTURES = ["CONTENT", "OUTBOUND", "APP_FACTORY", "LOCAL_BIZ", "MONETIZATION", "PRODUCT", "RESEARCH", "SCRAPING"]
 
 VENTURE_NAMES = {

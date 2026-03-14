@@ -1,0 +1,108 @@
+{
+  "cycle_start": "2026-03-14T06:25:44.581239",
+  "cycle_end": "2026-03-14T06:25:44.587957",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 6,
+  "new_intel_rows_written": 6,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Built a SaaS that makes $8K/month. Turned down an offer to acqui-hire me for $400K. Everyone thinks I'm crazy.",
+      "subreddit": "SaaS",
+      "score": 111,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rp8bfj/built_a_saas_that_makes_8kmonth_turned_down_an/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "My micro SaaS hit $0 MRR for 5 straight months. Then one positioning change took it to $4,800 MRR in 6 weeks.",
+      "subreddit": "MicroSaas",
+      "score": 33,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rsglbi/my_micro_saas_hit_0_mrr_for_5_straight_months/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I built a free Android TV remote app (no ads, no premium) as a side project",
+      "subreddit": "SideProject",
+      "score": 120,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rsebx7/i_built_a_free_android_tv_remote_app_no_ads_no/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "I'm actually shaking. We got our first paying user in 2 days. \ud83e\udd79",
+      "subreddit": "SideProject",
+      "score": 116,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rspmrf/im_actually_shaking_we_got_our_first_paying_user/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "2 years unemployed, married, broke, and I've been \"building startups\" with AI. Nobody came. Not a single paying user.",
+      "subreddit": "Solopreneur",
+      "score": 79,
+      "url": "https://www.reddit.com/r/Solopreneur/comments/1rsycfo/2_years_unemployed_married_broke_and_ive_been/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "Built a SaaS that makes $8K/month. Turned down an offer to acqui-hire me for $400K. Everyone thinks I'm crazy.",
+      "subreddit": "SaaS",
+      "score": 111,
+      "comments": 104,
+      "url": "https://www.reddit.com/r/SaaS/comments/1rp8bfj/built_a_saas_that_makes_8kmonth_turned_down_an/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA24228"
+    },
+    {
+      "title": "My micro SaaS hit $0 MRR for 5 straight months. Then one positioning change took it to $4,800 MRR in 6 weeks.",
+      "subreddit": "MicroSaas",
+      "score": 33,
+      "comments": 12,
+      "url": "https://www.reddit.com/r/microsaas/comments/1rsglbi/my_micro_saas_hit_0_mrr_for_5_straight_months/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA24234"
+    },
+    {
+      "title": "I built a free Android TV remote app (no ads, no premium) as a side project",
+      "subreddit": "SideProject",
+      "score": 120,
+      "comments": 43,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rsebx7/i_built_a_free_android_tv_remote_app_no_ads_no/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA24199"
+    },
+    {
+      "title": "I'm actually shaking. We got our first paying user in 2 days. \ud83e\udd79",
+      "subreddit": "SideProject",
+      "score": 116,
+      "comments": 68,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rspmrf/im_actually_shaking_we_got_our_first_paying_user/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA24200"
+    },
+    {
+      "title": "2 years unemployed, married, broke, and I've been \"building startups\" with AI. Nobody came. Not a single paying user.",
+      "subreddit": "Solopreneur",
+      "score": 79,
+      "comments": 95,
+      "url": "https://www.reddit.com/r/Solopreneur/comments/1rsycfo/2_years_unemployed_married_broke_and_ive_been/",
+      "keyword_hits": 0,
+      "roi": "HIGH",
+      "post_id": "ALPHA24239"
+    }
+  ]
+}
