@@ -394,3 +394,94 @@ See you tomorrow :)
 
 [ACQUISITION] I built a platform that lets consultants create and sell AI document products through their own branded portal
 
+
+
+---
+
+## Pending Enhancement (ALPHA22674, Score: 22)
+
+**Source:** @Jahjiren (high-signal-accounts) | **URL:** https://x.com/Jahjiren/status/2031735192113594631
+**Added:** 2026-03-12T06:45:02-04:00
+
+Imagine 29.6 Million views paired up with a clear CTA for you App or SaaS
+
+All from a single video using AI
+
+probably made in 20 minutes
+
+
+
+---
+
+## Pending Enhancement (ALPHA22678, Score: 30)
+
+**Source:** @AntonioEscudero (high-signal-accounts) | **URL:** https://x.com/AntonioEscudero/status/2031790196849828222
+**Added:** 2026-03-12T06:45:02-04:00
+
+Day 5 of growing RankInPublic to $10k  a month
+
+We just crossed 2,700 users :)
+
+Today was mainly a day of fixing issues.
+
+We changed the embedding model used for the product matchups
+
+And we made more clear the differentiation between paid and free features
+
+
+
+---
+
+## Pending Enhancement (ALPHA23975, Score: 35)
+
+**Source:** @0xROAS (high-signal-accounts) | **URL:** https://x.com/0xROAS/status/2032528102580986108
+**Added:** 2026-03-13T16:50:42-04:00
+
+here's how to do this in 2 minutes:
+
+- upload image to gemini
+- ask it to generate a 1:1 json prompt
+- generate the voice with minimax audio
+- generate the image with nano banana 2
+- lipsync with infinitetalk (open-source)
+
+congrats you just saved $10k for a simple talking head
+
+
+
+---
+
+## Pending Enhancement (ALPHA24164, Score: 24)
+
+**Source:** @HamptonAc_ (high-signal-accounts) | **URL:** https://x.com/HamptonAc_/status/2031658715313590539
+**Added:** 2026-03-13T16:50:56-04:00
+
+The difference between $1K months and $100K months wasn't a better product or a secret strategy.
+
+It was staying in the game long enough for the skill to catch up to the ambition.
+
+Month 1 you're guessing. 
+
+Month 6 you're pattern matching.
+
+Month 12 you're operating.
+
+The
+
+
+
+---
+
+## Pending Enhancement (ALPHA25119, Score: 24)
+
+**Source:** @rryssf_ (high-signal-accounts) | **URL:** https://x.com/rryssf_/status/2032394951514890337
+**Added:** 2026-03-14T06:15:02-04:00
+
+$200M ARR in 11 months is real traction.
+
+"your first AI employee" is still marketing.
+
+the gap between demo and reliable autonomous work execution is where every agent product lives or dies.
+
+watching the failure rate data, not the fundraise.
+

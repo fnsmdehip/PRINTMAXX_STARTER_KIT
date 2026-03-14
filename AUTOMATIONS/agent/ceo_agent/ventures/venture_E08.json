@@ -1,0 +1,14 @@
+{
+  "op_id": "E08",
+  "name": "Trending Products Scanner",
+  "category": "ECOM",
+  "lane": "ecom_arb",
+  "created": "2026-03-13T08:00:12.212426",
+  "score": 52.4,
+  "revenue_range": "$100-1K/mo",
+  "description": "Automated discovery of trending products for ecom opportunities.",
+  "automation_level": "High",
+  "status": "CREATED",
+  "cycles_run": 0,
+  "last_cycle": null
+}

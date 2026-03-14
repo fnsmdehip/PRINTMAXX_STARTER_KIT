@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-09 22:15:00
+**Last updated:** 2026-03-14 07:55:00
 
 ---
 
@@ -16,15 +16,27 @@
 | walktounlock-web | https://walktounlock-web.surge.sh | LIVE |
 | tasksmash-web | https://tasksmash.surge.sh | LIVE |
 | coreday-web | https://coreday.surge.sh | LIVE |
+| coldmaxx | https://coldmaxx.surge.sh | LIVE |
+| invoiceforge | https://invoiceforge.surge.sh | LIVE |
+| pagescorer | https://pagescorer.surge.sh | LIVE |
+| pitchdeck | https://pitchdeck.surge.sh | LIVE |
+| prayerlock-web | https://prayerlock-web.surge.sh | LIVE |
+| prospectmaxx | https://prospectmaxx.surge.sh | LIVE |
+| roicalc | https://roicalc.surge.sh | LIVE |
+| stackmaxx | https://stackmaxx.surge.sh | LIVE |
+| content-calendar | https://content-calendar.surge.sh | LIVE |
+| invoice-tracker | https://invoice-tracker.surge.sh | LIVE |
+| website-audit | https://website-audit.surge.sh | LIVE |
+| mcp-marketplace | https://mcp-marketplace.surge.sh | LIVE |
 
 ---
 
 ## Summary
 
-- **Total Deployments:** 267 (tracked in deployed_assets.json)
-- **PWAs:** 8/8 LIVE
-- **Health Check (Cycle 21):** 10/10 key sites returning 200 OK
-- **Timestamp:** 2026-03-09 22:15:00
+- **Total Deployments:** 354 (tracked in deployed_assets.json)
+- **PWAs:** 10/10 LIVE
+- **Health Check:** 12/12 key sites returning 200 OK
+- **Timestamp:** 2026-03-14 10:52:00
 
 ## App Details
 
@@ -49,10 +61,11 @@
 
 ## Lead Magnets
 
-Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/`
+Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/` (updated 2026-03-13)
 
 | Lead Magnet | URL | Status | Source File |
 |-------------|-----|--------|-------------|
+| AI Slop Detector | https://ai-slop-detector.surge.sh | LIVE | ai-slop-detector.html |
 | Cold Email ROI Calculator | https://cold-email-roi-calculator.surge.sh | LIVE | index.html |
 | Ramadan Daily Planner | https://ramadan-daily-planner.surge.sh | LIVE | ramadan-daily-planner.html |
 | Revenue Leak Audit | https://revenue-leak-audit.surge.sh | LIVE | revenue-leak-audit.html |
@@ -64,6 +77,7 @@ Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/`
 | Cold Email Deliverability Checklist | https://cold-email-deliverability-checklist.surge.sh | LIVE (prev deployed) | cold-email-deliverability-checklist.html |
 | SaaS Stack Audit | https://saas-stack-audit.surge.sh | LIVE (prev deployed) | saas-stack-audit.html |
 | Lead Magnets Hub | https://printmaxx-lead-magnets.surge.sh | LIVE (prev deployed) | hub |
+| Productivity Stack Quiz | https://productivity-stack-quiz.surge.sh | LIVE | productivity-stack-quiz.html |
 
 ---
 
@@ -87,6 +101,8 @@ Deployed 2026-03-09 by GAP HUNTER agent.
 | Instantly vs Lemlist | https://instantly-vs-lemlist.surge.sh | LIVE |
 | PageScorer vs GTmetrix | https://pagescorer-vs-gtmetrix.surge.sh | LIVE |
 | SleepMaxx vs Sleep Cycle | https://sleepmaxx-vs-sleepcycle.surge.sh | LIVE |
+| PrayerLock vs Hallow | https://prayerlock-vs-hallow.surge.sh | LIVE |
+| FocusLock vs Opal | https://focuslock-vs-opal.surge.sh | LIVE |
 
 ## Product Pages
 
@@ -98,7 +114,40 @@ Deployed 2026-03-09 by GAP HUNTER agent.
 | TaskSmash Web | https://tasksmash-web.surge.sh | LIVE |
 | AI Revenue Calculator | https://ai-revenue-calculator.surge.sh | LIVE |
 
-## Recent Local Business Pages (Louisville, KY batch)
+## App Marketing Landing Pages
 
-267 total surge.sh deployments. Full catalog in `AUTOMATIONS/agent/swarm/deployed_assets.json`.
-Key categories: 8 PWAs, 11 lead magnets, 5 comparison pages, 4 affiliate pages, 13+ denomination streak landing pages, 60+ local business pages, 10+ service landing pages.
+Deployed 2026-03-14 by ASSET DEPLOYER.
+
+| Page | URL | Status |
+|------|-----|--------|
+| Hilal Landing | https://hilal-landing.surge.sh | LIVE |
+| MealMaxx Landing | https://mealmaxx-landing.surge.sh | LIVE |
+| SleepMaxx Landing | https://sleepmaxx-landing.surge.sh | LIVE |
+| PrayerLock Landing | https://prayerlock-landing.surge.sh | LIVE |
+| FocusLock Landing | https://focuslock-landing.surge.sh | LIVE |
+| WalkToUnlock Landing | https://walktounlock-landing.surge.sh | LIVE |
+| Scripture Streak Landing | https://scripture-streak-landing.surge.sh | LIVE |
+
+## Productivity Quiz
+
+| Tool | URL | Status |
+|------|-----|--------|
+| Productivity Stack Quiz | https://productivity-stack-quiz.surge.sh | LIVE |
+
+## Full Deployment Summary
+
+354 total surge.sh deployments. Full catalog in `AUTOMATIONS/agent/swarm/deployed_assets.json`.
+
+| Category | Count | Status |
+|----------|-------|--------|
+| PWA Apps | 10 | ALL LIVE |
+| Lead Magnets | 11 | ALL LIVE |
+| Comparison Pages | 7 | ALL LIVE |
+| Affiliate Pages | 4 | LIVE (placeholder IDs) |
+| App Marketing Pages | 7 | ALL LIVE |
+| Denomination Streak Apps | 26 | ALL LIVE |
+| Local Business Pages | 150 | ALL LIVE |
+| Tool Apps | 9 | ALL LIVE |
+| Brand Pages | 15 | ALL LIVE |
+| Fiverr Service Pages | 12 | ALL LIVE |
+| Other (demos, misc) | ~103 | ALL LIVE |

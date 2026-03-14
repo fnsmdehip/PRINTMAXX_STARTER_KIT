@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-03-13T07:15:00+00:00",
+  "tailscale": {
+    "backend_state": "Running",
+    "dns_name": "control-node.example.ts.net",
+    "tailscale_ips": [
+      "100.64.0.10"
+    ],
+    "serve_status": "live",
+    "serve_detail": "https://control-node.example.ts.net (tailnet only)\\n|-- / proxy http://127.0.0.1:8790"
+  },
+  "coderelay": {
+    "local_url": "http://127.0.0.1:8790",
+    "same_wifi_url": "http://192.168.1.50:8791",
+    "tailnet_url": "https://control-node.example.ts.net",
+    "public_origin": "https://control-node.example.ts.net"
+  },
+  "rustdesk": {
+    "id": "123456789",
+    "permissions_status": "granted",
+    "password_status": "set"
+  }
+}

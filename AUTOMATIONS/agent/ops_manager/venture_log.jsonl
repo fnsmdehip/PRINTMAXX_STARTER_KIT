@@ -50,3 +50,58 @@
 {"ts": "2026-03-10T16:08:49.090163", "venture": "digital_products", "result": "success", "duration": 0.2, "output": "Product pipeline processed"}
 {"ts": "2026-03-10T16:08:49.419848", "venture": "affiliate", "result": "success", "duration": 0.3, "output": "Affiliate pipeline ran"}
 {"ts": "2026-03-10T16:09:26.231414", "venture": "apps", "result": "success", "duration": 36.8, "output": "Factory cycle ran"}
+{"ts": "2026-03-11T00:00:45.169913", "venture": "services", "result": "success", "duration": 32.8, "output": "3/3 service ops"}
+{"ts": "2026-03-11T00:00:56.197263", "venture": "edge_tactics", "result": "partial", "duration": 11.0, "output": "Edge tactics generation thin"}
+{"ts": "2026-03-11T00:01:19.938719", "venture": "content_farm", "result": "success", "duration": 23.7, "output": "3/3 content ops completed"}
+{"ts": "2026-03-11T00:01:29.895488", "venture": "adult_content", "result": "failed", "duration": 10.0, "output": "Both intel and content generation failed"}
+{"ts": "2026-03-11T00:01:39.493910", "venture": "viral_content", "result": "partial", "duration": 9.6, "output": "Viral content generation thin"}
+{"ts": "2026-03-11T00:01:49.306651", "venture": "competitive_intel", "result": "partial", "duration": 9.8, "output": "Intel gathering thin"}
+{"ts": "2026-03-11T00:06:59.807612", "venture": "growth", "result": "success", "duration": 310.5, "output": "1/2 growth ops"}
+{"ts": "2026-03-11T00:09:00.268913", "venture": "ecom", "result": "success", "duration": 120.5, "output": "1/2 ecom ops"}
+{"ts": "2026-03-11T00:09:00.827254", "venture": "digital_products", "result": "success", "duration": 0.6, "output": "Product pipeline processed"}
+{"ts": "2026-03-11T00:09:01.406144", "venture": "affiliate", "result": "success", "duration": 0.6, "output": "Affiliate pipeline ran"}
+{"ts": "2026-03-11T00:14:01.486643", "venture": "apps", "result": "partial", "duration": 300.1, "output": "Factory cycle ran"}
+{"ts": "2026-03-11T20:00:38.412915", "venture": "services", "result": "success", "duration": 30.9, "output": "3/3 service ops"}
+{"ts": "2026-03-11T20:00:43.478321", "venture": "edge_tactics", "result": "partial", "duration": 5.1, "output": "Edge tactics generation thin"}
+{"ts": "2026-03-11T20:00:53.491829", "venture": "content_farm", "result": "success", "duration": 10.0, "output": "3/3 content ops completed"}
+{"ts": "2026-03-11T20:00:58.300566", "venture": "adult_content", "result": "failed", "duration": 4.8, "output": "Both intel and content generation failed"}
+{"ts": "2026-03-11T20:01:02.793791", "venture": "viral_content", "result": "partial", "duration": 4.5, "output": "Viral content generation thin"}
+{"ts": "2026-03-11T20:01:07.358188", "venture": "competitive_intel", "result": "partial", "duration": 4.6, "output": "Intel gathering thin"}
+{"ts": "2026-03-11T20:06:14.749709", "venture": "growth", "result": "success", "duration": 307.4, "output": "1/2 growth ops"}
+{"ts": "2026-03-11T20:08:14.990037", "venture": "ecom", "result": "success", "duration": 120.2, "output": "1/2 ecom ops"}
+{"ts": "2026-03-11T20:08:15.099607", "venture": "digital_products", "result": "success", "duration": 0.1, "output": "Product pipeline processed"}
+{"ts": "2026-03-11T20:08:15.298663", "venture": "affiliate", "result": "success", "duration": 0.2, "output": "Affiliate pipeline ran"}
+{"ts": "2026-03-11T20:09:52.125189", "venture": "apps", "result": "success", "duration": 96.8, "output": "Factory cycle ran"}
+{"ts": "2026-03-12T08:00:56.591200", "venture": "services", "result": "success", "duration": 49.2, "output": "3/3 service ops"}
+{"ts": "2026-03-12T08:01:03.944773", "venture": "edge_tactics", "result": "partial", "duration": 7.4, "output": "Edge tactics generation thin"}
+{"ts": "2026-03-12T08:01:16.217226", "venture": "content_farm", "result": "success", "duration": 12.2, "output": "3/3 content ops completed"}
+{"ts": "2026-03-12T08:01:21.731358", "venture": "adult_content", "result": "failed", "duration": 5.5, "output": "Both intel and content generation failed"}
+{"ts": "2026-03-12T08:01:27.106879", "venture": "viral_content", "result": "partial", "duration": 5.4, "output": "Viral content generation thin"}
+{"ts": "2026-03-12T08:01:33.016152", "venture": "competitive_intel", "result": "partial", "duration": 5.9, "output": "Intel gathering thin"}
+{"ts": "2026-03-12T08:06:40.662191", "venture": "growth", "result": "success", "duration": 307.6, "output": "1/2 growth ops"}
+{"ts": "2026-03-12T08:08:41.060306", "venture": "ecom", "result": "success", "duration": 120.4, "output": "1/2 ecom ops"}
+{"ts": "2026-03-12T08:08:41.237512", "venture": "digital_products", "result": "success", "duration": 0.2, "output": "Product pipeline processed"}
+{"ts": "2026-03-12T08:08:41.443600", "venture": "affiliate", "result": "success", "duration": 0.2, "output": "Affiliate pipeline ran"}
+{"ts": "2026-03-12T08:13:41.468581", "venture": "apps", "result": "partial", "duration": 300.0, "output": "Factory cycle ran"}
+{"ts": "2026-03-13T08:00:51.460630", "venture": "services", "result": "success", "duration": 38.7, "output": "3/3 service ops"}
+{"ts": "2026-03-13T08:01:09.999500", "venture": "edge_tactics", "result": "partial", "duration": 18.5, "output": "Edge tactics generation thin"}
+{"ts": "2026-03-13T08:01:41.160359", "venture": "content_farm", "result": "success", "duration": 31.2, "output": "3/3 content ops completed"}
+{"ts": "2026-03-13T08:01:57.798243", "venture": "adult_content", "result": "failed", "duration": 16.6, "output": "Both intel and content generation failed"}
+{"ts": "2026-03-13T08:02:14.676473", "venture": "viral_content", "result": "partial", "duration": 16.9, "output": "Viral content generation thin"}
+{"ts": "2026-03-13T08:02:29.637143", "venture": "competitive_intel", "result": "partial", "duration": 15.0, "output": "Intel gathering thin"}
+{"ts": "2026-03-13T08:07:42.602049", "venture": "growth", "result": "success", "duration": 313.0, "output": "1/2 growth ops"}
+{"ts": "2026-03-13T08:09:42.835468", "venture": "ecom", "result": "success", "duration": 120.2, "output": "1/2 ecom ops"}
+{"ts": "2026-03-13T08:09:42.967603", "venture": "digital_products", "result": "success", "duration": 0.1, "output": "Product pipeline processed"}
+{"ts": "2026-03-13T08:09:43.168787", "venture": "affiliate", "result": "success", "duration": 0.2, "output": "Affiliate pipeline ran"}
+{"ts": "2026-03-13T08:14:43.178378", "venture": "apps", "result": "partial", "duration": 300.0, "output": "Factory cycle ran"}
+{"ts": "2026-03-14T04:00:56.924135", "venture": "services", "result": "success", "duration": 48.6, "output": "3/3 service ops"}
+{"ts": "2026-03-14T04:01:09.342591", "venture": "edge_tactics", "result": "partial", "duration": 12.4, "output": "Edge tactics generation thin"}
+{"ts": "2026-03-14T04:01:32.869451", "venture": "content_farm", "result": "success", "duration": 23.5, "output": "3/3 content ops completed"}
+{"ts": "2026-03-14T04:01:44.541588", "venture": "adult_content", "result": "failed", "duration": 11.7, "output": "Both intel and content generation failed"}
+{"ts": "2026-03-14T04:01:57.005815", "venture": "viral_content", "result": "partial", "duration": 12.5, "output": "Viral content generation thin"}
+{"ts": "2026-03-14T04:02:08.248423", "venture": "competitive_intel", "result": "partial", "duration": 11.2, "output": "Intel gathering thin"}
+{"ts": "2026-03-14T04:07:20.632205", "venture": "growth", "result": "success", "duration": 312.4, "output": "1/2 growth ops"}
+{"ts": "2026-03-14T04:09:20.883093", "venture": "ecom", "result": "success", "duration": 120.3, "output": "1/2 ecom ops"}
+{"ts": "2026-03-14T04:09:21.019561", "venture": "digital_products", "result": "success", "duration": 0.1, "output": "Product pipeline processed"}
+{"ts": "2026-03-14T04:09:21.225328", "venture": "affiliate", "result": "success", "duration": 0.2, "output": "Affiliate pipeline ran"}
+{"ts": "2026-03-14T04:14:21.287780", "venture": "apps", "result": "partial", "duration": 300.1, "output": "Factory cycle ran"}

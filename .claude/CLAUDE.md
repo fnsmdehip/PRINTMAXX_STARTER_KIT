@@ -21,6 +21,7 @@ These files were extracted from CLAUDE.md to save tokens. Read them ONLY when yo
 | **Need session history?** | `OPS/SESSION_LOG.md` (session-by-session changelog) |
 | **Need current status?** | `OPS/CURRENT_STATUS.md` (what's deployed, what's built, what's next) |
 | **Need live system map?** | `OPS/PRINTMAXX_SYSTEM_MAP.md` (canonical current topology: agents, queues, control surfaces, data flow) |
+| **Need remote-control stack?** | `OPS/REMOTE_CONTROL_DAISY_CHAIN.md` (Tailscale + CodeRelay + RustDesk control-plane pattern and extraction boundary) |
 | **Need handoff/versions?** | `OPS/HANDOFF_AND_VERSION_TRACKER.md` (latest handoff + XLSX versions) |
 | **Need quant tools?** | `OPS/QUANT_TOOLS_AND_INFRASTRUCTURE.md` (all CLI tools + folder hierarchy) |
 | **Need codebase overview?** | `OPS/CODEBASE_GRAMMAR.md` (118x compressed system grammar, auto-generated 5:45 AM) |
@@ -29,6 +30,10 @@ These files were extracted from CLAUDE.md to save tokens. Read them ONLY when yo
 | **Need research pipeline?** | `OPS/DAILY_RESEARCH_PIPELINE_REF.md` (all scrapers + cron schedule) |
 | **Need workflows?** | `OPS/WORKFLOWS_AND_PATTERNS.md` (content gen, validation, deployment) |
 | **Need strategic docs?** | `OPS/STRATEGIC_AND_CONTENT_REF.md` (intel docs + content calendar) |
+| **Need restructure V2 intel?** | `OPS/RESTRUCTURE_V2_INTEL_BRIEF.md` (gap analysis from metaswarm/Swan AI/OpenClaw/IH) |
+| **Need value pricing?** | `OPS/EAS_VALUE_PRICING_FRAMEWORK.md` (value-based pricing for EAS pilots) |
+| **Need human approval queue?** | `OPS/PENDING_HUMAN_APPROVAL.jsonl` (items needing human action) |
+| **Need agent soul/identity?** | `AUTOMATIONS/SOUL.md` (behavioral directives for all agents) |
 
 ---
 
@@ -38,6 +43,7 @@ These files were extracted from CLAUDE.md to save tokens. Read them ONLY when yo
 
 **Mandatory when changes are made:**
 - If you add, remove, rename, or rewire agents, automations, schedules, launchd plists, cron jobs, queues, dashboards, memory layers, control surfaces, key folders, or system data flow, update `OPS/PRINTMAXX_SYSTEM_MAP.md` in the same session before finishing.
+- If the change touches remote control, anywhere access, launchd control surfaces, or tailnet/desktop control wiring, update `OPS/REMOTE_CONTROL_DAISY_CHAIN.md` in the same session too.
 - If the change also affects navigation, session-start guidance, or standing agent instructions, update `.claude/CLAUDE.md` in the same session too.
 - Do not leave architecture drift. The map must describe the live system, not the intended system.
 
@@ -272,6 +278,16 @@ Every agent, venture, and the CEO agent itself queries intelligence_router.py be
 - Control panel: `python3 AUTOMATIONS/control_panel.py` (localhost:9999, auto-launches on session start)
 - Throttle: `python3 AUTOMATIONS/throttle_toggle.py --status` (EFFICIENT/HIGH mode)
 
+**Restructure V2 Components (blocking gates, task graph, GTM agents, challengers):**
+- Gates: `python3 AUTOMATIONS/gates.py --stats` (blocking state gate health)
+- Task graph: `python3 AUTOMATIONS/task_graph.py --status` (dependency chain status)
+- Task graph ready: `python3 AUTOMATIONS/task_graph.py --ready` (tasks with deps satisfied)
+- Shakespeare: `python3 AUTOMATIONS/shakespeare_agent.py --status` (content gen status)
+- Observer: `python3 AUTOMATIONS/observer_agent.py --status` (inbound lead monitoring)
+- Quinn: `python3 AUTOMATIONS/quinn_agent.py --status` (warm outreach queue)
+- Challengers: `python3 AUTOMATIONS/challenger_agents.py --stats` (CEO decision review stats)
+- Worktrees: `python3 AUTOMATIONS/worktree_manager.py --status` (parallel agent isolation)
+
 **Master Ops Bridge (xlsx intelligence for all agents):**
 - Rebuild cache: `python3 AUTOMATIONS/master_ops_bridge.py --rebuild`
 - Stats: `python3 AUTOMATIONS/master_ops_bridge.py --stats`
@@ -288,7 +304,10 @@ Every agent, venture, and the CEO agent itself queries intelligence_router.py be
 - By venture: `python3 AUTOMATIONS/alpha_query.py --venture APP_FACTORY --json` (APP_FACTORY|OUTBOUND|CONTENT|LOCAL_BIZ|MONETIZATION|RESEARCH|PRODUCT|SCRAPING)
 - Keyword search: `python3 AUTOMATIONS/alpha_query.py --search "mobile app pricing" --json`
 - Stats: `python3 AUTOMATIONS/alpha_query.py --stats`
+- App factory autopilot: `python3 AUTOMATIONS/app_factory_autopilot.py --run` -> bookmarks/accounts scrape + auto-approve + auto-process + spec generation + queue refresh
+- App factory command center: `python3 AUTOMATIONS/app_factory_command_center.py --refresh --top 8` -> writes `AUTOMATIONS/agent/autonomy/app_factory_priority_queue.json` + `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md`
 - **MANDATORY:** Before building ANY asset, query relevant alpha first. Base decisions on accumulated intelligence, not default LLM knowledge.
+- **APP FACTORY RULE:** Before app spec/build work, run the app factory autopilot or at minimum refresh the app factory command center, then use the ranked queue as the source of truth. Upgrade existing apps before greenfield work when the queue says so.
 
 **Intelligence Router (MANDATORY before any build/execute):**
 - `python3 AUTOMATIONS/intelligence_router.py --venture TYPE --task TASK --brief` (human sessions)
@@ -550,6 +569,8 @@ All findings → `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Never create sepa
 | Copy style | `.claude/rules/copy-style.md` |
 | Alpha review | `.claude/rules/alpha-review.md` |
 | App factory | `MONEY_METHODS/APP_FACTORY/` |
+| App factory autopilot | `AUTOMATIONS/app_factory_autopilot.py` + `AUTOMATIONS/agent/autonomy/app_factory_autopilot_status.json` |
+| App factory command center | `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md` + `AUTOMATIONS/agent/autonomy/app_factory_priority_queue.json` |
 | Products | `PRODUCTS/` + `DIGITAL_PRODUCTS/` |
 | Leads | `AUTOMATIONS/leads/` |
 | Content | `CONTENT/social/` |
@@ -559,5 +580,18 @@ All findings → `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Never create sepa
 | Master ops cache | `AUTOMATIONS/master_ops_cache.json` (auto-rebuilt JSON, 12h TTL) |
 | Control panel | `AUTOMATIONS/control_panel.py` + `control_panel.html` (localhost:9999) |
 | Throttle config | `AUTOMATIONS/throttle_config.json` + `throttle_state.json` |
+| SOUL.md (agent identity) | `AUTOMATIONS/SOUL.md` (behavioral directives for all agents) |
+| Blocking gates | `AUTOMATIONS/gates.py` + `LEDGER/printmaxx_gates.db` |
+| Task dependency graph | `AUTOMATIONS/task_graph.py` (DAG chains for pipeline agents) |
+| Cross-model routing | `AUTOMATIONS/MODEL_ROUTING_CONFIG.json` + `.claude/external-tools.yaml` |
+| Shakespeare agent | `AUTOMATIONS/shakespeare_agent.py` (movement-first content gen) |
+| Observer agent | `AUTOMATIONS/observer_agent.py` (inbound lead monitoring) |
+| Quinn agent | `AUTOMATIONS/quinn_agent.py` (warm outreach gen) |
+| Challenger agents | `AUTOMATIONS/challenger_agents.py` (adversarial CEO review) |
+| Worktree manager | `AUTOMATIONS/worktree_manager.py` (parallel agent isolation) |
+| Agent skills | `skills/` (5 packaged PRINTMAXX skills for marketplace) |
+| Human approval queue | `OPS/PENDING_HUMAN_APPROVAL.jsonl` |
+| Restructure V2 intel | `OPS/RESTRUCTURE_V2_INTEL_BRIEF.md` |
+| Value pricing | `OPS/EAS_VALUE_PRICING_FRAMEWORK.md` |
 | All quant tools | `OPS/QUANT_TOOLS_AND_INFRASTRUCTURE.md` |
 | Full nav | `OPS/NAV_INDEX.md` |

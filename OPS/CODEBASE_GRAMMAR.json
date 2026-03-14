@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-10T05:45:00.995835",
+  "generated": "2026-03-14T05:45:01.112051",
   "project": "PRINTMAXX",
   "total_scripts": 20,
   "scripts": {
@@ -202,10 +202,10 @@
         "--cron-add"
       ],
       "state_files": [
-        "ceo_state.json",
+        "LOCK_FILE",
         "CHECKPOINT_FILE",
-        "STATE_FILE",
-        "LOCK_FILE"
+        "ceo_state.json",
+        "STATE_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -354,7 +354,7 @@
     },
     "venture_autonomy.py": {
       "desc": "8 venture types \u2014 universal execution engine, self-managing schedules, SelfManager auto-adjusts",
-      "lines": 1731,
+      "lines": 1769,
       "classes": [
         {
           "name": "AutonomyState",
@@ -524,9 +524,9 @@
         "--self-manage"
       ],
       "state_files": [
+        "autonomy_state.json",
         "LOG_FILE",
-        "STATE_FILE",
-        "autonomy_state.json"
+        "STATE_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -539,7 +539,7 @@
     },
     "intelligence_router.py": {
       "desc": "central intelligence hub \u2014 484 docs, 14,799 alpha, 16 CSVs across 9 ventures",
-      "lines": 1823,
+      "lines": 1832,
       "classes": [],
       "functions": [
         {
@@ -1370,7 +1370,7 @@
     },
     "alpha_auto_processor.py": {
       "desc": "auto-processes ALPHA_STAGING.csv \u2014 routes to ventures/OPS/cron/archive",
-      "lines": 796,
+      "lines": 815,
       "classes": [],
       "functions": [
         {
@@ -1518,6 +1518,11 @@
           "name": "show_status",
           "args": [],
           "doc": "Show current alpha pipeline stats."
+        },
+        {
+          "name": "refresh_app_factory_queue",
+          "args": [],
+          "doc": "Keep the app-factory queue current after live alpha routing."
         },
         {
           "name": "main",
@@ -1976,9 +1981,9 @@
       ],
       "state_files": [
         "LOG_FILE",
+        "LOCK_FILE",
         "daily_research_orchestrator_state.json",
-        "STATE_FILE",
-        "LOCK_FILE"
+        "STATE_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2418,8 +2423,8 @@
       ],
       "state_files": [],
       "reads": [
-        "ETSY_LISTINGS_COMPLETE.md",
         "REVENUE_TRACKER.csv",
+        "ETSY_LISTINGS_COMPLETE.md",
         "ACCOUNTS.csv",
         "progress.json"
       ],

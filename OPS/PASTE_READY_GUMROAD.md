@@ -463,3 +463,14 @@ Been vibe-coding something small:
 
 Vibe Codors + Greta Marketplace (441 PH votes). Sell existing built apps (20+ PWAs and templates). No fees on Vibe Codors. $39-299 per listing. We have PrayerLock + FocusLock + HabitForge + 6 local biz demos + SaaS templates all built and deployed. Package and list. $2-8K first month.
 
+
+
+---
+
+## Pending Enhancement (ALPHA22679, Score: 41)
+
+**Source:** r/AmazonFBA | **URL:** https://reddit.com/r/AmazonFBA/comments/1rqgtkf/from_900month_to_40k80kmonth_with_one_listing/
+**Added:** 2026-03-12T06:15:01-04:00
+
+[r/AmazonFBA] From ~$900/month to $40k–$80k/month with one listing — sharing the numbers
+

@@ -1,35 +1,44 @@
 {
-  "last_updated": "2026-03-09T23:15:00Z",
-  "cycle": 15,
-  "total_assets": 267,
-  "total_content_pieces": 680,
-  "content_ready": 165,
-  "content_pending_review": 303,
-  "content_blocked_qa": 212,
+  "last_updated": "2026-03-14T07:55:00Z",
+  "cycle": 16,
+  "total_assets": 270,
+  "total_content_pieces": 750,
+  "content_ready": 200,
+  "content_pending_review": 330,
+  "content_blocked_qa": 220,
   "new_this_cycle": {
     "assets_covered": [
-      "Claude Code Agent Bible",
-      "Scripture Streak",
-      "cursor-vs-claudecode",
-      "sleepmaxx-vs-sleepcycle",
-      "instantly-vs-lemlist",
-      "coldmaxx-vs-instantly"
+      "AI Slop Detector",
+      "Productivity Stack Quiz",
+      "HabitForge (expanded)",
+      "MealMaxx (expanded)",
+      "WalkToUnlock (expanded)",
+      "Dusk/SleepMaxx (expanded)",
+      "CoreDay (expanded)",
+      "FocusLock (LinkedIn added)",
+      "pagescorer-vs-gtmetrix (first coverage)",
+      "7 App Landing Pages"
     ],
-    "content_pieces_created": 34,
-    "platforms_targeted": ["twitter", "reddit", "hackernews", "devto", "indiehackers"],
-    "file": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+    "content_pieces_created": 70,
+    "platforms_targeted": ["twitter", "reddit", "hackernews", "devto", "indiehackers", "linkedin", "producthunt", "directories"],
+    "files": [
+      "CONTENT/social/distribution/twitter_distribution_cycle16.md",
+      "CONTENT/social/distribution/reddit_distribution_cycle16.md",
+      "CONTENT/social/distribution/hn_ih_linkedin_devto_cycle16.md",
+      "CONTENT/social/distribution/directory_submissions_cycle16.md"
+    ]
   },
   "distribution_channels": {
     "twitter": {
       "status": "active",
       "account": "@PRINTMAXXER",
-      "posts_queued": 149,
+      "posts_queued": 179,
       "posts_distributed": 0,
       "notes": "Account exists, X Premium needed for link posts"
     },
     "reddit": {
       "status": "content_ready",
-      "posts_created": 22,
+      "posts_created": 37,
       "posts_distributed": 0,
       "target_subs": [
         "r/SideProject",
@@ -43,27 +52,37 @@
         "r/ClaudeAI",
         "r/LocalLLaMA",
         "r/quantifiedself",
-        "r/muslimtechnet"
+        "r/muslimtechnet",
+        "r/artificial",
+        "r/ChatGPT",
+        "r/freelanceWriters",
+        "r/copywriting",
+        "r/MealPrepSunday",
+        "r/EatCheapAndHealthy",
+        "r/fitness",
+        "r/sleep",
+        "r/biohackers",
+        "r/selfimprovement"
       ]
     },
     "hackernews": {
       "status": "content_ready",
-      "posts_created": 4,
+      "posts_created": 8,
       "posts_distributed": 0
     },
     "devto": {
       "status": "content_ready",
-      "articles_created": 3,
+      "articles_created": 6,
       "articles_distributed": 0
     },
     "linkedin": {
       "status": "content_ready",
-      "posts_created": 1,
+      "posts_created": 5,
       "posts_distributed": 0
     },
     "indie_hackers": {
       "status": "content_ready",
-      "posts_created": 3,
+      "posts_created": 7,
       "posts_distributed": 0
     },
     "quora": {
@@ -72,8 +91,16 @@
       "answers_distributed": 0
     },
     "product_hunt": {
-      "status": "not_started",
-      "notes": "Need 3-week runway for launch prep"
+      "status": "content_ready",
+      "launch_drafts": 14,
+      "launches_completed": 0,
+      "notes": "Need PH account + 3-week runway for launch prep"
+    },
+    "directories": {
+      "status": "content_ready",
+      "submissions_drafted": 35,
+      "submissions_completed": 0,
+      "platforms": ["AlternativeTo", "SaaSHub", "BetaList", "ThereIsAnAIForThat"]
     },
     "gumroad": {
       "status": "BLOCKED",
@@ -87,7 +114,7 @@
     },
     "medium": {
       "status": "not_started",
-      "notes": "Repurpose newsletter content"
+      "notes": "Repurpose Dev.to articles"
     },
     "substack": {
       "status": "not_started",
@@ -95,6 +122,14 @@
     }
   },
   "top_distributable_assets": [
+    {
+      "name": "AI Slop Detector",
+      "url": "ai-slop-detector.surge.sh",
+      "channels_covered": ["twitter", "reddit", "hackernews", "devto", "indiehackers", "linkedin", "producthunt", "directories"],
+      "channels_pending": [],
+      "priority": "HIGHEST",
+      "notes": "Full coverage this cycle. Hot topic in AI community. Best candidate for viral distribution."
+    },
     {
       "name": "Claude Code Agent Bible",
       "url": "claude-code-agent-bible.surge.sh",
@@ -112,12 +147,28 @@
       "notes": "ADHD market is massive. r/ADHD post is strongest piece."
     },
     {
+      "name": "Productivity Stack Quiz",
+      "url": "productivity-stack-quiz.surge.sh",
+      "channels_covered": ["twitter", "reddit", "indiehackers", "linkedin", "producthunt"],
+      "channels_pending": ["hackernews", "devto"],
+      "priority": "HIGH",
+      "notes": "Interactive tool, high shareability. Good for viral loops."
+    },
+    {
       "name": "CoreDay",
       "url": "coreday.surge.sh",
-      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers"],
-      "channels_pending": ["linkedin", "devto", "producthunt"],
+      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers", "linkedin", "devto", "producthunt"],
+      "channels_pending": [],
       "priority": "HIGH",
-      "notes": "Contrarian angle resonates in r/productivity and r/digitalminimalism"
+      "notes": "Full coverage. Contrarian angle resonates."
+    },
+    {
+      "name": "HabitForge",
+      "url": "habitforge-web.surge.sh",
+      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers", "devto", "producthunt"],
+      "channels_pending": ["linkedin"],
+      "priority": "HIGH",
+      "notes": "Expanded significantly this cycle."
     },
     {
       "name": "Hilal",
@@ -126,14 +177,15 @@
       "channels_pending": [],
       "time_sensitive": true,
       "priority": "HIGH",
-      "notes": "Ramadan active NOW, ~20 days left. Content exists, needs posting."
+      "notes": "Ramadan active NOW, ~15 days left."
     },
     {
-      "name": "Scripture Streak",
-      "url": "scripture-streak.surge.sh",
-      "channels_covered": ["twitter", "reddit"],
-      "channels_pending": ["hackernews", "indiehackers"],
-      "priority": "MEDIUM"
+      "name": "PrayerLock",
+      "url": "prayerlock.surge.sh",
+      "channels_covered": ["twitter", "reddit", "facebook", "discord", "whatsapp"],
+      "channels_pending": [],
+      "priority": "HIGH",
+      "notes": "Ramadan time-sensitive"
     },
     {
       "name": "Cursor vs Claude Code",
@@ -144,63 +196,61 @@
       "notes": "Hot topic in developer communities"
     },
     {
-      "name": "Lead Magnet Bundle (5 tools)",
-      "url": "multiple",
-      "channels_covered": ["twitter", "reddit"],
-      "channels_pending": ["linkedin", "indiehackers"],
+      "name": "SleepMaxx/Dusk",
+      "url": "sleepmaxx-web.surge.sh",
+      "channels_covered": ["twitter", "reddit", "indiehackers", "producthunt"],
+      "channels_pending": ["hackernews", "linkedin", "devto"],
       "priority": "MEDIUM"
-    },
-    {
-      "name": "PrayerLock",
-      "url": "prayerlock.surge.sh",
-      "channels_covered": ["twitter", "reddit", "facebook", "discord", "whatsapp"],
-      "channels_pending": [],
-      "priority": "HIGH",
-      "notes": "Ramadan time-sensitive"
     }
   ],
   "coverage_gaps": [
-    "680+ content pieces created across 15 cycles. 0 posted anywhere.",
+    "750+ content pieces created across 16 cycles. 0 posted anywhere.",
     "No DM funnel active on any account",
     "No clipper/secondary accounts created",
     "No Medium articles published",
     "No Substack newsletter swaps initiated",
     "No Product Hunt launch scheduled",
-    "289+ content pieces stuck in PENDING_REVIEW",
+    "330+ content pieces stuck in PENDING_REVIEW",
     "X Premium not subscribed (link posts get 0% engagement)",
-    "HabitForge, MealMaxx, WalkToUnlock, Dusk have minimal coverage",
-    "pagescorer-vs-gtmetrix comparison page has no distribution content"
+    "WalkToUnlock still has minimal coverage (Twitter + Reddit only)",
+    "Scripture Streak needs HN/IH/LinkedIn/Dev.to coverage"
   ],
   "human_actions_required": [
     {
       "action": "Subscribe to X Premium on @PRINTMAXXER",
       "time_est": "5 min",
       "priority": "P0",
-      "impact": "Unblocks link posts. Without it, 149 tweets with URLs get 0% reach."
+      "impact": "Unblocks link posts. Without it, 179 tweets with URLs get 0% reach."
     },
     {
-      "action": "Post top 5 Reddit posts (r/ADHD TaskSmash, r/ClaudeAI Agent Bible, r/productivity CoreDay, r/islam Scripture Streak, r/webdev Cursor vs Claude Code)",
+      "action": "Post top 5 Reddit posts (r/artificial AI Slop Detector, r/ADHD TaskSmash, r/productivity CoreDay+HabitForge, r/ClaudeAI Agent Bible)",
       "time_est": "25 min",
       "priority": "P0",
-      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+      "content_location": "CONTENT/social/distribution/reddit_distribution_cycle16.md"
     },
     {
-      "action": "Post 2 Show HN posts (Agent Bible + Cursor vs Claude Code)",
-      "time_est": "10 min",
+      "action": "Post 3 Show HN posts (AI Slop Detector, Agent Bible, HabitForge)",
+      "time_est": "15 min",
       "priority": "P0",
-      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+      "content_location": "CONTENT/social/distribution/hn_ih_linkedin_devto_cycle16.md"
     },
     {
-      "action": "Post Dev.to article (Filesystem-as-memory pattern)",
+      "action": "Post Dev.to articles (AI Slop Detector + HabitForge technical writeups)",
       "time_est": "15 min",
       "priority": "P1",
-      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+      "content_location": "CONTENT/social/distribution/hn_ih_linkedin_devto_cycle16.md"
     },
     {
-      "action": "Post Indie Hackers post (Running autonomous agents 24/7)",
+      "action": "Post Indie Hackers posts (AI Slop Detector + SleepMaxx)",
       "time_est": "10 min",
       "priority": "P1",
-      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+      "content_location": "CONTENT/social/distribution/hn_ih_linkedin_devto_cycle16.md"
+    },
+    {
+      "action": "Post 4 LinkedIn posts (AI Slop Detector, Productivity Quiz, CoreDay, FocusLock)",
+      "time_est": "15 min",
+      "priority": "P1",
+      "content_location": "CONTENT/social/distribution/hn_ih_linkedin_devto_cycle16.md"
     },
     {
       "action": "Create Gumroad account + list top 5 products",
@@ -208,10 +258,16 @@
       "priority": "P0"
     },
     {
-      "action": "Post Twitter threads (Agent Bible thread + standalone tweets)",
+      "action": "Post Twitter threads and standalone tweets",
       "time_est": "20 min",
       "priority": "P0",
-      "content_location": "CONTENT/social/distribution/cycle15_new_assets_20260309.md"
+      "content_location": "CONTENT/social/distribution/twitter_distribution_cycle16.md"
+    },
+    {
+      "action": "Submit to AlternativeTo + SaaSHub + BetaList directories",
+      "time_est": "30 min",
+      "priority": "P1",
+      "content_location": "CONTENT/social/distribution/directory_submissions_cycle16.md"
     }
   ]
 }

@@ -1957,3 +1957,246 @@ Sadly, most think it takes years to build
 
 Here’s how you can do it in the next 6 weeks:
 
+
+
+---
+
+## Pending Enhancement (ALPHA21631, Score: 24)
+
+**Source:** @adriamatz (bookmarks) | **URL:** https://x.com/adriamatz/status/2031273051598311788
+**Added:** 2026-03-11T00:15:01-04:00
+
+A fake AI app makes $50K/mo from dog owners
+
+→ 60K downloads/mo
+→ Just plays random sounds at your dog
+
+The "AI translation" is fake.
+
+Picks a random emotion and displays it.
+
+They film their dog's reaction for TikTok.
+
+The pet niche never dies.
+
+700M dogs as potential users.
+
+
+
+---
+
+## Pending Enhancement (ALPHA22498, Score: 24)
+
+**Source:** @knoxtwts (high-signal-accounts) | **URL:** https://x.com/knoxtwts/status/2031728918122889439
+**Added:** 2026-03-12T02:14:17-04:00
+
+actual ways people are making money with ai content right now:
+
+- ugc ads for companies (retainers, $2k/mo+)
+- faceless channels (low ticket, affiliates)
+- ai slideshow accounts on tiktok (affiliate network + brand links)
+- white label production for other agencies (they mark up
+
+
+
+---
+
+## Pending Enhancement (ALPHA22682, Score: 38)
+
+**Source:** r/passive_income | **URL:** https://reddit.com/r/passive_income/comments/1rqsrdo/accidentally_built_a_following_of_40_year_old/
+**Added:** 2026-03-12T06:15:01-04:00
+
+[r/passive_income] Accidentally built a following of 40+ year old women on Facebook. I'm a 26M. First brand deal just paid $320 for one post.
+
+
+
+---
+
+## Pending Enhancement (ALPHA22837, Score: 20)
+
+**Source:** r/Affiliatemarketing | **URL:** https://reddit.com/r/Affiliatemarketing/comments/1rqf1iv/why_do_most_creators_fail_at_affiliate_marketing/
+**Added:** 2026-03-12T06:15:02-04:00
+
+[r/Affiliatemarketing] Why do most creators fail at affiliate marketing even with thousands of views?
+
+
+
+---
+
+## Pending Enhancement (ALPHA22656, Score: 26)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/kritarthmittal/status/2031715676847817031
+**Added:** 2026-03-12T06:45:02-04:00
+
+Sora 2 just got a massive upgrade.
+
+I partnered with Arcads to build a custom n8n workflow that
+
+> scrapes Reddit
+> analyzes competitors' ads
+> recreates viral AI ugc videos
+> puts it all on a Google sheet / Airtable
+> schedules it on X, TikTok, Li
+
+Like + comment "SEND" to get
+
+
+
+---
+
+## Pending Enhancement (ALPHA23006, Score: 30)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2008643433897066927
+**Added:** 2026-03-12T08:18:27-04:00
+
+🚀 Turn podcasts into viral clips in minutes. Virality Score finds your best moments, AI B-Roll adds flair, Speaker Detection keeps faces framed, and removes filler words like “um” &amp; “uh.”
+
+Don't sleep on this. Try OpusClip today and get 25 free clips/month.
+
+
+
+---
+
+## Pending Enhancement (ALPHA23031, Score: 30)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2030639096322748789
+**Added:** 2026-03-12T08:18:27-04:00
+
+ReelClaw revolution is here
+
+you can scale to 1000 tiktok accounts if you have:
+&gt; viral hook
+&gt; demos
+&gt; warmed up accounts
+
+and its all within reach.
+
+connecting the dots now. https://t.co/O3Vo8gWrTA
+
+
+
+---
+
+## Pending Enhancement (ALPHA23038, Score: 28)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2029790710451654938
+**Added:** 2026-03-12T08:18:27-04:00
+
+this article tells you exactly why you're not making good money on Youtube 🔗
+
+
+
+---
+
+## Pending Enhancement (ALPHA23052, Score: 30)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2029179443302785362
+**Added:** 2026-03-12T08:18:27-04:00
+
+This is genuinely 1 of the weirdest apps I’ve ever seen💀
+
+They are going viral on TT
+1,000,000 views with this hook 
+
+The app exposes if your partner is a Gooner by telling you when they visit a corn website. https://t.co/CyEgpJJZIR
+
+
+
+---
+
+## Pending Enhancement (ALPHA23933, Score: 30)
+
+**Source:** @levikov (bookmarks) | **URL:** https://x.com/levikov/status/2032033939653869853
+**Added:** 2026-03-13T14:26:20-04:00
+
+Instagram theme pages with AI characters are the most slept-on money printer on the internet right now and the people running them are earning $5-40k/month from a single page while everyone else fights over TikTok…
+
+I'm going to explain exactly how this works because the people
+
+
+
+---
+
+## Pending Enhancement (ALPHA23956, Score: 30)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2032469101126324349
+**Added:** 2026-03-13T16:50:42-04:00
+
+$70k added revenue for a client we launched on tiktok shop less than 2 months ago.
+
+
+
+---
+
+## Pending Enhancement (ALPHA24145, Score: 32)
+
+**Source:** @affprinter (high-signal-accounts) | **URL:** https://x.com/affprinter/status/2031999796504883586
+**Added:** 2026-03-13T16:50:49-04:00
+
+I make $100K+ per month with TikTok slideshows
+ 
+Here's how in 10 steps:
+ 
+1. create TikTok accounts (5 min)
+2. pick your offer: Walmart, Sephora, Amazon, Target, etc (1 min)
+3. scroll TikTok, find viral slideshows in your niche (10 min)
+4. screenshot the best frames, add your
+
+
+
+---
+
+## Pending Enhancement (ALPHA24167, Score: 30)
+
+**Source:** @alexxgrowth (high-signal-accounts) | **URL:** https://x.com/alexxgrowth/status/2032093755730264164
+**Added:** 2026-03-13T16:50:56-04:00
+
+tiktok is now paying people to clip their content and post it on youtube
+
+let me say that again
+
+a platform worth $50 BILLION is using the exact same model that 16 year olds on Content Rewards use to make rent
+
+they're not running ads. they're not doing influencer deals
+
+they're
+
+
+
+---
+
+## Pending Enhancement (ALPHA24174, Score: 49)
+
+**Source:** @fromzerotomill (high-signal-accounts) | **URL:** https://x.com/fromzerotomill/status/2032330778173219144
+**Added:** 2026-03-13T16:50:56-04:00
+
+Phantom Profits is live
+
+the complete system for building faceless pages that print $10k-30k/month
+
+12 beta operators averaged $18,400 in first 60 days
+everything included:
+
+1. niche selection framework
+2. offer architecture
+3. viral content engine
+4. dm conversion scripts
+5.
+
+
+
+---
+
+## Pending Enhancement (ALPHA25174, Score: 20)
+
+**Source:** @pounddz (high-signal-accounts) | **URL:** https://x.com/pounddz/status/2032736197403939262
+**Added:** 2026-03-14T06:15:03-04:00
+
+I know a kid that’s been making 15k a month pretty consistently with TikTok slideshows 
+
+He just uses Clawdbot + Nano banana to make the slides and promotes content rewards offers 
+
+he said he works max 2 hours a day and has a system to go viral super consistently 
+
+here's
+

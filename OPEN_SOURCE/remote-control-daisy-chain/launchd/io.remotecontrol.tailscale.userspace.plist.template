@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>io.remotecontrol.tailscale.userspace</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/homebrew/bin/tailscaled</string>
+    <string>--tun=userspace-networking</string>
+    <string>--socket=__HOME__/.tailscale-remote-control/tailscaled.socket</string>
+    <string>--state=__HOME__/.tailscale-remote-control/tailscaled.state</string>
+    <string>--statedir=__HOME__/.tailscale-remote-control</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>__HOME__/.tailscale-remote-control/tailscaled.out</string>
+  <key>StandardErrorPath</key>
+  <string>__HOME__/.tailscale-remote-control/tailscaled.out</string>
+</dict>
+</plist>

@@ -1,0 +1,108 @@
+{
+  "cycle_start": "2026-03-13T16:16:27.752978",
+  "cycle_end": "2026-03-13T16:16:27.779351",
+  "version_changes_detected": 0,
+  "reddit_signals_found": 10,
+  "new_intel_rows_written": 10,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I built a wallpaper that shifts perspective when you move your head  looking for feedback",
+      "subreddit": "SideProject",
+      "score": 629,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rs969i/i_built_a_wallpaper_that_shifts_perspective_when/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "Got $240 revenue and 370+ installs in 10 days of my app release",
+      "subreddit": "AppBusiness",
+      "score": 110,
+      "url": "https://www.reddit.com/r/AppBusiness/comments/1rro8ta/got_240_revenue_and_370_installs_in_10_days_of_my/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGHEST",
+      "title": "I got my SaaS alone to $10kMRR. Here's how I plan to reach $200k with my new co-founder",
+      "subreddit": "micro_saas",
+      "score": 31,
+      "url": "https://www.reddit.com/r/micro_saas/comments/1rrswlk/i_got_my_saas_alone_to_10kmrr_heres_how_i_plan_to/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "my saas had zero conversions at $9/mo. i raised to $29 and people started paying.",
+      "subreddit": "Entrepreneur",
+      "score": 100,
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1rr7b4t/my_saas_had_zero_conversions_at_9mo_i_raised_to/",
+      "action": "Review for competitor pricing/feature intelligence."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "A failed acquisition made someone $280M. He wasn\u2019t even trying.",
+      "subreddit": "Entrepreneur",
+      "score": 88,
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1rs8ah8/a_failed_acquisition_made_someone_280m_he_wasnt/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [],
+  "top_reddit_signals": [
+    {
+      "title": "I built a wallpaper that shifts perspective when you move your head  looking for feedback",
+      "subreddit": "SideProject",
+      "score": 629,
+      "comments": 55,
+      "url": "https://www.reddit.com/r/SideProject/comments/1rs969i/i_built_a_wallpaper_that_shifts_perspective_when/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA23076"
+    },
+    {
+      "title": "Got $240 revenue and 370+ installs in 10 days of my app release",
+      "subreddit": "AppBusiness",
+      "score": 110,
+      "comments": 57,
+      "url": "https://www.reddit.com/r/AppBusiness/comments/1rro8ta/got_240_revenue_and_370_installs_in_10_days_of_my/",
+      "keyword_hits": 1,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA23080"
+    },
+    {
+      "title": "I got my SaaS alone to $10kMRR. Here's how I plan to reach $200k with my new co-founder",
+      "subreddit": "micro_saas",
+      "score": 31,
+      "comments": 18,
+      "url": "https://www.reddit.com/r/micro_saas/comments/1rrswlk/i_got_my_saas_alone_to_10kmrr_heres_how_i_plan_to/",
+      "keyword_hits": 0,
+      "roi": "HIGHEST",
+      "post_id": "ALPHA23114"
+    },
+    {
+      "title": "my saas had zero conversions at $9/mo. i raised to $29 and people started paying.",
+      "subreddit": "Entrepreneur",
+      "score": 100,
+      "comments": 113,
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1rr7b4t/my_saas_had_zero_conversions_at_9mo_i_raised_to/",
+      "keyword_hits": 1,
+      "roi": "HIGH",
+      "post_id": "ALPHA23096"
+    },
+    {
+      "title": "A failed acquisition made someone $280M. He wasn\u2019t even trying.",
+      "subreddit": "Entrepreneur",
+      "score": 88,
+      "comments": 43,
+      "url": "https://www.reddit.com/r/Entrepreneur/comments/1rs8ah8/a_failed_acquisition_made_someone_280m_he_wasnt/",
+      "keyword_hits": 0,
+      "roi": "HIGH",
+      "post_id": "ALPHA23929"
+    }
+  ]
+}

@@ -484,3 +484,56 @@ If I had to make money with apps again from zero:
 
 done
 
+
+
+---
+
+## Pending Enhancement (ALPHA22500, Score: 30)
+
+**Source:** @knoxtwts (high-signal-accounts) | **URL:** https://x.com/knoxtwts/status/2031671543152234714
+**Added:** 2026-03-12T02:14:17-04:00
+
+the ai video model that generates the best quality right now is completely irrelevant to whether you make money
+
+i know people clearing $10k/month who exclusively use kling 2.0
+
+not even the latest version. never tried seedance. never tried sora 2.
+
+they picked one model a year
+
+
+
+---
+
+## Pending Enhancement (ALPHA23882, Score: 24)
+
+**Source:** @codyschneiderxx (high-signal-accounts) | **URL:** https://x.com/codyschneiderxx/status/2032169758766817690
+**Added:** 2026-03-13T05:07:39-04:00
+
+google ads for saas 101
+
+find bottom of funnel keywords related to the product
+
+cluster similar keywords into ad sets
+
+now make conversion event for the user action that you want
+
+that can be a sign up, a free trial start, a paid conversion, a demo book, whatever
+
+how to actually
+
+
+
+---
+
+## Pending Enhancement (ALPHA24158, Score: 30)
+
+**Source:** @HamptonAc_ (high-signal-accounts) | **URL:** https://x.com/HamptonAc_/status/2032216360634188159
+**Added:** 2026-03-13T16:50:56-04:00
+
+I don't usually drop full systems like this but this one's too stupid to keep private
+
+$100K in 24 days came from this exact blueprint
+
+if you read this and don't at least try it, you're choosing to leave $$$ on the table
+

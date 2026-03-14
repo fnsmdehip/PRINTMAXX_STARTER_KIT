@@ -1782,3 +1782,72 @@ Here's a lesson on hooks that:
 > spark conversations
 > drive views, downloads and revenue 
 
+
+
+---
+
+## Pending Enhancement (ALPHA23955, Score: 30)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2032488076644143432
+**Added:** 2026-03-13T16:50:42-04:00
+
+We’re at $80k added revenue now
+
+
+
+---
+
+## Pending Enhancement (ALPHA24025, Score: 26)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/alexcooldev/status/2032488928096444658
+**Added:** 2026-03-13T16:50:42-04:00
+
+I keep seeing people flexing millions in B2C app revenue from paid ads dashboards… and somehow most of them are Turkish, if you’re Turkish you’ve already won 90% of the game lol.
+
+
+
+---
+
+## Pending Enhancement (ALPHA24118, Score: 24)
+
+**Source:** @stockMKTnewz (high-signal-accounts) | **URL:** https://x.com/StockMKTNewz/status/2032498068080259324
+**Added:** 2026-03-13T16:50:49-04:00
+
+Intuit $INTU brought in ~$1.6 Billion of revenue from Quickbooks last quarter
+
+Here's Intuit's Revenue by category
+
+
+
+---
+
+## Pending Enhancement (ALPHA25199, Score: 30)
+
+**Source:** @damianplayer (high-signal-accounts) | **URL:** https://x.com/damianplayer/status/2032632788831101275
+**Added:** 2026-03-14T06:22:13-04:00
+
+this guy is building what school should’ve been the whole time!
+
+>kids building real companies not writing essays about them
+
+>coaches checking your P&L not your attendance
+
+>$1,000,000 in revenue before graduation or your tuition back
+
+someone is finally building the education
+
+
+
+---
+
+## Pending Enhancement (ALPHA25240, Score: 29)
+
+**Source:** @alexxgrowth (high-signal-accounts) | **URL:** https://x.com/PrismMarketView/status/2031709045120209116/analytics
+**Added:** 2026-03-14T06:22:14-04:00
+
+$BRCC -- 
+@blckriflecoffee
+ Inc. grew retail coffee sales 31% in 2025 -- roughly 3x the category average. Stock near 52-week lows. One analyst covers it. Costs easing into 2026: management guided +7% revenue, +30% EBITDA expansion. Turnaround ahead of the price.
+
+The Undercovered.
+

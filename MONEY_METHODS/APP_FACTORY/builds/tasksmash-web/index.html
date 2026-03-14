@@ -1309,10 +1309,12 @@ if ('serviceWorker' in navigator) {
 
   <!-- email capture -->
   <div style="border-top:1px solid #1f2937;padding-top:24px;max-width:400px;">
-    <p style="margin:0 0 4px;font-size:14px;font-weight:600;color:#e5e5e5;">join 2,000+ solopreneurs</p>
-    <p style="margin:0 0 14px;font-size:12px;color:#9ca3af;">free tools, no fluff. unsubscribe any time.</p>
-    <!-- TODO: wire to beehiiv/convertkit -->
-    <form action="#" method="POST" style="display:flex;gap:8px;flex-wrap:wrap;">
+    <p style="margin:0 0 4px;font-size:14px;font-weight:600;color:#e5e5e5;">ADHD productivity hacks. weekly.</p>
+    <p style="margin:0 0 14px;font-size:12px;color:#9ca3af;">no fluff. unsubscribe any time.</p>
+    <form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" style="display:flex;gap:8px;flex-wrap:wrap;">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Lead from TaskSmash">
+      <input type="hidden" name="_next" value="https://tasksmash.surge.sh">
       <input
         type="email"
         name="email"
@@ -1346,7 +1348,7 @@ if ('serviceWorker' in navigator) {
         "
         onmouseover="this.style.background='#2563eb'"
         onmouseout="this.style.background='#3b82f6'"
-      >get updates</button>
+      >send it</button>
     </form>
   </div>
 </div>

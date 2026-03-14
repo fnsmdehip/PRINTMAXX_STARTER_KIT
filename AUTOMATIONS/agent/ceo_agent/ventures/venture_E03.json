@@ -1,0 +1,14 @@
+{
+  "op_id": "E03",
+  "name": "Ecom Arbitrage Scanner",
+  "category": "ECOM",
+  "lane": "rbi_intent_sniping",
+  "created": "2026-03-11T00:00:12.117548",
+  "score": 60.2,
+  "revenue_range": "$50-500/mo",
+  "description": "Automated price arbitrage between Amazon, Walmart, eBay. Scanner already built.",
+  "automation_level": "High",
+  "status": "CREATED",
+  "cycles_run": 0,
+  "last_cycle": null
+}

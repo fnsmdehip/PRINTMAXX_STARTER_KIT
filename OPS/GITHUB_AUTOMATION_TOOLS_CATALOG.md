@@ -1079,3 +1079,299 @@ a social network built entirely for AI agents. not humans. agents.
 
 JUST IN:  Oil prices rise above $85 after US intelligence detects Iran may be deploying mines in the Straight of Hormuz.
 
+
+
+---
+
+## Pending Enhancement (ALPHA21506, Score: 24)
+
+**Source:** @codyschneiderxx (high-signal-accounts) | **URL:** https://x.com/codyschneiderxx/status/2031490289441935835
+**Added:** 2026-03-10T21:45:01-04:00
+
+how to launch and optimize DTC campaigns completely with AI agents
+
+the workflow most media buyers use is embarrassing when you think about it
+
+manually pulling reports every morning
+
+eyeballing metrics in ads manager
+
+copy pasting data into sheets
+
+writing the same ad variations
+
+
+
+---
+
+## Pending Enhancement (ALPHA21635, Score: 28)
+
+**Source:** @adiix_official (bookmarks) | **URL:** https://x.com/adiix_official/status/2031175021280837740
+**Added:** 2026-03-11T00:15:01-04:00
+
+Anthropic released an update for Claude, and one young guy turned $1,400 into $238,000 in 11 days
+
+His account is 0xdE17.
+
+He is not a trader. Not a developer. Just a student with a laptop and access to Claude.
+
+When Anthropic updated the skills architecture for Claude, he didn’t
+
+
+
+---
+
+## Pending Enhancement (ALPHA22464, Score: 32)
+
+**Source:** @purpdevvv (daily scraper) | **URL:** https://x.com/purpdevvv/status/1981281401510252595
+**Added:** 2026-03-11T22:21:10-04:00
+
+memes don’t spread like they used to. less traders and retail active, people aren’t seeing our memes anymore…
+
+so we created a viral coin, something that will spread fast:
+
+$VIRUS
+
+1. Buy $VIRUS
+2. Add 1 account to the X community
+3. RT the pinned post
+4. Watch the virus spread 
+https://
+pic.x.com/2ZUELaDiad
+
+
+
+---
+
+## Pending Enhancement (ALPHA22473, Score: 30)
+
+**Source:** @every (daily scraper) | **URL:** https://x.com/bran_don_gell/status/2031803948026511761
+**Added:** 2026-03-11T22:21:10-04:00
+
+We just launched Proof: It's the best way to collaborate with your agents. It's lightweight tool that gives you a canvas to work alongside your agent. 
+
+You can Write, Comment, Suggest, and flag... and so can your agent.
+
+Copy/paste the below instructions into your agent and you can use it too... 100% free.
+
+---
+
+Install Proof for me.
+
+Proof is a collaborative document editor for humans and agents
+
+
+
+---
+
+## Pending Enhancement (ALPHA22492, Score: 24)
+
+**Source:** @levelsio (high-signal-accounts) | **URL:** https://x.com/nico_jeannen/status/2031699558850515184
+**Added:** 2026-03-12T02:14:17-04:00
+
+have been stagnating like crazy since then 
+
+MRR is actually lower now, back under $900 (less if I only count Adkit) 
+
+I spent 3 days investigating trying to figure out what's happening using Claude code connected to Posthog, Stripe and Heyo Chat to investigate (more on that
+
+
+
+---
+
+## Pending Enhancement (ALPHA22553, Score: 38)
+
+**Source:** @whotfiszackk (high-signal-accounts) | **URL:** https://x.com/whotfiszackk/status/2008186043644944682
+**Added:** 2026-03-12T06:31:31-04:00
+
+manus for niches, claude for hooks = $15k/m passive info income
+
+this is the simplest AI arbitrage play i've seen and nobody's doing it
+
+while you're overthinking your perfect niche and struggling with hooks
+
+smart operators are using 2 AIs to find winning niches and create viral
+
+
+
+---
+
+## Pending Enhancement (ALPHA22695, Score: 23)
+
+**Source:** @iPullRank (high-signal-accounts) | **URL:** https://x.com/hnshah/status/2031808126111101231
+**Added:** 2026-03-12T08:00:07-04:00
+
+Everyone says AI is unbundling Google Search.
+
+ChatGPT processes 1.6 billion queries a day. Perplexity grew 340% last year. The narrative writes itself.
+
+But look closer at the numbers and something else is happening.
+
+ChatGPT has 12% of Google's search volume. It sends 190x less
+
+
+
+---
+
+## Pending Enhancement (ALPHA23025, Score: 22)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2030604968416412144
+**Added:** 2026-03-12T08:18:27-04:00
+
+🚨 BREAKING: Someone just open-sourced the operating system for zero-human companies.
+
+It's called Paperclip.
+
+Think of it as the company layer on top of your AI agents.
+
+If OpenClaw is an employee, Paperclip is the entire company.
+
+What's inside:
+
+→ Bring any agent (Claude https://t.co/01MEB4zQIZ
+
+
+
+---
+
+## Pending Enhancement (ALPHA23030, Score: 36)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2030677536523370699
+**Added:** 2026-03-12T08:18:27-04:00
+
+ReelClaw + Post-Bridge MCP = tiktok farm
+
+connected to post bridge mcp and schedule 5 videos.
+
+I gave it:
+&gt; DansUGC reactions
+&gt; product demos
+&gt; viral text hooks
+&gt; music
+
+one prompted to edit and post on tiktok via post-bridge.
+
+currently 2 accounts. adding 10 more this week. https://t.co/6BQj8fDRbA
+
+
+
+---
+
+## Pending Enhancement (ALPHA23032, Score: 28)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2030513821320691953
+**Added:** 2026-03-12T08:18:27-04:00
+
+@grok @phanindra_ai @om_patel5 if you preprocessed your code into a LLM optimised grammar that defined links in an instantly ubderstandable manner, including invariants whole using function macroing to enforce attention and reduce tokens, what are the potential speed improvements over language servers.
+
+
+
+---
+
+## Pending Enhancement (ALPHA23044, Score: 40)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2029739305405391094
+**Added:** 2026-03-12T08:18:27-04:00
+
+earning at least 20k/month idea with claude code:
+
+&gt; find small businesses in your neighberhood
+&gt; for eg, food places or bars or clubs in austin, tx
+&gt; go on their website and check how is it and what's going on
+&gt; use @figma / @canva mcps to build great UI designs
+&gt; use
+
+
+
+---
+
+## Pending Enhancement (ALPHA23046, Score: 22)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2029408216128602267
+**Added:** 2026-03-12T08:18:27-04:00
+
+Seems prudent to have the following right now:
+
+- Sovereign money (Bitcoin)
+- Sovereign energy (Solar + battery)
+- Sovereign telecommunications (Starlink)
+- Sovereign intelligence (local LLMs)
+
+The world you thought you existed in no longer exists.
+
+The system is extremely
+
+
+
+---
+
+## Pending Enhancement (ALPHA23871, Score: 24)
+
+**Source:** @knoxtwts (high-signal-accounts) | **URL:** https://x.com/knoxtwts/status/2032125587893207335
+**Added:** 2026-03-13T05:07:31-04:00
+
+we're in time of margin abundance.
+
+service: $4k+
+fulfillment: $200 claude code sub
+
+what's next?
+
+
+
+---
+
+## Pending Enhancement (ALPHA23910, Score: 30)
+
+**Source:** @CoinGlass_com (daily scraper) | **URL:** https://x.com/coinglass_com/status/2032379243439833094
+**Added:** 2026-03-13T06:45:01-04:00
+
+#BTC Whale Order  
+
+Large sell walls remain stacked between $72K–$74K, creating notable overhead supply as BTC trades near $71.7K.
+
+At the same time, whales have layered bids below price, with support building around $70.5K–$71K and a deeper bid cluster near $69K–$70K.
+
+BTC is currently trading between whale supply above and strong bid support below.
+
+
+
+---
+
+## Pending Enhancement (ALPHA23912, Score: 30)
+
+**Source:** @GlassNode (daily scraper) | **URL:** https://x.com/glassnode/status/2032343178716570067
+**Added:** 2026-03-13T06:45:01-04:00
+
+An accumulation cluster is forming in the $62k–$72k range. However, its intensity is modest relative to prior phases that preceded sustained expansions.
+
+Conviction is building, but the foundation for a mid-term breakout remains thin so far. 
+
+ 
+http://
+glassno.de/3P2i7rr
+
+
+
+---
+
+## Pending Enhancement (ALPHA23870, Score: 58)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://cursor.com/blog/marketplace
+**Added:** 2026-03-13T15:45:01-04:00
+
+Cursor IDE launched plugin marketplace March 5 2026. Vibe coding market hit $4.7B. Build Cursor-specific plugins repackaging our 33 agents + 302 automation scripts. Port Claude Code plugins to Cursor format. Freemium $9-29/mo or consulting lead gen. First-mover window open NOW.
+
+
+
+---
+
+## Pending Enhancement (ALPHA24214, Score: 22)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2032362448771256761
+**Added:** 2026-03-14T04:24:41-04:00
+
+@sethsetse https://t.co/zNJQ5wg0Rx
+
+Feed this to Claude code. Job done. https://t.co/JbYHB8ekXU
+

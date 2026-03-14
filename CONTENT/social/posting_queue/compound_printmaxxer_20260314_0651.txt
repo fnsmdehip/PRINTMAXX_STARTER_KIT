@@ -1,0 +1,9 @@
+7 of my autonomous agents were silently failing for days.
+
+root cause: unescaped parentheses in launchd plist files. bash couldn't parse the inline prompts.
+
+fix: extracted all prompts to separate .md files. agents now read from files instead of inline strings.
+
+30 minutes of debugging. 7 agents resurrected.
+
+the lesson nobody talks about with AI agents: 80% of failures are infra, not AI.

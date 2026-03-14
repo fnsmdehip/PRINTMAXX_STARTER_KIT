@@ -1354,6 +1354,11 @@ def get_intelligence(venture_type: str, task_type: Optional[str] = None, include
     # Enrich with Master Ops xlsx data (if bridge module is available)
     result = _enrich_with_master_ops(venture_type, result)
 
+    # Inject SOUL.md behavioral directives (lightweight primer for all agents)
+    soul_path = PROJECT / "AUTOMATIONS" / "SOUL.md"
+    if soul_path.exists():
+        result["soul_directives"] = soul_path.read_text(encoding="utf-8")[:2000]
+
     return result
 
 
@@ -1614,6 +1619,10 @@ def format_human_output(intel: dict[str, Any], mode: str = "default") -> str:
     # Brief at the end
     lines.append(f"\n  BRIEF: {intel['brief']}")
     lines.append(f"\n  Valid tasks for {venture}: {', '.join(intel['meta'].get('valid_tasks', []))}")
+
+    # SOUL directives (behavioral primer)
+    if intel.get("soul_directives"):
+        lines.append(f"\n  SOUL: Behavioral directives loaded from AUTOMATIONS/SOUL.md")
     lines.append("")
 
     return "\n".join(lines)

@@ -91,3 +91,85 @@ Fixed Pricing: Always $106/month, no surprises.
 
  Start your 30-day trial NOW!
 
+
+
+---
+
+## Pending Enhancement (ALPHA21527, Score: 23)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2031414870105813013
+**Added:** 2026-03-10T21:45:01-04:00
+
+3. 8 AI companion apps that made $2.89M in 30 days
+
++ a 3-step playbook on how they did it.
+
+
+
+---
+
+## Pending Enhancement (ALPHA22632, Score: 26)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rrhqu2/saas_founders_were_giving_away_ai_marketing/
+**Added:** 2026-03-12T06:15:01-04:00
+
+[ACQUISITION] SaaS founders: we're giving away AI marketing playbooks that run your growth on autopilot
+
+
+
+---
+
+## Pending Enhancement (ALPHA23906, Score: 24)
+
+**Source:** @WatcherGuru (daily scraper) | **URL:** https://x.com/WatcherGuru/status/2032187766033780802
+**Added:** 2026-03-13T06:45:01-04:00
+
+JUST IN:  Nearly $1 trillion wiped out from the US stock market today.
+
+
+
+---
+
+## Pending Enhancement (ALPHA23908, Score: 24)
+
+**Source:** @WatcherGuru (daily scraper) | **URL:** https://x.com/WatcherGuru/status/2032116947303706762
+**Added:** 2026-03-13T06:45:01-04:00
+
+JUST IN: $820,000,000,000 wiped out from the US stock market in the first two hours of trading today.
+
+
+
+---
+
+## Pending Enhancement (ALPHA24052, Score: 24)
+
+**Source:** @PrajwalTomar_ (high-signal-accounts) | **URL:** https://x.com/PrajwalTomar_/status/2032433313114382453
+**Added:** 2026-03-13T16:50:49-04:00
+
+I'm giving away the EXACT system I used to build 50+ MVPs.
+
+Completely FREE.
+
+1,600+ builders joined in the past month alone. If you want to ship your first SaaS in the next 10 days, this is the only community you need.
+
+No BS. Just the complete playbook that took me months to
+
+
+
+---
+
+## Pending Enhancement (ALPHA25197, Score: 23)
+
+**Source:** @damianplayer (high-signal-accounts) | **URL:** https://x.com/damianplayer/status/2032671168033947902
+**Added:** 2026-03-14T06:22:13-04:00
+
+this is wild…
+
+Anduril just banked a $20 billion government contract. 
+
+10 years of AI-powered defense tech built by a startup founded 9 years ago.
+
+Palmer Luckey got fired from facebook, started a defense company, and is now rewriting the playbook on modern day warfare.
+
+the
+

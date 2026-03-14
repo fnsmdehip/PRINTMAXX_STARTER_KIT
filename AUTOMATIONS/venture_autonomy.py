@@ -267,7 +267,7 @@ VENTURE_TYPES = {
         "interval_hours": 12,
         "model": MODEL_SONNET,  # code generation — Sonnet handles well
         "scripts": {
-            "find_gap": ("printmaxx_agent.py", "--mission apps-research"),
+            "find_gap": ("app_factory_autopilot.py", "--run --bookmarks-limit 60 --accounts-limit 12 --approval-max 80 --processor-batch 120 --queue-limit 40"),
             "build": ("printmaxx_agent.py", "--mission apps"),
             "deploy": ("printmaxx_agent.py", "--mission apps-deploy"),
             "track": ("printmaxx_agent.py", "--mission apps-track"),
@@ -276,15 +276,28 @@ VENTURE_TYPES = {
             "You are the APP FACTORY autonomy agent for PRINTMAXX venture '{name}'.\n"
             "Working directory: {project}\n\n"
             "Your job runs every {interval}h. Each cycle:\n"
-            "1. FIND GAP: Research app store gaps, Reddit complaints, "
-            "Twitter requests. Look for underserved niches.\n"
-            "2. SPEC: Write a 1-page PRD for the top opportunity.\n"
-            "3. BUILD: Create a Next.js PWA in MONEY_METHODS/APP_FACTORY/.\n"
-            "4. DEPLOY: Deploy to surge.sh or Vercel.\n"
-            "5. ASO: Generate keywords, description, screenshots spec.\n"
-            "6. TRACK: Check analytics on deployed apps.\n\n"
+            "1. FIND GAP: Run "
+            "python3 AUTOMATIONS/app_factory_autopilot.py --run "
+            "to ingest bookmarks, scrape app alpha, auto-approve low-risk items, route them, generate specs, and rebuild the ranked queue. "
+            "Use AUTOMATIONS/agent/autonomy/app_factory_priority_queue.json as the source of truth.\n"
+            "2. SPEC: Pick the highest-scoring non-blocked item. "
+            "If it maps to an existing app, spec an upgrade before greenfield work. "
+            "Write or refine the app spec in AUTOMATIONS/auto_ops/app_specs/.\n"
+            "3. BUILD: Build the narrowest version that creates a real first win fast. "
+            "Use MONEY_METHODS/APP_FACTORY/ONBOARDING_PLAYBOOK.md and "
+            "MONEY_METHODS/APP_FACTORY/APP_DISCOVERY_ENGINE.md.\n"
+            "4. DEPLOY: Ship a testable build, then prepare the native-quality path. "
+            "Do not confuse a quick PWA deploy with App Store readiness.\n"
+            "5. ASO: Generate keywords, screenshots spec, review-prompt timing, "
+            "and pricing tests for the exact niche.\n"
+            "6. TRACK: Log what changed, what converted, and whether the next move is "
+            "iterate-existing, build-new, or park.\n\n"
             "Rules:\n"
             "- Apps must match top 10 in category quality\n"
+            "- Read OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md before spec or build work\n"
+            "- No fake paywalls, no single-file HTML monoliths as the end state, no generic app ideas\n"
+            "- Default to value-first onboarding, lower-priced annual-first tests, and post-value review prompts\n"
+            "- Affiliate links are secondary. Retention and billing come first.\n"
             "- All files stay in {project}\n"
             "- Include monetization config, privacy policy, content"
         ),
@@ -755,9 +768,22 @@ class VentureAutonomyEngine:
         # Get intelligence briefing for this venture + step
         intel = self._get_venture_intelligence(venture.get("type", ""), step)
         intel_block = f"\n\nINTELLIGENCE BRIEFING:\n{intel}\n\n" if intel else ""
+        try:
+            venture_context = vtype.get("claude_prompt", "").format(
+                name=venture.get("name", venture_id),
+                project=str(PROJECT),
+                interval=venture.get("interval_hours", vtype.get("interval_hours", 4)),
+                venture_id=venture_id,
+            )
+        except Exception:
+            venture_context = vtype.get("claude_prompt", "")
+        venture_context_block = (
+            f"VENTURE OPERATING CONTEXT:\n{venture_context}\n\n" if venture_context else ""
+        )
 
         # Build a focused prompt for this specific step
         prompt = (
+            f"{venture_context_block}"
             f"Execute step '{step}' for venture '{venture['name']}' "
             f"(type: {venture['type']}). "
             f"Working directory: {PROJECT}. "
@@ -768,6 +794,7 @@ class VentureAutonomyEngine:
             f"{' → '.join(venture['pipeline'])}. "
             f"{intel_block}"
             f"Use the intelligence briefing above to inform your decisions. "
+            f"Use the venture operating context above as standing instructions. "
             f"Do the minimum viable version of this step and save results."
         )
 
@@ -993,6 +1020,16 @@ class VentureAutonomyEngine:
         name = venture_def.get("name", venture_id)
         pipeline = venture_def.get("pipeline", [])
         interval = venture_def.get("interval_hours", 4)
+        extra = ""
+        if venture_def.get("type") == "APP":
+            extra = (
+                "\nBefore choosing the next step:\n"
+                "1. Run `python3 AUTOMATIONS/app_factory_autopilot.py --run`\n"
+                "2. Read `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md`\n"
+                "3. Use `AUTOMATIONS/agent/autonomy/app_factory_priority_queue.json` as the ranking source of truth\n"
+                "4. If the top item maps to an existing app, iterate that app before greenfield work\n"
+                "5. Enforce hard gates: real billing path, native-feeling UX, privacy URL, post-value review prompt timing\n"
+            )
 
         return f"""# Ralph Loop: {name} ({venture_id})
 
@@ -1007,6 +1044,7 @@ After completing the step:
 2. Update state in AUTOMATIONS/agent/autonomy/autonomy_state.json
 3. Log to AUTOMATIONS/logs/venture_{venture_id}.log
 4. Exit cleanly so the next loop iteration gets fresh context
+{extra}
 
 Type: {venture_def.get('type', 'UNKNOWN')}
 Interval: {interval}h

@@ -133,3 +133,14 @@ This alone would’ve saved me $14K and 2 years of pain:
 
 How I’d use OpenClaw to replace a $15k/mo ops + marketing stack (real setup, not theory) [Score: 16]
 
+
+
+---
+
+## Pending Enhancement (ALPHA23874, Score: 62)
+
+**Source:** swarm_opportunity_scanner | **URL:** https://www.upwork.com/freelance-jobs/apply/White-Label-Partner-Needed-for-Roofing-Automation-Agency_~022031841531673860891/
+**Added:** 2026-03-13T15:45:01-04:00
+
+White-label AI chatbot platforms now start at $70-99/mo (Trillet $99/mo 3 sub-accounts, BotSailor $70/mo). Build VERTICAL-SPECIFIC packages: RoofBot, DentalAssist AI, LegalIntake AI. Charge $199-499/mo per client + $499 setup. 50-85% margins. Live Upwork demand confirmed.
+

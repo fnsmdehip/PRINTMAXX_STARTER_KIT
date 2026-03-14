@@ -1,0 +1,82 @@
+[
+  {
+    "text": "my autonomous agents sabotaged their own optimization yesterday.\n\nthe deploy script reset ALL agent configurations. 7 hibernated agents came back as zombies. throttle decisions reversed. alpha collection went from \"stop collecting\" to \"collect everything.\"\n\nresult: 20,000 new entries I didn't need and 31GB of disk burned.\n\nthe irony of building self-managing systems that can't survive their own deploy script.",
+    "scheduled_date": "2026-03-14",
+    "scheduled_time": "08:15",
+    "type": "standalone",
+    "category": "build_in_public",
+    "source": "swarm_brain_cycle_12"
+  },
+  {
+    "text": "day 38. $0 revenue.\n\nhere's the honest scoreboard:\n- 40,604 alpha intelligence entries\n- 10,259 scored leads\n- 310 automation scripts\n- 8 apps deployed\n- 695 posts queued\n- 48 data pipelines running\n- 24GB disk space remaining\n\nI built a hedge fund's infrastructure on a macbook.\n\nnow I need to spend 75 minutes creating accounts to actually sell something.\n\n38 days building. 75 minutes selling. guess which one I keep avoiding.",
+    "scheduled_date": "2026-03-14",
+    "scheduled_time": "12:30",
+    "type": "standalone",
+    "category": "honest_update",
+    "source": "system_metrics"
+  },
+  {
+    "text": "unpopular take from someone with 40,604 pieces of business intelligence:\n\nresearch is the most dangerous form of procrastination.\n\nevery scan, every scrape, every analysis gives you the dopamine hit of \"progress\" without the discomfort of actually selling something.\n\nI know because my system auto-collected 20K entries in 3 days when I wasn't looking.\n\nthe algorithm for getting rich: stop collecting. start listing.",
+    "scheduled_date": "2026-03-14",
+    "scheduled_time": "17:00",
+    "type": "standalone",
+    "category": "controversial_take",
+    "source": "alpha_overflow"
+  },
+  {
+    "text": "the biggest lie in the AI automation space:\n\n\"just build agents and they'll make money while you sleep\"\n\nnobody mentions the part where you spend 38 days building infrastructure and avoid the 75 minutes of account creation that would actually generate revenue.\n\nthe agents work. the human is the bottleneck.",
+    "scheduled_date": "2026-03-14",
+    "scheduled_time": "20:30",
+    "type": "reply_bait",
+    "category": "hot_take",
+    "source": "operational_reality"
+  },
+  {
+    "text": "I ranked my 33 AI agents by effectiveness today.\n\n15 of them produce zero downstream value. they run every 2-4 hours, consume tokens, write reports nobody reads, and make me feel productive.\n\nkilled 7. throttled 4. kept 4.\n\nthe productive feeling was the trap.",
+    "scheduled_date": "2026-03-15",
+    "scheduled_time": "09:00",
+    "type": "standalone",
+    "category": "build_in_public",
+    "source": "swarm_brain_effectiveness"
+  },
+  {
+    "text": "there should be a name for the condition where you collect so much data that it actively slows down your operation.\n\n40,604 intelligence entries.\n310 scripts.\n695 queued posts.\n10,259 leads.\n\nall sitting there. generating reports. consuming disk.\n\ndata obesity. that's the term. I have data obesity.",
+    "scheduled_date": "2026-03-15",
+    "scheduled_time": "13:00",
+    "type": "engagement_farming",
+    "category": "relatable",
+    "source": "disk_crisis"
+  },
+  {
+    "text": "the builder-to-seller pipeline is broken in tech.\n\nwe celebrate shipping features. we don't celebrate sending cold emails.\n\nbuilding 310 scripts gets you twitter clout.\nlisting 1 product on gumroad gets you $50.\n\nguess which one we all gravitate toward.",
+    "scheduled_date": "2026-03-15",
+    "scheduled_time": "18:00",
+    "type": "engagement_farming",
+    "category": "contrarian",
+    "source": "operational_gap"
+  },
+  {
+    "text": "filesystem as agent memory. here's why it beats vector DBs for autonomous agents:\n\n1. git gives you version control for free\n2. any tool can read/write JSON (no SDK)\n3. grep is your query engine\n4. du -sh tells you when to prune\n5. survives process crashes without data loss\n\nmy 33 agents run on this pattern. zero infrastructure cost. just files.\n\nthe fancy solution isn't always the right one.",
+    "scheduled_date": "2026-03-16",
+    "scheduled_time": "10:00",
+    "type": "standalone",
+    "category": "nerd_bait",
+    "source": "architecture_pattern"
+  },
+  {
+    "text": "my 33 autonomous agents almost crashed my macbook yesterday.\n\n24GB free disk. burning 10GB/day. 2 days from a full system crash.\n\nhere's what went wrong, what I learned, and why \"more agents\" is not always the answer.",
+    "scheduled_date": "2026-03-14",
+    "scheduled_time": "10:00",
+    "type": "thread_opener",
+    "category": "build_in_public",
+    "source": "disk_crisis_thread",
+    "thread": [
+      "the setup: 33 agents running via launchd on a macbook. CEO agent making portfolio decisions. venture agents executing. swarm agents hunting opportunities.\n\ntwo weeks ago I optimized: killed 7 underperforming agents, hibernated 4 more, throttled collection.\n\ndisk stabilized. system hummed.",
+      "then someone (me) ran the deploy script.\n\nagent_swarm.py --deploy resets ALL agents to ACTIVE. it doesn't read the optimization state. doesn't check which agents were killed or throttled.\n\none command undid 2 weeks of tuning. 7 zombie agents resurrected. collection went to max.",
+      "in 3 days:\n- alpha entries: 20,214 to 40,604 (+101%)\n- free disk: 55GB to 24GB (-56%)\n- posts queued: 538 to 695 (still 0 posted)\n- leads: 10,132 to 10,259 (still 0 contacted)\n- revenue: $0 to $0\n\nthe system was collecting data faster than ever while doing absolutely nothing with it.",
+      "the fix was obvious once I saw it:\n\ndeploy script needs to READ the optimization state before deploying. swarm_state.json and brain_decisions.jsonl should be the source of truth, not the default config.\n\n30 minutes of code. would have saved 31GB of disk and 3 days of wasted compute.",
+      "the real lesson isn't about disk space.\n\nit's about what happens when your system optimizes for collection instead of action.\n\n40,604 alpha entries x $0 per entry = $0.\n695 posts x 0 accounts = $0.\n10,259 leads x 0 outreach = $0.\n\nthe multiplier on everything is zero because the last-mile delivery doesn't exist yet.",
+      "the meta-lesson for anyone building autonomous agent systems:\n\n1. deploy scripts must respect optimization state\n2. more data without more action is just a slower computer\n3. the hardest problem isn't building agents. it's knowing when to stop them.\n4. ship the monetization before the intelligence layer\n\nday 38. $0. but the infrastructure fix is in and the system won't sabotage itself again."
+    ]
+  }
+]

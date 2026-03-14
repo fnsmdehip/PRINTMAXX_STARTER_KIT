@@ -9,23 +9,23 @@ Status: PENDING_REVIEW
 ```
 pipeline update:
 
-• 163,700 websites analyzed
-• 14,835 hot leads (bad site + high budget industry)
-• 83,366 warm leads
-• 1,081,751 cold emails generated
-• 727,377 in outreach pipeline
+• 164,700 websites analyzed
+• 14,931 hot leads (bad site + high budget industry)
+• 83,870 warm leads
+• 1,094,972 cold emails generated
+• 742,308 in outreach pipeline
 
 runs autonomously. cron job at 3am. crash recovery built in. this is the way.
 ```
 
 ### Tweet 2
 ```
-most people manually find leads one at a time. I downloaded 2.87 million from Overture Maps, deduped to 1.45M unique domains, and built a closed-loop pipeline that qualifies → emails → tracks automatically. 14,835 hot leads so far.
+analyzed 164,700 business websites last night while sleeping. 14,931 have garbage sites that need rebuilding. cold emails already drafted. this is what automation looks like.
 ```
 
 ### Tweet 3
 ```
-analyzed 163,700 business websites last night while sleeping. 14,835 have garbage sites that need rebuilding. cold emails already drafted. this is what automation looks like.
+14,931 local businesses with outdated websites identified. personalized cold emails with live demo links generated automatically. the pipeline runs at 3am. I wake up to qualified leads.
 ```
 
 ## Thread (7 tweets)
@@ -80,9 +80,9 @@ qualify → email → track → repeat. no human in the loop.
 ```
 current numbers:
 
-• 163,700 websites analyzed (of 1.45M)
-• 14,835 hot leads identified
-• 1,081,751 cold emails generated
+• 164,700 websites analyzed (of 1.45M)
+• 14,931 hot leads identified
+• 1,094,972 cold emails generated
 • 16 live demo sites
 • 6 industry templates
 

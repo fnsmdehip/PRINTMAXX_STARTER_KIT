@@ -1,0 +1,97 @@
+THREAD: How My AI CEO Agent Runs My Business Portfolio
+
+1/7
+I built an AI agent that acts as CEO of my solopreneur portfolio.
+
+it runs every 8 hours. reads all intelligence. scores opportunities. creates new ventures. kills underperformers.
+
+last night it created 20 new business lanes while I slept. here's how it works.
+
+---
+
+2/7
+the CEO agent has 16 phases per cycle:
+
+1. read intelligence briefs
+2. check venture performance
+3. score new opportunities
+4. create venture agents for high-scorers
+5. kill ventures below threshold after 10 cycles
+6. adjust agent intervals (speed up winners)
+7-16. [cross-pollination, feedback loops, deployment, audit]
+
+total cycle time: ~15 minutes.
+
+---
+
+3/7
+the scoring system:
+
+every opportunity gets a composite score from 0-100.
+
+inputs: status readiness, category potential, intelligence density, time sensitivity, resource requirements.
+
+above 60 = auto-create venture agent.
+below 50 = archive.
+50-60 = queue for human review.
+
+last night's top scorer: Quora/Reddit answer marketing at 80.5.
+
+---
+
+4/7
+what "create venture agent" actually means:
+
+the CEO agent writes a JSON config specifying:
+- venture type (OUTBOUND, CONTENT, APP, etc.)
+- target metrics
+- intelligence brief
+- schedule (how often to run)
+- kill triggers (when to shut down)
+
+then venture_autonomy.py picks it up and installs it as a launchd agent.
+
+fully hands-off after creation.
+
+---
+
+5/7
+the kill triggers matter more than the creation:
+
+- app earning <$100 MRR after 60 days = kill
+- content account <500 followers after 90 days = pivot
+- cold outbound <2% reply after 3 optimizations = rewrite ICP
+- any venture with 10 consecutive failed cycles = auto-prune
+
+the SelfManager class handles all of this. no human intervention needed.
+
+---
+
+6/7
+the self-healing loop:
+
+health monitor runs every 2 hours. checks:
+- launchd agent exit codes
+- disk usage trends
+- log file sizes
+- stale lock files
+- zombie processes
+
+today it found 7 agents with bash syntax errors. auto-fixed by extracting prompts to files. all 7 back online.
+
+total human involvement: zero.
+
+---
+
+7/7
+the meta-lesson:
+
+stop thinking about AI agents as "tools you use."
+
+think about them as "employees you manage."
+
+you don't write code for each employee. you write job descriptions, KPIs, and firing criteria.
+
+the CEO agent is just a manager with a really good memory and zero ego.
+
+20 new ventures. 0 arguments. 0 meetings. runs at 4am.

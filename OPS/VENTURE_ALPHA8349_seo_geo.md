@@ -395,3 +395,63 @@ Owning search intent = Lower acquisition costs
 
 (4/18)
 
+
+
+---
+
+## Pending Enhancement (ALPHA22700, Score: 24)
+
+**Source:** r/SEO | **URL:** https://reddit.com/r/SEO/comments/1rqxamt/meta_is_hiring_an_seo_strategy_manager_for_213k/
+**Added:** 2026-03-12T06:15:01-04:00
+
+[r/SEO] Meta is hiring an SEO Strategy manager for $213k in NY
+
+
+
+---
+
+## Pending Enhancement (ALPHA22998, Score: 24)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1985461088738255271
+**Added:** 2026-03-12T08:00:07-04:00
+
+info products are stupid simple.
+
+most people overthink the whole game.
+
+you need these five things and you're printing.
+
+niche with buyers who are desperate. not interested. DESPERATE.
+
+mechanism with a name that sounds like you invented it. call it The Velocity Framework or some proprietary sounding stuff.
+
+landing page that doesn't look like you built it in 2007.
+
+VSL that makes them feel the p
+
+
+
+---
+
+## Pending Enhancement (ALPHA24056, Score: 30)
+
+**Source:** @PrajwalTomar_ (high-signal-accounts) | **URL:** https://x.com/PrajwalTomar_/status/2032493983222640703
+**Added:** 2026-03-13T16:50:49-04:00
+
+Backend developers charge $10k+ for this.
+
+I built it in 2 hours. By myself. With AI.
+
+→ Google OAuth
+→ Stripe payments
+→ Customer portal
+→ AI integration
+→ Full database
+→ Everything
+
+All deployed and working.
+
+Stop waiting for someone to build your idea.
+
+Full breakdown
+

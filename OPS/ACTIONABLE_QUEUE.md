@@ -1,10 +1,14 @@
-# ACTIONABLE QUEUE -- 2026-03-10 07:30
-Total items: 42 (deduplicated from all sources)
+# ACTIONABLE QUEUE -- 2026-03-14 07:30
+Total items: 50 (deduplicated from all sources)
 
 ---
 
-## [P0] CRITICAL -- Revenue-blocking human actions (16 items)
+## [P0] CRITICAL -- Revenue-blocking human actions (24 items)
 
+- [ ] - P0: Install or open the Tailscale iPhone app and log into the same account so the tailnet URL works from anywhere [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - P0 (5-15 min): Keep X/Brave logged in so the bookmark/account scrapers can run live [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN BLOCKERS (75 min total):** Gumroad (45m), X Premium (5m), Buffer CSV import (5m), affiliate signup (15m), paste 3 emails (5m). Unlocks $850-5,300/mo pipeline. [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Status:** DONE (product built). HUMAN ACTION: List on Gumroad/Whop when accounts created. [HUMAN]
@@ -23,6 +27,18 @@ Total items: 42 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - [ ] **[HIGH] Vibe Marketplace by Greta (441 PH votes):** New channel to sell vibe-coded products instantly. Sign up: https://www.producthunt.com/posts/vibe-marketplace-by-greta [HUMAN: review + sign up] [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - Blockers:
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **Remaining blocker for mobile/iPhone access:**
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - P0: Test CodeRelay from the iPhone against `https://printmaxx-control.tail16dddb.ts.net`
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - P0: Open RustDesk on the Mac and grant Screen Recording + Accessibility if prompted
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - P0 (5 min): Leave automation privacy permission on `Documents`; `Desktop` and network volumes not required unless you intentionally use them
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - P0 (20-40 min): Create/finish Apple Developer + App Store Connect + RevenueCat + Stripe path. This is still the app-factory bottleneck
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - P0 (5 min): Subscribe to X Premium on @PRINTMAXXER -- without it, link posts get 0% engagement
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Priority:** P0 — #1 BLOCKER for all revenue
@@ -38,7 +54,7 @@ Total items: 42 (deduplicated from all sources)
 - [ ] - [P0] Facebook keyword scraper - $500 budget (r/forhire)
       Source: PERSISTENT_TASK_TRACKER
 
-## [P1] HIGH -- System improvements with high ROI (7 items)
+## [P1] HIGH -- System improvements with high ROI (6 items)
 
 - [ ] - **HUMAN ACTIONS:** Deploy PWAs (~10 min), post tweets (~15 min), wire email forms to Beehiiv (~15 min) [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
@@ -52,11 +68,15 @@ Total items: 42 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **PageScorer:** pagescorer.surge.sh — landing page audit tool, conversion scoring, actionable fixes
       Source: PERSISTENT_TASK_TRACKER
-- [ ] - 168 deployed pages × $0 organic traffic = total SEO waste
-      Source: swarm/trend_synthesis_20260308.md
 
-## [P2] MEDIUM -- Nice-to-have optimizations (17 items)
+## [P2] MEDIUM -- Nice-to-have optimizations (18 items)
 
+- [ ] - **Human actions required next:** [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md` -> human-readable execution brief [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **Human actions required:** [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTIONS NEEDED:** [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Next action (human):** Post to r/ADHD using the thread template in ASO_AND_CONTENT.md [HUMAN]
@@ -87,10 +107,6 @@ Total items: 42 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - 1 REJECTED (pure price action news)
       Source: PERSISTENT_TASK_TRACKER
-- [ ] - Comparison pages (8) with proper schema, FAQ, cross-links = ready but invisible
-      Source: swarm/trend_synthesis_20260308.md
-- [ ] - All longtail SEO pages = zero indexing
-      Source: swarm/trend_synthesis_20260308.md
 
 ## [P3] LOW -- Research/exploration (2 items)
 
@@ -101,6 +117,5 @@ Total items: 42 (deduplicated from all sources)
 
 ---
 ### Sources
-- PERSISTENT_TASK_TRACKER: 38 items
-- swarm: 3 items
+- PERSISTENT_TASK_TRACKER: 49 items
 - DAILY_TACTICAL_PLAN: 1 items

@@ -1,0 +1,14 @@
+{
+  "op_id": "G12",
+  "name": "Content QA Pipeline",
+  "category": "GROWTH",
+  "lane": "rbi_intent_sniping",
+  "created": "2026-03-11T04:00:07.487332",
+  "score": 59.2,
+  "revenue_range": "Meta-op",
+  "description": "258-item content QA queue. Review \u2192 approve \u2192 post pipeline.",
+  "automation_level": "High",
+  "status": "CREATED",
+  "cycles_run": 0,
+  "last_cycle": null
+}
