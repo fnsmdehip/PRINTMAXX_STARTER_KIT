@@ -1,7 +1,7 @@
 {
   "last_cycle": "2026-03-14T12:23:38.286971",
   "cycles_run": 21,
-  "total_decisions": 104,
+  "total_decisions": 108,
   "op_scores": {
     "C01": {
       "op_id": "C01",
@@ -17791,6 +17791,31 @@
       "op_id": "D01",
       "name": "Gumroad Product Portfolio",
       "created": "2026-03-14T12:00:14.402563"
+    },
+    {
+      "op_id": "D02",
+      "name": "Notion Template Marketplace",
+      "created": "2026-03-14T16:00:16.563901"
+    },
+    {
+      "op_id": "D06",
+      "name": "Canva Template Store",
+      "created": "2026-03-14T16:00:16.590068"
+    },
+    {
+      "op_id": "F04",
+      "name": "Course/Digital Product Affiliate",
+      "created": "2026-03-14T16:00:16.615290"
+    },
+    {
+      "op_id": "N11",
+      "name": "PLR/MRR Digital Product Arbitrage",
+      "created": "2026-03-14T16:00:16.641045"
+    },
+    {
+      "op_id": "N58",
+      "name": "Template Marketplace Multi-list",
+      "created": "2026-03-14T16:00:16.667701"
     }
   ],
   "enhanced_ops": [],
