@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-14T12:23:38.286971",
-  "cycles_run": 21,
-  "total_decisions": 108,
+  "last_cycle": "2026-03-14T16:23:24.417191",
+  "cycles_run": 22,
+  "total_decisions": 109,
   "op_scores": {
     "C01": {
       "op_id": "C01",
@@ -20521,16 +20521,16 @@
     "protect_threshold": 60,
     "promote_threshold": 70
   },
-  "last_alpha_scrape": "2026-03-14T12:20:22.932232",
+  "last_alpha_scrape": "2026-03-14T16:06:12.572922",
   "alpha_pipeline_results": {
     "twitter_scraper": "failed",
     "reddit_scraper": "ok",
     "alpha_processor": "ok"
   },
   "last_research": "2026-03-14T04:30:23.026458",
-  "last_decision_engine": "2026-03-14T12:20:23.411749",
+  "last_decision_engine": "2026-03-14T16:06:14.061330",
   "last_content_gen": "2026-03-14T12:20:49.455176",
-  "last_health_check": "2026-03-14T12:21:24.210692",
+  "last_health_check": "2026-03-14T16:06:53.337689",
   "last_openclaw": "2026-03-14T12:21:45.423320",
   "openclaw_city_index": 13,
   "openclaw_stats": {
@@ -20592,12 +20592,12 @@
     "15 6 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --outreach >> AUTOMATIONS/logs/openclaw_outreach.log 2>&1",
     "30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/inbound_lead_tracker.py --scan >> AUTOMATIONS/logs/inbound_lead_tracker.log 2>&1"
   ],
-  "last_autonomy_run": "2026-03-14T12:23:33.251754",
+  "last_autonomy_run": "2026-03-14T16:23:03.318407",
   "autonomy_stats": {
     "status": "failed"
   },
-  "last_self_manage": "2026-03-14T12:23:33.497486",
-  "self_manage_actions": 1,
-  "last_swarm_check": "2026-03-14T12:23:33.632025",
-  "last_loop_closer": "2026-03-14T12:23:38.254629"
+  "last_self_manage": "2026-03-14T16:23:04.530529",
+  "self_manage_actions": 2,
+  "last_swarm_check": "2026-03-14T16:23:05.399685",
+  "last_loop_closer": "2026-03-14T16:23:24.391862"
 }

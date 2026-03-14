@@ -620,3 +620,37 @@
 {"ts": "2026-03-14T14:04:10.335823", "mission": "proactive_hunt", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
 {"ts": "2026-03-14T16:00:04.014070", "mission": "health_heal", "result": "success", "duration_s": 3.8, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-14T16:00:04.211114", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 85 response drafts, 38 listing drafts"}
+{"ts": "2026-03-14T16:07:09.085500", "mission": "content", "result": "partial", "duration_s": 14.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:07:22.990682", "mission": "content", "result": "partial", "duration_s": 13.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:07:37.122671", "mission": "content", "result": "partial", "duration_s": 14.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:07:51.117338", "mission": "content", "result": "partial", "duration_s": 13.9, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:08:04.341838", "mission": "content", "result": "partial", "duration_s": 13.1, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:08:19.251500", "mission": "content", "result": "partial", "duration_s": 14.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:08:34.301446", "mission": "content", "result": "partial", "duration_s": 14.9, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:08:48.184363", "mission": "content", "result": "partial", "duration_s": 13.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:09:03.072554", "mission": "content", "result": "partial", "duration_s": 14.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:09:19.827344", "mission": "content", "result": "partial", "duration_s": 16.6, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:09:33.387172", "mission": "content", "result": "partial", "duration_s": 13.5, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:09:48.490486", "mission": "content", "result": "partial", "duration_s": 15.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:10:04.759297", "mission": "content", "result": "partial", "duration_s": 16.1, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:10:21.934361", "mission": "content", "result": "partial", "duration_s": 17.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:10:38.213723", "mission": "content", "result": "partial", "duration_s": 16.2, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:10:53.321024", "mission": "content", "result": "partial", "duration_s": 15.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:11:07.182204", "mission": "content", "result": "partial", "duration_s": 13.7, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:11:21.128874", "mission": "content", "result": "partial", "duration_s": 13.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:11:34.616963", "mission": "content", "result": "partial", "duration_s": 13.3, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:11:49.853183", "mission": "content", "result": "partial", "duration_s": 15.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:12:04.108414", "mission": "content", "result": "partial", "duration_s": 14.1, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:12:18.622104", "mission": "content", "result": "partial", "duration_s": 14.2, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:12:32.712328", "mission": "content", "result": "partial", "duration_s": 14.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:12:47.243578", "mission": "content", "result": "partial", "duration_s": 14.1, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:13:03.146131", "mission": "content", "result": "partial", "duration_s": 14.9, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-14T16:16:15.956929", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-14T16:18:54.305262", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-14T16:26:57.887884", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-14T16:32:58.351402", "mission": "autonomy:SCRAPING_competitive_intel", "result": "partial", "duration_s": 3, "output": "Competitive Intel Scraping: 1/3 steps OK"}
+{"ts": "2026-03-14T16:38:57.742902", "mission": "autonomy:alpha_intelligence", "result": "partial", "duration_s": 3, "output": "Alpha Intelligence Research: 1/3 steps OK"}
+{"ts": "2026-03-14T18:00:04.745297", "mission": "health_heal", "result": "success", "duration_s": 4.5, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-14T18:00:05.006898", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 85 response drafts, 38 listing drafts"}
+{"ts": "2026-03-14T18:03:59.141915", "mission": "scan_opps_eve", "result": "success", "duration_s": 234.1, "output": "3/4 scanners completed"}
+{"ts": "2026-03-14T18:04:35.065349", "mission": "gen_content_eve", "result": "success", "duration_s": 35.9, "output": "Generated content from 3 sources, saved to AGENT_CONTENT_20260314.md"}
