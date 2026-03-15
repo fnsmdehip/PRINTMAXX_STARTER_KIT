@@ -677,3 +677,9 @@
 {"ts": "2026-03-14T23:00:36.407896", "mission": "gen_content_eve", "result": "success", "duration_s": 36.2, "output": "Generated content from 3 sources, saved to AGENT_CONTENT_20260314.md"}
 {"ts": "2026-03-14T23:00:37.927659", "mission": "safety_commit", "result": "success", "duration_s": 1.5, "output": "Git safety commit"}
 {"ts": "2026-03-14T23:00:44.214415", "mission": "screen_alpha_night", "result": "success", "duration_s": 6.3, "output": "Screened batch from 51203 pending entries"}
+{"ts": "2026-03-15T00:07:48.015457", "mission": "health_heal", "result": "success", "duration_s": 4.3, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-15T00:07:48.326529", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 91 response drafts, 38 listing drafts"}
+{"ts": "2026-03-15T00:09:00.287444", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-15T00:13:48.359336", "mission": "research_night", "result": "failed", "duration_s": 360.0, "output": "0/3 scrapers completed"}
+{"ts": "2026-03-15T00:15:48.445730", "mission": "upgrade_night", "result": "partial", "duration_s": 120.1, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-15T00:17:18.464709", "mission": "hunt_night", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}

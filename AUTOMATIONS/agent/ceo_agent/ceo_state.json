@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-14T20:26:11.168677",
-  "cycles_run": 23,
-  "total_decisions": 118,
+  "last_cycle": "2026-03-15T00:17:00.734667",
+  "cycles_run": 24,
+  "total_decisions": 119,
   "op_scores": {
     "C01": {
       "op_id": "C01",
@@ -20571,16 +20571,16 @@
     "protect_threshold": 60,
     "promote_threshold": 70
   },
-  "last_alpha_scrape": "2026-03-14T20:15:58.513505",
+  "last_alpha_scrape": "2026-03-15T00:06:03.370099",
   "alpha_pipeline_results": {
     "twitter_scraper": "failed",
     "reddit_scraper": "ok",
     "alpha_processor": "ok"
   },
   "last_research": "2026-03-14T04:30:23.026458",
-  "last_decision_engine": "2026-03-14T20:15:59.322192",
+  "last_decision_engine": "2026-03-15T00:06:03.769049",
   "last_content_gen": "2026-03-14T20:16:29.166169",
-  "last_health_check": "2026-03-14T20:17:11.335116",
+  "last_health_check": "2026-03-15T00:06:40.380458",
   "last_openclaw": "2026-03-14T20:18:09.634200",
   "openclaw_city_index": 14,
   "openclaw_stats": {
@@ -20642,13 +20642,12 @@
     "0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_command_center.py --refresh --top 8 >> AUTOMATIONS/logs/app_factory_command_center.log 2>&1",
     "0 21 * * * cd $BASE && $PYTHON AUTOMATIONS/compliance_scanner.py --audit-all >> AUTOMATIONS/logs/compliance_scanner.log 2>&1"
   ],
-  "last_autonomy_run": "2026-03-14T20:26:05.166576",
+  "last_autonomy_run": "2026-03-15T00:16:40.559013",
   "autonomy_stats": {
-    "status": "ok",
-    "summary": "[20:26:05] [AUTONOMY] [INFO] Ran 1/10 ventures this cycle"
+    "status": "failed"
   },
-  "last_self_manage": "2026-03-14T20:26:05.450224",
+  "last_self_manage": "2026-03-15T00:16:41.763812",
   "self_manage_actions": 1,
-  "last_swarm_check": "2026-03-14T20:26:05.701645",
-  "last_loop_closer": "2026-03-14T20:26:11.150547"
+  "last_swarm_check": "2026-03-15T00:16:42.173340",
+  "last_loop_closer": "2026-03-15T00:17:00.521904"
 }
