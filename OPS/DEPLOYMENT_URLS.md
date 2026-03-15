@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-14 07:55:00
+**Last updated:** 2026-03-14 21:30:00
 
 ---
 
@@ -20,7 +20,8 @@
 | invoiceforge | https://invoiceforge.surge.sh | LIVE |
 | pagescorer | https://pagescorer.surge.sh | LIVE |
 | pitchdeck | https://pitchdeck.surge.sh | LIVE |
-| prayerlock-web | https://prayerlock-web.surge.sh | LIVE |
+| prayerlock-web | https://prayerlock-web.surge.sh | LIVE — AI Dua tab added 2026-03-14 |
+| pdfmaxx | https://pdfmaxx.surge.sh | LIVE — new 2026-03-14 |
 | prospectmaxx | https://prospectmaxx.surge.sh | LIVE |
 | roicalc | https://roicalc.surge.sh | LIVE |
 | stackmaxx | https://stackmaxx.surge.sh | LIVE |
@@ -59,12 +60,24 @@
 
 ---
 
+## Affiliate Comparison Pages
+
+| Page | URL | Status | Commission |
+|------|-----|--------|------------|
+| semrush-vs-ahrefs | https://semrush-vs-ahrefs.surge.sh | LIVE (placeholder IDs) | $200-350/sale, 120-day cookie |
+| smartlead-vs-instantly | https://smartlead-vs-instantly.surge.sh | LIVE (placeholder IDs) | 20-35% recurring |
+| best-ai-tools-2026 | https://best-ai-tools-2026.surge.sh | LIVE (placeholder IDs) | mixed |
+| ai-stack-2026 | https://ai-stack-2026.surge.sh | LIVE (placeholder IDs) | mixed |
+| convertkit-vs-beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE (placeholder IDs) | 50% yr1 / 30% recurring |
+
+---
+
 ## Summary
 
-- **Total Deployments:** 382 (tracked in deployed_assets.json)
-- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages
+- **Total Deployments:** 385 (tracked in deployed_assets.json)
+- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages + 5 affiliate comparison pages
 - **Health Check:** All new deployments returning 200 OK
-- **Timestamp:** 2026-03-14 11:20:00
+- **Timestamp:** 2026-03-14 21:20:00
 
 ## App Details
 

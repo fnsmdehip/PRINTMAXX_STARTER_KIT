@@ -1446,3 +1446,16 @@ Yet nobody has built the Duolingo for books.
 Duolingo made $1.04 billion last year 
 according to claude
 
+
+
+---
+
+## Pending Enhancement (ALPHA98918, Score: 32)
+
+**Source:** @zach_yadegari (daily scraper) | **URL:** https://x.com/zach_yadegari/status/1887149146483654762
+**Added:** 2026-03-14T21:45:00-04:00
+
+We built Cal AI to $1.8 million MRR from our high school classrooms
+
+There is nothing stopping you
+

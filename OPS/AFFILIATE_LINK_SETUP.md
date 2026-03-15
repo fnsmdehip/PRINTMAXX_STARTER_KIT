@@ -95,12 +95,49 @@ Note: These compound. By month 12, your month-1 referrals are still paying. Recu
 
 ---
 
+## NEW: SEMrush Affiliate (HIGHEST per-sale commission)
+
+### 4. SEMrush ($200-350 per sale + $10/trial, 120-day cookie) - HIGHEST PRIORITY
+- **Sign up:** https://www.semrush.com/lp/affiliate-program/en/ (via Impact.com)
+- **Commission:** $200 per sale (Pro), $350 per sale (Guru), $10 per free trial signup
+- **Cookie:** 120 days (4x most competitors)
+- **Payout:** Monthly via Impact.com
+- **Your ref link format:** `https://www.semrush.com/?ref=YOUR_REF_ID`
+- **Replace in files:** Search for `REPLACE_SEMRUSH_REF` in:
+  - `LANDING/affiliate-pages/semrush-vs-ahrefs/index.html`
+- **Math:** 1 sale/mo = $200-350/mo. 120-day cookie means clicks from 4 months ago can still convert.
+
+### 5. Ahrefs (varies, check program)
+- **Sign up:** Check https://ahrefs.com/affiliates or similar
+- **Your ref link format:** varies
+- **Replace in files:** Search for `REPLACE_AHREFS_REF` in:
+  - `LANDING/affiliate-pages/semrush-vs-ahrefs/index.html`
+
+### 6. Smartlead (20-35% lifetime recurring)
+- **Sign up:** https://www.smartlead.ai/affiliate-partners
+- **Commission:** 20-35% lifetime recurring (tiered)
+- **Replace in files:** Search for `PLACEHOLDER` in:
+  - `LANDING/affiliate-pages/smartlead-vs-instantly/index.html`
+
+### 7. Instantly (20-40% recurring, tiered)
+- **Sign up:** https://instantly.ai/affiliate
+- **Commission:** 20% first 50 referrals, 30% for 51-75, 40% for 76+
+- **Replace in files:** Search for `PLACEHOLDER` in:
+  - `LANDING/affiliate-pages/smartlead-vs-instantly/index.html`
+
+---
+
 ## Next Actions
 
-1. Sign up for ConvertKit affiliate program (5 min)
-2. Sign up for Beehiiv partner program (5 min)
-3. Replace placeholder IDs (2 min)
-4. Redeploy pages (1 min)
+1. Sign up for SEMrush affiliate via Impact.com (5 min) - $200-350/SALE, 120-day cookie
+2. Sign up for ConvertKit affiliate program (5 min)
+3. Sign up for Beehiiv partner program (5 min)
+4. Sign up for Instantly affiliate (5 min)
+5. Sign up for Smartlead affiliate (5 min)
+6. Replace all placeholder IDs across 5 pages (5 min)
+7. Redeploy all 5 pages (2 min)
+
+**Total time: ~30 min. Potential: $500-2,000/mo in affiliate commissions once traffic matures.**
 5. Post distribution content from `CONTENT/social/affiliate_funnel_posts_mar7.md`
 6. Monitor GoatCounter for click data
 

@@ -263,8 +263,20 @@
 - **Content queued:** 5 tweets + 1 thread + 1 Reddit post -> `CONTENT/social/affiliate_funnel_posts_mar7.md` (PENDING_REVIEW)
 - **Setup guide:** `OPS/AFFILIATE_LINK_SETUP.md` (affiliate program signup links + sed commands to replace placeholder IDs)
 - **Revenue potential:** ConvertKit 30% recurring + Beehiiv 20% recurring = ~$185/mo at 10 referrals each
-- **BLOCKER (human):** Sign up for ConvertKit + Beehiiv affiliate programs, replace placeholder IDs, redeploy. See `OPS/AFFILIATE_LINK_SETUP.md`.
-- **Next cycle:** Build "Cursor vs Claude Code" comparison page, check GoatCounter click data, add ThriveCart page
+- **BLOCKER (human):** Sign up for affiliate programs and replace placeholder IDs. See `OPS/AFFILIATE_LINK_SETUP.md`.
+- **Next cycle:** Check GoatCounter click data, add ThriveCart page, build "Cursor vs Claude Code" comparison
+
+### AFFILIATE FUNNEL CYCLE — 2026-03-14 (autonomy agent)
+- **Status:** DONE
+- **Deployed 3 new pages:**
+  - https://semrush-vs-ahrefs.surge.sh (NEW, $200-350/sale, 120-day cookie)
+  - https://smartlead-vs-instantly.surge.sh (was built, now deployed)
+  - https://best-ai-tools-2026.surge.sh (was built, now deployed)
+- **Total affiliate pages now live:** 5 comparison/affiliate pages on surge.sh
+- **Content queued:** 8 promo tweets in `CONTENT/social/AFFILIATE_PROMO_TWEETS_MAR14.csv` (PENDING_REVIEW)
+- **Updated:** `OPS/DEPLOYMENT_URLS.md` with affiliate page section, `OPS/AFFILIATE_LINK_SETUP.md` with SEMrush/Ahrefs/Smartlead/Instantly signup info
+- **Revenue potential:** SEMrush alone = $200-350 per sale with 120-day cookie. 1 sale/mo = $2,400-4,200/yr.
+- **BLOCKER (human, 30 min total):** Sign up for 5 affiliate programs and replace placeholder IDs. Full instructions in `OPS/AFFILIATE_LINK_SETUP.md`. Priority order: SEMrush (highest per-sale) > ConvertKit (recurring) > Beehiiv (50% yr1) > Instantly (tiered) > Smartlead (lifetime recurring).
 
 ### APP FACTORY CYCLE — 2026-03-07 (autonomy agent)
 - **Status:** DONE
