@@ -235,7 +235,7 @@ class GitGuard:
 
             # Stage all changes
             subprocess.run(
-                ["git", "add", "-A"],
+                ["git", "add", "-u"],
                 cwd=str(PROJECT), capture_output=True, timeout=30
             )
 
@@ -284,7 +284,7 @@ class GitGuard:
         """Commit after CEO changes, with a descriptive message."""
         try:
             subprocess.run(
-                ["git", "add", "-A"],
+                ["git", "add", "-u"],
                 cwd=str(PROJECT), capture_output=True, timeout=30
             )
             subprocess.run(

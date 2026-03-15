@@ -202,3 +202,16 @@ INTELLIGENCE phase (iterations 16-20):
 ---
 
 **This system runs automatically. Check logs daily. Act on high-priority alerts immediately.**
+
+---
+
+## Alpha Insights (Auto-Appended)
+
+_Insights auto-appended by playbook_enhancer.py. Review and integrate as needed._
+
+### Alpha Insight: ALPHA8034 — 2026-03-15
+**Source:** r/SideProject ([link](https://www.reddit.com/r/SideProject/comments/1r7yb3k/automated_70_of_my_work_tasks_in_one_month/))
+**Category:** MONETIZATION
+**Insight:** [ACQUISITION] Automated 70% of my work tasks in one month
+**Potential:** ROI: MEDIUM
+

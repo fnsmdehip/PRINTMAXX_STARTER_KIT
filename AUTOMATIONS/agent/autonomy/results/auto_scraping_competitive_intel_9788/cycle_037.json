@@ -1,0 +1,219 @@
+{
+  "cycle_start": "2026-03-15T00:59:25.180439",
+  "cycle_end": "2026-03-15T00:59:25.186755",
+  "version_changes_detected": 12,
+  "reddit_signals_found": 1,
+  "new_intel_rows_written": 13,
+  "alerts_generated": 4,
+  "alerts": [
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Abide",
+      "category": "faith",
+      "change": "3.77.0 -> 3.79.0",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+2) - active development",
+      "action": "Check Abide App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "Knowunity",
+      "category": "study",
+      "change": "6.9.1 -> 6.11.0",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+2) - active development",
+      "action": "Check Knowunity App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "VERSION_CHANGE",
+      "priority": "HIGH",
+      "app": "StepBet",
+      "category": "fitness",
+      "change": "22.5.0 -> 22.7.0",
+      "threat_level": "UNKNOWN",
+      "note": "Minor jump (+2) - active development",
+      "action": "Check StepBet App Store page for new features. Update gap analysis."
+    },
+    {
+      "type": "REDDIT_SIGNAL",
+      "priority": "HIGH",
+      "title": "macOS 26 Users' New Launchpad Alternative: No Installation Required, Restores Classic Launchpad Experience.",
+      "subreddit": "InternetIsBeautiful",
+      "score": 1,
+      "url": "https://www.reddit.com/r/InternetIsBeautiful/comments/1ru2ljk/macos_26_users_new_launchpad_alternative_no/",
+      "action": "Review for competitor pricing/feature intelligence."
+    }
+  ],
+  "scored_changes": [
+    {
+      "app": "Abide",
+      "from_version": "3.77.0",
+      "to_version": "3.79.0",
+      "price": "Free",
+      "rating": 4.87,
+      "ratings_count": 120971,
+      "category": "faith",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+2) - active development"
+    },
+    {
+      "app": "Opal",
+      "from_version": "3.151",
+      "to_version": "3.151.1",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 68442,
+      "category": "screen_time",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "BePresent",
+      "from_version": "0.18.61",
+      "to_version": "0.18.62",
+      "price": "Free",
+      "rating": 4.84,
+      "ratings_count": 39367,
+      "category": "screen_time",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "one sec",
+      "from_version": "5.1",
+      "to_version": "5.2",
+      "price": "Free",
+      "rating": 4.83,
+      "ratings_count": 22282,
+      "category": "screen_time",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Gauth",
+      "from_version": "1.91.0",
+      "to_version": "1.92.0",
+      "price": "Free",
+      "rating": 4.84,
+      "ratings_count": 1346558,
+      "category": "study",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Knowunity",
+      "from_version": "6.9.1",
+      "to_version": "6.11.0",
+      "price": "Free",
+      "rating": 4.63,
+      "ratings_count": 3942,
+      "category": "study",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+2) - active development"
+    },
+    {
+      "app": "Quizlet",
+      "from_version": "10.26",
+      "to_version": "10.27",
+      "price": "Free",
+      "rating": 4.78,
+      "ratings_count": 1055620,
+      "category": "study",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "FitBod",
+      "from_version": "8.7.0",
+      "to_version": "8.8.0",
+      "price": "Free",
+      "rating": 4.82,
+      "ratings_count": 265909,
+      "category": "fitness",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Streaks Workout",
+      "from_version": "7.2.1",
+      "to_version": "7.2.2",
+      "price": "$4.99",
+      "rating": 4.76,
+      "ratings_count": 6947,
+      "category": "fitness",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "StepBet",
+      "from_version": "22.5.0",
+      "to_version": "22.7.0",
+      "price": "Free",
+      "rating": 4.8,
+      "ratings_count": 22024,
+      "category": "fitness",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "HIGH",
+      "threat": "UNKNOWN",
+      "note": "Minor jump (+2) - active development"
+    },
+    {
+      "app": "Focus Keeper",
+      "from_version": "4.2.11",
+      "to_version": "4.2.12",
+      "price": "Free",
+      "rating": 4.79,
+      "ratings_count": 31199,
+      "category": "productivity",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    },
+    {
+      "app": "Sleep Cycle",
+      "from_version": "6.26.8",
+      "to_version": "6.26.9",
+      "price": "Free",
+      "rating": 4.66,
+      "ratings_count": 21099,
+      "category": "sleep",
+      "scan_date": "2026-03-15T00:54:13.487918",
+      "roi": "MEDIUM",
+      "threat": "UNKNOWN",
+      "note": "Small update"
+    }
+  ],
+  "top_reddit_signals": [
+    {
+      "title": "macOS 26 Users' New Launchpad Alternative: No Installation Required, Restores Classic Launchpad Experience.",
+      "subreddit": "InternetIsBeautiful",
+      "score": 1,
+      "comments": 1,
+      "url": "https://www.reddit.com/r/InternetIsBeautiful/comments/1ru2ljk/macos_26_users_new_launchpad_alternative_no/",
+      "keyword_hits": 2,
+      "roi": "HIGH",
+      "post_id": "ALPHA99004"
+    }
+  ]
+}

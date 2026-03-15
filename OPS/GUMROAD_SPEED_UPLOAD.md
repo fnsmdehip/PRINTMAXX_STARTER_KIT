@@ -539,3 +539,14 @@ y/ethereum-foundation
 
 Building a portfolio of AI tools on Gumroad — shipped my first one yesterday, aiming for $500/mo
 
+
+
+---
+
+## Pending Enhancement (ALPHA99866, Score: 29)
+
+**Source:** r/SaaS | **URL:** https://reddit.com/r/SaaS/comments/1rtgnnw/competitor_copied_our_entire_product_and_priced/
+**Added:** 2026-03-15T03:21:55-04:00
+
+Competitor copied product + priced at 50% ($29 vs $59/mo). Premium positioning is the moat when copied.
+
