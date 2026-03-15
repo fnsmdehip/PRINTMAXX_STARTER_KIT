@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-14T16:23:24.417191",
-  "cycles_run": 22,
-  "total_decisions": 113,
+  "last_cycle": "2026-03-14T20:26:11.168677",
+  "cycles_run": 23,
+  "total_decisions": 114,
   "op_scores": {
     "C01": {
       "op_id": "C01",
@@ -20546,31 +20546,26 @@
     "protect_threshold": 60,
     "promote_threshold": 70
   },
-  "last_alpha_scrape": "2026-03-14T16:06:12.572922",
+  "last_alpha_scrape": "2026-03-14T20:15:58.513505",
   "alpha_pipeline_results": {
     "twitter_scraper": "failed",
     "reddit_scraper": "ok",
     "alpha_processor": "ok"
   },
   "last_research": "2026-03-14T04:30:23.026458",
-  "last_decision_engine": "2026-03-14T16:06:14.061330",
-  "last_content_gen": "2026-03-14T12:20:49.455176",
-  "last_health_check": "2026-03-14T16:06:53.337689",
-  "last_openclaw": "2026-03-14T12:21:45.423320",
-  "openclaw_city_index": 13,
+  "last_decision_engine": "2026-03-14T20:15:59.322192",
+  "last_content_gen": "2026-03-14T20:16:29.166169",
+  "last_health_check": "2026-03-14T20:17:11.335116",
+  "last_openclaw": "2026-03-14T20:18:09.634200",
+  "openclaw_city_index": 14,
   "openclaw_stats": {
     "discover": "ok",
     "city": "Atlanta GA",
-    "niche": "dentist",
+    "niche": "plumber",
     "build": "ok",
     "outreach": "ok"
   },
   "managed_crons": [
-    "0 3 * * 1 cd $BASE && $PYTHON AUTOMATIONS/platform_rpm_tracking.py >> AUTOMATIONS/logs/rpm_tracking.log 2>&1",
-    "30 3 * * 1 cd $BASE && $PYTHON AUTOMATIONS/creator_program_monitoring.py >> AUTOMATIONS/logs/creator_programs.log 2>&1",
-    "0 4 * * 1 cd $BASE && $PYTHON AUTOMATIONS/aso_keyword_research.py >> AUTOMATIONS/logs/aso_keywords.log 2>&1",
-    "30 4 * * 1 cd $BASE && $PYTHON AUTOMATIONS/gov_tenders_scraper.py --all-sources --days 7 --top 50 >> AUTOMATIONS/logs/gov_tenders.log 2>&1",
-    "0 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_scanner.py >> AUTOMATIONS/logs/ecom_arb.log 2>&1",
     "15 5 * * 1 cd $BASE && $PYTHON AUTOMATIONS/trending_products_scanner.py >> AUTOMATIONS/logs/trending_products.log 2>&1",
     "0 6 * * 1 cd $BASE && $PYTHON AUTOMATIONS/engagement_optimizer.py --schedule-week >> AUTOMATIONS/logs/engagement_optimizer.log 2>&1",
     "0 */2 * * * cd $BASE && $PYTHON AUTOMATIONS/ecom_arb_engine.py --hourly --top 5 >> AUTOMATIONS/logs/ecom_arb_engine.log 2>&1",
@@ -20615,14 +20610,20 @@
     "0 0 * * 2 cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --discover \"Louisville KY\" \"pressure washing\" --limit 15 >> AUTOMATIONS/logs/openclaw_discovery.log 2>&1",
     "0 6 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --build >> AUTOMATIONS/logs/openclaw_build.log 2>&1",
     "15 6 * * * cd $BASE && $PYTHON AUTOMATIONS/openclaw_local_biz.py --outreach >> AUTOMATIONS/logs/openclaw_outreach.log 2>&1",
-    "30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/inbound_lead_tracker.py --scan >> AUTOMATIONS/logs/inbound_lead_tracker.log 2>&1"
+    "30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/inbound_lead_tracker.py --scan >> AUTOMATIONS/logs/inbound_lead_tracker.log 2>&1",
+    "20 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/intelligence_router.py --venture ALL --task general --json >> AUTOMATIONS/logs/intelligence_router.log 2>&1",
+    "30 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/master_ops_bridge.py --rebuild >> AUTOMATIONS/logs/master_ops_bridge.log 2>&1",
+    "0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_autopilot.py --run >> AUTOMATIONS/logs/app_factory_autopilot.log 2>&1",
+    "0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_command_center.py --refresh --top 8 >> AUTOMATIONS/logs/app_factory_command_center.log 2>&1",
+    "0 21 * * * cd $BASE && $PYTHON AUTOMATIONS/compliance_scanner.py --audit-all >> AUTOMATIONS/logs/compliance_scanner.log 2>&1"
   ],
-  "last_autonomy_run": "2026-03-14T16:23:03.318407",
+  "last_autonomy_run": "2026-03-14T20:26:05.166576",
   "autonomy_stats": {
-    "status": "failed"
+    "status": "ok",
+    "summary": "[20:26:05] [AUTONOMY] [INFO] Ran 1/10 ventures this cycle"
   },
-  "last_self_manage": "2026-03-14T16:23:04.530529",
-  "self_manage_actions": 2,
-  "last_swarm_check": "2026-03-14T16:23:05.399685",
-  "last_loop_closer": "2026-03-14T16:23:24.391862"
+  "last_self_manage": "2026-03-14T20:26:05.450224",
+  "self_manage_actions": 1,
+  "last_swarm_check": "2026-03-14T20:26:05.701645",
+  "last_loop_closer": "2026-03-14T20:26:11.150547"
 }

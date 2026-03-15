@@ -428,7 +428,8 @@
       "config": {
         "cities_completed": [
           "Nashville",
-          "Memphis"
+          "Memphis",
+          "Milwaukee"
         ],
         "cities_queued": [
           "Knoxville",
@@ -438,7 +439,17 @@
           "Raleigh",
           "Charlotte",
           "San Antonio",
-          "Portland"
+          "Portland",
+          "Cincinnati",
+          "St Louis",
+          "Pittsburgh",
+          "Minneapolis",
+          "Kansas City",
+          "Sacramento",
+          "Salt Lake City",
+          "Cleveland",
+          "Richmond",
+          "Omaha"
         ],
         "verticals": [
           "auto_repair",
@@ -449,7 +460,12 @@
           "roofing",
           "landscaping",
           "cleaning",
-          "handyman"
+          "handyman",
+          "plumber",
+          "pest_control",
+          "flooring",
+          "locksmith",
+          "towing"
         ],
         "current_city_index": 2,
         "priority_targets": [
@@ -681,8 +697,8 @@
         "priority_updated": "2026-03-10T00:14:44.880720"
       },
       "created_at": "2026-03-06T21:12:49.502027",
-      "last_run": "2026-03-14T16:18:54.283966",
-      "cycles_run": 23,
+      "last_run": "2026-03-14T20:05:00.000000",
+      "cycles_run": 24,
       "results": [
         {
           "ts": "2026-03-08T10:15:10.789573",
@@ -1790,21 +1806,9 @@
         "targets": "competitors,trends,pricing"
       },
       "created_at": "2026-03-06T21:16:28.943305",
-      "last_run": "2026-03-14T16:26:57.879601",
-      "cycles_run": 33,
+      "last_run": "2026-03-14T20:26:05.114334",
+      "cycles_run": 34,
       "results": [
-        {
-          "ts": "2026-03-09T16:20:16.161084",
-          "steps": {
-            "configure": "failed",
-            "scrape": "failed",
-            "clean": "failed",
-            "analyze": "ok",
-            "store": "failed",
-            "alert": "ok"
-          },
-          "success_rate": "2/6"
-        },
         {
           "ts": "2026-03-09T20:11:25.226927",
           "steps": {
@@ -2036,38 +2040,50 @@
             "alert": "ok"
           },
           "success_rate": "2/6"
+        },
+        {
+          "ts": "2026-03-14T20:26:05.114349",
+          "steps": {
+            "configure": "failed",
+            "scrape": "failed",
+            "clean": "failed",
+            "analyze": "ok",
+            "store": "failed",
+            "alert": "ok"
+          },
+          "success_rate": "2/6"
         }
       ],
       "pipeline_stats": {
         "configure": {
-          "runs": 18,
+          "runs": 19,
           "successes": 1,
-          "last_run": "2026-03-14T16:20:05.791354"
+          "last_run": "2026-03-14T20:19:18.009477"
         },
         "scrape": {
-          "runs": 18,
+          "runs": 19,
           "successes": 1,
-          "last_run": "2026-03-14T16:25:05.830394"
+          "last_run": "2026-03-14T20:24:18.022228"
         },
         "clean": {
-          "runs": 18,
+          "runs": 19,
           "successes": 1,
-          "last_run": "2026-03-14T16:25:59.164077"
+          "last_run": "2026-03-14T20:25:13.958732"
         },
         "analyze": {
-          "runs": 18,
-          "successes": 18,
-          "last_run": "2026-03-14T16:26:02.753934"
+          "runs": 19,
+          "successes": 19,
+          "last_run": "2026-03-14T20:25:16.565238"
         },
         "store": {
-          "runs": 18,
+          "runs": 19,
           "successes": 1,
-          "last_run": "2026-03-14T16:26:57.411544"
+          "last_run": "2026-03-14T20:26:04.785959"
         },
         "alert": {
-          "runs": 18,
-          "successes": 18,
-          "last_run": "2026-03-14T16:26:57.879523"
+          "runs": 19,
+          "successes": 19,
+          "last_run": "2026-03-14T20:26:05.113909"
         }
       },
       "cycle_count": 18,
@@ -2444,8 +2460,8 @@
       ]
     }
   },
-  "total_cycles": 129,
-  "total_pipeline_runs": 656,
+  "total_cycles": 130,
+  "total_pipeline_runs": 662,
   "created_at": "2026-03-06T21:12:45.215910",
   "RESEARCH": {
     "last_cycle": "2026-03-09T10:25:38.188614",
