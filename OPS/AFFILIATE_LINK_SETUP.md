@@ -178,3 +178,23 @@ Fewer bills. More savings. Bundle mobile with internet for just $25/month per li
 
 GStack - Use Garry Tan exact Claude Code setup (YC president config as a product)
 
+
+
+---
+
+## Pending Enhancement (ALPHA98788, Score: 35)
+
+**Source:** @seanb2b (high-signal-accounts) | **URL:** https://x.com/seanb2b/status/2032488883670168055
+**Added:** 2026-03-14T18:45:01-04:00
+
+Ashao 
+→ Closed $3K setup + $300/meeting
+→ 50% upfront, 50% after first call
+
+$97 → $3K collected + recurring
+
+Stop trying to figure it out yourself 
+
+http://
+closingclientsgroup.com
+

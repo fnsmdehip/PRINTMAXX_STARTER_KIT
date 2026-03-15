@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-03-14 18:04
-Last session: 2026-03-14 17:54 (0.2h ago)
+# SESSION BRIEFING -- 2026-03-14 19:52
+Last session: 2026-03-14 19:23 (0.5h ago)
 
 ---
 
@@ -8,6 +8,9 @@ Last session: 2026-03-14 17:54 (0.2h ago)
 ### Daily Digest (latest)
 Revenue: $0 | Day 35 at zero
 - **84 new entries** scraped
+
+### Agent Reports (1 since last session)
+- gap_report_20260314.md
 
 ### System Heartbeat
 Leads: 176,700/1,454,245 analyzed | 16,313 hot | 88,992 warm | 929,663 pipeline

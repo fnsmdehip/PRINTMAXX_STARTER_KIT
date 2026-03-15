@@ -240,9 +240,12 @@ log "OVERNIGHT RUN COMPLETE - $DATE"
 log "============================================"
 
 # Count successes and failures
-SUCCESS_COUNT=$(grep -c '"SUCCESS"' "$STATUS_FILE" 2>/dev/null || echo 0)
-FAIL_COUNT=$(grep -c '"FAILED"' "$STATUS_FILE" 2>/dev/null || echo 0)
-TIMEOUT_COUNT=$(grep -c '"TIMEOUT"' "$STATUS_FILE" 2>/dev/null || echo 0)
+SUCCESS_COUNT=$(grep -c '"SUCCESS"' "$STATUS_FILE" 2>/dev/null | tr -d '[:space:]')
+SUCCESS_COUNT=${SUCCESS_COUNT:-0}
+FAIL_COUNT=$(grep -c '"FAILED"' "$STATUS_FILE" 2>/dev/null | tr -d '[:space:]')
+FAIL_COUNT=${FAIL_COUNT:-0}
+TIMEOUT_COUNT=$(grep -c '"TIMEOUT"' "$STATUS_FILE" 2>/dev/null | tr -d '[:space:]')
+TIMEOUT_COUNT=${TIMEOUT_COUNT:-0}
 
 log "Results: $SUCCESS_COUNT succeeded, $FAIL_COUNT failed, $TIMEOUT_COUNT timed out"
 log "Full log: $LOG_FILE"
