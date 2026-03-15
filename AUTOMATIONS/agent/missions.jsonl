@@ -688,3 +688,10 @@
 {"ts": "2026-03-15T00:28:22.259858", "mission": "autonomy:SCRAPING_competitive_intel", "result": "partial", "duration_s": 3, "output": "Competitive Intel Scraping: 1/3 steps OK"}
 {"ts": "2026-03-15T02:02:35.108458", "mission": "health_heal", "result": "success", "duration_s": 4.4, "output": "Health checked. Healed issues."}
 {"ts": "2026-03-15T02:02:35.416817", "mission": "process_decide", "result": "success", "duration_s": 0.3, "output": "Decisions made. 91 response drafts, 38 listing drafts"}
+{"ts": "2026-03-15T04:00:59.226539", "mission": "content", "result": "partial", "duration_s": 6.6, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-15T04:01:08.770921", "mission": "upgrade", "result": "partial", "duration_s": 9.4, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-15T04:01:09.375233", "mission": "schedule", "result": "success", "duration_s": 0.3, "output": "Scheduled 42 slots across 7 days"}
+{"ts": "2026-03-15T04:05:23.962815", "mission": "health_heal", "result": "success", "duration_s": 3.3, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-15T04:05:24.167114", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 91 response drafts, 38 listing drafts"}
+{"ts": "2026-03-15T04:06:35.338768", "mission": "hunt", "result": "partial", "duration_s": 7.3, "output": "Searched but results were thin"}
+{"ts": "2026-03-15T04:07:24.197779", "mission": "upgrade_night", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}

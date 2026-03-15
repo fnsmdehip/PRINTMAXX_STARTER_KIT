@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15 03:45:03",
+  "generated_at": "2026-03-15 04:00:15",
   "sources": {
     "alpha_staging_candidates": 3227,
     "app_factory_methods_candidates": 5,
@@ -17,8 +17,8 @@
     "decision_counts": {
       "ITERATE_EXISTING_NOW": 88,
       "BUILD_NEW_NOW": 68,
-      "SPEC_AND_TEST": 156,
-      "PARK": 2871,
+      "SPEC_AND_TEST": 155,
+      "PARK": 2872,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
