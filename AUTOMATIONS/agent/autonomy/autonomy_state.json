@@ -270,7 +270,7 @@
         "followup",
         "track"
       ],
-      "interval_hours": 24,
+      "interval_hours": 12,
       "config": {},
       "created_at": "2026-03-06T21:12:49.295222",
       "last_run": "2026-03-14T04:50:19.662271",
@@ -697,21 +697,9 @@
         "priority_updated": "2026-03-10T00:14:44.880720"
       },
       "created_at": "2026-03-06T21:12:49.502027",
-      "last_run": "2026-03-14T20:05:00.000000",
-      "cycles_run": 24,
+      "last_run": "2026-03-15T00:09:00.273473",
+      "cycles_run": 25,
       "results": [
-        {
-          "ts": "2026-03-08T10:15:10.789573",
-          "steps": {
-            "discover": "ok",
-            "grade": "failed",
-            "build_preview": "ok",
-            "deploy": "failed",
-            "outreach": "ok",
-            "track": "failed"
-          },
-          "success_rate": "3/6"
-        },
         {
           "ts": "2026-03-08T16:15:21.025344",
           "steps": {
@@ -939,38 +927,50 @@
             "track": "failed"
           },
           "success_rate": "3/6"
+        },
+        {
+          "ts": "2026-03-15T00:09:00.273492",
+          "steps": {
+            "discover": "ok",
+            "grade": "failed",
+            "build_preview": "ok",
+            "deploy": "failed",
+            "outreach": "ok",
+            "track": "failed"
+          },
+          "success_rate": "3/6"
         }
       ],
       "pipeline_stats": {
         "discover": {
-          "runs": 23,
-          "successes": 23,
-          "last_run": "2026-03-14T16:15:11.877025"
+          "runs": 24,
+          "successes": 24,
+          "last_run": "2026-03-15T00:06:50.116963"
         },
         "grade": {
-          "runs": 23,
+          "runs": 24,
           "successes": 2,
-          "last_run": "2026-03-14T16:16:30.156290"
+          "last_run": "2026-03-15T00:07:34.710122"
         },
         "build_preview": {
-          "runs": 23,
-          "successes": 22,
-          "last_run": "2026-03-14T16:16:30.686733"
+          "runs": 24,
+          "successes": 23,
+          "last_run": "2026-03-15T00:07:34.933349"
         },
         "deploy": {
-          "runs": 23,
+          "runs": 24,
           "successes": 2,
-          "last_run": "2026-03-14T16:17:48.168626"
+          "last_run": "2026-03-15T00:08:17.149916"
         },
         "outreach": {
-          "runs": 23,
-          "successes": 23,
-          "last_run": "2026-03-14T16:17:48.328589"
+          "runs": 24,
+          "successes": 24,
+          "last_run": "2026-03-15T00:08:17.253883"
         },
         "track": {
-          "runs": 22,
+          "runs": 23,
           "successes": 1,
-          "last_run": "2026-03-14T16:18:54.283944"
+          "last_run": "2026-03-15T00:09:00.273448"
         }
       }
     },
@@ -2481,8 +2481,8 @@
       ]
     }
   },
-  "total_cycles": 132,
-  "total_pipeline_runs": 671,
+  "total_cycles": 133,
+  "total_pipeline_runs": 677,
   "created_at": "2026-03-06T21:12:45.215910",
   "RESEARCH": {
     "last_cycle": "2026-03-09T10:25:38.188614",
