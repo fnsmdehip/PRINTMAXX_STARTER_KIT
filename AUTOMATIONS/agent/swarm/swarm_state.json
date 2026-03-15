@@ -1,7 +1,7 @@
 {
   "agents": {
     "gap_hunter": {
-      "installed_at": "2026-03-14T16:23:07.346162",
+      "installed_at": "2026-03-14T20:26:06.730991",
       "status": "ACTIVE",
       "interval": "24h",
       "throttled_at": "2026-03-13T15:35:00Z",
@@ -17,7 +17,7 @@
       "reason": "RE-KILL. Redundant with gap_hunter. Originally killed Cycle 4, resurrected by deploy override."
     },
     "competitor_stalker": {
-      "installed_at": "2026-03-14T16:23:09.069723",
+      "installed_at": "2026-03-14T20:26:07.302884",
       "status": "ACTIVE",
       "interval": "24h",
       "throttled_at": "2026-03-13T15:35:10Z",
@@ -25,7 +25,7 @@
       "reason": "Intel saturation. Daily scan sufficient."
     },
     "asset_deployer": {
-      "installed_at": "2026-03-14T16:23:10.104590",
+      "installed_at": "2026-03-14T20:26:07.826152",
       "status": "ACTIVE",
       "interval": "8h",
       "redirected_at": "2026-03-13T15:35:17Z",
@@ -40,7 +40,7 @@
       "reason": "RE-KILL. No social accounts. Was deep-hibernated Cycle 11, resurrected by deploy override."
     },
     "lead_machine": {
-      "installed_at": "2026-03-14T16:23:11.076188",
+      "installed_at": "2026-03-14T20:26:08.111336",
       "status": "ACTIVE",
       "interval": "24h",
       "throttled_at": "2026-03-13T15:35:12Z",
@@ -48,7 +48,7 @@
       "reason": "10,259 leads with 0 contacted. More leads = negative value."
     },
     "seo_aso_optimizer": {
-      "installed_at": "2026-03-14T16:23:12.323458",
+      "installed_at": "2026-03-14T20:26:08.447172",
       "status": "ACTIVE",
       "interval": "24h",
       "throttled_at": "2026-03-13T15:35:13Z",
@@ -77,27 +77,27 @@
       "reason": "RE-HIBERNATE. 40,604 alpha entries = 400x actionable. Wake at first revenue."
     },
     "cross_pollinator": {
-      "installed_at": "2026-03-14T16:23:14.231039",
+      "installed_at": "2026-03-14T20:26:08.807975",
       "status": "ACTIVE",
       "interval": "4h",
       "priority": "P0",
       "reason": "Star agent. 1,043+ items wired, 34 connections. Only compound value agent."
     },
     "revenue_tracker": {
-      "installed_at": "2026-03-14T16:23:17.745313",
+      "installed_at": "2026-03-14T20:26:09.516660",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "$0 revenue. Nothing to track. Daily check sufficient."
     },
     "system_healer": {
-      "installed_at": "2026-03-14T16:23:18.396050",
+      "installed_at": "2026-03-14T20:26:09.627194",
       "status": "ACTIVE",
       "interval": "2h",
       "priority": "P0",
       "reason": "100% effectiveness. Essential infrastructure. NEW: disk cleanup task."
     },
     "data_janitor": {
-      "installed_at": "2026-03-14T16:23:18.829748",
+      "installed_at": "2026-03-14T20:26:09.795356",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "Useful for disk cleanup but daily is sufficient."
@@ -109,13 +109,13 @@
       "reason": "No distribution channels (no accounts). Wake when accounts exist."
     },
     "inbound_maximizer": {
-      "installed_at": "2026-03-14T16:23:20.204898",
+      "installed_at": "2026-03-14T20:26:10.114324",
       "status": "ACTIVE",
       "interval": "8h",
       "reason": "Fixed real bugs. Maintains deployed apps."
     },
     "swarm_brain": {
-      "installed_at": "2026-03-14T16:23:20.873461",
+      "installed_at": "2026-03-14T20:26:10.285517",
       "status": "ACTIVE",
       "interval": "12h",
       "reason": "Meta-orchestrator. Conservation mode interval."
@@ -135,13 +135,13 @@
       "reason": "RE-HIBERNATE. 30+ unused PNGs generated since Cycle 11. No distribution."
     },
     "quality_gate": {
-      "installed_at": "2026-03-14T16:23:21.476981",
+      "installed_at": "2026-03-14T20:26:10.387635",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "Useful but daily gate check sufficient at $0 revenue."
     },
     "playwright_tester": {
-      "installed_at": "2026-03-14T16:23:22.196075",
+      "installed_at": "2026-03-14T20:26:10.595896",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "Sites stable. Daily test sufficient."
@@ -167,11 +167,11 @@
       "reason": "Dead 6 days. Mandate (alpha_digest_top50) never delivered. Last output Mar 8."
     },
     "growth_strategist": {
-      "installed_at": "2026-03-14T16:23:23.503754",
+      "installed_at": "2026-03-14T20:26:10.895746",
       "status": "ACTIVE"
     }
   },
-  "deployed_at": "2026-03-14T16:23:23.504935",
+  "deployed_at": "2026-03-14T20:26:10.896938",
   "total_runs": 0,
   "brain_cycles": 12,
   "last_brain_cycle": "2026-03-13T15:35:00Z",

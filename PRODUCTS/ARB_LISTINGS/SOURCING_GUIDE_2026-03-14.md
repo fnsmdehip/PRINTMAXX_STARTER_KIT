@@ -10,20 +10,20 @@
 | 4 | Unknown Product | fitness | N/A | 55% | eBay |
 | 5 | Unknown Product | home | N/A | 54% | eBay |
 | 6 | Unknown Product | beauty | N/A | 54% | eBay |
-| 7 | Unknown Product | kitchen | N/A | 53% | eBay |
+| 7 | Unknown Product | fitness | N/A | 54% | eBay |
 | 8 | Unknown Product | kitchen | N/A | 53% | eBay |
 | 9 | Unknown Product | kitchen | N/A | 53% | eBay |
-| 10 | Unknown Product | beauty | N/A | 52% | eBay |
+| 10 | Unknown Product | kitchen | N/A | 53% | eBay |
 | 11 | Unknown Product | beauty | N/A | 52% | eBay |
-| 12 | Unknown Product | fitness | N/A | 52% | eBay |
-| 13 | Unknown Product | health | N/A | 51% | eBay |
-| 14 | Unknown Product | fitness | N/A | 50% | eBay |
-| 15 | Unknown Product | health | N/A | 50% | eBay |
-| 16 | Unknown Product | beauty | N/A | 50% | eBay |
-| 17 | Unknown Product | fitness | N/A | 50% | eBay |
-| 18 | Unknown Product | home | N/A | 50% | eBay |
+| 12 | Unknown Product | beauty | N/A | 52% | eBay |
+| 13 | Unknown Product | fitness | N/A | 52% | eBay |
+| 14 | Unknown Product | beauty | N/A | 52% | eBay |
+| 15 | Unknown Product | health | N/A | 51% | eBay |
+| 16 | Unknown Product | fitness | N/A | 50% | eBay |
+| 17 | Unknown Product | health | N/A | 50% | eBay |
+| 18 | Unknown Product | beauty | N/A | 50% | eBay |
 | 19 | Unknown Product | fitness | N/A | 50% | eBay |
-| 20 | Unknown Product | tech | N/A | 50% | eBay |
+| 20 | Unknown Product | home | N/A | 50% | eBay |
 
 ## Sourcing Steps
 1. Search AliExpress for each product name
