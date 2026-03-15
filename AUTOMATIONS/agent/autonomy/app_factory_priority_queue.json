@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-14 18:01:06",
+  "generated_at": "2026-03-14 19:28:03",
   "sources": {
-    "alpha_staging_candidates": 3112,
+    "alpha_staging_candidates": 3185,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 81
+    "existing_specs_detected": 85
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3086,
+    "total_candidates": 3148,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 81,
-      "BUILD_NEW_NOW": 65,
-      "SPEC_AND_TEST": 145,
-      "PARK": 2788,
+      "ITERATE_EXISTING_NOW": 84,
+      "BUILD_NEW_NOW": 66,
+      "SPEC_AND_TEST": 148,
+      "PARK": 2843,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
-      "faith": 72,
-      "focus": 442,
-      "habits": 186,
-      "ai_utility": 2066,
+      "faith": 74,
+      "focus": 447,
+      "habits": 190,
+      "ai_utility": 2114,
       "fitness": 182,
-      "sleep": 117,
-      "meal": 21
+      "sleep": 119,
+      "meal": 22
     }
   },
   "queue": [
@@ -1392,6 +1392,130 @@
       "rank": 22
     },
     {
+      "candidate_id": "ALPHA_GAP_JOURNAL_PRICING",
+      "title": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
+      "source": "competitive_intel_engine",
+      "source_url": "internal_gap_analysis_20260313",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "PENDING_REVIEW",
+      "status": "APPROVED",
+      "engagement_authenticity": "",
+      "earnings_verified": "",
+      "applicable_niches": "2026-03-13T16:22:15",
+      "applicable_methods": "TRUE",
+      "evidence": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
+      "compliance_notes": "",
+      "reviewer_notes": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_GAP_JOURNAL_PRICING",
+        "source": "competitive_intel_engine",
+        "source_url": "internal_gap_analysis_20260313",
+        "category": "Journal apps niche: 17 competitors, ALL free. Zero paid. Same gap as faith. First mover premium pricing opportunity.",
+        "tactic": "APP_FACTORY",
+        "roi_potential": "HIGHEST",
+        "priority": "PENDING_REVIEW",
+        "status": "APPROVED",
+        "applicable_methods": "TRUE",
+        "applicable_niches": "2026-03-13T16:22:15",
+        "synergy_score": "Competitive scan 2026-03-13. 17 free journal apps, 0 paid. journal-streak app candidate for .99/mo positioning.",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "",
+        "earnings_verified": "",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
+        "created_at": "",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 101,
+      "cluster": "faith",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
+      "paywall_variant": "after first devotional value moment, annual-first anchor",
+      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
+      "primary_monetization": "subscription with 7-day trial",
+      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 23
+    },
+    {
+      "candidate_id": "ALPHA_APPSTORE_PAID_HABIT_GAP",
+      "title": "Streaks $5.99 (27K ratings) + Due $7.99. Paid segment validated. Test $4.99 for streak apps. Route: APP_FACTORY.",
+      "source": "competitive_intel_engine_appstore",
+      "source_url": "internal_app_scan_20260313",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "PENDING_REVIEW",
+      "status": "APPROVED",
+      "engagement_authenticity": "",
+      "earnings_verified": "",
+      "applicable_niches": "2026-03-13T16:23:40",
+      "applicable_methods": "TRUE",
+      "evidence": "Streaks $5.99 (27K ratings) + Due $7.99. Paid segment validated. Test $4.99 for streak apps. Route: APP_FACTORY.",
+      "compliance_notes": "",
+      "reviewer_notes": "Streaks $5.99 (27K ratings) + Due $7.99. Paid segment validated. Test $4.99 for streak apps. Route: APP_FACTORY.",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_APPSTORE_PAID_HABIT_GAP",
+        "source": "competitive_intel_engine_appstore",
+        "source_url": "internal_app_scan_20260313",
+        "category": "Paid habit trackers (Streaks $5.99/4.8\u2605 27K ratings, Due $7.99/4.7\u2605, Goblin $2.99/4.8\u2605) prove willingness to pay. Most competitors are free. First $5.99 habit-streak app with strong ASO = wins paid segment.",
+        "tactic": "APP_FACTORY",
+        "roi_potential": "HIGHEST",
+        "priority": "PENDING_REVIEW",
+        "status": "APPROVED",
+        "applicable_methods": "TRUE",
+        "applicable_niches": "2026-03-13T16:23:40",
+        "synergy_score": "App Store scan 2026-03-13. 160 apps scanned. Paid winners: Streaks $5.99 (27K ratings), Due $7.99 (2.7K), Goblin Tools $2.99 (2.8K). Structured (FREE) has 155K ratings \u2014 volume at free, quality at paid. Our streak apps should test $4.99 one-time vs freemium.",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "",
+        "earnings_verified": "",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "Streaks $5.99 (27K ratings) + Due $7.99. Paid segment validated. Test $4.99 for streak apps. Route: APP_FACTORY.",
+        "created_at": "",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 100,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 24
+    },
+    {
       "candidate_id": "ALPHA17429",
       "title": "$0 to $1k MRR \u2014 exact steps I would take if starting over (SaaS case study)",
       "source": "indiehackers_reddit",
@@ -1451,7 +1575,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA18535",
@@ -1513,7 +1637,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA_REDDIT_0309_001",
@@ -1575,7 +1699,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA15286",
@@ -1618,7 +1742,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA18170",
@@ -1680,7 +1804,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA544",
@@ -1742,7 +1866,69 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 30
+    },
+    {
+      "candidate_id": "ALPHA_GAP_FAITH_PRICING",
+      "title": "23 competitors ALL free. Premium subscription gap. Add $0.99/mo tier to PrayerLock. Route: APP_FACTORY.",
+      "source": "competitive_intel_engine",
+      "source_url": "internal_gap_analysis_20260313",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "PENDING_REVIEW",
+      "status": "APPROVED",
+      "engagement_authenticity": "",
+      "earnings_verified": "",
+      "applicable_niches": "2026-03-13T16:22:15",
+      "applicable_methods": "TRUE",
+      "evidence": "23 competitors ALL free. Premium subscription gap. Add $0.99/mo tier to PrayerLock. Route: APP_FACTORY.",
+      "compliance_notes": "",
+      "reviewer_notes": "23 competitors ALL free. Premium subscription gap. Add $0.99/mo tier to PrayerLock. Route: APP_FACTORY.",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_GAP_FAITH_PRICING",
+        "source": "competitive_intel_engine",
+        "source_url": "internal_gap_analysis_20260313",
+        "category": "Faith apps niche: 23 competitors, ALL free. Zero paid apps. Premium subscription gap = untapped pricing arbitrage for PrayerLock.",
+        "tactic": "APP_FACTORY",
+        "roi_potential": "HIGHEST",
+        "priority": "PENDING_REVIEW",
+        "status": "APPROVED",
+        "applicable_methods": "TRUE",
+        "applicable_niches": "2026-03-13T16:22:15",
+        "synergy_score": "Competitive scan 2026-03-13. 23 free faith apps, 0 paid. Sleep category charges .66 avg \u2014 faith app users will pay. ACTIONABLE: add .99/mo tier to PrayerLock immediately.",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "",
+        "earnings_verified": "",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "23 competitors ALL free. Premium subscription gap. Add $0.99/mo tier to PrayerLock. Route: APP_FACTORY.",
+        "created_at": "",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 96,
+      "cluster": "faith",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "Hilal / PrayerLock / Scripture Streak",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
+      "paywall_variant": "after first devotional value moment, annual-first anchor",
+      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
+      "primary_monetization": "subscription with 7-day trial",
+      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA17028",
@@ -1804,7 +1990,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 32
     },
     {
       "candidate_id": "HN_003",
@@ -1866,7 +2052,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA18679",
@@ -1928,7 +2114,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 34
     },
     {
       "candidate_id": "RF_001",
@@ -1997,7 +2183,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA25039",
@@ -2059,7 +2245,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA18306",
@@ -2121,7 +2307,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA18478",
@@ -2183,7 +2369,7 @@
         "monetization: paid upfront vs free trial subscription"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA229",
@@ -2245,7 +2431,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA17338",
@@ -2307,192 +2493,6 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
-    },
-    {
-      "candidate_id": "ALPHA18487",
-      "title": "Visual routine app for ADHD/autism kids. 87 families, \u20ac33 revenue, \u20ac2 MRR. Tiny numbers but MASSIVE niche validation. ADHD apps are consistently one of the highest-demand niches in the app store. Built for own son, now other parents finding it useful.",
-      "source": "r/passive_income",
-      "source_url": "https://reddit.com/r/passive_income/comments/1rni750/",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "70",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "True",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "Visual routine app for ADHD/autism kids. 87 families, \u20ac33 revenue, \u20ac2 MRR. Tiny numbers but MASSIVE niche validation. ADHD apps are consistently one of the highest-demand niches in the app store. Built for own son, now other parents finding it useful.",
-      "compliance_notes": "",
-      "reviewer_notes": "Actionability: 7. Effort: 8h",
-      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_ALPHA18487.md",
-      "raw": {
-        "alpha_id": "ALPHA18487",
-        "source": "r/passive_income",
-        "source_url": "https://reddit.com/r/passive_income/comments/1rni750/",
-        "category": "APP_FACTORY",
-        "tactic": "Visual routine app for ADHD/autism kids. 87 families, \u20ac33 revenue, \u20ac2 MRR. Tiny numbers but MASSIVE niche validation. ADHD apps are consistently one of the highest-demand niches in the app store. Built for own son, now other parents finding it useful.",
-        "roi_potential": "HIGH",
-        "priority": "70",
-        "status": "APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "True",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "Actionability: 7. Effort: 8h",
-        "created_at": "2026-03-08T15:57:51.676243",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": "2026-03-08"
-      },
-      "score": 91,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 38
-    },
-    {
-      "candidate_id": "ALPHA228",
-      "title": "Fitness niche AI influencer. Combine with APP_FACTORY fitness apps.",
-      "source": "AI Influencer Fitness Niche",
-      "source_url": "AI_INFLUENCER/FITNESS_COACHES research",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "Fitness niche AI influencer. Combine with APP_FACTORY fitness apps.",
-      "compliance_notes": "",
-      "reviewer_notes": "APPROVED. Fitness niche AI influencer playbook. Cross-sell with WalkToUnlock and other fitness apps. Content-to-app funnel. Synergy score high with APP_FACTORY.",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA228",
-        "source": "AI Influencer Fitness Niche",
-        "source_url": "AI_INFLUENCER/FITNESS_COACHES research",
-        "category": "AI_INFLUENCER",
-        "tactic": "",
-        "roi_potential": "HIGH",
-        "priority": "",
-        "status": "APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "",
-        "extracted_method": "Fitness niche AI influencer. Combine with APP_FACTORY fitness apps.",
-        "compliance_notes": "",
-        "reviewer_notes": "APPROVED. Fitness niche AI influencer playbook. Cross-sell with WalkToUnlock and other fitness apps. Content-to-app funnel. Synergy score high with APP_FACTORY.",
-        "created_at": "",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 90,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA_CI_20260309_1627_3442",
-      "title": "Streaks app: $5.99 paid in top Health & Fitness paid chart (Mar 2026). Habit/streak tracking at premium price point validated. AutoSleep and HeartWatch both $8.99 - Health & Fitness paid tier clusters around $4.99-$8.99. Our streak apps should price at $4.99-$7.99 not free.",
-      "source": "appstore_competitive_intel",
-      "source_url": "https://apps.apple.com/us/charts/iphone/health-fitness-apps/6013",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGHEST",
-      "priority": "IMMEDIATE",
-      "status": "ARCHIVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "TRUE",
-      "applicable_niches": "health,fitness,habits",
-      "applicable_methods": "APP_FACTORY",
-      "evidence": "Streak/habit apps price at $5.99 paid. Health & Fitness paid tier: $4.99-$8.99. Our 8 streak apps should NOT be free - price at $4.99 minimum. AutoSleep at $8.99 shows willingness to pay for health tracking. Reprice all streak apps immediately.",
-      "compliance_notes": "None",
-      "reviewer_notes": "Auto-archived: Score 28 below routing threshold",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA_CI_20260309_1627_3442",
-        "source": "appstore_competitive_intel",
-        "source_url": "https://apps.apple.com/us/charts/iphone/health-fitness-apps/6013",
-        "category": "COMPETITOR_SIGNAL",
-        "tactic": "Streaks app: $5.99 paid in top Health & Fitness paid chart (Mar 2026). Habit/streak tracking at premium price point validated. AutoSleep and HeartWatch both $8.99 - Health & Fitness paid tier clusters around $4.99-$8.99. Our streak apps should price at $4.99-$7.99 not free.",
-        "roi_potential": "HIGHEST",
-        "priority": "IMMEDIATE",
-        "status": "ARCHIVED",
-        "applicable_methods": "APP_FACTORY",
-        "applicable_niches": "health,fitness,habits",
-        "synergy_score": "90",
-        "cross_sell_products": "",
-        "implementation_priority": "IMMEDIATE",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "TRUE",
-        "extracted_method": "Streak/habit apps price at $5.99 paid. Health & Fitness paid tier: $4.99-$8.99. Our 8 streak apps should NOT be free - price at $4.99 minimum. AutoSleep at $8.99 shows willingness to pay for health tracking. Reprice all streak apps immediately.",
-        "compliance_notes": "None",
-        "reviewer_notes": "Auto-archived: Score 28 below routing threshold",
-        "created_at": "2026-03-09T16:27:57.714188",
-        "ops_generated": "FALSE",
-        "quality_issues": "",
-        "date_added": "2026-03-09"
-      },
-      "score": 90,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 10,
       "rank": 40
     }
   ]

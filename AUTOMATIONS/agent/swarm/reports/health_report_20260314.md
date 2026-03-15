@@ -1,77 +1,55 @@
-# SYSTEM HEALTH REPORT — 2026-03-14 14:25 (Cycle 5)
-
-Previous cycles: 04:30 (10 agents fixed), 06:55 (3 fixes), 10:10 (3 fixes), 12:15 (1 fix). This cycle: 3 fixes applied.
+# System Health Report — 2026-03-14 18:30
 
 ## Summary
-- **Overall Status:** YELLOW (improved from prior cycle — key crash bug fixed)
-- **Disk:** 49GB free / 926GB — healthy
-- **Logs:** 48MB total — no cleanup needed
-- **Cron:** 66 active entries, 52+ scripts all exist (100%), all compile clean
-- **Launchd:** 26 agents loaded — 2 running (asset_deployer PID 85987, system_healer PID 85992), 18 healthy (exit 0), 6 with last-run failures
-- **Daemon:** PID 13218 alive (printmaxx_agent.py)
+
+| Metric | Status |
+|--------|--------|
+| Disk | 50GB free / 926GB total (5.4% used) |
+| Cron | 62 active entries, 247 total lines, all scripts exist + syntax OK |
+| Launchd | 26 agents loaded, 22 OK, 4 failing |
+| Logs | 48MB total, no oversized files |
+| Processes | 3 active (asset_deployer, competitive_intel, system_healer) + daemon PID 13218 alive |
+| Lock files | 4 active (all < 10min old, healthy) |
 
 ## Fixes Applied This Cycle
 
-### FIX 1: venture_autonomy.py pipeline crash (CRITICAL)
-- **Bug:** `AttributeError: 'dict' object has no attribute 'index'` at line 792
-- **Root cause:** `auto_scraping_competitive_intel_9788` venture had its `pipeline` field corrupted from a list to a dict (pipeline stats leaked into pipeline field)
-- **Fix (data):** Restored `autonomy_state.json` pipeline to correct list `["configure", "scrape", "clean", "analyze", "store", "alert"]`
-- **Fix (code):** Hardened `_run_with_claude()` to detect dict pipelines, auto-repair them to lists, and handle missing steps gracefully
-- **Impact:** SCRAPING ventures were crashing every 2h cycle. Now fixed.
+### 1. overnight_master_runner.sh — Syntax Error (FIXED)
+- **Issue:** Line 256 arithmetic expression failed because grep -c output contained embedded newlines
+- **Fix:** Added tr -d to strip whitespace + ${VAR:-0} fallback
+- **Impact:** Overnight runner will complete cleanly starting tonight at 2 AM
 
-### FIX 2: quality_gate launchd syntax error (HIGH)
-- **Bug:** Bash syntax error from unescaped parentheses in inline prompt
-- **Root cause:** `(python3 -c "import requests; ...")` in plist prompt broke bash parsing
-- **Fix:** Rebuilt plist to read prompt from external file (`cat prompt.md | claude -p`) instead of inlining
-- **Status:** Reloaded via `launchctl unload/load`
+### 2. quality_gate swarm plist — Bash Syntax Error (FIXED)
+- **Issue:** Exit code 2. Raw parentheses in bash -c prompt
+- **Fix:** Extracted prompt to quality_gate_prompt.md + wrapper script. Plist reloaded.
+- **Impact:** Quality gate agent is now functional (was completely broken)
 
-### FIX 3: research_alpha_intelligence launchd Operation not permitted (MEDIUM)
-- **Bug:** `$(cat prompt.md)` subshell fails with "Operation not permitted" in launchd sandbox
-- **Root cause:** macOS sandbox restricts `cat` in `$(...)` subshell for launchd agents
-- **Fix:** Rewrote plist to use piped input `cat prompt.md | claude -p` instead of subshell
-- **Status:** Reloaded via `launchctl unload/load`
+## Known Issues (Require Human Action)
 
-## Remaining Issues
+### 3. claude-sessions — Exit 126 (macOS Permission)
+- Root cause: macOS blocks bash in launchd from accessing project dir
+- Human action: System Preferences > Privacy & Security > Full Disk Access > add /bin/bash
 
-### LAUNCHD: 4 agents with OAuth/rate-limit failures (SELF-HEALING)
-- `auto_monetize_affiliate_funnels_9569` — exit 1 (OAuth expired Mar 13)
-- `auto_local_biz_openclaw_nationwide_9569` — exit 1 (OAuth expired Mar 13)
-- `auto_app_app_factory_9788` — exit 1 (OAuth expired Mar 13)
-- These will self-heal on next scheduled run if Claude auth is current. No action needed.
+### 4-6. Three claude venture agents (exit 1)
+- auto_monetize_affiliate_funnels_9569, auto_local_biz_openclaw_nationwide_9569, auto_app_app_factory_9788
+- Empty error logs. Likely claude -p prompt failures.
+- Severity: Low-Medium (cron alternatives still running)
 
-### LAUNCHD: claude-sessions exit 126 (HUMAN BLOCKER)
-- `com.printmaxx.claude-sessions` — exit 126 ("Operation not permitted")
-- macOS sandboxing blocks `/bin/bash` from executing `AUTOMATIONS/schedule_claude.sh`
-- **HUMAN ACTION:** Grant Full Disk Access to Terminal.app in System Preferences > Privacy & Security > Full Disk Access
+## Log Error Analysis
 
-### LAUNCHD: quality_gate exit 2 (FIXED — will verify next cycle)
-- Previously had syntax error, plist rebuilt this cycle
-- Will verify exit code on next scheduled run (2h interval)
+| Log | Errors | Cause | Severity |
+|-----|--------|-------|----------|
+| indeed_hiring | 680 | DDG/Google rate limiting | Low (expected) |
+| control_panel | 385 | Port collision on restart | Info (not real) |
+| competitive_intel | 145 | Fiverr/Upwork 403 blocks | Low (expected) |
+| venture_autonomy | 31 | Pipeline tracebacks | Medium |
 
-### SYSTEM HEALTH MONITOR: 77% DEGRADED
-- Per `system_health.log`: GREEN=10, AMBER=3, RED=2
-- This is baseline for current state (no revenue accounts configured)
+## Process Health
 
-### CONTROL PANEL: Port 9999 conflict
-- Most recent log shows Flask binding error (port in use), but `lsof :9999` shows nothing currently bound
-- May have been a transient issue; control panel is not critical
+| Process | PID | Status | Uptime |
+|---------|-----|--------|--------|
+| printmaxx_agent (daemon) | 13218 | Running | 6.7 days |
+| control_panel (Flask :9999) | 29675 | Running | 4 days |
+| asset_deployer | 43142 | Active | Current cycle |
+| competitive_intel | 43064 | Active | Current cycle |
 
-## Cron Health
-- All 52+ cron scripts exist on disk (100%)
-- 68 log files updated today — cron is actively executing
-- Key logs active in last 2h: venture_autonomy, decision_engine, system_health, control_panel, alpha_processor, quality_gate, loop_closer, content_queue, ecom_arb_engine
-
-## Lock Files
-- No stale locks in AUTOMATIONS/locks/ (clean)
-- Node/pip lock files in app factory dirs are normal (yarn.lock, .lock)
-
-## Disk Analysis
-- Total project: ~31GB (as expected for large project)
-- Logs: 48MB (healthy, under 100MB threshold)
-- No cleanup needed this cycle
-
-## Next Cycle Checks
-1. Verify quality_gate exits 0 after plist fix
-2. Verify research_alpha_intelligence exits 0 after plist fix
-3. Verify venture_autonomy SCRAPING cycles complete without crash
-4. Monitor OAuth status on remaining 3 agents
+## Next Cycle: ~20:30

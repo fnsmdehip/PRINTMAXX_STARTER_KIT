@@ -486,3 +486,14 @@ you do not need to figure out a business model, you do not need GTM, you do not 
 
 just build things clankers want.
 
+
+
+---
+
+## Pending Enhancement (ALPHA98910, Score: 36)
+
+**Source:** hackernews | **URL:** https://www.indiehackers.com/post/i-sold-my-0-revenue-saas-side-project-for-4-5k-290062e6ef
+**Added:** 2026-03-14T18:53:50-04:00
+
+I sold my $0 revenue SaaS side project for $4.5k
+

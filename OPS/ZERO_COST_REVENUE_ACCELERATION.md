@@ -1868,3 +1868,79 @@ Abacus Global Management $ABX Reports Fourth Quarter and Full Year 2025 Results 
 
 • Fourth Quarter and Full Year 2025 Revenue
 
+
+
+---
+
+## Pending Enhancement (ALPHA98773, Score: 36)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/alexcooldev/status/2032888101509701958
+**Added:** 2026-03-14T18:45:01-04:00
+
+Best question. Right now I have 3 apps, and almost all of them already have about 70% of the marketing automated.
+
+Before that, I hired students to create content and post on different social media platforms, which helped increase the revenue quite a lot. My second app has
+
+
+
+---
+
+## Pending Enhancement (ALPHA98794, Score: 30)
+
+**Source:** @joelhooks (high-signal-accounts) | **URL:** https://x.com/buildordie/status/2031855796292591619/analytics
+**Added:** 2026-03-14T18:45:01-04:00
+
+signups are open. no waitlist, no invite code. 
+
+$5 free credits on every account. deploy a bot and see what happens.
+
+
+
+---
+
+## Pending Enhancement (ALPHA98802, Score: 29)
+
+**Source:** @paoloanzn (high-signal-accounts) | **URL:** https://x.com/AY_Orbach/status/1948049118586437969/analytics
+**Added:** 2026-03-14T18:45:02-04:00
+
+Introducing Moby.
+
+A hyper-intelligent agent suite that can add $100,000+ of revenue to any 7-figure brand.
+
+Bold claim, I know.
+
+Let's see it in action:
+
+
+
+---
+
+## Pending Enhancement (ALPHA98878, Score: 24)
+
+**Source:** reddit/microsaas | **URL:** https://reddit.com/r/microsaas/comments/1rtuqid/i_created_a_tool_that_catches_revenue_leaks_and/
+**Added:** 2026-03-14T18:53:50-04:00
+
+I created a tool that catches revenue leaks and auto-fixes them so you don't have to deal with it.
+
+
+
+---
+
+## Pending Enhancement (ALPHA98908, Score: 24)
+
+**Source:** hackernews | **URL:** https://mattmazur.com/2024/01/16/my-indie-saas-revenue-has-grown-37-per-year-for-13-years/
+**Added:** 2026-03-14T18:53:50-04:00
+
+My Indie SaaS Revenue Has Grown 37% per Year for 13 Years
+
+
+
+---
+
+## Pending Enhancement (ALPHA98911, Score: 24)
+
+**Source:** hackernews | **URL:** https://x.com/indiepageapp
+**Added:** 2026-03-14T18:53:50-04:00
+
+Show HN: I made a bot and it grew my SaaS revenue by 56%
+
