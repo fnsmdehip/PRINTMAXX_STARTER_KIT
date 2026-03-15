@@ -955,3 +955,68 @@ Key Metrics:
 
 BLOCKER STATUS: All revenue blocked on HUMAN account creation (~2.5 hours total)
 Revenue: $0 | Day 35
+
+===========================================
+GAP HUNTER CYCLE — 2026-03-15 03:22
+===========================================
+Gaps Found: 8 (7 recurring + 1 new)
+Report: AUTOMATIONS/agent/swarm/reports/gap_report_20260315.md
+
+Actions Taken:
+1. ALPHA ROUTING: Ran alpha_auto_processor.py --process-new (18,187 rows, 10 processed, 294 APPROVED unrouted remaining — down from 385)
+2. BUFFER CSV: Generated BUFFER_EXPORT_20260315.csv with 7 tweet-length posts. Most queue content is >280 chars (thread format).
+3. GAP REPORT: Generated gap_report_20260315.md
+
+New Gap Found:
+- GAP 7: Content pipeline inefficiency — long-form content generated but no tweet extraction pipeline to split into Buffer-ready format
+- GAP 5 elevated: 8 email sequences built but not wired to any service
+
+Key Metrics:
+- PDFs built: 18 — 0 listed (HUMAN BLOCKER)
+- Content in posting queue: 769 files — 0 posted (HUMAN BLOCKER)
+- Leads with emails: 21 hot, 1,232 total — 0 contacted (HUMAN BLOCKER)
+- Alpha pending review: 2,414 entries
+- Alpha approved but unrouted: 294 (down from 385, auto-processor clearing backlog)
+- Sites live: 47 on surge.sh — 0 monetized (HUMAN BLOCKER)
+- Email sequences: 8 built — 0 wired (HUMAN BLOCKER)
+- Buffer CSVs generated: 16 total — 0 imported (HUMAN BLOCKER)
+- Cron entries: 71 active
+- Bloated Buffer CSV: BUFFER_EXPORT_20260308.csv (8.5MB, malformed) flagged for cleanup
+
+BLOCKER STATUS: All revenue blocked on HUMAN account creation (~2.5-3h total)
+Revenue: $0 | Day 36
+
+--- ADDENDUM (asset scanner results) ---
+New gaps found by deep asset scan:
+- GAP 9: printmaxx-site (Next.js) built Feb 5 but never deployed — needs static export config
+- GAP 10: 13 extended streak apps have code but only marketing pages deployed (not actual apps)
+- GAP 11: 2 Roblox projects (roblox_tycoon + robloxmaxx) have source code but never published
+
+Additional action taken:
+- Built tweet_extractor.py to fix content pipeline gap
+- Extracted 48 tweets from 769 queue files into BUFFER_EXTRACTED_20260315.csv
+- All 48 tweets under 280 chars (avg 91 chars), scheduled 8/day for 6 days
+
+--- FINAL ADDENDUM (data scanner + corrections) ---
+CRITICAL CORRECTION: Alpha CSV has 18,187 entries (NOT 51,240 — wc -l counts multi-line CSV fields as separate lines)
+- Previous reports using grep -c and wc -l gave inaccurate numbers
+- Actual corruption: 327 entries (1.8%), NOT 34,841 (68%)
+- Fixed: 327 corrupt entries → PENDING_REVIEW (backed up to ALPHA_STAGING.csv.bak_20260315)
+- Actual APPROVED count: 616 (not 294)
+- PENDING_REVIEW now: 327 (the fixed entries, ready for auto-processing)
+
+Additional findings from data scanner:
+- 5,738,886 bulk US leads in AUTOMATIONS/leads/ (pre-purchased databases)
+- 204 OpenClaw leads queued, zero sent
+- 50+ marketplace listings ready (Gumroad 19, Fiverr 9, Whop 8, Etsy, Ecom)
+- 78 experiments ALL status NOT_STARTED in MEGA_SHEET
+- 68/69 money methods stuck in "Planning" (only APP_FACTORY active)
+- INPUT/OUTPUT imbalance: 57 cron scripts are scrapers/analyzers, near-zero OUTPUT scripts scheduled
+- 9 email sequences + 8 templates written, zero wired to any ESP
+
+TOTAL ACTIONS THIS CYCLE:
+1. Alpha auto-processing: 10 entries processed
+2. Alpha CSV fix: 327 corrupt entries repaired
+3. Tweet extractor built: AUTOMATIONS/tweet_extractor.py
+4. 48 tweets extracted: BUFFER_EXTRACTED_20260315.csv (8/day, 6 days)
+5. Gap report: AUTOMATIONS/agent/swarm/reports/gap_report_20260315.md (16 gaps total)

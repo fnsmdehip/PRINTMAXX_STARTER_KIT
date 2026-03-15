@@ -84,5 +84,36 @@ AUDIT/META_VISION_*_FILE_INVENTORY.csv
 __pycache__/
 *.pyc
 
+# SQLite databases (binary, changes every commit = bloat)
+*.db
+*.db-wal
+*.db-shm
+LEDGER/alpha_index.db
+LEDGER/printmaxx_gates.db
+
+# Lock files
+AUTOMATIONS/locks/
+
+# Large binary files that shouldn't be in git
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.icns
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.xlsx
+*.xls
+
+# Daemon/runtime logs that change constantly
+AUTOMATIONS/agent/daemon.log
+AUTOMATIONS/subconscious/subconscious.log
+
 # Local LLM quarantine — never commit, never feed to Claude
 CONTENT/_LOCAL_LLM_QUARANTINE/
+
+# External repos (cloned for reference, not our code)
+external/

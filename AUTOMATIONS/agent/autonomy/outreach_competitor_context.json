@@ -1253,5 +1253,21 @@
       "last_updated": "MEDIUM"
     }
   ],
-  "updated_at": "2026-03-14T20:30:00.653844"
+  "updated_at": "2026-03-15T00:30:00.896357",
+  "last_intel_cycle": "2026-03-15T01:00:04.282689",
+  "cycle_37_alerts": {
+    "timestamp": "2026-03-15T01:00:04.282696",
+    "version_changes": 12,
+    "high_priority": [
+      "Abide v3.77\u2192v3.79",
+      "Knowunity v6.9\u2192v6.11",
+      "StepBet v22.5\u2192v22.7"
+    ],
+    "strategic_note": "Abide is direct faith competitor - monitor changelog for feature gaps. StepBet bet-mechanics = applicable to streak monetization.",
+    "alpha_staged": [
+      "ALPHA99319 (Abide)",
+      "ALPHA99738 (StepBet)",
+      "ALPHA99385 (Knowunity)"
+    ]
+  }
 }

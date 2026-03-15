@@ -1,0 +1,38 @@
+{
+  "cycle": "COMP_INTEL_CYCLE_37",
+  "timestamp": "2026-03-15T01:00:18.895094",
+  "phase": {
+    "CONFIGURE": "OK - 19 app targets, 20 reddit subreddits active",
+    "SCRAPE": {
+      "reddit": "1 new entry (20 subreddits scanned)",
+      "competitor_monitor": "12 version changes across 19 tracked apps",
+      "intel_engine": "background (--apps flag hangs, run weekly --scan-all instead)"
+    },
+    "CLEAN": "611 existing keys deduped, 13 new rows written",
+    "ANALYZE": "3 HIGH alerts (Abide +2, StepBet +2, Knowunity +2), 9 MEDIUM",
+    "STORE": "12 rows \u2192 COMPETITOR_CHANGES.csv, 1 row \u2192 COMPETITIVE_INTEL.csv",
+    "ALERT": "3 alpha entries staged (ALPHA99319, ALPHA99738, ALPHA99385)"
+  },
+  "top_signals": [
+    {
+      "priority": "HIGH",
+      "app": "Abide",
+      "change": "v3.77\u2192v3.79 (+2 minor)",
+      "action": "Check changelog for features to counter in PrayerLock/scripture-streak"
+    },
+    {
+      "priority": "HIGH",
+      "app": "StepBet",
+      "change": "v22.5\u2192v22.7 (+2 minor)",
+      "action": "Study bet-mechanic monetization for fitness-streak"
+    },
+    {
+      "priority": "HIGH",
+      "app": "Knowunity",
+      "change": "v6.9\u2192v6.11 (+2 minor)",
+      "action": "Niche-down to religious study (Torah/Quran) vs their generic edu"
+    }
+  ],
+  "strategic_insight": "Faith and fitness streak categories showing active development cycles across top competitors. Window for niche-down differentiation before they catch up. PrayerLock/Hilal timing critical - Ramadan 25 days remaining.",
+  "next_run": "~02:59 AM (2h schedule)"
+}

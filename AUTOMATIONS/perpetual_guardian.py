@@ -323,12 +323,19 @@ def run_safety_commit():
 
         log(f"  {len(changes)} changed files detected.")
 
-        # Stage all changes
+        # Stage tracked files only (respects .gitignore, avoids binary bloat)
         subprocess.run(
-            ["git", "add", "-A"],
+            ["git", "add", "-u"],
             capture_output=True, timeout=30,
             cwd=str(BASE)
         )
+        # Also stage new Python/MD/JSON/CSV/YAML files (skip binaries)
+        for ext in ["*.py", "*.md", "*.json", "*.csv", "*.yaml", "*.yml", "*.sh", "*.txt", "*.html", "*.css", "*.js", "*.ts", "*.tsx"]:
+            subprocess.run(
+                ["git", "add", ext],
+                capture_output=True, timeout=10,
+                cwd=str(BASE)
+            )
 
         # Commit with timestamp
         msg = f"Guardian safety commit {NOW.strftime('%Y-%m-%d %H:%M')}"
@@ -348,6 +355,17 @@ def run_safety_commit():
             )
             if hash_result.returncode == 0:
                 log(f"  Hash: {hash_result.stdout.strip()}")
+
+            # AUTO-PUSH to remote (the whole point of git backup)
+            push_result = subprocess.run(
+                ["git", "push", "origin", "main"],
+                capture_output=True, text=True, timeout=120,
+                cwd=str(BASE)
+            )
+            if push_result.returncode == 0:
+                log("  Pushed to origin/main")
+            else:
+                log(f"  Push failed: {push_result.stderr.strip()[:200]}")
         else:
             log(f"  Commit skipped: {result.stderr.strip()[:200]}")
 

@@ -1,9 +1,9 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-15 00:15:56
+Generated: 2026-03-15 03:45:03
 
 ## Inputs
-- ALPHA_STAGING app candidates: 3204
+- ALPHA_STAGING app candidates: 3227
 - APP_FACTORY_METHODS candidates: 5
 - Reddit findings consumed: 6
 - Existing app specs detected: 85
@@ -33,19 +33,19 @@ Generated: 2026-03-15 00:15:56
 | 5 | Review prompt timing hack: +0.8 stars by delaying review request to value moment | PrayerLock / Scripture Streak AI layer | 125 | MEDIUM_HIGH | subscription with 7-day trial | paywall timing: after first value moment vs after onboarding prev |
 | 6 | Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months | Streakr | 122 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 7 | Minimum Viable Day concept: 307 upvotes, viral productivity framework | Streakr | 122 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 9 | ASO HACK: Move app review prompt from day-1 to post-3day-streak → +0.8 App Store | Streakr | 117 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 9 | Adapty 2026: Weekly plans = 55% of all app revenue. Weekly+trial = best LTV conf | PrayerLock / Scripture Streak AI layer | 118 | MEDIUM_HIGH | subscription with 7-day trial | paywall timing: after first value moment vs after onboarding prev |
 
 ## Build New Now
 | Rank | Opportunity | Target | Score | Market | Monetization | Core Test |
 |------|-------------|--------|-------|--------|--------------|-----------|
 | 8 | Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard | NEW_BUILD | 118 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 11 | PDF editor product signal: 158 score, 80 comments on r/SideProject. 100% local,  | NEW_BUILD | 114 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 14 | Niche B2B SaaS: automated compliance reminders for dental/vet offices. Stack: Ne | NEW_BUILD | 110 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 20 | SaaS pricing: $9/mo = ZERO conversions. Raised to $29/mo = paying customers imme | NEW_BUILD | 104 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 23 | AI lowers app dev barrier → Cambrian explosion of niche apps imminent. levelsio  | NEW_BUILD | 101 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 29 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 33 | Free trial converts 2% → 11% paid. Tested on SaaS product. Real data from r/Side | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 34 | Running 4 AI-driven companies from terminal via agent orchestration (auto-co-met | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 12 | PDF editor product signal: 158 score, 80 comments on r/SideProject. 100% local,  | NEW_BUILD | 114 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 15 | Niche B2B SaaS: automated compliance reminders for dental/vet offices. Stack: Ne | NEW_BUILD | 110 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 21 | SaaS pricing: $9/mo = ZERO conversions. Raised to $29/mo = paying customers imme | NEW_BUILD | 104 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 24 | AI lowers app dev barrier → Cambrian explosion of niche apps imminent. levelsio  | NEW_BUILD | 101 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 31 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 35 | Free trial converts 2% → 11% paid. Tested on SaaS product. Real data from r/Side | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 36 | Running 4 AI-driven companies from terminal via agent orchestration (auto-co-met | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.
