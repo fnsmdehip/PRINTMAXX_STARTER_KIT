@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-14T18:45:00.000000",
-  "last_cycle": "asset_deployer_cycle_2026-03-14_1845",
+  "last_updated": "2026-03-14T22:30:00.000000",
+  "last_cycle": "asset_deployer_cycle_2026-03-14_2230",
   "total_surge_deployments": 355,
   "health_status": "ALL_HEALTHY",
   "health_check_results": {
@@ -59,12 +59,12 @@
       "dial-one-plumbing-cooling-heating-dallas-tx.surge.sh"
     ]
   },
-  "redeployments_this_cycle": [],
+  "redeployments_this_cycle": ["pdfmaxx.surge.sh (was 404, fixed)", "semrush-vs-ahrefs.surge.sh (updated from LANDING/affiliate-pages/)"],
   "new_deployments_this_cycle": [],
-  "cycle_notes": "Asset deployer cycle 2026-03-14 18:45. 40 sites health-checked, all returning 200 OK. 0 new deployments needed - all builds already deployed. 3 transient 504s on Dallas local biz sites resolved on retry. No new deployable assets found in LANDING/, APP_FACTORY/, PRODUCTS/, or DIGITAL_PRODUCTS/. biomaxx-sdk54 and robloxmaxx remain non-web-deployable. 355 total surge deployments stable.",
+  "cycle_notes": "Asset deployer cycle 2026-03-14 22:30. 80+ sites health-checked across all categories (apps, streaks, tools, services, comparisons, local biz). pdfmaxx.surge.sh was returning 404 - redeployed and verified 200 OK. semrush-vs-ahrefs.surge.sh updated from LANDING/affiliate-pages/ source. All other sites healthy. 355 total surge deployments stable. No new undeployed assets found. biomaxx-sdk54 and robloxmaxx remain non-web-deployable.",
   "by_category": {
     "pwa_apps": {
-      "count": 10,
+      "count": 11,
       "status": "ALL_LIVE",
       "urls": [
         "coreday.surge.sh",
@@ -76,7 +76,8 @@
         "ramadan-tracker.surge.sh",
         "habitforge-web.surge.sh",
         "hilal-app.surge.sh",
-        "prayerlock-web.surge.sh"
+        "prayerlock-web.surge.sh",
+        "pdfmaxx.surge.sh"
       ]
     },
     "comparison_pages": {
@@ -93,14 +94,15 @@
       ]
     },
     "affiliate_pages": {
-      "count": 4,
+      "count": 5,
       "status": "LIVE_PLACEHOLDER_IDS",
       "blocker": "Need real affiliate IDs from partner signups",
       "urls": [
         "smartlead-vs-instantly.surge.sh",
         "best-ai-tools-2026.surge.sh",
         "ai-stack-2026.surge.sh",
-        "convertkit-vs-beehiiv.surge.sh"
+        "convertkit-vs-beehiiv.surge.sh",
+        "semrush-vs-ahrefs.surge.sh"
       ]
     },
     "lead_magnets": {

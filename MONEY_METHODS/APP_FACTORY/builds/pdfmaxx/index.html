@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#6366f1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PDFMaxx">
+<meta name="description" content="Merge, split, compress, and reorder PDFs locally. Your files never leave your device. Free PDF editor PWA.">
+<meta property="og:title" content="PDFMaxx — Local PDF Editor">
+<meta property="og:description" content="Merge, split, compress PDFs. 100% local — no uploads, no cloud, no privacy risk.">
+<link rel="manifest" href="manifest.json">
+<title>PDFMaxx — Local PDF Tools</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        indigo: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' },
+        surface: { 900: '#0f0f1a', 800: '#16162a', 700: '#1e1e35' }
+      }
+    }
+  }
+}
+</script>
+<style>
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, sans-serif; overscroll-behavior: none; background: #0f0f1a; }
+.drop-zone { border: 2px dashed rgba(99,102,241,0.4); transition: all 0.2s; }
+.drop-zone.drag-over { border-color: #6366f1; background: rgba(99,102,241,0.08); }
+.tool-card { transition: all 0.2s; cursor: pointer; }
+.tool-card:hover { transform: translateY(-2px); }
+.tool-card.active { border-color: #6366f1; background: rgba(99,102,241,0.12); }
+.file-item { animation: slideIn 0.2s ease; }
+@keyframes slideIn { from { opacity:0; transform:translateX(-8px); } to { opacity:1; transform:translateX(0); } }
+.progress-bar { transition: width 0.4s ease; }
+.badge-pro { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.safe-label { background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.25); }
+</style>
+</head>
+<body class="min-h-screen text-gray-100">
+
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-surface-900/95 backdrop-blur border-b border-white/5" style="padding-top: env(safe-area-inset-top)">
+  <div class="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">📄</span>
+      <div>
+        <div class="font-bold text-base leading-tight">PDFMaxx</div>
+        <div class="text-[10px] text-gray-500 leading-tight">local pdf tools</div>
+      </div>
+    </div>
+    <span class="safe-label text-[10px] font-semibold px-2.5 py-1 rounded-full">🔒 100% Local</span>
+  </div>
+</header>
+
+<main class="max-w-lg mx-auto px-4 pb-24" style="padding-bottom: calc(80px + env(safe-area-inset-bottom))">
+
+  <!-- Hero -->
+  <div class="mt-5 mb-5 text-center">
+    <h1 class="text-xl font-bold text-white mb-1">PDF tools that respect your privacy</h1>
+    <p class="text-sm text-gray-400">Files stay on your device. Zero uploads. Works offline.</p>
+  </div>
+
+  <!-- Tool Selector -->
+  <div class="grid grid-cols-2 gap-3 mb-5">
+    <button class="tool-card bg-surface-800 border border-white/8 rounded-2xl p-4 text-left" onclick="selectTool('merge')" id="tool-merge">
+      <div class="text-2xl mb-2">🔗</div>
+      <div class="font-semibold text-sm text-white mb-1">Merge PDFs</div>
+      <div class="text-xs text-gray-400">Combine multiple PDFs into one</div>
+      <div class="mt-2 text-[10px] font-semibold text-green-400">FREE</div>
+    </button>
+    <button class="tool-card bg-surface-800 border border-white/8 rounded-2xl p-4 text-left" onclick="selectTool('split')" id="tool-split">
+      <div class="text-2xl mb-2">✂️</div>
+      <div class="font-semibold text-sm text-white mb-1">Split PDF</div>
+      <div class="text-xs text-gray-400">Extract pages or page ranges</div>
+      <div class="mt-2 text-[10px] font-semibold text-green-400">FREE</div>
+    </button>
+    <button class="tool-card bg-surface-800 border border-white/8 rounded-2xl p-4 text-left" onclick="selectTool('compress')" id="tool-compress">
+      <div class="text-2xl mb-2">🗜️</div>
+      <div class="font-semibold text-sm text-white mb-1">Compress PDF</div>
+      <div class="text-xs text-gray-400">Reduce file size, keep quality</div>
+      <div class="mt-2 text-[10px] font-semibold text-green-400">FREE</div>
+    </button>
+    <button class="tool-card bg-surface-800 border border-white/8 rounded-2xl p-4 text-left" onclick="selectTool('reorder')" id="tool-reorder">
+      <div class="text-2xl mb-2">🔀</div>
+      <div class="font-semibold text-sm text-white mb-1">Reorder Pages</div>
+      <div class="text-xs text-gray-400">Drag and rearrange pages</div>
+      <div class="mt-2 flex items-center gap-1">
+        <span class="badge-pro text-[10px] font-semibold px-2 py-0.5 rounded-full text-white">PRO</span>
+      </div>
+    </button>
+  </div>
+
+  <!-- Active Tool Panel -->
+  <div id="tool-panel" class="hidden">
+
+    <!-- Tool Header -->
+    <div class="flex items-center justify-between mb-4">
+      <h2 id="tool-title" class="text-base font-semibold text-white"></h2>
+      <button onclick="clearAll()" class="text-xs text-gray-500 hover:text-gray-300 transition">Clear all</button>
+    </div>
+
+    <!-- Drop Zone -->
+    <div id="drop-zone" class="drop-zone rounded-2xl p-6 text-center mb-4"
+      ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+      <div class="text-3xl mb-3">📁</div>
+      <p class="text-sm text-gray-300 mb-1">Drop PDF files here</p>
+      <p class="text-xs text-gray-500 mb-4">or click to browse</p>
+      <label class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl cursor-pointer transition">
+        Choose Files
+        <input id="file-input" type="file" accept=".pdf" multiple class="hidden" onchange="handleFileInput(event)">
+      </label>
+    </div>
+
+    <!-- File List -->
+    <div id="file-list" class="space-y-2 mb-4"></div>
+
+    <!-- Split Options (only for split mode) -->
+    <div id="split-options" class="hidden bg-surface-800 border border-white/8 rounded-2xl p-4 mb-4">
+      <label class="text-sm font-medium text-gray-300 block mb-2">Pages to extract</label>
+      <input id="split-pages" type="text" placeholder="e.g. 1-3, 5, 7-9 (or 'all')"
+        class="w-full bg-surface-700 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-gray-200 placeholder-gray-500 outline-none focus:border-indigo-500/50 transition">
+      <p class="text-xs text-gray-500 mt-2">Leave empty to split into individual pages</p>
+    </div>
+
+    <!-- Action Button -->
+    <button id="action-btn" onclick="runTool()" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3.5 rounded-2xl transition disabled:opacity-40" disabled>
+      <span id="action-btn-text">Add files first</span>
+    </button>
+
+    <!-- Progress -->
+    <div id="progress-wrap" class="hidden mt-4">
+      <div class="flex items-center justify-between text-xs text-gray-400 mb-2">
+        <span id="progress-label">Processing...</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
+        <div id="progress-bar" class="progress-bar bg-indigo-500 h-full rounded-full" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="result-wrap" class="hidden mt-4 p-4 bg-surface-800 border border-green-500/20 rounded-2xl text-center">
+      <div class="text-2xl mb-2">✅</div>
+      <div id="result-info" class="text-sm text-gray-300 mb-3"></div>
+      <button id="download-btn" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition">
+        Download PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Pro Upgrade Banner -->
+  <div id="pro-banner" class="hidden mt-5 p-4 rounded-2xl text-center" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(79,70,229,0.08));border:1px solid rgba(99,102,241,0.25);">
+    <div class="text-2xl mb-2">⚡</div>
+    <div class="text-sm font-semibold text-indigo-300 mb-1">PDFMaxx Pro</div>
+    <p class="text-xs text-gray-400 mb-3">Page reordering, drag-to-sort, password protection, and batch compression. One price, all tools.</p>
+    <a href="mailto:printmaxxstudio@gmail.com?subject=PDFMaxx%20Pro" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition">Get Pro — $3.99/mo</a>
+  </div>
+
+  <!-- How It Works -->
+  <div class="mt-6">
+    <h3 class="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">How it works</h3>
+    <div class="space-y-3">
+      <div class="flex items-start gap-3">
+        <div class="w-7 h-7 rounded-xl bg-indigo-500/20 flex items-center justify-center text-sm shrink-0">1</div>
+        <div>
+          <div class="text-sm font-medium text-gray-200">Choose a tool</div>
+          <div class="text-xs text-gray-500">Merge, split, or compress — all free</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <div class="w-7 h-7 rounded-xl bg-indigo-500/20 flex items-center justify-center text-sm shrink-0">2</div>
+        <div>
+          <div class="text-sm font-medium text-gray-200">Drop your PDF files</div>
+          <div class="text-xs text-gray-500">Processed 100% in your browser</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <div class="w-7 h-7 rounded-xl bg-indigo-500/20 flex items-center justify-center text-sm shrink-0">3</div>
+        <div>
+          <div class="text-sm font-medium text-gray-200">Download instantly</div>
+          <div class="text-xs text-gray-500">No waiting, no emails, no accounts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Note -->
+  <div class="mt-6 p-4 rounded-2xl" style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);">
+    <div class="flex items-start gap-3">
+      <span class="text-lg">🔒</span>
+      <div>
+        <div class="text-sm font-semibold text-green-400 mb-1">Zero-upload privacy</div>
+        <div class="text-xs text-gray-400 leading-relaxed">Your PDF files are processed entirely in your browser using JavaScript. They are never sent to any server. Not even our own. Works offline once loaded.</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Toast -->
+<div id="toast" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden">
+  <div class="bg-gray-800 text-white text-sm px-4 py-2.5 rounded-xl shadow-xl border border-white/10" id="toast-msg"></div>
+</div>
+
+<script>
+// ===== STATE =====
+var currentTool = null;
+var files = [];
+var outputBytes = null;
+
+// ===== TOOL SELECTION =====
+function selectTool(tool) {
+  currentTool = tool;
+  document.querySelectorAll('.tool-card').forEach(function(c) { c.classList.remove('active'); });
+  var card = document.getElementById('tool-' + tool);
+  if (card) card.classList.add('active');
+
+  var panel = document.getElementById('tool-panel');
+  var splitOpts = document.getElementById('split-options');
+  var proBanner = document.getElementById('pro-banner');
+
+  if (tool === 'reorder') {
+    panel.classList.add('hidden');
+    proBanner.classList.remove('hidden');
+    return;
+  }
+
+  proBanner.classList.add('hidden');
+  panel.classList.remove('hidden');
+  document.getElementById('tool-title').textContent = {
+    merge: 'Merge PDFs',
+    split: 'Split PDF',
+    compress: 'Compress PDF'
+  }[tool];
+
+  splitOpts.classList.toggle('hidden', tool !== 'split');
+  clearAll(true);
+}
+
+// ===== FILE HANDLING =====
+function handleDragOver(e) {
+  e.preventDefault();
+  document.getElementById('drop-zone').classList.add('drag-over');
+}
+function handleDragLeave() {
+  document.getElementById('drop-zone').classList.remove('drag-over');
+}
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('drop-zone').classList.remove('drag-over');
+  var dropped = Array.from(e.dataTransfer.files).filter(function(f) { return f.type === 'application/pdf'; });
+  addFiles(dropped);
+}
+function handleFileInput(e) {
+  addFiles(Array.from(e.target.files));
+  e.target.value = '';
+}
+function addFiles(newFiles) {
+  if (currentTool === 'split' || currentTool === 'compress') {
+    files = [newFiles[0]];
+  } else {
+    files = files.concat(newFiles);
+  }
+  renderFileList();
+  updateActionBtn();
+}
+function removeFile(idx) {
+  files.splice(idx, 1);
+  renderFileList();
+  updateActionBtn();
+}
+function renderFileList() {
+  var list = document.getElementById('file-list');
+  while (list.firstChild) list.removeChild(list.firstChild);
+  files.forEach(function(f, i) {
+    var item = document.createElement('div');
+    item.className = 'file-item flex items-center gap-3 bg-surface-800 border border-white/6 rounded-xl px-3 py-2.5';
+
+    var icon = document.createElement('span');
+    icon.textContent = '📄';
+    icon.style.fontSize = '18px';
+
+    var info = document.createElement('div');
+    info.style.flex = '1';
+    info.style.minWidth = '0';
+    var name = document.createElement('div');
+    name.style.cssText = 'font-size:13px;font-weight:500;color:#e2e8f0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
+    name.textContent = f.name;
+    var size = document.createElement('div');
+    size.style.cssText = 'font-size:11px;color:#64748b;';
+    size.textContent = formatBytes(f.size);
+    info.appendChild(name);
+    info.appendChild(size);
+
+    var removeBtn = document.createElement('button');
+    removeBtn.style.cssText = 'color:#475569;font-size:18px;line-height:1;padding:4px;background:none;border:none;cursor:pointer;flex-shrink:0;';
+    removeBtn.textContent = '×';
+    removeBtn.setAttribute('aria-label', 'Remove file');
+    (function(idx) { removeBtn.addEventListener('click', function() { removeFile(idx); }); })(i);
+
+    item.appendChild(icon);
+    item.appendChild(info);
+    item.appendChild(removeBtn);
+    list.appendChild(item);
+  });
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+}
+
+function updateActionBtn() {
+  var btn = document.getElementById('action-btn');
+  var txt = document.getElementById('action-btn-text');
+  var ready = files.length > 0 && (currentTool !== 'merge' || files.length >= 2);
+  btn.disabled = !ready;
+  if (!ready) {
+    txt.textContent = currentTool === 'merge' ? 'Add at least 2 PDFs' : 'Add a PDF file';
+  } else {
+    txt.textContent = { merge: 'Merge ' + files.length + ' PDFs', split: 'Split PDF', compress: 'Compress PDF' }[currentTool];
+  }
+}
+
+function clearAll(silent) {
+  files = [];
+  outputBytes = null;
+  renderFileList();
+  updateActionBtn();
+  document.getElementById('result-wrap').classList.add('hidden');
+  document.getElementById('progress-wrap').classList.add('hidden');
+  if (!silent) showToast('Cleared');
+}
+
+// ===== TOOL EXECUTION =====
+async function runTool() {
+  if (!files.length || !currentTool) return;
+  setProgress(0, 'Loading...');
+  try {
+    if (currentTool === 'merge') await runMerge();
+    else if (currentTool === 'split') await runSplit();
+    else if (currentTool === 'compress') await runCompress();
+  } catch (err) {
+    showToast('Error: ' + (err.message || 'Processing failed'));
+    document.getElementById('progress-wrap').classList.add('hidden');
+  }
+}
+
+async function runMerge() {
+  setProgress(10, 'Reading files...');
+  var merged = await PDFLib.PDFDocument.create();
+  for (var i = 0; i < files.length; i++) {
+    setProgress(10 + Math.round(70 * i / files.length), 'Merging page ' + (i + 1) + '...');
+    var bytes = await readFileAsArrayBuffer(files[i]);
+    var doc = await PDFLib.PDFDocument.load(bytes);
+    var pages = await merged.copyPages(doc, doc.getPageIndices());
+    pages.forEach(function(p) { merged.addPage(p); });
+  }
+  setProgress(90, 'Saving...');
+  outputBytes = await merged.save();
+  var totalPages = (await PDFLib.PDFDocument.load(outputBytes)).getPageCount();
+  showResult(files.length + ' files merged → ' + totalPages + ' pages, ' + formatBytes(outputBytes.length), 'merged.pdf');
+}
+
+async function runSplit() {
+  setProgress(10, 'Reading PDF...');
+  var bytes = await readFileAsArrayBuffer(files[0]);
+  var src = await PDFLib.PDFDocument.load(bytes);
+  var total = src.getPageCount();
+  var pagesInput = document.getElementById('split-pages').value.trim();
+  var indices = parsePageRanges(pagesInput, total);
+  if (!indices.length) {
+    showToast('Invalid page range');
+    document.getElementById('progress-wrap').classList.add('hidden');
+    return;
+  }
+  setProgress(40, 'Extracting ' + indices.length + ' pages...');
+  var out = await PDFLib.PDFDocument.create();
+  var copied = await out.copyPages(src, indices);
+  copied.forEach(function(p) { out.addPage(p); });
+  setProgress(85, 'Saving...');
+  outputBytes = await out.save();
+  showResult('Extracted ' + indices.length + ' of ' + total + ' pages — ' + formatBytes(outputBytes.length), 'split.pdf');
+}
+
+async function runCompress() {
+  setProgress(10, 'Reading PDF...');
+  var bytes = await readFileAsArrayBuffer(files[0]);
+  var src = await PDFLib.PDFDocument.load(bytes, { updateMetadata: false });
+  setProgress(50, 'Optimizing...');
+  // Strip unused objects and re-save (pdf-lib re-serializes cleanly, removing orphaned objects)
+  var out = await PDFLib.PDFDocument.create();
+  var pages = await out.copyPages(src, src.getPageIndices());
+  pages.forEach(function(p) { out.addPage(p); });
+  setProgress(85, 'Saving...');
+  outputBytes = await out.save({ useObjectStreams: true });
+  var saved = files[0].size - outputBytes.length;
+  var pct = Math.round(saved / files[0].size * 100);
+  var msg = pct > 0
+    ? 'Compressed: ' + formatBytes(files[0].size) + ' → ' + formatBytes(outputBytes.length) + ' (−' + pct + '%)'
+    : 'File optimized: ' + formatBytes(outputBytes.length) + ' (already compact)';
+  showResult(msg, 'compressed.pdf');
+}
+
+function parsePageRanges(input, total) {
+  if (!input || input.toLowerCase() === 'all') {
+    return Array.from({length: total}, function(_, i) { return i; });
+  }
+  var indices = [];
+  var parts = input.split(',');
+  for (var i = 0; i < parts.length; i++) {
+    var part = parts[i].trim();
+    var range = part.split('-');
+    if (range.length === 2) {
+      var start = parseInt(range[0], 10) - 1;
+      var end = parseInt(range[1], 10) - 1;
+      if (!isNaN(start) && !isNaN(end) && start >= 0 && end < total) {
+        for (var j = start; j <= end; j++) indices.push(j);
+      }
+    } else {
+      var page = parseInt(part, 10) - 1;
+      if (!isNaN(page) && page >= 0 && page < total) indices.push(page);
+    }
+  }
+  return indices;
+}
+
+function readFileAsArrayBuffer(file) {
+  return new Promise(function(resolve, reject) {
+    var reader = new FileReader();
+    reader.onload = function(e) { resolve(e.target.result); };
+    reader.onerror = reject;
+    reader.readAsArrayBuffer(file);
+  });
+}
+
+// ===== UI HELPERS =====
+function setProgress(pct, label) {
+  document.getElementById('progress-wrap').classList.remove('hidden');
+  document.getElementById('result-wrap').classList.add('hidden');
+  document.getElementById('progress-label').textContent = label;
+  document.getElementById('progress-pct').textContent = pct + '%';
+  document.getElementById('progress-bar').style.width = pct + '%';
+}
+
+function showResult(info, filename) {
+  setProgress(100, 'Done!');
+  setTimeout(function() {
+    document.getElementById('progress-wrap').classList.add('hidden');
+    document.getElementById('result-wrap').classList.remove('hidden');
+    document.getElementById('result-info').textContent = info;
+    var dlBtn = document.getElementById('download-btn');
+    dlBtn.onclick = function() { downloadOutput(filename); };
+  }, 400);
+}
+
+function downloadOutput(filename) {
+  if (!outputBytes) return;
+  var blob = new Blob([outputBytes], { type: 'application/pdf' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+var toastTimer = null;
+function showToast(msg) {
+  var toast = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  toast.classList.remove('hidden');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function() { toast.classList.add('hidden'); }, 2500);
+}
+
+// PWA
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function() {});
+}
+
+// Select merge by default
+selectTool('merge');
+</script>
+
+<!-- Privacy Policy -->
+<footer class="max-w-lg mx-auto px-4 pb-6 mt-4 text-center">
+  <p class="text-xs text-gray-600">
+    <a href="#privacy" onclick="showPrivacy()" class="underline text-gray-500">Privacy Policy</a> ·
+    <a href="mailto:printmaxxstudio@gmail.com" class="underline text-gray-500">Contact</a>
+  </p>
+</footer>
+
+<div id="privacy-modal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4">
+  <div class="bg-surface-800 border border-white/10 rounded-2xl p-6 max-w-sm w-full relative">
+    <button onclick="document.getElementById('privacy-modal').style.display='none'" style="position:absolute;top:12px;right:14px;background:none;border:none;color:#64748b;cursor:pointer;font-size:20px;">&times;</button>
+    <h2 class="text-base font-bold text-white mb-3">Privacy Policy</h2>
+    <p class="text-sm text-gray-300 leading-relaxed">PDFMaxx processes all files entirely in your browser. No PDF data is ever transmitted to any server. We do not collect, store, or share any document content. The only data we may collect is anonymous usage analytics (page views) to improve the product. Your files are yours.</p>
+  </div>
+</div>
+
+<script>
+function showPrivacy() {
+  var modal = document.getElementById('privacy-modal');
+  modal.style.display = 'flex';
+}
+</script>
+</body>
+</html>

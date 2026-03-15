@@ -62,6 +62,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-be
 .tab-content { animation: fadeIn 0.2s ease; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
+/* AI Dua Tab */
+.dua-category-btn { transition: all 0.2s ease; border: 1px solid rgba(255,255,255,0.08); }
+.dua-category-btn.active { background: rgba(13,148,136,0.25); border-color: rgba(13,148,136,0.5); color: #0d9488; }
+@keyframes duaTyping { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+.dua-result-anim { animation: duaTyping 0.4s ease; }
+.arabic-text { font-size: 1.2rem; line-height: 2.2; direction: rtl; text-align: right; }
+
 /* Pulse animation for timer */
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px rgba(13, 148, 136, 0.3); }
@@ -462,6 +469,49 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-be
     </div>
   </div>
 
+  <!-- AI Dua Tab -->
+  <div id="tab-dua" class="tab-content hidden">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-semibold text-gray-200">Dua Assistant</h2>
+      <span id="dua-count-badge" class="text-xs px-2 py-1 rounded-full bg-teal-500/20 text-teal-400 font-medium">5 free today</span>
+    </div>
+
+    <!-- Situation Search -->
+    <div class="relative mb-4">
+      <input id="dua-search" type="text" placeholder="How are you feeling? (e.g. anxious, grateful...)"
+        class="w-full bg-dark-900 border border-white/10 rounded-2xl px-4 py-3 text-sm text-gray-200 placeholder-gray-500 outline-none focus:border-teal-500/50 transition pr-12"
+        oninput="duaSearch(this.value)" />
+      <svg class="absolute right-4 top-3.5 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </div>
+
+    <!-- Categories -->
+    <div class="flex gap-2 overflow-x-auto pb-2 mb-4 scrollbar-hide" style="-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+      <button class="dua-category-btn active whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('all',this)">All</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('salah',this)">After Salah</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('morning',this)">Morning</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('evening',this)">Evening</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('anxiety',this)">Anxiety</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('health',this)">Health</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('ramadan',this)">Ramadan</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('rizq',this)">Rizq</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('forgiveness',this)">Forgiveness</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('travel',this)">Travel</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('eating',this)">Eating</button>
+      <button class="dua-category-btn whitespace-nowrap px-3 py-1.5 rounded-xl text-xs font-medium text-gray-300 bg-white/5" onclick="duaFilter('sleep',this)">Sleep</button>
+    </div>
+
+    <!-- Dua Results -->
+    <div id="dua-results" class="space-y-3 pb-4"></div>
+
+    <!-- Pro Upgrade Banner -->
+    <div id="dua-pro-banner" class="hidden mt-4 p-4 rounded-2xl bg-gradient-to-r from-gold-500/20 to-teal-500/20 border border-gold-500/20 text-center">
+      <div class="text-2xl mb-1">✨</div>
+      <div class="text-sm font-semibold text-gold-400 mb-1">Daily limit reached</div>
+      <p class="text-xs text-gray-400 mb-3">Upgrade to Pro for unlimited duas, full Arabic audio, and personalized morning/evening adhkar routines.</p>
+      <a href="mailto:printmaxxstudio@gmail.com?subject=PrayerLock Pro" class="inline-block bg-gradient-to-r from-teal-500 to-teal-600 text-white text-xs font-semibold px-5 py-2 rounded-xl">Upgrade to Pro — $4.99/mo</a>
+    </div>
+  </div>
+
   <!-- Settings Tab -->
   <div id="tab-settings" class="tab-content hidden">
     <h2 class="text-lg font-semibold text-gray-200 mb-6">Settings</h2>
@@ -556,9 +606,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; overscroll-be
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
       <span class="text-[10px]">Tasbih</span>
     </button>
-    <button onclick="showTab('salah')" data-tab="salah" class="nav-btn flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-      <span class="text-[10px]">Salah</span>
+    <button onclick="showTab('salah')" data-tab="salah" class="nav-btn flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-xl transition">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      <span class="text-[9px]">Salah</span>
+    </button>
+    <button onclick="showTab('dua')" data-tab="dua" class="nav-btn flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-xl transition" style="position:relative;">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      <span class="text-[9px]">Dua</span>
+      <span style="position:absolute;top:2px;right:2px;width:6px;height:6px;background:#d4a574;border-radius:50%;"></span>
     </button>
   </div>
 </nav>
@@ -1808,16 +1863,170 @@ document.body.addEventListener('touchmove', (e) => {
     localStorage.setItem(PL_DISMISS_KEY, String(Date.now()));
     document.getElementById('plEmailOverlay').style.display = 'none';
   }
-  if (shouldShow()) {
-    setTimeout(function() {
-      var overlay = document.getElementById('plEmailOverlay');
-      overlay.style.display = 'flex';
-      document.getElementById('plEmailClose').addEventListener('click', dismiss);
-      overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) dismiss();
-      });
-    }, 30000);
+  // Value-moment trigger: show after first prayer logged or 3-day streak (not time-based)
+  window.plShowEmailIfEligible = function() {
+    if (!shouldShow()) return;
+    var overlay = document.getElementById('plEmailOverlay');
+    overlay.style.display = 'flex';
+    document.getElementById('plEmailClose').addEventListener('click', dismiss);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) dismiss(); });
+  };
+  // Fallback: show after 3 minutes only if user has interacted (has a streak)
+  setTimeout(function() {
+    var streak = parseInt(localStorage.getItem('prayerStreak') || '0', 10);
+    if (streak >= 1) window.plShowEmailIfEligible();
+  }, 180000);
+})();
+</script>
+
+<script>
+// ===== AI DUA ASSISTANT — all DOM-safe (no innerHTML with dynamic data) =====
+var DUA_DB = [
+  {id:1,category:'salah',title:'After completing prayer',arabic:'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ، وَشُكْرِكَ، وَحُسْنِ عِبَادَتِكَ',transliteration:"Allahumma a'inni 'ala dhikrika wa shukrika wa husni 'ibadatik",english:"O Allah, help me to remember You, to thank You, and to worship You in the best manner.",source:'Abu Dawud',keywords:['prayer','salah','worship','help']},
+  {id:2,category:'salah',title:'After Fajr and Maghrib',arabic:'لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',transliteration:"La ilaha illallahu wahdahu la sharika lah, lahul mulku wa lahul hamdu wa huwa 'ala kulli shay'in qadir",english:'None has the right to be worshipped except Allah, alone, without partner. His is the dominion and praise, and He is capable of all things.',source:'Muslim',keywords:['fajr','maghrib','morning','evening','tawheed']},
+  {id:3,category:'salah',title:'Dhikr after every prayer',arabic:'سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَاللَّهُ أَكْبَرُ',transliteration:'SubhanAllah, Alhamdulillah, Allahu Akbar',english:'Glory be to Allah, all praise is for Allah, and Allah is the greatest. Repeat each 33 times.',source:'Muslim',keywords:['tasbih','dhikr','prayer','after','33']},
+  {id:4,category:'morning',title:'Morning protection dua',arabic:'اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ',transliteration:"Allahumma bika asbahna wa bika amsayna wa bika nahya wa bika namutu wa ilayka n-nushur",english:'O Allah, by Your leave we have reached the morning and by Your leave we reach the evening, by Your leave we live and die and unto You is our resurrection.',source:'Tirmidhi',keywords:['morning','fajr','start','day','protection']},
+  {id:5,category:'morning',title:'Morning comprehensive',arabic:'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ للهِ، وَالْحَمْدُ للهِ، لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ',transliteration:'Asbahna wa asbahal mulku lillahi walhamdu lillahi la ilaha illallahu wahdahu la sharika lah',english:'We have entered a new morning and with it all dominion belongs to Allah. All praise is for Allah. None has the right to be worshipped but Allah, alone, without partner.',source:'Abu Dawud',keywords:['morning','praise','Allah','start','fajr']},
+  {id:6,category:'morning',title:'100x morning protection',arabic:'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',transliteration:'SubhanAllahi wa bihamdih',english:'Glory be to Allah and all praise is for Him. Say 100 times in the morning — sins are expiated even if like the foam of the sea.',source:'Bukhari & Muslim',keywords:['morning','protection','expiation','sins','100','subhanallah']},
+  {id:7,category:'evening',title:'Evening protection dua',arabic:'اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ',transliteration:"Allahumma bika amsayna wa bika asbahna wa bika nahya wa bika namutu wa ilaykal masir",english:'O Allah, by Your leave we have reached the evening and by Your leave we reach the morning, by Your leave we live and die and unto You is our return.',source:'Tirmidhi',keywords:['evening','maghrib','isha','night','protection']},
+  {id:8,category:'evening',title:'Master of forgiveness (evening)',arabic:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ',transliteration:"Allahumma anta rabbi la ilaha illa anta khalaqtani wa ana 'abduk",english:'O Allah, You are my Lord, none has the right to be worshipped except You, You created me and I am Your servant.',source:'Bukhari',keywords:['evening','forgiveness','master','sayyid','night','istighfar']},
+  {id:9,category:'anxiety',title:'When feeling overwhelmed',arabic:'حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ',transliteration:"Hasbunallahu wa ni'mal wakil",english:'Allah is sufficient for us and He is the best Disposer of affairs.',source:'Quran 3:173 / Bukhari',keywords:['anxiety','overwhelmed','stress','enough','trust','worry','sufficient']},
+  {id:10,category:'anxiety',title:"Prophet Yunus's dua (Jonah)",arabic:'لَا إِلَهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ',transliteration:'La ilaha illa anta subhanaka inni kuntu minaz zalimin',english:'None has the right to be worshipped but You, Glorified be You. Truly I was among the wrongdoers.',source:'Quran 21:87',keywords:['anxiety','distress','trapped','difficult','yunus','prophet','crisis','desperate','dark']},
+  {id:11,category:'anxiety',title:'Remove grief and sadness',arabic:'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الهَمِّ وَالحُزْنِ',transliteration:"Allahumma inni a'udhu bika minal hammi wal huzn",english:'O Allah, I seek refuge in you from grief and sadness, from weakness and from laziness, from miserliness and from cowardice.',source:'Bukhari',keywords:['anxiety','sadness','grief','worry','stress','sad','depressed','weak','lonely']},
+  {id:12,category:'anxiety',title:'When afraid',arabic:'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',transliteration:"A'udhu bi kalimatillahit tammati min sharri ma khalaq",english:'I seek refuge in the perfect words of Allah from the evil of what He has created.',source:'Muslim',keywords:['fear','afraid','evil','protection','scared','danger']},
+  {id:13,category:'health',title:'Dua for healing',arabic:'اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمَاً',transliteration:"Allahumma rabban nas, adhhibil ba's, ishfi antash shafi, la shifa'a illa shifa'uk, shifa'an la yughadiru saqama",english:'O Allah, Lord of mankind, remove the affliction and heal. You are the Healer. There is no cure except Your cure, a cure that does not leave any disease behind.',source:'Bukhari & Muslim',keywords:['sick','heal','health','illness','pain','doctor','hospital','disease','recovery','cure']},
+  {id:14,category:'health',title:'Ruqyah self-recitation',arabic:'بِسْمِ اللَّهِ أَرْقِيكَ، مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ',transliteration:"Bismillahi arqika, min kulli shay'in yu'dhika",english:'In the Name of Allah I recite over you (a protection) from everything that harms you, from the evil of every soul or envious eye. May Allah heal you.',source:'Muslim',keywords:['ruqyah','evil eye','healing','protection','pain','sick','envy','hasad']},
+  {id:15,category:'ramadan',title:'Laylat al-Qadr dua',arabic:'اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي',transliteration:"Allahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'anni",english:'O Allah, You are Pardoning and You love pardon, so pardon me.',source:'Tirmidhi — from Aisha (RA)',keywords:['ramadan','laylatul qadr','night of power','forgiveness','mercy','odd nights','27']},
+  {id:16,category:'ramadan',title:'Breaking fast — Iftar dua',arabic:'اللَّهُمَّ لَكَ صُمْتُ، وَعَلَى رِزْقِكَ أَفْطَرْتُ',transliteration:"Allahumma laka sumtu wa 'ala rizqika aftartu",english:'O Allah, for You I have fasted and upon Your provisions I break my fast.',source:'Abu Dawud',keywords:['iftar','break fast','ramadan','sunset','eat','maghrib','fast']},
+  {id:17,category:'ramadan',title:'Suhoor intention',arabic:'وَبِصَوْمِ غَدٍ نَّوَيْتُ مِنْ شَهْرِ رَمَضَانَ',transliteration:'Wa bisawmi ghadin nawaytu min shahri ramadan',english:'I intend to keep the fast for tomorrow in the month of Ramadan.',source:'Traditional',keywords:['suhoor','intention','fasting','ramadan','niyyah','tomorrow']},
+  {id:18,category:'ramadan',title:'Seeking forgiveness in Ramadan',arabic:'أَسْتَغْفِرُ اللَّهَ الَّذِيَ لاَ إِلَهَ إلاَّ هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ',transliteration:"Astaghfirullaha l-ladhi la ilaha illa huwal hayyul qayyumu wa atubu ilayh",english:'I seek forgiveness from Allah, besides whom there is no god, the Ever-Living, the Self-Sustaining, and I repent to Him.',source:'Abu Dawud / Tirmidhi',keywords:['forgiveness','tawbah','ramadan','repent','sins','expiation']},
+  {id:19,category:'rizq',title:'Halal provision dua',arabic:'اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ',transliteration:"Allahumma kafini bihalali ka 'an haramika wa aghnini bifadlika 'amman siwak",english:'O Allah, make what is lawful enough for me, as opposed to what is unlawful, and spare me by Your grace, of need of others.',source:'Tirmidhi',keywords:['rizq','money','halal','provision','wealth','finances','income','job','career']},
+  {id:20,category:'rizq',title:'Pure provision and knowledge',arabic:'اللَّهُمَّ إِنِّي أَسْأَلُكَ رِزْقًا طَيِّبًا، وَعِلْمًا نَافِعًا، وَعَمَلًا مُتَقَبَّلًا',transliteration:"Allahumma inni as'aluka rizqan tayyiba wa 'ilman nafi'a wa 'amalan mutaqabbala",english:'O Allah, I ask You for pure provision, beneficial knowledge, and accepted deeds.',source:'Ibn Majah',keywords:['rizq','provision','knowledge','deeds','income','blessing','work','business']},
+  {id:21,category:'forgiveness',title:'Sayyidul Istighfar',arabic:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ',transliteration:"Allahumma anta rabbi la ilaha illa anta, khalaqtani wa ana 'abduka, wa ana 'ala 'ahdika wa wa'dika mastata'tu",english:"O Allah, You are my Lord, there is no god but You. You created me and I am Your servant, following Your covenant and my promise to You as best I can. (Continue with the full dua — Bukhari says whoever says it in the morning and dies that day enters Paradise.)",source:'Bukhari',keywords:['forgiveness','repentance','sins','regret','tawbah','istighfar','master','sayyid']},
+  {id:22,category:'forgiveness',title:'Simple daily istighfar',arabic:'أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ',transliteration:"Astaghfirullaha wa atubu ilayh",english:"I seek forgiveness from Allah and repent to Him. The Prophet said he would say this 100 times per day.",source:'Bukhari & Muslim',keywords:['forgiveness','sins','repent','100','daily','istighfar','simple']},
+  {id:23,category:'forgiveness',title:"Adam and Eve's dua",arabic:'رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ',transliteration:'Rabbana zalamna anfusana wa in lam taghfir lana wa tarhamna lanakunanna minal khasirin',english:"Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.",source:'Quran 7:23',keywords:['sin','forgiveness','regret','wrong','mistake','repent','guilty','shame']},
+  {id:24,category:'travel',title:'Starting a journey',arabic:'اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ',transliteration:'Allahu Akbar x3. SubhanaLladhi sakhkhara lana hadha wa ma kunna lahu muqrinin',english:'Allah is the Greatest x3. Glory be to He who has subjected this to us, and we could not have subdued it.',source:'Muslim',keywords:['travel','journey','car','plane','trip','transport','road','drive']},
+  {id:25,category:'travel',title:'Entering a new place',arabic:'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',transliteration:"A'udhu bi kalimatillahit tammati min sharri ma khalaq",english:'I seek refuge in the perfect words of Allah from the evil of what He created.',source:'Muslim',keywords:['travel','new place','protection','hotel','city','country','unfamiliar']},
+  {id:26,category:'eating',title:'Before eating',arabic:'بِسْمِ اللَّهِ',transliteration:'Bismillah',english:"In the name of Allah. If you forget to say it at the beginning say: 'Bismillahi fi awwalihi wa akhirihi' (In the name of Allah at its beginning and end).",source:'Abu Dawud / Tirmidhi',keywords:['eat','food','meal','drink','bismillah','before','hunger']},
+  {id:27,category:'eating',title:'After eating',arabic:'الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ',transliteration:"Alhamdu lillahil ladhi at'amani hadha wa razaqanihi min ghayri hawlin minni wa la quwwatin",english:'Praise be to Allah Who has fed me this food and provided it for me without any strength or power on my part.',source:'Abu Dawud / Tirmidhi',keywords:['eat','food','after meal','gratitude','hamdulillah','finish']},
+  {id:28,category:'sleep',title:'Before sleeping',arabic:'اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا',transliteration:'Allahumma bismika amutu wa ahya',english:'O Allah, with Your name I die and I live.',source:'Bukhari',keywords:['sleep','night','bed','before sleep','rest','tired']},
+  {id:29,category:'sleep',title:'Ayat al-Kursi before bed',arabic:'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ',transliteration:"Allahu la ilaha illa huwal hayyul qayyum... (Read full Ayat al-Kursi, Quran 2:255)",english:"Read full Ayat al-Kursi before sleeping. The Prophet said: 'An angel will protect you all night and no devil will come near you until the morning.'",source:'Bukhari',keywords:['sleep','protection','night','angels','ayatul kursi','safe','guard']},
+  {id:30,category:'sleep',title:'When having bad dreams',arabic:'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ',transliteration:'A\'udhu billahi minash shaytanir rajim',english:'I seek refuge in Allah from the accursed devil. Then spit to your left 3 times and change the side you are sleeping on.',source:'Muslim',keywords:['nightmare','bad dream','sleep','shaytan','scared','fear','night','disturbing']}
+];
+
+var DUA_DAILY_KEY = 'dua_used_' + new Date().toISOString().split('T')[0];
+var DUA_FREE_LIMIT = 5;
+
+function getDuaUsed() { return parseInt(localStorage.getItem(DUA_DAILY_KEY) || '0', 10); }
+function incrementDuaUsed() { localStorage.setItem(DUA_DAILY_KEY, String(getDuaUsed() + 1)); }
+
+function updateDuaBadge() {
+  var used = getDuaUsed(), remaining = Math.max(0, DUA_FREE_LIMIT - used);
+  var badge = document.getElementById('dua-count-badge');
+  if (!badge) return;
+  badge.textContent = remaining > 0 ? (remaining + ' free today') : 'Pro: unlimited';
+  badge.style.background = remaining > 0 ? 'rgba(13,148,136,0.2)' : 'rgba(212,165,116,0.2)';
+  badge.style.color = remaining > 0 ? '#0d9488' : '#d4a574';
+}
+
+function makeDuaCard(d, locked) {
+  var card = document.createElement('div');
+  card.className = 'dua-result-anim rounded-2xl p-4';
+  card.style.cssText = 'background:rgba(18,18,31,0.9);border:1px solid rgba(255,255,255,0.06);' + (locked ? 'opacity:0.55;position:relative;overflow:hidden;' : '');
+
+  if (locked) {
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:absolute;inset:0;background:rgba(10,10,22,0.85);display:flex;align-items:center;justify-content:center;border-radius:16px;z-index:10;';
+    var link = document.createElement('a');
+    link.href = 'mailto:printmaxxstudio@gmail.com?subject=PrayerLock%20Pro';
+    link.style.cssText = 'background:linear-gradient(135deg,#0d9488,#086b62);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:12px;text-decoration:none;';
+    link.textContent = 'Unlock Pro — $4.99/mo';
+    overlay.appendChild(link);
+    card.appendChild(overlay);
   }
+
+  var header = document.createElement('div');
+  header.style.cssText = 'display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:12px;';
+  var titleEl = document.createElement('div');
+  titleEl.style.cssText = 'font-size:14px;font-weight:600;color:#e2e8f0;';
+  titleEl.textContent = d.title;
+  var catBadge = document.createElement('span');
+  catBadge.style.cssText = 'font-size:10px;padding:2px 8px;border-radius:999px;background:rgba(13,148,136,0.15);color:#0d9488;flex-shrink:0;text-transform:capitalize;';
+  catBadge.textContent = d.category;
+  header.appendChild(titleEl); header.appendChild(catBadge);
+  card.appendChild(header);
+
+  var arabicEl = document.createElement('div');
+  arabicEl.className = 'arabic-text';
+  arabicEl.style.cssText = 'color:#d4a574;margin-bottom:12px;background:rgba(255,255,255,0.03);border-radius:12px;padding:12px;';
+  arabicEl.textContent = d.arabic;
+  card.appendChild(arabicEl);
+
+  var transEl = document.createElement('div');
+  transEl.style.cssText = 'font-size:12px;color:#94a3b8;font-style:italic;margin-bottom:8px;';
+  transEl.textContent = d.transliteration;
+  card.appendChild(transEl);
+
+  var engEl = document.createElement('div');
+  engEl.style.cssText = 'font-size:14px;color:#cbd5e1;line-height:1.6;margin-bottom:8px;';
+  engEl.textContent = d.english;
+  card.appendChild(engEl);
+
+  var srcEl = document.createElement('div');
+  srcEl.style.cssText = 'font-size:11px;color:#475569;';
+  srcEl.textContent = 'Source: ' + d.source;
+  card.appendChild(srcEl);
+
+  return card;
+}
+
+function renderDuas(duas) {
+  var container = document.getElementById('dua-results');
+  if (!container) return;
+  while (container.firstChild) container.removeChild(container.firstChild);
+  var used = getDuaUsed();
+  if (duas.length === 0) {
+    var msg = document.createElement('div');
+    msg.style.cssText = 'text-align:center;color:#64748b;padding:32px 0;font-size:14px;';
+    msg.textContent = 'No duas found. Try a different search.';
+    container.appendChild(msg);
+  } else {
+    duas.forEach(function(d, i) { container.appendChild(makeDuaCard(d, used >= DUA_FREE_LIMIT && i >= 2)); });
+  }
+  var banner = document.getElementById('dua-pro-banner');
+  if (banner) banner.classList.toggle('hidden', used < DUA_FREE_LIMIT);
+}
+
+function duaFilter(category, btn) {
+  document.querySelectorAll('.dua-category-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  var searchEl = document.getElementById('dua-search');
+  if (searchEl) searchEl.value = '';
+  var results = category === 'all' ? DUA_DB : DUA_DB.filter(function(d) { return d.category === category; });
+  incrementDuaUsed(); updateDuaBadge(); renderDuas(results);
+}
+
+function duaSearch(query) {
+  if (!query || !query.trim()) { duaFilter('all', null); return; }
+  var q = query.toLowerCase();
+  var results = DUA_DB.filter(function(d) {
+    return d.keywords.some(function(k) { return k.indexOf(q) !== -1; }) ||
+      d.title.toLowerCase().indexOf(q) !== -1 || d.english.toLowerCase().indexOf(q) !== -1;
+  });
+  incrementDuaUsed(); updateDuaBadge(); renderDuas(results);
+}
+
+// Patch showTab to init dua results on first open
+(function() {
+  var _origShowTab = window.showTab;
+  window.showTab = function(tab) {
+    if (_origShowTab) _origShowTab(tab);
+    if (tab === 'dua') {
+      updateDuaBadge();
+      var container = document.getElementById('dua-results');
+      if (container && container.children.length === 0) renderDuas(DUA_DB.slice(0, 8));
+    }
+  };
 })();
 </script>
 </body>

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-03-14 20:32:35",
+  "generated_at": "2026-03-14 22:43:35",
   "sources": {
-    "alpha_staging_candidates": 3185,
+    "alpha_staging_candidates": 3199,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
     "existing_specs_detected": 85
@@ -13,19 +13,19 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3148,
+    "total_candidates": 3162,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 84,
-      "BUILD_NEW_NOW": 66,
+      "ITERATE_EXISTING_NOW": 88,
+      "BUILD_NEW_NOW": 69,
       "SPEC_AND_TEST": 148,
-      "PARK": 2843,
+      "PARK": 2850,
       "VALIDATE_FIRST": 7
     },
     "cluster_counts": {
-      "faith": 74,
-      "focus": 447,
-      "habits": 190,
-      "ai_utility": 2114,
+      "faith": 78,
+      "focus": 450,
+      "habits": 191,
+      "ai_utility": 2120,
       "fitness": 182,
       "sleep": 119,
       "meal": 22
@@ -1268,6 +1268,68 @@
       "rank": 20
     },
     {
+      "candidate_id": "ALPHA98937",
+      "title": "Habit Tracker by InnerGrow: \u26054.8 (137K reviews), v2.13.14 still free. 137K reviews = massive social proof moat. Beat them on niche (faith-specific habit).",
+      "source": "competitive_intel_synthesis_scripturestreak_competitor",
+      "source_url": "",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "NOW",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "FALSE",
+      "applicable_niches": "N/A",
+      "applicable_methods": "UNCHECKED",
+      "evidence": "Habit Tracker by InnerGrow: \u26054.8 (137K reviews), v2.13.14 still free. 137K reviews = massive social",
+      "compliance_notes": "",
+      "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA98937",
+        "source": "competitive_intel_synthesis_scripturestreak_competitor",
+        "source_url": "",
+        "category": "COMPETITIVE_INTEL",
+        "tactic": "Habit Tracker by InnerGrow: \u26054.8 (137K reviews), v2.13.14 still free. 137K reviews = massive social proof moat. Beat them on niche (faith-specific habit).",
+        "roi_potential": "HIGH",
+        "priority": "NOW",
+        "status": "APPROVED",
+        "applicable_methods": "UNCHECKED",
+        "applicable_niches": "N/A",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "FALSE",
+        "extracted_method": "Habit Tracker by InnerGrow: \u26054.8 (137K reviews), v2.13.14 still free. 137K reviews = massive social",
+        "compliance_notes": "",
+        "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
+        "created_at": "2026-03-14",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": "2026-03-14"
+      },
+      "score": 103,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 21
+    },
+    {
       "candidate_id": "ALPHA25041",
       "title": "Competitor gap: Fabulous habit tracker (87K reviews) at \u26054.45 \u2014 only major habit app below 4.5. Heavy paywall = user complaints. Gap for generous freemium habit app positioning.",
       "source": "itunes_api",
@@ -1327,7 +1389,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 21
+      "rank": 22
     },
     {
       "candidate_id": "ALPHA18678",
@@ -1389,7 +1451,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 23
     },
     {
       "candidate_id": "ALPHA_GAP_JOURNAL_PRICING",
@@ -1451,7 +1513,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 24
     },
     {
       "candidate_id": "ALPHA_APPSTORE_PAID_HABIT_GAP",
@@ -1513,7 +1575,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA17429",
@@ -1575,7 +1637,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA18535",
@@ -1637,7 +1699,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA_REDDIT_0309_001",
@@ -1699,7 +1761,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA15286",
@@ -1742,7 +1804,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA18170",
@@ -1804,7 +1866,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA544",
@@ -1866,7 +1928,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -1928,7 +1990,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA17028",
@@ -1990,7 +2052,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 33
     },
     {
       "candidate_id": "HN_003",
@@ -2052,7 +2114,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA18679",
@@ -2114,7 +2176,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 35
     },
     {
       "candidate_id": "RF_001",
@@ -2183,7 +2245,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA25039",
@@ -2245,7 +2307,69 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 37
+    },
+    {
+      "candidate_id": "ALPHA98935",
+      "title": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. Direct PrayerLock competitor. All free model.",
+      "source": "competitive_intel_synthesis_prayerlock_competitor",
+      "source_url": "",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "NOW",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "FALSE",
+      "applicable_niches": "N/A",
+      "applicable_methods": "UNCHECKED",
+      "evidence": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. D",
+      "compliance_notes": "",
+      "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA98935",
+        "source": "competitive_intel_synthesis_prayerlock_competitor",
+        "source_url": "",
+        "category": "COMPETITIVE_INTEL",
+        "tactic": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. Direct PrayerLock competitor. All free model.",
+        "roi_potential": "HIGH",
+        "priority": "NOW",
+        "status": "APPROVED",
+        "applicable_methods": "UNCHECKED",
+        "applicable_niches": "N/A",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "FALSE",
+        "extracted_method": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. D",
+        "compliance_notes": "",
+        "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
+        "created_at": "2026-03-14",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": "2026-03-14"
+      },
+      "score": 93,
+      "cluster": "faith",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "Hilal / PrayerLock / Scripture Streak",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
+      "paywall_variant": "after first devotional value moment, annual-first anchor",
+      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
+      "primary_monetization": "subscription with 7-day trial",
+      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA18306",
@@ -2307,7 +2431,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA18478",
@@ -2367,130 +2491,6 @@
         "pricing: annual-first anchor vs cheaper monthly plan",
         "review prompt: milestone trigger only, never session-one prompt",
         "monetization: paid upfront vs free trial subscription"
-      ],
-      "risk_score": 0,
-      "rank": 38
-    },
-    {
-      "candidate_id": "ALPHA229",
-      "title": "Faith niche AI influencer. Combine with PrayerLock app.",
-      "source": "AI Influencer Faith Niche",
-      "source_url": "AI_INFLUENCER/FAITH_PERSONA research",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "Faith niche AI influencer. Combine with PrayerLock app.",
-      "compliance_notes": "",
-      "reviewer_notes": "APPROVED. Faith niche AI influencer playbook. Cross-sell with PrayerLock app. Strong audience alignment. Content-to-app funnel opportunity.",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA229",
-        "source": "AI Influencer Faith Niche",
-        "source_url": "AI_INFLUENCER/FAITH_PERSONA research",
-        "category": "AI_INFLUENCER",
-        "tactic": "",
-        "roi_potential": "HIGH",
-        "priority": "",
-        "status": "APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "",
-        "extracted_method": "Faith niche AI influencer. Combine with PrayerLock app.",
-        "compliance_notes": "",
-        "reviewer_notes": "APPROVED. Faith niche AI influencer playbook. Cross-sell with PrayerLock app. Strong audience alignment. Content-to-app funnel opportunity.",
-        "created_at": "",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 91,
-      "cluster": "faith",
-      "market_room": "MEDIUM_HIGH",
-      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
-      "paywall_variant": "after first devotional value moment, annual-first anchor",
-      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
-      "primary_monetization": "subscription with 7-day trial",
-      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA17338",
-      "title": "+82% on $SPY today. Gamma exposure showed $687 as a rejection area, with the Interval Map highlighting negative exposure building near $684.I tweeted the structure, took the trade, and exited once flows flipped.Quant Data gives you this visibility. Free 7-day trial.",
-      "source": "@purpdevvv (high-signal-accounts)",
-      "source_url": "https://x.com/AndrewHiesinger/status/2007277337122091472/analytics",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "HIGH",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "UNCHECKED",
-      "earnings_verified": "N/A",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "+82% on $SPY today. Gamma exposure showed $687 as a rejection area, with the Interval Map highlighting negative exposure building near $684.I tweeted the structure, took the trade, and exited once flows flipped.Quant Data gives you this visibility. Free 7-day trial.",
-      "compliance_notes": "",
-      "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA17338_monetization.md",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA17338",
-        "source": "@purpdevvv (high-signal-accounts)",
-        "source_url": "https://x.com/AndrewHiesinger/status/2007277337122091472/analytics",
-        "category": "MONETIZATION",
-        "tactic": "+82% on $SPY today. Gamma exposure showed $687 as a rejection area, with the Interval Map highlighting negative exposure building near $684.I tweeted the structure, took the trade, and exited once flows flipped.Quant Data gives you this visibility. Free 7-day trial.",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "UNCHECKED",
-        "earnings_verified": "N/A",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA17338_monetization.md",
-        "created_at": "2026-03-07T11:42:06.691077",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 91,
-      "cluster": "ai_utility",
-      "market_room": "HIGH",
-      "existing_app_target": "NEW_BUILD",
-      "execution_lane": "NEW_BUILD",
-      "build_decision": "BUILD_NEW_NOW",
-      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
-      "paywall_variant": "after the first clear output, never before time-to-value",
-      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
-      "primary_monetization": "subscription with fast time-to-value and annual anchor",
-      "secondary_monetization": "paid upfront for privacy-first local tools; avoid ads unless usage is massive",
-      "price_test": "$6.99 to $9.99/mo and $39.99 to $59.99/yr",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
       "rank": 40

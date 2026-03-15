@@ -1,6 +1,6 @@
 # Upwork Boring Category Gig Listings
 
-Generated: 2026-03-08 08:16:04
+Generated: 2026-03-14 22:39:50
 
 Strategy: Find best-selling Fiverr gigs in boring categories, offer same service on Upwork at 2x price with rush delivery and unlimited revisions as differentiators.
 
@@ -51,13 +51,13 @@ Rush delivery: 24-hour turnaround available for time-sensitive applications.
 
 ### Margin math
 
-Fiverr cost: $30-80 -> Upwork price: $100-200 = ~2.5x margin
+Fiverr cost: $40-80 -> Upwork price: $100-200 = ~2.5x margin
 
 ### Fiverr gigs this competes with
 
-- Resume Writing Services | Resume Help | Professional Resume Writers ... ($30-80)
-- Hire the best resume writers ($30-80)
-- 24 Best Cv Writing Services To Buy Online ($30-80)
+- I will write a professional ATS resume and cover letter ($40-80)
+- I will rewrite your resume for maximum ATS score ($30-60)
+- I will create a modern resume with professional design ($25-50)
 
 ---
 
