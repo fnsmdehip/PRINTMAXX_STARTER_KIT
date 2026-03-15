@@ -658,3 +658,4 @@
 {"ts": "2026-03-14T18:20:15.498278", "mission": "autonomy:auto_app_app_factory_9788", "result": "partial", "duration_s": 6, "output": "App Factory: 4/6 steps OK"}
 {"ts": "2026-03-14T19:01:01.560021", "mission": "factory", "result": "success", "duration_s": 61.6, "output": "Factory cycle complete"}
 {"ts": "2026-03-14T20:00:04.171030", "mission": "health_heal", "result": "success", "duration_s": 4.1, "output": "Health checked. Healed issues."}
+{"ts": "2026-03-14T20:00:04.384139", "mission": "process_decide", "result": "success", "duration_s": 0.2, "output": "Decisions made. 87 response drafts, 38 listing drafts"}
