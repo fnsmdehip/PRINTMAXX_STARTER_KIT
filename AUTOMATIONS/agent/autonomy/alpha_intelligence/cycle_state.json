@@ -1,49 +1,33 @@
 {
-  "last_cycle": "2026-03-16T04:40:00Z",
-  "cycle_number": 1847,
+  "cycle_number": 249,
+  "phase": "report",
   "status": "COMPLETE",
-  "scraping": {
-    "twitter_status": "SUCCESS",
-    "twitter_output": "AUTOMATIONS/twitter_scraper_output/scrape_20260316_043137.json",
-    "reddit_status": "SUCCESS",
-    "reddit_output": "AUTOMATIONS/reddit_scraper_output/reddit_20260316_041347.json",
-    "entries_captured": 90
+  "timestamp": "2026-03-16T12:37:00Z",
+  "duration_seconds": 120,
+  "report_generated": true,
+  "report_location": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_report.md",
+  "summary": {
+    "pending_review_backlog": 421,
+    "approved_routed": 381,
+    "content_generated": 28,
+    "ventures_updated": 8
   },
-  "analysis": {
-    "processor_status": "SUCCESS",
-    "entries_processed": 50,
-    "entries_bolstered": 1,
-    "entries_archived": 49
-  },
-  "scoring": {
-    "bot_detection": "ACTIVE",
-    "earnings_skepticism": "APPLIED",
-    "compliance_check": "PASSED"
-  },
-  "routing": {
-    "freelance_opportunities": 8,
-    "ecom_opportunities": 14,
-    "master_ops_ready": 87
-  },
-  "content_generation": {
-    "major_pieces": 2,
-    "sub_pieces": 12,
-    "files_created": [
-      "CONTENT/social/posting_queue/gumroad_speed_upload_alpha101126.txt",
-      "CONTENT/social/posting_queue/decision_engine_freelance_opportunities_20260316.txt"
-    ]
-  },
-  "report": "AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260316.md",
-  "next_cycle": "2026-03-16T08:40:00Z",
-  "p0_actions": [
-    "Setup Gumroad account (5 min)",
-    "Respond to r/forhire web clients post (15 min)",
-    "Execute freelance pitch template"
+  "next_cycle_scheduled": "2026-03-16T14:39:00Z",
+  "blockers": [
+    "Pending review backlog: 421 HIGH/HIGHEST entries need human classification",
+    "Twitter scraper needs: pip3 install playwright + python3 -m playwright install chromium",
+    "ProductHunt API requires GraphQL auth token"
   ],
   "metrics": {
-    "elapsed_time_minutes": 9,
-    "tool_calls_used": 14,
-    "alpha_entries_in_system": 19822,
-    "content_distribution_ready": true
-  }
+    "entries_processed_today": 308,
+    "entries_routed_today": 141,
+    "high_roi_entries_today": 62,
+    "content_posts_generated": 52,
+    "scraper_health": {
+      "twitter": "needs_playwright_reinstall",
+      "reddit": "complete",
+      "hn_ph_ih": "complete"
+    }
+  },
+  "notes": "Cycle 249 complete. Comprehensive report generated covering 421 pending entries, 381 approved/routed, 28 content pieces. All 5 pipeline phases executed. See report_report.md for full intelligence summary."
 }

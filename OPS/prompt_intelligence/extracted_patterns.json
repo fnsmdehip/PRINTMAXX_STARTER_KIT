@@ -1,0 +1,456 @@
+{
+  "mined_at": "2026-03-16T12:50:01.159095",
+  "total_prompts": 1510,
+  "correction_count": 369,
+  "escalation_count": 219,
+  "satisfaction_count": 143,
+  "top_corrections": [
+    {
+      "timestamp": "2026-03-15T08:01:12",
+      "prompt": "Analyze these user prompts from the last 2 days of a PRINTMAXX autonomous business system.\nThe user is building a hedge fund of revenue lanes with 33 autonomous agents, scrapers, and content pipelines.\n\nFor each session, I'll show the prompts in order:\n\n=== SESSION 1 (2026-03-13 08:00 - 08:00, 0 min, 1 prompts) ===\n  [1] Analyze these user prompts from the last 2 days of a PRINTMAXX autonomous business system.\nThe user is building a hedge fund of revenue lanes with 33 autonomous agents, scrapers",
+      "markers": [
+        "lazy",
+        "wrong",
+        "stop",
+        "popular",
+        "not just"
+      ],
+      "marker_count": 5
+    },
+    {
+      "timestamp": "2026-03-08T13:40:25",
+      "prompt": "<task-notification>\n<task-id>a61d77cdb1bbc2f54</task-id>\n<tool-use-id>toolu_01LoxMiwkNCYohbSNUQ2rv15</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a61d77cdb1bbc2f54.output</output-file>\n<status>completed</status>\n<summary>Agent \"Scan generated content files\" completed</summary>\n<result>Good. I found one sycophantic phrase: \"i'm most personally invested in\". Let me complete my analysis now. Based on my comprehensive review, here'",
+      "markers": [
+        "stop",
+        "aggregate",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-10T08:00:47",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-10T08:01:15",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-10T16:00:48",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-10T16:01:28",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-11T00:00:51",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-11T00:01:37",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-11T20:00:42",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-11T20:01:01",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-12T08:01:01",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-12T08:01:26",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-13T08:01:05",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-13T08:02:06",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-14T04:01:02",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-14T04:01:50",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-14T12:01:02",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-14T12:01:54",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-14T20:00:50",
+      "prompt": "You are an aggressive but legal engagement hacking agent for PRINTMAXX social accounts.\n\nLEGAL BOUNDARIES (from grey_hat_legal.md):\n- ALLOWED: Multiple accounts, AI personas (disclosed), content scraping (public), reply farming,\n  competitor brand in SEO, swarm promotion (organic), controversy hooks\n- RISKY BUT LEGAL: Engagement pods (ToS violation only), DM automation (triggered by user),\n  aggressive SEO tactics\n- NEVER DO: Fake scarcity (FTC), buying followers for sponsor fraud, bot manipulat",
+      "markers": [
+        "lazy",
+        "wrong",
+        "not just"
+      ],
+      "marker_count": 3
+    },
+    {
+      "timestamp": "2026-03-14T20:01:31",
+      "prompt": "You are a viral content strategist. Generate content designed to exploit\nplatform algorithms for maximum reach.\n\nTACTICS TO USE:\n1. INTENTIONAL FLAW ADS \u2014 \"seven finger\" approach\n   - Create ad copy/concept where something is subtly wrong\n   - People comment \"wait, that has 7 fingers\" or \"that math is wrong\"\n   - Comments feed algorithm \u2192 more reach \u2192 more eyes on the product\n   - The flaw must be subtle enough to feel accidental\n\n2. RAGE BAIT / HOT TAKES\n   - Opinions that split audience 50/50\n",
+      "markers": [
+        "wrong",
+        "stop",
+        "popular"
+      ],
+      "marker_count": 3
+    }
+  ],
+  "top_escalations": [
+    {
+      "timestamp": "2026-03-08T06:10:06",
+      "prompt": "You are the LOCAL BIZ autonomy agent for PRINTMAXX venture '\\''OpenClaw Nationwide'\\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 4h. Each cycle: 1. DISCOVER: Search for local businesses in rotating cities that have no website or terrible websites. Use DuckDuckGo search, Yelp scraping, Google Maps data. 2. GRADE: Score each business website A-F based on mobile responsiveness, SSL, load time, design quality. 3. BUILD PREVIEW: For F and D grad",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T06:10:19",
+      "prompt": "You are the RESEARCH autonomy agent for PRINTMAXX venture '\\''Alpha Intelligence'\\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 2h. Each cycle: 1. SCRAPE: Run twitter_alpha_scraper.py --all and background_reddit_scraper.py --scrape. Also check HackerNews, ProductHunt, IndieHackers. 2. ANALYZE: Process raw scrapes through alpha_auto_processor.py. Score each finding on actionability, ROI, effort. 3. SCORE: Rate findings HIGHEST/HIGH/MEDIUM/LOW",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T07:42:16",
+      "prompt": "You are the PLAYWRIGHT TESTER agent for PRINTMAXX.\nWorking directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt\n\nYou test every deployed site and app to make sure it actually works.\n\nCYCLE:\n1. GET DEPLOY LIST: Read AUTOMATIONS/agent/swarm/deployed_assets.json for all live URLs. Also run \n  printmaxx-store.surge.sh                                                     7 hours ago    surge   surge.sh   Standard  \n  instantly-vs-lemlist.surge.sh                                         ",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T08:10:30",
+      "prompt": "You are the RESEARCH autonomy agent for PRINTMAXX venture '\\''Alpha Intelligence'\\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 2h. Each cycle: 1. SCRAPE: Run twitter_alpha_scraper.py --all and background_reddit_scraper.py --scrape. Also check HackerNews, ProductHunt, IndieHackers. 2. ANALYZE: Process raw scrapes through alpha_auto_processor.py. Score each finding on actionability, ROI, effort. 3. SCORE: Rate findings HIGHEST/HIGH/MEDIUM/LOW",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T08:14:49",
+      "prompt": "<task-notification>\n<task-id>abb69b06d9298b65a</task-id>\n<tool-use-id>toolu_01CYC1oJSNnDj2DuoDYDKxVW</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/abb69b06d9298b65a.output</output-file>\n<status>completed</status>\n<summary>Agent \"Scrape HackerNews and ProductHunt\" completed</summary>\n<result>All 15 entries staged. Here is the report.\n\n---\n\n**HackerNews Scrape Results (2026-03-08)**\n\n- **Total stories fetched** (score >= 50): 23\n-",
+      "markers": [
+        "ralph loop"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T08:18:26",
+      "prompt": "<task-notification>\n<task-id>a5ce4f164ca587062</task-id>\n<tool-use-id>toolu_012DoW25jmbnJutqHhtxDprX</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a5ce4f164ca587062.output</output-file>\n<status>completed</status>\n<summary>Agent \"Scan built apps and products\" completed</summary>\n<result>Perfect. Now let me create the final comprehensive report:\n\n---\n\n## PRINTMAXX ASSET DEPLOYMENT AUDIT \u2014 March 8, 2026\n\nBased on thorough code anal",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T09:19:57",
+      "prompt": "<task-notification>\n<task-id>a1447987a23890bfc</task-id>\n<tool-use-id>toolu_01PBQ4dXBcgLzVguZ4ueARqH</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a1447987a23890bfc.output</output-file>\n<status>completed</status>\n<summary>Agent \"Review Mar late-month scheduled tweets\" completed</summary>\n<result>All 3 files fixed. Here is the summary.\n\n---\n\n## QUALITY GATE REPORT -- CONTENT/social/posting_queue/ (mar24-mar31)\n\n**Total files revi",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T10:00:32",
+      "prompt": "You are upgrading content for the PRINTMAXX system. This content was auto-generated by a ralph loop and may be surface-level.\n\nCONTENT TO UPGRADE (from C01_tiktok, sample):\n# C01 TikTok Video Scripts \u2014 30 Scripts\n\n**Format:** Hook (0-3s) \u2192 Body (3-45s) \u2192 CTA (45-60s)\n**Target:** 45-60 seconds per script\n**Voice:** @pipelineabuser weighted \u2014 consequence-first, exact numbers, no AI slop\n\n---\n\n## NICHE 1: SOLOPRENEUR / MONEY METHODS (Scripts 1-10)\n\n---\n\n### Script 1: Cold Email ROI\n**Hook (0-3s):**",
+      "markers": [
+        "ralph loop"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T10:05:09",
+      "prompt": "<task-notification>\n<task-id>a24487e3f2c19b6ca</task-id>\n<tool-use-id>toolu_0159hW5s43rKnjjnvRpCofke</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a24487e3f2c19b6ca.output</output-file>\n<status>completed</status>\n<summary>Agent \"Audit app marketing pages SEO\" completed</summary>\n<result>Now I have everything I need. Let me compile the full audit report.\n\n---\n\n## SEO/Meta Audit Report: PRINTMAXX App Landing Pages\n\n**Audit date:**",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T10:10:17",
+      "prompt": "You are the LOCAL BIZ autonomy agent for PRINTMAXX venture '\\''OpenClaw Nationwide'\\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 4h. Each cycle: 1. DISCOVER: Search for local businesses in rotating cities that have no website or terrible websites. Use DuckDuckGo search, Yelp scraping, Google Maps data. 2. GRADE: Score each business website A-F based on mobile responsiveness, SSL, load time, design quality. 3. BUILD PREVIEW: For F and D grad",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T10:51:31",
+      "prompt": "You are the RESEARCH autonomy agent for PRINTMAXX venture '\\''Alpha Intelligence'\\''. Working directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt  Your job runs every 2h. Each cycle: 1. SCRAPE: Run twitter_alpha_scraper.py --all and background_reddit_scraper.py --scrape. Also check HackerNews, ProductHunt, IndieHackers. 2. ANALYZE: Process raw scrapes through alpha_auto_processor.py. Score each finding on actionability, ROI, effort. 3. SCORE: Rate findings HIGHEST/HIGH/MEDIUM/LOW",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T11:29:52",
+      "prompt": "<task-notification>\n<task-id>a44c932da57f481b2</task-id>\n<tool-use-id>toolu_015kfTb3Q2Cwn58K2EKnuXoe</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a44c932da57f481b2.output</output-file>\n<status>completed</status>\n<summary>Agent \"Quality gate batch 5: product promos + app promos\" completed</summary>\n<result>Now I'll analyze each file against the quality checklist.\n\n**File-by-file analysis:**\n\n**1. product_promo_50_viral_tweet_tem",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T11:30:04",
+      "prompt": "<task-notification>\n<task-id>a00d4e2e57b02a745</task-id>\n<tool-use-id>toolu_016bcnMTzAKCMV6FoSSsiYxf</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a00d4e2e57b02a745.output</output-file>\n<status>completed</status>\n<summary>Agent \"Quality gate batch 6: alpha + brain + misc content\" completed</summary>\n<result>Clean. Here is the summary:\n\n---\n\n**QUALITY GATE REVIEW SUMMARY**\n\n| Metric | Count |\n|---|---|\n| Total reviewed | 14 |\n| P",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T11:30:21",
+      "prompt": "<task-notification>\n<task-id>a6873ecc1f75f1b77</task-id>\n<tool-use-id>toolu_01JUmMY9SbabZjpEi3zYXb8o</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a6873ecc1f75f1b77.output</output-file>\n<status>completed</status>\n<summary>Agent \"Quality gate batch 4: apr3-apr11 + promos\" completed</summary>\n<result>Here is the quality gate summary.\n\n---\n\n**QUALITY GATE REPORT: 19 Files Reviewed**\n\n| Metric | Count |\n|--------|-------|\n| Total re",
+      "markers": [
+        "also"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T11:47:39",
+      "prompt": "You are the PLAYWRIGHT TESTER agent for PRINTMAXX.\nWorking directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt\n\nYou test every deployed site and app to make sure it actually works.\n\nCYCLE:\n1. GET DEPLOY LIST: Read AUTOMATIONS/agent/swarm/deployed_assets.json for all live URLs. Also run \n  shia-streak-landing.surge.sh                                                             15 minutes ago   surge   surge.sh   Standard  \n  sunni-streak-landing.surge.sh                           ",
+      "markers": [
+        "also"
+      ]
+    }
+  ],
+  "satisfactions": [
+    {
+      "timestamp": "2026-03-08T05:11:54",
+      "prompt": "You are the QUALITY GATE agent for PRINTMAXX.\nWorking directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt\n\nYou are the LAST LINE OF DEFENSE before anything goes live. You have VETO POWER. If something is slop, you BLOCK it and either fix it or flag it.\n\nCYCLE:\n1. CHECK PENDING CONTENT: Read all files in CONTENT/social/ with status PENDING_REVIEW:\n   - Run EVERY piece through the copy-style.md checklist:\n     [ ] Zero em dashes\n     [ ] Zero banned AI vocabulary (leverage, utilize",
+      "markers": [
+        "perfect"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T07:12:04",
+      "prompt": "You are the QUALITY GATE agent for PRINTMAXX.\nWorking directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt\n\nYou are the LAST LINE OF DEFENSE before anything goes live. You have VETO POWER. If something is slop, you BLOCK it and either fix it or flag it.\n\nCYCLE:\n1. CHECK PENDING CONTENT: Read all files in CONTENT/social/ with status PENDING_REVIEW:\n   - Run EVERY piece through the copy-style.md checklist:\n     [ ] Zero em dashes\n     [ ] Zero banned AI vocabulary (leverage, utilize",
+      "markers": [
+        "perfect"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T07:16:52",
+      "prompt": "You are the INBOUND MAXIMIZER agent for PRINTMAXX.\nWorking directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt\n\nYour job: create a firehose of inbound leads and opportunities. Every 4 hours.\n\nCYCLE:\n1. AUDIT INBOUND: Check all inbound channels:\n   - Which deployed sites have contact forms or lead capture?\n   - Which content pieces are generating engagement?\n   - Which social accounts are getting DMs/replies?\n   - Which products have reviews or purchase activity?\n2. IDENTIFY BOTTL",
+      "markers": [
+        "fire"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T07:47:30",
+      "prompt": "<task-notification>\n<task-id>afc6eedc8ffd5f7d0</task-id>\n<tool-use-id>toolu_01GtshizeRXUCPpMa7ppbMik</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/afc6eedc8ffd5f7d0.output</output-file>\n<status>completed</status>\n<summary>Agent \"Scan for undeployed assets\" completed</summary>\n<result>Perfect. Now let me create the comprehensive report:\n\n## SCAN RESULTS: Deployable Assets NOT Yet on Surge.sh\n\nBased on thorough scan of LANDING, MO",
+      "markers": [
+        "perfect"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T08:18:26",
+      "prompt": "<task-notification>\n<task-id>a5ce4f164ca587062</task-id>\n<tool-use-id>toolu_012DoW25jmbnJutqHhtxDprX</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a5ce4f164ca587062.output</output-file>\n<status>completed</status>\n<summary>Agent \"Scan built apps and products\" completed</summary>\n<result>Perfect. Now let me create the final comprehensive report:\n\n---\n\n## PRINTMAXX ASSET DEPLOYMENT AUDIT \u2014 March 8, 2026\n\nBased on thorough code anal",
+      "markers": [
+        "perfect"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T09:12:16",
+      "prompt": "You are the QUALITY GATE agent for PRINTMAXX.\nWorking directory: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt\n\nYou are the LAST LINE OF DEFENSE before anything goes live. You have VETO POWER. If something is slop, you BLOCK it and either fix it or flag it.\n\nCYCLE:\n1. CHECK PENDING CONTENT: Read all files in CONTENT/social/ with status PENDING_REVIEW:\n   - Run EVERY piece through the copy-style.md checklist:\n     [ ] Zero em dashes\n     [ ] Zero banned AI vocabulary (leverage, utilize",
+      "markers": [
+        "perfect"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T09:51:22",
+      "prompt": "<task-notification>\n<task-id>a767a3e1b5da7469c</task-id>\n<tool-use-id>toolu_01TgfJ6jhtiWBKJcBzC8Vt3b</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a767a3e1b5da7469c.output</output-file>\n<status>completed</status>\n<summary>Agent \"Audit lead magnets SEO\" completed</summary>\n<result>Here is the full SEO audit for all six files.\n\n---\n\n## SEO Audit: PRINTMAXX Lead Magnet HTML Files\n\n---\n\n### 1. solopreneur-launch-checklist.html\n\n**Ti",
+      "markers": [
+        "exactly",
+        "solid"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T09:53:00",
+      "prompt": "<task-notification>\n<task-id>a9d6c08a0aafd5232</task-id>\n<tool-use-id>toolu_017zFJVB3iyJkDJE8yEqWhME</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a9d6c08a0aafd5232.output</output-file>\n<status>completed</status>\n<summary>Agent \"Audit comparison page SEO\" completed</summary>\n<result>I have everything I need for a complete audit. Here is the full structured report.\n\n---\n\n# SEO Audit Report: 07_LANDING Comparison Pages\n\n**Audit da",
+      "markers": [
+        "exactly"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T11:13:32",
+      "prompt": "<task-notification>\n<task-id>a40dca43f2152ad43</task-id>\n<tool-use-id>toolu_01HwKcmJ6r39abPGbSk9dCDf</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/a40dca43f2152ad43.output</output-file>\n<status>completed</status>\n<summary>Agent \"Check revenue tracking state\" completed</summary>\n<result>Perfect. Now let me compile my findings into a clear report:\n\n## FINANCIAL & BLOCKER AUDIT REPORT\n\n### ACTUAL REVENUE: $0\n\n**Timeline:** Day 33 (",
+      "markers": [
+        "perfect"
+      ]
+    },
+    {
+      "timestamp": "2026-03-08T11:13:46",
+      "prompt": "<task-notification>\n<task-id>aa452b1fac09dd6c8</task-id>\n<tool-use-id>toolu_01Gzu5ZuNTVgSFkjhR9pbjXH</tool-use-id>\n<output-file>/private/tmp/claude-501/-Users-macbookpro-Documents-p-PRINTMAXX-STARTER-KITttttt/tasks/aa452b1fac09dd6c8.output</output-file>\n<status>completed</status>\n<summary>Agent \"Audit Gumroad-ready products\" completed</summary>\n<result>Perfect! Now I have comprehensive data. Let me compile the final report.\n\n## PRODUCT READINESS AUDIT \u2014 FINAL REPORT\n\n### GUMROAD DIGITAL PRODUCTS",
+      "markers": [
+        "perfect"
+      ]
+    }
+  ],
+  "top_keywords": {
+    "surge": 13510,
+    "automations": 5496,
+    "standard": 4018,
+    "users": 3192,
+    "content": 3138,
+    "hours": 3110,
+    "macbookpro": 3104,
+    "documents": 3080,
+    "intelligence": 2888,
+    "agent": 2712,
+    "task": 2546,
+    "printmaxx": 2268,
+    "output": 2094,
+    "python": 1873,
+    "venture": 1852,
+    "logs": 1851,
+    "base": 1795,
+    "days": 1720,
+    "data": 1715,
+    "tool": 1646,
+    "revenue": 1605,
+    "status": 1553,
+    "tweets": 1551,
+    "email": 1532,
+    "ready": 1528,
+    "directory": 1460,
+    "first": 1418,
+    "each": 1404,
+    "streak": 1388,
+    "audit": 1370
+  },
+  "top_bigrams": {
+    "surge surge": 4498,
+    "surge standard": 4001,
+    "users macbookpro": 3104,
+    "macbookpro documents": 3067,
+    "surge hours": 2411,
+    "hours surge": 2406,
+    "automations logs": 1789,
+    "base python": 1609,
+    "python automations": 1609,
+    "directory users": 1340,
+    "automations agent": 1025,
+    "working directory": 1023,
+    "output file": 794,
+    "automations automations": 779,
+    "intelligence briefing": 772,
+    "cold email": 754,
+    "louisville surge": 736,
+    "agent printmaxx": 728,
+    "surge days": 719,
+    "days surge": 719
+  },
+  "meta_rules": [
+    "DIRECT-CORRECTION (triggered 85x): User gives direct corrections \u2014 extract the rule and never repeat the mistake.",
+    "DEPTH-DEMAND (triggered 28x): User expects output BEYOND the literal ask. Find adjacent improvements, non-obvious angles, and implicit subtasks.",
+    "ANTI-LAZY (triggered 22x): User pushes back when output defaults to popular/generic solutions instead of critically analyzing for best. Always justify WHY something is recommended, not just that it's popular.",
+    "ANTI-LAZY (triggered 20x): User pushes back when output defaults to popular/generic solutions instead of critically analyzing for best. Always justify WHY something is recommended, not just that it's popular.",
+    "ANTI-LAZY (triggered 16x): User pushes back when output defaults to popular/generic solutions instead of critically analyzing for best. Always justify WHY something is recommended, not just that it's popular.",
+    "ANTI-LAZY (triggered 13x): User pushes back when output defaults to popular/generic solutions instead of critically analyzing for best. Always justify WHY something is recommended, not just that it's popular.",
+    "DIRECT-CORRECTION (triggered 1x): User gives direct corrections \u2014 extract the rule and never repeat the mistake.",
+    "ESCALATION-PATTERN: User escalated 219 times across sessions. The system consistently under-delivers on first pass. Default response should be at the depth of what the user typically escalates TO, not what they initially ask for.",
+    "SATISFACTION-TRIGGERS: User expressed satisfaction 143 times. Common context: when system executes autonomously, when output exceeds expectations, when system finds non-obvious angles."
+  ]
+}

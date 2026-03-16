@@ -1,12 +1,12 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-16 12:00:04
+Generated: 2026-03-16 15:46:59
 
 ## Inputs
-- ALPHA_STAGING app candidates: 2830
+- ALPHA_STAGING app candidates: 2924
 - APP_FACTORY_METHODS candidates: 5
 - Reddit findings consumed: 6
-- Existing app specs detected: 90
+- Existing app specs detected: 91
 
 ## Hard Gates
 - No fake paywalls. Real RevenueCat or real billing path before shipping.
@@ -44,8 +44,8 @@ Generated: 2026-03-16 12:00:04
 | 20 | SaaS pricing: $9/mo = ZERO conversions. Raised to $29/mo = paying customers imme | NEW_BUILD | 104 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 23 | AI lowers app dev barrier → Cambrian explosion of niche apps imminent. levelsio  | NEW_BUILD | 101 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 30 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 34 | Free trial converts 2% → 11% paid. Tested on SaaS product. Real data from r/Side | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 35 | Running 4 AI-driven companies from terminal via agent orchestration (auto-co-met | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 32 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 35 | Free trial converts 2% → 11% paid. Tested on SaaS product. Real data from r/Side | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.

@@ -407,3 +407,20 @@ reddit_signal,APP_FACTORY_SIGNAL,What are you building this week?,N/A,3,8,cycle_
 2026-03-16,49,REDDIT_SIGNAL,MONETIZATION,r/stopdrinking,I can’t do this anymore,,,EXTRACT_ALPHA,P1,HIGH,168,https://reddit.com/r/stopdrinking/comments/1rv68uw/i_cant_do_this_anymore/,GENERAL
 2026-03-16,49,REDDIT_SIGNAL,MONETIZATION,r/stopdrinking,21 Days!,,,EXTRACT_ALPHA,P1,HIGH,159,https://reddit.com/r/stopdrinking/comments/1rv4g7q/21_days/,GENERAL
 2026-03-16,49,REDDIT_SIGNAL,MONETIZATION,r/stopdrinking,I’m starting to love being sober,,,EXTRACT_ALPHA,P1,HIGH,478,https://reddit.com/r/stopdrinking/comments/1ruunzd/im_starting_to_love_being_sober/,GENERAL
+gap_confirmation,meditation,MeditationStreak GAP,0 paid,,,,,1,0,competitive_intel_cycle_51,,436K demand,cycle_51_confirmed,0 competitors at $1.99,2026-03-16T12:29:10.811763
+gap_confirmation,finance,MoneyHabit GAP,0 paid,,,,,1,0,competitive_intel_cycle_51,,137K demand,cycle_51_confirmed,0 competitors at $2.99,2026-03-16T12:29:10.811763
+gap_confirmation,health,SobrietyStreak GAP,0 paid,,,,,1,0,competitive_intel_cycle_51,,300K community,cycle_51_confirmed,"3 cycles confirmed, 0 paid",2026-03-16T12:29:10.811763
+gap_confirmation,health,SleepHabit GAP,0 paid,,,,,1,0,competitive_intel_cycle_51,,unquantified demand,cycle_51_confirmed,"3 cycles confirmed, 0 paid",2026-03-16T12:29:10.811763
+gap_confirmation,health,WaterReminder GAP,0 paid,,,,,1,0,competitive_intel_cycle_51,,151K demand,cycle_51_confirmed,template ready,2026-03-16T12:29:10.811763
+gap_confirmation,productivity,ReadingTracker GAP,0 paid,,,,,1,0,competitive_intel_cycle_51,,709K demand,cycle_51_confirmed,template ready,2026-03-16T12:29:10.811763
+revenue_intel,app_revenue,Sold 89 lifetime deals at $199 each to get off the ground. The math 12 months later is embarrassing,$199,,,,,1,0,reddit/SaaS,https://reddit.com/r/SaaS/comments/1ruc0cu/sold_89_lifetime_deals_at_199_each_to_get_off_the/,267,cycle_51,Revenue signal score: 267,2026-03-16T12:29:10.811763
+revenue_intel,app_revenue,"Just hit my first $20 in app revenue, not much but it feels good .",$20,,,,,1,0,reddit/AppBusiness,https://reddit.com/r/AppBusiness/comments/1ruf7zf/just_hit_my_first_20_in_app_revenue_not_much_but/,122,cycle_51,Revenue signal score: 122,2026-03-16T12:29:10.811763
+revenue_intel,app_revenue,$1k revenue month. Milestone reached.,$1k,,,,,1,0,reddit/AppBusiness,https://reddit.com/r/AppBusiness/comments/1ruu06e/1k_revenue_month_milestone_reached/,57,cycle_51,Revenue signal score: 57,2026-03-16T12:29:10.811763
+revenue_intel,app_revenue,My app made $142 sales in the first 5 days,$142,,,,,1,0,reddit/AppBusiness,https://reddit.com/r/AppBusiness/comments/1rv4uat/my_app_made_142_sales_in_the_first_5_days/,36,cycle_51,Revenue signal score: 36,2026-03-16T12:29:10.811763
+revenue_intel,app_revenue,"I made $413 from 1,700 users in 3 months...here's the honest breakdown.",$413,,,,,1,0,reddit/SaaS,https://reddit.com/r/SaaS/comments/1rv61om/i_made_413_from_1700_users_in_3_monthsheres_the/,34,cycle_51,Revenue signal score: 34,2026-03-16T12:29:10.811763
+CI_C52_meditation_streak,BLUE_OCEAN,meditation_streak,AppStore iTunes API,0 paid apps found,CONFIRMED,BUILD_NOW,cycle_52,2026-03-16T14:44:39.641144
+CI_C52_money_habit,BLUE_OCEAN,money_habit,AppStore iTunes API,0 paid apps found,CONFIRMED,BUILD_NOW,cycle_52,2026-03-16T14:44:39.641144
+CI_C52_sobriety_streak,BLUE_OCEAN,sobriety_streak,AppStore iTunes API,0 paid apps found,CONFIRMED,BUILD_NOW,cycle_52,2026-03-16T14:44:39.641144
+CI_C52_sleep_habit,BLUE_OCEAN,sleep_habit,AppStore iTunes API,0 paid apps found,CONFIRMED,BUILD_NOW,cycle_52,2026-03-16T14:44:39.641144
+CI_C52_water_reminder,BLUE_OCEAN,water_reminder,AppStore iTunes API,0 paid apps found,CONFIRMED,BUILD_NOW,cycle_52,2026-03-16T14:44:39.641144
+CI_C52_reading_tracker_WEAK,WEAK_GAP,reading_tracker,AppStore iTunes API,2 paid: BookBuddy Pro: Book Tracker $9.99 | Streaks $5.99,PARTIAL_GAP,BUILD_WITH_DIFFERENTIATION,cycle_52,2026-03-16T14:44:39.641144

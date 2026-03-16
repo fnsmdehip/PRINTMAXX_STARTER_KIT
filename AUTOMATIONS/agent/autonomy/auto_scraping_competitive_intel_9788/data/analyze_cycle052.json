@@ -1,0 +1,183 @@
+{
+  "cycle": 52,
+  "analyzed_at": "2026-03-16T14:44:19.517443",
+  "scrape_status": "SUCCESS - 150 posts from 6 subreddits",
+  "reddit": {
+    "total": 150,
+    "new_unique": 140,
+    "high_signal": 13,
+    "revenue_signals": 13,
+    "app_signals": 49,
+    "ltd_signals": 1
+  },
+  "appstore": {
+    "blue_oceans": [
+      "meditation_streak",
+      "money_habit",
+      "sobriety_streak",
+      "sleep_habit",
+      "water_reminder"
+    ],
+    "weak_gaps": {
+      "reading_tracker": [
+        {
+          "name": "BookBuddy Pro: Book Tracker",
+          "price": 9.99,
+          "ratings": 5715
+        },
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "ratings": 27340
+        }
+      ]
+    }
+  },
+  "new_alpha": [
+    {
+      "id": "ALPHA_CI_52_001",
+      "title": "Elderly mother can\u2019t pay bills",
+      "url": "https://reddit.com/r/personalfinance/comments/1ruezml/elderly_mother_cant_pay_bills/",
+      "subreddit": "personalfinance",
+      "score": 995,
+      "comments": 123,
+      "signal_score": 50,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_002",
+      "title": "Share your ***Not-AI*** projects",
+      "url": "https://reddit.com/r/SideProject/comments/1oaq2kx/share_your_notai_projects/",
+      "subreddit": "SideProject",
+      "score": 619,
+      "comments": 1555,
+      "signal_score": 50,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_003",
+      "title": "Apple Card virtual card number stolen and fraudulently used. Disputed, and they did not decide in my favor.",
+      "url": "https://reddit.com/r/personalfinance/comments/1rvaefp/apple_card_virtual_card_number_stolen_and/",
+      "subreddit": "personalfinance",
+      "score": 250,
+      "comments": 136,
+      "signal_score": 40,
+      "category": "APP_TACTIC",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_004",
+      "title": "Something from The Four Agreements finally clicked for me today",
+      "url": "https://reddit.com/r/Meditation/comments/1rumuur/something_from_the_four_agreements_finally/",
+      "subreddit": "Meditation",
+      "score": 101,
+      "comments": 24,
+      "signal_score": 30,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_005",
+      "title": "Are we suffering because we think too much?",
+      "url": "https://reddit.com/r/Meditation/comments/1rugf8n/are_we_suffering_because_we_think_too_much/",
+      "subreddit": "Meditation",
+      "score": 143,
+      "comments": 56,
+      "signal_score": 30,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_006",
+      "title": "Some Pointers after 12 Years of Meditation",
+      "url": "https://reddit.com/r/Meditation/comments/1rtlop8/some_pointers_after_12_years_of_meditation/",
+      "subreddit": "Meditation",
+      "score": 248,
+      "comments": 33,
+      "signal_score": 30,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_007",
+      "title": "Company delayed bonus payout unexpectedly.  give 2-week notice or prioritize the bonus?",
+      "url": "https://reddit.com/r/personalfinance/comments/1rv3ugl/company_delayed_bonus_payout_unexpectedly_give/",
+      "subreddit": "personalfinance",
+      "score": 133,
+      "comments": 81,
+      "signal_score": 30,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_008",
+      "title": "Tax season this year really opened my eyes",
+      "url": "https://reddit.com/r/personalfinance/comments/1rv1w3h/tax_season_this_year_really_opened_my_eyes/",
+      "subreddit": "personalfinance",
+      "score": 103,
+      "comments": 63,
+      "signal_score": 30,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_009",
+      "title": "Am I doing fine? I\u2019m going to list out my expenses.",
+      "url": "https://reddit.com/r/personalfinance/comments/1rupndf/am_i_doing_fine_im_going_to_list_out_my_expenses/",
+      "subreddit": "personalfinance",
+      "score": 150,
+      "comments": 96,
+      "signal_score": 30,
+      "category": "INTEL",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_010",
+      "title": "Launched my first SaaS",
+      "url": "https://reddit.com/r/SaaS/comments/1rvgrhv/launched_my_first_saas/",
+      "subreddit": "SaaS",
+      "score": 2,
+      "comments": 0,
+      "signal_score": 30,
+      "category": "APP_TACTIC",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_011",
+      "title": "I\u2019m a solo founder and today is the biggest day of my journey. I just launched on Product Hunt and your support means the world.",
+      "url": "https://reddit.com/r/indiehackers/comments/1rqp0po/im_a_solo_founder_and_today_is_the_biggest_day_of/",
+      "subreddit": "indiehackers",
+      "score": 71,
+      "comments": 108,
+      "signal_score": 30,
+      "category": "APP_TACTIC",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_012",
+      "title": "Built 5 apps, 4 failed at $0, one hit $7K MRR. Here's the exact pattern successful app founders follow",
+      "url": "https://reddit.com/r/AppBusiness/comments/1rva997/built_5_apps_4_failed_at_0_one_hit_7k_mrr_heres/",
+      "subreddit": "AppBusiness",
+      "score": 16,
+      "comments": 7,
+      "signal_score": 30,
+      "category": "APP_REVENUE",
+      "keyword_hits": []
+    },
+    {
+      "id": "ALPHA_CI_52_013",
+      "title": "Thesis: Discord is an underrated platform for software products. Proof: I built a SaaS that runs entirely inside Discord and hit 1,850 MRR",
+      "url": "https://reddit.com/r/SideProject/comments/1rvfp51/thesis_discord_is_an_underrated_platform_for/",
+      "subreddit": "SideProject",
+      "score": 3,
+      "comments": 4,
+      "signal_score": 30,
+      "category": "APP_REVENUE",
+      "keyword_hits": []
+    }
+  ],
+  "blue_oceans_all_confirmed": false,
+  "key_finding": "5 blue oceans still open. ReadTracker has 2 incumbents (BookBuddy $9.99 + Streaks $5.99 = WEAK gap still)."
+}

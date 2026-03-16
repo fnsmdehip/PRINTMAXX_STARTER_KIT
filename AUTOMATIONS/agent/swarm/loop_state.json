@@ -1,17 +1,17 @@
 {
-  "last_decision_cycle": "2026-03-16T10:30:01.139533",
-  "last_feedback_cycle": "2026-03-16T10:30:01.170647",
-  "last_pipeline_cycle": "2026-03-16T10:30:01.171944",
+  "last_decision_cycle": "2026-03-16T15:20:00.328143",
+  "last_feedback_cycle": "2026-03-16T15:20:00.373377",
+  "last_pipeline_cycle": "2026-03-16T15:20:00.376232",
   "decisions_executed": 25,
-  "feedback_updates": 2719,
+  "feedback_updates": 2819,
   "pipeline_advances": 0,
   "agent_scores": {
     "gap_hunter": {
-      "total_runs": 111,
-      "produced_output": 111,
-      "led_to_action": 330,
+      "total_runs": 115,
+      "produced_output": 115,
+      "led_to_action": 334,
       "led_to_revenue": 0,
-      "effectiveness": 218.4
+      "effectiveness": 214.3
     },
     "opportunity_scanner": {
       "total_runs": 79,
@@ -23,9 +23,9 @@
     "competitor_stalker": {
       "total_runs": 35,
       "produced_output": 35,
-      "led_to_action": 255,
+      "led_to_action": 259,
       "led_to_revenue": 0,
-      "effectiveness": 477.1
+      "effectiveness": 484.0
     },
     "asset_deployer": {
       "total_runs": 106,
@@ -42,18 +42,18 @@
       "effectiveness": 155.1
     },
     "lead_machine": {
-      "total_runs": 111,
-      "produced_output": 111,
-      "led_to_action": 205,
+      "total_runs": 115,
+      "produced_output": 115,
+      "led_to_action": 213,
       "led_to_revenue": 0,
-      "effectiveness": 150.8
+      "effectiveness": 151.1
     },
     "seo_aso_optimizer": {
       "total_runs": 34,
       "produced_output": 34,
-      "led_to_action": 193,
+      "led_to_action": 197,
       "led_to_revenue": 0,
-      "effectiveness": 380.6
+      "effectiveness": 387.6
     },
     "conversion_optimizer": {
       "total_runs": 30,
@@ -77,32 +77,32 @@
       "effectiveness": 370.9
     },
     "cross_pollinator": {
-      "total_runs": 105,
-      "produced_output": 105,
-      "led_to_action": 363,
+      "total_runs": 109,
+      "produced_output": 109,
+      "led_to_action": 375,
       "led_to_revenue": 0,
-      "effectiveness": 247.4
+      "effectiveness": 246.4
     },
     "revenue_tracker": {
       "total_runs": 30,
       "produced_output": 30,
-      "led_to_action": 186,
+      "led_to_action": 190,
       "led_to_revenue": 0,
-      "effectiveness": 412.0
+      "effectiveness": 420.0
     },
     "system_healer": {
-      "total_runs": 112,
-      "produced_output": 112,
-      "led_to_action": 266,
+      "total_runs": 116,
+      "produced_output": 116,
+      "led_to_action": 270,
       "led_to_revenue": 0,
-      "effectiveness": 182.5
+      "effectiveness": 179.7
     },
     "data_janitor": {
       "total_runs": 22,
       "produced_output": 22,
-      "led_to_action": 91,
+      "led_to_action": 95,
       "led_to_revenue": 0,
-      "effectiveness": 288.2
+      "effectiveness": 299.1
     },
     "distribution_engine": {
       "total_runs": 98,
@@ -112,18 +112,18 @@
       "effectiveness": 125.1
     },
     "inbound_maximizer": {
-      "total_runs": 94,
-      "produced_output": 92,
-      "led_to_action": 294,
+      "total_runs": 98,
+      "produced_output": 96,
+      "led_to_action": 298,
       "led_to_revenue": 0,
-      "effectiveness": 230.9
+      "effectiveness": 225.4
     },
     "swarm_brain": {
-      "total_runs": 105,
-      "produced_output": 105,
-      "led_to_action": 184,
+      "total_runs": 109,
+      "produced_output": 109,
+      "led_to_action": 188,
       "led_to_revenue": 0,
-      "effectiveness": 145.1
+      "effectiveness": 143.5
     },
     "video_factory": {
       "total_runs": 59,
@@ -147,11 +147,11 @@
       "effectiveness": 210.8
     },
     "playwright_tester": {
-      "total_runs": 89,
-      "produced_output": 87,
-      "led_to_action": 156,
+      "total_runs": 93,
+      "produced_output": 91,
+      "led_to_action": 160,
       "led_to_revenue": 0,
-      "effectiveness": 146.7
+      "effectiveness": 144.6
     },
     "alert_dispatcher": {
       "total_runs": 69,
@@ -177,11 +177,11 @@
     "growth_strategist": {
       "total_runs": 0,
       "produced_output": 0,
-      "led_to_action": 50,
+      "led_to_action": 54,
       "led_to_revenue": 0,
       "effectiveness": 0.0
     }
   },
-  "last_drift_check": "2026-03-16T10:30:01.177720",
-  "last_drift_score": 9.5
+  "last_drift_check": "2026-03-16T15:20:00.383941",
+  "last_drift_score": 9.3
 }

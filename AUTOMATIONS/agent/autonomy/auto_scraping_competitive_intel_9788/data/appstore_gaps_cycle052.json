@@ -1,0 +1,61 @@
+{
+  "meditation_streak": {
+    "total_results": 9,
+    "paid_count": 0,
+    "free_count": 9,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "gap_level": "BLUE_OCEAN"
+  },
+  "money_habit": {
+    "total_results": 10,
+    "paid_count": 0,
+    "free_count": 10,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "gap_level": "BLUE_OCEAN"
+  },
+  "sobriety_streak": {
+    "total_results": 10,
+    "paid_count": 0,
+    "free_count": 10,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "gap_level": "BLUE_OCEAN"
+  },
+  "sleep_habit": {
+    "total_results": 9,
+    "paid_count": 0,
+    "free_count": 9,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "gap_level": "BLUE_OCEAN"
+  },
+  "water_reminder": {
+    "total_results": 10,
+    "paid_count": 0,
+    "free_count": 10,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "gap_level": "BLUE_OCEAN"
+  },
+  "reading_tracker": {
+    "total_results": 9,
+    "paid_count": 2,
+    "free_count": 7,
+    "paid_apps": [
+      {
+        "name": "BookBuddy Pro: Book Tracker",
+        "price": 9.99,
+        "ratings": 5715
+      },
+      {
+        "name": "Streaks",
+        "price": 5.99,
+        "ratings": 27340
+      }
+    ],
+    "gap_confirmed": false,
+    "gap_level": "WEAK"
+  }
+}

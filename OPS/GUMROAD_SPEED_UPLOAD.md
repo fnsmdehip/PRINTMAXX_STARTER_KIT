@@ -592,3 +592,14 @@ Support Us In Advancing Iagon
 
 As Iagon enters our next phase of growth and seeks to scale awareness and accessibility to our products and ecosystem, we are looking to secure a loan of up to $1.5M (6 million $ADA) to support ongoing initiatives related to IP expansion, ecosystem
 
+
+
+---
+
+## Pending Enhancement (ALPHA102434, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rvfp51/thesis_discord_is_an_underrated_platform_for/
+**Added:** 2026-03-16T14:18:06-04:00
+
+[ACQUISITION] Thesis: Discord is an underrated platform for software products. Proof: I built a SaaS that runs entirely inside Discord
+

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-16 12:00:04",
+  "generated_at": "2026-03-16 15:46:59",
   "sources": {
-    "alpha_staging_candidates": 2830,
+    "alpha_staging_candidates": 2924,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 90
+    "existing_specs_detected": 91
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,21 +13,21 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 2799,
+    "total_candidates": 2893,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 84,
-      "BUILD_NEW_NOW": 68,
+      "ITERATE_EXISTING_NOW": 97,
+      "BUILD_NEW_NOW": 69,
       "SPEC_AND_TEST": 118,
-      "PARK": 2520,
-      "VALIDATE_FIRST": 9
+      "PARK": 2599,
+      "VALIDATE_FIRST": 10
     },
     "cluster_counts": {
-      "faith": 88,
-      "focus": 343,
-      "habits": 140,
-      "ai_utility": 1978,
-      "fitness": 157,
-      "sleep": 79,
+      "faith": 97,
+      "focus": 355,
+      "habits": 146,
+      "ai_utility": 2036,
+      "fitness": 161,
+      "sleep": 84,
       "meal": 14
     }
   },
@@ -1931,6 +1931,68 @@
       "rank": 31
     },
     {
+      "candidate_id": "ALPHA_CI_51_LTD_001",
+      "title": "LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $17.7K upfront. Post warns about long-term support costs but initial cash is real.",
+      "source": "reddit/SaaS",
+      "source_url": "https://www.reddit.com/r/SaaS/comments/1ruc0cu/sold_89_lifetime_deals_at_199_each_to_get_off_the/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "IMMEDIATE",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "SCREENSHOT",
+      "applicable_niches": "ALL",
+      "applicable_methods": "APP_FACTORY,OUTBOUND",
+      "evidence": "Price at $199 LTD. Target SaaS/app builders. 89 units = $17.7K week 1. Risk: ongoing support. Mitigate: cap LTD at 200 units.",
+      "compliance_notes": "",
+      "reviewer_notes": "CI cycle 51. High score post (255 upvotes, 94 comments). LTD strategy confirmed viable. Key intel for app factory launch.",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA_CI_51_LTD_001",
+        "source": "reddit/SaaS",
+        "source_url": "https://www.reddit.com/r/SaaS/comments/1ruc0cu/sold_89_lifetime_deals_at_199_each_to_get_off_the/",
+        "category": "MONETIZATION",
+        "tactic": "LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $17.7K upfront. Post warns about long-term support costs but initial cash is real.",
+        "roi_potential": "HIGHEST",
+        "priority": "P0",
+        "status": "APPROVED",
+        "applicable_methods": "APP_FACTORY,OUTBOUND",
+        "applicable_niches": "ALL",
+        "synergy_score": "90",
+        "cross_sell_products": "",
+        "implementation_priority": "IMMEDIATE",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "SCREENSHOT",
+        "extracted_method": "Price at $199 LTD. Target SaaS/app builders. 89 units = $17.7K week 1. Risk: ongoing support. Mitigate: cap LTD at 200 units.",
+        "compliance_notes": "",
+        "reviewer_notes": "CI cycle 51. High score post (255 upvotes, 94 comments). LTD strategy confirmed viable. Key intel for app factory launch.",
+        "created_at": "2026-03-16T12:29:10.811763",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": "2026-03-16"
+      },
+      "score": 97,
+      "cluster": "ai_utility",
+      "market_room": "HIGH",
+      "existing_app_target": "NEW_BUILD",
+      "execution_lane": "NEW_BUILD",
+      "build_decision": "BUILD_NEW_NOW",
+      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
+      "paywall_variant": "after the first clear output, never before time-to-value",
+      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
+      "primary_monetization": "subscription with fast time-to-value and annual anchor",
+      "secondary_monetization": "paid upfront for privacy-first local tools; avoid ads unless usage is massive",
+      "price_test": "$6.99 to $9.99/mo and $39.99 to $59.99/yr",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 32
+    },
+    {
       "candidate_id": "ALPHA544",
       "title": "Feb 2026 TikTok: Grammys commentary + Thermostat Game + Undesirable Child confessions + Euphoria glam transitions.",
       "source": "New Engen",
@@ -1990,7 +2052,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -2052,7 +2114,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA17028",
@@ -2114,7 +2176,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 35
     },
     {
       "candidate_id": "HN_003",
@@ -2176,7 +2238,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA18679",
@@ -2238,7 +2300,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 37
     },
     {
       "candidate_id": "RF_001",
@@ -2307,7 +2369,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA25039",
@@ -2369,7 +2431,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA98935",
@@ -2429,68 +2491,6 @@
         "pricing: annual-first anchor vs cheaper monthly plan",
         "review prompt: milestone trigger only, never session-one prompt",
         "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA18306",
-      "title": "Sell PWA habit tracker apps on Fiverr using scripture-streak template. $200-500 per app. <1 hour fulfillment. 22+ apps already built as portfolio proof. Fiverr account exists. Clone + rebrand + deploy pipeline proven.",
-      "source": "swarm_opportunity_scanner",
-      "source_url": "https://www.fiverr.com/",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "IMMEDIATE",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "N/A",
-      "earnings_verified": "N/A",
-      "applicable_niches": "apps,freelance,fiverr",
-      "applicable_methods": "DIGITAL_PRODUCTS",
-      "evidence": "Productized Fiverr gig: custom habit tracker PWA in 24h. Template fork + rebrand + deploy. $200-500 per order. <1hr fulfillment.",
-      "compliance_notes": "None",
-      "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA18306_monetization.md",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA18306",
-        "source": "swarm_opportunity_scanner",
-        "source_url": "https://www.fiverr.com/",
-        "category": "MONETIZATION",
-        "tactic": "Sell PWA habit tracker apps on Fiverr using scripture-streak template. $200-500 per app. <1 hour fulfillment. 22+ apps already built as portfolio proof. Fiverr account exists. Clone + rebrand + deploy pipeline proven.",
-        "roi_potential": "HIGH",
-        "priority": "IMMEDIATE",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "DIGITAL_PRODUCTS",
-        "applicable_niches": "apps,freelance,fiverr",
-        "synergy_score": "85",
-        "cross_sell_products": "Scripture Streak Template|App Factory Pipeline|8 Live PWA Apps",
-        "implementation_priority": "IMMEDIATE",
-        "engagement_authenticity": "N/A",
-        "earnings_verified": "N/A",
-        "extracted_method": "Productized Fiverr gig: custom habit tracker PWA in 24h. Template fork + rebrand + deploy. $200-500 per order. <1hr fulfillment.",
-        "compliance_notes": "None",
-        "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA18306_monetization.md",
-        "created_at": "2026-03-08T11:15:00",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": "2026-03-08"
-      },
-      "score": 92,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
       "rank": 40

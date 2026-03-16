@@ -1,0 +1,51 @@
+{
+  "built_at": "2026-03-16T12:58:09.749420",
+  "prompt_count": 1510,
+  "chain_count": 168,
+  "task_count": 151,
+  "rule_count": 6,
+  "rules": [
+    {
+      "id": "ANTI-LAZY",
+      "count": 20,
+      "rule": "Default output depth is consistently below user expectations. System must default to the ESCALATED depth, not the initial polite response depth.",
+      "evidence": "User triggered anti-lazy corrections 20 times across sessions.",
+      "action": "Before presenting any output, ask: 'Would the user call this lazy?' If yes, go deeper before presenting."
+    },
+    {
+      "id": "DEPTH-FIRST",
+      "count": 61,
+      "rule": "User consistently asks for MORE after initial response. The initial response should already include what the user typically asks for in their follow-up.",
+      "evidence": "User demanded more depth 61 times. Pattern: initial ask \u2192 'also...' / 'what about...' / 'deeper'",
+      "action": "After completing the literal ask, proactively address 2-3 adjacent areas the user would likely follow up on."
+    },
+    {
+      "id": "WRONG-DIRECTION",
+      "count": 145,
+      "rule": "System frequently misinterprets user intent on first pass. Need better intent parsing before executing.",
+      "evidence": "User said 'no/wrong/not that' 145 times.",
+      "action": "For ambiguous requests, internally generate 2-3 interpretations and select the one most consistent with user's established patterns before executing."
+    },
+    {
+      "id": "HARD-TOPICS",
+      "count": 94,
+      "rule": "Topics that consistently need multiple corrections: printmaxx, documents, working, every, alpha. These need extra care.",
+      "evidence": "94 tasks had 3+ corrections.",
+      "action": "When a task matches these topics, use the correction chain from history to pre-emptively address the typical issues."
+    },
+    {
+      "id": "SATISFACTION-PATTERN",
+      "count": 451,
+      "rule": "User is most satisfied when: system executes autonomously without asking, output exceeds explicit ask, non-obvious angles are found, and work compounds into multiple outputs.",
+      "evidence": "451 satisfaction signals found.",
+      "action": "Optimize for these satisfaction triggers in every output."
+    },
+    {
+      "id": "CHAIN-LENGTH",
+      "count": 168,
+      "rule": "Average correction chain is 6.9 prompts long. This means the system typically needs 7 iterations to reach what the user wants. Target: get to the right output in 1 prompt.",
+      "evidence": "168 correction chains analyzed.",
+      "action": "Use the Competitive Cognition Protocol to anticipate corrections before presenting output."
+    }
+  ]
+}
