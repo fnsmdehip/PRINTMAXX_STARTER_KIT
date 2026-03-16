@@ -1944,3 +1944,47 @@ My Indie SaaS Revenue Has Grown 37% per Year for 13 Years
 
 Show HN: I made a bot and it grew my SaaS revenue by 56%
 
+
+
+---
+
+## Pending Enhancement (ALPHA98737, Score: 31)
+
+**Source:** indiehackers | **URL:** https://www.indiehackers.com/post/tech/bootstrapping-to-7-figures-while-competing-with-best-in-class-tools-lzinCpsk21EfLwzEiubO
+**Added:** 2026-03-15T04:25:18-04:00
+
+Bootstrapped to 7 figures competing with HubSpot/Chargebee/Intercom (Outseta). Geoff Roberts: 9-year commitment. All-in-one payments+auth+CRM+email+helpdesk for recurring-revenue businesses. 3 years to reach $1500 MRR. Key: integrated solution beats best-in-class individual tools for early-stage founders.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100588, Score: 47)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1ructj5/at_300k_revenue_i_accidentally_built_udemy_for/
+**Added:** 2026-03-15T10:15:01-04:00
+
+[ACQUISITION] At $300K revenue, I accidentally built Udemy for SaaS founders and its being loved [rev: $$300]
+
+
+
+---
+
+## Pending Enhancement (ALPHA101045, Score: 30)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rv0gto/your_saas_isnt_prerevenue_its_posttrust/
+**Added:** 2026-03-16T02:30:01-04:00
+
+[ACQUISITION] Your SaaS isn’t "pre-revenue." It’s "post-trust."
+
+
+
+---
+
+## Pending Enhancement (ALPHA101138, Score: 24)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/refgrow
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Refgrow 2.0: Grow your revenue with referrals
+

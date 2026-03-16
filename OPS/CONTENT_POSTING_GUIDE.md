@@ -2244,3 +2244,184 @@ I’m 21, I just failed my dream job exam by 15 seconds, and I’ve spent 4 mont
 
 Curious on what the best methods of earnings affiliate income is in this day and age from digital products? | I really want to take my affiliate income to the next level, and I am curious if anyone would be open to sharing a bit about which methods worked well for them.
 
+
+
+---
+
+## Pending Enhancement (ALPHA98738, Score: 43)
+
+**Source:** indiehackers | **URL:** https://www.indiehackers.com/post/creators/from-simple-newsletter-to-4-5m-yr-media-company-RgQf0f1CJEO8KzTFjExN
+**Added:** 2026-03-15T04:25:18-04:00
+
+Newsletter to $4.5M/yr media company (Tangle). Isaac Saul: nonpartisan political newsletter. 500K+ readers in 60+ countries. Started on Substack with 13 readers then moved to Ghost (avoiding 10% revenue cut). $4M ARR + $500K+ ad revenue. Key: wrote while working full-time for first year. Reader feedback shaped product.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100019, Score: 26)
+
+**Source:** @leojrr (bookmarks) | **URL:** https://x.com/leojrr/status/2032560486638838071
+**Added:** 2026-03-15T06:15:02-04:00
+
+biggest mistake i made with openclaw
+automating TikTok without data
+
+it was just a bot guessing what to post about
+
+now it:
+1. analyzes trending topics in my niche
+2. finds which slides are performing best
+3. learns and adjusts automatically
+
+here's exactly how to set it up
+
+---
+
+
+
+---
+
+## Pending Enhancement (ALPHA100174, Score: 28)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rtjzei/went_viral_but_i_wont_get_paid_since_yt/
+**Added:** 2026-03-15T06:20:04-04:00
+
+[r/NewTubers] Went Viral - But I Won't Get Paid Since YT Monetization Takes So Long
+
+
+
+---
+
+## Pending Enhancement (ALPHA100312, Score: 20)
+
+**Source:** r/beermoney | **URL:** https://reddit.com/r/beermoney/comments/1rsl3xv/trying_to_monetise_my_ig_page_42k_organic/
+**Added:** 2026-03-15T06:20:04-04:00
+
+[r/beermoney] Trying to monetise my IG page (42k+ organic followers)
+
+
+
+---
+
+## Pending Enhancement (ALPHA100317, Score: 22)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rtlotr/what_were_your_stats_after_your_first_year_on/
+**Added:** 2026-03-15T06:20:04-04:00
+
+[r/NewTubers] What were your stats after your first year on YouTube
+
+
+
+---
+
+## Pending Enhancement (ALPHA100498, Score: 24)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/sitsense
+**Added:** 2026-03-15T08:15:02-04:00
+
+[PH LAUNCH] SitSense: Use your webcam to fix your posture
+
+
+
+---
+
+## Pending Enhancement (ALPHA100531, Score: 28)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rucfg6/after_years_on_youtube_i_realise_subscribers_are/
+**Added:** 2026-03-15T08:55:30-04:00
+
+[r/NewTubers] After years on YouTube, I realise subscribers are just not that important, THIS IS !
+
+
+
+---
+
+## Pending Enhancement (ALPHA100722, Score: 20)
+
+**Source:** @lottsnomad (high-signal-accounts) | **URL:** https://x.com/lottsnomad/status/2033291438377632219
+**Added:** 2026-03-16T00:24:29-04:00
+
+ever wonder how much those annoying games on tiktok make?
+
+here’s one
+
+$80 million a month
+
+only 1 year old btw
+
+
+
+---
+
+## Pending Enhancement (ALPHA100858, Score: 26)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rur8qk/finally_monetized_one_of_my_channels_yesterday/
+**Added:** 2026-03-16T00:25:19-04:00
+
+[r/NewTubers] Finally monetized one of my channels yesterday!
+
+
+
+---
+
+## Pending Enhancement (ALPHA100859, Score: 20)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1ruwae7/national_park_channel_over_4_months/
+**Added:** 2026-03-16T00:25:19-04:00
+
+[r/NewTubers] National Park channel over 4 months
+
+
+
+---
+
+## Pending Enhancement (ALPHA100645, Score: 35)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2033294085797077247
+**Added:** 2026-03-16T00:41:06-04:00
+
+I made $100K for an brand in under 2 months on TikTok Shop
+
+- no wasted samples
+- no lost time 
+- no bs 
+- no fluff
+
+I put together a brand new comprehensive playbook I used to scale this brand with UGC and AI creators. 
+
+It covers: 
+
+- how to find good creators
+- making content
+
+
+
+---
+
+## Pending Enhancement (ALPHA100649, Score: 26)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2033200284848009312
+**Added:** 2026-03-16T00:41:06-04:00
+
+I just did $100k in added sales for a client, my agency took them live on tiktok shop 5 weeks ago at 0
+
+Here’s how we do this:
+
+1 - choosing my inner circle high quality creators 
+
+2 - giving them training on viral content ideas with the product 
+
+3 - keeping content quality high
+
+
+
+---
+
+## Pending Enhancement (ALPHA101136, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/glam-ai
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Glam AI: Pick a trend, add your photo, and create viral content
+

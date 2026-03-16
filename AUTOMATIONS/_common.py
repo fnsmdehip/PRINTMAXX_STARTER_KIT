@@ -64,6 +64,32 @@ def get_soul(max_chars: int = 2000) -> str:
     except Exception:
         return ""
 
+VOICE_MODEL_PATH = PROJECT / "OPS" / "USER_VOICE_MODEL.json"
+
+def get_voice_model(max_chars: int = 500) -> str:
+    """Get compact user voice model for agent injection.
+
+    Reads OPS/USER_VOICE_MODEL.json and returns a structured injection string
+    with style summary, banned patterns, and recurring instructions. Agents
+    prepend this to prompts so their output matches the user's voice.
+    """
+    try:
+        model = json.loads(VOICE_MODEL_PATH.read_text(encoding="utf-8"))
+        summary = model.get("style_summary", "")
+        if not summary:
+            return ""
+        parts = [f"VOICE: {summary}"]
+        banned = model.get("banned_patterns", [])[:8]
+        if banned:
+            parts.append(f"NEVER SAY: {', '.join(banned[:8])}")
+        instructions = model.get("recurring_instructions", [])[:3]
+        if instructions:
+            parts.append(f"RULES: {'; '.join(instructions[:3])}")
+        injection = " | ".join(parts)
+        return injection[:max_chars]
+    except Exception:
+        return ""
+
 VENTURES = ["CONTENT", "OUTBOUND", "APP_FACTORY", "LOCAL_BIZ", "MONETIZATION", "PRODUCT", "RESEARCH", "SCRAPING"]
 
 VENTURE_NAMES = {

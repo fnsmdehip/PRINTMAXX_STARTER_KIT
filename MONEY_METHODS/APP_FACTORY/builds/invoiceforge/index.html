@@ -7,9 +7,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="InvoiceForge">
-<meta name="description" content="Generate professional invoices in seconds. Auto-calculated totals, tax, PDF export, payment tracking. Free for freelancers.">
+<meta name="description" content="Free invoice generator for plumbers, electricians, HVAC techs, contractors, and freelancers. Trade-specific templates, auto-calc totals, tax, PDF export, Stripe payments.">
 <meta property="og:title" content="InvoiceForge - Invoice Generator">
-<meta property="og:description" content="Professional invoices in seconds. Auto-calc totals, PDF export, payment tracking, recurring templates. Free PWA.">
+<meta property="og:description" content="Free invoice generator for tradespeople. Plumber, electrician, HVAC, contractor templates. Auto-calc, PDF export, Stripe payments.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="InvoiceForge - Invoice Generator">
@@ -753,7 +753,12 @@ function renderTemplates() {
   var builtIn = [
     {id: 'bi-1', name: 'Hourly Consulting', description: 'Consulting hours with hourly rate', bizName: 'Your Name', items: [{description: 'Consulting Hours', quantity: 10, rate: 150, total: 1500}], taxRate: 0, currency: 'USD'},
     {id: 'bi-2', name: 'Fixed Project', description: 'Fixed-price project with milestones', bizName: 'Your Name', items: [{description: 'Project Deposit (50%)', quantity: 1, rate: 2500, total: 2500}, {description: 'Final Delivery (50%)', quantity: 1, rate: 2500, total: 2500}], taxRate: 0, currency: 'USD'},
-    {id: 'bi-3', name: 'Monthly Retainer', description: 'Recurring monthly service', bizName: 'Your Name', items: [{description: 'Monthly Retainer - March 2026', quantity: 1, rate: 3000, total: 3000}], taxRate: 0, currency: 'USD'}
+    {id: 'bi-3', name: 'Monthly Retainer', description: 'Recurring monthly service', bizName: 'Your Name', items: [{description: 'Monthly Retainer - March 2026', quantity: 1, rate: 3000, total: 3000}], taxRate: 0, currency: 'USD'},
+    {id: 'bi-4', name: 'Plumbing Service', description: 'Plumber service call + hourly labor + parts', bizName: 'Your Plumbing Co', items: [{description: 'Service Call', quantity: 1, rate: 85, total: 85}, {description: 'Labor (per hour)', quantity: 3, rate: 95, total: 285}, {description: 'Parts & Materials', quantity: 1, rate: 127, total: 127}], taxRate: 8.25, currency: 'USD'},
+    {id: 'bi-5', name: 'Electrical Work', description: 'Electrician diagnostic + labor + materials', bizName: 'Your Electric Co', items: [{description: 'Diagnostic Fee', quantity: 1, rate: 75, total: 75}, {description: 'Electrical Labor (per hour)', quantity: 4, rate: 110, total: 440}, {description: 'Wiring & Components', quantity: 1, rate: 185, total: 185}], taxRate: 8.25, currency: 'USD'},
+    {id: 'bi-6', name: 'HVAC Service', description: 'HVAC maintenance or repair invoice', bizName: 'Your HVAC Co', items: [{description: 'System Diagnostic', quantity: 1, rate: 95, total: 95}, {description: 'HVAC Technician Labor (per hour)', quantity: 2.5, rate: 120, total: 300}, {description: 'Refrigerant & Parts', quantity: 1, rate: 210, total: 210}], taxRate: 8.25, currency: 'USD'},
+    {id: 'bi-7', name: 'Landscaping', description: 'Lawn care and landscaping service', bizName: 'Your Landscaping Co', items: [{description: 'Lawn Mowing & Edging', quantity: 1, rate: 65, total: 65}, {description: 'Hedge Trimming', quantity: 1, rate: 45, total: 45}, {description: 'Mulch & Materials', quantity: 3, rate: 35, total: 105}], taxRate: 0, currency: 'USD'},
+    {id: 'bi-8', name: 'General Contractor', description: 'Contractor project invoice with phases', bizName: 'Your Construction Co', items: [{description: 'Demolition & Prep', quantity: 1, rate: 1200, total: 1200}, {description: 'Framing & Structural', quantity: 1, rate: 3500, total: 3500}, {description: 'Finishing Work', quantity: 1, rate: 2800, total: 2800}, {description: 'Permits & Inspections', quantity: 1, rate: 450, total: 450}], taxRate: 0, currency: 'USD'}
   ];
 
   list.appendChild(el('div', {className: 'section-title', textContent: 'Built-In Templates', style: 'margin-top:0'}));
@@ -906,6 +911,29 @@ for (var n = 0; n < navItems.length; n++) {
 }
 
 addFooters();
+
+// Smart review prompt - show after 3rd invoice (value delivered, not first use)
+var invoiceCount = getInvoices().length;
+if (invoiceCount >= 3 && !localStorage.getItem('invoiceforge_reviewed')) {
+  setTimeout(function() {
+    var reviewBar = el('div', {style: 'position:fixed;bottom:60px;left:12px;right:12px;background:var(--bg3);border:1px solid var(--accent);border-radius:12px;padding:14px 16px;z-index:999;display:flex;align-items:center;justify-content:space-between;gap:12px;animation:fadeUp .3s ease'});
+    reviewBar.appendChild(el('span', {textContent: 'You\'ve created ' + invoiceCount + ' invoices. Finding it useful?', style: 'font-size:13px;color:var(--text)'}));
+    var btnRow = el('div', {style: 'display:flex;gap:8px;flex-shrink:0'});
+    var shareBtn = el('button', {className: 'btn btn-primary btn-sm', textContent: 'Share', style: 'padding:6px 14px;font-size:12px'});
+    shareBtn.addEventListener('click', function() {
+      if (navigator.share) { navigator.share({title: 'InvoiceForge', text: 'Free invoice generator for tradespeople', url: 'https://invoiceforge.surge.sh'}); }
+      else { navigator.clipboard.writeText('https://invoiceforge.surge.sh'); showToast('Link copied'); }
+      localStorage.setItem('invoiceforge_reviewed', '1');
+      reviewBar.remove();
+    });
+    var dismissBtn = el('button', {className: 'btn btn-sm', textContent: 'Later', style: 'padding:6px 10px;font-size:12px;color:var(--text3);background:none;border:none'});
+    dismissBtn.addEventListener('click', function() { reviewBar.remove(); localStorage.setItem('invoiceforge_reviewed', '1'); });
+    btnRow.appendChild(shareBtn);
+    btnRow.appendChild(dismissBtn);
+    reviewBar.appendChild(btnRow);
+    document.body.appendChild(reviewBar);
+  }, 2000);
+}
 
 // Service Worker
 if ('serviceWorker' in navigator) {

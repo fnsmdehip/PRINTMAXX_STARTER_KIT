@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0c0c18">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="StudyLock">
+<meta name="description" content="Free study timer app with Pomodoro, ambient sounds, streak tracking, and subject analytics. Lock in and study. GitHub-style heatmap. Offline PWA.">
+<meta property="og:title" content="StudyLock - Study Timer &amp; Focus Tracker">
+<meta property="og:description" content="Pomodoro study timer with ambient sounds, streak heatmap, subject tracking, and daily goals. Free PWA for students.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="StudyLock - Study Timer &amp; Focus Tracker">
+<meta name="twitter:description" content="Lock in and study. Pomodoro timer, ambient sounds, streak tracking. Free PWA for students.">
+<meta name="keywords" content="study timer app, pomodoro study, focus timer for students, study streak tracker, pomodoro timer online, study session timer, focus app, study planner">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230c0c18' width='100' height='100' rx='20'/><text y='68' x='50' text-anchor='middle' font-size='50'>&#x1F512;</text></svg>">
+<title>StudyLock - Study Timer &amp; Focus Tracker</title>
+<style>
+*{-webkit-tap-highlight-color:transparent;box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0c0c18;--bg2:#141422;--bg3:#1c1c30;--bg4:#262642;
+--text:#eeeef4;--text2:#9898b8;--text3:#5e5e7a;
+--accent:#8b5cf6;--accent2:#a78bfa;--accent3:#7c3aed;
+--green:#10b981;--red:#ef4444;--orange:#f59e0b;--blue:#3b82f6;--cyan:#06b6d4;
+--radius:16px;--radius-sm:10px;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+#app{height:100%;display:flex;flex-direction:column;overflow:hidden}
+.header{padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.header h1{font-size:20px;font-weight:700;letter-spacing:-.3px;display:flex;align-items:center;gap:8px}
+.header h1 span{color:var(--accent2)}
+.icon-btn{width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:var(--bg2);color:var(--text2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent2)}
+.main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:0 0 100px}
+.main::-webkit-scrollbar{display:none}
+.section{padding:20px}
+.section+.section{border-top:1px solid rgba(255,255,255,.04)}
+.section-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:14px}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--bg);border-top:1px solid rgba(255,255,255,.06);padding:8px 0 max(8px,env(safe-area-inset-bottom));z-index:50}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0;cursor:pointer;color:var(--text3);transition:color .15s;border:none;background:none;font-family:inherit}
+.nav-item.active{color:var(--accent2)}
+.nav-item svg{width:20px;height:20px}
+.nav-item span{font-size:10px;font-weight:500}
+.view{display:none}.view.active{display:block}
+.timer-container{display:flex;flex-direction:column;align-items:center;padding:32px 20px}
+.timer-ring-wrap{position:relative;width:260px;height:260px;margin-bottom:24px}
+.timer-ring-wrap svg{transform:rotate(-90deg)}
+.timer-ring-bg{stroke:var(--bg3);fill:none;stroke-width:8}
+.timer-ring-fg{fill:none;stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset .5s ease}
+.timer-display{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.timer-time{font-size:56px;font-weight:700;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.timer-label{font-size:13px;color:var(--text3);margin-top:4px}
+.timer-subject{font-size:14px;color:var(--accent2);font-weight:500;margin-top:2px}
+.duration-row{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;justify-content:center}
+.dur-pill{padding:10px 18px;border-radius:20px;border:1px solid rgba(255,255,255,.1);background:var(--bg2);color:var(--text2);font-size:14px;font-weight:500;cursor:pointer;transition:all .15s;font-family:inherit}
+.dur-pill.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.dur-pill:hover{border-color:var(--accent)}
+.subject-row{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:20px}
+.subj-pill{padding:8px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:var(--bg2);color:var(--text2);font-size:12px;font-weight:500;cursor:pointer;transition:all .15s;font-family:inherit}
+.subj-pill.active{background:var(--accent3);color:#fff;border-color:var(--accent3)}
+.btn{width:100%;padding:14px;border-radius:var(--radius);border:none;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent3)}
+.btn-primary:active{transform:scale(.98)}
+.btn-secondary{background:var(--bg3);color:var(--text2);border:1px solid rgba(255,255,255,.08)}
+.btn-danger{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.2)}
+.btn-sm{width:auto;padding:10px 20px;font-size:13px;border-radius:10px}
+.btn-row{display:flex;gap:8px;margin-top:12px}
+.btn-row .btn{flex:1}
+.sound-row{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;justify-content:center}
+.sound-btn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:var(--bg2);color:var(--text3);font-size:11px;cursor:pointer;transition:all .15s;font-family:inherit;min-width:64px}
+.sound-btn.active{border-color:var(--accent);color:var(--accent2);background:rgba(139,92,246,.1)}
+.sound-btn svg{width:20px;height:20px}
+.heatmap-grid{display:flex;gap:3px;overflow-x:auto;padding-bottom:8px}
+.heatmap-grid::-webkit-scrollbar{display:none}
+.heatmap-col{display:flex;flex-direction:column;gap:3px}
+.heatmap-cell{width:13px;height:13px;border-radius:2px;background:var(--bg3)}
+.heatmap-cell.l1{background:rgba(139,92,246,.2)}
+.heatmap-cell.l2{background:rgba(139,92,246,.4)}
+.heatmap-cell.l3{background:rgba(139,92,246,.65)}
+.heatmap-cell.l4{background:var(--accent)}
+.heatmap-legend{display:flex;align-items:center;gap:4px;margin-top:8px;justify-content:flex-end}
+.heatmap-legend span{font-size:10px;color:var(--text3)}
+.stats-row{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.stat-card{flex:1;min-width:80px;background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-sm);padding:14px;text-align:center}
+.stat-value{font-size:22px;font-weight:800;letter-spacing:-.3px;color:var(--accent2)}
+.stat-label{font-size:11px;color:var(--text3);margin-top:2px}
+.pie-wrap{display:flex;align-items:center;gap:20px;padding:12px 0}
+.pie-legend{display:flex;flex-direction:column;gap:6px}
+.pie-legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2)}
+.pie-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.goal-bar{height:8px;border-radius:4px;background:var(--bg3);overflow:hidden;margin:6px 0 12px}
+.goal-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent3),var(--accent2));transition:width .4s ease}
+.goal-text{display:flex;justify-content:space-between;font-size:12px;color:var(--text3)}
+.quote-card{background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(6,182,212,.08));border:1px solid rgba(139,92,246,.15);border-radius:var(--radius);padding:20px;margin:16px 0;text-align:center}
+.quote-text{font-size:15px;font-style:italic;line-height:1.6;color:var(--text);margin-bottom:8px}
+.quote-author{font-size:12px;color:var(--text3)}
+.setting-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.setting-label{font-size:14px;color:var(--text)}
+.setting-desc{font-size:11px;color:var(--text3);margin-top:2px}
+.toggle{width:44px;height:24px;border-radius:12px;background:var(--bg3);position:relative;cursor:pointer;transition:background .2s;border:none;flex-shrink:0}
+.toggle.on{background:var(--accent)}
+.toggle::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:#fff;top:2px;left:2px;transition:transform .2s}
+.toggle.on::after{transform:translateX(20px)}
+.input-group{margin-bottom:14px}
+.input-group label{display:block;font-size:13px;font-weight:500;color:var(--text2);margin-bottom:6px}
+.input-group input,.input-group select{width:100%;background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;color:var(--text);font-size:15px;font-family:inherit;outline:none;transition:border-color .15s}
+.input-group input:focus{border-color:var(--accent)}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:10px 20px;border-radius:var(--radius);font-size:13px;font-weight:500;opacity:0;transition:opacity .2s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(139,92,246,.2)}50%{box-shadow:0 0 40px rgba(139,92,246,.5)}}
+.timer-active{animation:pulse-glow 2s ease-in-out infinite;border-radius:50%}
+.anim-in{animation:fadeUp .25s ease}
+.splash{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);transition:opacity .4s}
+.splash.hide{opacity:0;pointer-events:none}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.overlay.show{display:flex}
+.overlay-content{background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;max-width:360px;width:100%;text-align:center;animation:fadeUp .3s ease}
+.overlay-content h2{font-size:22px;font-weight:700;margin-bottom:8px}
+.overlay-content p{font-size:14px;color:var(--text2);margin-bottom:16px;line-height:1.5}
+@media(min-width:480px){.timer-ring-wrap{width:280px;height:280px}.timer-time{font-size:64px}}
+</style>
+</head>
+<body>
+<div id="app">
+
+<div class="splash" id="splash">
+<div style="font-size:56px;margin-bottom:12px">&#x1F512;</div>
+<h1 style="font-size:24px;font-weight:700;color:var(--accent2)">StudyLock</h1>
+<p style="font-size:13px;color:var(--text3);margin-top:6px">Lock in. Study. Repeat.</p>
+</div>
+
+<header class="header">
+<h1>&#x1F512; <span>StudyLock</span></h1>
+<div>
+<button class="icon-btn" id="btnSettings" aria-label="Settings">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 00-2 2v.18a2 2 0 01-1 1.73l-.43.25a2 2 0 01-2 0l-.15-.08a2 2 0 00-2.73.73l-.22.38a2 2 0 00.73 2.73l.15.1a2 2 0 011 1.72v.51a2 2 0 01-1 1.74l-.15.09a2 2 0 00-.73 2.73l.22.38a2 2 0 002.73.73l.15-.08a2 2 0 012 0l.43.25a2 2 0 011 1.73V20a2 2 0 002 2h.44a2 2 0 002-2v-.18a2 2 0 011-1.73l.43-.25a2 2 0 012 0l.15.08a2 2 0 002.73-.73l.22-.39a2 2 0 00-.73-2.73l-.15-.08a2 2 0 01-1-1.74v-.5a2 2 0 011-1.74l.15-.09a2 2 0 00.73-2.73l-.22-.38a2 2 0 00-2.73-.73l-.15.08a2 2 0 01-2 0l-.43-.25a2 2 0 01-1-1.73V4a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+</button>
+</div>
+</header>
+
+<div class="main">
+
+<div class="view active" id="viewTimer">
+<div class="timer-container">
+<div class="subject-row" id="subjectRow"></div>
+<div class="duration-row" id="durRow"></div>
+<div class="timer-ring-wrap" id="timerRingWrap">
+<svg viewBox="0 0 260 260" width="260" height="260">
+<circle class="timer-ring-bg" cx="130" cy="130" r="120"/>
+<circle class="timer-ring-fg" id="timerRingFg" cx="130" cy="130" r="120" stroke="var(--accent2)" stroke-dasharray="753.98" stroke-dashoffset="0"/>
+</svg>
+<div class="timer-display">
+<div class="timer-time" id="timerTime">25:00</div>
+<div class="timer-label" id="timerLabel">FOCUS</div>
+<div class="timer-subject" id="timerSubject"></div>
+</div>
+</div>
+<div class="sound-row" id="soundRow"></div>
+<div id="timerButtons" style="width:100%;max-width:300px">
+<button class="btn btn-primary" id="btnStart">Start Focus</button>
+<div class="btn-row" id="btnRunning" style="display:none">
+<button class="btn btn-secondary" id="btnPause">Pause</button>
+<button class="btn btn-danger" id="btnStop">Stop</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="view" id="viewStats">
+<div class="section anim-in">
+<div class="section-title">This Week</div>
+<div class="stats-row" id="statsCards"></div>
+</div>
+<div class="section anim-in">
+<div class="section-title">Study Streak</div>
+<div class="heatmap-grid" id="heatmap"></div>
+<div class="heatmap-legend">
+<span>Less</span>
+<div class="heatmap-cell"></div>
+<div class="heatmap-cell l1"></div>
+<div class="heatmap-cell l2"></div>
+<div class="heatmap-cell l3"></div>
+<div class="heatmap-cell l4"></div>
+<span>More</span>
+</div>
+</div>
+<div class="section anim-in">
+<div class="section-title">Subject Breakdown</div>
+<div class="pie-wrap">
+<canvas id="pieChart" width="140" height="140"></canvas>
+<div class="pie-legend" id="pieLegend"></div>
+</div>
+</div>
+</div>
+
+<div class="view" id="viewGoals">
+<div class="section anim-in">
+<div class="section-title">Today's Progress</div>
+<div id="dailyGoalArea"></div>
+</div>
+<div class="section anim-in">
+<div class="section-title">Weekly Progress</div>
+<div id="weeklyGoalArea"></div>
+</div>
+<div class="section anim-in">
+<div class="section-title">Set Goals</div>
+<div class="input-group">
+<label>Daily study goal (minutes)</label>
+<input type="number" id="inputDailyGoal" min="10" max="720" value="120" style="max-width:160px">
+</div>
+<div class="input-group">
+<label>Weekly study goal (hours)</label>
+<input type="number" id="inputWeeklyGoal" min="1" max="100" value="14" style="max-width:160px">
+</div>
+<button class="btn btn-primary btn-sm" id="btnSaveGoals">Save Goals</button>
+</div>
+</div>
+
+<div class="view" id="viewSettings">
+<div class="section">
+<div class="section-title">Preferences</div>
+<div class="setting-row">
+<div><div class="setting-label">Break Duration</div><div class="setting-desc">Rest time between sessions</div></div>
+<select id="selectBreak" style="width:80px;background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:8px;color:var(--text);font-size:14px;font-family:inherit">
+<option value="5">5 min</option><option value="10">10 min</option><option value="15">15 min</option>
+</select>
+</div>
+<div class="setting-row">
+<div><div class="setting-label">Notifications</div><div class="setting-desc">Alert when timer ends</div></div>
+<button class="toggle" id="toggleNotif"></button>
+</div>
+<div class="setting-row">
+<div><div class="setting-label">Auto-start Break</div><div class="setting-desc">Automatically begin break after focus</div></div>
+<button class="toggle" id="toggleAutoBreak"></button>
+</div>
+</div>
+<div class="section">
+<div class="section-title">Subjects</div>
+<div id="subjectManager"></div>
+<div style="display:flex;gap:8px;margin-top:12px">
+<input type="text" id="inputNewSubject" placeholder="Add subject..." style="flex:1;background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px;color:var(--text);font-size:14px;font-family:inherit;outline:none">
+<button class="btn btn-primary btn-sm" id="btnAddSubject" style="width:auto;padding:10px 16px">Add</button>
+</div>
+</div>
+<div class="section">
+<div class="section-title">Data</div>
+<div class="btn-row">
+<button class="btn btn-secondary btn-sm" id="btnExport">Export Data</button>
+<button class="btn btn-danger btn-sm" id="btnReset">Reset All</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<nav class="bottom-nav">
+<button class="nav-item active" data-view="viewTimer">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+<span>Timer</span>
+</button>
+<button class="nav-item" data-view="viewStats">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+<span>Stats</span>
+</button>
+<button class="nav-item" data-view="viewGoals">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+<span>Goals</span>
+</button>
+</nav>
+
+<div class="overlay" id="overlayComplete">
+<div class="overlay-content">
+<div style="font-size:48px;margin-bottom:12px" id="completeEmoji">&#x1F389;</div>
+<h2 id="completeTitle">Session Complete!</h2>
+<p id="completeText"></p>
+<div class="quote-card" id="completeQuote" style="margin:12px 0 16px"></div>
+<div class="btn-row">
+<button class="btn btn-secondary btn-sm" id="btnTakeBreak">Take Break</button>
+<button class="btn btn-primary btn-sm" id="btnNextSession">Study Again</button>
+</div>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var DURATIONS=[25,45,60,90];
+var SUBJECTS_DEFAULT=['Math','Science','Language','History','Computer Science','Literature','General'];
+var SUBJECT_COLORS=['#8b5cf6','#3b82f6','#10b981','#f59e0b','#ef4444','#06b6d4','#ec4899','#f97316','#14b8a6','#6366f1'];
+
+var SOUND_ICONS={
+rain:'M16 13V21M8 13V21M12 15V23M20 16.58A5 5 0 0018 7h-1.26A8 8 0 104 15.25',
+cafe:'M17 8h1a4 4 0 110 8h-1M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8zM6 2v2M10 2v2M14 2v2',
+white:'M2 12h4l3-9 4 18 3-9h4',
+fire:'M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z',
+none:'M1 1L23 23M9 9v3a3 3 0 005.12 2.12M15 9.34V4a3 3 0 00-5.94-.6M17 16.95A7 7 0 015 12v-2m14 0v2c0 .34-.03.67-.08 1M12 19v4m-4 0h8'
+};
+var SOUND_LABELS={rain:'Rain',cafe:'Cafe',white:'White',fire:'Fire',none:'Off'};
+var SOUND_IDS=['rain','cafe','white','fire','none'];
+
+var QUOTES=[
+{t:"The secret of getting ahead is getting started.",a:"Mark Twain"},
+{t:"It always seems impossible until it's done.",a:"Nelson Mandela"},
+{t:"Don't watch the clock; do what it does. Keep going.",a:"Sam Levenson"},
+{t:"Success is the sum of small efforts repeated day in and day out.",a:"Robert Collier"},
+{t:"The expert in anything was once a beginner.",a:"Helen Hayes"},
+{t:"Discipline is the bridge between goals and accomplishment.",a:"Jim Rohn"},
+{t:"A little progress each day adds up to big results.",a:"Satya Nani"},
+{t:"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.",a:"Richard Feynman"},
+{t:"Education is not the filling of a pail, but the lighting of a fire.",a:"W.B. Yeats"},
+{t:"The more that you read, the more things you will know.",a:"Dr. Seuss"},
+{t:"Live as if you were to die tomorrow. Learn as if you were to live forever.",a:"Mahatma Gandhi"},
+{t:"Self-education is, I firmly believe, the only kind of education there is.",a:"Isaac Asimov"},
+{t:"An investment in knowledge pays the best interest.",a:"Benjamin Franklin"},
+{t:"The beautiful thing about learning is that nobody can take it away from you.",a:"B.B. King"},
+{t:"You don't have to be great to start, but you have to start to be great.",a:"Zig Ziglar"}
+];
+
+var S={timerSec:0,totalSec:25*60,running:false,paused:false,isBreak:false,dur:25,subj:'General',sound:'none',actx:null,nodes:[],iv:null};
+
+function gs(k,fb){try{var v=localStorage.getItem('studylock_'+k);return v?JSON.parse(v):fb}catch(e){return fb}}
+function ss(k,v){try{localStorage.setItem('studylock_'+k,JSON.stringify(v))}catch(e){}}
+function getSessions(){return gs('sessions',[])}
+function addSession(s){var a=getSessions();a.push(s);ss('sessions',a)}
+function getSubjects(){return gs('subjects',SUBJECTS_DEFAULT.slice())}
+function getSettings(){return gs('settings',{breakMin:5,notif:false,autoBreak:false,dailyGoal:120,weeklyGoal:14})}
+function saveSets(s){ss('settings',s)}
+
+function $(id){return document.getElementById(id)}
+function el(tag,props){var e=document.createElement(tag);if(props)for(var k in props){if(k==='textContent')e.textContent=props[k];else if(k==='className')e.className=props[k];else e.setAttribute(k,props[k])}return e}
+function showToast(msg){var t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2000)}
+
+function makeSvgIcon(pathD){
+  var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('width','20');svg.setAttribute('height','20');
+  svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','2');
+  var p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  p.setAttribute('d',pathD);svg.appendChild(p);return svg;
+}
+
+// NAV
+var navItems=document.querySelectorAll('.nav-item');
+navItems.forEach(function(ni){ni.addEventListener('click',function(){
+  navItems.forEach(function(n){n.classList.remove('active')});
+  ni.classList.add('active');
+  document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active')});
+  var t=ni.getAttribute('data-view');$(t).classList.add('active');
+  if(t==='viewStats')renderStats();if(t==='viewGoals')renderGoals();
+})});
+$('btnSettings').addEventListener('click',function(){
+  navItems.forEach(function(n){n.classList.remove('active')});
+  document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active')});
+  $('viewSettings').classList.add('active');renderSettings();
+});
+
+// SUBJECTS
+function renderSubjects(){
+  var row=$('subjectRow');row.textContent='';
+  getSubjects().forEach(function(s){
+    var p=el('button',{className:'subj-pill'+(s===S.subj?' active':''),textContent:s});
+    p.addEventListener('click',function(){S.subj=s;renderSubjects();$('timerSubject').textContent=s});
+    row.appendChild(p);
+  });
+}
+
+// DURATIONS
+function renderDurations(){
+  var row=$('durRow');row.textContent='';
+  DURATIONS.forEach(function(d){
+    var p=el('button',{className:'dur-pill'+(d===S.dur?' active':''),textContent:d+' min'});
+    p.addEventListener('click',function(){if(S.running)return;S.dur=d;S.totalSec=d*60;S.timerSec=0;renderDurations();updateDisplay()});
+    row.appendChild(p);
+  });
+}
+
+// SOUNDS
+function renderSounds(){
+  var row=$('soundRow');row.textContent='';
+  SOUND_IDS.forEach(function(id){
+    var btn=el('button',{className:'sound-btn'+(id===S.sound?' active':'')});
+    btn.appendChild(makeSvgIcon(SOUND_ICONS[id]));
+    var lbl=el('span',{textContent:SOUND_LABELS[id]});btn.appendChild(lbl);
+    btn.addEventListener('click',function(){S.sound=id;renderSounds();if(S.running&&!S.paused)playSound(id);else stopSounds()});
+    row.appendChild(btn);
+  });
+}
+
+// WEB AUDIO
+function getAC(){if(!S.actx){var AC=window.AudioContext||window.webkitAudioContext;S.actx=new AC()}if(S.actx.state==='suspended')S.actx.resume();return S.actx}
+function stopSounds(){S.nodes.forEach(function(n){try{n.stop()}catch(e){}try{n.disconnect()}catch(e){}});S.nodes=[]}
+
+function playSound(id){
+  stopSounds();if(id==='none')return;
+  var ctx=getAC(),sr=ctx.sampleRate,bs=2*sr;
+  function noiseBuf(){var b=ctx.createBuffer(1,bs,sr),d=b.getChannelData(0);for(var i=0;i<bs;i++)d[i]=Math.random()*2-1;return b}
+
+  if(id==='white'){
+    var src=ctx.createBufferSource();src.buffer=noiseBuf();src.loop=true;
+    var g=ctx.createGain();g.gain.value=0.12;
+    var lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=4000;
+    src.connect(lp);lp.connect(g);g.connect(ctx.destination);src.start();S.nodes.push(src);
+  }else if(id==='rain'){
+    var src2=ctx.createBufferSource();src2.buffer=noiseBuf();src2.loop=true;
+    var bp=ctx.createBiquadFilter();bp.type='bandpass';bp.frequency.value=1800;bp.Q.value=0.7;
+    var g2=ctx.createGain();g2.gain.value=0.18;
+    src2.connect(bp);bp.connect(g2);g2.connect(ctx.destination);src2.start();S.nodes.push(src2);
+    var osc=ctx.createOscillator();osc.type='sine';osc.frequency.value=55;
+    var g3=ctx.createGain();g3.gain.value=0.04;
+    osc.connect(g3);g3.connect(ctx.destination);osc.start();S.nodes.push(osc);
+  }else if(id==='cafe'){
+    var src3=ctx.createBufferSource();src3.buffer=noiseBuf();src3.loop=true;
+    var bp2=ctx.createBiquadFilter();bp2.type='bandpass';bp2.frequency.value=600;bp2.Q.value=0.5;
+    var g4=ctx.createGain();g4.gain.value=0.1;
+    src3.connect(bp2);bp2.connect(g4);g4.connect(ctx.destination);src3.start();S.nodes.push(src3);
+    var src4=ctx.createBufferSource();src4.buffer=noiseBuf();src4.loop=true;
+    var bp3=ctx.createBiquadFilter();bp3.type='bandpass';bp3.frequency.value=2200;bp3.Q.value=1.2;
+    var g5=ctx.createGain();g5.gain.value=0.06;
+    src4.connect(bp3);bp3.connect(g5);g5.connect(ctx.destination);src4.start();S.nodes.push(src4);
+  }else if(id==='fire'){
+    var buf=ctx.createBuffer(1,bs,sr),dd=buf.getChannelData(0);
+    for(var i=0;i<bs;i++)dd[i]=(Math.random()*2-1)*(Math.random()>0.7?1:0.3);
+    var src5=ctx.createBufferSource();src5.buffer=buf;src5.loop=true;
+    var lp2=ctx.createBiquadFilter();lp2.type='lowpass';lp2.frequency.value=1200;
+    var g6=ctx.createGain();g6.gain.value=0.15;
+    src5.connect(lp2);lp2.connect(g6);g6.connect(ctx.destination);src5.start();S.nodes.push(src5);
+  }
+}
+
+// TIMER
+function updateDisplay(){
+  var rem=S.totalSec-S.timerSec;if(rem<0)rem=0;
+  var m=Math.floor(rem/60),s=rem%60;
+  $('timerTime').textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  var circ=2*Math.PI*120,prog=S.totalSec>0?S.timerSec/S.totalSec:0;
+  $('timerRingFg').setAttribute('stroke-dashoffset',circ*(1-prog));
+  $('timerRingFg').setAttribute('stroke',S.isBreak?'#10b981':'var(--accent2)');
+}
+
+function startTimer(){
+  if(S.running&&!S.paused)return;
+  if(!S.running){S.timerSec=0;S.running=true;S.paused=false}else{S.paused=false}
+  $('btnStart').style.display='none';$('btnRunning').style.display='flex';
+  $('btnPause').textContent='Pause';$('timerLabel').textContent=S.isBreak?'BREAK':'FOCUS';
+  $('timerRingWrap').classList.add('timer-active');
+  document.querySelectorAll('.dur-pill,.subj-pill').forEach(function(p){p.style.pointerEvents='none';p.style.opacity='0.5'});
+  if(S.sound!=='none')playSound(S.sound);
+  S.iv=setInterval(function(){S.timerSec++;updateDisplay();if(S.timerSec>=S.totalSec)completeSession()},1000);
+}
+
+function pauseTimer(){
+  if(!S.running)return;
+  if(S.paused){startTimer();return}
+  S.paused=true;clearInterval(S.iv);$('btnPause').textContent='Resume';
+  $('timerRingWrap').classList.remove('timer-active');stopSounds();
+}
+
+function stopTimer(){
+  clearInterval(S.iv);S.running=false;S.paused=false;S.timerSec=0;S.isBreak=false;
+  $('btnStart').style.display='flex';$('btnStart').textContent='Start Focus';$('btnRunning').style.display='none';
+  $('timerLabel').textContent='FOCUS';$('timerRingWrap').classList.remove('timer-active');
+  document.querySelectorAll('.dur-pill,.subj-pill').forEach(function(p){p.style.pointerEvents='';p.style.opacity=''});
+  stopSounds();updateDisplay();
+}
+
+function completeSession(){
+  clearInterval(S.iv);stopSounds();$('timerRingWrap').classList.remove('timer-active');
+  if(!S.isBreak){
+    addSession({date:new Date().toISOString().split('T')[0],subject:S.subj,duration:S.dur,completedAt:Date.now()});
+    var sets=getSettings();
+    if(sets.notif&&'Notification' in window&&Notification.permission==='granted')
+      new Notification('StudyLock',{body:S.dur+' min session complete! Great work.'});
+    var ss2=getSessions(),td=new Date().toISOString().split('T')[0];
+    var todayMin=ss2.filter(function(x){return x.date===td}).reduce(function(a,x){return a+x.duration},0);
+    $('completeTitle').textContent='Session Complete!';
+    $('completeText').textContent='You studied '+S.subj+' for '+S.dur+' min. Total today: '+todayMin+' min.';
+    var q=QUOTES[Math.floor(Math.random()*QUOTES.length)];
+    var qc=$('completeQuote');qc.textContent='';
+    var qt=el('div',{className:'quote-text'});qt.textContent='"'+q.t+'"';qc.appendChild(qt);
+    var qa=el('div',{className:'quote-author'});qa.textContent=q.a;qc.appendChild(qa);
+    $('overlayComplete').classList.add('show');
+    if(sets.autoBreak)$('btnTakeBreak').textContent='Break ('+sets.breakMin+' min)';
+  }else{showToast('Break complete! Ready to study.');stopTimer()}
+}
+
+$('btnStart').addEventListener('click',startTimer);
+$('btnPause').addEventListener('click',pauseTimer);
+$('btnStop').addEventListener('click',stopTimer);
+$('btnTakeBreak').addEventListener('click',function(){
+  $('overlayComplete').classList.remove('show');
+  var sets=getSettings();S.isBreak=true;S.totalSec=sets.breakMin*60;S.timerSec=0;S.running=false;updateDisplay();startTimer();
+});
+$('btnNextSession').addEventListener('click',function(){$('overlayComplete').classList.remove('show');stopTimer()});
+
+// STATS
+function renderStats(){
+  var sessions=getSessions(),now=new Date(),todayStr=now.toISOString().split('T')[0];
+  var ws=new Date(now);ws.setDate(ws.getDate()-ws.getDay());var weekStr=ws.toISOString().split('T')[0];
+  var todayMin=sessions.filter(function(x){return x.date===todayStr}).reduce(function(a,x){return a+x.duration},0);
+  var weekMin=sessions.filter(function(x){return x.date>=weekStr}).reduce(function(a,x){return a+x.duration},0);
+  var streak=0,cd=new Date(now);
+  while(true){var ds=cd.toISOString().split('T')[0];if(sessions.some(function(x){return x.date===ds})){streak++;cd.setDate(cd.getDate()-1)}else break}
+
+  var sc=$('statsCards');sc.textContent='';
+  [{v:todayMin+'m',l:'Today'},{v:Math.floor(weekMin/60)+'h '+(weekMin%60)+'m',l:'This Week'},{v:String(streak),l:'Day Streak'},{v:String(sessions.length),l:'Sessions'}].forEach(function(c){
+    var card=el('div',{className:'stat-card'});
+    card.appendChild(el('div',{className:'stat-value',textContent:c.v}));
+    card.appendChild(el('div',{className:'stat-label',textContent:c.l}));
+    sc.appendChild(card);
+  });
+  renderHeatmap(sessions);renderPie(sessions);
+}
+
+function renderHeatmap(sessions){
+  var grid=$('heatmap');grid.textContent='';
+  var dc={};sessions.forEach(function(x){dc[x.date]=(dc[x.date]||0)+x.duration});
+  var today=new Date(),start=new Date(today);start.setDate(start.getDate()-start.getDay()-15*7);
+  for(var w=0;w<16;w++){
+    var col=el('div',{className:'heatmap-col'});
+    for(var d=0;d<7;d++){
+      var cd=new Date(start);cd.setDate(cd.getDate()+w*7+d);
+      var ds=cd.toISOString().split('T')[0],mins=dc[ds]||0;
+      var lv='';if(mins>=120)lv=' l4';else if(mins>=60)lv=' l3';else if(mins>=30)lv=' l2';else if(mins>0)lv=' l1';
+      var cell=el('div',{className:'heatmap-cell'+lv,title:ds+': '+mins+' min'});
+      col.appendChild(cell);
+    }
+    grid.appendChild(col);
+  }
+}
+
+function renderPie(sessions){
+  var canvas=$('pieChart'),ctx=canvas.getContext('2d'),w=canvas.width,h=canvas.height;
+  ctx.clearRect(0,0,w,h);
+  var sm={};sessions.forEach(function(x){sm[x.subject]=(sm[x.subject]||0)+x.duration});
+  var subs=Object.keys(sm);
+  var leg=$('pieLegend');leg.textContent='';
+  if(subs.length===0){ctx.fillStyle='#5e5e7a';ctx.font='13px system-ui';ctx.textAlign='center';ctx.fillText('No data yet',w/2,h/2);return}
+  var total=subs.reduce(function(a,s){return a+sm[s]},0);
+  var cx=w/2,cy=h/2,r=55,sa=-Math.PI/2,allS=getSubjects();
+  subs.sort(function(a,b){return sm[b]-sm[a]});
+  subs.forEach(function(subj,i){
+    var frac=sm[subj]/total,sweep=frac*2*Math.PI;
+    var ci=allS.indexOf(subj);if(ci<0)ci=i;
+    var color=SUBJECT_COLORS[ci%SUBJECT_COLORS.length];
+    ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,sa,sa+sweep);ctx.closePath();ctx.fillStyle=color;ctx.fill();sa+=sweep;
+    var item=el('div',{className:'pie-legend-item'});
+    var dot=el('div',{className:'pie-dot'});dot.style.background=color;item.appendChild(dot);
+    item.appendChild(el('span',{textContent:subj+' ('+sm[subj]+'m)'}));leg.appendChild(item);
+  });
+  ctx.beginPath();ctx.arc(cx,cy,30,0,2*Math.PI);ctx.fillStyle='#141422';ctx.fill();
+}
+
+// GOALS
+function renderGoals(){
+  var sets=getSettings(),sessions=getSessions(),now=new Date(),td=now.toISOString().split('T')[0];
+  $('inputDailyGoal').value=sets.dailyGoal;$('inputWeeklyGoal').value=sets.weeklyGoal;
+  var todayMin=sessions.filter(function(x){return x.date===td}).reduce(function(a,x){return a+x.duration},0);
+  var dp=Math.min(100,Math.round(todayMin/sets.dailyGoal*100));
+  var da=$('dailyGoalArea');da.textContent='';
+  var dt=el('div',{className:'goal-text'});dt.appendChild(el('span',{textContent:todayMin+' / '+sets.dailyGoal+' min'}));dt.appendChild(el('span',{textContent:dp+'%'}));da.appendChild(dt);
+  var db=el('div',{className:'goal-bar'});var df=el('div',{className:'goal-fill'});df.style.width=dp+'%';db.appendChild(df);da.appendChild(db);
+  if(dp>=100)da.appendChild(el('div',{textContent:'Daily goal reached!',className:'',style:'font-size:13px;color:var(--green);font-weight:600;margin-top:4px'}));
+
+  var ws2=new Date(now);ws2.setDate(ws2.getDate()-ws2.getDay());var weekStr=ws2.toISOString().split('T')[0];
+  var weekMin=sessions.filter(function(x){return x.date>=weekStr}).reduce(function(a,x){return a+x.duration},0);
+  var wgm=sets.weeklyGoal*60,wp=Math.min(100,Math.round(weekMin/wgm*100));
+  var wa=$('weeklyGoalArea');wa.textContent='';
+  var wt=el('div',{className:'goal-text'});wt.appendChild(el('span',{textContent:Math.floor(weekMin/60)+'h '+(weekMin%60)+'m / '+sets.weeklyGoal+'h'}));wt.appendChild(el('span',{textContent:wp+'%'}));wa.appendChild(wt);
+  var wb=el('div',{className:'goal-bar'});var wf=el('div',{className:'goal-fill'});wf.style.width=wp+'%';wb.appendChild(wf);wa.appendChild(wb);
+  if(wp>=100)wa.appendChild(el('div',{textContent:'Weekly goal reached!',className:'',style:'font-size:13px;color:var(--green);font-weight:600;margin-top:4px'}));
+}
+$('btnSaveGoals').addEventListener('click',function(){
+  var s=getSettings();s.dailyGoal=parseInt($('inputDailyGoal').value)||120;s.weeklyGoal=parseInt($('inputWeeklyGoal').value)||14;
+  saveSets(s);renderGoals();showToast('Goals saved');
+});
+
+// SETTINGS
+function renderSettings(){
+  var s=getSettings();$('selectBreak').value=s.breakMin;
+  $('toggleNotif').classList.toggle('on',s.notif);$('toggleAutoBreak').classList.toggle('on',s.autoBreak);
+  var mgr=$('subjectManager');mgr.textContent='';var subs=getSubjects();
+  subs.forEach(function(subj,i){
+    var row=el('div',{style:'display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)'});
+    row.appendChild(el('span',{textContent:subj,style:'font-size:14px'}));
+    if(subs.length>1){
+      var rm=el('button',{textContent:'Remove',style:'font-size:12px;color:var(--red);background:none;border:none;cursor:pointer;font-family:inherit'});
+      rm.addEventListener('click',function(){subs.splice(i,1);ss('subjects',subs);if(S.subj===subj)S.subj=subs[0];renderSettings();renderSubjects()});
+      row.appendChild(rm);
+    }
+    mgr.appendChild(row);
+  });
+}
+$('selectBreak').addEventListener('change',function(){var s=getSettings();s.breakMin=parseInt(this.value);saveSets(s)});
+$('toggleNotif').addEventListener('click',function(){
+  var s=getSettings();
+  if(!s.notif&&'Notification' in window){Notification.requestPermission().then(function(p){s.notif=p==='granted';saveSets(s);renderSettings()})}
+  else{s.notif=!s.notif;saveSets(s);renderSettings()}
+});
+$('toggleAutoBreak').addEventListener('click',function(){var s=getSettings();s.autoBreak=!s.autoBreak;saveSets(s);renderSettings()});
+$('btnAddSubject').addEventListener('click',function(){
+  var v=$('inputNewSubject').value.trim();if(!v)return;
+  var subs=getSubjects();if(subs.indexOf(v)>=0){showToast('Subject exists');return}
+  subs.push(v);ss('subjects',subs);$('inputNewSubject').value='';renderSettings();renderSubjects();showToast('Subject added');
+});
+$('btnExport').addEventListener('click',function(){
+  var data={sessions:getSessions(),subjects:getSubjects(),settings:getSettings()};
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var a=el('a',{href:URL.createObjectURL(blob),download:'studylock_data.json'});a.click();showToast('Data exported');
+});
+$('btnReset').addEventListener('click',function(){
+  if(confirm('Delete all study data? This cannot be undone.')){
+    localStorage.removeItem('studylock_sessions');localStorage.removeItem('studylock_subjects');
+    localStorage.removeItem('studylock_settings');localStorage.removeItem('studylock_reviewed');
+    showToast('All data cleared');renderStats();renderGoals();renderSettings();renderSubjects();
+  }
+});
+
+// INIT
+renderSubjects();renderDurations();renderSounds();updateDisplay();$('timerSubject').textContent=S.subj;
+setTimeout(function(){$('splash').classList.add('hide');setTimeout(function(){$('splash').style.display='none'},400)},800);
+
+// SMART REVIEW (after 10th session)
+var sc2=getSessions().length;
+if(sc2>=10&&!localStorage.getItem('studylock_reviewed')){
+  setTimeout(function(){
+    var bar=el('div',{style:'position:fixed;bottom:60px;left:12px;right:12px;background:var(--bg3);border:1px solid var(--accent);border-radius:12px;padding:14px 16px;z-index:999;display:flex;align-items:center;justify-content:space-between;gap:12px;animation:fadeUp .3s ease'});
+    bar.appendChild(el('span',{textContent:'You\'ve completed '+sc2+' study sessions! Finding it useful?',style:'font-size:13px;color:var(--text)'}));
+    var br2=el('div',{style:'display:flex;gap:8px;flex-shrink:0'});
+    var sb=el('button',{className:'btn btn-primary btn-sm',textContent:'Share',style:'padding:6px 14px;font-size:12px'});
+    sb.addEventListener('click',function(){
+      if(navigator.share)navigator.share({title:'StudyLock',text:'Study timer with streaks and ambient sounds',url:'https://studylock.surge.sh'});
+      else{navigator.clipboard.writeText('https://studylock.surge.sh');showToast('Link copied')}
+      localStorage.setItem('studylock_reviewed','1');bar.remove();
+    });
+    var db2=el('button',{className:'btn btn-sm',textContent:'Later',style:'padding:6px 10px;font-size:12px;color:var(--text3);background:none;border:none'});
+    db2.addEventListener('click',function(){bar.remove();localStorage.setItem('studylock_reviewed','1')});
+    br2.appendChild(sb);br2.appendChild(db2);bar.appendChild(br2);document.body.appendChild(bar);
+  },2500);
+}
+
+// SERVICE WORKER
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(e){console.log('SW reg failed:',e)})})}
+
+})();
+</script>
+</body>
+</html>

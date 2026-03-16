@@ -475,7 +475,8 @@ def scan_upwork_category(category_name, query):
     html = fetch_url(url, min_delay=3.0)
     if not html:
         return {"source": "upwork", "category": category_name, "query": query,
-                "status": "fetch_failed", "rates": [], "scan_date": datetime.now().isoformat()}
+                "status": "fetch_failed", "rates": [], "rate_min": None, "rate_max": None,
+                "rate_median": None, "rate_count": 0, "scan_date": datetime.now().isoformat()}
 
     # Extract hourly rates
     rates = []

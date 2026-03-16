@@ -1,7 +1,7 @@
 {
-  "cycle_id": "cycle_25_20260315_0400",
-  "cycle_number": 25,
-  "last_completed_phase": 6,
+  "cycle_id": "cycle_29_20260316_0800",
+  "cycle_number": 29,
+  "last_completed_phase": 2,
   "phase_results": {
     "1": {
       "count": 179,
@@ -14,50 +14,9 @@
       ]
     },
     "2": {
-      "decisions": [
-        {
-          "type": "CREATE",
-          "op_id": "N09",
-          "name": "AI Companion App",
-          "reason": "READY status, score 50.6, not yet running"
-        },
-        {
-          "type": "CREATE",
-          "op_id": "N41",
-          "name": "Subscription Box Curation",
-          "reason": "READY status, score 47.6, not yet running"
-        },
-        {
-          "type": "CREATE",
-          "op_id": "N47",
-          "name": "eBay/FB Marketplace Flipping",
-          "reason": "READY status, score 49.4, not yet running"
-        }
-      ]
-    },
-    "3": "snapshot_taken",
-    "4": "intel_loaded",
-    "5": {
-      "results": [
-        {
-          "op_id": "N09",
-          "status": "success"
-        },
-        {
-          "op_id": "N41",
-          "status": "success"
-        },
-        {
-          "op_id": "N47",
-          "status": "success"
-        }
-      ]
-    },
-    "6": {
-      "issues": [],
-      "summary": "3 create"
+      "decisions": []
     }
   },
-  "started_at": "2026-03-15T04:00:00.474213",
-  "updated_at": "2026-03-15T04:00:08.145528"
+  "started_at": "2026-03-16T08:00:00.739359",
+  "updated_at": "2026-03-16T08:00:08.069223"
 }

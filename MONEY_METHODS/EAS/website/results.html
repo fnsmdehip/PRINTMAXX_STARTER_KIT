@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results - Enterprise Automation Solutions</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0a;--gold:#c9a227;--cream:#f5f0e8;--muted:#888;--card-bg:rgba(201,162,39,0.04);--card-border:rgba(201,162,39,0.12);--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--max-w:1200px;--transition:0.3s ease}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none;transition:opacity var(--transition)}a:hover{opacity:0.8}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.25}
+h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-0.02em}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem)}
+h3{font-size:1.25rem}
+p{color:var(--cream);opacity:0.85}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,39,0.08)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:1.3rem;color:var(--cream);letter-spacing:0.04em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);font-size:0.875rem;letter-spacing:0.02em;transition:color var(--transition)}
+.nav-links a:hover{color:var(--cream);opacity:1}
+.nav-cta{background:var(--gold);color:var(--bg);padding:8px 20px;border-radius:4px;font-size:0.875rem;font-weight:600}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:99;padding:40px 24px}
+.mobile-menu.active{display:flex;flex-direction:column;gap:24px}
+.mobile-menu a{color:var(--cream);font-size:1.1rem;font-family:var(--serif)}
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-size:0.95rem;font-weight:600;letter-spacing:0.02em;cursor:pointer;transition:all var(--transition);border:none;text-align:center}
+.btn-gold{background:var(--gold);color:var(--bg)}.btn-gold:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,162,39,0.2)}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,0.25)}.btn-outline:hover{border-color:var(--cream);transform:translateY(-1px)}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;padding:40px 32px;transition:all var(--transition)}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+section{padding:100px 0}
+.section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold);margin-bottom:16px}
+footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:0.8rem;color:var(--muted)}
+.footer-links{display:flex;gap:24px}.footer-links a{font-size:0.8rem;color:var(--muted)}.footer-links a:hover{color:var(--cream)}
+
+.page-hero{padding:160px 0 60px;text-align:center}
+.page-hero p{color:var(--muted);max-width:600px;margin:16px auto 0;font-size:1.05rem}
+
+.cases-grid{display:grid;grid-template-columns:1fr;gap:32px}
+.case-card{padding:48px 40px}
+.case-headline{font-family:var(--serif);font-size:1.5rem;color:var(--cream);margin-bottom:32px;line-height:1.35;max-width:680px}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.case-section-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin-bottom:12px}
+.case-section p{font-size:0.9rem;color:var(--muted);line-height:1.65}
+.case-metric{font-family:var(--serif);font-size:1.8rem;color:var(--gold);margin-bottom:4px}
+.case-metric-label{font-size:0.8rem;color:var(--muted)}
+.case-outcomes{display:flex;gap:40px;margin-top:32px;padding-top:32px;border-top:1px solid rgba(245,240,232,0.06)}
+.case-industry{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:16px;display:inline-block;padding:4px 12px;border:1px solid rgba(245,240,232,0.08);border-radius:12px}
+.agent-badge{display:inline-block;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);padding:4px 12px;border:1px solid var(--card-border);border-radius:12px;margin-left:8px}
+
+.testimonials{margin-top:80px}
+.testimonial{border-left:2px solid var(--gold);padding:32px 0 32px 32px;margin-bottom:48px}
+.testimonial blockquote{font-family:var(--serif);font-size:1.15rem;line-height:1.6;color:var(--cream);margin-bottom:16px;font-style:italic}
+.testimonial cite{font-size:0.85rem;color:var(--muted);font-style:normal}
+
+.final-cta{text-align:center;padding:120px 0;border-top:1px solid rgba(245,240,232,0.06)}
+.final-cta h2{margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}
+  .case-grid{grid-template-columns:1fr}
+  .case-outcomes{flex-direction:column;gap:20px}
+  .page-hero{padding:120px 0 40px}
+  section{padding:60px 0}
+  .case-card{padding:32px 24px}
+  .testimonial{padding-left:20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">EAS</a>
+    <ul class="nav-links">
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="playbooks.html">Playbooks</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="packages.html">Packages</a>
+  <a href="results.html">Results</a>
+  <a href="playbooks.html">Playbooks</a>
+  <a href="calculator.html">Calculator</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html">Book a Call</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label fade-up">Results</div>
+    <h1 class="fade-up">AI agents running real businesses. Real numbers.</h1>
+    <p class="fade-up">Not hypothetical projections. These are agents we installed, running live, measured over weeks and months.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cases-grid">
+
+      <!-- CASE 1: DENTAL -->
+      <div class="card case-card fade-up">
+        <span class="case-industry">Multi-location dental</span>
+        <span class="agent-badge">AI Receptionist</span>
+        <div class="case-headline">AI receptionist handles 93% of incoming calls without human intervention. Front desk staff reassigned to patient care.</div>
+        <div class="case-grid">
+          <div class="case-section">
+            <div class="case-section-label">Before the agent</div>
+            <p>4-location dental group losing 30+ calls per day to voicemail. Front desk overwhelmed during peak hours. Patients calling back 2-3 times to book. 8 hours per week spent on manual recall scheduling via spreadsheet.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-label">What we installed</div>
+            <p>AI receptionist using Vapi voice agent with custom dental conversation flows. Trained on their service catalog, insurance accepted, and booking rules. Connected to their practice management system. Agent handles new patient intake, appointment booking, rescheduling, and recall outreach.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-label">After 30 days</div>
+            <p>93% of calls handled end-to-end by the AI. No hold music. No voicemail. Patients book in under 2 minutes. Front desk staff freed up 15+ hours per week, reassigned to in-office patient experience. Recall scheduling now runs automatically.</p>
+          </div>
+        </div>
+        <div class="case-outcomes">
+          <div>
+            <div class="case-metric" data-target="93" data-suffix="%">0</div>
+            <div class="case-metric-label">Calls handled by AI</div>
+          </div>
+          <div>
+            <div class="case-metric" data-target="15" data-suffix=" hrs/wk">0</div>
+            <div class="case-metric-label">Staff time recovered</div>
+          </div>
+          <div>
+            <div class="case-metric" data-target="2" data-suffix=" min avg">0</div>
+            <div class="case-metric-label">Time to book appointment</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 2: HVAC -->
+      <div class="card case-card fade-up">
+        <span class="case-industry">HVAC and plumbing</span>
+        <span class="agent-badge">Autonomous Dispatch Agent</span>
+        <div class="case-headline">Autonomous dispatch agent cut job cycle time by 40%. Invoicing went from 5 days lag to same-day.</div>
+        <div class="case-grid">
+          <div class="case-section">
+            <div class="case-section-label">Before the agent</div>
+            <p>Regional HVAC company running 40+ service calls daily. Dispatchers manually entering job details into 3 different systems. Invoicing lagged 4-5 days behind job completion. Monthly reconciliation errors costing $4,200/month in missed billings.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-label">What we installed</div>
+            <p>Multi-agent system: dispatch coordinator agent routes jobs based on tech location, skill, and load. Job completion agent auto-generates invoices, updates inventory, and syncs CRM. Intelligence agent monitors for scheduling conflicts, parts shortages, and revenue anomalies.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-label">After 30 days</div>
+            <p>Job-to-invoice cycle dropped from 5 days to same-day. Dispatchers saved 90 minutes per job cycle on data entry. Reconciliation errors dropped 73%. Monthly revenue recovery: $4,200 in previously missed billings now captured automatically.</p>
+          </div>
+        </div>
+        <div class="case-outcomes">
+          <div>
+            <div class="case-metric" data-target="40" data-suffix="%">0</div>
+            <div class="case-metric-label">Faster job cycle</div>
+          </div>
+          <div>
+            <div class="case-metric" data-target="73" data-suffix="%">0</div>
+            <div class="case-metric-label">Fewer reconciliation errors</div>
+          </div>
+          <div>
+            <div class="case-metric">$4,200</div>
+            <div class="case-metric-label">Monthly revenue recovered</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 3: AGENCY -->
+      <div class="card case-card fade-up">
+        <span class="case-industry">B2B marketing agency</span>
+        <span class="agent-badge">AI Meeting Brain</span>
+        <div class="case-headline">AI meeting brain captures 98% of decisions and auto-assigns owners. Weekly status meetings cut by 70%.</div>
+        <div class="case-grid">
+          <div class="case-section">
+            <div class="case-section-label">Before the agent</div>
+            <p>22-person agency with 3 partners spending 5+ hours per week in status meetings. Decisions made in meetings but never tracked. Action items buried in chat threads. Nobody knew what was decided last week, so they'd meet again to re-decide.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-label">What we installed</div>
+            <p>AI Meeting Brain: auto-joins all Zoom calls, transcribes with speaker identification, extracts every decision, action item, owner, and deadline. Syncs to Notion decision log. Daily Slack digest with yesterday's decisions and due items. Weekly leadership summary with unresolved items.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-label">After 30 days</div>
+            <p>98% of action items now tracked with assigned owners and deadlines. Weekly status meetings dropped from 5 hours to 1.5 hours. Partners report actually knowing what's happening across projects for the first time. "We stopped having the meeting about the meeting."</p>
+          </div>
+        </div>
+        <div class="case-outcomes">
+          <div>
+            <div class="case-metric" data-target="98" data-suffix="%">0</div>
+            <div class="case-metric-label">Decisions captured</div>
+          </div>
+          <div>
+            <div class="case-metric" data-target="70" data-suffix="%">0</div>
+            <div class="case-metric-label">Less meeting time</div>
+          </div>
+          <div>
+            <div class="case-metric" data-target="22" data-suffix=" people">0</div>
+            <div class="case-metric-label">Team aligned daily</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="testimonials">
+      <div class="section-label fade-up">What they said</div>
+
+      <div class="testimonial fade-up">
+        <blockquote>"The AI receptionist doesn't just answer phones. It has actual conversations with patients, remembers their preferences, and books them faster than our front desk ever could. Our staff was skeptical for about 3 days. Then they realized they could finally focus on the patients standing in front of them."</blockquote>
+        <cite>Dr. Rachel Kim, Managing Partner, Bright Dental Group</cite>
+      </div>
+
+      <div class="testimonial fade-up">
+        <blockquote>"We stopped having the meeting about the meeting. The AI sends us a digest every morning. Decisions tracked, owners assigned, deadlines visible. I stopped asking 'what happened yesterday?' because the answer shows up at 9am in Slack. Every single day. That alone was worth the install."</blockquote>
+        <cite>Marcus Cole, Co-founder, Clearpath Marketing</cite>
+      </div>
+
+      <div class="testimonial fade-up">
+        <blockquote>"I was paying 2 dispatchers to copy-paste between 3 systems all day. Now the agent does it in real time with zero errors. Same-day invoicing was something we talked about for 2 years. EAS installed it in 12 days."</blockquote>
+        <cite>Robert Tran, Operations Director, Summit HVAC</cite>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container fade-up">
+    <h2>Want to see exactly how these agents were built? We'll walk you through the architecture.</h2>
+    <div class="cta-buttons">
+      <a href="book.html" class="btn btn-gold">Book a call</a>
+      <a href="contact.html" class="btn btn-outline">Request case study details</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Enterprise Automation Solutions. All rights reserved.</div>
+    <div class="footer-links"><a href="contact.html">Privacy</a><a href="contact.html">Contact</a><a href="book.html">Book a Call</a></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+const countObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;if(!el.dataset.target)return;const target=parseFloat(el.dataset.target);const suffix=el.dataset.suffix||'';let current=0;const step=target/40;const interval=setInterval(()=>{current+=step;if(current>=target){current=target;clearInterval(interval)}el.textContent=Math.round(current)+suffix},25);countObserver.unobserve(el)}})},{threshold:0.5});
+document.querySelectorAll('.case-metric[data-target]').forEach(el=>countObserver.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "total": 18,
+  "passed": 15,
+  "failed": 3,
+  "errors": 0,
+  "pass_rate": "83%",
+  "run_at": "2026-03-16T05:17:42.894811",
+  "results": [
+    {
+      "name": "discover_workflows",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "Found 324 automation scripts",
+      "timestamp": "2026-03-16T05:17:42.303736"
+    },
+    {
+      "name": "score_workflows",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "decision_engine.py exists and available for workflow scoring",
+      "timestamp": "2026-03-16T05:17:42.303768"
+    },
+    {
+      "name": "roi_model",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "Monthly value: $15,588, payback: 5 days",
+      "timestamp": "2026-03-16T05:17:42.303783"
+    },
+    {
+      "name": "identify_candidates",
+      "status": "PASS",
+      "duration": 0.05,
+      "detail": "master_ops_bridge stats: available",
+      "timestamp": "2026-03-16T05:17:42.350775"
+    },
+    {
+      "name": "pipeline_responds",
+      "status": "PASS",
+      "duration": 0.03,
+      "detail": "Lead pipeline responds to --status",
+      "timestamp": "2026-03-16T05:17:42.382953"
+    },
+    {
+      "name": "lead_scoring",
+      "status": "FAIL",
+      "duration": 0.1,
+      "detail": "",
+      "timestamp": "2026-03-16T05:17:42.483969"
+    },
+    {
+      "name": "content_research",
+      "status": "PASS",
+      "duration": 0.15,
+      "detail": "Alpha query available for content research",
+      "timestamp": "2026-03-16T05:17:42.630444"
+    },
+    {
+      "name": "content_queue",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "783 posts in queue",
+      "timestamp": "2026-03-16T05:17:42.632512"
+    },
+    {
+      "name": "voice_playbook",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "Phone pilot playbook: 31KB",
+      "timestamp": "2026-03-16T05:17:42.632582"
+    },
+    {
+      "name": "knowledge_base_source",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "734 OPS docs available for RAG knowledge base",
+      "timestamp": "2026-03-16T05:17:42.636540"
+    },
+    {
+      "name": "guardrails_enforcement",
+      "status": "PASS",
+      "duration": 0.05,
+      "detail": "Guardrails test suite passed",
+      "timestamp": "2026-03-16T05:17:42.689199"
+    },
+    {
+      "name": "circuit_breakers",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "agent_resilience.py: 11KB",
+      "timestamp": "2026-03-16T05:17:42.689396"
+    },
+    {
+      "name": "security_audit",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "Security audit system available",
+      "timestamp": "2026-03-16T05:17:42.689424"
+    },
+    {
+      "name": "soul_behavioral_directives",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "SOUL.md: 6788 chars, directives present",
+      "timestamp": "2026-03-16T05:17:42.689597"
+    },
+    {
+      "name": "claude_md_guardrails",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "CLAUDE.md: 43021 chars, guardrails referenced",
+      "timestamp": "2026-03-16T05:17:42.689867"
+    },
+    {
+      "name": "legal_templates",
+      "status": "PASS",
+      "duration": 0.0,
+      "detail": "4 legal templates found",
+      "timestamp": "2026-03-16T05:17:42.690043"
+    },
+    {
+      "name": "risk_disclosure",
+      "status": "FAIL",
+      "duration": 0.0,
+      "detail": "Risk disclosure covers AI liability and recording consent",
+      "timestamp": "2026-03-16T05:17:42.690475"
+    },
+    {
+      "name": "no_hardcoded_secrets",
+      "status": "FAIL",
+      "duration": 0.2,
+      "detail": "13 files with potential API keys",
+      "timestamp": "2026-03-16T05:17:42.894770"
+    }
+  ]
+}

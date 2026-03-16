@@ -131,6 +131,18 @@
         ]
       }
     ],
+    "PreCompact": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/hooks/save_context_snapshot.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "*",

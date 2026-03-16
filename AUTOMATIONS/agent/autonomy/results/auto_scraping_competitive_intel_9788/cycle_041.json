@@ -1,0 +1,199 @@
+{
+  "cycle": 41,
+  "timestamp": "2026-03-15T07:45:06.678529",
+  "phase_results": {
+    "configure": {
+      "status": "OK",
+      "last_cycle": 40,
+      "last_run": "2026-03-15T03:07:18"
+    },
+    "scrape": {
+      "reddit": {
+        "status": "OK",
+        "new_entries": 2,
+        "file": "reddit_20260315_073528.json"
+      },
+      "apps_scan": {
+        "status": "COMPLETE",
+        "apps_scanned": 160,
+        "errors": 0,
+        "niches_covered": 10,
+        "completed_at": "2026-03-15T07:46:41.572895"
+      },
+      "services_scan": {
+        "status": "PARTIAL",
+        "note": "Codeable $80-120/hr confirmed. GrowthMachine timeout. Siege Media 403. WebFX data noise.",
+        "actionable": "Services pricing scan low-signal this cycle. Codeable dev rates = $80-120/hr benchmark for freelance positioning."
+      },
+      "content_scan": {
+        "status": "COMPLETE",
+        "newsletters_scanned": [
+          "Indie Hackers",
+          "The Bootstrapped Founder",
+          "Lenny's Newsletter",
+          "Growth in Reverse",
+          "Justin Welsh",
+          "Dan Koe",
+          "Nathan Barry"
+        ],
+        "paid_newsletter_benchmarks": {
+          "Lenny's Newsletter": "~1,100,000 subscribers | paid tier active",
+          "Growth in Reverse": "~41,000 subscribers | paid tier active",
+          "Justin Welsh": "~39,000 subscribers | paid tier active"
+        },
+        "errors": [
+          "Nathan Barry Substack 404 - likely migrated to Kit"
+        ],
+        "actionable": "Paid newsletter tier confirmed viable at 39K-1.1M subs. Our Beehiiv has no paid tier yet. Add $7/mo paid tier once at 500+ subs."
+      }
+    },
+    "clean": {
+      "existing_keys": 615,
+      "version_changes_today": 0,
+      "signals_scored": 5
+    },
+    "analyze": {
+      "highest_signals": [
+        {
+          "title": "Adapty 2026: weekly+trial = 55% revenue, 6x iOS conversion",
+          "subreddit": "Solopreneur",
+          "score": 31
+        },
+        {
+          "title": "TrustMRR $1.5k MRR/month from trust widget",
+          "subreddit": "micro_saas",
+          "score": 21
+        },
+        {
+          "title": "Dead Internet theory - high engagement MicroSaaS",
+          "subreddit": "MicroSaas",
+          "score": 65
+        }
+      ],
+      "gap_analysis": {
+        "pricing_gaps": {
+          "faith": "23 free / 0 paid - BLUE OCEAN",
+          "sleep": "18 free / 3 paid - avg .66 (HIGHEST)",
+          "study": "17 free / 1 paid - avg .99",
+          "journal": "17 free / 0 paid"
+        },
+        "platform_gaps": [
+          "google_play",
+          "chrome_extension",
+          "apple_watch",
+          "android_widget"
+        ],
+        "content_gaps": [
+          "newsletter_substack",
+          "paid_newsletter",
+          "digital_products_gumroad"
+        ]
+      }
+    },
+    "store": {
+      "competitive_intel_csv_rows": 405,
+      "new_rows_written": 4,
+      "alpha_staged": 13,
+      "alpha_ids": [
+        "ALPHA100456",
+        "ALPHA100457",
+        "ALPHA100458",
+        "ALPHA100459",
+        "ALPHA100460",
+        "ALPHA100461",
+        "ALPHA100462",
+        "ALPHA100463",
+        "ALPHA100464",
+        "ALPHA100465",
+        "ALPHA100466",
+        "ALPHA100467",
+        "ALPHA100468"
+      ]
+    },
+    "alerts": [
+      {
+        "severity": "P0",
+        "type": "ACTION_REQUIRED",
+        "message": "Switch ALL apps to weekly $0.99 + 3-day trial (Adapty 2026 data: 55% revenue, 6x conversion). No paid competitors in faith niche."
+      },
+      {
+        "severity": "P1",
+        "type": "PLATFORM_GAP",
+        "message": "Android/Google Play missing. Capacitor wrapper = 2x TAM with minimal effort."
+      },
+      {
+        "severity": "P1",
+        "type": "MONETIZATION",
+        "message": "TrustMRR model: social proof widget = $1.5k MRR passively. Consider cloning for printmaxx."
+      },
+      {
+        "severity": "P1",
+        "type": "PRICING_GAP",
+        "message": "Sleep apps = $37.66 avg paid price. SleepMaxx can command premium $4.99/week."
+      }
+    ]
+  },
+  "total_new_rows": 4,
+  "total_alpha_staged": 13,
+  "total_alerts": 4,
+  "app_store_intelligence": {
+    "blue_ocean_niches": [
+      {
+        "niche": "faith",
+        "free": 24,
+        "paid": 0,
+        "action": "Add weekly $0.99 IAP to all 14 denomination apps NOW"
+      },
+      {
+        "niche": "habit",
+        "free": 27,
+        "paid": 0,
+        "action": "Add weekly $0.99 IAP to all streak habit apps NOW"
+      },
+      {
+        "niche": "journal",
+        "free": 17,
+        "paid": 0,
+        "action": "Add IAP + gamification (study Finch mechanics)"
+      },
+      {
+        "niche": "screen_time",
+        "free": 16,
+        "paid": 0,
+        "action": "Premium positioning opportunity"
+      }
+    ],
+    "dominant_incumbents": {
+      "faith": "Bible (13M ratings) - generic, cannot niche down to denominations",
+      "sleep": "Calm (1.9M), Headspace (974K) - premium ceiling at $99.99/yr",
+      "study": "Duolingo (5M), Gauth (1.3M) - massive but broad"
+    },
+    "pricing_intelligence": {
+      "sleep_max_price": 99.99,
+      "sleep_avg_paid": 37.66,
+      "study_avg_paid": 24.99,
+      "adhd_avg_paid": 5.66,
+      "recommended_weekly_price": 0.99,
+      "recommended_monthly_price": 3.99,
+      "recommended_annual_price": 19.99
+    }
+  },
+  "completed_at": "2026-03-15T07:49:11.001054",
+  "cycle_summary": {
+    "total_apps_scanned": 160,
+    "total_reddit_signals": 5,
+    "total_new_intel_rows": 4,
+    "total_alpha_staged": 13,
+    "p0_actions": [
+      "Add $0.99/week IAP to all faith + habit streak apps (0 paid competitors)",
+      "Switch all apps to weekly + 3-day trial (Adapty 2026: 55% revenue, 6x conversion)"
+    ],
+    "p1_actions": [
+      "Android/Google Play wrapper via Capacitor (2x TAM)",
+      "iOS 26 Liquid Glass support \u2014 window is NOW",
+      "Faith app features: offline mode + audio prayers + widget",
+      "SleepMaxx premium pricing at $4.99/week (competitor ceiling $99.99/yr)"
+    ]
+  },
+  "all_scans_complete": true
+}

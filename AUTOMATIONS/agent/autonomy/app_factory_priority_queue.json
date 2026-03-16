@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-15 04:00:15",
+  "generated_at": "2026-03-16 07:22:17",
   "sources": {
-    "alpha_staging_candidates": 3227,
+    "alpha_staging_candidates": 3685,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 85
+    "existing_specs_detected": 102
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,21 +13,21 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3190,
+    "total_candidates": 3631,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 88,
-      "BUILD_NEW_NOW": 68,
-      "SPEC_AND_TEST": 155,
-      "PARK": 2872,
-      "VALIDATE_FIRST": 7
+      "ITERATE_EXISTING_NOW": 97,
+      "BUILD_NEW_NOW": 71,
+      "SPEC_AND_TEST": 160,
+      "PARK": 3294,
+      "VALIDATE_FIRST": 9
     },
     "cluster_counts": {
-      "faith": 85,
-      "focus": 453,
-      "habits": 195,
-      "ai_utility": 2133,
-      "fitness": 183,
-      "sleep": 119,
+      "faith": 99,
+      "focus": 485,
+      "habits": 227,
+      "ai_utility": 2465,
+      "fitness": 205,
+      "sleep": 128,
       "meal": 22
     }
   },
@@ -1888,6 +1888,68 @@
       "rank": 30
     },
     {
+      "candidate_id": "ALPHA100456",
+      "title": "Faith app niche: 23 free competitors, 0 paid tier. Weekly $0.99 + 3-day trial = only paid option in entire category. Blue ocean paywall.",
+      "source": "competitive_intel_cycle_041",
+      "source_url": "itunes_api_gap_analysis",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGHEST",
+      "priority": "P0_NOW",
+      "status": "CONVERTED_TO_RESEARCH",
+      "engagement_authenticity": "SYSTEM_GENERATED",
+      "earnings_verified": "TRUE",
+      "applicable_niches": "faith",
+      "applicable_methods": "PrayerLock, scripture-streak, all faith apps",
+      "evidence": "Faith app niche: 23 free competitors, 0 paid tier. Weekly $0.99 + 3-day trial = only paid option in entire category. Blue ocean paywall.",
+      "compliance_notes": "",
+      "reviewer_notes": "Auto-converted to research task: 0 6 * * 1",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA100456",
+        "source": "competitive_intel_cycle_041",
+        "source_url": "itunes_api_gap_analysis",
+        "category": "APP_FACTORY",
+        "tactic": "Faith app niche: 23 free competitors, 0 paid tier. Weekly $0.99 + 3-day trial = only paid option in entire category. Blue ocean paywall.",
+        "roi_potential": "HIGHEST",
+        "priority": "P0_NOW",
+        "status": "CONVERTED_TO_RESEARCH",
+        "applicable_methods": "PrayerLock, scripture-streak, all faith apps",
+        "applicable_niches": "faith",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "SYSTEM_GENERATED",
+        "earnings_verified": "TRUE",
+        "extracted_method": "",
+        "compliance_notes": "",
+        "reviewer_notes": "Auto-converted to research task: 0 6 * * 1",
+        "created_at": "",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": ""
+      },
+      "score": 98,
+      "cluster": "faith",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
+      "paywall_variant": "after first devotional value moment, annual-first anchor",
+      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
+      "primary_monetization": "subscription with 7-day trial",
+      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 31
+    },
+    {
       "candidate_id": "ALPHA15286",
       "title": "ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. Simple UX",
       "source": "APP_FACTORY_METHODS.csv",
@@ -1928,7 +1990,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA18170",
@@ -1990,7 +2052,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA544",
@@ -2052,7 +2114,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -2114,7 +2176,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA17028",
@@ -2176,7 +2238,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 36
     },
     {
       "candidate_id": "HN_003",
@@ -2238,7 +2300,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA18679",
@@ -2300,7 +2362,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 38
     },
     {
       "candidate_id": "RF_001",
@@ -2369,7 +2431,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA25039",
@@ -2416,68 +2478,6 @@
       "cluster": "faith",
       "market_room": "MEDIUM_HIGH",
       "existing_app_target": "PrayerLock / Scripture Streak AI layer",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
-      "paywall_variant": "after first devotional value moment, annual-first anchor",
-      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
-      "primary_monetization": "subscription with 7-day trial",
-      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA98935",
-      "title": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. Direct PrayerLock competitor. All free model.",
-      "source": "competitive_intel_synthesis_prayerlock_competitor",
-      "source_url": "",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "NOW",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "FALSE",
-      "applicable_niches": "N/A",
-      "applicable_methods": "UNCHECKED",
-      "evidence": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. D",
-      "compliance_notes": "",
-      "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA98935",
-        "source": "competitive_intel_synthesis_prayerlock_competitor",
-        "source_url": "",
-        "category": "COMPETITIVE_INTEL",
-        "tactic": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. Direct PrayerLock competitor. All free model.",
-        "roi_potential": "HIGH",
-        "priority": "NOW",
-        "status": "APPROVED",
-        "applicable_methods": "UNCHECKED",
-        "applicable_niches": "N/A",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "FALSE",
-        "extracted_method": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. D",
-        "compliance_notes": "",
-        "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
-        "created_at": "2026-03-14",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": "2026-03-14"
-      },
-      "score": 93,
-      "cluster": "faith",
-      "market_room": "MEDIUM_HIGH",
-      "existing_app_target": "Hilal / PrayerLock / Scripture Streak",
       "execution_lane": "ITERATE_EXISTING",
       "build_decision": "ITERATE_EXISTING_NOW",
       "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",

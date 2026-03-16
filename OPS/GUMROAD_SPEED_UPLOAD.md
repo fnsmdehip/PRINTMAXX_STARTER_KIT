@@ -550,3 +550,45 @@ Building a portfolio of AI tools on Gumroad — shipped my first one yesterday, 
 
 Competitor copied product + priced at 50% ($29 vs $59/mo). Premium positioning is the moat when copied.
 
+
+
+---
+
+## Pending Enhancement (ALPHA100589, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rucj80/the_first_version_of_our_product_worked_perfectly/
+**Added:** 2026-03-15T10:15:01-04:00
+
+[ACQUISITION] The first version of our product worked perfectly and nobody used it
+
+
+
+---
+
+## Pending Enhancement (ALPHA100653, Score: 36)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2033256675650748908
+**Added:** 2026-03-16T00:41:06-04:00
+
+Add these viral formats to your test rotation 
+
+- Sometimes You Just Need Focus
+- Place Your Boring Product Inside a Cheating or Relationship Narrative
+- Easter Egg in the MacBook Growth Hack
+- Combo: Trend Hook & Notification Text Hack
+- POV Cheating Drama: 27M views
+- Rating
+
+
+
+---
+
+## Pending Enhancement (ALPHA101126, Score: 34)
+
+**Source:** @cjzafir (high-signal-accounts) | **URL:** https://x.com/IagonOfficial/status/2030984477162213490/photo/1
+**Added:** 2026-03-16T04:36:30-04:00
+
+Support Us In Advancing Iagon
+
+As Iagon enters our next phase of growth and seeks to scale awareness and accessibility to our products and ecosystem, we are looking to secure a loan of up to $1.5M (6 million $ADA) to support ongoing initiatives related to IP expansion, ecosystem
+

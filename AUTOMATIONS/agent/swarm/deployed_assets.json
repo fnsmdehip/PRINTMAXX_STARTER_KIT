@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-15T02:20:00.000000",
+  "last_updated": "2026-03-15T04:32:25",
   "last_cycle": "asset_deployer_cycle_2026-03-15_0220",
   "total_surge_deployments": 355,
   "health_status": "ALL_HEALTHY",
@@ -264,5 +264,28 @@
       "deployed_at": "2026-03-14T18:23:00.000000"
     }
   ],
-  "total_count": 10
+  "total_count": 10,
+  "live_test": {
+    "tested_at": "2026-03-15T04:32:25",
+    "total": 156,
+    "green": 101,
+    "yellow": 40,
+    "red": 15,
+    "pass_rate": "90.4%",
+    "avg_load_ms": 4983,
+    "playwright_visual_tested": 156,
+    "notes": "Cycle 16 (Playwright Tester): Full async test of 156 sites. 101 GREEN, 40 YELLOW, 15 RED.",
+    "still_broken": [
+      "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "https://saas-stack-audit-200.surge.sh",
+      "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
+      "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
+      "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh",
+      "https://old-settlers-dental-p-a-austin-tx.surge.sh"
+    ]
+  }
 }

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROI Calculator - Enterprise Automation Solutions</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0a;--gold:#c9a227;--cream:#f5f0e8;--muted:#888;--card-bg:rgba(201,162,39,0.04);--card-border:rgba(201,162,39,0.12);--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--max-w:1200px;--transition:0.3s ease}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none;transition:opacity var(--transition)}a:hover{opacity:0.8}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.25}
+h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-0.02em}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem)}
+h3{font-size:1.25rem}
+p{color:var(--cream);opacity:0.85}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,39,0.08)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:1.3rem;color:var(--cream);letter-spacing:0.04em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);font-size:0.875rem;letter-spacing:0.02em;transition:color var(--transition)}
+.nav-links a:hover{color:var(--cream);opacity:1}
+.nav-cta{background:var(--gold);color:var(--bg);padding:8px 20px;border-radius:4px;font-size:0.875rem;font-weight:600}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:99;padding:40px 24px}
+.mobile-menu.active{display:flex;flex-direction:column;gap:24px}
+.mobile-menu a{color:var(--cream);font-size:1.1rem;font-family:var(--serif)}
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-size:0.95rem;font-weight:600;letter-spacing:0.02em;cursor:pointer;transition:all var(--transition);border:none;text-align:center}
+.btn-gold{background:var(--gold);color:var(--bg)}.btn-gold:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,162,39,0.2)}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,0.25)}.btn-outline:hover{border-color:var(--cream);transform:translateY(-1px)}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;padding:40px 32px;transition:all var(--transition)}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+section{padding:100px 0}
+.section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold);margin-bottom:16px}
+footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:0.8rem;color:var(--muted)}
+.footer-links{display:flex;gap:24px}.footer-links a{font-size:0.8rem;color:var(--muted)}.footer-links a:hover{color:var(--cream)}
+
+.page-hero{padding:160px 0 60px;text-align:center}
+.page-hero p{color:var(--muted);max-width:600px;margin:16px auto 0;font-size:1.05rem}
+
+.calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
+.calc-inputs{position:sticky;top:100px}
+.input-group{margin-bottom:40px}
+.input-group label{display:block;font-family:var(--serif);font-size:1rem;margin-bottom:12px}
+.input-group .value-display{font-family:var(--serif);font-size:1.4rem;color:var(--gold);margin-bottom:12px}
+.input-group input[type="range"]{-webkit-appearance:none;width:100%;height:4px;background:rgba(245,240,232,0.1);border-radius:2px;outline:none;cursor:pointer}
+.input-group input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;background:var(--gold);border-radius:50%;cursor:pointer;border:3px solid var(--bg)}
+.input-group input[type="range"]::-moz-range-thumb{width:20px;height:20px;background:var(--gold);border-radius:50%;cursor:pointer;border:3px solid var(--bg)}
+.input-range-labels{display:flex;justify-content:space-between;margin-top:8px;font-size:0.75rem;color:var(--muted)}
+
+.calc-results .result-card{margin-bottom:24px;padding:32px}
+.result-label{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:8px}
+.result-value{font-family:var(--serif);font-size:2.4rem;color:var(--gold);transition:all 0.3s ease}
+.result-sub{font-size:0.85rem;color:var(--muted);margin-top:4px}
+
+.result-highlight{border-color:var(--gold) !important;background:rgba(201,162,39,0.06) !important}
+
+.agent-hours-card{margin-top:24px;padding:32px;background:rgba(201,162,39,0.03);border:1px solid rgba(201,162,39,0.1);border-radius:6px}
+.agent-hours-card h4{font-size:0.95rem;margin-bottom:16px}
+.hours-comparison{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;text-align:center}
+.hours-block .hours-num{font-family:var(--serif);font-size:1.6rem;margin-bottom:4px}
+.hours-block .hours-label{font-size:0.78rem;color:var(--muted)}
+.hours-block.human .hours-num{color:var(--muted)}
+.hours-block.agent .hours-num{color:var(--gold)}
+.hours-vs{font-family:var(--serif);font-size:0.9rem;color:var(--muted)}
+
+.calc-ctas{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap}
+
+.final-cta{text-align:center;padding:120px 0;border-top:1px solid rgba(245,240,232,0.06)}
+.final-cta h2{margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}
+  .calc-layout{grid-template-columns:1fr}
+  .calc-inputs{position:static}
+  .page-hero{padding:120px 0 40px}
+  section{padding:60px 0}
+  .result-value{font-size:1.8rem}
+  .hours-comparison{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">EAS</a>
+    <ul class="nav-links">
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="playbooks.html">Playbooks</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="packages.html">Packages</a>
+  <a href="results.html">Results</a>
+  <a href="playbooks.html">Playbooks</a>
+  <a href="calculator.html">Calculator</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html">Book a Call</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label fade-up">Calculator</div>
+    <h1 class="fade-up">See what an AI agent saves you every month.</h1>
+    <p class="fade-up">Drag the sliders. An AI agent works 24/7, 720 hours per month, at $0/hour. Compare that to what you're paying humans to do the same work.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- INPUTS -->
+      <div class="calc-inputs fade-up">
+        <div class="input-group">
+          <label>Team size doing this work</label>
+          <div class="value-display" id="teamDisplay">5 people</div>
+          <input type="range" id="teamSize" min="1" max="50" value="5" oninput="calculate()">
+          <div class="input-range-labels"><span>1</span><span>50</span></div>
+        </div>
+
+        <div class="input-group">
+          <label>Average hourly rate (fully loaded)</label>
+          <div class="value-display" id="rateDisplay">$72/hr</div>
+          <input type="range" id="hourlyRate" min="25" max="200" value="72" step="1" oninput="calculate()">
+          <div class="input-range-labels"><span>$25</span><span>$200</span></div>
+        </div>
+
+        <div class="input-group">
+          <label>Hours per week on tasks an agent could handle</label>
+          <div class="value-display" id="hoursDisplay">10 hrs/wk</div>
+          <input type="range" id="wastedHours" min="1" max="40" value="10" oninput="calculate()">
+          <div class="input-range-labels"><span>1 hr</span><span>40 hrs</span></div>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="calc-results fade-up">
+        <div class="card result-card">
+          <div class="result-label">Monthly value recovered</div>
+          <div class="result-value" id="monthlyValue">$15,588</div>
+          <div class="result-sub">What you're spending on work an AI agent could do</div>
+        </div>
+
+        <div class="card result-card result-highlight">
+          <div class="result-label">Annual savings</div>
+          <div class="result-value" id="annualValue">$187,056</div>
+          <div class="result-sub">Recovered value if you install the agent now</div>
+        </div>
+
+        <div class="card result-card">
+          <div class="result-label">Recommended starting tier</div>
+          <div class="result-value" id="recommendedTier" style="font-size:1.5rem">AI Agent Install</div>
+          <div class="result-sub" id="tierReason">Monthly savings justify a $3,000-$7,000 agent install</div>
+        </div>
+
+        <div class="card result-card">
+          <div class="result-label">Estimated payback</div>
+          <div class="result-value" id="paybackDays">7 days</div>
+          <div class="result-sub">Time to recover your agent install investment</div>
+        </div>
+
+        <!-- AGENT HOURS COMPARISON -->
+        <div class="agent-hours-card">
+          <h4>The math that matters</h4>
+          <div class="hours-comparison">
+            <div class="hours-block human">
+              <div class="hours-num" id="humanHours">43 hrs/mo</div>
+              <div class="hours-label">Your team on these tasks</div>
+            </div>
+            <div class="hours-vs">vs</div>
+            <div class="hours-block agent">
+              <div class="hours-num">720 hrs/mo</div>
+              <div class="hours-label">AI agent (24/7, $0/hr)</div>
+            </div>
+          </div>
+          <p style="font-size:0.82rem;color:var(--muted);margin-top:16px;text-align:center">An AI agent works every hour of every day. No PTO, no sick days, no overtime. It does in a weekend what takes a team a month.</p>
+        </div>
+
+        <div class="calc-ctas">
+          <a href="book.html" class="btn btn-gold">Book your agent install</a>
+          <a href="#" class="btn btn-outline" onclick="shareResults();return false;">Share these numbers</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container fade-up">
+    <h2>Numbers look right? Let's figure out which agent makes sense for your team.</h2>
+    <div class="cta-buttons">
+      <a href="book.html" class="btn btn-gold">Book a 15-minute assessment</a>
+      <a href="packages.html" class="btn btn-outline">See packages</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Enterprise Automation Solutions. All rights reserved.</div>
+    <div class="footer-links"><a href="contact.html">Privacy</a><a href="contact.html">Contact</a><a href="book.html">Book a Call</a></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+function calculate(){
+  const team=parseInt(document.getElementById('teamSize').value);
+  const rate=parseInt(document.getElementById('hourlyRate').value);
+  const hours=parseInt(document.getElementById('wastedHours').value);
+
+  document.getElementById('teamDisplay').textContent=team+(team===1?' person':' people');
+  document.getElementById('rateDisplay').textContent='$'+rate+'/hr';
+  document.getElementById('hoursDisplay').textContent=hours+(hours===1?' hr/wk':' hrs/wk');
+
+  const monthly=Math.round(team*rate*hours*4.33);
+  const annual=monthly*12;
+  const humanMonthly=Math.round(team*hours*4.33);
+
+  document.getElementById('monthlyValue').textContent='$'+monthly.toLocaleString();
+  document.getElementById('annualValue').textContent='$'+annual.toLocaleString();
+  document.getElementById('humanHours').textContent=humanMonthly+' hrs/mo';
+
+  let tier,reason,pilotPrice;
+  if(monthly<4000){
+    tier='AI Agent Install';
+    reason='Start with a single agent ($3,000-$7,000). Your savings justify the install in the first month.';
+    pilotPrice=3000;
+  } else if(monthly<10000){
+    tier='AI Agent Install';
+    reason='A single agent at $3,000-$7,000 pays for itself in '+Math.max(1,Math.round(5000/monthly*30))+' days. Start here, add more agents later.';
+    pilotPrice=5000;
+  } else if(monthly<25000){
+    tier='Intelligence System';
+    reason='At $'+monthly.toLocaleString()+'/mo in recoverable value, a Tier 2 Intelligence System ($8k-$20k) makes sense. You could also start with 2 agents.';
+    pilotPrice=12000;
+  } else {
+    tier='Autonomous Operations';
+    reason='You\'re losing $'+monthly.toLocaleString()+'/mo. A full multi-agent system ($15k-$40k) pays for itself in weeks, not months.';
+    pilotPrice=25000;
+  }
+
+  document.getElementById('recommendedTier').textContent=tier;
+  document.getElementById('tierReason').textContent=reason;
+
+  const paybackDays=Math.max(1,Math.round(pilotPrice/monthly*30));
+  document.getElementById('paybackDays').textContent=paybackDays+(paybackDays===1?' day':' days');
+}
+
+function shareResults(){
+  const team=document.getElementById('teamSize').value;
+  const rate=document.getElementById('hourlyRate').value;
+  const hours=document.getElementById('wastedHours').value;
+  const monthly=document.getElementById('monthlyValue').textContent;
+  const annual=document.getElementById('annualValue').textContent;
+  const tier=document.getElementById('recommendedTier').textContent;
+
+  const text='AI Agent ROI estimate:\n\n'+
+    'Team: '+team+' people\n'+
+    'Rate: $'+rate+'/hr\n'+
+    'Manual hours/wk: '+hours+'\n\n'+
+    'Monthly recoverable: '+monthly+'\n'+
+    'Annual savings: '+annual+'\n'+
+    'Recommended: '+tier+'\n\n'+
+    'An AI agent works 720 hrs/mo at $0/hr.\n'+
+    'Calculate yours: enterpriseautomationsolutions.com/calculator';
+
+  if(navigator.share){
+    navigator.share({title:'AI Agent ROI Calculator',text:text});
+  } else if(navigator.clipboard){
+    navigator.clipboard.writeText(text);
+    alert('Results copied to clipboard.');
+  }
+}
+
+calculate();
+</script>
+
+</body>
+</html>

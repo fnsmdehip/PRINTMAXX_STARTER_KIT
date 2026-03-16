@@ -247,16 +247,46 @@ PYTHON=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
 30 8 * * * cd $BASE && $PYTHON AUTOMATIONS/inbound_lead_tracker.py --scan >> AUTOMATIONS/logs/inbound_lead_tracker.log 2>&1
 
 # =============================================================================
-# GAP HUNTER ADDITIONS (2026-03-14) — high-value scrapers + app factory autopilot
+# GAP HUNTER ADDITIONS — 2026-03-14 19:30 (Cycle 4)
 # =============================================================================
-# Twitter deep scraper - bookmarks + high-signal accounts via Brave cookie injection
-# Runs at 7:00 AM (after daily_twitter_scraper at 6:05 AM)
-0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/twitter_alpha_scraper.py --all >> AUTOMATIONS/logs/twitter_alpha_scraper.log 2>&1
 
-# Reddit deep scraper - 41+ subreddits via JSON API, deep comment scraping
-# Runs at 7:15 AM (after daily_reddit_scraper at 6:15 AM)
-15 7 * * * cd $BASE && $PYTHON AUTOMATIONS/reddit_deep_scraper.py --all >> AUTOMATIONS/logs/reddit_deep_scraper.log 2>&1
+# Intelligence router: routes alpha to ventures before actions (every 3h)
+20 */3 * * * cd $BASE && $PYTHON AUTOMATIONS/intelligence_router.py --venture ALL --task general --json >> AUTOMATIONS/logs/intelligence_router.log 2>&1
 
-# App factory autopilot - bookmarks/accounts scrape + auto-approve + spec gen + queue refresh
-# Runs at 8:45 AM (after alpha_staging refreshed by alpha_auto_processor at 8:00 AM)
-45 8 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_autopilot.py --run >> AUTOMATIONS/logs/app_factory_autopilot.log 2>&1
+# Master ops bridge: rebuild xlsx cache (every 6h, 12h TTL)
+30 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/master_ops_bridge.py --rebuild >> AUTOMATIONS/logs/master_ops_bridge.log 2>&1
+
+# App factory autopilot: auto-approve + process bookmarks (daily 7 AM)
+0 7 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_autopilot.py --run >> AUTOMATIONS/logs/app_factory_autopilot.log 2>&1
+
+# App factory command center: refresh priority queue (every 6h)
+0 */6 * * * cd $BASE && $PYTHON AUTOMATIONS/app_factory_command_center.py --refresh --top 8 >> AUTOMATIONS/logs/app_factory_command_center.log 2>&1
+
+# Compliance scanner: content compliance audit (daily 9 PM)
+0 21 * * * cd $BASE && $PYTHON AUTOMATIONS/compliance_scanner.py --audit-all >> AUTOMATIONS/logs/compliance_scanner.log 2>&1
+
+# =============================================================================
+# RESTRUCTURE_V2 AGENTS — Added 2026-03-15
+# All use jitter_run.sh to prevent simultaneous API hits
+# =============================================================================
+
+# 8:00 AM daily - Shakespeare agent (content generation, --dry-run until posting accounts live)
+0 8 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/shakespeare_agent.py --generate --dry-run >> AUTOMATIONS/logs/shakespeare.log 2>&1
+
+# Every 4 hours - Observer agent (engagement monitoring)
+0 */4 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/observer_agent.py --scan >> AUTOMATIONS/logs/observer.log 2>&1
+
+# 9:00 AM daily - Quinn agent (warm outreach, --dry-run until outreach channels live)
+0 9 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/quinn_agent.py --process --dry-run >> AUTOMATIONS/logs/quinn.log 2>&1
+
+# 10:00 AM daily - Challenger agents (review CEO decisions)
+0 10 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/challenger_agents.py --review >> AUTOMATIONS/logs/challenger.log 2>&1
+
+# Every 2 hours (offset :30) - Gates health check
+30 */2 * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/gates.py --stats >> AUTOMATIONS/logs/gates.log 2>&1
+
+# Every hour (offset :15) - Task graph dependency readiness check
+15 * * * * cd $BASE && bash AUTOMATIONS/jitter_run.sh 180 $PYTHON AUTOMATIONS/task_graph.py --ready >> AUTOMATIONS/logs/task_graph.log 2>&1
+
+# 11:00 PM daily - Conversation logger: extract Claude session transcripts
+0 23 * * * cd $BASE && $PYTHON AUTOMATIONS/conversation_logger.py --extract >> AUTOMATIONS/logs/conversation_logger.log 2>&1

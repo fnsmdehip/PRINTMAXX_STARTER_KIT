@@ -1,0 +1,275 @@
+{
+  "journaling_habit": {
+    "incumbent_ratings": 280000,
+    "incumbent": "Day One",
+    "apps_found": [
+      {
+        "name": "Day One Journal",
+        "price": 0,
+        "ratings": 280000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Journey Journal",
+        "price": 0,
+        "ratings": 45000,
+        "type": "free"
+      },
+      {
+        "name": "Diarly",
+        "price": 0,
+        "ratings": 12000,
+        "type": "free"
+      },
+      {
+        "name": "Grid Diary",
+        "price": 0,
+        "ratings": 8000,
+        "type": "free"
+      },
+      {
+        "name": "Reflectly",
+        "price": 0,
+        "ratings": 30000,
+        "type": "free+sub"
+      }
+    ],
+    "paid_upfront_count": 0,
+    "blue_ocean": true,
+    "analysis": "No paid-upfront journaling streak apps. All major players are free/sub. Gap: simple $1.99 streak-focused journal."
+  },
+  "fitness_streak": {
+    "incumbent_ratings": 1200000,
+    "incumbent": "Strava",
+    "apps_found": [
+      {
+        "name": "Strava",
+        "price": 0,
+        "ratings": 1200000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Nike Run Club",
+        "price": 0,
+        "ratings": 850000,
+        "type": "free"
+      },
+      {
+        "name": "Streaks Workout",
+        "price": 2.99,
+        "ratings": 25000,
+        "type": "paid"
+      },
+      {
+        "name": "Fitbod",
+        "price": 0,
+        "ratings": 98000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Strong",
+        "price": 0,
+        "ratings": 45000,
+        "type": "free+sub"
+      }
+    ],
+    "paid_upfront_count": 1,
+    "blue_ocean": false,
+    "analysis": "Streaks Workout ($2.99, 25K ratings) occupies paid slot. But specialized niches (running-only streak, lifting-only streak) still open. Consider differentiated angle."
+  },
+  "chess_habit": {
+    "incumbent_ratings": 431000,
+    "incumbent": "Chess.com",
+    "apps_found": [
+      {
+        "name": "Chess.com",
+        "price": 0,
+        "ratings": 431000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Lichess",
+        "price": 0,
+        "ratings": 89000,
+        "type": "free"
+      },
+      {
+        "name": "Magnus Trainer",
+        "price": 0,
+        "ratings": 15000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Chess Tactics Pro",
+        "price": 1.99,
+        "ratings": 3200,
+        "type": "paid"
+      },
+      {
+        "name": "Chess Clock",
+        "price": 0,
+        "ratings": 12000,
+        "type": "free"
+      }
+    ],
+    "paid_upfront_count": 1,
+    "blue_ocean": false,
+    "analysis": "Chess Tactics Pro ($1.99) is tiny (3.2K ratings). Chess daily practice habit tracker with puzzle streak \u2014 VALID gap at $0.99-$1.99 level."
+  },
+  "art_drawing_streak": {
+    "incumbent_ratings": 1900000,
+    "incumbent": "Procreate",
+    "apps_found": [
+      {
+        "name": "Procreate",
+        "price": 12.99,
+        "ratings": 1900000,
+        "type": "paid"
+      },
+      {
+        "name": "Adobe Fresco",
+        "price": 0,
+        "ratings": 45000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Sketchbook",
+        "price": 0,
+        "ratings": 78000,
+        "type": "free"
+      },
+      {
+        "name": "Art Set 4",
+        "price": 4.99,
+        "ratings": 22000,
+        "type": "paid"
+      },
+      {
+        "name": "Daily Art Practice",
+        "price": 0,
+        "ratings": 1200,
+        "type": "free"
+      }
+    ],
+    "paid_upfront_count": 2,
+    "blue_ocean": false,
+    "analysis": "Procreate dominates but is full-featured. Art streak tracker (companion app, not drawing tool) \u2014 track daily practice minutes/streaks \u2014 zero paid entrants in TRACKER category."
+  },
+  "music_practice_streak": {
+    "incumbent_ratings": 107000,
+    "incumbent": "Yousician",
+    "apps_found": [
+      {
+        "name": "Yousician",
+        "price": 0,
+        "ratings": 107000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Simply Piano",
+        "price": 0,
+        "ratings": 156000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Tonestro",
+        "price": 0,
+        "ratings": 8000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Practice+",
+        "price": 4.99,
+        "ratings": 1800,
+        "type": "paid"
+      },
+      {
+        "name": "Metronome Beats",
+        "price": 0,
+        "ratings": 45000,
+        "type": "free"
+      }
+    ],
+    "paid_upfront_count": 1,
+    "blue_ocean": false,
+    "analysis": "Practice+ ($4.99, only 1.8K ratings) = weak incumbent. Music practice streak tracker with simple timer + streak = VALID gap at $0.99-$1.99."
+  },
+  "water_reminder": {
+    "incumbent_ratings": 151935,
+    "incumbent": "Drink Water Reminder",
+    "apps_found": [
+      {
+        "name": "Drink Water Reminder",
+        "price": 0,
+        "ratings": 151935,
+        "type": "free+ads"
+      },
+      {
+        "name": "WaterMinder",
+        "price": 0,
+        "ratings": 35000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Hydro Coach",
+        "price": 0,
+        "ratings": 28000,
+        "type": "free"
+      },
+      {
+        "name": "Plant Nanny",
+        "price": 0,
+        "ratings": 65000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Water Tracker Daily",
+        "price": 0,
+        "ratings": 18000,
+        "type": "free+ads"
+      }
+    ],
+    "paid_upfront_count": 0,
+    "blue_ocean": true,
+    "analysis": "CONFIRMED: Still 0 paid-upfront water streak apps. Blue ocean intact. WaterStreak at $1.99 opportunity persists. Total demand 151K+ ratings validated."
+  },
+  "reading_tracker": {
+    "incumbent_ratings": 709733,
+    "incumbent": "Goodreads",
+    "apps_found": [
+      {
+        "name": "Goodreads",
+        "price": 0,
+        "ratings": 709733,
+        "type": "free"
+      },
+      {
+        "name": "StoryGraph",
+        "price": 0,
+        "ratings": 12000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Bookly",
+        "price": 0,
+        "ratings": 35000,
+        "type": "free+sub"
+      },
+      {
+        "name": "Reading List",
+        "price": 0,
+        "ratings": 8500,
+        "type": "free"
+      },
+      {
+        "name": "Book Tracker",
+        "price": 0,
+        "ratings": 5200,
+        "type": "free"
+      }
+    ],
+    "paid_upfront_count": 0,
+    "blue_ocean": true,
+    "analysis": "CONFIRMED: Still 0 paid-upfront reading streak apps. Goodreads 709K demand validated. ReadStreak at $1.99 opportunity still open."
+  }
+}

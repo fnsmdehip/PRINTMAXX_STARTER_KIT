@@ -1459,3 +1459,110 @@ We built Cal AI to $1.8 million MRR from our high school classrooms
 
 There is nothing stopping you
 
+
+
+---
+
+## Pending Enhancement (ALPHA23020, Score: 51)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2030633793644564782
+**Added:** 2026-03-15T04:19:30-04:00
+
+🚨 BREAKING — one of the strongest OpenClaw setups on Polymarket just went public.
+
+A trader reportedly turned ~$100–200 into ~$3.7M.
+
+No insider info.
+No political connections.
+Just automation built with OpenClaw.
+
+Profile →
+ https://t.co/umVfQ5lDFv
+
+Copytrade https://t.co/kt7i6Azx3Q
+
+
+
+---
+
+## Pending Enhancement (ALPHA98732, Score: 29)
+
+**Source:** hackernews | **URL:** https://ml.ink/
+**Added:** 2026-03-15T04:19:31-04:00
+
+Ink - deploy full-stack apps from AI agents via MCP or Skills. 26 HN points. Platform where primary users are AI agents, not humans. Auto-deployment from agent output. Could automate PRINTMAXX app factory deployment pipeline - agents build apps, Ink deploys them.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100018, Score: 20)
+
+**Source:** @shannholmberg (bookmarks) | **URL:** https://x.com/shannholmberg/status/2032835035985072206
+**Added:** 2026-03-15T06:15:02-04:00
+
+Cancel your weekend plans
+
+if you work in marketing, you need to catch up
+
+> set up claude code (superpowers, skip permissions, obsidian integration)
+> create your brand foundation file (voice, tone, audience, what you never say)
+> map out your workflows and see where you can
+
+
+
+---
+
+## Pending Enhancement (ALPHA100445, Score: 42)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2032835035985072206
+**Added:** 2026-03-15T06:41:25-04:00
+
+Cancel your weekend plans
+
+if you work in marketing, you need to catch up
+
+&gt; set up claude code (superpowers, skip permissions, obsidian integration)
+&gt; create your brand foundation file (voice, tone, audience, what you never say)
+&gt; map out your workflows and see where you can
+
+
+
+---
+
+## Pending Enhancement (ALPHA100468, Score: 29)
+
+**Source:** @lookonchain (high-signal-accounts) | **URL:** https://x.com/lookonchain/status/2033120860954063121
+**Added:** 2026-03-15T08:55:29-04:00
+
+After holding $TRUMP for 8 months, whale 2sBcbh finally gave up and sold 211,343 $TRUMP($847K) at a $1.29M loss. 
+
+He bought 211,343 $TRUMP($2.13M) at $10 eight months ago.
+
+He also bought 18,787 $SOL($3.29M) at $175 and is now down $1.62M.
+
+
+https://
+intel.arkm.com/explorer/addre
+ss/2sBcbhsfHqiqtuiCpf33BxzkmgPtT4HU2xUuFZuiXn87
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA100688, Score: 28)
+
+**Source:** @Argona0x (high-signal-accounts) | **URL:** https://x.com/Argona0x/status/2033236537538642027
+**Added:** 2026-03-16T00:41:07-04:00
+
+i pointed Claude Code at the pentagon's public budget document and told it to find every contract overpaying by 10x or more
+
+it came back with 340 results worth $4.2B in potential undercuts
+
+and a business plan i didn't ask for
+
+i fed it the 
+http://
+FPDS.gov procurement
+

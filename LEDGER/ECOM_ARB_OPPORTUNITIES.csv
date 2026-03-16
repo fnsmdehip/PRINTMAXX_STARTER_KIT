@@ -2,11 +2,19 @@ product_name,source,source_price,selling_platform,estimated_sell_price,fees,ship
 Example Wireless Earbuds,Walmart,15.0,facebook,30.0,1.5,5.0,8.5,28.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
 Example Wireless Earbuds,Walmart,15.0,mercari,30.0,3.0,5.0,7.0,23.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
 Example Wireless Earbuds,Walmart,15.0,ebay,30.0,3.98,5.0,6.02,20.08,https://walmart.com/clearance/electronics,electronics,API integration required for live data
-2026-03-15T04:00:54.338052,led face mask,beauty,42.99,16.5,FB Marketplace,16.34,38.0,16,44.5,LIST,2.15,0.0,8.0,0.0,26.65,amazon,medium
-2026-03-15T04:00:23.210734,ice roller face,health,14.34,2.75,FB Marketplace,6.37,44.4,0,27.3,LIST,0.72,0.0,4.5,0.0,7.97,ebay,light
-2026-03-15T04:01:33.726114,portable blender,kitchen,12.99,8.5,FB Marketplace,-4.16,-32.0,12,-15.4,SKIP,0.65,0.0,8.0,0.0,17.15,amazon,medium
-2026-03-15T04:03:12.774786,grip strength trainer,fitness,4.59,2.75,FB Marketplace,-2.89,-63.0,0,-29.5,SKIP,0.23,0.0,4.5,0.0,7.48,amazon,light
-2026-03-15T04:02:46.039790,resistance bands set,fitness,3.39,3.5,FB Marketplace,-4.78,-141.0,0,-63.6,SKIP,0.17,0.0,4.5,0.0,8.17,amazon,light
-2026-03-15T04:00:35.784558,neck stretcher,health,5.99,5.5,FB Marketplace,-7.81,-130.4,0,-63.9,SKIP,0.3,0.0,8.0,0.0,13.8,amazon,medium
-2026-03-15T04:00:29.707822,gua sha tool,health,2.39,2.0,FB Marketplace,-4.23,-177.0,8,-74.7,SKIP,0.12,0.0,4.5,0.0,6.62,amazon,light
-2026-03-15T04:03:31.174567,cat water fountain,pet,5.99,8.5,FB Marketplace,-10.81,-180.5,12,-84.8,SKIP,0.3,0.0,8.0,0.0,16.8,amazon,medium
+2026-03-16T06:03:24.828221,yoga mat,fitness,26.99,7.0,FB Marketplace,14.14,52.4,50,57.2,LIST,1.35,0.0,4.5,0.0,12.85,amazon,light
+2026-03-16T06:01:02.770257,led face mask,beauty,39.99,16.5,FB Marketplace,13.49,33.7,50,48.7,LIST,2.0,0.0,8.0,0.0,26.5,amazon,medium
+2026-03-16T06:00:33.803248,gua sha tool,health,15.0,2.0,FB Marketplace,7.75,51.7,50,47.3,LIST,0.75,0.0,4.5,0.0,7.25,amazon+ebay,light
+2026-03-16T06:02:53.097450,cable organizer,tech,12.99,2.0,FB Marketplace,5.84,45.0,50,41.8,LIST,0.65,0.0,4.5,0.0,7.15,amazon,light
+2026-03-16T06:03:17.528163,pull up bar,fitness,18.68,8.5,FB Marketplace,1.25,6.7,50,19.6,WATCH,0.93,0.0,8.0,0.0,17.43,amazon,medium
+2026-03-16T06:02:26.232518,wireless earbuds,tech,11.99,6.5,FB Marketplace,-3.11,-25.9,50,-0.0,SKIP,0.6,0.0,8.0,0.0,15.1,amazon,medium
+2026-03-16T06:01:50.237129,air fryer liner,kitchen,4.34,2.0,FB Marketplace,-2.38,-54.8,50,-10.5,SKIP,0.22,0.0,4.5,0.0,6.72,amazon,light
+2026-03-16T06:03:54.629856,dog puzzle toy,pet,6.99,5.5,FB Marketplace,-6.86,-98.1,50,-34.5,SKIP,0.35,0.0,8.0,0.0,13.85,amazon,medium
+2026-03-16T06:04:38.156817,shower head filter,home,6.95,5.5,FB Marketplace,-6.9,-99.2,50,-35.0,SKIP,0.35,0.0,8.0,0.0,13.85,amazon,medium
+2026-03-16T06:04:57.490095,shoe rack,home,8.55,8.5,FB Marketplace,-8.38,-98.0,50,-36.8,SKIP,0.43,0.0,8.0,0.0,16.93,amazon,medium
+2026-03-16T06:03:10.010377,resistance bands set,fitness,3.69,3.5,FB Marketplace,-4.49,-121.8,50,-40.5,SKIP,0.18,0.0,4.5,0.0,8.18,amazon,light
+2026-03-16T06:03:32.286534,jump rope weighted,fitness,3.4,3.5,FB Marketplace,-4.77,-140.3,50,-48.3,SKIP,0.17,0.0,4.5,0.0,8.17,amazon,light
+2026-03-16T06:02:04.591116,vegetable chopper,kitchen,4.99,5.5,FB Marketplace,-8.76,-175.5,50,-68.3,SKIP,0.25,0.0,8.0,0.0,13.75,amazon,medium
+2026-03-16T06:01:58.436902,knife sharpener,kitchen,2.71,4.0,FB Marketplace,-5.93,-218.7,50,-81.4,SKIP,0.14,0.0,4.5,0.0,8.64,amazon,light
+2026-03-16T06:04:00.862465,cat water fountain,pet,5.59,8.5,FB Marketplace,-11.19,-200.2,50,-81.9,SKIP,0.28,0.0,8.0,0.0,16.78,amazon,medium
+2026-03-16T06:00:46.619461,scalp massager,health,2.39,2.75,FB Marketplace,-8.48,-354.8,50,-139.6,SKIP,0.12,0.0,8.0,0.0,10.87,amazon,medium

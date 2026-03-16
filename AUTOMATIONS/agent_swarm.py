@@ -67,9 +67,11 @@ def log(msg: str, level: str = "INFO") -> None:
 # SWARM AGENT DEFINITIONS
 # ══════════════════════════════════════════════════════════════════════════
 
-# Model routing: ALL agents use Opus on Max plan. Zero API cost, max quality everywhere.
-# User rule: "ensure best output" — no Sonnet for anything, Opus handles all.
+# Smart model routing: right model for each task
+# Opus = strategy/creativity/quality. Sonnet = solid execution. Haiku = routine/maintenance.
 MODEL_OPUS = "claude-opus-4-6"
+MODEL_SONNET = "claude-sonnet-4-6"
+MODEL_HAIKU = "claude-haiku-4-5-20251001"
 
 SWARM_AGENTS = {
     # ── DISCOVERY AGENTS (Find what's missing, find opportunities) ────────
@@ -98,7 +100,7 @@ Rules: All files stay in {project}. Use real data. If you find something built b
         "category": "DISCOVERY",
         "description": "Web searches for new monetization opportunities matching our stack and skills",
         "interval_hours": 4,
-        "model": MODEL_OPUS,  # strategic evaluation of opportunities
+        "model": MODEL_SONNET,  # web search + basic analysis
         "prompt": """You are the OPPORTUNITY SCANNER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -119,7 +121,7 @@ Rules: All files stay in {project}. Real research only, no placeholder data. Foc
         "category": "DISCOVERY",
         "description": "Monitors competitor changes, pricing, new features, market moves",
         "interval_hours": 6,
-        "model": MODEL_OPUS,  # competitive analysis needs deep reasoning
+        "model": MODEL_SONNET,  # monitoring + basic analysis
         "prompt": """You are the COMPETITOR STALKER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -142,7 +144,7 @@ Rules: All files stay in {project}. Real competitors, real data.""",
         "category": "ACTION",
         "description": "Takes built apps/sites/products and deploys them to surge, vercel, gumroad, etc.",
         "interval_hours": 2,
-        "model": MODEL_OPUS,  # deploy what's built
+        "model": MODEL_HAIKU,  # deploy built assets — mostly mechanical
         "prompt": """You are the ASSET DEPLOYER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -206,7 +208,7 @@ Rules: All files stay in {project}. Follow copy-style.md. No AI slop. Lowercase 
         "category": "ACTION",
         "description": "Continuously finds, qualifies, and processes leads across all channels",
         "interval_hours": 3,
-        "model": MODEL_OPUS,  # lead qualification + outreach copy = strategic
+        "model": MODEL_SONNET,  # lead gen templates
         "prompt": """You are the LEAD MACHINE agent for PRINTMAXX.
 Working directory: {project}
 
@@ -233,7 +235,7 @@ Rules: All files stay in {project}. Real businesses, real contact info. No spam 
         "category": "OPTIMIZE",
         "description": "Continuously optimizes all deployed assets for search discovery",
         "interval_hours": 6,
-        "model": MODEL_OPUS,  # SEO keyword strategy + implementation
+        "model": MODEL_SONNET,  # keyword strategy
         "prompt": """You are the SEO/ASO OPTIMIZER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -263,7 +265,7 @@ Rules: All files stay in {project}. Real keyword data. Implement changes directl
         "category": "OPTIMIZE",
         "description": "Tests and improves CTAs, funnels, landing pages, and user flows",
         "interval_hours": 8,
-        "model": MODEL_OPUS,  # conversion copy is external-facing, needs best model
+        "model": MODEL_SONNET,  # testing + iteration
         "prompt": """You are the CONVERSION OPTIMIZER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -289,7 +291,7 @@ Rules: All files stay in {project}. Follow copy-style.md strictly. No AI slop in
         "category": "OPTIMIZE",
         "description": "Audits all output for quality — code, content, deployments, data",
         "interval_hours": 4,
-        "model": MODEL_OPUS,  # quality judgment needs best reasoning
+        "model": MODEL_HAIKU,  # checklist-style validation
         "prompt": """You are the QUALITY ENFORCER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -326,7 +328,7 @@ Rules: All files stay in {project}. Fix issues, don't just report them.""",
         "category": "INTELLIGENCE",
         "description": "Aggregates all scraped data into actionable trend reports and predictions",
         "interval_hours": 6,
-        "model": MODEL_OPUS,  # strategic analysis + predictions = Opus
+        "model": MODEL_HAIKU,  # aggregate data
         "prompt": """You are the TREND SYNTHESIZER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -356,7 +358,7 @@ Rules: All files stay in {project}. Real data, real analysis. No generic "AI is 
         "category": "INTELLIGENCE",
         "description": "Finds connections between ventures and creates compound value",
         "interval_hours": 4,
-        "model": MODEL_OPUS,  # finding non-obvious connections = deep reasoning
+        "model": MODEL_SONNET,  # cross-referencing
         "prompt": """You are the CROSS-POLLINATOR agent for PRINTMAXX.
 Working directory: {project}
 
@@ -384,7 +386,7 @@ Rules: All files stay in {project}. Create REAL connections, not just reports ab
         "category": "INTELLIGENCE",
         "description": "Tracks all revenue streams, finds gaps, projects growth, suggests increases",
         "interval_hours": 8,
-        "model": MODEL_OPUS,  # financial analysis + strategy = Opus
+        "model": MODEL_SONNET,  # financial tracking
         "prompt": """You are the REVENUE TRACKER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -416,7 +418,7 @@ Rules: All files stay in {project}. Real numbers only. $0 is a real number — b
         "category": "MAINTENANCE",
         "description": "Finds and fixes broken crons, dead processes, failed deploys, stale locks",
         "interval_hours": 2,
-        "model": MODEL_OPUS,  # infrastructure maintenance + root cause analysis
+        "model": MODEL_HAIKU,  # detect broken plists, stale files
         "prompt": """You are the SYSTEM HEALER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -449,7 +451,7 @@ Rules: All files stay in {project} (except launchd/cron which are system-level).
         "category": "MAINTENANCE",
         "description": "Deduplicates CSVs, cleans stale data, archives old logs, maintains data hygiene",
         "interval_hours": 12,
-        "model": MODEL_OPUS,  # data quality + dedup decisions
+        "model": MODEL_HAIKU,  # clean, dedupe, prune
         "prompt": """You are the DATA JANITOR agent for PRINTMAXX.
 Working directory: {project}
 
@@ -473,7 +475,7 @@ Rules: All files stay in {project}. NEVER delete original data — archive it. A
         "category": "GROWTH",
         "description": "Takes every asset and pushes it to every relevant channel — maximum surface area",
         "interval_hours": 3,
-        "model": MODEL_OPUS,  # distribution strategy + channel-native content = Opus
+        "model": MODEL_SONNET,  # channel-native content
         "prompt": """You are the DISTRIBUTION ENGINE agent for PRINTMAXX.
 Working directory: {project}
 
@@ -519,7 +521,7 @@ Rules: All files stay in {project}. Follow copy-style.md. Platform-native conten
         "category": "GROWTH",
         "description": "Optimizes all inbound channels — SEO, content, social, referrals — for maximum lead flow",
         "interval_hours": 4,
-        "model": MODEL_OPUS,  # inbound strategy + lead magnets = Opus
+        "model": MODEL_SONNET,  # lead magnets
         "prompt": """You are the INBOUND MAXIMIZER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -718,7 +720,7 @@ Rules: All files stay in {project}. Prioritize revenue-generating actions over e
         "category": "MEDIA",
         "description": "Remotion-based auto video generation — product demos, before/after, social clips, explainers",
         "interval_hours": 6,
-        "model": MODEL_OPUS,  # video scripting + composition design = creative Opus work
+        "model": MODEL_SONNET,  # script-based video gen
         "prompt": """You are the VIDEO FACTORY agent for PRINTMAXX.
 Working directory: {project}
 
@@ -767,7 +769,7 @@ Rules: All files stay in {project}.""",
         "category": "MEDIA",
         "description": "HTML-to-image pipeline for social graphics, product mockups, data visualizations — zero cost, high quality",
         "interval_hours": 3,
-        "model": MODEL_OPUS,  # visual design decisions need creative intelligence
+        "model": MODEL_SONNET,  # template-based image gen
         "prompt": """You are the IMAGE FACTORY agent for PRINTMAXX.
 Working directory: {project}
 
@@ -888,7 +890,7 @@ Rules: All files stay in {project}.""",
         "category": "QUALITY",
         "description": "Automated Playwright testing of all deployed sites — catches broken deploys, 404s, rendering issues",
         "interval_hours": 4,
-        "model": MODEL_OPUS,  # test execution + failure analysis
+        "model": MODEL_HAIKU,  # run tests, report results
         "prompt": """You are the PLAYWRIGHT TESTER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -943,7 +945,7 @@ Rules: All files stay in {project}. Test with real URLs. Screenshot every site."
         "category": "NOTIFICATION",
         "description": "Sends macOS push notifications for high-value events — new leads, revenue, broken deploys, opportunities",
         "interval_hours": 1,
-        "model": MODEL_OPUS,  # event classification + priority routing
+        "model": MODEL_SONNET,  # event routing
         "prompt": """You are the ALERT DISPATCHER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -1031,7 +1033,7 @@ Rules: All files stay in {project}. Base everything on real intelligence data, n
         "category": "GROWTH",
         "description": "Posts APPROVED content to social platforms — currently queues to drafts, posts when API access available",
         "interval_hours": 3,
-        "model": MODEL_OPUS,  # content quality + platform optimization
+        "model": MODEL_SONNET,  # posting
         "prompt": """You are the SOCIAL POSTER agent for PRINTMAXX.
 Working directory: {project}
 
@@ -1168,11 +1170,21 @@ def generate_plist(agent_id: str, agent_def: dict[str, Any]) -> tuple[str, str]:
     # Inject intelligence briefing for agents that have venture mappings
     intel_briefing = get_agent_intelligence(agent_id)
 
+    # Agentic loop directive — appended to every agent's prompt
+    agentic_suffix = (
+        "\n\nAGENTIC EXECUTION:\n"
+        "Do NOT stop after one step. Keep going until the task is COMPLETE or you hit a blocker.\n"
+        "- Read state -> Plan -> Execute -> Verify -> If more work needed, CONTINUE\n"
+        "- If you find sub-tasks while working, do them now, don't defer\n"
+        "- Only stop when: (a) task fully complete, (b) human action required, (c) 15+ tool calls made (safety limit)\n"
+        f"- Write completion status to AUTOMATIONS/agent/swarm/reports/{agent_id}_report_{{date}}.md"
+    )
+
     # Build the prompt — escape for XML
     prompt = intel_briefing + agent_def["prompt"].format(
         project=str(PROJECT),
         date=datetime.now().strftime("%Y%m%d"),
-    )
+    ) + agentic_suffix.format(date=datetime.now().strftime("%Y%m%d"))
     # Escape XML special chars
     prompt_escaped = (prompt
         .replace("&", "&amp;")
@@ -1309,7 +1321,7 @@ def show_status() -> None:
             exit_code = next((e for a, e in installed if a == aid), "-")
             status = "LIVE" if is_installed else "OFF"
             health = "OK" if exit_code == "0" else ("ERR" if is_installed else "-")
-            mdl = "OPUS" if adef.get("model") == MODEL_OPUS else "SNT"
+            mdl = "OPUS" if adef.get("model") == MODEL_OPUS else ("SNT" if adef.get("model") == MODEL_SONNET else "HKU")
             print(f"  {status:>4} {aid:<25} every {adef['interval_hours']:>2}h  {mdl:>4} {health:>3}  {adef['description'][:35]}")
 
     # Check for recent reports

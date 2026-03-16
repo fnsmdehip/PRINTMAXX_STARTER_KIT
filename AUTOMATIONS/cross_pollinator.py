@@ -2838,6 +2838,310 @@ def wire_gap_reports_to_ceo():
     return len(gaps)
 
 
+# ─── CONNECTION 54: Community Intel → Cold Outreach Leads ─────────────────
+# 4,678 community intel rows (freelance requests, build needs) → outreach leads
+def wire_community_intel_to_outreach():
+    ci_path = LEDGER / "COMMUNITY_INTEL.csv"
+    if not ci_path.exists():
+        return 0
+
+    # Track what we've already processed
+    processed_path = safe_path(LEADS / "community_intel_processed.json")
+    processed = set()
+    if processed_path.exists():
+        processed = set(json.loads(processed_path.read_text()))
+
+    rows = load_csv(ci_path, max_rows=200)
+    new_leads = []
+
+    for row in rows:
+        url = row.get("post_url", "")
+        if not url or url in processed:
+            continue
+
+        signal = row.get("signal_type", "").lower()
+        text = row.get("signal_text", "") or row.get("title", "")
+        subreddit = row.get("subreddit_or_community", "")
+
+        # Only wire freelance/hiring/build requests
+        if signal not in ("freelance", "hiring", "build_request", "revenue", "pain_point"):
+            continue
+
+        # Check for budget signals
+        numbers = row.get("extracted_numbers", "")
+        score = int(row.get("score", "0") or "0")
+
+        if score < 5 and not numbers:
+            continue
+
+        new_leads.append({
+            "source": f"community_intel_{subreddit}",
+            "url": url,
+            "text": text[:300],
+            "signal_type": signal,
+            "budget_signals": numbers,
+            "score": score,
+            "found_date": row.get("timestamp", datetime.now().isoformat()),
+            "status": "NEW"
+        })
+        processed.add(url)
+
+    if new_leads:
+        out_path = safe_path(LEADS / "community_intel_leads.jsonl")
+        with open(out_path, "a") as f:
+            for lead in new_leads:
+                f.write(json.dumps(lead) + "\n")
+        processed_path.write_text(json.dumps(list(processed)))
+
+    return len(new_leads)
+
+
+# ─── CONNECTION 55: Community Intel → App Factory Demand ──────────────────
+# Build requests from communities → app demand signals for factory
+def wire_community_intel_to_app_factory():
+    ci_path = LEDGER / "COMMUNITY_INTEL.csv"
+    if not ci_path.exists():
+        return 0
+
+    processed_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "ci_app_demand_processed.json")
+    processed = set()
+    if processed_path.exists():
+        processed = set(json.loads(processed_path.read_text()))
+
+    rows = load_csv(ci_path, max_rows=300)
+    demand_signals = []
+
+    for row in rows:
+        url = row.get("post_url", "")
+        if not url or url in processed:
+            continue
+
+        text = (row.get("signal_text", "") or row.get("title", "")).lower()
+        signal = row.get("signal_type", "").lower()
+
+        # Look for app/tool/build demand
+        app_keywords = ["build", "app", "tool", "saas", "automat", "bot", "scrip", "software", "platform", "website"]
+        if not any(kw in text for kw in app_keywords):
+            continue
+
+        score = int(row.get("score", "0") or "0")
+        if score < 3:
+            continue
+
+        demand_signals.append({
+            "source_url": url,
+            "demand_text": text[:400],
+            "signal_type": signal,
+            "community": row.get("subreddit_or_community", ""),
+            "score": score,
+            "extracted_numbers": row.get("extracted_numbers", ""),
+            "found_date": row.get("timestamp", datetime.now().isoformat())
+        })
+        processed.add(url)
+
+    if demand_signals:
+        out_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "community_app_demand.jsonl")
+        with open(out_path, "a") as f:
+            for sig in demand_signals:
+                f.write(json.dumps(sig) + "\n")
+        processed_path.write_text(json.dumps(list(processed)))
+
+    return len(demand_signals)
+
+
+# ─── CONNECTION 56: Backtest Results → Alpha Kill List ────────────────────
+# 40K backtest results with KILL decisions → blacklist for alpha processor
+def wire_backtests_to_alpha_killlist():
+    bt_path = LEDGER / "BACKTESTS" / "BACKTEST_RESULTS.csv"
+    if not bt_path.exists():
+        return 0
+
+    killlist_path = safe_path(AUTOMATIONS / "alpha_killlist.json")
+    existing_killlist = {}
+    if killlist_path.exists():
+        existing_killlist = json.loads(killlist_path.read_text())
+
+    if existing_killlist.get("last_updated", "") == datetime.now().strftime("%Y-%m-%d"):
+        return 0  # Already updated today
+
+    rows = load_csv(bt_path, max_rows=5000)
+    kill_sources = {}
+    kill_categories = {}
+
+    for row in rows:
+        decision = row.get("decision", "").upper()
+        if decision != "KILL":
+            continue
+        source = row.get("source", "unknown")
+        category = row.get("category", "unknown")
+        kill_sources[source] = kill_sources.get(source, 0) + 1
+        kill_categories[category] = kill_categories.get(category, 0) + 1
+
+    # Sources with 3+ kills = low-signal, categories with 5+ kills = oversaturated
+    blacklist_sources = [s for s, c in kill_sources.items() if c >= 3]
+    weak_categories = [cat for cat, c in kill_categories.items() if c >= 5]
+
+    killlist = {
+        "last_updated": datetime.now().strftime("%Y-%m-%d"),
+        "total_backtested": len(rows),
+        "total_kills": sum(1 for r in rows if r.get("decision", "").upper() == "KILL"),
+        "blacklist_sources": blacklist_sources,
+        "weak_categories": weak_categories,
+        "kill_rate_by_source": {s: c for s, c in sorted(kill_sources.items(), key=lambda x: -x[1])[:20]},
+        "kill_rate_by_category": {c: n for c, n in sorted(kill_categories.items(), key=lambda x: -x[1])[:20]}
+    }
+
+    killlist_path.write_text(json.dumps(killlist, indent=2))
+    return len(blacklist_sources) + len(weak_categories)
+
+
+# ─── CONNECTION 57: Viral Repurpose Queue → Content Farm ──────────────────
+# 116 viral tweets ready to repurpose → posting queue
+def wire_viral_repurpose_to_content():
+    vr_path = AUTOMATIONS / "viral_content" / "repurpose_queue.csv"
+    if not vr_path.exists():
+        return 0
+
+    processed_path = safe_path(AUTOMATIONS / "viral_content" / "repurposed_ids.json")
+    processed = set()
+    if processed_path.exists():
+        processed = set(json.loads(processed_path.read_text()))
+
+    rows = load_csv(vr_path, max_rows=50)
+    count = 0
+
+    for row in rows:
+        tweet_id = row.get("original_tweet_id", "")
+        if not tweet_id or tweet_id in processed:
+            continue
+
+        status = row.get("status", "").upper()
+        if status != "PENDING":
+            continue
+
+        caption = row.get("suggested_caption", "")
+        content_text = row.get("content_text", "")
+        repurpose_type = row.get("repurpose_type", "REPOST")
+        handle = row.get("original_handle", "")
+        engagement = row.get("engagement_score", "0")
+
+        if not caption and not content_text:
+            continue
+
+        # Create post for queue
+        post_text = caption if caption else content_text[:280]
+        if repurpose_type == "MEDIA_REPOST" and handle:
+            post_text = f"spotted this from {handle}. {post_text}"
+
+        today = datetime.now().strftime("%Y%m%d")
+        post_path = safe_path(POSTING_QUEUE / f"viral_repurpose_{today}_{count}.txt")
+        post_path.parent.mkdir(parents=True, exist_ok=True)
+        post_path.write_text(post_text)
+
+        processed.add(tweet_id)
+        count += 1
+
+        if count >= 5:  # Cap per cycle to avoid spam
+            break
+
+    if processed:
+        processed_path.write_text(json.dumps(list(processed)))
+
+    return count
+
+
+# ─── CONNECTION 58: RBI Daily Scans → CEO Inbox ──────────────────────────
+# P0 methods from RBI → CEO agent for venture priority adjustment
+def wire_rbi_scans_to_ceo():
+    today = datetime.now().strftime("%Y-%m-%d")
+    rbi_path = LEDGER / "RBI_AUDITS" / f"rbi_scan_{today}.csv"
+    if not rbi_path.exists():
+        return 0
+
+    ceo_inbox = safe_path(AUTOMATIONS / "agent" / "ceo_agent" / "inbox")
+    ceo_inbox.mkdir(parents=True, exist_ok=True)
+
+    slug = f"rbi_p0_methods_{today.replace('-', '')}"
+    inbox_path = safe_path(ceo_inbox / f"{slug}.json")
+    if inbox_path.exists():
+        return 0
+
+    rows = load_csv(rbi_path, max_rows=50)
+    p0_methods = []
+
+    for row in rows:
+        priority = row.get("priority", "").upper()
+        if priority != "P0":
+            continue
+        p0_methods.append({
+            "category": row.get("category", ""),
+            "name": row.get("name", ""),
+            "revenue_range": row.get("est_revenue_range", ""),
+            "status": row.get("status", ""),
+            "blockers": row.get("blockers", ""),
+            "next_action": row.get("next_action", "")[:200],
+            "startup_cost": row.get("startup_cost", "0")
+        })
+
+    if not p0_methods:
+        return 0
+
+    message = {
+        "source": "rbi_daily_scan",
+        "type": "P0_REVENUE_METHODS",
+        "timestamp": datetime.now().isoformat(),
+        "scan_date": today,
+        "methods_found": len(p0_methods),
+        "methods": p0_methods,
+        "action_required": "Adjust venture priorities based on P0 ready-to-launch methods"
+    }
+
+    inbox_path.write_text(json.dumps(message, indent=2))
+    return len(p0_methods)
+
+
+# ─── CONNECTION 59: Tweetlio Exports → Content Performance Tracker ────────
+# Track what content was actually exported/scheduled for performance feedback
+def wire_tweetlio_to_performance():
+    export_dir = CONTENT / "printmaxxer"
+    today = datetime.now().strftime("%Y%m%d")
+    export_path = export_dir / f"TWEETLIO_EXPORT_{today}.json"
+    if not export_path.exists():
+        return 0
+
+    perf_path = safe_path(LEDGER / "CONTENT_PERFORMANCE_LOG.csv")
+    perf_exists = perf_path.exists()
+
+    # Check if already processed
+    processed_marker = safe_path(export_dir / f".tweetlio_processed_{today}")
+    if processed_marker.exists():
+        return 0
+
+    data = load_json(export_path)
+    if not isinstance(data, list):
+        return 0
+
+    rows_to_add = []
+    for item in data:
+        text = item.get("text", "") or item.get("content", "") or str(item)[:200]
+        rows_to_add.append({
+            "date": today,
+            "source": "tweetlio_export",
+            "content_preview": text[:150].replace("\n", " "),
+            "status": "EXPORTED",
+            "engagement": "",
+            "clicks": "",
+            "impressions": ""
+        })
+
+    if rows_to_add:
+        fieldnames = ["date", "source", "content_preview", "status", "engagement", "clicks", "impressions"]
+        append_csv(perf_path, rows_to_add, fieldnames)
+        processed_marker.write_text(datetime.now().isoformat())
+
+    return len(rows_to_add)
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -2901,6 +3205,12 @@ def run_cycle():
         ("Growth Strategy → Content Farm", wire_growth_strategy_to_content),
         ("Platform Algo Changes → Content", wire_algo_changes_to_content),
         ("Gap Reports → CEO Decisions", wire_gap_reports_to_ceo),
+        ("Community Intel → Cold Outreach Leads", wire_community_intel_to_outreach),
+        ("Community Intel → App Factory Demand", wire_community_intel_to_app_factory),
+        ("Backtest Results → Alpha Kill List", wire_backtests_to_alpha_killlist),
+        ("Viral Repurpose → Content Farm", wire_viral_repurpose_to_content),
+        ("RBI Scans → CEO Inbox", wire_rbi_scans_to_ceo),
+        ("Tweetlio Exports → Performance Tracker", wire_tweetlio_to_performance),
     ]
 
     total_wired = 0

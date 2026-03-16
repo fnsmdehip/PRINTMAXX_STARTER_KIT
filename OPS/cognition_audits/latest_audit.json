@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-16T05:38:24.092192",
+  "findings": [
+    {
+      "category": "AI_SLOP_IN_SYSTEM_FILES",
+      "severity": "MEDIUM",
+      "detail": "CLAUDE.md contains banned AI vocabulary ('comprehensive'). The system prompt itself has slop.",
+      "fix": "Search and replace banned words in CLAUDE.md"
+    },
+    {
+      "category": "ORPHAN_SCRIPTS",
+      "severity": "MEDIUM",
+      "detail": "237 scripts not referenced in cron or CLAUDE.md. Potential dead code.",
+      "fix": "Audit orphan scripts. Kill dead ones. Wire live ones into cron."
+    },
+    {
+      "category": "PROMPT_INTELLIGENCE",
+      "severity": "INFO",
+      "detail": "1431 user prompts logged. Analyze for: recurring frustrations, repeated requests (should be automated), capability gaps.",
+      "fix": "Run prompt_meta_review.py to extract patterns."
+    },
+    {
+      "category": "EDGE_CHECK",
+      "severity": "INFO",
+      "detail": "Weekly check: Are our system patterns still ahead of what's publicly available? Search for 'CLAUDE.md best practices', 'claude code power user', 'ai agent architecture 2026' and compare to our system.",
+      "fix": "Agent should web-search for latest patterns and compare to our CLAUDE.md/SOUL.md."
+    },
+    {
+      "category": "META_COGNITION",
+      "severity": "INFO",
+      "detail": "Is the Competitive Cognition Protocol actually changing agent behavior? Check: are session outputs qualitatively different from before it was added? Are agents finding non-obvious angles?",
+      "fix": "Compare pre/post session quality. If no improvement, revise the protocol."
+    }
+  ],
+  "total_findings": 5,
+  "high_severity": 0,
+  "medium_severity": 2
+}

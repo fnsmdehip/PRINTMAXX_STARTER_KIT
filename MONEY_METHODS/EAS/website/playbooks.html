@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playbooks - Enterprise Automation Solutions</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0a;--gold:#c9a227;--cream:#f5f0e8;--muted:#888;--card-bg:rgba(201,162,39,0.04);--card-border:rgba(201,162,39,0.12);--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--max-w:1200px;--transition:0.3s ease}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none;transition:opacity var(--transition)}a:hover{opacity:0.8}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.25}
+h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-0.02em}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem)}
+h3{font-size:1.25rem}
+p{color:var(--cream);opacity:0.85}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,39,0.08)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:1.3rem;color:var(--cream);letter-spacing:0.04em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);font-size:0.875rem;letter-spacing:0.02em;transition:color var(--transition)}
+.nav-links a:hover{color:var(--cream);opacity:1}
+.nav-cta{background:var(--gold);color:var(--bg);padding:8px 20px;border-radius:4px;font-size:0.875rem;font-weight:600}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:99;padding:40px 24px}
+.mobile-menu.active{display:flex;flex-direction:column;gap:24px}
+.mobile-menu a{color:var(--cream);font-size:1.1rem;font-family:var(--serif)}
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-size:0.95rem;font-weight:600;letter-spacing:0.02em;cursor:pointer;transition:all var(--transition);border:none;text-align:center}
+.btn-gold{background:var(--gold);color:var(--bg)}.btn-gold:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,162,39,0.2)}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,0.25)}.btn-outline:hover{border-color:var(--cream);transform:translateY(-1px)}
+.btn-sm{padding:10px 24px;font-size:0.85rem}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;padding:40px 32px;transition:all var(--transition)}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+section{padding:100px 0}
+.section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold);margin-bottom:16px}
+footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:0.8rem;color:var(--muted)}
+.footer-links{display:flex;gap:24px}.footer-links a{font-size:0.8rem;color:var(--muted)}.footer-links a:hover{color:var(--cream)}
+
+.page-hero{padding:160px 0 60px;text-align:center}
+.page-hero p{color:var(--muted);max-width:600px;margin:16px auto 0;font-size:1.05rem}
+
+.playbooks-grid{display:grid;grid-template-columns:1fr;gap:32px}
+.playbook-card{padding:48px 40px}
+.playbook-tag{display:inline-block;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);padding:4px 12px;border:1px solid var(--card-border);border-radius:12px;margin-bottom:20px}
+.playbook-card h3{font-size:1.45rem;margin-bottom:16px}
+.playbook-card>p{color:var(--muted);font-size:0.95rem;line-height:1.7;margin-bottom:32px;max-width:720px}
+.playbook-what{margin-bottom:32px}
+.playbook-what h4{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:16px}
+.playbook-what ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.playbook-what li{font-size:0.88rem;color:var(--muted);padding:8px 0 8px 16px;position:relative}
+.playbook-what li::before{content:'';position:absolute;left:0;top:50%;width:4px;height:4px;background:var(--gold);border-radius:50%;transform:translateY(-50%)}
+
+/* TIMELINE */
+.playbook-timeline{margin-bottom:32px}
+.playbook-timeline h4{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:16px}
+.timeline-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+.timeline-step{background:rgba(201,162,39,0.03);border:1px solid rgba(201,162,39,0.08);border-radius:4px;padding:16px}
+.timeline-step .day{font-family:var(--serif);font-size:0.82rem;color:var(--gold);margin-bottom:4px}
+.timeline-step .task{font-size:0.82rem;color:var(--muted);line-height:1.5}
+
+.workshop-cta{text-align:center;padding:80px 48px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;margin-top:80px}
+.workshop-cta h2{margin-bottom:16px}
+.workshop-cta p{color:var(--muted);max-width:540px;margin:0 auto 32px}
+
+.final-cta{text-align:center;padding:120px 0;border-top:1px solid rgba(245,240,232,0.06)}
+.final-cta h2{margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}
+  .playbook-what ul{grid-template-columns:1fr}
+  .timeline-steps{grid-template-columns:1fr}
+  .page-hero{padding:120px 0 40px}
+  section{padding:60px 0}
+  .playbook-card{padding:32px 24px}
+  .workshop-cta{padding:48px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">EAS</a>
+    <ul class="nav-links">
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="playbooks.html">Playbooks</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="packages.html">Packages</a>
+  <a href="results.html">Results</a>
+  <a href="playbooks.html">Playbooks</a>
+  <a href="calculator.html">Calculator</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html">Book a Call</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label fade-up">Playbooks</div>
+    <h1 class="fade-up">How we actually build these agents.</h1>
+    <p class="fade-up">Not theory. Not blog posts. These are the exact processes we follow during real installations, with specific tools, timelines, and decision points.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="playbooks-grid">
+
+      <!-- PLAYBOOK 1: AI RECEPTIONIST -->
+      <div class="card playbook-card fade-up">
+        <span class="playbook-tag">AI Receptionist</span>
+        <h3>Install an AI receptionist in 10 days</h3>
+        <p>Step-by-step guide to deploying a conversational voice AI that answers every call, qualifies leads, and books appointments directly into your calendar. This is the exact process we use for dental offices, law firms, and home service companies. Covers platform selection, conversation design, integration architecture, testing, and go-live.</p>
+
+        <div class="playbook-timeline">
+          <h4>10-day install timeline</h4>
+          <div class="timeline-steps">
+            <div class="timeline-step">
+              <div class="day">Days 1-2</div>
+              <div class="task">Call audit. Record 50+ real calls. Map conversation patterns, common questions, booking rules.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 3-4</div>
+              <div class="task">Build conversation flows in Vapi/Bland AI. Script 12-15 conversation branches. Configure voice persona.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 5-6</div>
+              <div class="task">Integrate with calendar, CRM, and practice management. Build call logging and daily digest pipeline.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 7-8</div>
+              <div class="task">QA testing. 47 test scenarios. Edge cases. Hostile callers. Silence handling. Transfer logic.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 9-10</div>
+              <div class="task">Parallel run (AI + human). Measure accuracy. Tune confidence thresholds. Go live.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-what">
+          <h4>What the playbook covers</h4>
+          <ul>
+            <li>Vapi vs Bland AI vs Retell comparison (scored by latency, voice quality, cost)</li>
+            <li>Conversation design templates for 4 industries</li>
+            <li>Integration architecture diagrams (CRM, calendar, PMS)</li>
+            <li>QA testing checklist (47 scenarios including edge cases)</li>
+            <li>Confidence threshold tuning guide</li>
+            <li>Go-live runbook with rollback plan</li>
+            <li>Cost model: per-minute pricing at different call volumes</li>
+            <li>Staff training deck for the handoff</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn btn-outline btn-sm">Request this playbook</a>
+      </div>
+
+      <!-- PLAYBOOK 2: COMPETITIVE INTELLIGENCE -->
+      <div class="card playbook-card fade-up">
+        <span class="playbook-tag">Intelligence System</span>
+        <h3>Build a competitive intelligence pipeline</h3>
+        <p>How to set up an autonomous system that monitors your competitors, scores every signal, and delivers actionable digests daily. This is the same architecture we use internally to monitor 200+ sources across multiple industries. Covers source selection, scraping infrastructure, AI scoring, alert triggers, and RAG knowledge base setup.</p>
+
+        <div class="playbook-timeline">
+          <h4>3-week build timeline</h4>
+          <div class="timeline-steps">
+            <div class="timeline-step">
+              <div class="day">Week 1</div>
+              <div class="task">Source mapping. Identify 50-200 monitoring targets: competitor sites, forums, social accounts, job boards, SEC filings.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Week 2</div>
+              <div class="task">Build scraping infrastructure (Playwright + n8n). AI scoring pipeline. Alert threshold configuration. Daily digest template.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Week 3</div>
+              <div class="task">RAG knowledge base setup (Pinecone). Historical data backfill. Testing and tuning. Go-live with team training.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-what">
+          <h4>What the playbook covers</h4>
+          <ul>
+            <li>Source taxonomy: 8 categories of competitive signals</li>
+            <li>Scraping architecture: Playwright + n8n + proxy rotation</li>
+            <li>AI scoring framework: opportunity vs threat vs neutral</li>
+            <li>Alert trigger rules (price changes, new hires, product launches)</li>
+            <li>RAG setup with Pinecone: making your intel searchable by AI</li>
+            <li>Daily digest format and delivery (Slack, email, or both)</li>
+            <li>Self-healing patterns: what to do when a source changes structure</li>
+            <li>Cost model at different monitoring scales</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn btn-outline btn-sm">Request this playbook</a>
+      </div>
+
+      <!-- PLAYBOOK 3: AI STACK DECISION -->
+      <div class="card playbook-card fade-up">
+        <span class="playbook-tag">Decision Framework</span>
+        <h3>The AI agent stack: Claude vs GPT vs open-source</h3>
+        <p>An honest comparison of the AI models, orchestration tools, and infrastructure options for building autonomous agents. When to use Claude API (and why we use it). When GPT-4 makes more sense. When open-source models like Llama or Mistral are the right call. Covers cost, quality, latency, and vendor risk for each option.</p>
+
+        <div class="playbook-what">
+          <h4>What the playbook covers</h4>
+          <ul>
+            <li>Claude vs GPT-4 vs Llama 3 vs Mistral: benchmark results for agent tasks</li>
+            <li>Cost-per-agent-hour at different usage volumes</li>
+            <li>n8n vs LangChain vs CrewAI vs custom orchestration: tradeoffs</li>
+            <li>When to self-host vs use cloud APIs (break-even analysis)</li>
+            <li>Vendor lock-in risk assessment for each stack</li>
+            <li>MCP (Model Context Protocol): why it matters for tool integration</li>
+            <li>Supabase vs Firebase vs custom backend for agent state</li>
+            <li>Real client scenarios: which stack we chose and why</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn btn-outline btn-sm">Request this playbook</a>
+      </div>
+
+    </div>
+
+    <!-- WORKSHOP CTA -->
+    <div class="workshop-cta fade-up">
+      <div class="section-label">Workshops</div>
+      <h2>Want a guided walkthrough?</h2>
+      <p>We run 90-minute workshops where we walk your team through a playbook using your actual tools and data. We'll map what the agent would look like for your specific business. $750 flat, remote.</p>
+      <a href="book.html" class="btn btn-gold">Book a workshop</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container fade-up">
+    <h2>Rather have us install the agents for you?</h2>
+    <div class="cta-buttons">
+      <a href="packages.html" class="btn btn-gold">See packages</a>
+      <a href="book.html" class="btn btn-outline">Book a call</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Enterprise Automation Solutions. All rights reserved.</div>
+    <div class="footer-links"><a href="contact.html">Privacy</a><a href="contact.html">Contact</a><a href="book.html">Book a Call</a></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "cycle": 42,
+  "timestamp": "2026-03-16T02:40:51.305107",
+  "status": "COMPLETE",
+  "phase_results": {
+    "configure": {
+      "status": "OK",
+      "last_cycle": 41,
+      "last_run": "2026-03-15T07:45:06"
+    },
+    "scrape": {
+      "reddit": {
+        "status": "OK",
+        "new_entries": 32,
+        "files_processed": 2
+      },
+      "twitter": {
+        "status": "OK",
+        "unique_signals": 21,
+        "files_processed": 5
+      },
+      "apps_scan": {
+        "status": "COMPLETE",
+        "apps_scanned": 35,
+        "niches_covered": 7
+      },
+      "services_scan": {
+        "status": "SKIPPED",
+        "note": "Engine timeout, low signal"
+      }
+    },
+    "clean": {
+      "existing_keys": 42,
+      "new_rows_normalized": 50,
+      "duplicates_removed": 0
+    },
+    "analyze": {
+      "highest_signals": [
+        {
+          "title": "Sold 89 LTDs at $199 = $17K bootstrap",
+          "source": "r/SaaS",
+          "score": 255,
+          "relevance": 18
+        },
+        {
+          "title": "Prayer habit = 0 paid apps, Pray.com 188K ratings",
+          "source": "iTunes API",
+          "score": 0,
+          "relevance": "BLUE_OCEAN"
+        },
+        {
+          "title": "Bible streak incumbent: 27 ratings only",
+          "source": "iTunes API",
+          "score": 0,
+          "relevance": "WEAK_INCUMBENT"
+        },
+        {
+          "title": "TikTok games $80M/mo in 1yr",
+          "source": "twitter",
+          "relevance": "HIGHEST"
+        }
+      ],
+      "gap_analysis": {
+        "pricing_gaps": {
+          "prayer_habit": "0 paid / 5 free - BLUE OCEAN",
+          "bible_streak": "0 paid / 5 free - weak incumbent (27 ratings)",
+          "faith_devotional": "0 paid / 5 free - BLUE OCEAN",
+          "quran_daily": "1 paid at $49.99 / 4 free - gap at $2.99-$9.99"
+        }
+      }
+    },
+    "store": {
+      "competitive_intel_csv_rows": 92,
+      "new_rows_written": 50,
+      "alpha_staged": 8,
+      "alpha_ids": [
+        "ALPHA101100",
+        "ALPHA101101",
+        "ALPHA101102",
+        "ALPHA101103",
+        "ALPHA101104",
+        "ALPHA101105",
+        "ALPHA101106",
+        "ALPHA101107"
+      ]
+    },
+    "alert": {
+      "p0_alerts": 3,
+      "p1_alerts": 2,
+      "highest_roi_alert": "BIBLE STREAK INCUMBENT WEAKNESS + PRAYER HABIT BLUE OCEAN"
+    }
+  }
+}

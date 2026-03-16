@@ -1,12 +1,12 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-15 04:00:15
+Generated: 2026-03-16 07:22:17
 
 ## Inputs
-- ALPHA_STAGING app candidates: 3227
+- ALPHA_STAGING app candidates: 3685
 - APP_FACTORY_METHODS candidates: 5
 - Reddit findings consumed: 6
-- Existing app specs detected: 85
+- Existing app specs detected: 102
 
 ## Hard Gates
 - No fake paywalls. Real RevenueCat or real billing path before shipping.
@@ -43,9 +43,9 @@ Generated: 2026-03-15 04:00:15
 | 15 | Niche B2B SaaS: automated compliance reminders for dental/vet offices. Stack: Ne | NEW_BUILD | 110 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 21 | SaaS pricing: $9/mo = ZERO conversions. Raised to $29/mo = paying customers imme | NEW_BUILD | 104 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 24 | AI lowers app dev barrier → Cambrian explosion of niche apps imminent. levelsio  | NEW_BUILD | 101 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 31 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 35 | Free trial converts 2% → 11% paid. Tested on SaaS product. Real data from r/Side | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 36 | Running 4 AI-driven companies from terminal via agent orchestration (auto-co-met | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 32 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 36 | Free trial converts 2% → 11% paid. Tested on SaaS product. Real data from r/Side | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 37 | Running 4 AI-driven companies from terminal via agent orchestration (auto-co-met | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.

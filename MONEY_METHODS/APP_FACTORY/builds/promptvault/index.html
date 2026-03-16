@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0c0c18">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PromptVault">
+<meta name="description" content="Save, organize, and reuse AI prompts. Variable substitution, categories, search, import/export. Free offline PWA prompt manager for ChatGPT, Claude, and all AI tools.">
+<meta property="og:title" content="PromptVault - AI Prompt Manager">
+<meta property="og:description" content="Save, organize, and reuse your best AI prompts. Variable substitution, categories, favorites. Free PWA.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PromptVault - AI Prompt Manager">
+<meta name="twitter:description" content="Organize your AI prompts. Variables, categories, search, import/export. Free offline PWA.">
+<meta name="keywords" content="ai prompt manager, chatgpt prompts, prompt library, prompt organizer, ai prompt templates, prompt engineering tool, claude prompts, save ai prompts">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230c0c18' width='100' height='100' rx='20'/><text y='68' x='50' text-anchor='middle' font-size='50'>&#x1F5C3;</text></svg>">
+<title>PromptVault - AI Prompt Manager</title>
+<style>
+*{-webkit-tap-highlight-color:transparent;box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0c0c18;--bg2:#141422;--bg3:#1c1c30;--bg4:#262642;
+--text:#eeeef4;--text2:#9898b8;--text3:#5e5e7a;
+--accent:#f59e0b;--accent2:#fbbf24;--accent3:#d97706;
+--green:#10b981;--red:#ef4444;--blue:#3b82f6;--purple:#a855f7;--cyan:#06b6d4;--pink:#ec4899;
+--radius:16px;--radius-sm:10px;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+#app{height:100%;display:flex;flex-direction:column;overflow:hidden}
+.header{padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.header h1{font-size:20px;font-weight:700;letter-spacing:-.3px;display:flex;align-items:center;gap:8px}
+.header h1 span{color:var(--accent2)}
+.header-actions{display:flex;gap:8px}
+.icon-btn{width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:var(--bg2);color:var(--text2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent2)}
+.main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:0 0 100px}
+.main::-webkit-scrollbar{display:none}
+.section{padding:20px}
+.section+.section{border-top:1px solid rgba(255,255,255,.04)}
+.section-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:14px}
+
+/* Bottom nav */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--bg);border-top:1px solid rgba(255,255,255,.06);padding:8px 0 max(8px,env(safe-area-inset-bottom));z-index:50}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0;cursor:pointer;color:var(--text3);transition:color .15s;border:none;background:none;font-family:inherit}
+.nav-item.active{color:var(--accent2)}
+.nav-item svg{width:20px;height:20px}
+.nav-item span{font-size:10px;font-weight:500}
+
+.view{display:none}.view.active{display:block}
+
+/* Search bar */
+.search-bar{display:flex;gap:8px;padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.04)}
+.search-input{flex:1;background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px 10px 36px;color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:border-color .15s;background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235e5e7a' stroke-width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:10px center}
+.search-input:focus{border-color:var(--accent)}
+
+/* Category filter */
+.cat-row{display:flex;gap:6px;padding:8px 20px 12px;overflow-x:auto;flex-shrink:0}
+.cat-row::-webkit-scrollbar{display:none}
+.cat-pill{padding:6px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:var(--bg2);color:var(--text2);font-size:12px;font-weight:500;cursor:pointer;transition:all .15s;font-family:inherit;white-space:nowrap;flex-shrink:0}
+.cat-pill.active{background:var(--accent3);color:#fff;border-color:var(--accent3)}
+
+/* Prompt cards */
+.prompt-card{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:16px;margin:0 20px 10px;cursor:pointer;transition:border-color .15s;animation:fadeUp .2s ease}
+.prompt-card:hover{border-color:var(--accent)}
+.prompt-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+.prompt-card-title{font-size:15px;font-weight:600;flex:1;margin-right:8px}
+.prompt-card-star{color:var(--text3);cursor:pointer;font-size:20px;line-height:1;border:none;background:none;padding:0;transition:color .15s}
+.prompt-card-star.starred{color:var(--accent2)}
+.prompt-card-cat{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;text-transform:uppercase;margin-bottom:6px}
+.prompt-card-preview{font-size:13px;color:var(--text3);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.prompt-card-meta{display:flex;gap:12px;margin-top:8px;font-size:11px;color:var(--text3)}
+.prompt-card-vars{color:var(--cyan)}
+
+/* Category colors */
+.cat-coding{background:rgba(59,130,246,.15);color:var(--blue)}
+.cat-writing{background:rgba(168,85,247,.15);color:var(--purple)}
+.cat-marketing{background:rgba(236,72,153,.15);color:var(--pink)}
+.cat-research{background:rgba(6,182,212,.15);color:var(--cyan)}
+.cat-business{background:rgba(16,185,129,.15);color:var(--green)}
+.cat-custom{background:rgba(245,158,11,.15);color:var(--accent2)}
+
+/* Buttons */
+.btn{width:100%;padding:14px;border-radius:var(--radius);border:none;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary{background:var(--accent);color:#000}
+.btn-primary:hover{background:var(--accent3)}
+.btn-primary:active{transform:scale(.98)}
+.btn-secondary{background:var(--bg3);color:var(--text2);border:1px solid rgba(255,255,255,.08)}
+.btn-danger{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.2)}
+.btn-sm{width:auto;padding:10px 20px;font-size:13px;border-radius:10px}
+.btn-row{display:flex;gap:8px;margin-top:12px}
+.btn-row .btn{flex:1}
+
+/* Form */
+.input-group{margin-bottom:14px}
+.input-group label{display:block;font-size:13px;font-weight:500;color:var(--text2);margin-bottom:6px}
+.input-group input,.input-group textarea,.input-group select{width:100%;background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;color:var(--text);font-size:15px;font-family:inherit;outline:none;transition:border-color .15s;resize:vertical}
+.input-group input:focus,.input-group textarea:focus,.input-group select:focus{border-color:var(--accent)}
+.input-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%239898b8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.input-group select option{background:var(--bg2);color:var(--text)}
+
+/* Prompt detail / use view */
+.prompt-detail{padding:20px}
+.prompt-detail-title{font-size:22px;font-weight:700;margin-bottom:4px}
+.prompt-detail-cat{display:inline-block;padding:3px 10px;border-radius:6px;font-size:12px;font-weight:600;text-transform:uppercase;margin-bottom:12px}
+.prompt-body{background:var(--bg3);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-sm);padding:16px;font-size:14px;line-height:1.6;color:var(--text);white-space:pre-wrap;word-break:break-word;margin-bottom:16px;max-height:240px;overflow-y:auto}
+.prompt-body::-webkit-scrollbar{display:none}
+.var-highlight{background:rgba(6,182,212,.2);color:var(--cyan);padding:1px 4px;border-radius:3px;font-weight:600}
+.var-input-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.var-input-label{font-size:13px;color:var(--cyan);font-weight:600;min-width:100px;flex-shrink:0}
+.var-input{flex:1;background:var(--bg2);border:1px solid rgba(6,182,212,.3);border-radius:8px;padding:10px 14px;color:var(--text);font-size:14px;font-family:inherit;outline:none}
+.var-input:focus{border-color:var(--cyan)}
+.output-area{background:var(--bg2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-sm);padding:16px;font-size:14px;line-height:1.6;color:var(--text);white-space:pre-wrap;word-break:break-word;margin-bottom:16px;min-height:80px;max-height:300px;overflow-y:auto}
+.output-area::-webkit-scrollbar{display:none}
+.example-area{background:var(--bg3);border:1px solid rgba(255,255,255,.04);border-radius:var(--radius-sm);padding:14px;font-size:13px;line-height:1.5;color:var(--text2);margin-bottom:16px;white-space:pre-wrap}
+
+/* Stats */
+.stats-row{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.stat-card{flex:1;min-width:80px;background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-sm);padding:14px;text-align:center}
+.stat-value{font-size:22px;font-weight:800;letter-spacing:-.3px;color:var(--accent2)}
+.stat-label{font-size:11px;color:var(--text3);margin-top:2px}
+
+/* Top prompts */
+.top-prompt{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.top-prompt-rank{font-size:18px;font-weight:800;color:var(--accent2);width:28px;text-align:center}
+.top-prompt-name{font-size:14px;font-weight:500;flex:1}
+.top-prompt-count{font-size:13px;color:var(--text3)}
+
+/* Empty state */
+.empty-state{text-align:center;padding:40px 20px;color:var(--text3)}
+.empty-state p{font-size:14px;line-height:1.6}
+
+/* Toast */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:10px 20px;border-radius:var(--radius);font-size:13px;font-weight:500;opacity:0;transition:opacity .2s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
+
+/* Splash */
+.splash{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);transition:opacity .4s}
+.splash.hide{opacity:0;pointer-events:none}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.anim-in{animation:fadeUp .25s ease}
+.back-btn{display:flex;align-items:center;gap:6px;color:var(--text2);font-size:14px;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;margin-bottom:16px}
+.back-btn:hover{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div id="app">
+
+<div class="splash" id="splash">
+<div style="font-size:56px;margin-bottom:12px">&#x1F5C3;</div>
+<h1 style="font-size:24px;font-weight:700;color:var(--accent2)">PromptVault</h1>
+<p style="font-size:13px;color:var(--text3);margin-top:6px">Your AI prompt library</p>
+</div>
+
+<header class="header">
+<h1>&#x1F5C3; <span>PromptVault</span></h1>
+<div class="header-actions">
+<button class="icon-btn" id="btnNewPrompt" aria-label="New prompt">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<button class="icon-btn" id="btnMenu" aria-label="Menu">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+</button>
+</div>
+</header>
+
+<div class="main">
+
+<!-- LIBRARY VIEW -->
+<div class="view active" id="viewLibrary">
+<div class="search-bar">
+<input type="text" class="search-input" id="searchInput" placeholder="Search prompts...">
+</div>
+<div class="cat-row" id="catRow"></div>
+<div id="promptList"></div>
+</div>
+
+<!-- PROMPT DETAIL / USE VIEW -->
+<div class="view" id="viewDetail">
+<div class="prompt-detail anim-in" id="detailContent"></div>
+</div>
+
+<!-- CREATE/EDIT VIEW -->
+<div class="view" id="viewEdit">
+<div class="section anim-in">
+<button class="back-btn" id="btnBackEdit">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+Back
+</button>
+<div class="section-title" id="editTitle">New Prompt</div>
+<div class="input-group">
+<label>Title</label>
+<input type="text" id="inputTitle" placeholder="e.g. Code Review Assistant">
+</div>
+<div class="input-group">
+<label>Category</label>
+<select id="inputCategory">
+<option value="Coding">Coding</option>
+<option value="Writing">Writing</option>
+<option value="Marketing">Marketing</option>
+<option value="Research">Research</option>
+<option value="Business">Business</option>
+<option value="Custom">Custom</option>
+</select>
+</div>
+<div class="input-group">
+<label>Prompt Text <span style="color:var(--cyan);font-size:11px">(use {{variable}} for placeholders)</span></label>
+<textarea id="inputPrompt" rows="6" placeholder="Write a {{type}} blog post about {{topic}} targeting {{audience}}..."></textarea>
+</div>
+<div class="input-group">
+<label>Output Example <span style="color:var(--text3);font-size:11px">(optional)</span></label>
+<textarea id="inputExample" rows="3" placeholder="Example output to show what this prompt produces..."></textarea>
+</div>
+<button class="btn btn-primary" id="btnSavePrompt">Save Prompt</button>
+</div>
+</div>
+
+<!-- SETTINGS/DATA VIEW -->
+<div class="view" id="viewSettings">
+<div class="section anim-in">
+<div class="section-title">Stats</div>
+<div class="stats-row" id="settingsStats"></div>
+</div>
+<div class="section anim-in">
+<div class="section-title">Most Used</div>
+<div id="topPrompts"></div>
+</div>
+<div class="section anim-in">
+<div class="section-title">Data</div>
+<div class="btn-row">
+<button class="btn btn-secondary btn-sm" id="btnImport">Import JSON</button>
+<button class="btn btn-secondary btn-sm" id="btnExport">Export JSON</button>
+</div>
+<input type="file" id="fileImport" accept=".json" style="display:none">
+<div class="btn-row" style="margin-top:8px">
+<button class="btn btn-danger btn-sm" id="btnResetAll">Reset All Data</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<nav class="bottom-nav">
+<button class="nav-item active" data-view="viewLibrary">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+<span>Library</span>
+</button>
+<button class="nav-item" data-view="viewSettings">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+<span>Stats</span>
+</button>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var CATEGORIES=['All','Coding','Writing','Marketing','Research','Business','Custom'];
+var CAT_CLASS={Coding:'cat-coding',Writing:'cat-writing',Marketing:'cat-marketing',Research:'cat-research',Business:'cat-business',Custom:'cat-custom'};
+
+// 20 built-in starter prompts
+var STARTER_PROMPTS=[
+{id:'s1',title:'Code Review',category:'Coding',prompt:'Review this {{language}} code for bugs, performance issues, and best practices. Suggest improvements with explanations:\n\n{{code}}',example:'Found 3 issues:\n1. Memory leak in line 15 - the event listener is never removed\n2. O(n^2) complexity in the loop - consider using a Set\n3. Missing error handling for the API call',vars:['language','code'],starred:false,uses:0},
+{id:'s2',title:'Debug Helper',category:'Coding',prompt:'I have a bug in my {{language}} code. The expected behavior is {{expected}} but the actual behavior is {{actual}}. Here is the code:\n\n{{code}}\n\nHelp me find and fix the bug.',example:'The issue is in your recursive function - the base case is never reached because...',vars:['language','expected','actual','code'],starred:false,uses:0},
+{id:'s3',title:'API Documentation',category:'Coding',prompt:'Write API documentation for this {{language}} function/endpoint. Include parameters, return values, examples, and edge cases:\n\n{{code}}',example:'## getUserById(id)\n\n**Parameters:**\n- `id` (string, required) - The unique user identifier\n\n**Returns:** User object or null\n\n**Example:**\n```\nconst user = await getUserById("abc123");\n```',vars:['language','code'],starred:false,uses:0},
+{id:'s4',title:'Refactor Code',category:'Coding',prompt:'Refactor this {{language}} code to be more readable, maintainable, and performant. Explain each change:\n\n{{code}}',example:'Changes made:\n1. Extracted magic numbers into named constants\n2. Split the 50-line function into 3 focused functions\n3. Replaced nested callbacks with async/await',vars:['language','code'],starred:false,uses:0},
+{id:'s5',title:'Blog Post Writer',category:'Writing',prompt:'Write a {{length}}-word blog post about {{topic}} for {{audience}}. Use a {{tone}} tone. Include:\n- Attention-grabbing headline\n- Hook in the first paragraph\n- 3-5 subheadings\n- Actionable takeaways\n- Call to action at the end',example:'# 5 Ways Remote Teams Stay Productive Without Burning Out\n\nThe Slack messages pile up at 11 PM...',vars:['length','topic','audience','tone'],starred:false,uses:0},
+{id:'s6',title:'Email Rewriter',category:'Writing',prompt:'Rewrite this email to be more {{tone}}. Keep the core message but make it {{goal}}:\n\nOriginal email:\n{{email}}',example:'Subject: Quick question about the Q3 timeline\n\nHey Sarah,\n\nHope your week is going well...',vars:['tone','goal','email'],starred:false,uses:0},
+{id:'s7',title:'Story Outline',category:'Writing',prompt:'Create a detailed outline for a {{genre}} story about {{premise}}. Include:\n- Character profiles (3-5 characters)\n- Three-act structure\n- Key plot points\n- Theme and motifs\n- Potential twists',example:'Title: The Last Algorithm\n\nCharacters:\n1. Maya Chen - 28, AI researcher who discovers...',vars:['genre','premise'],starred:false,uses:0},
+{id:'s8',title:'Content Calendar',category:'Marketing',prompt:'Create a {{duration}} content calendar for {{brand}} on {{platform}}. Our target audience is {{audience}} and our goal is {{goal}}. Include:\n- Post topics and hooks\n- Best posting times\n- Content mix (educational/entertaining/promotional)\n- Hashtag suggestions',example:'Week 1:\nMon 9AM - Educational: "3 mistakes new founders make with pricing"\nWed 12PM - Behind the scenes: Workshop photo + story\nFri 5PM - Engagement: Poll about...',vars:['duration','brand','platform','audience','goal'],starred:false,uses:0},
+{id:'s9',title:'Ad Copy Generator',category:'Marketing',prompt:'Write {{count}} variations of ad copy for {{product}} targeting {{audience}} on {{platform}}. Focus on {{benefit}}. Include:\n- Headline (max 30 chars)\n- Body (max 90 chars)\n- CTA',example:'Version 1:\nHeadline: Ship Code 3x Faster\nBody: AI-powered code review catches bugs before your users do.\nCTA: Start Free Trial',vars:['count','product','audience','platform','benefit'],starred:false,uses:0},
+{id:'s10',title:'SEO Meta Tags',category:'Marketing',prompt:'Write SEO-optimized meta tags for a page about {{topic}} targeting the keyword "{{keyword}}". Include:\n- Title tag (50-60 chars)\n- Meta description (150-160 chars)\n- H1 tag\n- 5 related keywords\n- Schema markup suggestion',example:'Title: Best Project Management Tools for Remote Teams (2024)\nDescription: Compare the top 10 project management tools...',vars:['topic','keyword'],starred:false,uses:0},
+{id:'s11',title:'Landing Page Copy',category:'Marketing',prompt:'Write landing page copy for {{product}}. Target audience: {{audience}}. Main value prop: {{value_prop}}. Include:\n- Hero headline and subhead\n- 3 feature sections with benefits\n- Social proof section\n- FAQ (5 questions)\n- CTA sections',example:'Hero: Stop Guessing. Start Growing.\nSubhead: The analytics dashboard that tells you exactly...',vars:['product','audience','value_prop'],starred:false,uses:0},
+{id:'s12',title:'Research Summary',category:'Research',prompt:'Summarize the key findings on {{topic}} for a {{audience}} audience. Include:\n- Executive summary (2-3 sentences)\n- Key data points and statistics\n- Main arguments for and against\n- Practical implications\n- Areas needing more research\n- Sources to explore further',example:'Executive Summary: Recent studies show that intermittent fasting...',vars:['topic','audience'],starred:false,uses:0},
+{id:'s13',title:'Compare and Contrast',category:'Research',prompt:'Compare {{option_a}} vs {{option_b}} for {{use_case}}. Create a structured analysis covering:\n- Feature comparison table\n- Pricing\n- Pros and cons of each\n- Best use cases\n- Recommendation with reasoning',example:'| Feature | Option A | Option B |\n|---------|----------|----------|\n| Price   | $29/mo   | $49/mo   |',vars:['option_a','option_b','use_case'],starred:false,uses:0},
+{id:'s14',title:'Literature Review',category:'Research',prompt:'Create a literature review outline on {{topic}} covering the period {{timeframe}}. Include:\n- Key themes and trends\n- Major contributors and their findings\n- Methodological approaches used\n- Gaps in current research\n- Suggested framework for analysis',example:'Theme 1: The Rise of Transformer Architectures (2017-2020)\nVaswani et al. (2017) introduced...',vars:['topic','timeframe'],starred:false,uses:0},
+{id:'s15',title:'Business Plan Section',category:'Business',prompt:'Write the {{section}} section of a business plan for {{business}}. Target market: {{market}}. Include specific numbers, projections, and actionable strategies.',example:'Market Analysis:\nThe global market for sustainable packaging reached $280B in 2023...',vars:['section','business','market'],starred:false,uses:0},
+{id:'s16',title:'SWOT Analysis',category:'Business',prompt:'Perform a SWOT analysis for {{company}} in the {{industry}} industry. Consider:\n- Internal strengths and weaknesses\n- External opportunities and threats\n- Strategic recommendations based on the analysis\n- Priority actions (30/60/90 day)',example:'Strengths:\n1. Strong brand recognition (85% awareness in target demo)\n2. Proprietary technology with 3 patents...',vars:['company','industry'],starred:false,uses:0},
+{id:'s17',title:'Meeting Agenda',category:'Business',prompt:'Create a structured meeting agenda for a {{type}} meeting about {{topic}} with {{attendees}}. Duration: {{duration}} minutes. Include:\n- Time allocations\n- Discussion points\n- Decision items\n- Action items template\n- Pre-meeting prep required',example:'Meeting: Q3 Product Roadmap Review\nDuration: 45 minutes\n\n0:00-0:05 - Welcome & context setting...',vars:['type','topic','attendees','duration'],starred:false,uses:0},
+{id:'s18',title:'Cold Email Template',category:'Business',prompt:'Write a cold email to {{recipient_role}} at {{company_type}} companies offering {{service}}. The key pain point is {{pain_point}}. Keep it under 100 words. No fluff.',example:'Subject: Quick question about [specific metric]\n\nHi [Name],\n\nNoticed [specific observation about their company]...',vars:['recipient_role','company_type','service','pain_point'],starred:false,uses:0},
+{id:'s19',title:'Custom Prompt Builder',category:'Custom',prompt:'You are a {{role}} expert. Your task is to {{task}}. The context is {{context}}. Please provide your response in {{format}} format. Important constraints: {{constraints}}.',example:'Response varies based on role and task specified.',vars:['role','task','context','format','constraints'],starred:false,uses:0},
+{id:'s20',title:'Explain Like I\'m 5',category:'Custom',prompt:'Explain {{concept}} to me like I\'m 5 years old. Use simple analogies from everyday life. Then explain it again at a {{level}} level with technical details.',example:'Simple: Imagine your brain is like a big library. Machine learning is like having a librarian who gets better at finding books the more you ask...\n\nAdvanced: Machine learning algorithms optimize a loss function...',vars:['concept','level'],starred:false,uses:0}
+];
+
+// STATE
+var currentFilter='All';
+var currentSearch='';
+var editingId=null;
+
+// STORAGE
+function gs(k,fb){try{var v=localStorage.getItem('promptvault_'+k);return v?JSON.parse(v):fb}catch(e){return fb}}
+function ss(k,v){try{localStorage.setItem('promptvault_'+k,JSON.stringify(v))}catch(e){}}
+
+function getPrompts(){
+  var p=gs('prompts',null);
+  if(p===null){
+    // First load - seed with starters
+    ss('prompts',STARTER_PROMPTS);
+    return STARTER_PROMPTS.slice();
+  }
+  return p;
+}
+function savePrompts(p){ss('prompts',p)}
+function getTotalUses(){return gs('totalUses',0)}
+function setTotalUses(n){ss('totalUses',n)}
+
+// DOM
+function $(id){return document.getElementById(id)}
+function el(tag,props){var e=document.createElement(tag);if(props)for(var k in props){if(k==='textContent')e.textContent=props[k];else if(k==='className')e.className=props[k];else e.setAttribute(k,props[k])}return e}
+function showToast(msg){var t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2000)}
+
+function extractVars(text){
+  var matches=text.match(/\{\{([^}]+)\}\}/g);
+  if(!matches)return[];
+  var seen={},result=[];
+  matches.forEach(function(m){var v=m.slice(2,-2).trim();if(!seen[v]){seen[v]=true;result.push(v)}});
+  return result;
+}
+
+function escapeHtml(str){
+  var d=document.createElement('div');d.textContent=str;return d.textContent;
+}
+
+// NAV
+function switchView(id){
+  document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active')});
+  $(id).classList.add('active');
+  var navItems=document.querySelectorAll('.nav-item');
+  navItems.forEach(function(n){n.classList.toggle('active',n.getAttribute('data-view')===id)});
+}
+
+document.querySelectorAll('.nav-item').forEach(function(ni){
+  ni.addEventListener('click',function(){
+    var t=ni.getAttribute('data-view');
+    switchView(t);
+    if(t==='viewLibrary')renderList();
+    if(t==='viewSettings')renderSettingsView();
+  });
+});
+
+$('btnNewPrompt').addEventListener('click',function(){
+  editingId=null;$('editTitle').textContent='New Prompt';
+  $('inputTitle').value='';$('inputCategory').value='Coding';$('inputPrompt').value='';$('inputExample').value='';
+  switchView('viewEdit');
+});
+
+$('btnMenu').addEventListener('click',function(){
+  switchView('viewSettings');renderSettingsView();
+});
+
+$('btnBackEdit').addEventListener('click',function(){switchView('viewLibrary');renderList()});
+
+// CATEGORY FILTER
+function renderCats(){
+  var row=$('catRow');row.textContent='';
+  CATEGORIES.forEach(function(c){
+    var p=el('button',{className:'cat-pill'+(c===currentFilter?' active':''),textContent:c});
+    p.addEventListener('click',function(){currentFilter=c;renderCats();renderList()});
+    row.appendChild(p);
+  });
+}
+
+// PROMPT LIST
+function renderList(){
+  var list=$('promptList');list.textContent='';
+  var prompts=getPrompts();
+  var q=currentSearch.toLowerCase();
+
+  var filtered=prompts.filter(function(p){
+    if(currentFilter!=='All'&&p.category!==currentFilter)return false;
+    if(q&&p.title.toLowerCase().indexOf(q)<0&&p.prompt.toLowerCase().indexOf(q)<0)return false;
+    return true;
+  });
+
+  // Starred first, then by usage
+  filtered.sort(function(a,b){
+    if(a.starred&&!b.starred)return -1;
+    if(!a.starred&&b.starred)return 1;
+    return(b.uses||0)-(a.uses||0);
+  });
+
+  if(filtered.length===0){
+    var empty=el('div',{className:'empty-state'});
+    empty.appendChild(el('p',{textContent:q?'No prompts match your search.':'No prompts in this category. Tap + to create one.'}));
+    list.appendChild(empty);
+    return;
+  }
+
+  filtered.forEach(function(p){
+    var card=el('div',{className:'prompt-card'});
+
+    var header=el('div',{className:'prompt-card-header'});
+    header.appendChild(el('div',{className:'prompt-card-title',textContent:p.title}));
+    var starBtn=el('button',{className:'prompt-card-star'+(p.starred?' starred':''),textContent:p.starred?'\u2605':'\u2606'});
+    starBtn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var prompts2=getPrompts();
+      var idx=prompts2.findIndex(function(x){return x.id===p.id});
+      if(idx>=0){prompts2[idx].starred=!prompts2[idx].starred;savePrompts(prompts2);renderList()}
+    });
+    header.appendChild(starBtn);
+    card.appendChild(header);
+
+    var catCls=CAT_CLASS[p.category]||'cat-custom';
+    card.appendChild(el('div',{className:'prompt-card-cat '+catCls,textContent:p.category}));
+
+    var preview=p.prompt.substring(0,120).replace(/\{\{([^}]+)\}\}/g,'[$1]');
+    card.appendChild(el('div',{className:'prompt-card-preview',textContent:preview+(p.prompt.length>120?'...':'')}));
+
+    var meta=el('div',{className:'prompt-card-meta'});
+    var vars2=extractVars(p.prompt);
+    if(vars2.length>0)meta.appendChild(el('span',{className:'prompt-card-vars',textContent:vars2.length+' variable'+(vars2.length>1?'s':'')}));
+    meta.appendChild(el('span',{textContent:(p.uses||0)+' uses'}));
+    card.appendChild(meta);
+
+    card.addEventListener('click',function(){showDetail(p.id)});
+    list.appendChild(card);
+  });
+}
+
+// SEARCH
+$('searchInput').addEventListener('input',function(){currentSearch=this.value;renderList()});
+
+// DETAIL VIEW
+function showDetail(id){
+  var prompts=getPrompts();
+  var p=prompts.find(function(x){return x.id===id});
+  if(!p)return;
+
+  var dc=$('detailContent');dc.textContent='';
+
+  // Back button
+  var back=el('button',{className:'back-btn'});
+  var svgNs='http://www.w3.org/2000/svg';
+  var bSvg=document.createElementNS(svgNs,'svg');
+  bSvg.setAttribute('width','16');bSvg.setAttribute('height','16');bSvg.setAttribute('viewBox','0 0 24 24');
+  bSvg.setAttribute('fill','none');bSvg.setAttribute('stroke','currentColor');bSvg.setAttribute('stroke-width','2');
+  var bPath=document.createElementNS(svgNs,'polyline');bPath.setAttribute('points','15 18 9 12 15 6');
+  bSvg.appendChild(bPath);back.appendChild(bSvg);
+  back.appendChild(document.createTextNode(' Back'));
+  back.addEventListener('click',function(){switchView('viewLibrary');renderList()});
+  dc.appendChild(back);
+
+  // Title + category
+  dc.appendChild(el('div',{className:'prompt-detail-title',textContent:p.title}));
+  var catCls=CAT_CLASS[p.category]||'cat-custom';
+  dc.appendChild(el('div',{className:'prompt-detail-cat '+catCls,textContent:p.category}));
+
+  // Prompt body with highlighted vars
+  dc.appendChild(el('div',{className:'section-title',textContent:'Prompt Template'}));
+  var body=el('div',{className:'prompt-body'});
+  var bodyText=p.prompt.replace(/\{\{([^}]+)\}\}/g,function(match,v){
+    return '\u27E8'+v.trim()+'\u27E9';
+  });
+  body.textContent=bodyText;
+  dc.appendChild(body);
+
+  // Variable inputs
+  var vars2=extractVars(p.prompt);
+  if(vars2.length>0){
+    dc.appendChild(el('div',{className:'section-title',textContent:'Fill Variables'}));
+    var varInputs={};
+    vars2.forEach(function(v){
+      var row=el('div',{className:'var-input-row'});
+      row.appendChild(el('div',{className:'var-input-label',textContent:'{{'+v+'}}'}));
+      var inp=el('input',{className:'var-input',placeholder:'Enter '+v+'...'});
+      inp.addEventListener('input',updateOutput);
+      varInputs[v]=inp;
+      row.appendChild(inp);
+      dc.appendChild(row);
+    });
+  }
+
+  // Output
+  dc.appendChild(el('div',{className:'section-title',textContent:'Final Prompt'}));
+  var output=el('div',{className:'output-area'});
+  output.textContent=p.prompt.replace(/\{\{([^}]+)\}\}/g,'[...]');
+  dc.appendChild(output);
+
+  function updateOutput(){
+    var text=p.prompt;
+    vars2.forEach(function(v){
+      var val=varInputs[v].value||'[...]';
+      text=text.replace(new RegExp('\\{\\{'+v.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\}\\}','g'),val);
+    });
+    output.textContent=text;
+  }
+
+  // Copy button
+  var copyBtn=el('button',{className:'btn btn-primary',textContent:'Copy to Clipboard'});
+  copyBtn.addEventListener('click',function(){
+    var text2=output.textContent;
+    navigator.clipboard.writeText(text2).then(function(){
+      showToast('Copied to clipboard!');
+      // Increment usage
+      var pp=getPrompts();
+      var idx=pp.findIndex(function(x){return x.id===p.id});
+      if(idx>=0){pp[idx].uses=(pp[idx].uses||0)+1;savePrompts(pp)}
+      setTotalUses(getTotalUses()+1);
+    });
+  });
+  dc.appendChild(el('div',{style:'margin-top:12px'}));
+  dc.appendChild(copyBtn);
+
+  // Example
+  if(p.example){
+    dc.appendChild(el('div',{className:'section-title',textContent:'Example Output',style:'margin-top:20px'}));
+    dc.appendChild(el('div',{className:'example-area',textContent:p.example}));
+  }
+
+  // Edit/delete row
+  var actionRow=el('div',{className:'btn-row',style:'margin-top:16px'});
+  var editBtn=el('button',{className:'btn btn-secondary btn-sm',textContent:'Edit'});
+  editBtn.addEventListener('click',function(){
+    editingId=p.id;$('editTitle').textContent='Edit Prompt';
+    $('inputTitle').value=p.title;$('inputCategory').value=p.category;
+    $('inputPrompt').value=p.prompt;$('inputExample').value=p.example||'';
+    switchView('viewEdit');
+  });
+  actionRow.appendChild(editBtn);
+  var delBtn=el('button',{className:'btn btn-danger btn-sm',textContent:'Delete'});
+  delBtn.addEventListener('click',function(){
+    if(confirm('Delete "'+p.title+'"?')){
+      var pp2=getPrompts().filter(function(x){return x.id!==p.id});
+      savePrompts(pp2);switchView('viewLibrary');renderList();showToast('Prompt deleted');
+    }
+  });
+  actionRow.appendChild(delBtn);
+  dc.appendChild(actionRow);
+
+  switchView('viewDetail');
+}
+
+// SAVE PROMPT
+$('btnSavePrompt').addEventListener('click',function(){
+  var title=$('inputTitle').value.trim();
+  var cat=$('inputCategory').value;
+  var prompt=$('inputPrompt').value.trim();
+  var example=$('inputExample').value.trim();
+
+  if(!title){showToast('Title is required');return}
+  if(!prompt){showToast('Prompt text is required');return}
+
+  var prompts=getPrompts();
+  var vars2=extractVars(prompt);
+
+  if(editingId){
+    var idx=prompts.findIndex(function(x){return x.id===editingId});
+    if(idx>=0){
+      prompts[idx].title=title;prompts[idx].category=cat;prompts[idx].prompt=prompt;
+      prompts[idx].example=example;prompts[idx].vars=vars2;
+      savePrompts(prompts);showToast('Prompt updated');
+    }
+  }else{
+    var newP={
+      id:'u'+Date.now(),title:title,category:cat,prompt:prompt,example:example,
+      vars:vars2,starred:false,uses:0
+    };
+    prompts.unshift(newP);savePrompts(prompts);showToast('Prompt saved');
+  }
+  editingId=null;
+  switchView('viewLibrary');renderList();
+});
+
+// SETTINGS VIEW
+function renderSettingsView(){
+  var prompts=getPrompts();
+  var totalUses=getTotalUses();
+  var starred=prompts.filter(function(p){return p.starred}).length;
+
+  // Cat breakdown
+  var catCounts={};
+  prompts.forEach(function(p){catCounts[p.category]=(catCounts[p.category]||0)+1});
+
+  var sc=$('settingsStats');sc.textContent='';
+  [{v:String(prompts.length),l:'Total Prompts'},{v:String(totalUses),l:'Total Uses'},{v:String(starred),l:'Favorites'},{v:String(Object.keys(catCounts).length),l:'Categories'}].forEach(function(c){
+    var card=el('div',{className:'stat-card'});
+    card.appendChild(el('div',{className:'stat-value',textContent:c.v}));
+    card.appendChild(el('div',{className:'stat-label',textContent:c.l}));
+    sc.appendChild(card);
+  });
+
+  // Top prompts
+  var tp=$('topPrompts');tp.textContent='';
+  var sorted=prompts.slice().sort(function(a,b){return(b.uses||0)-(a.uses||0)}).slice(0,5);
+  if(sorted.length===0||sorted[0].uses===0){
+    tp.appendChild(el('div',{className:'empty-state',textContent:'No usage data yet. Start using prompts!',style:'padding:20px'}));
+  }else{
+    sorted.forEach(function(p,i){
+      if((p.uses||0)===0)return;
+      var row=el('div',{className:'top-prompt'});
+      row.appendChild(el('div',{className:'top-prompt-rank',textContent:'#'+(i+1)}));
+      row.appendChild(el('div',{className:'top-prompt-name',textContent:p.title}));
+      row.appendChild(el('div',{className:'top-prompt-count',textContent:(p.uses||0)+' uses'}));
+      tp.appendChild(row);
+    });
+  }
+}
+
+// IMPORT/EXPORT
+$('btnExport').addEventListener('click',function(){
+  var data={prompts:getPrompts(),totalUses:getTotalUses(),exportedAt:new Date().toISOString()};
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var a=el('a',{href:URL.createObjectURL(blob),download:'promptvault_export.json'});a.click();
+  showToast('Data exported');
+});
+
+$('btnImport').addEventListener('click',function(){$('fileImport').click()});
+$('fileImport').addEventListener('change',function(e){
+  var file=e.target.files[0];if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(ev){
+    try{
+      var data=JSON.parse(ev.target.result);
+      if(data.prompts&&Array.isArray(data.prompts)){
+        var existing=getPrompts();
+        var existingIds={};existing.forEach(function(p){existingIds[p.id]=true});
+        var added=0;
+        data.prompts.forEach(function(p){
+          if(!existingIds[p.id]){
+            p.id='i'+Date.now()+'_'+(added++);
+            existing.push(p);
+          }
+        });
+        savePrompts(existing);
+        showToast('Imported '+added+' prompts');
+        renderList();renderSettingsView();
+      }else{showToast('Invalid format')}
+    }catch(err){showToast('Import failed: invalid JSON')}
+  };
+  reader.readAsText(file);
+  e.target.value='';
+});
+
+$('btnResetAll').addEventListener('click',function(){
+  if(confirm('Delete all prompts and data? This cannot be undone.')){
+    localStorage.removeItem('promptvault_prompts');localStorage.removeItem('promptvault_totalUses');
+    localStorage.removeItem('promptvault_reviewed');
+    showToast('All data cleared');renderList();renderSettingsView();
+  }
+});
+
+// INIT
+renderCats();renderList();
+setTimeout(function(){$('splash').classList.add('hide');setTimeout(function(){$('splash').style.display='none'},400)},800);
+
+// SMART REVIEW (after 20th prompt used)
+var tu=getTotalUses();
+if(tu>=20&&!localStorage.getItem('promptvault_reviewed')){
+  setTimeout(function(){
+    var bar=el('div',{style:'position:fixed;bottom:60px;left:12px;right:12px;background:var(--bg3);border:1px solid var(--accent);border-radius:12px;padding:14px 16px;z-index:999;display:flex;align-items:center;justify-content:space-between;gap:12px;animation:fadeUp .3s ease'});
+    bar.appendChild(el('span',{textContent:'You\'ve used '+tu+' prompts! Finding PromptVault useful?',style:'font-size:13px;color:var(--text)'}));
+    var br2=el('div',{style:'display:flex;gap:8px;flex-shrink:0'});
+    var sb=el('button',{className:'btn btn-primary btn-sm',textContent:'Share',style:'padding:6px 14px;font-size:12px'});
+    sb.addEventListener('click',function(){
+      if(navigator.share)navigator.share({title:'PromptVault',text:'AI prompt manager with variables and categories',url:'https://promptvault.surge.sh'});
+      else{navigator.clipboard.writeText('https://promptvault.surge.sh');showToast('Link copied')}
+      localStorage.setItem('promptvault_reviewed','1');bar.remove();
+    });
+    var db2=el('button',{className:'btn btn-sm',textContent:'Later',style:'padding:6px 10px;font-size:12px;color:var(--text3);background:none;border:none'});
+    db2.addEventListener('click',function(){bar.remove();localStorage.setItem('promptvault_reviewed','1')});
+    br2.appendChild(sb);br2.appendChild(db2);bar.appendChild(br2);document.body.appendChild(bar);
+  },2500);
+}
+
+// SERVICE WORKER
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(e){console.log('SW reg failed:',e)})})}
+
+})();
+</script>
+</body>
+</html>
