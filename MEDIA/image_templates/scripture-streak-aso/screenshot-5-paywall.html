@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1320px;
+    height: 2868px;
+    background: #0F1729;
+    font-family: -apple-system, 'SF Pro Display', Inter, sans-serif;
+    color: #E8E8E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 80px;
+    overflow: hidden;
+  }
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .top-label {
+    font-size: 68px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.15;
+  }
+  .trial-badge {
+    background: rgba(212,175,55,0.15);
+    border: 2px solid #D4AF37;
+    border-radius: 60px;
+    padding: 18px 60px;
+    font-size: 36px;
+    color: #D4AF37;
+    font-weight: 600;
+  }
+  .plan-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+  }
+  .plan-card {
+    background: #1E2D50;
+    border-radius: 24px;
+    padding: 50px 60px;
+    border: 2px solid rgba(212,175,55,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .plan-card.highlighted {
+    border-color: #D4AF37;
+    background: #1A2A48;
+    box-shadow: 0 0 40px rgba(212,175,55,0.15);
+  }
+  .popular-badge {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #D4AF37;
+    color: #0F1729;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 8px 40px;
+    border-radius: 30px;
+    white-space: nowrap;
+  }
+  .plan-name { font-size: 40px; font-weight: 700; color: #FFFFFF; }
+  .plan-desc { font-size: 28px; color: #6070A0; margin-top: 8px; }
+  .plan-price { font-size: 52px; font-weight: 800; color: #D4AF37; text-align: right; }
+  .plan-per { font-size: 26px; color: #6070A0; text-align: right; margin-top: 4px; }
+  .plan-save {
+    font-size: 24px;
+    background: rgba(212,175,55,0.15);
+    color: #D4AF37;
+    padding: 6px 20px;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: inline-block;
+  }
+  .cta-btn {
+    background: #D4AF37;
+    color: #0F1729;
+    border: none;
+    border-radius: 20px;
+    padding: 50px;
+    font-size: 52px;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.5px;
+  }
+  .footer-note {
+    font-size: 28px;
+    color: #4050A0;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .bottom-label {
+    font-size: 46px;
+    font-weight: 500;
+    color: #7080A0;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="top-section">
+    <div class="top-label">Try Grace free<br>for 7 days.</div>
+    <div class="trial-badge">7-day free trial — cancel anytime</div>
+  </div>
+
+  <div class="plan-cards">
+    <div class="plan-card highlighted">
+      <div class="popular-badge">Most Popular</div>
+      <div>
+        <div class="plan-name">Weekly</div>
+        <div class="plan-desc">Flexible, cancel anytime</div>
+      </div>
+      <div>
+        <div class="plan-price">$4.99</div>
+        <div class="plan-per">per week</div>
+      </div>
+    </div>
+
+    <div class="plan-card">
+      <div>
+        <div class="plan-name">Monthly</div>
+        <div class="plan-desc">Commit to the habit</div>
+      </div>
+      <div>
+        <div class="plan-price">$12.99</div>
+        <div class="plan-per">per month</div>
+      </div>
+    </div>
+
+    <div class="plan-card">
+      <div>
+        <div class="plan-name">Annual</div>
+        <div class="plan-desc">Best long-term value</div>
+        <div class="plan-save">Save 23%</div>
+      </div>
+      <div>
+        <div class="plan-price">$59.99</div>
+        <div class="plan-per">per year</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-btn">Start Free Trial</div>
+
+  <div class="footer-note">
+    Free for 7 days. Then $4.99/week unless cancelled.<br>
+    Cancel anytime in App Store settings.
+  </div>
+
+  <div class="bottom-label">Cancel anytime. No commitment.</div>
+</body>
+</html>

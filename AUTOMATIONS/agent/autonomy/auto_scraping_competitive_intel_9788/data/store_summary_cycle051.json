@@ -1,0 +1,29 @@
+{
+  "cycle": 51,
+  "stored_at": "2026-03-16T12:29:10.811763",
+  "ci_rows_added": 11,
+  "alpha_rows_added": 3,
+  "blue_ocean_confirmed": [
+    "meditation_streak",
+    "money_habit",
+    "sobriety_streak",
+    "sleep_habit",
+    "water_reminder",
+    "reading_tracker"
+  ],
+  "build_now": [
+    "meditation_streak",
+    "money_habit",
+    "sobriety_streak",
+    "sleep_habit"
+  ],
+  "p0_alpha": [
+    "ALPHA_CI_51_LTD_001",
+    "ALPHA_CI_51_COLD_001"
+  ],
+  "source_data": {
+    "clean_posts": 61,
+    "high_signal_posts": 25,
+    "analyze_cycle": 49
+  }
+}

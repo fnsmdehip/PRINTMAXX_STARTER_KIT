@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1320px;
+    height: 2868px;
+    background: #0F1729;
+    font-family: -apple-system, 'SF Pro Display', Inter, sans-serif;
+    color: #E8E8E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 80px;
+    overflow: hidden;
+  }
+  .top-label {
+    font-size: 68px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+  .phone-mockup {
+    width: 900px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 0;
+  }
+  .streak-ring {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 12px solid #D4AF37;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.08);
+    box-shadow: 0 0 80px rgba(212, 175, 55, 0.3);
+  }
+  .streak-number {
+    font-size: 120px;
+    font-weight: 800;
+    color: #D4AF37;
+    line-height: 1;
+  }
+  .streak-label {
+    font-size: 28px;
+    color: #A0A8C0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .verse-card {
+    width: 100%;
+    background: #1E2D50;
+    border-radius: 24px;
+    padding: 50px 60px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  .verse-ref {
+    font-size: 28px;
+    color: #D4AF37;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .verse-text {
+    font-size: 38px;
+    line-height: 1.5;
+    color: #C8D0E8;
+    font-style: italic;
+  }
+  .heatmap {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+  .heatmap-day {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    background: rgba(212, 175, 55, 0.15);
+  }
+  .heatmap-day.done { background: #D4AF37; }
+  .heatmap-day.partial { background: rgba(212, 175, 55, 0.4); }
+  .bottom-label {
+    font-size: 46px;
+    font-weight: 500;
+    color: #7080A0;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="top-label">Build the habit.<br>Never miss a day.</div>
+
+  <div class="phone-mockup">
+    <div class="streak-ring">
+      <div class="streak-number">21</div>
+      <div class="streak-label">day streak</div>
+    </div>
+
+    <div class="verse-card">
+      <div class="verse-ref">Philippians 4:13</div>
+      <div class="verse-text">"I can do all things through Christ who strengthens me."</div>
+    </div>
+
+    <div class="heatmap">
+      <div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div>
+      <div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div>
+      <div class="heatmap-day partial"></div><div class="heatmap-day partial"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div><div class="heatmap-day done"></div>
+      <div class="heatmap-day"></div><div class="heatmap-day"></div><div class="heatmap-day"></div><div class="heatmap-day"></div><div class="heatmap-day"></div><div class="heatmap-day"></div><div class="heatmap-day"></div>
+    </div>
+  </div>
+
+  <div class="bottom-label">Daily verse + streak tracking</div>
+</body>
+</html>

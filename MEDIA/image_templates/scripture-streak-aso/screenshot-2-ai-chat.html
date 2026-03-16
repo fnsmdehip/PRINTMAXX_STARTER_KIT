@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1320px;
+    height: 2868px;
+    background: #0F1729;
+    font-family: -apple-system, 'SF Pro Display', Inter, sans-serif;
+    color: #E8E8E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 80px;
+    overflow: hidden;
+  }
+  .top-label {
+    font-size: 68px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.15;
+  }
+  .chat-window {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 40px 0;
+  }
+  .chat-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+  }
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4AF37, #8B6914);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+  }
+  .persona-name { font-size: 36px; font-weight: 700; color: #D4AF37; }
+  .persona-sub { font-size: 24px; color: #6070A0; }
+
+  .msg-user {
+    align-self: flex-end;
+    background: #D4AF37;
+    color: #0F1729;
+    padding: 32px 44px;
+    border-radius: 32px 32px 6px 32px;
+    font-size: 34px;
+    line-height: 1.4;
+    max-width: 85%;
+    font-weight: 600;
+  }
+  .msg-ai {
+    align-self: flex-start;
+    background: #1E2D50;
+    border: 1px solid rgba(212,175,55,0.2);
+    padding: 36px 44px;
+    border-radius: 6px 32px 32px 32px;
+    font-size: 34px;
+    line-height: 1.55;
+    max-width: 92%;
+    color: #C8D0E8;
+    display: flex;
+    gap: 24px;
+  }
+  .msg-ai-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4AF37, #8B6914);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .free-limit {
+    text-align: center;
+    font-size: 26px;
+    color: #5060A0;
+    padding: 20px;
+    border: 1px dashed rgba(212,175,55,0.3);
+    border-radius: 12px;
+    color: #A0A0C0;
+  }
+  .free-limit span { color: #D4AF37; }
+  .bottom-label {
+    font-size: 46px;
+    font-weight: 500;
+    color: #7080A0;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="top-label">Ask Grace anything<br>about scripture.</div>
+
+  <div class="chat-window">
+    <div class="chat-header">
+      <div class="avatar">G</div>
+      <div>
+        <div class="persona-name">Grace</div>
+        <div class="persona-sub">Your Bible Study Companion</div>
+      </div>
+    </div>
+
+    <div class="msg-user">
+      What does today's verse mean for my situation at work?
+    </div>
+
+    <div class="msg-ai">
+      <div class="msg-ai-avatar">G</div>
+      <div>
+        Philippians 4:13 isn't about willpower — it's about source. Paul wrote this from prison, and he wasn't claiming superhuman ability. He was saying his strength came from somewhere outside himself.<br><br>
+        For your work situation: the question isn't "can I handle this?" It's "am I trying to handle it alone?" That's the shift this verse is pointing to.
+      </div>
+    </div>
+
+    <div class="msg-user">
+      How do I actually apply that when my manager is being unfair?
+    </div>
+
+    <div class="free-limit">
+      <span>2 of 3</span> free messages used today — upgrade for unlimited access
+    </div>
+  </div>
+
+  <div class="bottom-label">AI Bible study — no fluff, just clarity</div>
+</body>
+</html>

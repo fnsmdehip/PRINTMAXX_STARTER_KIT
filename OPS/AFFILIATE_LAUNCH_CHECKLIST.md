@@ -858,3 +858,36 @@ That same structural flaw exists in the $40B influencer market right now. A crea
 
 [ACQUISITION] I think it's happening....we got out second paid user after 4 days of launch 🥹🥹
 
+
+
+---
+
+## Pending Enhancement (ALPHA102447, Score: 36)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rvde4d/how_to_build_a_startup_waitlist_before_launch_and/
+**Added:** 2026-03-16T14:18:06-04:00
+
+[ACQUISITION] How to Build a Startup Waitlist Before Launch and Validate Demand Fast
+
+
+
+---
+
+## Pending Enhancement (ALPHA102456, Score: 24)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47401042
+**Added:** 2026-03-16T14:18:06-04:00
+
+[ACQUISITION] Launch HN: Voygr (YC W26) – A better maps API for agents and AI apps
+
+
+
+---
+
+## Pending Enhancement (ALPHA102463, Score: 24)
+
+**Source:** HackerNews | **URL:** https://www.usechamber.io/
+**Added:** 2026-03-16T14:18:06-04:00
+
+[ACQUISITION] Launch HN: Chamber (YC W26) – An AI Teammate for GPU Infrastructure
+
