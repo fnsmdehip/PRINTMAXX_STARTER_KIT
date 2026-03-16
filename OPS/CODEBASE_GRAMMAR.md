@@ -1,5 +1,5 @@
 # PRINTMAXX CODEBASE GRAMMAR
-# Generated: 2026-03-14T05:45:01.112051
+# Generated: 2026-03-16T05:45:00.685240
 # 20 scripts | Instant system understanding
 
 ## EXECUTION HIERARCHY
@@ -47,12 +47,12 @@
   fn: safe_path(p) | safe_command(cmd_str) | disk_free_gb() | ts() | log(msg, level) | run_script(script_path, args, timeout_sec, label) — Run a PRINTMAXX script with guardrails. Returns (success, output). | _hours_since(iso_ts) — Return hours elapsed since an ISO timestamp string. Returns float('inf') if None | run_ceo_cycle(dry_run) — Run one full CEO cycle: score -> decide -> snapshot -> execute -> audit. | show_status() — Show full CEO agent status dashboard. | run_daemon() — Run the CEO agent 24/7. | main()
   cli: --status --daemon --score --decide --run --protect --rollback --alpha --research --content --health --decision-engine --ventures --cron-list --cron-add
 
-### agent_swarm.py (1491L) — 22 operational agents — generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection
+### agent_swarm.py (1527L) — 22 operational agents — generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection
   class SwarmState: [__init__(), _load(), save(), update_agent(agent_id, updates)]
-  fn: safe_path(p) | ts() | log(msg, level) | get_agent_intelligence(agent_id) — Query intelligence router for this agent's venture context. | generate_plist(agent_id, agent_def) — Generate a launchd plist for a swarm agent. | install_agent(agent_id) — Generate plist and install via launchctl. | uninstall_agent(agent_id) — Unload and remove a swarm agent. | list_installed() — List all installed swarm agents. | show_status() | deploy_all() | kill_all() | show_logs(agent_id) | health_check() | main()
-  cli: --status --deploy --list --kill --kill-all --logs --health --run
+  fn: safe_path(p) | ts() | log(msg, level) | get_agent_intelligence(agent_id) — Query intelligence router for this agent's venture context. | generate_plist(agent_id, agent_def) — Generate a launchd plist for a swarm agent. | install_agent(agent_id) — Generate plist and install via launchctl. | uninstall_agent(agent_id) — Unload and remove a swarm agent. | list_installed() — List all installed swarm agents. | show_status() | deploy_all(force) — Deploy swarm agents respecting brain state. | kill_all() | show_logs(agent_id) | health_check() | main()
+  cli: --status --deploy --list --kill --kill-all --logs --health --force-deploy --run
 
-### venture_autonomy.py (1769L) — 8 venture types — universal execution engine, self-managing schedules, SelfManager auto-adjusts
+### venture_autonomy.py (1792L) — 8 venture types — universal execution engine, self-managing schedules, SelfManager auto-adjusts
   class AutonomyState: [__init__(), _load(), save(), get_venture(venture_id), add_venture(venture_id, venture_def), update_venture(venture_id, updates), get_active_ventures()]
   class VentureAutonomyEngine: [__init__(state), create_venture(venture_type, name, config), run_venture(venture_id), run_all_active(), _get_venture_xlsx_context(venture_type), _get_venture_intelligence(venture_type, step), _run_with_claude(venture_id, venture, step, vtype), _save_step_result(venture_id, step, success, output), _generate_schedule_configs(venture_id, venture_def), _generate_llm_launchd_plist(venture_id, venture_def, vtype, interval_hours)]
   class SchedulerManager: [install_launchd(venture_id, mode), uninstall_launchd(venture_id), install_all_llm(), install_cron(venture_id), list_installed()]
@@ -80,9 +80,9 @@
   fn: normalize_roi(val) — Fix corrupted ROI values from CSV misalignment. | load_alpha() — Load all alpha entries from CSV, fixing known data quality issues. | score_entry(entry, venture_config) — Score how relevant an alpha entry is to a venture type. | query_venture(entries, venture_type, status_filter, limit) — Query alpha entries relevant to a venture type. | keyword_search(entries, query, limit) — Full-text keyword search across all alpha fields. | query_by_category(entries, category, limit) — Query by exact category match. | top_alpha(entries, limit) — Get top alpha entries by ROI potential. | show_stats(entries) — Show alpha distribution stats. | format_result(score, entry, verbose) — Format a single result for display. | main()
   cli: --venture --category --search --top --status --stats --untagged --json --verbose
 
-### loop_closer.py (973L) — closes open loops — decision execution, feedback tracking, pipeline advancement
+### loop_closer.py (1165L) — closes open loops — decision execution, feedback tracking, pipeline advancement
   fn: log(msg, level) | log_action(action_type, target, result, details) | load_state() | save_state(state) | run_cmd(cmd, timeout, label) | _get_blocker_intelligence() — Get current blocker state from Master Ops for loop closing. | adjust_interval(agent_id, params, dry_run) | kill_agent(agent_id, dry_run) | deploy_agent(agent_id, dry_run) | create_venture(venture_type, params, dry_run) | boost_agent(agent_id, dry_run) | throttle_agent(agent_id, dry_run) | run_script_action(script, params, dry_run) | process_alpha(dry_run) | execute_weekly_target(target_key, params, dry_run) — Execute an agent-owned weekly target by triggering the relevant swarm agent.
-  cli: --cycle --decisions --feedback --pipeline --status --dry-run
+  cli: --cycle --decisions --feedback --pipeline --status --drift --dry-run
 
 ### decision_engine.py (1206L) — closed-loop decision processing — pending data → actions
   class FreelancePipeline: [analyze(dry_run), _match_service(opp), _build_price_line(opp, svc), _generate_responses(opportunities)]
@@ -120,7 +120,7 @@
   fn: extract_brave_cookies(domain_filter) — Extract and decrypt cookies from Brave's cookie database.
   cli: --bookmarks --accounts --handles --all --meme --deep --download-media --limit --days --max-scrolls --visible
 
-### background_reddit_scraper.py (278L) — Reddit JSON API scraper — no auth needed
+### background_reddit_scraper.py (285L) — Reddit JSON API scraper — no auth needed
   fn: load_subreddits(limit) — Load subreddits marked for auto-monitoring | get_next_alpha_id() — Get next available ALPHA ID | load_existing_urls() — Load existing URLs to avoid duplicates | estimate_roi(text, upvotes) — Estimate ROI potential | has_signal(title) — Check if title has business/alpha signal | scrape_subreddits(subreddits) — Scrape subreddits using Reddit JSON API - runs in background | main()
   cli: --scrape --full --limit
 
@@ -133,7 +133,7 @@
 ### memory_manager.py (464L) — filesystem-based memory management
   fn: count_csv(path) | count_files(pattern) | read_json(path) | file_age_hours(path) | safe_read_csv_column(path, col) | update_heartbeat() — Generate HEARTBEAT.md — the system pulse check. | update_active_tasks() — Refresh active-tasks.md with current system state. | log_to_daily(message) — Append a message to today's daily log. | generate_daily_summary() — Generate end-of-day summary from daily log entries. | check_venture_health() — Quick health check across all ventures. | main()
   cli: --heartbeat --active-tasks --daily-summary --log --health --full
-  reads: REVENUE_TRACKER.csv, ETSY_LISTINGS_COMPLETE.md, ACCOUNTS.csv, progress.json
+  reads: ETSY_LISTINGS_COMPLETE.md, progress.json, REVENUE_TRACKER.csv, ACCOUNTS.csv
 
 ### wire_missed_intelligence.py (263L) — parses MISSED_INTELLIGENCE_SCAN.md → updates catalog
   fn: classify_path(path) — Classify a file path into a venture type. | parse_scan_file(scan_path) — Parse MISSED_INTELLIGENCE_SCAN.md and extract all file entries. | get_existing_paths(catalog) — Get all paths already in the catalog across all ventures. | main()

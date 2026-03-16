@@ -572,3 +572,57 @@ ACTION NEEDED:
   ✗ OKC Mobile Detailing | https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-c
   ✗ OKC Car Detailing | https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-c
   ✗ Portland Window Cleaning | https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.s
+
+[2026-03-15 04:32] PLAYWRIGHT ALERT — 15 RED site(s):
+  ✗ OKC Mobile Detailing | https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-c
+  ✗ OKC Car Detailing | https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-c
+  ✗ Portland Window Cleaning | https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.s
+  ✗ SaaS Stack Audit 200 | https://saas-stack-audit-200.surge.sh | Page.title: Execution context was destroyed, most likely because of a navigation
+  ✗ Birmingham Detailing | https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham
+  ✗ Birmingham Home Detailing | https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://home-professional-mobile-detailing-amp-products-super-store-birmingham-
+  ✗ Homeguide Handyman LV | https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-
+  ✗ Pink Windows Louisville | https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.su
+  ✗ Cherry Window Louisville | https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh | Page.goto: net::ERR_NAME_NOT_RESOLVED at https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville
+  ✗ Old Settlers Dental ATX | https://old-settlers-dental-p-a-austin-tx.surge.sh | HTTP 504
+  ✗ Vitadox Austin Dentists | https://dentists-in-austin-tx-vitadox-austin-tx.surge.sh | HTTP 504
+  ✗ Harmony Plumbing Dallas | https://harmony-plumbing-and-drain-cleaning-dallas-tx.surge.sh | HTTP 504
+  ✗ Public Service Plumber DAL | https://public-service-plumbers-air-conditioning-llc-dallas-tx.surge.sh | HTTP 504
+  ✗ Berkeys AC Plumbing Dallas | https://berkeys-air-conditioning-plumbing-and-electrical-dallas-tx.surge.sh | HTTP 504
+  ✗ Accurate Leak Dallas | https://accurate-leak-and-line-dallas-tx.surge.sh | HTTP 504
+
+========================================
+PLAYWRIGHT TESTER - CYCLE 2026-03-15 04:30
+========================================
+
+TESTED: 156 sites via Playwright (8 concurrent tabs, 15s timeout)
+RESULTS: 101 GREEN | 40 YELLOW | 15 RED
+TRUE HEALTH: 148/156 operational (94.9%)
+
+>> 8 REAL FAILURES (DNS — subdomain >63 chars, never resolvable):
+   These need REDEPLOYMENT with shortened names:
+   1. mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh (77 chars)
+   2. top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh (77 chars)
+   3. window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh (69 chars)
+   4. mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh (74 chars)
+   5. home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh (73 chars)
+   6. the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh (73 chars)
+   7. local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh (68 chars)
+   8. residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh (74 chars)
+
+>> 6 FALSE POSITIVES (504 transient — all 200 on retry):
+   old-settlers-dental, vitadox-austin, harmony-plumbing-dallas,
+   public-service-plumber-dallas, berkeys-dallas, accurate-leak-dallas
+   ACTION: None needed. Surge CDN was temporarily overloaded.
+
+>> 1 FALSE POSITIVE (navigation error — SaaS Stack Audit 200):
+   Client-side redirect confused Playwright. Returns 200 on curl.
+
+>> 40 YELLOW (slow load >5s):
+   Mostly Austin dentist and Dallas plumbing pages. Surge CDN
+   was under load during test. All functional but slow.
+
+>> ACTION ITEMS:
+   [P1] Redeploy 8 DNS-broken sites with <=63-char subdomain names
+   [P2] Monitor slow YELLOW sites for persistent performance issues
+   [P3] Consider implementing DNS name length validation before deploy
+

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Local Biz Lead Machine</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Local Biz Lead Machine</h1>
+</header>
+<h1 id="local-biz-lead-machine">Local Biz Lead Machine</h1>
+<h2
+id="find-businesses-that-need-help.-show-them-proof.-close-the-deal.">find
+businesses that need help. show them proof. close the deal.</h2>
+<hr />
+<h2 id="part-1-google-maps-scraping-method">Part 1: Google Maps Scraping
+Method</h2>
+<p>Google Maps is a free database of every local business with a
+website, phone number, address, and reviews. you don’t need paid tools
+to access it.</p>
+<h3 id="manual-method-free-10-minutes-per-niche-per-city">manual method
+(free, 10 minutes per niche per city)</h3>
+<ol type="1">
+<li>open Google Maps in Chrome</li>
+<li>search: “[niche] in [city]” (example: “dentists in Austin TX”)</li>
+<li>scroll through results. Google shows 20 at a time. keep scrolling
+for more.</li>
+<li>for each business, note:
+<ul>
+<li>business name</li>
+<li>website URL</li>
+<li>phone number</li>
+<li>rating and review count</li>
+<li>address</li>
+</ul></li>
+</ol>
+<p><strong>what to look for:</strong> - businesses with websites that
+look outdated (you can tell from the URL pattern and the Google Maps
+preview) - businesses with under 20 reviews (they’re not doing marketing
+well) - businesses with no website listed (they need one) - businesses
+with 3-4 star ratings and complaints about “hard to reach” or “website
+doesn’t work” (these are your warmest leads)</p>
+<h3 id="faster-method-google-maps-a-spreadsheet">faster method: Google
+Maps + a spreadsheet</h3>
+<p>open Google Maps in one tab. open Google Sheets in another. as you
+scroll through results, paste business info into your sheet.</p>
+<p>columns for your spreadsheet:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr>
+<th>business name</th>
+<th>website</th>
+<th>phone</th>
+<th>rating</th>
+<th>reviews</th>
+<th>city</th>
+<th>niche</th>
+<th>audit score</th>
+<th>contacted</th>
+<th>response</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>this is tedious for the first 50 leads. after that, you get fast at
+scanning and qualifying in seconds.</p>
+<h3 id="the-outsource-the-scrape-option">the “outsource the scrape”
+option</h3>
+<p>if you want to skip manual collection: - <strong>Google Maps scraper
+tools:</strong> Outscraper, PhantomBuster, or Apify actors. $0-30/month
+depending on volume. - <strong>virtual assistant:</strong> hire on
+Fiverr or Upwork. $5-10 per 100 leads scraped and entered into a
+spreadsheet. - <strong>Python script with Playwright:</strong> automate
+the browser. more setup but free and unlimited.</p>
+<p>the method doesn’t matter. what matters is getting a list of 200+
+businesses with websites you can audit.</p>
+<h3 id="targeting-the-right-niches">targeting the right niches</h3>
+<p>not all local businesses pay equally. rank by willingness to pay for
+web services:</p>
+<p><strong>high willingness ($1,500-5,000 projects):</strong> - dentists
+and orthodontists - lawyers (personal injury, family, criminal) -
+plastic surgeons and med spas - home renovation contractors - real
+estate agents (individual, not brokerages) - HVAC, plumbing, and
+electrical companies</p>
+<p><strong>medium willingness ($500-1,500 projects):</strong> -
+restaurants and bars - auto repair shops - veterinarians - fitness
+studios and gyms - salons and barbershops - daycares and tutoring
+centers</p>
+<p><strong>lower willingness ($200-500 projects):</strong> - retail
+shops - food trucks - freelance professionals - small non-profits</p>
+<p>target the high willingness tier first. same amount of effort to
+close a $3,000 deal as a $500 deal.</p>
+<hr />
+<h2 id="part-2-website-audit-automation">Part 2: Website Audit
+Automation</h2>
+<p>the audit is your sales pitch. you’re not selling “web design.”
+you’re selling “here are 7 problems with your website that are costing
+you customers, and I can fix all of them.”</p>
+<h3 id="what-to-check-15-point-audit">what to check (15-point
+audit)</h3>
+<p>run these checks on every website in your lead list. takes 2-3
+minutes per site once you have the process down.</p>
+<p><strong>speed and performance:</strong> 1. <strong>page load
+time.</strong> use pagespeed.web.dev. enter their URL. anything over 3
+seconds on mobile = red flag. 53% of mobile visitors leave after 3
+seconds. 2. <strong>mobile responsiveness.</strong> open their site on
+your phone. does it look broken? text too small? buttons too close
+together? take a screenshot. 3. <strong>Core Web Vitals.</strong>
+pagespeed.web.dev shows these too. LCP, FID, CLS. if any are red,
+mention it.</p>
+<p><strong>security and trust:</strong> 4. <strong>SSL
+certificate.</strong> does the URL show https or http? http sites get a
+“Not Secure” warning in Chrome. instant trust killer. 5. <strong>broken
+links.</strong> click through the main navigation. any 404 pages? use
+brokenlinkcheck.com for a quick scan. 6. <strong>contact form.</strong>
+does it work? submit a test message. you’d be surprised how many contact
+forms go to dead email addresses.</p>
+<p><strong>visibility and marketing:</strong> 7. <strong>Google Business
+Profile.</strong> search their business name on Google. is their GBP
+claimed? are the hours correct? is there a description? photos? 8.
+<strong>review count and recency.</strong> when was their last Google
+review? if it’s been 6+ months, they’re leaving money on the table. 9.
+<strong>meta title and description.</strong> right-click on their
+homepage, “View Page Source,” search for <code>&lt;title&gt;</code> and
+<code>&lt;meta name="description"&gt;</code>. if the title is just
+“Home” or “Welcome,” their SEO is nonexistent. 10. <strong>social media
+links.</strong> do they have social links on their website? do those
+links work? do the social profiles have recent posts?</p>
+<p><strong>content and conversion:</strong> 11. <strong>clear call to
+action.</strong> can you tell what they want visitors to do within 5
+seconds? if the answer is no, the site isn’t converting. 12.
+<strong>photos.</strong> are they using stock photos or real photos of
+their business? real photos convert 35% better. 13. <strong>testimonials
+or reviews on site.</strong> do they show customer reviews on their
+website? most local businesses don’t, and it costs them. 14.
+<strong>service pages.</strong> do they have individual pages for each
+service? “dentist in Austin” ranks better than a single page listing all
+services. 15. <strong>last update.</strong> check the copyright year in
+the footer. if it says 2019, the site hasn’t been touched in years.</p>
+<h3 id="scoring-the-audit">scoring the audit</h3>
+<p>score each item 0-2: - 0 = major issue (broken, missing, or
+critically bad) - 1 = needs improvement (exists but not optimized) - 2 =
+good (no action needed)</p>
+<p>max score: 30. your best prospects score under 15.</p>
+<h3 id="presenting-the-audit">presenting the audit</h3>
+<p>do NOT send a spreadsheet. send a simple document or email with:</p>
+<ol type="1">
+<li><strong>3 biggest problems</strong> (the most visually obvious
+issues)</li>
+<li><strong>what each problem costs them</strong> (in customers lost,
+not technical jargon)</li>
+<li><strong>before/after example</strong> (show a competitor’s site that
+does it right)</li>
+<li><strong>your fix</strong> (what you’d do, in plain language)</li>
+</ol>
+<p><strong>example audit summary:</strong></p>
+<blockquote>
+<p>I looked at [business name]’s website and found a few things that
+might be costing you customers:</p>
+<ol type="1">
+<li><p>your site takes 7.2 seconds to load on mobile. the industry
+average for dentists is 2.8 seconds. Google’s data shows 53% of visitors
+leave after 3 seconds. that’s roughly half your mobile visitors bouncing
+before they see your site.</p></li>
+<li><p>your contact form goes to a 404 error page. anyone trying to book
+an appointment through your website right now can’t. I tested it
+twice.</p></li>
+<li><p>your Google Business Profile hasn’t had a new review in 11
+months. your top competitor has 15 reviews from the last 3 months.
+reviews are the #1 factor in local search ranking.</p></li>
+</ol>
+<p>I can fix all three of these in about a week. want me to send a
+quote?</p>
+</blockquote>
+<p>specific. numbers. no jargon. talks about their business, not your
+skills.</p>
+<hr />
+<h2 id="part-3-cold-email-templates">Part 3: Cold Email Templates</h2>
+<h3 id="template-1-restaurant-food-service">template 1: restaurant /
+food service</h3>
+<p>subject: noticed something on [restaurant name]’s website</p>
+<blockquote>
+<p>hi [first name],</p>
+<p>I was looking for [cuisine type] restaurants in [city] and found
+[restaurant name]. the food looks great based on your photos.</p>
+<p>I noticed your website takes about [X] seconds to load on mobile. for
+restaurants, most people search on their phones when they’re hungry and
+deciding where to eat. a slow site means they pick the next result
+instead.</p>
+<p>I also noticed your online menu is a PDF. about 40% of mobile users
+can’t open PDFs easily, which means they might not see your menu at
+all.</p>
+<p>I help restaurants in [city] fix these kinds of issues. usually takes
+1-2 weeks and costs between $500-$1,200 depending on scope.</p>
+<p>want me to send a free audit with everything I’d fix?</p>
+<p>[your name]</p>
+</blockquote>
+<h3
+id="template-2-professional-services-lawyers-dentists-accountants">template
+2: professional services (lawyers, dentists, accountants)</h3>
+<p>subject: [business name]’s Google presence</p>
+<blockquote>
+<p>hi [first name],</p>
+<p>I was researching [niche] in [city] and noticed [business name] ranks
+on page [X] for “[niche] in [city].” your top competitor, [competitor
+name], ranks #1 and has [X] more Google reviews.</p>
+<p>three things I noticed that might be affecting your visibility:</p>
+<ol type="1">
+<li>your website’s meta title says “[generic title]” instead of
+including “[niche] in [city]”</li>
+<li>your last Google review was [X months] ago</li>
+<li>[one more specific issue from audit]</li>
+</ol>
+<p>I help [niche] practices in [city] improve their online presence. my
+last client, a [similar niche] in [nearby city], went from page 3 to
+page 1 for their main keyword in 6 weeks.</p>
+<p>can I send you a free audit?</p>
+<p>[your name]</p>
+</blockquote>
+<h3 id="template-3-home-services-hvac-plumbing-contractors">template 3:
+home services (HVAC, plumbing, contractors)</h3>
+<p>subject: [business name]’s website on mobile</p>
+<blockquote>
+<p>hey [first name],</p>
+<p>I pulled up [business name]’s website on my phone and ran into a few
+issues:</p>
+<ul>
+<li>the phone number isn’t clickable (customers have to memorize it and
+dial manually)</li>
+<li>the contact form doesn’t work on mobile (I tested it)</li>
+<li>page takes [X] seconds to load (Google recommends under 3)</li>
+</ul>
+<p>for home service companies, 70%+ of customers search on their phones
+during emergencies. if they can’t call you in one tap, they call the
+next company.</p>
+<p>I fix these kinds of issues for contractors and service companies.
+usually $800-$1,500 and done within 2 weeks.</p>
+<p>interested in a free audit?</p>
+<p>[your name]</p>
+</blockquote>
+<h3 id="template-4-retail-local-shops">template 4: retail / local
+shops</h3>
+<p>subject: quick thought about [business name]</p>
+<blockquote>
+<p>hi [first name],</p>
+<p>I walked past [business name] on [street/area] and checked out your
+website afterward. the store looks great but the website doesn’t
+match.</p>
+<p>a few things I noticed: - no Google Business Profile photos (this is
+free and takes 10 minutes to fix) - website copyright says [old year] -
+no customer reviews visible on the site</p>
+<p>I help local shops in [city] get their online presence to match their
+in-store experience. packages start at $500.</p>
+<p>want me to put together a quick list of everything I’d improve?</p>
+<p>[your name]</p>
+</blockquote>
+<hr />
+<h2 id="part-4-pricing-guide">Part 4: Pricing Guide</h2>
+<h3 id="the-3-tier-structure">the 3-tier structure</h3>
+<p>offer three packages. most people pick the middle one.</p>
+<p><strong>tier 1: website fix ($500-800)</strong> - fix the specific
+issues from your audit - speed optimization - mobile responsiveness fix
+- contact form repair - SSL setup if needed - delivered in 1 week</p>
+<p><strong>tier 2: website overhaul ($1,200-2,000)</strong> - everything
+in tier 1 - new design (modern template, their branding) - SEO basics
+(meta titles, descriptions, schema markup) - Google Business Profile
+optimization - 5 pages (home, about, services, contact, testimonials) -
+delivered in 2-3 weeks</p>
+<p><strong>tier 3: full digital presence ($2,500-4,000)</strong> -
+everything in tier 2 - custom design - 10+ pages with individual service
+pages - local SEO setup - review generation system - social media
+profile setup - monthly reporting - delivered in 4-6 weeks</p>
+<h3 id="anchoring-strategy">anchoring strategy</h3>
+<p>always present tier 3 first. when they see $3,500, tier 2 at $1,500
+feels reasonable. if you present $500 first, $1,500 feels expensive.</p>
+<h3 id="the-retainer-pitch">the retainer pitch</h3>
+<p>after the project is complete, offer ongoing maintenance:</p>
+<blockquote>
+<p>I can maintain everything we just built for $200-500/month. that
+includes hosting, security updates, monthly speed checks, Google
+Business Profile management, and 2 hours of content updates.</p>
+</blockquote>
+<p><strong>retainer math:</strong> 10 clients x $300/month =
+$3,000/month recurring. this is the real money in local business
+services. projects are lumpy. retainers are reliable.</p>
+<h3 id="pricing-psychology">pricing psychology</h3>
+<ul>
+<li>never quote in round numbers. $1,497 feels researched. $1,500 feels
+made up.</li>
+<li>always anchor against the cost of NOT fixing it. “your broken
+contact form has been live for 3 months. if even 5 potential patients
+tried to book through your site, that’s $5,000-15,000 in lost
+revenue.”</li>
+<li>local businesses compare you to agencies. agencies charge
+$5,000-20,000. you’re the affordable expert.</li>
+</ul>
+<hr />
+<h2 id="part-5-follow-up-sequence">Part 5: Follow-Up Sequence</h2>
+<p>70% of local business deals close on follow-ups 2-4. never send one
+email and give up.</p>
+<h3 id="the-5-email-sequence">the 5-email sequence</h3>
+<p><strong>email 1 (day 0):</strong> initial outreach (use templates
+from Part 3)</p>
+<p><strong>email 2 (day 3):</strong> subject: re: [original subject]</p>
+<blockquote>
+<p>hi [first name], following up on my note about [business name]’s
+website.</p>
+<p>I actually went ahead and ran a full audit. the short version: your
+site scores [X/30] on my 15-point check. your closest competitor scores
+[Y/30].</p>
+<p>happy to share the full breakdown. no charge, no obligation.</p>
+<p>[your name]</p>
+</blockquote>
+<p><strong>email 3 (day 7):</strong> subject: [business name] vs
+[competitor name]</p>
+<blockquote>
+<p>[first name], one more data point.</p>
+<p>I compared [business name] to [competitor name] on 5 key metrics: -
+page speed: you [X]s, them [Y]s - Google reviews: you [X], them [Y] -
+mobile score: you [X/100], them [Y/100]</p>
+<p>the gap is fixable. most of these improvements take 1-2 weeks.</p>
+<p>worth a 10-minute call to walk through it?</p>
+<p>[your name]</p>
+</blockquote>
+<p><strong>email 4 (day 14):</strong> subject: last thought on [business
+name]’s site</p>
+<blockquote>
+<p>hey [first name], I know you’re busy running a business. just wanted
+to flag: the contact form issue I mentioned is still live. every day it
+stays broken is potential customers you’re losing.</p>
+<p>if this isn’t a priority right now, I get it. if it ever becomes one,
+I’m here.</p>
+<p>[your name]</p>
+</blockquote>
+<p><strong>email 5 (day 21):</strong> subject: closing the loop</p>
+<blockquote>
+<p>[first name], last email from me about this. if website improvements
+are ever on your radar, here’s what I’d do first:</p>
+<ol type="1">
+<li>fix the contact form (30 minutes)</li>
+<li>add click-to-call to your phone number (15 minutes)</li>
+<li>update your Google Business Profile (1 hour)</li>
+</ol>
+<p>those 3 things cost under $500 and would make the biggest immediate
+difference.</p>
+<p>my email and number are below if you ever want to chat.</p>
+<p>[your name]</p>
+</blockquote>
+<h3 id="follow-up-timing">follow-up timing</h3>
+<ul>
+<li>email 2: 3 days after email 1</li>
+<li>email 3: 4 days after email 2</li>
+<li>email 4: 7 days after email 3</li>
+<li>email 5: 7 days after email 4</li>
+</ul>
+<p>total sequence: 21 days. after that, stop emailing. add them to a
+90-day check-in list.</p>
+<hr />
+<h2 id="part-6-case-study-template">Part 6: Case Study Template</h2>
+<p>every completed project becomes a case study. case studies close
+future clients.</p>
+<h3 id="the-format">the format</h3>
+<pre><code>## [business name]: [headline result]
+
+**industry:** [niche]
+**location:** [city, state]
+**project:** [tier name]
+**timeline:** [X weeks]
+**investment:** [price range, not exact]
+
+### the problem
+[2-3 sentences about what was broken]
+
+### what we did
+[bullet list of specific fixes]
+
+### results
+- page speed: [before] -&gt; [after]
+- Google ranking: page [X] -&gt; page [Y] for &quot;[keyword]&quot;
+- contact form submissions: [before] -&gt; [after] per month
+- Google reviews: [before] -&gt; [after]
+
+### client quote
+&gt; &quot;[quote from the business owner, even if short]&quot;</code></pre>
+<p><strong>get the quote.</strong> after every project, send this
+email:</p>
+<blockquote>
+<p>hey [first name], glad you’re happy with the new site. quick favor:
+would you mind sharing a 1-2 sentence quote about working together? I
+use these on my website to show future clients what the process is like.
+something like “[business name] worked with [your name] on our website
+and [result/experience]” is perfect.</p>
+</blockquote>
+<p>most people will do it if you make it easy. some won’t. ask every
+time.</p>
+<hr />
+<h2 id="part-7-objection-handling">Part 7: Objection Handling</h2>
+<p>the 5 objections you’ll hear from local business owners and what to
+say.</p>
+<h3 id="i-have-a-nephewfriend-who-does-websites">“I have a nephew/friend
+who does websites”</h3>
+<blockquote>
+<p>totally understand. a lot of my clients started with a friend or
+family member. the main difference is that I specialize in [niche]
+businesses and know what drives customers in your specific industry. but
+if you’re happy with what they’re doing, that’s great.</p>
+</blockquote>
+<h3 id="i-dont-think-a-website-matters-for-my-business">“I don’t think a
+website matters for my business”</h3>
+<blockquote>
+<p>I hear that. here’s a stat that might be relevant: 97% of consumers
+search online for local businesses. when someone searches “[niche] in
+[city],” your website is what convinces them to call you instead of your
+competitor. right now, [competitor] shows up first. their site loads in
+2 seconds and has a click-to-call button. yours takes 8 seconds and the
+contact form is broken.</p>
+</blockquote>
+<h3 id="its-too-expensive">“it’s too expensive”</h3>
+<blockquote>
+<p>I understand budget is a factor. the website fix package starts at
+$500, and most of that is fixing things that are actively losing you
+customers right now. your broken contact form alone has probably cost
+you more than $500 in the last 3 months.</p>
+</blockquote>
+<h3 id="i-need-to-think-about-it">“I need to think about it”</h3>
+<blockquote>
+<p>of course, take your time. just so I can follow up at the right time,
+is there a specific concern I can address, or is it more about
+timing?</p>
+</blockquote>
+<p>(this separates real “thinking about it” from polite rejection. if
+they name a concern, address it. if it’s timing, ask when to check
+back.)</p>
+<h3 id="can-you-guarantee-results">“can you guarantee results?”</h3>
+<blockquote>
+<p>I can guarantee the deliverables: a fast, mobile-optimized site with
+working forms and proper SEO setup. I can show you results from similar
+businesses I’ve worked with. what I can’t guarantee is how quickly
+Google updates rankings, because that’s on Google’s timeline. but the
+improvements I make are the same ones that moved [past client] from page
+3 to page 1.</p>
+</blockquote>
+<hr />
+<h2 id="what-to-do-today">what to do today</h2>
+<ol type="1">
+<li>pick a niche and a city from Part 1</li>
+<li>find 50 businesses on Google Maps (takes about 30 minutes)</li>
+<li>audit the top 20 by website quality (takes about 1 hour)</li>
+<li>email the 10 worst websites using templates from Part 3</li>
+<li>follow up using the sequence from Part 5</li>
+<li>close your first client within 2-3 weeks</li>
+</ol>
+<p>50 leads. 10 emails. 1 client. $1,500. that’s the math. the guide
+cost $17. ROI: 8,723%.</p>
+<p>now stop reading and start scraping.</p>
+</body>
+</html>

@@ -60,3 +60,57 @@ thinks that over the next five years, the biggest bottleneck to deploying AI wil
 
 ASML sells EUV machines for $300-400 million. You need about three and a half machines, so $1.2
 
+
+
+---
+
+## Pending Enhancement (ALPHA98740, Score: 26)
+
+**Source:** hackernews | **URL:** https://washingtonian.com/2026/03/12/the-washington-post-is-using-reader-data-to-set-subscription-prices-how-does-that-work/
+**Added:** 2026-03-15T04:19:31-04:00
+
+Washington Post using reader data to set dynamic subscription prices. 13 HN points. Personalized pricing based on engagement data. Tactic: price discrimination based on user behavior signals. Applicable to SaaS/app pricing - show different pricing to different user segments.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100969, Score: 24)
+
+**Source:** @randfish (high-signal-accounts) | **URL:** https://x.com/tommolog/status/2033232275198853391/photo/1
+**Added:** 2026-03-16T02:30:01-04:00
+
+After taking time to digest 
+@Rivian
+'s R2 pricing and trim packages, I believe it can be the high-volume, mass-market EV the brand desparately needs. They may not have "hit it out of the park", but I think it's a solid triple. 
+
+It would have been great if the $45k option would
+
+
+
+---
+
+## Pending Enhancement (ALPHA101111, Score: 36)
+
+**Source:** @FedotOff90 (bookmarks) | **URL:** https://x.com/FedotOff90/status/2033295714608947282
+**Added:** 2026-03-16T04:05:58-04:00
+
+Met a 19-year-old at one of our events doing $40k/month profit. He started 8 months ago lol
+
+Asked him what he does differently from most people who fail.
+
+He said: I copy winning ads frame by frame before he ever tries to create anything original.
+
+No "creative thinking." No
+
+
+
+---
+
+## Pending Enhancement (ALPHA101206, Score: 34)
+
+**Source:** r/SaaS - Cycle 43 | **URL:** https://www.reddit.com/r/SaaS/comments/1ruc0cu/
+**Added:** 2026-03-16T05:30:01-04:00
+
+LTD PRICING SWEET SPOT: $199 LTD sold 89 units = $17.7K. Our apps at $29-49 LTD could hit 300-500 units = $9-20K.
+

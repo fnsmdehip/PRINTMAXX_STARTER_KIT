@@ -1,10 +1,24 @@
-# ACTIONABLE QUEUE -- 2026-03-14 07:30
-Total items: 50 (deduplicated from all sources)
+# ACTIONABLE QUEUE -- 2026-03-16 07:30
+Total items: 77 (deduplicated from all sources)
 
 ---
 
-## [P0] CRITICAL -- Revenue-blocking human actions (24 items)
+## [P0] CRITICAL -- Revenue-blocking human actions (32 items)
 
+- [ ] - **HUMAN ACTION (P0, 10 min):** Create Product Hunt maker profile [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 15 min):** Create Pinterest business account + upload first 17 pins [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **P0 BLOCKER: Stripe account needed to process payments across ALL apps** [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P0, 10 min):** Create Stripe account — unlocks payment for all 20+ apps [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P0, 10 min):** Create Gumroad account — unlocks 13 PDF product listings [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 15 min):** Evaluate listing agent swarm capabilities on ClawsList or packaging Claude Code config as a Gumroad product [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P0, 15 min):** Send 6 cold emails to HN leads with direct founder emails: [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - P0: Install or open the Tailscale iPhone app and log into the same account so the tailnet URL works from anywhere [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - P0 (5-15 min): Keep X/Brave logged in so the bookmark/account scrapers can run live [HUMAN]
@@ -17,7 +31,9 @@ Total items: 50 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTION (45-60 min total):** Sign up for 10 affiliate programs. URLs and steps in OPS/AFFILIATE_OPPORTUNITIES_MAR08.md. [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
-- [ ] - **BLOCKER (human):** Sign up for ConvertKit + Beehiiv affiliate programs, replace placeholder IDs, redeploy. See `OPS/AFFILIATE_LINK_SETUP.md`. [HUMAN]
+- [ ] - **BLOCKER (human):** Sign up for affiliate programs and replace placeholder IDs. See `OPS/AFFILIATE_LINK_SETUP.md`. [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **BLOCKER (human, 30 min total):** Sign up for 5 affiliate programs and replace placeholder IDs. Full instructions in `OPS/AFFILIATE_LINK_SETUP.md`. Priority order: SEMrush (highest per-sale) > ConvertKit (recurring) > Beehiiv (50% yr1) > Instantly (tiered) > Smartlead (lifetime recurring). [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Remaining blocker:** Human account creation (Gumroad/Fiverr/Stripe). 32 days, zero credentials configured. [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
@@ -54,8 +70,22 @@ Total items: 50 (deduplicated from all sources)
 - [ ] - [P0] Facebook keyword scraper - $500 budget (r/forhire)
       Source: PERSISTENT_TASK_TRACKER
 
-## [P1] HIGH -- System improvements with high ROI (6 items)
+## [P1] HIGH -- System improvements with high ROI (14 items)
 
+- [ ] - **HUMAN ACTION (P1, ~$100, 30 min):** File DBA "Enterprise Automation Solutions" under Wyoming LLC [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 30 min):** Open business bank account under DBA [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 20 min):** Submit InvoiceForge to PH on Mar 17 (kit ready) [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 15 min):** Post InvoiceForge to r/plumbing, r/electricians, r/HVAC (posts ready in `CONTENT/social/posting_queue/invoiceforge_trade_launch_mar15.txt`) [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 5 min):** Post 2-3 tweets about InvoiceForge trade templates [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 5 min):** Review content at `CONTENT/social/posting_queue/research_alpha_20260314.txt` and post best 2-3 tweets [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P1, 10 min):** Post 4 Reddit DMs to r/forhire leads: [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTIONS:** Deploy PWAs (~10 min), post tweets (~15 min), wire email forms to Beehiiv (~15 min) [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Prompt pipeline built:** log_user_prompts.sh → prompt_meta_review.py → actionable_aggregator.py → session_briefing.py
@@ -68,9 +98,21 @@ Total items: 50 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **PageScorer:** pagescorer.surge.sh — landing page audit tool, conversion scoring, actionable fixes
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - ✓ All systems healthy, no immediate fixes required
+      Source: swarm/system_healer_report_20260315.md
 
-## [P2] MEDIUM -- Nice-to-have optimizations (18 items)
+## [P2] MEDIUM -- Nice-to-have optimizations (29 items)
 
+- [ ] - **HUMAN ACTION (P2, 10 min):** Set up Cal.com account for booking page [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **HUMAN ACTION (P2, 10 min):** Set up hello@enterpriseautomationsolutions.com email [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - BLOCKED ON HUMAN: ~30 ops (assets ready, needs account) [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - Clear automation-ready vs human-only action split [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - **Status:** OUTREACH READY — NEEDS HUMAN TO SEND [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Human actions required next:** [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md` -> human-readable execution brief [HUMAN]
@@ -93,6 +135,10 @@ Total items: 50 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - None: blocking None ventures [HUMAN]
       Source: DAILY_TACTICAL_PLAN
+- [ ] - 📋 Old audit CSVs available for manual cleanup if needed [HUMAN]
+      Source: swarm/system_healer_report_20260315.md
+- [ ] - **Alpha applied action plan created:** `OPS/ALPHA_APPLIED_ACTION_PLAN.md`
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - `OPS/FIRST_DOLLAR_ACTION_PLAN.md` — unified 2.5-hour path to first revenue
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Twitter scraper:** Running in background (cookie extraction)
@@ -107,6 +153,14 @@ Total items: 50 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - 1 REJECTED (pure price action news)
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - All venture automation services now active
+      Source: swarm/system_healer_report_20260316.md
+- [ ] - All script services now active
+      Source: swarm/system_healer_report_20260316.md
+- [ ] - Ready to execute on schedule
+      Source: swarm/system_healer_report_20260316.md
+- [ ] - ⚠️ Monitor disk usage trend (currently 97%)
+      Source: swarm/system_healer_report_20260315.md
 
 ## [P3] LOW -- Research/exploration (2 items)
 
@@ -117,5 +171,6 @@ Total items: 50 (deduplicated from all sources)
 
 ---
 ### Sources
-- PERSISTENT_TASK_TRACKER: 49 items
+- PERSISTENT_TASK_TRACKER: 70 items
+- swarm: 6 items
 - DAILY_TACTICAL_PLAN: 1 items

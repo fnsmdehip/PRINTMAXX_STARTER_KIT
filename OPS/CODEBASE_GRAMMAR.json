@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-14T05:45:01.112051",
+  "generated": "2026-03-16T05:45:00.685240",
   "project": "PRINTMAXX",
   "total_scripts": 20,
   "scripts": {
@@ -202,10 +202,10 @@
         "--cron-add"
       ],
       "state_files": [
-        "LOCK_FILE",
         "CHECKPOINT_FILE",
+        "STATE_FILE",
         "ceo_state.json",
-        "STATE_FILE"
+        "LOCK_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -232,7 +232,7 @@
     },
     "agent_swarm.py": {
       "desc": "22 operational agents \u2014 generates launchd plists, manages health, AGENT_VENTURE_MAP for intelligence injection",
-      "lines": 1491,
+      "lines": 1527,
       "classes": [
         {
           "name": "SwarmState",
@@ -306,8 +306,10 @@
         },
         {
           "name": "deploy_all",
-          "args": [],
-          "doc": ""
+          "args": [
+            "force"
+          ],
+          "doc": "Deploy swarm agents respecting brain state."
         },
         {
           "name": "kill_all",
@@ -340,6 +342,7 @@
         "--kill-all",
         "--logs",
         "--health",
+        "--force-deploy",
         "--run"
       ],
       "state_files": [],
@@ -348,13 +351,15 @@
       "calls_scripts": [],
       "constants": [
         "MODEL_OPUS = 'claude-opus-4-6'",
+        "MODEL_SONNET = 'claude-sonnet-4-6'",
+        "MODEL_HAIKU = 'claude-haiku-4-5-20251001'",
         "SWARM_AGENTS = {...} (25 keys)",
         "AGENT_VENTURE_MAP = {...} (23 keys)"
       ]
     },
     "venture_autonomy.py": {
       "desc": "8 venture types \u2014 universal execution engine, self-managing schedules, SelfManager auto-adjusts",
-      "lines": 1769,
+      "lines": 1792,
       "classes": [
         {
           "name": "AutonomyState",
@@ -534,6 +539,7 @@
       "constants": [
         "MODEL_OPUS = 'claude-opus-4-6'",
         "MODEL_SONNET = 'claude-sonnet-4-6'",
+        "MODEL_HAIKU = 'claude-haiku-4-5-20251001'",
         "VENTURE_TYPES = {...} (8 keys)"
       ]
     },
@@ -850,8 +856,8 @@
         "--advance"
       ],
       "state_files": [
-        "AUTOMATIONS",
-        "STATE_FILE"
+        "STATE_FILE",
+        "AUTOMATIONS"
       ],
       "reads": [],
       "writes": [],
@@ -1030,7 +1036,7 @@
     },
     "loop_closer.py": {
       "desc": "closes open loops \u2014 decision execution, feedback tracking, pipeline advancement",
-      "lines": 973,
+      "lines": 1165,
       "classes": [],
       "functions": [
         {
@@ -1195,6 +1201,20 @@
           "doc": ""
         },
         {
+          "name": "score_soul_drift",
+          "args": [
+            "text"
+          ],
+          "doc": "Score a piece of text for soul drift. Returns {score: 0-10, violations: [...]}."
+        },
+        {
+          "name": "run_drift_check",
+          "args": [
+            "dry_run"
+          ],
+          "doc": "Loop 4: Score recent agent outputs for soul drift."
+        },
+        {
           "name": "run_cycle",
           "args": [
             "dry_run"
@@ -1213,6 +1233,7 @@
         "--feedback",
         "--pipeline",
         "--status",
+        "--drift",
         "--dry-run"
       ],
       "state_files": [],
@@ -1222,7 +1243,9 @@
       "constants": [
         "MAX_ACTIONS_PER_CYCLE = 10",
         "REQUIRES_HUMAN = [...] (4 items)",
-        "ACTION_REGISTRY = {...} (10 keys)"
+        "ACTION_REGISTRY = {...} (10 keys)",
+        "DRIFT_SIGNALS = {...} (5 keys)",
+        "DRIFT_WEIGHTS = {...} (5 keys)"
       ]
     },
     "decision_engine.py": {
@@ -1980,10 +2003,10 @@
         "--status"
       ],
       "state_files": [
-        "LOG_FILE",
-        "LOCK_FILE",
         "daily_research_orchestrator_state.json",
-        "STATE_FILE"
+        "LOG_FILE",
+        "STATE_FILE",
+        "LOCK_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2209,8 +2232,8 @@
       ],
       "state_files": [
         "COPY_STYLE_HANDLES_FILE",
-        "CREDS_FILE",
-        "BRAVE_KEY_FILE"
+        "BRAVE_KEY_FILE",
+        "CREDS_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2223,7 +2246,7 @@
     },
     "background_reddit_scraper.py": {
       "desc": "Reddit JSON API scraper \u2014 no auth needed",
-      "lines": 278,
+      "lines": 285,
       "classes": [],
       "functions": [
         {
@@ -2423,10 +2446,10 @@
       ],
       "state_files": [],
       "reads": [
-        "REVENUE_TRACKER.csv",
         "ETSY_LISTINGS_COMPLETE.md",
-        "ACCOUNTS.csv",
-        "progress.json"
+        "progress.json",
+        "REVENUE_TRACKER.csv",
+        "ACCOUNTS.csv"
       ],
       "writes": [],
       "calls_scripts": [],

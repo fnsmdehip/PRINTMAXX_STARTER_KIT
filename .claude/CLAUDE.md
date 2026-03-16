@@ -162,10 +162,18 @@ If you scan something and just log it to a CSV, you failed. If you build somethi
 - Every session, check: "What data is sitting in CSVs that nobody acted on?" and act on it.
 - If a cron job is broken, fix it. If a pipeline is dead-ending, wire up the next step. If content exists but isn't distributed, distribute it.
 
-**USE HIGH EFFORT OPUS:**
+**USE HIGH EFFORT + SMART MODEL ROUTING:**
 - Always request maximum reasoning effort. Never settle for quick/shallow analysis.
 - When building, build thoroughly. When analyzing, analyze deeply. When writing, write like it matters.
-- Model routing: ALL agents use Opus. Zero API cost on Max plan, max quality everywhere. No Sonnet, no Haiku. Every agent deserves best reasoning.
+- Model routing: Smart selection per task. Opus for strategy/creativity/quality/decisions. Sonnet for execution/maintenance/scraping. Haiku for mechanical/bulk/cleanup. See `AUTOMATIONS/MODEL_ROUTING_CONFIG.json` for per-agent assignments.
+
+### 5b. ONE DASHBOARD — NEVER CREATE NEW ONES
+
+**Canonical dashboard:** `AUTOMATIONS/control_panel.py` at localhost:9999. This is the ONLY dashboard.
+
+**BANNED:** Creating new dashboard scripts. There are already 12+ abandoned dashboard files in AUTOMATIONS/. If the dashboard needs new features, add them to `control_panel.py`. If user asks "show me a dashboard" → `python3 AUTOMATIONS/control_panel.py` and open localhost:9999.
+
+**System visualization:** `python3 AUTOMATIONS/system_visualizer.py` auto-generates `OPS/SYSTEM_VISUAL.html` daily (cron 6 AM). Open it for a visual overview of all agents, ventures, and pipelines.
 
 ### 6. FACTORY MODE — PRE-PREP EVERYTHING
 
@@ -235,7 +243,41 @@ User directive: "there should just be like a common sense loop double check thin
 - Financial tracking that's 5 days stale
 - Overlooking the obvious ($0 revenue for 33 days = stop building, start selling)
 
-### 12. INTELLIGENCE-FIRST — QUERY BEFORE EVERY ACTION
+### 12. NEW VENTURE AUTO-REGISTRATION (MANDATORY)
+
+When creating ANY new venture, op, or business line, AUTOMATICALLY update ALL of these in the same session:
+
+1. `OPS/PRINTMAXX_SYSTEM_MAP.md` — Add to STRUCTURE TREE + relevant sections
+2. `OPS/PERSISTENT_TASK_TRACKER.md` — Add venture section with status + blockers
+3. `.claude/CLAUDE.md` — Add to KEY FILE LOCATIONS table
+4. `AUTOMATIONS/SOUL.md` — Add kill/double-down triggers for the venture
+5. `.claude/projects/-Users-macbookpro/memory/` — Create memory file + update MEMORY.md index
+6. `CONTENT/social/posting_queue/` — Generate launch content (Rule 9: Max Squeeze)
+
+This is NOT optional. Skipping any step = orphan venture that agents can't find. Every session auto-loads these files, so new ventures are visible to all agents from the next session onward. EAS venture (Mar 2026) was the first to follow this protocol.
+
+### 13. COMPETITIVE COGNITION — THINK HARDER THAN EVERYONE ELSE
+
+**Assume 10,000 other Claude power users are working on similar problems right now.** Some have better prompts. Your job: stay ahead. Every session.
+
+Before executing any non-trivial task, run this protocol (from SOUL.md "Competitive Cognition Protocol"):
+1. What would a median Claude session produce? That's your FLOOR, not ceiling.
+2. What's the non-obvious angle the user didn't think to ask for?
+3. What would someone smarter say is wrong with your reasoning?
+4. Are you recommending this because it's best, or because it's popular? (Popular ≠ optimal)
+5. What does this look like in 6 months? What breaks? What scales?
+6. Can this output compound into 3+ derivative outputs?
+7. Would the user say "this is exactly what I needed but didn't know how to ask for"?
+
+This isn't about being verbose. It's about being DEEPER on every task than what 99% of sessions produce. The model is the same for everyone. The thinking architecture creates the edge.
+
+**Anti-lazy checks:**
+- Am I defaulting to the most-mentioned tool/framework, or did I critically compare alternatives?
+- Am I giving a surface answer that any competent person could get, or am I finding the angle that requires THIS system's accumulated intelligence?
+- Am I building for TODAY or building for where the market will be in 6 months?
+- If I showed this output to the user's smartest competitor, would they be worried?
+
+### 14. INTELLIGENCE-FIRST — QUERY BEFORE EVERY ACTION
 
 Before building, deploying, posting, or executing ANY task, query the intelligence router for that venture+task. Use the brief for human sessions, JSON for automated agents. This ensures every action is informed by ALL accumulated intelligence, not just default LLM knowledge.
 
@@ -321,7 +363,7 @@ Every agent, venture, and the CEO agent itself queries intelligence_router.py be
 - Reddit: `python3 AUTOMATIONS/background_reddit_scraper.py --scrape` (JSON API)
 - Alpha process: `python3 AUTOMATIONS/alpha_auto_processor.py --process-new`
 
-**Model routing:** Opus for decisions, strategy, content, quality, intelligence. Sonnet for execution, maintenance, testing. Haiku for bulk only.
+**Model routing:** Opus (4 agents: swarm_brain, quality_gate, gap_hunter, growth_strategist). Sonnet (12 agents: execution/maintenance). Haiku (4 agents: mechanical/cleanup). See `MODEL_ROUTING_CONFIG.json`.
 
 **Browser fallback:** Chrome MCP → agent-browser → Playwright → Python requests → Browserbase
 
@@ -350,7 +392,7 @@ Before cloning, installing, or trusting ANY external git repo, npm package, pip 
 
 Report findings before proceeding. If ANY red flag is found, BLOCK installation and alert the user.
 
-### 14. AUTO-QUALITY PIPELINE (runs by default, no human trigger needed)
+### 15. AUTO-QUALITY PIPELINE (runs by default, no human trigger needed)
 
 User directive: "bake simplify and security review and any other value add shit into the way we operate by default"
 User directive: "not just simplify and security review but any others that can help i may not know of"
@@ -512,7 +554,7 @@ Native Claude Code subconscious powered by your Max plan:
 
 **Total autonomous agents:** 8 venture + 25 swarm = 33 agents running 24/7 via launchd.
 
-**Model routing:** Opus for strategy/intelligence/content/decisions/quality (19 agents). Sonnet for execution/maintenance/scraping/testing (6 agents). The `swarm_brain` (Opus, every 4h) is the LLM-managed meta-agent that reads all other agents' output and makes strategic decisions about the swarm.
+**Model routing:** Opus (4 active: swarm_brain, quality_gate, gap_hunter, growth_strategist). Sonnet (5 active: competitor_stalker, lead_machine, cross_pollinator, revenue_tracker, inbound_maximizer). Haiku (3 active: system_healer, data_janitor, playwright_tester). 13 agents killed/hibernated by swarm_brain decisions. The `swarm_brain` (Opus, every 4h) is the LLM-managed meta-agent that reads all other agents' output and makes strategic decisions about the swarm.
 
 **Quality pipeline:** quality_gate (Opus, every 2h) is a HARD gate — blocks slop before deployment, rewrites bad content, rejects low-quality assets. playwright_tester auto-tests all deployed sites.
 
@@ -571,6 +613,7 @@ All findings → `LEDGER/ALPHA_STAGING.csv` as PENDING_REVIEW. Never create sepa
 | App factory | `MONEY_METHODS/APP_FACTORY/` |
 | App factory autopilot | `AUTOMATIONS/app_factory_autopilot.py` + `AUTOMATIONS/agent/autonomy/app_factory_autopilot_status.json` |
 | App factory command center | `OPS/APP_FACTORY_ALPHA_COMMAND_CENTER.md` + `AUTOMATIONS/agent/autonomy/app_factory_priority_queue.json` |
+| EAS venture | `MONEY_METHODS/EAS/` (website, legal, playbooks, outreach) + `AUTOMATIONS/eas_lead_pipeline.py` |
 | Products | `PRODUCTS/` + `DIGITAL_PRODUCTS/` |
 | Leads | `AUTOMATIONS/leads/` |
 | Content | `CONTENT/social/` |

@@ -188,16 +188,18 @@ def send_bus_message(body: str, to_agent: str = "ceo") -> None:
 # VENTURE TYPES — Each type defines its autonomy pipeline
 # ══════════════════════════════════════════════════════════════════════════
 
-# Model routing: Opus for strategy/content/decisions, Sonnet for execution/bulk
+# Smart model routing: right model for each task
+# Opus = strategy/creativity/quality. Sonnet = solid execution. Haiku = routine/maintenance.
 MODEL_OPUS = "claude-opus-4-6"
 MODEL_SONNET = "claude-sonnet-4-6"
+MODEL_HAIKU = "claude-haiku-4-5-20251001"
 
 VENTURE_TYPES = {
     "OUTBOUND": {
         "description": "Cold outreach ventures — email, DM, LinkedIn, etc.",
         "pipeline": ["prospect", "qualify", "build_asset", "outreach", "followup", "track"],
         "interval_hours": 4,
-        "model": MODEL_OPUS,  # outreach copy is external-facing, needs best quality
+        "model": MODEL_SONNET,  # outreach templates + prospecting
         "scripts": {
             "prospect": ("printmaxx_agent.py", "--mission outreach-prospect"),
             "qualify": ("printmaxx_agent.py", "--mission outreach-qualify"),
@@ -231,7 +233,7 @@ VENTURE_TYPES = {
         "description": "Content creation ventures — social, blog, video scripts, newsletters.",
         "pipeline": ["find_topics", "generate", "format", "schedule", "distribute", "track"],
         "interval_hours": 6,
-        "model": MODEL_OPUS,  # content is external-facing, needs best quality
+        "model": MODEL_SONNET,  # content gen + scheduling
         "scripts": {
             "find_topics": ("printmaxx_agent.py", "--mission content-topics"),
             "generate": ("printmaxx_agent.py", "--mission content"),
@@ -307,7 +309,7 @@ VENTURE_TYPES = {
         "description": "Local business outreach — find businesses, build sites, pitch.",
         "pipeline": ["discover", "grade", "build_preview", "deploy", "outreach", "track"],
         "interval_hours": 4,
-        "model": MODEL_OPUS,  # outreach copy + business evaluation = strategic
+        "model": MODEL_SONNET,  # local biz prospecting + site builds
         "scripts": {
             "discover": ("openclaw_local_biz.py", '--discover "{city}" {niche}'),
             "build_preview": ("openclaw_local_biz.py", "--build"),
@@ -338,7 +340,7 @@ VENTURE_TYPES = {
         "description": "Research & alpha — scrape, analyze, score, route to actions.",
         "pipeline": ["scrape", "analyze", "score", "route", "compound"],
         "interval_hours": 2,
-        "model": MODEL_OPUS,  # analysis + scoring = needs deep reasoning
+        "model": MODEL_HAIKU,  # scraping + data processing
         "scripts": {
             "scrape": ("twitter_alpha_scraper.py", "--all"),
             "analyze": ("alpha_auto_processor.py", "--process-new"),
@@ -367,7 +369,7 @@ VENTURE_TYPES = {
         "description": "Monetization ventures — affiliate, digital products, funnels.",
         "pipeline": ["find_offers", "create_funnel", "build_page", "deploy", "distribute", "track"],
         "interval_hours": 8,
-        "model": MODEL_OPUS,  # funnel copy + offer evaluation = strategic
+        "model": MODEL_SONNET,  # funnel builds + offer evaluation
         "scripts": {
             "find_offers": ("printmaxx_agent.py", "--mission monetize-research"),
             "create_funnel": ("printmaxx_agent.py", "--mission monetize"),
@@ -398,7 +400,7 @@ VENTURE_TYPES = {
         "description": "Digital product ventures — ebooks, courses, templates, tools.",
         "pipeline": ["find_demand", "create", "listing", "launch", "distribute", "track"],
         "interval_hours": 24,
-        "model": MODEL_OPUS,  # product creation + listing copy = needs best model
+        "model": MODEL_SONNET,  # product builds + listing creation
         "scripts": {
             "find_demand": ("printmaxx_agent.py", "--mission product-research"),
             "create": ("printmaxx_agent.py", "--mission product-create"),
@@ -801,7 +803,13 @@ class VentureAutonomyEngine:
             f"{intel_block}"
             f"Use the intelligence briefing above to inform your decisions. "
             f"Use the venture operating context above as standing instructions. "
-            f"Do the minimum viable version of this step and save results."
+            f"Do the minimum viable version of this step and save results.\n\n"
+            f"AGENTIC EXECUTION:\n"
+            f"Do NOT stop after one step. Keep going until the task is COMPLETE or you hit a blocker.\n"
+            f"- Read state -> Plan -> Execute -> Verify -> If more work needed, CONTINUE\n"
+            f"- If you find sub-tasks while working, do them now, don't defer\n"
+            f"- Only stop when: (a) task fully complete, (b) human action required, (c) 15+ tool calls made (safety limit)\n"
+            f"- Write completion status to AUTOMATIONS/agent/autonomy/{venture_id}/output/{step}_report.md"
         )
 
         model = vtype.get("model", MODEL_SONNET)
@@ -889,6 +897,15 @@ class VentureAutonomyEngine:
             project=str(PROJECT),
             interval=interval_hours,
             venture_id=venture_id,
+        )
+        # Append agentic loop directive
+        prompt += (
+            "\n\nAGENTIC EXECUTION:\n"
+            "Do NOT stop after one step. Keep going until the task is COMPLETE or you hit a blocker.\n"
+            "- Read state -> Plan -> Execute -> Verify -> If more work needed, CONTINUE\n"
+            "- If you find sub-tasks while working, do them now, don't defer\n"
+            "- Only stop when: (a) task fully complete, (b) human action required, (c) 15+ tool calls made (safety limit)\n"
+            f"- Write completion status to AUTOMATIONS/agent/autonomy/{venture_id}/output/report_{datetime.now().strftime('%Y%m%d')}.md"
         )
         # Escape for XML/bash: replace quotes and ampersands
         prompt_escaped = (prompt

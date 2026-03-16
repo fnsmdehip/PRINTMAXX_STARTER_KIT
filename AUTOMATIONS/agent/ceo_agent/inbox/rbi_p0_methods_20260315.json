@@ -1,0 +1,64 @@
+{
+  "source": "rbi_daily_scan",
+  "type": "P0_REVENUE_METHODS",
+  "timestamp": "2026-03-15T04:28:58.766535",
+  "scan_date": "2026-03-15",
+  "methods_found": 6,
+  "methods": [
+    {
+      "category": "freelance",
+      "name": "Fiverr/Upwork: Local Business Website Audit",
+      "revenue_range": "$500-$5000/mo",
+      "status": "READY_TO_LAUNCH",
+      "blockers": "Need Fiverr/Upwork account",
+      "next_action": "List website audit gig on Fiverr ($99 audit, $499 audit + action plan). Run local_biz_pipeline.py on 50 prospects. Cold email the worst-scoring ones with free preview.",
+      "startup_cost": "0"
+    },
+    {
+      "category": "cold_email",
+      "name": "Gmail Cold Outreach (500/day Free)",
+      "revenue_range": "$500-$5000/mo",
+      "status": "READY_TO_LAUNCH",
+      "blockers": "Gmail warmup takes 7-14 days",
+      "next_action": "Create 3 Gmail accounts. Warm for 7 days (send 10-20 normal emails/day). Start sending cold emails at 20/day, ramp to 100/day by week 2. Use email sequences from COLD_OUTBOUND/.",
+      "startup_cost": "0"
+    },
+    {
+      "category": "marketplace",
+      "name": "Gumroad Digital Products",
+      "revenue_range": "$200-$2000/mo",
+      "status": "READY_TO_LAUNCH",
+      "blockers": "Need Gumroad account + Stripe connected",
+      "next_action": "Copy listings from GUMROAD_READY_LISTINGS.md into Gumroad. Connect Stripe. Publish all 10.",
+      "startup_cost": "0"
+    },
+    {
+      "category": "marketplace",
+      "name": "Whop Digital Products",
+      "revenue_range": "$100-$1500/mo",
+      "status": "READY_TO_LAUNCH",
+      "blockers": "Need Whop seller account",
+      "next_action": "Create Whop account, paste listings, set up payment. Whop has Discover tab = free organic traffic.",
+      "startup_cost": "0"
+    },
+    {
+      "category": "content_syndication",
+      "name": "Medium Partner Program Articles",
+      "revenue_range": "$50-$1000/mo",
+      "status": "READY_TO_LAUNCH",
+      "blockers": "Need Medium account with Partner Program enabled",
+      "next_action": "Join Medium Partner Program (free). Publish existing articles from CONTENT/medium_articles/. Optimize titles for SEO. Publish 3-5x/week for first month.",
+      "startup_cost": "0"
+    },
+    {
+      "category": "directory",
+      "name": "Product Hunt Launch (PrayerLock)",
+      "revenue_range": "$0-$500/mo",
+      "status": "READY_TO_LAUNCH",
+      "blockers": "Need to deploy PrayerLock first; Need Product Hunt account",
+      "next_action": "Deploy PrayerLock to Vercel. Submit to Product Hunt with 5 upvote commitments. Cross-post to HackerNews Show HN.",
+      "startup_cost": "0"
+    }
+  ],
+  "action_required": "Adjust venture priorities based on P0 ready-to-launch methods"
+}

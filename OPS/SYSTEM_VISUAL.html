@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<title>PRINTMAXX System Visual</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; color: #e0e0e0; font-family: 'SF Mono', 'Fira Code', monospace; padding: 20px; }
+  h1 { color: #fff; margin-bottom: 5px; font-size: 24px; }
+  .subtitle { color: #666; font-size: 13px; margin-bottom: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 20px; }
+  .card { background: #141414; border: 1px solid #222; border-radius: 8px; padding: 16px; }
+  .card h2 { color: #ffd93d; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  .stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  .stat-label { color: #888; }
+  .stat-value { color: #fff; font-weight: bold; }
+  .stat-value.warn { color: #ff6b6b; }
+  .stat-value.good { color: #6bcb77; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 6px 8px; color: #666; border-bottom: 1px solid #222; font-size: 11px; text-transform: uppercase; }
+  td { padding: 5px 8px; border-bottom: 1px solid #1a1a1a; }
+  .section { margin-bottom: 24px; }
+  .section h2 { color: #ffd93d; font-size: 16px; margin-bottom: 8px; }
+  .model-bar { display: flex; gap: 8px; margin: 8px 0; }
+  .model-chip { padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+  .collapsed { display: none; }
+  .toggle { cursor: pointer; color: #666; font-size: 12px; }
+  .toggle:hover { color: #ffd93d; }
+</style>
+</head><body>
+<h1>PRINTMAXX SYSTEM VISUAL</h1>
+<p class="subtitle">Auto-generated 2026-03-16 06:00 | Refreshes daily at 6 AM</p>
+
+<div class="grid">
+  <div class="card">
+    <h2>Infrastructure</h2>
+    <div class="stat"><span class="stat-label">Cron jobs</span><span class="stat-value">108</span></div>
+    <div class="stat"><span class="stat-label">LaunchD plists</span><span class="stat-value">16</span></div>
+    <div class="stat"><span class="stat-label">Active agents</span><span class="stat-value good">17</span></div>
+    <div class="stat"><span class="stat-label">Killed/Sleeping</span><span class="stat-value">8/0</span></div>
+    <div class="stat"><span class="stat-label">Ventures</span><span class="stat-value">10</span></div>
+  </div>
+
+  <div class="card">
+    <h2>Model Distribution</h2>
+    <div class="model-bar">
+      <span class="model-chip" style="background:#ff6b6b;color:#000">Opus: 17</span>
+      <span class="model-chip" style="background:#ffd93d;color:#000">Sonnet: 0</span>
+      <span class="model-chip" style="background:#6bcb77;color:#000">Haiku: 0</span>
+    </div>
+    <div class="stat"><span class="stat-label">Total active</span><span class="stat-value">17</span></div>
+    <div class="stat"><span class="stat-label">Opus %</span><span class="stat-value">100%</span></div>
+  </div>
+
+  <div class="card">
+    <h2>Freshness</h2>
+    <div class="stat"><span class="stat-label">Session briefing</span><span class="stat-value good">0.5h ago</span></div>
+    <div class="stat"><span class="stat-label">Tactical plan</span><span class="stat-value good">22.7h ago</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Active Swarm Agents (17)</h2>
+  <table>
+    <tr><th>Agent</th><th>Model</th><th>Status</th><th>Interval</th><th>Category</th></tr>
+    <tr>
+            <td>alert_dispatcher</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">HIBERNATED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>competitor_stalker</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>cross_pollinator</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>data_janitor</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>distribution_engine</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">HIBERNATED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>gap_hunter</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>growth_strategist</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>image_factory</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">HIBERNATED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>inbound_maximizer</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>lead_machine</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>playwright_tester</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>quality_gate</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>revenue_tracker</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>social_poster</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">HIBERNATED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>swarm_brain</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>system_healer</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">ACTIVE</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>trend_synthesizer</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#6bcb77">HIBERNATED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>Ventures (10)</h2>
+  <table>
+    <tr><th>Venture</th><th>Status</th><th>Cycles</th><th>Success Rate</th></tr>
+    <tr>
+            <td>SCRAPING_competitive_intel</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>1</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>alpha_intelligence</td>
+            <td style="color:#ff6b6b">unknown</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_app_app_factory_9788</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_content_niche_content_farm_9569</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_local_biz_openclaw_nationwide_9569</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_monetize_affiliate_funnels_9569</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_outbound_cold_outreach_engine_9569</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_product_digital_products_9788</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_research_alpha_intelligence_9565</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>0</td>
+            <td>0/0</td>
+        </tr>
+<tr>
+            <td>auto_scraping_competitive_intel_9788</td>
+            <td style="color:#ff6b6b">ACTIVE</td>
+            <td>1</td>
+            <td>0/0</td>
+        </tr>
+  </table>
+</div>
+
+<div class='section'><h2>Killed Agents (8)</h2><table><tr><th>Agent</th><th>Model</th><th>Status</th><th>Interval</th><th>Category</th></tr><tr>
+            <td>asset_deployer</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>content_compounder</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>conversion_optimizer</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>meta_executor</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>opportunity_scanner</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>quality_enforcer</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>seo_aso_optimizer</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr>
+<tr>
+            <td>video_factory</td>
+            <td><span style="background:#ff6b6b;color:#000;padding:2px 8px;border-radius:4px;font-size:12px">Opus</span></td>
+            <td style="color:#666">KILLED</td>
+            <td>?h</td>
+            <td style="font-size:12px;color:#888"></td>
+        </tr></table></div>
+
+
+
+<div style="margin-top:20px;color:#333;font-size:11px">
+  guardrail hook: active | full disk: off | model routing: smart | dashboard: control_panel.py :9999
+</div>
+</body></html>

@@ -1,0 +1,129 @@
+{
+  "sleep_tracker": {
+    "total": 9,
+    "paid": 1,
+    "free": 8,
+    "top_app": "ShutEye\u00ae: Sleep Tracker, Sound",
+    "top_ratings": 345915,
+    "top_price": 0.0,
+    "paid_apps": [
+      {
+        "name": "AutoSleep: Watch Sleep Tracker",
+        "price": 8.99,
+        "ratings": 60766
+      }
+    ],
+    "free_top": [
+      {
+        "name": "SleepWatch - Top Sleep Tracker",
+        "ratings": 328548
+      },
+      {
+        "name": "ShutEye\u00ae: Sleep Tracker, Sound",
+        "ratings": 345915
+      },
+      {
+        "name": "Sleep Cycle - Tracker & Sounds",
+        "ratings": 21177
+      }
+    ]
+  },
+  "focus_timer": {
+    "total": 10,
+    "paid": 1,
+    "free": 9,
+    "top_app": "Focus Keeper - Pomodoro Timer",
+    "top_ratings": 31208,
+    "top_price": 0.0,
+    "paid_apps": [
+      {
+        "name": "Focus Timer: Pomodoro",
+        "price": 2.99,
+        "ratings": 0
+      }
+    ],
+    "free_top": [
+      {
+        "name": "Pomodoro - Focus Timer",
+        "ratings": 10659
+      },
+      {
+        "name": "FocusPomo \u00b7 Pomodoro Timer",
+        "ratings": 6596
+      },
+      {
+        "name": "Focus To-Do: Focus Timer&Tasks",
+        "ratings": 14336
+      }
+    ]
+  },
+  "water_reminder": {
+    "total": 9,
+    "paid": 0,
+    "free": 9,
+    "top_app": "Drink Water Reminder N Tracker",
+    "top_ratings": 151935,
+    "top_price": 0.0,
+    "paid_apps": [],
+    "free_top": [
+      {
+        "name": "Drink Water Reminder N Tracker",
+        "ratings": 151935
+      },
+      {
+        "name": "Drink water: Drinking reminder",
+        "ratings": 22166
+      },
+      {
+        "name": "Water Reminder - Daily Tracker",
+        "ratings": 75017
+      }
+    ]
+  },
+  "reading_tracker": {
+    "total": 9,
+    "paid": 0,
+    "free": 9,
+    "top_app": "Goodreads: Book Tracker & More",
+    "top_ratings": 709733,
+    "top_price": 0.0,
+    "paid_apps": [],
+    "free_top": [
+      {
+        "name": "Fable: Track & Discuss Books",
+        "ratings": 68229
+      },
+      {
+        "name": "Bookly: Book Tracker",
+        "ratings": 56734
+      },
+      {
+        "name": "Goodreads: Book Tracker & More",
+        "ratings": 709733
+      }
+    ]
+  },
+  "coding_habit": {
+    "total": 9,
+    "paid": 0,
+    "free": 9,
+    "top_app": "Habit Tracker",
+    "top_ratings": 137411,
+    "top_price": 0.0,
+    "paid_apps": [],
+    "free_top": [
+      {
+        "name": "Habit Tracker",
+        "ratings": 137411
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "ratings": 12621
+      },
+      {
+        "name": "Habitify: Habit Tracker",
+        "ratings": 6716
+      }
+    ]
+  }
+}

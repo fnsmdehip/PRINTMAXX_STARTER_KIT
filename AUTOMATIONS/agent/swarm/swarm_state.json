@@ -1,13 +1,14 @@
 {
   "agents": {
     "gap_hunter": {
-      "installed_at": "2026-03-15T00:16:44.191148",
+      "installed_at": "2026-03-16T04:17:25.016791",
       "status": "ACTIVE",
       "interval": "24h",
-      "throttled_at": "2026-03-13T15:35:00Z",
-      "throttled_by": "swarm_brain_cycle12",
-      "reason": "PROMOTED A-tier Cycle 13. Deployed 14 landing pages. Processed 1,305 alpha entries.",
-      "tier": "A"
+      "promoted_at": "2026-03-15T04:30:03Z",
+      "promoted_by": "swarm_brain_cycle14",
+      "reason": "S-TIER. 3 reports/24h. Built tweet_extractor (OUTPUT tool). Found 16 gaps incl. critical Gap 13 (INPUT/OUTPUT imbalance). Fixed alpha CSV corruption.",
+      "tier": "S",
+      "mandate": "Address Gap 13: build cron installer for 6 OUTPUT scripts with account-existence guards"
     },
     "opportunity_scanner": {
       "installed_at": "2026-03-14T08:06:46.232250",
@@ -17,141 +18,150 @@
       "reason": "RE-KILL. Redundant with gap_hunter. Originally killed Cycle 4, resurrected by deploy override."
     },
     "competitor_stalker": {
-      "installed_at": "2026-03-15T00:16:45.672333",
+      "installed_at": "2026-03-16T04:17:25.339351",
       "status": "ACTIVE",
       "interval": "24h",
-      "throttled_at": "2026-03-13T15:35:10Z",
-      "throttled_by": "swarm_brain_cycle12",
-      "reason": "Intel saturation. Daily scan sufficient."
+      "reason": "C-tier. Intel saturation. Daily scan sufficient.",
+      "tier": "C"
     },
     "asset_deployer": {
       "installed_at": "2026-03-15T00:16:46.811670",
-      "status": "ACTIVE",
-      "interval": "8h",
-      "redirected_at": "2026-03-13T15:35:17Z",
-      "mandate": "activation_packaging",
-      "reason": "Redirected from new deploys to creating 1-click activation scripts for human."
+      "status": "KILLED",
+      "killed_at": "2026-03-15T04:30:04Z",
+      "killed_by": "swarm_brain_cycle14",
+      "reason": "2 cycles with activation packaging mandate unfulfilled. cross_pollinator handles wire-up better."
     },
     "content_compounder": {
       "installed_at": "2026-03-14T08:06:47.351997",
       "status": "KILLED",
       "killed_at": "2026-03-13T15:35:03Z",
       "killed_by": "swarm_brain_cycle12",
-      "reason": "RE-KILL. No social accounts. Was deep-hibernated Cycle 11, resurrected by deploy override."
+      "reason": "RE-KILL. No social accounts."
     },
     "lead_machine": {
-      "installed_at": "2026-03-15T00:16:47.933527",
+      "installed_at": "2026-03-16T04:17:25.754607",
       "status": "ACTIVE",
-      "interval": "24h",
-      "throttled_at": "2026-03-13T15:35:12Z",
-      "throttled_by": "swarm_brain_cycle12",
-      "reason": "10,259 leads with 0 contacted. More leads = negative value."
+      "interval": "48h",
+      "throttled_at": "2026-03-15T04:30:09Z",
+      "throttled_by": "swarm_brain_cycle14",
+      "reason": "5.7M bulk leads + 1,232 scraped. 0 contacted. 48h keeps pipeline warm without waste.",
+      "tier": "C"
     },
     "seo_aso_optimizer": {
       "installed_at": "2026-03-15T00:16:49.325829",
-      "status": "ACTIVE",
-      "interval": "24h",
-      "throttled_at": "2026-03-13T15:35:13Z",
-      "throttled_by": "swarm_brain_cycle12",
-      "reason": "All surge.sh sites have robots.txt Disallow. SEO on invisible sites = zero value."
+      "status": "KILLED",
+      "killed_at": "2026-03-15T04:30:05Z",
+      "killed_by": "swarm_brain_cycle14",
+      "reason": "3 cycles, never removed robots.txt Disallow. Zero SEO value produced. All 62+ sites invisible."
     },
     "conversion_optimizer": {
       "installed_at": "2026-03-14T08:06:48.361825",
       "status": "KILLED",
       "killed_at": "2026-03-08T19:30:00Z",
       "killed_by": "swarm_brain_cycle8",
-      "reason": "7 cycles mandated to fix 17 dead CTAs, 0 fixed. MCR: 0%. Replaced by meta_executor."
+      "reason": "7 cycles mandated to fix 17 dead CTAs, 0 fixed. MCR: 0%."
     },
     "quality_enforcer": {
       "installed_at": "2026-03-14T08:06:48.393752",
       "status": "KILLED",
       "killed_at": "2026-03-08T03:15:00Z",
       "killed_by": "swarm_brain_cycle5",
-      "reason": "Redundant with quality_gate (436% effectiveness)."
+      "reason": "Redundant with quality_gate."
     },
     "trend_synthesizer": {
       "installed_at": "2026-03-14T08:06:48.726524",
       "status": "HIBERNATED",
       "hibernated_at": "2026-03-13T15:35:04Z",
       "hibernated_by": "swarm_brain_cycle12",
-      "reason": "RE-HIBERNATE. 40,604 alpha entries = 400x actionable. Wake at first revenue."
+      "reason": "RE-HIBERNATE. Wake at first revenue."
     },
     "cross_pollinator": {
-      "installed_at": "2026-03-15T00:16:50.584991",
+      "installed_at": "2026-03-16T04:17:26.351579",
       "status": "ACTIVE",
       "interval": "4h",
       "priority": "P0",
-      "reason": "Star agent. 1,043+ items wired, 34 connections. Only compound value agent."
+      "reason": "STAR AGENT. 900 items wired, 53 connections, 5 new this cycle. Only compound value agent.",
+      "tier": "S",
+      "connections": 53,
+      "items_wired": 1943
     },
     "revenue_tracker": {
-      "installed_at": "2026-03-15T00:16:53.375372",
+      "installed_at": "2026-03-16T04:17:27.212549",
       "status": "ACTIVE",
       "interval": "24h",
-      "reason": "$0 revenue. Nothing to track. Daily check sufficient."
+      "reason": "$0 revenue. Daily check sufficient.",
+      "tier": "C"
     },
     "system_healer": {
-      "installed_at": "2026-03-15T00:16:53.739644",
+      "installed_at": "2026-03-16T04:17:27.326207",
       "status": "ACTIVE",
       "interval": "2h",
       "priority": "P0",
-      "reason": "100% effectiveness. Essential infrastructure. NEW: disk cleanup task."
+      "reason": "S-TIER. Fixed quality_gate launchd, freed port 9999, compressed logs. Health 87/100.",
+      "tier": "S"
     },
     "data_janitor": {
-      "installed_at": "2026-03-15T00:16:53.940383",
+      "installed_at": "2026-03-16T04:17:27.418803",
       "status": "ACTIVE",
       "interval": "24h",
-      "reason": "Useful for disk cleanup but daily is sufficient."
+      "reason": "B-tier. Mandate: find top 5 disk growth sources. 20GB consumed in 24h.",
+      "tier": "B",
+      "mandate": "Identify top 5 disk growth sources, prune safely, maintain >30GB free"
     },
     "distribution_engine": {
       "installed_at": "2026-03-14T08:06:50.264342",
       "status": "HIBERNATED",
       "hibernated_at": "2026-03-13T15:35:00Z",
-      "reason": "No distribution channels (no accounts). Wake when accounts exist."
+      "reason": "No distribution channels."
     },
     "inbound_maximizer": {
-      "installed_at": "2026-03-15T00:16:54.648971",
+      "installed_at": "2026-03-16T04:17:27.747261",
       "status": "ACTIVE",
       "interval": "8h",
-      "reason": "Fixed real bugs. Maintains deployed apps."
+      "reason": "A-tier. Maintains deployed apps, verifies email capture.",
+      "tier": "A"
     },
     "swarm_brain": {
-      "installed_at": "2026-03-15T00:16:56.098243",
+      "installed_at": "2026-03-16T04:17:27.926362",
       "status": "ACTIVE",
       "interval": "12h",
-      "reason": "Meta-orchestrator. Conservation mode interval."
+      "reason": "Meta-orchestrator. Conservation mode.",
+      "tier": "S"
     },
     "video_factory": {
       "installed_at": "2026-03-06T23:06:18.197386",
       "status": "KILLED",
       "killed_at": "2026-03-08T11:15:00Z",
       "killed_by": "swarm_brain_cycle6",
-      "reason": "Zero distribution channels. Confirmed kill Cycle 12."
+      "reason": "Zero distribution channels."
     },
     "image_factory": {
       "installed_at": "2026-03-06T23:06:18.222274",
       "status": "HIBERNATED",
       "hibernated_at": "2026-03-13T15:35:06Z",
       "hibernated_by": "swarm_brain_cycle12",
-      "reason": "RE-HIBERNATE. 30+ unused PNGs generated since Cycle 11. No distribution."
+      "reason": "RE-HIBERNATE. 30+ unused PNGs."
     },
     "quality_gate": {
-      "installed_at": "2026-03-15T00:16:56.821347",
+      "installed_at": "2026-03-16T04:17:28.123022",
       "status": "ACTIVE",
       "interval": "24h",
-      "reason": "Useful but daily gate check sufficient at $0 revenue."
+      "reason": "Fixed by system_healer this cycle. Let it run and prove value.",
+      "tier": "C"
     },
     "playwright_tester": {
-      "installed_at": "2026-03-15T00:16:57.249654",
+      "installed_at": "2026-03-16T04:17:28.353868",
       "status": "ACTIVE",
       "interval": "24h",
-      "reason": "Sites stable. Daily test sufficient."
+      "reason": "Lightweight site tests.",
+      "tier": "C"
     },
     "alert_dispatcher": {
       "installed_at": "2026-03-08T03:42:03.272426",
       "status": "HIBERNATED",
       "hibernated_at": "2026-03-13T15:35:07Z",
       "hibernated_by": "swarm_brain_cycle12",
-      "reason": "RE-HIBERNATE. No notification channels configured."
+      "reason": "RE-HIBERNATE. No notification channels."
     },
     "social_poster": {
       "installed_at": "2026-03-08T03:42:04.287168",
@@ -164,102 +174,47 @@
       "status": "KILLED",
       "killed_at": "2026-03-14T12:12:02Z",
       "killed_by": "swarm_brain_cycle13",
-      "reason": "Dead 6 days. Mandate (alpha_digest_top50) never delivered. Last output Mar 8."
+      "reason": "Dead 6 days. Mandate never delivered."
     },
     "growth_strategist": {
-      "installed_at": "2026-03-15T00:16:58.323406",
-      "status": "ACTIVE"
+      "installed_at": "2026-03-16T04:17:29.127508",
+      "status": "ACTIVE",
+      "interval": "24h",
+      "reason": "Produces daily growth strategy reports wired to content by cross_pollinator.",
+      "tier": "B"
     }
   },
-  "deployed_at": "2026-03-15T00:16:58.324792",
-  "total_runs": 0,
-  "brain_cycles": 12,
-  "last_brain_cycle": "2026-03-13T15:35:00Z",
-  "active_agents": 5,
-  "throttled_agents": 8,
-  "killed_agents": 4,
-  "hibernated_agents": 7,
-  "paused_ventures": 1,
+  "deployed_at": "2026-03-16T04:17:29.129474",
+  "brain_cycles": 14,
+  "last_brain_cycle": "2026-03-15T04:30:00Z",
   "conservation_mode": true,
-  "survival_mode": true,
-  "emergency_disk_mode": true,
-  "deep_maintenance_mode": false,
-  "cycle12_theme": "EMERGENCY_CONSERVATION_DEPLOY_REGRESSION",
-  "mandates_issued": 4,
-  "mandates_pending": [
-    "fix_dead_ctas",
-    "fix_generators",
-    "cloudflare_migration_poc",
-    "fix_openclaw_pipeline"
-  ],
-  "mandates_completed": 0,
-  "mandate_compliance_rate": "0%",
-  "mandate_execution_gap": "structural - cron agents cannot edit code - formally accepted cycle 10",
-  "new_mandate_cycle12": "patch_agent_swarm_deploy_to_respect_state",
-  "daily_runs_target": 10,
-  "feedback_loop_overrides": 6,
+  "daily_runs_target": 6,
   "feedback_loop_status": "DEFUNCT_CYCLE12",
-  "feedback_loop_reason": "Recommends boost for ALL 24 agents including killed ones. Metric meaningless. Manual brain eval replaces it.",
-  "agents_killed_cycle12": [
-    "opportunity_scanner",
-    "content_compounder"
+  "agents_killed_cycle14": [
+    "asset_deployer",
+    "seo_aso_optimizer"
   ],
-  "agents_hibernated_cycle12": [
-    "trend_synthesizer",
-    "social_poster",
-    "image_factory",
-    "alert_dispatcher",
-    "distribution_engine"
+  "agents_promoted_cycle14": [
+    "gap_hunter_to_S"
   ],
-  "agents_throttled_24h_cycle12": [
-    "gap_hunter",
-    "competitor_stalker",
-    "lead_machine",
-    "seo_aso_optimizer",
-    "alpha_intelligence",
-    "revenue_tracker",
-    "data_janitor",
-    "quality_gate",
-    "playwright_tester"
+  "agents_throttled_cycle14": [
+    "lead_machine_to_48h"
   ],
-  "agents_active_cycle12": [
-    "cross_pollinator_4h",
-    "system_healer_2h",
-    "inbound_maximizer_8h",
-    "asset_deployer_8h_redirected",
-    "meta_executor_8h_redirected"
-  ],
-  "agents_priority_p0_cycle12": [
-    "system_healer",
-    "cross_pollinator"
-  ],
-  "ventures_paused": [
-    "auto_local_biz_openclaw_nationwide_9569"
-  ],
-  "critical_finding_cycle12": "Deploy override wiped all Cycle 10-11 decisions. Alpha doubled to 40,604. Disk crashed 55GB\u219224GB. Deploy must be patched to respect state. Feedback loop DEFUNCT.",
-  "deploy_override_incident": {
-    "occurred_at": "2026-03-13T08:29:00Z",
-    "effect": "All killed/hibernated agents reset to ACTIVE",
-    "alpha_before": 20214,
-    "alpha_after": 40604,
-    "disk_before_gb": 55,
-    "disk_after_gb": 24,
-    "fix_required": "agent_swarm.py must read swarm_state.json before deploying"
-  },
-  "cross_pollinator_connections": 34,
-  "cross_pollinator_items_wired": 1043,
-  "three_email_recommendation_cycles": 10,
-  "three_email_archived": true,
-  "disk_free_gb": 24,
-  "disk_burn_rate_gb_per_day": 10,
-  "disk_days_remaining": 2.4,
-  "alpha_entries_total": 40604,
-  "posts_queued": 695,
+  "emergency_fix_cycle14": "content_mission_error_loop_175_errors",
+  "active_count": 11,
+  "killed_count": 9,
+  "hibernated_count": 5,
+  "total_agents": 25,
+  "disk_free_gb": 31,
+  "disk_project_gb": 28,
+  "alpha_entries_total": 49373,
+  "posts_queued": 812,
   "posts_posted": 0,
-  "leads_total": 10259,
+  "leads_total_scraped": 1232,
+  "leads_total_bulk": 5738886,
   "leads_contacted": 0,
   "products_built": 51,
   "products_listed": 0,
   "revenue_total": 0,
-  "revenue_day": 38
+  "revenue_day": 37
 }

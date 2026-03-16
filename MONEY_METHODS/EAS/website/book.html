@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Call - Enterprise Automation Solutions</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0a;--gold:#c9a227;--cream:#f5f0e8;--muted:#888;--card-bg:rgba(201,162,39,0.04);--card-border:rgba(201,162,39,0.12);--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--max-w:1200px;--transition:0.3s ease}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none;transition:opacity var(--transition)}a:hover{opacity:0.8}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.25}
+h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-0.02em}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem)}
+h3{font-size:1.25rem}
+h4{font-size:1.05rem}
+p{color:var(--cream);opacity:0.85}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,39,0.08)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:1.3rem;color:var(--cream);letter-spacing:0.04em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);font-size:0.875rem;letter-spacing:0.02em;transition:color var(--transition)}
+.nav-links a:hover{color:var(--cream);opacity:1}
+.nav-cta{background:var(--gold);color:var(--bg);padding:8px 20px;border-radius:4px;font-size:0.875rem;font-weight:600}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:99;padding:40px 24px}
+.mobile-menu.active{display:flex;flex-direction:column;gap:24px}
+.mobile-menu a{color:var(--cream);font-size:1.1rem;font-family:var(--serif)}
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-size:0.95rem;font-weight:600;letter-spacing:0.02em;cursor:pointer;transition:all var(--transition);border:none;text-align:center}
+.btn-gold{background:var(--gold);color:var(--bg)}.btn-gold:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,162,39,0.2)}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;padding:40px 32px;transition:all var(--transition)}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+section{padding:100px 0}
+.section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold);margin-bottom:16px}
+footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:0.8rem;color:var(--muted)}
+.footer-links{display:flex;gap:24px}.footer-links a{font-size:0.8rem;color:var(--muted)}.footer-links a:hover{color:var(--cream)}
+
+.page-hero{padding:160px 0 40px;text-align:center}
+.page-hero p{color:var(--muted);max-width:640px;margin:16px auto 0;font-size:1.05rem;line-height:1.7}
+
+/* CALENDAR EMBED */
+.cal-embed{max-width:800px;margin:0 auto;padding:60px 0}
+.cal-placeholder{background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;padding:80px 40px;text-align:center}
+.cal-placeholder p{color:var(--muted);font-size:0.95rem;margin-bottom:16px}
+.cal-placeholder a{font-size:0.9rem}
+
+/* INFO CARDS */
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:80px}
+.info-card h3{margin-bottom:16px;font-size:1.15rem}
+.info-card ul{list-style:none}
+.info-card li{font-size:0.9rem;color:var(--muted);padding:8px 0;border-bottom:1px solid rgba(245,240,232,0.04);padding-left:16px;position:relative;line-height:1.5}
+.info-card li::before{content:'';position:absolute;left:0;top:50%;width:4px;height:4px;background:var(--gold);border-radius:50%;transform:translateY(-50%)}
+
+/* WHAT TO EXPECT */
+.expect-section{margin-top:80px;padding:60px 48px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;text-align:center}
+.expect-section h3{margin-bottom:12px}
+.expect-section p{color:var(--muted);font-size:0.95rem;max-width:600px;margin:0 auto;line-height:1.7}
+
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}
+  .info-grid{grid-template-columns:1fr}
+  .page-hero{padding:120px 0 40px}
+  section{padding:60px 0}
+  .cal-placeholder{padding:48px 24px}
+  .expect-section{padding:40px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">EAS</a>
+    <ul class="nav-links">
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="playbooks.html">Playbooks</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="packages.html">Packages</a>
+  <a href="results.html">Results</a>
+  <a href="playbooks.html">Playbooks</a>
+  <a href="calculator.html">Calculator</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html">Book a Call</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label fade-up">Book</div>
+    <h1 class="fade-up">15 minutes. Find your highest-ROI agent.</h1>
+    <p class="fade-up">We'll identify which AI agent would have the biggest impact on your operations and show you exactly how it works. No pitch deck. No pressure. Just a clear answer on whether this makes sense for your business.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+
+    <!-- CALENDAR PLACEHOLDER -->
+    <div class="cal-embed fade-up">
+      <div class="cal-placeholder">
+        <p>Calendar loading...</p>
+        <p>If it doesn't appear, email us directly.</p>
+        <a href="mailto:hello@enterpriseautomationsolutions.com">hello@enterpriseautomationsolutions.com</a>
+      </div>
+      <!-- Replace the div above with your Cal.com embed script -->
+      <!-- Example: <script src="https://app.cal.com/embed/embed.js"></script> -->
+    </div>
+
+    <!-- INFO CARDS -->
+    <div class="info-grid">
+      <div class="card info-card fade-up">
+        <h3>What to prepare</h3>
+        <ul>
+          <li>One or two manual processes that cost the most time</li>
+          <li>How many people are involved in those processes</li>
+          <li>Your current tools (CRM, calendar, project management)</li>
+          <li>Rough team size and monthly volume (calls, tickets, leads)</li>
+        </ul>
+      </div>
+
+      <div class="card info-card fade-up">
+        <h3>What we'll cover</h3>
+        <ul>
+          <li>Which of the 5 AI agent types fits your situation</li>
+          <li>How the agent would connect to your existing tools</li>
+          <li>Realistic timeline and cost for your install</li>
+          <li>What "autonomous" actually means for your operations</li>
+        </ul>
+      </div>
+
+      <div class="card info-card fade-up">
+        <h3>What happens after</h3>
+        <ul>
+          <li>We send a summary email within 24 hours</li>
+          <li>If there's a fit, we share a signal map proposal with exact scope and price</li>
+          <li>If there's not a fit, we tell you why and recommend alternatives</li>
+          <li>No follow-up spam. We email once, then it's your move.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <div class="expect-section fade-up">
+      <div class="section-label">What this is not</div>
+      <h3>We don't do sales presentations.</h3>
+      <p>There's no slide deck. No "let me tell you about our company" opener. We ask about your operations, identify the highest-impact agent, and tell you whether we can help. If we can't, we'll say so. 15 minutes means 15 minutes.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Enterprise Automation Solutions. All rights reserved.</div>
+    <div class="footer-links"><a href="contact.html">Privacy</a><a href="contact.html">Contact</a><a href="book.html">Book a Call</a></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

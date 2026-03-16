@@ -23,3 +23,17 @@
 {"ts": "2026-03-08T08:30:00.889671", "action": "priority_shift", "target": "ALL", "result": "FAILED", "details": "Plist not found for ALL"}
 {"ts": "2026-03-08T10:30:01.225272", "action": "priority_shift", "target": "ALL", "result": "FAILED", "details": "Plist not found for ALL"}
 {"ts": "2026-03-08T12:30:00.667184", "action": "priority_shift", "target": "ALL", "result": "FAILED", "details": "Plist not found for ALL"}
+{"ts": "2026-03-15T05:07:46.302997", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.2/10, drifted=0"}
+{"ts": "2026-03-15T06:30:58.679255", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.3/10, drifted=0"}
+{"ts": "2026-03-15T08:06:41.928060", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-15T08:30:00.925214", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-15T10:30:00.356197", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T00:20:02.558898", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T00:30:00.453513", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T00:31:53.073064", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T02:30:00.976360", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T03:20:00.771474", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.8/10, drifted=0"}
+{"ts": "2026-03-16T04:17:29.307388", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.6/10, drifted=0"}
+{"ts": "2026-03-16T04:30:00.666486", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.6/10, drifted=0"}
+{"ts": "2026-03-16T06:20:01.627203", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T06:30:00.763527", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.6/10, drifted=0"}

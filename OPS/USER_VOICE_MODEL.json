@@ -1,0 +1,127 @@
+{
+  "generated": "2026-03-15T05:15:12.532287",
+  "prompt_count_analyzed": 516,
+  "total_entries_scanned": 13333,
+  "sources": {
+    "user_prompts": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/USER_PROMPTS.jsonl",
+    "conversation_history": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/LEDGER/CONVERSATION_HISTORY.jsonl",
+    "memories": "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/subconscious/memories/memories.jsonl",
+    "claude_md_directives": 11
+  },
+  "tone_profile": {
+    "directness": 10,
+    "formality": 7,
+    "profanity_tolerance": 3,
+    "abbreviation_heavy": true,
+    "typo_tolerant": false,
+    "avg_prompt_length": 959,
+    "short_prompt_ratio": 0.39
+  },
+  "preferred_terms": [
+    "tool",
+    "month",
+    "scripts",
+    "cold",
+    "dog walking",
+    "save",
+    "shit",
+    "script",
+    "i said",
+    "i want",
+    "dont",
+    "minimize shit",
+    "yo",
+    "hook",
+    "nah",
+    "per",
+    "use ur best judgement",
+    "dog walk",
+    "affiliate",
+    "email",
+    "automate",
+    "bruh",
+    "wtf",
+    "i mean",
+    "just do it"
+  ],
+  "banned_patterns": [
+    "I hope this helps",
+    "Let me know if",
+    "comprehensive",
+    "leverage",
+    "utilize",
+    "delve",
+    "innovative",
+    "seamless",
+    "game-changer",
+    "unlock",
+    "elevate",
+    "cutting-edge",
+    "empower",
+    "foster",
+    "frictionless",
+    "journey",
+    "robust",
+    "streamlined",
+    "furthermore",
+    "moreover",
+    "additionally",
+    "testament",
+    "landscape",
+    "paradigm",
+    "Great question",
+    "That's a great",
+    "I'd be happy to",
+    "absolutely",
+    "certainly"
+  ],
+  "correction_history": [
+    {
+      "pattern": "try again",
+      "count": 1
+    },
+    {
+      "pattern": "dont do",
+      "count": 1
+    },
+    {
+      "pattern": "fix that",
+      "count": 1
+    },
+    {
+      "pattern": "don't use",
+      "count": 1
+    },
+    {
+      "pattern": "wrong.",
+      "count": 1
+    }
+  ],
+  "recurring_instructions": [
+    "i scraped 200 local service businesses — plumbers, roofers, landscapers — using apollo",
+    "\"i sent 200 cold emails last week",
+    "dont just do basic bitch work go above beyond quant level",
+    "### script 1: cold email roi",
+    "bake simplify and security review and any other value add shit into the way we operate by default",
+    "\"here's the breakdown",
+    "**cta (45-60s):**",
+    "you are upgrading content for the printmaxx system",
+    "**format:** hook (0-3s) → body (3-45s) → cta (45-60s)",
+    "# c01 tiktok video scripts — 30 scripts",
+    "not just full spectrum of printmaxx but also proactively improves and adds",
+    "there should just be like a common sense loop double check thing at the end that you do as like a meta analysis of everything you're doing and making sure you're not overlooking something that is obvious",
+    "**voice:** @pipelineabuser weighted — consequence-first, exact numbers, no ai slop",
+    "if u fuck up stop asking me what to do and use ur best judgement",
+    "**target:** 45-60 seconds per script"
+  ],
+  "escalation_triggers": [
+    "bruh = mild frustration",
+    "I already said = moderate frustration",
+    "what the fuck = strong frustration",
+    "dude = mild frustration",
+    "come on = mild frustration",
+    "i already told = moderate frustration",
+    "wtf = strong frustration"
+  ],
+  "style_summary": "Direct, command-oriented, abbreviation-heavy, action-oriented. Hates being asked questions. Wants execution not deliberation. Uses 'tool', 'month', 'scripts', 'cold', 'dog walking'. Never hedge, never summarize what was just done. No AI slop vocabulary."
+}

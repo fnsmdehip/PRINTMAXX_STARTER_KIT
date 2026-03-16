@@ -1,0 +1,10 @@
+{
+  "total_processed": 69,
+  "total_warm": 35,
+  "total_cold": 34,
+  "last_process_date": "2026-03-15",
+  "ab_distribution": {
+    "WARM_QUINN": 35,
+    "COLD_STANDARD": 34
+  }
+}

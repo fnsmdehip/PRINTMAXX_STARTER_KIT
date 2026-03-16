@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-14 21:30:00
+**Last updated:** 2026-03-15 08:47:32
 
 ---
 
@@ -122,6 +122,7 @@ Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/` (updated 2026-03-13)
 | Vibe Coding Profit Calculator | https://vibe-coding-profit-calculator.surge.sh | LIVE | vibe-coding-profit-calculator.html |
 | SaaS Stack Audit (200) | https://saas-stack-audit-200.surge.sh | LIVE | saas-stack-audit-200.html |
 | Local Demos Hub | https://printmaxx-local-demos.surge.sh | LIVE | printmaxx-local-demos/index.html |
+| Cold Email ROI Calculator v2 | https://cold-email-roi-calculator-printmaxx.surge.sh | LIVE 2026-03-15 | cold-email-roi-calculator.html |
 
 ---
 
@@ -177,6 +178,13 @@ Deployed 2026-03-14 by ASSET DEPLOYER.
 | Tool | URL | Status |
 |------|-----|--------|
 | Productivity Stack Quiz | https://productivity-stack-quiz.surge.sh | LIVE |
+| ai-video-tools | https://ai-video-tools.surge.sh | LIVE |
+| email-tools-compared | https://email-tools-compared.surge.sh | LIVE |
+| invoice-tools-compared | https://invoice-tools-compared.surge.sh | LIVE |
+| promptvault | https://promptvault.surge.sh | LIVE |
+| studylock | https://studylock.surge.sh | LIVE |
+| toolstack-review | https://toolstack-review.surge.sh | LIVE |
+| website-builders-compared | https://website-builders-compared.surge.sh | LIVE |
 
 ## Full Deployment Summary
 
@@ -195,3 +203,51 @@ Deployed 2026-03-14 by ASSET DEPLOYER.
 | Brand Pages | 15 | ALL LIVE |
 | Fiverr Service Pages | 12 | ALL LIVE |
 | Other (demos, misc) | ~103 | ALL LIVE |
+
+---
+
+## Pre-Deployment SEO Checklist (ALPHA101162 Integration)
+
+**Source:** r/nextjs case study — Themefisher lost 85% search traffic (28.8K → 4.4K clicks) due to missing SEO audit during Next.js migration.
+
+**Requirement:** Before deploying ANY app router change or site migration to production.
+
+### Pre-Migration Audit
+- [ ] Document current site structure (URL patterns, dynamic routes)
+- [ ] Export current sitemap.xml (baseline)
+- [ ] Export current robots.txt (baseline)
+- [ ] Check Search Console coverage (baseline impressions, clicks)
+- [ ] Identify all dynamic routes that will change
+- [ ] List all external links pointing to old URLs (backlinks.com, SEMrush)
+- [ ] Verify SSL certificate for new domain (if applicable)
+- [ ] Test site crawlability with Screaming Frog or GTmetrix
+- [ ] Document all custom 301 redirects needed
+- [ ] Tag all redirect mapping in a CSV for verification
+
+### During Migration
+- [ ] Update robots.txt (allow new paths, keep old as accessible)
+- [ ] Generate new sitemap.xml with all new routes
+- [ ] Create 301 redirects from OLD URLs → NEW URLs
+- [ ] Test redirect chain (old → intermediate → new, if applicable)
+- [ ] Verify canonical tags on all pages (point to new URLs)
+- [ ] Update XML sitemap with lastmod dates
+- [ ] Disable old sitemap in robots.txt
+- [ ] Submit new sitemap to Search Console
+
+### Post-Migration Validation
+- [ ] Wait 24-48h, check Search Console for crawl errors
+- [ ] Verify all 301 redirects working (random sample test)
+- [ ] Check index status in Search Console (old URLs should redirect)
+- [ ] Monitor organic traffic trends (week 1, week 2, week 3)
+- [ ] Verify all important pages indexed in Google (site:domain.com)
+- [ ] Check PageSpeed Insights score (app router may affect performance)
+- [ ] Test Core Web Vitals (LCP, FID, CLS)
+- [ ] Verify structured data (schema.org tags) still valid
+- [ ] Check for 404s in Search Console error reports
+- [ ] Manually test 10-20 top pages for proper rendering
+- [ ] Verify analytics UTM params still firing
+- [ ] Set up traffic alerts (alert if organic drops 25%+ in 7 days)
+
+**Risk Level:** CRITICAL — 85% search traffic loss possible if skipped
+**Cost of Skipping:** ~$100K+ annual lost organic revenue
+**Time to Complete:** 2-4 hours before deployment

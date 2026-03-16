@@ -71,6 +71,7 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── daily_research_orchestrator.py#   L3 execution. Research pipeline: scrapers → alpha review → content gen.
 │   ├── app_factory_autopilot.py      #   L3 execution. Bookmarks + app alpha scrape + auto-approve + auto-process + queue rebuild.
 │   ├── app_factory_command_center.py #   L3 execution. Scores app alpha → ranked app queue + OPS app command center.
+│   ├── eas_lead_pipeline.py           #   L3 execution. EAS venture: scores leads for automation fit, generates cold emails, exports CSV. Cron weekday 8AM.
 │   ├── quality_gate.py               #   L5 quality. Hard gate — blocks slop, rewrites bad content.
 │   ├── system_health_monitor.py      #   L5 quality. Health checks: agents, cron, disk, processes.
 │   ├── compliance_scanner.py         #   L5 quality. FTC/platform compliance auditing.
@@ -124,6 +125,13 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── NAV_INDEX.md                  #   632-line "Where is..." navigation index
 │   ├── HEARTBEAT.md                  #   System pulse
 │   └── SESSION_LOG.md                #   Session-by-session changelog
+│
+├── MONEY_METHODS/EAS/                # EAS VENTURE — Enterprise Automation Solutions
+│   ├── website/                      #   7 HTML pages (Private Bank design: black/gold/serif)
+│   ├── legal/                        #   MSA, SOW, Risk Disclosure, Subcontractor Agreement
+│   ├── playbooks/                    #   Signal Map, Phone Pilot, Ops Pilot, Managed Ops delivery manuals
+│   ├── outreach/                     #   Cold email sequences + lead scoring config + eas_leads_ready.csv
+│   └── EAS_VENTURE_README.md         #   Venture overview for agents
 │
 ├── CONTENT/                          # CONTENT ENGINE — 957 files
 │   ├── social/

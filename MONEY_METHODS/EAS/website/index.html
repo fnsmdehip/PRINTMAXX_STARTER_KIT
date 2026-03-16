@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAS - We Install AI Agents That Run Your Operations</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0a0a0a;--gold:#c9a227;--cream:#f5f0e8;--muted:#888;
+--card-bg:rgba(201,162,39,0.04);--card-border:rgba(201,162,39,0.12);
+--serif:Georgia,'Times New Roman',serif;
+--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+--max-w:1200px;--transition:0.3s ease;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none;transition:opacity var(--transition)}
+a:hover{opacity:0.8}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.25}
+h1{font-size:clamp(2.2rem,5.5vw,3.4rem);letter-spacing:-0.025em}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem);letter-spacing:-0.01em}
+h3{font-size:1.25rem}
+p{color:var(--cream);opacity:0.85}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,39,0.08)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--serif);font-size:1.3rem;color:var(--cream);letter-spacing:0.04em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);font-size:0.875rem;letter-spacing:0.02em;transition:color var(--transition)}
+.nav-links a:hover{color:var(--cream);opacity:1}
+.nav-cta{background:var(--gold);color:var(--bg);padding:8px 20px;border-radius:4px;font-size:0.875rem;font-weight:600;letter-spacing:0.02em;transition:all var(--transition)}
+.nav-cta:hover{opacity:0.9;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream);transition:all var(--transition)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);z-index:99;padding:40px 24px}
+.mobile-menu.active{display:flex;flex-direction:column;gap:24px}
+.mobile-menu a{color:var(--cream);font-size:1.1rem;font-family:var(--serif)}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-size:0.95rem;font-weight:600;letter-spacing:0.02em;cursor:pointer;transition:all var(--transition);border:none;text-align:center}
+.btn-gold{background:var(--gold);color:var(--bg)}
+.btn-gold:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,162,39,0.2)}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(245,240,232,0.25)}
+.btn-outline:hover{border-color:var(--cream);transform:translateY(-1px)}
+
+/* CARDS */
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px;padding:40px 32px;transition:all var(--transition)}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+
+/* SCROLL ANIMATION */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* SECTIONS */
+section{padding:100px 0}
+.section-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold);margin-bottom:16px}
+
+/* HERO */
+.hero{padding:160px 0 100px;position:relative}
+.hero-label{display:inline-block;padding:6px 16px;border:1px solid rgba(201,162,39,0.25);border-radius:20px;font-size:0.78rem;color:var(--gold);letter-spacing:0.06em;margin-bottom:32px;text-transform:uppercase}
+.hero h1{max-width:780px;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{max-width:640px;color:var(--muted);font-size:1.05rem;margin-bottom:40px;line-height:1.75}
+.hero-ctas{display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.hero-note{font-size:0.82rem;color:var(--muted)}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:80px}
+.stat-card{text-align:center;padding:48px 24px}
+.stat-number{font-family:var(--serif);font-size:2.4rem;color:var(--gold);margin-bottom:8px}
+.stat-label{font-size:0.85rem;color:var(--muted);letter-spacing:0.04em}
+
+/* TRUST BAR */
+.trust-bar{border-top:1px solid rgba(245,240,232,0.06);border-bottom:1px solid rgba(245,240,232,0.06);padding:48px 0}
+.trust-label{text-align:center;font-size:0.8rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:32px}
+.trust-logos{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;align-items:center}
+.trust-logos span{font-size:0.9rem;color:var(--muted);letter-spacing:0.04em;font-weight:500}
+
+/* VALUE PROPS */
+.value-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.value-card h3{margin-bottom:12px;color:var(--cream)}
+.value-card p{font-size:0.9rem;color:var(--muted);line-height:1.65}
+
+/* AGENTS */
+.agents-section{margin-top:48px}
+.agents-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.agent-card{padding:40px 28px}
+.agent-icon{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--gold);margin-bottom:20px;font-weight:600}
+.agent-card h3{margin-bottom:12px;font-size:1.15rem}
+.agent-card p{font-size:0.88rem;color:var(--muted);line-height:1.65;margin-bottom:20px}
+.agent-card ul{list-style:none;margin-top:16px}
+.agent-card li{font-size:0.85rem;color:var(--muted);padding:7px 0;border-bottom:1px solid rgba(245,240,232,0.04);padding-left:16px;position:relative}
+.agent-card li::before{content:'';position:absolute;left:0;top:50%;width:4px;height:4px;background:var(--gold);border-radius:50%;transform:translateY(-50%)}
+.agents-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px}
+
+/* AGENT FEED */
+.feed-section{background:rgba(245,240,232,0.02);border-radius:8px;padding:60px 48px;margin-top:48px}
+.feed-header{margin-bottom:32px}
+.feed-header h3{margin-bottom:8px}
+.feed-header p{color:var(--muted);font-size:0.95rem}
+.feed-mock{background:var(--bg);border:1px solid rgba(245,240,232,0.08);border-radius:6px;padding:24px;font-family:'SF Mono',Menlo,monospace;font-size:0.8rem;line-height:2}
+.feed-mock .time{color:var(--gold);font-weight:600}
+.feed-mock .agent-name{color:var(--cream);font-weight:600}
+.feed-mock .action{color:var(--muted)}
+.feed-mock .highlight{color:var(--cream);opacity:0.9}
+.feed-mock .dim{opacity:0.4}
+.feed-line{padding:4px 0;border-bottom:1px solid rgba(245,240,232,0.03)}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px}
+.process-step .step-num{font-family:var(--serif);font-size:2rem;color:var(--gold);opacity:0.6;margin-bottom:12px}
+.process-step h3{font-size:1.1rem;margin-bottom:10px}
+.process-step p{font-size:0.85rem;color:var(--muted);line-height:1.6}
+
+/* FAQ */
+.faq-list{max-width:800px;margin:48px auto 0}
+.faq-item{border-bottom:1px solid rgba(245,240,232,0.06)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:24px 0;cursor:pointer;font-family:var(--serif);font-size:1.05rem;color:var(--cream);transition:color var(--transition)}
+.faq-q:hover{color:var(--gold)}
+.faq-q span{font-size:1.2rem;transition:transform var(--transition);color:var(--muted)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease}
+.faq-a p{font-size:0.9rem;color:var(--muted);line-height:1.7;padding-bottom:24px}
+.faq-item.open .faq-a{max-height:300px}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+
+/* FINAL CTA */
+.final-cta{text-align:center;padding:120px 0;border-top:1px solid rgba(245,240,232,0.06)}
+.final-cta h2{margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto}
+.final-cta .hero-ctas{justify-content:center}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:0.8rem;color:var(--muted)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:0.8rem;color:var(--muted)}
+.footer-links a:hover{color:var(--cream)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .stats-grid,.value-grid,.agents-grid,.process-grid{grid-template-columns:1fr}
+  .agents-grid-2{grid-template-columns:1fr}
+  .hero{padding:120px 0 60px}
+  section{padding:60px 0}
+  .hero h1{font-size:1.8rem}
+  .card{padding:32px 24px}
+  .feed-section{padding:32px 20px}
+  .trust-logos{gap:24px}
+  .footer-inner{flex-direction:column;text-align:center}
+  .mobile-sticky-cta{position:fixed;bottom:0;left:0;right:0;padding:12px 16px;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-top:1px solid var(--card-border);z-index:98;display:block}
+  .mobile-sticky-cta .btn{width:100%;display:block}
+  .desktop-only-hide{display:block}
+}
+@media(min-width:769px){
+  .mobile-sticky-cta{display:none}
+  .desktop-only-hide{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">EAS</a>
+    <ul class="nav-links">
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="playbooks.html">Playbooks</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="packages.html">Packages</a>
+  <a href="results.html">Results</a>
+  <a href="playbooks.html">Playbooks</a>
+  <a href="calculator.html">Calculator</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html">Book a Call</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-label fade-up">not another automation agency</div>
+    <h1 class="fade-up">We install AI agents that <em>run your operations.</em></h1>
+    <p class="hero-sub fade-up">Most automation shops connect Tool A to Tool B. We deploy autonomous systems that think, decide, execute, and improve themselves. Your business runs while you sleep.</p>
+    <div class="hero-ctas fade-up">
+      <a href="book.html" class="btn btn-gold">Book a 15-minute assessment</a>
+      <a href="packages.html" class="btn btn-outline">See packages</a>
+    </div>
+    <p class="hero-note fade-up">Fixed pricing. 10-14 day installs. Agent goes live or you don't pay.</p>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+      <div class="card stat-card fade-up">
+        <div class="stat-number" data-target="5" data-suffix=" agent types">0</div>
+        <div class="stat-label">Ready to deploy</div>
+      </div>
+      <div class="card stat-card fade-up">
+        <div class="stat-number" data-target="10" data-suffix="-day installs">0</div>
+        <div class="stat-label">Agent goes live</div>
+      </div>
+      <div class="card stat-card fade-up">
+        <div class="stat-number" data-static="true">24/7 autonomous</div>
+        <div class="stat-label">No human babysitting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-label fade-up">Capabilities, not brand names. We pick what works.</div>
+    <div class="trust-logos fade-up">
+      <span>Autonomous Reasoning</span>
+      <span>Voice Conversations</span>
+      <span>Self-Healing Systems</span>
+      <span>Competitive Intelligence</span>
+      <span>Multi-Model Support</span>
+      <span>Open Source First</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section>
+  <div class="container">
+    <div class="section-label fade-up">Why we're different</div>
+    <h2 class="fade-up" style="margin-bottom:48px">Four things that separate us from every Zapier shop.</h2>
+    <div class="value-grid">
+      <div class="card value-card fade-up">
+        <h3>Agents, not workflows</h3>
+        <p>A workflow fires when triggered and follows a script. An agent wakes up, checks its environment, makes decisions, takes action, and logs what it did. That's what we build. Your AI receptionist doesn't follow a phone tree. It has a conversation, qualifies the caller, and books the appointment.</p>
+      </div>
+      <div class="card value-card fade-up">
+        <h3>Self-healing infrastructure</h3>
+        <p>Our agents have circuit breakers, retry logic, and fallback paths. If an API goes down at 3am, the system reroutes, retries, and sends you a report in the morning. No Slack alerts at midnight. No broken automations sitting dead until someone notices.</p>
+      </div>
+      <div class="card value-card fade-up">
+        <h3>Your data stays yours</h3>
+        <p>We build on open-source tools and deploy on your infrastructure. No vendor lock-in. No monthly platform fees going to Zapier forever. You own the code, the data, and the agents. If you fire us, everything keeps running.</p>
+      </div>
+      <div class="card value-card fade-up">
+        <h3>We eat our own cooking</h3>
+        <p>We run 33 autonomous AI agents in our own operations. Content generation, lead qualification, competitive monitoring, system health checks. Every agent we sell to clients is a version of something we run internally, every day, at scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI AGENTS -->
+<section class="agents-section">
+  <div class="container">
+    <div class="section-label fade-up">What we install</div>
+    <h2 class="fade-up">Five AI agents. Pick one. It runs 24/7 without you.</h2>
+    <div class="agents-grid">
+      <div class="card agent-card fade-up">
+        <div class="agent-icon">AI Receptionist</div>
+        <h3>Every call answered. Every lead qualified.</h3>
+        <p>Conversational voice AI that handles multi-turn phone calls, books appointments, qualifies leads, and logs everything to your CRM. Not an IVR phone tree. An actual AI that passes the Turing test on phone calls.</p>
+        <ul>
+          <li>Answers calls 24/7 with natural conversation</li>
+          <li>Books directly into your calendar system</li>
+          <li>Qualifies callers by budget, timeline, urgency</li>
+          <li>Transfers hot leads to your team in real time</li>
+          <li>Daily call digest with recordings and summaries</li>
+        </ul>
+      </div>
+      <div class="card agent-card fade-up">
+        <div class="agent-icon">AI Content Engine</div>
+        <h3>50+ pieces of content per week. Zero writers.</h3>
+        <p>Your AI content agent researches your industry, writes posts, generates social content, schedules across platforms, tracks engagement, and doubles down on winners. The agent learns what resonates and adjusts. Works with Claude, GPT, or open-source models based on your preference.</p>
+        <ul>
+          <li>Researches your industry and competitors daily</li>
+          <li>Writes blog posts, social posts, email copy</li>
+          <li>Schedules across 6+ platforms automatically</li>
+          <li>Tracks engagement and doubles down on winners</li>
+          <li>Weekly performance report with recommendations</li>
+        </ul>
+      </div>
+      <div class="card agent-card fade-up">
+        <div class="agent-icon">AI Lead Machine</div>
+        <h3>Prospects found, scored, and contacted. Automatically.</h3>
+        <p>Scrapes your target market from Google Maps, LinkedIn, and industry directories. Scores every lead 0-100. Generates hyper-personalized outreach. Sends via cold email. Tracks replies. Books meetings.</p>
+        <ul>
+          <li>Scrapes prospects from 5+ data sources</li>
+          <li>AI scores each lead by fit and intent signals</li>
+          <li>Writes personalized outreach per prospect</li>
+          <li>Sends and manages email sequences</li>
+          <li>Auto-books meetings from positive replies</li>
+        </ul>
+      </div>
+    </div>
+    <div class="agents-grid-2">
+      <div class="card agent-card fade-up">
+        <div class="agent-icon">AI Meeting Brain</div>
+        <h3>Decisions captured. Action items assigned. Nothing lost.</h3>
+        <p>Joins your Zoom, Teams, or Meet calls. Transcribes. Extracts every decision, action item, owner, and deadline. Syncs to your project management tool. Sends daily digest to leadership.</p>
+        <ul>
+          <li>Auto-joins and transcribes all meetings</li>
+          <li>Extracts decisions with assigned owners</li>
+          <li>Syncs to Asana, Jira, Linear, or Notion</li>
+          <li>Follow-up reminders with accountability</li>
+          <li>Weekly decision log for leadership review</li>
+        </ul>
+      </div>
+      <div class="card agent-card fade-up">
+        <div class="agent-icon">AI Support Agent</div>
+        <h3>80% of tickets resolved without a human.</h3>
+        <p>Ingests your docs, FAQ, and knowledge base into a RAG system. Handles Tier 1 support via chat and email. Escalates complex issues to humans with full context attached. Learns from every interaction.</p>
+        <ul>
+          <li>Trained on your docs, SOPs, and past tickets</li>
+          <li>Handles chat and email support 24/7</li>
+          <li>Escalates with full context when needed</li>
+          <li>Learns from resolutions to improve over time</li>
+          <li>Weekly report: resolved, escalated, new patterns</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT ACTIVITY FEED -->
+<section>
+  <div class="container">
+    <div class="feed-section fade-up">
+      <div class="feed-header">
+        <h3>What your agents did while you slept.</h3>
+        <p>This is what a Tuesday morning looks like when AI agents run your operations.</p>
+      </div>
+      <div class="feed-mock">
+        <div class="feed-line"><span class="time">[06:01]</span> <span class="agent-name">Content Engine</span> <span class="action">published blog post</span> <span class="highlight">"Q2 HVAC maintenance checklist"</span><span class="action">, scheduled 6 social variants across LinkedIn, X, Facebook</span></div>
+        <div class="feed-line"><span class="time">[07:34]</span> <span class="agent-name">Lead Machine</span> <span class="action">scraped 142 new prospects from Google Maps,</span> <span class="highlight">scored 38 as high-intent</span><span class="action">, queued 12 personalized emails</span></div>
+        <div class="feed-line"><span class="time">[08:12]</span> <span class="agent-name">AI Receptionist</span> <span class="action">answered call from +1-555-0182,</span> <span class="highlight">booked appointment for Thursday 2pm</span><span class="action">, logged to HubSpot with call summary</span></div>
+        <div class="feed-line"><span class="time">[08:44]</span> <span class="agent-name">Support Agent</span> <span class="action">resolved 4 support tickets overnight,</span> <span class="highlight">escalated 1 billing issue</span> <span class="action">to finance team with full context</span></div>
+        <div class="feed-line"><span class="time">[09:15]</span> <span class="agent-name">Meeting Brain</span> <span class="action">extracted 7 action items from yesterday's team sync,</span> <span class="highlight">assigned owners in Asana</span><span class="action">, sent digest to leadership</span></div>
+        <div class="feed-line"><span class="time">[09:21]</span> <span class="agent-name">Lead Machine</span> <span class="action">received 3 replies from yesterday's outreach,</span> <span class="highlight">2 requested pricing calls</span><span class="action">, auto-booked via Calendly</span></div>
+        <div class="feed-line dim" style="text-align:right;border:none;padding-top:12px">live feed from your EAS agent dashboard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="container">
+    <div class="section-label fade-up">How it works</div>
+    <h2 class="fade-up" style="margin-bottom:8px">From first call to autonomous agent in 4 steps.</h2>
+    <div class="process-grid">
+      <div class="process-step fade-up">
+        <div class="step-num">01</div>
+        <h3>Signal map</h3>
+        <p>We audit your operations and identify which AI agent would have the highest ROI. Where are hours being lost? What tasks are repetitive? What's falling through cracks? We find the answer in 3-5 days.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-num">02</div>
+        <h3>Agent install</h3>
+        <p>We build, configure, test, and deploy your AI agent in 10-14 days. Connected to your existing tools. Trained on your data. Running on your infrastructure. Fixed price, defined scope.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-num">03</div>
+        <h3>Prove autonomy</h3>
+        <p>Your agent runs for 2 weeks while we measure everything. Calls handled, leads generated, tickets resolved, content published, decisions captured. Real numbers, not projections.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-num">04</div>
+        <h3>Scale</h3>
+        <p>Add more agents. Build an intelligence layer that monitors your competitors. Move to managed autonomy where we run and evolve your AI systems month over month. The system compounds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-label fade-up">Common questions</div>
+    <h2 class="fade-up">Things people ask before installing their first agent.</h2>
+    <div class="faq-list">
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How is this different from hiring a Zapier consultant?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>A Zapier consultant connects apps together. When the trigger fires, the workflow runs. Our agents don't wait for triggers. They wake up on a schedule, assess their environment, make decisions, take action, and log results. An AI receptionist doesn't just route calls. It has a conversation, qualifies the caller, checks your calendar, and books the appointment. That's the difference between a workflow and an agent.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What happens if the AI makes a mistake?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>Every agent has guardrails and escalation paths. The AI receptionist transfers calls it can't handle. The support agent escalates tickets that need human review. The lead machine flags edge cases for your team. We build confidence thresholds into every agent. Below the threshold, it routes to a human. Above it, it acts and logs what it did so you can review.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do we need to change our existing tools?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>No. Our agents connect to your existing stack. If you use HubSpot, the agent logs to HubSpot. If you use Google Calendar, it books there. If you use Slack, it sends digests to Slack. We adapt to your tools. The only new infrastructure is the AI agent itself and the orchestration layer that powers it.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What does "self-healing" mean?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>If an API goes down, the agent retries with exponential backoff. If retries fail, it switches to a fallback path. If the fallback fails, it pauses that function, sends an alert, and continues operating on everything else. When the API comes back, the agent automatically resumes. You never have to restart anything manually. This is circuit breaker architecture, the same pattern Netflix and Amazon use.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How fast until we see results?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>Signal map takes 3-5 days. Agent install takes 10-14 days. Your agent is live and working within 3 weeks of signing. Most clients see measurable impact in the first week of the agent running. AI receptionist clients typically see 40-60% fewer missed calls in week one.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container fade-up">
+    <h2>Your competitors are still connecting Zapier zaps. You could have AI agents running your operations.</h2>
+    <div class="hero-ctas">
+      <a href="book.html" class="btn btn-gold">Book a 15-minute assessment</a>
+      <a href="calculator.html" class="btn btn-outline">Calculate your agent ROI</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Enterprise Automation Solutions. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="contact.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html">Book a Call</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky-cta desktop-only-hide">
+  <a href="book.html" class="btn btn-gold">Book a 15-minute assessment</a>
+</div>
+
+<script>
+// Mobile menu
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('active');
+}
+
+// FAQ
+function toggleFaq(el){
+  el.parentElement.classList.toggle('open');
+}
+
+// Scroll animations
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// Count-up animation
+const countObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target;
+      if(el.dataset.static==='true') return;
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      let current = 0;
+      const step = target / 40;
+      const interval = setInterval(()=>{
+        current += step;
+        if(current >= target){
+          current = target;
+          clearInterval(interval);
+        }
+        el.textContent = Math.round(current) + suffix;
+      }, 25);
+      countObserver.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.stat-number').forEach(el=>{
+  if(el.dataset.static!=='true') countObserver.observe(el);
+});
+</script>
+
+</body>
+</html>

@@ -6314,3 +6314,480 @@ With one prompt, you get all the viral insights you need.
 
 Delivered on Slack
 
+
+
+---
+
+## Pending Enhancement (ALPHA98733, Score: 37)
+
+**Source:** indiehackers | **URL:** https://www.indiehackers.com/post/tech/hitting-25k-mrr-by-making-his-goals-less-ambitious-jQRZDnzwm8DFAaS4Xrq0
+**Added:** 2026-03-15T04:25:18-04:00
+
+$25K+ MRR by making goals LESS ambitious. Dmytro Krasun: failed repeatedly with big goals. Success came from downgrading ambition + focusing on small easy steps. Reddit was key growth channel. Took 2 years to identify real ICP. Subscription + pay-as-you-go pricing. Key: know who youre selling to - changed everything.
+
+
+
+---
+
+## Pending Enhancement (ALPHA98740, Score: 26)
+
+**Source:** indiehackers | **URL:** https://www.indiehackers.com/post/how-to-promote-a-startup-if-you-are-a-developer-7b88e2238f
+**Added:** 2026-03-15T04:25:18-04:00
+
+How to promote a startup as a developer. Key insight: 10% of ProductHunt published startups are DEAD (20676 expired domains from 198110). Developers treat marketing as unimportant and keep writing features instead. Trap: codebase grows but nothing else does. Shift mindset from feature-building to marketing.
+
+
+
+---
+
+## Pending Enhancement (ALPHA99888, Score: 22)
+
+**Source:** @Hesamation (high-signal-accounts) | **URL:** https://x.com/Hesamation/status/2032966979464605802
+**Added:** 2026-03-15T04:25:18-04:00
+
+for the last 18 months i’ve been going viral more than i can remember and i haven’t see a post explaining the algorithm behind going viral better than this. you will see the world different when you internalize the 20/80 rule and respect it.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100037, Score: 20)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/03/14/meta-reportedly-considering-layoffs-that-could-affect-20-of-the-company/) | **URL:** https://techcrunch.com/2026/03/14/meta-reportedly-considering-layoffs-that-could-affect-20-of-the-company/
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PLATFORM UPDATE] Meta reportedly considering layoffs that could affect 20% of the company
+
+
+
+---
+
+## Pending Enhancement (ALPHA100043, Score: 20)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/03/13/steven-spielberg-says-hes-never-used-ai-in-any-of-his-films/) | **URL:** https://techcrunch.com/2026/03/13/steven-spielberg-says-hes-never-used-ai-in-any-of-his-films/
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PLATFORM UPDATE] Steven Spielberg says he&#8217;s &#8216;never used AI&#8217; in any of his films
+
+
+
+---
+
+## Pending Enhancement (ALPHA100053, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/morgen-2
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Morgen: Your entire morning in one tab.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100054, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/aura-water
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Aura Water: Private Hydration: Offline water tracker with a private AI hydration coach
+
+
+
+---
+
+## Pending Enhancement (ALPHA100055, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/laterai-save-read-listen
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] LaterAI: AI-powered reading, 100% on your device
+
+
+
+---
+
+## Pending Enhancement (ALPHA100057, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/clawsecure
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] ClawSecure: The only complete security platform for OpenClaw AI agents
+
+
+
+---
+
+## Pending Enhancement (ALPHA100058, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/github-google-workspace-cli
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Google Workspace CLI: CLI for Google Workspace ecosystem built for humans &amp; agents
+
+
+
+---
+
+## Pending Enhancement (ALPHA100059, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/byterover
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] ByteRover Memory System for OpenClaw: File-based memory for OpenClaw with &gt;92% retrieval accuracy
+
+
+
+---
+
+## Pending Enhancement (ALPHA100060, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/nutgrafe
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Nutgrafe: Every article summarized in one short paragraph.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100061, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/mooon
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Mooon: One-step Japanese Document Processing Engine
+
+
+
+---
+
+## Pending Enhancement (ALPHA100065, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/tellus-3
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Tellus: Grandpa’s stories, preserved for his grandkids
+
+
+
+---
+
+## Pending Enhancement (ALPHA100071, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/campee-planning-poker-online
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Campee: Your estimations, frictionless
+
+
+
+---
+
+## Pending Enhancement (ALPHA100073, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lingofable
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Lingofable: Language learning, one story at a time
+
+
+
+---
+
+## Pending Enhancement (ALPHA100074, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/rainfrog-2
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Rainfrog: Mix, match, and create stunning consistent campaign visuals
+
+
+
+---
+
+## Pending Enhancement (ALPHA100076, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/ask-maps-by-google
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Ask Maps by Google: Ask Maps questions, drive with immersive navigation.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100077, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/solo-voice
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Solo Voice: Private by architecture, not by promise.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100080, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/brutal-verdict
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Brutal Verdict: 100% local AI Driven insights of chat messages
+
+
+
+---
+
+## Pending Enhancement (ALPHA100081, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/saturn-5
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Saturn: Turn Japan's public data into an AI-ready spreadsheet WS
+
+
+
+---
+
+## Pending Enhancement (ALPHA100088, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/hyper-10
+**Added:** 2026-03-15T06:15:02-04:00
+
+[PH LAUNCH] Hyper: Perfect memory for every real-world conversation
+
+
+
+---
+
+## Pending Enhancement (ALPHA100158, Score: 31)
+
+**Source:** r/wallstreetbets | **URL:** https://reddit.com/r/wallstreetbets/comments/1rsb64m/the_deflation_glitch_why_2_bills_are_the_ultimate/
+**Added:** 2026-03-15T06:20:04-04:00
+
+[r/wallstreetbets] THE DEFLATION GLITCH: Why $2 Bills are the ultimate hedge against the Fed
+
+
+
+---
+
+## Pending Enhancement (ALPHA100169, Score: 26)
+
+**Source:** r/wallstreetbets | **URL:** https://reddit.com/r/wallstreetbets/comments/1rsyqzp/fuck_this_shit/
+**Added:** 2026-03-15T06:20:04-04:00
+
+[r/wallstreetbets] Fuck this shit
+
+
+
+---
+
+## Pending Enhancement (ALPHA100336, Score: 20)
+
+**Source:** r/passive_income | **URL:** https://reddit.com/r/passive_income/comments/1ru5gjt/i_made_a_list_of_20_things_people_pay_for_every/
+**Added:** 2026-03-15T06:31:10-04:00
+
+[r/passive_income] i made a list of 20 things people pay for every single month but actively hate. each one is a business opportunity hiding in plain sight
+
+
+
+---
+
+## Pending Enhancement (ALPHA100337, Score: 20)
+
+**Source:** r/passive_income | **URL:** https://reddit.com/r/passive_income/comments/1ru2pf9/built_an_automated_crypto_trading_system_sharing/
+**Added:** 2026-03-15T06:31:10-04:00
+
+[r/passive_income] Built an automated crypto trading system -Sharing what I have learnt
+
+
+
+---
+
+## Pending Enhancement (ALPHA100387, Score: 20)
+
+**Source:** r/entrepreneur | **URL:** https://reddit.com/r/Entrepreneur/comments/1rtnn6n/the_most_expensive_employee_isnt_the_one_you_pay/
+**Added:** 2026-03-15T06:31:10-04:00
+
+[r/entrepreneur] The most expensive employee isn't the one you pay the most. It's the one who calls in sick every Friday.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100495, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/parker-by-perfectly
+**Added:** 2026-03-15T08:15:02-04:00
+
+[PH LAUNCH] Parker by Perfectly: Your AI career super-connector
+
+
+
+---
+
+## Pending Enhancement (ALPHA100574, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/manus-agents-for-telegram
+**Added:** 2026-03-15T10:15:01-04:00
+
+[PH LAUNCH] Manus Agents for Telegram: Personal AI Agent in Your Chat
+
+
+
+---
+
+## Pending Enhancement (ALPHA100660, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/burnlink
+**Added:** 2026-03-16T00:15:01-04:00
+
+[PH LAUNCH] BurnLink: Share encrypted files that are ephemeral
+
+
+
+---
+
+## Pending Enhancement (ALPHA100939, Score: 28)
+
+**Source:** @simonecanciello (high-signal-accounts) | **URL:** https://x.com/simonecanciello/status/2033217138282930328
+**Added:** 2026-03-16T02:30:01-04:00
+
+if you’re chronically online, you already know this format.
+
+“umm since WHEN??” + snapchat style format = you’re 100% viral.
+
+just build an app with strong visuals.
+
+
+
+---
+
+## Pending Enhancement (ALPHA101035, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/deepidv
+**Added:** 2026-03-16T02:30:01-04:00
+
+[PH LAUNCH] deepidv: AI-native verification &amp; anti-fraud Engine
+
+
+
+---
+
+## Pending Enhancement (ALPHA101133, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/adaptive-ai
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Adaptive — The Agent Computer: The computer for AI to get things done
+
+
+
+---
+
+## Pending Enhancement (ALPHA101134, Score: 32)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/donely
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Donely: Your own OpenClaw instance for $0/mo
+
+
+
+---
+
+## Pending Enhancement (ALPHA101135, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/knock-7
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Knock: Knock on your MacBook to control your Mac
+
+
+
+---
+
+## Pending Enhancement (ALPHA101137, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/spott-3
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Spott: Spott is the AI-native ATS &amp; CRM for recruiting firms
+
+
+
+---
+
+## Pending Enhancement (ALPHA101139, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/masko-code
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Masko Code: A mascot that watches Claude Code for you
+
+
+
+---
+
+## Pending Enhancement (ALPHA101140, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/mulerun
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] MuleRun: Raise an AI that actually learns how you work
+
+
+
+---
+
+## Pending Enhancement (ALPHA101141, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/jetbrains
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] JetBrains Air: Run Codex, Claude Agents, Gemini CLI, and Junie side by side
+
+
+
+---
+
+## Pending Enhancement (ALPHA101143, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/z-ai
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] GLM-5-Turbo: High-speed agentic model built specifically for OpenClaw
+
+
+
+---
+
+## Pending Enhancement (ALPHA101145, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/wendi-ai-yc-application
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] Wendi AI: The AI OS for people who manage people
+
+
+
+---
+
+## Pending Enhancement (ALPHA101146, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/fnkey
+**Added:** 2026-03-16T04:16:41-04:00
+
+[PH LAUNCH] FnKey: macOS dictation with Deepgram stream
+
+
+
+---
+
+## Pending Enhancement (ALPHA101240, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/faces-4
+**Added:** 2026-03-16T06:15:01-04:00
+
+[PH LAUNCH] Faces: Interactive presentations that use the full power of the web
+

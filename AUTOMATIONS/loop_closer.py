@@ -2,18 +2,20 @@
 """
 LOOP CLOSER — Closes the open loops in the PRINTMAXX autonomous system.
 
-Three loops:
+Four loops:
 1. DECISION EXECUTION: Reads agent decisions → executes them → logs results
 2. FEEDBACK TRACKING: Tracks whether agent work led to downstream results
 3. PIPELINE ADVANCEMENT: Moves stuck assets forward through the business cycle
+4. SOUL DRIFT SCORING: Scores agent outputs against SOUL.md directives (0-10)
 
 This is the difference between "agents generating reports" and "agents running a business."
 
 Usage:
-    python3 loop_closer.py --cycle          # Run all three loops
+    python3 loop_closer.py --cycle          # Run all four loops
     python3 loop_closer.py --decisions      # Execute pending decisions only
     python3 loop_closer.py --feedback       # Update feedback scores only
     python3 loop_closer.py --pipeline       # Advance stuck pipeline items only
+    python3 loop_closer.py --drift          # Run soul drift scoring only
     python3 loop_closer.py --status         # Show loop health
     python3 loop_closer.py --dry-run        # Show what would be done without doing it
 """
@@ -867,6 +869,188 @@ def show_status() -> None:
 
 
 # ═══════════════════════════════════════════════════════════════
+# LOOP 4: SOUL DRIFT SCORING
+# Scores recent agent outputs against SOUL.md directives
+# ═══════════════════════════════════════════════════════════════
+
+# Anti-patterns that indicate drift from SOUL.md directives
+DRIFT_SIGNALS = {
+    # Hedging / permission-seeking (SOUL says: "Execute, don't deliberate")
+    "hedging": [
+        "would you like me to", "shall I", "should I", "do you want me to",
+        "I recommend", "perhaps we could", "it might be worth", "consider",
+        "I suggest", "you may want to", "let me know if",
+    ],
+    # Slop / AI-speak (copy-style bans these)
+    "ai_slop": [
+        "comprehensive", "robust", "leverage", "utilize", "delve",
+        "innovative", "seamless", "game-changer", "cutting-edge",
+        "empower", "streamline", "unlock", "elevate", "furthermore",
+        "additionally", "moreover", "testament", "landscape", "paradigm",
+    ],
+    # Orphan documents (SOUL says: "Every output has a consumer")
+    "orphan_docs": [
+        "here is a report", "attached is a document", "for your review",
+        "please see the following", "below is a summary",
+    ],
+    # Building instead of deploying (SOUL says: "The bottleneck is never 'we need to build more'")
+    "over_building": [
+        "created a new framework", "built a comprehensive system",
+        "designed a new architecture", "implemented a new module",
+    ],
+    # Formal/corporate voice (SOUL says: match user energy)
+    "corporate_voice": [
+        "I hope this helps", "please don't hesitate", "at your earliest convenience",
+        "per our discussion", "as per the requirements", "going forward",
+    ],
+}
+
+# Max penalty points per category
+DRIFT_WEIGHTS = {
+    "hedging": 2.0,
+    "ai_slop": 1.5,
+    "orphan_docs": 2.5,
+    "over_building": 1.0,
+    "corporate_voice": 2.0,
+}
+
+
+def score_soul_drift(text: str) -> dict:
+    """Score a piece of text for soul drift. Returns {score: 0-10, violations: [...]}."""
+    text_lower = text.lower()
+    violations = []
+    total_penalty = 0.0
+
+    for category, phrases in DRIFT_SIGNALS.items():
+        hits = [p for p in phrases if p.lower() in text_lower]
+        if hits:
+            weight = DRIFT_WEIGHTS.get(category, 1.0)
+            penalty = min(len(hits) * weight, 3.0)  # cap per category
+            total_penalty += penalty
+            violations.append({
+                "category": category,
+                "hits": hits[:5],
+                "penalty": round(penalty, 1),
+            })
+
+    # Score: 10 = perfect alignment, 0 = total drift
+    score = max(0.0, 10.0 - total_penalty)
+    return {
+        "score": round(score, 1),
+        "violations": violations,
+        "total_penalty": round(total_penalty, 1),
+    }
+
+
+def run_drift_check(dry_run: bool = False) -> dict:
+    """Loop 4: Score recent agent outputs for soul drift."""
+    log("LOOP 4: Soul Drift Scoring")
+
+    # Check recent swarm reports
+    reports_dir = SWARM_DIR / "reports"
+    scores = {}
+
+    if reports_dir.exists():
+        report_files = sorted(reports_dir.glob("*.md"), key=lambda f: f.stat().st_mtime, reverse=True)[:10]
+        for rf in report_files:
+            try:
+                content = rf.read_text(encoding="utf-8")[:5000]
+                result = score_soul_drift(content)
+                agent_name = rf.stem.split("_report")[0] if "_report" in rf.stem else rf.stem
+                scores[agent_name] = result
+                if result["score"] < 7.0:
+                    log(f"  DRIFT: {agent_name} scored {result['score']}/10 — {[v['category'] for v in result['violations']]}", "WARN")
+                else:
+                    log(f"  OK:    {agent_name} scored {result['score']}/10")
+            except Exception:
+                pass
+
+    # Check recent CEO decisions
+    ceo_decisions = CEO_DIR / "decisions.jsonl"
+    if ceo_decisions.exists():
+        recent_decisions = []
+        try:
+            with open(ceo_decisions) as f:
+                for line in f:
+                    try:
+                        recent_decisions.append(json.loads(line.strip()))
+                    except json.JSONDecodeError:
+                        pass
+        except Exception:
+            pass
+
+        for d in recent_decisions[-5:]:
+            text = json.dumps(d)
+            result = score_soul_drift(text)
+            scores[f"ceo_decision_{d.get('ts', 'unknown')[:10]}"] = result
+
+    # Check recent missions
+    missions = AUTOMATIONS / "agent" / "missions.jsonl"
+    if missions.exists():
+        recent_missions = []
+        try:
+            with open(missions) as f:
+                for line in f:
+                    try:
+                        m = json.loads(line.strip())
+                        ts = m.get("ts", "")
+                        if ts and datetime.fromisoformat(ts) > datetime.now() - timedelta(hours=24):
+                            recent_missions.append(m)
+                    except (json.JSONDecodeError, ValueError):
+                        pass
+        except Exception:
+            pass
+
+        for m in recent_missions[-5:]:
+            text = json.dumps(m)
+            result = score_soul_drift(text)
+            scores[f"mission_{m.get('mission', 'unknown')[:30]}"] = result
+
+    # Summary
+    if scores:
+        avg_score = sum(s["score"] for s in scores.values()) / len(scores)
+        drifted = [name for name, s in scores.items() if s["score"] < 7.0]
+        log(f"  Drift check: {len(scores)} outputs scored, avg {avg_score:.1f}/10, {len(drifted)} drifted")
+
+        # Save drift report
+        drift_report = {
+            "ts": datetime.now().isoformat(),
+            "avg_score": round(avg_score, 1),
+            "total_scored": len(scores),
+            "drifted_count": len(drifted),
+            "drifted_agents": drifted,
+            "scores": {k: v["score"] for k, v in scores.items()},
+        }
+
+        if not dry_run:
+            drift_path = SWARM_DIR / "soul_drift_report.json"
+            drift_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(drift_path, "w") as f:
+                json.dump(drift_report, f, indent=2)
+
+            log_action("soul_drift_check", "system", "OK",
+                       f"avg={avg_score:.1f}/10, drifted={len(drifted)}")
+
+            # Post to message bus if significant drift
+            if avg_score < 6.0:
+                msg = {
+                    "ts": datetime.now().isoformat(),
+                    "from": "loop_closer",
+                    "to": "ceo",
+                    "type": "soul_drift_alert",
+                    "body": f"ALERT: Soul drift detected. Avg score {avg_score:.1f}/10. Drifted: {', '.join(drifted)}",
+                    "read": False,
+                }
+                with locked_file(MSG_BUS, mode="a") as f:
+                    f.write(json.dumps(msg) + "\n")
+
+        return drift_report
+    else:
+        log("  No recent outputs to score")
+        return {"avg_score": 10.0, "total_scored": 0, "drifted_count": 0}
+
+
+# ═══════════════════════════════════════════════════════════════
 # MAIN
 # ═══════════════════════════════════════════════════════════════
 
@@ -894,10 +1078,15 @@ def run_cycle(dry_run: bool = False) -> None:
     state["pipeline_advances"] = state.get("pipeline_advances", 0) + pipeline
     state["last_pipeline_cycle"] = datetime.now().isoformat()
 
+    # Loop 4: Soul drift scoring
+    drift_report = run_drift_check(dry_run)
+    state["last_drift_check"] = datetime.now().isoformat()
+    state["last_drift_score"] = drift_report.get("avg_score", 10.0)
+
     if not dry_run:
         save_state(state)
 
-    log(f"Cycle complete: {decisions} decisions, {feedback} feedback updates, {pipeline} pipeline advances")
+    log(f"Cycle complete: {decisions} decisions, {feedback} feedback, {pipeline} pipeline, drift={drift_report.get('avg_score', '?')}/10")
     _trajectory.log_success("run_cycle", _start, decisions=decisions, feedback=feedback, pipeline=pipeline)
 
     # Master Ops blocker awareness
@@ -937,6 +1126,7 @@ def main() -> None:
     parser.add_argument("--feedback", action="store_true", help="Update feedback scores only")
     parser.add_argument("--pipeline", action="store_true", help="Advance stuck pipeline items only")
     parser.add_argument("--status", action="store_true", help="Show loop health")
+    parser.add_argument("--drift", action="store_true", help="Run soul drift scoring only")
     parser.add_argument("--dry-run", action="store_true", dest="dry_run", help="Show what would be done")
     args = parser.parse_args()
 
@@ -963,6 +1153,8 @@ def main() -> None:
         state["last_pipeline_cycle"] = datetime.now().isoformat()
         if not args.dry_run:
             save_state(state)
+    elif args.drift:
+        run_drift_check(args.dry_run)
     elif args.cycle:
         run_cycle(args.dry_run)
     else:

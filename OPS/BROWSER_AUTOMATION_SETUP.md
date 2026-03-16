@@ -1955,3 +1955,14 @@ From
 
 Agent 37 - Managed OpenClaw instance for $3.99/mo. Isolated container (2 vCPU + 4GB RAM) with full terminal + SSL. Connect to Gmail/Slack/850+ apps. Run background tasks and market scanners 24/7. 30-second setup. Intro pricing $3.99 then $9.99/mo. 321 upvotes on PH launch day.
 
+
+
+---
+
+## Pending Enhancement (ALPHA98741, Score: 23)
+
+**Source:** indiehackers | **URL:** https://www.indiehackers.com/post/setting-up-openclaw-as-a-personal-ai-content-manager-full-breakdown-19276e58d9
+**Added:** 2026-03-15T04:25:18-04:00
+
+OpenClaw as personal AI content manager. Telegram bot that drafts and publishes to 13+ social platforms. 3 config files + Docker container. Uses Kimi K2.5 (cheap 256K context OpenAI-compatible API). Skills: social-posting + humanizer + de-ai-ify. SOUL file = system prompt in Markdown. Full setup guide.
+

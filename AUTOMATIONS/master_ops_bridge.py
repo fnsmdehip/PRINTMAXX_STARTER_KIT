@@ -607,15 +607,24 @@ class MasterOpsBridge:
             if oid:
                 rank_lookup[oid] = rank
 
+        # Human-only blockers — ops with these can still run automation parts
+        HUMAN_BLOCKERS = {
+            "GUMROAD_ACCOUNT", "STORE_ACCOUNT_AND_PAYMENT",
+            "X_MULTI_ACCOUNT_STACK", "EMAIL_INFRA",
+            "FIVERR_UPWORK_ACCOUNT", "ACCOUNT_EBAY",
+            "ACCOUNT_ETSY", "ACCOUNT_AMAZON",
+        }
+
         actionable: List[Dict[str, Any]] = []
         for row in self.get_ready_ops():
             op_id = _safe_str(row.get("OP_ID")).upper()
-            blocker = _safe_str(row.get("BLOCKER_KEY"))
-            if blocker:
-                continue  # skip blocked even if marked READY
+            blocker = _safe_str(row.get("BLOCKER_KEY")).upper()
             next_action = _safe_str(row.get("NEXT_AUTOMATION_ACTION"))
             cmd = cmd_lookup.get(op_id, "")
             rank = rank_lookup.get(op_id, 9999)
+
+            # Include ops even with human-only blockers (mark them)
+            is_blocked = bool(blocker) and blocker not in HUMAN_BLOCKERS
 
             actionable.append({
                 "op_id": op_id,
@@ -627,6 +636,9 @@ class MasterOpsBridge:
                 "next_action": next_action,
                 "command_template": cmd,
                 "priority_rank": rank,
+                "blocker": blocker if blocker else "",
+                "human_blocked": blocker in HUMAN_BLOCKERS,
+                "fully_blocked": is_blocked,
             })
 
         actionable.sort(key=lambda x: x["priority_rank"])

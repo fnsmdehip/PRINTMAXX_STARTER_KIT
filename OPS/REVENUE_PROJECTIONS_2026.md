@@ -497,3 +497,58 @@ just build things clankers want.
 
 I sold my $0 revenue SaaS side project for $4.5k
 
+
+
+---
+
+## Pending Enhancement (ALPHA100101, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1ru9s7g/my_side_project_now_making_390_mrr/
+**Added:** 2026-03-15T06:15:02-04:00
+
+[ACQUISITION] My side project now making ~390 MRR
+
+
+
+---
+
+## Pending Enhancement (ALPHA100575, Score: 26)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1ruezlk/i_built_a_side_project_for_indian_job_seekers/
+**Added:** 2026-03-15T10:15:01-04:00
+
+[ACQUISITION] I built a side project for Indian job seekers after failing placement interviews.
+
+
+
+---
+
+## Pending Enhancement (ALPHA100577, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1ruev1k/built_a_tool_so_my_side_project_doesnt_die_in_the/
+**Added:** 2026-03-15T10:15:01-04:00
+
+[ACQUISITION] Built a tool so my side project doesn’t die in the “I’ll post about it later” void
+
+
+
+---
+
+## Pending Enhancement (ALPHA100679, Score: 35)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rus1yc/i_spent_1300_on_a_dead_project_the_idea_still/
+**Added:** 2026-03-16T00:15:01-04:00
+
+[ACQUISITION] I spent $1,300 on a dead project. The idea still won't leave me alone. [rev: $$1,300]
+
+
+
+---
+
+## Pending Enhancement (ALPHA101156, Score: 30)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rv2059/from_side_project_to_x_mrr_lessons_from_building/
+**Added:** 2026-03-16T04:16:41-04:00
+
+[ACQUISITION] From side project to $X MRR: lessons from building a Telegram-first B2B platform in a niche nobody talks about
+
