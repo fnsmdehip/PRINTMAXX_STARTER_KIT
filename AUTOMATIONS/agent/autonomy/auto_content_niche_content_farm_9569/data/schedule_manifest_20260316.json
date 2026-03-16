@@ -1,0 +1,136 @@
+{
+  "generated": "2026-03-16T08:31:00-05:00",
+  "cycle_date": "2026-03-16",
+  "venture": "Niche Content Farm",
+  "step": "schedule",
+  "core_angle": "35 days / $0 / 323 scripts — builder's trap, horizontal vs vertical progress",
+  "total_pieces": 11,
+  "items": [
+    {
+      "id": "tw_post_1",
+      "platform": "twitter",
+      "type": "standalone",
+      "angle": "revenue bottleneck",
+      "scheduled_est": "2026-03-16T12:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_twitter.md",
+      "status": "PENDING_REVIEW",
+      "char_count": 145,
+      "hook": "$0 revenue for 35 days. 8 apps built. 47 sites deployed."
+    },
+    {
+      "id": "tw_post_2",
+      "platform": "twitter",
+      "type": "standalone",
+      "angle": "cold email math",
+      "scheduled_est": "2026-03-16T18:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_twitter.md",
+      "status": "PENDING_REVIEW",
+      "char_count": 198,
+      "hook": "cold email math nobody talks about:"
+    },
+    {
+      "id": "tw_post_3",
+      "platform": "twitter",
+      "type": "standalone",
+      "angle": "local biz audit hook",
+      "scheduled_est": "2026-03-17T07:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_twitter.md",
+      "status": "PENDING_REVIEW",
+      "char_count": 210,
+      "hook": "ran an automated audit on 50 local businesses last night"
+    },
+    {
+      "id": "tw_post_4",
+      "platform": "twitter",
+      "type": "standalone",
+      "angle": "overnight runner pattern",
+      "scheduled_est": "2026-03-17T12:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_twitter.md",
+      "status": "PENDING_REVIEW",
+      "char_count": 195,
+      "hook": "the overnight runner changed how i ship"
+    },
+    {
+      "id": "tw_post_5",
+      "platform": "twitter",
+      "type": "standalone",
+      "angle": "boring = prints",
+      "scheduled_est": "2026-03-18T07:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_twitter.md",
+      "status": "PENDING_REVIEW",
+      "char_count": 213,
+      "hook": "everyone's building AI wrappers"
+    },
+    {
+      "id": "tw_thread_1",
+      "platform": "twitter",
+      "type": "thread",
+      "angle": "35 days $0 builder trap",
+      "tweet_count": 6,
+      "scheduled_est": "2026-03-18T18:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_twitter.md",
+      "status": "PENDING_REVIEW",
+      "hook": "the real cost of not creating accounts for 35 days."
+    },
+    {
+      "id": "li_post_1",
+      "platform": "linkedin",
+      "type": "standalone",
+      "angle": "builder's trap",
+      "scheduled_est": "2026-03-17T08:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_linkedin.md",
+      "status": "PENDING_REVIEW",
+      "best_days": ["Tuesday", "Wednesday", "Thursday"],
+      "hook": "35 days. $0 revenue. Not because the system doesn't work."
+    },
+    {
+      "id": "li_post_2",
+      "platform": "linkedin",
+      "type": "standalone",
+      "angle": "cold email math",
+      "scheduled_est": "2026-03-19T12:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_linkedin.md",
+      "status": "PENDING_REVIEW",
+      "hook": "cold email math that actually works at scale"
+    },
+    {
+      "id": "li_post_3",
+      "platform": "linkedin",
+      "type": "standalone",
+      "angle": "local biz audit service",
+      "scheduled_est": "2026-03-24T08:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_linkedin.md",
+      "status": "PENDING_REVIEW",
+      "hook": "50 local business audits, automated"
+    },
+    {
+      "id": "nl_issue_1",
+      "platform": "newsletter",
+      "type": "issue",
+      "angle": "35 days $0 builder trap deep dive",
+      "scheduled_est": "2026-03-17T09:00:00-05:00",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_newsletter.md",
+      "status": "PENDING_REVIEW",
+      "blocker": "Beehiiv account required",
+      "word_count_approx": 600
+    },
+    {
+      "id": "blog_post_1",
+      "platform": "blog",
+      "type": "article",
+      "angle": "builder's trap SEO",
+      "scheduled_est": "2026-03-19T10:00:00-05:00",
+      "publish_rationale": "evergreen, capture Wed thread traffic, index before weekend",
+      "source_file": "CONTENT/social/generated/PENDING_REVIEW_format_20260316_blog.md",
+      "status": "PENDING_REVIEW",
+      "word_count_approx": 900
+    }
+  ],
+  "blockers": [
+    "Newsletter publish requires Beehiiv account (not yet created)",
+    "Blog post requires landing site CMS or surge deploy",
+    "Twitter posting requires X Premium for link engagement"
+  ],
+  "next_step": "distribute",
+  "distribute_action": "Move APPROVED items to CONTENT/social/posting_queue/ as individual post files"
+}

@@ -11,6 +11,7 @@ Your landing pages are live but affiliate links have **placeholder IDs**. Sign u
 |------|-----|--------|
 | AI Stack 2026 | https://ai-stack-2026.surge.sh | LIVE, needs real affiliate IDs |
 | ConvertKit vs Beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE, needs real affiliate IDs |
+| Cursor vs Claude Code | https://cursor-vs-claude-code.surge.sh | BUILT, needs deploy + affiliate IDs |
 
 ---
 
@@ -68,7 +69,18 @@ Then redeploy:
 ```bash
 cd LANDING/app-marketing-pages/ai-stack-2026 && npx surge . ai-stack-2026.surge.sh
 cd LANDING/app-marketing-pages/convertkit-vs-beehiiv && npx surge . convertkit-vs-beehiiv.surge.sh
+
+# cursor-vs-claude-code page (new Mar 2026)
+sed -i '' 's/REPLACE_CURSOR_AFF_ID/your_cursor_aff_id/g' LANDING/app-marketing-pages/cursor-vs-claude-code/index.html
+sed -i '' 's/REPLACE_WINDSURF_AFF_ID/your_windsurf_aff_id/g' LANDING/app-marketing-pages/cursor-vs-claude-code/index.html
+cd LANDING/app-marketing-pages/cursor-vs-claude-code && npx surge . cursor-vs-claude-code.surge.sh
 ```
+
+### New affiliate programs to sign up for (cursor-vs-claude-code page)
+
+**Cursor affiliate:** cursor.com/affiliate — ~30% recurring on $20/mo Pro = $6/user/month
+**Windsurf/Codeium:** codeium.com/affiliate — commission varies, check on signup
+**Placeholder IDs:** `REPLACE_CURSOR_AFF_ID` and `REPLACE_WINDSURF_AFF_ID` in cursor-vs-claude-code/index.html
 
 ---
 

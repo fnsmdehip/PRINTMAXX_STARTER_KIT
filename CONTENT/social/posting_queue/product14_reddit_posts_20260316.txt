@@ -1,0 +1,106 @@
+PRODUCT: Claude Code Agent Bible
+DATE: 2026-03-16
+STATUS: PENDING_REVIEW (replace [GUMROAD_LINK] before posting)
+POST TIMING: 10am-12pm EST
+---
+
+== r/ClaudeAI ==
+TITLE: I ran 33 autonomous Claude agents for 35 days. Here's the architecture that made it possible.
+
+BODY:
+After 35 days I documented everything in detail. The core pattern that makes infinite agent runtime possible:
+
+**Filesystem = memory. Context window = disposable scratchpad.**
+
+Each agent:
+1. Reads state from JSON files
+2. Does ONE specific task (under 60 seconds ideal)
+3. Writes output back to files
+4. Exits clean
+
+Next iteration starts with fresh 200K context. No degradation over time. No context window crashes.
+
+The system structure:
+- 33 agents organized by category (META, DISCOVERY, ACTION, QUALITY, INTELLIGENCE, GROWTH, MAINTENANCE)
+- 16-phase CEO orchestration cycle (runs every 6h, checkpoint-resume for crash recovery)
+- JSONL message bus for inter-agent communication
+- SQLite FTS5 for searching 15K+ intelligence entries (<50ms)
+- Quality gate agent (Opus, every 2h) — hard blocks slop before deployment
+
+Cost: ~$200/mo Claude Max. Zero additional API costs.
+
+I documented all of it in an interactive HTML file — searchable, works offline. Link in profile if you want it ($49). Happy to answer architecture questions here.
+
+What's your biggest challenge building Claude agents?
+
+---
+
+== r/SideProject ==
+TITLE: Built a system of 33 AI agents that runs 24/7 on my MacBook. Documenting the architecture.
+
+BODY:
+35 days running autonomous AI agents. Here's what I learned.
+
+The system:
+- 33 agents across 6 categories
+- Runs scraping, content generation, intelligence routing, quality gating, and more
+- Total cost: ~$200/mo (Claude Max plan, no external APIs)
+
+The insight that made it work: treat agents as stateless functions. Each one reads from files, does work, writes back, exits. Fresh context every iteration. The filesystem is the memory layer.
+
+The thing that surprised me: the bottleneck is never the agents. They generate endless output. The bottleneck is human action on that output (listing products, sending emails, etc.).
+
+Built an interactive HTML file documenting everything — the architecture, all 33 agent configs, the CEO loop, templates for building your own system. [GUMROAD_LINK]
+
+If you're building AI agents, happy to answer questions about what worked and what didn't.
+
+---
+
+== r/IndieHackers ==
+TITLE: 35 days, 33 autonomous AI agents, $200/mo. The architecture I wish I'd had at the start.
+
+BODY:
+Indie hacker building solo. Running 33 autonomous Claude Code agents for 35 days. Documenting the architecture.
+
+**What the agents do:**
+- Discovery: scan Reddit, Twitter, competitors for signals
+- Content: generate, gate for quality, route to channels
+- Intelligence: index findings, route to relevant ventures
+- Quality: Opus-powered gate that blocks slop before deployment
+- Growth: distribution, social posting, inbound monitoring
+
+**The critical insight:**
+Every agent is stateless. Read files → do one task → write output → exit. The filesystem is the memory. Context window is a throwaway scratchpad.
+
+Prevents context window exhaustion and makes 24/7 operation possible without cloud servers.
+
+**Costs:** ~$200/mo Claude Max. No external APIs. Everything runs locally via launchd cron.
+
+**The honest part:** agents generate enormous amounts of output. The bottleneck is still human action (account signups, product listings, sending cold emails). AI doesn't fix human procrastination.
+
+Documented everything in an interactive HTML file — 33 agent configs, the CEO loop, templates. [GUMROAD_LINK]
+
+What's your agent infrastructure look like?
+
+---
+
+== Show HN (news.ycombinator.com) ==
+TITLE: Show HN: Interactive documentation of running 33 autonomous Claude agents for 35 days
+
+COMMENT:
+I've been running 33 autonomous AI agents on a MacBook for 35 days. This is the complete architecture documentation — not a blog post, an interactive HTML file with search.
+
+The key insight: context windows make long-running agents fail. The fix is treating each agent iteration as a stateless function. Read state files → do work → write output → exit. The filesystem persists. The context doesn't need to.
+
+Technical details:
+- State managed via JSON files + SQLite (FTS5 for full-text search over 15K entries)
+- Inter-agent communication via JSONL append-only message bus
+- Orchestration via launchd + cron (no cloud infra)
+- Quality gate: Opus runs every 2h, blocks deployment of low-quality content
+- CEO loop: 16 phases, checkpoint-resume for crash recovery
+
+Cost: ~$200/mo (Claude Max plan). No other APIs.
+
+The file is searchable (press "/" to find anything), dark-themed, works offline. $49 on Gumroad: [GUMROAD_LINK]
+
+HN: I'd be interested in feedback on the architecture specifically — is JSONL message bus the right approach, or would you use a different IPC mechanism for agent-to-agent communication?

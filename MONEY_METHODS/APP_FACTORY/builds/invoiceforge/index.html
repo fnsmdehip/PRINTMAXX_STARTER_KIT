@@ -940,6 +940,44 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(function(e){ console.log('SW registration failed:', e); });
 }
 
+// EMAIL CAPTURE: show after 3rd invoice created
+(function() {
+  var INV_EM_KEY = 'if_em_captured';
+  function checkEmailPrompt() {
+    if (localStorage.getItem(INV_EM_KEY)) return;
+    var invs = getInvoices ? getInvoices() : [];
+    if (invs.length >= 3) showInvoiceEmailCapture();
+  }
+  function showInvoiceEmailCapture() {
+    if (document.getElementById('if-email-bar')) return;
+    var bar = el('div', {id: 'if-email-bar', style: 'position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#1e40af,#1d4ed8);padding:16px 20px;z-index:9998;border-top:1px solid rgba(255,255,255,0.15);border-radius:16px 16px 0 0;box-shadow:0 -8px 32px rgba(0,0,0,0.3)'});
+    var inner = el('div', {style: 'max-width:480px;margin:0 auto'});
+    var hd = el('div', {style: 'display:flex;justify-content:space-between;align-items:center;margin-bottom:8px'});
+    hd.appendChild(el('span', {textContent: '💼 Get the Freelancer Revenue Toolkit', style: 'font-weight:800;font-size:0.95rem;color:#fff'}));
+    var x = el('button', {textContent: '×', style: 'background:none;border:none;color:rgba(255,255,255,0.6);font-size:1.3rem;cursor:pointer;padding:0'});
+    x.addEventListener('click', function() { bar.remove(); localStorage.setItem(INV_EM_KEY, 'dismissed'); });
+    hd.appendChild(x);
+    inner.appendChild(hd);
+    inner.appendChild(el('p', {textContent: 'rate card template + invoice follow-up scripts + pricing calculator. free. takes 5 seconds.', style: 'font-size:0.8rem;color:rgba(255,255,255,0.75);margin-bottom:12px;line-height:1.5'}));
+    var form = el('form', {style: 'display:flex;gap:8px', action: 'https://formsubmit.co/printmaxxweb@gmail.com', method: 'POST', target: '_blank'});
+    form.appendChild(el('input', {type: 'hidden', name: '_subject', value: 'InvoiceForge - Revenue Toolkit Request'}));
+    form.appendChild(el('input', {type: 'hidden', name: 'source', value: 'invoiceforge-email-bar'}));
+    var emailInput = el('input', {type: 'email', name: 'email', placeholder: 'your@email.com', required: true, style: 'flex:1;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:10px 12px;color:#fff;font-family:inherit;font-size:0.85rem;outline:none'});
+    form.appendChild(emailInput);
+    var submit = el('button', {type: 'submit', textContent: 'Send it', style: 'background:#fff;color:#1d4ed8;border:none;border-radius:8px;padding:10px 16px;font-weight:800;font-size:0.85rem;cursor:pointer;font-family:inherit;white-space:nowrap'});
+    form.addEventListener('submit', function() { localStorage.setItem(INV_EM_KEY, '1'); setTimeout(function(){ bar.remove(); }, 1500); });
+    form.appendChild(submit);
+    inner.appendChild(form);
+    bar.appendChild(inner);
+    document.body.appendChild(bar);
+  }
+  // Check on each invoice save
+  document.addEventListener('click', function(e) {
+    if (e.target && e.target.textContent === 'Save Invoice') setTimeout(checkEmailPrompt, 500);
+  });
+  setTimeout(checkEmailPrompt, 3000);
+})();
+
 })();
 </script>
 </body>

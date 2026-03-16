@@ -60,6 +60,23 @@
 
 ---
 
+## Lead Magnets (tools + calculators)
+
+| Page | URL | Status | Email Gate |
+|------|-----|--------|------------|
+| freelance-rate-calculator | https://freelance-rate-calc.surge.sh | LIVE (2026-03-16) | after 2nd calc |
+| cold-email-roi-calculator | https://cold-email-roi-calculator.surge.sh | LIVE | after 2nd calc |
+| vibe-coding-profit-calculator | https://vibe-coding-profit-calc.surge.sh | LIVE | email gate |
+| side-project-revenue-estimator | https://side-project-revenue-est.surge.sh | LIVE | email gate |
+| saas-stack-audit | https://saas-stack-audit.surge.sh | LIVE | email gate |
+| solopreneur-launch-checklist | https://solopreneur-launch-checklist.surge.sh | LIVE | none |
+| revenue-leak-audit | https://revenue-leak-audit.surge.sh | LIVE | email gate |
+| subject-line-grader | https://subject-line-grader.surge.sh | LIVE | email gate |
+| productivity-stack-quiz | https://productivity-stack-quiz.surge.sh | LIVE | email gate |
+| ramadan-daily-planner | https://ramadan-daily-planner.surge.sh | LIVE | email gate |
+
+---
+
 ## Affiliate Comparison Pages
 
 | Page | URL | Status | Commission |
@@ -69,15 +86,30 @@
 | best-ai-tools-2026 | https://best-ai-tools-2026.surge.sh | LIVE (placeholder IDs) | mixed |
 | ai-stack-2026 | https://ai-stack-2026.surge.sh | LIVE (placeholder IDs) | mixed |
 | convertkit-vs-beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE (placeholder IDs) | 50% yr1 / 30% recurring |
+| klaviyo-alternative | https://klaviyo-alternative.surge.sh | LIVE (2026-03-16) — needs affiliate IDs | 30% recurring (ConvertKit) + 20% (Beehiiv) |
 
 ---
 
 ## Summary
 
-- **Total Deployments:** 385 (tracked in deployed_assets.json)
-- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages + 5 affiliate comparison pages
+- **Total Deployments:** 394 (tracked in deployed_assets.json)
+- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages + 6 affiliate comparison pages + 9 new gap-hunter deploys
 - **Health Check:** All new deployments returning 200 OK
-- **Timestamp:** 2026-03-14 21:20:00
+- **Timestamp:** 2026-03-16 11:48:00
+
+### Gap Hunter Deploys (2026-03-16)
+
+| App | URL | Type |
+|-----|-----|------|
+| promptvault | https://promptvault.surge.sh | PWA |
+| studylock | https://studylock.surge.sh | PWA |
+| ai-video-tools | https://ai-video-tools.surge.sh | Tool |
+| email-tools-compared | https://email-tools-compared.surge.sh | Affiliate comparison |
+| invoice-tools-compared | https://invoice-tools-compared.surge.sh | Affiliate comparison |
+| toolstack-review | https://toolstack-review.surge.sh | Affiliate comparison |
+| website-builders-compared | https://website-builders-compared.surge.sh | Affiliate comparison |
+| klaviyo-alternative | https://klaviyo-alternative.surge.sh | Affiliate comparison |
+| cursor-vs-claude-code | https://cursor-vs-claude-code.surge.sh | Marketing page |
 
 ## App Details
 

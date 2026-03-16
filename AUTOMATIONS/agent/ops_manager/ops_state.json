@@ -1,6 +1,6 @@
 {
-  "last_cycle": "2026-03-16T00:13:56.058467",
-  "cycles_run": 19,
+  "last_cycle": "2026-03-16T08:14:31.259991",
+  "cycles_run": 20,
   "venture_scores": {
     "services": {
       "name": "services",
@@ -194,69 +194,69 @@
   "venture_status": {
     "services": {
       "last_result": "success",
-      "last_run": "2026-03-16T00:00:59.803266",
+      "last_run": "2026-03-16T08:01:07.493182",
       "last_summary": "3/3 service ops",
-      "duration": 47.5
+      "duration": 59.4
     },
     "edge_tactics": {
       "last_result": "partial",
-      "last_run": "2026-03-16T00:01:08.533499",
+      "last_run": "2026-03-16T08:01:19.445126",
       "last_summary": "Edge tactics generation thin",
-      "duration": 8.7
+      "duration": 12.0
     },
     "content_farm": {
       "last_result": "success",
-      "last_run": "2026-03-16T00:01:22.027621",
+      "last_run": "2026-03-16T08:01:42.330304",
       "last_summary": "3/3 content ops completed",
-      "duration": 13.4
+      "duration": 22.9
     },
     "adult_content": {
       "last_result": "failed",
-      "last_run": "2026-03-16T00:01:28.432203",
+      "last_run": "2026-03-16T08:01:54.972330",
       "last_summary": "Both intel and content generation failed",
-      "duration": 6.4
+      "duration": 12.6
     },
     "viral_content": {
       "last_result": "partial",
-      "last_run": "2026-03-16T00:01:37.286670",
+      "last_run": "2026-03-16T08:02:05.793333",
       "last_summary": "Viral content generation thin",
-      "duration": 8.9
+      "duration": 10.8
     },
     "competitive_intel": {
       "last_result": "partial",
-      "last_run": "2026-03-16T00:01:47.172490",
+      "last_run": "2026-03-16T08:02:16.761188",
       "last_summary": "Intel gathering thin",
-      "duration": 9.9
+      "duration": 11.0
     },
     "growth": {
       "last_result": "success",
-      "last_run": "2026-03-16T00:06:55.008724",
+      "last_run": "2026-03-16T08:07:30.368587",
       "last_summary": "1/2 growth ops",
-      "duration": 307.8
+      "duration": 313.6
     },
     "ecom": {
       "last_result": "success",
-      "last_run": "2026-03-16T00:08:55.365092",
+      "last_run": "2026-03-16T08:09:30.651248",
       "last_summary": "1/2 ecom ops",
-      "duration": 120.4
+      "duration": 120.3
     },
     "digital_products": {
       "last_result": "success",
-      "last_run": "2026-03-16T00:08:55.568342",
+      "last_run": "2026-03-16T08:09:30.829606",
       "last_summary": "Product pipeline processed",
       "duration": 0.2
     },
     "affiliate": {
       "last_result": "success",
-      "last_run": "2026-03-16T00:08:55.971160",
+      "last_run": "2026-03-16T08:09:31.248255",
       "last_summary": "Affiliate pipeline ran",
       "duration": 0.4
     },
     "apps": {
       "last_result": "partial",
-      "last_run": "2026-03-16T00:13:56.044746",
+      "last_run": "2026-03-16T08:14:31.259438",
       "last_summary": "Factory cycle ran",
-      "duration": 300.1
+      "duration": 300.0
     }
   },
   "revenue": {
@@ -279,5 +279,5 @@
   "killed_ventures": [],
   "pending_ventures": [],
   "last_prioritization": "2026-03-16T08:00:08.080162",
-  "disk_gb_free": 49.3
+  "disk_gb_free": 48.2
 }

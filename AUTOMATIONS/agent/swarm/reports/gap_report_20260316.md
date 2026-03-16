@@ -1,8 +1,31 @@
-# GAP HUNTER REPORT — 2026-03-16 03:35
+# GAP HUNTER REPORT — 2026-03-16 11:48 (cycle 2)
 
 ## Executive Summary
 
 **Day 36 at $0 revenue.** The system has massive built inventory but near-zero distribution. The bottleneck is NOT building — it's human account creation blocking ALL revenue channels.
+
+## CYCLE 2 ACTIONS (11:48)
+
+**Deployed 9 previously-built assets to surge.sh:**
+
+| App | URL | Type |
+|-----|-----|------|
+| promptvault | https://promptvault.surge.sh | PWA |
+| studylock | https://studylock.surge.sh | PWA |
+| ai-video-tools | https://ai-video-tools.surge.sh | Tool page |
+| email-tools-compared | https://email-tools-compared.surge.sh | Affiliate comparison |
+| invoice-tools-compared | https://invoice-tools-compared.surge.sh | Affiliate comparison |
+| toolstack-review | https://toolstack-review.surge.sh | Affiliate comparison |
+| website-builders-compared | https://website-builders-compared.surge.sh | Affiliate comparison |
+| klaviyo-alternative | https://klaviyo-alternative.surge.sh | Affiliate comparison |
+| cursor-vs-claude-code | https://cursor-vs-claude-code.surge.sh | Marketing page |
+
+**Updated DEPLOYMENT_URLS.md. Total deployments: 394.**
+**2,257 PENDING_REVIEW alpha entries still unprocessed (up from 0 at 03:35).**
+**898 content pieces in posting queue (up from 853).**
+**328 scripts, 102 in crontab, 226 not scheduled.**
+
+---
 
 ---
 
@@ -103,10 +126,11 @@ Pages:
 
 ## GAPS THAT ARE NOT GAPS (GOOD NEWS)
 
-- All app builds with index.html ARE deployed (0 deployment gaps)
-- No broken cron entries (all 107 active entries reference valid scripts)
+- All app builds with index.html now deployed (9 new deploys this cycle, 0 remaining gaps)
+- No broken cron entries (all 102 active entries reference valid scripts)
 - Alpha auto-processor is functioning (19,716 entries processed)
-- 323 automation scripts exist with 107 cron entries active
+- 328 automation scripts exist with 102 cron entries active
+- klaviyo-alternative and cursor-vs-claude-code now LIVE (were built but 404)
 
 ---
 

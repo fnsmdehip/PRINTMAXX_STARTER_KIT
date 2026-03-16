@@ -1,0 +1,347 @@
+{
+  "tested_at": "2026-03-16T08:21:20.686001",
+  "total": 30,
+  "green": 11,
+  "yellow": 10,
+  "red": 9,
+  "pass_rate": "70.0%",
+  "results": [
+    {
+      "url": "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-cham"
+    },
+    {
+      "url": "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-"
+    },
+    {
+      "url": "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-servic"
+    },
+    {
+      "url": "https://saas-stack-audit-200.surge.sh",
+      "status": 200,
+      "result": "RED",
+      "load_time_ms": 3883,
+      "has_content": false,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-interior-detailing-birmingham-al-magic-city-"
+    },
+    {
+      "url": "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://home-professional-mobile-detailing-amp-products-sup"
+    },
+    {
+      "url": "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://the-10-best-handyman-services-in-las-vegas-nv-2026-"
+    },
+    {
+      "url": "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-window-cleaning-in-louisville-pink-x27-s-wind"
+    },
+    {
+      "url": "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://residential-and-commercial-window-cleaning-cherry-w"
+    },
+    {
+      "url": "https://old-settlers-dental-p-a-austin-tx.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 4271,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://printmaxx.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 4329,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://coldmaxx.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 6924,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://prayerlock-web.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 7439,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://stackmaxx.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 4067,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://invoiceforge.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 8730,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://pdfmaxx.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 6961,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://hilal-landing.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 7303,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://mcp-marketplace.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 6849,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://coreday.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 6558,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://ramadan-tracker.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 7273,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://printmaxx-tools.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 6712,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://printmaxx-site.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 3924,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://printmaxx-services.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 3928,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://semrush-vs-ahrefs.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 4749,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://convertkit-vs-beehiiv.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 3938,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://best-ai-tools-2026.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 4761,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://scripture-streak-landing.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 4014,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://prayerlock-landing.surge.sh",
+      "status": 200,
+      "result": "YELLOW",
+      "load_time_ms": 6632,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://spodak-dental-group-miami-fl.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 3959,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://goldsberry-portz-divorce-family-lawyers-pllc-houston-tx.surge.sh",
+      "status": 200,
+      "result": "GREEN",
+      "load_time_ms": 3786,
+      "has_content": true,
+      "error_count": 0,
+      "errors": []
+    }
+  ],
+  "red_sites": [
+    {
+      "url": "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-cham"
+    },
+    {
+      "url": "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-"
+    },
+    {
+      "url": "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-servic"
+    },
+    {
+      "url": "https://saas-stack-audit-200.surge.sh",
+      "status": 200,
+      "result": "RED",
+      "load_time_ms": 3883,
+      "has_content": false,
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "url": "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-interior-detailing-birmingham-al-magic-city-"
+    },
+    {
+      "url": "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://home-professional-mobile-detailing-amp-products-sup"
+    },
+    {
+      "url": "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://the-10-best-handyman-services-in-las-vegas-nv-2026-"
+    },
+    {
+      "url": "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-window-cleaning-in-louisville-pink-x27-s-wind"
+    },
+    {
+      "url": "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh",
+      "status": 0,
+      "result": "RED",
+      "load_time_ms": -1,
+      "has_content": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://residential-and-commercial-window-cleaning-cherry-w"
+    }
+  ]
+}

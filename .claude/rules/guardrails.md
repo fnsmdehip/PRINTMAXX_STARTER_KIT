@@ -1,13 +1,15 @@
-# Guardrails Rules (NON-NEGOTIABLE SAFETY)
+# Guardrails Rules (PRINTMAXX Project Only)
 
-## The ONE Rule: Stay In Your Lane
+## Scope: These guardrails apply ONLY when Claude Code is running inside the PRINTMAXX project folder. They do NOT restrict the user from working in other project folders.
 
-**ALL file operations (read, write, delete, move) MUST stay within the PRINTMAXX project folder:**
+## The ONE Rule: Stay In Your Lane (within PRINTMAXX sessions)
+
+**When working in this project, file operations MUST stay within:**
 ```
 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/
 ```
 
-**DO NOT touch, modify, read, or interact with files in ANY other location. Period.**
+**PRINTMAXX autonomous agents and cron jobs must not touch files outside this project.**
 
 ## What You CAN Do
 
