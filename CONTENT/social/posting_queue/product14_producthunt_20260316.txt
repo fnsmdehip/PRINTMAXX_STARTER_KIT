@@ -1,0 +1,56 @@
+PRODUCT: Claude Code Agent Bible
+DATE: 2026-03-16
+PLATFORM: ProductHunt
+STATUS: PENDING_REVIEW — submit night before launch at 12:01am PST
+---
+
+TITLE: The Claude Code Agent Bible
+
+TAGLINE: 33 autonomous agents. 16-phase CEO cycle. 35 days on a MacBook. The architecture.
+
+TOPICS: Artificial Intelligence, Developer Tools, Productivity
+
+THUMBNAIL SPEC: Dark background (#1a1a2e). White large text: "33 AGENTS". Below in teal (#00d4aa): "16-Phase CEO Loop • 35 Days Live". Small robot icon bottom-right. Minimal, no clutter.
+
+DESCRIPTION:
+Everything I know about running autonomous Claude Code agents 24/7.
+
+Not a course. An interactive HTML file — searchable, dark theme, works offline.
+
+**What's inside:**
+
+The Architecture
+- 4-layer system: execution, orchestration, intelligence, memory
+- Why filesystem = memory (the pattern that prevents context window crashes)
+- JSONL message bus for inter-agent communication
+
+The Agents (all 33)
+- Each agent's category, schedule, model assignment, and purpose
+- Which ones run on Opus vs Sonnet vs Haiku (and why)
+- The quality gate pattern (hard blocker for slop)
+
+The CEO Loop
+- All 16 phases documented
+- Checkpoint-resume (crashes don't lose progress)
+- Kill/double-down triggers for autonomous venture management
+
+Templates (copy-paste ready)
+- Ralph loop pattern for infinite agent execution
+- Intelligence routing (SQLite FTS5, sub-50ms search)
+- Twitter cookie injection for Brave browser
+- Crontab setup for 50+ jobs
+- JSONL state management
+- Agent health monitoring
+
+Format: Single HTML file. Press "/" to search. Works offline. No login.
+
+FIRST COMMENT (post immediately after submission):
+Hey PH! Made this after running 33 AI agents on my MacBook for 35 straight days.
+
+The "aha" moment: every agent should be stateless. Read state files → do one task → write output → exit. The filesystem is the memory layer. Context window is just a scratchpad.
+
+This prevents the #1 failure mode of AI agent systems: context window exhaustion.
+
+Happy to answer anything about the architecture in the comments.
+
+HUNTER REQUEST: DM 3 active PH hunters in the AI/DevTools space before submission. Ask for support on day of launch. Top 5 product of the day threshold: ~150 upvotes.

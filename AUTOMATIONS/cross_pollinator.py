@@ -3142,6 +3142,463 @@ def wire_tweetlio_to_performance():
     return len(rows_to_add)
 
 
+# ─── CONNECTION 60: Fused Signals (IMMEDIATE_ACTION) → Cold Outreach Queue ─
+def wire_fused_signals_to_outreach():
+    """391 IMMEDIATE_ACTION demand signals in FUSED_SIGNALS.csv have no outreach consumer."""
+    rows = load_csv(LEDGER / "FUSED_SIGNALS.csv", max_rows=2000)
+    if not rows:
+        return 0
+
+    out_path = safe_path(LEADS / "fused_immediate_outreach.jsonl")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Load existing to avoid dupes
+    existing_titles = set()
+    if out_path.exists():
+        for line in out_path.read_text().splitlines():
+            try:
+                existing_titles.add(json.loads(line).get("title", ""))
+            except Exception:
+                pass
+
+    new_leads = []
+    for row in rows:
+        action = row.get("action", "")
+        category = row.get("primary_category", "")
+        score = float(row.get("fused_score", 0) or 0)
+        title = row.get("title", "")
+        budget = row.get("budget", "")
+        url = row.get("url", "")
+
+        if action != "IMMEDIATE_ACTION":
+            continue
+        if category not in ("SERVICE", "FREELANCE", "DEMAND"):
+            continue
+        if score < 70:
+            continue
+        if title in existing_titles:
+            continue
+
+        lead = {
+            "title": title,
+            "url": url,
+            "budget": budget,
+            "fused_score": score,
+            "source": row.get("source", ""),
+            "category": category,
+            "matched_services": row.get("matched_services", ""),
+            "extracted_at": datetime.now().isoformat(),
+            "status": "PENDING_OUTREACH"
+        }
+        new_leads.append(lead)
+        existing_titles.add(title)
+
+    if new_leads:
+        with open(out_path, "a") as f:
+            for lead in new_leads:
+                f.write(json.dumps(lead) + "\n")
+
+    return len(new_leads)
+
+
+# ─── CONNECTION 61: Fused Signals (Trends) → Content Farm Topics ──────────
+def wire_fused_trends_to_content():
+    """Trend signals from FUSED_SIGNALS.csv → posting queue as actionable hooks."""
+    rows = load_csv(LEDGER / "FUSED_SIGNALS.csv", max_rows=2000)
+    if not rows:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+
+    existing_posts = {f.stem for f in queue_dir.iterdir() if f.suffix == ".txt"}
+
+    new_posts = 0
+    trend_rows = [r for r in rows if r.get("signal_type") == "trend" and float(r.get("fused_score", 0) or 0) >= 80]
+    trend_rows = sorted(trend_rows, key=lambda x: float(x.get("fused_score", 0) or 0), reverse=True)[:8]
+
+    for row in trend_rows:
+        title = (row.get("title", "") or "")[:120]
+        source = row.get("source", "")
+        score = row.get("fused_score", "")
+        slug = f"fused_trend_{source}_{title[:30]}".replace(" ", "_").replace("/", "_")[:60]
+        slug = "".join(c for c in slug if c.isalnum() or c in "_-")
+
+        if slug in existing_posts:
+            continue
+
+        tweet = (
+            f"cross-platform signal: {title}\n\n"
+            f"i track {source} signals daily.\n"
+            f"this one scored {score}/100 across demand + trend sources.\n\n"
+            f"when 3+ signals align on the same topic it means money is moving there."
+        )
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        post_path.write_text(tweet, encoding="utf-8")
+        existing_posts.add(slug)
+        new_posts += 1
+
+    return new_posts
+
+
+# ─── CONNECTION 62: Opportunity Radar → CEO Inbox ─────────────────────────
+def wire_opportunity_radar_to_ceo():
+    """549 OPPORTUNITY_RADAR rows are all unprocessed (no status). Top ones → CEO inbox."""
+    rows = load_csv(LEDGER / "OPPORTUNITY_RADAR.csv", max_rows=1000)
+    if not rows:
+        return 0
+
+    ceo_inbox = safe_path(AUTOMATIONS / "agent" / "ceo_agent" / "inbox")
+    ceo_inbox.mkdir(parents=True, exist_ok=True)
+    out_path = safe_path(ceo_inbox / f"opportunity_radar_{datetime.now().strftime('%Y%m%d')}.json")
+
+    if out_path.exists():
+        return 0  # Already ran today
+
+    # Sort by relevance_score, take top 20
+    scored = []
+    for row in rows:
+        try:
+            score = float(row.get("relevance_score", 0) or 0)
+        except (ValueError, TypeError):
+            score = 0
+        scored.append((score, row))
+
+    top = [r for _, r in sorted(scored, key=lambda x: x[0], reverse=True)[:20]]
+
+    output = {
+        "generated_at": datetime.now().isoformat(),
+        "source": "OPPORTUNITY_RADAR.csv",
+        "total_available": len(rows),
+        "top_opportunities": [
+            {
+                "title": r.get("title", ""),
+                "source": r.get("source", ""),
+                "description": (r.get("description", "") or "")[:200],
+                "relevance_score": r.get("relevance_score", ""),
+                "category": r.get("category", ""),
+                "url": r.get("url", ""),
+                "synergy_ops": r.get("synergy_ops", ""),
+                "timestamp": r.get("timestamp", ""),
+            }
+            for r in top
+        ]
+    }
+
+    with open(out_path, "w") as f:
+        json.dump(output, f, indent=2)
+
+    return len(top)
+
+
+# ─── CONNECTION 63: Creator Programs → Monetize Venture Config ────────────
+def wire_creator_programs_to_monetize():
+    """504 creator programs (YouTube, X, TikTok, etc.) → monetization priority config."""
+    rows = load_csv(LEDGER / "CREATOR_PROGRAMS.csv", max_rows=1000)
+    if not rows:
+        return 0
+
+    out_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "creator_program_priorities.json")
+
+    # Parse RPM and rank by potential
+    ranked = []
+    for row in rows:
+        platform = row.get("platform", "")
+        program = row.get("program_name", "")
+        payout_model = row.get("payout_model", "")
+        try:
+            rpm_high = float(row.get("rpm_high", 0) or 0)
+        except (ValueError, TypeError):
+            rpm_high = 0
+        try:
+            rpm_low = float(row.get("rpm_low", 0) or 0)
+        except (ValueError, TypeError):
+            rpm_low = 0
+
+        if rpm_high > 0 or rpm_low > 0:
+            ranked.append({
+                "platform": platform,
+                "program": program,
+                "payout_model": payout_model,
+                "rpm_low": rpm_low,
+                "rpm_high": rpm_high,
+                "avg_rpm": (rpm_low + rpm_high) / 2,
+                "requirements": row.get("requirements", ""),
+                "notes": row.get("notes", ""),
+            })
+
+    ranked.sort(key=lambda x: x["avg_rpm"], reverse=True)
+
+    output = {
+        "generated_at": datetime.now().isoformat(),
+        "source": "CREATOR_PROGRAMS.csv",
+        "total_programs": len(rows),
+        "ranked_programs": ranked[:30],
+        "platform_summary": {},
+    }
+
+    # Platform summary
+    from collections import defaultdict
+    by_platform = defaultdict(list)
+    for r in ranked:
+        by_platform[r["platform"]].append(r["avg_rpm"])
+    for platform, rpms in by_platform.items():
+        output["platform_summary"][platform] = {
+            "program_count": len(rpms),
+            "avg_rpm": round(sum(rpms) / len(rpms), 2),
+            "max_rpm": round(max(rpms), 2),
+        }
+
+    with open(out_path, "w") as f:
+        json.dump(output, f, indent=2)
+
+    return len(ranked[:30])
+
+
+# ─── CONNECTION 64: Today's Freelance Demand → Live Outreach Queue ────────
+def wire_todays_freelance_to_outreach():
+    """FREELANCE_DEMAND_SCAN.csv was scraped today. High-score fresh [HIRING] → live queue."""
+    rows = load_csv(LEDGER / "FREELANCE_DEMAND_SCAN.csv", max_rows=5000)
+    if not rows:
+        return 0
+
+    out_path = safe_path(LEADS / "todays_hiring_leads.jsonl")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    marker = safe_path(LEADS / f".todays_hiring_processed_{today}")
+    if marker.exists():
+        return 0
+
+    # Load existing URLs to avoid dupes
+    existing_urls = set()
+    if out_path.exists():
+        for line in out_path.read_text().splitlines():
+            try:
+                existing_urls.add(json.loads(line).get("url", ""))
+            except Exception:
+                pass
+
+    new_leads = []
+    for row in rows:
+        ts = row.get("timestamp", "")
+        if not ts.startswith(today):
+            continue  # Only today's fresh leads
+
+        score = float(row.get("score", 0) or 0)
+        if score < 40:
+            continue
+
+        title = row.get("title", "")
+        if not any(kw in title.lower() for kw in ["hiring", "hire", "need", "looking", "wanted"]):
+            continue
+
+        url = row.get("url", "")
+        if url in existing_urls:
+            continue
+
+        try:
+            budget = float(row.get("budget", 0) or 0)
+        except (ValueError, TypeError):
+            budget = 0
+
+        lead = {
+            "title": title,
+            "url": url,
+            "source": row.get("source", ""),
+            "score": score,
+            "budget": budget,
+            "matched_services": row.get("matched_services", ""),
+            "scraped_at": ts,
+            "status": "LIVE_TODAY",
+        }
+        new_leads.append(lead)
+        existing_urls.add(url)
+
+    if new_leads:
+        with open(out_path, "a") as f:
+            for lead in new_leads:
+                f.write(json.dumps(lead) + "\n")
+        marker.write_text(datetime.now().isoformat())
+
+    return len(new_leads)
+
+
+# ─── CONNECTION 65: ECOM Arb Opportunities → Content Farm ─────────────────
+def wire_ecom_arb_to_content():
+    """32 ECOM_ARB_OPPORTUNITIES rows → posting queue as arbitrage insight posts."""
+    rows = load_csv(LEDGER / "ECOM_ARB_OPPORTUNITIES.csv", max_rows=200)
+    if not rows:
+        return 0
+
+    queue_dir = safe_path(POSTING_QUEUE)
+    queue_dir.mkdir(parents=True, exist_ok=True)
+
+    marker = safe_path(AUTOMATIONS / "agent" / ".ecom_arb_content_wired")
+    if marker.exists():
+        return 0
+
+    # Group by category, pick best margin per category
+    from collections import defaultdict
+    by_category = defaultdict(list)
+    for row in rows:
+        try:
+            margin = float(row.get("margin_pct", 0) or 0)
+        except (ValueError, TypeError):
+            margin = 0
+        by_category[row.get("category", "misc")].append((margin, row))
+
+    new_posts = 0
+    for category, items in list(by_category.items())[:3]:
+        best_margin, best_row = sorted(items, key=lambda x: x[0], reverse=True)[0]
+        product = best_row.get("product_name", "")
+        source = best_row.get("source", "")
+        sell_platform = best_row.get("selling_platform", "")
+        source_price = best_row.get("source_price", "")
+        sell_price = best_row.get("estimated_sell_price", "")
+        net_profit = best_row.get("net_profit", "")
+
+        slug = f"ecom_arb_{category}_{sell_platform}".replace(" ", "_")[:50]
+
+        tweet = (
+            f"ecom arb: {category}\n\n"
+            f"buy from {source} at ${source_price}\n"
+            f"sell on {sell_platform} at ${sell_price}\n"
+            f"net profit: ${net_profit} ({best_margin:.0f}% margin)\n\n"
+            f"the people doing this at scale aren't posting about it.\n"
+            f"they're just doing it."
+        )
+
+        post_path = safe_path(queue_dir / f"{slug}.txt")
+        if not post_path.exists():
+            post_path.write_text(tweet, encoding="utf-8")
+            new_posts += 1
+
+    marker.write_text(datetime.now().isoformat())
+    return new_posts
+
+
+# ─── CONNECTION 66: Community App Demand → App Factory Ranked Demand List ─
+def wire_community_demand_to_app_factory_ranked():
+    """120 community_app_demand entries → ranked top-15 for App Factory command center."""
+    demand_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "community_app_demand.jsonl")
+    if not demand_path.exists():
+        return 0
+
+    entries = []
+    for line in demand_path.read_text().splitlines():
+        try:
+            entries.append(json.loads(line))
+        except Exception:
+            pass
+
+    if not entries:
+        return 0
+
+    out_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "app_demand_ranked.json")
+
+    # Only rebuild if demand file is newer than ranked output
+    if out_path.exists():
+        demand_mtime = demand_path.stat().st_mtime
+        out_mtime = out_path.stat().st_mtime
+        if out_mtime >= demand_mtime:
+            return 0  # Already up to date
+
+    # Score and rank
+    ranked = sorted(entries, key=lambda x: x.get("score", 0), reverse=True)[:15]
+
+    output = {
+        "generated_at": datetime.now().isoformat(),
+        "source": "community_app_demand.jsonl",
+        "total_entries": len(entries),
+        "top_demand": [
+            {
+                "rank": i + 1,
+                "demand_text": e.get("demand_text", "")[:200],
+                "signal_type": e.get("signal_type", ""),
+                "community": e.get("community", ""),
+                "score": e.get("score", 0),
+                "numbers": e.get("extracted_numbers", ""),
+                "url": e.get("source_url", ""),
+                "found_date": e.get("found_date", ""),
+            }
+            for i, e in enumerate(ranked)
+        ]
+    }
+
+    with open(out_path, "w") as f:
+        json.dump(output, f, indent=2)
+
+    return len(ranked)
+
+
+# ─── CONNECTION 67: Platform RPM Tracker → Content Schedule Priority ───────
+def wire_rpm_tracker_to_content_schedule():
+    """733 PLATFORM_RPM_TRACKER rows → content schedule that prioritizes highest-RPM platforms."""
+    rows = load_csv(LEDGER / "PLATFORM_RPM_TRACKER.csv", max_rows=1000)
+    if not rows:
+        return 0
+
+    out_path = safe_path(AUTOMATIONS / "agent" / "autonomy" / "content_platform_priority.json")
+
+    # Aggregate RPM by platform
+    from collections import defaultdict
+    platform_data = defaultdict(lambda: {"views": 0, "revenue": 0, "benchmarks": []})
+
+    for row in rows:
+        platform = row.get("platform", "")
+        if not platform:
+            continue
+        try:
+            rpm_bench_high = float(row.get("rpm_benchmark_high", 0) or 0)
+            rpm_bench_low = float(row.get("rpm_benchmark_low", 0) or 0)
+            rpm_calc = float(row.get("rpm_calculated", 0) or 0)
+        except (ValueError, TypeError):
+            continue
+
+        if rpm_bench_high > 0:
+            platform_data[platform]["benchmarks"].append({
+                "low": rpm_bench_low,
+                "high": rpm_bench_high,
+                "calculated": rpm_calc,
+                "content_type": row.get("content_type", ""),
+            })
+
+    # Score each platform by avg benchmark high RPM
+    platform_scores = []
+    for platform, data in platform_data.items():
+        benches = data["benchmarks"]
+        if not benches:
+            continue
+        avg_high = sum(b["high"] for b in benches) / len(benches)
+        max_high = max(b["high"] for b in benches)
+        best_content_type = max(benches, key=lambda b: b["high"]).get("content_type", "")
+        platform_scores.append({
+            "platform": platform,
+            "avg_rpm_high": round(avg_high, 2),
+            "max_rpm": round(max_high, 2),
+            "best_content_type": best_content_type,
+            "data_points": len(benches),
+            "priority": "HIGH" if avg_high >= 5 else "MEDIUM" if avg_high >= 2 else "LOW",
+        })
+
+    platform_scores.sort(key=lambda x: x["avg_rpm_high"], reverse=True)
+
+    output = {
+        "generated_at": datetime.now().isoformat(),
+        "source": "PLATFORM_RPM_TRACKER.csv",
+        "total_rows": len(rows),
+        "recommendation": "Post on highest-RPM platforms first. Repurpose to lower-RPM after.",
+        "platform_priority": platform_scores,
+    }
+
+    with open(out_path, "w") as f:
+        json.dump(output, f, indent=2)
+
+    return len(platform_scores)
+
+
 # ─── MAIN CYCLE ───────────────────────────────────────────────────────────
 def run_cycle():
     print("=" * 60)
@@ -3211,6 +3668,15 @@ def run_cycle():
         ("Viral Repurpose → Content Farm", wire_viral_repurpose_to_content),
         ("RBI Scans → CEO Inbox", wire_rbi_scans_to_ceo),
         ("Tweetlio Exports → Performance Tracker", wire_tweetlio_to_performance),
+        # ── New connections added 2026-03-16 ──────────────────────────────
+        ("Fused Signals → Cold Outreach Queue", wire_fused_signals_to_outreach),
+        ("Fused Trends → Content Farm", wire_fused_trends_to_content),
+        ("Opportunity Radar → CEO Inbox", wire_opportunity_radar_to_ceo),
+        ("Creator Programs → Monetize Config", wire_creator_programs_to_monetize),
+        ("Today's Freelance Demand → Live Outreach", wire_todays_freelance_to_outreach),
+        ("ECOM Arb → Content Farm", wire_ecom_arb_to_content),
+        ("Community Demand → App Factory Ranked", wire_community_demand_to_app_factory_ranked),
+        ("Platform RPM → Content Schedule Priority", wire_rpm_tracker_to_content_schedule),
     ]
 
     total_wired = 0

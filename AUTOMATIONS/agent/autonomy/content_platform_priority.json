@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-03-16T08:30:03.379255",
+  "source": "PLATFORM_RPM_TRACKER.csv",
+  "total_rows": 733,
+  "recommendation": "Post on highest-RPM platforms first. Repurpose to lower-RPM after.",
+  "platform_priority": [
+    {
+      "platform": "TikTok Rewards",
+      "avg_rpm_high": 6.0,
+      "max_rpm": 6.0,
+      "best_content_type": "short_form",
+      "data_points": 1,
+      "priority": "HIGH"
+    },
+    {
+      "platform": "FB Reels",
+      "avg_rpm_high": 4.4,
+      "max_rpm": 4.4,
+      "best_content_type": "short_form",
+      "data_points": 1,
+      "priority": "MEDIUM"
+    },
+    {
+      "platform": "YouTube Shorts",
+      "avg_rpm_high": 0.5,
+      "max_rpm": 0.5,
+      "best_content_type": "short_form",
+      "data_points": 1,
+      "priority": "LOW"
+    }
+  ]
+}

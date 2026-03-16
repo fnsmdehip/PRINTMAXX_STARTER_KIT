@@ -1,78 +1,49 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-16T10:52:28.992582Z",
-  "cycle_number": 46,
+  "last_cycle": "2026-03-16T11:35:00",
+  "cycle_number": 49,
   "cycle_status": "COMPLETE",
   "current_step": "complete",
   "stats": {
-    "reddit_posts_scraped": 43,
-    "reddit_posts_cleaned": 43,
-    "high_signal_reddit": 22,
-    "apps_scanned": 35,
-    "niches_covered": 7,
-    "new_niches": 5,
-    "validated_niches": 2,
-    "alpha_entries_created": 15,
-    "ci_rows_added": 15
+    "reddit_posts_scraped": 173,
+    "reddit_posts_cleaned": 119,
+    "high_signal_reddit": 36,
+    "subreddits_covered": 15,
+    "revenue_intel_signals": 8,
+    "app_gap_signals": 1,
+    "monetization_tactics": 10,
+    "alpha_entries_created": 10,
+    "ci_rows_added": 20,
+    "blue_oceans_confirmed": 0
   },
-  "prev_cycle_stats": {
-    "cycle": 45,
-    "reddit_posts_scraped": 30,
-    "twitter_signals_scraped": 21,
-    "apps_scanned": 13,
-    "alpha_entries_created": 5
-  },
-  "high_value_alerts": [
-    {
-      "id": "ALPHA101300",
-      "alert": "WATER REMINDER BLUE OCEAN: Still 0 paid apps. 151K demand. WaterStreak $1.99 \u2014 universal need, 2h clone from scripture-streak template.",
-      "roi_potential": "HIGHEST"
-    },
-    {
-      "id": "ALPHA101301",
-      "alert": "READING STREAK BLUE OCEAN: Still 0 paid streak apps. Goodreads 709K demand. ReadStreak $1.99 \u2014 huge TAM.",
-      "roi_potential": "HIGHEST"
-    },
-    {
-      "id": "ALPHA101302",
-      "alert": "JOURNALING BLUE OCEAN: Day One 280K ratings but $0 paid streak-only journaling apps. JournalStreak at $1.99 \u2014 position as 'Day One but simpler, with streaks'.",
-      "roi_potential": "HIGHEST"
-    },
-    {
-      "id": "ALPHA101303",
-      "alert": "MUSIC PRACTICE GAP: Practice+ ($4.99) only 1.8K ratings = weak incumbent. Music practice streak tracker at $0.99 would dominate.",
-      "roi_potential": "HIGH"
-    },
-    {
-      "id": "ALPHA101304",
-      "alert": "CHESS DAILY HABIT GAP: Chess Tactics Pro ($1.99) only 3.2K ratings. Chess daily practice streak tracker missing. Chess.com 431K demand to tap.",
-      "roi_potential": "HIGH"
-    }
-  ],
-  "new_blue_oceans": {
-    "journaling_habit": "demand=280K, 0 paid streak-only, JournalStreak at $1.99"
-  },
+  "cumulative_blue_oceans": 14,
   "confirmed_blue_oceans": {
-    "water_reminder": "demand=151K, 0 paid, WaterStreak $1.99 \u2014 CONFIRMED cycle 46",
-    "reading_tracker": "demand=709K, 0 paid, ReadStreak $1.99 \u2014 CONFIRMED cycle 46"
+    "water_reminder": "151K demand, 0 paid \u2014 DEPLOY NOW",
+    "reading_tracker": "709K demand, 0 paid \u2014 DEPLOY NOW",
+    "journaling_habit": "280K demand, 0 paid \u2014 DEPLOY NOW",
+    "coding_habit": "137K demand, 0 paid \u2014 QUEUE",
+    "money_habit": "137K demand, 0 paid \u2014 QUEUE",
+    "meditation_streak": "436K demand, 0 paid \u2014 QUEUE",
+    "language": "96K demand, 0 paid \u2014 CONFIRMED cycle 048-049",
+    "manifestation": "22K demand, 0 paid \u2014 QUEUE",
+    "tarot": "22K demand, 0 paid \u2014 QUEUE",
+    "breathwork": "17K demand, 0 paid \u2014 QUEUE",
+    "gratitude": "17K demand, 0 paid \u2014 QUEUE",
+    "sobriety": "300K community, 0 paid \u2014 BUILD NOW (3 cycles confirmed)",
+    "sleep_habit": "0 paid competitors confirmed \u2014 BUILD NOW",
+    "language_habit": "0 paid confirmed \u2014 BUILD NOW"
   },
-  "cumulative_blue_oceans": 9,
-  "next_cycle": "auto",
-  "gap_analysis": {
-    "pricing_gaps": {
-      "water_reminder": "0 paid / 5 free \u2014 BLUE OCEAN CONFIRMED \u2014 151K demand",
-      "reading_tracker": "0 paid / 5 free \u2014 BLUE OCEAN CONFIRMED \u2014 709K demand",
-      "journaling_habit": "0 paid / 5 free \u2014 NEW BLUE OCEAN \u2014 280K demand",
-      "music_practice_streak": "1 weak ($4.99/1.8K) \u2014 WEAK INCUMBENT \u2014 107K demand",
-      "chess_habit": "1 weak ($1.99/3.2K) \u2014 WEAK INCUMBENT \u2014 431K demand",
-      "fitness_streak": "1 medium ($2.99/25K) \u2014 DIFFERENTIATION NEEDED \u2014 1.2M demand",
-      "art_drawing_streak": "0 tracker-specific paid \u2014 NICHE BLUE OCEAN \u2014 1.9M demand"
-    }
-  },
-  "configure_completed_at": "2026-03-16T10:52:28.992582Z",
-  "scrape_completed_at": "2026-03-16T10:52:28.992582Z",
-  "clean_completed_at": "2026-03-16T10:52:28.992582Z",
-  "analyze_completed_at": "2026-03-16T10:52:28.992582Z",
-  "store_completed_at": "2026-03-16T10:52:28.992582Z",
-  "alert_completed_at": "2026-03-16T10:52:28.992582Z"
+  "p0_alerts": [
+    "LTD LAUNCH STRATEGY: r/SaaS post shows K+ first week from 89 LTDs at $199. Apply to sobriety-streak immediately.",
+    "sobriety-streak: 3 cycles confirmed 0 paid competitors. 300K subreddit. BUILD NOW.",
+    "sleep-habit tracker: 3 cycles confirmed 0 paid competitors. BUILD NOW.",
+    "screen_time/nosurf niche: new gap signal from r/nosurf. Evaluate ScreenStreak."
+  ],
+  "key_insight": "89 lifetime deals at  = K week 1. Apply LTD strategy to all blue ocean apps at launch.",
+  "configure_completed_at": "2026-03-16T11:32:00",
+  "scrape_completed_at": "2026-03-16T11:33:30",
+  "clean_completed_at": "2026-03-16T11:34:00",
+  "analyze_completed_at": "2026-03-16T11:34:30",
+  "store_completed_at": "2026-03-16T11:35:00",
+  "alert_completed_at": "2026-03-16T11:35:30"
 }

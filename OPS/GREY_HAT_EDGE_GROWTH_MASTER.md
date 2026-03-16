@@ -6791,3 +6791,14 @@ just build an app with strong visuals.
 
 [PH LAUNCH] Faces: Interactive presentations that use the full power of the web
 
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47350759, Score: 21)
+
+**Source:** HackerNews (top) | **URL:** https://www.asimov.press/p/viral-capsids
+**Added:** 2026-03-16T10:38:59-04:00
+
+Why Are Viral Capsids Icosahedral?
+

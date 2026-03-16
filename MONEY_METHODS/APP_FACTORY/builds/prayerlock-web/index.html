@@ -2029,5 +2029,75 @@ function duaSearch(query) {
   };
 })();
 </script>
+
+<!-- RAMADAN EMAIL CAPTURE MODAL -->
+<style>
+#pl-email-modal{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:16px;background:linear-gradient(135deg,rgba(13,148,136,0.97),rgba(6,95,70,0.97));backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,0.15);transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);border-radius:20px 20px 0 0;box-shadow:0 -8px 40px rgba(0,0,0,0.4)}
+#pl-email-modal.show{transform:translateY(0)}
+#pl-email-modal .pl-em-inner{max-width:420px;margin:0 auto;padding:4px 0 8px}
+#pl-email-modal .pl-em-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+#pl-email-modal h4{font-size:1rem;font-weight:800;letter-spacing:-0.3px;color:#fff;line-height:1.3}
+#pl-email-modal p{font-size:0.82rem;color:rgba(255,255,255,0.75);margin-bottom:14px;line-height:1.5}
+#pl-email-modal .pl-em-close{background:none;border:none;color:rgba(255,255,255,0.6);font-size:1.3rem;cursor:pointer;padding:0 0 0 12px;line-height:1;flex-shrink:0}
+#pl-email-modal form{display:flex;gap:8px}
+#pl-email-modal input[type=email]{flex:1;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:11px 14px;color:#fff;font-family:inherit;font-size:0.88rem;outline:none}
+#pl-email-modal input[type=email]::placeholder{color:rgba(255,255,255,0.45)}
+#pl-email-modal input[type=email]:focus{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.18)}
+#pl-email-modal button[type=submit]{background:#fff;color:#065f46;border:none;border-radius:10px;padding:11px 18px;font-weight:800;font-size:0.85rem;cursor:pointer;font-family:inherit;white-space:nowrap;transition:opacity 0.2s}
+#pl-email-modal button[type=submit]:hover{opacity:0.9}
+#pl-email-modal .pl-em-fine{font-size:0.72rem;color:rgba(255,255,255,0.45);margin-top:8px;text-align:center}
+#pl-email-modal .pl-em-success{text-align:center;padding:8px 0;color:#fff;font-weight:700;font-size:0.95rem;display:none}
+</style>
+<div id="pl-email-modal">
+  <div class="pl-em-inner">
+    <div class="pl-em-hd">
+      <h4>🌙 Free Ramadan Dua Booklet</h4>
+      <button class="pl-em-close" onclick="plDismissModal()" aria-label="close">×</button>
+    </div>
+    <p>30 duas for the blessed month — beautifully formatted, ready to print or share. Drop your email, get it instantly.</p>
+    <form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" target="_blank" onsubmit="plEmailSubmit(event)">
+      <input type="hidden" name="_subject" value="PrayerLock - Ramadan Dua Booklet Request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="source" value="prayerlock-web-ramadan-modal">
+      <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
+      <button type="submit">Get it free</button>
+    </form>
+    <div class="pl-em-success" id="pl-em-success">✓ sent! check your inbox in a few minutes 🤲</div>
+    <p class="pl-em-fine">no spam. unsubscribe any time.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var MODAL_KEY='pl_em_dismissed';
+  var shown=false;
+  function plShowModal(){
+    if(shown||localStorage.getItem(MODAL_KEY))return;
+    var now=new Date();
+    // Only show during Ramadan 2026 (Feb 28 - Mar 30)
+    var start=new Date('2026-02-28'),end=new Date('2026-03-31');
+    if(now<start||now>end)return;
+    shown=true;
+    document.getElementById('pl-email-modal').classList.add('show');
+  }
+  window.plDismissModal=function(){
+    localStorage.setItem(MODAL_KEY,'1');
+    document.getElementById('pl-email-modal').classList.remove('show');
+  };
+  window.plEmailSubmit=function(e){
+    localStorage.setItem(MODAL_KEY,'1');
+    document.getElementById('pl-em-success').style.display='block';
+    setTimeout(function(){document.getElementById('pl-email-modal').classList.remove('show');},2500);
+  };
+  // Show after 45 seconds of use (user is engaged)
+  setTimeout(plShowModal,45000);
+  // Also show after 3 prayer sessions completed
+  var _origStreak=window.updateStreak||null;
+  var prayerCount=+(localStorage.getItem('pl_prayer_count')||0);
+  document.addEventListener('pl-prayer-complete',function(){
+    prayerCount++;localStorage.setItem('pl_prayer_count',prayerCount);
+    if(prayerCount>=3)plShowModal();
+  });
+})();
+</script>
 </body>
 </html>

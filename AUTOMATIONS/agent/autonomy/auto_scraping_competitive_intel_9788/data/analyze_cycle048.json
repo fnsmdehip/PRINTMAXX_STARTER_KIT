@@ -1,0 +1,331 @@
+{
+  "cycle": 48,
+  "analyzed_at": "2026-03-16T10:29:58.933112",
+  "reddit": {
+    "total_processed": 270,
+    "alpha_extracted": 74,
+    "approved": 43,
+    "entries": [
+      {
+        "source": "r/SaaS",
+        "title": "Sold 89 lifetime deals at $199 each to get off the ground. The math 12 months later is embarrassing",
+        "url": "https://reddit.com/r/SaaS/comments/1ruc0cu/sold_89_lifetime_deals_at_199_each_to_get_off_the/",
+        "score": 269,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 66,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/AppBusiness",
+        "title": "Just hit my first $20 in app revenue, not much but it feels good .",
+        "url": "https://reddit.com/r/AppBusiness/comments/1ruf7zf/just_hit_my_first_20_in_app_revenue_not_much_but/",
+        "score": 119,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,APP_DEMAND",
+        "signal_score": 57,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/AppBusiness",
+        "title": "My app made $142 sales in the first 5 days",
+        "url": "https://reddit.com/r/AppBusiness/comments/1rv4uat/my_app_made_142_sales_in_the_first_5_days/",
+        "score": 23,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,APP_DEMAND",
+        "signal_score": 49,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/SaaS",
+        "title": "I got tired of paying for SaaS tools while building SaaS tools so I built my own. Total operating cost: $4 a month",
+        "url": "https://reddit.com/r/SaaS/comments/1ruxwj7/i_got_tired_of_paying_for_saas_tools_while/",
+        "score": 16,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 46,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/languagelearning",
+        "title": "Any language learning apps that don't use ai?",
+        "url": "https://reddit.com/r/languagelearning/comments/1rtn749/any_language_learning_apps_that_dont_use_ai/",
+        "score": 21,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,APP_DEMAND",
+        "signal_score": 45,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/indiehackers",
+        "title": "I put $100 into Reddit ads. I got 50 clicks, but not a single conversion.",
+        "url": "https://reddit.com/r/indiehackers/comments/1rqubg9/i_put_100_into_reddit_ads_i_got_50_clicks_but_not/",
+        "score": 42,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 44,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/SaaS",
+        "title": "I made $413 from 1,700 users in 3 months...here's the honest breakdown.",
+        "url": "https://reddit.com/r/SaaS/comments/1rv61om/i_made_413_from_1700_users_in_3_monthsheres_the/",
+        "score": 22,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,GROWTH_HACK",
+        "signal_score": 44,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/MicroSaas",
+        "title": "$2,400 in 7 days on AppSumo (second launch) - we made the same mistakes as last time and almost blew it again",
+        "url": "https://reddit.com/r/microsaas/comments/1rv6ong/2400_in_7_days_on_appsumo_second_launch_we_made/",
+        "score": 2,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,APP_DEMAND",
+        "signal_score": 43,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/AppBusiness",
+        "title": "Built 5 apps, 4 failed at $0, one hit $7K MRR. Here's the exact pattern successful app founders follow",
+        "url": "https://reddit.com/r/AppBusiness/comments/1rva997/built_5_apps_4_failed_at_0_one_hit_7k_mrr_heres/",
+        "score": 9,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,APP_DEMAND",
+        "signal_score": 41,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/AppBusiness",
+        "title": "$1k revenue month. Milestone reached.",
+        "url": "https://reddit.com/r/AppBusiness/comments/1ruu06e/1k_revenue_month_milestone_reached/",
+        "score": 54,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 41,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/AppBusiness",
+        "title": "I kept getting lost learning programming, so I built a small app to structure my learning \u2014 looking for honest feedback",
+        "url": "https://reddit.com/r/AppBusiness/comments/1rv786m/i_kept_getting_lost_learning_programming_so_i/",
+        "score": 1,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,APP_DEMAND",
+        "signal_score": 30,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/MicroSaas",
+        "title": "I went from $0 to $0 in MRR over the past year, after betting everything on my product. You can do it too.",
+        "url": "https://reddit.com/r/microsaas/comments/1rv8ds2/i_went_from_0_to_0_in_mrr_over_the_past_year/",
+        "score": 4,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 20,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/MicroSaas",
+        "title": "GPT 5.4 &amp; GPT 5.4 Pro + Claude Opus 4.6 &amp; Sonnet 4.6 + Gemini 3.1 Pro For Just $5/Month (With API Access, AI Agents And Even Web App Building)",
+        "url": "https://reddit.com/r/microsaas/comments/1rv7480/gpt_54_gpt_54_pro_claude_opus_46_sonnet_46_gemini/",
+        "score": 2,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE,APP_DEMAND",
+        "signal_score": 20,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/languagelearning",
+        "title": "Any tips for staying motivated while learning your TL?",
+        "url": "https://reddit.com/r/languagelearning/comments/1rtww1p/any_tips_for_staying_motivated_while_learning/",
+        "score": 8,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 17,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/AppBusiness",
+        "title": "First paying customer",
+        "url": "https://reddit.com/r/AppBusiness/comments/1rv7ob7/first_paying_customer/",
+        "score": 10,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 15,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/MicroSaas",
+        "title": "I hit 680 paying customers in under a year. Here's what worked and what was a complete waste of time",
+        "url": "https://reddit.com/r/microsaas/comments/1ruzpdk/i_hit_680_paying_customers_in_under_a_year_heres/",
+        "score": 5,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 15,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/languagelearning",
+        "title": "Learning Cases",
+        "url": "https://reddit.com/r/languagelearning/comments/1rudpat/learning_cases/",
+        "score": 3,
+        "roi": "HIGHEST",
+        "category": "MONETIZATION",
+        "status": "APPROVED",
+        "patterns": "REVENUE",
+        "signal_score": 13,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/stopdrinking",
+        "title": "I\u2019m starting to love being sober",
+        "url": "https://reddit.com/r/stopdrinking/comments/1ruunzd/im_starting_to_love_being_sober/",
+        "score": 454,
+        "roi": "HIGH",
+        "category": "APP_DEMAND_VALIDATION",
+        "status": "APPROVED",
+        "patterns": "SOBRIETY_DEMAND",
+        "signal_score": 77,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/stopdrinking",
+        "title": "The Daily Check-In for Monday, March 16th: Just for today, I am NOT drinking!",
+        "url": "https://reddit.com/r/stopdrinking/comments/1ruyea2/the_daily_checkin_for_monday_march_16th_just_for/",
+        "score": 361,
+        "roi": "HIGH",
+        "category": "APP_DEMAND_VALIDATION",
+        "status": "APPROVED",
+        "patterns": "APP_DEMAND,SOBRIETY_DEMAND",
+        "signal_score": 76,
+        "date": "2026-03-16"
+      },
+      {
+        "source": "r/Stoicism",
+        "title": "Seneca Letter 41 - we push one another into vice",
+        "url": "https://reddit.com/r/Stoicism/comments/1rskgyd/seneca_letter_41_we_push_one_another_into_vice/",
+        "score": 886,
+        "roi": "HIGH",
+        "category": "APP_DEMAND_VALIDATION",
+        "status": "APPROVED",
+        "patterns": "STOIC_DEMAND",
+        "signal_score": 63,
+        "date": "2026-03-16"
+      }
+    ]
+  },
+  "app_store": {
+    "niche_intel": {
+      "stoic": {
+        "niche": "stoic",
+        "total_apps": 17,
+        "paid_competitors": 1,
+        "blue_ocean_score": 70,
+        "action": "BUILD_AND_DIFFERENTIATE",
+        "priority": "P1",
+        "paid_app_details": [
+          {
+            "name": "Stoic Meditations",
+            "price": 8.99,
+            "rating": 4.8
+          }
+        ]
+      },
+      "sobriety": {
+        "niche": "sobriety",
+        "total_apps": 13,
+        "paid_competitors": 0,
+        "blue_ocean_score": 100,
+        "action": "BUILD_NOW",
+        "priority": "P0",
+        "paid_app_details": []
+      },
+      "sleep": {
+        "niche": "sleep",
+        "total_apps": 8,
+        "paid_competitors": 0,
+        "blue_ocean_score": 100,
+        "action": "BUILD_NOW",
+        "priority": "P0",
+        "paid_app_details": []
+      },
+      "cooking": {
+        "niche": "cooking",
+        "total_apps": 9,
+        "paid_competitors": 1,
+        "blue_ocean_score": 70,
+        "action": "BUILD_AND_DIFFERENTIATE",
+        "priority": "P1",
+        "paid_app_details": [
+          {
+            "name": "Streaks",
+            "price": 5.99,
+            "rating": 4.81569
+          }
+        ]
+      },
+      "language": {
+        "niche": "language",
+        "total_apps": 10,
+        "paid_competitors": 0,
+        "blue_ocean_score": 100,
+        "action": "BUILD_NOW",
+        "priority": "P0",
+        "paid_app_details": []
+      }
+    },
+    "blue_ocean_confirmed": [
+      "sobriety",
+      "sleep",
+      "language"
+    ],
+    "build_next": [
+      "sobriety",
+      "sleep",
+      "language"
+    ]
+  },
+  "key_findings": {
+    "sobriety_blue_ocean": "CONFIRMED \u2014 0 paid apps for sobriety streak tracker",
+    "sleep_blue_ocean": "CONFIRMED \u2014 0 paid apps for sleep habit tracker",
+    "language_blue_ocean": "CONFIRMED \u2014 0 paid apps for language habit daily",
+    "stoic_near_blue_ocean": "NEAR \u2014 1 paid competitor: Stoic Meditations @ $8.99 (4.8 stars)",
+    "stoic_gap": "Stoic Meditations is $8.99 one-time \u2014 gap for $0.99 freemium daily streak",
+    "sobriety_demand": "25 high-engagement r/stopdrinking posts confirm massive demand",
+    "saas_signal": "r/SaaS: \"Sold 89 lifetime deals at $199 each\" \u2014 LTD launch tactic confirmed"
+  }
+}

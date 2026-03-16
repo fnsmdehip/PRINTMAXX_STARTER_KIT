@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Freelance Rate Calculator: What Should You Actually Charge?</title>
+<meta name="description" content="plug in your expenses, target income, and hours. get your minimum viable rate, target rate, and premium rate in 30 seconds. no fluff, just math.">
+<meta name="keywords" content="freelance rate calculator, how much to charge freelancing, freelancer hourly rate, consulting rate calculator, freelance pricing calculator">
+<link rel="canonical" href="https://freelance-rate-calc.surge.sh">
+<meta property="og:title" content="Freelance Rate Calculator: What Should You Actually Charge?">
+<meta property="og:description" content="plug in your numbers. get your minimum viable rate, target rate, and premium rate in 30 seconds.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Freelance Rate Calculator: What Should You Charge?">
+<meta name="twitter:description" content="plug in your numbers. get your minimum viable rate, target rate, and premium rate. no fluff.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--s:#111;--c:rgba(255,255,255,.05);--a:#00ff88;--ad:rgba(0,255,136,.15);--ag:rgba(0,255,136,.3);--t:#e5e5e5;--m:#777;--r:rgba(255,255,255,.08);--border:rgba(255,255,255,.06)}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;min-height:100vh;overflow-x:hidden}
+a{color:var(--a);text-decoration:none}
+.ctr{max-width:600px;margin:0 auto;padding:0 20px}
+header{padding:40px 0 28px;text-align:center}
+header h1{font-size:clamp(1.4rem,5vw,1.9rem);font-weight:800;letter-spacing:-1px;line-height:1.2;margin-bottom:8px}
+header h1 span{color:var(--a)}
+header p{color:var(--m);font-size:.9rem;max-width:420px;margin:0 auto}
+.card{background:var(--c);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px}
+.card h2{font-size:.78rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}
+.field{margin-bottom:16px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:.88rem;margin-bottom:6px;color:var(--t)}
+.field label small{color:var(--m);font-weight:400}
+.field input[type=number],.field select{width:100%;background:var(--s);border:1px solid var(--r);border-radius:8px;padding:10px 14px;color:var(--t);font-family:inherit;font-size:.92rem;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.field input[type=number]:focus,.field select:focus{border-color:var(--a)}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23777'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+.field select option{background:#111;color:#e5e5e5}
+.srow{display:flex;align-items:center;gap:12px}
+.srow input[type=range]{flex:1;-webkit-appearance:none;height:6px;background:var(--r);border-radius:3px;outline:none;cursor:pointer}
+.srow input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--a);cursor:pointer;box-shadow:0 0 10px var(--ag)}
+.srow input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--a);cursor:pointer;border:none}
+.sval{min-width:80px;text-align:right;font-weight:700;font-size:.92rem;color:var(--a)}
+.calc-btn{width:100%;background:var(--a);color:#0a0a0a;border:none;border-radius:10px;padding:14px;font-weight:800;font-size:1rem;cursor:pointer;font-family:inherit;transition:all .2s;letter-spacing:-.3px;margin-top:8px}
+.calc-btn:hover{box-shadow:0 0 24px var(--ag);transform:translateY(-1px)}
+#results{display:none;animation:fadeUp .4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.rate-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px}
+.rate-box{background:rgba(255,255,255,.03);border:1px solid var(--r);border-radius:12px;padding:16px;text-align:center}
+.rate-box.primary{border-color:var(--a);background:var(--ad)}
+.rate-box .rval{font-size:1.6rem;font-weight:800;letter-spacing:-1px;margin-bottom:4px}
+.rate-box.primary .rval{color:var(--a)}
+.rate-box .rlbl{font-size:.72rem;color:var(--m);text-transform:uppercase;letter-spacing:.5px}
+.rate-box .rmo{font-size:.8rem;color:var(--m);margin-top:4px}
+.bdr{margin-bottom:20px}
+.bdr h3,.ins h3{font-size:.78rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.brrow{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.88rem}
+.brrow:last-child{border-bottom:none}
+.brrow .bv{font-weight:700}
+.brrow.ok .bv{color:var(--a)}
+.ins{margin-bottom:20px}
+.iitem{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem}
+.iitem:last-child{border-bottom:none}
+.iitem .ic{color:var(--a);font-weight:800;flex-shrink:0}
+#email-gate{background:var(--c);border:1px solid rgba(0,255,136,.2);border-radius:14px;padding:24px;margin-bottom:16px;text-align:center;display:none}
+#email-gate h3{font-size:1.1rem;font-weight:800;letter-spacing:-.3px;margin-bottom:6px}
+#email-gate p{color:var(--m);font-size:.88rem;margin-bottom:16px;max-width:360px;margin-left:auto;margin-right:auto;line-height:1.5}
+#email-gate form{max-width:320px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+#email-gate input[type=email]{width:100%;background:var(--s);border:1px solid var(--r);border-radius:8px;padding:12px 14px;color:var(--t);font-family:inherit;font-size:.92rem;outline:none;transition:border-color .2s}
+#email-gate input[type=email]:focus{border-color:var(--a)}
+#email-gate button{background:var(--a);color:#0a0a0a;border:none;border-radius:8px;padding:12px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit}
+#email-gate .fine{font-size:.72rem;color:var(--m);margin-top:4px}
+.unlock-msg{display:none;background:var(--ad);border:1px solid rgba(0,255,136,.2);border-radius:10px;padding:12px 16px;text-align:center;font-size:.88rem;font-weight:700;color:var(--a);margin-bottom:16px;animation:fadeUp .4s ease}
+.crosslinks{margin-bottom:24px}
+.crosslinks h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.5px;color:var(--m);margin-bottom:12px}
+.clcard{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;text-decoration:none;color:var(--t);transition:border-color .2s}
+.clcard:hover{border-color:var(--a)}
+.cln{font-size:.88rem;font-weight:700}
+.cld{font-size:.75rem;color:var(--m)}
+.cla{color:var(--a);font-size:1.1rem;flex-shrink:0;margin-left:12px}
+footer{padding:28px 0;text-align:center;border-top:1px solid var(--border);margin-top:8px}
+footer p{color:var(--m);font-size:.75rem}
+</style>
+</head>
+<body>
+<div class="ctr">
+<header>
+  <h1>freelance rate calculator<br><span>what should you actually charge?</span></h1>
+  <p>plug in your numbers. get your minimum viable rate, target rate, and premium rate. 30 seconds, no fluff.</p>
+</header>
+
+<div class="card">
+  <h2>your costs</h2>
+  <div class="field">
+    <label>monthly living expenses <small>(rent, food, bills)</small></label>
+    <input type="number" id="living" value="3000" min="0" step="100">
+  </div>
+  <div class="field">
+    <label>monthly business costs <small>(tools, subscriptions, software)</small></label>
+    <input type="number" id="biz" value="300" min="0" step="50">
+  </div>
+  <div class="field">
+    <label>self-employment tax rate</label>
+    <div class="srow">
+      <input type="range" id="taxS" min="10" max="45" value="30" oninput="document.getElementById('taxV').textContent=this.value+'%'">
+      <span class="sval" id="taxV">30%</span>
+    </div>
+  </div>
+  <div class="field">
+    <label>monthly savings target</label>
+    <input type="number" id="savings" value="500" min="0" step="100">
+  </div>
+</div>
+
+<div class="card">
+  <h2>your time</h2>
+  <div class="field">
+    <label>billable hours per week <small>(actual client work, not total hours)</small></label>
+    <div class="srow">
+      <input type="range" id="hoursS" min="5" max="40" value="25" oninput="document.getElementById('hoursV').textContent=this.value+'h'">
+      <span class="sval" id="hoursV">25h</span>
+    </div>
+  </div>
+  <div class="field">
+    <label>weeks worked per year <small>(subtract vacation, sick days)</small></label>
+    <div class="srow">
+      <input type="range" id="weeksS" min="30" max="52" value="46" oninput="document.getElementById('weeksV').textContent=this.value+'w'">
+      <span class="sval" id="weeksV">46w</span>
+    </div>
+  </div>
+  <div class="field">
+    <label>experience level</label>
+    <select id="experience">
+      <option value="1.0">just starting out (&lt;1 year)</option>
+      <option value="1.15">intermediate (1-3 years)</option>
+      <option value="1.35" selected>experienced (3-6 years)</option>
+      <option value="1.6">expert (6+ years, known results)</option>
+      <option value="2.0">specialist / in-demand niche</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>industry</label>
+    <select id="industry">
+      <option value="0.8">content / writing</option>
+      <option value="0.9">social media / VA</option>
+      <option value="1.0" selected>web design / development</option>
+      <option value="1.1">marketing / paid ads</option>
+      <option value="1.2">copywriting / conversion</option>
+      <option value="1.3">software engineering</option>
+      <option value="1.4">AI / ML / data science</option>
+      <option value="1.5">legal / compliance / finance</option>
+    </select>
+  </div>
+</div>
+
+<button class="calc-btn" onclick="calculate()">calculate my rate</button>
+
+<div id="unlock-msg" class="unlock-msg">rate card unlocked. full breakdown below.</div>
+
+<div id="email-gate">
+  <h3>get the full rate breakdown</h3>
+  <p>minimum viable, target, and premium rates + the exact scripts to justify them to clients. drop your email — takes 5 seconds, no spam.</p>
+  <form action="https://formsubmit.co/printmaxxweb@gmail.com" method="POST" target="_blank" onsubmit="unlockCalc()">
+    <input type="hidden" name="_subject" value="Freelance Rate Calculator - Rate Card Request">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="source" value="freelance-rate-calculator">
+    <input type="email" name="email" placeholder="your@email.com" required autocomplete="email">
+    <button type="submit">unlock full breakdown</button>
+    <p class="fine">no spam. unsubscribe any time.</p>
+  </form>
+</div>
+
+<div id="results">
+  <div class="card">
+    <h2>your rates</h2>
+    <div class="rate-grid">
+      <div class="rate-box">
+        <div class="rval" id="min-rate">—</div>
+        <div class="rlbl">minimum</div>
+        <div class="rmo" id="min-mo"></div>
+      </div>
+      <div class="rate-box primary">
+        <div class="rval" id="target-rate">—</div>
+        <div class="rlbl">target</div>
+        <div class="rmo" id="target-mo"></div>
+      </div>
+      <div class="rate-box">
+        <div class="rval" id="premium-rate">—</div>
+        <div class="rlbl">premium</div>
+        <div class="rmo" id="premium-mo"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="bdr">
+      <h3>the math</h3>
+      <div class="brrow">
+        <span>total monthly need (after tax)</span>
+        <span class="bv" id="bd-costs">—</span>
+      </div>
+      <div class="brrow">
+        <span>annual billable hours</span>
+        <span class="bv" id="bd-hours">—</span>
+      </div>
+      <div class="brrow">
+        <span>break-even hourly</span>
+        <span class="bv" id="bd-min">—</span>
+      </div>
+      <div class="brrow ok">
+        <span>target (break-even + multipliers)</span>
+        <span class="bv" id="bd-target">—</span>
+      </div>
+    </div>
+    <div class="ins">
+      <h3>what this means</h3>
+      <div id="insight-list"></div>
+    </div>
+  </div>
+
+  <div class="crosslinks">
+    <h3>tools that go with this</h3>
+    <a class="clcard" href="https://invoiceforge.surge.sh" target="_blank">
+      <div><div class="cln">InvoiceForge</div><div class="cld">free invoice generator — send professional invoices in 60 seconds</div></div>
+      <span class="cla">→</span>
+    </a>
+    <a class="clcard" href="https://cold-email-roi-calculator.surge.sh" target="_blank">
+      <div><div class="cln">Cold Email ROI Calculator</div><div class="cld">how many leads do you need to hit your target income?</div></div>
+      <span class="cla">→</span>
+    </a>
+    <a class="clcard" href="https://coldmaxx.surge.sh" target="_blank">
+      <div><div class="cln">ColdMaxx</div><div class="cld">cold outreach tool built for freelancers and solopreneurs</div></div>
+      <span class="cla">→</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>built by <a href="https://printmaxx.co">PRINTMAXX</a> · free forever · no account required</p>
+</footer>
+</div>
+
+<script>
+(function(){
+'use strict';
+var UK='frc_unlocked';
+var CC='frc_count';
+var calcCount=+(localStorage.getItem(CC)||0);
+var unlocked=localStorage.getItem(UK)==='1';
+
+function fmt(n){
+  if(n>=1e6)return '$'+(n/1e6).toFixed(1)+'M';
+  if(n>=1e3)return '$'+Math.round(n/1e3)+'K';
+  return '$'+Math.round(n).toLocaleString();
+}
+function fmtH(n){return '$'+Math.ceil(n)+'/h';}
+
+window.unlockCalc=function(){
+  localStorage.setItem(UK,'1');
+  unlocked=true;
+  document.getElementById('email-gate').style.display='none';
+  document.getElementById('unlock-msg').style.display='block';
+  document.getElementById('results').style.display='block';
+};
+
+function addInsight(container,icon,text){
+  var d=document.createElement('div');
+  d.className='iitem';
+  var ic=document.createElement('span');
+  ic.className='ic';
+  ic.textContent=icon;
+  var t=document.createElement('span');
+  t.textContent=text;
+  d.appendChild(ic);
+  d.appendChild(t);
+  container.appendChild(d);
+}
+
+window.calculate=function(){
+  var living=Math.max(0,+(document.getElementById('living').value)||0);
+  var biz=Math.max(0,+(document.getElementById('biz').value)||0);
+  var tax=+document.getElementById('taxS').value/100;
+  var savings=Math.max(0,+(document.getElementById('savings').value)||0);
+  var hpw=+document.getElementById('hoursS').value;
+  var wpy=+document.getElementById('weeksS').value;
+  var expM=+document.getElementById('experience').value;
+  var indM=+document.getElementById('industry').value;
+
+  var monthlyNeed=living+biz+savings;
+  var annualNeed=monthlyNeed*12;
+  var annualWithTax=annualNeed/(1-tax);
+  var billHours=hpw*wpy;
+  var minRate=annualWithTax/billHours;
+  var targetRate=minRate*expM*indM;
+  var premiumRate=targetRate*1.5;
+
+  var minMo=Math.round(minRate*hpw*4.33);
+  var targetMo=Math.round(targetRate*hpw*4.33);
+  var premiumMo=Math.round(premiumRate*hpw*4.33);
+
+  calcCount++;
+  localStorage.setItem(CC,calcCount);
+
+  // populate values
+  document.getElementById('min-rate').textContent=fmtH(minRate);
+  document.getElementById('target-rate').textContent=fmtH(targetRate);
+  document.getElementById('premium-rate').textContent=fmtH(premiumRate);
+  document.getElementById('min-mo').textContent=fmt(minMo)+'/mo';
+  document.getElementById('target-mo').textContent=fmt(targetMo)+'/mo';
+  document.getElementById('premium-mo').textContent=fmt(premiumMo)+'/mo';
+  document.getElementById('bd-costs').textContent='$'+Math.round(annualWithTax/12).toLocaleString()+'/mo';
+  document.getElementById('bd-hours').textContent=Math.round(billHours).toLocaleString()+' hrs/yr';
+  document.getElementById('bd-min').textContent=fmtH(minRate);
+  document.getElementById('bd-target').textContent=fmtH(targetRate);
+
+  var il=document.getElementById('insight-list');
+  while(il.firstChild) il.removeChild(il.firstChild);
+
+  if(minRate<30) addInsight(il,'⚠','your minimum is $'+Math.ceil(minRate)+'/h — very low. one slow month and rent is at risk. focus on raising rates before volume.');
+  else if(minRate>100) addInsight(il,'✓','strong floor at $'+Math.ceil(minRate)+'/h. anything above this is real profit — keep rates high, avoid race-to-bottom clients.');
+  else addInsight(il,'→','your floor is $'+Math.ceil(minRate)+'/h. never take work below this rate — not even for "exposure" or "portfolio."');
+
+  if(hpw>30) addInsight(il,'⚠','billing '+hpw+' hours/week is optimistic. in practice, 20-25 billable is realistic after admin and biz dev. raise your rate instead of billing more hours.');
+
+  if(expM>=1.35) addInsight(il,'💡','at your experience level, anchor on client ROI not your hourly cost. "$'+Math.ceil(targetRate)+'/h" frames as a cost — "my clients average 4x return" frames as an investment.');
+
+  if(targetRate>150) addInsight(il,'📦','at $'+Math.ceil(targetRate)+'/h, consider project-based pricing. a 40h project = $'+fmt(Math.ceil(targetRate)*40)+'. easier to sell than an hourly rate.');
+
+  addInsight(il,'📋','send a rate card: Standard $'+Math.ceil(targetRate)+'/h · Retainer $'+Math.ceil(targetRate*0.85)+'/h · Rush $'+Math.ceil(targetRate*1.5)+'/h. makes you look premium before they even ask.');
+
+  // show gate or results
+  if(!unlocked&&calcCount>=2){
+    document.getElementById('email-gate').style.display='block';
+    document.getElementById('results').style.display='none';
+    document.getElementById('email-gate').scrollIntoView({behavior:'smooth'});
+  } else {
+    document.getElementById('results').style.display='block';
+    document.getElementById('email-gate').style.display='none';
+    document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+};
+
+if(unlocked) document.getElementById('unlock-msg').style.display='block';
+})();
+</script>
+</body>
+</html>

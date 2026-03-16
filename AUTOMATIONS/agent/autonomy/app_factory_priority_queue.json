@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-16 07:22:17",
+  "generated_at": "2026-03-16 12:00:04",
   "sources": {
-    "alpha_staging_candidates": 3685,
+    "alpha_staging_candidates": 2830,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 102
+    "existing_specs_detected": 90
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 3631,
+    "total_candidates": 2799,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 97,
-      "BUILD_NEW_NOW": 71,
-      "SPEC_AND_TEST": 160,
-      "PARK": 3294,
+      "ITERATE_EXISTING_NOW": 84,
+      "BUILD_NEW_NOW": 68,
+      "SPEC_AND_TEST": 118,
+      "PARK": 2520,
       "VALIDATE_FIRST": 9
     },
     "cluster_counts": {
-      "faith": 99,
-      "focus": 485,
-      "habits": 227,
-      "ai_utility": 2465,
-      "fitness": 205,
-      "sleep": 128,
-      "meal": 22
+      "faith": 88,
+      "focus": 343,
+      "habits": 140,
+      "ai_utility": 1978,
+      "fitness": 157,
+      "sleep": 79,
+      "meal": 14
     }
   },
   "queue": [
@@ -586,68 +586,6 @@
       "rank": 9
     },
     {
-      "candidate_id": "ALPHA_CI_22_001",
-      "title": "ASO HACK: Move app review prompt from day-1 to post-3day-streak \u2192 +0.8 App Store stars. 30min code change per app.",
-      "source": "competitive_intel_cycle22",
-      "source_url": "https://reddit.com/r/SideProject/review_timing_0_8_stars",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGHEST",
-      "priority": "",
-      "status": "APPROVED",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "N/A",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "ASO HACK: Move app review prompt from day-1 to post-3day-streak \u2192 +0.8 App Store stars. 30min code change per app.",
-      "compliance_notes": "",
-      "reviewer_notes": "",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA_CI_22_001",
-        "source": "competitive_intel_cycle22",
-        "source_url": "https://reddit.com/r/SideProject/review_timing_0_8_stars",
-        "category": "SEO_GEO_ASO",
-        "tactic": "ASO HACK: Move app review prompt from day-1 to post-3day-streak \u2192 +0.8 App Store stars. 30min code change per app.",
-        "roi_potential": "HIGHEST",
-        "priority": "",
-        "status": "APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "N/A",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "",
-        "created_at": "2026-03-09T13:52:55.851259",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 117,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 10
-    },
-    {
       "candidate_id": "ALPHA18482",
       "title": "App was stuck at 3.2 stars. Moved review prompt from early sessions to after user achieves a milestone (value moment). Rating jumped to 4.0. No code change, no feature change. Just timing of the StoreKit prompt.",
       "source": "r/SideProject",
@@ -707,7 +645,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 11
+      "rank": 10
     },
     {
       "candidate_id": "ALPHA16310",
@@ -769,7 +707,7 @@
         "monetization: paid upfront vs free trial subscription"
       ],
       "risk_score": 0,
-      "rank": 12
+      "rank": 11
     },
     {
       "candidate_id": "ALPHA18680",
@@ -831,7 +769,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 13
+      "rank": 12
     },
     {
       "candidate_id": "ALPHA18684",
@@ -893,7 +831,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 14
+      "rank": 13
     },
     {
       "candidate_id": "ALPHA_REDDIT_SAAS001",
@@ -955,7 +893,7 @@
         "monetization: paid upfront vs free trial subscription"
       ],
       "risk_score": 0,
-      "rank": 15
+      "rank": 14
     },
     {
       "candidate_id": "ALPHA25277",
@@ -1017,7 +955,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 16
+      "rank": 15
     },
     {
       "candidate_id": "ALPHA16827",
@@ -1079,7 +1017,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 17
+      "rank": 16
     },
     {
       "candidate_id": "ALPHA18479",
@@ -1141,7 +1079,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 18
+      "rank": 17
     },
     {
       "candidate_id": "ALPHA25040",
@@ -1203,7 +1141,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 19
+      "rank": 18
     },
     {
       "candidate_id": "ALPHA18483",
@@ -1265,7 +1203,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 20
+      "rank": 19
     },
     {
       "candidate_id": "ALPHA25276",
@@ -1327,7 +1265,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 21
+      "rank": 20
     },
     {
       "candidate_id": "ALPHA98937",
@@ -1389,7 +1327,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 21
     },
     {
       "candidate_id": "ALPHA25041",
@@ -1451,7 +1389,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 22
     },
     {
       "candidate_id": "ALPHA18678",
@@ -1513,69 +1451,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 24
-    },
-    {
-      "candidate_id": "ALPHA_GAP_JOURNAL_PRICING",
-      "title": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
-      "source": "competitive_intel_engine",
-      "source_url": "internal_gap_analysis_20260313",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGHEST",
-      "priority": "PENDING_REVIEW",
-      "status": "APPROVED",
-      "engagement_authenticity": "",
-      "earnings_verified": "",
-      "applicable_niches": "2026-03-13T16:22:15",
-      "applicable_methods": "TRUE",
-      "evidence": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
-      "compliance_notes": "",
-      "reviewer_notes": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA_GAP_JOURNAL_PRICING",
-        "source": "competitive_intel_engine",
-        "source_url": "internal_gap_analysis_20260313",
-        "category": "Journal apps niche: 17 competitors, ALL free. Zero paid. Same gap as faith. First mover premium pricing opportunity.",
-        "tactic": "APP_FACTORY",
-        "roi_potential": "HIGHEST",
-        "priority": "PENDING_REVIEW",
-        "status": "APPROVED",
-        "applicable_methods": "TRUE",
-        "applicable_niches": "2026-03-13T16:22:15",
-        "synergy_score": "Competitive scan 2026-03-13. 17 free journal apps, 0 paid. journal-streak app candidate for .99/mo positioning.",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "",
-        "earnings_verified": "",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "17 competitors ALL free. Same gap as faith. journal-streak candidate for $0.99/mo. Route: APP_FACTORY.",
-        "created_at": "",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 101,
-      "cluster": "faith",
-      "market_room": "MEDIUM_HIGH",
-      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
-      "paywall_variant": "after first devotional value moment, annual-first anchor",
-      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
-      "primary_monetization": "subscription with 7-day trial",
-      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 25
+      "rank": 23
     },
     {
       "candidate_id": "ALPHA_APPSTORE_PAID_HABIT_GAP",
@@ -1637,7 +1513,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 24
     },
     {
       "candidate_id": "ALPHA17429",
@@ -1699,7 +1575,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA18535",
@@ -1761,7 +1637,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 26
     },
     {
       "candidate_id": "ALPHA_REDDIT_0309_001",
@@ -1823,7 +1699,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 27
     },
     {
       "candidate_id": "COMP_INTEL_039_B",
@@ -1885,7 +1761,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA100456",
@@ -1947,7 +1823,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA15286",
@@ -1990,7 +1866,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA18170",
@@ -2052,7 +1928,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA544",
@@ -2114,7 +1990,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -2176,7 +2052,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 35
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA17028",
@@ -2238,7 +2114,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 36
+      "rank": 34
     },
     {
       "candidate_id": "HN_003",
@@ -2300,7 +2176,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 37
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA18679",
@@ -2362,7 +2238,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 38
+      "rank": 36
     },
     {
       "candidate_id": "RF_001",
@@ -2431,7 +2307,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 39
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA25039",
@@ -2491,6 +2367,130 @@
         "pricing: annual-first anchor vs cheaper monthly plan",
         "review prompt: milestone trigger only, never session-one prompt",
         "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 38
+    },
+    {
+      "candidate_id": "ALPHA98935",
+      "title": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. Direct PrayerLock competitor. All free model.",
+      "source": "competitive_intel_synthesis_prayerlock_competitor",
+      "source_url": "",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "NOW",
+      "status": "APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "FALSE",
+      "applicable_niches": "N/A",
+      "applicable_methods": "UNCHECKED",
+      "evidence": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. D",
+      "compliance_notes": "",
+      "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA98935",
+        "source": "competitive_intel_synthesis_prayerlock_competitor",
+        "source_url": "",
+        "category": "COMPETITIVE_INTEL",
+        "tactic": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. Direct PrayerLock competitor. All free model.",
+        "roi_potential": "HIGH",
+        "priority": "NOW",
+        "status": "APPROVED",
+        "applicable_methods": "UNCHECKED",
+        "applicable_niches": "N/A",
+        "synergy_score": "",
+        "cross_sell_products": "",
+        "implementation_priority": "",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "FALSE",
+        "extracted_method": "Athan: Ramadan 2026 in USA: \u26054.8 (45.8K reviews), v10.4.2 updated today. Actively Ramadan-branded. D",
+        "compliance_notes": "",
+        "reviewer_notes": "Auto-approved competitive intel 2026-03-14",
+        "created_at": "2026-03-14",
+        "ops_generated": "",
+        "quality_issues": "",
+        "date_added": "2026-03-14"
+      },
+      "score": 93,
+      "cluster": "faith",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "Hilal / PrayerLock / Scripture Streak",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
+      "paywall_variant": "after first devotional value moment, annual-first anchor",
+      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
+      "primary_monetization": "subscription with 7-day trial",
+      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "affiliate placement: post-conversion home tab vs no affiliate module"
+      ],
+      "risk_score": 0,
+      "rank": 39
+    },
+    {
+      "candidate_id": "ALPHA18306",
+      "title": "Sell PWA habit tracker apps on Fiverr using scripture-streak template. $200-500 per app. <1 hour fulfillment. 22+ apps already built as portfolio proof. Fiverr account exists. Clone + rebrand + deploy pipeline proven.",
+      "source": "swarm_opportunity_scanner",
+      "source_url": "https://www.fiverr.com/",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "IMMEDIATE",
+      "status": "ROUTED_TO_VENTURE",
+      "engagement_authenticity": "N/A",
+      "earnings_verified": "N/A",
+      "applicable_niches": "apps,freelance,fiverr",
+      "applicable_methods": "DIGITAL_PRODUCTS",
+      "evidence": "Productized Fiverr gig: custom habit tracker PWA in 24h. Template fork + rebrand + deploy. $200-500 per order. <1hr fulfillment.",
+      "compliance_notes": "None",
+      "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA18306_monetization.md",
+      "existing_spec": null,
+      "raw": {
+        "alpha_id": "ALPHA18306",
+        "source": "swarm_opportunity_scanner",
+        "source_url": "https://www.fiverr.com/",
+        "category": "MONETIZATION",
+        "tactic": "Sell PWA habit tracker apps on Fiverr using scripture-streak template. $200-500 per app. <1 hour fulfillment. 22+ apps already built as portfolio proof. Fiverr account exists. Clone + rebrand + deploy pipeline proven.",
+        "roi_potential": "HIGH",
+        "priority": "IMMEDIATE",
+        "status": "ROUTED_TO_VENTURE",
+        "applicable_methods": "DIGITAL_PRODUCTS",
+        "applicable_niches": "apps,freelance,fiverr",
+        "synergy_score": "85",
+        "cross_sell_products": "Scripture Streak Template|App Factory Pipeline|8 Live PWA Apps",
+        "implementation_priority": "IMMEDIATE",
+        "engagement_authenticity": "N/A",
+        "earnings_verified": "N/A",
+        "extracted_method": "Productized Fiverr gig: custom habit tracker PWA in 24h. Template fork + rebrand + deploy. $200-500 per order. <1hr fulfillment.",
+        "compliance_notes": "None",
+        "reviewer_notes": "Auto-routed to venture: VENTURE_ALPHA18306_monetization.md",
+        "created_at": "2026-03-08T11:15:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": "2026-03-08"
+      },
+      "score": 92,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
       "rank": 40

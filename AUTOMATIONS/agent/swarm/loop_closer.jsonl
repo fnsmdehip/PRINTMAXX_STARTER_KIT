@@ -37,3 +37,7 @@
 {"ts": "2026-03-16T04:30:00.666486", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.6/10, drifted=0"}
 {"ts": "2026-03-16T06:20:01.627203", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
 {"ts": "2026-03-16T06:30:00.763527", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.6/10, drifted=0"}
+{"ts": "2026-03-16T08:26:51.366001", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T08:30:01.589428", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-16T08:44:56.798294", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.4/10, drifted=0"}
+{"ts": "2026-03-16T10:30:01.177167", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
