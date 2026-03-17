@@ -12,6 +12,12 @@ Your landing pages are live but affiliate links have **placeholder IDs**. Sign u
 | AI Stack 2026 | https://ai-stack-2026.surge.sh | LIVE, needs real affiliate IDs |
 | ConvertKit vs Beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE, needs real affiliate IDs |
 | Cursor vs Claude Code | https://cursor-vs-claude-code.surge.sh | BUILT, needs deploy + affiliate IDs |
+| Framer vs Webflow | https://framer-vs-webflow.surge.sh | LIVE, needs real affiliate IDs |
+| Smartlead vs Instantly | https://smartlead-vs-instantly.surge.sh | LIVE, needs real affiliate IDs |
+| SEMrush vs Ahrefs | https://semrush-vs-ahrefs.surge.sh | LIVE, needs real affiliate IDs |
+| Best Cold Email Tools | https://best-cold-email-tools.surge.sh | LIVE, needs real affiliate IDs |
+| Best AI Tools 2026 | https://best-ai-tools-2026.surge.sh | LIVE, needs real affiliate IDs |
+| Klaviyo Alternative | https://klaviyo-alternative.surge.sh | LIVE, needs real affiliate IDs |
 
 ---
 
@@ -137,6 +143,23 @@ Note: These compound. By month 12, your month-1 referrals are still paying. Recu
 - **Replace in files:** Search for `PLACEHOLDER` in:
   - `LANDING/affiliate-pages/smartlead-vs-instantly/index.html`
 
+### 8. Webflow (50% first year revenue share) - NEW
+- **Sign up:** https://webflow.com/partners
+- **Commission:** 50% of referred customer's first year of payments
+- **Cookie:** 90 days
+- **Payout:** Monthly via Partnerstack
+- **Your ref link format:** `https://webflow.grsm.io/YOUR_PARTNER_ID`
+- **Replace in files:** Search for `REPLACE_WEBFLOW_AFF_ID` in:
+  - `LANDING/affiliate-pages/framer-vs-webflow/index.html`
+- **Math:** 1 referral at $23/mo = $138 first year. 10 referrals = $1,380/year.
+
+### 9. Framer (affiliate program)
+- **Sign up:** Check https://www.framer.com/partners/ or similar
+- **Commission:** Varies, check on signup
+- **Your ref link format:** `https://www.framer.com/?via=YOUR_ID`
+- **Replace in files:** Search for `REPLACE_FRAMER_AFF_ID` in:
+  - `LANDING/affiliate-pages/framer-vs-webflow/index.html`
+
 ---
 
 ## Next Actions
@@ -146,12 +169,15 @@ Note: These compound. By month 12, your month-1 referrals are still paying. Recu
 3. Sign up for Beehiiv partner program (5 min)
 4. Sign up for Instantly affiliate (5 min)
 5. Sign up for Smartlead affiliate (5 min)
-6. Replace all placeholder IDs across 5 pages (5 min)
-7. Redeploy all 5 pages (2 min)
+6. Sign up for Webflow partners (5 min) - 50% first year
+7. Sign up for Framer affiliate (5 min)
+8. Replace all placeholder IDs across 8 pages (10 min)
+9. Redeploy all 8 pages (5 min)
 
-**Total time: ~30 min. Potential: $500-2,000/mo in affiliate commissions once traffic matures.**
-5. Post distribution content from `CONTENT/social/affiliate_funnel_posts_mar7.md`
-6. Monitor GoatCounter for click data
+**Total time: ~45 min. Potential: $500-2,500/mo in affiliate commissions once traffic matures.**
+
+10. Post distribution content from `CONTENT/social/posting_queue/affiliate_distribution_20260316.txt` (12 posts ready)
+11. Monitor GoatCounter for click data
 
 
 ---

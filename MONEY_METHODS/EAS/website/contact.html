@@ -51,7 +51,9 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 .form-group label{display:block;font-size:0.85rem;color:var(--muted);margin-bottom:8px;letter-spacing:0.02em}
 .form-group label .req{color:var(--gold)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(245,240,232,0.04);border:1px solid rgba(245,240,232,0.1);border-radius:4px;padding:12px 16px;color:var(--cream);font-family:var(--sans);font-size:0.95rem;transition:border-color var(--transition);outline:none}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(245,240,232,0.04);border:1px solid rgba(245,240,232,0.1);border-radius:4px;padding:12px 16px;color:var(--cream);font-family:var(--sans);font-size:0.95rem;transition:border-color var(--transition);outline:none;-webkit-appearance:none;appearance:none}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23888'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer}
+.form-group select option{background:var(--bg);color:var(--cream)}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--gold)}
 .form-group textarea{min-height:120px;resize:vertical}
 .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(245,240,232,0.25)}
@@ -114,8 +116,8 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 <section class="page-hero">
   <div class="container">
     <div class="section-label fade-up">Contact</div>
-    <h1 class="fade-up">Tell us what's eating your team's time.</h1>
-    <p class="fade-up">Fill this out and we'll get back to you within one business day with an initial assessment. Usually faster.</p>
+    <h1 class="fade-up">Tell us where your team loses hours every week.</h1>
+    <p class="fade-up">We reply within one business day with an assessment of your highest-ROI automation target. Most responses go out within 4 hours.</p>
   </div>
 </section>
 
@@ -125,12 +127,12 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 
       <!-- FORM -->
       <div class="fade-up">
-        <form action="https://formspree.io/f/placeholder" method="POST">
+        <form action="https://formspree.io/f/placeholder" method="POST" id="contactForm">
 
           <div class="form-row">
             <div class="form-group">
               <label>Name <span class="req">*</span></label>
-              <input type="text" name="name" required placeholder="Your name">
+              <input type="text" name="name" required placeholder="Full name">
             </div>
             <div class="form-group">
               <label>Work email <span class="req">*</span></label>
@@ -144,31 +146,84 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
               <input type="text" name="company" placeholder="Company name">
             </div>
             <div class="form-group">
-              <label>Website</label>
-              <input type="url" name="website" placeholder="https://...">
+              <label>Role / title</label>
+              <input type="text" name="role" placeholder="COO, VP Ops, Founder...">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
+              <label>Website</label>
+              <input type="url" name="website" placeholder="https://...">
+            </div>
+            <div class="form-group">
               <label>Phone</label>
               <input type="tel" name="phone" placeholder="(555) 123-4567">
             </div>
+          </div>
+
+          <div class="form-row">
             <div class="form-group">
               <label>Industry</label>
-              <input type="text" name="industry" placeholder="Dental, HVAC, legal, agency...">
+              <select name="industry">
+                <option value="">Select your industry...</option>
+                <option value="healthcare">Healthcare / dental</option>
+                <option value="legal">Legal</option>
+                <option value="home-services">Home services (HVAC, plumbing, electrical)</option>
+                <option value="real-estate">Real estate</option>
+                <option value="agency">Agency / consulting</option>
+                <option value="saas">SaaS / technology</option>
+                <option value="ecommerce">E-commerce / retail</option>
+                <option value="financial">Financial services</option>
+                <option value="manufacturing">Manufacturing / logistics</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Team size</label>
+              <select name="team_size">
+                <option value="">Select...</option>
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-200">51-200 employees</option>
+                <option value="200+">200+ employees</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Timeline</label>
+              <select name="timeline">
+                <option value="">Select...</option>
+                <option value="asap">Ready now</option>
+                <option value="1-3mo">1-3 months</option>
+                <option value="3-6mo">3-6 months</option>
+                <option value="exploring">Just exploring</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Budget range</label>
+              <select name="budget">
+                <option value="">Select...</option>
+                <option value="under-5k">Under $5,000</option>
+                <option value="5k-15k">$5,000 - $15,000</option>
+                <option value="15k-40k">$15,000 - $40,000</option>
+                <option value="40k+">$40,000+</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
             </div>
           </div>
 
           <div class="form-group">
-            <label>What work would you want an AI agent to handle?</label>
-            <textarea name="message" placeholder="Tell us about the manual processes, repetitive tasks, or operational bottlenecks that eat your team's time. Be specific about hours spent, tools involved, and what falls through the cracks."></textarea>
+            <label>What manual work costs your team the most time right now?</label>
+            <textarea name="message" rows="5" placeholder="Example: Our 3-person intake team spends 12 hrs/week copying data from emails into Salesforce and routing to the right rep. About 15% of leads get lost in the process."></textarea>
           </div>
 
           <!-- HEURISTICS -->
           <div class="heuristics">
-            <h4>Check any that describe your situation</h4>
-            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:20px">Helps us identify which AI agent would have the highest impact.</p>
+            <h4>Which of these apply to you?</h4>
+            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:20px">Helps us tailor the assessment to your situation before the first call.</p>
             <div class="heuristics-grid">
               <label class="heuristic-item">
                 <input type="checkbox" name="signal_manual">
@@ -179,29 +234,46 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
                 <span>Phone calls going to voicemail after hours</span>
               </label>
               <label class="heuristic-item">
-                <input type="checkbox" name="signal_meetings">
-                <span>Team spending hours on meeting follow-ups</span>
+                <input type="checkbox" name="signal_support">
+                <span>Customer support overwhelmed with repetitive questions</span>
               </label>
               <label class="heuristic-item">
                 <input type="checkbox" name="signal_competitors">
                 <span>No competitive monitoring in place</span>
               </label>
               <label class="heuristic-item">
-                <input type="checkbox" name="signal_support">
-                <span>Customer support overwhelmed with repetitive questions</span>
-              </label>
-              <label class="heuristic-item">
                 <input type="checkbox" name="signal_content">
-                <span>Marketing content production bottleneck</span>
+                <span>Content production can't keep up with demand</span>
               </label>
               <label class="heuristic-item">
                 <input type="checkbox" name="signal_data">
-                <span>Data spread across 5+ tools with no single source of truth</span>
+                <span>Data spread across 5+ tools, no single source of truth</span>
+              </label>
+              <label class="heuristic-item">
+                <input type="checkbox" name="signal_custom">
+                <span>Need a custom agent for a workflow not listed here</span>
+              </label>
+              <label class="heuristic-item">
+                <input type="checkbox" name="signal_security">
+                <span>Require on-premise or air-gapped deployment</span>
               </label>
             </div>
           </div>
 
-          <button type="submit" class="btn btn-gold submit-btn">Send introduction</button>
+          <div class="form-group" style="margin-top:16px">
+            <label>How did you find us?</label>
+            <select name="source">
+              <option value="">Select...</option>
+              <option value="search">Search engine</option>
+              <option value="referral">Referral</option>
+              <option value="social">Social media</option>
+              <option value="content">Blog / article / podcast</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <p style="font-size:0.78rem;color:var(--muted);margin-top:24px">We don't share your information with third parties. No marketing lists. No follow-up spam. One reply with our assessment.</p>
+          <button type="submit" class="btn btn-gold submit-btn">Start the conversation</button>
 
         </form>
       </div>
@@ -209,24 +281,24 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
       <!-- SIDEBAR -->
       <div class="contact-sidebar">
         <div class="card sidebar-card fade-up">
-          <h4>What happens next?</h4>
-          <p>We review your submission, look at your website and current tech stack, and reply with an initial assessment. If there's a fit, we schedule a 15-minute call to identify which AI agent would have the highest impact. No pitch deck, no pressure.</p>
+          <h4>After you submit</h4>
+          <p>We review your submission and audit your public-facing tech stack. Our reply includes: which process to automate first, estimated cost range, expected payback period, and whether we're the right fit. If we aren't, we'll tell you that too.</p>
         </div>
 
         <div class="card sidebar-card fade-up">
-          <h4>Need NDAs?</h4>
-          <p>We sign mutual NDAs before any deep-dive engagement. If you need one signed before this initial conversation, mention it in your message and we'll send ours over.</p>
+          <h4>Need NDAs first?</h4>
+          <p>We sign mutual NDAs before any deep-dive engagement. If you need one signed before this initial conversation, mention it in your message. We'll send ours within 2 hours.</p>
         </div>
 
         <div class="card sidebar-card fade-up">
           <h4>Prefer email?</h4>
-          <p>Skip the form entirely.</p>
-          <a href="mailto:hello@enterpriseautomationsolutions.com">hello@enterpriseautomationsolutions.com</a>
+          <p>Reach us directly.</p>
+          <a href="mailto:hello@enterpriseautomation.solutions">hello@enterpriseautomation.solutions</a>
         </div>
 
         <div class="card sidebar-card fade-up">
-          <h4>Rather just book a call?</h4>
-          <p>Skip the form. 15 minutes. We'll map your highest-ROI agent on the call.</p>
+          <h4>Rather just talk?</h4>
+          <p>15 minutes. No slides. We ask about your operations and tell you exactly which agent to build first and what it costs.</p>
           <a href="book.html">Book a call here</a>
         </div>
       </div>

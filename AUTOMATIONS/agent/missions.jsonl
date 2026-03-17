@@ -864,3 +864,68 @@
 {"ts": "2026-03-16T18:16:01.677034", "mission": "autonomy:auto_monetize_affiliate_funnel", "result": "partial", "duration_s": 6, "output": "Affiliate Funnels: 4/6 steps OK"}
 {"ts": "2026-03-16T18:21:35.633839", "mission": "autonomy:SCRAPING_competitive_intel", "result": "partial", "duration_s": 3, "output": "Competitive Intel Scraping: 1/3 steps OK"}
 {"ts": "2026-03-16T18:27:09.257834", "mission": "autonomy:alpha_intelligence", "result": "partial", "duration_s": 3, "output": "Alpha Intelligence Research: 1/3 steps OK"}
+{"ts": "2026-03-16T20:28:33.701552", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 3/6 steps OK"}
+{"ts": "2026-03-17T06:08:43.447776", "mission": "content", "result": "partial", "duration_s": 82.6, "output": "Claude returned error, output length: 287"}
+{"ts": "2026-03-17T06:09:48.059677", "mission": "upgrade", "result": "partial", "duration_s": 62.7, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-17T06:09:52.048860", "mission": "schedule", "result": "success", "duration_s": 2.9, "output": "Scheduled 42 slots across 7 days"}
+{"ts": "2026-03-17T06:13:23.174753", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-17T06:13:27.989638", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-17T06:13:51.689212", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-17T06:14:13.382849", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-17T06:18:22.576412", "mission": "autonomy:auto_monetize_affiliate_funnel", "result": "partial", "duration_s": 6, "output": "Affiliate Funnels: 4/6 steps OK"}
+{"ts": "2026-03-17T06:18:28.554262", "mission": "autonomy:auto_monetize_affiliate_funnel", "result": "partial", "duration_s": 6, "output": "Affiliate Funnels: 4/6 steps OK"}
+{"ts": "2026-03-17T06:18:43.583920", "mission": "autonomy:auto_monetize_affiliate_funnel", "result": "partial", "duration_s": 6, "output": "Affiliate Funnels: 4/6 steps OK"}
+{"ts": "2026-03-17T06:19:15.537955", "mission": "autonomy:auto_monetize_affiliate_funnel", "result": "partial", "duration_s": 6, "output": "Affiliate Funnels: 4/6 steps OK"}
+{"ts": "2026-03-17T06:19:31.801331", "mission": "hunt", "result": "partial", "duration_s": 81.3, "output": "Searched but results were thin"}
+{"ts": "2026-03-17T06:19:52.164049", "mission": "autonomy:auto_monetize_affiliate_funnel", "result": "partial", "duration_s": 6, "output": "Affiliate Funnels: 4/6 steps OK"}
+{"ts": "2026-03-17T06:28:46.339834", "mission": "autonomy:auto_app_app_factory_9788", "result": "partial", "duration_s": 6, "output": "App Factory: 3/6 steps OK"}
+{"ts": "2026-03-17T06:29:00.797703", "mission": "autonomy:auto_app_app_factory_9788", "result": "partial", "duration_s": 6, "output": "App Factory: 3/6 steps OK"}
+{"ts": "2026-03-17T06:29:17.480887", "mission": "autonomy:auto_app_app_factory_9788", "result": "partial", "duration_s": 6, "output": "App Factory: 3/6 steps OK"}
+{"ts": "2026-03-17T06:29:26.910002", "mission": "autonomy:auto_app_app_factory_9788", "result": "partial", "duration_s": 6, "output": "App Factory: 3/6 steps OK"}
+{"ts": "2026-03-17T06:30:11.480064", "mission": "autonomy:auto_app_app_factory_9788", "result": "partial", "duration_s": 6, "output": "App Factory: 3/6 steps OK"}
+{"ts": "2026-03-17T06:37:44.395581", "mission": "content", "result": "partial", "duration_s": 64.4, "output": "Claude returned error, output length: 287"}
+{"ts": "2026-03-17T06:39:26.066329", "mission": "upgrade", "result": "partial", "duration_s": 99.9, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-17T06:42:37.571567", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-17T06:42:44.214278", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-17T06:42:49.711541", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-17T06:42:54.475436", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-17T06:43:02.296106", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-17T06:45:32.076576", "mission": "autonomy:SCRAPING_competitive_intel", "result": "failed", "duration_s": 3, "output": "Competitive Intel Scraping: 0/3 steps OK"}
+{"ts": "2026-03-17T06:45:32.286498", "mission": "autonomy:SCRAPING_competitive_intel", "result": "failed", "duration_s": 3, "output": "Competitive Intel Scraping: 0/3 steps OK"}
+{"ts": "2026-03-17T06:45:38.497234", "mission": "autonomy:SCRAPING_competitive_intel", "result": "failed", "duration_s": 3, "output": "Competitive Intel Scraping: 0/3 steps OK"}
+{"ts": "2026-03-17T06:45:51.128724", "mission": "autonomy:SCRAPING_competitive_intel", "result": "failed", "duration_s": 3, "output": "Competitive Intel Scraping: 0/3 steps OK"}
+{"ts": "2026-03-17T06:45:55.928872", "mission": "autonomy:SCRAPING_competitive_intel", "result": "failed", "duration_s": 3, "output": "Competitive Intel Scraping: 0/3 steps OK"}
+{"ts": "2026-03-17T06:48:10.815533", "mission": "autonomy:alpha_intelligence", "result": "failed", "duration_s": 3, "output": "Alpha Intelligence Research: 0/3 steps OK"}
+{"ts": "2026-03-17T06:48:22.839413", "mission": "autonomy:alpha_intelligence", "result": "failed", "duration_s": 3, "output": "Alpha Intelligence Research: 0/3 steps OK"}
+{"ts": "2026-03-17T06:48:26.297193", "mission": "autonomy:alpha_intelligence", "result": "failed", "duration_s": 3, "output": "Alpha Intelligence Research: 0/3 steps OK"}
+{"ts": "2026-03-17T06:48:37.028876", "mission": "autonomy:alpha_intelligence", "result": "failed", "duration_s": 3, "output": "Alpha Intelligence Research: 0/3 steps OK"}
+{"ts": "2026-03-17T06:48:39.122786", "mission": "autonomy:alpha_intelligence", "result": "failed", "duration_s": 3, "output": "Alpha Intelligence Research: 0/3 steps OK"}
+{"ts": "2026-03-17T06:49:44.563501", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 1/6 steps OK"}
+{"ts": "2026-03-17T06:51:12.573663", "mission": "autonomy:SCRAPING_competitive_intel", "result": "failed", "duration_s": 3, "output": "Competitive Intel Scraping: 0/3 steps OK"}
+{"ts": "2026-03-17T08:01:41.890807", "mission": "content", "result": "partial", "duration_s": 20.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:02:01.360923", "mission": "content", "result": "partial", "duration_s": 19.4, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:02:20.800974", "mission": "content", "result": "partial", "duration_s": 19.4, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:02:43.678160", "mission": "content", "result": "partial", "duration_s": 22.6, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:03:03.048156", "mission": "content", "result": "partial", "duration_s": 18.9, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:03:23.599692", "mission": "content", "result": "partial", "duration_s": 20.4, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:03:44.906400", "mission": "content", "result": "partial", "duration_s": 20.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:04:05.338216", "mission": "content", "result": "partial", "duration_s": 20.3, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:04:27.033516", "mission": "content", "result": "partial", "duration_s": 21.4, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:04:46.765858", "mission": "content", "result": "partial", "duration_s": 19.6, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:05:08.026434", "mission": "content", "result": "partial", "duration_s": 21.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:05:30.762320", "mission": "content", "result": "partial", "duration_s": 22.6, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:05:52.633428", "mission": "content", "result": "partial", "duration_s": 21.6, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:06:16.523334", "mission": "content", "result": "partial", "duration_s": 23.7, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:06:38.795913", "mission": "content", "result": "partial", "duration_s": 21.9, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:07:05.073935", "mission": "content", "result": "partial", "duration_s": 26.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:07:24.420404", "mission": "content", "result": "partial", "duration_s": 18.6, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:07:44.026849", "mission": "content", "result": "partial", "duration_s": 19.4, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:08:02.604022", "mission": "content", "result": "partial", "duration_s": 18.3, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:08:21.743421", "mission": "content", "result": "partial", "duration_s": 18.7, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:08:43.579356", "mission": "content", "result": "partial", "duration_s": 21.5, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:09:04.703783", "mission": "content", "result": "partial", "duration_s": 20.8, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:09:26.810897", "mission": "content", "result": "partial", "duration_s": 21.9, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:09:44.706382", "mission": "content", "result": "partial", "duration_s": 17.3, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:10:06.499106", "mission": "content", "result": "partial", "duration_s": 21.0, "output": "Claude returned error, output length: 235"}
+{"ts": "2026-03-17T08:16:12.776115", "mission": "autonomy:auto_outbound_cold_outreach_en", "result": "partial", "duration_s": 6, "output": "Cold Outreach Engine: 5/6 steps OK"}
+{"ts": "2026-03-17T08:17:27.118344", "mission": "autonomy:alpha_intelligence", "result": "partial", "duration_s": 3, "output": "Alpha Intelligence Research: 1/3 steps OK"}

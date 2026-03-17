@@ -113,8 +113,8 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 <section class="page-hero">
   <div class="container">
     <div class="section-label fade-up">Playbooks</div>
-    <h1 class="fade-up">How we actually build these agents.</h1>
-    <p class="fade-up">Not theory. Not blog posts. These are the exact processes we follow during real installations, with specific tools, timelines, and decision points.</p>
+    <h1 class="fade-up">How we build these agents. Step by step.</h1>
+    <p class="fade-up">Not theory. Not blog posts. These are the exact processes we follow during installations, with specific tools, timelines, and decision points. Most firms hide behind NDAs. We publish ours because execution is the hard part, not knowing the steps.</p>
   </div>
 </section>
 
@@ -125,11 +125,11 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
       <!-- PLAYBOOK 1: AI RECEPTIONIST -->
       <div class="card playbook-card fade-up">
         <span class="playbook-tag">AI Receptionist</span>
-        <h3>Install an AI receptionist in 10 days</h3>
-        <p>Step-by-step guide to deploying a conversational voice AI that answers every call, qualifies leads, and books appointments directly into your calendar. This is the exact process we use for dental offices, law firms, and home service companies. Covers platform selection, conversation design, integration architecture, testing, and go-live.</p>
+        <h3>Install an AI receptionist in 10 business days</h3>
+        <p>Step-by-step guide to deploying a voice AI that answers every call, qualifies leads, and books appointments into your calendar. Built for dental offices, law firms, and home service companies that lose revenue to voicemail. Covers platform selection, conversation design, integration architecture, testing, and go-live.</p>
 
         <div class="playbook-timeline">
-          <h4>10-day install timeline</h4>
+          <h4>10 business day install timeline</h4>
           <div class="timeline-steps">
             <div class="timeline-step">
               <div class="day">Days 1-2</div>
@@ -145,7 +145,7 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
             </div>
             <div class="timeline-step">
               <div class="day">Days 7-8</div>
-              <div class="task">QA testing. 47 test scenarios. Edge cases. Hostile callers. Silence handling. Transfer logic.</div>
+              <div class="task">QA testing. 40+ test scenarios covering edge cases, hostile callers, silence handling, and transfer logic.</div>
             </div>
             <div class="timeline-step">
               <div class="day">Days 9-10</div>
@@ -158,23 +158,24 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
           <h4>What the playbook covers</h4>
           <ul>
             <li>Voice AI platform comparison (scored by latency, voice quality, cost)</li>
-            <li>Conversation design templates for 4 industries</li>
+            <li>Conversation design templates (dental, legal, HVAC, home services)</li>
             <li>Integration architecture diagrams (CRM, calendar, PMS)</li>
-            <li>QA testing checklist (47 scenarios including edge cases)</li>
+            <li>QA testing checklist (40+ scenarios including edge cases)</li>
             <li>Confidence threshold tuning guide</li>
-            <li>Go-live runbook with rollback plan</li>
+            <li>Go-live runbook with rollback plan (what to do when it fails at 2 AM)</li>
             <li>Cost model: per-minute pricing at different call volumes</li>
             <li>Staff training deck for the handoff</li>
+            <li>Data security review: what the agent can and cannot access</li>
           </ul>
         </div>
-        <a href="contact.html" class="btn btn-outline btn-sm">Request this playbook</a>
+        <a href="contact.html" class="btn btn-outline btn-sm">Get the full playbook (PDF + 30-min walkthrough)</a>
       </div>
 
       <!-- PLAYBOOK 2: COMPETITIVE INTELLIGENCE -->
       <div class="card playbook-card fade-up">
         <span class="playbook-tag">Intelligence System</span>
         <h3>Build a competitive intelligence pipeline</h3>
-        <p>How to set up an autonomous system that monitors your competitors, scores every signal, and delivers actionable digests daily. This is the same architecture we use internally to monitor 200+ sources across multiple industries. Covers source selection, scraping infrastructure, AI scoring, alert triggers, and RAG knowledge base setup.</p>
+        <p>How to set up a system that monitors your competitors, scores every signal by threat level, and delivers daily digests your team actually reads. We run this same architecture internally. Covers source selection, scraping infrastructure, AI-powered scoring, alert triggers, and a searchable knowledge base so nothing gets buried.</p>
 
         <div class="playbook-timeline">
           <h4>3-week build timeline</h4>
@@ -200,21 +201,21 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
             <li>Source taxonomy: 8 categories of competitive signals</li>
             <li>Scraping architecture: headless browser + workflow engine + proxy rotation</li>
             <li>AI scoring framework: opportunity vs threat vs neutral</li>
-            <li>Alert trigger rules (price changes, new hires, product launches)</li>
+            <li>Alert trigger rules (price changes, new hires, product launches, funding rounds, tech stack changes)</li>
             <li>RAG setup with vector database: making your intel searchable by AI</li>
             <li>Daily digest format and delivery (Slack, email, or both)</li>
-            <li>Self-healing patterns: what to do when a source changes structure</li>
+            <li>Self-healing patterns: what happens when a source redesigns their site (most scrapers break here)</li>
             <li>Cost model at different monitoring scales</li>
           </ul>
         </div>
-        <a href="contact.html" class="btn btn-outline btn-sm">Request this playbook</a>
+        <a href="contact.html" class="btn btn-outline btn-sm">Get the full playbook (PDF + 30-min walkthrough)</a>
       </div>
 
       <!-- PLAYBOOK 3: AI STACK DECISION -->
       <div class="card playbook-card fade-up">
         <span class="playbook-tag">Decision Framework</span>
-        <h3>Choosing the right AI agent stack for your business</h3>
-        <p>An honest comparison of leading AI models, orchestration tools, and infrastructure options for building autonomous agents. When to use cloud APIs vs open-source models. When a managed workflow engine beats custom code. Covers cost, quality, latency, and vendor risk for each option.</p>
+        <h3>Choosing the right AI agent stack (and avoiding the wrong one)</h3>
+        <p>We've deployed agents on 6 different stacks in production. Some failed. This playbook documents what we learned: which models handle which tasks, where open-source beats paid APIs, and where custom code creates more problems than it solves. No vendor favoritism. Just what worked and what didn't, with the cost data to prove it.</p>
 
         <div class="playbook-what">
           <h4>What the playbook covers</h4>
@@ -226,20 +227,104 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
             <li>Vendor lock-in risk assessment for each stack</li>
             <li>Model Context Protocol: why it matters for tool integration</li>
             <li>Managed vs self-hosted databases for agent state</li>
-            <li>Real client scenarios: which stack we chose and why</li>
+            <li>Real deployment scenarios: which stack we chose, what broke, and what we'd change</li>
           </ul>
         </div>
-        <a href="contact.html" class="btn btn-outline btn-sm">Request this playbook</a>
+        <a href="contact.html" class="btn btn-outline btn-sm">Get the full playbook (PDF + 30-min walkthrough)</a>
+      </div>
+
+      <!-- PLAYBOOK 4: WORKFLOW AUTOMATION -->
+      <div class="card playbook-card fade-up">
+        <span class="playbook-tag">Workflow Automation</span>
+        <h3>Automate a multi-step manual workflow in 2 weeks</h3>
+        <p>Your team has at least one workflow where someone copies data between tools, waits for approvals, or routes requests manually. This playbook covers how to map that workflow, identify what can be automated vs what needs human judgment, build the connectors, and test until the error rate is below 0.5%. Common targets: invoice processing, employee onboarding, and order fulfillment.</p>
+
+        <div class="playbook-timeline">
+          <h4>2-week build timeline</h4>
+          <div class="timeline-steps">
+            <div class="timeline-step">
+              <div class="day">Days 1-3</div>
+              <div class="task">Workflow mapping. Shadow the team. Document every step, decision point, exception, and tool involved. Identify the 3 highest-friction handoffs.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 4-7</div>
+              <div class="task">Build automation layer. API connectors, webhook triggers, conditional routing. Test each connector independently before chaining.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 8-10</div>
+              <div class="task">Error handling and edge cases. Build retry logic, dead-letter queues, and human escalation triggers for exceptions the agent can't resolve.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 11-14</div>
+              <div class="task">Parallel run with manual process. Compare outputs. Tune until error rate is below 0.5%. Go live with monitoring dashboard.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-what">
+          <h4>What the playbook covers</h4>
+          <ul>
+            <li>Workflow mapping template (Miro/FigJam format)</li>
+            <li>Tool integration decision matrix: API vs webhook vs RPA vs scraper</li>
+            <li>Error handling patterns: retry, dead-letter, human escalation</li>
+            <li>Monitoring setup: alerts for failed runs, latency spikes, data mismatches</li>
+            <li>Cost comparison: manual labor vs automation at 3 volume tiers</li>
+            <li>Security review checklist for data flowing between tools</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn btn-outline btn-sm">Get the full playbook (PDF + 30-min walkthrough)</a>
+      </div>
+
+      <!-- PLAYBOOK 5: DATA PIPELINE -->
+      <div class="card playbook-card fade-up">
+        <span class="playbook-tag">Data Pipeline</span>
+        <h3>Build a reporting pipeline that updates itself</h3>
+        <p>Your team spends hours pulling data from CRMs, spreadsheets, and third-party tools into reports every week. Off-the-shelf ETL tools handle the obvious cases, but the last 20% (custom exports, legacy systems, manual CSVs) always requires custom work. This playbook covers both: when to use existing tools and when to build custom connectors, plus how to add anomaly detection so you catch data quality issues before they hit a report.</p>
+
+        <div class="playbook-timeline">
+          <h4>2-week build timeline</h4>
+          <div class="timeline-steps">
+            <div class="timeline-step">
+              <div class="day">Days 1-3</div>
+              <div class="task">Data source audit. Identify every system, API, spreadsheet, and manual export. Map data types, update frequencies, and access methods.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 4-7</div>
+              <div class="task">Build extraction layer. API connectors, scheduled pulls, file watchers. Transform and normalize data into a unified schema.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 8-10</div>
+              <div class="task">Report generation. Build templates for each stakeholder. Configure scheduling, delivery channels, and anomaly alerts.</div>
+            </div>
+            <div class="timeline-step">
+              <div class="day">Days 11-14</div>
+              <div class="task">Validation testing. Compare automated reports against manual versions. Tune thresholds. Document the pipeline for your team.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-what">
+          <h4>What the playbook covers</h4>
+          <ul>
+            <li>ETL architecture for 5 common data source patterns</li>
+            <li>Data validation rules: type checking, range checks, referential integrity</li>
+            <li>Anomaly detection: statistical baselines and alert thresholds</li>
+            <li>Self-healing patterns when upstream schemas change</li>
+            <li>Report templates: executive summary, operational dashboard, trend analysis</li>
+            <li>Scheduling and delivery: cron, webhook triggers, Slack/email output</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn btn-outline btn-sm">Get the full playbook (PDF + 30-min walkthrough)</a>
       </div>
 
     </div>
 
     <!-- WORKSHOP CTA -->
     <div class="workshop-cta fade-up">
-      <div class="section-label">Workshops</div>
-      <h2>Want a guided walkthrough?</h2>
-      <p>We run 90-minute workshops where we walk your team through a playbook using your actual tools and data. We'll map what the agent would look like for your specific business. $750 flat, remote.</p>
-      <a href="book.html" class="btn btn-gold">Book a workshop</a>
+      <div class="section-label">Paid workshops</div>
+      <h2>Skip the free discovery calls. Get the architecture.</h2>
+      <p>90 minutes, your team on the call. We walk through a playbook using your actual tools and data. You leave with: (1) an architecture diagram of the proposed agent, (2) a tool-by-tool recommendation with costs, and (3) a realistic build timeline. $750 flat, remote. Credits toward the project if you hire us.</p>
+      <a href="book.html" class="btn btn-gold">Schedule a 90-min workshop</a>
     </div>
 
   </div>
@@ -248,10 +333,10 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container fade-up">
-    <h2>Rather have us install the agents for you?</h2>
+    <h2>Rather have us build it?</h2>
     <div class="cta-buttons">
-      <a href="packages.html" class="btn btn-gold">See packages</a>
-      <a href="book.html" class="btn btn-outline">Book a call</a>
+      <a href="packages.html" class="btn btn-gold">See packages and pricing</a>
+      <a href="calculator.html" class="btn btn-outline">Calculate your ROI first</a>
     </div>
   </div>
 </section>

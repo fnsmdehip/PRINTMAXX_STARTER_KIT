@@ -118,8 +118,8 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 <section class="page-hero">
   <div class="container">
     <div class="section-label fade-up">Calculator</div>
-    <h1 class="fade-up">See what an AI agent saves you every month.</h1>
-    <p class="fade-up">Drag the sliders. An AI agent works 24/7, 720 hours per month, at $0/hour. Compare that to what you're paying humans to do the same work.</p>
+    <h1 class="fade-up">What your current manual work actually costs.</h1>
+    <p class="fade-up">Drag the sliders to match your team. These calculations use the same framework we walk through on client assessments.</p>
   </div>
 </section>
 
@@ -137,14 +137,14 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
         </div>
 
         <div class="input-group">
-          <label>Average hourly rate (fully loaded)</label>
+          <label>Average hourly cost per person (salary + benefits + overhead)</label>
           <div class="value-display" id="rateDisplay">$72/hr</div>
           <input type="range" id="hourlyRate" min="25" max="200" value="72" step="1" oninput="calculate()">
           <div class="input-range-labels"><span>$25</span><span>$200</span></div>
         </div>
 
         <div class="input-group">
-          <label>Hours per week on tasks an agent could handle</label>
+          <label>Hours per week per person on automatable tasks <span style="font-size:0.75rem;color:var(--muted);font-family:var(--sans)">(data entry, monitoring, routing, reporting)</span></label>
           <div class="value-display" id="hoursDisplay">10 hrs/wk</div>
           <input type="range" id="wastedHours" min="1" max="40" value="10" oninput="calculate()">
           <div class="input-range-labels"><span>1 hr</span><span>40 hrs</span></div>
@@ -156,30 +156,30 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
         <div class="card result-card">
           <div class="result-label">Monthly value recovered</div>
           <div class="result-value" id="monthlyValue">$15,588</div>
-          <div class="result-sub">What you're spending on work an AI agent could do</div>
+          <div class="result-sub">What you're paying humans for tasks an AI agent handles at a fraction of the cost</div>
         </div>
 
         <div class="card result-card result-highlight">
           <div class="result-label">Annual savings</div>
           <div class="result-value" id="annualValue">$187,056</div>
-          <div class="result-sub">Recovered value if you install the agent now</div>
+          <div class="result-sub">Net of typical $200-400/mo in operational costs (API usage, hosting, monitoring)</div>
         </div>
 
         <div class="card result-card">
-          <div class="result-label">Recommended starting tier</div>
+          <div class="result-label">Where to start</div>
           <div class="result-value" id="recommendedTier" style="font-size:1.5rem">AI Agent Install</div>
           <div class="result-sub" id="tierReason">Monthly savings justify a $3,000-$7,000 agent install</div>
         </div>
 
         <div class="card result-card">
-          <div class="result-label">Estimated payback</div>
+          <div class="result-label">Estimated payback period</div>
           <div class="result-value" id="paybackDays">7 days</div>
-          <div class="result-sub">Time to recover your agent install investment</div>
+          <div class="result-sub">Time for recovered value to exceed install cost</div>
         </div>
 
         <!-- AGENT HOURS COMPARISON -->
         <div class="agent-hours-card">
-          <h4>The math that matters</h4>
+          <h4>Where the money goes</h4>
           <div class="hours-comparison">
             <div class="hours-block human">
               <div class="hours-num" id="humanHours">43 hrs/mo</div>
@@ -188,15 +188,15 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
             <div class="hours-vs">vs</div>
             <div class="hours-block agent">
               <div class="hours-num">720 hrs/mo</div>
-              <div class="hours-label">AI agent (24/7, $0/hr)</div>
+              <div class="hours-label">AI agent availability (24/7)</div>
             </div>
           </div>
-          <p style="font-size:0.82rem;color:var(--muted);margin-top:16px;text-align:center">An AI agent works every hour of every day. No PTO, no sick days, no overtime. It does in a weekend what takes a team a month.</p>
+          <p style="font-size:0.82rem;color:var(--muted);margin-top:16px;text-align:center">An AI agent runs continuously on tasks like data entry, monitoring, report generation, and routing. No PTO, no overtime, no context-switching losses. Your team focuses on work that requires judgment.</p>
         </div>
 
         <div class="calc-ctas">
-          <a href="book.html" class="btn btn-gold">Book your agent install</a>
-          <a href="#" class="btn btn-outline" onclick="shareResults();return false;">Share these numbers</a>
+          <a href="book.html" class="btn btn-gold">Discuss these numbers on a call</a>
+          <a href="#" class="btn btn-outline" onclick="shareResults();return false;">Copy ROI summary</a>
         </div>
       </div>
 
@@ -207,9 +207,9 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container fade-up">
-    <h2>Numbers look right? Let's figure out which agent makes sense for your team.</h2>
+    <h2>This calculator covers direct labor costs only. Error rates, missed opportunities, and turnover from repetitive work aren't included.</h2>
     <div class="cta-buttons">
-      <a href="book.html" class="btn btn-gold">Book a 15-minute assessment</a>
+      <a href="book.html" class="btn btn-gold">Talk to us about these numbers</a>
       <a href="packages.html" class="btn btn-outline">See packages</a>
     </div>
   </div>
@@ -245,13 +245,17 @@ function calculate(){
   document.getElementById('humanHours').textContent=humanMonthly+' hrs/mo';
 
   let tier,reason,pilotPrice;
-  if(monthly<4000){
+  if(monthly<2000){
+    tier='Workflow Automation';
+    reason='At this volume, a targeted workflow automation ($1,500-$3,000) makes the most sense. Focus on a single high-friction process.';
+    pilotPrice=1500;
+  } else if(monthly<4000){
     tier='AI Agent Install';
-    reason='Start with a single agent ($3,000-$7,000). Your savings justify the install in the first month.';
+    reason='A single focused agent ($3,000-$7,000) targeting your highest-friction task. Recovers the cost within the first month.';
     pilotPrice=3000;
   } else if(monthly<10000){
     tier='AI Agent Install';
-    reason='A single agent at $3,000-$7,000 pays for itself in '+Math.max(1,Math.round(5000/monthly*30))+' days. Start here, add more agents later.';
+    reason='A single agent at $3,000-$7,000 pays for itself in '+Math.max(1,Math.round(5000/monthly*30))+' days based on your numbers.';
     pilotPrice=5000;
   } else if(monthly<25000){
     tier='Intelligence System';
@@ -259,7 +263,7 @@ function calculate(){
     pilotPrice=12000;
   } else {
     tier='Autonomous Operations';
-    reason='You\'re losing $'+monthly.toLocaleString()+'/mo. A full multi-agent system ($15k-$40k) pays for itself in weeks, not months.';
+    reason='At $'+monthly.toLocaleString()+'/mo in recoverable value, a multi-agent system ($15k-$40k) with 3-5 specialized agents covers intake, processing, reporting, and monitoring. Payback in weeks.';
     pilotPrice=25000;
   }
 
@@ -278,21 +282,25 @@ function shareResults(){
   const annual=document.getElementById('annualValue').textContent;
   const tier=document.getElementById('recommendedTier').textContent;
 
-  const text='AI Agent ROI estimate:\n\n'+
-    'Team: '+team+' people\n'+
-    'Rate: $'+rate+'/hr\n'+
-    'Manual hours/wk: '+hours+'\n\n'+
-    'Monthly recoverable: '+monthly+'\n'+
-    'Annual savings: '+annual+'\n'+
-    'Recommended: '+tier+'\n\n'+
-    'An AI agent works 720 hrs/mo at $0/hr.\n'+
-    'Calculate yours: enterpriseautomationsolutions.com/calculator';
+  const text='AI Agent ROI Analysis\n'+
+    '━━━━━━━━━━━━━━━━━━━━\n\n'+
+    'Current state:\n'+
+    '  '+team+' people x $'+rate+'/hr x '+hours+' hrs/wk\n\n'+
+    'Recoverable value:\n'+
+    '  '+monthly+'/month | '+annual+'/year\n\n'+
+    'Recommendation: '+tier+'\n\n'+
+    'Run your own numbers:\n'+
+    'enterpriseautomationsolutions.com/calculator';
 
   if(navigator.share){
-    navigator.share({title:'AI Agent ROI Calculator',text:text});
+    navigator.share({title:'AI Agent ROI Analysis',text:text});
   } else if(navigator.clipboard){
     navigator.clipboard.writeText(text);
-    alert('Results copied to clipboard.');
+    const btn=document.querySelector('.calc-ctas .btn-outline');
+    const orig=btn.textContent;
+    btn.textContent='Copied to clipboard';
+    btn.style.borderColor='var(--gold)';
+    setTimeout(()=>{btn.textContent=orig;btn.style.borderColor='';},2000);
   }
 }
 

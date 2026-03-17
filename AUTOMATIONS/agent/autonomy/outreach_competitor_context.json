@@ -86,7 +86,7 @@
     },
     {
       "name": "Echo Prayer",
-      "rating": "4.81",
+      "rating": "4.8",
       "price": "Free",
       "last_updated": "2025-12-15"
     },
@@ -308,7 +308,7 @@
       "name": "Notion: Notes, Tasks, AI",
       "rating": "4.78",
       "price": "Free",
-      "last_updated": "2026-03-12"
+      "last_updated": "2026-03-17"
     },
     {
       "name": "Bear - Markdown Notes",
@@ -326,13 +326,13 @@
       "name": "Goodnotes: AI Notes, Docs, PDF",
       "rating": "4.72",
       "price": "Free",
-      "last_updated": "2026-03-10"
+      "last_updated": "2026-03-17"
     },
     {
       "name": "Notability: AI Notes & PDF app",
       "rating": "4.76",
       "price": "Free",
-      "last_updated": "2026-03-12"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Calendars: Schedule Planner",
@@ -356,11 +356,11 @@
       "name": "Superhuman Mail",
       "rating": "4.59",
       "price": "Free",
-      "last_updated": "2026-03-12"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Raycast: AI, Notes and more",
-      "rating": "4.34",
+      "rating": "4.35",
       "price": "Free",
       "last_updated": "2026-03-11"
     },
@@ -412,7 +412,7 @@
       "name": "Brainly: AI Homework Helper",
       "rating": "4.72",
       "price": "Free",
-      "last_updated": "2026-03-10"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Photomath",
@@ -430,7 +430,7 @@
       "name": "Chegg Study - Homework Help",
       "rating": "4.69",
       "price": "Free",
-      "last_updated": "2026-02-17"
+      "last_updated": "2026-03-17"
     },
     {
       "name": "Notion Calendar",
@@ -460,7 +460,7 @@
       "name": "Duolingo - Language Lessons",
       "rating": "4.73",
       "price": "Free",
-      "last_updated": "2026-03-10"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Coursera: Grow your career",
@@ -472,11 +472,11 @@
       "name": "Brilliant: Learn by doing",
       "rating": "4.74",
       "price": "Free",
-      "last_updated": "2026-03-11"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "WolframAlpha",
-      "rating": "2.8",
+      "rating": "2.79",
       "price": "Free",
       "last_updated": "2025-12-17"
     },
@@ -528,7 +528,7 @@
       "name": "Strava: Run, Bike, Walk",
       "rating": "4.81",
       "price": "Free",
-      "last_updated": "2026-03-05"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "MyFitnessPal: Calorie Counter",
@@ -582,7 +582,7 @@
       "name": "Centr: Strength & Fitness App",
       "rating": "4.75",
       "price": "Free",
-      "last_updated": "2026-03-09"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Future Pro: Personal Training",
@@ -612,7 +612,7 @@
       "name": "Freeletics: Workouts & Fitness",
       "rating": "4.64",
       "price": "Free",
-      "last_updated": "2026-03-09"
+      "last_updated": "2026-03-16"
     }
   ],
   "adhd": [
@@ -802,13 +802,13 @@
       "name": "Headspace: Meditation & Sleep",
       "rating": "4.84",
       "price": "Free",
-      "last_updated": "2026-03-10"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "BetterSleep: Relax and Sleep",
       "rating": "4.75",
       "price": "Free",
-      "last_updated": "2026-03-02"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Insight Timer\u2013Meditate & Sleep",
@@ -899,6 +899,12 @@
       "rating": "4.61",
       "price": "Free",
       "last_updated": "2026-02-12"
+    },
+    {
+      "name": "FocusDown: Flip & Focus Timer",
+      "rating": "4.83",
+      "price": "Free",
+      "last_updated": "2026-02-27"
     }
   ],
   "journal": [
@@ -906,7 +912,7 @@
       "name": "Day One: Daily Journal & Diary",
       "rating": "4.83",
       "price": "Free",
-      "last_updated": "2026-03-10"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Journey - Diary, Journal",
@@ -984,7 +990,7 @@
       "name": "Bearable - Symptom Tracker",
       "rating": "4.76",
       "price": "Free",
-      "last_updated": "2026-03-09"
+      "last_updated": "2026-03-16"
     },
     {
       "name": "Moodnotes - Mood Tracker",
@@ -1002,7 +1008,7 @@
       "name": "Balance: Meditation & Sleep",
       "rating": "4.88",
       "price": "Free",
-      "last_updated": "2026-03-12"
+      "last_updated": "2026-03-17"
     }
   ],
   "app_development": [
@@ -1137,12 +1143,6 @@
       "rating": "",
       "price": "",
       "last_updated": ""
-    },
-    {
-      "name": "Danny Postma",
-      "rating": "",
-      "price": "",
-      "last_updated": ""
     }
   ],
   "solopreneur": [
@@ -1249,5 +1249,5 @@
       "last_updated": ""
     }
   ],
-  "updated_at": "2026-03-16T16:30:00.530327"
+  "updated_at": "2026-03-17T08:30:00.829896"
 }

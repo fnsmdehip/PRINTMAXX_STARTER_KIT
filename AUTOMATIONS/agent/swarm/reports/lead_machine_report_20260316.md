@@ -1,3 +1,60 @@
+# Lead Machine Report — 2026-03-16 (Updated: Cycle 4 — 2026-03-17)
+
+---
+
+# CYCLE 4 REPORT — 2026-03-17 (New Verticals: Chiro / Attorney / Reddit)
+
+Cycle: 4 (morning, new vertical prospecting)
+Status: COMPLETE
+New verticals: Chiropractic, Solo Attorney (estate planning), r/forhire channel
+
+## Cycle 4 Summary
+
+| Metric | Value |
+|--------|-------|
+| Sources scanned | Web search (Yelp, Chamber of Commerce, attorney blogs), Reddit r/forhire |
+| Total leads prospected | 10 |
+| Leads scored 8+  | 3 (Grande Chiro, Rotuna Chiro, Addie Prewitt Law) |
+| Outreach drafts written | 6 (5 personalized + 1 channel template) |
+| CSV saved | swarm_leads_20260316_cycle4.csv |
+| New verticals opened | Chiropractic (broken/no site), Solo attorney (DIY site), Reddit r/forhire monitoring |
+
+## Top 3 Leads — Cycle 4 (SEND TODAY)
+
+| Rank | Score | Name | Email | Pitch |
+|------|-------|------|-------|-------|
+| 1 | 9/10 | Dr. Nicholas Grande — Grande Family Chiro | ngrande@croftonpainreliefclinic.com | drgrande.com is a blank directory index. Patients land on raw filenames. |
+| 2 | 8/10 | Dr. Jody Rotuna — Rotuna Chiropractic | help@rotunachiropractic.com | 25yr practice, static HTML, JaneApp redirect loses bookings. |
+| 3 | 8/10 | Addie Prewitt — Estate Planning Attorney | addieprewittlaw.com/contact | Self-diagnosed DIY Squarespace problem publicly. One estate client = pays for site. |
+
+## Files Created — Cycle 4
+
+- AUTOMATIONS/leads/swarm_leads_20260316_cycle4.csv
+- AUTOMATIONS/leads/outreach_drafts/20260317/01_grande_family_chiro_nicholas.md
+- AUTOMATIONS/leads/outreach_drafts/20260317/02_rotuna_chiro_jody.md
+- AUTOMATIONS/leads/outreach_drafts/20260317/03_addie_prewitt_law.md
+- AUTOMATIONS/leads/outreach_drafts/20260317/04_grandview_health_chicago.md
+- AUTOMATIONS/leads/outreach_drafts/20260317/05_relax_chiro_la_premium.md
+- AUTOMATIONS/leads/outreach_drafts/20260317/06_reddit_forhire_template.md
+
+## HUMAN ACTION — Cycle 4 (15 min)
+
+1. Email ngrande@croftonpainreliefclinic.com — draft in 01_grande_family_chiro_nicholas.md
+2. Email help@rotunachiropractic.com — draft in 02_rotuna_chiro_jody.md
+3. Submit contact form at addieprewittlaw.com/contact — draft in 03_addie_prewitt_law.md
+4. Monitor reddit.com/r/forhire daily — sort New, filter [HIRING], reply within 2hr of post
+
+## Cumulative All-Time Totals
+
+- Cycle 1 (Mar 16 morning): 10 leads, 10 drafts
+- Cycle 2 (Mar 16 midday): 10 leads, 10 drafts
+- Cycle 3 (Mar 16 afternoon): 10 leads, 10 drafts
+- Cycle 7 (Mar 16 evening): 10 leads, 10 drafts
+- Cycle 4 (Mar 17 morning): 10 leads, 6 drafts (chiro/attorney new vertical)
+- **All-time total: 50+ qualified leads, 46+ outreach drafts, 5+ verticals**
+
+---
+
 # Lead Machine Report — 2026-03-16
 
 Cycle: 2 (11:45 AM run)

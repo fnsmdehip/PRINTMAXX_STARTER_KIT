@@ -1,5 +1,5 @@
-# ACTIONABLE QUEUE -- 2026-03-16 07:30
-Total items: 77 (deduplicated from all sources)
+# ACTIONABLE QUEUE -- 2026-03-17 07:30
+Total items: 80 (deduplicated from all sources)
 
 ---
 
@@ -101,7 +101,7 @@ Total items: 77 (deduplicated from all sources)
 - [ ] - ✓ All systems healthy, no immediate fixes required
       Source: swarm/system_healer_report_20260315.md
 
-## [P2] MEDIUM -- Nice-to-have optimizations (29 items)
+## [P2] MEDIUM -- Nice-to-have optimizations (32 items)
 
 - [ ] - **HUMAN ACTION (P2, 10 min):** Set up Cal.com account for booking page [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
@@ -133,6 +133,8 @@ Total items: 77 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - [P2] [HUMAN] None: blocking None ventures (source: DAILY_TACTICAL_PLAN) [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - [P2] [HUMAN] 📋 Old audit CSVs available for manual cleanup if needed (source: swarm/system_healer_report_20260315.md) [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - None: blocking None ventures [HUMAN]
       Source: DAILY_TACTICAL_PLAN
 - [ ] - 📋 Old audit CSVs available for manual cleanup if needed [HUMAN]
@@ -153,11 +155,15 @@ Total items: 77 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - 1 REJECTED (pure price action news)
       Source: PERSISTENT_TASK_TRACKER
-- [ ] - All venture automation services now active
+- [ ] - Archive logs >30 days: ~15MB saveable
       Source: swarm/system_healer_report_20260316.md
-- [ ] - All script services now active
+- [ ] - Old app builds (>10 versions): ~50MB saveable
       Source: swarm/system_healer_report_20260316.md
-- [ ] - Ready to execute on schedule
+- [ ] - Estimated reclaim: 65-80MB (brings disk from 94.8% to ~94%)
+      Source: swarm/system_healer_report_20260316.md
+- [ ] - Current growth rate: ~10MB/day
+      Source: swarm/system_healer_report_20260316.md
+- [ ] - Time until critical (98%): 5-7 days
       Source: swarm/system_healer_report_20260316.md
 - [ ] - ⚠️ Monitor disk usage trend (currently 97%)
       Source: swarm/system_healer_report_20260315.md
@@ -171,6 +177,6 @@ Total items: 77 (deduplicated from all sources)
 
 ---
 ### Sources
-- PERSISTENT_TASK_TRACKER: 70 items
-- swarm: 6 items
+- PERSISTENT_TASK_TRACKER: 71 items
+- swarm: 8 items
 - DAILY_TACTICAL_PLAN: 1 items

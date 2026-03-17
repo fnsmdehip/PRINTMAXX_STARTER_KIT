@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-16T05:45:00.685240",
+  "generated": "2026-03-17T06:03:59.671655",
   "project": "PRINTMAXX",
   "total_scripts": 20,
   "scripts": {
@@ -202,9 +202,9 @@
         "--cron-add"
       ],
       "state_files": [
-        "CHECKPOINT_FILE",
         "STATE_FILE",
         "ceo_state.json",
+        "CHECKPOINT_FILE",
         "LOCK_FILE"
       ],
       "reads": [],
@@ -529,9 +529,9 @@
         "--self-manage"
       ],
       "state_files": [
+        "STATE_FILE",
         "autonomy_state.json",
-        "LOG_FILE",
-        "STATE_FILE"
+        "LOG_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -1555,8 +1555,8 @@
       ],
       "cli": [],
       "state_files": [
-        "LOG_FILE",
-        "CRON_ENTRIES_FILE"
+        "CRON_ENTRIES_FILE",
+        "LOG_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2003,10 +2003,10 @@
         "--status"
       ],
       "state_files": [
-        "daily_research_orchestrator_state.json",
-        "LOG_FILE",
         "STATE_FILE",
-        "LOCK_FILE"
+        "daily_research_orchestrator_state.json",
+        "LOCK_FILE",
+        "LOG_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2231,9 +2231,9 @@
         "--visible"
       ],
       "state_files": [
-        "COPY_STYLE_HANDLES_FILE",
         "BRAVE_KEY_FILE",
-        "CREDS_FILE"
+        "CREDS_FILE",
+        "COPY_STYLE_HANDLES_FILE"
       ],
       "reads": [],
       "writes": [],
@@ -2446,10 +2446,10 @@
       ],
       "state_files": [],
       "reads": [
-        "ETSY_LISTINGS_COMPLETE.md",
-        "progress.json",
+        "ACCOUNTS.csv",
         "REVENUE_TRACKER.csv",
-        "ACCOUNTS.csv"
+        "progress.json",
+        "ETSY_LISTINGS_COMPLETE.md"
       ],
       "writes": [],
       "calls_scripts": [],

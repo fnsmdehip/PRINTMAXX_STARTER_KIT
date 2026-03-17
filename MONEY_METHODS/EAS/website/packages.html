@@ -58,10 +58,21 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 .pricing-card li{font-size:0.88rem;color:var(--muted);padding:9px 0;border-bottom:1px solid rgba(245,240,232,0.04);padding-left:16px;position:relative}
 .pricing-card li::before{content:'';position:absolute;left:0;top:50%;width:4px;height:4px;background:var(--gold);border-radius:50%;transform:translateY(-50%)}
 
+/* DNA CARD */
+.dna-pricing-card{grid-column:1 / -1;border-color:var(--gold);background:rgba(201,162,39,0.06)}
+
 .included-section{margin-top:80px;padding:60px 0;border-top:1px solid rgba(245,240,232,0.06);border-bottom:1px solid rgba(245,240,232,0.06)}
 .included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
 .included-item h4{font-size:1rem;margin-bottom:8px}
 .included-item p{font-size:0.85rem;color:var(--muted)}
+
+/* ADD-ONS */
+.addons-section{margin-top:60px}
+.addons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+.addon-card{background:rgba(245,240,232,0.02);border:1px solid rgba(245,240,232,0.06);border-radius:6px;padding:28px 24px}
+.addon-card h4{font-size:1rem;margin-bottom:4px;font-family:var(--serif);font-weight:400}
+.addon-price{font-family:var(--serif);font-size:1.1rem;color:var(--gold);margin-bottom:12px}
+.addon-card p{font-size:0.82rem;color:var(--muted);line-height:1.6}
 
 .billing-note{text-align:center;margin-top:60px;padding:40px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:6px}
 .billing-note h3{margin-bottom:12px}
@@ -74,7 +85,7 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 .faq-q span{font-size:1.2rem;transition:transform var(--transition);color:var(--muted)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
 .faq-a p{font-size:0.9rem;color:var(--muted);line-height:1.7;padding-bottom:24px}
-.faq-item.open .faq-a{max-height:300px}
+.faq-item.open .faq-a{max-height:400px}
 .faq-item.open .faq-q span{transform:rotate(45deg)}
 
 .final-cta{text-align:center;padding:120px 0;border-top:1px solid rgba(245,240,232,0.06)}
@@ -83,7 +94,8 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 
 @media(max-width:768px){
   .nav-links{display:none}.hamburger{display:flex}
-  .pricing-grid,.included-grid{grid-template-columns:1fr}
+  .pricing-grid,.included-grid,.addons-grid{grid-template-columns:1fr}
+  .dna-pricing-card{grid-column:auto}
   .page-hero{padding:120px 0 40px}
   section{padding:60px 0}
 }
@@ -118,15 +130,15 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 <section class="page-hero">
   <div class="container">
     <div class="section-label fade-up">Packages</div>
-    <h1 class="fade-up">Four tiers. From a single agent to full autonomous operations.</h1>
-    <p class="fade-up">Fixed pricing on every engagement. You know the cost before we write a single line of code. No hourly billing, no scope creep invoices.</p>
+    <h1 class="fade-up">Fixed price. You own everything. No lock-in.</h1>
+    <p class="fade-up">You know the cost before we write a single line of code. No hourly billing, no scope creep invoices. One agent or a full multi-agent system, priced per project, not per hour. Every package below has been deployed in production.</p>
   </div>
 </section>
 
 <section style="padding-top:0">
   <div class="container">
     <div class="section-label fade-up" style="margin-bottom:8px">One-time installs</div>
-    <p class="fade-up" style="color:var(--muted);font-size:0.9rem;margin-bottom:32px">Fixed-price projects. You pay once, you own everything.</p>
+    <p class="fade-up" style="color:var(--muted);font-size:0.9rem;margin-bottom:32px">Build it, deploy it, hand it over. Every project has a defined scope, fixed cost, and hard deadline.</p>
     <div class="pricing-grid">
 
       <div class="card pricing-card fade-up" style="position:relative">
@@ -134,15 +146,15 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
         <div class="tier-label">Tier 1</div>
         <h3>AI Agent Install</h3>
         <div class="price">$3,000 - $7,000</div>
-        <div class="price-note">Fixed fee, 10-14 days</div>
-        <p class="tier-desc">Pick one autonomous agent. We install it. It runs 24/7 without you. Choose from: AI Receptionist, Content Engine, Lead Machine, Meeting Brain, or Support Agent.</p>
+        <div class="price-note">Fixed fee, 10-14 day delivery guarantee</div>
+        <p class="tier-desc">One AI agent that handles a specific job: answering phones, qualifying leads, writing content, resolving support tickets, or running a process you define. Scoped to your business, not a template.</p>
         <ul>
-          <li>Full agent build, configuration, and deployment</li>
-          <li>Integration with your existing tools and CRM</li>
-          <li>Agent trained on your data and business context</li>
-          <li>2-week supervised autonomy period with metrics</li>
-          <li>Runbook, architecture docs, and team training</li>
-          <li>30-day warranty on bugs and issues</li>
+          <li>Custom agent build, testing, and production deployment</li>
+          <li>Integrates with your stack: Salesforce, HubSpot, Slack, Google Workspace, and 50+ tools</li>
+          <li>Agent trained on your data: past emails, tickets, calls, and internal docs</li>
+          <li>2-week supervised period: agent runs live, we monitor every output, fix edge cases in real time</li>
+          <li>Runbook and architecture docs your ops team can follow without us</li>
+          <li>60-day warranty: bugs and issues fixed at no cost</li>
         </ul>
         <a href="book.html" class="btn btn-gold btn-sm" style="width:100%;margin-top:16px">Book your agent install</a>
       </div>
@@ -152,14 +164,14 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
         <h3>Intelligence System</h3>
         <div class="price">$8,000 - $20,000</div>
         <div class="price-note">Fixed fee, 3-4 weeks</div>
-        <p class="tier-desc">Custom competitive intelligence or market monitoring pipeline. Your AI scrapes, scores, categorizes, and alerts you on every signal that matters to your business.</p>
+        <p class="tier-desc">Custom competitive intelligence pipeline. Your AI scrapes competitor pricing, product launches, job postings, SEC filings, social mentions, and forum chatter. Scores each signal as opportunity, threat, or noise. Alerts you same-day. Searchable knowledge base included.</p>
         <ul>
-          <li>Scrapes sources you define (competitors, forums, social, news, SEC filings)</li>
-          <li>AI scores every signal: opportunity, threat, or neutral</li>
-          <li>Daily Slack or email digest with actionable insights</li>
+          <li>You define the sources and signals. We configure the scraping and scoring pipeline.</li>
+          <li>AI scores every signal: opportunity, threat, or noise. Priority-ranked daily.</li>
+          <li>Daily Slack or email digest: what changed, what matters, what to do</li>
           <li>Auto-alerts on significant changes (price drops, new products, hiring)</li>
-          <li>RAG knowledge base: your company history searchable by AI</li>
-          <li>Self-updating and self-healing, runs 24/7 on your infrastructure</li>
+          <li>Searchable knowledge base: your company history searchable by AI</li>
+          <li>Self-healing: if a data source changes format or goes down, the system adapts without manual fixes</li>
         </ul>
         <a href="book.html" class="btn btn-outline btn-sm" style="width:100%;margin-top:16px">Scope your intel system</a>
       </div>
@@ -169,23 +181,43 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
         <h3>Autonomous Operations</h3>
         <div class="price">$15,000 - $40,000</div>
         <div class="price-note">Fixed fee, 4-8 weeks</div>
-        <p class="tier-desc">Full multi-agent system for a business department. Multiple AI agents coordinating, making decisions, handing off tasks, and reporting results. The full package.</p>
+        <p class="tier-desc">Multi-agent system for an entire department: operations, sales, support, logistics, or finance. Multiple AI agents coordinating, making decisions, handing off tasks, and reporting results. Price depends on number of agents and integrations.</p>
         <ul>
-          <li>Multiple AI agents with orchestrator coordination</li>
-          <li>Self-healing with circuit breakers, retry logic, fallback paths</li>
-          <li>Custom tool integrations via Model Context Protocol</li>
-          <li>RAG knowledge base from your company docs</li>
-          <li>Decision logging and audit trails</li>
-          <li>Daily and weekly performance dashboards</li>
-          <li>Agent-to-agent communication and task handoff</li>
+          <li>3-8 AI agents with a central orchestrator that assigns and sequences work</li>
+          <li>Self-healing: if an agent fails, backup paths activate automatically. No 3am pages.</li>
+          <li>Connects to your existing tools (CRM, ERP, email, Slack, databases)</li>
+          <li>Searchable knowledge base from your company docs</li>
+          <li>Every agent decision logged with reasoning: full audit trail for compliance</li>
+          <li>Daily and weekly performance dashboards accessible to your entire leadership team</li>
+          <li>Agents hand off tasks to each other without human routing</li>
         </ul>
-        <a href="contact.html" class="btn btn-outline btn-sm" style="width:100%;margin-top:16px">Request a proposal</a>
+        <a href="contact.html" class="btn btn-outline btn-sm" style="width:100%;margin-top:16px">Scope your department build</a>
+      </div>
+
+      <!-- BUSINESS DNA -->
+      <div class="card pricing-card dna-pricing-card fade-up" style="position:relative">
+        <div class="badge">Premium</div>
+        <div class="tier-label">Tier 4</div>
+        <h3>Business DNA Analysis</h3>
+        <div class="price">$25,000 - $75,000</div>
+        <div class="price-note">30-day observation + custom agent deployment</div>
+        <p class="tier-desc">We don't ask how you work. We observe. For 30 days, with full consent and NDA coverage, our AI analyzes communication patterns, meeting workflows, screen activity, and decision chains. We map the micro-decisions and unwritten rules that never make it into a process document. Then we build agents based on what we observed, not what you described.</p>
+        <ul>
+          <li>30-day operational observation (email, Slack, meetings, screen, calls)</li>
+          <li>Complete workflow mapping: every handoff, bottleneck, and decision pattern</li>
+          <li>Operational digital twin: a visual map and simulation of your workflows, bottlenecks, and decision trees you can review and update</li>
+          <li>Custom agent deployment based on observed behavior, not described processes</li>
+          <li>Agents learn how your best people make decisions: what they check, who they escalate to, what exceptions they handle manually</li>
+          <li>Data security options: cloud, private cloud, on-premise, or hybrid deployment</li>
+          <li>Full NDA coverage. Your data stays under your control at all times</li>
+        </ul>
+        <a href="contact.html" class="btn btn-gold btn-sm" style="width:100%;margin-top:16px">Request a Business DNA proposal</a>
       </div>
 
     </div>
 
     <div class="section-label fade-up" style="margin-top:80px;margin-bottom:8px">Monthly retainers</div>
-    <p class="fade-up" style="color:var(--muted);font-size:0.9rem;margin-bottom:32px">Ongoing agent management. We keep your systems running, improving, and compounding.</p>
+    <p class="fade-up" style="color:var(--muted);font-size:0.9rem;margin-bottom:32px">Ongoing management. Agents get faster, more accurate, and more capable every month. You don't babysit them. We do.</p>
     <div class="pricing-grid">
 
       <div class="card pricing-card fade-up" style="position:relative">
@@ -194,13 +226,13 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
         <h3>Agent Care</h3>
         <div class="price">$997 - $2,997</div>
         <div class="price-note">Per month</div>
-        <p class="tier-desc">We monitor, maintain, and improve the agents we installed. Prompt tuning, integration fixes, performance reports, and up to 10 hours of improvement work per month.</p>
+        <p class="tier-desc">We monitor, maintain, and improve the agents we installed. $997/mo covers 1-2 agents with 5 hours of improvement work. $2,997/mo covers 3-5 agents with 10 hours. Prompt tuning, integration fixes, and monthly performance reports included at every level.</p>
         <ul>
           <li>24/7 agent monitoring and alerting</li>
           <li>Monthly prompt tuning and accuracy improvements</li>
           <li>Integration maintenance (API changes, tool updates)</li>
           <li>Monthly performance report with ROI metrics</li>
-          <li>Up to 10 hours of improvement work per month</li>
+          <li>5-10 hours of improvement work per month (scales with plan)</li>
           <li>Slack support, same-day response</li>
         </ul>
         <a href="book.html" class="btn btn-gold btn-sm" style="width:100%;margin-top:16px">Start agent care</a>
@@ -211,18 +243,42 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
         <h3>Managed Autonomy</h3>
         <div class="price">$3,000 - $10,000</div>
         <div class="price-note">Per month</div>
-        <p class="tier-desc">We run and evolve your AI systems. Monthly capability additions, performance optimization, and a dedicated team that keeps your agents getting smarter.</p>
+        <p class="tier-desc">We run and evolve your AI systems. $3,000/mo covers system management and monthly optimization. $10,000/mo adds dedicated engineering time, new agent builds, and strategic AI roadmap ownership. Price scales with scope, not surprises.</p>
         <ul>
           <li>Everything in Agent Care, plus:</li>
           <li>Monthly capability additions (new agents, integrations, data sources)</li>
-          <li>Performance optimization: A/B test automations, tune prompts, improve accuracy</li>
-          <li>Quarterly strategic AI roadmap review</li>
+          <li>Performance optimization: A/B test automations, tune prompts, measure accuracy improvements</li>
+          <li>Quarterly strategic AI roadmap review ($5K+ plans)</li>
           <li>Dedicated Slack channel, 2-hour response SLA</li>
-          <li>Agent health dashboards with uptime, accuracy, and ROI metrics</li>
+          <li>Agent health dashboards: uptime, accuracy, cost-per-action, and ROI metrics</li>
         </ul>
         <a href="contact.html" class="btn btn-outline btn-sm" style="width:100%;margin-top:16px">Request a proposal</a>
       </div>
 
+    </div>
+
+    <!-- DATA SECURITY ADD-ONS -->
+    <div class="addons-section fade-up">
+      <div class="section-label">Data security add-ons</div>
+      <h2 style="margin-bottom:8px">HIPAA, SOC 2, FINRA, FedRAMP. We deploy where your data policy requires.</h2>
+      <p style="color:var(--muted);font-size:0.9rem;margin-bottom:24px">Available with any tier. If your compliance team has data residency requirements, start here.</p>
+      <div class="addons-grid">
+        <div class="addon-card fade-up">
+          <h4>Private Cloud Deployment</h4>
+          <div class="addon-price">+$5,000 - $10,000</div>
+          <p>Agents run on dedicated instances in your AWS, GCP, or Azure account. You control access, logging, and data retention. We manage the agents, you own the infrastructure.</p>
+        </div>
+        <div class="addon-card fade-up">
+          <h4>On-Premise / Air-Gapped</h4>
+          <div class="addon-price">+$8,000 - $20,000</div>
+          <p>Open-source models running on your hardware. Data never leaves your network. No external API calls. Built for HIPAA, SOC 2 Type II, FINRA/SEC, and FedRAMP requirements. Includes hardware spec consultation.</p>
+        </div>
+        <div class="addon-card fade-up">
+          <h4>Client-Owned Model Training</h4>
+          <div class="addon-price">+$15,000 - $35,000</div>
+          <p>We fine-tune a model on your proprietary data. It runs on your infrastructure. We don't retain copies, training data, or model weights after delivery. Your institutional knowledge stays in your building, not in a data center you don't control.</p>
+        </div>
+      </div>
     </div>
 
     <!-- INCLUDED IN EVERY ENGAGEMENT -->
@@ -231,28 +287,28 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
       <h2>Included in every engagement</h2>
       <div class="included-grid">
         <div class="included-item fade-up">
-          <h4>Dedicated Slack channel</h4>
-          <p>Direct access to your project lead. No support tickets, no waiting 48 hours. Real-time communication throughout the build.</p>
+          <h4>Direct access to your build team</h4>
+          <p>Shared Slack channel with your project lead and engineers. No support ticket queues, no 48-hour wait. You talk to the people writing the code.</p>
         </div>
         <div class="included-item fade-up">
           <h4>Full documentation handoff</h4>
-          <p>Architecture diagrams, runbooks, and SOPs. Your team can maintain, modify, and extend everything we build. No black boxes.</p>
+          <p>Architecture diagrams, runbooks, and SOPs. Your team can maintain, modify, and extend everything we build. If we get hit by a bus, your system keeps running.</p>
         </div>
         <div class="included-item fade-up">
           <h4>Agent performance tracking</h4>
-          <p>Before-and-after metrics on every agent. Calls handled, leads generated, tickets resolved, hours saved. You see exactly what changed.</p>
+          <p>Before-and-after metrics on every agent. Calls handled, leads generated, tickets resolved, hours saved, dollars recovered. Tracked from day one.</p>
         </div>
         <div class="included-item fade-up">
           <h4>Team training session</h4>
-          <p>90-minute hands-on training for your team. How the agent works, how to monitor it, when to intervene, and how to get the most out of it.</p>
+          <p>90-minute hands-on session. How the agent works, how to monitor it, when to intervene, what the metrics mean. Recorded for future hires.</p>
         </div>
         <div class="included-item fade-up">
-          <h4>30-day warranty</h4>
-          <p>Bugs and issues fixed at no extra cost for 30 days after launch. If something breaks that we built, we fix it. No asterisks.</p>
+          <h4>60-day warranty</h4>
+          <p>Bugs and issues fixed at no extra cost for 60 days after launch. If something breaks that we built, we fix it. No asterisks.</p>
         </div>
         <div class="included-item fade-up">
           <h4>Open-source, no lock-in</h4>
-          <p>We build on open-source workflow engines and databases. You own the code, the data, and the infrastructure. If you leave, everything keeps running.</p>
+          <p>We build on open-source tools. You own the code, the data, and the infrastructure. If you fire us tomorrow, everything keeps running. Most AI agencies use proprietary platforms that stop working when you stop paying. We don't.</p>
         </div>
       </div>
     </div>
@@ -260,7 +316,7 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
     <!-- BILLING -->
     <div class="billing-note fade-up">
       <h3>Simple billing</h3>
-      <p>50% to reserve your spot. 50% on agent launch. Managed Autonomy billed monthly, 30-day cancellation, no penalties. You own everything we build.</p>
+      <p>One-time installs: 50% to start, 50% on launch. Retainers: monthly, cancel in 30 days, no penalties. Business DNA: three equal milestones (observation, analysis, deployment). You own everything we build.</p>
     </div>
   </div>
 </section>
@@ -269,22 +325,38 @@ footer{border-top:1px solid rgba(245,240,232,0.06);padding:40px 0}
 <section>
   <div class="container">
     <div class="section-label fade-up">Questions</div>
-    <h2 class="fade-up">Before you pick a tier.</h2>
+    <h2 class="fade-up">Common questions.</h2>
     <div class="faq-list">
       <div class="faq-item fade-up">
-        <div class="faq-q" onclick="toggleFaq(this)">Can we start with one agent and scale up later?<span>+</span></div>
-        <div class="faq-a"><p>That's what most clients do. Start with an AI Receptionist or Lead Machine at Tier 1. Run it for a month, see the numbers, then decide if you want to add more agents or move to Tier 2/3. Each agent works independently, so you can add them one at a time.</p></div>
+        <div class="faq-q" onclick="toggleFaq(this)">What size company is this for?<span>+</span></div>
+        <div class="faq-a"><p>Most clients have 10-500 employees and $2M-$100M in revenue. If you have fewer than 5 employees, most of these agents won't save enough time to justify the cost. If you're a Fortune 500, we work with your IT and compliance teams, but the engagement starts the same way: one agent, one workflow, measured results.</p></div>
       </div>
       <div class="faq-item fade-up">
-        <div class="faq-q" onclick="toggleFaq(this)">What if our situation doesn't fit these tiers?<span>+</span></div>
-        <div class="faq-a"><p>We scope custom projects regularly. The tiers cover 80% of engagements, but if you need something specific, we'll build a custom proposal. Same fixed-price approach, same delivery timeline. The tiers are starting points, not cages.</p></div>
+        <div class="faq-q" onclick="toggleFaq(this)">Can we start with one agent and scale up later?<span>+</span></div>
+        <div class="faq-a"><p>That's what most clients do. Start with an agent install at Tier 1. Run it for a month, see the numbers, then decide if you want to add more agents or move to Tier 2/3. Each agent works independently, so you can add them one at a time. Some clients start with a single agent and grow to a full multi-agent system over 6-12 months.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">What if our use case isn't listed?<span>+</span></div>
+        <div class="faq-a"><p>If a human does it on a schedule, follows a process, and makes decisions based on data, we can build an agent for it. The agents on our homepage are starting points. We've also built agents for financial reconciliation, regulatory compliance, supply chain coordination, recruiting pipelines, quality assurance, and data processing.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">Is Business DNA worth the premium over standard agent install?<span>+</span></div>
+        <div class="faq-a"><p>It depends on complexity. If you know exactly what you want automated (e.g., "answer our phones"), a Tier 1 agent install is the right call. Business DNA is for organizations where the workflows are complex, undocumented, or involve institutional knowledge that nobody has written down. Agents built from DNA analysis handle edge cases that described-process agents miss, because they're modeled on what your people actually do, not what they say they do. For large operations where getting it wrong is expensive, the observation phase pays for itself.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">What about data security for sensitive industries?<span>+</span></div>
+        <div class="faq-a"><p>We offer four deployment models. Standard cloud (encrypted, SOC 2 compliant). Private cloud (your AWS/GCP/Azure). On-premise with open-source models (data never leaves your network). And hybrid (AI reasoning runs in the cloud, but your sensitive data stays on-premise and never leaves your network). For finance, healthcare, legal, and defense, we also offer client-owned model training: we train a model on your data that you own completely. We don't retain copies. Your proprietary information never touches a third-party provider.</p></div>
       </div>
       <div class="faq-item fade-up">
         <div class="faq-q" onclick="toggleFaq(this)">Is there a discount for bundling agents?<span>+</span></div>
-        <div class="faq-a"><p>Yes. If you install 2+ agents together, we reduce the combined price by 15%. The agents share infrastructure (same workflow engine, same database backend), so we pass the efficiency savings to you.</p></div>
+        <div class="faq-a"><p>Yes. Install 2+ agents together and the combined price drops 15%. Each agent after the first is faster to deploy since the core infrastructure is already in place.</p></div>
       </div>
       <div class="faq-item fade-up">
-        <div class="faq-q" onclick="toggleFaq(this)">What's the cancellation policy on Managed Autonomy?<span>+</span></div>
+        <div class="faq-q" onclick="toggleFaq(this)">Why not build this in-house?<span>+</span></div>
+        <div class="faq-a"><p>You can. If you have AI engineers on staff, the main cost is their time and the iteration cycles. Most companies that come to us tried internal builds first and hit two problems: it took 3-4x longer than expected, and the agents worked in demos but broke in production. We've deployed enough agents to know the failure modes. That's what you're buying: fewer dead-end iterations. If you do build in-house, we'll still consult on architecture.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q" onclick="toggleFaq(this)">What's the cancellation policy on retainers?<span>+</span></div>
         <div class="faq-a"><p>30 days notice. No penalties, no exit fees. We hand over all documentation, credentials, and monitoring access. Your agents keep running. You own everything. We designed it this way because we'd rather keep clients by being good than by making it hard to leave.</p></div>
       </div>
     </div>

@@ -1,0 +1,42 @@
+{
+  "reddit_sizes": {
+    "personalfinance": {
+      "subscribers": 21608654,
+      "label": "r/personalfinance (finance habit)"
+    },
+    "productivity": {
+      "subscribers": 4150773,
+      "label": "r/productivity (productivity streak)"
+    },
+    "walking": {
+      "subscribers": 217859,
+      "label": "r/walking (walking habit)"
+    },
+    "flexibility": {
+      "subscribers": 2384495,
+      "label": "r/flexibility (stretching habit)"
+    },
+    "wakeupearlyclub": {
+      "subscribers": 0,
+      "label": "r/wakeupearlyclub (early riser)"
+    },
+    "nosurf": {
+      "subscribers": 292744,
+      "label": "r/nosurf (digital detox)"
+    },
+    "loseit": {
+      "subscribers": 4128326,
+      "label": "r/loseit (weight tracking)"
+    },
+    "breathwork": {
+      "subscribers": 20371,
+      "label": "r/breathwork (breathwork habit)"
+    },
+    "EatCheapAndHealthy": {
+      "subscribers": 11408183,
+      "label": "r/EatCheapAndHealthy (clean eating)"
+    }
+  },
+  "scraped_at": "2026-03-17T10:52:49.885695+00:00",
+  "cycle": 58
+}

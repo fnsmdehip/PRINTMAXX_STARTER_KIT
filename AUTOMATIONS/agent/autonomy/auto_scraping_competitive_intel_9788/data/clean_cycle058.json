@@ -1,0 +1,110 @@
+{
+  "cycle": 58,
+  "cleaned_at": "2026-03-17T10:52:49.886703+00:00",
+  "gap_classification": {
+    "breathwork_habit": {
+      "status": "BLUE_OCEAN",
+      "community_size": 20371,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    },
+    "productivity_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 4150773,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    },
+    "walking_habit": {
+      "status": "BLUE_OCEAN",
+      "community_size": 217859,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    },
+    "finance_habit": {
+      "status": "OCCUPIED",
+      "community_size": 21608654,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 1,
+      "paid_apps_sample": []
+    },
+    "digital_detox_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 292744,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    },
+    "weight_tracking": {
+      "status": "BLUE_OCEAN",
+      "community_size": 4128326,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    },
+    "early_riser_habit": {
+      "status": "BLUE_OCEAN",
+      "community_size": 180000,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    },
+    "clean_eating_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 11408183,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    },
+    "stretching_habit": {
+      "status": "BLUE_OCEAN",
+      "community_size": 2384495,
+      "community_source": "reddit_live",
+      "itunes_paid_total": 0,
+      "paid_apps_sample": []
+    }
+  },
+  "new_bos_this_cycle": [
+    {
+      "niche": "clean_eating_streak",
+      "community": 11408183
+    },
+    {
+      "niche": "productivity_streak",
+      "community": 4150773
+    },
+    {
+      "niche": "weight_tracking",
+      "community": 4128326
+    },
+    {
+      "niche": "stretching_habit",
+      "community": 2384495
+    },
+    {
+      "niche": "digital_detox_streak",
+      "community": 292744
+    },
+    {
+      "niche": "walking_habit",
+      "community": 217859
+    },
+    {
+      "niche": "early_riser_habit",
+      "community": 180000
+    },
+    {
+      "niche": "breathwork_habit",
+      "community": 20371
+    }
+  ],
+  "occupied_niches": [
+    "finance_habit"
+  ],
+  "dedup_notes": [
+    "All 9 targets are first-time scans this cycle."
+  ],
+  "rate_limit_impact": "None. All scans completed."
+}

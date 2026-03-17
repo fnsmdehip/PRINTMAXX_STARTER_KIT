@@ -1,8 +1,8 @@
 # Reddit Pain Point Digest
 
-Generated: 2026-03-16 18:10:35
+Generated: 2026-03-16 20:10:40
 
-Total pain points found: 10
+Total pain points found: 9
 
 ---
 
@@ -20,22 +20,21 @@ Pattern: looking_for | Categories: looking_for
 > How do you handle pay transparency compliance when hiring across multiple states? We're a 40-person company posting jobs in CA, IL, and NY. I've been manually checking the requirements for each state 
 Link: https://reddit.com/r/smallbusiness/comments/1rvlv92/anyone_actually_using_software_to_check_pay/
 
-## MEDIUM Opportunity (8 posts, score 50-69)
+## MEDIUM Opportunity (7 posts, score 50-69)
 
 - [69] r/loseit: Can I achieve fat loss eating 2000kcal? (need_help)
-- [69] r/GetDisciplined: Procrastination is silently creating a graveyard of our ideas (need_help)
+- [60] r/loseit: I need help to come up with a weight-loss plan (need_help)
 - [60] r/loseit: Help with confidence after weight loss (need_help)
 - [60] r/loseit: Confidence Issues (need_help)
+- [60] r/loseit: Need help with food (need_help)
 - [60] r/smallbusiness: Giving access to a~i (need_help)
 - [60] r/smallbusiness: Need help with multi-location Tech Stack Set Up (need_help)
-- [51] r/loseit: Need help with food (need_help)
-- [51] r/Christianity: Why does heaven sound so scary? (need_help)
 
 ## Pattern Breakdown
 
 | Pattern | Count | Signal |
 |---------|-------|--------|
-| need_help | 8 | 60/100 |
+| need_help | 7 | 60/100 |
 | looking_for | 2 | 80/100 |
 
 ## Recommended Actions

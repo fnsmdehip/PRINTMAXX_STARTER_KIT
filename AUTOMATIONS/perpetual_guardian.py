@@ -147,9 +147,10 @@ def check_cron() -> Tuple[str, str]:
 def check_git() -> Tuple[str, str]:
     """Check git status."""
     try:
+        _clear_stale_lock()
         result = subprocess.run(
             ["git", "status", "--porcelain"],
-            capture_output=True, text=True, timeout=10,
+            capture_output=True, text=True, timeout=60,
             cwd=str(BASE)
         )
         changes = len([l for l in result.stdout.strip().split("\n") if l.strip()])
@@ -304,21 +305,63 @@ def run_pulse() -> Dict:
 # SAFETY COMMIT (git commit if changes exist, every 2 hours)
 # ---------------------------------------------------------------------------
 
+def _clear_stale_lock():
+    """Remove stale .git/index.lock if no git process is running."""
+    lock = BASE / ".git" / "index.lock"
+    if lock.exists():
+        import time as _time
+        age = _time.time() - lock.stat().st_mtime
+        if age > 120:  # older than 2 minutes = stale
+            lock.unlink()
+            log(f"  Cleared stale index.lock ({int(age)}s old)")
+
+
+def _push_to_remote():
+    """Push to origin/main. Called after commit AND standalone."""
+    try:
+        # Check if there are unpushed commits
+        ahead = subprocess.run(
+            ["git", "rev-list", "--count", "origin/main..HEAD"],
+            capture_output=True, text=True, timeout=15,
+            cwd=str(BASE)
+        )
+        count = int(ahead.stdout.strip()) if ahead.returncode == 0 else 0
+        if count == 0:
+            return
+        log(f"  {count} unpushed commits. Pushing...")
+        push_result = subprocess.run(
+            ["git", "push", "origin", "main"],
+            capture_output=True, text=True, timeout=180,
+            cwd=str(BASE)
+        )
+        if push_result.returncode == 0:
+            log("  Pushed to origin/main")
+        else:
+            log(f"  Push failed: {push_result.stderr.strip()[:200]}")
+    except Exception as e:
+        log(f"  Push error: {e}")
+
+
 def run_safety_commit():
     """Git commit uncommitted changes as a safety net."""
     log("=== SAFETY GIT COMMIT ===")
 
     try:
-        # Check for changes
+        # Clear stale locks before any git operation
+        _clear_stale_lock()
+
+        # Check for changes (60s timeout for large repos)
         result = subprocess.run(
             ["git", "status", "--porcelain"],
-            capture_output=True, text=True, timeout=10,
+            capture_output=True, text=True, timeout=60,
             cwd=str(BASE)
         )
         changes = [l for l in result.stdout.strip().split("\n") if l.strip()]
 
         if not changes:
-            log("  No changes to commit. Skipping.")
+            log("  No changes to commit.")
+            # Still push any unpushed commits from previous runs
+            _push_to_remote()
             return
 
         log(f"  {len(changes)} changed files detected.")
@@ -326,14 +369,14 @@ def run_safety_commit():
         # Stage tracked files only (respects .gitignore, avoids binary bloat)
         subprocess.run(
             ["git", "add", "-u"],
-            capture_output=True, timeout=30,
+            capture_output=True, timeout=60,
             cwd=str(BASE)
         )
         # Also stage new Python/MD/JSON/CSV/YAML files (skip binaries)
         for ext in ["*.py", "*.md", "*.json", "*.csv", "*.yaml", "*.yml", "*.sh", "*.txt", "*.html", "*.css", "*.js", "*.ts", "*.tsx"]:
             subprocess.run(
                 ["git", "add", ext],
-                capture_output=True, timeout=10,
+                capture_output=True, timeout=15,
                 cwd=str(BASE)
             )
 
@@ -341,13 +384,12 @@ def run_safety_commit():
         msg = f"Guardian safety commit {NOW.strftime('%Y-%m-%d %H:%M')}"
         result = subprocess.run(
             ["git", "commit", "-m", msg],
-            capture_output=True, text=True, timeout=30,
+            capture_output=True, text=True, timeout=60,
             cwd=str(BASE)
         )
 
         if result.returncode == 0:
             log(f"  Committed: {msg}")
-            # Get short hash
             hash_result = subprocess.run(
                 ["git", "rev-parse", "--short", "HEAD"],
                 capture_output=True, text=True, timeout=5,
@@ -355,22 +397,16 @@ def run_safety_commit():
             )
             if hash_result.returncode == 0:
                 log(f"  Hash: {hash_result.stdout.strip()}")
-
-            # AUTO-PUSH to remote (the whole point of git backup)
-            push_result = subprocess.run(
-                ["git", "push", "origin", "main"],
-                capture_output=True, text=True, timeout=120,
-                cwd=str(BASE)
-            )
-            if push_result.returncode == 0:
-                log("  Pushed to origin/main")
-            else:
-                log(f"  Push failed: {push_result.stderr.strip()[:200]}")
         else:
             log(f"  Commit skipped: {result.stderr.strip()[:200]}")
 
+        # Always try to push (whether commit succeeded or not)
+        _push_to_remote()
+
     except subprocess.TimeoutExpired:
         log("  Git operation timed out.")
+        # Even if commit timed out, try to push existing unpushed commits
+        _push_to_remote()
     except Exception as e:
         log(f"  Git error: {e}")
 

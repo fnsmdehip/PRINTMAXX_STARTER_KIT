@@ -1,0 +1,129 @@
+{
+  "cycle": 56,
+  "cleaned_at": "2026-03-17T00:19:22Z",
+  "dedup_notes": [
+    "running_streak + running_streak_alt merged: both returned Streaks (generic $5.99). One canonical entry created.",
+    "meditation_streak_recheck: confirms cycle055 finding (0 paid dedicated). No new data, carry forward.",
+    "language_streak_recheck: confirms cycle055 finding (0 paid dedicated). No new data, carry forward."
+  ],
+  "rate_limit_impact": "Reddit post searches rate-limited. Subscriber counts obtained. Post sentiment deferred to C57.",
+  "gap_classification": {
+    "running_streak": {
+      "itunes_paid_total": 1,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": true,
+      "status": "BLUE_OCEAN",
+      "community_size": 4191576,
+      "community_source": "r/running",
+      "note": "Only generic apps: Streaks. No dedicated running_streak app exists. | Verified C56. r/running = 4.19M. ONLY Streaks ($5.99 generic). P0 BUILD TARGET.",
+      "paid_app_names": [
+        "Streaks"
+      ]
+    },
+    "yoga_streak": {
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "status": "BLUE_OCEAN",
+      "community_size": 3310494,
+      "community_source": "r/yoga",
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "cycling_habit": {
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "status": "BLUE_OCEAN",
+      "community_size": 1445449,
+      "community_source": "r/cycling",
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "hiit_streak": {
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "status": "BLUE_OCEAN",
+      "community_size": 4718645,
+      "community_source": "r/bodyweightfitness",
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "pushup_streak": {
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "status": "BLUE_OCEAN",
+      "community_size": 4718645,
+      "community_source": "r/bodyweightfitness",
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "plank_habit": {
+      "itunes_paid_total": 1,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": true,
+      "status": "BLUE_OCEAN",
+      "community_size": 4718645,
+      "community_source": "r/bodyweightfitness",
+      "note": "Only generic apps: Streaks. No dedicated plank_habit app exists.",
+      "paid_app_names": [
+        "Streaks"
+      ]
+    },
+    "intermittent_fasting": {
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "status": "BLUE_OCEAN",
+      "community_size": 556261,
+      "community_source": "r/fasting",
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "meditation_streak": {
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "status": "BLUE_OCEAN",
+      "community_size": null,
+      "community_source": "not sized this cycle",
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "language_streak": {
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "status": "BLUE_OCEAN",
+      "community_size": null,
+      "community_source": "not sized this cycle",
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    }
+  },
+  "new_community_sizes": {
+    "r/yoga": 3310494,
+    "r/cycling": 1445449,
+    "r/fasting": 556261,
+    "r/bodyweightfitness": 4718645,
+    "r/running": 4191576
+  },
+  "validation_flags": [
+    "No status regressions vs C55. All classifications consistent."
+  ],
+  "blue_oceans_this_cycle": [
+    "running_streak",
+    "yoga_streak",
+    "cycling_habit",
+    "hiit_streak",
+    "pushup_streak",
+    "plank_habit",
+    "intermittent_fasting",
+    "meditation_streak",
+    "language_streak"
+  ],
+  "weak_gaps_this_cycle": [],
+  "p0_confirmed": "running_streak: BLUE_OCEAN verified. 4.19M demand. Only Streaks (generic). BUILD NOW."
+}

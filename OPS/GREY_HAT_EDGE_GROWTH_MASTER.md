@@ -6898,3 +6898,223 @@ A lot of this AI talent is being wasted
 
 [PLATFORM UPDATE] Nvidia says China’s BYD and Geely will use its robotaxi platform
 
+
+
+---
+
+## Pending Enhancement (ALPHA103146, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/xhawk
+**Added:** 2026-03-16T20:05:49-04:00
+
+[PH LAUNCH] XHawk 0.99: Transform Coding Sessions &amp; Code into a System of Context
+
+
+
+---
+
+## Pending Enhancement (ALPHA103232, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/openviktor-com
+**Added:** 2026-03-17T06:18:15-04:00
+
+[PH LAUNCH] openviktor.com: Hire your AI employee for any role
+
+
+
+---
+
+## Pending Enhancement (ALPHA103233, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/bolt-foundry
+**Added:** 2026-03-17T06:18:15-04:00
+
+[PH LAUNCH] Bolt Foundry: Build and verify agents you can trust
+
+
+
+---
+
+## Pending Enhancement (ALPHA103236, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/clicksay
+**Added:** 2026-03-17T06:18:15-04:00
+
+[PH LAUNCH] ClickSay: Click any element and ClickSay instantly captures it
+
+
+
+---
+
+## Pending Enhancement (ALPHA103237, Score: 28)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/hirehunch
+**Added:** 2026-03-17T06:18:16-04:00
+
+[PH LAUNCH] JusRecruit: AI ATS that handles phone screens + first-round interviews
+
+
+
+---
+
+## Pending Enhancement (ALPHA103238, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/openflags
+**Added:** 2026-03-17T06:18:16-04:00
+
+[PH LAUNCH] OpenFlags: Fast, self-hosted, edge-ready feature flags for modern teams
+
+
+
+---
+
+## Pending Enhancement (ALPHA103241, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/usercall
+**Added:** 2026-03-17T06:18:16-04:00
+
+[PH LAUNCH] Usercall Triggers: Talk to users the moment behavior changes
+
+
+
+---
+
+## Pending Enhancement (ALPHA103244, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/ocean-orchestrator
+**Added:** 2026-03-17T06:18:16-04:00
+
+[PH LAUNCH] Ocean Orchestrator: Run AI jobs from your IDE with a one-click workflow
+
+
+
+---
+
+## Pending Enhancement (ALPHA103246, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/agreeguard-ai-terms-privacy-analyzer
+**Added:** 2026-03-17T06:18:16-04:00
+
+[PH LAUNCH] AgreeGuard: AI reads the fine print before you click "I Agree"
+
+
+
+---
+
+## Pending Enhancement (ALPHA103247, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/dev-impact
+**Added:** 2026-03-17T06:18:16-04:00
+
+[PH LAUNCH] dev-impact: Turn projects into outcomes w/ measurable metrics + evidence
+
+
+
+---
+
+## Pending Enhancement (ALPHA103250, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/discli
+**Added:** 2026-03-17T06:18:17-04:00
+
+[PH LAUNCH] discli: Discord CLI for AI agents and humans
+
+
+
+---
+
+## Pending Enhancement (ALPHA103251, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/activestat
+**Added:** 2026-03-17T06:18:17-04:00
+
+[PH LAUNCH] ActiveStat: High-fidelity Mac performance telemetry from your menu bar
+
+
+
+---
+
+## Pending Enhancement (ALPHA103254, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/training-data-generator
+**Added:** 2026-03-17T06:18:18-04:00
+
+[PH LAUNCH] Lightning Rod: Training Data Generator: Turn real-world data into training datasets fast
+
+
+
+---
+
+## Pending Enhancement (ALPHA103255, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/dropadoo-send-files-via-drop-macos
+**Added:** 2026-03-17T06:18:18-04:00
+
+[PH LAUNCH] dropadoo: Send files to predefined Emails via drag and drop
+
+
+
+---
+
+## Pending Enhancement (ALPHA103256, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/angy
+**Added:** 2026-03-17T06:18:18-04:00
+
+[PH LAUNCH] Angy: Multi‑agent pipelines w/ AI‑driven scheduling + safety check
+
+
+
+---
+
+## Pending Enhancement (ALPHA103258, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/agen
+**Added:** 2026-03-17T06:18:18-04:00
+
+[PH LAUNCH] Agen: Fully Autonomous AI Coding Agents
+
+
+
+---
+
+## Pending Enhancement (ALPHA103259, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/forg
+**Added:** 2026-03-17T06:18:19-04:00
+
+[PH LAUNCH] Forg: Most meaningfull network of indie hackers/developers
+
+
+
+---
+
+## Pending Enhancement (ALPHA103261, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/dexcode
+**Added:** 2026-03-17T06:18:19-04:00
+
+[PH LAUNCH] DexCode: Your AI Agent builds the Deck &amp; you never leave the terminal
+
+
+
+---
+
+## Pending Enhancement (ALPHA103315, Score: 32)
+
+**Source:** r/smallbusiness | **URL:** https://reddit.com/r/smallbusiness/comments/1rvtede/how_to_lose_500k_opening_a_bubble_tea_shop/
+**Added:** 2026-03-17T06:31:35-04:00
+
+[r/smallbusiness] How to lose $500K opening a bubble tea shop. (lessons from recent lawsuits)
+
+
+
+---
+
+## Pending Enhancement (ALPHA103440, Score: 20)
+
+**Source:** r/smallbusiness | **URL:** https://reddit.com/r/smallbusiness/comments/1rw0oty/why_do_most_people_get_stuck_before_starting_a/
+**Added:** 2026-03-17T06:31:35-04:00
+
+[r/smallbusiness] Why do most people get stuck before starting a business?
+

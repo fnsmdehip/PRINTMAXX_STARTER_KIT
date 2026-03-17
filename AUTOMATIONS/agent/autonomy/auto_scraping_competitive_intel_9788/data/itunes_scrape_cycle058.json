@@ -1,0 +1,80 @@
+{
+  "finance_habit": {
+    "term": "budget habit streak tracker paid",
+    "total_results": 9,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:51:41.166684+00:00"
+  },
+  "finance_habit_alt": {
+    "term": "personal finance streak daily habit paid",
+    "total_results": 10,
+    "paid_dedicated": 1,
+    "paid_apps": [
+      {
+        "name": "Money Pro: Personal Finance AR",
+        "price": 4.99,
+        "ratings": 2336,
+        "score": 4.22,
+        "genre": "Finance"
+      }
+    ],
+    "scanned_at": "2026-03-17T10:51:45.159384+00:00"
+  },
+  "productivity_streak": {
+    "term": "productivity habit streak pomodoro paid",
+    "total_results": 10,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:51:49.567412+00:00"
+  },
+  "walking_habit": {
+    "term": "walking habit streak step goal daily paid",
+    "total_results": 9,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:51:53.525942+00:00"
+  },
+  "stretching_habit": {
+    "term": "stretching habit streak daily flexibility paid",
+    "total_results": 10,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:51:57.743908+00:00"
+  },
+  "early_riser_habit": {
+    "term": "wake up early habit streak morning paid",
+    "total_results": 10,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:52:01.947246+00:00"
+  },
+  "digital_detox_streak": {
+    "term": "screen time limit streak habit paid",
+    "total_results": 10,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:52:06.222072+00:00"
+  },
+  "weight_tracking": {
+    "term": "weight loss streak tracker habit paid",
+    "total_results": 9,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:52:10.043052+00:00"
+  },
+  "breathwork_habit": {
+    "term": "breathwork habit streak daily breathing paid",
+    "total_results": 10,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:52:14.131790+00:00"
+  },
+  "clean_eating_streak": {
+    "term": "clean eating habit streak healthy daily paid",
+    "total_results": 10,
+    "paid_dedicated": 0,
+    "paid_apps": [],
+    "scanned_at": "2026-03-17T10:52:18.010137+00:00"
+  }
+}

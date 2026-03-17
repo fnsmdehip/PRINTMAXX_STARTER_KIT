@@ -127,3 +127,14 @@ a $50k app idea:
 
 a cute app that gives you an outfit based on the weather.
 
+
+
+---
+
+## Pending Enhancement (ALPHA103161, Score: 47)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rvppf7/5_microsaas_niches_with_strong_demand_signals/
+**Added:** 2026-03-16T20:05:49-04:00
+
+[ACQUISITION] 5 micro-SaaS niches with strong demand signals right now (based on what devs are posting about [rev: $$50]
+

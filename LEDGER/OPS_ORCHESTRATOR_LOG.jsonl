@@ -495,3 +495,6 @@
 {"timestamp": "2026-03-16T02:24:00.959425", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
 {"timestamp": "2026-03-16T02:24:01.111109", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
 {"timestamp": "2026-03-16T02:24:01.116706", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}
+{"timestamp": "2026-03-17T06:04:24.362786", "event": "STATE_MERGED", "op_id": "SYSTEM", "details": {"xlsx_ops": 178, "saved_ops": 208, "new_from_xlsx": 0, "legacy_preserved": 30, "total_ops": 208}}
+{"timestamp": "2026-03-17T06:04:32.249268", "event": "FREQUENCIES_ADAPTED", "op_id": "SYSTEM", "details": {}}
+{"timestamp": "2026-03-17T06:04:32.262279", "event": "RUN_COMPLETE", "op_id": "SYSTEM", "details": {"transitions": 0, "queue_size": 208, "total_ops": 208}}

@@ -1,17 +1,17 @@
 {
-  "last_decision_cycle": "2026-03-16T18:30:00.808226",
-  "last_feedback_cycle": "2026-03-16T18:30:00.865393",
-  "last_pipeline_cycle": "2026-03-16T18:30:00.866606",
+  "last_decision_cycle": "2026-03-17T08:30:00.363338",
+  "last_feedback_cycle": "2026-03-17T08:30:00.537875",
+  "last_pipeline_cycle": "2026-03-17T08:30:00.592866",
   "decisions_executed": 25,
-  "feedback_updates": 2919,
+  "feedback_updates": 3119,
   "pipeline_advances": 0,
   "agent_scores": {
     "gap_hunter": {
-      "total_runs": 119,
-      "produced_output": 119,
-      "led_to_action": 338,
+      "total_runs": 127,
+      "produced_output": 127,
+      "led_to_action": 357,
       "led_to_revenue": 0,
-      "effectiveness": 210.4
+      "effectiveness": 208.7
     },
     "opportunity_scanner": {
       "total_runs": 79,
@@ -21,11 +21,11 @@
       "effectiveness": 131.9
     },
     "competitor_stalker": {
-      "total_runs": 35,
-      "produced_output": 35,
-      "led_to_action": 263,
+      "total_runs": 41,
+      "produced_output": 41,
+      "led_to_action": 270,
       "led_to_revenue": 0,
-      "effectiveness": 490.9
+      "effectiveness": 435.1
     },
     "asset_deployer": {
       "total_runs": 106,
@@ -42,18 +42,18 @@
       "effectiveness": 155.1
     },
     "lead_machine": {
-      "total_runs": 119,
-      "produced_output": 119,
-      "led_to_action": 221,
+      "total_runs": 127,
+      "produced_output": 127,
+      "led_to_action": 236,
       "led_to_revenue": 0,
-      "effectiveness": 151.4
+      "effectiveness": 151.5
     },
     "seo_aso_optimizer": {
       "total_runs": 34,
       "produced_output": 34,
-      "led_to_action": 201,
+      "led_to_action": 208,
       "led_to_revenue": 0,
-      "effectiveness": 394.7
+      "effectiveness": 407.1
     },
     "conversion_optimizer": {
       "total_runs": 30,
@@ -77,32 +77,32 @@
       "effectiveness": 370.9
     },
     "cross_pollinator": {
-      "total_runs": 113,
-      "produced_output": 113,
-      "led_to_action": 387,
+      "total_runs": 121,
+      "produced_output": 121,
+      "led_to_action": 408,
       "led_to_revenue": 0,
-      "effectiveness": 245.5
+      "effectiveness": 242.3
     },
     "revenue_tracker": {
-      "total_runs": 30,
-      "produced_output": 30,
-      "led_to_action": 194,
+      "total_runs": 36,
+      "produced_output": 36,
+      "led_to_action": 201,
       "led_to_revenue": 0,
-      "effectiveness": 428.0
+      "effectiveness": 375.0
     },
     "system_healer": {
-      "total_runs": 120,
-      "produced_output": 120,
-      "led_to_action": 274,
+      "total_runs": 128,
+      "produced_output": 128,
+      "led_to_action": 289,
       "led_to_revenue": 0,
-      "effectiveness": 177.0
+      "effectiveness": 175.5
     },
     "data_janitor": {
       "total_runs": 22,
       "produced_output": 22,
-      "led_to_action": 99,
+      "led_to_action": 106,
       "led_to_revenue": 0,
-      "effectiveness": 310.0
+      "effectiveness": 329.1
     },
     "distribution_engine": {
       "total_runs": 98,
@@ -112,18 +112,18 @@
       "effectiveness": 125.1
     },
     "inbound_maximizer": {
-      "total_runs": 102,
-      "produced_output": 100,
-      "led_to_action": 302,
+      "total_runs": 110,
+      "produced_output": 108,
+      "led_to_action": 309,
       "led_to_revenue": 0,
-      "effectiveness": 220.4
+      "effectiveness": 210.9
     },
     "swarm_brain": {
-      "total_runs": 113,
-      "produced_output": 113,
-      "led_to_action": 192,
+      "total_runs": 121,
+      "produced_output": 121,
+      "led_to_action": 199,
       "led_to_revenue": 0,
-      "effectiveness": 141.9
+      "effectiveness": 138.7
     },
     "video_factory": {
       "total_runs": 59,
@@ -147,11 +147,11 @@
       "effectiveness": 210.8
     },
     "playwright_tester": {
-      "total_runs": 97,
-      "produced_output": 95,
-      "led_to_action": 164,
+      "total_runs": 105,
+      "produced_output": 103,
+      "led_to_action": 171,
       "led_to_revenue": 0,
-      "effectiveness": 142.8
+      "effectiveness": 138.8
     },
     "alert_dispatcher": {
       "total_runs": 69,
@@ -177,11 +177,11 @@
     "growth_strategist": {
       "total_runs": 0,
       "produced_output": 0,
-      "led_to_action": 58,
+      "led_to_action": 65,
       "led_to_revenue": 0,
       "effectiveness": 0.0
     }
   },
-  "last_drift_check": "2026-03-16T18:30:00.876665",
-  "last_drift_score": 9.2
+  "last_drift_check": "2026-03-17T08:30:00.608489",
+  "last_drift_score": 9.6
 }
