@@ -27,20 +27,20 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("AGENT_SOUL_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
 LOGS_DIR = PROJECT_ROOT / "logs"
 LOGS_DIR.mkdir(exist_ok=True)
 REFINER_LOG = LOGS_DIR / "user_sim_refiner_history.jsonl"
 
 # Project configs -- what files to review per project
-# Override by setting AGENT_SOUL_PROJECTS_CONFIG to a JSON file path
+# Override by setting DOGWALK_PROJECTS_CONFIG to a JSON file path
 PROJECTS: dict = {}
 
 
 def load_projects_config():
     """Load project configurations from config file or environment."""
     global PROJECTS
-    config_path = os.environ.get("AGENT_SOUL_PROJECTS_CONFIG", "")
+    config_path = os.environ.get("DOGWALK_PROJECTS_CONFIG", "")
     if config_path and Path(config_path).exists():
         try:
             PROJECTS.update(json.loads(Path(config_path).read_text()))

@@ -1,21 +1,21 @@
 {
-  "ts": "2026-03-17T08:30:00.607397",
+  "ts": "2026-03-17T10:30:00.933727",
   "avg_score": 9.6,
   "total_scored": 12,
   "drifted_count": 0,
   "drifted_agents": [],
   "scores": {
-    "lead_machine": 10.0,
-    "gap": 8.5,
-    "growth_strategy_20260317": 8.5,
     "gap_hunter": 8.5,
+    "gap": 8.5,
     "system_healer": 10.0,
+    "lead_machine": 10.0,
+    "growth_strategy_20260317": 8.5,
     "inbound_maximizer": 10.0,
-    "cross_pollinator": 10.0,
-    "cross_pollination_20260316": 10.0,
     "ceo_decision_2026-03-15": 10.0,
     "mission_content": 10.0,
-    "mission_autonomy:auto_outbound_cold_ou": 10.0,
-    "mission_autonomy:alpha_intelligence": 10.0
+    "mission_autonomy:auto_content_niche_co": 10.0,
+    "mission_autonomy:auto_local_biz_opencl": 10.0,
+    "mission_autonomy:auto_product_digital_": 10.0,
+    "mission_autonomy:auto_scraping_competi": 10.0
   }
 }

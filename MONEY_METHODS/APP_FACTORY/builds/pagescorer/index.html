@@ -375,6 +375,7 @@ function renderResults(url, items) {
       var leads = JSON.parse(localStorage.getItem('pagescorer_leads')||'[]');
       leads.push({email:email, url:url, score:pct, grade:grade, ts:new Date().toISOString()});
       localStorage.setItem('pagescorer_leads', JSON.stringify(leads));
+      try{var fd=new FormData();fd.append('email',email);fd.append('_subject','[PageScorer] Lead - Audit Request');fd.append('_captcha','false');fd.append('source','pagescorer.surge.sh');fd.append('url',url);fd.append('score',pct);fetch('https://formsubmit.co/printmaxxweb@gmail.com',{method:'POST',body:fd}).catch(function(){});}catch(e){}
       emailBtn.textContent = 'sent';
       emailBtn.disabled = true;
     }

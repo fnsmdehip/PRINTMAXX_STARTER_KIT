@@ -1,0 +1,137 @@
+[
+  {
+    "niche_id": "cold_shower_streak",
+    "label": "Cold Shower Streak (RESCAN)",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 8,
+    "top_app_names": [
+      "ColdStreak: Shower Tracker",
+      "Cold Shower Therapy",
+      "Plunge - Official App"
+    ],
+    "expected_demand": "coldshowers=300K+",
+    "reasoning": "8 competitors. Top: 'Plunge - Official App' (1538 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "drawing_streak",
+    "label": "Drawing/Sketch Streak (RESCAN)",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 8,
+    "top_app_names": [
+      "Drawing \u25ab",
+      "Drawing Pad procreate Sketch",
+      "Sketchar: AR Drawing App"
+    ],
+    "expected_demand": "learntodraw=4M+",
+    "reasoning": "8 competitors. Top: 'Simply Draw: Learn to Draw' (566119 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "vitamin_habit",
+    "label": "Vitamin/Supplement Habit (RESCAN)",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 9,
+    "top_app_names": [
+      "Nutrition Tracker: Foodnoms",
+      "Cronometer: Calorie Counter",
+      "Gentler Streak Workout Tracker"
+    ],
+    "expected_demand": "Supplements=1M+",
+    "reasoning": "9 competitors. Top: 'Fullscript' (96989 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "swimming_streak",
+    "label": "Swimming Streak (RESCAN)",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 6,
+    "top_app_names": [
+      "Meet Mobile: Swim",
+      "MySwimPro: #1 Swim Workout App",
+      "Swim.com: Swim Tracker"
+    ],
+    "expected_demand": "Swimming=250K+",
+    "reasoning": "6 competitors. Top: 'Meet Mobile: Swim' (80317 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "bible_reading_streak",
+    "label": "Bible Reading Streak",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 8,
+    "top_app_names": [
+      "Bible",
+      "Holy Bible King James + Audio",
+      "Dwell: Audio Bible"
+    ],
+    "expected_demand": "Christianity=1M+",
+    "reasoning": "8 competitors. Top: 'Bible' (13047808 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "photography_streak",
+    "label": "Photography Practice Streak",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 4,
+    "top_app_names": [
+      "GuruShots: Photography Game",
+      "Selfie A Day - Everyday Photo",
+      "Photo Roulette"
+    ],
+    "expected_demand": "photography=5M+",
+    "reasoning": "4 competitors. Top: 'Photo Roulette' (108753 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "chess_habit",
+    "label": "Chess Daily Habit Streak",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 10,
+    "top_app_names": [
+      "Chess \u2219",
+      "Chess Tiger Pro",
+      "Chess - Offline Board Game"
+    ],
+    "expected_demand": "chess=1M+",
+    "reasoning": "10 competitors. Top: 'Chess \u2219' (199824 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "cooking_streak",
+    "label": "Daily Cooking Streak",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 4,
+    "top_app_names": [
+      "NYT Cooking: Quick Tasty Meals",
+      "Pepper - Recipe Organizer",
+      "Samsung Food: Meal Planner"
+    ],
+    "expected_demand": "Cooking=1.5M+",
+    "reasoning": "4 competitors. Top: 'NYT Cooking: Quick Tasty Meals' (533504 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  },
+  {
+    "niche_id": "handwriting_habit",
+    "label": "Handwriting Practice Streak",
+    "verdict": "OCCUPIED",
+    "dedicated_apps": 6,
+    "top_app_names": [
+      "Writey Cursive Handwriting",
+      "Handwriting Practice - Cursive",
+      "Modern Handwriting Calligraphy"
+    ],
+    "expected_demand": "Handwriting=500K+",
+    "reasoning": "6 competitors. Top: 'Writey Cursive Handwriting' (10988 ratings).",
+    "cycle": 60,
+    "analyzed_at": "2026-03-17"
+  }
+]

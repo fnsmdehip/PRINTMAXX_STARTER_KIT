@@ -41,6 +41,7 @@ Usage:
 """
 
 import csv
+csv.field_size_limit(10 * 1024 * 1024)
 import re
 import argparse
 import math

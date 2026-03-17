@@ -17,6 +17,7 @@ Stdlib only. No external dependencies.
 
 import argparse
 import csv
+csv.field_size_limit(10 * 1024 * 1024)
 import json
 import os
 import sqlite3

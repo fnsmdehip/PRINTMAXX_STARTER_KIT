@@ -1,4 +1,7 @@
-"""agent-soul: meta-cognition framework for AI agents that learn how you think.
+"""dogwalk core — meta-cognition framework for AI agents.
+
+stop dog walking your AI through every decision.
+6.9 corrections per task → 1.
 
 Modules:
     voice_extractor    - analyze prompt history, distill communication style

@@ -29,6 +29,8 @@ import json
 import os
 import subprocess
 import sys
+
+csv.field_size_limit(sys.maxsize)
 import time
 from datetime import datetime, timedelta
 from pathlib import Path

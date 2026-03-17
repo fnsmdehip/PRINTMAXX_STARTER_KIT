@@ -28,7 +28,7 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("AGENT_SOUL_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
 
 LOGS_DIR = PROJECT_ROOT / "logs"
 STATE_DIR = PROJECT_ROOT / "state"
@@ -36,9 +36,9 @@ OUTPUT_DIR = PROJECT_ROOT / "output"
 
 # Input files (configure per your project structure)
 TASK_TRACKER = Path(os.environ.get(
-    "AGENT_SOUL_TASK_TRACKER", PROJECT_ROOT / "data" / "tasks.md"))
+    "DOGWALK_TASK_TRACKER", PROJECT_ROOT / "data" / "tasks.md"))
 AGENT_REPORTS_DIR = Path(os.environ.get(
-    "AGENT_SOUL_REPORTS_DIR", PROJECT_ROOT / "output" / "reports"))
+    "DOGWALK_REPORTS_DIR", PROJECT_ROOT / "output" / "reports"))
 
 OUTPUT_FILE = OUTPUT_DIR / "session_briefing.md"
 BRIEFING_STATE = STATE_DIR / "session_briefing_state.json"

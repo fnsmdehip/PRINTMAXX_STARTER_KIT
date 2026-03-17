@@ -240,6 +240,8 @@ function calculate(){
       var leads = JSON.parse(localStorage.getItem('roicalc_leads')||'[]');
       leads.push({email:email,visitors:visitors,convRate:convRate,dealValue:dealValue,bizType:bizType,roi:roi,ts:new Date().toISOString()});
       localStorage.setItem('roicalc_leads',JSON.stringify(leads));
+      // Send to formsubmit.co so leads are actually collected
+      try{var fd=new FormData();fd.append('email',email);fd.append('_subject','[ROI Calc] Lead - Free Audit Request');fd.append('_captcha','false');fd.append('source','roicalc.surge.sh');fd.append('roi',roi);fd.append('visitors',visitors);fetch('https://formsubmit.co/printmaxxweb@gmail.com',{method:'POST',body:fd}).catch(function(){});}catch(e){}
       emailBtn.textContent='sent';emailBtn.disabled=true;
     }
   });

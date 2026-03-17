@@ -29,6 +29,7 @@ Usage:
 """
 
 import csv
+csv.field_size_limit(10 * 1024 * 1024)
 import json
 import argparse
 import hashlib

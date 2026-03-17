@@ -26,6 +26,7 @@ No external dependencies. stdlib only.
 
 import argparse
 import csv
+csv.field_size_limit(10 * 1024 * 1024)
 import json
 import os
 import subprocess
@@ -145,7 +146,7 @@ def check_cron() -> Tuple[str, str]:
 
 
 def check_git() -> Tuple[str, str]:
-    """Check git status."""
+    """Check git status including unpushed commits."""
     try:
         _clear_stale_lock()
         result = subprocess.run(
@@ -154,11 +155,30 @@ def check_git() -> Tuple[str, str]:
             cwd=str(BASE)
         )
         changes = len([l for l in result.stdout.strip().split("\n") if l.strip()])
-        if changes > 50:
-            return "AMBER", f"{changes} uncommitted changes"
+
+        # Count unpushed commits
+        unpushed = 0
+        unpushed_str = ""
+        try:
+            ahead = subprocess.run(
+                ["git", "rev-list", "--count", "origin/main..HEAD"],
+                capture_output=True, text=True, timeout=15,
+                cwd=str(BASE)
+            )
+            if ahead.returncode == 0:
+                unpushed = int(ahead.stdout.strip())
+                unpushed_str = f", {unpushed} commits unpushed"
+        except Exception:
+            unpushed_str = ", unpushed count unknown"
+
+        # Determine severity: RED if 6+ unpushed (push failing 12h+)
+        if unpushed >= 6:
+            return "RED", f"{changes} uncommitted changes{unpushed_str} (push failing?)"
+        elif changes > 50:
+            return "AMBER", f"{changes} uncommitted changes{unpushed_str}"
         elif changes > 0:
-            return "GREEN", f"{changes} uncommitted changes"
-        return "GREEN", "Clean working tree"
+            return "GREEN", f"{changes} uncommitted changes{unpushed_str}"
+        return "GREEN", f"Clean working tree{unpushed_str}"
     except Exception as e:
         return "RED", f"Git check failed: {e}"
 

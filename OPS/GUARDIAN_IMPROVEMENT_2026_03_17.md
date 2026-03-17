@@ -1,5 +1,5 @@
 # Guardian Improvement Report — 2026-03-17
-Generated: 08:00:01
+Generated: 09:38:22
 
 ## Gaps Found
 

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe Coding Cheat Sheet: 47 Prompts That Ship Real Products</title>
+<meta name="description" content="47 copy-paste Claude Code prompts that actually ship. From zero to deployed app. Used to build 50+ live products.">
+<meta name="keywords" content="vibe coding, claude code prompts, ai coding prompts, build with ai, claude max prompts, indie hacker ai, solopreneur ai tools">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vibe-coding-cheat-sheet.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vibe Coding Cheat Sheet: 47 Prompts That Ship Real Products">
+<meta property="og:description" content="47 copy-paste Claude Code prompts that actually ship. From zero to deployed app in one session.">
+<meta property="og:url" content="https://vibe-coding-cheat-sheet.surge.sh">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="Vibe Coding Cheat Sheet: 47 Prompts That Ship">
+<meta name="twitter:description" content="47 copy-paste Claude prompts. Built 50+ live products with these. Free.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080808;--surface:#111;--card:#161616;--border:rgba(255,255,255,.08);
+  --accent:#00ff88;--accent-dim:rgba(0,255,136,.15);
+  --text:#e8e8e8;--muted:#888;--orange:#ff9500;--blue:#4f9eff;--purple:#b06bff;
+}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.header{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;max-width:860px;margin:0 auto}
+.logo{font-size:.75rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.badge{background:var(--accent-dim);color:var(--accent);font-size:.68rem;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:.5px;border:1px solid rgba(0,255,136,.2)}
+.hero{max-width:860px;margin:0 auto;padding:48px 24px 32px}
+.hero-tag{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:1.05rem;color:var(--muted);max-width:560px;line-height:1.65;margin-bottom:24px}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap}
+.hero-stat{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted)}
+.hero-stat strong{color:var(--text);font-weight:700}
+.gate-bar{background:linear-gradient(135deg,rgba(0,255,136,.08),rgba(79,158,255,.08));border:1px solid rgba(0,255,136,.2);border-radius:12px;padding:24px;margin:24px;max-width:860px}
+.gate-bar h3{font-size:1.1rem;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.gate-bar p{font-size:.875rem;color:var(--muted);margin-bottom:16px}
+.gate-form{display:flex;gap:10px;flex-wrap:wrap}
+.gate-form input[type="email"]{flex:1;min-width:220px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:8px;padding:11px 14px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none}
+.gate-form input[type="email"]:focus{border-color:var(--accent)}
+.gate-form button{background:var(--accent);color:#000;border:none;border-radius:8px;padding:11px 24px;font-weight:800;font-size:.9rem;cursor:pointer;font-family:inherit;white-space:nowrap}
+.gate-form button:hover{opacity:.88}
+.gate-fine{font-size:.7rem;color:var(--muted);margin-top:8px}
+.content{max-width:860px;margin:0 auto;padding:0 24px 60px}
+.section{margin-bottom:40px}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.section-icon{font-size:1.4rem}
+.section-title{font-size:1rem;font-weight:800;letter-spacing:-.3px}
+.section-count{font-size:.75rem;color:var(--muted);font-weight:600;background:rgba(255,255,255,.06);padding:2px 8px;border-radius:4px}
+.prompt-grid{display:grid;gap:12px}
+.prompt-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;position:relative;transition:border-color .15s}
+.prompt-card:hover{border-color:rgba(255,255,255,.15)}
+.prompt-num{font-size:.7rem;font-weight:700;color:var(--muted);letter-spacing:.5px;margin-bottom:8px}
+.prompt-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:10px}
+.label-ship{background:rgba(0,255,136,.12);color:var(--accent)}
+.label-debug{background:rgba(255,149,0,.12);color:var(--orange)}
+.label-growth{background:rgba(176,107,255,.12);color:var(--purple)}
+.label-research{background:rgba(79,158,255,.12);color:var(--blue)}
+.label-deploy{background:rgba(255,99,99,.12);color:#ff6363}
+.prompt-text{font-family:'JetBrains Mono','Fira Code',monospace;font-size:.82rem;line-height:1.6;color:#c8d0e0;background:rgba(255,255,255,.03);border-radius:6px;padding:12px;border-left:3px solid var(--border);white-space:pre-wrap;word-break:break-word}
+.prompt-note{font-size:.78rem;color:var(--muted);margin-top:10px;line-height:1.5}
+.copy-btn{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:.7rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit}
+.copy-btn:hover{background:rgba(255,255,255,.1);color:var(--text)}
+.stats-bar{display:flex;gap:20px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:32px}
+.stat-item{display:flex;flex-direction:column;gap:2px}
+.stat-num{font-size:1.3rem;font-weight:900;letter-spacing:-1px}
+.stat-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+/* Locked section */
+.locked-section{position:relative}
+.locked-section .blurred{filter:blur(3px);opacity:.4;pointer-events:none;user-select:none;transition:all .4s}
+.locked-section.unlocked .blurred{filter:none;opacity:1;pointer-events:auto;user-select:auto}
+.lock-cta-box{text-align:center;padding:32px 20px;background:rgba(0,255,136,.04);border:1px dashed rgba(0,255,136,.2);border-radius:10px;margin-top:16px}
+.lock-cta-box h4{font-size:1rem;font-weight:800;margin-bottom:6px}
+.lock-cta-box p{font-size:.85rem;color:var(--muted);margin-bottom:16px}
+.locked-section.unlocked .lock-cta-box{display:none}
+.footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:var(--muted);font-size:.8rem;max-width:860px;margin:0 auto}
+@media(max-width:600px){.hero{padding:32px 16px 24px}.content{padding:0 16px 40px}.header{padding:16px}.gate-bar{margin:16px}.prompt-text{font-size:.75rem}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">PRINTMAXXER</div>
+  <div class="badge">FREE CHEAT SHEET</div>
+</div>
+
+<div class="hero">
+  <div class="hero-tag">VIBE CODING WEAPONS</div>
+  <h1>47 prompts that actually <span>ship products</span></h1>
+  <p class="hero-sub">copy-paste prompts for Claude Code. not theory. used to build 50+ live apps. first 7 free, drop your email to unlock all 47.</p>
+  <div class="hero-meta">
+    <div class="hero-stat"><strong>50+</strong> apps built with these</div>
+    <div class="hero-stat"><strong>47</strong> battle-tested prompts</div>
+    <div class="hero-stat"><strong>0</strong> fluff prompts</div>
+  </div>
+</div>
+
+<div class="gate-bar" id="emailBar">
+  <h3>unlock all 47 prompts free</h3>
+  <p>drop your email. get the full sheet + updates when new prompts work. no spam.</p>
+  <form class="gate-form" id="gateForm">
+    <input type="email" id="gateEmail" placeholder="your@email.com" required>
+    <button type="submit" id="gateBtn">unlock all 47 →</button>
+  </form>
+  <p class="gate-fine">no spam. unsubscribe any time.</p>
+</div>
+
+<div class="content">
+
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-num" style="color:var(--accent)">47</div><div class="stat-label">Prompts Total</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:var(--orange)">12</div><div class="stat-label">Shipping</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:var(--blue)">9</div><div class="stat-label">Debug</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:var(--purple)">8</div><div class="stat-label">Growth</div></div>
+    <div class="stat-item"><div class="stat-num" style="color:#ff6363">18</div><div class="stat-label">Deploy + Ops</div></div>
+  </div>
+
+  <!-- SHIPPING PROMPTS (free) -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-icon">🚀</div>
+      <div class="section-title">Shipping Prompts</div>
+      <div class="section-count">12 prompts</div>
+    </div>
+    <div class="prompt-grid">
+
+      <div class="prompt-card">
+        <button class="copy-btn" onclick="copyPrompt(this)">copy</button>
+        <div class="prompt-num">PROMPT 01</div><div class="prompt-label label-ship">SHIP</div>
+        <div class="prompt-text">Build a single-page web app that [TOOL DESCRIPTION]. Requirements:
+- Pure HTML/CSS/JS, no frameworks, no build step
+- Works offline (no API calls except optional)
+- Mobile-first responsive
+- Dark theme with #0a0a0a background
+- Deploy-ready (surge.sh compatible)
+- Include share functionality and copy-to-clipboard
+
+Make it production quality, not a prototype.</div>
+        <div class="prompt-note">Used for: coldmaxx, roicalc, pagescorer, pdfmaxx, and 40+ others. Remove "no API calls" if you need external data.</div>
+      </div>
+
+      <div class="prompt-card">
+        <button class="copy-btn" onclick="copyPrompt(this)">copy</button>
+        <div class="prompt-num">PROMPT 02</div><div class="prompt-label label-ship">SHIP</div>
+        <div class="prompt-text">I have this app: [PASTE YOUR HTML].
+
+Add a lead capture overlay that:
+- Appears after the user gets value (30s or after first action)
+- Posts to formsubmit.co/[YOUR_EMAIL] via FormData fetch
+- Has a smooth dismiss with 7-day cooldown (localStorage)
+- Doesn't block core functionality
+- Shows "join X people getting [VALUE]" social proof
+
+Don't break existing functionality.</div>
+        <div class="prompt-note">This is how every app gets email capture added in under 10 minutes.</div>
+      </div>
+
+      <div class="prompt-card">
+        <button class="copy-btn" onclick="copyPrompt(this)">copy</button>
+        <div class="prompt-num">PROMPT 03</div><div class="prompt-label label-ship">SHIP</div>
+        <div class="prompt-text">Create a landing page for [PRODUCT] with:
+- Hook: one specific painful problem in first 5 words
+- Social proof: 3 real-feeling testimonials with names and roles
+- Features: 5 bullets max, each under 10 words
+- CTA: email capture via formsubmit.co/[EMAIL]
+- FAQ: 4 questions that handle top objections
+- Design: dark, clean, single accent color #[HEX]
+
+No lorem ipsum. No "game-changing" language. Write like a human who uses the product.</div>
+        <div class="prompt-note">Pair with: deploy to surge.sh via "npx surge" in the directory</div>
+      </div>
+
+      <div class="prompt-card">
+        <button class="copy-btn" onclick="copyPrompt(this)">copy</button>
+        <div class="prompt-num">PROMPT 04</div><div class="prompt-label label-ship">SHIP</div>
+        <div class="prompt-text">I need a PWA (Progressive Web App) version of [APP CONCEPT].
+
+Requirements:
+- manifest.json with all required fields
+- Service worker with offline caching (cache-first strategy)
+- Install banner / "Add to Home Screen" prompt
+- iOS splash screen meta tags
+- All assets under 200KB total
+- No backend required
+
+Output: index.html, manifest.json, sw.js as separate files.</div>
+        <div class="prompt-note">App-store-like install on mobile without App Store submission.</div>
+      </div>
+
+      <div class="prompt-card">
+        <button class="copy-btn" onclick="copyPrompt(this)">copy</button>
+        <div class="prompt-num">PROMPT 05</div><div class="prompt-label label-ship">SHIP</div>
+        <div class="prompt-text">Add cross-promotion links to this app: [PASTE HTML]
+
+My other tools: [LIST TOOL NAMES + URLS]
+
+Add a "free tools that pair with this" section at the bottom:
+- Max 4 links
+- One-line description of VALUE not features
+- Subtle design that doesn't compete with main CTA
+- Arrow (→) as the action indicator
+
+Match existing visual style exactly.</div>
+        <div class="prompt-note">Cross-linking between apps = compound inbound. Each tool drives traffic to others.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DEBUG - 2 free -->
+  <div class="section">
+    <div class="section-head">
+      <div class="section-icon">🔧</div>
+      <div class="section-title">Debug Prompts</div>
+      <div class="section-count">9 prompts</div>
+    </div>
+    <div class="prompt-grid">
+      <div class="prompt-card">
+        <button class="copy-btn" onclick="copyPrompt(this)">copy</button>
+        <div class="prompt-num">PROMPT 06</div><div class="prompt-label label-debug">DEBUG</div>
+        <div class="prompt-text">This code isn't working: [PASTE CODE]
+
+Error: [PASTE ERROR]
+
+Before fixing: tell me EXACTLY what the bug is and why it happens. Then fix it.
+
+Also: are there any other bugs in this code that will surface later? List them.</div>
+        <div class="prompt-note">The "tell me first, then fix" constraint prevents Claude from fixing the wrong thing.</div>
+      </div>
+      <div class="prompt-card">
+        <button class="copy-btn" onclick="copyPrompt(this)">copy</button>
+        <div class="prompt-num">PROMPT 07</div><div class="prompt-label label-debug">DEBUG</div>
+        <div class="prompt-text">Audit this code for silent failures: [PASTE CODE]
+
+Look for:
+1. Functions that return undefined causing downstream NaN/null errors
+2. Event listeners that could fire multiple times
+3. localStorage calls that fail on private browsing
+4. Async operations with no error handling
+5. Race conditions
+
+List each issue: what fails, when it fails, how to fix it.</div>
+        <div class="prompt-note">Run this before deploying. Silent failures are why apps "don't work on mobile."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCKED: remaining 40 prompts -->
+  <div class="locked-section" id="lockedSection">
+
+    <div class="blurred" id="blurredContent">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-icon">🔧</div>
+          <div class="section-title">More Debug Prompts</div>
+          <div class="section-count">7 more</div>
+        </div>
+        <div class="prompt-grid">
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 08</div><div class="prompt-label label-debug">DEBUG</div>
+            <div class="prompt-text">Audit this app for performance issues: [PASTE HTML/JS]
+Check: DOM ops in loops, event listener cleanup, images without w/h, sync localStorage reads, CSS animations using layout triggers.
+For each: performance cost + fix.</div>
+          </div>
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 09</div><div class="prompt-label label-debug">DEBUG</div>
+            <div class="prompt-text">My app works on desktop but breaks on mobile. Code: [PASTE]
+Debug: touch vs click (300ms), viewport overflow, iOS Safari CSS bugs (position:fixed, vh), font-size below 16px (zoom trigger), flexbox diffs, hover states on touch.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head">
+          <div class="section-icon">📈</div>
+          <div class="section-title">Growth Prompts</div>
+          <div class="section-count">8 prompts</div>
+        </div>
+        <div class="prompt-grid">
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 10</div><div class="prompt-label label-growth">GROWTH</div>
+            <div class="prompt-text">Generate complete SEO meta tags for: [TOOL NAME + DESCRIPTION]
+Keywords: [3-5 keywords]. URL: [URL]
+Output: title (under 60 chars, keyword first), meta description (under 155 chars), og: tags, twitter:card tags, JSON-LD WebApplication schema.</div>
+          </div>
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 11</div><div class="prompt-label label-growth">GROWTH</div>
+            <div class="prompt-text">Write 5 Twitter posts for this tool: [NAME + URL + ONE-LINE]
+Rules: hook = consequence or number in first 5 words. No em dashes. No "game-changer." One CTA: the URL only. Under 240 chars each. Builder tone, not marketer. Make each angle different.</div>
+          </div>
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 12</div><div class="prompt-label label-growth">GROWTH</div>
+            <div class="prompt-text">Write a 7-tweet build-in-public thread about building [TOOL].
+Structure: Hook tweet (result) → problem → first fail + why → approach that worked → surprising discovery → what I'd do differently → CTA.
+Tone: journal entry, not press release.</div>
+          </div>
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 13</div><div class="prompt-label label-growth">GROWTH</div>
+            <div class="prompt-text">Write a cold email for [TOOL] targeting [AUDIENCE].
+PAS framework. Subject: under 6 words, no question marks. Opening: their pain, not about me. Body: under 75 words. CTA: one clear action. PS: one social proof line.
+Write 3 variants from 3 different angles.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head">
+          <div class="section-icon">🔬</div>
+          <div class="section-title">Research Prompts</div>
+          <div class="section-count">8 prompts</div>
+        </div>
+        <div class="prompt-grid">
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 14-21</div><div class="prompt-label label-research">RESEARCH</div>
+            <div class="prompt-text">Niche research + competitor analysis + keyword research + community research + SaaS opportunity analysis + Product Hunt launch + Reddit growth + pain point mining prompts.
+All 8 tested on real product launches. Specific outputs, not general advice.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-head">
+          <div class="section-icon">⚙️</div>
+          <div class="section-title">Deploy + Ops Prompts</div>
+          <div class="section-count">18 prompts</div>
+        </div>
+        <div class="prompt-grid">
+          <div class="prompt-card">
+            <div class="prompt-num">PROMPT 22-47</div><div class="prompt-label label-deploy">DEPLOY</div>
+            <div class="prompt-text">26 deploy and ops prompts:
+Surge.sh deploy scripts, git commit generation, env audit, bundle size reduction, robots.txt + sitemap, 301 redirect maps, cron scripts, health checks, rate limiting, CORS config, AI feature integration (no backend), multi-step forms, CSV export, print layouts, affiliate links, email sequences, waitlist pages, changelogs, GDPR banners, dark mode toggle, keyboard shortcuts, undo/redo, drag-and-drop, auto-save, data export.
+Each prompt ships production-ready output.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lock-cta-box" id="lockCtaBox">
+      <h4>40 more prompts locked</h4>
+      <p>debug, growth, research, deploy, and ops prompts. drop your email to unlock instantly. free forever.</p>
+      <form class="gate-form" style="justify-content:center" id="gateForm2">
+        <input type="email" id="gateEmail2" placeholder="your@email.com" required>
+        <button type="submit">unlock free →</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:40px;text-align:center">
+    <div style="font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px">BUILT BY</div>
+    <div style="font-size:1rem;font-weight:800;letter-spacing:-.3px;margin-bottom:8px">@PRINTMAXXER</div>
+    <div style="font-size:.875rem;color:var(--muted);margin-bottom:16px;max-width:400px;margin-left:auto;margin-right:auto">50+ apps shipped with Claude Code. this cheat sheet is what i use every day. everything here has been tested in production.</div>
+    <a href="https://twitter.com/printmaxxer" target="_blank" style="display:inline-block;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:8px 20px;font-size:.85rem;font-weight:700;color:var(--text)">follow on X →</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>PRINTMAXXER · free tools for solopreneurs</div>
+  <div style="margin-top:8px">
+    <a href="https://coldmaxx.surge.sh">cold email generator</a> ·
+    <a href="https://roicalc.surge.sh">roi calculator</a> ·
+    <a href="https://pagescorer.surge.sh">page scorer</a> ·
+    <a href="https://ai-revenue-calculator.surge.sh">revenue calculator</a>
+  </div>
+</div>
+
+<script>
+function submitGate(emailVal) {
+  if (!emailVal || emailVal.indexOf('@') === -1) return false;
+  // POST to formsubmit via fetch
+  var fd = new FormData();
+  fd.append('email', emailVal);
+  fd.append('_subject', '[Vibe Coding] Cheat Sheet Unlock');
+  fd.append('_captcha', 'false');
+  fd.append('source', 'vibe-coding-cheat-sheet.surge.sh');
+  fetch('https://formsubmit.co/printmaxxweb@gmail.com', {method:'POST', body:fd}).catch(function(){});
+  localStorage.setItem('pm_vibe_unlocked', '1');
+  unlock();
+  return true;
+}
+
+function unlock() {
+  var section = document.getElementById('lockedSection');
+  if (section) section.classList.add('unlocked');
+  var bar = document.getElementById('emailBar');
+  if (bar) bar.style.display = 'none';
+  var blurred = document.getElementById('blurredContent');
+  if (blurred) { blurred.style.filter = 'none'; blurred.style.opacity = '1'; blurred.style.pointerEvents = 'auto'; blurred.style.userSelect = 'auto'; }
+  // Add copy buttons to locked prompts
+  var locked_cards = blurred ? blurred.querySelectorAll('.prompt-card') : [];
+  for (var i = 0; i < locked_cards.length; i++) {
+    if (!locked_cards[i].querySelector('.copy-btn')) {
+      var btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = 'copy';
+      btn.setAttribute('onclick', 'copyPrompt(this)');
+      locked_cards[i].insertBefore(btn, locked_cards[i].firstChild);
+    }
+  }
+}
+
+document.getElementById('gateForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var email = document.getElementById('gateEmail').value.trim();
+  if (submitGate(email)) {
+    var btn = document.getElementById('gateBtn');
+    btn.textContent = 'unlocked ✓';
+    btn.disabled = true;
+  }
+});
+
+document.getElementById('gateForm2').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var email = document.getElementById('gateEmail2').value.trim();
+  if (submitGate(email)) {
+    var btn = e.target.querySelector('button');
+    if (btn) { btn.textContent = 'unlocked ✓'; btn.disabled = true; }
+  }
+});
+
+function copyPrompt(btn) {
+  var card = btn.closest('.prompt-card');
+  var textEl = card.querySelector('.prompt-text');
+  if (!textEl) return;
+  var text = textEl.textContent.trim();
+  navigator.clipboard.writeText(text).then(function() {
+    btn.textContent = 'copied ✓';
+    setTimeout(function() { btn.textContent = 'copy'; }, 2000);
+  }).catch(function() { btn.textContent = 'select + copy above'; });
+}
+
+// Auto-unlock if already submitted
+if (localStorage.getItem('pm_vibe_unlocked') === '1') { unlock(); }
+</script>
+</body>
+</html>

@@ -10,10 +10,10 @@ tone, corrections, frustrations), and outputs a compact voice model that any
 agent can consume.
 
 Usage:
-    python3 -m agent_soul.core.voice_extractor --extract       # Analyze prompts, build model
-    python3 -m agent_soul.core.voice_extractor --inject        # Output compact injection string
-    python3 -m agent_soul.core.voice_extractor --status        # Show model stats
-    python3 -m agent_soul.core.voice_extractor --diff          # Compare current vs previous model
+    python3 -m dogwalk.core.voice_extractor --extract       # Analyze prompts, build model
+    python3 -m dogwalk.core.voice_extractor --inject        # Output compact injection string
+    python3 -m dogwalk.core.voice_extractor --status        # Show model stats
+    python3 -m dogwalk.core.voice_extractor --diff          # Compare current vs previous model
 
 No external API calls. Pure Python text analysis.
 """
@@ -32,19 +32,19 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Paths (configurable via environment)
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("AGENT_SOUL_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
 
 PROMPTS_FILE = Path(os.environ.get(
-    "AGENT_SOUL_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
+    "DOGWALK_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
 CONVERSATION_FILE = Path(os.environ.get(
-    "AGENT_SOUL_CONVERSATIONS", PROJECT_ROOT / "data" / "conversations.jsonl"))
+    "DOGWALK_CONVERSATIONS", PROJECT_ROOT / "data" / "conversations.jsonl"))
 MODEL_PATH = Path(os.environ.get(
-    "AGENT_SOUL_VOICE_MODEL", PROJECT_ROOT / "output" / "voice_model.json"))
+    "DOGWALK_VOICE_MODEL", PROJECT_ROOT / "output" / "voice_model.json"))
 MODEL_PREV_PATH = MODEL_PATH.parent / "voice_model.prev.json"
 SOUL_FILE = Path(os.environ.get(
-    "AGENT_SOUL_SOUL_MD", PROJECT_ROOT / "templates" / "SOUL.md"))
+    "DOGWALK_SOUL_MD", PROJECT_ROOT / "templates" / "SOUL.md"))
 SYSTEM_INSTRUCTIONS = Path(os.environ.get(
-    "AGENT_SOUL_INSTRUCTIONS", PROJECT_ROOT / "templates" / "CLAUDE.md"))
+    "DOGWALK_INSTRUCTIONS", PROJECT_ROOT / "templates" / "CLAUDE.md"))
 
 LOGS_DIR = PROJECT_ROOT / "logs"
 

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-PRINTMAXX System Health Monitor — 14-point check across all automated systems.
+PRINTMAXX System Health Monitor — 16-point check across all automated systems.
 
 Answers the question: "Is our stuff ACTUALLY running?"
 
 Usage:
-    python3 AUTOMATIONS/system_health_monitor.py --check       # Full 14-point health check
+    python3 AUTOMATIONS/system_health_monitor.py --check       # Full 16-point health check
     python3 AUTOMATIONS/system_health_monitor.py --quick       # Summary line only
     python3 AUTOMATIONS/system_health_monitor.py --json        # Machine-readable JSON output
     python3 AUTOMATIONS/system_health_monitor.py --skip-sites  # Skip HTTP checks (faster)
@@ -219,7 +219,7 @@ def _fmt_age(h: float) -> str:
 
 
 # ---------------------------------------------------------------------------
-# 14 Health Checks
+# 16 Health Checks
 # ---------------------------------------------------------------------------
 
 def check_01_cron_jobs() -> dict:
@@ -627,6 +627,68 @@ def check_15_new_pipelines() -> dict:
     return _result("15. New Pipelines", sev, detail, file_ages_h=ages)
 
 
+def check_16_git_push_health() -> dict:
+    """Git push health: unpushed commit count and age of last push."""
+    try:
+        # Count unpushed commits (HEAD ahead of origin/main)
+        rev_list = subprocess.run(
+            ["git", "rev-list", "--count", "origin/main..HEAD"],
+            capture_output=True, text=True, timeout=15,
+            cwd=str(PROJECT_ROOT)
+        )
+        if rev_list.returncode != 0:
+            # origin/main may not exist (no remote configured or never pushed)
+            stderr = rev_list.stderr.strip()
+            if "unknown revision" in stderr or "bad revision" in stderr:
+                return _result("16. Git Push Health", "AMBER",
+                               "No origin/main ref — remote may not be configured",
+                               unpushed=None, push_age_h=None)
+            return _result("16. Git Push Health", "RED",
+                           f"rev-list failed: {stderr[:120]}",
+                           unpushed=None, push_age_h=None)
+
+        unpushed = int(rev_list.stdout.strip())
+
+        # Get age of last push by checking origin/main commit timestamp
+        push_age_h = None
+        try:
+            ts_result = subprocess.run(
+                ["git", "log", "-1", "--format=%ct", "origin/main"],
+                capture_output=True, text=True, timeout=10,
+                cwd=str(PROJECT_ROOT)
+            )
+            if ts_result.returncode == 0 and ts_result.stdout.strip():
+                origin_ts = int(ts_result.stdout.strip())
+                push_age_h = (_now().timestamp() - origin_ts) / 3600.0
+        except Exception:
+            pass
+
+        # Severity based on unpushed count
+        # GREEN: 0 unpushed
+        # AMBER: 1-5 unpushed
+        # RED: 6+ unpushed (push failing for 12+ hours given 4h guardian cycle)
+        if unpushed == 0:
+            sev = "GREEN"
+            age_str = f", last push {_fmt_age(push_age_h)}" if push_age_h is not None else ""
+            detail = f"0 unpushed commits{age_str}"
+        elif unpushed <= 5:
+            sev = "AMBER"
+            age_str = f", last push {_fmt_age(push_age_h)}" if push_age_h is not None else ""
+            detail = f"{unpushed} unpushed commits{age_str}"
+        else:
+            sev = "RED"
+            age_str = f", last push {_fmt_age(push_age_h)}" if push_age_h is not None else ""
+            detail = f"{unpushed} unpushed commits (push failing 12h+?){age_str}"
+
+        return _result("16. Git Push Health", sev, detail,
+                        unpushed=unpushed,
+                        push_age_h=round(push_age_h, 1) if push_age_h is not None else None)
+
+    except Exception as e:
+        return _result("16. Git Push Health", "RED", f"Check failed: {e}",
+                        unpushed=None, push_age_h=None)
+
+
 # ---------------------------------------------------------------------------
 # Result builder
 # ---------------------------------------------------------------------------
@@ -662,11 +724,12 @@ ALL_CHECKS = [
     check_13_running_processes,
     check_14_disk_space,
     check_15_new_pipelines,
+    check_16_git_push_health,
 ]
 
 
 def run_all(skip_sites: bool = False) -> list:
-    """Execute all 14 health checks."""
+    """Execute all 16 health checks."""
     results = []
     for fn in ALL_CHECKS:
         if skip_sites and fn is check_03_live_sites:
@@ -749,7 +812,7 @@ def _sev_badge(sev: str, color: bool) -> str:
 
 
 def print_full(results: list, summary: dict, report_path: Path):
-    """Print formatted 14-point health table."""
+    """Print formatted 16-point health table."""
     color = _use_color()
     w = 80
 
@@ -821,10 +884,10 @@ def print_quick(summary: dict):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="PRINTMAXX System Health Monitor - 14-point automated system check"
+        description="PRINTMAXX System Health Monitor - 16-point automated system check"
     )
     parser.add_argument("--check", action="store_true", default=True,
-                        help="Full 14-point health check (default)")
+                        help="Full 16-point health check (default)")
     parser.add_argument("--quick", action="store_true",
                         help="Summary line only")
     parser.add_argument("--json", action="store_true",
