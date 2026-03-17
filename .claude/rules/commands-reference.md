@@ -1,6 +1,6 @@
 # Technical Quick Reference
 
-Stack: Python | LLM: Claude Code (subscription, model-agnostic in theory) | Browser: multi-fallback (Chrome MCP, Playwright, Selenium, Browserbase, requests) | Revenue: $0 | Apps: 114 deployed | Scripts: 392
+Stack: Python | LLM: Claude Code (subscription, model-agnostic in theory) | Browser: 8-level fallback (Playwriter MCP, Brave cookies, Vercel Agent-Browser, Chrome CDP, Playwright, Selenium, Browserbase, requests) | Revenue: $0 | Apps: 114 deployed | Scripts: 392
 
 ## Essential Commands
 - Decision engine: `python3 AUTOMATIONS/decision_engine.py --cycle`
@@ -39,4 +39,12 @@ Opus: swarm_brain, quality_gate, gap_hunter, growth_strategist
 Sonnet: competitor_stalker, lead_machine, cross_pollinator, revenue_tracker, inbound_maximizer
 Haiku: system_healer, data_janitor, playwright_tester
 
-Browser fallback: Chrome MCP → Playwright → Selenium → Browserbase → Python requests
+Browser fallback (priority order):
+1. Playwriter MCP (your running Chrome, existing logins, anti-bot inherent) — github.com/remorses/playwriter
+2. Brave cookie + Playwright persistent context (AES decrypted cookies from daily browser)
+3. Vercel Agent-Browser CLI (headless, 82% less tokens than Playwright MCP) — github.com/vercel-labs/agent-browser
+4. Chrome CDP (connect to running debug instance, localhost:9222)
+5. Playwright (general headless automation)
+6. Selenium (legacy fallback)
+7. Browserbase (cloud anti-detection, proxy rotation, $20/mo) — browserbase.com
+8. Python requests/urllib (API-only, no browser needed)
