@@ -26,24 +26,65 @@ MCP (Model Context Protocol) is an open standard by Anthropic that enables AI ap
 |------------|---------|-------------------|
 | **pipedream** | 2,500 APIs, 8,000+ tools | Master integration hub - connects everything |
 | **google-sheets-mcp** | Sheets read/write | LEDGER/*.csv sync, lead tracking |
+| **playwriter** | YOUR running Chrome via MCP | Authenticated scraping (Twitter bookmarks, social), inherits all logins, anti-bot inherent. github.com/remorses/playwriter |
+| **agent-browser** | Vercel headless CLI (Rust) | Token-efficient headless automation (82% less context than Playwright MCP), CI/testing, public page scraping. github.com/vercel-labs/agent-browser |
 | **playwright-mcp-server** | Browser automation | Research scraping, form filling |
 | **server-filesystem** | File operations | Content management, CSV operations |
 | **server-memory** | Persistent context | Session state across ralph loops |
 
 **Installation Priority:**
 ```bash
-# 1. Pipedream (highest ROI)
+# 1. Playwriter (highest ROI for authenticated scraping)
+# Install Chrome extension: https://chromewebstore.google.com/detail/playwriter/jfeammnjpkecdekppnclgkkffahnhfhe
+# Then add MCP config (see below)
+
+# 2. Vercel Agent-Browser (token-efficient headless)
+# Rust CLI, auto-downloads Chrome for Testing
+curl -fsSL https://agent-browser.dev/install.sh | sh
+# Or: npm install -g @anthropic-ai/agent-browser
+
+# 3. Pipedream (master API hub)
 npx -y @pipedream/mcp
 
-# 2. Google Sheets
+# 4. Google Sheets
 pip install mcp-google-sheets
 
-# 3. Playwright
+# 5. Playwright MCP (fallback)
 npx -y @executeautomation/playwright-mcp-server
 
-# 4. Filesystem (built-in)
+# 6. Filesystem (built-in)
 npx -y @modelcontextprotocol/server-filesystem /path/to/allowed
 ```
+
+#### Playwriter MCP Config
+```json
+{
+  "mcpServers": {
+    "playwriter": {
+      "command": "npx",
+      "args": ["-y", "playwriter"],
+      "env": {}
+    }
+  }
+}
+```
+**Why Playwriter is #1:** It controls your ALREADY-RUNNING Chrome with all existing logins, cookies, and extensions. No cookie export/import. No AES decryption. No fresh browser instance. Sites see your real human browser. Anti-bot detection is inherently beaten. Perfect for Twitter bookmarks, social media scraping, any authenticated task.
+
+#### Vercel Agent-Browser Usage
+```bash
+# Start daemon (downloads Chrome for Testing automatically)
+agent-browser
+
+# Navigate
+agent-browser goto "https://example.com"
+
+# With persistent session (saves cookies across restarts)
+agent-browser --session-name twitter goto "https://x.com/i/bookmarks"
+
+# Screenshot
+agent-browser screenshot
+```
+**Why Agent-Browser is #2:** 82% less context than Playwright MCP (~1,400 tokens vs ~7,800). Uses accessibility tree with ref IDs instead of CSS selectors. 50+ commands. Stealth mode via Kernel cloud.
 
 ### TIER 2: HIGH PRIORITY (Week 2-3)
 
