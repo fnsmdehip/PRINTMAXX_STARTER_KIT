@@ -378,3 +378,25 @@ Try it free today.
 
 [ACQUISITION] We started sending our newsletter on WhatsApp and it accidentally became a growth channel. What should we add next?
 
+
+
+---
+
+## Pending Enhancement (ALPHA103268, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rw1lg4/i_automated_my_job_search_with_ai_agents_516/
+**Added:** 2026-03-17T06:18:19-04:00
+
+[ACQUISITION] I automated my job search with AI agents — 516 evaluations, 66 applications, zero manual screening
+
+
+
+---
+
+## Pending Enhancement (ALPHA103272, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rw29vt/respectaso_free_open_source_self_hosted_privacy/
+**Added:** 2026-03-17T06:18:19-04:00
+
+[ACQUISITION] RespectASO: Free + Open Source + Self Hosted + Privacy Focused App Store Optimization (ASO) Keyword Research Tool for Mo
+

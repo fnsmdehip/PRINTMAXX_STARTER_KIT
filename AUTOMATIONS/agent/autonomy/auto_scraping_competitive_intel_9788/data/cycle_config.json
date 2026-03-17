@@ -1,85 +1,153 @@
 {
-  "cycle_number": 55,
-  "configured_at": "2026-03-16T19:00:00Z",
+  "cycle_number": 60,
+  "configured_at": "2026-03-17T12:30:00Z",
   "venture": "SCRAPING_competitive_intel",
   "step": "configure",
-  "strategy": "NEW_NICHES_EXPANSION + NOFAP_DEEP_DIVE + LTD_VALIDATION_C52_C54",
-  "note": "Cycle 55: 15 BOs confirmed. Focus: 1) Expand to unexplored niches (journaling, language learning, walking, sleep, writing). 2) NoFapStreak deep dive - app store positioning + privacy-first messaging. 3) Validate LTD 89x$199=$17.7K - confirm not same source as C52. 4) Spot-check top 5 BOs for new entrants.",
-  "niches_cycle55": [
-    "journaling_habit",
-    "language_learning_streak",
-    "walking_habit_streak",
-    "sleep_habit_tracker",
-    "writing_habit_streak",
-    "mindfulness_streak",
-    "gratitude_habit"
+  "strategy": "FALSE_POSITIVE_RESCAN + FAITH_CREATIVE_SWEEP + GENERIC_TRACKER_FILTER",
+  "note": "Cycle 60: Re-scan 4 false positives (Streaks was generic tracker). Add exclusion list. New: bible_reading, photography, chess, cooking, declutter, handwriting.",
+  "niches_cycle56": [
+    "running_streak",
+    "yoga_streak",
+    "cycling_habit",
+    "hiit_streak",
+    "pushup_streak",
+    "plank_habit",
+    "intermittent_fasting_streak"
   ],
   "existing_bos_recheck": [
     "meditation_streak",
+    "language_learning_streak",
+    "journaling_habit",
     "nofap_streak",
-    "sobriety_streak",
-    "cold_shower_streak",
     "stoicism_habit"
   ],
   "key_objectives": [
-    "1) Scan 7 new niches for paid gap",
-    "2) NoFapStreak: app store search, review sentiment, competitors",
-    "3) Validate LTD case study - different source or duplicate of C52",
-    "4) Demand sizing: r/LanguageLearning, r/Journaling, r/sleep, r/running",
-    "5) New entrant check: any paid app appear in any confirmed BO this cycle?"
+    "1) RunningStreak: iTunes scan 'running streak habit paid'. P0. 4.19M demand unverified.",
+    "2) Yoga/Cycling/HIIT: New fitness sub-niches - demand size + iTunes gap check.",
+    "3) PushupStreak + PlankHabit: Body-weight micro-niches. Low competition hypothesis.",
+    "4) IntermittentFastingStreak: 16:8 fasting tracker gap check.",
+    "5) Recheck top 5 BOs for new paid dedicated entrants.",
+    "6) LTD flag: Mark 89x$199 case as MANUAL_VALIDATION_NEEDED in alert."
   ],
-  "itunes_search_terms": [
-    "journal habit streak daily paid",
-    "language learning streak habit",
-    "walking habit tracker streak",
-    "sleep habit tracker paid",
-    "writing habit streak daily",
-    "mindfulness habit streak paid",
-    "nofap streak counter app",
-    "sobriety counter streak paid",
-    "gratitude habit journal paid",
-    "cold shower habit streak paid"
-  ],
-  "reddit_subreddits": [
-    "Journaling",
-    "languagelearning",
-    "sleep",
-    "running",
-    "walking",
-    "indiehackers",
-    "MicroSaas",
-    "SaaS"
-  ],
-  "reddit_keywords": [
-    "journal habit app recommendation",
-    "language streak app",
-    "walking habit tracker app",
-    "sleep tracker habit app paid",
-    "writing habit streak app",
-    "lifetime deal week 1 revenue",
-    "indie app LTD sales results",
-    "appsumo launch week revenue"
-  ],
+  "itunes_search_terms": {
+    "running_streak": "running streak habit paid",
+    "running_streak_alt": "run daily habit tracker paid",
+    "yoga_streak": "yoga streak habit daily paid",
+    "cycling_habit": "cycling habit streak tracker paid",
+    "hiit_streak": "hiit workout streak habit paid",
+    "pushup_streak": "pushup streak counter habit paid",
+    "plank_habit": "plank habit streak counter paid",
+    "intermittent_fasting": "intermittent fasting streak habit paid",
+    "meditation_streak_recheck": "meditation streak daily habit paid",
+    "language_streak_recheck": "language learning streak habit paid"
+  },
+  "reddit_targets": {
+    "running": [
+      "running streak app habit",
+      "run daily habit app",
+      "streak tracker runner"
+    ],
+    "yoga": [
+      "yoga streak app habit",
+      "yoga daily habit tracker"
+    ],
+    "cycling": [
+      "cycling habit app streak",
+      "bike daily tracker"
+    ],
+    "fasting": [
+      "intermittent fasting app paid streak",
+      "16:8 fasting tracker app"
+    ],
+    "bodyweightfitness": [
+      "pushup streak app habit tracker",
+      "plank habit app paid"
+    ],
+    "Meditation": [
+      "meditation streak app paid",
+      "daily meditation habit tracker"
+    ],
+    "languagelearning": [
+      "streak app recommendation",
+      "language habit tracker paid"
+    ],
+    "indiehackers": [
+      "lifetime deal launch revenue week 1",
+      "89 lifetime deals 199"
+    ]
+  },
   "demand_sizing": {
-    "subreddits_to_size": ["Journaling", "languagelearning", "sleep", "running", "walking"],
-    "goal": "New niche demand validation - get subscriber counts"
+    "subreddits_to_size": [
+      "yoga",
+      "cycling",
+      "fasting",
+      "bodyweightfitness"
+    ],
+    "goal": "Get subscriber counts to slot new niches into BO demand ranking"
   },
   "ltd_validation": {
-    "goal": "Determine if 89 LDs x $199 = $17.7K is new case (not C52 duplicate)",
-    "search": ["site:reddit.com/r/indiehackers 89 lifetime deals", "indie app lifetime deal $17000 launch"],
-    "subreddits": ["indiehackers", "SaaS", "MicroSaas"]
+    "goal": "Flag 89 LDs x $199 = $17.7K case for manual human review",
+    "status": "MANUAL_VALIDATION_NEEDED",
+    "action": "Add to alert output - human must check indiehackers.com directly",
+    "search_terms": [
+      "89 lifetime deals $199 indie app",
+      "indie app $17700 launch ltds"
+    ],
+    "subreddits": [
+      "indiehackers",
+      "MicroSaas",
+      "SaaS"
+    ]
+  },
+  "current_bo_portfolio": {
+    "total_confirmed": 20,
+    "p0_builds": [
+      "MeditationStreak (3.52M)",
+      "NoFapStreak (1.24M)"
+    ],
+    "p1_builds": [
+      "LanguageLearningStreak (3.34M)",
+      "JournalingStreak (2.19M)"
+    ],
+    "unverified_priority": [
+      "RunningStreak (4.19M) - SCAN THIS CYCLE"
+    ],
+    "ramadan_critical": "~12 days remaining - PrayerLock must be live"
   },
   "rate_limits": {
     "itunes_delay_s": 2.5,
     "reddit_delay_s": 2.0,
     "timeout_s": 180,
     "max_retries": 2,
-    "max_results_per_term": 5
+    "max_results_per_term": 10
   },
-  "cumulative_context": {
-    "confirmed_bos": 15,
-    "p0_builds": ["MeditationStreak", "NoFapStreak"],
-    "ramadan_days_remaining": 14,
-    "ltd_cases_needed": 1
-  }
+  "scraper_script": "scraper_cycle060.py",
+  "output_files": {
+    "raw_scrape": "data/raw_scrape_cycle056.json",
+    "itunes_scrape": "data/itunes_scrape_cycle056.json",
+    "clean": "data/clean_cycle056.json",
+    "analyze": "data/analyze_cycle056.json"
+  },
+  "generic_tracker_exclusions": [
+    "Streaks",
+    "Habitica",
+    "Productive",
+    "HabitMinder",
+    "Habit Tracker",
+    "Loop Habit Tracker",
+    "Done",
+    "Streaks - Habit Tracker"
+  ],
+  "niches_cycle60": [
+    "cold_shower_streak_rescan",
+    "drawing_streak_rescan",
+    "vitamin_habit_rescan",
+    "swimming_streak_rescan",
+    "bible_reading_streak",
+    "photography_streak",
+    "chess_habit",
+    "cooking_streak",
+    "declutter_habit",
+    "handwriting_habit"
+  ]
 }

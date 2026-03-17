@@ -1,0 +1,86 @@
+[
+  {
+    "_comment": "Example: user wanted specific tool recommendation, system gave generic list",
+    "initial_prompt": "what monitoring tool should i use for my saas app. need uptime checks and incident alerts",
+    "initial_ts": "2026-02-15T09:12:00",
+    "corrections": [
+      {
+        "prompt": "no not a list of 10 tools. which ONE should i actually use for a solo founder with < $50/mo budget",
+        "ts": "2026-02-15T09:14:00",
+        "signals": ["no ", "not that"]
+      },
+      {
+        "prompt": "stop recommending datadog. i said solo founder. $50/mo. datadog is $500+/mo for anything useful",
+        "ts": "2026-02-15T09:16:00",
+        "signals": ["stop", "i said"]
+      },
+      {
+        "prompt": "betterstack. just say betterstack. $24/mo, does uptime + incidents + status page. done.",
+        "ts": "2026-02-15T09:18:00",
+        "signals": []
+      }
+    ],
+    "resolution": "exactly. one tool, one price, covers all three needs. that's what i wanted.",
+    "resolved": true,
+    "chain_length": 4,
+    "meta_rule_extracted": "When asked for a tool recommendation with constraints (budget, team size), give ONE answer with reasoning, not a comparison table. The user already knows the options exist."
+  },
+  {
+    "_comment": "Example: user wanted code, system gave explanation",
+    "initial_prompt": "write me a retry decorator with exponential backoff and jitter",
+    "initial_ts": "2026-02-20T14:30:00",
+    "corrections": [
+      {
+        "prompt": "i said write me the code. not explain what exponential backoff is. i know what it is. just the decorator.",
+        "ts": "2026-02-20T14:32:00",
+        "signals": ["i said", "not that"]
+      }
+    ],
+    "resolution": "good. that's all i needed.",
+    "resolved": true,
+    "chain_length": 2,
+    "meta_rule_extracted": "When the user says 'write me X', they want the artifact, not an explanation of X. Skip the preamble. Code first, explanation only if asked."
+  },
+  {
+    "_comment": "Example: user wanted depth, system gave surface-level overview",
+    "initial_prompt": "analyze the competitive landscape for AI code assistants in 2026",
+    "initial_ts": "2026-03-01T10:00:00",
+    "corrections": [
+      {
+        "prompt": "this is surface level. what are the actual pricing models, what's the retention data, where are the moats",
+        "ts": "2026-03-01T10:05:00",
+        "signals": ["surface", "deeper"]
+      },
+      {
+        "prompt": "you're just listing features. i want to know which ones are actually making money and why. not marketing copy.",
+        "ts": "2026-03-01T10:10:00",
+        "signals": ["you're just", "not that", "actually"]
+      },
+      {
+        "prompt": "better but what about the ones that failed. windsurf folded into codeium. what went wrong there. that's where the real signal is.",
+        "ts": "2026-03-01T10:15:00",
+        "signals": ["what about", "also "]
+      }
+    ],
+    "resolution": null,
+    "resolved": false,
+    "chain_length": 4,
+    "meta_rule_extracted": "For analysis tasks, the user wants: (1) actual numbers not feature lists, (2) failure analysis not just winners, (3) 'why' not 'what'. Default analysis depth should be at the THIRD correction level, not the first."
+  },
+  {
+    "_comment": "Example: user wanted autonomous execution, system asked for permission",
+    "initial_prompt": "set up the cron jobs for all the daily scrapers",
+    "initial_ts": "2026-03-05T16:00:00",
+    "corrections": [
+      {
+        "prompt": "dont ask me if its ok to set up cron. i literally just told you to set up cron. use your best judgment on timing.",
+        "ts": "2026-03-05T16:02:00",
+        "signals": ["don't", "i said"]
+      }
+    ],
+    "resolution": "perfect",
+    "resolved": true,
+    "chain_length": 2,
+    "meta_rule_extracted": "When the user gives a direct instruction, execute it. Do not ask for confirmation. 'Use your best judgment' means make the decision yourself, do not bounce it back."
+  }
+]

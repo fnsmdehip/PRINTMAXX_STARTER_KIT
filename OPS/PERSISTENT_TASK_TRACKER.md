@@ -1050,3 +1050,11 @@ If context was compacted and you lost track:
 - [P2] All script services now active (source: swarm/system_healer_report_20260316.md)
 - [P2] Ready to execute on schedule (source: swarm/system_healer_report_20260316.md)
 - [P2] ⚠️ Monitor disk usage trend (currently 97%) (source: swarm/system_healer_report_20260315.md)
+
+
+### AGGREGATOR FINDINGS -- 2026-03-17 07:30
+- [P2] Archive logs >30 days: ~15MB saveable (source: swarm/system_healer_report_20260316.md)
+- [P2] Old app builds (>10 versions): ~50MB saveable (source: swarm/system_healer_report_20260316.md)
+- [P2] Estimated reclaim: 65-80MB (brings disk from 94.8% to ~94%) (source: swarm/system_healer_report_20260316.md)
+- [P2] Current growth rate: ~10MB/day (source: swarm/system_healer_report_20260316.md)
+- [P2] Time until critical (98%): 5-7 days (source: swarm/system_healer_report_20260316.md)

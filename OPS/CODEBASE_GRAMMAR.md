@@ -1,5 +1,5 @@
 # PRINTMAXX CODEBASE GRAMMAR
-# Generated: 2026-03-16T05:45:00.685240
+# Generated: 2026-03-17T06:03:59.671655
 # 20 scripts | Instant system understanding
 
 ## EXECUTION HIERARCHY
@@ -133,7 +133,7 @@
 ### memory_manager.py (464L) — filesystem-based memory management
   fn: count_csv(path) | count_files(pattern) | read_json(path) | file_age_hours(path) | safe_read_csv_column(path, col) | update_heartbeat() — Generate HEARTBEAT.md — the system pulse check. | update_active_tasks() — Refresh active-tasks.md with current system state. | log_to_daily(message) — Append a message to today's daily log. | generate_daily_summary() — Generate end-of-day summary from daily log entries. | check_venture_health() — Quick health check across all ventures. | main()
   cli: --heartbeat --active-tasks --daily-summary --log --health --full
-  reads: ETSY_LISTINGS_COMPLETE.md, progress.json, REVENUE_TRACKER.csv, ACCOUNTS.csv
+  reads: ACCOUNTS.csv, REVENUE_TRACKER.csv, progress.json, ETSY_LISTINGS_COMPLETE.md
 
 ### wire_missed_intelligence.py (263L) — parses MISSED_INTELLIGENCE_SCAN.md → updates catalog
   fn: classify_path(path) — Classify a file path into a venture type. | parse_scan_file(scan_path) — Parse MISSED_INTELLIGENCE_SCAN.md and extract all file entries. | get_existing_paths(catalog) — Get all paths already in the catalog across all ventures. | main()

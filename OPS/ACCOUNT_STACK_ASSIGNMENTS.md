@@ -275,3 +275,22 @@
 | IPRoyal 6 ISP IPs | $12/mo | When Webshare gets flagged |
 | Publer | $24/mo | When need 100+ scheduled posts |
 | Ultra Mobile PayGo x3 | $9/mo | For re-verification on key accounts |
+
+
+---
+
+## Pending Enhancement (ALPHA103220, Score: 38)
+
+**Source:** @tatealax (high-signal-accounts) | **URL:** https://x.com/reezus/status/2033561922247725251
+**Added:** 2026-03-17T08:16:15-04:00
+
+I spent 6 months figuring out AI UGC so you don't have to.
+
+and thats how we went from 0 → 4M views/week → $20K MRR with $0 ad spend.
+
+The tech stack. The prompts. The automation pipeline. The account structure.
+
+Here's what I wish someone told me on day 1:
+
+Your first 20 AI
+

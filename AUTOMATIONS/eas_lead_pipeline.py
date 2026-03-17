@@ -135,7 +135,11 @@ def score_for_eas(lead):
     score = 0.0
 
     # Website quality inverse (worse site = better lead)
-    website_score = float(lead.get("website_score", lead.get("score", 50)))
+    website_score_raw = lead.get("website_score", lead.get("score", 50))
+    try:
+        website_score = float(website_score_raw) if website_score_raw and str(website_score_raw).strip() else 50
+    except (ValueError, TypeError):
+        website_score = 50
     score += (100 - website_score) * DEFAULT_SCORING["website_quality_inverse"]
 
     # Phone-first business

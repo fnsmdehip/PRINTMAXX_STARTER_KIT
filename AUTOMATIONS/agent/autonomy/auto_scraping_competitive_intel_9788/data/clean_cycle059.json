@@ -1,0 +1,222 @@
+{
+  "blue_oceans": [
+    {
+      "niche": "water_habit",
+      "label": "Water/Hydration Habit",
+      "status": "BLUE_OCEAN",
+      "paid_apps": 0,
+      "top_apps": [],
+      "demand_proxy": 12483059,
+      "subreddit_counts": {
+        "hydrohomies": 1281719,
+        "water": 71940,
+        "fitness": 12483059
+      },
+      "itunes_terms_scanned": [
+        "water habit streak tracker paid",
+        "hydration tracker daily habit paid"
+      ],
+      "reason": "BLUE_OCEAN | community=12,483,059 | paid_apps=0 | cycle=59"
+    },
+    {
+      "niche": "study_streak",
+      "label": "Study Habit Streak",
+      "status": "BLUE_OCEAN",
+      "paid_apps": 0,
+      "top_apps": [],
+      "demand_proxy": 3252652,
+      "subreddit_counts": {
+        "studying": 62343,
+        "GetStudying": 3252652,
+        "learnmath": 435938
+      },
+      "itunes_terms_scanned": [
+        "study streak habit paid",
+        "study daily habit tracker paid"
+      ],
+      "reason": "BLUE_OCEAN | community=3,252,652 | paid_apps=0 | cycle=59"
+    },
+    {
+      "niche": "affirmation_habit",
+      "label": "Daily Affirmation Streak",
+      "status": "BLUE_OCEAN",
+      "paid_apps": 0,
+      "top_apps": [],
+      "demand_proxy": 2517912,
+      "subreddit_counts": {
+        "lawofattraction": 354437,
+        "PositiveThinking": 54143,
+        "selfimprovement": 2517912
+      },
+      "itunes_terms_scanned": [
+        "affirmation daily habit streak paid",
+        "positive affirmation streak paid"
+      ],
+      "reason": "BLUE_OCEAN | community=2,517,912 | paid_apps=0 | cycle=59"
+    },
+    {
+      "niche": "gratitude_streak",
+      "label": "Gratitude Journal Streak",
+      "status": "BLUE_OCEAN",
+      "paid_apps": 0,
+      "top_apps": [],
+      "demand_proxy": 1469776,
+      "subreddit_counts": {
+        "gratitude": 163489,
+        "ThankYou": 2545,
+        "Mindfulness": 1469776
+      },
+      "itunes_terms_scanned": [
+        "gratitude journal streak habit paid",
+        "daily gratitude habit paid"
+      ],
+      "reason": "BLUE_OCEAN | community=1,469,776 | paid_apps=0 | cycle=59"
+    },
+    {
+      "niche": "sleep_habit",
+      "label": "Sleep Habit Tracker",
+      "status": "BLUE_OCEAN",
+      "paid_apps": 0,
+      "top_apps": [],
+      "demand_proxy": 671248,
+      "subreddit_counts": {
+        "sleep": 671248,
+        "insomnia": 179519,
+        "sleephackers": 43728
+      },
+      "itunes_terms_scanned": [
+        "sleep habit streak tracker paid",
+        "bedtime routine habit paid"
+      ],
+      "reason": "BLUE_OCEAN | community=671,248 | paid_apps=0 | cycle=59"
+    }
+  ],
+  "occupied": [
+    {
+      "niche": "cold_shower_streak",
+      "label": "Cold Shower Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 2517911,
+      "subreddit_counts": {
+        "coldshowers": 42328,
+        "Wim_Hof": 0,
+        "selfimprovement": 2517911
+      },
+      "itunes_terms_scanned": [
+        "cold shower streak habit paid",
+        "cold shower challenge app paid"
+      ],
+      "reason": "OCCUPIED | community=2,517,911 | paid_apps=1 | cycle=59"
+    },
+    {
+      "niche": "drawing_streak",
+      "label": "Drawing/Sketch Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 3067923,
+      "subreddit_counts": {
+        "learnart": 1671475,
+        "learntodraw": 3067923,
+        "ArtFundamentals": 264804
+      },
+      "itunes_terms_scanned": [
+        "drawing streak habit daily paid",
+        "sketch daily habit tracker paid"
+      ],
+      "reason": "OCCUPIED | community=3,067,923 | paid_apps=1 | cycle=59"
+    },
+    {
+      "niche": "vitamin_habit",
+      "label": "Vitamin/Supplement Habit",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 525201,
+      "subreddit_counts": {
+        "Supplements": 525201,
+        "vitamins": 9944,
+        "nootropics": 438426
+      },
+      "itunes_terms_scanned": [
+        "vitamin supplement habit tracker paid",
+        "daily vitamin streak habit paid"
+      ],
+      "reason": "OCCUPIED | community=525,201 | paid_apps=1 | cycle=59"
+    },
+    {
+      "niche": "music_practice_streak",
+      "label": "Music Practice Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 2,
+      "top_apps": [
+        {
+          "name": "Anytune Pro+: Studio Tools\u00a0",
+          "price": 14.99,
+          "rating": 4.87635
+        },
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 3301023,
+      "subreddit_counts": {
+        "Guitar": 3301023,
+        "piano": 1260467,
+        "learnmusictheory": 1208
+      },
+      "itunes_terms_scanned": [
+        "music practice streak habit paid",
+        "guitar practice habit daily paid"
+      ],
+      "reason": "OCCUPIED | community=3,301,023 | paid_apps=2 | cycle=59"
+    },
+    {
+      "niche": "swimming_streak",
+      "label": "Swimming Habit Streak",
+      "status": "OCCUPIED",
+      "paid_apps": 1,
+      "top_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569
+        }
+      ],
+      "demand_proxy": 600023,
+      "subreddit_counts": {
+        "Swimming": 600023,
+        "openwater": 61,
+        "triathlon": 265836
+      },
+      "itunes_terms_scanned": [
+        "swimming streak habit paid",
+        "swim daily habit tracker paid"
+      ],
+      "reason": "OCCUPIED | community=600,023 | paid_apps=1 | cycle=59"
+    }
+  ],
+  "errors": []
+}

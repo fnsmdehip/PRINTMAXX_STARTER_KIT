@@ -1,0 +1,118 @@
+{
+  "cycle": 57,
+  "cleaned_at": "2026-03-17T10:22:43.070820+00:00",
+  "gap_classification": {
+    "sleep_habit": {
+      "status": "BLUE_OCEAN",
+      "community_size": 2100000,
+      "community_source": "",
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "sobriety_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 300000,
+      "community_source": "",
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "water_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 151000,
+      "community_source": "",
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "reading_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 23000000,
+      "community_source": "",
+      "itunes_paid_total": 1,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": true,
+      "note": "Only generic apps: Streaks. Dedicated niche app missing.",
+      "paid_app_names": [
+        "Streaks"
+      ]
+    },
+    "cold_shower": {
+      "status": "BLUE_OCEAN",
+      "community_size": 520000,
+      "community_source": "",
+      "itunes_paid_total": 1,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": true,
+      "note": "Only generic apps: Streaks. Dedicated niche app missing.",
+      "paid_app_names": [
+        "Streaks"
+      ]
+    },
+    "chess_habit": {
+      "status": "OCCUPIED",
+      "community_size": 3000000,
+      "community_source": "",
+      "itunes_paid_total": 1,
+      "itunes_paid_dedicated": 1,
+      "itunes_only_generic": false,
+      "note": "Paid competitors: Chess Tiger Pro.",
+      "paid_app_names": [
+        "Chess Tiger Pro"
+      ]
+    },
+    "drawing_habit": {
+      "status": "BLUE_OCEAN",
+      "community_size": 1500000,
+      "community_source": "",
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "gratitude_journal": {
+      "status": "BLUE_OCEAN",
+      "community_size": 170000,
+      "community_source": "",
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    },
+    "coding_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 4700000,
+      "community_source": "",
+      "itunes_paid_total": 1,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": true,
+      "note": "Only generic apps: Streaks. Dedicated niche app missing.",
+      "paid_app_names": [
+        "Streaks"
+      ]
+    },
+    "study_streak": {
+      "status": "BLUE_OCEAN",
+      "community_size": 1200000,
+      "community_source": "",
+      "itunes_paid_total": 0,
+      "itunes_paid_dedicated": 0,
+      "itunes_only_generic": false,
+      "note": "0 paid apps found. Pure gap.",
+      "paid_app_names": []
+    }
+  },
+  "dedup_notes": [
+    "All 10 targets are new first-time scans this cycle."
+  ],
+  "rate_limit_impact": "None. All scans completed."
+}

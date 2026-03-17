@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+csv.field_size_limit(10 * 1024 * 1024)  # 10MB limit for large alpha entries
 import hashlib
 import os
 import re

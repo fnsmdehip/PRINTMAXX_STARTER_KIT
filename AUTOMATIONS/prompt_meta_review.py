@@ -180,7 +180,8 @@ def run_claude_analysis(prompt_text: str) -> str:
     """Run claude -p with the analysis prompt."""
     try:
         result = subprocess.run(
-            ["claude", "-p", prompt_text],
+            ["claude", "-p"],
+            input=prompt_text,
             capture_output=True,
             text=True,
             timeout=120,
@@ -189,7 +190,8 @@ def run_claude_analysis(prompt_text: str) -> str:
         if result.returncode == 0:
             return result.stdout.strip()
         else:
-            log(f"claude -p failed: {result.stderr[:200]}", "ERROR")
+            log(f"claude -p failed: returncode={result.returncode}", "ERROR")
+            log(f"stderr: {result.stderr[:200]}", "ERROR")
             return f"[ERROR: claude -p failed with code {result.returncode}]"
     except FileNotFoundError:
         log("claude CLI not found", "ERROR")

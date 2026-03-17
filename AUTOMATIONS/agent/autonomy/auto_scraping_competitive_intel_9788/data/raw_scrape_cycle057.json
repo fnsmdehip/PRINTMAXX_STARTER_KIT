@@ -1,0 +1,143 @@
+{
+  "cycle": 57,
+  "itunes": {
+    "sleep_habit": {
+      "search_term": "sleep habit streak tracker paid",
+      "total_results": 8,
+      "paid_count": 0,
+      "free_count": 8,
+      "paid_apps": [],
+      "gap_confirmed": true,
+      "only_generic": false
+    },
+    "sobriety_streak": {
+      "search_term": "sobriety streak counter days paid",
+      "total_results": 10,
+      "paid_count": 0,
+      "free_count": 10,
+      "paid_apps": [],
+      "gap_confirmed": true,
+      "only_generic": false
+    },
+    "water_streak": {
+      "search_term": "water reminder streak daily paid",
+      "total_results": 10,
+      "paid_count": 0,
+      "free_count": 10,
+      "paid_apps": [],
+      "gap_confirmed": true,
+      "only_generic": false
+    },
+    "reading_streak": {
+      "search_term": "reading streak daily habit paid",
+      "total_results": 10,
+      "paid_count": 1,
+      "free_count": 9,
+      "paid_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569,
+          "rating_count": 27340,
+          "developer": "Crunchy Bagel",
+          "bundle_id": "com.streaksapp.streak"
+        }
+      ],
+      "gap_confirmed": true,
+      "only_generic": true
+    },
+    "cold_shower": {
+      "search_term": "cold shower streak habit daily paid",
+      "total_results": 10,
+      "paid_count": 1,
+      "free_count": 9,
+      "paid_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569,
+          "rating_count": 27340,
+          "developer": "Crunchy Bagel",
+          "bundle_id": "com.streaksapp.streak"
+        }
+      ],
+      "gap_confirmed": true,
+      "only_generic": true
+    },
+    "chess_habit": {
+      "search_term": "chess habit streak daily tracker paid",
+      "total_results": 10,
+      "paid_count": 1,
+      "free_count": 9,
+      "paid_apps": [
+        {
+          "name": "Chess Tiger Pro",
+          "price": 14.99,
+          "rating": 4.85425,
+          "rating_count": 23390,
+          "developer": "Christophe Th\u00e9ron",
+          "bundle_id": "com.chesstiger.ChessTiger"
+        }
+      ],
+      "gap_confirmed": false,
+      "only_generic": false
+    },
+    "drawing_habit": {
+      "search_term": "drawing habit streak daily tracker paid",
+      "total_results": 10,
+      "paid_count": 0,
+      "free_count": 10,
+      "paid_apps": [],
+      "gap_confirmed": true,
+      "only_generic": false
+    },
+    "gratitude_journal": {
+      "search_term": "gratitude journal streak habit paid",
+      "total_results": 10,
+      "paid_count": 0,
+      "free_count": 10,
+      "paid_apps": [],
+      "gap_confirmed": true,
+      "only_generic": false
+    },
+    "coding_streak": {
+      "search_term": "coding habit streak daily paid",
+      "total_results": 10,
+      "paid_count": 1,
+      "free_count": 9,
+      "paid_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "rating": 4.81569,
+          "rating_count": 27340,
+          "developer": "Crunchy Bagel",
+          "bundle_id": "com.streaksapp.streak"
+        }
+      ],
+      "gap_confirmed": true,
+      "only_generic": true
+    },
+    "study_streak": {
+      "search_term": "study habit streak daily paid",
+      "total_results": 10,
+      "paid_count": 0,
+      "free_count": 10,
+      "paid_apps": [],
+      "gap_confirmed": true,
+      "only_generic": false
+    }
+  },
+  "reddit_sizes": {
+    "sleep_habit": 2100000,
+    "sobriety_streak": 300000,
+    "water_streak": 151000,
+    "reading_streak": 23000000,
+    "cold_shower": 520000,
+    "chess_habit": 3000000,
+    "drawing_habit": 1500000,
+    "gratitude_journal": 170000,
+    "coding_streak": 4700000,
+    "study_streak": 1200000
+  }
+}

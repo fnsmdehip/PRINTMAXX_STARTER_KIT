@@ -1,7 +1,7 @@
 {
   "agents": {
     "gap_hunter": {
-      "installed_at": "2026-03-16T16:35:09.951290",
+      "installed_at": "2026-03-17T06:52:41.575948",
       "status": "ACTIVE",
       "interval": "24h",
       "promoted_at": "2026-03-15T04:30:03Z",
@@ -18,7 +18,7 @@
       "reason": "RE-KILL. Redundant with gap_hunter. Originally killed Cycle 4, resurrected by deploy override."
     },
     "competitor_stalker": {
-      "installed_at": "2026-03-16T16:35:10.281743",
+      "installed_at": "2026-03-17T06:52:47.144477",
       "status": "ACTIVE",
       "interval": "48h",
       "throttled_at": "2026-03-16T08:20:00Z",
@@ -41,7 +41,7 @@
       "reason": "RE-KILL. No social accounts."
     },
     "lead_machine": {
-      "installed_at": "2026-03-16T16:35:10.694103",
+      "installed_at": "2026-03-17T06:52:49.436301",
       "status": "ACTIVE",
       "interval": "48h",
       "throttled_at": "2026-03-15T04:30:09Z",
@@ -78,7 +78,7 @@
       "reason": "RE-HIBERNATE. Wake at first revenue."
     },
     "cross_pollinator": {
-      "installed_at": "2026-03-16T16:35:11.070248",
+      "installed_at": "2026-03-17T06:52:51.077230",
       "status": "ACTIVE",
       "interval": "4h",
       "priority": "P0",
@@ -88,7 +88,7 @@
       "items_wired": 1943
     },
     "revenue_tracker": {
-      "installed_at": "2026-03-16T16:35:11.833136",
+      "installed_at": "2026-03-17T06:52:57.052799",
       "status": "ACTIVE",
       "interval": "48h",
       "throttled_at": "2026-03-16T08:20:01Z",
@@ -97,7 +97,7 @@
       "tier": "C"
     },
     "system_healer": {
-      "installed_at": "2026-03-16T16:35:11.988589",
+      "installed_at": "2026-03-17T06:52:57.512123",
       "status": "ACTIVE",
       "interval": "2h",
       "priority": "P0",
@@ -106,7 +106,7 @@
       "mandate": "Cycle 15: (1) Regenerate DAILY_DIGEST.md (8 days stale). (2) Regenerate INTELLIGENCE_CATALOG.json (9 days stale). (3) Fix robots.txt Disallow on ALL 62+ surge.sh sites. (4) Implement content mission circuit breaker (80+ wasted API calls/day)."
     },
     "data_janitor": {
-      "installed_at": "2026-03-16T16:35:12.130259",
+      "installed_at": "2026-03-17T06:52:58.334426",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "B-tier. Mandate: find top 5 disk growth sources. 20GB consumed in 24h.",
@@ -120,14 +120,14 @@
       "reason": "No distribution channels."
     },
     "inbound_maximizer": {
-      "installed_at": "2026-03-16T16:35:12.455271",
+      "installed_at": "2026-03-17T06:53:00.251082",
       "status": "ACTIVE",
       "interval": "8h",
       "reason": "A-tier. Maintains deployed apps, verifies email capture.",
       "tier": "A"
     },
     "swarm_brain": {
-      "installed_at": "2026-03-16T16:35:12.603270",
+      "installed_at": "2026-03-17T06:53:00.970174",
       "status": "ACTIVE",
       "interval": "12h",
       "reason": "Meta-orchestrator. Conservation mode.",
@@ -148,14 +148,14 @@
       "reason": "RE-HIBERNATE. 30+ unused PNGs."
     },
     "quality_gate": {
-      "installed_at": "2026-03-16T16:35:12.739011",
+      "installed_at": "2026-03-17T06:53:01.582024",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "Fixed by system_healer this cycle. Let it run and prove value.",
       "tier": "C"
     },
     "playwright_tester": {
-      "installed_at": "2026-03-16T16:35:12.867361",
+      "installed_at": "2026-03-17T06:53:02.105606",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "Lightweight site tests.",
@@ -182,14 +182,14 @@
       "reason": "Dead 6 days. Mandate never delivered."
     },
     "growth_strategist": {
-      "installed_at": "2026-03-16T16:35:13.187985",
+      "installed_at": "2026-03-17T06:53:04.847688",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "Produces daily growth strategy reports wired to content by cross_pollinator.",
       "tier": "B"
     }
   },
-  "deployed_at": "2026-03-16T16:35:13.190654",
+  "deployed_at": "2026-03-17T06:53:04.850278",
   "brain_cycles": 15,
   "last_brain_cycle": "2026-03-16T08:20:00Z",
   "conservation_mode": true,

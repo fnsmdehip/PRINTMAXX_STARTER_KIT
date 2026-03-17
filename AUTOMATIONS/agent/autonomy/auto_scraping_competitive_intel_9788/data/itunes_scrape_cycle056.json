@@ -1,0 +1,110 @@
+{
+  "running_streak": {
+    "search_term": "running streak habit paid",
+    "total_results": 10,
+    "paid_count": 1,
+    "free_count": 9,
+    "paid_apps": [
+      {
+        "name": "Streaks",
+        "price": 5.99,
+        "rating": 4.82,
+        "rating_count": 27340,
+        "developer": "Crunchy Bagel Pty Ltd",
+        "bundle_id": "com.streaksapp.streak"
+      }
+    ],
+    "gap_confirmed": true,
+    "only_generic": true
+  },
+  "running_streak_alt": {
+    "search_term": "run daily habit tracker paid",
+    "total_results": 9,
+    "paid_count": 0,
+    "free_count": 9,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  },
+  "yoga_streak": {
+    "search_term": "yoga streak habit daily paid",
+    "total_results": 10,
+    "paid_count": 0,
+    "free_count": 10,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  },
+  "cycling_habit": {
+    "search_term": "cycling habit streak tracker paid",
+    "total_results": 9,
+    "paid_count": 0,
+    "free_count": 9,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  },
+  "hiit_streak": {
+    "search_term": "hiit workout streak habit paid",
+    "total_results": 9,
+    "paid_count": 0,
+    "free_count": 9,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  },
+  "pushup_streak": {
+    "search_term": "pushup streak counter habit paid",
+    "total_results": 10,
+    "paid_count": 0,
+    "free_count": 10,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  },
+  "plank_habit": {
+    "search_term": "plank habit streak counter paid",
+    "total_results": 10,
+    "paid_count": 1,
+    "free_count": 9,
+    "paid_apps": [
+      {
+        "name": "Streaks",
+        "price": 5.99,
+        "rating": 4.82,
+        "rating_count": 27340,
+        "developer": "Crunchy Bagel Pty Ltd",
+        "bundle_id": "com.streaksapp.streak"
+      }
+    ],
+    "gap_confirmed": true,
+    "only_generic": true
+  },
+  "intermittent_fasting": {
+    "search_term": "intermittent fasting streak habit paid",
+    "total_results": 10,
+    "paid_count": 0,
+    "free_count": 10,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  },
+  "meditation_streak_recheck": {
+    "search_term": "meditation streak daily habit paid",
+    "total_results": 9,
+    "paid_count": 0,
+    "free_count": 9,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  },
+  "language_streak_recheck": {
+    "search_term": "language learning streak habit paid",
+    "total_results": 10,
+    "paid_count": 0,
+    "free_count": 10,
+    "paid_apps": [],
+    "gap_confirmed": true,
+    "only_generic": false
+  }
+}

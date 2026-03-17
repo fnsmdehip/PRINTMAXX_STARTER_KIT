@@ -166,6 +166,8 @@ Deployed 2026-03-09 from `DIGITAL_PRODUCTS/lead_magnets/` (updated 2026-03-13)
 | Best AI Tools 2026 | https://best-ai-tools-2026.surge.sh | LIVE (placeholder IDs) |
 | AI Stack 2026 | https://ai-stack-2026.surge.sh | LIVE (placeholder IDs) |
 | ConvertKit vs Beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE (placeholder IDs) |
+| Framer vs Webflow | https://framer-vs-webflow.surge.sh | LIVE - deployed 2026-03-17 by GAP HUNTER |
+| App Marketing Hub | https://app-marketing-pages.surge.sh | LIVE - deployed 2026-03-17 by GAP HUNTER |
 
 ## Comparison Pages
 

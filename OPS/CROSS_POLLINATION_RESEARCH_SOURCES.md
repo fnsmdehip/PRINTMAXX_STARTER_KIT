@@ -357,3 +357,23 @@ Track each stack launch in:
 5. **Cross-reference with ALPHA_STAGING.csv** - Integrate new tactics
 
 **Research is perpetual. New stacks discovered weekly via high-signal sources.**
+
+
+---
+
+## Pending Enhancement (ALPHA103304, Score: 20)
+
+**Source:** @aleyda (high-signal-accounts) | **URL:** https://x.com/timsoulo/status/2033592883345846331
+**Added:** 2026-03-17T06:50:39-04:00
+
+Nearly 90 million search visits wiped out in the last 9 months. And traffic from AI didn't replace even 5% of it.
+
+(across ~75k websites connected to free 
+@Ahrefs
+ Web Analytics)
+
+Here's how other traffic sources held up:
+
+ Paid traffic is UP 13.8% (188M → 214M)
+ Social
+
