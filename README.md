@@ -148,7 +148,7 @@ cat OPS/ACTIONABLE_QUEUE.md
 
 ## related
 
-- [`agent-soul`](https://github.com/fnsmdehip/agent-soul) — the meta-cognition framework extracted from this system (open source)
+- [`dogwalk`](https://github.com/fnsmdehip/dogwalk) — stop dog walking your AI. meta-cognition framework extracted from this system (open source)
 
 ## license
 

@@ -347,6 +347,7 @@ function renderResults(industry,city,listSize,service,minScore){
       var leads=JSON.parse(localStorage.getItem('prospectmaxx_leads')||'[]');
       leads.push({email:email,industry:industry,city:city,ts:new Date().toISOString()});
       localStorage.setItem('prospectmaxx_leads',JSON.stringify(leads));
+      try{var fd=new FormData();fd.append('email',email);fd.append('_subject','[ProspectMaxx] Lead - Pro Waitlist');fd.append('_captcha','false');fd.append('source','prospectmaxx.surge.sh');fd.append('industry',industry);fd.append('city',city);fetch('https://formsubmit.co/printmaxxweb@gmail.com',{method:'POST',body:fd}).catch(function(){});}catch(e){}
       joinBtn.textContent='joined';joinBtn.disabled=true;
     }
   });

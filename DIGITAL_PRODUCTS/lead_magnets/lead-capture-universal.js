@@ -32,7 +32,7 @@
   // -------------------------------------------------------------------------
   // Config — override with window.LEAD_ENDPOINT / window.LEAD_SOURCE
   // -------------------------------------------------------------------------
-  var ENDPOINT = window.LEAD_ENDPOINT || 'http://localhost:8888/lead';
+  var ENDPOINT = window.LEAD_ENDPOINT || 'https://formsubmit.co/ajax/printmaxxweb@gmail.com';
   var SOURCE   = window.LEAD_SOURCE   || location.hostname + location.pathname;
 
   // -------------------------------------------------------------------------

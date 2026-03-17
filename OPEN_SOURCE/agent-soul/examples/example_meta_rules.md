@@ -75,4 +75,4 @@ Action: concrete steps to implement the rule
 ```
 
 The cognitive engine generates these automatically from your prompt history.
-Run `python3 -m agent_soul.core.cognitive_engine --build-model` to generate your own.
+Run `python3 -m dogwalk.core.cognitive_engine --build-model` to generate your own.

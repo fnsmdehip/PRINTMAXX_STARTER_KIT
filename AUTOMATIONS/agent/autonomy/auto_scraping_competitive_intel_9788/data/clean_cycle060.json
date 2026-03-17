@@ -1,0 +1,797 @@
+{
+  "cold_shower_streak": {
+    "niche": {
+      "id": "cold_shower_streak",
+      "label": "Cold Shower Streak (RESCAN)",
+      "itunes_terms": [
+        "cold shower streak app",
+        "cold shower challenge dedicated"
+      ],
+      "reddit_subs": [
+        "coldshowers",
+        "Wim_Hof",
+        "coldplunge"
+      ],
+      "expected_demand": "coldshowers=300K+",
+      "rescan": true
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "ColdStreak: Shower Tracker",
+          "price": "Free",
+          "rating": 0,
+          "ratings_count": 0,
+          "version": "1.1"
+        },
+        {
+          "name": "Cold Shower Therapy",
+          "price": "Free",
+          "rating": 4.40566,
+          "ratings_count": 106,
+          "version": "2.10"
+        },
+        {
+          "name": "Plunge - Official App",
+          "price": "Free",
+          "rating": 4.71261,
+          "ratings_count": 1538,
+          "version": "4.3.2"
+        },
+        {
+          "name": "Cold Shower Therapy",
+          "price": "Free",
+          "rating": 4.40566,
+          "ratings_count": 106,
+          "version": "2.10"
+        },
+        {
+          "name": "GoPolar: Cold Plunge & Sauna",
+          "price": "Free",
+          "rating": 4.69048,
+          "ratings_count": 252,
+          "version": "2.3.5"
+        },
+        {
+          "name": "Cold Shower Timer - Ice Bath",
+          "price": "$2.99",
+          "rating": 0,
+          "ratings_count": 0,
+          "version": "1.2"
+        },
+        {
+          "name": "Bathtimer: Shower & Save Water",
+          "price": "Free",
+          "rating": 4.67605,
+          "ratings_count": 71,
+          "version": "1.18"
+        },
+        {
+          "name": "Polar Dive",
+          "price": "Free",
+          "rating": 3.94737,
+          "ratings_count": 19,
+          "version": "1.2"
+        }
+      ],
+      "generic_filtered": [
+        "Streaks",
+        "Strides: Habit Tracker + Goals"
+      ],
+      "total_community": 68895,
+      "reddit_breakdown": {
+        "coldshowers": 42328,
+        "Wim_Hof": 0,
+        "coldplunge": 26567
+      },
+      "reasoning": "8 competitors. Top: 'Plunge - Official App' (1538 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:36:10.445010+00:00"
+  },
+  "drawing_streak": {
+    "niche": {
+      "id": "drawing_streak",
+      "label": "Drawing/Sketch Streak (RESCAN)",
+      "itunes_terms": [
+        "drawing streak daily app",
+        "sketch habit daily dedicated"
+      ],
+      "reddit_subs": [
+        "learnart",
+        "learntodraw",
+        "ArtFundamentals"
+      ],
+      "expected_demand": "learntodraw=4M+",
+      "rescan": true
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Drawing \u25ab",
+          "price": "Free",
+          "rating": 4.09058,
+          "ratings_count": 14915,
+          "version": "4.13"
+        },
+        {
+          "name": "Drawing Pad procreate Sketch",
+          "price": "Free",
+          "rating": 4.1256,
+          "ratings_count": 65678,
+          "version": "3.1.1"
+        },
+        {
+          "name": "Sketchar: AR Drawing App",
+          "price": "Free",
+          "rating": 4.25545,
+          "ratings_count": 9403,
+          "version": "10.3.1"
+        },
+        {
+          "name": "Simply Draw: Learn to Draw",
+          "price": "Free",
+          "rating": 4.73611,
+          "ratings_count": 566119,
+          "version": "1.6.16"
+        },
+        {
+          "name": "ArtWorkout: Learn How to Draw",
+          "price": "Free",
+          "rating": 4.59387,
+          "ratings_count": 169099,
+          "version": "1.13.3"
+        },
+        {
+          "name": "Paper: Sketch, Draw & Create",
+          "price": "Free",
+          "rating": 4.5726,
+          "ratings_count": 70693,
+          "version": "5.5.10"
+        },
+        {
+          "name": "Sketch a Day: prompts & tips",
+          "price": "Free",
+          "rating": 4.78312,
+          "ratings_count": 1019,
+          "version": "2.4.0"
+        },
+        {
+          "name": "Simply Draw: Learn to Draw",
+          "price": "Free",
+          "rating": 4.73611,
+          "ratings_count": 566119,
+          "version": "1.6.16"
+        }
+      ],
+      "generic_filtered": [
+        "everyday - Habit Tracker",
+        "Fabulous: Daily Habit Tracker"
+      ],
+      "total_community": 5004244,
+      "reddit_breakdown": {
+        "learnart": 1671480,
+        "learntodraw": 3067957,
+        "ArtFundamentals": 264807
+      },
+      "reasoning": "8 competitors. Top: 'Simply Draw: Learn to Draw' (566119 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:36:20.133731+00:00"
+  },
+  "vitamin_habit": {
+    "niche": {
+      "id": "vitamin_habit",
+      "label": "Vitamin/Supplement Habit (RESCAN)",
+      "itunes_terms": [
+        "vitamin tracker dedicated streak",
+        "supplement reminder streak dedicated"
+      ],
+      "reddit_subs": [
+        "Supplements",
+        "vitamins",
+        "nootropics"
+      ],
+      "expected_demand": "Supplements=1M+",
+      "rescan": true
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Nutrition Tracker: Foodnoms",
+          "price": "Free",
+          "rating": 4.74953,
+          "ratings_count": 6504,
+          "version": "2026.4"
+        },
+        {
+          "name": "Cronometer: Calorie Counter",
+          "price": "Free",
+          "rating": 4.7735,
+          "ratings_count": 88403,
+          "version": "4.52.2"
+        },
+        {
+          "name": "Gentler Streak Workout Tracker",
+          "price": "Free",
+          "rating": 4.71541,
+          "ratings_count": 8760,
+          "version": "5.11.3"
+        },
+        {
+          "name": "SuppCo: Supplement Scanner",
+          "price": "Free",
+          "rating": 4.80524,
+          "ratings_count": 16723,
+          "version": "1.9.7"
+        },
+        {
+          "name": "Reminder & Countdown",
+          "price": "Free",
+          "rating": 4.76421,
+          "ratings_count": 15959,
+          "version": "3.15.1"
+        },
+        {
+          "name": "SuppCo: Supplement Scanner",
+          "price": "Free",
+          "rating": 4.80524,
+          "ratings_count": 16723,
+          "version": "1.9.7"
+        },
+        {
+          "name": "Prove It - Supplement Scanner",
+          "price": "Free",
+          "rating": 4.43279,
+          "ratings_count": 13466,
+          "version": "3.1"
+        },
+        {
+          "name": "Fullscript",
+          "price": "Free",
+          "rating": 4.92573,
+          "ratings_count": 96989,
+          "version": "2.11.0"
+        },
+        {
+          "name": "Pill Reminder - All in One",
+          "price": "Free",
+          "rating": 4.72176,
+          "ratings_count": 26714,
+          "version": "8.4"
+        }
+      ],
+      "generic_filtered": [
+        "Strides: Habit Tracker + Goals"
+      ],
+      "total_community": 973798,
+      "reddit_breakdown": {
+        "Supplements": 525422,
+        "vitamins": 9944,
+        "nootropics": 438432
+      },
+      "reasoning": "9 competitors. Top: 'Fullscript' (96989 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:36:27.523862+00:00"
+  },
+  "swimming_streak": {
+    "niche": {
+      "id": "swimming_streak",
+      "label": "Swimming Streak (RESCAN)",
+      "itunes_terms": [
+        "swimming streak dedicated app",
+        "swim habit tracker dedicated"
+      ],
+      "reddit_subs": [
+        "Swimming",
+        "openwater",
+        "triathlon"
+      ],
+      "expected_demand": "Swimming=250K+",
+      "rescan": true
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Meet Mobile: Swim",
+          "price": "Free",
+          "rating": 4.82039,
+          "ratings_count": 80317,
+          "version": "4.11.3"
+        },
+        {
+          "name": "MySwimPro: #1 Swim Workout App",
+          "price": "Free",
+          "rating": 4.47829,
+          "ratings_count": 5735,
+          "version": "8.36.1"
+        },
+        {
+          "name": "Swim.com: Swim Tracker",
+          "price": "Free",
+          "rating": 4.36603,
+          "ratings_count": 1101,
+          "version": "6.0.18"
+        },
+        {
+          "name": "FORM Swim",
+          "price": "Free",
+          "rating": 4.75955,
+          "ratings_count": 3273,
+          "version": "3.19.1"
+        },
+        {
+          "name": "MySwimPro: #1 Swim Workout App",
+          "price": "Free",
+          "rating": 4.47829,
+          "ratings_count": 5735,
+          "version": "8.36.1"
+        },
+        {
+          "name": "Water Tracker by WaterMinder\u00ae",
+          "price": "Free",
+          "rating": 4.74613,
+          "ratings_count": 32873,
+          "version": "7.2.9"
+        }
+      ],
+      "generic_filtered": [
+        "Streaks",
+        "Habit Tracker",
+        "Grit: Daily Habit Tracker",
+        "Habitify: Habit Tracker"
+      ],
+      "total_community": 865943,
+      "reddit_breakdown": {
+        "Swimming": 600038,
+        "openwater": 61,
+        "triathlon": 265844
+      },
+      "reasoning": "6 competitors. Top: 'Meet Mobile: Swim' (80317 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:36:35.432713+00:00"
+  },
+  "bible_reading_streak": {
+    "niche": {
+      "id": "bible_reading_streak",
+      "label": "Bible Reading Streak",
+      "itunes_terms": [
+        "bible reading streak app",
+        "daily bible habit dedicated streak"
+      ],
+      "reddit_subs": [
+        "Christianity",
+        "Reformed",
+        "TrueChristian"
+      ],
+      "expected_demand": "Christianity=1M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Bible",
+          "price": "Free",
+          "rating": 4.91676,
+          "ratings_count": 13047808,
+          "version": "11.18.1"
+        },
+        {
+          "name": "Holy Bible King James + Audio",
+          "price": "Free",
+          "rating": 4.86588,
+          "ratings_count": 143725,
+          "version": "10.2.270"
+        },
+        {
+          "name": "Dwell: Audio Bible",
+          "price": "Free",
+          "rating": 4.89529,
+          "ratings_count": 79208,
+          "version": "2026.3.2"
+        },
+        {
+          "name": "Through the Word",
+          "price": "Free",
+          "rating": 4.77637,
+          "ratings_count": 4172,
+          "version": "5.0.1"
+        },
+        {
+          "name": "Logos: Deep Bible Study",
+          "price": "Free",
+          "rating": 4.86393,
+          "ratings_count": 161968,
+          "version": "49.0.0"
+        },
+        {
+          "name": "#Bible - Verse of the Day",
+          "price": "Free",
+          "rating": 4.89485,
+          "ratings_count": 361146,
+          "version": "11.3"
+        },
+        {
+          "name": "Bible",
+          "price": "Free",
+          "rating": 4.91676,
+          "ratings_count": 13047808,
+          "version": "11.18.1"
+        },
+        {
+          "name": "K.J.V. Holy Bible",
+          "price": "Free",
+          "rating": 4.85846,
+          "ratings_count": 475927,
+          "version": "4.720"
+        }
+      ],
+      "generic_filtered": [
+        "Bible Inspirations \u00b7 Daily",
+        "Daily Bible Verse & Motivation"
+      ],
+      "total_community": 899575,
+      "reddit_breakdown": {
+        "Christianity": 635308,
+        "Reformed": 73276,
+        "TrueChristian": 190991
+      },
+      "reasoning": "8 competitors. Top: 'Bible' (13047808 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:36:42.958588+00:00"
+  },
+  "photography_streak": {
+    "niche": {
+      "id": "photography_streak",
+      "label": "Photography Practice Streak",
+      "itunes_terms": [
+        "photography streak daily habit",
+        "photo challenge daily streak"
+      ],
+      "reddit_subs": [
+        "photography",
+        "photochallenge",
+        "beginnerphotography"
+      ],
+      "expected_demand": "photography=5M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "GuruShots: Photography Game",
+          "price": "Free",
+          "rating": 4.42539,
+          "ratings_count": 5167,
+          "version": "2.41.8"
+        },
+        {
+          "name": "Selfie A Day - Everyday Photo",
+          "price": "Free",
+          "rating": 4.65719,
+          "ratings_count": 3906,
+          "version": "3.30.0"
+        },
+        {
+          "name": "Photo Roulette",
+          "price": "Free",
+          "rating": 4.68045,
+          "ratings_count": 108753,
+          "version": "132.0.0"
+        },
+        {
+          "name": "500px-Photo Sharing Community",
+          "price": "Free",
+          "rating": 4.53077,
+          "ratings_count": 5298,
+          "version": "10.4.2.2"
+        }
+      ],
+      "generic_filtered": [
+        "everyday - Habit Tracker",
+        "Grit: Daily Habit Tracker",
+        "Way of Life - Habit Tracker",
+        "Streaks",
+        "Do Habits: Get It Done",
+        "BeReal: Photos & Friends Daily"
+      ],
+      "total_community": 5580073,
+      "reddit_breakdown": {
+        "photography": 5578626,
+        "photochallenge": 1447,
+        "beginnerphotography": 0
+      },
+      "reasoning": "4 competitors. Top: 'Photo Roulette' (108753 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:36:49.456331+00:00"
+  },
+  "chess_habit": {
+    "niche": {
+      "id": "chess_habit",
+      "label": "Chess Daily Habit Streak",
+      "itunes_terms": [
+        "chess habit daily streak",
+        "chess practice streak dedicated"
+      ],
+      "reddit_subs": [
+        "chess",
+        "chessbeginners",
+        "learnchess"
+      ],
+      "expected_demand": "chess=1M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Chess \u2219",
+          "price": "Free",
+          "rating": 4.52932,
+          "ratings_count": 199824,
+          "version": "2.11"
+        },
+        {
+          "name": "Chess Tiger Pro",
+          "price": "$14.99",
+          "rating": 4.85425,
+          "ratings_count": 23390,
+          "version": "2025.11.02"
+        },
+        {
+          "name": "Chess - Offline Board Game",
+          "price": "Free",
+          "rating": 4.91238,
+          "ratings_count": 58707,
+          "version": "2.7.4"
+        },
+        {
+          "name": "Chess",
+          "price": "Free",
+          "rating": 4.72179,
+          "ratings_count": 37864,
+          "version": "5.9"
+        },
+        {
+          "name": "Chess by Staple Games",
+          "price": "?",
+          "rating": 0,
+          "ratings_count": 0,
+          "version": "1.0"
+        },
+        {
+          "name": "Chess Online - Clash of Kings",
+          "price": "Free",
+          "rating": 4.70021,
+          "ratings_count": 27299,
+          "version": "3.20.0"
+        },
+        {
+          "name": "Chess - Offline Board Game",
+          "price": "Free",
+          "rating": 4.91238,
+          "ratings_count": 58707,
+          "version": "2.7.4"
+        },
+        {
+          "name": "Chess",
+          "price": "Free",
+          "rating": 4.72179,
+          "ratings_count": 37864,
+          "version": "5.9"
+        },
+        {
+          "name": "SocialChess \u2022 Online Chess",
+          "price": "Free",
+          "rating": 4.71785,
+          "ratings_count": 7007,
+          "version": "2026.01.2"
+        },
+        {
+          "name": "Chess Tiger Pro",
+          "price": "$14.99",
+          "rating": 4.85425,
+          "ratings_count": 23390,
+          "version": "2025.11.02"
+        }
+      ],
+      "generic_filtered": [],
+      "total_community": 2166844,
+      "reddit_breakdown": {
+        "chess": 1786412,
+        "chessbeginners": 378961,
+        "learnchess": 1471
+      },
+      "reasoning": "10 competitors. Top: 'Chess \u2219' (199824 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:36:56.904216+00:00"
+  },
+  "cooking_streak": {
+    "niche": {
+      "id": "cooking_streak",
+      "label": "Daily Cooking Streak",
+      "itunes_terms": [
+        "cooking habit streak daily",
+        "cook every day streak app"
+      ],
+      "reddit_subs": [
+        "Cooking",
+        "MealPrepSunday",
+        "EatCheapAndHealthy"
+      ],
+      "expected_demand": "Cooking=1.5M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "NYT Cooking: Quick Tasty Meals",
+          "price": "Free",
+          "rating": 4.91491,
+          "ratings_count": 533504,
+          "version": "4.150.0"
+        },
+        {
+          "name": "Pepper - Recipe Organizer",
+          "price": "Free",
+          "rating": 4.79315,
+          "ratings_count": 7155,
+          "version": "2.30.0"
+        },
+        {
+          "name": "Samsung Food: Meal Planner",
+          "price": "Free",
+          "rating": 4.78071,
+          "ratings_count": 6120,
+          "version": "5.55.1"
+        },
+        {
+          "name": "Plan to Eat",
+          "price": "Free",
+          "rating": 4.83993,
+          "ratings_count": 5916,
+          "version": "3.7.5"
+        }
+      ],
+      "generic_filtered": [
+        "everyday - Habit Tracker",
+        "Grit: Daily Habit Tracker",
+        "Do Habits: Get It Done",
+        "Way of Life - Habit Tracker",
+        "Streaks",
+        "Strides: Habit Tracker + Goals"
+      ],
+      "total_community": 23138126,
+      "reddit_breakdown": {
+        "Cooking": 6051981,
+        "MealPrepSunday": 5677901,
+        "EatCheapAndHealthy": 11408244
+      },
+      "reasoning": "4 competitors. Top: 'NYT Cooking: Quick Tasty Meals' (533504 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:37:04.787107+00:00"
+  },
+  "declutter_habit": {
+    "niche": {
+      "id": "declutter_habit",
+      "label": "Declutter/Minimalism Habit",
+      "itunes_terms": [
+        "declutter habit streak daily",
+        "minimalism habit streak dedicated"
+      ],
+      "reddit_subs": [
+        "minimalism",
+        "declutter",
+        "ZeroWaste"
+      ],
+      "expected_demand": "minimalism=2M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "BLUE_OCEAN",
+      "dedicated_apps": [],
+      "generic_filtered": [
+        "Do Habits: Get It Done",
+        "everyday - Habit Tracker",
+        "Grit: Daily Habit Tracker",
+        "Days Since: Quit Habit Tracker",
+        "Way of Life - Habit Tracker",
+        "Grit: Daily Habit Tracker",
+        "Fabulous: Daily Habit Tracker",
+        "Do Habits: Get It Done",
+        "Habit Tracker - Evoday",
+        "Way of Life - Habit Tracker"
+      ],
+      "total_community": 4472804,
+      "reddit_breakdown": {
+        "minimalism": 2558888,
+        "declutter": 719468,
+        "ZeroWaste": 1194448
+      },
+      "reasoning": "No dedicated niche app found. 10 generic trackers filtered out."
+    },
+    "scraped_at": "2026-03-17T14:37:12.267393+00:00"
+  },
+  "handwriting_habit": {
+    "niche": {
+      "id": "handwriting_habit",
+      "label": "Handwriting Practice Streak",
+      "itunes_terms": [
+        "handwriting practice streak daily",
+        "penmanship habit daily dedicated"
+      ],
+      "reddit_subs": [
+        "Handwriting",
+        "PenmanshipPorn",
+        "fountainpens"
+      ],
+      "expected_demand": "Handwriting=500K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Writey Cursive Handwriting",
+          "price": "Free",
+          "rating": 4.55396,
+          "ratings_count": 10988,
+          "version": "4.3.3"
+        },
+        {
+          "name": "Handwriting Practice - Cursive",
+          "price": "Free",
+          "rating": 4.424,
+          "ratings_count": 500,
+          "version": "9.10"
+        },
+        {
+          "name": "Modern Handwriting Calligraphy",
+          "price": "Free",
+          "rating": 4.27806,
+          "ratings_count": 374,
+          "version": "2.9.2"
+        },
+        {
+          "name": "Write It! Korean",
+          "price": "Free",
+          "rating": 4.82394,
+          "ratings_count": 3408,
+          "version": "4.6.3"
+        },
+        {
+          "name": "Scrivener",
+          "price": "$23.99",
+          "rating": 4.18398,
+          "ratings_count": 2549,
+          "version": "1.2.4"
+        },
+        {
+          "name": "Writey Cursive Handwriting",
+          "price": "Free",
+          "rating": 4.55396,
+          "ratings_count": 10988,
+          "version": "4.3.3"
+        }
+      ],
+      "generic_filtered": [
+        "Daily Prompt: Writing Prompts",
+        "everyday - Habit Tracker",
+        "Do Habits: Get It Done"
+      ],
+      "total_community": 2348533,
+      "reddit_breakdown": {
+        "Handwriting": 1033282,
+        "PenmanshipPorn": 915914,
+        "fountainpens": 399337
+      },
+      "reasoning": "6 competitors. Top: 'Writey Cursive Handwriting' (10988 ratings)."
+    },
+    "scraped_at": "2026-03-17T14:37:19.766948+00:00"
+  }
+}

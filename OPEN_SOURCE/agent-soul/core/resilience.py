@@ -13,8 +13,8 @@ Stdlib only. No external dependencies.
 Import and use across all your agents to make them production-grade.
 
 Usage:
-    from agent_soul.core.resilience import retry, locked_file, CircuitBreaker
-    from agent_soul.core.resilience import sanitize_for_prompt, TrajectoryLogger
+    from dogwalk.core.resilience import retry, locked_file, CircuitBreaker
+    from dogwalk.core.resilience import sanitize_for_prompt, TrajectoryLogger
 """
 from __future__ import annotations
 
@@ -35,14 +35,14 @@ from typing import Any, Callable, Generator, TypeVar
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("AGENT_SOUL_ROOT", Path.cwd()))
-LOCKS_DIR = Path(os.environ.get("AGENT_SOUL_LOCKS_DIR", PROJECT_ROOT / "state" / "locks"))
-LOGS_DIR = Path(os.environ.get("AGENT_SOUL_LOGS_DIR", PROJECT_ROOT / "logs"))
+PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
+LOCKS_DIR = Path(os.environ.get("DOGWALK_LOCKS_DIR", PROJECT_ROOT / "state" / "locks"))
+LOGS_DIR = Path(os.environ.get("DOGWALK_LOGS_DIR", PROJECT_ROOT / "logs"))
 TRAJECTORY_DIR = LOGS_DIR / "trajectory"
 CB_STATE_FILE = LOCKS_DIR / "circuit_breaker_state.json"
 
 _T = TypeVar("_T")
-logger = logging.getLogger("agent_soul.resilience")
+logger = logging.getLogger("dogwalk.resilience")
 
 
 # ---------------------------------------------------------------------------

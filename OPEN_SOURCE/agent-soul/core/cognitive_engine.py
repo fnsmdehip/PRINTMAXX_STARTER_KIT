@@ -34,12 +34,12 @@ from collections import defaultdict
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("AGENT_SOUL_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
 
 PROMPTS_FILE = Path(os.environ.get(
-    "AGENT_SOUL_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
+    "DOGWALK_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
 OUTPUT_DIR = Path(os.environ.get(
-    "AGENT_SOUL_COGNITION_DIR", PROJECT_ROOT / "output" / "prompt_intelligence"))
+    "DOGWALK_COGNITION_DIR", PROJECT_ROOT / "output" / "prompt_intelligence"))
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 MODEL_FILE = OUTPUT_DIR / "cognition_model.json"
@@ -90,7 +90,7 @@ def extract_correction_chains(prompts):
     chains = []
     current_chain = None
     prev_ts = None
-    window_minutes = int(os.environ.get("AGENT_SOUL_CHAIN_WINDOW", "10"))
+    window_minutes = int(os.environ.get("DOGWALK_CHAIN_WINDOW", "10"))
 
     for prompt in prompts:
         text = prompt.get("prompt", "").lower()[:500]
@@ -163,7 +163,7 @@ def build_task_index(prompts):
 
     Groups prompts by timestamp proximity.
     """
-    window_seconds = int(os.environ.get("AGENT_SOUL_CHAIN_WINDOW", "10")) * 60
+    window_seconds = int(os.environ.get("DOGWALK_CHAIN_WINDOW", "10")) * 60
     conversations = []
     current_convo = []
     prev_ts = None

@@ -5,11 +5,14 @@ Appends PENDING_REVIEW rows to LEDGER/ALPHA_STAGING.csv.
 """
 
 import csv
+import sys
 import time
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
+
+csv.field_size_limit(sys.maxsize)
 
 import requests
 

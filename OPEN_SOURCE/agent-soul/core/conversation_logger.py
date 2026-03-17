@@ -26,18 +26,18 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("AGENT_SOUL_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
 
 OUTPUT_FILE = Path(os.environ.get(
-    "AGENT_SOUL_CONVERSATIONS", PROJECT_ROOT / "data" / "conversations.jsonl"))
+    "DOGWALK_CONVERSATIONS", PROJECT_ROOT / "data" / "conversations.jsonl"))
 STATE_FILE = PROJECT_ROOT / "state" / "conversation_logger_state.json"
 
 # Directories containing Claude session transcript files
-# Override with comma-separated paths in AGENT_SOUL_TRANSCRIPT_DIRS
+# Override with comma-separated paths in DOGWALK_TRANSCRIPT_DIRS
 _default_transcript_dirs = str(Path.home() / ".claude" / "projects")
 TRANSCRIPT_DIRS = [
     Path(d.strip()) for d in
-    os.environ.get("AGENT_SOUL_TRANSCRIPT_DIRS", _default_transcript_dirs).split(",")
+    os.environ.get("DOGWALK_TRANSCRIPT_DIRS", _default_transcript_dirs).split(",")
     if d.strip()
 ]
 

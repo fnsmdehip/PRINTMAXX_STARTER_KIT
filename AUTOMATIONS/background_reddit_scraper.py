@@ -17,6 +17,8 @@ import json
 import time
 import argparse
 import sys
+
+csv.field_size_limit(sys.maxsize)
 from pathlib import Path
 
 try:

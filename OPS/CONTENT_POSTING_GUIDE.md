@@ -2547,3 +2547,20 @@ Retweet & Comment “Slideshow” and I’ll dm you a
 
 [r/NewTubers] Do your videos take a long time to get traction?
 
+
+
+---
+
+## Pending Enhancement (ALPHA103498, Score: 24)
+
+**Source:** @levelsio (high-signal-accounts) | **URL:** https://x.com/levelsio/status/2033717610844459108
+**Added:** 2026-03-17T11:13:22-04:00
+
+Kinda, in 2014 I made $5K/mo with Nomad List, 2015 was $10K/mo with Remote OK added
+
+Before that 2008-2013, I was making anywhere from $2K to $8K/mo with my YouTube channel
+
+And then before 2008 I was making maybe $500 - $1K/mo with my AdSense blogs
+
+And then around 2003 I was
+

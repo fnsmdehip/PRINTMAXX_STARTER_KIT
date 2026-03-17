@@ -1,0 +1,915 @@
+{
+  "generated_at": "2026-03-17",
+  "source": "LEDGER/COPY_STYLE_CORPUS.csv",
+  "total_examples": 543,
+  "filtered_high_signal": 154,
+  "top_100_cached": 100,
+  "usage": "Content farm: use as quality benchmarks. Match generated content to voice patterns from S-tier examples.",
+  "voice_distribution": {
+    "S-tier": 103,
+    "A-tier": 0,
+    "C-tier": 51
+  },
+  "examples": [
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 10166,
+      "views": 37564320,
+      "text": "Starlink\u2019s high-speed internet is available in your area.  Experience speeds up to 400+ Mbps to stream your favorite shows and sports, work from home, browse social media and more.",
+      "url": "https://x.com/Starlink/status/2015469462817054840/analytics",
+      "engagement_rate": 0.027
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 8327,
+      "views": 28190413,
+      "text": "Tired of the same old grocery store? Misfits Market brings you high-quality produce and unique finds that make shopping feel like an adventure. Discover new flavors, support farms and small makers, and get groceries you actually look forward to using.",
+      "url": "https://x.com/misfitsmarket/status/1993118094169194635/analytics",
+      "engagement_rate": 0.03
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 8267,
+      "views": 3982407,
+      "text": "Star Rail Post Out For Delivery Have you heard that rumor?  No matter which corner of the cosmos they're in, replies are delivered instantly... Tap the image below to send your chocolate and letter to the character.  You'll get messages on 03/14 too!",
+      "url": "https://x.com/honkaistarrail/status/2022506085840490496/analytics",
+      "engagement_rate": 0.208
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 7558,
+      "views": 1262179,
+      "text": "my uber driver had two phones on his dashboard  one for navigation. one had stripe open.  \"you run a business?\"  \"i sell a checklist.\"  \"a checklist?\"  \"pre-flight checklist for people scared of flying. $34.\"  pulled up his stripe at a red light. $8,400 last month.  \"how'd you",
+      "url": "https://x.com/ecomchigga/status/2027462006211494092",
+      "engagement_rate": 0.599
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 7530,
+      "views": 385843,
+      "text": "God gave America a Ronald. Now He\u2019s raised up a Donald. And the walls are coming down.  Follow for more.",
+      "url": "https://x.com/elijahliststeve/status/2020593394343706887/analytics",
+      "engagement_rate": 1.952
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 6102,
+      "views": 10464447,
+      "text": "Secretary of Defense Pete Hegeseth just publicly applauded Senator Katie Britt for her recent work!  Top Republicans are calling Katie of the 'most effective leaders' of the US Senate...and she's just getting started.   Does Katie have YOUR support? Join her team now!",
+      "url": "https://x.com/DAmericasFuture/status/1940039308939075732/analytics",
+      "engagement_rate": 0.058
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 4402,
+      "views": 42868377,
+      "text": "Fast, reliable internet no matter how remote.  Experience speeds up to 400+ Mbps to enjoy streaming your favorite shows and sports, video calling, browsing forums and weather apps\u2014even in the most rural areas.  Order online in under 2 minutes.",
+      "url": "https://x.com/Starlink/status/2015469462829326646",
+      "engagement_rate": 0.01
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 3829,
+      "views": 12945449,
+      "text": "I've been personally burning through billions of tokens a week for the past few months as a builder. Today I'm excited to announce Hyperagent, by Airtable.  An agents platform where every session gets its own isolated, full computing environment in the cloud \u2014 no Mac Mini",
+      "url": "https://x.com/howietl/status/2024618178912145592/analytics",
+      "engagement_rate": 0.03
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 3155,
+      "views": 313259,
+      "text": "I need to tell you about something that feels borderline illegal but is completely public information.  Every company accidentally leaks their entire product roadmap. New features. Upcoming launches. Secret promos. Partnership announcements. All of it.  They just don't know",
+      "url": "https://x.com/pipelineabuser/status/2017316778351947814",
+      "engagement_rate": 1.007
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 2996,
+      "views": 1258071,
+      "text": "The continent of Pywel is full of untold tales, interesting encounters, and hidden challenges that all shape your adventure.    Become a part of the journey and follow for the latest updates.",
+      "url": "https://x.com/CrimsonDesert_/status/2022584081935200703/analytics",
+      "engagement_rate": 0.238
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 2711,
+      "views": 9424617,
+      "text": "Analogue Pocket & Analogue Dock - restock.  A tribute to portable gaming. Out of the box, Pocket is compatible with the 2,780+ Game Boy, Game Boy Color & Game Boy Advance game cartridge library and more.   Available March 4th, 8am PST.  Ships June 2026.",
+      "url": "https://x.com/analogue/status/2028500640125669733/photo/1",
+      "engagement_rate": 0.029
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 2214,
+      "views": 22647499,
+      "text": "Replay now: Robinhood Chairman & CEO Vlad Tenev and Robinhood Ventures fund management unpack Robinhood Ventures Fund I, its strategy, and get the first look at what\u2019s next for retail investing.  See disclosures below.",
+      "url": "https://x.com/RobinhoodApp/status/2023804916645699673/analytics",
+      "engagement_rate": 0.01
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 1904,
+      "views": 19189534,
+      "text": "Watch now: Robinhood Ventures Fund I roadshow kickoff. Learn about the fund, its strategy, and what\u2019s ahead.  See disclosures below.",
+      "url": "https://x.com/RobinhoodApp/status/2023807567722672200/analytics",
+      "engagement_rate": 0.01
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 1442,
+      "views": 80587,
+      "text": "There are only two businesses I'd recommend anyone who is just starting do rn:  1. Sell OpenClaw installations and agent management infra B2B  2. Make AI ugc vids and drive millions of views to affiliate products on organic (this can be fully automated btw)  no noise no bs. these",
+      "url": "https://x.com/mike_revenue/status/2023561089137733642",
+      "engagement_rate": 1.789
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 1378,
+      "views": 20549,
+      "text": "This app has the most sharpest minds and the biggest retards simultaneously  Too informative and entertaining to delete   and twitter users are years ahead compared to other users when it comes to updated info",
+      "url": "https://x.com/dontrece_hd/status/2023769608210288696",
+      "engagement_rate": 6.706
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 1248,
+      "views": 416498,
+      "text": "When the line shoots straight up, taxpayers pay the price. Trillions moved. Businesses crushed. Who really benefited? Follow for more.",
+      "url": "https://x.com/elijahliststeve/status/2027528710992367778/analytics",
+      "engagement_rate": 0.3
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 1228,
+      "views": 103114,
+      "text": "I'm going to give you a business model that sounds fake but people are quietly making $20K, $50K, $100K+ per month doing exactly this.  Monitor government websites. Package the updates. Sell to companies who need the intel.  Governments are TERRIBLE at communication.  They post",
+      "url": "https://x.com/pipelineabuser/status/2018417074448605598",
+      "engagement_rate": 1.191
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 1138,
+      "views": 21671,
+      "text": "don't wait for opportunity, create it.",
+      "url": "https://x.com/ysuckme/status/2022980959327379601",
+      "engagement_rate": 5.251
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 1120,
+      "views": 66244,
+      "text": "claude is pretty bad at natively making backend dashboards and UI in general  instead of letting it freestyle the design, use this prompt:  \"Based on the style and core offer of (your product), identify enterprise-grade github dashboards or other copyable dashboards that we can",
+      "url": "https://x.com/pipelineabuser/status/2026771033945157728",
+      "engagement_rate": 1.691
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 1101,
+      "views": 5062852,
+      "text": "a16z Speedrun Alpha, for pre-idea/pre-team/pre-everything founders  it's time to bet on yourself, and figure out your startup idea. 2026 is well underway, crazy stuff happening in AI, and you're building agents/apps/whatever every night+weekend. You want to start a startup but",
+      "url": "https://x.com/andrewchen/status/2024174222021718446/analytics",
+      "engagement_rate": 0.022
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 1101,
+      "views": 5065385,
+      "text": "a16z Speedrun Alpha, for pre-idea/pre-team/pre-everything founders  it's time to bet on yourself, and figure out your startup idea. 2026 is well underway, crazy stuff happening in AI, and you're building agents/apps/whatever every night+weekend. You want to start a startup but",
+      "url": "https://x.com/andrewchen/status/2024174222021718446/analytics",
+      "engagement_rate": 0.022
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 1100,
+      "views": 242378,
+      "text": "We are excited to announce that  @tether , the largest stablecoin company in the world, is making a strategic investment of $200M into Whop, valuing us at $1.6B.  Our partnership with Tether marks a major step in building the world's largest internet market. Tether is committed to",
+      "url": "https://x.com/cultured/status/2026677118701289897",
+      "engagement_rate": 0.454
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 990,
+      "views": 64371,
+      "text": "gumroad shows you exactly how much money any product has made and nobody is using this  go to any gumroad product page. right click. view page source. ctrl+F \"sales_count\"  that's the real number. not the one on the page that sellers can hide.  now do this:  go to",
+      "url": "https://x.com/ecomchigga/status/2027874734218563816",
+      "engagement_rate": 1.538
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 986,
+      "views": 104334,
+      "text": "If your not making any money online at all then your simply blind to opportunities at this point   You can start a brand new account today and get paid for the views you get   The barrier to entry is 0   The reason this opportunity is such a good thing for beginners is because",
+      "url": "https://x.com/pounddz/status/2019718630905090071",
+      "engagement_rate": 0.945
+    },
+    {
+      "handle": "@dimitarangg",
+      "tier": "C",
+      "likes": 946,
+      "views": 49853,
+      "text": "i FIRED my 3 filipino setters and replaced them with claude code\u2026  automating my ENTIRE cold outreach flow with a $20/mo subscription  now i'm giving away a FULL masterclass on how to do the same  like + comment \"AI\" and i'll send it over  (must be following + RT for priority",
+      "url": "https://x.com/dimitarangg/status/2015110187514810633",
+      "engagement_rate": 1.898
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 944,
+      "views": 4767443,
+      "text": "The AI race will not be won with chatbots that predict the next word. In today\u2019s Wall Street Journal, I argue that staying ahead of China requires a new class of AI models built on physics, chemistry, and quantitative reasoning, not just language and images. China\u2019s next",
+      "url": "https://x.com/jackhidary/status/2023849429934239796/analytics",
+      "engagement_rate": 0.02
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 884,
+      "views": 33230,
+      "text": "don't listen to your parents  i'm 20 making $10k/mo and my mom still wants me to get a job  i love her but she doesn't get it  and she probably never will  and that's fine  your parents grew up in a world where job = security and anything else = risk  they can't picture making",
+      "url": "https://x.com/borekbruhh/status/2032260360766701672",
+      "engagement_rate": 2.66
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 862,
+      "views": 48013,
+      "text": "you can make an insane amount of money by simply monitoring X for AI trends & then spamming YT videos around them...",
+      "url": "https://x.com/eptwts/status/2015712665440555168",
+      "engagement_rate": 1.795
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 801,
+      "views": 63136,
+      "text": "You can turn $2,000 into $642,000 in 60 days and the method is so stupid it'll piss you off  no course. no mentor. no talent required  seriously  Find a product going viral on Instagram Reels. People in the comments are literally begging to buy it  Go to Facebook Ads Library",
+      "url": "https://x.com/Fortuze/status/2020860498158448662",
+      "engagement_rate": 1.269
+    },
+    {
+      "handle": "@dimitarangg",
+      "tier": "C",
+      "likes": 764,
+      "views": 190514,
+      "text": "if someone showed me this when first starting my cold email journey i'd hit multi-6-figs 10 times faster  just sayin",
+      "url": "https://x.com/dimitarangg/status/2022533258257330669",
+      "engagement_rate": 0.401
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 746,
+      "views": 62365,
+      "text": "if you're making less than $10k/month & you're obsessed with \"building\" products, then you've got your priorities completely backwards...  there's THOUSANDS of products out there that have already proven to convert that you can grab an affiliate link for & start promoting  if you",
+      "url": "https://x.com/eptwts/status/2015038599406784869",
+      "engagement_rate": 1.196
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 744,
+      "views": 57679,
+      "text": "The amount of kids that are going to be making $5k - $10k a month from posting content for brands is going to be insane this year   there is already people who make 6 figs a year by posting fully AI generated content working probably 2 hours a day   Jobs will be pointless",
+      "url": "https://x.com/pounddz/status/2026215405409165647",
+      "engagement_rate": 1.29
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 729,
+      "views": 335877,
+      "text": "On sports hedging.   The sports insurance and re-insurance industry is big: the annual market is around $9 billion and is projected to double by 2030. There are a variety of insurance products including brand sponsorships, game cancellations, team/player performance, off player",
+      "url": "https://x.com/mansourtarek_/status/2022047766445535538/photo/1",
+      "engagement_rate": 0.217
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 673,
+      "views": 984305,
+      "text": "Paraflow = PM logic \u00d7 Designer taste \u2192 dev-ready code  Try Free Now",
+      "url": "https://x.com/ParaflowAI/status/1988213113938977058/analytics",
+      "engagement_rate": 0.068
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 664,
+      "views": 23545,
+      "text": "there are only 4 ways to be productive when it comes to online biz...  > improving your product > working on the offer/funnel > creating content/creatives > talking to clients  everything else is fake productivity, focus only on the things that drive measurable output",
+      "url": "https://x.com/eptwts/status/2012862306640695601",
+      "engagement_rate": 2.82
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 654,
+      "views": 2137796,
+      "text": "Meet Clearl - an AI agent in your chat that connects to your tools and turns messages into real output in minutes.",
+      "url": "https://x.com/clearl_ai/status/2023757474235658547/analytics",
+      "engagement_rate": 0.031
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 618,
+      "views": 45054,
+      "text": "got a DM 3 months ago from a guy named josh  \"i have no skills, no audience, no product ideas, and $400 in my bank account. is this even possible for someone like me?\"  i told him to do one thing: go on facebook groups in a niche he was even slightly familiar with and screenshot",
+      "url": "https://x.com/ecomchigga/status/2029654701008974117",
+      "engagement_rate": 1.372
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 610,
+      "views": 53883,
+      "text": "sold my first faceless account last month for $47,000  i built it in 11 weeks  let me explain why this is the most underrated play in digital products right now  faceless accounts sell for 30-40x monthly revenue. that's not a typo  account making $1,200/month = $36K-$48K asset",
+      "url": "https://x.com/ecomchigga/status/2020714537939280057",
+      "engagement_rate": 1.132
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 599,
+      "views": 38509,
+      "text": "How I automate phones without getting banned.   There are multiple ways.  No lead magnet just all info here:  IG: > download appium -> npm i --location=global appium > start appium server -> appium //plus any server args you want ex: appium -p 4474 > install appium inspector and",
+      "url": "https://x.com/casualhyped/status/2019859962508526060",
+      "engagement_rate": 1.555
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 585,
+      "views": 29826,
+      "text": "tendersinfo .com  government contracts before they close.  filter by country, department, budget, deadline.  $500B+ in government spending every year. most of it posted publicly. nobody cold emails for it.  while everyone fights over saas logos you're selling to the DoD.",
+      "url": "https://x.com/pipelineabuser/status/2018841192851451987",
+      "engagement_rate": 1.961
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 521,
+      "views": 280961,
+      "text": "Yoru powerfully reminds Denji of someone that he used to know\u2026  Read Chainsaw Man, Ch. 230 in Shonen Jump for free!",
+      "url": "https://x.com/shonenjump/status/2026439899256336706/analytics",
+      "engagement_rate": 0.185
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 502,
+      "views": 30106,
+      "text": "most dropshippers find a winning product and have no idea where their competitor actually sources it.  they\u2019re stuck on aliexpress paying $12 for something that costs $3 at the factory.  here\u2019s the play:  us customs data is public. every shipment entering the country is logged -",
+      "url": "https://x.com/pipelineabuser/status/2017776308931998175",
+      "engagement_rate": 1.667
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 502,
+      "views": 52729,
+      "text": "This account grew to 48k followers in 2 weeks and it\u2019s being wasted by selling AI OnlyFans  If you ran this creative targeting 50 - 60 year old women to a gym plan or food plan for women after menopause you\u2019d make so much more money   A lot of this AI talent is being wasted",
+      "url": "https://x.com/pounddz/status/2033172049640698156",
+      "engagement_rate": 0.952
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 499,
+      "views": 25148,
+      "text": "here are all the AI tools you should get up to speed with right now...  LLM's: > claude > gemini > GPT > kimi  CODING AGENTS: > claude code > cursor > opencode > lovable  COMPUTER-USE AGENTS: > manus > openai/claude  AI IMAGE: > nano banana pro > GPT-image > midjourney  AI VIDEO:",
+      "url": "https://x.com/eptwts/status/2023723269732413839",
+      "engagement_rate": 1.984
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 499,
+      "views": 341757,
+      "text": "A central aspect of the government's electoral reform proposal is that the plurinominal seats campaign to win people's votes. It sounds good. But there's a small problem: they are voted in circumscriptions that have an average of 60 districts and 25 million voters. Imagine how",
+      "url": "https://x.com/LCUgalde/status/2027369865107878117/analytics",
+      "engagement_rate": 0.146
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 496,
+      "views": 41372,
+      "text": "I've spent the past year curating the best AI feed in the space.  These 50 accounts are the reason I'm ahead in AI.  They are by far the BEST AI accounts to follow on \ud835\udd4f.  Here's my top 50 (categorised):  General AI alpha:  @aiedge_  - my dedicated AI research account  @levie  - all",
+      "url": "https://x.com/milesdeutscher/status/2025920070539760104",
+      "engagement_rate": 1.199
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 481,
+      "views": 303471,
+      "text": "$10k/mo = cover your bills  $25K-$30K = afford luxury items (nice house, travel)  $50K/mo = exotic cars (Lambos, Ferraris)   $75K/mo = start building real wealth  $100k/mo PASSIVE = true financial freedom   $150/mo & beyond = \u2026Show more",
+      "url": "https://x.com/imakeBADads/status/2032833927748952362",
+      "engagement_rate": 0.158
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 471,
+      "views": 408361,
+      "text": "Startups can't grow if they have to navigate 50 different AI rulebooks. Conflicting state laws mean higher costs, legal uncertainty, and fewer breakthroughs. If we want the next generation of American companies to thrive, we need one clear federal framework.",
+      "url": "https://x.com/Innovators/status/2023513613345148942/analytics",
+      "engagement_rate": 0.115
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 462,
+      "views": 21468,
+      "text": "quit satisfying your audience and go stalk reddit for 30 minutes  i'm serious  right now there are people on reddit begging for products that don't exist yet. not vague \"i want to make money\" garbage. hyper-specific complaints with hundreds of upvotes proving demand  real",
+      "url": "https://x.com/ecomchigga/status/2020317944492781602",
+      "engagement_rate": 2.152
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 452,
+      "views": 890047,
+      "text": "Adventure as Geralt through the ballads of Dandelion in Reigns: The Witcher.  Swipe right, swipe left, seek glory, find death! Hunt monsters, upset locals or run a hot bath. Every choice shapes your legend.  Available now on PC, iOS & Android",
+      "url": "https://x.com/devolverdigital/status/2026634432833298775/analytics",
+      "engagement_rate": 0.051
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 447,
+      "views": 1987894,
+      "text": "UNION ARENA  Booster Pack KAGURABACHI launches on February 27, 2026!  Get ultra-premium manga-art cards!",
+      "url": "https://x.com/UA_EN_TCG/status/2024391151546150973/analytics",
+      "engagement_rate": 0.022
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 438,
+      "views": 68574,
+      "text": "great explanation of the algorithm tbh,  @grok  show me more content like this, ty...",
+      "url": "https://x.com/eptwts/status/2017715071950921991",
+      "engagement_rate": 0.639
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 414,
+      "views": 26703,
+      "text": "storeleads .com  database of 5+ million shopify stores.  filter by: - revenue estimates - apps installed - traffic - tech stack - ad spend  selling to ecom? stop guessing who's \"big enough.\"  pull every shopify store doing $1M+ with klaviyo installed. that's your list.",
+      "url": "https://x.com/pipelineabuser/status/2018793141902446609",
+      "engagement_rate": 1.55
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 414,
+      "views": 7015099,
+      "text": "Save up to $200 off the Pod  Add clinically proven better sleep to your mattress 30-Night risk-free trial Free shipping & returns  The Pod transforms any bed into an adaptive environment, adjusting temperature to maximize sleep.  Terms and conditions apply.",
+      "url": "https://x.com/eightsleep/status/2025933103102070854/analytics",
+      "engagement_rate": 0.006
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 386,
+      "views": 19172,
+      "text": "the obsession with building has poisoned the brain of many people who would have otherwise been successful...  you DO NOT need your own product  and if you've never sold anything before, you probably shouldn't  chances are you've used plenty products that you felt were amazing -",
+      "url": "https://x.com/eptwts/status/2031799206550081578",
+      "engagement_rate": 2.013
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 382,
+      "views": 980649,
+      "text": "How much water can the WaterCube make in 1 hour?   WaterCube 10 makes 10+ gallons of clean water a day from the air.",
+      "url": "https://x.com/_GenesisSystems/status/2019516381222281700/analytics",
+      "engagement_rate": 0.039
+    },
+    {
+      "handle": "@dimitarangg",
+      "tier": "C",
+      "likes": 371,
+      "views": 82373,
+      "text": "genuinely the best article on how to replace your cold outreach flow with claude code  that's my unbiased and humble opinion  abuse this strategy while there's no competition:",
+      "url": "https://x.com/dimitarangg/status/2029471582075195427",
+      "engagement_rate": 0.45
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 348,
+      "views": 25719,
+      "text": "hot take: clawdbot is useless for most people...  would be a much better use of your time to make your own specialized agents around the few tasks that actually move the needle in your life  a real operator will make more money without even using AI than most of these",
+      "url": "https://x.com/eptwts/status/2022735281728770389",
+      "engagement_rate": 1.353
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 347,
+      "views": 63632,
+      "text": "Kalshi is launching the first-ever luxury watch market, in partnership with Bezel.  For the first time, you can trade your view on watches, without owning one.  Only on Kalshi.",
+      "url": "https://x.com/KalshiTrade/status/2028868867603255317/photo/1",
+      "engagement_rate": 0.545
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 340,
+      "views": 41292,
+      "text": "i analyzed the X algorithm, here are my findings...  the algo uses AI to predict 19 different actions users might take on a post  each action has a \"weight\", some matter way more than others  it multiplies prediction x weight & adds them up, this is your post's score  here's a",
+      "url": "https://x.com/eptwts/status/2013552307804201255",
+      "engagement_rate": 0.823
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 339,
+      "views": 20529,
+      "text": "your first digital product should take 4 hours to make and sell for $47  not 4 months. not a 200 page course. not some \"comprehensive system\"  a single template that solves one specific problem for one specific person  here's why most people never make their first dollar online:",
+      "url": "https://x.com/ecomchigga/status/2019675439095066736",
+      "engagement_rate": 1.651
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 326,
+      "views": 22600,
+      "text": "made $1,100 last week from reddit without posting a single link  no followers. no audience. no ads  just exploited a loophole that 99% of people don't know exists  reddit bans self-promotion. post your product link and you're gone instantly  but here's what they can't ban:  being",
+      "url": "https://x.com/ecomchigga/status/2020764118827844055",
+      "engagement_rate": 1.442
+    },
+    {
+      "handle": "@dimitarangg",
+      "tier": "C",
+      "likes": 323,
+      "views": 16357,
+      "text": "i found a way to book 60 calls/mo with clawdbot  it automates cold outreach on X + email + linkedin   i put this method into a 73-page doc going over: - the full setup (vps/security/automation) - weekly deployment blueprint - my exact outreach scripts  like + comment \"CLAWDBOT\"",
+      "url": "https://x.com/dimitarangg/status/2025669965404393535",
+      "engagement_rate": 1.975
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 318,
+      "views": 34244,
+      "text": "voicemail drops are underrated.  your message lands in their voicemail without their phone ever ringing. no cold call rejection. no gatekeepers.  drop .co and voicedrop .ai both do this.  record 30 seconds. upload list. send tens of thousands of voicemails in a day. at scale it's",
+      "url": "https://x.com/pipelineabuser/status/2017827032328028306",
+      "engagement_rate": 0.929
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 302,
+      "views": 7924,
+      "text": "What do you mean a David bar is \"candy\" but a Twix  isn't?  The sales tax code in 24 states defines candy as sweetener + chocolate/nuts in bar form\u2026unless it contains flour. So, that cookie layer changes everything.  Thank god tools like  @numeral  exist to handle sales tax! #ad",
+      "url": "https://x.com/RosenZone/status/2000989501544362139/photo/1",
+      "engagement_rate": 3.811
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 289,
+      "views": 47005,
+      "text": "The continent of Pywel is full of untold tales, interesting encounters, and hidden challenges that all shape your adventure.    Become a part of the journey and follow for the latest updates.",
+      "url": "https://x.com/CrimsonDesert_/status/2022584082581065934/analytics",
+      "engagement_rate": 0.615
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 282,
+      "views": 17300,
+      "text": "here's how to use claude code to generate UI that's ACTUALLY good...  first you'll need to find a UI you want to take inspiration from & clone a \"reference\" page  this'll be a page you want to take inspiration from so that claude code has a good reference point to start with",
+      "url": "https://x.com/eptwts/status/2017920704117657959",
+      "engagement_rate": 1.63
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 282,
+      "views": 21439,
+      "text": "claude cowork will be a significantly bigger product than claude code...",
+      "url": "https://x.com/eptwts/status/2026771009441808553",
+      "engagement_rate": 1.315
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 282,
+      "views": 41148,
+      "text": "We created this commercial for Rumble in under 12 hours...  It was created by using: - Nano banana pro - Kling 3.0 multi cuts.  The sauce isn't in the tools you use but in how you use them  This commercial required 10+ angles, 100+ generations, and of course, editing.  I created",
+      "url": "https://x.com/starks_arq/status/2032523028844671014",
+      "engagement_rate": 0.685
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 275,
+      "views": 12991,
+      "text": "both money twitter AND crypto twitter have been swallowed by AI twitter...  MT & CT doesn't exist anymore, it's all AI",
+      "url": "https://x.com/eptwts/status/2025300344192831561",
+      "engagement_rate": 2.117
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 272,
+      "views": 15609,
+      "text": "i built a digital product last saturday morning and it made $1,100 by sunday night  not because it was good. because it was specific.  here's exactly what i did hour by hour:  9am: opened facebook groups in three niches i was considering. scrolled for 20 minutes each. one group",
+      "url": "https://x.com/ecomchigga/status/2030005764840956389",
+      "engagement_rate": 1.743
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 265,
+      "views": 453483,
+      "text": "Introducing SaucerSwap V3  A full central limit order book on  @Hedera 's L1. Off-chain matching, on-chain settlement.   Maker rebates, xSAUCE fee discounts, unified liquidity across V1, V2, and V3.  Launching Q2 2026.",
+      "url": "https://x.com/SaucerSwapLabs/status/2027446591171313695/photo/1",
+      "engagement_rate": 0.058
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 258,
+      "views": 35063,
+      "text": "dm'd a girl on X last week who had 340 followers and a bio that said \"digital products\"  figured she was another one just starting out  checked her gumroad. 1 product. a $39 notion template for tracking gym macros  \"how's it going with the template thing\"  \"good\"  \"good like you",
+      "url": "https://x.com/ecomchigga/status/2019595921156079620",
+      "engagement_rate": 0.736
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 253,
+      "views": 46191,
+      "text": "just one-shotted this slideshow by pasting it to claude, asking it to use the pptx claude skill & giving it my \"brand-style\" context profile...",
+      "url": "https://x.com/eptwts/status/2013350631403069922",
+      "engagement_rate": 0.548
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 252,
+      "views": 29499,
+      "text": "asked a guy at a hotel bar what he does  \"i sell the same PDF to the same person every month\"  thought it was a scam  \"they pay you monthly for ONE pdf?\"  \"i update it. add 3-4 pages. they stay subscribed.\"  he pulls up stripe  $67K MRR  same google doc since 2022  \"it's a",
+      "url": "https://x.com/ecomchigga/status/2022816893006905525",
+      "engagement_rate": 0.854
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 251,
+      "views": 7845,
+      "text": "one of the most neglected things that help you achieve a goal, is finding a network of people with that shared goal...  90% of the work is keeping the goal in your conscious mind & being reminded that you even have this goal  the best way to do that is to talk about it on a daily",
+      "url": "https://x.com/eptwts/status/2023531019005984894",
+      "engagement_rate": 3.199
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 243,
+      "views": 37728,
+      "text": "machina joined my mentorship program a few months back & now he's about to surpass me...  one thing that my program made me realize, is that man people are good at their craft & naturally talented writers...  but they never get rewarded for it because they don't have the right",
+      "url": "https://x.com/eptwts/status/2012529729803587733",
+      "engagement_rate": 0.644
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 242,
+      "views": 20567,
+      "text": "You don\u2019t realise how early you are   so many people are missing out on this opportunity and they don\u2019t even release it   using AI to promote organic affiliate is still so untapped   I know so many people in the industry and most are clueless to this opportunity or the tools   I",
+      "url": "https://x.com/pounddz/status/2021561432794361873",
+      "engagement_rate": 1.177
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 240,
+      "views": 12424,
+      "text": "if the thing you're working on doesn't either...  > create value for customers > communicate the value to potential customers  then you're probably wasting your time",
+      "url": "https://x.com/eptwts/status/2018270840584909090",
+      "engagement_rate": 1.932
+    },
+    {
+      "handle": "@fortuze",
+      "tier": "C",
+      "likes": 239,
+      "views": 1101558,
+      "text": "Here are the top AI infrastructure trends you need to be aware of in 2026.",
+      "url": "https://x.com/CrusoeAI/status/2010817879298789754/analytics",
+      "engagement_rate": 0.022
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 238,
+      "views": 16533,
+      "text": "every ecom brand running ads should have aged accounts in the comments.  ad drops. first 3 comments are from accounts you control.  \"just got mine last week, shipping was fast\"  \"this or the competitor version?\" then you reply with why yours is better  \"does this work for",
+      "url": "https://x.com/pipelineabuser/status/2026403273129832455",
+      "engagement_rate": 1.44
+    },
+    {
+      "handle": "@dimitarangg",
+      "tier": "C",
+      "likes": 236,
+      "views": 13536,
+      "text": "i scaled to 6-figs at 16 by SPAMMING 10k+ cold pitches a DAY  automated across the holy trinity of inbox t3rrorism:  twitter DMs outlook emails linkedin inmails  now i\u2019m giving away a 44-page guide on how to do the same  like + comment \u201cCOLD\u201d and i\u2019ll send it over  (must follow +",
+      "url": "https://x.com/dimitarangg/status/2017625140947751014",
+      "engagement_rate": 1.743
+    },
+    {
+      "handle": "@dimitarangg",
+      "tier": "C",
+      "likes": 234,
+      "views": 37083,
+      "text": "if someone showed me this at the start of my cold email journey i'd hit 6-figures at 14 and not 16  just sayin tho just sayin",
+      "url": "https://x.com/dimitarangg/status/2016966890820641211",
+      "engagement_rate": 0.631
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 234,
+      "views": 164312,
+      "text": "POV: 18 yrs old, $1.3m+ rev generated.",
+      "url": "https://x.com/ecomchigga/status/1989773709725634626",
+      "engagement_rate": 0.142
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 230,
+      "views": 427369,
+      "text": "NASDAQ 100: Blow-off Top Forming NOW?  Most traders will get trapped at the top\u2026 again.  My 2026 Outlook shows exactly when the party ends.  \u2192 FREE 60-page eBook (normally $30)",
+      "url": "https://x.com/BraVoCycles/status/1999211334668276128/analytics",
+      "engagement_rate": 0.054
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 227,
+      "views": 481291,
+      "text": "BARRIOS vs. GARCIA: THE WARRIOR SPIRIT  The epic battle between Barrios and Garcia goes down at the fight capital of the world, Las Vegas, on Saturday, February 21!  Garia seeks to capture his first world title and Barrios seeks to summon his warrior spirit.  READ THE BREAKDOWN:",
+      "url": "https://x.com/BOXINGnBBQ/status/2022704834571583789/analytics",
+      "engagement_rate": 0.047
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 221,
+      "views": 20615,
+      "text": "two guys joined the same discord 8 months ago  both asked me for advice on the same day  guy 1 had everything lined up: - macbook pro - $2,400 course library - ring light - podcast mic - custom notion dashboard - LLC already filed - logo designed - 3 months of savings set aside",
+      "url": "https://x.com/ecomchigga/status/2022039014342119599",
+      "engagement_rate": 1.072
+    },
+    {
+      "handle": "@pounddz",
+      "tier": "C",
+      "likes": 216,
+      "views": 21966,
+      "text": "This is a great untapped way of running Whop affiliate selling making money online to girls   most people target men but girls are so much easier to sell and also let\u2019s be honest, will believe AI videos more often than men   Here\u2019s an actual way you could make bread from whop",
+      "url": "https://x.com/pounddz/status/2030049176713609602",
+      "engagement_rate": 0.983
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 213,
+      "views": 21071,
+      "text": "parallel dialers.  most sdrs make 50 calls a day and have maybe 5 real conversations. 90% of the time is ringing, voicemails, and bad numbers.  parallel dialers call multiple lines at once. first person to pick up gets connected. the rest get dropped.  orum .com - ai-powered,",
+      "url": "https://x.com/pipelineabuser/status/2018032362626408610",
+      "engagement_rate": 1.011
+    },
+    {
+      "handle": "@ecomchigga",
+      "tier": "C",
+      "likes": 212,
+      "views": 9998,
+      "text": "found a gumroad exploit that's basically free sales and nobody's using it  the related products hack  here's what most people don't know:  gumroad has a \"discover\" section that recommends products based on what people already bought  you can't control if gumroad features you  but",
+      "url": "https://x.com/ecomchigga/status/2021353253573681382",
+      "engagement_rate": 2.12
+    },
+    {
+      "handle": "@dimitarangg",
+      "tier": "C",
+      "likes": 212,
+      "views": 10472,
+      "text": "i could get perma banned + blacklisted for sharing this but f*ck it:  i found a way to EXPLOIT cold outreach platform LOOPHOLES to break EVERY rule  how to: automate AI voice notes get outlook domains for only $40 BREAK linkedin\u2019s 2.5k lead scraping limits  like + comment \u201cSEND\u201d",
+      "url": "https://x.com/dimitarangg/status/2019056136213631314",
+      "engagement_rate": 2.024
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 210,
+      "views": 12067,
+      "text": "it's insane how streamers can control narratives by paying off the big clipping pages lmfao...  incentivizing these pages to make you look good can be the sole difference between being hated vs. loved, shits insane  like politics at a smaller scale",
+      "url": "https://x.com/eptwts/status/2012853252950282690",
+      "engagement_rate": 1.74
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 206,
+      "views": 32897,
+      "text": "meanwhile blackhat rebillers doing 10x worse on custom setups walking away fine   but a legit dude with 6 years and $30M processed gets nuked for 0.07%   shopify is dogshit. get your own payment stack or you're just waiting for your turn",
+      "url": "https://x.com/pipelineabuser/status/2016987648112623701",
+      "engagement_rate": 0.626
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 203,
+      "views": 11981,
+      "text": "linkedin voice notes get 3x response rates vs text. but nobody sends them because recording hundreds is tedious.  dripify and expandi automate this now.  record one voice note. tool sends it to hundreds of prospects as if you recorded each one personally.  \"hey [name], saw you're",
+      "url": "https://x.com/pipelineabuser/status/2018007465233670240",
+      "engagement_rate": 1.694
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 189,
+      "views": 1706311,
+      "text": "Artificial intelligence is strengthening American manufacturing. We can\u2019t let China win the AI race.",
+      "url": "https://x.com/americanedge/status/2026320536679416098/analytics",
+      "engagement_rate": 0.011
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 189,
+      "views": 20944,
+      "text": "i feel bad for people who bought property in dubai\u2026  i\u2019ve always felt that it\u2019s a risky play to commit to such a volatile region  stay safe my friends",
+      "url": "https://x.com/eptwts/status/2027790257635144031",
+      "engagement_rate": 0.902
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 188,
+      "views": 27838,
+      "text": "i respect the \"build in public\" community for inspiring people to build things & make a living for themselves...  but it'd be ingenuine of me to not warn you guys about the distorted vision of marketing that they seem to push  the guys within build in public community look at the",
+      "url": "https://x.com/eptwts/status/2017934908283380144",
+      "engagement_rate": 0.675
+    },
+    {
+      "handle": "@pipelineabuser",
+      "tier": "S",
+      "likes": 181,
+      "views": 9997,
+      "text": "triggering events nobody tracks:  - leadership change (theorg) - office move (google alerts + address) - bad glassdoor reviews spike (means problems = budget) - competitor layoffs (linkedin) - job posting removed (they hired, now implementing) - 10-K filing language changes (sec",
+      "url": "https://x.com/pipelineabuser/status/2019094608957849812",
+      "engagement_rate": 1.811
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 177,
+      "views": 8111,
+      "text": "the way i see it, the future of online business is heading in two possible directions...  1 - people become hyper-skeptical that everything is ran by an AI agent  2 - people stop caring & AI-ran businesses become the new normal",
+      "url": "https://x.com/eptwts/status/2024061571215864049",
+      "engagement_rate": 2.182
+    },
+    {
+      "handle": "@eptwts",
+      "tier": "S",
+      "likes": 172,
+      "views": 13289,
+      "text": "building an internal tool that pulls posts from marketing forums + social media, then qualifies whether they're valuable & turns them into an easily digestible format...  then it posts them to a feed where i can bookmark, save, filter by category & use the \"sauce\" as context in a",
+      "url": "https://x.com/eptwts/status/2017280648856154446",
+      "engagement_rate": 1.294
+    }
+  ]
+}

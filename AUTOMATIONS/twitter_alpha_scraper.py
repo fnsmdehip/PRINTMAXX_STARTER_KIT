@@ -32,6 +32,8 @@ import shutil
 import sqlite3
 import subprocess
 import sys
+
+csv.field_size_limit(sys.maxsize)
 import tempfile
 import urllib.request
 from datetime import datetime, timedelta, timezone

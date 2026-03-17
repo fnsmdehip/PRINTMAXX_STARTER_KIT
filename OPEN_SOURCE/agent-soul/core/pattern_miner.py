@@ -28,12 +28,12 @@ from collections import Counter
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("AGENT_SOUL_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
 
 PROMPTS_FILE = Path(os.environ.get(
-    "AGENT_SOUL_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
+    "DOGWALK_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
 OUTPUT_DIR = Path(os.environ.get(
-    "AGENT_SOUL_PATTERNS_DIR", PROJECT_ROOT / "output" / "prompt_intelligence"))
+    "DOGWALK_PATTERNS_DIR", PROJECT_ROOT / "output" / "prompt_intelligence"))
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 PATTERNS_FILE = OUTPUT_DIR / "extracted_patterns.json"

@@ -1,0 +1,101 @@
+PLAYWRIGHT TESTER — CYCLE 17 COMPLETE
+======================================
+Date: 2026-03-17 10:54:56
+Agent: playwright_tester
+Status: COMPLETE
+
+TEST EXECUTION SUMMARY
+=====================
+Total sites tested: 15
+  - 10 previously RED sites (priority)
+  - 5 sample GREEN sites (verification)
+
+Results:
+  GREEN (Healthy):  6 sites (40%)
+  YELLOW (Warnings): 0 sites
+  RED (Broken):     9 sites (60%)
+
+DETAILED FINDINGS
+================
+
+✓ GREEN Sites (All Healthy):
+  - old-settlers-dental-p-a-austin-tx.surge.sh
+  - printmaxx.surge.sh
+  - prayerlock-web.surge.sh
+  - coldmaxx.surge.sh
+  - mcp-marketplace.surge.sh
+  - stackmaxx.surge.sh
+
+  Assessment: Core apps and brand sites are stable.
+  Action: None needed.
+
+✗ RED Sites Breakdown:
+
+  Category A: DNS Failures (8 sites)
+  Problem: Domain names exceed 63-char DNS label limit
+  Error: "Failed to parse: domain, label empty or too long"
+  Root Cause: Local business page generator concatenates full company name + service + city + state
+  Example: "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh"
+            is 87+ characters (limit is 63)
+
+  Sites affected:
+  1. mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh
+  2. top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh
+  3. window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh
+  4. mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh
+  5. home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh
+  6. the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh
+  7. local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh
+  8. residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh
+
+  Category B: Blank Page (1 site)
+  1. saas-stack-audit-200.surge.sh
+     Problem: Returns HTTP 200 but no content
+     Source: Not found in codebase (auto-generated or deleted)
+     Action: Rebuild with content or remove
+
+KEY INSIGHTS
+===========
+1. Core PRINTMAXX apps (printmaxx, prayerlock, coldmaxx, etc.) are all healthy
+2. The "RED" status on most sites is NOT due to code issues
+3. Root cause is NAMING ISSUE in asset_deployer DNS generation
+4. Actual code quality appears healthy (6/6 sample sites working)
+5. Issue affects only local business pages (150+ of them)
+
+RECOMMENDATIONS
+==============
+Priority 1: Fix DNS Naming Algorithm
+  - Update asset_deployer.py to enforce max 30-char domain names
+  - Pattern: {service}-{city-abbr}.surge.sh
+  - Examples: fencing-lv.surge.sh, plumbing-mia.surge.sh
+  - Estimated impact: Fix 8 sites immediately
+
+Priority 2: Batch Rename & Redeploy
+  - Generate mapping of old → new domain names
+  - Use surge CLI to redeploy with new names
+  - Update deployed_assets.json registry
+  - Re-test all 8 sites after redeploy
+
+Priority 3: Full Health Audit
+  - Test full 355-site inventory in batches
+  - Apply same naming validation across all generators
+  - Expected outcome: 95%+ pass rate after fixes
+
+EVIDENCE FILES
+=============
+- AUTOMATIONS/agent/swarm/reports/playwright_tester_report_20260317.md
+- AUTOMATIONS/agent/swarm/reports/PLAYWRIGHT_TEST_SUMMARY_20260317.md
+- AUTOMATIONS/agent/swarm/deployed_assets.json (updated with findings)
+
+NEXT STEPS
+=========
+1. Assign fixing DNS names to asset_deployer maintenance
+2. Run bulk redeploy of 8 affected sites
+3. Schedule full 355-site health audit (next week)
+4. Add DNS validation to CI/CD pipeline
+
+---
+Cycle 17 testing complete.
+Testing framework: Python requests + surge CLI diagnostics
+Execution time: ~5 minutes
+Test coverage: 4% of active sites (15 of 355)

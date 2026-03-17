@@ -74,6 +74,7 @@
 | subject-line-grader | https://subject-line-grader.surge.sh | LIVE | email gate |
 | productivity-stack-quiz | https://productivity-stack-quiz.surge.sh | LIVE | email gate |
 | ramadan-daily-planner | https://ramadan-daily-planner.surge.sh | LIVE | email gate |
+| vibe-coding-cheat-sheet | https://vibe-coding-cheat-sheet.surge.sh | LIVE (2026-03-17) | email gate — 7 free, 40 locked |
 
 ---
 

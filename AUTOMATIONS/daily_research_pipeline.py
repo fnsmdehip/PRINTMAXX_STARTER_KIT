@@ -26,7 +26,9 @@ Cron entry (add to crontab):
 """
 
 import argparse
+import atexit
 import csv
+csv.field_size_limit(10 * 1024 * 1024)
 import json
 import os
 import re
@@ -97,22 +99,36 @@ def already_ran_today(state):
 
 
 # ─── Lock File ─────────────────────────────────────────────
+STALE_LOCK_HOURS = 2
+
 def acquire_lock():
     if LOCK_FILE.exists():
+        # Stale lock cleanup: if lock file is older than 2 hours, remove regardless of PID
         try:
-            pid = int(LOCK_FILE.read_text().strip())
-            # Check if process still running
-            os.kill(pid, 0)
-            log.warning(f"Pipeline already running (PID {pid})")
-            return False
+            lock_age_seconds = time.time() - LOCK_FILE.stat().st_mtime
+            if lock_age_seconds > STALE_LOCK_HOURS * 3600:
+                log.warning(f"Stale lock detected ({lock_age_seconds/3600:.1f}h old), removing")
+                LOCK_FILE.unlink()
+            else:
+                pid = int(LOCK_FILE.read_text().strip())
+                # Check if process still running
+                os.kill(pid, 0)
+                log.warning(f"Pipeline already running (PID {pid})")
+                return False
         except (ProcessLookupError, ValueError):
             LOCK_FILE.unlink()
+        except OSError:
+            LOCK_FILE.unlink()
     LOCK_FILE.write_text(str(os.getpid()))
+    atexit.register(release_lock)
     return True
 
 def release_lock():
     if LOCK_FILE.exists():
-        LOCK_FILE.unlink()
+        try:
+            LOCK_FILE.unlink()
+        except OSError:
+            pass
 
 
 # ─── Stage 1: SCRAPE ─────────────────────────────────────────
