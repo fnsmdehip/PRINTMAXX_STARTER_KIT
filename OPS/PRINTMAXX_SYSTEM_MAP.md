@@ -1,6 +1,6 @@
 # PRINTMAXX — COMPLETE SYSTEM MAP
 # Canonical live architecture map. Update this file in the same session whenever the system changes.
-# One solopreneur. Zero revenue. 33 autonomous agents. 298 Python scripts. 109 cron jobs. 27GB.
+# One solopreneur. Zero revenue. 33 autonomous agents. 392 Python scripts. 105 cron jobs (zero collisions). 27GB.
 # Goal: $0 → hedge fund capital management via recursive automation.
 
 ---
@@ -11,7 +11,7 @@ This is the live system map for PRINTMAXX.
 
 - Update this file immediately when agents, automations, schedules, queues, dashboards, memory layers, control surfaces, key directories, or data flow change.
 - If the change also affects navigation or standing instructions, update `.claude/CLAUDE.md` in the same session.
-- Latest verified control-surface update: 2026-03-13 03:14 EDT.
+- Latest verified control-surface update: 2026-03-17 EDT.
 
 ---
 
@@ -579,6 +579,30 @@ Twitter: FULL_OPS (Day 22, advanced from Day 2 per T019/T022)
 LinkedIn: CONTENT/linkedin/ created, pending human account setup
 Build-in-Public: CONTENT/build_in_public/ created
 ```
+
+---
+
+## CHANGES — 2026-03-17
+
+### Resilience Fixes
+- `perpetual_guardian.py`: Added `_clear_stale_lock()` (removes .git/index.lock if >120s old), `_push_to_remote()` standalone push, increased all git timeouts to 60s. Pushes even when commit fails.
+- `system_health_monitor.py`: Now 16-point health check (was 14). Added `check_16_git_push_health()` — GREEN/AMBER/RED based on unpushed commit count.
+- `daily_research_pipeline.py`: Added atexit handler for lock cleanup, age-based stale lock detection (>2h = force remove).
+- CSV field_size_limit raised to 10MB across 11 scripts: daily_digest, sqlite_alpha_index, perpetual_guardian, daily_research_pipeline, alpha_validator, alpha_screening, alpha_query, actionable_aggregator, intelligence_router, ceo_agent, venture_autonomy.
+
+### Cron Stagger (zero collisions)
+- `crontab_printmaxx_v7.txt`: 105 entries, ALL staggered to unique time slots. Was 55+ jobs at :00 causing resource contention.
+- perpetual_guardian keeps :00 (priority). ceo_agent moved to :20. system_health_monitor to :05. All others staggered by 5-10 min offsets.
+
+### Open-Source Extraction
+- `OPEN_SOURCE/agent-soul/`: Meta-cognition framework extracted. 10 core modules (voice_extractor, cognitive_engine, pattern_miner, user_sim_refiner, loop_closer, self_audit, decision_engine, resilience, conversation_logger, session_briefing) + templates + examples.
+- GitHub: `github.com/fnsmdehip/dogwalk` (private). Name pending — system is broader than correction-chain learning.
+
+### System Map Auto-Update
+- `.claude/rules/system-map-maintenance.md`: Dedicated auto-loading rule file. Ensures system map gets updated same-session on any architecture change.
+- CLAUDE.md Rule 12 expanded: now ARCHITECTURE-FIRST (read map before analyzing, update on ANY change, not just new ventures).
+- Session Start step 4 added: read system map for architecture context.
+- Session End step 3 added: update system map if architecture changed.
 
 ---
 
