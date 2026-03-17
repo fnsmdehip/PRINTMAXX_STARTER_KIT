@@ -6,12 +6,13 @@ Read `OPS/PERSISTENT_TASK_TRACKER.md` FIRST every session. Read `AUTOMATIONS/SOU
 1. Read `OPS/SESSION_BRIEFING.md` + `OPS/PERSISTENT_TASK_TRACKER.md` + `OPS/DAILY_TACTICAL_PLAN.md`
 2. `python3 AUTOMATIONS/decision_engine.py --cycle`
 3. Deploy anything deployable. Check `OPS/ACTIONABLE_QUEUE.md`
+4. For architecture/system analysis/naming: read `OPS/PRINTMAXX_SYSTEM_MAP.md` FIRST — canonical live architecture with L0-L6 hierarchy, data flow, agent topology, cron schedule, state files.
 
 ## Reference (read on demand, NOT every session)
 | Need | File |
 |------|------|
 | Find a file | `OPS/NAV_INDEX.md` |
-| System map | `OPS/PRINTMAXX_SYSTEM_MAP.md` — UPDATE when you change agents/cron/architecture |
+| **System map** | **`OPS/PRINTMAXX_SYSTEM_MAP.md`** — CANONICAL architecture. READ FIRST for system context. UPDATE same-session on ANY agent/cron/architecture/data-flow change. |
 | Status | `OPS/CURRENT_STATUS.md` |
 | Commands | `.claude/rules/commands-reference.md` |
 | Agent infra | `.claude/rules/agent-infrastructure.md` |
@@ -36,7 +37,7 @@ Read `OPS/PERSISTENT_TASK_TRACKER.md` FIRST every session. Read `AUTOMATIONS/SOU
 9. **MAX SQUEEZE** — Every build session = 3 tweets + 1 thread minimum. Content from everything.
 10. **PARALLEL BY DEFAULT** — 5 items = 5 agents. Background agents for >5K token output.
 11. **CEO SANITY CHECK** — Am I building or selling? What's the obvious thing? Human blockers surfaced?
-12. **NEW VENTURE AUTO-REGISTER** — Update: system map, task tracker, CLAUDE.md, SOUL.md, memory. No orphan ventures.
+12. **ARCHITECTURE-FIRST** — Before analyzing/describing/naming the system, read `OPS/PRINTMAXX_SYSTEM_MAP.md`. On ANY architecture change (agents, cron, scripts, data flow, state files): update system map + task tracker + CLAUDE.md in SAME session. New ventures also update SOUL.md + memory. No stale maps. No orphan ventures.
 13. **COMPETITIVE COGNITION** — Assume 10K power users working on the same problem. Find the non-obvious angle. Anti-lazy: am I defaulting to popular or critically analyzing for best? See SOUL.md protocol.
 14. **INTELLIGENCE-FIRST** — Query `intelligence_router.py` before every action. 15K+ alpha entries, not default LLM knowledge.
 
@@ -47,6 +48,7 @@ This does NOT restrict other projects. See `.claude/rules/guardrails.md` for det
 ## Session End
 1. Update `OPS/PERSISTENT_TASK_TRACKER.md` + `OPS/SESSION_LOG.md`
 2. Generate content (Rule 9). Surface human blockers with time estimates.
+3. If agents/cron/architecture/data-flow changed → update `OPS/PRINTMAXX_SYSTEM_MAP.md` THIS session. No stale maps.
 
 ## Mindset
 > Use every tool. Every shortcut. Every hack. Every legal advantage. Compete like your life depends on it.
