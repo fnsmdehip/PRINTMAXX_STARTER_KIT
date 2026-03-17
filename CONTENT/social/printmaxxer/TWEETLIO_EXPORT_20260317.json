@@ -346,28 +346,17 @@
     }
   },
   {
-    "content": "\"i believed this take 6 months ago. then i tested it. 200 emails, 30 days, controlled experiment. the opposite approach performed 3x better. sometimes the conventional wisdom is just wrong.\"\n\n---\n\n## SECTION 6: COMMUNITY BAIT POSTS (12 posts)\n\n### 1. \"so is openclaw really worth the waitlist?\"\nTitle: so is openclaw really worth the waitlist? i feel like my custom system with claude code is better\nBody: been running autonomous loops with claude code for 3 weeks now. while :; do cat PROMPT.md | claude --dangerously-skip-permissions --print ; done. reads state from filesystem, does one task, writes state, exits. fresh context every iteration. no memory bloat.\n\ni keep seeing people hype openclaw but from what i can tell it's basically a managed version of what i'm already doing with bash + prompt files + cron. the filesystem IS the memory. git IS the versioning. what am i missing?\n\nnot hating, genuinely curious if there's something openclaw does that this pattern can't. my overnight runs produce 40+ files per session with code review and tests passing.\nExpected discussion: framework vs custom debate, people sharing their own loop setups, openclaw defenders explaining the value-add, DMs asking for your setup\n\n### 2. \"agent frameworks are overkill for solopreneurs, change my mind\"\nTitle: unpopular opinion: agent frameworks are overkill for 90% of what solopreneurs need\nBody: been building automation scripts for 3 months. started with langchain, moved to autogen, tried crewai.\n\nended up with: python scripts + argparse + cron. that's it. 248 scripts. 156K lines. all running on a macbook.\n\nframeworks add complexity that solo devs don't need. you don't need multi-agent orchestration. you need one agent that reads a file, does a thing, and writes the output. bash can orchestrate that.\n\nthe only framework worth using is claude code itself. it's already an agent with file access, terminal, and tool use. just point it at a prompt file and let it run.\n\nam i being a boomer about this or does anyone else feel this way?\nExpected discussion: framework fans pushing back, fellow minimalists agreeing, people asking to see your script architecture, requests to open-source the setup\n\n### 3. \"i scanned 248 scripts to find SaaS candidates. top 3 scored 95/100\"\nTitle: scanned my 248 automation scripts to find which ones could be SaaS products. top 3 score 95/100.\nBody: built a script-to-SaaS analyzer. it reads the AST of every python file, checks for CLI interface (argparse), estimates market size, defensibility, and recurring potential. scores 0-100.\n\nresults surprised me:",
+    "content": "crontab entry: every 2 hours, runs all 3\n\ntotal cost: $0. total setup time: maybe 4 hours if you're starting from scratch.\n\n23,400 entries later you stop guessing and start knowing. reply \"pipeline\" if you want the cron setup.\n\n[444 chars]\n\n---\n\n## PRE-PUBLISH CHECKLIST",
     "scheduledDate": "2026-03-20T12:30:00",
     "type": "thread",
     "metadata": {
       "slot_type": "thread",
       "theme": "community",
-      "source_file": "COMMUNITY_INFILTRATION_PLAYBOOK.md",
+      "source_file": "AGENT_CONTENT_20260317_research.md",
       "account": "printmaxxer"
     },
     "threadTweets": [
-      "\"i believed this take 6 months ago. then i tested it. 200 emails, 30 days, controlled experiment. the opposite approach performed 3x better. sometimes the conventional wisdom is just wrong.\"\n\n---\n\n## SECTION 6: COMMUNITY BAIT POSTS (12 posts)\n\n### 1.",
-      "\"so is openclaw really worth the waitlist?\"\nTitle: so is openclaw really worth the waitlist? i feel like my custom system with claude code is better\nBody: been running autonomous loops with claude code for 3 weeks now.",
-      "while :; do cat PROMPT.md | claude --dangerously-skip-permissions --print ; done. reads state from filesystem, does one task, writes state, exits. fresh context every iteration. no memory bloat.",
-      "i keep seeing people hype openclaw but from what i can tell it's basically a managed version of what i'm already doing with bash + prompt files + cron. the filesystem IS the memory. git IS the versioning. what am i missing?",
-      "not hating, genuinely curious if there's something openclaw does that this pattern can't. my overnight runs produce 40+ files per session with code review and tests passing.",
-      "Expected discussion: framework vs custom debate, people sharing their own loop setups, openclaw defenders explaining the value-add, DMs asking for your setup\n\n### 2.",
-      "\"agent frameworks are overkill for solopreneurs, change my mind\"\nTitle: unpopular opinion: agent frameworks are overkill for 90% of what solopreneurs need\nBody: been building automation scripts for 3 months. started with langchain, moved to autogen, tried crewai.",
-      "ended up with: python scripts + argparse + cron. that's it. 248 scripts. 156K lines. all running on a macbook. frameworks add complexity that solo devs don't need. you don't need multi-agent orchestration.",
-      "you need one agent that reads a file, does a thing, and writes the output. bash can orchestrate that. the only framework worth using is claude code itself. it's already an agent with file access, terminal, and tool use. just point it at a prompt file and let it run.",
-      "am i being a boomer about this or does anyone else feel this way? Expected discussion: framework fans pushing back, fellow minimalists agreeing, people asking to see your script architecture, requests to open-source the setup\n\n### 3.",
-      "\"i scanned 248 scripts to find SaaS candidates. top 3 scored 95/100\"\nTitle: scanned my 248 automation scripts to find which ones could be SaaS products. top 3 score 95/100. Body: built a script-to-SaaS analyzer.",
-      "it reads the AST of every python file, checks for CLI interface (argparse), estimates market size, defensibility, and recurring potential. scores 0-100. results surprised me:"
+      "crontab entry: every 2 hours, runs all 3\n\ntotal cost: $0. total setup time: maybe 4 hours if you're starting from scratch. 23,400 entries later you stop guessing and start knowing. reply \"pipeline\" if you want the cron setup. [444 chars]\n\n---\n\n## PRE-PUBLISH CHECKLIST"
     ]
   },
   {

@@ -2564,3 +2564,421 @@ And then before 2008 I was making maybe $500 - $1K/mo with my AdSense blogs
 
 And then around 2003 I was
 
+
+
+---
+
+## Pending Enhancement (ALPHA103645, Score: 30)
+
+**Source:** @espindeezy (high-signal-accounts) | **URL:** https://x.com/espindeezy/status/2028336181054738493
+**Added:** 2026-03-17T12:00:06-04:00
+
+LOOKING FOR AN AI STUDY APP TO WORK WITH
+
+Pulled well over 20 million organic views across ig and TikTok for the last study app I worked with
+
+All from 1 minute + videos, no slideshows
+
+Grew the ig and TikTok pages to 27k followers and 12.5k followers 
+
+-Must already have a
+
+
+
+---
+
+## Pending Enhancement (ALPHA103651, Score: 32)
+
+**Source:** @espindeezy (high-signal-accounts) | **URL:** https://x.com/WifiUchiha/status/2016343040672022807
+**Added:** 2026-03-17T12:00:06-04:00
+
+I will be paying this creator $2.7k in bonuses for getting 1.1M views on tt
+
+This is on top of his other bonuses and retainer 
+
+Organic marketing for apps/ softwares is an untapped market for TikTok shop creators 
+
+Do not sleep on this…
+
+
+
+---
+
+## Pending Enhancement (ALPHA103511, Score: 20)
+
+**Source:** @franci__ugc (high-signal-accounts) | **URL:** https://x.com/franci__ugc/status/2018342418886590717
+**Added:** 2026-03-17T12:00:06-04:00
+
+tiktok's 2026 algorithm change nobody's talking about:
+
+"comment part 2" replies now get 4x the initial push of fresh posts.
+
+why? it signals conversation. algorithm sees engagement loop.
+
+your workflow should be:
+1. post video
+2. wait for comments
+3. reply to best comment with
+
+
+
+---
+
+## Pending Enhancement (ALPHA103549, Score: 29)
+
+**Source:** @yegormethod (high-signal-accounts) | **URL:** https://x.com/yegormethod/status/2030015816637313114
+**Added:** 2026-03-17T12:15:00-04:00
+
+I'm going to drop some crazy sauce for anyone selling an offer over $1000:
+
+Every B2B founder wants predictable client acquisition...
+
+but they spend 99% of their time and budget advertising on tiktok & instagram
+
+The person who can authorize 10k-50k has never once in their life
+
+
+
+---
+
+## Pending Enhancement (ALPHA104343, Score: 43)
+
+**Source:** 2026-03-17 | **URL:** @gregisenberg
+**Added:** 2026-03-17T13:28:28-04:00
+
+this is one of those stories that sounds fake but is inspirational 
+
+teenagers frustrated with calorie tracking build cal ai, use chatgpt to teach them code, lean into viral short-form content instead of fundraising, grow to ~15m downloads and $30m+ in revenue, and sell to
+
+
+
+---
+
+## Pending Enhancement (ALPHA104448, Score: 36)
+
+**Source:** 2026-03-17 | **URL:** @maverickecom
+**Added:** 2026-03-17T13:28:28-04:00
+
+We launched a 7 figure Amazon brand on tiktok shop and did $20k with human UGC creators this week
+
+Good team and good systems >
+
+Takeaway:
+
+- launch with human UGC. We use plug and play method to connect brands to high GMV creators in a mix of low retainers and commission only
+
+-
+
+
+
+---
+
+## Pending Enhancement (ALPHA104498, Score: 42)
+
+**Source:** 2026-03-17 | **URL:** @affprinter
+**Added:** 2026-03-17T13:28:28-04:00
+
+I Made $4,884 today
+
+no product, no face, no prior audience
+just making viral TikTok slideshows
+
+if you won't pull at least $1K in the first 7 days there is literally 0 hope for you man
+
+Retweet & Comment “TikTok” (must be following) and ill send you a free guide on how to do it
+
+
+
+---
+
+## Pending Enhancement (ALPHA104571, Score: 24)
+
+**Source:** 2026-03-17 | **URL:** r/startups
+**Added:** 2026-03-17T13:28:28-04:00
+
+$20k MRR to $191K MRR for supplement brand (I will not promote) heres every step of how we took a wellness brand from $20K MRR to $191K MRR in 7 months. It wasn’t all sunshine and rainbows but right now with AI you can get serious productivity gains. Hope this helps.
+
+Tbh smaller DTC brands have an insane advantage compared to legacy companies now and it’s not even close.
+
+My advice: take this and
+
+
+
+---
+
+## Pending Enhancement (ALPHA104720, Score: 46)
+
+**Source:** @dansugcmodels (daily scraper) | **URL:** https://x.com/dansugcmodels/status/1986470873096986958
+**Added:** 2026-03-17T14:20:01-04:00
+
+I analyzed 10,000 Jenni AI tiktok viral videos and found top 5 emotions that generate 80% of the views:
+
+> confused
+> frustrated
+> struggling
+> “whaaaat?”
+> tired in bed
+
+They’re easy to capture: 5–7 seconds, a clear hook, filmed on your phone, no script needed.
+
+The real bottleneck is finding reliable UGC creators at scale. its costly, inconsistent, and slow to deliver.
+
+I’ve bundled 100 human UG
+
+
+
+---
+
+## Pending Enhancement (ALPHA104745, Score: 30)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1984628980335480979
+**Added:** 2026-03-17T14:20:01-04:00
+
+most evil info product i've seen this year:
+
+a “21-day confidence bootcamp to make her chase you”
+
+tiktok ads targeting men with 0 dating experience
+
+landing page opens with:
+
+“she’s not ignoring you because she’s busy - she just doesn’t respect you.”
+
+“you can fix that in 3 weeks.”
+
+they scroll in silence questioning their whole existence
+
+offer: $67 bootcamp + $49/mo “alpha group chat”
+
+every li
+
+
+
+---
+
+## Pending Enhancement (ALPHA104747, Score: 54)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1989356178992664976
+**Added:** 2026-03-17T14:20:01-04:00
+
+most genius b2b info product hack i've seen this year: 
+
+guy was stuck at $2k/month selling $97 community access 
+
+everyone told him he needed more content, bigger audience, better marketing, viral growth 
+
+he ignored all of it 
+
+just: repositioned same product as infrastructure, not education, changed from "learn" to "install working infrastructure", raised price to $1997 
+
+multiple 5-figs first 
+
+
+
+---
+
+## Pending Enhancement (ALPHA104802, Score: 30)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1664517988274561025
+**Added:** 2026-03-17T14:20:02-04:00
+
+This Simple DR 6 site earned more than $4000 in 7 months with just 70 articles.
+
+Niche - Food - Cake
+Monetization - Adthrive
+What They Did - Listed cake prices from several food outlets and Left it and dint update content for Years 
+
+Some Interesting Facts
+
+
+
+---
+
+## Pending Enhancement (ALPHA104806, Score: 36)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1722219052444356815
+**Added:** 2026-03-17T14:20:02-04:00
+
+ This is Big 
+
+ This single page website earns $5000 to $7000 a month from affiliates 
+
+How about creating a  website similar to the look of Google Sheets as a homepage and listing 100s of product info and linking to affiliates?
+
+It is as simple as this.
+Niche - Computer Parts
+Monetisation  - Amazon Affiliates
+Traffic - 86.5k (Similar Web Data)
+Gets traffic from forums, social media etc
+No Blog
+No
+
+
+
+---
+
+## Pending Enhancement (ALPHA104809, Score: 44)
+
+**Source:** @iamgdsa (daily scraper) | **URL:** https://x.com/iamgdsa/status/1907068912308719644
+**Added:** 2026-03-17T14:20:02-04:00
+
+POV Camera does $150k mrr.
+
+11 TikTok accounts. 67M views. 3 hooks.
+
+Repeating the exact same format scheme (full AI avatars).
+
+Never seen anything like this:
+
+
+
+---
+
+## Pending Enhancement (ALPHA104818, Score: 24)
+
+**Source:** @jasoncfox (daily scraper) | **URL:** https://x.com/jasoncfox/status/1975175468757197156
+**Added:** 2026-03-17T14:25:55-04:00
+
+My first 5 clients came from the simplest DM
+
+My first $500k came from a simple DM and content
+
+My first $1m came from a simple DM, Content and Sales process
+
+Nothing complicated and nothing over the top
+
+I just filmed a training breaking down 7 of my best DMs that worked through all of these stages
+
+If you want it drop 'DM' below and I'll shoot it over (Must be following)
+
+
+
+---
+
+## Pending Enhancement (ALPHA104844, Score: 36)
+
+**Source:** @paoloanzn (daily scraper) | **URL:** https://x.com/paoloanzn/status/1931420723563602213
+**Added:** 2026-03-17T14:25:55-04:00
+
+I just automated the entire "brain rot" video creation process that's making creators $50K-$100K per month on autopilot
+
+can’t believe I’m about to give you the exact system for free…
+
+these split-screen videos (podcast clip + Minecraft parkour) are absolutely DOMINATING tiktok
+
+
+
+---
+
+## Pending Enhancement (ALPHA104849, Score: 24)
+
+**Source:** @yegormethod (daily scraper) | **URL:** https://x.com/yegormethod/status/1965430067208544467
+**Added:** 2026-03-17T14:25:55-04:00
+
+There’s a guy in your city who woke up at 4am, hit the gym for two hours, and will make $30,000 before you finish your first cup of coffee.
+
+You've never met him. You've never seen his posts.
+He doesn't have a "personal brand."
+
+He's not tweeting "rise and grind" from his iPhone.
+He's on a burner phone closing a deal that would change your family's life.
+
+He's not making a vision board.
+He's revie
+
+
+
+---
+
+## Pending Enhancement (ALPHA105027, Score: 30)
+
+**Source:** @pounddz (daily scraper) | **URL:** https://x.com/pounddz/status/1980056136574218660
+**Added:** 2026-03-17T14:30:01-04:00
+
+My brother just got out of the army and struggled to find a job. 
+
+We were having a couple of drinks discussing how the job market is fucked essentially and I brought up how it’s easier to easier to make $5k a month with online biz than it is to get a $2k a month job at this point 
+
+He (being used to hard work for money) was sceptical and argued against me
+
+I then showed him some of the numbers I’
+
+
+
+---
+
+## Pending Enhancement (ALPHA105035, Score: 56)
+
+**Source:** @alexxgrowth (daily scraper) | **URL:** https://x.com/alexxgrowth/status/1970847940823400467
+**Added:** 2026-03-17T14:30:01-04:00
+
+autistic content hack:
+
+sharing YOUR LOSSES makes more money than sharing wins
+
+i told my clippers to post two identical product launches:
+
+version A:
+"made $100k this month!"
+
+version B:
+"lost $30k but learned this..."
+
+version A:
+123k views, 13 sales
+
+version B:
+5.4M views, 1450 sales
+
+losing stories convert 49x better
+
+here's the psychology:
+
+winners create distance
+
+but losers create connectio
+
+
+
+---
+
+## Pending Enhancement (ALPHA105044, Score: 30)
+
+**Source:** @fromzerotomill (daily scraper) | **URL:** https://x.com/fromzerotomill/status/1921895790206730369
+**Added:** 2026-03-17T14:30:01-04:00
+
+There’s a guy in Romania
+
+Runs a faceless AI +18 disney IG profiles
+
+Auto-generates content with Midjourney + GPT
+
+Voice with ElevenLabs
+
+$300K/month
+
+Zero human contact
+
+Just ChatGPT, Stripe, and a MacBook
+
+Reply w/'AI' and ill send you guide on how to do it
+
+
+
+---
+
+## Pending Enhancement (ALPHA105058, Score: 32)
+
+**Source:** @SimonasDip (daily scraper) | **URL:** https://x.com/SimonasDip/status/1974156805379969399
+**Added:** 2026-03-17T14:30:01-04:00
+
+All methods to target US audience on TikTok (ranked from least to most reliable)
+
+1. VPN + US SIM card + restored phone + proxies
+Basically pretend you’re in the US by wiping a phone, inserting a US SIM, running VPN/proxy.
+
+ Pros: Cheapest DIY hack if you’re techy.
+ Cons: VPNs get flagged, proxies break, SIMs cost money. Accounts often stop hitting the US feed after a while.
+
+Reliability score: 3/
+

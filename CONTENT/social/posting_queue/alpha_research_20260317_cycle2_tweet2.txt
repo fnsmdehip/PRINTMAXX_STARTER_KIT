@@ -1,0 +1,9 @@
+someone built a Google Maps replacement. no API keys. no cookies. GDPR compliant out of the box.
+
+one script tag on your site.
+
+infrastructure cost: $7/month. serves unlimited traffic.
+
+they used OpenStreetMap tiles + Cloudflare R2 edge serving. no tile server needed.
+
+every SaaS charging $50/mo for map embeds just got undercut by a solo dev with a weekend project.

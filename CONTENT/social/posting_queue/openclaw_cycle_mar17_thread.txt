@@ -1,0 +1,52 @@
+THREAD: how I automated cold outreach with free website demos
+
+1/ most cold emails for web design say "I noticed your website could use some work. let me know if you'd like to chat."
+
+delete rate: 100%.
+
+here's what actually works.
+
+2/ I built a script that:
+- searches DuckDuckGo for "{service} in {city}"
+- visits every result
+- grades the website A through F
+- auto-generates a modern preview for F-grade sites
+- deploys to a live URL
+- queues a cold email with the link
+
+the whole pipeline runs every 4 hours.
+
+3/ the email is simple:
+
+"I was looking for plumbers in Tampa and noticed your site could use a refresh. I went ahead and built a free preview: [link]. no strings attached. if you like it, one-time fee to put it on your domain."
+
+that's it. no pitch deck. no discovery call CTA.
+
+4/ grading criteria:
+- no SSL = instant F
+- no viewport meta tag = F
+- "under construction" = F
+- table-based layout = D
+- parked GoDaddy domain = F
+
+these businesses are PAYING for Google Ads and sending traffic to broken sites.
+
+5/ current stats:
+- 556 leads across 42 US cities
+- 189 outreach emails queued
+- 16 new preview sites deployed today
+- ~20 seconds to generate and deploy each site
+
+the sites are real. mobile-friendly. live URLs. not mockups.
+
+6/ pricing: $500-2000 one-time to put it on their domain. no monthly fees, no contracts.
+
+at even a 2% close rate on 189 emails, that's 3-4 clients at $500-2000 each.
+
+the script cost me nothing to run. surge.sh is free. DuckDuckGo is free.
+
+7/ biggest lesson: delivered value > promised value.
+
+"I already built this for you" converts 3-5x better than "I could build something for you."
+
+stop asking for permission. just build the thing and show them.

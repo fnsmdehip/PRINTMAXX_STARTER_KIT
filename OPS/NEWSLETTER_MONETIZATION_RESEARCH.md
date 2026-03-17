@@ -400,3 +400,39 @@ Try it free today.
 
 [ACQUISITION] RespectASO: Free + Open Source + Self Hosted + Privacy Focused App Store Optimization (ASO) Keyword Research Tool for Mo
 
+
+
+---
+
+## Pending Enhancement (ALPHA103521, Score: 32)
+
+**Source:** @xivy0k (high-signal-accounts) | **URL:** https://x.com/xivy0k/status/2030656516659790139
+**Added:** 2026-03-17T12:00:06-04:00
+
+bro i was doing research last night and i found this guy medschoolbro he's just a med student who started making study guides for other med students and now he's doing $100k a month easy
+
+849k followers on facebook, 100k visitors a month on his site, 91 ads running right now
+
+and
+
+
+
+---
+
+## Pending Enhancement (ALPHA104800, Score: 42)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1591305300140777472
+**Added:** 2026-03-17T14:20:02-04:00
+
+New Site 
+DR - 18 
+Traffic - 233,000
+Niche - Travel
+Monetization - Adthrive, Affiliate 
+Expected Revenue - $8,000 to $12,00
+Buyer Intent Keywords 
+Top 5 Pages Traffic - 71,179
+Total Pages - 360
+Site Age - 12 months 
+US Traffic - 85.7% , UK - 10.8%
+

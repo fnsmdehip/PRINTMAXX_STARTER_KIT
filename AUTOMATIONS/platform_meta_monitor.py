@@ -31,7 +31,6 @@ PLATFORM_SOURCES = {
             "https://www.tiktok.com/creators/creator-portal/",
         ],
         "community": [
-            "r/TikTokCreators",
             "r/Tiktokhelp",
         ],
         "experts": [

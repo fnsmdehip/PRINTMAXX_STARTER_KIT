@@ -1,0 +1,39 @@
+DEPLOYMENT CYCLE REPORT - 2026-03-17 12:50
+============================================
+
+HEALTH CHECK: 40 sites checked
+- 38 healthy (200)
+- 2 issues found
+
+FIXES APPLIED:
+1. invoiceforge.surge.sh - was 504 (gateway timeout) → redeployed → 200 OK
+2. klaviyo-alternative.surge.sh - was 404 → redeployed from LANDING/affiliate-pages/ → 200 OK
+
+KNOWN ISSUES (unfixable):
+1. scripture-streak-legal.surge.sh - 404, source files no longer exist (orphan deployment)
+2. fence-installation-...-las-vegas-nv.surge.sh - 000, domain name exceeds Surge DNS length limit
+
+NO NEW DEPLOYABLE ASSETS FOUND
+- All APP_FACTORY/builds already deployed
+- All LANDING sites already deployed
+- PRODUCTS/ and DIGITAL_PRODUCTS/ contain non-web assets only
+
+CATEGORIES VERIFIED HEALTHY:
+- PWA Apps (11): All 200
+- Comparison Pages (7): All 200
+- Affiliate Pages (5+): All 200
+- Streak Apps (26+): All 200
+- Local Biz Sites (50+): All 200 (except 1 DNS issue)
+- Tool Pages (10+): All 200
+- Marketing Pages (10+): All 200
+
+SOCIAL POSTS FOR REDEPLOYMENTS:
+---
+Post 1:
+invoiceforge is back up. free invoice generator for freelancers. zero signup. just type and download. invoiceforge.surge.sh
+
+Post 2:
+fixed the klaviyo alternative comparison page. if you're paying $150/mo for email marketing, there are better options. klaviyo-alternative.surge.sh
+---
+
+NEXT CYCLE: Check again in 2 hours

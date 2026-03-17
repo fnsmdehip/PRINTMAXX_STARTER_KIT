@@ -675,3 +675,81 @@ Indie start-ups building the same product become friends.
 
 Indie start-ups only need $10k MRR to succeed. The market is so big that it is unrealistic and unnecessary for two independent developers to “compete” with
 
+
+
+---
+
+## Pending Enhancement (ALPHA103654, Score: 30)
+
+**Source:** @fromzerotomill (high-signal-accounts) | **URL:** https://x.com/fromzerotomill/status/2030729593930572208
+**Added:** 2026-03-17T12:00:06-04:00
+
+here's how i find $10k/month niches in 20 minutes:
+
+go to reddit
+
+find a subreddit with 50k+ members
+
+sort by top posts this month
+
+read the top 10 complaints
+
+if 3+ complaints are about the same problem — that's your niche
+
+the product writes itself
+
+and while you're spending
+
+
+
+---
+
+## Pending Enhancement (ALPHA104728, Score: 36)
+
+**Source:** @xivy0k (daily scraper) | **URL:** https://x.com/xivy0k/status/1988276238604267982
+**Added:** 2026-03-17T14:20:01-04:00
+
+These digital products are printing right now.
+
+People are making $1k+/day selling them.
+
+I made a list of the current winners  all digital/info 
+
+products that are crushing it right now.
+
+like, rt + reply “LIST” and I’ll send it over
+
+
+
+---
+
+## Pending Enhancement (ALPHA104742, Score: 42)
+
+**Source:** @CEOLandshark (daily scraper) | **URL:** https://x.com/CEOLandshark/status/1951018530536825309
+**Added:** 2026-03-17T14:20:01-04:00
+
+If you're broke + technical and want to make a quick $100k - just build "lifetime" versions of dumb products that overcharge people.
+
+If you just created a 1:1 copy of something like ManyChat and offered that for $1000/lifetime, you'd make SOME money unless you're thick
+
+
+
+---
+
+## Pending Enhancement (ALPHA105047, Score: 48)
+
+**Source:** @fromzerotomill (daily scraper) | **URL:** https://x.com/fromzerotomill/status/1976275131438858695
+**Added:** 2026-03-17T14:30:01-04:00
+
+"how do i build an info product from scratch and make $10k/m??"
+
+i get this question like 10 times a day, so i'm here to tell you that you DON'T need to build a product yourself
+
+you can use offers that already print & make over $10k PER DAY (not per month)
+
+all ethically, done with precision
+
+created a doc showing how it's done
+
+follow, rt & comment "offer" and i'll send it over
+

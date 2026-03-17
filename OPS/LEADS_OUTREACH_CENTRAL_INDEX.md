@@ -940,3 +940,17 @@ I do run ads
 
 Most importantly, I run a
 
+
+
+---
+
+## Pending Enhancement (ALPHA104610, Score: 32)
+
+**Source:** 2026-03-17 | **URL:** r/smallbusiness
+**Added:** 2026-03-17T13:28:28-04:00
+
+just got back from an industry conference and genuinely feel like i lit $4k on fire ok so rant incoming lol. we sell B2B software to mid-market retailers and i convinced myself that one of the big retail tech conferences in Vegas was worth attending this year. registration alone was $1,800, add flights and 3 nights at the conference hotel and we're looking at just over $4k total.
+
+  
+i went in wit
+

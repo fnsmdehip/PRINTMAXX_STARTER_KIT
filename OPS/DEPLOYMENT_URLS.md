@@ -88,13 +88,15 @@
 | ai-stack-2026 | https://ai-stack-2026.surge.sh | LIVE (placeholder IDs) | mixed |
 | convertkit-vs-beehiiv | https://convertkit-vs-beehiiv.surge.sh | LIVE (placeholder IDs) | 50% yr1 / 30% recurring |
 | klaviyo-alternative | https://klaviyo-alternative.surge.sh | LIVE (2026-03-16) — needs affiliate IDs | 30% recurring (ConvertKit) + 20% (Beehiiv) |
+| framer-vs-webflow | https://framer-vs-webflow.surge.sh | LIVE (placeholder IDs) | 50% first payment (Webflow) |
+| best-cold-email-tools | https://best-cold-email-tools.surge.sh | LIVE (2026-03-17) — needs affiliate IDs | 20-35% recurring (Instantly, Smartlead, Lemlist, Saleshandy, Woodpecker, Apollo, Reply.io) |
 
 ---
 
 ## Summary
 
 - **Total Deployments:** 394 (tracked in deployed_assets.json)
-- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages + 6 affiliate comparison pages + 9 new gap-hunter deploys
+- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages + 8 affiliate comparison pages + 9 new gap-hunter deploys
 - **Health Check:** All new deployments returning 200 OK
 - **Timestamp:** 2026-03-16 11:48:00
 
@@ -220,10 +222,11 @@ Deployed 2026-03-14 by ASSET DEPLOYER.
 | studylock | https://studylock.surge.sh | LIVE |
 | toolstack-review | https://toolstack-review.surge.sh | LIVE |
 | website-builders-compared | https://website-builders-compared.surge.sh | LIVE |
+| deskbreak-web | https://deskbreak.surge.sh | LIVE |
 
 ## Full Deployment Summary
 
-354 total surge.sh deployments. Full catalog in `AUTOMATIONS/agent/swarm/deployed_assets.json`.
+355 total surge.sh deployments. Full catalog in `AUTOMATIONS/agent/swarm/deployed_assets.json`.
 
 | Category | Count | Status |
 |----------|-------|--------|

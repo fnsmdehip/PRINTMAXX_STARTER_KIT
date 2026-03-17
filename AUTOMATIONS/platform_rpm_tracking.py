@@ -82,7 +82,6 @@ PLATFORM_RPM_BASELINE = {
 REDDIT_RPM_QUERIES = [
     ("youtube", "YouTube RPM 2026 OR RPM per mille OR ad revenue"),
     ("NewTubers", "RPM OR CPM OR ad revenue 2026"),
-    ("TikTokCreators", "RPM OR earnings OR creator fund 2026"),
     ("juststart", "RPM OR ad revenue OR display ads 2026"),
     ("blogging", "RPM OR Mediavine OR AdThrive 2026"),
     ("Medium", "earnings OR partner program OR per read 2026"),

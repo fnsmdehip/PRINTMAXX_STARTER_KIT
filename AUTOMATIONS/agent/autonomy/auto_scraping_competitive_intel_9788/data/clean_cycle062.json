@@ -1,0 +1,1344 @@
+{
+  "drawing_streak": {
+    "niche": {
+      "id": "drawing_streak",
+      "label": "Daily Drawing Practice Streak",
+      "itunes_terms": [
+        "drawing streak daily practice dedicated",
+        "draw every day habit tracker"
+      ],
+      "reddit_subs": [
+        "learnart",
+        "sketching",
+        "drawing"
+      ],
+      "expected_demand": "learnart=700K+, drawing=3M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Simply Draw: Learn to Draw",
+          "ratings_count": 566119,
+          "price": "Free",
+          "developer": "Simply Ltd",
+          "version": "1.6.16"
+        },
+        {
+          "name": "Draw it",
+          "ratings_count": 554664,
+          "price": "Free",
+          "developer": "Kwalee Ltd",
+          "version": "2.0.6"
+        },
+        {
+          "name": "Drawing Desk:Learn to Draw App",
+          "ratings_count": 205382,
+          "price": "Free",
+          "developer": "4Axis Technologies Pte Ltd",
+          "version": "10.4.5"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "ratings_count": 87139
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Habit Rabbit: Habit Tracker",
+          "ratings_count": 7947
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Daily Habit & Routine Tracker",
+          "ratings_count": 4686
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Habit Tracker - Daily Goals",
+          "ratings_count": 2526
+        },
+        {
+          "name": "Habit \u2014 Daily Tracker",
+          "ratings_count": 2411
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        }
+      ],
+      "total_community": 7429522,
+      "reddit_breakdown": {
+        "learnart": 1671484,
+        "sketching": 30618,
+        "drawing": 5727420
+      },
+      "reasoning": "15 competitors. Top: 'Simply Draw: Learn to Draw' (566,119 ratings)."
+    }
+  },
+  "music_practice_streak": {
+    "niche": {
+      "id": "music_practice_streak",
+      "label": "Daily Music Practice Streak",
+      "itunes_terms": [
+        "music practice streak daily dedicated",
+        "instrument practice habit tracker app"
+      ],
+      "reddit_subs": [
+        "learnmusic",
+        "Guitar",
+        "piano"
+      ],
+      "expected_demand": "Guitar=4M+, piano=400K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "MuseScore\uff0dSheet Music & Chords",
+          "ratings_count": 73281,
+          "price": "Free",
+          "developer": "MuseScore BVBA",
+          "version": "2.14.15"
+        },
+        {
+          "name": "The Metronome by Soundbrenner",
+          "ratings_count": 46613,
+          "price": "Free",
+          "developer": "Soundbrenner",
+          "version": "1.42.4"
+        },
+        {
+          "name": "Magic Piano: game by Smule",
+          "ratings_count": 19292,
+          "price": "Free",
+          "developer": "Smule",
+          "version": "8.6.7"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Andante Music Practice Journal",
+          "ratings_count": 2717
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        },
+        {
+          "name": "Habit Tracker: Loop",
+          "ratings_count": 129
+        },
+        {
+          "name": "Daylio Journal - Mood Tracker",
+          "ratings_count": 58572
+        }
+      ],
+      "total_community": 4641345,
+      "reddit_breakdown": {
+        "learnmusic": 79772,
+        "Guitar": 3301086,
+        "piano": 1260487
+      },
+      "reasoning": "15 competitors. Top: 'MuseScore\uff0dSheet Music & Chords' (73,281 ratings)."
+    }
+  },
+  "writing_streak": {
+    "niche": {
+      "id": "writing_streak",
+      "label": "Daily Writing Practice Streak",
+      "itunes_terms": [
+        "writing streak daily dedicated app",
+        "write every day habit streak tracker"
+      ],
+      "reddit_subs": [
+        "writing",
+        "fiction",
+        "worldbuilding"
+      ],
+      "expected_demand": "writing=2.8M+, fiction=800K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Grammarly: AI Keyboard & Notes",
+          "ratings_count": 209722,
+          "price": "Free",
+          "developer": "Grammarly, Inc",
+          "version": "9.2.0"
+        },
+        {
+          "name": "Friday AI Email Writer",
+          "ratings_count": 9506,
+          "price": "Free",
+          "developer": "Sekterra GmbH",
+          "version": "1.1.22"
+        },
+        {
+          "name": "Werdsmith: Writing App",
+          "ratings_count": 7611,
+          "price": "Free",
+          "developer": "Werdsmith Pty Ltd",
+          "version": "6.3.4"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Day One: Daily Journal & Diary",
+          "ratings_count": 115368
+        },
+        {
+          "name": "Daily Prompt: Writing Prompts",
+          "ratings_count": 2151
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Reflection: AI Journal & Coach",
+          "ratings_count": 939
+        },
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Days Since: Quit Habit Tracker",
+          "ratings_count": 17383
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "Habit Rabbit: Habit Tracker",
+          "ratings_count": 7947
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        }
+      ],
+      "total_community": 5221945,
+      "reddit_breakdown": {
+        "writing": 3340609,
+        "fiction": 13002,
+        "worldbuilding": 1868334
+      },
+      "reasoning": "6 competitors. Top: 'Grammarly: AI Keyboard & Notes' (209,722 ratings)."
+    }
+  },
+  "photography_habit": {
+    "niche": {
+      "id": "photography_habit",
+      "label": "Daily Photography Habit Tracker",
+      "itunes_terms": [
+        "daily photography streak habit tracker dedicated",
+        "photo a day habit app dedicated"
+      ],
+      "reddit_subs": [
+        "photography",
+        "photojournalism",
+        "itookapicture"
+      ],
+      "expected_demand": "photography=21M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Me+ Lifestyle Routine",
+          "ratings_count": 235771,
+          "price": "Free",
+          "developer": "Enerjoy Pte. Ltd.",
+          "version": "2.8.6"
+        },
+        {
+          "name": "Selfie A Day - Everyday Photo",
+          "ratings_count": 3906,
+          "price": "Free",
+          "developer": "Selfie-A-Day LTD.",
+          "version": "3.30.0"
+        },
+        {
+          "name": "MyRoutine: Routine Habit Goal",
+          "ratings_count": 3386,
+          "price": "Free",
+          "developer": "Minding. co., Ltd.",
+          "version": "34.1.2"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Days Since: Quit Habit Tracker",
+          "ratings_count": 17383
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        },
+        {
+          "name": "Habit Rabbit: Habit Tracker",
+          "ratings_count": 7947
+        },
+        {
+          "name": "HelloHabit - Daily Planner",
+          "ratings_count": 2660
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        },
+        {
+          "name": "HabitMinder \u2022 Habit Tracker",
+          "ratings_count": 5757
+        },
+        {
+          "name": "Daily Habit & Routine Tracker",
+          "ratings_count": 4686
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Habit \u2014 Daily Tracker",
+          "ratings_count": 2411
+        }
+      ],
+      "total_community": 13126228,
+      "reddit_breakdown": {
+        "photography": 5578669,
+        "photojournalism": 18904,
+        "itookapicture": 7528655
+      },
+      "reasoning": "3 competitors. Top: 'Me+ Lifestyle Routine' (235,771 ratings)."
+    }
+  },
+  "couples_habit": {
+    "niche": {
+      "id": "couples_habit",
+      "label": "Couples Daily Habit & Check-In Tracker",
+      "itunes_terms": [
+        "couples habit tracker daily dedicated",
+        "relationship habit streak app dedicated"
+      ],
+      "reddit_subs": [
+        "relationship_advice",
+        "relationships",
+        "marriage"
+      ],
+      "expected_demand": "relationship_advice=3.7M+, relationships=2.5M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "TimeTree: Shared Calendar",
+          "ratings_count": 82934,
+          "price": "Free",
+          "developer": "TimeTree, Inc.",
+          "version": "15.6.0"
+        },
+        {
+          "name": "Evergreen: Relationship Growth",
+          "ratings_count": 52994,
+          "price": "Free",
+          "developer": "Evergreen Technologies",
+          "version": "1.55"
+        },
+        {
+          "name": "CoupleGrow - Relationship App",
+          "ratings_count": 6416,
+          "price": "Free",
+          "developer": "Lufian Labs",
+          "version": "3.4.1"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Days Since: Quit Habit Tracker",
+          "ratings_count": 17383
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Daily Habit & Routine Tracker",
+          "ratings_count": 4686
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Habit Tracker - Daily Goals",
+          "ratings_count": 2526
+        },
+        {
+          "name": "Habit \u2014 Daily Tracker",
+          "ratings_count": 2411
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        }
+      ],
+      "total_community": 20282254,
+      "reddit_breakdown": {
+        "relationship_advice": 15687805,
+        "relationships": 3674079,
+        "marriage": 920370
+      },
+      "reasoning": "3 competitors. Top: 'TimeTree: Shared Calendar' (82,934 ratings)."
+    }
+  },
+  "social_connection_habit": {
+    "niche": {
+      "id": "social_connection_habit",
+      "label": "Daily Social Connection Habit (call a friend)",
+      "itunes_terms": [
+        "social connection habit tracker daily dedicated",
+        "call friend streak app dedicated"
+      ],
+      "reddit_subs": [
+        "socialskills",
+        "lonely",
+        "makingfriends"
+      ],
+      "expected_demand": "socialskills=800K+, lonely=250K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Hoop - make new friends",
+          "ratings_count": 681451,
+          "price": "Free",
+          "developer": "Dazz",
+          "version": "3.29.1"
+        },
+        {
+          "name": "Yubo: Chat Meet & Make Friends",
+          "ratings_count": 366068,
+          "price": "Free",
+          "developer": "Twelve APP",
+          "version": "4.193.0"
+        },
+        {
+          "name": "Fam - make new friends live",
+          "ratings_count": 204786,
+          "price": "Free",
+          "developer": "SpotMap, Inc.",
+          "version": "17.117.126"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "ratings_count": 87139
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Habit Tracker - Daily Goals",
+          "ratings_count": 2526
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        }
+      ],
+      "total_community": 6802712,
+      "reddit_breakdown": {
+        "socialskills": 6324984,
+        "lonely": 477728,
+        "makingfriends": 0
+      },
+      "reasoning": "15 competitors. Top: 'Hoop - make new friends' (681,451 ratings)."
+    }
+  },
+  "cold_plunge_streak": {
+    "niche": {
+      "id": "cold_plunge_streak",
+      "label": "Cold Plunge / Cold Shower Streak",
+      "itunes_terms": [
+        "cold plunge streak tracker dedicated",
+        "cold shower habit streak app dedicated"
+      ],
+      "reddit_subs": [
+        "coldplunge",
+        "coldshowers",
+        "thermogenesis"
+      ],
+      "expected_demand": "coldplunge=200K+, coldshowers=500K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Map My Run GPS Running Tracker",
+          "ratings_count": 732282,
+          "price": "Free",
+          "developer": "Outside Television Inc",
+          "version": "26.3.0"
+        },
+        {
+          "name": "Slopes: Ski & Snowboard",
+          "ratings_count": 87111,
+          "price": "Free",
+          "developer": "Breakpoint Studio LLC",
+          "version": "2026.8"
+        },
+        {
+          "name": "Cyclemeter Cycling GPS Tracker",
+          "ratings_count": 17733,
+          "price": "Free",
+          "developer": "Abvio Inc.",
+          "version": "12.1.49"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "FITIV Workout & Health Tracker",
+          "ratings_count": 12458
+        },
+        {
+          "name": "Tally: The Anything Tracker",
+          "ratings_count": 4021
+        },
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Avocation - Habit Tracker",
+          "ratings_count": 947
+        },
+        {
+          "name": "Habit Tracker: Loop",
+          "ratings_count": 129
+        }
+      ],
+      "total_community": 68896,
+      "reddit_breakdown": {
+        "coldplunge": 26568,
+        "coldshowers": 42328,
+        "thermogenesis": 0
+      },
+      "reasoning": "13 competitors. Top: 'Map My Run GPS Running Tracker' (732,282 ratings)."
+    }
+  },
+  "fasting_streak": {
+    "niche": {
+      "id": "fasting_streak",
+      "label": "Intermittent Fasting Streak Tracker",
+      "itunes_terms": [
+        "intermittent fasting streak dedicated niche app",
+        "fasting streak habit tracker dedicated"
+      ],
+      "reddit_subs": [
+        "intermittentfasting",
+        "fasting",
+        "leangains"
+      ],
+      "expected_demand": "intermittentfasting=800K+, fasting=250K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Zero: Fasting & Food Tracker",
+          "ratings_count": 445173,
+          "price": "Free",
+          "developer": "Zero Longevity Science, Inc.",
+          "version": "7.3.0"
+        },
+        {
+          "name": "Fastic Weight Loss & Fasting",
+          "ratings_count": 246041,
+          "price": "Free",
+          "developer": "HealthVida GmbH & Co. KG.",
+          "version": "1.246.0"
+        },
+        {
+          "name": "BodyFast: Intermittent Fasting",
+          "ratings_count": 142254,
+          "price": "Free",
+          "developer": "BodyFast GmbH",
+          "version": "4.0.13"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        }
+      ],
+      "total_community": 1840262,
+      "reddit_breakdown": {
+        "intermittentfasting": 985385,
+        "fasting": 556328,
+        "leangains": 298549
+      },
+      "reasoning": "14 competitors. Top: 'Zero: Fasting & Food Tracker' (445,173 ratings)."
+    }
+  },
+  "sunlight_habit": {
+    "niche": {
+      "id": "sunlight_habit",
+      "label": "Morning Sunlight Habit Tracker",
+      "itunes_terms": [
+        "morning sunlight habit tracker dedicated",
+        "sunlight exposure streak app dedicated"
+      ],
+      "reddit_subs": [
+        "morningsunlight",
+        "biohacking",
+        "circadian"
+      ],
+      "expected_demand": "biohacking=300K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "UV Index Widget - Worldwide",
+          "ratings_count": 13599,
+          "price": "Free",
+          "developer": "Bjorn Jenssen",
+          "version": "13.0.1"
+        },
+        {
+          "name": "Sun Seeker - Sunlight Tracker",
+          "ratings_count": 12574,
+          "price": "$11.99",
+          "developer": "ozPDA",
+          "version": "8.0.2"
+        },
+        {
+          "name": "Beam Tanning - Get Tan Fast",
+          "ratings_count": 9404,
+          "price": "Free",
+          "developer": "Titano Digital Teknoloji Limited \u015eirketi",
+          "version": "1.25.6"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "ratings_count": 87139
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Routine Planner, Habit Tracker",
+          "ratings_count": 16278
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Daily Habit & Routine Tracker",
+          "ratings_count": 4686
+        },
+        {
+          "name": "Habit Hub: Routine Tracker",
+          "ratings_count": 8032
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        }
+      ],
+      "total_community": 29253,
+      "reddit_breakdown": {
+        "morningsunlight": 1,
+        "biohacking": 29252,
+        "circadian": 0
+      },
+      "reasoning": "14 competitors. Top: 'UV Index Widget - Worldwide' (13,599 ratings)."
+    }
+  },
+  "dog_training_streak": {
+    "niche": {
+      "id": "dog_training_streak",
+      "label": "Daily Dog Training Streak Tracker",
+      "itunes_terms": [
+        "dog training streak daily habit dedicated",
+        "dog training session tracker streak dedicated"
+      ],
+      "reddit_subs": [
+        "Dogtraining",
+        "dogs",
+        "puppy101"
+      ],
+      "expected_demand": "dogs=4M+, Dogtraining=400K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Woofz - Puppy and Dog Training",
+          "ratings_count": 48709,
+          "price": "Free",
+          "developer": "nove8",
+          "version": "3.6"
+        },
+        {
+          "name": "Tractive GPS for Dogs and Cats",
+          "ratings_count": 38619,
+          "price": "Free",
+          "developer": "Tractive",
+          "version": "26.11.0"
+        },
+        {
+          "name": "Fi - GPS Dog Tracker",
+          "ratings_count": 33398,
+          "price": "Free",
+          "developer": "Barking Labs Corp.",
+          "version": "3.117.1"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "ratings_count": 87139
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Daily Habit & Routine Tracker",
+          "ratings_count": 4686
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Habit \u2014 Daily Tracker",
+          "ratings_count": 2411
+        },
+        {
+          "name": "Habit Rabbit: Habit Tracker",
+          "ratings_count": 7947
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        }
+      ],
+      "total_community": 4816434,
+      "reddit_breakdown": {
+        "Dogtraining": 1521994,
+        "dogs": 2851665,
+        "puppy101": 442775
+      },
+      "reasoning": "13 competitors. Top: 'Woofz - Puppy and Dog Training' (48,709 ratings)."
+    }
+  },
+  "zero_waste_habit": {
+    "niche": {
+      "id": "zero_waste_habit",
+      "label": "Zero Waste Daily Habit Tracker",
+      "itunes_terms": [
+        "zero waste habit tracker dedicated",
+        "eco habit streak tracker dedicated app"
+      ],
+      "reddit_subs": [
+        "ZeroWaste",
+        "Anticonsumption",
+        "sustainability"
+      ],
+      "expected_demand": "ZeroWaste=600K+, sustainability=800K+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "BLUE_OCEAN",
+      "dedicated_apps": [],
+      "generic_filtered": [
+        {
+          "name": "Habit Tracker",
+          "ratings_count": 137468
+        },
+        {
+          "name": "Days Since: Quit Habit Tracker",
+          "ratings_count": 17383
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "HabitMinder \u2022 Habit Tracker",
+          "ratings_count": 5757
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Habit Tracker - Daily Goals",
+          "ratings_count": 2526
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Habit Rabbit: Habit Tracker",
+          "ratings_count": 7947
+        },
+        {
+          "name": "Daily Tracker Journal & Diary",
+          "ratings_count": 2187
+        }
+      ],
+      "total_community": 3667695,
+      "reddit_breakdown": {
+        "ZeroWaste": 1194469,
+        "Anticonsumption": 1576285,
+        "sustainability": 896941
+      },
+      "reasoning": "No dedicated niche app found. 17 generic trackers filtered out."
+    }
+  },
+  "plastic_free_streak": {
+    "niche": {
+      "id": "plastic_free_streak",
+      "label": "Plastic-Free Daily Streak",
+      "itunes_terms": [
+        "plastic free streak dedicated app",
+        "single use plastic habit tracker dedicated"
+      ],
+      "reddit_subs": [
+        "PlasticFreeLiving",
+        "ZeroWaste",
+        "environment"
+      ],
+      "expected_demand": "ZeroWaste=600K+, environment=1.8M+",
+      "rescan": false
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Sober Time - Sobriety Counter",
+          "ratings_count": 36083,
+          "price": "Free",
+          "developer": "Sociosoftware LLC",
+          "version": "4.3.03"
+        },
+        {
+          "name": "Receipt Pal: Earn Gift Cards",
+          "ratings_count": 22610,
+          "price": "Free",
+          "developer": "The NPD Group, Inc.",
+          "version": "8.9"
+        },
+        {
+          "name": "Cheddar Up",
+          "ratings_count": 3487,
+          "price": "Free",
+          "developer": "CheddarUp",
+          "version": "1.27.0"
+        }
+      ],
+      "generic_filtered": [
+        {
+          "name": "Streaks",
+          "ratings_count": 27340
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "ratings_count": 18807
+        },
+        {
+          "name": "Counter Tally Count",
+          "ratings_count": 11628
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "ratings_count": 16761
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "ratings_count": 8088
+        },
+        {
+          "name": "Habit \u2014 Daily Tracker",
+          "ratings_count": 2411
+        },
+        {
+          "name": "Habit Tracker - HabitKit",
+          "ratings_count": 1904
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "ratings_count": 4359
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "ratings_count": 91128
+        },
+        {
+          "name": "Tally \u2022 Quick Counter",
+          "ratings_count": 1587
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "ratings_count": 12649
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "ratings_count": 6720
+        },
+        {
+          "name": "Habit Rabbit: Habit Tracker",
+          "ratings_count": 7947
+        },
+        {
+          "name": "Today Habit tracker",
+          "ratings_count": 3547
+        },
+        {
+          "name": "Habit Tracker - Daily Goals",
+          "ratings_count": 2526
+        },
+        {
+          "name": "Way of Life - Habit Tracker",
+          "ratings_count": 5045
+        },
+        {
+          "name": "Habit Tracker - Evoday",
+          "ratings_count": 1346
+        },
+        {
+          "name": "Habit Tracker: Loop",
+          "ratings_count": 129
+        },
+        {
+          "name": "Avocation - Habit Tracker",
+          "ratings_count": 947
+        },
+        {
+          "name": "Critique AI: Habit Tracker",
+          "ratings_count": 6678
+        }
+      ],
+      "total_community": 2852275,
+      "reddit_breakdown": {
+        "PlasticFreeLiving": 111730,
+        "ZeroWaste": 1194469,
+        "environment": 1546076
+      },
+      "reasoning": "5 competitors. Top: 'Sober Time - Sobriety Counter' (36,083 ratings)."
+    }
+  }
+}

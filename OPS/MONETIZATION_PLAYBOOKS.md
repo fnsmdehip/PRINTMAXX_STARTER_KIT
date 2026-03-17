@@ -184,3 +184,54 @@ the
 
 [ACQUISITION] Would you use an app that finds players and books sports courts automatically?
 
+
+
+---
+
+## Pending Enhancement (ALPHA104837, Score: 36)
+
+**Source:** @Jonnyvandel (daily scraper) | **URL:** https://x.com/Jonnyvandel/status/1940156050696708596
+**Added:** 2026-03-17T14:25:55-04:00
+
+Arcads made $7M ARR in 7 weeks with an Al UGC maker￼
+
+I created a better one that RUNS LOCALLY, at a fraction of the price....
+
+Arcads makes 20 vids/month
+
+Mine makes 348+/day with BETTER TECH.
+
+Literally market anything.
+
+Like, rt & comment “MASSUGC” and I'll send it.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104865, Score: 24)
+
+**Source:** @zephyr_z9 (daily scraper) | **URL:** https://x.com/zephyr_z9/status/1980658076337492395
+**Added:** 2026-03-17T14:25:55-04:00
+
+BRUH
+Google lost over $100B in Market cap due to this tweet
+
+
+
+---
+
+## Pending Enhancement (ALPHA105089, Score: 24)
+
+**Source:** @DeItaone (high-signal-accounts) | **URL:** https://x.com/DeItaone/status/2033974302698053751
+**Added:** 2026-03-17T15:45:01-04:00
+
+OIL AT $125 WOULD FORCE A GLOBAL RESET
+
+Seth Carpenter of Morgan Stanley says oil above $125 per barrel would trigger a structural shift in the market, forcing demand destruction as supply tightens.
+
+He outlined three possible paths:
+
+ $65–70 if prices retreat
+ Around $100 if
+

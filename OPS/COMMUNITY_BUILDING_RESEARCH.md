@@ -678,3 +678,20 @@ Replit Agent → Perfect for simple, deployable SaaS p
 
 [ACQUISITION] A community I'm in is trying to build a 1,000,000-clip collaborative AI video. You claim a tile, generate 8 seconds, and
 
+
+
+---
+
+## Pending Enhancement (ALPHA104715, Score: 30)
+
+**Source:** @godofprompt (daily scraper) | **URL:** https://x.com/godofprompt/status/1944007663446372657
+**Added:** 2026-03-17T14:20:01-04:00
+
+Grok 4 is dangerously good.
+
+But 99% of people are sleeping on what it can actually do.
+
+I’ve used it to build apps, generate content, automate deep research, and more.
+
+Here are 10 ways to use Grok 4 that feel like cheating:
+

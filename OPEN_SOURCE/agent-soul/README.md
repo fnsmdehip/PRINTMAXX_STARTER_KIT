@@ -1,177 +1,258 @@
-# dogwalk
+# sovrun
 
-a fully autonomous multi-agent operating system. not a framework. a turnkey system you clone and run.
+the cognitive and behavioral layer for autonomous AI agent systems. 10 modules, stdlib only, extracted from a production system.
 
-## what this does
+## what this is
 
-dogwalk orchestrates 33 AI agents across 8 parallel venture types using a 7-layer command hierarchy. a CEO agent (L0) delegates to venture managers (L1) who dispatch specialist swarm agents with smart model routing (Opus for strategy, Sonnet for execution, Haiku for maintenance). every agent queries 15K+ curated intelligence entries before acting. every output gets scored for alignment drift. every decision gets adversarial review before execution.
+sovrun is 10 Python modules that give your AI agents: a voice model trained on YOUR prompts, correction chain learning that mines YOUR feedback into transferable rules, soul drift scoring that catches when agents start producing slop, a bias-null protocol that filters out LLM default behaviors, closed-loop decision execution, resilience primitives (circuit breaker, file locking, retry), and session continuity across context windows.
 
-the result: a self-healing, self-improving system that treats your operations like a hedge fund. it runs 10+ ventures simultaneously, auto-kills underperformers, doubles down on winners, and compounds synergies across the portfolio (4.5x-8.7x multipliers measured).
+it was extracted from a production autonomous system. the modules are the reusable core. they don't depend on any specific agent framework, LLM provider, or orchestration pattern. wire them into whatever you're building.
 
 ## the problem
 
-every agent framework gives you building blocks and says "good luck." CrewAI gives you agent classes. AutoGen gives you conversation patterns. LangGraph gives you state machines. DSPy gives you prompt optimizers. you still have to architect the system, wire the intelligence, build the review pipeline, handle crashes, prevent drift, and close every loop yourself.
+your AI agents run on default LLM knowledge and produce generic output. you correct them. they don't learn from the corrections. you correct them again. same mistakes. you've told your AI the same thing 50 times across different sessions and it still defaults to the behavior you hate.
 
-then your agents run on default LLM knowledge. no curated intelligence. no adversarial review. no outcome verification. no correction learning. they produce output. nobody checks if the output was good. nobody checks if downstream actions happened. the loop never closes.
+meanwhile, nobody checks if agent output matches your actual voice. nobody scores whether agents are drifting from their intended behavior. nobody closes the loop between "agent decided X" and "X actually happened." nobody audits the system for AI slop creeping into your own config files.
 
-dogwalk ships the entire operating system. 7 layers of command hierarchy. adversarial challengers that review every major decision. circuit breakers that recover from crashes. soul drift scoring that catches when agents start producing slop. correction chain learning that mines YOUR feedback to predict what you actually want.
+sovrun solves each of these with a dedicated module.
 
-your agent framework optimizes for benchmarks. this optimizes for your approval.
-
-## architecture
+## what's in the box
 
 ```
-L0  CEO ORCHESTRATOR
-    24/7 cycle. 16 phases. delegates everything. decides nothing alone.
-    |
-L1  VENTURE MANAGERS (8 parallel)
-    each manages one venture type. own schedule, own state, own kill criteria.
-    |
-L2  INTELLIGENCE LAYER
-    15K+ curated entries. queried before every action. not LLM defaults.
-    |
-L3  EXECUTION SWARM (25 specialist agents)
-    smart model routing: Opus (strategy) / Sonnet (execution) / Haiku (maintenance)
-    |
-L4  COLLECTION + INGESTION
-    scrapers, monitors, alpha processors. raw signal in, structured intel out.
-    |
-L5  QUALITY + REVIEW
-    adversarial challengers. soul drift scoring. writer != reviewer enforced.
-    |
-L6  MAINTENANCE + SELF-HEALING
-    watchdog, crash recovery, atomic checkpoints, circuit breakers, file locking.
+sovrun/
+  core/
+    voice_extractor.py     # your prompts -> voice model -> inject into any agent
+    cognitive_engine.py    # correction chains -> meta-rules -> "would have prevented this"
+    pattern_miner.py       # find what frustrates you, what satisfies you, what you correct
+    user_sim_refiner.py    # simulate YOUR critique autonomously on any project
+    loop_closer.py         # decisions -> execution -> feedback -> soul drift scoring
+    self_audit.py          # the system audits itself for slop, bloat, broken scripts
+    decision_engine.py     # closed-loop decisions with CSV audit trail
+    resilience.py          # retry, file locking (fcntl), circuit breaker, loop detection
+    conversation_logger.py # extract Claude session transcripts -> searchable JSONL
+    session_briefing.py    # "what happened since last session" from git + state files
+  templates/
+    SOUL.md                # agent identity + behavioral directives template
+    bias-null.md           # 5-point pre-output bias correction protocol
+    voice-config.json      # example voice model structure
+    CLAUDE.md              # template for wiring sovrun into system instructions
+  examples/
+    example_correction_chains.json
+    example_meta_rules.md
 ```
 
-## highlights
+## modules
 
-### 6to1 correction chain learning
+### voice extractor
 
-the core metric. 6.9 average corrections per task before the system produced what was actually wanted. that's 5.9 wasted round trips per task. dogwalk mines your correction history using timestamp-proximate prompt clustering, identifies when you're correcting vs starting new work, builds a correction chain model, and extracts meta-rules that would have prevented each correction. target: 1 correction or less.
+reads your prompt history (JSONL), identifies your vocabulary, tone, banned words, sentence patterns, and correction frequency. outputs a compact voice model JSON. then generates an injection string you prepend to any agent prompt so its output sounds like you instead of generic assistant.
 
-### adversarial review
+```bash
+python3 -m sovrun.core.voice_extractor --extract   # build model from prompts
+python3 -m sovrun.core.voice_extractor --inject    # get injection string
+python3 -m sovrun.core.voice_extractor --status    # model stats
+python3 -m sovrun.core.voice_extractor --diff      # compare current vs previous
+```
 
-major decisions get reviewed by challenger agents before execution. Devil's Advocate, Risk Assessor, Market Reality Checker. writer != reviewer enforced at the architecture level. cross-model validation (Opus reviews Sonnet output, Sonnet reviews Opus output). no single agent can approve its own work.
+### cognitive engine
 
-### portfolio theory
+the core learning module. reads your prompt history, identifies when you're correcting vs starting new work using timestamp-proximate clustering, builds correction chains (sequences of prompts where you kept fixing the same thing), then extracts meta-rules that would have prevented each correction.
 
-the system treats operations like a hedge fund portfolio. 10+ ventures run simultaneously with independent kill criteria and double-down triggers. app under $100 MRR after 60 days gets killed. content under 500 followers after 90 days gets killed. anything showing 20%+ growth at $500+ gets doubled. synergy multipliers (4.5x-8.7x) compound across ventures that feed each other.
+from production: 168 correction chains extracted, 6.9 average corrections per chain before the system produced what was actually wanted. target: 1.
 
-### bias-null protocol
+```bash
+python3 -m sovrun.core.cognitive_engine --build-model    # full cognition model
+python3 -m sovrun.core.cognitive_engine --lookup "TASK"   # find similar past tasks
+python3 -m sovrun.core.cognitive_engine --rules           # show meta-rules
+python3 -m sovrun.core.cognitive_engine --chain-analysis  # correction chain stats
+```
 
-5-point pre-output filter that runs silently before every major output. catches: legacy smuggling (defaulting to "industry standard says X"), preemptive appeasement (hedging when the answer is one-directional), lived-gap check (does this match observable reality or is it academic), popular-default trap (recommending what appeared most in training data vs what's best for THIS system), training-bias correction (counterweighting Claude's over-indexing on caution and consensus).
+### pattern miner
 
-### soul drift scoring
+finds three types of signals in your prompt history:
+- **correction markers**: "no not that", "wrong", "lazy", "that's not what I said"
+- **escalation triggers**: "deeper", "above and beyond", "surprise me", "actually think"
+- **satisfaction signals**: "perfect", "exactly", "ship it"
 
-continuous 0-10 alignment scoring of every agent output against behavioral directives in SOUL.md. anti-patterns detected: hedging, AI slop vocabulary, orphan documents, corporate voice, over-building. alert triggers when system average drops below 6/10. the system catches its own quality decay before you notice it.
+mines these into transferable rules: what makes you happy, what pisses you off, what patterns to avoid.
 
-### blocking gates
+```bash
+python3 -m sovrun.core.pattern_miner --mine          # extract all patterns
+python3 -m sovrun.core.pattern_miner --similar "Q"   # find similar past prompts
+python3 -m sovrun.core.pattern_miner --corrections   # correction sequences
+python3 -m sovrun.core.pattern_miner --effective     # satisfaction triggers
+```
 
-deterministic state machine. every major action goes through PENDING, then APPROVED or REJECTED. there is no path from REJECTED to APPROVED without human override. no workaround. no agent can bypass the gate. the state machine is the law.
+### user sim refiner
 
-### intelligence-first execution
+the autonomous critique loop. takes your extracted cognitive architecture (meta-rules, voice model, bias-null protocol) and simulates what YOU would criticize about a project's current state. outputs the critique for another agent or human to act on.
 
-every agent queries 15K+ curated intelligence entries before acting. not default LLM knowledge. not whatever was popular in training data. curated, scored, categorized entries from 484 mapped documents with 98.3% coverage. the intelligence layer is the difference between an agent that sounds smart and an agent that IS informed.
+this is the perpetual improvement system. it applies your own thinking discipline when you're not in the room.
 
-### self-healing
+### loop closer
 
-24/7 watchdog process. crash recovery with atomic checkpoints (CycleCheckpoint class with stale detection and resume-on-crash). circuit breakers that trip after repeated failures. file locking (fcntl.flock) preventing concurrent corruption. stale lock cleanup. retry with exponential backoff. the system assumes it will crash and builds recovery into every operation.
+closes 4 open loops that plague autonomous systems:
 
-### user voice injection
+1. **decision execution**: reads pending decisions, executes them, logs results
+2. **feedback tracking**: did the agent's work lead to downstream results?
+3. **pipeline advancement**: are things moving forward or stuck?
+4. **soul drift scoring**: scores every agent output 0-10 against behavioral directives in SOUL.md. alerts when system average drops below 6/10.
 
-extracts YOUR communication style from prompt history. tone profile, preferred vocabulary, banned words, correction patterns. injects this into every agent's prompt so output matches your voice on the first try. not "configure your agent's personality." automatic extraction from how you actually write.
+safety: max 10 actions per cycle, allowlisted action types only, full audit trail.
 
-## components
+```bash
+python3 -m sovrun.core.loop_closer --cycle      # run all 4 loops
+python3 -m sovrun.core.loop_closer --drift      # soul drift scoring only
+python3 -m sovrun.core.loop_closer --status     # loop health
+python3 -m sovrun.core.loop_closer --dry-run    # preview without executing
+```
 
-| module | what it does |
-|--------|-------------|
-| `voice_extractor` | analyzes prompt history, outputs tone profile + banned words + preferred vocabulary |
-| `cognitive_engine` | builds correction chains from timestamp-proximate prompts, extracts meta-rules |
-| `pattern_miner` | finds correction markers, escalation triggers, satisfaction signals |
-| `user_sim_refiner` | simulates your critique on project files using extracted cognitive architecture |
-| `loop_closer` | 4 loops: decisions, feedback, pipeline advancement, soul drift scoring |
-| `self_audit` | checks system files for AI slop, context bloat, missing protocols, broken scripts |
-| `decision_engine` | rule-based + LLM decision pipeline with CSV audit trail. every decision logged |
-| `resilience` | retry with backoff, file locking (fcntl), circuit breaker, prompt injection defense |
-| `conversation_logger` | extracts user+assistant messages from session transcripts into searchable JSONL |
-| `session_briefing` | generates "what happened since last session" from git + state files. no LLM calls |
+### self audit
 
-## what makes this different
+the system that audits the system. checks your project for:
+- AI slop vocabulary in your own config files
+- context bloat (instruction files wasting tokens every session)
+- missing meta-cognition protocols
+- orphan scripts not wired into any automation
+- prompt pattern health (are you learning from corrections?)
 
-| | dogwalk | CrewAI | AutoGen | LangGraph | DSPy |
-|---|---|---|---|---|---|
-| what it is | turnkey OS | framework | framework | framework | optimizer |
-| primary signal | your corrections | task outputs | conversations | state transitions | labeled examples |
-| intelligence | 15K+ curated entries pre-action | LLM defaults | LLM defaults | LLM defaults | labeled examples |
-| adversarial review | challenger agents + cross-model | none | none | none | none |
-| portfolio theory | kill losers, double winners, synergy stacks | none | none | none | none |
-| self-healing | circuit breaker, crash recovery, atomic checkpoints | basic retry | basic retry | none | none |
-| user voice | extracted from prompt history | none | none | none | none |
-| soul drift | 0-10 scoring per output | none | none | none | none |
-| blocking gates | deterministic state machine | none | none | state-based | none |
-| task dependencies | real DAGs, not cron timing | sequential | conversation flow | graph edges | pipeline |
-| dependencies | stdlib only | many | many | langchain | pytorch |
+```bash
+python3 -m sovrun.core.self_audit --audit    # full audit
+python3 -m sovrun.core.self_audit --report   # latest findings
+```
+
+### decision engine
+
+closed-loop autonomous decision pipeline: scan data sources, score opportunities, take action (within safety limits), log every decision with reasoning to CSV audit trail, update progress trackers. supports both rule-based threshold checks and LLM-delegated judgment calls.
+
+```bash
+python3 -m sovrun.core.decision_engine --cycle     # one decision cycle
+python3 -m sovrun.core.decision_engine --status    # pipeline status
+python3 -m sovrun.core.decision_engine --dry-run   # preview
+```
+
+### resilience
+
+shared module that makes any agent production-grade:
+- **retry with exponential backoff + jitter**: handles transient failures
+- **file locking (fcntl)**: prevents concurrent file corruption
+- **circuit breaker**: CLOSED -> OPEN -> HALF_OPEN -> CLOSED state machine
+- **input sanitization**: prompt injection defense
+- **trajectory logging**: append-only JSONL audit trail of agent decisions
+- **loop detection**: guards against runaway agents
+
+```python
+from sovrun.core.resilience import retry, locked_file, CircuitBreaker
+from sovrun.core.resilience import sanitize_for_prompt, TrajectoryLogger
+```
+
+### conversation logger
+
+extracts user and assistant messages from Claude Code session transcript files (JSONL), stores them in a searchable format. supports incremental processing (tracks byte offsets), keyword search, statistics, and recent message display.
+
+```bash
+python3 -m sovrun.core.conversation_logger --extract       # process new transcripts
+python3 -m sovrun.core.conversation_logger --search "kw"   # search history
+python3 -m sovrun.core.conversation_logger --stats         # totals
+python3 -m sovrun.core.conversation_logger --recent 20     # last N exchanges
+```
+
+### session briefing
+
+generates a concise "what happened since last session" briefing from git diffs, state files, task trackers, and agent output directories. no LLM calls. pure file reading. finishes in under 30 seconds.
+
+```bash
+python3 -m sovrun.core.session_briefing --save    # save briefing
+python3 -m sovrun.core.session_briefing --json    # JSON output
+```
+
+## templates
+
+### SOUL.md
+
+agent identity file. defines who the agent is, what it values, what anti-patterns to avoid. includes sections for: bias-null stack, competitive cognition protocol, constitutional self-correction rules, soul drift anti-patterns (hedging, AI slop, orphan docs, corporate voice, over-building).
+
+the soul drift scorer in loop_closer reads this file and scores agent outputs against it.
+
+### bias-null.md
+
+5-point pre-output filter. run silently before any major output:
+
+1. **legacy smuggling?** defaulting to "industry standard says X" when it doesn't apply?
+2. **preemptive appeasement?** adding "but of course there are tradeoffs" when the answer is clearly one-directional?
+3. **lived-gap check?** does this recommendation match observable reality or is it academic?
+4. **popular-default trap?** recommending this because it appeared most in training data, or because it's genuinely best for THIS system?
+5. **training-bias correction?** LLMs over-index on caution, consensus, credentialism. actively counterweight.
+
+### voice-config.json
+
+example of the voice model structure the voice extractor produces: tone profile, preferred terms, banned patterns, correction history summary.
+
+### CLAUDE.md
+
+template for wiring sovrun into your project's system instructions. session start hooks, reference file pointers, core rules, voice injection commands, loop closing schedule, self-audit cron.
 
 ## quick start
 
 ```bash
-# clone and install
-git clone https://github.com/fnsmdehip/dogwalk.git
-cd dogwalk
+git clone https://github.com/fnsmdehip/sovrun.git
+cd sovrun
 pip install -e .
 
-# set your project root
-export DOGWALK_ROOT=/path/to/your/project
-
-# create directories
+export SOVRUN_ROOT=/path/to/your/project
 mkdir -p data output state logs
 
-# if you have Claude Code transcripts, extract them
-python3 -m dogwalk.core.conversation_logger --extract
+# extract your Claude Code transcripts
+python3 -m sovrun.core.conversation_logger --extract
 
 # build voice model from your prompt history
-python3 -m dogwalk.core.voice_extractor --extract
+python3 -m sovrun.core.voice_extractor --extract
 
 # build cognition model (correction chains + meta-rules)
-python3 -m dogwalk.core.cognitive_engine --build-model
+python3 -m sovrun.core.cognitive_engine --build-model
 
-# mine patterns (corrections, escalations, satisfactions)
-python3 -m dogwalk.core.pattern_miner --mine
+# mine patterns
+python3 -m sovrun.core.pattern_miner --mine
 
 # see what the system learned about you
-python3 -m dogwalk.core.voice_extractor --status
+python3 -m sovrun.core.voice_extractor --status
 
-# get injection string for your agent prompts
-python3 -m dogwalk.core.voice_extractor --inject
+# inject voice into your agent prompts
+python3 -m sovrun.core.voice_extractor --inject
 
-# run self-audit
-python3 -m dogwalk.core.self_audit --audit
+# close all loops
+python3 -m sovrun.core.loop_closer --cycle
 
-# generate session briefing
-python3 -m dogwalk.core.session_briefing --save
-
-# close all loops (decisions, feedback, pipeline, soul drift)
-python3 -m dogwalk.core.loop_closer --cycle
+# audit the system
+python3 -m sovrun.core.self_audit --audit
 ```
+
+## what makes this different
+
+| | sovrun | CrewAI | AutoGen | LangGraph | DSPy |
+|---|---|---|---|---|---|
+| what it is | cognitive layer (10 modules) | agent framework | conversation framework | state machine framework | prompt optimizer |
+| learns from | your corrections + prompt history | nothing | nothing | nothing | labeled examples |
+| voice modeling | extracts your style, injects into agents | none | none | none | none |
+| correction chains | mines past failures into rules | none | none | none | none |
+| soul drift | 0-10 scoring per output | none | none | none | none |
+| bias correction | 5-point pre-output filter | none | none | none | none |
+| loop closing | decisions -> execution -> feedback | none | none | none | none |
+| self-audit | catches slop in your own system | none | none | none | none |
+| resilience | circuit breaker, file locking, retry, loop detection | basic retry | basic retry | none | none |
+| session continuity | transcript extraction + session briefing | none | none | none | none |
+| user simulation | autonomous critique using your patterns | none | none | none | none |
+| dependencies | stdlib only | many | many | langchain | pytorch |
 
 ## data format
 
-dogwalk reads JSONL files. each line is a JSON object with at minimum:
+sovrun reads JSONL files. each line is a JSON object with at minimum:
 
 ```json
 {"ts": "2026-03-15T14:30:00", "prompt": "your prompt text here"}
 ```
 
-optional fields: `role` (user/assistant), `session_id`, `content_length`.
-
-you can also use `content` or `text` instead of `prompt`.
-
-decision engine outputs CSV audit trails:
-
-```csv
-timestamp,decision_id,action,reasoning,outcome,score
-2026-03-15T14:30:00,d_001,deploy_app,high_growth_signal,success,8.2
-```
+optional fields: `role` (user/assistant), `session_id`, `content_length`. you can use `content` or `text` instead of `prompt`.
 
 ## environment variables
 
@@ -179,73 +260,25 @@ all paths are configurable. nothing is hardcoded.
 
 | variable | default | description |
 |----------|---------|-------------|
-| `DOGWALK_ROOT` | cwd | project root directory |
-| `DOGWALK_PROMPTS` | `data/prompts.jsonl` | prompt history file |
-| `DOGWALK_CONVERSATIONS` | `data/conversations.jsonl` | conversation history |
-| `DOGWALK_VOICE_MODEL` | `output/voice_model.json` | voice model output |
-| `DOGWALK_SOUL_MD` | `templates/SOUL.md` | agent identity file |
-| `DOGWALK_INSTRUCTIONS` | `templates/CLAUDE.md` | system instructions |
-| `DOGWALK_TRANSCRIPT_DIRS` | `~/.claude/projects` | transcript directories (comma-separated) |
+| `SOVRUN_ROOT` | cwd | project root directory |
+| `SOVRUN_PROMPTS` | `data/prompts.jsonl` | prompt history file |
+| `SOVRUN_CONVERSATIONS` | `data/conversations.jsonl` | conversation history |
+| `SOVRUN_VOICE_MODEL` | `output/voice_model.json` | voice model output |
+| `SOVRUN_SOUL_MD` | `templates/SOUL.md` | agent identity file |
+| `SOVRUN_INSTRUCTIONS` | `templates/CLAUDE.md` | system instructions |
+| `SOVRUN_TRANSCRIPT_DIRS` | `~/.claude/projects` | transcript directories (comma-separated) |
 
-## the numbers
+## production numbers
 
-from real usage across 200+ sessions:
+these are from the production system sovrun was extracted from:
 
-- 33 autonomous agents running (8 venture + 25 swarm)
-- 7-layer execution hierarchy (L0-L6)
-- 15,000+ curated intelligence entries
-- 484 documents mapped in intelligence router (98.3% coverage)
 - 1,510 prompts analyzed
 - 168 correction chains extracted
 - 6.9 average corrections per chain before resolution (target: 1)
 - 451 satisfaction signals identified
-- 112 active cron entries
-- 4.5x-8.7x synergy multipliers across venture portfolio
 - 0 external dependencies
 
-## use cases
-
-**solo founders running AI-first businesses.** you need 10 things happening simultaneously. content, outbound, app development, lead gen, monetization. dogwalk runs all of them as parallel ventures with independent kill criteria, shared intelligence, and synergy multipliers. you do account creation and payments. the system does everything else.
-
-**teams shipping autonomous agent systems.** your agents need consistent identity, adversarial review, crash recovery, and closed-loop verification. dogwalk provides the full stack: soul drift scoring catches quality decay, challenger agents review major decisions, circuit breakers handle failures, and the loop closer verifies downstream actions actually happened.
-
-**anyone who's corrected their AI 1000+ times.** those corrections contain transferable rules. dogwalk extracts them, builds a cognitive model of what you actually want, and injects it into every agent output. the system learns YOUR patterns so you stop repeating yourself.
-
-**content teams maintaining voice across AI output.** the voice extractor builds a tone profile from real prompts. banned words, preferred vocabulary, sentence structure patterns. inject it into any agent and the output matches your style instead of generic assistant voice.
-
-## templates
-
-the `templates/` directory contains starting points for the behavioral layer:
-
-- `SOUL.md` -- agent identity file with bias-null stack, competitive cognition protocol, constitutional self-correction, soul drift anti-patterns
-- `bias-null.md` -- the 5-point pre-output filter (legacy smuggling, preemptive appeasement, lived-gap check, popular-default trap, training-bias correction)
-- `voice-config.json` -- example voice model showing the extracted data structure (tone, vocabulary, banned words, correction history)
-- `CLAUDE.md` -- template for wiring dogwalk into your system instructions with intelligence-first execution rules
-
-## project structure
-
-```
-dogwalk/
-  core/
-    voice_extractor.py     # analyze prompts, build voice model, inject into agents
-    cognitive_engine.py    # correction chains + meta-rules + task indexing
-    pattern_miner.py       # find corrections, escalations, satisfaction signals
-    user_sim_refiner.py    # simulate user critique autonomously
-    loop_closer.py         # 4 loops: decisions, feedback, pipeline, soul drift
-    self_audit.py          # meta-improvement audit (the system that audits the system)
-    decision_engine.py     # rule-based + LLM decision pipeline with CSV audit trail
-    resilience.py          # retry, file locking, circuit breaker, sanitization, loop detection
-    conversation_logger.py # extract session transcripts into searchable JSONL
-    session_briefing.py    # generate session start briefings (no LLM calls, pure file reads)
-  templates/
-    SOUL.md                # agent identity + behavioral directives
-    bias-null.md           # 5-point bias correction protocol
-    voice-config.json      # example extracted voice model
-    CLAUDE.md              # system wiring template
-  examples/
-    example_correction_chains.json   # sample correction chain data
-    example_meta_rules.md            # sample extracted meta-rules
-```
+the parent system uses sovrun's modules to power: voice injection across all agents, soul drift scoring with auto-alert at <6/10, correction chain learning that feeds meta-rules back into agent prompts, bias-null filtering on every major output, and loop closing that verifies agent decisions led to real outcomes.
 
 ## dependencies
 

@@ -33,7 +33,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("SOVRUN_ROOT", Path.cwd()))
 
 LOGS_DIR = PROJECT_ROOT / "logs"
 LOGS_DIR.mkdir(parents=True, exist_ok=True)

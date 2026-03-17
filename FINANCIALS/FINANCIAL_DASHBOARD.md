@@ -1,7 +1,7 @@
 # PRINTMAXX Financial Dashboard
 
-**Last Updated:** 2026-03-08 23:15 EST
-**Status:** Pre-Revenue | Day 35 at $0 | SURVIVAL MODE
+**Last Updated:** 2026-03-17 15:00 EST
+**Status:** Pre-Revenue | Day 44 at $0 | SURVIVAL MODE
 
 ---
 
@@ -11,11 +11,11 @@
 |--------|-------|
 | **Total Revenue (Lifetime)** | $0 |
 | **Total Revenue (This Month)** | $0 |
-| **Total Expenses (Lifetime)** | $124 |
-| **Net Profit (Lifetime)** | -$124 |
+| **Total Expenses (Lifetime)** | ~$524 ($124 + ~$400 Claude Max × 2mo) |
+| **Net Profit (Lifetime)** | -$524 |
 | **Burn Rate (Monthly)** | ~$200 (Claude Max) + $0 tools |
-| **Days at $0 Revenue** | 35 |
-| **Pipeline Value (Monthly)** | $3,750 (if activated) |
+| **Days at $0 Revenue** | 44 |
+| **Pipeline Value (Monthly)** | $4,200+ (if activated) |
 
 ---
 
@@ -52,15 +52,16 @@
 
 | Asset Type | Count | Status |
 |-----------|-------|--------|
-| Surge.sh sites | 180+ | 96.1% healthy (248/258 GREEN) |
-| PWA apps | 22 | Live with email capture |
-| Denomination streak apps | 13 | Email capture in local files |
+| Surge.sh sites | 131 | LIVE (OPS/DEPLOYMENT_URLS.md) |
+| PWA / web apps | 37 | App factory builds |
+| Denomination streak apps | 13 | Email capture active |
 | Gumroad PDFs | 13 | Files ready, not uploaded |
-| Cold emails | 65+ | Drafted, not sent |
-| Content queue | 457 files | 8,486 lines, 0 published |
-| Leads scraped | 1,111+ | 0 contacted |
-| Local biz demo sites | 55+ | OpenClaw pipeline |
-| Affiliate pages | 4 | Live with placeholder IDs |
+| Ready-to-sell products | 11 | Includes Reddit MM ($29) + CC Bible ($47) |
+| HTML lead magnets | 17 | Live on surge.sh |
+| Cold emails drafted | 65+ | 0 sent |
+| Content queue | 1,017 files | 0 published, 2-day gap (Mar 16-17) |
+| Leads scraped | 186,700 | 0 contacted |
+| Affiliate pages | 6 | Live with placeholder IDs |
 
 ---
 

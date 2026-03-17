@@ -177,7 +177,6 @@ UPDATE_QUERIES = [
 ]
 
 # Reddit subs to monitor
-REDDIT_SUBS = ["TikTokCreators", "youtube", "Instagram", "Medium", "Substack", "socialmediamarketing"]
 
 
 def init_csv():
