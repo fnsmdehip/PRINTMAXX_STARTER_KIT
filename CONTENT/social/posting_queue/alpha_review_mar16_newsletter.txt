@@ -1,0 +1,47 @@
+STATUS: PENDING_REVIEW
+TYPE: newsletter_draft
+SOURCE: alpha_review_cycle_mar16_1948
+
+Subject: 3 app markets with millions of users and zero paid competitors
+
+---
+
+most app builders pick a market, build something, then pray for downloads.
+
+i automated a different approach.
+
+every day, a scanner cross-references reddit community sizes with iTunes paid app search results. if a subreddit has 1M+ subscribers and the app store shows 0 paid dedicated apps for that niche, it gets flagged.
+
+this week's cycle flagged three:
+
+**1. language learning streaks (3.34M potential users)**
+
+r/languagelearning has 3.34 million subscribers. searching iTunes for "language learning streak" returns zero paid dedicated apps. Duolingo dominates general learning, but there's no lightweight paid streak-only tracker.
+
+the angle: a $2 companion app that sits alongside whatever language tool you already use. adds streak pressure without replacing your workflow.
+
+**2. journaling habit streaks (2.19M potential users)**
+
+r/Journaling has 2.19 million subscribers. Day One charges $35/year but it's a full journaling platform, not a streak tracker. the gap is a simple "did you journal today?" accountability app.
+
+price: $1.99. build time: 1-2 days.
+
+**3. running streaks (4.19M potential users -- unverified)**
+
+r/running is the second-largest community we scan at 4.19 million subscribers. the iTunes scan hasn't run yet for this niche. if it confirms zero paid dedicated running streak apps, this becomes the largest blue ocean in our pipeline.
+
+yes, strava and nike run club exist. those are full running platforms. a $2 streak counter that just tracks "did you run today?" is a different product entirely.
+
+---
+
+the takeaway:
+
+the scanner found these gaps because it looks where builders aren't looking. most people build for crowded markets because those markets are visible. the invisible markets (huge demand, zero supply) only show up when you automate the search.
+
+also this week: a user on r/smallbusiness asked for pay transparency compliance software. 9+ states now require salary ranges on job postings. no tool automates checking compliance across multiple states. that's a SaaS at $29-49/month with an expanding market as more states pass laws.
+
+the pattern: real alpha comes from real people describing real problems they can't solve. not from twitter threads about "10x-ing your revenue."
+
+---
+
+until next time.

@@ -1,0 +1,94 @@
+{
+  "cycle": 55,
+  "cleaned_at": "2026-03-16T19:15:00Z",
+  "dedup_notes": [
+    "All 3 'paid' iTunes results are 'Streaks' by Crunchy Bagel - generic habit tracker, NOT dedicated niche app. Reclassified as WEAK_GAP not BLOCKED.",
+    "Reddit posts for journaling/languagelearning keywords returned off-topic cross-posts (Reddit search limitation). Subscriber counts are authoritative.",
+    "LTD 89x$199=$17.7K not found in C55 Reddit scrape. Insufficient data to confirm/deny duplicate vs C52."
+  ],
+  "gap_classification": {
+    "journaling_habit": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 0,
+      "status": "BLUE_OCEAN",
+      "community_size": 2187731,
+      "community_source": "r/Journaling"
+    },
+    "language_learning_streak": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 0,
+      "status": "BLUE_OCEAN",
+      "community_size": 3336222,
+      "community_source": "r/languagelearning"
+    },
+    "walking_habit_streak": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 0,
+      "status": "BLUE_OCEAN",
+      "community_size": null,
+      "community_source": "not sized this cycle"
+    },
+    "sleep_habit_tracker": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 0,
+      "status": "BLUE_OCEAN",
+      "community_size": 671169,
+      "community_source": "r/sleep"
+    },
+    "writing_habit_streak": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 1,
+      "generic_paid_app": "Streaks (generic, $5.99)",
+      "status": "WEAK_GAP",
+      "note": "Streaks is generic, not writing-specific. Dedicated writing streak app still viable."
+    },
+    "nofap_streak": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 1,
+      "generic_paid_app": "Streaks (generic, $5.99)",
+      "status": "BLUE_OCEAN",
+      "note": "Streaks is generic. No dedicated NoFap/sobriety streak app exists. Community trust gap from Quittr scandal."
+    },
+    "sobriety_streak": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 0,
+      "status": "BLUE_OCEAN",
+      "note": "Recheck confirmed: still 0 paid dedicated"
+    },
+    "gratitude_habit": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 0,
+      "status": "BLUE_OCEAN",
+      "note": "Confirmed blue ocean"
+    },
+    "cold_shower_streak": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 1,
+      "generic_paid_app": "Streaks (generic, $5.99)",
+      "status": "BLUE_OCEAN",
+      "note": "Streaks generic. Dedicated cold shower streak still blue ocean."
+    },
+    "mindfulness_streak": {
+      "itunes_paid_dedicated": 0,
+      "generic_paid": 0,
+      "status": "BLUE_OCEAN",
+      "note": "Pure gap confirmed"
+    },
+    "running_streak": {
+      "itunes_paid_dedicated": "NOT_SCANNED_C55",
+      "generic_paid": "NOT_SCANNED_C55",
+      "status": "UNVERIFIED",
+      "community_size": 4191576,
+      "community_source": "r/running",
+      "note": "r/running demand = 4.19M subs. iTunes NOT scanned yet. MUST scan C56."
+    }
+  },
+  "new_community_sizes": {
+    "r/Journaling": 2187731,
+    "r/languagelearning": 3336222,
+    "r/sleep": 671169,
+    "r/running": 4191576,
+    "r/indiehackers": 157401,
+    "r/MicroSaas": 170349
+  }
+}

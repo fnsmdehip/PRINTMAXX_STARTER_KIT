@@ -2481,3 +2481,69 @@ the brands that win aren't making better ads
 
 they're making content with real people, that viewers want to engage with
 
+
+
+---
+
+## Pending Enhancement (ALPHA102838, Score: 54)
+
+**Source:** r/passive_income | **URL:** https://reddit.com/r/passive_income/comments/1rvkdew/day_6_0_10k_with_ai_influencers/
+**Added:** 2026-03-16T16:19:22-04:00
+
+[r/passive_income] Day 6 $0 - $10k With AI Influencers
+
+
+
+---
+
+## Pending Enhancement (ALPHA102857, Score: 20)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rvkmuq/shorts_stop_growing_after_1k/
+**Added:** 2026-03-16T16:19:22-04:00
+
+[r/NewTubers] Shorts stop growing after 1k
+
+
+
+---
+
+## Pending Enhancement (ALPHA103020, Score: 20)
+
+**Source:** @affprinter (high-signal-accounts) | **URL:** https://x.com/affprinter/status/2033649987309993986
+**Added:** 2026-03-16T18:15:01-04:00
+
+I made $3424 Today from a viral tiktok slideshow
+which i made with nano banana pro
+
+I swear to god this is the easiest business model ever
+
+Kids are LITERALLY making thousands a day
+
+want the breakdown?
+
+Deleting in 24 hours....
+
+Retweet & Comment “Slideshow” and I’ll dm you a
+
+
+
+---
+
+## Pending Enhancement (ALPHA103084, Score: 26)
+
+**Source:** r/socialmedia | **URL:** https://reddit.com/r/socialmedia/comments/1rvlhrt/should_i_pivot_my_100k_follower_social_media/
+**Added:** 2026-03-16T18:21:03-04:00
+
+[r/socialmedia] Should I pivot my 100k+ follower social media pages from documentary content to a product visualization page, or start fresh?
+
+
+
+---
+
+## Pending Enhancement (ALPHA103098, Score: 22)
+
+**Source:** r/NewTubers | **URL:** https://reddit.com/r/NewTubers/comments/1rvghwj/do_your_videos_take_a_long_time_to_get_traction/
+**Added:** 2026-03-16T18:21:03-04:00
+
+[r/NewTubers] Do your videos take a long time to get traction?
+

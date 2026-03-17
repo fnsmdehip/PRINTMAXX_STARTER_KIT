@@ -269,3 +269,16 @@ day 15-30: dm outreach and first sales
 
 same system 12 operators used to
 
+
+
+---
+
+## Pending Enhancement (ALPHA102896, Score: 36)
+
+**Source:** @ecomchigga (high-signal-accounts) | **URL:** https://x.com/ecomchigga/status/2033318841942454474
+**Added:** 2026-03-16T17:26:10-04:00
+
+your free guide is making you $0 in affiliate income right now and that's insane to me
+
+every info seller puts together a free PDF to use as a lead magnet. smart. but then they just pack it with their own advice and a link to their course at the end. that's it. that's the whole
+

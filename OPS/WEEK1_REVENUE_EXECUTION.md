@@ -612,3 +612,24 @@ what nobody's mentioning:
 
 [ACQUISITION] Show HN: SafeAgent – exactly-once execution guard for AI agent side effects
 
+
+
+---
+
+## Pending Enhancement (ALPHA102924, Score: 24)
+
+**Source:** @zerohedge (high-signal-accounts) | **URL:** https://x.com/PauloMacro/status/2033624921394282715
+**Added:** 2026-03-16T17:26:10-04:00
+
+This NVDA is hysterical
+
+First it's red bar *NVIDIA CEO SEES 2027 AT LEAST ONE TRILLION DOLLARS OF REVENUE
+
+Now it's $1T for 2025-27.
+
+Now look at the revenue line from bloomberg table... 
+
+ummm $216bn 2025 + 364b 2026 + $470b 2027 = $1.05T  
+
+did Jensen just guide down??
+

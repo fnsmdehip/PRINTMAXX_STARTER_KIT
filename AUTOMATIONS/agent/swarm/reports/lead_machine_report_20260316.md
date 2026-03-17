@@ -109,8 +109,112 @@ Time estimate: ~20 minutes to send all 10.
 - Cycle 1 (today, morning): 10 leads, 10 drafts (lawyers, vets, gyms, realtors)
 - Cycle 2 (today, midday): 10 leads, 10 drafts (gyms, vets, realtors, Reddit crisis leads)
 - Cycle 3 (today, afternoon ~3:41 PM): 10 leads, 10 drafts (CrossFit, vet, Reddit product launch, accountants, auto repair) — **FIRST COLD CALL SCRIPTS PRODUCED**
-- **Total today: 30 leads, 30 outreach drafts**
+- **Total today (cycles 1-3): 30 leads, 30 outreach drafts**
 - **All-time cycles 1-9 (Mar 7-16): ~122 leads scored, ~92 drafts written**
+
+---
+
+# CYCLE 7 REPORT — 2026-03-16 (Evening 7:35 PM)
+
+Cycle: 7 (evening run)
+Status: COMPLETE
+New verticals: Salon/Spa, Accountant/Tax, Restaurant (no-website angle)
+
+## Cycle Summary
+
+| Metric | Value |
+|--------|-------|
+| Sources scanned | Bulk DB (US_LEADS_SALON 438k rows, US_LEADS_ACCOUNTANT 35k rows, US_LEADS_RESTAURANT 994k rows) |
+| Total leads evaluated | 150+ (filtered by email signal + free platform detection) |
+| Leads scored | 10 |
+| Outreach drafts written | 10 |
+| New verticals | Salon, Accountant/Tax Service, Restaurant |
+
+## Top 10 Leads — Cycle 7
+
+| Rank | Score | Name | Location | Pain Signal | Contact |
+|------|-------|------|----------|-------------|---------|
+| 1 | 10/10 | Ed's Hair Designers | Portland, TX | Yahoo + yolasite (2008 free platform) | msstayfit94@yahoo.com |
+| 2 | 10/10 | MLJ Professional Services | Laredo, TX | Yolasite accountant — tax season | +1 (956) 568-5566 |
+| 3 | 10/10 | H. Salt Fish & Chips | Rancho Palos Verdes, CA | NO WEBSITE — wealthy LA suburb | info@hsalt.com |
+| 4 | 9/10 | Express Tax Service | Edinburg, TX | webs.com free platform — peak tax season | +1 (956) 381-1178 |
+| 5 | 9/10 | Brownies Cafe | Yuma, AZ | AOL email + NO WEBSITE | grassr1@aol.com |
+| 6 | 9/10 | Studio Platinum | San Pedro, CA | Yahoo + no booking — LA market | studioplatinum797@yahoo.com |
+| 7 | 9/10 | Class Act Salon & Spa | Corpus Christi, TX | Hotmail + 68-char unusable URL | brandy_riley@hotmail.com |
+| 8 | 9/10 | J & W Tax Services | Jackson, MS | Wix subdomain — tax season | +1 (601) 965-5055 |
+| 9 | 9/10 | Southern Sass Hair Salon | New Iberia, LA | Yahoo + zero SEO in small town | southernsasshair@yahoo.com |
+| 10 | 9/10 | Rinata Skin & Body Care | Yuma, AZ | AOL email = trust signal killer | rinatakusy@aol.com |
+
+## Files Created (cycle 7)
+
+All in `AUTOMATIONS/leads/outreach_drafts/20260316/`:
+- 11_eds_hair_designers_yolasite.md
+- 12_mlj_professional_services_cpa.md
+- 13_h_salt_fish_chips_no_website.md
+- 14_express_tax_service_webs_com.md
+- 15_brownies_cafe_yuma_no_website.md
+- 16_studio_platinum_salon_la.md
+- 17_class_act_salon_corpus_christi.md
+- 18_jw_tax_services_jackson_ms.md
+- 19_southern_sass_hair_salon_louisiana.md
+- 20_rinata_skin_body_care_yuma.md
+
+Leads CSV updated: `AUTOMATIONS/leads/swarm_leads_20260316.csv` (rows 11-20)
+
+## Key Intelligence — Cycle 7
+
+**Free platform detection = fastest pain signal in bulk DB.**
+Pattern: search `email` for aol/yahoo/hotmail + search `website` for yolasite/webs.com/wix.com subdomain.
+Combo of both = 9-10/10 score instantly. No manual audit needed.
+
+**Tax season urgency is real (closes April 15).**
+Leads 2, 4, 8 (accountant/tax) — clients are choosing preparers RIGHT NOW. Email/call this week.
+Framing: "clients are choosing right now" resonates. Not hypothetical urgency — actual urgency.
+
+**Salon vertical has 438k rows in bulk DB.**
+Surface-scratched only. yolasite + yahoo combos exist in every state.
+Next cycle: focus on specific metro areas (Chicago, Dallas, Phoenix) for local cluster campaigns.
+
+**Restaurant no-website angle is high-urgency.**
+H. Salt (RPV, affluent area) + Brownies (Yuma, small market) = two extremes both work.
+RPV angle: "diners in RPV google before they go" — aspirational
+Yuma angle: "the cafe with a site wins" — competitive pressure
+
+## HUMAN ACTION REQUIRED — Cycle 7
+
+**Cold Emails (7 leads with email addresses):**
+1. msstayfit94@yahoo.com — Ed's Hair Designers (Portland TX, yolasite)
+2. info@hsalt.com — H. Salt Fish & Chips (Rancho Palos Verdes CA, no website)
+3. grassr1@aol.com — Brownies Cafe (Yuma AZ, no website)
+4. studioplatinum797@yahoo.com — Studio Platinum (San Pedro CA, LA market)
+5. brandy_riley@hotmail.com — Class Act Salon & Spa (Corpus Christi TX)
+6. southernsasshair@yahoo.com — Southern Sass Hair Salon (New Iberia LA)
+7. rinatakusy@aol.com — Rinata Skin & Body Care (Yuma AZ)
+
+**Cold Calls (3 phone-only leads — scripts ready):**
+8. +1 (956) 568-5566 — MLJ Professional Services (Laredo TX, CPA yolasite)
+9. +1 (956) 381-1178 — Express Tax Service (Edinburg TX, webs.com — URGENT: tax season)
+10. +1 (601) 965-5055 — J & W Tax Services (Jackson MS, wix subdomain — URGENT: tax season)
+
+Best call window: Mon-Fri 9am-11am or 2pm-4pm local time.
+Time estimate: ~20 min for 7 emails + ~20 min for 3 calls = 40 min total.
+
+## Cumulative All-Day Totals (Mar 16)
+
+- Cycles 1-3 (morning/midday/afternoon): 30 leads, 30 drafts
+- Cycle 7 (evening): 10 leads, 10 drafts
+- **Day total: 40+ leads, 40 outreach drafts**
+- **All-time (cycles 1-10, Mar 7-16): ~132 leads scored, ~102 drafts written**
+
+## Next Cycle (Cycle 8 — target: 3 hours)
+
+Priority verticals not yet touched:
+- **Doctor/GP** — Bulk DB has 186k rows. Many solo practices with outdated sites.
+- **Insurance agents** — Not in bulk DB. Web search + directory scrape needed.
+- **Landscaper/lawn** — Not in bulk DB. Google Maps scrape or Yelp search.
+- More salon clusters — Chicago/Dallas/Phoenix markets
+
+Alternatively: run Reddit scrape for fresh inbound demand signals (r/smallbusiness, r/Entrepreneur).
 
 ---
 
