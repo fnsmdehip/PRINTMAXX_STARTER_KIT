@@ -2021,3 +2021,124 @@ JUST IN: Nvidia $NVDA CEO Jensen Huang expects revenue to surpass $1 trillion by
 
 [ACQUISITION] Why does connecting traffic to revenue still feel unsolved?
 
+
+
+---
+
+## Pending Enhancement (ALPHA104438, Score: 35)
+
+**Source:** 2026-03-17 | **URL:** @levelsio
+**Added:** 2026-03-17T13:28:28-04:00
+
+http://
+photoai.com is a 40,870 line file called index.php
+
+$105,000/mo revenue
+
+$80,000/mo profit
+
+
+
+---
+
+## Pending Enhancement (ALPHA104495, Score: 36)
+
+**Source:** 2026-03-17 | **URL:** @whale_alert
+**Added:** 2026-03-17T13:28:28-04:00
+
+Clari: $310/user. Gong: $150/user. Salesforce Revenue Intelligence: $395/user.
+StratoForce: $25/user. Same pipeline scoring. Same conversation intelligence. Same forecasting.
+The difference? We're 100% native Salesforce. 
+First 50 orgs get lifetime Enterprise access — free.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104568, Score: 36)
+
+**Source:** 2026-03-17 | **URL:** @financialjuice
+**Added:** 2026-03-17T13:28:28-04:00
+
+$AVGO Broadcom Q1 Earnings
+
+Adjusted EPS $2.05, est. $2.03
+Adjusted revenue $19.31B, est. $19.26B
+Semiconductor solutions revenue $12.52B, est. $12.31B
+Sees Q2 revenue about $22.0B, est. $20.53B
+Sees Q2 adjusted EBITDA about 68% of projected revenue
+Expects AI semiconductor
+
+
+
+---
+
+## Pending Enhancement (ALPHA104689, Score: 36)
+
+**Source:** 2026-03-17 | **URL:** r/buildinpublic
+**Added:** 2026-03-17T13:28:28-04:00
+
+1,850 visitors, $113 in revenue, and 30 days of zero motivation. We see a lot of "up and to the right" graphs here, so I wanted to share what my messy journey looks like right now.  
+I’m building mybets.gg. It’s a bet tracker for sports bettors.  
+Here is the transparent reality of my metrics:
+
+* MRR: $60 (4 active subs)
+* Total Revenue: $113
+* Total Traffic: 1,850 visitors
+* Google Clicks: 46
+
+Se
+
+
+
+---
+
+## Pending Enhancement (ALPHA104705, Score: 30)
+
+**Source:** @tdinh_me (daily scraper) | **URL:** https://x.com/tdinh_me/status/1619156580502761472
+**Added:** 2026-03-17T13:28:28-04:00
+
+Man running a website that's probably worth $1M/year in ad revenue but decided not to monetize it in any way.
+
+Respect.
+
+
+https://
+news.ycombinator.com/item?id=345489
+08
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA104799, Score: 38)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1615669683520167936
+**Added:** 2026-03-17T14:20:02-04:00
+
+New Site - Interetsing 
+DR - 13 
+Traffic - 1 Million 
+Niche - Captions, Quotes, Messages 
+Monetisation - Mediavine 
+Expected Revenue - $10,000 to $15,000
+Site Age -  9 Months 
+Top Ten Pages Traffic - 144965
+The most exciting part is
+
+
+
+---
+
+## Pending Enhancement (ALPHA104805, Score: 36)
+
+**Source:** @Hightrafficsite (daily scraper) | **URL:** https://x.com/Hightrafficsite/status/1768599385049305444
+**Added:** 2026-03-17T14:20:02-04:00
+
+Huge traffic from just 45 pages - Kids coloring site 
+
+Revenue - $2000 to $2500 
+
+DM me for the price of Keywords and the list in my bio with lifetime updates
+

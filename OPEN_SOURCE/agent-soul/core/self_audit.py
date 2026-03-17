@@ -28,23 +28,23 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("SOVRUN_ROOT", Path.cwd()))
 
 AUDIT_DIR = Path(os.environ.get(
-    "DOGWALK_AUDIT_DIR", PROJECT_ROOT / "output" / "cognition_audits"))
+    "SOVRUN_AUDIT_DIR", PROJECT_ROOT / "output" / "cognition_audits"))
 AUDIT_DIR.mkdir(parents=True, exist_ok=True)
 
 LATEST_AUDIT = AUDIT_DIR / "latest_audit.json"
 
 # Files to check (override via environment or config)
 SYSTEM_INSTRUCTIONS = Path(os.environ.get(
-    "DOGWALK_INSTRUCTIONS", PROJECT_ROOT / "templates" / "CLAUDE.md"))
+    "SOVRUN_INSTRUCTIONS", PROJECT_ROOT / "templates" / "CLAUDE.md"))
 SOUL_FILE = Path(os.environ.get(
-    "DOGWALK_SOUL_MD", PROJECT_ROOT / "templates" / "SOUL.md"))
+    "SOVRUN_SOUL_MD", PROJECT_ROOT / "templates" / "SOUL.md"))
 SCRIPTS_DIR = Path(os.environ.get(
-    "DOGWALK_SCRIPTS_DIR", PROJECT_ROOT / "core"))
+    "SOVRUN_SCRIPTS_DIR", PROJECT_ROOT / "core"))
 PROMPTS_FILE = Path(os.environ.get(
-    "DOGWALK_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
+    "SOVRUN_PROMPTS", PROJECT_ROOT / "data" / "prompts.jsonl"))
 
 # Banned AI vocabulary (same list used by voice extractor)
 BANNED_WORDS = [

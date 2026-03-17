@@ -32,14 +32,14 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(os.environ.get("DOGWALK_ROOT", Path.cwd()))
+PROJECT_ROOT = Path(os.environ.get("SOVRUN_ROOT", Path.cwd()))
 
 STATE_DIR = Path(os.environ.get(
-    "DOGWALK_STATE_DIR", PROJECT_ROOT / "state"))
+    "SOVRUN_STATE_DIR", PROJECT_ROOT / "state"))
 LOGS_DIR = Path(os.environ.get(
-    "DOGWALK_LOGS_DIR", PROJECT_ROOT / "logs"))
+    "SOVRUN_LOGS_DIR", PROJECT_ROOT / "logs"))
 SOUL_FILE = Path(os.environ.get(
-    "DOGWALK_SOUL_MD", PROJECT_ROOT / "templates" / "SOUL.md"))
+    "SOVRUN_SOUL_MD", PROJECT_ROOT / "templates" / "SOUL.md"))
 
 STATE_DIR.mkdir(parents=True, exist_ok=True)
 LOGS_DIR.mkdir(parents=True, exist_ok=True)
@@ -49,7 +49,7 @@ LOOP_LOG = LOGS_DIR / "loop_closer.jsonl"
 DECISIONS_FILE = STATE_DIR / "decisions.jsonl"
 
 # Safety: max actions per cycle
-MAX_ACTIONS_PER_CYCLE = int(os.environ.get("DOGWALK_MAX_ACTIONS", "10"))
+MAX_ACTIONS_PER_CYCLE = int(os.environ.get("SOVRUN_MAX_ACTIONS", "10"))
 # Safety: actions that require human approval
 REQUIRES_HUMAN = {"delete_project", "kill_all_agents", "spend_money", "send_email_blast"}
 

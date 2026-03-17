@@ -308,3 +308,43 @@ your free guide is making you $0 in affiliate income right now and that's insane
 
 every info seller puts together a free PDF to use as a lead magnet. smart. but then they just pack it with their own advice and a link to their course at the end. that's it. that's the whole
 
+
+
+---
+
+## Pending Enhancement (ALPHA104835, Score: 36)
+
+**Source:** @Jonnyvandel (daily scraper) | **URL:** https://x.com/Jonnyvandel/status/1929950722243658067
+**Added:** 2026-03-17T14:25:55-04:00
+
+Arcads made $6M ARR in 5 weeks with an Al UGC maker
+
+I created a better one that RUNS LOCALLY, at a fraction of the price....
+
+Arcads makes 20 vids/month
+
+Mine makes 348+/day with the same tech.  Literally market anything.
+
+Like, rt & comment “ARCADS” and I'll send the guide.
+
+
+
+---
+
+## Pending Enhancement (ALPHA105048, Score: 24)
+
+**Source:** @0xrahulweb3 (daily scraper) | **URL:** https://x.com/0xrahulweb3/status/1921044673780404592
+**Added:** 2026-03-17T14:30:01-04:00
+
+$DOT is back
+
+
+@Polkadot
+ $DOT just hit $5 and its going way higher
+
+Elastic Scaling → JAM upgrade coming up fast. Setup looks clean. Fundamentals catching up.
+
+
+@Polkadot
+ szn is real.
+

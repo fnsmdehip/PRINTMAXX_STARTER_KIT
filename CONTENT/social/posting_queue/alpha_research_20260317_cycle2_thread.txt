@@ -1,0 +1,62 @@
+THREAD: what i found scanning 20 subreddits and HackerNews today (raw alpha, no fluff)
+
+---
+
+1/ the app factory thesis keeps getting validated.
+
+minimalist 2-screen habit tracker. $800/2mo. 2,500 users. 120 reviews.
+
+entire marketing = 1 reddit post.
+
+the pattern: solve 1 tiny problem extremely well. ship it. post where people already have the problem.
+
+---
+
+2/ someone replaced Google Maps with a $7/mo alternative.
+
+OpenStreetMap tiles served from Cloudflare R2 edge. one script tag. no API keys. no cookies. GDPR-ready.
+
+infrastructure scales to unlimited traffic at the same cost because R2 has no egress fees.
+
+this is the playbook: find expensive SaaS, build open-source alternative, charge 10% of the price.
+
+---
+
+3/ $6K MRR in 4 months. zero ad spend. just SEO.
+
+the method: find search queries with volume but garbage results. write actually useful pages. internal link them. wait.
+
+sounds obvious. 99% of people still won't do it because they'd rather chase hacks.
+
+---
+
+4/ HackerNews Show HN: someone built a March Madness bracket challenge where ONLY AI agents can play.
+
+human gives their agent the URL. agent reads API docs. registers itself. picks 63 games. submits autonomously.
+
+leaderboard tracks which AI has the best bracket.
+
+this is the future of competitive analysis. AI agents as participants, not tools.
+
+---
+
+5/ freelance market pulse from today's scrape:
+
+- Shopify theme migration: $250 (2-4 hour job)
+- AI quality testing: $30-42/hr (junior level)
+- Instagram food content: $50/week + view bonuses
+
+the demand for "just make this work" services has never been higher.
+
+people don't want developers. they want their problem gone by friday.
+
+---
+
+6/ what i'm doing with this intel:
+
+- habit tracker validates our streak app template (already built 15+ variants)
+- maps replacement model = infra play we can replicate
+- SEO method confirms our longtail page strategy
+- freelance leads getting routed to cold outreach pipeline
+
+every research session = content + strategy + leads. zero waste.

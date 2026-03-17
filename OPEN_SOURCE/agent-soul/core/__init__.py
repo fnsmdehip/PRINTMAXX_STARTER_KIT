@@ -1,4 +1,4 @@
-"""dogwalk core — meta-cognition framework for AI agents.
+"""sovrun core — meta-cognition framework for AI agents.
 
 stop dog walking your AI through every decision.
 6.9 corrections per task → 1.

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DeskBreak — Desk Wellness Timer for Remote Workers</title>
+<meta name="description" content="Automated desk break reminders: 20-20-20 eye breaks, posture checks, hydration reminders, and movement timers. Free PWA for remote workers and developers." />
+<meta name="keywords" content="desk break reminder, 20 20 20 rule, posture reminder, hydration reminder, eye strain timer, remote work wellness" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="manifest" href="/manifest.json" />
+<meta property="og:title" content="DeskBreak — Desk Wellness Timer" />
+<meta property="og:description" content="4 automated break timers for remote workers. Eye breaks, posture, hydration, movement. Free PWA." />
+<meta property="og:type" content="website" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a0a; --surface: #141414; --surface2: #1c1c1c;
+    --border: #2a2a2a; --text: #f5f5f5; --muted: #888;
+    --eye: #3b82f6; --posture: #a855f7; --water: #06b6d4; --move: #f59e0b;
+    --green: #22c55e; --radius: 14px;
+  }
+  html { font-size: 16px; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; min-height: 100vh; line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+
+  .app { max-width: 480px; margin: 0 auto; padding: 0 16px 80px; }
+  header { padding: 20px 0 8px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.3px; }
+  .logo span { color: var(--green); }
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .streak-badge { background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+  .settings-btn { background: none; border: none; cursor: pointer; color: var(--muted); padding: 4px; border-radius: 8px; transition: color 0.2s; font-size: 1.1rem; }
+  .settings-btn:hover { color: var(--text); }
+
+  .session-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; margin: 16px 0; text-align: center; }
+  .session-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 8px; }
+  .session-time { font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; font-variant-numeric: tabular-nums; line-height: 1; margin-bottom: 20px; }
+  .btn-start { background: var(--green); color: #000; border: none; border-radius: 10px; padding: 13px 36px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s, transform 0.1s; display: inline-flex; align-items: center; gap: 8px; }
+  .btn-start:hover { opacity: 0.9; }
+  .btn-start:active { transform: scale(0.97); }
+  .btn-stop { background: var(--surface2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 13px 36px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; margin-left: 10px; }
+  .btn-stop:hover { opacity: 0.8; }
+  .session-meta { display: flex; justify-content: center; gap: 20px; margin-top: 16px; }
+  .session-meta-item { font-size: 0.8rem; color: var(--muted); }
+  .session-meta-item strong { color: var(--text); font-weight: 600; }
+
+  .section-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin: 20px 0 10px; font-weight: 600; }
+  .timers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .timer-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 14px; position: relative; overflow: hidden; transition: border-color 0.3s; }
+  .timer-card.running { border-color: var(--accent-color); }
+  .timer-card-top-bar { position: absolute; top: 0; left: 0; right: 0; height: 2px; opacity: 0; transition: opacity 0.3s; }
+  .timer-card.running .timer-card-top-bar { opacity: 1; }
+  .timer-icon { font-size: 1.5rem; margin-bottom: 6px; }
+  .timer-name { font-size: 0.82rem; font-weight: 600; margin-bottom: 2px; }
+  .timer-desc { font-size: 0.72rem; color: var(--muted); margin-bottom: 10px; line-height: 1.4; }
+  .timer-countdown { font-size: 1.4rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -1px; }
+  .timer-status { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+  .timer-progress { margin-top: 10px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .timer-progress-bar { height: 100%; border-radius: 2px; transition: width 1s linear; width: 0%; }
+
+  .break-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.92); backdrop-filter: blur(8px); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .break-overlay.hidden { display: none; }
+  .break-modal { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px 28px; max-width: 360px; width: 100%; text-align: center; }
+  .break-icon { font-size: 3.5rem; margin-bottom: 12px; }
+  .break-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; }
+  .break-subtitle { font-size: 0.9rem; color: var(--muted); margin-bottom: 24px; line-height: 1.5; }
+  .break-timer-ring { width: 100px; height: 100px; margin: 0 auto 24px; position: relative; }
+  .break-timer-ring svg { transform: rotate(-90deg); }
+  .ring-track { fill: none; stroke: var(--border); stroke-width: 8; }
+  .ring-progress { fill: none; stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 1s linear; }
+  .break-timer-count { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .btn-done { width: 100%; border: none; border-radius: 12px; padding: 15px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; color: #000; }
+  .btn-done:hover { opacity: 0.9; }
+  .break-tip { margin-top: 14px; font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+  .break-tip-link { color: var(--eye); border-bottom: 1px solid currentColor; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 8px; text-align: center; }
+  .stat-val { font-size: 1.3rem; font-weight: 800; }
+  .stat-label { font-size: 0.67rem; color: var(--muted); margin-top: 2px; }
+
+  .settings-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
+  .settings-panel.hidden { display: none; }
+  .settings-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+  .settings-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .settings-row:last-of-type { border-bottom: none; }
+  .settings-row-left { display: flex; align-items: center; gap: 10px; }
+  .settings-row-icon { font-size: 1.1rem; width: 28px; text-align: center; }
+  .settings-row-label { font-size: 0.85rem; font-weight: 500; }
+  .settings-row-sub { font-size: 0.72rem; color: var(--muted); }
+  .interval-control { display: flex; align-items: center; gap: 8px; }
+  .interval-btn { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; width: 28px; height: 28px; font-size: 1rem; cursor: pointer; color: var(--text); display: flex; align-items: center; justify-content: center; transition: background 0.15s; }
+  .interval-btn:hover { background: var(--border); }
+  .interval-val { font-size: 0.85rem; font-weight: 700; min-width: 38px; text-align: center; }
+
+  .upgrade-section { background: linear-gradient(135deg, #141414 0%, #1a1a2e 100%); border: 1px solid #2a2a3a; border-radius: var(--radius); padding: 20px; margin: 20px 0; }
+  .upgrade-title { font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+  .upgrade-sub { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
+  .product-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .product-link { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px; display: flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: border-color 0.2s, background 0.2s; color: var(--text); }
+  .product-link:hover { border-color: #444; background: var(--surface2); }
+  .product-link-icon { font-size: 1.2rem; flex-shrink: 0; }
+  .product-link-label { color: var(--muted); font-size: 0.68rem; }
+
+  .email-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
+  .email-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+  .email-sub { font-size: 0.78rem; color: var(--muted); margin-bottom: 14px; }
+  .email-form { display: flex; gap: 8px; }
+  .email-input { flex: 1; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; font-size: 0.85rem; color: var(--text); outline: none; transition: border-color 0.2s; }
+  .email-input:focus { border-color: var(--green); }
+  .email-input::placeholder { color: var(--muted); }
+  .btn-email { background: var(--green); color: #000; border: none; border-radius: 8px; padding: 10px 16px; font-size: 0.82rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
+  .email-success { text-align: center; padding: 8px 0; }
+  .email-success-icon { font-size: 1.5rem; margin-bottom: 8px; }
+  .email-success-title { font-weight: 700; margin-bottom: 4px; }
+  .email-success-sub { font-size: 0.8rem; color: var(--muted); }
+
+  .install-banner { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; margin: 12px 0; }
+  .install-banner.hidden { display: none; }
+  .install-text { flex: 1; font-size: 0.82rem; }
+  .install-text strong { display: block; margin-bottom: 2px; }
+  .install-text span { color: var(--muted); font-size: 0.75rem; }
+  .btn-install { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer; color: var(--text); white-space: nowrap; }
+  .btn-dismiss { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 1rem; padding: 2px; }
+
+  footer { margin-top: 32px; padding-bottom: 20px; text-align: center; font-size: 0.72rem; color: var(--muted); line-height: 2; }
+  footer a { color: var(--muted); border-bottom: 1px solid var(--border); }
+
+  .notif-bar { background: #1a1200; border: 1px solid #3a2800; border-radius: 10px; padding: 10px 14px; font-size: 0.8rem; display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+  .notif-bar.hidden { display: none; }
+  .notif-bar span { flex: 1; }
+  .btn-notif { background: var(--move); color: #000; border: none; border-radius: 6px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
+
+  .hidden { display: none !important; }
+  @media (max-width: 360px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .session-time { font-size: 3rem; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header>
+    <div class="logo">Desk<span>Break</span></div>
+    <div class="header-right">
+      <div class="streak-badge">🔥 <span id="streak-count">0</span> day streak</div>
+      <button class="settings-btn" id="settings-toggle" title="Settings" aria-label="Settings">⚙️</button>
+    </div>
+  </header>
+
+  <div class="install-banner hidden" id="install-banner">
+    <span>📲</span>
+    <div class="install-text">
+      <strong>Add to Home Screen</strong>
+      <span>Works offline, no app store needed</span>
+    </div>
+    <button class="btn-install" id="btn-install">Install</button>
+    <button class="btn-dismiss" id="btn-dismiss-install" aria-label="Dismiss">✕</button>
+  </div>
+
+  <div class="notif-bar hidden" id="notif-bar">
+    <span>🔔 Allow notifications to get break alerts in the background.</span>
+    <button class="btn-notif" id="btn-notif">Allow</button>
+  </div>
+
+  <div class="session-card">
+    <div class="session-label">Focus Session</div>
+    <div class="session-time" id="session-time">00:00:00</div>
+    <div>
+      <button class="btn-start" id="btn-start">▶ Start Session</button>
+      <button class="btn-stop hidden" id="btn-stop">■ Stop</button>
+    </div>
+    <div class="session-meta">
+      <div class="session-meta-item">Next: <strong id="next-break-name">—</strong></div>
+      <div class="session-meta-item">In: <strong id="next-break-time">—</strong></div>
+    </div>
+  </div>
+
+  <div class="section-label">Break Timers</div>
+  <div class="timers-grid" id="timers-grid"></div>
+
+  <div class="section-label">Today</div>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-val" id="stat-eye">0</div><div class="stat-label">Eye Breaks</div></div>
+    <div class="stat-card"><div class="stat-val" id="stat-posture">0</div><div class="stat-label">Posture</div></div>
+    <div class="stat-card"><div class="stat-val" id="stat-water">0</div><div class="stat-label">Water</div></div>
+    <div class="stat-card"><div class="stat-val" id="stat-move">0</div><div class="stat-label">Movement</div></div>
+  </div>
+
+  <div class="settings-panel hidden" id="settings-panel">
+    <div class="settings-title">
+      <span>Settings</span>
+      <button class="settings-btn" id="settings-close" aria-label="Close">✕</button>
+    </div>
+    <div id="settings-rows"></div>
+    <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border); display:flex; gap:10px;">
+      <button id="btn-reset-today" style="flex:1; background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:9px; font-size:0.8rem; cursor:pointer; color:var(--text);">Reset Today</button>
+      <button id="btn-clear-all" style="flex:1; background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:9px; font-size:0.8rem; cursor:pointer; color:#ef4444;">Clear All Data</button>
+    </div>
+  </div>
+
+  <div class="upgrade-section">
+    <div class="upgrade-title">🪑 Upgrade Your Desk Setup</div>
+    <div class="upgrade-sub">Gear that actually makes a difference.</div>
+    <div class="product-links">
+      <a class="product-link" href="https://amzn.to/deskbreak-chair" target="_blank" rel="noopener sponsored">
+        <span class="product-link-icon">🪑</span>
+        <div><div>Ergonomic Chair</div><div class="product-link-label">Top-rated</div></div>
+      </a>
+      <a class="product-link" href="https://amzn.to/deskbreak-glasses" target="_blank" rel="noopener sponsored">
+        <span class="product-link-icon">🕶️</span>
+        <div><div>Blue Light Glasses</div><div class="product-link-label">Reduce eye strain</div></div>
+      </a>
+      <a class="product-link" href="https://amzn.to/deskbreak-bottle" target="_blank" rel="noopener sponsored">
+        <span class="product-link-icon">💧</span>
+        <div><div>32oz Water Bottle</div><div class="product-link-label">Hit your water goal</div></div>
+      </a>
+      <a class="product-link" href="https://amzn.to/deskbreak-stand" target="_blank" rel="noopener sponsored">
+        <span class="product-link-icon">🖥️</span>
+        <div><div>Monitor Stand</div><div class="product-link-label">Eye-level ergonomics</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="email-section" id="email-section">
+    <div class="email-title">Get the Perfect Desk Setup Guide</div>
+    <div class="email-sub">Free PDF — 12 science-backed changes under $50 that eliminate 80% of desk pain.</div>
+    <form class="email-form" id="email-form">
+      <input class="email-input" type="email" placeholder="your@email.com" required id="email-input" autocomplete="email" />
+      <button type="submit" class="btn-email">Send it →</button>
+    </form>
+  </div>
+
+  <footer>
+    Made by <a href="https://printmaxxer.com" target="_blank" rel="noopener">PRINTMAXXER</a>
+    <br><a href="https://deskbreak.surge.sh/privacy.html">Privacy Policy</a> · <a href="https://deskbreak.surge.sh/terms.html">Terms</a>
+    <br><span id="ios-hint" class="hidden">📱 iOS: tap Share then Add to Home Screen</span>
+  </footer>
+</div>
+
+<!-- BREAK OVERLAY -->
+<div class="break-overlay hidden" id="break-overlay" role="dialog" aria-modal="true" aria-labelledby="break-overlay-title">
+  <div class="break-modal">
+    <div class="break-icon" id="break-overlay-icon" aria-hidden="true">👁</div>
+    <div class="break-title" id="break-overlay-title">Eye Break</div>
+    <div class="break-subtitle" id="break-overlay-subtitle">Look at something 20 feet away for 20 seconds.</div>
+    <div class="break-timer-ring">
+      <svg viewBox="0 0 100 100" width="100" height="100" aria-hidden="true">
+        <circle class="ring-track" cx="50" cy="50" r="42" />
+        <circle class="ring-progress" id="ring-progress" cx="50" cy="50" r="42"
+          stroke="#3b82f6" stroke-dasharray="263.9" stroke-dashoffset="0" />
+      </svg>
+      <div class="break-timer-count" id="break-countdown">20</div>
+    </div>
+    <button class="btn-done" id="btn-done">Done ✓</button>
+    <div class="break-tip" id="break-tip">
+      <span id="break-tip-text"></span>
+      <a id="break-tip-link" class="break-tip-link" href="#" target="_blank" rel="noopener sponsored"></a>
+    </div>
+  </div>
+</div>
+
+<script>
+// All BREAKS config is static/hardcoded — no user data used in rendering
+const BREAKS = [
+  { id: 'eye',     icon: '👁',  color: '#3b82f6', name: 'Eye Break',     desc: '20-20-20 rule',        defInterval: 1200, breakDur: 20,  subtitle: 'Look at something 20 feet away. Blink slowly and relax.', tipText: 'Persistent eye strain? ', tipLinkText: 'Blue light glasses', tipLinkHref: 'https://amzn.to/deskbreak-glasses', statId: 'stat-eye' },
+  { id: 'posture', icon: '🧍', color: '#a855f7', name: 'Posture Check',  desc: 'Sit tall, relax',      defInterval: 1800, breakDur: 30,  subtitle: 'Uncross legs, sit straight, shoulders back, chin level.', tipText: 'Back pain? An ', tipLinkText: 'ergonomic chair', tipLinkHref: 'https://amzn.to/deskbreak-chair', statId: 'stat-posture' },
+  { id: 'water',   icon: '💧', color: '#06b6d4', name: 'Hydration',      desc: 'Drink 1 glass',        defInterval: 3600, breakDur: 15,  subtitle: 'Stand up, walk to your kitchen, drink a full glass.', tipText: 'A ', tipLinkText: '32oz water bottle', tipLinkHref: 'https://amzn.to/deskbreak-bottle', statId: 'stat-water' },
+  { id: 'move',    icon: '🤸', color: '#f59e0b', name: 'Movement',       desc: '2-min stretch/walk',   defInterval: 5400, breakDur: 120, subtitle: 'Stand up. Do shoulder rolls, neck stretches, or a short walk.', tipText: 'A ', tipLinkText: 'standing desk converter', tipLinkHref: 'https://amzn.to/deskbreak-stand', statId: 'stat-move' },
+];
+
+// ── STATE ─────────────────────────────────────────────────
+function defaultState() {
+  return {
+    streak: 0, lastActiveDate: null,
+    today: { eye: 0, posture: 0, water: 0, move: 0 },
+    settings: { eye: 1200, posture: 1800, water: 3600, move: 5400 },
+    emailCaptured: false, installDismissed: false,
+  };
+}
+let state = (() => {
+  try {
+    const saved = JSON.parse(localStorage.getItem('deskbreak_state') || '{}');
+    const def = defaultState();
+    return { ...def, ...saved, today: { ...def.today, ...(saved.today || {}) }, settings: { ...def.settings, ...(saved.settings || {}) } };
+  } catch { return defaultState(); }
+})();
+function save() { localStorage.setItem('deskbreak_state', JSON.stringify(state)); }
+
+// ── SESSION ───────────────────────────────────────────────
+let running = false, sessionSec = 0, tick = null;
+let timers = {}, activeBreak = null, breakTick = null;
+
+function startSession() {
+  if (running) return;
+  running = true;
+  checkStreak();
+  maybeAskNotif();
+  document.getElementById('btn-start').classList.add('hidden');
+  document.getElementById('btn-stop').classList.remove('hidden');
+  BREAKS.forEach(b => { timers[b.id] = { rem: state.settings[b.id], total: state.settings[b.id] }; });
+  renderCards();
+  tick = setInterval(() => { sessionSec++; updateClock(); tickTimers(); }, 1000);
+}
+
+function stopSession() {
+  if (!tick) return;
+  running = false;
+  clearInterval(tick); tick = null;
+  document.getElementById('btn-start').classList.remove('hidden');
+  document.getElementById('btn-stop').classList.add('hidden');
+  if (activeBreak) dismissBreak();
+  renderCards();
+}
+
+function updateClock() {
+  const h = Math.floor(sessionSec / 3600), m = Math.floor((sessionSec % 3600) / 60), s = sessionSec % 60;
+  document.getElementById('session-time').textContent = `${p(h)}:${p(m)}:${p(s)}`;
+}
+function p(n) { return String(n).padStart(2, '0'); }
+
+// ── BREAK TIMERS ─────────────────────────────────────────
+function tickTimers() {
+  if (activeBreak) return;
+  BREAKS.forEach(b => {
+    const t = timers[b.id];
+    if (!t) return;
+    t.rem = Math.max(0, t.rem - 1);
+    if (t.rem === 0) triggerBreak(b);
+  });
+  renderCards();
+  renderNextBreak();
+}
+
+function renderCards() {
+  BREAKS.forEach(b => {
+    const card = document.getElementById('tc-' + b.id);
+    if (!card) return;
+    const t = timers[b.id];
+    card.querySelector('.timer-countdown').textContent = t ? fmtTime(t.rem) : fmtTime(state.settings[b.id]);
+    card.querySelector('.timer-status').textContent = !running ? 'Waiting' : (t && t.rem > 0 ? 'Active' : 'Break!');
+    if (t) {
+      const pct = Math.min(1, (t.total - t.rem) / t.total);
+      card.querySelector('.timer-progress-bar').style.width = (pct * 100).toFixed(1) + '%';
+    }
+  });
+}
+
+function renderNextBreak() {
+  let minRem = null, minName = null;
+  BREAKS.forEach(b => {
+    const t = timers[b.id];
+    if (t && (minRem === null || t.rem < minRem)) { minRem = t.rem; minName = b.name; }
+  });
+  document.getElementById('next-break-name').textContent = minName || '—';
+  document.getElementById('next-break-time').textContent = minRem !== null ? fmtTime(minRem) : '—';
+}
+
+function fmtTime(s) {
+  if (s >= 3600) return Math.floor(s / 3600) + 'h ' + p(Math.floor((s % 3600) / 60)) + 'm';
+  if (s >= 60) return Math.floor(s / 60) + 'm ' + p(s % 60) + 's';
+  return s + 's';
+}
+
+// ── BREAK MODAL ──────────────────────────────────────────
+function triggerBreak(b) {
+  if (activeBreak) return;
+  activeBreak = b;
+  playBreakSound();
+  sendNotif(b.name, b.subtitle);
+
+  // Update overlay — all textContent, no innerHTML with user data
+  document.getElementById('break-overlay-icon').textContent = b.icon;
+  document.getElementById('break-overlay-title').textContent = b.name;
+  document.getElementById('break-overlay-subtitle').textContent = b.subtitle;
+  document.getElementById('btn-done').style.background = b.color;
+  document.getElementById('ring-progress').setAttribute('stroke', b.color);
+
+  // Tip: text node + separate anchor element (safe, no innerHTML with user content)
+  document.getElementById('break-tip-text').textContent = b.tipText;
+  const tipLink = document.getElementById('break-tip-link');
+  tipLink.textContent = b.tipLinkText;
+  tipLink.href = b.tipLinkHref;
+  tipLink.style.color = b.color;
+
+  const circ = 263.9;
+  let rem = b.breakDur;
+  const updateRing = () => {
+    const pct = rem / b.breakDur;
+    document.getElementById('ring-progress').style.strokeDashoffset = ((1 - pct) * circ).toFixed(2);
+    document.getElementById('break-countdown').textContent = rem;
+  };
+  updateRing();
+  breakTick = setInterval(() => { rem--; updateRing(); if (rem <= 0) { clearInterval(breakTick); playDoneSound(); } }, 1000);
+  document.getElementById('break-overlay').classList.remove('hidden');
+}
+
+function dismissBreak() {
+  if (!activeBreak) return;
+  clearInterval(breakTick); breakTick = null;
+  state.today[activeBreak.id] = (state.today[activeBreak.id] || 0) + 1;
+  save(); updateStats();
+  const t = timers[activeBreak.id];
+  if (t) { t.rem = state.settings[activeBreak.id]; t.total = state.settings[activeBreak.id]; }
+  activeBreak = null;
+  document.getElementById('break-overlay').classList.add('hidden');
+  renderCards();
+}
+
+// ── STREAK ────────────────────────────────────────────────
+function checkStreak() {
+  const today = new Date().toDateString();
+  if (state.lastActiveDate === today) return;
+  const yesterday = new Date(Date.now() - 86400000).toDateString();
+  state.streak = state.lastActiveDate === yesterday ? state.streak + 1 : 1;
+  state.lastActiveDate = today;
+  save();
+  document.getElementById('streak-count').textContent = state.streak;
+}
+
+// ── STATS ─────────────────────────────────────────────────
+function updateStats() {
+  BREAKS.forEach(b => { document.getElementById(b.statId).textContent = state.today[b.id] || 0; });
+}
+
+// ── SOUND ─────────────────────────────────────────────────
+let audioCtx;
+function getCtx() { return (audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)()); }
+function tone(freq, when, dur) {
+  try {
+    const ctx = getCtx();
+    const osc = ctx.createOscillator(), gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.type = 'sine'; osc.frequency.setValueAtTime(freq, when);
+    gain.gain.setValueAtTime(0.25, when); gain.gain.exponentialRampToValueAtTime(0.001, when + dur);
+    osc.start(when); osc.stop(when + dur);
+  } catch {}
+}
+function playBreakSound() { const t = getCtx().currentTime; tone(523, t, 0.3); tone(659, t + 0.15, 0.3); }
+function playDoneSound()  { const t = getCtx().currentTime; tone(659, t, 0.25); tone(784, t + 0.12, 0.3); }
+
+// ── NOTIFICATIONS ─────────────────────────────────────────
+function maybeAskNotif() {
+  if (!('Notification' in window) || Notification.permission !== 'default') return;
+  document.getElementById('notif-bar').classList.remove('hidden');
+}
+function sendNotif(title, body) {
+  if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
+  try { new Notification('DeskBreak: ' + title, { body, tag: 'deskbreak' }); } catch {}
+}
+
+// ── SETTINGS UI ───────────────────────────────────────────
+function renderSettings() {
+  const container = document.getElementById('settings-rows');
+  container.textContent = ''; // clear safely
+  BREAKS.forEach(b => {
+    const row = document.createElement('div');
+    row.className = 'settings-row';
+
+    const left = document.createElement('div');
+    left.className = 'settings-row-left';
+    const ic = document.createElement('div'); ic.className = 'settings-row-icon'; ic.textContent = b.icon;
+    const info = document.createElement('div');
+    const lbl = document.createElement('div'); lbl.className = 'settings-row-label'; lbl.textContent = b.name;
+    const sub = document.createElement('div'); sub.className = 'settings-row-sub'; sub.textContent = b.desc;
+    info.append(lbl, sub); left.append(ic, info);
+
+    const ctrl = document.createElement('div');
+    ctrl.className = 'interval-control';
+    const btnMinus = document.createElement('button'); btnMinus.className = 'interval-btn'; btnMinus.textContent = '−'; btnMinus.addEventListener('click', () => adjustInterval(b.id, -5));
+    const valEl = document.createElement('div'); valEl.className = 'interval-val'; valEl.id = 'iv-' + b.id; valEl.textContent = Math.floor(state.settings[b.id] / 60) + 'm';
+    const btnPlus = document.createElement('button'); btnPlus.className = 'interval-btn'; btnPlus.textContent = '+'; btnPlus.addEventListener('click', () => adjustInterval(b.id, 5));
+    ctrl.append(btnMinus, valEl, btnPlus);
+
+    row.append(left, ctrl);
+    container.appendChild(row);
+  });
+}
+
+function adjustInterval(id, deltaMins) {
+  const s = Math.max(300, Math.min(14400, state.settings[id] + deltaMins * 60));
+  state.settings[id] = s; save();
+  const el = document.getElementById('iv-' + id);
+  if (el) el.textContent = Math.floor(s / 60) + 'm';
+  if (running && timers[id]) { timers[id].rem = Math.min(timers[id].rem, s); timers[id].total = s; }
+}
+
+// ── TIMER CARDS RENDER ────────────────────────────────────
+function buildCards() {
+  const grid = document.getElementById('timers-grid');
+  grid.textContent = '';
+  BREAKS.forEach(b => {
+    const card = document.createElement('div');
+    card.className = 'timer-card';
+    card.id = 'tc-' + b.id;
+
+    const bar = document.createElement('div');
+    bar.className = 'timer-card-top-bar';
+    bar.style.background = b.color;
+
+    const icon = document.createElement('div'); icon.className = 'timer-icon'; icon.textContent = b.icon;
+    const name = document.createElement('div'); name.className = 'timer-name'; name.textContent = b.name;
+    const desc = document.createElement('div'); desc.className = 'timer-desc'; desc.textContent = b.desc;
+    const cd = document.createElement('div'); cd.className = 'timer-countdown'; cd.textContent = fmtTime(state.settings[b.id]);
+    const status = document.createElement('div'); status.className = 'timer-status'; status.textContent = 'Waiting';
+    const prog = document.createElement('div'); prog.className = 'timer-progress';
+    const progBar = document.createElement('div'); progBar.className = 'timer-progress-bar'; progBar.style.background = b.color;
+    prog.appendChild(progBar);
+
+    card.append(bar, icon, name, desc, cd, status, prog);
+    grid.appendChild(card);
+  });
+}
+
+// ── PWA INSTALL ───────────────────────────────────────────
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault(); deferredPrompt = e;
+  if (!state.installDismissed) document.getElementById('install-banner').classList.remove('hidden');
+});
+window.addEventListener('appinstalled', () => { document.getElementById('install-banner').classList.add('hidden'); });
+if (/iphone|ipad|ipod/i.test(navigator.userAgent) && !navigator.standalone) {
+  document.getElementById('ios-hint').classList.remove('hidden');
+}
+
+// ── EVENTS ────────────────────────────────────────────────
+document.getElementById('btn-start').addEventListener('click', startSession);
+document.getElementById('btn-stop').addEventListener('click', stopSession);
+document.getElementById('btn-done').addEventListener('click', dismissBreak);
+
+document.getElementById('settings-toggle').addEventListener('click', () => {
+  document.getElementById('settings-panel').classList.toggle('hidden');
+  renderSettings();
+});
+document.getElementById('settings-close').addEventListener('click', () => {
+  document.getElementById('settings-panel').classList.add('hidden');
+});
+
+document.getElementById('btn-install').addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  document.getElementById('install-banner').classList.add('hidden');
+});
+document.getElementById('btn-dismiss-install').addEventListener('click', () => {
+  state.installDismissed = true; save();
+  document.getElementById('install-banner').classList.add('hidden');
+});
+document.getElementById('btn-notif').addEventListener('click', async () => {
+  await Notification.requestPermission();
+  document.getElementById('notif-bar').classList.add('hidden');
+});
+
+document.getElementById('btn-reset-today').addEventListener('click', () => {
+  if (!confirm('Reset today\'s stats?')) return;
+  state.today = { eye: 0, posture: 0, water: 0, move: 0 }; save(); updateStats();
+});
+document.getElementById('btn-clear-all').addEventListener('click', () => {
+  if (!confirm('Clear all data including streak?')) return;
+  localStorage.removeItem('deskbreak_state'); state = defaultState(); save(); updateStats();
+  document.getElementById('streak-count').textContent = '0';
+});
+
+document.getElementById('email-form').addEventListener('submit', e => {
+  e.preventDefault();
+  state.emailCaptured = true; save();
+  const section = document.getElementById('email-section');
+  section.textContent = '';
+  const wrapper = document.createElement('div'); wrapper.className = 'email-success';
+  const ic = document.createElement('div'); ic.className = 'email-success-icon'; ic.textContent = '✅';
+  const title = document.createElement('div'); title.className = 'email-success-title'; title.textContent = "You're in!";
+  const sub = document.createElement('div'); sub.className = 'email-success-sub'; sub.textContent = 'Check your email for the Perfect Desk Setup Guide.';
+  wrapper.append(ic, title, sub); section.appendChild(wrapper);
+  // In production: POST email to your email service here
+});
+
+if (new URLSearchParams(location.search).get('action') === 'start') {
+  setTimeout(startSession, 600);
+}
+
+// ── INIT ──────────────────────────────────────────────────
+document.getElementById('streak-count').textContent = state.streak;
+buildCards();
+updateStats();
+if (state.emailCaptured) document.getElementById('email-section').style.display = 'none';
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
+</script>
+</body>
+</html>

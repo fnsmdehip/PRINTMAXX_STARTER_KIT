@@ -575,3 +575,67 @@ Tomorrow I will be working on abandoned checkout email sequences
 
 JUST IN: ETH reclaims $2,350, rising over 8% today.
 
+
+
+---
+
+## Pending Enhancement (ALPHA103565, Score: 38)
+
+**Source:** @KCodes7777 (high-signal-accounts) | **URL:** https://x.com/KCodes7777/status/2029548615803322498
+**Added:** 2026-03-17T12:15:00-04:00
+
+7 months ago i found out i was having a baby
+
+4 months ago I started building in public
+
+4300 followers today 
+
+1 app for review 
+
+over $2k made on X 
+
+Greatful for everyone following my journey 
+
+This is your sign to start building in public 
+
+
+
+---
+
+## Pending Enhancement (ALPHA105040, Score: 24)
+
+**Source:** @HamptonAc_ (daily scraper) | **URL:** https://x.com/HamptonAc_/status/1975907307251724639
+**Added:** 2026-03-17T14:30:01-04:00
+
+7 years ago I was homeless…
+
+A crane fell through my apartment complex, leaving me, and hundreds others with no home, cash, or any of our valuables.
+
+The only thing I had to my name was the shirt on my back and my laptop….
+
+Fast forward to today, I’ve generated $10,000,000 In online sales on my Ecom brands, and $50,000,000 for my students 
+
+I have been able to completely change the trajectory of m
+
+
+
+---
+
+## Pending Enhancement (ALPHA105116, Score: 30)
+
+**Source:** @godofprompt (high-signal-accounts) | **URL:** https://x.com/godofprompt/status/2033972266803863781
+**Added:** 2026-03-17T15:45:01-04:00
+
+Everyone’s scared of AI replacing their job.
+
+I just found a platform that builds businesses in ~30 seconds with 1 prompt.
+
+So now that the barrier to entry is killed.
+
+I created a list of the top 10 AI businesses to build TODAY.
+
+The right person could:
+
+1) Take this list.
+2)
+

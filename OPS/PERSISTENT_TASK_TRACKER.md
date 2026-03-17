@@ -1,6 +1,29 @@
 # PERSISTENT TASK TRACKER
 # Status: ACTIVE — READ THIS EVERY SESSION START, AFTER EVERY COMPACTION
-# Updated: 2026-03-15
+# Updated: 2026-03-17
+
+### P0 CRITICAL: SURGE.SH BLOCKS ALL SEARCH ENGINES — 2026-03-17
+- **Status:** BLOCKER — surge.sh free tier (Student plan) serves `Disallow: /` at CDN level on ALL sites
+- **Impact:** All 394 deployed pages are invisible to Google/Bing/AI search. Zero organic traffic possible.
+- **Verified:** Custom robots.txt deployed but CDN overrides it. Tested 6 sites, all return Disallow.
+- **On-page SEO work done (preserved for migration):**
+  - [x] 21 files enhanced with structured data (JSON-LD: FAQPage, SoftwareApplication, ItemList, HowTo, WebApplication)
+  - [x] Sitemap expanded 94 -> 188 URLs
+  - [x] Broken og:image refs fixed on 2 lead magnets
+  - [x] All 19 deployed files redeployed to surge.sh
+- **MIGRATION REQUIRED (pick one):**
+  - [ ] **HUMAN ACTION (P0, $13/mo):** Upgrade to Surge Plus (enables custom robots.txt, keeps all URLs)
+  - [ ] **HUMAN ACTION (P0, 30 min):** Create Cloudflare account + run `bash AUTOMATIONS/seo_platform_migration.sh --prepare && --deploy`
+  - [ ] **HUMAN ACTION (P0, 30 min):** Create Netlify account + run migration script `--netlify`
+- **Top 6 pages to migrate first (65.5K monthly searches):**
+  1. ai-slop-detector (22K/mo) — "ai content detector free"
+  2. ramadan-tracker (18K/mo, SEASONAL ends March 29) — "ramadan tracker app"
+  3. vibe-coding-cheat-sheet (12K/mo) — "vibe coding"
+  4. cursor-vs-claude-code (9.1K/mo) — "cursor vs claude code"
+  5. freelance-rate-calc (8.1K/mo) — "freelance rate calculator"
+  6. semrush-vs-ahrefs (6.5K/mo) — "semrush vs ahrefs 2026"
+- **Migration script ready:** `AUTOMATIONS/seo_platform_migration.sh`
+- **Full audit report:** `AUTOMATIONS/agent/swarm/reports/seo_audit_20260317.md`
 
 ### EAS VENTURE BUILD — 2026-03-16 (02:30 AM)
 - **Status:** IN PROGRESS — website, legal, playbooks, system integration all building in parallel

@@ -1,0 +1,46 @@
+{
+  "cycle": 63,
+  "timestamp": "2026-03-17T19:04:55.056234+00:00",
+  "strategy": "FINANCE_WELLNESS + MENTAL_HEALTH + SLEEP_HYGIENE + DIGITAL_WELLNESS + MICRO_HABITS",
+  "total_scanned": 12,
+  "blue_oceans": [
+    "savings_streak"
+  ],
+  "soft_competition": [
+    "sobriety_streak",
+    "anxiety_habit",
+    "therapist_homework_streak",
+    "no_screen_bedtime_streak",
+    "phone_detox_streak"
+  ],
+  "occupied": [
+    "budget_habit",
+    "debt_payoff_streak",
+    "sleep_streak",
+    "morning_routine_streak",
+    "walking_streak",
+    "hydration_streak"
+  ],
+  "top_opportunities": [
+    [
+      "savings_streak",
+      30944390
+    ],
+    [
+      "anxiety_habit",
+      2943399
+    ],
+    [
+      "no_screen_bedtime_streak",
+      1189734
+    ],
+    [
+      "sobriety_streak",
+      744618
+    ],
+    [
+      "phone_detox_streak",
+      518161
+    ]
+  ]
+}

@@ -7133,3 +7133,126 @@ try it out Slack/Clawdbot:
 http://
 socialgrowthengineers.com/prometheus
 
+
+
+---
+
+## Pending Enhancement (ALPHA104586, Score: 44)
+
+**Source:** 2026-03-17 | **URL:** r/AppBusiness
+**Added:** 2026-03-17T13:28:28-04:00
+
+1.3k users, but only $35 MRR. Is it time to kill my project? I've been running **RankMyCV** for a few months now. The growth actually surprised me—I just hit **1,356 total users** and I'm getting around 400-500 new signups per month.
+
+However, the revenue is... depressing.
+
+* Total users: 1,356
+* CVs analyzed: 813 (only 28 were paid)
+* **MRR: $35** (3 active subs)
+
+It seems people love the free to
+
+
+
+---
+
+## Pending Enhancement (ALPHA104601, Score: 32)
+
+**Source:** 2026-03-17 | **URL:** r/growthhacking
+**Added:** 2026-03-17T13:28:28-04:00
+
+We said no to $2.5m vc money and I'm still kinda shocked we did it lol Three founders here, plus one assistant who deserves a raise, no full-time hires yet, and the saas is already covering our bills nicely. It feels surreal most days.
+
+We launched our sass six months back. Almost no paid ads at the start just built something useful and watched LinkedIn and seo take off.
+
+Stats right now that stil
+
+
+
+---
+
+## Pending Enhancement (ALPHA104632, Score: 32)
+
+**Source:** 2026-03-17 | **URL:** r/SaaS
+**Added:** 2026-03-17T13:28:28-04:00
+
+what I actually did in the first 10 days to make Google notice my product When I launched my SaaS, I had:
+
+* A brand-new domain
+* Zero backlinks
+* No blog/ No authority /No traffic
+
+Most founders immediately start writing blog posts.I didn’t.Because here’s the truth:
+
+Google can’t rank what it doesn’t notice. so my only goal in the first 10 days was simple:Get Google to crawl, index, and trust my 
+
+
+
+---
+
+## Pending Enhancement (ALPHA104636, Score: 28)
+
+**Source:** 2026-03-17 | **URL:** r/SEO
+**Added:** 2026-03-17T13:28:28-04:00
+
+ChatGPT and Ecommerce SEO **ChatGPT pulls from Google Shopping for product results**
+
+When you ask ChatGPT for product recommendations, it runs encoded "fan-out" queries through Google Shopping in the background to build its product carousel. Google's ecosystem is simply too vast to ignore — it has 27+ years of pricing data, availability info, and reviews. So if your product ranks well on Google S
+
+
+
+---
+
+## Pending Enhancement (ALPHA104726, Score: 34)
+
+**Source:** @xivy0k (daily scraper) | **URL:** https://x.com/xivy0k/status/1985065423335772516
+**Added:** 2026-03-17T14:20:01-04:00
+
+We cracked the code with Instagram.
+
+50.1M views in 90 days  all organic.
+
+Every reel built trust → traffic → digital product sales.
+
+We follow the exact same system for every post.
+
+I documented the full playbook  follow, RT & comment
+
+“GUIDE” and I’ll send it free.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104751, Score: 28)
+
+**Source:** @wesocialgrowth (daily scraper) | **URL:** https://x.com/wesocialgrowth/status/1979412138797207794
+**Added:** 2026-03-17T14:20:01-04:00
+
+If someone decides to move on this,
+
+we've got you covered in all the latest growth marketing strategies
+
++ free viral hooks & how to resourcers.
+
+
+
+---
+
+## Pending Enhancement (ALPHA105077, Score: 31)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2033980972858069152
+**Added:** 2026-03-17T15:45:01-04:00
+
+This wasn't supposed to be free.
+
+40 viral hooks for your next month of posts.
+
+Complete with AI prompts so you can tailor them to your niche,
+
+and the psychological trigger behind each one.
+
++ real examples that pulled millions of views.
+
+Grab it here:
+

@@ -1656,3 +1656,719 @@ It said: "Big Every energy is when four very smart people spend 45 minutes sayin
 
 We asked for a joke. We got a roast.
 
+
+
+---
+
+## Pending Enhancement (ALPHA103514, Score: 20)
+
+**Source:** @franci__ugc (high-signal-accounts) | **URL:** https://x.com/franci__ugc/status/2029653941731086344
+**Added:** 2026-03-17T12:00:06-04:00
+
+everyone's talking about AI replacing creators
+
+nobody's talking about AI replacing the 6 hours i used to spend finding them
+
+we connected an AI agent to our CRM and now every creator application gets:
+> portfolio scraped
+> engagement rate checked
+> past brand deals found
+>
+
+
+
+---
+
+## Pending Enhancement (ALPHA103564, Score: 22)
+
+**Source:** @KCodes7777 (high-signal-accounts) | **URL:** https://x.com/KCodes7777/status/2029696157790728516
+**Added:** 2026-03-17T12:15:00-04:00
+
+1.8M views on my pregnancy niche page
+
+This is what 30 days of consistency looks like 
+
+→ 1 post a day
+→ Posted at 12pm
+→ 6 second video (
+http://
+pexels.com)
+→ Long caption (ChatGPT)
+→ Viral sound (IG viral sound library)
+
+That’s it
+
+No complicated strategy
+No expensive
+
+
+
+---
+
+## Pending Enhancement (ALPHA104326, Score: 43)
+
+**Source:** 2026-03-17 | **URL:** @levelsio
+**Added:** 2026-03-17T13:28:28-04:00
+
+How to get to $1 million MRR in 90 days:
+
+- Raise $$$ from VCs
+- Spend $1M on your friend's SaaS
+- They spend $1M on yours
+- Tweet you got to $1M MRR in 90 days
+- Cancel the subscription after one month cause now you already tweeted it
+- Use that month * 12 to say you got to $12M
+
+
+
+---
+
+## Pending Enhancement (ALPHA104414, Score: 30)
+
+**Source:** 2026-03-17 | **URL:** @AntonioEscudero
+**Added:** 2026-03-17T13:28:28-04:00
+
+Bye Bye Web developers...
+
+I just surpassed $3k in revenue and 2,400 users with my fully vibecoded SaaS
+
+RankInPublic was completely vibecoded using Claude Opus 4.6
+
+It took 7 days to develop, 12 hours a day.
+
+The stack I used:
+
+- Convex for the backend and db
+- Dodo Payments as
+
+
+
+---
+
+## Pending Enhancement (ALPHA104425, Score: 29)
+
+**Source:** 2026-03-17 | **URL:** @kloss_xyz
+**Added:** 2026-03-17T13:28:28-04:00
+
+Stop what you’re doing right now.
+
+Anthropic just dropped a free AI academy with 13 courses and official certificates across MCP, APIs, Claude Code, and fluency.
+
+People used to pay $2k for bootcamps teaching worse versions of these topics.
+
+Now it costs $0. Save it. Start today.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104591, Score: 36)
+
+**Source:** 2026-03-17 | **URL:** r/SaaS
+**Added:** 2026-03-17T13:28:28-04:00
+
+Building SaaS in 2026? My best advice * Offer Google login. Most people won't bother making an account otherwise.
+* Paying users = real demand. If no one has paid yet then it's not validated. 
+* Building an MVP is a sprint, the business and the customers is a marathon. Pace yourself accordingly.
+* Post-launch is 80% marketing, 20% product. Launching isn’t the end.
+* Market shamelessly. Talk about 
+
+
+
+---
+
+## Pending Enhancement (ALPHA104604, Score: 26)
+
+**Source:** 2026-03-17 | **URL:** r/Emailmarketing
+**Added:** 2026-03-17T13:28:28-04:00
+
+email marketing tools really said “what if we just charged more” huh sooo… just noticed something while checking a few email marketing tools this week and… bruh.
+
+a lot of them quietly raise the price the moment your list grows a little.
+
+like you start paying $20–$30/month thinking it’s fine… then your list hits a few thousand subscribers and suddenly it’s $80… $120… $200/month.
+
+and the funny pa
+
+
+
+---
+
+## Pending Enhancement (ALPHA104617, Score: 43)
+
+**Source:** 2026-03-17 | **URL:** r/micro_saas
+**Added:** 2026-03-17T13:28:28-04:00
+
+Stop building useless sh*t "Check out my SaaS directory list" - no one cares
+
+
+
+"I Hit 10k MRR in 30 Days: Here's How" - stop lying
+
+
+
+"I created an AI-powered chatbot" - no, you didn't create anything
+
+
+
+Most project we see here are totally useless and won't exist for more than a few months.
+
+
+
+And the culprit is you. Yes, you, who thought you'd get rich by starting a new SaaS entirely "coded" wi
+
+
+
+---
+
+## Pending Enhancement (ALPHA104662, Score: 50)
+
+**Source:** 2026-03-17 | **URL:** r/SaaS
+**Added:** 2026-03-17T13:28:28-04:00
+
+Hit $60 MRR, then ghosted my own SaaS for a month. I’ve realized that building the product is only 20% of the work.  
+A few months ago, I launched [mybets.gg](http://mybets.gg), a bet tracker designed to help sports bettors manage their bankroll and log their bets easier.
+
+The Stats so far:
+
+* Total Revenue: $113
+* MRR: $60
+* Active Subs: 4
+* Total Visitors: 1,850
+* Organic Clicks (Google): 46
+
+Af
+
+
+
+---
+
+## Pending Enhancement (ALPHA104708, Score: 24)
+
+**Source:** @gregisenberg (daily scraper) | **URL:** https://x.com/gregisenberg/status/1853066574309011776
+**Added:** 2026-03-17T13:28:28-04:00
+
+this youtuber with 9m subs saw his wife struggle to find a quality wheelchair — $5k price tags, long waits, made in china
+
+so he built his own factory in the USA
+
+now, he sells these $1,000 custom wheelchairs, shipped in weeks
+
+we need more creator-led businesses like this.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104743, Score: 36)
+
+**Source:** @knoxtwts (daily scraper) | **URL:** https://x.com/knoxtwts/status/1986467721475764684
+**Added:** 2026-03-17T14:20:01-04:00
+
+most genius digital product arbitrage i've seen this year:
+
+guy found guru doing $50k/month with faceless accounts
+
+everyone told him he needed his own unique method, original frameworks, proprietary systems
+he ignored all of it
+
+just: copied their multi-account structure, hired same VA model, used their telegram funnel
+generated $31k first month
+
+no innovation. no original ideas. no reinventing w
+
+
+
+---
+
+## Pending Enhancement (ALPHA104785, Score: 24)
+
+**Source:** @wannercashcow (daily scraper) | **URL:** https://x.com/wannercashcow/status/1935328699534164416
+**Added:** 2026-03-17T14:20:01-04:00
+
+Google's VEO 3 is the most powerful AI video tool out right now.
+
+It costs $250/month, but I use it for FREE.
+
+And I turn that into faceless videos that ACTUALLY make money 
+
+
+
+---
+
+## Pending Enhancement (ALPHA104796, Score: 30)
+
+**Source:** @purpdevvv (daily scraper) | **URL:** https://x.com/purpdevvv/status/1985665775697281476
+**Added:** 2026-03-17T14:20:02-04:00
+
+my deploying hit rate is ~30%. 10 deploys, 3 do well
+
+that’s why i’ve launched over 8k tokens to negate those odds
+
+failure is more expected than success, but the fails cost 0
+
+work harder
+
+
+
+---
+
+## Pending Enhancement (ALPHA104797, Score: 24)
+
+**Source:** @purpdevvv (daily scraper) | **URL:** https://x.com/purpdevvv/status/1985319079218188616
+**Added:** 2026-03-17T14:20:02-04:00
+
+i've been spam deploying for 15 months and stupidly paid 
+
+snipers track and buy my deploys due to previous performance, if this scares you, please do not buy my coins
+
+we don't need ur $20 and fud in the comms
+
+see you at the next $1m runner
+
+
+
+---
+
+## Pending Enhancement (ALPHA104814, Score: 30)
+
+**Source:** @iamgdsa (daily scraper) | **URL:** https://x.com/iamgdsa/status/1831327864802676802
+**Added:** 2026-03-17T14:25:55-04:00
+
+Cal AI is now famously doing $400K+ MRR.
+
+They’re running a mix channel acquisition strategy (ads + influencers + other).
+
+I went to check their influencer marketing strategies.
+
+They’re running targeted influencer marketing with crafted videos aiming for ≈$5 CPM:
+
+
+
+---
+
+## Pending Enhancement (ALPHA104815, Score: 30)
+
+**Source:** @jasoncfox (daily scraper) | **URL:** https://x.com/jasoncfox/status/1894017952132854068
+**Added:** 2026-03-17T14:25:55-04:00
+
+I was on a call with a guy doing $600k/mo. 
+
+Almost every sentence started like this
+
+'I was reading this book'
+'I was listening to this podcast'
+'I was on a call with my mentor'
+
+Then he would explain how he was implementing what he learned
+
+And That's why he's at $600k/mo.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104827, Score: 24)
+
+**Source:** @codyschneiderxx (daily scraper) | **URL:** https://x.com/codyschneiderxx/status/1945166479667691616
+**Added:** 2026-03-17T14:25:55-04:00
+
+please i beg you, dont make an automation agency 
+
+make a productized service that has defined recurring deliverables that uses automations to do 90% of the work and can run at a 80% margin
+
+
+
+---
+
+## Pending Enhancement (ALPHA104838, Score: 30)
+
+**Source:** @Jonnyvandel (daily scraper) | **URL:** https://x.com/Jonnyvandel/status/1954210569826767205
+**Added:** 2026-03-17T14:25:55-04:00
+
+AI found the product.
+
+AI made the ads.
+
+AI posted 300+ vids/day
+
+AI makes $200k/mo.
+
+(ai slop strat) 
+
+like & comment “MASS” and i’ll send you the full strategy.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104839, Score: 30)
+
+**Source:** @Jonnyvandel (daily scraper) | **URL:** https://x.com/Jonnyvandel/status/1947027782053294538
+**Added:** 2026-03-17T14:25:55-04:00
+
+AI found the product.
+
+AI made the ads.
+
+AI posted 300+ vids/day.
+
+Makes $200k/mo.
+
+(this feels illegal)
+
+like & comment “Mass” and i’ll send you the full workflow.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104846, Score: 56)
+
+**Source:** @paoloanzn (daily scraper) | **URL:** https://x.com/paoloanzn/status/1932511483147301023
+**Added:** 2026-03-17T14:25:55-04:00
+
+I spent 47 hours building what might be the most profitable n8n workflow ever created
+
+it's generating $50K/month in "brainrot" videos while I sleep.
+
+these "Reddit story" videos are pulling 50M+ views consistently
+
+and I'm about to show you the exact money printer that faceless
+
+
+
+---
+
+## Pending Enhancement (ALPHA104847, Score: 30)
+
+**Source:** @yegormethod (daily scraper) | **URL:** https://x.com/yegormethod/status/1971968128092410150
+**Added:** 2026-03-17T14:25:55-04:00
+
+met this guy in dubai who helps people "restructure wealth internationally"
+
+drives a $3M pagani
+has 7 passports
+definitely not laundering money ()
+
+his system for making money untouchable:
+
+(posting this from a VPN)
+
+the "Dubai Stack":
+- dubai company (0% tax)
+- estonian
+
+
+
+---
+
+## Pending Enhancement (ALPHA104863, Score: 36)
+
+**Source:** @zephyr_z9 (daily scraper) | **URL:** https://x.com/zephyr_z9/status/1967341335649644905
+**Added:** 2026-03-17T14:25:55-04:00
+
+> be Adobe, 40-year-old PDF jockey
+> 2025, stock doing a perfect -33% swan dive
+> “We’ll pivot to AI” says exec on 7-figure retention bonus
+> can’t ship a model because legal says every pixel needs a 12-page EULA
+> Midjourney drops v7, makes our Firefly look like MS Paint with a hangover
+> OpenAI drops GPT-Image, Google drops nano-banana, both free
+> our response: “Please login with your Adobe ID,
+
+
+
+---
+
+## Pending Enhancement (ALPHA104889, Score: 36)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954632271631401249
+**Added:** 2026-03-17T14:25:56-04:00
+
+How to set up Claude code in 2 min (for complete beginners)
+
+You need 3 tools to change your business.
+
+1) Claude code builds
+2) GitHub stores
+3) Vercel hosts
+
+Costs $20.
+
+What a time!
+
+Thank you 
+@boringmarketer
+
+
+
+---
+
+## Pending Enhancement (ALPHA104898, Score: 24)
+
+**Source:** @TheShamdoo (daily scraper) | **URL:** https://x.com/TheShamdoo/status/1973576908081336679
+**Added:** 2026-03-17T14:25:56-04:00
+
+You guys seriously don’t get how cooked the economy is 
+
+Trying to go on a trip with like 15 college friends - it’s about $200 per person for the weekend
+
+Only THREE of them can afford it. THREE. The youth is living off their parents and it’s a house of cards waiting to topple
+
+
+
+---
+
+## Pending Enhancement (ALPHA104900, Score: 36)
+
+**Source:** @weswinder (daily scraper) | **URL:** https://x.com/weswinder/status/1874519704909345111
+**Added:** 2026-03-17T14:25:56-04:00
+
+If you're serious about building a SaaS and hitting $10k/month in 2025, here's the best AI-powered stack to get you there FAST:
+
+Core Development Tools 
+
+Cursor → The best AI coding IDE for productivity and debugging.
+Bolt → Build and deploy micro SaaS quickly.
+Lovable →
+
+
+
+---
+
+## Pending Enhancement (ALPHA104908, Score: 24)
+
+**Source:** @unusual_whales (daily scraper) | **URL:** https://x.com/unusual_whales/status/1600140756672401408
+**Added:** 2026-03-17T14:25:56-04:00
+
+Last week, the IRS has stated that Americans must report payments on Venmo, PayPal over $600.
+
+Last week, the Defense Department failed its fifth audit, unable to account  for more than 61% its assets, worth about  $1.8 trillion.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104917, Score: 42)
+
+**Source:** @DeItaone (daily scraper) | **URL:** https://x.com/DeItaone/status/1987503995661746428
+**Added:** 2026-03-17T14:30:00-04:00
+
+TRUMP ANNOUNCES $2,000 TARIFF DIVIDEND FOR AMERICANS
+
+President Donald Trump announced a $2,000 payment to most Americans, funded by U.S. tariff revenues. In a Truth Social post, he said the U.S. is collecting “trillions of dollars” in tariffs and will use the money to reduce national debt and reward citizens—excluding high-income earners. Trump called tariff critics “fools” and claimed the U.S. i
+
+
+
+---
+
+## Pending Enhancement (ALPHA104918, Score: 32)
+
+**Source:** @lookonchain (daily scraper) | **URL:** https://x.com/lookonchain/status/1851672470924988755
+**Added:** 2026-03-17T14:30:00-04:00
+
+MrBeast (
+@MrBeast
+), an influencer with 31.2M followers, has engaged in insider trading, misleading investors, and using his influence to pump tokens, only to dump them later.
+
+He has made over $23M in profits from various crypto projects:
+
+$11.45M from $SUPER
+$4.65M from $ERN
+$1.72M from $PMON
+$1.31M from $STAK
+$1M from $AIOZ
+And more...
+
+https://
+loock.io/blog/mrbeast-i
+nvestigation
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA104931, Score: 26)
+
+**Source:** @whale_alert (daily scraper) | **URL:** https://x.com/whale_alert/status/1397906624656908294
+**Added:** 2026-03-17T14:30:00-04:00
+
+   2021 is set to be a record shattering year for scammers! We have tracked $153 million USD in stolen #BTC so far and need your help to make blockchain safer for everyone. Report scams and cryptocurrency related crimes on our anti-scam website:
+
+
+
+---
+
+## Pending Enhancement (ALPHA104960, Score: 26)
+
+**Source:** @OptionsAction (daily scraper) | **URL:** https://x.com/OptionsAction/status/1235339223814852608
+**Added:** 2026-03-17T14:30:00-04:00
+
+One trader just put down a $2 million bet that the pain for oil is not over. 
+@Michael_Khouw
+ has the details.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104980, Score: 36)
+
+**Source:** @0xROAS (daily scraper) | **URL:** https://x.com/0xROAS/status/1982057501190152362
+**Added:** 2026-03-17T14:30:00-04:00
+
+here's how to do this in 2 minutes:
+
+- go to nano banana
+- write "A hyper-realistic 3D medical visualization of the [digestive system, etc...]
+- image to video with kling 2.5
+- that's it
+
+congrats you just saved $10k and 3 weeks of waiting on an animation.
+
+
+
+---
+
+## Pending Enhancement (ALPHA104981, Score: 20)
+
+**Source:** @0xROAS (daily scraper) | **URL:** https://x.com/0xROAS/status/1970869332734275971
+**Added:** 2026-03-17T14:30:00-04:00
+
+my AI UGC ads are PRINTING like crazy right now.
+
+i found a stupidly simple way to reverse engineer viral ads and pump out winners in minutes.
+
+i just made a step-by-step guide that breaks down the entire workflow.
+
+like + rt + reply 'workflow' and I’ll send it over
+
+(must be following so i can dm)
+
+
+
+---
+
+## Pending Enhancement (ALPHA104996, Score: 24)
+
+**Source:** @nicbstme (daily scraper) | **URL:** https://x.com/nicbstme/status/1902942035553685914
+**Added:** 2026-03-17T14:30:01-04:00
+
+I love it! I wish the underlying data was more accurate. I asked 
+@fintool
+ to identify data discrepancies and there are a lot: 
+- $NOW number of employees is 26,293 not 22,000
+- $NOW FY24 revenue is $10.9B not $8.5B
+- $NOW Subscription rev Q4 2024 is $2.8B not $2.96B
+- etc etc
+
+
+
+---
+
+## Pending Enhancement (ALPHA105005, Score: 20)
+
+**Source:** @dwarkesh_sp (daily scraper) | **URL:** https://x.com/dwarkesh_sp/status/1892245713452741059
+**Added:** 2026-03-17T14:30:01-04:00
+
+.
+@satyanadella
+ on:
+
+- why he doesn’t believe in AGI but does believe in 10% economic growth
+
+- Microsoft’s new topological qubit breakthrough and gaming world models
+
+- whether Office commoditizes LLMs or the other way around
+
+Links below. Enjoy!
+
+Timestamps
+0:00:00 - Intro
+0:05:48 - AI won't be winner-take-all
+0:16:02 - World economy growing by 10%
+0:22:23 - Decreasing price of intelligence
+0:3
+
+
+
+---
+
+## Pending Enhancement (ALPHA105009, Score: 36)
+
+**Source:** @saimagnate (daily scraper) | **URL:** https://x.com/saimagnate/status/1917814434753568786
+**Added:** 2026-03-17T14:30:01-04:00
+
+Everyone’s selling courses on how to start a faceless YouTube channel but 90% of them don’t tell you what actual tools people are using to run banger channels with a $0 budget in 2025.
+
+Here’s the full stack. Learn it. Use it. Print money.
+
+
+
+
+---
+
+## Pending Enhancement (ALPHA105014, Score: 32)
+
+**Source:** @zach_yadegari (daily scraper) | **URL:** https://x.com/zach_yadegari/status/1831539643549995317
+**Added:** 2026-03-17T14:30:01-04:00
+
+Cal AI just passed $1 million in revenue.
+
+Today was my first day of high school senior year.
+
+Was this destiny? 
+Did I will this into existence? 
+Luck?
+
+I don’t know.
+
+
+
+---
+
+## Pending Enhancement (ALPHA105021, Score: 26)
+
+**Source:** @Fortuze (daily scraper) | **URL:** https://x.com/Fortuze/status/1963985511699095755
+**Added:** 2026-03-17T14:30:01-04:00
+
+I have a Urus Performante, APs, Rolexes, Designer, Good House, Parents Retired. 
+
+A business making 20M a month in revenue
+
+And I still don’t consider myself a millionaire… 
+
+Then I realized that even a millionaire is a bum…
+
+
+
+---
+
+## Pending Enhancement (ALPHA105029, Score: 20)
+
+**Source:** @pounddz (daily scraper) | **URL:** https://x.com/pounddz/status/1979517055029100972
+**Added:** 2026-03-17T14:30:01-04:00
+
+How to actually go viral (slideshow edition) 
+
+Simply algorithm rewards how many slides the viewer gets through + amount of time spent on the slideshow. 
+
+You can achieve this by: 
+- having more slides 
+- having longer text on each slide 
+There is a sweet spot of about 5-7 slides (if your not taking advantage of a viral trend) 
+
+People are going to stay on your slide for either - value or entertai
+
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47416227, Score: 22)
+
+**Source:** HackerNews (top) | **URL:** https://github.com/peters/horizon
+**Added:** 2026-03-17T15:45:01-04:00
+
+Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust. Tabs, splits, and tmux work fine until you have several projects open with logs, tests, and long-running shells. I kept rebuilding context instead of resuming work. Horizon puts shells on an infinite canvas. You can arrange them into workspaces and reopen later with layout, scrollback, and history i
+

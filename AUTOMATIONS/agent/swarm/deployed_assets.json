@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-03-15T04:32:25",
-  "last_cycle": "asset_deployer_cycle_2026-03-15_0220",
+  "last_updated": "2026-03-17T12:50:00",
+  "last_cycle": "asset_deployer_cycle_2026-03-17_1250",
   "total_surge_deployments": 355,
-  "health_status": "ALL_HEALTHY",
+  "health_status": "MOSTLY_HEALTHY",
   "health_check_results": {
-    "checked": 25,
-    "passed": 25,
-    "failed": 0,
+    "checked": 40,
+    "passed": 38,
+    "failed": 2,
     "transient_504s": 0,
-    "last_checked": "2026-03-15T02:20:00",
+    "last_checked": "2026-03-17T12:50:00",
     "sites_verified": [
       "printmaxx.surge.sh",
       "mcp-marketplace.surge.sh",
@@ -37,9 +37,17 @@
       "saas-stack-audit-200.surge.sh"
     ]
   },
-  "redeployments_this_cycle": [],
+  "redeployments_this_cycle": ["invoiceforge.surge.sh", "klaviyo-alternative.surge.sh"],
   "new_deployments_this_cycle": [],
-  "cycle_notes": "Asset deployer cycle 2026-03-15 02:20. 25 sites health-checked across all categories (apps, streaks, tools, services, local biz, fiverr pages). All 25 returned HTTP 200. No new undeployed assets found since last cycle (4h ago). 812 social posts pending in CONTENT/social/posting_queue/ (BLOCKER: X Premium + Buffer needed). biomaxx-sdk54 and robloxmaxx remain non-web-deployable. Content queue at 812 files (~18K lines). Pending content includes algo change alerts, freelance proof posts.",
+  "issues_found": {
+    "scripture-streak-legal.surge.sh": "404 - source files missing, orphan deployment",
+    "fence-installation-and-repair-in-las-vegas-nv-outstanding-fe-las-vegas-nv.surge.sh": "000 - domain name too long for Surge DNS resolution"
+  },
+  "fixes_applied": {
+    "invoiceforge.surge.sh": "Redeployed - was returning 504, now 200",
+    "klaviyo-alternative.surge.sh": "Redeployed from LANDING/affiliate-pages/ - was returning 404, now 200"
+  },
+  "cycle_notes": "Asset deployer cycle 2026-03-17 12:50. 40 sites health-checked across all categories. 38 passed, 2 issues (1 orphan 404, 1 DNS too-long). Fixed invoiceforge (504->200) and klaviyo-alternative (404->200). No new undeployed assets found. All apps, streaks, comparison pages, tools, and local biz sites healthy.",
   "by_category": {
     "pwa_apps": {
       "count": 11,

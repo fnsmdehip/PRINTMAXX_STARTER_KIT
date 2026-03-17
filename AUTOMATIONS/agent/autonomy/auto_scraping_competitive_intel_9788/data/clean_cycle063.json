@@ -1,0 +1,669 @@
+{
+  "savings_streak": {
+    "niche": {
+      "id": "savings_streak",
+      "label": "Daily Savings Habit / Micro-Savings Streak",
+      "itunes_terms": [
+        "savings streak daily habit dedicated",
+        "save money daily habit app streak",
+        "micro savings habit tracker dedicated"
+      ],
+      "reddit_subs": [
+        "personalfinance",
+        "frugal",
+        "povertyfinance"
+      ],
+      "expected_demand": "personalfinance=18M+, frugal=2.5M+"
+    },
+    "analysis": {
+      "verdict": "BLUE_OCEAN",
+      "dedicated_apps": [],
+      "generic_filtered_count": 15,
+      "reddit_breakdown": {
+        "personalfinance": 21609081,
+        "frugal": 6728987,
+        "povertyfinance": 2606322
+      },
+      "total_community": 30944390,
+      "reasoning": "No dedicated niche app found. 15 generic trackers filtered out. Community: 30,944,390."
+    }
+  },
+  "budget_habit": {
+    "niche": {
+      "id": "budget_habit",
+      "label": "Daily Budget Review Habit Streak",
+      "itunes_terms": [
+        "daily budget habit streak dedicated",
+        "budgeting habit streak tracker app",
+        "budget check habit daily app"
+      ],
+      "reddit_subs": [
+        "personalfinance",
+        "ynab",
+        "budget"
+      ],
+      "expected_demand": "personalfinance=18M+, ynab=300K+"
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "YNAB",
+          "ratings_count": 59020,
+          "price": "Free",
+          "developer": "You Need A Budget LLC",
+          "version": "26.9"
+        },
+        {
+          "name": "Weekly: Budget Planner App",
+          "ratings_count": 3447,
+          "price": "Free",
+          "developer": "Weekly, LLC",
+          "version": "4.5.7"
+        },
+        {
+          "name": "Buddy: Budget Planner App",
+          "ratings_count": 8849,
+          "price": "Free",
+          "developer": "Buddy Budgeting AB",
+          "version": "13.29"
+        }
+      ],
+      "generic_filtered_count": 12,
+      "reddit_breakdown": {
+        "personalfinance": 21609081,
+        "ynab": 215850,
+        "budget": 145663
+      },
+      "total_community": 21970594,
+      "reasoning": "Strong dedicated app (YNAB, 59,020 ratings). Market occupied. Community: 21,970,594."
+    }
+  },
+  "debt_payoff_streak": {
+    "niche": {
+      "id": "debt_payoff_streak",
+      "label": "Debt Snowball / Debt Payoff Streak Tracker",
+      "itunes_terms": [
+        "debt payoff streak habit tracker dedicated",
+        "debt free journey streak app",
+        "debt snowball habit app dedicated"
+      ],
+      "reddit_subs": [
+        "debtfree",
+        "personalfinance",
+        "Fire"
+      ],
+      "expected_demand": "debtfree=200K+, personalfinance=18M+"
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "YNAB",
+          "ratings_count": 59020,
+          "price": "Free",
+          "developer": "You Need A Budget LLC",
+          "version": "26.9"
+        },
+        {
+          "name": "Bill Tracker Pro",
+          "ratings_count": 4408,
+          "price": "Free",
+          "developer": "Bill Tracker Pro, Inc.",
+          "version": "4.1.55"
+        },
+        {
+          "name": "Mission Lane Card",
+          "ratings_count": 454947,
+          "price": "Free",
+          "developer": "Mission Lane LLC",
+          "version": "12.2.0"
+        },
+        {
+          "name": "Experian\u00ae",
+          "ratings_count": 2605755,
+          "price": "Free",
+          "developer": "Experian",
+          "version": "4.2.11"
+        },
+        {
+          "name": "Cleo AI: Smart Money Manager",
+          "ratings_count": 215294,
+          "price": "Free",
+          "developer": "Cleo AI Ltd",
+          "version": "3.42.0"
+        }
+      ],
+      "generic_filtered_count": 10,
+      "reddit_breakdown": {
+        "debtfree": 1719775,
+        "personalfinance": 21609081,
+        "Fire": 891140
+      },
+      "total_community": 24219996,
+      "reasoning": "Strong dedicated app (YNAB, 59,020 ratings). Market occupied. Community: 24,219,996."
+    }
+  },
+  "sobriety_streak": {
+    "niche": {
+      "id": "sobriety_streak",
+      "label": "Sobriety / Alcohol-Free Streak Tracker",
+      "itunes_terms": [
+        "sobriety streak counter dedicated app",
+        "sober streak tracker dedicated",
+        "alcohol free streak app dedicated"
+      ],
+      "reddit_subs": [
+        "stopdrinking",
+        "alcoholism",
+        "sobriety"
+      ],
+      "expected_demand": "stopdrinking=500K+, sobriety=200K+"
+    },
+    "analysis": {
+      "verdict": "SOFT_COMPETITION",
+      "dedicated_apps": [
+        {
+          "name": "Sober Time - Sobriety Counter",
+          "ratings_count": 36083,
+          "price": "Free",
+          "developer": "Sociosoftware LLC",
+          "version": "4.3.03"
+        },
+        {
+          "name": "I Am Sober",
+          "ratings_count": 173555,
+          "price": "Free",
+          "developer": "I Am Sober LLC",
+          "version": "8.5.5"
+        },
+        {
+          "name": "Reframe: Drink Less & Thrive",
+          "ratings_count": 38846,
+          "price": "Free",
+          "developer": "Glucobit Inc.",
+          "version": "3.9.35"
+        },
+        {
+          "name": "Nomo -  Sobriety Clocks",
+          "ratings_count": 15359,
+          "price": "Free",
+          "developer": "Parker Stech",
+          "version": "7.7.409"
+        },
+        {
+          "name": "Days - Sobriety Counter",
+          "ratings_count": 900,
+          "price": "Free",
+          "developer": "Kodeon, Inc.",
+          "version": "1.7.5"
+        }
+      ],
+      "generic_filtered_count": 4,
+      "reddit_breakdown": {
+        "stopdrinking": 652949,
+        "alcoholism": 91669,
+        "sobriety": 0
+      },
+      "total_community": 744618,
+      "reasoning": "Moderate competition (Sober Time - Sobriety Counter, 36,083 ratings). Undercut with UX + price. Community: 744,618."
+    }
+  },
+  "anxiety_habit": {
+    "niche": {
+      "id": "anxiety_habit",
+      "label": "Daily Anxiety Relief / Grounding Habit Streak",
+      "itunes_terms": [
+        "anxiety relief habit streak daily dedicated",
+        "anxiety grounding habit tracker app dedicated",
+        "daily calm anxiety streak dedicated"
+      ],
+      "reddit_subs": [
+        "Anxiety",
+        "mentalhealth",
+        "mindfulness"
+      ],
+      "expected_demand": "Anxiety=1.2M+, mentalhealth=1M+"
+    },
+    "analysis": {
+      "verdict": "SOFT_COMPETITION",
+      "dedicated_apps": [
+        {
+          "name": "Unwinding Anxiety",
+          "ratings_count": 4771,
+          "price": "Free",
+          "developer": "Sharecare, Inc.",
+          "version": "6.24.1"
+        },
+        {
+          "name": "Dare: Panic & Anxiety Relief",
+          "ratings_count": 6182,
+          "price": "Free",
+          "developer": "BMD Publishing Ltd",
+          "version": "17.7.1"
+        },
+        {
+          "name": "Simple Habit Sleep, Meditation",
+          "ratings_count": 77986,
+          "price": "Free",
+          "developer": "INGENIO, LLC",
+          "version": "6.1.1"
+        },
+        {
+          "name": "OCD.app - Self help + Therapy",
+          "ratings_count": 3338,
+          "price": "Free",
+          "developer": "Ggtude Ltd",
+          "version": "2.10.12"
+        },
+        {
+          "name": "Rootd: Panic Attacks & Anxiety",
+          "ratings_count": 10008,
+          "price": "Free",
+          "developer": "Simply Rooted Media Inc.",
+          "version": "3.1.37"
+        }
+      ],
+      "generic_filtered_count": 12,
+      "reddit_breakdown": {
+        "Anxiety": 840067,
+        "mentalhealth": 633529,
+        "mindfulness": 1469803
+      },
+      "total_community": 2943399,
+      "reasoning": "Weak dedicated app (Unwinding Anxiety, 4,771 ratings). Beatable with quality build. Community: 2,943,399."
+    }
+  },
+  "therapist_homework_streak": {
+    "niche": {
+      "id": "therapist_homework_streak",
+      "label": "Therapy Homework / CBT Habit Streak",
+      "itunes_terms": [
+        "therapy homework habit streak dedicated",
+        "CBT habit tracker streak dedicated",
+        "cognitive behavioral therapy habit app"
+      ],
+      "reddit_subs": [
+        "therapy",
+        "DBT",
+        "CBT"
+      ],
+      "expected_demand": "therapy=400K+, mentalhealth=1M+"
+    },
+    "analysis": {
+      "verdict": "SOFT_COMPETITION",
+      "dedicated_apps": [
+        {
+          "name": "Gentler Streak Workout Tracker",
+          "ratings_count": 8760,
+          "price": "Free",
+          "developer": "Gentler Stories LLC",
+          "version": "5.11.3"
+        }
+      ],
+      "generic_filtered_count": 17,
+      "reddit_breakdown": {
+        "therapy": 162962,
+        "DBT": 3174,
+        "CBT": 38235
+      },
+      "total_community": 204371,
+      "reasoning": "Moderate competition (Gentler Streak Workout Tracker, 8,760 ratings). Undercut with UX + price. Community: 204,371."
+    }
+  },
+  "sleep_streak": {
+    "niche": {
+      "id": "sleep_streak",
+      "label": "Sleep Consistency / Sleep Hygiene Streak",
+      "itunes_terms": [
+        "sleep consistency streak habit dedicated",
+        "sleep hygiene habit streak app dedicated",
+        "bedtime habit streak tracker dedicated"
+      ],
+      "reddit_subs": [
+        "sleep",
+        "insomnia",
+        "sleephacks"
+      ],
+      "expected_demand": "sleep=800K+, insomnia=500K+"
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "RISE: Sleep Tracker",
+          "ratings_count": 54765,
+          "price": "Free",
+          "developer": "Rise Science Inc",
+          "version": "1.575.0"
+        },
+        {
+          "name": "Sleep Monitor: Sleep Tracker",
+          "ratings_count": 5006,
+          "price": "Free",
+          "developer": "Xi'an Monster Software Technology Co., Ltd",
+          "version": "2.7.1"
+        },
+        {
+          "name": "Avrora Sleep Sounds & Stories",
+          "ratings_count": 17926,
+          "price": "Free",
+          "developer": "ONE ELEVEN HOLDINGS, LLC",
+          "version": "3.42.2"
+        },
+        {
+          "name": "Pillow: Sleep Tracker",
+          "ratings_count": 95341,
+          "price": "Free",
+          "developer": "Neybox Digital Ltd.",
+          "version": "6.2.8"
+        },
+        {
+          "name": "Sleep Cycle - Tracker & Sounds",
+          "ratings_count": 21207,
+          "price": "Free",
+          "developer": "Sleep Cycle AB",
+          "version": "6.26.9"
+        }
+      ],
+      "generic_filtered_count": 10,
+      "reddit_breakdown": {
+        "sleep": 671573,
+        "insomnia": 179547,
+        "sleephacks": 33
+      },
+      "total_community": 851153,
+      "reasoning": "Strong dedicated app (RISE: Sleep Tracker, 54,765 ratings). Market occupied. Community: 851,153."
+    }
+  },
+  "no_screen_bedtime_streak": {
+    "niche": {
+      "id": "no_screen_bedtime_streak",
+      "label": "No Screens Before Bed / Digital Sunset Streak",
+      "itunes_terms": [
+        "no screen bedtime habit streak dedicated",
+        "digital sunset habit streak tracker dedicated",
+        "screen free bedtime streak app"
+      ],
+      "reddit_subs": [
+        "nosurf",
+        "digitalminimalism",
+        "sleep"
+      ],
+      "expected_demand": "nosurf=200K+, digitalminimalism=100K+"
+    },
+    "analysis": {
+      "verdict": "SOFT_COMPETITION",
+      "dedicated_apps": [
+        {
+          "name": "BePresent: Screen Time Control",
+          "ratings_count": 39660,
+          "price": "Free",
+          "developer": "Screen Detox Inc",
+          "version": "0.18.62"
+        },
+        {
+          "name": "Habit Nest: Planner & Tracker",
+          "ratings_count": 1528,
+          "price": "Free",
+          "developer": "Habit Nest",
+          "version": "4.2.6"
+        }
+      ],
+      "generic_filtered_count": 16,
+      "reddit_breakdown": {
+        "nosurf": 292795,
+        "digitalminimalism": 225366,
+        "sleep": 671573
+      },
+      "total_community": 1189734,
+      "reasoning": "Moderate competition (BePresent: Screen Time Control, 39,660 ratings). Undercut with UX + price. Community: 1,189,734."
+    }
+  },
+  "phone_detox_streak": {
+    "niche": {
+      "id": "phone_detox_streak",
+      "label": "Phone / Social Media Detox Streak",
+      "itunes_terms": [
+        "phone detox streak habit dedicated",
+        "social media detox streak app dedicated",
+        "screen time detox habit streak"
+      ],
+      "reddit_subs": [
+        "nosurf",
+        "digitalminimalism",
+        "StopSpeending"
+      ],
+      "expected_demand": "nosurf=200K+, digitalminimalism=100K+"
+    },
+    "analysis": {
+      "verdict": "SOFT_COMPETITION",
+      "dedicated_apps": [
+        {
+          "name": "one sec | screen time + focus",
+          "ratings_count": 22305,
+          "price": "Free",
+          "developer": "riedel.wtf apps S.L.",
+          "version": "5.2"
+        },
+        {
+          "name": "BePresent: Screen Time Control",
+          "ratings_count": 39660,
+          "price": "Free",
+          "developer": "Screen Detox Inc",
+          "version": "0.18.62"
+        },
+        {
+          "name": "Dumb Phone (dp)",
+          "ratings_count": 2786,
+          "price": "Free",
+          "developer": "Michael Tigas",
+          "version": "1.11.7"
+        },
+        {
+          "name": "I Am Sober",
+          "ratings_count": 173555,
+          "price": "Free",
+          "developer": "I Am Sober LLC",
+          "version": "8.5.5"
+        },
+        {
+          "name": "Roots: Screen Time Control",
+          "ratings_count": 1527,
+          "price": "Free",
+          "developer": "MWM",
+          "version": "2.15"
+        }
+      ],
+      "generic_filtered_count": 7,
+      "reddit_breakdown": {
+        "nosurf": 292795,
+        "digitalminimalism": 225366,
+        "StopSpeending": 0
+      },
+      "total_community": 518161,
+      "reasoning": "Moderate competition (one sec | screen time + focus, 22,305 ratings). Undercut with UX + price. Community: 518,161."
+    }
+  },
+  "morning_routine_streak": {
+    "niche": {
+      "id": "morning_routine_streak",
+      "label": "Morning Routine Streak Tracker (custom flow)",
+      "itunes_terms": [
+        "morning routine streak tracker dedicated app",
+        "custom morning routine habit streak app",
+        "daily morning ritual streak dedicated"
+      ],
+      "reddit_subs": [
+        "morningRoutine",
+        "selfimprovement",
+        "productivity"
+      ],
+      "expected_demand": "selfimprovement=2M+, productivity=1.5M+"
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Strong Workout Tracker Gym Log",
+          "ratings_count": 108337,
+          "price": "Free",
+          "developer": "Strong Fitness PTE Limited",
+          "version": "6.2.9"
+        },
+        {
+          "name": "RepCount - Gym Workout Tracker",
+          "ratings_count": 12053,
+          "price": "Free",
+          "developer": "Siper Apps AB",
+          "version": "10.1.0"
+        },
+        {
+          "name": "Map My Fitness Workout Tracker",
+          "ratings_count": 76028,
+          "price": "Free",
+          "developer": "Outside Television Inc",
+          "version": "26.4.0"
+        },
+        {
+          "name": "Hevy - Workout Tracker Gym Log",
+          "ratings_count": 61369,
+          "price": "Free",
+          "developer": "Hevy Studios S.L.",
+          "version": "3.0.3"
+        }
+      ],
+      "generic_filtered_count": 13,
+      "reddit_breakdown": {
+        "morningRoutine": 1024,
+        "selfimprovement": 2518413,
+        "productivity": 4151011
+      },
+      "total_community": 6670448,
+      "reasoning": "Strong dedicated app (Strong Workout Tracker Gym Log, 108,337 ratings). Market occupied. Community: 6,670,448."
+    }
+  },
+  "walking_streak": {
+    "niche": {
+      "id": "walking_streak",
+      "label": "Daily Walking Streak (10K steps / walk daily)",
+      "itunes_terms": [
+        "walking streak habit daily dedicated app",
+        "walk every day streak dedicated",
+        "daily steps streak habit tracker dedicated"
+      ],
+      "reddit_subs": [
+        "walking",
+        "loseit",
+        "10000steps"
+      ],
+      "expected_demand": "walking=400K+, loseit=2.2M+"
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Map My Walk: Walking Tracker",
+          "ratings_count": 463762,
+          "price": "Free",
+          "developer": "Outside Television Inc",
+          "version": "26.3.0"
+        },
+        {
+          "name": "WeWard - Walking Rewards App",
+          "ratings_count": 75119,
+          "price": "Free",
+          "developer": "WEWARD",
+          "version": "8.11.0"
+        },
+        {
+          "name": "Moneywalk Step Counter&Rewards",
+          "ratings_count": 18060,
+          "price": "Free",
+          "developer": "Gravity Labs Co., Ltd.",
+          "version": "1.104.0"
+        },
+        {
+          "name": "Scrambly: Rewards for Steps",
+          "ratings_count": 38891,
+          "price": "Free",
+          "developer": "Scrambly",
+          "version": "0.5.5"
+        },
+        {
+          "name": "Pacer Pedometer Step Counter",
+          "ratings_count": 298641,
+          "price": "Free",
+          "developer": "Pacer Health, Inc",
+          "version": "11.2.1"
+        }
+      ],
+      "generic_filtered_count": 8,
+      "reddit_breakdown": {
+        "walking": 217934,
+        "loseit": 4128514,
+        "10000steps": 241
+      },
+      "total_community": 4346689,
+      "reasoning": "Strong dedicated app (Map My Walk: Walking Tracker, 463,762 ratings). Market occupied. Community: 4,346,689."
+    }
+  },
+  "hydration_streak": {
+    "niche": {
+      "id": "hydration_streak",
+      "label": "Daily Water Intake / Hydration Streak",
+      "itunes_terms": [
+        "water intake streak habit tracker dedicated",
+        "hydration streak daily habit app dedicated",
+        "drink water habit streak dedicated"
+      ],
+      "reddit_subs": [
+        "water",
+        "nutrition",
+        "loseit"
+      ],
+      "expected_demand": "loseit=2.2M+, nutrition=600K+"
+    },
+    "analysis": {
+      "verdict": "OCCUPIED",
+      "dedicated_apps": [
+        {
+          "name": "Water tracker Waterllama",
+          "ratings_count": 148800,
+          "price": "Free",
+          "developer": "Llama Luna Apps",
+          "version": "1.92.4"
+        },
+        {
+          "name": "Water Tracker by WaterMinder\u00ae",
+          "ratings_count": 32873,
+          "price": "Free",
+          "developer": "Funn Media, LLC",
+          "version": "7.2.9"
+        },
+        {
+          "name": "HidrateSpark Water Tracker",
+          "ratings_count": 18953,
+          "price": "Free",
+          "developer": "Hidrate Inc.",
+          "version": "4.8.2"
+        },
+        {
+          "name": "Drink Water Reminder N Tracker",
+          "ratings_count": 151935,
+          "price": "Free",
+          "developer": "Phoenix Games LLP",
+          "version": "6.1"
+        }
+      ],
+      "generic_filtered_count": 10,
+      "reddit_breakdown": {
+        "water": 71955,
+        "nutrition": 5878300,
+        "loseit": 4128514
+      },
+      "total_community": 10078769,
+      "reasoning": "Strong dedicated app (Water tracker Waterllama, 148,800 ratings). Market occupied. Community: 10,078,769."
+    }
+  }
+}

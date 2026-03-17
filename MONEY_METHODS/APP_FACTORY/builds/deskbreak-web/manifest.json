@@ -1,0 +1,40 @@
+{
+  "name": "DeskBreak - Desk Wellness Timer",
+  "short_name": "DeskBreak",
+  "description": "Automated desk break reminders for remote workers. Eye breaks, posture checks, hydration, and movement timers. Free PWA — works offline.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait",
+  "categories": ["health", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230a0a0a' width='512' height='512' rx='100'/><text y='360' x='256' text-anchor='middle' font-size='280'>🖥️</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230a0a0a' width='192' height='192' rx='40'/><text y='135' x='96' text-anchor='middle' font-size='105'>🖥️</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "DeskBreak timer dashboard",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Focus Session",
+      "short_name": "Start",
+      "description": "Start your desk break timer",
+      "url": "/?action=start"
+    }
+  ]
+}

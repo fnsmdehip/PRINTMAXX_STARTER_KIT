@@ -25,7 +25,7 @@ This is the single source of truth for every product and listing in the PRINTMAX
 
 | Platform | Products Ready | Status | Est. Revenue/mo | Account Created? |
 |----------|---------------|--------|-----------------|------------------|
-| Gumroad | 14 products + 3 bundles | READY | $900-3,500 | NO |
+| Gumroad | 15 products + 3 bundles | READY | $970-3,800 | NO |
 | Whop | 8 products | READY | $200-800 | NO |
 | Etsy | 20 listings | READY | $300-1,200 | NO |
 | Redbubble | 20 POD designs | READY | $100-500 | NO |
@@ -35,7 +35,7 @@ This is the single source of truth for every product and listing in the PRINTMAX
 | TeeSpring | 10 POD designs | READY (reuse Redbubble) | $50-200 | NO |
 | eBay/Mercari | 10 arb products | DRAFT (need sourcing) | $200-1,000 | NO |
 | **SYSTEM PRODUCTS** | 20 meta-products | NEEDS_CLEANUP | $1,000-5,000 | N/A |
-| **TOTAL** | **131+ listings** | | **$6,850-22,500/mo** | |
+| **TOTAL** | **132+ listings** | | **$6,920-22,800/mo** | |
 
 **BLOCKER: ALL platforms require account creation (Stripe first). See PRODUCTS/ECOM_LISTINGS_READY/ACCOUNT_NEEDS.md or PRODUCTS/UPLOAD_CHECKLIST.md**
 

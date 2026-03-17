@@ -22,7 +22,7 @@ FREE: 5 AI Prompts ($0)
          ↓
 ENTRY: Funnel Teardown Guide ($7) | Solopreneur Tech Stack ($17) | Viral Tweet Templates ($19)
          ↓
-CORE: Cold Email Playbook ($27) | Twitter Growth Playbook ($27) | 73 Subject Lines ($29)
+CORE: Cold Email Playbook ($27) | Twitter Growth Playbook ($27) | 73 Subject Lines ($29) | Reddit Money Machine ($29)
          ↓
 PREMIUM: Local Biz Cold Email Pack ($39) | AI Automation Toolkit ($47) | Vibe Coding Playbook ($47)
          ↓
@@ -154,6 +154,19 @@ BUNDLES: Cold Outreach Stack ($47) | Full Automation Bundle ($97) | Everything B
 **Revenue potential:** $675–2,700/mo at 25–100 sales
 **Upsell:** AI Content Farm Blueprint ($47)
 **Tags:** Twitter growth, X algorithm, tweet templates, monetization, solopreneur Twitter, reply strategy
+
+---
+
+### 11B. The Reddit Money Machine — $29
+**File:** `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/REDDIT_MONEY_MACHINE.md`
+**Listing:** `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/GUMROAD_LISTING.md`
+**Cover:** `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/COVER_SPEC.md`
+**Status:** `NEEDS_COVER` + `NEEDS_PDF` (content complete, needs PDF export + cover)
+**Revenue potential:** $725–2,900/mo at 25–100 sales
+**Why:** Reddit is the #1 underused free traffic channel. 41-subreddit hit list, 3-layer comment framework, launch templates. Complements Twitter and Cold Email playbooks for a "3-Channel Acquisition Bundle."
+**Upsell:** Cold Email Playbook ($27) → Twitter Growth Playbook ($27) → 3-Channel Bundle ($67)
+**Tags:** reddit marketing, reddit growth, customer acquisition, organic traffic, solopreneur, free traffic, lead generation, content marketing
+**Launch content:** `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/LAUNCH_CONTENT.md`
 
 ---
 
@@ -296,7 +309,8 @@ wkhtmltopdf pdfs/ai_automation_starter_kit.html pdfs/ai_automation_starter_kit.p
 | Full Automation Bundle | AI Automation Toolkit + AI Automation Starter Kit + Claude Code Bible | $97 | $1,940–7,760/mo |
 | Local Biz Operator | Local Biz Lead Machine + Local Biz Client Machine + Cold Email Playbook | $97 | $1,940–7,760/mo |
 | Twitter Domination | Twitter Growth Playbook + 50 Viral Tweet Templates + AI Content Farm Blueprint | $67 | $1,340–5,360/mo |
-| Everything Bundle | Top 8 core products | $197 | $985–7,880/mo |
+| 3-Channel Acquisition | Reddit Money Machine + Cold Email Playbook + Twitter Growth Playbook | $67 | $1,340–5,360/mo |
+| Everything Bundle | Top 9 core products (incl. Reddit) | $197 | $985–7,880/mo |
 
 ---
 

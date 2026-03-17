@@ -471,7 +471,6 @@ EXPANDED_SUBREDDITS = [
     "productivity", "Fitness", "sleep", "intermittentfasting",
     "MuslimLounge", "NoFap",
     # Content / creator
-    "NewTubers", "TikTokCreators",
     # Finance / crypto edge
     "cryptomarkets", "wallstreetbets",
     # AI / tools
