@@ -552,3 +552,25 @@ I sold my $0 revenue SaaS side project for $4.5k
 
 [ACQUISITION] From side project to $X MRR: lessons from building a Telegram-first B2B platform in a niche nobody talks about
 
+
+
+---
+
+## Pending Enhancement (ALPHA102799, Score: 41)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rvj201/sportsfluxlivefrom_side_project_to_micro_saas/
+**Added:** 2026-03-16T16:19:22-04:00
+
+[ACQUISITION] SportsFlux.live—from side project to micro SaaS? Revenue models welcome [rev: $$45/mo]
+
+
+
+---
+
+## Pending Enhancement (ALPHA102806, Score: 24)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47378448
+**Added:** 2026-03-16T16:19:22-04:00
+
+[ACQUISITION] How not to fork an open source project
+

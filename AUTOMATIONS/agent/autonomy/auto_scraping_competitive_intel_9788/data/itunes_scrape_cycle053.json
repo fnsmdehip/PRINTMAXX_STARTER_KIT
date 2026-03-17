@@ -1,0 +1,649 @@
+{
+  "cycle": 53,
+  "scraped_at": "2026-03-16T16:52:24.900520",
+  "itunes_results": {
+    "fitness_streak": {
+      "term": "fitness streak habit tracker",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.79623,
+          "rating_count": 137468,
+          "genre": "Productivity",
+          "bundle_id": "com.davetech.habit",
+          "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.81074,
+          "rating_count": 12649,
+          "genre": "Productivity",
+          "bundle_id": "stoope.Grit",
+          "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.5968,
+          "rating_count": 91128,
+          "genre": "Productivity",
+          "bundle_id": "com.beHappy.Productive",
+          "url": "https://apps.apple.com/us/app/productive-habit-tracker/id983826477?uo=4"
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.59776,
+          "rating_count": 6720,
+          "genre": "Health & Fitness",
+          "bundle_id": "co.vuvo.habitify",
+          "url": "https://apps.apple.com/us/app/habitify-habit-tracker/id1111447047?uo=4"
+        },
+        {
+          "name": "Habit-Bull: Daily Goal Planner",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.66728,
+          "rating_count": 8088,
+          "genre": "Productivity",
+          "bundle_id": "oristats.HabitBull",
+          "url": "https://apps.apple.com/us/app/habit-bull-daily-goal-planner/id1041482672?uo=4"
+        }
+      ]
+    },
+    "gratitude_journal": {
+      "term": "gratitude journal paid app",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Gratitude: Self-Care Journal",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.88316,
+          "rating_count": 44727,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.northstar.gratitude",
+          "url": "https://apps.apple.com/us/app/gratitude-self-care-journal/id1372575227?uo=4"
+        },
+        {
+          "name": "5 Minute Journal\u30fbDaily Diary",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.75892,
+          "rating_count": 17210,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.intelligentchange.Five-Minute-Journal",
+          "url": "https://apps.apple.com/us/app/5-minute-journal-daily-diary/id1062945251?uo=4"
+        },
+        {
+          "name": "Gratitude Plus \u2013 Journal",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.86507,
+          "rating_count": 13911,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.RedwheelApps.GratitudePlus",
+          "url": "https://apps.apple.com/us/app/gratitude-plus-journal/id1447851477?uo=4"
+        },
+        {
+          "name": "Gratitude Journal - The Life-changing App",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.68771,
+          "rating_count": 570,
+          "genre": "Lifestyle",
+          "bundle_id": "com.iphonemofo.gratipad",
+          "url": "https://apps.apple.com/us/app/gratitude-journal-the-life-changing-app/id402667476?uo=4"
+        },
+        {
+          "name": "Reflectly - Journal & AI Diary",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.56702,
+          "rating_count": 81738,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.reflectly.app",
+          "url": "https://apps.apple.com/us/app/reflectly-journal-ai-diary/id1241229134?uo=4"
+        }
+      ]
+    },
+    "habit_coach": {
+      "term": "habit coach app paid",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.45233,
+          "rating_count": 87139,
+          "genre": "Health & Fitness",
+          "bundle_id": "co.thefabulous.app",
+          "url": "https://apps.apple.com/us/app/fabulous-daily-habit-tracker/id1203637303?uo=4"
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.5968,
+          "rating_count": 91128,
+          "genre": "Productivity",
+          "bundle_id": "com.beHappy.Productive",
+          "url": "https://apps.apple.com/us/app/productive-habit-tracker/id983826477?uo=4"
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.81074,
+          "rating_count": 12649,
+          "genre": "Productivity",
+          "bundle_id": "stoope.Grit",
+          "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.59776,
+          "rating_count": 6720,
+          "genre": "Health & Fitness",
+          "bundle_id": "co.vuvo.habitify",
+          "url": "https://apps.apple.com/us/app/habitify-habit-tracker/id1111447047?uo=4"
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.78843,
+          "rating_count": 18807,
+          "genre": "Productivity",
+          "bundle_id": "com.puresignal.strides",
+          "url": "https://apps.apple.com/us/app/strides-habit-tracker-goals/id672401817?uo=4"
+        }
+      ]
+    },
+    "breathwork_streak": {
+      "term": "breathwork streak tracker",
+      "total_results": 5,
+      "paid_apps": [
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "is_paid": true,
+          "price_str": "$5.99",
+          "rating": 4.81569,
+          "rating_count": 27340,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.streaksapp.streak",
+          "url": "https://apps.apple.com/us/app/streaks/id963034692?uo=4"
+        }
+      ],
+      "paid_count": 1,
+      "all_apps": [
+        {
+          "name": "FivePointFive: Breathwork",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.76639,
+          "rating_count": 1708,
+          "genre": "Health & Fitness",
+          "bundle_id": "ios5p5.FivePointFive",
+          "url": "https://apps.apple.com/us/app/fivepointfive-breathwork/id6469338436?uo=4"
+        },
+        {
+          "name": "Streaks",
+          "price": 5.99,
+          "is_paid": true,
+          "price_str": "$5.99",
+          "rating": 4.81569,
+          "rating_count": 27340,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.streaksapp.streak",
+          "url": "https://apps.apple.com/us/app/streaks/id963034692?uo=4"
+        },
+        {
+          "name": "Strides: Habit Tracker + Goals",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.78843,
+          "rating_count": 18807,
+          "genre": "Productivity",
+          "bundle_id": "com.puresignal.strides",
+          "url": "https://apps.apple.com/us/app/strides-habit-tracker-goals/id672401817?uo=4"
+        },
+        {
+          "name": "Gentler Streak Workout Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.71541,
+          "rating_count": 8760,
+          "genre": "Health & Fitness",
+          "bundle_id": "app.gentler.activity",
+          "url": "https://apps.apple.com/us/app/gentler-streak-workout-tracker/id1576857102?uo=4"
+        },
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.81074,
+          "rating_count": 12649,
+          "genre": "Productivity",
+          "bundle_id": "stoope.Grit",
+          "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+        }
+      ]
+    },
+    "manifestation_tracker": {
+      "term": "manifestation habit tracker",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.81074,
+          "rating_count": 12649,
+          "genre": "Productivity",
+          "bundle_id": "stoope.Grit",
+          "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+        },
+        {
+          "name": "Productive - Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.5968,
+          "rating_count": 91128,
+          "genre": "Productivity",
+          "bundle_id": "com.beHappy.Productive",
+          "url": "https://apps.apple.com/us/app/productive-habit-tracker/id983826477?uo=4"
+        },
+        {
+          "name": "Fabulous: Daily Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.45233,
+          "rating_count": 87139,
+          "genre": "Health & Fitness",
+          "bundle_id": "co.thefabulous.app",
+          "url": "https://apps.apple.com/us/app/fabulous-daily-habit-tracker/id1203637303?uo=4"
+        },
+        {
+          "name": "Habitify: Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.59776,
+          "rating_count": 6720,
+          "genre": "Health & Fitness",
+          "bundle_id": "co.vuvo.habitify",
+          "url": "https://apps.apple.com/us/app/habitify-habit-tracker/id1111447047?uo=4"
+        },
+        {
+          "name": "Habit Rabbit: Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.66918,
+          "rating_count": 7947,
+          "genre": "Productivity",
+          "bundle_id": "com.superbyte.habitrabbit",
+          "url": "https://apps.apple.com/us/app/habit-rabbit-habit-tracker/id1522121879?uo=4"
+        }
+      ]
+    },
+    "tarot_streak": {
+      "term": "tarot daily habit streak",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Witch - AI Tarot Card Reading",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.78172,
+          "rating_count": 5525,
+          "genre": "Entertainment",
+          "bundle_id": "dozagac.Witch",
+          "url": "https://apps.apple.com/us/app/witch-ai-tarot-card-reading/id6446032714?uo=4"
+        },
+        {
+          "name": "Daily Tarot Card Reading Aura",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.62779,
+          "rating_count": 14769,
+          "genre": "Entertainment",
+          "bundle_id": "everydayapps.tarot",
+          "url": "https://apps.apple.com/us/app/daily-tarot-card-reading-aura/id1444277220?uo=4"
+        },
+        {
+          "name": "Tarot Card Reading - Tarotoo",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.68152,
+          "rating_count": 763,
+          "genre": "Entertainment",
+          "bundle_id": "app.tarotoo.com",
+          "url": "https://apps.apple.com/us/app/tarot-card-reading-tarotoo/id6736652947?uo=4"
+        },
+        {
+          "name": "Labyrinthos Tarot Reading",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.91216,
+          "rating_count": 22451,
+          "genre": "Entertainment",
+          "bundle_id": "com.labyrinthos.app",
+          "url": "https://apps.apple.com/us/app/labyrinthos-tarot-reading/id1155180220?uo=4"
+        },
+        {
+          "name": "Mystic Mondays",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.1984,
+          "rating_count": 1250,
+          "genre": "Lifestyle",
+          "bundle_id": "com.mysticmondays.tarot",
+          "url": "https://apps.apple.com/us/app/mystic-mondays/id1233064572?uo=4"
+        }
+      ]
+    },
+    "meditation_streak": {
+      "term": "meditation streak paid",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Insight Timer\u2013Meditate & Sleep",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.8953,
+          "rating_count": 436510,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.spotlightsix.zentimer",
+          "url": "https://apps.apple.com/us/app/insight-timer-meditate-sleep/id337472899?uo=4"
+        },
+        {
+          "name": "Unplug: Meditation",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.85103,
+          "rating_count": 6243,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.vhx.unplugmeditation",
+          "url": "https://apps.apple.com/us/app/unplug-meditation/id1188080269?uo=4"
+        },
+        {
+          "name": "Meditation & Sleep by Verv",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.56232,
+          "rating_count": 5223,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.grinasys.meditations",
+          "url": "https://apps.apple.com/us/app/meditation-sleep-by-verv/id1305198160?uo=4"
+        },
+        {
+          "name": "Mesmerize - Visual Meditation",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.72879,
+          "rating_count": 55008,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.rockwellventures.mesmerize",
+          "url": "https://apps.apple.com/us/app/mesmerize-visual-meditation/id1461517107?uo=4"
+        },
+        {
+          "name": "Meditation Studio",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.79202,
+          "rating_count": 9035,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.gaiam.meditation.studio",
+          "url": "https://apps.apple.com/us/app/meditation-studio/id1066018502?uo=4"
+        }
+      ]
+    },
+    "sobriety_counter": {
+      "term": "sobriety counter paid",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Sober Time - Sobriety Counter",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.84926,
+          "rating_count": 36083,
+          "genre": "Lifestyle",
+          "bundle_id": "com.sociosoft.sobertime",
+          "url": "https://apps.apple.com/us/app/sober-time-sobriety-counter/id1158895079?uo=4"
+        },
+        {
+          "name": "Nomo -  Sobriety Clocks",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.77616,
+          "rating_count": 15359,
+          "genre": "Lifestyle",
+          "bundle_id": "com.parkerstech.day",
+          "url": "https://apps.apple.com/us/app/nomo-sobriety-clocks/id566975787?uo=4"
+        },
+        {
+          "name": "I Am Sober",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.88082,
+          "rating_count": 173555,
+          "genre": "Lifestyle",
+          "bundle_id": "com.thehungrywasp.iamsober",
+          "url": "https://apps.apple.com/us/app/i-am-sober/id672904239?uo=4"
+        },
+        {
+          "name": "Days - Sobriety Counter",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.30999,
+          "rating_count": 900,
+          "genre": "Lifestyle",
+          "bundle_id": "com.tomasvitek.days",
+          "url": "https://apps.apple.com/us/app/days-sobriety-counter/id1084331959?uo=4"
+        },
+        {
+          "name": "Clean Day \u2014 Sobriety Counter",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.065,
+          "rating_count": 1677,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.cleandayapp.cleanday",
+          "url": "https://apps.apple.com/us/app/clean-day-sobriety-counter/id934015977?uo=4"
+        }
+      ]
+    },
+    "ramadan_app": {
+      "term": "ramadan habit tracker paid",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Grit: Daily Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.81074,
+          "rating_count": 12649,
+          "genre": "Productivity",
+          "bundle_id": "stoope.Grit",
+          "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+        },
+        {
+          "name": "Intermittent Fasting Tracker:",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.86563,
+          "rating_count": 43709,
+          "genre": "Health & Fitness",
+          "bundle_id": "de.kaioelfke.Fasting",
+          "url": "https://apps.apple.com/us/app/intermittent-fasting-tracker/id6448909309?uo=4"
+        },
+        {
+          "name": "everyday - Habit Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.70819,
+          "rating_count": 4359,
+          "genre": "Productivity",
+          "bundle_id": "app.everyday",
+          "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+        },
+        {
+          "name": "Do Habits: Get It Done",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.04026,
+          "rating_count": 16761,
+          "genre": "Productivity",
+          "bundle_id": "com.tbd.Done",
+          "url": "https://apps.apple.com/us/app/do-habits-get-it-done/id1103961876?uo=4"
+        },
+        {
+          "name": "Habit Tracker - Daily Goals",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.85036,
+          "rating_count": 2526,
+          "genre": "Productivity",
+          "bundle_id": "uniqo.habit",
+          "url": "https://apps.apple.com/us/app/habit-tracker-daily-goals/id6480042457?uo=4"
+        }
+      ]
+    },
+    "water_reminder": {
+      "term": "water reminder streak paid",
+      "total_results": 5,
+      "paid_apps": [],
+      "paid_count": 0,
+      "all_apps": [
+        {
+          "name": "Water tracker Waterllama",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.87499,
+          "rating_count": 148800,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.vitalii.water",
+          "url": "https://apps.apple.com/us/app/water-tracker-waterllama/id1454778585?uo=4"
+        },
+        {
+          "name": "Water Tracker by WaterMinder\u00ae",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.74613,
+          "rating_count": 32873,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.waterminder.waterminder",
+          "url": "https://apps.apple.com/us/app/water-tracker-by-waterminder/id653031147?uo=4"
+        },
+        {
+          "name": "Water Tracker. Drink Reminder",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.61076,
+          "rating_count": 1598,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.watertracker",
+          "url": "https://apps.apple.com/us/app/water-tracker-drink-reminder/id1440323599?uo=4"
+        },
+        {
+          "name": "My Water: Daily Drink Tracker",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.64839,
+          "rating_count": 23674,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.victorSharov.water",
+          "url": "https://apps.apple.com/us/app/my-water-daily-drink-tracker/id964748094?uo=4"
+        },
+        {
+          "name": "Drink Water \u2219 Daily Reminder",
+          "price": 0.0,
+          "is_paid": false,
+          "price_str": "Free",
+          "rating": 4.59546,
+          "rating_count": 25975,
+          "genre": "Health & Fitness",
+          "bundle_id": "com.aplicativoslegais.Beber-Agua-Free",
+          "url": "https://apps.apple.com/us/app/drink-water-daily-reminder/id1056210011?uo=4"
+        }
+      ]
+    }
+  },
+  "errors": []
+}

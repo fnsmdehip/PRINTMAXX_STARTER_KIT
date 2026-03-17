@@ -1,7 +1,7 @@
 {
-  "cycle_id": "cycle_31_20260316_1600",
-  "cycle_number": 31,
-  "last_completed_phase": 2,
+  "cycle_id": "cycle_32_20260316_2000",
+  "cycle_number": 32,
+  "last_completed_phase": 1,
   "phase_results": {
     "1": {
       "count": 179,
@@ -12,11 +12,8 @@
         "C16",
         "E01"
       ]
-    },
-    "2": {
-      "decisions": []
     }
   },
-  "started_at": "2026-03-16T16:00:01.192847",
-  "updated_at": "2026-03-16T16:00:06.901776"
+  "started_at": "2026-03-16T20:00:00.740127",
+  "updated_at": "2026-03-16T20:00:03.052459"
 }

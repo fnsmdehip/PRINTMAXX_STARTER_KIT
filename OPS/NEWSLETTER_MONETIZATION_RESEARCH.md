@@ -367,3 +367,14 @@ Focal - Your very own crypto research analyst. 24/7 market monitoring, narrative
 
 Try it free today.
 
+
+
+---
+
+## Pending Enhancement (ALPHA103051, Score: 26)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rvlwr1/we_started_sending_our_newsletter_on_whatsapp_and/
+**Added:** 2026-03-16T18:15:01-04:00
+
+[ACQUISITION] We started sending our newsletter on WhatsApp and it accidentally became a growth channel. What should we add next?
+

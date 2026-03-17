@@ -1,0 +1,28 @@
+THREAD: how I automated cold outreach for local business websites (full breakdown)
+
+1/ most local businesses have terrible websites. plumbers, roofers, HVAC companies, auto repair shops. they're running on GoDaddy parked pages, broken WordPress from 2018, or literally nothing.
+
+2/ I built a pipeline that finds them automatically. searches DuckDuckGo, Bing, Google, and BBB for "[niche] in [city]." filters out aggregators (Yelp, Thumbtack, etc). keeps only real businesses.
+
+3/ each business website gets graded A through F. checks mobile responsiveness, SSL, load time, design quality, content depth, visible phone number. anything scoring D or F = potential client.
+
+4/ for every F and D grade site, the system auto-generates a modern landing page. gradient hero, service cards, contact section, call-to-action button. mobile-first. loads in under 1 second. looks better than 90% of local biz sites.
+
+5/ deploys to surge.sh for free hosting. unique URL per business. the demo is live and clickable before they even know it exists.
+
+6/ then generates a personalized cold email. subject line references their actual business name. body links to their preview site. offer: $500 flat, no monthly fees, you own it.
+
+7/ current stats after running for 2 weeks:
+- 435 leads discovered
+- 324 preview sites deployed
+- 158 outreach emails queued
+- 6 new US cities added today
+- $0 ad spend
+
+8/ the key insight: don't TELL them you can build a website. SHOW them. the preview link does 80% of the selling. they click it, see their business name on a clean modern site, and the $500 feels like a bargain.
+
+9/ the entire pipeline runs on Python + DuckDuckGo HTML scraping + surge.sh free tier. no API keys. no paid tools. the only cost is time, and the pipeline automates that too.
+
+10/ cities covered so far: Austin, Miami, Phoenix, Denver, Atlanta, Nashville, Tampa, Charlotte, Orlando, Dallas, Houston, Chicago, San Diego, Minneapolis, Detroit, Salt Lake City, Kansas City, New Orleans, Richmond, Cincinnati, and more.
+
+scaling to every US city with >100K population. if you want the cold email template, reply "template."
