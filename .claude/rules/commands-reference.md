@@ -1,6 +1,6 @@
 # Technical Quick Reference
 
-Stack: Python, Playwright, Claude API | Revenue: $0 | Apps: 114 deployed | Scripts: 322
+Stack: Python | LLM: Claude Code (subscription, model-agnostic in theory) | Browser: multi-fallback (Chrome MCP, Playwright, Selenium, Browserbase, requests) | Revenue: $0 | Apps: 114 deployed | Scripts: 392
 
 ## Essential Commands
 - Decision engine: `python3 AUTOMATIONS/decision_engine.py --cycle`
@@ -39,4 +39,4 @@ Opus: swarm_brain, quality_gate, gap_hunter, growth_strategist
 Sonnet: competitor_stalker, lead_machine, cross_pollinator, revenue_tracker, inbound_maximizer
 Haiku: system_healer, data_janitor, playwright_tester
 
-Browser fallback: Chrome MCP → Playwright → Python requests
+Browser fallback: Chrome MCP → Playwright → Selenium → Browserbase → Python requests
