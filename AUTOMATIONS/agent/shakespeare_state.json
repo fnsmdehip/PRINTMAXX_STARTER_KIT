@@ -1,12 +1,14 @@
 {
-  "total_generated": 2,
-  "total_twitter": 1,
-  "total_linkedin": 1,
+  "total_generated": 6,
+  "total_twitter": 3,
+  "total_linkedin": 3,
   "total_threads": 0,
   "last_generate_date": "2026-03-17",
   "last_thread_date": null,
   "topic_history": [
-    "autonomous_business_os"
+    "autonomous_business_os",
+    "implementation_gap",
+    "ai_agent_roi"
   ],
   "rejected_count": 0
 }

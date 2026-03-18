@@ -7256,3 +7256,75 @@ and the psychological trigger behind each one.
 
 Grab it here:
 
+
+
+---
+
+## Pending Enhancement (ALPHA105152, Score: 20)
+
+**Source:** TechCrunch (https://techcrunch.com/2026/03/17/googles-personal-intelligence-feature-is-expanding-to-all-us-users/) | **URL:** https://techcrunch.com/2026/03/17/googles-personal-intelligence-feature-is-expanding-to-all-us-users/
+**Added:** 2026-03-17T16:08:12-04:00
+
+[PLATFORM UPDATE] Google&#8217;s Personal Intelligence feature is expanding to all US users
+
+
+
+---
+
+## Pending Enhancement (ALPHA105165, Score: 30)
+
+**Source:** @zach_yadegari (high-signal-accounts) | **URL:** https://x.com/zach_yadegari/status/2028522220801159272
+**Added:** 2026-03-17T16:08:13-04:00
+
+Free million dollar app idea for someone to build:
+
+Semantic search for instagram followers.
+
+“Show me only blonde girls”
+
+“Show me people I follow who don’t follow me back”
+
+
+
+---
+
+## Pending Enhancement (ALPHA105227, Score: 44)
+
+**Source:** r/passive_income | **URL:** https://reddit.com/r/passive_income/comments/1rvxmbb/automated_sports_prediction_experiment_day_3/
+**Added:** 2026-03-17T16:26:08-04:00
+
+[r/passive_income] Automated sports prediction experiment day 3: first loss, still up 40%+
+
+
+
+---
+
+## Pending Enhancement (ALPHA105296, Score: 26)
+
+**Source:** r/passive_income | **URL:** https://reddit.com/r/passive_income/comments/1rw9z2y/how_to_make_the_most_out_of_free_time_at_my_desk/
+**Added:** 2026-03-17T16:26:08-04:00
+
+[r/passive_income] How to make the most out of free time at my desk job
+
+
+
+---
+
+## Pending Enhancement (ALPHA105297, Score: 20)
+
+**Source:** r/passive_income | **URL:** https://reddit.com/r/passive_income/comments/1rvy6qu/any_advice_helps_really/
+**Added:** 2026-03-17T16:26:08-04:00
+
+[r/passive_income] Any advice helps really!
+
+
+
+---
+
+## Pending Enhancement (ALPHA105300, Score: 22)
+
+**Source:** r/entrepreneur | **URL:** https://reddit.com/r/Entrepreneur/comments/1rwdn54/running_a_4million_constructions_business_ama/
+**Added:** 2026-03-17T16:26:08-04:00
+
+[r/entrepreneur] Running a 4million € constructions business AMA
+
