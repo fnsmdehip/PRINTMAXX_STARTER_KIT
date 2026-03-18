@@ -1,0 +1,392 @@
+{
+  "tested_at": "2026-03-18T15:56:32.116143",
+  "total": 32,
+  "green": 28,
+  "yellow": 1,
+  "red": 3,
+  "sites": [
+    {
+      "url": "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "domain": "mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
+      "status_code": null,
+      "load_time_ms": null,
+      "has_content": false,
+      "console_errors": [],
+      "page_title": null,
+      "category": "RED",
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh/\nCall log:\n  - navigating to \"https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "domain": "window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
+      "status_code": null,
+      "load_time_ms": null,
+      "has_content": false,
+      "console_errors": [],
+      "page_title": null,
+      "category": "RED",
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh/\nCall log:\n  - navigating to \"https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "domain": "local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
+      "status_code": null,
+      "load_time_ms": null,
+      "has_content": false,
+      "console_errors": [],
+      "page_title": null,
+      "category": "RED",
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh/\nCall log:\n  - navigating to \"https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh/\", waiting until \"networkidle\"\n"
+    },
+    {
+      "url": "https://printmaxx.surge.sh",
+      "domain": "printmaxx.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 4551.23,
+      "has_content": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 400 ()"
+        }
+      ],
+      "page_title": "PRINTMAXX - Apps That Fix Real Problems",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://prayerlock-web.surge.sh",
+      "domain": "prayerlock-web.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 8500.22,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "PrayerLock - Build Your Prayer Habit",
+      "category": "YELLOW",
+      "error": null
+    },
+    {
+      "url": "https://coldmaxx.surge.sh",
+      "domain": "coldmaxx.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2026.41,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "ColdMaxx - Cold Email Generator",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://mcp-marketplace.surge.sh",
+      "domain": "mcp-marketplace.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2938.08,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "MCPHub - find the MCP server you need in 30 seconds",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://stackmaxx.surge.sh",
+      "domain": "stackmaxx.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1459.97,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "StackMaxx \u2014 Solopreneur Tech Stack Builder",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://coreday.surge.sh",
+      "domain": "coreday.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2868.68,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "CoreDay \u2014 Your 3 Non-Negotiables",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://walktounlock-web.surge.sh",
+      "domain": "walktounlock-web.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2078.95,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Steplock",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://tasksmash-web.surge.sh",
+      "domain": "tasksmash-web.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2164.07,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "TaskSmash - Break Any Task Into Tiny Steps",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://sleepmaxx-web.surge.sh",
+      "domain": "sleepmaxx-web.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2440.62,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Dusk",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://focuslock-web.surge.sh",
+      "domain": "focuslock-web.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1734.83,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "FocusLock - Lock In, Get It Done",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://ramadan-tracker.surge.sh",
+      "domain": "ramadan-tracker.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 4387.64,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Hilal - Ramadan Companion",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://coldmaxx-vs-instantly.surge.sh",
+      "domain": "coldmaxx-vs-instantly.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1892.33,
+      "has_content": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 400 ()"
+        }
+      ],
+      "page_title": "ColdMaxx vs Instantly (2026): Which Cold Email Tool Wins? Free vs $30/mo",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://cursor-vs-claudecode.surge.sh",
+      "domain": "cursor-vs-claudecode.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1693.37,
+      "has_content": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 400 ()"
+        }
+      ],
+      "page_title": "Cursor vs Claude Code (2026): Which AI Coding Tool Is Better?",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://prayerlock-vs-hallow.surge.sh",
+      "domain": "prayerlock-vs-hallow.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1517.72,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "App Comparisons - Honest Reviews and Alternatives (2026)",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://cold-email-roi-calculator.surge.sh",
+      "domain": "cold-email-roi-calculator.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2483.19,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Cold Email ROI Calculator: Free Revenue Estimator",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://subject-line-grader.surge.sh",
+      "domain": "subject-line-grader.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2054.1,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Cold Email Subject Line Grader: Free Instant Score",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://revenue-leak-audit.surge.sh",
+      "domain": "revenue-leak-audit.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1946.56,
+      "has_content": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 400 ()"
+        }
+      ],
+      "page_title": "Revenue Leak Audit | Find Where You're Losing Money",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://invoiceforge.surge.sh",
+      "domain": "invoiceforge.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 3045.5,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "InvoiceForge - Professional Invoice Generator",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://pagescorer.surge.sh",
+      "domain": "pagescorer.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1507.19,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "PageScorer \u2014 Landing Page Audit in 30 Seconds",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://prospectmaxx.surge.sh",
+      "domain": "prospectmaxx.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2752.75,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "ProspectMaxx \u2014 Local Business Lead Finder",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://printmaxx-website-design.surge.sh",
+      "domain": "printmaxx-website-design.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1759.56,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Modern Website for Local Businesses | 150+ Built",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://printmaxx-cold-email.surge.sh",
+      "domain": "printmaxx-cold-email.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1883.22,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Cold Email Sequences That Get Replies | 3-8% Reply Rate",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://printmaxx-automation.surge.sh",
+      "domain": "printmaxx-automation.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 2037.27,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Python Automation | Save 3-15 Hours/Week | Custom Scripts",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://printmaxx-tools.surge.sh",
+      "domain": "printmaxx-tools.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1515.96,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "PRINTMAXX Tools & Apps \u2014 46 free tools built by one person",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://printmaxx-apps.surge.sh",
+      "domain": "printmaxx-apps.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1749.58,
+      "has_content": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 400 ()"
+        }
+      ],
+      "page_title": "PRINTMAXX - Apps That Fix Real Problems",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://claude-code-agent-bible.surge.sh",
+      "domain": "claude-code-agent-bible.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1840.87,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "The Claude Code Agent Bible - 33 Autonomous Agents Running 24/7",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://scripture-streak.surge.sh",
+      "domain": "scripture-streak.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1643.49,
+      "has_content": true,
+      "console_errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 400 ()"
+        }
+      ],
+      "page_title": "Scripture Streak - Daily Scripture Reading Habit Tracker App",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://prayerlock-landing.surge.sh",
+      "domain": "prayerlock-landing.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1488.2,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "PrayerLock - Phone Auto-Locks at Adhan | Muslim Screen Time App",
+      "category": "GREEN",
+      "error": null
+    },
+    {
+      "url": "https://old-settlers-dental-p-a-austin-tx.surge.sh",
+      "domain": "old-settlers-dental-p-a-austin-tx.surge.sh",
+      "status_code": 200,
+      "load_time_ms": 1382.51,
+      "has_content": true,
+      "console_errors": [],
+      "page_title": "Old Settlers Dental, P.A. | Austin TX",
+      "category": "GREEN",
+      "error": null
+    }
+  ],
+  "pass_rate": "87.5%"
+}

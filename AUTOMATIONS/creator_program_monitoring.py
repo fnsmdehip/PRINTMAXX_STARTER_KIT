@@ -34,6 +34,27 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
+# Subreddits to monitor for creator program updates
+REDDIT_SUBS = [
+    "TikTok",
+    "YouTube",
+    "Instagram",
+    "Twitter",
+    "socialmediamarketing",
+    "Entrepreneur",
+    "startups",
+    "digitalnomad",
+    "passive_income",
+]
+
+UPDATE_QUERIES = [
+    "creator program",
+    "monetization update",
+    "revenue share",
+    "creator fund",
+    "content creator income",
+]
+
 # Known creator programs with baseline data
 CREATOR_PROGRAMS = [
     {

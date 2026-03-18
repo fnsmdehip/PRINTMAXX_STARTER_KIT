@@ -715,3 +715,20 @@ Want the full report on their keyword strategy?
 
 Comment "send" and like the post
 
+
+
+---
+
+## Pending Enhancement (ALPHA107308, Score: 24)
+
+**Source:** @HamptonAc_ (high-signal-accounts) | **URL:** https://x.com/HamptonAc_/status/2034131352887402806
+**Added:** 2026-03-18T15:13:27-04:00
+
+Guru Twitter: "I made $847K last month, here's my morning routine."
+
+Their morning routine: Wake up at 4am, meditate, journal, cold plunge, gratitude practice.
+
+The actual reason they made money: Good product, good ads, good margins.
+
+But sure, it was definitely the ice bath
+

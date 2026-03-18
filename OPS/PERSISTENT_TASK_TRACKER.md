@@ -382,6 +382,22 @@
   - ProductHunt March 2026: vertical AI agents dominating, not consumer apps
   - AI "babysitting" services for SMBs = managed services opportunity (r/Entrepreneur, 68 upvotes)
 
+### AFFILIATE FUNNEL CYCLE — 2026-03-18 (autonomy agent)
+- **Status:** DONE
+- **Deployed NEW page:** https://best-newsletter-platforms.surge.sh (newsletter platform roundup)
+  - Targets: Beehiiv (50% recurring), Kit/ConvertKit (50% yr1), Moosend (30% lifetime)
+  - Full SEO: JSON-LD Article + FAQPage, OG tags, sitemap, robots.txt
+  - GoatCounter affiliate click tracking on all CTA buttons
+  - FTC disclosure included
+  - Placeholder affiliate IDs (need replacement after signup)
+- **Research:** Updated affiliate research at `MONEY_METHODS/AFFILIATE_RESEARCH_MAR18.md`
+  - Key finding: SEMrush $450/sale at Platinum tier (was $350), Beehiiv cookie extended to 60 days
+- **Content queued:** 21 tweets + 1 thread (7 tweets) + 3 QT captions in `CONTENT/social/affiliate_distribution_20260318.md` (PENDING_REVIEW)
+  - Covers: newsletter platforms, SEMrush vs Ahrefs, cold email tools, ConvertKit vs Beehiiv
+- **Total affiliate pages now live:** 9 comparison/affiliate pages on surge.sh
+- **Revenue potential:** Beehiiv 50% recurring + Kit 50% yr1 = ~$235/mo at 10 referrals each
+- **BLOCKER (human, 45 min total):** Sign up for affiliate programs and replace placeholder IDs across ALL 9 pages. Priority: Beehiiv > SEMrush > Kit > Instantly > Smartlead. Full instructions: `OPS/AFFILIATE_LINK_SETUP.md`
+
 ### AFFILIATE FUNNELS MONETIZATION CYCLE — 2026-03-07 (autonomy agent)
 - **Status:** DONE
 - **Critical fix:** ai-stack-2026.surge.sh had ALL generic links (zero commissions earned). Added affiliate tracking + UTM params + GoatCounter click events.

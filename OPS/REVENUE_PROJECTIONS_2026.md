@@ -608,3 +608,14 @@ So I am building a cool AI project, which is solving a real problem and have sha
   
 Being pre-revenue and in build phase gives a sense of comfort of high ambition, and going to revenue seems like there is no way
 
+
+
+---
+
+## Pending Enhancement (ALPHA107007, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rxb1k6/i_got_tired_of_constantly_pausing_youtube/
+**Added:** 2026-03-18T14:20:02-04:00
+
+[ACQUISITION] I got tired of constantly pausing YouTube tutorials, so I built a web app that turns them into interactive project plans
+

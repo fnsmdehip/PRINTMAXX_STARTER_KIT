@@ -1,21 +1,25 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-17T23:21:45.913892+00:00",
-  "cycle_number": 66,
+  "last_cycle": "2026-03-18T17:57:23.469223+00:00",
+  "cycle_number": 67,
   "cycle_status": "COMPLETE",
   "current_step": "done",
-  "configured_at": "2026-03-17T23:21:45.913892+00:00",
+  "configured_at": "2026-03-18T17:57:23.469223+00:00",
   "stats": {
-    "niches_scanned": 12,
-    "new_bos_confirmed": 2,
-    "soft_competition": 3,
-    "occupied": 7,
-    "alpha_entries": 5,
-    "ci_rows_added": 12,
-    "blue_oceans_confirmed": 52
+    "niches_scanned": 13,
+    "new_bos_confirmed": 4,
+    "soft_competition": 0,
+    "occupied": 9,
+    "alpha_entries": 4,
+    "ci_rows_added": 13,
+    "blue_oceans_confirmed": 56
   },
-  "cumulative_blue_oceans": 52,
+  "cumulative_blue_oceans": 56,
   "p0_alerts": [
+    "NEW_C067 BLUE OCEAN: FLASHCARD_STREAK \u2014 6,037,704 community. BUILD NOW.",
+    "NEW_C067 BLUE OCEAN: HOMEWORK_STREAK \u2014 6,526,543 community. BUILD NOW.",
+    "NEW_C067 BLUE OCEAN: SOCIAL_CALL_STREAK \u2014 8,135,942 community. BUILD NOW.",
+    "NEW_C067 BLUE OCEAN: FAMILY_DINNER_STREAK \u2014 8,772,652 community. BUILD NOW.",
     "NEW_C066 BLUE OCEAN: DECLUTTER_DAILY_STREAK \u2014 4,473,006 community. BUILD NOW.",
     "NEW_C066 BLUE OCEAN: KNITTING_CRAFT_STREAK \u2014 5,342,203 community. BUILD NOW.",
     "NEW_C065 BLUE OCEAN: RANDOM_ACTS_KINDNESS \u2014 6,510,598 community. BUILD NOW.",
@@ -26,33 +30,30 @@
     "WRITING_DAILY_STREAK: 5.26M C064. BUILD NOW.",
     "PRAYERLOCK: Ramadan time-critical. CRITICAL."
   ],
-  "cycle_66_results": {
-    "strategy": "HOBBY_TRACKERS + PHYSICAL_WELLNESS_MICRO_HABITS",
+  "cycle_67_results": {
+    "strategy": "PARENTING + PET_CARE + ACADEMIC + SOCIAL_CONNECTION",
     "new_blue_oceans": [
-      "knitting_craft_streak",
-      "declutter_daily_streak"
+      "flashcard_streak",
+      "homework_streak",
+      "family_dinner_streak",
+      "social_call_streak"
     ],
-    "near_bos": [
-      "sun_salutation_streak",
-      "breathwork_daily"
-    ],
-    "soft_competition": [
-      "sun_salutation_streak",
-      "breathwork_daily",
-      "cold_plunge_streak"
-    ],
+    "near_bos": [],
+    "soft_competition": [],
     "occupied": [
-      "hiking_weekly_habit",
-      "intermittent_fasting_streak",
-      "water_intake_daily",
-      "walking_10k_steps_streak",
-      "language_immersion_streak",
-      "daily_doodle_streak",
-      "sauna_weekly_habit"
+      "toddler_reading_streak",
+      "bedtime_routine_habit",
+      "screen_limit_habit",
+      "journaling_with_kid",
+      "dog_walk_streak",
+      "pet_training_streak",
+      "cat_enrichment_habit",
+      "exam_prep_streak",
+      "gratitude_to_person"
     ],
     "biggest_community": [
-      "walking_10k_steps_streak",
-      16893143
+      "pet_training_streak",
+      10971204
     ]
   }
 }

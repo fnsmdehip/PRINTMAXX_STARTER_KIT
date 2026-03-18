@@ -1,5 +1,5 @@
-# SESSION BRIEFING -- 2026-03-18 07:14
-Last session: 2026-03-18 07:14 (0.0h ago)
+# SESSION BRIEFING -- 2026-03-18 15:59
+Last session: 2026-03-18 15:55 (0.1h ago)
 
 ---
 
@@ -8,6 +8,10 @@ Last session: 2026-03-18 07:14 (0.0h ago)
 ### Daily Digest (latest)
 Revenue: $0 | Day 44 at zero
 - **1648 new entries** scraped
+
+### Agent Reports (2 since last session)
+- test_action_plan_20260318.md
+- playwright_tester_report_20260318.md
 
 ### System Heartbeat
 Leads: 189,700/1,454,245 analyzed | 17,260 hot | 94,005 warm | 1,234,548 pipeline
@@ -26,13 +30,19 @@ No git commits since last session (or not a git repo).
 
 ## Actionable Queue
 
-# ACTIONABLE QUEUE -- 2026-03-17 07:30
-Total items: 80 (deduplicated from all sources)
+# ACTIONABLE QUEUE -- 2026-03-18 07:30
+Total items: 95 (deduplicated from all sources)
 
 ---
 
-## [P0] CRITICAL -- Revenue-blocking human actions (32 items)
+## [P0] CRITICAL -- Revenue-blocking human actions (39 items)
 
+- [ ] - [ ] **HUMAN ACTION (P0, $13/mo):** Upgrade to Surge Plus (enables custom robots.txt, keeps all URLs) [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - [ ] **HUMAN ACTION (P0, 30 min):** Create Cloudflare account + run `bash AUTOMATIONS/seo_platform_migration.sh --prepare && --deploy` [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - [ ] **HUMAN ACTION (P0, 30 min):** Create Netlify account + run migration script `--netlify` [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTION (P0, 10 min):** Create Product Hunt maker profile [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTION (P1, 15 min):** Create Pinterest business account + upload first 17 pins [HUMAN]
@@ -71,21 +81,19 @@ Total items: 80 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - [ ] **[HIGH] Vibe Marketplace by Greta (441 PH votes):** New channel to sell vibe-coded products instantly. Sign up: https://www.producthunt.com/posts/vibe-marketplace-by-greta [HUMAN: review + sign up] [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_agent_bible.md` — paste-ready Gumroad listing ($47) [HUMAN]
+      Source: swarm/revenue_report_20260317.md
+- [ ] - `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/GUMROAD_LISTING.md` — paste-ready listing ($29-39) [HUMAN]
+      Source: swarm/revenue_report_20260317.md
+- [ ] - **Status:** BLOCKER — surge.sh free tier (Student plan) serves `Disallow: /` at CDN level on ALL sites
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - Blockers:
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Remaining blocker for mobile/iPhone access:**
-      Source: PERSISTENT_TASK_TRACKER
-- [ ] - P0: Test CodeRelay from the iPhone against `https://printmaxx-control.tail16dddb.ts.net`
-      Source: PERSISTENT_TASK_TRACKER
-- [ ] - P0: Open RustDesk on the Mac and grant Screen Recording + Accessibility if prompted
-      Source: PERSISTENT_TASK_TRACKER
-- [ ] - P0 (5 min): Leave automation privacy permission on `Documents`; `Desktop` and network volumes not required unless you intentionally use them
-      Source: PERSISTENT_TASK_TRACKER
-- [ ] - P0 (20-40 min): Create/finish Apple Developer + App Store Connect + RevenueCat + Stripe path. This is still the app-factory bottleneck
-      Source: PERSISTENT_TASK_TRACKER
-- [ ] - P0 (5 min): Subscribe to X Premium on @PRINTMAXXER -- without it, link posts get 0% engagement
-      Source: PERSISTENT_TASK_TRACKER
-- [ ] - **Priority:** P0 — #1 BLOCKER for all revenue
 
 ## Prompt Review Findings
 (from 2026-03-17 08:01)
+
+## Recently Updated State
+
+- Autonomy state (updated 15:57)

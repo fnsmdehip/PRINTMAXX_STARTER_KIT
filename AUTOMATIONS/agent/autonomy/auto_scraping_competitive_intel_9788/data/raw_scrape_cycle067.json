@@ -1,0 +1,1169 @@
+{
+  "toddler_reading_streak": {
+    "label": "Daily Toddler Reading Streak",
+    "community_total": 9508171,
+    "community_breakdown": {
+      "Parenting": 8214074,
+      "toddlers": 505094,
+      "beyondthebump": 789003
+    },
+    "apps_found": 8,
+    "apps": {
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "beanstack tracker": {
+        "price": 0.0,
+        "rating": 4.76098,
+        "rating_count": 85580,
+        "genre": "Education",
+        "dev": "Zoobean, Inc.",
+        "bundle_id": "com.zoobean.beanstackTracker",
+        "url": "https://apps.apple.com/us/app/beanstack-tracker/id1360324277?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "way of life - habit tracker": {
+        "price": 0.0,
+        "rating": 4.82059,
+        "rating_count": 5050,
+        "genre": "Health & Fitness",
+        "dev": "Way of Life ApS",
+        "bundle_id": "com.larsparendt.wayoflife",
+        "url": "https://apps.apple.com/us/app/way-of-life-habit-tracker/id393159800?uo=4"
+      },
+      "habit hub: routine tracker": {
+        "price": 0.0,
+        "rating": 4.65662,
+        "rating_count": 8032,
+        "genre": "Productivity",
+        "dev": "Sabana Patel",
+        "bundle_id": "atryb.HabitHub",
+        "url": "https://apps.apple.com/us/app/habit-hub-routine-tracker/id1149192857?uo=4"
+      },
+      "bookly: book tracker": {
+        "price": 0.0,
+        "rating": 4.61201,
+        "rating_count": 56787,
+        "genre": "Book",
+        "dev": "TwoDoor Games",
+        "bundle_id": "com.twodoor.bookeep",
+        "url": "https://apps.apple.com/us/app/bookly-book-tracker/id1085047737?uo=4"
+      },
+      "tally: the anything tracker": {
+        "price": 0.0,
+        "rating": 4.34974,
+        "rating_count": 4023,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.tbd.Tally",
+        "url": "https://apps.apple.com/us/app/tally-the-anything-tracker/id1090990601?uo=4"
+      },
+      "bookmory - reading tracker": {
+        "price": 0.0,
+        "rating": 4.84248,
+        "rating_count": 15719,
+        "genre": "Book",
+        "dev": "Dong su Mun",
+        "bundle_id": "net.tonysoft.bookmory",
+        "url": "https://apps.apple.com/us/app/bookmory-reading-tracker/id1515533482?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 36,
+    "hypothesis": "BO \u2014 r/Parenting 5M+. 'Read 20 min/day' is universal advice. Zero dedicated streak tracker for parents."
+  },
+  "bedtime_routine_habit": {
+    "label": "Kids Bedtime Routine Habit Tracker",
+    "community_total": 8852131,
+    "community_breakdown": {
+      "Parenting": 8214074,
+      "sleeptrain": 159631,
+      "NewParents": 478426
+    },
+    "apps_found": 10,
+    "apps": {
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "strides: habit tracker + goals": {
+        "price": 0.0,
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity",
+        "dev": "Goals LLC",
+        "bundle_id": "com.puresignal.strides",
+        "url": "https://apps.apple.com/us/app/strides-habit-tracker-goals/id672401817?uo=4"
+      },
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "do habits: get it done": {
+        "price": 0.0,
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.tbd.Done",
+        "url": "https://apps.apple.com/us/app/do-habits-get-it-done/id1103961876?uo=4"
+      },
+      "habit hub: routine tracker": {
+        "price": 0.0,
+        "rating": 4.65662,
+        "rating_count": 8032,
+        "genre": "Productivity",
+        "dev": "Sabana Patel",
+        "bundle_id": "atryb.HabitHub",
+        "url": "https://apps.apple.com/us/app/habit-hub-routine-tracker/id1149192857?uo=4"
+      },
+      "sleep": {
+        "price": 0.0,
+        "rating": 4.27694,
+        "rating_count": 9771,
+        "genre": "Health & Fitness",
+        "dev": "Mosaic S.r.l.",
+        "bundle_id": "com.bendingspoonsapps.SleepHelp",
+        "url": "https://apps.apple.com/us/app/sleep/id1447478883?uo=4"
+      },
+      "smart sleep coach by pampers\u2122": {
+        "price": 0.0,
+        "rating": 4.7167,
+        "rating_count": 5810,
+        "genre": "Health & Fitness",
+        "dev": "P&G Baby Care Digital LLC",
+        "bundle_id": "com.pg.smartsleepcoach",
+        "url": "https://apps.apple.com/us/app/smart-sleep-coach-by-pampers/id1616824897?uo=4"
+      },
+      "hatch sleep": {
+        "price": 0.0,
+        "rating": 4.56297,
+        "rating_count": 60690,
+        "genre": "Health & Fitness",
+        "dev": "Hatch Baby, Inc.",
+        "bundle_id": "com.hatchbaby.Nightlight",
+        "url": "https://apps.apple.com/us/app/hatch-sleep/id1158048301?uo=4"
+      },
+      "rise: sleep tracker": {
+        "price": 0.0,
+        "rating": 4.70858,
+        "rating_count": 54896,
+        "genre": "Health & Fitness",
+        "dev": "Rise Science Inc",
+        "bundle_id": "com.risesci.nyx",
+        "url": "https://apps.apple.com/us/app/rise-sleep-tracker/id1453884781?uo=4"
+      },
+      "moshi kids: sleep, relax, play": {
+        "price": 0.0,
+        "rating": 4.73071,
+        "rating_count": 68410,
+        "genre": "Book",
+        "dev": "Mind Candy Ltd",
+        "bundle_id": "com.mindcandy.sleepstories",
+        "url": "https://apps.apple.com/us/app/moshi-kids-sleep-relax-play/id1306719339?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 33,
+    "hypothesis": "SOFT \u2014 Sleep apps for adults exist. Kids bedtime ROUTINE streak tracker is distinct niche."
+  },
+  "screen_limit_habit": {
+    "label": "Daily Screen Time Limit Habit",
+    "community_total": 8732669,
+    "community_breakdown": {
+      "Parenting": 8214074,
+      "nosurf": 292905,
+      "digitalminimalism": 225690
+    },
+    "apps_found": 7,
+    "apps": {
+      "habit tracker": {
+        "price": 0.0,
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity",
+        "dev": "InnerGrow",
+        "bundle_id": "com.davetech.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "bepresent: screen time control": {
+        "price": 0.0,
+        "rating": 4.84398,
+        "rating_count": 39964,
+        "genre": "Productivity",
+        "dev": "Screen Detox Inc",
+        "bundle_id": "com.getpresentapp.Present",
+        "url": "https://apps.apple.com/us/app/bepresent-screen-time-control/id1644737181?uo=4"
+      },
+      "one sec | screen time + focus": {
+        "price": 0.0,
+        "rating": 4.83314,
+        "rating_count": 22318,
+        "genre": "Productivity",
+        "dev": "riedel.wtf apps S.L.",
+        "bundle_id": "wtf.riedel.one-sec",
+        "url": "https://apps.apple.com/us/app/one-sec-screen-time-focus/id1532875441?uo=4"
+      },
+      "habit hub: routine tracker": {
+        "price": 0.0,
+        "rating": 4.65662,
+        "rating_count": 8032,
+        "genre": "Productivity",
+        "dev": "Sabana Patel",
+        "bundle_id": "atryb.HabitHub",
+        "url": "https://apps.apple.com/us/app/habit-hub-routine-tracker/id1149192857?uo=4"
+      },
+      "days since: quit habit tracker": {
+        "price": 0.0,
+        "rating": 4.82602,
+        "rating_count": 17399,
+        "genre": "Health & Fitness",
+        "dev": "A Couple of Friends OOD",
+        "bundle_id": "npetrova.DaysSince",
+        "url": "https://apps.apple.com/us/app/days-since-quit-habit-tracker/id1445348921?uo=4"
+      },
+      "productive - habit tracker": {
+        "price": 0.0,
+        "rating": 4.59683,
+        "rating_count": 91125,
+        "genre": "Productivity",
+        "dev": "Mosaic S.r.l.",
+        "bundle_id": "com.beHappy.Productive",
+        "url": "https://apps.apple.com/us/app/productive-habit-tracker/id983826477?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 33,
+    "hypothesis": "SOFT \u2014 Screen Time (Apple built-in) is a control, not a habit streak. Parent accountability tracker gap."
+  },
+  "journaling_with_kid": {
+    "label": "Daily Parent-Child Journal Streak",
+    "community_total": 10907349,
+    "community_breakdown": {
+      "Parenting": 8214074,
+      "Journaling": 2188181,
+      "toddlers": 505094
+    },
+    "apps_found": 8,
+    "apps": {
+      "5 minute journal\u30fbdaily diary": {
+        "price": 0.0,
+        "rating": 4.75896,
+        "rating_count": 17213,
+        "genre": "Health & Fitness",
+        "dev": "Intelligent Change LLC",
+        "bundle_id": "com.intelligentchange.Five-Minute-Journal",
+        "url": "https://apps.apple.com/us/app/5-minute-journal-daily-diary/id1062945251?uo=4"
+      },
+      "my wonderful days journal": {
+        "price": 0.0,
+        "rating": 4.77975,
+        "rating_count": 7228,
+        "genre": "Lifestyle",
+        "dev": "haha Interactive",
+        "bundle_id": "com.hahainteractive.mywdays",
+        "url": "https://apps.apple.com/us/app/my-wonderful-days-journal/id434356065?uo=4"
+      },
+      "diamond diary notes with lock": {
+        "price": 0.0,
+        "rating": 4.38903,
+        "rating_count": 8778,
+        "genre": "Productivity",
+        "dev": "Milica Petrovic",
+        "bundle_id": "milicapetrovic.secretdiary.DiamondDiaryNotesWithLock",
+        "url": "https://apps.apple.com/us/app/diamond-diary-notes-with-lock/id1437141637?uo=4"
+      },
+      "journey - diary, journal": {
+        "price": 0.0,
+        "rating": 4.64426,
+        "rating_count": 5015,
+        "genre": "Lifestyle",
+        "dev": "Two App Studio Pte. Ltd.",
+        "bundle_id": "com.journey.ios.app",
+        "url": "https://apps.apple.com/us/app/journey-diary-journal/id1300202543?uo=4"
+      },
+      "moleskine journal": {
+        "price": 0.0,
+        "rating": 4.48126,
+        "rating_count": 2641,
+        "genre": "Health & Fitness",
+        "dev": "Moleskine Srl",
+        "bundle_id": "com.moleskine.journey",
+        "url": "https://apps.apple.com/us/app/moleskine-journal/id1489704689?uo=4"
+      },
+      "day one: daily journal & diary": {
+        "price": 0.0,
+        "rating": 4.83201,
+        "rating_count": 115403,
+        "genre": "Health & Fitness",
+        "dev": "Bloom Built Inc",
+        "bundle_id": "com.bloombuilt.dayone-ios",
+        "url": "https://apps.apple.com/us/app/day-one-daily-journal-diary/id1044867788?uo=4"
+      },
+      "dailybean - simplest journal": {
+        "price": 0.0,
+        "rating": 4.81744,
+        "rating_count": 68350,
+        "genre": "Lifestyle",
+        "dev": "BlueSignum Corp.",
+        "bundle_id": "com.bluesignum.harukong",
+        "url": "https://apps.apple.com/us/app/dailybean-simplest-journal/id1553223828?uo=4"
+      },
+      "my diary - journal with lock": {
+        "price": 0.0,
+        "rating": 4.746,
+        "rating_count": 26803,
+        "genre": "Lifestyle",
+        "dev": "BetterApp Tech Co., Limited",
+        "bundle_id": "com.betterapp.mydiary",
+        "url": "https://apps.apple.com/us/app/my-diary-journal-with-lock/id1579321589?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 46,
+    "hypothesis": "BO \u2014 Intersection of journaling + parenting. Zero apps for parent+child daily journal streak."
+  },
+  "dog_walk_streak": {
+    "label": "Daily Dog Walk Streak Tracker",
+    "community_total": 3349203,
+    "community_breakdown": {
+      "dogs": 2852063,
+      "dogcare": 23240,
+      "DogAdvice": 473900
+    },
+    "apps_found": 5,
+    "apps": {
+      "habit tracker": {
+        "price": 0.0,
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity",
+        "dev": "InnerGrow",
+        "bundle_id": "com.davetech.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+      },
+      "fi - gps dog tracker": {
+        "price": 0.0,
+        "rating": 4.66411,
+        "rating_count": 33454,
+        "genre": "Health & Fitness",
+        "dev": "Barking Labs Corp.",
+        "bundle_id": "com.barkinglabs.fi",
+        "url": "https://apps.apple.com/us/app/fi-gps-dog-tracker/id1438036784?uo=4"
+      },
+      "map my walk: walking tracker": {
+        "price": 0.0,
+        "rating": 4.82984,
+        "rating_count": 463834,
+        "genre": "Lifestyle",
+        "dev": "Outside Television Inc",
+        "bundle_id": "Q5AWL8WCY6.iMapMyWalkFree",
+        "url": "https://apps.apple.com/us/app/map-my-walk-walking-tracker/id307861492?uo=4"
+      },
+      "cashwalk - daily step counter": {
+        "price": 0.0,
+        "rating": 4.57056,
+        "rating_count": 55412,
+        "genre": "Health & Fitness",
+        "dev": "CASHWALK LABS, INC",
+        "bundle_id": "com.cashwalklabs.cashwalk",
+        "url": "https://apps.apple.com/us/app/cashwalk-daily-step-counter/id1609906813?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 33,
+    "hypothesis": "BO \u2014 r/dogs 3M+. Vets say 2 walks/day. Zero dedicated dog-walk streak app. Massive unmet need."
+  },
+  "pet_training_streak": {
+    "label": "Daily Pet Training Session Streak",
+    "community_total": 10971204,
+    "community_breakdown": {
+      "Dogtraining": 1522112,
+      "Pets": 392921,
+      "cats": 9056171
+    },
+    "apps_found": 9,
+    "apps": {
+      "woofz - puppy and dog training": {
+        "price": 0.0,
+        "rating": 4.57932,
+        "rating_count": 48801,
+        "genre": "Lifestyle",
+        "dev": "nove8",
+        "bundle_id": "dog.training.woofz",
+        "url": "https://apps.apple.com/us/app/woofz-puppy-and-dog-training/id1532020050?uo=4"
+      },
+      "habit rabbit: habit tracker": {
+        "price": 0.0,
+        "rating": 4.66906,
+        "rating_count": 7950,
+        "genre": "Productivity",
+        "dev": "Justin Patrick Silang",
+        "bundle_id": "com.superbyte.habitrabbit",
+        "url": "https://apps.apple.com/us/app/habit-rabbit-habit-tracker/id1522121879?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "fabulous: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.45197,
+        "rating_count": 87165,
+        "genre": "Health & Fitness",
+        "dev": "Fabulous",
+        "bundle_id": "co.thefabulous.app",
+        "url": "https://apps.apple.com/us/app/fabulous-daily-habit-tracker/id1203637303?uo=4"
+      },
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "fi - gps dog tracker": {
+        "price": 0.0,
+        "rating": 4.66411,
+        "rating_count": 33454,
+        "genre": "Health & Fitness",
+        "dev": "Barking Labs Corp.",
+        "bundle_id": "com.barkinglabs.fi",
+        "url": "https://apps.apple.com/us/app/fi-gps-dog-tracker/id1438036784?uo=4"
+      },
+      "dogo: dog & puppy training": {
+        "price": 0.0,
+        "rating": 4.83188,
+        "rating_count": 16430,
+        "genre": "Education",
+        "dev": "Dogo App GmbH",
+        "bundle_id": "com.dogo.App",
+        "url": "https://apps.apple.com/us/app/dogo-dog-puppy-training/id1153294767?uo=4"
+      },
+      "puppr - dog training & tricks": {
+        "price": 0.0,
+        "rating": 4.80036,
+        "rating_count": 26828,
+        "genre": "Lifestyle",
+        "dev": "Chin and Cheeks LLC",
+        "bundle_id": "com.chinandcheeks.dogtrainer",
+        "url": "https://apps.apple.com/us/app/puppr-dog-training-tricks/id1199338956?uo=4"
+      },
+      "everydoggy - dog training app": {
+        "price": 0.0,
+        "rating": 4.55459,
+        "rating_count": 3462,
+        "genre": "Lifestyle",
+        "dev": "Star Focus",
+        "bundle_id": "com.everydoggy.app",
+        "url": "https://apps.apple.com/us/app/everydoggy-dog-training-app/id1488080064?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 43,
+    "hypothesis": "BO \u2014 r/Dogtraining 1M+. '5 min training daily' is standard advice. Zero dedicated training streak app."
+  },
+  "cat_enrichment_habit": {
+    "label": "Daily Cat Playtime / Enrichment Streak",
+    "community_total": 9437159,
+    "community_breakdown": {
+      "cats": 9056172,
+      "catcare": 64135,
+      "CATHELP": 316852
+    },
+    "apps_found": 10,
+    "apps": {
+      "my cat \u2013 virtual pet games": {
+        "price": 0.0,
+        "rating": 4.59999,
+        "rating_count": 101476,
+        "genre": "Games",
+        "dev": "APPSYOULOVE LTD",
+        "bundle_id": "com.liftapp.mycat",
+        "url": "https://apps.apple.com/us/app/my-cat-virtual-pet-games/id1480397119?uo=4"
+      },
+      "cat game - the cats collector!": {
+        "price": 0.0,
+        "rating": 4.88926,
+        "rating_count": 169360,
+        "genre": "Games",
+        "dev": "MinoMonsters, Inc.",
+        "bundle_id": "com.minogames.cats.beta",
+        "url": "https://apps.apple.com/us/app/cat-game-the-cats-collector/id1125011102?uo=4"
+      },
+      "the battle cats": {
+        "price": 0.0,
+        "rating": 4.53887,
+        "rating_count": 45666,
+        "genre": "Games",
+        "dev": "ponos corporation",
+        "bundle_id": "jp.co.ponos.battlecatsen",
+        "url": "https://apps.apple.com/us/app/the-battle-cats/id850057092?uo=4"
+      },
+      "neko atsume: kitty collector": {
+        "price": 0.0,
+        "rating": 4.77934,
+        "rating_count": 26384,
+        "genre": "Games",
+        "dev": "Hit-Point Co., Ltd.",
+        "bundle_id": "jp.co.hit-point.nekoatsume",
+        "url": "https://apps.apple.com/us/app/neko-atsume-kitty-collector/id923917775?uo=4"
+      },
+      "deco neko - cat room design": {
+        "price": 0.0,
+        "rating": 4.75965,
+        "rating_count": 23091,
+        "genre": "Games",
+        "dev": "Flying Bunny Studios",
+        "bundle_id": "io.flyingbunnystudios.deconeko",
+        "url": "https://apps.apple.com/us/app/deco-neko-cat-room-design/id1579536924?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "habit rabbit: habit tracker": {
+        "price": 0.0,
+        "rating": 4.66906,
+        "rating_count": 7950,
+        "genre": "Productivity",
+        "dev": "Justin Patrick Silang",
+        "bundle_id": "com.superbyte.habitrabbit",
+        "url": "https://apps.apple.com/us/app/habit-rabbit-habit-tracker/id1522121879?uo=4"
+      },
+      "habit tracker - daily goals": {
+        "price": 0.0,
+        "rating": 4.85018,
+        "rating_count": 2543,
+        "genre": "Productivity",
+        "dev": "Uniqo Lab.",
+        "bundle_id": "uniqo.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker-daily-goals/id6480042457?uo=4"
+      },
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "tally: the anything tracker": {
+        "price": 0.0,
+        "rating": 4.34974,
+        "rating_count": 4023,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.tbd.Tally",
+        "url": "https://apps.apple.com/us/app/tally-the-anything-tracker/id1090990601?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 36,
+    "hypothesis": "BO \u2014 r/cats 7M+. Vets recommend 15min daily play. Zero dedicated cat enrichment streak app."
+  },
+  "flashcard_streak": {
+    "label": "Daily Flashcard / Spaced Repetition Streak",
+    "community_total": 6037704,
+    "community_breakdown": {
+      "learnprogramming": 4332915,
+      "medicalschool": 789899,
+      "premed": 914890
+    },
+    "apps_found": 8,
+    "apps": {
+      "habit tracker": {
+        "price": 0.0,
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity",
+        "dev": "InnerGrow",
+        "bundle_id": "com.davetech.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+      },
+      "fabulous: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.45197,
+        "rating_count": 87165,
+        "genre": "Health & Fitness",
+        "dev": "Fabulous",
+        "bundle_id": "co.thefabulous.app",
+        "url": "https://apps.apple.com/us/app/fabulous-daily-habit-tracker/id1203637303?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "habitify: habit tracker": {
+        "price": 0.0,
+        "rating": 4.59703,
+        "rating_count": 6730,
+        "genre": "Health & Fitness",
+        "dev": "Unstatic Ltd Co",
+        "bundle_id": "co.vuvo.habitify",
+        "url": "https://apps.apple.com/us/app/habitify-habit-tracker/id1111447047?uo=4"
+      },
+      "productive - habit tracker": {
+        "price": 0.0,
+        "rating": 4.59683,
+        "rating_count": 91125,
+        "genre": "Productivity",
+        "dev": "Mosaic S.r.l.",
+        "bundle_id": "com.beHappy.Productive",
+        "url": "https://apps.apple.com/us/app/productive-habit-tracker/id983826477?uo=4"
+      },
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "do habits: get it done": {
+        "price": 0.0,
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.tbd.Done",
+        "url": "https://apps.apple.com/us/app/do-habits-get-it-done/id1103961876?uo=4"
+      },
+      "streaks": {
+        "price": 5.99,
+        "rating": 4.81555,
+        "rating_count": 27341,
+        "genre": "Health & Fitness",
+        "dev": "Crunchy Bagel",
+        "bundle_id": "com.streaksapp.streak",
+        "url": "https://apps.apple.com/us/app/streaks/id963034692?uo=4"
+      }
+    },
+    "status": "BLUE_OCEAN",
+    "score": 88,
+    "hypothesis": "SOFT \u2014 Anki is free/open. Gap: paid streak-gamification layer on top of ANY study deck."
+  },
+  "homework_streak": {
+    "label": "Daily Homework / Study Habit Streak",
+    "community_total": 6526543,
+    "community_breakdown": {
+      "teenagers": 3479849,
+      "highschool": 130262,
+      "college": 2916432
+    },
+    "apps_found": 8,
+    "apps": {
+      "habit tracker": {
+        "price": 0.0,
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity",
+        "dev": "InnerGrow",
+        "bundle_id": "com.davetech.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "strides: habit tracker + goals": {
+        "price": 0.0,
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity",
+        "dev": "Goals LLC",
+        "bundle_id": "com.puresignal.strides",
+        "url": "https://apps.apple.com/us/app/strides-habit-tracker-goals/id672401817?uo=4"
+      },
+      "habit hub: routine tracker": {
+        "price": 0.0,
+        "rating": 4.65662,
+        "rating_count": 8032,
+        "genre": "Productivity",
+        "dev": "Sabana Patel",
+        "bundle_id": "atryb.HabitHub",
+        "url": "https://apps.apple.com/us/app/habit-hub-routine-tracker/id1149192857?uo=4"
+      },
+      "productive - habit tracker": {
+        "price": 0.0,
+        "rating": 4.59683,
+        "rating_count": 91125,
+        "genre": "Productivity",
+        "dev": "Mosaic S.r.l.",
+        "bundle_id": "com.beHappy.Productive",
+        "url": "https://apps.apple.com/us/app/productive-habit-tracker/id983826477?uo=4"
+      },
+      "habitify: habit tracker": {
+        "price": 0.0,
+        "rating": 4.59703,
+        "rating_count": 6730,
+        "genre": "Health & Fitness",
+        "dev": "Unstatic Ltd Co",
+        "bundle_id": "co.vuvo.habitify",
+        "url": "https://apps.apple.com/us/app/habitify-habit-tracker/id1111447047?uo=4"
+      },
+      "days since: quit habit tracker": {
+        "price": 0.0,
+        "rating": 4.82602,
+        "rating_count": 17399,
+        "genre": "Health & Fitness",
+        "dev": "A Couple of Friends OOD",
+        "bundle_id": "npetrova.DaysSince",
+        "url": "https://apps.apple.com/us/app/days-since-quit-habit-tracker/id1445348921?uo=4"
+      },
+      "habit-bull: daily goal planner": {
+        "price": 0.0,
+        "rating": 4.66728,
+        "rating_count": 8088,
+        "genre": "Productivity",
+        "dev": "AppForge Inc.",
+        "bundle_id": "oristats.HabitBull",
+        "url": "https://apps.apple.com/us/app/habit-bull-daily-goal-planner/id1041482672?uo=4"
+      }
+    },
+    "status": "BLUE_OCEAN",
+    "score": 91,
+    "hypothesis": "BO \u2014 r/teenagers 2M+. Students need accountability. Zero dedicated homework streak tracker."
+  },
+  "exam_prep_streak": {
+    "label": "Daily Exam Prep Habit Tracker",
+    "community_total": 557998,
+    "community_breakdown": {
+      "MCAT": 323888,
+      "LSAT": 234110,
+      "CPA_Exam": 0
+    },
+    "apps_found": 10,
+    "apps": {
+      "habit tracker": {
+        "price": 0.0,
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity",
+        "dev": "InnerGrow",
+        "bundle_id": "com.davetech.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "productive - habit tracker": {
+        "price": 0.0,
+        "rating": 4.59683,
+        "rating_count": 91125,
+        "genre": "Productivity",
+        "dev": "Mosaic S.r.l.",
+        "bundle_id": "com.beHappy.Productive",
+        "url": "https://apps.apple.com/us/app/productive-habit-tracker/id983826477?uo=4"
+      },
+      "strides: habit tracker + goals": {
+        "price": 0.0,
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity",
+        "dev": "Goals LLC",
+        "bundle_id": "com.puresignal.strides",
+        "url": "https://apps.apple.com/us/app/strides-habit-tracker-goals/id672401817?uo=4"
+      },
+      "habit-bull: daily goal planner": {
+        "price": 0.0,
+        "rating": 4.66728,
+        "rating_count": 8088,
+        "genre": "Productivity",
+        "dev": "AppForge Inc.",
+        "bundle_id": "oristats.HabitBull",
+        "url": "https://apps.apple.com/us/app/habit-bull-daily-goal-planner/id1041482672?uo=4"
+      },
+      "mcat: king of the curve": {
+        "price": 0.0,
+        "rating": 4.55405,
+        "rating_count": 1480,
+        "genre": "Education",
+        "dev": "King of the Curve, LLC",
+        "bundle_id": "com.kingofthecurve.kingofthecurve",
+        "url": "https://apps.apple.com/us/app/mcat-king-of-the-curve/id1534662918?uo=4"
+      },
+      "lsat max lsat prep & tutoring": {
+        "price": 0.0,
+        "rating": 4.74626,
+        "rating_count": 4678,
+        "genre": "Education",
+        "dev": "TestMax, Inc.",
+        "bundle_id": "com.testmax.lsatmax",
+        "url": "https://apps.apple.com/us/app/lsat-max-lsat-prep-tutoring/id445785342?uo=4"
+      },
+      "7sage lsat": {
+        "price": 0.0,
+        "rating": 4.87854,
+        "rating_count": 2437,
+        "genre": "Education",
+        "dev": "7Sage Education Technology, Inc.",
+        "bundle_id": "com.7sage.LSAT",
+        "url": "https://apps.apple.com/us/app/7sage-lsat/id665684597?uo=4"
+      },
+      "mcat prep by medschoolcoach": {
+        "price": 0.0,
+        "rating": 4.77106,
+        "rating_count": 1175,
+        "genre": "Education",
+        "dev": "MedSchoolCoach",
+        "bundle_id": "com.medschoolcoach",
+        "url": "https://apps.apple.com/us/app/mcat-prep-by-medschoolcoach/id1503000883?uo=4"
+      },
+      "lsat test prep 2026": {
+        "price": 0.0,
+        "rating": 4.65957,
+        "rating_count": 94,
+        "genre": "Education",
+        "dev": "\u79c0\u5a1f \u5468",
+        "bundle_id": "pp.lsat",
+        "url": "https://apps.apple.com/us/app/lsat-test-prep-2026/id6448958576?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 21,
+    "hypothesis": "BO \u2014 High-stakes exam communities huge (MCAT 200K+, LSAT 70K+). Need daily streak accountability."
+  },
+  "gratitude_to_person": {
+    "label": "Daily Gratitude Message / Kind Act Streak",
+    "community_total": 1529719,
+    "community_breakdown": {
+      "gratitude": 163608,
+      "kindness": 33324,
+      "DecidingToBeBetter": 1332787
+    },
+    "apps_found": 9,
+    "apps": {
+      "gratitude: self-care journal": {
+        "price": 0.0,
+        "rating": 4.88314,
+        "rating_count": 44733,
+        "genre": "Health & Fitness",
+        "dev": "Hapjoy Technologies Private Limited",
+        "bundle_id": "com.northstar.gratitude",
+        "url": "https://apps.apple.com/us/app/gratitude-self-care-journal/id1372575227?uo=4"
+      },
+      "gratitude plus \u2013 journal": {
+        "price": 0.0,
+        "rating": 4.86454,
+        "rating_count": 13945,
+        "genre": "Health & Fitness",
+        "dev": "Redwheel Apps",
+        "bundle_id": "com.RedwheelApps.GratitudePlus",
+        "url": "https://apps.apple.com/us/app/gratitude-plus-journal/id1447851477?uo=4"
+      },
+      "fabulous: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.45197,
+        "rating_count": 87165,
+        "genre": "Health & Fitness",
+        "dev": "Fabulous",
+        "bundle_id": "co.thefabulous.app",
+        "url": "https://apps.apple.com/us/app/fabulous-daily-habit-tracker/id1203637303?uo=4"
+      },
+      "5 minute journal\u30fbdaily diary": {
+        "price": 0.0,
+        "rating": 4.75896,
+        "rating_count": 17213,
+        "genre": "Health & Fitness",
+        "dev": "Intelligent Change LLC",
+        "bundle_id": "com.intelligentchange.Five-Minute-Journal",
+        "url": "https://apps.apple.com/us/app/5-minute-journal-daily-diary/id1062945251?uo=4"
+      },
+      "do habits: get it done": {
+        "price": 0.0,
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.tbd.Done",
+        "url": "https://apps.apple.com/us/app/do-habits-get-it-done/id1103961876?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "habit \u2014 daily tracker": {
+        "price": 0.0,
+        "rating": 3.69432,
+        "rating_count": 2411,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.habit.habytracker.iosappplication",
+        "url": "https://apps.apple.com/us/app/habit-daily-tracker/id1445651730?uo=4"
+      },
+      "today habit tracker": {
+        "price": 0.0,
+        "rating": 4.67804,
+        "rating_count": 3547,
+        "genre": "Health & Fitness",
+        "dev": "Neybox Digital Ltd.",
+        "bundle_id": "com.neybox.Today",
+        "url": "https://apps.apple.com/us/app/today-habit-tracker/id1055295863?uo=4"
+      }
+    },
+    "status": "OCCUPIED",
+    "score": 21,
+    "hypothesis": "BO \u2014 r/gratitude 300K+, r/DecidingToBeBetter 700K+. Gratitude SENDING (to person) streak unbuilt."
+  },
+  "family_dinner_streak": {
+    "label": "Daily Family Dinner / Meal Together Streak",
+    "community_total": 8772652,
+    "community_breakdown": {
+      "Parenting": 8214074,
+      "family": 558404,
+      "mealplanning": 174
+    },
+    "apps_found": 9,
+    "apps": {
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "way of life - habit tracker": {
+        "price": 0.0,
+        "rating": 4.82059,
+        "rating_count": 5050,
+        "genre": "Health & Fitness",
+        "dev": "Way of Life ApS",
+        "bundle_id": "com.larsparendt.wayoflife",
+        "url": "https://apps.apple.com/us/app/way-of-life-habit-tracker/id393159800?uo=4"
+      },
+      "do habits: get it done": {
+        "price": 0.0,
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.tbd.Done",
+        "url": "https://apps.apple.com/us/app/do-habits-get-it-done/id1103961876?uo=4"
+      },
+      "habit tracker - evoday": {
+        "price": 0.0,
+        "rating": 4.76003,
+        "rating_count": 1346,
+        "genre": "Productivity",
+        "dev": "Cosmic Taps SL",
+        "bundle_id": "com.kevinquisquater.Habits",
+        "url": "https://apps.apple.com/us/app/habit-tracker-evoday/id1403517519?uo=4"
+      },
+      "streaks": {
+        "price": 5.99,
+        "rating": 4.81555,
+        "rating_count": 27341,
+        "genre": "Health & Fitness",
+        "dev": "Crunchy Bagel",
+        "bundle_id": "com.streaksapp.streak",
+        "url": "https://apps.apple.com/us/app/streaks/id963034692?uo=4"
+      },
+      "habit tracker": {
+        "price": 0.0,
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity",
+        "dev": "InnerGrow",
+        "bundle_id": "com.davetech.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "strides: habit tracker + goals": {
+        "price": 0.0,
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity",
+        "dev": "Goals LLC",
+        "bundle_id": "com.puresignal.strides",
+        "url": "https://apps.apple.com/us/app/strides-habit-tracker-goals/id672401817?uo=4"
+      },
+      "daily tracker journal & diary": {
+        "price": 0.0,
+        "rating": 4.50936,
+        "rating_count": 2187,
+        "genre": "Health & Fitness",
+        "dev": "Lumen Spark LLC",
+        "bundle_id": "com.cvz.dailytracker.premium",
+        "url": "https://apps.apple.com/us/app/daily-tracker-journal-diary/id306026134?uo=4"
+      }
+    },
+    "status": "BLUE_OCEAN",
+    "score": 91,
+    "hypothesis": "BO \u2014 Research-backed: family dinners = better outcomes. Zero dedicated family-dinner streak app."
+  },
+  "social_call_streak": {
+    "label": "Daily Phone Call / Social Connection Streak",
+    "community_total": 8135942,
+    "community_breakdown": {
+      "lonely": 477921,
+      "socialskills": 6325234,
+      "DecidingToBeBetter": 1332787
+    },
+    "apps_found": 7,
+    "apps": {
+      "everyday - habit tracker": {
+        "price": 0.0,
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity",
+        "dev": "Everyday Growth S.L.",
+        "bundle_id": "app.everyday",
+        "url": "https://apps.apple.com/us/app/everyday-habit-tracker/id1394150432?uo=4"
+      },
+      "grit: daily habit tracker": {
+        "price": 0.0,
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity",
+        "dev": "GrittyApps",
+        "bundle_id": "stoope.Grit",
+        "url": "https://apps.apple.com/us/app/grit-daily-habit-tracker/id6446997766?uo=4"
+      },
+      "habit tracker - evoday": {
+        "price": 0.0,
+        "rating": 4.76003,
+        "rating_count": 1346,
+        "genre": "Productivity",
+        "dev": "Cosmic Taps SL",
+        "bundle_id": "com.kevinquisquater.Habits",
+        "url": "https://apps.apple.com/us/app/habit-tracker-evoday/id1403517519?uo=4"
+      },
+      "do habits: get it done": {
+        "price": 0.0,
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity",
+        "dev": "Kodeon, Inc.",
+        "bundle_id": "com.tbd.Done",
+        "url": "https://apps.apple.com/us/app/do-habits-get-it-done/id1103961876?uo=4"
+      },
+      "way of life - habit tracker": {
+        "price": 0.0,
+        "rating": 4.82059,
+        "rating_count": 5050,
+        "genre": "Health & Fitness",
+        "dev": "Way of Life ApS",
+        "bundle_id": "com.larsparendt.wayoflife",
+        "url": "https://apps.apple.com/us/app/way-of-life-habit-tracker/id393159800?uo=4"
+      },
+      "habit tracker": {
+        "price": 0.0,
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity",
+        "dev": "InnerGrow",
+        "bundle_id": "com.davetech.habit",
+        "url": "https://apps.apple.com/us/app/habit-tracker/id1438388363?uo=4"
+      },
+      "days since: quit habit tracker": {
+        "price": 0.0,
+        "rating": 4.82602,
+        "rating_count": 17399,
+        "genre": "Health & Fitness",
+        "dev": "A Couple of Friends OOD",
+        "bundle_id": "npetrova.DaysSince",
+        "url": "https://apps.apple.com/us/app/days-since-quit-habit-tracker/id1445348921?uo=4"
+      }
+    },
+    "status": "BLUE_OCEAN",
+    "score": 88,
+    "hypothesis": "BO \u2014 Loneliness epidemic. CDC reports daily connection habit as antidote. Zero streak app exists."
+  }
+}
