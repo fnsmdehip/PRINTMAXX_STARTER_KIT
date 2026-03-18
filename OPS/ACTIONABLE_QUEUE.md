@@ -1,10 +1,16 @@
-# ACTIONABLE QUEUE -- 2026-03-17 07:30
-Total items: 80 (deduplicated from all sources)
+# ACTIONABLE QUEUE -- 2026-03-18 07:30
+Total items: 95 (deduplicated from all sources)
 
 ---
 
-## [P0] CRITICAL -- Revenue-blocking human actions (32 items)
+## [P0] CRITICAL -- Revenue-blocking human actions (39 items)
 
+- [ ] - [ ] **HUMAN ACTION (P0, $13/mo):** Upgrade to Surge Plus (enables custom robots.txt, keeps all URLs) [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - [ ] **HUMAN ACTION (P0, 30 min):** Create Cloudflare account + run `bash AUTOMATIONS/seo_platform_migration.sh --prepare && --deploy` [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
+- [ ] - [ ] **HUMAN ACTION (P0, 30 min):** Create Netlify account + run migration script `--netlify` [HUMAN]
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTION (P0, 10 min):** Create Product Hunt maker profile [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTION (P1, 15 min):** Create Pinterest business account + upload first 17 pins [HUMAN]
@@ -43,6 +49,12 @@ Total items: 80 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - [ ] **[HIGH] Vibe Marketplace by Greta (441 PH votes):** New channel to sell vibe-coded products instantly. Sign up: https://www.producthunt.com/posts/vibe-marketplace-by-greta [HUMAN: review + sign up] [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_agent_bible.md` — paste-ready Gumroad listing ($47) [HUMAN]
+      Source: swarm/revenue_report_20260317.md
+- [ ] - `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/GUMROAD_LISTING.md` — paste-ready listing ($29-39) [HUMAN]
+      Source: swarm/revenue_report_20260317.md
+- [ ] - **Status:** BLOCKER — surge.sh free tier (Student plan) serves `Disallow: /` at CDN level on ALL sites
+      Source: PERSISTENT_TASK_TRACKER
 - [ ] - Blockers:
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **Remaining blocker for mobile/iPhone access:**
@@ -69,8 +81,10 @@ Total items: 80 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - [P0] Facebook keyword scraper - $500 budget (r/forhire)
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - Listing: `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/GUMROAD_LISTING.md`
+      Source: swarm/revenue_tracker_report_20260317.md
 
-## [P1] HIGH -- System improvements with high ROI (14 items)
+## [P1] HIGH -- System improvements with high ROI (15 items)
 
 - [ ] - **HUMAN ACTION (P1, ~$100, 30 min):** File DBA "Enterprise Automation Solutions" under Wyoming LLC [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
@@ -88,6 +102,8 @@ Total items: 80 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **HUMAN ACTIONS:** Deploy PWAs (~10 min), post tweets (~15 min), wire email forms to Beehiiv (~15 min) [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
+- [ ] - Both have complete listing copy (paste-ready) [HUMAN]
+      Source: swarm/revenue_report_20260317.md
 - [ ] - **Prompt pipeline built:** log_user_prompts.sh → prompt_meta_review.py → actionable_aggregator.py → session_briefing.py
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - Research pipeline: running in background (twitter + reddit + alpha extraction)
@@ -98,10 +114,10 @@ Total items: 80 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - **PageScorer:** pagescorer.surge.sh — landing page audit tool, conversion scoring, actionable fixes
       Source: PERSISTENT_TASK_TRACKER
-- [ ] - ✓ All systems healthy, no immediate fixes required
-      Source: swarm/system_healer_report_20260315.md
+- [ ] - Listing: `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_agent_bible.md`
+      Source: swarm/revenue_tracker_report_20260317.md
 
-## [P2] MEDIUM -- Nice-to-have optimizations (32 items)
+## [P2] MEDIUM -- Nice-to-have optimizations (39 items)
 
 - [ ] - **HUMAN ACTION (P2, 10 min):** Set up Cal.com account for booking page [HUMAN]
       Source: PERSISTENT_TASK_TRACKER
@@ -137,8 +153,6 @@ Total items: 80 (deduplicated from all sources)
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - None: blocking None ventures [HUMAN]
       Source: DAILY_TACTICAL_PLAN
-- [ ] - 📋 Old audit CSVs available for manual cleanup if needed [HUMAN]
-      Source: swarm/system_healer_report_20260315.md
 - [ ] - **Alpha applied action plan created:** `OPS/ALPHA_APPLIED_ACTION_PLAN.md`
       Source: PERSISTENT_TASK_TRACKER
 - [ ] - `OPS/FIRST_DOLLAR_ACTION_PLAN.md` — unified 2.5-hour path to first revenue
@@ -165,8 +179,24 @@ Total items: 80 (deduplicated from all sources)
       Source: swarm/system_healer_report_20260316.md
 - [ ] - Time until critical (98%): 5-7 days
       Source: swarm/system_healer_report_20260316.md
-- [ ] - ⚠️ Monitor disk usage trend (currently 97%)
-      Source: swarm/system_healer_report_20260315.md
+- [ ] - Product: `DIGITAL_PRODUCTS/ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html`
+      Source: swarm/revenue_tracker_report_20260317.md
+- [ ] - Price: $47 (PWYW min $27)
+      Source: swarm/revenue_tracker_report_20260317.md
+- [ ] - Hot audience: Claude Code has active Twitter traction right now
+      Source: swarm/revenue_tracker_report_20260317.md
+- [ ] - Product: `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/`
+      Source: swarm/revenue_tracker_report_20260317.md
+- [ ] - Claude Code has a hot audience right now (150K+ Twitter impressions/month on topic)
+      Source: swarm/revenue_report_20260317.md
+- [ ] - Reddit Money Machine targets indie hackers = proven buyers
+      Source: swarm/revenue_report_20260317.md
+- [ ] - Combined potential: $300-800/mo at 5-15 sales/mo
+      Source: swarm/revenue_report_20260317.md
+- [ ] - `DIGITAL_PRODUCTS/ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html` — the actual product file
+      Source: swarm/revenue_report_20260317.md
+- [ ] - `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/REDDIT_MONEY_MACHINE.md` — the actual product
+      Source: swarm/revenue_report_20260317.md
 
 ## [P3] LOW -- Research/exploration (2 items)
 
@@ -177,6 +207,6 @@ Total items: 80 (deduplicated from all sources)
 
 ---
 ### Sources
-- PERSISTENT_TASK_TRACKER: 71 items
-- swarm: 8 items
+- PERSISTENT_TASK_TRACKER: 75 items
+- swarm: 19 items
 - DAILY_TACTICAL_PLAN: 1 items

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-18 05:47:55",
+  "generated_at": "2026-03-18 07:15:19",
   "sources": {
-    "alpha_staging_candidates": 2702,
+    "alpha_staging_candidates": 2948,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 66
+    "existing_specs_detected": 67
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,22 +13,22 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 2650,
+    "total_candidates": 2891,
     "decision_counts": {
       "ITERATE_EXISTING_NOW": 85,
       "BUILD_NEW_NOW": 44,
-      "SPEC_AND_TEST": 94,
-      "PARK": 2418,
-      "VALIDATE_FIRST": 9
+      "SPEC_AND_TEST": 99,
+      "PARK": 2653,
+      "VALIDATE_FIRST": 10
     },
     "cluster_counts": {
-      "faith": 77,
-      "habits": 138,
-      "ai_utility": 1925,
-      "fitness": 130,
-      "focus": 292,
-      "sleep": 75,
-      "meal": 13
+      "faith": 80,
+      "habits": 156,
+      "ai_utility": 2096,
+      "fitness": 140,
+      "focus": 317,
+      "sleep": 87,
+      "meal": 15
     }
   },
   "queue": [

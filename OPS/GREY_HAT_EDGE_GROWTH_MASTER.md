@@ -7339,3 +7339,394 @@ Semantic search for instagram followers.
 
 [r/cryptomarkets] The Shadow of a Liquidity Shock: When Michael J. Saylor's Strategy Devours Bitcoin Faster Than It Is Created.
 
+
+
+---
+
+## Pending Enhancement (ALPHA106799, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/articleback
+**Added:** 2026-03-18T06:10:15-04:00
+
+[PH LAUNCH] ArticleBack: Publish Insight, Build Authority
+
+
+
+---
+
+## Pending Enhancement (ALPHA106800, Score: 34)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/clipledger
+**Added:** 2026-03-18T06:10:15-04:00
+
+[PH LAUNCH] ClipLedger: Track views &amp; payouts for YouTube Shorts creators
+
+
+
+---
+
+## Pending Enhancement (ALPHA106803, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/permit-io
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Permit.io MCP Gateway: Drop-in MCP Security Developers Love and CISOs Trust
+
+
+
+---
+
+## Pending Enhancement (ALPHA106806, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/perplexity-ai
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Comet for Enterprise: Perplexity’s Secure AI browser built for enterprise teams
+
+
+
+---
+
+## Pending Enhancement (ALPHA106807, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lore-4
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Lore: Cursor for your memory. 100% private, open-source &amp; free.
+
+
+
+---
+
+## Pending Enhancement (ALPHA106808, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/claude-dispatch
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Claude Dispatch: Text Claude from your phone using “Dispatch”
+
+
+
+---
+
+## Pending Enhancement (ALPHA106810, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/unsloth
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Unsloth Studio: Visual LLM fine-tuning and inference for everyone
+
+
+
+---
+
+## Pending Enhancement (ALPHA106811, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/autosend-mcp
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] AutoSend MCP: The email platform your AI agent can operate.
+
+
+
+---
+
+## Pending Enhancement (ALPHA106812, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/fantastical
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Fantastical MCP for Mac: Manage your schedule directly with Claude
+
+
+
+---
+
+## Pending Enhancement (ALPHA106813, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lightfield
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Lightfield: AI-native CRM that builds itself and does work for you
+
+
+
+---
+
+## Pending Enhancement (ALPHA106814, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/soul-2-0
+**Added:** 2026-03-18T06:10:16-04:00
+
+[PH LAUNCH] Soul 2.0: Fashion-Grade AI Photos Without the Camera Crew
+
+
+
+---
+
+## Pending Enhancement (ALPHA106815, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/sharepatch
+**Added:** 2026-03-18T06:10:17-04:00
+
+[PH LAUNCH] SharePatch: Share git patches with clean, review-ready browser diffs
+
+
+
+---
+
+## Pending Enhancement (ALPHA106816, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/doccupine
+**Added:** 2026-03-18T06:10:17-04:00
+
+[PH LAUNCH] Doccupine: Open source AI-ready documentation platform.
+
+
+
+---
+
+## Pending Enhancement (ALPHA106817, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/databox
+**Added:** 2026-03-18T06:10:17-04:00
+
+[PH LAUNCH] Genie by Databox: Your AI analyst for business performance
+
+
+
+---
+
+## Pending Enhancement (ALPHA106818, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lista-4
+**Added:** 2026-03-18T06:10:17-04:00
+
+[PH LAUNCH] Lista: A simple to-do list with GTD workflows + iCloud sync
+
+
+
+---
+
+## Pending Enhancement (ALPHA106823, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/claude-double-checker-is-2x-active
+**Added:** 2026-03-18T06:10:17-04:00
+
+[PH LAUNCH] Claude Double Checker: See Claude's 2× usage window live in your macOS menu bar
+
+
+
+---
+
+## Pending Enhancement (ALPHA106799, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/articleback
+**Added:** 2026-03-18T06:10:18-04:00
+
+[PH LAUNCH] ArticleBack: Publish Insight, Build Authority
+
+
+
+---
+
+## Pending Enhancement (ALPHA106800, Score: 34)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/clipledger
+**Added:** 2026-03-18T06:10:18-04:00
+
+[PH LAUNCH] ClipLedger: Track views &amp; payouts for YouTube Shorts creators
+
+
+
+---
+
+## Pending Enhancement (ALPHA106803, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/permit-io
+**Added:** 2026-03-18T06:10:18-04:00
+
+[PH LAUNCH] Permit.io MCP Gateway: Drop-in MCP Security Developers Love and CISOs Trust
+
+
+
+---
+
+## Pending Enhancement (ALPHA106806, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/perplexity-ai
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Comet for Enterprise: Perplexity’s Secure AI browser built for enterprise teams
+
+
+
+---
+
+## Pending Enhancement (ALPHA106807, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lore-4
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Lore: Cursor for your memory. 100% private, open-source &amp; free.
+
+
+
+---
+
+## Pending Enhancement (ALPHA106808, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/claude-dispatch
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Claude Dispatch: Text Claude from your phone using “Dispatch”
+
+
+
+---
+
+## Pending Enhancement (ALPHA106810, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/unsloth
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Unsloth Studio: Visual LLM fine-tuning and inference for everyone
+
+
+
+---
+
+## Pending Enhancement (ALPHA106811, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/autosend-mcp
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] AutoSend MCP: The email platform your AI agent can operate.
+
+
+
+---
+
+## Pending Enhancement (ALPHA106812, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/fantastical
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Fantastical MCP for Mac: Manage your schedule directly with Claude
+
+
+
+---
+
+## Pending Enhancement (ALPHA106813, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lightfield
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Lightfield: AI-native CRM that builds itself and does work for you
+
+
+
+---
+
+## Pending Enhancement (ALPHA106814, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/soul-2-0
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Soul 2.0: Fashion-Grade AI Photos Without the Camera Crew
+
+
+
+---
+
+## Pending Enhancement (ALPHA106815, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/sharepatch
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] SharePatch: Share git patches with clean, review-ready browser diffs
+
+
+
+---
+
+## Pending Enhancement (ALPHA106816, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/doccupine
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Doccupine: Open source AI-ready documentation platform.
+
+
+
+---
+
+## Pending Enhancement (ALPHA106817, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/databox
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Genie by Databox: Your AI analyst for business performance
+
+
+
+---
+
+## Pending Enhancement (ALPHA106818, Score: 26)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/lista-4
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Lista: A simple to-do list with GTD workflows + iCloud sync
+
+
+
+---
+
+## Pending Enhancement (ALPHA106823, Score: 20)
+
+**Source:** ProductHunt | **URL:** https://www.producthunt.com/products/claude-double-checker-is-2x-active
+**Added:** 2026-03-18T06:10:19-04:00
+
+[PH LAUNCH] Claude Double Checker: See Claude's 2× usage window live in your macOS menu bar
+
+
+
+---
+
+## Pending Enhancement (ALPHA106901, Score: 26)
+
+**Source:** r/SideProject | **URL:** https://reddit.com/r/SideProject/comments/1rwan5v/i_built_a_finance_app_thats_manual_by_design/
+**Added:** 2026-03-18T06:15:09-04:00
+
+[r/SideProject] I built a finance app that's manual by design - because sync and automation don't mean you understand your money
+
+
+
+---
+
+## Pending Enhancement (ALPHA106911, Score: 20)
+
+**Source:** r/cryptomarkets | **URL:** https://reddit.com/r/CryptoMarkets/comments/1rwa2ti/whats_the_weirdest_thing_youve_seen_someone_do_in/
+**Added:** 2026-03-18T06:15:09-04:00
+
+[r/cryptomarkets] What’s the weirdest thing you’ve seen someone do in crypto?
+
+
+
+---
+
+## Pending Enhancement (ALPHA106937, Score: 22)
+
+**Source:** @lottsnomad (high-signal-accounts) | **URL:** https://x.com/lottsnomad/status/2034110091897540705
+**Added:** 2026-03-18T07:15:13-04:00
+
+viral growth usually starts with one repeatable action
+
+something users want to share
+
+something that signals status
+
+design that loop early
+

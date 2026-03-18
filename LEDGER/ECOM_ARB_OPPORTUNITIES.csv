@@ -2,3 +2,53 @@ product_name,source,source_price,selling_platform,estimated_sell_price,fees,ship
 Example Wireless Earbuds,Walmart,15.0,facebook,30.0,1.5,5.0,8.5,28.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
 Example Wireless Earbuds,Walmart,15.0,mercari,30.0,3.0,5.0,7.0,23.33,https://walmart.com/clearance/electronics,electronics,API integration required for live data
 Example Wireless Earbuds,Walmart,15.0,ebay,30.0,3.98,5.0,6.02,20.08,https://walmart.com/clearance/electronics,electronics,API integration required for live data
+2026-03-18T05:47:43.669781,led face mask,beauty,39.99,16.5,FB Marketplace,13.49,33.7,50,48.7,LIST,2.0,0.0,8.0,0.0,26.5,amazon,medium
+2026-03-18T05:49:58.813648,pull up bar,fitness,14.99,8.5,FB Marketplace,-2.26,-15.1,50,5.6,SKIP,0.75,0.0,8.0,0.0,17.25,amazon,medium
+2026-03-18T05:51:32.000032,shoe rack,home,9.99,8.5,FB Marketplace,-7.01,-70.2,50,-23.6,SKIP,0.5,0.0,8.0,0.0,17.0,amazon,medium
+2026-03-18T05:47:01.661438,posture corrector,health,6.99,4.25,FB Marketplace,-5.61,-80.3,50,-25.5,SKIP,0.35,0.0,8.0,0.0,12.6,amazon,medium
+2026-03-18T05:49:51.660294,resistance bands set,fitness,3.69,3.5,FB Marketplace,-4.49,-121.8,50,-40.5,SKIP,0.18,0.0,4.5,0.0,8.18,amazon,light
+2026-03-18T05:48:39.742276,knife sharpener,kitchen,2.69,4.0,FB Marketplace,-5.94,-221.0,57,-80.2,SKIP,0.13,0.0,4.5,0.0,8.63,amazon,light
+2026-03-18T05:47:27.305184,scalp massager,health,2.42,2.75,FB Marketplace,-8.45,-349.2,50,-137.4,SKIP,0.12,0.0,8.0,0.0,10.87,amazon,medium
+2026-03-18T05:47:41.425465,led face mask,beauty,39.99,16.5,FB Marketplace,13.49,33.7,15,38.2,LIST,2.0,0.0,8.0,0.0,26.5,amazon,medium
+2026-03-18T05:46:59.094003,posture corrector,health,16.65,4.25,FB Marketplace,3.57,21.4,40,25.9,LIST,0.83,0.0,8.0,0.0,13.08,ebay,medium
+2026-03-18T05:49:56.485377,pull up bar,fitness,14.99,8.5,FB Marketplace,-2.26,-15.1,50,5.6,SKIP,0.75,0.0,8.0,0.0,17.25,amazon,medium
+2026-03-18T05:50:16.271588,grip strength trainer,fitness,4.89,2.75,FB Marketplace,-2.6,-53.3,50,-10.2,SKIP,0.24,0.0,4.5,0.0,7.49,amazon,light
+2026-03-18T05:47:49.612441,dermaplaning tool,beauty,4.99,2.0,FB Marketplace,-1.76,-35.3,0,-16.8,SKIP,0.25,0.0,4.5,0.0,6.75,amazon,light
+2026-03-18T05:49:34.038094,cable organizer,tech,4.99,2.0,FB Marketplace,-1.76,-35.3,0,-16.8,SKIP,0.25,0.0,4.5,0.0,6.75,amazon,light
+2026-03-18T05:48:30.843483,air fryer liner,kitchen,4.29,2.0,FB Marketplace,-2.42,-56.5,2,-25.6,SKIP,0.21,0.0,4.5,0.0,6.71,amazon,light
+2026-03-18T05:51:34.527384,shoe rack,home,8.99,8.5,FB Marketplace,-7.96,-88.5,50,-32.3,SKIP,0.45,0.0,8.0,0.0,16.95,amazon,medium
+2026-03-18T05:50:39.388683,cat water fountain,pet,6.99,8.5,FB Marketplace,-9.86,-141.1,50,-56.2,SKIP,0.35,0.0,8.0,0.0,16.85,amazon,medium
+2026-03-18T05:47:18.930948,neck stretcher,health,6.24,5.5,FB Marketplace,-7.57,-121.3,1,-59.6,SKIP,0.31,0.0,8.0,0.0,13.81,amazon,medium
+2026-03-18T05:47:12.557381,gua sha tool,health,2.41,2.0,FB Marketplace,-4.21,-174.7,9,-73.5,SKIP,0.12,0.0,4.5,0.0,6.62,amazon,light
+2026-03-18T05:48:43.623435,vegetable chopper,kitchen,4.99,5.5,FB Marketplace,-8.76,-175.5,7,-81.2,SKIP,0.25,0.0,8.0,0.0,13.75,amazon,medium
+2026-03-18T05:47:25.161578,scalp massager,health,2.42,2.75,FB Marketplace,-8.45,-349.2,14,-148.2,SKIP,0.12,0.0,8.0,0.0,10.87,amazon,medium
+2026-03-18T05:50:05.381034,yoga mat,fitness,28.99,7.0,FB Marketplace,16.04,55.3,50,61.2,LIST,1.45,0.0,4.5,0.0,12.95,amazon,light
+2026-03-18T05:48:11.370743,lash serum,beauty,6.99,2.75,FB Marketplace,-0.61,-8.7,54,11.8,SKIP,0.35,0.0,4.5,0.0,7.6,amazon,light
+2026-03-18T05:49:34.213726,cable organizer,tech,6.89,2.0,FB Marketplace,0.05,0.7,0,0.4,WATCH,0.34,0.0,4.5,0.0,6.84,amazon,light
+2026-03-18T05:51:24.683635,led candles,home,5.99,3.5,FB Marketplace,-2.31,-38.6,50,-3.9,SKIP,0.3,0.0,4.5,0.0,8.3,amazon,light
+2026-03-18T05:47:05.666020,ice roller face,health,4.99,2.75,FB Marketplace,-2.51,-50.3,50,-8.9,SKIP,0.25,0.0,4.5,0.0,7.5,amazon,light
+2026-03-18T05:47:46.011241,dermaplaning tool,beauty,4.99,2.0,FB Marketplace,-1.76,-35.3,0,-16.8,SKIP,0.25,0.0,4.5,0.0,6.75,amazon,light
+2026-03-18T05:49:06.583768,wireless earbuds,tech,8.99,6.5,FB Marketplace,-5.96,-66.3,34,-25.3,SKIP,0.45,0.0,8.0,0.0,14.95,amazon,medium
+2026-03-18T05:48:30.952829,air fryer liner,kitchen,4.29,2.0,FB Marketplace,-2.42,-56.5,2,-25.6,SKIP,0.21,0.0,4.5,0.0,6.71,amazon,light
+2026-03-18T05:50:12.592970,jump rope weighted,fitness,3.99,3.5,FB Marketplace,-4.21,-105.5,50,-33.5,SKIP,0.2,0.0,4.5,0.0,8.2,amazon,light
+2026-03-18T05:50:34.327011,dog puzzle toy,pet,6.99,5.5,FB Marketplace,-6.86,-98.1,50,-34.5,SKIP,0.35,0.0,8.0,0.0,13.85,amazon,medium
+2026-03-18T05:49:51.527028,resistance bands set,fitness,3.69,3.5,FB Marketplace,-4.49,-121.8,50,-40.5,SKIP,0.18,0.0,4.5,0.0,8.18,amazon,light
+2026-03-18T05:48:43.298703,vegetable chopper,kitchen,4.99,5.5,FB Marketplace,-8.76,-175.5,7,-81.2,SKIP,0.25,0.0,8.0,0.0,13.75,amazon,medium
+2026-03-18T05:50:14.413496,yoga mat,fitness,28.99,7.0,FB Marketplace,16.04,55.3,50,61.2,LIST,1.45,0.0,4.5,0.0,12.95,amazon,light
+2026-03-18T05:49:25.459488,phone projector,tech,84.97,14.0,FB Marketplace,58.72,69.1,2,58.2,LIST,4.25,0.0,8.0,0.0,26.25,amazon,medium
+2026-03-18T05:49:01.344269,electric lunch box,kitchen,10.19,8.5,FB Marketplace,-6.82,-66.9,50,-22.0,SKIP,0.51,0.0,8.0,0.0,17.01,amazon,medium
+2026-03-18T05:47:03.487357,posture corrector,health,6.99,4.25,FB Marketplace,-5.61,-80.3,50,-25.5,SKIP,0.35,0.0,8.0,0.0,12.6,amazon,medium
+2026-03-18T05:50:01.657890,resistance bands set,fitness,3.69,3.5,FB Marketplace,-4.49,-121.8,50,-40.5,SKIP,0.18,0.0,4.5,0.0,8.18,amazon,light
+2026-03-18T05:47:24.248861,neck stretcher,health,5.99,5.5,FB Marketplace,-7.81,-130.4,50,-48.9,SKIP,0.3,0.0,8.0,0.0,13.8,amazon,medium
+2026-03-18T05:47:16.954617,gua sha tool,health,2.41,2.0,FB Marketplace,-4.21,-174.7,50,-61.2,SKIP,0.12,0.0,4.5,0.0,6.62,amazon,light
+2026-03-18T05:48:45.990716,knife sharpener,kitchen,2.6,4.0,FB Marketplace,-6.03,-231.9,50,-86.8,SKIP,0.13,0.0,4.5,0.0,8.63,amazon,light
+2026-03-18T05:47:31.771196,scalp massager,health,2.42,2.75,FB Marketplace,-8.45,-349.2,50,-137.4,SKIP,0.12,0.0,8.0,0.0,10.87,amazon,medium
+2026-03-18T06:13:35.191632,yoga mat,fitness,26.99,7.0,FB Marketplace,14.14,52.4,50,57.2,LIST,1.35,0.0,4.5,0.0,12.85,amazon,light
+2026-03-18T06:13:04.890687,cable organizer,tech,11.99,2.0,FB Marketplace,4.89,40.8,50,38.7,LIST,0.6,0.0,4.5,0.0,7.1,amazon,light
+2026-03-18T06:13:26.704496,pull up bar,fitness,14.19,8.5,FB Marketplace,-3.02,-21.3,50,1.9,SKIP,0.71,0.0,8.0,0.0,17.21,amazon,medium
+2026-03-18T06:13:48.212972,grip strength trainer,fitness,4.79,2.75,FB Marketplace,-2.7,-56.4,50,-11.6,SKIP,0.24,0.0,4.5,0.0,7.49,amazon,light
+2026-03-18T06:12:39.897885,wireless earbuds,tech,8.99,6.5,FB Marketplace,-5.96,-66.3,50,-20.5,SKIP,0.45,0.0,8.0,0.0,14.95,amazon,medium
+2026-03-18T06:11:57.122996,portable blender,kitchen,9.0,8.5,FB Marketplace,-7.95,-88.3,50,-32.2,SKIP,0.45,0.0,8.0,0.0,16.95,amazon,medium
+2026-03-18T06:14:43.571178,shower head filter,home,6.99,5.5,FB Marketplace,-6.86,-98.1,50,-34.5,SKIP,0.35,0.0,8.0,0.0,13.85,amazon,medium
+2026-03-18T06:12:17.308905,vegetable chopper,kitchen,4.99,5.5,FB Marketplace,-8.76,-175.5,50,-68.3,SKIP,0.25,0.0,8.0,0.0,13.75,amazon,medium
+2026-03-18T06:11:01.010859,scalp massager,health,2.42,2.75,FB Marketplace,-8.45,-349.2,50,-137.4,SKIP,0.12,0.0,8.0,0.0,10.87,amazon,medium
