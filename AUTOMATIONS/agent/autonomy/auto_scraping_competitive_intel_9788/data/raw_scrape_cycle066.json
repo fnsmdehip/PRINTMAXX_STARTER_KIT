@@ -1,0 +1,182 @@
+{
+  "knitting_craft_streak": {
+    "label": "Daily Knitting / Craft Practice Streak",
+    "community_total": 5342203,
+    "subreddit_breakdown": {
+      "knitting": 588649,
+      "crochet": 1909663,
+      "crafts": 2843891
+    },
+    "top_competitor": "Tally: The Anything Tracker",
+    "top_competitor_ratings": 4021,
+    "generics_filtered": 12,
+    "hypothesis": "BO \u2014 knitting 1M+, crochet 3M+. Zero dedicated streak apps. Craft is massive TikTok trend.",
+    "status": "BLUE_OCEAN",
+    "score": 8
+  },
+  "hiking_weekly_habit": {
+    "label": "Weekly Hiking / Trail Habit Tracker",
+    "community_total": 8413069,
+    "subreddit_breakdown": {
+      "hiking": 2507209,
+      "trailrunning": 457244,
+      "backpacking": 5448616
+    },
+    "top_competitor": "AllTrails: Hike, Bike & Run",
+    "top_competitor_ratings": 1022091,
+    "generics_filtered": 9,
+    "hypothesis": "SOFT \u2014 Alltrails dominates logging but NOT habit streak. Dedicated hiking-streak niche open.",
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "sun_salutation_streak": {
+    "label": "Daily Sun Salutation / Morning Yoga Streak",
+    "community_total": 6832193,
+    "subreddit_breakdown": {
+      "yoga": 3310666,
+      "morningroutine": 1024,
+      "Meditation": 3520503
+    },
+    "top_competitor": "Paycor Mobile",
+    "top_competitor_ratings": 31898,
+    "generics_filtered": 8,
+    "hypothesis": "BO \u2014 r/yoga 500K+. Sun salutation is universal entry yoga. No dedicated streak app.",
+    "status": "SOFT_COMPETITION",
+    "score": 5
+  },
+  "intermittent_fasting_streak": {
+    "label": "Intermittent Fasting Streak Tracker",
+    "community_total": 1730083,
+    "subreddit_breakdown": {
+      "intermittentfasting": 985423,
+      "fasting": 556355,
+      "OMAD": 188305
+    },
+    "top_competitor": "Zero: Fasting & Food Tracker",
+    "top_competitor_ratings": 445173,
+    "generics_filtered": 1,
+    "hypothesis": "SOFT \u2014 Zero (IF tracker) exists but no pure habit-streak app. 900K IF community.",
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "water_intake_daily": {
+    "label": "Daily Water Intake Habit Streak",
+    "community_total": 11288703,
+    "subreddit_breakdown": {
+      "hydrohomies": 1281763,
+      "nutrition": 5878343,
+      "loseit": 4128597
+    },
+    "top_competitor": "Drink Water Reminder N Tracker",
+    "top_competitor_ratings": 151935,
+    "generics_filtered": 8,
+    "hypothesis": "SOFT \u2014 WaterMinder exists but habit-streak framing untapped. r/hydrohomies 400K+ active.",
+    "status": "OCCUPIED",
+    "score": 3
+  },
+  "walking_10k_steps_streak": {
+    "label": "Daily 10K Steps Streak Tracker",
+    "community_total": 16893143,
+    "subreddit_breakdown": {
+      "walking": 217976,
+      "fitness": 12483288,
+      "running": 4191879
+    },
+    "top_competitor": "Map My Walk: Walking Tracker",
+    "top_competitor_ratings": 463762,
+    "generics_filtered": 9,
+    "hypothesis": "SOFT \u2014 Samsung Health/Apple Health do steps but no streak-gamification. 10K steps is cultural shorthand.",
+    "status": "OCCUPIED",
+    "score": 3
+  },
+  "declutter_daily_streak": {
+    "label": "Daily Declutter / Minimalism Habit Streak",
+    "community_total": 4473006,
+    "subreddit_breakdown": {
+      "minimalism": 2558965,
+      "declutter": 719524,
+      "ZeroWaste": 1194517
+    },
+    "top_competitor": "",
+    "top_competitor_ratings": 0,
+    "generics_filtered": 19,
+    "hypothesis": "BO \u2014 r/minimalism 500K+, r/declutter 350K+. No dedicated declutter streak app exists.",
+    "status": "BLUE_OCEAN",
+    "score": 9
+  },
+  "language_immersion_streak": {
+    "label": "Daily Language Immersion / Listening Streak",
+    "community_total": 4461960,
+    "subreddit_breakdown": {
+      "languagelearning": 3336640,
+      "learnspanish": 295204,
+      "LearnJapanese": 830116
+    },
+    "top_competitor": "Memrise Easy Language Learning",
+    "top_competitor_ratings": 213554,
+    "generics_filtered": 0,
+    "hypothesis": "SOFT \u2014 Duolingo owns gamified learning but passive immersion (listening/reading) has no streak app.",
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "daily_doodle_streak": {
+    "label": "Daily Drawing / Doodle Practice Streak",
+    "community_total": 7478522,
+    "subreddit_breakdown": {
+      "learnart": 1671502,
+      "drawing": 5727516,
+      "Sketch": 79504
+    },
+    "top_competitor": "Simply Draw: Learn to Draw",
+    "top_competitor_ratings": 566119,
+    "generics_filtered": 4,
+    "hypothesis": "BO \u2014 r/learnart 500K+. Learn-to-draw communities huge. No pure doodle streak app.",
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "breathwork_daily": {
+    "label": "Daily Breathwork / Box Breathing Streak",
+    "community_total": 3540890,
+    "subreddit_breakdown": {
+      "breathwork": 20387,
+      "Meditation": 3520503,
+      "Wim_Hof": 0
+    },
+    "top_competitor": "Habit-Bull: Daily Goal Planner",
+    "top_competitor_ratings": 8088,
+    "generics_filtered": 18,
+    "hypothesis": "BO \u2014 Breathwork rising fast post-COVID. Wim Hof community 200K+. Zero dedicated breathwork streak apps.",
+    "status": "SOFT_COMPETITION",
+    "score": 5
+  },
+  "cold_plunge_streak": {
+    "label": "Daily Cold Plunge / Ice Bath Streak",
+    "community_total": 791075,
+    "subreddit_breakdown": {
+      "coldplunge": 26572,
+      "Wim_Hof": 0,
+      "biohackers": 764503
+    },
+    "top_competitor": "Plunge - Official App",
+    "top_competitor_ratings": 1538,
+    "generics_filtered": 17,
+    "hypothesis": "SOFT \u2014 Community growing rapidly. Wim Hof app exists but no cold-plunge-specific streak tracker.",
+    "status": "SOFT_COMPETITION",
+    "score": 4
+  },
+  "sauna_weekly_habit": {
+    "label": "Weekly Sauna / Heat Therapy Habit Tracker",
+    "community_total": 1083615,
+    "subreddit_breakdown": {
+      "Sauna": 115321,
+      "biohackers": 764503,
+      "longevity": 203791
+    },
+    "top_competitor": "BetterMe: Health Coaching",
+    "top_competitor_ratings": 700642,
+    "generics_filtered": 10,
+    "hypothesis": "BO \u2014 r/Sauna 200K+. Sauna + longevity trend massive. Absolutely zero dedicated sauna tracker apps.",
+    "status": "OCCUPIED",
+    "score": 2
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "gratitude_journal_streak": {
+    "niche": "gratitude_journal_streak",
+    "label": "Daily Gratitude Journal Streak",
+    "hypothesis": "SOFT \u2014 apps like 5-Minute Journal exist but niche streak-only gratitude trackers may be BO",
+    "community_total": 4870085,
+    "subreddit_breakdown": {
+      "gratitude": 163540,
+      "Journaling": 2188010,
+      "selfimprovement": 2518535
+    },
+    "total_apps_found": 26,
+    "generics_filtered": 11,
+    "real_competitors": 15,
+    "top_competitor": "Journal",
+    "top_competitor_ratings": 247948,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "therapy_homework_streak": {
+    "niche": "therapy_homework_streak",
+    "label": "Daily Therapy / CBT Homework Streak",
+    "hypothesis": "BO \u2014 therapist-assigned homework tracking is underserved, 10M+ therapy subreddit",
+    "community_total": 834836,
+    "subreddit_breakdown": {
+      "therapy": 162977,
+      "cbt": 38238,
+      "mentalhealth": 633621
+    },
+    "total_apps_found": 28,
+    "generics_filtered": 10,
+    "real_competitors": 18,
+    "top_competitor": "Clarity: CBT Self Help Journal",
+    "top_competitor_ratings": 28761,
+    "status": "OCCUPIED",
+    "score": 4
+  },
+  "sobriety_streak_niche": {
+    "niche": "sobriety_streak_niche",
+    "label": "Sobriety / Sober Streak Counter (non-AA)",
+    "hypothesis": "SOFT \u2014 r/stopdrinking huge, apps exist but none dominate non-AA secular market",
+    "community_total": 1132689,
+    "subreddit_breakdown": {
+      "stopdrinking": 652975,
+      "redditorsinrecovery": 70023,
+      "leaves": 409691
+    },
+    "total_apps_found": 23,
+    "generics_filtered": 10,
+    "real_competitors": 13,
+    "top_competitor": "I Am Sober",
+    "top_competitor_ratings": 173555,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "screen_time_habit": {
+    "niche": "screen_time_habit",
+    "label": "Daily Screen Time Reduction Habit",
+    "hypothesis": "BO \u2014 digital wellness is massive trend, existing apps are OS-level not habit-streak",
+    "community_total": 518485,
+    "subreddit_breakdown": {
+      "nosurf": 292812,
+      "digitalminimalism": 225435,
+      "screentime": 238
+    },
+    "total_apps_found": 26,
+    "generics_filtered": 12,
+    "real_competitors": 14,
+    "top_competitor": "I Am Sober",
+    "top_competitor_ratings": 173555,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "bedtime_routine_streak": {
+    "niche": "bedtime_routine_streak",
+    "label": "Daily Bedtime Routine / Sleep Hygiene Streak",
+    "hypothesis": "BO \u2014 insomnia + sleep optimization trend huge, no dedicated routine streak app",
+    "community_total": 851163,
+    "subreddit_breakdown": {
+      "sleep": 671601,
+      "insomnia": 179562,
+      "sleephygiene": 0
+    },
+    "total_apps_found": 27,
+    "generics_filtered": 12,
+    "real_competitors": 15,
+    "top_competitor": "Slumber\uff0dCalm Stories for Sleep",
+    "top_competitor_ratings": 25902,
+    "status": "OCCUPIED",
+    "score": 4
+  },
+  "parenting_read_aloud": {
+    "niche": "parenting_read_aloud",
+    "label": "Daily Read-Aloud to Kids Streak",
+    "hypothesis": "BO \u2014 parenting community 18M+, pediatric reading habit trackers nearly absent on App Store",
+    "community_total": 9507631,
+    "subreddit_breakdown": {
+      "Parenting": 8213777,
+      "beyondthebump": 788896,
+      "toddlers": 504958
+    },
+    "total_apps_found": 27,
+    "generics_filtered": 8,
+    "real_competitors": 19,
+    "top_competitor": "Epic - Kids' Books & Reading",
+    "top_competitor_ratings": 516982,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "no_spend_day_streak": {
+    "niche": "no_spend_day_streak",
+    "label": "No-Spend Day Streak / Budget Habit",
+    "hypothesis": "BO \u2014 frugal subreddits 40M+ combined, no-spend challenge apps nearly zero",
+    "community_total": 11752375,
+    "subreddit_breakdown": {
+      "povertyfinance": 2606496,
+      "frugal": 6729065,
+      "financialindependence": 2416814
+    },
+    "total_apps_found": 21,
+    "generics_filtered": 17,
+    "real_competitors": 4,
+    "top_competitor": "YNAB",
+    "top_competitor_ratings": 59020,
+    "status": "OCCUPIED",
+    "score": 3
+  },
+  "savings_deposit_streak": {
+    "niche": "savings_deposit_streak",
+    "label": "Daily Savings Deposit / Transfer Streak",
+    "hypothesis": "BO \u2014 r/personalfinance 30.9M confirmed, no dedicated daily-savings-action streak app",
+    "community_total": 30755152,
+    "subreddit_breakdown": {
+      "personalfinance": 21609273,
+      "financialindependence": 2416814,
+      "Frugal": 6729065
+    },
+    "total_apps_found": 22,
+    "generics_filtered": 12,
+    "real_competitors": 10,
+    "top_competitor": "Oportun: Finances made simple",
+    "top_competitor_ratings": 289144,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "call_family_streak": {
+    "niche": "call_family_streak",
+    "label": "Daily Call / Text Family Member Streak",
+    "hypothesis": "BO \u2014 loneliness epidemic, no dedicated family connection streak app found",
+    "community_total": 22571490,
+    "subreddit_breakdown": {
+      "family": 558348,
+      "relationship_advice": 15688080,
+      "socialskills": 6325062
+    },
+    "total_apps_found": 21,
+    "generics_filtered": 13,
+    "real_competitors": 8,
+    "top_competitor": "(Not Boring) Habits",
+    "top_competitor_ratings": 5467,
+    "status": "SOFT_COMPETITION",
+    "score": 7
+  },
+  "random_acts_kindness": {
+    "niche": "random_acts_kindness",
+    "label": "Daily Random Acts of Kindness Streak",
+    "hypothesis": "BO \u2014 1M+ RAK community, prosocial behavior apps essentially zero on App Store",
+    "community_total": 6510598,
+    "subreddit_breakdown": {
+      "RandomActsOfKindness": 115812,
+      "socialskills": 6325062,
+      "mentalhealthsupport": 69724
+    },
+    "total_apps_found": 21,
+    "generics_filtered": 17,
+    "real_competitors": 4,
+    "top_competitor": "",
+    "top_competitor_ratings": 0,
+    "status": "BLUE_OCEAN",
+    "score": 10
+  },
+  "cold_shower_streak": {
+    "niche": "cold_shower_streak",
+    "label": "Daily Cold Shower / Cold Exposure Streak",
+    "hypothesis": "SOFT \u2014 Wim Hof app exists but not a streak-focused habit tracker",
+    "community_total": 71747,
+    "subreddit_breakdown": {
+      "coldshowers": 42330,
+      "Wim_Hof": 0,
+      "biohacking": 29417
+    },
+    "total_apps_found": 23,
+    "generics_filtered": 16,
+    "real_competitors": 7,
+    "top_competitor": "Cold Shower Therapy",
+    "top_competitor_ratings": 106,
+    "status": "SOFT_COMPETITION",
+    "score": 6
+  },
+  "sunlight_morning_habit": {
+    "niche": "sunlight_morning_habit",
+    "label": "Daily Morning Sunlight Exposure Habit",
+    "hypothesis": "BO \u2014 Huberman Lab audience massive, no dedicated morning sunlight streak app",
+    "community_total": 937222,
+    "subreddit_breakdown": {
+      "HubermanLab": 236204,
+      "biohacking": 29417,
+      "sleep": 671601
+    },
+    "total_apps_found": 23,
+    "generics_filtered": 14,
+    "real_competitors": 9,
+    "top_competitor": "Me+ Lifestyle Routine",
+    "top_competitor_ratings": 235771,
+    "status": "OCCUPIED",
+    "score": 2
+  }
+}

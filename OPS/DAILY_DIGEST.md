@@ -1,53 +1,62 @@
-# DAILY DIGEST — 2026-03-08 01:33
-Covering: 2026-03-08 to 2026-03-08
-Revenue: $0 | Day 35 at zero
+# DAILY DIGEST — 2026-03-17 18:39
+Covering: 2026-03-17 to 2026-03-17
+Revenue: $0 | Day 44 at zero
 
 ---
 
 ### Alpha Intelligence
-- **84 new entries** scraped
-- Actionable: 24
-- Archived/low-value: 54
+- **1648 new entries** scraped
+- Actionable: 217
+- Archived/low-value: 1312
 - Flagged for human review: 0
 
-**Top categories:** TOOL_ALPHA (41), GENERAL (13), MONETIZATION (11), APP_FACTORY (8), CONTENT_FORMAT (4)
+**Top categories:** GENERAL (388), MONETIZATION (307), APP_FACTORY (280), TOOL_ALPHA (275), GROWTH_HACK (115)
 
 **Best finds:**
-- [HN_003] APP_FACTORY | ROI:HIGHEST | HackerNews Show HN
-  Running 4 AI-driven companies from terminal via agent orchestration (auto-co-meta). Solopreneur-AI hybrid model: one person + agent swarm = multi-comp
-- [PH_20260308_STITCH_BY_GOOGL] TOOL_ALPHA | ROI:HIGHEST | ProductHunt
-  Stitch by Google: Turn napkin sketches into production-ready UI in seconds. | 635 PH votes | Topics: Design Tools, Developer Tools, Artificial Intelli
-- [ALPHA_REDDIT_APP002] APP_FACTORY | ROI:HIGHEST | r/AppBusiness post - FocusBudd
-  Pomodoro iOS app. Solo dev. $0 ad spend. 23 days to $300 MRR. 2.8K downloads. 4 tactics: (1) 20+ language localization Day 1 for non-US App Store long
-- [ALPHA_REDDIT_SAAS001] APP_FACTORY | ROI:HIGHEST | r/SaaS post - Dental complianc
-  Niche B2B SaaS: automated compliance reminders for dental/vet offices. Stack: Next.js + Supabase + Stripe + Vercel at $8.11/mo. Outreach: scraped Goog
-- [ALPHA_REDDIT_001] SEO_CONTENT | ROI:HIGHEST | Reddit r/GrowthHacking
-  SEO + programmatic SEO flywheel. Ahrefs $149M ARR with no SDRs/BDRs. Hunt low-competition high-intent keywords (best X alternative, X pricing). Use AI
-- [ALPHA_REDDIT_002] CONTENT_FORMAT | ROI:HIGHEST | Reddit r/SaaS
-  YouTube as search engine not audience engine. 100-200 view videos generating $12k/month and 1400 paying subscribers. 63% of views from search. 26% fro
-- [ALPHA_BIBLECHAT_001] APP_FACTORY | ROI:HIGHEST | Reddit r/AppBusiness + Appfigu
-  BibleChat (Romanian 2-man studio pivot) reached $750K/mo net revenue in March 2025. 1.5M downloads that month. Tech: React Native + RAG on scripture c
-- [HN_001] TOOL_ALPHA | ROI:HIGH | HackerNews Show HN
-  MCP server giving Claude persistent memory + local RAG. Zero-cost memory layer for AI agents. Direct relevance to ralph loop infrastructure and agent 
+- [ALPHA103306] APP_FACTORY | ROI:HIGHEST | r/SaaS
+  [r/SaaS] I made $413 from 1,700 users in 3 months...here's the honest breakdown.
+- [ALPHA103205] MONETIZATION | ROI:HIGHEST | @levelsio (high-signal-account
+   Here is the full 40 minutes of my crew and I exposing California fraud, Minnesota was big but California is even bigger... We uncovered over $170,000
+- [ALPHA103285] MONETIZATION | ROI:HIGHEST | @StevenCravotta (high-signal-a
+  What 99% of founders think about building an app:
+
+· You need to know how to code
+· You need a massive budget
+· You need a technical cofounder
+· It ta
+- [ALPHA103662] GROWTH_TACTICS | ROI:HIGHEST | r/growthhacking
+  Built to $6K MRR in 4 months without ad spend - the boring SEO foundation that actually worked
+- [ALPHA104743] MONETIZATION | ROI:HIGHEST | @zach_yadegari (high-signal-ac
+  Cal AI has been acquired by MyFitnessPal 
+
+Henry and I started Cal AI as 17-year old high school students with one mission: make calorie tracking easi
+- [ALPHA105082] MONETIZATION | ROI:HIGHEST | @unusual_whales (high-signal-a
+  73% of senators have a median net worth of more than $1 million, compared to just 7% of the U.S. population, per NOTUS
+- [ALPHA_HN_47416227] TOOL_ALPHA | ROI:HIGHEST | HackerNews (top)
+  Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust. Tabs, splits, and tmux work fine until you have several projects open with logs, 
+- [ALPHA103204] TOOL_ALPHA | ROI:HIGH | GitHub
+  MIT repo: karthironald/BodyProgress (272 stars, Swift)
 
 ### Content Pipeline
-- Total content files: 711
-- Auto-generated folder: 32 files total
+- **APPROVED_POSTS_MAR7.csv**: 20 posts ready
+- **BUFFER_UPLOAD_MAR7.csv**: 50 posts ready
+- Total content files: 1623
+- Auto-generated folder: 46 files total
 
 ### Agent Activity
-- **4 reports** generated
+- **17 reports** generated
+  - PLAYWRIGHT_TEST_SUMMARY: 1
+  - competitor_intel: 1
+  - competitor_stalker_report: 1
+  - cross_pollination: 1
+  - cross_pollinator_report: 1
+  - gap_hunter_report: 1
   - gap_report: 1
-  - health_report: 1
-  - meta_executor: 1
-  - swarm_brain: 1
+  - growth_strategy: 1
+  - inbound_report: 1
+  - lead_machine_report: 1
 
 ### What Changed / Improved
-- **36 assets** updated
-  - ADHD-Streak (DEPLOYED): PWA streak tracker. Email capture active. OG image generated. Needs native mobil
-  - PrayerLock (DEPLOYED): PWA prayer tracker. Email capture active. OG image generated.
-  - FocusLock (DEPLOYED): PWA focus timer. Email capture active. OG image generated.
-  - SleepMaxx (DEPLOYED): PWA sleep tracker. Email capture active. OG image generated.
-  - MealMaxx (DEPLOYED): PWA meal tracker. Email capture active. OG image generated.
 
 ### HUMAN REQUIRED (only you can do these)
 

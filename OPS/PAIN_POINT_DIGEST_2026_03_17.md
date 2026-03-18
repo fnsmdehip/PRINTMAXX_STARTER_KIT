@@ -1,14 +1,20 @@
 # Reddit Pain Point Digest
 
-Generated: 2026-03-17 06:21:58
+Generated: 2026-03-17 18:11:09
 
-Total pain points found: 11
+Total pain points found: 22
 
 ---
 
-## HIGH Opportunity (6 posts, score >= 70)
+## HIGH Opportunity (7 posts, score >= 70)
 
-### [100/100] r/AppIdeas (1↑ 1💬)
+### [100/100] r/GetStudying (66↑ 7💬)
+**The tests never stop.**
+Pattern: wish_existed | Categories: wish_existed
+> Thinking out loud here, but without any tests, assignments or exams I wouldn’t be trying as hard in my studies. Like genuinely, if I had no external pressure to get things done I would do the bare min
+Link: https://reddit.com/r/GetStudying/comments/1rwbful/the_tests_never_stop/
+
+### [85/100] r/AppIdeas (0↑ 1💬)
 **I asked 100 people what are problems they facing in marketing here's the....**
 Pattern: willing_to_pay | Categories: willing_to_pay
 > Problems-
@@ -20,7 +26,16 @@ Pattern: willing_to_pay | Categories: willing_to_pay
 If you have fix o
 Link: https://reddit.com/r/AppIdeas/comments/1rvx7kv/i_asked_100_people_what_are_problems_they_facing/
 
-### [80/100] r/startups (0↑ 15💬)
+### [80/100] r/startups (2↑ 9💬)
+**Any tool to review vendor contracts / NDA without paying lawyer every time? "I will not promote"**
+Pattern: looking_for | Categories: looking_for
+> I need to review one vendor contract and one NDA, but going to lawyer for every small thing feels too much expensive 😅
+
+Half the time contract is just 4–5 pages but still charges like big case.
+I just
+Link: https://reddit.com/r/startups/comments/1rwg0ey/any_tool_to_review_vendor_contracts_nda_without/
+
+### [80/100] r/startups (0↑ 16💬)
 **Consumer app feasibility question - I will not promote**
 Pattern: frustrated_with | Categories: frustrated_with
 > I am sick of AI slop posts.
@@ -30,58 +45,53 @@ I think it is enough of an annoyance and waste of time that I am willing to go t
 I think the best way to achieve this is a new browse
 Link: https://reddit.com/r/startups/comments/1rvfokn/consumer_app_feasibility_question_i_will_not/
 
-### [80/100] r/productivity (2↑ 2💬)
-**An app that syncs screen time across both iPhone and Windows laptop?**
+### [80/100] r/GetDisciplined (2↑ 1💬)
+**I'm looking for an app or website to help me lose weight. (This might not be the best subreddit but due to low karma I c**
 Pattern: looking_for | Categories: looking_for
-> Is there an app that syncs and aggregates the screen time between an iPhone and a Windows laptop? I waste a lot of time on both, and I wanted to know how much I would be wasting on both in total. It w
-Link: https://reddit.com/r/productivity/comments/1rvjkvg/an_app_that_syncs_screen_time_across_both_iphone/
+> I'm 24m and I want to lose weight. Gained a lot of weight last year and want to shed it but not by myself. I'm looking for an app or website where I can:
 
-### [80/100] r/digitalminimalism (2↑ 2💬)
-**Any app like AppBlock but free?**
-Pattern: looking_for | Categories: looking_for
-> I pay the deal on Appblock and liked the unlocked version of the app a lot
+-give info about age height weight to calcula
+Link: https://reddit.com/r/getdisciplined/comments/1rwj3rb/im_looking_for_an_app_or_website_to_help_me_lose/
 
-Being able to have like 5 programs that are only enable when you are in your home is awesome 
-
-But the capped version is awf
-Link: https://reddit.com/r/digitalminimalism/comments/1rvdwm5/any_app_like_appblock_but_free/
-
-### [78/100] r/Entrepreneur (80↑ 120💬)
-**took 3 years off after my exit. coming back feels harder than starting from scratch**
+### [78/100] r/webdev (30↑ 62💬)
+**Cold calling for web developers**
 Pattern: need_help | Categories: need_help
-> hey everyone, transitioning back after time away and wanted perspective from people who've done this
+> I've finally started cold calling to get clients - I'm about 100 calls this week (which yes I recognize is not high volume), but I'm proud I've made those 100. Here's the thing: I absolutely suck. I'm
+Link: https://reddit.com/r/webdev/comments/1rwawtc/cold_calling_for_web_developers/
 
-32 (M). before 2020 built and exited couple small b2b businesses. stepped away intentionally for f
-Link: https://reddit.com/r/Entrepreneur/comments/1ru9pv4/took_3_years_off_after_my_exit_coming_back_feels/
-
-### [70/100] r/SaaS (2↑ 3💬)
-**I’ve completely lost all motivation to build anything after multiple failed attempts — anyone been here and come back?**
+### [70/100] r/ADHD (1↑ 3💬)
+**Need to book coaching. How?!**
 Pattern: frustrated_with | Categories: frustrated_with
-> I’m just gonna be straight – I’m burned out as fuck right now and kinda lost.
+> I’ve come to the point where my marriage is on the rocks, my kids don’t respect me and I’m constantly late to work. I need help. My wife is insisting I setup an adhd coach to help tackle my overwhelm 
+Link: https://reddit.com/r/ADHD/comments/1rwjejn/need_to_book_coaching_how/
 
-Been trying to build my own thing for over a year now. Started with Layerly cloud – tool for 3D print farms, made MVP, sp
-Link: https://reddit.com/r/SaaS/comments/1rw256o/ive_completely_lost_all_motivation_to_build/
+## MEDIUM Opportunity (15 posts, score 50-69)
 
-## MEDIUM Opportunity (5 posts, score 50-69)
-
-- [69] r/webdev: Beyond PageSpeed Insights: What tools do you use to benchmark the impact of heav (need_help)
-- [60] r/microsaas: How are you marketing your SaaS on social media right now? (need_help)
-- [60] r/ADHD: struggling with getting anything done for difficult classes (need_help)
-- [60] r/Christianity: Loneliness is killing me slowly. I don't have friends. (need_help)
-- [60] r/islam: recent revert with troubles on praying (need_help)
+- [60] r/GetStudying: How to "wake up" my brain faster to study ? (need_help)
+- [60] r/GetStudying: How do you study after lunch or dinner? I feel very focused before eating, but t (frustrated_with)
+- [60] r/ADHD: Struggling with school, medication and will to live (need_help)
+- [60] r/ADHD: Got prescribed Wellbutrin (need_help)
+- [60] r/ADHD: ADHD and anemia (need_help)
+- [60] r/loseit: Can’t stop eating (need_help)
+- [60] r/sleep: Need something to block my ears to get good sleep at night. (need_help)
+- [60] r/sleep: Sleep advice needed (need_help)
+- [60] r/GetDisciplined: [Question] How do you get motivated for the day? (need_help)
+- [60] r/smallbusiness: Small business owner here getting hit with “temporary energy surcharges” tied to (need_help)
 
 ## Pattern Breakdown
 
 | Pattern | Count | Signal |
 |---------|-------|--------|
-| need_help | 6 | 60/100 |
-| frustrated_with | 2 | 70/100 |
+| need_help | 13 | 60/100 |
+| frustrated_with | 3 | 70/100 |
 | looking_for | 2 | 80/100 |
+| feature_request | 2 | 50/100 |
+| wish_existed | 1 | 90/100 |
 | willing_to_pay | 1 | 100/100 |
 
 ## Recommended Actions
 
-1. REPLY to 6 high-opportunity posts with value-first content
+1. REPLY to 7 high-opportunity posts with value-first content
 2. Cross-reference with existing app features to find product-market fit signals
 3. URGENT: 1 posts express willingness to pay - validate demand
 4. Competitor weakness detected - check frustrated posts for feature gap opportunities

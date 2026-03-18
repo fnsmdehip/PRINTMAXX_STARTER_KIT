@@ -2982,3 +2982,24 @@ Basically pretend you’re in the US by wiping a phone, inserting a US SIM, runn
 
 Reliability score: 3/
 
+
+
+---
+
+## Pending Enhancement (ALPHA105219, Score: 43)
+
+**Source:** @StevenCravotta (high-signal-accounts) | **URL:** https://x.com/StevenCravotta/status/2033927119684722710
+**Added:** 2026-03-17T16:12:50-04:00
+
+The app space is saturated is a complete myth.
+
+95% of apps have no idea about distribution.
+
+The barrier to entry to BUILD apps has gone down to zero.
+
+But the barrier to MARKET apps is still high.
+
+If you know how to create viral TikToks, you can dominate.
+
+The building part is
+

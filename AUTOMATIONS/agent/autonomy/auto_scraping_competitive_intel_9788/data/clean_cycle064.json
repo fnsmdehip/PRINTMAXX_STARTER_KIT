@@ -1,0 +1,218 @@
+{
+  "guitar_practice_streak": {
+    "niche": "guitar_practice_streak",
+    "label": "Daily Guitar Practice Streak",
+    "hypothesis": "BO \u2014 no dedicated guitar practice tracker, 2M+ guitarist community",
+    "community_total": 3801271,
+    "subreddit_breakdown": {
+      "guitarlessons": 445866,
+      "Guitar": 3301180,
+      "learnguitar": 54225
+    },
+    "total_apps_found": 29,
+    "generics_filtered": 11,
+    "real_competitors": 18,
+    "top_competitor": "Ultimate Guitar: Chords & Tabs",
+    "top_competitor_ratings": 443387,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "piano_practice_habit": {
+    "niche": "piano_practice_habit",
+    "label": "Daily Piano Practice Habit Tracker",
+    "hypothesis": "BO \u2014 piano learning community growing via TikTok trend, no dedicated app",
+    "community_total": 1391773,
+    "subreddit_breakdown": {
+      "pianolearning": 122965,
+      "piano": 1260513,
+      "learnpiano": 8295
+    },
+    "total_apps_found": 30,
+    "generics_filtered": 10,
+    "real_competitors": 20,
+    "top_competitor": "Simply Piano: Learn Piano Fast",
+    "top_competitor_ratings": 803356,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "chess_daily_streak": {
+    "niche": "chess_daily_streak",
+    "label": "Daily Chess Puzzle / Study Streak",
+    "hypothesis": "OCCUPIED \u2014 Chess.com has app but no dedicated streak-only habit tool",
+    "community_total": 2166253,
+    "subreddit_breakdown": {
+      "chess": 1786507,
+      "chessbeginners": 379012,
+      "ChessOpenings": 734
+    },
+    "total_apps_found": 23,
+    "generics_filtered": 3,
+    "real_competitors": 20,
+    "top_competitor": "Chess \u2219",
+    "top_competitor_ratings": 199824,
+    "status": "OCCUPIED",
+    "score": 2
+  },
+  "writing_daily_streak": {
+    "niche": "writing_daily_streak",
+    "label": "Daily Writing / 1000 Words Streak",
+    "hypothesis": "BO \u2014 large writing community, NaNoWriMo proves demand, no dedicated streak app",
+    "community_total": 5258908,
+    "subreddit_breakdown": {
+      "writing": 3340723,
+      "worldbuilding": 1868392,
+      "nanowrimo": 49793
+    },
+    "total_apps_found": 26,
+    "generics_filtered": 14,
+    "real_competitors": 12,
+    "top_competitor": "Habit-Bull: Daily Goal Planner",
+    "top_competitor_ratings": 8088,
+    "status": "SOFT_COMPETITION",
+    "score": 7
+  },
+  "poetry_streak": {
+    "niche": "poetry_streak",
+    "label": "Daily Poetry Writing Streak",
+    "hypothesis": "BO \u2014 niche but loyal community, no dedicated poetry streak app found",
+    "community_total": 4025992,
+    "subreddit_breakdown": {
+      "Poetry": 2157599,
+      "poetryworkshop": 0,
+      "worldbuilding": 1868393
+    },
+    "total_apps_found": 26,
+    "generics_filtered": 12,
+    "real_competitors": 14,
+    "top_competitor": "Poemhunter",
+    "top_competitor_ratings": 8521,
+    "status": "SOFT_COMPETITION",
+    "score": 7
+  },
+  "devotional_reading_streak": {
+    "niche": "devotional_reading_streak",
+    "label": "Daily Devotional Reading Streak (non-Quran/Bible specific)",
+    "hypothesis": "SOFT \u2014 Hallow exists but is Catholic-focused, gap for Protestant/generic devotional",
+    "community_total": 1272829,
+    "subreddit_breakdown": {
+      "Christianity": 635419,
+      "Reformed": 73282,
+      "spirituality": 564128
+    },
+    "total_apps_found": 27,
+    "generics_filtered": 11,
+    "real_competitors": 16,
+    "top_competitor": "Glorify: Devotional & Prayer",
+    "top_competitor_ratings": 90482,
+    "status": "OCCUPIED",
+    "score": 3
+  },
+  "rosary_streak": {
+    "niche": "rosary_streak",
+    "label": "Daily Rosary Prayer Streak",
+    "hypothesis": "BO \u2014 Hallow is meditation-first, no dedicated rosary streak tracker",
+    "community_total": 1068587,
+    "subreddit_breakdown": {
+      "Catholicism": 328600,
+      "OrthodoxChristianity": 104568,
+      "Christianity": 635419
+    },
+    "total_apps_found": 21,
+    "generics_filtered": 2,
+    "real_competitors": 19,
+    "top_competitor": "Relevant Radio Catholic Rosary",
+    "top_competitor_ratings": 50273,
+    "status": "OCCUPIED",
+    "score": 3
+  },
+  "posture_habit": {
+    "niche": "posture_habit",
+    "label": "Daily Posture Check / Posture Habit Streak",
+    "hypothesis": "BO \u2014 WFH posture epidemic, r/Posture community active, no dedicated habit app",
+    "community_total": 5172571,
+    "subreddit_breakdown": {
+      "Posture": 453687,
+      "Posturecheck": 0,
+      "bodyweightfitness": 4718884
+    },
+    "total_apps_found": 22,
+    "generics_filtered": 15,
+    "real_competitors": 7,
+    "top_competitor": "Habit-Bull: Daily Goal Planner",
+    "top_competitor_ratings": 8088,
+    "status": "SOFT_COMPETITION",
+    "score": 7
+  },
+  "stretching_streak": {
+    "niche": "stretching_streak",
+    "label": "Daily Stretching / Flexibility Streak",
+    "hypothesis": "SOFT \u2014 Some yoga apps include stretching but no dedicated stretch-streak app",
+    "community_total": 5797994,
+    "subreddit_breakdown": {
+      "flexibility": 2384549,
+      "yoga": 3310657,
+      "Stretching": 102788
+    },
+    "total_apps_found": 22,
+    "generics_filtered": 17,
+    "real_competitors": 5,
+    "top_competitor": "Stretch: Stretching & Mobility",
+    "top_competitor_ratings": 3163,
+    "status": "SOFT_COMPETITION",
+    "score": 7
+  },
+  "typing_speed_habit": {
+    "niche": "typing_speed_habit",
+    "label": "Daily Typing Speed Practice Streak",
+    "hypothesis": "BO \u2014 WFH remote work typing skill demand, no dedicated habit tracker found",
+    "community_total": 5522679,
+    "subreddit_breakdown": {
+      "learntyping": 10872,
+      "MechanicalKeyboards": 1360735,
+      "productivity": 4151072
+    },
+    "total_apps_found": 25,
+    "generics_filtered": 13,
+    "real_competitors": 12,
+    "top_competitor": "Type Run",
+    "top_competitor_ratings": 30563,
+    "status": "OCCUPIED",
+    "score": 4
+  },
+  "networking_habit": {
+    "niche": "networking_habit",
+    "label": "Daily Networking / Professional Outreach Streak",
+    "hypothesis": "BO \u2014 job market anxiety driving networking behavior, no streak app found",
+    "community_total": 6250916,
+    "subreddit_breakdown": {
+      "networking": 425014,
+      "careerguidance": 4843514,
+      "LinkedInLunatics": 982388
+    },
+    "total_apps_found": 26,
+    "generics_filtered": 18,
+    "real_competitors": 8,
+    "top_competitor": "Habit-Bull: Daily Goal Planner",
+    "top_competitor_ratings": 8088,
+    "status": "SOFT_COMPETITION",
+    "score": 7
+  },
+  "reading_pages_streak": {
+    "niche": "reading_pages_streak",
+    "label": "Daily Reading Pages Goal Streak (10 pages/day)",
+    "hypothesis": "BO supplement to READING_STREAK \u2014 pages-focused vs time-focused, different UX",
+    "community_total": 29038074,
+    "subreddit_breakdown": {
+      "books": 27049097,
+      "52book": 653483,
+      "booksuggestions": 1335494
+    },
+    "total_apps_found": 23,
+    "generics_filtered": 11,
+    "real_competitors": 12,
+    "top_competitor": "Bookly: Book Tracker",
+    "top_competitor_ratings": 56749,
+    "status": "OCCUPIED",
+    "score": 3
+  }
+}

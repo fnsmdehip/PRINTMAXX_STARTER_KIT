@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-03-16T08:22:13.503260",
+  "generated_at": "2026-03-17T16:30:02.076061",
   "source": "community_app_demand.jsonl",
-  "total_entries": 120,
+  "total_entries": 121,
   "top_demand": [
     {
       "rank": 1,
@@ -152,18 +152,6 @@
       "numbers": "$1000",
       "url": "https://reddit.com/r/Affiliatemarketing/comments/1rmg4tu/curious_on_what_the_best_methods_of_earnings/",
       "found_date": "2026-03-06 14:55:15"
-    },
-    {
-      "label": "Declutter/Minimalism Habit",
-      "niche_id": "declutter_habit",
-      "source": "competitive_intel_ci_cycle60",
-      "dedicated_apps": 0,
-      "verdict": "BLUE_OCEAN",
-      "expected_demand": "minimalism=2M+",
-      "confidence": "HIGH",
-      "added_at": "2026-03-17"
     }
-  ],
-  "ci_additions": 1,
-  "last_ci_update": "2026-03-17"
+  ]
 }

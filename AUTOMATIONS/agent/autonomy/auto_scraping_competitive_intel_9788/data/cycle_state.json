@@ -1,53 +1,58 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-17T19:04:55.056234+00:00",
-  "cycle_number": 63,
+  "last_cycle": "2026-03-17T23:21:45.913892+00:00",
+  "cycle_number": 66,
   "cycle_status": "COMPLETE",
   "current_step": "done",
-  "configured_at": "2026-03-17T19:04:55.056234+00:00",
+  "configured_at": "2026-03-17T23:21:45.913892+00:00",
   "stats": {
     "niches_scanned": 12,
-    "new_bos_confirmed": 1,
-    "soft_competition": 5,
-    "occupied": 6,
-    "alpha_entries": 6,
+    "new_bos_confirmed": 2,
+    "soft_competition": 3,
+    "occupied": 7,
+    "alpha_entries": 5,
     "ci_rows_added": 12,
-    "blue_oceans_confirmed": 46
+    "blue_oceans_confirmed": 52
   },
-  "cumulative_blue_oceans": 46,
+  "cumulative_blue_oceans": 52,
   "p0_alerts": [
-    "CLEAN_EATING_STREAK: 11.4M community. LARGEST BO. BUILD NOW.",
+    "NEW_C066 BLUE OCEAN: DECLUTTER_DAILY_STREAK \u2014 4,473,006 community. BUILD NOW.",
+    "NEW_C066 BLUE OCEAN: KNITTING_CRAFT_STREAK \u2014 5,342,203 community. BUILD NOW.",
+    "NEW_C065 BLUE OCEAN: RANDOM_ACTS_KINDNESS \u2014 6,510,598 community. BUILD NOW.",
+    "SAVINGS_STREAK: 30.9M personalfinance. BUILD NOW.",
     "READING_STREAK: 23M r/books. BUILD NOW.",
-    "CODING_STREAK: 4.7M r/learnprogramming. BUILD NOW.",
-    "MEDITATION_STREAK: 3.52M. BUILD NOW.",
-    "RUNNING_STREAK: 4.19M VERIFIED. BUILD NOW.",
-    "PRAYERLOCK: Ramadan time-critical. CRITICAL.",
-    "LTD_VALIDATION: 89x199=17711 UNVERIFIED. Human check indiehackers.com.",
-    "SAVINGS_STREAK: 30.0M community. BUILD NOW."
+    "CLEAN_EATING_STREAK: 11.4M. BUILD NOW.",
+    "NETWORKING_HABIT: 6.25M C064. BUILD NOW.",
+    "WRITING_DAILY_STREAK: 5.26M C064. BUILD NOW.",
+    "PRAYERLOCK: Ramadan time-critical. CRITICAL."
   ],
-  "cycle_63_results": {
-    "strategy": "FINANCE_WELLNESS + MENTAL_HEALTH + SLEEP_HYGIENE + DIGITAL_WELLNESS + MICRO_HABITS",
+  "cycle_66_results": {
+    "strategy": "HOBBY_TRACKERS + PHYSICAL_WELLNESS_MICRO_HABITS",
     "new_blue_oceans": [
-      "savings_streak"
+      "knitting_craft_streak",
+      "declutter_daily_streak"
+    ],
+    "near_bos": [
+      "sun_salutation_streak",
+      "breathwork_daily"
     ],
     "soft_competition": [
-      "sobriety_streak",
-      "anxiety_habit",
-      "therapist_homework_streak",
-      "no_screen_bedtime_streak",
-      "phone_detox_streak"
+      "sun_salutation_streak",
+      "breathwork_daily",
+      "cold_plunge_streak"
     ],
     "occupied": [
-      "budget_habit",
-      "debt_payoff_streak",
-      "sleep_streak",
-      "morning_routine_streak",
-      "walking_streak",
-      "hydration_streak"
+      "hiking_weekly_habit",
+      "intermittent_fasting_streak",
+      "water_intake_daily",
+      "walking_10k_steps_streak",
+      "language_immersion_streak",
+      "daily_doodle_streak",
+      "sauna_weekly_habit"
     ],
     "biggest_community": [
-      "savings_streak",
-      30944390
+      "walking_10k_steps_streak",
+      16893143
     ]
   }
 }
