@@ -236,6 +236,7 @@ def get_todays_posts(phase_config: dict[str, Any], state: dict[str, Any]) -> lis
 
 def get_intelligence_brief(venture: str = "GROWTH", task: str = "engagement") -> str:
     """Pull intelligence brief for the plan."""
+    parts = []
     try:
         result = subprocess.run(
             ["python3", str(AUTOMATIONS / "intelligence_router.py"),
@@ -243,10 +244,25 @@ def get_intelligence_brief(venture: str = "GROWTH", task: str = "engagement") ->
             capture_output=True, text=True, timeout=15, cwd=str(PROJECT)
         )
         if result.returncode == 0:
-            return result.stdout.strip()[:600]
+            parts.append(result.stdout.strip()[:600])
     except Exception:
         pass
-    return ""
+
+    # Capital Genesis Priority Stack — surface top-ranked methods for daily planning
+    cap_gen_path = PROJECT / "OPS" / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+    if cap_gen_path.exists():
+        try:
+            stack = cap_gen_path.read_text()
+            # Extract P0 section for daily action planning
+            p0_end = stack.find("## P1:")
+            if p0_end > 0:
+                parts.append(f"PRIORITY STACK (P0 — DO NOW):\n{stack[:p0_end].strip()[:500]}")
+            else:
+                parts.append(f"PRIORITY STACK:\n{stack[:500]}")
+        except Exception:
+            pass
+
+    return "\n\n".join(parts) if parts else ""
 
 
 def populate_reply_template(hook_key: str, metrics: dict[str, Any]) -> str:

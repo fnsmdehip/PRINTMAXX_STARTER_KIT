@@ -16,6 +16,9 @@ Stack: Python | LLM: Claude Code (subscription, model-agnostic in theory) | Brow
 - Alpha: `python3 AUTOMATIONS/alpha_query.py --venture APP_FACTORY --json`
 - Master Ops: `python3 AUTOMATIONS/master_ops_bridge.py --brief VENTURE_TYPE`
 - App factory: `python3 AUTOMATIONS/app_factory_command_center.py --refresh --top 8`
+- Method discovery: `python3 AUTOMATIONS/method_discovery_crawler.py --crawl` (--score, --report, --new-only, --dry-run)
+- Capital Genesis ranking: `python3 AUTOMATIONS/capital_genesis_ranker.py --rank` (--top N, --p0, --new, --report, --export csv, --phase N)
+- Priority stack: `cat OPS/CAPITAL_GENESIS_PRIORITY_STACK.md`
 
 ## Scrapers (run every session)
 - Twitter: `python3 AUTOMATIONS/twitter_alpha_scraper.py --all`
@@ -33,6 +36,14 @@ Stack: Python | LLM: Claude Code (subscription, model-agnostic in theory) | Brow
 - Ready ops: `--ready` | Synergies: `--synergy` | Blockers: `--blockers`
 - Playbook: `--playbook C01` | Brief: `--brief VENTURE_TYPE`
 - 19 sheets, 182 ops, 26 synergies, 12h TTL cache, cron 5:15 AM
+
+## Sovrun (Agent OS)
+- Handoff: `python3 AUTOMATIONS/agent_swarm.py --handoff SOURCE TARGET "task"`
+- Skills query: `python3 AUTOMATIONS/agent_swarm.py --skills "search query"`
+- CEO DAG mode: `python3 AUTOMATIONS/ceo_agent.py --dag`
+- DAG status: `python3 AUTOMATIONS/ceo_agent.py --dag-status`
+- Procedural memory consolidate: `python3 -c "import sys; sys.path.insert(0,'OPEN_SOURCE/agent-soul'); from core.procedural_memory import ProceduralMemory; m=ProceduralMemory(db_path='AUTOMATIONS/agent/sovrun/skills.db'); m.consolidate(); m.close()"`
+- Skills stats: `python3 -c "import sys; sys.path.insert(0,'OPEN_SOURCE/agent-soul'); from core.procedural_memory import ProceduralMemory; import json; m=ProceduralMemory(db_path='AUTOMATIONS/agent/sovrun/skills.db'); print(json.dumps(m.stats(),indent=2)); m.close()"`
 
 ## Model Routing
 Opus: swarm_brain, quality_gate, gap_hunter, growth_strategist

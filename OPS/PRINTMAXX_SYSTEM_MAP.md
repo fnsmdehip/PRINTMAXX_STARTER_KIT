@@ -1,6 +1,6 @@
 # PRINTMAXX — COMPLETE SYSTEM MAP
 # Canonical live architecture map. Update this file in the same session whenever the system changes.
-# One solopreneur. Zero revenue. 33 autonomous agents. 392 Python scripts. 105 cron jobs (zero collisions). 27GB.
+# One solopreneur. Zero revenue. 33 autonomous agents. 394 Python scripts. 107 cron jobs (zero collisions). 27GB.
 # Goal: $0 → hedge fund capital management via recursive automation.
 
 ---
@@ -11,7 +11,7 @@ This is the live system map for PRINTMAXX.
 
 - Update this file immediately when agents, automations, schedules, queues, dashboards, memory layers, control surfaces, key directories, or data flow change.
 - If the change also affects navigation or standing instructions, update `.claude/CLAUDE.md` in the same session.
-- Latest verified control-surface update: 2026-03-17 EDT.
+- Latest verified control-surface update: 2026-03-18 EDT.
 
 ---
 
@@ -51,7 +51,7 @@ PRINTMAXX operates as a **hedge fund of revenue lanes**, not a single-bet startu
 ```
 PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │
-├── AUTOMATIONS/                      # THE BRAIN — 298 Python scripts, 5K files
+├── AUTOMATIONS/                      # THE BRAIN — 300 Python scripts, 5K files
 │   ├── ceo_agent.py                  #   L0 orchestrator. 16 phases. Scores ops, decides PROMOTE/ENHANCE/CREATE/KILL.
 │   ├── venture_autonomy.py           #   L1 engine. 8 venture types. Self-managing schedules. SelfManager auto-adjusts.
 │   ├── agent_swarm.py                #   L1 engine. 25 operational agents. Generates launchd plists. Health monitoring.
@@ -78,6 +78,8 @@ PRINTMAXX_STARTER_KITttttt/          # 27GB, 595K files
 │   ├── prompt_meta_review.py         #   L2 intelligence. Analyzes user prompts for lost threads, patterns, forgotten goals.
 │   ├── session_briefing.py           #   L2 intelligence. Auto session-start briefing: agent reports, changes, queue.
 │   ├── actionable_aggregator.py      #   L3 execution. Scans 6 sources → prioritized P0-P3 action queue.
+│   ├── method_discovery_crawler.py   #   L4 collection. Daily crawls 18 subreddits + HN + Twitter for new revenue methods. Capital Genesis scoring. Cron 5 AM.
+│   ├── capital_genesis_ranker.py     #   L2 intelligence. Scores ALL methods on 7 weighted dimensions, phase-aware. Daily priority stack. Cron 5:30 AM.
 │   ├── memory_manager.py             #   L6 maintenance. Filesystem-based memory management.
 │   ├── wire_missed_intelligence.py   #   L6 maintenance. Parses scan results → updates intelligence catalog.
 │   ├── build_codebase_grammar.py     #   L6 maintenance. AST-based 118x compression for LLM context.
@@ -307,6 +309,7 @@ L1 ENGINES          venture_autonomy.py ──────────── Eve
                          │
 L2 INTELLIGENCE     intelligence_router.py ────────── On demand. 484 docs + 15K alpha → briefing.
                     alpha_query.py ────────────────── On demand. Search/filter/score alpha.
+                    capital_genesis_ranker.py ─────── 5:30 AM. Ranks ALL methods on 7 dimensions → priority stack.
                     daily_digest.py ───────────────── 6:45 AM. What happened overnight.
                     master_ops_bridge.py ─────────── On demand. 182 ops + synergy + playbooks from xlsx.
                          │
@@ -316,7 +319,8 @@ L3 EXECUTION        daily_tactical_engine.py ──────── 7:15 AM. "
                     twitter_warmup_poster.py ──────── Midnight. Advance warmup day.
                     alpha_auto_processor.py ───────── 6:30 AM. Route new alpha.
                          │
-L4 COLLECTION       twitter_alpha_scraper.py ──────── 6:00 AM. 133 accounts.
+L4 COLLECTION       method_discovery_crawler.py ──── 5:00 AM. 18 subreddits + HN + Twitter for new methods.
+                    twitter_alpha_scraper.py ──────── 6:00 AM. 133 accounts.
                     background_reddit_scraper.py ──── 6:15 AM. Reddit JSON.
                          │
 L5 QUALITY          quality_gate.py ───────────────── Every 2h. Blocks slop.
@@ -326,6 +330,11 @@ L5 QUALITY          quality_gate.py ──────────────�
 L6 MAINTENANCE      loop_closer.py ────────────────── Every 2h. Closes decision/feedback/pipeline loops.
                     memory_manager.py ─────────────── 5:00 AM. Filesystem memory.
                     build_codebase_grammar.py ─────── 5:45 AM. 118x compressed grammar.
+                         │
+SOVRUN LAYER        core/handoff.py ──────────────── Agent-to-agent handoff protocol. Guardrails + audit trail.
+(OPEN_SOURCE/       core/procedural_memory.py ─────── FTS5 skill docs. Agents recall learned solutions.
+ agent-soul/)       core/orchestration.py ─────────── DAG executor. Parallel phase execution for CEO cycle.
+                    core/resilience.py ────────────── Circuit breaker, retry, file locking, sanitization.
 ```
 
 ---
@@ -333,6 +342,16 @@ L6 MAINTENANCE      loop_closer.py ───────────────
 ## DATA FLOW
 
 ```
+method_discovery_crawler ──→ ALPHA_STAGING.csv (status=NEW_METHOD) + METHOD_DISCOVERY_LOG.csv
+         │
+         └──→ auto_ops/discovered_methods/ (high-scoring method stubs)
+
+capital_genesis_ranker ◄── ALPHA_STAGING + all method CSVs + MASTER_OPS
+         │
+         └──→ OPS/CAPITAL_GENESIS_PRIORITY_STACK.md + LEDGER/CAPITAL_GENESIS_RANKINGS.csv
+                    │
+                    └──→ CEO agent + daily_tactical_engine (priority-driven decisions)
+
 SCRAPE ──→ ALPHA_STAGING.csv ──→ alpha_auto_processor ──→ Method CSVs + Venture routing
 BOOKMARKS/HIGH-SIGNAL ──→ app_factory_autopilot.py ──→ alpha_auto_approver.py ──→ alpha_auto_processor.py ──→ alpha_to_ops.py
                                  │
@@ -387,10 +406,11 @@ All agents run via `claude -p --dangerously-skip-permissions` on Claude Max plan
 
 ---
 
-## CRON SCHEDULE (109 entries)
+## CRON SCHEDULE (111 entries)
 
 ```
 MORNING CHAIN (sequential):
+  5:00  method_discovery_crawler   5:30  capital_genesis_ranker
   5:00  growth_strategist          5:30  venture self-manager
   5:45  codebase grammar           6:00  twitter scraper + alpha review
   6:15  reddit scraper             6:30  alpha auto-processor
@@ -445,6 +465,9 @@ DECISION_REVIEWS.jsonl  Challenger agent review logs
 PENDING_HUMAN_APPROVAL.jsonl  Items needing human action
 worktree_state.json     Active git worktrees for parallel agents
 SOUL.md                 Behavioral identity for all agents
+CAPITAL_GENESIS_PRIORITY_STACK.md  Daily ranked method priorities (capital_genesis_ranker, 5:30 AM)
+CAPITAL_GENESIS_RANKINGS.csv       Machine-readable method rankings with scores
+METHOD_DISCOVERY_LOG.csv           New methods discovered by crawler with CG scores
 ```
 
 ---
@@ -582,6 +605,17 @@ Build-in-Public: CONTENT/build_in_public/ created
 
 ---
 
+## CHANGES — 2026-03-18
+
+### Method Discovery + Capital Genesis Ranking
+- `method_discovery_crawler.py` (L4): Daily crawls 18 subreddits + HN + Twitter for NEW revenue methods not yet in master ops. Capital Genesis scoring on 7 dimensions. High-scoring methods get auto-stubs in `auto_ops/discovered_methods/`. Cron 5 AM. CLI: --crawl, --score, --report, --new-only, --dry-run.
+- `capital_genesis_ranker.py` (L2): Scores ALL methods on 7 weighted dimensions, phase-aware across 4 revenue phases. Outputs daily priority stack to `OPS/CAPITAL_GENESIS_PRIORITY_STACK.md` + `LEDGER/CAPITAL_GENESIS_RANKINGS.csv`. Cron 5:30 AM. CLI: --rank, --top N, --p0, --new, --report, --export csv, --phase N.
+- `auto_ops/alpha_theses/BOOMER_MALE_55_70_AFFILIATE.md`: P0 alpha thesis — faceless Facebook/YouTube pages targeting men 55-70, affiliate products $30-80 (health, golf, fishing, tools). Wired into ALPHA_STAGING, MARKETING_CHANNELS_MASTER, WINNING_CONTENT_STRUCTURES, INTELLIGENCE_CATALOG, intelligence_router, alpha_query.
+- New data flow: crawler → ALPHA_STAGING (NEW_METHOD) → ranker → PRIORITY_STACK → CEO agent
+- New state files: CAPITAL_GENESIS_PRIORITY_STACK.md, CAPITAL_GENESIS_RANKINGS.csv, METHOD_DISCOVERY_LOG.csv
+
+---
+
 ## CHANGES — 2026-03-17
 
 ### Resilience Fixes
@@ -594,9 +628,16 @@ Build-in-Public: CONTENT/build_in_public/ created
 - `crontab_printmaxx_v7.txt`: 105 entries, ALL staggered to unique time slots. Was 55+ jobs at :00 causing resource contention.
 - perpetual_guardian keeps :00 (priority). ceo_agent moved to :20. system_health_monitor to :05. All others staggered by 5-10 min offsets.
 
-### Open-Source Extraction
-- `OPEN_SOURCE/agent-soul/`: Meta-cognition framework extracted. 10 core modules (voice_extractor, cognitive_engine, pattern_miner, user_sim_refiner, loop_closer, self_audit, decision_engine, resilience, conversation_logger, session_briefing) + templates + examples.
-- GitHub: `github.com/fnsmdehip/dogwalk` (private). Name pending — system is broader than correction-chain learning.
+### Open-Source Extraction (sovrun)
+- `OPEN_SOURCE/agent-soul/`: Meta-cognition framework extracted. 13 core modules (voice_extractor, cognitive_engine, pattern_miner, user_sim_refiner, loop_closer, self_audit, decision_engine, resilience, conversation_logger, session_briefing, handoff, procedural_memory, orchestration) + templates + examples.
+- GitHub: `github.com/fnsmdehip/dogwalk` (private). Name pending.
+- **Wired into PRINTMAXX production** (Mar 18):
+  - `_common.py`: sovrun path added to sys.path. Helper functions: `sovrun_available()`, `get_procedural_memory()`, `get_handoff_router()`, `recall_skills_for_task()`, `capture_skill_from_result()`.
+  - `agent_swarm.py`: HandoffRouter registers all 25 swarm agents as handoff targets. `--handoff SOURCE TARGET "task"` CLI. `--skills QUERY` CLI. Procedural memory injected into agent prompts at deploy time.
+  - `ceo_agent.py`: `--dag` flag runs independent phases 7-16 in parallel via DAGOrchestrator (4 workers). `--dag-status` shows last run. Falls back to sequential on import failure.
+  - `venture_autonomy.py`: Procedural memory recall before each venture cycle. Skill capture after successful cycles.
+  - `loop_closer.py`: Skill capture for successful loop closing actions.
+  - Skills DB: `AUTOMATIONS/agent/sovrun/skills.db` (FTS5). Handoff log: `AUTOMATIONS/agent/swarm/sovrun/handoffs.jsonl`.
 
 ### System Map Auto-Update
 - `.claude/rules/system-map-maintenance.md`: Dedicated auto-loading rule file. Ensures system map gets updated same-session on any architecture change.

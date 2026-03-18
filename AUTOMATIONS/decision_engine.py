@@ -1080,6 +1080,23 @@ def run_cycle(dry_run=False):
         except Exception as e:
             log(f"Master Ops: bridge error — {e}", "WARN")
 
+    # Capital Genesis Priority Stack — factor ranked priorities into decisions
+    cap_gen_path = PROJECT_ROOT / "OPS" / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+    if cap_gen_path.exists():
+        try:
+            text = cap_gen_path.read_text()
+            p0_count = text.count("| LAUNCH |") if "## P0:" in text else 0
+            # Count P0 vs P1 methods to inform decision weighting
+            p1_start = text.find("## P1:")
+            p0_section = text[:p1_start] if p1_start > 0 else text[:500]
+            log(f"Capital Genesis: {p0_count} P0 LAUNCH items loaded for decision weighting")
+            results["capital_genesis"] = {
+                "p0_launch_count": p0_count,
+                "stack_loaded": True,
+            }
+        except Exception as e:
+            log(f"Capital Genesis: read error — {e}", "WARN")
+
     # Summary
     log("=" * 60)
     log("CYCLE COMPLETE — SUMMARY")

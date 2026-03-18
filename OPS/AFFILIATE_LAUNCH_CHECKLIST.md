@@ -1001,3 +1001,52 @@ Get $100 in AI credits on Zo – the product that inspired OpenClaw.
 
 [ACQUISITION] From idea → launch → first user (AI resume tool)
 
+---
+
+## BOOMER MALE 55-70 AFFILIATE STRATEGY
+
+### Target Demographic
+Males 55-70. High disposable income. Willing to pay for quality. Trust-driven purchasing. Email-first, Facebook-second. YouTube for longform research before buying.
+
+### Product Categories ($30-80 sweet spot)
+
+**Health & Wellness (Highest margin):**
+- Joint support supplements (glucosamine, turmeric, collagen) — ClickBank, direct brand affiliates
+- Sleep aids (melatonin, weighted blankets, white noise machines) — Amazon Associates
+- Prostate health supplements — ClickBank health category, high commissions (50-75%)
+- Pain relief devices (TENS units, massage guns, heating pads) — Amazon Associates, ShareASale
+
+**Golf ($40-120 range):**
+- Putters, wedges, training aids — Amazon Associates, Golf Galaxy affiliate
+- Golf GPS devices, rangefinders — higher ticket, good commissions
+- Golf apparel, accessories — seasonal content opportunities
+
+**Fishing ($30-100 range):**
+- Lures, rods, reels by species — Amazon Associates, Bass Pro affiliate
+- Fishing electronics (fish finders, trolling motors) — higher ticket items
+- Tackle storage, clothing — seasonal and evergreen content
+
+**Workshop/Tools:**
+- Power tools under $500 — Amazon Associates, Home Depot affiliate
+- Hand tools, workbench accessories — evergreen content
+- Safety equipment, shop organization — low competition keywords
+
+**Financial Planning:**
+- Medicare supplement info — CPA offers (cost per acquisition, high payouts)
+- Retirement planning guides — lead gen for financial advisors
+- Identity protection services — recurring commission programs
+
+### Distribution Channels (Priority Order)
+1. Email newsletter — highest open/click rates for this demographic
+2. YouTube longform descriptions — product links in 10-20 min review videos
+3. Facebook Groups — soft promotion in hobby groups (golf, fishing, woodworking)
+4. Google SEO — "Best [Product] for Men Over 55" pages, low competition
+5. Facebook Ads — targeting 55-70 male interests (golf, fishing, health)
+
+### Programmatic SEO Templates
+Build at `builds/programmatic_seo/boomer/`:
+- `best-{product}-for-men-over-55.html`
+- `{product}-review-{year}.html`
+- `{product}-vs-{product}-comparison.html`
+- `top-{n}-{category}-for-seniors.html`
+

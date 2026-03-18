@@ -34,6 +34,21 @@ Build faceless YouTube channels using local AI (Mac, $0 marginal cost). Long-for
 - **Horror/Mystery:** Highest engagement rates. AI-generated visuals work well. $8-15 CPM.
 - **Finance/Investing:** Highest CPM but needs credibility signals.
 
+**Tier 3 — Boomer Male 55-70 Demographic (HIGH CPM, LOW competition in faceless):**
+- **Golf Tips/Reviews:** $15-30 CPM. "Best Putters Under $200" / "Fix Your Slice in 5 Minutes." 10-20 min calm authority format. Affiliate: golf gear $40-120.
+- **Fishing Tutorials:** $8-15 CPM. "Best Bass Lures for Spring 2026" / "Kayak Fishing Setup Guide." Deep knowledge signals. Affiliate: fishing gear $30-100.
+- **Health/Wellness for Men 50+:** $12-25 CPM. "Joint Pain Relief That Actually Works" / "Sleep Better After 55." Affiliate: supplements $30-80, pain relief devices.
+- **Workshop/DIY/Tools:** $8-15 CPM. "Best Table Saw Under $500" / "Woodworking Basics for Beginners." Affiliate: power tools, workshop gear.
+- **Retirement Planning Basics:** $20-35 CPM. "Social Security Timing Strategy" / "Medicare Explained Simply." Highest CPM of any niche. Affiliate: financial planning services.
+
+**Boomer Content Format Rules:**
+- 10-20 min longform (NOT shorts). This demographic watches full videos.
+- Calm, authoritative narration. No hype. No zoomer energy. Think PBS documentary meets practical guide.
+- Lower background music volume. Clear speech priority.
+- Larger text overlays. High contrast. Simple thumbnails with clear text.
+- CTA: "subscribe for more" at end, not mid-roll spam. Email newsletter capture in description.
+- Upload schedule: 2-3x/week consistency beats daily churn for this audience.
+
 ---
 
 ## 2. Complete Pipeline

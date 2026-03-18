@@ -30,6 +30,7 @@ import json
 import os
 import subprocess
 import sys
+import threading
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
@@ -40,6 +41,23 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from agent_resilience import (
     sanitize_for_prompt, locked_file, TrajectoryLogger,
 )
+
+# Sovrun modules — graceful fallback if not available
+_SOVRUN_PATH = str(Path(__file__).resolve().parent.parent / "OPEN_SOURCE" / "agent-soul")
+if _SOVRUN_PATH not in sys.path:
+    sys.path.insert(0, _SOVRUN_PATH)
+
+_SOVRUN_AVAILABLE = False
+try:
+    from core.handoff import HandoffRouter, HandoffRequest, HandoffResult, GuardrailScope
+    from core.procedural_memory import ProceduralMemory
+    _SOVRUN_AVAILABLE = True
+except ImportError:
+    HandoffRouter = None  # type: ignore[assignment, misc]
+    HandoffRequest = None  # type: ignore[assignment, misc]
+    HandoffResult = None  # type: ignore[assignment, misc]
+    GuardrailScope = None  # type: ignore[assignment, misc]
+    ProceduralMemory = None  # type: ignore[assignment, misc]
 
 _trajectory = TrajectoryLogger("agent_swarm")
 
@@ -1108,6 +1126,134 @@ class SwarmState:
 
 
 # ══════════════════════════════════════════════════════════════════════════
+# SOVRUN HANDOFF INTEGRATION
+# ══════════════════════════════════════════════════════════════════════════
+
+_handoff_router: Optional[Any] = None
+_procedural_memory: Optional[Any] = None
+_sovrun_init_lock = threading.Lock()
+
+
+def _get_handoff_router() -> Optional[Any]:
+    """Lazy singleton for the HandoffRouter. Thread-safe initialization."""
+    global _handoff_router
+    if not _SOVRUN_AVAILABLE:
+        return None
+    if _handoff_router is None:
+        with _sovrun_init_lock:
+            if _handoff_router is None:  # double-check after acquiring lock
+                os.environ.setdefault("SOVRUN_ROOT", str(PROJECT))
+                log_path = AUTOMATIONS / "agent" / "sovrun" / "handoffs.jsonl"
+                log_path.parent.mkdir(parents=True, exist_ok=True)
+                router = HandoffRouter(log_path=log_path)
+                # Register all swarm agents as handoff targets
+                for agent_id, agent_def in SWARM_AGENTS.items():
+                    _register_agent_as_handoff_target_on(router, agent_id, agent_def)
+                _handoff_router = router
+    return _handoff_router
+
+
+def _get_procedural_memory() -> Optional[Any]:
+    """Lazy singleton for ProceduralMemory. Thread-safe initialization."""
+    global _procedural_memory
+    if not _SOVRUN_AVAILABLE:
+        return None
+    if _procedural_memory is None:
+        with _sovrun_init_lock:
+            if _procedural_memory is None:  # double-check after acquiring lock
+                os.environ.setdefault("SOVRUN_ROOT", str(PROJECT))
+                db_path = AUTOMATIONS / "agent" / "sovrun" / "skills.db"
+                db_path.parent.mkdir(parents=True, exist_ok=True)
+                _procedural_memory = ProceduralMemory(db_path=db_path)
+    return _procedural_memory
+
+
+def _register_agent_as_handoff_target_on(router: Any, agent_id: str, agent_def: dict[str, Any]) -> None:
+    """Register a swarm agent as a handoff target on the given router."""
+    if router is None:
+        return
+
+    def _run_agent_via_handoff(context: dict[str, Any]) -> dict[str, Any]:
+        """Execute a swarm agent as a handoff target."""
+        task = context.get("task", "")
+        model = agent_def.get("model", MODEL_OPUS)
+        prompt = agent_def["prompt"].format(
+            project=str(PROJECT),
+            date=datetime.now().strftime("%Y%m%d"),
+        )
+        if task:
+            prompt = f"DELEGATED TASK: {task}\n\n{prompt}"
+
+        # Inject procedural memory for this task
+        mem = _get_procedural_memory()
+        if mem:
+            try:
+                skills_injection = mem.export_injection(task or agent_def.get("description", ""), max_chars=400)
+                if skills_injection:
+                    prompt = f"{skills_injection}\n\n{prompt}"
+            except Exception:
+                pass
+
+        try:
+            result = subprocess.run(
+                ["claude", "-p", prompt[:8000], "--dangerously-skip-permissions",
+                 "--model", model],
+                capture_output=True, text=True,
+                timeout=600, cwd=str(PROJECT)
+            )
+            output = (result.stdout or "")[-3000:]
+            success = result.returncode == 0
+
+            # Capture skill on success
+            if success and mem and task:
+                try:
+                    mem.capture(task=task, result=output[:1000], success=True)
+                except Exception:
+                    pass
+
+            return {"success": success, "output": output, "agent_id": agent_id}
+        except subprocess.TimeoutExpired:
+            return {"success": False, "output": "Timeout after 600s", "agent_id": agent_id}
+        except Exception as e:
+            return {"success": False, "output": str(e)[:500], "agent_id": agent_id}
+
+    router.register(_run_agent_via_handoff, name=agent_id)
+
+
+def handoff_to_agent(source: str, target_agent: str, task: str,
+                     context: Optional[dict[str, Any]] = None,
+                     timeout: float = 600.0) -> Optional[dict[str, Any]]:
+    """Send a handoff request from one agent to another.
+
+    Returns the HandoffResult as a dict, or None if sovrun is unavailable.
+    Falls back to None (caller should use existing dispatch) if handoff fails.
+    """
+    router = _get_handoff_router()
+    if router is None:
+        return None
+    if target_agent not in SWARM_AGENTS:
+        log(f"Handoff target '{target_agent}' not in swarm agents", "WARN")
+        return None
+
+    ctx = dict(context or {})
+    ctx["task"] = task
+    try:
+        request = HandoffRequest(
+            source_agent=source,
+            target_agent=target_agent,
+            context=ctx,
+            task_description=task,
+            guardrail_scope=GuardrailScope.WRITE_ALLOWED,
+            timeout_seconds=timeout,
+        )
+        result = router.send(request)
+        return result.to_dict()
+    except Exception as e:
+        log(f"Handoff {source}->{target_agent} failed: {e}", "WARN")
+        return None
+
+
+# ══════════════════════════════════════════════════════════════════════════
 # PLIST GENERATION + INSTALLATION
 # ══════════════════════════════════════════════════════════════════════════
 
@@ -1180,8 +1326,21 @@ def generate_plist(agent_id: str, agent_def: dict[str, Any]) -> tuple[str, str]:
         f"- Write completion status to AUTOMATIONS/agent/swarm/reports/{agent_id}_report_{{date}}.md"
     )
 
+    # Inject procedural memory (learned skills relevant to this agent's task)
+    skills_injection = ""
+    if _SOVRUN_AVAILABLE:
+        mem = _get_procedural_memory()
+        if mem:
+            try:
+                skills_injection = mem.export_injection(
+                    agent_def.get("description", agent_id), max_chars=400)
+                if skills_injection:
+                    skills_injection = f"\n--- LEARNED SKILLS ---\n{skills_injection}\n--- END SKILLS ---\n\n"
+            except Exception:
+                pass
+
     # Build the prompt — escape for XML
-    prompt = intel_briefing + agent_def["prompt"].format(
+    prompt = skills_injection + intel_briefing + agent_def["prompt"].format(
         project=str(PROJECT),
         date=datetime.now().strftime("%Y%m%d"),
     ) + agentic_suffix.format(date=datetime.now().strftime("%Y%m%d"))
@@ -1469,6 +1628,10 @@ def main() -> None:
     parser.add_argument("--health", action="store_true", help="Health check all agents")
     parser.add_argument("--force-deploy", action="store_true", help="Deploy ALL agents ignoring brain state (KILLED/HIBERNATED)")
     parser.add_argument("--run", type=str, help="Trigger immediate run of an agent via launchctl kickstart")
+    parser.add_argument("--handoff", nargs=3, metavar=("SOURCE", "TARGET", "TASK"),
+                        help="Send a handoff request: --handoff source_agent target_agent 'task description'")
+    parser.add_argument("--skills", type=str, metavar="QUERY",
+                        help="Query procedural memory for learned skills matching a task")
 
     args = parser.parse_args()
 
@@ -1519,6 +1682,44 @@ def main() -> None:
             print(f"Triggered: {agent_id} — check logs with --logs {agent_id}")
         else:
             print(f"Failed to trigger {agent_id} (is it installed?)")
+    elif args.handoff:
+        source, target, task = args.handoff
+        if not _SOVRUN_AVAILABLE:
+            print("Sovrun modules not available. Install from OPEN_SOURCE/agent-soul/")
+            sys.exit(1)
+        print(f"Handoff: {source} -> {target}")
+        print(f"Task: {task}")
+        result = handoff_to_agent(source, target, task)
+        if result:
+            print(f"Success: {result.get('success')}")
+            print(f"Duration: {result.get('duration_ms', 0)}ms")
+            if result.get("error"):
+                print(f"Error: {result['error']}")
+            output = result.get("result_data", {}).get("output", "")
+            if output:
+                print(f"\nOutput (last 500 chars):\n{output[-500:]}")
+        else:
+            print("Handoff failed or sovrun unavailable")
+    elif args.skills:
+        if not _SOVRUN_AVAILABLE:
+            print("Sovrun modules not available.")
+            sys.exit(1)
+        mem = _get_procedural_memory()
+        if mem:
+            results = mem.recall(args.skills, top_k=5)
+            if results:
+                print(f"\n=== Skills matching: \"{args.skills}\" ===\n")
+                for i, r in enumerate(results, 1):
+                    print(f"{i}. [{r['skill_id']}] {r['title']}")
+                    print(f"   Confidence: {r['confidence']:.2f} | Used: {r['success_count']}x")
+                    steps = r.get("solution_steps", [])
+                    if isinstance(steps, list):
+                        for j, step in enumerate(steps[:3], 1):
+                            print(f"   {j}. {step[:100]}")
+                    print()
+            else:
+                print("No matching skills found.")
+            mem.close()
     else:
         show_status()
 
