@@ -4,8 +4,94 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Optional
 import json
+import sys
 
 PROJECT = Path(__file__).resolve().parent.parent
+
+# Sovrun modules (our open-source agent OS)
+_SOVRUN_PATH = str(PROJECT / "OPEN_SOURCE" / "agent-soul")
+if _SOVRUN_PATH not in sys.path:
+    sys.path.insert(0, _SOVRUN_PATH)
+
+# Lazy sovrun imports — graceful fallback if not available
+_SOVRUN_AVAILABLE = False
+try:
+    from core.handoff import HandoffRouter, HandoffRequest, HandoffResult, GuardrailScope
+    from core.procedural_memory import ProceduralMemory
+    from core.orchestration import DAGOrchestrator, AgentStep, StepStatus, step as sovrun_step
+    _SOVRUN_AVAILABLE = True
+except ImportError:
+    HandoffRouter = None  # type: ignore[assignment, misc]
+    HandoffRequest = None  # type: ignore[assignment, misc]
+    HandoffResult = None  # type: ignore[assignment, misc]
+    GuardrailScope = None  # type: ignore[assignment, misc]
+    ProceduralMemory = None  # type: ignore[assignment, misc]
+    DAGOrchestrator = None  # type: ignore[assignment, misc]
+    AgentStep = None  # type: ignore[assignment, misc]
+    StepStatus = None  # type: ignore[assignment, misc]
+    sovrun_step = None  # type: ignore[assignment, misc]
+
+
+def sovrun_available() -> bool:
+    """Check if sovrun modules are importable."""
+    return _SOVRUN_AVAILABLE
+
+
+def get_procedural_memory() -> Any:
+    """Get a ProceduralMemory instance pointed at PRINTMAXX data dir.
+
+    Returns None if sovrun is not available.
+    """
+    if not _SOVRUN_AVAILABLE or ProceduralMemory is None:
+        return None
+    import os
+    os.environ.setdefault("SOVRUN_ROOT", str(PROJECT))
+    db_path = PROJECT / "AUTOMATIONS" / "agent" / "sovrun" / "skills.db"
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    return ProceduralMemory(db_path=db_path)
+
+
+def get_handoff_router() -> Any:
+    """Get a HandoffRouter instance for PRINTMAXX.
+
+    Returns None if sovrun is not available.
+    """
+    if not _SOVRUN_AVAILABLE or HandoffRouter is None:
+        return None
+    import os
+    os.environ.setdefault("SOVRUN_ROOT", str(PROJECT))
+    log_path = PROJECT / "AUTOMATIONS" / "agent" / "sovrun" / "handoffs.jsonl"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    return HandoffRouter(log_path=log_path)
+
+
+def recall_skills_for_task(task_description: str, max_chars: int = 600) -> str:
+    """Query procedural memory for relevant skills before an agent runs.
+
+    Returns injection string or empty string if unavailable.
+    """
+    mem = get_procedural_memory()
+    if mem is None:
+        return ""
+    try:
+        return mem.export_injection(task_description, max_chars=max_chars)
+    except Exception:
+        return ""
+    finally:
+        mem.close()
+
+
+def capture_skill_from_result(task: str, result: str, success: bool = True) -> None:
+    """Capture a completed task as a skill document in procedural memory."""
+    mem = get_procedural_memory()
+    if mem is None:
+        return
+    try:
+        mem.capture(task=task, result=result, success=success)
+    except Exception:
+        pass
+    finally:
+        mem.close()
 
 def safe_path(target: str | Path) -> Path:
     """Verify path is within project root. Raises ValueError if not."""

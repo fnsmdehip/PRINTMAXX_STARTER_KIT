@@ -178,6 +178,8 @@ INTELLIGENCE_MAP = {
              "36KB niche content research — viral tweet formats per niche, platform monetization rates, AI UGC tools, pricing benchmarks"),
             (OPS_RESEARCH / "COPY_PSYCHOLOGY_MASTER_REFERENCE.md",
              "Battle-tested psychological frameworks — reply bait Comment Keyword funnel, comments boost reach 10x vs likes"),
+            (AUTOMATIONS / "auto_ops" / "alpha_theses" / "BOOMER_MALE_55_70_AFFILIATE.md",
+             "Boomer male 55-70 affiliate thesis — 70% US disposable income, faceless FB/YT pages, health/golf/fishing/tools, $10-30K/mo, zero competition"),
         ],
         "dirs": [
             (CONTENT / "growth" / "buildout",
@@ -457,6 +459,8 @@ INTELLIGENCE_MAP = {
              "Complete asset inventory ready to sell — 5 Notion templates, Paywall Playbook $27, 105+ posts, 20+ email sequences"),
             (MONEY_METHODS / "SYNERGY_PACKAGES" / "SYNERGY_PACKAGE_COLD_EMAIL_EMPIRE.md",
              "8 synergy stacks scores 85-96 — combined $5K-55K/mo, Clay+Apollo+Instantly, flash sale backend, FOIA lead gen"),
+            (AUTOMATIONS / "auto_ops" / "alpha_theses" / "BOOMER_MALE_55_70_AFFILIATE.md",
+             "Boomer male 55-70 affiliate thesis — 70% disposable income, cheapest CPMs, faceless pages, $10-30K/mo affiliate, health/hobby verticals"),
         ],
         "dirs": [
             (MONEY_METHODS,
@@ -489,6 +493,7 @@ INTELLIGENCE_MAP = {
             "affiliate": [
                 GROWTH_OPS / "REFERRAL_PROGRAM_TEMPLATES.md",
                 GROWTH_OPS / "PARTNERSHIP_OPPORTUNITIES.md",
+                AUTOMATIONS / "auto_ops" / "alpha_theses" / "BOOMER_MALE_55_70_AFFILIATE.md",
             ],
             "launch": [
                 GROWTH_OPS / "GTM_OPTIMIZATION_CHECKLIST.md",

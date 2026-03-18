@@ -1,11 +1,11 @@
 {
   "generated": "2026-03-07",
-  "total_docs": 427,
+  "total_docs": 428,
   "catalog_version": "2.0",
   "notes": "Comprehensive intelligence catalog of all actionable documents in PRINTMAXX project. Paths are relative to project root. Focused on buried gold: specific revenue tactics, pricing, proven methods, and ready-to-use templates. Files were actually read and classified based on content, not just filename.",
   "ventures": {
     "CONTENT": {
-      "doc_count": 67,
+      "doc_count": 68,
       "docs": [
         {
           "path": "04_CONTENT/CAROUSEL_LIBRARY.md",
@@ -523,6 +523,19 @@
           "summary": "36KB comprehensive niche content research. 15 sections: viral tweet formats per niche (faith, fitness, sleep, productivity, cooking, finance, aesthetic, memes, AI tools, outbound, esoteric). Platform monetization rates. AI UGC tools landscape. Subscription pricing benchmarks. Ad creative format performance data.",
           "value": "HIGH",
           "source": "missed_scan_2026-03-07"
+        },
+        {
+          "path": "AUTOMATIONS/auto_ops/alpha_theses/BOOMER_MALE_55_70_AFFILIATE.md",
+          "value": "HIGH",
+          "summary": "Men 55-70 control 70% US disposable income with 38% fewer returns. Faceless Facebook/YouTube pages with affiliate content in health/golf/fishing/tools verticals. CPMs cheapest demo, zero competition. 3-5 pages = $10-30K/mo.",
+          "high_value_summary": "Untapped boomer male 55-70 affiliate thesis. 70% disposable income, cheapest CPMs, zero competition. Faceless FB/YT pages in health/hobby verticals. $10-30K/mo from 3-5 pages.",
+          "key_tactics": [
+            "Faceless Facebook pages targeting men 55-70 with value-first affiliate content",
+            "Long-form YouTube reviews (10-20 min) with calm authoritative tone",
+            "70% educational / 30% product review content ratio",
+            "$30-80 affiliate products in health, golf, fishing, tools, grilling, woodworking",
+            "CPMs cheapest demographic, 2-3x AOV vs younger demos"
+          ]
         }
       ]
     },

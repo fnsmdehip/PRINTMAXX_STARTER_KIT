@@ -71,6 +71,23 @@ from agent_resilience import (
     sanitize_for_prompt, locked_file, TrajectoryLogger,
 )
 
+# Sovrun modules — graceful fallback if not available
+_SOVRUN_PATH = str(Path(__file__).resolve().parent.parent / "OPEN_SOURCE" / "agent-soul")
+if _SOVRUN_PATH not in sys.path:
+    sys.path.insert(0, _SOVRUN_PATH)
+
+_SOVRUN_AVAILABLE = False
+try:
+    from core.orchestration import DAGOrchestrator, AgentStep, StepStatus, ParallelExecutor
+    from core.procedural_memory import ProceduralMemory
+    _SOVRUN_AVAILABLE = True
+except ImportError:
+    DAGOrchestrator = None  # type: ignore[assignment, misc]
+    AgentStep = None  # type: ignore[assignment, misc]
+    StepStatus = None  # type: ignore[assignment, misc]
+    ParallelExecutor = None  # type: ignore[assignment, misc]
+    ProceduralMemory = None  # type: ignore[assignment, misc]
+
 _trajectory = TrajectoryLogger("ceo_agent")
 
 # === GUARDRAILS (inherited from ops_manager) ===
@@ -660,7 +677,7 @@ class CEOBrain:
                 pass
 
         # 2. Buried gold summary from catalog
-        catalog_path = OPS / "INTELLIGENCE_CATALOG.json"
+        catalog_path = globals()['OPS'] / "INTELLIGENCE_CATALOG.json"
         if catalog_path.exists():
             try:
                 import json as _json
@@ -684,11 +701,21 @@ class CEOBrain:
                 pass
 
         # 3. Daily digest
-        digest_path = OPS / "DAILY_DIGEST.md"
+        digest_path = globals()['OPS'] / "DAILY_DIGEST.md"
         if digest_path.exists():
             try:
                 digest = digest_path.read_text()[:500]
                 parts.append(f"DAILY DIGEST:\n{digest}")
+            except Exception:
+                pass
+
+        # 4. Capital Genesis Priority Stack — ranked method priorities for venture decisions
+        cap_gen_path = globals()['OPS'] / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+        if cap_gen_path.exists():
+            try:
+                stack_text = cap_gen_path.read_text()
+                # Extract P0 + top P1 items (first 2000 chars covers the decision-critical info)
+                parts.append(f"CAPITAL GENESIS PRIORITY STACK:\n{stack_text[:2000]}")
             except Exception:
                 pass
 
@@ -1931,6 +1958,326 @@ def run_ceo_cycle(dry_run: bool = False) -> None:
 
 
 # ============================================================================
+# SOVRUN DAG ORCHESTRATION — parallel execution of independent CEO phases
+# ============================================================================
+
+def run_ceo_cycle_dag(dry_run: bool = False) -> None:
+    """Run the CEO cycle using sovrun DAGOrchestrator.
+
+    Phases 1-6 (scoring, decisions, snapshot, intel, execute, audit) run
+    sequentially because each depends on the previous.
+
+    Phases 7-16 (alpha, research, decision engine, content, health,
+    dynamic ventures, openclaw, cron sync, autonomy, loop closer) are
+    independent and run in parallel via the DAG executor.
+
+    Falls back to run_ceo_cycle() if sovrun is not available.
+    """
+    if not _SOVRUN_AVAILABLE:
+        log("Sovrun not available — falling back to sequential CEO cycle")
+        return run_ceo_cycle(dry_run=dry_run)
+
+    lock = LockGuard()
+    if not lock.acquire():
+        return
+
+    try:
+        os.environ.setdefault("SOVRUN_ROOT", str(PROJECT))
+        state = CEOState()
+        xlsx = XlsxIntel()
+        git = GitGuard()
+        scorer = VentureScorer(xlsx, state)
+        brain = CEOBrain(scorer, xlsx, state)
+        runner = VentureRunner(state, xlsx)
+        audit_trail = AuditTrail(state)
+
+        cycle_num = state.data["cycles_run"] + 1
+        cp = CycleCheckpoint(cycle_num)
+
+        disk = disk_free_gb()
+        log("=" * 70)
+        log(f"CEO CYCLE #{cycle_num} (DAG MODE) -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+        log(f"Disk: {disk}GB | Decisions so far: {state.data['total_decisions']}")
+        log("=" * 70)
+
+        if disk < 2:
+            log("DISK CRITICAL < 2GB -- CEO cycle paused", "WARN")
+            return
+
+        # ── SEQUENTIAL PHASE: Score → Decide → Snapshot → Intel → Execute → Audit
+        # These MUST run in order. Using existing checkpoint logic.
+        log("Phase 1-6: Sequential decision pipeline...")
+
+        # Phase 1: Score
+        if not cp.should_skip(1):
+            log("  Phase 1: Scoring all ops from xlsx...")
+            scores = scorer.score_all()
+            top5 = scores[:5]
+            log(f"    Top 5: {', '.join(f'{s['op_id']}={s['total_score']}' for s in top5)}")
+            cp.record_phase(1, {"count": len(scores)})
+        else:
+            scores = scorer.score_all()
+
+        # Phase 2: Decisions
+        if not cp.should_skip(2):
+            log("  Phase 2: CEO making strategic decisions...")
+            decisions = brain.analyze_and_decide(dry_run=dry_run)
+            cp.record_phase(2, {"count": len(decisions or [])})
+        else:
+            decisions = brain.analyze_and_decide(dry_run=dry_run)
+
+        issues: list[str] = []
+
+        if decisions:
+            for d in decisions:
+                log(f"    [{d['type']}] {d['op_id']} ({d['name']}): {d['reason']}")
+
+            if dry_run:
+                log("DRY RUN -- decisions not executed")
+                state.data["last_cycle"] = datetime.now().isoformat()
+                state.data["cycles_run"] += 1
+                state.save()
+                cp.finish_cycle()
+                return
+
+            # Phase 3-6: Snapshot, Intel, Execute, Audit
+            if not cp.should_skip(3):
+                log("  Phase 3: Git snapshot...")
+                audit_trail.capture_baseline()
+                git.snapshot("ceo_pre_decisions")
+                cp.record_phase(3, "snapshot_taken")
+
+            if not cp.should_skip(4):
+                log("  Phase 3.5: Intelligence enrichment...")
+                for d in decisions:
+                    op_id = d.get("op_id", "")
+                    _venture_type = "RESEARCH"
+                    if "APP" in op_id.upper(): _venture_type = "APP"
+                    elif "CONTENT" in op_id.upper(): _venture_type = "CONTENT"
+                    elif "OUTBOUND" in op_id.upper(): _venture_type = "OUTBOUND"
+                    elif "LOCAL" in op_id.upper(): _venture_type = "LOCAL_BIZ"
+                    elif "MONETIZ" in op_id.upper(): _venture_type = "MONETIZATION"
+                    elif "PRODUCT" in op_id.upper(): _venture_type = "PRODUCT"
+                    try:
+                        _intel_cmd = [
+                            "python3", str(AUTOMATIONS / "intelligence_router.py"),
+                            "--venture", _venture_type, "--task", d.get("type", "").lower(), "--brief"
+                        ]
+                        _intel_r = subprocess.run(_intel_cmd, capture_output=True, text=True, timeout=30)
+                        if _intel_r.returncode == 0 and _intel_r.stdout.strip():
+                            d["intelligence_brief"] = sanitize_for_prompt(
+                                _intel_r.stdout.strip()[:500], field_name=f"ceo_intel_{op_id}")
+                    except Exception:
+                        pass
+                cp.record_phase(4, "intel_loaded")
+
+            if not cp.should_skip(5):
+                log("  Phase 4: Executing decisions...")
+                results = runner.execute_decisions(decisions)
+                cp.record_phase(5, {"count": len(results)})
+            else:
+                results = []
+
+            if not cp.should_skip(6):
+                log("  Phase 5-6: Audit + commit...")
+                issues = audit_trail.check_regression(results)
+                if issues and any("failed" in i.lower() for i in issues):
+                    failed_count = sum(1 for r in results if r.get("status") == "failed")
+                    if failed_count > 2:
+                        log("ROLLING BACK", "ERROR")
+                        git.rollback()
+                summary_parts = [f"{sum(1 for d in decisions if d['type'] == t)} {t.lower()}"
+                                 for t in ["PROMOTE", "ENHANCE", "CREATE", "KILL", "DISCOVER"]
+                                 if any(d["type"] == t for d in decisions)]
+                git.post_change_commit(", ".join(summary_parts) or "no changes")
+                cp.record_phase(6, {"issues": issues})
+
+        # ── PARALLEL PHASE: Independent phases 7-16 via DAG
+        log("Phase 7-16: Parallel execution via DAG orchestrator...")
+
+        def _make_phase_fn(phase_name: str, fn: Any) -> Any:
+            """Wrap a phase function to handle errors gracefully."""
+            def _wrapped(results: dict) -> dict:
+                try:
+                    return fn(state, cp)
+                except Exception as e:
+                    log(f"  {phase_name} error: {e}", "WARN")
+                    return {"status": "error", "error": str(e)[:200]}
+            return _wrapped
+
+        def _phase_alpha(state: Any, cp: Any) -> dict:
+            hours = _hours_since(state.data.get("last_alpha_scrape"))
+            if hours < ALPHA_INTERVAL_HOURS:
+                return {"status": "interval_skip", "hours_since": round(hours, 1)}
+            alpha_results = {}
+            ok, _ = run_script("twitter_alpha_scraper.py", "--all", timeout_sec=300, label="alpha:twitter")
+            alpha_results["twitter"] = "ok" if ok else "failed"
+            ok, _ = run_script("background_reddit_scraper.py", "--scrape", timeout_sec=300, label="alpha:reddit")
+            alpha_results["reddit"] = "ok" if ok else "failed"
+            ok, _ = run_script("alpha_auto_processor.py", "--process-new", timeout_sec=180, label="alpha:processor")
+            alpha_results["processor"] = "ok" if ok else "failed"
+            state.data["last_alpha_scrape"] = datetime.now().isoformat()
+            state.save()
+            return alpha_results
+
+        def _phase_research(state: Any, cp: Any) -> dict:
+            hours = _hours_since(state.data.get("last_research"))
+            if hours < RESEARCH_INTERVAL_HOURS:
+                return {"status": "interval_skip"}
+            ok, _ = run_script("daily_research_orchestrator.py", "--full", timeout_sec=600, label="research:daily")
+            state.data["last_research"] = datetime.now().isoformat()
+            state.save()
+            return {"status": "ok" if ok else "failed"}
+
+        def _phase_decision_engine(state: Any, cp: Any) -> dict:
+            ok, _ = run_script("decision_engine.py", "--cycle", timeout_sec=300, label="decision:engine")
+            state.data["last_decision_engine"] = datetime.now().isoformat()
+            state.save()
+            return {"status": "ok" if ok else "failed"}
+
+        def _phase_content(state: Any, cp: Any) -> dict:
+            hours = _hours_since(state.data.get("last_content_gen"))
+            if hours < CONTENT_INTERVAL_HOURS:
+                return {"status": "interval_skip"}
+            ok1, _ = run_script("printmaxx_agent.py", "--mission content", timeout_sec=300)
+            ok2, _ = run_script("printmaxx_agent.py", "--mission upgrade", timeout_sec=300)
+            state.data["last_content_gen"] = datetime.now().isoformat()
+            state.save()
+            return {"content": "ok" if ok1 else "failed", "upgrade": "ok" if ok2 else "failed"}
+
+        def _phase_health(state: Any, cp: Any) -> dict:
+            hours = _hours_since(state.data.get("last_health_check"))
+            if hours < HEALTH_INTERVAL_HOURS:
+                return {"status": "interval_skip"}
+            ok, out = run_script("system_health_monitor.py", "--quick", timeout_sec=120)
+            state.data["last_health_check"] = datetime.now().isoformat()
+            state.save()
+            return {"status": "ok" if ok else "failed"}
+
+        def _phase_dynamic_ventures(state: Any, cp: Any) -> dict:
+            if state.data["cycles_run"] % 3 != 0:
+                return {"status": "cycle_skip"}
+            dv_results = runner.run_dynamic_ventures()
+            return {"success": sum(1 for r in dv_results if r.get("status") == "success"),
+                    "total": len(dv_results)}
+
+        def _phase_openclaw(state: Any, cp: Any) -> dict:
+            hours = _hours_since(state.data.get("last_openclaw"))
+            if hours < OPENCLAW_INTERVAL_HOURS:
+                return {"status": "interval_skip"}
+            openclaw_script = PROJECT / "AUTOMATIONS" / "openclaw_local_biz.py"
+            if not openclaw_script.exists():
+                return {"status": "script_missing"}
+            city_idx = state.data.get("openclaw_city_index", 0) % len(OPENCLAW_CITIES)
+            city, niche = OPENCLAW_CITIES[city_idx]
+            ok, _ = run_script("openclaw_local_biz.py", f'--discover "{city}" {niche}', timeout_sec=120)
+            result = {"discover": "ok" if ok else "failed", "city": city, "niche": niche}
+            if ok:
+                ok2, _ = run_script("openclaw_local_biz.py", "--build", timeout_sec=180)
+                result["build"] = "ok" if ok2 else "failed"
+            state.data["last_openclaw"] = datetime.now().isoformat()
+            state.data["openclaw_city_index"] = (city_idx + 1) % len(OPENCLAW_CITIES)
+            state.save()
+            return result
+
+        def _phase_cron_sync(state: Any, cp: Any) -> dict:
+            try:
+                cron_result = subprocess.run(["crontab", "-l"], capture_output=True, text=True, timeout=10)
+                if cron_result.returncode == 0:
+                    cron_lines = [l.strip() for l in cron_result.stdout.split("\n")
+                                  if l.strip() and not l.strip().startswith("#")]
+                    state.data["managed_crons"] = cron_lines[-50:]
+                    state.save()
+                    return {"status": "synced", "count": len(cron_lines)}
+            except Exception as e:
+                return {"status": "error", "error": str(e)[:100]}
+            return {"status": "empty"}
+
+        def _phase_autonomy(state: Any, cp: Any) -> dict:
+            hours = _hours_since(state.data.get("last_autonomy_run"))
+            if hours < AUTONOMY_INTERVAL_HOURS:
+                return {"status": "interval_skip"}
+            ok, _ = run_script("venture_autonomy.py", "--run-all", timeout_sec=600, label="autonomy:run-all")
+            state.data["last_autonomy_run"] = datetime.now().isoformat()
+            state.save()
+            if ok:
+                run_script("venture_autonomy.py", "--self-manage", timeout_sec=300)
+                state.data["last_self_manage"] = datetime.now().isoformat()
+                state.save()
+                run_script("agent_swarm.py", "--health", timeout_sec=60)
+            return {"status": "ok" if ok else "failed"}
+
+        def _phase_loop_closer(state: Any, cp: Any) -> dict:
+            ok, out = run_script("loop_closer.py", "--cycle", timeout_sec=120, label="loop_closer:cycle")
+            state.data["last_loop_closer"] = datetime.now().isoformat()
+            state.save()
+            return {"status": "ok" if ok else "failed"}
+
+        # Build DAG steps — all independent (no depends_on between them)
+        # _SOVRUN_AVAILABLE already checked at function entry (line ~1971)
+        dag_steps = [
+            AgentStep(name="alpha_pipeline", fn=_make_phase_fn("Alpha", _phase_alpha), timeout_seconds=600),
+            AgentStep(name="research", fn=_make_phase_fn("Research", _phase_research), timeout_seconds=660),
+            AgentStep(name="decision_engine", fn=_make_phase_fn("DecisionEngine", _phase_decision_engine), timeout_seconds=360),
+            AgentStep(name="content_gen", fn=_make_phase_fn("Content", _phase_content), timeout_seconds=660),
+            AgentStep(name="health_check", fn=_make_phase_fn("Health", _phase_health), timeout_seconds=180),
+            AgentStep(name="dynamic_ventures", fn=_make_phase_fn("DynVentures", _phase_dynamic_ventures), timeout_seconds=600),
+            AgentStep(name="openclaw", fn=_make_phase_fn("OpenClaw", _phase_openclaw), timeout_seconds=360),
+            AgentStep(name="cron_sync", fn=_make_phase_fn("CronSync", _phase_cron_sync), timeout_seconds=30),
+            AgentStep(name="autonomy", fn=_make_phase_fn("Autonomy", _phase_autonomy), timeout_seconds=900),
+            AgentStep(name="loop_closer", fn=_make_phase_fn("LoopCloser", _phase_loop_closer), timeout_seconds=180),
+        ]
+
+        # Set sovrun checkpoint file in our CEO dir
+        ckpt_file = CEO_DIR / "sovrun_dag_checkpoint.json"
+        dag = DAGOrchestrator(
+            steps=dag_steps,
+            max_workers=4,
+            timeout_seconds=1800,
+            checkpoint_file=ckpt_file,
+        )
+
+        log(f"  DAG: {len(dag_steps)} parallel phases, 4 workers, 1800s timeout")
+        dag_results = dag.run(resume=cp.resumed)
+
+        # Log results
+        completed = sum(1 for s in dag_steps if s.status == StepStatus.COMPLETE)
+        failed = sum(1 for s in dag_steps if s.status == StepStatus.FAILED)
+        log(f"  DAG complete: {completed}/{len(dag_steps)} phases done, {failed} failed")
+
+        for s in dag_steps:
+            status_str = s.status.value if hasattr(s.status, 'value') else str(s.status)
+            dur_str = f" [{s.duration_ms}ms]" if s.duration_ms else ""
+            err_str = f" ERR: {s.error}" if s.error else ""
+            log(f"    {s.name}: {status_str}{dur_str}{err_str}")
+
+        # Record all phases as completed in the CycleCheckpoint
+        for i, phase_num in enumerate(range(8, 18)):
+            if not cp.should_skip(phase_num):
+                step = dag_steps[i] if i < len(dag_steps) else None
+                result = step.result if step else None
+                cp.record_phase(phase_num, result)
+
+        # Cycle complete
+        state.data["last_cycle"] = datetime.now().isoformat()
+        state.data["cycles_run"] += 1
+        state.data["last_dag_mode"] = True
+        state.save()
+        cp.finish_cycle()
+
+        log("=" * 70)
+        log(f"CEO CYCLE COMPLETE (DAG MODE) -- {len(decisions)} decisions, {completed}/{len(dag_steps)} phases parallel")
+        log("=" * 70)
+
+    except Exception as e:
+        log(f"CEO CYCLE (DAG) FATAL ERROR: {e}", "ERROR")
+        import traceback
+        log(traceback.format_exc(), "ERROR")
+    finally:
+        lock.release()
+
+
+# ============================================================================
 # STATUS DASHBOARD
 # ============================================================================
 
@@ -2148,9 +2495,30 @@ def main() -> None:
     parser.add_argument("--ventures", action="store_true", help="Run dynamic ventures only")
     parser.add_argument("--cron-list", action="store_true", help="Show managed cron entries")
     parser.add_argument("--cron-add", type=str, help="Add a cron entry (e.g., '0 */2 * * * python3 ...')")
+    parser.add_argument("--dag", action="store_true", help="Run CEO cycle in DAG mode (parallel phases via sovrun)")
+    parser.add_argument("--dag-status", action="store_true", help="Show DAG orchestration status from last run")
     args = parser.parse_args()
 
-    if args.status:
+    if args.dag:
+        run_ceo_cycle_dag()
+    elif args.dag_status:
+        if not _SOVRUN_AVAILABLE:
+            print("Sovrun not available.")
+        else:
+            ckpt_file = CEO_DIR / "sovrun_dag_checkpoint.json"
+            if ckpt_file.exists():
+                ckpt = json.loads(ckpt_file.read_text())
+                print("\n=== CEO DAG Orchestration Status ===\n")
+                print(f"Last run: {ckpt.get('ts', '?')}")
+                for name, data in ckpt.get("steps", {}).items():
+                    st = data.get("status", "PENDING")
+                    dur = data.get("duration_ms", 0)
+                    err = data.get("error", "")
+                    print(f"  [{st:>8}] {name:<25} {dur:>6}ms{f'  ERR: {err[:50]}' if err else ''}")
+                print()
+            else:
+                print("No DAG checkpoint found. Run with --dag first.")
+    elif args.status:
         show_status()
     elif args.daemon:
         run_daemon()

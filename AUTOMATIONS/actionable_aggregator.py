@@ -515,6 +515,36 @@ def main() -> None:
     all_items.extend(csv_items)
     sources_scanned.append(f"decisions_csv: {len(csv_items)}")
 
+    # Capital Genesis Priority Stack — pull P0 items as actionable
+    log("  Scanning CAPITAL_GENESIS_PRIORITY_STACK...")
+    cap_gen_path = Path(__file__).resolve().parent.parent / "OPS" / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+    cap_gen_items: list[ActionableItem] = []
+    if cap_gen_path.exists():
+        try:
+            text = cap_gen_path.read_text()
+            # Extract P0 rows (lines with "LAUNCH" action in the P0 table)
+            in_p0 = False
+            for line in text.split("\n"):
+                if "## P0:" in line:
+                    in_p0 = True
+                    continue
+                if in_p0 and line.startswith("## P"):
+                    break
+                if in_p0 and "| LAUNCH |" in line:
+                    cols = [c.strip() for c in line.split("|") if c.strip()]
+                    if len(cols) >= 3:
+                        method_name = cols[1] if len(cols) > 1 else "unknown"
+                        cap_gen_items.append(ActionableItem(
+                            priority="P0",
+                            text=f"[Capital Genesis] {method_name[:100]}",
+                            source="capital_genesis_priority_stack",
+                            is_human=False,
+                        ))
+        except Exception:
+            pass
+    all_items.extend(cap_gen_items)
+    sources_scanned.append(f"capital_genesis: {len(cap_gen_items)}")
+
     log(f"  Raw total: {len(all_items)} items from {len(sources_scanned)} sources")
 
     # Deduplicate and sort

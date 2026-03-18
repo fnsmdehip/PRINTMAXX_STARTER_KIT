@@ -55,6 +55,17 @@ from agent_resilience import (
     sanitize_for_prompt, locked_file, TrajectoryLogger,
 )
 
+# Sovrun modules — procedural memory for venture skill recall
+_SOVRUN_PATH = str(Path(__file__).resolve().parent.parent / "OPEN_SOURCE" / "agent-soul")
+if _SOVRUN_PATH not in sys.path:
+    sys.path.insert(0, _SOVRUN_PATH)
+
+try:
+    from core.procedural_memory import ProceduralMemory as _ProceduralMemory
+    _SOVRUN_AVAILABLE = True
+except ImportError:
+    _SOVRUN_AVAILABLE = False
+
 try:
     from master_ops_bridge import MasterOpsBridge
     _BRIDGE_AVAILABLE = True
@@ -62,6 +73,36 @@ except ImportError:
     _BRIDGE_AVAILABLE = False
 
 _trajectory = TrajectoryLogger("venture_autonomy")
+
+
+def _recall_venture_skills(venture_type: str, task: str = "") -> str:
+    """Query sovrun procedural memory for skills relevant to this venture."""
+    if not _SOVRUN_AVAILABLE:
+        return ""
+    try:
+        db_path = AUTOMATIONS / "agent" / "sovrun" / "skills.db"
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        mem = _ProceduralMemory(db_path=db_path)
+        query = f"{venture_type} {task}".strip()
+        injection = mem.export_injection(query, max_chars=400)
+        mem.close()
+        return injection
+    except Exception:
+        return ""
+
+
+def _capture_venture_skill(venture_type: str, task: str, result: str, success: bool = True) -> None:
+    """Capture a venture execution as a procedural skill."""
+    if not _SOVRUN_AVAILABLE or not success or len(task.strip()) < 10:
+        return
+    try:
+        db_path = AUTOMATIONS / "agent" / "sovrun" / "skills.db"
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        mem = _ProceduralMemory(db_path=db_path)
+        mem.capture(task=f"[{venture_type}] {task}", result=result[:1000], success=True)
+        mem.close()
+    except Exception:
+        pass
 
 # ── paths & guardrails ───────────────────────────────────────────────────
 PROJECT = Path("/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt")
@@ -241,6 +282,19 @@ VENTURE_TYPES = {
             "distribute": ("printmaxx_agent.py", "--mission content-distribute"),
             "track": ("printmaxx_agent.py", "--mission content-track"),
         },
+        "demographic_variants": {
+            "boomer_male_55_70": {
+                "platforms": ["YouTube", "Facebook", "Email Newsletter"],
+                "content_style": "calm, authoritative, educational. no zoomer energy. trustworthy voice. "
+                    "10-20 min longform. specific verticals: golf, fishing, health/wellness, tools/DIY, "
+                    "retirement planning, classic cars, woodworking.",
+                "format": "longer paragraphs, no slang, clear structure. educational not entertaining. "
+                    "problem-solution framing. credibility signals (years of experience, data, studies).",
+                "cta_style": "direct, low-pressure. 'learn more' not 'smash subscribe'. email capture over social follows.",
+                "product_categories": "health supplements ($30-80), pain relief, sleep aids, golf gear, "
+                    "fishing equipment, workshop tools, financial planning guides.",
+            },
+        },
         "claude_prompt": (
             "You are the CONTENT autonomy agent for PRINTMAXX venture '{name}'.\n"
             "Working directory: {project}\n\n"
@@ -251,8 +305,11 @@ VENTURE_TYPES = {
             "2. GENERATE: Create 5 social posts (X/Twitter format), "
             "1 thread (5-7 tweets), 1 newsletter draft. "
             "Follow .claude/rules/copy-style.md voice guidelines.\n"
+            "   BOOMER VARIANT: Also generate 2 Facebook posts + 1 YouTube longform script "
+            "targeting males 55-70. Calm, authoritative tone. Health/golf/fishing/tools verticals. "
+            "Save to CONTENT/social/boomer/.\n"
             "3. FORMAT: Adapt content for each platform "
-            "(X, LinkedIn, newsletter, blog).\n"
+            "(X, LinkedIn, newsletter, blog, Facebook Groups for 55+ demo).\n"
             "4. SCHEDULE: Save all content to CONTENT/social/generated/ "
             "as PENDING_REVIEW with timestamps.\n"
             "5. DISTRIBUTE: Move APPROVED content to posting queue.\n"
@@ -260,6 +317,7 @@ VENTURE_TYPES = {
             "Rules:\n"
             "- NEVER use AI slop vocabulary (see .claude/rules/copy-style.md)\n"
             "- Consequence-first hooks, specific numbers, lowercase energy\n"
+            "- Boomer content: NO zoomer energy. Educational, trustworthy, calm authority.\n"
             "- All files stay in {project}"
         ),
     },
@@ -377,18 +435,37 @@ VENTURE_TYPES = {
             "deploy": ("printmaxx_agent.py", "--mission monetize-deploy"),
             "track": ("printmaxx_agent.py", "--mission monetize-track"),
         },
+        "demographic_variants": {
+            "boomer_male_55_70": {
+                "affiliate_categories": "health supplements (joint support, sleep aids, prostate health $30-80), "
+                    "pain relief devices, golf accessories ($40-120), fishing gear ($30-100), "
+                    "workshop/power tools, financial planning services, Medicare supplement info.",
+                "funnel_style": "longer-form landing pages. testimonials from age-appropriate people. "
+                    "larger fonts, clear layouts, phone number visible. trust signals: BBB, guarantees, "
+                    "free shipping. email-first not social-first.",
+                "platforms": "Facebook Ads targeting 55-70 male, YouTube pre-roll on golf/fishing/DIY channels, "
+                    "email newsletters (high open rates in this demo), Google Search (health keywords).",
+            },
+        },
         "claude_prompt": (
             "You are the MONETIZATION autonomy agent for PRINTMAXX venture '{name}'.\n"
             "Working directory: {project}\n\n"
             "Your job runs every {interval}h. Each cycle:\n"
             "1. FIND OFFERS: Scan affiliate networks, Gumroad trending, "
             "AppSumo deals. Find high-commission opportunities.\n"
+            "   BOOMER VARIANT: Also scan ClickBank health/wellness category, "
+            "Amazon Associates for golf/fishing/tools, and supplement affiliate programs. "
+            "Target $30-80 price range products for males 55-70.\n"
             "2. CREATE FUNNEL: Design a conversion funnel for the top offer. "
             "Email sequence, landing page copy, social proof.\n"
+            "   BOOMER VARIANT: Longer-form pages, larger fonts, trust signals, "
+            "phone-friendly. Email-first distribution.\n"
             "3. BUILD PAGE: Create landing page in LANDING/ directory.\n"
             "4. DEPLOY: Deploy to surge.sh or Vercel.\n"
             "5. DISTRIBUTE: Create social posts, email blasts, "
-            "community posts promoting the offer.\n"
+            "community posts promoting the offer. "
+            "BOOMER VARIANT: Facebook Groups for 55+ demographics, "
+            "YouTube descriptions on longform content.\n"
             "6. TRACK: Check conversion rates, revenue, ROI.\n\n"
             "Rules:\n"
             "- FTC disclosure on all affiliate links\n"
@@ -601,6 +678,11 @@ class VentureAutonomyEngine:
         except Exception as _ie:
             log(f"  Intelligence query failed (non-fatal): {_ie}", "WARN")
 
+        # SOVRUN PROCEDURAL MEMORY: Recall relevant skills
+        skills_brief = _recall_venture_skills(vtype_key, venture.get("name", ""))
+        if skills_brief:
+            log(f"  Procedural memory: {len(skills_brief)} chars of learned skills")
+
         # XLSX INTELLIGENCE: Get Master Ops context for this venture
         xlsx_ctx = self._get_venture_xlsx_context(vtype_key)
         if xlsx_ctx:
@@ -686,6 +768,16 @@ class VentureAutonomyEngine:
         )
 
         log(f"Venture cycle complete: {venture['name']} — {successes}/{total} steps succeeded")
+
+        # Capture as procedural skill on success
+        if successes > 0:
+            steps_summary = ", ".join(f"{k}:{v}" for k, v in cycle_results.items())
+            _capture_venture_skill(
+                vtype_key, venture.get("name", venture_id),
+                f"Pipeline: {steps_summary}. {successes}/{total} steps succeeded.",
+                success=(successes == total),
+            )
+
         return True
 
     def run_all_active(self) -> None:

@@ -36,6 +36,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from agent_resilience import locked_file, TrajectoryLogger
 
+# Sovrun modules — procedural memory for loop closing skills
+_SOVRUN_PATH = str(Path(__file__).resolve().parent.parent / "OPEN_SOURCE" / "agent-soul")
+if _SOVRUN_PATH not in sys.path:
+    sys.path.insert(0, _SOVRUN_PATH)
+
+try:
+    from core.procedural_memory import ProceduralMemory as _ProceduralMemory
+    _SOVRUN_AVAILABLE = True
+except ImportError:
+    _SOVRUN_AVAILABLE = False
+
 try:
     from master_ops_bridge import MasterOpsBridge
     _BRIDGE_AVAILABLE = True
@@ -43,6 +54,20 @@ except ImportError:
     _BRIDGE_AVAILABLE = False
 
 _trajectory = TrajectoryLogger("loop_closer")
+
+
+def _capture_loop_skill(loop_type: str, action: str, result: str) -> None:
+    """Capture successful loop closing actions as procedural skills."""
+    if not _SOVRUN_AVAILABLE or len(action.strip()) < 10:
+        return
+    try:
+        db_path = Path(__file__).resolve().parent / "agent" / "sovrun" / "skills.db"
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        mem = _ProceduralMemory(db_path=db_path)
+        mem.capture(task=f"[loop:{loop_type}] {action}", result=result[:500], success=True)
+        mem.close()
+    except Exception:
+        pass
 
 PROJECT = Path(__file__).resolve().parent.parent
 AUTOMATIONS = PROJECT / "AUTOMATIONS"

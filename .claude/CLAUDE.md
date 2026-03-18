@@ -39,7 +39,7 @@ Read `OPS/PERSISTENT_TASK_TRACKER.md` FIRST every session. Read `AUTOMATIONS/SOU
 11. **CEO SANITY CHECK** — Am I building or selling? What's the obvious thing? Human blockers surfaced?
 12. **ARCHITECTURE-FIRST** — Before analyzing/describing/naming the system, read `OPS/PRINTMAXX_SYSTEM_MAP.md`. On ANY architecture change (agents, cron, scripts, data flow, state files): update system map + task tracker + CLAUDE.md in SAME session. New ventures also update SOUL.md + memory. No stale maps. No orphan ventures.
 13. **COMPETITIVE COGNITION** — Assume 10K power users working on the same problem. Find the non-obvious angle. Anti-lazy: am I defaulting to popular or critically analyzing for best? See SOUL.md protocol.
-14. **INTELLIGENCE-FIRST** — Query `intelligence_router.py` before every action. 15K+ alpha entries, not default LLM knowledge.
+14. **INTELLIGENCE-FIRST** — Query `intelligence_router.py` before every action. 15K+ alpha entries, not default LLM knowledge. Check `OPS/CAPITAL_GENESIS_PRIORITY_STACK.md` for daily ranked priorities.
 
 ## Guardrails (for THIS project only)
 When working in this PRINTMAXX project, file ops stay within: `/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/`

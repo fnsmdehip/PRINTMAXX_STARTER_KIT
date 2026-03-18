@@ -51,7 +51,9 @@ VENTURE_ALPHA_MAP = {
         "categories": ["CONTENT_FORMAT", "CONTENT_FARM", "GROWTH_HACK"],
         "keywords": ["content", "twitter", "thread", "viral", "hook", "engagement",
                       "posting", "social media", "distribution", "newsletter", "audience",
-                      "niche account", "faceless", "ugc", "youtube", "tiktok", "reels"],
+                      "niche account", "faceless", "ugc", "youtube", "tiktok", "reels",
+                      "boomer", "55-70", "facebook page", "long-form", "educational",
+                      "authoritative", "voiceover"],
         "methods": ["CONTENT", "CONTENT_FARM", "SOCIAL"],
     },
     "LOCAL_BIZ": {
@@ -65,7 +67,9 @@ VENTURE_ALPHA_MAP = {
         "categories": ["MONETIZATION", "ECOM", "ECOM_ARB"],
         "keywords": ["revenue", "pricing", "monetize", "gumroad", "whop", "stripe",
                       "subscription", "saas", "mrr", "arr", "convert", "funnel",
-                      "checkout", "payment", "affiliate", "commission", "passive"],
+                      "checkout", "payment", "affiliate", "commission", "passive",
+                      "boomer", "55-70", "disposable income", "health supplements",
+                      "golf", "fishing", "tools", "faceless", "aov", "cpm"],
         "methods": ["DIGITAL_PRODUCTS", "MONETIZE", "ECOM"],
     },
     "RESEARCH": {
