@@ -949,3 +949,39 @@
 {"ts": "2026-03-17T16:27:36.723221", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
 {"ts": "2026-03-17T16:35:37.925752", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
 {"ts": "2026-03-17T18:15:40.710220", "mission": "autonomy:auto_outbound_cold_outreach_en", "result": "partial", "duration_s": 6, "output": "Cold Outreach Engine: 5/6 steps OK"}
+{"ts": "2026-03-17T20:19:23.183934", "mission": "autonomy:auto_app_app_factory_9788", "result": "partial", "duration_s": 6, "output": "App Factory: 4/6 steps OK"}
+{"ts": "2026-03-17T20:20:53.923630", "mission": "content", "result": "partial", "duration_s": 11.8, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:21:06.065524", "mission": "upgrade", "result": "partial", "duration_s": 12.1, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-17T20:21:06.465204", "mission": "schedule", "result": "success", "duration_s": 0.3, "output": "Scheduled 42 slots across 7 days"}
+{"ts": "2026-03-17T20:26:24.555056", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-17T20:26:48.858451", "mission": "hunt", "result": "partial", "duration_s": 13.1, "output": "Searched but results were thin"}
+{"ts": "2026-03-17T20:32:15.351012", "mission": "autonomy:SCRAPING_competitive_intel", "result": "partial", "duration_s": 3, "output": "Competitive Intel Scraping: 1/3 steps OK"}
+{"ts": "2026-03-17T20:38:02.661090", "mission": "autonomy:alpha_intelligence", "result": "partial", "duration_s": 3, "output": "Alpha Intelligence Research: 1/3 steps OK"}
+{"ts": "2026-03-17T20:38:23.146717", "mission": "content", "result": "partial", "duration_s": 8.2, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:38:34.599083", "mission": "upgrade", "result": "partial", "duration_s": 10.9, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-17T20:39:28.745483", "mission": "content", "result": "partial", "duration_s": 11.8, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:39:40.005439", "mission": "content", "result": "partial", "duration_s": 11.2, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:39:53.538409", "mission": "content", "result": "partial", "duration_s": 13.3, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:40:05.444928", "mission": "content", "result": "partial", "duration_s": 11.8, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:40:14.669026", "mission": "content", "result": "partial", "duration_s": 9.2, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:40:27.154286", "mission": "content", "result": "partial", "duration_s": 12.2, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:40:35.388259", "mission": "content", "result": "partial", "duration_s": 8.2, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:40:44.257044", "mission": "content", "result": "partial", "duration_s": 8.7, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:40:53.480725", "mission": "content", "result": "partial", "duration_s": 9.1, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:41:02.119840", "mission": "content", "result": "partial", "duration_s": 8.6, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:41:13.616528", "mission": "content", "result": "partial", "duration_s": 11.4, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:41:22.155945", "mission": "content", "result": "partial", "duration_s": 8.5, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:41:33.781787", "mission": "content", "result": "partial", "duration_s": 11.5, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:41:46.561439", "mission": "content", "result": "partial", "duration_s": 12.4, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:41:58.826166", "mission": "content", "result": "partial", "duration_s": 12.2, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:42:08.469212", "mission": "content", "result": "partial", "duration_s": 9.5, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:42:21.139634", "mission": "content", "result": "partial", "duration_s": 12.3, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:42:32.876084", "mission": "content", "result": "partial", "duration_s": 11.6, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:42:43.569259", "mission": "content", "result": "partial", "duration_s": 10.6, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:42:53.033052", "mission": "content", "result": "partial", "duration_s": 8.9, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:43:04.041891", "mission": "content", "result": "partial", "duration_s": 10.5, "output": "Claude returned error, output length: 134"}
+{"ts": "2026-03-17T20:43:15.545227", "mission": "content", "result": "partial", "duration_s": 11.3, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:43:26.750291", "mission": "content", "result": "partial", "duration_s": 11.1, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:43:37.045459", "mission": "content", "result": "partial", "duration_s": 10.0, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:43:50.211740", "mission": "content", "result": "partial", "duration_s": 12.0, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-17T20:46:37.748802", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}

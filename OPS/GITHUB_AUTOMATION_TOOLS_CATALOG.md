@@ -2372,3 +2372,178 @@ People are going to stay on your slide for either - value or entertai
 
 Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust. Tabs, splits, and tmux work fine until you have several projects open with logs, tests, and long-running shells. I kept rebuilding context instead of resuming work. Horizon puts shells on an infinite canvas. You can arrange them into workspaces and reopen later with layout, scrollback, and history i
 
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:46:15-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:46:16-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:46:18-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:46:18-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:46:18-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:46:20-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:46:20-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+

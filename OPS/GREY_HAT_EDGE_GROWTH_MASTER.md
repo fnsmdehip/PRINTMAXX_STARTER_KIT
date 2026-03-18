@@ -7328,3 +7328,14 @@ Semantic search for instagram followers.
 
 [r/entrepreneur] Running a 4million € constructions business AMA
 
+
+
+---
+
+## Pending Enhancement (ALPHA105613, Score: 20)
+
+**Source:** r/cryptomarkets | **URL:** https://reddit.com/r/CryptoMarkets/comments/1rw88pg/the_shadow_of_a_liquidity_shock_when_michael_j/
+**Added:** 2026-03-17T20:18:01-04:00
+
+[r/cryptomarkets] The Shadow of a Liquidity Shock: When Michael J. Saylor's Strategy Devours Bitcoin Faster Than It Is Created.
+
