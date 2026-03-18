@@ -2164,3 +2164,33 @@ Nvidia's CEO Huang: Revenue opportunity for Blackwell and Rubin chips is likely 
 
 [ACQUISITION] 400 Users in ~72 hours struggling with connecting traffic to revenue
 
+
+
+---
+
+## Pending Enhancement (ALPHA105471, Score: 24)
+
+**Source:** @karpathy (high-signal-accounts) | **URL:** https://x.com/Grayscale/status/2033966786379751932/photo/1
+**Added:** 2026-03-17T20:02:11-04:00
+
+Current 
+@Polymarket
+ odds put the CLARITY Act passing in 2026 at around 50%. 
+
+The real battle lines have formed around net interest margin and transaction fees—core bank revenue streams, now increasingly contested by stablecoin issuers like 
+@circle
+ and 
+@tether
+ and blockchains
+
+
+
+---
+
+## Pending Enhancement (ALPHA105549, Score: 24)
+
+**Source:** HackerNews | **URL:** https://news.ycombinator.com/item?id=47419293
+**Added:** 2026-03-17T20:18:01-04:00
+
+[ACQUISITION] AI costs are showing up before revenue in public cloud companies
+

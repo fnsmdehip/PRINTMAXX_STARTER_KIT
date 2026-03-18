@@ -1,7 +1,7 @@
 {
-  "last_cycle": "2026-03-17T12:51:13.471578",
-  "cycles_run": 278,
-  "missions_completed": 457,
+  "last_cycle": "2026-03-17T20:43:50.212946",
+  "cycles_run": 309,
+  "missions_completed": 488,
   "missions_failed": 30,
   "last_mission_results": {
     "health_heal": "success",
@@ -32,7 +32,7 @@
   "blockers": [
     "account_creation"
   ],
-  "disk_gb_free": 44.3,
+  "disk_gb_free": 41.1,
   "last_run_times": {
     "health_heal": "2026-03-15T10:14:05.793035",
     "process_decide": "2026-03-15T10:14:06.038749",

@@ -1,5 +1,5 @@
 # PRINTMAXX CODEBASE GRAMMAR
-# Generated: 2026-03-17T06:03:59.671655
+# Generated: 2026-03-18T05:45:58.677340
 # 20 scripts | Instant system understanding
 
 ## EXECUTION HIERARCHY
@@ -34,7 +34,7 @@
 
 ## SCRIPTS
 
-### ceo_agent.py (2284L) — 24/7 orchestrator — scores ops, makes PROMOTE/ENHANCE/CREATE/KILL/DISCOVER decisions, delegates to ventures
+### ceo_agent.py (2285L) — 24/7 orchestrator — scores ops, makes PROMOTE/ENHANCE/CREATE/KILL/DISCOVER decisions, delegates to ventures
   class GitGuard: [__init__(), snapshot(label), rollback(), post_change_commit(summary)]
   class XlsxIntel: [__init__(), _find_xlsx(), _load(), get_all_ops(), get_auto_status(), get_priority_launch(), get_synergy_stacks(), get_venture_map(), get_expansion_queue(), get_op_by_id(op_id)]
   class CEOState: [__init__(), _load(), _default(), save(), log_decision(decision), log_audit(audit_entry), is_protected(op_id), protect_op(op_id), get_score_trend(op_id, periods)]
@@ -52,7 +52,7 @@
   fn: safe_path(p) | ts() | log(msg, level) | get_agent_intelligence(agent_id) — Query intelligence router for this agent's venture context. | generate_plist(agent_id, agent_def) — Generate a launchd plist for a swarm agent. | install_agent(agent_id) — Generate plist and install via launchctl. | uninstall_agent(agent_id) — Unload and remove a swarm agent. | list_installed() — List all installed swarm agents. | show_status() | deploy_all(force) — Deploy swarm agents respecting brain state. | kill_all() | show_logs(agent_id) | health_check() | main()
   cli: --status --deploy --list --kill --kill-all --logs --health --force-deploy --run
 
-### venture_autonomy.py (1792L) — 8 venture types — universal execution engine, self-managing schedules, SelfManager auto-adjusts
+### venture_autonomy.py (1793L) — 8 venture types — universal execution engine, self-managing schedules, SelfManager auto-adjusts
   class AutonomyState: [__init__(), _load(), save(), get_venture(venture_id), add_venture(venture_id, venture_def), update_venture(venture_id, updates), get_active_ventures()]
   class VentureAutonomyEngine: [__init__(state), create_venture(venture_type, name, config), run_venture(venture_id), run_all_active(), _get_venture_xlsx_context(venture_type), _get_venture_intelligence(venture_type, step), _run_with_claude(venture_id, venture, step, vtype), _save_step_result(venture_id, step, success, output), _generate_schedule_configs(venture_id, venture_def), _generate_llm_launchd_plist(venture_id, venture_def, vtype, interval_hours)]
   class SchedulerManager: [install_launchd(venture_id, mode), uninstall_launchd(venture_id), install_all_llm(), install_cron(venture_id), list_installed()]
@@ -60,7 +60,7 @@
   fn: _sig(s, f) | safe_path(p) | ts() | log(msg, level) | run_cmd(cmd, timeout_sec, label) — Run a command with guardrails. Returns (success, output). | run_script(script_name, args, timeout_sec, label) — Run a PRINTMAXX automation script. | _hours_since(iso_ts) | log_mission(mission_name, result, duration_s, output) — Log to the shared agent mission log (same format as monitor.py expects). | send_bus_message(body, to_agent) — Send a message on the shared inter-agent bus. | show_status() | list_types() | run_daemon() — Run the autonomy engine forever, cycling all active ventures. | main()
   cli: --status --run --run-all --create --list-types --schedule --install-launchd --install-script-launchd --install-cron --install-all --import-ceo --daemon --pause --resume-venture --bootstrap --self-manage
 
-### intelligence_router.py (1832L) — central intelligence hub — 484 docs, 14,799 alpha, 16 CSVs across 9 ventures
+### intelligence_router.py (1833L) — central intelligence hub — 484 docs, 14,799 alpha, 16 CSVs across 9 ventures
   fn: safe_path(p) — Verify path is within project root. Raises ValueError if not. | ts() | load_catalog() — Load INTELLIGENCE_CATALOG.json if it exists, merge with hardcoded map. | query_alpha(venture_type, top) — Query alpha entries relevant to a venture. | find_existing_docs(venture_type) — Return list of (path, description, exists) for a venture's docs. | find_existing_dirs(venture_type) — Return list of (dir_path, description, file_count, files) for directories. | find_existing_csvs(venture_type) — Return list of (path, description, exists, row_count) for LEDGER CSVs. | find_swarm_reports(venture_type, max_reports) — Find the most recent swarm reports relevant to a venture type. | find_task_docs(venture_type, task_type) — Get the most relevant docs for a specific task within a venture. | extract_doc_summary(doc_path, max_lines) — Extract key sections from a doc (headers + first few lines under each). | _enrich_with_master_ops(venture_type, brief) — Enrich an intelligence brief with Master Ops xlsx data. | get_intelligence(venture_type, task_type, include_summaries, alpha_count) | compute_stats() — Compute coverage statistics across all venture types. | format_human_output(intel, mode) — Format intelligence for human-readable CLI output. | format_stats_output(stats) — Format stats for human-readable output.
   cli: --venture --task --json --brief --full --stats --catalog --list-ventures --alpha-count
 
@@ -72,11 +72,11 @@
   fn: load_state() | save_state(state) | get_phase(day) | load_approved_posts() — Load all approved posts from CSV files, newest first. | filter_for_warmup(posts, phase_config, state) — Filter posts based on warmup phase rules. | pick_posts(filtered, max_count) — Pick posts to send, with some randomization for natural feel. | show_status(state) | do_post(state, dry_run) | log_post(text, post_meta) — Log posted content to POSTED_LOG.csv | main()
   cli: --status --post --dry-run --set-day --advance
 
-### daily_digest.py (254L) — human-readable system activity summary — alpha, content, agents, changes
+### daily_digest.py (255L) — human-readable system activity summary — alpha, content, agents, changes
   fn: get_date_range(days) | alpha_summary(dates) | content_summary(dates) | agent_summary(dates) | blocker_summary() | improvements_summary(dates) | main()
   cli: --days --save
 
-### alpha_query.py (375L) — venture-based alpha queries with ROI normalization — search/filter 14,799 entries
+### alpha_query.py (376L) — venture-based alpha queries with ROI normalization — search/filter 14,799 entries
   fn: normalize_roi(val) — Fix corrupted ROI values from CSV misalignment. | load_alpha() — Load all alpha entries from CSV, fixing known data quality issues. | score_entry(entry, venture_config) — Score how relevant an alpha entry is to a venture type. | query_venture(entries, venture_type, status_filter, limit) — Query alpha entries relevant to a venture type. | keyword_search(entries, query, limit) — Full-text keyword search across all alpha fields. | query_by_category(entries, category, limit) — Query by exact category match. | top_alpha(entries, limit) — Get top alpha entries by ROI potential. | show_stats(entries) — Show alpha distribution stats. | format_result(score, entry, verbose) — Format a single result for display. | main()
   cli: --venture --category --search --top --status --stats --untagged --json --verbose
 
@@ -84,7 +84,7 @@
   fn: log(msg, level) | log_action(action_type, target, result, details) | load_state() | save_state(state) | run_cmd(cmd, timeout, label) | _get_blocker_intelligence() — Get current blocker state from Master Ops for loop closing. | adjust_interval(agent_id, params, dry_run) | kill_agent(agent_id, dry_run) | deploy_agent(agent_id, dry_run) | create_venture(venture_type, params, dry_run) | boost_agent(agent_id, dry_run) | throttle_agent(agent_id, dry_run) | run_script_action(script, params, dry_run) | process_alpha(dry_run) | execute_weekly_target(target_key, params, dry_run) — Execute an agent-owned weekly target by triggering the relevant swarm agent.
   cli: --cycle --decisions --feedback --pipeline --status --drift --dry-run
 
-### decision_engine.py (1206L) — closed-loop decision processing — pending data → actions
+### decision_engine.py (1208L) — closed-loop decision processing — pending data → actions
   class FreelancePipeline: [analyze(dry_run), _match_service(opp), _build_price_line(opp, svc), _generate_responses(opportunities)]
   class EcomArbPipeline: [analyze(dry_run), _get_product_data(prod), _generate_listings(products)]
   class AlphaPipeline: [analyze(dry_run), _escalate_scale_items(items)]
@@ -94,14 +94,14 @@
   fn: safe_path(target) | log(msg, level) | log_decision(source, action, reasoning, outcome) — Append to decisions ledger for full audit trail. | _get_ops_weight(op_id_or_venture) — Get xlsx-based scoring weights for a decision. | apply_ops_boost(base_score, op_id_or_venture) — Apply xlsx-informed boosts/penalties to a base score. | read_csv_tail(filepath, n) — Read last N rows of a CSV file. | count_csv_rows(filepath) | run_cycle(dry_run) — Run one full decision cycle across all pipelines. | run_daemon() — Run continuously, one cycle every 30 minutes. | show_status() — Show current pipeline status. | main()
   cli: --cycle --daemon --status --dry-run --fix-broken
 
-### alpha_auto_processor.py (815L) — auto-processes ALPHA_STAGING.csv — routes to ventures/OPS/cron/archive
+### alpha_auto_processor.py (816L) — auto-processes ALPHA_STAGING.csv — routes to ventures/OPS/cron/archive
   fn: now_iso() | log(msg) — Append to log file and print to stderr. | safe_path(target) — Verify path is within project root. | text_hash(text) — Short hash for dedup. | build_ops_index() | _kw_score(text, keywords, max_pts) — Count how many keyword patterns match, scale to max_pts. | score_alpha(row) | check_redundancy(row, seen_hashes, ops_index) | find_ops_match(row, ops_index) | detect_timeframe(text) | route_alpha(row, score, ops_index) | create_venture_stub(row, score, dry_run) — Create a stub OPS file for a new venture opportunity. | bolster_existing(row, target_path, score, dry_run) — Append alpha intelligence to an existing OPS file. | add_cron_entry(row, cron_schedule, dry_run) — Append a cron entry specification. | add_to_high_value_queue(row, score, dry_run) — Add entry to the high-value queue for human review.
 
-### system_health_monitor.py (858L) — health checks — agents, cron, disk, processes
+### system_health_monitor.py (921L) — health checks — agents, cron, disk, processes
   fn: _now() | _file_age_h(p) — Hours since file was last modified. Returns inf if missing. | _newest_in_dir(directory, pattern) — Age in hours of newest file matching pattern in directory. inf if none. | _newest_matching(base_dir, pattern) — Age of newest file matching glob pattern under base_dir. | _csv_rows(p) — Count data rows in CSV (excludes header). 0 if missing. | _http_status(url, timeout) — HTTP status code for url. 0 on failure. Uses curl, then urllib fallback. | _crontab_text() — Return current crontab contents as string, empty on error. | _sev(age_h, amber, red) — Map age to severity: GREEN / AMBER / RED. | _status_word(sev) | _fmt_age(h) | check_01_cron_jobs() — Cron job freshness: entries installed + key logs producing output. | check_02_pipeline_freshness() — Pipeline freshness: ANALYZED_LEADS, HOT_LEADS_QUALIFIED, progress.json. | check_03_live_sites() — Live site uptime: check all 16 surge.sh sites return 200. | check_04_memory_system() — Memory system: HEARTBEAT.md + active-tasks.md freshness. | check_05_lead_growth() — Lead pipeline growth: row counts across lead files.
   cli: --check --quick --json --skip-sites
 
-### daily_research_orchestrator.py (1054L) — research pipeline — scrapers, alpha review, content generation
+### daily_research_orchestrator.py (1053L) — research pipeline — scrapers, alpha review, content generation
   fn: acquire_lock() | release_lock() | fetch_json(url, timeout) — Fetch JSON from URL with rate limiting and error handling. | fetch_text(url, timeout) — Fetch raw text/HTML from URL. | content_hash(text) — MD5 hash of normalized text for deduplication. | load_existing_hashes() — Load content hashes from existing ALPHA_STAGING entries to avoid duplicates. | is_duplicate(text, url) — Check if content already exists in ALPHA_STAGING. | mark_seen(text, url) — Mark content as seen for this run. | get_next_alpha_id() — Get the next alpha_id number from ALPHA_STAGING.csv. | append_alpha_entries(entries, dry_run) — Append entries to ALPHA_STAGING.csv. Returns count appended. | categorize_finding(text) — Categorize a finding based on keyword matching. | score_finding(text, upvotes, comments) — Score a finding 0-100 for relevance and quality. | score_to_status(score) — Convert score to alpha status. | score_to_roi(score) — Convert score to ROI potential. | run_existing_scrapers() — Run existing scraper scripts via subprocess. Returns run results.
   cli: --full --gaps-only --dry-run --status
 
@@ -115,12 +115,12 @@
   fn: rating(score) | rating_symbol(score) | collect_files(dirs, extensions, recursive) — Collect files from multiple directories, handling missing dirs gracefully. | safe_read(path, max_bytes) — Read file content safely, handling encoding errors. | count_pattern(text, pattern, case_insensitive) | find_slop_words(text) — Find banned AI slop words in text. Returns (word, count) pairs. | find_spam_words(text) — Find spam trigger words in text. | count_em_dashes(text) | main()
   cli: --score-all --score-apps --score-content --score-emails --score-listings --score-scripts --gate --report --api-json
 
-### twitter_alpha_scraper.py (1014L) — scrapes 133 Twitter accounts via Brave cookies + Playwright
+### twitter_alpha_scraper.py (1016L) — scrapes 133 Twitter accounts via Brave cookies + Playwright
   class TwitterScraper: [__init__(deep, download_media, meme_mode, days), _load_alpha_fieldnames(), _load_copy_style_handles(), _parse_ts(ts), _load_existing_urls(), _get_next_alpha_id(), _is_signal_content(text), _categorize(text), _estimate_roi(tweet), save_to_csv(tweets, source_type)]
   fn: extract_brave_cookies(domain_filter) — Extract and decrypt cookies from Brave's cookie database.
   cli: --bookmarks --accounts --handles --all --meme --deep --download-media --limit --days --max-scrolls --visible
 
-### background_reddit_scraper.py (285L) — Reddit JSON API scraper — no auth needed
+### background_reddit_scraper.py (287L) — Reddit JSON API scraper — no auth needed
   fn: load_subreddits(limit) — Load subreddits marked for auto-monitoring | get_next_alpha_id() — Get next available ALPHA ID | load_existing_urls() — Load existing URLs to avoid duplicates | estimate_roi(text, upvotes) — Estimate ROI potential | has_signal(title) — Check if title has business/alpha signal | scrape_subreddits(subreddits) — Scrape subreddits using Reddit JSON API - runs in background | main()
   cli: --scrape --full --limit
 
@@ -133,7 +133,7 @@
 ### memory_manager.py (464L) — filesystem-based memory management
   fn: count_csv(path) | count_files(pattern) | read_json(path) | file_age_hours(path) | safe_read_csv_column(path, col) | update_heartbeat() — Generate HEARTBEAT.md — the system pulse check. | update_active_tasks() — Refresh active-tasks.md with current system state. | log_to_daily(message) — Append a message to today's daily log. | generate_daily_summary() — Generate end-of-day summary from daily log entries. | check_venture_health() — Quick health check across all ventures. | main()
   cli: --heartbeat --active-tasks --daily-summary --log --health --full
-  reads: ACCOUNTS.csv, REVENUE_TRACKER.csv, progress.json, ETSY_LISTINGS_COMPLETE.md
+  reads: REVENUE_TRACKER.csv, ACCOUNTS.csv, ETSY_LISTINGS_COMPLETE.md, progress.json
 
 ### wire_missed_intelligence.py (263L) — parses MISSED_INTELLIGENCE_SCAN.md → updates catalog
   fn: classify_path(path) — Classify a file path into a venture type. | parse_scan_file(scan_path) — Parse MISSED_INTELLIGENCE_SCAN.md and extract all file entries. | get_existing_paths(catalog) — Get all paths already in the catalog across all ventures. | main()

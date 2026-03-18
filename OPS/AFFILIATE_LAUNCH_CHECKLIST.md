@@ -979,3 +979,25 @@ Get $100 in AI credits on Zo – the product that inspired OpenClaw.
 > Nov 19, 2025 - Zo launch
 > 6 days later - first OpenClaw commit
 
+
+
+---
+
+## Pending Enhancement (ALPHA105538, Score: 42)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rwle2g/i_built_a_tool_because_i_realized_15_of_my_amazon/
+**Added:** 2026-03-17T20:18:01-04:00
+
+[ACQUISITION] I built a tool because I realized 15% of my Amazon affiliate links were dead (and losing me money)
+
+
+
+---
+
+## Pending Enhancement (ALPHA105544, Score: 30)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rwmm5j/from_idea_launch_first_user_ai_resume_tool/
+**Added:** 2026-03-17T20:18:01-04:00
+
+[ACQUISITION] From idea → launch → first user (AI resume tool)
+
