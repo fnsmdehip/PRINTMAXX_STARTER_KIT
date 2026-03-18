@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-17T12:50:00",
-  "last_cycle": "asset_deployer_cycle_2026-03-17_1250",
+  "last_updated": "2026-03-18T15:58:45.355793",
+  "last_cycle": "playwright_test_cycle_2026-03-18_batch",
   "total_surge_deployments": 355,
   "health_status": "MOSTLY_HEALTHY",
   "health_check_results": {
@@ -37,7 +37,10 @@
       "saas-stack-audit-200.surge.sh"
     ]
   },
-  "redeployments_this_cycle": ["invoiceforge.surge.sh", "klaviyo-alternative.surge.sh"],
+  "redeployments_this_cycle": [
+    "invoiceforge.surge.sh",
+    "klaviyo-alternative.surge.sh"
+  ],
   "new_deployments_this_cycle": [],
   "issues_found": {
     "scripture-streak-legal.surge.sh": "404 - source files missing, orphan deployment",
@@ -274,39 +277,43 @@
   ],
   "total_count": 10,
   "live_test": {
-    "tested_at": "2026-03-17T10:54:56",
-    "cycle": "Playwright Tester v2 - March 17",
-    "total": 15,
-    "green": 6,
-    "yellow": 0,
-    "red": 9,
-    "pass_rate": "40.0%",
-    "notes": "Cycle 17 (Playwright Tester v2): Focused test on 10 previously RED sites + 5 sample GREEN sites. 6 GREEN verified healthy. 9 RED sites with DNS failures (domain names exceed 63-char DNS label limit). Root cause: overly long auto-generated domain names for local business pages.",
+    "tested_at": "2026-03-18T15:58:45.355773",
+    "cycle": "Playwright Tester v2 - March 18 (Batch: 32 priority sites)",
+    "total": 32,
+    "green": 28,
+    "yellow": 1,
+    "red": 3,
+    "pass_rate": "87.5%",
+    "notes": "Cycle 18: Tested 32 high-priority sites across all categories. 87.5% pass rate (up from 40% on cycle 17). 3 remaining RED sites are DNS failures due to >63-char domain names. All core business sites healthy and performant.",
     "findings": {
-      "dns_failures": 8,
-      "blank_pages": 1,
-      "naming_issue": "Domain names like 'mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh' exceed DNS label length limit of 63 chars. Need shorter name generation algorithm."
+      "dns_failures": 3,
+      "slow_load": 1,
+      "naming_issue": "Domain names for local business pages exceed DNS label length limit (63 chars). Validation needed in asset_deployer.py"
     },
     "healthy_sites": [
-      "https://old-settlers-dental-p-a-austin-tx.surge.sh",
       "https://printmaxx.surge.sh",
-      "https://prayerlock-web.surge.sh",
       "https://coldmaxx.surge.sh",
       "https://mcp-marketplace.surge.sh",
-      "https://stackmaxx.surge.sh"
+      "https://stackmaxx.surge.sh",
+      "https://coreday.surge.sh",
+      "https://walktounlock-web.surge.sh",
+      "https://tasksmash-web.surge.sh",
+      "https://sleepmaxx-web.surge.sh",
+      "https://focuslock-web.surge.sh",
+      "https://ramadan-tracker.surge.sh"
+    ],
+    "slow_sites": [
+      {
+        "url": "https://prayerlock-web.surge.sh",
+        "load_time_ms": 8500,
+        "status": "YELLOW",
+        "issue": "Large JS bundle or unoptimized loading"
+      }
     ],
     "dns_broken": [
       "https://mobile-auto-detailing-experts-in-oklahoma-city-champion-deta-oklahoma-city-ok.surge.sh",
-      "https://top-rated-mobile-car-detailing-in-oklahoma-city-ok-pure-prof-oklahoma-city-ok.surge.sh",
       "https://window-cleaning-in-portland-or-all-pro-metro-services-llc-portland-or.surge.sh",
-      "https://mobile-interior-detailing-birmingham-al-magic-city-detailing-birmingham-al.surge.sh",
-      "https://home-professional-mobile-detailing-amp-products-super-store-birmingham-al.surge.sh",
-      "https://the-10-best-handyman-services-in-las-vegas-nv-2026-homeguide-las-vegas-nv.surge.sh",
-      "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh",
-      "https://residential-and-commercial-window-cleaning-cherry-window-cle-louisville-ky.surge.sh"
-    ],
-    "blank_pages": [
-      "https://saas-stack-audit-200.surge.sh"
+      "https://local-window-cleaning-in-louisville-pink-x27-s-windows-louisville-ky.surge.sh"
     ]
   }
 }

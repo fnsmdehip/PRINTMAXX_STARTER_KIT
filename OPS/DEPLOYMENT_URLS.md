@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-15 08:47:32
+**Last updated:** 2026-03-18 14:57:00
 
 ---
 
@@ -28,6 +28,7 @@
 | content-calendar | https://content-calendar.surge.sh | LIVE |
 | invoice-tracker | https://invoice-tracker.surge.sh | LIVE |
 | website-audit | https://website-audit.surge.sh | LIVE |
+| deskbreak-web | https://deskbreak-web.surge.sh | LIVE — gap-hunter deploy 2026-03-18 |
 | mcp-marketplace | https://mcp-marketplace.surge.sh | LIVE |
 | adhd-streak | https://adhd-streak.surge.sh | LIVE |
 | art-streak-landing | https://art-streak-landing.surge.sh | LIVE |
@@ -90,6 +91,7 @@
 | klaviyo-alternative | https://klaviyo-alternative.surge.sh | LIVE (2026-03-16) — needs affiliate IDs | 30% recurring (ConvertKit) + 20% (Beehiiv) |
 | framer-vs-webflow | https://framer-vs-webflow.surge.sh | LIVE (placeholder IDs) | 50% first payment (Webflow) |
 | best-cold-email-tools | https://best-cold-email-tools.surge.sh | LIVE (2026-03-17) — needs affiliate IDs | 20-35% recurring (Instantly, Smartlead, Lemlist, Saleshandy, Woodpecker, Apollo, Reply.io) |
+| best-newsletter-platforms | https://best-newsletter-platforms.surge.sh | LIVE (2026-03-18) — needs affiliate IDs | 50% recurring (Beehiiv, Kit) + 30% (Moosend) |
 
 ---
 

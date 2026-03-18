@@ -1,0 +1,42 @@
+{
+  "cycle": 67,
+  "timestamp": "2026-03-18T17:57:23.469223+00:00",
+  "strategy": "PARENTING + PET_CARE + ACADEMIC + SOCIAL_CONNECTION",
+  "total_scanned": 13,
+  "blue_oceans": [
+    "flashcard_streak",
+    "homework_streak",
+    "family_dinner_streak",
+    "social_call_streak"
+  ],
+  "soft_competition": [],
+  "occupied": [
+    "toddler_reading_streak",
+    "bedtime_routine_habit",
+    "screen_limit_habit",
+    "journaling_with_kid",
+    "dog_walk_streak",
+    "pet_training_streak",
+    "cat_enrichment_habit",
+    "exam_prep_streak",
+    "gratitude_to_person"
+  ],
+  "top_opportunities": [
+    [
+      "family_dinner_streak",
+      8772652
+    ],
+    [
+      "social_call_streak",
+      8135942
+    ],
+    [
+      "homework_streak",
+      6526543
+    ],
+    [
+      "flashcard_streak",
+      6037704
+    ]
+  ]
+}

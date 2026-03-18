@@ -447,3 +447,14 @@ US Traffic - 85.7% , UK - 10.8%
 
 [ACQUISITION] Show HN: Antfly: Distributed, Multimodal Search and Memory and Graphs in Go
 
+
+
+---
+
+## Pending Enhancement (ALPHA107010, Score: 24)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rxajnz/launching_my_microsaas_today_ats_resume_scorer/
+**Added:** 2026-03-18T14:20:02-04:00
+
+[ACQUISITION] Launching my microsaas today — ATS resume scorer built solo after a painful job search
+

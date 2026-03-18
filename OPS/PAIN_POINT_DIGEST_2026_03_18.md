@@ -1,58 +1,46 @@
 # Reddit Pain Point Digest
 
-Generated: 2026-03-18 06:01:19
+Generated: 2026-03-18 14:10:32
 
-Total pain points found: 10
+Total pain points found: 5
 
 ---
 
 ## HIGH Opportunity (3 posts, score >= 70)
 
-### [100/100] r/AppIdeas (1↑ 1💬)
-**I asked 100 people what are problems they facing in marketing here's the....**
+### [100/100] r/smallbusiness (1↑ 1💬)
+**Daily Pay Rate, but does not work everyday**
 Pattern: willing_to_pay | Categories: willing_to_pay
-> Problems-
+> If we have an employee that is okay with a daily flat rate no matter his hours, but may not work every day, how can we legally pay him? There are days we may only work 4hrs, but then days he may work 
+Link: https://reddit.com/r/smallbusiness/comments/1rxautz/daily_pay_rate_but_does_not_work_everyday/
 
-1) Finding qualified users who actually have strong pain + are willing to pay (not curious/free signups).
-
-2) Converting interest/traffic into signups/trials/paying users
-
-If you have fix o
-Link: https://reddit.com/r/AppIdeas/comments/1rvx7kv/i_asked_100_people_what_are_problems_they_facing/
-
-### [80/100] r/GetDisciplined (4↑ 3💬)
-**I'm looking for an app or website to help me lose weight. (This might not be the best subreddit but due to low karma I c**
+### [80/100] r/islam (2↑ 2💬)
+**Ruqyah &amp; exorcisms in Islam and how deep do they go?**
 Pattern: looking_for | Categories: looking_for
-> I'm 24m and I want to lose weight. Gained a lot of weight last year and want to shed it but not by myself. I'm looking for an app or website where I can:
+> I recently saw/listened to a podcast about exorcisms by a roman catholic priest and how they work in Christianity. The priest mentioned that they apparently have a list of demons, their names &amp; th
+Link: https://reddit.com/r/islam/comments/1rxb83o/ruqyah_exorcisms_in_islam_and_how_deep_do_they_go/
 
--give info about age height weight to calcula
-Link: https://reddit.com/r/getdisciplined/comments/1rwj3rb/im_looking_for_an_app_or_website_to_help_me_lose/
-
-### [70/100] r/EntrepreneurRideAlong (0↑ 5💬)
-**Unpopular opinion: Prompt engineering is mostly a waste of time.**
+### [70/100] r/SideProject (1↑ 1💬)
+**Built a YouTube keyboard control extension because I was tired of using a mouse**
 Pattern: frustrated_with | Categories: frustrated_with
-> I’ll probably get downvoted for this, but most AI image/video tools are terrible for creators who actually want to grow on social media.
+> I’ve been working on a small side project: a Chrome extension that lets you control YouTube entirely using keyboard shortcuts.
 
-Not because the models are bad, they’re insanely powerful.
+The idea came from how annoying it is to:
 
-Bu
-Link: https://reddit.com/r/EntrepreneurRideAlong/comments/1rwp5eo/unpopular_opinion_prompt_engineering_is_mostly_a/
+* Skip ads manually
+* Click l
+Link: https://reddit.com/r/SideProject/comments/1rxa1sd/built_a_youtube_keyboard_control_extension/
 
-## MEDIUM Opportunity (7 posts, score 50-69)
+## MEDIUM Opportunity (2 posts, score 50-69)
 
-- [60] r/microsaas: I got tired of guessing who to sell to, so trying to build something around it ( (need_help)
-- [60] r/loseit: Struggling to visualize going from 17% to 14% body fat – will losing 2.3 kg real (need_help)
-- [60] r/Biohackers: Has anyone investigated their immune health? (need_help)
-- [60] r/sleep: Any tips for fixing my sleep schedule? (need_help)
-- [60] r/GetDisciplined: I stopped opening my todo app — until I reduced it to 3 tasks (need_help)
-- [60] r/GetDisciplined: I keep forgetting to pay bills – struggling to stay disciplined (need_help)
-- [51] r/GetDisciplined: I stopped opening my todo app — until I reduced it to 3 tasks (need_help)
+- [60] r/Christianity: I created a 210-day Scripture journaling guide for people struggling with anxiet (need_help)
+- [51] r/sleep: I made a free 888Hz sleep meditation, hope it helps someone tonight 🌙 (need_help)
 
 ## Pattern Breakdown
 
 | Pattern | Count | Signal |
 |---------|-------|--------|
-| need_help | 7 | 60/100 |
+| need_help | 2 | 60/100 |
 | willing_to_pay | 1 | 100/100 |
 | looking_for | 1 | 80/100 |
 | frustrated_with | 1 | 70/100 |
