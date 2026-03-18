@@ -1,7 +1,7 @@
 {
   "agents": {
     "gap_hunter": {
-      "installed_at": "2026-03-17T20:46:38.589717",
+      "installed_at": "2026-03-18T06:09:43.790030",
       "status": "ACTIVE",
       "interval": "24h",
       "demoted_at": "2026-03-17T10:55:02Z",
@@ -40,7 +40,7 @@
       "reason": "RE-KILL. No social accounts."
     },
     "lead_machine": {
-      "installed_at": "2026-03-17T20:46:38.887863",
+      "installed_at": "2026-03-18T06:09:56.574396",
       "status": "ACTIVE",
       "interval": "48h",
       "reason": "C-tier. Quality improving (personalized outreach drafts). 46+ leads with 6 new this cycle. 0 contacted. 48h keeps pipeline warm.",
@@ -75,7 +75,7 @@
       "reason": "RE-HIBERNATE. Wake at first revenue."
     },
     "cross_pollinator": {
-      "installed_at": "2026-03-17T20:46:39.142798",
+      "installed_at": "2026-03-18T06:10:07.390349",
       "status": "ACTIVE",
       "interval": "4h",
       "priority": "P0",
@@ -93,7 +93,7 @@
       "tier": "C"
     },
     "system_healer": {
-      "installed_at": "2026-03-17T20:46:39.285744",
+      "installed_at": "2026-03-18T06:10:09.095543",
       "status": "ACTIVE",
       "interval": "2h",
       "demoted_at": "2026-03-17T10:55:01Z",
@@ -103,7 +103,7 @@
       "mandate": "Cycle 16 (ESCALATED): (1) Regenerate OPS/DAILY_DIGEST.md (10 DAYS STALE). (2) Implement content mission circuit breaker. Demote to B-tier if undelivered by Cycle 17."
     },
     "data_janitor": {
-      "installed_at": "2026-03-17T20:46:39.409914",
+      "installed_at": "2026-03-18T06:10:10.786091",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "B-tier. Simplified mandate: disk monitoring + log cleanup.",
@@ -117,7 +117,7 @@
       "reason": "No distribution channels."
     },
     "inbound_maximizer": {
-      "installed_at": "2026-03-17T20:46:39.667368",
+      "installed_at": "2026-03-18T06:10:18.423867",
       "status": "ACTIVE",
       "interval": "12h",
       "throttled_at": "2026-03-17T10:55:06Z",
@@ -126,7 +126,7 @@
       "tier": "A"
     },
     "swarm_brain": {
-      "installed_at": "2026-03-17T20:46:39.900303",
+      "installed_at": "2026-03-18T06:10:19.434880",
       "status": "ACTIVE",
       "interval": "12h",
       "reason": "Meta-orchestrator. Deep conservation mode.",
@@ -147,14 +147,14 @@
       "reason": "RE-HIBERNATE. 30+ unused PNGs."
     },
     "quality_gate": {
-      "installed_at": "2026-03-17T20:46:40.105350",
+      "installed_at": "2026-03-18T06:10:20.330143",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "C-tier. Background slop prevention.",
       "tier": "C"
     },
     "playwright_tester": {
-      "installed_at": "2026-03-17T20:46:40.352239",
+      "installed_at": "2026-03-18T06:10:21.553880",
       "status": "ACTIVE",
       "interval": "24h",
       "reason": "C-tier. Site verification.",
@@ -181,7 +181,7 @@
       "reason": "Dead 6 days. Mandate never delivered."
     },
     "growth_strategist": {
-      "installed_at": "2026-03-17T20:46:41.032206",
+      "installed_at": "2026-03-18T06:10:31.251997",
       "status": "ACTIVE",
       "interval": "48h",
       "demoted_at": "2026-03-17T10:55:05Z",
@@ -190,7 +190,7 @@
       "tier": "C"
     }
   },
-  "deployed_at": "2026-03-17T20:46:41.034236",
+  "deployed_at": "2026-03-18T06:10:31.255151",
   "brain_cycles": 16,
   "last_brain_cycle": "2026-03-17T10:55:00Z",
   "conservation_mode": true,

@@ -1,10 +1,11 @@
 {
-  "ts": "2026-03-18T05:46:11.524499",
-  "avg_score": 9.5,
-  "total_scored": 13,
+  "ts": "2026-03-18T06:30:00.269739",
+  "avg_score": 9.3,
+  "total_scored": 12,
   "drifted_count": 0,
   "drifted_agents": [],
   "scores": {
+    "growth_strategy_20260318": 8.5,
     "lead_machine": 8.5,
     "gap": 10.0,
     "competitor_stalker": 10.0,
@@ -14,9 +15,7 @@
     "revenue": 8.5,
     "seo_audit_20260317": 10.0,
     "inbound": 10.0,
-    "cross_pollinator": 10.0,
     "ceo_decision_2026-03-15": 10.0,
-    "mission_content": 10.0,
-    "mission_autonomy:auto_local_biz_opencl": 10.0
+    "mission_autonomy:alpha_intelligence": 10.0
   }
 }

@@ -1,0 +1,185 @@
+# Pipeline Building-in-Public Content — 2026-03-18
+
+Generated from real pipeline metrics. @PRINTMAXXER voice.
+Status: PENDING_REVIEW
+
+## Tweets (pick 1-2 per day)
+
+### Tweet 1
+```
+1.45 million business domains in the queue. 189,700 analyzed so far (13.0%). 17,260 hot leads. 1,451,939 cold emails drafted. the machine runs 24/7 via cron. I just check the dashboard.
+```
+
+### Tweet 2
+```
+17,260 local businesses with outdated websites identified. personalized cold emails with live demo links generated automatically. the pipeline runs at 3am. I wake up to qualified leads.
+```
+
+### Tweet 3
+```
+pipeline update:
+
+• 189,700 websites analyzed
+• 17,260 hot leads (bad site + high budget industry)
+• 94,005 warm leads
+• 1,451,939 cold emails generated
+• 1,234,548 in outreach pipeline
+
+runs autonomously. cron job at 3am. crash recovery built in. this is the way.
+```
+
+## Thread (7 tweets)
+
+### 1/7
+```
+I built a system that finds local businesses with garbage websites and cold emails them with live demos of what their site COULD look like. here's exactly how it works (and the numbers so far). 🧵
+```
+
+### 2/7
+```
+step 1: data.
+
+downloaded 2.87 million US business locations from Overture Maps (free, open data). dentists, lawyers, realtors, gyms, salons, restaurants, chiropractors, vets, plumbers.
+
+filtered to 1.45 million unique domains after dedup.
+```
+
+### 3/7
+```
+step 2: website analysis.
+
+each site gets scored 0-100 across 5 dimensions:
+• design modernity (CSS Grid vs table layouts)
+• SEO quality (meta tags, schema, sitemap)
+• AI/GIO readiness (structured data, FAQ content)
+• mobile responsiveness
+• business activity signals
+
+runs at ~12 sites/second with 30 parallel workers.
+```
+
+### 4/7
+```
+step 3: automatic cold email generation.
+
+hot leads (score >= 65) get personalized 3-email sequences. each email includes a live demo URL matching their industry. dental practice → dental-demo.surge.sh. law firm → legal-demo.surge.sh.
+
+the demo sites are already live. 16 of them.
+```
+
+### 5/7
+```
+step 4: closed loop.
+
+entire pipeline runs via cron at 3am. crash recovery built in (active-tasks.md pattern from OpenClaw). if it dies mid-batch, next run picks up exactly where it left off.
+
+qualify → email → track → repeat. no human in the loop.
+```
+
+### 6/7
+```
+current numbers:
+
+• 189,700 websites analyzed (of 1.45M)
+• 17,260 hot leads identified
+• 1,451,939 cold emails generated
+• 16 live demo sites
+• 6 industry templates
+
+total cost: $0 (Overture Maps is free, surge.sh is free, email via smtplib).
+```
+
+### 7/7
+```
+the playbook:
+
+1. find businesses with bad websites (automated)
+2. show them what a good one looks like (live demos)
+3. offer to build it for $500-$3,000
+4. use AI tools to actually build it in 2 hours
+
+margin is insane because the build cost is near zero.
+
+shipping > planning.
+```
+
+---
+
+## Cycle 2 Content (06:33 AM scrape)
+
+### Tweet 8 — GitGlimpse alpha
+```
+found a github action that auto-generates UI/UX demo GIFs for every PR.
+
+you push code. it screenshots the diff. posts a visual review in the PR thread.
+
+zero manual QA. called GitGlimpse. open source.
+
+if you're drowning in AI-generated PRs this is mandatory.
+```
+
+### Tweet 9 — AI search eating clicks
+```
+AI search is eating organic clicks and CMOs can't prove ROI anymore.
+
+this is the window. local businesses don't understand what's happening. they just see "traffic is down."
+
+the ones who explain it clearly and offer a fix will clean up for the next 18 months.
+```
+
+### Tweet 10 — digital cookbook passive income signal
+```
+someone on reddit made a "tiny digital cookbook" that sells without daily posting.
+
+the move: one hyper-specific niche product. set up SEO + pinterest. stop touching it.
+
+passive income isn't fake. it's just boring to build. most people quit at month 2.
+```
+
+### Tweet 11 — autonomous agents in 2 lines
+```
+HN front page today: launch an autonomous AI agent with sandboxed execution in 2 lines of code.
+
+the barrier to building AI agents just dropped to zero.
+
+which means the value isn't in building agents anymore. it's in knowing WHAT to automate.
+
+domain expertise > code ability. always was.
+```
+
+## Thread — AI tools alpha from today's HN scrape (5 tweets)
+
+### 1/5
+```
+scraped 99 HackerNews stories this morning. 37 had real signal. here are the 5 tools worth knowing about right now:
+```
+
+### 2/5
+```
+1. GitGlimpse — github action that auto-generates visual UI demos for PRs. push code, get a GIF review. open source. mandatory if you're using AI code assistants.
+
+2. Lore — local AI thought capture. runs on your machine. no cloud. captures knowledge you'd otherwise lose (curl commands, standup notes, random ideas).
+```
+
+### 3/5
+```
+3. Sonder — self-hosted AI social simulation engine. run social dynamics simulations locally. useful for game devs, researchers, content strategists.
+
+4. Hat v0.7.0 — fast local file compression and conversion. automate media processing without cloud APIs.
+```
+
+### 4/5
+```
+5. Dump — share context with AI instantly. one command to package prompts, links, and files into a format any LLM can consume.
+
+pattern: every tool that won today removes friction between humans and AI. the theme is speed.
+```
+
+### 5/5
+```
+I scrape HN, Reddit (20 subs), ProductHunt, and Twitter bookmarks every 2 hours.
+
+37 new entries this cycle. 1 integrated into the tool catalog. 3 reddit entries. 0 from ProductHunt (dead today).
+
+the alpha isn't in any single finding. it's in the compounding pattern recognition across sources.
+```

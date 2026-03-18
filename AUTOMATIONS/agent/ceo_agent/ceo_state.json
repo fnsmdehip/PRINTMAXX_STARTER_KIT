@@ -1,6 +1,6 @@
 {
-  "last_cycle": "2026-03-17T20:46:41.645843",
-  "cycles_run": 37,
+  "last_cycle": "2026-03-18T06:10:34.011894",
+  "cycles_run": 38,
   "total_decisions": 122,
   "op_scores": {
     "C01": {
@@ -20586,22 +20586,22 @@
     "protect_threshold": 60,
     "promote_threshold": 70
   },
-  "last_alpha_scrape": "2026-03-17T20:38:14.486075",
+  "last_alpha_scrape": "2026-03-18T05:54:36.181824",
   "alpha_pipeline_results": {
     "twitter_scraper": "failed",
     "reddit_scraper": "ok",
     "alpha_processor": "ok"
   },
   "last_research": "2026-03-17T12:50:26.399430",
-  "last_decision_engine": "2026-03-17T20:38:14.831302",
-  "last_content_gen": "2026-03-17T20:38:34.612398",
-  "last_health_check": "2026-03-17T20:39:16.028630",
-  "last_openclaw": "2026-03-17T20:44:25.122762",
-  "openclaw_city_index": 21,
+  "last_decision_engine": "2026-03-18T05:54:55.474986",
+  "last_content_gen": "2026-03-18T05:56:10.507970",
+  "last_health_check": "2026-03-18T05:57:27.045921",
+  "last_openclaw": "2026-03-18T05:59:24.002160",
+  "openclaw_city_index": 22,
   "openclaw_stats": {
     "discover": "ok",
-    "city": "Phoenix AZ",
-    "niche": "lawyer",
+    "city": "Denver CO",
+    "niche": "dentist",
     "build": "ok",
     "outreach": "ok"
   },
@@ -20657,13 +20657,12 @@
     "20 5 * * 0 cd $BASE && $PYTHON AUTOMATIONS/competitive_cognition_audit.py --audit >> AUTOMATIONS/logs/cognition_audit.log 2>&1",
     "20 4 * * 0 cd $BASE && $PYTHON AUTOMATIONS/cognitive_engine.py --build-model >> AUTOMATIONS/logs/cognitive_engine.log 2>&1"
   ],
-  "last_autonomy_run": "2026-03-17T20:46:37.759295",
+  "last_autonomy_run": "2026-03-18T06:09:24.731254",
   "autonomy_stats": {
-    "status": "ok",
-    "summary": "[20:46:37] [AUTONOMY] [INFO] Ran 1/10 ventures this cycle"
+    "status": "failed"
   },
-  "last_self_manage": "2026-03-17T20:46:38.053673",
-  "self_manage_actions": 1,
-  "last_swarm_check": "2026-03-17T20:46:38.159063",
-  "last_loop_closer": "2026-03-17T20:46:41.621147"
+  "last_self_manage": "2026-03-18T06:09:31.521631",
+  "self_manage_actions": 2,
+  "last_swarm_check": "2026-03-18T06:09:33.976422",
+  "last_loop_closer": "2026-03-18T06:10:33.592562"
 }

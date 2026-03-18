@@ -2547,3 +2547,98 @@ new: profitable month one
 
 the choice is yours
 
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:49:08-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA105627, Score: 44)
+
+**Source:** @startupideaspod (daily scraper) | **URL:** https://x.com/startupideaspod/status/1954226168464552127
+**Added:** 2026-03-18T05:49:08-04:00
+
+the startup game changed
+
+old path:
+idea → raise money → hire → burn → hope  
+
+new path:
+audience → product → community → automate 
+
+old: 2% equity after dilution
+new: 100% ownership forever 
+
+old: $0 salary for years
+new: profitable month one
+
+the choice is yours
+
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47418820, Score: 23)
+
+**Source:** HackerNews (showhn) | **URL:** https://github.com/DeDuckProject/git-glimpse
+**Added:** 2026-03-18T06:33:19-04:00
+
+Show HN: GitGlimpse – GitHub Action that generates UI/UX demos for your PRs. I got tired of having to pull, build and manually QA the gazillion PRs that Claude creates for me, so I built this tool that solves some of this pain. GitGlimpse is an open-source Github action that acts as a visual reviewer. It looks at the diff, generates a visual demo and posts it as a GIF direct
+
+
+
+---
+
+## Pending Enhancement (ALPHA106950, Score: 30)
+
+**Source:** @matteo_spada (high-signal-accounts) | **URL:** https://x.com/alice_ercolani/status/2034027046880587928
+**Added:** 2026-03-18T07:15:13-04:00
+
+Bitepal is making $1m/month and 400k downloads/month by solving diet anxiety.
+
+I used an AI agent to grab their top 50 keywords automatically with 
+@TryAstroApp
+'s MCP server
+
+Find the prompts I used in the next post
+
+
+
+---
+
+## Pending Enhancement (ALPHA106957, Score: 24)
+
+**Source:** @WorkflowWhisper (high-signal-accounts) | **URL:** https://x.com/WorkflowWhisper/status/2034178074573771047
+**Added:** 2026-03-18T07:15:13-04:00
+
+95% of people who sign up for an AI automation tool never deploy a single workflow in production.
+
+i was one of them for 3 months.
+
+signed up for every tool. watched every tutorial. bookmarked every thread. built zero workflows that actually ran for a client.
+
+then i changed one
+

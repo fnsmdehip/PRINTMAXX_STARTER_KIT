@@ -1081,3 +1081,20 @@ If context was compacted and you lost track:
 - [P2] Estimated reclaim: 65-80MB (brings disk from 94.8% to ~94%) (source: swarm/system_healer_report_20260316.md)
 - [P2] Current growth rate: ~10MB/day (source: swarm/system_healer_report_20260316.md)
 - [P2] Time until critical (98%): 5-7 days (source: swarm/system_healer_report_20260316.md)
+
+
+### AGGREGATOR FINDINGS -- 2026-03-18 07:30
+- [P0] [HUMAN] `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_agent_bible.md` — paste-ready Gumroad listing ($47) (source: swarm/revenue_report_20260317.md)
+- [P0] [HUMAN] `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/GUMROAD_LISTING.md` — paste-ready listing ($29-39) (source: swarm/revenue_report_20260317.md)
+- [P0] Listing: `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/GUMROAD_LISTING.md` (source: swarm/revenue_tracker_report_20260317.md)
+- [P1] [HUMAN] Both have complete listing copy (paste-ready) (source: swarm/revenue_report_20260317.md)
+- [P1] Listing: `DIGITAL_PRODUCTS/ready_to_sell/LISTING_claude_code_agent_bible.md` (source: swarm/revenue_tracker_report_20260317.md)
+- [P2] Product: `DIGITAL_PRODUCTS/ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html` (source: swarm/revenue_tracker_report_20260317.md)
+- [P2] Price: $47 (PWYW min $27) (source: swarm/revenue_tracker_report_20260317.md)
+- [P2] Hot audience: Claude Code has active Twitter traction right now (source: swarm/revenue_tracker_report_20260317.md)
+- [P2] Product: `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/` (source: swarm/revenue_tracker_report_20260317.md)
+- [P2] Claude Code has a hot audience right now (150K+ Twitter impressions/month on topic) (source: swarm/revenue_report_20260317.md)
+- [P2] Reddit Money Machine targets indie hackers = proven buyers (source: swarm/revenue_report_20260317.md)
+- [P2] Combined potential: $300-800/mo at 5-15 sales/mo (source: swarm/revenue_report_20260317.md)
+- [P2] `DIGITAL_PRODUCTS/ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html` — the actual product file (source: swarm/revenue_report_20260317.md)
+- [P2] `DIGITAL_PRODUCTS/ready_to_sell/reddit_money_machine/REDDIT_MONEY_MACHINE.md` — the actual product (source: swarm/revenue_report_20260317.md)
