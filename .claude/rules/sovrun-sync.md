@@ -39,6 +39,20 @@ When ANY new tool, module, or integration is added to the system:
 7. Add to the connector registry if it's an external service
 8. Create a procedural memory skill doc for how to use the new capability
 
+### Growth Strategy Auto-Injection (always active when planning ventures)
+When creating or planning ANY venture, op, or content strategy:
+1. Read `OPS/GREY_HAT_EDGE_GROWTH_MASTER.md` for edge tactics applicable to this venture
+2. Read `OPS/DEFINITIVE_GROWTH_STACK.md` for the full growth toolkit
+3. Check `AUTOMATIONS/edge_growth_engine.py` for automated growth capabilities
+4. Propose growth plan with 3 budget tiers:
+   - FREE ($0): organic tactics, multi-account cross-promotion, engagement warming, algorithm optimization
+   - LOW ($0-50/mo): paid boosting, micro-influencer seeding, targeted ads at cheap CPMs
+   - MID ($50-200/mo): influencer campaigns, paid acquisition, retargeting
+5. Include BOTH basic strategies (post frequency, engagement, Product Hunt, subreddits) AND edge strategies (from grey hat master)
+6. Factor growth budget into Capital Genesis scoring (capital_genesis_ranker.py)
+7. DO NOT include edge tactics in sovrun open source — PRINTMAXX private only
+8. Always verify: legal? FTC compliant? Would an established agency do this?
+
 ### Novel Discovery Rule (always active during PRINTMAXX work)
 When working on ANY task and discovering a novel solution, trick, or improvement:
 1. Is this reusable? If yes, extract into sovrun as a module or pattern
