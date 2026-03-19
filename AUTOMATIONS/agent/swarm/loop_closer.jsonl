@@ -86,3 +86,5 @@
 {"ts": "2026-03-18T06:30:00.270238", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.3/10, drifted=0"}
 {"ts": "2026-03-18T14:30:00.431047", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.7/10, drifted=0"}
 {"ts": "2026-03-18T15:20:01.006768", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.5/10, drifted=0"}
+{"ts": "2026-03-18T18:20:00.680436", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.1/10, drifted=1"}
+{"ts": "2026-03-18T18:30:00.464252", "action": "soul_drift_check", "target": "system", "result": "OK", "details": "avg=9.1/10, drifted=1"}

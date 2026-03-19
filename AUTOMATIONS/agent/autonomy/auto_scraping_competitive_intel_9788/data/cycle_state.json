@@ -1,21 +1,38 @@
 {
   "venture": "SCRAPING_competitive_intel",
-  "last_cycle": "2026-03-18T17:57:23.469223+00:00",
-  "cycle_number": 67,
+  "last_cycle": "2026-03-18T22:41:07.908286+00:00",
+  "cycle_number": 69,
   "cycle_status": "COMPLETE",
   "current_step": "done",
-  "configured_at": "2026-03-18T17:57:23.469223+00:00",
+  "configured_at": "2026-03-18T22:41:07.908286+00:00",
   "stats": {
-    "niches_scanned": 13,
-    "new_bos_confirmed": 4,
+    "niches_scanned": 14,
+    "blue_oceans": 8,
     "soft_competition": 0,
-    "occupied": 9,
-    "alpha_entries": 4,
-    "ci_rows_added": 13,
-    "blue_oceans_confirmed": 56
+    "occupied": 6,
+    "ci_rows_added": 32,
+    "alpha_entries": 8,
+    "community_total": 134846955
   },
-  "cumulative_blue_oceans": 56,
+  "cumulative_blue_oceans": 73,
   "p0_alerts": [
+    "NEW_C069 BLUE OCEAN: BEDTIME_STORY_STREAK \u2014 10,902,169 community. BUILD NOW.",
+    "NEW_C069 BLUE OCEAN: OUTDOOR_PLAY_STREAK \u2014 10,919,185 community. BUILD NOW.",
+    "NEW_C069 BLUE OCEAN: COOK_AT_HOME_STREAK \u2014 23,140,485 community. BUILD NOW.",
+    "NEW_C069 BLUE OCEAN: FERMENTATION_PRACTICE_STREAK \u2014 1,419,225 community. BUILD NOW.",
+    "NEW_C069 BLUE OCEAN: CBT_EXERCISE_STREAK \u2014 1,106,757 community. BUILD NOW.",
+    "NEW_C069 BLUE OCEAN: ANGER_MANAGEMENT_STREAK \u2014 1,060,811 community. BUILD NOW.",
+    "NEW_C069 BLUE OCEAN: NO_PHONE_MORNING_STREAK \u2014 2,638,474 community. BUILD NOW.",
+    "NEW_C069 BLUE OCEAN: DEEP_WORK_STREAK \u2014 8,601,339 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: PLANT_BASED_STREAK \u2014 0 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: ZERO_WASTE_STREAK \u2014 0 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: RECYCLING_STREAK \u2014 0 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: SIDE_HUSTLE_STREAK \u2014 0 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: CONTENT_CREATION_STREAK \u2014 0 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: COLD_OUTREACH_STREAK \u2014 557,329 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: DEBT_PAYOFF_STREAK \u2014 25,939,183 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: NO_SPEND_CHALLENGE \u2014 28,418,356 community. BUILD NOW.",
+    "NEW_C068 BLUE OCEAN: SAVINGS_GOAL_STREAK \u2014 30,756,895 community. BUILD NOW.",
     "NEW_C067 BLUE OCEAN: FLASHCARD_STREAK \u2014 6,037,704 community. BUILD NOW.",
     "NEW_C067 BLUE OCEAN: HOMEWORK_STREAK \u2014 6,526,543 community. BUILD NOW.",
     "NEW_C067 BLUE OCEAN: SOCIAL_CALL_STREAK \u2014 8,135,942 community. BUILD NOW.",
@@ -26,34 +43,27 @@
     "SAVINGS_STREAK: 30.9M personalfinance. BUILD NOW.",
     "READING_STREAK: 23M r/books. BUILD NOW.",
     "CLEAN_EATING_STREAK: 11.4M. BUILD NOW.",
-    "NETWORKING_HABIT: 6.25M C064. BUILD NOW.",
-    "WRITING_DAILY_STREAK: 5.26M C064. BUILD NOW.",
-    "PRAYERLOCK: Ramadan time-critical. CRITICAL."
+    "NETWORKING_HABIT: 6.25M C064. BUILD NOW."
   ],
-  "cycle_67_results": {
-    "strategy": "PARENTING + PET_CARE + ACADEMIC + SOCIAL_CONNECTION",
+  "cycle_69_results": {
+    "strategy": "PARENTING + COOKING_FOOD + SPORTS_SPECIFIC + MENTAL_HEALTH + DIGITAL_WELLNESS",
     "new_blue_oceans": [
-      "flashcard_streak",
-      "homework_streak",
-      "family_dinner_streak",
-      "social_call_streak"
+      "bedtime_story_streak",
+      "outdoor_play_streak",
+      "cook_at_home_streak",
+      "fermentation_practice_streak",
+      "cbt_exercise_streak",
+      "anger_management_streak",
+      "no_phone_morning_streak",
+      "deep_work_streak"
     ],
-    "near_bos": [],
-    "soft_competition": [],
     "occupied": [
-      "toddler_reading_streak",
-      "bedtime_routine_habit",
-      "screen_limit_habit",
-      "journaling_with_kid",
-      "dog_walk_streak",
-      "pet_training_streak",
-      "cat_enrichment_habit",
-      "exam_prep_streak",
-      "gratitude_to_person"
-    ],
-    "biggest_community": [
-      "pet_training_streak",
-      10971204
+      "family_gratitude_streak",
+      "meal_prep_streak",
+      "swimming_laps_streak",
+      "golf_practice_streak",
+      "cycling_km_streak",
+      "affirmation_streak"
     ]
   }
 }

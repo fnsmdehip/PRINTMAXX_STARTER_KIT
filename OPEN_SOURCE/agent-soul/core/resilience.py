@@ -345,8 +345,141 @@ class TrajectoryLogger:
 
 
 # ---------------------------------------------------------------------------
+# 6. Parallel guardrails
+# ---------------------------------------------------------------------------
+
+class ParallelGuardrail:
+    """Run safety checks concurrently with agent execution.
+
+    Instead of running guardrails before or after the agent (sequential),
+    this runs them in parallel. If any guardrail fails, the agent execution
+    is immediately cancelled via a threading.Event signal.
+
+    Usage:
+        def check_path(context):
+            if "/etc" in context.get("path", ""):
+                raise ValueError("blocked path")
+
+        def check_tokens(context):
+            if context.get("tokens", 0) > 100000:
+                raise ValueError("token limit exceeded")
+
+        guard = ParallelGuardrail([check_path, check_tokens])
+        result = guard.run(my_agent_fn, context={"path": "/safe", "tokens": 500})
+
+    Args:
+        guardrails: list of callables that receive context dict and raise on violation.
+        timeout_seconds: max time to wait for agent + guardrails.
+    """
+
+    def __init__(self, guardrails: list[Callable[..., Any]],
+                 timeout_seconds: float = 120.0) -> None:
+        self.guardrails = guardrails
+        self.timeout_seconds = timeout_seconds
+
+    def run(self, agent_fn: Callable[..., Any],
+            context: dict[str, Any] | None = None,
+            **kwargs: Any) -> dict[str, Any]:
+        """Execute agent_fn and guardrails concurrently.
+
+        Returns dict with keys:
+            success: bool
+            result: agent return value (if success)
+            error: error message (if failed)
+            cancelled: True if agent was cancelled by guardrail
+            guardrail_results: list of guardrail outcomes
+        """
+        import threading
+
+        ctx = context or {}
+        cancel_event = threading.Event()
+        agent_result: list[Any] = []
+        agent_error: list[str] = []
+        guardrail_errors: list[str] = []
+        guardrail_lock = threading.Lock()
+
+        def _run_agent() -> None:
+            try:
+                # Check cancellation before starting
+                if cancel_event.is_set():
+                    return
+                result = agent_fn(ctx, **kwargs) if kwargs else agent_fn(ctx)
+                if not cancel_event.is_set():
+                    agent_result.append(result)
+            except Exception as exc:
+                agent_error.append(str(exc))
+
+        def _run_guardrail(guard_fn: Callable[..., Any]) -> None:
+            try:
+                guard_fn(ctx)
+            except Exception as exc:
+                with guardrail_lock:
+                    guardrail_errors.append(
+                        f"{guard_fn.__name__}: {exc}")
+                cancel_event.set()  # Signal agent to stop
+
+        # Start all threads
+        threads: list[threading.Thread] = []
+
+        agent_thread = threading.Thread(target=_run_agent, daemon=True)
+        agent_thread.start()
+        threads.append(agent_thread)
+
+        for guard_fn in self.guardrails:
+            t = threading.Thread(
+                target=_run_guardrail, args=(guard_fn,), daemon=True)
+            t.start()
+            threads.append(t)
+
+        # Wait for completion
+        for t in threads:
+            t.join(timeout=self.timeout_seconds)
+
+        # Check results
+        cancelled = cancel_event.is_set()
+
+        if guardrail_errors:
+            logger.warning("guardrail violations: %s",
+                           "; ".join(guardrail_errors))
+            return {
+                "success": False,
+                "result": None,
+                "error": f"Guardrail violated: {'; '.join(guardrail_errors)}",
+                "cancelled": cancelled,
+                "guardrail_results": guardrail_errors,
+            }
+
+        if agent_error:
+            return {
+                "success": False,
+                "result": None,
+                "error": agent_error[0],
+                "cancelled": False,
+                "guardrail_results": [],
+            }
+
+        if agent_result:
+            return {
+                "success": True,
+                "result": agent_result[0],
+                "error": None,
+                "cancelled": False,
+                "guardrail_results": [],
+            }
+
+        # Timeout or no result
+        return {
+            "success": False,
+            "result": None,
+            "error": "Timeout or no result produced",
+            "cancelled": cancelled,
+            "guardrail_results": guardrail_errors,
+        }
+
+
+# ---------------------------------------------------------------------------
 # Exports
 # ---------------------------------------------------------------------------
 __all__ = ["retry", "file_lock", "locked_file", "CircuitBreaker",
            "CircuitBreakerOpen", "sanitize_for_prompt", "TrajectoryLogger",
-           "safe_path", "PROJECT_ROOT"]
+           "safe_path", "PROJECT_ROOT", "ParallelGuardrail"]

@@ -3,6 +3,42 @@
 
 ---
 
+## Evening Cycle (19:35) — APPENDED
+
+### 10 New Leads Added
+
+| # | Company | Email | Score | Draft |
+|---|---------|-------|-------|-------|
+| E01 | Di Rezze Family Office | jpd@direzzefamilyoffice.com | 9.5 | E01_di_rezze_family_office.md |
+| E02 | Marker Learning | lucie@markerlearning.com | 9.0 | E02_marker_learning.md |
+| E03 | GetDynasty | kyle@getdynasty.com | 9.0 | E03_get_dynasty.md |
+| E04 | Apex Dental Partners | dhanson@apexdp.com | 9.0 | E04_apex_dental_partners.md |
+| E05 | Jurisphere.ai | sumit@jurisphere.ai | 8.5 | E05_jurisphere_ai.md |
+| E06 | Reckon Digital | jobs@reckondigital.com | 8.5 | E06_reckon_digital.md |
+| E07 | CodSpeed | careers@codspeed.io | 8.0 | E07_codspeed.md |
+| E08 | THINKalpha | jason@thinkalpha.io | 8.0 | E08_thinkalpha.md |
+| E09 | Empire Flippers | form only | 7.5 | E09_empire_flippers.md |
+| E10 | Instinct Science | form only | 7.5 | E10_instinct_science.md |
+
+**Drafts location:** `AUTOMATIONS/leads/outreach_drafts/20260318_evening/`
+**Source:** HN Who Is Hiring March 2026 (live scrape)
+**8 direct emails, 2 form-only**
+
+### SEND NOW (Human Action Required)
+1. jpd@direzzefamilyoffice.com — family office AI ops (highest priority)
+2. dhanson@apexdp.com — dental DSO (we have dental portfolio as moat)
+3. kyle@getdynasty.com — founder direct, Python/React
+4. lucie@markerlearning.com — ed-tech, React/Node
+5. jason@thinkalpha.io — fintech, React migration pitch
+6. sumit@jurisphere.ai — legal AI, React/Node
+7. jobs@reckondigital.com — UK agency, Python/React
+8. careers@codspeed.io — dev tools, Next.js
+
+### Today Total: 25 leads, 20 drafts, 18 direct emails
+
+---
+
+
 ## Summary
 
 | Metric | Value |

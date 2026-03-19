@@ -11,9 +11,15 @@ Modules:
     loop_closer        - close open loops: decide, act, log, learn
     self_audit         - competitive cognition audit (meta-improvement)
     decision_engine    - closed-loop autonomous decision agent
-    resilience         - retry, file locking, circuit breaker, sanitization
+    resilience         - retry, file locking, circuit breaker, sanitization, parallel guardrails
     conversation_logger - extract and search conversation transcripts
     session_briefing   - generate session start briefings from system state
+    handoff            - typed agent-to-agent handoff protocol with guardrails
+    procedural_memory  - skill document system: capture, recall, consolidate learned tasks
+    orchestration      - DAG-based step execution with parallel fanout, checkpointing, resume
+    durable            - crash recovery with deterministic replay
+    tracing            - agent observability: event collection, cost tracking, HTML timelines
+    mcp_bridge         - expose agents as MCP tool servers, consume external MCP tools
 """
 
 __version__ = "0.1.0"

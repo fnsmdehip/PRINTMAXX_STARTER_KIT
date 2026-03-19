@@ -1,0 +1,26 @@
+{
+  "cycle_id": "cycle_39_20260318_1601",
+  "cycle_number": 39,
+  "last_completed_phase": 7,
+  "phase_results": {
+    "1": {
+      "count": 179,
+      "top5": [
+        "C01",
+        "C09",
+        "C11",
+        "C16",
+        "E01"
+      ]
+    },
+    "2": {
+      "decisions": []
+    },
+    "7": {
+      "ran": true,
+      "ok": true
+    }
+  },
+  "started_at": "2026-03-18T16:01:35.276758",
+  "updated_at": "2026-03-18T16:22:53.288848"
+}

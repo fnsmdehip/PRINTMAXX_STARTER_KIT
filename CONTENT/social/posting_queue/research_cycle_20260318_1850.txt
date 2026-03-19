@@ -1,0 +1,74 @@
+## RESEARCH CYCLE CONTENT - 2026-03-18 18:50
+## Source: Alpha Intelligence autonomy cycle
+## Status: PENDING_REVIEW
+
+---
+
+### TWEET 1 - Stripe MPP (Tool Alpha)
+stripe just shipped Machine Payments Protocol. machines can now initiate, authorize, and settle payments autonomously. API-to-API payment rails.
+
+every AI agent builder just got a native payment layer. the "AI agents that can buy things" future isn't 2027. it's now.
+
+130 HN points in 3 hours.
+
+---
+
+### TWEET 2 - $7K MRR Breakdown (Micro SaaS)
+someone on r/micro_saas just dropped a fully transparent $0 to $7K MRR breakdown. 18 months. no funding. no cofounder.
+
+the part everyone skips: they spent months 1-6 on distribution before writing a single line of code. talked to 200+ potential users first.
+
+most builders do the opposite. build for 6 months then wonder why nobody cares.
+
+---
+
+### TWEET 3 - Cold Email $22K/mo (Outbound)
+$22k/mo service business. just cold emails and DMs. no ads. no content. no followers.
+
+the math: 200 emails/day x 2% reply rate = 4 conversations/day. close 1 per week at $5.5k. that's $22k/mo.
+
+cold outbound has 87% margins. every other channel wishes.
+
+---
+
+### TWEET 4 - Godot Game Generator (App Factory)
+someone built Claude Code skills that generate complete Godot games from prompts. 325 HN points.
+
+the app factory model is getting validated everywhere. prompt-to-product pipelines. not one app at a time, but manufacturing runs.
+
+godogen: github.com/htdt/godogen
+
+---
+
+### THREAD - "The 3 Patterns Every Solopreneur Should Watch This Week"
+
+1/ three patterns from today's alpha research that matter more than whatever guru thread you saved this week.
+
+pattern 1: machine payments are here. stripe's MPP means AI agents can now handle money autonomously. this changes every SaaS play.
+
+2/ pattern 2: the transparent $7K MRR breakdown on r/micro_saas confirms what we keep saying. distribution before code. they spent 6 months talking to users before building. most indie hackers build first, distribute never.
+
+3/ pattern 3: cold outbound math still crushes everything. $22k/mo from emails and DMs. no audience needed. no content flywheel. just volume + targeting + follow-up.
+
+200 emails/day. 2% reply. 4 conversations daily. 1 close per week. the numbers don't lie.
+
+4/ bonus pattern: the HN archive is now on HuggingFace as Parquet. 47 million items. updated every 5 minutes. free.
+
+if you're not mining HN for trend signals and product ideas, you're leaving alpha on the table. build a simple script, query weekly.
+
+5/ what's the thread connecting all four? the builders winning right now are the ones treating business like a data pipeline.
+
+scrape -> analyze -> decide -> execute -> measure -> compound.
+
+not vibes. not inspiration. pipeline.
+
+---
+
+### BONUS TWEET - HN Archive Dataset
+47 million HN items. 11.6GB. updated every 5 minutes. free on HuggingFace.
+
+i'm building a trend detector on top of this. every week: what topics spike, what Show HNs get traction, what pain points surface.
+
+if you're still manually scrolling HN for ideas, automate it.
+
+huggingface.co/datasets/open-index/hacker-news

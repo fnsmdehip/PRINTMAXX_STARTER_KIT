@@ -43,8 +43,10 @@
       "installed_at": "2026-03-18T06:09:56.574396",
       "status": "ACTIVE",
       "interval": "48h",
-      "reason": "C-tier. Quality improving (personalized outreach drafts). 46+ leads with 6 new this cycle. 0 contacted. 48h keeps pipeline warm.",
-      "tier": "C"
+      "promoted_at": "2026-03-18T16:00:04Z",
+      "promoted_by": "swarm_brain_cycle17",
+      "reason": "PROMOTED C->B. Quality jumped: HN Who is Hiring source, 8/15 scored 8+, personalized drafts with specific pain points. Top lead Ayeeye 9.5/10.",
+      "tier": "B"
     },
     "seo_aso_optimizer": {
       "installed_at": "2026-03-15T00:16:49.325829",
@@ -119,11 +121,11 @@
     "inbound_maximizer": {
       "installed_at": "2026-03-18T06:10:18.423867",
       "status": "ACTIVE",
-      "interval": "12h",
-      "throttled_at": "2026-03-17T10:55:06Z",
-      "throttled_by": "swarm_brain_cycle16",
-      "reason": "A-tier. Throttled 8h->12h. No traffic to maximize at $0.",
-      "tier": "A"
+      "interval": "24h",
+      "demoted_at": "2026-03-18T16:00:05Z",
+      "demoted_by": "swarm_brain_cycle17",
+      "reason": "Demoted A->B. Throttled 12h->24h. No traffic, no report, no accounts. 24h check sufficient.",
+      "tier": "B"
     },
     "swarm_brain": {
       "installed_at": "2026-03-18T06:10:19.434880",
@@ -182,63 +184,48 @@
     },
     "growth_strategist": {
       "installed_at": "2026-03-18T06:10:31.251997",
-      "status": "ACTIVE",
+      "status": "HIBERNATED",
       "interval": "48h",
-      "demoted_at": "2026-03-17T10:55:05Z",
-      "demoted_by": "swarm_brain_cycle16",
-      "reason": "Demoted B->C. Throttled 24h->48h. 50KB reports with zero downstream execution. Strategies unactioned at $0.",
+      "hibernated_at": "2026-03-18T16:00:06Z",
+      "hibernated_by": "swarm_brain_cycle17",
+      "reason": "HIBERNATE. C-tier 2 cycles, zero downstream action, no report today. Wake at first revenue or social account.",
       "tier": "C"
     }
   },
   "deployed_at": "2026-03-18T06:10:31.255151",
-  "brain_cycles": 16,
-  "last_brain_cycle": "2026-03-17T10:55:00Z",
+  "brain_cycles": 17,
+  "last_brain_cycle": "2026-03-18T16:00:00Z",
   "conservation_mode": true,
   "conservation_level": "DEEP",
   "daily_runs_target": 4,
   "feedback_loop_status": "DEFUNCT_CYCLE12",
-  "agents_killed_cycle16": [],
-  "agents_demoted_cycle16": [
-    "system_healer_S_to_A",
-    "gap_hunter_S_to_A",
-    "growth_strategist_B_to_C"
+  "agents_promoted_cycle17": [
+    "lead_machine_C_to_B"
   ],
-  "agents_hibernated_cycle16": [
-    "revenue_tracker",
-    "competitor_stalker"
+  "agents_demoted_cycle17": [
+    "inbound_maximizer_A_to_B"
   ],
-  "agents_throttled_cycle16": [
-    "inbound_maximizer_8h_to_12h",
-    "growth_strategist_24h_to_48h"
+  "agents_hibernated_cycle17": [
+    "growth_strategist"
   ],
-  "mandates_issued_cycle16": [
-    "system_healer: Daily Digest refresh + circuit breaker (ESCALATED, demote to B if undelivered)",
-    "gap_hunter: content pipeline continuity (output_cron_installer CANCELLED)",
-    "data_janitor: disk monitoring + log cleanup (simplified)"
+  "mandates_issued_cycle17": [
+    "system_healer: fix launchd 126 permission errors OR migrate to cron (demote to B if 59% health persists at Cycle 18)"
   ],
-  "mandates_cancelled_cycle16": [
-    "gap_hunter: output_cron_installer (3 cycles undelivered, manual setup = 5 min)",
-    "system_healer: robots.txt fix (deprioritized, SEO irrelevant at $0)",
-    "system_healer: intelligence catalog refresh (router works, catalog is nice-to-have)",
-    "data_janitor: feedback_effectiveness.json (over-engineered)"
-  ],
-  "compound_actions_cycle15_delivered": "0_of_6",
-  "compound_actions_cycle16_count": 2,
-  "emergency_fix_cycle16": "daily_digest_10_days_stale",
-  "active_count": 9,
+  "compound_actions_cycle16_delivered": "1.5_of_2",
+  "compound_actions_cycle17_count": 3,
+  "active_count": 8,
   "killed_count": 9,
-  "hibernated_count": 7,
+  "hibernated_count": 8,
   "total_agents": 25,
-  "disk_free_gb": 45,
-  "disk_project_gb": 28,
-  "alpha_entries_total": 55935,
-  "posts_queued": 964,
+  "system_health_pct": 59,
+  "alpha_entries_total": 15989,
+  "posts_queued": 690,
   "posts_posted": 0,
-  "leads_total_scraped": 1278,
-  "leads_total_bulk": 5738886,
+  "leads_total_qualified": 46,
   "leads_contacted": 0,
   "products_built": 51,
   "products_listed": 0,
+  "deployments_live": 132,
   "revenue_total": 0,
-  "revenue_day": 38
+  "revenue_day": 44
 }

@@ -40,6 +40,14 @@ Read progress.md for next uncompleted batch.
 
 **15. Product Descriptions x20** - 20 Whop/Gumroad product descriptions for various digital products. Save to: `PRODUCTS/descriptions/PRODUCT_DESCRIPTIONS_20.md`
 
+**16. Boomer Facebook Posts x30** - 30 Facebook posts for males 55-70. Topics: golf tips, fishing advice, health/wellness after 55, tool reviews, retirement tips. Calm, authoritative, educational tone. NO zoomer energy. Longer format, clear value. Save to: `CONTENT/social/boomer/BOOMER_FACEBOOK_30.md`
+
+**17. Boomer YouTube Scripts x10** - 10 YouTube longform scripts (10-20 min each) for males 55-70. Niches: golf equipment reviews, fishing tutorials, joint health, sleep improvement, woodworking basics. Calm narrator voice, no hype. Save to: `CONTENT/video/BOOMER_YOUTUBE_SCRIPTS_10.md`
+
+**18. Boomer Email Newsletter x10** - 10 newsletter issues targeting males 55-70. Topics: health tips men won't talk about, weekend project ideas, gear reviews, fishing/golf seasonal guides. Trustworthy expert voice. Save to: `CONTENT/newsletters/BOOMER_NEWSLETTER_10.md`
+
+**19. Boomer Affiliate Review Pages x10** - 10 long-form product review articles for SEO. "Best [Product] for Men Over 55" format. Categories: supplements, golf gear, fishing equipment, tools, sleep aids. Include affiliate placeholders. Save to: `CONTENT/affiliate_reviews/BOOMER_REVIEWS_10.md`
+
 ## Rules
 - EVERY piece of content must pass copy-style.md check
 - Specific numbers always

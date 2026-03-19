@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-18 14:57:00
+**Last updated:** 2026-03-18 19:42:00
 
 ---
 
@@ -128,6 +128,12 @@
 | walktounlock-web | WalkToUnlock | Walking incentive and step tracking |
 | tasksmash-web | TaskSmash | ADHD task breakdown - free Goblin Tools alternative |
 | coreday-web | CoreDay | Anti-habit-tracker - 3 non-negotiables = Win Day |
+
+## Landing / Marketing Pages
+
+| Page | URL | Status |
+|------|-----|--------|
+| printmaxx-thanks | https://printmaxx-thanks.surge.sh | LIVE — post-signup thank you page, deployed 2026-03-18 |
 
 ## Notes
 

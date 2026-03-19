@@ -1,6 +1,6 @@
 # Unified Alpha Monitor Digest
 
-Generated: 2026-03-18 14:04:30
+Generated: 2026-03-18 18:04:32
 
 ---
 
@@ -8,7 +8,7 @@ Generated: 2026-03-18 14:04:30
 
 ### PrayerLock (13 mentions)
 
-- **r/PrayerRequests** (score: 10) [app_mention]
+- **r/PrayerRequests** (score: 8) [app_mention]
   I can't find peace
   https://reddit.com/r/PrayerRequests/comments/1ruzjij/i_cant_find_peace/
 
@@ -16,7 +16,7 @@ Generated: 2026-03-18 14:04:30
   I feel like my mom could die any day now. I dont know what to do. Its like shes getting worse by the
   https://reddit.com/r/TrueChristian/comments/1rr5fch/i_feel_like_my_mom_could_die_any_day_now_i_dont/
 
-- **r/TrueChristian** (score: 5) [app_mention]
+- **r/TrueChristian** (score: 4) [app_mention]
   How do you know God’s Will for you even currently?
   https://reddit.com/r/TrueChristian/comments/1rvlmqn/how_do_you_know_gods_will_for_you_even_currently/
 
@@ -24,13 +24,13 @@ Generated: 2026-03-18 14:04:30
   Idolizing Control
   https://reddit.com/r/TrueChristian/comments/1rvoyx9/idolizing_control/
 
-- **r/VirginVoyages** (score: 2) [category_question]
-  Resilient Lady – Western Carib + Bimini 7 days, Honest Review + Tips
-  https://reddit.com/r/VirginVoyages/comments/1rxaxt5/resilient_lady_western_carib_bimini_7_days_honest/
+- **r/Christianity** (score: 2) [app_mention]
+  When Gods hand changes the story
+  https://reddit.com/r/Christianity/comments/1rx1kda/when_gods_hand_changes_the_story/
 
-### StudyLock (23 mentions)
+### StudyLock (25 mentions)
 
-- **r/GetStudying** (score: 182) [app_mention]
+- **r/GetStudying** (score: 183) [app_mention]
   switched to 90 minute study blocks and genuinely cannot go back, this is not a drill
   https://reddit.com/r/GetStudying/comments/1rs4vo7/switched_to_90_minute_study_blocks_and_genuinely/
 
@@ -38,21 +38,21 @@ Generated: 2026-03-18 14:04:30
   Your brain literally rewires itself when you struggle to learn something new (coming from a 4.0 GPA 
   https://reddit.com/r/studytips/comments/1rsppzi/your_brain_literally_rewires_itself_when_you/
 
-- **r/ADHD** (score: 42) [app_mention]
+- **r/ADHD** (score: 52) [app_mention]
   Focus techniques NEVER work.
   https://reddit.com/r/ADHD/comments/1rwvhqi/focus_techniques_never_work/
 
-- **r/GetStudying** (score: 16) [app_mention]
+- **r/GetStudying** (score: 22) [app_mention]
   My homemade analog pomodoro timer
   https://reddit.com/r/GetStudying/comments/1rx0uvs/my_homemade_analog_pomodoro_timer/
 
-- **r/StudyTips** (score: 5) [app_mention]
-  You after finding that perfect cafe:
-  https://reddit.com/r/studytips/comments/1rvucp3/you_after_finding_that_perfect_cafe/
+- **r/GetStudying** (score: 15) [app_mention]
+  It’s Midnight. Motivation Is Hanging by a Thread. Study With Me
+  https://reddit.com/r/GetStudying/comments/1rxcw9p/its_midnight_motivation_is_hanging_by_a_thread/
 
 ### BioMaxx (17 mentions)
 
-- **r/Biohackers** (score: 733) [app_mention]
+- **r/Biohackers** (score: 735) [app_mention]
   [PSA] If you aren't getting 3-4 sessions of 30 minutes of elevated heart rate cardio a week, you sho
   https://reddit.com/r/Biohackers/comments/1rvxoqv/psa_if_you_arent_getting_34_sessions_of_30/
 
@@ -60,37 +60,37 @@ Generated: 2026-03-18 14:04:30
   L. reuteri ATCC PTA 6475 – The Most Effective Supplement I’ve Found After Years of Trying Almost Eve
   https://reddit.com/r/Supplements/comments/1rrqekf/l_reuteri_atcc_pta_6475_the_most_effective/
 
-- **r/Biohackers** (score: 25) [app_mention]
+- **r/Biohackers** (score: 27) [app_mention]
   Opinions on blood test
   https://reddit.com/r/Biohackers/comments/1ruqikg/opinions_on_blood_test/
 
-- **r/Biohackers** (score: 10) [app_mention]
+- **r/Biohackers** (score: 9) [app_mention]
   Are we collecting massive amounts of bio data but still learning almost nothing?
   https://reddit.com/r/Biohackers/comments/1rufra5/are_we_collecting_massive_amounts_of_bio_data_but/
 
-- **r/Biohackers** (score: 8) [app_mention]
-  How to increase HDL???
-  https://reddit.com/r/Biohackers/comments/1rvie99/how_to_increase_hdl/
+- **r/Biohackers** (score: 7) [app_mention]
+  Life-Extension's BioActive Complete B-Complex
+  https://reddit.com/r/Biohackers/comments/1rva34g/lifeextensions_bioactive_complete_bcomplex/
 
-### FocusLock (14 mentions)
+### FocusLock (15 mentions)
 
-- **r/ADHD** (score: 104) [app_mention]
+- **r/ADHD** (score: 109) [app_mention]
   I quit Adderall.
   https://reddit.com/r/ADHD/comments/1rwhwdd/i_quit_adderall/
 
-- **r/ADHD** (score: 44) [app_mention]
+- **r/ADHD** (score: 55) [app_mention]
   Focus techniques NEVER work.
   https://reddit.com/r/ADHD/comments/1rwvhqi/focus_techniques_never_work/
 
-- **r/GetDisciplined** (score: 22) [app_mention]
+- **r/GetDisciplined** (score: 20) [app_mention]
   I quit social media and finally broke free from an addiction I’ve had since I was 14
   https://reddit.com/r/getdisciplined/comments/1ruq58u/i_quit_social_media_and_finally_broke_free_from/
 
-- **r/GetDisciplined** (score: 16) [app_mention]
+- **r/GetDisciplined** (score: 11) [app_mention]
   [METHOD] How I completely reset my life and became unrecognisable.
   https://reddit.com/r/getdisciplined/comments/1rvpl8t/method_how_i_completely_reset_my_life_and_became/
 
-- **r/ADHD** (score: 4) [app_mention]
+- **r/ADHD** (score: 3) [app_mention]
   My medication has the total opposite effect of what it’s supposed to?
   https://reddit.com/r/ADHD/comments/1rsczrm/my_medication_has_the_total_opposite_effect_of/
 
@@ -100,59 +100,55 @@ Generated: 2026-03-18 14:04:30
   Down 120 lbs and here’s my favorite stack that helped
   https://reddit.com/r/Biohacking/comments/1rt01hh/down_120_lbs_and_heres_my_favorite_stack_that/
 
-- **r/biohacking** (score: 166) [app_mention]
+- **r/biohacking** (score: 188) [app_mention]
   Never imaged becoming a human pin cushion in my thirties but these results have been 🔥
   https://reddit.com/r/Biohacking/comments/1rwpuye/never_imaged_becoming_a_human_pin_cushion_in_my/
 
-- **r/biohacking** (score: 9) [app_mention]
+- **r/biohacking** (score: 10) [app_mention]
   The 5 blood biomarkers that predict your biological age (and how to improve them)
   https://reddit.com/r/Biohacking/comments/1rwvotm/the_5_blood_biomarkers_that_predict_your/
 
-- **r/biohacking** (score: 8) [app_mention]
-  Anyone here using sermorelin specifically for sleep quality and energy? Looking for realistic expect
-  https://reddit.com/r/Biohacking/comments/1rsnang/anyone_here_using_sermorelin_specifically_for/
+- **r/SleepApnea** (score: 8) [app_mention]
+  Empty Nose Syndrome Demystified - Part 1
+  https://reddit.com/r/SleepApnea/comments/1rxcile/empty_nose_syndrome_demystified_part_1/
 
-- **r/biohacking** (score: 7) [app_mention]
+- **r/biohacking** (score: 8) [app_mention]
   Most biohackers optimizing everything except the most basic thing — tissue repair signaling
   https://reddit.com/r/Biohacking/comments/1rwn7zt/most_biohackers_optimizing_everything_except_the/
 
 ### WalkToUnlock (5 mentions)
 
-- **r/custommagic** (score: 2) [category_question]
-  Inflation
-  https://reddit.com/r/custommagic/comments/1rxb5co/inflation/
+- **r/CryptoReferrals** (score: 1) [category_question]
+  300€ in ONE day so easy!
+  https://reddit.com/r/CryptoReferrals/comments/1rxhtak/300_in_one_day_so_easy/
 
-- **r/ukrave** (score: 1) [category_question]
-  Put together a dancefloor report and it turns out where you stand on the dancefloor changes how much
-  https://reddit.com/r/ukrave/comments/1rxb6op/put_together_a_dancefloor_report_and_it_turns_out/
+- **r/DataAnalysisTrends** (score: 1) [category_question]
+  How to Build Things People Actually Want
+  https://reddit.com/r/DataAnalysisTrends/comments/1rxhrq3/how_to_build_things_people_actually_want/
 
-- **r/TorontoRaves** (score: 1) [category_question]
-  Put together a dancefloor report and it turns out where you stand on the dancefloor changes how much
-  https://reddit.com/r/TorontoRaves/comments/1rxb64x/put_together_a_dancefloor_report_and_it_turns_out/
+- **r/Wealthsimple_Bonus** (score: 1) [category_question]
+  Turn your paycheque into crypto with Wealthsimple
+  https://reddit.com/r/Wealthsimple_Bonus/comments/1rxhr6p/turn_your_paycheque_into_crypto_with_wealthsimple/
 
 - **r/Referalcodesofficial** (score: 1) [category_question]
   Revolut &lt;18 codes
-  https://reddit.com/r/Referalcodesofficial/comments/1rxb4xl/revolut_18_codes/
+  https://reddit.com/r/Referalcodesofficial/comments/1rxhpwf/revolut_18_codes/
 
-- **r/privacychain** (score: 1) [category_question]
-  Trying to stay private in 2026 is starting to feel like a full-time job — how do you keep it from bu
-  https://reddit.com/r/privacychain/comments/1rxb4jo/trying_to_stay_private_in_2026_is_starting_to/
+- **r/u_Academic_Gas2682** (score: 1) [category_question]
+  Memorizer-it, Feature demonstration pt1
+  https://reddit.com/r/u_Academic_Gas2682/comments/1rxhp8u/memorizerit_feature_demonstration_pt1/
 
 ### RamadanTracker (5 mentions)
 
-- **r/NewsStarWorld** (score: 5) [category_question]
+- **r/NewsStarWorld** (score: 12) [category_question]
   US contractors stranded in Iraq under threat of imminent attack: ‘We are sitting ducks’ - Via InSnap
   https://reddit.com/r/NewsStarWorld/comments/1rxadt6/us_contractors_stranded_in_iraq_under_threat_of/
 
-- **r/MuslimNikah** (score: 4) [category_question]
+- **r/MuslimNikah** (score: 7) [category_question]
   Are my expectations and standards too unrealistic?
   https://reddit.com/r/MuslimNikah/comments/1rx9ff0/are_my_expectations_and_standards_too_unrealistic/
 
-- **r/RasAlKhaimah** (score: 4) [category_question]
-  New thrift shop
-  https://reddit.com/r/RasAlKhaimah/comments/1rx4f3y/new_thrift_shop/
-
-- **r/emiratiwomen** (score: 3) [category_question]
+- **r/emiratiwomen** (score: 2) [category_question]
   New thrift shop
   https://reddit.com/r/emiratiwomen/comments/1rx75cy/new_thrift_shop/
 
@@ -160,11 +156,39 @@ Generated: 2026-03-18 14:04:30
   Built a visual and audio prayer guide for new muslims
   https://reddit.com/r/MuslimDevelopers/comments/1rx4p2q/built_a_visual_and_audio_prayer_guide_for_new/
 
+- **r/IslamMadani** (score: 1) [category_question]
+  All starts and ends with God
+  https://reddit.com/r/IslamMadani/comments/1rxgnju/all_starts_and_ends_with_god/
+
 ## 2. Cloneable GitHub Repos (MIT)
+
+- **[Lissy93/dashy](https://github.com/Lissy93/dashy)** (24259 stars, Vue)
+  🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!
+  License: MIT | Updated: 2026-03-18 | Query: PWA productivity license:mit stars:>100
+
+- **[kriasoft/react-starter-kit](https://github.com/kriasoft/react-starter-kit)** (23543 stars, TypeScript)
+  Modern React starter kit with Bun, TypeScript, Tailwind CSS, tRPC, Stripe, and Cloudflare Workers. Production-ready monorepo for building fast web apps.
+  License: MIT | Updated: 2026-03-18 | Query: saas template license:mit stars:>200
 
 - **[Snouzy/workout-cool](https://github.com/Snouzy/workout-cool)** (7129 stars, TypeScript)
   🏋 Modern open-source fitness coaching platform. Create workout plans, track progress, and access a comprehensive exercise database.
   License: MIT | Updated: 2026-03-18 | Query: fitness tracker license:mit stars:>100
+
+- **[ixartz/SaaS-Boilerplate](https://github.com/ixartz/SaaS-Boilerplate)** (6920 stars, TypeScript)
+  🚀🎉📚 SaaS Boilerplate built with Next.js + Tailwind CSS + Shadcn UI + TypeScript. ⚡️ Full-stack React application with Auth, Multi-tenancy, Roles & Permissions, i18n, Landing Page, DB, Logging, Testing
+  License: MIT | Updated: 2026-03-18 | Query: saas template license:mit stars:>200
+
+- **[nextify-limited/saasfly](https://github.com/nextify-limited/saasfly)** (2865 stars, TypeScript)
+  Your Next SaaS Template or Boilerplate ! A magic trip start with `bun create saasfly` . The more stars, the more surprises
+  License: MIT | Updated: 2026-03-18 | Query: saas template license:mit stars:>200
+
+- **[scosman/CMSaasStarter](https://github.com/scosman/CMSaasStarter)** (2293 stars, Svelte)
+  A modern SaaS template/boilerplate built with SvelteKit, Tailwind, and Supabase. Includes marketing page, blog, subscriptions, auth, user dashboard, user settings, pricing page, and more.
+  License: MIT | Updated: 2026-03-18 | Query: saas template license:mit stars:>200
+
+- **[dunky11/react-saas-template](https://github.com/dunky11/react-saas-template)** (1961 stars, JavaScript)
+  🌊   Template for building an SaaS / admin website using React + Material-UI
+  License: MIT | Updated: 2026-03-09 | Query: saas template license:mit stars:>200
 
 - **[sorenlouv/fb-sleep-stats](https://github.com/sorenlouv/fb-sleep-stats)** (1688 stars, JavaScript)
   Use Facebook to track your friends’ sleeping habits
@@ -173,6 +197,10 @@ Generated: 2026-03-18 14:04:30
 - **[agencyenterprise/react-native-health](https://github.com/agencyenterprise/react-native-health)** (1130 stars, Objective-C)
   A React Native package to interact with Apple HealthKit
   License: MIT | Updated: 2026-03-15 | Query: react native health license:mit stars:>1
+
+- **[brufdev/many-notes](https://github.com/brufdev/many-notes)** (927 stars, PHP)
+  Markdown note-taking web application designed for simplicity
+  License: MIT | Updated: 2026-03-17 | Query: PWA productivity license:mit stars:>100
 
 - **[kingstinct/react-native-healthkit](https://github.com/kingstinct/react-native-healthkit)** (635 stars, TypeScript)
   HealthKit bindings for React Native with TypeScript
@@ -186,48 +214,20 @@ Generated: 2026-03-18 14:04:30
   Israel's Ministry of Health's COVID-19 Exposure Prevention App
   License: MIT | Updated: 2026-01-19 | Query: react native health license:mit stars:>1
 
+- **[Hanziness/FocusTide](https://github.com/Hanziness/FocusTide)** (399 stars, Vue)
+  Modern and customizable productivity timer app that runs in your browser.
+  License: MIT | Updated: 2026-03-08 | Query: PWA productivity license:mit stars:>100
+
 - **[matinzd/react-native-health-connect](https://github.com/matinzd/react-native-health-connect)** (384 stars, Kotlin)
   React native library for health connect (Android only)
   License: MIT | Updated: 2026-03-18 | Query: react native health license:mit stars:>1
-
-- **[muhammadtalhasultan/Sirat-E-Mustaqeem](https://github.com/muhammadtalhasultan/Sirat-E-Mustaqeem)** (360 stars, Dart)
-  Islamic App with Complete Quran, Prayer time Api, Hadith, & Qibla Direction.
-  License: MIT | Updated: 2026-03-18 | Query: prayer app license:mit stars:>50
-
-- **[brandonp2412/Flexify](https://github.com/brandonp2412/Flexify)** (360 stars, Dart)
-  💪 Track your gym progress and flex on people
-  License: MIT | Updated: 2026-03-18 | Query: fitness tracker license:mit stars:>100
-
-- **[karthironald/BodyProgress](https://github.com/karthironald/BodyProgress)** (272 stars, Swift)
-  Simple workout and progress tracking app for fitness freaks with Widget support.
-  License: MIT | Updated: 2026-03-17 | Query: fitness tracker license:mit stars:>100
-
-- **[viccon/pulse](https://github.com/viccon/pulse)** (241 stars, Go)
-  Like a fitness tracker for your coding sessions
-  License: MIT | Updated: 2026-02-02 | Query: fitness tracker license:mit stars:>100
-
-- **[vmiklos/plees-tracker](https://github.com/vmiklos/plees-tracker)** (217 stars, Kotlin)
-  Plees Tracker is a simple sleep tracker for your Android phone.
-  License: MIT | Updated: 2026-03-16 | Query: sleep tracker license:mit stars:>50
-
-- **[basarsubasi/simplefitnessapp](https://github.com/basarsubasi/simplefitnessapp)** (208 stars, TypeScript)
-  Repository for FOSS fitness tracking app Simple.
-  License: MIT | Updated: 2026-03-14 | Query: fitness tracker license:mit stars:>100
-
-- **[Arijit-05/Fomodoro](https://github.com/Arijit-05/Fomodoro)** (177 stars, Kotlin)
-  Fomodoro is a beautifully simple and distraction-free Pomodoro timer built with Android (Kotlin). Designed with a cute and minimal UI, it’s perfect for anyone who wants to stay focused without the clu
-  License: MIT | Updated: 2026-03-13 | Query: study timer license:mit stars:>50
-
-- **[DBChoco/Muezzin](https://github.com/DBChoco/Muezzin)** (176 stars, JavaScript)
-   A prayer times (Adhan) and Quran app for Windows, macOS and GNU/Linux.
-  License: MIT | Updated: 2026-02-19 | Query: prayer app license:mit stars:>50
 
 ## 3. Content Freshness Audit
 
 ### HIGH (255 files > 30 days old)
 
+- `MONEY_METHODS/APP_FACTORY/VIBE_CODING_5_APPS_PLAN.md` (43d old, last: 2026-02-03)
 - `MONEY_METHODS/APP_FACTORY/builds/biomaxx-sdk54/LAUNCH_ASSETS.md` (43d old, last: 2026-02-03)
-- `MONEY_METHODS/APP_FACTORY/VIBE_CODING_5_APPS_PLAN.md` (42d old, last: 2026-02-03)
 - `MONEY_METHODS/APP_FACTORY/AUDIT_OUTPUT.md` (40d old, last: 2026-02-06)
 - `MONEY_METHODS/APP_FACTORY/assets/ICON_GENERATION_PROMPTS_V3.md` (40d old, last: 2026-02-06)
 - `MONEY_METHODS/APP_FACTORY/builds/prayerlock-web/PRODUCT_HUNT_LAUNCH.md` (40d old, last: 2026-02-06)
@@ -278,6 +278,12 @@ Active signals: 141
 
 ## 7. Platform & Policy News (RSS)
 
+- **[TechCrunch]** [Nothing CEO Carl Pei says smartphone apps will disappear as AI agents take their](https://techcrunch.com/2026/03/18/nothing-ceo-carl-pei-says-smartphone-apps-will-disappear-as-ai-agents-take-their-place/)
+  > Nothing CEO Carl Pei says AI agents will eventually replace apps, shifting smartphones toward systems that understand intent and act on a user's behal
+
+- **[TechCrunch]** [FBI is buying location data to track US citizens, director confirms](https://techcrunch.com/2026/03/18/fbi-is-buying-location-data-to-track-us-citizens-kash-patel-wyden/)
+  > FBI director Kash Patel told lawmakers that the agency is actively purchasing commercially available location data, which can track Americans without 
+
 - **[TechCrunch]** [Pardoned Nikola founder Trevor Milton is trying to raise $1B for AI-powered plan](https://techcrunch.com/2026/03/18/pardoned-nikola-founder-trevor-milton-is-trying-to-raise-1b-for-ai-powered-planes/)
   > He told the Wall Street Journal he thinks autonomous planes will be "10 times harder than Nikola ever was."
 
@@ -317,92 +323,58 @@ Active signals: 141
 - **[TechCrunch]** [Mistral bets on ‘build-your-own AI’ as it takes on OpenAI, Anthropic in the ente](https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/)
   > Mistral Forge lets enterprises train custom AI models from scratch on their own data, challenging rivals that rely on fine-tuning and retrieval-based 
 
-- **[TheVerge]** [The best AirPods deals you can get right now](https://www.theverge.com/21302051/best-apple-airpods-deals)
-
-- **[TheVerge]** [PSA: Hackers can raid iOS 18 with an infected link](https://www.theverge.com/tech/896841/iphone-ios-18-attack-darksword)
-
-**Total news items:** 16
+**Total news items:** 15
 
 ## 8. Product Hunt Launches
-
-- **[OpenObserve](https://www.producthunt.com/products/openobserve)** [ai]
-  > AI-native, open-source Datadog alternative
-
-- **[Claude Dispatch](https://www.producthunt.com/products/claude)** [claude]
-  > Text Claude from your phone using “Dispatch”
-
-- **[Claude Double Checker](https://www.producthunt.com/products/claude-double-checker-is-2x-active)** [claude]
-  > See Claude's 2× usage window live in your macOS menu bar
-
-- **[MS AUTO CAPTIONS](https://www.producthunt.com/products/ms-auto-captions)** [ai]
-  > Generate trending subtitles for videos automatically with AI
-
-- **[Forvibe for macOS](https://www.producthunt.com/products/forvibe)** [top_launch]
-  > Everything between your build and the App Store
-
-- **[Comet for Enterprise](https://www.producthunt.com/products/perplexity-ai)** [ai]
-  > Perplexity’s Secure AI browser built for enterprise teams
-
-- **[Lore](https://www.producthunt.com/products/lore-4)** [top_launch]
-  > Cursor for your memory. 100% private, open-source &amp; free.
-
-- **[Unsloth Studio](https://www.producthunt.com/products/unsloth)** [ai]
-  > Open-source web UI to run and train AI models.
-
-- **[Permit.io MCP Gateway](https://www.producthunt.com/products/permit-io)** [top_launch]
-  > Drop-in MCP Security Developers Love and CISOs Trust
 
 - **[Banyan AI Lite](https://www.producthunt.com/products/banyan-ai-lite)** [ai, saas]
   > AI detecting &amp; preventing SaaS churn
 
-- **[Lightfield](https://www.producthunt.com/products/lightfield)** [ai, crm]
-  > AI-native CRM that builds itself and does work for you
+- **[Genie by Databox](https://www.producthunt.com/products/databox)** [ai]
+  > Your AI analyst for business performance
+
+- **[Lore](https://www.producthunt.com/products/lore-4)** [top_launch]
+  > Cursor for your memory. 100% private, open-source &amp; free.
+
+- **[Claude Dispatch](https://www.producthunt.com/products/claude)** [claude]
+  > Text Claude from your phone using “Dispatch”
+
+- **[SharePatch](https://www.producthunt.com/products/sharepatch)** [top_launch]
+  > Share git patches with clean, review-ready browser diffs
 
 - **[ClipLedger](https://www.producthunt.com/products/clipledger)** [creator]
   > Track views &amp; payouts for YouTube Shorts creators
 
-- **[UseAgents](https://www.producthunt.com/products/useagents)** [agent]
-  > Define tools once for agents use them everywhere
+- **[MetricMap](https://www.producthunt.com/products/metricmap-analytics-for-saas-e-com)** [saas, analytics]
+  > Track revenue, ads, web vitals, &amp; user insights in one hub
+
+- **[Forvibe for macOS](https://www.producthunt.com/products/forvibe)** [top_launch]
+  > Everything between your build and the App Store
 
 - **[Bookshelf for NotebookLM](https://www.producthunt.com/products/bookshelf-for-notebooklm)** [top_launch]
   > Add folders, search, and sync to Google NotebookLM
 
-- **[RyzenClaw + RadeonClaw](https://www.producthunt.com/products/instella)** [top_launch]
-  > Run OpenClaw locally on your AMD PC
+- **[Fantastical MCP for Mac](https://www.producthunt.com/products/fantastical)** [claude]
+  > Manage your schedule directly with Claude
+
+- **[Comet for Enterprise](https://www.producthunt.com/products/perplexity-ai)** [ai]
+  > Perplexity’s Secure AI browser built for enterprise teams
+
+- **[Soul 2.0](https://www.producthunt.com/products/soul-2-0)** [ai]
+  > Fashion-Grade AI Photos Without the Camera Crew
+
+- **[GPT‑5.4 mini and nano](https://www.producthunt.com/products/openai)** [ai, agent, gpt]
+  > Fast and efficient models optimized for coding and subagents
+
+- **[Claude Double Checker](https://www.producthunt.com/products/claude-double-checker-is-2x-active)** [claude]
+  > See Claude's 2× usage window live in your macOS menu bar
+
+- **[Lista](https://www.producthunt.com/products/lista-4)** [top_launch]
+  > A simple to-do list with GTD workflows + iCloud sync
 
 **Total PH launches found:** 40
 
 ## 9. SAM.gov Government Contracts
-
-- **[SUSTAINMENT, ENHANCEMENT AND TRANSITION SUPPORT OF VAS ENTERPRISE CORE HR SOLUTI](https://www.usaspending.gov/award/279969886)**
-  Keyword: NAICS 541511 | Deadline: 2026-06-15
-
-- **[ENTERPRISE TESTING SERVICE SUPPORT SERVICES](https://www.usaspending.gov/award/279968526)**
-  Keyword: NAICS 541511 | Deadline: 2021-06-13
-
-- **[FAS CLOUD SERVICES SUPPORT](https://www.usaspending.gov/award/281081757)**
-  Keyword: NAICS 541511 | Deadline: 2026-03-31
-
-- **[DEFENSE ENTERPRISE OFFICE SOLUTIONS (DEOS)](https://www.usaspending.gov/award/281087102)**
-  Keyword: NAICS 541511 | Deadline: 2026-03-04
-
-- **[PROVIDE, MAINTAIN, IMPROVE, AND SECURE HUDS VIRTUAL AND PHYSICAL ENTERPRISE IT I](https://www.usaspending.gov/award/291973099)**
-  Keyword: NAICS 541511 | Deadline: 2025-09-29
-
-- **[EDAS SERVICES - ITSSS-2 SCOR 1](https://www.usaspending.gov/award/278270006)**
-  Keyword: NAICS 541511 | Deadline: 2026-09-29
-
-- **[SMC ZA DIGITAL ENGINEERING ENVIRONMENT DEE](https://www.usaspending.gov/award/281083758)**
-  Keyword: NAICS 541511 | Deadline: 2026-09-23
-
-- **[VA GENERAL MENTAL HEALTH AND SUICIDE PREVENTION AWARENESS AND EDUCATION OUTREACH](https://www.usaspending.gov/award/279980886)**
-  Keyword: NAICS 541511 | Deadline: 2027-04-03
-
-- **[ENTERPRISE SERVICE DESK (ESD) TIER ONE SUPPORT](https://www.usaspending.gov/award/279970652)**
-  Keyword: NAICS 541511 | Deadline: 2027-03-29
-
-- **[CYBERSPACE OPERATIONS SUPPORT SERVICES COSS](https://www.usaspending.gov/award/281084515)**
-  Keyword: NAICS 541511 | Deadline: 2026-07-31
 
 - **[CAD/CAM SUPPORT SERVICES](https://www.usaspending.gov/award/291286817)**
   Keyword: NAICS 541430 | Deadline: 2025-09-24
@@ -419,54 +391,81 @@ Active signals: 141
 - **[OFFICE OF WATER STRATEGIC COMMUNICATIONS AND PUBLIC ENGAGEMENT](https://www.usaspending.gov/award/291016831)**
   Keyword: NAICS 541430 | Deadline: 2026-08-24
 
+- **[SALT PLAINS NWR EXHIBITS AND PANELS](https://www.usaspending.gov/award/277768215)**
+  Keyword: NAICS 541430 | Deadline: 2024-09-13
+
+- **[INTERPRETIVE SERVICES FOR MCCALL FISH HATCHERY-VISITOR SERVICES](https://www.usaspending.gov/award/277780429)**
+  Keyword: NAICS 541430 | Deadline: 2026-07-30
+
+- **[THIS BPA CALL IS FOR PRINT SERVICES (DIGITAL AND OFFSET).](https://www.usaspending.gov/award/279009954)**
+  Keyword: NAICS 541430 | Deadline: 2023-09-30
+
+- **[PRINTING SERVICES (DIGITAL QUICK PRINT AND OFFSET PRINT)](https://www.usaspending.gov/award/279010111)**
+  Keyword: NAICS 541430 | Deadline: 2024-09-30
+
+- **[ART - LABOR AND RESEARCH, ART AND ARTIST SELECTION, MANAGING COLLABORATION WITH ](https://www.usaspending.gov/award/278730919)**
+  Keyword: NAICS 541430 | Deadline: 2020-01-31
+
+- **[OPM HRS RECRUITMENT AND BRANDING BPA AFCS CALL 04](https://www.usaspending.gov/award/281084464)**
+  Keyword: NAICS 541613 | Deadline: 2026-05-23
+
+- **[ADMINISTRATION FOR CHILDREN AND FAMILIES (ACF), OFFICE OF REFUGEE RESETTLEMENT (](https://www.usaspending.gov/award/277758581)**
+  Keyword: NAICS 541613 | Deadline: 2026-09-21
+
+- **[ARX COMMUNICATIONS & MEDIA](https://www.usaspending.gov/award/291510530)**
+  Keyword: NAICS 541613 | Deadline: 2026-08-31
+
+- **[DIGITAL AND INTERNAL COMMUNICATIONS SUPPORT](https://www.usaspending.gov/award/291495260)**
+  Keyword: NAICS 541613 | Deadline: 2026-09-29
+
+- **[ADMINISTRATIVE SUPPORT SERVICES FOR THE OFFICE OF LEGISLATIVE AND PUBLIC AFFAIRS](https://www.usaspending.gov/award/290202947)**
+  Keyword: NAICS 541613 | Deadline: 2026-06-30
+
 **Total contracts found:** 50
 
 ## 10. Acquisition Opportunities (Reddit + HN)
 
-- **[Dev from Croatia looking for a chill side project partner (AI / automation / Saa](https://www.reddit.com/r/SideProject/comments/1rxaxes/dev_from_croatia_looking_for_a_chill_side_project/)** [r/SideProject]
+- **[Share your project and let us test it! 😄](https://www.reddit.com/r/SideProject/comments/1rxhs6f/share_your_project_and_let_us_test_it/)** [r/SideProject]
 
-- **[Solo founders and devs: How much budget do you willingly burn on Meta/Reddit ads](https://www.reddit.com/r/SideProject/comments/1rxa56l/solo_founders_and_devs_how_much_budget_do_you/)** [r/SideProject]
+- **[I built an app because splitting drink rounds with friends is more annoying than](https://www.reddit.com/r/SideProject/comments/1rxhnu4/i_built_an_app_because_splitting_drink_rounds/)** [r/SideProject]
 
-- **[i built an android app that never existed before : a mirror in lock screen](https://www.reddit.com/r/SideProject/comments/1rxa16j/i_built_an_android_app_that_never_existed_before/)** [r/SideProject]
+- **[My first big Vibe coding project. Based on TrustMRR by Marc Lou](https://www.reddit.com/r/SideProject/comments/1rxhjzt/my_first_big_vibe_coding_project_based_on/)** [r/SideProject]
 
-- **[Free recipe webapp – stash, import &amp; organize recipes (WIP)](https://www.reddit.com/r/SideProject/comments/1rx9z0m/free_recipe_webapp_stash_import_organize_recipes/)** [r/SideProject]
+- **[Built a real-time battery wattmeter app as a side project](https://www.reddit.com/r/SideProject/comments/1rxhb4f/built_a_realtime_battery_wattmeter_app_as_a_side/)** [r/SideProject]
 
-- **[My first app just crossed 100 downloads in the first week 🥹](https://www.reddit.com/r/SideProject/comments/1rx9yql/my_first_app_just_crossed_100_downloads_in_the/)** [r/SideProject]
+- **[I built a tool that turns static content into cinematic scrollytelling experienc](https://www.reddit.com/r/SideProject/comments/1rxh9we/i_built_a_tool_that_turns_static_content_into/)** [r/SideProject]
 
-- **[I built a lead gen SaaS in 2026](https://www.reddit.com/r/SideProject/comments/1rx9yhz/i_built_a_lead_gen_saas_in_2026/)** [r/SideProject]
-   | Revenue: $$19
+- **[I spent 3 months building a tool because YouTube's auto-captions kept
+mangling e](https://www.reddit.com/r/SideProject/comments/1rxh38q/i_spent_3_months_building_a_tool_because_youtubes/)** [r/SideProject]
 
-- **[I got tired of constantly pausing YouTube tutorials, so I built a web app that t](https://www.reddit.com/r/microsaas/comments/1rxb1k6/i_got_tired_of_constantly_pausing_youtube/)** [r/microsaas]
+- **[Built a portfolio platform for builders in 48hrs. 3 weeks later: 120+ users, 5 u](https://www.reddit.com/r/SideProject/comments/1rxgx3y/built_a_portfolio_platform_for_builders_in_48hrs/)** [r/SideProject]
 
-- **[the most useful 2 weeks i’ve seen weren’t building. they were tagging every user](https://www.reddit.com/r/microsaas/comments/1rxazza/the_most_useful_2_weeks_ive_seen_werent_building/)** [r/microsaas]
+- **[I created a fitness app that allows you to track workouts with your voice!](https://www.reddit.com/r/SideProject/comments/1rxgk65/i_created_a_fitness_app_that_allows_you_to_track/)** [r/SideProject]
 
-- **[I keep seeing people say they built and launched a SaaS over a weekend and I gen](https://www.reddit.com/r/microsaas/comments/1rxas8t/i_keep_seeing_people_say_they_built_and_launched/)** [r/microsaas]
+- **[Looking for feedback: I built a free, open-source iOS app that strips or randomi](https://www.reddit.com/r/SideProject/comments/1rxgjiw/looking_for_feedback_i_built_a_free_opensource/)** [r/SideProject]
 
-- **[Launching my microsaas today — ATS resume scorer built solo after a painful job ](https://www.reddit.com/r/microsaas/comments/1rxajnz/launching_my_microsaas_today_ats_resume_scorer/)** [r/microsaas]
+- **[My experience moving from UIPath alternatives to a more human-centric automation](https://www.reddit.com/r/SideProject/comments/1rxgfzd/my_experience_moving_from_uipath_alternatives_to/)** [r/SideProject]
 
-- **[Want to control Tinder from Claude Code?
+- **[Failed to start a hedge fund. Built an equity research agent instead. It pulls S](https://www.reddit.com/r/SideProject/comments/1rxgdai/failed_to_start_a_hedge_fund_built_an_equity/)** [r/SideProject]
 
-I built a CLI swipe on 1000+ profiles ](https://www.reddit.com/r/microsaas/comments/1rxag7c/want_to_control_tinder_from_claude_code_i_built_a/)** [r/microsaas]
+- **[I'm 16 and built an AI that rewrites your CV to match any job posting in under 6](https://www.reddit.com/r/SideProject/comments/1rxgd7g/im_16_and_built_an_ai_that_rewrites_your_cv_to/)** [r/SideProject]
 
-- **[I built an AI SaaS that generates video descriptions from uploaded videos — sell](https://www.reddit.com/r/microsaas/comments/1rx96ko/i_built_an_ai_saas_that_generates_video/)** [r/microsaas]
-   | Revenue: $$150 | Asking: $150,
+- **[This one change got me 10 free tier and 2 paid tier customers in one day](https://www.reddit.com/r/microsaas/comments/1rxh5go/this_one_change_got_me_10_free_tier_and_2_paid/)** [r/microsaas]
 
-- **[How are you actually marketing your SaaS right now?](https://www.reddit.com/r/microsaas/comments/1rx93qd/how_are_you_actually_marketing_your_saas_right_now/)** [r/microsaas]
+- **[Giving away 100% of revenue for 12 months to whoever can grow my plant care app](https://www.reddit.com/r/microsaas/comments/1rxfph3/giving_away_100_of_revenue_for_12_months_to/)** [r/microsaas]
 
-- **[Got my first SaaS payout, $981.55 net. A few things surprised me.](https://www.reddit.com/r/microsaas/comments/1rx8tq2/got_my_first_saas_payout_98155_net_a_few_things/)** [r/microsaas]
-   | Revenue: $$981.55
+- **[can ai actually book appointments via DM now?](https://www.reddit.com/r/microsaas/comments/1rxfjqn/can_ai_actually_book_appointments_via_dm_now/)** [r/microsaas]
 
-- **[How are you finding users for your SaaS?](https://www.reddit.com/r/microsaas/comments/1rx8i8n/how_are_you_finding_users_for_your_saas/)** [r/microsaas]
-
-**Total listings found:** 48
+**Total listings found:** 54
 
 ## 11. Recommended Actions
 
-1. EVALUATE 13 high-star MIT repos for clone/adapt potential
-2. EVALUATE 40 Product Hunt launches for competitive intel or clone opportunities
-3. REVIEW 50 gov contract opportunities for freelance/agency bid potential
-4. SCAN 48 acquisition listings for underpriced SaaS/app buy opportunities
-5. RUN meme_coin_signal_tracker.py if crypto market is active
-6. CHECK competitor apps for pricing changes this week
-7. UPDATE ASO keywords in App Store Connect based on trending terms
-8. SCAN BlackHatWorld for new legal growth tactics
+1. REPLY to 1 high-score Reddit posts asking about our app categories (value-first, no promo)
+2. EVALUATE 23 high-star MIT repos for clone/adapt potential
+3. EVALUATE 40 Product Hunt launches for competitive intel or clone opportunities
+4. REVIEW 50 gov contract opportunities for freelance/agency bid potential
+5. SCAN 54 acquisition listings for underpriced SaaS/app buy opportunities
+6. RUN meme_coin_signal_tracker.py if crypto market is active
+7. CHECK competitor apps for pricing changes this week
+8. UPDATE ASO keywords in App Store Connect based on trending terms
+9. SCAN BlackHatWorld for new legal growth tactics
