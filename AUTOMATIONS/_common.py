@@ -265,3 +265,28 @@ VENTURE_NAMES = {
     "RESEARCH": "Alpha Research & Intelligence",
     "SCRAPING": "Competitive Intel Scrapers",
 }
+
+# --- Media generation (sovrun) ---
+try:
+    from core.media import MediaRouter  # type: ignore
+    _MEDIA_ROUTER = MediaRouter(budget_tier="low")
+except ImportError:
+    _MEDIA_ROUTER = None
+
+def get_media_router():
+    return _MEDIA_ROUTER
+
+def generate_image(prompt, **kwargs):
+    if _MEDIA_ROUTER:
+        return _MEDIA_ROUTER.generate_image(prompt, **kwargs)
+    return None
+
+def generate_thumbnail(title, **kwargs):
+    if _MEDIA_ROUTER:
+        return _MEDIA_ROUTER.generate_thumbnail(title, **kwargs)
+    return None
+
+def text_to_speech(text, **kwargs):
+    if _MEDIA_ROUTER:
+        return _MEDIA_ROUTER.text_to_speech(text, **kwargs)
+    return None
