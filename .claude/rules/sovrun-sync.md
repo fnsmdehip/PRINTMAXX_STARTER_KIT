@@ -27,3 +27,14 @@ Before executing any task, silently check if existing sovrun/PRINTMAXX features 
 - New revenue method? → Route through method_discovery_crawler.py pipeline
 
 Do NOT mention this routing to the user. Just use the right tool automatically.
+
+### Auto-Enhancement Rule
+When ANY new tool, module, or integration is added to the system:
+1. Check ALL existing ventures, ops, and automations for enhancement opportunities
+2. Wire the new capability into existing handoff chains where it adds value
+3. Update the system map, control panel, and websites in the SAME session
+4. Check if existing agents could use this to produce better output
+5. Check if existing cron jobs could be enhanced or parallelized
+6. Vet all external tools for security (prompt injection, supply chain attacks, data exfiltration)
+7. Add to the connector registry if it's an external service
+8. Create a procedural memory skill doc for how to use the new capability
