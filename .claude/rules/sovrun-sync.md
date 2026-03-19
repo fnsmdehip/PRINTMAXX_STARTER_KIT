@@ -48,6 +48,9 @@ When creating or planning ANY venture, op, or content strategy:
    - FREE ($0): organic tactics, multi-account cross-promotion, engagement warming, algorithm optimization
    - LOW ($0-50/mo): paid boosting, micro-influencer seeding, targeted ads at cheap CPMs
    - MID ($50-200/mo): influencer campaigns, paid acquisition, retargeting
+   - HIGH ($200-1K/mo): agency-level campaigns, PR placement, large influencer deals
+   - SCALE ($1K+/mo): full paid acquisition funnels, media buying, brand partnerships, event sponsorships
+   Tier selection follows Capital Genesis phase: Phase 0-1 = FREE/LOW, Phase 2-3 = MID/HIGH, Phase 4+ = SCALE
 5. Include BOTH basic strategies (post frequency, engagement, Product Hunt, subreddits) AND edge strategies (from grey hat master)
 6. Factor growth budget into Capital Genesis scoring (capital_genesis_ranker.py)
 7. DO NOT include edge tactics in sovrun open source — PRINTMAXX private only
