@@ -290,3 +290,37 @@ def text_to_speech(text, **kwargs):
     if _MEDIA_ROUTER:
         return _MEDIA_ROUTER.text_to_speech(text, **kwargs)
     return None
+
+# --- External tool integrations (sovrun connector registry) ---
+# These tools are available via connectors/registry.json
+# Install with: python3 OPEN_SOURCE/agent-soul/connectors/setup.py --connect TOOL_NAME
+
+AVAILABLE_TOOLS = {
+    "crawl4ai": {"pip": "crawl4ai", "use_for": "LLM-friendly web crawling for generic URLs", "ventures": "intelligence pipeline, alpha scraping"},
+    "postiz": {"docker": "ghcr.io/gitroomhq/postiz-app", "use_for": "30+ platform post scheduling", "ventures": "C01-C18 content"},
+    "polar": {"pip": "polar-sdk", "use_for": "self-hosted payments (replaces Gumroad)", "ventures": "D01-D12 digital products"},
+    "listmonk": {"docker": "listmonk/listmonk", "use_for": "self-hosted newsletter", "ventures": "N12 newsletter, C05 pipeline"},
+    "freqtrade": {"docker": "freqtradeorg/freqtrade", "use_for": "crypto trading backtesting", "ventures": "I01-I05 investment"},
+    "mautic": {"docker": "mautic/mautic", "use_for": "marketing automation + CRM for EAS clients", "ventures": "S02 EAS"},
+}
+
+def get_available_tools():
+    """Return dict of available external tools and what they're for."""
+    return AVAILABLE_TOOLS
+
+def suggest_tools_for_task(task_description):
+    """Suggest which external tools could help with a task."""
+    task_lower = task_description.lower()
+    suggestions = []
+    keywords = {
+        "crawl4ai": ["crawl", "scrape", "website", "extract", "url"],
+        "postiz": ["post", "schedule", "social", "publish", "distribute"],
+        "polar": ["payment", "sell", "product", "gumroad", "checkout", "subscription"],
+        "listmonk": ["newsletter", "email list", "subscriber", "email campaign"],
+        "freqtrade": ["trade", "crypto", "backtest", "exchange", "bitcoin"],
+        "mautic": ["crm", "lead nurture", "marketing automation", "contact"],
+    }
+    for tool, kws in keywords.items():
+        if any(kw in task_lower for kw in kws):
+            suggestions.append({"tool": tool, **AVAILABLE_TOOLS[tool]})
+    return suggestions
