@@ -39,6 +39,24 @@ When ANY new tool, module, or integration is added to the system:
 7. Add to the connector registry if it's an external service
 8. Create a procedural memory skill doc for how to use the new capability
 
+### Novel Discovery Rule (always active during PRINTMAXX work)
+When working on ANY task and discovering a novel solution, trick, or improvement:
+1. Is this reusable? If yes, extract into sovrun as a module or pattern
+2. Are others doing this? Quick search for similar approaches
+3. If others do it better: wire theirs in (security vet first). If we do it better: document as sovrun module
+4. If hybrid opportunity: build the hybrid combining best of both
+5. Track in `OPS/NOVEL_DISCOVERIES.md` with date and sovrun extraction status
+6. Update sovrun README, website, connector registry when extracted
+
+### Research Decision Framework (for evaluating any new tool/technique)
+1. Does our system already do this? Check master ops, scripts, sovrun modules
+2. If yes, is ours better? Compare features, maintenance burden
+3. If theirs is better, wire in without conflicts? Check chains, cron, data flow
+4. Security vet: 6-point audit from `.claude/reference/external-code-security.md`
+5. License check: can we still monetize with this integrated?
+6. If wiring in, run auto-enhancement (check ALL ventures for new opportunities)
+7. If building our own, make it a sovrun module so both PRINTMAXX and open source benefit
+
 ### Browser Control Fallback
 When no API or MCP exists for a web tool (Google Stitch, Canva, etc.):
 1. First check if Playwright MCP can control it
