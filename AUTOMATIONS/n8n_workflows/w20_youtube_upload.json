@@ -1,0 +1,244 @@
+{
+  "name": "PRINTMAXX - YouTube Video Upload + Schedule",
+  "nodes": [
+    {
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "parameters": {
+        "path": "youtube-upload",
+        "httpMethod": "POST",
+        "responseMode": "onReceived",
+        "responseData": "allEntries"
+      },
+      "webhookId": "youtube-upload-wh"
+    },
+    {
+      "name": "Validate Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const body = $input.item.json.body || $input.item.json;\n\nconst filePath = body.file_path || '';\nconst title = body.title || '';\nconst description = body.description || '';\nconst tags = body.tags || [];\nconst thumbnailPath = body.thumbnail_path || '';\nconst publishAt = body.publish_at || '';\nconst privacyStatus = body.privacy_status || 'private';\nconst categoryId = body.category_id || '22';\n\nif (!filePath || !title) {\n  throw new Error('Missing required fields: file_path and title');\n}\n\nreturn [{\n  json: {\n    filePath,\n    title: title.substring(0, 100),\n    description: description.substring(0, 5000),\n    tags: Array.isArray(tags) ? tags.slice(0, 30) : [],\n    thumbnailPath,\n    publishAt,\n    privacyStatus,\n    categoryId,\n    receivedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Upload Video to YouTube",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,contentDetails",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.youtubeOAuth2}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"snippet\": {\n    \"title\": \"{{ $json.title }}\",\n    \"description\": \"{{ $json.description }}\",\n    \"tags\": {{ JSON.stringify($json.tags) }},\n    \"categoryId\": \"{{ $json.categoryId }}\"\n  },\n  \"status\": {\n    \"privacyStatus\": \"{{ $json.privacyStatus }}\",\n    \"publishAt\": \"{{ $json.publishAt || '' }}\",\n    \"selfDeclaredMadeForKids\": false\n  }\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 300000
+        }
+      }
+    },
+    {
+      "name": "Upload Video Binary",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [850, 300],
+      "parameters": {
+        "method": "PUT",
+        "url": "={{ $json.headers?.location || $json.Location }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "video/*"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "raw",
+        "rawBody": "={{ $('Validate Payload').item.json.filePath }}",
+        "options": {
+          "timeout": 600000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Set Thumbnail",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1050, 300],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "thumb_check",
+              "leftValue": "={{ $('Validate Payload').item.json.thumbnailPath }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Upload Thumbnail",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1250, 200],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={{ $('Upload Video Binary').item.json.id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.youtubeOAuth2}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "image/png"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000
+        }
+      }
+    },
+    {
+      "name": "Build Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const videoData = $('Upload Video Binary').item.json;\nconst input = $('Validate Payload').item.json;\n\nreturn [{\n  json: {\n    status: 'uploaded',\n    videoId: videoData.id || 'unknown',\n    title: input.title,\n    url: `https://youtube.com/watch?v=${videoData.id || ''}`,\n    privacyStatus: input.privacyStatus,\n    publishAt: input.publishAt || 'immediate',\n    uploadedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Telegram Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1650, 300],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=YouTube Upload Complete\n\nTitle: {{ $json.title }}\nVideo: {{ $json.url }}\nStatus: {{ $json.privacyStatus }}\nScheduled: {{ $json.publishAt }}\nTime: {{ $json.uploadedAt }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Log to Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1850, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_GOOGLE_SHEET_ID_HERE"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "YouTubeUploads"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [[{"node": "Validate Payload", "type": "main", "index": 0}]]
+    },
+    "Validate Payload": {
+      "main": [[{"node": "Upload Video to YouTube", "type": "main", "index": 0}]]
+    },
+    "Upload Video to YouTube": {
+      "main": [[{"node": "Upload Video Binary", "type": "main", "index": 0}]]
+    },
+    "Upload Video Binary": {
+      "main": [[{"node": "Set Thumbnail", "type": "main", "index": 0}]]
+    },
+    "Set Thumbnail": {
+      "main": [
+        [{"node": "Upload Thumbnail", "type": "main", "index": 0}],
+        [{"node": "Build Result", "type": "main", "index": 0}]
+      ]
+    },
+    "Upload Thumbnail": {
+      "main": [[{"node": "Build Result", "type": "main", "index": 0}]]
+    },
+    "Build Result": {
+      "main": [[{"node": "Telegram Notification", "type": "main", "index": 0}]]
+    },
+    "Telegram Notification": {
+      "main": [[{"node": "Log to Sheet", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "content"},
+    {"name": "youtube"},
+    {"name": "P1"}
+  ]
+}

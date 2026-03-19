@@ -1,0 +1,220 @@
+{
+  "name": "PRINTMAXX - Bland.ai Inbound Call Router + CRM",
+  "nodes": [
+    {
+      "name": "Inbound Call Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "parameters": {
+        "path": "bland-inbound",
+        "httpMethod": "POST",
+        "responseMode": "onReceived",
+        "responseData": "allEntries"
+      },
+      "webhookId": "bland-inbound-wh"
+    },
+    {
+      "name": "Parse Call Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const body = $input.item.json.body || $input.item.json;\n\nconst callId = body.call_id || body.id || '';\nconst phoneNumber = body.from || body.phone_number || '';\nconst transcript = body.transcript || body.concatenated_transcript || '';\nconst duration = body.call_length || body.duration || 0;\nconst status = body.status || body.call_status || 'completed';\nconst summary = body.summary || '';\nconst answeredBy = body.answered_by || 'unknown';\n\nreturn [{\n  json: {\n    callId,\n    phoneNumber,\n    transcript: transcript.substring(0, 3000),\n    duration,\n    status,\n    summary: summary.substring(0, 500),\n    answeredBy,\n    receivedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Qualify with AI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "{{$credentials.anthropicApiKey}}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"claude-haiku-4-5-20251001\",\n  \"max_tokens\": 300,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Analyze this call transcript and return JSON with: {\\\"lead_score\\\": 1-10, \\\"category\\\": \\\"HOT|WARM|COLD\\\", \\\"business_type\\\": \\\"...\\\", \\\"needs\\\": [\\\"...\\\"], \\\"next_action\\\": \\\"...\\\", \\\"urgency\\\": \\\"HIGH|MEDIUM|LOW\\\"}\\n\\nTranscript: {{ $json.transcript.substring(0, 2000) }}\\n\\nSummary: {{ $json.summary }}\"\n    }\n  ]\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Parse Qualification",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const callData = $('Parse Call Data').item.json;\nconst aiResponse = $input.item.json;\n\nlet qualification = {};\ntry {\n  const content = aiResponse.content?.[0]?.text || '{}';\n  const jsonMatch = content.match(/\\{[\\s\\S]*\\}/);\n  qualification = jsonMatch ? JSON.parse(jsonMatch[0]) : {};\n} catch(e) {\n  qualification = { lead_score: 1, category: 'COLD', needs: [], next_action: 'manual_review' };\n}\n\nreturn [{\n  json: {\n    ...callData,\n    leadScore: qualification.lead_score || 1,\n    category: qualification.category || 'COLD',\n    businessType: qualification.business_type || 'unknown',\n    needs: qualification.needs || [],\n    nextAction: qualification.next_action || 'follow_up',\n    urgency: qualification.urgency || 'LOW',\n    qualifiedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Route by Score",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1050, 300],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "hot_check",
+              "leftValue": "={{ $json.leadScore }}",
+              "rightValue": 7,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Hot Lead - Telegram Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1250, 200],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=HOT LEAD INBOUND CALL\n\nPhone: {{ $json.phoneNumber }}\nScore: {{ $json.leadScore }}/10 ({{ $json.category }})\nBusiness: {{ $json.businessType }}\nUrgency: {{ $json.urgency }}\nNeeds: {{ $json.needs.join(', ') }}\nNext: {{ $json.nextAction }}\nDuration: {{ $json.duration }}s\nTime: {{ $json.qualifiedAt }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Save to CRM Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1450, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_CRM_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "InboundCalls"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Cold Lead Log",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1250, 400],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_CRM_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "ColdLeads"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Inbound Call Webhook": {
+      "main": [[{"node": "Parse Call Data", "type": "main", "index": 0}]]
+    },
+    "Parse Call Data": {
+      "main": [[{"node": "Qualify with AI", "type": "main", "index": 0}]]
+    },
+    "Qualify with AI": {
+      "main": [[{"node": "Parse Qualification", "type": "main", "index": 0}]]
+    },
+    "Parse Qualification": {
+      "main": [[{"node": "Route by Score", "type": "main", "index": 0}]]
+    },
+    "Route by Score": {
+      "main": [
+        [
+          {"node": "Hot Lead - Telegram Alert", "type": "main", "index": 0},
+          {"node": "Save to CRM Sheet", "type": "main", "index": 0}
+        ],
+        [{"node": "Cold Lead Log", "type": "main", "index": 0}]
+      ]
+    },
+    "Hot Lead - Telegram Alert": {
+      "main": [[{"node": "Save to CRM Sheet", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "lead-generation"},
+    {"name": "bland-ai"},
+    {"name": "P0"}
+  ]
+}
