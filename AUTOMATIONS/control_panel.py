@@ -1380,6 +1380,72 @@ def api_kpi():
     return jsonify(kpi)
 
 
+@app.route("/api/kpi/calendar")
+def api_kpi_calendar():
+    """Return full month calendar with daily KPIs and tasks."""
+    import calendar
+    now = datetime.now()
+    year, month = now.year, now.month + 1 if now.month < 12 else 1  # next month (April)
+    if now.month == 12: year += 1
+    _, days_in_month = calendar.monthrange(year, month)
+
+    # Detailed daily tasks for each day of the month
+    daily_plans = {
+        # WEEK 1: UNBLOCK + FIRST DOLLAR
+        1: {"theme": "UNBLOCK", "tasks": ["Create Gumroad account", "List 3 digital products (prompt packs, templates, guides)", "Set up Gumroad profile with banner + bio", "Draft 5 tweets about products", "Write 1 Twitter thread about automation"], "revenue_target": "$0", "content": "5 tweets + 1 thread"},
+        2: {"theme": "PRODUCTS", "tasks": ["List 7 more products on Gumroad (total 10)", "Create product thumbnails with Playwright screenshot", "Set up Twitter posting queue for the week", "Write 1 LinkedIn post about automation", "Engage with 10 accounts in your niche"], "revenue_target": "$0-10", "content": "5 tweets + 1 LinkedIn"},
+        3: {"theme": "FREELANCE", "tasks": ["Authenticate Stripe MCP", "Create Fiverr account + post first gig (Claude Code automation)", "Write 3 Fiverr gig descriptions", "Draft cold email template", "Write 1 Twitter thread about freelancing with AI"], "revenue_target": "$0-20", "content": "5 tweets + 1 thread"},
+        4: {"theme": "OUTREACH", "tasks": ["Post 3 more Fiverr gigs (different categories)", "Create Upwork profile", "Submit 5 Upwork proposals", "Reply to 20 Twitter accounts in your niche", "Research 10 potential cold email targets"], "revenue_target": "$0-50", "content": "5 tweets + 20 replies"},
+        5: {"theme": "COLD EMAIL", "tasks": ["Send first cold email batch (50 emails via SendGrid)", "Monitor Fiverr/Upwork for responses", "Write 1 Twitter thread about your system", "Post in 2 relevant subreddits", "Create 1 TikTok script"], "revenue_target": "$0-50", "content": "5 tweets + 1 thread + Reddit"},
+        6: {"theme": "ANALYZE", "tasks": ["Review all analytics (Twitter, Gumroad, Fiverr)", "Identify what got most traction", "Double down on best performing content format", "Engage with 15 accounts", "Plan next week based on data"], "revenue_target": "$0-100", "content": "3 tweets + engage"},
+        7: {"theme": "BATCH", "tasks": ["Batch create 15 tweets for next week", "Batch create 5 Twitter threads", "Create 3 TikTok scripts", "Optimize Gumroad listings based on views", "Review and respond to any inquiries"], "revenue_target": "$0-100", "content": "Buffer 15 tweets"},
+        # WEEK 2: DOUBLE DOWN ON WHAT WORKS
+        8: {"theme": "DATA REVIEW", "tasks": ["Deep analytics review of Week 1", "Calculate: which channel has best ROI per hour?", "3x effort on top channel", "Kill any channel with 0 traction", "Set up YouTube channel (faceless)"], "revenue_target": "$10-30", "content": "5 tweets + 1 thread"},
+        9: {"theme": "VIDEO", "tasks": ["Write first YouTube script (10-min educational)", "Generate voiceover with Edge TTS (free)", "Source stock footage / AI video clips", "Create thumbnail with Playwright", "Continue Fiverr/Upwork proposals (5 more)"], "revenue_target": "$10-30", "content": "5 tweets + YouTube script"},
+        10: {"theme": "SCALE EMAIL", "tasks": ["Cold email batch 2 (100 emails total)", "Follow up on batch 1 non-responders", "Track open rates and replies", "Write case study from any wins", "Post in 3 Facebook Groups (boomer content)"], "revenue_target": "$20-50", "content": "5 tweets + 1 thread"},
+        11: {"theme": "YOUTUBE", "tasks": ["Upload first YouTube video", "Optimize title/description/tags for SEO", "Create end screen + cards", "Share on Twitter and Reddit", "Start second video script"], "revenue_target": "$20-50", "content": "5 tweets + YouTube"},
+        12: {"theme": "TIKTOK", "tasks": ["Create TikTok account", "Post first 3 TikTok videos", "Use trending sounds + hooks", "Cross-post to YouTube Shorts", "Continue freelance work"], "revenue_target": "$20-50", "content": "5 tweets + 3 TikToks"},
+        13: {"theme": "EAS OUTREACH", "tasks": ["Research 10 local businesses needing automation", "Score with savvy_lead_scraper", "Send 10 personalized EAS outreach emails", "Follow up on freelance inquiries", "Post boomer content on Facebook"], "revenue_target": "$20-100", "content": "3 tweets + EAS outreach"},
+        14: {"theme": "WEEK 2 REVIEW", "tasks": ["Review Week 2 metrics vs targets", "Calculate total revenue so far", "Adjust Week 3 plan based on what's working", "Batch content for next week", "Celebrate any wins (even small ones)"], "revenue_target": "$20-100", "content": "Buffer 15 tweets"},
+        # WEEK 3: SCALE WINNERS, KILL LOSERS
+        15: {"theme": "SCALE/KILL", "tasks": ["Kill ventures with 0 traction after 14 days", "3x resources on top performing channel", "Set up newsletter (Beehiiv or listmonk)", "Create lead magnet for email list", "Write launch announcement"], "revenue_target": "$30-100", "content": "5 tweets + newsletter setup"},
+        16: {"theme": "NEWSLETTER", "tasks": ["Write first newsletter issue", "Set up opt-in on all properties (Gumroad, YouTube, Twitter bio)", "Create welcome email sequence (3 emails)", "Cross-promote newsletter in content", "Continue freelance deliveries"], "revenue_target": "$30-100", "content": "5 tweets + newsletter"},
+        17: {"theme": "AFFILIATE", "tasks": ["Research 5 affiliate programs (boomer demo: health, golf, fishing)", "Apply to ClickBank + Amazon Associates", "Write first 3 affiliate review posts", "Post in relevant Facebook Groups", "Cold email batch 3 (150 total)"], "revenue_target": "$30-100", "content": "5 tweets + 3 reviews"},
+        18: {"theme": "EAS FOLLOW UP", "tasks": ["Follow up on EAS outreach (call/email)", "Send 10 more EAS prospecting emails", "Create EAS case study draft", "Continue affiliate content", "Post YouTube video #2"], "revenue_target": "$30-150", "content": "5 tweets + YouTube"},
+        19: {"theme": "CONTENT MACHINE", "tasks": ["Batch create 10 TikToks", "Batch create 5 YouTube Shorts", "Write 3 newsletter sections", "Create 5 Facebook posts (boomer)", "Automate posting schedule for next week"], "revenue_target": "$30-150", "content": "5 tweets + TikTok batch"},
+        20: {"theme": "FACEBOOK ADS", "tasks": ["If budget allows: set up $5/day Facebook ad (boomer demo)", "Target men 55-70, interests: golf/fishing/health", "Use best performing organic content as ad creative", "If no budget: double down on organic Facebook Groups", "Review all channel metrics"], "revenue_target": "$50-200", "content": "3 tweets + FB posts"},
+        21: {"theme": "WEEK 3 REVIEW", "tasks": ["Monthly trajectory check: on track for $1K?", "If behind: identify biggest bottleneck and fix", "If ahead: consider adding 1 new venture", "Batch content for final week", "Update KPI dashboard with actuals"], "revenue_target": "$50-200", "content": "Buffer next week"},
+        # WEEK 4: COMPOUND + SET UP MAY
+        22: {"theme": "RANK CHANNELS", "tasks": ["Rank all channels by revenue per hour invested", "Top 3 channels get 80% of effort for rest of month", "Bottom channels get paused or automated", "Set up any recurring revenue (subscriptions, retainers)", "Write proposal for highest-value EAS prospect"], "revenue_target": "$50-200", "content": "5 tweets + best format"},
+        23: {"theme": "RECURRING REV", "tasks": ["Convert any one-time sales to subscriptions where possible", "Pitch retainer to best freelance client", "Set up membership tier on Gumroad or Whop", "Create exclusive content for subscribers", "Continue newsletter growth"], "revenue_target": "$50-200", "content": "5 tweets + newsletter"},
+        24: {"theme": "LAUNCH", "tasks": ["Pick best product for Product Hunt launch", "Prepare launch assets (screenshots, description, video)", "Schedule launch for optimal day (Tuesday-Thursday)", "Recruit 5 people to upvote at launch", "Post pre-launch content on all channels"], "revenue_target": "$50-200", "content": "5 tweets + launch prep"},
+        25: {"theme": "PRODUCT HUNT", "tasks": ["Execute Product Hunt launch", "Monitor and respond to all comments", "Share launch link everywhere", "Write Twitter thread about the launch story", "Send launch announcement to email list"], "revenue_target": "$50-300", "content": "5 tweets + PH engagement"},
+        26: {"theme": "EAS CLOSE", "tasks": ["Push hardest EAS prospect to close", "Send final proposal with urgency", "If deal closes: begin delivery immediately", "If no close: analyze why and adjust pitch", "Continue all automated content"], "revenue_target": "$100-500", "content": "5 tweets + case study"},
+        27: {"theme": "OPTIMIZE", "tasks": ["A/B test best performing content formats", "Optimize email subject lines based on open rates", "Improve Gumroad listing copy for top products", "Add upsells/cross-sells to best sellers", "Review affiliate performance"], "revenue_target": "$100-500", "content": "3 tweets + optimize"},
+        28: {"theme": "MAY PLANNING", "tasks": ["Full month review: revenue vs all 3 scenarios", "Identify top 3 ventures for May focus", "Set May targets based on April data", "Create May roadmap with adjusted KPIs", "Document all learnings for procedural memory"], "revenue_target": "$100-500", "content": "Monthly report"},
+        29: {"theme": "SYSTEMS", "tasks": ["Automate anything you did manually this month", "Set up new cron jobs for recurring tasks", "Update PRINTMAXX system map with changes", "Clean up dead ventures and orphan docs", "Prep for May sprint"], "revenue_target": "$100-500", "content": "3 tweets"},
+        30: {"theme": "MONTH CLOSE", "tasks": ["Final revenue count for April", "Update KPI dashboard with final numbers", "Write retrospective: what worked, what didn't, what surprised", "Set aggressive but realistic May targets", "Celebrate progress (any revenue > $0 is a win)"], "revenue_target": "$100-500", "content": "Thread: month 1 results"},
+    }
+
+    calendar_data = []
+    for day in range(1, min(days_in_month + 1, 31)):
+        plan = daily_plans.get(day, {"theme": "FLEX", "tasks": ["Continue top priorities", "Maintain content schedule", "Monitor metrics"], "revenue_target": "TBD", "content": "3-5 tweets"})
+        is_today = (now.month == month and now.day == day) or (now.month == month - 1 and day == 1)
+        calendar_data.append({
+            "day": day,
+            "weekday": calendar.day_abbr[calendar.weekday(year, month, day)],
+            "theme": plan["theme"],
+            "tasks": plan["tasks"],
+            "revenue_target": plan["revenue_target"],
+            "content": plan["content"],
+            "is_today": is_today,
+            "is_past": False,  # April hasn't started yet
+            "week": (day - 1) // 7 + 1,
+        })
+
+    return jsonify({"month": f"{calendar.month_name[month]} {year}", "days": calendar_data, "goal": "$1,000"})
+
+
 @app.route("/api/kpi/complete", methods=["POST"])
 def api_kpi_complete():
     """Mark a blocker as complete."""
