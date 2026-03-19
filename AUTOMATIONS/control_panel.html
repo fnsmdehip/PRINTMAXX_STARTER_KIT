@@ -1883,15 +1883,25 @@ body {
     </div>
 
     <div class="glass-card" style="margin-top:16px; display:none;" id="kpi-day-detail">
-      <div class="card-title"><i class="ti ti-clipboard-list"></i>Day <span id="kpi-day-num"></span>: <span id="kpi-day-theme"></span></div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div class="card-title" style="margin:0;"><i class="ti ti-clipboard-list"></i>DAY <span id="kpi-day-num"></span> // <span id="kpi-day-theme" style="color:var(--accent);"></span></div>
+        <div id="kpi-day-week-phase" style="font-family:JetBrains Mono;font-size:0.7em;padding:3px 10px;border-radius:4px;background:var(--accent);color:#000;font-weight:700;letter-spacing:1px;"></div>
+      </div>
+      <!-- Scores Bar -->
+      <div id="kpi-day-scores" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;"></div>
+      <!-- Targets Grid -->
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:12px;" id="kpi-day-targets-grid"></div>
+      <!-- Main Content: Tasks + Sidebar -->
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:16px;">
         <div>
-          <div style="font-size:0.8em; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Tasks</div>
+          <div style="font-size:0.7em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">OPERATIONS (<span id="kpi-day-task-count">0</span>)</div>
           <div id="kpi-day-tasks"></div>
         </div>
         <div>
-          <div style="font-size:0.8em; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Targets</div>
-          <div id="kpi-day-targets"></div>
+          <div style="font-size:0.7em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">AUTOMATION CHECKS</div>
+          <div id="kpi-day-automation" style="margin-bottom:16px;"></div>
+          <div style="font-size:0.7em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">RESEARCH QUEUE</div>
+          <div id="kpi-day-research"></div>
         </div>
       </div>
     </div>
@@ -3151,23 +3161,31 @@ async function loadCalendar() {
     // Day cells
     var cells = d.days.map(function(day) {
       var colors = {
-        'UNBLOCK':'var(--danger)','PRODUCTS':'var(--purple)','FREELANCE':'var(--blue)',
-        'OUTREACH':'var(--warn)','COLD EMAIL':'var(--warn)','ANALYZE':'var(--accent)',
-        'BATCH':'var(--text-dim)','DATA REVIEW':'var(--accent)','VIDEO':'var(--purple)',
-        'SCALE EMAIL':'var(--warn)','YOUTUBE':'var(--danger)','TIKTOK':'var(--purple)',
-        'EAS OUTREACH':'var(--blue)','SCALE/KILL':'var(--danger)','NEWSLETTER':'var(--blue)',
-        'AFFILIATE':'var(--accent)','EAS FOLLOW UP':'var(--blue)','CONTENT MACHINE':'var(--purple)',
-        'FACEBOOK ADS':'var(--blue)','LAUNCH':'var(--accent)','PRODUCT HUNT':'var(--accent)',
-        'EAS CLOSE':'var(--blue)','OPTIMIZE':'var(--accent)','MAY PLANNING':'var(--text-dim)',
-        'SYSTEMS':'var(--text-dim)','MONTH CLOSE':'var(--accent)','RECURRING REV':'var(--accent)',
-        'RANK CHANNELS':'var(--accent)','FLEX':'var(--text-dim)'
+        'DAY ZERO':'var(--danger)','PRODUCT BLITZ':'var(--purple)','FREELANCE LAUNCH':'var(--blue)',
+        'FIRST BLOOD':'var(--danger)','OUTREACH MACHINE':'var(--warn)','DATA WAR ROOM':'var(--accent)',
+        'CONTENT FACTORY':'var(--purple)','TRIPLE DOWN':'var(--danger)','VIDEO BLITZ':'var(--purple)',
+        'EMAIL SCALE':'var(--warn)','MULTI-PLATFORM':'var(--blue)','EAS OFFENSIVE':'var(--blue)',
+        'PAID EXPERIMENT':'var(--warn)','WEEK 2 WAR ROOM':'var(--accent)','KILL AND SCALE':'var(--danger)',
+        'NEWSLETTER ENGINE':'var(--blue)','AFFILIATE LAUNCH':'var(--accent)','EAS CLOSE PUSH':'var(--blue)',
+        'CONTENT FLOOD':'var(--purple)','EDGE TACTICS':'var(--danger)','WEEK 3 CALIBRATION':'var(--accent)',
+        'REVENUE ENGINE':'var(--accent)','RECURRING REVENUE':'var(--accent)','PRODUCT HUNT PREP':'var(--purple)',
+        'LAUNCH DAY':'var(--danger)','EAS FINAL PUSH':'var(--blue)','CONVERSION OPTIMIZATION':'var(--accent)',
+        'MAY WAR PLAN':'var(--warn)','AUTOMATE EVERYTHING':'var(--purple)','MONTH 1 CLOSE':'var(--accent)',
+        'FLEX':'var(--text-dim)'
       };
       var color = colors[day.theme] || 'var(--text-dim)';
       var border = day.is_today ? 'border:2px solid var(--accent);' : 'border:1px solid var(--border);';
-      return '<div onclick="showDay(' + day.day + ')" style="' + border + 'border-radius:8px;padding:6px;cursor:pointer;background:var(--panel);min-height:60px;transition:all 0.15s;" onmouseenter="this.style.borderColor=\'var(--accent)\'" onmouseleave="this.style.borderColor=\'' + (day.is_today ? 'var(--accent)' : 'var(--border)') + '\'">' +
-        '<div style="font-family:JetBrains Mono;font-size:0.9em;font-weight:700;color:var(--text);">' + day.day + '</div>' +
-        '<div style="font-size:0.6em;color:' + color + ';font-weight:600;margin-top:2px;">' + day.theme + '</div>' +
-        '<div style="font-size:0.6em;color:var(--accent);margin-top:2px;">' + day.revenue_target + '</div>' +
+      var sc = day.scores || {};
+      var engScore = sc.engagement || 0;
+      var ctScore = sc.content || 0;
+      var orScore = sc.outreach || 0;
+      var intensity = Math.min(100, Math.round((engScore + ctScore + orScore) / 4));
+      var intensityBar = '<div style="margin-top:3px;height:2px;background:var(--border);border-radius:1px;overflow:hidden;"><div style="width:' + intensity + '%;height:100%;background:' + color + ';"></div></div>';
+      return '<div onclick="showDay(' + day.day + ')" style="' + border + 'border-radius:8px;padding:6px;cursor:pointer;background:var(--panel);min-height:72px;transition:all 0.15s;" onmouseenter="this.style.borderColor=\'var(--accent)\'" onmouseleave="this.style.borderColor=\'' + (day.is_today ? 'var(--accent)' : 'var(--border)') + '\'">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:JetBrains Mono;font-size:0.9em;font-weight:700;color:var(--text);">' + day.day + '</span><span style="font-size:0.5em;color:var(--text-dim);font-family:JetBrains Mono;">' + (day.week_phase || '').substring(0,4) + '</span></div>' +
+        '<div style="font-size:0.55em;color:' + color + ';font-weight:700;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + day.theme + '</div>' +
+        '<div style="font-size:0.55em;color:var(--accent);margin-top:1px;font-family:JetBrains Mono;font-weight:600;">' + day.revenue_target + '</div>' +
+        intensityBar +
       '</div>';
     }).join('');
     cal.innerHTML = header + padding + cells;
@@ -3182,12 +3200,68 @@ function showDay(dayNum) {
   detail.style.display = 'block';
   document.getElementById('kpi-day-num').textContent = dayNum;
   document.getElementById('kpi-day-theme').textContent = day.theme;
-  document.getElementById('kpi-day-tasks').innerHTML = day.tasks.map(function(t) {
-    return '<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:0.85em;display:flex;gap:8px;"><span style="color:var(--accent);">&#9654;</span><span>' + t + '</span></div>';
+  document.getElementById('kpi-day-week-phase').textContent = 'WK' + day.week + ' // ' + (day.week_phase || 'SCALE');
+
+  // Scores bar
+  var sc = day.scores || {};
+  var scoresHtml = [
+    {label:'ENGAGEMENT', value:sc.engagement||0, color:'var(--accent)', icon:'&#9889;'},
+    {label:'CONTENT', value:sc.content||0, color:'var(--purple)', icon:'&#9998;'},
+    {label:'OUTREACH', value:sc.outreach||0, color:'var(--warn)', icon:'&#9993;'}
+  ].map(function(s) {
+    return '<div style="background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:8px;text-align:center;">' +
+      '<div style="font-size:0.6em;color:var(--text-dim);letter-spacing:1px;font-family:JetBrains Mono;">' + s.icon + ' ' + s.label + '</div>' +
+      '<div style="font-family:JetBrains Mono;font-size:1.4em;color:' + s.color + ';font-weight:700;margin-top:2px;">' + s.value + '</div>' +
+    '</div>';
   }).join('');
-  document.getElementById('kpi-day-targets').innerHTML =
-    '<div style="padding:8px;background:var(--panel);border-radius:8px;margin-bottom:8px;"><div style="font-size:0.75em;color:var(--text-dim);">Revenue Target</div><div style="font-family:JetBrains Mono;font-size:1.3em;color:var(--accent);font-weight:700;">' + day.revenue_target + '</div></div>' +
-    '<div style="padding:8px;background:var(--panel);border-radius:8px;"><div style="font-size:0.75em;color:var(--text-dim);">Content Target</div><div style="font-family:JetBrains Mono;font-size:0.9em;color:var(--blue);">' + day.content + '</div></div>';
+  document.getElementById('kpi-day-scores').innerHTML = scoresHtml;
+
+  // Targets grid (6 columns: Revenue, Content, Engagement, Outreach, Automation, Research)
+  var ct = day.content || {};
+  var eg = day.engagement || {};
+  var or_d = day.outreach || {};
+  var autoChecks = day.automation_checks || [];
+  var research = day.research || [];
+  var contentStr = (ct.tweets||0) + 'tw ' + (ct.threads||0) + 'th ' + (ct.tiktoks||0) + 'tt ' + (ct.youtube||0) + 'yt ' + (ct.newsletters||0) + 'nl';
+  var engStr = (eg.replies||0) + 'rp ' + (eg.dms||0) + 'dm ' + (eg.comments||0) + 'cm ' + (eg.follows||0) + 'fw';
+  var outStr = (or_d.cold_emails||0) + 'em ' + (or_d.proposals||0) + 'pr ' + (or_d.calls||0) + 'cl';
+  function targetCell(label, mainVal, subVal, color) {
+    return '<div style="background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:8px;">' +
+      '<div style="font-size:0.55em;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;font-family:JetBrains Mono;">' + label + '</div>' +
+      '<div style="font-family:JetBrains Mono;font-size:0.95em;color:' + color + ';font-weight:700;margin-top:4px;">' + mainVal + '</div>' +
+      '<div style="font-size:0.55em;color:var(--text-dim);margin-top:2px;font-family:JetBrains Mono;">' + subVal + '</div>' +
+    '</div>';
+  }
+  document.getElementById('kpi-day-targets-grid').innerHTML =
+    targetCell('REVENUE', day.revenue_target, 'target', 'var(--accent)') +
+    targetCell('CONTENT', (ct.tweets||0)+((ct.threads||0)*3)+((ct.tiktoks||0)*2)+((ct.youtube||0)*5)+((ct.newsletters||0)*4) + ' pts', contentStr, 'var(--purple)') +
+    targetCell('ENGAGE', (eg.replies||0)+(eg.dms||0)+(eg.comments||0)+(eg.follows||0) + ' acts', engStr, 'var(--blue)') +
+    targetCell('OUTREACH', (or_d.cold_emails||0)+(or_d.proposals||0)+(or_d.calls||0) + ' total', outStr, 'var(--warn)') +
+    targetCell('AUTO', autoChecks.length + ' checks', autoChecks.slice(0,2).join(', '), 'var(--text)') +
+    targetCell('RESEARCH', research.length + ' items', research.slice(0,2).join(', '), 'var(--text-dim)');
+
+  // Tasks with checkboxes
+  document.getElementById('kpi-day-task-count').textContent = day.tasks.length;
+  document.getElementById('kpi-day-tasks').innerHTML = day.tasks.map(function(t, i) {
+    var id = 'task-' + dayNum + '-' + i;
+    return '<div style="padding:5px 0;border-bottom:1px solid var(--border);font-size:0.8em;display:flex;gap:8px;align-items:flex-start;">' +
+      '<input type="checkbox" id="' + id + '" style="margin-top:3px;accent-color:var(--accent);cursor:pointer;" onchange="this.parentElement.style.opacity=this.checked?\'0.4\':\'1\'">' +
+      '<label for="' + id + '" style="cursor:pointer;line-height:1.4;">' + t + '</label>' +
+    '</div>';
+  }).join('');
+
+  // Automation checks
+  document.getElementById('kpi-day-automation').innerHTML = autoChecks.map(function(c) {
+    return '<div style="padding:4px 0;font-size:0.75em;display:flex;gap:6px;align-items:center;border-bottom:1px solid var(--border);">' +
+      '<span style="color:var(--warn);font-size:0.8em;">&#9679;</span><span style="font-family:JetBrains Mono;">' + c + '</span></div>';
+  }).join('') || '<div style="font-size:0.75em;color:var(--text-dim);">None scheduled</div>';
+
+  // Research queue
+  document.getElementById('kpi-day-research').innerHTML = research.map(function(r) {
+    return '<div style="padding:4px 0;font-size:0.75em;display:flex;gap:6px;align-items:center;border-bottom:1px solid var(--border);">' +
+      '<span style="color:var(--blue);font-size:0.8em;">&#9679;</span><span style="font-family:JetBrains Mono;">' + r + '</span></div>';
+  }).join('') || '<div style="font-size:0.75em;color:var(--text-dim);">None scheduled</div>';
+
   detail.scrollIntoView({behavior:'smooth'});
 }
 
