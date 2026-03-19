@@ -1309,6 +1309,264 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
 }
+
+/* --- N8N WORKFLOWS TAB --- */
+.n8n-link-btn {
+  background: rgba(68,136,255,0.15);
+  color: var(--blue);
+  border: 1px solid rgba(68,136,255,0.3);
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-size: 11px;
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s;
+}
+.n8n-link-btn:hover { background: rgba(68,136,255,0.25); border-color: rgba(68,136,255,0.5); }
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.workflow-card {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  transition: border-color 0.2s;
+}
+.workflow-card:hover { border-color: var(--border-hover); }
+.workflow-name {
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.workflow-meta {
+  font-size: 10px;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+.wf-badge {
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+.wf-active { background: var(--accent-dim); color: var(--accent); }
+.wf-inactive { background: var(--danger-dim); color: var(--danger); }
+
+.exec-row {
+  display: grid;
+  grid-template-columns: 1fr 120px 80px 100px;
+  gap: 8px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px;
+  align-items: center;
+}
+.exec-row:last-child { border-bottom: none; }
+.exec-header {
+  font-weight: 600;
+  color: var(--text-dim);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.exec-status {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  text-align: center;
+}
+.exec-success { background: var(--accent-dim); color: var(--accent); }
+.exec-error { background: var(--danger-dim); color: var(--danger); }
+.exec-running { background: var(--yellow-dim); color: var(--yellow); }
+
+/* --- SKILL LIBRARY TAB --- */
+.skill-search-input {
+  width: 100%;
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.skill-search-input:focus { border-color: var(--accent); }
+.skill-search-input::placeholder { color: var(--text-muted); }
+
+.skill-item {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  transition: border-color 0.2s;
+}
+.skill-item:hover { border-color: var(--border-hover); }
+.skill-name {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.skill-desc {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.skill-meta {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 6px;
+}
+
+/* --- HANDOFF CHAINS TAB --- */
+.chain-card {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+}
+.chain-card:hover { border-color: var(--border-hover); }
+.chain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chain-name {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.chain-run-btn {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(0,255,136,0.3);
+  border-radius: var(--radius-sm);
+  padding: 5px 14px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.chain-run-btn:hover { background: rgba(0,255,136,0.25); border-color: rgba(0,255,136,0.5); }
+.chain-run-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.chain-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.chain-step {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-dim);
+}
+.chain-arrow {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+/* --- DAG TAB --- */
+.dag-container {
+  position: relative;
+  padding: 20px 0;
+}
+.dag-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.dag-layer-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 60px;
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+}
+.dag-node {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  min-width: 160px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.dag-node-name {
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+.dag-node-desc {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+.dag-node-status {
+  font-size: 9px;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 4px;
+  font-weight: 600;
+}
+.dag-node.dag-ok { border-color: rgba(0,255,136,0.4); }
+.dag-node.dag-ok .dag-node-status { color: var(--accent); }
+.dag-node.dag-failed { border-color: rgba(255,51,85,0.4); }
+.dag-node.dag-failed .dag-node-status { color: var(--danger); }
+.dag-node.dag-running { border-color: rgba(234,179,8,0.4); animation: glow-pulse 2s infinite; }
+.dag-node.dag-running .dag-node-status { color: var(--yellow); }
+.dag-node.dag-pending { border-color: var(--border); }
+.dag-node.dag-pending .dag-node-status { color: var(--text-muted); }
+
+.dag-connector {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.dag-info-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px;
+}
+.dag-info-row:last-child { border-bottom: none; }
+.dag-info-label {
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+.dag-info-value {
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+}
 </style>
 </head>
 <body>
@@ -1354,6 +1612,10 @@ body {
   <div class="tab" data-tab="actions"><i class="ti ti-bolt"></i>Actions</div>
   <div class="tab" data-tab="blockers"><i class="ti ti-alert-triangle"></i>Blockers</div>
   <div class="tab" data-tab="ops"><i class="ti ti-chart-treemap"></i>Ops Intel</div>
+  <div class="tab" data-tab="n8n"><i class="ti ti-topology-star-3"></i>n8n Workflows</div>
+  <div class="tab" data-tab="skills"><i class="ti ti-brain"></i>Skill Library</div>
+  <div class="tab" data-tab="chains"><i class="ti ti-link"></i>Handoff Chains</div>
+  <div class="tab" data-tab="dag"><i class="ti ti-git-merge"></i>Intel DAG</div>
 </div>
 
 <div class="content">
@@ -1537,6 +1799,53 @@ body {
     </div>
   </div>
 
+  <!-- ====== N8N WORKFLOWS TAB ====== -->
+  <div class="tab-content" id="tab-n8n">
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="card-title" style="display:flex; justify-content:space-between; align-items:center;">
+        <span><i class="ti ti-topology-star-3"></i>n8n Workflows (localhost:5678)</span>
+        <a href="http://localhost:5678" target="_blank" class="n8n-link-btn">Open n8n UI <i class="ti ti-external-link" style="font-size:12px"></i></a>
+      </div>
+      <div class="workflow-grid" id="n8n-workflows"></div>
+    </div>
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-history"></i>Recent Executions</div>
+      <div id="n8n-executions" style="max-height:400px; overflow-y:auto;"></div>
+    </div>
+  </div>
+
+  <!-- ====== SKILL LIBRARY TAB ====== -->
+  <div class="tab-content" id="tab-skills">
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-brain"></i>Procedural Memory Skills</div>
+      <div style="margin-bottom:12px;">
+        <input type="text" class="skill-search-input" id="skill-search" placeholder="Search skills..." onkeyup="debounceSkillSearch()">
+      </div>
+      <div id="skills-list" style="max-height:600px; overflow-y:auto;"></div>
+    </div>
+  </div>
+
+  <!-- ====== HANDOFF CHAINS TAB ====== -->
+  <div class="tab-content" id="tab-chains">
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-link"></i>Handoff Chains (5 pipelines)</div>
+      <div id="chains-list"></div>
+    </div>
+    <div class="output-panel" id="chain-output"></div>
+  </div>
+
+  <!-- ====== INTELLIGENCE DAG TAB ====== -->
+  <div class="tab-content" id="tab-dag">
+    <div class="glass-card">
+      <div class="card-title"><i class="ti ti-git-merge"></i>Morning Intelligence DAG</div>
+      <div id="dag-viz"></div>
+    </div>
+    <div class="glass-card" style="margin-top:16px;">
+      <div class="card-title"><i class="ti ti-file-info"></i>DAG Checkpoint</div>
+      <div id="dag-checkpoint-info"></div>
+    </div>
+  </div>
+
 </div>
 
 <div class="toast" id="toast"></div>
@@ -1601,6 +1910,10 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     if (tab.dataset.tab === 'actions') loadActions();
     if (tab.dataset.tab === 'blockers') loadBlockers();
     if (tab.dataset.tab === 'ops') loadOpsIntel();
+    if (tab.dataset.tab === 'n8n') loadN8nWorkflows();
+    if (tab.dataset.tab === 'skills') loadSkills();
+    if (tab.dataset.tab === 'chains') loadChains();
+    if (tab.dataset.tab === 'dag') loadDag();
   });
 });
 
@@ -2430,6 +2743,305 @@ function renderRevenueStatus(status) {
     ]));
   });
   container.appendChild(details);
+}
+
+// ---------- N8N WORKFLOWS ----------
+async function loadN8nWorkflows() {
+  try {
+    var [wfR, exR] = await Promise.all([
+      fetch(API + '/api/n8n/workflows'),
+      fetch(API + '/api/n8n/executions')
+    ]);
+    var wfData = await wfR.json();
+    var exData = await exR.json();
+    renderWorkflows(wfData);
+    renderExecutions(exData);
+  } catch (e) {
+    var c = clearEl('n8n-workflows');
+    c.appendChild(el('p', {style:'color:var(--danger); padding:8px; font-size:11px;'}, 'Failed to load n8n data: ' + e.message));
+  }
+}
+
+function renderWorkflows(data) {
+  var container = clearEl('n8n-workflows');
+  if (data.error) {
+    container.appendChild(el('p', {style:'color:var(--warn); padding:8px; font-size:11px;'}, data.error));
+    return;
+  }
+  var workflows = data.data || data.workflows || [];
+  if (!workflows.length && !data.error) {
+    // Might be the response itself is an array
+    if (Array.isArray(data)) workflows = data;
+  }
+  if (!workflows.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); padding:8px; font-size:11px;'}, 'No workflows found'));
+    return;
+  }
+  workflows.forEach(function(wf) {
+    var isActive = wf.active === true || wf.active === 'true';
+    var card = el('div', {className:'workflow-card'}, [
+      el('div', {className:'workflow-name'}, [
+        el('span', {className:'wf-badge ' + (isActive ? 'wf-active' : 'wf-inactive')}, isActive ? 'ACTIVE' : 'OFF'),
+        document.createTextNode(wf.name || wf.id || 'Untitled')
+      ]),
+      el('div', {className:'workflow-meta'}, [
+        document.createTextNode('ID: ' + (wf.id || '--')),
+        wf.updatedAt ? document.createTextNode(' | Updated: ' + new Date(wf.updatedAt).toLocaleDateString()) : document.createTextNode('')
+      ])
+    ]);
+    container.appendChild(card);
+  });
+}
+
+function renderExecutions(data) {
+  var container = clearEl('n8n-executions');
+  if (data.error) {
+    container.appendChild(el('p', {style:'color:var(--warn); padding:8px; font-size:11px;'}, data.error));
+    return;
+  }
+  var executions = data.data || data.executions || [];
+  if (!executions.length && !data.error) {
+    if (Array.isArray(data)) executions = data;
+  }
+  // Header
+  container.appendChild(el('div', {className:'exec-row exec-header'}, [
+    el('span', {}, 'Workflow'),
+    el('span', {}, 'Started'),
+    el('span', {}, 'Status'),
+    el('span', {}, 'Duration')
+  ]));
+  if (!executions.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); padding:8px; font-size:11px;'}, 'No recent executions'));
+    return;
+  }
+  executions.slice(0, 20).forEach(function(ex) {
+    var status = (ex.status || ex.finished === false ? 'running' : 'unknown').toLowerCase();
+    if (ex.status) status = ex.status.toLowerCase();
+    var statusClass = status === 'success' ? 'exec-success' : status === 'error' || status === 'failed' ? 'exec-error' : 'exec-running';
+    var startStr = ex.startedAt ? new Date(ex.startedAt).toLocaleTimeString() : '--';
+    var dur = '';
+    if (ex.startedAt && ex.stoppedAt) {
+      var ms = new Date(ex.stoppedAt) - new Date(ex.startedAt);
+      dur = ms < 1000 ? ms + 'ms' : (ms / 1000).toFixed(1) + 's';
+    }
+    var wfName = (ex.workflowData && ex.workflowData.name) || ex.workflowId || '--';
+    container.appendChild(el('div', {className:'exec-row'}, [
+      el('span', {style:'color:var(--text);'}, String(wfName)),
+      el('span', {style:'font-family:JetBrains Mono,monospace; font-size:10px; color:var(--text-dim);'}, startStr),
+      el('span', {className:'exec-status ' + statusClass}, status.toUpperCase()),
+      el('span', {style:'font-family:JetBrains Mono,monospace; font-size:10px; color:var(--text-dim);'}, dur)
+    ]));
+  });
+}
+
+// ---------- SKILL LIBRARY ----------
+var _skillSearchTimer = null;
+function debounceSkillSearch() {
+  clearTimeout(_skillSearchTimer);
+  _skillSearchTimer = setTimeout(function() {
+    loadSkills(document.getElementById('skill-search').value);
+  }, 300);
+}
+
+async function loadSkills(query) {
+  query = query || '';
+  try {
+    var url = API + '/api/sovrun/skills';
+    if (query) url += '?q=' + encodeURIComponent(query);
+    var resp = await fetch(url);
+    var data = await resp.json();
+    renderSkills(data);
+  } catch (e) {
+    var c = clearEl('skills-list');
+    c.appendChild(el('p', {style:'color:var(--danger); padding:8px; font-size:11px;'}, 'Failed to load skills: ' + e.message));
+  }
+}
+
+function renderSkills(data) {
+  var container = clearEl('skills-list');
+  if (data.error) {
+    container.appendChild(el('p', {style:'color:var(--warn); padding:8px; font-size:11px;'}, data.error));
+    return;
+  }
+  var skills = data.skills || [];
+  if (!skills.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); padding:8px; font-size:11px;'}, data.query ? 'No skills matching "' + data.query + '"' : 'No skills in procedural memory'));
+    return;
+  }
+  // Show count
+  container.appendChild(el('div', {style:'font-size:10px; color:var(--text-muted); margin-bottom:8px; font-family:JetBrains Mono,monospace;'}, data.count + ' skill(s) found'));
+  skills.forEach(function(sk) {
+    var item = el('div', {className:'skill-item'}, [
+      el('div', {className:'skill-name'}, sk.name || sk.skill_name || 'Unnamed'),
+      el('div', {className:'skill-desc'}, sk.description || sk.content || sk.steps || '--')
+    ]);
+    // Add meta info if available
+    var meta = [];
+    if (sk.source) meta.push('source: ' + sk.source);
+    if (sk.confidence) meta.push('confidence: ' + sk.confidence);
+    if (sk.created_at) meta.push('created: ' + sk.created_at);
+    if (sk.use_count) meta.push('uses: ' + sk.use_count);
+    if (meta.length) {
+      item.appendChild(el('div', {className:'skill-meta'}, meta.join(' | ')));
+    }
+    container.appendChild(item);
+  });
+}
+
+// ---------- HANDOFF CHAINS ----------
+async function loadChains() {
+  try {
+    var resp = await fetch(API + '/api/sovrun/chains');
+    var data = await resp.json();
+    renderChains(data);
+  } catch (e) {
+    var c = clearEl('chains-list');
+    c.appendChild(el('p', {style:'color:var(--danger); padding:8px; font-size:11px;'}, 'Failed to load chains: ' + e.message));
+  }
+}
+
+function renderChains(data) {
+  var container = clearEl('chains-list');
+  var chains = data.chains || [];
+  if (!chains.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); padding:8px; font-size:11px;'}, 'No chains configured'));
+    return;
+  }
+  chains.forEach(function(chain) {
+    var stepsEl = el('div', {className:'chain-steps'});
+    chain.steps.forEach(function(step, i) {
+      if (i > 0) stepsEl.appendChild(el('span', {className:'chain-arrow'}, '\u2192'));
+      stepsEl.appendChild(el('span', {className:'chain-step'}, step));
+    });
+
+    var runBtn = el('button', {
+      className: 'chain-run-btn',
+      onclick: function() { runChain(chain.name, this); }
+    }, 'Run Chain');
+
+    var card = el('div', {className:'chain-card'}, [
+      el('div', {className:'chain-header'}, [
+        el('span', {className:'chain-name'}, chain.name.replace(/_/g, ' ')),
+        runBtn
+      ]),
+      stepsEl
+    ]);
+    container.appendChild(card);
+  });
+}
+
+async function runChain(chainName, btn) {
+  btn.disabled = true;
+  btn.textContent = 'Running...';
+  var output = document.getElementById('chain-output');
+  output.className = 'output-panel visible';
+  output.textContent = 'Executing chain: ' + chainName + '...';
+  try {
+    var resp = await fetch(API + '/api/sovrun/chains/' + chainName + '/run', {method: 'POST'});
+    var data = await resp.json();
+    if (data.success) {
+      output.textContent = data.output || 'Chain completed successfully.';
+      toast('Chain "' + chainName + '" completed');
+    } else {
+      output.textContent = 'ERROR:\n' + (data.error || data.output || 'Unknown error');
+      toast('Chain failed', true);
+    }
+  } catch (e) {
+    output.textContent = 'Request failed: ' + e.message;
+    toast('Chain request failed', true);
+  }
+  btn.disabled = false;
+  btn.textContent = 'Run Chain';
+}
+
+// ---------- INTELLIGENCE DAG ----------
+async function loadDag() {
+  try {
+    var resp = await fetch(API + '/api/sovrun/dag');
+    var data = await resp.json();
+    renderDag(data);
+  } catch (e) {
+    var c = clearEl('dag-viz');
+    c.appendChild(el('p', {style:'color:var(--danger); padding:8px; font-size:11px;'}, 'Failed to load DAG: ' + e.message));
+  }
+}
+
+function renderDag(data) {
+  var container = clearEl('dag-viz');
+  var steps = data.dag_steps || [];
+
+  if (!steps.length) {
+    container.appendChild(el('p', {style:'color:var(--text-muted); padding:8px; font-size:11px;'}, 'No DAG data available'));
+    return;
+  }
+
+  var dagEl = el('div', {className:'dag-container'});
+
+  // Group steps by layer
+  var layers = {};
+  steps.forEach(function(s) {
+    var L = s.layer || 1;
+    if (!layers[L]) layers[L] = [];
+    layers[L].push(s);
+  });
+
+  var layerLabels = {1: 'SCRAPE', 2: 'MERGE', 3: 'PROCESS', 4: 'ROUTE', 5: 'RANK'};
+  var layerKeys = Object.keys(layers).sort(function(a,b){ return a - b; });
+
+  layerKeys.forEach(function(L, idx) {
+    if (idx > 0) {
+      dagEl.appendChild(el('div', {className:'dag-connector'}, '\u2193'));
+    }
+
+    var layerEl = el('div', {className:'dag-layer'});
+    layerEl.appendChild(el('div', {className:'dag-layer-label'}, layerLabels[L] || 'L' + L));
+
+    layers[L].forEach(function(step) {
+      var statusText = (step.status || 'pending').toUpperCase();
+      var statusClass = 'dag-pending';
+      if (step.status === 'ok' || step.status === 'completed' || step.status === 'success') statusClass = 'dag-ok';
+      else if (step.status === 'failed' || step.status === 'error') statusClass = 'dag-failed';
+      else if (step.status === 'running') statusClass = 'dag-running';
+
+      var durText = '';
+      if (step.duration != null) durText = ' (' + Number(step.duration).toFixed(1) + 's)';
+
+      var node = el('div', {className:'dag-node ' + statusClass}, [
+        el('div', {className:'dag-node-name'}, step.name.replace(/_/g, ' ')),
+        el('div', {className:'dag-node-desc'}, step.desc || ''),
+        el('div', {className:'dag-node-status'}, statusText + durText)
+      ]);
+      layerEl.appendChild(node);
+    });
+
+    dagEl.appendChild(layerEl);
+  });
+
+  container.appendChild(dagEl);
+
+  // Checkpoint info
+  var cpContainer = clearEl('dag-checkpoint-info');
+  var cp = data.checkpoint;
+  if (!cp || (typeof cp === 'object' && Object.keys(cp).length === 0)) {
+    cpContainer.appendChild(el('p', {style:'color:var(--text-muted); padding:8px; font-size:11px;'}, 'No checkpoint data (DAG may not have run yet)'));
+    return;
+  }
+
+  var infoRows = [
+    {label: 'Status', value: cp.status || cp.overall_status || '--'},
+    {label: 'Started', value: cp.started_at || cp.start_time || '--'},
+    {label: 'Completed', value: cp.completed_at || cp.end_time || '--'},
+    {label: 'Duration', value: cp.duration_seconds ? cp.duration_seconds.toFixed(1) + 's' : cp.total_duration ? cp.total_duration.toFixed(1) + 's' : '--'},
+    {label: 'Steps OK', value: String(cp.steps_completed || cp.ok_count || '--')},
+    {label: 'Steps Failed', value: String(cp.steps_failed || cp.fail_count || '0')}
+  ];
+
+  infoRows.forEach(function(r) {
+    cpContainer.appendChild(el('div', {className:'dag-info-row'}, [
+      el('span', {className:'dag-info-label'}, r.label),
+      el('span', {className:'dag-info-value'}, r.value)
+    ]));
+  });
 }
 
 // ---------- AUTO REFRESH ----------
