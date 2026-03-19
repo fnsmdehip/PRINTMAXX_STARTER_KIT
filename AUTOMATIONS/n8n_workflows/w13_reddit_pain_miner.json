@@ -1,0 +1,252 @@
+{
+  "name": "PRINTMAXX - Reddit Pain Point Miner with AI Analysis",
+  "nodes": [
+    {
+      "name": "Every 4 Hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Set Subreddits",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Target subreddits for pain point mining\n// Aligned with PRINTMAXX ventures: EAS, LOCAL_BIZ, CONTENT\nconst subreddits = [\n  { sub: 'smallbusiness', keywords: ['automation', 'workflow', 'repetitive', 'time consuming', 'manual process'] },\n  { sub: 'Entrepreneur', keywords: ['automate', 'efficiency', 'scaling', 'bottleneck', 'overwhelmed'] },\n  { sub: 'SaaS', keywords: ['churn', 'onboarding', 'integration', 'workflow'] },\n  { sub: 'startups', keywords: ['MVP', 'no-code', 'automation', 'launch'] },\n  { sub: 'digital_marketing', keywords: ['content', 'scheduling', 'analytics', 'outreach'] },\n  { sub: 'freelance', keywords: ['client management', 'invoicing', 'proposals', 'lead gen'] },\n  { sub: 'webdev', keywords: ['deploy', 'CI/CD', 'monitoring', 'automation'] },\n  { sub: 'realestateinvesting', keywords: ['lead generation', 'CRM', 'follow up', 'automation'] }\n];\n\nreturn subreddits.map(s => ({ json: s }));"
+      }
+    },
+    {
+      "name": "Scrape Subreddit",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://www.reddit.com/r/{{ $json.sub }}/new.json?limit=25",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "PRINTMAXX-PainMiner/1.0"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 15000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Extract Posts",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const data = $input.item.json;\nconst posts = data?.data?.children || [];\nconst results = [];\n\nfor (const post of posts) {\n  const d = post.data;\n  if (!d) continue;\n  \n  // Skip if too old (> 24 hours)\n  const postAge = Date.now() / 1000 - d.created_utc;\n  if (postAge > 86400) continue;\n  \n  // Skip if too short\n  const text = (d.title || '') + ' ' + (d.selftext || '');\n  if (text.length < 50) continue;\n  \n  results.push({\n    json: {\n      subreddit: d.subreddit,\n      title: d.title || '',\n      selftext: (d.selftext || '').substring(0, 2000),\n      author: d.author || '',\n      score: d.score || 0,\n      numComments: d.num_comments || 0,\n      url: `https://reddit.com${d.permalink}`,\n      createdUtc: d.created_utc,\n      postAge: Math.round(postAge / 3600) + 'h'\n    }\n  });\n}\n\nreturn results.length > 0 ? results : [{ json: { skip: true, subreddit: data?.subreddit || 'unknown' } }];"
+      }
+    },
+    {
+      "name": "Filter Valid Posts",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1050, 300],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "skip_check",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "AI Pain Point Analysis",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1250, 200],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.openAiApiKey}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"gpt-4o-mini\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Analyze this Reddit post for business opportunities. Return JSON: {\\\"pain_point\\\": \\\"specific problem described\\\", \\\"opportunity_type\\\": \\\"AUTOMATION|CONTENT|PRODUCT|SERVICE\\\", \\\"opportunity_score\\\": 1-10, \\\"target_venture\\\": \\\"EAS|LOCAL_BIZ|CONTENT|FREELANCE|APP_FACTORY\\\", \\\"suggested_action\\\": \\\"specific action to take\\\", \\\"is_lead\\\": true/false, \\\"lead_type\\\": \\\"WARM|COLD|NOT_A_LEAD\\\"}. Score 7+ means clear monetizable opportunity. is_lead=true means poster could be a client.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Subreddit: r/{{ $json.subreddit }}\\nTitle: {{ $json.title }}\\nPost: {{ $json.selftext.substring(0, 2000) }}\\nEngagement: {{ $json.score }} upvotes, {{ $json.numComments }} comments\"\n    }\n  ],\n  \"max_tokens\": 300,\n  \"temperature\": 0.3,\n  \"response_format\": { \"type\": \"json_object\" }\n}",
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Parse Analysis",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1450, 200],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const item = $input.item;\nlet analysis = {};\n\ntry {\n  const content = item.json?.choices?.[0]?.message?.content || '{}';\n  analysis = JSON.parse(content);\n} catch(e) {\n  analysis = {\n    pain_point: 'Parse error',\n    opportunity_type: 'UNKNOWN',\n    opportunity_score: 0,\n    target_venture: 'RESEARCH',\n    suggested_action: 'Manual review needed',\n    is_lead: false,\n    lead_type: 'NOT_A_LEAD'\n  };\n}\n\nreturn [{\n  json: {\n    ...item.json,\n    painPoint: analysis.pain_point || '',\n    opportunityType: analysis.opportunity_type || '',\n    opportunityScore: analysis.opportunity_score || 0,\n    targetVenture: analysis.target_venture || '',\n    suggestedAction: analysis.suggested_action || '',\n    isLead: analysis.is_lead || false,\n    leadType: analysis.lead_type || 'NOT_A_LEAD',\n    analyzedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Save to Opportunities Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1650, 200],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_OPPORTUNITIES_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Reddit_Opportunities"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Check High Value",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1850, 200],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "score_check",
+              "leftValue": "={{ $json.opportunityScore }}",
+              "rightValue": 7,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Alert High Value Opportunity",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [2050, 100],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=REDDIT OPPORTUNITY (Score: {{ $json.opportunityScore }}/10)\n\nr/{{ $json.subreddit }} | {{ $json.postAge }} ago\n{{ $json.title }}\n\nPain point: {{ $json.painPoint }}\nType: {{ $json.opportunityType }}\nVenture: {{ $json.targetVenture }}\nAction: {{ $json.suggestedAction }}\nLead: {{ $json.leadType }}\n\n{{ $json.url }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Every 4 Hours": {
+      "main": [[{"node": "Set Subreddits", "type": "main", "index": 0}]]
+    },
+    "Set Subreddits": {
+      "main": [[{"node": "Scrape Subreddit", "type": "main", "index": 0}]]
+    },
+    "Scrape Subreddit": {
+      "main": [[{"node": "Extract Posts", "type": "main", "index": 0}]]
+    },
+    "Extract Posts": {
+      "main": [[{"node": "Filter Valid Posts", "type": "main", "index": 0}]]
+    },
+    "Filter Valid Posts": {
+      "main": [
+        [{"node": "AI Pain Point Analysis", "type": "main", "index": 0}],
+        []
+      ]
+    },
+    "AI Pain Point Analysis": {
+      "main": [[{"node": "Parse Analysis", "type": "main", "index": 0}]]
+    },
+    "Parse Analysis": {
+      "main": [[{"node": "Save to Opportunities Sheet", "type": "main", "index": 0}]]
+    },
+    "Save to Opportunities Sheet": {
+      "main": [[{"node": "Check High Value", "type": "main", "index": 0}]]
+    },
+    "Check High Value": {
+      "main": [
+        [{"node": "Alert High Value Opportunity", "type": "main", "index": 0}],
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "reddit"},
+    {"name": "research"},
+    {"name": "P1"}
+  ]
+}

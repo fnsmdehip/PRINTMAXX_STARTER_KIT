@@ -1,0 +1,242 @@
+{
+  "name": "PRINTMAXX - Apollo Lead Scraping + Enrichment",
+  "nodes": [
+    {
+      "name": "Weekly Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 7 * * 1,4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Set Apollo Search Criteria",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [450, 300],
+      "parameters": {
+        "mode": "manual",
+        "duplicateItem": false,
+        "assignments": {
+          "assignments": [
+            {
+              "id": "persona_titles",
+              "name": "personaTitles",
+              "value": "CEO,Founder,Owner,Operations Manager,COO,Business Owner",
+              "type": "string"
+            },
+            {
+              "id": "industries",
+              "name": "industries",
+              "value": "professional services,real estate,healthcare,construction,legal,accounting",
+              "type": "string"
+            },
+            {
+              "id": "company_size",
+              "name": "companySize",
+              "value": "1-50",
+              "type": "string"
+            },
+            {
+              "id": "location",
+              "name": "location",
+              "value": "United States",
+              "type": "string"
+            },
+            {
+              "id": "max_results",
+              "name": "maxResults",
+              "value": 100,
+              "type": "number"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Apollo People",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apollo.io/api/v1/mixed_people/search",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"api_key\": \"YOUR_APOLLO_API_KEY\",\n  \"q_person_title\": \"{{ $json.personaTitles }}\",\n  \"person_locations\": [\"{{ $json.location }}\"],\n  \"organization_num_employees_ranges\": [\"{{ $json.companySize }}\"],\n  \"per_page\": {{ $json.maxResults }},\n  \"page\": 1\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Extract Contact Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const data = $input.item.json;\nconst people = data.people || [];\nconst results = [];\n\nfor (const person of people) {\n  const org = person.organization || {};\n  \n  results.push({\n    json: {\n      // Person data\n      firstName: person.first_name || '',\n      lastName: person.last_name || '',\n      fullName: `${person.first_name || ''} ${person.last_name || ''}`.trim(),\n      title: person.title || '',\n      email: person.email || '',\n      emailStatus: person.email_status || '',\n      linkedinUrl: person.linkedin_url || '',\n      phone: person.phone_numbers?.[0]?.sanitized_number || '',\n      city: person.city || '',\n      state: person.state || '',\n      country: person.country || '',\n      \n      // Company data\n      companyName: org.name || '',\n      companyDomain: org.primary_domain || '',\n      companyWebsite: org.website_url || '',\n      companyIndustry: org.industry || '',\n      companySize: org.estimated_num_employees || 0,\n      companyLinkedin: org.linkedin_url || '',\n      companyRevenue: org.annual_revenue_printed || '',\n      \n      // Meta\n      apolloId: person.id || '',\n      scrapedAt: new Date().toISOString(),\n      leadScore: 0,\n      outreachStatus: 'NEW'\n    }\n  });\n}\n\nreturn results.length > 0 ? results : [{ json: { error: 'No results from Apollo' } }];"
+      }
+    },
+    {
+      "name": "Score Leads",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const item = $input.item;\nconst lead = item.json;\nlet score = 0;\n\n// Email quality (+30)\nif (lead.email && lead.emailStatus === 'verified') score += 30;\nelse if (lead.email) score += 15;\n\n// Title relevance (+25)\nconst highValueTitles = ['ceo', 'founder', 'owner', 'coo', 'president'];\nconst mediumValueTitles = ['operations', 'manager', 'director', 'vp'];\nconst titleLower = (lead.title || '').toLowerCase();\nif (highValueTitles.some(t => titleLower.includes(t))) score += 25;\nelse if (mediumValueTitles.some(t => titleLower.includes(t))) score += 15;\n\n// Company size (+20) - sweet spot is 5-50\nconst size = lead.companySize || 0;\nif (size >= 5 && size <= 50) score += 20;\nelse if (size >= 1 && size <= 100) score += 10;\n\n// Has LinkedIn (+10)\nif (lead.linkedinUrl) score += 10;\n\n// Has phone (+10)\nif (lead.phone) score += 10;\n\n// Has website (+5)\nif (lead.companyWebsite) score += 5;\n\nreturn [{\n  json: {\n    ...lead,\n    leadScore: score,\n    leadTier: score >= 70 ? 'HOT' : score >= 40 ? 'WARM' : 'COLD'\n  }\n}];"
+      }
+    },
+    {
+      "name": "Save to Leads Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1250, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_LEADS_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Apollo_Leads"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {
+          "cellFormat": "USER_ENTERED"
+        }
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Filter Hot Leads",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1450, 300],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "hot_check",
+              "leftValue": "={{ $json.leadTier }}",
+              "rightValue": "HOT",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Alert Hot Lead",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1650, 200],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=HOT LEAD (Score: {{ $json.leadScore }})\n\n{{ $json.fullName }}\n{{ $json.title }} at {{ $json.companyName }}\nEmail: {{ $json.email }}\nPhone: {{ $json.phone }}\nSize: {{ $json.companySize }} employees\nIndustry: {{ $json.companyIndustry }}\nLinkedIn: {{ $json.linkedinUrl }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Batch Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1650, 400],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// This runs for non-hot leads, just counts them\nreturn [{ json: { status: 'logged', tier: $input.item.json.leadTier } }];"
+      }
+    }
+  ],
+  "connections": {
+    "Weekly Trigger": {
+      "main": [[{"node": "Set Apollo Search Criteria", "type": "main", "index": 0}]]
+    },
+    "Set Apollo Search Criteria": {
+      "main": [[{"node": "Search Apollo People", "type": "main", "index": 0}]]
+    },
+    "Search Apollo People": {
+      "main": [[{"node": "Extract Contact Data", "type": "main", "index": 0}]]
+    },
+    "Extract Contact Data": {
+      "main": [[{"node": "Score Leads", "type": "main", "index": 0}]]
+    },
+    "Score Leads": {
+      "main": [[{"node": "Save to Leads Sheet", "type": "main", "index": 0}]]
+    },
+    "Save to Leads Sheet": {
+      "main": [[{"node": "Filter Hot Leads", "type": "main", "index": 0}]]
+    },
+    "Filter Hot Leads": {
+      "main": [
+        [{"node": "Alert Hot Lead", "type": "main", "index": 0}],
+        [{"node": "Batch Summary", "type": "main", "index": 0}]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "lead-generation"},
+    {"name": "P0"}
+  ]
+}
