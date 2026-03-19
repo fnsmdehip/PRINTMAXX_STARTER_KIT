@@ -21,6 +21,7 @@ import csv
 import json
 import os
 import re
+import sqlite3
 import subprocess
 import sys
 import threading
@@ -29,6 +30,8 @@ import webbrowser
 from datetime import datetime, timedelta
 from pathlib import Path
 from collections import Counter
+from urllib.request import Request, urlopen
+from urllib.error import URLError
 
 try:
     from flask import Flask, jsonify, request, Response
@@ -51,6 +54,27 @@ HTML_PATH = AUTOMATIONS / "control_panel.html"
 
 PORT = 9999
 PYTHON = sys.executable
+
+# Load N8N_API_KEY from .env
+N8N_BASE = "http://localhost:5678"
+N8N_API_KEY = ""
+_env_path = PROJECT_ROOT / ".env"
+if _env_path.exists():
+    try:
+        with open(_env_path, "r") as _ef:
+            for _line in _ef:
+                _line = _line.strip()
+                if _line.startswith("N8N_API_KEY="):
+                    N8N_API_KEY = _line.split("=", 1)[1].strip()
+                    break
+    except Exception:
+        pass
+
+# Sovrun paths
+SOVRUN_SKILLS_DB = AUTOMATIONS / "agent" / "sovrun" / "skills.db"
+SOVRUN_SKILLS_DB_ALT = AUTOMATIONS / "agent" / "swarm" / "sovrun" / "skills.db"
+DAG_CHECKPOINT = AUTOMATIONS / "agent" / "morning_dag_checkpoint.json"
+DAG_STATE = AUTOMATIONS / "agent" / "morning_dag_state.json"
 
 app = Flask(__name__)
 _lock = threading.Lock()
@@ -1138,6 +1162,175 @@ def api_pipeline():
 @app.route("/api/master-ops")
 def api_master_ops():
     return jsonify(get_master_ops())
+
+
+# ---------------------------------------------------------------------------
+# Sovrun + n8n helpers
+# ---------------------------------------------------------------------------
+def _n8n_request(path, method="GET"):
+    """Make a request to the n8n API. Returns parsed JSON or error dict."""
+    if not N8N_API_KEY:
+        return {"error": "N8N_API_KEY not configured in .env"}
+    url = f"{N8N_BASE}/api/v1{path}"
+    headers = {"X-N8N-API-KEY": N8N_API_KEY, "Accept": "application/json"}
+    try:
+        req = Request(url, headers=headers, method=method)
+        with urlopen(req, timeout=10) as resp:
+            return json.loads(resp.read().decode())
+    except URLError as e:
+        return {"error": f"n8n unreachable: {e.reason}"}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def _get_skills_db():
+    """Return path to the skills.db that exists, or None."""
+    for p in [SOVRUN_SKILLS_DB, SOVRUN_SKILLS_DB_ALT]:
+        if p.exists():
+            return p
+    return None
+
+
+def get_sovrun_skills(query=""):
+    """Query procedural memory FTS5 for skill docs."""
+    db_path = _get_skills_db()
+    if not db_path:
+        return {"error": "skills.db not found", "skills": []}
+    try:
+        conn = sqlite3.connect(str(db_path))
+        conn.row_factory = sqlite3.Row
+        if query:
+            # Try FTS5 first
+            try:
+                rows = conn.execute(
+                    "SELECT * FROM skills_fts WHERE skills_fts MATCH ? ORDER BY rank LIMIT 50",
+                    (query,)
+                ).fetchall()
+            except Exception:
+                # Fallback to LIKE
+                rows = conn.execute(
+                    "SELECT * FROM skills WHERE name LIKE ? OR description LIKE ? LIMIT 50",
+                    (f"%{query}%", f"%{query}%")
+                ).fetchall()
+        else:
+            rows = conn.execute("SELECT * FROM skills ORDER BY rowid DESC LIMIT 50").fetchall()
+        skills = [dict(r) for r in rows]
+        conn.close()
+        return {"skills": skills, "count": len(skills), "query": query}
+    except Exception as e:
+        return {"error": str(e), "skills": []}
+
+
+def get_handoff_chains():
+    """Return the 5 handoff chains and basic status."""
+    chains_def = {
+        "local_biz": [
+            "savvy_lead_scraper", "lead_enrichment", "eas_lead_pipeline",
+            "cold_email_generator", "follow_up_tracker",
+        ],
+        "content_factory": [
+            "alpha_scanner", "topic_selector", "content_generator",
+            "voice_injector", "platform_formatter",
+        ],
+        "product_launch": [
+            "demand_scanner", "product_builder", "listing_creator",
+            "distribution_engine", "sales_tracker",
+        ],
+        "freelance": [
+            "job_scanner", "proposal_writer", "submission_tracker",
+            "delivery_manager", "review_collector",
+        ],
+        "alpha_to_revenue": [
+            "scraper_fleet", "alpha_processor", "intelligence_router",
+            "capital_genesis_ranker", "venture_autonomy",
+        ],
+    }
+    result = []
+    for name, steps in chains_def.items():
+        result.append({
+            "name": name,
+            "steps": steps,
+            "step_count": len(steps),
+        })
+    return {"chains": result}
+
+
+def get_dag_status():
+    """Read morning intelligence DAG checkpoint/state."""
+    data = {"checkpoint": None, "state": None}
+    if DAG_CHECKPOINT.exists():
+        data["checkpoint"] = safe_read_json(DAG_CHECKPOINT)
+    if DAG_STATE.exists():
+        data["state"] = safe_read_json(DAG_STATE)
+
+    # Build the DAG structure for visualization
+    dag_steps = [
+        {"name": "scrape_twitter", "depends_on": [], "layer": 1, "desc": "Twitter (133 accounts)"},
+        {"name": "scrape_reddit", "depends_on": [], "layer": 1, "desc": "Reddit (18 subreddits)"},
+        {"name": "scrape_hn", "depends_on": [], "layer": 1, "desc": "HN + ProductHunt"},
+        {"name": "merge_results", "depends_on": ["scrape_twitter", "scrape_reddit", "scrape_hn"], "layer": 2, "desc": "Merge scraper results"},
+        {"name": "alpha_processor", "depends_on": ["merge_results"], "layer": 3, "desc": "Process new alpha"},
+        {"name": "intelligence_router", "depends_on": ["alpha_processor"], "layer": 4, "desc": "Route through intel"},
+        {"name": "capital_genesis_ranker", "depends_on": ["intelligence_router"], "layer": 5, "desc": "Rank by Capital Genesis"},
+    ]
+
+    # Enrich with status from checkpoint
+    cp = data.get("checkpoint") or {}
+    step_statuses = cp.get("step_statuses", cp.get("steps", {}))
+    for step in dag_steps:
+        sname = step["name"]
+        if isinstance(step_statuses, dict) and sname in step_statuses:
+            ss = step_statuses[sname]
+            if isinstance(ss, dict):
+                step["status"] = ss.get("status", "pending")
+                step["duration"] = ss.get("duration_seconds", ss.get("duration", None))
+            else:
+                step["status"] = str(ss)
+        else:
+            step["status"] = "pending"
+
+    data["dag_steps"] = dag_steps
+    return data
+
+
+# --- Sovrun + n8n API routes ---
+
+@app.route("/api/n8n/workflows")
+def api_n8n_workflows():
+    data = _n8n_request("/workflows")
+    return jsonify(data)
+
+
+@app.route("/api/n8n/executions")
+def api_n8n_executions():
+    limit = request.args.get("limit", "20")
+    data = _n8n_request(f"/executions?limit={limit}")
+    return jsonify(data)
+
+
+@app.route("/api/sovrun/skills")
+def api_sovrun_skills():
+    query = request.args.get("q", "")
+    return jsonify(get_sovrun_skills(query))
+
+
+@app.route("/api/sovrun/chains")
+def api_sovrun_chains():
+    return jsonify(get_handoff_chains())
+
+
+@app.route("/api/sovrun/chains/<chain_name>/run", methods=["POST"])
+def api_run_chain(chain_name):
+    code, out, err = run_cmd(
+        [PYTHON, str(AUTOMATIONS / "agent_swarm.py"), "--chain", chain_name],
+        timeout=120
+    )
+    return jsonify({"success": code == 0, "output": out[-3000:], "error": err[-1000:]})
+
+
+@app.route("/api/sovrun/dag")
+def api_sovrun_dag():
+    return jsonify(get_dag_status())
 
 
 # ---------------------------------------------------------------------------

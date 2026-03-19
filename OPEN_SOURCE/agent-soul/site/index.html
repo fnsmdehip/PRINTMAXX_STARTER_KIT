@@ -4,343 +4,110 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>sovrun - autonomous agent OS</title>
-<meta name="description" content="cognitive and behavioral layer for autonomous AI agent systems. voice modeling, correction chains, soul drift scoring. Python stdlib. zero deps.">
+<meta name="description" content="19 modules across 5 layers. DAG orchestration, crash recovery with deterministic replay, 105 MCP connectors, memory import from any LLM. Python stdlib. zero deps.">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --bg: #0a0a0a;
-  --bg-card: #111111;
-  --bg-card-hover: #161616;
-  --border: #1e1e1e;
-  --border-accent: #2a2a2a;
-  --text: #e0e0e0;
-  --text-dim: #888888;
-  --text-bright: #ffffff;
-  --accent: #3b82f6;
-  --accent-dim: #2563eb;
-  --green: #22c55e;
-  --red: #666666;
-  --yellow: #eab308;
+  --bg: #0a0a0a; --bg-card: #111111; --bg-card-hover: #161616;
+  --border: #1e1e1e; --border-accent: #2a2a2a;
+  --text: #e0e0e0; --text-dim: #888888; --text-bright: #ffffff;
+  --accent: #3b82f6; --accent-dim: #2563eb;
+  --green: #22c55e; --red: #666666; --yellow: #eab308;
   --mono: 'SF Mono', 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-
 html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--sans);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
+body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
-/* layout */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 section { padding: 80px 0; }
 section + section { border-top: 1px solid var(--border); }
 
-/* nav */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(10,10,10,0.85); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 12px 0;
-}
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 12px 0; }
 nav .container { display: flex; justify-content: space-between; align-items: center; }
 nav .logo { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--text-bright); letter-spacing: -0.5px; }
 nav .links { display: flex; gap: 24px; font-size: 14px; }
 nav .links a { color: var(--text-dim); }
 nav .links a:hover { color: var(--text-bright); text-decoration: none; }
 
-/* hero */
 .hero { padding: 160px 0 100px; text-align: center; }
-.hero h1 {
-  font-family: var(--mono);
-  font-size: clamp(48px, 8vw, 80px);
-  font-weight: 800;
-  color: var(--text-bright);
-  letter-spacing: -3px;
-  line-height: 1;
-  margin-bottom: 16px;
-}
-.hero .tagline {
-  font-family: var(--mono);
-  font-size: clamp(14px, 2vw, 18px);
-  color: var(--text-dim);
-  margin-bottom: 24px;
-  letter-spacing: -0.3px;
-}
-.hero .oneliner {
-  font-size: 18px;
-  color: var(--text);
-  max-width: 640px;
-  margin: 0 auto 40px;
-  line-height: 1.5;
-}
+.hero h1 { font-family: var(--mono); font-size: clamp(48px, 8vw, 80px); font-weight: 800; color: var(--text-bright); letter-spacing: -3px; line-height: 1; margin-bottom: 16px; }
+.hero .tagline { font-family: var(--mono); font-size: clamp(14px, 2vw, 18px); color: var(--text-dim); margin-bottom: 24px; letter-spacing: -0.3px; }
+.hero .oneliner { font-size: 18px; color: var(--text); max-width: 700px; margin: 0 auto 40px; line-height: 1.5; }
 .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; align-items: center; }
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  transition: all 0.15s;
-}
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 6px; font-family: var(--mono); font-size: 14px; font-weight: 500; border: none; cursor: pointer; transition: all 0.15s; }
 .btn-primary { background: var(--accent); color: white; }
 .btn-primary:hover { background: var(--accent-dim); text-decoration: none; }
 .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border-accent); }
 .btn-secondary:hover { border-color: var(--text-dim); text-decoration: none; }
-.badge {
-  display: inline-flex; align-items: center;
-  margin-top: 20px;
-}
+.badge { display: inline-flex; align-items: center; margin-top: 20px; }
 .badge img { height: 20px; }
 
-/* section headers */
-.section-label {
-  font-family: var(--mono);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-.section-title {
-  font-size: clamp(24px, 4vw, 36px);
-  font-weight: 700;
-  color: var(--text-bright);
-  margin-bottom: 16px;
-  letter-spacing: -1px;
-}
-.section-desc {
-  font-size: 16px;
-  color: var(--text-dim);
-  max-width: 640px;
-  line-height: 1.6;
-}
+.section-label { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 12px; }
+.section-title { font-size: clamp(24px, 4vw, 36px); font-weight: 700; color: var(--text-bright); margin-bottom: 16px; letter-spacing: -1px; }
+.section-desc { font-size: 16px; color: var(--text-dim); max-width: 640px; line-height: 1.6; }
 
-/* problem */
-.problem-text {
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 720px;
-}
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 32px; }
+.feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; transition: border-color 0.15s; }
+.feature-card:hover { border-color: var(--border-accent); }
+.feature-card h3 { font-family: var(--mono); font-size: 15px; color: var(--text-bright); margin-bottom: 8px; }
+.feature-card p { font-size: 14px; color: var(--text-dim); line-height: 1.5; }
+.feature-card .tag { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(59,130,246,0.08); display: inline-block; padding: 2px 8px; border-radius: 4px; margin-top: 8px; }
+
+.problem-text { font-size: 18px; line-height: 1.7; max-width: 720px; }
 .problem-text strong { color: var(--text-bright); }
 
-/* module grid */
 .layer-group { margin-bottom: 48px; }
 .layer-group:last-child { margin-bottom: 0; }
-.layer-label {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent);
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-.module-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 12px;
-}
-.module-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 20px;
-  transition: border-color 0.15s, background 0.15s;
-}
+.layer-label { font-family: var(--mono); font-size: 13px; color: var(--accent); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: 1.5px; }
+.module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.module-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; transition: border-color 0.15s, background 0.15s; }
 .module-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
-.module-name {
-  font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-bright);
-  margin-bottom: 6px;
-}
-.module-desc {
-  font-size: 13px;
-  color: var(--text-dim);
-  line-height: 1.5;
-  margin-bottom: 8px;
-}
-.module-key {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--accent);
-  background: rgba(59,130,246,0.08);
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 4px;
-}
+.module-name { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--text-bright); margin-bottom: 6px; }
+.module-desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; margin-bottom: 8px; }
+.module-key { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(59,130,246,0.08); display: inline-block; padding: 2px 8px; border-radius: 4px; }
 
-/* comparison table */
-.table-wrapper {
-  overflow-x: auto;
-  margin: 32px 0 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  min-width: 900px;
-}
-.comparison-table th {
-  font-family: var(--mono);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 14px 12px;
-  text-align: left;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
-  color: var(--text-dim);
-  position: sticky;
-  top: 0;
-  white-space: nowrap;
-}
+.table-wrapper { overflow-x: auto; margin: 32px 0 0; border: 1px solid var(--border); border-radius: 8px; }
+.comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 900px; }
+.comparison-table th { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; padding: 14px 12px; text-align: left; background: var(--bg-card); border-bottom: 1px solid var(--border); color: var(--text-dim); position: sticky; top: 0; white-space: nowrap; }
 .comparison-table th:first-child { color: var(--text); min-width: 180px; }
 .comparison-table th.highlight { color: var(--accent); }
-.comparison-table td {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-dim);
-  vertical-align: top;
-}
+.comparison-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-dim); vertical-align: top; }
 .comparison-table tr:last-child td { border-bottom: none; }
-.comparison-table td:first-child {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text);
-  white-space: nowrap;
-}
+.comparison-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--text); white-space: nowrap; }
 .comparison-table .yes { color: var(--green); }
 .comparison-table .no { color: var(--red); }
 .comparison-table .partial { color: var(--yellow); }
 .comparison-table tbody tr:hover { background: var(--bg-card); }
 
-/* quick start */
-.quickstart-block {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 32px;
-}
-.quickstart-header {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-dim);
-  padding: 12px 20px;
-  background: rgba(255,255,255,0.02);
-  border-bottom: 1px solid var(--border);
-}
-.quickstart-block pre {
-  padding: 20px;
-  overflow-x: auto;
-  font-family: var(--mono);
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--text);
-}
+.quickstart-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 32px; }
+.quickstart-header { font-family: var(--mono); font-size: 12px; color: var(--text-dim); padding: 12px 20px; background: rgba(255,255,255,0.02); border-bottom: 1px solid var(--border); }
+.quickstart-block pre { padding: 20px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.8; color: var(--text); }
 .quickstart-block .comment { color: var(--text-dim); }
 .quickstart-block .cmd { color: var(--green); }
 
-/* architecture */
-.arch-diagram {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 32px;
-  margin-top: 32px;
-  overflow-x: auto;
-}
-.arch-diagram pre {
-  font-family: var(--mono);
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--text);
-  text-align: center;
-}
-.arch-diagram .layer-cognitive { color: var(--accent); }
-.arch-diagram .layer-orch { color: var(--green); }
-.arch-diagram .layer-memory { color: var(--yellow); }
-.arch-diagram .layer-infra { color: #a78bfa; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 32px; }
+.stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; text-align: center; }
+.stat-number { font-family: var(--mono); font-size: 36px; font-weight: 700; color: var(--text-bright); letter-spacing: -2px; }
+.stat-label { font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+.stat-note { font-family: var(--mono); font-size: 11px; color: var(--text-dim); margin-top: 24px; text-align: center; opacity: 0.7; }
 
-/* production numbers */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin-top: 32px;
-}
-.stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 24px;
-  text-align: center;
-}
-.stat-number {
-  font-family: var(--mono);
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--text-bright);
-  letter-spacing: -2px;
-}
-.stat-label {
-  font-size: 13px;
-  color: var(--text-dim);
-  margin-top: 4px;
-}
-.stat-note {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-dim);
-  margin-top: 24px;
-  text-align: center;
-  opacity: 0.7;
-}
+.cta-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 40px; margin-top: 48px; text-align: center; }
+.cta-section h3 { font-size: 20px; color: var(--text-bright); margin-bottom: 8px; }
+.cta-section p { font-size: 14px; color: var(--text-dim); margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
 
-/* footer */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 40px 0;
-  text-align: center;
-}
-footer .footer-links {
-  display: flex; gap: 24px; justify-content: center;
-  font-family: var(--mono);
-  font-size: 13px;
-  margin-bottom: 16px;
-}
+footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; }
+footer .footer-links { display: flex; gap: 24px; justify-content: center; font-family: var(--mono); font-size: 13px; margin-bottom: 16px; }
 footer .footer-links a { color: var(--text-dim); }
 footer .footer-links a:hover { color: var(--text-bright); }
-footer .footer-note {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-dim);
-  opacity: 0.5;
-}
+footer .footer-note { font-family: var(--mono); font-size: 12px; color: var(--text-dim); opacity: 0.5; }
 
-/* mobile */
 @media (max-width: 768px) {
   section { padding: 60px 0; }
   .hero { padding: 120px 0 60px; }
   nav .links { gap: 16px; font-size: 13px; }
-  .module-grid { grid-template-columns: 1fr; }
+  .module-grid, .feature-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-actions { flex-direction: column; align-items: center; }
 }
@@ -352,25 +119,24 @@ footer .footer-note {
 </head>
 <body>
 
-<!-- nav -->
 <nav>
   <div class="container">
-    <a href="#" class="logo">sovrun</a>
+    <a href="index.html" class="logo">sovrun</a>
     <div class="links">
-      <a href="#modules">modules</a>
-      <a href="#comparison">comparison</a>
-      <a href="#quickstart">quickstart</a>
+      <a href="docs.html">docs</a>
+      <a href="compare.html">compare</a>
+      <a href="architecture.html">architecture</a>
+      <a href="pricing.html">pricing</a>
       <a href="https://github.com/fnsmdehip/sovrun">github</a>
     </div>
   </div>
 </nav>
 
-<!-- hero -->
 <section class="hero">
   <div class="container">
     <h1>sovrun</h1>
-    <p class="tagline">agents that learn your patterns. zero deps.</p>
-    <p class="oneliner">you've corrected your AI agent the same way 50 times. it still defaults to the behavior you hate. sovrun fixes that. voice modeling, correction chain learning, soul drift scoring, bias filtering. 15 modules extracted from a production system running 24/7.</p>
+    <p class="tagline">autonomous agent OS. 20 modules. 1,200+ connectors. python.</p>
+    <p class="oneliner">agents that learn your voice, orchestrate as DAGs, recover from crashes, create n8n workflows autonomously, and score their own output quality. 20 modules across 5 layers. import your ChatGPT/Claude/Gemini history. 126 MCP connectors with auto-setup + 1,200 more via n8n bridge. extracted from a production system running 33 agents 24/7.</p>
     <div class="hero-actions">
       <a href="https://github.com/fnsmdehip/sovrun" class="btn btn-primary">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -384,82 +150,97 @@ footer .footer-note {
   </div>
 </section>
 
-<!-- problem -->
-<section id="problem">
+<section>
   <div class="container">
-    <p class="section-label">the problem</p>
-    <div class="problem-text">
-      <p>your AI agents run on default LLM knowledge and produce generic output. you correct them. <strong>they don't learn from the corrections.</strong> you correct them again. same mistakes. session 47, same correction you gave in session 3.</p>
-      <p style="margin-top: 16px;">no system checks if agent output matches your actual voice. no system scores whether agents are drifting from their directives. no system closes the loop between "agent decided X" and "X actually happened." crash at step 14 of 16? you replay from step 1. every API call, every token, wasted.</p>
-      <p style="margin-top: 16px;">sovrun solves each of these with a dedicated module. no framework lock-in, no dependency chain, no vendor SDK. Python stdlib only.</p>
+    <p class="section-label">what sovrun does</p>
+    <h2 class="section-title">5 layers. each works standalone.</h2>
+    <p class="section-desc">wire in one module or all 19. no framework lock-in, no vendor SDK, no dependency chain.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>cognitive layer (7 modules)</h3>
+        <p>voice modeling trained on YOUR prompts. correction chain learning that mines your feedback into rules. soul drift scoring. bias-null filtering. self-audit that catches slop in your own config.</p>
+        <span class="tag">agents learn your patterns, not LLM defaults</span>
+      </div>
+      <div class="feature-card">
+        <h3>orchestration layer (4 modules)</h3>
+        <p>DAG execution with Sequential, Parallel, and Loop agents. typed agent-to-agent handoffs with guardrails. closed-loop decision engine. loop closer that verifies decisions led to real outcomes.</p>
+        <span class="tag">compose agents into DAGs, not linear pipelines</span>
+      </div>
+      <div class="feature-card">
+        <h3>memory layer (4 modules)</h3>
+        <p>procedural memory with FTS5 search across past solutions. import history from ChatGPT, Claude, and Gemini. session briefings from git diffs. conversation logger with keyword search.</p>
+        <span class="tag">import from any LLM, remember what worked</span>
+      </div>
+      <div class="feature-card">
+        <h3>infrastructure layer (3 modules)</h3>
+        <p>crash recovery with deterministic replay (crash at step 14, replay from 14, not 1). circuit breaker state machine. file locking. loop detection for runaway agents. HTML tracing timeline.</p>
+        <span class="tag">zero wasted API calls on recovery</span>
+      </div>
+      <div class="feature-card">
+        <h3>connectors layer (105 MCP)</h3>
+        <p>auto-setup for Slack, GitHub, Notion, Stripe, Gmail, Postgres, and 99 others. agents build n8n workflows programmatically. one command to configure any connector.</p>
+        <span class="tag">sovrun-mcp --setup slack</span>
+      </div>
+      <div class="feature-card">
+        <h3>zero or optional deps</h3>
+        <p>core runs on Python stdlib only. 0 pip installs. connectors and workflow bridge are optional. runs on any machine with Python 3.10+. no vendor lock-in.</p>
+        <span class="tag">pip install sovrun installs nothing extra</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- modules -->
+<section id="problem">
+  <div class="container">
+    <p class="section-label">the problem</p>
+    <div class="problem-text">
+      <p>your AI agents run on default LLM knowledge. you correct them. <strong>they don't learn from the corrections.</strong> session 47, same correction you gave in session 3.</p>
+      <p style="margin-top: 16px;">nobody checks if agent output matches your voice. nobody scores drift from directives. nobody closes the loop between "agent decided X" and "X actually happened." crash at step 14 of 16? replay from step 1. every API call wasted. need Slack + GitHub + Notion connected? configure each one manually for every project.</p>
+      <p style="margin-top: 16px;">sovrun solves each of these with a dedicated module. 19 modules, 5 layers, stdlib only.</p>
+    </div>
+  </div>
+</section>
+
 <section id="modules">
   <div class="container">
     <p class="section-label">what's in the box</p>
-    <h2 class="section-title">15 modules. 4 layers.</h2>
-    <p class="section-desc">each module works standalone. <code style="font-size:13px;background:rgba(59,130,246,0.08);padding:2px 6px;border-radius:4px;">from sovrun.voice import VoiceExtractor</code> and you're wired in.</p>
+    <h2 class="section-title">19 modules. 5 layers.</h2>
+    <p class="section-desc">each module works standalone. <code style="font-size:13px;background:rgba(59,130,246,0.08);padding:2px 6px;border-radius:4px;">from sovrun.core.voice_extractor import VoiceExtractor</code></p>
 
     <div style="margin-top: 48px;">
-
-      <!-- cognitive layer -->
       <div class="layer-group">
-        <div class="layer-label">cognitive</div>
+        <div class="layer-label">cognitive (7 modules)</div>
         <div class="module-grid">
           <div class="module-card">
             <div class="module-name">voice_extractor</div>
-            <div class="module-desc">reads your prompt history, extracts your vocabulary, tone, banned words. outputs a voice model you inject into any agent prompt.</div>
+            <div class="module-desc">reads your prompt history, extracts vocabulary, tone, banned words. outputs a voice model you inject into any agent prompt.</div>
             <span class="module-key">your prompts -> voice model -> agent injection</span>
           </div>
           <div class="module-card">
             <div class="module-name">cognitive_engine</div>
-            <div class="module-desc">identifies correction chains in your history. builds meta-rules that would have prevented each correction sequence.</div>
+            <div class="module-desc">identifies correction chains. builds meta-rules that would have prevented each correction sequence.</div>
             <span class="module-key">168 chains, 6.9 avg corrections per chain</span>
           </div>
           <div class="module-card">
             <div class="module-name">pattern_miner</div>
-            <div class="module-desc">finds correction markers, escalation triggers, satisfaction signals. mines transferable rules from what pisses you off and what works.</div>
+            <div class="module-desc">finds correction markers, escalation triggers, satisfaction signals. mines transferable rules from what works and what doesn't.</div>
             <span class="module-key">correction + satisfaction + escalation signals</span>
           </div>
           <div class="module-card">
             <div class="module-name">user_sim_refiner</div>
-            <div class="module-desc">simulates YOUR critique on any project. takes your cognitive architecture and applies your thinking when you're not in the room.</div>
+            <div class="module-desc">simulates YOUR critique on any project. applies your thinking when you're not in the room.</div>
             <span class="module-key">autonomous critique using your patterns</span>
           </div>
           <div class="module-card">
             <div class="module-name">self_audit</div>
-            <div class="module-desc">checks for AI slop in your config files, context bloat wasting tokens, orphan scripts, missing protocols. the system that audits the system.</div>
+            <div class="module-desc">checks for AI slop in config files, context bloat, orphan scripts, missing protocols. the system that audits the system.</div>
             <span class="module-key">slop detection + context bloat + orphan scan</span>
           </div>
           <div class="module-card">
-            <div class="module-name">bias-null protocol</div>
-            <div class="module-desc">5-point pre-output filter. catches legacy smuggling, preemptive appeasement, popular-default traps, training-bias contamination.</div>
-            <span class="module-key">template: run before every major output</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- orchestration layer -->
-      <div class="layer-group">
-        <div class="layer-label">orchestration</div>
-        <div class="module-grid">
-          <div class="module-card">
-            <div class="module-name">handoff</div>
-            <div class="module-desc">typed agent-to-agent delegation with context transfer. agent A invokes agent B mid-task, passes state, receives result, continues.</div>
-            <span class="module-key">scoped guardrails per handoff</span>
-          </div>
-          <div class="module-card">
-            <div class="module-name">orchestration</div>
-            <div class="module-desc">SequentialAgent, ParallelAgent, LoopAgent primitives. compose agents into DAGs. non-dependent phases run in parallel automatically.</div>
-            <span class="module-key">DAG execution with typed state</span>
-          </div>
-          <div class="module-card">
-            <div class="module-name">loop_closer</div>
-            <div class="module-desc">closes 4 loops: decision execution, feedback tracking, pipeline advancement, soul drift scoring. scores every output 0-10 against SOUL.md.</div>
-            <span class="module-key">alerts when drift drops below 6/10</span>
+            <div class="module-name">bias_null</div>
+            <div class="module-desc">5-point pre-output filter. catches legacy smuggling, appeasement, popular-default traps, training-bias contamination.</div>
+            <span class="module-key">run before every major output</span>
           </div>
           <div class="module-card">
             <div class="module-name">decision_engine</div>
@@ -469,9 +250,34 @@ footer .footer-note {
         </div>
       </div>
 
-      <!-- memory layer -->
       <div class="layer-group">
-        <div class="layer-label">memory</div>
+        <div class="layer-label">orchestration (4 modules)</div>
+        <div class="module-grid">
+          <div class="module-card">
+            <div class="module-name">orchestration</div>
+            <div class="module-desc">SequentialAgent, ParallelAgent, LoopAgent primitives. compose agents into DAGs. non-dependent phases run in parallel.</div>
+            <span class="module-key">DAG execution with typed state</span>
+          </div>
+          <div class="module-card">
+            <div class="module-name">handoff</div>
+            <div class="module-desc">typed agent-to-agent delegation with context transfer. agent A invokes B mid-task, passes state, receives result.</div>
+            <span class="module-key">scoped guardrails per handoff</span>
+          </div>
+          <div class="module-card">
+            <div class="module-name">loop_closer</div>
+            <div class="module-desc">closes 4 loops: decision execution, feedback tracking, pipeline advancement, soul drift scoring (0-10 per output).</div>
+            <span class="module-key">alerts when drift drops below 6/10</span>
+          </div>
+          <div class="module-card">
+            <div class="module-name">workflow_bridge</div>
+            <div class="module-desc">agents create n8n workflows programmatically. define triggers, nodes, connections in Python. export as n8n-compatible JSON.</div>
+            <span class="module-key">sovrun-workflow --create "slack to sheets"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer-group">
+        <div class="layer-label">memory (4 modules)</div>
         <div class="module-grid">
           <div class="module-card">
             <div class="module-name">procedural_memory</div>
@@ -479,21 +285,25 @@ footer .footer-note {
             <span class="module-key">agents remember what worked</span>
           </div>
           <div class="module-card">
+            <div class="module-name">memory_import</div>
+            <div class="module-desc">import conversation history from ChatGPT, Claude, and Gemini exports. normalizes into sovrun's format for voice extraction.</div>
+            <span class="module-key">sovrun-import --provider chatgpt --file export.zip</span>
+          </div>
+          <div class="module-card">
             <div class="module-name">conversation_logger</div>
-            <div class="module-desc">extracts messages from Claude session transcripts into searchable JSONL. incremental processing, keyword search, statistics.</div>
+            <div class="module-desc">extracts messages from session transcripts into searchable JSONL. incremental processing, keyword search, statistics.</div>
             <span class="module-key">search your entire prompt history</span>
           </div>
           <div class="module-card">
             <div class="module-name">session_briefing</div>
-            <div class="module-desc">"what happened since last session" from git diffs, state files, task trackers. no LLM calls. pure file reading. under 30 seconds.</div>
+            <div class="module-desc">"what happened since last session" from git diffs, state files, task trackers. no LLM calls. under 30 seconds.</div>
             <span class="module-key">context continuity across sessions</span>
           </div>
         </div>
       </div>
 
-      <!-- infrastructure layer -->
       <div class="layer-group">
-        <div class="layer-label">infrastructure</div>
+        <div class="layer-label">infrastructure (3 modules)</div>
         <div class="module-grid">
           <div class="module-card">
             <div class="module-name">resilience</div>
@@ -505,19 +315,38 @@ footer .footer-note {
             <div class="module-desc">deterministic replay on crash. each step logged atomically. crash at step 14 replays from 14, not from 1. zero wasted API calls.</div>
             <span class="module-key">step-level checkpoint + replay</span>
           </div>
+          <div class="module-card">
+            <div class="module-name">tracing</div>
+            <div class="module-desc">HTML timeline of LLM calls, tool executions, handoffs, failures. per-agent token attribution. cost tracking.</div>
+            <span class="module-key">sovrun-trace --visualize</span>
+          </div>
         </div>
       </div>
 
+      <div class="layer-group">
+        <div class="layer-label">connectors (105 MCP + bridge)</div>
+        <div class="module-grid">
+          <div class="module-card">
+            <div class="module-name">mcp_bridge</div>
+            <div class="module-desc">auto-configures MCP servers for 126 connectors. one command per service. generates claude_desktop_config.json entries.</div>
+            <span class="module-key">sovrun-mcp --setup slack github notion</span>
+          </div>
+          <div class="module-card">
+            <div class="module-name">deps</div>
+            <div class="module-desc">optional dependency manager. core is stdlib-only. connectors and workflow bridge can install what they need on demand.</div>
+            <span class="module-key">sovrun-deps --install n8n-client</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- comparison -->
 <section id="comparison">
   <div class="container">
-    <p class="section-label">comparison</p>
-    <h2 class="section-title">sovrun vs everything else</h2>
-    <p class="section-desc">green where we deliver. gray where we don't. yellow where it's partial. same standard applied to everyone.</p>
+    <p class="section-label">honest comparison</p>
+    <h2 class="section-title">sovrun vs the field</h2>
+    <p class="section-desc">green where we deliver. gray where we don't. yellow where it's partial. <a href="compare.html">full breakdown with 11 competitors</a>.</p>
 
     <div class="table-wrapper">
       <table class="comparison-table">
@@ -527,180 +356,30 @@ footer .footer-note {
             <th class="highlight">sovrun</th>
             <th>LangGraph</th>
             <th>CrewAI</th>
-            <th>AutoGen</th>
             <th>Google ADK</th>
             <th>Hermes</th>
             <th>n8n</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>voice modeling (learns your style)</td>
-            <td class="yes">yes</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="partial">partial (Honcho)</td>
-            <td class="no">no</td>
-          </tr>
-          <tr>
-            <td>correction chain learning</td>
-            <td class="yes">yes</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-          </tr>
-          <tr>
-            <td>soul drift scoring</td>
-            <td class="yes">0-10 per output</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-          </tr>
-          <tr>
-            <td>bias-null filtering</td>
-            <td class="yes">5-point filter</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-          </tr>
-          <tr>
-            <td>agent handoffs</td>
-            <td class="yes">typed + context</td>
-            <td class="partial">graph edges</td>
-            <td class="partial">manager mode</td>
-            <td class="partial">conversation</td>
-            <td class="yes">built-in</td>
-            <td class="yes">built-in</td>
-            <td class="partial">workflow links</td>
-          </tr>
-          <tr>
-            <td>DAG orchestration</td>
-            <td class="yes">Seq/Par/Loop</td>
-            <td class="yes">core feature</td>
-            <td class="partial">basic</td>
-            <td class="yes">graph-based</td>
-            <td class="yes">Seq/Par/Loop</td>
-            <td class="partial">basic</td>
-            <td class="yes">visual DAG</td>
-          </tr>
-          <tr>
-            <td>procedural memory</td>
-            <td class="yes">FTS5 skill docs</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="partial">memory service</td>
-            <td class="yes">70+ skills</td>
-            <td class="no">no</td>
-          </tr>
-          <tr>
-            <td>crash recovery / replay</td>
-            <td class="yes">deterministic</td>
-            <td class="partial">checkpoints</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="partial">session state</td>
-            <td class="partial">basic</td>
-            <td class="partial">retry only</td>
-          </tr>
-          <tr>
-            <td>observability / tracing</td>
-            <td class="partial">trajectory logs</td>
-            <td class="yes">LangSmith</td>
-            <td class="partial">basic logs</td>
-            <td class="partial">basic logs</td>
-            <td class="partial">cloud console</td>
-            <td class="partial">basic</td>
-            <td class="yes">visual UI</td>
-          </tr>
-          <tr>
-            <td>MCP support</td>
-            <td class="partial">consume only</td>
-            <td class="partial">via adapters</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="partial">basic</td>
-            <td class="no">no</td>
-            <td class="yes">consume + expose</td>
-          </tr>
-          <tr>
-            <td>connector count</td>
-            <td>118 (registry)</td>
-            <td>LangChain deps</td>
-            <td>tools only</td>
-            <td>Azure integrations</td>
-            <td>Google Cloud</td>
-            <td>6 messaging</td>
-            <td class="yes">1,200+</td>
-          </tr>
-          <tr>
-            <td>dependencies</td>
-            <td class="yes">0 (stdlib)</td>
-            <td class="no">langchain + deps</td>
-            <td class="no">many</td>
-            <td class="no">many</td>
-            <td class="no">google deps</td>
-            <td class="no">many</td>
-            <td class="no">node + deps</td>
-          </tr>
-          <tr>
-            <td>self-hosted</td>
-            <td class="yes">yes</td>
-            <td class="yes">yes</td>
-            <td class="yes">yes</td>
-            <td class="partial">Azure preferred</td>
-            <td class="partial">GCP preferred</td>
-            <td class="yes">yes</td>
-            <td class="yes">yes</td>
-          </tr>
-          <tr>
-            <td>license</td>
-            <td class="yes">MIT</td>
-            <td>MIT</td>
-            <td>MIT</td>
-            <td>MIT</td>
-            <td>Apache 2.0</td>
-            <td>MIT</td>
-            <td class="partial">Sustainable Use</td>
-          </tr>
-          <tr>
-            <td>token overhead</td>
-            <td class="yes">minimal</td>
-            <td class="partial">moderate</td>
-            <td class="no">56% extra</td>
-            <td class="partial">moderate</td>
-            <td class="partial">moderate</td>
-            <td class="partial">moderate</td>
-            <td class="yes">n/a (workflow)</td>
-          </tr>
-          <tr>
-            <td>24/7 autonomous operation</td>
-            <td class="yes">durable + loop closer</td>
-            <td class="partial">with infra</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="no">no</td>
-            <td class="yes">yes</td>
-            <td class="partial">cron triggers</td>
-          </tr>
+          <tr><td>voice modeling</td><td class="yes">yes</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="partial">Honcho</td><td class="no">no</td></tr>
+          <tr><td>correction chain learning</td><td class="yes">yes</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+          <tr><td>soul drift scoring</td><td class="yes">0-10 per output</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+          <tr><td>memory import (any LLM)</td><td class="yes">ChatGPT/Claude/Gemini</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+          <tr><td>DAG orchestration</td><td class="yes">Seq/Par/Loop/DAG</td><td class="yes">core feature</td><td class="partial">basic</td><td class="yes">Seq/Par/Loop</td><td class="partial">basic</td><td class="yes">visual DAG</td></tr>
+          <tr><td>agent handoffs</td><td class="yes">typed + guardrails</td><td class="partial">graph edges</td><td class="partial">manager mode</td><td class="yes">built-in</td><td class="yes">built-in</td><td class="partial">workflow links</td></tr>
+          <tr><td>crash recovery</td><td class="yes">deterministic replay</td><td class="partial">checkpoints</td><td class="no">no</td><td class="partial">session state</td><td class="partial">basic</td><td class="partial">retry only</td></tr>
+          <tr><td>procedural memory</td><td class="yes">FTS5 + self-improving</td><td class="no">no</td><td class="no">no</td><td class="partial">memory service</td><td class="yes">70+ skills</td><td class="no">no</td></tr>
+          <tr><td>MCP connectors</td><td class="yes">105 (auto-setup)</td><td class="partial">via adapters</td><td class="partial">basic</td><td class="yes">native</td><td class="partial">basic</td><td class="yes">1,200+</td></tr>
+          <tr><td>dependencies</td><td class="yes">0 (stdlib only)</td><td class="no">langchain + deps</td><td class="no">many</td><td class="no">google deps</td><td class="no">many</td><td class="no">node + deps</td></tr>
+          <tr><td>license</td><td class="yes">MIT</td><td>MIT</td><td>MIT</td><td>Apache 2.0</td><td>MIT</td><td class="partial">Sustainable Use</td></tr>
+          <tr><td>autonomous 24/7</td><td class="yes">durable + loop closer</td><td class="partial">with infra</td><td class="no">no</td><td class="no">no</td><td class="yes">yes</td><td class="partial">cron triggers</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- quickstart -->
 <section id="quickstart">
   <div class="container">
     <p class="section-label">get started</p>
@@ -708,8 +387,12 @@ footer .footer-note {
 
     <div class="quickstart-block">
       <div class="quickstart-header">terminal</div>
-      <pre><span class="cmd">git clone</span> https://github.com/fnsmdehip/sovrun.git
-<span class="cmd">cd</span> sovrun && <span class="cmd">pip install</span> -e .
+      <pre><span class="cmd">pip install</span> sovrun
+<span class="comment"># or: git clone https://github.com/fnsmdehip/sovrun.git && cd sovrun && pip install -e .</span>
+
+<span class="comment"># import your history from any LLM provider</span>
+<span class="cmd">sovrun-import</span> --provider chatgpt --file ~/Downloads/conversations.json
+<span class="cmd">sovrun-import</span> --provider claude --dir ~/.claude/projects
 
 <span class="comment"># build voice model from your prompt history</span>
 <span class="cmd">sovrun-voice</span> --extract
@@ -717,78 +400,48 @@ footer .footer-note {
 <span class="comment"># build correction chains + meta-rules</span>
 <span class="cmd">sovrun-engine</span> --build-model
 
+<span class="comment"># set up your connectors</span>
+<span class="cmd">sovrun-mcp</span> --setup slack github notion
+
+<span class="comment"># run orchestration DAG</span>
+<span class="cmd">sovrun-orchestrate</span> --visualize
+
 <span class="comment"># close all loops (decisions, feedback, drift scoring)</span>
-<span class="cmd">sovrun-loops</span> --cycle
-
-<span class="comment"># see what the system learned about you</span>
-<span class="cmd">sovrun-voice</span> --status
-
-<span class="comment"># visualize your agent DAG</span>
-<span class="cmd">sovrun-orchestrate</span> --visualize</pre>
+<span class="cmd">sovrun-loops</span> --cycle</pre>
     </div>
   </div>
 </section>
 
-<!-- architecture -->
-<section id="architecture">
-  <div class="container">
-    <p class="section-label">architecture</p>
-    <h2 class="section-title">4 layers. each works standalone.</h2>
-
-    <div class="arch-diagram">
-      <pre>
-<span class="layer-cognitive">  COGNITIVE                       ORCHESTRATION              MEMORY                INFRASTRUCTURE</span>
-<span class="layer-cognitive">  +-----------------------+</span>      <span class="layer-orch">+------------------+</span>      <span class="layer-memory">+------------------+</span>   <span class="layer-infra">+------------------+</span>
-<span class="layer-cognitive">  | voice_extractor       |</span>      <span class="layer-orch">| handoff          |</span>      <span class="layer-memory">| procedural_memory|</span>   <span class="layer-infra">| resilience       |</span>
-<span class="layer-cognitive">  | cognitive_engine      |</span>  ->  <span class="layer-orch">| orchestration    |</span>  ->  <span class="layer-memory">| conversation_log |</span>   <span class="layer-infra">| durable          |</span>
-<span class="layer-cognitive">  | pattern_miner         |</span>      <span class="layer-orch">| loop_closer      |</span>      <span class="layer-memory">| session_briefing |</span>   <span class="layer-infra">|                  |</span>
-<span class="layer-cognitive">  | user_sim_refiner      |</span>      <span class="layer-orch">| decision_engine  |</span>      <span class="layer-memory">|                  |</span>   <span class="layer-infra">|                  |</span>
-<span class="layer-cognitive">  | self_audit            |</span>      <span class="layer-orch">|                  |</span>      <span class="layer-memory">|                  |</span>   <span class="layer-infra">|                  |</span>
-<span class="layer-cognitive">  | bias-null protocol    |</span>      <span class="layer-orch">|                  |</span>      <span class="layer-memory">|                  |</span>   <span class="layer-infra">|                  |</span>
-<span class="layer-cognitive">  +-----------------------+</span>      <span class="layer-orch">+------------------+</span>      <span class="layer-memory">+------------------+</span>   <span class="layer-infra">+------------------+</span>
-
-<span style="color: var(--text-dim);">  learns YOUR patterns            composes agent flows        remembers what worked    makes it production-grade
-  corrects LLM defaults           closes decision loops       continuity across         retry, circuit break,
-  scores drift from intent        typed handoffs              context windows           crash recovery, replay</span>
-</pre>
-    </div>
-  </div>
-</section>
-
-<!-- production numbers -->
 <section id="numbers">
   <div class="container">
     <p class="section-label">production numbers</p>
     <h2 class="section-title">extracted from a live system.</h2>
-    <p class="section-desc">these numbers are from the production autonomous system sovrun was extracted from. not synthetic benchmarks.</p>
-
+    <p class="section-desc">from the production autonomous system sovrun was extracted from. not synthetic benchmarks.</p>
     <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">1,510</div>
-        <div class="stat-label">prompts fed to cognitive engine</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">168</div>
-        <div class="stat-label">correction chains extracted</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">6.9</div>
-        <div class="stat-label">avg corrections per chain</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">0</div>
-        <div class="stat-label">external dependencies</div>
-      </div>
+      <div class="stat-card"><div class="stat-number">20</div><div class="stat-label">modules across 5 layers</div></div>
+      <div class="stat-card"><div class="stat-number">1,510</div><div class="stat-label">prompts fed to cognitive engine</div></div>
+      <div class="stat-card"><div class="stat-number">168</div><div class="stat-label">correction chains extracted</div></div>
+      <div class="stat-card"><div class="stat-number">1,200+</div><div class="stat-label">connectors via n8n bridge</div></div>
+      <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">external dependencies (core)</div></div>
+      <div class="stat-card"><div class="stat-number">24/7</div><div class="stat-label">autonomous operation tested</div></div>
     </div>
-    <p class="stat-note">from the parent system. not a benchmark. your numbers will depend on your prompt history and agent architecture.</p>
+    <p class="stat-note">your numbers will depend on your prompt history and agent architecture.</p>
+
+    <div class="cta-section">
+      <h3>need it installed for you?</h3>
+      <p>our consulting arm deploys sovrun into your infrastructure. audit, setup, custom agents, ongoing management.</p>
+      <a href="pricing.html#consulting" class="btn btn-primary">see consulting packages</a>
+    </div>
   </div>
 </section>
 
-<!-- footer -->
 <footer>
   <div class="container">
     <div class="footer-links">
       <a href="https://github.com/fnsmdehip/sovrun">github</a>
+      <a href="docs.html">docs</a>
+      <a href="compare.html">compare</a>
+      <a href="pricing.html">pricing</a>
       <a href="https://github.com/fnsmdehip/sovrun/issues">issues</a>
       <a href="https://github.com/fnsmdehip/sovrun/blob/main/LICENSE">MIT license</a>
     </div>
