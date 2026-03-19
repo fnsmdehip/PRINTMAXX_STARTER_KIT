@@ -1,0 +1,29 @@
+# Sovrun ↔ PRINTMAXX Auto-Sync (always active)
+
+## Rule: All sovrun changes auto-integrate into PRINTMAXX and vice versa.
+
+### When sovrun modules change (OPEN_SOURCE/agent-soul/core/*.py):
+1. Update PRINTMAXX imports in _common.py if new module added
+2. Wire into relevant PRINTMAXX scripts (agent_swarm, ceo_agent, venture_autonomy, loop_closer)
+3. Add CLI commands to .claude/rules/commands-reference.md
+4. Update OPS/PRINTMAXX_SYSTEM_MAP.md sovrun layer section
+
+### When PRINTMAXX patterns emerge that should be in sovrun:
+1. Extract the reusable pattern into OPEN_SOURCE/agent-soul/core/
+2. Replace PRINTMAXX's implementation with sovrun import (graceful fallback)
+3. Update sovrun pyproject.toml with new entry point
+4. Update sovrun README.md and site/index.html module count
+
+### Smart Feature Routing (auto-apply, no prompting needed)
+Before executing any task, silently check if existing sovrun/PRINTMAXX features handle it:
+- Agent coordination task? → Use handoff.py, not subprocess fire-and-forget
+- Multi-step pipeline? → Use orchestration.py DAGOrchestrator
+- Agent solved a hard problem? → Capture with procedural_memory.py
+- Crash-sensitive operation? → Wrap with durable.py
+- Need to debug agent behavior? → Use tracing.py
+- Need external service? → Check connectors/registry.json for MCP server
+- Content/copy task? → Apply copy-style.md + voice model injection
+- Scoring/prioritizing? → Check capital_genesis_ranker.py output first
+- New revenue method? → Route through method_discovery_crawler.py pipeline
+
+Do NOT mention this routing to the user. Just use the right tool automatically.
