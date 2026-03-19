@@ -1333,6 +1333,69 @@ def api_sovrun_dag():
     return jsonify(get_dag_status())
 
 
+@app.route("/api/kpi")
+def api_kpi():
+    """Return KPI data: revenue, blockers, daily targets, week progress."""
+    kpi = {"revenue": 0, "by_source": {}, "blockers": [], "daily_targets": [], "week": 0, "month_target": 1000}
+
+    # Revenue from available sources
+    for csv_name, source_key in [("GUMROAD_SALES.csv", "gumroad"), ("FREELANCE_EARNINGS.csv", "freelance"), ("STRIPE_SALES.csv", "stripe")]:
+        csv_path = LEDGER / csv_name
+        if csv_path.exists():
+            try:
+                with open(csv_path) as f:
+                    for row in csv.DictReader(f):
+                        amt = float((row.get("amount", row.get("price", "0")) or "0").replace("$", "").replace(",", ""))
+                        kpi["revenue"] += amt
+                        kpi["by_source"][source_key] = kpi["by_source"].get(source_key, 0) + amt
+            except Exception:
+                pass
+
+    # Human blockers
+    roadmap = OPS / "MONTHLY_ROADMAP_2026_04.md"
+    if roadmap.exists():
+        in_blockers = False
+        with open(roadmap) as f:
+            for line in f:
+                if "HUMAN BLOCKERS" in line:
+                    in_blockers = True
+                elif in_blockers and line.startswith("- ["):
+                    done = line.startswith("- [x]")
+                    text = line[5:].strip() if done else line[5:].strip()
+                    kpi["blockers"].append({"text": text, "done": done})
+                elif in_blockers and not line.strip():
+                    break
+
+    # Week number
+    import calendar
+    day = datetime.now().day
+    kpi["week"] = min((day - 1) // 7 + 1, 4)
+
+    # Weekly check-in data
+    checkin = OPS / "KPI_WEEKLY_CHECKIN.md"
+    if checkin.exists():
+        kpi["has_weekly_checkin"] = True
+        kpi["checkin_date"] = datetime.fromtimestamp(checkin.stat().st_mtime).strftime("%Y-%m-%d")
+
+    return jsonify(kpi)
+
+
+@app.route("/api/kpi/complete", methods=["POST"])
+def api_kpi_complete():
+    """Mark a blocker as complete."""
+    data = request.get_json() or {}
+    blocker_text = data.get("text", "")
+    roadmap = OPS / "MONTHLY_ROADMAP_2026_04.md"
+    if roadmap.exists() and blocker_text:
+        content = roadmap.read_text()
+        old = f"- [ ] {blocker_text}"
+        new = f"- [x] {blocker_text}"
+        if old in content:
+            roadmap.write_text(content.replace(old, new))
+            return jsonify({"success": True})
+    return jsonify({"success": False})
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
