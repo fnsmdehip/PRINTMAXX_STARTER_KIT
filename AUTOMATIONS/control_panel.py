@@ -1404,12 +1404,14 @@ def api_kpi_calendar():
                 # ACCOUNTS
                 "Set up GoLogin with 6 browser profiles: @PRINTMAXXER (primary), 2 niche accounts (fitness/golf, finance), 2 content farm accounts, 1 findom persona",
                 "Assign SOAX mobile proxy to each GoLogin profile (unique residential IP per account, geo-match to account location)",
-                "Create 3 secondary X/Twitter accounts in GoLogin profiles — each gets its own niche, voice, and bio",
+                "Create 3 secondary X/Twitter accounts in GoLogin profiles. Each gets its own niche, voice, and bio",
                 "Subscribe X Premium Basic ($3/mo) on primary + 2 secondary accounts ($9 total) for 10x impression boost",
                 # CONTENT
                 "Post 8 tweets from primary @PRINTMAXXER queue + 1 thread: what you are building",
                 "Run content_factory.py --batch-alpha 5 to generate cross-platform content from latest alpha",
                 "Generate 3 faceless video scripts via ai_video_content_pipeline.py --generate golf --count 3 for boomer YouTube",
+                "Upload 3 low-content books to Amazon KDP (E05): journal templates, planners, prompt books from DIGITAL_PRODUCTS/ ($2-5 royalty per sale, seeds compound over 90 days)",
+                "List 5 digital downloads on Etsy (E06): automation checklists, prompt packs, workflow templates at $5-15 each with SEO-optimized titles",
                 # ENGAGEMENT
                 "Reply to 40 accounts from primary within 15 min of target posting (reply guy = 150x a like in algo weight)",
                 "Post 3 tweets per secondary account (warmup phase: quality over volume, first 100 tweets set algo foundation)",
@@ -1420,7 +1422,7 @@ def api_kpi_calendar():
                 "Verify 112 cron jobs ran: check system_health_monitor.py --quick output",
                 "Verify twitter_alpha_scraper.py output at LEDGER/TWITTER_ALPHA_SCRAPES.csv (133 accounts scraped at 6AM)",
                 "Verify background_reddit_scraper.py output at LEDGER/REDDIT_SCRAPES/ (ran at 6:15AM)",
-                "Check soul_drift_report.json — any agent below 6/10 gets prompt rewrite immediately"
+                "Check soul_drift_report.json: any agent below 6/10 gets prompt rewrite immediately"
             ],
             "revenue_target": "$0",
             "content": {"tweets": 14, "threads": 1, "tiktoks": 0, "youtube": 3, "newsletters": 0},
@@ -1484,12 +1486,13 @@ def api_kpi_calendar():
             "theme": "GOV CONTRACTS + EAS PIPELINE",
             "tasks": [
                 # ACCOUNTS
-                "Continue secondary account warmup: 5 tweets + 20 replies per secondary account (unique content per account, never cross-post identical text)",
+                "Secondary account warmup Day 3: post 5 tweets + 20 replies per account (unique content, never cross-post identical text. First 100 tweets set your algo foundation.)",
                 "Set up GoLogin profile for LinkedIn automation (separate from Twitter profiles)",
                 # CONTENT
                 "Post 8 tweets + 2 threads from primary (1 freelance value thread, 1 build-in-public thread)",
                 "Generate 5 TikTok scripts via ai_video_content_pipeline.py --generate fitness --count 5",
-                "Create 3 LinkedIn posts repurposing best tweets with B2B framing for EAS",
+                "Create 3 LinkedIn posts repurposing best tweets with B2B framing for EAS (optimize for Depth Score: dwell time + comment depth + saves, zero external links in body)",
+                "Publish 1 Medium article + 1 Quora answer repurposing best thread content (Parasite SEO: high-DA backlinks to money sites for free)",
                 # ENGAGEMENT
                 "Reply to 50 accounts from primary + 10 replies per secondary (80 total)",
                 "Comment on 5 LinkedIn posts about business automation (value-add, link EAS site in profile)",
@@ -1539,8 +1542,8 @@ def api_kpi_calendar():
                 "Comment on 10 Reddit posts: r/freelance, r/automation, r/smallbusiness, r/Entrepreneur (genuine value, link in profile)",
                 # REVENUE
                 "Launch cold email via n8n w04: 50 emails to local businesses with outdated websites from eas_lead_pipeline scored list",
-                "Submit 10 more Upwork proposals (20 total active, target $2K+ projects)",
-                "Check Fiverr for new buyer requests in AI/automation categories, respond to all within 1 hour",
+                "Submit 10 more Upwork proposals (20 total active, target $2K+ projects) -- attach portfolio screenshots from PRODUCTS/ + apps from APP_FACTORY/",
+                "Check Fiverr for new buyer requests in AI/automation categories, respond to all within 1 hour with custom video intro (60 seconds max, screen record)",
                 # AUTOMATION
                 "Verify eas_lead_pipeline.py 8AM cron: check scored leads in LEDGER/",
                 "Verify method_discovery_crawler.py 5AM cron: any new P0 methods in OPS/CAPITAL_GENESIS_PRIORITY_STACK.md?",
@@ -1568,7 +1571,8 @@ def api_kpi_calendar():
             "theme": "E-COMMERCE + ARBITRAGE SCAN",
             "tasks": [
                 # ACCOUNTS
-                "Set up Fanvue account for persona venture P02 (findom, separate GoLogin profile + SOAX proxy)",
+                "Set up Fanvue account for persona venture P02 (findom, separate GoLogin profile + SOAX proxy, unique residential IP geo-matched to persona location)",
+                "Post 5 findom persona tweets: teaser content + #findom #paypig hashtags + Fanvue link in bio (cross-platform stack: Twitter discovery > Fanvue content > Telegram VIP > CashApp tributes)",
                 "Set up Beehiiv newsletter account + create lead magnet PDF (free automation checklist)",
                 # CONTENT
                 "Post 10 tweets + 1 thread from primary: 'I sent 50 cold emails, here is what happened' (real-time case study)",
@@ -1578,9 +1582,10 @@ def api_kpi_calendar():
                 # ENGAGEMENT
                 "Reply to 60 accounts from primary + 20 from secondaries (80 total)",
                 "DM 10 mid-tier accounts (2K-20K followers) offering free template in exchange for feedback/testimonial",
+                "Buy 3 PLR products ($20-50 each) from PLRProducts.com or IDplr.com, rebrand with PRINTMAXX voice, list on Gumroad at $27-47 (N11 PLR arbitrage: 20-40% margin after acquisition)",
                 # REVENUE
-                "Scan Facebook/TikTok ads libraries for winning products (TikTok Shop arbitrage E01)",
-                "List top 3 winning products on TikTok Shop or appropriate e-commerce platform",
+                "Run product_scanner.py --source tiktok_ads_library --source fb_ads_library --min-engagement 10000: identify 5 winning products under $30 AOV with 3x+ markup potential (E01 TikTok Shop arbitrage)",
+                "List top 3 winning products on TikTok Shop with supplier links, cost/margin analysis, and 3 ad hook scripts per product",
                 "Send cold email batch 2: 50 more emails (100 total) via n8n w04, A/B test subject lines",
                 "Follow up on batch 1 non-openers with different subject line (auto via SendGrid sequence)",
                 "Run auto_freelance_responder.py --scan-and-respond to auto-generate proposals for hot Reddit/Upwork jobs",
@@ -1588,7 +1593,8 @@ def api_kpi_calendar():
                 "Verify twitter_warmup_poster.py warmup day status + advancement",
                 "Check cold email analytics: open rates (target >40%), reply rates (target >2%), bounce rates (target <5%)",
                 "Verify capital_genesis_ranker.py 5:30AM cron: review updated priority stack",
-                "Check n8n w13 (Reddit pain point miner) output: any EAS prospects identified?"
+                "Check n8n w13 (Reddit pain point miner) output: any EAS prospects identified?",
+                "Post 3 findom teaser tweets from persona secondary account: establish presence in #findom #paypig communities before Fanvue launch Day 5"
             ],
             "revenue_target": "$0-75",
             "content": {"tweets": 20, "threads": 1, "tiktoks": 0, "youtube": 3, "newsletters": 0},
@@ -1699,17 +1705,19 @@ def api_kpi_calendar():
                 "Secondary accounts: post 8 tweets each (total 16 across 2 accounts)",
                 "Cross-account amplification: secondary accounts quote-tweet primary threads with unique takes (stagger 2+ hours)",
                 # CONTENT
-                "Run content_factory.py --batch-alpha 10: generate 10 multi-platform content pieces from alpha",
-                "Generate 5 TikToks via ai_video_content_pipeline.py for fitness + golf niches",
-                "Post 3 TikToks + cross-post adapted versions to YouTube Shorts + Instagram Reels",
+                "Run content_factory.py --batch-alpha 10: generate 10 pieces targeting X (primary), LinkedIn (EAS), Pinterest (affiliate), Facebook (boomer) simultaneously",
+                "Generate 5 TikToks via ai_video_content_pipeline.py --generate fitness --count 3 --generate golf --count 2",
+                "Post 3 TikToks + cross-post adapted versions to YouTube Shorts + Instagram Reels (unique captions per platform, never identical text)",
                 # ENGAGEMENT
                 "Reply to 75 accounts from primary + 25 from secondaries (100 total)",
                 "DM 15 people: 5 Upwork job posters who haven't hired, 5 thread engagers, 5 cold prospects",
+                "Set up ManyChat on Instagram business account: auto-DM lead magnet to anyone who comments keyword (Instagram Graph API: 200 DMs/hr, Meta-approved, zero ban risk)",
                 "Post to 3 X Communities before tweeting to trigger 30-min velocity window boost",
                 # REVENUE
                 "Send cold email batch 3: 75 emails (175 total) via n8n w04 with A/B winning subject line",
-                "Submit 15 Upwork proposals (35 total) targeting $1K-5K project budgets",
+                "Submit 15 Upwork proposals (35 total) targeting $1K-5K project budgets -- use portfolio pieces from PRODUCTS/ as proof of speed",
                 "Follow up on all Week 1 cold emails that got opens but no replies (auto via n8n w04 sequence)",
+                "Set up Bland AI voice outreach (S05): load EAS discovery call script, test 5 calls to warm leads from eas_lead_pipeline scored list (100 free calls/day)",
                 # AUTOMATION
                 "Verify agent_swarm.py --status: 25 agents operational, check model routing (Opus/Sonnet/Haiku)",
                 "Check alpha_auto_processor.py: process all PENDING_REVIEW entries in ALPHA_STAGING.csv",
@@ -1750,6 +1758,7 @@ def api_kpi_calendar():
                 "Submit 10 Upwork proposals on jobs matching Fiverr gig categories (45 total)",
                 "Run auto_freelance_responder.py --scan-and-respond: auto-bid on hot Reddit freelance threads",
                 "Respond to all Fiverr buyer requests within 1 hour, offer rush delivery premium",
+                "Run Bland AI: 20 calls to scored EAS leads from eas_lead_pipeline.py (100 free/day, 1-3% appointment rate = 0-1 meetings booked)",
                 # GOV CONTRACTS
                 "Run sam_gov_monitor.py --limit 50: scan for new IT/software/digital marketing contracts",
                 "Draft proposal outline for top-scoring SAM.gov opportunity matching our NAICS codes",
@@ -1760,7 +1769,7 @@ def api_kpi_calendar():
             "revenue_target": "$10-100",
             "content": {"tweets": 26, "threads": 1, "tiktoks": 3, "youtube": 3, "newsletters": 0},
             "engagement": {"replies": 100, "dms": 10, "comments": 15, "follows": 45},
-            "outreach": {"cold_emails": 0, "proposals": 10, "calls": 0},
+            "outreach": {"cold_emails": 0, "proposals": 10, "calls": 20},
             "automation_checks": [
                 "venture_autonomy.py: 8 venture types active",
                 "twitter_alpha_scraper.py: 133-account scan output",
@@ -1916,6 +1925,7 @@ def api_kpi_calendar():
                 "Submit 10 Upwork proposals on fresh $2K+ jobs (65 total, track win rate)",
                 "If budget available: launch $5/day Facebook ad targeting men 55-70 (golf/fishing/health interests)",
                 "If no budget: organic substitute -- post in 10 more boomer Facebook Groups",
+                "Run Bland AI: 50 calls to scored leads from eas_lead_pipeline.py (Week 2 ramp: target 2-3 meetings booked, log objections for script refinement)",
                 # AUTOMATION
                 "Verify all cron jobs via crontab -l: identify any silently failed jobs",
                 "Check method_discovery_crawler.py 5AM cron: any new revenue methods discovered?",
@@ -1924,7 +1934,7 @@ def api_kpi_calendar():
             "revenue_target": "$30-200",
             "content": {"tweets": 36, "threads": 2, "tiktoks": 0, "youtube": 2, "newsletters": 1},
             "engagement": {"replies": 105, "dms": 15, "comments": 15, "follows": 45},
-            "outreach": {"cold_emails": 0, "proposals": 10, "calls": 0},
+            "outreach": {"cold_emails": 0, "proposals": 10, "calls": 50},
             "automation_checks": [
                 "crontab full audit: all 112 jobs verified",
                 "method_discovery_crawler.py: 5AM cron output",
@@ -2117,12 +2127,15 @@ def api_kpi_calendar():
                 "Write newsletter #3 with Week 3 alpha + exclusive subscriber offer",
                 "Post 12 tweets + 2 threads from primary (1 engagement-bait, 1 value)",
                 "Post 10 tweets per secondary (30 total)",
+                "Post 5 findom persona tweets + 3 Fanvue paid posts (maintain daily cadence -- P02 projected $200-5K/mo, needs consistent presence)",
+                "Publish 2 Medium articles + 1 LinkedIn long-form article repurposing top threads (Parasite SEO: DA90+ backlinks compound over 60 days)",
                 # ENGAGEMENT
                 "Reply to 80 from primary + 40 from secondaries + 10 viral post replies within 30 min (130 total)",
                 "DM 20 people: 10 engaged followers + 5 potential clients + 5 potential partners",
                 # REVENUE
                 "Post 5 Pinterest pins with affiliate-linked boomer products (golf, health, fishing)",
-                "Check all e-commerce listings performance: views, clicks, conversion rate",
+                "Check all e-commerce listings performance: Etsy views/favorites, KDP page reads, Gumroad views/conversions, TikTok Shop clicks",
+                "Run Bland AI: 30 calls to scored leads (target: 1-2 meetings booked, use EAS discovery script from MONEY_METHODS/EAS/)",
                 # AUTOMATION
                 "Verify all content posted across platforms: check Buffer/Typefully/Publer queues",
                 "Run system_visualizer.py: review SYSTEM_VISUAL.html for architecture gaps",
@@ -2163,6 +2176,7 @@ def api_kpi_calendar():
                 "Send cold email batch 8: 50 emails (500 total) -- only to highest-engagement segments",
                 "Run auto_freelance_responder.py --scan-and-respond: capture any new hot jobs",
                 "Review all Fiverr/Upwork active proposals: respond to inquiries within 1 hour",
+                "Run Bland AI: 30 calls to EAS + local biz leads (push for discovery calls, track appointment-to-close ratio)",
                 # GOV CONTRACTS
                 "Run uk_contracts_finder.py --keyword 'digital' --min-value 50000: scan high-value UK contracts",
                 "Review GOV_OPPORTUNITIES.csv: any deadlines in next 7 days? Draft submission.",
@@ -2240,8 +2254,8 @@ def api_kpi_calendar():
                 # ENGAGEMENT
                 "Reply to 30 accounts (reduced volume, increase quality on calibration day)",
                 # REVENUE
-                "Trajectory check: on track for $1K this month? Identify the 1 biggest bottleneck.",
-                "Revenue gap analysis: shortest path from current revenue to $1K = double down there",
+                "Trajectory check: are we on track for $1K this month? If not, what is the single fastest move to close the gap? Name it.",
+                "Revenue gap analysis: sort all active channels by $/hr. The top channel gets 3x resources starting tomorrow.",
                 "Full engagement-to-revenue conversion audit: which platform converts best?",
                 "If any venture crossed $100 this week: create SOP to replicate 3x",
                 "Pre-draft 100 cold emails for Week 4 with personalization tokens (load into n8n w04)",
@@ -2289,6 +2303,7 @@ def api_kpi_calendar():
                 # REVENUE
                 "Pitch retainer to best freelance client: $500-2K/mo for ongoing automation support",
                 "Set up subscription tier on Gumroad/Whop: monthly templates ($19/mo) or community ($49/mo)",
+                "Publish Chrome extension v1 to Chrome Web Store (D05, $5 one-time fee): AI prompt helper or automation shortcut tool from APP_FACTORY/ portfolio",
                 # AUTOMATION
                 "Verify PH analytics tracking: upvotes, visits, conversions counted accurately",
                 "Monitor checkout under PH traffic load: no failures",
@@ -2329,13 +2344,14 @@ def api_kpi_calendar():
                 "Call top 3 EAS leads: voice builds trust faster than email",
                 "Convert one-time Gumroad buyers to subscribers: email all buyers with subscription offer",
                 "Launch Telegram VIP channel ($49-99/mo) with exclusive alpha/automation content",
+                "Set up SMS opt-in on all checkout pages (98% open rate vs 20% email). First SMS to opted-in buyers: exclusive deal + referral code (TCPA compliant: explicit written consent per marketer)",
                 "Send cold email batch 9: 75 emails (575 total) with PH launch as social proof + testimonials",
                 # AUTOMATION
                 "Verify Telegram VIP payment gateway working",
                 "Check daily_engagement_planner.py: warmup schedule aligned with current volume?",
                 "Verify all revenue tracking: Gumroad, Fiverr, Upwork, affiliate, Stripe dashboards accurate"
             ],
-            "revenue_target": "$150-700",
+            "revenue_target": "$200-1000",
             "content": {"tweets": 42, "threads": 2, "tiktoks": 3, "youtube": 0, "newsletters": 1},
             "engagement": {"replies": 120, "dms": 20, "comments": 15, "follows": 50},
             "outreach": {"cold_emails": 75, "proposals": 0, "calls": 3},
@@ -2366,6 +2382,8 @@ def api_kpi_calendar():
                 "Reply to 80 from primary + 40 from secondaries (120 total)",
                 "DM 10 warmest leads with personalized offer based on engagement history",
                 # REVENUE
+                "Send cold email batch: 50 emails (625 total) maintaining daily cadence -- never let the pipeline go cold for more than 24h",
+                "Run Bland AI: 50 calls to fresh scored leads + follow-up calls to Day 23 meeting no-shows",
                 "A/B test: Gumroad product titles/descriptions/prices for top 3 sellers",
                 "Add upsells/cross-sells to all product checkout pages",
                 "Optimize email sequences: rewrite any email with <20% open rate or <2% click rate",
@@ -2382,7 +2400,7 @@ def api_kpi_calendar():
             "revenue_target": "$200-800",
             "content": {"tweets": 42, "threads": 1, "tiktoks": 3, "youtube": 2, "newsletters": 0},
             "engagement": {"replies": 120, "dms": 10, "comments": 10, "follows": 35},
-            "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
+            "outreach": {"cold_emails": 50, "proposals": 0, "calls": 50},
             "automation_checks": [
                 "alpha_auto_processor.py: all PENDING_REVIEW cleared",
                 "Gumroad: analytics vs expected revenue match",
@@ -2493,8 +2511,8 @@ def api_kpi_calendar():
                 # ENGAGEMENT
                 "Reply to 30 accounts + handle all open DM conversations",
                 # REVENUE
-                "Full month review: actual revenue vs conservative/medium/aggressive scenarios from KPI_DASHBOARD.md",
-                "Per-channel breakdown: revenue, time invested, ROI per hour, growth trajectory",
+                "Month review: actual revenue vs KPI_DASHBOARD.md projections (conservative $800, medium $2,900, aggressive $8,100). Where did we land?",
+                "Per-channel breakdown: revenue, hours invested, $/hr, growth rate. Sort by $/hr descending.",
                 "Identify top 3 ventures for next month: allocate 80% of effort to these three",
                 "Kill list: finalize ventures to cut next month (<$50 revenue after full month)",
                 "Scale list: ventures getting 3x resources next month (>$200 revenue or >5% engagement)",
@@ -2533,10 +2551,10 @@ def api_kpi_calendar():
                 # ENGAGEMENT
                 "Reply to 60 accounts across all platforms",
                 # REVENUE
-                "Final revenue count: total earnings across ALL channels (freelance, products, content, EAS, persona, affiliate, gov contracts)",
-                "Revenue leaderboard: rank every venture by actual revenue generated",
-                "Engagement leaderboard: followers gained per account, engagement rate, growth trajectory",
-                "Outreach leaderboard: emails sent, reply rate, close rate, revenue per email",
+                "Final revenue count across ALL channels: freelance, products, content, EAS, persona, affiliate, gov contracts. No rounding. Exact numbers.",
+                "Revenue leaderboard: rank every venture by actual $/hr generated. Kill anything below $10/hr.",
+                "Engagement leaderboard: followers gained per account, engagement rate, growth trajectory. TweepCred estimate per account.",
+                "Outreach leaderboard: emails sent, reply rate, close rate, revenue per email. Compare to 2% reply / 20% close benchmarks.",
                 # AUTOMATION
                 "Full system health audit: all 112 cron jobs, all 33 agents, all scrapers, all pipelines",
                 "Run capital_genesis_ranker.py --rank --report: fresh next-month priority stack",
@@ -2644,7 +2662,7 @@ def api_kpi_calendar():
     default_plan = {
         "theme": "FLEX OPS",
         "tasks": [
-            "Continue top 3 priority ventures from CAPITAL_GENESIS_PRIORITY_STACK.md",
+            "Execute top 3 priority ventures from CAPITAL_GENESIS_PRIORITY_STACK.md (check daily, priorities shift)",
             "Post 12 tweets from primary + 8 per secondary account (28 total)",
             "Reply to 60 accounts from primary + 20 from secondaries (80 total)",
             "Follow up on all open proposals (Upwork, EAS, freelance) and DM conversations",
