@@ -1623,6 +1623,38 @@ body {
 
   <!-- ====== DASHBOARD TAB ====== -->
   <div class="tab-content active" id="tab-dashboard">
+
+    <!-- KPI HERO — first thing you see -->
+    <div class="glass-card" style="border:2px solid var(--accent); background:linear-gradient(135deg, rgba(0,255,136,0.08), rgba(0,100,255,0.05)); margin-bottom:16px; padding:24px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <div style="font-size:1.4em; font-weight:800; color:var(--text); font-family:'JetBrains Mono';"><i class="ti ti-target-arrow" style="color:var(--accent);"></i> TODAY'S BATTLE PLAN</div>
+        <div style="font-family:'JetBrains Mono'; font-size:0.85em; color:var(--text-dim);" id="dash-kpi-date"></div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px,1fr)); gap:12px; margin-bottom:20px;">
+        <div style="text-align:center; padding:16px; background:var(--panel); border-radius:10px; border:1px solid var(--border);">
+          <div id="dash-kpi-revenue" style="font-family:'JetBrains Mono'; font-size:2em; font-weight:800; color:var(--accent);">$0</div>
+          <div style="font-size:0.75em; color:var(--text-dim);">Revenue</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--panel); border-radius:10px; border:1px solid var(--border);">
+          <div id="dash-kpi-day-theme" style="font-family:'JetBrains Mono'; font-size:1em; font-weight:700; color:var(--warn);">—</div>
+          <div style="font-size:0.75em; color:var(--text-dim);">Today's Theme</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--panel); border-radius:10px; border:1px solid var(--border);">
+          <div id="dash-kpi-tasks-count" style="font-family:'JetBrains Mono'; font-size:2em; font-weight:800; color:var(--blue);">0</div>
+          <div style="font-size:0.75em; color:var(--text-dim);">Tasks Today</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--panel); border-radius:10px; border:1px solid var(--border);">
+          <div id="dash-kpi-blockers-hero" style="font-family:'JetBrains Mono'; font-size:2em; font-weight:800; color:var(--danger);">0</div>
+          <div style="font-size:0.75em; color:var(--text-dim);">Blockers</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--panel); border-radius:10px; border:1px solid var(--border);">
+          <div id="dash-kpi-week-phase" style="font-family:'JetBrains Mono'; font-size:0.9em; font-weight:700; color:var(--purple);">W1</div>
+          <div style="font-size:0.75em; color:var(--text-dim);">Week Phase</div>
+        </div>
+      </div>
+      <div id="dash-kpi-today-tasks" style="max-height:300px; overflow-y:auto;"></div>
+    </div>
+
     <!-- Real-time chart -->
     <div class="glass-card dash-grid-full" style="margin-bottom:16px">
       <div class="card-title"><i class="ti ti-chart-area-line"></i>Agent Activity (24h)</div>
@@ -1965,7 +1997,7 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     tab.classList.add('active');
     var target = document.getElementById('tab-' + tab.dataset.tab);
     if (target) target.classList.add('active');
-    if (tab.dataset.tab === 'dashboard') loadDashboard();
+    if (tab.dataset.tab === 'dashboard') { loadDashboard(); loadDashKPI(); }
     if (tab.dataset.tab === 'agents') loadStatus();
     if (tab.dataset.tab === 'tree') loadSystemTree();
     if (tab.dataset.tab === 'actions') loadActions();
@@ -3143,6 +3175,38 @@ async function loadKPI() {
   }
 }
 
+async function loadDashKPI() {
+  try {
+    var [kpiR, calR] = await Promise.all([fetch(API+'/api/kpi'), fetch(API+'/api/kpi/calendar')]);
+    var kpi = await kpiR.json();
+    var cal = await calR.json();
+    document.getElementById('dash-kpi-revenue').textContent = '$' + (kpi.revenue||0).toLocaleString();
+    var remaining = (kpi.blockers||[]).filter(function(b){return !b.done;}).length;
+    document.getElementById('dash-kpi-blockers-hero').textContent = remaining;
+    document.getElementById('dash-kpi-blockers-hero').style.color = remaining > 0 ? 'var(--danger)' : 'var(--accent)';
+    var today = new Date();
+    document.getElementById('dash-kpi-date').textContent = today.toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
+    // Find today's plan (use day 1 as preview if month hasn't started)
+    var dayNum = today.getDate();
+    var todayPlan = cal.days.find(function(d){return d.day===dayNum;}) || cal.days[0];
+    document.getElementById('dash-kpi-day-theme').textContent = todayPlan.theme;
+    document.getElementById('dash-kpi-tasks-count').textContent = todayPlan.tasks.length;
+    var weekPhases = {1:'FOUNDATION',2:'VOLUME',3:'OPTIMIZATION',4:'COMPOUND'};
+    document.getElementById('dash-kpi-week-phase').textContent = (todayPlan.week_phase || weekPhases[todayPlan.week] || 'W'+todayPlan.week);
+    // Render today's tasks
+    var tasksEl = document.getElementById('dash-kpi-today-tasks');
+    tasksEl.innerHTML = todayPlan.tasks.map(function(t,i){
+      return '<div style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85em;">' +
+        '<span style="color:var(--accent);font-family:JetBrains Mono;min-width:20px;">'+(i+1)+'.</span>' +
+        '<span style="color:var(--text);">'+t+'</span></div>';
+    }).join('');
+    // Revenue target
+    tasksEl.innerHTML += '<div style="margin-top:12px;padding:12px;background:var(--panel);border-radius:8px;display:flex;justify-content:space-between;">' +
+      '<span style="color:var(--text-dim);font-size:0.85em;">Revenue Target</span>' +
+      '<span style="color:var(--accent);font-family:JetBrains Mono;font-weight:700;">'+ todayPlan.revenue_target +'</span></div>';
+  } catch(e) { console.error('dash KPI failed:', e); }
+}
+
 async function loadCalendar() {
   try {
     var r = await fetch(API + '/api/kpi/calendar');
@@ -3319,11 +3383,12 @@ async function completeBlocker(el, text) {
 
 // ---------- AUTO REFRESH ----------
 loadDashboard();
+loadDashKPI();
 setInterval(function() {
   var activeTab = document.querySelector('.tab.active');
   if (!activeTab) return;
   var tab = activeTab.dataset.tab;
-  if (tab === 'dashboard') loadDashboard();
+  if (tab === 'dashboard') { loadDashboard(); loadDashKPI(); }
   else if (tab === 'agents') loadStatus();
   else if (tab === 'kpi') loadKPI();
 }, 30000);
