@@ -82,6 +82,149 @@ def log(msg: str, level: str = "INFO") -> None:
     print(f"[{ts()}] [SWARM] [{level}] {msg}")
 
 # ══════════════════════════════════════════════════════════════════════════
+# HANDOFF CHAINS -- Pre-configured multi-agent pipelines
+# ══════════════════════════════════════════════════════════════════════════
+# Each chain is a list of agents executed in sequence.  The output from each
+# agent is fed as context to the next.  Use --chain CHAIN_NAME to execute.
+
+HANDOFF_CHAINS: dict[str, list[str]] = {
+    "local_biz": [
+        "savvy_lead_scraper", "lead_enrichment", "eas_lead_pipeline",
+        "cold_email_generator", "follow_up_tracker",
+    ],
+    "content_factory": [
+        "alpha_scanner", "topic_selector", "content_generator",
+        "voice_injector", "platform_formatter",
+    ],
+    "product_launch": [
+        "demand_scanner", "product_builder", "listing_creator",
+        "distribution_engine", "sales_tracker",
+    ],
+    "freelance": [
+        "job_scanner", "proposal_writer", "submission_tracker",
+        "delivery_manager", "review_collector",
+    ],
+    "alpha_to_revenue": [
+        "scraper_fleet", "alpha_processor", "intelligence_router",
+        "capital_genesis_ranker", "venture_autonomy",
+    ],
+}
+
+
+def run_handoff_chain(chain_name: str) -> dict[str, Any]:
+    """Execute a pre-configured handoff chain sequentially.
+
+    Each step in the chain is dispatched via `claude -p` with the chain
+    context injected.  If a step corresponds to a real swarm agent, its
+    full prompt is used.  Otherwise a generic delegation prompt is created.
+
+    Returns a dict summarising each step result.
+    """
+    if chain_name not in HANDOFF_CHAINS:
+        log(f"Unknown chain: {chain_name}. Available: {', '.join(HANDOFF_CHAINS)}", "ERROR")
+        return {"error": f"unknown chain: {chain_name}"}
+
+    steps = HANDOFF_CHAINS[chain_name]
+    log(f"=== Handoff Chain: {chain_name} ({len(steps)} steps) ===")
+
+    results: dict[str, Any] = {}
+    carry_context = ""
+
+    for i, step_name in enumerate(steps, 1):
+        log(f"  Step {i}/{len(steps)}: {step_name}")
+
+        # Build prompt -- use swarm agent prompt if available
+        if step_name in SWARM_AGENTS:
+            agent_def = SWARM_AGENTS[step_name]
+            model = agent_def.get("model", MODEL_OPUS)
+            prompt = agent_def["prompt"].format(
+                project=str(PROJECT),
+                date=datetime.now().strftime("%Y%m%d"),
+            )
+        else:
+            # Generic delegation prompt for chain steps not in SWARM_AGENTS
+            model = MODEL_SONNET
+            prompt = (
+                f"You are the {step_name} agent in the PRINTMAXX {chain_name} chain.\n"
+                f"Working directory: {PROJECT}\n\n"
+                f"Your task: execute the '{step_name}' phase of the {chain_name} pipeline.\n"
+                f"Do your job thoroughly. Write output files to "
+                f"AUTOMATIONS/agent/swarm/chain_outputs/{chain_name}/.\n"
+                f"Report what you did and any actionable findings.\n"
+            )
+
+        # Inject carry context from previous steps
+        if carry_context:
+            prompt = (
+                f"CONTEXT FROM PREVIOUS CHAIN STEPS:\n{carry_context[-2000:]}\n\n"
+                f"---\n\n{prompt}"
+            )
+
+        # Inject procedural memory
+        mem = _get_procedural_memory()
+        if mem:
+            try:
+                injection = mem.export_injection(step_name, max_chars=300)
+                if injection:
+                    prompt = f"{injection}\n\n{prompt}"
+            except Exception:
+                pass
+
+        # Execute via claude -p
+        try:
+            result = subprocess.run(
+                ["claude", "-p", prompt[:8000], "--dangerously-skip-permissions",
+                 "--model", model],
+                capture_output=True, text=True,
+                timeout=600, cwd=str(PROJECT),
+            )
+            output = (result.stdout or "")[-3000:]
+            success = result.returncode == 0
+        except subprocess.TimeoutExpired:
+            output = "Timeout after 600s"
+            success = False
+        except Exception as e:
+            output = str(e)[:500]
+            success = False
+
+        results[step_name] = {
+            "step": i,
+            "success": success,
+            "output_tail": output[-500:],
+        }
+
+        status = "OK" if success else "FAIL"
+        log(f"    [{status}] {step_name}")
+
+        # Accumulate context for next step
+        carry_context += f"\n\n--- {step_name} output ---\n{output[-1000:]}"
+
+        # Capture skill on success
+        if success and mem:
+            try:
+                mem.capture(
+                    task=f"chain:{chain_name}:{step_name}",
+                    result=output[:1000],
+                    success=True,
+                )
+            except Exception:
+                pass
+
+    # Save chain results
+    chain_output_dir = safe_path(SWARM_DIR / "chain_outputs" / chain_name)
+    chain_output_dir.mkdir(parents=True, exist_ok=True)
+    result_file = chain_output_dir / f"run_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    result_file.write_text(json.dumps(results, indent=2))
+
+    ok_count = sum(1 for r in results.values() if r.get("success"))
+    log(f"=== Chain {chain_name} complete: {ok_count}/{len(steps)} steps OK ===")
+    _trajectory.log("chain_complete", {
+        "chain": chain_name, "ok": ok_count, "total": len(steps),
+    })
+    return results
+
+
+# ══════════════════════════════════════════════════════════════════════════
 # SWARM AGENT DEFINITIONS
 # ══════════════════════════════════════════════════════════════════════════
 
@@ -1632,6 +1775,10 @@ def main() -> None:
                         help="Send a handoff request: --handoff source_agent target_agent 'task description'")
     parser.add_argument("--skills", type=str, metavar="QUERY",
                         help="Query procedural memory for learned skills matching a task")
+    parser.add_argument("--chain", type=str, metavar="CHAIN_NAME",
+                        help=f"Execute a handoff chain: {', '.join(HANDOFF_CHAINS)}")
+    parser.add_argument("--list-chains", action="store_true",
+                        help="List all available handoff chains")
 
     args = parser.parse_args()
 
@@ -1720,6 +1867,24 @@ def main() -> None:
             else:
                 print("No matching skills found.")
             mem.close()
+    elif args.chain:
+        chain_name = args.chain
+        if chain_name not in HANDOFF_CHAINS:
+            print(f"Unknown chain: {chain_name}")
+            print(f"Available chains: {', '.join(HANDOFF_CHAINS)}")
+            sys.exit(1)
+        results = run_handoff_chain(chain_name)
+        ok_count = sum(1 for r in results.values() if isinstance(r, dict) and r.get("success"))
+        print(f"\nChain '{chain_name}' complete: {ok_count}/{len(HANDOFF_CHAINS[chain_name])} steps OK")
+    elif args.list_chains:
+        print("\nAVAILABLE HANDOFF CHAINS:\n")
+        for name, steps in HANDOFF_CHAINS.items():
+            print(f"  {name}:")
+            for i, step in enumerate(steps, 1):
+                in_swarm = " (swarm agent)" if step in SWARM_AGENTS else ""
+                print(f"    {i}. {step}{in_swarm}")
+            print()
+        print(f"Run with: python3 {Path(__file__).name} --chain CHAIN_NAME\n")
     else:
         show_status()
 

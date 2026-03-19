@@ -1,0 +1,247 @@
+{
+  "name": "PRINTMAXX - Telegram Command Center",
+  "nodes": [
+    {
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [250, 300],
+      "parameters": {
+        "updates": ["message"],
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Parse Command",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const message = $input.item.json.message || {};\nconst text = (message.text || '').trim();\nconst chatId = message.chat?.id || '';\nconst userId = message.from?.id || '';\nconst username = message.from?.username || '';\n\n// Parse command and args\nconst parts = text.split(/\\s+/);\nconst command = (parts[0] || '').toLowerCase().replace('/', '');\nconst args = parts.slice(1).join(' ');\n\n// Authorized users check\nconst authorizedUsers = ['YOUR_TELEGRAM_USER_ID'];\nconst isAuthorized = authorizedUsers.includes(String(userId));\n\nconst validCommands = {\n  'status': 'Get system status',\n  'alpha': 'Run alpha pipeline',\n  'health': 'System health check',\n  'deploy': 'Deploy pending assets',\n  'leads': 'Get lead count and recent leads',\n  'revenue': 'Get revenue dashboard',\n  'content': 'Generate content batch',\n  'swarm': 'Get swarm agent status',\n  'ceo': 'Trigger CEO cycle',\n  'help': 'Show available commands'\n};\n\nreturn [{\n  json: {\n    command,\n    args,\n    chatId: String(chatId),\n    userId: String(userId),\n    username,\n    isAuthorized,\n    isValidCommand: command in validCommands,\n    validCommands,\n    receivedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Auth Check",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "auth_check",
+              "leftValue": "={{ $json.isAuthorized }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Reject Unauthorized",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [850, 450],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "={{ $json.chatId }}",
+        "text": "Unauthorized. This bot is private.",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Route Command",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [850, 250],
+      "parameters": {
+        "rules": {
+          "rules": [
+            {
+              "outputKey": "status",
+              "conditions": {
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.command }}",
+                    "rightValue": "status",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ]
+              }
+            },
+            {
+              "outputKey": "alpha",
+              "conditions": {
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.command }}",
+                    "rightValue": "alpha",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ]
+              }
+            },
+            {
+              "outputKey": "health",
+              "conditions": {
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.command }}",
+                    "rightValue": "health",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ]
+              }
+            },
+            {
+              "outputKey": "help",
+              "conditions": {
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.command }}",
+                    "rightValue": "help",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ]
+              }
+            }
+          ],
+          "fallbackOutput": "default"
+        }
+      }
+    },
+    {
+      "name": "Execute Agent Command",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1100, 150],
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:9999/api/command",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"command\": \"{{ $('Parse Command').item.json.command }}\",\n  \"args\": \"{{ $('Parse Command').item.json.args }}\",\n  \"source\": \"telegram\",\n  \"user\": \"{{ $('Parse Command').item.json.username }}\"\n}",
+        "options": {
+          "timeout": 120000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Format Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1300, 150],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const command = $('Parse Command').item.json.command;\nconst chatId = $('Parse Command').item.json.chatId;\nconst response = $input.item.json;\n\nlet message = '';\n\nif (response.error || response.statusCode >= 400) {\n  message = `Command /${command} failed.\\nAgent may be offline. Try again later.`;\n} else {\n  const data = response.data || response.result || response;\n  message = `/${command} result:\\n\\n${JSON.stringify(data, null, 2).substring(0, 3500)}`;\n}\n\nreturn [{\n  json: {\n    chatId,\n    message: message.substring(0, 4000),\n    command\n  }\n}];"
+      }
+    },
+    {
+      "name": "Send Help",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1100, 350],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "={{ $('Parse Command').item.json.chatId }}",
+        "text": "PRINTMAXX Command Center\n\n/status - System status\n/alpha - Run alpha pipeline\n/health - Health check\n/deploy - Deploy pending assets\n/leads - Lead count\n/revenue - Revenue dashboard\n/content - Generate content\n/swarm - Swarm status\n/ceo - CEO cycle\n/help - This message",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Send Response",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1500, 150],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.message }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [[{"node": "Parse Command", "type": "main", "index": 0}]]
+    },
+    "Parse Command": {
+      "main": [[{"node": "Auth Check", "type": "main", "index": 0}]]
+    },
+    "Auth Check": {
+      "main": [
+        [{"node": "Route Command", "type": "main", "index": 0}],
+        [{"node": "Reject Unauthorized", "type": "main", "index": 0}]
+      ]
+    },
+    "Route Command": {
+      "main": [
+        [{"node": "Execute Agent Command", "type": "main", "index": 0}],
+        [{"node": "Execute Agent Command", "type": "main", "index": 0}],
+        [{"node": "Execute Agent Command", "type": "main", "index": 0}],
+        [{"node": "Send Help", "type": "main", "index": 0}],
+        [{"node": "Execute Agent Command", "type": "main", "index": 0}]
+      ]
+    },
+    "Execute Agent Command": {
+      "main": [[{"node": "Format Response", "type": "main", "index": 0}]]
+    },
+    "Format Response": {
+      "main": [[{"node": "Send Response", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "telegram"},
+    {"name": "command-center"},
+    {"name": "P0"}
+  ]
+}

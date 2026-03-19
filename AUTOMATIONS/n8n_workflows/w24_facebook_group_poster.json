@@ -1,0 +1,193 @@
+{
+  "name": "PRINTMAXX - Facebook Group Poster (Boomer Content)",
+  "nodes": [
+    {
+      "name": "Daily Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Set Group Config",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Facebook Groups to post to (replace with real group IDs)\nconst groups = [\n  { id: 'GROUP_ID_1', name: 'Small Business Owners', niche: 'local_biz', tone: 'helpful' },\n  { id: 'GROUP_ID_2', name: 'Retirement Planning', niche: 'finance', tone: 'trustworthy' },\n  { id: 'GROUP_ID_3', name: 'Digital Marketing Tips', niche: 'marketing', tone: 'educational' },\n  { id: 'GROUP_ID_4', name: 'Side Hustle Ideas', niche: 'monetization', tone: 'motivational' },\n  { id: 'GROUP_ID_5', name: 'Entrepreneurs Over 50', niche: 'boomer_biz', tone: 'relatable' }\n];\n\nconst today = new Date().toISOString().split('T')[0];\nconst dayOfWeek = new Date().getDay();\n\n// Rotate groups: 2-3 per day to avoid spam detection\nconst todayGroups = groups.filter((_, i) => (i + dayOfWeek) % 3 !== 0).slice(0, 3);\n\nreturn todayGroups.map(g => ({ json: { ...g, date: today, dayOfWeek } }));"
+      }
+    },
+    {
+      "name": "Generate Content via Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "{{$credentials.anthropicApiKey}}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"claude-haiku-4-5-20251001\",\n  \"max_tokens\": 800,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Write a Facebook post for a group called '{{ $json.name }}' (niche: {{ $json.niche }}, tone: {{ $json.tone }}). Target audience: men 55-70 who own small businesses or are planning retirement. Rules: 1) No AI vocabulary (no 'leverage', 'unlock', 'game-changer'). 2) Write like a real person sharing experience. 3) Include one practical tip or insight. 4) End with a question to drive comments. 5) Keep under 200 words. 6) No hashtags. 7) No emojis except maybe one thumbs up. Return ONLY the post text, no explanation.\"\n    }\n  ]\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Extract Post Text",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const groupData = $('Set Group Config').item.json;\nconst aiResponse = $input.item.json;\n\nconst postText = aiResponse.content?.[0]?.text || 'Could not generate content';\n\nreturn [{\n  json: {\n    groupId: groupData.id,\n    groupName: groupData.name,\n    niche: groupData.niche,\n    postText: postText.trim(),\n    date: groupData.date,\n    generatedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Post to Facebook Group",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1050, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v19.0/{{ $json.groupId }}/feed",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"message\": \"{{ $json.postText }}\",\n  \"access_token\": \"{{$credentials.facebookPageAccessToken}}\"\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Log Post Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1250, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const postData = $('Extract Post Text').item.json;\nconst fbResult = $input.item.json;\n\nconst success = !!fbResult.id;\nconst postId = fbResult.id || 'failed';\nconst error = fbResult.error?.message || '';\n\nreturn [{\n  json: {\n    groupId: postData.groupId,\n    groupName: postData.groupName,\n    niche: postData.niche,\n    postId,\n    success,\n    error,\n    postText: postData.postText.substring(0, 200) + '...',\n    postedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Save to Tracking Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1450, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_CONTENT_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "FacebookPosts"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Daily Summary",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1650, 300],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=Facebook Group Posts Today\n\nGroup: {{ $json.groupName }}\nStatus: {{ $json.success ? 'Posted' : 'Failed' }}\nPost ID: {{ $json.postId }}\n{{ $json.error ? 'Error: ' + $json.error : '' }}\nTime: {{ $json.postedAt }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily Trigger": {
+      "main": [[{"node": "Set Group Config", "type": "main", "index": 0}]]
+    },
+    "Set Group Config": {
+      "main": [[{"node": "Generate Content via Claude", "type": "main", "index": 0}]]
+    },
+    "Generate Content via Claude": {
+      "main": [[{"node": "Extract Post Text", "type": "main", "index": 0}]]
+    },
+    "Extract Post Text": {
+      "main": [[{"node": "Post to Facebook Group", "type": "main", "index": 0}]]
+    },
+    "Post to Facebook Group": {
+      "main": [[{"node": "Log Post Result", "type": "main", "index": 0}]]
+    },
+    "Log Post Result": {
+      "main": [[{"node": "Save to Tracking Sheet", "type": "main", "index": 0}]]
+    },
+    "Save to Tracking Sheet": {
+      "main": [[{"node": "Daily Summary", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "content"},
+    {"name": "facebook"},
+    {"name": "boomer-content"},
+    {"name": "P0"}
+  ]
+}
