@@ -1,0 +1,160 @@
+{
+  "name": "PRINTMAXX - Multi-Channel Error Alerter",
+  "nodes": [
+    {
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "parameters": {}
+    },
+    {
+      "name": "Format Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const error = $input.item.json;\n\nconst workflowName = error.workflow?.name || 'Unknown Workflow';\nconst workflowId = error.workflow?.id || '?';\nconst errorMessage = error.execution?.error?.message || 'No error message';\nconst errorNode = error.execution?.lastNodeExecuted || 'Unknown node';\nconst executionId = error.execution?.id || '?';\nconst timestamp = new Date().toISOString();\n\n// Severity classification\nlet severity = 'LOW';\nif (errorMessage.includes('timeout') || errorMessage.includes('rate limit')) {\n  severity = 'MEDIUM';\n} else if (errorMessage.includes('auth') || errorMessage.includes('credential') || errorMessage.includes('401') || errorMessage.includes('403')) {\n  severity = 'HIGH';\n} else if (errorMessage.includes('ECONNREFUSED') || errorMessage.includes('ENOTFOUND')) {\n  severity = 'HIGH';\n}\n\nreturn [{\n  json: {\n    workflowName,\n    workflowId,\n    errorMessage: errorMessage.substring(0, 500),\n    errorNode,\n    executionId,\n    severity,\n    timestamp,\n    suggestion: severity === 'HIGH' ? 'Check credentials and service connectivity' : \n                severity === 'MEDIUM' ? 'Likely rate limit or timeout. Will retry automatically.' :\n                'Non-critical. Check workflow logic.'\n  }\n}];"
+      }
+    },
+    {
+      "name": "Telegram Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [650, 200],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=WORKFLOW ERROR [{{ $json.severity }}]\n\nWorkflow: {{ $json.workflowName }} ({{ $json.workflowId }})\nFailed node: {{ $json.errorNode }}\nError: {{ $json.errorMessage }}\nExecution: {{ $json.executionId }}\nTime: {{ $json.timestamp }}\n\nSuggestion: {{ $json.suggestion }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    },
+    {
+      "name": "Email Alert (HIGH only)",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [650, 400],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "severity_check",
+              "leftValue": "={{ $json.severity }}",
+              "rightValue": "HIGH",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Send Email Alert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [850, 350],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.sendgrid.com/v3/mail/send",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.sendGridApiKey}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"personalizations\": [\n    {\n      \"to\": [{\"email\": \"YOUR_ALERT_EMAIL@yourdomain.com\"}],\n      \"subject\": \"[PRINTMAXX] HIGH SEVERITY: {{ $json.workflowName }} failed\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"alerts@yourdomain.com\",\n    \"name\": \"PRINTMAXX Alerts\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/plain\",\n      \"value\": \"Workflow: {{ $json.workflowName }}\\nNode: {{ $json.errorNode }}\\nError: {{ $json.errorMessage }}\\nExecution: {{ $json.executionId }}\\nTime: {{ $json.timestamp }}\\n\\nSuggestion: {{ $json.suggestion }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Log Error to Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [850, 200],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_OPS_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "ErrorLog"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Error Trigger": {
+      "main": [[{"node": "Format Error", "type": "main", "index": 0}]]
+    },
+    "Format Error": {
+      "main": [
+        [
+          {"node": "Telegram Alert", "type": "main", "index": 0},
+          {"node": "Email Alert (HIGH only)", "type": "main", "index": 0}
+        ]
+      ]
+    },
+    "Telegram Alert": {
+      "main": [[{"node": "Log Error to Sheet", "type": "main", "index": 0}]]
+    },
+    "Email Alert (HIGH only)": {
+      "main": [
+        [{"node": "Send Email Alert", "type": "main", "index": 0}],
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "monitoring"},
+    {"name": "P1"}
+  ]
+}

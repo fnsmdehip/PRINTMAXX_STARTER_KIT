@@ -1,0 +1,229 @@
+{
+  "name": "PRINTMAXX - AI Cold Email Sequence (SendGrid)",
+  "nodes": [
+    {
+      "name": "Daily Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * 1-5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Read Leads Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [450, 300],
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_LEADS_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Leads"
+        },
+        "filters": {
+          "filter": [
+            {
+              "lookupColumn": "emailStatus",
+              "lookupValue": "NOT_SENT"
+            }
+          ]
+        },
+        "options": {
+          "range": "A:Z"
+        }
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Limit Daily Batch",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Limit to 95 emails per day (SendGrid free tier is 100/day, leave buffer)\nconst MAX_DAILY = 95;\nconst items = $input.all();\nconst batch = items.slice(0, MAX_DAILY);\n\nreturn batch.map(item => ({\n  json: {\n    ...item.json,\n    batchSize: batch.length,\n    totalPending: items.length\n  }\n}));"
+      }
+    },
+    {
+      "name": "Generate Personalized Email",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [850, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.openAiApiKey}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"gpt-4o-mini\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You write cold outreach emails for an automation consultancy. Style: direct, no fluff, consequence-first. Max 100 words. Structure: 1) specific observation about their business, 2) one pain point they likely have, 3) one concrete result we delivered for a similar business, 4) soft CTA (reply if interested). No 'I hope this finds you well'. No corporate jargon. Lowercase casual tone.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Write a cold email for: {{ $json.businessName }} in {{ $json.city }}, {{ $json.state }}. Category: {{ $json.category }}. Their website: {{ $json.website }}. Contact: {{ $json.extractedEmail }}. First name if available: {{ $json.contactFirstName || 'there' }}\"\n    }\n  ],\n  \"max_tokens\": 300,\n  \"temperature\": 0.7\n}",
+        "options": {}
+      }
+    },
+    {
+      "name": "Parse Email Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const item = $input.item;\nconst emailBody = item.json?.choices?.[0]?.message?.content || 'Could not generate email';\n\n// Extract subject line (first line) and body (rest)\nconst lines = emailBody.split('\\n').filter(l => l.trim());\nlet subject = '';\nlet body = emailBody;\n\n// Check if first line looks like a subject\nif (lines[0] && (lines[0].toLowerCase().startsWith('subject:') || lines[0].toLowerCase().startsWith('re:'))) {\n  subject = lines[0].replace(/^subject:\\s*/i, '').trim();\n  body = lines.slice(1).join('\\n').trim();\n} else {\n  // Generate subject from business name\n  subject = `quick question about ${item.json.businessName || 'your business'}`;\n}\n\nreturn [{\n  json: {\n    ...item.json,\n    emailSubject: subject,\n    emailBody: body,\n    generatedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Send via SendGrid",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1250, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.sendgrid.com/v3/mail/send",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.sendGridApiKey}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"personalizations\": [\n    {\n      \"to\": [{\"email\": \"{{ $json.extractedEmail }}\"}],\n      \"subject\": \"{{ $json.emailSubject }}\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"YOUR_SENDER_EMAIL@yourdomain.com\",\n    \"name\": \"YOUR_NAME\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/plain\",\n      \"value\": \"{{ $json.emailBody }}\"\n    }\n  ],\n  \"tracking_settings\": {\n    \"open_tracking\": {\"enable\": true},\n    \"click_tracking\": {\"enable\": true}\n  }\n}",
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Update Sheet Status",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1450, 300],
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_LEADS_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Leads"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "emailStatus": "SENT_DAY1",
+            "lastEmailDate": "={{ new Date().toISOString() }}",
+            "emailSubject": "={{ $json.emailSubject }}"
+          }
+        },
+        "options": {
+          "cellFormat": "USER_ENTERED"
+        }
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Daily Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1650, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Aggregate daily send stats\nconst items = $input.all();\nconst sent = items.filter(i => !i.json.error).length;\nconst failed = items.filter(i => i.json.error).length;\n\nreturn [{\n  json: {\n    summary: `Cold email batch complete`,\n    sent: sent,\n    failed: failed,\n    total: items.length,\n    timestamp: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Telegram Summary",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1850, 300],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=Cold Email Report\n\nSent: {{ $json.sent }}\nFailed: {{ $json.failed }}\nTotal: {{ $json.total }}\nTime: {{ $json.timestamp }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily Trigger": {
+      "main": [[{"node": "Read Leads Sheet", "type": "main", "index": 0}]]
+    },
+    "Read Leads Sheet": {
+      "main": [[{"node": "Limit Daily Batch", "type": "main", "index": 0}]]
+    },
+    "Limit Daily Batch": {
+      "main": [[{"node": "Generate Personalized Email", "type": "main", "index": 0}]]
+    },
+    "Generate Personalized Email": {
+      "main": [[{"node": "Parse Email Content", "type": "main", "index": 0}]]
+    },
+    "Parse Email Content": {
+      "main": [[{"node": "Send via SendGrid", "type": "main", "index": 0}]]
+    },
+    "Send via SendGrid": {
+      "main": [[{"node": "Update Sheet Status", "type": "main", "index": 0}]]
+    },
+    "Update Sheet Status": {
+      "main": [[{"node": "Daily Summary", "type": "main", "index": 0}]]
+    },
+    "Daily Summary": {
+      "main": [[{"node": "Telegram Summary", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "email-outreach"},
+    {"name": "P0"}
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "name": "PRINTMAXX - Stripe Payment + Digital Product Delivery",
+  "nodes": [
+    {
+      "name": "Stripe Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "stripe-payment",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "webhookId": "stripe-payment-hook"
+    },
+    {
+      "name": "Verify Payment Event",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const body = $input.item.json.body || $input.item.json;\nconst eventType = body.type || '';\n\n// Only process successful payments\nif (eventType !== 'checkout.session.completed' && eventType !== 'payment_intent.succeeded') {\n  return [{ json: { skip: true, reason: `Event type ${eventType} not a payment` } }];\n}\n\nconst session = body.data?.object || {};\nconst customerEmail = session.customer_details?.email || session.receipt_email || session.customer_email || '';\nconst amountPaid = (session.amount_total || session.amount || 0) / 100;\nconst currency = session.currency || 'usd';\nconst productName = session.metadata?.product_name || session.description || 'Digital Product';\nconst downloadUrl = session.metadata?.download_url || '';\nconst paymentId = session.id || '';\nconst customerName = session.customer_details?.name || '';\n\nif (!customerEmail) {\n  throw new Error('No customer email found in payment event');\n}\n\nreturn [{\n  json: {\n    customerEmail,\n    customerName,\n    amountPaid,\n    currency,\n    productName,\n    downloadUrl,\n    paymentId,\n    eventType,\n    processedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "name": "Check Skip",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "skip_check",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "name": "Send Product Email",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [850, 200],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.sendgrid.com/v3/mail/send",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.sendGridApiKey}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"personalizations\": [\n    {\n      \"to\": [{\"email\": \"{{ $json.customerEmail }}\", \"name\": \"{{ $json.customerName }}\"}],\n      \"subject\": \"Your purchase: {{ $json.productName }}\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"YOUR_SENDER_EMAIL@yourdomain.com\",\n    \"name\": \"PRINTMAXX\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/html\",\n      \"value\": \"<h2>thanks for the purchase.</h2><p>here's your download link for <strong>{{ $json.productName }}</strong>:</p><p><a href='{{ $json.downloadUrl }}' style='display:inline-block;padding:12px 24px;background:#000;color:#fff;text-decoration:none;font-weight:bold;'>download now</a></p><p>amount: ${{ $json.amountPaid }} {{ $json.currency }}</p><p>if you have questions, reply to this email.</p><p>- PRINTMAXX</p>\"\n    }\n  ],\n  \"tracking_settings\": {\n    \"open_tracking\": {\"enable\": true},\n    \"click_tracking\": {\"enable\": true}\n  }\n}",
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Log Sale to Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [850, 400],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_SALES_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Sales"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "date": "={{ $json.processedAt }}",
+            "customer_email": "={{ $json.customerEmail }}",
+            "customer_name": "={{ $json.customerName }}",
+            "product": "={{ $json.productName }}",
+            "amount": "={{ $json.amountPaid }}",
+            "currency": "={{ $json.currency }}",
+            "payment_id": "={{ $json.paymentId }}",
+            "delivery_status": "SENT"
+          }
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Add to Newsletter List",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1050, 400],
+      "parameters": {
+        "method": "PUT",
+        "url": "https://api.sendgrid.com/v3/marketing/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.sendGridApiKey}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"contacts\": [\n    {\n      \"email\": \"{{ $json.customerEmail }}\",\n      \"first_name\": \"{{ $json.customerName.split(' ')[0] || '' }}\",\n      \"custom_fields\": {\n        \"product_purchased\": \"{{ $json.productName }}\",\n        \"purchase_date\": \"{{ $json.processedAt }}\"\n      }\n    }\n  ]\n}",
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Seller Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1050, 200],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=SALE\n\nProduct: {{ $json.productName }}\nAmount: ${{ $json.amountPaid }} {{ $json.currency }}\nCustomer: {{ $json.customerEmail }}\nDelivery: Sent\nTime: {{ $json.processedAt }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Stripe Webhook": {
+      "main": [[{"node": "Verify Payment Event", "type": "main", "index": 0}]]
+    },
+    "Verify Payment Event": {
+      "main": [[{"node": "Check Skip", "type": "main", "index": 0}]]
+    },
+    "Check Skip": {
+      "main": [
+        [
+          {"node": "Send Product Email", "type": "main", "index": 0},
+          {"node": "Log Sale to Sheets", "type": "main", "index": 0}
+        ],
+        []
+      ]
+    },
+    "Send Product Email": {
+      "main": [[{"node": "Seller Notification", "type": "main", "index": 0}]]
+    },
+    "Log Sale to Sheets": {
+      "main": [[{"node": "Add to Newsletter List", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "payments"},
+    {"name": "P0"}
+  ]
+}
