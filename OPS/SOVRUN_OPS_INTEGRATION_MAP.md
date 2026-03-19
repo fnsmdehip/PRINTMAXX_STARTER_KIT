@@ -142,3 +142,28 @@ These existing systems must NOT be disrupted:
 5. **Loop closer** — new skill capture hooks INTO loop_closer, doesn't replace it
 6. **Intelligence router** — new workflows CONSUME router output, don't bypass it
 7. **Control panel** — ONE dashboard rule still applies (localhost:9999)
+
+## Tool Integration Decision Log (2026-03-19)
+
+### SKIP (we already have better versions)
+| Tool | Our Version | Why Skip |
+|---|---|---|
+| MoneyPrinterTurbo | auto_clip_pipeline.py + ai_video_content_pipeline.py | Ours has affiliate hooks, voice model injection, PRINTMAXXER copy style |
+| ShortGPT | auto_clip_pipeline.py | Ours uses Claude for viral moment detection, theirs uses GPT |
+| yt-dlp | Already installed, used in clip pipeline | Already integrated |
+
+### WIRE IN (adds genuine value)
+| Tool | What It Adds | Which Ventures |
+|---|---|---|
+| Postiz | 30+ platform scheduling (we only have Twitter + manual) | C01-C18 content ventures |
+| Crawl4AI | LLM-friendly web crawling (cleaner than our custom scrapers for generic URLs) | Intelligence pipeline, alpha scraping |
+| Polar | Self-hosted payment platform (replaces Gumroad dependency, better margins) | D01-D12 digital products |
+| Freqtrade | Crypto trading backtesting (new capability) | I01-I05 investment ventures |
+| listmonk | Self-hosted newsletter (replaces Beehiiv dependency) | N12 newsletter, C05 pipeline |
+| Google Stitch | UI generation via browser control (when API available) | App factory, landing pages |
+
+### HYBRID (combine best of both)
+| Tool | Our Version | Hybrid Approach |
+|---|---|---|
+| Mautic | eas_lead_pipeline.py | Use Mautic CRM for EAS clients, our pipeline for PRINTMAXX internal leads |
+| Crawl4AI + our scrapers | Platform-specific scrapers (Twitter, Reddit) | Use our scrapers for authenticated/platform-specific, Crawl4AI for generic web crawling |

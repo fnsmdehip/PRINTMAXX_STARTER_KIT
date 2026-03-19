@@ -38,3 +38,10 @@ When ANY new tool, module, or integration is added to the system:
 6. Vet all external tools for security (prompt injection, supply chain attacks, data exfiltration)
 7. Add to the connector registry if it's an external service
 8. Create a procedural memory skill doc for how to use the new capability
+
+### Browser Control Fallback
+When no API or MCP exists for a web tool (Google Stitch, Canva, etc.):
+1. First check if Playwright MCP can control it
+2. If not, use our browser fallback chain (Playwriter → Brave cookies → Agent-Browser → Chrome CDP → Playwright → Selenium)
+3. Browser-controlled tools are LOWEST priority connectors (fragile, break on UI changes)
+4. Always prefer API/MCP over browser control
