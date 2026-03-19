@@ -19,6 +19,9 @@ try:
     from core.handoff import HandoffRouter, HandoffRequest, HandoffResult, GuardrailScope
     from core.procedural_memory import ProceduralMemory
     from core.orchestration import DAGOrchestrator, AgentStep, StepStatus, step as sovrun_step
+    from core.workflow_bridge import WorkflowDetector, WorkflowBuilder, WorkflowManager
+    from core.conversation_index import ConversationIndex
+    from core.tracing import Tracer, TraceEvent
     _SOVRUN_AVAILABLE = True
 except ImportError:
     HandoffRouter = None  # type: ignore[assignment, misc]
@@ -30,6 +33,12 @@ except ImportError:
     AgentStep = None  # type: ignore[assignment, misc]
     StepStatus = None  # type: ignore[assignment, misc]
     sovrun_step = None  # type: ignore[assignment, misc]
+    WorkflowDetector = None  # type: ignore[assignment, misc]
+    WorkflowBuilder = None  # type: ignore[assignment, misc]
+    WorkflowManager = None  # type: ignore[assignment, misc]
+    ConversationIndex = None  # type: ignore[assignment, misc]
+    Tracer = None  # type: ignore[assignment, misc]
+    TraceEvent = None  # type: ignore[assignment, misc]
 
 
 def sovrun_available() -> bool:
@@ -92,6 +101,74 @@ def capture_skill_from_result(task: str, result: str, success: bool = True) -> N
         pass
     finally:
         mem.close()
+
+def get_workflow_detector() -> Any:
+    """Get a WorkflowDetector instance.
+
+    Returns None if sovrun is not available.
+    """
+    if not _SOVRUN_AVAILABLE or WorkflowDetector is None:
+        return None
+    return WorkflowDetector()
+
+
+def get_conversation_index() -> Any:
+    """Get a ConversationIndex pointed at PRINTMAXX conversation data.
+
+    Returns None if sovrun is not available.
+    """
+    if not _SOVRUN_AVAILABLE or ConversationIndex is None:
+        return None
+    import os
+    os.environ.setdefault("SOVRUN_ROOT", str(PROJECT))
+    db_path = PROJECT / "AUTOMATIONS" / "agent" / "sovrun" / "conversations.db"
+    conv_file = PROJECT / "LEDGER" / "CONVERSATION_HISTORY.jsonl"
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    return ConversationIndex(db_path=db_path, conversation_file=conv_file)
+
+
+def get_tracer(agent_name: str = "printmaxx") -> Any:
+    """Get a Tracer instance for agent observability.
+
+    Returns None if sovrun is not available.
+    """
+    if not _SOVRUN_AVAILABLE or Tracer is None:
+        return None
+    import os
+    os.environ.setdefault("SOVRUN_ROOT", str(PROJECT))
+    traces_dir = PROJECT / "AUTOMATIONS" / "logs" / "traces"
+    traces_dir.mkdir(parents=True, exist_ok=True)
+    os.environ.setdefault("SOVRUN_TRACES_DIR", str(traces_dir))
+    return Tracer()
+
+
+def search_conversations(query: str, top_k: int = 10) -> list:
+    """Search conversation history via FTS5 index.
+
+    Returns list of matching entries or empty list if unavailable.
+    """
+    idx = get_conversation_index()
+    if idx is None:
+        return []
+    try:
+        return idx.search(query, top_k=top_k)
+    except Exception:
+        return []
+
+
+def should_use_workflow(task_description: str) -> bool:
+    """Check if a task should be routed to an n8n workflow.
+
+    Returns False if sovrun is not available or detection fails.
+    """
+    detector = get_workflow_detector()
+    if detector is None:
+        return False
+    try:
+        return detector.should_use_workflow(task_description)
+    except Exception:
+        return False
+
 
 def safe_path(target: str | Path) -> Path:
     """Verify path is within project root. Raises ValueError if not."""
