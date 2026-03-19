@@ -1891,16 +1891,16 @@ body {
       <div id="kpi-day-scores" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;"></div>
       <!-- Targets Grid -->
       <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:12px;" id="kpi-day-targets-grid"></div>
-      <!-- Main Content: Tasks + Sidebar -->
+      <!-- Main Content: Categorized Tasks + Sidebar -->
       <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:16px;">
         <div>
           <div style="font-size:0.7em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">OPERATIONS (<span id="kpi-day-task-count">0</span>)</div>
           <div id="kpi-day-tasks"></div>
         </div>
         <div>
-          <div style="font-size:0.7em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">AUTOMATION CHECKS</div>
+          <div style="font-size:0.7em;color:var(--warn);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">AUTOMATION CHECKS</div>
           <div id="kpi-day-automation" style="margin-bottom:16px;"></div>
-          <div style="font-size:0.7em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">RESEARCH QUEUE</div>
+          <div style="font-size:0.7em;color:var(--blue);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-family:JetBrains Mono;">RESEARCH QUEUE</div>
           <div id="kpi-day-research"></div>
         </div>
       </div>
@@ -3240,26 +3240,72 @@ function showDay(dayNum) {
     targetCell('AUTO', autoChecks.length + ' checks', autoChecks.slice(0,2).join(', '), 'var(--text)') +
     targetCell('RESEARCH', research.length + ' items', research.slice(0,2).join(', '), 'var(--text-dim)');
 
-  // Tasks with checkboxes
+  // Categorize tasks by detecting category comment markers
+  var categories = [
+    {key: 'ACCOUNTS', color: 'var(--purple)', icon: '&#128100;', pattern: /^(Set up GoLogin|Create.*account|Warm up|Continue.*warmup|Subscribe X Premium|Audit all.*account|Cross-promote|Cross-account|Deploy.*account|Launch.*persona|All.*account|All secondary|Check.*TweepCred|Check shadowban|KILL.*account|SCALE.*posting|Deploy strategic follow|Top-performing account|Low-performing account|Evaluate.*secondary|Pre-create|Final account|Update all bios|Full.*account.*audit|Plan account|Full multi-account)/i},
+    {key: 'CONTENT', color: 'var(--purple)', icon: '&#9998;', pattern: /^(Post \d+ tweet|Write.*newsletter|Generate.*video|Generate.*product|Run content_factory|Run auto_clip|Run ai_video|Run edge_growth_engine.*repurpose|Run edge_growth_engine.*cross|Run edge_growth_engine.*viral|Upload YouTube|Create.*Facebook.*post|Create.*LinkedIn|Batch create|Script \d+ TikTok|Post in.*Facebook Group|Post.*TikTok|Post.*affiliate|Post.*Pinterest|Pin \d+|Write \d+ affiliate|Create.*ad creative|Deploy content atom|Share.*link|Post first PH|Write.*launch thread|Execute Product Hunt|Batch \d+ Facebook|Pre-generate)/i},
+    {key: 'ENGAGEMENT', color: 'var(--blue)', icon: '&#9889;', pattern: /^(Reply to|DM \d+|Comment on|Post to.*X Communit|Target people|Quote-tweet|Deploy reply guy|Recruit \d+ hunters|Monitor PH|Handle all open DM|Deploy bookmark|Secondary account.*amplif)/i},
+    {key: 'OUTREACH', color: 'var(--warn)', icon: '&#9993;', pattern: /^(Send cold|Send \d+ (?:personalized|custom)|Submit \d+ Upwork|Cold call|Call\/email|Call top|Push hardest|Follow up on|Respond to all Fiverr|Run auto_freelance|Pitch retainer|Launch cold email|Convert.*buyers|Push.*EAS|Check Fiverr for)/i},
+    {key: 'REVENUE', color: 'var(--accent)', icon: '&#128176;', pattern: /^(Create Gumroad|Create Whop|List.*products|Set Fiverr|Run fiverr_gig|Scan.*ads.*librar|List top \d+ winning|Create urgency|Set up.*subscription|Add upsell|Optimize.*Gumroad|A\/B test.*Gumroad|Create upsell|Apply to \d+ affiliate|Launch Telegram VIP|Set up CashApp|Rank.*channel|Full.*analytics|Full.*funnel|Calculate|Per-channel|Revenue.*count|Revenue leaderboard|Engagement leaderboard|Outreach leaderboard|Trajectory check|Revenue gap|Kill.*venture|Scale.*venture|Kill list|Scale list|If.*budget|Identify top|Full month review|Final revenue|Update KPI|Set \d+ stretch|Close any remaining|Review e-commerce|Automate any task|Write May|Set May|If deal closes|If no close|Optimize email seq|Create.*case study|Check all e-commerce)/i},
+    {key: 'GOV CONTRACTS', color: '#4ecdc4', icon: '&#127970;', pattern: /^(Run sam_gov|Run uk_contracts|Review.*GOV_OPPORT|Review all SAM|Draft.*SAM.gov|Draft proposal|Identify.*contract|Submit.*SAM.gov|Submit proposal|Final SAM|If any contract won|Update gov|Review all GOV)/i},
+    {key: 'AUTOMATION', color: 'var(--text)', icon: '&#9881;', pattern: /^(Verify|Check|Run system|Run security|Run full|Run competitive|Run capital_genesis|Verify all|Deploy any backlog|Set up new cron|Update.*SYSTEM_MAP|Clean up dead|Document procedural|Pre-draft|Plan Week|Measure edge|Review.*agent|Final backup)/i},
+    {key: 'RESEARCH', color: 'var(--text-dim)', icon: '&#128218;', pattern: /^(Read|Review CAPITAL|Review.*ACTIONABLE|Deep dive|Review method|Review OPEN_SOURCE|Review.*NOVEL|Review.*daily_digest)/i}
+  ];
+  var categorized = {};
+  categories.forEach(function(c) { categorized[c.key] = []; });
+  categorized['OTHER'] = [];
+  day.tasks.forEach(function(t, i) {
+    // Strip leading "# CATEGORY" comments if present
+    var taskText = t.replace(/^#\s*\w+\s*\n?/, '').trim();
+    var matched = false;
+    for (var ci = 0; ci < categories.length; ci++) {
+      if (categories[ci].pattern.test(taskText)) {
+        categorized[categories[ci].key].push({text: taskText, idx: i});
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) categorized['OTHER'].push({text: taskText, idx: i});
+  });
+
+  // Render categorized tasks
   document.getElementById('kpi-day-task-count').textContent = day.tasks.length;
-  document.getElementById('kpi-day-tasks').innerHTML = day.tasks.map(function(t, i) {
-    var id = 'task-' + dayNum + '-' + i;
-    return '<div style="padding:5px 0;border-bottom:1px solid var(--border);font-size:0.8em;display:flex;gap:8px;align-items:flex-start;">' +
-      '<input type="checkbox" id="' + id + '" style="margin-top:3px;accent-color:var(--accent);cursor:pointer;" onchange="this.parentElement.style.opacity=this.checked?\'0.4\':\'1\'">' +
-      '<label for="' + id + '" style="cursor:pointer;line-height:1.4;">' + t + '</label>' +
-    '</div>';
-  }).join('');
+  var tasksHtml = '';
+  categories.forEach(function(cat) {
+    var items = categorized[cat.key];
+    if (items.length === 0) return;
+    tasksHtml += '<div style="margin-top:10px;margin-bottom:4px;font-size:0.65em;color:' + cat.color + ';text-transform:uppercase;letter-spacing:2px;font-family:JetBrains Mono;font-weight:700;border-bottom:1px solid var(--border);padding-bottom:3px;">' + cat.icon + ' ' + cat.key + ' (' + items.length + ')</div>';
+    items.forEach(function(item) {
+      var id = 'task-' + dayNum + '-' + item.idx;
+      tasksHtml += '<div style="padding:4px 0;border-bottom:1px solid var(--border);font-size:0.78em;display:flex;gap:8px;align-items:flex-start;">' +
+        '<input type="checkbox" id="' + id + '" style="margin-top:3px;accent-color:' + cat.color + ';cursor:pointer;" onchange="this.parentElement.style.opacity=this.checked?\'0.4\':\'1\'">' +
+        '<label for="' + id + '" style="cursor:pointer;line-height:1.4;">' + item.text + '</label>' +
+      '</div>';
+    });
+  });
+  // Other uncategorized
+  if (categorized['OTHER'].length > 0) {
+    tasksHtml += '<div style="margin-top:10px;margin-bottom:4px;font-size:0.65em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;font-family:JetBrains Mono;font-weight:700;border-bottom:1px solid var(--border);padding-bottom:3px;">OTHER (' + categorized['OTHER'].length + ')</div>';
+    categorized['OTHER'].forEach(function(item) {
+      var id = 'task-' + dayNum + '-' + item.idx;
+      tasksHtml += '<div style="padding:4px 0;border-bottom:1px solid var(--border);font-size:0.78em;display:flex;gap:8px;align-items:flex-start;">' +
+        '<input type="checkbox" id="' + id + '" style="margin-top:3px;accent-color:var(--text-dim);cursor:pointer;" onchange="this.parentElement.style.opacity=this.checked?\'0.4\':\'1\'">' +
+        '<label for="' + id + '" style="cursor:pointer;line-height:1.4;">' + item.text + '</label>' +
+      '</div>';
+    });
+  }
+  document.getElementById('kpi-day-tasks').innerHTML = tasksHtml;
 
   // Automation checks
   document.getElementById('kpi-day-automation').innerHTML = autoChecks.map(function(c) {
-    return '<div style="padding:4px 0;font-size:0.75em;display:flex;gap:6px;align-items:center;border-bottom:1px solid var(--border);">' +
-      '<span style="color:var(--warn);font-size:0.8em;">&#9679;</span><span style="font-family:JetBrains Mono;">' + c + '</span></div>';
+    return '<div style="padding:4px 0;font-size:0.72em;display:flex;gap:6px;align-items:flex-start;border-bottom:1px solid var(--border);">' +
+      '<span style="color:var(--warn);font-size:0.8em;margin-top:2px;">&#9679;</span><span style="font-family:JetBrains Mono;line-height:1.4;">' + c + '</span></div>';
   }).join('') || '<div style="font-size:0.75em;color:var(--text-dim);">None scheduled</div>';
 
   // Research queue
   document.getElementById('kpi-day-research').innerHTML = research.map(function(r) {
-    return '<div style="padding:4px 0;font-size:0.75em;display:flex;gap:6px;align-items:center;border-bottom:1px solid var(--border);">' +
-      '<span style="color:var(--blue);font-size:0.8em;">&#9679;</span><span style="font-family:JetBrains Mono;">' + r + '</span></div>';
+    return '<div style="padding:4px 0;font-size:0.72em;display:flex;gap:6px;align-items:flex-start;border-bottom:1px solid var(--border);">' +
+      '<span style="color:var(--blue);font-size:0.8em;margin-top:2px;">&#9679;</span><span style="font-family:JetBrains Mono;line-height:1.4;">' + r + '</span></div>';
   }).join('') || '<div style="font-size:0.75em;color:var(--text-dim);">None scheduled</div>';
 
   detail.scrollIntoView({behavior:'smooth'});
