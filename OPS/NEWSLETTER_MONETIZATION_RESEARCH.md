@@ -458,3 +458,26 @@ US Traffic - 85.7% , UK - 10.8%
 
 [ACQUISITION] Launching my microsaas today — ATS resume scorer built solo after a painful job search
 
+
+
+---
+
+## Pending Enhancement (ALPHA107416, Score: 30)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rxh38q/i_spent_3_months_building_a_tool_because_youtubes/
+**Added:** 2026-03-18T18:15:00-04:00
+
+[ACQUISITION] I spent 3 months building a tool because YouTube's auto-captions kept
+mangling every proper noun in my research
+
+
+
+---
+
+## Pending Enhancement (ALPHA107421, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rxgdai/failed_to_start_a_hedge_fund_built_an_equity/
+**Added:** 2026-03-18T18:15:00-04:00
+
+[ACQUISITION] Failed to start a hedge fund. Built an equity research agent instead. It pulls SEC filings, earnings calls, financial da
+

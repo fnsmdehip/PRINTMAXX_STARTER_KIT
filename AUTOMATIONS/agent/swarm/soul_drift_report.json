@@ -1,24 +1,27 @@
 {
-  "ts": "2026-03-18T15:20:01.006185",
-  "avg_score": 9.5,
-  "total_scored": 15,
-  "drifted_count": 0,
-  "drifted_agents": [],
+  "ts": "2026-03-18T18:30:00.463604",
+  "avg_score": 9.1,
+  "total_scored": 16,
+  "drifted_count": 1,
+  "drifted_agents": [
+    "playwright_tester"
+  ],
   "scores": {
+    "cross_pollinator": 8.5,
+    "system_healer": 8.0,
+    "cross_pollination_20260318": 10.0,
+    "swarm_brain_20260318": 8.5,
+    "inbound": 8.5,
+    "test_action_plan_20260318": 10.0,
+    "playwright_tester": 6.5,
     "lead_machine": 8.5,
     "gap_hunter": 8.5,
     "gap": 8.5,
-    "revenue_tracker": 10.0,
-    "revenue": 10.0,
-    "system_healer": 10.0,
-    "competitor_intel_20260318": 8.0,
-    "competitor_stalker": 10.0,
-    "growth_strategy_20260318": 8.5,
     "ceo_decision_2026-03-15": 10.0,
-    "mission_autonomy:auto_app_app_factory_": 10.0,
-    "mission_autonomy:auto_product_digital_": 10.0,
-    "mission_autonomy:auto_scraping_competi": 10.0,
-    "mission_autonomy:SCRAPING_competitive_": 10.0,
-    "mission_autonomy:alpha_intelligence": 10.0
+    "mission_content": 10.0,
+    "mission_upgrade": 10.0,
+    "mission_schedule": 10.0,
+    "mission_hunt": 10.0,
+    "mission_autonomy:auto_scraping_competi": 10.0
   }
 }

@@ -2283,3 +2283,36 @@ Then I sold it to a studio in Europe.
 
 Just start.
 
+
+
+---
+
+## Pending Enhancement (ALPHA107417, Score: 36)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rxgx3y/built_a_portfolio_platform_for_builders_in_48hrs/
+**Added:** 2026-03-18T18:15:00-04:00
+
+[ACQUISITION] Built a portfolio platform for builders in 48hrs. 3 weeks later: 120+ users, 5 usd revenue, and a ton of features shippe
+
+
+
+---
+
+## Pending Enhancement (ALPHA107424, Score: 30)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rxfph3/giving_away_100_of_revenue_for_12_months_to/
+**Added:** 2026-03-18T18:15:00-04:00
+
+[ACQUISITION] Giving away 100% of revenue for 12 months to whoever can grow my plant care app
+
+
+
+---
+
+## Pending Enhancement (ALPHA107426, Score: 49)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rxfeae/update_how_we_hit_14k_in_revenue_with_0_mrr/
+**Added:** 2026-03-18T18:15:00-04:00
+
+[ACQUISITION] UPDATE: How we hit $14k in revenue with $0 MRR [rev: $$14]
+

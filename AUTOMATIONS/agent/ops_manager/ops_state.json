@@ -1,6 +1,6 @@
 {
-  "last_cycle": "2026-03-17T20:32:21.762229",
-  "cycles_run": 24,
+  "last_cycle": "2026-03-18T16:22:53.250124",
+  "cycles_run": 25,
   "venture_scores": {
     "services": {
       "name": "services",
@@ -194,69 +194,69 @@
   "venture_status": {
     "services": {
       "last_result": "success",
-      "last_run": "2026-03-17T20:20:31.038956",
+      "last_run": "2026-03-18T16:02:10.407323",
       "last_summary": "3/3 service ops",
-      "duration": 29.3
+      "duration": 30.3
     },
     "edge_tactics": {
-      "last_result": "partial",
-      "last_run": "2026-03-17T20:20:42.006409",
-      "last_summary": "Edge tactics generation thin",
-      "duration": 11.0
+      "last_result": "success",
+      "last_run": "2026-03-18T16:03:07.470182",
+      "last_summary": "Generated edge tactics: edge_20260318_1603.md",
+      "duration": 57.1
     },
     "content_farm": {
       "last_result": "success",
-      "last_run": "2026-03-17T20:21:06.492181",
+      "last_run": "2026-03-18T16:05:41.836037",
       "last_summary": "3/3 content ops completed",
-      "duration": 24.5
+      "duration": 154.4
     },
     "adult_content": {
-      "last_result": "failed",
-      "last_run": "2026-03-17T20:21:16.648762",
-      "last_summary": "Both intel and content generation failed",
-      "duration": 10.2
+      "last_result": "partial",
+      "last_run": "2026-03-18T16:06:24.749221",
+      "last_summary": "Intel OK but local LLM not available for content \u2014 install Ollama",
+      "duration": 42.9
     },
     "viral_content": {
-      "last_result": "partial",
-      "last_run": "2026-03-17T20:21:27.199390",
-      "last_summary": "Viral content generation thin",
-      "duration": 10.5
+      "last_result": "success",
+      "last_run": "2026-03-18T16:07:20.878994",
+      "last_summary": "Generated viral content: viral_20260318_1607.md",
+      "duration": 56.1
     },
     "competitive_intel": {
       "last_result": "partial",
-      "last_run": "2026-03-17T20:21:35.545159",
+      "last_run": "2026-03-18T16:09:21.345374",
       "last_summary": "Intel gathering thin",
-      "duration": 8.3
+      "duration": 120.1
     },
     "growth": {
       "last_result": "success",
-      "last_run": "2026-03-17T20:26:48.921566",
+      "last_run": "2026-03-18T16:15:51.680417",
       "last_summary": "1/2 growth ops",
-      "duration": 313.3
+      "duration": 390.3
     },
     "ecom": {
       "last_result": "success",
-      "last_run": "2026-03-17T20:28:49.890876",
+      "last_run": "2026-03-18T16:17:52.242995",
       "last_summary": "1/2 ecom ops",
-      "duration": 121.0
+      "duration": 120.6
     },
     "digital_products": {
       "last_result": "success",
-      "last_run": "2026-03-17T20:28:50.179019",
+      "last_run": "2026-03-18T16:17:52.521852",
       "last_summary": "Product pipeline processed",
       "duration": 0.3
     },
     "affiliate": {
       "last_result": "success",
-      "last_run": "2026-03-17T20:28:50.690236",
+      "last_run": "2026-03-18T16:17:53.137824",
       "last_summary": "Affiliate pipeline ran",
-      "duration": 0.5
+      "duration": 0.6
     },
     "apps": {
-      "last_result": "success",
-      "last_run": "2026-03-17T20:32:21.762074",
+      "last_result": "partial",
+      "last_run": "2026-03-18T16:22:53.247054",
       "last_summary": "Factory cycle ran",
-      "duration": 211.1
+      "duration": 300.1
     }
   },
   "revenue": {
@@ -278,6 +278,6 @@
   ],
   "killed_ventures": [],
   "pending_ventures": [],
-  "last_prioritization": "2026-03-17T20:20:01.746675",
-  "disk_gb_free": 41.2
+  "last_prioritization": "2026-03-18T16:01:40.151145",
+  "disk_gb_free": 39.1
 }

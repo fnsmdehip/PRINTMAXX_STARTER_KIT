@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-18 15:45:02",
+  "generated_at": "2026-03-18 18:49:21",
   "sources": {
-    "alpha_staging_candidates": 3043,
+    "alpha_staging_candidates": 3091,
     "app_factory_methods_candidates": 5,
     "reddit_findings_candidates": 6,
-    "existing_specs_detected": 67
+    "existing_specs_detected": 72
   },
   "hard_gates": [
     "No fake paywalls. Real RevenueCat or real billing path before shipping.",
@@ -13,20 +13,20 @@
     "If an alpha item clearly upgrades an existing app, iterate that app before starting a greenfield clone."
   ],
   "summary": {
-    "total_candidates": 2983,
+    "total_candidates": 3028,
     "decision_counts": {
-      "ITERATE_EXISTING_NOW": 85,
+      "ITERATE_EXISTING_NOW": 90,
       "BUILD_NEW_NOW": 44,
       "SPEC_AND_TEST": 99,
-      "PARK": 2745,
+      "PARK": 2785,
       "VALIDATE_FIRST": 10
     },
     "cluster_counts": {
-      "faith": 81,
-      "habits": 158,
-      "ai_utility": 2169,
-      "fitness": 143,
-      "focus": 327,
+      "faith": 83,
+      "habits": 166,
+      "ai_utility": 2198,
+      "fitness": 144,
+      "focus": 332,
       "sleep": 90,
       "meal": 15
     }
@@ -524,6 +524,254 @@
       "rank": 8
     },
     {
+      "candidate_id": "CI_C069_BO_001",
+      "title": "BLUE OCEAN APP: BEDTIME STORY STREAK \u2014 Daily Bedtime Story Reading Streak (Parent + Child)",
+      "source": "auto_scraping_ci_c069",
+      "source_url": "itunes_api+reddit_scan",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "IMMEDIATE",
+      "status": "AUTO_APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "bedtime_story_streak",
+      "applicable_methods": "MM020_APP_FACTORY",
+      "evidence": "iTunes confirms zero niche-specific streak app for bedtime reading. 10.9M community (r/Parenting+r/daddit+r/beyondthebump). Build daily parent-child reading streak tracker.",
+      "compliance_notes": "",
+      "reviewer_notes": "Community=10,902,169. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_CI_C069_BO_001.md",
+      "raw": {
+        "alpha_id": "CI_C069_BO_001",
+        "source": "auto_scraping_ci_c069",
+        "source_url": "itunes_api+reddit_scan",
+        "category": "APP_FACTORY",
+        "tactic": "BLUE OCEAN APP: BEDTIME STORY STREAK \u2014 Daily Bedtime Story Reading Streak (Parent + Child)",
+        "roi_potential": "HIGH",
+        "priority": "P0",
+        "status": "AUTO_APPROVED",
+        "applicable_methods": "MM020_APP_FACTORY",
+        "applicable_niches": "bedtime_story_streak",
+        "synergy_score": "8",
+        "cross_sell_products": "",
+        "implementation_priority": "IMMEDIATE",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "iTunes confirms zero niche-specific streak app for bedtime reading. 10.9M community (r/Parenting+r/daddit+r/beyondthebump). Build daily parent-child reading streak tracker.",
+        "compliance_notes": "",
+        "reviewer_notes": "Community=10,902,169. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+        "created_at": "2026-03-18T22:45:58.928678+00:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": "2026-03-18"
+      },
+      "score": 109,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 9
+    },
+    {
+      "candidate_id": "CI_C069_BO_002",
+      "title": "BLUE OCEAN APP: OUTDOOR PLAY STREAK \u2014 Daily Outdoor / Unstructured Play Streak for Kids",
+      "source": "auto_scraping_ci_c069",
+      "source_url": "itunes_api+reddit_scan",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "IMMEDIATE",
+      "status": "AUTO_APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "outdoor_play_streak",
+      "applicable_methods": "MM020_APP_FACTORY",
+      "evidence": "iTunes confirms zero niche-specific app. 10.9M community. Screen time anxiety drives demand. Build outdoor play time tracker for parents.",
+      "compliance_notes": "",
+      "reviewer_notes": "Community=10,919,185. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_CI_C069_BO_002.md",
+      "raw": {
+        "alpha_id": "CI_C069_BO_002",
+        "source": "auto_scraping_ci_c069",
+        "source_url": "itunes_api+reddit_scan",
+        "category": "APP_FACTORY",
+        "tactic": "BLUE OCEAN APP: OUTDOOR PLAY STREAK \u2014 Daily Outdoor / Unstructured Play Streak for Kids",
+        "roi_potential": "HIGH",
+        "priority": "P0",
+        "status": "AUTO_APPROVED",
+        "applicable_methods": "MM020_APP_FACTORY",
+        "applicable_niches": "outdoor_play_streak",
+        "synergy_score": "8",
+        "cross_sell_products": "",
+        "implementation_priority": "IMMEDIATE",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "iTunes confirms zero niche-specific app. 10.9M community. Screen time anxiety drives demand. Build outdoor play time tracker for parents.",
+        "compliance_notes": "",
+        "reviewer_notes": "Community=10,919,185. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+        "created_at": "2026-03-18T22:45:58.928678+00:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": "2026-03-18"
+      },
+      "score": 109,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 10
+    },
+    {
+      "candidate_id": "CI_C069_BO_003",
+      "title": "BLUE OCEAN APP: COOK AT HOME STREAK \u2014 Daily Cook-at-Home / No Takeout Streak",
+      "source": "auto_scraping_ci_c069",
+      "source_url": "itunes_api+reddit_scan",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "IMMEDIATE",
+      "status": "AUTO_APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "cook_at_home_streak",
+      "applicable_methods": "MM020_APP_FACTORY",
+      "evidence": "iTunes confirms zero niche streak app for home cooking. 23.1M community. Both financial AND health goal. Massive overlap r/Frugal + r/EatCheapAndHealthy.",
+      "compliance_notes": "",
+      "reviewer_notes": "Community=23,140,485. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_CI_C069_BO_003.md",
+      "raw": {
+        "alpha_id": "CI_C069_BO_003",
+        "source": "auto_scraping_ci_c069",
+        "source_url": "itunes_api+reddit_scan",
+        "category": "APP_FACTORY",
+        "tactic": "BLUE OCEAN APP: COOK AT HOME STREAK \u2014 Daily Cook-at-Home / No Takeout Streak",
+        "roi_potential": "HIGH",
+        "priority": "P0",
+        "status": "AUTO_APPROVED",
+        "applicable_methods": "MM020_APP_FACTORY",
+        "applicable_niches": "cook_at_home_streak",
+        "synergy_score": "8",
+        "cross_sell_products": "",
+        "implementation_priority": "IMMEDIATE",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "iTunes confirms zero niche streak app for home cooking. 23.1M community. Both financial AND health goal. Massive overlap r/Frugal + r/EatCheapAndHealthy.",
+        "compliance_notes": "",
+        "reviewer_notes": "Community=23,140,485. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+        "created_at": "2026-03-18T22:45:58.928678+00:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": "2026-03-18"
+      },
+      "score": 109,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 11
+    },
+    {
+      "candidate_id": "CI_C069_BO_008",
+      "title": "BLUE OCEAN APP: DEEP WORK STREAK \u2014 Daily Deep Work / Focus Block Completion Streak",
+      "source": "auto_scraping_ci_c069",
+      "source_url": "itunes_api+reddit_scan",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "IMMEDIATE",
+      "status": "AUTO_APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "deep_work_streak",
+      "applicable_methods": "MM020_APP_FACTORY",
+      "evidence": "iTunes confirms zero streak app for Cal Newport deep work. 8.6M community. Forest/Focus track sessions not streaks. r/productivity 4.1M.",
+      "compliance_notes": "",
+      "reviewer_notes": "Community=8,601,339. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_CI_C069_BO_008.md",
+      "raw": {
+        "alpha_id": "CI_C069_BO_008",
+        "source": "auto_scraping_ci_c069",
+        "source_url": "itunes_api+reddit_scan",
+        "category": "APP_FACTORY",
+        "tactic": "BLUE OCEAN APP: DEEP WORK STREAK \u2014 Daily Deep Work / Focus Block Completion Streak",
+        "roi_potential": "HIGH",
+        "priority": "P0",
+        "status": "AUTO_APPROVED",
+        "applicable_methods": "MM020_APP_FACTORY",
+        "applicable_niches": "deep_work_streak",
+        "synergy_score": "8",
+        "cross_sell_products": "",
+        "implementation_priority": "IMMEDIATE",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "iTunes confirms zero streak app for Cal Newport deep work. 8.6M community. Forest/Focus track sessions not streaks. r/productivity 4.1M.",
+        "compliance_notes": "",
+        "reviewer_notes": "Community=8,601,339. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+        "created_at": "2026-03-18T22:45:58.928678+00:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": "2026-03-18"
+      },
+      "score": 109,
+      "cluster": "focus",
+      "market_room": "MEDIUM_HIGH",
+      "existing_app_target": "Vault",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "attention problem selector -> session goal -> first focus win -> reminder -> paywall",
+      "paywall_variant": "after first completed work session",
+      "aesthetic_direction": "graphite base, one high-voltage accent, dense information, tactile controls",
+      "primary_monetization": "subscription with annual anchor",
+      "secondary_monetization": "paid upfront test if the app is privacy-first and local-only",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 12
+    },
+    {
       "candidate_id": "ALPHA25277",
       "title": "Competitor gap: Fabulous habit tracker (87K reviews, \u26054.45) is the ONLY major habit app below 4.5 stars. Their heavy paywall is the #1 complaint. Opportunity: position Streakr as \"habit tracking without the paywall\".",
       "source": "competitive_intel_synthesis",
@@ -583,7 +831,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 9
+      "rank": 13
     },
     {
       "candidate_id": "ALPHA103107",
@@ -645,7 +893,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 10
+      "rank": 14
     },
     {
       "candidate_id": "ALPHA25040",
@@ -707,7 +955,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 11
+      "rank": 15
     },
     {
       "candidate_id": "ALPHA25276",
@@ -769,7 +1017,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 12
+      "rank": 16
     },
     {
       "candidate_id": "ALPHA_CI_56_FASTING_001",
@@ -831,7 +1079,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 13
+      "rank": 17
     },
     {
       "candidate_id": "ALPHA98937",
@@ -893,7 +1141,69 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 14
+      "rank": 18
+    },
+    {
+      "candidate_id": "CI_C069_BO_007",
+      "title": "BLUE OCEAN APP: NO PHONE MORNING STREAK \u2014 No-Phone First Hour / Morning Digital Detox Streak",
+      "source": "auto_scraping_ci_c069",
+      "source_url": "itunes_api+reddit_scan",
+      "source_type": "alpha_staging",
+      "roi_potential": "HIGH",
+      "priority": "NEXT_SPRINT",
+      "status": "AUTO_APPROVED",
+      "engagement_authenticity": "AUTHENTIC",
+      "earnings_verified": "N/A",
+      "applicable_niches": "no_phone_morning_streak",
+      "applicable_methods": "MM020_APP_FACTORY",
+      "evidence": "iTunes confirms zero dedicated morning detox streak app. 2.6M community. Viral self-help advice. r/nosurf + r/digitalminimalism + r/getdisciplined.",
+      "compliance_notes": "",
+      "reviewer_notes": "Community=2,638,474. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+      "existing_spec": "AUTOMATIONS/auto_ops/app_specs/APP_SPEC_CI_C069_BO_007.md",
+      "raw": {
+        "alpha_id": "CI_C069_BO_007",
+        "source": "auto_scraping_ci_c069",
+        "source_url": "itunes_api+reddit_scan",
+        "category": "APP_FACTORY",
+        "tactic": "BLUE OCEAN APP: NO PHONE MORNING STREAK \u2014 No-Phone First Hour / Morning Digital Detox Streak",
+        "roi_potential": "HIGH",
+        "priority": "P0",
+        "status": "AUTO_APPROVED",
+        "applicable_methods": "MM020_APP_FACTORY",
+        "applicable_niches": "no_phone_morning_streak",
+        "synergy_score": "8",
+        "cross_sell_products": "",
+        "implementation_priority": "NEXT_SPRINT",
+        "engagement_authenticity": "AUTHENTIC",
+        "earnings_verified": "N/A",
+        "extracted_method": "iTunes confirms zero dedicated morning detox streak app. 2.6M community. Viral self-help advice. r/nosurf + r/digitalminimalism + r/getdisciplined.",
+        "compliance_notes": "",
+        "reviewer_notes": "Community=2,638,474. iTunes confirmed no direct competitor. Auto-flagged cycle 069. AUTO_APPROVED 2026-03-18T18:49:01-04:00 (roi>=HIGH)",
+        "created_at": "2026-03-18T22:45:58.928678+00:00",
+        "ops_generated": "TRUE",
+        "quality_issues": "",
+        "date_added": "2026-03-18"
+      },
+      "score": 99,
+      "cluster": "habits",
+      "market_room": "HIGH",
+      "existing_app_target": "Streakr",
+      "execution_lane": "ITERATE_EXISTING",
+      "build_decision": "ITERATE_EXISTING_NOW",
+      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
+      "paywall_variant": "after first completion, show streak preview and annual plan",
+      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
+      "primary_monetization": "subscription with 7-day trial and annual anchor",
+      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
+      "price_test": "$24.99 to $39.99/yr first",
+      "experiments": [
+        "paywall timing: after first value moment vs after onboarding preview",
+        "pricing: annual-first anchor vs cheaper monthly plan",
+        "review prompt: milestone trigger only, never session-one prompt",
+        "onboarding length: 3-screen fast path vs 5-screen personalized path"
+      ],
+      "risk_score": 0,
+      "rank": 19
     },
     {
       "candidate_id": "ALPHA25041",
@@ -955,7 +1265,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 15
+      "rank": 20
     },
     {
       "candidate_id": "COMP_INTEL_039_B",
@@ -1017,7 +1327,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 16
+      "rank": 21
     },
     {
       "candidate_id": "ALPHA100456",
@@ -1079,7 +1389,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 17
+      "rank": 22
     },
     {
       "candidate_id": "ALPHA103105",
@@ -1141,7 +1451,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 18
+      "rank": 23
     },
     {
       "candidate_id": "ALPHA15286",
@@ -1184,7 +1494,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 19
+      "rank": 24
     },
     {
       "candidate_id": "ALPHA544",
@@ -1246,7 +1556,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 20
+      "rank": 25
     },
     {
       "candidate_id": "ALPHA_APPSTORE_PAID_HABIT_GAP",
@@ -1308,7 +1618,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 21
+      "rank": 26
     },
     {
       "candidate_id": "RF_001",
@@ -1377,7 +1687,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 22
+      "rank": 27
     },
     {
       "candidate_id": "ALPHA_CI059_STUDY_STREAK",
@@ -1439,7 +1749,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 23
+      "rank": 28
     },
     {
       "candidate_id": "ALPHA_CI_51_LTD_001",
@@ -1501,7 +1811,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 24
+      "rank": 29
     },
     {
       "candidate_id": "ALPHA_GAP_FAITH_PRICING",
@@ -1563,7 +1873,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 25
+      "rank": 30
     },
     {
       "candidate_id": "ALPHA25039",
@@ -1625,7 +1935,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 26
+      "rank": 31
     },
     {
       "candidate_id": "ALPHA538",
@@ -1687,7 +1997,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 27
+      "rank": 32
     },
     {
       "candidate_id": "ALPHA558",
@@ -1749,7 +2059,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 28
+      "rank": 33
     },
     {
       "candidate_id": "ALPHA98935",
@@ -1811,7 +2121,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 29
+      "rank": 34
     },
     {
       "candidate_id": "ALPHA102376",
@@ -1873,7 +2183,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 30
+      "rank": 35
     },
     {
       "candidate_id": "ALPHA102377",
@@ -1935,7 +2245,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 31
+      "rank": 36
     },
     {
       "candidate_id": "ALPHA102378",
@@ -1997,7 +2307,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 32
+      "rank": 37
     },
     {
       "candidate_id": "ALPHA102379",
@@ -2059,7 +2369,7 @@
         "affiliate placement: post-conversion home tab vs no affiliate module"
       ],
       "risk_score": 0,
-      "rank": 33
+      "rank": 38
     },
     {
       "candidate_id": "ALPHA102380",
@@ -2121,7 +2431,7 @@
         "onboarding length: 3-screen fast path vs 5-screen personalized path"
       ],
       "risk_score": 0,
-      "rank": 34
+      "rank": 39
     },
     {
       "candidate_id": "ALPHA102381",
@@ -2176,316 +2486,6 @@
       "primary_monetization": "subscription with 7-day trial and annual anchor",
       "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
       "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 35
-    },
-    {
-      "candidate_id": "ALPHA102389",
-      "title": "MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporter (196 stars, Python)",
-      "source": "GitHub",
-      "source_url": "https://github.com/rolandsz/Mi-Fit-and-Zepp-workout-exporter",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "HIGH",
-      "status": "AUTO_APPROVED",
-      "engagement_authenticity": "UNKNOWN",
-      "earnings_verified": "N/A",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporter (196 stars, Python)",
-      "compliance_notes": "",
-      "reviewer_notes": "unified_alpha_monitor: license=MIT; query=expo fitness license:mit stars:>50; evaluate for clone/adapt. AUTO_APPROVED 2026-03-16T14:18:05-04:00 (roi>=HIGH)",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA102389",
-        "source": "GitHub",
-        "source_url": "https://github.com/rolandsz/Mi-Fit-and-Zepp-workout-exporter",
-        "category": "TOOL_ALPHA",
-        "tactic": "MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporter (196 stars, Python)",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "AUTO_APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "UNKNOWN",
-        "earnings_verified": "N/A",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "unified_alpha_monitor: license=MIT; query=expo fitness license:mit stars:>50; evaluate for clone/adapt. AUTO_APPROVED 2026-03-16T14:18:05-04:00 (roi>=HIGH)",
-        "created_at": "2026-03-16T14:02:34.221108",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 89,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 36
-    },
-    {
-      "candidate_id": "ALPHA103204",
-      "title": "MIT repo: karthironald/BodyProgress (272 stars, Swift)",
-      "source": "GitHub",
-      "source_url": "https://github.com/karthironald/BodyProgress",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "HIGH",
-      "status": "AUTO_APPROVED",
-      "engagement_authenticity": "UNKNOWN",
-      "earnings_verified": "N/A",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "MIT repo: karthironald/BodyProgress (272 stars, Swift)",
-      "compliance_notes": "",
-      "reviewer_notes": "unified_alpha_monitor: license=MIT; query=fitness tracker license:mit stars:>100; evaluate for clone/adapt. AUTO_APPROVED 2026-03-17T06:17:55-04:00 (roi>=HIGH)",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA103204",
-        "source": "GitHub",
-        "source_url": "https://github.com/karthironald/BodyProgress",
-        "category": "TOOL_ALPHA",
-        "tactic": "MIT repo: karthironald/BodyProgress (272 stars, Swift)",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "AUTO_APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "UNKNOWN",
-        "earnings_verified": "N/A",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "unified_alpha_monitor: license=MIT; query=fitness tracker license:mit stars:>100; evaluate for clone/adapt. AUTO_APPROVED 2026-03-17T06:17:55-04:00 (roi>=HIGH)",
-        "created_at": "2026-03-17T06:17:06.729434",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 89,
-      "cluster": "habits",
-      "market_room": "HIGH",
-      "existing_app_target": "Streakr",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal picker -> starter pack -> first completion -> reminder permission -> paywall",
-      "paywall_variant": "after first completion, show streak preview and annual plan",
-      "aesthetic_direction": "warm ivory, emerald progress rings, crisp cards, satisfying celebrations",
-      "primary_monetization": "subscription with 7-day trial and annual anchor",
-      "secondary_monetization": "light affiliate add-ons only if they reinforce the streak outcome",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "onboarding length: 3-screen fast path vs 5-screen personalized path"
-      ],
-      "risk_score": 0,
-      "rank": 37
-    },
-    {
-      "candidate_id": "ALPHA103206",
-      "title": "MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporter (197 stars, Python)",
-      "source": "GitHub",
-      "source_url": "https://github.com/rolandsz/Mi-Fit-and-Zepp-workout-exporter",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGH",
-      "priority": "HIGH",
-      "status": "AUTO_APPROVED",
-      "engagement_authenticity": "UNKNOWN",
-      "earnings_verified": "N/A",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporter (197 stars, Python)",
-      "compliance_notes": "",
-      "reviewer_notes": "unified_alpha_monitor: license=MIT; query=expo fitness license:mit stars:>50; evaluate for clone/adapt. AUTO_APPROVED 2026-03-17T06:17:55-04:00 (roi>=HIGH)",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA103206",
-        "source": "GitHub",
-        "source_url": "https://github.com/rolandsz/Mi-Fit-and-Zepp-workout-exporter",
-        "category": "TOOL_ALPHA",
-        "tactic": "MIT repo: rolandsz/Mi-Fit-and-Zepp-workout-exporter (197 stars, Python)",
-        "roi_potential": "HIGH",
-        "priority": "HIGH",
-        "status": "AUTO_APPROVED",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "UNKNOWN",
-        "earnings_verified": "N/A",
-        "extracted_method": "",
-        "compliance_notes": "",
-        "reviewer_notes": "unified_alpha_monitor: license=MIT; query=expo fitness license:mit stars:>50; evaluate for clone/adapt. AUTO_APPROVED 2026-03-17T06:17:55-04:00 (roi>=HIGH)",
-        "created_at": "2026-03-17T06:17:06.729471",
-        "ops_generated": "TRUE",
-        "quality_issues": "",
-        "date_added": ""
-      },
-      "score": 89,
-      "cluster": "fitness",
-      "market_room": "HIGH",
-      "existing_app_target": "Steplock",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "goal setup -> baseline selection -> one immediate action -> reminder permission -> paywall",
-      "paywall_variant": "after plan preview or first logged action",
-      "aesthetic_direction": "sunrise gradients, bold counters, motion-heavy metrics, tactile progress states",
-      "primary_monetization": "subscription with 7-day trial and annual-first pricing",
-      "secondary_monetization": "supplement, gear, or wellness affiliate offers after conversion tests",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 38
-    },
-    {
-      "candidate_id": "ALPHA98936",
-      "title": "Namaz App: \u26054.91 (13.7K reviews), v1.17.3. Very high rating faith app. Free. Competitor to PrayerLock.",
-      "source": "competitive_intel_synthesis_prayerlock_competitor",
-      "source_url": "",
-      "source_type": "alpha_staging",
-      "roi_potential": "MEDIUM",
-      "priority": "SOON",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "FALSE",
-      "applicable_niches": "N/A",
-      "applicable_methods": "UNCHECKED",
-      "evidence": "Namaz App: \u26054.91 (13.7K reviews), v1.17.3. Very high rating faith app. Free. Competitor to PrayerLoc",
-      "compliance_notes": "",
-      "reviewer_notes": "Auto-approved competitive intel 2026-03-14 [ROUTED: 2026-03-17 to RESEARCH by gap_hunter]",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA98936",
-        "source": "competitive_intel_synthesis_prayerlock_competitor",
-        "source_url": "",
-        "category": "COMPETITIVE_INTEL",
-        "tactic": "Namaz App: \u26054.91 (13.7K reviews), v1.17.3. Very high rating faith app. Free. Competitor to PrayerLock.",
-        "roi_potential": "MEDIUM",
-        "priority": "SOON",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "UNCHECKED",
-        "applicable_niches": "N/A",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "FALSE",
-        "extracted_method": "Namaz App: \u26054.91 (13.7K reviews), v1.17.3. Very high rating faith app. Free. Competitor to PrayerLoc",
-        "compliance_notes": "",
-        "reviewer_notes": "Auto-approved competitive intel 2026-03-14 [ROUTED: 2026-03-17 to RESEARCH by gap_hunter]",
-        "created_at": "2026-03-14",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": "2026-03-14"
-      },
-      "score": 88,
-      "cluster": "faith",
-      "market_room": "MEDIUM_HIGH",
-      "existing_app_target": "PrayerLock / Scripture Streak AI layer",
-      "execution_lane": "ITERATE_EXISTING",
-      "build_decision": "ITERATE_EXISTING_NOW",
-      "onboarding_model": "belief or practice selector -> daily cadence setup -> first devotional win -> reminder -> paywall",
-      "paywall_variant": "after first devotional value moment, annual-first anchor",
-      "aesthetic_direction": "midnight blue, warm gold, quiet motion, modern-reverent typography",
-      "primary_monetization": "subscription with 7-day trial",
-      "secondary_monetization": "books, study tools, or affiliate offers only after retention exists",
-      "price_test": "$24.99 to $39.99/yr first",
-      "experiments": [
-        "paywall timing: after first value moment vs after onboarding preview",
-        "pricing: annual-first anchor vs cheaper monthly plan",
-        "review prompt: milestone trigger only, never session-one prompt",
-        "affiliate placement: post-conversion home tab vs no affiliate module"
-      ],
-      "risk_score": 0,
-      "rank": 39
-    },
-    {
-      "candidate_id": "ALPHA98946",
-      "title": "Weekly plans drive 55% of all app revenue in 2026 (Adapty). Weekly + trial = strongest 12-month retention. Immediate action: add weekly plan to ALL apps.",
-      "source": "r/AppBusiness",
-      "source_url": "https://reddit.com/r/AppBusiness/weekly_plans_55pct_revenue",
-      "source_type": "alpha_staging",
-      "roi_potential": "HIGHEST",
-      "priority": "NOW",
-      "status": "ROUTED_TO_VENTURE",
-      "engagement_authenticity": "AUTHENTIC",
-      "earnings_verified": "FALSE",
-      "applicable_niches": "",
-      "applicable_methods": "",
-      "evidence": "Weekly plans drive 55% of all app revenue in 2026 (Adapty). Weekly + trial = strongest 12-month rete",
-      "compliance_notes": "",
-      "reviewer_notes": "Competitive intel auto-processed 2026-03-14 [ROUTED: 2026-03-17 to APP by gap_hunter]",
-      "existing_spec": null,
-      "raw": {
-        "alpha_id": "ALPHA98946",
-        "source": "r/AppBusiness",
-        "source_url": "https://reddit.com/r/AppBusiness/weekly_plans_55pct_revenue",
-        "category": "APP_MONETIZATION",
-        "tactic": "Weekly plans drive 55% of all app revenue in 2026 (Adapty). Weekly + trial = strongest 12-month retention. Immediate action: add weekly plan to ALL apps.",
-        "roi_potential": "HIGHEST",
-        "priority": "NOW",
-        "status": "ROUTED_TO_VENTURE",
-        "applicable_methods": "",
-        "applicable_niches": "",
-        "synergy_score": "",
-        "cross_sell_products": "",
-        "implementation_priority": "",
-        "engagement_authenticity": "AUTHENTIC",
-        "earnings_verified": "FALSE",
-        "extracted_method": "Weekly plans drive 55% of all app revenue in 2026 (Adapty). Weekly + trial = strongest 12-month rete",
-        "compliance_notes": "",
-        "reviewer_notes": "Competitive intel auto-processed 2026-03-14 [ROUTED: 2026-03-17 to APP by gap_hunter]",
-        "created_at": "2026-03-14",
-        "ops_generated": "",
-        "quality_issues": "",
-        "date_added": "2026-03-14"
-      },
-      "score": 88,
-      "cluster": "ai_utility",
-      "market_room": "HIGH",
-      "existing_app_target": "NEW_BUILD",
-      "execution_lane": "NEW_BUILD",
-      "build_decision": "BUILD_NEW_NOW",
-      "onboarding_model": "drop input -> show first useful result fast -> personalize -> paywall",
-      "paywall_variant": "after the first clear output, never before time-to-value",
-      "aesthetic_direction": "clean white or ink black, one sharp accent, no fake futuristic chrome",
-      "primary_monetization": "subscription with fast time-to-value and annual anchor",
-      "secondary_monetization": "paid upfront for privacy-first local tools; avoid ads unless usage is massive",
-      "price_test": "$6.99 to $9.99/mo and $39.99 to $59.99/yr",
       "experiments": [
         "paywall timing: after first value moment vs after onboarding preview",
         "pricing: annual-first anchor vs cheaper monthly plan",

@@ -41,6 +41,15 @@
 - Save all content to `CONTENT/social/` or `CONTENT/` subdirectories
 - Generate minimum 3 variants per concept for A/B testing
 
+    ## Boomer Male 55-70 Variant
+- Every 3rd batch: generate 2 Facebook posts + 1 YouTube longform script for males 55-70
+- Verticals: golf, fishing, health/wellness, tools/DIY, retirement planning
+- Tone: calm, authoritative, educational. NO zoomer energy. NO slang. Trustworthy voice.
+- Format: longer paragraphs, clear structure, problem-solution framing
+- CTA: "learn more" / email capture, not "smash subscribe"
+- Save boomer content to `CONTENT/social/boomer/`
+- Facebook Groups strategy: find and engage in 55+ hobby/interest groups
+
     ## Quality Gates (CHECK BEFORE MARKING DONE)
 
     Every task output must pass ALL of these:

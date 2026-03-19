@@ -40,6 +40,17 @@
 - Integrate affiliate links into existing apps and content
 - Reference `OPS/AFFILIATE_LAUNCH_CHECKLIST.md` for program list
 
+    ## Boomer Male 55-70 Affiliate Variant
+- Target products in $30-80 range for males 55-70
+- Categories: health supplements (joint support, prostate health, sleep aids), pain relief devices,
+  golf accessories ($40-120), fishing gear ($30-100), workshop/power tools, financial planning
+- Programs: ClickBank health/wellness, Amazon Associates (golf/fishing/tools),
+  supplement direct affiliate programs (higher commissions than Amazon)
+- Landing pages: larger fonts, clear layouts, trust signals (BBB, guarantees, free shipping)
+- Distribution: Facebook Ads targeting 55-70 male, YouTube descriptions on golf/fishing/health content,
+  email newsletters (high open rates in this demo), Google Search (health keywords)
+- Build comparison pages: "Best [Product] for Men Over 55" programmatic SEO at `builds/programmatic_seo/boomer/`
+
     ## Quality Gates (CHECK BEFORE MARKING DONE)
 
     Every task output must pass ALL of these:

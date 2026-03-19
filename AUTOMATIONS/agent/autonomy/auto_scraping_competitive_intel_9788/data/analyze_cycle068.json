@@ -1,0 +1,98 @@
+{
+  "cycle": 68,
+  "timestamp": "2026-03-18T20:04:37.247223+00:00",
+  "strategy": "FINANCIAL_WELLNESS + ENTREPRENEURSHIP + ENVIRONMENTAL + CREATIVE_SKILLS",
+  "total_scanned": 14,
+  "blue_oceans": [
+    "debt_payoff_streak",
+    "no_spend_challenge",
+    "savings_goal_streak",
+    "cold_outreach_streak",
+    "content_creation_streak",
+    "side_hustle_streak",
+    "recycling_streak",
+    "zero_waste_streak",
+    "plant_based_streak"
+  ],
+  "soft_competition": [
+    "networking_streak"
+  ],
+  "occupied": [
+    "invest_daily_streak",
+    "drawing_streak",
+    "music_practice_streak",
+    "daily_writing_streak"
+  ],
+  "top_opportunities": [
+    [
+      "savings_goal_streak",
+      30756895
+    ],
+    [
+      "no_spend_challenge",
+      28418356
+    ],
+    [
+      "debt_payoff_streak",
+      25939183
+    ],
+    [
+      "cold_outreach_streak",
+      557329
+    ],
+    [
+      "content_creation_streak",
+      0
+    ],
+    [
+      "side_hustle_streak",
+      0
+    ],
+    [
+      "networking_streak",
+      0
+    ],
+    [
+      "recycling_streak",
+      0
+    ]
+  ],
+  "blue_ocean_details": {
+    "debt_payoff_streak": {
+      "community": 25939183,
+      "score": 100
+    },
+    "no_spend_challenge": {
+      "community": 28418356,
+      "score": 98
+    },
+    "savings_goal_streak": {
+      "community": 30756895,
+      "score": 95
+    },
+    "cold_outreach_streak": {
+      "community": 557329,
+      "score": 79
+    },
+    "content_creation_streak": {
+      "community": 0,
+      "score": 70
+    },
+    "side_hustle_streak": {
+      "community": 0,
+      "score": 73
+    },
+    "recycling_streak": {
+      "community": 0,
+      "score": 73
+    },
+    "zero_waste_streak": {
+      "community": 0,
+      "score": 70
+    },
+    "plant_based_streak": {
+      "community": 0,
+      "score": 70
+    }
+  }
+}

@@ -893,7 +893,7 @@ What I've learned:",,,2026-03-21,12:30,printmaxxer Twitter
 
 today's automated scan pulled 11 pain points and 33 revenue opportunities from reddit. here's what's actually worth building right now. a breakdown from raw data not vibes.",,,2026-03-21,18:00,printmaxxer Twitter
 every scan i run finds more opportunities than i can execute. that's the real problem at $0 revenue. not finding the thing. doing the thing. listing it. sending the email. following up. the intelligence layer works. now it's a shipping problem. if you're scanning and not shipping you're just a really well-informed person making $0.,,,2026-03-21,21:00,printmaxxer Twitter
-"one tweet about a specific mistake i made got 1.2m impressions. threads with ""lessons"" got 4k. people want stories not lectures",,,2026-03-22,07:30,printmaxxer Twitter
+"the meta lesson: 1,454,245 data points in the pipeline. 189,700 analyzed. 17,260 flagged hot. i wake up to a prioritized list not a blank screen. the gap isn't ideas. it's infrastructure. build the scanner once, run it forever. stop scrolling for inspiration and start scraping for demand.",,,2026-03-22,07:30,printmaxxer Twitter
 """bookmarking this entire build log. in 6 months one of two things will be true: they'll have revenue and this will be a case study, or they'll have pivoted and this will be a lesson. either way it's valuable.""
 
 ### Hot takes you disagree with (5)",,,2026-03-22,10:00,printmaxxer Twitter
@@ -1106,13 +1106,9 @@ python3 AUTOMATIONS/contentrepurposer.py --source ""CONTENT/social/printmaxxer/t
 0 7 * python3 AUTOMATIONS/twitteralphascraper.py --accounts target_list.txt --flag-qt-opportunities
 
 ### Pabbly Workflow Ideas",,,2026-03-22,12:30,printmaxxer Twitter
-"what's the hardest lesson you learned about selling to small businesses? i'm pivoting to local biz services and want to know what i'm walking into. specifics appreciated, not generic ""it's hard"" answers.",,,2026-03-22,15:00,printmaxxer Twitter
-"""this is the post everyone needs to see but nobody will bookmark. failure posts with real data are worth 100x the 'i made $50K this month' screenshots. the lessons are in the losses.""",,,2026-03-22,18:00,printmaxxer Twitter
-"use AI tools to actually build it in 2 hours
-
-margin is insane because the build cost is near zero.
-
-shipping > planning.",,,2026-03-22,21:00,printmaxxer Twitter
+"one tweet about a specific mistake i made got 1.2m impressions. threads with ""lessons"" got 4k. people want stories not lectures",,,2026-03-22,15:00,printmaxxer Twitter
+"what's the hardest lesson you learned about selling to small businesses? i'm pivoting to local biz services and want to know what i'm walking into. specifics appreciated, not generic ""it's hard"" answers.",,,2026-03-22,18:00,printmaxxer Twitter
+"""this is the post everyone needs to see but nobody will bookmark. failure posts with real data are worth 100x the 'i made $50K this month' screenshots. the lessons are in the losses.""",,,2026-03-22,21:00,printmaxxer Twitter
 see your streaks,,,2026-03-23,07:30,printmaxxer Twitter
 "unpopular opinion: if you need a course to start an online business in 2026, you're not gonna make it. everything is on youtube. everything is in docs. the information isn't the bottleneck. you are.",,,2026-03-23,10:00,printmaxxer Twitter
 "vertical specialization (3-5x better retention than horizontal)
