@@ -20,10 +20,10 @@ Read `OPS/PERSISTENT_TASK_TRACKER.md` FIRST every session. Read `AUTOMATIONS/SOU
 | Strategy | `.claude/rules/strategic-ethos.md` |
 | Quality pipeline | `.claude/rules/auto-quality.md` |
 | Ralph/Memory | `.claude/rules/ralph-and-memory.md` |
-| Copy style | `.claude/rules/copy-style.md` |
+| Copy style | `.claude/reference/copy-style.md` (load on demand, NOT every message) |
 | Guardrails | `.claude/rules/guardrails.md` |
-| Security | `.claude/rules/security.md` + `.claude/rules/external-code-security.md` |
-| Alpha review | `.claude/rules/alpha-review.md` |
+| Security | `.claude/rules/security.md` + `.claude/reference/external-code-security.md` |
+| Alpha review | `.claude/reference/alpha-review.md` (load on demand) |
 
 ## Core Rules (ALWAYS active)
 1. **SHIP NOW** — Deploy what exists before building new things. $0 revenue at Day 35.
