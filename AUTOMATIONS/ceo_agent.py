@@ -658,6 +658,7 @@ class CEOBrain:
         self.scorer = scorer
         self.xlsx = xlsx
         self.state = state
+        self.ops = OPS  # Ensure OPS is accessible as instance var
 
     def _get_strategic_intelligence(self) -> str:
         """Pull multi-venture intelligence briefing + buried gold for CEO decisions."""
@@ -677,7 +678,7 @@ class CEOBrain:
                 pass
 
         # 2. Buried gold summary from catalog
-        catalog_path = globals()['OPS'] / "INTELLIGENCE_CATALOG.json"
+        catalog_path = self.ops / "INTELLIGENCE_CATALOG.json"
         if catalog_path.exists():
             try:
                 import json as _json
@@ -701,7 +702,7 @@ class CEOBrain:
                 pass
 
         # 3. Daily digest
-        digest_path = globals()['OPS'] / "DAILY_DIGEST.md"
+        digest_path = self.ops / "DAILY_DIGEST.md"
         if digest_path.exists():
             try:
                 digest = digest_path.read_text()[:500]
@@ -710,7 +711,7 @@ class CEOBrain:
                 pass
 
         # 4. Capital Genesis Priority Stack — ranked method priorities for venture decisions
-        cap_gen_path = globals()['OPS'] / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+        cap_gen_path = self.ops / "CAPITAL_GENESIS_PRIORITY_STACK.md"
         if cap_gen_path.exists():
             try:
                 stack_text = cap_gen_path.read_text()
