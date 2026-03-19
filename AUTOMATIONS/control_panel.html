@@ -1876,6 +1876,25 @@ body {
       <div class="card-title"><i class="ti ti-alert-triangle"></i>Human Blockers (resolve to unblock revenue)</div>
       <div id="kpi-blockers" style="margin-top:8px;">Loading...</div>
     </div>
+
+    <div class="glass-card" style="margin-top:16px;">
+      <div class="card-title"><i class="ti ti-calendar"></i>Monthly Calendar — <span id="kpi-month-name">Loading...</span> (Goal: <span id="kpi-goal">$1,000</span>)</div>
+      <div id="kpi-calendar" style="display:grid; grid-template-columns:repeat(7,1fr); gap:4px; margin-top:12px;">Loading...</div>
+    </div>
+
+    <div class="glass-card" style="margin-top:16px; display:none;" id="kpi-day-detail">
+      <div class="card-title"><i class="ti ti-clipboard-list"></i>Day <span id="kpi-day-num"></span>: <span id="kpi-day-theme"></span></div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:12px;">
+        <div>
+          <div style="font-size:0.8em; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Tasks</div>
+          <div id="kpi-day-tasks"></div>
+        </div>
+        <div>
+          <div style="font-size:0.8em; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Targets</div>
+          <div id="kpi-day-targets"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -1946,7 +1965,7 @@ document.querySelectorAll('.tab').forEach(function(tab) {
     if (tab.dataset.tab === 'skills') loadSkills();
     if (tab.dataset.tab === 'chains') loadChains();
     if (tab.dataset.tab === 'dag') loadDag();
-    if (tab.dataset.tab === 'kpi') loadKPI();
+    if (tab.dataset.tab === 'kpi') { loadKPI(); loadCalendar(); }
   });
 });
 
@@ -3112,6 +3131,64 @@ async function loadKPI() {
   } catch(e) {
     console.error('KPI load failed:', e);
   }
+}
+
+async function loadCalendar() {
+  try {
+    var r = await fetch(API + '/api/kpi/calendar');
+    var d = await r.json();
+    document.getElementById('kpi-month-name').textContent = d.month;
+    document.getElementById('kpi-goal').textContent = d.goal;
+    var cal = document.getElementById('kpi-calendar');
+    // Header row
+    var header = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(function(day) {
+      return '<div style="text-align:center;font-size:0.7em;color:var(--text-dim);padding:4px;font-family:JetBrains Mono;">' + day + '</div>';
+    }).join('');
+    // Pad first week
+    var firstDay = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].indexOf(d.days[0].weekday);
+    var padding = '';
+    for (var i = 0; i < firstDay; i++) padding += '<div></div>';
+    // Day cells
+    var cells = d.days.map(function(day) {
+      var colors = {
+        'UNBLOCK':'var(--danger)','PRODUCTS':'var(--purple)','FREELANCE':'var(--blue)',
+        'OUTREACH':'var(--warn)','COLD EMAIL':'var(--warn)','ANALYZE':'var(--accent)',
+        'BATCH':'var(--text-dim)','DATA REVIEW':'var(--accent)','VIDEO':'var(--purple)',
+        'SCALE EMAIL':'var(--warn)','YOUTUBE':'var(--danger)','TIKTOK':'var(--purple)',
+        'EAS OUTREACH':'var(--blue)','SCALE/KILL':'var(--danger)','NEWSLETTER':'var(--blue)',
+        'AFFILIATE':'var(--accent)','EAS FOLLOW UP':'var(--blue)','CONTENT MACHINE':'var(--purple)',
+        'FACEBOOK ADS':'var(--blue)','LAUNCH':'var(--accent)','PRODUCT HUNT':'var(--accent)',
+        'EAS CLOSE':'var(--blue)','OPTIMIZE':'var(--accent)','MAY PLANNING':'var(--text-dim)',
+        'SYSTEMS':'var(--text-dim)','MONTH CLOSE':'var(--accent)','RECURRING REV':'var(--accent)',
+        'RANK CHANNELS':'var(--accent)','FLEX':'var(--text-dim)'
+      };
+      var color = colors[day.theme] || 'var(--text-dim)';
+      var border = day.is_today ? 'border:2px solid var(--accent);' : 'border:1px solid var(--border);';
+      return '<div onclick="showDay(' + day.day + ')" style="' + border + 'border-radius:8px;padding:6px;cursor:pointer;background:var(--panel);min-height:60px;transition:all 0.15s;" onmouseenter="this.style.borderColor=\'var(--accent)\'" onmouseleave="this.style.borderColor=\'' + (day.is_today ? 'var(--accent)' : 'var(--border)') + '\'">' +
+        '<div style="font-family:JetBrains Mono;font-size:0.9em;font-weight:700;color:var(--text);">' + day.day + '</div>' +
+        '<div style="font-size:0.6em;color:' + color + ';font-weight:600;margin-top:2px;">' + day.theme + '</div>' +
+        '<div style="font-size:0.6em;color:var(--accent);margin-top:2px;">' + day.revenue_target + '</div>' +
+      '</div>';
+    }).join('');
+    cal.innerHTML = header + padding + cells;
+    window._calendarData = d.days;
+  } catch(e) { console.error('Calendar load failed:', e); }
+}
+
+function showDay(dayNum) {
+  var day = window._calendarData.find(function(d) { return d.day === dayNum; });
+  if (!day) return;
+  var detail = document.getElementById('kpi-day-detail');
+  detail.style.display = 'block';
+  document.getElementById('kpi-day-num').textContent = dayNum;
+  document.getElementById('kpi-day-theme').textContent = day.theme;
+  document.getElementById('kpi-day-tasks').innerHTML = day.tasks.map(function(t) {
+    return '<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:0.85em;display:flex;gap:8px;"><span style="color:var(--accent);">&#9654;</span><span>' + t + '</span></div>';
+  }).join('');
+  document.getElementById('kpi-day-targets').innerHTML =
+    '<div style="padding:8px;background:var(--panel);border-radius:8px;margin-bottom:8px;"><div style="font-size:0.75em;color:var(--text-dim);">Revenue Target</div><div style="font-family:JetBrains Mono;font-size:1.3em;color:var(--accent);font-weight:700;">' + day.revenue_target + '</div></div>' +
+    '<div style="padding:8px;background:var(--panel);border-radius:8px;"><div style="font-size:0.75em;color:var(--text-dim);">Content Target</div><div style="font-family:JetBrains Mono;font-size:0.9em;color:var(--blue);">' + day.content + '</div></div>';
+  detail.scrollIntoView({behavior:'smooth'});
 }
 
 async function completeBlocker(el, text) {
