@@ -1628,7 +1628,12 @@ body {
     <div class="glass-card" style="border:2px solid var(--accent); background:linear-gradient(135deg, rgba(0,255,136,0.08), rgba(0,100,255,0.05)); margin-bottom:16px; padding:24px;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
         <div style="font-size:1.4em; font-weight:800; color:var(--text); font-family:'JetBrains Mono';"><i class="ti ti-target-arrow" style="color:var(--accent);"></i> today's KPIs</div>
-        <div style="display:flex; gap:16px; align-items:center;">
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+          <div style="display:flex; gap:4px; background:var(--panel); border-radius:8px; padding:3px; border:1px solid var(--border);" id="kpi-mode-toggle">
+            <span class="kpi-mode active" data-mode="standard" onclick="setKPIMode('standard')" style="font-family:'JetBrains Mono'; font-size:0.7em; padding:4px 10px; border-radius:6px; cursor:pointer; color:var(--accent); background:var(--accent-dim);">standard</span>
+            <span class="kpi-mode" data-mode="beast" onclick="setKPIMode('beast')" style="font-family:'JetBrains Mono'; font-size:0.7em; padding:4px 10px; border-radius:6px; cursor:pointer; color:var(--warn);">beast</span>
+            <span class="kpi-mode" data-mode="modafinil" onclick="setKPIMode('modafinil')" style="font-family:'JetBrains Mono'; font-size:0.7em; padding:4px 10px; border-radius:6px; cursor:pointer; color:var(--danger);">modafinil</span>
+          </div>
           <span style="font-family:'JetBrains Mono'; font-size:0.85em; color:var(--text-dim);" id="dash-kpi-date"></span>
           <span onclick="document.querySelector('[data-tab=kpi]').click();" style="font-family:'JetBrains Mono'; font-size:0.75em; color:var(--accent); cursor:pointer; padding:4px 10px; border:1px solid var(--accent); border-radius:6px;">view month &rarr;</span>
         </div>
@@ -3178,9 +3183,26 @@ async function loadKPI() {
   }
 }
 
+var currentKPIMode = 'standard';
+function setKPIMode(mode) {
+  currentKPIMode = mode;
+  document.querySelectorAll('.kpi-mode').forEach(function(el) {
+    el.classList.remove('active');
+    el.style.background = 'transparent';
+  });
+  var active = document.querySelector('.kpi-mode[data-mode="'+mode+'"]');
+  if (active) {
+    active.classList.add('active');
+    var colors = {standard:'var(--accent-dim)', beast:'var(--warn-dim)', modafinil:'var(--danger-dim)'};
+    active.style.background = colors[mode] || 'var(--accent-dim)';
+  }
+  loadDashKPI();
+  loadCalendar();
+}
+
 async function loadDashKPI() {
   try {
-    var [kpiR, calR] = await Promise.all([fetch(API+'/api/kpi'), fetch(API+'/api/kpi/calendar')]);
+    var [kpiR, calR] = await Promise.all([fetch(API+'/api/kpi'), fetch(API+'/api/kpi/calendar?mode='+currentKPIMode)]);
     var kpi = await kpiR.json();
     var cal = await calR.json();
     document.getElementById('dash-kpi-revenue').textContent = '$' + (kpi.revenue||0).toLocaleString();
@@ -3212,9 +3234,9 @@ async function loadDashKPI() {
 
 async function loadCalendar() {
   try {
-    var r = await fetch(API + '/api/kpi/calendar');
+    var r = await fetch(API + '/api/kpi/calendar?mode=' + currentKPIMode);
     var d = await r.json();
-    document.getElementById('kpi-month-name').textContent = d.month;
+    document.getElementById('kpi-month-name').textContent = d.month + ' [' + (d.mode_label || 'Standard') + ']';
     document.getElementById('kpi-goal').textContent = d.goal;
     var cal = document.getElementById('kpi-calendar');
     // Header row
