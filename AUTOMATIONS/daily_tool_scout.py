@@ -20,8 +20,67 @@ TOPICS = [
     "agent+framework", "automation+tool", "ai+agent", "workflow+automation",
     "content+generation", "trading+bot", "video+generation", "voice+ai",
     "web+scraper", "lead+generation", "seo+tool", "newsletter",
-    "social+media+automation", "mcp+server", "browser+automation"
+    "social+media+automation", "mcp+server", "browser+automation",
+    # Claude/Anthropic — we run on Claude Max, track everything they ship
+    "anthropic+claude", "claude+code", "claude+agent+sdk", "model+context+protocol",
+    # Competitor LLM tools we might leverage or need to match
+    "openai+agents", "gemini+agent", "llm+orchestration",
 ]
+
+# Anthropic-specific: check SDK/Claude Code releases for features that affect our system
+ANTHROPIC_REPOS = [
+    ("anthropics/anthropic-sdk-python", "Claude Python SDK"),
+    ("anthropics/claude-code", "Claude Code CLI"),
+    ("anthropics/courses", "Anthropic courses/examples"),
+    ("modelcontextprotocol/servers", "Official MCP servers"),
+]
+
+
+def check_anthropic_updates():
+    """Check Anthropic repos for recent releases/commits that could improve our system."""
+    from datetime import timedelta
+    updates = []
+    week_ago = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%dT00:00:00Z")
+    for repo, label in ANTHROPIC_REPOS:
+        try:
+            # Check releases
+            url = f"https://api.github.com/repos/{repo}/releases?per_page=3"
+            req = urllib.request.Request(url, headers={"Accept": "application/vnd.github.v3+json", "User-Agent": "sovrun-scout"})
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                releases = json.loads(resp.read().decode())
+                for rel in releases:
+                    if rel.get("published_at", "") > week_ago:
+                        updates.append({
+                            "source": label,
+                            "type": "release",
+                            "name": rel.get("tag_name", ""),
+                            "title": rel.get("name", ""),
+                            "url": rel.get("html_url", ""),
+                            "body": (rel.get("body") or "")[:200],
+                            "date": rel.get("published_at", "")[:10],
+                        })
+        except Exception as e:
+            log(f"Anthropic check failed for {repo}: {e}")
+        try:
+            # Check recent commits
+            url = f"https://api.github.com/repos/{repo}/commits?since={week_ago}&per_page=5"
+            req = urllib.request.Request(url, headers={"Accept": "application/vnd.github.v3+json", "User-Agent": "sovrun-scout"})
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                commits = json.loads(resp.read().decode())
+                if len(commits) > 3:
+                    updates.append({
+                        "source": label,
+                        "type": "active_development",
+                        "name": f"{len(commits)} commits this week",
+                        "title": commits[0]["commit"]["message"].split("\n")[0][:80] if commits else "",
+                        "url": f"https://github.com/{repo}/commits",
+                        "body": "",
+                        "date": datetime.now().strftime("%Y-%m-%d"),
+                    })
+        except Exception:
+            pass
+    return updates
+
 
 def log(msg):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -70,12 +129,26 @@ def main():
     # Sort by stars
     all_repos.sort(key=lambda x: x["stars"], reverse=True)
     
+    # Check Anthropic/Claude updates
+    anthropic_updates = check_anthropic_updates()
+
     # Write report
     output = OPS / "DAILY_TOOL_SCOUT.md"
     with open(output, "w") as f:
         f.write(f"# Daily Tool Scout — {datetime.now().strftime('%Y-%m-%d')}\n\n")
-        f.write(f"Found {len(all_repos)} new repos (50+ stars, created in last 7 days)\n\n")
-        f.write("## ACTION REQUIRED: Review and approve integration\n\n")
+
+        # Anthropic section FIRST (highest priority — affects our entire system)
+        if anthropic_updates:
+            f.write("## CLAUDE/ANTHROPIC UPDATES (check these first — affects our system)\n\n")
+            f.write("| Date | Source | Type | Name | Details |\n")
+            f.write("|------|--------|------|------|--------|\n")
+            for u in anthropic_updates:
+                f.write(f"| {u['date']} | {u['source']} | {u['type']} | [{u['name']}]({u['url']}) | {u['title']} {u['body'][:100]} |\n")
+            f.write("\n**Action:** Check if any updates unlock new capabilities for our agent system, MCP integrations, or Claude Code workflows.\n\n")
+        else:
+            f.write("## CLAUDE/ANTHROPIC: No new updates this week\n\n")
+
+        f.write(f"## NEW TOOLS ({len(all_repos)} repos, 50+ stars, last 7 days)\n\n")
         f.write("| Stars | Name | Description | License | Language | Topic |\n")
         f.write("|-------|------|-------------|---------|----------|-------|\n")
         for r in all_repos[:30]:
