@@ -3262,9 +3262,13 @@ async function loadDashKPI() {
     // Render today's tasks
     var tasksEl = document.getElementById('dash-kpi-today-tasks');
     tasksEl.innerHTML = todayPlan.tasks.map(function(t,i){
+      var text = (typeof t === 'object') ? t.text : t;
+      var tag = (typeof t === 'object') ? t.tag : 'MANUAL';
+      var tagColors = {AUTO:'var(--accent)',SEMI:'var(--warn)',MANUAL:'var(--blue)'};
+      var tagBadge = '<span style="font-size:0.65em;padding:1px 5px;border-radius:3px;background:rgba(255,255,255,0.08);color:'+( tagColors[tag]||'var(--text-dim)')+';font-family:JetBrains Mono;margin-right:6px;">'+tag+'</span>';
       return '<div style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85em;">' +
         '<span style="color:var(--accent);font-family:JetBrains Mono;min-width:20px;">'+(i+1)+'.</span>' +
-        '<span style="color:var(--text);">'+t+'</span></div>';
+        '<span style="color:var(--text);">'+tagBadge+text+'</span></div>';
     }).join('');
     // Revenue target
     tasksEl.innerHTML += '<div style="margin-top:12px;padding:12px;background:var(--panel);border-radius:8px;display:flex;justify-content:space-between;">' +
