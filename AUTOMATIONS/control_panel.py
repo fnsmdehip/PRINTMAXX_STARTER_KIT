@@ -1554,9 +1554,9 @@ def api_kpi_calendar():
     import calendar
     mode = request.args.get("mode", "standard")
     now = datetime.now()
-    year, month = now.year, now.month + 1 if now.month < 12 else 1
-    if now.month == 12: year += 1
+    year, month = now.year, now.month  # Current month, not next month
     _, days_in_month = calendar.monthrange(year, month)
+    today_day = now.day
 
     # Intensity multipliers per mode
     MULTIPLIERS = {
@@ -2215,7 +2215,8 @@ def api_kpi_calendar():
 
     for day in range(1, min(days_in_month + 1, 31)):
         plan = daily_plans.get(day, default_plan)
-        is_today = (now.month == month and now.day == day) or (now.month == month - 1 and day == 1)
+        is_today = (day == today_day)
+        is_past = (day < today_day)
         week_num = (day - 1) // 7 + 1
 
         # Apply intensity multipliers
@@ -2276,7 +2277,7 @@ def api_kpi_calendar():
             "automation_checks": plan.get("automation_checks", []),
             "research": plan.get("research", []),
             "is_today": is_today,
-            "is_past": False,
+            "is_past": is_past,
             "week": week_num,
             "week_phase": week_phases.get(week_num, "SCALE"),
             "scores": {
