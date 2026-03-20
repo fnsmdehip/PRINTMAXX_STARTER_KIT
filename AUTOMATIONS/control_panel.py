@@ -1333,6 +1333,140 @@ def api_sovrun_dag():
     return jsonify(get_dag_status())
 
 
+@app.route("/api/daily-feed")
+def api_daily_feed():
+    """Aggregate all daily automated activity into actionable notifications."""
+    feed = []
+    today = datetime.now().strftime("%Y-%m-%d")
+    today_ts = datetime.now().replace(hour=0, minute=0, second=0).timestamp()
+
+    # 1. Alpha staging — new entries needing review
+    alpha_csv = LEDGER / "ALPHA_STAGING.csv"
+    if alpha_csv.exists():
+        try:
+            pending = 0
+            with open(alpha_csv) as f:
+                for row in csv.DictReader(f):
+                    if row.get("status", "").upper() in ("PENDING_REVIEW", "NEW_METHOD"):
+                        pending += 1
+            if pending > 0:
+                feed.append({"type": "action", "icon": "ti-bulb", "color": "var(--warn)", "title": f"{pending} alpha entries need review", "desc": "ALPHA_STAGING.csv has pending items", "action": "python3 AUTOMATIONS/alpha_auto_processor.py --process-new", "priority": "high"})
+        except Exception:
+            pass
+
+    # 2. Capital Genesis priority stack — P0 items
+    pstack = OPS / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+    if pstack.exists() and pstack.stat().st_mtime > today_ts - 86400:
+        try:
+            p0_count = sum(1 for line in open(pstack) if "| P0 |" in line or "LAUNCH_NOW" in line)
+            if p0_count > 0:
+                feed.append({"type": "opportunity", "icon": "ti-rocket", "color": "var(--accent)", "title": f"{p0_count} P0 methods ready to launch", "desc": "Capital Genesis ranked these as immediate action", "action": "cat OPS/CAPITAL_GENESIS_PRIORITY_STACK.md", "priority": "high"})
+        except Exception:
+            pass
+
+    # 3. Daily tool scout — new tools found
+    scout = OPS / "DAILY_TOOL_SCOUT.md"
+    if scout.exists() and scout.stat().st_mtime > today_ts - 86400:
+        feed.append({"type": "research", "icon": "ti-search", "color": "var(--blue)", "title": "Daily tool scout has new results", "desc": "Review new open source tools discovered today", "action": "cat OPS/DAILY_TOOL_SCOUT.md", "priority": "medium"})
+
+    # 4. Scraper outputs — what ran today
+    scraper_dir = AUTOMATIONS / "twitter_scraper_output"
+    if scraper_dir.exists():
+        recent = [f for f in scraper_dir.iterdir() if f.stat().st_mtime > today_ts - 86400]
+        if recent:
+            feed.append({"type": "data", "icon": "ti-brand-twitter", "color": "var(--blue)", "title": f"Twitter scraper: {len(recent)} new outputs", "desc": "Alpha extracted from 133 monitored accounts", "action": "ls AUTOMATIONS/twitter_scraper_output/", "priority": "low"})
+
+    reddit_dir = AUTOMATIONS / "reddit_scraper_output"
+    if reddit_dir.exists():
+        recent = [f for f in reddit_dir.iterdir() if f.stat().st_mtime > today_ts - 86400]
+        if recent:
+            feed.append({"type": "data", "icon": "ti-brand-reddit", "color": "var(--warn)", "title": f"Reddit scraper: {len(recent)} new outputs", "desc": "Pain points and alpha from subreddits", "action": "ls AUTOMATIONS/reddit_scraper_output/", "priority": "low"})
+
+    # 5. n8n workflow executions
+    if N8N_API_KEY:
+        try:
+            n8n_data = _n8n_request("/executions?limit=20")
+            if isinstance(n8n_data, dict) and "data" in n8n_data:
+                execs = n8n_data["data"]
+                today_execs = [e for e in execs if today in e.get("startedAt", "")]
+                failed = [e for e in today_execs if e.get("status") == "error"]
+                if failed:
+                    feed.append({"type": "alert", "icon": "ti-alert-triangle", "color": "var(--danger)", "title": f"{len(failed)} n8n workflows FAILED today", "desc": "Check n8n for error details", "action": "open http://localhost:5678", "priority": "high"})
+                elif today_execs:
+                    feed.append({"type": "status", "icon": "ti-check", "color": "var(--accent)", "title": f"{len(today_execs)} n8n workflows ran successfully", "desc": "All workflows healthy", "action": "", "priority": "low"})
+        except Exception:
+            pass
+
+    # 6. Agent swarm reports — today's reports
+    reports_dir = AUTOMATIONS / "agent" / "swarm" / "reports"
+    if reports_dir.exists():
+        today_reports = [f.name for f in reports_dir.iterdir() if f.is_file() and today.replace("-", "") in f.name]
+        if today_reports:
+            feed.append({"type": "intel", "icon": "ti-robot", "color": "var(--purple)", "title": f"{len(today_reports)} agent reports generated", "desc": ", ".join(today_reports[:3]) + ("..." if len(today_reports) > 3 else ""), "action": f"ls {reports_dir}", "priority": "medium"})
+
+    # 7. Soul drift — check if below threshold
+    drift_file = AUTOMATIONS / "agent" / "swarm" / "soul_drift_report.json"
+    if drift_file.exists():
+        try:
+            drift = json.loads(drift_file.read_text())
+            avg = drift.get("system_average", drift.get("average_score", 10))
+            if avg < 6:
+                feed.append({"type": "alert", "icon": "ti-mood-sad", "color": "var(--danger)", "title": f"Soul drift score: {avg}/10 (below 6 threshold)", "desc": "Agents producing off-brand output. Review and fix prompts.", "action": "python3 AUTOMATIONS/loop_closer.py --drift", "priority": "high"})
+        except Exception:
+            pass
+
+    # 8. CEO decisions — recent
+    ceo_decisions = AUTOMATIONS / "agent" / "ceo_agent" / "decisions.jsonl"
+    if ceo_decisions.exists():
+        try:
+            recent = []
+            with open(ceo_decisions) as f:
+                for line in f:
+                    try:
+                        d = json.loads(line)
+                        if today in d.get("ts", d.get("timestamp", "")):
+                            recent.append(d)
+                    except Exception:
+                        pass
+            if recent:
+                feed.append({"type": "decision", "icon": "ti-crown", "color": "var(--accent)", "title": f"CEO agent made {len(recent)} decisions today", "desc": recent[-1].get("action", recent[-1].get("decision", ""))[:80] if recent else "", "action": "python3 AUTOMATIONS/ceo_agent.py --status", "priority": "medium"})
+        except Exception:
+            pass
+
+    # 9. Method discovery — new methods found
+    discovery_log = LEDGER / "METHOD_DISCOVERY_LOG.csv"
+    if discovery_log.exists() and discovery_log.stat().st_mtime > today_ts - 86400:
+        try:
+            new_methods = sum(1 for line in open(discovery_log) if today in line)
+            if new_methods > 0:
+                feed.append({"type": "opportunity", "icon": "ti-coin", "color": "var(--accent)", "title": f"{new_methods} new revenue methods discovered", "desc": "From Reddit, HN, Twitter crawl", "action": "python3 AUTOMATIONS/method_discovery_crawler.py --report", "priority": "high"})
+        except Exception:
+            pass
+
+    # 10. Gov contracts — new opportunities
+    gov_csv = LEDGER / "GOV_OPPORTUNITIES.csv"
+    if gov_csv.exists() and gov_csv.stat().st_mtime > today_ts - 86400:
+        feed.append({"type": "opportunity", "icon": "ti-building-bank", "color": "var(--blue)", "title": "Government contract scan updated", "desc": "SAM.gov + UK Contracts Finder results", "action": "cat LEDGER/GOV_OPPORTUNITIES.csv | head -20", "priority": "medium"})
+
+    # 11. Content posting queue — what's ready to post
+    queue_dir = PROJECT_ROOT / "CONTENT" / "social" / "posting_queue"
+    if queue_dir.exists():
+        ready = [f for f in queue_dir.iterdir() if f.is_file() and f.suffix in (".txt", ".md")]
+        if ready:
+            feed.append({"type": "action", "icon": "ti-send", "color": "var(--purple)", "title": f"{len(ready)} posts in queue ready to publish", "desc": "Review and schedule or post manually", "action": f"ls {queue_dir}", "priority": "medium"})
+
+    # 12. Freelance demand — new opportunities
+    freelance_csv = LEDGER / "FREELANCE_DEMAND_SCAN.csv"
+    if freelance_csv.exists() and freelance_csv.stat().st_mtime > today_ts - 86400:
+        feed.append({"type": "opportunity", "icon": "ti-briefcase", "color": "var(--accent)", "title": "Freelance demand scan updated", "desc": "New gigs matching our capabilities", "action": "python3 AUTOMATIONS/auto_freelance_responder.py --scan", "priority": "medium"})
+
+    # Sort: high priority first, then medium, then low
+    priority_order = {"high": 0, "medium": 1, "low": 2}
+    feed.sort(key=lambda x: priority_order.get(x.get("priority", "low"), 3))
+
+    return jsonify({"feed": feed, "count": len(feed), "date": today})
+
+
 @app.route("/api/kpi")
 def api_kpi():
     """Return KPI data: revenue, blockers, daily targets, week progress."""
