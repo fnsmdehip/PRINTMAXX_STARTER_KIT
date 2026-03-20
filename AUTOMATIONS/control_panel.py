@@ -1382,12 +1382,23 @@ def api_kpi():
 
 @app.route("/api/kpi/calendar")
 def api_kpi_calendar():
-    """Return full month calendar with daily KPIs and tasks."""
+    """Return full month calendar with daily KPIs and tasks.
+    ?mode=standard (default) | ?mode=beast | ?mode=modafinil
+    """
     import calendar
+    mode = request.args.get("mode", "standard")
     now = datetime.now()
-    year, month = now.year, now.month + 1 if now.month < 12 else 1  # next month (April)
+    year, month = now.year, now.month + 1 if now.month < 12 else 1
     if now.month == 12: year += 1
     _, days_in_month = calendar.monthrange(year, month)
+
+    # Intensity multipliers per mode
+    MULTIPLIERS = {
+        "standard": {"engagement": 1.0, "content": 1.0, "outreach": 1.0, "revenue": 1.0, "label": "Standard", "desc": "Sustainable daily pace. 6-8 hrs focused work."},
+        "beast": {"engagement": 2.0, "content": 2.0, "outreach": 2.0, "revenue": 1.5, "label": "Beast Mode", "desc": "12-14 hr days. Everything at 2x. Sleep when profitable."},
+        "modafinil": {"engagement": 3.5, "content": 3.0, "outreach": 3.0, "revenue": 2.5, "label": "Modafinil Mode", "desc": "16-18 hr days. Upper ceiling of human output. Every waking minute is revenue-generating. Not sustainable forever but will compress 3 months into 1."},
+    }
+    mult = MULTIPLIERS.get(mode, MULTIPLIERS["standard"])
 
     # ==========================================================================
     # PRINTMAXX DAILY OPS — 33-AGENT AUTONOMOUS SYSTEM KPIs
@@ -2699,23 +2710,68 @@ def api_kpi_calendar():
     week_phases = {1: "INFRA + ACCOUNTS", 2: "VOLUME + PIPELINE", 3: "EDGE + OPTIMIZE", 4: "COMPOUND + CLOSE"}
 
     calendar_data = []
+    m_eng = mult["engagement"]
+    m_con = mult["content"]
+    m_out = mult["outreach"]
+    m_rev = mult["revenue"]
+
     for day in range(1, min(days_in_month + 1, 31)):
         plan = daily_plans.get(day, default_plan)
         is_today = (now.month == month and now.day == day) or (now.month == month - 1 and day == 1)
         week_num = (day - 1) // 7 + 1
-        content = plan.get("content", {"tweets": 5, "threads": 0, "tiktoks": 0, "youtube": 0, "newsletters": 0})
-        engagement = plan.get("engagement", {"replies": 0, "dms": 0, "comments": 0, "follows": 0})
-        outreach = plan.get("outreach", {"cold_emails": 0, "proposals": 0, "calls": 0})
-        # Compute daily scores
-        engagement_score = engagement.get("replies", 0) + engagement.get("dms", 0) + engagement.get("comments", 0) + engagement.get("follows", 0)
+
+        # Apply intensity multipliers
+        raw_content = plan.get("content", {"tweets": 5, "threads": 0, "tiktoks": 0, "youtube": 0, "newsletters": 0})
+        raw_engagement = plan.get("engagement", {"replies": 0, "dms": 0, "comments": 0, "follows": 0})
+        raw_outreach = plan.get("outreach", {"cold_emails": 0, "proposals": 0, "calls": 0})
+
+        content = {k: int(v * m_con) for k, v in raw_content.items()}
+        engagement = {k: int(v * m_eng) for k, v in raw_engagement.items()}
+        outreach = {k: int(v * m_out) for k, v in raw_outreach.items()}
+
+        # Scale revenue target string
+        rev_target = plan["revenue_target"]
+        if m_rev > 1.0:
+            import re as _re
+            nums = _re.findall(r'\d+', rev_target.replace(",", ""))
+            if nums:
+                scaled = [f"${int(int(n) * m_rev):,}" for n in nums]
+                rev_target = "-".join(scaled) if len(scaled) > 1 else scaled[0]
+
+        # Extra tasks for beast/modafinil modes
+        tasks = list(plan["tasks"])
+        if mode == "beast":
+            tasks.extend([
+                f"BEAST: Double content output across all accounts ({content['tweets']} tweets, {content.get('tiktoks',0)} TikToks)",
+                f"BEAST: Extra cold email batch ({outreach['cold_emails']} total today)",
+                "BEAST: 2nd YouTube video or 5 extra Shorts",
+                "BEAST: Review and respond to ALL pending DMs across all accounts",
+                "BEAST: Extra 30 min competitor analysis + steal their best formats",
+            ])
+        elif mode == "modafinil":
+            tasks.extend([
+                f"MODAFINIL: 3x all engagement ({engagement['replies']} replies, {engagement['dms']} DMs, {engagement['follows']} follows)",
+                f"MODAFINIL: 3x content factory ({content['tweets']} tweets, {content.get('threads',0)} threads, {content.get('tiktoks',0)} TikToks)",
+                f"MODAFINIL: 3x outreach blast ({outreach['cold_emails']} emails, {outreach['proposals']} proposals, {outreach['calls']} calls)",
+                "MODAFINIL: Set up 2 additional niche accounts with GoLogin + SOAX",
+                "MODAFINIL: Batch create 48hrs of scheduled content across all platforms",
+                "MODAFINIL: Deep alpha review: process ALL pending ALPHA_STAGING entries",
+                "MODAFINIL: Write and publish 2 Medium articles (parasite SEO)",
+                "MODAFINIL: Record 3 YouTube videos back to back (batch production)",
+                "MODAFINIL: DM 50 potential collaborators / affiliate partners",
+                "MODAFINIL: Build and deploy 1 micro-SaaS or tool (app factory sprint)",
+            ])
+
+        engagement_score = sum(engagement.values())
         content_score = content.get("tweets", 0) + content.get("threads", 0) * 3 + content.get("tiktoks", 0) * 2 + content.get("youtube", 0) * 5 + content.get("newsletters", 0) * 4
         outreach_score = outreach.get("cold_emails", 0) + outreach.get("proposals", 0) * 5 + outreach.get("calls", 0) * 10
+
         calendar_data.append({
             "day": day,
             "weekday": calendar.day_abbr[calendar.weekday(year, month, day)],
             "theme": plan["theme"],
-            "tasks": plan["tasks"],
-            "revenue_target": plan["revenue_target"],
+            "tasks": tasks,
+            "revenue_target": rev_target,
             "content": content,
             "engagement": engagement,
             "outreach": outreach,
@@ -2732,7 +2788,15 @@ def api_kpi_calendar():
             },
         })
 
-    return jsonify({"month": f"{calendar.month_name[month]} {year}", "days": calendar_data, "goal": "$1,000"})
+    goals = {"standard": "$1,000", "beast": "$2,500", "modafinil": "$5,000+"}
+    return jsonify({
+        "month": f"{calendar.month_name[month]} {year}",
+        "days": calendar_data,
+        "goal": goals.get(mode, "$1,000"),
+        "mode": mode,
+        "mode_label": mult["label"],
+        "mode_desc": mult["desc"],
+    })
 
 
 @app.route("/api/kpi/complete", methods=["POST"])
