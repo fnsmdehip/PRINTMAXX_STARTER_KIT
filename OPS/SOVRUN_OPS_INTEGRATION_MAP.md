@@ -211,4 +211,41 @@ These existing systems must NOT be disrupted:
 | Tool | Our Version | Hybrid Approach |
 |---|---|---|
 | Mautic | eas_lead_pipeline.py | Use Mautic CRM for EAS clients, our pipeline for PRINTMAXX internal leads |
+
+## Unwired Money Methods (Wired 2026-03-20)
+
+### API Arbitrage (MONEY_METHODS/API_ARBITRAGE/API_ARBITRAGE_PLAYBOOK.md)
+- **Venture mapping:** BROKERING, APP_FACTORY, MONETIZATION
+- **Sovrun module:** orchestration.py (DAG: API discovery -> MVP build -> Stripe checkout -> launch)
+- **Revenue:** $500-10K/mo portfolio, 70-99% margins, $0 startup
+- **Synergy:** Feeds MCP_MARKETPLACE (API wrappers as MCP servers), PRODUCT (micro-SaaS), CONTENT (build-in-public threads)
+
+### MCP Marketplace (MONEY_METHODS/MCP_MARKETPLACE/LAUNCH.md + MONETIZATION.md)
+- **Venture mapping:** APP_FACTORY, PRODUCT, MONETIZATION
+- **Sovrun module:** durable.py (crash recovery for directory scraping), workflow_bridge.py (hosting affiliate tracking)
+- **Revenue:** Featured $29/mo, verified $9/mo, enterprise $99/mo, hosting affiliate. $5.6K/mo at 1K servers.
+- **Synergy:** Feeds API_ARBITRAGE (API wrappers sold as MCP servers), CONTENT (weekly MCP roundup newsletter)
+
+### GitHub Repurpose Strategy (MONEY_METHODS/GITHUB_REPURPOSE_STRATEGY.md)
+- **Venture mapping:** APP_FACTORY, PRODUCT, RESEARCH
+- **Sovrun module:** procedural_memory.py (capture winning splice patterns), tracing.py (track which repos yielded best code)
+- **Revenue:** Saves $3.5-7K per SaaS build. Accelerates APP_FACTORY 10x.
+- **Synergy:** Feeds APP_FACTORY (faster builds), API_ARBITRAGE (splice auth + payments from proven repos)
+
+### POD / TikTok Arbitrage (MONEY_METHODS/POD_TIKTOK_ARBITRAGE_AUDIT.md)
+- **Venture mapping:** CONTENT, MONETIZATION, PRODUCT
+- **Sovrun module:** orchestration.py (DAG: design gen -> mockup -> listing -> cross-post), workflow_bridge.py (Etsy/Redbubble listing)
+- **Revenue:** POD $1K-3K/mo at 150+ designs, TikTok Shop $1K/mo at Month 3, content cross-post RPM $200/mo
+- **Synergy:** Feeds CONTENT (product review videos), MONETIZATION (affiliate commissions), 7 revenue touchpoints per video
+
+### Synergies/Tools/Missing Audit (MONEY_METHODS/SYNERGIES_TOOLS_MISSING_AUDIT.md)
+- **Venture mapping:** ALL (cross-cutting)
+- **Coverage:** 10 synergy stacks, 5 tool listicles (50 tools), 40 missing method directories, 5 bundle product concepts ($47-297)
+- **Synergy:** Feeds PRODUCT (bundle concepts ready to list), CONTENT (tool listicles as threads), MONETIZATION (method stacking)
+
+### Affiliate Research Mar 2026 (MONEY_METHODS/AFFILIATE_RESEARCH_MAR18.md)
+- **Venture mapping:** CONTENT, MONETIZATION
+- **Top programs:** Beehiiv 50% (60d cookie), SEMrush $200-450 (120d cookie), Instantly 20-40%, Kit 50%+lifetime, Smartlead 15-35% lifetime
+- **Revenue:** Base $3.9K/yr, Bull $15.6K/yr from existing pages
+- **Synergy:** 8 comparison pages LIVE on surge.sh need real affiliate IDs swapped in. Single highest-ROI human action.
 | Crawl4AI + our scrapers | Platform-specific scrapers (Twitter, Reddit) | Use our scrapers for authenticated/platform-specific, Crawl4AI for generic web crawling |

@@ -200,6 +200,10 @@ CATEGORY_VENTURE_MAP = {
     "DOMAIN_FLIPPING": ["BROKERING", "MONETIZATION"],
     "WHITE_LABEL": ["BROKERING", "PRODUCT", "CONTENT"],
     "API_ARBITRAGE": ["BROKERING", "APP_FACTORY", "MONETIZATION"],
+    "MCP_MARKETPLACE": ["APP_FACTORY", "PRODUCT", "MONETIZATION"],
+    "GITHUB_REPURPOSE": ["APP_FACTORY", "PRODUCT", "RESEARCH"],
+    "POD_TIKTOK_ARBITRAGE": ["CONTENT", "MONETIZATION", "PRODUCT"],
+    "AFFILIATE": ["CONTENT", "MONETIZATION"],
 }
 
 # ---------------------------------------------------------------------------
@@ -454,6 +458,16 @@ def _guess_category_from_id(method_id: str) -> str:
         return "FREELANCE"
     if "TEMPLATE" in upper or "NOTION" in upper or "PRODUCT" in upper:
         return "DIGITAL_PRODUCTS"
+    if "MCP" in upper and ("MARKET" in upper or "HUB" in upper or "DIRECTORY" in upper):
+        return "MCP_MARKETPLACE"
+    if "API" in upper and "ARBITRAGE" in upper:
+        return "API_ARBITRAGE"
+    if "POD" in upper and ("TIKTOK" in upper or "ARBITRAGE" in upper):
+        return "POD_TIKTOK_ARBITRAGE"
+    if "GITHUB" in upper and "REPURPOSE" in upper:
+        return "GITHUB_REPURPOSE"
+    if "AFFILIATE" in upper and ("RESEARCH" in upper or "PROGRAM" in upper):
+        return "AFFILIATE"
     if "BROKER" in upper or "REFERRAL" in upper or "CONNECTOR" in upper:
         return "BROKERING"
     if "LEAD_GEN" in upper or "LEAD GEN" in upper:
@@ -547,6 +561,8 @@ def score_speed_to_revenue(method: dict) -> float:
         "RESEARCH": 2, "SCRAPING": 3,
         "BROKERING": 5, "REFERRAL": 6, "LEAD_GEN": 6,
         "DOMAIN_FLIPPING": 5, "WHITE_LABEL": 5, "API_ARBITRAGE": 4,
+        "MCP_MARKETPLACE": 5, "GITHUB_REPURPOSE": 5, "POD_TIKTOK_ARBITRAGE": 6,
+        "AFFILIATE": 7,
     }
     base = float(speed_map.get(category, 5))
 
@@ -586,6 +602,8 @@ def score_downside_risk(method: dict) -> float:
         "RESEARCH": 9, "SCRAPING": 5,
         "BROKERING": 7, "REFERRAL": 7, "LEAD_GEN": 7,
         "DOMAIN_FLIPPING": 7, "WHITE_LABEL": 8, "API_ARBITRAGE": 6,
+        "MCP_MARKETPLACE": 8, "GITHUB_REPURPOSE": 8, "POD_TIKTOK_ARBITRAGE": 6,
+        "AFFILIATE": 8,
     }
     base = float(risk_map.get(category, 6))
 
@@ -618,6 +636,8 @@ def score_automation_potential(method: dict) -> float:
         "FREELANCE": 4, "INFO_PRODUCTS": 4,
         "BROKERING": 8, "REFERRAL": 7, "LEAD_GEN": 9,
         "DOMAIN_FLIPPING": 8, "WHITE_LABEL": 8, "API_ARBITRAGE": 8,
+        "MCP_MARKETPLACE": 6, "GITHUB_REPURPOSE": 7, "POD_TIKTOK_ARBITRAGE": 7,
+        "AFFILIATE": 7,
     }
     base = float(auto_map.get(category, 5))
 
@@ -728,6 +748,8 @@ def score_upfront_cost(method: dict) -> tuple[float, float]:
             "AGENCY": 50, "INFO_PRODUCTS": 0,
             "BROKERING": 0, "REFERRAL": 0, "LEAD_GEN": 0,
             "DOMAIN_FLIPPING": 30, "WHITE_LABEL": 0, "API_ARBITRAGE": 50,
+            "MCP_MARKETPLACE": 0, "GITHUB_REPURPOSE": 0, "POD_TIKTOK_ARBITRAGE": 50,
+            "AFFILIATE": 0,
         }
         estimated_cost = float(cost_defaults.get(category, 50))
 
@@ -769,6 +791,8 @@ def score_liability_risk(method: dict) -> float:
         "AGENCY": 6, "INFO_PRODUCTS": 7,
         "BROKERING": 7, "REFERRAL": 7, "LEAD_GEN": 7,
         "DOMAIN_FLIPPING": 8, "WHITE_LABEL": 7, "API_ARBITRAGE": 6,
+        "MCP_MARKETPLACE": 8, "GITHUB_REPURPOSE": 7, "POD_TIKTOK_ARBITRAGE": 6,
+        "AFFILIATE": 7,
     }
     base = float(liability_map.get(category, 6))
 

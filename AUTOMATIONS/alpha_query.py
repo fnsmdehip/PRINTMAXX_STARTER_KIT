@@ -69,7 +69,11 @@ VENTURE_ALPHA_MAP = {
                       "subscription", "saas", "mrr", "arr", "convert", "funnel",
                       "checkout", "payment", "affiliate", "commission", "passive",
                       "boomer", "55-70", "disposable income", "health supplements",
-                      "golf", "fishing", "tools", "faceless", "aov", "cpm"],
+                      "golf", "fishing", "tools", "faceless", "aov", "cpm",
+                      "api arbitrage", "api wrapper", "mcp marketplace", "mcphub",
+                      "featured listing", "pod", "print on demand", "tiktok shop",
+                      "platform arbitrage", "cross-post", "beehiiv affiliate",
+                      "semrush affiliate", "instantly affiliate", "cookie duration"],
         "methods": ["DIGITAL_PRODUCTS", "MONETIZE", "ECOM"],
     },
     "RESEARCH": {
@@ -81,7 +85,10 @@ VENTURE_ALPHA_MAP = {
     "PRODUCT": {
         "categories": ["MONETIZATION", "ECOM"],
         "keywords": ["product", "digital product", "ebook", "template", "course",
-                      "pdf", "notion", "playbook", "toolkit", "bundle", "gumroad"],
+                      "pdf", "notion", "playbook", "toolkit", "bundle", "gumroad",
+                      "api wrapper", "github repurpose", "splice", "mit license",
+                      "mcp server", "mcp marketplace", "pod", "merch", "t-shirt",
+                      "redbubble", "etsy", "printful", "printify", "synergy stack"],
         "methods": ["DIGITAL_PRODUCTS", "PRODUCT"],
     },
     "SCRAPING": {

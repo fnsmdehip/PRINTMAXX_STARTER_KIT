@@ -1,6 +1,6 @@
 {
   "generated": "2026-03-07",
-  "total_docs": 428,
+  "total_docs": 439,
   "catalog_version": "2.0",
   "notes": "Comprehensive intelligence catalog of all actionable documents in PRINTMAXX project. Paths are relative to project root. Focused on buried gold: specific revenue tactics, pricing, proven methods, and ready-to-use templates. Files were actually read and classified based on content, not just filename.",
   "ventures": {
@@ -1224,7 +1224,7 @@
       ]
     },
     "MONETIZATION": {
-      "doc_count": 79,
+      "doc_count": 86,
       "docs": [
         {
           "path": "DIGITAL_PRODUCTS/GUMROAD_LAUNCH_EXECUTION_GUIDE.md",
@@ -1792,11 +1792,80 @@
           "summary": "Revenue pipeline data",
           "value": "MEDIUM",
           "source": "missed_scan_2026-03-07"
+        },
+        {
+          "path": "MONEY_METHODS/API_ARBITRAGE/API_ARBITRAGE_PLAYBOOK.md",
+          "value": "HIGH",
+          "high_value_summary": "Wrap free/cheap APIs into paid SaaS. 15 opportunities across data enrichment, AI wrappers, content tools, business tools, monitoring. 70-99% margins. Portfolio of 5-10 products at $500/mo avg = $5K/mo. $0 startup cost.",
+          "key_tactics": [
+            "RapidAPI 40K+ free-tier APIs as wholesale product source",
+            "4-tier pricing: single wrapper $9-29, aggregator $29-79, full tool $49-199, white-label $500-2K",
+            "build process: validate Day 1, MVP Day 2-3 with Claude Code, launch Day 4-5 on ProductHunt + Reddit",
+            "portfolio approach: build 3/month, kill losers at < 5 signups, double down on winners"
+          ],
+          "source": "wired_2026-03-20"
+        },
+        {
+          "path": "MONEY_METHODS/MCP_MARKETPLACE/LAUNCH.md",
+          "value": "HIGH",
+          "high_value_summary": "MCPHub directory launch plan. 50+ MCP servers indexed. ProductHunt + HN + Reddit Day 1 launch sequence. Server author outreach for organic growth. Target: 1K visitors Week 1, 100 servers Month 2.",
+          "key_tactics": [
+            "ProductHunt launch at 12:01 AM PT with 5-10 prepped upvoters",
+            "server author outreach validates listings AND gets them to share",
+            "unique copy per subreddit, never crosspost"
+          ],
+          "source": "wired_2026-03-20"
+        },
+        {
+          "path": "MONEY_METHODS/MCP_MARKETPLACE/MONETIZATION.md",
+          "value": "HIGH",
+          "high_value_summary": "MCPHub monetization tiers: free listing, featured $29/mo, verified $9/mo, enterprise $99/mo, hosting affiliate 20%. $5.6K/mo at 1K servers. Near-100% margin on static site.",
+          "key_tactics": [
+            "featured listing pinned to top of category with badge",
+            "hosting affiliate via Railway/Render/Fly.io deploy buttons",
+            "expansion: MCP server hosting $5-20/mo, server templates $29-49, consulting $150-300/hr"
+          ],
+          "source": "wired_2026-03-20"
+        },
+        {
+          "path": "MONEY_METHODS/POD_TIKTOK_ARBITRAGE_AUDIT.md",
+          "value": "HIGH",
+          "high_value_summary": "Full POD + TikTok Shop + platform arbitrage audit. 100 design concepts across 7 niches. 20 TikTok product video scripts. Sourcing lists with margin analysis. Cross-platform content arbitrage: 1 video = 7 revenue touchpoints. Conservative $3.5-9.1K/mo at Month 6.",
+          "key_tactics": [
+            "100 t-shirt designs across faith/fitness/tech/meme/motivational/humor/seasonal",
+            "20 TikTok product review scripts with 3-second hooks",
+            "cross-post stagger: TikTok Day 0, IG Day 1, YT Day 2, FB Day 3",
+            "digital product arbitrage: 10 Notion templates in one weekend = $240/mo"
+          ],
+          "source": "wired_2026-03-20"
+        },
+        {
+          "path": "MONEY_METHODS/AFFILIATE_RESEARCH_MAR18.md",
+          "value": "HIGH",
+          "high_value_summary": "Top 5 affiliate programs ranked for solopreneur audience. Beehiiv 50% recurring 12mo, SEMrush $200-450/sale with 120d cookie, Instantly 20-40% tiered, Kit 50% + lifetime tail, Smartlead 15-35% lifetime. 8 comparison pages LIVE with placeholder IDs. Base $3.9K/yr, bull $15.6K/yr.",
+          "key_tactics": [
+            "SEMrush 120-day cookie is radically underexploited at $200-450/sale",
+            "Smartlead lifetime recurring + 90d cookie is best pure economics in cold email",
+            "Kit lifetime tail invisible alpha: 10-20% forever after year 1 beats Beehiiv long-term",
+            "swap placeholder affiliate IDs on 8 live surge.sh pages = highest ROI human action"
+          ],
+          "source": "wired_2026-03-20"
+        },
+        {
+          "path": "MONEY_METHODS/SYNERGIES_TOOLS_MISSING_AUDIT.md",
+          "value": "HIGH",
+          "high_value_summary": "Full audit: 10 synergy playbooks (3,599 lines), 16 unwritten synergies, 5 tool listicles (50 tools with pricing), 40 missing method directories (57% coverage gap), 5 bundle product concepts $47-297. SYN351 Voice AI is most executable playbook.",
+          "key_tactics": [
+            "SYN351 Voice AI: 7-email cold sequence written, Vapi 85% margin, $0 to $60K MRR path",
+            "5 bundle concepts ready to list: Solopreneur Starter $47, AI Content Machine $97, App Factory Kit $197",
+            "MIT SaaS replacements save $300-1,200/yr per tool: Umami, Chatwoot, Listmonk, NocoDB"
+          ],
+          "source": "wired_2026-03-20"
         }
       ]
     },
     "PRODUCT": {
-      "doc_count": 68,
+      "doc_count": 72,
       "docs": [
         {
           "path": "03_PLAYBOOKS/AI_WRAPPER/TOP_5_WRAPPERS_LAUNCH_PRIORITY.md",
@@ -2225,6 +2294,40 @@
           "summary": "Lead magnets index page",
           "value": "MEDIUM",
           "source": "missed_scan_2026-03-07"
+        },
+        {
+          "path": "MONEY_METHODS/GITHUB_REPURPOSE_STRATEGY.md",
+          "value": "HIGH",
+          "high_value_summary": "978-line systematic GitHub repo repurposing strategy. Surgical code extraction from MIT repos across 8 categories. Security protocol with automated scan script. Multi-repo Frankenstein pattern saves $3.5-7K per SaaS build. License compliance reference.",
+          "key_tactics": [
+            "Pattern 5 Multi-Repo Frankenstein: auth from Repo A + UI from Repo B + payments from Repo C + your business logic",
+            "full security scan bash script ready to run against any cloned repo",
+            "MIT SaaS replacements: Umami, Chatwoot, Listmonk, NocoDB save $300-1,200/yr each",
+            "always build custom: monetization, branding, business rules, content, analytics"
+          ],
+          "source": "wired_2026-03-20"
+        },
+        {
+          "path": "MONEY_METHODS/API_ARBITRAGE/API_ARBITRAGE_PLAYBOOK.md",
+          "value": "HIGH",
+          "high_value_summary": "15 API arbitrage opportunities. Free APIs wrapped into $9-199/mo SaaS products with Claude Code in 4-8 hours. Next.js + Supabase + Vercel stack at $0 startup cost.",
+          "key_tactics": [
+            "Company Intelligence API -> Competitor Tracker SaaS $29/mo (97% margin)",
+            "Claude API + Scraper -> AI Research Assistant $29/mo (90% margin)",
+            "Government Data APIs -> Grant/Contract Finder $29/mo (98% margin)"
+          ],
+          "source": "wired_2026-03-20"
+        },
+        {
+          "path": "MONEY_METHODS/SYNERGIES_TOOLS_MISSING_AUDIT.md",
+          "value": "HIGH",
+          "high_value_summary": "5 bundle product concepts ready to list on Gumroad. Solopreneur Starter Pack $47, AI Content Machine $97, App Factory Kit $197, Cold Outbound Closer $147, Full-Stack Portfolio $297. All content exists in PRINTMAXX system.",
+          "key_tactics": [
+            "bundle products from existing internal docs and templates",
+            "10 missing synergy stacks identified with revenue projections",
+            "40 methods with no directory = 57% coverage gap to fill"
+          ],
+          "source": "wired_2026-03-20"
         }
       ]
     },

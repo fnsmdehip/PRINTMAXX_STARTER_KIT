@@ -1886,6 +1886,8 @@ def api_kpi_calendar():
             "theme": "EAS CLOSE PUSH + ARBITRAGE",
             "tasks": [
                 {"text": "Check TweepCred health across all accounts", "tag": "AUTO", "detail": "Engagement-to-follower ratios healthy?\nAny account below suppression threshold needs intervention.\nCommand: python3 AUTOMATIONS/edge_growth_engine.py --account-health\nTime: 5 min."},
+                {"text": "Identify top 3 APIs to wrap. Use API_ARBITRAGE_PLAYBOOK.md", "tag": "SEMI", "detail": "Browse RapidAPI + Public-APIs GitHub for free-tier APIs solving real problems.\nCheck competitors charging $50+/mo for same data.\nPick top 3 by: demand + build ease + margin (70-99%).\nRef: MONEY_METHODS/API_ARBITRAGE/API_ARBITRAGE_PLAYBOOK.md\nTime: 30 min."},
+                {"text": "Find 5 trending repos to repurpose", "tag": "SEMI", "detail": "GitHub search: license:mit stars:>200 pushed:>2025-09-01\nCategories: SaaS starters, scrapers, AI wrappers, payment integrations.\nRun security scan from GITHUB_REPURPOSE_STRATEGY.md Section 2.\nLog to LEDGER/GITHUB_REPURPOSE_TRACKER.csv.\nTime: 30 min."},
                 {"text": "Post 12 tweets + 2 threads from primary + 10/secondary (42 total)", "tag": "AUTO", "detail": "1 EAS value prop thread, 1 tactical content thread.\nTime: 0 min (automated)."},
                 {"text": "Upload YouTube EAS video", "tag": "SEMI", "detail": "'How I automate a business in 48 hours'\nFull SEO setup. End screen to subscribe.\nTime: 25 min."},
                 {"text": "Post 3 TikToks (product review hook format)", "tag": "SEMI", "detail": "Hook: 'Stop paying for X when Y exists'\nFormat: problem > reveal > CTA.\nTime: 15 min."},
@@ -1907,6 +1909,7 @@ def api_kpi_calendar():
             "theme": "CONTENT FLOOD + CROSS-AMPLIFICATION",
             "tasks": [
                 {"text": "Cross-account amplification: secondaries reply to primary thread", "tag": "SEMI", "detail": "Primary posts thread. Secondaries reply with value-add takes.\nEach account unique perspective from its niche.\nStagger 1-2 hours. Triggers velocity window.\nTier: MEDIUM.\nTime: 15 min."},
+                {"text": "Deploy MCPHub to surge. Follow LAUNCH.md", "tag": "MANUAL", "detail": "Curate 50+ MCP servers in servers.json.\nDeploy to mcphub.surge.sh.\nTest on mobile + desktop.\nSet up submission email.\nRef: MONEY_METHODS/MCP_MARKETPLACE/LAUNCH.md + MONETIZATION.md\nMonetization: featured $29/mo, verified $9/mo, enterprise $99/mo.\nTime: 60 min."},
                 {"text": "Post to 3 X Communities before main tweets", "tag": "SEMI", "detail": "Triggers 30-min algo velocity window.\nCommunities provide warm audience for initial engagement.\nTime: 10 min."},
                 {"text": "Batch create 15 TikToks across niches", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/ai_video_content_pipeline.py --generate fitness --count 5 --generate golf --count 5 --generate health --count 5\nTime: 0 min (automated)."},
                 {"text": "Batch create 5 YouTube Shorts from best clips", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_clip_pipeline.py --batch --max-clips 5\nTime: 0 min (automated)."},
