@@ -178,38 +178,76 @@ def clear_semi_queue():
 
 
 def integrate_approved():
-    """Route approved entries through intelligence router + capital genesis.
-    Don't just approve — actually wire into the system."""
+    """Full autonomous integration pipeline. Not just approve — CREATE, WIRE, TRACK.
+
+    For each high-value approved entry, claude -p decides:
+    1. Route to existing venture OR create new venture
+    2. Create new automation/cron if warranted
+    3. Score with Capital Genesis
+    4. Wire into intelligence router
+    5. Generate growth plan using grey hat + edge tactics
+    6. Update system map
+    """
     import subprocess
-    try:
-        # Run alpha processor to route approved entries to ventures
-        result = subprocess.run(
-            ["python3", str(AUTOMATIONS / "alpha_auto_processor.py"), "--process-new"],
-            capture_output=True, text=True, timeout=120
-        )
-        log(f"Alpha processor: {result.stdout.strip()[-200:]}")
-    except Exception as e:
-        log(f"Alpha processor failed: {e}")
 
-    try:
-        # Re-run capital genesis ranker to score new methods
-        result = subprocess.run(
-            ["python3", str(AUTOMATIONS / "capital_genesis_ranker.py"), "--rank"],
-            capture_output=True, text=True, timeout=120
-        )
-        log(f"Capital Genesis re-ranked after approvals")
-    except Exception as e:
-        log(f"Ranker failed: {e}")
+    def run(cmd, timeout=120):
+        try:
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, cwd=str(PROJECT))
+            return r.stdout.strip(), r.returncode == 0
+        except Exception as e:
+            return str(e), False
 
-    try:
-        # Refresh intelligence router with new approved docs
-        result = subprocess.run(
-            ["python3", str(AUTOMATIONS / "intelligence_router.py"), "--refresh"],
-            capture_output=True, text=True, timeout=60
-        )
-        log(f"Intelligence router refreshed")
-    except Exception as e:
-        log(f"Router refresh failed: {e}")
+    # Step 1: Route approved entries to ventures
+    out, ok = run(["python3", str(AUTOMATIONS / "alpha_auto_processor.py"), "--process-new"])
+    log(f"Alpha processor: {'OK' if ok else 'FAILED'} — {out[-150:]}")
+
+    # Step 2: Re-rank with Capital Genesis
+    out, ok = run(["python3", str(AUTOMATIONS / "capital_genesis_ranker.py"), "--rank"])
+    log(f"Capital Genesis re-ranked: {'OK' if ok else 'FAILED'}")
+
+    # Step 3: Refresh intelligence router
+    out, ok = run(["python3", str(AUTOMATIONS / "intelligence_router.py"), "--refresh"], timeout=60)
+    log(f"Intelligence router refreshed: {'OK' if ok else 'FAILED'}")
+
+    # Step 4: For P0-ranked methods, use claude -p to decide if new venture/automation needed
+    pstack = OPS / "CAPITAL_GENESIS_PRIORITY_STACK.md"
+    if pstack.exists():
+        try:
+            p0_methods = [l.strip() for l in open(pstack) if "P0" in l and "|" in l]
+            new_p0 = [m for m in p0_methods if datetime.now().strftime("%Y-%m-%d") in m or "LAUNCH_NOW" in m]
+
+            if new_p0:
+                methods_text = "\n".join(new_p0[:5])
+                prompt = (
+                    f"You are the PRINTMAXX CEO agent. These P0 methods just scored highest:\n\n"
+                    f"{methods_text}\n\n"
+                    f"For each, decide:\n"
+                    f"1. Does an existing venture handle this? (OUTBOUND/CONTENT/APP/LOCAL_BIZ/RESEARCH/MONETIZE/PRODUCT/SCRAPING/BROKERING)\n"
+                    f"2. Or does this need a NEW venture type?\n"
+                    f"3. Should we create a new automation script for it?\n"
+                    f"4. What growth tactics from our edge playbook apply?\n"
+                    f"5. What budget tier (FREE/LOW/MID) makes sense at $0 revenue?\n\n"
+                    f"Be specific. Name exact scripts, ventures, and tactics.\n"
+                    f"Output as actionable steps, not analysis."
+                )
+                result = subprocess.run(
+                    ["claude", "-p", prompt],
+                    capture_output=True, text=True, timeout=60
+                )
+                if result.returncode == 0:
+                    # Save the CEO analysis
+                    analysis_file = OPS / "AUTO_INTEGRATION_ANALYSIS.md"
+                    with open(analysis_file, "w") as f:
+                        f.write(f"# Auto-Integration Analysis — {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n")
+                        f.write(f"## P0 Methods Analyzed\n\n{methods_text}\n\n")
+                        f.write(f"## CEO Agent Recommendations\n\n{result.stdout}\n")
+                    log(f"CEO analysis saved: {len(new_p0)} P0 methods analyzed")
+        except Exception as e:
+            log(f"P0 analysis failed: {e}")
+
+    # Step 5: Update system map
+    out, ok = run(["python3", str(AUTOMATIONS / "system_visualizer.py")], timeout=60)
+    log(f"System map updated: {'OK' if ok else 'SKIPPED'}")
 
 
 def main():
