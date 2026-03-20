@@ -3214,18 +3214,28 @@ async function loadDailyFeed() {
       el.innerHTML = '<div style="color:var(--text-dim);padding:12px;">No activity yet today. Automations run at 5-7 AM.</div>';
       return;
     }
-    el.innerHTML = d.feed.map(function(item) {
+    el.innerHTML = d.feed.map(function(item, idx) {
       var priorityBadge = '';
       if (item.priority === 'high') priorityBadge = '<span style="font-size:0.65em;padding:2px 6px;border-radius:4px;background:var(--danger-dim);color:var(--danger);font-family:JetBrains Mono;margin-left:8px;">ACTION</span>';
       else if (item.priority === 'medium') priorityBadge = '<span style="font-size:0.65em;padding:2px 6px;border-radius:4px;background:var(--warn-dim);color:var(--warn);font-family:JetBrains Mono;margin-left:8px;">REVIEW</span>';
-      var actionBtn = item.action ? '<div style="margin-top:6px;"><span onclick="navigator.clipboard.writeText(\''+item.action.replace(/'/g,"\\'")+'\');showToast(\'Copied!\')" style="font-family:JetBrains Mono;font-size:0.7em;color:var(--accent);cursor:pointer;padding:3px 8px;border:1px solid var(--border);border-radius:4px;">'+item.action.substring(0,60)+(item.action.length>60?'...':'')+'</span></div>' : '';
-      return '<div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:12px;align-items:flex-start;">' +
-        '<i class="ti '+item.icon+'" style="font-size:1.3em;color:'+item.color+';margin-top:2px;"></i>' +
-        '<div style="flex:1;">' +
-          '<div style="font-size:0.9em;font-weight:600;color:var(--text);">'+item.title+priorityBadge+'</div>' +
-          '<div style="font-size:0.8em;color:var(--text-dim);margin-top:2px;">'+item.desc+'</div>' +
-          actionBtn +
-        '</div></div>';
+      var detailId = 'feed-detail-'+idx;
+      var safeAction = (item.action||'').replace(/'/g,"\\'");
+      var detailPanel = '<div id="'+detailId+'" style="display:none;margin-top:8px;padding:10px;background:rgba(0,0,0,0.3);border-radius:6px;border-left:3px solid '+item.color+';">' +
+        '<div style="font-size:0.8em;color:var(--text-dim);margin-bottom:6px;">'+item.desc+'</div>' +
+        (item.action ? '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+          '<span onclick="navigator.clipboard.writeText(\''+safeAction+'\');showToast(\'Copied!\')" style="font-family:JetBrains Mono;font-size:0.7em;color:var(--accent);cursor:pointer;padding:4px 10px;border:1px solid var(--accent);border-radius:4px;background:var(--accent-dim);">copy command</span>' +
+          (item.action.startsWith('open ') || item.action.startsWith('cat ') ? '' : '<span onclick="fetch(\'/api/run-command\',{method:\'POST\',headers:{\'Content-Type\':\'application/json\'},body:JSON.stringify({cmd:\''+safeAction+'\'})}).then(function(r){return r.json()}).then(function(d){showToast(d.success?\'Done!\':\'Error\');})" style="font-family:JetBrains Mono;font-size:0.7em;color:var(--warn);cursor:pointer;padding:4px 10px;border:1px solid var(--warn);border-radius:4px;">run it</span>') +
+        '</div>' : '') +
+        '<div style="font-family:JetBrains Mono;font-size:0.7em;color:var(--text-dim);margin-top:6px;word-break:break-all;">'+(item.action||'no command')+'</div>' +
+      '</div>';
+      return '<div style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);cursor:pointer;" onclick="var d=document.getElementById(\''+detailId+'\');d.style.display=d.style.display===\'none\'?\'block\':\'none\';">' +
+        '<div style="display:flex;gap:12px;align-items:center;">' +
+          '<i class="ti '+item.icon+'" style="font-size:1.3em;color:'+item.color+';"></i>' +
+          '<div style="flex:1;font-size:0.9em;font-weight:600;color:var(--text);">'+item.title+priorityBadge+'</div>' +
+          '<span style="color:var(--text-dim);font-size:0.7em;">&#9660;</span>' +
+        '</div>' +
+        detailPanel +
+      '</div>';
     }).join('');
   } catch(e) { console.error('feed failed:', e); }
 }
