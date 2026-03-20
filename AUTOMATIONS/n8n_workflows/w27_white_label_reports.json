@@ -1,0 +1,194 @@
+{
+  "name": "PRINTMAXX - White Label Reports (Broker Play)",
+  "nodes": [
+    {
+      "name": "Weekly Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 7 * * 1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Load Report Config",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// White-label report configurations\n// Each report sold to businesses for $200-500\nconst reportConfigs = [\n  {\n    reportId: 'WLR_001',\n    clientName: 'Example Client',\n    clientEmail: 'client@example.com',\n    industry: 'dental',\n    location: 'Austin TX',\n    reportType: 'competitive_analysis',\n    title: 'Dental Practice Competitive Intelligence Report',\n    sections: ['market_overview', 'competitor_analysis', 'seo_audit', 'social_presence', 'recommendations'],\n    price: 300\n  },\n  {\n    reportId: 'WLR_002',\n    clientName: 'Example HVAC Company',\n    clientEmail: 'hvac@example.com',\n    industry: 'hvac',\n    location: 'Dallas TX',\n    reportType: 'market_opportunity',\n    title: 'HVAC Market Opportunity Analysis',\n    sections: ['market_size', 'demand_trends', 'competitor_gaps', 'pricing_analysis', 'growth_opportunities'],\n    price: 500\n  }\n];\n\nconst today = new Date().toISOString().split('T')[0];\nreturn reportConfigs.map(r => ({ json: { ...r, generationDate: today } }));"
+      }
+    },
+    {
+      "name": "Generate Report via Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [650, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "{{$credentials.anthropicApiKey}}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 4000,\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Generate a professional industry intelligence report.\\n\\nTitle: {{ $json.title }}\\nIndustry: {{ $json.industry }}\\nLocation: {{ $json.location }}\\nReport Type: {{ $json.reportType }}\\nSections to include: {{ $json.sections.join(', ') }}\\n\\nRules:\\n1. Write as a professional consulting firm. No AI vocabulary.\\n2. Include specific data points, percentages, and dollar figures.\\n3. Use markdown formatting with headers, bullet points, and tables.\\n4. Include actionable recommendations in each section.\\n5. Reference real industry trends and market data.\\n6. Professional tone -- this is a paid report (${{ $json.price }}).\\n7. Include executive summary at the top.\\n8. End with 'Next Steps' section.\\n\\nReturn the full report in markdown format.\"\n    }\n  ]\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Format Report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const config = $('Load Report Config').item.json;\nconst aiResponse = $input.item.json;\n\nconst reportContent = aiResponse.content?.[0]?.text || 'Report generation failed';\n\n// Add branding header and footer\nconst brandedReport = `# ${config.title}\\n\\n` +\n  `**Prepared for:** ${config.clientName}\\n` +\n  `**Date:** ${config.generationDate}\\n` +\n  `**Report ID:** ${config.reportId}\\n` +\n  `**Location:** ${config.location}\\n\\n` +\n  `---\\n\\n` +\n  reportContent +\n  `\\n\\n---\\n\\n` +\n  `*This report was prepared by our research team using proprietary data analysis tools and industry databases. ` +\n  `For questions or custom analysis requests, contact us at reports@yourdomain.com.*\\n`;\n\nreturn [{\n  json: {\n    reportId: config.reportId,\n    clientName: config.clientName,\n    clientEmail: config.clientEmail,\n    title: config.title,\n    reportContent: brandedReport,\n    price: config.price,\n    generatedAt: new Date().toISOString(),\n    wordCount: brandedReport.split(/\\s+/).length\n  }\n}];"
+      }
+    },
+    {
+      "name": "Send Report via Email",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1050, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.sendgrid.com/v3/mail/send",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.sendGridApiKey}}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"personalizations\": [{\n    \"to\": [{\"email\": \"{{ $json.clientEmail }}\", \"name\": \"{{ $json.clientName }}\"}],\n    \"subject\": \"Your {{ $json.title }} is Ready\"\n  }],\n  \"from\": {\"email\": \"reports@yourdomain.com\", \"name\": \"Intelligence Reports\"},\n  \"content\": [{\n    \"type\": \"text/html\",\n    \"value\": \"<p>Hi {{ $json.clientName }},</p><p>Your requested intelligence report is ready. Please find the full analysis below.</p><p>Report: <strong>{{ $json.title }}</strong></p><p>Word count: {{ $json.wordCount }} words</p><hr><div style='font-family: Georgia, serif; line-height: 1.6;'>{{ $json.reportContent }}</div><hr><p>Questions about this report? Reply to this email.</p>\"\n  }]\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Track Revenue",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1250, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_BROKERING_TRACKING_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "WhiteLabelReports"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Alert on Delivery",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1450, 300],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=White Label Report Delivered\n\nReport: {{ $json.title }}\nClient: {{ $json.clientName }}\nPrice: ${{ $json.price }}\nWord Count: {{ $json.wordCount }}\nGenerated: {{ $json.generatedAt }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Weekly Trigger": {
+      "main": [[{"node": "Load Report Config", "type": "main", "index": 0}]]
+    },
+    "Load Report Config": {
+      "main": [[{"node": "Generate Report via Claude", "type": "main", "index": 0}]]
+    },
+    "Generate Report via Claude": {
+      "main": [[{"node": "Format Report", "type": "main", "index": 0}]]
+    },
+    "Format Report": {
+      "main": [[{"node": "Send Report via Email", "type": "main", "index": 0}]]
+    },
+    "Send Report via Email": {
+      "main": [[{"node": "Track Revenue", "type": "main", "index": 0}]]
+    },
+    "Track Revenue": {
+      "main": [[{"node": "Alert on Delivery", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "brokering"},
+    {"name": "white-label-reports"},
+    {"name": "revenue"},
+    {"name": "P1"}
+  ]
+}

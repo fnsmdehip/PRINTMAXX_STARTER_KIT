@@ -94,6 +94,51 @@ scraper_fleet → alpha_processor → intelligence_router → capital_genesis_ra
 ```
 This is the master chain. Everything feeds into it. The ranker decides priority, venture_autonomy picks the best execution path.
 
+### Chain 6: Brokering Pipeline (BROKERING venture type)
+```
+target_scraper → lead_qualifier → service_matcher → intro_drafter → cold_emailer → follow_up_tracker → referral_closer → revenue_tracker
+```
+**Handoff chain:** Each step passes enriched lead data to the next via handoff.py.
+
+- **target_scraper**: savvy_lead_scraper.py / nationwide_scraper.py scrape businesses needing services (equipment, loans, processing, insurance). Output: broker_targets.csv
+- **lead_qualifier**: Score leads 1-10 on deal size, urgency, fit. Enrich via Apollo/Clearbit. Move 7+ to qualified_broker_leads.csv
+- **service_matcher**: Match qualified leads to best service provider (lender, broker, vendor, agent) from provider database
+- **intro_drafter**: Generate warm intro email for both parties using cold email templates adapted for brokering
+- **cold_emailer**: n8n w04 (SendGrid) sends intro emails. CAN-SPAM compliant.
+- **follow_up_tracker**: Auto follow-up Day 3/5/7. Track opens, replies, meetings booked.
+- **referral_closer**: When deal progresses, send referral agreement. Track deal value.
+- **revenue_tracker**: Log referral fees to LEDGER/BROKERING_REVENUE.csv. Feed into Capital Genesis ranker.
+
+**Sovrun modules used:**
+- `handoff.py` — context passing between pipeline steps
+- `workflow_bridge.py` — n8n w25 (lead gen service), w26 (domain flipper), w27 (white-label reports)
+- `procedural_memory.py` — capture winning intro email patterns and successful vertical plays
+- `durable.py` — crash recovery for batch outreach operations
+
+**n8n workflows:**
+| ID | Name | What It Does | Verticals |
+|---|---|---|---|
+| w25 | Lead Gen Service | Scrape leads for client businesses → deliver via Google Sheets → charge monthly | All brokering verticals |
+| w26 | Domain Flipper | Scan expiring domains with SEO value → alert on opportunities → track acquisitions | Domain arbitrage |
+| w27 | White Label Reports | intelligence_router generates industry report → formats → delivers to client email | White-label reports |
+
+**Verticals (rotate through):**
+1. Real estate referrals (1-3% per deal)
+2. Equipment financing brokerage ($500-5K per deal)
+3. Merchant processing referrals (residual income)
+4. Insurance referrals ($50-500 per referral)
+5. SBA loan brokerage (1-2% origination fee)
+6. Wholesale/distribution connecting (connector fee)
+7. Lead gen as a service ($500-2K/mo per client)
+8. White-label reports ($200-500 per report)
+
+**Cross-pollination:**
+- Feeds OUTBOUND (same cold email infra)
+- Feeds SCRAPING (same scraper fleet)
+- Feeds LOCAL_BIZ (same lead enrichment pipeline)
+- Feeds EAS (brokering is a lighter version of EAS service delivery)
+- Feeds PRODUCT (white-label reports are digital products)
+
 ## DAG Candidates (Currently Sequential, Should Parallel)
 
 ### 1. Morning Intelligence Pipeline

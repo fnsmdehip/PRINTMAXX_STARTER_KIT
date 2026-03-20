@@ -189,6 +189,15 @@ TWITTER_SEARCH_QUERIES = [
     "sold templates gumroad",
     "SEO niche site income",
     "dropshipping profit margin",
+    # Brokering / connector plays
+    "referral fee business",
+    "broker connector business",
+    "lead gen service revenue",
+    "white label report sold",
+    "domain flipping profit",
+    "api arbitrage income",
+    "equipment financing broker",
+    "merchant processing referral",
 ]
 
 # Reddit subreddits for method discovery
@@ -234,6 +243,10 @@ METHOD_SIGNAL_KEYWORDS = [
     r"\b(?:faceless|youtube|tiktok|content\s+(?:creation|farm))\b",
     r"\b(?:automation|bot|scraper|api|tool|chrome\s+extension)\b",
     r"\b(?:flipping|arbitrage|resell|wholesale)\b",
+    # Brokering / connector signals
+    r"\b(?:referral\s+fee|broker|connector\s+business|lead\s+gen\s+service)\b",
+    r"\b(?:white\s+label|domain\s+flip|api\s+arbitrage|merchant\s+processing)\b",
+    r"\b(?:equipment\s+financ|insurance\s+referral|sba\s+loan|freight\s+broker)\b",
 ]
 
 # Low-value signals (deprioritize or skip)
@@ -350,6 +363,7 @@ class CapitalGenesisScorer:
     EXISTING_VENTURES = [
         "OUTBOUND", "CONTENT", "APP_FACTORY", "LOCAL_BIZ",
         "RESEARCH", "MONETIZE", "PRODUCT", "SCRAPING", "EAS",
+        "BROKERING",
     ]
 
     def score(self, method: dict[str, Any]) -> dict[str, Any]:
@@ -610,6 +624,7 @@ class CapitalGenesisScorer:
             "PRODUCT": ["digital product", "ebook", "course", "template", "notion"],
             "SCRAPING": ["scraper", "crawl", "data", "monitor", "intelligence"],
             "EAS": ["automation", "enterprise", "agency", "consulting"],
+            "BROKERING": ["broker", "referral fee", "connector", "lead gen service", "white label", "domain flip", "api arbitrage"],
         }
 
         hits = 0
@@ -737,6 +752,7 @@ def _categorize_method(text: str) -> str:
         (["flipping", "arbitrage", "resell", "wholesale"], "ARBITRAGE"),
         (["local", "smb", "small business", "brick and mortar"], "LOCAL_BIZ"),
         (["print on demand", "pod", "merch", "t-shirt"], "POD"),
+        (["referral fee", "broker", "connector business", "lead gen service", "white label", "domain flip", "api arbitrage", "merchant processing", "equipment financing", "insurance referral"], "BROKERING"),
     ]
     for keywords, cat in categories:
         if any(kw in text_lower for kw in keywords):
