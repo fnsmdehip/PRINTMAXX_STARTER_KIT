@@ -74,6 +74,13 @@ When working on ANY task and discovering a novel solution, trick, or improvement
 6. If wiring in, run auto-enhancement (check ALL ventures for new opportunities)
 7. If building our own, make it a sovrun module so both PRINTMAXX and open source benefit
 
+### Test Immediately Rule
+When creating ANY new automation, cron job, or script:
+1. Run it immediately after creation to verify it works
+2. Don't just schedule it and hope — test NOW
+3. Check the output, fix any errors, re-run until clean
+4. THEN add to cron/schedule
+
 ### Stuck Agent Detection
 When spawning background agents:
 1. Check progress after 5 minutes (file size change)
