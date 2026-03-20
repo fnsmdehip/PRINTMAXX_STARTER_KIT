@@ -1350,7 +1350,13 @@ def api_daily_feed():
                     if row.get("status", "").upper() in ("PENDING_REVIEW", "NEW_METHOD"):
                         pending += 1
             if pending > 0:
-                feed.append({"type": "action", "icon": "ti-bulb", "color": "var(--warn)", "title": f"{pending} alpha entries need review", "desc": "ALPHA_STAGING.csv has pending items", "action": "python3 AUTOMATIONS/alpha_auto_processor.py --process-new", "priority": "high"})
+                # Get actual pending entries to show
+                preview_items = []
+                with open(alpha_csv) as f2:
+                    for row in csv.DictReader(f2):
+                        if row.get("status", "").upper() in ("PENDING_REVIEW", "NEW_METHOD") and len(preview_items) < 5:
+                            preview_items.append(row.get("extracted_method", row.get("tactic", row.get("content", "")))[:120])
+                feed.append({"type": "action", "icon": "ti-bulb", "color": "var(--warn)", "title": f"{pending} alpha entries need review", "desc": "ALPHA_STAGING.csv has pending items", "action": "python3 AUTOMATIONS/alpha_auto_processor.py --process-new", "priority": "high", "preview": preview_items})
         except Exception:
             pass
 
@@ -1358,16 +1364,27 @@ def api_daily_feed():
     pstack = OPS / "CAPITAL_GENESIS_PRIORITY_STACK.md"
     if pstack.exists() and pstack.stat().st_mtime > today_ts - 86400:
         try:
-            p0_count = sum(1 for line in open(pstack) if "| P0 |" in line or "LAUNCH_NOW" in line)
-            if p0_count > 0:
-                feed.append({"type": "opportunity", "icon": "ti-rocket", "color": "var(--accent)", "title": f"{p0_count} P0 methods ready to launch", "desc": "Capital Genesis ranked these as immediate action", "action": "cat OPS/CAPITAL_GENESIS_PRIORITY_STACK.md", "priority": "high"})
+            p0_lines = [line.strip() for line in open(pstack) if "| P0 |" in line or "LAUNCH_NOW" in line]
+            if p0_lines:
+                feed.append({"type": "opportunity", "icon": "ti-rocket", "color": "var(--accent)", "title": f"{len(p0_lines)} P0 methods ready to launch", "desc": "Capital Genesis ranked these as immediate action", "action": "cat OPS/CAPITAL_GENESIS_PRIORITY_STACK.md", "priority": "high", "preview": [l.split("|")[2].strip() if "|" in l else l[:100] for l in p0_lines[:5]]})
         except Exception:
             pass
 
     # 3. Daily tool scout — new tools found
     scout = OPS / "DAILY_TOOL_SCOUT.md"
     if scout.exists() and scout.stat().st_mtime > today_ts - 86400:
-        feed.append({"type": "research", "icon": "ti-search", "color": "var(--blue)", "title": "Daily tool scout has new results", "desc": "Review new open source tools discovered today", "action": "cat OPS/DAILY_TOOL_SCOUT.md", "priority": "medium"})
+        scout_preview = []
+        try:
+            for line in open(scout):
+                if line.startswith("| ") and ("[" in line) and ("Stars" not in line and "Security" not in line and "---" not in line and "Date" not in line):
+                    parts = [p.strip() for p in line.split("|") if p.strip()]
+                    if len(parts) >= 3:
+                        scout_preview.append(f"{parts[0]} - {parts[1]}" if "http" not in parts[0] else parts[1])
+                    if len(scout_preview) >= 8:
+                        break
+        except Exception:
+            pass
+        feed.append({"type": "research", "icon": "ti-search", "color": "var(--blue)", "title": "Daily tool scout has new results", "desc": f"{len(scout_preview)} tools found", "action": "cat OPS/DAILY_TOOL_SCOUT.md", "priority": "medium", "preview": scout_preview})
 
     # 4. Scraper outputs — what ran today
     scraper_dir = AUTOMATIONS / "twitter_scraper_output"
@@ -1402,7 +1419,18 @@ def api_daily_feed():
     if reports_dir.exists():
         today_reports = [f.name for f in reports_dir.iterdir() if f.is_file() and today.replace("-", "") in f.name]
         if today_reports:
-            feed.append({"type": "intel", "icon": "ti-robot", "color": "var(--purple)", "title": f"{len(today_reports)} agent reports generated", "desc": ", ".join(today_reports[:3]) + ("..." if len(today_reports) > 3 else ""), "action": f"ls {reports_dir}", "priority": "medium"})
+            # Read first few lines of each report for preview
+            report_previews = []
+            for rname in today_reports[:5]:
+                rpath = reports_dir / rname
+                try:
+                    with open(rpath) as rf:
+                        lines = [l.strip() for l in rf.readlines()[:5] if l.strip() and not l.startswith("#")]
+                        if lines:
+                            report_previews.append(f"{rname}: {lines[0][:80]}")
+                except Exception:
+                    report_previews.append(rname)
+            feed.append({"type": "intel", "icon": "ti-robot", "color": "var(--purple)", "title": f"{len(today_reports)} agent reports generated", "desc": ", ".join(today_reports[:3]) + ("..." if len(today_reports) > 3 else ""), "action": f"ls {reports_dir}", "priority": "medium", "preview": report_previews})
 
     # 7. Soul drift — check if below threshold
     drift_file = AUTOMATIONS / "agent" / "swarm" / "soul_drift_report.json"
