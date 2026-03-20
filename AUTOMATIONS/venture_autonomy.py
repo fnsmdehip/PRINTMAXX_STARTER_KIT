@@ -14,6 +14,7 @@ Every venture type gets its own autonomy loop:
   RESEARCH  → scrape sources → analyze → score → route to actions → compound
   MONETIZE  → find offers → create funnels → deploy pages → track conversions
   PRODUCT   → find demand → build product → create listing → distribute → sell
+  BROKERING → scrape targets → qualify leads → connect parties → earn fee → track revenue
 
 The engine:
   1. Reads venture definitions (from CEO agent, xlsx, or manual)
@@ -526,6 +527,53 @@ VENTURE_TYPES = {
             "Rules: All files in {project}. Respect rate limits. No TOS violations."
         ),
     },
+
+    "BROKERING": {
+        "description": "Connect businesses to services for referral fees. Same scraping + cold email pattern, different verticals.",
+        "pipeline": ["scrape_targets", "qualify_leads", "connect_parties", "earn_fee", "track_revenue"],
+        "interval_hours": 6,
+        "model": MODEL_SONNET,  # prospecting + outreach execution
+        "verticals": [
+            "real_estate", "equipment_financing", "merchant_processing",
+            "insurance", "sba_loans", "wholesale", "lead_gen_service",
+            "white_label_reports",
+        ],
+        "scripts": {
+            "scrape_targets": ("printmaxx_agent.py", "--mission brokering-scrape"),
+            "qualify_leads": ("printmaxx_agent.py", "--mission brokering-qualify"),
+            "track_revenue": ("printmaxx_agent.py", "--mission brokering-track"),
+        },
+        "claude_prompt": (
+            "You are the BROKERING autonomy agent for PRINTMAXX venture '{name}'.\n"
+            "Working directory: {project}\n\n"
+            "Reference: OPS/BROKERING_ARBITRAGE_OPPORTUNITIES.md for the full play list.\n\n"
+            "Your job runs every {interval}h. Each cycle:\n"
+            "1. SCRAPE TARGETS: Find businesses needing services in the active vertical. "
+            "Use savvy_lead_scraper, nationwide_scraper, or SAM.gov monitor. "
+            "Sources: Google Maps, LinkedIn, industry directories. "
+            "Save to AUTOMATIONS/leads/{venture_id}/broker_targets.csv\n"
+            "2. QUALIFY LEADS: Score each target on deal size, urgency, and fit. "
+            "Enrich with Apollo/Clearbit data if available. "
+            "Move qualified leads (score 7+) to qualified_broker_leads.csv\n"
+            "3. CONNECT PARTIES: For qualified leads, identify the best service provider "
+            "(lender, broker, vendor, agent) and draft a warm intro email for both sides. "
+            "Use cold email templates from MONEY_METHODS/EAS/email_templates/ adapted for brokering.\n"
+            "4. EARN FEE: Track introductions made. Follow up on connections. "
+            "Send referral agreement when deal progresses. "
+            "Fee structure: 1-5% of deal value or flat $50-5K per referral.\n"
+            "5. TRACK REVENUE: Log all referral fees earned, pending, and pipeline. "
+            "Update LEDGER/BROKERING_REVENUE.csv\n\n"
+            "Verticals to rotate through: real estate referrals, equipment financing, "
+            "merchant processing, insurance, SBA loans, wholesale connecting, "
+            "lead gen as a service, white-label reports.\n\n"
+            "Rules:\n"
+            "- All files stay in {project}\n"
+            "- CAN-SPAM compliant on all outreach\n"
+            "- Disclose referral relationship where legally required\n"
+            "- Track referral agreements in LEDGER/\n"
+            "- Kill verticals with <2% conversion after 100 outreach attempts"
+        ),
+    },
 }
 
 
@@ -621,8 +669,8 @@ class VentureAutonomyEngine:
         (venture_dir / "output").mkdir(exist_ok=True)
         (venture_dir / "logs").mkdir(exist_ok=True)
 
-        # Also create leads directory if outbound/local_biz
-        if venture_type in ("OUTBOUND", "LOCAL_BIZ"):
+        # Also create leads directory if outbound/local_biz/brokering
+        if venture_type in ("OUTBOUND", "LOCAL_BIZ", "BROKERING"):
             leads_dir = AUTOMATIONS / "leads" / venture_id
             leads_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1848,6 +1896,7 @@ def main() -> None:
             ("APP", "App Factory", {"stack": "nextjs,pwa"}),
             ("PRODUCT", "Digital Products", {"types": "templates,ebooks,tools"}),
             ("SCRAPING", "Competitive Intel", {"targets": "competitors,trends,pricing"}),
+            ("BROKERING", "Broker Connector Plays", {"verticals": "real_estate,equipment_financing,merchant_processing,lead_gen_service"}),
         ]
         created = 0
         for vtype, name, config in core_ventures:

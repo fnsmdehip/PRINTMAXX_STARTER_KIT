@@ -1,0 +1,146 @@
+{
+  "name": "PRINTMAXX - Domain Flipper (Arbitrage Play)",
+  "nodes": [
+    {
+      "name": "Daily Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 6 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Scan Expiring Domains",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [450, 300],
+      "parameters": {
+        "method": "GET",
+        "url": "https://member.expireddomains.net/domains/expiredcom/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "name": "Score Domains for SEO Value",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Parse expiring domains and score by SEO value signals\n// In production, integrate with Moz/Ahrefs API for DA/DR scores\nconst html = $input.item.json.data || '';\n\n// Extract domain data from HTML table rows\nconst domainPattern = /([a-z0-9-]+\\.[a-z]{2,})/gi;\nconst domains = [...new Set((html.match(domainPattern) || []).slice(0, 100))];\n\n// Score heuristics (replace with real API calls in production)\nconst scored = domains.map(domain => {\n  const parts = domain.split('.');\n  const name = parts[0];\n  const tld = parts.slice(1).join('.');\n  \n  let score = 0;\n  // Short domains are more valuable\n  if (name.length <= 5) score += 3;\n  else if (name.length <= 8) score += 2;\n  else if (name.length <= 12) score += 1;\n  \n  // .com premium\n  if (tld === 'com') score += 3;\n  else if (tld === 'io' || tld === 'co') score += 2;\n  \n  // Keyword value (basic heuristic)\n  const keywords = ['ai', 'app', 'tool', 'auto', 'bot', 'data', 'cloud', 'dev', 'tech', 'smart', 'pay', 'cash', 'shop'];\n  for (const kw of keywords) {\n    if (name.includes(kw)) { score += 2; break; }\n  }\n  \n  // No numbers or hyphens preferred\n  if (!/[-0-9]/.test(name)) score += 1;\n  \n  return {\n    domain,\n    name,\n    tld,\n    score,\n    estimatedBuyCost: 10 + Math.floor(Math.random() * 40),\n    estimatedResaleValue: score >= 6 ? 500 + score * 200 : 100 + score * 50,\n    scannedAt: new Date().toISOString()\n  };\n});\n\n// Sort by score descending, take top 20\nscored.sort((a, b) => b.score - a.score);\nconst topDomains = scored.slice(0, 20);\n\nreturn [{ json: { domains: topDomains, totalScanned: domains.length, date: new Date().toISOString().split('T')[0] } }];"
+      }
+    },
+    {
+      "name": "Filter High Value Opportunities",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const data = $input.item.json;\nconst highValue = data.domains.filter(d => d.score >= 5 && d.estimatedResaleValue > 200);\n\nreturn [{\n  json: {\n    opportunities: highValue,\n    count: highValue.length,\n    totalScanned: data.totalScanned,\n    date: data.date,\n    topPick: highValue[0] || null\n  }\n}];"
+      }
+    },
+    {
+      "name": "Save to Tracking Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1050, 300],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_BROKERING_TRACKING_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "DomainOpportunities"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_cred",
+          "name": "Google Sheets"
+        }
+      }
+    },
+    {
+      "name": "Alert if High Value Found",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [1250, 300],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=Domain Flipper Alert\n\nScanned: {{ $json.totalScanned }} expiring domains\nHigh-value opportunities: {{ $json.count }}\n{{ $json.topPick ? 'Top pick: ' + $json.topPick.domain + ' (score: ' + $json.topPick.score + ', est. resale: $' + $json.topPick.estimatedResaleValue + ')' : 'No standout picks today' }}\nDate: {{ $json.date }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_cred",
+          "name": "Telegram Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily Trigger": {
+      "main": [[{"node": "Scan Expiring Domains", "type": "main", "index": 0}]]
+    },
+    "Scan Expiring Domains": {
+      "main": [[{"node": "Score Domains for SEO Value", "type": "main", "index": 0}]]
+    },
+    "Score Domains for SEO Value": {
+      "main": [[{"node": "Filter High Value Opportunities", "type": "main", "index": 0}]]
+    },
+    "Filter High Value Opportunities": {
+      "main": [[{"node": "Save to Tracking Sheet", "type": "main", "index": 0}]]
+    },
+    "Save to Tracking Sheet": {
+      "main": [[{"node": "Alert if High Value Found", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "tags": [
+    {"name": "PRINTMAXX"},
+    {"name": "brokering"},
+    {"name": "domain-flipping"},
+    {"name": "arbitrage"},
+    {"name": "P1"}
+  ]
+}

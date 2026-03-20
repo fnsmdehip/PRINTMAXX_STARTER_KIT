@@ -163,7 +163,7 @@ REVENUE_MAP = {
 VENTURES = [
     "CONTENT", "OUTBOUND", "APP_FACTORY", "LOCAL_BIZ",
     "MONETIZATION", "PRODUCT", "RESEARCH", "SCRAPING",
-    "EAS", "FREELANCE",
+    "EAS", "FREELANCE", "BROKERING",
 ]
 
 # Category to venture mapping for synergy computation
@@ -194,6 +194,12 @@ CATEGORY_VENTURE_MAP = {
     "RESEARCH": ["RESEARCH"],
     "SCRAPING": ["SCRAPING", "RESEARCH"],
     "AGENCY": ["OUTBOUND", "EAS", "FREELANCE"],
+    "BROKERING": ["BROKERING", "OUTBOUND", "SCRAPING", "LOCAL_BIZ"],
+    "REFERRAL": ["BROKERING", "OUTBOUND", "MONETIZATION"],
+    "LEAD_GEN": ["BROKERING", "OUTBOUND", "SCRAPING", "EAS"],
+    "DOMAIN_FLIPPING": ["BROKERING", "MONETIZATION"],
+    "WHITE_LABEL": ["BROKERING", "PRODUCT", "CONTENT"],
+    "API_ARBITRAGE": ["BROKERING", "APP_FACTORY", "MONETIZATION"],
 }
 
 # ---------------------------------------------------------------------------
@@ -448,6 +454,14 @@ def _guess_category_from_id(method_id: str) -> str:
         return "FREELANCE"
     if "TEMPLATE" in upper or "NOTION" in upper or "PRODUCT" in upper:
         return "DIGITAL_PRODUCTS"
+    if "BROKER" in upper or "REFERRAL" in upper or "CONNECTOR" in upper:
+        return "BROKERING"
+    if "LEAD_GEN" in upper or "LEAD GEN" in upper:
+        return "LEAD_GEN"
+    if "DOMAIN" in upper and ("FLIP" in upper or "EXPIR" in upper):
+        return "DOMAIN_FLIPPING"
+    if "WHITE_LABEL" in upper or "WHITE LABEL" in upper:
+        return "WHITE_LABEL"
     return "GENERAL"
 
 
@@ -531,6 +545,8 @@ def score_speed_to_revenue(method: dict) -> float:
         "MCP_SERVER": 5, "COMMUNITY": 3, "SAAS": 3,
         "LOCAL_BIZ": 4, "AGENCY": 4, "INFO_PRODUCTS": 6,
         "RESEARCH": 2, "SCRAPING": 3,
+        "BROKERING": 5, "REFERRAL": 6, "LEAD_GEN": 6,
+        "DOMAIN_FLIPPING": 5, "WHITE_LABEL": 5, "API_ARBITRAGE": 4,
     }
     base = float(speed_map.get(category, 5))
 
@@ -568,6 +584,8 @@ def score_downside_risk(method: dict) -> float:
         "CHROME_EXT": 7, "MCP_SERVER": 7, "COMMUNITY": 7,
         "SAAS": 6, "LOCAL_BIZ": 6, "AGENCY": 6,
         "RESEARCH": 9, "SCRAPING": 5,
+        "BROKERING": 7, "REFERRAL": 7, "LEAD_GEN": 7,
+        "DOMAIN_FLIPPING": 7, "WHITE_LABEL": 8, "API_ARBITRAGE": 6,
     }
     base = float(risk_map.get(category, 6))
 
@@ -598,6 +616,8 @@ def score_automation_potential(method: dict) -> float:
         "CHROME_EXT": 5, "MCP_SERVER": 5, "COMMUNITY": 3,
         "SAAS": 5, "LOCAL_BIZ": 6, "AGENCY": 4,
         "FREELANCE": 4, "INFO_PRODUCTS": 4,
+        "BROKERING": 8, "REFERRAL": 7, "LEAD_GEN": 9,
+        "DOMAIN_FLIPPING": 8, "WHITE_LABEL": 8, "API_ARBITRAGE": 8,
     }
     base = float(auto_map.get(category, 5))
 
@@ -639,6 +659,7 @@ def score_synergy(method: dict) -> tuple[float, list[str]]:
         "RESEARCH": ["research", "alpha", "intelligence", "scrape", "monitor"],
         "EAS": ["enterprise", "automation", "consulting", "agency"],
         "FREELANCE": ["freelance", "fiverr", "upwork", "service"],
+        "BROKERING": ["broker", "referral fee", "connector", "lead gen service", "white label", "domain flip"],
     }
 
     for venture, keywords in venture_keywords.items():
@@ -705,6 +726,8 @@ def score_upfront_cost(method: dict) -> tuple[float, float]:
             "MCP_SERVER": 0, "COMMUNITY": 100, "SAAS": 200,
             "ECOM": 200, "ECOM_ARB": 100, "LOCAL_BIZ": 50,
             "AGENCY": 50, "INFO_PRODUCTS": 0,
+            "BROKERING": 0, "REFERRAL": 0, "LEAD_GEN": 0,
+            "DOMAIN_FLIPPING": 30, "WHITE_LABEL": 0, "API_ARBITRAGE": 50,
         }
         estimated_cost = float(cost_defaults.get(category, 50))
 
@@ -744,6 +767,8 @@ def score_liability_risk(method: dict) -> float:
         "DIRECTORY": 8, "CHROME_EXT": 7, "MCP_SERVER": 8,
         "COMMUNITY": 7, "SAAS": 6, "LOCAL_BIZ": 6,
         "AGENCY": 6, "INFO_PRODUCTS": 7,
+        "BROKERING": 7, "REFERRAL": 7, "LEAD_GEN": 7,
+        "DOMAIN_FLIPPING": 8, "WHITE_LABEL": 7, "API_ARBITRAGE": 6,
     }
     base = float(liability_map.get(category, 6))
 
