@@ -3352,15 +3352,23 @@ function showDay(dayNum) {
   }).join('');
   document.getElementById('kpi-day-scores').innerHTML = scoresHtml;
 
-  // Targets grid (6 columns: Revenue, Content, Engagement, Outreach, Automation, Research)
+  // Targets grid
   var ct = day.content || {};
   var eg = day.engagement || {};
   var or_d = day.outreach || {};
-  var autoChecks = day.automation_checks || [];
-  var research = day.research || [];
   var contentStr = (ct.tweets||0) + 'tw ' + (ct.threads||0) + 'th ' + (ct.tiktoks||0) + 'tt ' + (ct.youtube||0) + 'yt ' + (ct.newsletters||0) + 'nl';
   var engStr = (eg.replies||0) + 'rp ' + (eg.dms||0) + 'dm ' + (eg.comments||0) + 'cm ' + (eg.follows||0) + 'fw';
   var outStr = (or_d.cold_emails||0) + 'em ' + (or_d.proposals||0) + 'pr ' + (or_d.calls||0) + 'cl';
+
+  // Count tasks by tag
+  var autoCount = 0, semiCount = 0, manualCount = 0;
+  (day.tasks || []).forEach(function(t) {
+    var tag = (typeof t === 'object' && t.tag) ? t.tag : '';
+    if (tag === 'AUTO') autoCount++;
+    else if (tag === 'SEMI') semiCount++;
+    else if (tag === 'MANUAL') manualCount++;
+  });
+
   function targetCell(label, mainVal, subVal, color) {
     return '<div style="background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:8px;">' +
       '<div style="font-size:0.55em;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;font-family:JetBrains Mono;">' + label + '</div>' +
@@ -3373,76 +3381,96 @@ function showDay(dayNum) {
     targetCell('CONTENT', (ct.tweets||0)+((ct.threads||0)*3)+((ct.tiktoks||0)*2)+((ct.youtube||0)*5)+((ct.newsletters||0)*4) + ' pts', contentStr, 'var(--purple)') +
     targetCell('ENGAGE', (eg.replies||0)+(eg.dms||0)+(eg.comments||0)+(eg.follows||0) + ' acts', engStr, 'var(--blue)') +
     targetCell('OUTREACH', (or_d.cold_emails||0)+(or_d.proposals||0)+(or_d.calls||0) + ' total', outStr, 'var(--warn)') +
-    targetCell('AUTO', autoChecks.length + ' checks', autoChecks.slice(0,2).join(', '), 'var(--text)') +
-    targetCell('RESEARCH', research.length + ' items', research.slice(0,2).join(', '), 'var(--text-dim)');
+    targetCell('AUTO', autoCount + ' tasks', 'verified by system', '#00d97e') +
+    targetCell('MANUAL', manualCount + ' tasks', 'human required', 'var(--blue)');
 
-  // Categorize tasks by detecting category comment markers
-  var categories = [
-    {key: 'ACCOUNTS', color: 'var(--purple)', icon: '&#128100;', pattern: /^(Set up GoLogin|Create.*account|Warm up|Continue.*warmup|Subscribe X Premium|Audit all.*account|Cross-promote|Cross-account|Deploy.*account|Launch.*persona|All.*account|All secondary|Check.*TweepCred|Check shadowban|KILL.*account|SCALE.*posting|Deploy strategic follow|Top-performing account|Low-performing account|Evaluate.*secondary|Pre-create|Final account|Update all bios|Full.*account.*audit|Plan account|Full multi-account)/i},
-    {key: 'CONTENT', color: 'var(--purple)', icon: '&#9998;', pattern: /^(Post \d+ tweet|Write.*newsletter|Generate.*video|Generate.*product|Run content_factory|Run auto_clip|Run ai_video|Run edge_growth_engine.*repurpose|Run edge_growth_engine.*cross|Run edge_growth_engine.*viral|Upload YouTube|Create.*Facebook.*post|Create.*LinkedIn|Batch create|Script \d+ TikTok|Post in.*Facebook Group|Post.*TikTok|Post.*affiliate|Post.*Pinterest|Pin \d+|Write \d+ affiliate|Create.*ad creative|Deploy content atom|Share.*link|Post first PH|Write.*launch thread|Execute Product Hunt|Batch \d+ Facebook|Pre-generate)/i},
-    {key: 'ENGAGEMENT', color: 'var(--blue)', icon: '&#9889;', pattern: /^(Reply to|DM \d+|Comment on|Post to.*X Communit|Target people|Quote-tweet|Deploy reply guy|Recruit \d+ hunters|Monitor PH|Handle all open DM|Deploy bookmark|Secondary account.*amplif)/i},
-    {key: 'OUTREACH', color: 'var(--warn)', icon: '&#9993;', pattern: /^(Send cold|Send \d+ (?:personalized|custom)|Submit \d+ Upwork|Cold call|Call\/email|Call top|Push hardest|Follow up on|Respond to all Fiverr|Run auto_freelance|Pitch retainer|Launch cold email|Convert.*buyers|Push.*EAS|Check Fiverr for)/i},
-    {key: 'REVENUE', color: 'var(--accent)', icon: '&#128176;', pattern: /^(Create Gumroad|Create Whop|List.*products|Set Fiverr|Run fiverr_gig|Scan.*ads.*librar|List top \d+ winning|Create urgency|Set up.*subscription|Add upsell|Optimize.*Gumroad|A\/B test.*Gumroad|Create upsell|Apply to \d+ affiliate|Launch Telegram VIP|Set up CashApp|Rank.*channel|Full.*analytics|Full.*funnel|Calculate|Per-channel|Revenue.*count|Revenue leaderboard|Engagement leaderboard|Outreach leaderboard|Trajectory check|Revenue gap|Kill.*venture|Scale.*venture|Kill list|Scale list|If.*budget|Identify top|Full month review|Final revenue|Update KPI|Set \d+ stretch|Close any remaining|Review e-commerce|Automate any task|Write May|Set May|If deal closes|If no close|Optimize email seq|Create.*case study|Check all e-commerce)/i},
-    {key: 'GOV CONTRACTS', color: '#4ecdc4', icon: '&#127970;', pattern: /^(Run sam_gov|Run uk_contracts|Review.*GOV_OPPORT|Review all SAM|Draft.*SAM.gov|Draft proposal|Identify.*contract|Submit.*SAM.gov|Submit proposal|Final SAM|If any contract won|Update gov|Review all GOV)/i},
-    {key: 'AUTOMATION', color: 'var(--text)', icon: '&#9881;', pattern: /^(Verify|Check|Run system|Run security|Run full|Run competitive|Run capital_genesis|Verify all|Deploy any backlog|Set up new cron|Update.*SYSTEM_MAP|Clean up dead|Document procedural|Pre-draft|Plan Week|Measure edge|Review.*agent|Final backup)/i},
-    {key: 'RESEARCH', color: 'var(--text-dim)', icon: '&#128218;', pattern: /^(Read|Review CAPITAL|Review.*ACTIONABLE|Deep dive|Review method|Review OPEN_SOURCE|Review.*NOVEL|Review.*daily_digest)/i}
-  ];
-  var categorized = {};
-  categories.forEach(function(c) { categorized[c.key] = []; });
-  categorized['OTHER'] = [];
-  day.tasks.forEach(function(t, i) {
-    // Strip leading "# CATEGORY" comments if present
-    var taskText = t.replace(/^#\s*\w+\s*\n?/, '').trim();
-    var matched = false;
-    for (var ci = 0; ci < categories.length; ci++) {
-      if (categories[ci].pattern.test(taskText)) {
-        categorized[categories[ci].key].push({text: taskText, idx: i});
-        matched = true;
-        break;
-      }
+  // Tag colors and sorting
+  var tagConfig = {
+    'AUTO':   {color: '#00d97e', bg: 'rgba(0,217,126,0.12)', border: 'rgba(0,217,126,0.3)', label: 'AUTO', icon: '&#9881;'},
+    'SEMI':   {color: '#ff9f43', bg: 'rgba(255,159,67,0.12)', border: 'rgba(255,159,67,0.3)', label: 'SEMI', icon: '&#9889;'},
+    'MANUAL': {color: '#54a0ff', bg: 'rgba(84,160,255,0.12)', border: 'rgba(84,160,255,0.3)', label: 'MANUAL', icon: '&#9997;'}
+  };
+
+  // Normalize tasks: support both old string format and new object format
+  var normalizedTasks = (day.tasks || []).map(function(t, i) {
+    if (typeof t === 'string') {
+      return {text: t, tag: 'MANUAL', detail: '', idx: i};
     }
-    if (!matched) categorized['OTHER'].push({text: taskText, idx: i});
+    return {text: t.text || '', tag: t.tag || 'MANUAL', detail: t.detail || '', idx: i};
   });
 
-  // Render categorized tasks
+  // Group by tag: AUTO first, then SEMI, then MANUAL
+  var grouped = {AUTO: [], SEMI: [], MANUAL: []};
+  normalizedTasks.forEach(function(t) {
+    var g = grouped[t.tag] || grouped['MANUAL'];
+    g.push(t);
+  });
+
+  // Render grouped tasks
   document.getElementById('kpi-day-task-count').textContent = day.tasks.length;
   var tasksHtml = '';
-  categories.forEach(function(cat) {
-    var items = categorized[cat.key];
-    if (items.length === 0) return;
-    tasksHtml += '<div style="margin-top:10px;margin-bottom:4px;font-size:0.65em;color:' + cat.color + ';text-transform:uppercase;letter-spacing:2px;font-family:JetBrains Mono;font-weight:700;border-bottom:1px solid var(--border);padding-bottom:3px;">' + cat.icon + ' ' + cat.key + ' (' + items.length + ')</div>';
+
+  ['AUTO', 'SEMI', 'MANUAL'].forEach(function(tagKey) {
+    var items = grouped[tagKey];
+    if (!items || items.length === 0) return;
+    var cfg = tagConfig[tagKey];
+
+    tasksHtml += '<div style="margin-top:12px;margin-bottom:6px;display:flex;align-items:center;gap:8px;border-bottom:2px solid ' + cfg.border + ';padding-bottom:4px;">' +
+      '<span style="display:inline-block;padding:2px 8px;border-radius:4px;background:' + cfg.bg + ';border:1px solid ' + cfg.border + ';color:' + cfg.color + ';font-size:0.65em;font-weight:800;letter-spacing:2px;font-family:JetBrains Mono;">' + cfg.icon + ' ' + cfg.label + '</span>' +
+      '<span style="font-size:0.6em;color:var(--text-dim);font-family:JetBrains Mono;">' + items.length + ' task' + (items.length !== 1 ? 's' : '') + '</span>' +
+    '</div>';
+
     items.forEach(function(item) {
       var id = 'task-' + dayNum + '-' + item.idx;
-      tasksHtml += '<div style="padding:4px 0;border-bottom:1px solid var(--border);font-size:0.78em;display:flex;gap:8px;align-items:flex-start;">' +
-        '<input type="checkbox" id="' + id + '" style="margin-top:3px;accent-color:' + cat.color + ';cursor:pointer;" onchange="this.parentElement.style.opacity=this.checked?\'0.4\':\'1\'">' +
-        '<label for="' + id + '" style="cursor:pointer;line-height:1.4;">' + item.text + '</label>' +
+      var detailId = 'detail-' + dayNum + '-' + item.idx;
+      var hasDetail = item.detail && item.detail.length > 0;
+
+      tasksHtml += '<div style="border-bottom:1px solid var(--border);margin-bottom:1px;">';
+
+      // Task row
+      tasksHtml += '<div style="padding:5px 0;font-size:0.78em;display:flex;gap:8px;align-items:flex-start;cursor:' + (hasDetail ? 'pointer' : 'default') + ';" ' +
+        (hasDetail ? 'onclick="var d=document.getElementById(\'' + detailId + '\');d.style.display=d.style.display===\'none\'?\'block\':\'none\'"' : '') + '>' +
+        '<input type="checkbox" id="' + id + '" style="margin-top:3px;accent-color:' + cfg.color + ';cursor:pointer;flex-shrink:0;" onclick="event.stopPropagation()" onchange="this.closest(\'div\').parentElement.style.opacity=this.checked?\'0.4\':\'1\'">' +
+        '<div style="flex:1;line-height:1.4;">' +
+          '<span style="display:inline-block;padding:1px 5px;border-radius:3px;background:' + cfg.bg + ';color:' + cfg.color + ';font-size:0.7em;font-weight:700;font-family:JetBrains Mono;margin-right:6px;vertical-align:middle;">' + cfg.label + '</span>' +
+          '<span>' + item.text + '</span>' +
+          (hasDetail ? '<span style="color:var(--text-dim);font-size:0.8em;margin-left:6px;">&#9660;</span>' : '') +
+        '</div>' +
       '</div>';
+
+      // Detail panel (hidden by default)
+      if (hasDetail) {
+        var escapedDetail = item.detail.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+        tasksHtml += '<div id="' + detailId + '" style="display:none;padding:8px 12px 10px 32px;background:var(--panel);border-left:3px solid ' + cfg.color + ';margin:0 0 2px 0;border-radius:0 0 4px 4px;">' +
+          '<pre style="font-family:JetBrains Mono,monospace;font-size:0.72em;line-height:1.5;color:var(--text);white-space:pre-wrap;word-break:break-word;margin:0;">' + escapedDetail + '</pre>' +
+        '</div>';
+      }
+
+      tasksHtml += '</div>';
     });
   });
-  // Other uncategorized
-  if (categorized['OTHER'].length > 0) {
-    tasksHtml += '<div style="margin-top:10px;margin-bottom:4px;font-size:0.65em;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;font-family:JetBrains Mono;font-weight:700;border-bottom:1px solid var(--border);padding-bottom:3px;">OTHER (' + categorized['OTHER'].length + ')</div>';
-    categorized['OTHER'].forEach(function(item) {
-      var id = 'task-' + dayNum + '-' + item.idx;
-      tasksHtml += '<div style="padding:4px 0;border-bottom:1px solid var(--border);font-size:0.78em;display:flex;gap:8px;align-items:flex-start;">' +
-        '<input type="checkbox" id="' + id + '" style="margin-top:3px;accent-color:var(--text-dim);cursor:pointer;" onchange="this.parentElement.style.opacity=this.checked?\'0.4\':\'1\'">' +
-        '<label for="' + id + '" style="cursor:pointer;line-height:1.4;">' + item.text + '</label>' +
-      '</div>';
-    });
-  }
+
   document.getElementById('kpi-day-tasks').innerHTML = tasksHtml;
 
-  // Automation checks
-  document.getElementById('kpi-day-automation').innerHTML = autoChecks.map(function(c) {
-    return '<div style="padding:4px 0;font-size:0.72em;display:flex;gap:6px;align-items:flex-start;border-bottom:1px solid var(--border);">' +
-      '<span style="color:var(--warn);font-size:0.8em;margin-top:2px;">&#9679;</span><span style="font-family:JetBrains Mono;line-height:1.4;">' + c + '</span></div>';
-  }).join('') || '<div style="font-size:0.75em;color:var(--text-dim);">None scheduled</div>';
+  // Automation checks (backward compat: if still present in data)
+  var autoChecks = day.automation_checks || [];
+  var autoCheckEl = document.getElementById('kpi-day-automation');
+  if (autoCheckEl) {
+    autoCheckEl.innerHTML = autoChecks.length > 0 ? autoChecks.map(function(c) {
+      return '<div style="padding:4px 0;font-size:0.72em;display:flex;gap:6px;align-items:flex-start;border-bottom:1px solid var(--border);">' +
+        '<span style="color:var(--warn);font-size:0.8em;margin-top:2px;">&#9679;</span><span style="font-family:JetBrains Mono;line-height:1.4;">' + c + '</span></div>';
+    }).join('') : '<div style="font-size:0.75em;color:var(--text-dim);">Embedded in task details above</div>';
+  }
 
-  // Research queue
-  document.getElementById('kpi-day-research').innerHTML = research.map(function(r) {
-    return '<div style="padding:4px 0;font-size:0.72em;display:flex;gap:6px;align-items:flex-start;border-bottom:1px solid var(--border);">' +
-      '<span style="color:var(--blue);font-size:0.8em;margin-top:2px;">&#9679;</span><span style="font-family:JetBrains Mono;line-height:1.4;">' + r + '</span></div>';
-  }).join('') || '<div style="font-size:0.75em;color:var(--text-dim);">None scheduled</div>';
+  // Research queue (backward compat)
+  var research = day.research || [];
+  var researchEl = document.getElementById('kpi-day-research');
+  if (researchEl) {
+    researchEl.innerHTML = research.length > 0 ? research.map(function(r) {
+      return '<div style="padding:4px 0;font-size:0.72em;display:flex;gap:6px;align-items:flex-start;border-bottom:1px solid var(--border);">' +
+        '<span style="color:var(--blue);font-size:0.8em;margin-top:2px;">&#9679;</span><span style="font-family:JetBrains Mono;line-height:1.4;">' + r + '</span></div>';
+    }).join('') : '<div style="font-size:0.75em;color:var(--text-dim);">Embedded in task details above</div>';
+  }
 
   detail.scrollIntoView({behavior:'smooth'});
 }

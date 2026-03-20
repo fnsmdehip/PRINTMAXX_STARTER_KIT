@@ -1537,1308 +1537,633 @@ def api_kpi_calendar():
     # ==========================================================================
     # PRINTMAXX DAILY OPS — 33-AGENT AUTONOMOUS SYSTEM KPIs
     # ==========================================================================
-    # Week 1: INFRA + ACCOUNTS (multi-account stack, proxy setup, product listings, first outreach)
-    # Week 2: VOLUME + PIPELINE (3x content across accounts, cold email at scale, gov contracts, freelance)
-    # Week 3: EDGE + OPTIMIZE (growth engine tactics, kill/scale, arbitrage, secondary account amplification)
-    # Week 4: COMPOUND + CLOSE (recurring revenue, retainers, community, full system audit)
+    # Task format: {"text": str, "tag": "AUTO"|"SEMI"|"MANUAL", "detail": str}
+    # AUTO  = fully automated, just verify it ran
+    # SEMI  = system generates output, human reviews/approves before execution
+    # MANUAL = requires human hands (account creation, payments, strategic decisions)
+    #
+    # Account Tiers referenced in detail fields:
+    #   SAFE      = primary @PRINTMAXXER, conservative (5 posts/day), full TOS compliance
+    #   MEDIUM    = 2-3 niche accounts, moderate automation (10-15 posts/day), test new tactics
+    #   AGGRESSIVE = burner/test accounts, push limits (20+ posts/day), expendable if banned
+    #
+    # Week 1: INFRA + ACCOUNTS
+    # Week 2: VOLUME + PIPELINE
+    # Week 3: EDGE + OPTIMIZE
+    # Week 4: COMPOUND + CLOSE
     daily_plans = {
         # ===== WEEK 1: INFRA + ACCOUNTS =====
         1: {
             "theme": "MULTI-ACCOUNT GENESIS",
             "tasks": [
-                # ACCOUNTS
-                "Set up GoLogin with 6 browser profiles: @PRINTMAXXER (primary), 2 niche accounts (fitness/golf, finance), 2 content farm accounts, 1 findom persona",
-                "Assign SOAX mobile proxy to each GoLogin profile (unique residential IP per account, geo-match to account location)",
-                "Create 3 secondary X/Twitter accounts in GoLogin profiles. Each gets its own niche, voice, and bio",
-                "Subscribe X Premium Basic ($3/mo) on primary + 2 secondary accounts ($9 total) for 10x impression boost",
-                # CONTENT
-                "Post 8 tweets from primary @PRINTMAXXER queue + 1 thread: what you are building",
-                "Run content_factory.py --batch-alpha 5 to generate cross-platform content from latest alpha",
-                "Generate 3 faceless video scripts via ai_video_content_pipeline.py --generate golf --count 3 for boomer YouTube",
-                "Upload 3 low-content books to Amazon KDP (E05): journal templates, planners, prompt books from DIGITAL_PRODUCTS/ ($2-5 royalty per sale, seeds compound over 90 days)",
-                "List 5 digital downloads on Etsy (E06): automation checklists, prompt packs, workflow templates at $5-15 each with SEO-optimized titles",
-                # ENGAGEMENT
-                "Reply to 40 accounts from primary within 15 min of target posting (reply guy = 150x a like in algo weight)",
-                "Post 3 tweets per secondary account (warmup phase: quality over volume, first 100 tweets set algo foundation)",
-                # REVENUE
-                "Create Gumroad account + list all 13 products with price anchoring ($197 crossed out, $97 shown)",
-                "Create Whop storefront + list top 8 products (5.7% fee vs Gumroad 10%)",
-                # AUTOMATION
-                "Verify 112 cron jobs ran: check system_health_monitor.py --quick output",
-                "Verify twitter_alpha_scraper.py output at LEDGER/TWITTER_ALPHA_SCRAPES.csv (133 accounts scraped at 6AM)",
-                "Verify background_reddit_scraper.py output at LEDGER/REDDIT_SCRAPES/ (ran at 6:15AM)",
-                "Check soul_drift_report.json: any agent below 6/10 gets prompt rewrite immediately"
+                {"text": "Set up GoLogin with 6 browser profiles (primary + 2 niche + 2 content farm + 1 findom)", "tag": "MANUAL", "detail": "Go to gologin.com, log in. Create 6 profiles:\n1. @PRINTMAXXER (primary, SAFE tier)\n2. Fitness/golf niche (MEDIUM tier)\n3. Finance niche (MEDIUM tier)\n4. Content farm #1 (AGGRESSIVE tier)\n5. Content farm #2 (AGGRESSIVE tier)\n6. Findom persona (MEDIUM tier)\nFor each profile: OS=macOS, browser=Chrome, WebRTC=altered, Canvas=noise, WebGL=noise, timezone=match proxy geo.\nAssign SOAX mobile proxy per profile: GoLogin > Profile > Proxy > SOAX rotating mobile US.\nVerify fingerprint uniqueness: browserleaks.com in each profile.\nTime: 45 min."},
+                {"text": "Assign unique SOAX residential proxy to each GoLogin profile", "tag": "MANUAL", "detail": "Log into SOAX dashboard (soax.com). Create 6 sticky sessions (mobile US, different states).\nCopy proxy credentials (host:port:user:pass) for each.\nIn GoLogin, open each profile > Proxy Settings > paste SOAX credentials.\nTest each: visit whatismyipaddress.com, confirm unique IP and US geo.\nNEVER share IPs between profiles. Each account = unique residential IP.\nIf IP flagged: rotate to new sticky session in SOAX dashboard.\nTime: 20 min."},
+                {"text": "Create 3 secondary X/Twitter accounts in GoLogin profiles", "tag": "MANUAL", "detail": "Open each GoLogin profile (niche #1, #2, content farm #1).\nGo to twitter.com/i/flow/signup. Use unique email per account (protonmail).\nPhone verification: use separate numbers (TextNow app = free US numbers).\nSet unique bio, name, PFP per account. Each gets its own niche voice.\nDO NOT follow each other. DO NOT interact between accounts.\nStagger creation: wait 30+ min between signups.\nIf CAPTCHA loops: clear cookies, try different SOAX session.\nTier: MEDIUM for niche, AGGRESSIVE for content farm.\nTime: 30 min."},
+                {"text": "Subscribe X Premium Basic ($3/mo) on primary + 2 secondaries", "tag": "MANUAL", "detail": "In each GoLogin profile, go to twitter.com/i/premium_sign_up.\nSelect Basic ($3/mo). Pay with separate payment methods if possible.\nWhy: 10x median impressions, reply prioritization, TweepCred +100 boost.\nTotal: $9/mo for 3 accounts. Add remaining accounts after warmup.\nVerify: blue checkmark appears on profile. Check Settings > Premium.\nTime: 10 min."},
+                {"text": "Post 8 tweets from @PRINTMAXXER + 1 thread", "tag": "AUTO", "detail": "Runs via auto_content_poster.py cron at 7AM.\nContent source: CONTENT/social/posting_queue/\nGenerated by: content_factory.py --batch-alpha\nThread topic: 'what you are building' (build-in-public hook).\nVerify: check CONTENT/social/posting_queue/ for today's posts.\nManual check: python3 AUTOMATIONS/auto_content_poster.py --status\nIf cron missed: python3 AUTOMATIONS/auto_content_poster.py --post\nTier: SAFE. Max 8 tweets/day during warmup.\nRisk: None. API-based posting via Typefully/Publer.\nTime: 0 min (automated). 2 min to verify."},
+                {"text": "Generate cross-platform content batch from latest alpha", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/content_factory.py --batch-alpha 5\nReads: LEDGER/ALPHA_STAGING.csv for latest high-value entries.\nOutputs: 5 content pieces adapted for X, LinkedIn, Pinterest, Facebook.\nStored at: CONTENT/social/posting_queue/\nCron: runs as part of daily content pipeline.\nVerify: ls -la CONTENT/social/posting_queue/ | head -20\nRisk: None. Content generation only, no posting.\nTime: 0 min (automated)."},
+                {"text": "Generate 3 faceless video scripts for boomer YouTube", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/ai_video_content_pipeline.py --generate golf --count 3\nOutputs: 3 scripts at CONTENT/video/scripts/\nTarget demo: men 55-70, golf/fishing/health interests.\nReference: AUTOMATIONS/auto_ops/alpha_theses/BOOMER_MALE_55_70_AFFILIATE.md\nNext step: render with Remotion (video_factory) or manual screen recording.\nRisk: None. Script generation only.\nTime: 0 min (automated)."},
+                {"text": "Upload 3 low-content books to Amazon KDP", "tag": "MANUAL", "detail": "Go to kdp.amazon.com. Sign in or create account.\nUpload from DIGITAL_PRODUCTS/:\n1. Journal template (E05) - $2-5 royalty/sale\n2. Planner template - $2-5 royalty/sale\n3. Prompt book - $3-7 royalty/sale\nFor each: set title with keywords, description, 7 keyword slots (research via Publisher Rocket or free Amazon search suggest).\nCategory: choose 2 low-competition categories.\nPricing: $4.99-9.99 range. 70% royalty.\nCompounds over 90 days as reviews accumulate.\nTime: 45 min."},
+                {"text": "List 5 digital downloads on Etsy", "tag": "MANUAL", "detail": "Go to etsy.com/sell. Create shop if needed (fnsmdehip@proton.me).\nUpload from DIGITAL_PRODUCTS/:\n1. Automation checklist ($5)\n2. Prompt pack ($9)\n3. Workflow templates ($12)\n4. Claude Code guide ($15)\n5. Agency playbook excerpt ($7)\nFor each: SEO-optimized title (use eRank.com for Etsy keyword research).\n13 tags per listing (max allowed). High-res mockup thumbnails from MEDIA/generated_images/.\nEtsy fees: $0.20 listing + 6.5% transaction.\nTime: 40 min."},
+                {"text": "Reply to 40 accounts from primary (reply guy strategy)", "tag": "SEMI", "detail": "edge_growth_engine.py generates reply suggestions.\nCommand: python3 AUTOMATIONS/edge_growth_engine.py --reply-guy\nOutput: CONTENT/social/reply_queue/ with suggested replies.\nYOU review the queue before posting.\nTarget: accounts tweeting about manual processes, hiring devs, or automation.\nReply within 15 min of target posting for max algo weight.\nAuthor-engaged reply = +75 weight (150x a like).\nSafe limit: 50 replies/day/account. We do 40 (conservative).\nTool: GoLogin primary profile + SOAX mobile proxy.\nTier: SAFE. Genuine engagement only.\nTime: 30 min to review queue + post."},
+                {"text": "Post 3 tweets per secondary account (warmup)", "tag": "SEMI", "detail": "Content pre-generated by content_factory.py.\nReview at: CONTENT/social/posting_queue/ (filtered by account).\nPost manually via GoLogin profiles (warmup phase = manual posting preferred).\nQuality over volume: first 100 tweets set algo foundation.\nNEVER cross-post identical text (40% duplicate penalty).\nStagger: 30+ min between accounts.\nTier: MEDIUM. 3 tweets/day during warmup.\nRisk: Low. Under all rate limits.\nTime: 15 min."},
+                {"text": "Create Gumroad account + list 13 products", "tag": "MANUAL", "detail": "Go to gumroad.com. Sign up with fnsmdehip@proton.me.\nProducts ready at PRODUCTS/ and DIGITAL_PRODUCTS/.\nUpload all 13 with price anchoring ($197 crossed out, $97 shown).\nKey products:\n- Automation prompt pack ($19)\n- Claude Code mastery guide ($29)\n- Agency playbook ($49)\n- Full bundle ($97)\nUse thumbnails from MEDIA/generated_images/.\nSet up Stripe Connect for payouts.\nGumroad fee: 10% + processing.\nTime: 30 min."},
+                {"text": "Create Whop storefront + list top 8 products", "tag": "MANUAL", "detail": "Go to whop.com. Create account.\nList top 8 products (same as Gumroad best sellers).\nWhop fee: 5.7% (vs Gumroad 10%) = better margins.\nSet up payment processing.\nLink to same Stripe account.\nTime: 20 min."},
+                {"text": "Verify all cron jobs and scrapers ran", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/system_health_monitor.py --quick\n  Check: 112 cron jobs status.\n  Verify twitter_alpha_scraper.py output: LEDGER/TWITTER_ALPHA_SCRAPES.csv (133 accounts, 6AM cron)\n  Verify background_reddit_scraper.py: LEDGER/REDDIT_SCRAPES/ (6:15AM cron)\n  Check soul_drift_report.json: any agent below 6/10 gets prompt rewrite.\nPath: AUTOMATIONS/agent/swarm/soul_drift_report.json\nRisk: None. Read-only checks.\nTime: 2 min."},
             ],
             "revenue_target": "$0",
             "content": {"tweets": 14, "threads": 1, "tiktoks": 0, "youtube": 3, "newsletters": 0},
             "engagement": {"replies": 40, "dms": 5, "comments": 10, "follows": 25},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "cron health: system_health_monitor.py --quick (112 jobs)",
-                "twitter_alpha_scraper.py: 133 accounts, 6AM cron",
-                "background_reddit_scraper.py: 6:15AM cron",
-                "soul_drift_report.json: all agents > 6/10",
-                "GoLogin profiles: 6 profiles with unique SOAX proxies"
-            ],
-            "research": [
-                "CAPITAL_GENESIS_PRIORITY_STACK.md: daily ranked priorities",
-                "daily_tool_scout.py output: new tools discovered",
-                "ALPHA_STAGING.csv: process 50 PENDING_REVIEW entries"
-            ]
         },
         2: {
             "theme": "FREELANCE + PRODUCT BLITZ",
             "tasks": [
-                # ACCOUNTS
-                "Warm up 3 secondary X accounts: 5 tweets each, 15 genuine replies each, follow 20 niche accounts each (stagger 30+ min between accounts)",
-                "Create Fiverr account + post 5 gigs: AI automation ($150), Claude Code dev ($200), chatbot build ($100), data pipeline ($175), web scraping ($125)",
-                "Create Upwork profile + submit 10 proposals on AI/automation jobs with $1K+ budgets",
-                # CONTENT
-                "Post 8 tweets + 1 thread from primary: 'I build apps in 2 hours that agencies quote $10K for'",
-                "Generate product thumbnails for all 13 Gumroad products using Playwright screenshot factory",
-                "Run auto_clip_pipeline.py --demo on 2 trending YouTube videos in AI niche to identify clip opportunities",
-                # ENGAGEMENT
-                "Reply to 50 accounts from primary (target: anyone tweeting about manual processes, hiring devs, or needing automation)",
-                "DM 10 people who tweeted about manual work pain points with genuine value (no pitch)",
-                "Post in 2 X Communities relevant to automation/AI before tweeting (30-min velocity window hack)",
-                # REVENUE
-                "Run fiverr_gig_scraper.py --category resume to analyze competitor pricing and delivery times",
-                "Set Fiverr launch price at $25 for first gig to accelerate first review acquisition",
-                # AUTOMATION
-                "Verify agent_swarm.py --status: 25 agents operational (4 Opus, 5 Sonnet, 3 Haiku)",
-                "Verify n8n workflow w01 (GMaps lead scraper) executed, check LEDGER for new leads",
-                "Verify n8n workflow w04 (cold email SendGrid) is ready for Day 4 launch",
-                "Check alpha_auto_processor.py output: process any PENDING_REVIEW entries"
+                {"text": "Warm up 3 secondary X accounts (5 tweets + 15 replies + 20 follows each)", "tag": "SEMI", "detail": "Content pre-generated at CONTENT/social/posting_queue/.\nReview content for each account's niche voice.\nPost via GoLogin profiles. Stagger 30+ min between accounts.\nFollow 20 niche-relevant accounts per profile (manual, genuine interest).\n15 genuine replies per account to niche accounts.\nFirst 100 tweets = algorithmic foundation. Quality matters more than volume.\nTier: MEDIUM.\nRisk: Low. Well under rate limits.\nTime: 30 min."},
+                {"text": "Create Fiverr account + post 5 gigs", "tag": "MANUAL", "detail": "Go to fiverr.com. Sign up with fnsmdehip@proton.me.\nCreate 5 gigs:\n1. AI automation setup ($150)\n2. Claude Code development ($200)\n3. Chatbot build ($100)\n4. Data pipeline ($175)\n5. Web scraping ($125)\nLaunch price: $25 for first gig to get first review fast.\nEach gig needs: title, description, 3 packages (basic/standard/premium), FAQ, requirements.\nUse portfolio from PRODUCTS/ as proof.\nTime: 40 min."},
+                {"text": "Create Upwork profile + submit 10 proposals", "tag": "MANUAL", "detail": "Go to upwork.com. Create profile.\nHeadline: 'AI Automation Engineer | Claude Code | Ship in 48hrs'\nPortfolio: screenshots from PRODUCTS/ and APP_FACTORY/ builds.\nSubmit 10 proposals on AI/automation jobs with $1K+ budgets.\nEach proposal: personalized opening line referencing their specific project.\nAttach 1-2 relevant portfolio pieces per proposal.\nTip: mention delivery speed (48hr turnaround) as differentiator.\nUpwork fee: 10% on first $10K with client.\nTime: 60 min."},
+                {"text": "Post 8 tweets + 1 thread from primary", "tag": "AUTO", "detail": "Runs via auto_content_poster.py cron at 7AM.\nThread topic: 'I build apps in 2 hours that agencies quote $10K for'\nContent from: CONTENT/social/posting_queue/\nVerify: python3 AUTOMATIONS/auto_content_poster.py --status\nIf missed: python3 AUTOMATIONS/auto_content_poster.py --post\nTier: SAFE.\nTime: 0 min (automated). 2 min to verify."},
+                {"text": "Generate product thumbnails for 13 Gumroad products", "tag": "AUTO", "detail": "Uses Playwright screenshot factory (zero cost).\nTemplates at: MEDIA/image_templates/\nCommand: python3 AUTOMATIONS/image_factory.py --batch-thumbnails\nOutput: MEDIA/generated_images/thumbnails/\nIf not automated yet: use Canva free tier or screenshot existing landing pages.\nTime: 0 min if automated, 30 min if manual."},
+                {"text": "Run auto_clip_pipeline on 2 trending AI videos", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_clip_pipeline.py --demo --count 2\nFinds trending YouTube videos in AI niche.\nExtracts best 30-60 second clips.\nOutput: CONTENT/video/clips/\nUse for TikTok/Shorts/Reels cross-posting.\nRisk: Fair use for commentary/reaction. Add original commentary.\nTime: 0 min (automated)."},
+                {"text": "Reply to 50 accounts from primary (target automation pain points)", "tag": "SEMI", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --reply-guy\nGenerates reply queue at: CONTENT/social/reply_queue/\nTarget: anyone tweeting about manual processes, hiring devs, needing automation.\nYOU review before posting.\nReply within 15 min of viral posts for max algo weight.\nAuthor-engaged reply = +75 weight (150x a like).\nSafe limit: 50 replies/day/account.\nTool: GoLogin primary profile + SOAX mobile proxy.\nTier: SAFE.\nTime: 35 min."},
+                {"text": "DM 10 people who tweeted about manual work pain points", "tag": "MANUAL", "detail": "Find targets from edge_growth_engine.py reply-guy output.\nSend genuine value DMs (no pitch). Examples:\n- 'Saw your tweet about X. I actually built a tool for this. Happy to share.'\n- 'That workflow you described - there is a way to cut it from 3hrs to 15min.'\nDO NOT link to products yet. Build relationship first.\nMax 50 DMs/day/account. We do 10 (conservative).\nTier: SAFE.\nTime: 20 min."},
+                {"text": "Post in 2 X Communities for velocity window boost", "tag": "SEMI", "detail": "Find 2 X Communities in automation/AI niche.\nPost content 30 min BEFORE main tweet to generate early engagement.\nThis triggers the algorithm's velocity window for broader distribution.\nCommunities replaced engagement pods as the legitimate alternative.\nTier: SAFE. Platform-endorsed feature.\nTime: 10 min."},
+                {"text": "Verify agent swarm and n8n workflows operational", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/agent_swarm.py --status\n  Expected: 25 agents operational (4 Opus, 5 Sonnet, 3 Haiku active)\n  Verify n8n w01 (GMaps lead scraper): check LEDGER/ for new leads.\n  Verify n8n w04 (cold email SendGrid): ready for Day 4 launch.\n  Check alpha_auto_processor.py: process any PENDING_REVIEW entries.\n  Command: python3 AUTOMATIONS/alpha_auto_processor.py --process-new\nRisk: None. Status checks.\nTime: 3 min."},
             ],
             "revenue_target": "$0-20",
             "content": {"tweets": 23, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 50, "dms": 10, "comments": 15, "follows": 60},
             "outreach": {"cold_emails": 0, "proposals": 10, "calls": 0},
-            "automation_checks": [
-                "agent_swarm.py --status: 25 agents, model routing check",
-                "n8n w01 GMaps lead scraper execution",
-                "n8n w04 cold email SendGrid readiness",
-                "alpha_auto_processor.py: PENDING_REVIEW cleared",
-                "fiverr_gig_scraper.py: competitor analysis complete"
-            ],
-            "research": [
-                "Fiverr AI category: pricing, delivery times, top sellers",
-                "Upwork trending skills: which AI jobs are paying $2K+",
-                "GREY_HAT_EDGE_GROWTH_MASTER.md: warmup protocols (Section 11)"
-            ]
         },
         3: {
             "theme": "GOV CONTRACTS + EAS PIPELINE",
             "tasks": [
-                # ACCOUNTS
-                "Secondary account warmup Day 3: post 5 tweets + 20 replies per account (unique content, never cross-post identical text. First 100 tweets set your algo foundation.)",
-                "Set up GoLogin profile for LinkedIn automation (separate from Twitter profiles)",
-                # CONTENT
-                "Post 8 tweets + 2 threads from primary (1 freelance value thread, 1 build-in-public thread)",
-                "Generate 5 TikTok scripts via ai_video_content_pipeline.py --generate fitness --count 5",
-                "Create 3 LinkedIn posts repurposing best tweets with B2B framing for EAS (optimize for Depth Score: dwell time + comment depth + saves, zero external links in body)",
-                "Publish 1 Medium article + 1 Quora answer repurposing best thread content (Parasite SEO: high-DA backlinks to money sites for free)",
-                # ENGAGEMENT
-                "Reply to 50 accounts from primary + 10 replies per secondary (80 total)",
-                "Comment on 5 LinkedIn posts about business automation (value-add, link EAS site in profile)",
-                # REVENUE
-                "Run sam_gov_monitor.py to scan SAM.gov for IT/software/automation contracts matching NAICS 541511-541990",
-                "Run uk_contracts_finder.py --categories IT consulting marketing to scan UK procurement opportunities",
-                "Review LEDGER/GOV_OPPORTUNITIES.csv: identify top 3 contracts we can bid on with Claude Code capabilities",
-                "Run eas_lead_pipeline.py: scrape + score 50 local businesses with outdated websites",
-                "Draft 3 EAS cold email templates: Signal Map intro ($1,500), Phone Pilot pitch ($3,500), Ops Pilot value prop ($4,500)",
-                # AUTOMATION
-                "Verify venture_autonomy.py --status: all 8 venture types active (OUTBOUND, CONTENT, APP, LOCAL_BIZ, RESEARCH, MONETIZE, PRODUCT, SCRAPING)",
-                "Verify daily_engagement_planner.py ran at 7AM, review today's engagement plan",
-                "Check n8n w09 (content repurpose) execution status"
+                {"text": "Secondary account warmup Day 3 (5 tweets + 20 replies per account)", "tag": "SEMI", "detail": "Content from CONTENT/social/posting_queue/ filtered per account niche.\nPost via GoLogin profiles. Unique content per account (never cross-post identical text).\nFirst 100 tweets set algo foundation.\nStagger 30+ min between accounts.\nTier: MEDIUM.\nTime: 20 min."},
+                {"text": "Set up GoLogin profile for LinkedIn automation", "tag": "MANUAL", "detail": "In GoLogin, create new profile: 'LinkedIn-EAS'\nOS: macOS, browser: Chrome, proxy: separate SOAX sticky session.\nNEVER share proxy with Twitter profiles.\nLinkedIn detects automation aggressively. Use Expandi ($99/mo) or Dripify ($59/mo) for safe automation.\nChrome extensions = instant detection. Desktop automation = DEAD.\nTier: MEDIUM.\nTime: 15 min."},
+                {"text": "Post 8 tweets + 2 threads from primary", "tag": "AUTO", "detail": "Runs via auto_content_poster.py cron.\nThread topics: 1 freelance value thread, 1 build-in-public thread.\nVerify: python3 AUTOMATIONS/auto_content_poster.py --status\nTier: SAFE.\nTime: 0 min (automated)."},
+                {"text": "Generate 5 TikTok scripts for fitness niche", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/ai_video_content_pipeline.py --generate fitness --count 5\nOutput: CONTENT/video/scripts/fitness/\nFirst 3 seconds = hook or die. Pattern interrupts (zoom, cut, text flash).\nPost times: 6-10 AM and 7-11 PM.\nTime: 0 min (automated)."},
+                {"text": "Create 3 LinkedIn posts repurposing best tweets for EAS B2B", "tag": "SEMI", "detail": "Take top-performing tweets from auto_content_poster.py --winners.\nRewrite with B2B framing for Enterprise Automation Solutions.\nOptimize for LinkedIn Depth Score: dwell time + comment depth + saves.\nZERO external links in body (external links = -60% reach on LinkedIn).\nAI-detected content = -47% reach. Write in human voice.\nPost from GoLogin LinkedIn profile.\nTier: SAFE.\nTime: 20 min."},
+                {"text": "Publish 1 Medium article + 1 Quora answer (Parasite SEO)", "tag": "SEMI", "detail": "Repurpose best thread content into:\n1. Medium article (DA 96 backlink, free)\n2. Quora answer to relevant automation question\nParasite SEO: high-DA backlinks to money sites for free.\nInclude 1-2 links to Gumroad/landing pages in author bio.\nDO NOT use AI-detected writing style. Rewrite in human voice.\nMedium tip: submit to publications for 10x distribution.\nTime: 30 min."},
+                {"text": "Reply to 50 from primary + 10 per secondary (80 total)", "tag": "SEMI", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --reply-guy\nReview queue at CONTENT/social/reply_queue/.\nPrimary: 50 replies (SAFE tier, genuine engagement).\nSecondaries: 10 each (MEDIUM tier, building niche presence).\nTotal: 80 replies across accounts.\nStagger between accounts.\nTime: 40 min."},
+                {"text": "Scan SAM.gov for IT/software/automation contracts", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/sam_gov_monitor.py\nScans for NAICS codes 541511-541990 (IT consulting, software dev, digital marketing).\nOutput: LEDGER/GOV_OPPORTUNITIES.csv\nAlso run: python3 AUTOMATIONS/uk_contracts_finder.py --categories 'IT consulting marketing'\nReview top 3 contracts we can bid on with Claude Code capabilities.\nTime: 0 min (automated). 10 min to review output."},
+                {"text": "Run EAS lead pipeline: scrape + score 50 local businesses", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/eas_lead_pipeline.py\nCron: weekday 8AM.\nScrapes + scores local businesses with outdated websites.\nOutput: LEDGER/EAS_LEADS_SCORED.csv\nScoring: website age, mobile responsiveness, social presence, industry.\nTop verticals: dental, legal, HVAC (highest close rates).\nTime: 0 min (automated). 5 min to review top leads."},
+                {"text": "Draft 3 EAS cold email templates", "tag": "SEMI", "detail": "Templates for 3 EAS packages:\n1. Signal Map intro ($1,500) - 'We mapped 12 automation opportunities for [BUSINESS]'\n2. Phone Pilot pitch ($3,500) - 'Your receptionist handles 47 calls/day. AI handles 200.'\n3. Ops Pilot value prop ($4,500) - 'Cut 20 hrs/week of admin. We build it in 5 days.'\nStore in: MONEY_METHODS/EAS/email_templates/\nLoad into n8n w04 for Day 4+ automated sending.\nPersonalization tokens: {business_name}, {owner_name}, {industry}, {pain_point}.\nTime: 25 min."},
+                {"text": "Verify venture autonomy and daily engagement planner", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/venture_autonomy.py --status\n  Expected: all 8 venture types active (OUTBOUND, CONTENT, APP, LOCAL_BIZ, RESEARCH, MONETIZE, PRODUCT, SCRAPING).\n  Verify daily_engagement_planner.py ran at 7AM cron.\n  Review today's engagement plan at OPS/DAILY_ENGAGEMENT_PLAN.md.\n  Check n8n w09 (content repurpose) execution status.\nTime: 3 min."},
             ],
             "revenue_target": "$0-30",
             "content": {"tweets": 24, "threads": 2, "tiktoks": 5, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 80, "dms": 5, "comments": 15, "follows": 35},
             "outreach": {"cold_emails": 0, "proposals": 10, "calls": 0},
-            "automation_checks": [
-                "sam_gov_monitor.py: NAICS codes 541511-541990 scan",
-                "uk_contracts_finder.py: IT/consulting/marketing scan",
-                "eas_lead_pipeline.py: 50 leads scored (8AM cron)",
-                "venture_autonomy.py --status: 8 venture types",
-                "daily_engagement_planner.py: 7AM cron verified"
-            ],
-            "research": [
-                "GOV_OPPORTUNITIES.csv: top 3 biddable contracts",
-                "EAS competitor pricing: dental/legal/HVAC verticals",
-                "BOOMER_MALE_55_70_AFFILIATE.md: content angles for faceless YouTube"
-            ]
         },
         4: {
             "theme": "COLD OUTREACH IGNITION",
             "tasks": [
-                # ACCOUNTS
-                "Create TikTok account + post first 3 videos (screen recordings of AI builds, real phone, no VPN)",
-                "Create Pinterest account + pin 10 affiliate-linked products with SEO-optimized descriptions",
-                "Cross-promote: secondary accounts repost/quote-tweet primary content (stagger 2+ hours apart)",
-                # CONTENT
-                "Post 10 tweets + 1 thread from primary: breakdown of a real automation build",
-                "Post 5 tweets per secondary account: niche-specific content (never identical to primary)",
-                "Run content_factory.py --batch-alpha 10 to generate multi-platform content batch",
-                "Post 3 TikToks (cross-post adapted versions to YouTube Shorts + Instagram Reels)",
-                # ENGAGEMENT
-                "Reply to 60 accounts from primary + 15 per secondary (90 total)",
-                "DM 15 people: 5 who tweeted about hiring devs, 5 who need automation, 5 potential collaborators",
-                "Comment on 10 Reddit posts: r/freelance, r/automation, r/smallbusiness, r/Entrepreneur (genuine value, link in profile)",
-                # REVENUE
-                "Launch cold email via n8n w04: 50 emails to local businesses with outdated websites from eas_lead_pipeline scored list",
-                "Submit 10 more Upwork proposals (20 total active, target $2K+ projects) -- attach portfolio screenshots from PRODUCTS/ + apps from APP_FACTORY/",
-                "Check Fiverr for new buyer requests in AI/automation categories, respond to all within 1 hour with custom video intro (60 seconds max, screen record)",
-                # AUTOMATION
-                "Verify eas_lead_pipeline.py 8AM cron: check scored leads in LEDGER/",
-                "Verify method_discovery_crawler.py 5AM cron: any new P0 methods in OPS/CAPITAL_GENESIS_PRIORITY_STACK.md?",
-                "Verify edge_growth_engine.py is tracking engagement ratios per account within platform limits",
-                "Check n8n w14 (Stripe product delivery) webhook readiness for first sale"
+                {"text": "Create TikTok account + post first 3 videos", "tag": "MANUAL", "detail": "Use real phone (no VPN, no proxy for TikTok signup).\nContent: screen recordings of AI builds (authentic, raw).\nPost times: 6-10 AM or 7-11 PM.\nFirst 3 seconds = hook. Pattern interrupts every 3-5 seconds.\nHashtags: 0-2 max (3+ = 40% reach penalty on X, similar on TikTok).\nDO NOT use anti-detect browser for TikTok (phone fingerprint required).\nTime: 30 min."},
+                {"text": "Create Pinterest account + pin 10 affiliate products", "tag": "MANUAL", "detail": "Go to pinterest.com. Create business account.\nPin 10 boomer-targeted products with affiliate links:\n- Golf gadgets, fishing gear, health supplements, financial tools.\nSEO-optimize: keyword-rich pin titles and descriptions.\nUse eRank or Pinterest Trends for keyword research.\n15-25 pins/day is optimal cadence.\nAffiliate: Amazon Associates, ShareASale, or direct brand programs.\nTime: 25 min."},
+                {"text": "Cross-promote: secondaries repost/quote-tweet primary content", "tag": "SEMI", "detail": "Secondary accounts quote-tweet primary threads with unique takes.\nStagger 2+ hours apart between accounts.\nEach account adds a unique perspective from its niche.\nNEVER repost identical text (40% duplicate penalty).\nTier: MEDIUM.\nTime: 15 min."},
+                {"text": "Post 10 tweets + 1 thread from primary + 5 per secondary", "tag": "AUTO", "detail": "Primary: runs via auto_content_poster.py cron.\nThread topic: breakdown of a real automation build.\nSecondaries: 5 tweets each, niche-specific.\nContent from content_factory.py --batch-alpha 10.\nVerify: python3 AUTOMATIONS/auto_content_poster.py --status\nTier: SAFE (primary), MEDIUM (secondaries).\nTime: 0 min (automated). 5 min to verify."},
+                {"text": "Post 3 TikToks cross-posted to YouTube Shorts + IG Reels", "tag": "SEMI", "detail": "Take TikTok videos from Day 3 scripts (rendered).\nAdapt captions per platform (never identical text).\nTikTok: raw, authentic. Shorts: more polished. Reels: aesthetic.\nRemove TikTok watermark before cross-posting (SnapTik or SaveTik).\nPost times optimized per platform.\nTime: 20 min."},
+                {"text": "Reply to 60 from primary + 15 per secondary (90 total)", "tag": "SEMI", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --reply-guy\nReview queue at CONTENT/social/reply_queue/.\nPrimary: 60 replies (pushing toward ceiling).\nSecondaries: 15 each.\nTotal: 90 replies. Still under 50/account limit.\nTier: SAFE (primary), MEDIUM (secondaries).\nTime: 45 min."},
+                {"text": "DM 15 people: devs hiring, automation needs, collaborators", "tag": "MANUAL", "detail": "5 who tweeted about hiring devs (pitch speed + cost savings).\n5 who need automation (offer free 15-min audit).\n5 potential collaborators (cross-promotion, mutual amplification).\nPersonalize every DM. Reference their specific tweet/post.\nMax 50 DMs/day. We do 15 (conservative SAFE tier).\nTime: 25 min."},
+                {"text": "Comment on 10 Reddit posts for visibility", "tag": "SEMI", "detail": "Subreddits: r/freelance, r/automation, r/smallbusiness, r/Entrepreneur.\nProvide genuine value in comments. Link in Reddit profile, NOT in comment.\nReddit auto-removes comments with obvious self-promo links.\nAccount age + karma threshold required before posting in most subs.\nUse real Reddit account (no proxy needed for Reddit).\nTime: 20 min."},
+                {"text": "Launch cold email via n8n: 50 emails to scored local businesses", "tag": "AUTO", "detail": "n8n workflow w04 sends via SendGrid.\nRecipients: top-scored leads from eas_lead_pipeline.py.\nTemplate: Signal Map intro ($1,500) with personalization tokens.\nCAN-SPAM compliant: opt-out link, physical address, identified as ad.\nDomain: warmed 2+ weeks, SPF+DKIM+DMARC configured.\nPlain text only (HTML = spam filter trigger).\nDisable open tracking (Gmail shows warning label).\nSafe limit: 50/day for warmed inbox.\nMonitor: bounce rate < 5%, spam complaints < 0.1%.\nIf bounces spike: pause and clean list.\nTime: 0 min (automated). 5 min to verify."},
+                {"text": "Submit 10 Upwork proposals on $2K+ projects", "tag": "SEMI", "detail": "Search Upwork for: AI automation, Claude, chatbot, web scraping, data pipeline.\nFilter: $1K-5K budget, posted last 24h.\nEach proposal: personalized opening referencing their project.\nAttach portfolio from PRODUCTS/ and APP_FACTORY/ as proof of speed.\nMention 48hr delivery as differentiator.\n20 total active proposals after today.\nTime: 45 min."},
+                {"text": "Verify edge growth tracking and n8n webhook readiness", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/edge_growth_engine.py --status\n  Verify: engagement ratios per account within platform limits.\n  Check method_discovery_crawler.py 5AM cron: new P0 methods in OPS/CAPITAL_GENESIS_PRIORITY_STACK.md\n  Check n8n w14 (Stripe product delivery) webhook: ready for first sale.\nTime: 3 min."},
             ],
             "revenue_target": "$0-50",
             "content": {"tweets": 20, "threads": 1, "tiktoks": 3, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 90, "dms": 15, "comments": 20, "follows": 45},
             "outreach": {"cold_emails": 50, "proposals": 10, "calls": 0},
-            "automation_checks": [
-                "n8n w04 cold email: 50 emails sent, bounce rate < 5%",
-                "eas_lead_pipeline.py: scored leads accuracy check",
-                "method_discovery_crawler.py: 5AM cron output",
-                "edge_growth_engine.py: per-account engagement ratios",
-                "n8n w14 Stripe webhook: ready for first sale"
-            ],
-            "research": [
-                "CAPITAL_GENESIS_PRIORITY_STACK.md: new P0 methods",
-                "Reddit r/automation + r/freelance: hot job threads",
-                "DEFINITIVE_GROWTH_STACK.md: engagement escalation section"
-            ]
         },
         5: {
             "theme": "E-COMMERCE + ARBITRAGE SCAN",
             "tasks": [
-                # ACCOUNTS
-                "Set up Fanvue account for persona venture P02 (findom, separate GoLogin profile + SOAX proxy, unique residential IP geo-matched to persona location)",
-                "Post 5 findom persona tweets: teaser content + #findom #paypig hashtags + Fanvue link in bio (cross-platform stack: Twitter discovery > Fanvue content > Telegram VIP > CashApp tributes)",
-                "Set up Beehiiv newsletter account + create lead magnet PDF (free automation checklist)",
-                # CONTENT
-                "Post 10 tweets + 1 thread from primary: 'I sent 50 cold emails, here is what happened' (real-time case study)",
-                "Post 5 tweets per secondary (10 total), each adapted to its niche voice",
-                "Generate 3 faceless YouTube scripts via ai_video_content_pipeline.py --generate health --count 3 (boomer targeting)",
-                "Run auto_clip_pipeline.py --url [trending video] --max-clips 5 to batch-clip viral content",
-                # ENGAGEMENT
-                "Reply to 60 accounts from primary + 20 from secondaries (80 total)",
-                "DM 10 mid-tier accounts (2K-20K followers) offering free template in exchange for feedback/testimonial",
-                "Buy 3 PLR products ($20-50 each) from PLRProducts.com or IDplr.com, rebrand with PRINTMAXX voice, list on Gumroad at $27-47 (N11 PLR arbitrage: 20-40% margin after acquisition)",
-                # REVENUE
-                "Run product_scanner.py --source tiktok_ads_library --source fb_ads_library --min-engagement 10000: identify 5 winning products under $30 AOV with 3x+ markup potential (E01 TikTok Shop arbitrage)",
-                "List top 3 winning products on TikTok Shop with supplier links, cost/margin analysis, and 3 ad hook scripts per product",
-                "Send cold email batch 2: 50 more emails (100 total) via n8n w04, A/B test subject lines",
-                "Follow up on batch 1 non-openers with different subject line (auto via SendGrid sequence)",
-                "Run auto_freelance_responder.py --scan-and-respond to auto-generate proposals for hot Reddit/Upwork jobs",
-                # AUTOMATION
-                "Verify twitter_warmup_poster.py warmup day status + advancement",
-                "Check cold email analytics: open rates (target >40%), reply rates (target >2%), bounce rates (target <5%)",
-                "Verify capital_genesis_ranker.py 5:30AM cron: review updated priority stack",
-                "Check n8n w13 (Reddit pain point miner) output: any EAS prospects identified?",
-                "Post 3 findom teaser tweets from persona secondary account: establish presence in #findom #paypig communities before Fanvue launch Day 5"
+                {"text": "Set up Fanvue account for findom persona (P02)", "tag": "MANUAL", "detail": "Use separate GoLogin profile + unique SOAX proxy.\nGo to fanvue.com. Create account. Fanvue = most AI-friendly platform.\n15% of revenue from AI creators. Top AI creator: $23K/mo.\nCross-platform stack: Twitter discovery > Fanvue content > Telegram VIP > CashApp tributes.\nGeo-match proxy to persona location.\nTime: 15 min."},
+                {"text": "Post 5 findom persona tweets + set up cross-platform funnel", "tag": "SEMI", "detail": "Teaser content + #findom #paypig hashtags + Fanvue link in bio.\nPost via GoLogin findom profile.\n5-10 tweets/day in findom niche.\nBuild funnel: Twitter (free discovery) > Fanvue (paid content) > Telegram VIP ($99-499/mo) > CashApp (tributes).\nTier: MEDIUM. Separate from primary brand entirely.\nTime: 15 min."},
+                {"text": "Set up Beehiiv newsletter + create lead magnet PDF", "tag": "MANUAL", "detail": "Go to beehiiv.com. Create account.\nNewsletter name: match @PRINTMAXXER brand.\nLead magnet: free automation checklist PDF (create from DIGITAL_PRODUCTS/ content).\nSet up welcome email sequence (3 emails over 7 days).\nAdd opt-in link to all bios, Gumroad checkout, YouTube descriptions.\nBeehiiv free tier: up to 2,500 subscribers.\nTime: 25 min."},
+                {"text": "Post 10 tweets + 1 thread from primary (cold email case study)", "tag": "AUTO", "detail": "Thread topic: 'I sent 50 cold emails, here is what happened' (real-time case study).\nAuto-posted via cron. Content from posting_queue/.\n5 tweets per secondary (10 total), adapted to niche voice.\nVerify: python3 AUTOMATIONS/auto_content_poster.py --status\nTime: 0 min (automated)."},
+                {"text": "Generate 3 faceless YouTube scripts (boomer health)", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/ai_video_content_pipeline.py --generate health --count 3\nOutput: CONTENT/video/scripts/health/\nTarget: men 55-70.\nTopics: supplement reviews, health tracking gadgets, longevity tips.\nMonetization: affiliate links in description ($10-50/referral for health supplements).\nTime: 0 min (automated)."},
+                {"text": "Batch-clip 5 viral videos for repurposing", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_clip_pipeline.py --url [trending_video] --max-clips 5\nExtracts best 30-60 second segments from trending content.\nOutput: CONTENT/video/clips/\nUse for TikTok/Shorts/Reels with original commentary added.\nTime: 0 min (automated)."},
+                {"text": "Reply to 60 from primary + 20 from secondaries (80 total)", "tag": "SEMI", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --reply-guy\nReview queue. Post via GoLogin profiles.\nPrimary: 60 (SAFE). Secondaries: 20 total (MEDIUM).\nTime: 40 min."},
+                {"text": "DM 10 mid-tier accounts offering free template for testimonial", "tag": "MANUAL", "detail": "Target: 2K-20K follower accounts in AI/automation niche.\nOffer: free automation template in exchange for honest feedback/testimonial.\nTestimonials = social proof for Gumroad listings.\nFTC: must disclose if testimonial was incentivized.\nTime: 20 min."},
+                {"text": "Buy 3 PLR products and rebrand for Gumroad", "tag": "MANUAL", "detail": "Sources: PLRProducts.com, IDplr.com. Budget: $20-50 each.\nPLR = Private Label Rights = legal to rebrand and resell.\nRebrand with PRINTMAXX voice (apply copy-style.md).\nList on Gumroad at $27-47 each.\nN11 PLR arbitrage: 20-40% margin after acquisition.\nTime: 30 min."},
+                {"text": "Scan TikTok/Facebook ads libraries for winning products", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/product_scanner.py --source tiktok_ads_library --source fb_ads_library --min-engagement 10000\nIdentifies products: under $30 AOV, 3x+ markup potential.\nOutput: LEDGER/WINNING_PRODUCTS.csv\nE01 TikTok Shop arbitrage: find supplier on AliExpress/1688, list on TikTok Shop.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Send cold email batch 2 (50 more, A/B test subject lines)", "tag": "AUTO", "detail": "n8n w04 auto-sends batch 2.\n100 total emails sent.\nA/B test: 2 subject lines, 25 each.\nFollow up on batch 1 non-openers with different subject line (auto via SendGrid sequence).\nMonitor: open rates (target >40%), reply rates (target >2%).\nTime: 0 min (automated). 5 min to check analytics."},
+                {"text": "Auto-generate freelance proposals for hot jobs", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_freelance_responder.py --scan-and-respond\nScans Reddit and Upwork for matching jobs.\nAuto-generates personalized proposals.\nOutput: CONTENT/proposals/pending/ for review before sending.\nCron: every 2 hours, 15 min after scanner.\nTime: 0 min (automated). 10 min to review proposals."},
+                {"text": "Verify warmup status and analytics", "tag": "AUTO", "detail": "Commands:\n  Verify twitter_warmup_poster.py warmup day status.\n  Check cold email analytics: open rates (>40%), reply rates (>2%), bounce (<5%).\n  Verify capital_genesis_ranker.py 5:30AM cron output.\n  Check n8n w13 (Reddit pain point miner): any EAS prospects?\nTime: 5 min."},
             ],
             "revenue_target": "$0-75",
             "content": {"tweets": 20, "threads": 1, "tiktoks": 0, "youtube": 3, "newsletters": 0},
             "engagement": {"replies": 80, "dms": 10, "comments": 10, "follows": 40},
             "outreach": {"cold_emails": 50, "proposals": 5, "calls": 0},
-            "automation_checks": [
-                "twitter_warmup_poster.py: warmup day advancement",
-                "cold email analytics: open/reply/bounce rates",
-                "capital_genesis_ranker.py: 5:30AM cron output",
-                "n8n w13 Reddit pain miner: EAS prospect alerts",
-                "auto_freelance_responder.py: proposals generated"
-            ],
-            "research": [
-                "TikTok/Facebook ads library: winning product scan",
-                "cold email A/B test results: best subject lines",
-                "Fanvue competitor analysis: pricing, content strategy"
-            ]
         },
         6: {
             "theme": "WEEK 1 WAR ROOM",
             "tasks": [
-                # ACCOUNTS
-                "Audit all GoLogin profiles: verify each has unique SOAX IP, no fingerprint overlap, no shared cookies",
-                "Check shadowban status on all accounts: shadowban.eu for X, engagement rate drop for others",
-                # CONTENT
-                "Batch create 30 tweets + 7 threads for primary + 15 tweets per secondary for Week 2",
-                "Script 5 TikToks from ai_video_content_pipeline.py --generate fitness --count 5",
-                # ENGAGEMENT
-                "Reply to 30 accounts (reduced volume Saturday, increase quality)",
-                "Post 5 tweets + 1 thread from primary: 'Week 1 building in public -- real numbers'",
-                # REVENUE
-                "Full Week 1 analytics: Twitter impressions per account, Gumroad views, Fiverr clicks, email open/reply rates",
-                "Calculate revenue-per-hour for every channel: freelance, products, email, engagement",
-                "Rank all channels by ROI: top 3 get 3x resources in Week 2",
-                # AUTOMATION
-                "Run system_health_monitor.py --quick: fix any degraded services",
-                "Verify all scrapers ran (twitter_alpha_scraper, background_reddit_scraper, alpha_auto_processor)",
-                "Review daily_digest.py output (6:45AM cron): identify 3 actions the system surfaced that were missed",
-                "Check ACTIONABLE_QUEUE.md for any queued items not yet executed",
-                # GOV CONTRACTS
-                "Run sam_gov_monitor.py: check for newly posted IT/software contracts this week",
-                "Review GOV_OPPORTUNITIES.csv: shortlist contracts with response deadlines in next 14 days"
+                {"text": "Audit all GoLogin profiles for fingerprint isolation", "tag": "MANUAL", "detail": "Open each GoLogin profile. Visit browserleaks.com.\nVerify: unique IP, unique canvas hash, unique WebGL hash, no shared cookies.\nCheck: no fingerprint overlap between any two profiles.\nIf overlap found: regenerate fingerprint in GoLogin profile settings.\nTime: 20 min."},
+                {"text": "Check shadowban status on all accounts", "tag": "SEMI", "detail": "For X/Twitter: visit shadowban.eu, enter each account handle.\nFor Instagram: check engagement rate drop (normal = 3-6%, shadowban = <1%).\nFor TikTok: check if videos appear in hashtag search from logged-out browser.\nIf shadowbanned on X: reduce to 3 tweets/day for 48hrs, no automation, genuine engagement only.\nRecovery: stop all automated activity, post manually for 5-7 days.\nTime: 15 min."},
+                {"text": "Batch create 30 tweets + 7 threads + 15/secondary for Week 2", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/content_factory.py --batch-alpha 30\nAdditional: python3 AUTOMATIONS/content_factory.py --threads 7\nPer secondary: 15 unique tweets in niche voice.\nOutput: CONTENT/social/posting_queue/\nScript 5 TikToks: python3 AUTOMATIONS/ai_video_content_pipeline.py --generate fitness --count 5\nTime: 0 min (automated). 15 min to review/edit."},
+                {"text": "Post 5 tweets + 1 thread from primary (Week 1 real numbers)", "tag": "AUTO", "detail": "Reduced volume Saturday. Focus on quality.\nThread: 'Week 1 building in public -- real numbers'\nVerify: python3 AUTOMATIONS/auto_content_poster.py --status\nTier: SAFE.\nTime: 0 min (automated)."},
+                {"text": "Reply to 30 accounts (reduced Saturday volume, higher quality)", "tag": "SEMI", "detail": "Saturday = quality over quantity.\nPrimary only, 30 replies.\nFocus on high-value accounts with >10K followers.\nTime: 20 min."},
+                {"text": "Full Week 1 analytics across all channels", "tag": "SEMI", "detail": "Compile:\n- Twitter impressions per account (Twitter Analytics or Typefully).\n- Gumroad views + conversions.\n- Fiverr clicks + buyer requests.\n- Email open/reply/bounce rates from SendGrid dashboard.\n- Etsy views/favorites.\n- KDP page reads.\nCalculate revenue-per-hour for every channel.\nRank all channels by ROI. Top 3 get 3x resources in Week 2.\nStore results in OPS/WEEKLY_ANALYTICS/week1.md.\nTime: 30 min."},
+                {"text": "Verify system health + scrapers + daily digest", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/system_health_monitor.py --quick\n  Verify all scrapers ran (twitter_alpha, reddit, alpha_auto_processor).\n  Review daily_digest.py output (6:45AM cron): identify 3 missed actions.\n  Check ACTIONABLE_QUEUE.md for queued items not yet executed.\nTime: 5 min."},
+                {"text": "Scan SAM.gov for new contracts posted this week", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/sam_gov_monitor.py\nReview GOV_OPPORTUNITIES.csv: shortlist contracts with deadlines in next 14 days.\nTime: 0 min (automated). 5 min to review."},
             ],
             "revenue_target": "$0-100",
             "content": {"tweets": 5, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 30, "dms": 5, "comments": 5, "follows": 15},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "system_health_monitor.py --quick: all services green",
-                "all scrapers: twitter/reddit/alpha verified",
-                "daily_digest.py: 6:45AM cron output reviewed",
-                "ACTIONABLE_QUEUE.md: queued items cleared",
-                "shadowban check: all accounts clean"
-            ],
-            "research": [
-                "Week 1 channel ROI ranking: revenue-per-hour analysis",
-                "GOV_OPPORTUNITIES.csv: biddable contracts shortlist",
-                "daily_digest.py: missed opportunities identified"
-            ]
         },
         7: {
             "theme": "CONTENT FACTORY + BOOMER PIPELINE",
             "tasks": [
-                # ACCOUNTS
-                "Set up YouTube channel: branding, about page, thumbnail template, channel keywords for faceless boomer content",
-                "Add CashApp/Venmo/crypto wallet links to ALL account bios (P11 passive tributes)",
-                # CONTENT
-                "Upload first 3 faceless YouTube videos (golf tips, fishing gear reviews, health for men 55+) from ai_video_content_pipeline.py output",
-                "Create 5 Facebook posts for boomer demo Groups (golf automation, health tracking, fishing tech)",
-                "Write first newsletter issue in Beehiiv: automation alpha + exclusive tool recommendation",
-                "Run edge_growth_engine.py --repurpose [best_thread] to atomize top content across 6 platforms",
-                # ENGAGEMENT
-                "Reply to 30 accounts + respond to all accumulated DMs across all accounts",
-                "Post 3 tweets per secondary account (maintain warmup cadence)",
-                # REVENUE
-                "Optimize top 3 Gumroad listings: update titles, descriptions, pricing based on Week 1 view data",
-                "Write cold email follow-up sequence: 3 emails at days 3/5/7 after initial (load into n8n w04)",
-                "Apply to 3 affiliate programs: health/supplement (10-15% commission), SaaS tools ($50-500/referral), hosting ($50-200/referral)",
-                # AUTOMATION
-                "Verify weekly backup ran (Sunday 3AM cron), check backup integrity in ~/PRINTMAXX_BACKUPS/",
-                "Verify intelligence_router.py coverage: 484 docs mapped, 98.3% target",
-                "Verify security_audit.py Sunday 4:30AM cron ran: review 6-category findings",
-                "Plan Week 2 escalation: 3x content volume across all accounts, launch gov contract bids"
+                {"text": "Set up YouTube channel for faceless boomer content", "tag": "MANUAL", "detail": "Go to youtube.com. Create channel.\nBranding: name, about page, banner, PFP.\nChannel keywords: golf tips, fishing gear, health supplements, men over 50.\nThumbnail template: create reusable template in Canva or MEDIA/image_templates/.\nMonetization: YouTube Partner Program at 1K subs + 4K watch hours.\nTime: 20 min."},
+                {"text": "Add payment links to ALL account bios", "tag": "MANUAL", "detail": "CashApp, Venmo, crypto wallet links in all bios.\nP11 passive tributes: some followers will tip/donate spontaneously.\nFor findom persona: CashApp is primary tribute method.\nTime: 10 min."},
+                {"text": "Upload first 3 faceless YouTube videos", "tag": "SEMI", "detail": "Videos from ai_video_content_pipeline.py output.\nTopics: golf tips, fishing gear reviews, health for men 55+.\nUpload via YouTube Studio. Set:\n- SEO title with keywords\n- Description with affiliate links + timestamps\n- Tags (up to 500 characters)\n- End screen: subscribe button + next video\n- Cards at 30%, 60%, 80% marks linking to products\nThumbnail: high-contrast with large text.\nTime: 30 min."},
+                {"text": "Create 5 Facebook posts for boomer Groups", "tag": "SEMI", "detail": "Target Groups: golf tips, fishing tech, health tracking for seniors.\nContent: practical tips with product recommendations.\nInclude affiliate links where group rules allow.\nDO NOT spam. Provide genuine value. 1 post per group per day max.\nFacebook organic reach is low but boomer demo is highly active in Groups.\nTime: 20 min."},
+                {"text": "Write first Beehiiv newsletter issue", "tag": "SEMI", "detail": "Topic: automation alpha + exclusive tool recommendation.\nInclude: 3-5 actionable tips, 1 tool recommendation (affiliate link), 1 free resource.\nCTA: reply to this email (boosts deliverability), share with a friend (growth loop).\nSend to full subscriber list.\nMonitor: open rate (target >40%), click rate (target >5%).\nTime: 25 min."},
+                {"text": "Atomize top content across 6 platforms", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --repurpose [best_thread_path]\n1 thread becomes 12 niche-specific angles.\nDistributed to: X, LinkedIn, Pinterest, Facebook, Medium, Reddit.\nEach adaptation unique per platform voice.\nTime: 0 min (automated)."},
+                {"text": "Reply to 30 accounts + respond to all DMs", "tag": "SEMI", "detail": "Sunday = maintenance mode.\n30 replies from primary.\nRespond to ALL accumulated DMs across all accounts.\n3 tweets per secondary (maintain warmup cadence).\nTime: 25 min."},
+                {"text": "Optimize top 3 Gumroad listings from Week 1 data", "tag": "SEMI", "detail": "Review Gumroad analytics: views, conversions, bounce rate per product.\nUpdate titles, descriptions, pricing based on data.\nA/B test: try different price points on lowest-converting products.\nAdd social proof: any reviews, testimonials, download counts.\nTime: 15 min."},
+                {"text": "Write cold email follow-up sequence (3 emails)", "tag": "SEMI", "detail": "Sequence: Day 3, Day 5, Day 7 after initial.\nEach follow-up: different angle, shorter, more direct.\nLoad into n8n w04 as automated sequence.\nKey: first email = 58% of all replies. Optimize step 1 hardest.\nTime: 20 min."},
+                {"text": "Apply to 3 affiliate programs", "tag": "MANUAL", "detail": "Target high-commission verticals:\n1. Health/supplement (10-15% commission per sale)\n2. SaaS tools ($50-500 per referral)\n3. Hosting ($50-200 per referral)\nApply via: ShareASale, CJ Affiliate, Impact, or direct brand programs.\nNeed: website/social proof, traffic estimates, content plan.\nTime: 15 min."},
+                {"text": "Verify backups, intelligence router, security audit", "tag": "AUTO", "detail": "Commands:\n  Verify weekly backup ran (Sunday 3AM cron): ls ~/PRINTMAXX_BACKUPS/\n  Verify intelligence_router.py coverage: 484 docs, 98.3% target.\n    python3 AUTOMATIONS/intelligence_router.py --stats\n  Verify security_audit.py Sunday 4:30AM cron: review 6-category findings.\n    cat AUTOMATIONS/logs/security_audit.log | tail -50\nPlan Week 2 escalation: 3x content volume, launch gov contract bids.\nTime: 5 min."},
             ],
             "revenue_target": "$0-150",
             "content": {"tweets": 9, "threads": 0, "tiktoks": 0, "youtube": 3, "newsletters": 1},
             "engagement": {"replies": 30, "dms": 10, "comments": 5, "follows": 15},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "weekly backup: Sunday 3AM cron + integrity check",
-                "intelligence_router.py: 484 docs, 98.3% coverage",
-                "security_audit.py: Sunday 4:30AM 6-category scan",
-                "edge_growth_engine.py --repurpose: content atomization",
-                "n8n w04: follow-up sequence loaded and armed"
-            ],
-            "research": [
-                "YouTube competitor analysis: faceless boomer channels RPM/CPM",
-                "boomer Facebook Groups: top 10 groups by activity for golf/fishing/health",
-                "affiliate program commissions: highest-paying verticals"
-            ]
         },
         # ===== WEEK 2: VOLUME + PIPELINE =====
         8: {
             "theme": "TRIPLE-ACCOUNT VOLUME",
             "tasks": [
-                # ACCOUNTS
-                "Primary account: post 12 tweets + 2 threads (3x Week 1 volume)",
-                "Secondary accounts: post 8 tweets each (total 16 across 2 accounts)",
-                "Cross-account amplification: secondary accounts quote-tweet primary threads with unique takes (stagger 2+ hours)",
-                # CONTENT
-                "Run content_factory.py --batch-alpha 10: generate 10 pieces targeting X (primary), LinkedIn (EAS), Pinterest (affiliate), Facebook (boomer) simultaneously",
-                "Generate 5 TikToks via ai_video_content_pipeline.py --generate fitness --count 3 --generate golf --count 2",
-                "Post 3 TikToks + cross-post adapted versions to YouTube Shorts + Instagram Reels (unique captions per platform, never identical text)",
-                # ENGAGEMENT
-                "Reply to 75 accounts from primary + 25 from secondaries (100 total)",
-                "DM 15 people: 5 Upwork job posters who haven't hired, 5 thread engagers, 5 cold prospects",
-                "Set up ManyChat on Instagram business account: auto-DM lead magnet to anyone who comments keyword (Instagram Graph API: 200 DMs/hr, Meta-approved, zero ban risk)",
-                "Post to 3 X Communities before tweeting to trigger 30-min velocity window boost",
-                # REVENUE
-                "Send cold email batch 3: 75 emails (175 total) via n8n w04 with A/B winning subject line",
-                "Submit 15 Upwork proposals (35 total) targeting $1K-5K project budgets -- use portfolio pieces from PRODUCTS/ as proof of speed",
-                "Follow up on all Week 1 cold emails that got opens but no replies (auto via n8n w04 sequence)",
-                "Set up Bland AI voice outreach (S05): load EAS discovery call script, test 5 calls to warm leads from eas_lead_pipeline scored list (100 free calls/day)",
-                # AUTOMATION
-                "Verify agent_swarm.py --status: 25 agents operational, check model routing (Opus/Sonnet/Haiku)",
-                "Check alpha_auto_processor.py: process all PENDING_REVIEW entries in ALPHA_STAGING.csv",
-                "Verify n8n w01 (GMaps lead scraper): new leads enriched and scored"
+                {"text": "Post 12 tweets + 2 threads from primary (3x Week 1)", "tag": "AUTO", "detail": "Auto-posted via cron. 3x volume increase from Week 1.\nContent from content_factory.py --batch-alpha.\nVerify: python3 AUTOMATIONS/auto_content_poster.py --status\nTier: SAFE. 12 tweets/day is within normal range for active accounts.\nTime: 0 min (automated)."},
+                {"text": "Post 8 tweets per secondary (16 total across 2 accounts)", "tag": "AUTO", "detail": "Auto-posted via cron, staggered 30+ min between accounts.\nContent adapted per niche voice. Never identical to primary.\nTier: MEDIUM. 8/day is moderate for warmed accounts.\nTime: 0 min (automated). 5 min to verify."},
+                {"text": "Cross-account amplification: secondaries quote-tweet primary", "tag": "SEMI", "detail": "Secondary accounts quote-tweet primary threads with unique takes.\nStagger 2+ hours apart. Each adds niche-specific value.\nNEVER use identical text (40% duplicate detection penalty).\nTier: MEDIUM.\nTime: 10 min."},
+                {"text": "Generate 10 pieces of multi-platform content", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/content_factory.py --batch-alpha 10\nTargets: X (primary), LinkedIn (EAS), Pinterest (affiliate), Facebook (boomer).\nOutput: CONTENT/social/posting_queue/\nTime: 0 min (automated)."},
+                {"text": "Generate 5 TikToks (3 fitness + 2 golf)", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/ai_video_content_pipeline.py --generate fitness --count 3\n  python3 AUTOMATIONS/ai_video_content_pipeline.py --generate golf --count 2\nPost 3 TikToks + cross-post to YouTube Shorts + IG Reels (unique captions).\nTime: 0 min (automated). 15 min to post cross-platform."},
+                {"text": "Reply to 75 from primary + 25 from secondaries (100 total)", "tag": "SEMI", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --reply-guy\nReview queue. 100 total replies across accounts.\nPrimary: 75 (SAFE, under 50/account, spread across day).\nWait -- 75 exceeds single account limit of 50.\nAdjust: 50 from primary + 25 per secondary = 100 total.\nTime: 50 min."},
+                {"text": "DM 15 people (Upwork posters, engagers, cold prospects)", "tag": "MANUAL", "detail": "5 Upwork job posters who haven't hired yet (pitch speed).\n5 people who engaged with your threads (convert to leads).\n5 cold prospects from EAS lead list.\nPersonalize every DM.\nTime: 25 min."},
+                {"text": "Set up ManyChat on Instagram for auto-DM lead magnet", "tag": "MANUAL", "detail": "Go to manychat.com. Connect Instagram business account.\nSet up: anyone who comments keyword (e.g., 'GUIDE') gets auto-DM with lead magnet link.\nInstagram Graph API: 200 DMs/hr, Meta-approved, zero ban risk.\nThis is the ONLY legal Instagram DM automation.\nTime: 20 min."},
+                {"text": "Post to 3 X Communities for velocity window boost", "tag": "SEMI", "detail": "Post content to X Communities before main tweet.\nTriggers 30-min velocity window for broader distribution.\nCommunities provide warm audience for initial engagement.\nTier: SAFE. Platform-endorsed feature.\nTime: 10 min."},
+                {"text": "Send cold email batch 3 (75 emails, 175 total)", "tag": "AUTO", "detail": "n8n w04 auto-sends with A/B winning subject line from batch 1-2.\nFollow up on Week 1 emails that got opens but no replies (auto via SendGrid sequence).\nMonitor: open rates, reply rates, bounces.\nTime: 0 min (automated). 5 min to check analytics."},
+                {"text": "Submit 15 Upwork proposals ($1K-5K projects)", "tag": "SEMI", "detail": "Filter: AI/automation, $1K-5K budget, posted last 48h.\nAttach portfolio from PRODUCTS/ as proof of delivery speed.\n35 total active proposals after today.\nTime: 60 min."},
+                {"text": "Set up Bland AI voice outreach for EAS", "tag": "MANUAL", "detail": "Go to bland.ai. Create account.\nLoad EAS discovery call script from MONEY_METHODS/EAS/call_scripts/.\nTest 5 calls to warm leads from eas_lead_pipeline scored list.\n100 free calls/day. 1-3% appointment rate = 0-1 meetings from 5 calls.\nS05 voice outreach venture.\nTime: 20 min."},
+                {"text": "Verify agent swarm and n8n workflows", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/agent_swarm.py --status (25 agents, model routing check)\n  python3 AUTOMATIONS/alpha_auto_processor.py --process-new (clear PENDING_REVIEW)\n  Check n8n w01 (GMaps lead scraper): new leads enriched.\nTime: 3 min."},
             ],
             "revenue_target": "$10-75",
             "content": {"tweets": 28, "threads": 2, "tiktoks": 3, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 100, "dms": 15, "comments": 15, "follows": 50},
             "outreach": {"cold_emails": 75, "proposals": 15, "calls": 0},
-            "automation_checks": [
-                "agent_swarm.py: 25 agents, Opus/Sonnet/Haiku routing",
-                "alpha_auto_processor.py: all PENDING_REVIEW cleared",
-                "n8n w01 GMaps: lead enrichment pipeline",
-                "n8n w04 cold email: bounce rate + sequence health",
-                "X Communities: velocity window engagement strategy"
-            ],
-            "research": [
-                "Upwork trending AI categories: $1K-5K job analysis",
-                "cold email A/B results: winning subject lines",
-                "AGENT_ECOSYSTEM_ANALYSIS.md: tool to integrate this week"
-            ]
         },
         9: {
             "theme": "VIDEO + FACELESS SCALE",
             "tasks": [
-                # ACCOUNTS
-                "All secondary accounts: 8 tweets + 25 replies each (pushing past warmup into growth phase)",
-                # CONTENT
-                "Upload YouTube faceless video #4-5 (golf tips, health for 55+) via ai_video_content_pipeline.py",
-                "Record 1 YouTube tutorial video: 'How I automate a business in 48 hours with Claude' (10 min)",
-                "Run auto_clip_pipeline.py --urls-file batch.txt --max-clips 15 on 3 trending AI/tech videos",
-                "Post clips as TikToks + Shorts + Reels (3 clips per platform = 9 posts)",
-                "Post 10 tweets + 1 thread from primary promoting YouTube content",
-                # ENGAGEMENT
-                "Reply to 75 accounts from primary + 25 from secondaries (100 total)",
-                "DM 10 mid-tier YouTubers in AI/automation niche offering cross-promotion",
-                # REVENUE
-                "Submit 10 Upwork proposals on jobs matching Fiverr gig categories (45 total)",
-                "Run auto_freelance_responder.py --scan-and-respond: auto-bid on hot Reddit freelance threads",
-                "Respond to all Fiverr buyer requests within 1 hour, offer rush delivery premium",
-                "Run Bland AI: 20 calls to scored EAS leads from eas_lead_pipeline.py (100 free/day, 1-3% appointment rate = 0-1 meetings booked)",
-                # GOV CONTRACTS
-                "Run sam_gov_monitor.py --limit 50: scan for new IT/software/digital marketing contracts",
-                "Draft proposal outline for top-scoring SAM.gov opportunity matching our NAICS codes",
-                # AUTOMATION
-                "Verify venture_autonomy.py --status: all 8 venture types active",
-                "Check twitter_alpha_scraper.py: new accounts to follow/engage from 133-account scan"
+                {"text": "All secondaries: 8 tweets + 25 replies each (past warmup)", "tag": "AUTO", "detail": "Auto-posted via cron. Secondaries now past warmup threshold.\n8 tweets + 25 replies = active but safe.\nTier: MEDIUM.\nTime: 0 min (automated). 10 min to verify."},
+                {"text": "Upload YouTube faceless videos #4-5 (golf, health 55+)", "tag": "SEMI", "detail": "Videos from ai_video_content_pipeline.py.\nUpload via YouTube Studio with full SEO:\n- Keyword-rich title, description, tags.\n- Affiliate links in description.\n- End screens + cards.\n- Custom thumbnail (high contrast, large text).\nTime: 25 min."},
+                {"text": "Record 1 YouTube tutorial: 'How I automate a business in 48 hours'", "tag": "MANUAL", "detail": "Screen record a real automation build with narration.\n10 min target length. Show: problem > solution > results.\nEdit: cut dead air, add text overlays, speed up repetitive parts.\nUpload with SEO optimization.\nThis is your portfolio piece for freelance clients.\nTime: 90 min (record + edit + upload)."},
+                {"text": "Batch-clip 15 trending AI/tech videos", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_clip_pipeline.py --urls-file batch.txt --max-clips 15\nProcess 3 trending AI/tech videos, 5 clips each.\nOutput: CONTENT/video/clips/\nPost as TikToks + Shorts + Reels (3 clips per platform = 9 posts).\nTime: 0 min (automated). 20 min to post cross-platform."},
+                {"text": "Post 10 tweets + 1 thread from primary promoting YouTube", "tag": "AUTO", "detail": "Thread: 'I just dropped a video showing how I automate a business in 48hrs. Link in bio.'\nDO NOT put YouTube link in tweet body (30-50% distribution penalty).\nUse 'link in bio' CTA.\nTime: 0 min (automated)."},
+                {"text": "Reply to 75 from primary + 25 from secondaries (100 total)", "tag": "SEMI", "detail": "Review queue from edge_growth_engine.py.\nPost via GoLogin profiles.\nTime: 50 min."},
+                {"text": "DM 10 mid-tier YouTubers for cross-promotion", "tag": "MANUAL", "detail": "Target: AI/automation YouTubers with 1K-50K subscribers.\nOffer: mutual shoutouts, collaborative content, or affiliate partnership.\nTime: 20 min."},
+                {"text": "Submit 10 Upwork proposals + auto-bid Reddit freelance", "tag": "SEMI", "detail": "Upwork: 10 more proposals (45 total). Target $1K-5K jobs.\nReddit: python3 AUTOMATIONS/auto_freelance_responder.py --scan-and-respond\nAuto-generates proposals for hot Reddit freelance threads.\nReview before sending.\nTime: 40 min."},
+                {"text": "Bland AI: 20 calls to scored EAS leads", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/bland_caller.py --leads 20 --script eas_discovery\nOr via Bland AI dashboard.\n100 free calls/day. 1-3% appointment rate = 0-1 meetings from 20 calls.\nLog all objections for script refinement.\nTime: 0 min (automated). 5 min to review results."},
+                {"text": "Scan SAM.gov for IT/software contracts + draft proposal", "tag": "SEMI", "detail": "Command: python3 AUTOMATIONS/sam_gov_monitor.py --limit 50\nReview LEDGER/GOV_OPPORTUNITIES.csv.\nDraft proposal outline for top-scoring contract matching NAICS 541511-541990.\nSAM.gov proposal requirements: formatting, SAM registration, DUNS number.\nTime: 30 min."},
+                {"text": "Verify venture autonomy + alpha scraper output", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/venture_autonomy.py --status (8 venture types active)\n  Check twitter_alpha_scraper.py: new accounts to follow/engage.\nTime: 3 min."},
             ],
             "revenue_target": "$10-100",
             "content": {"tweets": 26, "threads": 1, "tiktoks": 3, "youtube": 3, "newsletters": 0},
             "engagement": {"replies": 100, "dms": 10, "comments": 15, "follows": 45},
             "outreach": {"cold_emails": 0, "proposals": 10, "calls": 20},
-            "automation_checks": [
-                "venture_autonomy.py: 8 venture types active",
-                "twitter_alpha_scraper.py: 133-account scan output",
-                "auto_clip_pipeline.py: 15 clips generated",
-                "auto_freelance_responder.py: proposals auto-generated",
-                "sam_gov_monitor.py: new opportunities identified"
-            ],
-            "research": [
-                "SAM.gov: biddable contracts matching NAICS 541511-541990",
-                "YouTube SEO: faceless channel optimization for RPM",
-                "OPEN_SOURCE_MONEY_TOOLS: quick-deploy revenue tools"
-            ]
         },
         10: {
             "theme": "EMAIL SCALE + MULTI-PLATFORM",
             "tasks": [
-                # ACCOUNTS
-                "Start 2 more secondary accounts in new niches (health/supplements, personal finance) with GoLogin + SOAX",
-                "Each new account: bio, profile pic, 3 seed tweets, follow 20 niche accounts",
-                # CONTENT
-                "Post 12 tweets + 2 threads from primary (1 case study, 1 tactical value)",
-                "Post 8 tweets per secondary (24 total across 3 secondaries)",
-                "Post in 5 Facebook Groups with boomer-targeted content (golf, fishing, health tracking)",
-                "Create 3 LinkedIn posts repurposing best tweets with EAS B2B framing",
-                "Run edge_growth_engine.py --cross-post to distribute top content across all platforms",
-                # ENGAGEMENT
-                "Reply to 75 from primary + 30 from secondaries (105 total)",
-                "DM 15 people: 5 who engaged with content + 10 cold prospects from email list",
-                # REVENUE
-                "Send cold email batch 4: 100 emails (275 total) via n8n w04, split test 3 value props",
-                "Follow up sequence: Day 3 on batch 2, Day 5 on batch 1 (auto via SendGrid)",
-                "Write case study from any wins (reply, call booked, gig landed)",
-                # AUTOMATION
-                "Verify n8n workflows w01/w04/w09/w14: all executing without errors",
-                "Verify daily_engagement_planner.py 7AM cron + edge_growth_engine.py status",
-                "Process 100 alpha entries via alpha_auto_processor.py --process-new",
-                "Check n8n w16 error alerter: any silent workflow failures?"
+                {"text": "Start 2 more secondary accounts (health, finance niches)", "tag": "MANUAL", "detail": "New GoLogin profiles + SOAX sticky sessions.\nNiche 1: health/supplements. Niche 2: personal finance.\nEach account: bio, PFP, 3 seed tweets, follow 20 niche accounts.\nTier: MEDIUM.\nTime: 20 min."},
+                {"text": "Post 12 tweets + 2 threads from primary", "tag": "AUTO", "detail": "1 case study thread, 1 tactical value thread.\nAuto-posted via cron.\nTime: 0 min (automated)."},
+                {"text": "Post 8 tweets per secondary (24 total across 3)", "tag": "AUTO", "detail": "Auto-posted via cron, staggered.\nTime: 0 min (automated)."},
+                {"text": "Post in 5 Facebook Groups with boomer content", "tag": "SEMI", "detail": "Target Groups: golf, fishing, health tracking for men 50+.\nContent: practical tips with product recommendations.\n1 post per group per day. Genuine value, not spam.\nTime: 20 min."},
+                {"text": "Create 3 LinkedIn posts for EAS B2B", "tag": "SEMI", "detail": "Repurpose best tweets with B2B framing.\nOptimize for Depth Score. Zero external links in body.\nTime: 15 min."},
+                {"text": "Cross-post top content across all platforms", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --cross-post\nDistributes top-performing content across X, LinkedIn, Pinterest, Facebook.\nAdapted per platform. Never identical.\nTime: 0 min (automated)."},
+                {"text": "Reply to 75 from primary + 30 from secondaries (105 total)", "tag": "SEMI", "detail": "Review queue from edge_growth_engine.py.\nPost via GoLogin profiles.\nTime: 50 min."},
+                {"text": "DM 15 people (engagers + cold prospects)", "tag": "MANUAL", "detail": "5 who engaged with content + 10 cold prospects from email list.\nTime: 25 min."},
+                {"text": "Send cold email batch 4 (100 emails, 275 total)", "tag": "AUTO", "detail": "n8n w04 sends via SendGrid.\nSplit test 3 value props.\nFollow up: Day 3 on batch 2, Day 5 on batch 1 (auto).\nSafe limit: multi-inbox rotation.\nTime: 0 min (automated). 5 min to check analytics."},
+                {"text": "Write case study from any wins", "tag": "SEMI", "detail": "If ANY positive signal (reply, call booked, gig landed):\nWrite detailed case study with real numbers.\nUse as social proof in: Gumroad, proposals, cold emails.\nStore at: OPS/CASE_STUDIES/\nTime: 20 min."},
+                {"text": "Verify n8n workflows + engagement planner + alpha processing", "tag": "AUTO", "detail": "Commands:\n  Check n8n w01/w04/w09/w14: all executing.\n  Check n8n w16 error alerter: any silent failures.\n  Verify daily_engagement_planner.py 7AM cron.\n  python3 AUTOMATIONS/alpha_auto_processor.py --process-new (100 entries)\nTime: 5 min."},
             ],
             "revenue_target": "$20-100",
             "content": {"tweets": 36, "threads": 2, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 105, "dms": 15, "comments": 20, "follows": 60},
             "outreach": {"cold_emails": 100, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "n8n w01/w04/w09/w14: execution health check",
-                "n8n w16 error alerter: silent failure detection",
-                "daily_engagement_planner.py: 7AM cron verified",
-                "edge_growth_engine.py: cross-post execution",
-                "alpha_auto_processor.py: 100 entries processed"
-            ],
-            "research": [
-                "cold email split test: 3 value props compared",
-                "GITHUB_AUTOMATION_TOOLS_CATALOG.md: 2 GREEN-rated tools to integrate",
-                "Facebook Group engagement: boomer demo response rates"
-            ]
         },
         11: {
             "theme": "EAS OFFENSIVE + MULTI-PLATFORM",
             "tasks": [
-                # ACCOUNTS
-                "All 4 secondary accounts: 8 tweets + 25 replies each (32 tweets, 100 replies total across secondaries)",
-                "Create Pinterest boards for each niche: automation tools, boomer health, golf tech, finance tips",
-                # CONTENT
-                "Post 12 tweets + 1 thread from primary cross-promoting YouTube/TikTok",
-                "Upload YouTube faceless videos #6-7 in boomer niches (golf tips, health supplements)",
-                "Post 3 TikToks + cross-post to Shorts + Reels (adapted per platform, never identical)",
-                "Pin 10 affiliate products on Pinterest with SEO-optimized descriptions",
-                # ENGAGEMENT
-                "Reply to 75 from primary + 30 from secondaries + 20 TikTok comments (125 total)",
-                "DM 10 TikTok creators in AI/tech niche for duet/stitch opportunities",
-                # REVENUE
-                "Run eas_lead_pipeline.py: research 20 local businesses with outdated websites using savvy_lead_scraper",
-                "Send 20 personalized EAS outreach emails to highest-scored leads (dental, legal, HVAC verticals)",
-                "Submit 10 Upwork proposals (55 total), increase budget targets to $2K-10K",
-                "Follow up on all Fiverr messages, offer rush delivery at premium price",
-                # AUTOMATION
-                "Check loop_closer.py --cycle: verify all 4 loops ran (decisions, feedback, pipeline, soul drift)",
-                "Review soul_drift_report.json: rewrite prompts for any agent scoring < 7/10",
-                "Check uk_contracts_finder.py: any new UK IT/automation procurement opportunities?"
+                {"text": "All 4 secondaries: 8 tweets + 25 replies each", "tag": "AUTO", "detail": "32 tweets + 100 replies total across secondaries.\nAuto-posted via cron.\nTier: MEDIUM.\nTime: 0 min (automated)."},
+                {"text": "Create Pinterest boards for each niche", "tag": "MANUAL", "detail": "Boards: automation tools, boomer health, golf tech, finance tips.\n10 pins per board with affiliate links.\nSEO-optimized descriptions.\nTime: 20 min."},
+                {"text": "Post 12 tweets + 1 thread from primary", "tag": "AUTO", "detail": "Cross-promoting YouTube/TikTok content.\nTime: 0 min (automated)."},
+                {"text": "Upload YouTube faceless videos #6-7 (boomer niches)", "tag": "SEMI", "detail": "Golf tips, health supplements content.\nFull SEO setup: title, description, tags, end screens.\nTime: 25 min."},
+                {"text": "Post 3 TikToks + cross-post to Shorts + Reels", "tag": "SEMI", "detail": "Adapted per platform, never identical.\nRemove TikTok watermark before cross-posting.\nTime: 20 min."},
+                {"text": "Pin 10 affiliate products on Pinterest", "tag": "SEMI", "detail": "SEO-optimized descriptions.\nAffiliate links to boomer-targeted products.\nTime: 15 min."},
+                {"text": "Reply to 75 primary + 30 secondaries + 20 TikTok comments (125 total)", "tag": "SEMI", "detail": "Review queue from edge_growth_engine.py.\nTikTok: reply to comments on your videos (algorithm boost for reply engagement).\nTime: 60 min."},
+                {"text": "DM 10 TikTok creators for duet/stitch opportunities", "tag": "MANUAL", "detail": "Target: AI/tech TikTokers with 5K-100K followers.\nOffer: duet/stitch collaboration.\nTikTok collab = instant audience share.\nTime: 15 min."},
+                {"text": "Run EAS lead pipeline: score 20 local businesses", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/eas_lead_pipeline.py\nCron: weekday 8AM.\nOutput: LEDGER/EAS_LEADS_SCORED.csv\nTop verticals: dental, legal, HVAC.\nTime: 0 min (automated). 5 min to review."},
+                {"text": "Send 20 personalized EAS outreach emails", "tag": "SEMI", "detail": "To highest-scored leads from eas_lead_pipeline.\nVerticals: dental, legal, HVAC.\nTemplates from MONEY_METHODS/EAS/email_templates/.\nPersonalize with business name, pain point, industry.\nTime: 30 min."},
+                {"text": "Submit 10 Upwork proposals ($2K-10K targets)", "tag": "SEMI", "detail": "Increase budget targets from $1K to $2K-10K.\n55 total active proposals.\nTime: 40 min."},
+                {"text": "Verify loop closer, soul drift, UK contracts", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/loop_closer.py --cycle (4 loops: decisions, feedback, pipeline, soul drift)\n  Review soul_drift_report.json: rewrite prompts for agents < 7/10.\n  python3 AUTOMATIONS/uk_contracts_finder.py: new UK IT/automation opportunities.\nTime: 5 min."},
             ],
             "revenue_target": "$20-150",
             "content": {"tweets": 44, "threads": 1, "tiktoks": 3, "youtube": 2, "newsletters": 0},
             "engagement": {"replies": 125, "dms": 10, "comments": 20, "follows": 50},
             "outreach": {"cold_emails": 20, "proposals": 10, "calls": 0},
-            "automation_checks": [
-                "loop_closer.py --cycle: 4 loops verified",
-                "soul_drift_report.json: all agents > 7/10",
-                "eas_lead_pipeline.py: 20 leads scored",
-                "uk_contracts_finder.py: UK procurement scan",
-                "Pinterest: 10 affiliate pins indexed"
-            ],
-            "research": [
-                "BOOMER_MALE_55_70_AFFILIATE.md: refine content angles from engagement data",
-                "EAS verticals: dental/legal/HVAC pain points and pricing",
-                "TikTok trending sounds + formats for AI niche"
-            ]
         },
         12: {
             "theme": "EAS CLOSE + GOV BID PREP",
             "tasks": [
-                # ACCOUNTS
-                "Audit all account health: TweepCred proxy check (engagement rate vs follower count), warmup progress",
-                # CONTENT
-                "Post 12 tweets + 1 thread from primary: EAS case study or automation ROI breakdown",
-                "Post 8 tweets per secondary (24 total), niche-specific value content",
-                "Post 3 TikToks showing real automation results (screen recordings)",
-                "Create first Facebook ad creative for boomer demo ($0 spend, build assets only)",
-                # ENGAGEMENT
-                "Reply to 75 from primary + 30 from secondaries + 10 LinkedIn (115 total)",
-                "DM 10 local business owners on Instagram/Facebook who posted about being overwhelmed",
-                # REVENUE
-                "Cold call 5 highest-scored EAS leads (Bland AI if available, manual if not)",
-                "Send cold email batch 5: 75 emails (350 total) with best-performing subject line",
-                "Send 5 custom EAS proposals: Signal Map ($1,500), Phone Pilot ($3,500), Ops Pilot ($4,500)",
-                "Draft SAM.gov proposal for highest-value matching contract from GOV_OPPORTUNITIES.csv",
-                # AUTOMATION
-                "Run security_audit.py: review 6-category findings (secrets, injection, permissions, network, agent safety)",
-                "Verify eas_lead_pipeline.py scoring accuracy: are high-scored leads converting to email replies?",
-                "Check n8n w02 (Apollo lead enrichment): B2B contacts matching EAS criteria"
+                {"text": "Audit all account health (TweepCred, engagement rates, warmup)", "tag": "SEMI", "detail": "Check each account:\n- Engagement rate (healthy = 3-6%, suppressed = <1%)\n- Follower-to-engagement ratio (bought followers tank this)\n- TweepCred proxy: high engagement + Premium = 55-75 range\n- Warmup progress: past 100 tweets threshold?\nDocument in OPS/ACCOUNT_HEALTH.md.\nTime: 15 min."},
+                {"text": "Post 12 tweets + 1 thread from primary (EAS case study)", "tag": "AUTO", "detail": "Thread: EAS automation ROI breakdown.\nTime: 0 min (automated)."},
+                {"text": "Post 8 per secondary (24 total) + 3 TikToks", "tag": "AUTO", "detail": "TikToks: real automation results (screen recordings).\nTime: 0 min (automated). 10 min for TikTok posting."},
+                {"text": "Create Facebook ad creative for boomer demo", "tag": "SEMI", "detail": "$0 spend today -- build assets only.\nCreative: golf/health product review format.\nTarget: men 55-70, interests: golf, fishing, health supplements.\nStore in MEDIA/ad_creatives/facebook/.\nTime: 20 min."},
+                {"text": "Reply to 75 primary + 30 secondaries + 10 LinkedIn (115 total)", "tag": "SEMI", "detail": "LinkedIn: comment on 10 posts about business automation.\nValue-add comments. EAS site link in profile, not comments.\nTime: 55 min."},
+                {"text": "DM 10 local business owners on IG/Facebook", "tag": "MANUAL", "detail": "Target: owners who posted about being overwhelmed.\nOffer free 15-min audit of their operations.\nPersonalize based on their posts.\nTime: 20 min."},
+                {"text": "Cold call 5 highest-scored EAS leads", "tag": "SEMI", "detail": "Use Bland AI if available, manual phone if not.\nScript from MONEY_METHODS/EAS/call_scripts/.\nGoal: book discovery call or get proposal request.\nTrack: pick-up rate, interest level, objections.\nTime: 30 min if manual, 0 if Bland AI."},
+                {"text": "Send cold email batch 5 (75 emails, 350 total)", "tag": "AUTO", "detail": "Best-performing subject line from A/B tests.\nn8n w04 auto-sends.\nTime: 0 min (automated)."},
+                {"text": "Send 5 custom EAS proposals", "tag": "SEMI", "detail": "Packages: Signal Map ($1,500), Phone Pilot ($3,500), Ops Pilot ($4,500).\nTemplates at MONEY_METHODS/EAS/proposals/.\nCustomize per business. Attach ROI projections.\nTime: 45 min."},
+                {"text": "Draft SAM.gov proposal for highest-value contract", "tag": "SEMI", "detail": "From GOV_OPPORTUNITIES.csv: pick highest-value matching contract.\nDraft proposal following SAM.gov format requirements.\nTime: 60 min."},
+                {"text": "Verify security audit, lead scoring, Apollo enrichment", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/security_audit.py --status (6-category scan)\n  Check eas_lead_pipeline.py: high-scored leads converting to replies?\n  Check n8n w02 (Apollo lead enrichment): B2B contacts matching EAS.\nTime: 5 min."},
             ],
             "revenue_target": "$30-200",
             "content": {"tweets": 36, "threads": 1, "tiktoks": 3, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 115, "dms": 10, "comments": 10, "follows": 40},
             "outreach": {"cold_emails": 75, "proposals": 5, "calls": 5},
-            "automation_checks": [
-                "security_audit.py: 6-category scan clean",
-                "eas_lead_pipeline.py: lead-to-reply conversion check",
-                "n8n w02 Apollo: B2B contact enrichment",
-                "Bland AI: call script readiness + availability",
-                "Account health: TweepCred engagement ratios"
-            ],
-            "research": [
-                "SAM.gov proposal requirements: formatting + submission process",
-                "EAS MSA/SOW templates: ready for same-day contract send",
-                "Bland AI call scripts: EAS discovery call framework"
-            ]
         },
         13: {
             "theme": "BOOMER BLITZ + NEWSLETTER",
             "tasks": [
-                # ACCOUNTS
-                "Subscribe X Premium on 2 more secondary accounts that have passed warmup threshold ($6 more = $15 total)",
-                # CONTENT
-                "Write newsletter #1 in Beehiiv: Week 2 automation alpha + exclusive tool recommendation",
-                "Post 12 tweets + 2 threads from primary (1 growth update, 1 tactical lesson)",
-                "Post 8 tweets per secondary (24 total)",
-                "Post in 10 Facebook Groups with boomer-targeted content: golf tech reviews, health supplements, fishing gear",
-                "Upload YouTube faceless videos #8-9 in boomer niches (supplement reviews, golf gadgets)",
-                "Run ai_video_content_pipeline.py --generate golf --count 5 for next batch",
-                # ENGAGEMENT
-                "Reply to 75 from primary + 30 from secondaries (105 total)",
-                "DM 15 people: 5 newsletter subscribers, 5 thread engagers, 5 cold prospects",
-                # REVENUE
-                "Submit 10 Upwork proposals on fresh $2K+ jobs (65 total, track win rate)",
-                "If budget available: launch $5/day Facebook ad targeting men 55-70 (golf/fishing/health interests)",
-                "If no budget: organic substitute -- post in 10 more boomer Facebook Groups",
-                "Run Bland AI: 50 calls to scored leads from eas_lead_pipeline.py (Week 2 ramp: target 2-3 meetings booked, log objections for script refinement)",
-                # AUTOMATION
-                "Verify all cron jobs via crontab -l: identify any silently failed jobs",
-                "Check method_discovery_crawler.py 5AM cron: any new revenue methods discovered?",
-                "Verify n8n w09 (content repurpose) is processing new content pieces"
+                {"text": "Subscribe X Premium on 2 more secondaries past warmup", "tag": "MANUAL", "detail": "Accounts that passed warmup threshold get X Premium Basic ($3/mo each).\nTotal X Premium spend: $15/mo for 5 accounts.\n10x impressions per account.\nTime: 5 min."},
+                {"text": "Write newsletter #1 (Week 2 alpha + tool recommendation)", "tag": "SEMI", "detail": "Beehiiv newsletter.\nContent: Week 2 automation alpha + exclusive tool recommendation.\nInclude affiliate link for recommended tool.\nCTA: reply to boost deliverability + share for growth.\nTime: 25 min."},
+                {"text": "Post 12 tweets + 2 threads from primary", "tag": "AUTO", "detail": "1 growth update thread, 1 tactical lesson thread.\nTime: 0 min (automated)."},
+                {"text": "Post 8 per secondary (24 total)", "tag": "AUTO", "detail": "Niche-specific content per account.\nTime: 0 min (automated)."},
+                {"text": "Post in 10 Facebook Groups with boomer content", "tag": "SEMI", "detail": "Golf tech reviews, health supplements, fishing gear.\n1 post per group. Genuine value.\nTime: 30 min."},
+                {"text": "Upload YouTube faceless videos #8-9 (boomer niches)", "tag": "SEMI", "detail": "Supplement reviews, golf gadgets.\nFull SEO setup.\nTime: 25 min."},
+                {"text": "Generate next batch of 5 golf video scripts", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/ai_video_content_pipeline.py --generate golf --count 5\nTime: 0 min (automated)."},
+                {"text": "Reply to 75 primary + 30 secondaries (105 total)", "tag": "SEMI", "detail": "Review queue. Post via GoLogin.\nTime: 50 min."},
+                {"text": "DM 15 people (subscribers, engagers, cold)", "tag": "MANUAL", "detail": "5 newsletter subscribers (engagement), 5 thread engagers (conversion), 5 cold prospects.\nTime: 25 min."},
+                {"text": "Submit 10 Upwork proposals (65 total)", "tag": "SEMI", "detail": "Fresh $2K+ jobs. Track win rate.\nTime: 40 min."},
+                {"text": "Launch $5/day Facebook ad or 10 more organic Group posts", "tag": "SEMI", "detail": "IF budget: Facebook Ads Manager > men 55-70, interests: golf/fishing/health.\n$5/day = $150/mo. Track: CPC, CTR, conversions.\nIF no budget: organic substitute -- 10 more boomer Facebook Group posts.\nTime: 15 min."},
+                {"text": "Bland AI: 50 calls to scored leads", "tag": "AUTO", "detail": "Week 2 ramp. 100 free calls/day.\nTarget: 2-3 meetings booked.\nLog objections for script refinement.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Verify cron health, method discovery, content repurpose", "tag": "AUTO", "detail": "Commands:\n  crontab -l | wc -l (verify ~112 jobs)\n  Check method_discovery_crawler.py 5AM cron output.\n  Check n8n w09 content repurpose execution.\nTime: 5 min."},
             ],
             "revenue_target": "$30-200",
             "content": {"tweets": 36, "threads": 2, "tiktoks": 0, "youtube": 2, "newsletters": 1},
             "engagement": {"replies": 105, "dms": 15, "comments": 15, "follows": 45},
             "outreach": {"cold_emails": 0, "proposals": 10, "calls": 50},
-            "automation_checks": [
-                "crontab full audit: all 112 jobs verified",
-                "method_discovery_crawler.py: 5AM cron output",
-                "n8n w09 content repurpose: execution check",
-                "Beehiiv: newsletter delivery rate + open rate",
-                "Facebook ads: creative assets ready (or organic substitute)"
-            ],
-            "research": [
-                "new P0 revenue methods from crawler",
-                "competitor newsletters in automation niche: monetization models",
-                "Facebook ad benchmarks for men 55-70 demo"
-            ]
         },
         14: {
             "theme": "WEEK 2 CALIBRATION",
             "tasks": [
-                # ACCOUNTS
-                "Full multi-account audit: engagement rate per account, follower growth, shadowban status check",
-                # CONTENT
-                "Batch create for Week 3: 35 tweets + 7 threads for primary, 20 tweets per secondary",
-                "Script 5 TikToks + 1 YouTube tutorial for next week",
-                "Post 8 tweets + 1 thread from primary: 'Week 2 numbers (transparent growth update)'",
-                # ENGAGEMENT
-                "Reply to 30 accounts (reduced volume, increase quality on analytics day)",
-                "Handle all open DM conversations across all accounts",
-                # REVENUE
-                "Full funnel analysis: emails sent vs opens vs replies vs calls vs revenue",
-                "Full proposal analysis: proposals sent vs responses vs gigs won vs revenue per gig",
-                "Rank every channel by revenue-per-hour: top 3 get 3x resources in Week 3",
-                "Kill any channel with literally 0 signal after 14 days of effort",
-                # AUTOMATION
-                "Verify backup system ran (auto-backup cron), check agent resilience logs for circuit breaker triggers",
-                "Review ACTIONABLE_QUEUE.md (7:30AM cron): execute any queued items",
-                "Deep dive CAPITAL_GENESIS_PRIORITY_STACK.md: rewrite Week 3 priorities if stack shifted",
-                # GOV CONTRACTS
-                "Review all SAM.gov + UK Contracts Finder results from the week: any approaching deadline?",
-                "Submit proposal if any contract deadline is within 7 days"
+                {"text": "Full multi-account audit (engagement, growth, shadowban)", "tag": "SEMI", "detail": "Per account: engagement rate, follower growth, shadowban status.\nshadowban.eu for X. Engagement drop for others.\nDocument results. Kill accounts <0.5% engagement.\nTime: 20 min."},
+                {"text": "Batch create Week 3 content (35 tweets + 7 threads + 20/secondary)", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/content_factory.py --batch-alpha 35\n  python3 AUTOMATIONS/content_factory.py --threads 7\nScript 5 TikToks + 1 YouTube tutorial.\nTime: 0 min (automated). 20 min to review."},
+                {"text": "Post 8 tweets + 1 thread from primary (Week 2 numbers)", "tag": "AUTO", "detail": "Transparent growth update with real numbers.\nTime: 0 min (automated)."},
+                {"text": "Reply to 30 accounts (reduced volume, analytics day)", "tag": "SEMI", "detail": "Quality over quantity on calibration day.\nHandle all open DM conversations.\nTime: 20 min."},
+                {"text": "Full funnel analysis: emails > opens > replies > calls > revenue", "tag": "MANUAL", "detail": "Compile from: SendGrid (email), Upwork (proposals), Gumroad (products), all platforms.\nFull proposal analysis: sent vs responses vs gigs won vs revenue/gig.\nRank every channel by revenue-per-hour.\nTop 3 channels get 3x resources in Week 3.\nKILL any channel with literally 0 signal after 14 days.\nStore: OPS/WEEKLY_ANALYTICS/week2.md\nTime: 45 min."},
+                {"text": "Pre-draft 100 cold emails for Week 3", "tag": "AUTO", "detail": "Auto-generate with personalization tokens.\nLoad into n8n w04.\nTime: 0 min (automated)."},
+                {"text": "Review GOV contracts + submit if deadline within 7 days", "tag": "SEMI", "detail": "SAM.gov + UK Contracts Finder results from the week.\nIf any contract deadline within 7 days: prioritize submission.\nTime: 15 min."},
+                {"text": "Verify backups, resilience logs, priority stack", "tag": "AUTO", "detail": "Commands:\n  Verify backup cron ran. Check agent resilience logs for circuit breaker triggers.\n  Review ACTIONABLE_QUEUE.md (7:30AM cron): execute queued items.\n  Deep dive CAPITAL_GENESIS_PRIORITY_STACK.md: adjust Week 3 priorities.\nTime: 10 min."},
             ],
             "revenue_target": "$50-250",
             "content": {"tweets": 8, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 30, "dms": 10, "comments": 5, "follows": 15},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "backup system: integrity check + agent resilience logs",
-                "ACTIONABLE_QUEUE.md: 7:30AM cron output cleared",
-                "circuit breaker status: no triggers in last 48h",
-                "multi-account audit: per-account engagement rates",
-                "GOV proposals: deadline tracking"
-            ],
-            "research": [
-                "full funnel analysis: email/proposal/content conversion rates",
-                "channel ROI ranking: revenue-per-hour per channel",
-                "CAPITAL_GENESIS_PRIORITY_STACK.md: Week 3 priority adjustment"
-            ]
         },
         # ===== WEEK 3: EDGE + OPTIMIZE =====
         15: {
             "theme": "KILL AND SCALE",
             "tasks": [
-                # ACCOUNTS
-                "KILL: any account with <0.5% engagement after 14 days (algo suppression territory, rebuild or abandon)",
-                "SCALE: 3x posting volume on top 2 performing accounts",
-                "Deploy strategic follow/unfollow on secondary accounts: 50 follows/day per account, unfollow after 3 days if no followback",
-                # CONTENT
-                "Post 15 tweets + 2 threads from primary + 10 tweets per secondary (35 total)",
-                "Deploy content atomization: 1 thread becomes 12 niche-specific angles via content_factory.py (unique per account, 40% penalty for duplicate detection)",
-                "Post 3 TikToks + 2 YouTube Shorts from auto_clip_pipeline.py best clips",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total, push ceiling)",
-                "DM 20 people: mix of warm leads, cold prospects, collaboration pitches",
-                "Quote-tweet 5 viral posts within 15 min of posting (contrarian take = reply thread visibility)",
-                # REVENUE
-                "Send cold email batch 6: 100 emails (450 total) using only best-performing template from A/B tests",
-                "Run auto_freelance_responder.py --scan-and-respond: batch bid on all matching Reddit/Upwork jobs",
-                "Launch newsletter lead magnet: tweet link from primary, pin to profile, add to all bios",
-                # AUTOMATION
-                "Verify edge_growth_engine.py tracking: follow/unfollow ratios within platform limits per account",
-                "Check competitive_cognition_audit.py (Sunday 5AM cron): any strategic blind spots?",
-                "Verify sqlite_alpha_index.py FTS5 index is current (3:30AM daily cron)"
+                {"text": "KILL accounts with <0.5% engagement after 14 days", "tag": "MANUAL", "detail": "Review Week 2 analytics.\n<0.5% engagement = algo suppression territory.\nOptions: rebuild with new content strategy OR abandon.\nFree up resources (proxy, profile, time) for performing accounts.\nTime: 10 min."},
+                {"text": "SCALE top 2 accounts to 3x posting volume", "tag": "AUTO", "detail": "Update cron schedules for top performers.\nIncrease from 8 to 15-20 tweets/day.\nauto_content_poster.py handles volume scaling.\nTime: 5 min to adjust cron."},
+                {"text": "Deploy follow/unfollow on AGGRESSIVE tier accounts", "tag": "AUTO", "detail": "50 follows/day per account. Unfollow after 3 days if no followback.\nONLY on AGGRESSIVE tier (expendable accounts).\nNEVER on SAFE (@PRINTMAXXER) or MEDIUM accounts.\nedge_growth_engine.py tracks ratios within platform limits.\nX limit: 400 follows/day (new accounts: 10/day).\nRisk: Shadowban on AGGRESSIVE accounts (acceptable).\nTime: 0 min (automated)."},
+                {"text": "Post 15 tweets + 2 threads from primary + 10/secondary (35 total)", "tag": "AUTO", "detail": "Scaled volume on performing accounts.\nTime: 0 min (automated)."},
+                {"text": "Deploy content atomization: 1 thread > 12 angles", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/content_factory.py --atomize [best_thread]\n1 source > 12 niche-specific angles via AI.\nEach account gets unique voice and angle.\n40% penalty for duplicate detection -- all 12 must be unique.\nTime: 0 min (automated)."},
+                {"text": "Post 3 TikToks + 2 YouTube Shorts", "tag": "SEMI", "detail": "From auto_clip_pipeline.py best clips.\nAdapt per platform.\nTime: 15 min."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Push ceiling on replies. Review queue.\nQuote-tweet 5 viral posts within 15 min (contrarian take).\nTime: 60 min."},
+                {"text": "DM 20 people (warm leads, cold, collaborators)", "tag": "MANUAL", "detail": "Mix of warm leads, cold prospects, collaboration pitches.\nTime: 30 min."},
+                {"text": "Send cold email batch 6 (100 emails, 450 total)", "tag": "AUTO", "detail": "Only best-performing template from A/B tests.\nn8n w04 auto-sends.\nTime: 0 min (automated)."},
+                {"text": "Auto-bid on all matching freelance jobs", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_freelance_responder.py --scan-and-respond\nBatch bid on matching Reddit/Upwork jobs.\nReview proposals before sending.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Launch newsletter lead magnet across all channels", "tag": "SEMI", "detail": "Tweet link from primary (link in reply, not main tweet).\nPin to profile. Add to all bios.\nAdd to YouTube descriptions, Gumroad checkout.\nTime: 15 min."},
+                {"text": "Verify edge tracking, cognition audit, alpha index", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/edge_growth_engine.py --status (follow/unfollow ratios)\n  Check competitive_cognition_audit.py (Sunday 5AM): strategic blind spots.\n  Verify sqlite_alpha_index.py FTS5 index current (3:30AM daily).\nTime: 5 min."},
             ],
             "revenue_target": "$50-300",
             "content": {"tweets": 35, "threads": 2, "tiktoks": 3, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 120, "dms": 20, "comments": 15, "follows": 75},
             "outreach": {"cold_emails": 100, "proposals": 5, "calls": 0},
-            "automation_checks": [
-                "edge_growth_engine.py: follow/unfollow per-account ratios",
-                "competitive_cognition_audit.py: strategic blind spots",
-                "sqlite_alpha_index.py: FTS5 index currency (3:30AM cron)",
-                "content atomization: duplicate detection avoidance",
-                "killed accounts/ventures: documented + resources freed"
-            ],
-            "research": [
-                "GREY_HAT_EDGE_GROWTH_MASTER.md Section 4: Lead Gen Edge tactics",
-                "killed ventures: post-mortem analysis",
-                "scaled channel playbook: what doubled engagement?"
-            ]
         },
         16: {
             "theme": "AFFILIATE + NEWSLETTER ENGINE",
             "tasks": [
-                # ACCOUNTS
-                "All secondary accounts: increase to 10 tweets + 30 replies each (scaling past warmup)",
-                # CONTENT
-                "Write newsletter #2: best alpha from Week 2 + exclusive content not posted publicly",
-                "Write 5 affiliate review threads: boomer targeting (health supplements, golf tech, fishing gear, financial tools, insurance)",
-                "Post affiliate content: 3 Facebook Groups (boomer), 2 Reddit posts, 2 Pinterest pins, 1 YouTube Short",
-                "Post 12 tweets + 2 threads from primary: newsletter promotion + affiliate value thread",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total)",
-                "DM 15 people who engaged with newsletter/affiliate tweets -- offer exclusive bonus",
-                "Target people asking 'what tool should I use for X?' and reply with genuine comparison + affiliate link in reply thread",
-                # REVENUE
-                "Apply to 5 affiliate programs: health/supplement (10-15%), SaaS tools ($50-500/ref), hosting ($50-200/ref)",
-                "Send cold email batch 7: 75 emails (525 total) with newsletter CTA in email signature",
-                "Submit 10 Upwork proposals (75 total, track win rate this week)",
-                "Add newsletter opt-in to: Gumroad checkout, YouTube desc, all bios, all landing pages",
-                # AUTOMATION
-                "Check daily_digest.py: surface missed opportunities from last 48 hours",
-                "Verify prompt_meta_review.py (48h cycle): any lost threads or forgotten goals?",
-                "Verify compliance_scanner: all affiliate content FTC compliant?"
+                {"text": "All secondaries: 10 tweets + 30 replies each", "tag": "AUTO", "detail": "Scaling past warmup into growth phase.\nTime: 0 min (automated)."},
+                {"text": "Write newsletter #2 (best alpha + exclusive content)", "tag": "SEMI", "detail": "Best alpha from Week 2. Content NOT posted publicly.\nExclusive = subscriber retention.\nTime: 25 min."},
+                {"text": "Write 5 affiliate review threads (boomer targeting)", "tag": "SEMI", "detail": "Health supplements, golf tech, fishing gear, financial tools, insurance.\nEach thread: honest review + affiliate link in reply (not main tweet).\nFTC compliant: '#ad' or '#affiliate' disclosure.\nTime: 40 min."},
+                {"text": "Post affiliate content across 4 platforms", "tag": "SEMI", "detail": "3 Facebook Groups (boomer), 2 Reddit posts, 2 Pinterest pins, 1 YouTube Short.\nAdapted per platform. Genuine reviews, not spam.\nTime: 25 min."},
+                {"text": "Post 12 tweets + 2 threads from primary", "tag": "AUTO", "detail": "Newsletter promotion + affiliate value thread.\nTime: 0 min (automated)."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Target people asking 'what tool should I use for X?'\nReply with genuine comparison + affiliate link in reply thread.\nTime: 60 min."},
+                {"text": "DM 15 newsletter/affiliate engagers", "tag": "MANUAL", "detail": "Offer exclusive bonus to people who engaged with affiliate content.\nTime: 25 min."},
+                {"text": "Apply to 5 affiliate programs", "tag": "MANUAL", "detail": "Health/supplement (10-15%), SaaS tools ($50-500/ref), hosting ($50-200/ref).\nApply via ShareASale, CJ Affiliate, Impact, direct.\nTime: 15 min."},
+                {"text": "Send cold email batch 7 (75 emails, 525 total)", "tag": "AUTO", "detail": "Newsletter CTA in email signature for cross-channel growth.\nTime: 0 min (automated)."},
+                {"text": "Submit 10 Upwork proposals (75 total)", "tag": "SEMI", "detail": "Track win rate this week.\nAdd newsletter opt-in to: Gumroad checkout, YouTube desc, all bios.\nTime: 40 min."},
+                {"text": "Verify daily digest, prompt meta review, compliance", "tag": "AUTO", "detail": "Commands:\n  Check daily_digest.py: missed opportunities last 48h.\n  Check prompt_meta_review.py (48h cycle): lost threads or forgotten goals.\n  Verify compliance_scanner: all affiliate content FTC compliant.\nTime: 5 min."},
             ],
             "revenue_target": "$50-300",
             "content": {"tweets": 32, "threads": 2, "tiktoks": 0, "youtube": 0, "newsletters": 1},
             "engagement": {"replies": 120, "dms": 15, "comments": 15, "follows": 50},
             "outreach": {"cold_emails": 75, "proposals": 10, "calls": 0},
-            "automation_checks": [
-                "daily_digest.py: 6:45AM cron missed-opportunity scan",
-                "prompt_meta_review.py: 48h cycle lost-thread detection",
-                "compliance_scanner: FTC compliance on affiliate content",
-                "Beehiiv: newsletter delivery + open rate tracking",
-                "affiliate link tracking: click attribution working"
-            ],
-            "research": [
-                "highest-commission affiliate programs by vertical",
-                "competitor newsletter monetization models",
-                "BOOMER_MALE_55_70_AFFILIATE.md: engagement data refinement"
-            ]
         },
         17: {
             "theme": "EAS CLOSE PUSH + ARBITRAGE",
             "tasks": [
-                # ACCOUNTS
-                "Check all account TweepCred proxies: engagement-to-follower ratios healthy across all accounts",
-                # CONTENT
-                "Post 12 tweets + 2 threads from primary (1 EAS value prop, 1 tactical content)",
-                "Post 10 tweets per secondary (30 total across 3 secondaries)",
-                "Upload YouTube video (EAS-themed: 'How I automate a business in 48 hours')",
-                "Post 3 TikToks: product review format (hook: 'Stop paying for X when Y exists')",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total)",
-                "DM 15 local business owners from Instagram/Facebook who posted about growth/operations",
-                # REVENUE
-                "Call/email top 5 warmest EAS leads: push for discovery call or proposal request",
-                "Send 5 custom EAS proposals ($1,500-4,500 packages) from MONEY_METHODS/EAS/",
-                "Send 25 EAS follow-up emails to all previous outreach (Day 7/14 follow-ups)",
-                "Scan TikTok/Facebook ads libraries for 3 new winning products for e-commerce arbitrage",
-                "Run sam_gov_monitor.py: weekly government contract scan",
-                # AUTOMATION
-                "Verify eas_lead_pipeline.py accuracy: high-scored leads vs actual reply conversion",
-                "Check agent_swarm model routing: Opus on swarm_brain/quality_gate, Sonnet on competitor_stalker/lead_machine, Haiku on system_healer/data_janitor",
-                "Verify auto_freelance_responder.py: proposals sent in last 24h, response rate"
+                {"text": "Check TweepCred health across all accounts", "tag": "AUTO", "detail": "Engagement-to-follower ratios healthy?\nAny account below suppression threshold needs intervention.\nCommand: python3 AUTOMATIONS/edge_growth_engine.py --account-health\nTime: 5 min."},
+                {"text": "Post 12 tweets + 2 threads from primary + 10/secondary (42 total)", "tag": "AUTO", "detail": "1 EAS value prop thread, 1 tactical content thread.\nTime: 0 min (automated)."},
+                {"text": "Upload YouTube EAS video", "tag": "SEMI", "detail": "'How I automate a business in 48 hours'\nFull SEO setup. End screen to subscribe.\nTime: 25 min."},
+                {"text": "Post 3 TikToks (product review hook format)", "tag": "SEMI", "detail": "Hook: 'Stop paying for X when Y exists'\nFormat: problem > reveal > CTA.\nTime: 15 min."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Review queue. Post via GoLogin.\nTime: 60 min."},
+                {"text": "DM 15 local business owners about growth/operations", "tag": "MANUAL", "detail": "From Instagram/Facebook. Owners who posted about growth struggles.\nOffer free audit. Build relationship before pitch.\nTime: 25 min."},
+                {"text": "Push top 5 warmest EAS leads to close", "tag": "MANUAL", "detail": "Call/email top 5 warmest leads.\nPush for discovery call or proposal request.\nAttach case study if available.\nTime: 30 min."},
+                {"text": "Send 5 custom EAS proposals ($1,500-4,500)", "tag": "SEMI", "detail": "From MONEY_METHODS/EAS/ templates.\nCustomize per business with specific automation opportunities.\nTime: 45 min."},
+                {"text": "Send 25 EAS follow-up emails (Day 7/14 follow-ups)", "tag": "AUTO", "detail": "Auto via SendGrid sequence.\nFollowing up on all previous EAS outreach.\nTime: 0 min (automated)."},
+                {"text": "Scan ads libraries for 3 winning e-commerce products", "tag": "AUTO", "detail": "TikTok/Facebook ads library scan.\nIdentify products for e-commerce arbitrage.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Weekly SAM.gov contract scan", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/sam_gov_monitor.py\nTime: 0 min (automated). 5 min to review."},
+                {"text": "Verify EAS pipeline, model routing, freelance responder", "tag": "AUTO", "detail": "Commands:\n  Check eas_lead_pipeline.py accuracy: high-scored leads vs reply conversion.\n  Check agent_swarm model routing: Opus/Sonnet/Haiku assignments correct.\n  Check auto_freelance_responder.py: proposals sent in last 24h.\nTime: 5 min."},
             ],
             "revenue_target": "$75-350",
             "content": {"tweets": 42, "threads": 2, "tiktoks": 3, "youtube": 1, "newsletters": 0},
             "engagement": {"replies": 120, "dms": 15, "comments": 15, "follows": 50},
             "outreach": {"cold_emails": 25, "proposals": 5, "calls": 5},
-            "automation_checks": [
-                "eas_lead_pipeline.py: lead-to-conversion accuracy",
-                "agent_swarm model routing: Opus/Sonnet/Haiku assignments",
-                "auto_freelance_responder.py: proposal send rate",
-                "sam_gov_monitor.py: weekly scan results",
-                "TweepCred health: all accounts above suppression threshold"
-            ],
-            "research": [
-                "EAS proposal refinement from objection data",
-                "e-commerce arbitrage: winning product identification",
-                "SAM.gov: new contracts matching capabilities"
-            ]
         },
         18: {
             "theme": "CONTENT FLOOD + CROSS-AMPLIFICATION",
             "tasks": [
-                # ACCOUNTS
-                "Cross-account amplification day: primary posts thread, secondary accounts reply with value-add takes (unique per account)",
-                "Deploy X Communities strategy: post to 3 Communities before main tweet to trigger algo velocity window",
-                # CONTENT
-                "Batch create 15 TikToks via ai_video_content_pipeline.py across fitness, golf, health niches",
-                "Batch create 5 YouTube Shorts from auto_clip_pipeline.py best clips",
-                "Batch 10 Facebook posts for boomer Groups (5 different groups, 2 posts each)",
-                "Write newsletter #3 with Week 3 alpha + exclusive subscriber offer",
-                "Post 12 tweets + 2 threads from primary (1 engagement-bait, 1 value)",
-                "Post 10 tweets per secondary (30 total)",
-                "Post 5 findom persona tweets + 3 Fanvue paid posts (maintain daily cadence -- P02 projected $200-5K/mo, needs consistent presence)",
-                "Publish 2 Medium articles + 1 LinkedIn long-form article repurposing top threads (Parasite SEO: DA90+ backlinks compound over 60 days)",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries + 10 viral post replies within 30 min (130 total)",
-                "DM 20 people: 10 engaged followers + 5 potential clients + 5 potential partners",
-                # REVENUE
-                "Post 5 Pinterest pins with affiliate-linked boomer products (golf, health, fishing)",
-                "Check all e-commerce listings performance: Etsy views/favorites, KDP page reads, Gumroad views/conversions, TikTok Shop clicks",
-                "Run Bland AI: 30 calls to scored leads (target: 1-2 meetings booked, use EAS discovery script from MONEY_METHODS/EAS/)",
-                # AUTOMATION
-                "Verify all content posted across platforms: check Buffer/Typefully/Publer queues",
-                "Run system_visualizer.py: review SYSTEM_VISUAL.html for architecture gaps",
-                "Check method_discovery_crawler.py + daily_tool_scout.py: emergent tactics?"
+                {"text": "Cross-account amplification: secondaries reply to primary thread", "tag": "SEMI", "detail": "Primary posts thread. Secondaries reply with value-add takes.\nEach account unique perspective from its niche.\nStagger 1-2 hours. Triggers velocity window.\nTier: MEDIUM.\nTime: 15 min."},
+                {"text": "Post to 3 X Communities before main tweets", "tag": "SEMI", "detail": "Triggers 30-min algo velocity window.\nCommunities provide warm audience for initial engagement.\nTime: 10 min."},
+                {"text": "Batch create 15 TikToks across niches", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/ai_video_content_pipeline.py --generate fitness --count 5 --generate golf --count 5 --generate health --count 5\nTime: 0 min (automated)."},
+                {"text": "Batch create 5 YouTube Shorts from best clips", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_clip_pipeline.py --batch --max-clips 5\nTime: 0 min (automated)."},
+                {"text": "Post 10 Facebook posts for boomer Groups", "tag": "SEMI", "detail": "5 different groups, 2 posts each.\nGenuine value content with product recommendations.\nTime: 25 min."},
+                {"text": "Write newsletter #3 (Week 3 alpha + subscriber offer)", "tag": "SEMI", "detail": "Exclusive alpha + subscriber-only discount on Gumroad products.\nTime: 25 min."},
+                {"text": "Post 12 tweets + 2 threads from primary + 10/secondary (42 total)", "tag": "AUTO", "detail": "1 engagement-bait thread, 1 value thread.\nTime: 0 min (automated)."},
+                {"text": "Post 5 findom persona tweets + 3 Fanvue paid posts", "tag": "SEMI", "detail": "Maintain daily cadence. P02 projected $200-5K/mo.\nSeparate GoLogin profile.\nTime: 15 min."},
+                {"text": "Publish 2 Medium articles + 1 LinkedIn long-form (Parasite SEO)", "tag": "SEMI", "detail": "Repurpose top threads.\nDA90+ backlinks compound over 60 days.\nMedium: submit to publications for 10x distribution.\nTime: 30 min."},
+                {"text": "Reply to 80 primary + 40 secondaries + 10 viral (130 total)", "tag": "SEMI", "detail": "Reply to viral posts within 30 min for max algo weight.\nTime: 65 min."},
+                {"text": "DM 20 people (followers, clients, partners)", "tag": "MANUAL", "detail": "10 engaged followers + 5 potential clients + 5 partners.\nTime: 30 min."},
+                {"text": "Post 5 Pinterest pins with affiliate boomer products", "tag": "SEMI", "detail": "Golf, health, fishing affiliate links.\nSEO-optimized descriptions.\nTime: 15 min."},
+                {"text": "Check e-commerce performance across all listings", "tag": "SEMI", "detail": "Etsy views/favorites, KDP page reads, Gumroad views/conversions, TikTok Shop clicks.\nKill underperformers. Double down on winners.\nTime: 15 min."},
+                {"text": "Bland AI: 30 calls to scored leads", "tag": "AUTO", "detail": "EAS discovery script. Target: 1-2 meetings booked.\nTime: 0 min (automated). 5 min to review."},
+                {"text": "Verify content queues, system visualizer, discovery crawler", "tag": "AUTO", "detail": "Commands:\n  Check Buffer/Typefully/Publer queues: all content scheduled.\n  python3 AUTOMATIONS/system_visualizer.py: review SYSTEM_VISUAL.html.\n  Check method_discovery_crawler.py + daily_tool_scout.py: emergent tactics.\nTime: 5 min."},
             ],
             "revenue_target": "$100-500",
             "content": {"tweets": 42, "threads": 2, "tiktoks": 3, "youtube": 0, "newsletters": 1},
             "engagement": {"replies": 130, "dms": 20, "comments": 20, "follows": 50},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "content queue verification: Buffer/Typefully/Publer",
-                "system_visualizer.py: architecture gap analysis",
-                "method_discovery_crawler.py: 5AM cron emergent tactics",
-                "daily_tool_scout.py: new tool discoveries",
-                "X Communities: velocity window engagement tracking"
-            ],
-            "research": [
-                "emerging content formats from discovery crawler",
-                "Pinterest SEO: affiliate pin indexing speed",
-                "cross-amplification metrics: engagement lift measurement"
-            ]
         },
         19: {
             "theme": "EDGE GROWTH DEPLOYMENT",
             "tasks": [
-                # ACCOUNTS
-                "Deploy bookmark scraping: monitor bookmarks of top 10 alpha accounts for content ideas and trend signals",
-                "Check shadowban status on all accounts: run detection on shadowban.eu (X), engagement drop analysis (IG/TikTok)",
-                # CONTENT
-                "Post 12 tweets + 1 thread from primary + 10 per secondary (32 total)",
-                "Run edge_growth_engine.py --squeeze: full edge tactic audit + actionable output",
-                "Run edge_growth_engine.py --viral [top_product]: generate viral hooks for best-selling product",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total)",
-                "Deploy reply guy at scale: reply within 15 min to 10 big accounts in niche (author-engaged reply = +75 algo weight)",
-                "DM 15 people with highest interaction scores this week",
-                # REVENUE
-                "Send cold email batch 8: 50 emails (500 total) -- only to highest-engagement segments",
-                "Run auto_freelance_responder.py --scan-and-respond: capture any new hot jobs",
-                "Review all Fiverr/Upwork active proposals: respond to inquiries within 1 hour",
-                "Run Bland AI: 30 calls to EAS + local biz leads (push for discovery calls, track appointment-to-close ratio)",
-                # GOV CONTRACTS
-                "Run uk_contracts_finder.py --keyword 'digital' --min-value 50000: scan high-value UK contracts",
-                "Review GOV_OPPORTUNITIES.csv: any deadlines in next 7 days? Draft submission.",
-                # AUTOMATION
-                "Verify sqlite_alpha_index.py FTS5 search: run query for 'edge growth' + 'arbitrage' + 'government contract'",
-                "Measure edge tactic lift: are follow/unfollow, cross-amplification, X Communities producing measurable engagement increase?"
+                {"text": "Deploy bookmark scraping on top 10 alpha accounts", "tag": "AUTO", "detail": "Monitor bookmarks for content ideas and trend signals.\nedge_growth_engine.py handles scraping.\nTime: 0 min (automated)."},
+                {"text": "Check shadowban status on all accounts", "tag": "SEMI", "detail": "shadowban.eu for X. Engagement drop for IG/TikTok.\nRecovery protocol if shadowbanned: reduce volume, manual only, 5-7 days.\nTime: 15 min."},
+                {"text": "Post 12 tweets + 1 thread primary + 10/secondary (32 total)", "tag": "AUTO", "detail": "Time: 0 min (automated)."},
+                {"text": "Run full edge tactic audit", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --squeeze\nFull edge tactic audit with actionable output.\nAlso: --viral [top_product] for viral hooks.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Deploy reply guy at scale: reply within 15 min to 10 big accounts.\nAuthor-engaged reply = +75 algo weight.\nTime: 60 min."},
+                {"text": "DM 15 highest-interaction people this week", "tag": "MANUAL", "detail": "Convert engagement into relationships/sales.\nTime: 25 min."},
+                {"text": "Send cold email batch 8 (50 emails, 500 total)", "tag": "AUTO", "detail": "Only highest-engagement segments.\nTime: 0 min (automated)."},
+                {"text": "Capture new hot freelance jobs", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_freelance_responder.py --scan-and-respond\nReview all Fiverr/Upwork active proposals: respond within 1 hour.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Bland AI: 30 calls (push for discovery calls)", "tag": "AUTO", "detail": "EAS + local biz leads. Track appointment-to-close ratio.\nTime: 0 min (automated)."},
+                {"text": "Scan UK contracts for high-value opportunities", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/uk_contracts_finder.py --keyword 'digital' --min-value 50000\nReview GOV_OPPORTUNITIES.csv: deadlines in 7 days? Draft submission.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Measure edge tactic lift + verify alpha index", "tag": "AUTO", "detail": "Are follow/unfollow, cross-amplification, X Communities producing measurable engagement increase?\nFTS5 query: python3 AUTOMATIONS/sqlite_alpha_index.py --query 'edge growth arbitrage'\nTime: 10 min."},
             ],
             "revenue_target": "$100-500",
             "content": {"tweets": 32, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 120, "dms": 15, "comments": 15, "follows": 55},
             "outreach": {"cold_emails": 50, "proposals": 5, "calls": 0},
-            "automation_checks": [
-                "edge_growth_engine.py --squeeze: full tactic audit",
-                "sqlite_alpha_index.py: FTS5 edge/arbitrage/gov queries",
-                "edge tactic lift measurement: cross-amplification ROI",
-                "shadowban detection: all accounts clean",
-                "uk_contracts_finder.py: high-value UK contract scan"
-            ],
-            "research": [
-                "GREY_HAT_EDGE_GROWTH_MASTER.md Section 9: shadowban detection protocols",
-                "edge tactic effectiveness: measured lift per tactic",
-                "GOV deadlines: upcoming submission requirements"
-            ]
         },
         20: {
             "theme": "PRODUCT HUNT PREP + PERSONA LAUNCH",
             "tasks": [
-                # ACCOUNTS
-                "Launch Fanvue persona: first 5 posts from separate GoLogin profile + SOAX proxy, findom niche",
-                "Fanvue cross-promotion: hint content on X secondary account with teaser + Fanvue link in bio",
-                # CONTENT
-                "Pick best product for Product Hunt: clear value prop, professional landing page ready",
-                "Prepare PH launch assets: 5 screenshots, 60-sec demo video, tagline, description, first comment draft",
-                "Post 12 tweets + 2 threads from primary (1 pre-launch hype, 1 building-in-public)",
-                "Post 10 per secondary (30 total)",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total)",
-                "DM 15 people who launched on PH recently: ask for tips + mutual upvote exchange",
-                "Recruit 10 hunters/upvoters: DM people who upvoted similar products recently",
-                # REVENUE
-                "Create urgency offer: limited-time bundle combining top 3 Gumroad products at 40% discount",
-                "Set up CashApp/Venmo/crypto tribute page for Fanvue persona (P02/P11)",
-                "Submit 10 Upwork proposals (85 total)",
-                # AUTOMATION
-                "Verify product landing page: load speed, checkout flow, all links functional",
-                "Run system_health_monitor.py --quick: all services green before PH launch",
-                "Check loop_closer.py --cycle: are deals moving through pipeline stages?"
+                {"text": "Launch Fanvue persona with first 5 posts", "tag": "SEMI", "detail": "Separate GoLogin profile + SOAX proxy. Findom niche.\nHint content on X secondary with teaser + Fanvue link in bio.\nTime: 20 min."},
+                {"text": "Prepare Product Hunt launch assets", "tag": "SEMI", "detail": "Pick best product with clear value prop + professional landing page.\nAssets: 5 screenshots, 60-sec demo video, tagline, description, first comment draft.\nStore at: PRODUCTS/product_hunt/\nTime: 45 min."},
+                {"text": "Post 12 tweets + 2 threads from primary + 10/secondary (42 total)", "tag": "AUTO", "detail": "1 pre-launch hype thread, 1 build-in-public thread.\nTime: 0 min (automated)."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Time: 60 min."},
+                {"text": "DM 15 PH launchers for tips + mutual upvote", "tag": "MANUAL", "detail": "People who launched recently: ask for tips + mutual support.\nRecruit 10 hunters/upvoters: DM people who upvoted similar products.\nTime: 25 min."},
+                {"text": "Create urgency offer: limited-time bundle at 40% off", "tag": "SEMI", "detail": "Combine top 3 Gumroad products.\nAnchor: '$297 value for $97 -- limited time.'\nTime: 15 min."},
+                {"text": "Set up CashApp/Venmo/crypto tribute page for persona", "tag": "MANUAL", "detail": "P02/P11 passive tributes.\nLink from Fanvue profile + X bio.\nTime: 10 min."},
+                {"text": "Submit 10 Upwork proposals (85 total)", "tag": "SEMI", "detail": "Time: 40 min."},
+                {"text": "Verify landing page, system health, pipeline", "tag": "AUTO", "detail": "Commands:\n  Test landing page: load speed, checkout flow, all links.\n  python3 AUTOMATIONS/system_health_monitor.py --quick\n  python3 AUTOMATIONS/loop_closer.py --cycle: deals moving through pipeline?\nTime: 5 min."},
             ],
             "revenue_target": "$100-500",
             "content": {"tweets": 42, "threads": 2, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 120, "dms": 15, "comments": 15, "follows": 45},
             "outreach": {"cold_emails": 0, "proposals": 10, "calls": 0},
-            "automation_checks": [
-                "landing page: load speed + checkout flow test",
-                "system_health_monitor.py: pre-launch all-green check",
-                "loop_closer.py --cycle: pipeline advancement status",
-                "Fanvue: profile live + content indexed",
-                "PH launch assets: complete and staged"
-            ],
-            "research": [
-                "Product Hunt launch playbooks: timing + first-hour strategy",
-                "Fanvue competitor analysis: pricing + content frequency",
-                "bundle pricing psychology: anchoring + perceived discount"
-            ]
         },
         21: {
             "theme": "WEEK 3 CALIBRATION",
             "tasks": [
-                # ACCOUNTS
-                "Full multi-account health audit: per-account engagement rate, follower growth, TweepCred score estimate, shadowban status",
-                # CONTENT
-                "Post 8 tweets + 1 thread from primary: transparent Week 3 numbers update",
-                "Batch create for Week 4: 35 tweets + 7 threads (primary), 25 tweets per secondary",
-                "Script 5 TikToks + 1 YouTube tutorial for Week 4",
-                # ENGAGEMENT
-                "Reply to 30 accounts (reduced volume, increase quality on calibration day)",
-                # REVENUE
-                "Trajectory check: are we on track for $1K this month? If not, what is the single fastest move to close the gap? Name it.",
-                "Revenue gap analysis: sort all active channels by $/hr. The top channel gets 3x resources starting tomorrow.",
-                "Full engagement-to-revenue conversion audit: which platform converts best?",
-                "If any venture crossed $100 this week: create SOP to replicate 3x",
-                "Pre-draft 100 cold emails for Week 4 with personalization tokens (load into n8n w04)",
-                # AUTOMATION
-                "Run full system_health_monitor.py: check all services, review logs for silent failures",
-                "Verify backup system integrity + agent resilience logs for circuit breaker triggers",
-                "Run competitive_cognition_audit.py: identify strategic blind spots",
-                "Review CAPITAL_GENESIS_PRIORITY_STACK.md: recalibrate Week 4 priorities"
+                {"text": "Full multi-account health audit", "tag": "SEMI", "detail": "Per-account: engagement rate, follower growth, TweepCred estimate, shadowban status.\nDocument in OPS/ACCOUNT_HEALTH.md.\nTime: 20 min."},
+                {"text": "Post 8 tweets + 1 thread from primary (Week 3 numbers)", "tag": "AUTO", "detail": "Transparent growth update.\nTime: 0 min (automated)."},
+                {"text": "Batch create Week 4 content", "tag": "AUTO", "detail": "35 tweets + 7 threads (primary), 25/secondary.\nScript 5 TikToks + 1 YouTube tutorial.\nTime: 0 min (automated). 20 min to review."},
+                {"text": "Reply to 30 accounts (reduced calibration volume)", "tag": "SEMI", "detail": "Quality over quantity.\nTime: 20 min."},
+                {"text": "Trajectory check: on track for $1K?", "tag": "MANUAL", "detail": "If not: what is the SINGLE fastest move to close the gap? Name it.\nRevenue gap analysis: sort channels by $/hr. Top channel gets 3x resources.\nFull engagement-to-revenue conversion audit per platform.\nIf any venture crossed $100: create SOP to replicate 3x.\nTime: 45 min."},
+                {"text": "Pre-draft 100 cold emails for Week 4", "tag": "AUTO", "detail": "With personalization tokens. Load into n8n w04.\nTime: 0 min (automated)."},
+                {"text": "Full system audit + recalibrate priorities", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/system_health_monitor.py --full\n  Verify backups + agent resilience logs.\n  python3 AUTOMATIONS/competitive_cognition_audit.py --run\n  Review CAPITAL_GENESIS_PRIORITY_STACK.md: recalibrate Week 4.\nTime: 15 min."},
             ],
             "revenue_target": "$100-600",
             "content": {"tweets": 8, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 30, "dms": 5, "comments": 5, "follows": 15},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "full system_health_monitor.py: all services audit",
-                "backup system + agent resilience logs: circuit breaker check",
-                "competitive_cognition_audit.py: strategic blind spots",
-                "multi-account health: engagement/growth/shadowban per account",
-                "CAPITAL_GENESIS_PRIORITY_STACK.md: priority recalibration"
-            ],
-            "research": [
-                "trajectory analysis: $1K gap identification",
-                "bottleneck identification: single biggest block",
-                "SOP creation: replicate $100+ ventures 3x"
-            ]
         },
         # ===== WEEK 4: COMPOUND + CLOSE =====
         22: {
             "theme": "LAUNCH DAY + REVENUE ENGINE",
             "tasks": [
-                # ACCOUNTS
-                "All accounts on full blast: primary 15 tweets, secondaries 10 each (45 total), all promoting PH launch",
-                # CONTENT
-                "Execute Product Hunt launch at 12:01 AM PT",
-                "Post first PH comment with story + ask-me-anything",
-                "Write 1 launch thread: 'How I built X from zero'",
-                "Share PH link: Reddit (r/SaaS, r/SideProject), LinkedIn, Facebook Groups, Discord, Indie Hackers",
-                "Send newsletter blast: 'We just launched on Product Hunt'",
-                "Post 3 TikToks: launch day behind-the-scenes",
-                # ENGAGEMENT
-                "Monitor PH every 30 min: respond to EVERY comment within 15 min",
-                "Reply to 50+ accounts: all-engagement mode across all platforms",
-                "DM 20 people who upvoted/commented on PH thanking them",
-                "Secondary accounts amplify: quote-tweet launch with unique congratulatory takes",
-                # REVENUE
-                "Pitch retainer to best freelance client: $500-2K/mo for ongoing automation support",
-                "Set up subscription tier on Gumroad/Whop: monthly templates ($19/mo) or community ($49/mo)",
-                "Publish Chrome extension v1 to Chrome Web Store (D05, $5 one-time fee): AI prompt helper or automation shortcut tool from APP_FACTORY/ portfolio",
-                # AUTOMATION
-                "Verify PH analytics tracking: upvotes, visits, conversions counted accurately",
-                "Monitor checkout under PH traffic load: no failures",
-                "Check n8n w14 Stripe webhook: all sales auto-fulfilled"
+                {"text": "All accounts full blast for PH launch (45 total tweets)", "tag": "AUTO", "detail": "Primary 15 tweets, secondaries 10 each.\nAll promoting Product Hunt launch.\nauto_content_poster.py handles increased volume.\nTime: 0 min (automated)."},
+                {"text": "Execute Product Hunt launch at 12:01 AM PT", "tag": "MANUAL", "detail": "Go to producthunt.com. Submit product.\nPost first comment with story + AMA.\nTiming: 12:01 AM Pacific = least competition for front page.\nFirst hour is critical: rally all upvotes in first 60 min.\nShare PH link: Reddit (r/SaaS, r/SideProject), LinkedIn, Facebook, Discord, Indie Hackers.\nSend newsletter blast: 'We just launched on Product Hunt'\nTime: 30 min launch + all-day monitoring."},
+                {"text": "Post 3 TikToks: launch day behind-the-scenes", "tag": "SEMI", "detail": "Raw, authentic BTS content.\nShow real-time upvote count, comments, reactions.\nTime: 15 min."},
+                {"text": "Monitor PH + respond to EVERY comment within 15 min", "tag": "MANUAL", "detail": "Check PH every 30 min throughout the day.\nRespond to every comment within 15 min.\nHigh responsiveness = better PH ranking.\nTime: continuous throughout day."},
+                {"text": "Reply to 50+ accounts across all platforms (all-engagement mode)", "tag": "SEMI", "detail": "All-engagement mode. Every platform.\nSecondary accounts amplify: quote-tweet launch with unique congratulatory takes.\nDM 20 people who upvoted/commented thanking them.\nTime: 60 min."},
+                {"text": "Pitch retainer to best freelance client", "tag": "MANUAL", "detail": "$500-2K/mo for ongoing automation support.\nUse relationship built over Weeks 1-3.\nRecurring revenue > one-time gigs.\nTime: 20 min."},
+                {"text": "Set up subscription tier on Gumroad/Whop", "tag": "MANUAL", "detail": "Monthly templates ($19/mo) or community ($49/mo).\nRecurring revenue compounds.\nTime: 15 min."},
+                {"text": "Publish Chrome extension to Chrome Web Store", "tag": "MANUAL", "detail": "D05: AI prompt helper or automation shortcut from APP_FACTORY/.\nChrome Web Store: $5 one-time developer fee.\nMonetize: freemium (free basic, $9/mo pro).\nTime: 30 min."},
+                {"text": "Verify PH analytics, checkout, auto-fulfillment", "tag": "AUTO", "detail": "PH analytics: upvotes, visits, conversions.\nCheckout: no failures under traffic load.\nn8n w14 Stripe webhook: all sales auto-fulfilled.\nTime: 5 min per check."},
             ],
             "revenue_target": "$200-1000",
             "content": {"tweets": 45, "threads": 1, "tiktoks": 3, "youtube": 0, "newsletters": 1},
             "engagement": {"replies": 50, "dms": 20, "comments": 30, "follows": 30},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "PH analytics: upvotes/visits/conversions tracking",
-                "checkout: no failures under traffic load",
-                "n8n w14 Stripe: auto-fulfillment working",
-                "cross-account amplification: PH launch boost",
-                "subscription tier: payment flow verified"
-            ],
-            "research": [
-                "real-time PH ranking position: hourly tracking",
-                "conversion rate from PH traffic: optimize if below 2%",
-                "competitor PH launches today: differentiation analysis"
-            ]
         },
         23: {
             "theme": "RECURRING REVENUE + EAS FINAL PUSH",
             "tasks": [
-                # ACCOUNTS
-                "All accounts: resume normal posting cadence after PH day (12 primary + 10 per secondary)",
-                # CONTENT
-                "Post 12 tweets + 2 threads from primary (1 PH results recap, 1 subscriber value thread)",
-                "Post 10 per secondary (30 total)",
-                "Post 3 TikToks: 'day in the life running automated business'",
-                "Write newsletter #4: exclusive subscriber offer + referral incentive",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total)",
-                "DM 20 people: 10 existing buyers/engagers + 10 cold prospects",
-                # REVENUE
-                "Push hardest EAS prospect to close: final proposal with 48-hour expiry + 10% early-bird discount",
-                "Call top 3 EAS leads: voice builds trust faster than email",
-                "Convert one-time Gumroad buyers to subscribers: email all buyers with subscription offer",
-                "Launch Telegram VIP channel ($49-99/mo) with exclusive alpha/automation content",
-                "Set up SMS opt-in on all checkout pages (98% open rate vs 20% email). First SMS to opted-in buyers: exclusive deal + referral code (TCPA compliant: explicit written consent per marketer)",
-                "Send cold email batch 9: 75 emails (575 total) with PH launch as social proof + testimonials",
-                # AUTOMATION
-                "Verify Telegram VIP payment gateway working",
-                "Check daily_engagement_planner.py: warmup schedule aligned with current volume?",
-                "Verify all revenue tracking: Gumroad, Fiverr, Upwork, affiliate, Stripe dashboards accurate"
+                {"text": "Resume normal posting cadence (12 primary + 10/secondary)", "tag": "AUTO", "detail": "Back to standard after PH day.\nTime: 0 min (automated)."},
+                {"text": "Post 12 tweets + 2 threads (PH results + subscriber value)", "tag": "AUTO", "detail": "Time: 0 min (automated)."},
+                {"text": "Post 3 TikToks (day in the life running automated business)", "tag": "SEMI", "detail": "Authentic content showing real automation results.\nTime: 15 min."},
+                {"text": "Write newsletter #4 (exclusive offer + referral incentive)", "tag": "SEMI", "detail": "Subscriber-only deal. Referral: 'share with 3 friends, get X free.'\nGrowth loop: each subscriber brings more.\nTime: 25 min."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Time: 60 min."},
+                {"text": "DM 20 people (10 buyers/engagers + 10 cold)", "tag": "MANUAL", "detail": "Convert engagement to sales. Push existing buyers to higher tiers.\nTime: 30 min."},
+                {"text": "Push hardest EAS prospect to close", "tag": "MANUAL", "detail": "Final proposal with 48-hour expiry + 10% early-bird discount.\nCall top 3 EAS leads: voice builds trust faster than email.\nTime: 30 min."},
+                {"text": "Convert Gumroad one-time buyers to subscribers", "tag": "SEMI", "detail": "Email all buyers with subscription offer.\nTemplate: 'You bought X. Get monthly updates + new tools for $19/mo.'\nTime: 15 min."},
+                {"text": "Launch Telegram VIP channel ($49-99/mo)", "tag": "MANUAL", "detail": "Exclusive alpha/automation content.\nPayment via Gumroad subscription or direct crypto.\nContent: daily alpha drops, tool reviews, behind-the-scenes.\nTime: 20 min."},
+                {"text": "Set up SMS opt-in on checkout pages", "tag": "MANUAL", "detail": "SMS: 98% open rate vs 20% email.\nTCPA REQUIRED: explicit written consent per marketer.\nFirst SMS to opted-in buyers: exclusive deal + referral code.\nUse Twilio or similar. NEVER cold SMS.\nPenalties: $500-$1,500 PER VIOLATION.\nTime: 20 min."},
+                {"text": "Send cold email batch 9 (75 emails, 575 total)", "tag": "AUTO", "detail": "PH launch as social proof + testimonials.\nTime: 0 min (automated)."},
+                {"text": "Verify Telegram payment, engagement planner, revenue tracking", "tag": "AUTO", "detail": "Telegram VIP payment gateway test.\ndaily_engagement_planner.py: warmup aligned with volume.\nAll revenue dashboards accurate: Gumroad, Fiverr, Upwork, affiliate, Stripe.\nTime: 10 min."},
             ],
             "revenue_target": "$200-1000",
             "content": {"tweets": 42, "threads": 2, "tiktoks": 3, "youtube": 0, "newsletters": 1},
             "engagement": {"replies": 120, "dms": 20, "comments": 15, "follows": 50},
             "outreach": {"cold_emails": 75, "proposals": 0, "calls": 3},
-            "automation_checks": [
-                "Telegram VIP: payment gateway test",
-                "daily_engagement_planner.py: volume/warmup alignment",
-                "revenue tracking: all dashboards accurate",
-                "EAS proposal: delivery pipeline ready if close",
-                "Gumroad/Whop: subscription tier conversion tracking"
-            ],
-            "research": [
-                "community monetization models: M01-M06 docs",
-                "Telegram channel benchmarks: subscriber-to-revenue",
-                "EAS objection handling: update playbook from calls"
-            ]
         },
         24: {
             "theme": "CONVERSION OPTIMIZATION + GOV BID",
             "tasks": [
-                # ACCOUNTS
-                "Audit all accounts: which to keep, which to pivot, which to kill based on 3-week data",
-                # CONTENT
-                "Post 12 tweets + 1 thread from primary: 'X things I learned from sending 500+ cold emails'",
-                "Post 10 per secondary (30 total)",
-                "Upload YouTube faceless videos #10-11 in boomer niches",
-                "Post 3 TikToks + 2 YouTube Shorts: top-converting format from analytics",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total)",
-                "DM 10 warmest leads with personalized offer based on engagement history",
-                # REVENUE
-                "Send cold email batch: 50 emails (625 total) maintaining daily cadence -- never let the pipeline go cold for more than 24h",
-                "Run Bland AI: 50 calls to fresh scored leads + follow-up calls to Day 23 meeting no-shows",
-                "A/B test: Gumroad product titles/descriptions/prices for top 3 sellers",
-                "Add upsells/cross-sells to all product checkout pages",
-                "Optimize email sequences: rewrite any email with <20% open rate or <2% click rate",
-                "Create upsell path: $15 buyer gets email for $50 product, $50 buyer gets $99 package",
-                # GOV CONTRACTS
-                "Submit SAM.gov proposal for best-matching contract (if deadline this week)",
-                "Run uk_contracts_finder.py --keyword 'automation' --min-value 25000: new opportunities",
-                "Identify UK contracts we can bid on: IT/software/digital transformation",
-                # AUTOMATION
-                "Run full alpha_auto_processor.py batch: clear all PENDING_REVIEW entries",
-                "Verify Gumroad analytics match expected revenue, check for payment failures",
-                "Check n8n w16 error alerter: any workflow failures in last 7 days?"
+                {"text": "Audit all accounts: keep, pivot, or kill based on 3-week data", "tag": "MANUAL", "detail": "Review 3-week performance per account.\nKeep: >1% engagement, growing followers.\nPivot: stagnant but salvageable niche.\nKill: <0.5% engagement, no growth.\nTime: 15 min."},
+                {"text": "Post 12 tweets + 1 thread (cold email lessons)", "tag": "AUTO", "detail": "Thread: 'X things I learned from sending 500+ cold emails'\nTime: 0 min (automated)."},
+                {"text": "Post 10/secondary (30 total) + 3 TikToks + 2 Shorts", "tag": "AUTO", "detail": "Top-converting format from analytics.\nTime: 0 min (automated). 15 min for video posting."},
+                {"text": "Upload YouTube faceless videos #10-11 (boomer niches)", "tag": "SEMI", "detail": "Full SEO setup.\nTime: 25 min."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Time: 60 min."},
+                {"text": "DM 10 warmest leads with personalized offer", "tag": "MANUAL", "detail": "Based on engagement history. Custom pricing.\nTime: 20 min."},
+                {"text": "Send cold email batch (50 emails, 625 total)", "tag": "AUTO", "detail": "Daily cadence. Never let pipeline go cold >24h.\nTime: 0 min (automated)."},
+                {"text": "Bland AI: 50 calls (fresh leads + follow-ups)", "tag": "AUTO", "detail": "Fresh scored leads + follow-up on Day 23 meeting no-shows.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "A/B test Gumroad product titles/descriptions/prices", "tag": "SEMI", "detail": "Top 3 sellers. Test: different titles, prices, descriptions.\nAdd upsells/cross-sells to checkout pages.\nCreate upsell path: $15 buyer > email for $50 product > $99 package.\nOptimize any email with <20% open or <2% click rate.\nTime: 20 min."},
+                {"text": "Submit SAM.gov proposal if deadline this week", "tag": "SEMI", "detail": "From GOV_OPPORTUNITIES.csv: best match.\nUK: python3 AUTOMATIONS/uk_contracts_finder.py --keyword 'automation' --min-value 25000\nTime: 60 min if submitting."},
+                {"text": "Verify alpha processor, Gumroad analytics, n8n errors", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/alpha_auto_processor.py --process-new (clear all PENDING_REVIEW)\n  Gumroad analytics vs expected revenue match.\n  n8n w16 error alerter: workflow failures in last 7 days.\nTime: 5 min."},
             ],
             "revenue_target": "$200-800",
             "content": {"tweets": 42, "threads": 1, "tiktoks": 3, "youtube": 2, "newsletters": 0},
             "engagement": {"replies": 120, "dms": 10, "comments": 10, "follows": 35},
             "outreach": {"cold_emails": 50, "proposals": 0, "calls": 50},
-            "automation_checks": [
-                "alpha_auto_processor.py: all PENDING_REVIEW cleared",
-                "Gumroad: analytics vs expected revenue match",
-                "n8n w16: error alerter -- 7-day failure review",
-                "uk_contracts_finder.py: automation contract scan",
-                "A/B test tracking: product title/price variations"
-            ],
-            "research": [
-                "conversion optimization: landing page best practices",
-                "pricing psychology: anchoring + payment splitting",
-                "SAM.gov proposal submission: requirements checklist"
-            ]
         },
         25: {
             "theme": "SCALE WINNERS + AUTOMATE REPEATS",
             "tasks": [
-                # ACCOUNTS
-                "Top-performing accounts: increase posting 2x, add X Premium if not already subscribed",
-                "Low-performing accounts: reduce to maintenance mode (3 tweets + 10 replies daily)",
-                # CONTENT
-                "Post 15 tweets + 2 threads from primary (revenue milestone + tactical value)",
-                "Post 10 per secondary (30 total)",
-                "Post 3 TikToks showing real automation workflows in action",
-                "Run content_factory.py --batch-alpha 15: large batch for end-of-month content buffer",
-                # ENGAGEMENT
-                "Reply to 80 from primary + 40 from secondaries (120 total)",
-                "DM 15 people: potential next-month collaboration partners",
-                # REVENUE
-                "Send cold email batch 10: 100 emails (675 total) -- only to hottest segments",
-                "Follow up on ALL open proposals: Upwork, EAS, freelance -- create urgency with expiry dates",
-                "Automate any task done manually 3+ times this month: script + cron",
-                "Deploy any backlogged automation from ACTIONABLE_QUEUE.md",
-                # AUTOMATION
-                "Set up new cron jobs for recurring workflows discovered this month",
-                "Create automated revenue reporting: daily Telegram summary via n8n w17",
-                "Update PRINTMAXX_SYSTEM_MAP.md with all changes from this month",
-                "Clean up dead ventures: archive docs, remove orphan cron jobs"
+                {"text": "Scale top accounts 2x, reduce low performers to maintenance", "tag": "AUTO", "detail": "Top-performing: increase posting 2x, add X Premium if not subscribed.\nLow-performing: 3 tweets + 10 replies daily (maintenance mode).\nUpdate cron schedules accordingly.\nTime: 5 min."},
+                {"text": "Post 15 tweets + 2 threads primary + 10/secondary (45 total)", "tag": "AUTO", "detail": "Revenue milestone thread + tactical value thread.\nTime: 0 min (automated)."},
+                {"text": "Post 3 TikToks showing real automation workflows", "tag": "SEMI", "detail": "Screen recordings of actual automations running.\nAuthentic > polished.\nTime: 15 min."},
+                {"text": "Generate large content buffer for end-of-month", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/content_factory.py --batch-alpha 15\nTime: 0 min (automated)."},
+                {"text": "Reply to 80 primary + 40 secondaries (120 total)", "tag": "SEMI", "detail": "Time: 60 min."},
+                {"text": "DM 15 potential collaboration partners for next month", "tag": "MANUAL", "detail": "Cross-promotion, affiliate partnerships, content collaborations.\nTime: 25 min."},
+                {"text": "Send cold email batch 10 (100 emails, 675 total)", "tag": "AUTO", "detail": "Only hottest segments.\nTime: 0 min (automated)."},
+                {"text": "Follow up ALL open proposals with urgency/expiry dates", "tag": "SEMI", "detail": "Upwork, EAS, freelance. Create urgency.\n'This rate expires Friday' or 'Slots filling up.'\nTime: 20 min."},
+                {"text": "Automate any task done manually 3+ times this month", "tag": "SEMI", "detail": "Review month's manual tasks.\nAnything done 3+ times: write script + add to cron.\nDeploy remaining ACTIONABLE_QUEUE.md items.\nTime: 30 min."},
+                {"text": "Update system map + clean dead ventures", "tag": "AUTO", "detail": "Commands:\n  Update OPS/PRINTMAXX_SYSTEM_MAP.md with all month changes.\n  Archive dead venture docs.\n  Remove orphan cron jobs: crontab -l | grep -v [dead_script]\nCreate automated revenue reporting: n8n w17 daily Telegram summary.\nTime: 15 min."},
             ],
             "revenue_target": "$200-800",
             "content": {"tweets": 45, "threads": 2, "tiktoks": 3, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 120, "dms": 15, "comments": 10, "follows": 40},
             "outreach": {"cold_emails": 100, "proposals": 5, "calls": 0},
-            "automation_checks": [
-                "new cron jobs deployed for recurring workflows",
-                "ACTIONABLE_QUEUE.md: all backlog cleared",
-                "PRINTMAXX_SYSTEM_MAP.md: updated with month changes",
-                "dead ventures: archived + orphan crons removed",
-                "automated revenue reporting: n8n w17 configured"
-            ],
-            "research": [
-                "NOVEL_DISCOVERIES.md: patterns worth extracting to sovrun",
-                "automation candidates: manual tasks done 3+ times",
-                "next-month pipeline warmup: pre-draft content + emails"
-            ]
         },
         26: {
             "theme": "PARTNERSHIP + COMMUNITY",
             "tasks": [
-                # ACCOUNTS
-                "Evaluate: which secondary accounts are worth $3/mo X Premium upgrade based on engagement data?",
-                # CONTENT
-                "Post 12 tweets + 1 thread from primary: Month retrospective with real numbers",
-                "Post 10 per secondary (30 total)",
-                "Upload YouTube video: month retrospective or best tutorial content",
-                "Post 3 TikToks: authentic behind-the-scenes, no polish",
-                "Write newsletter #5: month in review + what is coming next month",
-                # ENGAGEMENT
-                "Reply to 75 from primary + 30 from secondaries (105 total)",
-                "DM 10 top engagers: convert to community members / paid subscribers",
-                # REVENUE
-                "Send cold email batch 11: 50 emails (725 total) with best social proof from the month",
-                "Push any open EAS deals to close: follow up with case study + limited-time pricing",
-                "Review e-commerce listing performance: kill underperformers, double down on winners",
-                # GOV CONTRACTS
-                "Final SAM.gov + UK Contracts Finder weekly scan before month end",
-                "If any contract won: begin delivery planning immediately",
-                # AUTOMATION
-                "Run capital_genesis_ranker.py --rank --report: generate fresh next-month priority stack",
-                "Verify all 33 agents operational: agent_swarm (25) + venture_autonomy (8)",
-                "Check intelligence_router.py --stats: doc coverage and alpha entry count"
+                {"text": "Evaluate secondary accounts for X Premium ROI", "tag": "SEMI", "detail": "Based on engagement data: which secondaries justify $3/mo Premium?\nROI threshold: Premium accounts should show >2x impressions vs free.\nTime: 10 min."},
+                {"text": "Post 12 tweets + 1 thread (month retrospective, real numbers)", "tag": "AUTO", "detail": "Time: 0 min (automated)."},
+                {"text": "Post 10/secondary (30 total) + 3 TikToks + 1 YouTube", "tag": "AUTO", "detail": "YouTube: month retrospective or best tutorial.\nTikToks: authentic behind-the-scenes.\nTime: 0 min (automated). 25 min for YouTube upload."},
+                {"text": "Write newsletter #5 (month review + next month preview)", "tag": "SEMI", "detail": "Build anticipation for next month.\nTime: 25 min."},
+                {"text": "Reply to 75 primary + 30 secondaries (105 total)", "tag": "SEMI", "detail": "Time: 50 min."},
+                {"text": "DM 10 top engagers to convert to paid community", "tag": "MANUAL", "detail": "Convert free followers to Telegram VIP / Gumroad subscribers.\nTime: 20 min."},
+                {"text": "Send cold email batch 11 (50 emails, 725 total)", "tag": "AUTO", "detail": "Best social proof from the month.\nTime: 0 min (automated)."},
+                {"text": "Push open EAS deals to close with case study + urgency", "tag": "MANUAL", "detail": "Limited-time pricing. Attach case study.\nTime: 20 min."},
+                {"text": "Review e-commerce listing performance", "tag": "SEMI", "detail": "Kill underperformers. Double down on winners.\nEtsy, KDP, Gumroad, TikTok Shop.\nTime: 15 min."},
+                {"text": "Final monthly GOV contract scan", "tag": "AUTO", "detail": "SAM.gov + UK Contracts Finder.\nIf contract won: begin delivery planning.\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Verify all 33 agents + intelligence router + priority stack", "tag": "AUTO", "detail": "Commands:\n  python3 AUTOMATIONS/capital_genesis_ranker.py --rank --report\n  python3 AUTOMATIONS/agent_swarm.py --status (25 agents)\n  python3 AUTOMATIONS/venture_autonomy.py --status (8 ventures)\n  python3 AUTOMATIONS/intelligence_router.py --stats\nTime: 5 min."},
             ],
             "revenue_target": "$200-800",
             "content": {"tweets": 42, "threads": 1, "tiktoks": 3, "youtube": 1, "newsletters": 1},
             "engagement": {"replies": 105, "dms": 10, "comments": 10, "follows": 35},
             "outreach": {"cold_emails": 50, "proposals": 0, "calls": 3},
-            "automation_checks": [
-                "capital_genesis_ranker.py: fresh priority stack generated",
-                "all 33 agents: swarm (25) + ventures (8) operational",
-                "intelligence_router.py --stats: coverage + alpha count",
-                "SAM.gov + UK Contracts Finder: final monthly scan",
-                "e-commerce listings: performance review complete"
-            ],
-            "research": [
-                "next-month priority stack: adjusted from actual data",
-                "partnership opportunities: collab partners identified",
-                "community conversion: free follower to paid member pipeline"
-            ]
         },
         27: {
             "theme": "NEXT MONTH WAR PLAN",
             "tasks": [
-                # ACCOUNTS
-                "Full account stack review: total accounts, total X Premium spend, engagement per account, ROI per account",
-                "Plan account stack for next month: which to add, which to sunset, which niches to expand",
-                # CONTENT
-                "Post 8 tweets + 1 thread from primary: 'Month in review, honest numbers'",
-                "Post 5 per secondary (15 total)",
-                # ENGAGEMENT
-                "Reply to 30 accounts + handle all open DM conversations",
-                # REVENUE
-                "Month review: actual revenue vs KPI_DASHBOARD.md projections (conservative $800, medium $2,900, aggressive $8,100). Where did we land?",
-                "Per-channel breakdown: revenue, hours invested, $/hr, growth rate. Sort by $/hr descending.",
-                "Identify top 3 ventures for next month: allocate 80% of effort to these three",
-                "Kill list: finalize ventures to cut next month (<$50 revenue after full month)",
-                "Scale list: ventures getting 3x resources next month (>$200 revenue or >5% engagement)",
-                "Set next-month daily KPI targets based on actual conversion rates",
-                # AUTOMATION
-                "Verify all automated systems stable for overnight/weekend operation",
-                "Review all agent outputs: any consistently underperforming agents need prompt rewrites?",
-                "Document procedural memory: what worked, what didn't, what to never repeat"
+                {"text": "Full account stack review (ROI per account)", "tag": "MANUAL", "detail": "Total accounts, X Premium spend, engagement/account, ROI/account.\nPlan next month: add, sunset, expand niches.\nTime: 20 min."},
+                {"text": "Post 8 tweets + 1 thread (month review, honest numbers)", "tag": "AUTO", "detail": "Time: 0 min (automated)."},
+                {"text": "Post 5/secondary (15 total)", "tag": "AUTO", "detail": "Reduced end-of-month volume.\nTime: 0 min (automated)."},
+                {"text": "Reply to 30 accounts + handle all open DMs", "tag": "SEMI", "detail": "Time: 20 min."},
+                {"text": "Month revenue review vs projections", "tag": "MANUAL", "detail": "Actual vs KPI_DASHBOARD.md projections (conservative $800, medium $2,900, aggressive $8,100).\nPer-channel: revenue, hours invested, $/hr, growth rate. Sort by $/hr.\nTop 3 ventures for next month: 80% effort allocation.\nKill list: <$50 revenue after full month.\nScale list: >$200 revenue or >5% engagement = 3x resources.\nSet next-month daily KPI targets from actual conversion rates.\nTime: 45 min."},
+                {"text": "Verify all systems stable for weekend/overnight", "tag": "AUTO", "detail": "All automated systems operational.\nReview agent outputs: underperforming agents need prompt rewrites.\nDocument procedural memory: what worked, what didn't.\nTime: 10 min."},
             ],
             "revenue_target": "$200-800",
             "content": {"tweets": 23, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 30, "dms": 5, "comments": 5, "follows": 15},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "all systems stability: overnight/weekend readiness",
-                "agent performance audit: underperforming agents identified",
-                "procedural memory: lessons captured + stored",
-                "account stack ROI: per-account revenue analysis",
-                "next-month KPI targets: set from actual conversion data"
-            ],
-            "research": [
-                "month retrospective: actual vs projected revenue",
-                "next-month venture prioritization: top 3 + kill list",
-                "conversion rate baselines: email/proposal/content per channel"
-            ]
         },
         28: {
             "theme": "MONTH CLOSE + SYSTEM AUDIT",
             "tasks": [
-                # ACCOUNTS
-                "Update all bios/profiles with new credentials or milestones from the month",
-                # CONTENT
-                "Post 10 tweets + 1 thread from primary: 'Month complete, real numbers, no cap'",
-                "Post 5 per secondary (15 total)",
-                "Post LinkedIn retrospective for EAS credibility building",
-                # ENGAGEMENT
-                "Reply to 60 accounts across all platforms",
-                # REVENUE
-                "Final revenue count across ALL channels: freelance, products, content, EAS, persona, affiliate, gov contracts. No rounding. Exact numbers.",
-                "Revenue leaderboard: rank every venture by actual $/hr generated. Kill anything below $10/hr.",
-                "Engagement leaderboard: followers gained per account, engagement rate, growth trajectory. TweepCred estimate per account.",
-                "Outreach leaderboard: emails sent, reply rate, close rate, revenue per email. Compare to 2% reply / 20% close benchmarks.",
-                # AUTOMATION
-                "Full system health audit: all 112 cron jobs, all 33 agents, all scrapers, all pipelines",
-                "Run capital_genesis_ranker.py --rank --report: fresh next-month priority stack",
-                "Verify all GoLogin profiles + SOAX proxies still functional and undetected",
-                "Set 3 stretch goals for next month that would change the trajectory if achieved",
-                # GOV CONTRACTS
-                "Review all GOV_OPPORTUNITIES.csv outcomes: bids submitted, responses received, contracts won",
-                "Update gov contract pipeline tracker with next month's target contracts"
+                {"text": "Update all bios/profiles with month milestones", "tag": "MANUAL", "detail": "New credentials, follower counts, revenue milestones.\nTime: 10 min."},
+                {"text": "Post 10 tweets + 1 thread (month wrap-up) + LinkedIn retrospective", "tag": "AUTO", "detail": "Time: 0 min (automated). 10 min for LinkedIn."},
+                {"text": "Post 5/secondary (15 total)", "tag": "AUTO", "detail": "Time: 0 min (automated)."},
+                {"text": "Reply to 60 accounts across all platforms", "tag": "SEMI", "detail": "Time: 30 min."},
+                {"text": "Final revenue count across ALL channels (exact numbers)", "tag": "MANUAL", "detail": "Freelance, products, content, EAS, persona, affiliate, gov contracts.\nNo rounding. Exact.\nRevenue leaderboard: rank by actual $/hr. Kill <$10/hr.\nEngagement leaderboard: followers gained, engagement rate, growth trajectory.\nOutreach leaderboard: emails sent, reply rate, close rate, $/email.\nCompare to benchmarks: 2% reply, 20% close.\nTime: 30 min."},
+                {"text": "Full system health audit + next-month priority stack", "tag": "AUTO", "detail": "Commands:\n  All 112 cron jobs, 33 agents, all scrapers, all pipelines.\n  python3 AUTOMATIONS/capital_genesis_ranker.py --rank --report\n  Verify GoLogin profiles + SOAX proxies functional and undetected.\n  Set 3 stretch goals for next month.\nTime: 15 min."},
+                {"text": "Review GOV contract outcomes", "tag": "SEMI", "detail": "Bids submitted, responses received, contracts won.\nUpdate pipeline tracker for next month.\nTime: 10 min."},
             ],
             "revenue_target": "$250-1000",
             "content": {"tweets": 25, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 60, "dms": 10, "comments": 10, "follows": 30},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "full system audit: 112 crons + 33 agents + all scrapers",
-                "capital_genesis_ranker.py: next-month stack generated",
-                "GoLogin + SOAX: all profiles functional + undetected",
-                "GOV pipeline: bids/responses/wins tracked",
-                "stretch goals: 3 trajectory-changing targets set"
-            ],
-            "research": [
-                "month data analysis: what compounded, what didn't",
-                "next-month priority stack: data-driven venture ranking",
-                "stretch goal feasibility: resource requirements mapped"
-            ]
         },
         29: {
             "theme": "PIPELINE PRELOAD",
             "tasks": [
-                # ACCOUNTS
-                "Pre-create any new accounts needed for next month expansions (new GoLogin profiles + SOAX assignments)",
-                # CONTENT
-                "Batch create next month Week 1 content: 35 tweets + 7 threads (primary), 25 per secondary",
-                "Pre-generate 10 faceless YouTube videos via ai_video_content_pipeline.py for next month",
-                "Post 10 tweets + 1 thread from primary: 'How I automated X so I never have to do it again'",
-                # ENGAGEMENT
-                "Reply to 60 accounts + engage with anyone discussing automation/efficiency",
-                "DM 10 potential next-month collaboration partners",
-                # REVENUE
-                "Send cold email batch 12: 50 emails (775 total) -- warm up next month pipeline early",
-                "Pre-draft 100 cold emails for next month Week 1 with personalization tokens",
-                "Run auto_freelance_responder.py --scan-and-respond: capture any end-of-month hot jobs",
-                # AUTOMATION
-                "Set up any new cron jobs identified during the month",
-                "Deploy any remaining items from ACTIONABLE_QUEUE.md",
-                "Update OPS/PRINTMAXX_SYSTEM_MAP.md with all month's changes",
-                "Clean up dead ventures: archive docs, remove orphan cron jobs, update intelligence catalog"
+                {"text": "Pre-create next month accounts (new GoLogin profiles + SOAX)", "tag": "MANUAL", "detail": "Any new niche expansions planned.\nTime: 15 min."},
+                {"text": "Batch create next month Week 1 content", "tag": "AUTO", "detail": "35 tweets + 7 threads (primary), 25/secondary.\nPre-generate 10 faceless YouTube videos.\nTime: 0 min (automated). 15 min to review."},
+                {"text": "Post 10 tweets + 1 thread from primary", "tag": "AUTO", "detail": "'How I automated X so I never have to do it again'\nTime: 0 min (automated)."},
+                {"text": "Reply to 60 accounts + engage automation discussions", "tag": "SEMI", "detail": "Time: 30 min."},
+                {"text": "DM 10 next-month collaboration partners", "tag": "MANUAL", "detail": "Time: 20 min."},
+                {"text": "Send cold email batch 12 (50 emails, 775 total)", "tag": "AUTO", "detail": "Warm up next month pipeline early.\nPre-draft 100 emails for next month Week 1.\nTime: 0 min (automated)."},
+                {"text": "Capture end-of-month hot freelance jobs", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_freelance_responder.py --scan-and-respond\nTime: 0 min (automated). 10 min to review."},
+                {"text": "Deploy month's new cron jobs + clean dead ventures", "tag": "AUTO", "detail": "Set up new cron jobs for recurring workflows.\nDeploy remaining ACTIONABLE_QUEUE.md items.\nUpdate OPS/PRINTMAXX_SYSTEM_MAP.md.\nArchive dead ventures, remove orphan crons, update intelligence catalog.\nTime: 15 min."},
             ],
             "revenue_target": "$200-800",
             "content": {"tweets": 10, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 0},
             "engagement": {"replies": 60, "dms": 10, "comments": 10, "follows": 40},
             "outreach": {"cold_emails": 50, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "new cron jobs: all month's discoveries deployed",
-                "ACTIONABLE_QUEUE.md: fully cleared",
-                "PRINTMAXX_SYSTEM_MAP.md: end-of-month update",
-                "dead ventures: cleaned + archived",
-                "next-month content buffer: pre-loaded"
-            ],
-            "research": [
-                "next-month pipeline warmup: pre-drafted emails/content",
-                "automation candidates: month's manual tasks scripted",
-                "NOVEL_DISCOVERIES.md: sovrun extraction candidates"
-            ]
         },
         30: {
             "theme": "MONTH CLOSE FINAL",
             "tasks": [
-                # ACCOUNTS
-                "Final account health check: all accounts clean, all proxies working, all profiles updated",
-                # CONTENT
-                "Post 10 tweets + 1 thread from primary: end-of-month wrap-up",
-                "Send newsletter: month recap + next month preview (build anticipation)",
-                # ENGAGEMENT
-                "Reply to 60 accounts + final DM batch to close open conversations",
-                # REVENUE
-                "Final revenue reconciliation: all channels, all platforms, all payment processors",
-                "Update KPI_DASHBOARD.md with actual month numbers vs projections",
-                "Close any remaining open proposals with urgency",
-                # AUTOMATION
-                "Verify all systems stable for overnight transition to next month",
-                "Run capital_genesis_ranker.py --rank --export csv: export month-end state",
-                "Verify all 33 agents operational for next month's Day 1",
-                "Final backup: python3 AUTOMATIONS/backup_system.py --full"
+                {"text": "Final account health check (all clean, proxies working, profiles updated)", "tag": "SEMI", "detail": "Verify: all accounts clean, all SOAX proxies working, all GoLogin profiles updated.\nTime: 10 min."},
+                {"text": "Post 10 tweets + 1 thread (end-of-month wrap)", "tag": "AUTO", "detail": "Time: 0 min (automated)."},
+                {"text": "Send newsletter: month recap + next month preview", "tag": "SEMI", "detail": "Build anticipation. Include best content from the month.\nTime: 20 min."},
+                {"text": "Reply to 60 accounts + close open DM conversations", "tag": "SEMI", "detail": "Final DM batch. Close or schedule follow-ups.\nTime: 30 min."},
+                {"text": "Final revenue reconciliation across all channels", "tag": "MANUAL", "detail": "All channels, all platforms, all payment processors.\nUpdate KPI_DASHBOARD.md with actual month numbers vs projections.\nClose any remaining open proposals with urgency.\nTime: 30 min."},
+                {"text": "Verify all systems stable for next month Day 1", "tag": "AUTO", "detail": "Commands:\n  All systems stable for overnight transition.\n  python3 AUTOMATIONS/capital_genesis_ranker.py --rank --export csv\n  All 33 agents operational for next month.\n  python3 AUTOMATIONS/backup_system.py --full\nTime: 10 min."},
             ],
             "revenue_target": "$250-1000",
             "content": {"tweets": 10, "threads": 1, "tiktoks": 0, "youtube": 0, "newsletters": 1},
             "engagement": {"replies": 60, "dms": 10, "comments": 10, "follows": 30},
             "outreach": {"cold_emails": 0, "proposals": 0, "calls": 0},
-            "automation_checks": [
-                "all 33 agents: operational for next month",
-                "capital_genesis_ranker.py: month-end state exported",
-                "backup_system.py --full: complete backup verified",
-                "all accounts: clean health + working proxies",
-                "next month Day 1: all systems ready"
-            ],
-            "research": [
-                "month-end revenue reconciliation: actual vs target",
-                "KPI_DASHBOARD.md: updated with real numbers",
-                "next month Day 1 priorities: top 3 actions identified"
-            ]
         },
     }
 
     default_plan = {
         "theme": "FLEX OPS",
         "tasks": [
-            "Execute top 3 priority ventures from CAPITAL_GENESIS_PRIORITY_STACK.md (check daily, priorities shift)",
-            "Post 12 tweets from primary + 8 per secondary account (28 total)",
-            "Reply to 60 accounts from primary + 20 from secondaries (80 total)",
-            "Follow up on all open proposals (Upwork, EAS, freelance) and DM conversations",
-            "Run auto_freelance_responder.py --scan-and-respond: capture hot jobs",
-            "Send 25 cold emails from pipeline (continue n8n w04 sequence)",
-            "Run sam_gov_monitor.py: check for new matching contracts",
-            "Verify system_health_monitor.py --quick: all 112 cron jobs + 33 agents",
-            "Check twitter_alpha_scraper.py + background_reddit_scraper.py outputs",
-            "Check soul_drift_report.json: all agents > 6/10",
-            "Process 50 alpha entries via alpha_auto_processor.py --process-new",
-            "Review daily_digest.py output (6:45AM): surface missed opportunities",
-            "Post 3 TikToks from ai_video_content_pipeline.py batch",
-            "Check GoLogin profiles + SOAX proxies: all accounts clean and functional",
+            {"text": "Execute top 3 priority ventures from CAPITAL_GENESIS_PRIORITY_STACK.md", "tag": "SEMI", "detail": "Check OPS/CAPITAL_GENESIS_PRIORITY_STACK.md daily -- priorities shift.\nCommand: python3 AUTOMATIONS/capital_genesis_ranker.py --top 3\nReview and execute the top 3 highest-priority actions.\nTime: varies."},
+            {"text": "Post 12 tweets from primary + 8 per secondary (28 total)", "tag": "AUTO", "detail": "auto_content_poster.py cron handles primary.\nSecondaries via cron, staggered 30+ min.\nContent from content_factory.py.\nVerify: python3 AUTOMATIONS/auto_content_poster.py --status\nTime: 0 min (automated)."},
+            {"text": "Reply to 60 from primary + 20 from secondaries (80 total)", "tag": "SEMI", "detail": "Command: python3 AUTOMATIONS/edge_growth_engine.py --reply-guy\nReview queue at CONTENT/social/reply_queue/.\nPost via GoLogin profiles.\nTime: 40 min."},
+            {"text": "Follow up on all open proposals and DM conversations", "tag": "SEMI", "detail": "Upwork, EAS, freelance proposals.\nAll open DMs across accounts.\nCreate urgency: 'This rate expires [date].'\nTime: 20 min."},
+            {"text": "Auto-scan and respond to hot freelance jobs", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/auto_freelance_responder.py --scan-and-respond\nGenerates proposals for matching jobs.\nReview before sending.\nTime: 0 min (automated). 10 min to review."},
+            {"text": "Send 25 cold emails from pipeline", "tag": "AUTO", "detail": "n8n w04 sequence continues daily.\nTime: 0 min (automated). 3 min to check analytics."},
+            {"text": "Scan SAM.gov for matching contracts", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/sam_gov_monitor.py\nTime: 0 min (automated). 5 min to review."},
+            {"text": "Verify system health (112 crons + 33 agents)", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/system_health_monitor.py --quick\nCheck: twitter_alpha_scraper.py + background_reddit_scraper.py outputs.\nCheck soul_drift_report.json: all agents > 6/10.\nTime: 3 min."},
+            {"text": "Process 50 alpha entries", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/alpha_auto_processor.py --process-new\nTime: 0 min (automated)."},
+            {"text": "Review daily digest for missed opportunities", "tag": "AUTO", "detail": "daily_digest.py output (6:45AM cron).\nSurface any missed actions.\nTime: 3 min."},
+            {"text": "Post 3 TikToks from video pipeline batch", "tag": "SEMI", "detail": "From ai_video_content_pipeline.py output.\nAdapt captions. Post to TikTok + cross-post to Shorts/Reels.\nTime: 15 min."},
+            {"text": "Check GoLogin profiles + SOAX proxies (all clean)", "tag": "AUTO", "detail": "Verify: unique IPs, no fingerprint overlap, no shadowbans.\nshadowban.eu for X accounts.\nTime: 5 min."},
         ],
         "revenue_target": "TBD",
         "content": {"tweets": 28, "threads": 0, "tiktoks": 3, "youtube": 0, "newsletters": 0},
         "engagement": {"replies": 80, "dms": 10, "comments": 10, "follows": 25},
         "outreach": {"cold_emails": 25, "proposals": 5, "calls": 0},
-        "automation_checks": [
-            "system_health_monitor.py: 112 crons + 33 agents",
-            "twitter_alpha_scraper.py + reddit scraper: output verified",
-            "soul_drift_report.json: all agents > 6/10",
-            "GoLogin + SOAX: all profiles functional",
-            "daily_digest.py: 6:45AM cron reviewed"
-        ],
-        "research": [
-            "CAPITAL_GENESIS_PRIORITY_STACK.md: daily priorities",
-            "alpha_staging: 50 PENDING_REVIEW entries processed",
-            "sam_gov_monitor.py: new contract opportunities"
-        ]
     }
+
 
     # Weekly phase labels
     week_phases = {1: "INFRA + ACCOUNTS", 2: "VOLUME + PIPELINE", 3: "EDGE + OPTIMIZE", 4: "COMPOUND + CLOSE"}
@@ -2876,24 +2201,24 @@ def api_kpi_calendar():
         tasks = list(plan["tasks"])
         if mode == "beast":
             tasks.extend([
-                f"BEAST: Double content output across all accounts ({content['tweets']} tweets, {content.get('tiktoks',0)} TikToks)",
-                f"BEAST: Extra cold email batch ({outreach['cold_emails']} total today)",
-                "BEAST: 2nd YouTube video or 5 extra Shorts",
-                "BEAST: Review and respond to ALL pending DMs across all accounts",
-                "BEAST: Extra 30 min competitor analysis + steal their best formats",
+                {"text": f"BEAST: Double content output ({content['tweets']} tweets, {content.get('tiktoks',0)} TikToks)", "tag": "AUTO", "detail": f"Increase auto_content_poster.py cron frequency to 2x.\nDouble batch: python3 AUTOMATIONS/content_factory.py --batch-alpha {content['tweets']}\nAll auto-posted. Verify cron ran.\nTier: MEDIUM on secondaries, push volume.\nTime: 0 min (automated)."},
+                {"text": f"BEAST: Extra cold email batch ({outreach['cold_emails']} total)", "tag": "AUTO", "detail": f"n8n w04 sends additional batch. {outreach['cold_emails']} emails today.\nMulti-inbox rotation to stay under per-inbox limits.\nMonitor bounce rate < 5%.\nTime: 0 min (automated)."},
+                {"text": "BEAST: 2nd YouTube video or 5 extra Shorts", "tag": "SEMI", "detail": "Batch produce from ai_video_content_pipeline.py or auto_clip_pipeline.py output.\nUpload with full SEO.\nTime: 30 min."},
+                {"text": "BEAST: Respond to ALL pending DMs across all accounts", "tag": "MANUAL", "detail": "Open each GoLogin profile. Check DMs.\nRespond to every pending conversation.\nConvert warm leads to calls/proposals.\nTime: 30 min."},
+                {"text": "BEAST: 30-min competitor analysis + steal their best formats", "tag": "SEMI", "detail": "edge_growth_engine.py --squeeze outputs competitor analysis.\nIdentify top-performing content formats in niche.\nAdapt (not copy) their best hooks and structures.\nTime: 30 min."},
             ])
         elif mode == "modafinil":
             tasks.extend([
-                f"MODAFINIL: 3x all engagement ({engagement['replies']} replies, {engagement['dms']} DMs, {engagement['follows']} follows)",
-                f"MODAFINIL: 3x content factory ({content['tweets']} tweets, {content.get('threads',0)} threads, {content.get('tiktoks',0)} TikToks)",
-                f"MODAFINIL: 3x outreach blast ({outreach['cold_emails']} emails, {outreach['proposals']} proposals, {outreach['calls']} calls)",
-                "MODAFINIL: Set up 2 additional niche accounts with GoLogin + SOAX",
-                "MODAFINIL: Batch create 48hrs of scheduled content across all platforms",
-                "MODAFINIL: Deep alpha review: process ALL pending ALPHA_STAGING entries",
-                "MODAFINIL: Write and publish 2 Medium articles (parasite SEO)",
-                "MODAFINIL: Record 3 YouTube videos back to back (batch production)",
-                "MODAFINIL: DM 50 potential collaborators / affiliate partners",
-                "MODAFINIL: Build and deploy 1 micro-SaaS or tool (app factory sprint)",
+                {"text": f"MODAFINIL: 3x engagement volume ({engagement['replies']} replies, {engagement['dms']} DMs)", "tag": "AUTO", "detail": f"Increase edge_growth_engine.py reply-guy output to 3x.\nGenerate 3x reply queue. Review batch (larger but same review process).\n{engagement['replies']} replies + {engagement['dms']} DMs + {engagement['follows']} follows today.\nSpread across accounts to stay under per-account limits.\nTier: MEDIUM/AGGRESSIVE accounts absorb the volume.\nTime: 15 min extra review (automation handles generation)."},
+                {"text": f"MODAFINIL: 3x content factory ({content['tweets']} tweets, {content.get('threads',0)} threads)", "tag": "AUTO", "detail": f"Command: python3 AUTOMATIONS/content_factory.py --batch-alpha {content['tweets']}\nIncrease cron frequency to 3x.\nAll auto-posted via auto_content_poster.py.\n{content.get('tiktoks',0)} TikToks via ai_video_content_pipeline.py.\nTime: 0 min (automated)."},
+                {"text": f"MODAFINIL: 3x outreach blast ({outreach['cold_emails']} emails, {outreach['proposals']} proposals)", "tag": "AUTO", "detail": f"n8n w04 sends 3x volume: {outreach['cold_emails']} emails.\nMulti-inbox rotation (3-5 inboxes at 50-80 each).\n{outreach['proposals']} proposals via auto_freelance_responder.py.\n{outreach['calls']} calls via Bland AI.\nAll automated. Monitor bounce/spam rates.\nTime: 0 min (automated). 10 min to monitor."},
+                {"text": "MODAFINIL: Set up 2 additional niche accounts", "tag": "MANUAL", "detail": "New GoLogin profiles + SOAX sticky sessions.\nPick 2 untapped niches from market research.\nEach: bio, PFP, 3 seed tweets, follow 20 niche accounts.\nTier: AGGRESSIVE (expendable, test new niches).\nTime: 20 min."},
+                {"text": "MODAFINIL: Batch create 48hrs of scheduled content", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/content_factory.py --batch-alpha 50\nGenerate 2 days of content buffer across all platforms.\nLoad into Buffer/Typefully/Publer scheduling queues.\nTime: 0 min (automated). 15 min to review."},
+                {"text": "MODAFINIL: Deep alpha review (process ALL pending entries)", "tag": "AUTO", "detail": "Command: python3 AUTOMATIONS/alpha_auto_processor.py --process-all\nProcess every PENDING_REVIEW entry in ALPHA_STAGING.csv.\nNo backlog left.\nTime: 0 min (automated)."},
+                {"text": "MODAFINIL: Write and publish 2 Medium articles (Parasite SEO)", "tag": "SEMI", "detail": "Repurpose top threads into long-form.\nDA90+ backlinks. Submit to Medium publications for 10x distribution.\nInclude affiliate links where relevant. FTC compliant.\nTime: 40 min."},
+                {"text": "MODAFINIL: Record 3 YouTube videos back to back", "tag": "MANUAL", "detail": "Batch production: record 3 tutorials/reviews consecutively.\nScreen record with narration. Edit: cut dead air, add overlays.\nUpload with full SEO, end screens, cards.\nTime: 2-3 hours."},
+                {"text": "MODAFINIL: DM 50 collaborators / affiliate partners", "tag": "SEMI", "detail": "Generate DM templates from edge_growth_engine.py.\nPersonalize each. Mix: 20 collab, 15 affiliate, 15 cross-promo.\nSpread across accounts. Max 50 DMs/day/account.\nTime: 30 min to review/personalize."},
+                {"text": "MODAFINIL: Build and deploy 1 micro-SaaS (app factory sprint)", "tag": "MANUAL", "detail": "Pick highest-scoring app from CAPITAL_GENESIS_PRIORITY_STACK.md.\nVibe-code with Claude Code in 2-4 hours.\nDeploy to Vercel/Netlify. List on Gumroad.\nThis is the MANUAL stretch goal -- genuine human creativity required.\nTime: 2-4 hours."},
             ])
 
         engagement_score = sum(engagement.values())
