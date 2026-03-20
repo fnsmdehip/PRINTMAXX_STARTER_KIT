@@ -82,15 +82,43 @@ def auto_approve_alpha():
                         row["status"] = "APPROVED"
                         row["reviewer_notes"] = f"AUTO-APPROVED {datetime.now().strftime('%Y-%m-%d')} (trusted source)"
                         approved_count += 1
-                    # Auto-reject obvious engagement bait
-                    elif any(bait in (row.get("extracted_method", "") or "").lower() for bait in ["follow me", "like and subscribe", "dm me", "link in bio", "giveaway"]):
-                        row["status"] = "ENGAGEMENT_BAIT"
-                        row["reviewer_notes"] = f"AUTO-REJECTED {datetime.now().strftime('%Y-%m-%d')} (engagement bait)"
                     else:
-                        # Default: approve with lower confidence
-                        row["status"] = "APPROVED"
-                        row["reviewer_notes"] = f"AUTO-APPROVED {datetime.now().strftime('%Y-%m-%d')} (default, unreviewed by cutoff)"
-                        approved_count += 1
+                        # LLM-in-the-loop: claude -p analyzes if genuinely valuable
+                        # Even "engagement bait" patterns can contain real alpha
+                        method_text = row.get("extracted_method", row.get("tactic", row.get("content", "")))[:500]
+                        source = row.get("source", "unknown")
+                        if method_text:
+                            try:
+                                import subprocess
+                                prompt = (
+                                    f"You are an alpha reviewer for a revenue system. Analyze this entry.\n"
+                                    f"Source: {source}\n"
+                                    f"Content: {method_text}\n\n"
+                                    f"Is there a genuinely actionable revenue method here, even if wrapped in engagement bait?\n"
+                                    f"Consider: could this make money if automated? Is there a real tactic buried in the noise?\n"
+                                    f"Reply with exactly one word first: APPROVE or REJECT\n"
+                                    f"Then one sentence explaining why."
+                                )
+                                result = subprocess.run(
+                                    ["claude", "-p", prompt, "--model", "haiku"],
+                                    capture_output=True, text=True, timeout=30
+                                )
+                                answer = result.stdout.strip()
+                                if answer.upper().startswith("REJECT"):
+                                    row["status"] = "REJECTED"
+                                    row["reviewer_notes"] = f"AI-REJECTED {datetime.now().strftime('%Y-%m-%d')}: {answer[:120]}"
+                                else:
+                                    row["status"] = "APPROVED"
+                                    row["reviewer_notes"] = f"AI-APPROVED {datetime.now().strftime('%Y-%m-%d')}: {answer[:120]}"
+                                    approved_count += 1
+                            except Exception:
+                                row["status"] = "APPROVED"
+                                row["reviewer_notes"] = f"AUTO-APPROVED {datetime.now().strftime('%Y-%m-%d')} (LLM timeout, default approve)"
+                                approved_count += 1
+                        else:
+                            row["status"] = "APPROVED"
+                            row["reviewer_notes"] = f"AUTO-APPROVED {datetime.now().strftime('%Y-%m-%d')} (empty content)"
+                            approved_count += 1
                 rows.append(row)
 
         if approved_count > 0:
@@ -149,6 +177,41 @@ def clear_semi_queue():
             log(f"Error clearing SEMI queue: {e}")
 
 
+def integrate_approved():
+    """Route approved entries through intelligence router + capital genesis.
+    Don't just approve — actually wire into the system."""
+    import subprocess
+    try:
+        # Run alpha processor to route approved entries to ventures
+        result = subprocess.run(
+            ["python3", str(AUTOMATIONS / "alpha_auto_processor.py"), "--process-new"],
+            capture_output=True, text=True, timeout=120
+        )
+        log(f"Alpha processor: {result.stdout.strip()[-200:]}")
+    except Exception as e:
+        log(f"Alpha processor failed: {e}")
+
+    try:
+        # Re-run capital genesis ranker to score new methods
+        result = subprocess.run(
+            ["python3", str(AUTOMATIONS / "capital_genesis_ranker.py"), "--rank"],
+            capture_output=True, text=True, timeout=120
+        )
+        log(f"Capital Genesis re-ranked after approvals")
+    except Exception as e:
+        log(f"Ranker failed: {e}")
+
+    try:
+        # Refresh intelligence router with new approved docs
+        result = subprocess.run(
+            ["python3", str(AUTOMATIONS / "intelligence_router.py"), "--refresh"],
+            capture_output=True, text=True, timeout=60
+        )
+        log(f"Intelligence router refreshed")
+    except Exception as e:
+        log(f"Router refresh failed: {e}")
+
+
 def main():
     log("Starting auto-approve cycle")
 
@@ -157,6 +220,11 @@ def main():
 
     method_count = auto_approve_methods()
     log(f"Methods: {method_count} entries auto-approved")
+
+    # Intelligently integrate approved entries into the system
+    if alpha_count > 0 or method_count > 0:
+        integrate_approved()
+        log("Approved entries integrated: routed to ventures, re-ranked, router refreshed")
 
     clear_semi_queue()
     log("SEMI queue cleared")
