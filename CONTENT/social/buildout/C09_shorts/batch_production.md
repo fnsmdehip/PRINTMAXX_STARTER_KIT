@@ -1,4 +1,4 @@
-# Batch Production SOP — 10 Shorts in 1 Hour
+# Batch Production SOP, 10 Shorts in 1 Hour
 
 **Goal:** Go from 0 to 10 published Shorts in 60 minutes or less
 **Requires:** Claude Pro, ElevenLabs, CapCut (mobile or desktop), YouTube app
@@ -33,7 +33,7 @@ Topics for today's batch:
 
 Rules:
 - No em dashes
-- No AI vocabulary (leverage, utilize, comprehensive, robust)
+- No AI vocabulary (use, use, complete, strong)
 - Short sentences. Punchy. Lowercase energy.
 - Use specific numbers always.
 - Each script must stand alone as complete value.
@@ -54,7 +54,7 @@ Output: 10 numbered scripts in the exact format above.
 
 **Workflow:**
 1. Open ElevenLabs Speech Synthesis
-2. Paste Script 1 body text (hook + body only, no CTA — add CTA as text on screen)
+2. Paste Script 1 body text (hook + body only, no CTA, add CTA as text on screen)
 3. Generate. Download as MP3.
 4. Paste Script 2. Generate. Download.
 5. Continue until all 10 done.
@@ -135,7 +135,7 @@ Follow for more [niche] breakdowns: [channel handle]
 **Tags:** 5-8 tags max. Mix broad and specific.
 Example: "youtube shorts", "make money online", "passive income 2026", "cold email", "solopreneur"
 
-**Category:** Education (not "People & Blogs" — Education gets better placement)
+**Category:** Education (not "People & Blogs", Education gets better placement)
 **Made for Kids:** No
 **Visibility:** Schedule (optimal times below)
 
@@ -182,7 +182,7 @@ Fix: Use CapCut's manual caption editor. Spot-check first 5 seconds only. Let th
 Fix: Add commas after natural pause points in the script. Commas = pauses = more natural cadence. Also try reducing Stability to 0.35 for more expressive delivery.
 
 **Bottleneck: Videos take forever to export from CapCut**
-Fix: Export one at a time. Don't queue multiple CapCut exports — it throttles. While one exports, work on YouTube metadata for previously exported videos.
+Fix: Export one at a time. Don't queue multiple CapCut exports, it throttles. While one exports, work on YouTube metadata for previously exported videos.
 
 **Bottleneck: Can't think of 10 topics**
 Fix: Open reddit_deep_scraper.py output. Look at what questions people are asking in your niche this week. Every question = a Short. 10 topics in 5 minutes.

@@ -1,11 +1,11 @@
-# C02 YouTube Automation — 20 Faceless Video Scripts
+# C02 YouTube Automation, 20 Faceless Video Scripts
 # AI narration ready. 8-12 min each. No on-camera presence required.
 # Format: HOOK (30 sec) | BODY (sections) | CTA (60 sec)
 # Narration note: each line = 1 teleprompter beat. Pause 0.5s between bullets.
 
 ---
 
-## SCRIPT 01 — "7 AI Tools That Replaced My $3,000/Month Team"
+## SCRIPT 01, "7 AI Tools That Replaced My $3,000/Month Team"
 **Category:** Tool Review | **Target length:** 10 min | **Monetization angle:** affiliate (each tool)
 
 ### HOOK (0:00-0:30)
@@ -23,7 +23,7 @@ The reason most people don't make the switch is they don't know which tools actu
 I tested 34 of them. Most were garbage.
 These seven passed.
 
-### SECTION 2: TOOL 1 — CONTENT WRITING (1:30-2:30)
+### SECTION 2: TOOL 1, CONTENT WRITING (1:30-2:30)
 Claude.ai. $20/month.
 Replaced a $600/month content writer.
 It writes 2,000-word SEO articles in 4 minutes.
@@ -32,7 +32,7 @@ Give it: target keyword, target audience, competitor URLs to beat, tone.
 Do that and the output is publishable after a 10-minute edit.
 Link in description. First month is basically free with the trial.
 
-### SECTION 3: TOOL 2 — VIDEO EDITING (2:30-3:30)
+### SECTION 3: TOOL 2, VIDEO EDITING (2:30-3:30)
 Descript. $24/month.
 Replaced a $900/month video editor.
 You paste your script. It generates the rough cut.
@@ -40,7 +40,7 @@ Overdub feature: if you mispronounce something, type the correction. Your voice 
 Captions are auto-generated. Transcription is 99% accurate.
 For faceless channels like this one, it handles 80% of the production.
 
-### SECTION 4: TOOL 3 — SEO RESEARCH (3:30-4:30)
+### SECTION 4: TOOL 3, SEO RESEARCH (3:30-4:30)
 Ahrefs Lite. $29/month.
 Replaced a $500/month SEO consultant.
 Not using it for full audits. Just three things:
@@ -49,26 +49,26 @@ Two: reverse-engineer what my competitors rank for.
 Three: track rankings weekly.
 That's it. The consultant was charging me for the same three functions.
 
-### SECTION 5: TOOL 4 — THUMBNAIL CREATION (4:30-5:15)
+### SECTION 5: TOOL 4, THUMBNAIL CREATION (4:30-5:15)
 Canva Pro. $15/month.
 Replaced a $200/month graphic designer.
 I have 5 thumbnail templates. Every video uses one of the templates.
 Swap the background image, swap the text. Done in 8 minutes.
 The templates were designed once. They've been used 200+ times.
 
-### SECTION 6: TOOL 5 — SOCIAL SCHEDULING (5:15-6:00)
+### SECTION 6: TOOL 5, SOCIAL SCHEDULING (5:15-6:00)
 Buffer. $15/month.
 Replaced a $400/month social media manager.
 Post goes live on YouTube, I hit one button. It schedules Instagram Reels, TikTok, LinkedIn, and X automatically.
 5 platforms. 1 click. The VA was doing this manually.
 
-### SECTION 7: TOOL 6 — EMAIL MARKETING (6:00-6:45)
+### SECTION 7: TOOL 6, EMAIL MARKETING (6:00-6:45)
 ConvertKit. $29/month (up to 1K subscribers free).
 Replaced a $300/month email specialist.
 Automations run 24/7. Welcome sequence, broadcast emails, tagging based on behavior.
 Once you build the sequences, the system runs without you.
 
-### SECTION 8: TOOL 7 — AI NARRATION (6:45-7:45)
+### SECTION 8: TOOL 7, AI NARRATION (6:45-7:45)
 ElevenLabs. $22/month.
 This is the big one for faceless channels.
 Generate a custom voice. Use it on every video.
@@ -91,14 +91,14 @@ That's not a lifestyle upgrade. That's a business model change.
 
 ### CTA (9:00-10:00)
 I linked all seven tools in the description with the exact plans I use.
-Some of them have affiliate deals — you get a discount, I get a small commission. Full transparency.
-If you want to see my exact workflow — how I go from script to published video in one afternoon — subscribe.
+Some of them have affiliate deals, you get a discount, I get a small commission. Full transparency.
+If you want to see my exact workflow, how I go from script to published video in one afternoon, subscribe.
 Next video I'm walking through the full production pipeline live.
 Drop a comment if you're currently paying a human for any of these. Curious what your situation looks like.
 
 ---
 
-## SCRIPT 02 — "I Made $4,200 in 90 Days Selling AI Prompts (Full Breakdown)"
+## SCRIPT 02, "I Made $4,200 in 90 Days Selling AI Prompts (Full Breakdown)"
 **Category:** Money Method | **Target length:** 9 min | **Monetization angle:** own product, Gumroad affiliate
 
 ### HOOK (0:00-0:30)
@@ -162,11 +162,11 @@ You can have this live in a weekend.
 ### CTA (8:30-9:00)
 I'll put my exact Gumroad listing template in the description.
 It's free. Swipe the structure.
-Subscribe if you want to see me launch the next product live — I'm doing it in real time on this channel.
+Subscribe if you want to see me launch the next product live, I'm doing it in real time on this channel.
 
 ---
 
-## SCRIPT 03 — "The $0 Content Strategy That Built My First 10K Followers"
+## SCRIPT 03, "The $0 Content Strategy That Built My First 10K Followers"
 **Category:** Growth | **Target length:** 10 min | **Monetization angle:** course, newsletter
 
 ### HOOK (0:00-0:30)
@@ -250,7 +250,7 @@ The next video is my full posting schedule with exact times and templates.
 
 ---
 
-## SCRIPT 04 — "5 Micro-SaaS Tools That Each Make $5K-$15K/Month (And How They Were Built)"
+## SCRIPT 04, "5 Micro-SaaS Tools That Each Make $5K-$15K/Month (And How They Were Built)"
 **Category:** Money Method | **Target length:** 11 min | **Monetization angle:** newsletter, course
 
 ### HOOK (0:00-0:30)
@@ -268,14 +268,14 @@ You can charge $29-$199/month to businesses.
 That's achievable in 12-18 months without a team.
 Each of these five is proof.
 
-### SECTION 2: TOOL 1 — EMAILOCTOPUS ALTERNATIVE CASE (1:30-2:45)
+### SECTION 2: TOOL 1, EMAILOCTOPUS ALTERNATIVE CASE (1:30-2:45)
 A dev noticed that Mailchimp was charging 10x more than it cost to actually send emails.
 Built a simpler version. Launched on Product Hunt.
 Priced at $24/month for 10K subscribers. Mailchimp charges $299 for the same.
 Within 8 months: $8,200 MRR. One dev.
 The lesson: find an overpriced incumbent. Build the simple version. Target their price-sensitive customers first.
 
-### SECTION 3: TOOL 2 — SCREENSHOT API (2:45-4:00)
+### SECTION 3: TOOL 2, SCREENSHOT API (2:45-4:00)
 Developers need to take screenshots of websites programmatically.
 A tool that does this: Screenshotone.
 $19-$99/month depending on volume.
@@ -284,7 +284,7 @@ $12K MRR. One founder. No employees.
 The lesson: developer tools are undervalued because developers think "I could build this."
 They could. They don't. That's your market.
 
-### SECTION 4: TOOL 3 — REDDIT MONITORING (4:00-5:15)
+### SECTION 4: TOOL 3, REDDIT MONITORING (4:00-5:15)
 GummySearch charges $49/month to monitor Reddit for keywords and report trends.
 The core feature: you tell it your niche, it scans Reddit 24/7, and tells you what people are complaining about.
 Market research that used to cost thousands per quarter for $49/month.
@@ -292,13 +292,13 @@ Founders use it for product validation and content ideas.
 $9K MRR. Built in 6 months.
 The lesson: make manual research automatic. Find a repetitive task experts do. Automate it. Charge monthly.
 
-### SECTION 5: TOOL 4 — CHANGELOG MAKER (5:15-6:30)
+### SECTION 5: TOOL 4, CHANGELOG MAKER (5:15-6:30)
 Headway. $29-$199/month. Lets SaaS companies publish product updates in a beautiful changelog format.
 Tiny, focused product. No CRM. No analytics. Just changelogs.
 25,000+ companies use it.
 The lesson: extremely narrow scope is a feature, not a limitation. Customers trust a tool that does one thing.
 
-### SECTION 6: TOOL 5 — EMAIL WARM-UP TOOL (6:30-7:45)
+### SECTION 6: TOOL 5, EMAIL WARM-UP TOOL (6:30-7:45)
 Lemwarm. Part of Lemlist. Helps cold emailers avoid spam folders by warming up new email addresses.
 Standalone subscription: $29/month.
 At scale: the average cold emailer needs 5-10 email accounts warmed simultaneously.
@@ -327,7 +327,7 @@ Subscribe so you don't miss it.
 
 ---
 
-## SCRIPT 05 — "I Automated My Entire Morning Routine with Python (Saves 2 Hours/Day)"
+## SCRIPT 05, "I Automated My Entire Morning Routine with Python (Saves 2 Hours/Day)"
 **Category:** Productivity/Tech | **Target length:** 10 min | **Monetization angle:** affiliate (tools), GitHub repo
 
 ### HOOK (0:00-0:30)
@@ -344,34 +344,34 @@ Output goes to a single Notion page I check with my coffee.
 Total monthly cost: $6 for the server. Free for everything else.
 You don't need to be a developer to copy this. I'll link the GitHub repo.
 
-### SECTION 2: AUTOMATION 1 — EMAIL TRIAGE (1:30-2:30)
+### SECTION 2: AUTOMATION 1, EMAIL TRIAGE (1:30-2:30)
 The script pulls my inbox via IMAP, runs each email through Claude's API, and sorts them into three buckets.
 Urgent, reply today. Low priority, handle tomorrow. Delete immediately.
 It writes a summary of the urgent emails to Notion.
 Time saved: 40 minutes.
 The API cost for 50 emails per day: $0.08. Less than a dime.
 
-### SECTION 3: AUTOMATION 2 — CONTENT RESEARCH (2:30-3:30)
+### SECTION 3: AUTOMATION 2, CONTENT RESEARCH (2:30-3:30)
 Script pulls trending content from Reddit, Twitter, and YouTube search.
 Filters for my three content topics: AI tools, money methods, productivity.
 Ranks by engagement rate, not absolute numbers.
 Outputs the top 10 pieces of content from the last 24 hours to Notion.
 Time saved: 45 minutes of manual research.
 
-### SECTION 4: AUTOMATION 3 — ANALYTICS DASHBOARD (3:30-4:30)
+### SECTION 4: AUTOMATION 3, ANALYTICS DASHBOARD (3:30-4:30)
 Script hits the YouTube Analytics API, X API, and ConvertKit API.
 Pulls views, subscriber change, email open rates, and revenue for the last 24 hours.
 Formats it into a simple Notion dashboard.
 I see every metric I care about in one row per day.
 Time saved: 15 minutes of manual checking across 4 platforms.
 
-### SECTION 5: AUTOMATION 4 — POST SCHEDULING (4:30-5:30)
+### SECTION 5: AUTOMATION 4, POST SCHEDULING (4:30-5:30)
 I write content on Sunday.
 The script takes the content file, formats it per platform, and schedules via Buffer's API.
 Monday through Friday automated. One 2-hour Sunday session runs the whole week.
 Time saved: 30 minutes per day of manual scheduling.
 
-### SECTION 6: AUTOMATION 5 — LEAD MONITORING (5:30-6:30)
+### SECTION 6: AUTOMATION 5, LEAD MONITORING (5:30-6:30)
 This one is the most valuable.
 The script monitors three sources: my competitor's product launches, keyword alerts via Google Alerts API, and replies to my own posts.
 Any new signal goes to Notion immediately.
@@ -401,7 +401,7 @@ Subscribe to see those when they're ready.
 
 ---
 
-## SCRIPT 06 — "The Faceless YouTube Channel Blueprint (0 to $2K/Month)"
+## SCRIPT 06, "The Faceless YouTube Channel Blueprint (0 to $2K/Month)"
 **Category:** Money Method | **Target length:** 11 min | **Monetization angle:** course, affiliate
 
 ### HOOK (0:00-0:30)
@@ -470,13 +470,13 @@ They cross-link where relevant. Subscribers in one funnel into others.
 The 10-hour investment I made 18 months ago is now running at $2,100/month.
 
 ### CTA (10:00-11:00)
-If you want my full production SOP — every template, every tool, every step — it's linked in the description.
+If you want my full production SOP, every template, every tool, every step, it's linked in the description.
 Including the ElevenLabs voice settings I use, the Canva thumbnail templates, and the Descript editing workflow.
 Subscribe if you want to see me build a new channel from scratch in real time. That's the next series.
 
 ---
 
-## SCRIPT 07 — "ChatGPT vs Claude vs Gemini: Which Actually Makes You Money?"
+## SCRIPT 07, "ChatGPT vs Claude vs Gemini: Which Actually Makes You Money?"
 **Category:** Tool Review | **Target length:** 9 min | **Monetization angle:** affiliate (Claude Pro, ChatGPT Plus)
 
 ### HOOK (0:00-0:30)
@@ -541,7 +541,7 @@ Subscribe for next week's video: the exact prompts I use for each tool to get th
 
 ---
 
-## SCRIPT 08 — "How to Build a $3K/Month Notion Template Business"
+## SCRIPT 08, "How to Build a $3K/Month Notion Template Business"
 **Category:** Money Method | **Target length:** 10 min | **Monetization angle:** own product, Gumroad affiliate
 
 ### HOOK (0:00-0:30)
@@ -560,10 +560,10 @@ Top sellers on Gumroad make $30K-$100K/year from templates alone.
 ### SECTION 2: WHAT ACTUALLY SELLS (1:30-2:45)
 Not productivity systems. Too saturated.
 What sells: very specific use cases.
-"Freelance client portal" — tracks projects, invoices, client notes. Sold 400+ times at $39.
-"Real estate deal analyzer" — specific enough to get Zillow users. $49.
-"Solopreneur OS" — specific audience, specific promise. $97.
-"Content calendar for coaches" — hyper-niche. $29. But only coaches buy it and they buy without hesitation.
+"Freelance client portal", tracks projects, invoices, client notes. Sold 400+ times at $39.
+"Real estate deal analyzer", specific enough to get Zillow users. $49.
+"Solopreneur OS", specific audience, specific promise. $97.
+"Content calendar for coaches", hyper-niche. $29. But only coaches buy it and they buy without hesitation.
 Rule: the more specific the template, the higher the conversion rate.
 
 ### SECTION 3: BUILDING THE TEMPLATE (2:45-4:30)
@@ -613,7 +613,7 @@ If you already have a template idea, drop it in the comments. I'll tell you if i
 
 ---
 
-## SCRIPT 09 — "Cold Email in 2024: What Actually Works (Tested on 10,000 Emails)"
+## SCRIPT 09, "Cold Email in 2024: What Actually Works (Tested on 10,000 Emails)"
 **Category:** Money Method | **Target length:** 10 min | **Monetization angle:** newsletter, course
 
 ### HOOK (0:00-0:30)
@@ -630,21 +630,21 @@ Each account sends max 40 emails per day. Total send capacity: 120/day.
 Clay.com for lead data. Apollo.io for email finding. Instantly.ai for sending and tracking.
 Total infrastructure cost: $187/month.
 
-### SECTION 2: WHAT WORKED — SUBJECT LINES (1:30-2:30)
+### SECTION 2: WHAT WORKED, SUBJECT LINES (1:30-2:30)
 Subject lines that worked: questions and first names.
-"Quick question, [FirstName]" — 61% open rate.
-"Saw your post about [specific thing]" — 55% open rate.
-"[FirstName] — thought of you" — 52% open rate.
+"Quick question, [FirstName]", 61% open rate.
+"Saw your post about [specific thing]", 55% open rate.
+"[FirstName], thought of you", 52% open rate.
 
 Subject lines that failed:
-"Introducing [product name]" — 18%.
-"Partnership opportunity" — 14%.
-"Following up" — 21%.
+"Introducing [product name]", 18%.
+"Partnership opportunity", 14%.
+"Following up", 21%.
 People open emails when they think it might be relevant to them specifically. Generic subject lines signal mass email.
 
-### SECTION 3: WHAT WORKED — EMAIL BODY (2:30-4:00)
+### SECTION 3: WHAT WORKED, EMAIL BODY (2:30-4:00)
 Best-performing template across 10K emails:
-Line 1: specific observation about them. "saw you're growing a newsletter — congrats on hitting 5K."
+Line 1: specific observation about them. "saw you're growing a newsletter, congrats on hitting 5K."
 Line 2: relevant credibility. "I help newsletter operators get to 50K by doing X."
 Line 3: specific offer. "would a 15-minute breakdown of your current acquisition strategy be useful?"
 Line 4: easy CTA. "Yes or no works fine."
@@ -661,8 +661,8 @@ Personalization that's clearly templated. "I love what you're doing with [compan
 
 ### SECTION 5: THE PERSONALIZATION TRAP (5:00-6:15)
 Personalization works when it's specific and unexpected.
-"Saw your post about X from 3 weeks ago" — specific. Real signal that you looked.
-"Love what you're doing at [company]" — generic. Could be copy-pasted to anyone.
+"Saw your post about X from 3 weeks ago", specific. Real signal that you looked.
+"Love what you're doing at [company]", generic. Could be copy-pasted to anyone.
 The difference: specific personalization requires research. 30 seconds per prospect.
 I use Clay.com to automate some of this research at scale.
 It's not perfect but it's faster than manual research.
@@ -672,7 +672,7 @@ Most replies come from follow-up 3 or 4.
 My sequence: day 1, day 3, day 7, day 14.
 4 emails max. After that it's harassment.
 Follow-up 2: soft. "Just bubbling this up in case it got buried."
-Follow-up 3: add value. "Wrote something you might find useful — [link]."
+Follow-up 3: add value. "Wrote something you might find useful, [link]."
 Follow-up 4: close the loop. "Last email from me on this. If timing changes, my info is below."
 42% of my replies come from follow-ups 3 and 4.
 
@@ -692,13 +692,13 @@ Mine did because I targeted precisely. Your numbers will be different.
 But even at half those rates, cold email at scale beats most revenue channels.
 
 ### CTA (9:00-10:00)
-I published the full email template library I use — 12 templates across different offer types.
+I published the full email template library I use, 12 templates across different offer types.
 Free in the description.
 Subscribe for next week: how I built my lead list using Clay.com without spending $500/month on data.
 
 ---
 
-## SCRIPT 10 — "The AI Side Income Stack: How I Make $6K/Month Working 3 Hours/Day"
+## SCRIPT 10, "The AI Side Income Stack: How I Make $6K/Month Working 3 Hours/Day"
 **Category:** Money Method | **Target length:** 12 min | **Monetization angle:** newsletter, course, affiliate
 
 ### HOOK (0:00-0:30)
@@ -714,7 +714,7 @@ Some started at 10 hours per week when I was building them. Now they're maintena
 The goal is not to go viral. The goal is to have 5 things each generating $1,000-$2,000/month.
 That's more stable than $6K from one source. And it stacks differently over time.
 
-### SECTION 2: STREAM 1 — YOUTUBE AD REVENUE (1:30-2:30)
+### SECTION 2: STREAM 1, YOUTUBE AD REVENUE (1:30-2:30)
 Channel: AI tools and productivity. 42K subscribers.
 Monthly views: 180,000.
 CPM: $14. RPM: $8.
@@ -722,14 +722,14 @@ Monthly revenue: $1,440.
 Time: 6-8 hours per week producing 2 videos.
 This takes the most time but also drives subscribers to every other stream.
 
-### SECTION 3: STREAM 2 — AFFILIATE COMMISSIONS (2:30-3:30)
+### SECTION 3: STREAM 2, AFFILIATE COMMISSIONS (2:30-3:30)
 Tool recommendations in every video.
 ElevenLabs, Descript, Ahrefs, Notion, ConvertKit.
 Average monthly affiliate revenue: $1,200.
 It's not one big affiliate. It's 8 small ones adding up.
 ElevenLabs pays 22% recurring. My referrals average $4.84/month each. 60 active referrals = $290/month from one program alone.
 
-### SECTION 4: STREAM 3 — NEWSLETTER PAID TIER (3:30-4:30)
+### SECTION 4: STREAM 3, NEWSLETTER PAID TIER (3:30-4:30)
 Free newsletter: 4,200 subscribers.
 Paid tier: $9/month. 180 subscribers.
 Monthly revenue: $1,620.
@@ -737,7 +737,7 @@ The paid tier gets: weekly deep-dives, tool breakdowns with my actual usage data
 The free tier exists to build trust. The paid tier monetizes it.
 Time: 2 hours per week for the paid newsletter. Most of the research overlaps with YouTube.
 
-### SECTION 5: STREAM 4 — DIGITAL PRODUCTS (4:30-5:30)
+### SECTION 5: STREAM 4, DIGITAL PRODUCTS (4:30-5:30)
 Three products on Gumroad.
 AI Prompt Pack: $27. 22 sales/month = $594.
 YouTube Workflow Templates: $47. 8 sales/month = $376.
@@ -746,7 +746,7 @@ Total: $1,455/month.
 These are passive. The videos drive traffic. Gumroad handles fulfillment.
 I created them once. They generate revenue without ongoing work.
 
-### SECTION 6: STREAM 5 — OCCASIONAL CONSULTING (5:30-6:30)
+### SECTION 6: STREAM 5, OCCASIONAL CONSULTING (5:30-6:30)
 Two consulting calls per month. $250/hour. 90 minutes each.
 Monthly: $750.
 I don't advertise this. It comes from newsletter readers who want 1:1 help.
@@ -784,7 +784,7 @@ That's the honest version of this story.
 
 ### SECTION 9: WHAT TO DO FIRST (9:15-10:30)
 Don't try to build 5 streams at once.
-Pick one. The YouTube channel is the highest leverage because it feeds every other stream.
+Pick one. The YouTube channel is the highest use because it feeds every other stream.
 Alternatively: start with the newsletter if you don't want to produce video.
 Build the distribution channel first. Then monetize it.
 Trying to monetize before you have an audience is like opening a store in an empty mall.
@@ -798,12 +798,12 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPTS 11-20 — CONDENSED OUTLINES
+## SCRIPTS 11-20, CONDENSED OUTLINES
 *Full scripts available on request. These outlines are production-ready for script expansion.*
 
 ---
 
-## SCRIPT 11 — "10 Automation Tools That Serious Solopreneurs Use (2024)"
+## SCRIPT 11, "10 Automation Tools That Serious Solopreneurs Use (2024)"
 **Hook:** "most solopreneurs use 2-3 automation tools. the ones making $10K+/month use 10 specific ones."
 **Topics:** Make, Clay, Zapier, n8n, Airtable, Notion, Buffer, Instantly, Phantombuster, Apollo
 **Monetization:** Affiliate for each tool (avg 20-30% recurring)
@@ -811,7 +811,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 12 — "I Tested 15 AI Image Tools. Only 3 Are Worth Paying For."
+## SCRIPT 12, "I Tested 15 AI Image Tools. Only 3 Are Worth Paying For."
 **Hook:** "spent $340 testing every major AI image tool over 6 weeks. here's the honest ranking."
 **Topics:** Midjourney, DALL-E 3, Stable Diffusion, Ideogram, Recraft, Adobe Firefly, Canva AI, Kling, Runway, Leonardo
 **Monetization:** Affiliate (Midjourney, Adobe, Canva)
@@ -819,7 +819,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 13 — "The $500/Week Freelance Side Hustle Using Claude AI"
+## SCRIPT 13, "The $500/Week Freelance Side Hustle Using Claude AI"
 **Hook:** "I cleared $2,200 last month writing for clients using Claude. clients have no idea."
 **Topics:** Which services to offer, how to use AI without making slop, pricing strategy, getting first clients
 **Monetization:** Claude affiliate, course
@@ -827,7 +827,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 14 — "How to Make Money on Etsy in 2024 Without Making Anything"
+## SCRIPT 14, "How to Make Money on Etsy in 2024 Without Making Anything"
 **Hook:** "digital products on Etsy. no inventory, no shipping, no manufacturing. $800 last month."
 **Topics:** Product types, niche selection, Etsy SEO, pricing, getting first sales
 **Monetization:** Etsy (not affiliate-able, but drives to own product listing)
@@ -835,7 +835,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 15 — "The Exact SEO Strategy That Gets 50K Monthly Visitors Without Backlinks"
+## SCRIPT 15, "The Exact SEO Strategy That Gets 50K Monthly Visitors Without Backlinks"
 **Hook:** "8,000 to 57,000 organic visitors in 11 months. no link building. no PR. here's the playbook."
 **Topics:** Topical authority, content clusters, programmatic SEO, internal linking, search intent matching
 **Monetization:** Ahrefs affiliate, newsletter, course
@@ -843,7 +843,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 16 — "Notion AI vs ChatGPT for Actual Work: Which Saves More Time?"
+## SCRIPT 16, "Notion AI vs ChatGPT for Actual Work: Which Saves More Time?"
 **Hook:** "I ran 40 tasks through both and tracked the time precisely. results surprised me."
 **Topics:** Writing, summarizing, databases, project management, research
 **Monetization:** Notion affiliate, ChatGPT Plus affiliate
@@ -851,7 +851,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 17 — "How I Find $1,000+ Business Ideas Every Week (Free Method)"
+## SCRIPT 17, "How I Find $1,000+ Business Ideas Every Week (Free Method)"
 **Hook:** "I log 15-20 validated business ideas every week. none of them cost money to discover. here's the system."
 **Topics:** Reddit method, Twitter monitoring, Hacker News, Product Hunt, job boards as demand signals
 **Monetization:** Newsletter, course
@@ -859,7 +859,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 18 — "The Make.com Automation That Runs My Business While I Sleep"
+## SCRIPT 18, "The Make.com Automation That Runs My Business While I Sleep"
 **Hook:** "my business runs 4 automated workflows that replaced 3 hours of daily manual work. built them in Make.com for free."
 **Topics:** Lead capture automation, email follow-up, content distribution, invoice/client onboarding
 **Monetization:** Make.com affiliate (20-30% recurring), newsletter
@@ -867,7 +867,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 19 — "Dropshipping in 2024: Honest Results After 90 Days"
+## SCRIPT 19, "Dropshipping in 2024: Honest Results After 90 Days"
 **Hook:** "I ran a dropshipping store for 90 days. here's the real numbers: revenue, cost, profit, and what I'd do differently."
 **Topics:** Niche selection, supplier vetting, ad spend, margins, what worked and what didn't
 **Monetization:** Shopify affiliate ($150/referral), course
@@ -875,7 +875,7 @@ Subscribe here for the video series where I'm tracking my progress toward $10K/m
 
 ---
 
-## SCRIPT 20 — "How to Build a Chrome Extension and Make $500-$2K/Month Selling It"
+## SCRIPT 20, "How to Build a Chrome Extension and Make $500-$2K/Month Selling It"
 **Hook:** "Chrome extensions with 100 users can generate $500/month. 1,000 users: $5K. here's the blueprint."
 **Topics:** Idea validation, finding profitable problems, non-technical build options, Chrome Web Store listing, pricing models
 **Monetization:** Course, affiliate (no-code tools)

@@ -2,7 +2,7 @@
 <!-- Account: @PRINTMAXXER -->
 <!-- Generated: 2026-03-14 22:30 -->
 <!-- Source: Research cycle alpha scan 2026-03-14 -->
-<!-- Findings used: canirun.ai HN viral, $4K MRR channel audit, $12K MRR bootstrapped framework, first 10 customers $0 spend, agent SEO paradigm, Claude 1M context GA -->
+<!-- Findings used: canirun.ai HN viral, $4K MRR channel audit, $12K MRR bootstrapped framework, first 10 customers $0 spend, agent SEO model, Claude 1M context GA -->
 
 ---
 
@@ -13,7 +13,7 @@
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Would @pipelineabuser actually post this?
@@ -92,7 +92,7 @@ most founders do 2 of these. the ones at $12K MRR do all 4 without exception.
 ---
 
 ### TWEET 4 - agent SEO / LLM-first content
-**Alpha source:** David Cramer (Sentry CEO) on agent SEO paradigm
+**Alpha source:** David Cramer (Sentry CEO) on agent SEO model
 
 ---
 

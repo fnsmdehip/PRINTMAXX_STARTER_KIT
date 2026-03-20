@@ -117,3 +117,4 @@ CONTENT/_LOCAL_LLM_QUARANTINE/
 
 # External repos (cloned for reference, not our code)
 external/
+.pip_libs/

@@ -1,4 +1,4 @@
-# @printmaxxer — 50 Tweets
+# @printmaxxer, 50 Tweets
 
 All tweets follow copy-style.md weighted voice aggregation.
 S-tier: @pipelineabuser consequence-first, exact numbers, tool names.
@@ -215,7 +215,7 @@ productized service ceiling: price × clients = higher cap.
 
 digital product ceiling: (units × price) - platform fees = theoretically infinite.
 
-same skills. different leverage.
+same skills. different use.
 
 ---
 
@@ -384,7 +384,7 @@ replies stay buried. QTs surface your content to YOUR audience.
 
 when someone posts something relevant:
 1. QT with a specific take or data point
-2. don't just agree — add something new
+2. don't just agree, add something new
 3. make YOUR followers glad they saw it
 
 QT is free amplification.

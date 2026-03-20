@@ -1,0 +1,193 @@
+{
+  "cycle": 79,
+  "timestamp": "2026-03-19T09:29:46.195490+00:00",
+  "niches": {
+    "daily_drawing_streak": {
+      "classification": "soft_competition",
+      "community_total": 2080000,
+      "reddit_communities": {
+        "learnart": 615000,
+        "drawing": 890000,
+        "Sketchbook": 265000,
+        "ArtFundamentals": 310000
+      },
+      "top_apps": [
+        "Procreate",
+        "Sketchbook - Draw and Paint",
+        "Adobe Fresco - Draw and Paint"
+      ],
+      "notes_summary": "Procreate (780K ratings) and Sketchbook (196K) are canvases \u2014 they have no daily streak accountability mechanic. 'Did you draw today?' is absent from ALL major art apps. SketchADay provides prompts bu"
+    },
+    "knitting_crochet_streak": {
+      "classification": "blue_ocean",
+      "community_total": 3073000,
+      "reddit_communities": {
+        "knitting": 780000,
+        "crochet": 2100000,
+        "YarnAddicts": 68000,
+        "Needlework": 125000
+      },
+      "top_apps": [
+        "Ravelry",
+        "Knit Counter - Row Counter",
+        "Knitcasso - Knitting Counter"
+      ],
+      "notes_summary": "Ravelry is a project portfolio (like Goodreads for yarn) \u2014 not a daily habit streak. Row counters are session tools. r/crochet alone has 2.1M members. Daily practice ('did you stitch at least 15 minut"
+    },
+    "photography_365_streak": {
+      "classification": "soft_competition",
+      "community_total": 4172000,
+      "reddit_communities": {
+        "photoclass": 188000,
+        "365challenge": 42000,
+        "photography": 3800000,
+        "photocritique": 142000
+      },
+      "top_apps": [
+        "VSCO: Photo & Video Editor",
+        "Lightroom Photo & Video Editor",
+        "365 Project Photo"
+      ],
+      "notes_summary": "VSCO and Lightroom are editing suites. 365 Project and Photo 365 are calendar-upload apps (4K-12K ratings only) with no streak gamification, no reminders, no community. r/photography has 3.8M members."
+    },
+    "cold_shower_streak": {
+      "classification": "blue_ocean",
+      "community_total": 2545000,
+      "reddit_communities": {
+        "coldshowers": 248000,
+        "Wim_Hof": 312000,
+        "selfimprovement": 1800000,
+        "nosurf": 185000
+      },
+      "top_apps": [
+        "Wim Hof Method",
+        "Cold Turkey Blocker",
+        "Breathwork - Wim Hof & More"
+      ],
+      "notes_summary": "Wim Hof Method app (68K ratings) has guided cold shower content but no standalone daily cold shower streak counter with gamification. Generic habit trackers (Habitica, Streaks, etc.) can log it but ha"
+    },
+    "gratitude_journal_streak": {
+      "classification": "occupied",
+      "community_total": 2747000,
+      "reddit_communities": {
+        "gratitude": 125000,
+        "mindfulness": 480000,
+        "Journaling": 342000,
+        "selfimprovement": 1800000
+      },
+      "top_apps": [
+        "Reflectly - Journal & AI Diary",
+        "Day One - Journal & Diary",
+        "5 Minute Journal: Self-Care"
+      ],
+      "notes_summary": "5 Minute Journal (89K ratings, $69.99/yr) is the closest but positions as a premium guided journal subscription \u2014 expensive and complex. Day One (310K) is a comprehensive diary with no streak gamifica"
+    },
+    "digital_detox_streak": {
+      "classification": "blue_ocean",
+      "community_total": 4974000,
+      "reddit_communities": {
+        "nosurf": 185000,
+        "digitalminimalism": 89000,
+        "productivity": 2900000,
+        "selfimprovement": 1800000
+      },
+      "top_apps": [
+        "Screen Time (Apple Built-in)",
+        "One Sec - App Blocker & Focus",
+        "Forest: Focus for Productivity"
+      ],
+      "notes_summary": "Forest (520K) gamifies individual focus sessions (25-min timer) \u2014 completely different from a 'did I stay under my screen time goal today?' daily streak. Apple Screen Time tracks but has zero gamifica"
+    },
+    "speed_reading_streak": {
+      "classification": "blue_ocean",
+      "community_total": 3432000,
+      "reddit_communities": {
+        "speedreading": 132000,
+        "getdisciplined": 1200000,
+        "books": 2100000
+      },
+      "top_apps": [
+        "Readlax - Speed Reading App",
+        "Spritz Speed Reader",
+        "Reeder 5"
+      ],
+      "notes_summary": "Speed reading apps (Readlax 12K, Spritz 4K) are practice tools but none have daily streak accountability. A user practicing speed reading for 10 minutes daily has no dedicated app that tracks their st"
+    },
+    "handwriting_practice_streak": {
+      "classification": "blue_ocean",
+      "community_total": 1467000,
+      "reddit_communities": {
+        "Handwriting": 485000,
+        "Calligraphy": 425000,
+        "fountainpens": 342000,
+        "PenmanshipPorn": 215000
+      },
+      "top_apps": [
+        "Calligraphy Lettering & Font Art",
+        "iScrybe - Handwriting Note",
+        "GoodNotes 5"
+      ],
+      "notes_summary": "GoodNotes (680K ratings) is a note-taking tool, not a daily handwriting practice accountability app. Calligraphy tutorials are reference content. r/Handwriting 485K + r/Calligraphy 425K + r/Penmanship"
+    },
+    "mental_math_streak": {
+      "classification": "occupied",
+      "community_total": 2710000,
+      "reddit_communities": {
+        "learnmath": 785000,
+        "mathematics": 1200000,
+        "GetStudying": 725000
+      },
+      "top_apps": [
+        "Mathway: Math Problem Solver",
+        "Photomath - Home Learner",
+        "Mental Math Master"
+      ],
+      "notes_summary": "Mathway and Photomath SOLVE math (answer-giving tools). Mental Math Master (18K) and Math Training (8K) are drill apps without streak gamification. Duolingo Math shut down in 2023. r/learnmath 785K + "
+    },
+    "golf_practice_streak": {
+      "classification": "blue_ocean",
+      "community_total": 1430000,
+      "reddit_communities": {
+        "golf": 1200000,
+        "golfswing": 185000,
+        "golf_irl": 45000
+      },
+      "top_apps": [
+        "Golfshot: Golf GPS + Scorecard",
+        "Golf GameBook - Live Scorecard",
+        "Arccos Golf - Smart Sensors"
+      ],
+      "notes_summary": "Golfshot (145K), GameBook (52K), Arccos (28K) all track ON-COURSE rounds \u2014 completely different from daily practice (putting green, range sessions, swing drills). V1 Golf analyzes swings on demand. r/"
+    },
+    "tennis_practice_streak": {
+      "classification": "blue_ocean",
+      "community_total": 793000,
+      "reddit_communities": {
+        "tennis": 680000,
+        "tennis_irl": 28000,
+        "TableTennis": 85000
+      },
+      "top_apps": [
+        "Tennis Abstract",
+        "SwingVision - Tennis AI Coach",
+        "PlayYourCourt: Tennis App"
+      ],
+      "notes_summary": "SwingVision (8.8K) analyzes matches. PlayYourCourt books courts. Tennis apps universally focus on match logistics or analysis, not daily practice accountability. r/tennis 680K. Daily footwork drills, "
+    },
+    "chess_puzzle_streak": {
+      "classification": "occupied",
+      "community_total": 3320000,
+      "reddit_communities": {
+        "chess": 2800000,
+        "chessbeginners": 485000,
+        "chessprogramming": 35000
+      },
+      "top_apps": [
+        "Chess - Play & Learn",
+        "Lichess - Online Chess",
+        "Magnus Trainer - Chess Puzzles"
+      ],
+      "notes_summary": "Chess.com (920K ratings) has a dedicated daily puzzle with streak tracking as a CORE feature. Lichess has puzzle streaks. Magnus Trainer has streak mechanics. Chess puzzle streak is OCCUPIED by well-f"
+    }
+  }
+}

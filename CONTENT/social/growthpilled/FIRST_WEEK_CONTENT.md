@@ -500,7 +500,7 @@ carousels using this format get 3x engagement versus single images on instagram.
 ### Pre-Publish Audit
 
 - [x] **zero em dashes** - confirmed. no em dashes in any content.
-- [x] **zero banned AI vocabulary** - no "leverage," "comprehensive," "innovative," "seamless," "game-changer," "unlock," "empower," "cutting-edge," "delve," "robust," "streamlined," or any other banned words.
+- [x] **zero banned AI vocabulary** - no "use," "complete," "novel," "seamless," "game-changer," "get," "empower," "cutting-edge," "dig," "strong," "streamlined," or any other banned words.
 - [x] **consequence-first hooks** - every tweet and script leads with what happened or a specific result, not explanation.
 - [x] **specific numbers** - every piece of content includes real numbers: $77,500 pipeline, 2.9x conversion, 200 DMs/hour, 3.8% reply rate, 23.8M views, 44.1% retention, etc.
 - [x] **would @pipelineabuser post this** - yes. aggressive, specific, lowercase energy, "borderline illegal" framing, tool names over generic terms.

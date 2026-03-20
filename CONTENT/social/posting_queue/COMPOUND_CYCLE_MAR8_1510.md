@@ -1,6 +1,6 @@
 # CONTENT COMPOUNDER OUTPUT -- 2026-03-08 15:10
 # Sources: trend_synthesis_20260308, competitor_intel_20260308, research_cycle_20260308_1321, CEO decisions (8 approved alphas)
-# Status: APPROVED (Quality Gate 2026-03-08 22:15 — all 17 pieces pass. Cold email niche already self-blocked and rewritten.)
+# Status: APPROVED (Quality Gate 2026-03-08 22:15, all 17 pieces pass. Cold email niche already self-blocked and rewritten.)
 # Voice: PRINTMAXXER (S-tier weighted: @pipelineabuser energy)
 
 ---
@@ -287,7 +287,7 @@ boring niche + simple app + zero competition = $64/month/app.
 
 65 of those = $4,200/mo.
 
-### COLD EMAIL NICHE: Outcome Framing — BLOCKED (Quality Gate: "tested this on 50 cold emails last week" is fabricated. No cold email infra exists. Rewrite below.)
+### COLD EMAIL NICHE: Outcome Framing, BLOCKED (Quality Gate: "tested this on 50 cold emails last week" is fabricated. No cold email infra exists. Rewrite below.)
 **Platform:** LinkedIn or Twitter cold email community
 
 ~~tested this on 50 cold emails last week:~~

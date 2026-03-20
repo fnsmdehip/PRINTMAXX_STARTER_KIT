@@ -1,11 +1,11 @@
-# Show HN posts — cycle 13
+# Show HN posts, cycle 13
 # Status: PENDING_REVIEW
 # Target: news.ycombinator.com/submit (Show HN)
 # Notes: HN rewards technical specificity, honest tradeoffs, builder perspective. No hype. No marketing language. Show the how.
 
 ---
 
-## Post 1 — PageScorer
+## Post 1, PageScorer
 
 **Title:**
 Show HN: PageScorer - I built a landing page audit tool that grades conversion potential A through F
@@ -36,7 +36,7 @@ Interested in feedback on the scoring weights. I weighted CTA specificity at 25%
 
 ---
 
-## Post 2 — Cold Email ROI Calculator
+## Post 2, Cold Email ROI Calculator
 
 **Title:**
 Show HN: I built a calculator that tells you what cold email actually costs per closed deal
@@ -74,7 +74,7 @@ https://cold-email-roi-calculator.surge.sh
 
 ---
 
-## Post 3 — Side Project Revenue Estimator
+## Post 3, Side Project Revenue Estimator
 
 **Title:**
 Show HN: Side Project Revenue Estimator - realistic projections based on traffic source, niche, and monetization type
@@ -92,7 +92,7 @@ This estimator accounts for those differences. You select:
 - Monetization type (SaaS, affiliate, digital product, service, ads)
 - Niche (B2B tools, consumer apps, info products, local, developer tools)
 - Monthly visitor count
-- Current month in operation (ramp curve is real — month 1 is not month 12)
+- Current month in operation (ramp curve is real, month 1 is not month 12)
 
 It outputs a 12-month projection with a realistic range (not a single number). P10, P50, P90. The P10 is what happens if you underperform. P90 is what happens if you execute well.
 

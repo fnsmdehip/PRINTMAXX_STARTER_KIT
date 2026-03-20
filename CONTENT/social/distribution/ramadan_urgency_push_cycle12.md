@@ -1,4 +1,4 @@
-# Ramadan Urgency Push — Cycle 12 (2026-03-08)
+# Ramadan Urgency Push, Cycle 12 (2026-03-08)
 
 ## CONTEXT
 Ramadan started Feb 28, 2026. ~18 days remaining (~Mar 27 end).
@@ -10,7 +10,7 @@ Every day we don't distribute = lost users in a closing window.
 ## REDDIT POSTS
 
 ### Post 1: r/islam (1.1M members)
-**Title:** free ramadan tracker app — fasting times, prayer tracking, quran progress, no ads
+**Title:** free ramadan tracker app, fasting times, prayer tracking, quran progress, no ads
 
 **Body:**
 salaam everyone,
@@ -33,7 +33,7 @@ ramadan mubarak to everyone. may Allah accept our fasting and prayers.
 ---
 
 ### Post 2: r/MuslimLounge (150K members)
-**Title:** made a free ramadan app that actually works offline — no login, no ads
+**Title:** made a free ramadan app that actually works offline, no login, no ads
 
 **Body:**
 assalamu alaikum,
@@ -57,7 +57,7 @@ taking feature requests if anyone wants anything added. still 18 days of ramadan
 ---
 
 ### Post 3: r/Ramadan (if exists) / r/muslimculture
-**Title:** free web app for tracking the rest of ramadan — prayers, fasting, quran progress
+**Title:** free web app for tracking the rest of ramadan, prayers, fasting, quran progress
 
 **Body:**
 built a free ramadan tracker for the last 18 days.
@@ -170,7 +170,7 @@ ramadan mubarak!
 ## PRODUCT HUNT
 
 ### Launch Copy
-**Tagline:** Track your Ramadan — prayers, fasting, Quran, dhikr. Free. Offline. No signup.
+**Tagline:** Track your Ramadan, prayers, fasting, Quran, dhikr. Free. Offline. No signup.
 
 **Description:**
 Hilal is a free Ramadan tracker PWA. Track all 5 daily prayers plus Taraweeh, fasting countdown, Quran reading progress by Juz, dhikr counter, and daily streaks.

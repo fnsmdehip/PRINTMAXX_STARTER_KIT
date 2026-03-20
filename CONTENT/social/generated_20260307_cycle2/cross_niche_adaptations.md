@@ -1,4 +1,4 @@
-# Cross-Niche Adaptations — 2026-03-07 Cycle 2
+# Cross-Niche Adaptations, 2026-03-07 Cycle 2
 # STATUS: APPROVED
 # Adapt core alpha for faith/fitness/esoteric niches
 
@@ -6,7 +6,7 @@
 
 ## FAITH NICHE (@selahmoments / ramadan content)
 
-### Post — Spiritual App Retention
+### Post, Spiritual App Retention
 apps that help people build daily spiritual habits have the same retention problem as every other subscription app.
 
 revenuecat data: top apps grew 80% yoy. the rest flatlined.
@@ -21,7 +21,7 @@ habit apps live and die by the first 3 days.
 
 ## FITNESS NICHE (@fitness related)
 
-### Post — Fitness App Pricing Intel
+### Post, Fitness App Pricing Intel
 fitness apps that charge per month are losing to apps that charge per result.
 
 credit-based pricing grew 126% yoy across all SaaS. fitness is no exception.
@@ -34,7 +34,7 @@ animated paywalls convert 2.9x better than static ones. if your paywall is a wal
 
 ## ESOTERIC / DRIFTHOUR NICHE
 
-### Post — Content Discovery Shift
+### Post, Content Discovery Shift
 the way people find content is changing and most creators haven't noticed.
 
 43% more brands got cited by chatgpt this year. 680 million citations analyzed.
@@ -52,7 +52,7 @@ the creators who figure this out first own the next decade of organic discovery.
 
 ## TOOLSTWTS NICHE
 
-### Post — Claude Skills Playbook
+### Post, Claude Skills Playbook
 anthropic dropped a free 33-page playbook on building claude skills.
 
 the skills folder is the real cheat code. spend 30 minutes building it and you never explain your process again.

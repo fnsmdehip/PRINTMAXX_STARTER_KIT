@@ -1,4 +1,4 @@
-# Reddit Distribution — Mar 8 2026
+# Reddit Distribution, Mar 8 2026
 # Status: PENDING_REVIEW
 # Subreddits: r/SideProject (3), r/Entrepreneur (2), r/webdev (2), r/SaaS (1), r/coldoutreach (1), r/indiehackers (2), r/islam (1), r/MuslimLounge (1)
 # Total posts: 13
@@ -7,7 +7,7 @@
 
 ## r/SideProject posts
 
-### r/SideProject — Post 1
+### r/SideProject, Post 1
 **Title:** I built 22 PWA apps in 35 days as a solo dev. here's what I learned about shipping fast.
 **Flair:** Show HN / Built This
 
@@ -39,7 +39,7 @@ All 22 apps are live at https://printmaxx-apps.surge.sh if you want to see the s
 
 ---
 
-### r/SideProject — Post 2
+### r/SideProject, Post 2
 **Title:** I deployed 262 websites to surge.sh in 5 weeks. the deployment pipeline that makes it possible.
 **Flair:** Technical / Show HN
 
@@ -69,7 +69,7 @@ The whole pipeline is about 200 lines of Python. If there's interest I can post 
 
 ---
 
-### r/SideProject — Post 3
+### r/SideProject, Post 3
 **Title:** I built a free cold email ROI calculator. no signup, no paywall.
 **Flair:** Free Tool / Show HN
 
@@ -98,7 +98,7 @@ It's at cold-email-roi-calculator.surge.sh. Free, no login, works offline after 
 
 ## r/Entrepreneur posts
 
-### r/Entrepreneur — Post 1
+### r/Entrepreneur, Post 1
 **Title:** 35 days building a digital product empire with $0 budget. 13 products ready, here's the stack.
 **Flair:** Entrepreneur / Case Study
 
@@ -126,7 +126,7 @@ The honest bottleneck right now is not building more things. It's getting the 13
 
 ---
 
-### r/Entrepreneur — Post 2
+### r/Entrepreneur, Post 2
 **Title:** I scraped 1,111 local business leads and built custom demo sites for each. here's the outreach framework.
 **Flair:** Cold Outreach / Growth
 
@@ -156,7 +156,7 @@ The 1,111 leads are still being worked through. The framework is the repeatable 
 
 ## r/webdev posts
 
-### r/webdev — Post 1
+### r/webdev, Post 1
 **Title:** I built 22 PWAs that average 55KB each. here's how I keep them tiny.
 **Flair:** PWA / Performance
 
@@ -182,7 +182,7 @@ If you're building a PWA and wondering where your KB went, audit your third-part
 
 ---
 
-### r/webdev — Post 2
+### r/webdev, Post 2
 **Title:** Deployed 262 static sites on surge.sh with automated Playwright testing. here's the pipeline.
 **Flair:** DevOps / Automation
 
@@ -254,22 +254,22 @@ surge.sh has been reliable for all 262 sites. $0 hosting cost. The only limit I'
 
 ## r/SaaS posts
 
-### r/SaaS — Post 1
+### r/SaaS, Post 1
 **Title:** Free tools I built instead of paying for SaaS: invoice generator, ROI calculator, page scorer, subject line grader.
 **Flair:** Tools / Free Resource
 
 I got tired of paying $20-40/month for tools I used 3-4 times a month. So I built the ones I needed most. All free, no login, no paywall.
 
-**Cold Email ROI Calculator** — cold-email-roi-calculator.surge.sh
+**Cold Email ROI Calculator**, cold-email-roi-calculator.surge.sh
 You enter daily volume, open rate, reply rate, close rate, deal size. It tells you monthly revenue projection and break-even volume. I use this before every campaign to reality-check my assumptions. The math almost always shows reply rate is the lever that matters most, not close rate.
 
-**Page Scorer** — pagescorer-vs-gtmetrix.surge.sh (comparison page with embedded scorer)
+**Page Scorer**, pagescorer-vs-gtmetrix.surge.sh (comparison page with embedded scorer)
 Scores your landing page on 8 factors: headline clarity, social proof, CTA placement, load time, mobile layout, trust signals, form friction, above-the-fold value prop. Not a Lighthouse replacement. More of a conversion audit than a technical audit.
 
-**Subject Line Grader** — subject-line-grader-pm.surge.sh
+**Subject Line Grader**, subject-line-grader-pm.surge.sh
 Paste a subject line and it scores it on: length (under 50 chars), personalization tokens, spam trigger words, question vs statement, urgency without screaming. Built this because I kept A/B testing subject lines without a baseline framework.
 
-**Invoice Generator** — invoiceforge.surge.sh
+**Invoice Generator**, invoiceforge.surge.sh
 Single-page invoice builder. Fill in client details, line items, payment terms. Downloads a clean PDF. No account, no watermark, no "upgrade to remove branding." I use this for every client invoice.
 
 All 4 are single-page static tools. Zero backend. The data never leaves your browser. Built in a weekend, maintained in about 30 minutes a month.
@@ -284,7 +284,7 @@ If you're paying monthly for any of these categories, worth checking if a free t
 
 ## r/coldoutreach posts
 
-### r/coldoutreach — Post 1
+### r/coldoutreach, Post 1
 **Title:** I built a cold email ROI calculator that shows exactly how many emails = $X revenue. free, no signup.
 **Flair:** Tool / Free Resource
 
@@ -319,7 +319,7 @@ Built this because I was doing this math in a spreadsheet before every campaign.
 
 ## r/indiehackers posts
 
-### r/indiehackers — Post 1
+### r/indiehackers, Post 1
 **Title:** Day 35: 22 apps, 262 sites, 13 products, $0 revenue. the honest truth about building vs selling.
 **Flair:** Post-Mortem / Transparency
 
@@ -355,7 +355,7 @@ Day 36 changes the metric. Not apps built. Not sites deployed. Revenue.
 
 ---
 
-### r/indiehackers — Post 2
+### r/indiehackers, Post 2
 **Title:** I automated my entire content pipeline: research to content to distribution. here's the architecture.
 **Flair:** Automation / Build Log
 
@@ -371,7 +371,7 @@ A Python script reads the CSV, scores each entry (specificity, actionability, RO
 For each approved alpha entry, Claude Code generates: 3 tweet variants, 1 thread outline, 1 Reddit post draft, and a newsletter paragraph. The prompt template is the same every time. Output goes to a staging folder with status PENDING_REVIEW.
 
 **Layer 4: Quality gate (runs before distribution)**
-A separate script reads the staging folder and runs a checklist: no em dashes, no banned AI vocabulary (leverage, utilize, delve, etc.), consequence-first hook, specific numbers present, length within platform limits. Anything that fails gets flagged for human edit. About 15% fail on the first pass.
+A separate script reads the staging folder and runs a checklist: no em dashes, no banned AI vocabulary (use, use, dig, etc.), consequence-first hook, specific numbers present, length within platform limits. Anything that fails gets flagged for human edit. About 15% fail on the first pass.
 
 **Layer 5: Distribution queue**
 Approved content gets routed to a posting queue by platform: Twitter, Reddit, LinkedIn, newsletter. The queue has time slots. Human posts from the queue, doesn't write from scratch.
@@ -388,7 +388,7 @@ Full stack: Python, Playwright (for scraping), Claude API (for generation), surg
 
 ## r/islam posts
 
-### r/islam — Post 1
+### r/islam, Post 1
 **Title:** Built a free Ramadan tracker PWA. prayer times, fasting tracker, Quran progress. works offline, no ads.
 **Flair:** App / Resource
 
@@ -419,7 +419,7 @@ Ramadan Mubarak to everyone in this community.
 
 ## r/MuslimLounge posts
 
-### r/MuslimLounge — Post 1
+### r/MuslimLounge, Post 1
 **Title:** Free prayer streak app for Ramadan. 55KB, works offline, no tracking.
 **Flair:** Apps & Tech
 
@@ -453,7 +453,7 @@ Ramadan Mubarak. May Allah accept our fasting and prayers.
 ## Pre-publish checklist (run before each post)
 
 - [ ] Zero em dashes in post body
-- [ ] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [ ] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [ ] First sentence delivers value or consequence, not setup
 - [ ] Specific numbers present (KB sizes, site counts, revenue figures, percentages)
 - [ ] No promotional adjectives (revolutionary, cutting-edge, game-changing)

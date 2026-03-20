@@ -8,7 +8,7 @@
 
 ## PRE-PUBLISH CHECKLIST (APPLIED TO ALL CONTENT)
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Would @pipelineabuser actually post this? YES
@@ -26,14 +26,14 @@
 
 i paste AI-written copy into this tool and it scores it in 3 seconds.
 it flags the exact phrases that give you away.
-"leverage." "unlock." "delve." all of it.
+"use." "get." "dig." all of it.
 built a detector that catches what your eye misses.
 
 ai-slop-detector.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 unpopular opinion: you can tell within 4 words whether something was written by AI.
 
@@ -49,7 +49,7 @@ human writers bleed on the page. AI writers float above it.
 this is exactly why AI content is collapsing engagement across every niche.
 
 built a free tool that scans your copy and flags every tell before you post.
-catching "furthermore" and "testament to" in content is borderline embarrassing now.
+catching "and" and "testament to" in content is borderline embarrassing now.
 
 ai-slop-detector.surge.sh
 
@@ -71,7 +71,7 @@ productivity-stack-quiz.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 the productivity tool space is mostly theater.
 
@@ -109,7 +109,7 @@ scripture-streak.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 the Bible app space is dominated by YouVersion.
 430M downloads. ad-supported. notification-spammy.
@@ -146,12 +146,12 @@ walktounlock-web.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 phone addiction apps that ask you to "be mindful" don't work.
 
 what works: friction. make the thing you want cost something physical.
-walk 500 steps, unlock your apps. simplest behavior design possible.
+walk 500 steps, get your apps. simplest behavior design possible.
 still surprised nobody shipped this earlier.
 
 ---
@@ -161,7 +161,7 @@ still surprised nobody shipped this earlier.
 this is the most honest screen time tool i've seen.
 
 no journaling prompts. no "digital wellness" branding.
-you walk. you unlock. that's it.
+you walk. you get. that's it.
 
 walktounlock-web.surge.sh
 
@@ -183,7 +183,7 @@ focuslock.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 every distraction blocker has a bypass option.
 that's the problem.
@@ -221,7 +221,7 @@ prayerlock.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 the Muslim app space is undersaturated for tools that create actual friction.
 
@@ -258,7 +258,7 @@ sleepmaxx-web.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 sleep optimization is the most ignored performance variable.
 
@@ -297,7 +297,7 @@ mealmaxx-web.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 meal prep apps overcomplicated something that should be dead simple.
 
@@ -334,7 +334,7 @@ habitforge-web.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 habit trackers are broken because they celebrate too early.
 
@@ -372,7 +372,7 @@ hilal.surge.sh
 
 ---
 
-**[REPLY-BAIT TWEET — no link]**
+**[REPLY-BAIT TWEET, no link]**
 
 the top Ramadan apps in the store are either overbuilt or full of ads.
 
@@ -395,11 +395,11 @@ hilal.surge.sh
 ---
 
 ## BONUS: CROSS-APP THREAD (post as a standalone thread)
-### Thread format — accounts for full @PRINTMAXXER narrative
+### Thread format, accounts for full @PRINTMAXXER narrative
 
 ---
 
-**[TWEET 1 — hook]**
+**[TWEET 1, hook]**
 
 shipped 7 apps in 30 days. all live. all free. here's what each one does and why it exists.
 
@@ -453,7 +453,7 @@ habitforge-web.surge.sh
 
 ---
 
-**[TWEET 8 — close]**
+**[TWEET 8, close]**
 
 all free. all live. all built in 30 days with 0 funding.
 

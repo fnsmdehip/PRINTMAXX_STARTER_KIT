@@ -25,11 +25,11 @@ The system structure:
 - 16-phase CEO orchestration cycle (runs every 6h, checkpoint-resume for crash recovery)
 - JSONL message bus for inter-agent communication
 - SQLite FTS5 for searching 15K+ intelligence entries (<50ms)
-- Quality gate agent (Opus, every 2h) — hard blocks slop before deployment
+- Quality gate agent (Opus, every 2h), hard blocks slop before deployment
 
 Cost: ~$200/mo Claude Max. Zero additional API costs.
 
-I documented all of it in an interactive HTML file — searchable, works offline. Link in profile if you want it ($49). Happy to answer architecture questions here.
+I documented all of it in an interactive HTML file, searchable, works offline. Link in profile if you want it ($49). Happy to answer architecture questions here.
 
 What's your biggest challenge building Claude agents?
 
@@ -50,7 +50,7 @@ The insight that made it work: treat agents as stateless functions. Each one rea
 
 The thing that surprised me: the bottleneck is never the agents. They generate endless output. The bottleneck is human action on that output (listing products, sending emails, etc.).
 
-Built an interactive HTML file documenting everything — the architecture, all 33 agent configs, the CEO loop, templates for building your own system. [GUMROAD_LINK]
+Built an interactive HTML file documenting everything, the architecture, all 33 agent configs, the CEO loop, templates for building your own system. [GUMROAD_LINK]
 
 If you're building AI agents, happy to answer questions about what worked and what didn't.
 
@@ -78,7 +78,7 @@ Prevents context window exhaustion and makes 24/7 operation possible without clo
 
 **The honest part:** agents generate enormous amounts of output. The bottleneck is still human action (account signups, product listings, sending cold emails). AI doesn't fix human procrastination.
 
-Documented everything in an interactive HTML file — 33 agent configs, the CEO loop, templates. [GUMROAD_LINK]
+Documented everything in an interactive HTML file, 33 agent configs, the CEO loop, templates. [GUMROAD_LINK]
 
 What's your agent infrastructure look like?
 
@@ -88,7 +88,7 @@ What's your agent infrastructure look like?
 TITLE: Show HN: Interactive documentation of running 33 autonomous Claude agents for 35 days
 
 COMMENT:
-I've been running 33 autonomous AI agents on a MacBook for 35 days. This is the complete architecture documentation — not a blog post, an interactive HTML file with search.
+I've been running 33 autonomous AI agents on a MacBook for 35 days. This is the complete architecture documentation, not a blog post, an interactive HTML file with search.
 
 The key insight: context windows make long-running agents fail. The fix is treating each agent iteration as a stateless function. Read state files → do work → write output → exit. The filesystem persists. The context doesn't need to.
 
@@ -103,4 +103,4 @@ Cost: ~$200/mo (Claude Max plan). No other APIs.
 
 The file is searchable (press "/" to find anything), dark-themed, works offline. $49 on Gumroad: [GUMROAD_LINK]
 
-HN: I'd be interested in feedback on the architecture specifically — is JSONL message bus the right approach, or would you use a different IPC mechanism for agent-to-agent communication?
+HN: I'd be interested in feedback on the architecture specifically, is JSONL message bus the right approach, or would you use a different IPC mechanism for agent-to-agent communication?

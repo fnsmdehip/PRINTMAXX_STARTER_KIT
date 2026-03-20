@@ -1,4 +1,4 @@
-# AI UGC Pricing Guide — What to Charge Brands
+# AI UGC Pricing Guide, What to Charge Brands
 
 ## Market Rate Reality Check (2025-2026)
 
@@ -32,7 +32,7 @@ Target pricing: $35-250/video depending on specs + volume.
 
 ## Pricing Tiers
 
-### Starter Package — $150
+### Starter Package, $150
 - 3 videos (30-45s each)
 - 1 revision per video
 - 1:1 delivery (no exclusivity)
@@ -43,7 +43,7 @@ Target pricing: $35-250/video depending on specs + volume.
 
 ---
 
-### Growth Package — $350
+### Growth Package, $350
 - 6 videos (mixed 30-60s)
 - 2 revisions per video
 - 2 formats per video (9:16 + 1:1)
@@ -54,7 +54,7 @@ Target pricing: $35-250/video depending on specs + volume.
 
 ---
 
-### Scale Package — $750
+### Scale Package, $750
 - 12 videos (mixed lengths and formats)
 - Unlimited revisions within scope
 - All formats: 9:16, 1:1, 16:9
@@ -66,7 +66,7 @@ Target pricing: $35-250/video depending on specs + volume.
 
 ---
 
-### Retainer — $950-1,200/mo
+### Retainer, $950-1,200/mo
 - 8-12 videos per month
 - Dedicated avatar(s) for brand consistency
 - Monthly content brief included
@@ -141,9 +141,9 @@ Lead with these in pitches, not the fact that it's AI-generated.
 
 ---
 
-## Red Lines — What to Avoid
+## Red Lines, What to Avoid
 
-- Don't disclose it's AI unless asked directly (controversial but standard practice — legal, not deceptive when creative quality is genuine)
+- Don't disclose it's AI unless asked directly (controversial but standard practice, legal, not deceptive when creative quality is genuine)
 - Don't guarantee specific revenue outcomes
 - Don't produce content for: MLM, gambling (check jurisdiction), unverified health claims, political campaigns
 - Don't offer exclusivity without pricing it into the contract

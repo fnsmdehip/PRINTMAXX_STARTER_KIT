@@ -48,7 +48,7 @@ Will post real numbers when they come in. No faking it.
 
 # IH POST 2
 
-TITLE: 5 free SaaS tools built in 5 weeks — the monetization plan behind the free tier
+TITLE: 5 free SaaS tools built in 5 weeks, the monetization plan behind the free tier
 
 ---
 
@@ -64,23 +64,23 @@ The free tool does the qualifying work before anyone talks to me.
 
 The 5 tools and their paid paths:
 
-1. ShopMetrics Pro — shopmetrics-pro.surge.sh
+1. ShopMetrics Pro, shopmetrics-pro.surge.sh
 Free: analyze any Shopify store's tech stack and apps.
 Paid path: ecom agency retainer or "fix what I found" productized service.
 
-2. SiteScore Free — sitescore-free.surge.sh
+2. SiteScore Free, sitescore-free.surge.sh
 Free: 5 signals, instant.
-Paid: sitescore-pro.surge.sh — 47 signals at $19/mo. Upgrade happens in-app.
+Paid: sitescore-pro.surge.sh, 47 signals at $19/mo. Upgrade happens in-app.
 
-3. Cold Email ROI Calculator — cold-email-calc.surge.sh
+3. Cold Email ROI Calculator, cold-email-calc.surge.sh
 Free: plug in your numbers, get ROI.
 Paid path: cold email done-for-you service for businesses where the calculator shows positive ROI.
 
-4. PageScorer — pagescorer.surge.sh
+4. PageScorer, pagescorer.surge.sh
 Free: page scoring for developers and founders.
 Paid path: same as SiteScore, different entry point.
 
-5. FlowStack — printmaxx-flowstack.surge.sh
+5. FlowStack, printmaxx-flowstack.surge.sh
 Free: shows the system.
 Paid: workflow templates and automation kit for agencies wanting to build fast at $97.
 

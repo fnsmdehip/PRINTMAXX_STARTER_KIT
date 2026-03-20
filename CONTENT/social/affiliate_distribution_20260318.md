@@ -284,7 +284,7 @@ cold take: substack taking 10% of your paid subs is wild when beehiiv charges 0%
 ## PRE-PUBLISH CHECKLIST (verified)
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, utilize, delve, comprehensive, robust, innovative, seamless, game-changer, unlock, elevate)
+- [x] Zero banned AI vocabulary (no use, use, dig, complete, strong, novel, seamless, game-changer, get, elevate)
 - [x] Consequence-first hooks on all root tweets
 - [x] Exact numbers throughout (2,500 subs, $99/mo, $25/mo, 97% deliverability, 10%, $39/mo, 35 trillion, 43 trillion, 1-3% reply rate, 8-12% reply rate, $300 saved, $6,000/year)
 - [x] Would @pipelineabuser post this? Yes.

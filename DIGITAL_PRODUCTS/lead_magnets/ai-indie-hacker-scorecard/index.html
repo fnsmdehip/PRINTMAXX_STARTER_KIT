@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Is Your AI Project At $0? | Revenue Readiness Scorecard</title>
+<meta name="description" content="10-question scorecard reveals exactly which of 5 blockers is keeping your AI side project at $0. Built by someone with 33 agents and $0 revenue who finally figured it out.">
+<meta name="keywords" content="ai side project revenue, indie hacker scorecard, vibe coding money, ai project zero revenue, solopreneur revenue audit">
+<meta property="og:title" content="Why Is Your AI Project At $0?">
+<meta property="og:description" content="10 questions. 5 blockers. Find out exactly what is killing your revenue.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111;
+    --surface2: #1a1a1a;
+    --border: #222;
+    --text: #f0f0f0;
+    --muted: #666;
+    --accent: #7c3aed;
+    --accent2: #a855f7;
+    --green: #22c55e;
+    --red: #ef4444;
+    --yellow: #eab308;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, 'Inter', sans-serif; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 40px 20px 80px; }
+  .hidden { display: none !important; }
+
+  .badge { display: inline-block; background: rgba(124,58,237,0.15); color: var(--accent2); border: 1px solid rgba(124,58,237,0.3); padding: 6px 16px; border-radius: 20px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 20px; }
+  .hero { text-align: center; padding: 60px 0 48px; }
+  .hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px; }
+  .hero h1 em { color: var(--accent2); font-style: normal; }
+  .hero p { color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 500px; margin: 0 auto 32px; }
+  .cred-row { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+  .cred-item { font-size: 0.78rem; color: var(--muted); }
+  .cred-item b { color: var(--text); }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 32px; margin-bottom: 24px; }
+  .card-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 20px; }
+  .feature-row { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+  .feature-arrow { color: var(--accent2); font-size: 1.1rem; flex-shrink: 0; }
+  .feature-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 3px; }
+  .feature-desc { font-size: 0.82rem; color: var(--muted); }
+
+  .btn { background: var(--accent); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: opacity 0.15s; width: 100%; letter-spacing: 0.3px; }
+  .btn:hover { opacity: 0.9; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-lg { font-size: 1rem; padding: 16px 32px; }
+  .small-hint { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 12px; }
+
+  .progress-bar { background: var(--surface2); border-radius: 4px; height: 4px; margin-bottom: 40px; }
+  .progress-fill { background: var(--accent); height: 4px; border-radius: 4px; transition: width 0.4s ease; }
+  .q-meta { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+  .q-text { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.3px; }
+  .q-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 24px; }
+  .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+  .option { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; cursor: pointer; transition: all 0.15s; display: flex; align-items: flex-start; gap: 12px; }
+  .option:hover { border-color: var(--accent); background: rgba(124,58,237,0.08); }
+  .option.selected { border-color: var(--accent); background: rgba(124,58,237,0.12); }
+  .opt-letter { background: var(--surface2); border-radius: 6px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: var(--muted); flex-shrink: 0; }
+  .option.selected .opt-letter { background: var(--accent); color: white; }
+  .opt-text { font-size: 0.9rem; line-height: 1.4; }
+
+  .loading-dots { display: flex; justify-content: center; gap: 6px; padding: 80px 0; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 1.2s ease-in-out infinite; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse { 0%, 80%, 100% { opacity: 0.3; } 40% { opacity: 1; } }
+
+  .score-wrap { text-align: center; margin-bottom: 32px; }
+  .score-circle { position: relative; width: 120px; height: 120px; margin: 0 auto 20px; }
+  .score-circle svg { transform: rotate(-90deg); }
+  .score-bg { fill: none; stroke: var(--surface2); stroke-width: 8; }
+  .score-arc { fill: none; stroke: var(--accent); stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
+  .score-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 2rem; font-weight: 800; }
+  .score-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .result-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .result-sub { font-size: 0.9rem; color: var(--muted); }
+
+  .email-gate { background: var(--surface); border: 1px solid rgba(124,58,237,0.3); border-radius: 14px; padding: 32px; text-align: center; margin-bottom: 32px; }
+  .email-gate h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 8px; }
+  .email-gate p { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5; }
+  .email-form { display: flex; gap: 10px; flex-wrap: wrap; }
+  .email-input { flex: 1; min-width: 200px; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 12px 16px; border-radius: 8px; font-size: 0.9rem; }
+  .email-input:focus { outline: none; border-color: var(--accent); }
+  .email-submit { background: var(--accent); color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.9rem; white-space: nowrap; }
+  .email-submit:hover { opacity: 0.9; }
+  .success-msg { color: var(--green); font-size: 0.9rem; font-weight: 600; margin-top: 10px; }
+  .skip-link { font-size: 0.72rem; color: var(--muted); margin-top: 10px; }
+  .skip-link button { background: none; border: none; color: var(--accent2); text-decoration: underline; cursor: pointer; font-size: 0.72rem; }
+
+  .section-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 16px; }
+  .blocker-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 14px; }
+  .blocker-card.red { border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.04); }
+  .blocker-card.yellow { border-color: rgba(234,179,8,0.3); background: rgba(234,179,8,0.04); }
+  .blocker-card.green { border-color: rgba(34,197,94,0.3); background: rgba(34,197,94,0.04); }
+  .blocker-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+  .blocker-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+  .blocker-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+
+  .action-list { margin-bottom: 40px; }
+  .action-item { border-left: 2px solid var(--border); padding: 12px 0 12px 20px; margin-bottom: 8px; }
+  .action-item.first { border-left-color: var(--accent2); }
+  .action-step { font-size: 0.72rem; color: var(--muted); margin-bottom: 4px; }
+  .action-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+  .action-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+
+  .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; text-align: center; margin-bottom: 32px; }
+  .cta-box .cta-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+  .cta-box h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 8px; }
+  .cta-box p { font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
+  .cta-btn { display: inline-block; background: var(--accent); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+  .cta-btn:hover { opacity: 0.9; }
+
+  .footer { text-align: center; padding-top: 40px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--accent2); text-decoration: none; }
+  .footer p { font-size: 0.78rem; color: var(--muted); margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- INTRO -->
+  <section id="introSection">
+    <div class="hero">
+      <div class="badge">Free Scorecard</div>
+      <h1>Why is your AI project<br>still at <em>$0?</em></h1>
+      <p>10 questions. Pinpoints the exact blocker. Built by someone who ran 33 AI agents for 45 days and made $0 before figuring out the pattern.</p>
+      <div class="cred-row">
+        <div class="cred-item"><b>337</b> automation scripts</div>
+        <div class="cred-item"><b>1.45M</b> leads analyzed</div>
+        <div class="cred-item"><b>5</b> revenue blockers mapped</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">What you will find out</div>
+      <div class="feature-row">
+        <div class="feature-arrow">&#8594;</div>
+        <div>
+          <div class="feature-title">Your #1 revenue blocker</div>
+          <div class="feature-desc">Distribution gap vs. product gap vs. execution gap. Most people guess wrong.</div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-arrow">&#8594;</div>
+        <div>
+          <div class="feature-title">Revenue readiness score out of 100</div>
+          <div class="feature-desc">Across 5 dimensions: product, distribution, monetization, execution, and inbound capture.</div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-arrow">&#8594;</div>
+        <div>
+          <div class="feature-title">A 3-step action plan for this week</div>
+          <div class="feature-desc">Specific and ordered. Not "post more content."</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-lg" id="startBtn">Start the 2-minute scorecard &#8594;</button>
+    <p class="small-hint">Free. No signup to start.</p>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quizSection" class="hidden">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:10%"></div></div>
+    <div class="q-meta" id="qMeta">Question 1 of 10</div>
+    <div class="q-text" id="qText"></div>
+    <div class="q-sub" id="qSub"></div>
+    <div class="options" id="optionsList"></div>
+    <button class="btn" id="nextBtn" disabled>Next &#8594;</button>
+  </section>
+
+  <!-- LOADING -->
+  <section id="loadingSection" class="hidden">
+    <div style="text-align:center;padding:60px 0 20px;">
+      <p style="font-size:1.1rem;font-weight:700;margin-bottom:8px;">Scoring your answers...</p>
+      <p style="font-size:0.85rem;color:var(--muted);">Checking 5 revenue dimensions</p>
+    </div>
+    <div class="loading-dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="resultsSection" class="hidden">
+
+    <div class="score-wrap">
+      <div class="score-circle">
+        <svg width="120" height="120" viewBox="0 0 120 120">
+          <circle class="score-bg" cx="60" cy="60" r="52"/>
+          <circle class="score-arc" id="scoreArc" cx="60" cy="60" r="52"
+            stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+        </svg>
+        <div class="score-num" id="scoreNum">0</div>
+      </div>
+      <div class="score-label">Revenue Readiness Score</div>
+      <h2 class="result-title" id="resultTitle"></h2>
+      <p class="result-sub" id="resultSub"></p>
+    </div>
+
+    <!-- EMAIL GATE -->
+    <div class="email-gate" id="emailGate">
+      <h3>Get your full breakdown + action plan</h3>
+      <p>Enter your email to unlock your detailed blocker analysis and ranked action steps. No spam. One email with your results.</p>
+      <form class="email-form" id="emailForm">
+        <input type="email" id="emailInput" class="email-input" placeholder="your@email.com" required autocomplete="email">
+        <button type="submit" class="email-submit">Send results &#8594;</button>
+      </form>
+      <div id="emailSuccess" class="success-msg hidden">Results noted. Check your inbox shortly.</div>
+      <div class="skip-link">Or <button onclick="revealResults()">skip and see results now</button> (no email required)</div>
+    </div>
+
+    <!-- BLOCKERS - hidden until revealed -->
+    <div id="blockersSection" class="hidden">
+      <div class="section-label">Your revenue blockers (worst first)</div>
+      <div id="blockersList"></div>
+    </div>
+
+    <div class="action-list hidden" id="actionSection">
+      <div class="section-label" style="margin-top:32px;">Your 3-step action plan this week</div>
+      <div id="actionList"></div>
+    </div>
+
+    <div id="ctaSection" class="cta-box hidden">
+      <div class="cta-label">Built to fix exactly this</div>
+      <h3>PRINTMAXX Autonomous Revenue System</h3>
+      <p>337 automation scripts. Cold outreach pipelines. App factory. Content engines. Everything pre-built to close the gap between $0 and first dollar.</p>
+      <a class="cta-btn" href="https://printmaxxer.surge.sh" target="_blank" rel="noopener">See the system &#8594;</a>
+    </div>
+
+    <div class="footer">
+      <p>Built by <a href="https://twitter.com/printmaxxer" target="_blank" rel="noopener">@printmaxxer</a> | Day 45. $0. Learning in public.</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var QUESTIONS = [
+    {
+      id: 'product', dim: 'product',
+      text: 'How would you describe your main AI project?',
+      sub: 'Pick the option that fits best.',
+      opts: [
+        { letter: 'A', text: 'Full product. People can sign up and use it today.', score: 20 },
+        { letter: 'B', text: 'MVP shipped but needs polish before I show anyone.', score: 10 },
+        { letter: 'C', text: 'Still building, getting close.', score: 5 },
+        { letter: 'D', text: 'I have 5 half-built projects and none are done.', score: 2 }
+      ]
+    },
+    {
+      id: 'dist1', dim: 'distribution',
+      text: 'What happens when you ship something new?',
+      sub: 'Be honest. This is the one that matters most.',
+      opts: [
+        { letter: 'A', text: 'I post it and get immediate eyes. I have an audience waiting.', score: 20 },
+        { letter: 'B', text: 'I post on Twitter or Reddit and get some traction.', score: 12 },
+        { letter: 'C', text: 'I post it, 12 impressions, move on.', score: 5 },
+        { letter: 'D', text: 'I built it. I have not told anyone.', score: 1 }
+      ]
+    },
+    {
+      id: 'dist2', dim: 'distribution',
+      text: 'How often do you post about what you are building?',
+      sub: '',
+      opts: [
+        { letter: 'A', text: 'Daily or near-daily. Building in public is my strategy.', score: 20 },
+        { letter: 'B', text: '2 to 3 times per week.', score: 14 },
+        { letter: 'C', text: 'When I remember or when there is a milestone.', score: 6 },
+        { letter: 'D', text: 'I have posted maybe twice total.', score: 2 }
+      ]
+    },
+    {
+      id: 'mon1', dim: 'monetization',
+      text: 'Is there a clear way to pay you right now?',
+      sub: 'On any of your projects.',
+      opts: [
+        { letter: 'A', text: 'Yes. Stripe connected, payment working end-to-end.', score: 20 },
+        { letter: 'B', text: 'Yes but not tested. Payment page exists.', score: 10 },
+        { letter: 'C', text: 'Not yet. Building the product first, payment later.', score: 4 },
+        { letter: 'D', text: 'No payment system at all.', score: 1 }
+      ]
+    },
+    {
+      id: 'mon2', dim: 'monetization',
+      text: 'What is your pricing model?',
+      sub: '',
+      opts: [
+        { letter: 'A', text: 'Clear pricing published. Free tier and paid tiers defined.', score: 20 },
+        { letter: 'B', text: 'I have a rough number in my head.', score: 8 },
+        { letter: 'C', text: 'Free for now, figure out money later.', score: 4 },
+        { letter: 'D', text: 'I have not thought about pricing yet.', score: 1 }
+      ]
+    },
+    {
+      id: 'exec1', dim: 'execution',
+      text: 'When you identify your number one blocker, what happens?',
+      sub: '',
+      opts: [
+        { letter: 'A', text: 'I fix it within 48 hours and move to the next one.', score: 20 },
+        { letter: 'B', text: 'I fix it but it takes a week or two.', score: 12 },
+        { letter: 'C', text: 'I note it, add it to a list, keep building.', score: 5 },
+        { letter: 'D', text: 'I build more automation to handle the blocker automatically.', score: 3 }
+      ]
+    },
+    {
+      id: 'exec2', dim: 'execution',
+      text: 'How many hours did you spend shipping vs. building last week?',
+      sub: 'Shipping means: posting content, sending emails, submitting to directories, listing on marketplaces.',
+      opts: [
+        { letter: 'A', text: 'More time shipping than building.', score: 20 },
+        { letter: 'B', text: 'Roughly even.', score: 14 },
+        { letter: 'C', text: 'Mostly building, some shipping.', score: 6 },
+        { letter: 'D', text: 'Pure building. Zero shipping.', score: 1 }
+      ]
+    },
+    {
+      id: 'inb1', dim: 'inbound',
+      text: 'Do you have a way to capture emails from your traffic?',
+      sub: '',
+      opts: [
+        { letter: 'A', text: 'Yes. Email signup on every key page, actively growing list.', score: 20 },
+        { letter: 'B', text: 'One place has a signup form. Not sure it works.', score: 8 },
+        { letter: 'C', text: 'No email capture. Just links to the product.', score: 4 },
+        { letter: 'D', text: 'No pages, no traffic, no capture.', score: 1 }
+      ]
+    },
+    {
+      id: 'inb2', dim: 'inbound',
+      text: 'When someone finds your project, what is the one thing you want them to do?',
+      sub: '',
+      opts: [
+        { letter: 'A', text: 'Clear CTA. Sign up, buy, or join waitlist. One action.', score: 20 },
+        { letter: 'B', text: 'I want them to explore and see everything.', score: 8 },
+        { letter: 'C', text: 'Follow me on Twitter.', score: 6 },
+        { letter: 'D', text: 'I have not thought about it. Just want traffic.', score: 2 }
+      ]
+    },
+    {
+      id: 'mindset', dim: 'execution',
+      text: 'Be honest: what is actually blocking your revenue right now?',
+      sub: 'Your gut answer.',
+      opts: [
+        { letter: 'A', text: 'Accounts not set up (Stripe, Gumroad, etc.).', score: 12 },
+        { letter: 'B', text: 'Product is not good enough yet.', score: 8 },
+        { letter: 'C', text: 'Not enough people know it exists.', score: 10 },
+        { letter: 'D', text: 'I know exactly what to do and I have not done it.', score: 5 }
+      ]
+    }
+  ];
+
+  var DIM_INFO = {
+    product:      { icon: '\uD83D\uDEE0\uFE0F', label: 'Product',           desc: 'Your product is not ready to sell or you are over-polishing instead of shipping.' },
+    distribution: { icon: '\uD83D\uDCE2', label: 'Distribution',     desc: 'Nobody knows you exist. Great products die without distribution. This is the number one killer.' },
+    monetization: { icon: '\uD83D\uDCB3', label: 'Monetization',     desc: 'No payment system means no revenue even with traffic. Setting up Stripe takes 30 minutes.' },
+    execution:    { icon: '\u26A1', label: 'Execution Speed', desc: 'You are building automation to avoid the thing you need to do manually first. Ship first, automate second.' },
+    inbound:      { icon: '\uD83C\uDFAF', label: 'Inbound Capture', desc: 'Traffic is leaking. No lead capture means no compound growth. Every visitor lost is gone forever.' }
+  };
+
+  var ACTION_MAP = {
+    distribution: {
+      title: 'Post one honest thread today about your progress',
+      desc: 'Build-in-public converts 3 to 5 times better than cold launch. One honest post about your journey beats 10 polished product posts. Write it now.'
+    },
+    monetization: {
+      title: 'Set up a Stripe account in the next 2 hours',
+      desc: 'Stripe setup takes 30 minutes. Add a payment link to your main page. You cannot earn what you cannot collect. This is not optional.'
+    },
+    execution: {
+      title: 'List 3 things you have been almost done with for a week and ship them today',
+      desc: 'Your blockers are not technical. They are execution debt. Pick the one that unblocks revenue first.'
+    },
+    product: {
+      title: 'Define done for your MVP in one sentence and ship when that is true',
+      desc: 'If you cannot describe done in one sentence, you are in permanent iteration mode. Set a hard deadline and ship even if imperfect.'
+    },
+    inbound: {
+      title: 'Add one email signup form to your highest-traffic page today',
+      desc: 'Use Formspree (free) or Beehiiv (free up to 2500 subscribers). One form, one CTA. A list of 50 warm leads beats 50,000 cold impressions.'
+    }
+  };
+
+  var currentQ = 0;
+  var answers = [];
+  var selectedOpt = null;
+
+  function show(id) { document.getElementById(id).classList.remove('hidden'); }
+  function hide(id) { document.getElementById(id).classList.add('hidden'); }
+
+  function makeEl(tag, cls, text) {
+    var el = document.createElement(tag);
+    if (cls) el.className = cls;
+    if (text) el.textContent = text;
+    return el;
+  }
+
+  document.getElementById('startBtn').addEventListener('click', function() {
+    hide('introSection');
+    show('quizSection');
+    renderQuestion();
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', function() {
+    if (selectedOpt === null) return;
+    answers.push({ dim: QUESTIONS[currentQ].dim, score: QUESTIONS[currentQ].opts[selectedOpt].score });
+    currentQ++;
+    if (currentQ >= QUESTIONS.length) {
+      hide('quizSection');
+      show('loadingSection');
+      setTimeout(function() {
+        hide('loadingSection');
+        show('resultsSection');
+        renderResults();
+      }, 2200);
+    } else {
+      renderQuestion();
+    }
+  });
+
+  function renderQuestion() {
+    var q = QUESTIONS[currentQ];
+    document.getElementById('progressFill').style.width = ((currentQ / QUESTIONS.length) * 100) + '%';
+    document.getElementById('qMeta').textContent = 'Question ' + (currentQ + 1) + ' of ' + QUESTIONS.length;
+    document.getElementById('qText').textContent = q.text;
+    document.getElementById('qSub').textContent = q.sub;
+
+    var list = document.getElementById('optionsList');
+    while (list.firstChild) list.removeChild(list.firstChild);
+
+    q.opts.forEach(function(opt, i) {
+      var div = makeEl('div', 'option');
+      var letterEl = makeEl('div', 'opt-letter', opt.letter);
+      var textEl = makeEl('div', 'opt-text', opt.text);
+      div.appendChild(letterEl);
+      div.appendChild(textEl);
+      div.addEventListener('click', (function(idx) {
+        return function() { selectOpt(idx); };
+      })(i));
+      list.appendChild(div);
+    });
+
+    selectedOpt = null;
+    var btn = document.getElementById('nextBtn');
+    btn.disabled = true;
+    btn.textContent = currentQ === QUESTIONS.length - 1 ? 'See my results \u2192' : 'Next \u2192';
+  }
+
+  function selectOpt(idx) {
+    var opts = document.querySelectorAll('#optionsList .option');
+    opts.forEach(function(o) { o.classList.remove('selected'); });
+    opts[idx].classList.add('selected');
+    selectedOpt = idx;
+    document.getElementById('nextBtn').disabled = false;
+  }
+
+  function calcScores() {
+    var dims = { product: [], distribution: [], monetization: [], execution: [], inbound: [] };
+    answers.forEach(function(a) { if (dims[a.dim]) dims[a.dim].push(a.score); });
+    var result = {};
+    Object.keys(dims).forEach(function(d) {
+      var arr = dims[d];
+      result[d] = arr.length ? Math.round(arr.reduce(function(a,b){return a+b;},0) / arr.length) : 10;
+    });
+    return result;
+  }
+
+  function renderResults() {
+    var dimScores = calcScores();
+    var vals = Object.values(dimScores);
+    var total = Math.round(vals.reduce(function(a,b){return a+b;},0) / vals.length);
+
+    animateScore(total);
+
+    var title, sub;
+    if (total >= 15) {
+      title = 'Strong foundation. One bottleneck to clear.';
+      sub = 'You are close. The gap is specific and fixable within two weeks.';
+    } else if (total >= 10) {
+      title = 'Multiple blockers stacking on each other.';
+      sub = 'Fixing one usually unlocks two more. Start with distribution.';
+    } else {
+      title = 'Pre-revenue mode. The execution gap is wide open.';
+      sub = 'You have infrastructure. You need to press send. Today.';
+    }
+    document.getElementById('resultTitle').textContent = title;
+    document.getElementById('resultSub').textContent = sub;
+
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      hide('emailForm');
+      show('emailSuccess');
+      setTimeout(revealResults, 800);
+    });
+  }
+
+  function animateScore(target) {
+    var arc = document.getElementById('scoreArc');
+    var numEl = document.getElementById('scoreNum');
+    var circ = 326.7;
+    var current = 0;
+    var step = target / 30;
+    var timer = setInterval(function() {
+      current = Math.min(current + step, target);
+      numEl.textContent = Math.round(current);
+      arc.style.strokeDashoffset = circ - (current / 20) * circ;
+      if (current >= target) clearInterval(timer);
+    }, 35);
+  }
+
+  window.revealResults = function() {
+    hide('emailGate');
+
+    var dimScores = calcScores();
+    var sorted = Object.entries(dimScores).sort(function(a,b){return a[1]-b[1];});
+
+    show('blockersSection');
+    var list = document.getElementById('blockersList');
+    while (list.firstChild) list.removeChild(list.firstChild);
+
+    sorted.forEach(function(entry) {
+      var dim = entry[0], score = entry[1];
+      var info = DIM_INFO[dim];
+      var cls = score < 8 ? 'blocker-card red' : score < 14 ? 'blocker-card yellow' : 'blocker-card green';
+      var statusText = score < 8 ? 'Critical' : score < 14 ? 'Needs work' : 'Solid';
+      var dot = score < 8 ? '\uD83D\uDD34 ' : score < 14 ? '\uD83D\uDFE1 ' : '\uD83D\uDFE2 ';
+
+      var card = makeEl('div', cls);
+      var iconEl = makeEl('div', 'blocker-icon', info.icon);
+      var body = makeEl('div');
+      var titleEl = makeEl('div', 'blocker-title', info.label + ' — ' + score + '/20 — ' + dot + statusText);
+      var descEl = makeEl('div', 'blocker-desc', info.desc);
+      body.appendChild(titleEl);
+      body.appendChild(descEl);
+      card.appendChild(iconEl);
+      card.appendChild(body);
+      list.appendChild(card);
+    });
+
+    show('actionSection');
+    var aList = document.getElementById('actionList');
+    while (aList.firstChild) aList.removeChild(aList.firstChild);
+
+    var worst = sorted[0][0];
+    var second = sorted[1][0];
+    var fallback1 = { title: 'Spend 15 minutes shipping right now, not building', desc: 'Post on Twitter, reply to one comment, submit to one directory, or email one potential customer. 15 minutes of distribution beats 4 hours of feature work.' };
+    var fallback2 = { title: 'Pick one project and do nothing else this week', desc: 'Five half-built projects guarantees $0. Focus on the one with the shortest path to first dollar. Kill or pause the others.' };
+
+    var steps = [
+      ACTION_MAP[worst] || fallback1,
+      ACTION_MAP[second] || fallback1,
+      fallback2
+    ];
+
+    steps.forEach(function(step, i) {
+      var item = makeEl('div', i === 0 ? 'action-item first' : 'action-item');
+      var stepEl = makeEl('div', 'action-step', 'Step ' + (i+1) + (i === 0 ? ' (most important)' : ''));
+      var titleEl = makeEl('div', 'action-title', step.title);
+      var descEl = makeEl('div', 'action-desc', step.desc);
+      item.appendChild(stepEl);
+      item.appendChild(titleEl);
+      item.appendChild(descEl);
+      aList.appendChild(item);
+    });
+
+    show('ctaSection');
+  };
+})();
+</script>
+</body>
+</html>

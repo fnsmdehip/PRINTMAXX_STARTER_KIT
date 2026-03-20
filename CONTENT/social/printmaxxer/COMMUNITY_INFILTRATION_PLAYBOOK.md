@@ -1,4 +1,4 @@
-# @printmaxxer — Community Infiltration + Engagement Playbook
+# @printmaxxer, Community Infiltration + Engagement Playbook
 # Generated: 2026-03-05
 # Status: PENDING_REVIEW
 # Purpose: Cross-platform community penetration, authority building, audience capture, funnel seeding
@@ -162,7 +162,7 @@
 ### 9. Bootstrapped Founders Slack (MicroConf adjacent)
 - **invite strategy:** apply through various bootstrapper communities
 - **first message:** "currently at $0 MRR with 7 apps built. the classic trap: building is dopamine, selling is pain. switching to 80% outbound 20% building this month. will report back with real numbers"
-- **value-add:** radical transparency about the journey, share every data point
+- **value-add:** radical transparency about the path, share every data point
 - **what to post:** weekly revenue updates (even when $0), experiment results, pivot decisions with reasoning
 
 ### 10. Hacker News Adjacent Communities
@@ -207,7 +207,7 @@
 
 ### 4. r/indiehackers (80K+ members)
 - **posting strategy:** build in public, share everything, be radically transparent
-- **what works:** journey posts with real numbers, tool recommendations with specifics, honest failures
+- **what works:** path posts with real numbers, tool recommendations with specifics, honest failures
 - **karma requirements:** low, community is welcoming
 - **self-promo rules:** OK if you're adding value and being honest
 - **sample titles:**
@@ -246,7 +246,7 @@
   - "my Next.js + Python stack for rapid prototyping. 7 apps in 3 weeks"
 
 ### 8. r/startups (1.2M+ members)
-- **posting strategy:** strategic insights, market analysis, honest journey posts
+- **posting strategy:** strategic insights, market analysis, honest path posts
 - **what works:** validation stories, market research, pivot decisions with reasoning
 - **karma requirements:** moderate
 - **self-promo rules:** very strict, no promotion in posts
@@ -417,7 +417,7 @@
 
 12. total infrastructure cost: $43/mo. claude max plan: $100/mo. revenue: functionally zero from digital products. ROI is negative. but the skill stack is compounding. this is the honest math nobody posts.
 
-13. 7 apps built. estimated total dev cost if i hired someone: $35K. actual cost: $100 claude subscription + 8 hours of my time. the AI leverage is real. the revenue is not. yet.
+13. 7 apps built. estimated total dev cost if i hired someone: $35K. actual cost: $100 claude subscription + 8 hours of my time. the AI use is real. the revenue is not. yet.
 
 14. ran monte carlo simulation on my revenue streams. 6-month P50 projection: $3,475. P90: $5,267. the variable: how many cold emails i send per day. everything else is noise. sharing the full model.
 
@@ -555,7 +555,7 @@
 
 21. "this is the build-in-public energy i follow people for. not the curated wins. the raw, ugly, mid-progress updates where nothing is working yet but you're still shipping."
 
-22. "following this journey. the one thing i'd change about their approach: spend 30 minutes per day on distribution before writing a single line of code. code without customers is a hobby."
+22. "following this path. the one thing i'd change about their approach: spend 30 minutes per day on distribution before writing a single line of code. code without customers is a hobby."
 
 23. "their daily output is making me rethink my own process. i spend 60% of time on building. they spend 60% on selling. we have similar technical skill. they have revenue. i don't. the data speaks."
 

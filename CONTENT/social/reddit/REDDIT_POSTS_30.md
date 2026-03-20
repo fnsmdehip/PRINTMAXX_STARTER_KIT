@@ -143,7 +143,7 @@ Does it actually work? Yes. I'm averaging 9,400 steps per day now (was 3,200 bef
 
 Biggest challenge: HealthKit permissions are confusing. Took 3 hours just to read step count correctly.
 
-Monetization idea: freemium model. Free version locks after 8pm. Premium ($4/month) lets you set custom lock times and unlock goals.
+Monetization idea: freemium model. Free version locks after 8pm. Premium ($4/month) lets you set custom lock times and get goals.
 
 Feature I cut: social accountability (compete with friends). Wanted to ship fast. Will add later if anyone actually uses this.
 
@@ -161,7 +161,7 @@ I have 13 apps in various stages of development. Not one is on the App Store. Th
 
 The apps:
 - Prayer tracking PWA (90% done, stuck on icon design)
-- Walk-to-unlock fitness app (95% done, worried about App Store rejection)
+- Walk-to-get fitness app (95% done, worried about App Store rejection)
 - Biomaxx health tracker (99% done, debating pricing strategy)
 - 10 other concepts in earlier stages
 

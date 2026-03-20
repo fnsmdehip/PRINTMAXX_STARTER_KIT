@@ -1,0 +1,1287 @@
+[
+  {
+    "niche": "no_spend_day_streak",
+    "label": "No-Spend Day / Spend-Free Day Streak",
+    "community_estimate": 8900000,
+    "hypothesis": "BO \u2014 'no spend day challenges' are viral (TikTok, Reddit). No dedicated streak app. YNAB tracks budget, not streak accountability. Massive overlap with frugal community.",
+    "itunes_results": [
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Days Since: Quit Habit Tracker",
+        "price": "Free",
+        "rating": 4.82602,
+        "rating_count": 17399,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Fabulous: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.45197,
+        "rating_count": 87165,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Me+ Lifestyle Routine",
+        "price": "Free",
+        "rating": 4.8041,
+        "rating_count": 235993,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Do Habits: Get It Done",
+        "price": "Free",
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity"
+      }
+    ],
+    "reddit_sizes": {
+      "Frugal": 6729615,
+      "personalfinance": 21610719,
+      "leanfire": 360270
+    },
+    "status": "BLUE_OCEAN",
+    "competitors": [],
+    "notes": "No niche-specific apps found in iTunes search",
+    "community_actual": 28700604
+  },
+  {
+    "niche": "savings_deposit_streak",
+    "label": "Daily Micro-Savings / $5-a-Day Deposit Streak",
+    "community_estimate": 7200000,
+    "hypothesis": "BO \u2014 'save $1 a day' challenges are consistently viral. Round-up apps (Acorns) focus on automation, not habit streaks. Gap: accountability for INTENTIONAL daily savings action.",
+    "itunes_results": [
+      {
+        "name": "Qapital: The Money Saving App",
+        "price": "Free",
+        "rating": 4.79894,
+        "rating_count": 85639,
+        "genre": "Finance"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Monzo - Mobile Banking",
+        "price": "Free",
+        "rating": 4.74776,
+        "rating_count": 5479,
+        "genre": "Finance"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Bill Tracker Pro",
+        "price": "Free",
+        "rating": 4.56741,
+        "rating_count": 4413,
+        "genre": "Finance"
+      },
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "YNAB",
+        "price": "Free",
+        "rating": 4.79246,
+        "rating_count": 59043,
+        "genre": "Finance"
+      },
+      {
+        "name": "Oportun: Finances made simple",
+        "price": "Free",
+        "rating": 4.73714,
+        "rating_count": 289146,
+        "genre": "Finance"
+      }
+    ],
+    "reddit_sizes": {
+      "personalfinance": 21610719,
+      "Frugal": 6729615,
+      "povertyfinance": 2609233
+    },
+    "status": "BLUE_OCEAN",
+    "competitors": [],
+    "notes": "No niche-specific apps found in iTunes search",
+    "community_actual": 30949567
+  },
+  {
+    "niche": "debt_paydown_streak",
+    "label": "Weekly Debt Paydown / Extra Payment Streak",
+    "community_estimate": 5400000,
+    "hypothesis": "BO \u2014 debt payoff community is massive (r/debtfree 400K). Debt apps (Undebt.it, Debt Payoff Planner) are calculators/trackers not streak/habit tools. Emotional accountability gap.",
+    "itunes_results": [
+      {
+        "name": "Bill Tracker Pro",
+        "price": "Free",
+        "rating": 4.56741,
+        "rating_count": 4413,
+        "genre": "Finance"
+      },
+      {
+        "name": "YNAB",
+        "price": "Free",
+        "rating": 4.79246,
+        "rating_count": 59043,
+        "genre": "Finance"
+      },
+      {
+        "name": "Budget app - spending tracker",
+        "price": "Free",
+        "rating": 4.7191,
+        "rating_count": 13888,
+        "genre": "Finance"
+      },
+      {
+        "name": "Changed: Debt Payoff Planner",
+        "price": "Free",
+        "rating": 4.56813,
+        "rating_count": 5020,
+        "genre": "Finance"
+      },
+      {
+        "name": "Weekly: Budget Planner App",
+        "price": "Free",
+        "rating": 4.8098,
+        "rating_count": 3449,
+        "genre": "Finance"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Do Habits: Get It Done",
+        "price": "Free",
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity"
+      }
+    ],
+    "reddit_sizes": {
+      "personalfinance": 21610719,
+      "debtfree": 1719953,
+      "Debt": 140752
+    },
+    "status": "OCCUPIED",
+    "competitors": [
+      {
+        "name": "Changed: Debt Payoff Planner",
+        "price": "Free",
+        "rating": 4.56813,
+        "rating_count": 5020,
+        "version": "5.33",
+        "genre": "Finance",
+        "updated": "2026-03-17"
+      }
+    ],
+    "notes": "1 direct competitor(s) found",
+    "community_actual": 23471424
+  },
+  {
+    "niche": "expense_log_streak",
+    "label": "Daily Expense Logging / Manual Budget Tracking Streak",
+    "community_estimate": 6800000,
+    "hypothesis": "BO \u2014 many people want manual awareness not automation. YNAB/Mint auto-import. The gap: an app that rewards you JUST for logging daily, no automation required. Behavior change, not tracking.",
+    "itunes_results": [
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Budget app - spending tracker",
+        "price": "Free",
+        "rating": 4.7191,
+        "rating_count": 13888,
+        "genre": "Finance"
+      },
+      {
+        "name": "Expenses: Spending Tracker",
+        "price": "Free",
+        "rating": 4.79526,
+        "rating_count": 1646,
+        "genre": "Finance"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Track Spending : Wise Budget",
+        "price": "Free",
+        "rating": 4.78591,
+        "rating_count": 2896,
+        "genre": "Finance"
+      },
+      {
+        "name": "Buddy: Budget Planner App",
+        "price": "Free",
+        "rating": 4.70697,
+        "rating_count": 8849,
+        "genre": "Finance"
+      },
+      {
+        "name": "YNAB",
+        "price": "Free",
+        "rating": 4.79246,
+        "rating_count": 59043,
+        "genre": "Finance"
+      },
+      {
+        "name": "EveryDollar: Budget Management",
+        "price": "Free",
+        "rating": 4.73663,
+        "rating_count": 82674,
+        "genre": "Finance"
+      }
+    ],
+    "reddit_sizes": {
+      "personalfinance": 21610719,
+      "Frugal": 6729615,
+      "FIRE": 891849
+    },
+    "status": "SOFT_COMPETITION",
+    "competitors": [
+      {
+        "name": "Expenses: Spending Tracker",
+        "price": "Free",
+        "rating": 4.79526,
+        "rating_count": 1646,
+        "version": "3.9.16",
+        "genre": "Finance",
+        "updated": "2026-03-16"
+      }
+    ],
+    "notes": "1 weak competitor(s) found",
+    "community_actual": 29232183
+  },
+  {
+    "niche": "investment_dca_streak",
+    "label": "Daily / Weekly DCA (Dollar-Cost Averaging) Investment Streak",
+    "community_estimate": 5800000,
+    "hypothesis": "BO \u2014 DCA is the most recommended investing strategy. Brokerage apps (Robinhood, Fidelity) are execution tools, not habit streak trackers. Gap: accountability for consistent contribution habit.",
+    "itunes_results": [
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Fabulous: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.45197,
+        "rating_count": 87165,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Crypto Pro: Live Coin Tracker",
+        "price": "Free",
+        "rating": 4.71816,
+        "rating_count": 46459,
+        "genre": "Finance"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Do Habits: Get It Done",
+        "price": "Free",
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Habitify: Habit Tracker",
+        "price": "Free",
+        "rating": 4.59703,
+        "rating_count": 6730,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Robinhood: Trading & Investing",
+        "price": "Free",
+        "rating": 4.27628,
+        "rating_count": 4707744,
+        "genre": "Finance"
+      }
+    ],
+    "reddit_sizes": {
+      "investing": 3308514,
+      "Bogleheads": 818077,
+      "stocks": 9168446
+    },
+    "status": "BLUE_OCEAN",
+    "competitors": [],
+    "notes": "No niche-specific apps found in iTunes search",
+    "community_actual": 13295037
+  },
+  {
+    "niche": "linkedin_post_streak",
+    "label": "Daily LinkedIn Content Posting Streak",
+    "community_estimate": 4100000,
+    "hypothesis": "BO \u2014 'post on LinkedIn daily for 30 days' is now a professional growth trope. Buffer/Hootsuite are schedulers, not streak accountability tools. Clear gap for a simple LinkedIn habit tracker.",
+    "itunes_results": [
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Productive - Habit Tracker",
+        "price": "Free",
+        "rating": 4.59683,
+        "rating_count": 91125,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Do Habits: Get It Done",
+        "price": "Free",
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Habitify: Habit Tracker",
+        "price": "Free",
+        "rating": 4.59703,
+        "rating_count": 6730,
+        "genre": "Health & Fitness"
+      }
+    ],
+    "reddit_sizes": {
+      "linkedin": 145273,
+      "careerguidance": 4844641,
+      "personalfinance": 21610719
+    },
+    "status": "BLUE_OCEAN",
+    "competitors": [],
+    "notes": "No niche-specific apps found in iTunes search",
+    "community_actual": 26600633
+  },
+  {
+    "niche": "networking_email_streak",
+    "label": "Daily Professional Networking / Cold Outreach Email Streak",
+    "community_estimate": 3900000,
+    "hypothesis": "BO \u2014 career coaches universally recommend '5 networking emails/week'. CRMs (HubSpot, Apollo) are complex. Gap: a simple streak tracker for daily networking effort. High willingness-to-pay (career ROI).",
+    "itunes_results": [
+      {
+        "name": "Constant Contact",
+        "price": "Free",
+        "rating": 4.75596,
+        "rating_count": 10269,
+        "genre": "Business"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Habit \u2014 Daily Tracker",
+        "price": "Free",
+        "rating": 3.69432,
+        "rating_count": 2411,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Cleanfox - Email Cleaner",
+        "price": "Free",
+        "rating": 4.79232,
+        "rating_count": 25390,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Canary Mail \u2013 AI Email",
+        "price": "Free",
+        "rating": 4.49155,
+        "rating_count": 8583,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Clean Email: Inbox Cleaner",
+        "price": "Free",
+        "rating": 4.4644,
+        "rating_count": 3581,
+        "genre": "Productivity"
+      }
+    ],
+    "reddit_sizes": {
+      "careerguidance": 4844641,
+      "cscareerquestions": 2329903,
+      "sales": 557381
+    },
+    "status": "OCCUPIED",
+    "competitors": [
+      {
+        "name": "Cleanfox - Email Cleaner",
+        "price": "Free",
+        "rating": 4.79232,
+        "rating_count": 25390,
+        "version": "3.28.44",
+        "genre": "Productivity",
+        "updated": "2026-01-13"
+      },
+      {
+        "name": "Canary Mail \u2013 AI Email",
+        "price": "Free",
+        "rating": 4.49155,
+        "rating_count": 8583,
+        "version": "5.18",
+        "genre": "Productivity",
+        "updated": "2026-02-18"
+      },
+      {
+        "name": "Clean Email: Inbox Cleaner",
+        "price": "Free",
+        "rating": 4.4644,
+        "rating_count": 3581,
+        "version": "3.0.46",
+        "genre": "Productivity",
+        "updated": "2026-03-02"
+      }
+    ],
+    "notes": "3 direct competitor(s) found",
+    "community_actual": 7731925
+  },
+  {
+    "niche": "certification_study_streak",
+    "label": "Daily Professional Certification Study Streak (AWS / PMP / CFA)",
+    "community_estimate": 2100000,
+    "hypothesis": "BO \u2014 exam prep requires daily habit. Anki covers flashcards. Study apps (Magoosh, PrepAway) are content not streak tracking. Gap: general certification streak tracker with milestone rewards.",
+    "itunes_results": [
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Today Habit tracker",
+        "price": "Free",
+        "rating": 4.67804,
+        "rating_count": 3547,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Habit \u2014 Daily Tracker",
+        "price": "Free",
+        "rating": 3.69432,
+        "rating_count": 2411,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Flipd: focus & study timer",
+        "price": "Free",
+        "rating": 4.51567,
+        "rating_count": 6923,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Vaia: AI Flashcards. Study App",
+        "price": "Free",
+        "rating": 4.7085,
+        "rating_count": 1482,
+        "genre": "Education"
+      },
+      {
+        "name": "Knowunity: AI Study & Homework",
+        "price": "Free",
+        "rating": 4.6288,
+        "rating_count": 3952,
+        "genre": "Education"
+      }
+    ],
+    "reddit_sizes": {
+      "AWSCertifications": 158310,
+      "PMP": 116414,
+      "CFAprogram": 0
+    },
+    "status": "OCCUPIED",
+    "competitors": [
+      {
+        "name": "Flipd: focus & study timer",
+        "price": "Free",
+        "rating": 4.51567,
+        "rating_count": 6923,
+        "version": "5.0.1",
+        "genre": "Productivity",
+        "updated": "2025-02-25"
+      },
+      {
+        "name": "Vaia: AI Flashcards. Study App",
+        "price": "Free",
+        "rating": 4.7085,
+        "rating_count": 1482,
+        "version": "16.1.0",
+        "genre": "Education",
+        "updated": "2026-03-16"
+      },
+      {
+        "name": "Knowunity: AI Study & Homework",
+        "price": "Free",
+        "rating": 4.6288,
+        "rating_count": 3952,
+        "version": "6.11.0",
+        "genre": "Education",
+        "updated": "2026-03-13"
+      }
+    ],
+    "notes": "3 direct competitor(s) found",
+    "community_actual": 274724
+  },
+  {
+    "niche": "portfolio_update_streak",
+    "label": "Weekly Portfolio / GitHub / Personal Brand Update Streak",
+    "community_estimate": 4500000,
+    "hypothesis": "BO \u2014 'update your portfolio' is universal career advice that never gets done. GitHub tracks commits but not portfolio curation. Gap: weekly streak for portfolio/personal brand actions.",
+    "itunes_results": [
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Habitify: Habit Tracker",
+        "price": "Free",
+        "rating": 4.59703,
+        "rating_count": 6730,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Productive - Habit Tracker",
+        "price": "Free",
+        "rating": 4.59683,
+        "rating_count": 91125,
+        "genre": "Productivity"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Today Habit tracker",
+        "price": "Free",
+        "rating": 4.67804,
+        "rating_count": 3547,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Habit \u2014 Daily Tracker",
+        "price": "Free",
+        "rating": 3.69432,
+        "rating_count": 2411,
+        "genre": "Productivity"
+      }
+    ],
+    "reddit_sizes": {
+      "cscareerquestions": 2329903,
+      "webdev": 3207622,
+      "designers": 356
+    },
+    "status": "BLUE_OCEAN",
+    "competitors": [],
+    "notes": "No niche-specific apps found in iTunes search",
+    "community_actual": 5537881
+  },
+  {
+    "niche": "daily_drawing_streak",
+    "label": "Daily Drawing / Sketching Practice Streak",
+    "community_estimate": 4800000,
+    "hypothesis": "BO \u2014 'draw every day for 30 days' is the most repeated art advice. Procreate/Adobe Fresco are tools, not streak trackers. Gap: accountability layer specifically for daily art practice.",
+    "itunes_results": [
+      {
+        "name": "Paper: Sketch, Draw & Create",
+        "price": "Free",
+        "rating": 4.57256,
+        "rating_count": 70709,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Simply Draw: Learn to Draw",
+        "price": "Free",
+        "rating": 4.73574,
+        "rating_count": 569106,
+        "genre": "Education"
+      },
+      {
+        "name": "Drawing \u25ab",
+        "price": "Free",
+        "rating": 4.09082,
+        "rating_count": 14919,
+        "genre": "Productivity"
+      },
+      {
+        "name": "AR Drawing: Sketch & Paint",
+        "price": "Free",
+        "rating": 4.52357,
+        "rating_count": 70831,
+        "genre": "Graphics & Design"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Draw it",
+        "price": "Free",
+        "rating": 4.51234,
+        "rating_count": 554778,
+        "genre": "Games"
+      },
+      {
+        "name": "Drawing Desk: Sketch Paint Art",
+        "price": "Free",
+        "rating": 4.29341,
+        "rating_count": 14611,
+        "genre": "Graphics & Design"
+      },
+      {
+        "name": "Doodle \u2022 Art",
+        "price": "Free",
+        "rating": 4.30734,
+        "rating_count": 70827,
+        "genre": "Education"
+      }
+    ],
+    "reddit_sizes": {
+      "learnart": 1671571,
+      "ArtFundamentals": 264889,
+      "drawing": 5727836
+    },
+    "status": "OCCUPIED",
+    "competitors": [
+      {
+        "name": "Drawing \u25ab",
+        "price": "Free",
+        "rating": 4.09082,
+        "rating_count": 14919,
+        "version": "4.13",
+        "genre": "Productivity",
+        "updated": "2026-03-16"
+      },
+      {
+        "name": "AR Drawing: Sketch & Paint",
+        "price": "Free",
+        "rating": 4.52357,
+        "rating_count": 70831,
+        "version": "5.0.4",
+        "genre": "Graphics & Design",
+        "updated": "2026-03-12"
+      },
+      {
+        "name": "Drawing Desk: Sketch Paint Art",
+        "price": "Free",
+        "rating": 4.29341,
+        "rating_count": 14611,
+        "version": "7.5.6",
+        "genre": "Graphics & Design",
+        "updated": "2026-01-05"
+      }
+    ],
+    "notes": "3 direct competitor(s) found",
+    "community_actual": 7664296
+  },
+  {
+    "niche": "daily_photo_streak",
+    "label": "Daily Photography / One Photo a Day Streak",
+    "community_estimate": 6200000,
+    "hypothesis": "BO \u2014 365 photo projects are extremely popular. Instagram tracks posting, not intent/streak. Gap: a minimalist daily photography streak app separate from social media posting.",
+    "itunes_results": [
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Days Since: Quit Habit Tracker",
+        "price": "Free",
+        "rating": 4.82602,
+        "rating_count": 17399,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Selfie A Day - Everyday Photo",
+        "price": "Free",
+        "rating": 4.65719,
+        "rating_count": 3906,
+        "genre": "Photo & Video"
+      },
+      {
+        "name": "Do Habits: Get It Done",
+        "price": "Free",
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Way of Life - Habit Tracker",
+        "price": "Free",
+        "rating": 4.82059,
+        "rating_count": 5050,
+        "genre": "Health & Fitness"
+      }
+    ],
+    "reddit_sizes": {
+      "photography": 5579139,
+      "itookapicture": 7528902,
+      "photojournalism": 18910
+    },
+    "status": "BLUE_OCEAN",
+    "competitors": [],
+    "notes": "No niche-specific apps found in iTunes search",
+    "community_actual": 13126951
+  },
+  {
+    "niche": "music_practice_streak",
+    "label": "Daily Music Practice / Instrument Session Streak",
+    "community_estimate": 5700000,
+    "hypothesis": "BO \u2014 teachers universally say '20 min daily practice beats 2h weekly'. GarageBand/Yousician are tools not habit trackers. Gap: instrument-agnostic daily practice streak accountability.",
+    "itunes_results": [
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Andante Music Practice Journal",
+        "price": "Free",
+        "rating": 4.85956,
+        "rating_count": 2720,
+        "genre": "Music"
+      },
+      {
+        "name": "Anytune Pro+: Studio Tools\u00a0",
+        "price": "$14.99",
+        "rating": 4.87646,
+        "rating_count": 8038,
+        "genre": "Music"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Tonic Music",
+        "price": "Free",
+        "rating": 4.79617,
+        "rating_count": 2463,
+        "genre": "Music"
+      },
+      {
+        "name": "Metronome Tuner | Practice+",
+        "price": "Free",
+        "rating": 4.3769,
+        "rating_count": 2762,
+        "genre": "Music"
+      },
+      {
+        "name": "Gibson: Learn to Play Guitar",
+        "price": "Free",
+        "rating": 4.75484,
+        "rating_count": 11364,
+        "genre": "Education"
+      },
+      {
+        "name": "Fender Play: Learn Guitar",
+        "price": "Free",
+        "rating": 4.7965,
+        "rating_count": 60633,
+        "genre": "Education"
+      }
+    ],
+    "reddit_sizes": {
+      "learnguitar": 54290,
+      "piano": 1260673,
+      "WeAreTheMusicMakers": 3823861
+    },
+    "status": "OCCUPIED",
+    "competitors": [
+      {
+        "name": "Andante Music Practice Journal",
+        "price": "Free",
+        "rating": 4.85956,
+        "rating_count": 2720,
+        "version": "6.6.5",
+        "genre": "Music",
+        "updated": "2026-03-14"
+      },
+      {
+        "name": "Tonic Music",
+        "price": "Free",
+        "rating": 4.79617,
+        "rating_count": 2463,
+        "version": "11.1.0",
+        "genre": "Music",
+        "updated": "2026-02-28"
+      },
+      {
+        "name": "Metronome Tuner | Practice+",
+        "price": "Free",
+        "rating": 4.3769,
+        "rating_count": 2762,
+        "version": "1.4.103",
+        "genre": "Music",
+        "updated": "2024-07-09"
+      }
+    ],
+    "notes": "3 direct competitor(s) found",
+    "community_actual": 5138824
+  },
+  {
+    "niche": "no_plastic_day_streak",
+    "label": "No Single-Use Plastic / Plastic-Free Day Streak",
+    "community_estimate": 2600000,
+    "hypothesis": "BO \u2014 Plastic Free July challenge is global. Zero waste apps (Olio, Too Good To Go) are swap/food-sharing, not habit tracking. Gap: streak tracker for daily plastic avoidance.",
+    "itunes_results": [
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Days Since: Quit Habit Tracker",
+        "price": "Free",
+        "rating": 4.82602,
+        "rating_count": 17399,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Strides: Habit Tracker + Goals",
+        "price": "Free",
+        "rating": 4.78853,
+        "rating_count": 18811,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Fabulous: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.45197,
+        "rating_count": 87165,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Do Habits: Get It Done",
+        "price": "Free",
+        "rating": 4.04026,
+        "rating_count": 16761,
+        "genre": "Productivity"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Today Habit tracker",
+        "price": "Free",
+        "rating": 4.67804,
+        "rating_count": 3547,
+        "genre": "Health & Fitness"
+      }
+    ],
+    "reddit_sizes": {
+      "ZeroWaste": 1194655,
+      "PlasticFreeJuly": 0,
+      "environment": 1546117
+    },
+    "status": "BLUE_OCEAN",
+    "competitors": [],
+    "notes": "No niche-specific apps found in iTunes search",
+    "community_actual": 2740772
+  },
+  {
+    "niche": "plant_based_meal_streak",
+    "label": "Daily Plant-Based / Meat-Free Meal Streak",
+    "community_estimate": 8300000,
+    "hypothesis": "BO \u2014 'Meatless Monday' + 'Veganuary' trend. Cronometer/MyFitnessPal are calorie trackers. Gap: simple streak tracker for plant-based meals, separate from calorie counting.",
+    "itunes_results": [
+      {
+        "name": "Eat This Much - Meal Planner",
+        "price": "Free",
+        "rating": 4.71478,
+        "rating_count": 21815,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Everyday",
+        "price": "Free",
+        "rating": 4.83134,
+        "rating_count": 25791,
+        "genre": "Food & Drink"
+      },
+      {
+        "name": "Carbon - Macro Coach & Tracker",
+        "price": "Free",
+        "rating": 4.82449,
+        "rating_count": 7749,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Nutrition Tracker: Foodnoms",
+        "price": "Free",
+        "rating": 4.74857,
+        "rating_count": 6535,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Forks Plant-Based Recipes",
+        "price": "$9.99",
+        "rating": 4.63107,
+        "rating_count": 1854,
+        "genre": "Food & Drink"
+      },
+      {
+        "name": "everyday - Habit Tracker",
+        "price": "Free",
+        "rating": 4.70826,
+        "rating_count": 4360,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Days Since: Quit Habit Tracker",
+        "price": "Free",
+        "rating": 4.82602,
+        "rating_count": 17399,
+        "genre": "Health & Fitness"
+      }
+    ],
+    "reddit_sizes": {
+      "PlantBasedDiet": 519891,
+      "vegan": 1950948,
+      "vegetarian": 787851
+    },
+    "status": "OCCUPIED",
+    "competitors": [
+      {
+        "name": "Eat This Much - Meal Planner",
+        "price": "Free",
+        "rating": 4.71478,
+        "rating_count": 21815,
+        "version": "2.0.154",
+        "genre": "Health & Fitness",
+        "updated": "2026-03-18"
+      },
+      {
+        "name": "Forks Plant-Based Recipes",
+        "price": "$9.99",
+        "rating": 4.63107,
+        "rating_count": 1854,
+        "version": "2.2.1",
+        "genre": "Food & Drink",
+        "updated": "2021-04-05"
+      }
+    ],
+    "notes": "2 direct competitor(s) found",
+    "community_actual": 3258690
+  },
+  {
+    "niche": "walking_steps_streak",
+    "label": "Daily 10K Steps / Walking Goal Streak",
+    "community_estimate": 7100000,
+    "hypothesis": "SOFT \u2014 Apple Health/Fitbit count steps. But they track continuously not habit streaks. Gap may be marginal. Check iTunes carefully for dedicated 'did I hit my steps goal today' streak apps.",
+    "itunes_results": [
+      {
+        "name": "Habit Tracker",
+        "price": "Free",
+        "rating": 4.79606,
+        "rating_count": 137601,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Map My Walk: Walking Tracker",
+        "price": "Free",
+        "rating": 4.82984,
+        "rating_count": 463834,
+        "genre": "Lifestyle"
+      },
+      {
+        "name": "Grit: Daily Habit Tracker",
+        "price": "Free",
+        "rating": 4.81088,
+        "rating_count": 12691,
+        "genre": "Productivity"
+      },
+      {
+        "name": "Running Walking Tracker Goals",
+        "price": "Free",
+        "rating": 4.82017,
+        "rating_count": 100117,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Pacer Pedometer Step Counter",
+        "price": "Free",
+        "rating": 4.89835,
+        "rating_count": 298853,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Steps: Make Money & Earn Cash",
+        "price": "Free",
+        "rating": 4.62871,
+        "rating_count": 13892,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "StepsApp Pedometer",
+        "price": "Free",
+        "rating": 4.81863,
+        "rating_count": 268719,
+        "genre": "Health & Fitness"
+      },
+      {
+        "name": "Steps - Activity Tracker",
+        "price": "Free",
+        "rating": 4.77444,
+        "rating_count": 123770,
+        "genre": "Health & Fitness"
+      }
+    ],
+    "reddit_sizes": {
+      "loseit": 4129067,
+      "GetFit": 0,
+      "walking": 0
+    },
+    "status": "OCCUPIED",
+    "competitors": [
+      {
+        "name": "Map My Walk: Walking Tracker",
+        "price": "Free",
+        "rating": 4.82984,
+        "rating_count": 463834,
+        "version": "26.3.0",
+        "genre": "Lifestyle",
+        "updated": "2026-02-19"
+      },
+      {
+        "name": "Running Walking Tracker Goals",
+        "price": "Free",
+        "rating": 4.82017,
+        "rating_count": 100117,
+        "version": "2.63",
+        "genre": "Health & Fitness",
+        "updated": "2026-02-09"
+      },
+      {
+        "name": "Steps: Make Money & Earn Cash",
+        "price": "Free",
+        "rating": 4.62871,
+        "rating_count": 13892,
+        "version": "3.8.5",
+        "genre": "Health & Fitness",
+        "updated": "2025-01-22"
+      },
+      {
+        "name": "StepsApp Pedometer",
+        "price": "Free",
+        "rating": 4.81863,
+        "rating_count": 268719,
+        "version": "8.7.1",
+        "genre": "Health & Fitness",
+        "updated": "2026-03-17"
+      },
+      {
+        "name": "Steps - Activity Tracker",
+        "price": "Free",
+        "rating": 4.77444,
+        "rating_count": 123770,
+        "version": "1.7.64",
+        "genre": "Health & Fitness",
+        "updated": "2025-12-10"
+      }
+    ],
+    "notes": "5 direct competitor(s) found",
+    "community_actual": 4129067
+  }
+]

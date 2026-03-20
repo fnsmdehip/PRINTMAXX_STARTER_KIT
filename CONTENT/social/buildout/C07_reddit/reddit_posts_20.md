@@ -1,4 +1,4 @@
-# Reddit Posts — 20 Ready-to-Post (Value-First, No Spam)
+# Reddit Posts, 20 Ready-to-Post (Value-First, No Spam)
 
 All posts follow Reddit culture: give the full sauce upfront, no teasing, no "DM me for details."
 Karma builds through value. Accounts need 30+ days age + 100+ comment karma before posting to major subs.
@@ -13,13 +13,13 @@ Karma builds through value. Accounts need 30+ days age + 100+ comment karma befo
 Been documenting this publicly so sharing the real numbers.
 
 **What I built:**
-- PrayerLock (daily Islamic prayer tracker) — 55KB, fully offline
-- QuranStreak — Quran reading habit tracker
-- SickhStreak — fitness consistency app
-- MeditationStreak — meditation timer + streak
-- ScriptureStreak — Bible reading tracker
-- VaultTimer (Pomodoro) — focus timer
-- DuskSleep — sleep hygiene app
+- PrayerLock (daily Islamic prayer tracker), 55KB, fully offline
+- QuranStreak, Quran reading habit tracker
+- SickhStreak, fitness consistency app
+- MeditationStreak, meditation timer + streak
+- ScriptureStreak, Bible reading tracker
+- VaultTimer (Pomodoro), focus timer
+- DuskSleep, sleep hygiene app
 
 **Stack for each:** Single HTML file. No backend. LocalStorage for data. Service worker for offline. Installable on any device.
 
@@ -36,7 +36,7 @@ Been documenting this publicly so sharing the real numbers.
 
 **Total cost so far:** $0 (Claude Max plan I was already paying for, surge.sh free tier)
 
-**Next step for me:** Getting each one into the App Store. That's the hard part — Apple review, privacy policy, screenshots. Working through it now.
+**Next step for me:** Getting each one into the App Store. That's the hard part, Apple review, privacy policy, screenshots. Working through it now.
 
 Happy to answer questions on the technical side or the niche selection process.
 
@@ -67,7 +67,7 @@ Hey [name],
 
 I do SEO audits for B2B SaaS companies. Found 3 broken backlinks on your site killing your domain authority.
 
-I fix these in 48 hours — past clients saw avg 12% traffic increase in 60 days.
+I fix these in 48 hours, past clients saw avg 12% traffic increase in 60 days.
 
 Worth a 15-min call?
 
@@ -128,7 +128,7 @@ Reddit doesn't let you use headers but paragraph breaks work. Start with the TL;
 Use your target keyword naturally in the first 100 words.
 
 **Step 5: Amplify**
-Upvotes push the post up Reddit AND signal to Google it's quality. Ask 3-5 genuine people to engage (not brigading — real people, real opinions).
+Upvotes push the post up Reddit AND signal to Google it's quality. Ask 3-5 genuine people to engage (not brigading, real people, real opinions).
 
 This method got me a Reddit post ranking #4 for "best time tracking tools freelance" within 9 days.
 
@@ -156,7 +156,7 @@ Sharing real numbers because I'm tired of the vague "I make 5 figures" posts.
 **What's working for outreach:**
 - Cold calling (15 calls = 2-3 responses every time)
 - Google Maps search for businesses without websites or with ugly ones
-- Wappalyzer to identify sites running on old tech (Squarespace 5, old WordPress, Weebly) — these owners are prime for upgrades
+- Wappalyzer to identify sites running on old tech (Squarespace 5, old WordPress, Weebly), these owners are prime for upgrades
 
 **What's not working:**
 - Emailing from a fresh domain (going to spam)
@@ -183,7 +183,7 @@ What happened and how we diagnosed it:
 Facebook deprioritized link posts in Q4 2024. They want content that keeps people on Facebook, not content that sends them to your website.
 
 **How we confirmed it:**
-Split tested identical content — one with a link, one text-only with the link in comments. Text-only got 3.4x the reach.
+Split tested identical content, one with a link, one text-only with the link in comments. Text-only got 3.4x the reach.
 
 **What we changed:**
 - Moved all links to first comment
@@ -197,7 +197,7 @@ Split tested identical content — one with a link, one text-only with the link 
 
 **What this means for your strategy:**
 
-If you're posting links on Facebook and wondering why reach is dead — test putting the link in the first comment. Takes 30 seconds and you might see 2-3x the reach immediately.
+If you're posting links on Facebook and wondering why reach is dead, test putting the link in the first comment. Takes 30 seconds and you might see 2-3x the reach immediately.
 
 Works on LinkedIn too. Same pattern.
 
@@ -205,7 +205,7 @@ Works on LinkedIn too. Same pattern.
 
 ## POST 6
 **Subreddit:** r/forhire (offering)
-**Title:** [FOR HIRE] SEO content audits for SaaS companies — I identify why your blog isn't ranking and exactly what to fix
+**Title:** [FOR HIRE] SEO content audits for SaaS companies, I identify why your blog isn't ranking and exactly what to fix
 
 **Body:**
 What I do: Technical SEO + content audit specifically for SaaS blogs and product pages.
@@ -223,11 +223,11 @@ What I do: Technical SEO + content audit specifically for SaaS blogs and product
 
 **Pricing:** $200 flat for sites up to 500 pages. $350 for 500-2,000 pages.
 
-**What past clients said:** (real quotes, no fabrication — happy to share contact info)
+**What past clients said:** (real quotes, no fabrication, happy to share contact info)
 
-"Found 14 pages competing for the same keyword. Fixed the cannibalization, +31% organic traffic in 6 weeks." — SaaS founder, B2B logistics
+"Found 14 pages competing for the same keyword. Fixed the cannibalization, +31% organic traffic in 6 weeks.", SaaS founder, B2B logistics
 
-"Caught 3 technical issues we'd been ignoring. One was a noindex tag on our pricing page. That was live for 4 months." — Growth manager, HR software
+"Caught 3 technical issues we'd been ignoring. One was a noindex tag on our pricing page. That was live for 4 months.", Growth manager, HR software
 
 **Tools I use:** Screaming Frog, Ahrefs, Google Search Console, PageSpeed Insights, ContentKing.
 
@@ -247,9 +247,9 @@ I sold 14 different Notion templates. 3 of them made 90% of the revenue. Here's 
 **Total revenue: $4,218 across 14 months**
 
 **Top 3 sellers:**
-1. Second Brain (GTD system) — $29 — 87 sales — $2,523 total
-2. Client Portal (freelancers) — $19 — 61 sales — $1,159 total
-3. Business OS (solopreneurs) — $39 — 14 sales — $546 total
+1. Second Brain (GTD system), $29, 87 sales, $2,523 total
+2. Client Portal (freelancers), $19, 61 sales, $1,159 total
+3. Business OS (solopreneurs), $39, 14 sales, $546 total
 
 **The 11 that barely sold:** Anything too niche or too simple. "Reading tracker" = 3 sales. "Budget tracker" = 9 sales (too much competition for free versions).
 
@@ -261,7 +261,7 @@ I sold 14 different Notion templates. 3 of them made 90% of the revenue. Here's 
 
 **What doesn't sell:**
 - Templates that duplicate what Notion gives you free
-- Over-designed templates (people customize — they want bones, not decoration)
+- Over-designed templates (people customize, they want bones, not decoration)
 - Templates without a clear problem statement on the listing
 
 **Distribution that worked:**
@@ -343,8 +343,8 @@ Here's what you get in a single file:
 ```
 
 **Add two more files:**
-- `manifest.json` — makes it installable
-- `sw.js` — caches the file for offline use
+- `manifest.json`, makes it installable
+- `sw.js`, caches the file for offline use
 
 **Total: 3 files. Deployable on any static host.**
 
@@ -377,17 +377,17 @@ I see a lot of "here's how I made $X" posts with zero specifics. Here's mine wit
 
 **What I built:** Productized cold email service for local service businesses (plumbers, HVAC, landscaping).
 
-**Month 1 — $0:**
+**Month 1, $0:**
 - Weeks 1-2: Built the outreach system. Clay for data, Apollo for emails, Instantly for sending.
 - Weeks 3-4: First 200 cold emails sent. 4 responses. 2 calls. 0 closes.
 - Learning: My offer was too vague. "I'll get you leads" means nothing.
 
-**Month 2 — $800:**
+**Month 2, $800:**
 - Refined offer: "I'll send 500 cold emails to homeowners in your zip code. You pay per booked call."
 - Pay-per-result model unlocked 3 clients at $200/mo each (low, I know, but proof of concept)
 - Started tracking: open rate 34%, click rate 8%, reply rate 3.1%
 
-**Month 3 — $3,100:**
+**Month 3, $3,100:**
 - Raised price to $400/mo after showing results
 - Added one $800/mo client (general contractor, larger territory)
 - Total: 6 clients, 2 at $400, 1 at $800, 3 at $200 (grandfathered legacy pricing)
@@ -410,12 +410,12 @@ AMA on the actual mechanics.
 
 ## POST 11
 **Subreddit:** r/Affiliatemarketing
-**Title:** SaaS affiliate programs I'm currently promoting — commissions, cookie windows, and what converts
+**Title:** SaaS affiliate programs I'm currently promoting, commissions, cookie windows, and what converts
 
 **Body:**
 Been doing affiliate marketing for 14 months. Here are the programs I'm actively running with real data on what converts.
 
-**Tier 1 — Actively promoting (paying out)**
+**Tier 1, Actively promoting (paying out)**
 
 | Product | Commission | Cookie | My EPC | Best converting content |
 |---|---|---|---|---|
@@ -425,10 +425,10 @@ Been doing affiliate marketing for 14 months. Here are the programs I'm actively
 | Surfer SEO | 25% recurring | 60 days | $1.05 | SEO tutorial content |
 | ClickFunnels | 40% recurring | 30 days | $0.90 | Sales funnel walkthroughs |
 
-**Tier 2 — Testing**
-- Instantly.ai — 20% recurring — launched review post, too early to judge
-- Clay — referral credits only (not cash) — useful for my own costs
-- Notion (partner program) — very low commission, not worth it
+**Tier 2, Testing**
+- Instantly.ai, 20% recurring, launched review post, too early to judge
+- Clay, referral credits only (not cash), useful for my own costs
+- Notion (partner program), very low commission, not worth it
 
 **What actually converts:**
 
@@ -439,7 +439,7 @@ Tutorial posts ("How to set up a newsletter") build trust but convert slow. Bett
 **Traffic sources that work:**
 - Reddit posts linking to my review site
 - YouTube video descriptions
-- Pinterest (Beehiiv specifically does well here — creator audience)
+- Pinterest (Beehiiv specifically does well here, creator audience)
 
 **What doesn't work:**
 - Putting affiliate links in Twitter posts. Rate limited and looks spammy.
@@ -462,10 +462,10 @@ Spent 3 weeks pulling Reddit posts that rank in the top 3 results for commercial
 
 **Title patterns that rank:**
 
-1. **Number + specific outcome:** "I made $X doing Y in Z days" — 34% of ranking posts
-2. **Question matching search query:** "How do I [exact keyword phrase]?" — 28%
-3. **List format:** "7 [tool/method/tip] for [specific audience]" — 22%
-4. **Confession/case study:** "Here's what I learned after [doing X] for [time period]" — 16%
+1. **Number + specific outcome:** "I made $X doing Y in Z days", 34% of ranking posts
+2. **Question matching search query:** "How do I [exact keyword phrase]?", 28%
+3. **List format:** "7 [tool/method/tip] for [specific audience]", 22%
+4. **Confession/case study:** "Here's what I learned after [doing X] for [time period]", 16%
 
 **Body structure of ranking posts:**
 
@@ -490,15 +490,15 @@ I've tried everything. Zettelkasten, PARA, GTD, Johnny.Decimal. Here's what actu
 
 **The setup (3 databases, not 14):**
 
-**Database 1: Inbox** — Everything goes here first. No sorting on capture.
+**Database 1: Inbox**, Everything goes here first. No sorting on capture.
 - Properties: Status (Inbox/Processed), Date, Source, Tags
 - Rule: Don't process on capture. Just dump it.
 
-**Database 2: Notes** — Processed thoughts, ideas, references.
+**Database 2: Notes**, Processed thoughts, ideas, references.
 - Properties: Tags, Related projects, Created, Last modified
 - Linked from Inbox via relation
 
-**Database 3: Projects** — Active work only.
+**Database 3: Projects**, Active work only.
 - Properties: Status, Deadline, Priority, Related notes
 - If something sits in Projects for 90+ days with no progress, it moves to Archive
 
@@ -639,8 +639,8 @@ Here's my actual data from 90 days of posting across Instagram, X, and LinkedIn.
 - X: Tue-Thu 11:30am
 
 **What doesn't matter as much as I thought:**
-- Day of week (within Mon-Thu) — less than 8% variance
-- Posting every single day vs 4x/week — I couldn't measure a reach difference
+- Day of week (within Mon-Thu), less than 8% variance
+- Posting every single day vs 4x/week, I couldn't measure a reach difference
 
 Test your own account for 30 days with a simple spreadsheet. Your data > any article's averages.
 
@@ -668,7 +668,7 @@ Don't cut existing clients yet. Just stop accepting new work under $100/hr. Say 
 Deliver 1-2 things with measurable results. Document them: "Increased organic traffic 22% in 60 days." You need proof before you can justify a price increase.
 
 **Month 4: Raise rates on new clients**
-Any new client, quote $120/hr. See who says yes. (Most will — you now have better proof.)
+Any new client, quote $120/hr. See who says yes. (Most will, you now have better proof.)
 
 **Month 5: Letter to existing clients**
 "In 60 days, my rate moves to $120/hr for all projects. Ongoing work grandfathered at current rate for 90 days after that. I wanted to give you time to plan."
@@ -715,9 +715,9 @@ I discovered I spent 2.1 hours/day in email and Slack. I thought it was 45 minut
 - Timing shows you in real-time when you're approaching the limit
 
 **What didn't work for me:**
-- Manual timers (Toggl, Clockify) — forgot to start/stop constantly
-- "Planned day" apps (Motion, Sunsama) — planning my day before knowing what urgent things come in felt fake
-- Browser extensions only (RescueTime) — missed all non-browser work
+- Manual timers (Toggl, Clockify), forgot to start/stop constantly
+- "Planned day" apps (Motion, Sunsama), planning my day before knowing what urgent things come in felt fake
+- Browser extensions only (RescueTime), missed all non-browser work
 
 **Honest downside:** Timing is $29/yr and Mac only. If you're on Windows, ActivityWatch is free and close.
 
@@ -762,7 +762,7 @@ Next iteration reads the updated state. Memory lives in the filesystem, not the 
 - Too much context (Sonnet 3.7 with 200K context still gets confused past 80K tokens of context)
 
 **Cost:**
-On Claude Max plan ($100/mo), overnight loops run "free" — no usage limits. On API pricing, 8 hours of active loops would be expensive.
+On Claude Max plan ($100/mo), overnight loops run "free", no usage limits. On API pricing, 8 hours of active loops would be expensive.
 
 **What I've built with it:**
 - 181-task content generation system (I'm currently mid-run)
@@ -802,7 +802,7 @@ At 100K views/month in finance: $1,200-4,000/mo from ads alone.
 - 200K+: $3,000-15,000 per video
 
 **4. Digital products (highest margin)**
-- Templates, courses, guides — 100% margin
+- Templates, courses, guides, 100% margin
 - 30K-view audience converts ~0.1-0.5% on a $47 product = $140-700 per relevant video
 
 **Realistic Year 1 timeline for faceless finance channel:**

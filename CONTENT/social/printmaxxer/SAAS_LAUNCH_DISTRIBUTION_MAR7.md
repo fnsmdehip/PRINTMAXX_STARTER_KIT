@@ -9,7 +9,7 @@ BATCH: SaaS tools + surge.sh deployment distribution
 
 ---
 
-## TWEET 1 — ShopMetrics Pro launch
+## TWEET 1, ShopMetrics Pro launch
 
 built a free shopify store analyzer.
 
@@ -21,7 +21,7 @@ shopmetrics-pro.surge.sh
 
 ---
 
-## TWEET 2 — SiteScore free vs pro
+## TWEET 2, SiteScore free vs pro
 
 sitescore now has 2 tiers.
 
@@ -35,7 +35,7 @@ sitescore-pro.surge.sh
 
 ---
 
-## TWEET 3 — Cold Email Calculator
+## TWEET 3, Cold Email Calculator
 
 built a cold email ROI calculator.
 
@@ -48,7 +48,7 @@ cold-email-calc.surge.sh
 
 ---
 
-## TWEET 4 — Portfolio flex (surge.sh)
+## TWEET 4, Portfolio flex (surge.sh)
 
 140+ live websites. $0 hosting.
 
@@ -60,7 +60,7 @@ surge install takes 30 seconds. surge deploy takes 3.
 
 ---
 
-## TWEET 5 — Builder credibility thread hook
+## TWEET 5, Builder credibility thread hook
 
 week 5, day 32.
 

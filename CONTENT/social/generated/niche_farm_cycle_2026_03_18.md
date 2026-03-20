@@ -8,19 +8,19 @@
 ## Cycle Summary
 
 ### Topics Covered (fresh - not in previous cycles)
-1. **Cold email 2026 shifts** — tracking pixel death, first name spam flag, 58% first email rule, casual > polished
-2. **UGC cost collapse** — $500 to $0.10/video via Nano Banana, 38% conversion boost, service opportunity
-3. **GEO (Generative Engine Optimization)** — 43% citation increase, Reddit = Perplexity gold, structured data
-4. **Pricing psychology** — 25-60% revenue from pricing alone, usage-based 126% YoY growth
-5. **Self-reply funnel** — 3-5x CTR vs bio link, algorithm shows OP reply first
+1. **Cold email 2026 shifts**, tracking pixel death, first name spam flag, 58% first email rule, casual > polished
+2. **UGC cost collapse**, $500 to $0.10/video via Nano Banana, 38% conversion boost, service opportunity
+3. **GEO (Generative Engine Optimization)**, 43% citation increase, Reddit = Perplexity gold, structured data
+4. **Pricing psychology**, 25-60% revenue from pricing alone, usage-based 126% YoY growth
+5. **Self-reply funnel**, 3-5x CTR vs bio link, algorithm shows OP reply first
 
 ### Topics Avoided (already covered in cycles 1-4)
-- Platform algo changes (IG, TikTok, YT Shorts) — covered 2026-03-17
-- Gov contracts / SAM.gov — covered 2026-03-17
-- AI influencer stack / $40/mo — covered 2026-03-17
-- Pipeline building-in-public stats — covered 2026-03-18
-- Cold calling vs cold email — covered 2026-03-17 cycle4
-- 90-minute revenue unlock — covered 2026-03-17 cycle4
+- Platform algo changes (IG, TikTok, YT Shorts), covered 2026-03-17
+- Gov contracts / SAM.gov, covered 2026-03-17
+- AI influencer stack / $40/mo, covered 2026-03-17
+- Pipeline building-in-public stats, covered 2026-03-18
+- Cold calling vs cold email, covered 2026-03-17 cycle4
+- 90-minute revenue get, covered 2026-03-17 cycle4
 
 ### Content Generated
 | Type | Count | File |
@@ -52,7 +52,7 @@
 - [x] No promotional adjectives
 
 ### Next Cycle Suggestions (for cycle 6)
-- Vibe coding paradigm (ALPHA349 — Karpathy, 31K likes, 5.3M views)
+- Vibe coding model (ALPHA349, Karpathy, 31K likes, 5.3M views)
 - 4-day SaaS build method (ALPHA343)
 - Revenue-based financing at $15K MRR (ALPHA346)
 - Intent data cold email enrichment (ALPHA288)

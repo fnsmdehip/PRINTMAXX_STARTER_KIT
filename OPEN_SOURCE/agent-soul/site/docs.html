@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sovrun docs</title>
+<meta name="description" content="sovrun documentation. 19 modules, CLI commands, environment variables, connector setup, memory import.">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0a0a; --bg-card: #111111; --bg-card-hover: #161616;
+  --border: #1e1e1e; --border-accent: #2a2a2a;
+  --text: #e0e0e0; --text-dim: #888888; --text-bright: #ffffff;
+  --accent: #3b82f6; --accent-dim: #2563eb;
+  --green: #22c55e; --yellow: #eab308;
+  --mono: 'SF Mono', 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+section { padding: 60px 0; }
+section + section { border-top: 1px solid var(--border); }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 12px 0; }
+nav .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; }
+nav .logo { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--text-bright); letter-spacing: -0.5px; }
+nav .links { display: flex; gap: 24px; font-size: 14px; }
+nav .links a { color: var(--text-dim); }
+nav .links a:hover { color: var(--text-bright); text-decoration: none; }
+nav .links a.active { color: var(--text-bright); }
+
+h1 { font-family: var(--mono); font-size: 36px; font-weight: 800; color: var(--text-bright); letter-spacing: -2px; margin-bottom: 8px; }
+h2 { font-size: 24px; font-weight: 700; color: var(--text-bright); letter-spacing: -0.5px; margin-bottom: 12px; margin-top: 48px; }
+h2:first-child { margin-top: 0; }
+h3 { font-family: var(--mono); font-size: 16px; font-weight: 600; color: var(--text-bright); margin: 24px 0 8px; }
+p { margin-bottom: 12px; }
+p.dim { color: var(--text-dim); }
+
+code { font-family: var(--mono); font-size: 13px; background: rgba(59,130,246,0.08); padding: 2px 6px; border-radius: 4px; }
+pre { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.7; color: var(--text); margin: 12px 0 20px; }
+pre .comment { color: var(--text-dim); }
+pre .cmd { color: var(--green); }
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0 24px; font-size: 14px; }
+th { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; padding: 10px 12px; text-align: left; background: var(--bg-card); border-bottom: 1px solid var(--border); color: var(--text-dim); }
+td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text-dim); vertical-align: top; }
+td:first-child { font-family: var(--mono); font-size: 13px; color: var(--text); white-space: nowrap; }
+
+.toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin: 24px 0; }
+.toc ul { list-style: none; padding: 0; columns: 2; }
+.toc li { font-size: 14px; margin-bottom: 6px; }
+.toc a { color: var(--text-dim); }
+.toc a:hover { color: var(--text-bright); }
+
+footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; }
+footer .footer-links { display: flex; gap: 24px; justify-content: center; font-family: var(--mono); font-size: 13px; margin-bottom: 16px; }
+footer .footer-links a { color: var(--text-dim); }
+footer .footer-links a:hover { color: var(--text-bright); }
+footer .footer-note { font-family: var(--mono); font-size: 12px; color: var(--text-dim); opacity: 0.5; }
+
+@media (max-width: 768px) {
+  section { padding: 40px 0; }
+  nav .links { gap: 16px; font-size: 13px; }
+  .toc ul { columns: 1; }
+}
+@media (max-width: 480px) { nav .links { display: none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">sovrun</a>
+    <div class="links">
+      <a href="docs.html" class="active">docs</a>
+      <a href="compare.html">compare</a>
+      <a href="architecture.html">architecture</a>
+      <a href="pricing.html">pricing</a>
+      <a href="https://github.com/fnsmdehip/sovrun">github</a>
+    </div>
+  </div>
+</nav>
+
+<section style="padding-top: 120px;">
+  <div class="container">
+    <h1>docs</h1>
+    <p class="dim">19 modules across 5 layers. each works standalone. zero dependencies for core.</p>
+
+    <div class="toc">
+      <ul>
+        <li><a href="#quickstart">quick start</a></li>
+        <li><a href="#memory-import">memory import</a></li>
+        <li><a href="#cognitive">cognitive layer</a></li>
+        <li><a href="#orchestration">orchestration layer</a></li>
+        <li><a href="#memory">memory layer</a></li>
+        <li><a href="#infrastructure">infrastructure layer</a></li>
+        <li><a href="#connectors">connectors</a></li>
+        <li><a href="#env">environment variables</a></li>
+      </ul>
+    </div>
+
+    <h2 id="quickstart">quick start</h2>
+
+    <pre><span class="comment"># install</span>
+<span class="cmd">pip install</span> sovrun
+<span class="comment"># or from source:</span>
+<span class="cmd">git clone</span> https://github.com/fnsmdehip/sovrun.git
+<span class="cmd">cd</span> sovrun && <span class="cmd">pip install</span> -e .
+
+<span class="comment"># set project root (all paths relative to this)</span>
+<span class="cmd">export</span> SOVRUN_ROOT=/path/to/your/project
+<span class="cmd">mkdir -p</span> data output state logs
+
+<span class="comment"># import your conversation history</span>
+<span class="cmd">sovrun-import</span> --provider claude --dir ~/.claude/projects
+
+<span class="comment"># build voice model</span>
+<span class="cmd">sovrun-voice</span> --extract
+
+<span class="comment"># build cognition model (correction chains + meta-rules)</span>
+<span class="cmd">sovrun-engine</span> --build-model
+
+<span class="comment"># mine patterns (what frustrates you, what works)</span>
+<span class="cmd">sovrun-miner</span> --mine
+
+<span class="comment"># set up MCP connectors</span>
+<span class="cmd">sovrun-mcp</span> --setup slack github
+
+<span class="comment"># close all loops</span>
+<span class="cmd">sovrun-loops</span> --cycle
+
+<span class="comment"># audit the system</span>
+<span class="cmd">sovrun-audit</span> --audit</pre>
+
+    <h2 id="memory-import">memory import</h2>
+    <p>import your conversation history from any LLM provider. sovrun normalizes all formats into its internal JSONL format for voice extraction and correction chain analysis.</p>
+
+    <h3>ChatGPT</h3>
+    <pre><span class="comment"># export from ChatGPT settings -> Data controls -> Export data</span>
+<span class="comment"># you'll get a zip file with conversations.json</span>
+<span class="cmd">sovrun-import</span> --provider chatgpt --file ~/Downloads/chatgpt-export.zip</pre>
+
+    <h3>Claude</h3>
+    <pre><span class="comment"># point at your Claude projects directory</span>
+<span class="cmd">sovrun-import</span> --provider claude --dir ~/.claude/projects
+
+<span class="comment"># or a specific transcript file</span>
+<span class="cmd">sovrun-import</span> --provider claude --file transcript.jsonl</pre>
+
+    <h3>Gemini</h3>
+    <pre><span class="comment"># export from Google Takeout -> Gemini</span>
+<span class="cmd">sovrun-import</span> --provider gemini --file ~/Downloads/gemini-export.json</pre>
+
+    <p>after import, run <code>sovrun-voice --extract</code> to build your voice model from the combined history.</p>
+
+    <h2 id="cognitive">cognitive layer (7 modules)</h2>
+
+    <h3>voice_extractor</h3>
+    <p>reads your prompt history (JSONL), identifies vocabulary, tone, banned words, sentence patterns. outputs a voice model JSON you inject into any agent prompt.</p>
+    <pre><span class="cmd">sovrun-voice</span> --extract     <span class="comment"># build model from prompts</span>
+<span class="cmd">sovrun-voice</span> --inject      <span class="comment"># get injection string for agent prompts</span>
+<span class="cmd">sovrun-voice</span> --status      <span class="comment"># model stats</span>
+<span class="cmd">sovrun-voice</span> --diff        <span class="comment"># compare current vs previous model</span></pre>
+
+    <h3>cognitive_engine</h3>
+    <p>identifies correction chains in your history. builds meta-rules that would have prevented each correction sequence. from production: 168 chains, 6.9 average corrections per chain.</p>
+    <pre><span class="cmd">sovrun-engine</span> --build-model     <span class="comment"># full cognition model</span>
+<span class="cmd">sovrun-engine</span> --lookup "TASK"    <span class="comment"># find similar past tasks</span>
+<span class="cmd">sovrun-engine</span> --rules            <span class="comment"># show extracted meta-rules</span>
+<span class="cmd">sovrun-engine</span> --chain-analysis   <span class="comment"># correction chain stats</span></pre>
+
+    <h3>pattern_miner</h3>
+    <p>finds correction markers ("no not that"), escalation triggers ("deeper", "surprise me"), and satisfaction signals ("perfect", "ship it"). mines into transferable rules.</p>
+    <pre><span class="cmd">sovrun-miner</span> --mine          <span class="comment"># extract all patterns</span>
+<span class="cmd">sovrun-miner</span> --similar "Q"   <span class="comment"># find similar past prompts</span>
+<span class="cmd">sovrun-miner</span> --corrections   <span class="comment"># correction sequences only</span>
+<span class="cmd">sovrun-miner</span> --effective     <span class="comment"># satisfaction triggers only</span></pre>
+
+    <h3>user_sim_refiner</h3>
+    <p>autonomous critique loop. takes your extracted cognitive architecture and simulates what you would criticize about a project. outputs critique for another agent to act on.</p>
+    <pre><span class="comment"># in Python:</span>
+from sovrun.core.user_sim_refiner import UserSimRefiner
+refiner = UserSimRefiner()
+critique = refiner.simulate_critique("path/to/project")</pre>
+
+    <h3>self_audit</h3>
+    <p>checks your project for AI slop vocabulary in config files, context bloat wasting tokens, missing protocols, orphan scripts not wired into any automation.</p>
+    <pre><span class="cmd">sovrun-audit</span> --audit    <span class="comment"># full audit</span>
+<span class="cmd">sovrun-audit</span> --report   <span class="comment"># latest findings</span></pre>
+
+    <h3>bias_null (template)</h3>
+    <p>5-point pre-output filter. run before any major output. catches: legacy smuggling, preemptive appeasement, lived-gap check, popular-default trap, training-bias correction.</p>
+    <p>ships as a template at <code>templates/bias-null.md</code>. inject into agent system prompts.</p>
+
+    <h3>decision_engine</h3>
+    <p>closed-loop: scan data sources, score opportunities, take action (within safety limits), log every decision with reasoning to CSV. supports rule-based and LLM-delegated judgment.</p>
+    <pre><span class="cmd">sovrun-loops</span> --cycle      <span class="comment"># includes decision engine</span>
+<span class="comment"># or standalone:</span>
+python3 -m sovrun.core.decision_engine --cycle
+python3 -m sovrun.core.decision_engine --dry-run</pre>
+
+    <h2 id="orchestration">orchestration layer (4 modules)</h2>
+
+    <h3>orchestration</h3>
+    <p>compose agents into DAGs using three primitives: SequentialAgent, ParallelAgent, LoopAgent. non-dependent phases run in parallel. typed state management.</p>
+    <pre><span class="cmd">sovrun-orchestrate</span> --visualize   <span class="comment"># render DAG as HTML</span>
+<span class="cmd">sovrun-orchestrate</span> --status      <span class="comment"># execution status</span>
+
+<span class="comment"># Python:</span>
+from sovrun.core.orchestration import DAGOrchestrator, SequentialAgent, ParallelAgent
+dag = DAGOrchestrator()
+dag.add_phase("research", ParallelAgent([agent_a, agent_b]))
+dag.add_phase("synthesize", SequentialAgent([agent_c]), depends_on=["research"])
+dag.run()</pre>
+
+    <h3>handoff</h3>
+    <p>typed agent-to-agent delegation. agent A invokes agent B mid-task, passes context, receives result, continues. scoped guardrails per handoff.</p>
+    <pre><span class="cmd">sovrun-handoff</span> --from agent_a --to agent_b --task "analyze data"
+
+<span class="comment"># Python:</span>
+from sovrun.core.handoff import Handoff
+result = Handoff.delegate(
+    source="researcher",
+    target="writer",
+    context={"findings": data},
+    guardrails=["no_external_calls"]
+)</pre>
+
+    <h3>loop_closer</h3>
+    <p>closes 4 open loops: decision execution, feedback tracking, pipeline advancement, soul drift scoring (0-10 per output against SOUL.md directives).</p>
+    <pre><span class="cmd">sovrun-loops</span> --cycle      <span class="comment"># run all 4 loops</span>
+<span class="cmd">sovrun-loops</span> --drift      <span class="comment"># soul drift scoring only</span>
+<span class="cmd">sovrun-loops</span> --status     <span class="comment"># loop health</span>
+<span class="cmd">sovrun-loops</span> --dry-run    <span class="comment"># preview without executing</span></pre>
+
+    <h3>workflow_bridge</h3>
+    <p>agents create n8n workflows programmatically. define triggers, nodes, connections in Python. export as n8n-compatible JSON for import.</p>
+    <pre><span class="cmd">sovrun-workflow</span> --create "slack message to google sheets row"
+<span class="cmd">sovrun-workflow</span> --list       <span class="comment"># list created workflows</span>
+<span class="cmd">sovrun-workflow</span> --export id  <span class="comment"># export as n8n JSON</span></pre>
+
+    <h2 id="memory">memory layer (4 modules)</h2>
+
+    <h3>procedural_memory</h3>
+    <p>auto-generates skill docs from successful agent runs. FTS5-indexed (SQLite full-text search). before each run, queries for relevant past solutions.</p>
+    <pre><span class="cmd">sovrun-memory</span> --consolidate   <span class="comment"># consolidate new skills</span>
+<span class="cmd">sovrun-memory</span> --search "task"  <span class="comment"># search past solutions</span>
+<span class="cmd">sovrun-memory</span> --stats          <span class="comment"># skill count and categories</span>
+
+<span class="comment"># Python:</span>
+from sovrun.core.procedural_memory import ProceduralMemory
+mem = ProceduralMemory(db_path="skills.db")
+results = mem.search("deploy to vercel")
+mem.close()</pre>
+
+    <h3>memory_import</h3>
+    <p>see <a href="#memory-import">memory import section</a> above.</p>
+
+    <h3>conversation_logger</h3>
+    <p>extracts user and assistant messages from Claude Code session transcripts into searchable JSONL. incremental processing (tracks byte offsets).</p>
+    <pre><span class="comment"># CLI:</span>
+python3 -m sovrun.core.conversation_logger --extract
+python3 -m sovrun.core.conversation_logger --search "deployment"
+python3 -m sovrun.core.conversation_logger --stats
+python3 -m sovrun.core.conversation_logger --recent 20</pre>
+
+    <h3>session_briefing</h3>
+    <p>"what happened since last session" from git diffs, state files, task trackers. no LLM calls. pure file reading. under 30 seconds.</p>
+    <pre><span class="cmd">sovrun-briefing</span> --save    <span class="comment"># save briefing to file</span>
+<span class="cmd">sovrun-briefing</span> --json    <span class="comment"># JSON output</span></pre>
+
+    <h2 id="infrastructure">infrastructure layer (3 modules)</h2>
+
+    <h3>resilience</h3>
+    <p>shared module for production-grade agents: retry with exponential backoff + jitter, file locking (fcntl on unix), circuit breaker (CLOSED/OPEN/HALF_OPEN), input sanitization, loop detection.</p>
+    <pre>from sovrun.core.resilience import retry, locked_file, CircuitBreaker
+from sovrun.core.resilience import sanitize_for_prompt, TrajectoryLogger, LoopDetector</pre>
+
+    <h3>durable</h3>
+    <p>deterministic replay on crash. each step logged atomically. crash at step 14 replays from step 14, not step 1. zero wasted API calls on recovery.</p>
+    <pre><span class="cmd">sovrun-durable</span> --status    <span class="comment"># show checkpoint state</span>
+<span class="cmd">sovrun-durable</span> --replay    <span class="comment"># replay from last checkpoint</span>
+
+<span class="comment"># Python:</span>
+from sovrun.core.durable import DurableExecution
+with DurableExecution("my_pipeline") as dur:
+    result_1 = dur.step("fetch_data", fetch_function)
+    result_2 = dur.step("process", process_function, result_1)
+    <span class="comment"># crash here? next run replays from step 3, not step 1</span></pre>
+
+    <h3>tracing</h3>
+    <p>HTML timeline of LLM calls, tool executions, handoffs, failures. per-agent token attribution and cost tracking.</p>
+    <pre><span class="cmd">sovrun-trace</span> --visualize   <span class="comment"># generate HTML timeline</span>
+<span class="cmd">sovrun-trace</span> --cost         <span class="comment"># token cost breakdown by agent</span></pre>
+
+    <h2 id="connectors">connectors (105 MCP servers)</h2>
+    <p>105 pre-configured MCP server definitions across 18 categories: communication, data, social, dev, commerce, AI, storage, CRM, marketing, scraping, search, monitoring, productivity, finance, media, analytics, support, infrastructure.</p>
+
+    <pre><span class="comment"># list all available connectors</span>
+<span class="cmd">sovrun-mcp</span> --list
+
+<span class="comment"># set up a connector (adds to claude_desktop_config.json)</span>
+<span class="cmd">sovrun-mcp</span> --setup slack
+<span class="comment"># prompts for required env vars: SLACK_BOT_TOKEN, SLACK_TEAM_ID</span>
+
+<span class="comment"># set up multiple at once</span>
+<span class="cmd">sovrun-mcp</span> --setup slack github notion postgres stripe
+
+<span class="comment"># search connectors by category</span>
+<span class="cmd">sovrun-mcp</span> --category communication
+<span class="cmd">sovrun-mcp</span> --category data</pre>
+
+    <p>each connector definition includes: MCP server command, required environment variables, capabilities list, and setup instructions. the registry is at <code>connectors/registry.json</code>.</p>
+
+    <h2 id="env">environment variables</h2>
+    <p>all paths are configurable. nothing is hardcoded.</p>
+
+    <table>
+      <thead><tr><th>variable</th><th>default</th><th>description</th></tr></thead>
+      <tbody>
+        <tr><td>SOVRUN_ROOT</td><td>cwd</td><td>project root directory</td></tr>
+        <tr><td>SOVRUN_PROMPTS</td><td>data/prompts.jsonl</td><td>prompt history file</td></tr>
+        <tr><td>SOVRUN_CONVERSATIONS</td><td>data/conversations.jsonl</td><td>conversation history</td></tr>
+        <tr><td>SOVRUN_VOICE_MODEL</td><td>output/voice_model.json</td><td>voice model output</td></tr>
+        <tr><td>SOVRUN_SOUL_MD</td><td>templates/SOUL.md</td><td>agent identity file</td></tr>
+        <tr><td>SOVRUN_INSTRUCTIONS</td><td>templates/CLAUDE.md</td><td>system instructions</td></tr>
+        <tr><td>SOVRUN_TRANSCRIPT_DIRS</td><td>~/.claude/projects</td><td>transcript directories (comma-separated)</td></tr>
+        <tr><td>SOVRUN_SKILLS_DB</td><td>state/skills.db</td><td>procedural memory database</td></tr>
+        <tr><td>SOVRUN_MCP_CONFIG</td><td>~/.config/claude/claude_desktop_config.json</td><td>MCP config file path</td></tr>
+      </tbody>
+    </table>
+
+    <h2>data format</h2>
+    <p>sovrun reads JSONL files. each line is a JSON object with at minimum:</p>
+    <pre>{"ts": "2026-03-15T14:30:00", "prompt": "your prompt text here"}</pre>
+    <p>optional fields: <code>role</code> (user/assistant), <code>session_id</code>, <code>content_length</code>. you can use <code>content</code> or <code>text</code> instead of <code>prompt</code>.</p>
+
+    <h2>templates</h2>
+    <p>sovrun ships with 4 templates you customize for your system:</p>
+    <table>
+      <thead><tr><th>template</th><th>purpose</th></tr></thead>
+      <tbody>
+        <tr><td>SOUL.md</td><td>agent identity, behavioral directives, anti-patterns. the soul drift scorer reads this.</td></tr>
+        <tr><td>bias-null.md</td><td>5-point pre-output filter. inject into agent system prompts.</td></tr>
+        <tr><td>voice-config.json</td><td>example voice model structure. voice_extractor generates the real one.</td></tr>
+        <tr><td>CLAUDE.md</td><td>template for wiring sovrun into your project's system instructions.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/fnsmdehip/sovrun">github</a>
+      <a href="index.html">home</a>
+      <a href="compare.html">compare</a>
+      <a href="pricing.html">pricing</a>
+      <a href="https://github.com/fnsmdehip/sovrun/blob/main/LICENSE">MIT license</a>
+    </div>
+    <p class="footer-note">stdlib only. zero deps. python 3.10+.</p>
+  </div>
+</footer>
+
+</body>
+</html>

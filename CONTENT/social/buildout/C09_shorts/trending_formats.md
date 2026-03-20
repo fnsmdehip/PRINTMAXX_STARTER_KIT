@@ -1,4 +1,4 @@
-# YouTube Shorts Trending Formats — What's Working Now (March 2026)
+# YouTube Shorts Trending Formats, What's Working Now (March 2026)
 
 ## Why Format Matters More Than Content
 
@@ -149,7 +149,7 @@ Algorithm kill: Completely saturated. Zero differentiation. No comment engagemen
 Use audio strategically only for:
 
 1. **Trending instrumental** behind a text-on-screen story (emotional hook format)
-2. **Original AI voice** (ElevenLabs) for educational content — sounds better than screen recordings with no audio
+2. **Original AI voice** (ElevenLabs) for educational content, sounds better than screen recordings with no audio
 3. **Original music** (Suno/Udio generated) for productivity/aesthetic content
 4. **Dead silence** for high-stakes reveals (no music = tension + focus)
 
@@ -183,11 +183,11 @@ Use audio strategically only for:
 
 Shorts thumbnails display differently than long-form. Key rules:
 
-1. **Text must be readable at 50px wide** — use fonts above 80pt weight
-2. **Center composition only** — side elements get cropped on mobile
-3. **High contrast** — red/yellow on dark background outperforms everything
-4. **Face beats no-face** — if you're on camera, show the reaction face
-5. **Number in the thumbnail** — "$3,847" outperforms "I Made Money"
-6. **No brand logos** — they're unreadable at Shorts thumbnail size
+1. **Text must be readable at 50px wide**, use fonts above 80pt weight
+2. **Center composition only**, side elements get cropped on mobile
+3. **High contrast**, red/yellow on dark background outperforms everything
+4. **Face beats no-face**, if you're on camera, show the reaction face
+5. **Number in the thumbnail**, "$3,847" outperforms "I Made Money"
+6. **No brand logos**, they're unreadable at Shorts thumbnail size
 
 Canva template dimensions: 1080 × 1920px (standard Shorts)

@@ -17,7 +17,7 @@ Each platform has its own search index, hashtag culture, caption length sweet sp
 - Aspect ratio: 9:16 (required for FYP prominence)
 
 ### Caption Rules
-- Max 2,200 characters — use 150-300 for best performance
+- Max 2,200 characters, use 150-300 for best performance
 - Hook your caption: first line visible without "more" click
 - No paragraph breaks needed (people rarely read TikTok captions)
 - Add 3-5 hashtags max: 1 broad (#makemoney) + 2 mid (#coldemailstrategy) + 1 niche (#solopreneurlife)
@@ -26,7 +26,7 @@ Each platform has its own search index, hashtag culture, caption length sweet sp
 ### Hashtag Strategy
 - Do NOT use 30 hashtags like it's 2018 Instagram
 - TikTok recommends 3-5 relevant tags
-- Trending hashtags on TikTok are pinned to challenges — use them only if content actually fits
+- Trending hashtags on TikTok are pinned to challenges, use them only if content actually fits
 - Create one brand hashtag (#printmaxxer) and use it every post
 
 ### TikTok-Specific Caption Templates
@@ -75,7 +75,7 @@ First 15 minutes after posting: reply to every comment. This signals to TikTok t
 - No TikTok watermark (IG suppresses watermarked content)
 
 ### Caption Rules
-- Max 2,200 characters — sweet spot is 125-150 characters visible before "more"
+- Max 2,200 characters, sweet spot is 125-150 characters visible before "more"
 - First sentence = hook (consequence-first)
 - Add line breaks every 1-2 sentences for readability
 - 3-10 hashtags in caption OR first comment (first comment is cleaner)
@@ -136,15 +136,15 @@ Ask for saves: "Save this for when you're ready to start." This is the single mo
 ### Caption Rules
 - Max 63,206 characters (basically no limit)
 - But sweet spot: 80-150 characters
-- Facebook users read captions more than IG users — a slightly longer caption with a question at the end increases comments
-- Hashtags matter less on FB than IG or TikTok — use 2-3 relevant ones max
+- Facebook users read captions more than IG users, a slightly longer caption with a question at the end increases comments
+- Hashtags matter less on FB than IG or TikTok, use 2-3 relevant ones max
 - Links in captions are fine on FB (unlike IG where link in bio is required)
 
 ### Audience Difference
 Facebook's Reels audience skews older: 25-45 vs TikTok's 18-30.
 
 This matters for content strategy:
-- More business-owner angle, less "here's my hustle journey"
+- More business-owner angle, less "here's my hustle path"
 - Can reference more practical concerns: taxes, retirement, stability
 - Less hype energy, more credibility signals
 
@@ -152,7 +152,7 @@ This matters for content strategy:
 
 **Money method:**
 ```
-How I made $3,200 last month with cold email — starting from zero.
+How I made $3,200 last month with cold email, starting from zero.
 
 Full breakdown in the comments. What part of cold email feels hardest for you?
 
@@ -191,7 +191,7 @@ Cross-posting IG Reels to FB via Meta Business Suite gets you all three placemen
 ### Video Specs
 - Resolution: 1080x1920 (must be vertical)
 - Max length: 60 seconds for Shorts feed (up to 3 min with Shorts label)
-- File size: up to 256GB (irrelevant — your files will be <500MB)
+- File size: up to 256GB (irrelevant, your files will be <500MB)
 - Title: must be 100 characters max
 - No watermarks from competing platforms (YouTube suppresses these)
 
@@ -199,17 +199,17 @@ Cross-posting IG Reels to FB via Meta Business Suite gets you all three placemen
 - Title IS your caption on YouTube Shorts
 - 60-100 characters is the sweet spot
 - Include the primary keyword people would search
-- Title appears in search results — write for discoverability
+- Title appears in search results, write for discoverability
 
 ### Description Rules
-- Add a description (many creators skip this — it's SEO real estate)
+- Add a description (many creators skip this, it's SEO real estate)
 - Include 2-3 keywords naturally in first sentence
 - Add chapters if video is longer than 60s
 - Add link to related video or channel
 - Add 5-10 hashtags at bottom of description (not in title)
 
 ### Hashtag Strategy
-- Add #Shorts in description (critical — tells algorithm to surface in Shorts feed)
+- Add #Shorts in description (critical, tells algorithm to surface in Shorts feed)
 - Add 4-7 niche hashtags in description
 - Do NOT put hashtags in the title
 
@@ -233,7 +233,7 @@ Full tutorial on my channel → [link]
 ```
 
 ### YouTube Shorts Algorithm Signals (Priority Order)
-1. Swipe-away rate (how fast people skip — LOWEST is best)
+1. Swipe-away rate (how fast people skip, LOWEST is best)
 2. Like/view ratio
 3. Comments
 4. Subscription rate from video (very high signal)

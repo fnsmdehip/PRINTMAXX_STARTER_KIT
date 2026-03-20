@@ -1,4 +1,4 @@
-# Quora Answer Templates — Newly Deployed Tools
+# Quora Answer Templates, Newly Deployed Tools
 # Status: PENDING_REVIEW
 # Created: 2026-03-07
 # Target: High-intent Quora questions tied to deployed surge.sh tools
@@ -8,7 +8,7 @@
 ## Pre-Publish Checklist (Run before posting each answer)
 
 - [ ] Zero em dashes
-- [ ] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [ ] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [ ] No "It's not just X, it's Y" constructions
 - [ ] No vague attributions without links
 - [ ] No promotional adjectives
@@ -91,7 +91,7 @@ Fix those 3 things first. Then look at everything else.
 
 **Target tools:** prayerlock-app.surge.sh, ramadan-tracker.surge.sh
 
-**Note: TIME CRITICAL — Ramadan has approximately 22 days remaining as of 2026-03-07**
+**Note: TIME CRITICAL, Ramadan has approximately 22 days remaining as of 2026-03-07**
 
 ---
 
@@ -261,7 +261,7 @@ Work from what's actually visible. There's more there than most people use.
 
 ## Zero Waste Bonus: 3 Tweets + 1 Thread from This Content
 
-### Tweet 1 (from Answer 1 — site analysis)
+### Tweet 1 (from Answer 1, site analysis)
 ```
 free website analysis vs $130/mo SEMrush
 
@@ -273,7 +273,7 @@ here's what the free tools actually cover:
 pay for SEMrush when you need backlink data or competitor keywords at scale. for "is my site healthy" questions, the free tools give you 90% of the answer.
 ```
 
-### Tweet 2 (from Answer 4 — cold email ROI)
+### Tweet 2 (from Answer 4, cold email ROI)
 ```
 the variable that moves cold email revenue most isn't send volume
 
@@ -289,7 +289,7 @@ same send volume. better subject line and personalization. 67% revenue increase.
 run the math at cold-email-calc.surge.sh before you scale volume on a broken sequence.
 ```
 
-### Tweet 3 (from Answer 3 — Ramadan tracker, time-sensitive)
+### Tweet 3 (from Answer 3, Ramadan tracker, time-sensitive)
 ```
 22 days left in Ramadan
 

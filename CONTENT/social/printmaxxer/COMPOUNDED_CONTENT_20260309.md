@@ -1,4 +1,4 @@
-# Compounded Content Batch — 2026-03-09 14:30
+# Compounded Content Batch, 2026-03-09 14:30
 # Source: Gap Report, Alpha Scoring, Agent Missions, Swarm Intel
 # Voice: PRINTMAXXER (weighted S-tier dominant)
 # Status: PENDING_REVIEW
@@ -7,7 +7,7 @@
 
 ## STANDALONE TWEETS (8)
 
-### Tweet 1 — The Execution Gap (from Gap Report)
+### Tweet 1, The Execution Gap (from Gap Report)
 ```
 day 35. $0 revenue.
 
@@ -18,7 +18,7 @@ day 35. $0 revenue.
 building is the comfort zone. selling is the actual job.
 ```
 
-### Tweet 2 — AEO Is the New SEO (from ALPHA19242)
+### Tweet 2, AEO Is the New SEO (from ALPHA19242)
 ```
 AEO (AI Engine Optimization) is a category that didn't exist 6 months ago.
 
@@ -29,7 +29,7 @@ zero good tools exist. zero playbooks. zero established players.
 the window is maybe 6-12 months before it's saturated. move now or watch.
 ```
 
-### Tweet 3 — Reddit Gold Mine (from ALPHA18860)
+### Tweet 3, Reddit Gold Mine (from ALPHA18860)
 ```
 found a reddit thread yesterday. "i will become your first user." 59 upvotes. 289 comments.
 
@@ -38,7 +38,7 @@ found a reddit thread yesterday. "i will become your first user." 59 upvotes. 28
 you don't need a marketing budget. you need to read r/microsaas for 15 minutes.
 ```
 
-### Tweet 4 — The Scanner Math (from Agent Missions)
+### Tweet 4, The Scanner Math (from Agent Missions)
 ```
 ran the pain point scanner this morning. 18 reddit posts. scored each 0-100.
 
@@ -47,7 +47,7 @@ ran the pain point scanner this morning. 18 reddit posts. scored each 0-100.
 that's a "please someone build this" post sitting there for anyone to grab. the scanner took 4 minutes. most people spend 4 hours guessing what to build.
 ```
 
-### Tweet 5 — Google Quality Paradox (from ALPHA19240)
+### Tweet 5, Google Quality Paradox (from ALPHA19240)
 ```
 someone on r/SEO: "i 10x'd the quality of my site. google ranked it lower."
 
@@ -56,7 +56,7 @@ someone on r/SEO: "i 10x'd the quality of my site. google ranked it lower."
 google doesn't reward quality. google rewards whatever google rewards. stop optimizing for what you think should work and start testing what actually does.
 ```
 
-### Tweet 6 — $0 Cold Email Stack (from Agent Content)
+### Tweet 6, $0 Cold Email Stack (from Agent Content)
 ```
 cold email stack that costs $0:
 
@@ -67,7 +67,7 @@ cold email stack that costs $0:
 people paying $200/mo for instantly.ai when gmail is sitting right there.
 ```
 
-### Tweet 7 — Hourly Reminder App Gap (from ALPHA19217)
+### Tweet 7, Hourly Reminder App Gap (from ALPHA19217)
 ```
 r/productivity post: "is there an app that reminds me every hour to drink water, check posture, stretch?"
 
@@ -76,7 +76,7 @@ pain score: 92/100. 19 comments. nobody linked a working solution.
 that's a $2.99/mo PWA you can build in 4 hours with push notifications and a cron job. the demand is literally begging.
 ```
 
-### Tweet 8 — The Scan-Score-Act Loop (from Agent Content)
+### Tweet 8, The Scan-Score-Act Loop (from Agent Content)
 ```
 the scanning is automated. the extraction is automated. the scoring is automated.
 
@@ -89,7 +89,7 @@ scan. score. act. every day. that's the loop.
 
 ---
 
-## THREAD 1 — Day 35 Transparency Report (7 tweets)
+## THREAD 1, Day 35 Transparency Report (7 tweets)
 
 ### 1/7
 ```
@@ -167,7 +167,7 @@ the system works. the execution doesn't. day 36 starts with the boring stuff.
 
 ---
 
-## THREAD 2 — AEO: The New SEO Nobody's Talking About (5 tweets)
+## THREAD 2, AEO: The New SEO Nobody's Talking About (5 tweets)
 
 ### 1/5
 ```
@@ -215,7 +215,7 @@ both can ship in a weekend. the demand already exists. just needs someone to ser
 
 ## REPLY BAIT / ENGAGEMENT FARMING (3)
 
-### Reply Bait 1 — The Execution Question
+### Reply Bait 1, The Execution Question
 ```
 real question. no judgment.
 
@@ -226,14 +226,14 @@ how many of those weeks were building vs how many were listing, emailing, or pos
 drop your honest ratio below.
 ```
 
-### Reply Bait 2 — Tool Debate
+### Reply Bait 2, Tool Debate
 ```
 $200/mo for cold email tools vs 3 free gmail accounts doing the same thing.
 
 wrong answers only for why people still pay.
 ```
 
-### Reply Bait 3 — The Boring Step
+### Reply Bait 3, The Boring Step
 ```
 the boring step in your business that you keep avoiding. what is it?
 
@@ -268,7 +268,7 @@ the simplest health habits are the most neglected. you don't need a $50/mo welln
 
 ---
 
-## NEWSLETTER DRAFT — "The Execution Gap"
+## NEWSLETTER DRAFT, "The Execution Gap"
 
 **Subject:** day 35 at $0. here's every number.
 
@@ -306,17 +306,17 @@ tomorrow I'm listing. posting. sending. the system works. I just need to use it.
 
 what's your execution gap? reply and tell me the one boring step you keep avoiding.
 
-— PRINTMAXX
+- PRINTMAXX
 
 ---
 
-## PRODUCT SPEC — AEO Playbook (from ALPHA19242)
+## PRODUCT SPEC, AEO Playbook (from ALPHA19242)
 
 **Product:** The AEO Playbook: Track & Optimize Your Brand in AI Responses
 **Price:** $27 (intro) / $47 (full)
 **Platform:** Gumroad (when account created)
 **Target:** SEO professionals, agency owners, marketing managers
-**Demand signal:** r/bigseo thread — "clients demanding AEO reports but no good way to track"
+**Demand signal:** r/bigseo thread, "clients demanding AEO reports but no good way to track"
 
 **Outline:**
 1. What is AEO and why it matters now (not in 2 years, NOW)
@@ -348,6 +348,6 @@ what's your execution gap? reply and tell me the one boring step you keep avoidi
 
 ---
 
-*Generated by Content Compounder Cycle — 2026-03-09 14:30*
+*Generated by Content Compounder Cycle, 2026-03-09 14:30*
 *Source data: gap_report_20260309, alpha_scoring_20260309, missions.jsonl, AGENT_CONTENT_20260309*
 *Next cycle: +2 hours*

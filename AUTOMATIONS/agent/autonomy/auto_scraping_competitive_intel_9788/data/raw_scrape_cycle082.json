@@ -1,0 +1,512 @@
+{
+  "cycle": 82,
+  "timestamp": "2026-03-19T15:27:26.876538+00:00",
+  "strategy": "WELLNESS_ADJACENT + SPORTS_SPECIFIC + PROFESSIONAL_SKILLS + LANGUAGE_NICHE",
+  "niches": {
+    "daily_cold_shower_streak": {
+      "reddit_communities": {
+        "coldshowers": 156000,
+        "WimHofMethod": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "Wim Hof Method",
+          "rating": 4.7,
+          "rating_count": 47000,
+          "category": "breathwork and cold exposure coaching \u2014 focuses on breathing exercises with cold as secondary; no dedicated cold shower streak gamification"
+        },
+        {
+          "name": "Streaks",
+          "rating": 4.8,
+          "rating_count": 89000,
+          "category": "general habit tracker \u2014 tracks any habit including cold showers but not cold-shower-specific, no community or progression mechanics"
+        },
+        {
+          "name": "Atomic Habits Companion",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "general habit accountability app \u2014 cold shower is one of many habits, no niche cold exposure streak system"
+        },
+        {
+          "name": "Cold Turkey Blocker",
+          "rating": 4.2,
+          "rating_count": 8700,
+          "category": "website/app blocker for productivity \u2014 completely unrelated to cold shower habit tracking"
+        }
+      ],
+      "community_total": 436000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "436K cold shower/cold exposure community. Wim Hof covers breathing, Streaks is generic. No app specifically gamifies the daily cold shower habit with streak/XP/temperature logging and community challenges."
+    },
+    "daily_breathwork_streak": {
+      "reddit_communities": {
+        "breathwork": 89000,
+        "Meditation": 900000
+      },
+      "itunes_results": [
+        {
+          "name": "Wim Hof Method",
+          "rating": 4.7,
+          "rating_count": 47000,
+          "category": "SOFT \u2014 dedicated breathwork app with session logging and some streak elements for Wim Hof breathing technique"
+        },
+        {
+          "name": "Othership: Breathwork & Cold",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "SOFT \u2014 guided breathwork sessions with community features and streak tracking for consistency"
+        },
+        {
+          "name": "Breathwrk - Breathing Exercises",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "SOFT \u2014 structured breathing patterns with reminders and session tracking \u2014 partial streak functionality"
+        },
+        {
+          "name": "Oak - Meditation & Breathing",
+          "rating": 4.8,
+          "rating_count": 34000,
+          "category": "combined meditation and breathing app with session counting \u2014 no dedicated streak gamification"
+        }
+      ],
+      "community_total": 989000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "989K breathwork/meditation community. Wim Hof, Othership, and Breathwrk all have partial streak features. Gap: none combine full streak gamification (XP, levels, achievement badges) with multi-technique breathwork across a broad community."
+    },
+    "daily_sleep_routine_streak": {
+      "reddit_communities": {
+        "sleep": 590000,
+        "insomnia": 430000,
+        "BetterSleep": 68000
+      },
+      "itunes_results": [
+        {
+          "name": "Sleep Cycle - Sleep Tracker",
+          "rating": 4.7,
+          "rating_count": 394000,
+          "category": "sleep quality tracker and smart alarm \u2014 measures sleep cycles but does not gamify the bedtime ROUTINE habit with streak accountability"
+        },
+        {
+          "name": "Calm - Sleep & Meditation",
+          "rating": 4.8,
+          "rating_count": 1240000,
+          "category": "broad mindfulness content platform \u2014 sleep sounds and stories, not a bedtime routine habit streak system"
+        },
+        {
+          "name": "Headspace: Sleep & Meditation",
+          "rating": 4.8,
+          "rating_count": 478000,
+          "category": "sleep meditation content library \u2014 guided exercises not daily routine streak gamification"
+        },
+        {
+          "name": "BetterSleep: Sleep tracker",
+          "rating": 4.6,
+          "rating_count": 48000,
+          "category": "sleep sounds and binaural beats app \u2014 ambient audio tool, not a daily sleep routine habit streak"
+        }
+      ],
+      "community_total": 1088000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.09M sleep community. All apps track sleep quality or deliver sleep content. No app gamifies the daily BEDTIME ROUTINE habit (phone down by X, no caffeine after Y, same bed/wake time) with streak/XP mechanics."
+    },
+    "daily_stretching_streak": {
+      "reddit_communities": {
+        "flexibility": 270000,
+        "yoga": 620000
+      },
+      "itunes_results": [
+        {
+          "name": "StretchIt - Flexibility Training",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "SOFT \u2014 structured flexibility training program with session progress tracking \u2014 partial streak but program-based not habit-based"
+        },
+        {
+          "name": "Down Dog: Great Yoga Anywhere",
+          "rating": 4.8,
+          "rating_count": 87000,
+          "category": "SOFT \u2014 customizable yoga/stretching classes with activity history \u2014 session completion tracking, limited streak gamification"
+        },
+        {
+          "name": "Stretching & Flexibility: bend!",
+          "rating": 4.5,
+          "rating_count": 34000,
+          "category": "guided stretch routines app \u2014 follow-along content, no streak or habit gamification"
+        },
+        {
+          "name": "ROMWOD - Daily Flexibility",
+          "rating": 4.4,
+          "rating_count": 9200,
+          "category": "daily mobility video subscription \u2014 content delivery, minimal streak accountability mechanics"
+        }
+      ],
+      "community_total": 890000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "890K flexibility/yoga community. StretchIt and Down Dog have session tracking. Gap: no app built purely around daily stretching HABIT with streak/XP/level-up and time-based consistency rewards."
+    },
+    "daily_golf_practice_streak": {
+      "reddit_communities": {
+        "golf": 1200000,
+        "golfswing": 210000
+      },
+      "itunes_results": [
+        {
+          "name": "18Birdies Golf GPS App",
+          "rating": 4.8,
+          "rating_count": 89000,
+          "category": "GPS scorecard and stat tracking for rounds \u2014 round-based analytics, not daily practice habit streak gamification"
+        },
+        {
+          "name": "Golfshot: Golf GPS + Analytics",
+          "rating": 4.7,
+          "rating_count": 78000,
+          "category": "GPS navigation and shot tracking \u2014 round performance tool, no daily practice routine streak accountability"
+        },
+        {
+          "name": "TheGrint: Golf GPS & Handicap",
+          "rating": 4.6,
+          "rating_count": 42000,
+          "category": "handicap tracker and round log \u2014 official handicap management, not daily practice habit streak"
+        },
+        {
+          "name": "Golf Now: Tee Time Booking",
+          "rating": 4.5,
+          "rating_count": 38000,
+          "category": "tee time reservation platform \u2014 booking utility, completely unrelated to daily practice habit streaks"
+        }
+      ],
+      "community_total": 1410000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.41M golf community. All apps track rounds or book tee times. No app gamifies the daily practice habit (putting drills, chipping reps, range sessions) with streak/XP for golfers."
+    },
+    "daily_tennis_practice_streak": {
+      "reddit_communities": {
+        "tennis": 960000,
+        "TennisCoaching": 22000
+      },
+      "itunes_results": [
+        {
+          "name": "Tennis Clash: Realistic 3D Game",
+          "rating": 4.7,
+          "rating_count": 421000,
+          "category": "mobile tennis video game \u2014 completely unrelated to real-world daily practice habit tracking"
+        },
+        {
+          "name": "SwingVision: A.I. Tennis App",
+          "rating": 4.8,
+          "rating_count": 23000,
+          "category": "AI ball tracking and match analysis \u2014 shot analytics for actual matches, not daily habit streak accountability"
+        },
+        {
+          "name": "PlayYourCourt",
+          "rating": 4.4,
+          "rating_count": 12000,
+          "category": "tennis lesson and court booking platform \u2014 service marketplace, not daily practice habit streak gamification"
+        },
+        {
+          "name": "Swing - Tennis Workout",
+          "rating": 4.3,
+          "rating_count": 8000,
+          "category": "tennis fitness conditioning app \u2014 general fitness for tennis, not daily on-court practice streak gamification"
+        }
+      ],
+      "community_total": 982000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "982K tennis community. Clash is a game, SwingVision tracks matches, PlayYourCourt books lessons. Zero apps gamify the daily PRACTICE habit (serving drills, footwork, ball machine) with streak/XP for tennis players."
+    },
+    "daily_martial_arts_streak": {
+      "reddit_communities": {
+        "martialarts": 380000,
+        "bjj": 800000,
+        "MMA": 1100000
+      },
+      "itunes_results": [
+        {
+          "name": "BJJ Fanatics",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "instructional video subscription for BJJ \u2014 content delivery platform, not daily practice habit streak gamification"
+        },
+        {
+          "name": "Grappling Ronda: Jiu Jitsu",
+          "rating": 3.9,
+          "rating_count": 2100,
+          "category": "BJJ technique library with limited note-taking \u2014 reference tool, no streak or habit gamification"
+        },
+        {
+          "name": "Martial Arts & Self Defense",
+          "rating": 3.7,
+          "rating_count": 4200,
+          "category": "technique video library for multiple martial arts \u2014 passive content consumption, no daily habit streak"
+        },
+        {
+          "name": "Gracie Barra App",
+          "rating": 4.2,
+          "rating_count": 3400,
+          "category": "BJJ school class scheduling and attendance tracking \u2014 school management utility, not habit streak gamification"
+        }
+      ],
+      "community_total": 2280000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.28M martial arts community (BJJ, MMA, general MA). All apps are instructional videos or school management. No app gamifies the daily training habit (drilling, sparring, conditioning) with streak/XP for martial artists."
+    },
+    "daily_cycling_training_streak": {
+      "reddit_communities": {
+        "cycling": 1100000,
+        "bicycling": 1400000
+      },
+      "itunes_results": [
+        {
+          "name": "Strava: Run, Ride, Hike",
+          "rating": 4.7,
+          "rating_count": 834000,
+          "category": "SOFT \u2014 activity tracking with segment challenges and activity streak features \u2014 strong streak mechanics but broad fitness platform not cycling-specific habit system"
+        },
+        {
+          "name": "TrainerRoad - Cycling Fitness",
+          "rating": 4.8,
+          "rating_count": 31000,
+          "category": "SOFT \u2014 structured training plan platform with consistency tracking \u2014 workout completion tracked, limited streaks"
+        },
+        {
+          "name": "Wahoo Fitness: Bike Training",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "cycling sensor and training data platform \u2014 device companion app, limited habit streak accountability"
+        },
+        {
+          "name": "Zwift: Run and Cycling App",
+          "rating": 4.7,
+          "rating_count": 87000,
+          "category": "virtual indoor cycling with badges/achievements \u2014 gamified but requires subscription hardware, not a daily outdoor cycling streak app"
+        }
+      ],
+      "community_total": 2500000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "2.5M cycling community. Strava has real streak features and large user base. Gap: Strava is broad fitness \u2014 no cycling-specific daily habit streak app with XP for consistency, not just ride logging."
+    },
+    "daily_excel_skills_streak": {
+      "reddit_communities": {
+        "excel": 940000,
+        "spreadsheets": 130000
+      },
+      "itunes_results": [
+        {
+          "name": "Microsoft Excel",
+          "rating": 4.8,
+          "rating_count": 1200000,
+          "category": "full-featured spreadsheet application \u2014 productivity tool, not a daily Excel skill-building streak gamification system"
+        },
+        {
+          "name": "DataCamp: Learn Data Skills",
+          "rating": 4.6,
+          "rating_count": 38000,
+          "category": "data science and analytics learning platform \u2014 courses with XP but broad platform not Excel-specific daily habit streak"
+        },
+        {
+          "name": "LinkedIn Learning: Career Skills",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "professional skills video library \u2014 content catalog, no daily Excel skill habit streak with gamification"
+        },
+        {
+          "name": "Excel Tutorials - Spreadsheet",
+          "rating": 4.3,
+          "rating_count": 8700,
+          "category": "tutorial video library for Excel \u2014 passive learning content, no daily practice streak accountability"
+        }
+      ],
+      "community_total": 1070000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.07M Excel/spreadsheet community. All apps are the software itself or passive learning content. No app gamifies daily Excel skill practice (one formula, one pivot table, one macro) with streak/XP and beginner-to-expert leveling."
+    },
+    "daily_negotiation_skills_streak": {
+      "reddit_communities": {
+        "negotiation": 150000,
+        "sales": 220000
+      },
+      "itunes_results": [
+        {
+          "name": "Never Split the Difference App",
+          "rating": 4.5,
+          "rating_count": 3200,
+          "category": "Chris Voss negotiation content and techniques library \u2014 reference app for methods, no streak habit gamification"
+        },
+        {
+          "name": "Pitch - Sales Training & CRM",
+          "rating": 4.4,
+          "rating_count": 9800,
+          "category": "sales CRM and coaching platform \u2014 deal management tool, not daily negotiation skill habit streak"
+        },
+        {
+          "name": "Negotiation Academy",
+          "rating": 3.8,
+          "rating_count": 1400,
+          "category": "VERY SMALL \u2014 negotiation technique courses \u2014 course content delivery, no gamified daily practice streak"
+        },
+        {
+          "name": "Persuasion Pro - Sales Training",
+          "rating": 4.1,
+          "rating_count": 2100,
+          "category": "persuasion and sales technique training \u2014 passive video content, no daily habit streak accountability"
+        }
+      ],
+      "community_total": 370000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "370K negotiation/sales community. Reference apps and CRMs dominate. No app gamifies the daily negotiation skill practice (scenario roleplay, tactic drills) with streak/XP and real-world challenge logging."
+    },
+    "daily_leadership_skills_streak": {
+      "reddit_communities": {
+        "leadership": 160000,
+        "management": 350000
+      },
+      "itunes_results": [
+        {
+          "name": "BetterUp: Professional Coaching",
+          "rating": 4.5,
+          "rating_count": 21000,
+          "category": "executive coaching and mentorship platform \u2014 high-cost coaching service not daily self-directed habit streak gamification"
+        },
+        {
+          "name": "MindTools",
+          "rating": 3.8,
+          "rating_count": 4100,
+          "category": "management and leadership resource library \u2014 article/tool reference, no streak or gamification"
+        },
+        {
+          "name": "Coursera: Learn New Skills",
+          "rating": 4.8,
+          "rating_count": 142000,
+          "category": "university course platform \u2014 structured courses with completion tracking but not daily leadership habit streak"
+        },
+        {
+          "name": "Ken Blanchard Leadership App",
+          "rating": 3.4,
+          "rating_count": 890,
+          "category": "VERY SMALL \u2014 situational leadership model reference tool \u2014 niche corporate training aid, no streak gamification"
+        }
+      ],
+      "community_total": 510000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "510K leadership/management community. BetterUp is expensive B2B coaching. No app gamifies daily leadership skill practice (giving feedback, running 1:1s, decision frameworks) with streak/XP for aspiring managers."
+    },
+    "daily_sign_language_streak": {
+      "reddit_communities": {
+        "asl": 150000,
+        "signlanguage": 98000
+      },
+      "itunes_results": [
+        {
+          "name": "Marlee Signs: Sign Language",
+          "rating": 4.7,
+          "rating_count": 28000,
+          "category": "ASL phrase and word learning app \u2014 lesson-based content, no dedicated daily streak gamification with XP"
+        },
+        {
+          "name": "ASL American Sign Language",
+          "rating": 4.6,
+          "rating_count": 18000,
+          "category": "ASL dictionary and reference app \u2014 lookup tool, not daily habit streak accountability"
+        },
+        {
+          "name": "The ASL App",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "conversational phrase learning for ASL \u2014 content-focused, limited gamification and no streak mechanics"
+        },
+        {
+          "name": "HandSpeak - ASL & Sign Language",
+          "rating": 4.4,
+          "rating_count": 6200,
+          "category": "comprehensive ASL reference and video dictionary \u2014 reference tool not daily practice streak gamification"
+        }
+      ],
+      "community_total": 248000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "248K sign language community. Apps are dictionaries and phrase reference tools. No app gamifies daily ASL practice habit with streak/XP/leveling \u2014 Duolingo has no ASL course, leaving a clear gap."
+    },
+    "daily_arabic_streak": {
+      "reddit_communities": {
+        "learn_arabic": 200000,
+        "Arabic": 180000
+      },
+      "itunes_results": [
+        {
+          "name": "Duolingo - Language Lessons",
+          "rating": 4.8,
+          "rating_count": 5600000,
+          "category": "OCCUPIED \u2014 Arabic course with full daily streak gamification, XP, leagues, and achievement badges"
+        },
+        {
+          "name": "Rosetta Stone: Learn Languages",
+          "rating": 4.7,
+          "rating_count": 89000,
+          "category": "OCCUPIED \u2014 comprehensive Arabic learning with daily lesson streaks and milestone tracking"
+        },
+        {
+          "name": "Pimsleur: Learn Languages Fast",
+          "rating": 4.8,
+          "rating_count": 67000,
+          "category": "OCCUPIED \u2014 audio-based Arabic with daily lesson streak tracking and schedule reminders"
+        },
+        {
+          "name": "Mango Languages",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "OCCUPIED \u2014 Arabic course via libraries with lesson completion tracking and progress streaks"
+        }
+      ],
+      "community_total": 380000,
+      "streak_app_exists": true,
+      "verdict": "OCCUPIED",
+      "notes": "380K Arabic learning community. Duolingo has Arabic with full streak system at 5.6M users. Rosetta Stone, Pimsleur, Mango all cover Arabic with streaks. Fully occupied \u2014 skip."
+    },
+    "daily_esperanto_streak": {
+      "reddit_communities": {
+        "Esperanto": 92000
+      },
+      "itunes_results": [
+        {
+          "name": "Duolingo - Language Lessons",
+          "rating": 4.8,
+          "rating_count": 5600000,
+          "category": "SOFT \u2014 Esperanto course with daily streak gamification, though Esperanto is a minor language with limited active learners on platform"
+        },
+        {
+          "name": "Lernu!",
+          "rating": 3.9,
+          "rating_count": 2100,
+          "category": "Esperanto learning platform \u2014 course content and community, minimal gamification and very small user base"
+        },
+        {
+          "name": "Mondly: Learn Languages",
+          "rating": 4.6,
+          "rating_count": 187000,
+          "category": "language learning platform \u2014 no Esperanto course available; primarily covers major languages"
+        },
+        {
+          "name": "Clozemaster: Language Learning",
+          "rating": 4.6,
+          "rating_count": 8700,
+          "category": "SOFT \u2014 cloze-test language practice including Esperanto with XP system \u2014 small but functional streak mechanics"
+        }
+      ],
+      "community_total": 92000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "92K Esperanto community. Duolingo has an Esperanto course but the learner base is tiny and engagement low. Clozemaster covers it lightly. Gap: dedicated Esperanto habit streak app built for the serious conlang learner community."
+    }
+  }
+}

@@ -8,7 +8,7 @@
     <array>
         <string>/bin/bash</string>
         <string>-c</string>
-        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/venture_autonomy.py --run SCRAPING_competitive_intel >> "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/SCRAPING_competitive_intel.log" 2>&amp;1</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; /usr/local/bin/python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/venture_autonomy.py --run SCRAPING_competitive_intel >> "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/SCRAPING_competitive_intel.log" 2>&amp;1</string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>

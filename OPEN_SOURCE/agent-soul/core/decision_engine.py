@@ -43,18 +43,20 @@ DECISION_LEDGER = PROJECT_ROOT / "output" / "decisions.csv"
 STATE_FILE = PROJECT_ROOT / "state" / "decision_engine_state.json"
 
 
-def safe_path(target):
+def safe_path(target: str | Path) -> Path:
     """Verify path is within project root."""
     resolved = Path(target).resolve()
     root = PROJECT_ROOT.resolve()
-    if not str(resolved).startswith(str(root)):
-        raise ValueError(f"BLOCKED: {resolved} is outside project root")
+    try:
+        resolved.relative_to(root)
+    except ValueError:
+        raise ValueError(f"BLOCKED: {resolved} is outside project root {root}")
     return resolved
 
 
-def log(msg, level="INFO"):
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    line = f"[{ts}] [{level}] {msg}"
+def log(msg: str, level: str = "INFO") -> None:
+    ts = datetime.now().strftime("%H:%M:%S")
+    line = f"[{ts}] [DECISION] [{level}] {msg}"
     print(line)
     DECISION_LOG.parent.mkdir(parents=True, exist_ok=True)
     with open(DECISION_LOG, "a") as f:

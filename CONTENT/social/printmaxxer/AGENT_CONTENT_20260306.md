@@ -1,4 +1,4 @@
-# Agent-Generated Content — 2026-03-06 20:08
+# Agent-Generated Content, 2026-03-06 20:08
 
 33 RBI opportunities. $4,100-$50,750/mo combined. 11 ready to launch. 6 are do-today. not next week. today. the audit gig alone sits at $99 per report, $499 for report + action plan. local_biz_pipeline.py scores 50 prospects before your coffee gets cold.
 

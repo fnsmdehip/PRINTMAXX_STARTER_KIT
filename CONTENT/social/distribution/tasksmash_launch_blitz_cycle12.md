@@ -1,4 +1,4 @@
-# TaskSmash Launch Blitz — Cycle 12 (2026-03-08)
+# TaskSmash Launch Blitz, Cycle 12 (2026-03-08)
 
 ## WHY TASKSMASH IS THE #1 DISTRIBUTION PRIORITY
 
@@ -11,7 +11,7 @@ URL: https://tasksmash.surge.sh
 ## REDDIT POSTS (Copy-paste ready)
 
 ### Post 1: r/ADHD (2.1M members)
-**Title:** I built a free app that breaks overwhelming tasks into tiny steps — no signup, works offline
+**Title:** I built a free app that breaks overwhelming tasks into tiny steps, no signup, works offline
 
 **Body:**
 i've been struggling with task paralysis my entire life. you know that thing where you need to do something but your brain just... won't start?
@@ -56,7 +56,7 @@ i use it every morning to break my day into steps small enough that my brain doe
 ---
 
 ### Post 3: r/SideProject (180K members)
-**Title:** shipped a free Goblin Tools alternative in a weekend — 55KB PWA, zero backend
+**Title:** shipped a free Goblin Tools alternative in a weekend, 55KB PWA, zero backend
 
 **Body:**
 saw a lot of people asking for a simpler version of Goblin Tools that doesn't require an account. built TaskSmash as a single-file PWA.
@@ -84,7 +84,7 @@ feedback welcome. planning to add customizable step sizes next.
 ---
 
 ### Post 4: r/webdev (2.3M members)
-**Title:** built a 55KB PWA that works offline with zero backend — how single-file apps changed my approach
+**Title:** built a 55KB PWA that works offline with zero backend, how single-file apps changed my approach
 
 **Body:**
 i've been shipping single-file PWAs and it's changed how i think about web development.
@@ -130,7 +130,7 @@ not trying to sell anything. genuinely just built this for myself and figured th
 ## HACKER NEWS
 
 ### Show HN Post
-**Title:** Show HN: TaskSmash — Free Goblin Tools alternative, 55KB PWA, no signup
+**Title:** Show HN: TaskSmash, Free Goblin Tools alternative, 55KB PWA, no signup
 
 **Body:**
 TaskSmash breaks overwhelming tasks into small, actionable steps. Built as a single-file PWA (55KB) that works offline with zero backend.
@@ -267,7 +267,7 @@ Paste "organize my finances" and get specific sub-tasks like "open bank statemen
 **Makers Comment:**
 Built this because I needed it. Every productivity app wants my email before I can do anything. TaskSmash has zero signup friction. Visit the URL, start using it.
 
-The entire app is 55KB — one HTML file with a service worker for offline support. No framework, no backend, no monthly cost. Single-file PWAs are an underrated architecture for utility tools.
+The entire app is 55KB, one HTML file with a service worker for offline support. No framework, no backend, no monthly cost. Single-file PWAs are an underrated architecture for utility tools.
 
 ---
 

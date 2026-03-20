@@ -1,4 +1,4 @@
-# X/Twitter Monetization Paths — @printmaxxer
+# X/Twitter Monetization Paths, @printmaxxer
 
 Revenue ranked by feasibility at different follower counts.
 All numbers are realistic conserved estimates, not optimistic projections.
@@ -41,7 +41,7 @@ Recommend tools you actually use. Include affiliate links in your bio, newslette
 - Avg commission $40 → $1,000/mo from affiliate alone
 
 **Implementation:**
-1. Apply to 3 programs immediately (Notion, ConvertKit, Beehiiv — all open to small accounts)
+1. Apply to 3 programs immediately (Notion, ConvertKit, Beehiiv, all open to small accounts)
 2. Write one honest, tested review per month
 3. Put affiliate links in bio link-in-bio (Carrd or Linktree)
 4. Put links in newsletter, not tweet body (tweets penalized for external links)
@@ -102,7 +102,7 @@ X has a native tip feature. Works best for:
 
 **Implementation:** Enable tips in account settings. Add your Stripe or PayPal. Mention at end of high-value threads: "if this saved you time, tips are appreciated."
 
-Don't lead with tips — it feels transactional. Only mention at the end of exceptional content.
+Don't lead with tips, it feels transactional. Only mention at the end of exceptional content.
 
 ---
 
@@ -184,7 +184,7 @@ At 5,000 subscribers:
 
 **Implementation:**
 1. Pick Beehiiv (free to 2,500 subscribers, built-in monetization)
-2. Create 1 lead magnet (tools list, checklist, or mini-guide — 30 min to produce)
+2. Create 1 lead magnet (tools list, checklist, or mini-guide, 30 min to produce)
 3. Add to X bio and pin a thread that links to it
 4. Send 2 emails/month minimum
 
@@ -208,7 +208,7 @@ X audience → direct product purchase. No middleman.
 1. Build in public for 4+ weeks (audience knows the product is coming)
 2. Launch thread (tell the story of what you built and why)
 3. First 48 hours: offer 20% launch discount
-4. Put product link in bio only (not tweet body — algo penalty)
+4. Put product link in bio only (not tweet body, algo penalty)
 5. Follow up with results tweet at day 7 (social proof)
 
 ---
@@ -221,7 +221,7 @@ Based on time-to-revenue for a new account:
 - Apply for 3 affiliate programs immediately
 - Enable tips
 - Build newsletter with lead magnet
-- Focus on growth (no monetization posts — just value)
+- Focus on growth (no monetization posts, just value)
 
 **Month 3 (1K-2K followers):**
 - First affiliate thread

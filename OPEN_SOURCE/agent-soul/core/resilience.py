@@ -8,7 +8,8 @@ Provides:
 - input sanitization for prompt injection defense
 - trajectory logging (append-only JSONL audit trail)
 
-Stdlib only. No external dependencies.
+Auto-upgrades retry to tenacity via deps.py if available.
+Falls back to stdlib if not.
 
 Import and use across all your agents to make them production-grade.
 
@@ -32,6 +33,16 @@ from io import TextIOWrapper
 from pathlib import Path
 from typing import Any, Callable, Generator, TypeVar
 
+try:
+    from .deps import get_retry as _get_tenacity_retry  # type: ignore[import-not-found]
+    _HAS_DEPS = True
+except ImportError:
+    try:
+        from deps import get_retry as _get_tenacity_retry  # type: ignore[import-not-found, no-redef]
+        _HAS_DEPS = True
+    except ImportError:
+        _HAS_DEPS = False
+
 # ---------------------------------------------------------------------------
 # Configurable paths
 # ---------------------------------------------------------------------------
@@ -53,7 +64,9 @@ def safe_path(target: str | Path) -> Path:
     """Verify target resolves inside PROJECT_ROOT."""
     resolved = Path(target).resolve()
     root = PROJECT_ROOT.resolve()
-    if not str(resolved).startswith(str(root)):
+    try:
+        resolved.relative_to(root)
+    except ValueError:
         raise ValueError(f"BLOCKED: {resolved} outside {root}")
     return resolved
 
@@ -74,10 +87,9 @@ def _ts() -> float:
 # 1. Retry with exponential backoff + jitter
 # ---------------------------------------------------------------------------
 
-def retry(max_attempts: int = 5, base_delay: float = 2.0,
-          on_failure_return: Any = "") -> Callable[..., Any]:
-    """Decorator: retry N times with exponential backoff.
-    On final failure, logs error and returns on_failure_return."""
+def _stdlib_retry(max_attempts: int = 5, base_delay: float = 2.0,
+                  on_failure_return: Any = "") -> Callable[..., Any]:
+    """Stdlib retry: N attempts with exponential backoff + jitter."""
     def decorator(fn: Callable[..., _T]) -> Callable[..., _T | Any]:
         @functools.wraps(fn)
         def wrapper(*args: Any, **kwargs: Any) -> _T | Any:
@@ -97,6 +109,21 @@ def retry(max_attempts: int = 5, base_delay: float = 2.0,
             return on_failure_return
         return wrapper
     return decorator
+
+
+def retry(max_attempts: int = 5, base_delay: float = 2.0,
+          on_failure_return: Any = "") -> Callable[..., Any]:
+    """Retry decorator. Uses tenacity if installed, stdlib fallback if not."""
+    if _HAS_DEPS:
+        try:
+            _tenacity_retry = _get_tenacity_retry()
+            if _tenacity_retry is not None:
+                return _tenacity_retry(max_attempts=max_attempts, base_delay=base_delay,
+                                       on_failure_return=on_failure_return)
+        except Exception:
+            pass
+    return _stdlib_retry(max_attempts=max_attempts, base_delay=base_delay,
+                         on_failure_return=on_failure_return)
 
 
 # ---------------------------------------------------------------------------

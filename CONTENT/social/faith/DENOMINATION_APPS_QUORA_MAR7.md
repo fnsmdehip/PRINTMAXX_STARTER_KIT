@@ -6,7 +6,7 @@ NOTE: Write in first person as a builder who uses the apps. Natural, helpful. No
 
 ---
 
-# ANSWER 1 — "What are the best apps for daily Bible reading?"
+# ANSWER 1, "What are the best apps for daily Bible reading?"
 
 The most used ones are YouVersion (Bible app), Logos, and Dwell.
 
@@ -20,19 +20,19 @@ The gap I kept running into with all of them: they're denomination-neutral to th
 
 I ended up building denomination-specific streak trackers to fill this. they're free PWAs (work in browser, offline-capable, no account):
 
-- Baptist: baptist-streak.surge.sh — reading plans, Sunday tracking, prayer list
-- Evangelical: evangelical-streak.surge.sh — quiet time, accountability, Bible reading
-- Presbyterian: presbyterian-streak.surge.sh — Westminster Catechism, Sabbath tracking, scripture meditation
-- Lutheran: lutheran-streak.surge.sh — Luther's daily prayers, catechism integration, liturgical calendar
-- Episcopal/Anglican: episcopal-streak.surge.sh and anglican-streak.surge.sh — Book of Common Prayer Daily Office
-- Catholic: catholic-streak.surge.sh — Lectionary readings tied to the actual Mass calendar
-- Orthodox: orthodox-streak.surge.sh — Orthodox lectionary, fasting calendar
+- Baptist: baptist-streak.surge.sh, reading plans, Sunday tracking, prayer list
+- Evangelical: evangelical-streak.surge.sh, quiet time, accountability, Bible reading
+- Presbyterian: presbyterian-streak.surge.sh, Westminster Catechism, Sabbath tracking, scripture meditation
+- Lutheran: lutheran-streak.surge.sh, Luther's daily prayers, catechism integration, liturgical calendar
+- Episcopal/Anglican: episcopal-streak.surge.sh and anglican-streak.surge.sh, Book of Common Prayer Daily Office
+- Catholic: catholic-streak.surge.sh, Lectionary readings tied to the actual Mass calendar
+- Orthodox: orthodox-streak.surge.sh, Orthodox lectionary, fasting calendar
 
 For generic daily reading with a clean streak mechanic, YouVersion is still the first recommendation. if you want something tuned to your specific tradition's calendar and practices, the denomination-specific ones are more useful.
 
 ---
 
-# ANSWER 2 — "What apps help track Ramadan fasting and prayers?"
+# ANSWER 2, "What apps help track Ramadan fasting and prayers?"
 
 The most widely used Ramadan apps are Muslim Pro and Athan (formerly Prayer Times).
 
@@ -54,7 +54,7 @@ For prayer times, Muslim Pro or Athan are the better-established tools. for acco
 
 ---
 
-# ANSWER 3 — "How do I build a daily devotional habit?"
+# ANSWER 3, "How do I build a daily devotional habit?"
 
 The research on habit formation is clear on a few things. cue, routine, reward. the cue has to be consistent (same time, same trigger). the routine has to be short enough that starting is easy. the reward has to be immediate.
 

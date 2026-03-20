@@ -1,11 +1,11 @@
-# Deployment Cycle 20 — 2026-03-09 18:30
+# Deployment Cycle 20, 2026-03-09 18:30
 
 ## New Deployments
 
 ### Claude Code Agent Bible
 - URL: https://claude-code-agent-bible.surge.sh
 - Type: Product preview/sales page
-- Description: 33 autonomous Claude Code agents running 24/7 — the complete system architecture and implementation guide
+- Description: 33 autonomous Claude Code agents running 24/7, the complete system architecture and implementation guide
 - Source: DIGITAL_PRODUCTS/ready_to_sell/14_CLAUDE_CODE_AGENT_BIBLE.html
 
 ## Health Check Results

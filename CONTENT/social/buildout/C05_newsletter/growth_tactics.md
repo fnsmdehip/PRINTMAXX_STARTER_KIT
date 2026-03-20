@@ -1,4 +1,4 @@
-# Newsletter Growth Tactics — 0 to 10K Subscribers
+# Newsletter Growth Tactics, 0 to 10K Subscribers
 
 ## Platform Recommendation
 
@@ -27,7 +27,7 @@ For solopreneur/business niche:
 Post format that converts:
 - Title: specific result + timeframe ("How I got my first consulting client in 8 days")
 - Body: real story, real tools, real numbers
-- Last paragraph: "I cover this in more detail in my free newsletter — link in bio if you want the full breakdown"
+- Last paragraph: "I cover this in more detail in my free newsletter, link in bio if you want the full breakdown"
 - DO NOT paste the newsletter link in the body (triggers spam filters in most subs)
 
 Expected conversion: 0.5-2% of post views click through. 15-30% of those subscribe.
@@ -42,8 +42,8 @@ Time to 1,000 from Reddit only: 6-8 weeks.
 - Link the newsletter in the product description
 
 Examples that work:
-- "Cold Email Swipe File — 6 subject lines, 3 body templates" → free download → newsletter link
-- "AI Tools Stack 2026 — 47 tools ranked by ROI" → free PDF → newsletter link
+- "Cold Email Swipe File, 6 subject lines, 3 body templates" → free download → newsletter link
+- "AI Tools Stack 2026, 47 tools ranked by ROI" → free PDF → newsletter link
 - "Solopreneur Revenue Calculator" → web tool → newsletter link
 
 Expected result: 100-400 subscribers per launch (top 5 position = 200-400)
@@ -56,11 +56,11 @@ Frequency: one launch per month
 - Browse Substack and find newsletters with similar audience
 
 **The pitch email:**
-Subject: newsletter swap — [your newsletter], [subscriber count]
+Subject: newsletter swap, [your newsletter], [subscriber count]
 
 "Hey [Name],
 
-I run [Newsletter Name] — [X] subscribers in [niche], [open rate]% average opens.
+I run [Newsletter Name], [X] subscribers in [niche], [open rate]% average opens.
 
 I think our audiences overlap. Up for a swap mention? I'd mention you in one issue, you mention me in one issue.
 
@@ -117,7 +117,7 @@ Setup time: 1 hour to join + configure.
 
 ### Paid Twitter/X Promotion
 
-Option 1: promoted posts (Twitter ads) — target by interests (entrepreneurship, SaaS, startups)
+Option 1: promoted posts (Twitter ads), target by interests (entrepreneurship, SaaS, startups)
 Budget: $200/mo test
 Expected CPL: $1-3
 
@@ -162,7 +162,7 @@ Pitch angle: "I can break down [specific framework with numbers] for your audien
 ### Press and Media Mentions
 
 Pitch your data to journalists.
-Example: "I analyzed 200 Etsy shops — here's what the top 1% do differently"
+Example: "I analyzed 200 Etsy shops, here's what the top 1% do differently"
 Target: Tech Crunch, Business Insider, Forbes Advisor, The Hustle, Morning Brew
 Result: one mention can drive 500-5,000 subscribers in 24 hours
 

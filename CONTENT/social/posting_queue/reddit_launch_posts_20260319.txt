@@ -1,0 +1,206 @@
+REDDIT POST 1, r/NoFap
+Subreddit: r/NoFap (1.24M members)
+Post type: Tool/Resource
+Title: Built a free NoFap tracker with zero data collection (after seeing the Quittr news)
+
+---
+After seeing what happened with Quittr (selling user data from a sobriety app, yeah, really), I built my own.
+
+**SoberStreak** is a free streak tracker for NoFap, alcohol, smoking, or any habit. The difference:
+
+- No account. No email. Nothing.
+- All data stays on your phone only
+- Works offline (PWA)
+- Zero analytics, zero tracking pixels, zero server contact
+
+Your streak, journal entries, and relapse dates are stored in your browser's localStorage. When you close the tab, that data stays on your device. Period.
+
+Features:
+- Day counter with emergency craving panel (breathing exercises, cold shower timer, urge delay technique)
+- Daily journal
+- Milestone badges at 1/3/7/14/21/30/60/90/180/365 days
+- 13-week heatmap
+- Works for NoFap, alcohol, smoking, weed, junk food, or custom habit
+
+Free, no signup: https://soberstreak.surge.sh
+
+---
+REDDIT POST 2, r/running
+Subreddit: r/running (4.19M members)
+Post type: Tool/Resource
+Title: I built a free running streak tracker because every app wants you to sign up for something
+
+---
+Every running app I tried either:
+- Required an account (Strava, NRC)
+- Was a generic $5.99 habit tracker with a running emoji slapped on it
+- Wanted GPS access for a streak counter
+
+I just wanted to know: did I run today? How many days in a row?
+
+So I built **RunningStreak**, a dedicated running streak tracker that works without an account.
+
+**What it does:**
+- Tracks your daily streak
+- Logs distance (km or miles), duration, and pace per run
+- 13-week heatmap showing your consistency
+- Weekly view (7-day grid)
+- Milestone badges at key streak marks (7, 14, 21, 30, 50, 66, 100, 365 days, 66 days because that's the UCL habit formation threshold)
+- Science tab on what daily running actually does to your body
+
+**What it doesn't do:**
+- No account
+- No GPS (it's a streak tracker, not a GPS tracker)
+- No social features
+- No subscription
+
+Works offline. All data stays on your phone.
+
+Free: https://runningstreak.surge.sh
+
+Running the 66-day challenge? This is built for exactly that.
+
+---
+REDDIT POST 3, r/C25K (Couch to 5K)
+Subreddit: r/C25K (1.2M members)
+Post type: Tool/Resource
+Title: Free streak tracker for C25K, tracks your run days with no account needed
+
+---
+Finishing C25K means building the habit of showing up. The streak matters as much as the pace.
+
+I built **RunningStreak** specifically for tracking daily run consistency, no GPS, no account, no leaderboard. Just: did you run today?
+
+Logs distance and time if you want, calculates pace, shows a 13-week heatmap. Milestone badge at 66 days, the UCL research threshold for habit formation.
+
+Free, no signup: https://runningstreak.surge.sh
+
+---
+POSTING NOTES:
+- r/NoFap: DO NOT post links in first 5 mins. Post text first, add link in comment if mods allow.
+- r/running: Flair as "Training" or "Tool/App"
+- r/C25K: Shorter post, supportive tone
+- Best time: 9-11am EST weekdays
+- Avoid posting all 3 same day, space 48h apart
+- If mods remove for self-promo, repost as "I made a thing" vs promotional framing
+
+---
+REDDIT POST 4, r/yoga
+Subreddit: r/yoga (845K members)
+Post type: Tool/Resource
+Title: Built a free yoga streak tracker, no app store, no account, just your daily practice
+
+---
+Every yoga app I tried was either subscription-based or buried my simple streak inside 50 features I didn't need.
+
+I just wanted to know: did I practice today? How many days in a row?
+
+Built **YogaStreak**, a free streak tracker for daily yoga practice. No account, no subscription.
+
+**What it tracks:**
+- Daily practice streak with 13-week heatmap
+- Session duration and style (yin, vinyasa, restorative, etc.)
+- Journal entry per session
+- Milestone badges at 7, 14, 21, 30, 66, 100, 365 days
+- Science tab on what daily yoga does to cortisol, flexibility, nervous system
+
+**What it doesn't do:**
+- No account creation
+- No pose videos (use YouTube for that)
+- No subscription
+- Offline-capable PWA, install it from your browser
+
+All data stays on your device. Free: https://yoga-streak.surge.sh
+
+Currently at day 1? This is built for exactly that.
+
+---
+REDDIT POST 5, r/bodyweightfitness
+Subreddit: r/bodyweightfitness (2.2M members)
+Post type: Tool/Resource
+Title: Free pushup streak tracker, daily consistency tool with no account
+
+---
+I've seen a hundred posts asking "how do I stick to daily pushups." The answer is tracking.
+
+Built **PushupStreak**, tracks your daily pushup sessions, zero account required.
+
+**Features:**
+- Daily streak counter with heatmap
+- Reps, sets, and max reps per session
+- Milestone badges at 7, 14, 21, 30, 66, 100 days
+- Works offline (PWA)
+- No data leaves your device
+
+Free: https://pushup-streak.surge.sh
+
+If you're doing the 100 pushups/day challenge or just trying to build the habit, this is the simplest way to track it.
+
+---
+REDDIT POST 6, r/bodyweightfitness (second post, different angle)
+Subreddit: r/bodyweightfitness (2.2M members)
+Post type: Tool/Resource
+Title: Built a free plank streak tracker, 30 seconds up to 5 minutes, no app needed
+
+---
+Daily plank habit is one of the highest ROI core exercises. But tracking it is weirdly hard.
+
+**PlankStreak**, tracks your daily plank practice with duration logging.
+
+- Logs plank duration per session (30 seconds to 5+ minutes)
+- 13-week heatmap of consistency
+- Milestone badges (7, 14, 21, 30, 66, 100 days)
+- No account, no subscription, offline-capable
+- All data on your device
+
+Free: https://plank-streak.surge.sh
+
+Building toward the 5-minute plank? Track the daily compound.
+
+---
+REDDIT POST 7, r/HIIT
+Subreddit: r/HIIT (105K members)
+Post type: Tool/Resource
+Title: Free HIIT streak tracker, counts your sessions, no subscription
+
+---
+HIIT consistency > intensity. You can do the hardest workout on the planet but if you skip 3 days it doesn't compound.
+
+Built **HIITStreak**, tracks daily HIIT sessions with no account.
+
+- Streak counter + 13-week heatmap
+- Session duration and intensity logging
+- Milestone badges at 7, 14, 21, 30, 66, 100 days
+- Offline-capable, no subscription, data stays on device
+
+Free: https://hiit-streak.surge.sh
+
+---
+REDDIT POST 8, r/cycling
+Subreddit: r/cycling (1.1M members)
+Post type: Tool/Resource
+Title: Built a free cycling streak tracker, daily rides logged with no account
+
+---
+Strava is great for segments. This is for something different: did you ride today?
+
+**CyclingStreak**, tracks your daily cycling habit.
+
+- Logs distance (km or miles), duration, elevation
+- 13-week heatmap of riding consistency
+- Milestone badges at 7, 14, 30, 66, 100, 365 days
+- No account, no subscription, offline-capable PWA
+- All data stays on your device
+
+Free: https://cycling-streak.surge.sh
+
+For the daily commute riders, the "every day in March" challenge people, or anyone trying to make cycling a true daily habit, this one's built for you.
+
+---
+POSTING NOTES (updated):
+- r/yoga: Best framing is "I made this for my own practice." Avoid "I built an app", say "web tool"
+- r/bodyweightfitness: High tolerance for tool posts. Flair as "Progress/Form Check" or "Community"
+- r/HIIT: Smaller community, post Tuesday/Thursday when engagement peaks
+- r/cycling: Post Monday morning (commute mindset). Link in comments if mods restrict posts.
+- Space all posts 48h+ apart across subreddits
+- r/stopdrinking post (soberstreak) separate from r/NoFap, different audiences, different framing

@@ -52,11 +52,11 @@ which would move your needle most?
 
 4/ they fixed 3 things. conversion rate doubled instantly. here's what they changed (and why it works):
 
-5/ 1. ABOVE-FOLD SOCIAL PROOF — moved testimonials to the first thing visitors see (not buried below). trust is the conversion killer.
+5/ 1. ABOVE-FOLD SOCIAL PROOF, moved testimonials to the first thing visitors see (not buried below). trust is the conversion killer.
 
-6/ 2. ONE-FIELD CTA — removed the multi-step form. just email. everything else after conversion. friction killed 50% of visitors.
+6/ 2. ONE-FIELD CTA, removed the multi-step form. just email. everything else after conversion. friction killed 50% of visitors.
 
-7/ 3. HEADLINE SPECIFICITY — 'Get Started' became 'Get My 30-Day Plan' (specific promise, not vague). clarity = conversions. result: 1% conversion rate.
+7/ 3. HEADLINE SPECIFICITY, 'Get Started' became 'Get My 30-Day Plan' (specific promise, not vague). clarity = conversions. result: 1% conversion rate.
 
 CTA: if your conversion rate is stuck at 0.5%, this is the thread. one change could 2x your business.
 ```

@@ -12,6 +12,7 @@ After completing the step:
 3. Log to AUTOMATIONS/logs/venture_auto_monetize_affiliate_funnels_9569.log
 4. Exit cleanly so the next loop iteration gets fresh context
 
+
 Type: MONETIZE
 Interval: 8h
 Working dir: /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt

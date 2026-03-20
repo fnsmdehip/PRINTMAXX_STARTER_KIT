@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (user-specific, not committed)
+data/
+output/
+state/
+logs/
+
+# Lock files
+*.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Secrets
+SECRETS/
+credentials*
+*.key
+*.pem
+
+# Large files
+*.csv
+*.xlsx
+*.sqlite
+*.db

@@ -1,11 +1,11 @@
-# CROSS-NICHE CONTENT — 2026-03-14 10:10
-# Source: Content Compounder Agent — Cross-Pollination
+# CROSS-NICHE CONTENT, 2026-03-14 10:10
+# Source: Content Compounder Agent, Cross-Pollination
 # Status: PENDING_REVIEW
 # Voice: Niche-adapted PRINTMAXXER
 
 ---
 
-## FAITH NICHE (Ramadan-specific — TIME CRITICAL, ~15 days left)
+## FAITH NICHE (Ramadan-specific, TIME CRITICAL, ~15 days left)
 
 ### FAITH-01: Ramadan Discipline Thread
 ```
@@ -103,7 +103,7 @@ more restrictions = more creativity
 
 the phone is not the problem. the lack of boundaries is.
 
-lock the phone during work. unlock it during breaks.
+lock the phone during work. get it during breaks.
 
 simple system. hard discipline. massive results.
 ```
@@ -230,6 +230,6 @@ the skill isn't using the tool. it's knowing what to build with it.
 
 ## RAMADAN URGENCY FLAG
 
-PrayerLock, Scripture Streak, Ramadan Tracker, Quran Streak — all have ~15 days left in Ramadan window. Faith niche content needs IMMEDIATE distribution. After Ramadan ends, engagement on these topics drops 80%+.
+PrayerLock, Scripture Streak, Ramadan Tracker, Quran Streak, all have ~15 days left in Ramadan window. Faith niche content needs IMMEDIATE distribution. After Ramadan ends, engagement on these topics drops 80%+.
 
 **Action:** Faith content (FAITH-01 through FAITH-03) should be posted BEFORE general solopreneur content.

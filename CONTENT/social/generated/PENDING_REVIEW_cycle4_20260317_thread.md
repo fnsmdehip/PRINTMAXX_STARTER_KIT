@@ -1,4 +1,4 @@
-# CYCLE 4 — TWITTER THREAD: AI Content Arbitrage Playbook
+# CYCLE 4, TWITTER THREAD: AI Content Arbitrage Playbook
 # Generated: 2026-03-17 19:05
 # Status: PENDING_REVIEW
 # Voice: PRINTMAXXER (S-tier @pipelineabuser dominant)
@@ -60,7 +60,7 @@ convenience is a permanent moat.
 
 how to find operators (the supply side):
 
-- Fiverr: search "AI video" — sort by newest, filter $50-150
+- Fiverr: search "AI video", sort by newest, filter $50-150
 - r/editors, r/VideoEditing: people posting AI demo reels weekly
 - Twitter: search "just made this with Runway" or "Kling is insane"
 

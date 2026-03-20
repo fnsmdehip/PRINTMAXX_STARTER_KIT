@@ -1030,3 +1030,40 @@
 {"ts": "2026-03-18T16:05:41.816152", "mission": "schedule", "result": "success", "duration_s": 0.4, "output": "Scheduled 42 slots across 7 days"}
 {"ts": "2026-03-18T16:15:51.627033", "mission": "hunt", "result": "partial", "duration_s": 90.0, "output": "Searched but results were thin"}
 {"ts": "2026-03-18T18:22:57.736085", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-18T20:17:21.374092", "mission": "autonomy:auto_local_biz_openclaw_nation", "result": "partial", "duration_s": 6, "output": "OpenClaw Nationwide: 3/6 steps OK"}
+{"ts": "2026-03-18T20:21:08.851647", "mission": "content", "result": "partial", "duration_s": 14.2, "output": "Claude returned error, output length: 34"}
+{"ts": "2026-03-18T20:21:24.145337", "mission": "upgrade", "result": "partial", "duration_s": 15.2, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-18T20:21:24.313457", "mission": "schedule", "result": "success", "duration_s": 0.1, "output": "Scheduled 42 slots across 7 days"}
+{"ts": "2026-03-18T20:23:02.672830", "mission": "autonomy:alpha_intelligence", "result": "partial", "duration_s": 3, "output": "Alpha Intelligence Research: 1/3 steps OK"}
+{"ts": "2026-03-18T20:27:26.057965", "mission": "hunt", "result": "partial", "duration_s": 15.7, "output": "Searched but results were thin"}
+{"ts": "2026-03-18T20:51:44.217019", "mission": "content", "result": "success", "duration_s": 77.2, "output": "Generated content from 2 sources, saved to AGENT_CONTENT_20260318.md"}
+{"ts": "2026-03-18T20:53:44.484578", "mission": "upgrade", "result": "partial", "duration_s": 120.1, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-18T22:24:27.545942", "mission": "autonomy:auto_scraping_competitive_inte", "result": "partial", "duration_s": 6, "output": "Competitive Intel: 2/6 steps OK"}
+{"ts": "2026-03-18T22:30:09.146205", "mission": "autonomy:SCRAPING_competitive_intel", "result": "partial", "duration_s": 3, "output": "Competitive Intel Scraping: 1/3 steps OK"}
+{"ts": "2026-03-20T07:22:23.077889", "mission": "content", "result": "success", "duration_s": 74.5, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:24:23.195569", "mission": "upgrade", "result": "partial", "duration_s": 120.0, "output": "Upgrade attempt for C01_tiktok: failed"}
+{"ts": "2026-03-20T07:26:37.029013", "mission": "content", "result": "success", "duration_s": 97.6, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:27:43.852245", "mission": "content", "result": "success", "duration_s": 66.8, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:29:21.540014", "mission": "content", "result": "success", "duration_s": 97.6, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:30:42.950567", "mission": "content", "result": "success", "duration_s": 81.3, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:32:09.804562", "mission": "content", "result": "success", "duration_s": 86.8, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:33:35.755389", "mission": "content", "result": "success", "duration_s": 85.9, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:34:44.906286", "mission": "content", "result": "success", "duration_s": 69.1, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:36:09.626526", "mission": "content", "result": "success", "duration_s": 84.7, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:37:44.083115", "mission": "content", "result": "success", "duration_s": 94.4, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:39:05.955004", "mission": "content", "result": "success", "duration_s": 81.8, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:40:37.085718", "mission": "content", "result": "success", "duration_s": 91.0, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:42:28.003791", "mission": "content", "result": "success", "duration_s": 110.9, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:43:51.090223", "mission": "content", "result": "success", "duration_s": 83.0, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:45:00.124693", "mission": "content", "result": "success", "duration_s": 68.9, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:46:25.917888", "mission": "content", "result": "success", "duration_s": 85.7, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:47:54.061820", "mission": "content", "result": "success", "duration_s": 88.0, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:49:33.901620", "mission": "content", "result": "success", "duration_s": 99.8, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:50:53.658366", "mission": "content", "result": "success", "duration_s": 79.7, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:52:15.432711", "mission": "content", "result": "success", "duration_s": 81.7, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:53:49.232852", "mission": "content", "result": "success", "duration_s": 93.6, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:55:20.595678", "mission": "content", "result": "success", "duration_s": 91.1, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:56:31.010731", "mission": "content", "result": "success", "duration_s": 70.3, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:57:48.893957", "mission": "content", "result": "success", "duration_s": 77.8, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T07:59:05.003420", "mission": "content", "result": "success", "duration_s": 76.0, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}
+{"ts": "2026-03-20T08:01:04.344562", "mission": "content", "result": "success", "duration_s": 118.6, "output": "Generated content from 1 sources, saved to AGENT_CONTENT_20260320.md"}

@@ -1,4 +1,4 @@
-# Agent-Generated Content — 2026-03-17 09:55
+# Agent-Generated Content, 2026-03-17 09:55
 
 Source: GAP HUNTER cycle 2 findings | Status: PENDING_REVIEW
 
@@ -16,13 +16,13 @@ gap hunter report from this morning: 186,700 leads scraped and scored. 53 hot le
 
 ---
 
-content pipeline stalled for 2 days. twitter algorithm penalizes gaps over 24 hours. you lose momentum, you lose reach, you lose the compounding effect. 964 posts sitting in the queue. buffer CSVs ready for import. but no X premium subscription means link posts get 0% reach. the $8/mo subscription is literally the cheapest unlock in the entire pipeline.
+content pipeline stalled for 2 days. twitter algorithm penalizes gaps over 24 hours. you lose momentum, you lose reach, you lose the compounding effect. 964 posts sitting in the queue. buffer CSVs ready for import. but no X premium subscription means link posts get 0% reach. the $8/mo subscription is literally the cheapest get in the entire pipeline.
 
 ---
 
 THREAD:
 
-the 95-minute unlock. everything a solopreneur needs to go from $0 to pipeline-ready in one focused session.
+the 95-minute get. everything a solopreneur needs to go from $0 to pipeline-ready in one focused session.
 
 ---
 

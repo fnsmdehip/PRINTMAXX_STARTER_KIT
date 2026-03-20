@@ -62,7 +62,7 @@ Distribution path:
 **2. Numbered list tweets (single tweet)**
 - Avg impressions: 2-5x follower count
 - Best for: shares and QTs
-- Example format: "7 tools I use to X:\n\n1. [tool] — [what it does]\n2..."
+- Example format: "7 tools I use to X:\n\n1. [tool], [what it does]\n2..."
 - Time to write: 15 minutes
 
 **3. "I tested X" posts**
@@ -82,7 +82,7 @@ Distribution path:
 
 **6. Plain retweets**
 - Minimal amplification of your own account
-- Use sparingly — QTs instead
+- Use sparingly, QTs instead
 
 ---
 
@@ -108,7 +108,7 @@ If you post and don't reply to comments for 2+ hours, the engagement velocity dr
 ### Posting links to external platforms
 Tweets with YouTube links, newsletter links, or Gumroad links perform 60-80% worse.
 
-**Fix:** Build a mini-funnel on X itself. The link goes in the reply, the profile bio, and the thread's final tweet — never tweet body.
+**Fix:** Build a mini-funnel on X itself. The link goes in the reply, the profile bio, and the thread's final tweet, never tweet body.
 
 ### Inconsistent posting
 The algo favors accounts that post consistently over accounts that post in bursts.
@@ -128,7 +128,7 @@ X shows your content in two places: your followers' Home feed and the "For You" 
 
 **To appear in more For You feeds:**
 - Use consistent topic signals in your posts (solopreneur, indie hacker, AI tools, cold email, apps)
-- Your account needs to be "classified" by the algo in your niche — this takes 4-6 weeks of consistent posting in one topic area
+- Your account needs to be "classified" by the algo in your niche, this takes 4-6 weeks of consistent posting in one topic area
 - Don't jump between unrelated topics (tech one day, politics the next, recipes the day after = algo confusion)
 
 ---

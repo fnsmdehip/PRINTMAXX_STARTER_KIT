@@ -1050,3 +1050,22 @@ Build at `builds/programmatic_seo/boomer/`:
 - `{product}-vs-{product}-comparison.html`
 - `top-{n}-{category}-for-seniors.html`
 
+
+
+---
+
+## Pending Enhancement (ALPHA108135, Score: 30)
+
+**Source:** @unusual_whales (high-signal-accounts) | **URL:** https://x.com/unusual_whales/status/2034696655988011131
+**Added:** 2026-03-20T02:59:31-04:00
+
+Insiders often have confidential knowledge.
+
+Here is an example of a possible insider, spotted using Unusual Predictions.
+
+This wallet has only four positions.
+
+All are on whether the coin Backpack FDV will be above $200M one day after launch.
+
+Will there be a listing? What do
+

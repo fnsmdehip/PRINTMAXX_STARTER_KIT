@@ -1,4 +1,4 @@
-# Deployment Announcements — Mar 7 2026, Cycle 5
+# Deployment Announcements, Mar 7 2026, Cycle 5
 Status: PENDING_REVIEW
 
 ---

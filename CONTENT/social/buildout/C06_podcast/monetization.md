@@ -1,4 +1,4 @@
-# C06 Podcast Factory — Monetization
+# C06 Podcast Factory, Monetization
 
 ## Revenue Model Overview
 
@@ -20,7 +20,7 @@ Every episode naturally mentions tools. Every tool mention is an affiliate link 
 
 Structure the mention naturally:
 - BAD: "Check out our sponsor Instantly.ai"
-- GOOD: "[Guest] mentioned they use Instantly.ai for email sending. I've used it for 6 months — link in show notes. $47/month."
+- GOOD: "[Guest] mentioned they use Instantly.ai for email sending. I've used it for 6 months, link in show notes. $47/month."
 
 ### Top Affiliate Programs by Episode Category
 
@@ -44,9 +44,9 @@ Structure the mention naturally:
 | Tool | Commission | Notes |
 |------|-----------|-------|
 | Notion | $5-20 per paid referral | Varies |
-| Ahrefs | 20% recurring | $99-199/mo — high value |
+| Ahrefs | 20% recurring | $99-199/mo, high value |
 | ConvertKit | 30% for life | $29-79/mo |
-| Beehiiv | 50% for 12 months | $39-99/mo — highest value |
+| Beehiiv | 50% for 12 months | $39-99/mo, highest value |
 | Gumroad | Not affiliatable | Mention anyway for credibility |
 
 **App/SaaS/No-Code:**
@@ -107,11 +107,11 @@ At 5,000 downloads/episode and $40 CPM:
 
 ### How to Find Sponsors
 
-**Step 1 — Inbound first:**
+**Step 1, Inbound first:**
 Add this to show notes on every episode:
 "Sponsor this show: if you sell to solopreneurs, indie hackers, or online business builders, email [contact]. 500+ downloads/episode."
 
-**Step 2 — Outbound targeting:**
+**Step 2, Outbound targeting:**
 Target SaaS companies with affiliate programs (they already understand podcast ROI). Find email via:
 - LinkedIn: search "[company] head of marketing" or "podcast partnerships"
 - Company website contact page
@@ -119,11 +119,11 @@ Target SaaS companies with affiliate programs (they already understand podcast R
 
 **Pitch email template:**
 ```
-Subject: podcast sponsorship — [Show Name], [X] downloads/episode
+Subject: podcast sponsorship, [Show Name], [X] downloads/episode
 
 Hi [Name],
 
-I run The Printmaxx Podcast — [X] downloads/episode, audience is solopreneurs and online builders. I've used [their tool] for [X months] and mentioned it in [number] episodes.
+I run The Printmaxx Podcast, [X] downloads/episode, audience is solopreneurs and online builders. I've used [their tool] for [X months] and mentioned it in [number] episodes.
 
 Would you be open to a paid sponsorship? I'm offering mid-roll at $[rate]/episode. Happy to share listener stats and past episode examples.
 
@@ -148,9 +148,9 @@ Worth a quick call?
 ### Patreon Setup
 
 **Tiers:**
-- $5/month "Supporter" — Ad-free episodes, 1-week early access
-- $15/month "Builder" — Ad-free + bonus Q&A episodes (1 extra/month) + full transcripts
-- $49/month "Operator" — Everything + monthly group call with host
+- $5/month "Supporter", Ad-free episodes, 1-week early access
+- $15/month "Builder", Ad-free + bonus Q&A episodes (1 extra/month) + full transcripts
+- $49/month "Operator", Everything + monthly group call with host
 
 **Revenue target at each milestone:**
 | Supporters | Monthly Revenue |
@@ -176,12 +176,12 @@ At 2,000 downloads/episode, expect 10-40 Patreon backers.
 Every episode is a 25-minute advertisement for your expertise. At the end of every episode:
 
 **CTA script:**
-"If you want help implementing any of this — whether it's the cold email setup, the content system, or figuring out which revenue stream makes sense for your situation — you can book a 30-minute strategy call. Link in show notes."
+"If you want help implementing any of this, whether it's the cold email setup, the content system, or figuring out which revenue stream makes sense for your situation, you can book a 30-minute strategy call. Link in show notes."
 
 **Pricing for calls:**
-- $97 — first call (discovery, low-friction entry)
-- $297 — follow-up implementation call
-- $1,500/month — ongoing advisory (1 call/week)
+- $97, first call (discovery, low-friction entry)
+- $297, follow-up implementation call
+- $1,500/month, ongoing advisory (1 call/week)
 
 **Conversion rate:** 1-3% of listeners who hear CTA will click. 10-20% of those will book.
 

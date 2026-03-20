@@ -118,7 +118,7 @@ the machine is built. now i need one thing to hit.
 congrats on $1.3k. that first dollar is the hardest one.
 ```
 
-Transparency about $0 is MORE interesting than fake wins. People follow the journey.
+Transparency about $0 is MORE interesting than fake wins. People follow the path.
 
 ### Pattern 4: Simple Universal Truth Statements (Reply Ratio: 25-46%)
 
@@ -211,7 +211,7 @@ These accounts post frequently, have active reply sections, and their audience o
 | @bcherny | Claude product launches | First real-world usage report. "just tested this with my 31 agents" |
 | @kloss_xyz | Claude Code features | Specific use case. "this solves my /loop monitoring problem" |
 | @steipete | Codex/OpenClaw drops | Show you're using the tools. Technical credibility. |
-| @karpathy | AI paradigm posts | Bring data from your operation. "ran this pattern across 10K data points" |
+| @karpathy | AI model posts | Bring data from your operation. "ran this pattern across 10K data points" |
 | @mattpocockuk | Ralph loop content | You literally run ralph loops. This is YOUR territory. |
 
 ### Tier 3: Aspirational Draft Targets (Bigger accounts, harder to stand out)
@@ -311,7 +311,7 @@ i'm on day 34 at $0. but the system is built:
 
 the delta between "everything is built" and "first dollar" is what i'm documenting.
 
-following your journey for inspiration.
+following your path for inspiration.
 ```
 
 ### Hook 5: "Binary Choice Engagement"

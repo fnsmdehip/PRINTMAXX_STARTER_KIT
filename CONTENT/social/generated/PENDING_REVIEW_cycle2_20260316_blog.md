@@ -22,7 +22,7 @@ This is Generative Engine Optimization (GEO). McKinsey projects $750B in consume
 
 ## What 680 million citations revealed
 
-A comprehensive analysis of 680 million citations across ChatGPT, Perplexity, and Google AI Mode showed clear patterns in what gets cited.
+A complete analysis of 680 million citations across ChatGPT, Perplexity, and Google AI Mode showed clear patterns in what gets cited.
 
 ### Content that gets cited
 

@@ -1,4 +1,4 @@
-# DISTRIBUTION CYCLE 7 — Fresh Angles
+# DISTRIBUTION CYCLE 7, Fresh Angles
 # Generated: 2026-03-08
 # Focus: Uncovered gaps, new angles, platform-native content
 
@@ -14,7 +14,7 @@ for local businesses (plumber, dentist, salon, restaurant):
 - build with AI (Claude Code) + deploy on surge.sh = $0/month
 - I built 24 local business demo sites this way
 - each site loads in under 2 seconds, scores 90+ on Lighthouse
-- SSL, CDN, mobile responsive — all included free
+- SSL, CDN, mobile responsive, all included free
 
 for e-commerce:
 - Shopify is still the move if you want to sell products
@@ -42,7 +42,7 @@ here's exactly what I did:
 total cost: $0. total time: 1 weekend.
 
 then cold email local businesses in your city:
-"hey [name], I noticed your website [specific issue — slow load, not mobile friendly, no contact form]. I already built a demo of what your new site could look like: [link to demo]. want me to finish it? $500 flat rate."
+"hey [name], I noticed your website [specific issue, slow load, not mobile friendly, no contact form]. I already built a demo of what your new site could look like: [link to demo]. want me to finish it? $500 flat rate."
 
 the demo approach converts because they can SEE the result before paying. it's not a pitch deck. it's a working website.
 
@@ -150,7 +150,7 @@ All free. All open. All under 60KB per app.
 
 ---
 
-## GAP 4: TWITTER CONTENT — NICHE ACCOUNT SEEDS
+## GAP 4: TWITTER CONTENT, NICHE ACCOUNT SEEDS
 
 ### @selahmoments (Faith/Wellness Niche)
 ```
@@ -290,13 +290,13 @@ If you're a web developer or agency struggling to close local business clients, 
 **Description:** 28 free habit tracking apps for every niche. Fitness, coding, meditation, reading, prayer, art, journaling, language learning. All work offline. No accounts needed. Install from your browser.
 **Link:** printmaxx-apps.surge.sh
 
-### Pin 2: "Ramadan Tracker App — Free, Offline, No Ads"
+### Pin 2: "Ramadan Tracker App, Free, Offline, No Ads"
 **Board:** Ramadan / Islamic Life
 **Image:** PrayerLock + Ramadan tracker screenshot
 **Description:** Free Ramadan tracker. Prayer times, fasting log, Quran reading progress. Works offline during prayer. No ads, no data collection. Under 60KB. ramadan-tracker.surge.sh
 **Link:** ramadan-tracker.surge.sh
 
-### Pin 3: "ADHD Focus Timer — 5 Minute Blocks"
+### Pin 3: "ADHD Focus Timer, 5 Minute Blocks"
 **Board:** ADHD Tips / Mental Health
 **Image:** FocusLock app screenshot
 **Description:** Focus timer built for ADHD brains. 5-minute micro-sessions instead of 25-minute pomodoros. No streak shaming. Visual progress that shows total effort, not consecutive days. Free.
@@ -370,7 +370,7 @@ curious: has anyone here used free tools as lead gen successfully? what was your
 
 ## DISTRIBUTION SCHEDULING MATRIX
 
-### Week 1 (Mar 8-14) — Foundation
+### Week 1 (Mar 8-14), Foundation
 | Day | Platform | Content | Notes |
 |-----|----------|---------|-------|
 | Mon | Twitter | LURK (day 4) | Browse only |
@@ -381,7 +381,7 @@ curious: has anyone here used free tools as lead gen successfully? what was your
 | Sat | Quora | Answer 5 questions | Habit apps + web dev |
 | Sun | Newsletter | First issue | Substack or Beehiiv |
 
-### Week 2 (Mar 15-21) — Expansion
+### Week 2 (Mar 15-21), Expansion
 | Day | Platform | Content | Notes |
 |-----|----------|---------|-------|
 | Mon | Twitter | First real posts (day 10-ish) | Warmup dependent |
@@ -392,7 +392,7 @@ curious: has anyone here used free tools as lead gen successfully? what was your
 | Sat | Pinterest | 5 pins | Apps + productivity |
 | Sun | AlternativeTo | 4 submissions | PageScorer, FocusLock, etc. |
 
-### Week 3 (Mar 22-28) — Ramadan Push
+### Week 3 (Mar 22-28), Ramadan Push
 | Day | Platform | Content | Notes |
 |-----|----------|---------|-------|
 | Mon | Twitter | Start posting 4x/day | Day 17-ish warmup |

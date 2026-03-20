@@ -1,4 +1,4 @@
-# CYCLE 4 — NEWSLETTER DRAFT
+# CYCLE 4, NEWSLETTER DRAFT
 # Generated: 2026-03-17 19:05
 # Status: PENDING_REVIEW
 # Voice: PRINTMAXXER
@@ -16,7 +16,7 @@ C: "90 minutes between $0 and first revenue (day 35 update)"
 
 ## NEWSLETTER BODY
 
-**the weekly signal dump — march 17, 2026**
+**the weekly signal dump, march 17, 2026**
 
 3 things worth your time this week. no fluff, just signal.
 
@@ -54,7 +54,7 @@ the $200K SaaS isn't in another task manager. it's in the 8 hours before the tas
 
 ---
 
-### 3. the 90-minute revenue unlock (building in public, day 35)
+### 3. the 90-minute revenue get (building in public, day 35)
 
 current stats:
 - 332 automation scripts running
@@ -86,6 +86,6 @@ speed isn't velocity. it's concurrency.
 
 that's the signal. see you next week.
 
-— printmaxxer
+- printmaxxer
 
 ---

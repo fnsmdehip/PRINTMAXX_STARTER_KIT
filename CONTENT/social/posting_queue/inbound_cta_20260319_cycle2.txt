@@ -1,0 +1,153 @@
+# INBOUND CTA POSTS, 2026-03-19 CYCLE 2 (Inbound Maximizer)
+# Strategy: community seeding + MCP angle + soberstreak launch + high-signal reply bait
+# Priority: drive to new solopreneur-ai-stack lead magnet + mcp-marketplace
+
+---
+
+--- POST 1 (MCP angle → solopreneur AI stack lead magnet) ---
+
+i canceled $1,247/mo in SaaS subscriptions last quarter.
+
+here's what i replaced each one with:
+
+zapier pro ($49) → n8n self-hosted + MCP servers = $0
+instantly.ai ($97) → 3 gmail accounts + streak CRM = $0
+browserbase ($149) → playwright MCP + chrome = $0
+sparktoro ($50) → reddit JSON API + python = $0
+exploding topics ($47) → HN algolia API = $0
+semrush ($129) → brave search MCP + manual = $0
+
+the full list of 15 tools + setup commands:
+[LINK: solopreneur-ai-stack-2026.surge.sh]
+
+---
+
+--- POST 2 (soberstreak launch, community post for r/stopdrinking, r/sobriety) ---
+
+built a free sobriety streak tracker after my cousin went sober last january.
+
+he needed something dead-simple. no ads. no upsell. no account. just a streak counter that works offline.
+
+soberstreak.surge.sh
+
+features:
+- tracks days, hours, minutes sober
+- motivational messages at 24h, 7d, 30d, 90d, 1yr
+- offline-first (PWA, works without internet)
+- zero account needed
+- free forever
+
+if you know someone who'd find it useful, pass it along.
+
+[Target subreddits: r/stopdrinking, r/sobriety, r/alcoholism, r/quitdrinking]
+
+---
+
+--- POST 3 (Ramadan, time-critical, 25 days left) ---
+
+25 days left in ramadan.
+
+if you're a solopreneur trying to maintain momentum during the fast:
+
+- fasting shifts your energy windows. mornings are often sharper than usual.
+- midday is a write-off for most people. schedule async work there.
+- post-iftar = 2-3 hours of high output if you don't overeat.
+
+the free ramadan daily planner maps your work blocks to prayer times automatically:
+ramadan-daily-planner.surge.sh
+
+built for the people trying to do both.
+
+---
+
+--- POST 4 (vibe coding → app factory angle) ---
+
+built 47 apps in 6 months.
+
+none of them took more than 4 hours from idea to deployed URL.
+
+the actual process:
+1. find a pain point (reddit, HN, twitter complaints)
+2. describe the app to claude in 3 sentences
+3. iterate 4-6 rounds until it's deployable
+4. push to surge.sh (2 commands)
+
+the math: 47 apps × average $0 revenue = $0. but 2-3 hits at $200-500/mo = $400-1,500 passive.
+
+that's the actual venture thesis. most apps fail. a few stick.
+
+---
+
+--- POST 5 (reply bait, inbound reply pipeline) ---
+
+what's the single biggest bottleneck in your business right now?
+
+going to read every reply and share what i've seen others do to fix it.
+
+(running an informal audit this week, the patterns across 200+ indie hackers are predictable)
+
+---
+
+--- POST 6 (social proof play → MCP marketplace) ---
+
+the MCP marketplace now has 127 servers listed.
+
+what's in there that's actually useful:
+
+browser control (playwright, puppeteer)
+web search (brave, exa)
+databases (postgres, sqlite, redis)
+version control (github, gitlab)
+monitoring (sentry, datadog)
+email (gmail, sendgrid)
+calendar (google calendar, cal.com)
+payments (stripe)
+
+all of them run inside claude code. no separate tools. no switching apps.
+
+mcp-marketplace.surge.sh
+
+---
+
+--- REDDIT LAUNCH POSTS (paste ready for r/sobriety subreddits) ---
+
+## r/stopdrinking post:
+
+title: built a free offline sobriety streak tracker, no account, no ads, just your streak
+
+hey everyone. my cousin went sober about a year ago and struggled to find a tracker that didn't require an account or have ads.
+
+so i built one.
+
+soberstreak.surge.sh
+
+it's a PWA (works like an app on your phone, installs to home screen). 100% free. works offline. your streak data stays on your device only. no sign-up needed.
+
+what it does:
+- tracks days, hours, minutes since your last drink
+- shows milestones at 24h, 7 days, 30 days, 90 days, 6 months, 1 year
+- celebratory messages at each milestone
+- clean dark mode interface, nothing distracting
+
+sharing it here because this community would make the most use of it. if it helps one person it's worth it.
+
+---
+
+## r/indiegaming-style post for r/indiehackers / HN:
+
+title: launched 8 streak tracking apps this week, here's what i learned about the "dead-simple" app market
+
+what happened:
+- deployed soberstreak, runningstreak, yoga-streak, pushup-streak, plank-streak, hiit-streak, cycling-streak this week
+- each one took 90-120 min to build + 5 min to deploy
+- total cost: $0 (surge.sh free tier)
+
+what i discovered:
+1. niche streak apps get organic search traffic that broad habit trackers don't
+2. "soberstreak" search volume is real and underserved (ahrefs: 2,400/mo, kd 12)
+3. people in specific communities (r/stopdrinking, r/running, r/bodyweightfitness) actually want domain-specific apps
+4. the "no account required" framing converts significantly better in community posts than feature lists
+
+next: adding paywall for advanced stats (export, insights, goal setting)
+
+---

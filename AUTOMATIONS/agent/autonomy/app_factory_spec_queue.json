@@ -1,5 +1,127 @@
 [
   {
+    "title": "Hurricane Season Prep Tracker App (seasonal, coastal US market)",
+    "category": "seasonal_app",
+    "priority": "HIGH",
+    "status": "SPEC_READY",
+    "app_idea": "Hurricane preparedness checklist + tracker app. Timed to hit App Store 6-8 weeks before June 1 hurricane season. Features: supply checklist (food/water/meds), home prep checklist (shutters/generator/roof), evacuation plan builder, emergency contacts. Target: FL, TX, LA, SC, NC coastal homeowners. Seasonal demand spike April-May before season opens.",
+    "monetization": "Freemium: free checklist, $1.99 one-time for household plan + offline mode. Affiliate: emergency supply links (Amazon), generator links, insurance comparison. Annual seasonal pattern = repeat downloads each spring.",
+    "source": "lead_machine_20260320_hurricane_angle",
+    "market_signal": "Lead Machine found 3 roofing/HVAC businesses targeting hurricane prep market. Demand spike documented: April-May pre-season search surge. No dominant streak/checklist app for hurricane prep on App Store.",
+    "target_stores": ["App Store", "PWA web app for instant deploy"],
+    "build_time_estimate": "2-3 days (reuse scripture-streak base template)",
+    "urgency": "Ship by April 15 to catch May pre-season search spike",
+    "added_at": "2026-03-20T09:05",
+    "source_agent": "cross_pollinator_cycle24"
+  },
+  {
+    "title": "Paywall SDK Migration: Qonversion > RevenueCat (ALL apps)",
+    "category": "infrastructure",
+    "priority": "HIGH",
+    "status": "SPEC_READY",
+    "app_idea": "Switch all new app paywall integrations from RevenueCat to Qonversion. Qonversion free tier: $10K/mo MTR (vs RevenueCat $2.5K). Take rate: 0.6% (vs 1%). For PRINTMAXX at $0 MRR, this delays any platform fees by 20x. 30-minute SDK swap.",
+    "monetization": "Cost savings: $0 until $10K MRR. RevenueCat would bill at $2.5K MRR.",
+    "source": "competitor_intel_20260319",
+    "sdk_docs": "qonversion.io",
+    "action": "Use Qonversion in all future app specs. Audit existing apps that reference RevenueCat.",
+    "added_at": "2026-03-19T05:11"
+  },
+  {
+    "title": "Denomination SEO Comparison Pages (13 pages, zero competition)",
+    "category": "seo_content",
+    "priority": "HIGH",
+    "status": "SPEC_READY",
+    "app_idea": "Create 13 comparison pages targeting 'best [denomination] habit tracker 2026' queries. FaithTime.ai owns generic faith search. We own denomination-specific. These pages are our moat \u2014 FaithTime cannot counter-program without abandoning their generalist positioning.",
+    "monetization": "Organic SEO traffic to denomination streak apps. Each page targets a niche with zero competition. Affiliate links + app download CTAs.",
+    "denominations": [
+      "Catholic",
+      "Baptist",
+      "Lutheran",
+      "Methodist",
+      "Presbyterian",
+      "Episcopal",
+      "Pentecostal",
+      "Evangelical",
+      "Anglican",
+      "Orthodox",
+      "Protestant",
+      "Shia",
+      "Sunni"
+    ],
+    "deployed_apps": [
+      "catholic-streak-marketing",
+      "baptist-streak-marketing",
+      "lutheran-streak-marketing",
+      "methodist-streak-marketing",
+      "presbyterian-streak-marketing",
+      "episcopal-streak-marketing",
+      "pentecostal-streak-marketing",
+      "evangelical-streak-marketing",
+      "anglican-streak-marketing",
+      "orthodox-streak-marketing",
+      "protestant-streak-marketing",
+      "shia-streak-marketing",
+      "sunni-streak-marketing"
+    ],
+    "source": "competitor_intel_20260319",
+    "added_at": "2026-03-19T05:11"
+  },
+  {
+    "title": "Local Biz Companion App: Dentist (299 validated leads)",
+    "category": "dentist",
+    "validated_lead_count": 299,
+    "app_idea": "Dental appointment reminder + teeth tracking app. Upsell to dental practices for $29/mo.",
+    "monetization": "B2B SaaS: $29/mo per practice. Built-in referral tracking.",
+    "source": "cold_outreach_lead_demand",
+    "priority": "HIGH",
+    "status": "SPEC_READY",
+    "added_at": "2026-03-18T20:40:56"
+  },
+  {
+    "title": "Local Biz Companion App: Dental (26 validated leads)",
+    "category": "dental",
+    "validated_lead_count": 26,
+    "app_idea": "Dental appointment reminder + teeth tracking app. Upsell to dental practices for $29/mo.",
+    "monetization": "B2B SaaS: $29/mo per practice. Built-in referral tracking.",
+    "source": "cold_outreach_lead_demand",
+    "priority": "MEDIUM",
+    "status": "SPEC_READY",
+    "added_at": "2026-03-18T20:40:56"
+  },
+  {
+    "title": "Local Biz Companion App: Restaurant (10 validated leads)",
+    "category": "restaurant",
+    "validated_lead_count": 10,
+    "app_idea": "Service booking companion for restaurant customers.",
+    "monetization": "Freemium consumer + B2B partner referral program.",
+    "source": "cold_outreach_lead_demand",
+    "priority": "MEDIUM",
+    "status": "SPEC_READY",
+    "added_at": "2026-03-18T20:40:56"
+  },
+  {
+    "title": "Local Biz Companion App: Lawyer (6 validated leads)",
+    "category": "lawyer",
+    "validated_lead_count": 6,
+    "app_idea": "Legal deadline tracker for small biz owners. Connects to local attorneys.",
+    "monetization": "Consumer: $9.99/mo. Attorney referral: $25 per qualified lead.",
+    "source": "cold_outreach_lead_demand",
+    "priority": "MEDIUM",
+    "status": "SPEC_READY",
+    "added_at": "2026-03-18T20:40:56"
+  },
+  {
+    "title": "Local Biz Companion App: Auto Repair (3 validated leads)",
+    "category": "auto_repair",
+    "validated_lead_count": 3,
+    "app_idea": "Car maintenance log + reminder. Partners with local shops via referral.",
+    "monetization": "Freemium. $2.99/mo premium. Affiliate: $3 per shop referral.",
+    "source": "cold_outreach_lead_demand",
+    "priority": "MEDIUM",
+    "status": "SPEC_READY",
+    "added_at": "2026-03-18T20:40:56"
+  },
+  {
     "source_file": "APP_SPEC_ALPHA1464.md",
     "title": "App Spec: ALPHA1464",
     "status": "QUEUED",
@@ -1447,5 +1569,140 @@
     "status": "QUEUED",
     "priority": "MEDIUM",
     "added_at": "2026-03-18T15:57:02.075255"
+  },
+  {
+    "source_file": "APP_SPEC_CI_C069_BO_008.md",
+    "title": "App Spec: CI_C069_BO_008",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-18T20:30:02.151191"
+  },
+  {
+    "source_file": "APP_SPEC_CI_C069_BO_003.md",
+    "title": "App Spec: CI_C069_BO_003",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-18T20:30:02.151666"
+  },
+  {
+    "source_file": "APP_SPEC_CI_C069_BO_007.md",
+    "title": "App Spec: CI_C069_BO_007",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-18T20:30:02.151887"
+  },
+  {
+    "source_file": "APP_SPEC_CI_C069_BO_002.md",
+    "title": "App Spec: CI_C069_BO_002",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-18T20:30:02.152037"
+  },
+  {
+    "source_file": "APP_SPEC_CI_C069_BO_001.md",
+    "title": "App Spec: CI_C069_BO_001",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-18T20:30:02.152131"
+  },
+  {
+    "source_file": "APP_SPEC_ALPHA_HN_107501.md",
+    "title": "App Spec: ALPHA_HN_107501",
+    "status": "QUEUED",
+    "priority": "MEDIUM",
+    "added_at": "2026-03-18T20:30:02.152183"
+  },
+  {
+    "title": "financial_tracking_streak \u2014 Daily Financial Check-In Streak App",
+    "category": "financial_productivity",
+    "community_size": 21585000,
+    "cycle": 78,
+    "priority": "P0",
+    "build_status": "SPEC_NEEDED",
+    "added": "2026-03-19T09:11:05.788429+00:00",
+    "hypothesis": "21.5M FIRE/PF community. YNAB/Copilot/Monarch have zero streak gamification. Mint dead. Daily 5-min check-in + streak.",
+    "surge_url": "financialstreak.surge.sh"
+  },
+  {
+    "title": "hadith_study_streak \u2014 Daily Hadith Study Streak App [RAMADAN URGENT]",
+    "category": "faith_islamic",
+    "community_size": 1181000,
+    "cycle": 78,
+    "priority": "P0_RAMADAN",
+    "build_status": "SPEC_NEEDED",
+    "added": "2026-03-19T09:11:05.788429+00:00",
+    "hypothesis": "Muslim Pro 520K ratings, zero hadith streak. Ramadan ends Mar 29. Sunnah.com API free. Daily hadith + streak.",
+    "surge_url": "hadithdaily.surge.sh"
+  },
+  {
+    "title": "bedtime_reading_streak \u2014 Daily Bedtime Reading to Child Streak App",
+    "category": "parenting",
+    "community_size": 5937000,
+    "cycle": 78,
+    "priority": "P0",
+    "build_status": "SPEC_NEEDED",
+    "added": "2026-03-19T09:11:05.788429+00:00",
+    "hypothesis": "5.9M parenting community. AAP 20min/day recommendation. No parent accountability streak exists. Guilt-driver mechanic.",
+    "surge_url": "bedtimestreak.surge.sh"
+  },
+  {
+    "title": "DM Streak \u2014 Daily DM Skills Habit App",
+    "category": "gaming_adjacent",
+    "priority": "P0",
+    "status": "SPEC_READY",
+    "app_idea": "Daily habit streak app for Dungeon Masters. 5.38M community (r/DnD 4.8M + r/DMAcademy 580K). Daily tasks: prep one encounter, study one monster, write one scene hook. Streak/XP system. D&D Beyond manages characters but NOTHING gamifies the daily DM skill practice habit.",
+    "monetization": "Freemium: free streak tracking. $2.99/mo premium: advanced encounter templates, GM screen integration, session notes sync.",
+    "source": "CI_autonomy_cycle083",
+    "community_size": 5380000,
+    "verdict": "BLUE_OCEAN",
+    "added_at": "2026-03-19T11:58"
+  },
+  {
+    "title": "WorkshopStreak \u2014 Daily Woodworking Habit App",
+    "category": "hobby_niche",
+    "priority": "P0",
+    "status": "SPEC_READY",
+    "app_idea": "Daily habit streak app for woodworkers. 4.77M community (r/woodworking 4.7M + r/BeginnerWoodWorking 68K). Daily tasks: 15 min chisel drills, joinery reps, finishing techniques. Streak/XP/level system. All existing apps are plan libraries and calculators \u2014 ZERO gamified habit system.",
+    "monetization": "Freemium: streak + basic tasks free. $2.99/mo premium: project integration, skill tree, community challenges.",
+    "source": "CI_autonomy_cycle083",
+    "community_size": 4768000,
+    "verdict": "BLUE_OCEAN",
+    "added_at": "2026-03-19T11:58"
+  },
+  {
+    "title": "TradeStreak \u2014 Daily Options Study Habit App",
+    "category": "financial_skills",
+    "priority": "P0",
+    "status": "SPEC_READY",
+    "app_idea": "Daily habit streak app for options traders. 2.77M community (r/options 2.1M + r/thetagang 670K). Daily tasks: one Greeks concept, one strategy backtest, one setup identification. Streak/XP system. Brokerages execute trades \u2014 NOTHING gamifies the daily STUDY habit.",
+    "monetization": "Freemium: streak + daily tasks free. $4.99/mo premium: full study library, paper trade logging, strategy journal.",
+    "source": "CI_autonomy_cycle083",
+    "community_size": 2770000,
+    "verdict": "BLUE_OCEAN",
+    "added_at": "2026-03-19T11:58"
+  },
+  {
+    "title": "FiberStreak \u2014 Daily Knitting/Crochet Habit App",
+    "category": "hobby_niche",
+    "priority": "P0",
+    "status": "SPEC_READY",
+    "app_idea": "Daily habit streak app for knitters and crocheters. 2.6M community (r/knitting 1.2M + r/crochet 1.4M). Daily tasks: 10 rows minimum, one new stitch per week. Streak/XP/leveling. Ravelry tracks projects (web only), Knit Companion counts rows \u2014 NOTHING gamifies the daily practice habit.",
+    "monetization": "Freemium: streak + row counter free. $1.99/mo premium: pattern integration, WIP sync, community challenges.",
+    "source": "CI_autonomy_cycle083",
+    "community_size": 2600000,
+    "verdict": "BLUE_OCEAN",
+    "added_at": "2026-03-19T11:58"
+  },
+  {
+    "title": "SketchStreak \u2014 Daily Drawing Practice Habit App",
+    "category": "hobby_niche",
+    "priority": "P0",
+    "status": "SPEC_READY",
+    "app_idea": "Daily habit streak app for aspiring artists. 2.39M community (r/drawing 1.5M + r/learnart 890K). Daily tasks: 10-min gesture drawing, one composition study, one value study. Streak/XP system. Procreate is a drawing tool \u2014 NOTHING gamifies the daily practice habit for beginners.",
+    "monetization": "Freemium: streak + daily prompts free. $2.99/mo premium: full prompt library, critique community, skill tree.",
+    "source": "CI_autonomy_cycle083",
+    "community_size": 2390000,
+    "verdict": "BLUE_OCEAN",
+    "added_at": "2026-03-19T11:58"
   }
 ]

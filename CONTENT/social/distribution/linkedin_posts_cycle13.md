@@ -1,11 +1,11 @@
-# LinkedIn posts — cycle 13
+# LinkedIn posts, cycle 13
 # Status: PENDING_REVIEW
 # Voice: LinkedIn-native. Longer, first-person storytelling. Professional but not corporate. Numbers-led. No AI vocabulary. No em dashes. Sentence case on headings.
 # Target: Personal profile or @PRINTMAXXER brand page
 
 ---
 
-## Post 1 — PageScorer
+## Post 1, PageScorer
 
 I spent 3 months building a product nobody knew existed.
 
@@ -49,7 +49,7 @@ No signup. Takes 8 seconds. The grade will either confirm what you already know 
 
 ---
 
-## Post 2 — Cold Email ROI Calculator
+## Post 2, Cold Email ROI Calculator
 
 I was running cold email for 4 months before I calculated what it was actually costing me per closed deal.
 

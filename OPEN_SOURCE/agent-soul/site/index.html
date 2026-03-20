@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>sovrun - autonomous agent OS</title>
-<meta name="description" content="19 modules across 5 layers. DAG orchestration, crash recovery with deterministic replay, 105 MCP connectors, memory import from any LLM. Python stdlib. zero deps.">
+<meta name="description" content="autonomous agent OS. 20 modules across 5 layers. DAG orchestration, crash recovery, 1200+ connectors via n8n, memory import from any LLM. python. minimal deps (tenacity, httpx).">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -184,7 +184,7 @@ footer .footer-note { font-family: var(--mono); font-size: 12px; color: var(--te
       </div>
       <div class="feature-card">
         <h3>zero or optional deps</h3>
-        <p>core runs on Python stdlib only. 0 pip installs. connectors and workflow bridge are optional. runs on any machine with Python 3.10+. no vendor lock-in.</p>
+        <p>2 dependencies (tenacity for retry, httpx for HTTP). runs on any machine with Python 3.10+. no vendor lock-in. n8n bridge and MCP connectors are optional.</p>
         <span class="tag">pip install sovrun installs nothing extra</span>
       </div>
     </div>
@@ -197,7 +197,7 @@ footer .footer-note { font-family: var(--mono); font-size: 12px; color: var(--te
     <div class="problem-text">
       <p>your AI agents run on default LLM knowledge. you correct them. <strong>they don't learn from the corrections.</strong> session 47, same correction you gave in session 3.</p>
       <p style="margin-top: 16px;">nobody checks if agent output matches your voice. nobody scores drift from directives. nobody closes the loop between "agent decided X" and "X actually happened." crash at step 14 of 16? replay from step 1. every API call wasted. need Slack + GitHub + Notion connected? configure each one manually for every project.</p>
-      <p style="margin-top: 16px;">sovrun solves each of these with a dedicated module. 19 modules, 5 layers, stdlib only.</p>
+      <p style="margin-top: 16px;">sovrun solves each of these with a dedicated module. 20 modules, 5 layers, 2 deps.</p>
     </div>
   </div>
 </section>
@@ -333,7 +333,7 @@ footer .footer-note { font-family: var(--mono); font-size: 12px; color: var(--te
           </div>
           <div class="module-card">
             <div class="module-name">deps</div>
-            <div class="module-desc">optional dependency manager. core is stdlib-only. connectors and workflow bridge can install what they need on demand.</div>
+            <div class="module-desc">dependency manager. tenacity for retry, httpx for HTTP. auto-detects installed packages and routes to best available implementation.</div>
             <span class="module-key">sovrun-deps --install n8n-client</span>
           </div>
         </div>
@@ -371,7 +371,7 @@ footer .footer-note { font-family: var(--mono); font-size: 12px; color: var(--te
           <tr><td>crash recovery</td><td class="yes">deterministic replay</td><td class="partial">checkpoints</td><td class="no">no</td><td class="partial">session state</td><td class="partial">basic</td><td class="partial">retry only</td></tr>
           <tr><td>procedural memory</td><td class="yes">FTS5 + self-improving</td><td class="no">no</td><td class="no">no</td><td class="partial">memory service</td><td class="yes">70+ skills</td><td class="no">no</td></tr>
           <tr><td>MCP connectors</td><td class="yes">105 (auto-setup)</td><td class="partial">via adapters</td><td class="partial">basic</td><td class="yes">native</td><td class="partial">basic</td><td class="yes">1,200+</td></tr>
-          <tr><td>dependencies</td><td class="yes">0 (stdlib only)</td><td class="no">langchain + deps</td><td class="no">many</td><td class="no">google deps</td><td class="no">many</td><td class="no">node + deps</td></tr>
+          <tr><td>dependencies</td><td class="yes">2 (tenacity + httpx)</td><td class="no">langchain + deps</td><td class="no">many</td><td class="no">google deps</td><td class="no">many</td><td class="no">node + deps</td></tr>
           <tr><td>license</td><td class="yes">MIT</td><td>MIT</td><td>MIT</td><td>Apache 2.0</td><td>MIT</td><td class="partial">Sustainable Use</td></tr>
           <tr><td>autonomous 24/7</td><td class="yes">durable + loop closer</td><td class="partial">with infra</td><td class="no">no</td><td class="no">no</td><td class="yes">yes</td><td class="partial">cron triggers</td></tr>
         </tbody>
@@ -445,7 +445,7 @@ footer .footer-note { font-family: var(--mono); font-size: 12px; color: var(--te
       <a href="https://github.com/fnsmdehip/sovrun/issues">issues</a>
       <a href="https://github.com/fnsmdehip/sovrun/blob/main/LICENSE">MIT license</a>
     </div>
-    <p class="footer-note">stdlib only. zero deps. python 3.10+. not a framework, not a platform. just modules.</p>
+    <p class="footer-note">python 3.10+. 2 deps. MIT license. not a framework, not a platform. just modules.</p>
   </div>
 </footer>
 

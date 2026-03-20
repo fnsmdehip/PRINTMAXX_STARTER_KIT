@@ -1,21 +1,21 @@
-# App Store Screenshot Layout Guide — PRINTMAXX
+# App Store Screenshot Layout Guide, PRINTMAXX
 
 ---
 
 ## Required Screenshot Sizes
 
 ### iPhone 6.5" Display (iPhone 15 Pro Max, 14 Plus, etc.)
-- **Size:** 1290 x 2796 px (portrait) or 2796 x 1290 px (landscape)
-- **Required:** Yes — primary display size in App Store
+- **Size:** 1290 x 2796 px (portrait) or 2796 x 1290 px (view)
+- **Required:** Yes, primary display size in App Store
 - **Count:** 3-10 screenshots per localization
 
 ### iPhone 5.5" Display (iPhone 8 Plus, legacy)
-- **Size:** 1242 x 2208 px (portrait) or 2208 x 1242 px (landscape)
-- **Required:** Yes — required for older device support
+- **Size:** 1242 x 2208 px (portrait) or 2208 x 1242 px (view)
+- **Required:** Yes, required for older device support
 - **Count:** 3-10 screenshots
 
 ### iPad 12.9" (if applicable)
-- **Size:** 2048 x 2732 px (portrait) or 2732 x 2048 px (landscape)
+- **Size:** 2048 x 2732 px (portrait) or 2732 x 2048 px (view)
 
 ---
 
@@ -126,7 +126,7 @@ Same layout as Screenshot 2, different feature.
 ### Typography on Screenshots
 - **Headline:** 64-80px, bold (use brand heading font)
 - **Subtext:** 32-40px, regular weight
-- **Maximum 6 words per headline** — users scan fast
+- **Maximum 6 words per headline**, users scan fast
 
 ### Device Frame
 - Use iPhone 15 Pro frame (titanium finish) for premium feel
@@ -159,7 +159,7 @@ Same layout as Screenshot 2, different feature.
 ## Google Play Feature Graphic
 
 - **Size:** 1024 x 500 px
-- Landscape, no device frame
+- view, no device frame
 - App name + tagline + key visual
 - Separate HTML templates provided in this directory
 

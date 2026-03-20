@@ -12,7 +12,7 @@ This works because all four platforms now support:
 - Captions burned-in OR auto-generated
 - Music/audio layering
 
-The differences are in the metadata, caption length, hashtag culture, and algorithm timing — not the raw video.
+The differences are in the metadata, caption length, hashtag culture, and algorithm timing, not the raw video.
 
 ---
 
@@ -24,7 +24,7 @@ Shoot or generate one video in 1080x1920 (9:16). Export as MP4, H.264, 30fps.
 
 Name it: `YYYY-MM-DD_[topic]-MASTER.mp4`
 
-Always keep the master. Never upload the master directly — always use platform exports.
+Always keep the master. Never upload the master directly, always use platform exports.
 
 ### Step 2: Edit in CapCut (free, handles all 4 exports)
 
@@ -50,7 +50,7 @@ Export 4 times with these specs:
 | YT Shorts | 1080x1920 | 8Mbps | 30fps | MASTER_yt.mp4 |
 
 For TikTok and YouTube: higher bitrate → better quality retention after compression.
-For IG and FB: Meta recompresses aggressively — 5Mbps is enough.
+For IG and FB: Meta recompresses aggressively, 5Mbps is enough.
 
 ### Step 4: Platform Upload Sequence
 
@@ -61,7 +61,7 @@ For IG and FB: Meta recompresses aggressively — 5Mbps is enough.
 3. YouTube Shorts third
 4. FB Reels last (lowest priority, but free distribution)
 
-Wait 30-60 min between TikTok and IG uploads. Some accounts report IG penalizing same-day reposts that are fingerprinted by TikTok watermarks — use CapCut export to remove watermarks.
+Wait 30-60 min between TikTok and IG uploads. Some accounts report IG penalizing same-day reposts that are fingerprinted by TikTok watermarks, use CapCut export to remove watermarks.
 
 ### Step 5: Metadata Assembly Per Platform
 
@@ -88,7 +88,7 @@ TikTok watermarks on reposts are a known reach killer on IG and YouTube.
 
 Options:
 1. CapCut export without watermark (free, works)
-2. Remove.bg's video tool ($9/mo) — cleaner
+2. Remove.bg's video tool ($9/mo), cleaner
 3. Export from original project in each platform's native app
 
 Never post TikTok-watermarked content to IG, YouTube, or FB. Their algorithms actively suppress it.

@@ -162,7 +162,7 @@ def audit_system_patterns():
 
     # Save audit
     audit = {
-        "timestamp": datetime.now().isoformat(),
+        "ts": datetime.now().isoformat(),
         "findings": findings,
         "total_findings": len(findings),
         "high_severity": len([f for f in findings if f["severity"] == "HIGH"]),

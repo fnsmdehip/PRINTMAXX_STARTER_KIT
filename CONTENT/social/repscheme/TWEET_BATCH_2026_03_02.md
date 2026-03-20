@@ -8,7 +8,7 @@
 
 ## standalone tweets
 
-### tweet 1 — contrarian supplement list (adapted from @bayneframer format)
+### tweet 1, contrarian supplement list (adapted from @bayneframer format)
 **account:** @repscheme
 **chars:** 267
 
@@ -25,7 +25,7 @@ the $200/month stack guys are coping. the basics work. the basics have always wo
 
 ---
 
-### tweet 2 — discipline extraction mindset (adapted from @aestheticprimal)
+### tweet 2, discipline extraction mindset (adapted from @aestheticprimal)
 **account:** @repscheme
 **chars:** 242
 
@@ -42,7 +42,7 @@ motivation is a loan. discipline is equity. stop borrowing energy you can't sust
 
 ---
 
-### tweet 3 — "act accordingly" engagement format (adapted from @euronationalizt)
+### tweet 3, "act accordingly" engagement format (adapted from @euronationalizt)
 **account:** @repscheme
 **chars:** 276
 

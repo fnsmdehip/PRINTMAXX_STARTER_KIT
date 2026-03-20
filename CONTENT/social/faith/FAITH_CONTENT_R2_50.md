@@ -38,7 +38,7 @@ log it anyway.
 
 I went 3 weeks feeling completely disconnected. kept logging. "prayed. felt nothing." "prayed. still nothing."
 
-week 4, something shifted. looking back at those logs — I never actually stopped. felt like i did, but i didn't.
+week 4, something shifted. looking back at those logs, I never actually stopped. felt like i did, but i didn't.
 
 show up anyway.
 
@@ -112,7 +112,7 @@ the 6 months when I prayed consistently were the least anxious 6 months of my ad
 
 correlation? causation? i don't know.
 
-but the data is there in my log. days i missed salah, sleep got worse. days I kept it — calmer.
+but the data is there in my log. days i missed salah, sleep got worse. days I kept it, calmer.
 
 make of that what you will.
 
@@ -238,7 +238,7 @@ the bar isn't perfection. it's presence.
 ### 20. Twitter - CTA Post
 if you want to build a consistent prayer practice:
 
-1. track every single prayer — hit or miss
+1. track every single prayer, hit or miss
 2. review your data weekly
 3. find your weakest prayer and fix that one first
 4. tell one person your current streak
@@ -267,7 +267,7 @@ what's your fajr time? drop it below.
 ---
 
 ### 22. Instagram - Quran Verse Visual
-caption: "and establish prayer and give zakah and bow with those who bow [in worship and obedience]." — 2:43
+caption: "and establish prayer and give zakah and bow with those who bow [in worship and obedience].", 2:43
 
 the 'with those who bow' part keeps hitting me this ramadan.
 
@@ -356,7 +356,7 @@ caption: drop your prayer streak in the comments.
 
 mine: 91 days.
 
-not counting days where everything was perfect — counting days where I showed up even when it felt like nothing.
+not counting days where everything was perfect, counting days where I showed up even when it felt like nothing.
 
 I want to see your number. no judgment. 1 or 1000.
 
@@ -420,7 +420,7 @@ year 2: started tracking. saw the gaps. got honest.
 
 year 3: 91-day streak. I know my patterns. I know my weak spots.
 
-if you're new to this practice — tracking helped me more than any other single thing.
+if you're new to this practice, tracking helped me more than any other single thing.
 
 prayerlock, free, link in bio.
 
@@ -435,7 +435,7 @@ told him I'm logging it. showed him the app.
 
 now he wants his own log.
 
-tracking prayer is teaching him that prayer is real — something you actually do, not just something you intend to do.
+tracking prayer is teaching him that prayer is real, something you actually do, not just something you intend to do.
 
 best parenting win of the month.
 
@@ -581,7 +581,7 @@ by day 30 you'll have real data on your spiritual consistency. which prayers you
 you'll know yourself better than any personality quiz will tell you.
 
 [demo]
-open prayerlock [screen record] — tap yes or no after each prayer — that's it.
+open prayerlock [screen record], tap yes or no after each prayer, that's it.
 
 [CTA]
 link in bio. free. 30-day challenge starts now.
@@ -595,7 +595,7 @@ it's 11:43pm. ramadan night 5.
 
 isha was 2 hours ago. tarawih just finished.
 
-this is the part nobody shows you — the after.
+this is the part nobody shows you, the after.
 
 the house is quiet. you're tired but not anxious. something about moving through all those rakaat...
 
@@ -633,11 +633,11 @@ forced me to arrive for each prayer as its own thing.
 [voiceover]
 my actual daily schedule built around prayer times:
 
-4:58am — fajr (then back to sleep or work depending on the day)
-12:30pm — lunch break = dhuhr
-3:47pm — reschedule that meeting, asr
-6:18pm — maghrib means dinner at 6
-9:45pm — isha then wind down
+4:58am, fajr (then back to sleep or work depending on the day)
+12:30pm, lunch break = dhuhr
+3:47pm, reschedule that meeting, asr
+6:18pm, maghrib means dinner at 6
+9:45pm, isha then wind down
 
 five natural anchors. the whole day organizes itself around them.
 
@@ -715,7 +715,7 @@ pomodoro technique: work 25 min, break 5 min. created 1963.
 
 prayer: work, pause 6 minutes, repeat 5x daily. prescribed 610 CE.
 
-GTD, deep work, time blocking — all trying to solve: how do you stay focused across a full day?
+GTD, deep work, time blocking, all trying to solve: how do you stay focused across a full day?
 
 prayer solved it before any of these existed.
 
@@ -762,7 +762,7 @@ showing up to eid with data.
 
 who's joining me? drop your starting streak in the comments.
 
-[end card: prayerlock — link in bio — free — works offline]
+[end card: prayerlock, link in bio, free, works offline]
 
 ---
 
@@ -805,5 +805,5 @@ Key themes (fresh from R1):
 - Islamic history hooks (post #46)
 - Productivity framework angle (posts #26, #38, #47)
 
-App mentions: 12 of 50 posts reference prayerlock (24%) — not oversaturated
+App mentions: 12 of 50 posts reference prayerlock (24%), not oversaturated
 Status: PENDING_REVIEW

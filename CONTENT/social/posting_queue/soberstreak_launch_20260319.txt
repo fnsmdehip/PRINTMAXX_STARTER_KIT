@@ -1,0 +1,91 @@
+TWEET 1, SoberStreak launch (privacy angle)
+---
+Built a free sobriety tracker because every existing app either sells your data or charges $10/mo for a streak counter.
+
+SoberStreak:
+- No account required
+- No servers. Ever.
+- All data stays on your phone
+- Works offline
+
+Free: soberstreak.surge.sh
+
+---
+
+TWEET 2, RunningStreak launch (gap angle)
+---
+Every running app wants you to sign up, connect your GPS, join a leaderboard.
+
+Sometimes you just want to know: did I run today?
+
+RunningStreak tracks your streak, pace, and distance. No account. No ads. Free.
+
+runningstreak.surge.sh
+
+---
+
+TWEET 3, Meta take (builder angle)
+---
+I've shipped 2 PWA apps today.
+
+SoberStreak (sobriety/NoFap tracker, privacy-first)
+RunningStreak (running streak + pace logger)
+
+Both deployed in <30min each.
+Both work offline.
+Both zero server cost.
+
+The single-file PWA pattern is insanely underrated for building fast.
+
+---
+
+THREAD, The Quittr privacy scandal + SoberStreak angle
+---
+[1/6] Quittr got caught selling user data. A sobriety app. Selling the list of people trying to get sober.
+
+The response? "We updated our privacy policy."
+
+Here's why that's a bigger deal than it sounds, and what I built instead.
+
+[2/6] Think about what data a sobriety app collects:
+- What you're addicted to
+- How long you've been struggling
+- Your relapse dates
+- Your journal entries about rock-bottom moments
+
+That's not app data. That's ammunition.
+
+[3/6] The industry standard is "we need your email to back up your data."
+
+But your streak is 3 numbers. Your journal is text. localStorage handles both.
+
+The "we need your data" argument is a monetization wrapper dressed as a feature.
+
+[4/6] SoberStreak stores everything on your device.
+
+No account. No servers. No email. No analytics pings.
+Open the site. Start your streak. Close the tab. Come back tomorrow. Your streak is still there.
+
+Works offline too.
+
+[5/6] The tech stack is embarrassingly simple:
+- One HTML file
+- Tailwind CDN
+- localStorage
+- Service worker (for offline)
+
+Zero server costs. Zero data liability. Zero reasons to ever sell user data because there's none to sell.
+
+[6/6] Free: soberstreak.surge.sh
+
+If you're building habit apps, the bar for trust is higher than most niches. Build accordingly.
+
+---
+
+POSTING NOTES:
+- Tweet 1: Post from @printmaxxer, tag r/privacy, r/nofap communities
+- Tweet 2: Post from @printmaxxer
+- Tweet 3: Post from @printmaxxer as a builder take
+- Thread: Post all 6 parts as a thread. High engagement potential due to controversy angle.
+- Timing: Evenings 7-9pm for max impressions
+- Queue these after account warmup period

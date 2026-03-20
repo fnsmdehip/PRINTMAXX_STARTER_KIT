@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YogaStreak — Daily Practice Tracker</title>
+<meta name="description" content="Track your daily yoga streak. No account. No ads. All data stays on your device.">
+<meta name="theme-color" content="#7c3aed">
+<link rel="manifest" href="manifest.json">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { background: #0d0d1a; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .glass { background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.2); backdrop-filter: blur(10px); }
+  .glass-light { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+  .tab-active { background: rgba(124,58,237,0.3); border-color: rgba(124,58,237,0.6) !important; color: #c4b5fd; }
+  .badge-earned { background: rgba(124,58,237,0.2); border: 1px solid rgba(124,58,237,0.5); }
+  .badge-locked { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); opacity: 0.5; }
+  .heat-on { background: #7c3aed; }
+  .heat-off { background: rgba(255,255,255,0.06); }
+  .heat-today { background: #a78bfa; box-shadow: 0 0 6px rgba(167,139,250,0.6); }
+  .slide-up { animation: slideUp 0.3s ease; }
+  @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .btn-primary { background: #7c3aed; transition: background 0.2s; }
+  .btn-primary:hover { background: #6d28d9; }
+  .btn-danger { background: rgba(239,68,68,0.2); border: 1px solid rgba(239,68,68,0.4); }
+  .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 50; display: flex; align-items: flex-end; justify-content: center; }
+  .modal-card { background: #1a1a2e; border: 1px solid rgba(124,58,237,0.3); border-radius: 20px 20px 0 0; width: 100%; max-width: 480px; padding: 24px; }
+  .toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); background: #7c3aed; color: white; padding: 10px 20px; border-radius: 20px; font-size: 14px; z-index: 100; animation: fadeInOut 2s ease forwards; }
+  @keyframes fadeInOut { 0%{opacity:0;transform:translateX(-50%) translateY(10px)} 15%{opacity:1;transform:translateX(-50%) translateY(0)} 80%{opacity:1} 100%{opacity:0} }
+</style>
+</head>
+<body class="min-h-screen pb-20">
+
+<div id="app">
+  <!-- Header -->
+  <div class="glass sticky top-0 z-40 px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">🧘</span>
+      <span class="font-bold text-purple-300 text-lg">YogaStreak</span>
+    </div>
+    <div id="header-streak" class="text-sm text-purple-300 font-medium"></div>
+  </div>
+
+  <!-- Tab nav -->
+  <div class="flex gap-2 px-4 pt-4 pb-2">
+    <button id="tab-today" onclick="switchTab('today')" class="glass flex-1 py-2 text-sm rounded-lg text-center border border-transparent">Today</button>
+    <button id="tab-badges" onclick="switchTab('badges')" class="glass flex-1 py-2 text-sm rounded-lg text-center border border-transparent">Badges</button>
+    <button id="tab-history" onclick="switchTab('history')" class="glass flex-1 py-2 text-sm rounded-lg text-center border border-transparent">History</button>
+    <button id="tab-poses" onclick="switchTab('poses')" class="glass flex-1 py-2 text-sm rounded-lg text-center border border-transparent">Poses</button>
+  </div>
+
+  <!-- Tab: Today -->
+  <div id="view-today" class="px-4 py-2 slide-up">
+    <div class="glass rounded-2xl p-6 text-center mb-4">
+      <div id="streak-number" class="text-7xl font-black text-white mb-1"></div>
+      <div class="text-purple-300 text-lg font-medium mb-2">day streak</div>
+      <div id="streak-label" class="text-sm text-slate-400 mb-4"></div>
+      <div id="log-btn-wrap"></div>
+    </div>
+
+    <div id="session-detail" class="glass-light rounded-xl p-4 mb-4 hidden">
+      <div class="text-xs text-slate-500 uppercase tracking-wide mb-2">Today's session</div>
+      <div id="session-summary" class="text-sm text-slate-300"></div>
+    </div>
+
+    <div class="glass-light rounded-xl p-4 mb-4">
+      <div class="text-xs text-slate-500 uppercase tracking-wide mb-3">Next milestone</div>
+      <div id="next-milestone" class="text-sm"></div>
+    </div>
+
+    <div class="glass-light rounded-xl p-4 mb-4">
+      <div class="text-xs text-slate-500 uppercase tracking-wide mb-3">7-day view</div>
+      <div id="week-dots" class="flex gap-2 justify-center"></div>
+    </div>
+
+    <div id="reset-wrap" class="mt-4 hidden">
+      <button onclick="confirmReset()" class="btn-danger w-full py-3 rounded-xl text-sm text-red-400">Reset streak</button>
+    </div>
+  </div>
+
+  <!-- Tab: Badges -->
+  <div id="view-badges" class="px-4 py-2 slide-up hidden">
+    <div class="text-xs text-slate-500 uppercase tracking-wide mb-3 px-1">Milestones</div>
+    <div id="badges-grid" class="grid grid-cols-3 gap-3"></div>
+  </div>
+
+  <!-- Tab: History -->
+  <div id="view-history" class="px-4 py-2 slide-up hidden">
+    <div class="text-xs text-slate-500 uppercase tracking-wide mb-3 px-1">13-week heatmap</div>
+    <div id="heatmap" class="grid gap-1 mb-6" style="grid-template-columns: repeat(13,1fr)"></div>
+    <div class="text-xs text-slate-500 uppercase tracking-wide mb-3 px-1">Session log</div>
+    <div id="session-log" class="space-y-2"></div>
+    <div id="no-sessions" class="text-center text-slate-500 py-8 hidden">No sessions logged yet</div>
+  </div>
+
+  <!-- Tab: Poses -->
+  <div id="view-poses" class="px-4 py-2 slide-up hidden">
+    <div class="text-xs text-slate-500 uppercase tracking-wide mb-3 px-1">Practice styles</div>
+    <div id="poses-list" class="space-y-3"></div>
+  </div>
+</div>
+
+<!-- Log session modal -->
+<div id="log-modal" class="modal-bg hidden">
+  <div class="modal-card">
+    <h3 class="font-bold text-white mb-4">Log today's practice</h3>
+    <div class="space-y-3">
+      <div>
+        <label class="text-xs text-slate-400 mb-1 block">Style</label>
+        <select id="log-style" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white">
+          <option value="Vinyasa">Vinyasa</option>
+          <option value="Hatha">Hatha</option>
+          <option value="Yin">Yin</option>
+          <option value="Power">Power</option>
+          <option value="Restorative">Restorative</option>
+          <option value="Ashtanga">Ashtanga</option>
+          <option value="Kundalini">Kundalini</option>
+          <option value="Flow">Flow / Custom</option>
+        </select>
+      </div>
+      <div>
+        <label class="text-xs text-slate-400 mb-1 block">Duration (minutes)</label>
+        <input id="log-duration" type="number" min="1" max="180" placeholder="30" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white">
+      </div>
+      <div>
+        <label class="text-xs text-slate-400 mb-1 block">Note (optional)</label>
+        <input id="log-note" type="text" maxlength="80" placeholder="How did it feel?" class="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white">
+      </div>
+    </div>
+    <div class="flex gap-3 mt-5">
+      <button onclick="closeLogModal()" class="flex-1 py-3 rounded-xl text-sm glass-light">Cancel</button>
+      <button onclick="saveSession()" class="btn-primary flex-1 py-3 rounded-xl text-sm font-medium text-white">Log it</button>
+    </div>
+  </div>
+</div>
+
+<!-- Reset confirm modal -->
+<div id="reset-modal" class="modal-bg hidden">
+  <div class="modal-card">
+    <h3 class="font-bold text-white mb-2">Reset streak?</h3>
+    <p class="text-sm text-slate-400 mb-5">This clears your current streak count. Your session history stays intact.</p>
+    <div class="flex gap-3">
+      <button onclick="closeResetModal()" class="flex-1 py-3 rounded-xl text-sm glass-light">Cancel</button>
+      <button onclick="doReset()" class="flex-1 py-3 rounded-xl text-sm bg-red-600 text-white">Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom nav -->
+<nav class="fixed bottom-0 left-0 right-0 glass border-t border-purple-900/30 flex justify-around py-3 px-4 z-40">
+  <button onclick="switchTab('today')" class="flex flex-col items-center gap-1 text-xs text-slate-400" id="nav-today">
+    <span class="text-lg">🏠</span>Today
+  </button>
+  <button onclick="switchTab('badges')" class="flex flex-col items-center gap-1 text-xs text-slate-400" id="nav-badges">
+    <span class="text-lg">🏆</span>Badges
+  </button>
+  <button onclick="switchTab('history')" class="flex flex-col items-center gap-1 text-xs text-slate-400" id="nav-history">
+    <span class="text-lg">📅</span>History
+  </button>
+  <button onclick="switchTab('poses')" class="flex flex-col items-center gap-1 text-xs text-slate-400" id="nav-poses">
+    <span class="text-lg">🧘</span>Poses
+  </button>
+</nav>
+
+<script>
+const STORE_KEY = 'yogastreak_v1';
+const MILESTONES = [
+  {days:1,emoji:'🌱',label:'First Practice'},
+  {days:3,emoji:'🌿',label:'3-Day Flow'},
+  {days:7,emoji:'🌸',label:'One Week'},
+  {days:14,emoji:'🌺',label:'Two Weeks'},
+  {days:21,emoji:'🔥',label:'21-Day Habit'},
+  {days:30,emoji:'💜',label:'One Month'},
+  {days:60,emoji:'🦋',label:'Two Months'},
+  {days:90,emoji:'🌙',label:'90 Days'},
+  {days:180,emoji:'⭐',label:'Half Year'},
+  {days:365,emoji:'🏯',label:'Full Year'}
+];
+const POSES = [
+  {name:'Vinyasa',desc:'Breath-linked movement. Builds strength, flexibility, and cardio. Great for energy and flow states.',benefit:'Builds full-body strength + cardiovascular fitness'},
+  {name:'Hatha',desc:'Classic posture practice. Slower pace. Excellent for beginners and injury recovery.',benefit:'Improves flexibility + body awareness'},
+  {name:'Yin',desc:'Deep passive holds (3-7 min). Targets connective tissue and fascia. Excellent for recovery.',benefit:'Reduces chronic pain + improves joint mobility'},
+  {name:'Power',desc:'Athletic vinyasa variant. High intensity. Burns 250-400 cal/hr.',benefit:'Builds lean muscle + burns fat'},
+  {name:'Restorative',desc:'Completely passive poses with props. Activates parasympathetic nervous system.',benefit:'Deep stress recovery + sleep quality'},
+  {name:'Ashtanga',desc:'Fixed 6-series sequence. The most rigorous style. Athletes love it.',benefit:'Peak performance + mental discipline'},
+  {name:'Kundalini',desc:'Breathwork + movement + meditation. Unique energy system work.',benefit:'Nervous system reset + mental clarity'},
+];
+const QUOTES = [
+  'The pose begins when you want to leave it.',
+  'Yoga is not about touching your toes. It\'s about what you learn on the way down.',
+  'Inhale the future. Exhale the past.',
+  'The body benefits from movement. The mind benefits from stillness.',
+  'Yoga is the journey of the self, through the self, to the self.',
+];
+
+let state = {
+  startDate: null,
+  currentStreak: 0,
+  longestStreak: 0,
+  sessions: [],
+};
+let currentTab = 'today';
+
+function loadState() {
+  const raw = localStorage.getItem(STORE_KEY);
+  if (raw) {
+    try { state = JSON.parse(raw); } catch(e) {}
+  }
+}
+function saveState() {
+  localStorage.setItem(STORE_KEY, JSON.stringify(state));
+}
+function today() {
+  return new Date().toISOString().split('T')[0];
+}
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+function toast(msg) {
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2100);
+}
+
+function calcStreak() {
+  const sessions = state.sessions || [];
+  const dates = [...new Set(sessions.map(s => s.date))].sort().reverse();
+  if (!dates.length) return { current: 0, longest: 0 };
+  const t = today();
+  let current = 0;
+  let d = new Date(t);
+  for (let i = 0; i < 400; i++) {
+    const ds = d.toISOString().split('T')[0];
+    if (dates.includes(ds)) {
+      current++;
+      d.setDate(d.getDate() - 1);
+    } else if (i === 0) {
+      // today not practiced yet, check yesterday
+      d.setDate(d.getDate() - 1);
+      const ys = d.toISOString().split('T')[0];
+      if (!dates.includes(ys)) break;
+      current++;
+      d.setDate(d.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+  let longest = 0, run = 0;
+  for (let i = dates.length - 1; i >= 0; i--) {
+    if (i === dates.length - 1) { run = 1; continue; }
+    const prev = new Date(dates[i+1]);
+    const curr = new Date(dates[i]);
+    const diff = (prev - curr) / 86400000;
+    if (diff === 1) run++;
+    else run = 1;
+    if (run > longest) longest = run;
+  }
+  if (run > longest) longest = run;
+  return { current, longest };
+}
+
+function hasSessionToday() {
+  return (state.sessions || []).some(s => s.date === today());
+}
+
+function render() {
+  const { current, longest } = calcStreak();
+  state.currentStreak = current;
+  state.longestStreak = Math.max(longest, state.longestStreak || 0);
+
+  document.getElementById('header-streak').textContent = current > 0 ? current + ' day streak' : 'Start your streak';
+  document.getElementById('streak-number').textContent = current;
+  document.getElementById('streak-label').textContent = current === 0
+    ? QUOTES[Math.floor(Math.random() * QUOTES.length)]
+    : 'Keep the streak alive';
+
+  // Log button
+  const wrap = document.getElementById('log-btn-wrap');
+  wrap.innerHTML = '';
+  if (!hasSessionToday()) {
+    const btn = el('button', 'btn-primary px-8 py-3 rounded-xl font-medium text-white text-lg', '+ Log practice');
+    btn.onclick = openLogModal;
+    wrap.appendChild(btn);
+  } else {
+    const done = el('div', 'flex items-center justify-center gap-2 text-purple-300 text-lg', '');
+    done.appendChild(el('span', 'text-2xl', '✓'));
+    done.appendChild(el('span', '', 'Practiced today'));
+    wrap.appendChild(done);
+  }
+
+  // Session detail
+  const todaySessions = (state.sessions || []).filter(s => s.date === today());
+  const detailBox = document.getElementById('session-detail');
+  if (todaySessions.length > 0) {
+    detailBox.classList.remove('hidden');
+    const s = todaySessions[todaySessions.length - 1];
+    const sum = document.getElementById('session-summary');
+    sum.textContent = s.style + (s.duration ? ' · ' + s.duration + ' min' : '') + (s.note ? ' · ' + s.note : '');
+  } else {
+    detailBox.classList.add('hidden');
+  }
+
+  // Next milestone
+  const nextM = MILESTONES.find(m => m.days > current);
+  const nmEl = document.getElementById('next-milestone');
+  nmEl.innerHTML = '';
+  if (nextM) {
+    const row = el('div', 'flex items-center justify-between');
+    row.appendChild(el('span', 'text-slate-300 text-sm', nextM.emoji + ' ' + nextM.label + ' (' + nextM.days + ' days)'));
+    const left = nextM.days - current;
+    row.appendChild(el('span', 'text-purple-300 text-sm', left + ' to go'));
+    nmEl.appendChild(row);
+  } else {
+    nmEl.appendChild(el('span', 'text-purple-300 text-sm', '365 day master — legend 🏯'));
+  }
+
+  // Week dots
+  renderWeekDots();
+  // Reset button
+  document.getElementById('reset-wrap').classList.toggle('hidden', current === 0);
+  renderBadges();
+  renderHeatmap();
+  renderSessionLog();
+  renderPoses();
+}
+
+function renderWeekDots() {
+  const wrap = document.getElementById('week-dots');
+  wrap.innerHTML = '';
+  const sessions = state.sessions || [];
+  const dates = new Set(sessions.map(s => s.date));
+  const DAYS = ['S','M','T','W','T','F','S'];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const ds = d.toISOString().split('T')[0];
+    const isToday = ds === today();
+    const done = dates.has(ds);
+    const dot = el('div', 'flex flex-col items-center gap-1 flex-1');
+    const circle = el('div', 'w-8 h-8 rounded-full flex items-center justify-center text-xs ' + (done ? 'heat-on text-white' : (isToday ? 'border-2 border-purple-400 text-purple-300' : 'heat-off text-slate-500')));
+    circle.textContent = done ? '✓' : DAYS[d.getDay()];
+    dot.appendChild(circle);
+    const label = el('div', 'text-xs text-slate-500', DAYS[d.getDay()]);
+    dot.appendChild(label);
+    wrap.appendChild(dot);
+  }
+}
+
+function renderBadges() {
+  const grid = document.getElementById('badges-grid');
+  grid.innerHTML = '';
+  const { current } = calcStreak();
+  MILESTONES.forEach(m => {
+    const earned = current >= m.days;
+    const card = el('div', (earned ? 'badge-earned' : 'badge-locked') + ' rounded-xl p-3 text-center');
+    card.appendChild(el('div', 'text-3xl mb-1', m.emoji));
+    card.appendChild(el('div', 'text-xs font-medium text-white', m.label));
+    card.appendChild(el('div', 'text-xs text-slate-500 mt-1', m.days + ' days'));
+    if (earned) card.appendChild(el('div', 'text-xs text-purple-400 mt-1', 'Earned'));
+    grid.appendChild(card);
+  });
+}
+
+function renderHeatmap() {
+  const hm = document.getElementById('heatmap');
+  hm.innerHTML = '';
+  const sessions = state.sessions || [];
+  const dates = new Set(sessions.map(s => s.date));
+  const t = new Date(today());
+  for (let i = 90; i >= 0; i--) {
+    const d = new Date(t);
+    d.setDate(d.getDate() - i);
+    const ds = d.toISOString().split('T')[0];
+    const isToday = ds === today();
+    const done = dates.has(ds);
+    const cell = el('div', 'rounded-sm aspect-square ' + (isToday ? 'heat-today' : (done ? 'heat-on' : 'heat-off')));
+    hm.appendChild(cell);
+  }
+}
+
+function renderSessionLog() {
+  const log = document.getElementById('session-log');
+  const none = document.getElementById('no-sessions');
+  const sessions = (state.sessions || []).slice().reverse();
+  log.innerHTML = '';
+  if (!sessions.length) { none.classList.remove('hidden'); return; }
+  none.classList.add('hidden');
+  sessions.slice(0, 30).forEach(s => {
+    const row = el('div', 'glass-light rounded-xl p-3');
+    const top = el('div', 'flex items-center justify-between mb-1');
+    top.appendChild(el('span', 'text-sm font-medium text-white', s.style));
+    top.appendChild(el('span', 'text-xs text-slate-400', s.date));
+    row.appendChild(top);
+    if (s.duration || s.note) {
+      const bot = el('div', 'text-xs text-slate-400');
+      bot.textContent = (s.duration ? s.duration + ' min' : '') + (s.duration && s.note ? ' · ' : '') + (s.note || '');
+      row.appendChild(bot);
+    }
+    log.appendChild(row);
+  });
+}
+
+function renderPoses() {
+  const list = document.getElementById('poses-list');
+  list.innerHTML = '';
+  POSES.forEach(p => {
+    const card = el('div', 'glass-light rounded-xl p-4');
+    const title = el('div', 'font-medium text-white mb-1', p.name);
+    const desc = el('div', 'text-sm text-slate-400 mb-2', p.desc);
+    const benefit = el('div', 'text-xs text-purple-300', '→ ' + p.benefit);
+    card.appendChild(title); card.appendChild(desc); card.appendChild(benefit);
+    list.appendChild(card);
+  });
+}
+
+function switchTab(tab) {
+  ['today','badges','history','poses'].forEach(t => {
+    document.getElementById('view-' + t).classList.toggle('hidden', t !== tab);
+    document.getElementById('tab-' + t).classList.toggle('tab-active', t === tab);
+    document.getElementById('nav-' + t).classList.toggle('text-purple-300', t === tab);
+    document.getElementById('nav-' + t).classList.toggle('text-slate-400', t !== tab);
+  });
+  currentTab = tab;
+}
+
+function openLogModal() {
+  document.getElementById('log-modal').classList.remove('hidden');
+  document.getElementById('log-duration').value = '';
+  document.getElementById('log-note').value = '';
+}
+function closeLogModal() {
+  document.getElementById('log-modal').classList.add('hidden');
+}
+function saveSession() {
+  const style = document.getElementById('log-style').value;
+  const dur = parseInt(document.getElementById('log-duration').value) || 0;
+  const note = document.getElementById('log-note').value.trim().slice(0, 80);
+  if (!style) { toast('Select a style'); return; }
+  if (!state.sessions) state.sessions = [];
+  const existing = state.sessions.findIndex(s => s.date === today());
+  const entry = { date: today(), style, duration: dur || null, note: note || null };
+  if (existing >= 0) state.sessions[existing] = entry;
+  else state.sessions.push(entry);
+  saveState();
+  closeLogModal();
+  render();
+  toast('Practice logged');
+}
+
+function confirmReset() { document.getElementById('reset-modal').classList.remove('hidden'); }
+function closeResetModal() { document.getElementById('reset-modal').classList.add('hidden'); }
+function doReset() {
+  state.currentStreak = 0;
+  state.startDate = null;
+  saveState();
+  closeResetModal();
+  render();
+  toast('Streak reset');
+}
+
+// SW registration
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+
+loadState();
+render();
+switchTab('today');
+</script>
+</body>
+</html>

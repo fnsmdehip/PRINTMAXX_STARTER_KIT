@@ -4,7 +4,7 @@
 
 ---
 
-## DAY 1 — Monday: Establishing Authority
+## DAY 1, Monday: Establishing Authority
 
 **Tweet 1**
 you have 14 unread messages from me. you haven't opened them. interesting choice.
@@ -22,17 +22,17 @@ block list update: 3 names added today. talked a big game, sent nothing. bye.
 the men who pay on time sleep better. fact.
 
 **Fanvue Post 1**
-Good morning. I'm in a giving mood — for 6 hours only. First 5 who tribute $25+ get a personalized voice note. clock starts now.
+Good morning. I'm in a giving mood, for 6 hours only. First 5 who tribute $25+ get a personalized voice note. clock starts now.
 
 **Fanvue Post 2**
 Day 1 results: 3 new good boys, $340 in tributes before 2pm. i don't post wins to brag. i post them so you know what you're missing by hesitating.
 
 **Reddit Post** (r/findom)
-New here. Running a 30-day accountability experiment — daily check-ins, tribute goals, public ranking of who actually shows up vs who just lurks. DM if interested in being tracked. No fake subs, no games.
+New here. Running a 30-day accountability experiment, daily check-ins, tribute goals, public ranking of who actually shows up vs who just lurks. DM if interested in being tracked. No fake subs, no games.
 
 ---
 
-## DAY 2 — Tuesday: Scarcity Push
+## DAY 2, Tuesday: Scarcity Push
 
 **Tweet 1**
 only accepting 3 new subs this week. 2 spots already filled. you know what to do.
@@ -60,7 +60,7 @@ PSA: if you're messaging multiple dommes asking for "free trials" you're going t
 
 ---
 
-## DAY 3 — Wednesday: Proof Day
+## DAY 3, Wednesday: Proof Day
 
 **Tweet 1**
 screenshot dump incoming. 6 tributes before noon. one of you sent $200 "just because." that's my wednesday.
@@ -88,7 +88,7 @@ honest question for subs: what's the actual difference between a domme you've tr
 
 ---
 
-## DAY 4 — Thursday: Rate Increase Announcement
+## DAY 4, Thursday: Rate Increase Announcement
 
 **Tweet 1**
 rates went up today. i said they would. i meant it. the ones who locked in yesterday made a smart decision.
@@ -109,14 +109,14 @@ the pipeline is always moving. someone takes your spot within 24 hours of you le
 rate card update as of today: standard tribute $30 (was $20). custom requests start at $120 (was $80). voice notes $60 (was $40). subscribe before midnight to lock in your current rate.
 
 **Fanvue Post 2**
-three people upgraded their subscriptions today after the rate announcement. they said "i knew you weren't bluffing." that's the relationship i want — you know i mean what i say.
+three people upgraded their subscriptions today after the rate announcement. they said "i knew you weren't bluffing." that's the relationship i want, you know i mean what i say.
 
 **Reddit Post** (r/findom)
-unpopular opinion: dommes who never raise rates are sending a signal. value is relative. if you're the same price in 2024 as 2022, what does that say? this isn't shade — it's economics.
+unpopular opinion: dommes who never raise rates are sending a signal. value is relative. if you're the same price in 2024 as 2022, what does that say? this isn't shade, it's economics.
 
 ---
 
-## DAY 5 — Friday: Weekend Energy
+## DAY 5, Friday: Weekend Energy
 
 **Tweet 1**
 friday night and i'm deciding which tribute gets acknowledged first. the ones who send early always win.
@@ -125,7 +125,7 @@ friday night and i'm deciding which tribute gets acknowledged first. the ones wh
 my weekend starts when the tributes do. yours starts when i say so.
 
 **Tweet 3**
-$300 in before 5pm. the weekend subs are a different breed — they plan ahead. they're my favorites.
+$300 in before 5pm. the weekend subs are a different breed, they plan ahead. they're my favorites.
 
 **Tweet 4**
 if you're "saving up" you've already lost the window. the window was yesterday.
@@ -134,7 +134,7 @@ if you're "saving up" you've already lost the window. the window was yesterday.
 tonight: three of my long-term subs get priority access. they've earned it. month over month, they show up. that's how this works.
 
 **Fanvue Post 1**
-Friday drop: spend $100+ on Fanvue this weekend and i'll add you to my private watchlist — first to know when i post limited content. 48-hour window only.
+Friday drop: spend $100+ on Fanvue this weekend and i'll add you to my private watchlist, first to know when i post limited content. 48-hour window only.
 
 **Fanvue Post 2**
 end of week tally: 22 tributes. $1,840 total. 4 new additions to my inner circle. this is what a productive week looks like. the ones in my inner circle know what they get for it.
@@ -144,7 +144,7 @@ made $1,800+ in tributes this week with zero advertising, zero pay-per-view spam
 
 ---
 
-## DAY 6 — Saturday: Exclusive Access
+## DAY 6, Saturday: Exclusive Access
 
 **Tweet 1**
 saturday morning drop: limited content going live at noon. first 10 tributes over $50 get early access. no exceptions, no begging.
@@ -159,7 +159,7 @@ he's been subscribed for 4 months. hasn't missed a week. that kind of loyalty ge
 you can spend your saturday doing whatever. or you can spend it earning my attention. i know which one you'll regret more.
 
 **Tweet 5**
-the weekend dip is real — most dommes lose engagement saturday. mine goes up. different clientele. better clientele.
+the weekend dip is real, most dommes lose engagement saturday. mine goes up. different clientele. better clientele.
 
 **Fanvue Post 1**
 Saturday exclusive: i'm creating a ranked list of my top 10 subs this month. it posts sunday night. if you want your name on it, you know what to do before midnight.
@@ -172,7 +172,7 @@ strategy that works: posting my "good boys" list weekly with initials only. the 
 
 ---
 
-## DAY 7 — Sunday: Reflection + Rankings
+## DAY 7, Sunday: Reflection + Rankings
 
 **Tweet 1**
 week 1 complete. good boys list going up in 2 hours. you know who you are.
@@ -190,17 +190,17 @@ sundays are for reviewing who showed up. the answer tells me everything i need t
 new week starts tomorrow. fresh slate. the men who didn't show up this week get one more chance. one.
 
 **Fanvue Post 1**
-WEEK 1 GOOD BOYS LIST: [M.T] — 4 tributes, $380 total. [J.R] — 3 tributes, $290 total. [A.K] — daily check-ins, $210 total. these men get first access all week. congratulations.
+WEEK 1 GOOD BOYS LIST: [M.T], 4 tributes, $380 total. [J.R], 3 tributes, $290 total. [A.K], daily check-ins, $210 total. these men get first access all week. congratulations.
 
 **Fanvue Post 2**
 week 2 preview: i'm raising the inner circle buy-in. currently $200/week to maintain status. going to $250 starting monday. the three men currently in it have already confirmed. slots available for one more.
 
 **Reddit Post** (r/findom)
-week 1 in review: what worked — daily posting with clear CTAs, public rankings, scarcity (limited slots). what didn't — open DMs (got flooded with non-tributers). closing DMs to subs-only next week. learning as i go.
+week 1 in review: what worked, daily posting with clear CTAs, public rankings, scarcity (limited slots). what didn't, open DMs (got flooded with non-tributers). closing DMs to subs-only next week. learning as i go.
 
 ---
 
-## DAY 8 — Monday: Week 2 Opens
+## DAY 8, Monday: Week 2 Opens
 
 **Tweet 1**
 week 2. new goals. same standards. higher bar.
@@ -228,7 +228,7 @@ genuine question for experienced dommes: how do you handle the "i'll tribute aft
 
 ---
 
-## DAY 9 — Tuesday: Psychological Play
+## DAY 9, Tuesday: Psychological Play
 
 **Tweet 1**
 he hasn't messaged in 36 hours. i haven't noticed. that's not a threat. that's just honesty.
@@ -256,7 +256,7 @@ something i've noticed: the subs who tributed the most also asked the fewest "wh
 
 ---
 
-## DAY 10 — Wednesday: Mid-Week Power
+## DAY 10, Wednesday: Mid-Week Power
 
 **Tweet 1**
 wednesday check-in: who's on track for their weekly tribute goal? who's already behind? i can tell by who messages and who doesn't.
@@ -284,7 +284,7 @@ finance confession sessions are my highest-converting offer. $85 for 20 min. no 
 
 ---
 
-## DAY 11 — Thursday: Loyalty Recognition
+## DAY 11, Thursday: Loyalty Recognition
 
 **Tweet 1**
 shoutout to the man who's been consistent for 6 weeks straight. you know who you are. the consistency is noted. the loyalty is rewarded.
@@ -308,11 +308,11 @@ LOYALTY TIER PREVIEW: launching friday. 90+ days of consistent tribute qualifies
 the 8 men who qualify for the loyalty tier already know. i messaged them directly. their reaction told me everything about why they've lasted 90+ days.
 
 **Reddit Post** (r/findom)
-loyalty programs in findom — anyone else run one? i'm launching a 90-day consistent tribute = loyalty tier. curious what rewards others use. trying to make it feel special, not just another subscription level.
+loyalty programs in findom, anyone else run one? i'm launching a 90-day consistent tribute = loyalty tier. curious what rewards others use. trying to make it feel special, not just another subscription level.
 
 ---
 
-## DAY 12 — Friday: Launch Day
+## DAY 12, Friday: Launch Day
 
 **Tweet 1**
 loyalty tier is live. 8 men auto-qualified. 3 more slots available for new subs who commit to 90 days today. DM me.
@@ -336,11 +336,11 @@ Loyalty Tier officially launched. Current members: 8. Monthly value per member: 
 3 new commitment applications received today. reviewing by monday. the ones who came serious got serious responses. the ones who came with questions got radio silence.
 
 **Reddit Post** (r/findom)
-launched my loyalty tier today. 8 auto-qualified, 3 applications for new spots. zero advertising needed — just announced it on fanvue and here. the men who already show up consistently are the easiest to convert to higher-tier commitment.
+launched my loyalty tier today. 8 auto-qualified, 3 applications for new spots. zero advertising needed, just announced it on fanvue and here. the men who already show up consistently are the easiest to convert to higher-tier commitment.
 
 ---
 
-## DAY 13 — Saturday: Social Proof Dump
+## DAY 13, Saturday: Social Proof Dump
 
 **Tweet 1**
 saturday proof dump: 3 screenshots, 6 tributes, $780 today alone. the weekend crowd is serious.
@@ -364,11 +364,11 @@ Saturday drop: tribute $100+ today and i'll send a personalized audio tribute ac
 4 personalized audio slots filled. 2 remain. getting my coffee. starting recordings in 30 minutes.
 
 **Reddit Post** (r/findom)
-personalized audio acknowledgments as a tribute reward — highest engagement offer i've run. people want to hear their name. it's that simple. $100 ask, 4 sold in under an hour. runs on almost no effort.
+personalized audio acknowledgments as a tribute reward, highest engagement offer i've run. people want to hear their name. it's that simple. $100 ask, 4 sold in under an hour. runs on almost no effort.
 
 ---
 
-## DAY 14 — Sunday: Week 2 Rankings
+## DAY 14, Sunday: Week 2 Rankings
 
 **Tweet 1**
 week 2 rankings going up tonight. the top 3 this week beat last week's top 3. the bar keeps rising.
@@ -386,7 +386,7 @@ week 3 preview: harder. cleaner. less tolerance. more reward for the ones who ma
 if you want to be on the week 3 ranking, the window to get in starts monday. not today. monday.
 
 **Fanvue Post 1**
-WEEK 2 GOOD BOYS: [D.F] — $520 (week's top). [M.T] — $410 (second week in a row). [J.R] — $350. Three men who understand the assignment. This is what staying in the tier looks like.
+WEEK 2 GOOD BOYS: [D.F], $520 (week's top). [M.T], $410 (second week in a row). [J.R], $350. Three men who understand the assignment. This is what staying in the tier looks like.
 
 **Fanvue Post 2**
 week 2 total: $2,280. beat last week by $440. week 3 target: $3,000. one of you is going to help me hit it. probably more than one.
@@ -396,13 +396,13 @@ week 2 stats: $2,280 in tributes, 14 consistent subs, 4 in loyalty tier, 9 block
 
 ---
 
-## DAY 15 — Monday: Week 3 Standards
+## DAY 15, Monday: Week 3 Standards
 
 **Tweet 1**
 week 3 starts today with higher standards and exactly zero exceptions.
 
 **Tweet 2**
-$3,000 target this week. not sharing it to pressure you. sharing it because transparency creates accountability — mine and yours.
+$3,000 target this week. not sharing it to pressure you. sharing it because transparency creates accountability, mine and yours.
 
 **Tweet 3**
 if you're just joining, here's what you need to know: consistent beats large. showing up beats big gestures once a month.
@@ -420,17 +420,17 @@ Silent period: week 3, days 1-3. DMs off on Twitter. Only Fanvue messages from s
 day 1 of silent period: 7 Fanvue messages from existing subs. 2 new subscriptions just to get access. the filter is working.
 
 **Reddit Post** (r/findom)
-running a "silent period" experiment — closing twitter DMs for 3 days, fanvue-only access. theory: the men who subscribe just to reach me are higher-quality than the DM crowd. will report back by thursday.
+running a "silent period" experiment, closing twitter DMs for 3 days, fanvue-only access. theory: the men who subscribe just to reach me are higher-quality than the DM crowd. will report back by thursday.
 
 ---
 
-## DAY 16 — Tuesday: During Silent Period
+## DAY 16, Tuesday: During Silent Period
 
 **Tweet 1**
 silent period day 2. the men who understand are in my Fanvue. the men who don't are watching this post.
 
 **Tweet 2**
-every tool you've been given, every piece of content, every moment of attention — all of it pointed here. and here requires commitment.
+every tool you've been given, every piece of content, every moment of attention, all of it pointed here. and here requires commitment.
 
 **Tweet 3**
 a man told me he'd "check back in when the silent period ends." i won't remember him when it does.
@@ -452,7 +452,7 @@ day 2 update: 4 new fanvue subscriptions as a direct result of the silent period
 
 ---
 
-## DAY 17 — Wednesday: Silent Period Ends
+## DAY 17, Wednesday: Silent Period Ends
 
 **Tweet 1**
 silent period over. DMs open. 14 messages waiting. i'll respond in order of tribute amount sent during the silent period.
@@ -461,7 +461,7 @@ silent period over. DMs open. 14 messages waiting. i'll respond in order of trib
 the results: 4 new subs, $890 in tributes over 3 days with zero active promotion. inaccessibility works.
 
 **Tweet 3**
-i'll be honest — coming back to open DMs is less interesting than i expected. the fanvue crowd is just better.
+i'll be honest, coming back to open DMs is less interesting than i expected. the fanvue crowd is just better.
 
 **Tweet 4**
 the 3 days showed me who my real audience is. restructuring how i post based on that.
@@ -476,11 +476,11 @@ Silent period conclusion: $890 in 3 days, zero active promotion, 4 new subscript
 responding to the week's messages now. if you sent a tribute during the silent period, you're first. if you subscribed during the silent period, you're second. everyone else, i'll get to you.
 
 **Reddit Post** (r/findom)
-silent period results: $890 in 3 days, 4 new subs, 14 DMs waiting on open day. the scarcity worked. key insight: inaccessibility doesn't lose you followers — it filters them. better audience, better tributes, better energy. making it permanent.
+silent period results: $890 in 3 days, 4 new subs, 14 DMs waiting on open day. the scarcity worked. key insight: inaccessibility doesn't lose you followers, it filters them. better audience, better tributes, better energy. making it permanent.
 
 ---
 
-## DAY 18 — Thursday: Momentum Post
+## DAY 18, Thursday: Momentum Post
 
 **Tweet 1**
 halfway through week 3. $1,800 of the $3,000 target already hit. the math is working.
@@ -498,17 +498,17 @@ someone asked me for my "secret." the secret is not having secrets. show up, set
 if you want in on week 4 inner circle, the application window opens sunday. 2 spots available.
 
 **Fanvue Post 1**
-Priority 48 hours for silent period tributers — starting now. first access to tomorrow's content drop. first in the queue for DMs. first on the week 3 ranking. you know who you are.
+Priority 48 hours for silent period tributers, starting now. first access to tomorrow's content drop. first in the queue for DMs. first on the week 3 ranking. you know who you are.
 
 **Fanvue Post 2**
 content drop preview for priority members: unboxing + budget review session. dropping tonight at 9pm. if you're not in the priority tier, it goes public friday noon.
 
 **Reddit Post** (r/findom)
-halfway through week 3: $1,800 of $3,000 target. the silent period + priority reward system is the highest-converting combination i've run. treating consistent subs differently from new ones is not just ethics — it's strategy.
+halfway through week 3: $1,800 of $3,000 target. the silent period + priority reward system is the highest-converting combination i've run. treating consistent subs differently from new ones is not just ethics, it's strategy.
 
 ---
 
-## DAY 19 — Friday: Content Drop
+## DAY 19, Friday: Content Drop
 
 **Tweet 1**
 content dropped at 9pm last night for priority members. going public now. 15-hour head start for the ones who earned it.
@@ -526,7 +526,7 @@ three men who've never interacted with me before tributed this week because of t
 i'll close DMs again monday. if you have something to say, today and tomorrow are your days.
 
 **Fanvue Post 1**
-Content live for everyone. Budget review + my take on financial dynamic relationships. 22 minutes. Priority members already gave me feedback — the comments are worth reading before you watch.
+Content live for everyone. Budget review + my take on financial dynamic relationships. 22 minutes. Priority members already gave me feedback, the comments are worth reading before you watch.
 
 **Fanvue Post 2**
 day 5 of week 3: 9 new comments, 6 tributes from new subscribers off the content drop alone. content converts when it's genuine. this one was.
@@ -536,7 +536,7 @@ content that converts: budget review + financial dynamic breakdown. 22 minutes, 
 
 ---
 
-## DAY 20 — Saturday: Weekend Push
+## DAY 20, Saturday: Weekend Push
 
 **Tweet 1**
 saturday hustle: $900 from the weekly target. 2 days left. someone always closes the gap on saturdays.
@@ -564,7 +564,7 @@ $500 tribute came in at 2:47pm. inner circle spot claimed. the man who was in se
 
 ---
 
-## DAY 21 — Sunday: Week 3 Wrap
+## DAY 21, Sunday: Week 3 Wrap
 
 **Tweet 1**
 week 3 final: $3,140. beat the target by $140. the pipeline works when you work it.
@@ -582,17 +582,17 @@ week 4 starts tomorrow. the bar moves again. it always moves.
 tomorrow: new rates, new access tiers, new targets. if you're in, be in. if you're not, the door is still open until midnight.
 
 **Fanvue Post 1**
-WEEK 3 FINAL RANKINGS: [D.F] $720 (3-week top performer), [M.T] $580, [K.S] $450. New inner circle: [A.R] who entered via direct $500 tribute. Next week's inner circle opens tomorrow — applications in the comments.
+WEEK 3 FINAL RANKINGS: [D.F] $720 (3-week top performer), [M.T] $580, [K.S] $450. New inner circle: [A.R] who entered via direct $500 tribute. Next week's inner circle opens tomorrow, applications in the comments.
 
 **Fanvue Post 2**
-3-week cumulative: $6,260 in tributes. 21 consistent subs. 4-person inner circle. 23 blocked. the number that matters most is the 21 consistent subs — that's the foundation. everything else builds on it.
+3-week cumulative: $6,260 in tributes. 21 consistent subs. 4-person inner circle. 23 blocked. the number that matters most is the 21 consistent subs, that's the foundation. everything else builds on it.
 
 **Reddit Post** (r/findom)
 3-week recap: $6,260 total, 21 consistent subs, 4 inner circle members, silent period strategy working, loyalty tier launched, content-to-tribute conversion tracked. biggest lesson: blocking fast creates a better pool faster than any promotional tactic. quality of subs = quality of income.
 
 ---
 
-## DAY 22 — Monday: Week 4 Begins
+## DAY 22, Monday: Week 4 Begins
 
 **Tweet 1**
 week 4 opens with 21 consistent subs and a higher standard than week 1 had.
@@ -610,26 +610,26 @@ if you're new this week: tribute first, questions second. that's the order.
 silent period starts today. DMs closed until thursday. you know where to find me.
 
 **Fanvue Post 1**
-Week 4 rate card: standard tribute $33 (up from $30). Custom requests $143 (up from $130). Voice note $72 (up from $65). Long-term subs locked at previous rate — forever, as long as you stay consistent.
+Week 4 rate card: standard tribute $33 (up from $30). Custom requests $143 (up from $130). Voice note $72 (up from $65). Long-term subs locked at previous rate, forever, as long as you stay consistent.
 
 **Fanvue Post 2**
 week 4 inner circle applications: 6 received. selecting 1 new member by wednesday. criteria: tribute history, consistency, quality of interaction. not just amount. not just length. combination.
 
 **Reddit Post** (r/findom)
-week 4 strategy: raising rates 10% while locking long-term subs at their current rate. the loyal ones get a permanent price advantage. the new ones pay market rate. this creates two incentives simultaneously — stay loyal, and tribute sooner rather than later.
+week 4 strategy: raising rates 10% while locking long-term subs at their current rate. the loyal ones get a permanent price advantage. the new ones pay market rate. this creates two incentives simultaneously, stay loyal, and tribute sooner rather than later.
 
 ---
 
-## DAY 23 — Tuesday: Value Delivery
+## DAY 23, Tuesday: Value Delivery
 
 **Tweet 1**
 silent period. no tweets except this one. you know where to find the real content.
 
 **Tweet 2**
-[no tweet — maintaining silence protocol]
+[no tweet, maintaining silence protocol]
 
 **Tweet 3**
-[no tweet — maintaining silence protocol]
+[no tweet, maintaining silence protocol]
 
 **Tweet 4**
 one post today. that's it. the men who know, know.
@@ -638,17 +638,17 @@ one post today. that's it. the men who know, know.
 [no tweet]
 
 **Fanvue Post 1**
-Delivering this week: budget confessional video (12 min), custom request roundup from last week's winners, and a reading — what your tribute amount says about where you are mentally. dropping tonight.
+Delivering this week: budget confessional video (12 min), custom request roundup from last week's winners, and a reading, what your tribute amount says about where you are mentally. dropping tonight.
 
 **Fanvue Post 2**
 "what your tribute amount says about you" post live. 8 tiers. brutally honest. 14 comments in the first hour. this one hit something real.
 
 **Reddit Post** (r/findom)
-content idea that performed: "what your tribute amount says about you" — 8 tiers, honest assessments, no judgment framing but very direct observations. highest engagement of any post this month. people want to be seen accurately, even if it's uncomfortable.
+content idea that performed: "what your tribute amount says about you", 8 tiers, honest assessments, no judgment framing but very direct observations. highest engagement of any post this month. people want to be seen accurately, even if it's uncomfortable.
 
 ---
 
-## DAY 24 — Wednesday: Inner Circle Selection
+## DAY 24, Wednesday: Inner Circle Selection
 
 **Tweet 1**
 inner circle selection happening today. 6 applied. 1 slot. the decision is made but i'm not announcing until the selected man tributes acceptance.
@@ -666,7 +666,7 @@ someone asked me why the inner circle matters if it's not "exclusive content." b
 week 4 is shaping up to be the best week so far. some of you are the reason.
 
 **Fanvue Post 1**
-Inner circle selection complete: [T.M] — 2 weeks consistent, exceptional quality of interaction, tribute history shows pattern not just peaks. Welcome. Your permanent rate is locked now.
+Inner circle selection complete: [T.M], 2 weeks consistent, exceptional quality of interaction, tribute history shows pattern not just peaks. Welcome. Your permanent rate is locked now.
 
 **Fanvue Post 2**
 inner circle is now 5 members. capacity is 6. one spot remains, opens week 5. the 5 current members have first right of renewal for week 5, which all 5 have confirmed.
@@ -676,10 +676,10 @@ inner circle selection process: reviewed 6 applications. selected based on consi
 
 ---
 
-## DAY 25 — Thursday: DMs Reopen
+## DAY 25, Thursday: DMs Reopen
 
 **Tweet 1**
-DMs open today and tomorrow. the silent period worked — $1,400 without a single DM response. the future is cleaner.
+DMs open today and tomorrow. the silent period worked, $1,400 without a single DM response. the future is cleaner.
 
 **Tweet 2**
 3-day DM close, every week, from now on. the data supports it. the income supports it.
@@ -694,7 +694,7 @@ if you're new today: welcome. the learning curve is steep. the men who learn it 
 week 4 target: $3,500. current pace: on track.
 
 **Fanvue Post 1**
-DMs open. 22 messages waiting. responding in tribute order. if you sent something during the silent period, you're first. if you messaged without tribute, you're last. if you're new and subscribed to reach me — appreciate the effort, you're third.
+DMs open. 22 messages waiting. responding in tribute order. if you sent something during the silent period, you're first. if you messaged without tribute, you're last. if you're new and subscribed to reach me, appreciate the effort, you're third.
 
 **Fanvue Post 2**
 caught up on messages. 3 new subscription upgrades from the DM queue. the pattern continues: direct access creates conversion. access costs commitment to be in the space where i am.
@@ -704,7 +704,7 @@ thursday insight: $1,400 in 3 days during silent period with zero DM activity. t
 
 ---
 
-## DAY 26 — Friday: Proof and Pull
+## DAY 26, Friday: Proof and Pull
 
 **Tweet 1**
 week 4, friday. $2,800 in. $700 from target. the weekend crowd always shows up. i'm ready.
@@ -732,7 +732,7 @@ transparency experiment: posted a financial accountability video showing how i c
 
 ---
 
-## DAY 27 — Saturday: Weekend Momentum
+## DAY 27, Saturday: Weekend Momentum
 
 **Tweet 1**
 saturday. $700 from target. the men who know how saturdays work are already in my fanvue.
@@ -760,7 +760,7 @@ hitting weekly target on saturday by creating a clear, time-limited offer with a
 
 ---
 
-## DAY 28 — Sunday: Week 4 Wrap
+## DAY 28, Sunday: Week 4 Wrap
 
 **Tweet 1**
 week 4 final: $3,700. beat target by $200. 4 weeks, 4 targets hit.
@@ -788,7 +788,7 @@ month 1 recap going into final week: $9,960, 21 consistent subs, 5 inner circle,
 
 ---
 
-## DAY 29 — Monday: Final Push
+## DAY 29, Monday: Final Push
 
 **Tweet 1**
 7 days left in this month. $40 from $10k. the last push starts today.
@@ -806,7 +806,7 @@ the last 7 days of any month are when the serious men separate from the rest. i'
 $10k/month was not the goal on day 1. it is now. 4 weeks of proof that the system works. week 5 closes it.
 
 **Fanvue Post 1**
-Final week. Month-end recap posts on day 30. Every tribute this week counts double toward the final ranking — not in amount, in recognition weight. The men who show up this week get the most visibility in the recap.
+Final week. Month-end recap posts on day 30. Every tribute this week counts double toward the final ranking, not in amount, in recognition weight. The men who show up this week get the most visibility in the recap.
 
 **Fanvue Post 2**
 $40 from $10k. posting this so you know how close we are. the next tribute that comes in hits the milestone. first to tribute $40+ today gets named in the milestone post.
@@ -816,7 +816,7 @@ final week strategy: announcing a milestone ($10k month) that's 4 days away. cre
 
 ---
 
-## DAY 30 — Tuesday: Month Wrap + Final Ranking
+## DAY 30, Tuesday: Month Wrap + Final Ranking
 
 **Tweet 1**
 month 1 final: $10,340. i said $10k. we did $10,340. this is what the system built.
@@ -834,21 +834,21 @@ to everyone who tributed this month: you were part of building something real. t
 month 2 has one opening in the inner circle. applications open thursday. if you want it, start positioning now.
 
 **Fanvue Post 1**
-MONTH 1 FINAL RANKINGS — TOP 10:
-1. [D.F] — $3,200 (4-week king)
-2. [M.T] — $2,680 (3-week top, 1-week #2)
-3. [K.S] — $1,890
-4. [T.M] — $1,240 (joined week 4, immediate impact)
-5. [A.R] — $980
-6. [J.R] — $870
-7. [A.K] — $760
-8. [P.L] — $640
-9. [C.W] — $530
-10. [N.B] — $420
+MONTH 1 FINAL RANKINGS, TOP 10:
+1. [D.F], $3,200 (4-week king)
+2. [M.T], $2,680 (3-week top, 1-week #2)
+3. [K.S], $1,890
+4. [T.M], $1,240 (joined week 4, immediate impact)
+5. [A.R], $980
+6. [J.R], $870
+7. [A.K], $760
+8. [P.L], $640
+9. [C.W], $530
+10. [N.B], $420
 Total month: $10,340. Thank you.
 
 **Fanvue Post 2**
-Month 2 preview: same structure, higher standards, one additional inner circle spot, and a new tier — "founding member" status for anyone who's been consistent all 30 days. you've earned something. month 2 is where that something starts to compound.
+Month 2 preview: same structure, higher standards, one additional inner circle spot, and a new tier, "founding member" status for anyone who's been consistent all 30 days. you've earned something. month 2 is where that something starts to compound.
 
 **Reddit Post** (r/findom)
 30-day month 1 complete: $10,340, 21 consistent subs, 5 inner circle members, 0 advertising spend, 0 platform promotion spend. the entire engine was: consistent posting → clear rates → public rankings → loyalty rewards → scarcity (silent periods) → blocking fast. documenting everything for month 2. if anyone wants the full breakdown, i'll post it.

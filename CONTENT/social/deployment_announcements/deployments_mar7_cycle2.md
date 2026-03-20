@@ -1,10 +1,10 @@
 PENDING_REVIEW
 Generated: 2026-03-07 03:30
-Cycle: Asset Deployer — Cycle 2
+Cycle: Asset Deployer, Cycle 2
 
 ---
 
-## Tweet 1 — streak app fleet
+## Tweet 1, streak app fleet
 
 shipped 2 more faith streak apps today.
 
@@ -17,7 +17,7 @@ zero ad spend. just indexed urls compounding.
 
 ---
 
-## Tweet 2 — fiverr services hub
+## Tweet 2, fiverr services hub
 
 built a fiverr services hub with 13 individual service pages.
 
@@ -31,7 +31,7 @@ one deploy. 13 indexable pages.
 
 ---
 
-## Tweet 3 — local biz demo fleet
+## Tweet 3, local biz demo fleet
 
 7 local biz demo sites deployed today:
 
@@ -47,7 +47,7 @@ these are live sales demos. send a local biz owner the link for their industry. 
 
 ---
 
-## Tweet 4 — fixed broken deployment
+## Tweet 4, fixed broken deployment
 
 caught a broken deployment during routine health check.
 
@@ -59,7 +59,7 @@ this is why you run health checks every 2 hours not once a week.
 
 ---
 
-## Thread — 85 live deployments, what it means
+## Thread, 85 live deployments, what it means
 
 1/ we have 85 live sites on surge.sh right now.
 
@@ -81,7 +81,7 @@ cold outreach playbook: build the page, send the business owner the link, show t
 
 HVAC, fitness, dental, salon, restaurant, plumbing, lawn, realtor, legal.
 
-prospect says "what would my site look like?" — you send them a live URL in that exact niche.
+prospect says "what would my site look like?", you send them a live URL in that exact niche.
 
 5/ 13 tool + SaaS microsites.
 

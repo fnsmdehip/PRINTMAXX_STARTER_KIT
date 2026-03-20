@@ -1,4 +1,4 @@
-# HN + IndieHackers + LinkedIn + Dev.to — cycle 16
+# HN + IndieHackers + LinkedIn + Dev.to, cycle 16
 # Status: PENDING_REVIEW
 # Generated: 2026-03-14
 # Products: AI Slop Detector, Productivity Stack Quiz, HabitForge, CoreDay, MealMaxx, Dusk/SleepMaxx, FocusLock
@@ -13,7 +13,7 @@
 
 ---
 
-## HN Post 1 — AI Slop Detector
+## HN Post 1, AI Slop Detector
 
 **Title:**
 Show HN: AI Slop Detector - paste text, find out if it reads like AI wrote it
@@ -26,7 +26,7 @@ It's a single static HTML file. No backend. No API calls. Everything runs in the
 
 The 24 patterns fall into 4 categories:
 
-1. Vocabulary tells - words like "leverage," "utilize," "delve," "comprehensive," "robust," "seamless." Real writers almost never use these. LLMs reach for them constantly.
+1. Vocabulary tells - words like "use," "use," "dig," "complete," "strong," "seamless." Real writers almost never use these. LLMs reach for them constantly.
 2. Structure tells - the rule of three, synonym cycling (calling the same thing a "tool" then a "platform" then a "solution"), and negative parallelisms ("it's not just X, it's Y").
 3. Hedging patterns - excessive qualifiers stacked in a single sentence, false ranges like "from X to Y to Z," and generic conclusions.
 4. Punctuation tells - em dash overuse is probably the single strongest signal. Human writers use em dashes sparingly. AI uses them as a default connector.
@@ -35,7 +35,7 @@ A few things I discovered building it:
 
 The em dash is a better single-feature classifier than most people expect. In a test set of 200 texts (100 confirmed human, 100 confirmed GPT-4), em dash density alone correctly classified 78% of them.
 
-Vocabulary tells are noisy on their own but strong in combination. One "leverage" in a 500-word piece is nothing. Three banned words in the first paragraph is a strong signal.
+Vocabulary tells are noisy on their own but strong in combination. One "use" in a 500-word piece is nothing. Three banned words in the first paragraph is a strong signal.
 
 The hardest edge case: human writers who work in corporate environments have absorbed a lot of this vocabulary. A McKinsey consultant writing their own blog post can trip 6 or 7 of the 24 patterns without any AI involvement.
 
@@ -47,7 +47,7 @@ Interested in what patterns other people have found. I have 6 more candidate pat
 
 ---
 
-## HN Post 2 — Productivity Stack Quiz
+## HN Post 2, Productivity Stack Quiz
 
 **Title:**
 Show HN: Productivity Stack Quiz - interactive tool that recommends your tool stack based on how you actually work
@@ -72,7 +72,7 @@ One thing I'm not sure about: whether to add a "what's your budget" question. Ri
 
 ---
 
-## HN Post 3 — HabitForge
+## HN Post 3, HabitForge
 
 **Title:**
 Show HN: HabitForge - PWA habit tracker, offline-first, no account, no data collection
@@ -108,7 +108,7 @@ The codebase is about 800 lines of vanilla JS. If there's interest in the servic
 
 ---
 
-## HN Post 4 — CoreDay
+## HN Post 4, CoreDay
 
 **Title:**
 Show HN: CoreDay - daily planning PWA, 3 priorities, that's it
@@ -143,7 +143,7 @@ Curious whether anyone has a strong take on daily vs. weekly planning cycles at 
 
 ---
 
-## IH Post 1 — AI Slop Detector
+## IH Post 1, AI Slop Detector
 
 **Title:**
 I built a free AI content detector. Here's what 2 months of running it taught me about detection.
@@ -156,7 +156,7 @@ Here's what I learned.
 
 **Why I built it**
 
-I run a content operation with multiple accounts. I was reviewing content from contractors and having a hard time explaining to them what "sounds AI-generated" actually meant. Saying "don't use leverage, don't use utilize" is specific. Saying "it sounds robotic" is not.
+I run a content operation with multiple accounts. I was reviewing content from contractors and having a hard time explaining to them what "sounds AI-generated" actually meant. Saying "don't use use, don't use use" is specific. Saying "it sounds robotic" is not.
 
 I needed a tool that could give a contractor specific, line-level feedback. Not a vibe score. Specific flags.
 
@@ -203,7 +203,7 @@ What I want to figure out: is the hiring manager use case real enough to build a
 
 ---
 
-## IH Post 2 — HabitForge
+## IH Post 2, HabitForge
 
 **Title:**
 PWA vs native app for habit tracking: I chose the web and here's what that actually cost me
@@ -261,7 +261,7 @@ Interested in hearing from anyone who's done both and has actual user data on PW
 
 ---
 
-## IH Post 3 — MealMaxx
+## IH Post 3, MealMaxx
 
 **Title:**
 I built a meal planning app for a niche I'm not sure anyone asked for. Here's what happened.
@@ -315,7 +315,7 @@ If you've built a fitness or nutrition app and have conversion rate data, I'd li
 
 ---
 
-## IH Post 4 — Dusk/SleepMaxx
+## IH Post 4, Dusk/SleepMaxx
 
 **Title:**
 I built a sleep tracker that doesn't need your data. Here's the tradeoff.
@@ -362,7 +362,7 @@ I don't know yet if it is.
 
 ---
 
-## LinkedIn Post 1 — AI Slop Detector
+## LinkedIn Post 1, AI Slop Detector
 
 AI-generated content is now a hiring problem. Not just a content quality problem.
 
@@ -370,7 +370,7 @@ I've talked to 11 hiring managers in the past 6 weeks who are screening candidat
 
 The tells are specific once you know what to look for.
 
-Em dashes used as default connectors instead of commas or periods. Vocabulary like "leverage," "utilize," "delve into," "comprehensive approach." The rule of three (listing exactly three things instead of two or four). Synonym cycling, where the same thing gets called a "tool" then a "platform" then a "solution" in the same paragraph.
+Em dashes used as default connectors instead of commas or periods. Vocabulary like "use," "use," "dig into," "complete approach." The rule of three (listing exactly three things instead of two or four). Synonym cycling, where the same thing gets called a "tool" then a "platform" then a "solution" in the same paragraph.
 
 These aren't aesthetic preferences. They're patterns that correlate with AI output at a statistical level.
 
@@ -386,7 +386,7 @@ If you're hiring for roles where writing matters, the tool might be worth 60 sec
 
 ---
 
-## LinkedIn Post 2 — Productivity Stack Quiz
+## LinkedIn Post 2, Productivity Stack Quiz
 
 Most people are spending $150/month on productivity tools they don't need.
 
@@ -408,7 +408,7 @@ The best productivity system is the one with the fewest moving parts that still 
 
 ---
 
-## LinkedIn Post 3 — CoreDay
+## LinkedIn Post 3, CoreDay
 
 Solopreneurs don't have a time management problem. They have a priority selection problem.
 
@@ -430,7 +430,7 @@ The thing I've found since using it: the real value is the morning decision, not
 
 ---
 
-## LinkedIn Post 4 — FocusLock
+## LinkedIn Post 4, FocusLock
 
 Deep work is a competitive advantage right now. Not because it's rare as a concept. Because most people have given up trying to do it.
 
@@ -454,7 +454,7 @@ Deep work isn't a personality trait. It's a skill that atrophies without practic
 
 ---
 
-## Dev.to Article 1 — AI Slop Detector
+## Dev.to Article 1, AI Slop Detector
 
 **Title:** How I built an AI content detector as a 47KB static HTML file (no backend, no API)
 
@@ -480,14 +480,14 @@ Vocabulary tells (7 patterns): words and phrases that human writers almost never
 
 ```javascript
 const VOCABULARY_TELLS = [
-  'leverage', 'utilize', 'delve', 'dive into', 'unpack',
-  'comprehensive', 'robust', 'innovative', 'seamless',
+  'use', 'use', 'dig', 'dive into', 'unpack',
+  'complete', 'strong', 'novel', 'seamless',
   'streamlined', 'empower', 'foster', 'cutting-edge',
-  'game-changer', 'unlock', 'elevate'
+  'game-changer', 'get', 'elevate'
 ];
 ```
 
-These are weighted at 0.6 per occurrence, capped at 3 per category. One "leverage" in a 500-word piece moves the score 0.6 points. Three or more caps out.
+These are weighted at 0.6 per occurrence, capped at 3 per category. One "use" in a 500-word piece moves the score 0.6 points. Three or more caps out.
 
 Structure tells (6 patterns): the rule of three, synonym cycling, negative parallelisms, formulaic challenges, inline-header lists, and vague attributions.
 
@@ -560,7 +560,7 @@ The whole thing is one HTML file. JS is inline. No build step, no bundler, no de
 
 **What I'd do differently**
 
-The vocabulary list needs to be user-configurable. Different domains have different base rates for these words. Medical writing uses "comprehensive" legitimately more often than blog posts.
+The vocabulary list needs to be user-configurable. Different domains have different base rates for these words. Medical writing uses "complete" legitimately more often than blog posts.
 
 The test set I validated against was GPT-4 specifically. Newer models with specific prompting can score much lower. The patterns are calibrated to current AI defaults, not AI behavior in general.
 
@@ -570,7 +570,7 @@ Live at: https://ai-slop-detector.surge.sh
 
 ---
 
-## Dev.to Article 2 — HabitForge
+## Dev.to Article 2, HabitForge
 
 **Title:** Building a PWA with offline-first architecture: the service worker details nobody writes about
 
@@ -751,7 +751,7 @@ Live at https://habitforge-web.surge.sh
 
 ---
 
-## Dev.to Article 3 — CoreDay
+## Dev.to Article 3, CoreDay
 
 **Title:** Minimal JS daily planner: no framework, no build step, 34KB total
 
@@ -952,7 +952,7 @@ No minification, no obfuscation. View-source and you'll see the whole thing.
 # PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks on all pieces
 - [x] Exact numbers throughout (47KB, 34KB, 78%, 12 questions, 30 people, 26/30, 1.9M members, 34 posts, etc.)
 - [x] Would @pipelineabuser actually post this? (HN/IH: yes. LinkedIn: adapted for platform, honest voice)

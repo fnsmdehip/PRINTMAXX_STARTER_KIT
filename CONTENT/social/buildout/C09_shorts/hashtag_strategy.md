@@ -17,8 +17,8 @@ Hashtags = discoverability from search. Both matter. Neither replaces the other.
 ### Tier 1: Anchor Hashtags (always include)
 These tell YouTube the broad category. Include 1-2 per Short.
 
-- `#YouTubeShorts` — mandatory for Shorts feed inclusion
-- `#Shorts` — secondary anchor, still indexed separately
+- `#YouTubeShorts`, mandatory for Shorts feed inclusion
+- `#Shorts`, secondary anchor, still indexed separately
 
 ### Tier 2: Niche Hashtags (include 2-3)
 Tell YouTube the specific niche. Match to video topic.
@@ -129,7 +129,7 @@ YouTube confirmed this reduces reach on Shorts. Keep hashtags in description onl
 
 Step 1: Search your core topic in YouTube search bar
 Step 2: Look at the hashtags used on the top 5 Shorts in results
-Step 3: Click on a hashtag — see how many views that hashtag's page gets
+Step 3: Click on a hashtag, see how many views that hashtag's page gets
 Step 4: Target hashtags with 10M-500M views on their page
    - Under 10M: too niche, low discovery
    - Over 500M: too broad, won't surface your content

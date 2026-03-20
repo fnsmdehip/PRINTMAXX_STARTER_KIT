@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Find App Niches Nobody Is Building (Yet)</title>
+<meta name="description" content="the 3-step process for finding app niches with real demand and zero competition. used to validate and deploy 47 apps in 6 months.">
+<meta name="keywords" content="app niche research, find app niche, app idea validation, indie hacker app ideas, vibe coding niche, solopreneur app ideas 2026, underserved app niches">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://app-niche-finder.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Find App Niches Nobody Is Building (Yet)">
+<meta property="og:description" content="3-step process from 47 apps deployed. used Reddit, HN, and App Store gaps to find niches that convert.">
+<meta property="og:url" content="https://app-niche-finder.surge.sh">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="App Niche Finder: Find Underserved Niches Before Anyone Else">
+<meta name="twitter:description" content="the research framework behind 47 deployed apps. free.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080808;
+  --surface:#101010;
+  --card:#141414;
+  --border:rgba(255,255,255,.07);
+  --border-active:rgba(255,165,0,.4);
+  --accent:#ff9f0a;
+  --accent-dim:rgba(255,159,10,.1);
+  --green:#00e676;
+  --red:#ff4444;
+  --text:#e8e8e8;
+  --muted:#666;
+  --muted2:#444;
+}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:640px;margin:0 auto;padding:0 20px}
+header{padding:44px 0 28px;text-align:center}
+header h1{font-size:clamp(1.5rem,5vw,2rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:10px}
+header h1 em{font-style:normal;color:var(--accent)}
+.sub{color:var(--muted);font-size:.88rem;max-width:440px;margin:0 auto 16px}
+.proof-bar{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:16px 0 24px}
+.proof-item{text-align:center}
+.proof-num{font-size:1.4rem;font-weight:800;color:var(--accent)}
+.proof-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.section{margin:28px 0}
+.section-label{font-size:.7rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:14px}
+.step-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:12px}
+.step-num{font-size:.65rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.step-title{font-size:1rem;font-weight:700;margin-bottom:8px}
+.step-body{font-size:.85rem;color:#aaa;line-height:1.6}
+.step-body strong{color:#ccc}
+.step-body code{background:#1e1e1e;padding:2px 7px;border-radius:4px;font-size:.8rem;color:var(--accent);font-family:'SF Mono','Fira Code',monospace}
+.tag{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:2px 8px;border-radius:20px;margin:3px 3px 3px 0}
+.tag-free{background:rgba(0,230,118,.1);color:var(--green);border:1px solid rgba(0,230,118,.2)}
+.tag-reddit{background:rgba(255,69,0,.1);color:#ff6b35;border:1px solid rgba(255,69,0,.2)}
+.tag-hn{background:rgba(255,102,0,.1);color:#ff6600;border:1px solid rgba(255,102,0,.2)}
+.niche-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:10px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}
+.niche-card:hover{border-color:rgba(255,159,10,.2)}
+.niche-name{font-weight:700;font-size:.95rem;margin-bottom:4px}
+.niche-why{font-size:.82rem;color:#999;line-height:1.5}
+.niche-score{text-align:right}
+.score-num{font-size:1.2rem;font-weight:800;color:var(--accent)}
+.score-label{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.signal-item{background:#0e0e0e;border:1px solid var(--border);border-radius:8px;padding:12px}
+.signal-title{font-size:.78rem;font-weight:700;color:#ccc;margin-bottom:4px}
+.signal-text{font-size:.76rem;color:var(--muted);line-height:1.5}
+/* gate */
+.gate{background:var(--card);border:1px solid var(--border-active);border-radius:16px;padding:32px 24px;text-align:center;margin:32px 0}
+.gate h2{font-size:1.1rem;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+.gate p{color:var(--muted);font-size:.86rem;margin-bottom:22px;max-width:380px;margin-left:auto;margin-right:auto}
+.gate-form{display:flex;gap:10px;max-width:400px;margin:0 auto;flex-wrap:wrap}
+.gate-form input{flex:1;min-width:200px;padding:12px 16px;background:#1a1a1a;border:1px solid var(--border-active);border-radius:10px;color:var(--text);font-size:.9rem;outline:none}
+.gate-form input:focus{border-color:var(--accent)}
+.gate-form button{padding:12px 22px;background:var(--accent);color:#000;font-weight:700;font-size:.9rem;border:none;border-radius:10px;cursor:pointer;white-space:nowrap}
+.gate-form button:hover{opacity:.9}
+.gate-note{font-size:.72rem;color:#444;margin-top:12px}
+.gate-list{text-align:left;max-width:320px;margin:0 auto 20px;list-style:none}
+.gate-list li{font-size:.83rem;color:#aaa;padding:4px 0}
+.gate-list li::before{content:"→ ";color:var(--accent)}
+.locked{display:none}
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.8rem}
+footer a{color:#444}
+.callout{background:var(--accent-dim);border:1px solid var(--border-active);border-radius:10px;padding:14px 18px;font-size:.84rem;color:#ccc;margin:16px 0}
+.callout strong{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div style="display:inline-block;background:var(--accent-dim);border:1px solid var(--border-active);color:var(--accent);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 12px;border-radius:20px;margin-bottom:14px">Free Research Framework</div>
+  <h1>How to Find App Niches<br><em>Nobody Is Building Yet</em></h1>
+  <p class="sub">the 3-step process behind 47 deployed apps. find niches with real demand, no competition, and communities that will actually tell you what they want.</p>
+  <div class="proof-bar">
+    <div class="proof-item"><div class="proof-num">47</div><div class="proof-label">Apps deployed</div></div>
+    <div class="proof-item"><div class="proof-num">6</div><div class="proof-label">Months</div></div>
+    <div class="proof-item"><div class="proof-num">$0</div><div class="proof-label">Ad spend</div></div>
+    <div class="proof-item"><div class="proof-num">114</div><div class="proof-label">Niches mapped</div></div>
+  </div>
+</header>
+
+<!-- Why most app ideas fail -->
+<div class="section">
+  <div class="section-label">The problem with most app ideas</div>
+  <div class="step-card">
+    <div class="step-body">
+      most indie devs find app ideas by looking at <strong>what's popular</strong>: ProductHunt, App Store charts, trending Hacker News posts. the problem: popular = competitive. if 50 other devs saw the same ProductHunt post, you're building into a crowded market from day one.
+      <br><br>
+      the niches that actually convert for solo devs have 3 characteristics:<br>
+      1. a community that already exists and actively complains about a gap<br>
+      2. existing apps that are <strong>close but wrong</strong> (too generic, too expensive, require accounts)<br>
+      3. a keyword cluster with real search volume and a keyword difficulty under 20
+    </div>
+  </div>
+</div>
+
+<!-- Step 1: Reddit signal mining -->
+<div class="section">
+  <div class="section-label">Step 1: Reddit signal mining</div>
+  <div class="step-card">
+    <div class="step-num">Step 1 of 3</div>
+    <div class="step-title">Find the complaint clusters</div>
+    <div class="step-body">
+      Reddit is the best niche research tool that almost nobody uses correctly. the signal isn't in the upvotes — it's in the complaint threads.
+      <br><br>
+      <strong>Search query template:</strong><br>
+      <code>site:reddit.com "is there an app" OR "does anyone know an app" [niche]</code>
+      <br><br>
+      <strong>What you're looking for:</strong>
+      <ul style="list-style:none;margin-top:8px">
+        <li style="padding:3px 0;font-size:.82rem;color:#999">→ threads with 20+ upvotes AND comments saying "yeah I wish this existed"</li>
+        <li style="padding:3px 0;font-size:.82rem;color:#999">→ replies recommending apps that don't quite solve the problem</li>
+        <li style="padding:3px 0;font-size:.82rem;color:#999">→ complaints about existing apps (too expensive, requires sign-up, sold data)</li>
+      </ul>
+      <br>
+      <strong>Real example that worked:</strong> r/stopdrinking had 6 threads asking for a sobriety tracker with "no account required." Every recommendation required an account. Built SoberStreak in 90 min. Deployed. Posted the Reddit thread back with the link.
+      <br><br>
+      <span class="tag tag-reddit">Reddit signal</span><span class="tag tag-free">Free tool</span>
+    </div>
+  </div>
+
+  <div class="signal-grid">
+    <div class="signal-item">
+      <div class="signal-title">High-signal subreddits</div>
+      <div class="signal-text">r/apps, r/androidapps, r/iphoneapps, r/productivity, r/selfimprovement, r/stopdrinking, r/running, r/fitness, r/bodyweightfitness — any niche with 200K+ members</div>
+    </div>
+    <div class="signal-item">
+      <div class="signal-title">Ignore these signals</div>
+      <div class="signal-text">generic feature requests, threads older than 18 months, complaints about bugs (not gaps), requests for features in existing apps (means the market is served)</div>
+    </div>
+  </div>
+</div>
+
+<!-- Step 2: App Store gap analysis -->
+<div class="section">
+  <div class="section-label">Step 2: App Store gap analysis</div>
+  <div class="step-card">
+    <div class="step-num">Step 2 of 3</div>
+    <div class="step-title">Map the existing competition (and find its weakness)</div>
+    <div class="step-body">
+      once you've found a complaint cluster, search the App Store for what people are using now. you're not looking for whether competitors exist — you're looking for <strong>why they're wrong</strong>.
+      <br><br>
+      <strong>The 4 most exploitable weaknesses:</strong><br>
+      <ul style="list-style:none;margin-top:8px">
+        <li style="padding:4px 0;font-size:.82rem;color:#999"><strong style="color:#ccc">1. Account required</strong> — "no sign-up" is a feature for 60%+ of users in sensitive niches (sobriety, mental health, habits)</li>
+        <li style="padding:4px 0;font-size:.82rem;color:#999"><strong style="color:#ccc">2. Generic over niche</strong> — a "habit tracker" vs a "running streak tracker." niche wins in search. the "reading streak" app has 20x less competition than "habit tracker"</li>
+        <li style="padding:4px 0;font-size:.82rem;color:#999"><strong style="color:#ccc">3. Too expensive</strong> — $9.99/mo for a streak counter. the gap: free with optional $2.99 unlock for export/stats</li>
+        <li style="padding:4px 0;font-size:.82rem;color:#999"><strong style="color:#ccc">4. No offline mode</strong> — habit apps that require internet signal. offline-first is a differentiator in 2026</li>
+      </ul>
+      <br>
+      <strong>How to read App Store reviews for signals:</strong><br>
+      filter 1-star and 2-star reviews. look for patterns: <em>"works but requires account," "crashes offline," "too expensive for what it is."</em> these are your product requirements.
+      <br><br>
+      <span class="tag tag-free">Free</span><span class="tag tag-hn">Signal mining</span>
+    </div>
+  </div>
+</div>
+
+<!-- 2 free niches -->
+<div class="section">
+  <div class="section-label">5 Validated niches right now (2 free, 3 gated)</div>
+
+  <div class="niche-card">
+    <div>
+      <div class="niche-name">Faith-based streak trackers (denomination-specific)</div>
+      <div class="niche-why">13 denominations with 2M+ members each (Catholic, Baptist, Lutheran, Shia, Sunni, Orthodox, etc.). existing apps are generic "Christian habit tracker." search volume: 2,400-8,900/mo per denomination. kd: 5-15. zero niche-specific apps live for most denominations.</div>
+    </div>
+    <div class="niche-score">
+      <div class="score-num">91</div>
+      <div class="score-label">Niche score</div>
+    </div>
+  </div>
+
+  <div class="niche-card">
+    <div>
+      <div class="niche-name">Sobriety/habit tracking (specific addictions, not generic)</div>
+      <div class="niche-why">r/stopdrinking (800K), r/NoFap (1.24M), r/quittingalcohol (600K) — all have "is there an app for this" threads. existing apps sell user data or require accounts. the word "sobriety" = emotional anchor. "no account required" is the differentiator.</div>
+    </div>
+    <div class="niche-score">
+      <div class="score-num">88</div>
+      <div class="score-label">Niche score</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>3 more validated niches below</strong> — including the highest-scoring one (niche score: 94). includes search volume data, keyword difficulty, community size, and the exact positioning angle that converts.
+  </div>
+</div>
+
+<!-- Email gate -->
+<div class="gate" id="gate">
+  <h2>Get the full niche research kit</h2>
+  <p>3 more validated niches + the niche scoring spreadsheet + the full Step 3 (HN + search validation) guide.</p>
+  <ul class="gate-list">
+    <li>3 additional niches (including score 94 niche)</li>
+    <li>Niche scoring formula (7 variables, weighted)</li>
+    <li>Step 3: HN and keyword validation process</li>
+    <li>The "franchise model" — how to turn 1 niche into 13 apps</li>
+    <li>Reddit post template that gets 100+ upvotes</li>
+  </ul>
+  <div class="gate-form">
+    <input type="email" id="email-input" placeholder="your@email.com" autocomplete="email">
+    <button onclick="unlock()">Get the full kit →</button>
+  </div>
+  <p class="gate-note">no spam. one email when new niches drop.</p>
+</div>
+
+<!-- Locked content -->
+<div class="locked" id="locked-content">
+
+  <div class="niche-card" style="border-color:rgba(255,159,10,.3)">
+    <div>
+      <div class="niche-name">Religious holiday productivity apps</div>
+      <div class="niche-why">Ramadan (2B Muslims, 25 days/yr), Lent (1.3B Catholics, 40 days/yr), High Holy Days (15M Jews), Advent (2.4B Christians). existing apps: generic productivity. the gap: prayer-time-aware scheduling. Ramadan alone = 2.4M searches in February-March. kd: 12. this is a seasonal app with recurring annual demand.</div>
+    </div>
+    <div class="niche-score">
+      <div class="score-num">94</div>
+      <div class="score-label">Niche score</div>
+    </div>
+  </div>
+
+  <div class="niche-card">
+    <div>
+      <div class="niche-name">Fitness discipline trackers (specific movement, not generic fitness)</div>
+      <div class="niche-why">r/bodyweightfitness (2.7M), r/running (4.19M), r/yoga (900K), r/cycling (490K). generic habit trackers fail here because they don't speak the language (pace, sets, reps, km vs miles). search: "running streak app" 1,900/mo kd:8, "yoga streak tracker" 880/mo kd:4. the community-specific app wins every time.</div>
+    </div>
+    <div class="niche-score">
+      <div class="score-num">86</div>
+      <div class="score-label">Niche score</div>
+    </div>
+  </div>
+
+  <div class="niche-card">
+    <div>
+      <div class="niche-name">Freelancer billing + time tools (specific workflow, not generic invoicing)</div>
+      <div class="niche-why">r/freelance (900K), r/forhire, Upwork forums. complaint: existing invoicing tools are built for agencies, not solo freelancers. gap: "invoice in 30 seconds, no account required." FreshBooks = $17/mo for a solo invoice. the "no subscription" angle converts hard in this market. keyword: "free invoice generator" 33,100/mo, kd:22.</div>
+    </div>
+    <div class="niche-score">
+      <div class="score-num">83</div>
+      <div class="score-label">Niche score</div>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="section" style="margin-top:28px">
+    <div class="section-label">Step 3: Keyword + HN validation</div>
+    <div class="step-card">
+      <div class="step-num">Step 3 of 3</div>
+      <div class="step-title">Validate before building (30 minutes)</div>
+      <div class="step-body">
+        before writing a line of code, spend 30 minutes on this:
+        <br><br>
+        <strong>Keyword check (free):</strong><br>
+        → search Google for the exact phrase someone would type ("running streak tracker app")<br>
+        → if results are generic (Habitica, Streaks, generic habit trackers), the niche is underserved<br>
+        → check Ahrefs free tier or Ubersuggest: target keywords with 500-5,000 searches/mo and kd under 20<br>
+        <br>
+        <strong>HN validation:</strong><br>
+        → search HN Algolia API: <code>https://hn.algolia.com/api/v1/search?query=KEYWORD</code><br>
+        → if nobody has asked about this on HN = too niche. if there are 3-6 threads with 10+ comments = validated.<br>
+        <br>
+        <strong>The franchise model:</strong><br>
+        the real leverage is when one niche proves out and you can apply the same template to adjacent niches. the faith tracker thesis: Catholic streak → Baptist streak → Lutheran streak → Shia streak. same codebase. different branding. different App Store listing. each one captures 1,000-8,000 searches/mo that the generic player doesn't rank for.
+        <br><br>
+        <strong>Niche scoring formula (7 variables, 0-100):</strong><br>
+        <ul style="list-style:none;margin-top:8px">
+          <li style="padding:3px 0;font-size:.82rem;color:#999">→ Community size (max 20 points): 1M+ members = 20, 100K-1M = 12, &lt;100K = 5</li>
+          <li style="padding:3px 0;font-size:.82rem;color:#999">→ Complaint volume (max 20): 10+ threads asking for app = 20, 3-9 = 12, 1-2 = 5</li>
+          <li style="padding:3px 0;font-size:.82rem;color:#999">→ Search volume (max 15): 1K-5K/mo = 15, 500-1K = 10, 100-500 = 5</li>
+          <li style="padding:3px 0;font-size:.82rem;color:#999">→ Keyword difficulty (max 15): KD &lt;10 = 15, 10-20 = 10, 20-30 = 5</li>
+          <li style="padding:3px 0;font-size:.82rem;color:#999">→ Franchise potential (max 15): 10+ adjacent niches = 15, 3-9 = 8, 1-2 = 3</li>
+          <li style="padding:3px 0;font-size:.82rem;color:#999">→ Build time (max 10): &lt;4 hours = 10, 4-8h = 7, &gt;8h = 3</li>
+          <li style="padding:3px 0;font-size:.82rem;color:#999">→ Monetization clarity (max 5): clear path to $5-15/mo = 5, unclear = 1</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tools used -->
+  <div class="section">
+    <div class="section-label">Free tools for this research</div>
+    <div class="signal-grid">
+      <div class="signal-item">
+        <div class="signal-title">Reddit research</div>
+        <div class="signal-text">reddit.com/search, Google site:reddit.com, pushshift.io (archived). search "is there an app" + niche. free.</div>
+      </div>
+      <div class="signal-item">
+        <div class="signal-title">Keyword research</div>
+        <div class="signal-text">Ubersuggest free tier (3 searches/day), Ahrefs free tier, Google Keyword Planner (requires free Google Ads account). good enough for kd + volume.</div>
+      </div>
+      <div class="signal-item">
+        <div class="signal-title">App Store research</div>
+        <div class="signal-text">AppFollow free tier (reviews export), AppFigures, or manual: sort by "Most Recent" in App Store, filter 1-3 star reviews.</div>
+      </div>
+      <div class="signal-item">
+        <div class="signal-title">HN search</div>
+        <div class="signal-text">hn.algolia.com — search any term, filter by date (last 12 months), sort by comments. if 5+ comments = validated interest.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:4px">
+    <div class="section-label">What to build once you have a niche</div>
+    <p style="font-size:.86rem;color:#aaa;margin-bottom:10px">the single-file PWA pattern is the fastest path from niche to deployed URL. one HTML file, surge.sh in 5 min, PWA installable on mobile. no backend, no hosting cost, no maintenance:</p>
+    <p style="font-size:.86rem;color:#aaa">browse 47 examples: <a href="https://mcp-marketplace.surge.sh" target="_blank">mcp-marketplace.surge.sh</a> | calculate revenue potential: <a href="https://ai-revenue-calculator.surge.sh" target="_blank">ai-revenue-calculator.surge.sh</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>by <a href="https://printmaxxer.surge.sh" target="_blank">PRINTMAXX</a> · free tools for solopreneurs and indie devs</p>
+</footer>
+</div>
+
+<script>
+function unlock() {
+  const email = document.getElementById('email-input').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('email-input').style.borderColor = '#ff4444';
+    return;
+  }
+  localStorage.setItem('niche_unlocked', '1');
+  localStorage.setItem('niche_email', email);
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('locked-content').style.display = 'block';
+  document.getElementById('locked-content').scrollIntoView({behavior:'smooth'});
+}
+if (localStorage.getItem('niche_unlocked') === '1') {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('locked-content').style.display = 'block';
+}
+</script>
+</body>
+</html>

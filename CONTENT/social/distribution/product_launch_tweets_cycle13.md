@@ -1,4 +1,4 @@
-# Product launch tweets — cycle 13
+# Product launch tweets, cycle 13
 # Status: PENDING_REVIEW
 # Created: 2026-03-09
 # NOTE: Post these once Gumroad account is live. Replace [LINK] with actual Gumroad URLs.
@@ -9,7 +9,7 @@
 
 ---
 
-**Tweet 1 — 73 Cold Email Subject Lines**
+**Tweet 1, 73 Cold Email Subject Lines**
 
 73 subject lines I actually used to get replies from people who never respond to cold email.
 
@@ -21,7 +21,7 @@ gumroad: [LINK]
 
 ---
 
-**Tweet 2 — Funnel Teardown Pack**
+**Tweet 2, Funnel Teardown Pack**
 
 I tore down 14 funnels that are making money right now.
 
@@ -33,7 +33,7 @@ every teardown has: hook analysis, offer structure, price point, what I'd steal.
 
 ---
 
-**Tweet 3 — AI Automation Blueprint**
+**Tweet 3, AI Automation Blueprint**
 
 i built 9 automations this month using Claude. zero code on 6 of them.
 
@@ -45,7 +45,7 @@ $[PRICE] at [LINK]
 
 ---
 
-**Tweet 4 — Solopreneur OPS System**
+**Tweet 4, Solopreneur OPS System**
 
 my entire operating system for running a solo business is now a PDF.
 
@@ -57,7 +57,7 @@ i use every part of this every week. nothing in here is aspirational.
 
 ---
 
-**Tweet 5 — Cold Email Playbook**
+**Tweet 5, Cold Email Playbook**
 
 cold email still works. the people saying it doesn't are sending bad cold email.
 

@@ -759,7 +759,7 @@ the free sample closes deals. automate the scanning. respond fast. deliver quali
 ## VOICE CHECK
 
 - [ ] zero em dashes in all content
-- [ ] zero banned AI vocabulary (no "leverage," "comprehensive," "innovative," "seamless," "game-changer," "unlock," "empower," "cutting-edge," "delve," "robust")
+- [ ] zero banned AI vocabulary (no "use," "complete," "novel," "seamless," "game-changer," "get," "empower," "cutting-edge," "dig," "strong")
 - [ ] specific numbers throughout (952 websites, 15 signals, 170 hot leads, $46/mo, $50,120 fine, 14-21 day warmup, 58% replies from email 1, 9 subreddits, 47 opportunities, 1,035 leads, 16 demo sites)
 - [ ] blunt directive energy ("stop overthinking," "just do it," "stop buying leads," "never exceed 80 per inbox")
 - [ ] lowercase throughout on tweets (sentence case on LinkedIn/YouTube)

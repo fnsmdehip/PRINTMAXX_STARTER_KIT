@@ -112,3 +112,50 @@ SEMrush: 1 sale/month = $200. 5 sales = $1,000.
 The SEO migration (surge upgrade or Netlify/Cloudflare move) is what unlocks real scale here.
 Current state: manually driven traffic only.
 Post-migration: 65,500 monthly searches across top 6 pages = realistic 1,000-3,000 monthly visitors.
+
+
+---
+
+## Pending Enhancement (ALPHA107611, Score: 24)
+
+**Source:** @unusual_whales (high-signal-accounts) | **URL:** https://x.com/Limitlesss1/status/2034358095049277513
+**Added:** 2026-03-18T21:45:01-04:00
+
+@unusual_whales
+ Data was right! 
+
+$SPY & $SPX have fell -3.6% since the previous post 
+
+IV Rank trends can be used to forecast price action in the underlying
+
+Checkout this ticker on Unusual Whales:
+SPY
+
+https://
+unusualwhales.com/stock/SPY/over
+view
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA108136, Score: 35)
+
+**Source:** @unusual_whales (high-signal-accounts) | **URL:** https://x.com/unusual_whales/status/2034692881022079071
+**Added:** 2026-03-20T02:59:31-04:00
+
+Woah - look here.
+
+This wallet has only two positions, both on Netanyahu being out before June 30th.
+
+They have $175k on Bibi being out by March 31.  Loads of action in last TWO days.
+
+What do they know?
+
+See more: 
+https://
+unusualwhales.com/predictions/us
+er/0xd3481a261f3ee307bf821a1d7a66a79bb8b6d759
+…
+

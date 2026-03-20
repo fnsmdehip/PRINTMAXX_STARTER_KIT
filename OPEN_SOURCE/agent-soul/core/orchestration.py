@@ -71,7 +71,9 @@ def safe_path(target: str | Path) -> Path:
     """Verify path is within project root."""
     resolved = Path(target).resolve()
     root = PROJECT_ROOT.resolve()
-    if not str(resolved).startswith(str(root)):
+    try:
+        resolved.relative_to(root)
+    except ValueError:
         raise ValueError(f"BLOCKED: {resolved} outside {root}")
     return resolved
 
@@ -833,6 +835,111 @@ class DAGOrchestrator:
         lines.append("")
         return "\n".join(lines)
 
+    def export_mermaid(self) -> str:
+        """Generate Mermaid flowchart syntax for the DAG.
+
+        Color-codes nodes by status:
+            green=COMPLETE, yellow=RUNNING, gray=PENDING,
+            red=FAILED, strikethrough=SKIPPED
+        """
+        order = self._topo_sort()
+
+        # Load checkpoint for live status
+        ckpt = _load_checkpoint()
+        step_statuses: dict[str, str] = {}
+        if ckpt:
+            for name, data in ckpt.get("steps", {}).items():
+                step_statuses[name] = data.get("status", "PENDING")
+
+        style_map: dict[str, str] = {
+            "COMPLETE": "fill:#22c55e,color:#fff",
+            "RUNNING": "fill:#eab308,color:#000",
+            "PENDING": "fill:#6b7280,color:#fff",
+            "FAILED": "fill:#ef4444,color:#fff",
+            "SKIPPED": "fill:#9ca3af,color:#fff,stroke-dasharray:5",
+        }
+
+        lines: list[str] = ["graph TD"]
+
+        # Define nodes
+        for name in order:
+            s = self._by_name[name]
+            st = step_statuses.get(name, s.status.value
+                                   if isinstance(s.status, StepStatus)
+                                   else str(s.status))
+            label = f"{name}"
+            if s.timeout_seconds:
+                label += f"\\n({s.timeout_seconds}s)"
+            # Use rounded rectangle for all nodes
+            lines.append(f"    {name}[\"{label}\"]")
+
+        # Define edges
+        for name in order:
+            s = self._by_name[name]
+            for dep in s.depends_on:
+                lines.append(f"    {dep} --> {name}")
+
+        # Apply styles
+        for name in order:
+            st = step_statuses.get(
+                name,
+                self._by_name[name].status.value
+                if isinstance(self._by_name[name].status, StepStatus)
+                else str(self._by_name[name].status),
+            )
+            style = style_map.get(st, style_map["PENDING"])
+            lines.append(f"    style {name} {style}")
+
+        return "\n".join(lines)
+
+    def export_html_graph(self) -> str:
+        """Generate a standalone HTML file with Mermaid DAG visualization.
+
+        Returns the file path of the generated HTML.
+        """
+        mermaid_src = self.export_mermaid()
+
+        html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAG Visualization</title>
+<style>
+  body {{ font-family: 'SF Mono', monospace; background: #0a0a0a; color: #e0e0e0; padding: 24px; }}
+  h1 {{ font-size: 18px; margin-bottom: 16px; }}
+  .mermaid {{ background: #151515; border-radius: 8px; padding: 24px; }}
+  .legend {{ margin-top: 16px; font-size: 13px; color: #888; }}
+  .legend span {{ margin-right: 16px; }}
+  .dot {{ display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }}
+</style>
+</head>
+<body>
+<h1>DAG Orchestration Graph</h1>
+<div class="mermaid">
+{mermaid_src}
+</div>
+<div class="legend">
+  <span><span class="dot" style="background:#22c55e;"></span>Complete</span>
+  <span><span class="dot" style="background:#eab308;"></span>Running</span>
+  <span><span class="dot" style="background:#6b7280;"></span>Pending</span>
+  <span><span class="dot" style="background:#ef4444;"></span>Failed</span>
+  <span><span class="dot" style="background:#9ca3af;"></span>Skipped</span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({{ startOnLoad: true, theme: 'dark' }});
+</script>
+</body>
+</html>"""
+
+        html_path = safe_path(STATE_DIR / "dag_graph.html")
+        html_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(html_path, "w") as f:
+            f.write(html_content)
+
+        return str(html_path)
+
 
 # ---------------------------------------------------------------------------
 # CLI
@@ -850,9 +957,12 @@ def main() -> None:
                         help="ASCII art DAG visualization")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show execution plan without running")
+    parser.add_argument("--mermaid", action="store_true",
+                        help="Output Mermaid flowchart syntax for the DAG")
     args = parser.parse_args()
 
-    if not any([args.status, args.resume, args.visualize, args.dry_run]):
+    if not any([args.status, args.resume, args.visualize, args.dry_run,
+                args.mermaid]):
         parser.print_help()
         return
 
@@ -886,6 +996,10 @@ def main() -> None:
             print(dag.visualize())
         if args.dry_run:
             print(dag.dry_run())
+        if args.mermaid:
+            print(dag.export_mermaid())
+            html_path = dag.export_html_graph()
+            print(f"\nHTML graph written to: {html_path}")
         if args.resume:
             print("Resume requires callable steps. Use DAGOrchestrator "
                   "programmatically with resume=True.")

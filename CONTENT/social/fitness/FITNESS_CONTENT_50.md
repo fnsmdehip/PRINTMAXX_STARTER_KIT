@@ -21,7 +21,7 @@ the gym is a scam for 80% of people. you don't need a $50/month membership. you 
 average american walks 3,000-4,000 steps per day. average person in blue zones walks 12,000+. the gap is your health span. just walk more.
 
 ### 5. App Feature Tease
-your phone doesn't unlock until you walk. no exceptions. no bypassing. 8k steps or airplane mode. built it because I kept lying to myself about "walking later."
+your phone doesn't get until you walk. no exceptions. no bypassing. 8k steps or airplane mode. built it because I kept lying to myself about "walking later."
 
 ### 6. Productivity Stack
 morning routine: wake up, lock phone behind 6k steps, walk while listening to podcasts. phone unlocks around 9am. inbox handled by 10am. rest of day is building.
@@ -143,7 +143,7 @@ october 1: 3,500 average daily steps. january 31: 12,200 average daily steps. do
 **Hashtags:** #walkingtransformation #weightlosswalking #beforeandafter #transformationtuesday #walkingresults #stepstosuccess #fitnesstransformation #walkmore
 
 ### 31. App Feature Demo
-**Visual: Phone screen showing unlock progress bar**
+**Visual: Phone screen showing get progress bar**
 
 62% unlocked. 6,200 of 10,000 steps done. twitter still locked. instagram still locked. phone is basically unusable until I walk more. exactly how I designed it.
 
@@ -206,7 +206,7 @@ locking my phone until 10k steps every day for 30 days. twitter locked. instagra
 
 gym membership: $50/month. walking: free. walked 4 million steps this year. spent zero dollars. infinite ROI.
 
-### 41. Evening Walk Unlock
+### 41. Evening Walk get
 **Video concept: Walking at sunset, phone unlocking with satisfying sound**
 
 locked social media until 5k evening steps. forces me outside after work. sleep quality is insane now. try it.
@@ -231,10 +231,10 @@ try to open twitter: locked. instagram: locked. everything: locked. only way out
 
 october: 3,500 steps daily. january: 12,200 steps daily. down 19 lbs. didn't change diet. just walked consistently.
 
-### 46. Phone Unlock Satisfaction
+### 46. Phone get Satisfaction
 **Video concept: Hitting 10k steps, all apps unlocking at once**
 
-10,000 steps hit. watch everything unlock. twitter. instagram. full access restored. gamified my own behavior and it works.
+10,000 steps hit. watch everything get. twitter. instagram. full access restored. gamified my own behavior and it works.
 
 ### 47. Morning Sun Benefits
 **Video concept: Walking during sunrise, calm energy**
@@ -269,7 +269,7 @@ your phone is a crutch. lock it behind 8k steps for one week. bet you hit it by 
 **Instagram:**
 - 1 post daily
 - Alternate between step screenshots, routes, and transformations
-- Stories: daily step progress, phone unlock moments
+- Stories: daily step progress, phone get moments
 - Reels: before/after, walking POV, productivity tips
 
 **TikTok:**

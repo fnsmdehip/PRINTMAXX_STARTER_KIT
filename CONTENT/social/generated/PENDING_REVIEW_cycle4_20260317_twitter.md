@@ -1,11 +1,11 @@
-# CYCLE 4 — TWITTER/X POSTS
+# CYCLE 4, TWITTER/X POSTS
 # Generated: 2026-03-17 19:05
 # Status: PENDING_REVIEW
 # Voice: PRINTMAXXER (S-tier @pipelineabuser dominant)
 
 ---
 
-## POST 1 — AI Content Arbitrage
+## POST 1, AI Content Arbitrage
 
 solo operators sell AI-generated videos for $50-100 each. agencies resell those same videos to clients for $500-2,000.
 
@@ -19,7 +19,7 @@ the margin is in the relationship, not the render.
 
 ---
 
-## POST 2 — Cold Calling is Cooked
+## POST 2, Cold Calling is Cooked
 
 web developers still doing 100 cold calls a week in 2026.
 
@@ -32,7 +32,7 @@ the phone is a crutch. the inbox is a weapon.
 
 ---
 
-## POST 3 — Reddit is Begging for Fitness Apps
+## POST 3, Reddit is Begging for Fitness Apps
 
 counted 14 posts this week on r/loseit, r/fitness, and r/getdisciplined from people literally asking "is there an app that does X?"
 
@@ -44,7 +44,7 @@ might be me.
 
 ---
 
-## POST 4 — Sleep Biohacking > Productivity Apps
+## POST 4, Sleep Biohacking > Productivity Apps
 
 everyone builds task managers. nobody builds circadian optimization tools.
 
@@ -56,7 +56,7 @@ the $200K SaaS isn't in task management. it's in fixing the 8 hours before the t
 
 ---
 
-## POST 5 — The 90-Minute Revenue Unlock
+## POST 5, The 90-Minute Revenue get
 
 35 days building. 332 automation scripts. 47 live sites. 16 products in folder.
 

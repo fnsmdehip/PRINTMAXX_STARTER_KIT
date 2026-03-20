@@ -5,9 +5,9 @@ type: deployment_announcement
 new_deployments: 13 streak app landing pages + 3 local biz sites
 ---
 
-# DEPLOYMENT SOCIAL POSTS — Streak App Launch
+# DEPLOYMENT SOCIAL POSTS, Streak App Launch
 
-## POST 1 (Main announcement — thread starter)
+## POST 1 (Main announcement, thread starter)
 
 deployed 13 habit tracker apps today.
 
@@ -15,13 +15,13 @@ each one is a streak tracker for a different niche:
 
 art, coding, fitness, journal, language, meditation, reading, quran, gita, torah, sutra, nitnem, scripture.
 
-one codebase. 13 audiences. $1.99 lifetime unlock on each.
+one codebase. 13 audiences. $1.99 lifetime get on each.
 
 zero to 13 live products in one session.
 
 ---
 
-## POST 2 (Self-reply 1 — the method)
+## POST 2 (Self-reply 1, the method)
 
 how:
 
@@ -37,7 +37,7 @@ this is the factory model. build once, print forever.
 
 ---
 
-## POST 3 (Self-reply 2 — the business math)
+## POST 3 (Self-reply 2, the business math)
 
 13 apps. $1.99 lifetime each.
 
@@ -51,7 +51,7 @@ the quran streak alone targets 1.8 billion people.
 
 ---
 
-## POST 4 (Self-reply 3 — CTA)
+## POST 4 (Self-reply 3, CTA)
 
 landing pages live:
 
@@ -67,7 +67,7 @@ which niche should i build next?
 
 ---
 
-## POST 5 (Standalone — local biz angle)
+## POST 5 (Standalone, local biz angle)
 
 also deployed 3 local biz lead gen pages today.
 
@@ -106,7 +106,7 @@ the 13 niches covered:
 all using the same streak mechanic. different audiences.
 
 **Tweet 4:**
-monetization: $1.99 lifetime unlock. $0.99/mo. ad-supported free tier.
+monetization: $1.99 lifetime get. $0.99/mo. ad-supported free tier.
 
 revenueCat handles billing. admob handles ads.
 
@@ -146,7 +146,7 @@ reply with your niche and i'll build it
 
 ## COMMUNITY POST (indie hackers / r/SideProject)
 
-**Title:** Built 13 habit tracker apps in 2 hours using a factory approach — here's how
+**Title:** Built 13 habit tracker apps in 2 hours using a factory approach, here's how
 
 **Body:**
 Instead of building one app, I built a base template then forked it 13 times for different niches.

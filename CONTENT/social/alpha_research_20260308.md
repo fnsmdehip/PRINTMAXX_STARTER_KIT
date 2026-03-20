@@ -1,11 +1,11 @@
-# Alpha Research Content — 2026-03-08
+# Alpha Research Content, 2026-03-08
 # Status: PENDING_REVIEW
 # Generated from: Research cycle alpha findings
 # Voice: PRINTMAXXER weighted aggregate (S-tier dominant)
 
 ---
 
-## TWEET 1 — Bible GPT Signal (App Factory)
+## TWEET 1, Bible GPT Signal (App Factory)
 
 a 2-man team in Romania built a "Bible GPT" app to $300k/mo MRR.
 
@@ -17,7 +17,7 @@ if you can build for communities that actually RETAIN users (faith = daily habit
 
 ---
 
-## TWEET 2 — YouTube Low Views High Revenue
+## TWEET 2, YouTube Low Views High Revenue
 
 my favorite SaaS growth channel right now: YouTube videos with 100 views.
 
@@ -31,7 +31,7 @@ stop optimizing for views. optimize for wallets.
 
 ---
 
-## TWEET 3 — Vibe Coding Validation
+## TWEET 3, Vibe Coding Validation
 
 a researcher who "can't code" built a SaaS with vibe coding.
 
@@ -43,7 +43,7 @@ distribution > code quality. always was.
 
 ---
 
-## TWEET 4 — MicroSaaS Doubling Pattern
+## TWEET 4, MicroSaaS Doubling Pattern
 
 interesting pattern from r/MicroSaaS:
 
@@ -57,7 +57,7 @@ the product was already good enough. they just needed more people to know it exi
 
 ---
 
-## TWEET 5 — Zero CAC Growth Channel
+## TWEET 5, Zero CAC Growth Channel
 
 $149M ARR with almost zero customer acquisition cost.
 
@@ -71,7 +71,7 @@ it's content marketing except the content actually does something.
 
 ---
 
-## THREAD — App Factory Alpha (5 tweets)
+## THREAD, App Factory Alpha (5 tweets)
 
 ### Tweet 1/5 (Hook)
 i spent 2 hours analyzing every $10k+/mo app launch post on reddit this month.
@@ -117,7 +117,7 @@ the best time to build for underserved communities was 5 years ago. second best 
 
 ---
 
-## TWEET 6 — One-Insight Domains (HN Signal)
+## TWEET 6, One-Insight Domains (HN Signal)
 
 a single-page website called "zipcodefirst.com" hit 385 points on Hacker News.
 
@@ -131,7 +131,7 @@ programmatic SEO meets micro-virality.
 
 ---
 
-## TWEET 7 — Open Source CEO Agent
+## TWEET 7, Open Source CEO Agent
 
 someone open-sourced a tool that runs 4 AI-driven companies from a terminal.
 
@@ -143,7 +143,7 @@ the playbook is public now. execution speed is the only moat left.
 
 ---
 
-## TWEET 8 — AI Slop Detection Is Content
+## TWEET 8, AI Slop Detection Is Content
 
 a crowdsourced "LLM Writing Tropes" list hit 129 points on Hacker News.
 
@@ -153,11 +153,11 @@ this tells you two things:
 1. people can spot AI slop instantly
 2. content about AI slop detection gets engagement
 
-if you're still using words like "delve" and "comprehensive" in 2026 you deserve to be ignored.
+if you're still using words like "dig" and "complete" in 2026 you deserve to be ignored.
 
 ---
 
-## THREAD 2 — BibleChat Deep Dive (5 tweets) [HIGHEST PRIORITY]
+## THREAD 2, BibleChat Deep Dive (5 tweets) [HIGHEST PRIORITY]
 
 ### Tweet 1/5 (Hook)
 a 2-man team in Romania is making $750,000/month from a Bible app.
@@ -208,7 +208,7 @@ the data is screaming. are you listening?
 
 ---
 
-## TWEET 9 — Dental SaaS Local Biz Template
+## TWEET 9, Dental SaaS Local Biz Template
 
 a SaaS founder scraped Google Maps within 200 miles. found dental and vet offices.
 
@@ -226,7 +226,7 @@ local niche B2B SaaS is a money printer if you can stomach cold outreach.
 
 ---
 
-## TWEET 10 — Customer Pain Content Flywheel
+## TWEET 10, Customer Pain Content Flywheel
 
 the YouTube strategy that prints $12k/mo from 100-view videos:
 
@@ -243,7 +243,7 @@ you're not building an audience. you're intercepting people mid-search.
 
 ---
 
-## TWEET 11 — App Store Localization Arbitrage
+## TWEET 11, App Store Localization Arbitrage
 
 a solo dev hit $300 MRR in 23 days with $0 ad spend on a Pomodoro app.
 
@@ -253,11 +253,11 @@ the one trick nobody talks about: he localized the App Store listing into 20+ la
 
 "a huge chunk of my revenue comes from outside the US"
 
-Forest, Be Focused, Focus Flow — none of them bother localizing. it's free real estate.
+Forest, Be Focused, Focus Flow, none of them bother localizing. it's free real estate.
 
 ---
 
-## TWEET 12 — The 2.3x Referral Multiplier
+## TWEET 12, The 2.3x Referral Multiplier
 
 a SaaS founder sent 1,847 cold messages. got 6 paying customers.
 

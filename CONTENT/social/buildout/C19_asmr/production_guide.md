@@ -1,4 +1,4 @@
-# C19 ASMR — Production Guide (AI-First, Zero Human Required)
+# C19 ASMR, Production Guide (AI-First, Zero Human Required)
 
 ## Stack Overview
 
@@ -38,7 +38,7 @@ Not all ElevenLabs voices work for ASMR. These do:
 - Stability: 0.80 (higher = more consistent, less breathy)
 - Similarity: 0.75
 - Style: 0.15 (LOWER = more natural, less theatrical)
-- Speaker boost: OFF (adds sharpness — wrong for ASMR)
+- Speaker boost: OFF (adds sharpness, wrong for ASMR)
 
 **ASMR-specific generation trick:**
 Insert `[pause]` tags between sentences. ElevenLabs v3 honors them.
@@ -59,12 +59,12 @@ Example script: "This is the letter A. [pause] Dot dash. [pause] Listen closely.
 Every ASMR video uses 3 audio layers mixed at specific volumes:
 
 ```
-Layer 1 — BASE (ambient/drone): 100% volume in mix
-Layer 2 — ACTION SOUNDS (triggers): 60-80% of base
-Layer 3 — NARRATION (voice): 90-110% of base (voice sits on top)
+Layer 1, BASE (ambient/drone): 100% volume in mix
+Layer 2, ACTION SOUNDS (triggers): 60-80% of base
+Layer 3, NARRATION (voice): 90-110% of base (voice sits on top)
 ```
 
-**Never fight layers.** If the base is loud, the triggers get lost. EQ the base to remove 2kHz-4kHz frequencies — that's where most ASMR trigger sounds live.
+**Never fight layers.** If the base is loud, the triggers get lost. EQ the base to remove 2kHz-4kHz frequencies, that's where most ASMR trigger sounds live.
 
 ### Freesound.org sourcing guide
 All sounds royalty-free. Search terms that work:
@@ -81,7 +81,7 @@ All sounds royalty-free. Search terms that work:
 | Airport | "airport terminal ambience" | CC0 |
 
 **Filter: Always filter for CC0 (no attribution required)**
-**Duration: Get 2-5 min clips minimum — loop them in Audacity**
+**Duration: Get 2-5 min clips minimum, loop them in Audacity**
 
 ### Looping technique (Audacity)
 1. Import base sound file
@@ -114,10 +114,10 @@ Easiest. Single static image, 60-90 min, rendered once.
 7. Export: H.264, YouTube preset, target bitrate 8-12 Mbps
 
 **Image sources (free):**
-- Unsplash.com — search "cozy library", "rainy window", "airport night"
-- Pexels.com — same searches
-- Midjourney — "$0 per image" with basic plan if <200 images/mo
-- Stable Diffusion local — completely free, needs decent GPU
+- Unsplash.com, search "cozy library", "rainy window", "airport night"
+- Pexels.com, same searches
+- Midjourney, "$0 per image" with basic plan if <200 images/mo
+- Stable Diffusion local, completely free, needs decent GPU
 
 **Midjourney prompts for key concepts:**
 - Library: `cozy library interior night, warm candlelight, wooden shelves, fog window, rain, photorealistic, soft shadows --ar 16:9`
@@ -137,8 +137,8 @@ Easiest. Single static image, 60-90 min, rendered once.
 
 **Thumbnail specs:**
 - Size: 1280x720px (YouTube requirement)
-- Format: JPG (not PNG — smaller file, loads faster)
-- Text size: Minimum 80px — must be readable on mobile thumbnail
+- Format: JPG (not PNG, smaller file, loads faster)
+- Text size: Minimum 80px, must be readable on mobile thumbnail
 
 **Canva thumbnail template elements:**
 1. Dark-gradient overlay on background image (30% opacity black gradient, bottom-heavy)
@@ -262,7 +262,7 @@ Create these playlists immediately:
 - Post ambient clips to Reddit: r/ASMR, r/sleepsounds, r/ambientmusic, r/Nootropics
 - Twitter/X: "what sounds do you fall asleep to?" engagement bait → reply with video link
 - Pinterest: pin thumbnail with sleep keyword boards
-- Spotify (audio only): Use Anchor/Buzzsprout to distribute ambient audio as podcast episodes — free additional distribution
+- Spotify (audio only): Use Anchor/Buzzsprout to distribute ambient audio as podcast episodes, free additional distribution
 
 ### Community tab usage (once unlocked at 500 subs)
 - Monthly: "What's your favorite sleep sound?" poll

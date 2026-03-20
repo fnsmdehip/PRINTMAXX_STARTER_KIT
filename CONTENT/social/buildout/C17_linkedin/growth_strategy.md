@@ -1,4 +1,4 @@
-# LinkedIn Growth Strategy — 0 to 10K Followers
+# LinkedIn Growth Strategy, 0 to 10K Followers
 # Data-backed approach with realistic timelines
 
 ---
@@ -70,15 +70,15 @@ Quality comments:
 
 ---
 
-### Lever 3: DM Networking (10% of growth — highest quality followers)
+### Lever 3: DM Networking (10% of growth, highest quality followers)
 
 **The "value first" networking DM:**
 
 After commenting on someone's posts 2-3 times, send a brief DM:
 ```
-Hey [Name] — been following your posts on [topic] for a few weeks.
+Hey [Name], been following your posts on [topic] for a few weeks.
 
-Your [specific post] was genuinely useful — I used [specific insight] to [specific result].
+Your [specific post] was genuinely useful, I used [specific insight] to [specific result].
 
 Wanted to say thanks. If you ever want to compare notes on [topic], happy to jump on a quick call.
 ```
@@ -119,7 +119,7 @@ Goal: 3 posts go "small viral" (500+ impressions each) by the end of 90 days.
 New tactics to add:
 - Start a consistent "series" (e.g., "Weekly Revenue Update" every Monday)
 - Collaborate with one peer-level creator (cross-post or mention each other)
-- Launch a lead magnet (free resource) — capture emails from your growing audience
+- Launch a lead magnet (free resource), capture emails from your growing audience
 
 Content calendar adjustment:
 - Keep 5 posts/week
@@ -134,8 +134,8 @@ Content calendar adjustment:
 New tactics:
 - Add a strong CTA in every 6th post ("DM me [word] to get [resource]")
 - Publish one long-form article per month (LinkedIn Articles rank in Google)
-- Start tagging relevant people in posts (sparingly — when genuinely relevant)
-- Explore LinkedIn Live (Creator Mode required) — even 200 viewers builds trust fast
+- Start tagging relevant people in posts (sparingly, when genuinely relevant)
+- Explore LinkedIn Live (Creator Mode required), even 200 viewers builds trust fast
 
 Revenue integration:
 At this stage, content should be generating 5-15 inbound leads/month.
@@ -150,7 +150,7 @@ New tactics:
 - Publish original research posts ("I analyzed 200 cold emails. Here's what I found.")
 - Launch paid product to LinkedIn audience (newsletter upgrade, template, course)
 - Start appearing on podcasts (content repurposing + credibility signal)
-- Consider LinkedIn Newsletter (subscribers get notified directly — high open rates)
+- Consider LinkedIn Newsletter (subscribers get notified directly, high open rates)
 
 Revenue at this stage: $10,000-25,000/month if content → service pipeline is working.
 
@@ -208,12 +208,12 @@ Each LinkedIn post can feed growth on other platforms:
 
 **LinkedIn post → Newsletter:**
 - Include 1-2 LinkedIn posts per issue as "expanded" content
-- Newsletter readers often don't follow on LinkedIn — tell them to
+- Newsletter readers often don't follow on LinkedIn, tell them to
 - "If you want the full breakdown + 29 more posts like this, follow me on LinkedIn"
 
 **LinkedIn post → Reddit:**
 - Adapt tutorial posts into Reddit value posts in relevant subreddits
-- No self-promotion — just value
+- No self-promotion, just value
 - Include LinkedIn profile link in your Reddit bio (not in posts)
 
 ---
@@ -224,7 +224,7 @@ Track these monthly in your Notion CRM:
 
 | Metric | Month 1 | Month 3 | Month 6 | Month 12 |
 |---|---|---|---|---|
-| Total followers | — | 400-600 | 1,200-2,000 | 4,000-8,000 |
+| Total followers |, | 400-600 | 1,200-2,000 | 4,000-8,000 |
 | Avg impressions/post | 200-500 | 800-2,000 | 2,000-5,000 | 5,000-15,000 |
 | Inbound DMs/month | 0-2 | 3-8 | 8-20 | 20-50 |
 | Discovery calls booked | 0 | 1-3 | 4-8 | 10-20 |

@@ -1,37 +1,62 @@
 {
-  "last_updated": "2026-03-14T11:15:00Z",
-  "cycle": 17,
-  "total_assets": 354,
+  "last_updated": "2026-03-20T08:11:26.821575",
+  "cycle": 18,
+  "total_assets": 364,
   "total_content_pieces": 850,
-  "content_ready": 270,
+  "content_ready": 310,
   "content_pending_review": 360,
   "content_blocked_qa": 220,
   "new_this_cycle": {
     "assets_covered": [
-      "WalkToUnlock (gap fill: HN, IH, LinkedIn, Dev.to, PH)",
-      "Dusk/SleepMaxx (gap fill: HN, LinkedIn, Dev.to)",
-      "MealMaxx (gap fill: HN, LinkedIn, Dev.to)",
-      "Scripture Streak (gap fill: HN, IH, LinkedIn, Dev.to, PH)",
-      "Hilal (gap fill: HN, IH, LinkedIn, Dev.to)",
-      "PrayerLock (Ramadan urgency push)",
-      "Quran Streak (Ramadan urgency push)",
-      "33-Agent System (build-in-public multi-channel)",
-      "Pain Point Scanner (multi-channel)",
-      "Zero Revenue Transparency (multi-channel)",
-      "Local Biz Website Audits (multi-channel)",
-      "Cold Email at Scale (multi-channel)"
+      "DeskBreak (new: Twitter, Reddit r/remotework r/productivity, HN, LinkedIn, IH)",
+      "HIIT Streak (new: Twitter, Reddit r/fitness, HN)",
+      "Cycling Streak (new: Twitter, Reddit r/running, HN)",
+      "Plank/Pushup/Yoga/SoberStreak (new: Twitter, Reddit targeted subs)",
+      "email-tools-compared (new: Twitter, Reddit r/EmailMarketing, HN, LinkedIn)",
+      "invoice-tools-compared (new: Twitter, Reddit r/freelance, HN, LinkedIn, IH)",
+      "PrayerLock FINAL PUSH (Ramadan 9 days left - all Muslim channels)",
+      "Hilal FINAL PUSH (Ramadan 9 days left)",
+      "Agent shutdown story (authentic build-in-public - Twitter thread, IH, HN, LinkedIn)"
     ],
-    "content_pieces_created": 100,
-    "platforms_targeted": ["twitter", "reddit", "hackernews", "devto", "indiehackers", "linkedin", "producthunt", "directories", "facebook", "discord", "whatsapp", "medium"],
+    "content_pieces_created": 40,
+    "platforms_targeted": [
+      "twitter",
+      "reddit",
+      "hackernews",
+      "indiehackers",
+      "linkedin",
+      "facebook",
+      "discord",
+      "whatsapp"
+    ],
     "files": [
-      "CONTENT/social/distribution/gap_fill_cycle17_20260314.md",
-      "CONTENT/social/distribution/ramadan_urgency_cycle17_20260314.md",
-      "CONTENT/social/distribution/fresh_distribution_cycle17_20260314.md"
+      "CONTENT/social/distribution/reddit_cycle18_20260320.md",
+      "CONTENT/social/distribution/twitter_cycle18_20260320.md",
+      "CONTENT/social/distribution/hn_posts_cycle18_20260320.md",
+      "CONTENT/social/distribution/linkedin_cycle18_20260320.md",
+      "CONTENT/social/distribution/ramadan_final_push_cycle18_20260320.md",
+      "CONTENT/social/distribution/indiehackers_cycle18_20260320.md",
+      "CONTENT/social/distribution/COVERAGE_MAP_CYCLE18.md"
     ],
     "time_sensitive": {
-      "ramadan_days_remaining": 15,
-      "faith_apps_at_risk": ["PrayerLock", "Hilal", "Quran Streak", "Scripture Streak"],
-      "urgency": "CRITICAL - engagement drops 80% post-Ramadan"
+      "ramadan_days_remaining": 9,
+      "faith_apps_at_risk": [
+        "PrayerLock",
+        "Hilal",
+        "Quran Streak"
+      ],
+      "urgency": "CRITICAL - 9 days left, engagement drops 80% post-Eid"
+    },
+    "authentic_angle": {
+      "story": "25 autonomous agents hibernated after 45 days, /bin/zsh revenue",
+      "best_quote": "building at 10x the rate we ship creates the illusion of progress",
+      "use_for": [
+        "twitter_thread_1",
+        "IH_post_1",
+        "HN_ask_post_3",
+        "linkedin_post_1"
+      ],
+      "engagement_potential": "HIGHEST - raw honesty + specific numbers + agent quote"
     }
   },
   "distribution_channels": {
@@ -110,7 +135,12 @@
       "status": "content_ready",
       "submissions_drafted": 35,
       "submissions_completed": 0,
-      "platforms": ["AlternativeTo", "SaaSHub", "BetaList", "ThereIsAnAIForThat"]
+      "platforms": [
+        "AlternativeTo",
+        "SaaSHub",
+        "BetaList",
+        "ThereIsAnAIForThat"
+      ]
     },
     "gumroad": {
       "status": "BLOCKED",
@@ -153,9 +183,84 @@
   },
   "top_distributable_assets": [
     {
+      "name": "DeskBreak",
+      "url": "deskbreak.surge.sh",
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "linkedin",
+        "indiehackers"
+      ],
+      "channels_pending": [
+        "directories",
+        "producthunt"
+      ],
+      "priority": "HIGHEST",
+      "notes": "New cycle 18. Behavioral design angle strong for dev communities."
+    },
+    {
+      "name": "Fitness Streak Apps (6)",
+      "url": "hiit/cycling/plank/pushup/yoga/soberstreak.surge.sh",
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews"
+      ],
+      "channels_pending": [
+        "producthunt",
+        "directories",
+        "linkedin"
+      ],
+      "priority": "HIGH",
+      "notes": "New cycle 18. 6 apps, r/fitness/r/yoga/r/stopdrinking targets."
+    },
+    {
+      "name": "email-tools-compared",
+      "url": "email-tools-compared.surge.sh",
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "linkedin"
+      ],
+      "channels_pending": [
+        "directories",
+        "producthunt"
+      ],
+      "priority": "HIGH",
+      "notes": "New cycle 18. No affiliate bias angle resonates."
+    },
+    {
+      "name": "invoice-tools-compared",
+      "url": "invoice-tools-compared.surge.sh",
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "linkedin",
+        "indiehackers"
+      ],
+      "channels_pending": [
+        "directories",
+        "producthunt"
+      ],
+      "priority": "HIGH",
+      "notes": "New cycle 18. Freelancer/entrepreneur target."
+    },
+    {
       "name": "AI Slop Detector",
       "url": "ai-slop-detector.surge.sh",
-      "channels_covered": ["twitter", "reddit", "hackernews", "devto", "indiehackers", "linkedin", "producthunt", "directories"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "devto",
+        "indiehackers",
+        "linkedin",
+        "producthunt",
+        "directories"
+      ],
       "channels_pending": [],
       "priority": "HIGHEST",
       "notes": "Full coverage this cycle. Hot topic in AI community. Best candidate for viral distribution."
@@ -163,31 +268,66 @@
     {
       "name": "Claude Code Agent Bible",
       "url": "claude-code-agent-bible.surge.sh",
-      "channels_covered": ["twitter", "reddit", "hackernews", "devto", "indiehackers"],
-      "channels_pending": ["linkedin", "producthunt"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "devto",
+        "indiehackers"
+      ],
+      "channels_pending": [
+        "linkedin",
+        "producthunt"
+      ],
       "priority": "HIGHEST",
       "notes": "Developer community high signal. Best candidate for HN front page."
     },
     {
       "name": "TaskSmash",
       "url": "tasksmash.surge.sh",
-      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers", "devto"],
-      "channels_pending": ["linkedin", "producthunt"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "indiehackers",
+        "devto"
+      ],
+      "channels_pending": [
+        "linkedin",
+        "producthunt"
+      ],
       "priority": "HIGHEST",
       "notes": "ADHD market is massive. r/ADHD post is strongest piece."
     },
     {
       "name": "Productivity Stack Quiz",
       "url": "productivity-stack-quiz.surge.sh",
-      "channels_covered": ["twitter", "reddit", "indiehackers", "linkedin", "producthunt"],
-      "channels_pending": ["hackernews", "devto"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "indiehackers",
+        "linkedin",
+        "producthunt"
+      ],
+      "channels_pending": [
+        "hackernews",
+        "devto"
+      ],
       "priority": "HIGH",
       "notes": "Interactive tool, high shareability. Good for viral loops."
     },
     {
       "name": "CoreDay",
       "url": "coreday.surge.sh",
-      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers", "linkedin", "devto", "producthunt"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "indiehackers",
+        "linkedin",
+        "devto",
+        "producthunt"
+      ],
       "channels_pending": [],
       "priority": "HIGH",
       "notes": "Full coverage. Contrarian angle resonates."
@@ -195,15 +335,30 @@
     {
       "name": "HabitForge",
       "url": "habitforge-web.surge.sh",
-      "channels_covered": ["twitter", "reddit", "hackernews", "indiehackers", "devto", "producthunt"],
-      "channels_pending": ["linkedin"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "hackernews",
+        "indiehackers",
+        "devto",
+        "producthunt"
+      ],
+      "channels_pending": [
+        "linkedin"
+      ],
       "priority": "HIGH",
       "notes": "Expanded significantly this cycle."
     },
     {
       "name": "Hilal",
       "url": "ramadan-tracker.surge.sh",
-      "channels_covered": ["twitter", "reddit", "facebook", "discord", "whatsapp"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "facebook",
+        "discord",
+        "whatsapp"
+      ],
       "channels_pending": [],
       "time_sensitive": true,
       "priority": "HIGH",
@@ -212,101 +367,66 @@
     {
       "name": "PrayerLock",
       "url": "prayerlock.surge.sh",
-      "channels_covered": ["twitter", "reddit", "facebook", "discord", "whatsapp"],
+      "channels_covered": [
+        "twitter",
+        "reddit",
+        "facebook",
+        "discord",
+        "whatsapp"
+      ],
       "channels_pending": [],
       "priority": "HIGH",
       "notes": "Ramadan time-sensitive"
-    },
-    {
-      "name": "Cursor vs Claude Code",
-      "url": "cursor-vs-claudecode.surge.sh",
-      "channels_covered": ["twitter", "reddit", "hackernews"],
-      "channels_pending": ["devto", "indiehackers"],
-      "priority": "HIGH",
-      "notes": "Hot topic in developer communities"
-    },
-    {
-      "name": "SleepMaxx/Dusk",
-      "url": "sleepmaxx-web.surge.sh",
-      "channels_covered": ["twitter", "reddit", "indiehackers", "producthunt"],
-      "channels_pending": ["hackernews", "linkedin", "devto"],
-      "priority": "MEDIUM"
     }
   ],
   "coverage_gaps": [
-    "850+ content pieces created across 17 cycles. 0 posted anywhere.",
-    "No DM funnel active on any account",
-    "No clipper/secondary accounts created",
-    "No Substack newsletter swaps initiated",
-    "No Product Hunt launch scheduled",
-    "360+ content pieces stuck in PENDING_REVIEW",
-    "X Premium not subscribed (link posts get 0% engagement)",
-    "RAMADAN: 15 days left. Faith app content needs IMMEDIATE posting.",
-    "Pinterest: 0 pins active",
-    "YouTube Shorts: 0 videos published"
+    "Product Hunt: 0 launches in 18 cycles. Need PH account.",
+    "Directory submissions: AlternativeTo/SaaSHub/BetaList = 0 submitted.",
+    "Dev.to: articles created but never published.",
+    "Medium: articles created but never published.",
+    "YouTube Shorts: scripts written cycles 6-10, never filmed.",
+    "Pinterest: 0 pins despite visual PWAs being perfect for it.",
+    "Ramadan: 9 DAYS LEFT. Post ALL Ramadan content TODAY.",
+    "850+ content pieces created across 18 cycles. Still 0 posted anywhere."
   ],
   "human_actions_required": [
     {
-      "action": "Subscribe to X Premium on @PRINTMAXXER",
+      "action": "POST RAMADAN FINAL PUSH (9 days left)",
+      "time_est": "30 min",
+      "priority": "P0-EMERGENCY",
+      "impact": "3 faith apps losing their seasonal window in 9 days",
+      "content_location": "CONTENT/social/distribution/ramadan_final_push_cycle18_20260320.md"
+    },
+    {
+      "action": "Post DeskBreak to r/remotework",
       "time_est": "5 min",
       "priority": "P0",
-      "impact": "Unblocks 210+ tweets with URLs. Without it, link posts get 0% reach."
+      "content_location": "CONTENT/social/distribution/reddit_cycle18_20260320.md POST 1"
     },
     {
-      "action": "POST RAMADAN CONTENT NOW (15 days left, engagement drops 80% after)",
-      "time_est": "30 min",
-      "priority": "P0-URGENT",
-      "impact": "4 faith apps losing their entire seasonal window",
-      "content_location": "CONTENT/social/distribution/ramadan_urgency_cycle17_20260314.md",
-      "channels": "r/islam, r/MuslimLounge, Muslim Facebook groups, Discord, WhatsApp"
-    },
-    {
-      "action": "Post top 5 Reddit posts (AI Slop, TaskSmash, CoreDay, Agent Bible, Pain Scanner)",
-      "time_est": "25 min",
-      "priority": "P0",
-      "content_location": "CONTENT/social/distribution/fresh_distribution_cycle17_20260314.md"
-    },
-    {
-      "action": "Post 3 Show HN posts (AI Slop Detector, 33-Agent System, Pain Point Scanner)",
-      "time_est": "15 min",
-      "priority": "P0",
-      "content_location": "CONTENT/social/distribution/fresh_distribution_cycle17_20260314.md"
-    },
-    {
-      "action": "Create Gumroad account + list top 5 products",
-      "time_est": "60 min",
-      "priority": "P0",
-      "impact": "Unblocks $250-1000 in ready-to-sell digital products"
-    },
-    {
-      "action": "Post Twitter threads and standalone tweets (33-agent thread + zero revenue transparency)",
-      "time_est": "20 min",
-      "priority": "P0",
-      "content_location": "CONTENT/social/posting_queue/compound_content_20260314_1010.md"
-    },
-    {
-      "action": "Post Dev.to articles (Agent Architecture + Pain Point Scanner)",
-      "time_est": "15 min",
-      "priority": "P1",
-      "content_location": "CONTENT/social/distribution/fresh_distribution_cycle17_20260314.md"
-    },
-    {
-      "action": "Post Indie Hackers stories (33-Agent Build + Zero Revenue + Channel Testing)",
+      "action": "Post agent autopsy to Indie Hackers",
       "time_est": "10 min",
-      "priority": "P1",
-      "content_location": "CONTENT/social/distribution/fresh_distribution_cycle17_20260314.md"
+      "priority": "P0",
+      "impact": "Authentic story, high engagement, builds credibility",
+      "content_location": "CONTENT/social/distribution/indiehackers_cycle18_20260320.md POST 1"
     },
     {
-      "action": "Post LinkedIn posts (Agent System + Local Biz Audits + Cold Email)",
-      "time_est": "15 min",
-      "priority": "P1",
-      "content_location": "CONTENT/social/distribution/fresh_distribution_cycle17_20260314.md"
+      "action": "Post agent shutdown Twitter thread",
+      "time_est": "5 min",
+      "priority": "P0",
+      "content_location": "CONTENT/social/distribution/twitter_cycle18_20260320.md THREAD 1"
     },
     {
-      "action": "Submit to AlternativeTo + SaaSHub + BetaList directories",
-      "time_est": "30 min",
+      "action": "Submit Show HN: DeskBreak",
+      "time_est": "5 min",
       "priority": "P1",
-      "content_location": "CONTENT/social/distribution/directory_submissions_cycle16.md"
+      "content_location": "CONTENT/social/distribution/hn_posts_cycle18_20260320.md POST 1"
+    },
+    {
+      "action": "Post fitness streak apps to r/fitness",
+      "time_est": "5 min",
+      "priority": "P1",
+      "content_location": "CONTENT/social/distribution/reddit_cycle18_20260320.md POST 5"
     }
   ]
 }

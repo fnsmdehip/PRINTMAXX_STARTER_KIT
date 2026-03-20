@@ -1,4 +1,4 @@
-# C11 SEO — 50 Long-Tail Keywords by Niche
+# C11 SEO, 50 Long-Tail Keywords by Niche
 # Methodology: under KD 35 on Ahrefs scale, commercial or informational intent, affiliate-monetizable
 
 ---
@@ -24,10 +24,10 @@
 | 15 | how to build a one person business online | 3,800 | 30 | info | $1.20 | Tools stack |
 
 ### Keyword Cluster Notes (Niche 1)
-- **Pillar target:** "make money online 2025" (high difficulty — don't target directly)
+- **Pillar target:** "make money online 2025" (high difficulty, don't target directly)
 - **Cluster approach:** Build 15 articles around specific methods (outlines 001-010)
-- **Money keywords:** dropshipping and passive income have highest search volume but also highest difficulty — attack from long-tail angle first
-- **Quick wins:** keywords 5, 10, 13 — all under KD 26, less than 3K searches, highly winnable in 60-90 days
+- **Money keywords:** dropshipping and passive income have highest search volume but also highest difficulty, attack from long-tail angle first
+- **Quick wins:** keywords 5, 10, 13, all under KD 26, less than 3K searches, highly winnable in 60-90 days
 
 ---
 
@@ -50,10 +50,10 @@
 | 28 | ai tools that pay you to use them | 1,200 | 14 | info | $0.40 | Various programs |
 
 ### Keyword Cluster Notes (Niche 2)
-- **Pillar target:** "best AI tools 2025" — too competitive, build cluster first
-- **Fastest win:** keywords 19 (MCP servers), 28 (AI tools that pay), 24 (ElevenLabs pricing) — all under KD 22, emerging topics with rising search volume
-- **CPC watch:** keyword 20 has $4.20 CPC — means commercial buyers, worth targeting even at KD 38
-- **Trend alert:** MCP-related keywords growing 40%/month — move first
+- **Pillar target:** "best AI tools 2025", too competitive, build cluster first
+- **Fastest win:** keywords 19 (MCP servers), 28 (AI tools that pay), 24 (ElevenLabs pricing), all under KD 22, emerging topics with rising search volume
+- **CPC watch:** keyword 20 has $4.20 CPC, means commercial buyers, worth targeting even at KD 38
+- **Trend alert:** MCP-related keywords growing 40%/month, move first
 
 ---
 
@@ -73,9 +73,9 @@
 | 38 | linkedin lead generation strategy 2025 | 3,700 | 31 | info | $4.60 | LinkedIn Sales Nav |
 
 ### Keyword Cluster Notes (Niche 3)
-- **B2B upside:** keyword 38 has $4.60 CPC — LinkedIn audience = high value buyers
-- **Volume leaders:** keywords 29, 37 above 10K — strong traffic potential
-- **Quick win cluster:** keywords 33, 34, 28 (all under KD 25) — build these first for early traffic
+- **B2B upside:** keyword 38 has $4.60 CPC, LinkedIn audience = high value buyers
+- **Volume leaders:** keywords 29, 37 above 10K, strong traffic potential
+- **Quick win cluster:** keywords 33, 34, 28 (all under KD 25), build these first for early traffic
 
 ---
 
@@ -97,15 +97,15 @@
 | 50 | best digital products to sell online 2025 | 7,900 | 36 | commercial | $1.10 | Gumroad, Etsy |
 
 ### Keyword Cluster Notes (Niche 4)
-- **Ultra-low competition:** keywords 45 (KD 17), 47 (KD 16) — rank these in 30-45 days on a new site
-- **CPC insight:** keyword 49 at $3.20 CPC = SaaS buyers — high value per visitor
-- **Volume winner:** keyword 43 (9,800 searches) + reasonable KD 44 — strong upside
+- **Ultra-low competition:** keywords 45 (KD 17), 47 (KD 16), rank these in 30-45 days on a new site
+- **CPC insight:** keyword 49 at $3.20 CPC = SaaS buyers, high value per visitor
+- **Volume winner:** keyword 43 (9,800 searches) + reasonable KD 44, strong upside
 
 ---
 
 ## PRIORITIZED ATTACK ORDER
 
-### Phase 1 — 0 to 90 Days (Quick Wins, KD under 25)
+### Phase 1, 0 to 90 Days (Quick Wins, KD under 25)
 Target these first to build domain authority:
 1. Keyword 47: erank vs marmalead (KD 16)
 2. Keyword 45: tiktok shop vs amazon (KD 17)
@@ -118,12 +118,12 @@ Target these first to build domain authority:
 9. Keyword 42: amazon KDP worth it (KD 27)
 10. Keyword 44: best niches for POD (KD 28)
 
-### Phase 2 — 90 to 180 Days (Medium Competition, KD 28-38)
+### Phase 2, 90 to 180 Days (Medium Competition, KD 28-38)
 After Phase 1 establishes authority:
 11. Keywords 1, 7, 9, 33, 35 (KD 28-31)
 12. Keywords 3, 11, 15, 30, 32 (KD 32-36)
 
-### Phase 3 — 180+ Days (Competitive, KD 38+)
+### Phase 3, 180+ Days (Competitive, KD 38+)
 Once site has 50+ indexed pages and DA 15+:
 13. Remaining keywords as topical authority compounds
 

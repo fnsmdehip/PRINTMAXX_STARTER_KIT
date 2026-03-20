@@ -1,4 +1,4 @@
-# Thread — The Pricing Shift That's Printing Money in 2026
+# Thread, The Pricing Shift That's Printing Money in 2026
 # STATUS: APPROVED
 # SOURCE: ALPHA307, ALPHA308, ALPHA310, ALPHA312, ALPHA314, ALPHA16929, ALPHA16932
 # VOICE: PRINTMAXXER weighted aggregate

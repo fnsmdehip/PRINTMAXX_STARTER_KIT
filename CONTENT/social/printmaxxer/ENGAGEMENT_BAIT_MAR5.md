@@ -1,4 +1,4 @@
-# @printmaxxer — Engagement Bait + Reply Bait + QT Captions + Community Posts
+# @printmaxxer, Engagement Bait + Reply Bait + QT Captions + Community Posts
 # Generated: 2026-03-05
 # Status: PENDING_REVIEW
 # Purpose: Stimulate conversation, drive replies, build authority, algorithmic boost

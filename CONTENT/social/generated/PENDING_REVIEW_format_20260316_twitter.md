@@ -6,18 +6,18 @@
 # SCHEDULED: 2026-03-16T08:31:00-05:00
 #
 # SCHEDULE MANIFEST (EST)
-# POST_1: 2026-03-16 12:00 EST  [Mon midday — revenue bottleneck angle]
-# POST_2: 2026-03-16 18:00 EST  [Mon evening — cold email math]
-# POST_3: 2026-03-17 07:00 EST  [Tue morning — local biz audit hook]
-# POST_4: 2026-03-17 12:00 EST  [Tue midday — overnight runner pattern]
-# POST_5: 2026-03-18 07:00 EST  [Wed morning — boring = prints]
-# THREAD: 2026-03-18 18:00 EST  [Wed evening — 35 days $0 thread]
+# POST_1: 2026-03-16 12:00 EST  [Mon midday, revenue bottleneck angle]
+# POST_2: 2026-03-16 18:00 EST  [Mon evening, cold email math]
+# POST_3: 2026-03-17 07:00 EST  [Tue morning, local biz audit hook]
+# POST_4: 2026-03-17 12:00 EST  [Tue midday, overnight runner pattern]
+# POST_5: 2026-03-18 07:00 EST  [Wed morning, boring = prints]
+# THREAD: 2026-03-18 18:00 EST  [Wed evening, 35 days $0 thread]
 
 ---
 
 ## STANDALONE POSTS (5)
 
-### POST_1 — Revenue bottleneck angle
+### POST_1, Revenue bottleneck angle
 $0 revenue for 35 days. 8 apps built. 47 sites deployed. 33 opportunities scored and queued.
 
 the bottleneck isn't building. it's clicking "create account" on stripe.
@@ -26,7 +26,7 @@ one form between $0 and $1.
 
 ---
 
-### POST_2 — Cold email math
+### POST_2, Cold email math
 cold email math nobody talks about:
 
 gmail sends 500/day free
@@ -40,7 +40,7 @@ $6K/mo from free gmail accounts and a python script
 
 ---
 
-### POST_3 — Local biz audit hook
+### POST_3, Local biz audit hook
 ran an automated audit on 50 local businesses last night
 
 38 scored below 40/100
@@ -51,7 +51,7 @@ nobody's doing this with actual scoring algorithms. they're eyeballing and charg
 
 ---
 
-### POST_4 — Overnight runner pattern
+### POST_4, Overnight runner pattern
 the overnight runner changed how i ship
 
 while i sleep:
@@ -66,7 +66,7 @@ wake up to a prioritized list with dollar amounts attached. not ideas. actions.
 
 ---
 
-### POST_5 — Boring = prints
+### POST_5, Boring = prints
 everyone's building AI wrappers
 
 meanwhile local businesses still have sites scoring 12/100 on mobile speed. $500/mo to fix that. 4-5 clients same zip = batch the work.

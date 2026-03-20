@@ -59,7 +59,7 @@ audited 7 apps this morning.
 
 5 of them have pricing sections. "pro plan: $3/mo." "premium: $6/mo." real prices. real copy.
 
-zero payment links. every single "unlock pro" button goes to an email form.
+zero payment links. every single "get pro" button goes to an email form.
 
 someone who wants to pay me money literally cannot.
 

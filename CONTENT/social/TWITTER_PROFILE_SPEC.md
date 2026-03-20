@@ -32,7 +32,7 @@ what if you automated every side hustle method you ever bookmarked? finding out.
 
 ## Profile Picture
 
-**Option A:** Minimal logo — "PM" monogram, dark bg, blue accent
+**Option A:** Minimal logo, "PM" monogram, dark bg, blue accent
 **Option B:** Anonymous silhouette with terminal/matrix overlay
 **Option C:** AI-generated professional headshot (if you want a face)
 
@@ -62,7 +62,7 @@ printmaxx.surge.sh (or better: set up a link-in-bio page at printmaxx-links.surg
 ## Communities to Join
 
 **Building in Public:**
-- Search "building in public" — multiple communities with 10K+ members
+- Search "building in public", multiple communities with 10K+ members
 - @buildspace community
 - Indie Hackers crossposters
 
@@ -74,4 +74,4 @@ printmaxx.surge.sh (or better: set up a link-in-bio page at printmaxx-links.surg
 - Reply to @mcaborido, @maboroshi_ai type accounts
 - Engage in Claude/GPT discussion threads
 
-**Strategy:** Don't just join — provide value in replies. Drop specific numbers. "I tested this, here's what happened" energy. The bio + pinned tweet + consistent posting creates the flywheel.
+**Strategy:** Don't just join, provide value in replies. Drop specific numbers. "I tested this, here's what happened" energy. The bio + pinned tweet + consistent posting creates the flywheel.

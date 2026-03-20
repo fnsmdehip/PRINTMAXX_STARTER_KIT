@@ -1,4 +1,4 @@
-# C18 Viral Content Repurposer — Tools Comparison
+# C18 Viral Content Repurposer, Tools Comparison
 # Repurpose.io vs Manual vs Custom Scripts
 
 ## Decision Framework
@@ -17,9 +17,9 @@
 ## Option 1: Repurpose.io
 
 **Pricing:**
-- Starter: $25/mo — 5 channels, 100 posts/mo
-- Professional: $49/mo — unlimited channels, unlimited posts
-- Business: $99/mo — white-label, multiple workspaces
+- Starter: $25/mo, 5 channels, 100 posts/mo
+- Professional: $49/mo, unlimited channels, unlimited posts
+- Business: $99/mo, white-label, multiple workspaces
 
 **What it does:**
 - Watches a source channel (TikTok, YouTube, RSS)
@@ -36,12 +36,12 @@
 - TikTok → Pinterest ✓
 - YouTube → Podcast (audio extraction) ✓
 - Podcast → YouTube (static image video) ✓
-- Podcast → YouTube Shorts (auto-clips from long audio) — limited
+- Podcast → YouTube Shorts (auto-clips from long audio), limited
 - Twitter → LinkedIn ✓
 
 **Limitations:**
 - Does NOT generate captions per-platform (you set one preset)
-- No AI caption rewriting — same caption everywhere
+- No AI caption rewriting, same caption everywhere
 - Does NOT clip long-form into shorts (just crosspost)
 - No blog/newsletter automation
 - Limited to supported platforms
@@ -62,12 +62,12 @@
 ## Option 2: Manual Workflow (Free)
 
 **Stack:**
-- CapCut (free, desktop or web) — clip editing + captions
-- Buffer (free, 3 channels, 10 posts each) — scheduling
-- Later (free, 1 platform) — IG Reels scheduling
-- TikTok mobile — native upload with duplication to others
-- Beehiiv (free) — newsletter scheduling
-- YouTube Studio — video upload
+- CapCut (free, desktop or web), clip editing + captions
+- Buffer (free, 3 channels, 10 posts each), scheduling
+- Later (free, 1 platform), IG Reels scheduling
+- TikTok mobile, native upload with duplication to others
+- Beehiiv (free), newsletter scheduling
+- YouTube Studio, video upload
 
 **Workflow time per piece:**
 - Edit 4 clips in CapCut: 20 min
@@ -83,9 +83,9 @@
 **Limitation:** Fully manual. No automation. Error-prone at scale. TikTok watermark requires manual removal before crossposting (re-export without watermark).
 
 **TikTok watermark removal (free):**
-- Save TikTok to camera roll WITHOUT posting first — no watermark added yet
+- Save TikTok to camera roll WITHOUT posting first, no watermark added yet
 - OR use SnapTik.app / SSSTik.io to download and strip watermark
-- OR just don't post to TikTok first — post elsewhere, then TikTok last
+- OR just don't post to TikTok first, post elsewhere, then TikTok last
 
 **Best for:** Starting out. Under 5 videos/month. Zero budget.
 
@@ -94,11 +94,11 @@
 ## Option 3: Custom Python Scripts
 
 **Stack:**
-- `yt-dlp` — download from YouTube, TikTok, any platform
-- `ffmpeg` — clip cutting, format conversion, watermark removal
-- `whisper` — transcription (OpenAI Whisper, local)
-- `anthropic` SDK — Claude API for caption generation per platform
-- `tiktok-uploader`, `instagrapi`, `pytube`, `google-api-python-client` — platform APIs
+- `yt-dlp`, download from YouTube, TikTok, any platform
+- `ffmpeg`, clip cutting, format conversion, watermark removal
+- `whisper`, transcription (OpenAI Whisper, local)
+- `anthropic` SDK, Claude API for caption generation per platform
+- `tiktok-uploader`, `instagrapi`, `pytube`, `google-api-python-client`, platform APIs
 
 **Example pipeline script (conceptual):**
 
@@ -204,9 +204,9 @@ def get_platform_rules(platform: str) -> str:
 
 | Tool | Cost | Quality | Speed |
 |------|------|---------|-------|
-| Claude API (Haiku) | $0.003/1K tokens | Best — matches voice | Fast |
+| Claude API (Haiku) | $0.003/1K tokens | Best, matches voice | Fast |
 | ChatGPT API | $0.002/1K tokens | Good | Fast |
-| Opus.pro | $29/mo | Okay — preset prompts | Fast |
+| Opus.pro | $29/mo | Okay, preset prompts | Fast |
 | Repurpose.io built-in | Included | Basic, repetitive | Auto |
 
 **Recommendation:** Use Claude Haiku via API for all caption generation. At $0.003/1K tokens, processing 20 captions per video costs under $0.05. Full video repurpose costs under $0.10 total in API fees.
@@ -228,9 +228,9 @@ def get_platform_rules(platform: str) -> str:
 - Time cost: 20 min/piece
 
 ### $50/mo (mostly automated)
-- Repurpose.io Pro ($49) — unlimited crossposting
-- OpusClip ($29) — auto-clip extraction from long-form
-- Claude API ($5 cap) — per-platform captions
+- Repurpose.io Pro ($49), unlimited crossposting
+- OpusClip ($29), auto-clip extraction from long-form
+- Claude API ($5 cap), per-platform captions
 - Time cost: 10 min/piece
 
 ### $15/mo (custom scripts)

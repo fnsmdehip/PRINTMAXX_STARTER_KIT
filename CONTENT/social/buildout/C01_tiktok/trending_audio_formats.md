@@ -1,6 +1,6 @@
-# C01 TikTok — 10 Trending Audio & Format Ideas
+# C01 TikTok, 10 Trending Audio & Format Ideas
 
-**Note:** Audio trends shift weekly. These are structural formats + audio categories that have 6-12 month staying power. Specific audio IDs rotate — use these as discovery frameworks, not static picks.
+**Note:** Audio trends shift weekly. These are structural formats + audio categories that have 6-12 month staying power. Specific audio IDs rotate, use these as discovery frameworks, not static picks.
 
 ---
 
@@ -120,15 +120,15 @@
 1. Open TikTok, go to Creator Tools → Trending
 2. Filter by "sounds" in your niche categories
 3. Look for songs/sounds with 10K-100K videos (not 1M+ which is saturated)
-4. Check the "videos made with this sound" — if they're performing well, the sound is still boosted
+4. Check the "videos made with this sound", if they're performing well, the sound is still boosted
 5. Use CapCut's built-in trending sounds section (updated daily)
 6. Save 10 trending sounds per week to your "saved" list for future use
 
 **Royalty-free audio sources (for repurposing to YouTube/Instagram without takedowns):**
-- Epidemic Sound ($15/month) — clearance for all platforms
-- Artlist ($16/month) — unlimited lifetime license per track
-- YouTube Audio Library (free) — available for all platforms
-- TikTok's "Commercial Sounds" library — safe for ads and boosted posts
+- Epidemic Sound ($15/month), clearance for all platforms
+- Artlist ($16/month), unlimited lifetime license per track
+- YouTube Audio Library (free), available for all platforms
+- TikTok's "Commercial Sounds" library, safe for ads and boosted posts
 
 **Current evergreen audio categories (2026):**
 - Lo-fi hip hop: always safe, always algorithm-neutral

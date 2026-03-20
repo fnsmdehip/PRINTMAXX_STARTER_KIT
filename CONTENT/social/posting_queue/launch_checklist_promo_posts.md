@@ -101,7 +101,7 @@ drop your answer below. curious what's actually in the way.
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks on all 5 posts
 - [x] Exact numbers throughout (7 apps, 47 steps, 7 days, $497, days 1-5, days 6-7, app #8, 90%)
 - [x] Would @pipelineabuser actually post this? Yes on posts 1, 2, 4. @eptwts energy on 3. Reply bait on 5.

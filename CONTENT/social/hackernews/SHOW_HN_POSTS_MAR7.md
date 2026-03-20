@@ -6,7 +6,7 @@ BATCH: Hacker News Show HN posts
 
 # SHOW HN POST 1
 
-TITLE: Show HN: ShopMetrics Pro — paste any Shopify store URL, see their tech stack and apps
+TITLE: Show HN: ShopMetrics Pro, paste any Shopify store URL, see their tech stack and apps
 
 URL: https://shopmetrics-pro.surge.sh
 
@@ -25,7 +25,7 @@ What it returns:
 
 No login. No email. Paste URL, get data.
 
-Technical approach: static frontend on surge.sh, client-side analysis of publicly accessible store data via DOM inspection and script tag parsing. No server-side scraping — everything runs in-browser against what the store makes publicly available.
+Technical approach: static frontend on surge.sh, client-side analysis of publicly accessible store data via DOM inspection and script tag parsing. No server-side scraping, everything runs in-browser against what the store makes publicly available.
 
 I built this because I was manually reading Shopify source code before client pitches and wanted to stop doing that by hand. The 47-point version (SiteScore Pro) extends this to full SEO and performance auditing.
 
@@ -35,7 +35,7 @@ Would be curious what additional signals people would find useful. Klaviyo/Posts
 
 # SHOW HN POST 2
 
-TITLE: Show HN: SiteScore — free website performance scorer (47 signals, results in under 2 seconds)
+TITLE: Show HN: SiteScore, free website performance scorer (47 signals, results in under 2 seconds)
 
 URL: https://sitescore-free.surge.sh
 

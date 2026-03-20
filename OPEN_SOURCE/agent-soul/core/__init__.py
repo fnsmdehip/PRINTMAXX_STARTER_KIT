@@ -13,6 +13,7 @@ Modules:
     decision_engine    - closed-loop autonomous decision agent
     resilience         - retry, file locking, circuit breaker, sanitization, parallel guardrails
     conversation_logger - extract and search conversation transcripts
+    memory_import      - import conversation history from any LLM provider
     session_briefing   - generate session start briefings from system state
     handoff            - typed agent-to-agent handoff protocol with guardrails
     procedural_memory  - skill document system: capture, recall, consolidate learned tasks
@@ -20,6 +21,10 @@ Modules:
     durable            - crash recovery with deterministic replay
     tracing            - agent observability: event collection, cost tracking, HTML timelines
     mcp_bridge         - expose agents as MCP tool servers, consume external MCP tools
+    deps               - optional dependency upgrades with stdlib fallback (tenacity, httpx, rich)
+    workflow_bridge     - autonomous n8n workflow creation and management via API
+    conversation_index - FTS5 full-text search index for conversation history
+    media              - smart media generation router (image, video, TTS, voice agent, music)
 """
 
 __version__ = "0.1.0"

@@ -6,7 +6,7 @@ TARGET GROUPS: Catholic groups, Baptist/Evangelical groups, Muslim/Ramadan group
 
 ---
 
-# POST 1 — Catholic Facebook groups
+# POST 1, Catholic Facebook groups
 (Target: "Catholic Faith Community", "Catholic Women of Grace", "Traditional Latin Mass Catholics", "Daily Catholic Devotionals", any Catholic parish group)
 
 I built a free daily devotional tracker for Catholics and wanted to share it here in case it's helpful for anyone.
@@ -32,7 +32,7 @@ If you want features added (confession tracker, novena calendar, parish-specific
 
 ---
 
-# POST 2 — Baptist and Evangelical Facebook groups
+# POST 2, Baptist and Evangelical Facebook groups
 (Target: "Daily Bible Reading Challenge", "Baptist Women's Fellowship", "Evangelical Prayer Group", "Bible in a Year", church group pages)
 
 Sharing this here because I think some folks in this community might find it useful.
@@ -56,7 +56,7 @@ If your church has specific programs or accountability structures you want track
 
 ---
 
-# POST 3 — Muslim and Ramadan Facebook groups
+# POST 3, Muslim and Ramadan Facebook groups
 (Target: "Ramadan 2026", "Muslim Moms Network", "Sunni Muslims Worldwide", "Shia Muslims Community", "Islamic Daily Reminders")
 
 TIME-SENSITIVE: Ramadan has 22 days left. sharing this now because it's most useful right now.
@@ -90,24 +90,24 @@ Ramadan Mubarak to everyone in this community.
 
 ---
 
-# POST 4 — General Christian Facebook groups
+# POST 4, General Christian Facebook groups
 (Target: "Christian Women of Faith", "Daily Devotionals Community", "Faith and Growth", "Christians Who Read the Bible Daily", non-denominational church groups)
 
 I've been building free daily devotional apps for different Christian denominations and wanted to share them here.
 
 There are now 11 Christian editions live:
 
-- Catholic: saints calendar, rosary, Liturgy of the Hours — catholic-streak.surge.sh
-- Orthodox: fasting calendar, prayer rule — orthodox-streak.surge.sh
-- Baptist: Bible reading plans, accountability — baptist-streak.surge.sh
-- Methodist: daily devotional, class meeting structure — methodist-streak.surge.sh
-- Lutheran: Luther's daily prayers, catechism — lutheran-streak.surge.sh
-- Episcopal: Book of Common Prayer Daily Office — episcopal-streak.surge.sh
-- Pentecostal: prayer, worship, Holy Spirit focus — pentecostal-streak.surge.sh
-- Evangelical: quiet time, Bible reading — evangelical-streak.surge.sh
-- Presbyterian: Westminster Catechism, Sabbath — presbyterian-streak.surge.sh
-- Protestant: general daily scripture and prayer — protestant-streak.surge.sh
-- Anglican: Daily Office, BCP-aligned — anglican-streak.surge.sh
+- Catholic: saints calendar, rosary, Liturgy of the Hours, catholic-streak.surge.sh
+- Orthodox: fasting calendar, prayer rule, orthodox-streak.surge.sh
+- Baptist: Bible reading plans, accountability, baptist-streak.surge.sh
+- Methodist: daily devotional, class meeting structure, methodist-streak.surge.sh
+- Lutheran: Luther's daily prayers, catechism, lutheran-streak.surge.sh
+- Episcopal: Book of Common Prayer Daily Office, episcopal-streak.surge.sh
+- Pentecostal: prayer, worship, Holy Spirit focus, pentecostal-streak.surge.sh
+- Evangelical: quiet time, Bible reading, evangelical-streak.surge.sh
+- Presbyterian: Westminster Catechism, Sabbath, presbyterian-streak.surge.sh
+- Protestant: general daily scripture and prayer, protestant-streak.surge.sh
+- Anglican: Daily Office, BCP-aligned, anglican-streak.surge.sh
 
 All of them are free. No account. No download. Works offline. No ads.
 

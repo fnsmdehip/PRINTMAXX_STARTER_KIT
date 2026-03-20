@@ -1,5 +1,5 @@
-# Alpha Content Cycle — 2026-03-08 19:00
-Status: APPROVED (quality gate passed 2026-03-08 19:05 — all 5 tweets + thread approved, queued Apr 16-18)
+# Alpha Content Cycle, 2026-03-08 19:00
+Status: APPROVED (quality gate passed 2026-03-08 19:05, all 5 tweets + thread approved, queued Apr 16-18)
 
 ---
 

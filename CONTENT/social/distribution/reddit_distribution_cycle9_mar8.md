@@ -1,4 +1,4 @@
-# Reddit Distribution — Cycle 9 — March 8, 2026
+# Reddit Distribution, Cycle 9, March 8, 2026
 
 Status: PENDING_REVIEW
 Target: 8 posts, undercovered subreddits, value-first angles
@@ -6,7 +6,7 @@ Assets: PageScorer, ColdMaxx, WalkToUnlock, ADHD Streak, FocusLock, SleepMaxx, w
 
 ---
 
-## Post 1 — r/webdev
+## Post 1, r/webdev
 
 **Title:** I built a free Lighthouse alternative that scores your landing page conversion potential, not just speed
 
@@ -21,7 +21,7 @@ it runs 4 scoring layers instead of just speed:
 - page speed (yes, still matters, and I pull real data on it)
 - SEO structure (title tags, meta, heading hierarchy, indexability signals)
 - conversion readiness (CTA placement, above-the-fold clarity, trust signals)
-- mobile experience (not just responsiveness — actual usability on thumb-sized screens)
+- mobile experience (not just responsiveness, actual usability on thumb-sized screens)
 
 the output is a weighted score with a breakdown of exactly what's hurting you and why. it's free, runs on any URL you paste in, no account required.
 
@@ -33,7 +33,7 @@ would be curious what scores people get on landing pages they thought were solid
 
 ---
 
-## Post 2 — r/SaaS
+## Post 2, r/SaaS
 
 **Title:** I built 6 free tools in 30 days as a solo dev. here's what worked and what flopped
 
@@ -61,7 +61,7 @@ happy to go deep on any of these if people want to know the build process or wha
 
 ---
 
-## Post 3 — r/nosurf
+## Post 3, r/nosurf
 
 **Title:** I built an app that won't let you use your phone unless you walk 1000 steps first
 
@@ -71,7 +71,7 @@ I spent a lot of time thinking about why willpower approaches to phone addiction
 
 the problem with every app blocker I tried: they were friction, not a hard gate. you could always override them if you were motivated enough. and when you're mid-dopamine-chase at 11pm, you are always motivated enough to bypass a soft block.
 
-so I tried something different. what if the unlock requirement was physical instead of digital?
+so I tried something different. what if the get requirement was physical instead of digital?
 
 I built WalkToUnlock. the mechanic is simple: your phone stays locked until you hit a step threshold. I set mine at 1000 steps but it's adjustable. the phone literally doesn't open until you walk.
 
@@ -85,7 +85,7 @@ curious if anyone else has tried behavior-replacement approaches versus straight
 
 ---
 
-## Post 4 — r/ADHD
+## Post 4, r/ADHD
 
 **Title:** I have ADHD and built a streak app specifically for how our brains work - dopamine hits for consistency, not perfection
 
@@ -114,7 +114,7 @@ if anyone wants to swap notes on what habit tracking approaches have actually wo
 
 ---
 
-## Post 5 — r/Entrepreneur
+## Post 5, r/Entrepreneur
 
 **Title:** I cold emailed 500 local businesses with a free website audit. 23 replied. here's the exact template
 
@@ -154,7 +154,7 @@ if anyone wants the full scraping setup or the audit tool link, drop a comment.
 
 ---
 
-## Post 6 — r/selfhosted
+## Post 6, r/selfhosted
 
 **Title:** I built a self-hostable cold email toolkit, no SaaS subscriptions, no per-email costs
 
@@ -174,7 +174,7 @@ the toolkit (I'm calling it ColdMaxx) handles the parts of cold email that actua
 
 it runs locally or on any VPS you already have. postgres for storage, python for the core logic, a small web UI for managing sequences. I use it on a $6/month DigitalOcean droplet.
 
-the monthly cost to run it yourself: $6 for the server, whatever you pay for your sending domain (I use Postmark at about $15/mo for the volume I send). that's it. no per-seat pricing, no contact limits, no "upgrade to unlock sequences" paywalls.
+the monthly cost to run it yourself: $6 for the server, whatever you pay for your sending domain (I use Postmark at about $15/mo for the volume I send). that's it. no per-seat pricing, no contact limits, no "upgrade to get sequences" paywalls.
 
 the tradeoff compared to Instantly or Lemlist: you have to set it up yourself and manage deliverability. it's not plug-and-play. if you're comfortable with a basic VPS setup it takes maybe 2 hours to get running. if you want someone else to manage the infrastructure, the SaaS tools are probably worth it.
 
@@ -182,7 +182,7 @@ live version at coldmaxx-app.surge.sh if you want to see what the interface look
 
 ---
 
-## Post 7 — r/productivity
+## Post 7, r/productivity
 
 **Title:** 3 free PWAs I built to fix my own phone addiction, sleep, and focus problems
 
@@ -206,7 +206,7 @@ none of them have premium tiers. I built them for myself and decided to share th
 
 ---
 
-## Post 8 — r/digitalnomad
+## Post 8, r/digitalnomad
 
 **Title:** I build and deploy micro-tools as a nomad. 10+ live tools, $0 hosting. here's the exact stack
 
@@ -228,7 +228,7 @@ I don't do that anymore. here's the actual stack I use now:
 - roicalc.surge.sh (ROI calculator)
 - focuslock-app.surge.sh (focus/phone blocker)
 - sleepmaxx-app.surge.sh (sleep tracker)
-- walktounlock-app.surge.sh (walk to unlock your phone)
+- walktounlock-app.surge.sh (walk to get your phone)
 - and a few comparison pages that bring in SEO traffic
 
 total monthly cost: $0 for hosting. the tools generate backlinks, some ad revenue on the comparison pages, and occasionally lead to paid work when someone finds the tools useful and wants help with something bigger.
@@ -242,7 +242,7 @@ if you're a developer nomad and still using AWS or Vercel for hobby projects, su
 ## Pre-Publish Checklist (applied to all 8 posts)
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (no use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks on each post
 - [x] Exact numbers throughout (500 emails, 23 replies, 4.6% reply rate, 7.2 seconds, 80 pickups, 20 pickups, 22 min focus, 47 min focus, 30 seconds to deploy, $6/mo VPS, $15/mo Postmark, $97/mo replaced, 10+ tools, $0 hosting)
 - [x] Would @pipelineabuser actually post this? Yes - specific, aggressive with data, tells a real story

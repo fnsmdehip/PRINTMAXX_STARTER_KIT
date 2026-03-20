@@ -1,4 +1,4 @@
-# @printmaxxer — X (Twitter) Communities Content
+# @printmaxxer, X (Twitter) Communities Content
 # Generated: 2026-03-05
 # Status: PENDING_REVIEW
 # Purpose: Posts specifically for X Communities (the actual Twitter feature, not abstract communities)
@@ -14,7 +14,7 @@ These are real X Communities (the group feature on Twitter/X). Join all of them.
 | Community | URL | Members | Why |
 |-----------|-----|---------|-----|
 | Build in Public | x.com/i/communities/1493446837214187523 | Large, OG community | Core audience for @printmaxxer |
-| Build In Public - SaaS | x.com/i/communities/1828843041869713562 | Active SaaS builders | SaaS angle, daily journey posts |
+| Build In Public - SaaS | x.com/i/communities/1828843041869713562 | Active SaaS builders | SaaS angle, daily path posts |
 | Indie Hackers | x.com/i/communities/1852284626317754858 | Indie builder crowd | Revenue posts, tool posts |
 | AI Builders Collective | x.com/i/communities/1982477501432549714 | AI tool builders | Claude Code, MCP, automation posts |
 | Startup Community | x.com/i/communities/1471580197908586507 | Startup founders | General startup content |

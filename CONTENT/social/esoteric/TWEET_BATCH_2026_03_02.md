@@ -8,7 +8,7 @@
 
 ## standalone tweets
 
-### tweet 1 — ketamine + neurogenesis = consciousness expansion
+### tweet 1, ketamine + neurogenesis = consciousness expansion
 **account:** @voidpilled
 **chars:** 269
 
@@ -18,7 +18,7 @@ ketamine triggers neurogenesis. new neurons. literal new pathways in the brain. 
 
 ---
 
-### tweet 2 — epigenetic clocks = biological time manipulation
+### tweet 2, epigenetic clocks = biological time manipulation
 **account:** @voidpilled
 **chars:** 253
 
@@ -28,7 +28,7 @@ epigenetic clocks measure biological age independent of chronological time. your
 
 ---
 
-### tweet 3 — extraction mindset = energetic harvesting
+### tweet 3, extraction mindset = energetic harvesting
 **account:** @voidpilled
 **chars:** 268
 

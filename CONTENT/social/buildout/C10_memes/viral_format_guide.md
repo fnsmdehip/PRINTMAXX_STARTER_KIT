@@ -1,4 +1,4 @@
-# Viral Format Guide — What Makes Memes Spread
+# Viral Format Guide, What Makes Memes Spread
 
 ---
 
@@ -20,7 +20,7 @@ Generic memes die in your notifications. Specific memes travel across the intern
 **1. Drake Approve/Reject**
 - Why it works: Forces comparison, creates opinion, invites debate
 - Best for: Platform vs platform, old way vs new way, mindset shifts
-- Trick: The "reject" item must be something the audience secretly does — creates self-recognition
+- Trick: The "reject" item must be something the audience secretly does, creates self-recognition
 - Optimal caption length: 1-2 lines
 
 **2. Expanding Brain (4-panel)**
@@ -33,7 +33,7 @@ Generic memes die in your notifications. Specific memes travel across the intern
 - Why it works: Permission to relate to failure without shame
 - Best for: Productivity fails, passive income reality, business planning vs execution
 - Trick: The "reality" must be more specific and honest than expected
-- Engagement driver: Comments are always "lmao me" — reply bait built in
+- Engagement driver: Comments are always "lmao me", reply bait built in
 
 **4. Roll Safe (Tapping Temple)**
 - Why it works: Permission to be lazy disguised as intelligence
@@ -44,7 +44,7 @@ Generic memes die in your notifications. Specific memes travel across the intern
 **5. Gru's Plan (4-panel)**
 - Why it works: The reversal in panel 4 is always funny because it's always true
 - Best for: Any planning vs execution gap, any "I didn't think this through" moment
-- Trick: Panel 4 must use the exact same text as panel 3 — the humor is in repetition
+- Trick: Panel 4 must use the exact same text as panel 3, the humor is in repetition
 
 ---
 
@@ -58,7 +58,7 @@ Generic memes die in your notifications. Specific memes travel across the intern
 **7. This Is Fine (Dog in Burning Room)**
 - Why it works: Normalizes chaos, creates community through shared suffering
 - Best for: Remote work, economic anxiety, startup life, Ramadan during finals week
-- Trick: Label the fires specifically — the more specific, the more shares
+- Trick: Label the fires specifically, the more specific, the more shares
 
 **8. Surprised Pikachu**
 - Why it works: The "I caused this but am shocked" pattern is universally relatable

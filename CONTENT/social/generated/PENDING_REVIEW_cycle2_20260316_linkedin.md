@@ -6,7 +6,7 @@
 
 ---
 
-## POST 1 — GEO for business owners
+## POST 1, GEO for business owners
 
 50% of consumers now use AI tools for product discovery.
 
@@ -28,7 +28,7 @@ The ones still only doing traditional SEO will wonder where their traffic went.
 
 ---
 
-## POST 2 — Pricing as a growth lever
+## POST 2, Pricing as a growth lever
 
 Most founders treat pricing as a one-time decision they make in 5 minutes during launch.
 
@@ -48,7 +48,7 @@ The fix doesn't require new features or new users. Just better packaging of what
 
 ---
 
-## POST 3 — 1:20 content ratio
+## POST 3, 1:20 content ratio
 
 The creators growing fastest in 2026 aren't creating more content. They're distributing more.
 

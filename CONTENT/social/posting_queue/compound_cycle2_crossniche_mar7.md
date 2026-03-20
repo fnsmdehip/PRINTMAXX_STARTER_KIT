@@ -62,7 +62,7 @@ i have 14 free streak apps deployed with zero payment links.
 
 $2.99 x 1,000 downloads = $2,990 i'm leaving on the table by being free.
 
-adding $1.99 unlock to WalkToUnlock and SleepMaxx this week. zero new code needed. just a paywall.
+adding $1.99 get to WalkToUnlock and SleepMaxx this week. zero new code needed. just a paywall.
 
 ---
 

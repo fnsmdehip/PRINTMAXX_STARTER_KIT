@@ -1,4 +1,4 @@
-# @printmaxxer — 10 Complete Threads
+# @printmaxxer, 10 Complete Threads
 
 Format: Tweet 1 is the hook. Tweet 2-6/7 deliver value. Final tweet = CTA or close.
 All threads follow copy-style.md S-tier voice.
@@ -89,7 +89,7 @@ this is noise. everyone sends this.
 **T3**
 the template that works:
 
-line 1: specific thing I noticed — "Your checkout page loads in 4.2 seconds on mobile. The average in your category is 1.8."
+line 1: specific thing I noticed, "Your checkout page loads in 4.2 seconds on mobile. The average in your category is 1.8."
 line 2: "That's probably costing you 15-20% of mobile conversions."
 line 3: "I fix this for companies like yours in 48 hours."
 line 4: "Worth a quick look?"
@@ -116,7 +116,7 @@ companies that just raised money are in active vendor-evaluation mode. perfect t
 the follow-up sequence that doesn't feel spammy:
 
 Day 1: first email
-Day 4: "Sent this last week — wanted to make sure it landed."
+Day 4: "Sent this last week, wanted to make sure it landed."
 Day 9: "Last follow-up. Happy to share the full audit if the timing works better later."
 
 3 touchpoints. never more. never pressure.
@@ -130,7 +130,7 @@ stop sending essays. nobody reads them. 62 words or under.
 
 ---
 
-## Thread 3: "The X algorithm in 2026 — what it actually rewards"
+## Thread 3: "The X algorithm in 2026, what it actually rewards"
 
 **T1 (hook)**
 spent 4 months testing the X algorithm.
@@ -144,7 +144,7 @@ what the algo rewards (ranked by impact):
 
 1. replies (especially long back-and-forth)
 2. bookmarks (highest signal of value)
-3. link clicks to external (hurts distribution — don't put links in main tweet)
+3. link clicks to external (hurts distribution, don't put links in main tweet)
 4. time spent reading (long text > short)
 5. likes (overrated metric)
 
@@ -255,7 +255,7 @@ start with content. then multiply it. most people skip step 2.
 **T1 (hook)**
 most print-on-demand niches are saturated.
 
-here are the ones that aren't — with actual margin data:
+here are the ones that aren't, with actual margin data:
 
 **T2**
 the saturated stuff (avoid):
@@ -321,7 +321,7 @@ the lead magnet that actually pulls:
 
 not "subscribe for updates." nobody wants updates.
 
-"10 tools I use to automate 80% of my workday — free download."
+"10 tools I use to automate 80% of my workday, free download."
 
 specific, immediately useful, sounds exclusive. this converts at 4-8% from cold traffic.
 
@@ -363,7 +363,7 @@ if you found this useful: follow. I send 2 emails/month about what's actually wo
 
 ---
 
-## Thread 7: "The freelance to product transition — what nobody tells you"
+## Thread 7: "The freelance to product transition, what nobody tells you"
 
 **T1 (hook)**
 I charged $75/hour for 3 years.
@@ -429,7 +429,7 @@ the subreddits that send the most traffic (for solopreneurs):
 - r/indiehackers (180K)
 - r/microsaas (40K)
 - r/digitalnomad (1.8M)
-- r/personalfinance (18M — if relevant)
+- r/personalfinance (18M, if relevant)
 
 pick 3. master them before expanding.
 
@@ -458,7 +458,7 @@ after 500 karma: you can post products to relevant subreddits without getting in
 **T5**
 the post format that consistently gets to top:
 
-title: "[Month] I built [thing] — [specific result]. Here's what I learned."
+title: "[Month] I built [thing], [specific result]. Here's what I learned."
 
 structure: 3 sentences of context. numbered list of 5-7 learnings. conclusion. no CTA in body.
 
@@ -510,7 +510,7 @@ the funnel is: attention (X) → trust (newsletter) → purchase (product).
 X is the top. you need the rest of the funnel. build it early.
 
 **T5**
-the highest-leverage small-account move:
+the highest-use small-account move:
 
 build in public. ship something. tweet about what you're learning.
 

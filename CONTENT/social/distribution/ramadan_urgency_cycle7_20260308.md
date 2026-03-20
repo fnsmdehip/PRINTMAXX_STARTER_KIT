@@ -1,4 +1,4 @@
-# RAMADAN URGENCY DISTRIBUTION — 20 Days Left
+# RAMADAN URGENCY DISTRIBUTION, 20 Days Left
 # Generated: 2026-03-08 | Cycle 7
 # CRITICAL: Ramadan ends ~March 28-29, 2026. Every day without distribution = lost users.
 
@@ -25,7 +25,7 @@ Faith apps have seasonal demand windows. Missing Ramadan = waiting 11 months for
 
 **Post for r/islam:**
 ```
-Title: Free Ramadan tracking app — offline capable, no ads, no data collection
+Title: Free Ramadan tracking app, offline capable, no ads, no data collection
 
 assalamu alaikum everyone,
 
@@ -124,7 +124,7 @@ these cost $0 to host, $0 to use, collect $0 of your data.
 Tweet 6:
 technical details for the devs:
 
-- PWAs (progressive web apps) — install from browser
+- PWAs (progressive web apps), install from browser
 - vanilla JS, no frameworks
 - service workers for offline
 - localStorage for data
@@ -200,9 +200,9 @@ About 20 days of Ramadan left. May Allah accept our ibadah. Ramadan Mubarak.
 ```
 salam everyone. built some free ramadan apps, wanted to share:
 
-ramadan-tracker.surge.sh — fasting + prayer + quran tracking
-prayerlock-app.surge.sh — prayer streak tracker
-hilal-app.surge.sh — moon phase + eid prediction
+ramadan-tracker.surge.sh, fasting + prayer + quran tracking
+prayerlock-app.surge.sh, prayer streak tracker
+hilal-app.surge.sh, moon phase + eid prediction
 
 all free, work offline, no ads, no accounts. they're PWAs so you install from browser.
 
@@ -212,7 +212,7 @@ about 20 days of ramadan left. hope these help someone. ramadan mubarak.
 ### CHANNEL 5: Product Hunt (Ramadan-Timed Launch)
 
 **Product:** PrayerLock
-**Tagline:** Free prayer tracking app that works offline — built for Ramadan
+**Tagline:** Free prayer tracking app that works offline, built for Ramadan
 **Description:**
 ```
 PrayerLock is a prayer streak tracker designed for Muslims. Built as a PWA (progressive web app), it installs from your browser and works completely offline.
@@ -276,7 +276,7 @@ don't let it reset. keep the streak going.
 
 **Reddit post (r/islam):**
 ```
-Title: Keep your Ramadan prayer consistency going — the apps still work year-round
+Title: Keep your Ramadan prayer consistency going, the apps still work year-round
 
 The most common post-Ramadan drop-off: prayer consistency crashes back to pre-Ramadan levels within 2 weeks.
 
@@ -291,10 +291,10 @@ The data is all still on your phone. Your streaks are still there. Keep going.
 
 ## HUMAN ACTIONS REQUIRED (RAMADAN-SPECIFIC)
 
-1. **Create Reddit account** (5 min) — Post to r/islam and r/MuslimLounge TODAY
-2. **Join Islamic Facebook groups** (15 min) — Search "Muslim community [your city]", "Ramadan 2026", "Islamic lifestyle"
-3. **Join Islamic Discord servers** (10 min) — Search Discord for "Muslim", "Islam", "Ramadan"
-4. **Create Product Hunt account** (5 min) — Schedule PrayerLock launch for ~10 days from now
-5. **Post Ramadan content on Twitter** — BLOCKED until warmup day 10+ (March 15-ish at earliest)
+1. **Create Reddit account** (5 min), Post to r/islam and r/MuslimLounge TODAY
+2. **Join Islamic Facebook groups** (15 min), Search "Muslim community [your city]", "Ramadan 2026", "Islamic lifestyle"
+3. **Join Islamic Discord servers** (10 min), Search Discord for "Muslim", "Islam", "Ramadan"
+4. **Create Product Hunt account** (5 min), Schedule PrayerLock launch for ~10 days from now
+5. **Post Ramadan content on Twitter**, BLOCKED until warmup day 10+ (March 15-ish at earliest)
 
 **Total time needed: ~35 minutes for channels 1-4. Revenue potential: $0 direct, but 500-2,000 app installs during Ramadan = email list + retention for year-round monetization.**

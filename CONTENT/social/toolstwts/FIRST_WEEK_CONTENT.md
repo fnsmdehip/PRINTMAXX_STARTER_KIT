@@ -440,7 +440,7 @@ stop paying $500/mo for tools when $28/mo does the same thing.
 ## VOICE CHECK
 
 - [x] zero em dashes in entire document
-- [x] zero banned AI vocabulary (no "leverage," "comprehensive," "innovative," "seamless," "game-changer," "cutting-edge," "empower," "unlock," "delve," "robust")
+- [x] zero banned AI vocabulary (no "use," "complete," "novel," "seamless," "game-changer," "cutting-edge," "empower," "get," "dig," "strong")
 - [x] specific numbers in every piece (dollar amounts, time savings, tool limits, comparison metrics)
 - [x] lowercase energy throughout
 - [x] would @BLUECOW009 actually post this: yes. casual tech energy. "lol" openers. specific tool names not generic categories. stream-of-consciousness flow. real use cases not theoretical benefits.

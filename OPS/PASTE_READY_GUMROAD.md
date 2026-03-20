@@ -496,3 +496,31 @@ Vibe Codors + Greta Marketplace (441 PH votes). Sell existing built apps (20+ PW
 
 [ACQUISITION] Built a content repurposing engine with 3 studios — 30$ MRR currently, preparing for Acquire.com listing. Roast my posit
 
+
+
+---
+
+## Pending Enhancement (ALPHA107582, Score: 36)
+
+**Source:** r/AmazonFBA | **URL:** https://reddit.com/r/AmazonFBA/comments/1rxjp6w/6year_amazon_fba_brand_34kmo_profit_trademarked/
+**Added:** 2026-03-18T20:22:22-04:00
+
+[r/AmazonFBA] 6-Year Amazon FBA Brand | $34K/mo Profit | Trademarked | Patent Protected | $1.66M Listing
+
+
+
+---
+
+## Pending Enhancement (ALPHA107785, Score: 24)
+
+**Source:** @rryssf_ (high-signal-accounts) | **URL:** https://x.com/rryssf_/status/2034371732027711665
+**Added:** 2026-03-19T01:10:47-04:00
+
+McKinsey doesn't charge $500K for thinking.
+
+They charge $500K for thinking wrapped in 80 hours of structured slides, sourced data, and boardroom-ready formatting.
+
+AI just unbundled that. And one tool proves it better than anything I've tested.
+
+It's called Perceptis AI.
+

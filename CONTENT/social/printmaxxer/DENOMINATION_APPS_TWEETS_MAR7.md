@@ -6,7 +6,7 @@ FORMAT: 4 tweets, ready to post
 
 ---
 
-# TWEET 1 — Builder overview / portfolio flex
+# TWEET 1, Builder overview / portfolio flex
 
 built 14 denomination-specific daily devotional apps this weekend.
 
@@ -22,15 +22,15 @@ if you want to see the full portfolio: [catholic/orthodox/baptist/etc]-streak.su
 
 ---
 
-# TWEET 2 — Ramadan urgency / Islamic apps
+# TWEET 2, Ramadan urgency / Islamic apps
 
 Ramadan has 22 days left.
 
 I built 2 free streak trackers specifically for it.
 
-sunni-streak.surge.sh — 5 daily prayers, Tarawih, Quran pages, fasting streak, Zakat reminder
+sunni-streak.surge.sh, 5 daily prayers, Tarawih, Quran pages, fasting streak, Zakat reminder
 
-shia-streak.surge.sh — prayers, A'maal for the last 10 nights, Laylat al-Qadr tracking, daily duas, fasting streak
+shia-streak.surge.sh, prayers, A'maal for the last 10 nights, Laylat al-Qadr tracking, daily duas, fasting streak
 
 both work offline. no account. no download. free.
 
@@ -38,7 +38,7 @@ both work offline. no account. no download. free.
 
 ---
 
-# TWEET 3 — Catholic-specific
+# TWEET 3, Catholic-specific
 
 built a Catholic devotional tracker that actually knows what a feast day is.
 
@@ -59,7 +59,7 @@ built it because I was embarrassed by my own inconsistent prayer life. the strea
 
 ---
 
-# TWEET 4 — Builder angle / challenge post
+# TWEET 4, Builder angle / challenge post
 
 I built 14 apps in a weekend.
 

@@ -613,3 +613,35 @@ and turn on notification...
 
 [ACQUISITION] Our tool made a paid user say his money was well invested on us
 
+
+
+---
+
+## Pending Enhancement (ALPHA108033, Score: 24)
+
+**Source:** @HamptonAc_ (high-signal-accounts) | **URL:** https://x.com/HamptonAc_/status/2034508878231027804
+**Added:** 2026-03-19T11:03:22-04:00
+
+Being poor is a dumb thing to be.
+
+Making money is stupid simple.
+
+Find something people want, sell it to them and get paid.
+
+This isn't calculus or some rocket science.
+
+Some kid who can barely spell is copy-pasting products from China and making $40K months.
+
+So what's your
+
+
+
+---
+
+## Pending Enhancement (ALPHA108243, Score: 35)
+
+**Source:** @lottsnomad (high-signal-accounts) | **URL:** https://x.com/bchesky/status/2034708742986744030
+**Added:** 2026-03-20T07:11:06-04:00
+
+After YC, Airbnb raised $615k at a $3M post-money valuation. We were the highest valuation in our batch.
+

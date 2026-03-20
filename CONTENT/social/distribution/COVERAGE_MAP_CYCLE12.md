@@ -1,4 +1,4 @@
-# DISTRIBUTION COVERAGE MAP — Cycle 12 (2026-03-08 23:55)
+# DISTRIBUTION COVERAGE MAP, Cycle 12 (2026-03-08 23:55)
 
 ## CYCLE SUMMARY
 
@@ -22,7 +22,7 @@
 - **PRIORITY 1:** r/ADHD post has highest single-post viral potential in the entire portfolio
 
 ### ramadan_urgency_push_cycle12.md (~170 lines)
-- **7 channels** for Hilal/Ramadan apps — 18 DAYS LEFT
+- **7 channels** for Hilal/Ramadan apps, 18 DAYS LEFT
 - r/islam (1.1M), r/MuslimLounge (150K)
 - 3 Twitter posts (faith, builder, engagement angles)
 - Facebook Muslim groups, Discord, WhatsApp/Telegram sharable
@@ -62,33 +62,33 @@
 
 ## HIGHEST PRIORITY DISTRIBUTION ACTIONS (Ranked by ROI)
 
-### IMMEDIATE (Do today — copy-paste ready, 0 friction)
+### IMMEDIATE (Do today, copy-paste ready, 0 friction)
 
-1. **Post TaskSmash to r/ADHD** — 2.1M members, ADHD community shares tools aggressively. One viral post = 10K+ visits. Content ready in `tasksmash_launch_blitz_cycle12.md`. Time: 5 min.
+1. **Post TaskSmash to r/ADHD**, 2.1M members, ADHD community shares tools aggressively. One viral post = 10K+ visits. Content ready in `tasksmash_launch_blitz_cycle12.md`. Time: 5 min.
 
-2. **Post Hilal to r/islam** — 1.1M members, 18 days of Ramadan left. Content ready in `ramadan_urgency_push_cycle12.md`. Time: 5 min.
+2. **Post Hilal to r/islam**, 1.1M members, 18 days of Ramadan left. Content ready in `ramadan_urgency_push_cycle12.md`. Time: 5 min.
 
-3. **Post TaskSmash to r/productivity** — 2.5M members, different angle from r/ADHD. Time: 3 min.
+3. **Post TaskSmash to r/productivity**, 2.5M members, different angle from r/ADHD. Time: 3 min.
 
-4. **Post CoreDay to r/productivity** — Anti-habit angle is contrarian, will get engagement. Content in `coreday_launch_cycle12.md`. Time: 5 min. (Space 24h from TaskSmash to avoid spam detection.)
+4. **Post CoreDay to r/productivity**, Anti-habit angle is contrarian, will get engagement. Content in `coreday_launch_cycle12.md`. Time: 5 min. (Space 24h from TaskSmash to avoid spam detection.)
 
-5. **Post Hilal to r/MuslimLounge** — 150K members, more personal community. Time: 3 min.
+5. **Post Hilal to r/MuslimLounge**, 150K members, more personal community. Time: 3 min.
 
 ### SHORT-TERM (This week)
 
-6. **Submit TaskSmash Show HN** — HN account needed. Time: 10 min.
-7. **Submit CoreDay Show HN** — Different day from TaskSmash. Time: 10 min.
-8. **Post 3 IndieHackers transparency reports** — Account needed. Time: 15 min.
-9. **Submit TaskSmash to Product Hunt** — PH account needed. Time: 20 min.
-10. **Post lead magnet content to r/coldoutreach, r/SaaS** — Time: 10 min.
+6. **Submit TaskSmash Show HN**, HN account needed. Time: 10 min.
+7. **Submit CoreDay Show HN**, Different day from TaskSmash. Time: 10 min.
+8. **Post 3 IndieHackers transparency reports**, Account needed. Time: 15 min.
+9. **Submit TaskSmash to Product Hunt**, PH account needed. Time: 20 min.
+10. **Post lead magnet content to r/coldoutreach, r/SaaS**, Time: 10 min.
 
 ### BLOCKED (Require account creation)
 
-- All Twitter posting — @PRINTMAXXER in warmup, no other accounts created
-- Dev.to articles — Account needed
-- LinkedIn posts — Account needed
-- Directory submissions — Accounts needed
-- All marketplace listings — Stripe/Gumroad/Fiverr accounts needed
+- All Twitter posting, @PRINTMAXXER in warmup, no other accounts created
+- Dev.to articles, Account needed
+- LinkedIn posts, Account needed
+- Directory submissions, Accounts needed
+- All marketplace listings, Stripe/Gumroad/Fiverr accounts needed
 
 ## TOTAL CONTENT INVENTORY
 

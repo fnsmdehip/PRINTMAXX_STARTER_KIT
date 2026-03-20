@@ -1,4 +1,4 @@
-# Meme Account Monetization — Revenue Streams with Real Math
+# Meme Account Monetization, Revenue Streams with Real Math
 
 ---
 
@@ -29,7 +29,7 @@
 - Approach: "I post memes for builders who use AI. 8K of them see my content. want a sponsored post?"
 
 **Course creators / info product sellers** ($50-300 per post):
-- Be selective — only promote products you'd actually use
+- Be selective, only promote products you'd actually use
 - Risk: audience can smell guru promotion from 100 miles. use sparingly.
 
 **Ecom tools** (for @ecommeme account):
@@ -38,11 +38,11 @@
 
 ### Outreach Template
 ```
-Subject: Sponsored post idea — [your account] x [their brand]
+Subject: Sponsored post idea, [your account] x [their brand]
 
 Hey [name],
 
-I run [account] — memes for [niche]. [X] followers, [engagement rate]% engagement.
+I run [account], memes for [niche]. [X] followers, [engagement rate]% engagement.
 
 Your [product] would land well here. My audience is [specific description].
 
@@ -105,7 +105,7 @@ Best approach: integrate affiliate links into natural content, not dedicated ads
 **Faith / Wellness:**
 | Product | Commission | Cookie | Program |
 |---------|-----------|--------|---------|
-| YouVersion (Bible app) | N/A — app install focus | — | Track via PrayerLock CTA |
+| YouVersion (Bible app) | N/A, app install focus |, | Track via PrayerLock CTA |
 | Calm | 40% first month | 30 days | calm.com/b2b/partners |
 | Headspace | 35% | 30 days | headspace.com/affiliates |
 
@@ -157,7 +157,7 @@ Every successful merch meme account has a thing.
 **Phase 3: Where to sell**
 - Printify + Etsy (SEO-driven discovery, passive)
 - Printify + own Shopify store (more control, more marketing required)
-- Spring (formerly TeeSpring) — easiest setup, lower margins
+- Spring (formerly TeeSpring), easiest setup, lower margins
 - SPOD (fastest fulfillment, good for X audiences)
 
 **Best items for meme accounts:**
@@ -249,8 +249,8 @@ Assumes consistent 2x/day posting, active engagement, proper niche focus.
 
 | Month | Followers | Monthly Revenue | Primary Source |
 |-------|-----------|-----------------|----------------|
-| 1 | 500 | $0 | — |
-| 2 | 1,500 | $0 | — |
+| 1 | 500 | $0 |, |
+| 2 | 1,500 | $0 |, |
 | 3 | 3,000 | $50 | Affiliate clicks |
 | 4 | 5,000 | $150 | First sponsored post |
 | 5 | 7,500 | $300 | Affiliate + sponsored |

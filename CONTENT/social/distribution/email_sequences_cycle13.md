@@ -1,14 +1,14 @@
-# Email sequences — cycle 13
+# Email sequences, cycle 13
 # Status: PENDING_REVIEW
 # Created: 2026-03-09
 # Use case: Welcome sequence for lead magnet signups (cold email subject lines freebie)
-# Platform: Beehiiv or ConvertKit — set as automation, trigger on signup
+# Platform: Beehiiv or ConvertKit, set as automation, trigger on signup
 # Timing: Email 1 = immediate. Email 2 = 24h delay. Email 3 = 48h delay.
 # NOTE: Replace [YOUR NAME], [LINK TO FREEBIE], [GUMROAD LINK] before activating.
 
 ---
 
-## EMAIL 1 — Deliver the freebie + one quick win
+## EMAIL 1, Deliver the freebie + one quick win
 ## Send: Immediately on signup
 
 **Subject:** your 73 subject lines (+ one that gets a 61% open rate)
@@ -33,7 +33,7 @@ read the intro page first. it explains the 3 principles behind every subject lin
 
 ---
 
-## EMAIL 2 — Story + case study
+## EMAIL 2, Story + case study
 ## Send: 24 hours after Email 1
 
 **Subject:** the email that got a reply after 9 months of silence
@@ -60,7 +60,7 @@ P.S. tomorrow I'm sending something on the full cold email system I use. not jus
 
 ---
 
-## EMAIL 3 — Soft pitch paid product
+## EMAIL 3, Soft pitch paid product
 ## Send: 48 hours after Email 1
 
 **Subject:** the full cold email playbook (if you want it)

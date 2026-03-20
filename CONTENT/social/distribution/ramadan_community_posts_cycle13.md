@@ -104,7 +104,7 @@ Ramadan Mubarak
 
 ## PRE-PUBLISH CHECKLIST
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Each post is genuinely platform-native (Facebook = warm/long, Discord = casual/short, WhatsApp = ultra-brief)
 - [x] Exact numbers throughout (19 days, 55 kilobytes, 55KB, 3 tools, day 10)
 - [x] Tools described by what they DO, not by adjectives

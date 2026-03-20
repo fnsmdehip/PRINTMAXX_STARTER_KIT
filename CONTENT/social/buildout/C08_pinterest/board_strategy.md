@@ -1,4 +1,4 @@
-# C08 Pinterest — Board Strategy (10 Boards, SEO-Optimized)
+# C08 Pinterest, Board Strategy (10 Boards, SEO-Optimized)
 
 ## Pinterest SEO Fundamentals
 
@@ -20,7 +20,7 @@ Target: 10 active boards, 50+ pins per board, 5-10 new pins/day total.
 **SEO Keywords:** cold email, cold outreach, B2B lead generation, Apollo.io, Instantly.ai, email sequences, cold email templates
 
 **Board Description:**
-cold email strategies that generate $3K-10K/mo for solopreneurs. real breakdowns: tools, sequences, reply rates, client case studies. Apollo.io lead scraping, Instantly.ai warm-up, 6-question framework, follow-up timing. no fluff — real numbers from real campaigns.
+cold email strategies that generate $3K-10K/mo for solopreneurs. real breakdowns: tools, sequences, reply rates, client case studies. Apollo.io lead scraping, Instantly.ai warm-up, 6-question framework, follow-up timing. no fluff, real numbers from real campaigns.
 
 **Pin Types:**
 - Tutorial: Apollo.io lead scraping walkthrough
@@ -39,12 +39,12 @@ cold email strategies that generate $3K-10K/mo for solopreneurs. real breakdowns
 
 ## Board 2: Digital Products Income
 
-**Board Title:** Digital Products Income — Sell Notion Templates, Guides, and Downloads
+**Board Title:** Digital Products Income, Sell Notion Templates, Guides, and Downloads
 
 **SEO Keywords:** digital products, passive income, Gumroad, sell Notion templates, digital downloads, make money online
 
 **Board Description:**
-how to make $500-3,000/mo selling digital products with zero inventory. Gumroad, Etsy, Whop — which platforms pay the most. real income breakdowns, product ideas, pricing strategies. Notion templates, prompt packs, spreadsheets, printables. save every pin in this board.
+how to make $500-3,000/mo selling digital products with zero inventory. Gumroad, Etsy, Whop, which platforms pay the most. real income breakdowns, product ideas, pricing strategies. Notion templates, prompt packs, spreadsheets, printables. save every pin in this board.
 
 **Pin Types:**
 - Case study: "$847/mo from Notion templates" breakdown
@@ -63,7 +63,7 @@ how to make $500-3,000/mo selling digital products with zero inventory. Gumroad,
 
 ## Board 3: Faceless YouTube Strategy
 
-**Board Title:** Faceless YouTube Channel Strategy — Make Money Without Showing Your Face
+**Board Title:** Faceless YouTube Channel Strategy, Make Money Without Showing Your Face
 
 **SEO Keywords:** faceless YouTube, YouTube automation, AI YouTube channel, how to make money on YouTube without showing face, YouTube passive income
 
@@ -87,7 +87,7 @@ faceless YouTube channels earning $2K-8K/mo. no camera, no editing skills, no te
 
 ## Board 4: Notion Templates for Business
 
-**Board Title:** Notion Templates for Business and Productivity — Free and Premium
+**Board Title:** Notion Templates for Business and Productivity, Free and Premium
 
 **SEO Keywords:** Notion templates, Notion for business, Notion productivity, free Notion templates, Notion second brain, Notion CRM
 
@@ -111,7 +111,7 @@ best Notion templates for solopreneurs: client CRM, content calendar, financial 
 
 ## Board 5: Newsletter Income
 
-**Board Title:** Newsletter Income Strategy — Build and Monetize an Email List
+**Board Title:** Newsletter Income Strategy, Build and Monetize an Email List
 
 **SEO Keywords:** newsletter business, make money with email list, Beehiiv, newsletter monetization, email list passive income, Substack income
 
@@ -135,7 +135,7 @@ how newsletters make $500-10K/mo. Beehiiv vs Substack breakdown. sponsor rates a
 
 ## Board 6: Print on Demand Business
 
-**Board Title:** Print on Demand Business — Printify, Printful, Etsy Strategy
+**Board Title:** Print on Demand Business, Printify, Printful, Etsy Strategy
 
 **SEO Keywords:** print on demand, Printify, Printful, POD business, Etsy print on demand, passive income print on demand
 
@@ -159,7 +159,7 @@ print on demand strategies that generate $1K-5K/mo. Printify vs Printful margin 
 
 ## Board 7: Passive Income Systems
 
-**Board Title:** Passive Income Systems — Realistic Methods That Actually Work
+**Board Title:** Passive Income Systems, Realistic Methods That Actually Work
 
 **SEO Keywords:** passive income, passive income ideas, passive income online, how to make passive income, real passive income streams, passive income for beginners
 
@@ -167,7 +167,7 @@ print on demand strategies that generate $1K-5K/mo. Printify vs Printful margin 
 passive income strategies that work in 2026. no crypto gambling, no MLM, no "sell courses about selling courses." real tested methods: Amazon KDP ($847/mo), Beehiiv newsletter ($647/mo), Pinterest affiliate ($200/mo), digital products ($500/mo). income breakdowns with real numbers. save this board.
 
 **Pin Types:**
-- Case study: "I tested 12 passive income ideas — here's what worked"
+- Case study: "I tested 12 passive income ideas, here's what worked"
 - Calculator: earnings at 1K/5K/10K pageviews
 - Method breakdown: Amazon KDP step by step
 - Myth busting: "passive income isn't passive (here's what it really is)"
@@ -183,12 +183,12 @@ passive income strategies that work in 2026. no crypto gambling, no MLM, no "sel
 
 ## Board 8: AI Tools for Creators
 
-**Board Title:** Best AI Tools for Content Creators — Reviews, Comparisons, and Tutorials
+**Board Title:** Best AI Tools for Content Creators, Reviews, Comparisons, and Tutorials
 
 **SEO Keywords:** AI tools for creators, best AI tools, Claude AI, ChatGPT, AI writing tools, AI video tools, AI for business
 
 **Board Description:**
-honest reviews of AI tools that actually save time and make money. Claude vs ChatGPT breakdown. ElevenLabs voice AI tutorial. Surfer SEO + AI workflow. Jasper alternatives. Perplexity for research. real ROI analysis for each tool — not ads, actual usage data. $0 to $200/mo starter stacks.
+honest reviews of AI tools that actually save time and make money. Claude vs ChatGPT breakdown. ElevenLabs voice AI tutorial. Surfer SEO + AI workflow. Jasper alternatives. Perplexity for research. real ROI analysis for each tool, not ads, actual usage data. $0 to $200/mo starter stacks.
 
 **Pin Types:**
 - Comparison: Claude vs ChatGPT for business tasks
@@ -207,7 +207,7 @@ honest reviews of AI tools that actually save time and make money. Claude vs Cha
 
 ## Board 9: Amazon KDP Strategy
 
-**Board Title:** Amazon KDP Strategy — Make Money Self-Publishing Books
+**Board Title:** Amazon KDP Strategy, Make Money Self-Publishing Books
 
 **SEO Keywords:** Amazon KDP, self-publishing, KDP income, how to publish on Amazon, low content books, make money publishing, KDP passive income
 
@@ -231,7 +231,7 @@ Amazon KDP strategies earning $500-5K/mo. low content books (journals, planners,
 
 ## Board 10: Affiliate Marketing Strategy
 
-**Board Title:** Affiliate Marketing Strategy — High-Commission Programs and Traffic Methods
+**Board Title:** Affiliate Marketing Strategy, High-Commission Programs and Traffic Methods
 
 **SEO Keywords:** affiliate marketing, affiliate marketing for beginners, high ticket affiliate, affiliate income, make money affiliate marketing, Pinterest affiliate marketing
 

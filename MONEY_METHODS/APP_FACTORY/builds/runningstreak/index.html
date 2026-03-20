@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0a1a0a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RunningStreak">
+<meta name="description" content="Track your daily running streak. Log distance, time, and milestones. The only app built just for running streaks.">
+<meta property="og:title" content="RunningStreak - Daily Run Streak Tracker">
+<meta property="og:description" content="The dedicated running streak tracker. Log your runs, hit milestones, build the habit.">
+<meta property="og:type" content="website">
+<link rel="manifest" href="manifest.json">
+<link rel="canonical" href="https://runningstreak.surge.sh/">
+<title>RunningStreak - Daily Run Streak Tracker</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RunningStreak","applicationCategory":"HealthAndFitness","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Track your daily running streak. The dedicated app for runners who want to build a daily run habit.","author":{"@type":"Organization","name":"RunningStreak"}}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, sans-serif; overscroll-behavior: none; background: #0a1a0a; }
+.tab-content { animation: fadeIn 0.2s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse-green { 0%,100% { box-shadow: 0 0 24px rgba(22,163,74,.35); } 50% { box-shadow: 0 0 48px rgba(22,163,74,.7); } }
+.pulse-glow { animation: pulse-green 2.5s ease-in-out infinite; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
+.shake { animation: shake .4s ease; }
+.streak-bar { height: 8px; background: rgba(22,163,74,.15); border-radius: 4px; overflow: hidden; }
+.streak-bar-fill { height: 100%; background: linear-gradient(90deg,#15803d,#16a34a); border-radius: 4px; transition: width .8s cubic-bezier(.4,0,.2,1); }
+.heatmap-cell { width: 14px; height: 14px; border-radius: 3px; }
+.glass { background: rgba(255,255,255,.04); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.07); }
+</style>
+</head>
+<body class="dark min-h-screen text-white select-none">
+
+<div id="app" class="max-w-md mx-auto min-h-screen flex flex-col pb-24" style="background:#0a1a0a">
+
+  <!-- HEADER -->
+  <div class="flex items-center justify-between px-5 pt-12 pb-4">
+    <div>
+      <h1 class="text-xl font-bold text-white">RunningStreak</h1>
+      <p class="text-xs text-green-400 mt-0.5">🏃 Build the daily run habit</p>
+    </div>
+    <button id="settings-btn" class="w-9 h-9 rounded-full glass flex items-center justify-center text-gray-400">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+    </button>
+  </div>
+
+  <div class="flex-1 px-4">
+
+    <!-- HOME TAB -->
+    <div id="tab-home" class="tab-content">
+
+      <!-- Streak display -->
+      <div class="flex flex-col items-center py-6">
+        <div class="pulse-glow w-48 h-48 rounded-full flex items-center justify-center mb-4" style="background:radial-gradient(circle,rgba(22,163,74,.15) 0%,rgba(10,26,10,0) 70%);border:2px solid rgba(22,163,74,.3)">
+          <div class="text-center">
+            <div id="streak-days" class="text-6xl font-black text-white leading-none">0</div>
+            <div class="text-green-400 text-sm font-medium mt-1">day streak</div>
+          </div>
+        </div>
+        <div id="streak-label" class="text-lg font-semibold text-white mb-1">Start your run streak</div>
+        <div id="start-date-label" class="text-xs text-gray-500">Log your first run to begin</div>
+      </div>
+
+      <!-- Milestone progress -->
+      <div class="glass rounded-2xl p-4 mb-4">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium text-gray-300">Next milestone</span>
+          <span id="next-milestone-label" class="text-xs text-green-400 font-medium">7 days</span>
+        </div>
+        <div class="streak-bar"><div id="milestone-bar" class="streak-bar-fill" style="width:0%"></div></div>
+        <p id="milestone-msg" class="text-xs text-gray-500 mt-2">Log your first run to start</p>
+      </div>
+
+      <!-- Log run button -->
+      <button id="log-run-btn" class="w-full py-4 rounded-2xl font-bold text-white text-lg mb-4 active:scale-95 transition-all" style="background:linear-gradient(135deg,#15803d,#16a34a)">
+        🏃 Log Today's Run
+      </button>
+
+      <!-- Today's run stats -->
+      <div id="todays-run-section" class="glass rounded-2xl p-4 mb-4 hidden">
+        <p class="text-xs text-green-400 font-semibold uppercase tracking-wide mb-3">Today's Run</p>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="text-center">
+            <div id="today-dist" class="text-xl font-bold text-white">--</div>
+            <div class="text-xs text-gray-500 mt-0.5">km</div>
+          </div>
+          <div class="text-center">
+            <div id="today-time" class="text-xl font-bold text-white">--</div>
+            <div class="text-xs text-gray-500 mt-0.5">minutes</div>
+          </div>
+          <div class="text-center">
+            <div id="today-pace" class="text-xl font-bold text-white">--</div>
+            <div class="text-xs text-gray-500 mt-0.5">min/km</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="grid grid-cols-4 gap-2 mb-6">
+        <div class="glass rounded-xl p-3 text-center">
+          <div id="stat-best" class="text-xl font-bold text-white">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">Best</div>
+        </div>
+        <div class="glass rounded-xl p-3 text-center">
+          <div id="stat-total-km" class="text-xl font-bold text-white">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">km total</div>
+        </div>
+        <div class="glass rounded-xl p-3 text-center">
+          <div id="stat-total-runs" class="text-xl font-bold text-white">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">runs</div>
+        </div>
+        <div class="glass rounded-xl p-3 text-center">
+          <div id="stat-avg-km" class="text-xl font-bold text-white">0</div>
+          <div class="text-xs text-gray-500 mt-0.5">avg km</div>
+        </div>
+      </div>
+
+      <!-- Weekly view -->
+      <div class="glass rounded-2xl p-4 mb-4">
+        <p class="text-xs text-gray-500 mb-3 font-medium uppercase tracking-wide">This week</p>
+        <div id="weekly-view" class="flex justify-between gap-1"></div>
+      </div>
+
+      <!-- Motivational nudge -->
+      <div id="motivation-box" class="glass rounded-2xl p-4 mb-4">
+        <p id="motivation-text" class="text-sm text-gray-300 text-center leading-relaxed"></p>
+      </div>
+
+      <!-- Miss a day -->
+      <button id="reset-btn" class="w-full py-2.5 rounded-xl text-sm text-gray-500 border border-gray-700/50">
+        Missed a day — reset streak
+      </button>
+    </div>
+
+    <!-- MILESTONES TAB -->
+    <div id="tab-milestones" class="tab-content hidden">
+      <h2 class="text-lg font-bold text-white mb-4 pt-2">Milestones</h2>
+      <div id="milestones-list" class="space-y-3"></div>
+    </div>
+
+    <!-- HISTORY TAB -->
+    <div id="tab-history" class="tab-content hidden">
+      <h2 class="text-lg font-bold text-white mb-1 pt-2">Run History</h2>
+      <p class="text-xs text-gray-500 mb-5">Your logged runs</p>
+      <div id="heatmap-grid" class="mb-6"></div>
+      <div id="run-log" class="space-y-3"></div>
+      <div id="run-log-empty" class="text-center py-12 text-gray-600">
+        <div class="text-4xl mb-3">🏃</div>
+        <p class="text-sm">No runs logged yet.<br>Start your streak today.</p>
+      </div>
+    </div>
+
+    <!-- SCIENCE TAB -->
+    <div id="tab-science" class="tab-content hidden">
+      <h2 class="text-lg font-bold text-white mb-4 pt-2">Why Daily Running Works</h2>
+      <div id="science-cards" class="space-y-3"></div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto" style="background:rgba(10,26,10,.95);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,.06)">
+    <div class="grid grid-cols-4 py-2">
+      <button id="nav-home" class="flex flex-col items-center py-2 gap-1" style="color:#16a34a">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span class="text-xs">Today</span>
+      </button>
+      <button id="nav-milestones" class="flex flex-col items-center py-2 gap-1 text-gray-500">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        <span class="text-xs">Badges</span>
+      </button>
+      <button id="nav-history" class="flex flex-col items-center py-2 gap-1 text-gray-500">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+        <span class="text-xs">History</span>
+      </button>
+      <button id="nav-science" class="flex flex-col items-center py-2 gap-1 text-gray-500">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        <span class="text-xs">Science</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- LOG RUN MODAL -->
+<div id="log-run-modal" class="fixed inset-0 z-50 hidden" style="background:rgba(0,0,0,.85);backdrop-filter:blur(8px)">
+  <div class="max-w-md mx-auto h-full flex flex-col justify-end">
+    <div class="rounded-t-3xl p-6" style="background:#0f2010">
+      <div class="w-12 h-1 rounded bg-gray-600 mx-auto mb-6"></div>
+      <h2 class="text-xl font-bold text-white mb-1">Log Today's Run</h2>
+      <p class="text-gray-400 text-sm mb-6">Add your details (distance and time optional)</p>
+      <div class="space-y-4 mb-6">
+        <div class="glass rounded-xl p-4">
+          <p class="text-sm font-medium text-white mb-1">Distance (km)</p>
+          <input id="run-dist" type="number" step="0.1" min="0" max="999" placeholder="e.g. 5.2" class="w-full bg-transparent text-white text-2xl font-bold outline-none placeholder-gray-600">
+        </div>
+        <div class="glass rounded-xl p-4">
+          <p class="text-sm font-medium text-white mb-1">Duration (minutes)</p>
+          <input id="run-time" type="number" min="0" max="999" placeholder="e.g. 28" class="w-full bg-transparent text-white text-2xl font-bold outline-none placeholder-gray-600">
+        </div>
+        <div class="glass rounded-xl p-4">
+          <p class="text-sm font-medium text-white mb-1">Notes (optional)</p>
+          <input id="run-notes" type="text" placeholder="Morning run, felt great..." class="w-full bg-transparent text-white text-sm outline-none placeholder-gray-600" maxlength="80">
+        </div>
+      </div>
+      <button id="save-run-btn" class="w-full py-4 rounded-2xl font-bold text-white text-lg mb-3" style="background:linear-gradient(135deg,#15803d,#16a34a)">Save Run</button>
+      <button id="close-log-btn" class="w-full py-3 text-gray-400 text-sm">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS MODAL -->
+<div id="settings-modal" class="fixed inset-0 z-50 hidden" style="background:rgba(0,0,0,.85);backdrop-filter:blur(8px)">
+  <div class="max-w-md mx-auto h-full flex flex-col justify-end">
+    <div class="rounded-t-3xl p-6" style="background:#0f2010">
+      <div class="w-12 h-1 rounded bg-gray-600 mx-auto mb-6"></div>
+      <h2 class="text-xl font-bold text-white mb-6">Settings</h2>
+      <div class="space-y-4 mb-6">
+        <div class="glass rounded-xl p-4">
+          <p class="text-sm font-medium text-white mb-1">Distance unit</p>
+          <div class="flex gap-3 mt-2">
+            <button id="unit-km" class="flex-1 py-2 rounded-lg text-sm font-medium" style="background:rgba(22,163,74,.3);border:1px solid rgba(22,163,74,.6);color:#4ade80">km</button>
+            <button id="unit-mi" class="flex-1 py-2 rounded-lg text-sm font-medium" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#9ca3af">miles</button>
+          </div>
+        </div>
+        <div class="glass rounded-xl p-4">
+          <p class="text-sm font-medium text-white mb-1">Daily goal (km)</p>
+          <input id="goal-dist-input" type="number" step="0.5" min="0" max="100" placeholder="e.g. 5" class="w-full bg-transparent text-white text-sm outline-none placeholder-gray-600">
+        </div>
+        <div class="glass rounded-xl p-4">
+          <p class="text-sm font-medium text-white mb-1">Set streak start date</p>
+          <input id="start-date-input" type="date" class="w-full bg-transparent text-white text-sm outline-none" style="color-scheme:dark">
+        </div>
+      </div>
+      <button id="save-settings-btn" class="w-full py-3.5 rounded-2xl font-bold text-white mb-3" style="background:linear-gradient(135deg,#15803d,#16a34a)">Save</button>
+      <button id="close-settings-btn" class="w-full py-3 text-gray-400 text-sm">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESET CONFIRM -->
+<div id="reset-confirm" class="fixed inset-0 z-50 hidden" style="background:rgba(0,0,0,.85);backdrop-filter:blur(8px)">
+  <div class="max-w-md mx-auto h-full flex items-center justify-center px-6">
+    <div class="w-full rounded-3xl p-6" style="background:#0f2010">
+      <div class="text-center mb-6">
+        <div class="text-5xl mb-3">😤</div>
+        <h2 class="text-xl font-bold text-white mb-2">Reset your streak?</h2>
+        <p class="text-gray-400 text-sm">Missing a day stings. But the streak starts now. Your run history stays safe.</p>
+      </div>
+      <div class="space-y-3">
+        <button id="confirm-reset-btn" class="w-full py-3.5 rounded-xl font-semibold text-white" style="background:rgba(239,68,68,.2);border:1px solid rgba(239,68,68,.4)">Yes, reset to day 0</button>
+        <button id="cancel-reset-btn" class="w-full py-3 text-gray-400 text-sm">Keep my streak</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-[200] pointer-events-none hidden">
+  <div id="toast-msg" class="px-5 py-3 rounded-2xl text-sm font-medium text-white" style="background:rgba(22,163,74,.9);backdrop-filter:blur(12px)"></div>
+</div>
+
+<script>
+// Safe DOM helper
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+
+// STATE
+const STORE_KEY = 'runningstreak_v1';
+let state = {
+  startDate: null, lastRunDate: null, streak: 0, bestStreak: 0,
+  unit: 'km', goalKm: 5,
+  runs: [], // [{date,dist,time,notes}]
+};
+
+const MILESTONES = [
+  { days: 1,   emoji: '🌱', title: '1 Day',     msg: 'First run logged. The streak begins.' },
+  { days: 3,   emoji: '🔥', title: '3 Days',    msg: 'Three in a row. Habit forming.' },
+  { days: 7,   emoji: '💎', title: '1 Week',    msg: 'One full week of running. Runner.' },
+  { days: 14,  emoji: '⚡', title: '2 Weeks',   msg: 'Two weeks. Your lungs are thanking you.' },
+  { days: 21,  emoji: '🧠', title: '21 Days',   msg: 'Science says 21 days forms a habit. Done.' },
+  { days: 30,  emoji: '🏆', title: '30 Days',   msg: 'One month. VO2 max is genuinely improving.' },
+  { days: 50,  emoji: '🥇', title: '50 Days',   msg: '50 days without missing. Elite tier.' },
+  { days: 66,  emoji: '⭐', title: '66 Days',   msg: 'Actual habit threshold per UCL research.' },
+  { days: 100, emoji: '💯', title: '100 Days',  msg: '100 runs. You are a runner. Period.' },
+  { days: 365, emoji: '🚀', title: '365 Days',  msg: 'One full year. Run streak legend.' },
+];
+
+const SCIENCE_CARDS = [
+  { emoji: '🫀', title: 'Heart health', body: '30 mins of daily running reduces heart disease risk by 35%. Even 10 mins at low pace counts.' },
+  { emoji: '🧠', title: 'Mental clarity', body: 'Daily aerobic exercise produces BDNF — the brain\'s growth hormone. 20 mins is the dose.' },
+  { emoji: '😴', title: 'Sleep quality', body: 'Runners fall asleep 50% faster and get 21% more deep sleep. Run before 6pm for best results.' },
+  { emoji: '⚖️', title: 'Weight', body: 'Running burns 600 cal/hr average. 21 days of daily runs often shifts the weight set-point permanently.' },
+  { emoji: '⏳', title: 'Longevity', body: 'Harvard study: runners live 3 years longer on average. Benefit maxes at 4-5hrs running per week.' },
+  { emoji: '🏃', title: 'Streak science', body: 'The streak itself is the mechanism. Missing one day doubles your chance of quitting. Do not miss.' },
+];
+
+const MOTIVATIONS = [
+  'The run you dread is the run you need.',
+  'You don\'t have to run fast. You just have to run.',
+  'Every run is a deposit into your future self.',
+  'The streak is the discipline.',
+  'Run the mile you are in.',
+  'Future you is cheering for today you.',
+  'Consistency over intensity. Always.',
+];
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) state = Object.assign({}, state, JSON.parse(raw));
+  } catch(e) {}
+}
+function saveState() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
+
+function getToday() { return new Date().toISOString().split('T')[0]; }
+function daysBetween(d1, d2) { return Math.floor((new Date(d2) - new Date(d1)) / 86400000); }
+function calcStreak() {
+  if (!state.startDate) return 0;
+  return Math.max(0, daysBetween(state.startDate, getToday()) + 1);
+}
+
+// LOG RUN
+function saveRun() {
+  const today = getToday();
+  const distRaw = parseFloat(document.getElementById('run-dist').value) || 0;
+  const timeRaw = parseInt(document.getElementById('run-time').value) || 0;
+  const notes = document.getElementById('run-notes').value.trim().slice(0, 80);
+
+  if (!state.startDate) state.startDate = today;
+  state.lastRunDate = today;
+
+  // Remove existing entry for today if any
+  state.runs = state.runs.filter(r => r.date !== today);
+  state.runs.unshift({ date: today, dist: distRaw, time: timeRaw, notes });
+
+  const s = calcStreak();
+  if (s > state.bestStreak) state.bestStreak = s;
+  state.streak = s;
+  saveState();
+
+  document.getElementById('log-run-modal').classList.add('hidden');
+  updateLogBtn();
+  renderHome();
+
+  const m = MILESTONES.find(x => x.days === s);
+  setTimeout(() => showToast(m ? m.emoji + ' ' + m.title + ' unlocked! ' + m.msg : 'Run logged. Day ' + s + ' streak!'), 200);
+}
+
+function updateLogBtn() {
+  const btn = document.getElementById('log-run-btn');
+  const today = getToday();
+  const todaysRun = state.runs.find(r => r.date === today);
+  if (todaysRun) {
+    btn.style.background = 'rgba(22,163,74,.2)';
+    btn.style.border = '1px solid rgba(22,163,74,.3)';
+    btn.textContent = '✓ Run logged today';
+    btn.style.color = '#4ade80';
+
+    // Show today's stats
+    const section = document.getElementById('todays-run-section');
+    section.classList.remove('hidden');
+    document.getElementById('today-dist').textContent = todaysRun.dist > 0 ? todaysRun.dist.toFixed(1) : '--';
+    document.getElementById('today-time').textContent = todaysRun.time > 0 ? todaysRun.time : '--';
+    if (todaysRun.dist > 0 && todaysRun.time > 0) {
+      document.getElementById('today-pace').textContent = (todaysRun.time / todaysRun.dist).toFixed(1);
+    } else {
+      document.getElementById('today-pace').textContent = '--';
+    }
+  } else {
+    btn.style.background = 'linear-gradient(135deg,#15803d,#16a34a)';
+    btn.style.border = 'none';
+    btn.textContent = '🏃 Log Today\'s Run';
+    btn.style.color = 'white';
+    document.getElementById('todays-run-section').classList.add('hidden');
+  }
+}
+
+function doReset() {
+  if (state.streak > state.bestStreak) state.bestStreak = state.streak;
+  state.streak = 0; state.startDate = null; state.lastRunDate = null;
+  saveState();
+  document.getElementById('reset-confirm').classList.add('hidden');
+  renderHome();
+  updateLogBtn();
+  showToast('Streak reset. Start fresh. Your run history is safe.');
+}
+
+// RENDER HOME
+function renderHome() {
+  const s = calcStreak();
+  state.streak = s;
+  document.getElementById('streak-days').textContent = s;
+
+  const lbl = document.getElementById('streak-label');
+  const dlbl = document.getElementById('start-date-label');
+  if (s === 0) {
+    lbl.textContent = 'Start your run streak';
+    dlbl.textContent = 'Log your first run to begin';
+  } else if (s === 1) {
+    lbl.textContent = 'Day 1 — You started!';
+    dlbl.textContent = 'Keep going tomorrow.';
+  } else {
+    lbl.textContent = s + ' day running streak';
+    const d = new Date(state.startDate + 'T12:00');
+    dlbl.textContent = 'Since ' + d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+  }
+
+  const next = MILESTONES.find(m => m.days > s) || MILESTONES[MILESTONES.length - 1];
+  const prev = MILESTONES.filter(m => m.days <= s).pop();
+  const prevDays = prev ? prev.days : 0;
+  const pct = (next.days === prevDays) ? 100 : Math.min(100, ((s - prevDays) / (next.days - prevDays)) * 100);
+  document.getElementById('milestone-bar').style.width = pct + '%';
+  document.getElementById('next-milestone-label').textContent = next.days + ' days';
+  const rem = next.days - s;
+  document.getElementById('milestone-msg').textContent = rem > 0
+    ? rem + ' more day' + (rem > 1 ? 's' : '') + ' to unlock ' + next.emoji + ' ' + next.title
+    : next.emoji + ' ' + next.title + ' unlocked!';
+
+  // Stats
+  const totalKm = state.runs.reduce((a, r) => a + (r.dist || 0), 0);
+  const totalRuns = state.runs.length;
+  document.getElementById('stat-best').textContent = Math.max(state.bestStreak, s);
+  document.getElementById('stat-total-km').textContent = totalKm.toFixed(0);
+  document.getElementById('stat-total-runs').textContent = totalRuns;
+  document.getElementById('stat-avg-km').textContent = totalRuns > 0 ? (totalKm / totalRuns).toFixed(1) : '0';
+
+  // Weekly view (last 7 days)
+  const weekly = document.getElementById('weekly-view');
+  weekly.textContent = '';
+  const DAYS = ['S','M','T','W','T','F','S'];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const key = d.toISOString().split('T')[0];
+    const hasRun = state.runs.some(r => r.date === key);
+    const dayName = DAYS[d.getDay()];
+    const col = el('div', 'flex flex-col items-center gap-1.5 flex-1');
+    const dot = el('div', 'w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold',
+      hasRun ? '✓' : dayName);
+    dot.style.cssText = hasRun
+      ? 'background:rgba(22,163,74,.4);border:1px solid rgba(22,163,74,.6);color:#4ade80'
+      : 'background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#6b7280';
+    col.appendChild(dot);
+    col.appendChild(el('span', 'text-xs text-gray-600', hasRun ? '' : dayName));
+    weekly.appendChild(col);
+  }
+
+  // Motivation
+  const motiv = MOTIVATIONS[Math.floor(Math.random() * MOTIVATIONS.length)];
+  document.getElementById('motivation-text').textContent = '"' + motiv + '"';
+}
+
+// MILESTONES
+function renderMilestones() {
+  const s = calcStreak();
+  const c = document.getElementById('milestones-list');
+  c.textContent = '';
+  MILESTONES.forEach(m => {
+    const unlocked = s >= m.days;
+    const row = el('div', 'glass rounded-2xl p-4 flex items-center gap-4' + (unlocked ? '' : ' opacity-40'));
+    row.appendChild(el('div', 'text-3xl', unlocked ? m.emoji : '🔒'));
+    const info = el('div', 'flex-1');
+    info.appendChild(el('div', 'font-semibold text-white text-sm', m.title));
+    info.appendChild(el('div', 'text-xs text-gray-400 mt-0.5', m.msg));
+    row.appendChild(info);
+    row.appendChild(el('div', unlocked ? 'text-green-400 text-xs font-bold' : 'text-gray-600 text-xs',
+      unlocked ? 'EARNED' : m.days + 'd'));
+    c.appendChild(row);
+  });
+}
+
+// HISTORY
+function renderHistory() {
+  // Heatmap
+  const grid = document.getElementById('heatmap-grid');
+  grid.textContent = '';
+  const wrapper = el('div', 'grid gap-1 mb-6');
+  wrapper.style.gridTemplateColumns = 'repeat(13,1fr)';
+  const today = new Date();
+  for (let i = 51; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const key = d.toISOString().split('T')[0];
+    const hasRun = state.runs.some(r => r.date === key);
+    const cell = el('div', 'heatmap-cell');
+    cell.style.background = hasRun ? 'rgba(22,163,74,.8)' : 'rgba(255,255,255,.06)';
+    cell.title = key;
+    wrapper.appendChild(cell);
+  }
+  grid.appendChild(wrapper);
+
+  // Run log
+  const log = document.getElementById('run-log');
+  const empty = document.getElementById('run-log-empty');
+  log.textContent = '';
+  if (!state.runs.length) { empty.classList.remove('hidden'); return; }
+  empty.classList.add('hidden');
+  state.runs.slice(0, 30).forEach(r => {
+    const card = el('div', 'glass rounded-2xl p-4');
+    const meta = el('div', 'flex justify-between items-start mb-2');
+    meta.appendChild(el('span', 'text-xs text-green-400 font-medium',
+      new Date(r.date + 'T12:00').toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric' })));
+    const distStr = r.dist > 0 ? r.dist.toFixed(1) + ' km' : 'run logged';
+    meta.appendChild(el('span', 'text-xs text-gray-400 font-medium', distStr));
+    card.appendChild(meta);
+    if (r.time > 0) {
+      const paceRow = el('div', 'flex gap-4 text-xs text-gray-500 mb-1');
+      paceRow.appendChild(el('span', '', r.time + ' min'));
+      if (r.dist > 0) paceRow.appendChild(el('span', '', (r.time / r.dist).toFixed(1) + ' min/km'));
+      card.appendChild(paceRow);
+    }
+    if (r.notes) card.appendChild(el('p', 'text-xs text-gray-400 mt-1 italic', r.notes));
+    log.appendChild(card);
+  });
+}
+
+// SCIENCE
+function renderScience() {
+  const c = document.getElementById('science-cards');
+  c.textContent = '';
+  SCIENCE_CARDS.forEach(s => {
+    const card = el('div', 'glass rounded-2xl p-4');
+    const h = el('div', 'flex items-center gap-2 mb-2');
+    h.appendChild(el('span', 'text-xl', s.emoji));
+    h.appendChild(el('span', 'font-semibold text-white text-sm', s.title));
+    card.appendChild(h);
+    card.appendChild(el('p', 'text-sm text-gray-400 leading-relaxed', s.body));
+    c.appendChild(card);
+  });
+}
+
+// TABS
+const TABS = ['home','milestones','history','science'];
+function switchTab(tab) {
+  TABS.forEach(t => {
+    document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
+    const nav = document.getElementById('nav-' + t);
+    if (nav) nav.style.color = t === tab ? '#16a34a' : '#6b7280';
+  });
+  if (tab === 'milestones') renderMilestones();
+  if (tab === 'history') renderHistory();
+  if (tab === 'science') renderScience();
+}
+
+// SETTINGS
+function openSettings() {
+  document.getElementById('goal-dist-input').value = state.goalKm || 5;
+  if (state.startDate) document.getElementById('start-date-input').value = state.startDate;
+  document.getElementById('settings-modal').classList.remove('hidden');
+}
+function saveSettings() {
+  const goal = parseFloat(document.getElementById('goal-dist-input').value) || 5;
+  state.goalKm = Math.max(0, Math.min(999, goal));
+  const dateVal = document.getElementById('start-date-input').value;
+  if (dateVal && /^\d{4}-\d{2}-\d{2}$/.test(dateVal)) {
+    state.startDate = dateVal;
+    state.streak = calcStreak();
+    if (state.streak > state.bestStreak) state.bestStreak = state.streak;
+  }
+  saveState();
+  document.getElementById('settings-modal').classList.add('hidden');
+  renderHome();
+  showToast('Settings saved.');
+}
+
+// TOAST
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  t.classList.remove('hidden');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.add('hidden'), 3500);
+}
+
+// EVENT BINDING
+function bindEvents() {
+  document.getElementById('log-run-btn').onclick = () => {
+    document.getElementById('run-dist').value = '';
+    document.getElementById('run-time').value = '';
+    document.getElementById('run-notes').value = '';
+    document.getElementById('log-run-modal').classList.remove('hidden');
+  };
+  document.getElementById('save-run-btn').onclick = saveRun;
+  document.getElementById('close-log-btn').onclick = () => document.getElementById('log-run-modal').classList.add('hidden');
+  document.getElementById('reset-btn').onclick = () => document.getElementById('reset-confirm').classList.remove('hidden');
+  document.getElementById('confirm-reset-btn').onclick = doReset;
+  document.getElementById('cancel-reset-btn').onclick = () => document.getElementById('reset-confirm').classList.add('hidden');
+  document.getElementById('settings-btn').onclick = openSettings;
+  document.getElementById('save-settings-btn').onclick = saveSettings;
+  document.getElementById('close-settings-btn').onclick = () => document.getElementById('settings-modal').classList.add('hidden');
+  document.getElementById('nav-home').onclick = () => switchTab('home');
+  document.getElementById('nav-milestones').onclick = () => switchTab('milestones');
+  document.getElementById('nav-history').onclick = () => switchTab('history');
+  document.getElementById('nav-science').onclick = () => switchTab('science');
+  document.getElementById('unit-km').onclick = () => {
+    state.unit = 'km';
+    document.getElementById('unit-km').style.cssText = 'background:rgba(22,163,74,.3);border:1px solid rgba(22,163,74,.6);color:#4ade80;flex:1;padding:.5rem;border-radius:.5rem;font-size:.875rem;font-weight:500';
+    document.getElementById('unit-mi').style.cssText = 'background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#9ca3af;flex:1;padding:.5rem;border-radius:.5rem;font-size:.875rem;font-weight:500';
+  };
+  document.getElementById('unit-mi').onclick = () => {
+    state.unit = 'mi';
+    document.getElementById('unit-mi').style.cssText = 'background:rgba(22,163,74,.3);border:1px solid rgba(22,163,74,.6);color:#4ade80;flex:1;padding:.5rem;border-radius:.5rem;font-size:.875rem;font-weight:500';
+    document.getElementById('unit-km').style.cssText = 'background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#9ca3af;flex:1;padding:.5rem;border-radius:.5rem;font-size:.875rem;font-weight:500';
+  };
+}
+
+// SERVICE WORKER
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+
+// BOOT
+loadState();
+bindEvents();
+updateLogBtn();
+renderHome();
+</script>
+</body>
+</html>

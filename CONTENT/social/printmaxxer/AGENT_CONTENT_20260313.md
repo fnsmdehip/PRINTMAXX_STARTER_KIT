@@ -1,4 +1,4 @@
-# Agent-Generated Content — 2026-03-13 16:07
+# Agent-Generated Content, 2026-03-13 16:07
 
 r/startups drowning in "productivity tools" that don't actually track work. 33 comments deep. 91/100 opportunity score. the gap isn't another app. it's a dead simple dashboard that pulls from what they already use. notion + cal + slack into one view. nobody's built it right yet.
 

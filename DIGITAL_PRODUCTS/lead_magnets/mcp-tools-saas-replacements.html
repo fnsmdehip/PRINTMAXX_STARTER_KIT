@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 MCP Servers That Replace $800/mo in SaaS</title>
+<meta name="description" content="the full list of MCP servers replacing paid SaaS tools. browser automation, web scraping, search, databases, email — all free with Claude Code.">
+<meta name="keywords" content="MCP servers list, MCP Claude Code, replace SaaS with MCP, free MCP servers, Claude Code MCP, model context protocol tools, MCP vs SaaS">
+<link rel="canonical" href="https://mcp-saas-replacements.surge.sh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="12 MCP Servers That Replace $800/mo in SaaS">
+<meta property="og:description" content="free tools that cut your SaaS bill while making you more productive. works inside Claude Code today.">
+<meta property="og:url" content="https://mcp-saas-replacements.surge.sh">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<meta name="twitter:title" content="12 MCP Servers That Replace $800/mo in SaaS">
+<meta name="twitter:description" content="free tools that cut your SaaS bill. works inside Claude Code today.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#111;
+  --card:#161616;
+  --border:rgba(255,255,255,.07);
+  --border-active:rgba(0,200,255,.35);
+  --accent:#00c8ff;
+  --accent-dim:rgba(0,200,255,.1);
+  --green:#00ff88;
+  --text:#e8e8e8;
+  --muted:#666;
+}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:640px;margin:0 auto;padding:0 20px}
+header{padding:48px 0 32px;text-align:center}
+header h1{font-size:clamp(1.5rem,5vw,2rem);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:10px}
+header h1 em{font-style:normal;color:var(--accent)}
+header .sub{color:var(--muted);font-size:.9rem;max-width:420px;margin:0 auto}
+.badge{display:inline-block;background:var(--accent-dim);border:1px solid var(--border-active);color:var(--accent);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-bottom:16px}
+.savings-bar{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 24px;margin:24px 0;display:flex;justify-content:space-around;gap:8px;flex-wrap:wrap}
+.savings-item{text-align:center}
+.savings-num{font-size:1.5rem;font-weight:800;color:var(--green)}
+.savings-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.section{margin:32px 0}
+.section-title{font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:16px}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:10px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}
+.tool-card:hover{border-color:rgba(0,200,255,.2)}
+.tool-name{font-weight:700;font-size:.95rem;margin-bottom:4px}
+.tool-replaces{font-size:.8rem;color:var(--muted);margin-bottom:6px}
+.tool-replaces strong{color:#aaa}
+.tool-desc{font-size:.82rem;color:#999;line-height:1.5}
+.tool-tag{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;align-self:start}
+.tag-free{background:rgba(0,255,136,.1);color:var(--green);border:1px solid rgba(0,255,136,.2)}
+.tag-oss{background:rgba(0,200,255,.1);color:var(--accent);border:1px solid rgba(0,200,255,.2)}
+.savings-callout{font-size:.78rem;color:#555;font-style:italic;margin-top:4px}
+.divider{height:1px;background:var(--border);margin:8px 0}
+
+/* email gate */
+.gate{background:var(--card);border:1px solid var(--border-active);border-radius:16px;padding:32px 24px;text-align:center;margin:40px 0}
+.gate h2{font-size:1.2rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.gate p{color:var(--muted);font-size:.88rem;margin-bottom:22px}
+.gate-form{display:flex;gap:10px;max-width:400px;margin:0 auto;flex-wrap:wrap}
+.gate-form input{flex:1;min-width:200px;padding:12px 16px;background:#1a1a1a;border:1px solid var(--border-active);border-radius:10px;color:var(--text);font-size:.9rem;outline:none}
+.gate-form input:focus{border-color:var(--accent)}
+.gate-form button{padding:12px 22px;background:var(--accent);color:#000;font-weight:700;font-size:.9rem;border:none;border-radius:10px;cursor:pointer;white-space:nowrap}
+.gate-form button:hover{opacity:.9}
+.gate-note{font-size:.72rem;color:#444;margin-top:12px}
+
+/* locked cards */
+.locked{filter:blur(4px);pointer-events:none;user-select:none;position:relative}
+.locked-overlay{display:none}
+.lock-banner{background:var(--accent-dim);border:1px solid var(--border-active);border-radius:10px;padding:14px 18px;text-align:center;font-size:.84rem;color:var(--accent);margin-bottom:10px}
+
+.full-list{display:none}
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.8rem}
+footer a{color:#444}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="badge">Free Cheatsheet</div>
+  <h1>12 MCP Servers That Replace <em>$800/mo</em> in SaaS</h1>
+  <p class="sub">works inside Claude Code today. no extra subscriptions. just install the server and use it.</p>
+</header>
+
+<div class="savings-bar">
+  <div class="savings-item">
+    <div class="savings-num">$800</div>
+    <div class="savings-label">monthly SaaS cut</div>
+  </div>
+  <div class="savings-item">
+    <div class="savings-num">12</div>
+    <div class="savings-label">MCP replacements</div>
+  </div>
+  <div class="savings-item">
+    <div class="savings-num">$0</div>
+    <div class="savings-label">to install</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Free tools (no email needed)</div>
+
+  <div class="tool-card">
+    <div>
+      <div class="tool-name">Playwright MCP</div>
+      <div class="tool-replaces">Replaces: <strong>Browserbase ($49/mo)</strong> + Zapier browser steps ($20+/mo)</div>
+      <div class="tool-desc">Full browser automation inside Claude. clicks, form fills, scraping, screenshots — using your existing Chrome session with existing logins. no anti-bot bypass needed.</div>
+      <div class="savings-callout">saves ~$69/mo. works with Twitter, LinkedIn, any app you're already logged into.</div>
+    </div>
+    <span class="tool-tag tag-free">Free</span>
+  </div>
+
+  <div class="tool-card">
+    <div>
+      <div class="tool-name">Filesystem MCP</div>
+      <div class="tool-replaces">Replaces: <strong>Dropbox Business ($15/mo)</strong> + manual file management</div>
+      <div class="tool-desc">read, write, move, rename files across your entire machine from inside a Claude conversation. builds file pipelines without scripts.</div>
+      <div class="savings-callout">saves $15+/mo. turns Claude into a fully capable file manager.</div>
+    </div>
+    <span class="tool-tag tag-oss">Open Source</span>
+  </div>
+
+  <div class="tool-card">
+    <div>
+      <div class="tool-name">GitHub MCP</div>
+      <div class="tool-replaces">Replaces: <strong>GitHub Copilot Workspace ($10/mo)</strong> + manual PR review tools</div>
+      <div class="tool-desc">read files, create PRs, comment on issues, search code — directly from Claude. no context switching to the GitHub UI.</div>
+      <div class="savings-callout">saves $10/mo minimum. handles full PR review workflows.</div>
+    </div>
+    <span class="tool-tag tag-free">Free</span>
+  </div>
+
+  <div class="tool-card">
+    <div>
+      <div class="tool-name">Pinecone MCP</div>
+      <div class="tool-replaces">Replaces: <strong>Notion AI ($8/mo)</strong> + custom vector search pipelines</div>
+      <div class="tool-desc">semantic search over your own data from inside Claude. search 100K+ docs in milliseconds. no custom code needed to build the pipeline.</div>
+      <div class="savings-callout">replaces $40-200/mo vector infra. built-in to Claude workflow.</div>
+    </div>
+    <span class="tool-tag tag-free">Free tier</span>
+  </div>
+
+  <div class="divider"></div>
+  <div class="lock-banner">Enter your email below to unlock 8 more MCP servers — including the ones replacing Zapier, Airtable, and HubSpot</div>
+</div>
+
+<div class="gate" id="gate">
+  <h2>Unlock the full list</h2>
+  <p>4 servers are free. 8 more unlock when you drop your email. includes the Zapier replacement, Airtable killer, and the web scraping stack.</p>
+  <div class="gate-form">
+    <input type="email" id="email-input" placeholder="your@email.com" autocomplete="email">
+    <button onclick="unlock()">Unlock 8 more →</button>
+  </div>
+  <p class="gate-note">no spam. one email when the next cheatsheet drops.</p>
+</div>
+
+<div class="full-list" id="full-list">
+  <div class="section">
+    <div class="section-title">Unlocked — 8 more MCP servers</div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Firecrawl MCP</div>
+        <div class="tool-replaces">Replaces: <strong>ScrapingBee ($49/mo)</strong> + ParseHub ($89/mo)</div>
+        <div class="tool-desc">structured web scraping from inside Claude. give it a URL, get clean markdown. handles JS-rendered pages, bypass basic bot detection, extract any data structure you define in plain English.</div>
+        <div class="savings-callout">saves $138/mo. ask "scrape this site's pricing page and format as a comparison table" — done.</div>
+      </div>
+      <span class="tool-tag tag-oss">Open Source</span>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Zapier MCP</div>
+        <div class="tool-replaces">Replaces: <strong>Zapier Pro ($49/mo)</strong> for most AI automation use cases</div>
+        <div class="tool-desc">trigger 5,000+ Zapier app connections from inside a Claude conversation. send emails, create Airtable rows, post to Slack, update CRMs — using natural language.</div>
+        <div class="savings-callout">saves $49/mo on base Zapier costs. handles the long tail of automation requests without building zaps manually.</div>
+      </div>
+      <span class="tool-tag tag-free">Free tier</span>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Firebase MCP</div>
+        <div class="tool-replaces">Replaces: <strong>Airtable ($20/mo)</strong> for app database needs + manual Firebase console work</div>
+        <div class="tool-desc">read, write, query Firestore databases directly from Claude. build app backends without touching the Firebase console. Claude can debug, seed, and manage your entire database via natural language.</div>
+        <div class="savings-callout">saves $20-45/mo vs Airtable for structured data. free tier covers most indie projects.</div>
+      </div>
+      <span class="tool-tag tag-free">Free</span>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Slack MCP</div>
+        <div class="tool-replaces">Replaces: <strong>Slack bots ($7+/mo)</strong> + custom Slack app development</div>
+        <div class="tool-desc">read channels, send messages, search Slack history — from inside Claude. build Claude-powered Slack assistants without writing any integration code.</div>
+        <div class="savings-callout">saves $7-25/mo on bot tools. handles full Slack automation from a conversation.</div>
+      </div>
+      <span class="tool-tag tag-free">Free</span>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">PostgreSQL MCP</div>
+        <div class="tool-replaces">Replaces: <strong>TablePlus ($89 one-time)</strong> + Metabase cloud ($500/mo for teams)</div>
+        <div class="tool-desc">query any Postgres database in plain English from Claude. ask "show me all signups from last week that haven't activated" and get the SQL + results. no dashboard needed.</div>
+        <div class="savings-callout">replaces ad hoc analytics tools. write queries in English, not SQL.</div>
+      </div>
+      <span class="tool-tag tag-oss">Open Source</span>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Brave Search MCP</div>
+        <div class="tool-replaces">Replaces: <strong>Perplexity Pro ($20/mo)</strong> + manual Google research</div>
+        <div class="tool-desc">real-time web search inside Claude with AI synthesis. competitor research, trend analysis, fact checking — without leaving the conversation. uses Brave's index (not Google), so you get different results.</div>
+        <div class="savings-callout">saves $20/mo on Perplexity. better for research-heavy workflows.</div>
+      </div>
+      <span class="tool-tag tag-free">Free tier</span>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Notion MCP</div>
+        <div class="tool-replaces">Replaces: <strong>Notion AI ($8/mo)</strong> + manual database maintenance</div>
+        <div class="tool-desc">read and write Notion pages, databases, and blocks from Claude. build personal wikis, update project trackers, search across all your notes — without opening Notion.</div>
+        <div class="savings-callout">saves $8/mo on Notion AI. handles the database maintenance that kills productivity.</div>
+      </div>
+      <span class="tool-tag tag-free">Free</span>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Context7 MCP</div>
+        <div class="tool-replaces">Replaces: <strong>Mintlify ($150/mo)</strong> for doc access + manual copy-pasting from docs</div>
+        <div class="tool-desc">pulls real-time, version-accurate documentation for any library directly into Claude's context. ask "how do I use Pinecone's hybrid search" and get current, accurate code examples — not training data from 2024.</div>
+        <div class="savings-callout">eliminates hallucinated API calls. the single biggest quality improvement for vibe coders.</div>
+      </div>
+      <span class="tool-tag tag-free">Free</span>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:24px">
+    <div class="section-title">Next: where to find more</div>
+    <p style="font-size:.88rem;color:#aaa;margin-bottom:12px">these 12 are the highest-ROI starting point. the full MCP ecosystem has 400+ servers.</p>
+    <p style="font-size:.88rem;color:#aaa">browse the full directory: <a href="https://mcp-marketplace.surge.sh" target="_blank">mcp-marketplace.surge.sh</a></p>
+  </div>
+</div>
+
+<footer>
+  <p>by <a href="https://printmaxxer.surge.sh" target="_blank">PRINTMAXX</a> · free tools for solopreneurs</p>
+</footer>
+</div>
+
+<script>
+function unlock() {
+  const email = document.getElementById('email-input').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('email-input').style.borderColor = '#ff4444';
+    return;
+  }
+  // store locally
+  localStorage.setItem('mcp_unlocked', '1');
+  localStorage.setItem('mcp_email', email);
+  // show full list
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('full-list').style.display = 'block';
+  // scroll to unlocked content
+  document.getElementById('full-list').scrollIntoView({behavior:'smooth'});
+}
+// check if already unlocked
+if (localStorage.getItem('mcp_unlocked') === '1') {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('full-list').style.display = 'block';
+}
+</script>
+</body>
+</html>

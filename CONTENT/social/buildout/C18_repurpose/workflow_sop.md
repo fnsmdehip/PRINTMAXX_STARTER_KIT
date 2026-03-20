@@ -1,4 +1,4 @@
-# C18 Viral Content Repurposer — Workflow SOP
+# C18 Viral Content Repurposer, Workflow SOP
 # One Piece of Content → 10 Platforms
 
 ## The Math
@@ -19,11 +19,11 @@ Effective cost per platform: 17 minutes
 
 | Tier | Source | Repurpose Potential | Time to Process |
 |------|--------|--------------------|--------------------|
-| S | YouTube long-form (8-15 min) | Highest — video, clips, audio, transcript | 90 min |
-| A | Podcast episode (20-30 min) | High — audio, transcript, clips, blog | 75 min |
-| B | Twitter thread (10+ tweets) | Medium — carousel, blog, short video | 45 min |
-| C | Newsletter issue (800-1,200 words) | Medium — blog, thread, carousel, audio | 45 min |
-| D | Short-form clip (60 sec) | Low — crosspost only, no derivatives | 15 min |
+| S | YouTube long-form (8-15 min) | Highest, video, clips, audio, transcript | 90 min |
+| A | Podcast episode (20-30 min) | High, audio, transcript, clips, blog | 75 min |
+| B | Twitter thread (10+ tweets) | Medium, carousel, blog, short video | 45 min |
+| C | Newsletter issue (800-1,200 words) | Medium, blog, thread, carousel, audio | 45 min |
+| D | Short-form clip (60 sec) | Low, crosspost only, no derivatives | 15 min |
 
 ---
 
@@ -32,7 +32,7 @@ Effective cost per platform: 17 minutes
 ### Step 0: Pre-production (do before filming)
 - Write transcript first (Claude prompt: "Write a 10-minute video script on [topic] for a faceless YouTube channel targeting solopreneurs. Structure: Hook 0-30s, Problem 30-90s, Solution 2-7min, CTA 7-10min.")
 - From transcript, extract: thread hook, newsletter intro, 5 clip timestamps
-- Record video with transcript in hand — clean, natural pacing
+- Record video with transcript in hand, clean, natural pacing
 
 ### Step 1: Upload source (5 min)
 1. Export video at 1920x1080, H.264, AAC audio
@@ -42,12 +42,12 @@ Effective cost per platform: 17 minutes
 
 ### Step 2: Clip extraction (20 min)
 Cut 4-6 clips from the long-form:
-- Clip 1: Hook moment (0:15–0:45) — highest-energy 30 seconds
-- Clip 2: Core insight reveal — 45-60 seconds
-- Clip 3: Step-by-step snippet — 45 seconds
-- Clip 4: Proof point or result — 30 seconds
-- Clip 5 (optional): Contrarian take — 30 seconds
-- Clip 6 (optional): CTA clip — 20 seconds
+- Clip 1: Hook moment (0:15–0:45), highest-energy 30 seconds
+- Clip 2: Core insight reveal, 45-60 seconds
+- Clip 3: Step-by-step snippet, 45 seconds
+- Clip 4: Proof point or result, 30 seconds
+- Clip 5 (optional): Contrarian take, 30 seconds
+- Clip 6 (optional): CTA clip, 20 seconds
 
 Tool: CapCut (free, batch export), OpusClip ($29/mo auto-clips), or manual Descript
 
@@ -91,7 +91,7 @@ Prompt: "Convert this into a 7-tweet thread. Tweet 1: consequence-first hook wit
 
 ### Step 9: LinkedIn post (5 min)
 Prompt: "Write a 200-word LinkedIn post based on this content. Open with a bold claim. Use short paragraphs (1-2 sentences). Include 1 specific number. End with a question to drive comments. Professional but direct tone."
-- Post natively (no links in body — put link in comments)
+- Post natively (no links in body, put link in comments)
 - First comment: "Full video here: [link]" within 5 minutes of posting
 
 ### Step 10: Podcast episode (5 min)

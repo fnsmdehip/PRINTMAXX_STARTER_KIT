@@ -1,4 +1,4 @@
-# New Asset Distribution — Cycle 10 (Mar 8, 2026)
+# New Asset Distribution, Cycle 10 (Mar 8, 2026)
 
 Status: PENDING_REVIEW
 Generated: 2026-03-08 cycle 10
@@ -6,7 +6,7 @@ Assets: CoreDay, Revenue Leak Audit, SaaS Stack Audit, Best Cold Email Tools 202
 
 ---
 
-## TWITTER — Individual Tweets (6)
+## TWITTER, Individual Tweets (6)
 
 ### Tweet 1: CoreDay (coreday.surge.sh)
 
@@ -86,7 +86,7 @@ full breakdown: instantly-vs-lemlist.surge.sh
 
 ---
 
-## TWITTER — Thread: "6 free tools this week"
+## TWITTER, Thread: "6 free tools this week"
 
 ### Tweet 1/6 (hook)
 
@@ -103,7 +103,7 @@ here's all of them:
 ### Tweet 2/6
 
 ```
-1. CoreDay — daily habit tracker that loads in under 1 second. works offline. no account needed.
+1. CoreDay, daily habit tracker that loads in under 1 second. works offline. no account needed.
 
 replaces: Habitica ($9/mo), Streaks ($5), Strides ($5/mo)
 
@@ -113,7 +113,7 @@ coreday.surge.sh
 ### Tweet 3/6
 
 ```
-2. Revenue Leak Audit — 12 questions, 90 seconds. tells you exactly where your funnel is bleeding money.
+2. Revenue Leak Audit, 12 questions, 90 seconds. tells you exactly where your funnel is bleeding money.
 
 most solopreneurs find $1,200-4,850/mo in leaks they didn't know about.
 
@@ -125,7 +125,7 @@ revenue-leak-audit.surge.sh
 ### Tweet 4/6
 
 ```
-3. SaaS Stack Audit — paste your tools, get a waste report. finds overlap, unused seats, cheaper alternatives.
+3. SaaS Stack Audit, paste your tools, get a waste report. finds overlap, unused seats, cheaper alternatives.
 
 average savings found: $200-600/mo.
 
@@ -137,11 +137,11 @@ saas-stack-audit.surge.sh
 ### Tweet 5/6
 
 ```
-4. Cold Email Tools 2026 — tested 14 platforms, 10K+ emails. honest breakdown of deliverability, pricing, and what actually gets replies.
+4. Cold Email Tools 2026, tested 14 platforms, 10K+ emails. honest breakdown of deliverability, pricing, and what actually gets replies.
 
-5. Cursor vs Claude Code — real comparison after shipping 6 apps on both. not "both are great!" fluff.
+5. Cursor vs Claude Code, real comparison after shipping 6 apps on both. not "both are great!" fluff.
 
-6. Instantly vs Lemlist — same campaign on both. real numbers.
+6. Instantly vs Lemlist, same campaign on both. real numbers.
 
 best-cold-email-tools.surge.sh
 cursor-vs-claudecode.surge.sh
@@ -162,7 +162,7 @@ bookmark this. you'll need at least 2 of them.
 
 ---
 
-## REDDIT — Targeted Posts (6)
+## REDDIT, Targeted Posts (6)
 
 ---
 
@@ -426,21 +426,21 @@ Happy to answer specific questions about either platform.
 ## DISTRIBUTION CHECKLIST
 
 ### Twitter
-- [ ] Post Tweet 1 (CoreDay) — 8:00 AM
-- [ ] Post Tweet 2 (Revenue Leak Audit) — 10:30 AM
-- [ ] Post Tweet 3 (SaaS Stack Audit) — 12:00 PM
-- [ ] Post Tweet 4 (Cold Email Tools) — 2:30 PM
-- [ ] Post Tweet 5 (Cursor vs Claude Code) — 5:00 PM
-- [ ] Post Tweet 6 (Instantly vs Lemlist) — 7:30 PM
-- [ ] Post Thread ("6 free tools") — next day 9:00 AM
+- [ ] Post Tweet 1 (CoreDay), 8:00 AM
+- [ ] Post Tweet 2 (Revenue Leak Audit), 10:30 AM
+- [ ] Post Tweet 3 (SaaS Stack Audit), 12:00 PM
+- [ ] Post Tweet 4 (Cold Email Tools), 2:30 PM
+- [ ] Post Tweet 5 (Cursor vs Claude Code), 5:00 PM
+- [ ] Post Tweet 6 (Instantly vs Lemlist), 7:30 PM
+- [ ] Post Thread ("6 free tools"), next day 9:00 AM
 
 ### Reddit
-- [ ] r/productivity — CoreDay post
-- [ ] r/Entrepreneur — Revenue Leak Audit post
-- [ ] r/SaaS — SaaS Stack Audit post
-- [ ] r/sales — Cold Email Tools post
-- [ ] r/webdev — Cursor vs Claude Code post
-- [ ] r/coldoutreach — Instantly vs Lemlist post
+- [ ] r/productivity, CoreDay post
+- [ ] r/Entrepreneur, Revenue Leak Audit post
+- [ ] r/SaaS, SaaS Stack Audit post
+- [ ] r/sales, Cold Email Tools post
+- [ ] r/webdev, Cursor vs Claude Code post
+- [ ] r/coldoutreach, Instantly vs Lemlist post
 
 ### Reddit Timing
 - Space posts 2+ hours apart to avoid rate limits

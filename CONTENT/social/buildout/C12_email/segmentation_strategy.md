@@ -1,7 +1,7 @@
 # Email Segmentation Strategy
 
 Platform: Beehiiv (primary) / ConvertKit (alternative)
-Goal: Right message to right person at right time — without extra work
+Goal: Right message to right person at right time, without extra work
 
 ---
 
@@ -53,7 +53,7 @@ Tag based on what subscribers DO after joining.
 | cold_60 | No open in 60 days | Re-engagement sequence (Seq 6) |
 | cold_90 | No open in 90 days | Final win-back or suppress |
 | suppressed | No open in 120 days | Remove from main list |
-| replied | Has replied to any email | VIP segment — personal tone |
+| replied | Has replied to any email | VIP segment, personal tone |
 
 **What to send each tier:**
 - engaged_active: all emails, all sequences
@@ -159,9 +159,9 @@ Match sequence intensity to where the subscriber is.
 - Sequence: 7 emails, 2 asks (soft on email 5, hard on email 7)
 
 **Scaling ($10K+/mo):**
-- Lead: leverage + exit + team building
+- Lead: use + exit + team building
 - Main ask: high-ticket ($997+) or annual plan
-- Sequence: custom — heavily personalized based on purchase history
+- Sequence: custom, heavily personalized based on purchase history
 
 ---
 

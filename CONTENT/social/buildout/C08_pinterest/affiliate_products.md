@@ -1,8 +1,8 @@
-# C08 Pinterest — Top 20 Affiliate Products by Niche
+# C08 Pinterest, Top 20 Affiliate Products by Niche
 
 ## How Pinterest Affiliate Works
 
-Pinterest allows direct affiliate links in pins (no disclosure-free grey zone — FTC requires clear disclosure).
+Pinterest allows direct affiliate links in pins (no disclosure-free grey zone, FTC requires clear disclosure).
 Disclosure method: Add "affiliate link" or "#ad" to pin description.
 Best practice: link to a landing page or review post, not direct affiliate link (higher conversion rate, easier tracking).
 
@@ -22,7 +22,7 @@ Commission types:
 - Monthly value per referral: $15.80-23.80/mo recurring
 - Cookie: 90 days
 - Niche fit: Cold email boards, B2B sales content
-- Pin angle: "I scraped 10,000 leads in 30 minutes — here's how"
+- Pin angle: "I scraped 10,000 leads in 30 minutes, here's how"
 - Application: PartnerStack (Apollo partner program)
 - Conversion rate benchmark: 2-4% for qualified traffic
 
@@ -55,7 +55,7 @@ Commission types:
 - Monthly value per referral: $10 flat
 - Cookie: 30 days
 - Niche fit: Notion templates, productivity boards
-- Pin angle: "Free Notion template for [use case] — download below"
+- Pin angle: "Free Notion template for [use case], download below"
 - Application: Notion affiliate program
 - Best strategy: pair with own Gumroad Notion templates
 
@@ -82,7 +82,7 @@ Commission types:
 - Niche fit: Faceless YouTube, AI tools, content creation boards
 - Pin angle: "The AI voice that sounds more human than real humans"
 - Application: ElevenLabs affiliate program
-- Best tier to promote: Creator ($22/mo) — best value for faceless YouTube
+- Best tier to promote: Creator ($22/mo), best value for faceless YouTube
 
 **Product 7: Canva Pro**
 - Type: Graphic design platform
@@ -101,7 +101,7 @@ Commission types:
 - Monthly value per referral: $3.60-6/mo recurring
 - Cookie: 60 days
 - Niche fit: YouTube, podcast, content creator boards
-- Pin angle: "Edit podcasts by editing text — how Descript works"
+- Pin angle: "Edit podcasts by editing text, how Descript works"
 - Application: Descript affiliate program
 
 **Product 9: Tailwind**
@@ -110,15 +110,15 @@ Commission types:
 - Commission: 15% recurring
 - Monthly value per referral: $2.25-3.75/mo recurring
 - Cookie: 90 days
-- Niche fit: Pinterest strategy boards (meta — they're ON Pinterest)
+- Niche fit: Pinterest strategy boards (meta, they're ON Pinterest)
 - Pin angle: "I schedule 80 pins/week in 2 hours using this tool"
 - Application: Tailwind affiliate program
-- Note: High intent — people searching Pinterest strategy already need this
+- Note: High intent, people searching Pinterest strategy already need this
 
 **Product 10: Buffer**
 - Type: Social media scheduling
 - Price: $18/mo (Essentials), $12/mo (Team per user)
-- Commission: referral credits (not cash directly — check current terms)
+- Commission: referral credits (not cash directly, check current terms)
 - Niche fit: Social media, content creator boards
 - Pin angle: "How I post to 6 platforms in 10 minutes using Buffer"
 - Application: Buffer referral program
@@ -129,12 +129,12 @@ Commission types:
 
 **Product 11: Printify**
 - Type: Print on demand fulfillment
-- Price: Free tier, $29/mo (Premium — 20% discount on products)
+- Price: Free tier, $29/mo (Premium, 20% discount on products)
 - Commission: 4% of merchant net sales (ongoing, not recurring)
 - Expected monthly value: Varies; $25-100+/mo for active stores
 - Cookie: 90 days
 - Niche fit: POD, Etsy, passive income boards
-- Pin angle: "Printify vs Printful — which makes more profit per sale"
+- Pin angle: "Printify vs Printful, which makes more profit per sale"
 - Application: Printify affiliate program
 - Strategy: Promote Premium plan for the 20% product discount upsell
 
@@ -144,7 +144,7 @@ Commission types:
 - Commission: $25 per new registered merchant who makes a sale
 - Cookie: 30 days
 - Niche fit: POD, Etsy, passive income boards
-- Pin angle: "Printful quality vs Printify price — the honest comparison"
+- Pin angle: "Printful quality vs Printify price, the honest comparison"
 - Application: Printful affiliate program
 
 **Product 13: Publisher Rocket**
@@ -185,7 +185,7 @@ Commission types:
 - Expected value per referral: $500-2,000+ lifetime
 - Cookie: 90 days
 - Niche fit: Business, B2B sales, marketing boards
-- Pin angle: "HubSpot free CRM vs paid — when to upgrade"
+- Pin angle: "HubSpot free CRM vs paid, when to upgrade"
 - Application: HubSpot Solutions Partner or affiliate
 - Note: Highest earning potential of all affiliate products on this list
 
@@ -195,9 +195,9 @@ Commission types:
 - Commission: $150 per merchant who opens + maintains store
 - Cookie: 30 days
 - Niche fit: Ecom, dropshipping, passive income boards
-- Pin angle: "Shopify vs WooCommerce — which is better for beginners"
+- Pin angle: "Shopify vs WooCommerce, which is better for beginners"
 - Application: Shopify Affiliate Program
-- Note: High volume potential — ecom is broad topic
+- Note: High volume potential, ecom is broad topic
 
 **Product 18: Kinsta**
 - Type: Managed WordPress hosting
@@ -215,7 +215,7 @@ Commission types:
 - Commission: $200 minimum per signup
 - Cookie: 180 days
 - Niche fit: Blogging, website, content creator boards
-- Pin angle: "WordPress hosting ranked — why WP Engine is worth the price"
+- Pin angle: "WordPress hosting ranked, why WP Engine is worth the price"
 - Application: WP Engine affiliate program (via ShareASale)
 
 **Product 20: Monday.com**
@@ -224,7 +224,7 @@ Commission types:
 - Commission: $30-100 CPA depending on plan
 - Cookie: 90 days
 - Niche fit: Team/business productivity, project management boards
-- Pin angle: "Monday.com vs Asana vs ClickUp — ranked for small teams"
+- Pin angle: "Monday.com vs Asana vs ClickUp, ranked for small teams"
 - Application: Monday.com affiliate program
 
 ---
@@ -260,14 +260,14 @@ Commission types:
 
 Sign up for these first (highest earning potential for Pinterest traffic):
 
-1. HubSpot (apply via PartnerStack — up to $1,000/sale)
-2. Instantly.ai (30% recurring — best for cold email content)
-3. Beehiiv (30% recurring 12mo — best for newsletter content)
-4. Surfer SEO (25% recurring — best for SEO content)
-5. ElevenLabs (30% recurring — best for YouTube content)
-6. WP Engine (via ShareASale — $200 flat)
-7. Apollo.io (PartnerStack — 20% recurring)
-8. Kinsta (ShareASale — $50-500 CPA)
+1. HubSpot (apply via PartnerStack, up to $1,000/sale)
+2. Instantly.ai (30% recurring, best for cold email content)
+3. Beehiiv (30% recurring 12mo, best for newsletter content)
+4. Surfer SEO (25% recurring, best for SEO content)
+5. ElevenLabs (30% recurring, best for YouTube content)
+6. WP Engine (via ShareASale, $200 flat)
+7. Apollo.io (PartnerStack, 20% recurring)
+8. Kinsta (ShareASale, $50-500 CPA)
 9. Shopify (Shopify affiliate portal)
 10. Canva Pro (Canva affiliate portal)
 
@@ -278,7 +278,7 @@ Sign up for these first (highest earning potential for Pinterest traffic):
 Pinterest requires affiliate disclosure on every pin with a paid link.
 Standard disclosure: Add "affiliate link" to pin description.
 Full disclosure text example:
-"this pin contains affiliate links — if you click and buy, I earn a commission at no extra cost to you."
+"this pin contains affiliate links, if you click and buy, I earn a commission at no extra cost to you."
 
 Placement: In pin description, not just in linked post.
 Required by: FTC (US), ASA (UK), ACCC (AU).

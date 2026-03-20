@@ -1,10 +1,10 @@
-# C14 Remotion Video Templates — 5 Production-Ready Designs
+# C14 Remotion Video Templates, 5 Production-Ready Designs
 
 Each template: complete component code + usage + output specs + batch-render example.
 
 ---
 
-## Template 1: ShortClip — Hook + Steps Reveal
+## Template 1: ShortClip, Hook + Steps Reveal
 
 **What it produces:** 30-second vertical video. Bold hook text, numbered steps animate in one by one, CTA at end. Designed for TikTok, YouTube Shorts, Instagram Reels.
 
@@ -48,14 +48,14 @@ export const ShortClip: React.FC<Props> = ({ title, steps, accent }) => {
         {title}
       </div>
 
-      {/* Steps — each appears at 60-frame intervals */}
+      {/* Steps, each appears at 60-frame intervals */}
       {steps.map((step, i) => (
         <Sequence from={60 + i * 60} key={i}>
           <StepItem text={step} index={i} accent={accent} />
         </Sequence>
       ))}
 
-      {/* CTA — appears at frame 720 */}
+      {/* CTA, appears at frame 720 */}
       <Sequence from={720}>
         <CTABadge accent={accent} />
       </Sequence>
@@ -123,7 +123,7 @@ const videos = [
 
 ---
 
-## Template 2: StatsReveal — Metric Countdown + Breakdown
+## Template 2: StatsReveal, Metric Countdown + Breakdown
 
 **What it produces:** 15-second landscape video. Big metric counts up from 0, breakdown bars animate in. Designed for Twitter/X embeds, LinkedIn, YouTube Community posts.
 
@@ -210,7 +210,7 @@ const BreakdownBar: React.FC<{ item: Breakdown; accent: string }> = ({ item, acc
 
 ---
 
-## Template 3: Listicle — Animated Slide Deck
+## Template 3: Listicle, Animated Slide Deck
 
 **What it produces:** 50-second vertical video. Title slide, then numbered items slide in one per 8 seconds with icons. Designed for TikTok, Reels, Shorts.
 
@@ -236,7 +236,7 @@ export const Listicle: React.FC<Props> = ({ title, items, accent }) => {
 
   return (
     <AbsoluteFill style={{ background: TOKENS.colors.bg }}>
-      {/* Title card — first 60 frames */}
+      {/* Title card, first 60 frames */}
       <Sequence from={0} durationInFrames={90}>
         <TitleCard title={title} accent={accent} />
       </Sequence>
@@ -306,7 +306,7 @@ const ItemCard: React.FC<{ item: ListItem; accent: string; total: number; index:
 
 ---
 
-## Template 4: ColdEmailTutorial — Screen + Text Walkthrough
+## Template 4: ColdEmailTutorial, Screen + Text Walkthrough
 
 **What it produces:** 45-second horizontal video. Step-by-step cold email anatomy with animated highlights. Designed for YouTube, LinkedIn.
 
@@ -406,16 +406,16 @@ const Annotation: React.FC<{ label: string; color: string }> = ({ label, color }
 defaultProps: {
   subject: "quick question about [company]'s lead gen",
   sections: [
-    { label: "Hook — problem they have", text: "saw your team is hiring 3 BDRs. usually means the current pipeline needs backup.", color: "#FF5733", startFrame: 60 },
+    { label: "Hook, problem they have", text: "saw your team is hiring 3 BDRs. usually means the current pipeline needs backup.", color: "#FF5733", startFrame: 60 },
     { label: "Social proof", text: "helped a similar SaaS book 40 demos in 6 weeks with cold email.", color: "#6C63FF", startFrame: 150 },
-    { label: "CTA — one ask only", text: "worth a 15-min call this week?", color: "#22C55E", startFrame: 240 },
+    { label: "CTA, one ask only", text: "worth a 15-min call this week?", color: "#22C55E", startFrame: 240 },
   ]
 }
 ```
 
 ---
 
-## Template 5: QuoteCard — Animated Text Pull Quote
+## Template 5: QuoteCard, Animated Text Pull Quote
 
 **What it produces:** 10-second square or vertical video. Bold quote animates in word by word, author + handle appears, subtle background motion. Designed for Twitter/X, Instagram, LinkedIn.
 
@@ -461,7 +461,7 @@ export const QuoteCard: React.FC<Props> = ({ quote, author, handle, accent, bgSt
       {/* Accent bar */}
       <div style={{ width: 80, height: 8, background: accent, borderRadius: 4, marginBottom: 40 }} />
 
-      {/* Quote — word by word */}
+      {/* Quote, word by word */}
       <div style={{ fontSize: 68, fontWeight: 800, color: TOKENS.colors.text, lineHeight: 1.2, marginBottom: 60 }}>
         {words.map((word, i) => {
           const wordStart = Math.floor((i / words.length) * 150);

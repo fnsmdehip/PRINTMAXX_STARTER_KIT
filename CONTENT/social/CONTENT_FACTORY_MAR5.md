@@ -139,7 +139,7 @@ for research: the loop scrapes a target list of subreddits, twitter accounts, an
 critical detail: memory is the filesystem, not the context window. each loop iteration starts fresh. reads state from files. does work. writes results to files. this means it never loses context and can run indefinitely without degradation
 
 **7/7**
-i run 3 loops most nights. code, content, research. total compute cost is maybe $15/night. output value is hard to calculate but the content alone would take me 20+ hours manually. this is the real AI leverage nobody talks about
+i run 3 loops most nights. code, content, research. total compute cost is maybe $15/night. output value is hard to calculate but the content alone would take me 20+ hours manually. this is the real AI use nobody talks about
 
 ---
 

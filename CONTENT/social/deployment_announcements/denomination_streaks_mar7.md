@@ -1,4 +1,4 @@
-# Denomination Streak Apps — Deployment Announcement
+# Denomination Streak Apps, Deployment Announcement
 Date: 2026-03-07
 Cycle: Asset Deployer Run
 
@@ -29,7 +29,7 @@ All 200 OK. All deployed in one cycle.
 
 ## SOCIAL POSTS (PENDING_REVIEW)
 
-### Tweet 1 — The Data Hook
+### Tweet 1, The Data Hook
 ```
 shipped 13 more streak apps tonight.
 
@@ -40,7 +40,7 @@ that's now 38 streak apps live. all denomination-specific. all free.
 the religious habit tracker market is completely un-tapped.
 ```
 
-### Tweet 2 — The Insight
+### Tweet 2, The Insight
 ```
 the pattern: build one habit tracker for "christians"
 
@@ -53,7 +53,7 @@ get 11x the search traffic. zero extra code.
 specificity beats generality every time.
 ```
 
-### Tweet 3 — The Progress Thread Hook
+### Tweet 3, The Progress Thread Hook
 ```
 38 streak apps. $0 revenue. day 37.
 
@@ -66,7 +66,7 @@ same app. different words. different store listing. different app store category
 3 separate SKUs from one codebase.
 ```
 
-### Tweet 4 — Community Bait
+### Tweet 4, Community Bait
 ```
 if you're a solopreneur looking for an un-saturated niche:
 
@@ -79,8 +79,8 @@ nobody is building for these specifically.
 the "bible app" market is dominated. the "prayer rule tracker for orthodox christians" market is wide open.
 ```
 
-### Thread — Full launch breakdown
-Tweet 1: "built a streak app for every major christian denomination + main islamic traditions. here's why this is the highest-leverage thing i've built."
+### Thread, Full launch breakdown
+Tweet 1: "built a streak app for every major christian denomination + main islamic traditions. here's why this is the highest-use thing i've built."
 
 Tweet 2: "the app is identical for all of them. different icon. different accent color. different terminology. that's it. catholic = rosary. orthodox = prayer rule. lutheran = catechism. episcopal = daily office."
 

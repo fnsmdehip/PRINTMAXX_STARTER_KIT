@@ -8,8 +8,8 @@ cycle: distribution_engine_2
 ## Assets
 
 Built comparison pages (in builds/comparison-pages/):
-1. focuslock-vs-opal.html — FocusLock vs Opal (screen time/focus apps)
-2. prayerlock-vs-hallow.html — PrayerLock vs Hallow (prayer/faith apps)
+1. focuslock-vs-opal.html, FocusLock vs Opal (screen time/focus apps)
+2. prayerlock-vs-hallow.html, PrayerLock vs Hallow (prayer/faith apps)
 
 These target high-intent search queries: "[product] vs [product]" and "[product] alternative"
 
@@ -19,7 +19,7 @@ These target high-intent search queries: "[product] vs [product]" and "[product]
 
 ### 1. Reddit Distribution
 
-**r/productivity — FocusLock vs Opal**
+**r/productivity, FocusLock vs Opal**
 
 **Title:** compared free focus apps: FocusLock (PWA) vs Opal ($99/yr). here's the breakdown.
 
@@ -38,7 +38,7 @@ no affiliation with either. just tested both and wrote up the differences.
 
 ---
 
-**r/islam — PrayerLock vs Hallow**
+**r/islam, PrayerLock vs Hallow**
 
 **Title:** compared prayer apps: PrayerLock (free, Muslim) vs Hallow (paid, Christian). different audiences, similar mechanics.
 
@@ -115,11 +115,11 @@ each comparison page takes about 2 hours to write. the SEO value compounds forev
 
 Priority order (by search volume + conversion potential):
 
-1. **PageScorer vs GTmetrix** — high search volume, direct competitor
-2. **ColdMaxx vs Instantly** — hot market, lots of people searching
-3. **SleepMaxx vs Sleep Cycle** — consumer health, large audience
-4. **WalkToUnlock vs StepBet** — gamified fitness, niche but passionate
-5. **MealMaxx vs MyFitnessPal** — massive market, long tail keywords
+1. **PageScorer vs GTmetrix**, high search volume, direct competitor
+2. **ColdMaxx vs Instantly**, hot market, lots of people searching
+3. **SleepMaxx vs Sleep Cycle**, consumer health, large audience
+4. **WalkToUnlock vs StepBet**, gamified fitness, niche but passionate
+5. **MealMaxx vs MyFitnessPal**, massive market, long tail keywords
 
 HUMAN ACTION REQUIRED:
 - Deploy comparison pages to surge.sh (if not already deployed)

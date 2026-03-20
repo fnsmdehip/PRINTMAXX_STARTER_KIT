@@ -640,3 +640,24 @@ supremeecom.com/launchpad
 
 [r/AmazonFBA] How to Start Amazon FBA Private Label With $10k?
 
+
+
+---
+
+## Pending Enhancement (ALPHA107754, Score: 28)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2033999364595634590
+**Added:** 2026-03-18T22:48:03-04:00
+
+if you’re an ecomm brand and you’re not testing: 
+
+ad &gt; pdp
+ad &gt; advertorial &gt; pdp
+ad &gt; advertorial &gt; pdp &gt; rtg listicle &gt; pdp 
+ad &gt; sales page 
+ad &gt; low ticket FE &gt; upsell 
+ad &gt; quiz funnel &gt; personalised offer page
+ad &gt; vsl &gt; offer page
+ad &gt; listicle &gt; pdp 
+rtg ad &gt; product
+

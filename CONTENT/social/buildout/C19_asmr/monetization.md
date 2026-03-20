@@ -1,4 +1,4 @@
-# C19 ASMR Channel — Monetization Stack
+# C19 ASMR Channel, Monetization Stack
 
 ## Revenue Stream Overview
 
@@ -31,12 +31,12 @@ ASMR is among the highest-CPM YouTube niches due to long session times and adver
 - Average 10K-sub ASMR channel: 60-90K monthly views
 - Average view duration: 22-35 min (ASMR audience watches long)
 - 70K views × 25 min avg × $10 CPM = $291/month at 10K subs (conservative)
-- 8-hour videos count as one view but generate massive watch time — algorithm loves them
+- 8-hour videos count as one view but generate massive watch time, algorithm loves them
 
 ### Optimization rules
 - Upload 3x/week minimum for algorithm traction
 - Titles must contain: "ASMR" + sleep keyword + secondary hook word
-- First 30 seconds: no loud sounds, no jump scares — retention cliff
+- First 30 seconds: no loud sounds, no jump scares, retention cliff
 - Cards/end screens: link to Patreon and next video only
 - Enable "Made for kids" = NO (kills monetization, locks out Patreon CTAs)
 
@@ -88,7 +88,7 @@ ASMR is among the highest-CPM YouTube niches due to long session times and adver
 
 | Program | Product | Commission | Cookie | Avg order | Per conversion |
 |---------|---------|-----------|--------|-----------|----------------|
-| Audible | Audiobooks | $5-15/trial | 24 hrs | — | $5-15 |
+| Audible | Audiobooks | $5-15/trial | 24 hrs |, | $5-15 |
 | Amazon Associates | Sleep products | 3-8% | 24 hrs | $45 | $1.35-3.60 |
 | Calm app | Meditation | $15/sub | 30 days | $70/yr | $15 |
 | Headspace | Meditation | $10/sub | 30 days | $70/yr | $10 |
@@ -96,16 +96,16 @@ ASMR is among the highest-CPM YouTube niches due to long session times and adver
 | Sleep Number | Mattresses | 2-3% | 30 days | $1,200 | $24-36 |
 | Casper | Mattresses | $50/sale | 30 days | $900 | $50 |
 | White Noise app | Sleep sound app | $5/download | 7 days | $5 | $5 |
-| Beehiiv | Newsletter | $0.50-1.50/sub | 30 days | — | $0.50-1.50 |
+| Beehiiv | Newsletter | $0.50-1.50/sub | 30 days |, | $0.50-1.50 |
 | ElevenLabs | AI voice | 22% recurring | 30 days | $22/mo | $4.84/mo |
-| M1 Finance | Investing | $100-150/acct | 30 days | — | $100-150 |
-| Acorns | Investing | $5-10/sign up | 30 days | — | $5-10 |
+| M1 Finance | Investing | $100-150/acct | 30 days |, | $100-150 |
+| Acorns | Investing | $5-10/sign up | 30 days |, | $5-10 |
 
 ### Placement strategy
 - Sleep/ambient videos: BetterSleep, Calm, White Noise app
 - Finance ASMR: M1 Finance, Acorns, Audible (financial books)
 - Philosophy ASMR: Audible, book affiliate links
-- Tech ASMR: ElevenLabs (meta — they make the voice), newsletter tools
+- Tech ASMR: ElevenLabs (meta, they make the voice), newsletter tools
 - All videos: Amazon Associates for sleep masks, white noise machines, headphones
 
 ### Link format
@@ -133,10 +133,10 @@ White noise machine: [Amazon link]
 | Ambient channel tote | $28 | $12 | $16 | Casual fan |
 
 ### Design concepts for ASMR niche
-- Minimalist — channel logo + tagline only
+- Minimalist, channel logo + tagline only
 - Sleep-themed typography (moon, stars, wave patterns)
 - Philosophy quotes from Concept 7 series (Aurelius, Epictetus)
-- NO loud designs — brand misalignment with calm aesthetic
+- NO loud designs, brand misalignment with calm aesthetic
 
 ### Setup
 - Printful integration with Shopify store (or Spring/YouTube Merch shelf)
@@ -192,7 +192,7 @@ White noise machine: [Amazon link]
 ## 90-Day Revenue Activation Plan
 
 **Month 1 (0-1K subs):**
-- Upload 3x/week — 12 total videos
+- Upload 3x/week, 12 total videos
 - Priority: 8-hour ambient (Concept 10) for algorithm seeding
 - Set up Patreon tiers on day 1 (link in every video)
 - Enable affiliate links: Calm, Amazon, Audible
@@ -201,16 +201,16 @@ White noise machine: [Amazon link]
 **Month 2 (1K-3K subs):**
 - Hit 4,000 watch hours → apply for YPP (YouTube Partner Program)
 - Post Patreon community update to convert early fans
-- Add finance ASMR videos (Concept 2, 3, 15) — higher CPM
+- Add finance ASMR videos (Concept 2, 3, 15), higher CPM
 - Add Amazon Merch on Demand listings for merch without Printful fees
 - Send outreach to 3 sleep apps for sponsorship inquiry
 
 **Month 3 (3K-10K subs):**
-- Monetization live — AdSense revenue begins
+- Monetization live, AdSense revenue begins
 - Publish ASMR Production Guide on Gumroad ($27)
 - Apply to Grapevine for brand deals
 - Launch Tier 3 Patreon custom ambient option
-- Push 8-hour long formats hard — each one becomes a library asset forever
+- Push 8-hour long formats hard, each one becomes a library asset forever
 
 **Revenue at month 3 (conservative):**
 - AdSense: $150/mo

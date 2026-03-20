@@ -1,4 +1,4 @@
-# 50 Meme Concepts — Meme Account Network
+# 50 Meme Concepts, Meme Account Network
 # All captions follow S-tier copy style (consequence-first, specific, no AI slop)
 
 ---
@@ -77,7 +77,7 @@
 **Setup:** "hire $3/hr VA to do research and outreach"
 **Punchline:** "VA finds $5,000 client while you're at the gym"
 **Surprised Pikachu:** "you, receiving a Stripe notification"
-**Caption:** "leverage is real. stop doing everything yourself."
+**Caption:** "use is real. stop doing everything yourself."
 
 ---
 
@@ -106,10 +106,10 @@
 
 ### 13. "The $0 Marketing Stack"
 **Format:** List meme (items with price tags crossed out)
-**Item 1:** "Reddit — free"
-**Item 2:** "Twitter replies — free"
-**Item 3:** "cold email (free trial) — $0"
-**Item 4:** "Google SEO — free"
+**Item 1:** "Reddit, free"
+**Item 2:** "Twitter replies, free"
+**Item 3:** "cold email (free trial), $0"
+**Item 4:** "Google SEO, free"
 **Total:** "$0 marketing budget, $8,000 revenue in 60 days"
 **Caption:** "the best marketing channels are still free if you know how to use them."
 

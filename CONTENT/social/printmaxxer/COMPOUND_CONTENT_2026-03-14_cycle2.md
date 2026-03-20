@@ -1,4 +1,4 @@
-# Compound Content — 2026-03-14 (Cycle 2)
+# Compound Content, 2026-03-14 (Cycle 2)
 Generated from: health report auto-fix, CEO venture expansion, growth strategy anti-AI signal, system self-healing pattern.
 Status: PENDING_REVIEW
 Voice: PRINTMAXXER (copy-style.md weighted aggregate)
@@ -7,7 +7,7 @@ Voice: PRINTMAXXER (copy-style.md weighted aggregate)
 
 ## STANDALONE TWEETS (8)
 
-### Tweet 1 — System Self-Healing (Nerd Bait)
+### Tweet 1, System Self-Healing (Nerd Bait)
 ```
 7 of my autonomous agents were silently failing for days.
 
@@ -20,7 +20,7 @@ fix: extracted all prompts to separate .md files. agents now read from files ins
 the lesson nobody talks about with AI agents: 80% of failures are infra, not AI.
 ```
 
-### Tweet 2 — CEO Agent Portfolio Expansion
+### Tweet 2, CEO Agent Portfolio Expansion
 ```
 my AI CEO agent created 20 new ventures while I was sleeping.
 
@@ -38,7 +38,7 @@ the CEO agent reads intelligence briefs, scores opportunities, and spins up vent
 I woke up to 20 new business lanes I didn't start.
 ```
 
-### Tweet 3 — Anti-AI Positioning Signal
+### Tweet 3, Anti-AI Positioning Signal
 ```
 saw a post on r/SideProject get 610 upvotes and 1,518 comments.
 
@@ -51,7 +51,7 @@ anti-AI sentiment is the engagement multiplier nobody's using.
 if you're building with AI, positioning AGAINST AI in your marketing is the move right now.
 ```
 
-### Tweet 4 — Bash Syntax Debugging (Educational)
+### Tweet 4, Bash Syntax Debugging (Educational)
 ```
 debugging tip for anyone running AI agents via launchd on macOS:
 
@@ -64,7 +64,7 @@ extract prompts to files. use: claude -p "$(cat prompt_file.md)"
 saved me from 7 zombie agents running empty cycles.
 ```
 
-### Tweet 5 — Venture Scoring Formula
+### Tweet 5, Venture Scoring Formula
 ```
 how I auto-score new business opportunities:
 
@@ -81,7 +81,7 @@ below 50: archive.
 the CEO agent runs this every 8 hours. no human input needed.
 ```
 
-### Tweet 6 — Reply Bait (Freelance Arbitrage)
+### Tweet 6, Reply Bait (Freelance Arbitrage)
 ```
 claude code freelance arbitrage is the simplest play nobody's running.
 
@@ -98,7 +98,7 @@ the bottleneck isn't finding clients. it's having accounts set up to reply.
 day 38. still no accounts. still $0. the irony writes itself.
 ```
 
-### Tweet 7 — Prompt Extraction Pattern (Build-in-Public)
+### Tweet 7, Prompt Extraction Pattern (Build-in-Public)
 ```
 pattern I wish I knew 38 days ago:
 
@@ -114,7 +114,7 @@ why:
 migrated 10 agents to this pattern today. zero failures since.
 ```
 
-### Tweet 8 — Portfolio Diversification (Controversial)
+### Tweet 8, Portfolio Diversification (Controversial)
 ```
 my system tracks 20 active venture types across 7 categories:
 
@@ -134,7 +134,7 @@ the math works. the execution is the hard part.
 
 ---
 
-## THREAD (7 tweets) — "How My AI CEO Agent Runs My Business Portfolio"
+## THREAD (7 tweets), "How My AI CEO Agent Runs My Business Portfolio"
 
 ### 1/7
 ```
@@ -238,7 +238,7 @@ the CEO agent is just a manager with a really good memory and zero ego.
 
 ## REPLY BAIT (3)
 
-### Reply Bait 1 — Venture Scoring
+### Reply Bait 1, Venture Scoring
 ```
 what's your minimum viable score for starting a new project?
 
@@ -249,7 +249,7 @@ but honestly, 3 of my best ideas scored in the 50s and I almost killed them.
 do you trust the algorithm or your gut?
 ```
 
-### Reply Bait 2 — Agent Count
+### Reply Bait 2, Agent Count
 ```
 genuine question: what's the right number of autonomous agents for a solo operation?
 
@@ -260,7 +260,7 @@ at what point does "orchestrating agents" become its own full-time job that defe
 asking because I might be there.
 ```
 
-### Reply Bait 3 — Anti-AI Marketing
+### Reply Bait 3, Anti-AI Marketing
 ```
 wild signal from reddit: "not another AI app" positioning gets 12x more engagement than "powered by AI."
 
@@ -273,7 +273,7 @@ are we at peak AI fatigue already? or is this just reddit being reddit?
 
 ## ENGAGEMENT FARMING (3)
 
-### Engagement 1 — Overnight Automation
+### Engagement 1, Overnight Automation
 ```
 went to sleep. woke up with 20 new business opportunities scored, ranked, and ready to execute.
 
@@ -289,7 +289,7 @@ I didn't ask it to. it found them in the intelligence pipeline and decided they 
 this is what autonomous means.
 ```
 
-### Engagement 2 — Debug Stories
+### Engagement 2, Debug Stories
 ```
 the most boring part of running AI agents that nobody posts about:
 
@@ -298,7 +298,7 @@ debugging bash syntax errors in launchd plist XML files at 5am because an unesca
 the AI revolution is 10% AI and 90% XML escaping.
 ```
 
-### Engagement 3 — Zero to Portfolio
+### Engagement 3, Zero to Portfolio
 ```
 solopreneur stack in 2026:
 

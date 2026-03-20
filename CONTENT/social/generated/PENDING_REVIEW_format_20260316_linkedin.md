@@ -6,24 +6,24 @@
 # SCHEDULED: 2026-03-16T08:31:00-05:00
 #
 # SCHEDULE MANIFEST (EST)
-# POST_1: 2026-03-17 08:00 EST  [Tue morning — builder's trap (best slot: Tue 7-9am)]
-# POST_2: 2026-03-19 12:00 EST  [Thu midday — cold email math]
-# POST_3: 2026-03-24 08:00 EST  [Tue morning — local biz audit]
+# POST_1: 2026-03-17 08:00 EST  [Tue morning, builder's trap (best slot: Tue 7-9am)]
+# POST_2: 2026-03-19 12:00 EST  [Thu midday, cold email math]
+# POST_3: 2026-03-24 08:00 EST  [Tue morning, local biz audit]
 
 ---
 
-## POST_1 — Builder's Trap (best performer for LinkedIn)
+## POST_1, Builder's Trap (best performer for LinkedIn)
 
 35 days. $0 revenue.
 
-Not because the system doesn't work — it does.
+Not because the system doesn't work, it does.
 323 automation scripts running. 47 apps deployed. 182,700 leads analyzed.
 
 Because there's no Stripe account.
 
 This is the builder's trap: infrastructure feels productive. You can point to things you made. But "things you made" and "money you earned" require completely different actions.
 
-The system I built in 35 days will work the moment a single payment endpoint exists. It'll distribute products, process leads, run cold outreach, post content — all automatically.
+The system I built in 35 days will work the moment a single payment endpoint exists. It'll distribute products, process leads, run cold outreach, post content, all automatically.
 
 But none of that matters until there's a checkout page.
 
@@ -31,13 +31,13 @@ If you're building instead of listing right now, ask yourself: what's the one fo
 
 ---
 
-## POST_2 — Local Business Opportunity
+## POST_2, Local Business Opportunity
 
 Most SaaS founders are fighting for the same 10,000 early adopters.
 
 Local businesses in your city are sitting on 40/100 website scores and paying no one to fix them.
 
-I ran automated audits on 50 local businesses this week. 38 scored below 40 on mobile speed, SEO, and conversion basics. Sent the bottom 10 a free preview of exactly what's broken — no pitch, just data.
+I ran automated audits on 50 local businesses this week. 38 scored below 40 on mobile speed, SEO, and conversion basics. Sent the bottom 10 a free preview of exactly what's broken, no pitch, just data.
 
 The offer: $99 for the full audit, $499 for the audit + fix plan.
 
@@ -47,7 +47,7 @@ The "boring" market prints because every SaaS founder is ignoring it.
 
 ---
 
-## POST_3 — Cold Email Math (Data-driven)
+## POST_3, Cold Email Math (Data-driven)
 
 Here's the cold email math most people skip:
 
@@ -60,7 +60,7 @@ Here's the cold email math most people skip:
 
 Cost: free email accounts + a Python script.
 
-The failure mode isn't the math — it's skipping warmup, sending from one account, and wondering why you hit spam. The technical setup takes 2 hours. The returns compound weekly.
+The failure mode isn't the math, it's skipping warmup, sending from one account, and wondering why you hit spam. The technical setup takes 2 hours. The returns compound weekly.
 
 Most people overcomplicate the outreach and undercomplicate the infrastructure.
 

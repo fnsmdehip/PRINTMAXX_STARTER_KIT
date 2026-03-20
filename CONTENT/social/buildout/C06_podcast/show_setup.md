@@ -1,4 +1,4 @@
-# C06 Podcast Factory — Show Setup
+# C06 Podcast Factory, Show Setup
 
 ## Show Identity
 
@@ -7,7 +7,7 @@
 **Format:** Interview-style, AI host + scripted guest voices
 **Episode Length:** 20-30 min
 **Release Schedule:** 2x/week (Tuesday + Friday, 6am EST)
-**Host Voice:** ElevenLabs "Adam" — authoritative, paced, slightly dry
+**Host Voice:** ElevenLabs "Adam", authoritative, paced, slightly dry
 **Guest Voice Pool:** 4-5 distinct ElevenLabs voices to rotate (prevents monotony)
 
 ---
@@ -31,14 +31,14 @@
 **Dimensions:** 3000x3000px (Apple Podcasts minimum 1400x1400, 3000 is safe for all platforms)
 **Format:** JPEG or PNG
 
-**Design concept A — Minimal:**
+**Design concept A, Minimal:**
 - Black background
 - "PRINTMAXX PODCAST" in white Bebas Neue, large
 - Thin horizontal line below title
 - Subtitle in small white Montserrat: "real methods. real numbers."
 - No stock photos. No gradients. No gimmicks.
 
-**Design concept B — Data aesthetic:**
+**Design concept B, Data aesthetic:**
 - Dark navy background
 - Green terminal text: "$ ./build_wealth --method real --no-bs"
 - Below: "The Printmaxx Podcast" in clean sans-serif
@@ -56,7 +56,7 @@
 Real money methods from real people. No theory. No gurus. Just: what they did, what it cost, what it made. New episodes Tuesday and Friday.
 
 **Full description:**
-The Printmaxx Podcast breaks down how regular people build income online — not the highlight reel version, the real version. We talk numbers: actual revenue, actual costs, actual hours. No theory. No motivation. Just methods.
+The Printmaxx Podcast breaks down how regular people build income online, not the highlight reel version, the real version. We talk numbers: actual revenue, actual costs, actual hours. No theory. No motivation. Just methods.
 
 Each episode features a practitioner who's built something that works. We go deep on the specific tactics, tools, and decisions that separated results from failure.
 
@@ -78,25 +78,25 @@ solopreneur, side hustle, passive income, freelancing, online business, digital 
 Every episode follows this format. Fill in the blanks, adjust timing as needed.
 
 ```
-[INTRO MUSIC — 10 seconds]
+[INTRO MUSIC, 10 seconds]
 
-HOST: [Show intro — 3 sentences max. Guest name. What they built. One key number.]
+HOST: [Show intro, 3 sentences max. Guest name. What they built. One key number.]
 
-[MAIN INTERVIEW — 18-25 min]
+[MAIN INTERVIEW, 18-25 min]
 Format: Fast Q&A. No long speeches. Cut anything over 90 seconds without a transition.
 
-[SPONSOR BREAK — if applicable, 60 seconds, at minute 10-12]
+[SPONSOR BREAK, if applicable, 60 seconds, at minute 10-12]
 
-[LIGHTNING ROUND — 3-4 min]
+[LIGHTNING ROUND, 3-4 min]
 Standard closing questions:
 1. "Biggest mistake you made?"
 2. "One thing you'd tell someone starting today?"
 3. "What does your business look like in 12 months?"
 
-[OUTRO — 30 seconds]
+[OUTRO, 30 seconds]
 HOST: "That's [Guest Name]. [One-sentence summary of main insight]. I'm [Host], this is The Printmaxx Podcast. Tuesday and Friday. See you next time."
 
-[OUTRO MUSIC — 10 seconds]
+[OUTRO MUSIC, 10 seconds]
 ```
 
 ---
@@ -106,7 +106,7 @@ HOST: "That's [Guest Name]. [One-sentence summary of main insight]. I'm [Host], 
 ### Recording & Production
 | Tool | Use | Cost |
 |------|-----|------|
-| ElevenLabs | AI voices for host + guest | $22/mo (Creator plan — 100K chars/mo) |
+| ElevenLabs | AI voices for host + guest | $22/mo (Creator plan, 100K chars/mo) |
 | Descript | Edit by transcript, add captions | $24/mo (Creator plan) |
 | Buzzsprout | Hosting + distribution | $12/mo (3 hours/month) |
 | Canva | Cover art, episode graphics | Free |
@@ -117,11 +117,11 @@ HOST: "That's [Guest Name]. [One-sentence summary of main insight]. I'm [Host], 
 ### ElevenLabs Voice Selection
 - HOST: "Adam" (professional, authoritative)
 - GUEST pool:
-  - "Josh" — young, casual, builder energy
-  - "Rachel" — professional female voice
-  - "Antoni" — slightly older, experienced tone
-  - "Sam" — neutral, analytical
-  - "Bella" — warm, relatable female
+  - "Josh", young, casual, builder energy
+  - "Rachel", professional female voice
+  - "Antoni", slightly older, experienced tone
+  - "Sam", neutral, analytical
+  - "Bella", warm, relatable female
 
 Rotate guest voices to match guest persona. Priya (EP04) = Rachel voice. Devon (EP06) = Antoni.
 
@@ -155,7 +155,7 @@ Rotate guest voices to match guest persona. Priya (EP04) = Rachel voice. Devon (
 3. Set show info: name, description, categories, cover art
 4. Connect podcast to Apple: submit RSS feed at podcastsconnect.apple.com
 5. Connect to Spotify: Spotify for Podcasters auto-pulls from Buzzsprout RSS
-6. First episode should be a 2-min trailer explaining the show — releases immediately
+6. First episode should be a 2-min trailer explaining the show, releases immediately
 
 **RSS feed auto-distributes to:** Apple, Spotify, Google Podcasts, Amazon Music, iHeart, Overcast, Pocket Casts, Stitcher, TuneIn, Pandora
 
@@ -173,7 +173,7 @@ Rotate guest voices to match guest persona. Priya (EP04) = Rachel voice. Devon (
 ### Week 2 (launch week)
 - [ ] Release 3 episodes simultaneously (launch burst strategy)
 - [ ] Post on Twitter: "just launched [show]. 3 episodes live. episode 1 is [Guest Name] who makes $X doing Y. link:"
-- [ ] Post on Reddit: r/SideProject, r/entrepreneur — "I launched a podcast. here's what episode 1 is about [specific]. would love listens and honest feedback."
+- [ ] Post on Reddit: r/SideProject, r/entrepreneur, "I launched a podcast. here's what episode 1 is about [specific]. would love listens and honest feedback."
 - [ ] Email list announcement if applicable
 - [ ] Post audio clips to TikTok/Instagram Reels
 
@@ -200,7 +200,7 @@ Rotate guest voices to match guest persona. Priya (EP04) = Rachel voice. Devon (
 
 **Affiliate before sponsor revenue:**
 Use in-episode mentions of tools you're already using. Every episode naturally references tools:
-- Instantly.ai ($27-97/mo — affiliate pays 20%)
+- Instantly.ai ($27-97/mo, affiliate pays 20%)
 - ElevenLabs (20% affiliate)
 - Descript (20%)
 - Buzzsprout ($20 Amazon gift card per referral)

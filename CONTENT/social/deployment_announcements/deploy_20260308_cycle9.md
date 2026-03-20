@@ -1,11 +1,11 @@
-# Deployment Announcements — Cycle 9 (2026-03-08)
+# Deployment Announcements, Cycle 9 (2026-03-08)
 
 Status: PENDING_REVIEW
 Deployed: cold-email-roi-calculator.surge.sh | side-project-estimator.surge.sh | printmaxx-tools.surge.sh | financial-dashboard-pm.surge.sh
 
 ---
 
-## POST 1 — cold email ROI calculator (outbound audience)
+## POST 1, cold email ROI calculator (outbound audience)
 
 cold email ROI calculator. plug in your numbers. see exactly what your outreach is worth.
 
@@ -19,7 +19,7 @@ cold-email-roi-calculator.surge.sh
 
 ---
 
-## POST 2 — side project revenue estimator (indie hacker audience)
+## POST 2, side project revenue estimator (indie hacker audience)
 
 built a side project revenue estimator.
 
@@ -33,7 +33,7 @@ side-project-estimator.surge.sh
 
 ---
 
-## POST 3 — tools hub (general audience)
+## POST 3, tools hub (general audience)
 
 46 free tools on one page.
 
@@ -45,7 +45,7 @@ printmaxx-tools.surge.sh
 
 ---
 
-## POST 4 — financial dashboard (solopreneur audience)
+## POST 4, financial dashboard (solopreneur audience)
 
 solopreneur financial dashboard. track revenue, expenses, margins, runway.
 
@@ -55,7 +55,7 @@ financial-dashboard-pm.surge.sh
 
 ---
 
-## THREAD — 168 deployments milestone
+## THREAD, 168 deployments milestone
 
 168 pages live on surge.sh. $0/mo hosting.
 

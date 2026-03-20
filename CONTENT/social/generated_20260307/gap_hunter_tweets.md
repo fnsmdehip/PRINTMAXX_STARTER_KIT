@@ -1,10 +1,10 @@
-# Gap Hunter Generated Content — 2026-03-07
+# Gap Hunter Generated Content, 2026-03-07
 # Source: Top APPROVED alpha entries (HIGHEST/HIGH ROI)
 # Status: PENDING_REVIEW
 
 ---
 
-## TWEET 1 (Source: ALPHA17075 — app portfolio $22k/mo)
+## TWEET 1 (Source: ALPHA17075, app portfolio $22k/mo)
 
 failed app to 30-app portfolio making $22k/mo in under a year.
 
@@ -19,7 +19,7 @@ most people are polishing one app for 6 months. meanwhile someone launched 30 an
 
 ---
 
-## TWEET 2 (Source: ALPHA17028 — free trial conversion)
+## TWEET 2 (Source: ALPHA17028, free trial conversion)
 
 free trial converts 2% to paid. that's standard.
 
@@ -31,7 +31,7 @@ stop optimizing your pricing page. fix your first-run experience.
 
 ---
 
-## TWEET 3 (Source: ALPHA17033 — Shopify backlash)
+## TWEET 3 (Source: ALPHA17033, Shopify backlash)
 
 shopify just hiked prices again. 67 comments of pure rage on r/smallbusiness.
 
@@ -41,7 +41,7 @@ if you build tools for small merchants: right now is open season. they're active
 
 ---
 
-## TWEET 4 (Source: ALPHA17079 — micro SaaS market data)
+## TWEET 4 (Source: ALPHA17079, micro SaaS market data)
 
 micro SaaS market: $15.7B now. $59.6B by 2030. 30% growth per year.
 
@@ -51,7 +51,7 @@ the math has never been better for solo builders. stop reading about it. start s
 
 ---
 
-## TWEET 5 (Source: ALPHA17040 — pricing insight)
+## TWEET 5 (Source: ALPHA17040, pricing insight)
 
 charging $2/mo for your app is leaving money on the table.
 
@@ -61,7 +61,7 @@ you're not losing customers to high prices. you're losing them to low perceived 
 
 ---
 
-## THREAD (Source: ALPHA17078 — $60k/mo after Apple freeze)
+## THREAD (Source: ALPHA17078, $60k/mo after Apple freeze)
 
 1/ someone built an app portfolio to $60k/mo. then Apple froze their dev account.
 

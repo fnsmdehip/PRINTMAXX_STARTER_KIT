@@ -1,0 +1,547 @@
+{
+  "cycle": 84,
+  "timestamp": "2026-03-19T19:15:28.541912+00:00",
+  "strategy": "CREATIVE_ARTS + OUTDOOR_ADVENTURE + TECH_SKILLS + CULINARY_ARTS",
+  "niches": {
+    "daily_watercolor_painting_streak": {
+      "reddit_communities": {
+        "Watercolor": 820000,
+        "painting": 340000
+      },
+      "itunes_results": [
+        {
+          "name": "Procreate",
+          "rating": 4.9,
+          "rating_count": 1200000,
+          "category": "professional digital illustration app \u2014 full-featured canvas tool with no watercolor-specific habit streak gamification or practice accountability system"
+        },
+        {
+          "name": "Adobe Fresco: Draw & Paint",
+          "rating": 4.7,
+          "rating_count": 68000,
+          "category": "digital painting and drawing canvas \u2014 professional creation tool, no daily watercolor practice streak or skill progression gamification"
+        },
+        {
+          "name": "Watercolor Studio",
+          "rating": 4.3,
+          "rating_count": 8400,
+          "category": "digital watercolor simulation canvas \u2014 creative tool for painting, no daily habit streak accountability or XP progression system"
+        },
+        {
+          "name": "ArtRage - Realistic Painting",
+          "rating": 4.4,
+          "rating_count": 12000,
+          "category": "natural media digital painting \u2014 simulates physical media including watercolor; creation tool only, no daily practice streak gamification"
+        }
+      ],
+      "community_total": 1160000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.16M watercolor/painting community. Apps are digital painting canvases. No app gamifies the daily watercolor practice habit (one master study, one color mixing drill, one wet-on-wet technique rep) with streak/XP for developing artists."
+    },
+    "daily_embroidery_crossstitch_streak": {
+      "reddit_communities": {
+        "Embroidery": 590000,
+        "CrossStitch": 620000
+      },
+      "itunes_results": [
+        {
+          "name": "Pattern Keeper - Cross Stitch",
+          "rating": 4.8,
+          "rating_count": 18000,
+          "category": "cross stitch pattern reader and WIP tracker \u2014 in-project progress logging tool, no daily practice streak gamification or habit accountability beyond project completion"
+        },
+        {
+          "name": "DMC Stitch Source",
+          "rating": 4.5,
+          "rating_count": 7200,
+          "category": "DMC thread color reference and pattern generator \u2014 utility tool for color matching, not a daily habit streak app"
+        },
+        {
+          "name": "Embroidery Photo Stitch",
+          "rating": 4.2,
+          "rating_count": 5800,
+          "category": "photo-to-embroidery pattern converter \u2014 one-time use utility, no daily practice streak or skill progression gamification"
+        },
+        {
+          "name": "UrbanThreads Embroidery Designs",
+          "rating": 4.3,
+          "rating_count": 3400,
+          "category": "embroidery pattern library and design browser \u2014 content catalog, no daily habit streak or skill gamification"
+        }
+      ],
+      "community_total": 1210000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.21M embroidery/cross-stitch community. Pattern Keeper tracks project progress. No app gamifies the daily practice habit (one new stitch technique, 30-min daily session, skill level progression) with streak/XP for fiber arts practitioners."
+    },
+    "daily_calligraphy_lettering_streak": {
+      "reddit_communities": {
+        "Calligraphy": 330000,
+        "handwriting": 290000
+      },
+      "itunes_results": [
+        {
+          "name": "Procreate Pocket",
+          "rating": 4.8,
+          "rating_count": 38000,
+          "category": "mobile digital illustration app \u2014 general-purpose canvas tool, no calligraphy-specific daily habit streak or lettering skill progression"
+        },
+        {
+          "name": "Calligrapher - Lettering & Fonts",
+          "rating": 4.4,
+          "rating_count": 6200,
+          "category": "calligraphy template and tracing app \u2014 practice guide with letter overlays; limited gamification, no streak or XP system"
+        },
+        {
+          "name": "Calligraphy Alphabet Practice",
+          "rating": 4.2,
+          "rating_count": 4800,
+          "category": "alphabet practice template app \u2014 passive reference tool for tracing letterforms, no daily habit streak accountability"
+        },
+        {
+          "name": "Penly - Calligraphy Pen Tool",
+          "rating": 4.1,
+          "rating_count": 2900,
+          "category": "digital calligraphy drawing tool \u2014 stylus-optimized canvas for lettering practice, no streak gamification or XP progression"
+        }
+      ],
+      "community_total": 620000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "620K calligraphy/handwriting community. Apps are tracing templates and digital pens. No app gamifies the daily calligraphy habit (one alphabet page, one new letterform, one script style progression) with streak/XP for lettering artists."
+    },
+    "daily_pottery_wheel_streak": {
+      "reddit_communities": {
+        "Pottery": 490000,
+        "Ceramics": 250000
+      },
+      "itunes_results": [
+        {
+          "name": "Kiln Master",
+          "rating": 4.1,
+          "rating_count": 2800,
+          "category": "kiln firing schedule and temperature tracking app \u2014 equipment management utility, no daily pottery skill practice streak or progression gamification"
+        },
+        {
+          "name": "Pottery Studio",
+          "rating": 4.3,
+          "rating_count": 4100,
+          "category": "clay estimation and glaze recipe calculator \u2014 technical utility app for potters, no daily habit streak or gamification of throwing practice"
+        },
+        {
+          "name": "Ceramic Arts Network",
+          "rating": 4.0,
+          "rating_count": 1800,
+          "category": "ceramics media and tutorial content hub \u2014 content delivery app, no daily habit streak or XP progression for skill building"
+        },
+        {
+          "name": "GlazeCalc",
+          "rating": 4.2,
+          "rating_count": 2200,
+          "category": "glaze chemistry calculator and recipe formulator \u2014 specialized utility tool, no daily practice streak or skill gamification"
+        }
+      ],
+      "community_total": 740000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "740K pottery/ceramics community. Apps are kiln trackers and glaze calculators. No app gamifies the daily pottery practice habit (wheel centering drills, wall thickness reps, new form study) with streak/XP \u2014 passionate but unserved niche."
+    },
+    "daily_hiking_navigation_streak": {
+      "reddit_communities": {
+        "hiking": 2800000,
+        "Ultralight": 390000
+      },
+      "itunes_results": [
+        {
+          "name": "AllTrails: Hike, Bike & Run",
+          "rating": 4.8,
+          "rating_count": 1400000,
+          "category": "SOFT \u2014 trail discovery and activity logging with monthly/yearly stats; tracks hike history and mileage totals but no gamified daily streak with XP or achievement progression"
+        },
+        {
+          "name": "Gaia GPS: Hiking Offroad Maps",
+          "rating": 4.8,
+          "rating_count": 82000,
+          "category": "SOFT \u2014 offline navigation and route recording with activity history; logs hikes and tracks stats but no daily habit streak gamification or XP system"
+        },
+        {
+          "name": "Komoot: Hike, Bike & Run",
+          "rating": 4.7,
+          "rating_count": 48000,
+          "category": "SOFT \u2014 route planning and activity tracking with achievement highlights and collection badges; partial gamification but not daily habit streak focused"
+        },
+        {
+          "name": "ViewRanger: Hike, Bike, Ski",
+          "rating": 4.6,
+          "rating_count": 22000,
+          "category": "SOFT \u2014 GPS navigation with route recording and basic activity logging; no streak gamification or daily habit accountability system"
+        }
+      ],
+      "community_total": 3190000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "3.19M hiking community. AllTrails logs hikes and tracks stats. Komoot has badge collections. Gap: no app purely gamifies the daily hiking SKILL habit (navigation study, terrain reading, gear knowledge drills) with XP/streak separate from tracking physical activity."
+    },
+    "daily_rock_climbing_streak": {
+      "reddit_communities": {
+        "climbing": 710000,
+        "bouldering": 290000
+      },
+      "itunes_results": [
+        {
+          "name": "27Crags - Rock Climbing App",
+          "rating": 4.6,
+          "rating_count": 14000,
+          "category": "climbing route database and logbook \u2014 tick list and send logging tool, no daily habit streak gamification or skill progression with XP"
+        },
+        {
+          "name": "Vertical Life: Climbing App",
+          "rating": 4.5,
+          "rating_count": 11000,
+          "category": "climbing route finder and tick tracker \u2014 logbook and community feed app, tracks completed routes but no daily practice streak or skill habit system"
+        },
+        {
+          "name": "Mountain Project",
+          "rating": 4.7,
+          "rating_count": 42000,
+          "category": "rock climbing route database and tick list \u2014 route discovery and send logging, no gamified daily climbing habit streak or training progression"
+        },
+        {
+          "name": "Crimpd - Climbing Training",
+          "rating": 4.6,
+          "rating_count": 8200,
+          "category": "SOFT \u2014 structured climbing training plans with workout logging; has some consistency tracking but not a gamified daily streak with XP/levels"
+        }
+      ],
+      "community_total": 1000000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1M climbing community. 27Crags/Mountain Project track sends. Crimpd has training plans. No app gamifies the daily climbing HABIT (fingerboard session, movement drill, crimp strength rep log) with streak/XP \u2014 climbers are data-obsessed and underserved."
+    },
+    "daily_birdwatching_streak": {
+      "reddit_communities": {
+        "birding": 790000,
+        "birdwatching": 430000
+      },
+      "itunes_results": [
+        {
+          "name": "Merlin Bird ID by Cornell Lab",
+          "rating": 4.9,
+          "rating_count": 148000,
+          "category": "SOFT \u2014 AI bird species identification with daily bird highlights and photo ID; tracks life list and bird sightings but no dedicated habit streak gamification with XP"
+        },
+        {
+          "name": "eBird by Cornell Lab",
+          "rating": 4.7,
+          "rating_count": 38000,
+          "category": "SOFT \u2014 citizen science birding logbook with life list and year list tracking; some streak-like consecutive day tracking in year stats but no gamified XP or achievement system"
+        },
+        {
+          "name": "Audubon Bird Guide: North America",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "bird field guide and ID reference \u2014 comprehensive species database, no daily habit streak gamification or XP progression"
+        },
+        {
+          "name": "BirdsEye Bird Finding Guide",
+          "rating": 4.5,
+          "rating_count": 12000,
+          "category": "rare bird alert and sighting notification app \u2014 location-based birding alerts, no daily practice streak or habit accountability"
+        }
+      ],
+      "community_total": 1220000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "1.22M birding community. Merlin identifies species daily, eBird tracks life lists. Gap: no app purely gamifies the daily birding SKILL habit (one new ID drill, one call recognition study, one behavior observation log) with XP/streak for intermediate birders."
+    },
+    "daily_foraging_wildcrafting_streak": {
+      "reddit_communities": {
+        "foraging": 590000,
+        "mycology": 790000
+      },
+      "itunes_results": [
+        {
+          "name": "iNaturalist",
+          "rating": 4.8,
+          "rating_count": 88000,
+          "category": "citizen science species observation logbook \u2014 AI-powered ID and community verification, tracks total observations but no daily foraging habit streak gamification with XP"
+        },
+        {
+          "name": "Shroomify - Mushroom ID",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "AI mushroom species identification app \u2014 one-tap ID tool for field use, no daily habit streak or foraging skill progression gamification"
+        },
+        {
+          "name": "PictureThis - Plant Identifier",
+          "rating": 4.7,
+          "rating_count": 380000,
+          "category": "AI plant identification app \u2014 species ID and care guide reference, no daily foraging habit streak or wild plant knowledge gamification"
+        },
+        {
+          "name": "Forager - Wild Edibles Guide",
+          "rating": 4.3,
+          "rating_count": 8400,
+          "category": "wild edible plant reference guide \u2014 field reference content app, no daily foraging practice streak or skill progression with XP"
+        }
+      ],
+      "community_total": 1380000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.38M foraging/mycology community. iNaturalist logs observations. Shroomify and PictureThis identify species. No app gamifies the daily foraging practice habit (one new plant ID study, one habitat walk log, one preservation technique) with streak/XP \u2014 safety-conscious community hungry for education."
+    },
+    "daily_linux_terminal_streak": {
+      "reddit_communities": {
+        "linux": 2300000,
+        "linuxquestions": 580000
+      },
+      "itunes_results": [
+        {
+          "name": "Mimo: Learn Coding & Linux",
+          "rating": 4.8,
+          "rating_count": 148000,
+          "category": "SOFT \u2014 gamified coding education platform with streak tracking and XP for completing lessons; includes bash/shell content but no Linux-specific daily CLI habit system with commands-as-reps"
+        },
+        {
+          "name": "SoloLearn: Learn to Code",
+          "rating": 4.7,
+          "rating_count": 280000,
+          "category": "SOFT \u2014 programming course platform with daily streak tracking and XP; has Linux/bash module but broad platform, not purpose-built daily Linux CLI habit gamification"
+        },
+        {
+          "name": "Linux Command Library",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "Linux command reference and cheat sheet app \u2014 comprehensive command lookup utility, no daily practice streak or command drill gamification"
+        },
+        {
+          "name": "Terminal for Raspberry Pi SSH",
+          "rating": 4.3,
+          "rating_count": 8200,
+          "category": "SSH terminal app for connecting to Linux systems \u2014 remote access utility, no daily Linux skill habit streak or progression gamification"
+        }
+      ],
+      "community_total": 2880000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "2.88M Linux community. Mimo/SoloLearn have streak systems with some Linux content. Gap: no app purely gamifies the daily Linux CLI SKILL habit (one command mastery, one shell script drill, one sysadmin scenario) with XP/streak \u2014 power users want depth, not beginner courses."
+    },
+    "daily_vim_neovim_streak": {
+      "reddit_communities": {
+        "vim": 360000,
+        "neovim": 250000
+      },
+      "itunes_results": [
+        {
+          "name": "Vim - IDE and Text Editor",
+          "rating": 4.4,
+          "rating_count": 6800,
+          "category": "Vim text editor port for iOS \u2014 actual editor app, no habit streak gamification or daily command practice drill system"
+        },
+        {
+          "name": "Blink Shell: Mosh & SSH Client",
+          "rating": 4.7,
+          "rating_count": 4200,
+          "category": "SSH client with vim keybindings support \u2014 terminal access tool, no daily Vim skill habit streak or XP progression"
+        },
+        {
+          "name": "Termius - SSH & SFTP Client",
+          "rating": 4.7,
+          "rating_count": 48000,
+          "category": "SSH terminal client with vim key support \u2014 remote access utility, no daily Vim practice streak or gamification"
+        },
+        {
+          "name": "iVim - Vi Text Editor",
+          "rating": 4.3,
+          "rating_count": 3200,
+          "category": "vi/vim text editor for iOS \u2014 editor port, no daily command practice streak or habit gamification with XP"
+        }
+      ],
+      "community_total": 610000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "610K vim/neovim community. Apps are editor ports and SSH clients. No app gamifies the daily Vim mastery habit (one motion drill, one macro study, one plugin workflow rep) with streak/XP \u2014 developers who use Vim daily are extremely passionate and would pay for this."
+    },
+    "daily_docker_devops_streak": {
+      "reddit_communities": {
+        "docker": 390000,
+        "devops": 290000
+      },
+      "itunes_results": [
+        {
+          "name": "Docker Desktop Companion",
+          "rating": 4.2,
+          "rating_count": 3800,
+          "category": "Docker container management companion app \u2014 monitors running containers and images; management utility with no daily skill habit streak or practice gamification"
+        },
+        {
+          "name": "Portainer for Docker",
+          "rating": 4.1,
+          "rating_count": 2400,
+          "category": "Docker container management UI companion \u2014 container control panel, no daily practice streak or DevOps skill progression gamification"
+        },
+        {
+          "name": "Prometheus - Monitoring Tool",
+          "rating": 4.0,
+          "rating_count": 1800,
+          "category": "metrics monitoring dashboard companion \u2014 observability tool, no daily habit streak or skill drill gamification"
+        },
+        {
+          "name": "DevDocs - Developer Reference",
+          "rating": 4.6,
+          "rating_count": 8800,
+          "category": "offline developer documentation browser \u2014 reference tool for Docker and 100+ other docs, no daily practice streak or habit accountability"
+        }
+      ],
+      "community_total": 680000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "680K Docker/DevOps community. Management UIs and reference docs dominate. No app gamifies the daily Docker/DevOps skill habit (one container build scenario, one networking drill, one Kubernetes concept) with streak/XP for self-taught developers leveling up."
+    },
+    "daily_sql_query_streak": {
+      "reddit_communities": {
+        "SQL": 360000,
+        "learnSQL": 190000
+      },
+      "itunes_results": [
+        {
+          "name": "Mimo: Learn Coding / SQL",
+          "rating": 4.8,
+          "rating_count": 148000,
+          "category": "SOFT \u2014 gamified coding education with streak/XP; includes SQL module with daily lessons and streak tracking, partial overlap but broad platform not SQL-specific"
+        },
+        {
+          "name": "SoloLearn: SQL Course",
+          "rating": 4.7,
+          "rating_count": 280000,
+          "category": "SOFT \u2014 SQL course with daily streak tracking and code challenge gamification; has SQL-specific streak but lesson-based not practice-drill focused for intermediate learners"
+        },
+        {
+          "name": "SQLiteOnline Companion",
+          "rating": 4.0,
+          "rating_count": 2800,
+          "category": "SQLite database query tool for iOS \u2014 database browser and query runner, no daily habit streak gamification or skill progression"
+        },
+        {
+          "name": "DB Browser for SQLite",
+          "rating": 4.3,
+          "rating_count": 4200,
+          "category": "local SQLite database manager \u2014 data browser and query tool, no daily SQL practice streak or habit accountability system"
+        }
+      ],
+      "community_total": 550000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "550K SQL community. Mimo and SoloLearn have SQL with streak systems. Gap: both are beginners-focused with lesson pipelines \u2014 no app purely gamifies daily SQL PRACTICE drills (one complex JOIN scenario, one optimization challenge, one window function exercise) with XP for intermediate-advanced learners."
+    },
+    "daily_sourdough_baking_streak": {
+      "reddit_communities": {
+        "Sourdough": 890000,
+        "Breadit": 500000
+      },
+      "itunes_results": [
+        {
+          "name": "BreadBoss - Sourdough Helper",
+          "rating": 4.4,
+          "rating_count": 8200,
+          "category": "sourdough baker's assistant \u2014 starter feeding schedule and dough hydration calculator; no daily habit streak gamification or skill progression with XP"
+        },
+        {
+          "name": "KneadAce - Bread Baking Timer",
+          "rating": 4.3,
+          "rating_count": 5800,
+          "category": "bread baking timer and proofing schedule app \u2014 process management tool, no daily practice streak or baking skill gamification"
+        },
+        {
+          "name": "The Perfect Loaf - Bread Baking",
+          "rating": 4.5,
+          "rating_count": 4200,
+          "category": "sourdough recipe and technique reference \u2014 content and recipe app, no daily habit streak accountability or XP progression"
+        },
+        {
+          "name": "Tartine Bread App",
+          "rating": 4.4,
+          "rating_count": 3100,
+          "category": "recipe-based bread baking companion \u2014 recipe delivery and timer app, no daily practice streak or gamification of baking skill development"
+        }
+      ],
+      "community_total": 1390000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.39M sourdough/bread community. Apps are timers and calculators. No app gamifies the daily baking practice habit (one shaping session, one hydration experiment, one scoring technique) with streak/XP \u2014 a community already obsessively tracking fermentation times would love gamification."
+    },
+    "daily_coffee_brewing_streak": {
+      "reddit_communities": {
+        "Coffee": 1400000,
+        "espresso": 600000
+      },
+      "itunes_results": [
+        {
+          "name": "Acaia - Coffee Scale",
+          "rating": 4.7,
+          "rating_count": 12000,
+          "category": "smart coffee scale companion app \u2014 brewing ratio and flow rate monitor; tracks brew sessions but no daily habit streak gamification or barista skill XP progression"
+        },
+        {
+          "name": "Brew - Coffee Timer",
+          "rating": 4.5,
+          "rating_count": 9400,
+          "category": "pour-over and espresso brewing timer app \u2014 recipe and ratio guide for each brew method, no daily practice streak or skill gamification"
+        },
+        {
+          "name": "Roast World by Cropster",
+          "rating": 4.3,
+          "rating_count": 3800,
+          "category": "coffee roasting logbook and profile tracker \u2014 roaster's session log, not a daily consumer brewing habit streak app"
+        },
+        {
+          "name": "Coffee Companion",
+          "rating": 4.4,
+          "rating_count": 6200,
+          "category": "coffee flavor wheel and tasting notes reference \u2014 sensory education tool, no daily brewing practice streak or barista skill progression gamification"
+        }
+      ],
+      "community_total": 2000000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2M coffee community. Scale apps track brew ratios. No app gamifies the daily coffee SKILL habit (one extraction dial-in, one tasting calibration, one latte art practice rep) with streak/XP \u2014 coffee enthusiasts are data-obsessed and already tracking every gram."
+    },
+    "daily_pastry_baking_streak": {
+      "reddit_communities": {
+        "Baking": 1700000,
+        "AskBaking": 700000
+      },
+      "itunes_results": [
+        {
+          "name": "King Arthur Baking - Recipes",
+          "rating": 4.7,
+          "rating_count": 24000,
+          "category": "SOFT \u2014 recipe content library with baker's resources and some tracking features; has baker account with recipe saves but no daily habit streak or skill gamification"
+        },
+        {
+          "name": "Yummly Recipes & Cooking Tools",
+          "rating": 4.7,
+          "rating_count": 168000,
+          "category": "SOFT \u2014 recipe discovery and meal planning with cooking tracking; saves made recipes and plans meals but no daily baking skill streak gamification with XP"
+        },
+        {
+          "name": "The Bake App - Bread & Pastry",
+          "rating": 4.5,
+          "rating_count": 7800,
+          "category": "SOFT \u2014 specialized baking app with recipe timer and some consistency tracking features; partial habit elements but no XP/level gamification for pastry technique skill building"
+        },
+        {
+          "name": "Sally's Baking Addiction - App",
+          "rating": 4.6,
+          "rating_count": 12000,
+          "category": "recipe content and video tutorial hub \u2014 brand content delivery, no daily practice streak or pastry skill progression gamification"
+        }
+      ],
+      "community_total": 2400000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "2.4M baking community. King Arthur and Yummly track recipes, The Bake App has partial habit elements. Gap: no app purely gamifies the daily pastry SKILL habit (one new technique drill, one lamination rep, one decoration challenge) with full XP/streak for serious home bakers."
+    }
+  }
+}

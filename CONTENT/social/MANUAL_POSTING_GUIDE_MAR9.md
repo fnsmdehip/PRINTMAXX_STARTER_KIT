@@ -1,4 +1,4 @@
-# MANUAL POSTING GUIDE — Mar 9-12, 2026
+# MANUAL POSTING GUIDE, Mar 9-12, 2026
 ## @PRINTMAXXER on Twitter/X
 
 **API Status:** No Twitter API keys. All posts require manual copy-paste.
@@ -7,7 +7,7 @@
 
 ---
 
-## MAR 9 (TODAY) — 5 posts
+## MAR 9 (TODAY), 5 posts
 
 ### Post 1 | 07:30 (or ASAP if past)
 **File:** `twitter_PRINTMAXXER_mar9_0730.txt`
@@ -33,7 +33,7 @@ wrote one piece of content. AI turned it into 20. twitter thread, linkedin post,
 TikTok creator rewards pays 10x more than AdSense per view in certain niches. sponsorships on top of that. the stacked model: platform revenue + brand deals + affiliate. most people only run one of the three.
 ```
 
-### Post 5 | 21:00 (ENGAGEMENT BAIT — evening crowd)
+### Post 5 | 21:00 (ENGAGEMENT BAIT, evening crowd)
 **File:** `engagement_bait_20260309_1.txt`
 ```
 unpopular opinion:
@@ -49,9 +49,9 @@ that's the real answer. it's just not the one ppl want to hear.
 
 ---
 
-## MAR 10 — 5 posts
+## MAR 10, 5 posts
 
-### Post 1 | 07:30 (STRONGEST — tactical, immediate value)
+### Post 1 | 07:30 (STRONGEST, tactical, immediate value)
 **File:** `alpha_research_20260309_3.txt`
 ```
 app went from 3.8 to 4.6 stars.
@@ -63,7 +63,7 @@ one change: moved the review prompt from app open to after the user completed th
 timing the ask is the whole game.
 ```
 
-### Post 2 | 11:00 (ENGAGEMENT BAIT — LinkedIn bros will fight)
+### Post 2 | 11:00 (ENGAGEMENT BAIT, LinkedIn bros will fight)
 **File:** `engagement_bait_20260309_2.txt`
 ```
 hot take: LinkedIn outreach for B2B is dead and most ppl selling LinkedIn courses are the last ones to admit it.
@@ -111,7 +111,7 @@ most builders would call that a failure. the honest ones call it data.
 
 ---
 
-## MAR 11 — THREAD DAY (3 posts + 1 thread)
+## MAR 11, THREAD DAY (3 posts + 1 thread)
 
 ### Post 1 | 07:30
 **File:** `alpha_research_20260309_4.txt`
@@ -123,7 +123,7 @@ the entire ops layer runs on AI. no massive team. no VC.
 $171K MRR growth in 7 months is not a rounding error. that's a business.
 ```
 
-### Post 2 | 11:00 — THREAD (7 tweets, post as thread)
+### Post 2 | 11:00, THREAD (7 tweets, post as thread)
 **File:** `alpha_research_thread_20260309.txt`
 
 **Tweet 1/7:**
@@ -189,7 +189,7 @@ $799 revenue from 2,500 users tells you more than "$10K month 1" with no context
 honesty is the alpha.
 ```
 
-### Post 3 | 14:30 — MINI-THREAD (3 tweets)
+### Post 3 | 14:30, MINI-THREAD (3 tweets)
 **File:** `engagement_bait_20260309_3.txt`
 
 **Tweet 1/3:**
@@ -216,7 +216,7 @@ another founder: 200 LinkedIn messages, zero replies, 39 ppl telling him to fix 
 the copy is not the problem. the calls never happened.
 ```
 
-### Post 4 | 18:00 — BIP Pipeline (standalone)
+### Post 4 | 18:00, BIP Pipeline (standalone)
 **Source:** `PIPELINE_TWEETS_2026-03-09.md` Tweet 1
 ```
 pipeline update:
@@ -232,20 +232,20 @@ runs autonomously. cron job at 3am. crash recovery built in. this is the way.
 
 ---
 
-## MAR 12 — BIP THREAD DAY
+## MAR 12, BIP THREAD DAY
 
-### Post 1 | 07:30 — BIP standalone
+### Post 1 | 07:30, BIP standalone
 **Source:** `PIPELINE_TWEETS_2026-03-09.md` Tweet 2
 ```
 most people manually find leads one at a time. I downloaded 2.87 million from Overture Maps, deduped to 1.45M unique domains, and built a closed-loop pipeline that qualifies, emails, tracks automatically. 13,936 hot leads so far.
 ```
 
-### Post 2 | 11:00 — BIP THREAD (7 tweets)
+### Post 2 | 11:00, BIP THREAD (7 tweets)
 **Source:** `PIPELINE_TWEETS_2026-03-09.md` Thread section
 
 Post each as a reply thread (1/7 through 7/7). Content is in the PIPELINE_TWEETS file.
 
-### Post 3 | 14:30 — BIP standalone
+### Post 3 | 14:30, BIP standalone
 **Source:** `PIPELINE_TWEETS_2026-03-09.md` Tweet 3
 ```
 13,936 local businesses with outdated websites identified. personalized cold emails with live demo links generated automatically. the pipeline runs at 3am. I wake up to qualified leads.
@@ -269,7 +269,7 @@ Post to: r/SideProject, r/indiehackers, r/Entrepreneur, r/startups
 
 **File:** `alphacontent_20260309_newsletter_draft.txt`
 **Subject:** the $0.32/user habit app and the 0.8 star trick
-**Status:** APPROVED — ready to send when Beehiiv/ConvertKit account is set up
+**Status:** APPROVED, ready to send when Beehiiv/ConvertKit account is set up
 
 ---
 

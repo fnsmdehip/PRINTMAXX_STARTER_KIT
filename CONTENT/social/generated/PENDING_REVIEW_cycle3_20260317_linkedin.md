@@ -1,10 +1,10 @@
-# LINKEDIN ADAPTATIONS — Cycle 3, March 17 2026
+# LINKEDIN ADAPTATIONS, Cycle 3, March 17 2026
 # Status: PENDING_REVIEW
 # Platform: LinkedIn (professional tone, slightly longer, first-person narrative)
 
 ---
 
-## POST 1 — App Factory Blue Ocean (LinkedIn Format)
+## POST 1, App Factory Blue Ocean (LinkedIn Format)
 
 I spent 40 hours analyzing app store categories last week.
 
@@ -26,7 +26,7 @@ What "boring" niches have you found that are surprisingly underserved?
 
 ---
 
-## POST 2 — Gov Micro-Purchases (LinkedIn Format)
+## POST 2, Gov Micro-Purchases (LinkedIn Format)
 
 A number most solopreneurs never hear: $700B.
 
@@ -42,7 +42,7 @@ The 90% who don't know about SAM.gov are leaving money on the table. The 10% who
 
 ---
 
-## POST 3 — Cold Email 2026 (LinkedIn Format)
+## POST 3, Cold Email 2026 (LinkedIn Format)
 
 Something shifted in cold email this year.
 

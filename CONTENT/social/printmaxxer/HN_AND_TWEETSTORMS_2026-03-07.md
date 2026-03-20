@@ -1,4 +1,4 @@
-# HN Show Posts + Tweet Storms — 2026-03-07
+# HN Show Posts + Tweet Storms, 2026-03-07
 # Status: APPROVED (quality gate cycle 6)
 # Account: @PRINTMAXXER
 # Assets: surge.sh PWA portfolio + 77-site deployment
@@ -10,7 +10,7 @@
 
 ---
 
-### Show HN #1 — 13 streak-tracking PWAs for niche communities ($0 hosting)
+### Show HN #1, 13 streak-tracking PWAs for niche communities ($0 hosting)
 
 **Title:**
 Show HN: I built 13 streak-tracking PWAs for niche communities (all live, $0/mo hosting)
@@ -32,7 +32,7 @@ I'm curious if anyone else has pushed the no-backend PWA approach this far, and 
 
 ---
 
-### Show HN #2 — SiteScore free website analyzer
+### Show HN #2, SiteScore free website analyzer
 
 **Title:**
 Show HN: SiteScore – audit any website in 10 seconds, free, no signup
@@ -54,7 +54,7 @@ sitescore-app.surge.sh
 
 ---
 
-### Show HN #3 — PrayerLock 55KB PWA
+### Show HN #3, PrayerLock 55KB PWA
 
 **Title:**
 Show HN: PrayerLock – 55KB PWA that intercepts your phone before you scroll
@@ -81,7 +81,7 @@ prayerlock-app.surge.sh
 
 ---
 
-### Storm 1 — "I mass-deployed 77 websites for $0. here's how."
+### Storm 1, "I mass-deployed 77 websites for $0. here's how."
 
 **1/7**
 I deployed 77 websites last week.
@@ -167,7 +167,7 @@ what's your current monthly hosting bill? #buildinpublic
 ---
 ---
 
-### Storm 2 — "I built 13 apps in 48 hours. each one targets a different micro-niche."
+### Storm 2, "I built 13 apps in 48 hours. each one targets a different micro-niche."
 
 **1/6**
 I built 13 apps in 48 hours.
@@ -228,7 +228,7 @@ which niche should i build next? drop it below and i'll ship it this week.
 ---
 ---
 
-### Storm 3 — "the $0/month indie hacker stack nobody talks about"
+### Storm 3, "the $0/month indie hacker stack nobody talks about"
 
 **1/7**
 everyone talks about their $100/mo Vercel bill.
@@ -308,7 +308,7 @@ if it's above $0 i want to know what you're running that actually needs it.
 ---
 ---
 
-### Storm 4 — "I have 131 products ready to list and $0 revenue. here's the plan."
+### Storm 4, "I have 131 products ready to list and $0 revenue. here's the plan."
 
 **1/7**
 i have 131 products ready to list.
@@ -395,7 +395,7 @@ vote below. i'll do whichever wins today. #buildinpublic
 ## PRE-PUBLISH QA
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (no use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks on all 7 openers
 - [x] Exact numbers throughout (77 sites, 13 apps, 48 hours, 55KB, 131 products, $0, $9, $117)
 - [x] Would @pipelineabuser post this: yes

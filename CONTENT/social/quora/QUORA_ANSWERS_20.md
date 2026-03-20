@@ -52,7 +52,7 @@ Body (5 sentences max):
 
 That's it.
 
-What makes this work: the "[specific thing]" line. You have to actually research them. Not fake research like "love your content" — specific research like "saw you just launched your second location in Denver" or "noticed you're hiring for a head of sales."
+What makes this work: the "[specific thing]" line. You have to actually research them. Not fake research like "love your content", specific research like "saw you just launched your second location in Denver" or "noticed you're hiring for a head of sales."
 
 Spend 4 minutes per prospect finding that specific thing. 4 minutes of research on 50 prospects = $4,000/month if you close at industry average.
 
@@ -162,11 +162,11 @@ What worked:
 
 **Niche specificity.** The accounts that grew fastest were hyper-specific: notary tips, etsy seller tactics, trucking finance. Not "business." Specific.
 
-**Reply strategy over posting strategy.** For the first 3 months, I got more growth from replies than from my own posts. Find the 20 accounts in your niche with the most engaged followings. Reply to every post with a substantive point or an additional data point. Not "great post!" — actual value.
+**Reply strategy over posting strategy.** For the first 3 months, I got more growth from replies than from my own posts. Find the 20 accounts in your niche with the most engaged followings. Reply to every post with a substantive point or an additional data point. Not "great post!", actual value.
 
 **Consistency compounds.** 3 posts/day for 90 days beats 1 viral post. The algorithm learns what your content is about. Inconsistency resets that learning.
 
-**The stat that surprised me:** reply impressions were 3x higher than post impressions for my first 4 months. Every reply exposed me to the original poster's audience. That's the highest-leverage activity at sub-1K followers.
+**The stat that surprised me:** reply impressions were 3x higher than post impressions for my first 4 months. Every reply exposed me to the original poster's audience. That's the highest-use activity at sub-1K followers.
 
 Timeline expectations:
 - Month 1-3: slow growth (0-200 followers if you're good)
@@ -326,7 +326,7 @@ Key: the account has to be genuinely useful. If 80% of posts are affiliate links
 
 **2. Quora answers**
 
-High-quality Quora answers rank in Google for years. Include affiliate links naturally ("the tool I use is X, here's my link"). Quora traffic is high-intent — people searching for specific answers are ready to act.
+High-quality Quora answers rank in Google for years. Include affiliate links naturally ("the tool I use is X, here's my link"). Quora traffic is high-intent, people searching for specific answers are ready to act.
 
 **3. Reddit (carefully)**
 
@@ -362,7 +362,7 @@ The factors that determine where you land:
 
 **Niche selection:** Generalist copywriters earn less than specialists. "B2B SaaS copywriter" commands higher rates than "copywriter." Healthcare, finance, and tech pay more than retail or hospitality.
 
-**Specialization within copy:** Email sequences and landing pages pay more than blog posts. A landing page that converts at 4% instead of 2% can be worth $50K to a business — good copywriters know this and price accordingly.
+**Specialization within copy:** Email sequences and landing pages pay more than blog posts. A landing page that converts at 4% instead of 2% can be worth $50K to a business, good copywriters know this and price accordingly.
 
 **Speed of building a portfolio:** Work for free for 3 clients at the start. Get results. Get testimonials. Start charging at month 3. Don't wait for paid work before you have proof.
 
@@ -383,7 +383,7 @@ I've made $34,000 on Gumroad across 6 products over 2 years. Honest assessment:
 - File delivery is reliable
 
 **What Gumroad doesn't do well:**
-- Discovery (they don't send you customers — you have to find them yourself)
+- Discovery (they don't send you customers, you have to find them yourself)
 - Memberships (Patreon is better for ongoing subscription content)
 - Complex products with licensing (LemonSqueezy handles this better)
 - Detailed analytics
@@ -582,9 +582,9 @@ Faceless channels that work:
 - Data visualization videos
 
 The niches where faceless works best:
-- Finance ("how to set up a Roth IRA" — screen share the brokerage site)
-- Technology tools ("best free alternatives to X" — screen recordings)
-- How-to ("how to form an LLC in Texas" — walk through the state website)
+- Finance ("how to set up a Roth IRA", screen share the brokerage site)
+- Technology tools ("best free alternatives to X", screen recordings)
+- How-to ("how to form an LLC in Texas", walk through the state website)
 - News analysis (no face needed if you're analyzing data)
 
 The realistic numbers:
@@ -597,7 +597,7 @@ A channel with 100,000 monthly views:
 - AdSense: $400-1,000/month
 - Affiliate: $1,500-7,500/month
 
-The primary variable isn't view count — it's niche. A 10,000-view finance channel outearns a 100,000-view entertainment channel in both AdSense RPM and affiliate conversion.
+The primary variable isn't view count, it's niche. A 10,000-view finance channel outearns a 100,000-view entertainment channel in both AdSense RPM and affiliate conversion.
 
 The timeline to monetization (1,000 subscribers + 4,000 watch hours): 6-18 months for most faceless channels posting 1-2 videos/week.
 

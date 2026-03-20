@@ -1,4 +1,4 @@
-# Reddit Distribution Posts — Streak Apps & Surge Portfolio
+# Reddit Distribution Posts, Streak Apps & Surge Portfolio
 status: PENDING_REVIEW
 created: 2026-03-07
 assets: 13 streak PWAs, 77 surge sites, prayerlock-app.surge.sh, coldmaxx pipeline, local biz demos
@@ -7,7 +7,7 @@ assets: 13 streak PWAs, 77 surge sites, prayerlock-app.surge.sh, coldmaxx pipeli
 
 ## Pre-Publish Checklist
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Would @pipelineabuser actually post this?

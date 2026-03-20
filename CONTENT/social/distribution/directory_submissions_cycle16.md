@@ -1,4 +1,4 @@
-# Directory Submissions — Cycle 16
+# Directory Submissions, Cycle 16
 # Status: PENDING_REVIEW
 # Date: 2026-03-14
 # Apps: AI Slop Detector, Productivity Stack Quiz, HabitForge, CoreDay, Dusk (SleepMaxx)
@@ -8,7 +8,7 @@
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Lowercase energy where appropriate
@@ -36,14 +36,14 @@ AI Slop Detector flags 50+ patterns that make your writing sound like it was wri
 
 ### Maker First Comment (viral-optimized)
 ```
-hey PH — built this out of frustration.
+hey PH, built this out of frustration.
 
 i kept editing copy from freelancers and AI tools and something always felt off. i started cataloging the patterns. turns out there are about 50 of them.
 
 things like:
-- "delve into" (ChatGPT's favorite phrase, used 10x more than humans)
+- "dig into" (ChatGPT's favorite phrase, used 10x more than humans)
 - em dashes everywhere
-- "comprehensive" in every other sentence
+- "complete" in every other sentence
 - "it's not just X, it's Y" constructions
 - "I hope this email finds you well"
 
@@ -99,7 +99,7 @@ based on your answers, you get matched to a specific free tool. not a generic li
 
 takes about 90 seconds. no email. no account. no paywall. result is instant.
 
-curious what result people get — drop it in the comments.
+curious what result people get, drop it in the comments.
 ```
 
 ### Category Tags
@@ -281,7 +281,7 @@ Free browser tool that scores your text 0-100 for AI writing patterns. flags 50+
 ```
 AI Slop Detector is a free, browser-based tool that scores any text for AI writing patterns on a 0-100 scale. 0 means it reads as human. 100 means it reads as a bot wrote it.
 
-the tool flags 50+ specific patterns that make text sound AI-generated. this includes banned vocabulary (words like "leverage", "delve", "comprehensive" that language models use at a much higher rate than humans), structural tells (em dashes overused as a stylistic crutch, "It's not just X, it's Y" constructions), chatbot artifacts ("I hope this email finds you well", "Great question!"), vague attributions without sources, and hedging stacked three layers deep.
+the tool flags 50+ specific patterns that make text sound AI-generated. this includes banned vocabulary (words like "use", "dig", "complete" that language models use at a much higher rate than humans), structural tells (em dashes overused as a stylistic crutch, "It's not just X, it's Y" constructions), chatbot artifacts ("I hope this email finds you well", "Great question!"), vague attributions without sources, and hedging stacked three layers deep.
 
 each flagged item shows the matched phrase, why it's a problem, and a plain-English suggestion for what to write instead.
 
@@ -316,7 +316,7 @@ AI Slop Detector is a free web tool that tells you how AI-generated your text so
 paste any copy and get an instant slop score from 0 (reads human) to 100 (full robot). the tool detects 50+ specific patterns pulled from analysis of how language models write vs. how humans write.
 
 what it flags:
-- AI vocabulary: "leverage", "utilize", "delve into", "comprehensive", "robust", "seamless", and 40+ others
+- AI vocabulary: "use", "use", "dig into", "complete", "strong", "seamless", and 40+ others
 - overused em dashes (a strong statistical tell for LLM output)
 - formulaic constructions: "It's not just X, it's Y", the rule of three, synonym cycling
 - chatbot artifacts: sycophantic openers, "I hope this finds you well", hollow conclusions
@@ -354,7 +354,7 @@ AI Slop Detector catches the patterns that make AI-generated text obvious to tra
 
 paste any copy and get a score from 0 to 100. 0 = sounds human. 100 = unmistakably a language model. the tool flags 50+ specific patterns: banned vocabulary lists (words LLMs use at statistically higher rates than humans), structural tells (em dash overuse, the formulaic "It's not just X" construction), chatbot artifacts, vague attribution without sources, excessive hedging, filler phrases, and superficial analysis markers.
 
-each flag shows the matched text, why it's flagged, and a concrete replacement suggestion. the score is calibrated based on severity — high-severity flags (like "delve into" or sycophantic openers) weight more than low-severity flags (like a single filler phrase).
+each flag shows the matched text, why it's flagged, and a concrete replacement suggestion. the score is calibrated based on severity, high-severity flags (like "dig into" or sycophantic openers) weight more than low-severity flags (like a single filler phrase).
 
 who uses it:
 - content editors reviewing AI-assisted drafts
@@ -362,7 +362,7 @@ who uses it:
 - solopreneurs who write with AI help and want to clean up before publishing
 - developers building content pipelines who want a programmatic quality gate
 
-completely browser-based. paste text, hit scan, results in under a second. no account, no email, no server — everything runs locally.
+completely browser-based. paste text, hit scan, results in under a second. no account, no email, no server, everything runs locally.
 
 free forever.
 ```
@@ -390,7 +390,7 @@ paste any text, get a score from 0 to 100 (0 = human, 100 = bot), and see every 
 
 the score engine flags 50+ patterns, organized by severity:
 
-high severity: AI vocabulary like "leverage", "utilize", "delve", "comprehensive", "seamless" / em dash overuse / "It's not just X, it's Y" constructions / chatbot openers like "I hope this finds you well"
+high severity: AI vocabulary like "use", "use", "dig", "complete", "seamless" / em dash overuse / "It's not just X, it's Y" constructions / chatbot openers like "I hope this finds you well"
 
 medium severity: vague attributions without sources / rule of three lists / synonym cycling / promotional adjectives / sycophantic openers
 
@@ -432,7 +432,7 @@ most "best productivity apps" lists give you 50 options and leave you to figure 
 
 the 5 questions cover: what kills your productivity most, your ideal work session length, your biggest win scenario, how you use your phone, and how you respond when you miss a goal.
 
-results match you to tools across the focus, habit, planning, energy, and task management categories. the quiz recommends free tools only — no upsell to premium versions.
+results match you to tools across the focus, habit, planning, energy, and task management categories. the quiz recommends free tools only, no upsell to premium versions.
 
 the quiz uses a weighted scoring system across 4 productivity types:
 - focus-deficit: matched to Pomodoro-style focus tools
@@ -503,7 +503,7 @@ the questions:
 4. how do you mostly use your phone?
 5. when you miss a goal, what do you do?
 
-your answers score across 4 profile types: focus-deficit, habit-failure, energy-problem, and planning-gap. you get matched to one tool — not a list of 50 — with a reason why it fits your profile.
+your answers score across 4 profile types: focus-deficit, habit-failure, energy-problem, and planning-gap. you get matched to one tool, not a list of 50, with a reason why it fits your profile.
 
 every recommended tool has a free tier. no premium suggestions. no hidden upsell.
 
@@ -553,7 +553,7 @@ what it does not do:
 - require an account
 - store your data on any server
 - charge for any feature
-- send notifications (by design — if you need external reminders, the habit isn't yours yet)
+- send notifications (by design, if you need external reminders, the habit isn't yours yet)
 
 55KB total file size. loads in under 2 seconds on a slow connection.
 
@@ -616,7 +616,7 @@ habit tracker with GitHub-style heatmaps. free forever, no account, works offlin
 ```
 HabitForge is a free PWA habit tracker built for people who don't want to pay $10/month for streaks.
 
-every major habit app does this: give you a free tier that's barely functional, then lock streaks, heatmaps, and stats behind a subscription. HabitForge puts all of that in the free tier — permanently.
+every major habit app does this: give you a free tier that's barely functional, then lock streaks, heatmaps, and stats behind a subscription. HabitForge puts all of that in the free tier, permanently.
 
 what you get:
 - GitHub-style heatmap for every habit (365 days at a glance)
@@ -637,7 +637,7 @@ the heatmap is the hook. once you see a chain of green squares building up, you 
 
 55KB total. loads fast on any connection.
 
-beta testers wanted — drop feedback on which habit categories to add.
+beta testers wanted, drop feedback on which habit categories to add.
 ```
 
 **Category:** Productivity / Health
@@ -667,7 +667,7 @@ CoreDay is a minimalist daily planning PWA built on one rule: pick 3 non-negotia
 
 it does one thing and it does it without any friction.
 
-the reasoning: tracking 10-14 habits is counterproductive for most people. you hit 6, see all the red, feel like you failed. that failure feeling makes you stop using the app. CoreDay cuts the list to 3. these 3 things have to be your actual non-negotiables — the things where if you do them, the day was worth it regardless of what else happened.
+the reasoning: tracking 10-14 habits is counterproductive for most people. you hit 6, see all the red, feel like you failed. that failure feeling makes you stop using the app. CoreDay cuts the list to 3. these 3 things have to be your actual non-negotiables, the things where if you do them, the day was worth it regardless of what else happened.
 
 what it includes:
 - daily 3-item checklist (you set the items each day or save defaults)
@@ -755,7 +755,7 @@ why this works: when you can only pick 3, you're forced to actually prioritize. 
 
 it's a PWA. installs on any phone. works offline. no account. no subscription. all data local.
 
-feedback wanted on what daily planning features to add — if any.
+feedback wanted on what daily planning features to add, if any.
 ```
 
 **Category:** Productivity / Minimalism
@@ -895,18 +895,18 @@ built for people who know their sleep is bad but don't know which behavior to ch
 
 ---
 
-# BONUS: ZERO WASTE PROTOCOL — TWEETS FROM THIS CYCLE
+# BONUS: ZERO WASTE PROTOCOL, TWEETS FROM THIS CYCLE
 
-*Status: PENDING_REVIEW — route to @PRINTMAXXER, @toolstwts*
+*Status: PENDING_REVIEW, route to @PRINTMAXXER, @toolstwts*
 
-## Tweet Set 1 — AI Slop Detector
+## Tweet Set 1, AI Slop Detector
 
 ```
 paste your copy into this.
 
 get a 0-100 score.
 
-50+ patterns flagged: em dashes, "leverage", "delve", "seamless", "i hope this finds you well"
+50+ patterns flagged: em dashes, "use", "dig", "seamless", "i hope this finds you well"
 
 0 = human. 100 = full robot.
 
@@ -918,9 +918,9 @@ ai-slop-detector.surge.sh
 ```
 the 5 phrases that make your copy sound AI-written:
 
-1. "leverage" (use "use")
-2. "delve into" (just say "look at")
-3. "comprehensive" (delete it, it adds nothing)
+1. "use" (use "use")
+2. "dig into" (just say "look at")
+3. "complete" (delete it, it adds nothing)
 4. em dashes everywhere
 5. "It's not just X, it's Y"
 
@@ -942,7 +942,7 @@ ai-slop-detector.surge.sh
 free. no account. runs in browser.
 ```
 
-## Tweet Set 2 — HabitForge
+## Tweet Set 2, HabitForge
 
 ```
 every habit tracker i tried did the same thing.
@@ -971,7 +971,7 @@ free. no account. no subscription ever.
 habitforge-web.surge.sh
 ```
 
-## Tweet Set 3 — CoreDay
+## Tweet Set 3, CoreDay
 
 ```
 stopped tracking 14 habits.
@@ -985,7 +985,7 @@ it's more motivating than any complex system i've tried.
 free PWA: coreday.surge.sh
 ```
 
-## Thread — The Problem With Habit Trackers
+## Thread, The Problem With Habit Trackers
 
 ```
 1/ i've downloaded every habit tracker.
@@ -1024,7 +1024,7 @@ no complex systems. no gamification. no 12 habit categories.
 
 3 things. daily.
 
-coreday.surge.sh — free, no account
+coreday.surge.sh, free, no account
 ```
 
 ---

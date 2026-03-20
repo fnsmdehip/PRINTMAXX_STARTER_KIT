@@ -1,4 +1,4 @@
-# NEWSLETTER — Cycle 3, March 17 2026
+# NEWSLETTER, Cycle 3, March 17 2026
 # Status: PENDING_REVIEW
 # Format: Email newsletter (Beehiiv/ConvertKit)
 # Subject line options below

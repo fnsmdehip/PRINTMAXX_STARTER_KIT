@@ -67,7 +67,7 @@ wave 1: 5 research agents (parallel, file ownership maps)
 wave 2: 3 processing agents (compile, deduplicate)
 wave 3: 3 output agents (deliverables)
 
-it's a DAG with file-based contracts instead of API contracts. simpler to set up than Airflow. tradeoff is less robust.
+it's a DAG with file-based contracts instead of API contracts. simpler to set up than Airflow. tradeoff is less strong.
 
 ---
 

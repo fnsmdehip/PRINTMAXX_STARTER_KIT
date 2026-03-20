@@ -1,4 +1,4 @@
-# @selahmoments — X Communities Content (Ramadan Focus)
+# @selahmoments, X Communities Content (Ramadan Focus)
 # Generated: 2026-03-05
 # Status: PENDING_REVIEW
 # Purpose: Posts for X faith/Ramadan Communities during the remaining 25 days of Ramadan

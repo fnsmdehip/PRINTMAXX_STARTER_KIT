@@ -1,4 +1,4 @@
-# Pipeline Building-in-Public Content — 2026-02-28
+# Pipeline Building-in-Public Content, 2026-02-28
 
 Generated from real pipeline metrics. @PRINTMAXXER voice.
 Status: PENDING_REVIEW

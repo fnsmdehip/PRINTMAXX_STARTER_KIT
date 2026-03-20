@@ -28,6 +28,11 @@ from pathlib import Path
 # ── paths & guardrails ───────────────────────────────────────────────────────
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# Add .pip_libs to sys.path so Playwright (and other vendored deps) are importable
+_pip_libs = PROJECT_ROOT / ".pip_libs"
+if _pip_libs.exists() and str(_pip_libs) not in sys.path:
+    sys.path.insert(0, str(_pip_libs))
 AUTOMATIONS  = PROJECT_ROOT / "AUTOMATIONS"
 LEADS_DIR    = AUTOMATIONS / "leads" / "openclaw"
 BUILD_DIR    = AUTOMATIONS / "leads" / "openclaw" / "_sites"
@@ -52,11 +57,15 @@ DAEMON_CITIES = [
     "Tampa FL","Charlotte NC","Orlando FL","Dallas TX","San Antonio TX",
     "Jacksonville FL","Raleigh NC","Columbus OH","Indianapolis IN","Memphis TN",
     "Las Vegas NV","Oklahoma City OK","Portland OR","Tucson AZ",
+    "Seattle WA","Boston MA","Pittsburgh PA","Detroit MI","Minneapolis MN",
+    "Sacramento CA","Kansas City MO","St Louis MO","Cincinnati OH","New Orleans LA",
 ]
 DAEMON_NICHES = [
     "dentist","plumber","hvac","lawyer","restaurant","salon","gym",
     "chiropractor","auto repair","roofing","fencing","junk removal",
     "mobile detailing","window cleaning","pressure washing","landscaping",
+    "electrician","pest control","locksmith","tree service","handyman",
+    "carpet cleaning","towing",
 ]
 CYCLE_INTERVAL_S = 4 * 3600  # 4 hours per city
 
@@ -711,6 +720,7 @@ _SVC.update({
     "mobile detailing": ["Full Detail Package", "Interior Deep Clean", "Exterior Wash & Wax", "Paint Correction", "Ceramic Coating", "Fleet Detailing"],
     "window cleaning": ["Residential Window Cleaning", "Commercial Window Cleaning", "Screen Cleaning", "Hard Water Stain Removal", "Gutter Cleaning", "Pressure Washing"],
     "landscaping": ["Lawn Maintenance", "Landscape Design", "Hardscaping", "Irrigation Systems", "Tree & Shrub Care", "Seasonal Cleanup"],
+    "electrician": ["Residential Wiring", "Panel Upgrades", "Outlet & Switch Install", "Lighting Installation", "EV Charger Install", "Emergency Electrical"],
 })
 NICHE_SERVICES = {**_SVC, "dental": _SVC["dentist"], "plumbing": _SVC["plumber"]}
 

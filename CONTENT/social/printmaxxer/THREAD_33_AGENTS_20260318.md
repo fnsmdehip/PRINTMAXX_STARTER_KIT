@@ -94,7 +94,7 @@ it reads 200+ app store pages, pricing pages, product hunt launches, job posting
 this morning it caught three things:
 
 1. a new Bible chat app (4.88 stars) launched 3 days ago in my exact niche
-2. competitors patching for iOS 26 Liquid Glass — their apps will crash if they miss it
+2. competitors patching for iOS 26 Liquid Glass, their apps will crash if they miss it
 3. Habitify shipped conversational AI habit logging last week
 
 i had this intel before 9am. automatically.
@@ -146,6 +146,6 @@ Hashtags to add to tweet 8 only: #buildinpublic #solopreneur #indie
 
 **LinkedIn version:** Expand tweet 5 into 300-word post about systems vs tools. Target: founders, operators, indie hackers on LinkedIn.
 
-**Reddit version:** Post to r/SideProject and r/solopreneur as "I run 33 autonomous agents for $200/month — here's the full architecture after 44 days"
+**Reddit version:** Post to r/SideProject and r/solopreneur as "I run 33 autonomous agents for $200/month, here's the full architecture after 44 days"
 
 **Newsletter:** Use tweet 4 numbers as the hook for next newsletter issue. "The numbers the agents generated while I slept."

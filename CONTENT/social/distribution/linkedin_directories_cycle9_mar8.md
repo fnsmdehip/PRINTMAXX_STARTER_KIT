@@ -7,7 +7,7 @@
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers throughout
 - [x] Would @pipelineabuser actually post this?
@@ -154,7 +154,7 @@ The 3 apps:
 
 FocusLock - locks specific apps during work blocks. You set the timer. The phone gets boring. You get productive.
 
-WalkToUnlock - your phone stays locked until you've walked 500 steps. The cost to unlock is movement, not willpower.
+WalkToUnlock - your phone stays locked until you've walked 500 steps. The cost to get is movement, not willpower.
 
 SleepMaxx - tracks sleep quality using phone sensors. No wearable required. Shows you the patterns making your sleep worse.
 

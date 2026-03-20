@@ -8,7 +8,7 @@
 
 ## standalone tweets
 
-### tweet 1 — gumroad sales spy
+### tweet 1, gumroad sales spy
 **account:** @PRINTMAXXER
 **chars:** 271
 
@@ -18,7 +18,7 @@ view page source on any gumroad product. ctrl+f "sales_count". that's the real n
 
 ---
 
-### tweet 2 — gpt wrapper app factory
+### tweet 2, gpt wrapper app factory
 **account:** @PRINTMAXXER
 **chars:** 248
 
@@ -28,7 +28,7 @@ one chinese studio runs 24 gpt wrapper apps. $5M/month. twenty four apps. not on
 
 ---
 
-### tweet 3 — claude code mastery
+### tweet 3, claude code mastery
 **account:** @PRINTMAXXER
 **chars:** 243
 
@@ -38,7 +38,7 @@ one chinese studio runs 24 gpt wrapper apps. $5M/month. twenty four apps. not on
 
 ---
 
-### tweet 4 — ugc for pennies
+### tweet 4, ugc for pennies
 **account:** @PRINTMAXXER
 **chars:** 217
 
@@ -48,7 +48,7 @@ ugcdrop sells reaction clips for $0.01 each. one cent. pair that with an app dem
 
 ---
 
-### tweet 5 — distribution is the moat
+### tweet 5, distribution is the moat
 **account:** @PRINTMAXXER
 **chars:** 247
 
@@ -58,7 +58,7 @@ ugcdrop sells reaction clips for $0.01 each. one cent. pair that with an app dem
 
 ---
 
-## thread — the distribution playbook nobody talks about
+## thread, the distribution playbook nobody talks about
 
 ### thread tweet 1/7
 **account:** @PRINTMAXXER

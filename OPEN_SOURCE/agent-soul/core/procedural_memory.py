@@ -58,7 +58,9 @@ def safe_path(target: str | Path) -> Path:
     """Verify path is within project root. Raises ValueError if not."""
     resolved = Path(target).resolve()
     root = PROJECT_ROOT.resolve()
-    if not str(resolved).startswith(str(root)):
+    try:
+        resolved.relative_to(root)
+    except ValueError:
         raise ValueError(f"BLOCKED: {resolved} is outside project root {root}")
     return resolved
 

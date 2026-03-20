@@ -7835,3 +7835,72 @@ This brand went viral in the first 30 posts
 
 [r/Entrepreneur] What is your biggest struggle atm?
 
+
+
+---
+
+## Pending Enhancement (ALPHA107604, Score: 24)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2034345107106013626
+**Added:** 2026-03-18T21:45:01-04:00
+
+You're one viral video away from unlocking massive growth.
+
+We looked at millions of viral videos in the last year and these 5 components show up consistently.
+
+1/ Hook
+2/ Format
+3/ Duration
+4/ Content & Context
+5/ CTA placement
+
+Each one plays a different role and together, they
+
+
+
+---
+
+## Pending Enhancement (ALPHA108042, Score: 22)
+
+**Source:** @iamgdsa (high-signal-accounts) | **URL:** https://x.com/iamgdsa/status/2034635298869551188
+**Added:** 2026-03-19T11:34:52-04:00
+
+great niche, good spread of viral accounts btw, they're growing posting intensity now 
+
+printing
+
+
+
+---
+
+## Pending Enhancement (ALPHA108063, Score: 31)
+
+**Source:** @ecomchigga (high-signal-accounts) | **URL:** https://x.com/ecomchigga/status/2034347888218616099
+**Added:** 2026-03-19T11:34:52-04:00
+
+a guy with 32,982 followers asked me to look at his info product setup last week. wanted to know why he wasn't making sales
+
+i looked at his twitter. great content. good engagement. 20K-40K views per tweet. comments flowing in. the account looked healthy from the outside
+
+then i
+
+
+
+---
+
+## Pending Enhancement (ALPHA108324, Score: 20)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/alexcooldev/status/2034786130214932654
+**Added:** 2026-03-20T07:11:07-04:00
+
+I come from a dev background.
+
+Used to think: build something great → users will come.
+
+Reality:
+No distribution = no product.
+
+Now I spend more time on marketing than coding.
+
+Because what’s the point of building… if no one sees it?
+

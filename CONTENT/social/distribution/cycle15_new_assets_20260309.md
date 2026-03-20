@@ -1,4 +1,4 @@
-# Distribution Content — Cycle 15 (New Assets)
+# Distribution Content, Cycle 15 (New Assets)
 # Date: 2026-03-09
 # Status: PENDING_REVIEW
 # Assets: Scripture Streak, Claude Code Agent Bible, 5 comparison pages
@@ -28,7 +28,7 @@
 
 ---
 
-## TWITTER — @PRINTMAXXER
+## TWITTER, @PRINTMAXXER
 
 ### Standalone tweet 1
 
@@ -313,7 +313,7 @@ anyone else running autonomous coding agents? what's your architecture?
 
 ---
 
-## TWITTER — @PRINTMAXXER
+## TWITTER, @PRINTMAXXER
 
 ### Standalone tweet
 
@@ -384,7 +384,7 @@ looking for feedback. is the streak mechanic motivating for Quran reading or wou
 
 ---
 
-## TWITTER — @PRINTMAXXER
+## TWITTER, @PRINTMAXXER
 
 ### Standalone tweet 1 (Cursor vs Claude Code)
 
@@ -556,7 +556,7 @@ Happy to answer questions about specific workflow comparisons.
 
 ---
 
-## TWITTER — @PRINTMAXXER
+## TWITTER, @PRINTMAXXER
 
 ### Standalone tweet (fresh angle)
 
@@ -625,7 +625,7 @@ what's your approach to breaking down tasks? curious if the 5-minute-step rule r
 
 ---
 
-## TWITTER — @PRINTMAXXER
+## TWITTER, @PRINTMAXXER
 
 ### Standalone tweet (contrarian angle)
 
@@ -699,7 +699,7 @@ interested in feedback from this community specifically. does this approach reso
 
 ---
 
-## TWITTER — @PRINTMAXXER
+## TWITTER, @PRINTMAXXER
 
 ### Standalone tweet (lead magnet bundle)
 

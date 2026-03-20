@@ -1,4 +1,4 @@
-# Dev.to + LinkedIn Content — March 8 2026
+# Dev.to + LinkedIn Content, March 8 2026
 **Status:** PENDING_REVIEW
 **Accounts:** @PRINTMAXXER (LinkedIn), Dev.to (PRINTMAXX)
 **Generated:** 2026-03-08
@@ -744,7 +744,7 @@ Competitive intel: Playwright + requests. scrape what I need. no subscription to
 
 PDF generation: jsPDF CDN. client-side. no server, no cost per document.
 
-The leverage in this stack is that Claude Max ($200/mo) generates code, content, and analysis across all 22 apps, 262 sites, and 13 products. the marginal cost of adding a new product is zero beyond the time cost.
+The use in this stack is that Claude Max ($200/mo) generates code, content, and analysis across all 22 apps, 262 sites, and 13 products. the marginal cost of adding a new product is zero beyond the time cost.
 
 The constraint that makes this work: anything that would normally require a paid SaaS either gets replaced by a free alternative or gets built as a client-side tool.
 
@@ -782,7 +782,7 @@ Build the template once. generate the variants. let organic search sort out who 
 ## Pre-publish checklist
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage excluded from LinkedIn Post 3 use where it refers to financial/mechanical leverage, not the banned "leverage as a verb" usage)
+- [x] Zero banned AI vocabulary (use excluded from LinkedIn Post 3 use where it refers to financial/mechanical use, not the banned "use as a verb" usage)
 - [x] Consequence-first hooks on all pieces
 - [x] Exact numbers throughout (262 sites, 22 apps, 241 pass, 11 slow, 4 broken, 55KB, $300/mo, $19/mo, $39/mo, $14.95/mo, 35 hours, 5 weeks payback)
 - [x] Would @pipelineabuser post this? yes (direct, specific numbers, no hedging, honest about failures)

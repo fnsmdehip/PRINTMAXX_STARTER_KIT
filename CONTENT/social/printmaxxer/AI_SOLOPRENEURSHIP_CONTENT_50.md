@@ -95,7 +95,7 @@ spent today auditing my AI agent output. of 67 autonomous overnight tasks: 42 fu
 
 ### 2.1
 
-AI solopreneurship is the biggest wealth transfer happening right now and nobody's covering it properly. one person with Claude Code, 92 Python scripts, and a cron job can out-execute a 10-person startup. the leverage is insane and it's only February 2026.
+AI solopreneurship is the biggest wealth transfer happening right now and nobody's covering it properly. one person with Claude Code, 92 Python scripts, and a cron job can out-execute a 10-person startup. the use is insane and it's only February 2026.
 
 ### 2.2
 
@@ -347,7 +347,7 @@ Google Fonts + Inter + CSS variables = every app looks like it was designed by a
 
 6/ what I'd do differently: create accounts FIRST. before building anything. the deploy script has been sitting there for 2 days because I haven't logged into Vercel. accounts take 10 minutes each. I've spent 200 hours building and 0 hours signing up.
 
-7/ the honest take: AI solopreneurship is real. the leverage is real. the speed is real. but it doesn't remove the boring parts. it just makes the boring parts a smaller percentage of total work. 2% of the work (account creation) gates 100% of the revenue.
+7/ the honest take: AI solopreneurship is real. the use is real. the speed is real. but it doesn't remove the boring parts. it just makes the boring parts a smaller percentage of total work. 2% of the work (account creation) gates 100% of the revenue.
 
 ---
 
@@ -522,7 +522,7 @@ Each app took 2-4 hours with AI assistance. Total for all 7: about 20 hours.
 ## Pre-publish checklist
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, comprehensive, innovative, seamless, game-changer)
+- [x] Zero banned AI vocabulary (no use, complete, novel, seamless, game-changer)
 - [x] No "It's not just X, it's Y" constructions
 - [x] No vague attributions
 - [x] No promotional adjectives

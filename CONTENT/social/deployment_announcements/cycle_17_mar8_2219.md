@@ -1,4 +1,4 @@
-# Deployment Cycle 17 — 2026-03-08 22:19
+# Deployment Cycle 17, 2026-03-08 22:19
 
 ## Status: MAINTENANCE CYCLE (No New Deployments)
 
@@ -15,7 +15,7 @@
 - **Broken (RED)**: 5 (DNS label >63 chars, unfixable without regeneration)
 
 ### Known Issues (Unchanged)
-5 sites have DNS labels exceeding RFC 1035 63-char limit. Source files not persisted locally. Would need longtail page generator to regenerate with shorter subdomain names. Low priority — local biz demo pages for cities we don't actively target.
+5 sites have DNS labels exceeding RFC 1035 63-char limit. Source files not persisted locally. Would need longtail page generator to regenerate with shorter subdomain names. Low priority, local biz demo pages for cities we don't actively target.
 
 ### Human Blockers (Revenue-Blocking)
 - [ ] Create Gumroad account → 13 PDFs ready to list

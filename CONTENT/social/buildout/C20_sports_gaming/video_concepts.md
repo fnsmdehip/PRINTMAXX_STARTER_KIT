@@ -1,4 +1,4 @@
-# C20 Sports/Gaming Clips Channel — 20 Video Concepts
+# C20 Sports/Gaming Clips Channel, 20 Video Concepts
 
 ## Channel Identity
 
@@ -9,14 +9,14 @@
 
 ---
 
-## VIDEO CONCEPTS — SPORTS (1-10)
+## VIDEO CONCEPTS, SPORTS (1-10)
 
 ### 1. "The Worst NFL Draft Picks of the Last 10 Years (and What Teams Got Wrong)"
 **Format:** Long-form analysis, 10-12 min
 **Hook:** "Teams paid $150M guaranteed to players who never made it past year 2. here's what the data actually said."
 **Structure:**
-- Pick 1: JaMarcus Russell — 3 stats scouts ignored
-- Pick 2: Johnny Manziel — the combine number that should have ended it
+- Pick 1: JaMarcus Russell, 3 stats scouts ignored
+- Pick 2: Johnny Manziel, the combine number that should have ended it
 - Pick 3-5: 3 less-known busts with cleaner data stories
 - Pattern analysis: 4 red flags NFL teams still ignore
 - Tool callout: Pro Football Reference, 4th-down bot, TruMedia
@@ -41,7 +41,7 @@
 
 ---
 
-### 3. "Every MLB Stolen Base Record Broken in 2023 — Frame-by-Frame Analysis"
+### 3. "Every MLB Stolen Base Record Broken in 2023, Frame-by-Frame Analysis"
 **Format:** Clip-heavy breakdown, 6-8 min
 **Hook:** "MLB changed the rules and the stolen base numbers went insane. here's the physics of why."
 **Structure:**
@@ -50,7 +50,7 @@
 - Reaction time data for catchers vs. old rules
 - Which players benefited most statistically
 - Fantasy baseball implications
-**Clip strategy:** MLB Advanced Media clips — YouTube MLB channel embeds (no copyright risk)
+**Clip strategy:** MLB Advanced Media clips, YouTube MLB channel embeds (no copyright risk)
 **Affiliate angle:** DraftKings DFS ($25 CPA), ESPN+ subscription
 **Est. CPM:** $8-14
 
@@ -86,7 +86,7 @@
 
 ---
 
-### 6. "I Tracked Every Injury Prediction in the NFL for 1 Season — Results"
+### 6. "I Tracked Every Injury Prediction in the NFL for 1 Season, Results"
 **Format:** Data reveal video, 8 min
 **Hook:** "I tracked 150 'high injury risk' player flags over 17 weeks. 64% hit. here's what the model looks like."
 **Structure:**
@@ -96,22 +96,22 @@
 - 3 biggest misses (why they failed)
 - The feature that mattered most (snap count spike)
 - How to replicate it using Pro Football Reference + Python (free)
-**Clip strategy:** No game clips needed — data visualizations, screenshots
+**Clip strategy:** No game clips needed, data visualizations, screenshots
 **Affiliate angle:** DraftKings, FantasyPros premium ($20 CPA)
 **Est. CPM:** $14-20
 
 ---
 
-### 7. "Every Walk-Off Home Run in the Last World Series — Audio Reaction Breakdown"
+### 7. "Every Walk-Off Home Run in the Last World Series, Audio Reaction Breakdown"
 **Format:** Reaction + analysis, 6-8 min
 **Hook:** "Walk-offs feel random. they're not. 3 patterns predict when they happen."
 **Structure:**
-- Define walk-off leverage (LI index explanation)
+- Define walk-off use (LI index explanation)
 - Show last WS walk-offs with LI scores
 - Pattern 1: bullpen fatigue index
 - Pattern 2: batter's historical LI performance
 - Pattern 3: pitch type frequency in high-LI ABs
-**Clip strategy:** MLB's own YouTube channel clips — embedding allowed
+**Clip strategy:** MLB's own YouTube channel clips, embedding allowed
 **Affiliate angle:** FanDuel affiliate, MLB.TV subscription
 **Est. CPM:** $10-15
 
@@ -132,16 +132,16 @@
 
 ---
 
-### 9. "The Sports Bet That Pays 3x More Than Gambling — And It's Legal"
+### 9. "The Sports Bet That Pays 3x More Than Gambling, And It's Legal"
 **Format:** Financial education framing, 8 min
 **Hook:** "prediction markets. not sports betting. the difference is $40K/year for serious bettors."
 **Structure:**
 - Sports betting house edge: 4.5-10% vig
-- Prediction markets: Kalshi, Polymarket — how they work
+- Prediction markets: Kalshi, Polymarket, how they work
 - Real example: same event, different odds, same outcome
 - Tax treatment difference (capital gains vs. gambling losses)
 - How to hedge across both for positive EV
-**Clip strategy:** No clips needed — screen recordings of platforms
+**Clip strategy:** No clips needed, screen recordings of platforms
 **Affiliate angle:** Kalshi referral, Polymarket
 **Est. CPM:** $18-28 (finance + sports crossover)
 
@@ -162,9 +162,9 @@
 
 ---
 
-## VIDEO CONCEPTS — GAMING (11-20)
+## VIDEO CONCEPTS, GAMING (11-20)
 
-### 11. "The Speedrun That Took 6 Years to Beat — Full Breakdown"
+### 11. "The Speedrun That Took 6 Years to Beat, Full Breakdown"
 **Format:** History + analysis, 10-12 min
 **Hook:** "someone held a world record for 6 years. the strat that finally beat it required discovering a physics glitch nobody knew existed."
 **Structure:**
@@ -184,11 +184,11 @@
 **Hook:** "piracy costs publishers $X billion/year. but cracked versions often work better. here's the honest comparison."
 **Structure:**
 - Legal framing: own copies of all games, comparing DRM behavior
-- Game 1: Denuvo vs. cracked — performance benchmark
+- Game 1: Denuvo vs. cracked, performance benchmark
 - Game 2-5: Loading times, always-online requirement comparison
 - The 3 games where DRM actually broke the legit version
 - What publishers should do instead (data from DRM-free sales)
-**Clip strategy:** Own gameplay footage — no copyright issues
+**Clip strategy:** Own gameplay footage, no copyright issues
 **Affiliate angle:** Humble Bundle affiliate (15%), GOG DRM-free games
 **Est. CPM:** $5-9
 
@@ -239,13 +239,13 @@
 
 ---
 
-### 16. "The Chess Engine That Beat Every Top Grandmaster — And the Flaw Nobody Talks About"
+### 16. "The Chess Engine That Beat Every Top Grandmaster, And the Flaw Nobody Talks About"
 **Format:** Technical analysis, 8-10 min
 **Hook:** "Stockfish beats Magnus 99% of the time. it also makes moves no human would ever find. here's the one position type where humans still win."
 **Structure:**
 - Brief history of computer chess dominance
 - How neural networks changed engine play (Leela vs. Stockfish)
-- The endgame tablebase gap — when engines make suboptimal "winning" moves
+- The endgame tablebase gap, when engines make suboptimal "winning" moves
 - 3 real game positions where human intuition outperformed engine
 - What this means for AI in other domains
 **Clip strategy:** Chess.com board screenshots + lichess (no copyright)
@@ -254,7 +254,7 @@
 
 ---
 
-### 17. "I Replicated the Gambling System From Casino Games in Real Slot Machines — Results"
+### 17. "I Replicated the Gambling System From Casino Games in Real Slot Machines, Results"
 **Format:** Investigative, 10 min
 **Hook:** "slot machines use the same psychological patterns as Clash of Clans. i ran the numbers on both. they're identical."
 **Structure:**
@@ -269,7 +269,7 @@
 
 ---
 
-### 18. "Every Game That Used AI NPCs Before It Was Cool — 2000-2024 Timeline"
+### 18. "Every Game That Used AI NPCs Before It Was Cool, 2000-2024 Timeline"
 **Format:** History timeline, 10-12 min
 **Hook:** "everyone acts like AI in games is new. FEAR's AI from 2005 is still better than most modern games."
 **Structure:**
@@ -284,7 +284,7 @@
 
 ---
 
-### 19. "Twitch Gambling Streams Cost Viewers $40M Last Year — The Math"
+### 19. "Twitch Gambling Streams Cost Viewers $40M Last Year, The Math"
 **Format:** Investigative financial, 8-10 min
 **Hook:** "i tracked 8 gambling streamers for 90 days. viewership, promo codes, and estimated deposits. the numbers are disturbing."
 **Structure:**
@@ -329,7 +329,7 @@
 
 ## Channel Setup Notes
 
-**Niche positioning:** "Sports meets data meets money" — avoids pure commentary (crowded), focuses on the analytical angle that commands higher CPM and differentiates from highlight channels.
+**Niche positioning:** "Sports meets data meets money", avoids pure commentary (crowded), focuses on the analytical angle that commands higher CPM and differentiates from highlight channels.
 
 **Tone:** @pipelineabuser energy. specific numbers. no fluff. treat audience like they're smart.
 

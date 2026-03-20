@@ -1,4 +1,4 @@
-# Niche Content Farm — Cycle 3 Tweets
+# Niche Content Farm, Cycle 3 Tweets
 # STATUS: PENDING_REVIEW
 # DATE: 2026-03-07
 # CYCLE: 3 (6h autonomy run)
@@ -8,7 +8,7 @@
 
 ---
 
-## TWEET 1 — UGC Cost Destruction (ALPHA296 + ALPHA324)
+## TWEET 1, UGC Cost Destruction (ALPHA296 + ALPHA324)
 
 ugc used to cost $500+ per video. per. video.
 
@@ -22,7 +22,7 @@ if you're paying influencers $500 for a 15-second talking head in 2026, you're s
 
 ---
 
-## TWEET 2 — Self-Reply Funnel Hack (ALPHA334)
+## TWEET 2, Self-Reply Funnel Hack (ALPHA334)
 
 stop putting links in your bio and hoping people click.
 
@@ -39,7 +39,7 @@ i tested this on 11 posts. bio link: 23 clicks average. self-reply link: 89 clic
 
 ---
 
-## TWEET 3 — First Name Tokens = Spam Flag (ALPHA280 + ALPHA281)
+## TWEET 3, First Name Tokens = Spam Flag (ALPHA280 + ALPHA281)
 
 "Hey {firstName}," is now a spam trigger.
 
@@ -56,7 +56,7 @@ your cold email should read like you typed it in 30 seconds because you actually
 
 ---
 
-## TWEET 4 — TikTok Algo Shift Nobody Noticed (ALPHA263 + ALPHA273)
+## TWEET 4, TikTok Algo Shift Nobody Noticed (ALPHA263 + ALPHA273)
 
 tiktok raised its completion rate threshold in 2026. if people don't finish your video, you're dead.
 
@@ -70,7 +70,7 @@ if your videos are 3+ minutes and your completion rate is under 40%, the algorit
 
 ---
 
-## TWEET 5 — Vibe Coding is Real Now (ALPHA349 + ALPHA343)
+## TWEET 5, Vibe Coding is Real Now (ALPHA349 + ALPHA343)
 
 karpathy coined "vibe coding." 31K likes. 5.3M views.
 

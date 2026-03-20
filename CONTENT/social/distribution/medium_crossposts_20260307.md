@@ -1,7 +1,7 @@
-# Medium Cross-Posts — Cycle 4 (2026-03-07)
+# Medium Cross-Posts, Cycle 4 (2026-03-07)
 # Status: PENDING_REVIEW
 # Cross-posts of dev.to articles to Medium for additional SEO surface
-# Medium has high domain authority — articles rank well in Google
+# Medium has high domain authority, articles rank well in Google
 
 ---
 
@@ -112,9 +112,9 @@ one-size-fits-all fails in faith. so i built 27 specialized versions.
 
 instead of building 27 separate apps from scratch, i built a factory:
 
-1. **base template** — core streak tracking logic, PWA manifest, service worker, offline storage
-2. **denomination config** — custom content, colors, icons, prayer schedules, calendar events
-3. **build script** — takes base + config, outputs deployable PWA
+1. **base template**, core streak tracking logic, PWA manifest, service worker, offline storage
+2. **denomination config**, custom content, colors, icons, prayer schedules, calendar events
+3. **build script**, takes base + config, outputs deployable PWA
 
 each new denomination takes ~15 minutes to configure. the factory handles the rest.
 

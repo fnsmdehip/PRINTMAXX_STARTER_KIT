@@ -1,11 +1,11 @@
-# CYCLE 4 — LINKEDIN POSTS
+# CYCLE 4, LINKEDIN POSTS
 # Generated: 2026-03-17 19:05
 # Status: PENDING_REVIEW
-# Voice: PRINTMAXXER (adapted for LinkedIn — slightly more structured, same energy)
+# Voice: PRINTMAXXER (adapted for LinkedIn, slightly more structured, same energy)
 
 ---
 
-## POST 1 — AI Content Arbitrage
+## POST 1, AI Content Arbitrage
 
 Solo operators sell AI-generated videos for $50-100 each.
 
@@ -27,7 +27,7 @@ The moat is never the production. It's the relationship with the check-writer.
 
 ---
 
-## POST 2 — Building in Public Update (Day 35)
+## POST 2, Building in Public Update (Day 35)
 
 Day 35 of building an automated revenue system from scratch.
 
@@ -41,7 +41,7 @@ Revenue: $0.
 
 The bottleneck isn't code. It's 90 minutes of account creation I keep putting off.
 
-Stripe account (10 min) would unlock payments on 20+ apps. Gumroad (15 min) would list 13 products. Five affiliate signups (45 min) would monetize 8 comparison pages already getting traffic.
+Stripe account (10 min) would get payments on 20+ apps. Gumroad (15 min) would list 13 products. Five affiliate signups (45 min) would monetize 8 comparison pages already getting traffic.
 
 Lesson: shipping code is the easy part. Shipping revenue requires doing the boring stuff you keep skipping.
 
@@ -49,7 +49,7 @@ This week I'm doing the 90 minutes. Will report back.
 
 ---
 
-## POST 3 — Reddit Product Validation
+## POST 3, Reddit Product Validation
 
 Counted 14 posts this week across fitness and productivity subreddits from people asking "is there an app that does X?"
 

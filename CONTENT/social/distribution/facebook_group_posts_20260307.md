@@ -1,4 +1,4 @@
-# Facebook Group Distribution Posts — 2026-03-07
+# Facebook Group Distribution Posts, 2026-03-07
 # Status: PENDING_REVIEW
 # Asset coverage: local biz demos, prayer/ramadan apps, build-in-public, productivity PWAs
 # Total posts: 8 across 4 audience segments
@@ -8,7 +8,7 @@
 ## Pre-publish checklist (run before posting each)
 
 - [ ] Zero em dashes
-- [ ] Zero banned AI vocabulary (leverage, utilize, comprehensive, robust, innovative, seamless, game-changer, empower, unlock, delve, revolutionary, streamlined, foster)
+- [ ] Zero banned AI vocabulary (use, use, complete, strong, novel, seamless, game-changer, empower, get, dig, revolutionary, streamlined, foster)
 - [ ] No "It's not just X, it's Y" constructions
 - [ ] No promotional adjectives
 - [ ] Consequence-first hook
@@ -19,7 +19,7 @@
 
 ---
 
-## POST 1 — Local biz owner groups (version A)
+## POST 1, Local biz owner groups (version A)
 Target groups: Small Business Owners USA, Local Business Marketing, Main Street Business Network
 Tone: peer-to-peer, zero guru energy, light shame on the status quo
 
@@ -47,7 +47,7 @@ if one of these matches your industry, DM me. i'll build you a custom version. f
 
 ---
 
-## POST 2 — Local biz owner groups (version B)
+## POST 2, Local biz owner groups (version B)
 Target groups: Local Marketing for Small Businesses, Service Business Owners, Contractors & Trades
 Tone: slightly more direct, leads with the problem before showing the demos
 
@@ -73,7 +73,7 @@ which industry is yours? DM me and i'll send a custom mockup.
 
 ---
 
-## POST 3 — Muslim/Ramadan groups (version A)
+## POST 3, Muslim/Ramadan groups (version A)
 Target groups: Muslim Community USA, Ramadan Mubarak, Islam & Daily Life, American Muslims
 Tone: genuine community member, zero sales energy, gift framing
 
@@ -97,7 +97,7 @@ share with anyone who might find them useful. that's all. no ask.
 
 ---
 
-## POST 4 — Muslim/Ramadan groups (version B)
+## POST 4, Muslim/Ramadan groups (version B)
 Target groups: Ramadan 2026, Muslim Professionals Network, Islamic Community Center Groups
 Tone: more specific on the features, still zero sales energy, Ramadan urgency angle
 
@@ -119,7 +119,7 @@ if you find them useful, share the links in your family WhatsApp or with your ma
 
 ---
 
-## POST 5 — Solopreneur/Indie hacker groups (version A)
+## POST 5, Solopreneur/Indie hacker groups (version A)
 Target groups: Indie Hackers Community, Solopreneur Society, Build in Public, Side Projects & Indie Hacking
 Tone: build-in-public honesty, zero guru framing, real numbers, real lessons
 
@@ -130,7 +130,7 @@ day 42 of building in public.
 122 sites live on the internet.
 $0 revenue.
 
-before anyone says "build something people want" — fair. but the harder lesson i've learned over 6 weeks isn't about what to build. it's about distribution being a completely different skill than building.
+before anyone says "build something people want", fair. but the harder lesson i've learned over 6 weeks isn't about what to build. it's about distribution being a completely different skill than building.
 
 here's what i got wrong:
 
@@ -146,7 +146,7 @@ the build to distribute ratio should probably be 40/60 not 80/20 like i was doin
 
 ---
 
-## POST 6 — Solopreneur/Indie hacker groups (version B)
+## POST 6, Solopreneur/Indie hacker groups (version B)
 Target groups: Bootstrapped Founders, One Person Business, Ship It Weekly, Indie Makers
 Tone: slightly more tactical, specific lessons structured for people who want frameworks, honest failure accounting
 
@@ -168,7 +168,7 @@ what's actually working now: posting in small specific communities (under 5k mem
 
 ---
 
-## POST 7 — Productivity/Self-improvement groups (version A)
+## POST 7, Productivity/Self-improvement groups (version A)
 Target groups: Productivity Hacks, Self Improvement Daily, High Performance Habits, Deep Work Community
 Tone: peer recommendation energy, anti-app-store-bloat angle, specific tool breakdown
 
@@ -197,7 +197,7 @@ all 5 work offline. add to home screen from your browser. no app store required.
 
 ---
 
-## POST 8 — Productivity/Self-improvement groups (version B)
+## POST 8, Productivity/Self-improvement groups (version B)
 Target groups: Habit Building & Tracking, No-BS Productivity, Morning Routine Builders, Focus & Flow State
 Tone: slightly more specific on the "why free tools usually suck" angle, stronger community recommendation framing
 
@@ -208,7 +208,7 @@ most free productivity apps aren't free. they're free for 7 days then $12/month 
 i built 5 tools that are actually free. permanently. here's what they do and the link:
 
 walktounlock-app.surge.sh
-your phone stays locked until you hit your step goal for the day. uses your phone's built-in pedometer. no subscription to unlock your own phone.
+your phone stays locked until you hit your step goal for the day. uses your phone's built-in pedometer. no subscription to get your own phone.
 
 focuslock-app.surge.sh
 pomodoro timer that blocks sites you tell it to block during focus sessions. works in the browser. no extension install needed.

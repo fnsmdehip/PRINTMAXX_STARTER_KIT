@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sovrun"
+version = "0.1.0"
+description = "autonomous agent OS. 20 modules across 5 layers. voice modeling, DAG orchestration, procedural memory, crash recovery, action gates, Mermaid DAG export, conversation search. stdlib with optional deps."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "tenacity>=8.0",
+    "httpx>=0.24",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/fnsmdehip/sovrun"
+Repository = "https://github.com/fnsmdehip/sovrun"
+
+[project.scripts]
+sovrun-voice = "sovrun.core.voice_extractor:main"
+sovrun-engine = "sovrun.core.cognitive_engine:build_model"
+sovrun-miner = "sovrun.core.pattern_miner:mine_all"
+sovrun-audit = "sovrun.core.self_audit:audit_system_patterns"
+sovrun-loops = "sovrun.core.loop_closer:main"
+sovrun-briefing = "sovrun.core.session_briefing:main"
+sovrun-handoff = "sovrun.core.handoff:main"
+sovrun-memory = "sovrun.core.procedural_memory:main"
+sovrun-orchestrate = "sovrun.core.orchestration:main"
+sovrun-durable = "sovrun.core.durable:main"
+sovrun-trace = "sovrun.core.tracing:main"
+sovrun-mcp = "sovrun.core.mcp_bridge:main"
+sovrun-import = "sovrun.core.memory_import:main"
+sovrun-workflow = "sovrun.core.workflow_bridge:main"
+sovrun-deps = "sovrun.core.deps:main"
+sovrun-conversations = "sovrun.core.conversation_index:main"
+sovrun-media = "sovrun.core.media:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sovrun*"]
+
+[tool.setuptools.package-dir]
+sovrun = "."
+"sovrun.core" = "core"
+"sovrun.core.media_providers" = "core/media_providers"
+"sovrun.templates" = "templates"
+"sovrun.examples" = "examples"
+
+[tool.setuptools.package-data]
+"sovrun.templates" = ["*.md", "*.json"]
+"sovrun.examples" = ["*.md", "*.json"]
