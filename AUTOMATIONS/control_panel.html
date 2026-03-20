@@ -3197,6 +3197,13 @@ async function loadKPI() {
   }
 }
 
+function showOpt(containerId, idx) {
+  var container = document.getElementById(containerId);
+  if (!container) return;
+  var panels = container.querySelectorAll('.opt-panel');
+  panels.forEach(function(p, i) { p.style.display = i === idx ? 'block' : 'none'; });
+}
+
 async function loadDailyFeed() {
   try {
     var r = await fetch(API + '/api/daily-feed');
@@ -3261,15 +3268,42 @@ async function loadDashKPI() {
     document.getElementById('dash-kpi-week-phase').textContent = (todayPlan.week_phase || weekPhases[todayPlan.week] || 'W'+todayPlan.week);
     // Render today's tasks
     var tasksEl = document.getElementById('dash-kpi-today-tasks');
-    tasksEl.innerHTML = todayPlan.tasks.map(function(t,i){
-      var text = (typeof t === 'object') ? t.text : t;
-      var tag = (typeof t === 'object') ? t.tag : 'MANUAL';
-      var tagColors = {AUTO:'var(--accent)',SEMI:'var(--warn)',MANUAL:'var(--blue)'};
-      var tagBadge = '<span style="font-size:0.65em;padding:1px 5px;border-radius:3px;background:rgba(255,255,255,0.08);color:'+( tagColors[tag]||'var(--text-dim)')+';font-family:JetBrains Mono;margin-right:6px;">'+tag+'</span>';
-      return '<div style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85em;">' +
-        '<span style="color:var(--accent);font-family:JetBrains Mono;min-width:20px;">'+(i+1)+'.</span>' +
-        '<span style="color:var(--text);">'+tagBadge+text+'</span></div>';
-    }).join('');
+    // Group tasks by tag
+    var autoTasks = [], semiTasks = [], manualTasks = [];
+    todayPlan.tasks.forEach(function(t,i) {
+      var task = (typeof t === 'object') ? t : {text:t, tag:'MANUAL', detail:''};
+      task._idx = i;
+      if (task.tag === 'AUTO') autoTasks.push(task);
+      else if (task.tag === 'SEMI') semiTasks.push(task);
+      else manualTasks.push(task);
+    });
+
+    function renderTaskGroup(tasks, groupLabel, groupDesc, groupColor) {
+      if (!tasks.length) return '';
+      var html = '<div style="margin-bottom:16px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">' +
+        '<span style="font-family:JetBrains Mono;font-size:0.75em;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:'+groupColor+';font-weight:600;">'+groupLabel+'</span>' +
+        '<span style="font-size:0.75em;color:var(--text-dim);">'+groupDesc+'</span></div>';
+      tasks.forEach(function(t) {
+        var detailId = 'dash-detail-'+t._idx;
+        var hasDetail = t.detail;
+        var expandIcon = hasDetail ? ' <span style="color:var(--text-dim);font-size:0.65em;">&#9660;</span>' : '';
+        var detailHTML = '';
+        if (hasDetail) {
+          detailHTML = '<div id="'+detailId+'" style="display:none;margin-top:4px;margin-left:8px;padding:8px 10px;border-left:2px solid '+groupColor+';background:rgba(0,0,0,0.25);border-radius:0 4px 4px 0;">' +
+            '<pre style="font-family:JetBrains Mono;font-size:0.75em;color:var(--text-dim);white-space:pre-wrap;margin:0;line-height:1.5;">'+t.detail+'</pre></div>';
+        }
+        html += '<div style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.03);font-size:0.85em;">' +
+          '<div onclick="var d=document.getElementById(\''+detailId+'\');if(d)d.style.display=d.style.display===\'none\'?\'block\':\'none\';" style="cursor:'+(hasDetail?'pointer':'default')+';color:var(--text);">'+t.text+expandIcon+'</div>' +
+          detailHTML + '</div>';
+      });
+      html += '</div>';
+      return html;
+    }
+
+    tasksEl.innerHTML =
+      renderTaskGroup(autoTasks, 'RUNNING', 'already automated — just verify', 'var(--accent)') +
+      renderTaskGroup(semiTasks, 'REVIEW', 'system prepared — you approve', 'var(--warn)') +
+      renderTaskGroup(manualTasks, 'DO', 'you handle this', 'var(--blue)');
     // Revenue target
     tasksEl.innerHTML += '<div style="margin-top:12px;padding:12px;background:var(--panel);border-radius:8px;display:flex;justify-content:space-between;">' +
       '<span style="color:var(--text-dim);font-size:0.85em;">Revenue Target</span>' +
