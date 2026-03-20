@@ -481,3 +481,49 @@ mangling every proper noun in my research
 
 [ACQUISITION] Failed to start a hedge fund. Built an equity research agent instead. It pulls SEC filings, earnings calls, financial da
 
+
+
+---
+
+## Pending Enhancement (ALPHA107663, Score: 35)
+
+**Source:** @nicolascole77 (high-signal-accounts) | **URL:** https://x.com/Nicolascole77/status/2034398702144836032
+**Added:** 2026-03-18T21:45:01-04:00
+
+My fiction paid newsletter on Substack, Commercial Fiction Club, is up to $13k ARR.
+
+Goal is to hit $100k ARR by end of the year.
+
+
+https://
+nicolascolefiction.substack.com
+
+
+
+---
+
+## Pending Enhancement (ALPHA107665, Score: 42)
+
+**Source:** @nicolascole77 (high-signal-accounts) | **URL:** https://x.com/Nicolascole77/status/2034251319712612504
+**Added:** 2026-03-18T21:45:01-04:00
+
+We've built our paid newsletter Write With AI to $400k in annual subscription revenue and $800k+ in digital product sales.
+
+This is the exact roadmap to follow if you want to launch your own newsletter:
+
+
+
+---
+
+## Pending Enhancement (ALPHA107732, Score: 24)
+
+**Source:** @thomasbcn (high-signal-accounts) | **URL:** https://x.com/Thomasbcn/status/2034427868864753846
+**Added:** 2026-03-18T22:23:45-04:00
+
+My most profitable CPM are 3digits
+(and no, not on brand search...)
+
+I also battle for those fun sub $1, but that's a side quest
+
+Such a ridiculous metric to focus on...
+

@@ -1,4 +1,4 @@
-# @PRINTMAXXER Tweets — Feb 12 Session 2
+# @PRINTMAXXER Tweets, Feb 12 Session 2
 # Status: PENDING_REVIEW
 
 ## Tweet 1

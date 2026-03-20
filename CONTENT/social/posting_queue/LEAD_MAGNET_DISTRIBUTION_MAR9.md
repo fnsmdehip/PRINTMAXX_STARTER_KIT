@@ -1,4 +1,4 @@
-# Lead Magnet Distribution Tweets — 2026-03-09
+# Lead Magnet Distribution Tweets, 2026-03-09
 # Status: PENDING_REVIEW
 # Target: @PRINTMAXXER account
 # Strategy: Each tweet promotes a specific lead magnet with consequence-first hook
@@ -6,7 +6,7 @@
 
 ---
 
-## TWEET 1 — Cold Email ROI Calculator (business audience)
+## TWEET 1, Cold Email ROI Calculator (business audience)
 
 i built a calculator that tells you exactly how much cold email should make you per month.
 
@@ -20,7 +20,7 @@ https://cold-email-roi-calculator.surge.sh
 
 ---
 
-## TWEET 2 — Cursor vs Claude Code (vibe coding audience, HIGH viral potential)
+## TWEET 2, Cursor vs Claude Code (vibe coding audience, HIGH viral potential)
 
 cursor vs claude code. i built the comparison page nobody else would.
 
@@ -32,7 +32,7 @@ https://cursor-vs-claudecode.surge.sh
 
 ---
 
-## TWEET 3 — Subject Line Grader (email marketing audience)
+## TWEET 3, Subject Line Grader (email marketing audience)
 
 your cold email subject lines are probably why nobody replies.
 
@@ -44,7 +44,7 @@ https://subject-line-grader.surge.sh
 
 ---
 
-## TWEET 4 — SaaS Stack Audit (solopreneur audience)
+## TWEET 4, SaaS Stack Audit (solopreneur audience)
 
 most solopreneurs spend $200-400/mo on tools they use 30% of.
 
@@ -56,7 +56,7 @@ https://saas-stack-audit.surge.sh
 
 ---
 
-## TWEET 5 — Revenue Leak Audit (indie hacker audience)
+## TWEET 5, Revenue Leak Audit (indie hacker audience)
 
 your side project is leaking money in 3-5 places you haven't checked.
 
@@ -68,7 +68,7 @@ https://revenue-leak-audit.surge.sh
 
 ---
 
-## TWEET 6 — Side Project Revenue Estimator (build in public audience)
+## TWEET 6, Side Project Revenue Estimator (build in public audience)
 
 "should i build this?"
 
@@ -80,7 +80,7 @@ https://side-project-revenue-estimator.surge.sh
 
 ---
 
-## TWEET 7 — Solopreneur Launch Checklist (launch audience)
+## TWEET 7, Solopreneur Launch Checklist (launch audience)
 
 every solopreneur launch checklist i found online was either: 47 steps long or missing the 3 things that actually matter.
 
@@ -90,7 +90,7 @@ https://solopreneur-launch-checklist.surge.sh
 
 ---
 
-## TWEET 8 — Cold Email Deliverability Checklist (cold outbound audience)
+## TWEET 8, Cold Email Deliverability Checklist (cold outbound audience)
 
 you're sending 200 cold emails/day and 80% hit spam.
 
@@ -102,7 +102,7 @@ https://cold-email-deliverability-checklist.surge.sh
 
 ---
 
-## TWEET 9 — Smartlead vs Instantly (cold email tool audience)
+## TWEET 9, Smartlead vs Instantly (cold email tool audience)
 
 smartlead vs instantly. tested both for 30 days.
 
@@ -114,7 +114,7 @@ https://smartlead-vs-instantly.surge.sh
 
 ---
 
-## TWEET 10 — AI Revenue Calculator (AI builder audience)
+## TWEET 10, AI Revenue Calculator (AI builder audience)
 
 "how much could my AI side project actually make?"
 
@@ -128,23 +128,23 @@ https://ai-revenue-calculator.surge.sh
 
 ---
 
-## THREAD — Tools Hub (aggregator, post after individual tweets perform)
+## THREAD, Tools Hub (aggregator, post after individual tweets perform)
 
 i built 11 free tools for solopreneurs. all open. all work on mobile. zero accounts needed.
 
 here's the full list:
 
-1/ cold email ROI calculator — know your numbers before sending
-2/ subject line grader — stop guessing why nobody replies
-3/ deliverability checklist — SPF/DKIM/warmup audit
-4/ revenue leak audit — find where money escapes your funnel
-5/ side project estimator — should you even build this?
-6/ SaaS stack audit — find $100+/mo in tool overlap
-7/ solopreneur launch checklist — 12 items, nothing extra
-8/ AI revenue calculator — real projections from 200+ projects
-9/ $200/day calculator — reverse-engineer daily revenue targets
-10/ ramadan daily planner — for the month (time-sensitive)
-11/ all tools hub — everything in one place
+1/ cold email ROI calculator, know your numbers before sending
+2/ subject line grader, stop guessing why nobody replies
+3/ deliverability checklist, SPF/DKIM/warmup audit
+4/ revenue leak audit, find where money escapes your funnel
+5/ side project estimator, should you even build this?
+6/ SaaS stack audit, find $100+/mo in tool overlap
+7/ solopreneur launch checklist, 12 items, nothing extra
+8/ AI revenue calculator, real projections from 200+ projects
+9/ $200/day calculator, reverse-engineer daily revenue targets
+10/ ramadan daily planner, for the month (time-sensitive)
+11/ all tools hub, everything in one place
 
 https://app-hub-crosslinks.surge.sh
 

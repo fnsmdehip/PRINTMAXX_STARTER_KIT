@@ -8,7 +8,7 @@
 
 ---
 
-### TWEET 1 — dead startup directory
+### TWEET 1, dead startup directory
 **status:** PENDING_REVIEW
 **angle:** solopreneur intel / competitor graveyard
 **source:** startups.rip finding
@@ -23,7 +23,7 @@ startups.rip. it's free. go look before everyone else does.
 
 ---
 
-### TWEET 2 — habit tracker proof
+### TWEET 2, habit tracker proof
 **status:** PENDING_REVIEW
 **angle:** indie hacker proof / small app revenue
 **source:** habit tracker $800/2K users finding
@@ -38,7 +38,7 @@ the entire app store is full of $500-2,000/mo apps like this that nobody talks a
 
 ---
 
-### TWEET 3 — business coach scam
+### TWEET 3, business coach scam
 **status:** PENDING_REVIEW
 **angle:** rage bait / anti-guru / high engagement
 **source:** business coach $800/mo for 6 months finding
@@ -53,7 +53,7 @@ $4,800 for someone to say "sounds great keep going" once a week. the real busine
 
 ---
 
-### TWEET 4 — cold email tools
+### TWEET 4, cold email tools
 **status:** PENDING_REVIEW
 **angle:** outbound / tool stack / specific
 **source:** cold email tool ranking finding
@@ -70,7 +70,7 @@ everyone else is a reskin of the same API. stop paying $200/mo for cold email. t
 
 ---
 
-### TWEET 5 — hourly reminder app demand
+### TWEET 5, hourly reminder app demand
 **status:** PENDING_REVIEW
 **angle:** app factory / demand signal
 **source:** hourly reminder app request finding
@@ -85,7 +85,7 @@ the best app ideas aren't ideas. they're requests from ppl who already want to p
 
 ---
 
-## B) THREAD — dead startup directory (best finding)
+## B) THREAD, dead startup directory (best finding)
 
 ---
 
@@ -164,7 +164,7 @@ stop brainstorming. start mining. startups.rip.
 
 ---
 
-### ADAPTATION 1 — solopreneur angle (primary niche)
+### ADAPTATION 1, solopreneur angle (primary niche)
 **status:** PENDING_REVIEW
 **platform:** twitter/x
 **niche:** solopreneur / indie hacker
@@ -179,7 +179,7 @@ you don't need a new idea. you need a dead competitor's customer list.
 
 ---
 
-### ADAPTATION 2 — indie hacker angle (dev-focused)
+### ADAPTATION 2, indie hacker angle (dev-focused)
 **status:** PENDING_REVIEW
 **platform:** twitter/x
 **niche:** indie hacker / developer
@@ -194,7 +194,7 @@ their codebase is gone but their market still exists. build the thing they could
 
 ---
 
-### ADAPTATION 3 — tech/AI angle
+### ADAPTATION 3, tech/AI angle
 **status:** PENDING_REVIEW
 **platform:** twitter/x
 **niche:** AI / tech twitter
@@ -209,7 +209,7 @@ half these dead AI products can be rebuilt in a weekend now because the models g
 
 ---
 
-### ADAPTATION 4 — cold outreach angle
+### ADAPTATION 4, cold outreach angle
 **status:** PENDING_REVIEW
 **platform:** twitter/x
 **niche:** outbound / sales
@@ -226,7 +226,7 @@ warm lead disguised as a cold email. they already know the problem exists.
 
 ---
 
-### ADAPTATION 5 — content/newsletter angle
+### ADAPTATION 5, content/newsletter angle
 **status:** PENDING_REVIEW
 **platform:** twitter/x, newsletter
 **niche:** content creator / newsletter
@@ -248,4 +248,4 @@ every week, pick 3 dead startups from startups.rip. break down what they built, 
 - total_pieces: 16 (5 tweets + 6 thread + 5 adaptations)
 - all_status: PENDING_REVIEW
 - voice_check: lowercase, no em dashes, consequence-first hooks, specific numbers, @pipelineabuser energy
-- banned_words_check: zero instances of leverage/utilize/delve/comprehensive/robust/innovative/seamless/game-changer/unlock/elevate/journey/landscape/paradigm
+- banned_words_check: zero instances of use/use/dig/complete/strong/novel/seamless/game-changer/get/elevate/path/landscape/model

@@ -6,7 +6,7 @@
 
 ---
 
-## POST 1 — r/islam
+## POST 1, r/islam
 
 **Title:** I missed Fajr 6 days in a row before I figured out what was actually going wrong
 
@@ -26,7 +26,7 @@ The other thing that changed it for me was tying Fajr directly to something I wa
 
 ---
 
-## POST 2 — r/Ramadan
+## POST 2, r/Ramadan
 
 **Title:** Built a free Quran streak tracker after I kept losing count of where I was in my khatm
 
@@ -46,7 +46,7 @@ If you're doing a khatm and you're behind, you're probably not as far behind as 
 
 ---
 
-## POST 3 — r/MuslimLounge
+## POST 3, r/MuslimLounge
 
 **Title:** The thing nobody tells you about tracking your Ramadan progress
 
@@ -70,7 +70,7 @@ The tracker is free and there's no account required. Works offline. Link in my p
 
 ## PRE-PUBLISH CHECKLIST
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible (6 days, 3 years, 22 juz, 17 days, 12-day streak, 19 days, 3 weeks)
 - [x] Would @pipelineabuser post this? (adapted for platform - Reddit requires different energy but same specificity)

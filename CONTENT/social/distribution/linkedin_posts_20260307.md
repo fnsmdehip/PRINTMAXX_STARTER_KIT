@@ -7,7 +7,7 @@
 
 ---
 
-## Post 1 — Portfolio / Building-in-public honesty
+## Post 1, Portfolio / Building-in-public honesty
 
 **Asset:** Full portfolio (77 sites, 13 apps)
 **Angle:** Overbuilding vs distribution. $0 revenue despite massive output volume.
@@ -45,7 +45,7 @@ If you've built something this year that isn't generating revenue, I'd bet it's 
 
 ---
 
-## Post 2 — $0 tech stack for freelance web developers
+## Post 2, $0 tech stack for freelance web developers
 
 **Asset:** 6 local biz demo sites + ColdMaxx cold email tool + Fiverr gigs
 **Angle:** Tactical breakdown, portfolio-first outreach for freelancers
@@ -87,7 +87,7 @@ Which niche are you targeting? I'll tell you which demo site format converts bes
 
 ---
 
-## Post 3 — Religious-specific apps vs generic
+## Post 3, Religious-specific apps vs generic
 
 **Asset:** Scripture Streak, Torah Streak, Quran Streak, Gita Streak, Buddhist Streak, Sikh Streak, Mormon Streak + denominational variants
 **Angle:** Niche targeting strategy, religious app TAM
@@ -122,7 +122,7 @@ What's the most underserved community in your product category right now?
 
 ---
 
-## Post 4 — 131 digital products, zero listed
+## Post 4, 131 digital products, zero listed
 
 **Asset:** Gumroad 13 products, Whop 8, Etsy 20, Fiverr 10, KDP 15 + more
 **Angle:** Distribution is the bottleneck. AI made building trivially easy. Selling is hard.
@@ -164,7 +164,7 @@ Has AI changed how fast you can create things but left the distribution side exa
 
 ---
 
-## Post 5 — Ramadan apps (TIME-SENSITIVE)
+## Post 5, Ramadan apps (TIME-SENSITIVE)
 
 **Asset:** PrayerLock, Hilal (Ramadan tracker), Quran Streak
 **Angle:** Building for underserved communities, time-sensitive window

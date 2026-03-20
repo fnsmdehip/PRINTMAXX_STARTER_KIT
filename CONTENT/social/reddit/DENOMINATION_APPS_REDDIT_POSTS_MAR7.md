@@ -1,11 +1,11 @@
 STATUS: PENDING_REVIEW
 GENERATED: 2026-03-07
 CAMPAIGN: Denomination Streak Apps Launch
-ACCOUNTS: Reddit — r/Catholicism, r/OrthodoxChristianity, r/Baptist, r/Christianity, r/islam, r/MuslimLounge
+ACCOUNTS: Reddit, r/Catholicism, r/OrthodoxChristianity, r/Baptist, r/Christianity, r/islam, r/MuslimLounge
 
 ---
 
-# POST 1 — r/Catholicism
+# POST 1, r/Catholicism
 
 **Title:** Free daily devotional streak tracker built specifically for Catholics (saints calendar, rosary, Liturgy of the Hours)
 
@@ -36,9 +36,9 @@ If you want features added (confession tracking, novena calendar, etc.) drop the
 
 ---
 
-# POST 2 — r/OrthodoxChristianity
+# POST 2, r/OrthodoxChristianity
 
-**Title:** Built a free devotional tracker for Orthodox Christians — fasting calendar, prayer rule, daily Scripture
+**Title:** Built a free devotional tracker for Orthodox Christians, fasting calendar, prayer rule, daily Scripture
 
 **Body:**
 
@@ -66,9 +66,9 @@ Open to feedback on what's missing for your tradition. I know practices vary by 
 
 ---
 
-# POST 3 — r/Baptist
+# POST 3, r/Baptist
 
-**Title:** Free Bible reading streak app for Baptist believers — tracks daily reading, builds consistency
+**Title:** Free Bible reading streak app for Baptist believers, tracks daily reading, builds consistency
 
 **Body:**
 
@@ -84,7 +84,7 @@ What it does:
 - Prayer list with daily reminders
 - Verse of the day from a Baptist-appropriate selection
 
-The streak mechanic is the point. you miss a day, the streak resets. that mild sting is enough to keep most people consistent. it's the same reason Duolingo works for language learning — the streak creates accountability without needing another person in the room.
+The streak mechanic is the point. you miss a day, the streak resets. that mild sting is enough to keep most people consistent. it's the same reason Duolingo works for language learning, the streak creates accountability without needing another person in the room.
 
 Free. No ads. No email required.
 
@@ -96,7 +96,7 @@ If there are features that matter specifically to Baptist practice (Wednesday ni
 
 ---
 
-# POST 4 — r/Christianity
+# POST 4, r/Christianity
 
 **Title:** I built free daily devotional streak apps for 11 different Christian denominations (and 2 Islamic editions)
 
@@ -110,17 +110,17 @@ So I built denomination-specific versions.
 
 What's live right now:
 
-- catholic-streak.surge.sh — saints calendar, rosary, Liturgy of the Hours, fasting days
-- orthodox-streak.surge.sh — Orthodox fasting calendar (including the 4 seasons), prayer rule tracking, Orthodox lectionary
-- baptist-streak.surge.sh — daily Bible reading, reading plan options, Sunday attendance
-- methodist-streak.surge.sh — daily devotional, class meeting accountability, social justice check-ins
-- lutheran-streak.surge.sh — daily catechism, Luther's morning/evening prayers, liturgical calendar
-- episcopal-streak.surge.sh — BCP daily office tracker, Rite I and Rite II options, lectionary
-- pentecostal-streak.surge.sh — prayer and worship tracking, Holy Spirit focus, prayer language journaling
-- evangelical-streak.surge.sh — daily Bible reading, quiet time, accountability partner sharing
-- presbyterian-streak.surge.sh — Westminster Shorter Catechism daily reading, scripture meditation, Sabbath tracking
-- protestant-streak.surge.sh — general Protestant daily devotional, scripture, prayer
-- anglican-streak.surge.sh — Daily Office tracker (Morning/Evening Prayer), BCP-aligned, liturgical calendar
+- catholic-streak.surge.sh, saints calendar, rosary, Liturgy of the Hours, fasting days
+- orthodox-streak.surge.sh, Orthodox fasting calendar (including the 4 seasons), prayer rule tracking, Orthodox lectionary
+- baptist-streak.surge.sh, daily Bible reading, reading plan options, Sunday attendance
+- methodist-streak.surge.sh, daily devotional, class meeting accountability, social justice check-ins
+- lutheran-streak.surge.sh, daily catechism, Luther's morning/evening prayers, liturgical calendar
+- episcopal-streak.surge.sh, BCP daily office tracker, Rite I and Rite II options, lectionary
+- pentecostal-streak.surge.sh, prayer and worship tracking, Holy Spirit focus, prayer language journaling
+- evangelical-streak.surge.sh, daily Bible reading, quiet time, accountability partner sharing
+- presbyterian-streak.surge.sh, Westminster Shorter Catechism daily reading, scripture meditation, Sabbath tracking
+- protestant-streak.surge.sh, general Protestant daily devotional, scripture, prayer
+- anglican-streak.surge.sh, Daily Office tracker (Morning/Evening Prayer), BCP-aligned, liturgical calendar
 
 All of them are free PWAs. No account required. Works offline once loaded. No ads.
 
@@ -134,9 +134,9 @@ The streak mechanic is simple: maintain your daily practice, watch the number go
 
 ---
 
-# POST 5 — r/islam
+# POST 5, r/islam
 
-**Title:** Free Quran reading and prayer streak apps built for this Ramadan — Sunni and Shia editions, 22 days left
+**Title:** Free Quran reading and prayer streak apps built for this Ramadan, Sunni and Shia editions, 22 days left
 
 **Body:**
 
@@ -172,9 +172,9 @@ I'm not Muslim myself. I built these because I build these apps for different fa
 
 ---
 
-# POST 6 — r/MuslimLounge
+# POST 6, r/MuslimLounge
 
-**Title:** Made free Ramadan habit trackers for Sunni and Shia Muslims — 22 days left to build your streak
+**Title:** Made free Ramadan habit trackers for Sunni and Shia Muslims, 22 days left to build your streak
 
 **Body:**
 

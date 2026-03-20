@@ -1,4 +1,4 @@
-# Newsletter Draft — Platform Algorithm Wars: What Changed This Month
+# Newsletter Draft, Platform Algorithm Wars: What Changed This Month
 # STATUS: PENDING_REVIEW
 # DATE: 2026-03-07
 # CYCLE: 3

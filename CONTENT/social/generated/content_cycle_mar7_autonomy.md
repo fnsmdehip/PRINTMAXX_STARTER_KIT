@@ -1,6 +1,6 @@
-# CONTENT Autonomy Cycle — Generated Content
+# CONTENT Autonomy Cycle, Generated Content
 # Date: 2026-03-07
-# Status: QA_APPROVED (Quality Gate Cycle 9 — 2026-03-08)
+# Status: QA_APPROVED (Quality Gate Cycle 9, 2026-03-08)
 # QA Notes: Zero violations. Zero em dashes, zero banned vocab, consequence-first hooks, specific numbers throughout. All 13 pieces approved.
 # Cycle: Niche Content Farm autonomy agent (6h cycle)
 # Fresh alpha sources: ALPHA334, ALPHA296, ALPHA324, ALPHA310, ALPHA_CI_003, ALPHA336, ALPHA337, ALPHA343, ALPHA349
@@ -142,7 +142,7 @@ the code is worse. the business is better. I'll take that trade every time.
 
 ---
 
-## NEWSLETTER DRAFT: The Alpha Digest — Week of Mar 7, 2026
+## NEWSLETTER DRAFT: The Alpha Digest, Week of Mar 7, 2026
 **Subject line:** 5 things I found this week that changed how I build
 **Account:** @PRINTMAXXER
 **Platform:** Newsletter (Substack/Beehiiv)

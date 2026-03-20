@@ -244,7 +244,7 @@ the ancients called it sacred geometry. modern physics calls it theoretical fram
 ## 4. VOICE CHECK
 
 - [ ] zero em dashes (confirmed: none used)
-- [ ] zero AI vocabulary (no "leverage," "comprehensive," "innovative," "seamless," etc.)
+- [ ] zero AI vocabulary (no "use," "complete," "novel," "seamless," etc.)
 - [ ] cryptic but never pretentious (accessible to anyone curious, not gatekept)
 - [ ] specific references always (bell's theorem, pribram-bohm, antikythera, penrose tiling, E8, amplituhedron, kybalion principles by number, manly p. hall by name and age, steiner lectures by city and year)
 - [ ] lowercase energy throughout

@@ -1,4 +1,4 @@
-# Twitter Threads + Directory Submissions — Mar 8 2026
+# Twitter Threads + Directory Submissions, Mar 8 2026
 # Status: PENDING_REVIEW
 # Account: @PRINTMAXXER
 # Generated: 2026-03-08
@@ -8,7 +8,7 @@
 ## Pre-Publish Checklist
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers throughout
 - [x] Would @pipelineabuser actually post this? yes
@@ -283,7 +283,7 @@ all tools at printmaxx-tools.surge.sh
 
 ---
 
-### ProductHunt — PrayerLock
+### ProductHunt, PrayerLock
 
 **Name:** PrayerLock
 **Tagline:** Prayer streak tracker. offline-ready. no ads.
@@ -313,7 +313,7 @@ feedback welcome. especially from people who actually pray daily and have opinio
 
 ---
 
-### ProductHunt — ColdMaxx Tools
+### ProductHunt, ColdMaxx Tools
 
 **Name:** ColdMaxx Tools
 **Tagline:** Free cold email toolkit. no subscription.
@@ -347,7 +347,7 @@ what it doesn't do: sending. use Apollo, Instantly, or Smartlead for that. this 
 
 ---
 
-### ProductHunt — PrintMaxx Apps
+### ProductHunt, PrintMaxx Apps
 
 **Name:** PrintMaxx Apps
 **Tagline:** 22 micro-apps. all under 100KB. all free.
@@ -383,7 +383,7 @@ all 22 apps linked at printmaxx-portfolio.surge.sh
 
 ---
 
-### AlternativeTo — PrayerLock as alternative to Hallow
+### AlternativeTo, PrayerLock as alternative to Hallow
 
 **Name:** PrayerLock
 **Tagline:** Free, offline, no subscription
@@ -406,7 +406,7 @@ Hallow's core value is guided prayer audio, which PrayerLock doesn't have. if yo
 
 ---
 
-### AlternativeTo — FocusLock as alternative to Opal
+### AlternativeTo, FocusLock as alternative to Opal
 
 **Name:** FocusLock
 **Tagline:** Browser-based focus timer, no subscription
@@ -428,7 +428,7 @@ Opal does deep OS-level app blocking that FocusLock can't match. if you want to 
 
 ---
 
-### AlternativeTo — SleepMaxx as alternative to Sleep Cycle
+### AlternativeTo, SleepMaxx as alternative to Sleep Cycle
 
 **Name:** SleepMaxx
 **Tagline:** Sleep log tracker, offline, free
@@ -450,7 +450,7 @@ Sleep Cycle's core feature is sound-based sleep phase detection, which SleepMaxx
 
 ---
 
-### AlternativeTo — ColdMaxx as alternative to Instantly
+### AlternativeTo, ColdMaxx as alternative to Instantly
 
 **Name:** ColdMaxx Tools
 **Tagline:** Pre-send cold email toolkit, $0
@@ -472,7 +472,7 @@ Instantly is a full sending platform. ColdMaxx is the analysis layer you run bef
 
 ---
 
-### BetaList — PrayerLock
+### BetaList, PrayerLock
 
 **Name:** PrayerLock
 **Tagline:** Prayer streak tracker. 55KB. Works offline. No subscription.
@@ -492,7 +492,7 @@ What makes it different: every competing prayer app charges $7.99-$14.99/month. 
 
 ---
 
-### BetaList — ColdMaxx Tools Suite
+### BetaList, ColdMaxx Tools Suite
 
 **Name:** ColdMaxx Tools Suite
 **Tagline:** Know your cold email numbers before you pay for software.
@@ -512,7 +512,7 @@ The problem it solves: most people buy Instantly or Apollo and start sending bef
 
 ---
 
-### SaaSHub — InvoiceForge
+### SaaSHub, InvoiceForge
 
 **Name:** InvoiceForge
 **Tagline:** Free invoice generator with PDF export
@@ -541,7 +541,7 @@ What it doesn't do: recurring billing, payment processing, or accounting. for th
 
 ---
 
-### SaaSHub — PageScorer
+### SaaSHub, PageScorer
 
 **Name:** PageScorer
 **Tagline:** Website audit tool. No login. Results in 30 seconds.

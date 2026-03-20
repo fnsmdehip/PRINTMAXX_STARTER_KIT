@@ -248,7 +248,7 @@ so i built one that works differently.
 
 **flexible scheduling.** not everything needs to happen every single day. some habits are 3x/week. some are "whenever i remember." the app doesn't judge you for setting a realistic schedule.
 
-**no premium upsell guilt.** it's free. all features. no "upgrade to unlock streaks longer than 7 days" nonsense.
+**no premium upsell guilt.** it's free. all features. no "upgrade to get streaks longer than 7 days" nonsense.
 
 it's a progressive web app so you can install it from your browser. works on any phone, works offline, 55KB total. no account needed, all your data stays on your device.
 
@@ -293,7 +293,7 @@ outputs:
 
 example calculation: 1,000 leads, 45% open rate, 3% reply rate, 10% close rate, $2,000 deal value = 3 closed deals = $6,000 revenue. if your tools cost $100/mo and leads cost $0.05 each ($50), your ROI is 9,700%. now you know if it's worth running before you burn the list.
 
-the tool also shows you where the biggest leverage point is. like if bumping your reply rate from 3% to 5% doubles your revenue, maybe spend time on copy instead of buying more leads.
+the tool also shows you where the biggest use point is. like if bumping your reply rate from 3% to 5% doubles your revenue, maybe spend time on copy instead of buying more leads.
 
 **subject line grader** (subject-line-grader-pm.surge.sh)
 

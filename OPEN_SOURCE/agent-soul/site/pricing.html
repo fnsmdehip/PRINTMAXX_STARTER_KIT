@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sovrun - pricing</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0a;--bg-card:#111111;--border:#1e1e1e;--border-accent:#2a2a2a;--text:#e0e0e0;--text-dim:#888888;--text-bright:#ffffff;--accent:#3b82f6;--accent-dim:#2563eb;--green:#22c55e;--mono:'SF Mono','Cascadia Code','Fira Code',monospace;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 0}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+nav .logo{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--text-bright)}
+nav .links{display:flex;gap:24px;font-size:14px}
+nav .links a{color:var(--text-dim)}nav .links a:hover{color:var(--text-bright);text-decoration:none}
+section{padding:80px 0}
+.section-label{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:12px}
+.section-title{font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--text-bright);margin-bottom:16px;letter-spacing:-1px}
+.section-desc{font-size:16px;color:var(--text-dim);max-width:640px;line-height:1.6}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:48px}
+.price-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:32px 24px;display:flex;flex-direction:column}
+.price-card.featured{border-color:var(--accent);position:relative}
+.price-card.featured::before{content:'most popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:white;font-family:var(--mono);font-size:11px;padding:4px 12px;border-radius:4px}
+.price-name{font-family:var(--mono);font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.price-amount{font-size:36px;font-weight:700;color:var(--text-bright);margin-bottom:4px;font-family:var(--mono)}
+.price-amount span{font-size:16px;color:var(--text-dim);font-weight:400}
+.price-desc{font-size:14px;color:var(--text-dim);margin-bottom:24px;line-height:1.5}
+.price-features{list-style:none;flex:1}
+.price-features li{font-size:13px;color:var(--text);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.price-features li::before{content:'';display:inline-block;width:6px;height:6px;background:var(--green);border-radius:50%;margin-right:10px;vertical-align:middle}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:6px;font-family:var(--mono);font-size:14px;font-weight:500;border:none;cursor:pointer;transition:all 0.15s;text-align:center;justify-content:center;margin-top:24px;width:100%}
+.btn-primary{background:var(--accent);color:white}.btn-primary:hover{background:var(--accent-dim);text-decoration:none}
+.btn-secondary{background:transparent;color:var(--text);border:1px solid var(--border-accent)}.btn-secondary:hover{border-color:var(--text-dim);text-decoration:none}
+.consulting-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:32px}
+.consult-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+.consult-name{font-family:var(--mono);font-size:16px;font-weight:600;color:var(--text-bright);margin-bottom:4px}
+.consult-price{font-family:var(--mono);font-size:14px;color:var(--accent);margin-bottom:12px}
+.consult-desc{font-size:13px;color:var(--text-dim);line-height:1.5;margin-bottom:16px}
+.consult-list{list-style:none;font-size:13px;color:var(--text)}
+.consult-list li{padding:4px 0}
+.consult-list li::before{content:'>';font-family:var(--mono);color:var(--accent);margin-right:8px}
+.faq{margin-top:48px}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-q{font-weight:600;color:var(--text-bright);font-size:15px;margin-bottom:8px}
+.faq-a{font-size:14px;color:var(--text-dim);line-height:1.6}
+footer{border-top:1px solid var(--border);padding:40px 0;text-align:center}
+footer .footer-links{display:flex;gap:24px;justify-content:center;font-family:var(--mono);font-size:13px;margin-bottom:16px}
+footer .footer-links a{color:var(--text-dim)}footer .footer-links a:hover{color:var(--text-bright)}
+footer .footer-note{font-family:var(--mono);font-size:12px;color:var(--text-dim);opacity:0.5}
+@media(max-width:768px){section{padding:60px 0}.pricing-grid,.consulting-grid{grid-template-columns:1fr}nav .links{gap:16px;font-size:13px}}
+@media(max-width:480px){nav .links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="container"><a href="index.html" class="logo">sovrun</a><div class="links"><a href="docs.html">docs</a><a href="compare.html">compare</a><a href="architecture.html">architecture</a><a href="pricing.html">pricing</a><a href="https://github.com/fnsmdehip/sovrun">github</a></div></div></nav>
+
+<section style="padding-top:140px">
+<div class="container">
+<p class="section-label">pricing</p>
+<h2 class="section-title">free forever. pay for convenience.</h2>
+<p class="section-desc">all 19 modules are MIT licensed. self-host for free. pay if you want managed hosting, pre-configured connectors, or team features.</p>
+
+<div class="pricing-grid">
+<div class="price-card">
+<div class="price-name">free</div>
+<div class="price-amount">$0<span>/forever</span></div>
+<div class="price-desc">self-hosted. full system. no limits.</div>
+<ul class="price-features">
+<li>all 19 modules</li>
+<li>126 MCP connectors (self-setup)</li>
+<li>memory import from any LLM</li>
+<li>DAG orchestration</li>
+<li>crash recovery with replay</li>
+<li>procedural memory + skill docs</li>
+<li>voice model + drift scoring</li>
+<li>CLI tools (all entry points)</li>
+<li>MIT license</li>
+<li>community support (GitHub issues)</li>
+</ul>
+<a href="https://github.com/fnsmdehip/sovrun" class="btn btn-secondary">git clone</a>
+</div>
+
+<div class="price-card featured">
+<div class="price-name">pro</div>
+<div class="price-amount">$29<span>/mo</span></div>
+<div class="price-desc">managed hosting. zero setup.</div>
+<ul class="price-features">
+<li>everything in free</li>
+<li>managed cloud hosting</li>
+<li>visual trace dashboard</li>
+<li>pre-configured connectors (one-click)</li>
+<li>automatic cognitive model updates</li>
+<li>priority support (24h response)</li>
+<li>auto-scaling agent execution</li>
+<li>daily health reports</li>
+</ul>
+<a href="#" class="btn btn-primary">coming soon</a>
+</div>
+
+<div class="price-card">
+<div class="price-name">team</div>
+<div class="price-amount">$99<span>/mo</span></div>
+<div class="price-desc">multi-user. shared intelligence.</div>
+<ul class="price-features">
+<li>everything in pro</li>
+<li>up to 10 team members</li>
+<li>shared skill library</li>
+<li>team-wide voice models</li>
+<li>RBAC (role-based access)</li>
+<li>team analytics dashboard</li>
+<li>SSO (Google, GitHub, SAML)</li>
+<li>audit logs</li>
+</ul>
+<a href="#" class="btn btn-secondary">coming soon</a>
+</div>
+
+<div class="price-card">
+<div class="price-name">enterprise</div>
+<div class="price-amount">custom</div>
+<div class="price-desc">dedicated infra. compliance.</div>
+<ul class="price-features">
+<li>everything in team</li>
+<li>unlimited team members</li>
+<li>dedicated infrastructure</li>
+<li>SOC 2 / HIPAA compliance</li>
+<li>99.9% SLA</li>
+<li>custom agent development</li>
+<li>onboarding + training</li>
+<li>dedicated support engineer</li>
+</ul>
+<a href="mailto:enterprise@sovrun.dev" class="btn btn-secondary">contact us</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="consulting">
+<div class="container">
+<p class="section-label">consulting</p>
+<h2 class="section-title">need it installed for you?</h2>
+<p class="section-desc">our consulting arm deploys sovrun into your infrastructure. we audit your systems, identify automation opportunities, build custom agents, and manage ongoing operations.</p>
+
+<div class="consulting-grid">
+<div class="consult-card">
+<div class="consult-name">Signal Map</div>
+<div class="consult-price">$1,500 flat (5 days)</div>
+<div class="consult-desc">we audit your current systems and identify every automation opportunity with ROI estimates.</div>
+<ul class="consult-list">
+<li>full systems audit</li>
+<li>automation opportunity map</li>
+<li>ROI projections per automation</li>
+<li>implementation roadmap</li>
+<li>tech stack recommendations</li>
+</ul>
+</div>
+
+<div class="consult-card">
+<div class="consult-name">Phone Pilot</div>
+<div class="consult-price">$3,500 flat (10 days)</div>
+<div class="consult-desc">we deploy sovrun with voice agents that handle your phone calls, appointments, and lead qualification.</div>
+<ul class="consult-list">
+<li>sovrun deployment</li>
+<li>voice agent setup (Retell AI)</li>
+<li>call routing + transcription</li>
+<li>CRM integration</li>
+<li>30-day support included</li>
+</ul>
+</div>
+
+<div class="consult-card">
+<div class="consult-name">Ops Pilot</div>
+<div class="consult-price">$4,500 flat (10 days)</div>
+<div class="consult-desc">full sovrun deployment with custom agents, workflow automation, and intelligence routing for your specific operations.</div>
+<ul class="consult-list">
+<li>full sovrun deployment</li>
+<li>custom agent development</li>
+<li>n8n workflow automation</li>
+<li>MCP connector setup</li>
+<li>intelligence routing configured</li>
+<li>30-day support included</li>
+</ul>
+</div>
+
+<div class="consult-card">
+<div class="consult-name">Managed Ops</div>
+<div class="consult-price">$1,500-3,000/mo</div>
+<div class="consult-desc">ongoing management. we run your sovrun deployment, monitor agent health, optimize workflows, and handle issues.</div>
+<ul class="consult-list">
+<li>24/7 agent monitoring</li>
+<li>weekly optimization reports</li>
+<li>new agent development (2/mo)</li>
+<li>workflow maintenance</li>
+<li>priority support (4h response)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<p class="section-label">faq</p>
+<h2 class="section-title">common questions</h2>
+<div class="faq">
+<div class="faq-item">
+<div class="faq-q">is it really free?</div>
+<div class="faq-a">yes. all 19 modules, MIT license, no usage limits, no feature gates. self-host on your machine or server. the paid tiers are for managed hosting and team features. the code is identical.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">what's the difference between self-hosted and pro?</div>
+<div class="faq-a">self-hosted: you run it, you maintain it, you configure connectors yourself. pro: we host it, we maintain it, connectors are pre-configured, you get a visual dashboard. same code either way.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">do I need an LLM API key?</div>
+<div class="faq-a">sovrun itself doesn't call LLMs. it's the cognitive and orchestration layer that wraps around whatever LLM you use. your agents call the LLM. sovrun makes those agents smarter (voice model, correction chains, drift scoring) and more reliable (DAG orchestration, crash recovery, handoffs).</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">can I use it with OpenAI / Gemini / local models?</div>
+<div class="faq-a">yes. sovrun is model-agnostic. the voice model, correction chains, and drift scoring work with any LLM output. the memory import module reads ChatGPT, Claude, and Gemini exports.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">what's the consulting for?</div>
+<div class="faq-a">businesses that want sovrun deployed but don't have the technical team to do it. we come in, audit your systems, build custom agents for your specific workflows, configure everything, and optionally manage it ongoing. same system, professional installation.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">how is this different from n8n or Zapier?</div>
+<div class="faq-a">n8n and Zapier are workflow automation (when X happens, do Y). sovrun is an agent OS (agents that learn your patterns, orchestrate themselves, recover from crashes, and score their own output quality). sovrun can create n8n workflows programmatically. they solve different problems and work together.</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer><div class="container"><div class="footer-links"><a href="https://github.com/fnsmdehip/sovrun">github</a><a href="docs.html">docs</a><a href="compare.html">compare</a><a href="index.html">home</a></div><p class="footer-note">stdlib only. zero deps. python 3.10+. MIT license.</p></div></footer>
+</body>
+</html>

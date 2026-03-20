@@ -1,0 +1,90 @@
+{
+  "cycle": 77,
+  "timestamp": "2026-03-19T07:21:23.297232+00:00",
+  "niches": {
+    "public_speaking_streak": {
+      "community_total": 852000,
+      "app_count": 3,
+      "classification": "blue_ocean",
+      "top_competing_app": "Orai - Public Speaking App",
+      "notes_summary": "Orai/Speeko offer lesson curriculum and AI feedback. NONE track a simple daily 'did you practice speaking?' accountabili"
+    },
+    "negotiation_streak": {
+      "community_total": 5332000,
+      "app_count": 1,
+      "classification": "blue_ocean",
+      "top_competing_app": "Never Split the Difference",
+      "notes_summary": "Never Split the Difference companion is a book app, not streak tracker. No negotiation daily practice streak app found. "
+    },
+    "journaling_freewrite_streak": {
+      "community_total": 3102000,
+      "app_count": 4,
+      "classification": "soft_competition",
+      "top_competing_app": "Day One Journal",
+      "notes_summary": "Day One and Journey are rich diary apps \u2014 NOT 750-words streak apps. 750words.com (web-only, 80K users) is the reference"
+    },
+    "anger_management_streak": {
+      "community_total": 2790000,
+      "app_count": 3,
+      "classification": "blue_ocean",
+      "top_competing_app": "Woebot - Mental Health Support",
+      "notes_summary": "Woebot is a therapy chatbot. Happify is mood games. None have a dedicated daily anger-management PRACTICE streak (breath"
+    },
+    "composting_streak": {
+      "community_total": 6690000,
+      "app_count": 3,
+      "classification": "blue_ocean",
+      "top_competing_app": "ShareWaste - Find Composting",
+      "notes_summary": "ShareWaste finds composting spots but does NOT track daily compost-check habit. No app in the App Store asks 'did you ad"
+    },
+    "plant_based_streak": {
+      "community_total": 7320000,
+      "app_count": 4,
+      "classification": "blue_ocean",
+      "top_competing_app": "Cronometer - Nutrition Tracker",
+      "notes_summary": "Cronometer/MFP track nutrition but do NOT have a 'ate plant-based today' streak mechanic. HappyCow is a restaurant finde"
+    },
+    "guitar_chord_streak": {
+      "community_total": 3840000,
+      "app_count": 4,
+      "classification": "occupied",
+      "top_competing_app": "Yousician - Guitar, Piano",
+      "notes_summary": "SOFT COMPETITION. Yousician, Fender Play, Simply Guitar all have streak features embedded in lesson curriculum. A standa"
+    },
+    "chess_tactics_streak": {
+      "community_total": 4090000,
+      "app_count": 4,
+      "classification": "occupied",
+      "top_competing_app": "Chess.com - Play & Learn",
+      "notes_summary": "OCCUPIED. Chess.com's daily puzzle streak is a flagship feature with 90M+ users. Lichess has puzzle streaks. Magnus Trai"
+    },
+    "data_tracking_streak": {
+      "community_total": 2810000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "Apple Health",
+      "notes_summary": "Apple Health passively collects. Bearable tracks symptoms without streak gamification. Daylio has mood + activity streak"
+    },
+    "sewing_streak": {
+      "community_total": 1911000,
+      "app_count": 3,
+      "classification": "blue_ocean",
+      "top_competing_app": "Sewist - Sewing Pattern App",
+      "notes_summary": "All sewing apps are pattern viewers or project trackers. NONE have a daily sewing habit streak. r/sewing 1.1M community "
+    },
+    "origami_streak": {
+      "community_total": 1220000,
+      "app_count": 3,
+      "classification": "blue_ocean",
+      "top_competing_app": "iOrigami",
+      "notes_summary": "All origami apps are instruction viewers or games. No daily origami practice streak app. r/origami 420K posts daily fold"
+    },
+    "financial_tracking_streak": {
+      "community_total": 22890000,
+      "app_count": 4,
+      "classification": "occupied",
+      "top_competing_app": "YNAB - Budget & Finance App",
+      "notes_summary": "YNAB, Copilot, Monarch all track spending but have ZERO streak gamification. Daily financial check-in habit ('reviewed f"
+    }
+  }
+}

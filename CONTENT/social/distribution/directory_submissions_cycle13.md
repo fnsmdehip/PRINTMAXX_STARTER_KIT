@@ -1,4 +1,4 @@
-# Directory submissions — cycle 13
+# Directory submissions, cycle 13
 # Status: PENDING_REVIEW
 # Created: 2026-03-09
 
@@ -19,7 +19,7 @@ hey everyone. built this because I kept getting feedback like "the page feels of
 
 PageScorer gives you a number, not vibes.
 
-8 criteria. 30 seconds. free to run. took me 3 weeks to build the scoring rubric — based on 200+ landing page audits I did manually before automating it.
+8 criteria. 30 seconds. free to run. took me 3 weeks to build the scoring rubric, based on 200+ landing page audits I did manually before automating it.
 
 if you paste your URL in the comments I'll run it live and share the score here.
 
@@ -65,7 +65,7 @@ free. no account needed. works offline.
 
 ## ALTERNATIVETO
 
-### FocusLock — listed as alternative to: Forest, Opal
+### FocusLock, listed as alternative to: Forest, Opal
 
 **App name:** FocusLock
 
@@ -78,7 +78,7 @@ FocusLock is a focus timer that blocks browser tabs during work sessions. Unlike
 
 ---
 
-### TaskSmash — listed as alternative to: Todoist, Things 3
+### TaskSmash, listed as alternative to: Todoist, Things 3
 
 **App name:** TaskSmash
 

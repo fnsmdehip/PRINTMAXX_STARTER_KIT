@@ -1,19 +1,19 @@
-# Lead Magnet Distribution — Cycle 12 (2026-03-08)
+# Lead Magnet Distribution, Cycle 12 (2026-03-08)
 
 ## LIVE LEAD MAGNETS
-1. https://revenue-leak-audit.surge.sh — Revenue leak calculator for SaaS/businesses
-2. https://cold-email-roi-calculator.surge.sh — Cold email ROI calculator
-3. https://cold-email-deliverability-checklist.surge.sh — Email deliverability checklist
-4. https://saas-stack-audit.surge.sh — SaaS stack audit tool
-5. https://ramadan-daily-planner.surge.sh — Ramadan daily planner
-6. https://printmaxx-lead-magnets.surge.sh — Hub page
+1. https://revenue-leak-audit.surge.sh, Revenue leak calculator for SaaS/businesses
+2. https://cold-email-roi-calculator.surge.sh, Cold email ROI calculator
+3. https://cold-email-deliverability-checklist.surge.sh, Email deliverability checklist
+4. https://saas-stack-audit.surge.sh, SaaS stack audit tool
+5. https://ramadan-daily-planner.surge.sh, Ramadan daily planner
+6. https://printmaxx-lead-magnets.surge.sh, Hub page
 
 ---
 
 ## REDDIT DISTRIBUTION
 
 ### Post 1: r/coldoutreach (25K members)
-**Title:** free cold email ROI calculator — plug in your numbers, see if outbound is worth it before you send a single email
+**Title:** free cold email ROI calculator, plug in your numbers, see if outbound is worth it before you send a single email
 
 **Body:**
 built a calculator that tells you whether cold email is worth pursuing for your specific business.
@@ -36,7 +36,7 @@ built it because i was tired of "cold email works for everyone" advice. the math
 ---
 
 ### Post 2: r/Emailmarketing (90K members)
-**Title:** free deliverability checklist — 47 things to check before your cold emails land in spam
+**Title:** free deliverability checklist, 47 things to check before your cold emails land in spam
 
 **Body:**
 built an interactive checklist for email deliverability. goes through everything from DNS records to content formatting.
@@ -56,7 +56,7 @@ free, no account. check off items as you go, progress saves locally.
 ---
 
 ### Post 3: r/SaaS (120K members)
-**Title:** free tool — audit your SaaS stack and find where you're wasting money
+**Title:** free tool, audit your SaaS stack and find where you're wasting money
 
 **Body:**
 built a SaaS stack audit tool. plug in your tools and monthly costs, it identifies:
@@ -73,7 +73,7 @@ no signup, saves locally. built it after realizing i was spending $340/mo on too
 ---
 
 ### Post 4: r/Entrepreneur (2.5M members)
-**Title:** free revenue leak calculator — most businesses lose 15-30% of revenue to fixable problems
+**Title:** free revenue leak calculator, most businesses lose 15-30% of revenue to fixable problems
 
 **Body:**
 built a calculator that identifies where revenue is leaking in your business.
@@ -162,9 +162,9 @@ https://revenue-leak-audit.surge.sh
 
 ## DISTRIBUTION PRIORITY
 
-1. r/coldoutreach — ROI calculator (direct audience, high intent)
-2. r/Emailmarketing — Deliverability checklist (pain point content)
-3. r/SaaS — Stack audit (cost savings angle)
-4. r/Entrepreneur — Revenue leak calculator (broad appeal)
+1. r/coldoutreach, ROI calculator (direct audience, high intent)
+2. r/Emailmarketing, Deliverability checklist (pain point content)
+3. r/SaaS, Stack audit (cost savings angle)
+4. r/Entrepreneur, Revenue leak calculator (broad appeal)
 5. Twitter posts (3 standalone posts, one per tool)
 6. LinkedIn posts (professional audience for B2B tools)

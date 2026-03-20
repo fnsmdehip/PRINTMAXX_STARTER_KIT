@@ -1,4 +1,4 @@
-# Reddit Content Mining — What to Extract and Where to Use It
+# Reddit Content Mining, What to Extract and Where to Use It
 
 ## The Core Insight
 
@@ -32,7 +32,7 @@ Becomes cold email subject line: "most Notion templates don't work for how you a
 ---
 
 ### 2. Proven Solutions That Work
-Posts where someone shares a working framework — these have already been validated by the community's upvotes.
+Posts where someone shares a working framework, these have already been validated by the community's upvotes.
 
 **What to look for:**
 - Posts with 500+ upvotes explaining a specific method
@@ -141,11 +141,11 @@ Every Monday morning:
 **Step 3: Extract and tag (10 min)**
 
 For each piece of useful content, tag it:
-- `PAIN_POINT` — language to use in copy
-- `FRAMEWORK` — method to repurpose as content
-- `PROOF` — number or case study to reference
-- `TRENDING` — topic to build content around
-- `OBJECTION` — concern to pre-handle
+- `PAIN_POINT`, language to use in copy
+- `FRAMEWORK`, method to repurpose as content
+- `PROOF`, number or case study to reference
+- `TRENDING`, topic to build content around
+- `OBJECTION`, concern to pre-handle
 
 **Step 4: Convert to content (varies)**
 
@@ -216,16 +216,16 @@ One Reddit thread → 7+ content pieces:
 
 Ranked by quality-to-noise ratio:
 
-1. **r/Entrepreneur** — business models, revenue reports
-2. **r/SideProject** — app launches, product feedback
-3. **r/juststart** — affiliate marketing, niche sites
-4. **r/sweatystartup** — local biz, service business numbers
-5. **r/digitalmarketing** — platform changes, campaign data
-6. **r/freelance** — rate discussions, client problems
-7. **r/ChatGPT** — AI tool adoption patterns
-8. **r/SEO** — algorithm changes, ranking case studies
-9. **r/Notion** — power user workflows, feature requests
-10. **r/passive_income** — what's actually working for people right now
+1. **r/Entrepreneur**, business models, revenue reports
+2. **r/SideProject**, app launches, product feedback
+3. **r/juststart**, affiliate marketing, niche sites
+4. **r/sweatystartup**, local biz, service business numbers
+5. **r/digitalmarketing**, platform changes, campaign data
+6. **r/freelance**, rate discussions, client problems
+7. **r/ChatGPT**, AI tool adoption patterns
+8. **r/SEO**, algorithm changes, ranking case studies
+9. **r/Notion**, power user workflows, feature requests
+10. **r/passive_income**, what's actually working for people right now
 
 ---
 
@@ -235,6 +235,6 @@ Ranked by quality-to-noise ratio:
 - Synthesize: take the insight, add your own experience/data, write fresh
 - If you use a specific quote or case study, don't identify the user
 - General statistics ("multiple Reddit users reported X") are fine
-- Platform rules don't prohibit learning from public posts — they prohibit scraping for spam
+- Platform rules don't prohibit learning from public posts, they prohibit scraping for spam
 
 The line: extracting insight = fine. Copying content = not fine.

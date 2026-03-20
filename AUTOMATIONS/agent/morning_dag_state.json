@@ -1,0 +1,41 @@
+{
+  "last_run": "2026-03-20T06:00:07.935713",
+  "elapsed_seconds": 5.6,
+  "steps": {
+    "scrape_twitter": {
+      "status": "COMPLETE",
+      "duration_ms": 148,
+      "error": ""
+    },
+    "scrape_reddit": {
+      "status": "COMPLETE",
+      "duration_ms": 47,
+      "error": ""
+    },
+    "scrape_hn": {
+      "status": "COMPLETE",
+      "duration_ms": 49,
+      "error": ""
+    },
+    "merge_results": {
+      "status": "COMPLETE",
+      "duration_ms": 0,
+      "error": ""
+    },
+    "alpha_processor": {
+      "status": "COMPLETE",
+      "duration_ms": 4027,
+      "error": ""
+    },
+    "intelligence_router": {
+      "status": "COMPLETE",
+      "duration_ms": 124,
+      "error": ""
+    },
+    "capital_genesis_ranker": {
+      "status": "COMPLETE",
+      "duration_ms": 1042,
+      "error": ""
+    }
+  }
+}

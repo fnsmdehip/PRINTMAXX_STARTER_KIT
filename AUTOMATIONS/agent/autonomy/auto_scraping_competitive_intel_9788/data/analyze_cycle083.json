@@ -1,0 +1,110 @@
+{
+  "cycle": 83,
+  "timestamp": "2026-03-19T15:57:23.109045+00:00",
+  "scored_niches": [
+    {
+      "niche": "daily_budgeting_habit_streak",
+      "community_total": 21200000,
+      "verdict": "SOFT_COMPETITION",
+      "score": 10.6,
+      "priority": "P0",
+      "notes": "21.2M personal finance community. YNAB, Mint, Copilot all have partial tracking. Gap: no app purely gamifies the daily budget review HABIT (5-min daily log check, spend categorization, weekly target review) with XP/streak separate from budget management."
+    },
+    {
+      "niche": "daily_photography_streak",
+      "community_total": 5720000,
+      "verdict": "SOFT_COMPETITION",
+      "score": 2.86,
+      "priority": "P0",
+      "notes": "5.72M photography community. VSCO has daily photo challenges and some tracking. Gap: no app purely gamifies the daily photography SKILL practice habit (one composition study, one lighting drill) with XP/streak separate from editing or sharing."
+    },
+    {
+      "niche": "daily_dnd_dm_skills_streak",
+      "community_total": 5380000,
+      "verdict": "BLUE_OCEAN",
+      "score": 5.38,
+      "priority": "P0",
+      "notes": "5.38M DnD community. D&D Beyond manages characters, DM Screen runs sessions. No app gamifies the daily DM skill practice habit (prep one encounter, study one monster, write one scene hook) with streak/XP \u2014 huge underserved audience of aspiring DMs."
+    },
+    {
+      "niche": "daily_woodworking_streak",
+      "community_total": 4768000,
+      "verdict": "BLUE_OCEAN",
+      "score": 4.77,
+      "priority": "P0",
+      "notes": "4.77M woodworking community. Apps are plan libraries and calculators. No app gamifies the daily woodworking practice habit (15 min chisel drills, joinery reps, finishing technique) with streak/XP \u2014 massive underserved gap."
+    },
+    {
+      "niche": "daily_journaling_habit_streak",
+      "community_total": 3170000,
+      "verdict": "SOFT_COMPETITION",
+      "score": 1.58,
+      "priority": "P0",
+      "notes": "3.17M journaling community. Day One, Reflectly, Journey, 5MJ all have basic streaks. Gap: all are private diary tools \u2014 no app adds full gamification layer (XP, levels, achievement badges, writing challenges) on top of journaling habit."
+    },
+    {
+      "niche": "daily_affirmation_streak",
+      "community_total": 2780000,
+      "verdict": "SOFT_COMPETITION",
+      "score": 1.39,
+      "priority": "P0",
+      "notes": "2.78M LOA/self-improvement community. I Am and ThinkUp have basic streaks. Gap: no app combines full streak gamification (XP, levels, community challenges) with affirmation practice \u2014 existing apps are reminder utilities not gamified habit systems."
+    },
+    {
+      "niche": "daily_options_trading_streak",
+      "community_total": 2770000,
+      "verdict": "BLUE_OCEAN",
+      "score": 2.77,
+      "priority": "P0",
+      "notes": "2.77M options/thetagang community. Brokerages execute trades. Simulators practice trading. No app gamifies the daily options SKILL habit (one Greeks study, one strategy backtest, one setup identification) with streak/XP for self-taught traders."
+    },
+    {
+      "niche": "daily_knitting_crochet_streak",
+      "community_total": 2600000,
+      "verdict": "BLUE_OCEAN",
+      "score": 2.6,
+      "priority": "P0",
+      "notes": "2.6M knitting/crochet community. Ravelry tracks projects, Knit Companion counts rows. No app gamifies the daily practice habit (10 rows/day, new stitch per week) with streak/XP/leveling for fiber arts practitioners."
+    },
+    {
+      "niche": "daily_drawing_practice_streak",
+      "community_total": 2390000,
+      "verdict": "BLUE_OCEAN",
+      "score": 2.39,
+      "priority": "P0",
+      "notes": "2.39M drawing/art community. Procreate is the drawing tool. Drawing Academy teaches. No app specifically gamifies the daily 10-minute drawing habit with streak/XP for beginners building consistency \u2014 clear gap."
+    },
+    {
+      "niche": "daily_bookkeeping_skills_streak",
+      "community_total": 1730000,
+      "verdict": "BLUE_OCEAN",
+      "score": 1.73,
+      "priority": "P1",
+      "notes": "1.73M accounting/small biz community. QuickBooks manages real finances. No app gamifies the daily bookkeeping skill habit (one journal entry, one reconciliation drill, one financial statement exercise) with streak/XP for solopreneurs learning accounting."
+    },
+    {
+      "niche": "daily_poker_strategy_streak",
+      "community_total": 1242000,
+      "verdict": "BLUE_OCEAN",
+      "score": 1.24,
+      "priority": "P1",
+      "notes": "1.24M poker community. PokerStars runs games, WSOP is play money, GTO Wizard solves hands. No app gamifies the daily poker STUDY habit (one hand history review, one GTO concept, one range exercise) with streak/XP for serious amateur players."
+    },
+    {
+      "niche": "daily_speedcubing_practice_streak",
+      "community_total": 1070000,
+      "verdict": "BLUE_OCEAN",
+      "score": 1.07,
+      "priority": "P1",
+      "notes": "1.07M cubing community. Timer apps dominate (CS Timer, Twisty Timer). CubeX teaches algorithms. No app gamifies the daily practice habit (X solves per day, algorithm drill session, PLL/OLL practice) with streak/XP \u2014 niche but passionate audience."
+    },
+    {
+      "niche": "daily_tarot_practice_streak",
+      "community_total": 1010000,
+      "verdict": "BLUE_OCEAN",
+      "score": 1.01,
+      "priority": "P1",
+      "notes": "1.01M tarot community. Labyrinthos teaches card meanings. Mystic Mondays has daily pulls. No app gamifies the daily PRACTICE habit (one three-card spread, journal interpretation, accuracy tracking) with streak/XP for intermediate tarot practitioners."
+    }
+  ]
+}

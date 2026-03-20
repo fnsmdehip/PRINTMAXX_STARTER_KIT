@@ -1,9 +1,9 @@
-# Curated Beauty/Aesthetic Page — Account Package
+# Curated Beauty/Aesthetic Page, Account Package
 
 **Status:** PENDING_REVIEW
 **Created:** 2026-02-13 | **Updated:** 2026-02-14
-**Niche:** Curated aesthetic women/beauty photography — engagement farming + monetization
-**Style reference:** @beautyshowcase (PRIMARY — studied), @FemenineFrames, @BeautyFeminine, @AestheticGirls_
+**Niche:** Curated aesthetic women/beauty photography, engagement farming + monetization
+**Style reference:** @beautyshowcase (PRIMARY, studied), @FemenineFrames, @BeautyFeminine, @AestheticGirls_
 **Study doc:** OPS/BEAUTYSHOWCASE_STUDY.md (full reverse-engineering)
 **Target audience:** Men 18-35 who engage with beauty/aesthetic content on X. Women who follow for aspirational aesthetics.
 
@@ -13,13 +13,13 @@
 
 ### Handle Options (ranked)
 
-1. ~~**@velvetframes**~~ — TAKEN. was first choice but handle exists on X.
-2. **@velvetframes** ✅ AVAILABLE — luxe, aesthetic, non-corny. "velvet" implies softness + premium. sounds like a photography account. **NEW PRIMARY CHOICE.**
-3. ~~**@goldenframes_**~~ — TAKEN. handle exists on X.
-4. **@softfocusHQ** — photography term (soft focus). "HQ" adds authority. clean.
-5. **@framedarling** — playful, aesthetic. "darling" is vintage-feminine without being cringe.
+1. ~~**@velvetframes**~~, TAKEN. was first choice but handle exists on X.
+2. **@velvetframes** ✅ AVAILABLE, luxe, aesthetic, non-corny. "velvet" implies softness + premium. sounds like a photography account. **NEW PRIMARY CHOICE.**
+3. ~~**@goldenframes_**~~, TAKEN. handle exists on X.
+4. **@softfocusHQ**, photography term (soft focus). "HQ" adds authority. clean.
+5. **@framedarling**, playful, aesthetic. "darling" is vintage-feminine without being cringe.
 
-**Recommended: @velvetframes** (updated — @velvetframes was taken)
+**Recommended: @velvetframes** (updated, @velvetframes was taken)
 
 why: luxe, aesthetic, photography-native, doesn't sound like a thirst trap. "velvet" implies softness + premium quality. sounds like it could be a photography brand, not just a repost page. clean, memorable, available.
 
@@ -29,19 +29,19 @@ why: luxe, aesthetic, photography-native, doesn't sound like a thirst trap. "vel
 
 lowercase. clean. minimal. matches the aesthetic of the images.
 
-### Bio (CRITICAL — LEGAL DISCLAIMER BUILT IN)
+### Bio (CRITICAL, LEGAL DISCLAIMER BUILT IN)
 
 ```
 quiet beauty. golden light. soft focus.
-curated photography — not my content.
+curated photography, not my content.
 credit in replies. DM for removal.
 ```
 
 **Why this works:**
-- "curated photography" — frames it as curation, not claiming ownership
-- "not my content" — explicit disclaimer that this is reposted
-- "credit in replies" — shows good faith effort to attribute
-- "DM for removal" — DMCA-lite. shows willingness to comply with takedowns
+- "curated photography", frames it as curation, not claiming ownership
+- "not my content", explicit disclaimer that this is reposted
+- "credit in replies", shows good faith effort to attribute
+- "DM for removal", DMCA-lite. shows willingness to comply with takedowns
 - zero cringe. reads like a photography magazine, not a thirst account.
 
 **Alternative bio (more engagement-focused):**
@@ -53,7 +53,7 @@ curated. credited. DM for removal.
 ### Profile Aesthetic
 
 - **Avatar:** a simple golden/warm-toned circle or abstract shape. NOT a woman's photo (avoids confusion about identity). could be a camera aperture icon in gold on cream background.
-- **Banner:** a tasteful film strip / polaroid collage aesthetic in warm tones. or a single golden hour landscape (no people — the posts have people, the branding should be clean).
+- **Banner:** a tasteful film strip / polaroid collage aesthetic in warm tones. or a single golden hour landscape (no people, the posts have people, the branding should be clean).
 - **Color scheme:** warm gold, cream, soft white, muted earth tones
 - **Vibe:** the page should feel like flipping through a coffee table photography book. classy, not trashy.
 
@@ -63,7 +63,7 @@ curated. credited. DM for removal.
 |----------|--------|--------------|----------|
 | X/Twitter | @velvetframes | Primary. curated photos, aesthetic carousels | PRIMARY |
 | Instagram | @velvetframes | Reels of photo compilations, carousels, stories | HIGH |
-| Pinterest | @velvetframes | Pin every image — Pinterest LOVES this content | MEDIUM |
+| Pinterest | @velvetframes | Pin every image, Pinterest LOVES this content | MEDIUM |
 | TikTok | @velvetframes | Slideshow compilations with trending audio | LATER |
 
 ---
@@ -72,28 +72,28 @@ curated. credited. DM for removal.
 
 ### DMCA / Copyright Protection
 
-1. **bio disclaimer:** "not my content. credit in replies. DM for removal." — this shows good faith
+1. **bio disclaimer:** "not my content. credit in replies. DM for removal.", this shows good faith
 2. **credit in replies:** after every post, reply with "@[original creator]" or "credit: [source]" if known
 3. **DM for removal:** if ANY creator DMs asking to take down their image, remove it within 24 hours. no arguing. no delays. just remove.
 4. **never claim ownership:** never say "shot by me" or imply the content is original
 5. **link original when possible:** if you know the photographer or model, tag them
 6. **use public content only:** only repost from public profiles. never from private/locked accounts.
 
-### Age Verification (CRITICAL — NO EXCEPTIONS)
+### Age Verification (CRITICAL, NO EXCEPTIONS)
 
 **ONLY POST CONTENT OF ADULTS (18+). ZERO TOLERANCE.**
 
 verification methods:
-1. **source from verified/known adult models/influencers only** — if they have a professional IG with sponsorships, brand deals, modeling agency links, they are verified adults
-2. **when in doubt, DON'T POST IT** — if you can't confirm someone is 18+, skip them entirely
+1. **source from verified/known adult models/influencers only**, if they have a professional IG with sponsorships, brand deals, modeling agency links, they are verified adults
+2. **when in doubt, DON'T POST IT**, if you can't confirm someone is 18+, skip them entirely
 3. **red flags to avoid:**
-   - anyone who looks potentially under 18 — skip. doesn't matter if they're actually 25.
+   - anyone who looks potentially under 18, skip. doesn't matter if they're actually 25.
    - school/college setting photos (could be minors)
    - accounts that mix content of various ages
    - any content from TikTok unless the creator is a known adult influencer
 4. **preferred sources (safest):**
    - professional model Instagram accounts (verified, 18+, agency-represented)
-   - Reddit communities that require age verification (r/models, r/beautifulfemales — both require 18+ verified OC)
+   - Reddit communities that require age verification (r/models, r/beautifulfemales, both require 18+ verified OC)
    - stock photography sites (all models sign releases confirming 18+)
    - fashion/beauty brand campaigns (all models are contracted adults)
    - celebrity/public figure photos (obviously 18+)
@@ -113,7 +113,7 @@ verification methods:
 ### Platform Rules
 
 - **X/Twitter:** allows this type of content. no nudity in feed (mark sensitive if needed). no explicit content without age-gating.
-- **Instagram:** stricter. no implied nudity. suggestive content gets shadowbanned. keep it tasteful — golden hour, fashion, lifestyle, not bikini shots.
+- **Instagram:** stricter. no implied nudity. suggestive content gets shadowbanned. keep it tasteful, golden hour, fashion, lifestyle, not bikini shots.
 - **Pinterest:** very permissive for aesthetic/beauty content. great for traffic.
 - **TikTok:** slideshows with trending audio do well. keep it aesthetic, not provocative.
 
@@ -121,7 +121,7 @@ verification methods:
 
 ## 3. CONTENT SOURCING PLAYBOOK
 
-### Tier 1 Sources (Safest — Start Here)
+### Tier 1 Sources (Safest, Start Here)
 
 | Source | Why It's Safe | Content Type |
 |--------|---------------|-------------|
@@ -131,7 +131,7 @@ verification methods:
 | **Reddit r/beautifulfemales** | Requires 18+ verification for OC posters | Curated beauty photos |
 | **Celebrity/influencer content** | Obviously adults, public figures | Red carpet, photoshoots, candids |
 
-### Tier 2 Sources (Medium Risk — Use With Caution)
+### Tier 2 Sources (Medium Risk, Use With Caution)
 
 | Source | Why Medium Risk | Mitigation |
 |--------|----------------|------------|
@@ -167,10 +167,10 @@ verification methods:
 ### Format A: NO CAPTION (25% of posts)
 Use for your strongest images. just the photo, nothing else. signals confidence.
 ```
-(empty — no text)
+(empty, no text)
 ```
 
-### Format B: NATIONALITY TAGS (19% of posts — TOP PERFORMER)
+### Format B: NATIONALITY TAGS (19% of posts, TOP PERFORMER)
 One word. the nationality of the woman in the photo. triggers identity engagement.
 ```
 French
@@ -197,7 +197,7 @@ Greek
 Korean
 ```
 
-### Format C: "PICK A NUMBER" POLLS (13% of posts — #1 REPLY DRIVER)
+### Format C: "PICK A NUMBER" POLLS (13% of posts, #1 REPLY DRIVER)
 Multi-image post. ask followers to pick. gets 10-15x normal replies. algo gold.
 ```
 1, 2 or 3 ?
@@ -209,7 +209,7 @@ Multi-image post. ask followers to pick. gets 10-15x normal replies. algo gold.
 left or right ?
 ```
 
-### Format D: "GOOD MORNING" RECURRING (13% — daily habit)
+### Format D: "GOOD MORNING" RECURRING (13%, daily habit)
 Same text every single morning. different photo. creates daily ritual.
 ```
 Good morning
@@ -283,12 +283,12 @@ she didn't need a filter. just sunlight.
 ### Why This Works for Engagement Farming
 
 aesthetic beauty content has some of the highest engagement ratios on X. reasons:
-- **men engage** — likes, retweets, bookmarks (bookmarks are MASSIVE for this niche)
-- **women engage** — saves for inspo, aspirational follows
-- **the algorithm loves it** — high dwell time (people stop scrolling), high bookmark rate
-- **low effort per post** — curating is faster than creating
+- **men engage**, likes, retweets, bookmarks (bookmarks are MASSIVE for this niche)
+- **women engage**, saves for inspo, aspirational follows
+- **the algorithm loves it**, high dwell time (people stop scrolling), high bookmark rate
+- **low effort per post**, curating is faster than creating
 
-### Posting Schedule (8 posts/day — matches @beautyshowcase)
+### Posting Schedule (8 posts/day, matches @beautyshowcase)
 
 @beautyshowcase posts 8x/day on the hour. this is the proven cadence. not 3, not 5. eight.
 
@@ -307,13 +307,13 @@ aesthetic beauty content has some of the highest engagement ratios on X. reasons
 
 | Day | Special |
 |-----|---------|
-| Monday | 5-option poll ("1, 2, 3, 4 or 5 ?") — max replies |
+| Monday | 5-option poll ("1, 2, 3, 4 or 5 ?"), max replies |
 | Tuesday | "face of the week" thread (5-7 images) |
 | Wednesday | 1-2 video clips instead of photos |
 | Thursday | 3-option poll ("1, 2 or 3 ?") |
 | Friday | provocative opinion caption day |
 | Saturday | extra strong "Good morning" + nationality theme |
-| Sunday | all captionless day — pure curation, no words |
+| Sunday | all captionless day, pure curation, no words |
 
 ### Engagement Tactics
 
@@ -336,7 +336,7 @@ aesthetic beauty content has some of the highest engagement ratios on X. reasons
 | Month 3 | 25,000 followers | engagement loops + brand deals + viral poll posts |
 | Month 6 | 75,000+ followers | X ad revenue + affiliate partnerships + multi-page network |
 
-### Benchmark (@beautyshowcase actuals — what "good" looks like)
+### Benchmark (@beautyshowcase actuals, what "good" looks like)
 
 | Metric | Their Numbers | Your Month 1 Target |
 |--------|--------------|-------------------|
@@ -384,7 +384,7 @@ aesthetic beauty content has some of the highest engagement ratios on X. reasons
 ## 7. VOICE CHECK
 
 - [ ] zero em dashes (confirmed: none used)
-- [ ] zero AI vocabulary (no "leverage," "comprehensive," "innovative")
+- [ ] zero AI vocabulary (no "use," "complete," "novel")
 - [ ] poetic but not pretentious (accessible, not literary magazine gatekeeping)
 - [ ] never objectifying (art appreciation, not body commentary)
 - [ ] lowercase throughout
@@ -398,7 +398,7 @@ aesthetic beauty content has some of the highest engagement ratios on X. reasons
 
 ## 8. CONTENT BANK (Calibrated to @beautyshowcase)
 
-### Ultra-Minimal (use MOST — 0-15 chars)
+### Ultra-Minimal (use MOST, 0-15 chars)
 - (no caption)
 - "French"
 - "Italian"
@@ -421,7 +421,7 @@ aesthetic beauty content has some of the highest engagement ratios on X. reasons
 - "Mediterranean"
 - "Scandinavian"
 
-### Short Descriptors (15-30 chars — use occasionally)
+### Short Descriptors (15-30 chars, use occasionally)
 - "no filter needed"
 - "natural beauty >>"
 - "beauty of the day"
@@ -439,7 +439,7 @@ aesthetic beauty content has some of the highest engagement ratios on X. reasons
 - "less is always more"
 - "confidence is the most attractive thing"
 
-### Legacy Poetic (use sparingly — 1-2x per week max)
+### Legacy Poetic (use sparingly, 1-2x per week max)
 - "elegance isn't loud."
 - "cinema in a single frame."
 - "quiet beauty."

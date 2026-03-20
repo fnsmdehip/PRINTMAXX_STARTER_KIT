@@ -7,11 +7,11 @@ Target: 95%+ delivery rate, 90%+ inbox placement
 
 ## THE DELIVERABILITY STACK (In Priority Order)
 
-1. DNS records (SPF, DKIM, DMARC) — non-negotiable
-2. Domain warming — critical for new sending domains
-3. List hygiene — ongoing
-4. Content signals — ongoing
-5. Engagement optimization — ongoing
+1. DNS records (SPF, DKIM, DMARC), non-negotiable
+2. Domain warming, critical for new sending domains
+3. List hygiene, ongoing
+4. Content signals, ongoing
+5. Engagement optimization, ongoing
 
 Skip step 1 and nothing else matters. Your emails go to spam regardless.
 
@@ -153,7 +153,7 @@ If you're doing cold email outreach (not newsletter), use Instantly's warmup fea
 - Verify before importing any list you didn't build yourself
 
 **Spam trap detection:**
-List cleaning services also flag known spam traps — fake addresses that ISPs use to catch senders with poor hygiene. Sending to even one spam trap tanks deliverability.
+List cleaning services also flag known spam traps, fake addresses that ISPs use to catch senders with poor hygiene. Sending to even one spam trap tanks deliverability.
 
 ---
 
@@ -192,7 +192,7 @@ Lower risk but use sparingly:
 
 **Link practices:**
 - 1-3 links maximum per email
-- No link shorteners (bit.ly, tinyurl) — flag deliverability
+- No link shorteners (bit.ly, tinyurl), flag deliverability
 - Use your own domain for tracking links
 - Never link to domains with poor reputation
 
@@ -263,7 +263,7 @@ Subscribers who haven't engaged in 90+ days hurt your sender score.
 | Unsubscribe rate | Under 0.5% | 0.5-1% | Over 1% |
 
 **Tools to monitor inbox placement:**
-- GlockApps: $9/mo — sends test emails, shows inbox vs spam placement per provider
+- GlockApps: $9/mo, sends test emails, shows inbox vs spam placement per provider
 - Mail-Tester.com: free, one-time checks
 - MXToolbox: free, DNS and blacklist checks
 

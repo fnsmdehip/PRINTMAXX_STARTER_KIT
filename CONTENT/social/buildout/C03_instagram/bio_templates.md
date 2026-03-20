@@ -1,11 +1,11 @@
-# C03 Instagram Bio Templates — 5 Niche Accounts
+# C03 Instagram Bio Templates, 5 Niche Accounts
 
 Format: Each bio includes Name/Handle, Bio text, Link strategy, Profile pic concept, Highlight covers
 Character limit: 150 chars for bio text. Use every character.
 
 ---
 
-## Account 1: @printmaxxer — Solopreneur / Money Methods
+## Account 1: @printmaxxer, Solopreneur / Money Methods
 
 **Handle:** @printmaxxer
 **Name field:** printmaxx | build + print + compound
@@ -20,11 +20,11 @@ every tactic tested on myself first
 **Link text:** "free cold email swipe file (no fluff)"
 
 **Pinned Story Highlights:**
-1. "HOW I STARTED" — origin story highlight, 5-7 slides
-2. "FREE TOOLS" — $0 stack carousel screenshots
-3. "RESULTS" — revenue screenshots + client wins (verify authenticity)
-4. "COLD EMAIL" — templates + screenshots
-5. "AUTOMATIONS" — n8n workflow walkthroughs
+1. "HOW I STARTED", origin story highlight, 5-7 slides
+2. "FREE TOOLS", $0 stack carousel screenshots
+3. "RESULTS", revenue screenshots + client wins (verify authenticity)
+4. "COLD EMAIL", templates + screenshots
+5. "AUTOMATIONS", n8n workflow walkthroughs
 
 **Profile pic concept:** Clean headshot or brand mark. Dark background. No emoji overload in name.
 
@@ -36,11 +36,11 @@ every tactic tested on myself first
 - hot takes that get saved (10%)
 
 **What to post first:**
-"just started posting real numbers here — week 1 of trying to build to $10K/mo from scratch. follow if you want the actual math, not the highlight reel."
+"just started posting real numbers here, week 1 of trying to build to $10K/mo from scratch. follow if you want the actual math, not the highlight reel."
 
 ---
 
-## Account 2: @selahmoments — Faith / Daily Prayer
+## Account 2: @selahmoments, Faith / Daily Prayer
 
 **Handle:** @selahmoments
 **Name field:** selah | daily faith + prayer
@@ -55,11 +55,11 @@ no judgment. just grace.
 **Link text:** "free 30-day prayer journal"
 
 **Pinned Story Highlights:**
-1. "PRAYER GUIDES" — step-by-step how-to pray carousels
-2. "RAMADAN" — Ramadan-specific content
-3. "ANXIETY + FAITH" — mental health x spiritual health content
-4. "MORNING PRAYER" — quick morning prayer Reels
-5. "ABOUT" — what this account is, what it believes
+1. "PRAYER GUIDES", step-by-step how-to pray carousels
+2. "RAMADAN", Ramadan-specific content
+3. "ANXIETY + FAITH", mental health x spiritual health content
+4. "MORNING PRAYER", quick morning prayer Reels
+5. "ABOUT", what this account is, what it believes
 
 **Profile pic concept:** Soft light. Open hands. Sunrise. Warm tones. No stock photo energy.
 
@@ -75,7 +75,7 @@ no judgment. just grace.
 
 ---
 
-## Account 3: @aibuildersdaily — AI Tools / Tech
+## Account 3: @aibuildersdaily, AI Tools / Tech
 
 **Handle:** @aibuildersdaily
 **Name field:** AI builders | tools that actually work
@@ -90,11 +90,11 @@ real builds. real results. real talk.
 **Link text:** "the $89/mo AI stack that runs my business"
 
 **Pinned Story Highlights:**
-1. "TOOL REVIEWS" — honest ratings, no affiliate bias
-2. "BUILD WITH ME" — real projects being built live
-3. "N8N TEMPLATES" — automation workflow libraries
-4. "VS BATTLES" — Claude vs GPT4 vs Gemini comparisons
-5. "FREE STUFF" — all the freebies and templates
+1. "TOOL REVIEWS", honest ratings, no affiliate bias
+2. "BUILD WITH ME", real projects being built live
+3. "N8N TEMPLATES", automation workflow libraries
+4. "VS BATTLES", Claude vs GPT4 vs Gemini comparisons
+5. "FREE STUFF", all the freebies and templates
 
 **Profile pic concept:** Clean minimal. Either screenshot of a Claude conversation or abstract circuit board. Dark mode aesthetic.
 
@@ -110,7 +110,7 @@ real builds. real results. real talk.
 
 ---
 
-## Account 4: @streakbuilder — Habit / Fitness / Wellness
+## Account 4: @streakbuilder, Habit / Fitness / Wellness
 
 **Handle:** @streakbuilder
 **Name field:** streak builder | habits that compound
@@ -125,11 +125,11 @@ i test habits on myself so you know what works
 **Link text:** "free 90-day habit tracker (Notion)"
 
 **Pinned Story Highlights:**
-1. "90 DAY CHALLENGE" — current challenge progress
-2. "STEP TRACKER" — daily step count results + method
-3. "MEAL PREP" — Sunday prep walkthroughs
-4. "SCIENCE" — research behind the habits
-5. "BEFORE + AFTER" — tracked results over time
+1. "90 DAY CHALLENGE", current challenge progress
+2. "STEP TRACKER", daily step count results + method
+3. "MEAL PREP", Sunday prep walkthroughs
+4. "SCIENCE", research behind the habits
+5. "BEFORE + AFTER", tracked results over time
 
 **Profile pic concept:** Active shot. Natural light. Outdoors. Real person energy (not fitness model aesthetic).
 
@@ -145,7 +145,7 @@ i test habits on myself so you know what works
 
 ---
 
-## Account 5: @coldoutboundpro — B2B Sales / Cold Email (Niche Authority)
+## Account 5: @coldoutboundpro, B2B Sales / Cold Email (Niche Authority)
 
 **Handle:** @coldoutboundpro
 **Name field:** cold outbound | books more calls
@@ -160,11 +160,11 @@ stop guessing. start booking.
 **Link text:** "the 6-question cold email framework (free)"
 
 **Pinned Story Highlights:**
-1. "SUBJECT LINES" — 50 subject lines that work
-2. "TEMPLATES" — 10 full email sequences
-3. "RESULTS" — open rates + reply rates + calls booked screenshots
-4. "TOOL STACK" — Instantly + Apollo setup walkthrough
-5. "MISTAKES" — 10 most common cold email mistakes
+1. "SUBJECT LINES", 50 subject lines that work
+2. "TEMPLATES", 10 full email sequences
+3. "RESULTS", open rates + reply rates + calls booked screenshots
+4. "TOOL STACK", Instantly + Apollo setup walkthrough
+5. "MISTAKES", 10 most common cold email mistakes
 
 **Profile pic concept:** Laptop + data aesthetic. Clean headshot works too. Professional but not corporate.
 

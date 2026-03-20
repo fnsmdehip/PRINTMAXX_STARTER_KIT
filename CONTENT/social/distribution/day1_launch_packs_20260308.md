@@ -1,4 +1,4 @@
-# DAY-1 LAUNCH PACKS — Copy-Paste Ready
+# DAY-1 LAUNCH PACKS, Copy-Paste Ready
 # Generated: 2026-03-08 | Cycle 7
 # Purpose: The MOMENT you create an account, post THIS content first.
 
@@ -59,7 +59,7 @@ what's inside:
 - deployment pipeline (build → test → deploy → monitor in one command)
 - real examples with real URLs you can visit right now
 
-I went from $0 to 277 distributable assets in 33 days using this system. every app, every site, every tool — built with AI agents and deployed for free on surge.sh.
+I went from $0 to 277 distributable assets in 33 days using this system. every app, every site, every tool, built with AI agents and deployed for free on surge.sh.
 
 this playbook is the operating manual.
 ```
@@ -163,10 +163,10 @@ I can clone and customize any of these for your specific niche in 48 hours. fait
 
 ---
 
-## PACK 3: REDDIT (First 5 Posts — Value-First, No Promotion)
+## PACK 3: REDDIT (First 5 Posts, Value-First, No Promotion)
 
 ### Post 1: r/SideProject
-**Title:** I built 28 habit tracking apps in 33 days using AI agents — here's what I learned
+**Title:** I built 28 habit tracking apps in 33 days using AI agents, here's what I learned
 **Body:**
 ```
 I'm a solopreneur running an experiment: how many functional apps can one person ship using AI coding agents (Claude Code specifically)?
@@ -193,7 +193,7 @@ what would you want to know about the process? happy to share specifics.
 ```
 
 ### Post 2: r/Entrepreneur
-**Title:** 33 days, 122 websites, $0 revenue — the uncomfortable truth about building vs selling
+**Title:** 33 days, 122 websites, $0 revenue, the uncomfortable truth about building vs selling
 **Body:**
 ```
 I'll be honest about something most "build in public" people won't admit.
@@ -224,7 +224,7 @@ anyone else been through this? how did you break the building addiction?
 ```
 
 ### Post 3: r/webdev
-**Title:** I deployed 122 websites on surge.sh for free — here's my deployment pipeline
+**Title:** I deployed 122 websites on surge.sh for free, here's my deployment pipeline
 **Body:**
 ```
 I needed a way to deploy lots of static sites quickly without paying for hosting. here's what works:
@@ -242,7 +242,7 @@ the pipeline:
 what I deploy:
 - PWA habit trackers (28 of them across different niches)
 - SaaS utility tools (calculators, generators, graders)
-- local business demo sites (for cold outreach — "I already built your site")
+- local business demo sites (for cold outreach, "I already built your site")
 - comparison/SEO pages (pagescorer-vs-gtmetrix.surge.sh)
 
 performance:
@@ -257,12 +257,12 @@ happy to share the deployment script if anyone wants it.
 ```
 
 ### Post 4: r/MuslimLounge
-**Title:** Built a free Ramadan tracker app — works offline, no ads, no data collection
+**Title:** Built a free Ramadan tracker app, works offline, no ads, no data collection
 **Body:**
 ```
 assalamu alaikum,
 
-I built a simple Ramadan tracker that works on any phone. it's a PWA (progressive web app) so you install it from the browser — no app store needed.
+I built a simple Ramadan tracker that works on any phone. it's a PWA (progressive web app) so you install it from the browser, no app store needed.
 
 features:
 - daily fasting tracker
@@ -284,7 +284,7 @@ all free. all open. built these because the existing apps are either bloated wit
 ```
 
 ### Post 5: r/ADHD
-**Title:** I built a focus app specifically for ADHD brains — no streaks that shame you, just honest tracking
+**Title:** I built a focus app specifically for ADHD brains, no streaks that shame you, just honest tracking
 **Body:**
 ```
 I have ADHD. every productivity app I've tried feels like it was designed to make me feel bad.
@@ -337,7 +337,7 @@ quick backstory: I wanted to test whether AI agents could actually build product
 
 the result: every app works. every app is deployed. every app is under 60KB and works offline.
 
-the interesting learning: building is now trivially easy with AI. distribution is the hard part. I have 277 assets and $0 in revenue. the bottleneck isn't code anymore — it's getting products in front of people.
+the interesting learning: building is now trivially easy with AI. distribution is the hard part. I have 277 assets and $0 in revenue. the bottleneck isn't code anymore, it's getting products in front of people.
 
 happy to answer any questions about the AI agent workflow, the PWA architecture, or the distribution challenge.
 ```
@@ -346,7 +346,7 @@ happy to answer any questions about the AI agent workflow, the PWA architecture,
 
 ## PACK 5: INDIE HACKERS (First Post)
 
-**Title:** Month 1 recap: 122 sites, 28 apps, $0 revenue — the builder trap is real
+**Title:** Month 1 recap: 122 sites, 28 apps, $0 revenue, the builder trap is real
 **Body:**
 ```
 ## The Numbers
@@ -396,7 +396,7 @@ Revenue target for month 2: $1K. We'll see.
 ## PACK 6: HACKER NEWS (Show HN Posts)
 
 ### Show HN 1:
-**Title:** Show HN: I built 28 PWA habit trackers with AI agents — all free, all open
+**Title:** Show HN: I built 28 PWA habit trackers with AI agents, all free, all open
 **URL:** printmaxx-apps.surge.sh
 **Comment:**
 ```
@@ -418,13 +418,13 @@ Code is messy (it's AI-generated), but the apps work. Happy to discuss the archi
 ```
 
 ### Show HN 2:
-**Title:** Show HN: PageScorer — Free website audit tool (Lighthouse + competitor analysis)
+**Title:** Show HN: PageScorer, Free website audit tool (Lighthouse + competitor analysis)
 **URL:** pagescorer-app.surge.sh
 **Comment:**
 ```
 Built this as a free lead gen tool for my web design service. It runs a Lighthouse-style audit on any URL and gives actionable recommendations.
 
-It's a static PWA — all analysis happens client-side. No data collected, no accounts, works offline after first load.
+It's a static PWA, all analysis happens client-side. No data collected, no accounts, works offline after first load.
 
 Stack: vanilla JS, no dependencies, deployed on surge.sh.
 

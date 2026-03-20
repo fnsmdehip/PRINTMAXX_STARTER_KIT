@@ -1,10 +1,10 @@
-# C11 SEO — Site Architecture: Content Hub Strategy
+# C11 SEO, Site Architecture: Content Hub Strategy
 
 ---
 
 ## The Hub-and-Spoke Model
 
-One pillar page (broad topic, 3,000-5,000 words) surrounded by cluster pages (specific angles, 1,500-2,000 words each). Every spoke links back to the hub. The hub links to every spoke. Google reads this as topical authority — ranks all pages higher.
+One pillar page (broad topic, 3,000-5,000 words) surrounded by cluster pages (specific angles, 1,500-2,000 words each). Every spoke links back to the hub. The hub links to every spoke. Google reads this as topical authority, ranks all pages higher.
 
 ```
 PILLAR: "How to make money online in 2025"
@@ -22,13 +22,13 @@ PILLAR: "How to make money online in 2025"
 
 ## Recommended Domain Strategy
 
-**Option A — Niche focus** (higher topical authority, faster to rank):
-- `solopreneurkit.com` — all solopreneur methods
-- `printmaxxer.com` — branded authority play
-- `onlineincomestack.com` — broad but focused
+**Option A, Niche focus** (higher topical authority, faster to rank):
+- `solopreneurkit.com`, all solopreneur methods
+- `printmaxxer.com`, branded authority play
+- `onlineincomestack.com`, broad but focused
 
-**Option B — Multi-niche authority site** (more traffic ceiling, slower):
-- `incomemethods.com` — covers all niches
+**Option B, Multi-niche authority site** (more traffic ceiling, slower):
+- `incomemethods.com`, covers all niches
 - Risk: takes longer to establish topical authority per niche
 
 **Recommendation:** Option A with one tight niche first. Add second niche after 50+ indexed pages.
@@ -37,20 +37,20 @@ PILLAR: "How to make money online in 2025"
 
 ## Full Site Architecture
 
-### Level 1 — Homepage
+### Level 1, Homepage
 - URL: `domain.com/`
 - Purpose: Authority signal, links to all hubs
 - Content: Brief intro + links to 4 main content hubs
-- No need to rank this page — it feeds PageRank to hubs
+- No need to rank this page, it feeds PageRank to hubs
 
-### Level 2 — Pillar Pages (Content Hubs)
+### Level 2, Pillar Pages (Content Hubs)
 4 pillar pages, one per niche:
 
 **Hub 1: Money Methods**
 - URL: `domain.com/make-money-online/`
 - Target keyword: "how to make money online 2025"
 - Word count: 4,000-5,000 words
-- Content: comprehensive overview of all methods covered in spokes
+- Content: complete overview of all methods covered in spokes
 - Internal links: to all 15 spokes in this hub
 
 **Hub 2: AI Tools**
@@ -71,7 +71,7 @@ PILLAR: "How to make money online in 2025"
 - Word count: 4,000-4,500 words
 - Content: Etsy, dropshipping, POD, digital products
 
-### Level 3 — Cluster Pages (Spokes)
+### Level 3, Cluster Pages (Spokes)
 50 cluster pages (20 written from outlines + 30 additional):
 
 **Money Methods cluster (15 pages):**
@@ -140,11 +140,11 @@ PILLAR: "How to make money online in 2025"
 /sell-online/best-digital-products-sell/
 ```
 
-### Level 4 — Supporting Pages
-- `/tools/` — recommended tools page (heavy affiliate links)
-- `/resources/` — free downloads (lead magnet landing pages)
-- `/about/` — authority signal
-- `/start-here/` — guides new visitors to right content
+### Level 4, Supporting Pages
+- `/tools/`, recommended tools page (heavy affiliate links)
+- `/resources/`, free downloads (lead magnet landing pages)
+- `/about/`, authority signal
+- `/start-here/`, guides new visitors to right content
 
 ---
 

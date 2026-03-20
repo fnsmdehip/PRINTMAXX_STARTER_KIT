@@ -1,4 +1,4 @@
-# C14 Remotion Batch Pipeline — 50 Videos/Day
+# C14 Remotion Batch Pipeline, 50 Videos/Day
 
 ## Architecture Overview
 
@@ -88,7 +88,7 @@ async function renderOne(
   });
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
-  console.log(`\n  [DONE] ${config.id} — ${elapsed}s → ${outPath}`);
+  console.log(`\n  [DONE] ${config.id}, ${elapsed}s → ${outPath}`);
 }
 
 async function batchRender(configs: VideoConfig[]): Promise<void> {
@@ -123,7 +123,7 @@ node --loader ts-node/esm scripts/batch_render.ts
 
 ---
 
-## data/videos.json — Example 50-Video Dataset
+## data/videos.json, Example 50-Video Dataset
 
 ```json
 [

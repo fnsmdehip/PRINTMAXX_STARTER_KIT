@@ -1,4 +1,4 @@
-# C11 SEO — Internal Linking Strategy
+# C11 SEO, Internal Linking Strategy
 # Topic Clusters + PageRank Flow
 
 ---
@@ -38,7 +38,7 @@ Cost: $0. Time: 15 minutes per article if done right.
 - 40%: exact match keyword ("best affiliate programs")
 - 30%: partial match ("these affiliate programs")
 - 20%: natural phrasing ("check out this guide")
-- 10%: brand/generic ("click here" — sparingly)
+- 10%: brand/generic ("click here", sparingly)
 
 ---
 
@@ -107,7 +107,7 @@ HUB: /ai-tools/ [target KD 60+, build after cluster]
 ├── /ai-tools/mcp-servers-explained/
 │   Links to: /ai-tools/claude-vs-chatgpt/
 │            /ai-tools/chatbot-for-website/
-│            (no cluster article exists yet — link when created)
+│            (no cluster article exists yet, link when created)
 │
 ├── /ai-tools/eleven-labs-review/
 │   Links to: /content-creation/faceless-youtube-channel/
@@ -225,7 +225,7 @@ For each target article, use these anchor text variants:
 
 | Tool | Cost | Use |
 |------|------|-----|
-| Link Whisper | $77/yr | WordPress plugin — auto-suggests internal links |
+| Link Whisper | $77/yr | WordPress plugin, auto-suggests internal links |
 | Screaming Frog | Free (up to 500 URLs) | Crawl site to find orphan pages |
 | Ahrefs Site Audit | $99/mo | Internal link report + opportunities |
 | Yoast SEO | Free | Orphan content report (posts with no internal links) |

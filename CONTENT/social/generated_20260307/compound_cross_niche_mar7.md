@@ -44,7 +44,7 @@ the difference: features don't convert. outcomes do.
 "premium meal plans" = boring.
 "save $340/mo on food starting this week" = I'm in.
 
-if your health app says "unlock pro features" change it to the specific result TODAY.
+if your health app says "get pro features" change it to the specific result TODAY.
 
 ### Tweet B2 - Fitness App Cross-Sell
 

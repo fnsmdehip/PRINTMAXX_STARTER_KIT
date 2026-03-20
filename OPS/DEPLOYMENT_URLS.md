@@ -1,6 +1,6 @@
 # PRINTMAXX PWA Deployment URLs
 
-**Last updated:** 2026-03-18 19:42:00
+**Last updated:** 2026-03-19 05:30:00
 
 ---
 
@@ -20,7 +20,7 @@
 | invoiceforge | https://invoiceforge.surge.sh | LIVE |
 | pagescorer | https://pagescorer.surge.sh | LIVE |
 | pitchdeck | https://pitchdeck.surge.sh | LIVE |
-| prayerlock-web | https://prayerlock-web.surge.sh | LIVE — AI Dua tab added 2026-03-14 |
+| prayerlock-web | https://prayerlock-web.surge.sh | LIVE — review timing hack added 2026-03-19 |
 | pdfmaxx | https://pdfmaxx.surge.sh | LIVE — new 2026-03-14 |
 | prospectmaxx | https://prospectmaxx.surge.sh | LIVE |
 | roicalc | https://roicalc.surge.sh | LIVE |
@@ -58,6 +58,20 @@
 | protestant-streak-marketing | https://protestant-streak-marketing.surge.sh | LIVE |
 | shia-streak-marketing | https://shia-streak-marketing.surge.sh | LIVE |
 | sunni-streak-marketing | https://sunni-streak-marketing.surge.sh | LIVE |
+| email-tools-compared | https://email-tools-compared.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
+| invoice-tools-compared | https://invoice-tools-compared.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
+| promptvault | https://promptvault.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
+| soberstreak | https://soberstreak.surge.sh | LIVE — app-factory deploy 2026-03-19 |
+| runningstreak | https://runningstreak.surge.sh | LIVE — app-factory deploy 2026-03-19 |
+| yoga-streak | https://yoga-streak.surge.sh | LIVE — fitness cluster 2026-03-19 |
+| pushup-streak | https://pushup-streak.surge.sh | LIVE — fitness cluster 2026-03-19 |
+| plank-streak | https://plank-streak.surge.sh | LIVE — fitness cluster 2026-03-19, built-in timer |
+| hiit-streak | https://hiit-streak.surge.sh | LIVE — fitness cluster 2026-03-19 |
+| cycling-streak | https://cycling-streak.surge.sh | LIVE — fitness cluster 2026-03-19, km/mi toggle |
+| studylock | https://studylock.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
+| toolstack-review | https://toolstack-review.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
+| ai-video-tools | https://ai-video-tools.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
+| website-builders-compared | https://website-builders-compared.surge.sh | LIVE — gap-hunter deploy 2026-03-19 |
 
 ---
 
@@ -76,6 +90,10 @@
 | productivity-stack-quiz | https://productivity-stack-quiz.surge.sh | LIVE | email gate |
 | ramadan-daily-planner | https://ramadan-daily-planner.surge.sh | LIVE | email gate |
 | vibe-coding-cheat-sheet | https://vibe-coding-cheat-sheet.surge.sh | LIVE (2026-03-17) | email gate — 7 free, 40 locked |
+| mcp-tools-saas-replacements | https://mcp-tools-saas-replacements.surge.sh | LIVE — gap-hunter deploy 2026-03-19 | standalone |
+| solopreneur-ai-stack-2026 | https://solopreneur-ai-stack-2026.surge.sh | LIVE — gap-hunter deploy 2026-03-19 | standalone |
+| app-niche-finder | https://app-niche-finder.surge.sh | LIVE — inbound cycle4 2026-03-19 | 2 free / 3 gated |
+| mcp-roi-calculator | https://mcp-roi-calculator.surge.sh | LIVE — inbound cycle4 2026-03-19 | 10 tools free / full guide gated |
 
 ---
 
@@ -92,13 +110,15 @@
 | framer-vs-webflow | https://framer-vs-webflow.surge.sh | LIVE (placeholder IDs) | 50% first payment (Webflow) |
 | best-cold-email-tools | https://best-cold-email-tools.surge.sh | LIVE (2026-03-17) — needs affiliate IDs | 20-35% recurring (Instantly, Smartlead, Lemlist, Saleshandy, Woodpecker, Apollo, Reply.io) |
 | best-newsletter-platforms | https://best-newsletter-platforms.surge.sh | LIVE (2026-03-18) — needs affiliate IDs | 50% recurring (Beehiiv, Kit) + 30% (Moosend) |
+| best-saas-tools-solopreneurs | https://best-saas-tools-solopreneurs.surge.sh | LIVE (2026-03-19) — HUB PAGE links all 8 comparisons — needs affiliate IDs | All categories |
+| lemlist-vs-instantly | https://lemlist-vs-instantly.surge.sh | LIVE (2026-03-19) — needs affiliate IDs | 20-40% recurring (Instantly) + 20-35% recurring (Lemlist) |
 
 ---
 
 ## Summary
 
-- **Total Deployments:** 394 (tracked in deployed_assets.json)
-- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages + 8 affiliate comparison pages + 9 new gap-hunter deploys
+- **Total Deployments:** 395 (tracked in deployed_assets.json)
+- **PWAs:** 10/10 LIVE + 14 streak landing pages + 14 marketing pages + 9 affiliate comparison pages (incl. hub) + 9 new gap-hunter deploys
 - **Health Check:** All new deployments returning 200 OK
 - **Timestamp:** 2026-03-16 11:48:00
 

@@ -5,7 +5,7 @@
 
 ---
 
-## TWEET 1 — "boring unsexy" anti-hype angle
+## TWEET 1, "boring unsexy" anti-hype angle
 **Status:** PENDING_REVIEW
 **Angle:** what actually makes money vs what sounds cool
 **Platform:** Twitter/X
@@ -20,7 +20,7 @@ the stuff that prints is the stuff that sounds embarrassing at dinner parties.
 
 ---
 
-## TWEET 2 — app demand signals on Reddit
+## TWEET 2, app demand signals on Reddit
 **Status:** PENDING_REVIEW
 **Angle:** real demand hiding in plain sight
 **Platform:** Twitter/X
@@ -36,7 +36,7 @@ the demand is sitting there in plain text. most builders are too busy copying ea
 
 ---
 
-## TWEET 3 — VA market pricing ladder
+## TWEET 3, VA market pricing ladder
 **Status:** PENDING_REVIEW
 **Angle:** escape $20/hr commodity trap
 **Platform:** Twitter/X
@@ -51,7 +51,7 @@ same work. 4x the rate. the job title is the pricing strategy.
 
 ---
 
-## THREAD — "I monitor Reddit for what people beg to pay for"
+## THREAD, "I monitor Reddit for what people beg to pay for"
 **Status:** PENDING_REVIEW
 **Angle:** demand signal scraping method + this week's findings
 **Platform:** Twitter/X (thread, 6 tweets)
@@ -113,7 +113,7 @@ if you want to see what i'm building from these signals, follow along. i ship we
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, utilize, comprehensive, robust, innovative, seamless, delve, unlock, empower, game-changer, journey, cutting-edge, streamlined, frictionless, furthermore, additionally, moreover)
+- [x] Zero banned AI vocabulary (no use, use, complete, strong, novel, seamless, dig, get, empower, game-changer, path, cutting-edge, streamlined, frictionless, and, also, also)
 - [x] No "It's not just X, it's Y" constructions
 - [x] No vague attributions without links
 - [x] No promotional adjectives

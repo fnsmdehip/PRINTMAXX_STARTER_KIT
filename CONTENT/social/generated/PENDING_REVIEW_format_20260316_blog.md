@@ -4,7 +4,7 @@
 # VENTURE: Niche Content Farm
 # STEP: schedule (step 4/6)
 # SCHEDULED: 2026-03-16T08:31:00-05:00
-# PUBLISH_WINDOW: evergreen — recommended 2026-03-19 (capture Wed thread traffic, index before weekend)
+# PUBLISH_WINDOW: evergreen, recommended 2026-03-19 (capture Wed thread traffic, index before weekend)
 # TARGET KEYWORD: solopreneur automation system
 # FORMAT: ~900 words, H2/H3 structure, scannable
 
@@ -12,7 +12,7 @@
 
 **Title:** I built 323 automation scripts in 35 days and made $0. here's what the data says.
 
-**Meta description:** 35 days of automation, 47 deployed apps, 182,700 leads analyzed — and $0 revenue. The bottleneck wasn't the technology.
+**Meta description:** 35 days of automation, 47 deployed apps, 182,700 leads analyzed, and $0 revenue. The bottleneck wasn't the technology.
 
 ---
 
@@ -47,20 +47,20 @@ This is horizontal progress. More scripts, more automation, more coverage. But $
 
 While I was building, the system was scanning. Here are the top 3 opportunities it surfaced this week, ranked by ROI:
 
-### 1. Local Business Auditing — $500-$1,500/mo per client
+### 1. Local Business Auditing, $500-$1,500/mo per client
 
 Automated website audits on 50 local businesses in a single night. 38 scored below 40/100 on mobile speed, basic SEO, and conversion fundamentals.
 
-Nobody is doing this at scale. The standard approach is eyeballing a site and charging $2,000 for a "comprehensive audit." The automated approach:
+Nobody is doing this at scale. The standard approach is eyeballing a site and charging $2,000 for a "complete audit." The automated approach:
 
 - Run scoring algorithm against any URL in seconds
 - Send bottom performers a free preview of their score and top 3 issues
 - Offer: $99 full audit, $499 audit + fix plan, $500/mo ongoing maintenance
-- Batch 4-5 clients in the same geographic area — same CMS, same fixes, same templates
+- Batch 4-5 clients in the same geographic area, same CMS, same fixes, same templates
 
 Time to first revenue: under 2 weeks with existing tooling.
 
-### 2. Cold Email at Scale — $6K/mo from free Gmail accounts
+### 2. Cold Email at Scale, $6K/mo from free Gmail accounts
 
 The math most people skip:
 
@@ -78,9 +78,9 @@ The math most people skip:
 
 Cost: zero (Gmail is free). Infrastructure required: a Python script and 7 days of warmup.
 
-The failure mode isn't the math — it's sending from one cold account without warmup, hitting spam filters, and concluding that cold email doesn't work.
+The failure mode isn't the math, it's sending from one cold account without warmup, hitting spam filters, and concluding that cold email doesn't work.
 
-### 3. Overnight Automation — Prioritized action lists by morning
+### 3. Overnight Automation, Prioritized action lists by morning
 
 The overnight runner pattern changed how I approach execution:
 

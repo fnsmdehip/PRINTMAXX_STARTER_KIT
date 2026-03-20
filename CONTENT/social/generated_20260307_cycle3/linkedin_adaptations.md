@@ -1,4 +1,4 @@
-# LinkedIn Adaptations — Cycle 3
+# LinkedIn Adaptations, Cycle 3
 # STATUS: PENDING_REVIEW
 # DATE: 2026-03-07
 # CYCLE: 3
@@ -6,7 +6,7 @@
 
 ---
 
-## POST 1 — The UGC Market Repricing (from Tweet 1)
+## POST 1, The UGC Market Repricing (from Tweet 1)
 
 User-generated content used to cost $500+ per video.
 
@@ -22,7 +22,7 @@ The smart play: offer UGC-as-a-service to brands still paying $500/clip. Your ma
 
 ---
 
-## POST 2 — Platform Algorithm Convergence (from Newsletter)
+## POST 2, Platform Algorithm Convergence (from Newsletter)
 
 Three major platforms updated their algorithms this month. The pattern is impossible to ignore.
 
@@ -40,7 +40,7 @@ The creators who adapt in the next 30 days get a 6-month head start on everyone 
 
 ---
 
-## POST 3 — Vibe Coding and Who Gets to Build (from Tweet 5)
+## POST 3, Vibe Coding and Who Gets to Build (from Tweet 5)
 
 Andrej Karpathy coined a term last month: "vibe coding."
 

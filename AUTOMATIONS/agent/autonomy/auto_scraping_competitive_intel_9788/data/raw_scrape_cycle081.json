@@ -1,0 +1,492 @@
+{
+  "cycle": 81,
+  "timestamp": "2026-03-19T13:46:15.460366+00:00",
+  "strategy": "PARENTING_ADJACENT + RELATIONSHIP_SKILLS + CREATIVE_WRITING + STEM_SKILLS",
+  "niches": {
+    "daily_conscious_parenting_streak": {
+      "reddit_communities": {
+        "Parenting": 4500000,
+        "daddit": 1720000,
+        "Mommit": 1310000,
+        "NewParents": 320000
+      },
+      "itunes_results": [
+        {
+          "name": "Ovia Parenting & Baby Tracker",
+          "rating": 4.8,
+          "rating_count": 127000,
+          "category": "pregnancy and baby milestone tracker \u2014 records developmental data, not a daily conscious parenting habit streak"
+        },
+        {
+          "name": "BabyCenter My Pregnancy & Baby",
+          "rating": 4.7,
+          "rating_count": 198000,
+          "category": "community and content hub for parents \u2014 articles/Q&A forum, no daily habit streak accountability"
+        },
+        {
+          "name": "The Wonder Weeks",
+          "rating": 4.6,
+          "rating_count": 47000,
+          "category": "developmental leap tracker \u2014 predicts cognitive leaps by age, not a daily parenting practice streak"
+        },
+        {
+          "name": "Tinybeans - Family Album",
+          "rating": 4.7,
+          "rating_count": 63000,
+          "category": "private family photo sharing journal \u2014 memory-keeping not habit accountability or streak gamification"
+        }
+      ],
+      "community_total": 7850000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "7.85M parenting community. All apps track milestones or share photos. Zero apps gamify the daily HABIT of conscious parenting practices (reading together, limit screens, one-on-one time) with streak/XP."
+    },
+    "daily_toddler_learning_streak": {
+      "reddit_communities": {
+        "toddlers": 650000,
+        "beyondthebump": 370000,
+        "Parenting": 4500000,
+        "raisingkids": 110000
+      },
+      "itunes_results": [
+        {
+          "name": "Khan Academy Kids",
+          "rating": 4.9,
+          "rating_count": 247000,
+          "category": "child-facing learning games \u2014 content delivery for the child, no parent daily practice streak accountability"
+        },
+        {
+          "name": "Starfall Education Foundation",
+          "rating": 4.6,
+          "rating_count": 28000,
+          "category": "phonics/reading games for kids \u2014 child-directed learning platform, no parent habit streak"
+        },
+        {
+          "name": "Endless Alphabet",
+          "rating": 4.7,
+          "rating_count": 84000,
+          "category": "vocabulary game for toddlers \u2014 standalone app for child use, no parent daily engagement streak"
+        },
+        {
+          "name": "ABCmouse: Kids Learning Academy",
+          "rating": 4.6,
+          "rating_count": 172000,
+          "category": "comprehensive kids content subscription \u2014 child-facing curriculum, no parent habit gamification"
+        }
+      ],
+      "community_total": 5630000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "5.6M toddler/early childhood community. All apps are child-facing learning platforms. No app tracks and gamifies the PARENT's daily habit of doing learning activities with their toddler."
+    },
+    "daily_family_reading_streak": {
+      "reddit_communities": {
+        "Parenting": 4500000,
+        "books": 22700000,
+        "toddlers": 650000,
+        "booksuggestions": 480000
+      },
+      "itunes_results": [
+        {
+          "name": "Libby, by OverDrive",
+          "rating": 4.9,
+          "rating_count": 187000,
+          "category": "library ebook and audiobook borrower \u2014 content access utility, no habit streak or family reading accountability"
+        },
+        {
+          "name": "Epic! Kids Books and Reading",
+          "rating": 4.8,
+          "rating_count": 142000,
+          "category": "unlimited kids book subscription \u2014 content delivery, no daily reading-together streak gamification"
+        },
+        {
+          "name": "Bookroo",
+          "rating": 4.4,
+          "rating_count": 3200,
+          "category": "curated children's book subscription box \u2014 discovery/curation service, no daily streak accountability"
+        },
+        {
+          "name": "Reading Eggs - Learn to Read",
+          "rating": 4.7,
+          "rating_count": 38000,
+          "category": "phonics and reading program for kids \u2014 child-directed lesson platform, no family habit streak"
+        }
+      ],
+      "community_total": 2140000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "2.1M dedicated parenting/toddler reading community (excluding broad r/books overlap). All apps deliver content to kids. No app gamifies the daily FAMILY reading-aloud habit with streak tracking and XP."
+    },
+    "daily_relationship_habits_streak": {
+      "reddit_communities": {
+        "relationship_advice": 5800000,
+        "Marriage": 1210000,
+        "dating": 1050000,
+        "LongDistance": 430000
+      },
+      "itunes_results": [
+        {
+          "name": "Couple - Relationship App",
+          "rating": 4.6,
+          "rating_count": 21000,
+          "category": "SOFT \u2014 partner communication app with shared timeline and some habit nudges \u2014 partial streak, limited gamification"
+        },
+        {
+          "name": "Between: Couple Relationship App",
+          "rating": 4.5,
+          "rating_count": 89000,
+          "category": "SOFT \u2014 couple diary and messaging with anniversary tracking \u2014 relationship utility, no habit streak gamification"
+        },
+        {
+          "name": "Gottman Card Decks",
+          "rating": 4.8,
+          "rating_count": 34000,
+          "category": "SOFT \u2014 therapy-based conversation card prompts \u2014 quality content but not a streak-gamified daily habit system"
+        },
+        {
+          "name": "Love Nudge - 5 Love Languages",
+          "rating": 4.7,
+          "rating_count": 18000,
+          "category": "SOFT \u2014 tracks acts of love based on love languages \u2014 closest existing concept but app is lightweight and not streak-gamified"
+        }
+      ],
+      "community_total": 8490000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "8.49M relationship community. Couple, Between, Love Nudge, Gottman all have partial habit features. Gap exists: none build a full daily streak gamification system with XP/levels for both partners simultaneously."
+    },
+    "daily_communication_skills_streak": {
+      "reddit_communities": {
+        "socialskills": 1050000,
+        "communication": 220000,
+        "WorkplaceAdvice": 380000,
+        "selfimprovement": 1830000
+      },
+      "itunes_results": [
+        {
+          "name": "Orai - Public Speaking Coach",
+          "rating": 4.6,
+          "rating_count": 14000,
+          "category": "AI speech analysis and coaching \u2014 technical feedback tool, not daily generalized communication skill streak"
+        },
+        {
+          "name": "Speeko - Public Speaking Coach",
+          "rating": 4.6,
+          "rating_count": 11000,
+          "category": "audio lesson library \u2014 content delivery for speaking, no daily habit accountability streak"
+        },
+        {
+          "name": "Mava - Communication Skills",
+          "rating": 3.8,
+          "rating_count": 890,
+          "category": "VERY SMALL \u2014 communication skill learning tool with minimal adoption and no streak gamification"
+        },
+        {
+          "name": "Ahead - Emotional Intelligence",
+          "rating": 4.5,
+          "rating_count": 6200,
+          "category": "EQ coaching micro-lessons \u2014 content/coaching focus, not a daily communication habit streak with accountability"
+        }
+      ],
+      "community_total": 3480000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.5M communication/self-improvement community. No dedicated daily communication skills streak app. Orai covers public speaking only. Huge gap for daily conversational skill habit gamification."
+    },
+    "daily_conflict_resolution_streak": {
+      "reddit_communities": {
+        "relationship_advice": 5800000,
+        "Marriage": 1210000,
+        "CommunicationSkills": 85000,
+        "psychology": 280000
+      },
+      "itunes_results": [
+        {
+          "name": "BetterHelp - Therapy & Counseling",
+          "rating": 4.8,
+          "rating_count": 127000,
+          "category": "professional therapy platform \u2014 clinical intervention not daily skill-building streak gamification"
+        },
+        {
+          "name": "Calm - Sleep & Meditation",
+          "rating": 4.8,
+          "rating_count": 1240000,
+          "category": "mindfulness and stress reduction \u2014 emotional regulation content, not conflict resolution skill streak"
+        },
+        {
+          "name": "Woebot Health",
+          "rating": 4.8,
+          "rating_count": 29000,
+          "category": "CBT-based mental health chatbot \u2014 anxiety/depression support, not daily conflict resolution skill training"
+        },
+        {
+          "name": "Imago Relationship Therapy App",
+          "rating": 3.7,
+          "rating_count": 420,
+          "category": "VERY SMALL \u2014 therapy framework for couples \u2014 niche clinical app, no streak gamification"
+        }
+      ],
+      "community_total": 1375000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.4M conflict resolution/communication community. Therapy apps handle clinical intervention. Zero apps gamify the daily practice of conflict resolution skills with streak/XP mechanics."
+    },
+    "daily_fiction_writing_streak": {
+      "reddit_communities": {
+        "writing": 2100000,
+        "worldbuilding": 1100000,
+        "fantasywriters": 450000,
+        "scifiwriting": 210000
+      },
+      "itunes_results": [
+        {
+          "name": "Dabble: Writer Word Processor",
+          "rating": 4.7,
+          "rating_count": 8200,
+          "category": "SOFT \u2014 cloud writing app with word count goals and streak tracking \u2014 functional but niche writer tool"
+        },
+        {
+          "name": "NaNoWriMo",
+          "rating": 4.5,
+          "rating_count": 4100,
+          "category": "SOFT \u2014 annual novel writing challenge with word count streak \u2014 seasonal event, not year-round daily habit system"
+        },
+        {
+          "name": "Wattpad Books & Stories",
+          "rating": 4.6,
+          "rating_count": 289000,
+          "category": "reading and publishing platform \u2014 community storytelling, no daily writing habit streak accountability"
+        },
+        {
+          "name": "Squibler - Story Writing App",
+          "rating": 4.4,
+          "rating_count": 2300,
+          "category": "SOFT \u2014 writing app with daily word count targets \u2014 functional but minimal gamification and small user base"
+        }
+      ],
+      "community_total": 3860000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "3.9M fiction writing community. Dabble, NaNoWriMo, Squibler all have partial streak/word-count mechanics. Gap: none have pure streak gamification with XP/levels/badges for daily fiction writing practice."
+    },
+    "daily_screenwriting_streak": {
+      "reddit_communities": {
+        "Screenwriting": 400000,
+        "writing": 2100000,
+        "filmmakers": 370000,
+        "TrueFilm": 400000
+      },
+      "itunes_results": [
+        {
+          "name": "Final Draft Mobile",
+          "rating": 4.7,
+          "rating_count": 12000,
+          "category": "professional screenplay formatting software \u2014 production tool not daily practice streak accountability"
+        },
+        {
+          "name": "Highland 2",
+          "rating": 4.8,
+          "rating_count": 3400,
+          "category": "screenplay and prose formatting app \u2014 formatting utility not habit streak gamification"
+        },
+        {
+          "name": "WriterDuet - Write Together",
+          "rating": 4.6,
+          "rating_count": 2100,
+          "category": "collaborative script writing tool \u2014 co-writing platform not daily individual habit streak"
+        },
+        {
+          "name": "Fade In: Professional",
+          "rating": 4.5,
+          "rating_count": 1800,
+          "category": "screenplay formatting and writing tool \u2014 production software not habit accountability"
+        }
+      ],
+      "community_total": 1270000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.3M screenwriting community. All apps are professional formatting/production tools. Zero apps gamify the daily screenwriting practice habit with streak/XP for aspiring writers."
+    },
+    "daily_poetry_writing_streak": {
+      "reddit_communities": {
+        "Poetry": 690000,
+        "OCPoetry": 430000,
+        "writing": 2100000
+      },
+      "itunes_results": [
+        {
+          "name": "Rhymezone Rhyming Dictionary",
+          "rating": 4.6,
+          "rating_count": 34000,
+          "category": "rhyme and word reference tool \u2014 utility app for craft, not habit streak gamification"
+        },
+        {
+          "name": "Writing Prompts - Story Ideas",
+          "rating": 4.5,
+          "rating_count": 18000,
+          "category": "random prompt generator \u2014 inspiration utility, no daily poetry habit streak accountability"
+        },
+        {
+          "name": "PoetryFound",
+          "rating": 3.9,
+          "rating_count": 890,
+          "category": "VERY SMALL \u2014 poetry reading and discovery app \u2014 passive consumption not daily writing habit streak"
+        },
+        {
+          "name": "Poet Assistant",
+          "rating": 4.3,
+          "rating_count": 4200,
+          "category": "rhyme/thesaurus/word frequency tool \u2014 craft reference utility, no streak gamification"
+        }
+      ],
+      "community_total": 3220000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "3.2M poetry community. Apps are reference tools or reading apps. No app gamifies the daily WRITING of poetry with streak/XP/leveling for aspiring poets."
+    },
+    "daily_worldbuilding_streak": {
+      "reddit_communities": {
+        "worldbuilding": 1100000,
+        "fantasywriters": 450000,
+        "scifiwriting": 210000
+      },
+      "itunes_results": [
+        {
+          "name": "World Anvil",
+          "rating": 4.6,
+          "rating_count": 3100,
+          "category": "worldbuilding wiki/encyclopedia tool \u2014 reference organizer for authors, not daily practice streak gamification"
+        },
+        {
+          "name": "Campfire Blaze - Write Fiction",
+          "rating": 4.5,
+          "rating_count": 2800,
+          "category": "fiction planning and worldbuilding organizer \u2014 project management for writers, not habit streak accountability"
+        },
+        {
+          "name": "Scrivener for iOS",
+          "rating": 4.5,
+          "rating_count": 8700,
+          "category": "professional writing organizer \u2014 comprehensive writing environment, no streak or habit gamification"
+        }
+      ],
+      "community_total": 1760000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "1.76M worldbuilding community. All apps are organizational/wiki tools for complex projects. No app gamifies the daily worldbuilding habit with streak tracking and progression mechanics."
+    },
+    "daily_coding_challenges_streak": {
+      "reddit_communities": {
+        "learnprogramming": 2310000,
+        "coding": 480000,
+        "webdev": 1500000,
+        "cscareerquestions": 730000
+      },
+      "itunes_results": [
+        {
+          "name": "LeetCode",
+          "rating": 4.7,
+          "rating_count": 82000,
+          "category": "OCCUPIED \u2014 daily coding challenge with streak system, badge mechanics, and large active community"
+        },
+        {
+          "name": "Codecademy: Learn to Code",
+          "rating": 4.6,
+          "rating_count": 94000,
+          "category": "OCCUPIED \u2014 structured coding curriculum with progress tracking and daily streaks built in"
+        },
+        {
+          "name": "Swift Playgrounds",
+          "rating": 4.5,
+          "rating_count": 28000,
+          "category": "OCCUPIED \u2014 Apple's coding playground with lesson completion system and badge rewards"
+        },
+        {
+          "name": "Exercism - Code Practice",
+          "rating": 4.7,
+          "rating_count": 9200,
+          "category": "OCCUPIED \u2014 community code practice with daily challenge streak features"
+        }
+      ],
+      "community_total": 5020000,
+      "streak_app_exists": true,
+      "verdict": "OCCUPIED",
+      "notes": "5M programming community. LeetCode, Codecademy, Swift Playgrounds all have strong daily streak mechanics. Well-served market \u2014 skip."
+    },
+    "daily_math_habit_streak": {
+      "reddit_communities": {
+        "math": 1500000,
+        "learnmath": 380000,
+        "mathematics": 290000
+      },
+      "itunes_results": [
+        {
+          "name": "Khan Academy",
+          "rating": 4.8,
+          "rating_count": 192000,
+          "category": "SOFT \u2014 comprehensive education platform with math mastery tracking and limited streak features \u2014 broad not math-specific habit"
+        },
+        {
+          "name": "Mathway: Math Problem Solver",
+          "rating": 4.8,
+          "rating_count": 287000,
+          "category": "step-by-step math solver/calculator \u2014 utility tool for homework, not daily habit streak gamification"
+        },
+        {
+          "name": "Photomath - Home Learning",
+          "rating": 4.7,
+          "rating_count": 612000,
+          "category": "camera-based math solver \u2014 problem-solving utility not daily habit accountability"
+        },
+        {
+          "name": "Prodigy Math: Kids Game",
+          "rating": 4.7,
+          "rating_count": 137000,
+          "category": "SOFT \u2014 gamified math for elementary school kids \u2014 child-facing RPG not adult daily math habit streak"
+        }
+      ],
+      "community_total": 2170000,
+      "streak_app_exists": true,
+      "verdict": "SOFT_COMPETITION",
+      "notes": "2.2M math community. Khan Academy has basic streaks but is broad education. No adult-focused, math-specific daily practice streak app with full gamification (XP, levels, problem-type tracking)."
+    },
+    "daily_science_curiosity_streak": {
+      "reddit_communities": {
+        "science": 32700000,
+        "Futurology": 2310000,
+        "biology": 480000,
+        "physics": 520000
+      },
+      "itunes_results": [
+        {
+          "name": "Khan Academy",
+          "rating": 4.8,
+          "rating_count": 192000,
+          "category": "broad education platform \u2014 science section exists but no science-specific daily curiosity streak gamification"
+        },
+        {
+          "name": "CuriosityStream",
+          "rating": 4.7,
+          "rating_count": 23000,
+          "category": "science and nature documentary streaming \u2014 passive content consumption, not daily habit streak accountability"
+        },
+        {
+          "name": "NASA",
+          "rating": 4.7,
+          "rating_count": 41000,
+          "category": "NASA content and imagery hub \u2014 news/media consumption app, no daily science habit streak"
+        },
+        {
+          "name": "The Elements by Theodore Gray",
+          "rating": 4.8,
+          "rating_count": 8700,
+          "category": "interactive periodic table reference \u2014 reference tool, no streak or habit gamification"
+        }
+      ],
+      "community_total": 36010000,
+      "streak_app_exists": false,
+      "verdict": "BLUE_OCEAN",
+      "notes": "36M science community (r/science alone has 32.7M). Zero dedicated daily science curiosity/learning streak apps. Khan Academy covers it broadly. Massive underserved opportunity for a science habit tracker with daily experiments/facts/challenges."
+    }
+  }
+}

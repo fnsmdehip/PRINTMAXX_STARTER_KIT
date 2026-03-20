@@ -6,7 +6,7 @@ HOOK: Day 32 builder credibility + monetization plan
 
 ---
 
-# THREAD: week 5, day 32 — 140+ sites, $0 revenue, here's the plan
+# THREAD: week 5, day 32, 140+ sites, $0 revenue, here's the plan
 
 ---
 

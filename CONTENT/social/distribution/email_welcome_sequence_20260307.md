@@ -1,4 +1,4 @@
-# Email Welcome Sequence — 5-Email Drip (Cycle 4, 2026-03-07)
+# Email Welcome Sequence, 5-Email Drip (Cycle 4, 2026-03-07)
 # Status: PENDING_REVIEW
 # Platform: Substack or Beehiiv (pending account creation)
 # Trigger: New subscriber joins newsletter
@@ -30,7 +30,7 @@ this newsletter covers:
 
 reply to this email and tell me what you're building. i read every reply.
 
-—
+-
 
 **CTA:** check out the full portfolio: printmaxx-apps.surge.sh
 
@@ -47,7 +47,7 @@ people keep asking how i host 140+ websites for free. here's the entire stack.
 
 **hosting:** surge.sh (free tier, no limits)
 **framework:** none. vanilla HTML/CSS/JS.
-**apps:** PWAs (progressive web apps — install from browser, work offline)
+**apps:** PWAs (progressive web apps, install from browser, work offline)
 **deploy command:** `npx surge ./build site-name.surge.sh`
 
 that's it. no webpack. no next.js. no docker. no CI/CD pipeline. no github actions.
@@ -131,23 +131,23 @@ what revenue stream would you start with? reply and tell me.
 
 here are the 5 most useful tools i've built. all free. no signup.
 
-**1. SiteScore — website performance audit**
+**1. SiteScore, website performance audit**
 paste any URL. get a 47-point audit in 5 seconds. speed, SEO, mobile, security, accessibility.
 try it: sitescore-free.surge.sh
 
-**2. ShopMetrics Pro — shopify store analyzer**
+**2. ShopMetrics Pro, shopify store analyzer**
 paste any shopify store URL. see their tech stack, apps, products, estimated traffic.
 try it: shopmetrics-pro.surge.sh
 
-**3. Cold Email Calculator — ROI calculator**
+**3. Cold Email Calculator, ROI calculator**
 plug in your numbers. it tells you if cold email is profitable for your business.
 try it: cold-email-calc.surge.sh
 
-**4. PageScorer — instant page speed test**
+**4. PageScorer, instant page speed test**
 core web vitals, mobile score, load time. 3 seconds.
 try it: pagescorer.surge.sh
 
-**5. ADHD Streak — habit tracker for ADHD brains**
+**5. ADHD Streak, habit tracker for ADHD brains**
 built for executive dysfunction. visual streaks, zero friction, works offline.
 try it: adhd-streak.surge.sh
 
@@ -187,6 +187,6 @@ word of mouth is the only distribution channel that costs nothing and compounds 
 
 thanks for being here.
 
-—
+-
 
 p.s. next week i'm covering the exact cold email template that converts "i built your website" into paying clients. open rate has been 34% on the first batch. reply "cold email" if you want it early.

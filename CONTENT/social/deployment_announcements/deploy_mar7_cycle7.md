@@ -1,4 +1,4 @@
-# Deployment Announcements — Cycle 7 (Mar 7 2026)
+# Deployment Announcements, Cycle 7 (Mar 7 2026)
 
 Status: PENDING_REVIEW
 New deployments: 5
@@ -6,7 +6,7 @@ Total live: 161
 
 ---
 
-## TWEET 1 — ColdMaxx vs Instantly (comparison page SEO)
+## TWEET 1, ColdMaxx vs Instantly (comparison page SEO)
 
 paying $30/mo for instantly.ai in 2026
 
@@ -21,7 +21,7 @@ https://coldmaxx-vs-instantly.surge.sh
 
 ---
 
-## TWEET 2 — PageScorer vs GTmetrix (comparison page SEO)
+## TWEET 2, PageScorer vs GTmetrix (comparison page SEO)
 
 gtmetrix charges you $20-150/mo to tell you your site is slow
 
@@ -33,7 +33,7 @@ https://pagescorer-vs-gtmetrix.surge.sh
 
 ---
 
-## TWEET 3 — SleepMaxx vs Sleep Cycle (comparison page SEO)
+## TWEET 3, SleepMaxx vs Sleep Cycle (comparison page SEO)
 
 sleep cycle app: $40/yr subscription to track your sleep
 
@@ -45,7 +45,7 @@ https://sleepmaxx-vs-sleepcycle.surge.sh
 
 ---
 
-## THREAD — 3 free tools that replace $100+/yr subscriptions
+## THREAD, 3 free tools that replace $100+/yr subscriptions
 
 1/ i've been building free versions of paid tools
 
@@ -88,7 +88,7 @@ https://sleepmaxx-vs-sleepcycle.surge.sh
 
 ---
 
-## TWEET 4 — Meta (for the builders)
+## TWEET 4, Meta (for the builders)
 
 comparison page SEO is underrated
 
@@ -105,7 +105,7 @@ all free tools, all ranking for competitor terms
 
 ---
 
-## REPLY BAIT — Drop in indie hacker threads
+## REPLY BAIT, Drop in indie hacker threads
 
 built this free comparison page for anyone evaluating instantly.ai vs alternatives:
 

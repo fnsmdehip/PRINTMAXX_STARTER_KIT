@@ -261,7 +261,7 @@ product didn't change. the words describing it did.
 
 they weren't selling the wrong thing. they were describing the right thing wrong.
 
-positioning is the highest leverage move in early SaaS. not features. not code.
+positioning is the highest use move in early SaaS. not features. not code.
 ```
 
 ---
@@ -331,7 +331,7 @@ here's what the data from this + similar builders actually shows:
 
 **Tweet 2:**
 ```
-first: pricing was the unlock, not product.
+first: pricing was the get, not product.
 
 $9/mo = zero conversions. $29/mo = immediate paying customers. same product.
 
@@ -400,7 +400,7 @@ the window is open. the operators are just in the wrong seat.
 ## PRE-PUBLISH CHECKLIST (run before posting any of the above)
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks on all tweets
 - [x] Exact numbers throughout ($4,800 MRR, 3,000 downloads, 20%, 55%, 9 months, $3.1K, $40K)
 - [x] Would @pipelineabuser post this? yes

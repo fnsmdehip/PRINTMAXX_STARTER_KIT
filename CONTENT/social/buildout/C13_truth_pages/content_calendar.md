@@ -1,4 +1,4 @@
-# Content Calendar — C13 Truth Pages
+# Content Calendar, C13 Truth Pages
 # 12-Month Publishing Schedule
 # Strategy: 2 articles/week (104/year), hub-and-spoke SEO architecture
 
@@ -19,7 +19,7 @@
 
 ---
 
-## MONTH 1 — Foundation (Quick Wins)
+## MONTH 1, Foundation (Quick Wins)
 
 **Goal:** Get first 8 articles ranking. Build internal link structure. Target KD 22-38.
 
@@ -39,7 +39,7 @@
 
 ---
 
-## MONTH 2 — Building Clusters
+## MONTH 2, Building Clusters
 
 **Goal:** Add to every cluster started in Month 1. Create first internal link networks.
 
@@ -59,7 +59,7 @@
 
 ---
 
-## MONTH 3 — Mid-Tier Push
+## MONTH 3, Mid-Tier Push
 
 **Goal:** Start targeting KD 40-48 now that internal links are building. Introduce first 2,000+ word mega guides.
 
@@ -79,7 +79,7 @@
 
 ---
 
-## MONTH 4 — Cluster Expansion
+## MONTH 4, Cluster Expansion
 
 **Goal:** Expand every cluster to 4+ posts. Start building pillar page authority.
 
@@ -99,7 +99,7 @@
 
 ---
 
-## MONTH 5 — Volume Push
+## MONTH 5, Volume Push
 
 **Goal:** Target first articles over 10K volume. Supplement with review posts (high commercial intent, affiliate revenue).
 
@@ -119,7 +119,7 @@
 
 ---
 
-## MONTH 6 — Pillar Pages Launch
+## MONTH 6, Pillar Pages Launch
 
 **Goal:** Publish 4 pillar pages (3,000-5,000 words each) linking to all cluster content.
 
@@ -127,11 +127,11 @@
 |------|-----|---------|---------------|-----|-------------|
 | 21 | Tue | PILLAR: Make Money Online Complete Guide 2025 | how to make money online | 75 | 200,000+ |
 | 21 | Fri | How to Save $10,000 in 6 Months (Real Roadmap) | how to save money fast | 52 | 33,100 |
-| 22 | Tue | PILLAR: AI Tools for Solopreneurs — The Complete Stack | AI tools for business | 65 | 40,500 |
+| 22 | Tue | PILLAR: AI Tools for Solopreneurs, The Complete Stack | AI tools for business | 65 | 40,500 |
 | 22 | Fri | How to Start a Freelance Business With $0 in 2025 | how to start freelancing | 58 | 18,000 |
 | 23 | Tue | PILLAR: Print-on-Demand Complete Guide 2025 | print on demand guide | 60 | 27,100 |
 | 23 | Fri | Best Canva Alternatives Free in 2025 | best canva alternatives | 52 | 12,000 |
-| 24 | Tue | PILLAR: Cold Email Agency Playbook — From Setup to Scale | cold email agency | 50 | 9,900 |
+| 24 | Tue | PILLAR: Cold Email Agency Playbook, From Setup to Scale | cold email agency | 50 | 9,900 |
 | 24 | Fri | How to Use AI to Make Money in 2025 (8 Real Methods) | how to use ai to make money | 48 | 22,000 |
 
 **Month 6 publishing total:** 8 articles (48 cumulative)
@@ -140,7 +140,7 @@
 
 ---
 
-## MONTHS 7-9 — Scale and Refine
+## MONTHS 7-9, Scale and Refine
 
 **Goal:** 2 articles/week maintaining pace. Update top 10 articles with fresh data. Launch affiliate-heavy comparison posts.
 
@@ -167,7 +167,7 @@
 
 ---
 
-## MONTHS 10-12 — Authority and Monetization
+## MONTHS 10-12, Authority and Monetization
 
 **Goal:** Target highest-volume keywords (DA now 25-35+). Maximize affiliate revenue on high-traffic pages.
 
@@ -175,7 +175,7 @@
 - Side hustle ideas (91K volume, KD 65)
 - Passive income for beginners (40K volume)
 - How to invest money for beginners (high CPM/CPC)
-- Best business credit cards for entrepreneurs (high affiliate — $50-$200 per approval)
+- Best business credit cards for entrepreneurs (high affiliate, $50-$200 per approval)
 - Best project management tools (SaaS affiliate goldmine)
 - How to build a website for free (hosting affiliate)
 - Gumroad alternatives (Gumroad vs competitors)
@@ -209,8 +209,8 @@
 - Newsletter CTA on every article (build list for future monetization)
 
 **5,000-20,000 monthly visitors:**
-- Mediavine (requirements: 50K sessions/month) — still building
-- Ezoic (no minimum) — apply now, ~$8-12 RPM
+- Mediavine (requirements: 50K sessions/month), still building
+- Ezoic (no minimum), apply now, ~$8-12 RPM
 - Sponsored review posts ($300-$800 per post)
 
 **20,000-100,000 monthly visitors:**
@@ -262,11 +262,11 @@ At 2 articles/week: 3.5 hours/week on content production.
 ## Quality Standards
 
 Every article must have:
-- [ ] Real numbers (not "many" or "some" — exact figures with source)
+- [ ] Real numbers (not "many" or "some", exact figures with source)
 - [ ] Current tool pricing (verify before publish)
 - [ ] Comparison table (for any "best X" or "X vs Y" content)
 - [ ] Actionable steps (not just "here's what you could do")
-- [ ] PRINTMAXXER voice (no AI slop — check copy-style.md checklist)
+- [ ] PRINTMAXXER voice (no AI slop, check copy-style.md checklist)
 - [ ] Internal links to 2-3 related articles
 - [ ] Affiliate disclosure where relevant (FTC requirement)
 - [ ] Meta description under 155 characters with keyword

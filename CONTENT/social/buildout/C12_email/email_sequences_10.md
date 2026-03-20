@@ -1,4 +1,4 @@
-# 10 Email Sequences — Complete Copy
+# 10 Email Sequences, Complete Copy
 
 Platform: Beehiiv (primary), ConvertKit (backup)
 All sequences: plain-text first, mobile-optimized, 1 CTA per email
@@ -11,14 +11,14 @@ All sequences: plain-text first, mobile-optimized, 1 CTA per email
 
 ---
 
-**Email 1 — Day 0 (immediate)**
+**Email 1, Day 0 (immediate)**
 Subject: your cold email playbook is inside
 
 here's the playbook you downloaded.
 
 [LINK TO PDF]
 
-while you have it open — the section on reply rates matters most. most people skip it. that's why they get 0.3% reply rates instead of 6%.
+while you have it open, the section on reply rates matters most. most people skip it. that's why they get 0.3% reply rates instead of 6%.
 
 the difference between 0.3% and 6% on 500 emails:
 - 0.3% = 1-2 replies
@@ -28,13 +28,13 @@ same list. same offer. just a different opening line structure.
 
 i'll send you the 3-part framework tomorrow.
 
-—[NAME]
+-[NAME]
 
 PS: if you want to skip ahead and see how we build these for clients, reply "tell me more"
 
 ---
 
-**Email 2 — Day 1**
+**Email 2, Day 1**
 Subject: the opening line that got 34 replies in 48 hours
 
 most cold emails fail in the first sentence.
@@ -45,20 +45,20 @@ nobody cares.
 
 the line that got 34 replies from 180 sends:
 
-"noticed you're still using [COMPETITOR TOOL] — most of your competitors switched to [ALTERNATIVE] 6 months ago"
+"noticed you're still using [COMPETITOR TOOL], most of your competitors switched to [ALTERNATIVE] 6 months ago"
 
 why it works:
 - hyper-specific (shows real research)
 - slightly threatening (competitors are ahead)
 - opens a loop (what are competitors using?)
 
-formula: [SPECIFIC OBSERVATION] — [IMPLICATION FOR THEM]
+formula: [SPECIFIC OBSERVATION], [IMPLICATION FOR THEM]
 
 you need to know what to observe. that's what the next email is about.
 
 ---
 
-**Email 3 — Day 3**
+**Email 3, Day 3**
 Subject: 5 signals that mean "email me now"
 
 these 5 signals = high-intent prospects. when you see them, send that day.
@@ -79,7 +79,7 @@ i'll show you the exact filter setup tomorrow.
 
 ---
 
-**Email 4 — Day 5**
+**Email 4, Day 5**
 Subject: the 6-question email that closes $2.5K deals
 
 every cold email needs to answer 6 questions in 100 words or less:
@@ -107,7 +107,7 @@ that's it. 6 questions, 100 words, one ask.
 
 ---
 
-**Email 5 — Day 7**
+**Email 5, Day 7**
 Subject: what happens when you send 500 emails in one week
 
 data from a real campaign (B2B SaaS targeting):
@@ -131,7 +131,7 @@ the follow-up got 40% of the replies. most people don't send it.
 
 ---
 
-**Email 6 — Day 10**
+**Email 6, Day 10**
 Subject: the follow-up that isn't annoying
 
 most follow-ups get ignored because they're too long.
@@ -155,7 +155,7 @@ this one gets 12% reply rate. people don't like loose ends.
 
 ---
 
-**Email 7 — Day 14**
+**Email 7, Day 14**
 Subject: last one (and a free template)
 
 this is the last email in the series.
@@ -168,23 +168,23 @@ if you've been reading, you have the full cold email system:
 
 if you want us to build and run this for your business:
 
-[BOOK A CALL — 15 MINUTES]
+[BOOK A CALL, 15 MINUTES]
 
 if you want to do it yourself, here's the complete template pack (free):
 
 [DOWNLOAD TEMPLATES]
 
-either way — you have everything you need.
+either way, you have everything you need.
 
 ---
 
-## SEQUENCE 2: Welcome Sequence — Newsletter Subscribers (7 emails)
+## SEQUENCE 2: Welcome Sequence, Newsletter Subscribers (7 emails)
 **Trigger:** Subscribe to newsletter
 **Goal:** Engage, establish trust, convert to paid tier
 
 ---
 
-**Email 1 — Day 0**
+**Email 1, Day 0**
 Subject: you're in (here's what to expect)
 
 you just subscribed to [NEWSLETTER NAME].
@@ -197,9 +197,9 @@ here's what you'll get:
 
 this week's issue drops [DAY].
 
-while you wait — the most-read post from last month:
+while you wait, the most-read post from last month:
 
-[LINK: "how i went from $0 to $3K/mo in 90 days — the actual breakdown"]
+[LINK: "how i went from $0 to $3K/mo in 90 days, the actual breakdown"]
 
 3,200 people read it. here's why it resonated: real numbers, ugly months included.
 
@@ -207,12 +207,12 @@ see you [DAY].
 
 ---
 
-**Email 2 — Day 2**
+**Email 2, Day 2**
 Subject: the tool that changed how i track money
 
 ConvertKit is fine for email.
 
-but for tracking where the money actually comes from — i use a $0 spreadsheet.
+but for tracking where the money actually comes from, i use a $0 spreadsheet.
 
 here's the version i use: [LINK TO TEMPLATE]
 
@@ -228,7 +228,7 @@ why this matters: 80% of your revenue comes from 2-3 sources. most people don't 
 
 ---
 
-**Email 3 — Day 5**
+**Email 3, Day 5**
 Subject: 3 things i tried that didn't work
 
 transparency builds trust faster than success stories.
@@ -248,7 +248,7 @@ the pivot from each failure is what got me to $3K/mo. i'll cover that next issue
 
 ---
 
-**Email 4 — Day 8**
+**Email 4, Day 8**
 Subject: the $9/mo offer (worth it or not?)
 
 straight answer: yes.
@@ -267,11 +267,11 @@ the $9/mo math: if one tactic makes you $100 extra per month, it pays for itself
 
 if you want to upgrade: [LINK]
 
-if not — the free tier keeps everything it has now.
+if not, the free tier keeps everything it has now.
 
 ---
 
-**Email 5 — Day 12**
+**Email 5, Day 12**
 Subject: what 847 subscribers said they want more of
 
 i asked. 847 of you answered.
@@ -295,15 +295,15 @@ that's what you asked for. that's what you'll get.
 
 ---
 
-**Email 6 — Day 16**
+**Email 6, Day 16**
 Subject: the best resources i've found this month
 
-quick one — the best stuff i found this month:
+quick one, the best stuff i found this month:
 
 tools:
-- Phantom Buster ($56/mo) — automate LinkedIn scraping without getting banned
-- Instantly ($37/mo) — cold email at scale with auto-rotation
-- Beehiiv (free to 2.5K) — the newsletter platform this runs on
+- Phantom Buster ($56/mo), automate LinkedIn scraping without getting banned
+- Instantly ($37/mo), cold email at scale with auto-rotation
+- Beehiiv (free to 2.5K), the newsletter platform this runs on
 
 articles:
 - [LINK: how to write copy that doesn't sound like AI]
@@ -318,8 +318,8 @@ that's the month's best. next issue: the $0 content machine.
 
 ---
 
-**Email 7 — Day 21**
-Subject: 3 weeks in — quick check
+**Email 7, Day 21**
+Subject: 3 weeks in, quick check
 
 you've been on the list 3 weeks.
 
@@ -342,7 +342,7 @@ takes 5 seconds. genuinely changes what i write.
 
 ---
 
-**Email 1 — Day 0**
+**Email 1, Day 0**
 Subject: your [RESOURCE NAME] is attached
 
 here's your download: [LINK]
@@ -357,25 +357,25 @@ pick one thing. do it in the next 2 hours.
 
 ---
 
-**Email 2 — Day 2**
+**Email 2, Day 2**
 Subject: what's missing from the free version
 
 the free resource you downloaded covers the basics.
 
 what's NOT in it:
 - the 15 highest-converting subject lines (from 10K+ emails analyzed)
-- the "no-open" follow-up sequence (sends only to people who didn't open — 3x higher conversion)
+- the "no-open" follow-up sequence (sends only to people who didn't open, 3x higher conversion)
 - the segmentation system (send different messages to different people without extra work)
 
 these are in the full toolkit ($27 one-time).
 
 it's not upsell for the sake of upsell. the free version works. the paid version works 3x better.
 
-[GET THE FULL TOOLKIT — $27]
+[GET THE FULL TOOLKIT, $27]
 
 ---
 
-**Email 3 — Day 4**
+**Email 3, Day 4**
 Subject: results from 3 people who used the template this week
 
 three people sent me results this week (unsolicited):
@@ -390,16 +390,16 @@ these are real screenshots if you want to see them: [LINK]
 
 what they did: exactly what the template says. no hacks, no shortcuts.
 
-the paid version has 3x more templates like these: [LINK — $27]
+the paid version has 3x more templates like these: [LINK, $27]
 
 ---
 
-**Email 4 — Day 6**
+**Email 4, Day 6**
 Subject: last 24 hours at this price
 
 the toolkit is $27 until tomorrow.
 
-after that it goes to $47. (not fake urgency — i review pricing every 30 days and it's going up)
+after that it goes to $47. (not fake urgency, i review pricing every 30 days and it's going up)
 
 what you get:
 - 15 proven subject lines
@@ -408,18 +408,18 @@ what you get:
 - 6-question framework (advanced version)
 - Q&A access for 30 days
 
-[GET IT NOW — $27]
+[GET IT NOW, $27]
 
 after tomorrow: $47
 
 ---
 
-**Email 5 — Day 8**
+**Email 5, Day 8**
 Subject: price went up (but here's what's still free)
 
 the toolkit is $47 now.
 
-if $47 isn't right — the free version is still available at [LINK].
+if $47 isn't right, the free version is still available at [LINK].
 
 the free version covers 80% of what you need to start. use it.
 
@@ -435,7 +435,7 @@ one thing either way: send the email. the best template you don't send does noth
 
 ---
 
-**Email 1 — Day 0 (immediate)**
+**Email 1, Day 0 (immediate)**
 Subject: your trial starts now
 
 trial active. 14 days.
@@ -452,7 +452,7 @@ if you get stuck: reply to this email. i answer within 24 hours.
 
 ---
 
-**Email 2 — Day 3**
+**Email 2, Day 3**
 Subject: the one feature most people miss
 
 3 days in. most people haven't touched this yet:
@@ -463,11 +463,11 @@ it's the thing that saves 2 hours/week once you set it up. nobody finds it on th
 
 here's how to turn it on: [LINK]
 
-if you've been using the app and already found it — what do you think? reply and let me know.
+if you've been using the app and already found it, what do you think? reply and let me know.
 
 ---
 
-**Email 3 — Day 7**
+**Email 3, Day 7**
 Subject: halfway through your trial
 
 7 days left.
@@ -485,8 +485,8 @@ here's the quick-start for each: [LINK]
 
 ---
 
-**Email 4 — Day 12**
-Subject: 2 days left — here's what happens if you don't upgrade
+**Email 4, Day 12**
+Subject: 2 days left, here's what happens if you don't upgrade
 
 trial ends in 48 hours.
 
@@ -498,25 +498,25 @@ if you don't upgrade:
 
 if you do upgrade ($X/mo):
 - everything stays running
-- [BONUS: first month at 50% off — code TRIAL50]
+- [BONUS: first month at 50% off, code TRIAL50]
 - 30-day cancel anytime
 
 upgrade: [LINK]
 
 ---
 
-**Email 5 — Day 14**
+**Email 5, Day 14**
 Subject: trial ended
 
 your trial is over.
 
 three options:
 
-1. upgrade to keep everything running: [LINK — $X/mo, 50% off first month: TRIAL50]
+1. upgrade to keep everything running: [LINK, $X/mo, 50% off first month: TRIAL50]
 2. stay on free (limited features): [LINK]
 3. come back later (your data is saved): no action needed
 
-if the product didn't solve your problem — reply and tell me why. that's worth more than the subscription to me.
+if the product didn't solve your problem, reply and tell me why. that's worth more than the subscription to me.
 
 ---
 
@@ -526,14 +526,14 @@ if the product didn't solve your problem — reply and tell me why. that's worth
 
 ---
 
-**Email 1 — Day 0 (waitlist confirmation)**
+**Email 1, Day 0 (waitlist confirmation)**
 Subject: you're on the waitlist
 
 you're on the list.
 
 launch date: [DATE]
 early access: [DATE - 2 days before]
-price on launch: $X (waitlist gets $Y — confirmed)
+price on launch: $X (waitlist gets $Y, confirmed)
 
 while you wait, the most useful free resource i have:
 
@@ -543,21 +543,21 @@ see you on [DATE].
 
 ---
 
-**Email 2 — Day -7 (7 days before launch)**
-Subject: one week out — what you're getting
+**Email 2, Day -7 (7 days before launch)**
+Subject: one week out, what you're getting
 
 launching in 7 days.
 
 here's the exact curriculum:
 
-week 1: [TOPIC] — [specific outcome]
-week 2: [TOPIC] — [specific outcome]
-week 3: [TOPIC] — [specific outcome]
-week 4: [TOPIC] — [specific outcome]
+week 1: [TOPIC], [specific outcome]
+week 2: [TOPIC], [specific outcome]
+week 3: [TOPIC], [specific outcome]
+week 4: [TOPIC], [specific outcome]
 
 bonuses (waitlist only):
-- [BONUS 1] — worth $X
-- [BONUS 2] — worth $X
+- [BONUS 1], worth $X
+- [BONUS 2], worth $X
 - private group access
 
 total value: $XXX. waitlist price: $Y.
@@ -566,7 +566,7 @@ the difference between this and other courses: everything has real numbers attac
 
 ---
 
-**Email 3 — Day -3 (3 days before launch)**
+**Email 3, Day -3 (3 days before launch)**
 Subject: here's what [NAME] built in 30 days
 
 [NAME] went through the beta version of this course.
@@ -587,7 +587,7 @@ launch in 3 days. waitlist discount still locked in.
 
 ---
 
-**Email 4 — Day -1 (24 hours before launch)**
+**Email 4, Day -1 (24 hours before launch)**
 Subject: opens tomorrow (24h heads up)
 
 opening enrollment tomorrow at [TIME] [TIMEZONE].
@@ -599,26 +599,26 @@ tomorrow i'll send the link at [TIME].
 
 one thing to decide tonight: are you going to do something different in the next 90 days, or keep doing what you've been doing?
 
-if yes — i'll see you tomorrow.
+if yes, i'll see you tomorrow.
 
 ---
 
-**Email 5 — Day 0 (launch day)**
-Subject: open now — waitlist price for 48 hours
+**Email 5, Day 0 (launch day)**
+Subject: open now, waitlist price for 48 hours
 
 enrollment is open.
 
-[ENROLL NOW — $X WAITLIST PRICE]
+[ENROLL NOW, $X WAITLIST PRICE]
 
 waitlist price closes in 48 hours. after that: $Y.
 
-what you get: [QUICK BULLETS — curriculum, bonuses, access period, support]
+what you get: [QUICK BULLETS, curriculum, bonuses, access period, support]
 
 if you have a question before enrolling: reply to this. i answer today.
 
 ---
 
-**Email 6 — Day 2 (cart close)**
+**Email 6, Day 2 (cart close)**
 Subject: closing tonight at midnight
 
 final hours.
@@ -629,7 +629,7 @@ after midnight: $Y (no exceptions, automated).
 
 enrollment link: [LINK]
 
-if the price isn't the issue and you have a different hesitation — reply and tell me. sometimes there's a real reason to wait. sometimes there isn't. worth 2 minutes to figure out which.
+if the price isn't the issue and you have a different hesitation, reply and tell me. sometimes there's a real reason to wait. sometimes there isn't. worth 2 minutes to figure out which.
 
 ---
 
@@ -639,7 +639,7 @@ if the price isn't the issue and you have a different hesitation — reply and t
 
 ---
 
-**Email 1 — Day 0**
+**Email 1, Day 0**
 Subject: you stopped opening
 
 haven't seen you in a while.
@@ -654,12 +654,12 @@ one thing before you ghost for good: the most useful thing i sent in the last 60
 
 ---
 
-**Email 2 — Day 5**
+**Email 2, Day 5**
 Subject: still here
 
 still sending to you.
 
-quick temperature check — reply with one word:
+quick temperature check, reply with one word:
 - "yes" = still interested, keep sending
 - "pause" = i'll tag you as paused and stop for 90 days
 - "no" = i'll remove you instantly
@@ -668,10 +668,10 @@ no reply = i'll send one more in a week, then stop.
 
 ---
 
-**Email 3 — Day 12**
+**Email 3, Day 12**
 Subject: the thing i should have sent earlier
 
-looking back at what i've sent you — i think i missed the mark on what you actually wanted.
+looking back at what i've sent you, i think i missed the mark on what you actually wanted.
 
 what you signed up for was probably [ORIGINAL LEAD MAGNET TOPIC].
 
@@ -680,11 +680,11 @@ the best content i have on that, specifically:
 - [LINK 2]
 - [LINK 3]
 
-if that's not it either — one question: what would make this worth opening every [DAY]? reply with anything.
+if that's not it either, one question: what would make this worth opening every [DAY]? reply with anything.
 
 ---
 
-**Email 4 — Day 19**
+**Email 4, Day 19**
 Subject: honest question
 
 what would i have to send you for this to be worth opening every week?
@@ -695,18 +695,18 @@ reply with anything. one word or one paragraph, i read both.
 
 ---
 
-**Email 5 — Day 26**
+**Email 5, Day 26**
 Subject: last email (unsubscribe happens automatically)
 
 this is the last email you'll get from me.
 
 you'll be unsubscribed in 72 hours automatically.
 
-if that's fine — nothing to do.
+if that's fine, nothing to do.
 
-if you want to stay: click here [LINK — "keep me subscribed"]
+if you want to stay: click here [LINK, "keep me subscribed"]
 
-whatever you decide — the free resources stay available at [LINK].
+whatever you decide, the free resources stay available at [LINK].
 
 thanks for being on the list.
 
@@ -718,20 +718,20 @@ thanks for being on the list.
 
 ---
 
-**Email 1 — Day 3 post-delivery**
+**Email 1, Day 3 post-delivery**
 Subject: quick follow-up on [PROJECT]
 
 hope the [DELIVERABLE] is working well.
 
 one question: has anything come up since delivery that would help to adjust?
 
-i ask because most clients don't realize something until they start using it — and the fix is usually quick at this stage.
+i ask because most clients don't realize something until they start using it, and the fix is usually quick at this stage.
 
 reply if anything.
 
 ---
 
-**Email 2 — Day 10**
+**Email 2, Day 10**
 Subject: results from the work we did
 
 checking in on [PROJECT].
@@ -740,11 +740,11 @@ have you been able to track any results yet? even directional is useful.
 
 if you want, i can put together a quick analysis of what's working and what to build on next. takes about 30 minutes on my end.
 
-no charge — just useful context if we work together again.
+no charge, just useful context if we work together again.
 
 ---
 
-**Email 3 — Day 21**
+**Email 3, Day 21**
 Subject: what the next 90 days could look like
 
 based on what we built, here's what i'd do in the next 90 days if i were you:
@@ -753,13 +753,13 @@ month 1: [SPECIFIC RECOMMENDATION]
 month 2: [SPECIFIC RECOMMENDATION]
 month 3: [SPECIFIC RECOMMENDATION]
 
-i can execute this as a retainer at $X/mo. what's included: [LIST — 3 deliverables per month, weekly async check-in, priority turnaround].
+i can execute this as a retainer at $X/mo. what's included: [LIST, 3 deliverables per month, weekly async check-in, priority turnaround].
 
 if you want to see how i'd specifically approach it for your business: 20-minute call. [LINK]
 
 ---
 
-**Email 4 — Day 35**
+**Email 4, Day 35**
 Subject: a client who did this (similar to your situation)
 
 [CLIENT NAME/TYPE] was in a similar spot as you after our first project.
@@ -769,7 +769,7 @@ they took the retainer route. over 4 months:
 - [RESULT 2]
 - [RESULT 3]
 
-the key wasn't the individual work — it was the compounding. each month built on the last.
+the key wasn't the individual work, it was the compounding. each month built on the last.
 
 retainer structure: $X/mo, 3-month minimum (then month-to-month).
 
@@ -778,17 +778,17 @@ if not, no pressure. i'll check back in 30 days.
 
 ---
 
-**Email 5 — Day 50**
+**Email 5, Day 50**
 Subject: one more time (then i'll stop asking)
 
 last follow-up on the retainer offer.
 
 three options:
-1. start the retainer: $X/mo — [LINK]
+1. start the retainer: $X/mo, [LINK]
 2. one-off project: [LINK to book project call]
 3. not right now: reply "later" and i'll check back in 3 months
 
-whichever you pick — the work we did stands. happy to be a resource.
+whichever you pick, the work we did stands. happy to be a resource.
 
 ---
 
@@ -798,7 +798,7 @@ whichever you pick — the work we did stands. happy to be a resource.
 
 ---
 
-**Email 1 — Day 0 (purchase confirmation)**
+**Email 1, Day 0 (purchase confirmation)**
 Subject: your purchase is confirmed
 
 got it.
@@ -807,20 +807,20 @@ your [PRODUCT] is here: [LINK]
 
 quick tip on getting the most out of it: [ONE SPECIFIC RECOMMENDATION]
 
-one more thing — a lot of people add [UPSELL PRODUCT] at this point. it's the natural next step after [PRODUCT].
+one more thing, a lot of people add [UPSELL PRODUCT] at this point. it's the natural next step after [PRODUCT].
 
-price is lower when paired: [LINK — $X vs normal $Y]
+price is lower when paired: [LINK, $X vs normal $Y]
 
 that offer is only available for the next 48 hours.
 
 ---
 
-**Email 2 — Day 2**
+**Email 2, Day 2**
 Subject: how far along are you?
 
 48 hours in. where are you?
 
-a) haven't started yet (normal — life gets busy)
+a) haven't started yet (normal, life gets busy)
 b) read it, haven't acted yet
 c) started, have a question
 d) already got a result (tell me!)
@@ -829,13 +829,13 @@ reply with a letter. i'll send you the most relevant next step based on where yo
 
 ---
 
-**Email 3 — Day 4**
+**Email 3, Day 4**
 Subject: what to do after [PRODUCT]
 
 if you've worked through [PRODUCT], the natural next move is [UPSELL PRODUCT].
 
 here's why:
-[PRODUCT] covers [X]. [UPSELL PRODUCT] covers [Y — the next constraint].
+[PRODUCT] covers [X]. [UPSELL PRODUCT] covers [Y, the next constraint].
 
 most people who buy [PRODUCT] eventually buy [UPSELL PRODUCT]. doing it now vs later:
 - now: $X (48 hours left at this price)
@@ -843,11 +843,11 @@ most people who buy [PRODUCT] eventually buy [UPSELL PRODUCT]. doing it now vs l
 
 the only reason to wait is if you haven't finished [PRODUCT] yet. finish it first. then upgrade.
 
-[ADD UPSELL — $X]
+[ADD UPSELL, $X]
 
 ---
 
-**Email 4 — Day 6**
+**Email 4, Day 6**
 Subject: the piece most people miss
 
 one thing most people don't do after buying [PRODUCT]:
@@ -858,18 +858,18 @@ it's not in the main product because it's advanced. it IS in [UPSELL PRODUCT].
 
 the result when you add this one piece: [SPECIFIC OUTCOME WITH NUMBER].
 
-[UPSELL PRODUCT] — $X, 24 hours left at this price: [LINK]
+[UPSELL PRODUCT], $X, 24 hours left at this price: [LINK]
 
 ---
 
-**Email 5 — Day 7**
+**Email 5, Day 7**
 Subject: normal price now
 
 upsell price is gone. [UPSELL PRODUCT] is $Y from here.
 
 if you want it: [LINK]
 
-if not — the main product is enough to get started. everything you need is in there.
+if not, the main product is enough to get started. everything you need is in there.
 
 use it.
 
@@ -881,8 +881,8 @@ use it.
 
 ---
 
-**Email 1 — Day 3 post-signup**
-Subject: 3 days in — quick check
+**Email 1, Day 3 post-signup**
+Subject: 3 days in, quick check
 
 3 days on [PRODUCT].
 
@@ -893,12 +893,12 @@ if no: reply and tell me what's not working. i'll fix it or explain it in 24 hou
 
 ---
 
-**Email 2 — Day 14**
+**Email 2, Day 14**
 Subject: 2 weeks of data
 
 you've been using [PRODUCT] for 2 weeks.
 
-your usage so far: [DYNAMIC — logins, tasks, etc.]
+your usage so far: [DYNAMIC, logins, tasks, etc.]
 
 customers who use [PRODUCT] for 30+ consecutive days save an average of [X hours/week or $X/mo].
 
@@ -906,7 +906,7 @@ your estimate: [DYNAMIC CALCULATION]
 
 ---
 
-**Email 3 — Day 21**
+**Email 3, Day 21**
 Subject: annual plan math (worth it for you?)
 
 monthly: $X/mo = $Y/year
@@ -918,11 +918,11 @@ most customers keep it for 14+ months. average savings: $[X].
 
 annual plan: [LINK]
 
-if you prefer monthly — that's fine. just wanted to make sure you had the math.
+if you prefer monthly, that's fine. just wanted to make sure you had the math.
 
 ---
 
-**Email 4 — Day 30**
+**Email 4, Day 30**
 Subject: what [CUSTOMER TYPE] saved this month
 
 [CUSTOMER SEGMENT] customers averaged [X hours saved] in their first 30 days.
@@ -937,7 +937,7 @@ upgrade: [LINK]
 
 ---
 
-**Email 5 — Day 45**
+**Email 5, Day 45**
 Subject: limited time: annual plan with extras
 
 this month only (ends [DATE]):
@@ -949,18 +949,18 @@ annual plan includes:
 
 normal annual: $Z. this offer: $Z + bonuses.
 
-[UPGRADE NOW — expires DATE]
+[UPGRADE NOW, expires DATE]
 
 ---
 
-**Email 6 — Day 60**
+**Email 6, Day 60**
 Subject: honest question about whether this is working
 
 60 days in.
 
 one honest question: is [PRODUCT] solving the problem you signed up to solve?
 
-if yes: [LINK to annual plan — still the best deal]
+if yes: [LINK to annual plan, still the best deal]
 if no: reply and tell me what's missing. i'll fix it, connect you to a resource that helps, or give you a refund. whichever fits.
 
 i'd rather know than lose you quietly.
@@ -973,7 +973,7 @@ i'd rather know than lose you quietly.
 
 ---
 
-**Email 1 — Within 1 hour of event**
+**Email 1, Within 1 hour of event**
 Subject: recording + everything from today
 
 you attended [EVENT NAME]. here's everything:
@@ -983,13 +983,13 @@ slides: [LINK]
 resources mentioned: [LIST WITH LINKS]
 Q&A answers (written out): [LINK]
 
-the offer from today (if you missed it): [LINK — EVENT PRICING]
+the offer from today (if you missed it): [LINK, EVENT PRICING]
 
 event pricing closes in 72 hours.
 
 ---
 
-**Email 2 — Day 1**
+**Email 2, Day 1**
 Subject: the question everyone had but didn't ask
 
 most common question after this webinar (from the chat and replies):
@@ -1004,7 +1004,7 @@ still at event pricing for 48 hours: [LINK]
 
 ---
 
-**Email 3 — Day 2**
+**Email 3, Day 2**
 Subject: 3 people who did this already
 
 quick proof that the method works:
@@ -1019,7 +1019,7 @@ event pricing closes tomorrow midnight.
 
 ---
 
-**Email 4 — Day 3 (18 hours before close)**
+**Email 4, Day 3 (18 hours before close)**
 Subject: 18 hours left at event pricing
 
 event pricing closes at midnight [TIMEZONE].
@@ -1036,13 +1036,13 @@ if you have a question holding you back: reply now. i'm answering today.
 
 ---
 
-**Email 5 — Day 4 (post-close)**
+**Email 5, Day 4 (post-close)**
 Subject: event pricing closed (normal price available)
 
 event pricing is closed.
 
-[PRODUCT] is available at regular price: [LINK — $Y]
+[PRODUCT] is available at regular price: [LINK, $Y]
 
-if the timing wasn't right during the event window — no problem. the product doesn't expire. whenever you're ready: [LINK].
+if the timing wasn't right during the event window, no problem. the product doesn't expire. whenever you're ready: [LINK].
 
 replay stays up until [DATE]: [LINK]

@@ -1,4 +1,4 @@
-# Meme Batch Round 2 — 100 Text-Only Tweets
+# Meme Batch Round 2, 100 Text-Only Tweets
 # Platform: Twitter/X | Niche: Tech, startup, hustle, coding, solopreneur
 # Voice: @pipelineabuser + @eptwts + @BLUECOW009
 # Generated: 2026-03-05
@@ -932,7 +932,7 @@ F: posting about posting
 
 ---
 
-## END — MEME BATCH R2 (100 tweets)
+## END, MEME BATCH R2 (100 tweets)
 # Total: 100 memes across 7 categories
 # Voice calibration: @pipelineabuser energy, @eptwts authenticity, lowercase throughout
 # Best performers (predicted): 3, 13, 18, 45, 57, 75, 87, 100

@@ -11,7 +11,7 @@
 ## Pre-Publish Checklist
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, utilize, comprehensive, robust, seamless, innovative, game-changer)
+- [x] Zero banned AI vocabulary (no use, use, complete, strong, seamless, novel, game-changer)
 - [x] No "It's not just X, it's Y" constructions
 - [x] No vague attributions
 - [x] No promotional adjectives
@@ -266,7 +266,7 @@ Optional insert at Day 5: Template 2 (competitor angle) if you ran their audit b
 
 ## A/B Test Priorities
 
-Test these subject lines first (highest leverage):
+Test these subject lines first (highest use):
 
 | Variable | Version A | Version B |
 |----------|-----------|-----------|

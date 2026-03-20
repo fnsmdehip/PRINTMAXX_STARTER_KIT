@@ -16,7 +16,7 @@ Plus sponsors and affiliate = $8,000-12,000/mo at 5K subscribers.
 
 ---
 
-## FREE TIER — The Engine
+## FREE TIER, The Engine
 
 **What it includes:**
 - Weekly issue (full access)
@@ -25,7 +25,7 @@ Plus sponsors and affiliate = $8,000-12,000/mo at 5K subscribers.
 
 **Purpose:** Max reach, max deliverability, feed sponsor inventory, referral pool.
 
-Free tier is NOT a loss — it generates:
+Free tier is NOT a loss, it generates:
 - Sponsor revenue (CPM-based, need subscriber count)
 - Affiliate revenue (every tool mention = link)
 - Content distribution (readers share = free growth)
@@ -35,7 +35,7 @@ Free tier is NOT a loss — it generates:
 
 ---
 
-## PAID TIER — $9/mo (or $79/year = 27% discount)
+## PAID TIER, $9/mo (or $79/year = 27% discount)
 
 **Positioning:** "The complete playbook, not just the highlights."
 
@@ -88,7 +88,7 @@ In anniversary email (day 30 and day 90):
 
 ---
 
-## VIP TIER — $29/mo (or $249/year = 29% discount)
+## VIP TIER, $29/mo (or $249/year = 29% discount)
 
 **Positioning:** "Direct access + the full operator toolkit."
 
@@ -112,7 +112,7 @@ In anniversary email (day 30 and day 90):
 4. Monthly Teardown
 - Full audit of one VIP subscriber's business, funnel, or content strategy
 - Submitted via form. Selected and published (with permission) as case study.
-- Observer access even if not selected — real value either way.
+- Observer access even if not selected, real value either way.
 
 5. Template Vault (Full Library)
 - All swipe files + templates
@@ -188,6 +188,6 @@ Strategies to reduce:
 2. "Pause" option before cancel (30-day pause reduces churn by 25%)
 3. Annual plan discounting (locked in subscribers churn 4× less)
 4. New content formats quarterly (prevents content fatigue)
-5. Community element (VIP Slack or Telegram) — social lock-in reduces churn significantly
+5. Community element (VIP Slack or Telegram), social lock-in reduces churn significantly
 
 Target: <2% monthly churn. At $5,600/mo subscription revenue and 2% churn = $112/mo loss. Manageable.

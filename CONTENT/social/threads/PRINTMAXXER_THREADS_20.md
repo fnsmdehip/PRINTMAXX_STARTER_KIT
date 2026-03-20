@@ -238,7 +238,7 @@ tool 4: heygen ($24/mo). AI avatar videos for product demos and tutorials. i scr
 the workflow: monday - batch 7 threads in claude + edit. tuesday - batch graphics in midjourney. wednesday - record/generate video content. thursday-friday - post + engage. weekend - newsletter + planning.
 
 **Tweet 7 (Close):**
-$60/mo in tools. 10 hours/week of work. 200+ pieces of content across 6 platforms. this is the actual leverage of AI. not replacing your thinking. automating the production around your thinking.
+$60/mo in tools. 10 hours/week of work. 200+ pieces of content across 6 platforms. this is the actual use of AI. not replacing your thinking. automating the production around your thinking.
 
 ---
 
@@ -282,7 +282,7 @@ rule 1: share outcomes, not activities. not "i worked on my app today" but "i sh
 rule 2: share numbers. revenue, users, conversion rates, costs, time spent. "my landing page got 2,300 visitors. 47 signed up. that's a 2% conversion rate. not great. here's what i'm changing." numbers make it real. vague updates are invisible.
 
 **Tweet 5:**
-rule 3: share failures publicly. "i spent 3 weeks building a feature nobody used. here's what i learned." failures get 3-5x more engagement than successes. people connect with struggle. and your future successes land harder because they saw the journey.
+rule 3: share failures publicly. "i spent 3 weeks building a feature nobody used. here's what i learned." failures get 3-5x more engagement than successes. people connect with struggle. and your future successes land harder because they saw the path.
 
 **Tweet 6:**
 rule 4: the weekly recap format. every friday: "this week i: shipped X, got Y users, made $Z, learned [one thing]." people start following just to see the friday update. it becomes appointment content.

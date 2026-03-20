@@ -8,7 +8,7 @@
 
 ## standalone posts
 
-### post 1 — summer vibe "act accordingly" (adapted aesthetic)
+### post 1, summer vibe "act accordingly" (adapted aesthetic)
 **account:** @drifthour
 **chars:** 221
 
@@ -25,7 +25,7 @@ summer is a state of mind. curate it. act accordingly.
 
 ---
 
-### post 2 — longevity repackaged as aesthetic wellness
+### post 2, longevity repackaged as aesthetic wellness
 **account:** @drifthour
 **chars:** 237
 
@@ -37,7 +37,7 @@ cold water in the morning. green things on the plate. sunlight before noon. slee
 
 ---
 
-### post 3 — faceless page model for curated accounts
+### post 3, faceless page model for curated accounts
 **account:** @drifthour
 **chars:** 249
 

@@ -1,11 +1,11 @@
-# Indie Hackers posts — cycle 13
+# Indie Hackers posts, cycle 13
 # Status: PENDING_REVIEW
 # Format: "I built X" with technical detail + honest lessons. IH readers are builders. They want the how and the why it didn't go smoothly.
 # Voice: First-person, specific, honest about failures and tradeoffs. Numbers required. No hype.
 
 ---
 
-## Post 1 — PageScorer
+## Post 1, PageScorer
 
 **Title:**
 I built a landing page grader (A-F scoring). Here's what I learned auditing 50 real pages.
@@ -28,11 +28,11 @@ Once I fixed those, conversions started. I wanted a tool that would have caught 
 
 5 criteria, each weighted:
 
-- Value proposition clarity (30%) — does the hero section explain what the product does, for who, and what happens?
-- CTA specificity (25%) — does the button tell you what happens when you click?
-- Social proof presence (20%) — is there at least one credible proof element above the fold?
-- Form friction (15%) — how many fields? Is anything optional? Does the form look trustworthy?
-- Load time (10%) — anything over 3 seconds on mobile gets dinged
+- Value proposition clarity (30%), does the hero section explain what the product does, for who, and what happens?
+- CTA specificity (25%), does the button tell you what happens when you click?
+- Social proof presence (20%), is there at least one credible proof element above the fold?
+- Form friction (15%), how many fields? Is anything optional? Does the form look trustworthy?
+- Load time (10%), anything over 3 seconds on mobile gets dinged
 
 I tried an LLM-based scoring approach first. The problems: inconsistent scores across identical inputs, slow response times (3-5 seconds vs. 0.5), and outputs that were verbose instead of actionable. Switched to rule-based scoring. Faster, consistent, cheaper, more useful.
 
@@ -68,7 +68,7 @@ Happy to look at specific pages manually in the comments if you want a second re
 
 ---
 
-## Post 2 — Side Project Revenue Estimator
+## Post 2, Side Project Revenue Estimator
 
 **Title:**
 I built a revenue estimator that accounts for traffic source. The numbers are more honest than most.

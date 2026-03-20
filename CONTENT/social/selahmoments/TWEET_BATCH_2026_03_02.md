@@ -8,7 +8,7 @@
 
 ## standalone tweets
 
-### tweet 1 — distribution > product = stewardship parable
+### tweet 1, distribution > product = stewardship parable
 **account:** @selahmoments
 **chars:** 276
 
@@ -20,7 +20,7 @@ the servant who buried his gift had the same resource as the others. he just did
 
 ---
 
-### tweet 2 — extraction vs earning = abundance theology
+### tweet 2, extraction vs earning = abundance theology
 **account:** @selahmoments
 **chars:** 257
 
@@ -34,7 +34,7 @@ if your work takes more than it gives, that's pharaoh's model. build something t
 
 ---
 
-### tweet 3 — faceless pages = anonymous service
+### tweet 3, faceless pages = anonymous service
 **account:** @selahmoments
 **chars:** 262
 

@@ -1,4 +1,4 @@
-# LinkedIn Posts — 30 Complete Posts
+# LinkedIn Posts, 30 Complete Posts
 # Voice: Professional storytelling with solopreneur insider energy
 # Format: Hook + Story/Value + Insight + CTA (no external links in post body)
 
@@ -221,16 +221,16 @@ I generate 300+ qualified leads per month at $0 cost.
 
 The stack:
 
-Tool 1: Apollo.io (free tier — 50 exports/month)
+Tool 1: Apollo.io (free tier, 50 exports/month)
 Pull decision-makers by company size, industry, tech stack.
 
-Tool 2: Hunter.io (free tier — 25 verifications/month)
+Tool 2: Hunter.io (free tier, 25 verifications/month)
 Verify emails before sending.
 
 Tool 3: LinkedIn (free)
 Research each prospect's recent posts before reaching out. Mention something specific.
 
-Tool 4: Gmail + Mailmeteor (free tier — 50 emails/day)
+Tool 4: Gmail + Mailmeteor (free tier, 50 emails/day)
 Send personalized outreach at scale for free.
 
 Tool 5: Notion (free)
@@ -349,7 +349,7 @@ Day 2: Read 120 replies. Wrote down the top 3 complaints.
 
 Day 3: Found 20 local businesses in my city with those exact problems. Built a free audit for the worst one.
 
-Day 4: Emailed the audit to the owner. Subject: "I audited your website — found 4 things costing you customers."
+Day 4: Emailed the audit to the owner. Subject: "I audited your website, found 4 things costing you customers."
 
 Day 5: Got a reply in 3 hours.
 
@@ -476,7 +476,7 @@ Most people who "followed their passion" into a business ended up hating their p
 
 Most people who followed their curiosity into a business are still going 5 years in.
 
-The thing you're curious about right now — what would happen if you built something around it?
+The thing you're curious about right now, what would happen if you built something around it?
 
 ---
 
@@ -609,7 +609,7 @@ The bar for "personalized" just got higher.
 What works now:
 1. Reference something specific from their LinkedIn posts in the last 30 days
 2. Name a competitor and something they're doing better
-3. Lead with insight, not your service ("I noticed your pricing page has no social proof — costing you ~15% conversions")
+3. Lead with insight, not your service ("I noticed your pricing page has no social proof, costing you ~15% conversions")
 4. 3 sentences or less
 
 What died:
@@ -646,11 +646,11 @@ I've talked to 40+ freelancers clearing $10K+/month in the last year.
 
 Three things almost all of them share:
 
-1. One highly specific niche (not "web design" — "e-commerce Shopify stores in the outdoor gear space")
+1. One highly specific niche (not "web design", "e-commerce Shopify stores in the outdoor gear space")
 
-2. A content asset that generates inbound (blog, newsletter, LinkedIn, YouTube — not all four, just one, done consistently)
+2. A content asset that generates inbound (blog, newsletter, LinkedIn, YouTube, not all four, just one, done consistently)
 
-3. A retainer model (not hourly, not project — monthly recurring deliverables at $1,500-3,500/month)
+3. A retainer model (not hourly, not project, monthly recurring deliverables at $1,500-3,500/month)
 
 What none of them have:
 - A massive following
@@ -708,7 +708,7 @@ The internet is big enough for a narrow expert to build a $200K/year business. I
 ### Post 30: What I'd Do With $0 and 6 Months
 If I had to start from zero tomorrow:
 
-Month 1: Learn one skill (cold email, SEO, paid ads, no-code — pick one and master it in 4 weeks)
+Month 1: Learn one skill (cold email, SEO, paid ads, no-code, pick one and master it in 4 weeks)
 
 Month 2: Find my first client at a reduced rate or free in exchange for a testimonial and case study
 
@@ -730,5 +730,5 @@ What's the #1 thing stopping you from starting this today?
 
 ---
 
-*All posts formatted for LinkedIn native editor. No external links in post body — include in first comment.*
+*All posts formatted for LinkedIn native editor. No external links in post body, include in first comment.*
 *Post at 7-9am local time. Reply to all comments in first 60 minutes for algorithm boost.*

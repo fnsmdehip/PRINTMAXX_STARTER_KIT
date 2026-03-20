@@ -1,4 +1,4 @@
-# Welcome Sequence — 7 Emails Over 14 Days
+# Welcome Sequence, 7 Emails Over 14 Days
 
 ## Overview
 
@@ -11,13 +11,13 @@ Average performance targets:
 - Email 2: 58% open rate
 - Email 3: 51%
 - Email 4: 48%
-- Email 5: 44% (the pitch — this is acceptable)
+- Email 5: 44% (the pitch, this is acceptable)
 - Email 6: 40%
 - Email 7: 38%
 
 ---
 
-## EMAIL 1 — Immediate (0 hours after signup)
+## EMAIL 1, Immediate (0 hours after signup)
 
 **Subject:** here's your cold email swipe file
 
@@ -25,7 +25,7 @@ Average performance targets:
 
 ---
 
-Hey —
+Hey -
 
 Your Cold Email Swipe File is attached.
 
@@ -45,13 +45,13 @@ Reply to this email and tell me one thing: what's the #1 problem you're trying t
 
 I read every reply.
 
-— [Name]
+- [Name]
 
-P.S. Next email hits on day 3 — the exact $3,247 breakdown from my last month.
+P.S. Next email hits on day 3, the exact $3,247 breakdown from my last month.
 
 ---
 
-## EMAIL 2 — Day 3
+## EMAIL 2, Day 3
 
 **Subject:** where the $3,247 came from (detailed breakdown)
 
@@ -59,17 +59,17 @@ P.S. Next email hits on day 3 — the exact $3,247 breakdown from my last month.
 
 ---
 
-Hey —
+Hey -
 
 Last month I made $3,247.
 
 Here's the complete breakdown:
 
-$1,100 — AI automation consulting (2 clients, $550 each)
-$880 — Gumroad digital products (44 units at $20)
-$620 — SaaS affiliate commissions
-$397 — TikTok Creator Fund (3 accounts)
-$250 — newsletter sponsor (1 mention)
+$1,100, AI automation consulting (2 clients, $550 each)
+$880, Gumroad digital products (44 units at $20)
+$620, SaaS affiliate commissions
+$397, TikTok Creator Fund (3 accounts)
+$250, newsletter sponsor (1 mention)
 
 Total: $3,247
 
@@ -79,13 +79,13 @@ The thing most people miss: none of these streams require you to already have an
 
 Cold email got me the consulting clients. Reddit got me the first product sales. Affiliate commissions came from a single tweet thread.
 
-Tomorrow I'll break down the cold email system — including the exact 6 lines that got me 11% reply rates.
+Tomorrow I'll break down the cold email system, including the exact 6 lines that got me 11% reply rates.
 
-— [Name]
+- [Name]
 
 ---
 
-## EMAIL 3 — Day 5
+## EMAIL 3, Day 5
 
 **Subject:** the cold email framework that got 11% reply rates
 
@@ -93,7 +93,7 @@ Tomorrow I'll break down the cold email system — including the exact 6 lines t
 
 ---
 
-Hey —
+Hey -
 
 The cold email framework I use:
 
@@ -110,7 +110,7 @@ Most cold emails answer 0 of these.
 
 The example that works:
 
-"Hey [Name] — I help local med spas add $15K-40K/mo through automated appointment recovery texts. Most spas lose 30% of no-shows permanently. We recover 40% through a 3-text sequence. Already running this for 12 clinics — average client adds $23K in 90 days. Worth 15 minutes to see if the numbers work for you?"
+"Hey [Name], I help local med spas add $15K-40K/mo through automated appointment recovery texts. Most spas lose 30% of no-shows permanently. We recover 40% through a 3-text sequence. Already running this for 12 clinics, average client adds $23K in 90 days. Worth 15 minutes to see if the numbers work for you?"
 
 67 words. 11% reply rate.
 
@@ -118,11 +118,11 @@ The tech stack to send 500/day costs $86/mo.
 
 Full breakdown of the stack is in Issue 004 of the archives (link below).
 
-— [Name]
+- [Name]
 
 ---
 
-## EMAIL 4 — Day 7
+## EMAIL 4, Day 7
 
 **Subject:** 3 tools that paid for themselves in 72 hours
 
@@ -130,7 +130,7 @@ Full breakdown of the stack is in Issue 004 of the archives (link below).
 
 ---
 
-Hey —
+Hey -
 
 I track ROI per tool. Here's the top 3 this month:
 
@@ -152,11 +152,11 @@ What tools are you paying for right now that you're not sure are worth it?
 
 Reply and I'll tell you if I've tested them.
 
-— [Name]
+- [Name]
 
 ---
 
-## EMAIL 5 — Day 9 (THE PITCH)
+## EMAIL 5, Day 9 (THE PITCH)
 
 **Subject:** the paid version of this newsletter
 
@@ -164,7 +164,7 @@ Reply and I'll tell you if I've tested them.
 
 ---
 
-Hey —
+Hey -
 
 Quick email today.
 
@@ -188,13 +188,13 @@ If that sounds like something you want, here's the link: [PAID TIER LINK]
 
 If not, no pressure. The free weekly issue keeps coming.
 
-— [Name]
+- [Name]
 
 P.S. I'm capping the founding member price at $9/mo for the first 200 subscribers. It goes to $15/mo after. Currently at 142 founding members.
 
 ---
 
-## EMAIL 6 — Day 12
+## EMAIL 6, Day 12
 
 **Subject:** the newsletter monetization math (from $0 to $4,500/mo)
 
@@ -202,22 +202,22 @@ P.S. I'm capping the founding member price at $9/mo for the first 200 subscriber
 
 ---
 
-Hey —
+Hey -
 
 Most people think newsletters make money from paid subscriptions.
 
 That's layer 2. There are 3 layers.
 
-Layer 1 — Sponsors ($4,000/mo at scale)
+Layer 1, Sponsors ($4,000/mo at scale)
 At 2,000+ subscribers: charge $200-500 per issue mention.
 Two spots per issue. 4 issues/month. That's $1,600-4,000/mo.
 Before 2K: charge $50-100. Start finding sponsors now.
 
-Layer 2 — Paid subscriptions ($1,440/mo at scale)
+Layer 2, Paid subscriptions ($1,440/mo at scale)
 $9/mo tier. 5% conversion on 3,200 free subscribers = 160 paid = $1,440 MRR.
 The math: 1,000 free subscribers with 5% conversion = $450/mo recurring.
 
-Layer 3 — Affiliate commissions ($600-1,500/mo)
+Layer 3, Affiliate commissions ($600-1,500/mo)
 Every tool mention = affiliate link.
 Clay pays 20% recurring MRR.
 ConvertKit pays 30% recurring for 24 months.
@@ -229,11 +229,11 @@ This is not hypothetical. These are the actual numbers from newsletters I've ana
 
 Full breakdown in Issue 003 of the archives.
 
-— [Name]
+- [Name]
 
 ---
 
-## EMAIL 7 — Day 14
+## EMAIL 7, Day 14
 
 **Subject:** the 90-day roadmap to $10K/mo (honest version)
 
@@ -241,7 +241,7 @@ Full breakdown in Issue 003 of the archives.
 
 ---
 
-Hey —
+Hey -
 
 You've been on the list for 2 weeks.
 
@@ -272,7 +272,7 @@ Every issue of this newsletter gives you one more piece of the execution system.
 
 See you next week.
 
-— [Name]
+- [Name]
 
 P.S. The paid tier link is still below if you want the full playbook in one place. Issue 005 alone (the AI tools ROI breakdown) covers the $47 cost in tools research time saved.
 
@@ -290,7 +290,7 @@ Send schedule:
 - Email 6: 12 days
 - Email 7: 14 days
 
-A/B test: test 2 subject lines for emails 1, 3, and 5 (highest leverage points)
+A/B test: test 2 subject lines for emails 1, 3, and 5 (highest use points)
 
 Conversion tracking: tag "paid-converted" when subscriber upgrades. Track conversion rate weekly.
 

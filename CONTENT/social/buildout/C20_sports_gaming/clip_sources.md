@@ -1,8 +1,8 @@
-# C20 Sports/Gaming Clips Channel — Legal Clip Usage Guide
+# C20 Sports/Gaming Clips Channel, Legal Clip Usage Guide
 
 ## The Core Legal Framework
 
-### Fair Use (US) — 4-Factor Test
+### Fair Use (US), 4-Factor Test
 
 | Factor | What It Means | How to Pass |
 |--------|--------------|-------------|
@@ -29,20 +29,20 @@
 - **What:** Record your browser while showing pro-football-reference.com, basketball-reference.com, etc.
 - **Tools:** OBS or Loom
 - **Best for:** Stats-heavy sports videos #1, #2, #6
-- **Risk:** None — recording public information
+- **Risk:** None, recording public information
 
 ### Chess.com / Lichess Board Analysis
 - **What:** Replay any public game on lichess.org or chess.com analysis board
 - **Tools:** Screen record the analysis board
 - **Best for:** Chess concepts #4, #16
-- **Risk:** None — both platforms explicitly allow this
+- **Risk:** None, both platforms explicitly allow this
 
 ### Official MLB YouTube Channel
 - **URL:** youtube.com/mlb (21M subscribers)
-- **Policy:** MLB embeds clips with YouTube's standard embed policy — embedding is allowed
+- **Policy:** MLB embeds clips with YouTube's standard embed policy, embedding is allowed
 - **Best for:** Baseball concepts #3, #7
 - **How:** Use YouTube's embed feature or link out in description. Do NOT download and re-upload.
-- **Risk:** Low — embedding vs. downloading distinction
+- **Risk:** Low, embedding vs. downloading distinction
 
 ### Official NBA YouTube Channel
 - **URL:** youtube.com/nba
@@ -55,12 +55,12 @@
 ## TIER 2: LOW-RISK SOURCES (Transformative Commentary)
 
 ### News Broadcast Clips
-- **What:** News organizations (ESPN, Fox Sports) reporting ON events — press conferences, post-game interviews, referee explanations
+- **What:** News organizations (ESPN, Fox Sports) reporting ON events, press conferences, post-game interviews, referee explanations
 - **Legal basis:** News commentary is explicitly protected under fair use factor 1 (transformative purpose)
 - **Best for:** Referee analysis #5, analytical breakdowns
 - **How to source:** ESPN YouTube channel clips of press conferences and analysis segments
 - **Time limit:** Keep clips under 60 seconds
-- **Risk:** Low — news clips under commentary protection
+- **Risk:** Low, news clips under commentary protection
 
 ### Press Conference Footage
 - **What:** Official team/league press conferences
@@ -75,14 +75,14 @@
 - **Legal basis:** Transformative criticism (Twitch Gambling video #19)
 - **Terms note:** Twitch clips are user-generated, creator owns copyright. Commentary = fair use defense.
 - **Best for:** Gaming/streaming culture concepts
-- **Risk:** Low-medium — add your commentary voice over clip
+- **Risk:** Low-medium, add your commentary voice over clip
 
 ### Speedrun Footage
 - **What:** Speedruns posted publicly to YouTube/Twitch
 - **Sources:** speedrun.com, GDQ YouTube channel, individual runner channels
-- **Legal basis:** Educational/transformative — breaking down technique
+- **Legal basis:** Educational/transformative, breaking down technique
 - **Best for:** Speedrun concept #11
-- **Risk:** Low — reach out to runners first; most love the attention
+- **Risk:** Low, reach out to runners first; most love the attention
 
 ---
 
@@ -94,7 +94,7 @@
 - **Safe approach:** Use ONLY official NFL YouTube embeds, or clips under 15 seconds with commentary
 - **Safer alternative:** Use press conference clips instead of game footage
 - **If you must:** Keep under 10 seconds, add clear transformative commentary, accept potential DMCA
-- **Risk:** Medium — NFL is aggressive
+- **Risk:** Medium, NFL is aggressive
 
 ### NBA Game Footage
 - **Owner:** NBA / Turner Broadcasting
@@ -113,7 +113,7 @@
 ### Esports Tournament Footage
 - **Owner:** Tournament organizers (Riot, Valve, ESL)
 - **Policy:** Varies significantly by organizer
-- **Riot/League:** Has a content creator policy — review riot's policies page before using
+- **Riot/League:** Has a content creator policy, review riot's policies page before using
 - **Valve/Dota:** More lenient, no structured policy
 - **CS:GO/CS2:** ESL clips available under press license
 - **Safe approach:** Keep clips under 60 seconds with commentary, link to official VOD
@@ -121,20 +121,20 @@
 
 ---
 
-## TIER 4: HIGH-RISK — AVOID
+## TIER 4: HIGH-RISK, AVOID
 
 ### Full Game Broadcasts
-- Full ESPN/Fox Sports broadcasts — NEVER use
-- Pay-per-view event footage — NEVER use
-- NFL RedZone clips — NEVER use
+- Full ESPN/Fox Sports broadcasts, NEVER use
+- Pay-per-view event footage, NEVER use
+- NFL RedZone clips, NEVER use
 
 ### Music in Sports Arenas
-- Goal celebrations with arena music playing — copyright for the MUSIC, not just the event
-- Any clip with recognizable copyrighted songs in background — mute or avoid
+- Goal celebrations with arena music playing, copyright for the MUSIC, not just the event
+- Any clip with recognizable copyrighted songs in background, mute or avoid
 
 ### Pay-Per-View Sports
-- Boxing/UFC PPV footage — extremely aggressive legal teams
-- WWE content — copyrighted and actively monitored
+- Boxing/UFC PPV footage, extremely aggressive legal teams
+- WWE content, copyrighted and actively monitored
 
 ---
 
@@ -164,7 +164,7 @@ yt-dlp --download-sections "*HH:MM:SS-HH:MM:SS" "URL" -o "speedrun_segment.mp4"
 ### Step 3: Commentary Coverage
 - Every clip MUST have your voice commentary playing over it
 - Add on-screen text analysis
-- No silent clips of any duration — this is what makes it transformative
+- No silent clips of any duration, this is what makes it transformative
 
 ### Step 4: YouTube Upload Settings
 - In YouTube description: "Clips used under fair use for educational/commentary purposes"
@@ -176,10 +176,10 @@ yt-dlp --download-sections "*HH:MM:SS-HH:MM:SS" "URL" -o "speedrun_segment.mp4"
 ## DMCA Response Protocol
 
 **If you receive a Content ID claim (most common):**
-1. Review the claim — most are automatic, not manual
+1. Review the claim, most are automatic, not manual
 2. If your video is clearly transformative: file a dispute with your fair use reasoning
-3. If unsure: accept the claim (they get ad revenue, not you — video stays up)
-4. Never delete disputed videos — this forfeits your defense
+3. If unsure: accept the claim (they get ad revenue, not you, video stays up)
+4. Never delete disputed videos, this forfeits your defense
 
 **If you receive a manual DMCA takedown:**
 1. Review if the claim is valid

@@ -7,7 +7,7 @@
 
 ## STANDALONE TWEETS (5x)
 
-### Tweet 1 — IG Algo Intel
+### Tweet 1, IG Algo Intel
 ```
 instagram just changed the game. DM shares are now the #1 ranking signal above likes and comments.
 
@@ -16,7 +16,7 @@ meaning: if nobody is sharing your post in DMs, the algorithm buries it.
 every caption needs a "send this to someone who..." hook now. not optional.
 ```
 
-### Tweet 2 — YouTube Shorts SEO
+### Tweet 2, YouTube Shorts SEO
 ```
 youtube shorts update most people missed: search SEO now affects shorts discoverability.
 
@@ -25,7 +25,7 @@ meaning: titles and descriptions actually matter now. not just trending audio.
 50-60 seconds is the sweet spot. 18-22 shorts per month is the benchmark. stop posting 3 per day hoping for a hit.
 ```
 
-### Tweet 3 — Gov Micro-Purchases
+### Tweet 3, Gov Micro-Purchases
 ```
 $700B in federal government contracts per year. 23% set aside for small businesses.
 
@@ -34,7 +34,7 @@ the part nobody talks about: micro-purchases under $10K require zero formal bidd
 SAM.gov registration is free. FOIA requests tell you exactly what agencies are buying. the intel is public. people just don't look.
 ```
 
-### Tweet 4 — AI Influencer Stack Cost
+### Tweet 4, AI Influencer Stack Cost
 ```
 tested the minimum viable AI influencer stack. total cost: $40/month.
 
@@ -43,7 +43,7 @@ leonardo.ai for consistent visuals. elevenlabs for voice. heygen for video. canv
 that's it. no $500/mo tool stack. no studio. no camera. $40 and a posting schedule.
 ```
 
-### Tweet 5 — Builder Philosophy
+### Tweet 5, Builder Philosophy
 ```
 every layer of review you add makes you 10x slower. that's not hyperbole. it's math.
 
@@ -56,14 +56,14 @@ solo builders ship in hours what committees ship in quarters. the advantage isn'
 
 ---
 
-## THREAD (7 tweets) — Platform Algorithm Changes You Need to Know (March 2026)
+## THREAD (7 tweets), Platform Algorithm Changes You Need to Know (March 2026)
 
 ### 1/7 (Hook)
 ```
 every major platform just updated their algorithm. here's what changed and what it means for your content strategy. no fluff, just the specifics.
 ```
 
-### 2/7 — Instagram
+### 2/7, Instagram
 ```
 instagram: DM shares are now the top ranking signal. above likes. above comments. above saves.
 
@@ -72,7 +72,7 @@ if people aren't sharing your post in DMs, you're invisible.
 every post needs a "send this to..." angle. first 2 seconds decide if they swipe or stay. watch time is still #1 for reels.
 ```
 
-### 3/7 — TikTok
+### 3/7, TikTok
 ```
 tiktok: completion rate threshold increased. meaning: 60% watch-through used to be good enough. not anymore.
 
@@ -81,7 +81,7 @@ new factor: "active creator signal." posting consistently now directly boosts di
 first hour after posting determines your reach ceiling. time your posts or lose.
 ```
 
-### 4/7 — YouTube Shorts
+### 4/7, YouTube Shorts
 ```
 youtube shorts: search SEO now matters for discoverability. this is new.
 
@@ -91,7 +91,7 @@ new playbook: actual titles + descriptions + keywords
 sweet spot is 50-60 seconds. optimal posting: 18-22 per month. trending audio in first 5 seconds still helps but it's not the whole strategy anymore.
 ```
 
-### 5/7 — What This Means
+### 5/7, What This Means
 ```
 the shift across all 3 platforms: shareability > vanity metrics.
 
@@ -101,7 +101,7 @@ new game: make content people send to friends
 this is why "relatable" content is beating "impressive" content right now. you don't DM your friend a cinematic drone shot. you DM them a post that made you think "this is literally you."
 ```
 
-### 6/7 — Tactical Moves
+### 6/7, Tactical Moves
 ```
 what to do this week:
 
@@ -112,7 +112,7 @@ what to do this week:
 5. aim for 18-22 shorts/month, not 60
 ```
 
-### 7/7 — Close
+### 7/7, Close
 ```
 platforms reward people who study the algorithm. most creators post and pray.
 
@@ -123,7 +123,7 @@ bookmark this. come back in 30 days. see if your numbers moved.
 
 ---
 
-## NEWSLETTER DRAFT — "The Patch Notes Nobody Reads"
+## NEWSLETTER DRAFT, "The Patch Notes Nobody Reads"
 
 **Subject line:** every platform just changed their algorithm. here's the cheat sheet.
 

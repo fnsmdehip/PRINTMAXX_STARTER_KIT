@@ -1,4 +1,4 @@
-# Deployment Announcement — Cycle 12 (2026-03-08 13:57)
+# Deployment Announcement, Cycle 12 (2026-03-08 13:57)
 
 ## NEW: 10 Fiverr Service Landing Pages
 

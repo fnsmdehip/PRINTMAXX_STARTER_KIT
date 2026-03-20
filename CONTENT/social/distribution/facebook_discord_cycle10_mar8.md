@@ -1,4 +1,4 @@
-# Facebook Groups + Discord Distribution — Cycle 10, 2026-03-08
+# Facebook Groups + Discord Distribution, Cycle 10, 2026-03-08
 # Status: PENDING_REVIEW
 # Total: 6 Facebook group posts + 4 Discord posts
 # Assets: tools hub, cold email stack, local biz demos, ADHD streak, Ramadan apps, PageScorer
@@ -8,7 +8,7 @@
 ## Pre-publish checklist (run before posting each)
 
 - [ ] Zero em dashes
-- [ ] Zero banned AI vocabulary (leverage, utilize, comprehensive, robust, innovative, seamless, game-changer, empower, unlock, delve, revolutionary, streamlined, foster)
+- [ ] Zero banned AI vocabulary (use, use, complete, strong, novel, seamless, game-changer, empower, get, dig, revolutionary, streamlined, foster)
 - [ ] No "It's not just X, it's Y" constructions
 - [ ] No promotional adjectives
 - [ ] Consequence-first hook
@@ -23,7 +23,7 @@
 
 ---
 
-## FB POST 1 — Solopreneur / Indie Hacker groups
+## FB POST 1, Solopreneur / Indie Hacker groups
 Target groups: Indie Hackers, Solopreneurs United, One Person Business, Build In Public Community
 Tone: build-in-public transparency, peer sharing, slight flex but mostly just showing work
 Screenshot: browser with printmaxx-tools.surge.sh open showing the grid of 46 tool cards
@@ -61,7 +61,7 @@ if you're building solo, what's your biggest bottleneck right now? genuinely cur
 
 ---
 
-## FB POST 2 — Cold Email / Sales groups
+## FB POST 2, Cold Email / Sales groups
 Target groups: Cold Email Mastery, B2B Sales Strategies, Lead Generation Tactics, Email Outreach Pros
 Tone: practitioner sharing findings, cost-conscious, anti-tool-bloat
 Screenshot: side-by-side showing paid tools vs free alternatives with monthly costs crossed out
@@ -98,7 +98,7 @@ what's your current cold email stack costing you monthly?
 
 ---
 
-## FB POST 3 — Web Dev / Freelancer groups
+## FB POST 3, Web Dev / Freelancer groups
 Target groups: Web Developers & Designers, Freelance Web Design, WordPress & Web Dev Community, Frontend Developers
 Tone: generous resource sharing, peer-to-peer, portfolio reference angle
 Screenshot: grid of 4-5 local biz demo sites on mobile and desktop side by side
@@ -139,7 +139,7 @@ what industries am i missing? i'll build more if there's demand.
 
 ---
 
-## FB POST 4 — ADHD / Productivity groups
+## FB POST 4, ADHD / Productivity groups
 Target groups: ADHD Adults Support, Productivity & ADHD, ADHD Life Hacks, Neurodivergent Professionals
 Tone: empathetic, personal, zero condescension, built-by-someone-who-gets-it energy
 Screenshot: phone mockup showing the ADHD streak app with a 12-day streak and the calendar view
@@ -170,7 +170,7 @@ here's what makes it different from the 200 habit trackers on the app store:
 
 i built this for myself first. shared it with a few friends who also have ADHD and they asked me to make it public. so here it is.
 
-it's completely free. no premium tier, no "unlock 3 more habits for $4.99." what you see is what you get.
+it's completely free. no premium tier, no "get 3 more habits for $4.99." what you see is what you get.
 
 if you try it, i'd love to know: does the one-habit-at-a-time constraint help or would you want the option to add more? trying to figure out if that's a feature or a limitation.
 
@@ -178,7 +178,7 @@ adhd-streak.surge.sh
 
 ---
 
-## FB POST 5 — Muslim / Ramadan groups (URGENT, 19 days left)
+## FB POST 5, Muslim / Ramadan groups (URGENT, 19 days left)
 Target groups: Muslim Community USA, Ramadan Mubarak 2026, Muslim Professionals Network, Islam & Daily Life, American Muslims, Muslim Parents
 Tone: community member sharing a gift, zero promotion, warm and genuine, salam opener
 Screenshot: phone showing hilal app with fasting tracker and progress rings for the month
@@ -215,7 +215,7 @@ please share with family and friends if you find them useful. JazakAllahu khaira
 
 ---
 
-## FB POST 6 — Small Business Owner groups
+## FB POST 6, Small Business Owner groups
 Target groups: Small Business Owners USA, Local Business Marketing Tips, Entrepreneurs & Small Business, Main Street Business Network
 Tone: direct offer, slightly provocative opening, practitioner not agency
 Screenshot: before/after comparison of a dated business site vs one of the modern demos
@@ -267,7 +267,7 @@ what industry is your business in? curious which demos would be most useful.
 
 ---
 
-## DISCORD POST 1 — r/webdev Discord (#share-your-project or #tools)
+## DISCORD POST 1, r/webdev Discord (#share-your-project or #tools)
 Server: Reactiflux / The Coding Den / Webdev & Webdesign
 Channel: #show-your-work or #tools-and-resources
 
@@ -296,7 +296,7 @@ pagescorer.surge.sh
 
 ---
 
-## DISCORD POST 2 — IndieHackers Discord (#milestones or #build-in-public)
+## DISCORD POST 2, IndieHackers Discord (#milestones or #build-in-public)
 Server: Indie Hackers
 Channel: #milestones or #build-in-public
 
@@ -334,7 +334,7 @@ anyone else stuck in build-more-ship-less mode? how did you break out of it?
 
 ---
 
-## DISCORD POST 3 — Claude Code / AI Tooling Discord (#showcase or #projects)
+## DISCORD POST 3, Claude Code / AI Tooling Discord (#showcase or #projects)
 Server: Claude Code Community / AI Dev Tools / Anthropic Discord
 Channel: #showcase or #projects
 
@@ -368,7 +368,7 @@ the comparison page format itself is interesting for SEO. "X vs Y" queries have 
 
 ---
 
-## DISCORD POST 4 — Productivity / ADHD Discord (#tools or #apps)
+## DISCORD POST 4, Productivity / ADHD Discord (#tools or #apps)
 Server: ADHD Discord / Productivity Server / Self Improvement Discord
 Channel: #tools, #apps, or #resources
 

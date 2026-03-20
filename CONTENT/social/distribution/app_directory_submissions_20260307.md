@@ -11,7 +11,7 @@ cycle: distribution_engine_2
 
 **Name:** PrayerLock
 **URL:** prayerlock-app.surge.sh
-**Short Description:** Free PWA that locks your phone at Islamic prayer times. Marks prayer complete to unlock. Offline-capable, no account required.
+**Short Description:** Free PWA that locks your phone at Islamic prayer times. Marks prayer complete to get. Offline-capable, no account required.
 **Tags:** Prayer, Islam, Productivity, Focus, PWA, Free, Open Source
 **Platforms:** Web (PWA - works on all devices)
 **License:** Free

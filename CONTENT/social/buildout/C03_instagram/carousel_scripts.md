@@ -1,4 +1,4 @@
-# C03 Instagram Carousel Scripts — 30 Posts, 10 Slides Each
+# C03 Instagram Carousel Scripts, 30 Posts, 10 Slides Each
 
 Niches: solopreneur/money, faith/prayer, fitness/wellness, AI/tech tools
 Format: Slide 1 = hook, Slides 2-9 = value, Slide 10 = CTA
@@ -16,7 +16,7 @@ here's exactly what I did.
 
 **Slide 2:**
 week 1: picked ONE service people already pay for
-not "consulting" — specifically: cold email copywriting
+not "consulting", specifically: cold email copywriting
 $150/client. 3 clients. $450.
 
 **Slide 3:**
@@ -48,9 +48,9 @@ what I didn't do that people told me I needed:
 
 **Slide 8:**
 the 3 tools I actually used:
-- Notion (free) — proposals + SOPs
-- Stripe (2.9% fee) — payments
-- Gmail — everything else
+- Notion (free), proposals + SOPs
+- Stripe (2.9% fee), payments
+- Gmail, everything else
 
 **Slide 9:**
 month 2 target: $2,400
@@ -70,13 +70,13 @@ YouTube isn't the only platform paying creators.
 4 others pay you monthly and most people never try them.
 
 **Slide 2:**
-1. X/Twitter — Revenue Sharing
+1. X/Twitter, Revenue Sharing
 requires: 500 followers + 5M impressions in 3 months
 avg payout: $0.03-0.08 per 1,000 views
 real number: $300-1,200/mo if you post daily
 
 **Slide 3:**
-2. Substack — Paid Newsletter
+2. Substack, Paid Newsletter
 free until you turn on paid subscriptions
 $5-10/mo per subscriber
 100 paid subscribers = $500-1,000/mo
@@ -152,7 +152,7 @@ Hey [Name],
 I help SaaS companies rewrite their cold outreach.
 Usually cuts their sequence length in half and triples replies.
 
-Did it for [Competitor] — they went from 8% to 31% reply rate in 6 weeks.
+Did it for [Competitor], they went from 8% to 31% reply rate in 6 weeks.
 
 Worth a 15-min call this week?
 
@@ -176,9 +176,9 @@ spend 90 seconds on research. that's it.
 
 **Slide 7:**
 the tool stack to send at scale:
-- Apollo.io ($49/mo) — lead lists
-- Instantly.ai ($37/mo) — sequences + warmup
-- Loom — personalized video thumbnails (optional)
+- Apollo.io ($49/mo), lead lists
+- Instantly.ai ($37/mo), sequences + warmup
+- Loom, personalized video thumbnails (optional)
 total: $86/mo to run 1,000 sends/day
 
 **Slide 8:**
@@ -188,7 +188,7 @@ at $2,000/client = $6,000-8,000/mo from cold email alone
 
 **Slide 9:**
 what to do when they reply "not interested":
-"totally fair. one question — is it the timing or the offer that doesn't fit right now?"
+"totally fair. one question, is it the timing or the offer that doesn't fit right now?"
 that ONE question gets 30% of "no" responses to re-engage.
 
 **Slide 10 (CTA):**
@@ -205,37 +205,37 @@ I automate the other 40.
 here's the exact stack.
 
 **Slide 2:**
-1. lead research — 3 hours saved/week
+1. lead research, 3 hours saved/week
 Apollo.io → exports CSV of leads by company size, tech stack, job title
 zero manual browsing. $49/mo.
 
 **Slide 3:**
-2. cold email sending — 5 hours saved/week
+2. cold email sending, 5 hours saved/week
 Instantly.ai sequences. write once, runs forever.
 handles follow-ups, unsubscribes, replies routing. $37/mo.
 
 **Slide 4:**
-3. social scheduling — 4 hours saved/week
+3. social scheduling, 4 hours saved/week
 Buffer + n8n combo
 n8n repurposes my threads into carousels automatically. $0 (self-hosted).
 
 **Slide 5:**
-4. invoicing — 1 hour saved/week
+4. invoicing, 1 hour saved/week
 Stripe invoices set to auto-send on the 1st
 clients pay before I'm even awake. 2.9% fee.
 
 **Slide 6:**
-5. client reporting — 3 hours saved/week
+5. client reporting, 3 hours saved/week
 Notion template. client fills it weekly.
 I read it Friday morning and prep the call. zero prep otherwise.
 
 **Slide 7:**
-6. content repurposing — 2 hours saved/week
+6. content repurposing, 2 hours saved/week
 every long-form piece → Claude API → 5 social posts
 not AI slop. I edit. but the first draft takes 30 seconds.
 
 **Slide 8:**
-7. calendar booking — 2 hours saved/week
+7. calendar booking, 2 hours saved/week
 Cal.com (free) → clients book directly
 no back-and-forth. no "does Tuesday at 3 work?"
 
@@ -263,7 +263,7 @@ the faster path: comment on posts by people who already have audiences.
 
 **Slide 3:**
 step 1: find 10 accounts your ideal clients follow
-not influencers — people who run communities in your niche
+not influencers, people who run communities in your niche
 example: if you sell to SaaS founders, find accounts that SaaS founders follow
 
 **Slide 4:**
@@ -280,7 +280,7 @@ never: "great post!" never: sell anything.
 
 **Slide 6:**
 example comment:
-"100% — I tested this with 200 cold emails last month.
+"100%, I tested this with 200 cold emails last month.
 calls booked went from 3% to 11% just by changing the subject line.
 did you find reply timing (morning vs afternoon) changed anything for you?"
 
@@ -292,7 +292,7 @@ good: "I help B2B SaaS companies double cold email reply rates"
 
 **Slide 8:**
 step 5: the DM when someone follows you back
-"hey [name] — noticed you followed, thanks. what kind of outreach are you running right now?"
+"hey [name], noticed you followed, thanks. what kind of outreach are you running right now?"
 not a pitch. a question. 60% respond.
 
 **Slide 9:**
@@ -325,7 +325,7 @@ price: $800-1,500 one-time + $99/mo maintenance
 **Slide 4:**
 how to find clients in 2 hours:
 Google "[city] [niche] site:squarespace.com" or "wix.com"
-these businesses already know they need a website — theirs is just bad
+these businesses already know they need a website, theirs is just bad
 10 searches → 50 leads → 5 calls → 2 clients
 
 **Slide 5:**
@@ -342,10 +342,10 @@ month 1 total: $4,396
 
 **Slide 7:**
 the tools (all under $50/mo):
-- Framer ($15/mo) — templates that look $10K quality
-- Loom (free) — record the audit, send as pitch
-- Cal.com (free) — book calls
-- Stripe (2.9%) — get paid
+- Framer ($15/mo), templates that look $10K quality
+- Loom (free), record the audit, send as pitch
+- Cal.com (free), book calls
+- Stripe (2.9%), get paid
 
 **Slide 8:**
 scale path:
@@ -405,7 +405,7 @@ month 6 revenue: $2,900/mo (cohort revenue ÷ 2 months amortized)
 what these 6 streams have in common:
 - each one was built from the previous one
 - no stream required paid ads
-- all leverage the same knowledge base
+- all use the same knowledge base
 - each took under 2 weeks to launch
 
 **Slide 9:**
@@ -416,7 +416,7 @@ newsletter third (audience for everything else)
 affiliates + consulting + cohort come naturally after that
 
 **Slide 10 (CTA):**
-follow for the full timeline breakdown — which month I launched each, exactly what I posted, and what flopped.
+follow for the full timeline breakdown, which month I launched each, exactly what I posted, and what flopped.
 
 ---
 
@@ -480,7 +480,7 @@ save for next time a client pushes back on your rate.
 
 ---
 
-### Carousel 9: "the $0 business stack — tools that are actually free"
+### Carousel 9: "the $0 business stack, tools that are actually free"
 
 **Slide 1 (Hook):**
 I run a $5K/mo business on $0/mo in tools.
@@ -536,7 +536,7 @@ lead gen:
 
 **Slide 9:**
 the only tool worth paying for first:
-Instantly.ai at $37/mo — because it handles email warmup
+Instantly.ai at $37/mo, because it handles email warmup
 warm inbox = emails that actually land in primary tabs
 everything else can stay free until you hit $1K/mo
 
@@ -567,7 +567,7 @@ budget this BEFORE you quit. not after.
 **Slide 4:**
 the income dip is real:
 month 1-2 post-quit: income usually DROPS
-not because you're bad — because you're managing everything yourself now
+not because you're bad, because you're managing everything yourself now
 the safety number: 6 months of expenses in savings before quitting
 
 **Slide 5:**
@@ -595,7 +595,7 @@ the signals that say "not yet":
 one thing to do immediately after quitting:
 raise your rates by 30%
 the "I'm fully committed" energy closes more clients at higher prices
-you're no longer the person with a safety net — price accordingly
+you're no longer the person with a safety net, price accordingly
 
 **Slide 9:**
 the month 12 reality check:
@@ -616,7 +616,7 @@ follow for the client contract template that protects you when it goes wrong.
 ### Carousel 11: "10 verses for when you feel like giving up"
 
 **Slide 1 (Hook):**
-when everything is heavy and nothing makes sense —
+when everything is heavy and nothing makes sense -
 these are the 10 verses I come back to.
 
 **Slide 2:**
@@ -645,7 +645,7 @@ even this. especially this.
 
 **Slide 6:**
 Jeremiah 29:11
-"For I know the plans I have for you — plans to prosper you and not to harm you."
+"For I know the plans I have for you, plans to prosper you and not to harm you."
 the context: said to people in exile.
 the promise doesn't wait for the circumstances to improve.
 
@@ -705,14 +705,14 @@ God doesn't need the right words. he wants the real ones.
 **Slide 6:**
 what to do when you feel nothing:
 show up anyway.
-the feeling follows the practice — not the other way around.
+the feeling follows the practice, not the other way around.
 5 minutes of showing up beats waiting until you "feel like it"
 
 **Slide 7:**
 apps that help (not replace) the habit:
-- PrayerLock — daily reminders + journaling
-- Echo Prayer — share requests with others
-- Lectio 365 — guided morning/evening prayer
+- PrayerLock, daily reminders + journaling
+- Echo Prayer, share requests with others
+- Lectio 365, guided morning/evening prayer
 the goal: routine, not performance
 
 **Slide 8:**
@@ -748,7 +748,7 @@ how much of what we consume do we consume out of habit vs need?
 **Slide 3:**
 the focus effect:
 by week 2, my best work happened between 10am-2pm
-not because I was high-energy — because I had nothing to snack on
+not because I was high-energy, because I had nothing to snack on
 removed the option = removed the distraction
 
 **Slide 4:**
@@ -777,7 +777,7 @@ fasting exposed the avoidance
 **Slide 8:**
 day 28 realization:
 I didn't want it to end
-not for the restriction — for the intentionality
+not for the restriction, for the intentionality
 Ramadan forces a question: what would change if everything was deliberate?
 
 **Slide 9:**
@@ -794,7 +794,7 @@ follow for daily reflection prompts through the last 10 days.
 
 ---
 
-### Carousels 14-20: [Condensed Outlines — Same 10-Slide Structure]
+### Carousels 14-20: [Condensed Outlines, Same 10-Slide Structure]
 
 ### Carousel 14: "5 morning prayers for people who don't have words"
 
@@ -835,42 +835,42 @@ Slides: (1) Hook: "gratitude isn't denial. it's defiance." | (2-9) Groups of 4: 
 these 10 tools. total cost: $89/month.
 
 **Slide 2:**
-1. Claude (claude.ai) — $20/mo
+1. Claude (claude.ai), $20/mo
 writing, research, code, strategy
 genuinely better than GPT-4 for long-context work
 I run 90% of my AI tasks through it
 
 **Slide 3:**
-2. Perplexity Pro — $20/mo
+2. Perplexity Pro, $20/mo
 real-time search with citations
 kills the "let me google that" step on research tasks
 pulls from Reddit, recent articles, not training data
 
 **Slide 4:**
-3. Cursor — $20/mo
+3. Cursor, $20/mo
 AI-native code editor
 writes, refactors, explains, debugs
 I ship projects 3x faster. not 10%. 3x.
 
 **Slide 5:**
-4. Descript — $24/mo
+4. Descript, $24/mo
 edit video/audio by editing the transcript
 cut filler words in one click. remove silences. record AI voiceover.
 saved 4 hours/week on podcast editing alone.
 
 **Slide 6:**
-5. ElevenLabs — free tier
+5. ElevenLabs, free tier
 AI voiceover that doesn't sound robotic
 30-minute voice clone from your own audio
 used for: YouTube voiceover, ads, podcast intros
 
 **Slide 7:**
 6-10 (the rest of the stack):
-- n8n (self-hosted, free) — automation
-- Otter.ai (free tier) — meeting transcripts
-- Notion AI ($10/mo) — summarize + rewrite
-- Runway (free tier) — video background removal
-- DALL-E 3 via ChatGPT Plus — images on demand
+- n8n (self-hosted, free), automation
+- Otter.ai (free tier), meeting transcripts
+- Notion AI ($10/mo), summarize + rewrite
+- Runway (free tier), video background removal
+- DALL-E 3 via ChatGPT Plus, images on demand
 
 **Slide 8:**
 the honest comparison:
@@ -880,9 +880,9 @@ use ChatGPT for: browsing + DALL-E + voice mode
 
 **Slide 9:**
 the tools I tried that didn't stick:
-- Jasper.ai ($49/mo) — too expensive for what Claude does better
-- Copy.ai — same
-- Midjourney — DALL-E3 handles 80% of needs for less money
+- Jasper.ai ($49/mo), too expensive for what Claude does better
+- Copy.ai, same
+- Midjourney, DALL-E3 handles 80% of needs for less money
 
 **Slide 10 (CTA):**
 save this + follow for the n8n automation setup that runs my whole business.
@@ -911,7 +911,7 @@ save this + follow for the n8n automation setup that runs my whole business.
 
 ## NICHE: FITNESS / WELLNESS (5 carousels)
 
-### Carousel 26: "I lost 23 lbs in 12 weeks — no gym required"
+### Carousel 26: "I lost 23 lbs in 12 weeks, no gym required"
 
 10 slides: (1) Hook: specific number → (2) What didn't work before → (3) The actual protocol: calorie tracking + step goal (12K/day) + protein target (160g) → (4) The app that made tracking not suck (MacroFactor) → (5) Week 1-4 results → (6) What to do when weight stalls (refeed day) → (7) The meal prep system (2 hours Sunday) → (8) The 3 meals I ate every week → (9) What I'd do differently → (10) CTA: follow for the 12-week template
 

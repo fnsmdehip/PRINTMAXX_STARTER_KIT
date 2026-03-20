@@ -1,4 +1,4 @@
-# C01 TikTok — Account Setup Templates
+# C01 TikTok, Account Setup Templates
 
 ## 5 Niche Account Configurations
 
@@ -23,7 +23,7 @@
 
 **Profile Image:**
 - Dark background, clean text logo or headshot with high contrast
-- Avoid busy backgrounds — thumbnail visibility on small screens matters
+- Avoid busy backgrounds, thumbnail visibility on small screens matters
 
 **Link in Bio:**
 - Primary: newsletter landing page OR Gumroad storefront
@@ -64,7 +64,7 @@ building deen + dunya together. Quran streaks. morning prayer. 30-day habit trac
 
 **Profile Image:**
 - Minimal, calligraphy element or geometric pattern, muted colors (cream, gold, deep green)
-- Avoid overly "influencer" aesthetic — authenticity is the brand
+- Avoid overly "influencer" aesthetic, authenticity is the brand
 
 **Link in Bio:**
 - Primary: PrayerLock app download / web link
@@ -198,6 +198,6 @@ clips from 4 different niches. all about building more, spending less time.
 ### Account Safety Rules
 - Never use third-party automation for posting or follows
 - Never buy followers or engagement
-- Post original content — do not repost from other platforms with watermarks
+- Post original content, do not repost from other platforms with watermarks
 - Keep devices logged into TikTok (device trust matters for reach)
-- Avoid posting 3x in first 2 hours (triggers spam filter) — space posts 2+ hours apart
+- Avoid posting 3x in first 2 hours (triggers spam filter), space posts 2+ hours apart

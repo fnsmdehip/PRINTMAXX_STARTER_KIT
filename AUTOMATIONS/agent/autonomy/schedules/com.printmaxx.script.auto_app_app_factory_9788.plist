@@ -8,12 +8,12 @@
     <array>
         <string>/bin/bash</string>
         <string>-c</string>
-        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/venture_autonomy.py --run auto_app_app_factory_9788 >> "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/auto_app_app_factory_9788.log" 2>&amp;1</string>
+        <string>cd "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt" &amp;&amp; /usr/local/bin/python3 /Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/venture_autonomy.py --run auto_app_app_factory_9788 >> "/Users/macbookpro/Documents/p/PRINTMAXX_STARTER_KITttttt/AUTOMATIONS/logs/auto_app_app_factory_9788.log" 2>&amp;1</string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
-        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/macbookpro/.local/bin</string>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
     </dict>
     <key>StartInterval</key>
     <integer>43200</integer>

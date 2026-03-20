@@ -200,7 +200,7 @@
 
 **tweet 4:** the math is simple. a great product with 100 visitors/mo = maybe 2-3 customers. an okay product with 10,000 visitors/mo = 200-300 customers. the okay product makes more money every single time. quality matters less than reach until you hit scale.
 
-**tweet 5:** here's what "building distribution" actually looks like: writing 2-3 times per week (twitter, blog, newsletter). answering questions in communities every day. building in public so people follow the journey. making friends with other builders who share your stuff.
+**tweet 5:** here's what "building distribution" actually looks like: writing 2-3 times per week (twitter, blog, newsletter). answering questions in communities every day. building in public so people follow the path. making friends with other builders who share your stuff.
 
 **tweet 6:** the founders who "got lucky" with a viral launch all had the same thing in common: 6-12 months of audience building before the launch. the "overnight success" was just the night you noticed. the work started way earlier.
 
@@ -260,7 +260,7 @@
 
 **tweet 6:** advanced move: i added a pricing calculator below the cards. "how many clients do you have?" slider. it shows how much time/money they'd save at each tier. personalized value > static pricing every time. this increased average plan selection by one tier.
 
-**tweet 7:** the math: fixing these 3 things moved me from $5,800/mo to $9,000/mo without changing the product, the traffic, or the marketing. pricing is the highest-leverage thing you can optimize. a 10% improvement in conversion at the pricing page is worth more than a 30% increase in traffic.
+**tweet 7:** the math: fixing these 3 things moved me from $5,800/mo to $9,000/mo without changing the product, the traffic, or the marketing. pricing is the highest-use thing you can optimize. a 10% improvement in conversion at the pricing page is worth more than a 30% increase in traffic.
 
 ---
 

@@ -1,0 +1,90 @@
+{
+  "cycle": 73,
+  "timestamp": "2026-03-19T02:54:37.817381+00:00",
+  "niches": {
+    "guitar_practice_streak": {
+      "label": "Daily Guitar Practice Streak",
+      "community": 3802179,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 13,
+      "hypothesis": "HIGH BO: r/guitar 3.5M+ members. Guitar learning apps (Yousician, Simply Piano variant, Fender Play, Guitareo) are lesson/tab tools \u2014 NOT streak accountability apps. Daily practice consistency is the #1 complaint in r/guitar ('I keep skipping days'). Streak-first guitar habit app filling zero-app gap."
+    },
+    "piano_practice_streak": {
+      "label": "Daily Piano / Keyboard Practice Streak",
+      "community": 1392048,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 14,
+      "hypothesis": "HIGH BO: r/piano 1M+. Simply Piano / Flowkey are lesson platforms. Zero dedicated piano STREAK accountability apps. Same gap as guitar but smaller community. Adult learners especially \u2014 guilt culture around skipping days is massive."
+    },
+    "knitting_crochet_streak": {
+      "label": "Daily Knitting / Crochet Practice Streak",
+      "community": 2498853,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 12,
+      "hypothesis": "HIGH BO: r/knitting 1.1M + r/crochet 1.2M. Craft apps (Ravelry, LoveCrafts, Pattern Keeper) are pattern libraries and project trackers \u2014 zero streak accountability. 'WIPS guilt' (work-in-progress shame) culture in knitting = habit accountability need. 100% blue ocean."
+    },
+    "language_immersion_streak": {
+      "label": "Daily Language Immersion / Listening Streak",
+      "community": 4462722,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 22,
+      "hypothesis": "LIKELY_OCCUPIED but niche: r/languagelearning 3M+. Duolingo = lessons. Language Reactor / Immersion apps = content tools. STREAK accountability for passive immersion (30-min listening/reading daily) is a distinct use case. Matt vs Japan / Stephen Krashen audience. Check iTunes carefully."
+    },
+    "couples_devotional_streak": {
+      "label": "Daily Couples Devotional / Prayer Streak",
+      "community": 838580,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 20,
+      "hypothesis": "HIGH BO: r/Christianity 1.1M + r/christian 900K. Couple-specific faith apps (Lasting, Gottman) are therapy/communication tools. Daily devotional STREAK as a couple is a specific behavior with zero dedicated apps. Faith + relationship cross-niche. Proven premium pricing from faith streak history (PrayerLock, Hallow)."
+    },
+    "date_night_streak": {
+      "label": "Weekly Date Night / Quality Time Streak",
+      "community": 16634300,
+      "status": "BLUE_OCEAN",
+      "n_dedicated_apps": 13,
+      "hypothesis": "HIGH BO: r/relationship_advice 15M+ (largest community yet scanned). Date memory apps (Couple, Kindu, Between) are photo/messaging apps. Zero apps track weekly date night STREAK with accountability. Marriage counselors literally prescribe weekly date nights. Premium price point justified (relationship stakes are high)."
+    },
+    "love_language_streak": {
+      "label": "Daily Love Language Practice Streak",
+      "community": 19363911,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 23,
+      "hypothesis": "BO hypothesis: r/relationship_advice 15M+. Gary Chapman's '5 Love Languages' book has 20M+ copies sold. Zero dedicated love language STREAK apps. Couple apps exist but none gamify daily acts in partner's love language. High emotional stakes = high willingness to pay."
+    },
+    "random_kindness_streak": {
+      "label": "Daily Random Act of Kindness Streak",
+      "community": 2668934,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 6,
+      "hypothesis": "BO hypothesis: r/RandomActsofKindness 1.1M + r/selfimprovement 2.5M. Acts of kindness = proven happiness intervention (Harvard research). Zero dedicated kindness STREAK accountability apps. Adjacent to gratitude_message_streak but distinct behavior. Mental wellness angle + prosocial positioning."
+    },
+    "protein_goal_streak": {
+      "label": "Daily Protein Goal / Macro Target Streak",
+      "community": 15889539,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 15,
+      "hypothesis": "MEDIUM BO: r/fitness 15M+ + r/bodybuilding 6M. MyFitnessPal = comprehensive tracker. BUT streak-first protein accountability is distinct \u2014 MFP tracks everything, not gamified around hitting one daily number. 'Hit your protein' is the #1 fitness subreddit advice. Streak-first simple protein app may occupy gap."
+    },
+    "supplement_stack_streak": {
+      "label": "Daily Supplement / Nootropic Stack Streak",
+      "community": 1028388,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 6,
+      "hypothesis": "HIGH BO: r/Supplements 1.1M + r/nootropics 700K. Medisafe = medication REMINDERS (push notification only). Zero apps gamify supplement STREAK with accountability. Nootropic culture = obsessive daily tracking. 'Did I take my stack?' guilt is real. Clean blue ocean \u2014 Medisafe serves patients, not optimization enthusiasts."
+    },
+    "no_screens_before_bed_streak": {
+      "label": "Screen-Free Hour Before Bed Streak",
+      "community": 698377,
+      "status": "BLUE_OCEAN",
+      "n_dedicated_apps": 12,
+      "hypothesis": "HIGH BO: r/nosurf 600K + r/insomnia 700K + r/digitalminimalism 300K. Screen time apps (Apple Screen Time, Freedom, AppBlock) BLOCK usage \u2014 none gamify the STREAK of consecutive screen-free nights. Sleep hygiene is a top Huberman Lab protocol. Zero dedicated streak app. High intent audience willing to pay for accountability."
+    },
+    "dream_journal_streak": {
+      "label": "Daily Dream Journal / Lucid Dreaming Streak",
+      "community": 1179601,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 12,
+      "hypothesis": "MEDIUM BO: r/luciddreaming 500K + r/Dreams 300K. Dream journal apps exist (Dream: Journal & Lucid) but are content storage \u2014 not STREAK accountability. Lucid dreaming requires consistent daily journaling practice. Passionate niche, lower community but high retention potential."
+    }
+  }
+}

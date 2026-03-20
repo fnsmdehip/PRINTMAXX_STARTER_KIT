@@ -1,4 +1,4 @@
-# Research-Compounded Content — 2026-03-09
+# Research-Compounded Content, 2026-03-09
 # Source: Reddit scrapes, competitive intel, ALPHA_STAGING approved entries
 # Voice: PRINTMAXXER (S-tier weighted, @pipelineabuser dominant)
 # Status: PENDING_REVIEW
@@ -7,7 +7,7 @@
 
 ## STANDALONE TWEETS (5)
 
-### Tweet 1 — Cold Email Reply Rate (from r/coldemail, ALPHA19922)
+### Tweet 1, Cold Email Reply Rate (from r/coldemail, ALPHA19922)
 ```
 changed one thing in our cold emails. reply rate went from 3.2% to 6.8%.
 
@@ -18,7 +18,7 @@ stopped opening with what we do. started opening with a specific problem we foun
 the fix took 5 minutes. the difference is 2x replies.
 ```
 
-### Tweet 2 — $10,500 LinkedIn Disaster (from r/Entrepreneur)
+### Tweet 2, $10,500 LinkedIn Disaster (from r/Entrepreneur)
 ```
 solopreneur spent $10,500 on a linkedin content agency + outreach specialist.
 
@@ -29,7 +29,7 @@ meanwhile cold email costs $0 with 3 gmail accounts and a warm-up period. 500 em
 stop outsourcing the thing you should learn first. agencies sell you the dream of not doing the work. the work is the whole point.
 ```
 
-### Tweet 3 — ASO Review Prompt Timing (from competitive intel, APPROVED alpha)
+### Tweet 3, ASO Review Prompt Timing (from competitive intel, APPROVED alpha)
 ```
 moved the app review prompt from day 1 to after a 3-day streak.
 
@@ -42,7 +42,7 @@ day-3 users already feel invested. they rate based on the value they've gotten. 
 one line of code. 3 days of patience.
 ```
 
-### Tweet 4 — Backlink Reality Check (from r/SEO, 51 upvotes, 92 comments)
+### Tweet 4, Backlink Reality Check (from r/SEO, 51 upvotes, 92 comments)
 ```
 someone asked "how do websites get thousands of backlinks when they're brand new?"
 
@@ -56,7 +56,7 @@ someone asked "how do websites get thousands of backlinks when they're brand new
 nobody builds backlinks by writing "quality content" and waiting. that advice is from 2014.
 ```
 
-### Tweet 5 — First Paying Customer After 1 Year (from winwinkit.com, bootstrapped SaaS)
+### Tweet 5, First Paying Customer After 1 Year (from winwinkit.com, bootstrapped SaaS)
 ```
 13 years building iOS apps for Apple. decided to bootstrap a SaaS.
 
@@ -71,7 +71,7 @@ the gap between "I can build things" and "I can sell things" is always wider tha
 
 ---
 
-## THREAD (7 tweets) — The Backlink Myth
+## THREAD (7 tweets), The Backlink Myth
 
 ### 1/7
 ```
@@ -147,9 +147,9 @@ stop reading SEO blogs written by people selling SEO courses.
 
 ---
 
-## CROSS-NICHE ADAPTATION #1 — Faith App Angle
+## CROSS-NICHE ADAPTATION #1, Faith App Angle
 
-### Tweet — Review Prompt Timing for Faith Apps
+### Tweet, Review Prompt Timing for Faith Apps
 ```
 moved the "rate this app" prompt in our prayer streak app from day 1 to after the user completes 3 consecutive days.
 
@@ -164,7 +164,7 @@ works for any habit app. devotional, fitness, meditation, journaling. the timing
 don't interrupt the prayer. wait until they feel the answered one.
 ```
 
-### Tweet — Free Tool Backlink Strategy for Faith Niche
+### Tweet, Free Tool Backlink Strategy for Faith Niche
 ```
 every church website needs a sermon illustration finder. a bible verse lookup with cross-references. a volunteer scheduling calculator.
 
@@ -177,9 +177,9 @@ the backlink strategy that works: be useful. not clever.
 
 ---
 
-## CROSS-NICHE ADAPTATION #2 — Indie Hacker Angle
+## CROSS-NICHE ADAPTATION #2, Indie Hacker Angle
 
-### Tweet — First Customer Timeline Reality
+### Tweet, First Customer Timeline Reality
 ```
 13-year Apple dev built a SaaS. first paying customer after 12 months.
 
@@ -190,7 +190,7 @@ indie hackers see "$10K MRR in 90 days" posts and think something's wrong with t
 the posts you see are survivorship bias. the median time to first dollar for bootstrapped SaaS is 6-14 months. your timeline isn't broken. your expectations are.
 ```
 
-### Tweet — The $10,500 Agency Lesson for Builders
+### Tweet, The $10,500 Agency Lesson for Builders
 ```
 if you're an indie hacker thinking about hiring a linkedin content agency or outreach specialist before you've sent 500 cold emails yourself:
 
@@ -210,7 +210,7 @@ the order matters.
 - All 5 findings compounded into content
 - Thread selected: backlink topic (highest engagement signal: 51 upvotes, 92 comments)
 - Cross-niche: faith app angle ties to ASO hack + backlink strategy, indie hacker angle ties to SaaS learnings + agency spend warning
-- Zero AI vocabulary used (no leverage, utilize, comprehensive, robust, innovative, seamless)
+- Zero AI vocabulary used (no use, use, complete, strong, novel, seamless)
 - Zero em dashes
 - Consequence-first hooks on all tweets
 - Specific numbers throughout

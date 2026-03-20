@@ -1,0 +1,90 @@
+{
+  "cycle": 78,
+  "timestamp": "2026-03-19T09:07:57.848076+00:00",
+  "niches": {
+    "sign_language_streak": {
+      "community_total": 560000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "Duolingo - Language Lessons",
+      "notes_summary": "Duolingo added ASL in 2022 and its core mechanic IS a daily streak \u2014 direct overlap with streak accountability use case."
+    },
+    "accent_reduction_streak": {
+      "community_total": 2807000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "ELSA Speak - Accent Reduction",
+      "notes_summary": "ELSA Speak is an AI pronunciation feedback tool with lesson packs ($69.99/yr) \u2014 NOT a daily accountability streak for 'd"
+    },
+    "bible_verse_memory_streak": {
+      "community_total": 1240000,
+      "app_count": 3,
+      "classification": "soft_competition",
+      "top_competing_app": "Fighter Verses - Memorize Bible",
+      "notes_summary": "Fighter Verses uses spaced repetition to track per-verse mastery progress \u2014 distinct from a daily 'did I memorize at lea"
+    },
+    "hadith_study_streak": {
+      "community_total": 1181000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "Muslim Pro - Prayer Times Quran",
+      "notes_summary": "Muslim Pro (520K ratings) has prayer times, Quran audio, qibla \u2014 zero hadith study streak gamification. Hadith Collectio"
+    },
+    "torah_parsha_streak": {
+      "community_total": 862000,
+      "app_count": 3,
+      "classification": "soft_competition",
+      "top_competing_app": "Sefaria",
+      "notes_summary": "Sefaria is a comprehensive Jewish text library (like a digital Talmud), not a streak app. Chabad.org is a content hub. M"
+    },
+    "gtd_review_streak": {
+      "community_total": 3182000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "OmniFocus 3",
+      "notes_summary": "OmniFocus, Things 3, Todoist are task management systems. None gamify the GTD weekly review itself as a streakable habit"
+    },
+    "time_boxing_streak": {
+      "community_total": 3934000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "Toggl Track - Hours & Time Log",
+      "notes_summary": "Toggl and Clockify are retrospective time-tracking tools, not daily streak accountability for intentional deep work bloc"
+    },
+    "pomodoro_log_streak": {
+      "community_total": 4525000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "Forest - Stay Focused",
+      "notes_summary": "Forest (850K ratings) gamifies individual focus sessions with tree-growing but does NOT track a daily pomodoro count str"
+    },
+    "bedtime_reading_streak": {
+      "community_total": 5937000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "Epic! - Books for Kids",
+      "notes_summary": "Epic!, Storytime, Caribou are content delivery apps \u2014 they provide books but do NOT track whether the parent actually re"
+    },
+    "toddler_activity_streak": {
+      "community_total": 1600000,
+      "app_count": 3,
+      "classification": "soft_competition",
+      "top_competing_app": "BabySparks - Baby Development",
+      "notes_summary": "BabySparks tracks whether milestones have been reached (developmental progress), not whether the parent did structured p"
+    },
+    "morning_routine_streak": {
+      "community_total": 5048000,
+      "app_count": 3,
+      "classification": "occupied",
+      "top_competing_app": "Fabulous: Daily Habit Tracker",
+      "notes_summary": "Fabulous (452K ratings, $79.99/yr) provides coached morning routines with streak \u2014 DIRECT streak competition but at high"
+    },
+    "financial_tracking_streak_reeval": {
+      "community_total": 21585000,
+      "app_count": 3,
+      "classification": "blue_ocean",
+      "top_competing_app": "YNAB (You Need A Budget)",
+      "notes_summary": "RE-EVAL C077 (classifier bug fixed \u2014 explicit override). YNAB (172K ratings, $109/yr) is a full budgeting system with ze"
+    }
+  }
+}

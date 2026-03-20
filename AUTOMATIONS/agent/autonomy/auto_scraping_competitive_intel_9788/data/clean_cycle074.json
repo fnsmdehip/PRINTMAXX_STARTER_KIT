@@ -1,0 +1,90 @@
+{
+  "cycle": 74,
+  "timestamp": "2026-03-19T02:58:24.219850+00:00",
+  "niches": {
+    "sauna_streak": {
+      "label": "Daily Sauna / Heat Exposure Streak",
+      "community": 555570,
+      "status": "BLUE_OCEAN",
+      "n_dedicated_apps": 13,
+      "hypothesis": "HIGH BO: r/Sauna 120K + r/longevity 450K + r/HubermanLab 236K. Sauna apps are session timers (SteamPunk, Sauna Timer). NONE track consecutive-day STREAK. Huberman/Rhonda Patrick audience follows strict sauna protocols (4x/week, 20 min). Zero streak accountability app. Premium biohacker demographic = high willingness to pay."
+    },
+    "fasting_streak": {
+      "label": "Daily Intermittent Fasting Streak",
+      "community": 1730382,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 11,
+      "hypothesis": "HIGH BO: r/intermittentfasting 1.5M + r/fasting 800K + r/omad 300K. Fasting apps (Zero, Life Fasting, Fastic) are TIMERS \u2014 they track window duration. STREAK of consecutive fasting days is a distinct feature. Zero apps specifically gamify the consecutive day streak. Massive community with deeply habitual behavior patterns."
+    },
+    "red_light_therapy_streak": {
+      "label": "Daily Red Light Therapy Session Streak",
+      "community": 319603,
+      "status": "BLUE_OCEAN",
+      "n_dedicated_apps": 3,
+      "hypothesis": "HIGH BO: r/redlighttherapy 170K + r/biohacking 400K. Red light therapy apps are session timer apps (RLT Timer). Device apps (Joovv, BioMax) are product-specific. Zero streak accountability layer. Growing market \u2014 RLT device sales grew 340% 2022-2025. Premium biohacker audience. Probably zero dedicated streak apps."
+    },
+    "hrv_morning_streak": {
+      "label": "Daily HRV / Morning Readiness Check Streak",
+      "community": 341732,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 12,
+      "hypothesis": "MEDIUM BO: r/whoop 300K + r/ouraring 200K. Whoop/Oura are comprehensive health platforms. STREAK of logging HRV/readiness daily is a specific behavior. Third-party HRV streak app may be adjacent. Niche but high-value audience (biohacker early adopters, $30-50/mo spend). Check if dedicated standalone apps exist."
+    },
+    "tarot_daily_streak": {
+      "label": "Daily Tarot Pull / Card of the Day Streak",
+      "community": 705624,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 16,
+      "hypothesis": "HIGH BO: r/tarot 400K + r/tarotpractice 300K. Tarot apps are card databases (Galaxy Tarot, Golden Thread Tarot, Labyrinthos). NONE gamify daily pull STREAK. Tarot practitioners have explicit daily pull rituals ('card of the day'). Zero streak accountability. Spiritual audience is monetizable premium niche. Probably zero competitors given niche + mystical positioning."
+    },
+    "astrology_daily_streak": {
+      "label": "Daily Astrology / Chart Study Streak",
+      "community": 2351628,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 15,
+      "hypothesis": "HIGH BO: r/astrology 700K + r/AskAstrologers 400K + r/natal 200K. Astrology apps (Co-Star, The Pattern, Sanctuary) are chart reading/content apps. NONE track a daily study/practice STREAK. Astrology learners want to study their charts daily \u2014 zero streak app. Large, predominantly female demographic with high app monetization rate."
+    },
+    "scripture_memorization_streak": {
+      "label": "Daily Scripture Memorization Streak",
+      "community": 800356,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 25,
+      "hypothesis": "HIGH BO: r/Bible 1.1M + r/Christianity 635K. Scripture MEMORIZATION is distinct from reading (already occupying YouVersion space). Verse Fighter, Scripture Typer exist but are flashcard apps not streak accountability. Memorization is a spiritual discipline with explicit daily practice culture. Adjacent to faith streak apps (PrayerLock, Hallow) \u2014 proven monetizable."
+    },
+    "gratitude_ritual_streak": {
+      "label": "Daily Morning / Evening Gratitude Ritual Streak",
+      "community": 3685348,
+      "status": "BLUE_OCEAN",
+      "n_dedicated_apps": 6,
+      "hypothesis": "BO hypothesis: r/gratitude 163K + r/Meditation 700K + r/morningroutine 500K. Gratitude JOURNALING apps exist (Gratitude, Five Minute Journal). Gratitude RITUAL (structured practice: gratitude + affirmation + intention) is a distinct use case. No ritual-focused streak app. Note: gratitude_message_streak (C072) was BO \u2014 this is different behavior."
+    },
+    "declutter_streak": {
+      "label": "Daily Declutter / One Thing Out Streak",
+      "community": 3451294,
+      "status": "SOFT_COMPETITION",
+      "n_dedicated_apps": 6,
+      "hypothesis": "HIGH BO: r/minimalism 2M + r/declutter 600K. Home organization apps (Tody, OurHome) are chore trackers. Marie Kondo apps are one-time assessment tools. STREAK of removing one item per day ('minsgame', 'one thing out') has viral challenge culture on TikTok/YouTube. Zero dedicated streak app. r/declutter actively discusses wanting daily accountability."
+    },
+    "bed_making_streak": {
+      "label": "Daily Bed Making / Morning Discipline Streak",
+      "community": 2584272,
+      "status": "BLUE_OCEAN",
+      "n_dedicated_apps": 8,
+      "hypothesis": "HIGH BO: r/theXeffect 580K + r/selfimprovement 2.5M. 'Make your bed first' is a keystone habit (Jocko Willink, Admiral McRaven book with 10M+ copies sold). r/theXeffect is literally a streak accountability community. No dedicated app for this specific habit exists. Keystone habit = gateway to larger habit ecosystem. Could anchor a multi-habit streak app."
+    },
+    "rock_climbing_streak": {
+      "label": "Daily Rock Climbing / Training Streak",
+      "community": 2096357,
+      "status": "OCCUPIED",
+      "n_dedicated_apps": 13,
+      "hypothesis": "HIGH BO: r/climbing 2M + r/bouldering 400K. Climbing apps (Vertical Life, 27crags, Climbdex) are route databases and gym finders. Zero dedicated climbing STREAK app for daily training accountability. Training culture in r/climbing is strong ('hangboard protocol', '4x4s'). Adults paying $150+/mo gym membership are premium app buyers."
+    },
+    "martial_arts_streak": {
+      "label": "Daily Martial Arts / BJJ Practice Streak",
+      "community": 1420063,
+      "status": "SOFT_COMPETITION",
+      "n_dedicated_apps": 13,
+      "hypothesis": "MEDIUM BO: r/bjj 600K + r/martialarts 400K. BJJ/martial arts apps are technique libraries (GrappleArts, BJJ Fanatics) or gym management tools. Daily drilling/training streak is a core BJJ culture concept ('mat time matters'). Zero streak accountability apps. Adult male demographic with high discretionary spending on training."
+    }
+  }
+}

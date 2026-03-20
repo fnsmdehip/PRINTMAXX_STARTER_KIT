@@ -1,4 +1,4 @@
-# Agent-Generated Content — 2026-03-07 18:05
+# Agent-Generated Content, 2026-03-07 18:05
 
 local business website audit gig. $99 audit. $499 audit + action plan. local_biz_pipeline.py auto-scores 50 prospects. cold email the bottom scorers with a free preview of their own site's problems. they respond within hours because nobody else is telling them this. only blocker: creating the fiverr account.
 

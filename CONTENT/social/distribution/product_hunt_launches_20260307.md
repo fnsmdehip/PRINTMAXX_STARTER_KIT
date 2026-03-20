@@ -5,14 +5,14 @@ cycle: distribution_engine_2
 
 ---
 
-## Launch 1: PrayerLock (TIME-CRITICAL — Ramadan is live)
+## Launch 1: PrayerLock (TIME-CRITICAL, Ramadan is live)
 
 **Tagline:** the prayer tracker that locks your phone until you pray. built for ramadan.
 
 **Description:**
 PrayerLock blocks app access at prayer times. not a reminder. a lock.
 
-it calculates all 5 daily prayer times based on your location. when it's time, your phone goes into focus mode. you mark your prayer complete to unlock.
+it calculates all 5 daily prayer times based on your location. when it's time, your phone goes into focus mode. you mark your prayer complete to get.
 
 built as a PWA. no app store needed. works offline. installs to your home screen in 2 taps. 55KB total.
 
@@ -30,7 +30,7 @@ tested it during the first week of ramadan. completion rate went from ~60% to ~9
 live at prayerlock-app.surge.sh. code is vanilla JS, no frameworks.
 
 **Topics:** Productivity, Health & Fitness, Tech, Developer Tools
-**Gallery:** 3 screenshots — lock screen, prayer dashboard, streak view
+**Gallery:** 3 screenshots, lock screen, prayer dashboard, streak view
 
 ---
 
@@ -61,7 +61,7 @@ this gives you a clean, shareable report you can drop in a cold email or client 
 live at pagescorer.surge.sh. also available at sitescore-app.surge.sh.
 
 **Topics:** Developer Tools, SEO, Freelance, Marketing
-**Gallery:** 3 screenshots — URL input, score dashboard, detailed report
+**Gallery:** 3 screenshots, URL input, score dashboard, detailed report
 
 ---
 

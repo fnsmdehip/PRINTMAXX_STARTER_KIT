@@ -1,10 +1,10 @@
-# Generated Content — Mar 7 2026 Research Cycle
+# Generated Content, Mar 7 2026 Research Cycle
 # STATUS: APPROVED
 # Source: Alpha Intelligence autonomy agent cycle
 
 ---
 
-## TWEET 1 — Tech Employment Crisis Angle (ALPHA17073)
+## TWEET 1, Tech Employment Crisis Angle (ALPHA17073)
 **Niche:** @printmaxxer / solopreneur
 **Source:** HN front page, 929pts, 609 comments
 
@@ -16,7 +16,7 @@
 
 ---
 
-## TWEET 2 — SaaS Moat Disappearing (ALPHA17063)
+## TWEET 2, SaaS Moat Disappearing (ALPHA17063)
 **Niche:** @printmaxxer / solopreneur
 **Source:** r/SaaS, multiple VCs confirming
 
@@ -30,7 +30,7 @@
 
 ---
 
-## TWEET 3 — Vibe-Coded Security Gap (ALPHA17081)
+## TWEET 3, Vibe-Coded Security Gap (ALPHA17081)
 **Niche:** @printmaxxer / solopreneur
 **Source:** r/SaaS, 76 comments, massive pain point
 
@@ -42,7 +42,7 @@
 
 ---
 
-## TWEET 4 — App Portfolio Strategy Validation (ALPHA17075)
+## TWEET 4, App Portfolio Strategy Validation (ALPHA17075)
 **Niche:** @printmaxxer / solopreneur
 **Source:** IndieHackers, verified portfolio builder
 
@@ -54,7 +54,7 @@
 
 ---
 
-## TWEET 5 — PR Agencies Are a Scam (ALPHA17062)
+## TWEET 5, PR Agencies Are a Scam (ALPHA17062)
 **Niche:** @printmaxxer / solopreneur
 **Source:** r/startups, former head of growth at $680M startup
 
@@ -68,14 +68,14 @@
 
 ---
 
-## THREAD 1 — "the real alpha from today's research" (5 tweets)
+## THREAD 1, "the real alpha from today's research" (5 tweets)
 **Niche:** @printmaxxer
 **Format:** Value thread, reply bait in final tweet
 
 **Tweet 1/5:**
 > the SaaS moat is dead. app portfolios beat single-product bets. vibe-coded apps ship with open security holes. tech employment is worse than 2008.
 >
-> 20 subreddits, hacker news, indie hackers — all saying the same thing today. here's the breakdown:
+> 20 subreddits, hacker news, indie hackers, all saying the same thing today. here's the breakdown:
 
 **Tweet 2/5:**
 > finding #1: the SaaS moat is dead.
@@ -109,7 +109,7 @@
 
 ---
 
-## TWEET 6 — Pricing Alpha (ALPHA17040)
+## TWEET 6, Pricing Alpha (ALPHA17040)
 **Niche:** @printmaxxer / app dev
 **Source:** community intel scanner, pricing research
 
@@ -123,7 +123,7 @@
 
 ---
 
-## BONUS — Reply Bait Post
+## BONUS, Reply Bait Post
 **Niche:** @printmaxxer
 **Format:** Question post for engagement
 

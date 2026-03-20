@@ -284,7 +284,7 @@ Subject: I built 33 AI agents and made $0
 
 Preview: the most honest post-mortem I'll ever write
 
-Body: [Use Thread 1 content, expand sections 3-6 with more data from revenue report. CTA: "Follow the journey - I'm documenting what happens when I actually start selling instead of building."]
+Body: [Use Thread 1 content, expand sections 3-6 with more data from revenue report. CTA: "Follow the path - I'm documenting what happens when I actually start selling instead of building."]
 
 ---
 

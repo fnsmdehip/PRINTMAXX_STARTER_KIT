@@ -74,6 +74,6 @@ you don't need to automate everything on day 1. start with one script that saves
 - false confidence. having 400 leads doesn't mean anything if you don't follow up. automation can make you feel productive without being effective.
 - debugging at 2 AM is no fun when a cron job sends you error alerts.
 
-still, net positive by a huge margin. the leverage you get from even basic automation is the closest thing to having employees without the cost or management overhead.
+still, net positive by a huge margin. the use you get from even basic automation is the closest thing to having employees without the cost or management overhead.
 
 questions welcome. I can share specific script patterns for common automation tasks.

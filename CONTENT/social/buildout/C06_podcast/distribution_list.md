@@ -1,4 +1,4 @@
-# C06 Podcast Distribution — Platform List & Strategy
+# C06 Podcast Distribution, Platform List & Strategy
 
 ## Auto-Distribution via Buzzsprout RSS
 
@@ -34,7 +34,7 @@ Submit your Buzzsprout RSS feed once. These platforms pull automatically:
 
 **Why bother:** YouTube is the #2 podcast listening platform in the US (Edison Research 2024). AI-generated audio content performs fine with a static waveform.
 
-**Setup tool:** Canva's "audio visualizer" video template — drag in MP3, export 1080p video. 10 minutes per episode.
+**Setup tool:** Canva's "audio visualizer" video template, drag in MP3, export 1080p video. 10 minutes per episode.
 
 ### Substack
 - Cross-post transcript as newsletter
@@ -45,7 +45,7 @@ Submit your Buzzsprout RSS feed once. These platforms pull automatically:
 ### Medium
 - Publish edited transcript as article
 - Link to podcast episode
-- Medium's Partner Program pays per read — additional revenue layer
+- Medium's Partner Program pays per read, additional revenue layer
 
 ---
 
@@ -75,7 +75,7 @@ EPISODE (20-30 min audio)
             └── Post as static images on Instagram, Pinterest, LinkedIn
 ```
 
-**Tool for audiograms:** Headliner.app — free tier, drag in audio clip, auto-captions, exports as video. 15 min per clip.
+**Tool for audiograms:** Headliner.app, free tier, drag in audio clip, auto-captions, exports as video. 15 min per clip.
 
 ---
 
@@ -117,9 +117,9 @@ Submit manually to these for additional discovery:
 
 ### Podcast Aggregators & Newsletters
 Get your podcast featured:
-- Podnews.net (weekly newsletter, 25K subscribers) — submit at podnews.net/submit
-- Hot Pod (industry newsletter) — for business angle stories
-- Apple's "New & Noteworthy" — happens automatically if you get early velocity (100+ reviews in first week)
+- Podnews.net (weekly newsletter, 25K subscribers), submit at podnews.net/submit
+- Hot Pod (industry newsletter), for business angle stories
+- Apple's "New & Noteworthy", happens automatically if you get early velocity (100+ reviews in first week)
 
 ### Guest Appearance Strategy (Growth Hack)
 As your show grows, you become a desirable "guest" on other shows. This is how you break 1K downloads/episode fast:
@@ -145,9 +145,9 @@ As your show grows, you become a desirable "guest" on other shows. This is how y
 | Own website | Course upsells, product placement | Requires own traffic |
 
 **Earliest monetization (before 1K downloads):**
-- Affiliate mentions in episodes — no minimum audience required
-- Episode-level Patreon — "pay what you want" model
-- Consulting CTA — "if you want help implementing what [guest] described, book a call"
+- Affiliate mentions in episodes, no minimum audience required
+- Episode-level Patreon, "pay what you want" model
+- Consulting CTA, "if you want help implementing what [guest] described, book a call"
 
 ---
 

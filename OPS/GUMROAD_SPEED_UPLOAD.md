@@ -775,3 +775,104 @@ follow, rt & comment "offer" and i'll send it over
 
 [ACQUISITION] Thesis: Discord is an underrated platform for software products. Proof: I built a SaaS that runs entirely inside Discord [rev: $$1,850]
 
+
+
+---
+
+## Pending Enhancement (ALPHA107647, Score: 35)
+
+**Source:** @lookonchain (high-signal-accounts) | **URL:** https://x.com/lookonchain/status/2034271180052717741
+**Added:** 2026-03-18T21:45:01-04:00
+
+In less than 15 minutes, trader 0xf4b0 closed his $HYPE long, taking another $44K loss.
+
+
+
+
+---
+
+## Pending Enhancement (ALPHA108032, Score: 24)
+
+**Source:** @HamptonAc_ (high-signal-accounts) | **URL:** https://x.com/HamptonAc_/status/2034560811629174899
+**Added:** 2026-03-19T11:03:22-04:00
+
+Talked to a guy doing $85K/month last week.
+
+Asked him how many products he's tested this year.
+
+"Three."
+
+Asked how many creatives he's tested on those three.
+
+"Probably 200."
+
+You're testing 50 products with 3 creatives each.
+
+He's testing 3 products with 50 creatives each.
+
+
+
+---
+
+## Pending Enhancement (ALPHA108034, Score: 24)
+
+**Source:** @HamptonAc_ (high-signal-accounts) | **URL:** https://x.com/HamptonAc_/status/2034375423736303860
+**Added:** 2026-03-19T11:03:22-04:00
+
+When someone says "ecom is saturated" and you just had a $10K day selling a product with 200 competitors
+
+
+
+---
+
+## Pending Enhancement (ALPHA108055, Score: 29)
+
+**Source:** @lookonchain (high-signal-accounts) | **URL:** https://x.com/lookonchain/status/2034627000909140092
+**Added:** 2026-03-19T11:34:52-04:00
+
+Trader 0xF35A deposited 4.105M $USDC into Hyperliquid to FOMO into a long on Brent #oil ~50 minutes ago.
+
+He opened a 5x long on 189,904 xyz:BRENTOIL($20.19M).
+
+Liquidation price: $87.87.
+
+
+https://
+hypurrscan.io/address/0xF35A
+AD55C9941333bfdC69175eBA123d8B01338A#perps
+…
+
+
+
+---
+
+## Pending Enhancement (ALPHA108060, Score: 29)
+
+**Source:** @ecomchigga (high-signal-accounts) | **URL:** https://x.com/ecomchigga/status/2034379582564917371
+**Added:** 2026-03-19T11:34:52-04:00
+
+90% of people trying to sell info products and digital products on twitter are stuck under $500/month. and it's the same structural problem almost every time
+
+they have one product at one price point and they're trying to sell it cold to strangers through tweets
+
+that's like
+
+
+
+---
+
+## Pending Enhancement (ALPHA108081, Score: 24)
+
+**Source:** @AntonioEscudero (high-signal-accounts) | **URL:** https://x.com/AntonioEscudero/status/2034592413403251198
+**Added:** 2026-03-19T11:34:53-04:00
+
+My little SaaS 
+@rankinpublic
+ just made another $250 sale!
+
+And we just crossed 3,001 users
+
+We will raise the price for the directory submission service next week, as a way of increasing the conversion.
+
+It seems that if your prices are too low people don't value your product 
+

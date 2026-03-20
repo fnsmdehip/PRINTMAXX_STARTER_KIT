@@ -1,13 +1,13 @@
-# HN + Product Directory Distribution Pack — Cycle 7 — Mar 8 2026
+# HN + Product Directory Distribution Pack, Cycle 7, Mar 8 2026
 # Status: PENDING_REVIEW
 # Accounts: @PRINTMAXXER (HN/tech), @toolstwts (directories), @growthpilled (PH)
-# Voice: Weighted PRINTMAXXER aggregate — S-tier dominant, no marketing language
+# Voice: Weighted PRINTMAXXER aggregate, S-tier dominant, no marketing language
 
 ---
 
 ## HACKER NEWS SUBMISSIONS
 
-### 1. Show HN: PageScorer — free landing page audit, no login (pagescorer.surge.sh)
+### 1. Show HN: PageScorer, free landing page audit, no login (pagescorer.surge.sh)
 
 **Title (72 chars):**
 ```
@@ -78,7 +78,7 @@ Tools that needed significant rework:
 - Tools that need to handle wildly different input shapes
 
 Stack per tool: HTML/CSS/vanilla JS, deployed on surge.sh. Average tool
-is 12KB. Zero frameworks by design — faster cold load, easier to audit.
+is 12KB. Zero frameworks by design, faster cold load, easier to audit.
 
 Hub URL: printmaxx.surge.sh
 
@@ -95,7 +95,7 @@ happy to share the full code.
 
 ---
 
-### 3. Show HN: PrayerLock — 55KB offline-capable PWA for Ramadan habit tracking
+### 3. Show HN: PrayerLock, 55KB offline-capable PWA for Ramadan habit tracking
 
 **Title (75 chars):**
 ```
@@ -143,7 +143,7 @@ hardcoded city list which is fine but clunky.
 
 ---
 
-### 4. Show HN: OpenClaw — template system for spinning up local business sites fast
+### 4. Show HN: OpenClaw, template system for spinning up local business sites fast
 
 **Title (77 chars):**
 ```
@@ -195,7 +195,7 @@ behind the structured data defaults.
 
 ## PRODUCT HUNT LAUNCH PACKS
 
-### 5. PageScorer — Product Hunt launch pack
+### 5. PageScorer, Product Hunt launch pack
 
 **Tagline (54 chars):**
 ```
@@ -238,14 +238,14 @@ wrong. The weighting algorithm is still being tuned.
 ```
 Feature 1: 23-point audit covering load time, CTA placement, trust signals, social proof density, form friction, and headline clarity
 
-Feature 2: Every check returns a pass/fail with a one-line fix — not a score you have to interpret
+Feature 2: Every check returns a pass/fail with a one-line fix, not a score you have to interpret
 
 Feature 3: Fully client-side, 34KB, no login, no data stored, results in under 10 seconds
 ```
 
 ---
 
-### 6. PRINTMAXX Tools Hub — Product Hunt launch pack
+### 6. PRINTMAXX Tools Hub, Product Hunt launch pack
 
 **Tagline (55 chars):**
 ```
@@ -297,16 +297,16 @@ Tell me which ones are actually useful and I'll double down on those.
 ```
 Feature 1: 46 single-purpose tools covering outbound, landing pages, content, and financial modeling
 
-Feature 2: Every tool is client-side and under 20KB — no backend, no login, no data stored
+Feature 2: Every tool is client-side and under 20KB, no backend, no login, no data stored
 
-Feature 3: Results in under 15 seconds on every tool — built for the middle of a working session, not as a weekly ritual
+Feature 3: Results in under 15 seconds on every tool, built for the middle of a working session, not as a weekly ritual
 ```
 
 ---
 
 ## ALTERNATIVETO SUBMISSIONS
 
-### 7a. PageScorer — alternatives listing
+### 7a. PageScorer, alternatives listing
 
 **Product name:** PageScorer
 **URL:** pagescorer.surge.sh
@@ -326,7 +326,7 @@ Works on any public URL.
 **Differentiation blurb for each:**
 ```
 vs GTmetrix: GTmetrix focuses on performance metrics (load time, page
-size, requests). PageScorer focuses on conversion signals — CTA
+size, requests). PageScorer focuses on conversion signals, CTA
 placement, headline clarity, trust indicators. Different job.
 
 vs Lighthouse: Lighthouse is a full audit suite inside Chrome DevTools.
@@ -341,7 +341,7 @@ want to know why your CTA isn't converting, use PageScorer.
 
 ---
 
-### 7b. FocusLock — alternatives listing
+### 7b. FocusLock, alternatives listing
 
 **Product name:** FocusLock
 **URL:** focuslock.surge.sh
@@ -375,7 +375,7 @@ depth. FocusLock wins on setup time (zero) and cost (zero).
 
 ---
 
-### 7c. PrayerLock — alternatives listing
+### 7c. PrayerLock, alternatives listing
 
 **Product name:** PrayerLock
 **URL:** prayerlock.surge.sh
@@ -407,11 +407,11 @@ time calculation, check-ins, and streaks.
 
 ## BETALIST SUBMISSION
 
-### 8. PageScorer — BetaList
+### 8. PageScorer, BetaList
 
 **Headline (60 chars):**
 ```
-Landing page audit tool — 23 checks, no login, 10 seconds
+Landing page audit tool, 23 checks, no login, 10 seconds
 ```
 
 **Description (400 chars):**
@@ -441,7 +441,7 @@ Client-side only. 34KB. No account needed. Works on any public URL.
 
 ## SAASHUB LISTINGS
 
-### 9a. PageScorer — SaaSHub
+### 9a. PageScorer, SaaSHub
 
 **Name:** PageScorer
 **URL:** pagescorer.surge.sh
@@ -479,7 +479,7 @@ No account required. No data stored. Fully client-side. 34KB.
 
 ---
 
-### 9b. InvoiceForge — SaaSHub
+### 9b. InvoiceForge, SaaSHub
 
 **Name:** InvoiceForge
 **URL:** invoiceforge.surge.sh
@@ -508,7 +508,7 @@ Output is a clean, professional PDF. No InvoiceForge branding on the
 output (your invoice, not ours).
 
 No login. No subscription. Data entered is not transmitted anywhere.
-Refresh the page and it's gone — or download the PDF before you do.
+Refresh the page and it's gone, or download the PDF before you do.
 ```
 
 **Category:** Invoicing / Finance Tools
@@ -517,7 +517,7 @@ Refresh the page and it's gone — or download the PDF before you do.
 
 ---
 
-### 9c. ProspectMaxx — SaaSHub
+### 9c. ProspectMaxx, SaaSHub
 
 **Name:** ProspectMaxx
 **URL:** prospectmaxx.surge.sh
@@ -560,10 +560,10 @@ research tool).
 ## PRE-PUBLISH QA CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (no use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first framing in all HN first comments
 - [x] Exact numbers throughout (23 checks, 55KB, 34KB, 46 tools, 5 weeks, 12KB)
-- [x] Would @pipelineabuser post this? Yes — specific, number-heavy, anti-marketing energy
+- [x] Would @pipelineabuser post this? Yes, specific, number-heavy, anti-marketing energy
 - [x] HN tone: technical, honest about limitations, no marketing
 - [x] Product Hunt tone: founder voice, specific use cases, honest stats
 - [x] AlternativeTo: clear differentiation, honest tradeoffs

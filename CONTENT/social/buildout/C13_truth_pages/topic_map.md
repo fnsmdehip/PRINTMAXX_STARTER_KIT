@@ -1,12 +1,12 @@
-# Topic Map — 50 SEO Authority Topics
-# C13 Truth Pages — PRINTMAXX Content Hub
+# Topic Map, 50 SEO Authority Topics
+# C13 Truth Pages, PRINTMAXX Content Hub
 # Sorted by search volume. All volumes are monthly estimates.
 
 ## How to Use This
 
-Priority 1 (columns A-D): KD under 50, volume over 5K — hit these first
-Priority 2 (columns A-D): KD 50-65, volume over 10K — build to these as DA grows
-Priority 3 (columns A-D): KD under 40, volume 1K-5K — easy wins for long-tail cluster
+Priority 1 (columns A-D): KD under 50, volume over 5K, hit these first
+Priority 2 (columns A-D): KD 50-65, volume over 10K, build to these as DA grows
+Priority 3 (columns A-D): KD under 40, volume 1K-5K, easy wins for long-tail cluster
 
 Revenue notes: CPC = advertiser spend per click. High CPC = high affiliate potential.
 
@@ -127,7 +127,7 @@ Revenue notes: CPC = advertiser spend per click. High CPC = high affiliate poten
 
 ## Priority Attack Order
 
-**Phase 1 (months 1-3): Quick wins — KD under 45, volume 2K+**
+**Phase 1 (months 1-3): Quick wins, KD under 45, volume 2K+**
 
 Build domain authority with easy-to-rank content first. Each of these can rank page 1 within 60-90 days on a new domain with 3 backlinks.
 
@@ -140,7 +140,7 @@ Build domain authority with easy-to-rank content first. Each of these can rank p
 7. how to monetize small email list (KD 32)
 8. ai prompt packs to sell (KD 28)
 
-**Phase 2 (months 3-6): Mid-tier — KD 35-50, volume 5K+**
+**Phase 2 (months 3-6): Mid-tier, KD 35-50, volume 5K+**
 
 Once DA is 15+, target these with 5-10 internal links from Phase 1 content.
 
@@ -150,7 +150,7 @@ Once DA is 15+, target these with 5-10 internal links from Phase 1 content.
 4. best AI tools for solopreneurs (KD 42)
 5. how to sell notion templates (KD 35)
 
-**Phase 3 (months 6-12): High-volume targets — KD 50-65, volume 10K+**
+**Phase 3 (months 6-12): High-volume targets, KD 50-65, volume 10K+**
 
 Domain authority needed (DA 20-30+). These drive the majority of traffic once ranked.
 
@@ -165,9 +165,9 @@ Domain authority needed (DA 20-30+). These drive the majority of traffic once ra
 ## Competitive Intelligence Notes
 
 ### Top competitors in this space:
-- NerdWallet / Bankrate — finance angle, DA 70+. Can't compete head-on yet. Focus on niche angles they don't cover.
-- Shopify Blog — ecom angle, DA 90+. Same — niche down.
-- Side Hustle Nation, The Ways To Wealth — similar audience, DA 40-60. Real competition. Beat them with better specificity and more current data.
+- NerdWallet / Bankrate, finance angle, DA 70+. Can't compete head-on yet. Focus on niche angles they don't cover.
+- Shopify Blog, ecom angle, DA 90+. Same, niche down.
+- Side Hustle Nation, The Ways To Wealth, similar audience, DA 40-60. Real competition. Beat them with better specificity and more current data.
 
 ### Content differentiation strategy:
 Every article should have: real numbers, real tool names, current pricing, honest caveats. Most competitor content is generic. Specific beats generic every time.

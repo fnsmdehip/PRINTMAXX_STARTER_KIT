@@ -1,0 +1,92 @@
+{
+  "cycle": 76,
+  "timestamp": "2026-03-19T05:16:19.494642+00:00",
+  "niches_processed": 12,
+  "dedup_removed": 0,
+  "niches": {
+    "stoicism_streak": {
+      "niche": "stoicism_streak",
+      "community_total": 18867000,
+      "competing_app_count": 0,
+      "top_competitor_ratings": 0,
+      "notes": "No dedicated Stoic habit streak app found. DailyStoic.com is web newsletter only. Generic habit apps (Streaks, Habitify) exist but not Stoic-themed."
+    },
+    "ikigai_streak": {
+      "niche": "ikigai_streak",
+      "community_total": 815000,
+      "competing_app_count": 0,
+      "top_competitor_ratings": 0,
+      "notes": "r/ikigai 45K community. Ikigai.net is a lifestyle website. No mobile app for daily ikigai reflection STREAK found."
+    },
+    "zen_practice_streak": {
+      "niche": "zen_practice_streak",
+      "community_total": 1568000,
+      "competing_app_count": 3,
+      "top_competitor_ratings": 1900000,
+      "notes": "Guided meditation apps dominate. Headspace/Calm track guided session streaks. Simple unguided ZEN SITTING timer + streak is distinct."
+    },
+    "foam_rolling_streak": {
+      "niche": "foam_rolling_streak",
+      "community_total": 5290000,
+      "competing_app_count": 2,
+      "top_competitor_ratings": 12400,
+      "notes": "ROLL Recovery is guided routines, not streak accountability. No dedicated foam rolling STREAK tracker found."
+    },
+    "cold_bath_streak": {
+      "niche": "cold_bath_streak",
+      "community_total": 1260000,
+      "competing_app_count": 1,
+      "top_competitor_ratings": 2100,
+      "notes": "Ice Bath Timer is a stopwatch. Zero streak accountability. Distinct from C072 cold_shower_streak (immersion vs shower). Post-Huberman market growing."
+    },
+    "mobility_routine_streak": {
+      "niche": "mobility_routine_streak",
+      "community_total": 2070000,
+      "competing_app_count": 3,
+      "top_competitor_ratings": 31200,
+      "notes": "Pliability/StretchIt/GOWOD are content-delivery platforms WITH streak features embedded. Soft competition territory."
+    },
+    "touch_typing_streak": {
+      "niche": "touch_typing_streak",
+      "community_total": 5728000,
+      "competing_app_count": 0,
+      "top_competitor_ratings": 0,
+      "notes": "Typing speed tools (Keybr, TypeRacer, 10FastFingers) are web-only. No dedicated iOS mobile touch typing STREAK app with daily accountability found."
+    },
+    "coding_kata_streak": {
+      "niche": "coding_kata_streak",
+      "community_total": 5940000,
+      "competing_app_count": 3,
+      "top_competitor_ratings": 214000,
+      "notes": "LeetCode has daily challenge + streak (85K ratings). HackerRank has streaks. Mimo is strong gamified learner with 214K ratings. OCCUPIED."
+    },
+    "language_immersion_streak": {
+      "niche": "language_immersion_streak",
+      "community_total": 2210000,
+      "competing_app_count": 2,
+      "top_competitor_ratings": 5700000,
+      "notes": "Duolingo has 5.7M ratings with iconic streak mechanic. Language learning + streak = VERY OCCUPIED. Do not build."
+    },
+    "knitting_streak": {
+      "niche": "knitting_streak",
+      "community_total": 2485000,
+      "competing_app_count": 1,
+      "top_competitor_ratings": 3200,
+      "notes": "Ravelry is web-based pattern catalog/community. Row counter apps track progress per project, NOT habit streak accountability. r/knitting 1.1M + r/crochet 1.3M. Gap confirmed."
+    },
+    "woodworking_streak": {
+      "niche": "woodworking_streak",
+      "community_total": 4473000,
+      "competing_app_count": 0,
+      "top_competitor_ratings": 0,
+      "notes": "No dedicated woodworking habit streak apps found. Woodworking apps are project planners and joint calculators (Wood Shop Calculator). r/woodworking 4.2M clear."
+    },
+    "embroidery_streak": {
+      "niche": "embroidery_streak",
+      "community_total": 1107000,
+      "competing_app_count": 2,
+      "top_competitor_ratings": 4700,
+      "notes": "DMC Palette and iStitch are pattern/color tools NOT streak accountability. r/Embroidery 380K + r/CrossStitch 680K. Daily practice streak gap confirmed."
+    }
+  }
+}

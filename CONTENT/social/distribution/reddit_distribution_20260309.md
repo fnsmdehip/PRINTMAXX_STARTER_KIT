@@ -8,7 +8,7 @@
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Lowercase energy where appropriate
@@ -107,7 +107,7 @@ feedback welcome, especially on whether the duration-setting flow makes sense.
 
 the problem with focus timers: they count down in the background while you scroll Twitter. the timer finishing is the only consequence, and that consequence comes after the damage is done.
 
-i built FocusLock differently. you set a session, hit start, your screen locks. you can't casually unlock it and check something "real quick." the friction is physical, not psychological.
+i built FocusLock differently. you set a session, hit start, your screen locks. you can't casually get it and check something "real quick." the friction is physical, not psychological.
 
 it's free and runs in the browser as a PWA - you add it to your home screen, no app store needed.
 
@@ -115,7 +115,7 @@ focuslock-web.surge.sh
 
 honest notes for people with ADHD specifically:
 
-the lock works well when you initiate it on purpose. it's not a guardian that stops you from unlocking - you can still unlock your phone normally. what it does is add one extra intentional step before the screen lights up. for me that pause is enough to catch the impulse. for others it might not be. know your own patterns.
+the lock works well when you initiate it on purpose. it's not a guardian that stops you from unlocking - you can still get your phone normally. what it does is add one extra intentional step before the screen lights up. for me that pause is enough to catch the impulse. for others it might not be. know your own patterns.
 
 Android Chrome works clean. iOS Safari has a limitation with the Web Lock API - the tab needs to stay open in the foreground, which defeats some of the purpose on iPhone. that's a real bug i'm working on.
 
@@ -135,13 +135,13 @@ most focus advice assumes your phone is already away. mine wasn't.
 
 i tried timers, app blockers, do-not-disturb, grayscale. they all share one problem: they're advisory. the phone still lights up. the notifications still show the first line of the text. the friction is low enough that "just checking one thing" happens anyway.
 
-i built FocusLock to make the screen physically dark for a set window. you go to focuslock-web.surge.sh, set your session duration, hit start. your screen locks. you can still unlock it - this isn't a parental control - but unlocking is now a deliberate action instead of a reflexive one.
+i built FocusLock to make the screen physically dark for a set window. you go to focuslock-web.surge.sh, set your session duration, hit start. your screen locks. you can still get it - this isn't a parental control - but unlocking is now a deliberate action instead of a reflexive one.
 
 the behavioral difference: reflexive unlocking bypasses your prefrontal cortex. deliberate unlocking doesn't. one extra step is enough to catch the impulse before it executes.
 
 what i learned building and using this over a few weeks:
 
-- 25-minute sessions feel right for me. 45+ and i find reasons to unlock.
+- 25-minute sessions feel right for me. 45+ and i find reasons to get.
 - the app is more useful for protecting a session that's already going than for starting one from scratch.
 - having the lock on before i sit down matters more than anything else in my setup.
 

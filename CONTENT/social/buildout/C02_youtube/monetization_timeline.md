@@ -1,4 +1,4 @@
-# C02 YouTube — Monetization Timeline
+# C02 YouTube, Monetization Timeline
 # From 0 subscribers to $3K+/month. Real thresholds, real math, specific actions.
 
 ---
@@ -177,12 +177,12 @@ Avoid: gaming, entertainment, vlogs (low CPM, wrong audience)
 
 ## MILESTONE SUMMARY TABLE
 
-| Milestone | Timeline | Revenue/Month | Key Unlock |
+| Milestone | Timeline | Revenue/Month | Key get |
 |-----------|----------|---------------|------------|
 | 100 subscribers | Month 1 | $50-$100 affiliate | First real traction |
 | 500 subscribers | Month 2-3 | $150-$300 | Channel Memberships |
 | 1,000 subscribers | Month 3-4 | $300-$600 | YouTube Partner Program |
-| 4,000 watch hours | Month 3-4 | — | Ads (with 1K subs) |
+| 4,000 watch hours | Month 3-4 |, | Ads (with 1K subs) |
 | 5,000 subscribers | Month 5-7 | $500-$1,200 | Sponsor outreach starts |
 | 10,000 subscribers | Month 7-10 | $1,500-$2,500 | Real sponsorship rates |
 | 25,000 subscribers | Month 12-14 | $3,500-$6,000 | Mid-tier brands |
@@ -224,7 +224,7 @@ Tracking weekly instead of monthly catches trends 4x faster. Adjust content stra
 ## REALISTIC EXPECTATIONS (Unfiltered)
 
 Month 1-3: Making almost nothing. This is normal. You're training the algorithm.
-Month 4-6: First real money. Usually $200-$600/month. Motivation dips here — push through.
+Month 4-6: First real money. Usually $200-$600/month. Motivation dips here, push through.
 Month 7-12: Compounding starts. Old videos keep driving views. Revenue grows without new effort.
 Month 12-18: First $1K month. This is when most people who started at the same time have quit.
 Month 18-24: $3K-$6K/month realistic if content quality and consistency held.

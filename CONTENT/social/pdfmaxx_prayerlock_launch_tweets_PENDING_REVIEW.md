@@ -1,9 +1,9 @@
-# App Factory Launch Tweets — 2026-03-14
+# App Factory Launch Tweets, 2026-03-14
 Status: PENDING_REVIEW
 
 ---
 
-## Tweet 1 — PDFMaxx Launch (consequence-first hook)
+## Tweet 1, PDFMaxx Launch (consequence-first hook)
 ```
 built a pdf editor that doesn't upload your files to some random server in switzerland
 
@@ -17,7 +17,7 @@ pdfmaxx.surge.sh
 
 ---
 
-## Tweet 2 — The market insight (engagement bait)
+## Tweet 2, The market insight (engagement bait)
 ```
 every pdf tool on the market uploads your files to their servers
 
@@ -30,7 +30,7 @@ i built it in a day
 
 ---
 
-## Tweet 3 — PrayerLock AI Dua update (Ramadan timing)
+## Tweet 3, PrayerLock AI Dua update (Ramadan timing)
 ```
 updated prayerlock with an ai dua assistant
 
@@ -43,7 +43,7 @@ prayerlock-web.surge.sh
 
 ---
 
-## Tweet 4 — Thread opener (value thread)
+## Tweet 4, Thread opener (value thread)
 ```
 the biblechat app makes $750K/month
 
@@ -87,7 +87,7 @@ your move
 
 ---
 
-## Tweet 5 — Cold outbound angle
+## Tweet 5, Cold outbound angle
 ```
 pdf tools that upload your files:
 - ilovepdf (upload to EU server)

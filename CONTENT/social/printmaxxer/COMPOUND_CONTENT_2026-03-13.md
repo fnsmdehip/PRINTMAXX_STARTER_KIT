@@ -1,4 +1,4 @@
-# Compound Content — 2026-03-13 15:40
+# Compound Content, 2026-03-13 15:40
 Generated from: swarm reports, CEO decisions, alpha staging, reddit scrapes, pipeline metrics.
 Status: PENDING_REVIEW
 Voice: PRINTMAXXER (copy-style.md weighted aggregate)
@@ -7,7 +7,7 @@ Voice: PRINTMAXXER (copy-style.md weighted aggregate)
 
 ## STANDALONE TWEETS (7)
 
-### Tweet 1 — Build-in-Public (Automation Fleet)
+### Tweet 1, Build-in-Public (Automation Fleet)
 ```
 33 autonomous agents running on my macbook right now. CEO agent makes portfolio decisions every 4 hours. venture agents execute. swarm agents hunt gaps.
 
@@ -16,7 +16,7 @@ total monthly cost: $200 (claude max plan).
 no server. no team. no meetings. just cron jobs and filesystem state.
 ```
 
-### Tweet 2 — Honest Revenue Post (Day 35)
+### Tweet 2, Honest Revenue Post (Day 35)
 ```
 day 35. revenue: $0.
 
@@ -33,14 +33,14 @@ the infrastructure is insane. the revenue is not. yet.
 shipping the monetization layer this week.
 ```
 
-### Tweet 3 — Consequence-First (Lead Gen)
+### Tweet 3, Consequence-First (Lead Gen)
 ```
 woke up to 84 new alpha entries scraped overnight. system found a $280M failed acquisition story on r/Entrepreneur (88 upvotes, 43 comments) and auto-routed it to my content pipeline.
 
 I didn't do anything. the cron job did.
 ```
 
-### Tweet 4 — Tool Alpha (Anti-AI Slop)
+### Tweet 4, Tool Alpha (Anti-AI Slop)
 ```
 129-point crowdsourced list of AI writing tells hit the front page of HN yesterday.
 
@@ -49,7 +49,7 @@ I already have 24 of those patterns banned in my copy-style config. every piece 
 most people manually edit AI slop. I automated the filter.
 ```
 
-### Tweet 5 — Reply Bait (Controversial Take)
+### Tweet 5, Reply Bait (Controversial Take)
 ```
 unpopular opinion: most "AI automation" accounts are running $0 in actual revenue with $200/mo in AI subscriptions.
 
@@ -58,7 +58,7 @@ I know because I'm one of them.
 the difference is I'm not pretending otherwise. day 35 at zero. infrastructure first, revenue second. watch.
 ```
 
-### Tweet 6 — Specific Tactic (Geo-Arbitrage)
+### Tweet 6, Specific Tactic (Geo-Arbitrage)
 ```
 the simplest ecom play nobody talks about:
 
@@ -69,7 +69,7 @@ the simplest ecom play nobody talks about:
 same products. same ads. just 6 months behind. by the time US is saturated, brazil hasn't even seen it.
 ```
 
-### Tweet 7 — System Architecture (Nerd Bait)
+### Tweet 7, System Architecture (Nerd Bait)
 ```
 my autonomous agent stack:
 
@@ -85,7 +85,7 @@ total infra cost: $0/mo (runs on my laptop).
 
 ---
 
-## THREAD (7 tweets) — "How I Built 33 Autonomous Agents for $0"
+## THREAD (7 tweets), "How I Built 33 Autonomous Agents for $0"
 
 ### 1/7
 ```
@@ -170,7 +170,7 @@ all of this runs on a macbook with a $200/mo subscription. no AWS. no team. no m
 
 ## REPLY BAIT (3)
 
-### Reply Bait 1 — Poll-Style
+### Reply Bait 1, Poll-Style
 ```
 genuine question: would you rather have
 
@@ -180,7 +180,7 @@ B) 10 apps each making $500/mo
 same total revenue. completely different risk profiles. I chose B. here's why that might be wrong.
 ```
 
-### Reply Bait 2 — Hot Take
+### Reply Bait 2, Hot Take
 ```
 the "just ship it" crowd and the "plan everything" crowd are both wrong.
 
@@ -189,7 +189,7 @@ the right answer: build infrastructure that ships FOR you while you sleep. then 
 33 agents. zero manual deploys. that's the play.
 ```
 
-### Reply Bait 3 — Question Hook
+### Reply Bait 3, Question Hook
 ```
 how many of you are running autonomous agents right now?
 
@@ -202,7 +202,7 @@ curious what the real number is. reply with your stack.
 
 ## ENGAGEMENT FARMING (2)
 
-### Engagement 1 — Contrarian
+### Engagement 1, Contrarian
 ```
 hot take: the indie hacker community peaked in 2024.
 
@@ -211,7 +211,7 @@ hot take: the indie hacker community peaked in 2024.
 the solopreneur who codes is already obsolete. the solopreneur who orchestrates agents is next.
 ```
 
-### Engagement 2 — Relatable Pain
+### Engagement 2, Relatable Pain
 ```
 the gap between "I built a lot of stuff" and "I make money" is the widest gap in tech.
 

@@ -1,16 +1,16 @@
-# C08 Pinterest — Pin Templates (Descriptions, Keywords, Hashtags)
+# C08 Pinterest, Pin Templates (Descriptions, Keywords, Hashtags)
 
 ## Pinterest Description Formula
 
 Every pin description follows this structure:
-1. **Hook** (1 sentence — consequence-first, specific number)
-2. **Context** (2-3 sentences — what, how, tool names)
-3. **Proof or stat** (1 sentence — number-backed)
-4. **CTA** (1 sentence — save, download, link in bio)
+1. **Hook** (1 sentence, consequence-first, specific number)
+2. **Context** (2-3 sentences, what, how, tool names)
+3. **Proof or stat** (1 sentence, number-backed)
+4. **CTA** (1 sentence, save, download, link in bio)
 
 Total: 150-300 characters for mobile. 500-700 characters for desktop/SEO.
 
-Pinterest shows first 50-75 characters in feed — make those count.
+Pinterest shows first 50-75 characters in feed, make those count.
 
 ---
 
@@ -18,7 +18,7 @@ Pinterest shows first 50-75 characters in feed — make those count.
 
 ### Short Version (Mobile-First, 150 chars)
 ```
-[Tool A] vs [Tool B] — I tested both for [X months]. [Tool A] wins for [use case]. [Tool B] wins for [use case]. here's the side-by-side breakdown + my recommendation.
+[Tool A] vs [Tool B], I tested both for [X months]. [Tool A] wins for [use case]. [Tool B] wins for [use case]. here's the side-by-side breakdown + my recommendation.
 ```
 
 ### Full Version (SEO-Optimized, 500 chars)
@@ -32,7 +32,7 @@ verdict: if you [use case], use [Tool A]. if you [different use case], use [Tool
 
 I switched from [Tool B] to [Tool A] in [month/year]. saved $[X]/mo. here's the full breakdown with screenshots.
 
-save this pin — [CTA action].
+save this pin, [CTA action].
 ```
 
 ### Keywords to Include:
@@ -51,12 +51,12 @@ save this pin — [CTA action].
 
 ### Short Version
 ```
-$[X]/mo from [method] — here's exactly how I did it. [tool] + [tool] + [time investment]. breakdown with real numbers below.
+$[X]/mo from [method], here's exactly how I did it. [tool] + [tool] + [time investment]. breakdown with real numbers below.
 ```
 
 ### Full Version
 ```
-$[X]/mo from [method] — real breakdown with numbers.
+$[X]/mo from [method], real breakdown with numbers.
 
 month 1: $[X] ([what I built/set up])
 month 2: $[X] ([what changed])
@@ -68,7 +68,7 @@ net: $[X]/mo
 
 [key insight about what made the difference]
 
-save this — full guide below.
+save this, full guide below.
 ```
 
 ### Keywords to Include:
@@ -87,7 +87,7 @@ save this — full guide below.
 
 ### Short Version
 ```
-how to [achieve goal] in [timeframe] — step by step. [tool] + [tool]. most people skip step [X] and wonder why it doesn't work.
+how to [achieve goal] in [timeframe], step by step. [tool] + [tool]. most people skip step [X] and wonder why it doesn't work.
 ```
 
 ### Full Version
@@ -106,7 +106,7 @@ expected result: [specific outcome] in [timeframe]
 
 the part most tutorials skip: [key insight or warning]
 
-save this pin — I link the free template below.
+save this pin, I link the free template below.
 ```
 
 ### Keywords to Include:
@@ -125,24 +125,24 @@ save this pin — I link the free template below.
 
 ### Short Version
 ```
-[X] [tools/strategies/ideas] for [outcome] — ranked by ROI. I've tested [number] of them personally. the [#] surprised me.
+[X] [tools/strategies/ideas] for [outcome], ranked by ROI. I've tested [number] of them personally. the [#] surprised me.
 ```
 
 ### Full Version
 ```
-[X] [tools/strategies/ideas] for [outcome] — ranked by actual ROI:
+[X] [tools/strategies/ideas] for [outcome], ranked by actual ROI:
 
-1. [item] — [1 sentence value prop, $price if paid]
-2. [item] — [1 sentence value prop, $price if paid]
-3. [item] — [1 sentence value prop, $price if paid]
-4. [item] — [1 sentence value prop, $price if paid]
-5. [item] — [1 sentence value prop, $price if paid]
+1. [item], [1 sentence value prop, $price if paid]
+2. [item], [1 sentence value prop, $price if paid]
+3. [item], [1 sentence value prop, $price if paid]
+4. [item], [1 sentence value prop, $price if paid]
+5. [item], [1 sentence value prop, $price if paid]
 
 the one I use every day: [item].
 the best value: [item] ($[X]/mo).
 the most underrated: [item].
 
-save this for later — [CTA].
+save this for later, [CTA].
 ```
 
 ### Keywords to Include:
@@ -166,7 +166,7 @@ the [insight] that [result]. most [audience] don't know this. [1 sentence expans
 
 ### Full Version
 ```
-the [insight] that [result] — and it takes [X minutes] to implement.
+the [insight] that [result], and it takes [X minutes] to implement.
 
 most [audience] [do wrong thing]. it's not their fault. nobody told them [insight].
 
@@ -176,7 +176,7 @@ I [personal example]. result: [specific outcome in X timeframe].
 
 [1 actionable step they can take today]
 
-save this — [CTA].
+save this, [CTA].
 ```
 
 ### Keywords:
@@ -194,8 +194,8 @@ save this — [CTA].
 ## Image Specs for All Pins
 
 ### Required Dimensions
-- Standard pin: 1000x1500px (2:3 ratio) — best distribution
-- Square pin: 1000x1000px — works but 20% lower reach
+- Standard pin: 1000x1500px (2:3 ratio), best distribution
+- Square pin: 1000x1000px, works but 20% lower reach
 - Infographic: 1000x2100px (for tutorials/lists)
 - Story pin: 1080x1920px (if using Idea Pins)
 
@@ -238,7 +238,7 @@ save this — [CTA].
 - Amazon KDP
 - affiliate marketing for beginners
 
-**Tier 3 (1K-10K monthly searches — lower competition, higher conversion):**
+**Tier 3 (1K-10K monthly searches, lower competition, higher conversion):**
 - Apollo.io tutorial
 - Instantly.ai review
 - Beehiiv vs Substack
@@ -250,7 +250,7 @@ save this — [CTA].
 
 1. **Pin Title:** Primary keyword first, then modifier
    - Bad: "My Favorite Tool Stack"
-   - Good: "Cold Email Tools — Apollo.io + Instantly.ai Setup Guide 2026"
+   - Good: "Cold Email Tools, Apollo.io + Instantly.ai Setup Guide 2026"
 
 2. **Pin Description:** 2-3 keyword variations in first 100 characters
    - Include long-tail (3-4 word) phrases
@@ -263,7 +263,7 @@ save this — [CTA].
 
 ## Hashtag Sets by Board
 
-Use 5-8 hashtags per pin. Pinterest hashtags work differently from Instagram — they're more like categories.
+Use 5-8 hashtags per pin. Pinterest hashtags work differently from Instagram, they're more like categories.
 
 **Cold Email:**
 #coldemail #b2bleads #emailmarketing #coldoutreach #solopreneur #apolloio #emailsequence

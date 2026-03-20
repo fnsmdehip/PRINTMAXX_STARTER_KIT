@@ -1,4 +1,4 @@
-# C20 Sports/Gaming Clips Channel — Monetization Guide
+# C20 Sports/Gaming Clips Channel, Monetization Guide
 
 ## Revenue Stack Overview
 
@@ -7,8 +7,8 @@
 | YouTube AdSense | 1K subs + 4K watch hours | $80-200 | $300-800 | $800-2,500 |
 | Sports Betting Affiliates | Immediate (in description) | $200-600 | $500-1,500 | $1,000-3,500 |
 | Gaming Affiliates | Immediate | $50-150 | $150-400 | $400-1,200 |
-| Channel Memberships | 500+ subs | — | $100-300 | $300-800 |
-| Sponsorships | 5K+ subs | — | $200-500 | $1,000-4,000 |
+| Channel Memberships | 500+ subs |, | $100-300 | $300-800 |
+| Sponsorships | 5K+ subs |, | $200-500 | $1,000-4,000 |
 | **Total Conservative** | | **$330** | **$1,250** | **$3,500** |
 | **Total Aggressive** | | **$950** | **$3,500** | **$11,000** |
 
@@ -69,7 +69,7 @@ Conservative month 6: $300-500/mo AdSense alone
 - **MANDATORY disclaimer** in every video with betting affiliate links:
   "This video contains paid promotion and affiliate links for sports betting services. Gambling involves risk. Must be 21+ and in a legal jurisdiction. Bet responsibly."
 - YouTube requires you disclose paid promotions
-- Some states prohibit sports betting entirely — most affiliate programs geo-restrict themselves
+- Some states prohibit sports betting entirely, most affiliate programs geo-restrict themselves
 - FTC rules: clearly disclose affiliate relationships in description AND verbally in video
 
 ### Revenue Math
@@ -87,9 +87,9 @@ Aggressive: 10K views × 4% CTR × 15% CR × $50 = $3,000
 ```
 
 ### Best Video Formats for Betting Conversion
-1. Model-based analysis (video #2 NBA Props) — shows value, builds trust, converts
-2. "Best bet of the week" series — recurring, habitual viewers convert
-3. "I tested X sports betting strategy for 90 days" — results-based = trust signal
+1. Model-based analysis (video #2 NBA Props), shows value, builds trust, converts
+2. "Best bet of the week" series, recurring, habitual viewers convert
+3. "I tested X sports betting strategy for 90 days", results-based = trust signal
 
 ---
 
@@ -167,23 +167,23 @@ After YouTube's 30% cut: $927/mo
 ### Best Sponsors for This Niche
 
 **Tier A (Highest rate, hardest to get):**
-- Sports betting platforms (DraftKings, FanDuel) — $2,000-10,000/video at scale
-- Fantasy sports tools (FantasyPros, Underdog) — $500-2,000/video
-- Sports analytics tools (The Athletic, StatMuse) — $500-1,500/video
+- Sports betting platforms (DraftKings, FanDuel), $2,000-10,000/video at scale
+- Fantasy sports tools (FantasyPros, Underdog), $500-2,000/video
+- Sports analytics tools (The Athletic, StatMuse), $500-1,500/video
 
 **Tier B (Mid range):**
-- VPN services (NordVPN, ExpressVPN) — $500-2,000/video (standard creator rates)
-- Gaming peripherals (Razer, SteelSeries) — $300-1,000/video
-- Data visualization tools (Tableau, Flourish) — $200-800/video
+- VPN services (NordVPN, ExpressVPN), $500-2,000/video (standard creator rates)
+- Gaming peripherals (Razer, SteelSeries), $300-1,000/video
+- Data visualization tools (Tableau, Flourish), $200-800/video
 
 **Tier C (Entry level, easier to get):**
-- Gaming chair brands — $100-400/video
-- Snack/energy drink brands — $200-500/video
-- Amazon storefront products — $50-200/video
+- Gaming chair brands, $100-400/video
+- Snack/energy drink brands, $200-500/video
+- Amazon storefront products, $50-200/video
 
 ### Sponsorship Outreach Template
 ```
-Subject: Sponsorship Inquiry — [Channel Name] Sports/Gaming Analytics (X,XXX Subs)
+Subject: Sponsorship Inquiry, [Channel Name] Sports/Gaming Analytics (X,XXX Subs)
 
 Hey [Brand] partnerships team,
 
@@ -200,7 +200,7 @@ Sponsorship formats I offer:
 2. 2-video bundle: $XXX (10% discount)
 3. Monthly sponsorship (4 videos): $X,XXX
 
-My audience buys [products relevant to brand] — I've included a link to my media kit.
+My audience buys [products relevant to brand], I've included a link to my media kit.
 
 [Media kit link or attached PDF]
 
@@ -259,4 +259,4 @@ Before monetizing sports betting content:
 - [ ] YouTube paid promotion toggle: Enable in video settings for any sponsored content
 - [ ] State compliance: Don't actively target states where online betting is illegal (geo-restriction happens automatically via affiliate platforms)
 
-**Note:** YouTube does allow sports betting affiliate links and sponsored content as long as all disclosures are in place. Ad revenue on betting-adjacent content can be restricted on individual videos — this is normal, appeal if incorrectly flagged.
+**Note:** YouTube does allow sports betting affiliate links and sponsored content as long as all disclosures are in place. Ad revenue on betting-adjacent content can be restricted on individual videos, this is normal, appeal if incorrectly flagged.

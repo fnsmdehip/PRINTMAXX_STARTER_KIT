@@ -1,4 +1,4 @@
-# CYCLE 5 — LINKEDIN POSTS
+# CYCLE 5, LINKEDIN POSTS
 # Generated: 2026-03-18 07:10
 # Status: PENDING_REVIEW
 # Voice: Professional but direct (LinkedIn-adapted PRINTMAXXER)
@@ -6,7 +6,7 @@
 
 ---
 
-## POST 1 — Cold Email Shifts
+## POST 1, Cold Email Shifts
 
 Cold email fundamentals shifted in 2026. Three changes worth knowing:
 
@@ -22,7 +22,7 @@ Source: Saleshandy 2026 benchmark data, Instantly.ai cold email report.
 
 ---
 
-## POST 2 — GEO: Generative Engine Optimization
+## POST 2, GEO: Generative Engine Optimization
 
 43% more brands were cited by AI assistants this year than last year.
 
@@ -37,7 +37,7 @@ If your SEO strategy doesn't include AI citation optimization, you're optimizing
 
 ---
 
-## POST 3 — Pricing Optimization ROI
+## POST 3, Pricing Optimization ROI
 
 A stat that reframed how I think about growth:
 

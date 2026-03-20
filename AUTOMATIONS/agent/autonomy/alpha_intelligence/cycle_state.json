@@ -1,33 +1,36 @@
 {
-  "cycle_number": 249,
-  "phase": "report",
+  "cycle_number": 250,
+  "phase": "complete",
   "status": "COMPLETE",
-  "timestamp": "2026-03-16T12:37:00Z",
-  "duration_seconds": 120,
+  "timestamp": "2026-03-19T16:14:40.846042Z",
+  "duration_seconds": 3900,
   "report_generated": true,
-  "report_location": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_report.md",
+  "report_location": "/AUTOMATIONS/agent/autonomy/alpha_intelligence/output/report_20260319_cycle.md",
   "summary": {
-    "pending_review_backlog": 421,
-    "approved_routed": 381,
-    "content_generated": 28,
-    "ventures_updated": 8
+    "pending_review_backlog": 2138,
+    "approved_routed": 87,
+    "content_generated": 24,
+    "ventures_updated": 8,
+    "ecom_products_listed": 8,
+    "freelance_hot_leads": 2
   },
-  "next_cycle_scheduled": "2026-03-16T14:39:00Z",
+  "next_cycle_scheduled": "2026-03-19T19:09:17.909740Z",
   "blockers": [
-    "Pending review backlog: 421 HIGH/HIGHEST entries need human classification",
-    "Twitter scraper needs: pip3 install playwright + python3 -m playwright install chromium",
-    "ProductHunt API requires GraphQL auth token"
+    "10 ecom listings need description expansion (< 60 chars)",
+    "2,138 PENDING_REVIEW entries awaiting human triage (optional, accelerates)"
   ],
   "metrics": {
-    "entries_processed_today": 308,
-    "entries_routed_today": 141,
-    "high_roi_entries_today": 62,
-    "content_posts_generated": 52,
+    "entries_processed_today": 0,
+    "entries_routed_today": 87,
+    "high_roi_entries_today": 6,
+    "content_posts_generated": 24,
     "scraper_health": {
-      "twitter": "needs_playwright_reinstall",
+      "twitter": "complete",
       "reddit": "complete",
-      "hn_ph_ih": "complete"
-    }
+      "hn_ph_ih": "passive"
+    },
+    "twitter_entries_captured": 124,
+    "twitter_accounts_scanned": 133
   },
-  "notes": "Cycle 249 complete. Comprehensive report generated covering 421 pending entries, 381 approved/routed, 28 content pieces. All 5 pipeline phases executed. See report_report.md for full intelligence summary."
+  "notes": "Cycle 250 FINAL: Twitter scraper background task completed. Captured 124 new entries (ALPHA108114-ALPHA108237) from 133 accounts. All systems operational. Ready for processing in next cycle."
 }

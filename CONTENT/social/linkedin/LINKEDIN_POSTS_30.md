@@ -311,7 +311,7 @@ Apple doesn't want clones. they want differentiation.
 
 so i added 3 features no other prayer app has:
 
-1. walk-to-unlock prayers (gamification)
+1. walk-to-get prayers (gamification)
 2. Salah time streaks with community leaderboard
 3. Quranic verse search with AI-powered tafsir
 
@@ -639,7 +639,7 @@ what works:
 
 - matches my short, punchy sentence structure
 - uses specific numbers like i do
-- avoids AI vocabulary (no "leverage" or "unlock")
+- avoids AI vocabulary (no "use" or "get")
 
 what doesn't work:
 
@@ -897,9 +897,9 @@ now i post "spent 40 hours building a feature nobody wanted. here's how i could'
 
 engagement went up 10x.
 
-building in public isn't about documenting your journey.
+building in public isn't about documenting your path.
 
-it's about teaching through your journey.
+it's about teaching through your path.
 
 how do you approach building in public?
 

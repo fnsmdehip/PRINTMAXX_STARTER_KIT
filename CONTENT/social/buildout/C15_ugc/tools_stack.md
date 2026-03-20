@@ -1,4 +1,4 @@
-# AI UGC Tools Stack — Pricing Comparison + Recommended Setup
+# AI UGC Tools Stack, Pricing Comparison + Recommended Setup
 
 ## The Core Stack (What You Actually Need)
 
@@ -169,7 +169,7 @@ Hour 4: Edit + export
 - D-ID: $24 / 20 = $1.20/video
 - **Total COGS at 20 videos/mo: $2.30/video**
 
-**Margin at $65/video with 20 videos:** Revenue $1,300 — COGS $46 = $1,254 gross margin (96.5%)
+**Margin at $65/video with 20 videos:** Revenue $1,300, COGS $46 = $1,254 gross margin (96.5%)
 
 ---
 
@@ -207,9 +207,9 @@ At 30-100 videos/month: Semi-automated (batch scripts, templated prompts).
 At 100+ videos/month: Full API pipeline worth building.
 
 **API endpoints that matter:**
-- ElevenLabs: `POST /v1/text-to-speech/{voice_id}` — $0.30/1K chars
-- D-ID: `POST /talks` — $0.0015/second of video
-- Claude API: `POST /v1/messages` — $0.003/1K input tokens
+- ElevenLabs: `POST /v1/text-to-speech/{voice_id}`, $0.30/1K chars
+- D-ID: `POST /talks`, $0.0015/second of video
+- Claude API: `POST /v1/messages`, $0.003/1K input tokens
 
 **At 100 videos/month via API:**
 - ElevenLabs: ~$15/mo

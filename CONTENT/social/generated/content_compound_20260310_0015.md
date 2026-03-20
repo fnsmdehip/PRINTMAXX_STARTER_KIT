@@ -3,9 +3,9 @@
 **Agent:** content_compounder | **Pieces generated:** 8 | **Sources:** 3 swarm reports
 
 ## Sources Consumed
-1. `alpha_scoring_20260309_2350.md` — 7 approved alpha entries (dead startups, habit tracker, chore tracking, hourly reminders)
-2. `gap_report_20260309_2312.md` — Day 35 status (131 products, $0 revenue, 2.9M leads, content pipeline unclogging)
-3. `cross_pollination_20260309.md` — 39 connections, 1,043 items auto-routed, 6 new data flows
+1. `alpha_scoring_20260309_2350.md`, 7 approved alpha entries (dead startups, habit tracker, chore tracking, hourly reminders)
+2. `gap_report_20260309_2312.md`, Day 35 status (131 products, $0 revenue, 2.9M leads, content pipeline unclogging)
+3. `cross_pollination_20260309.md`, 39 connections, 1,043 items auto-routed, 6 new data flows
 
 ## Content Generated
 

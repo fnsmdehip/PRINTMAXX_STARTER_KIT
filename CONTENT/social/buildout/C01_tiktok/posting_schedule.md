@@ -1,9 +1,9 @@
-# C01 TikTok — Posting Schedule
+# C01 TikTok, Posting Schedule
 
 ## Optimal Posting Times by Niche
 
 **Data source:** TikTok Creator Analytics averages + 2025-2026 third-party studies (Social Insider, Later, Hootsuite)
-**Note:** These are EST. Adjust for your audience timezone — check Creator Analytics weekly and adapt.
+**Note:** These are EST. Adjust for your audience timezone, check Creator Analytics weekly and adapt.
 
 ### Money Methods / Solopreneur Niche
 | Day | Post 1 | Post 2 | Post 3 |
@@ -114,7 +114,7 @@
 - [ ] Caption is under 150 characters (first line, rest below fold)
 - [ ] 3-5 hashtags max in caption (rest in first comment)
 - [ ] No watermarks from other platforms (TikTok demotes cross-posted content)
-- [ ] CTA asks for comments or saves (not follows — too soft)
+- [ ] CTA asks for comments or saves (not follows, too soft)
 - [ ] Text overlay readable on mobile (min 20px font)
 
 ### Hashtag placement strategy:
@@ -125,7 +125,7 @@
 ### First 30 minutes after posting:
 - Reply to every comment within 30 minutes
 - Pin best comment as your reply
-- Do NOT re-post immediately if it underperforms — wait 24 hours before assessing
+- Do NOT re-post immediately if it underperforms, wait 24 hours before assessing
 - Share to your story for a 2-4 hour engagement bump
 
 ### Performance benchmarks to aim for (by account size):

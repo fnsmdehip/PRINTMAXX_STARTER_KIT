@@ -306,5 +306,19 @@ a:hover{color:var(--accent2)}
     <strong>affiliate disclosure:</strong> this page contains affiliate links. if you sign up through our links, we may earn a commission at no extra cost to you. InvoiceForge is our own product, and we've been transparent about that throughout this review. Wave and Zoho links are affiliate partnerships. all features and pricing verified as of March 2026. FTC compliant.
   </div>
 </div>
+
+<!-- Sticky lead capture bar -->
+<div id="sticky-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;border-top:1px solid #3b82f6;padding:14px 20px;z-index:999;text-align:center">
+  <div style="max-width:700px;margin:0 auto;display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+    <span style="color:#e8e8e8;font-size:0.9rem;font-weight:600">Free: Create and send invoices in 90 seconds — no account, no signup</span>
+    <a href="https://invoiceforge.surge.sh" target="_blank" style="background:#3b82f6;color:#fff;padding:8px 20px;border-radius:8px;font-size:0.82rem;font-weight:700;text-decoration:none;white-space:nowrap">Try InvoiceForge Free</a>
+    <button onclick="this.parentElement.parentElement.parentElement.style.display='none';localStorage.setItem('inv_bar','1')" style="background:transparent;border:none;color:#555;cursor:pointer;font-size:1.2rem;padding:0 4px">×</button>
+  </div>
+</div>
+<script>
+setTimeout(function(){
+  if(!localStorage.getItem('inv_bar')) document.getElementById('sticky-bar').style.display='block';
+}, 4000);
+</script>
 </body>
 </html>

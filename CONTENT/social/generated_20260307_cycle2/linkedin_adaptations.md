@@ -1,10 +1,10 @@
-# LinkedIn Adaptations — 2026-03-07 Cycle 2
+# LinkedIn Adaptations, 2026-03-07 Cycle 2
 # STATUS: APPROVED
 # VOICE: Professional but direct. No corporate fluff.
 
 ---
 
-## LINKEDIN POST 1 — Pricing Data (from Post 4)
+## LINKEDIN POST 1, Pricing Data (from Post 4)
 
 Pricing optimization is 2-4x more impactful than customer acquisition.
 
@@ -25,7 +25,7 @@ The 25-60% revenue increase most founders are missing is sitting in their pricin
 
 ---
 
-## LINKEDIN POST 2 — GEO Intel (from Post 3)
+## LINKEDIN POST 2, GEO Intel (from Post 3)
 
 680 million AI citations analyzed. The data is clear.
 
@@ -47,7 +47,7 @@ A content strategy stuck on 100% traditional SEO is leaving 30-40% of AI-driven 
 
 ---
 
-## LINKEDIN POST 3 — Subscription App Data (from Post 2)
+## LINKEDIN POST 3, Subscription App Data (from Post 2)
 
 RevenueCat just published data from 100K+ apps and 1 billion transactions.
 

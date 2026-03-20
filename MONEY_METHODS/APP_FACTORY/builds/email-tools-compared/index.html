@@ -265,5 +265,25 @@ a:hover{color:var(--accent2)}
     <strong>affiliate disclosure:</strong> this page contains affiliate links. if you sign up through these links, we may earn a commission at no extra cost to you. we only recommend tools we actively use and test. all data based on our own campaigns. individual results may vary based on domain health, list quality, and copy. FTC compliant. pricing accurate as of March 2026.
   </div>
 </div>
+
+<!-- Sticky lead capture bar -->
+<div id="sticky-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;border-top:1px solid #3b82f6;padding:14px 20px;z-index:999;text-align:center">
+  <div style="max-width:700px;margin:0 auto;display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
+    <span style="color:#e8e8e8;font-size:0.9rem;font-weight:600">Free: Cold Email ROI Calculator — see exactly how much revenue your outbound should generate</span>
+    <a href="https://cold-email-roi-calculator.surge.sh" target="_blank" style="background:#3b82f6;color:#fff;padding:8px 20px;border-radius:8px;font-size:0.82rem;font-weight:700;text-decoration:none;white-space:nowrap">Calculate My ROI</a>
+    <button onclick="document.getElementById('sticky-bar').style.display='none'" style="background:transparent;border:none;color:#555;cursor:pointer;font-size:1.2rem;padding:0 4px">×</button>
+  </div>
+</div>
+<script>
+setTimeout(function(){
+  var bar = document.getElementById('sticky-bar');
+  if(bar && !localStorage.getItem('email_bar_dismissed')){
+    bar.style.display = 'block';
+  }
+  document.querySelector('#sticky-bar button').addEventListener('click', function(){
+    localStorage.setItem('email_bar_dismissed','1');
+  });
+}, 4000);
+</script>
 </body>
 </html>

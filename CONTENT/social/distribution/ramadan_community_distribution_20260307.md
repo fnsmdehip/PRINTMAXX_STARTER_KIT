@@ -2,13 +2,13 @@
 status: PENDING_REVIEW
 created: 2026-03-07T06:00:00Z
 cycle: distribution_engine_2
-urgency: HIGH — Ramadan started Feb 28, ~22 days remaining
+urgency: HIGH, Ramadan started Feb 28, ~22 days remaining
 
 ---
 
 ## Reddit Posts (Muslim Communities)
 
-### Post 1 — r/islam
+### Post 1, r/islam
 
 **Title:** free ramadan prayer tracker app (PWA, no ads, no data collection)
 
@@ -39,7 +39,7 @@ both are free. jazakAllah khair for checking it out.
 
 ---
 
-### Post 2 — r/MuslimLounge
+### Post 2, r/MuslimLounge
 
 **Title:** made a free quran reading streak tracker for ramadan. no signup, works offline.
 
@@ -61,9 +61,9 @@ all free, all built for personal use and sharing with the community.
 
 ---
 
-### Post 3 — r/Ramadan (if exists) or r/progressive_islam
+### Post 3, r/Ramadan (if exists) or r/progressive_islam
 
-**Title:** open source ramadan tracker: fasting, prayers, quran, charity — all in one dashboard
+**Title:** open source ramadan tracker: fasting, prayers, quran, charity, all in one dashboard
 
 **Body:**
 
@@ -94,9 +94,9 @@ feedback welcome. ramadan mubarak.
 
 salam everyone. I built a free prayer tracker PWA for ramadan and wanted to share it with the community.
 
-prayerlock-app.surge.sh — tracks prayer completion with streaks, works offline, no signup.
-ramadan-tracker.surge.sh — fasting, quran, charity tracking dashboard.
-quran-streak-app.surge.sh — daily quran reading streak tracker.
+prayerlock-app.surge.sh, tracks prayer completion with streaks, works offline, no signup.
+ramadan-tracker.surge.sh, fasting, quran, charity tracking dashboard.
+quran-streak-app.surge.sh, daily quran reading streak tracker.
 
 all free, no ads, no data collection. built as web apps so they work on any device.
 
@@ -157,11 +157,11 @@ built one that doesn't. no account, no email, no tracking. 55KB PWA, offline-cap
 
 ## Distribution Execution Priority
 
-1. r/islam post — DO FIRST (largest Muslim subreddit)
-2. r/MuslimLounge post — DO SECOND
-3. Twitter/X Islamic tech posts — DO THIRD
-4. Facebook Muslim community groups — DO FOURTH
-5. Discord Islamic servers — DO FIFTH (need to identify servers first)
+1. r/islam post, DO FIRST (largest Muslim subreddit)
+2. r/MuslimLounge post, DO SECOND
+3. Twitter/X Islamic tech posts, DO THIRD
+4. Facebook Muslim community groups, DO FOURTH
+5. Discord Islamic servers, DO FIFTH (need to identify servers first)
 
 HUMAN ACTION REQUIRED:
 - Create Reddit account (or use existing)

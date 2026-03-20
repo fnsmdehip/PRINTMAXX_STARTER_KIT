@@ -1,4 +1,4 @@
-# Newsletter Draft — Weekly Alpha Digest
+# Newsletter Draft, Weekly Alpha Digest
 # STATUS: APPROVED
 # DATE: 2026-03-07
 # SOURCE: ALPHA_STAGING.csv cross-section

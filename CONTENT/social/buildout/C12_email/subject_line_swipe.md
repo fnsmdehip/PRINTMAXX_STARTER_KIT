@@ -1,4 +1,4 @@
-# 50 Subject Lines — Proven Swipe File
+# 50 Subject Lines, Proven Swipe File
 
 Categories: curiosity, consequence, proof, contrarian, personal, time-pressure, question
 
@@ -21,7 +21,7 @@ Lead with what happened. Let curiosity pull the open.
 7. this tweet got 2.1K likes (it broke my normal formula)
 8. signed a $7,200 client from one cold email (the template)
 9. 847 subscribers answered my survey (the results are surprising)
-10. $3K/mo in 90 days — the months that almost made me quit
+10. $3K/mo in 90 days, the months that almost made me quit
 
 ---
 
@@ -49,7 +49,7 @@ Disagree with conventional wisdom. Forces engagement.
 23. your open rate doesn't matter as much as you think
 24. why I stopped posting 3x per day (and grew faster)
 25. the free tier is better than the paid tier for most people
-26. cold email doesn't work — except when it does
+26. cold email doesn't work, except when it does
 27. everyone is building the wrong kind of audience
 28. the metric every course seller tracks but never tells you
 
@@ -91,7 +91,7 @@ Only use when true. Fake urgency kills trust permanently.
 47. this discount doesn't have a countdown timer (it just ends)
 48. event pricing closes in 18 hours
 49. first 50 get the bonus (37 claimed)
-50. trial ends in 48 hours — 3 options
+50. trial ends in 48 hours, 3 options
 
 ---
 
@@ -101,20 +101,20 @@ Only use when true. Fake urgency kills trust permanently.
 - lowercase subject lines outperform title case by ~18%
 - 4-7 words hit the sweet spot on mobile
 - parenthetical adds (like this) increase opens by 12% avg
-- numbers always outperform words ("3 things" vs "three things" — marginal but consistent)
+- numbers always outperform words ("3 things" vs "three things", marginal but consistent)
 
 **What kills open rates:**
 - "RE:" in subject when there's no prior conversation
 - all caps words
 - more than one exclamation mark
 - "newsletter" in the subject line (14% open rate drop)
-- emojis in B2B (7% drop) — neutral in B2C
+- emojis in B2B (7% drop), neutral in B2C
 
 **A/B testing priority:**
 1. test subject lines before any other variable
 2. run for minimum 300 recipients before calling a winner
 3. test one variable at a time
-4. reuse winning formulas — don't chase novelty
+4. reuse winning formulas, don't chase novelty
 
 **Inbox placement note:**
 Gmail's Promotions tab kills open rates. Signals that trigger Promotions:

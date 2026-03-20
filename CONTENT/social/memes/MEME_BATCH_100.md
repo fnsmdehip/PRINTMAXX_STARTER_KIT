@@ -24,7 +24,7 @@
 
 7. console.log("here"). console.log("here2"). console.log("wtf"). console.log("seriously wtf"). this is professional debugging.
 
-8. documentation: comprehensive 400 page guide. me: random github issue from 2019 with 3 upvotes.
+8. documentation: complete 400 page guide. me: random github issue from 2019 with 3 upvotes.
 
 9. "just use typescript" they said. "it'll catch bugs" they said. now i have 847 type errors and the app still doesn't work.
 
@@ -218,7 +218,7 @@
 
 98. the sunday scaries: existential dread about monday that starts on friday night.
 
-99. my therapist: you need to set boundaries. me: said yes to 4 things today i didn't want to do. therapy is a journey.
+99. my therapist: you need to set boundaries. me: said yes to 4 things today i didn't want to do. therapy is a path.
 
 100. "how are you" me: great. also me: held together by coffee, spite, and the fear of checking my bank account.
 

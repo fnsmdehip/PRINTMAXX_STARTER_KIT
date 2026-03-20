@@ -1,4 +1,4 @@
-# LinkedIn + Cold Email — Cycle 7 | Mar 8 2026
+# LinkedIn + Cold Email, Cycle 7 | Mar 8 2026
 # Status: PENDING_REVIEW
 # Accounts: @PRINTMAXXER (LinkedIn persona)
 # Voice: PRINTMAXXER weighted aggregate (S-tier 50% / A-tier 25% / B-tier 15% / C-tier 10%)
@@ -8,7 +8,7 @@
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers throughout
 - [x] Would @pipelineabuser actually post this?
@@ -21,7 +21,7 @@
 
 ---
 
-### POST 1 — "168 websites in 5 weeks as a solo developer"
+### POST 1, "168 websites in 5 weeks as a solo developer"
 
 Target: solopreneurs, developers, agency owners
 
@@ -83,7 +83,7 @@ What's stopping you from deploying something this week?
 
 ---
 
-### POST 2 — "14 local business websites built for free to prove a concept"
+### POST 2, "14 local business websites built for free to prove a concept"
 
 Target: agency owners, B2B service sellers, solopreneurs with local biz clients
 
@@ -155,7 +155,7 @@ Anyone running this play right now?
 
 ---
 
-### POST 3 — "The solopreneur tools I wish existed, so I built them"
+### POST 3, "The solopreneur tools I wish existed, so I built them"
 
 Target: solopreneurs, developers, small agency owners
 
@@ -213,7 +213,7 @@ Links in comments.
 
 ---
 
-### POST 4 — "Why I chose PWAs over native apps (and the numbers)"
+### POST 4, "Why I chose PWAs over native apps (and the numbers)"
 
 Target: developers, mobile-first founders, technical solopreneurs
 
@@ -280,7 +280,7 @@ What's your current app stack?
 
 ---
 
-### POST 5 — "Day 35, $0 revenue, 168 deployments. The honest math."
+### POST 5, "Day 35, $0 revenue, 168 deployments. The honest math."
 
 Target: building-in-public audience, solopreneurs, anyone early in the process
 
@@ -357,7 +357,7 @@ Target: Local businesses with no website or broken/outdated site
 
 ---
 
-### TEMPLATE 1 — Free audit offer
+### TEMPLATE 1, Free audit offer
 
 Subject: your [business type] website vs [competitor name] (quick look)
 
@@ -387,9 +387,9 @@ Consequence-first: yes (score gap visible in first 3 lines)
 
 ---
 
-### TEMPLATE 2 — Demo site already built
+### TEMPLATE 2, Demo site already built
 
-Subject: I built a new site for [business name] — want to see it?
+Subject: I built a new site for [business name], want to see it?
 
 ---
 
@@ -415,7 +415,7 @@ Consequence-first: yes (demo already exists, opening line)
 
 ---
 
-### TEMPLATE 3 — Three specific problems
+### TEMPLATE 3, Three specific problems
 
 Subject: 3 things losing you customers on [business name]'s site
 
@@ -447,7 +447,7 @@ Consequence-first: yes (problems stated as costs, not critique)
 
 ---
 
-## ZERO WASTE EXTRACT — BONUS TWEETS (3)
+## ZERO WASTE EXTRACT, BONUS TWEETS (3)
 
 For @PRINTMAXXER queue. Companion content to these posts.
 

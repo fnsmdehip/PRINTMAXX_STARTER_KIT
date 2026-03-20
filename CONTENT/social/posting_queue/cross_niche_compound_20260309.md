@@ -1,4 +1,4 @@
-# CROSS-NICHE ADAPTATIONS — 2026-03-09 18:28
+# CROSS-NICHE ADAPTATIONS, 2026-03-09 18:28
 # Source: compound_20260309_1828.md
 # Status: PENDING_REVIEW
 
@@ -57,18 +57,18 @@ the gap isn't technical ability. it's willingness to talk to humans before writi
 ---
 
 ## NEWSLETTER ANGLE (Beehiiv draft)
-**Subject:** Day 35 at $0 — what 34 AI agents taught me about revenue
+**Subject:** Day 35 at $0, what 34 AI agents taught me about revenue
 
 **Hook:** i have more automation than most funded startups. 296 scripts. 22 apps. 34 AI agents processing 1,559 data points per day. and exactly $0 in revenue. here's the painful lesson.
 
 **Body outline:**
 1. What the system does (the impressive part)
-2. Why it makes $0 (the honest part — human blockers)
+2. Why it makes $0 (the honest part, human blockers)
 3. The 93% deployment gap (real numbers)
 4. What I'd do differently (sell first framework)
 5. The AEO opportunity nobody's talking about (value-add for reader)
 
-**CTA:** reply with your "smallest revenue action" — the one thing you could do in 30 minutes that you've been avoiding
+**CTA:** reply with your "smallest revenue action", the one thing you could do in 30 minutes that you've been avoiding
 
 ---
 

@@ -1,17 +1,17 @@
-# Research Cycle Content — 2026-03-09 21:00
+# Research Cycle Content, 2026-03-09 21:00
 # Source: ALPHA20235 (@weswinder) + decision engine signals
 # Status: PENDING_REVIEW
 
 ---
 
-## Tweet 1 — Reply Bait (Dev Tools)
+## Tweet 1, Reply Bait (Dev Tools)
 paying $25 per PR review when the model doing it isn't even the best at code review
 
 the real move: run opus 4.6 locally via claude code. costs $0 on max plan. reviews unlimited PRs. writes the fix too.
 
 stop paying per-review SaaS when the underlying model is available direct.
 
-## Tweet 2 — System Flex (Research Pipeline)
+## Tweet 2, System Flex (Research Pipeline)
 i built a system that scrapes 20 subreddits + 40 twitter accounts every 4 hours
 
 auto-scores each finding on actionability, ROI, and effort. routes approved alpha to the right pipeline.
@@ -20,14 +20,14 @@ auto-scores each finding on actionability, ROI, and effort. routes approved alph
 
 the research isn't the hard part. acting on it is.
 
-## Tweet 3 — Contrarian Take (Freelance)
+## Tweet 3, Contrarian Take (Freelance)
 everyone talks about building products
 
 meanwhile reddit's hiring boards have $25-35/hr design gigs sitting for hours with 0 applicants
 
 fastest path to revenue isn't another SaaS. it's responding to the person who's already holding money out.
 
-## Thread — Research Alpha Breakdown (5 tweets)
+## Thread, Research Alpha Breakdown (5 tweets)
 
 1/ i process 12,000+ alpha entries from twitter, reddit, and competitive intel every week
 

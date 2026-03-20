@@ -5,7 +5,7 @@ cycle: distribution_engine_2
 
 ---
 
-## Post 1 — Milestone: 77 sites, 13 apps, $0 revenue (building in public)
+## Post 1, Milestone: 77 sites, 13 apps, $0 revenue (building in public)
 
 **Title:** I built 77 websites and 13 apps. Revenue: $0. Here's what I'm doing about it.
 
@@ -43,7 +43,7 @@ will update this thread with revenue as it comes in. starting from literal $0.
 
 ---
 
-## Post 2 — Technical Deep Dive: PWA Factory Pattern
+## Post 2, Technical Deep Dive: PWA Factory Pattern
 
 **Title:** How I template-deployed 13 PWAs in a weekend (code pattern + deploy pipeline)
 
@@ -103,7 +103,7 @@ currently testing with ramadan-focused marketing for the quran and prayer apps. 
 
 ---
 
-## Post 3 — Ramadan Apps (time-sensitive)
+## Post 3, Ramadan Apps (time-sensitive)
 
 **Title:** I built 2 Ramadan apps (PrayerLock + Hilal) and launched them the week Ramadan started
 
@@ -111,7 +111,7 @@ currently testing with ramadan-focused marketing for the quran and prayer apps. 
 
 ramadan started feb 28. I had the apps live by feb 27.
 
-PrayerLock: locks your phone at prayer times. not a reminder. a lock. you mark prayer complete to unlock. 55KB PWA. offline-capable.
+PrayerLock: locks your phone at prayer times. not a reminder. a lock. you mark prayer complete to get. 55KB PWA. offline-capable.
 
 Hilal (ramadan-tracker.surge.sh): tracks fasting days, prayer completion, quran reading progress, and charity goals for the 30 days of ramadan. shows countdown to iftar based on your location.
 

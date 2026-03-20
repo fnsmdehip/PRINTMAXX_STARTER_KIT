@@ -1,9 +1,9 @@
-# Ramadan Urgent Push — Cycle 5
+# Ramadan Urgent Push, Cycle 5
 
 status: PENDING_REVIEW
 created: 2026-03-07
 account: @printmaxxer (tweets) + community channels
-urgency: TIME-CRITICAL — Ramadan ends in ~20 days. After that, useless for 12 months.
+urgency: TIME-CRITICAL, Ramadan ends in ~20 days. After that, useless for 12 months.
 apps: PrayerLock (prayerlock-app.surge.sh) + Hilal (hilal-app.surge.sh / ramadan-tracker.surge.sh)
 
 ---
@@ -11,7 +11,7 @@ apps: PrayerLock (prayerlock-app.surge.sh) + Hilal (hilal-app.surge.sh / ramadan
 ## Pre-publish checklist
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Lowercase energy where appropriate
@@ -22,9 +22,9 @@ apps: PrayerLock (prayerlock-app.surge.sh) + Hilal (hilal-app.surge.sh / ramadan
 
 ---
 
-## Twitter / X — 4 tweets for @printmaxxer
+## Twitter / X, 4 tweets for @printmaxxer
 
-### Tweet 1 — Share-bait, PrayerLock feature-first
+### Tweet 1, Share-bait, PrayerLock feature-first
 
 your phone unlocks itself every few minutes during prayer.
 
@@ -38,7 +38,7 @@ send this to someone who needs it before Ramadan ends
 
 ---
 
-### Tweet 2 — Consequence-first, data privacy angle
+### Tweet 2, Consequence-first, data privacy angle
 
 most prayer apps send your prayer data to a server somewhere.
 
@@ -50,7 +50,7 @@ your ibaadah is yours.
 
 ---
 
-### Tweet 3 — Hilal / full Ramadan tracker, share angle
+### Tweet 3, Hilal / full Ramadan tracker, share angle
 
 built a Ramadan dashboard because I kept losing track of which juz I was on, how many fasts I'd done, and whether I hit my sadaqah goal.
 
@@ -64,14 +64,14 @@ share this one with your family group chat
 
 ---
 
-### Tweet 4 — Countdown urgency, both apps, invite reply
+### Tweet 4, Countdown urgency, both apps, invite reply
 
 20 days left in Ramadan.
 
 if you're behind on prayers or quran and need a system to finish strong:
 
-PrayerLock — prayerlock-app.surge.sh (prayer accountability, phone lock mechanic)
-Hilal — ramadan-tracker.surge.sh (fasting + quran + charity tracker)
+PrayerLock, prayerlock-app.surge.sh (prayer accountability, phone lock mechanic)
+Hilal, ramadan-tracker.surge.sh (fasting + quran + charity tracker)
 
 both free, both offline, both no login
 
@@ -79,9 +79,9 @@ drop this in the replies if you want your community to see it
 
 ---
 
-## Reddit r/islam — 1 post
+## Reddit r/islam, 1 post
 
-title: built PrayerLock and Hilal for Ramadan — free PWAs, no account, no ads, everything stored on your device
+title: built PrayerLock and Hilal for Ramadan, free PWAs, no account, no ads, everything stored on your device
 
 body:
 
@@ -91,7 +91,7 @@ i'm a developer and built two apps for Ramadan this year. sharing them here beca
 
 ---
 
-PrayerLock — prayerlock-app.surge.sh
+PrayerLock, prayerlock-app.surge.sh
 
 the idea came from my own problem: i'd get the prayer reminder, swipe it away, and tell myself i'd pray in a few minutes. then forget.
 
@@ -106,7 +106,7 @@ what it does:
 
 ---
 
-Hilal — hilal-app.surge.sh / ramadan-tracker.surge.sh
+Hilal, hilal-app.surge.sh / ramadan-tracker.surge.sh
 
 this is the full Ramadan dashboard. tracks everything across the month:
 - fasting log with streak counter
@@ -132,7 +132,7 @@ ramadan mubarak. any feedback welcome in the comments.
 
 ---
 
-## Reddit r/MuslimLounge — 1 post
+## Reddit r/MuslimLounge, 1 post
 
 title: anyone else struggling to stay consistent with prayers during Ramadan? built a free app that actually helped me
 
@@ -144,7 +144,7 @@ honest question: is anyone else finding it harder than expected to stay consiste
 
 i was. not because i didn't want to pray. more because the days are long, the schedule is different, and it's easy to tell yourself "in a few minutes" and then forget.
 
-i'm a developer so i built a thing. it's called PrayerLock. it literally locks your phone screen at prayer time and won't unlock until you mark the prayer done.
+i'm a developer so i built a thing. it's called PrayerLock. it literally locks your phone screen at prayer time and won't get until you mark the prayer done.
 
 sounds annoying? it kind of is. that's the point. it works because the friction is real.
 
@@ -160,9 +160,9 @@ if you've found anything else that helps with consistency this month, drop it be
 
 ---
 
-## Facebook — 2 posts for Muslim community groups
+## Facebook, 2 posts for Muslim community groups
 
-### Facebook Post 1 — PrayerLock
+### Facebook Post 1, PrayerLock
 
 Assalamu Alaikum brothers and sisters.
 
@@ -174,7 +174,7 @@ Your phone locks at each prayer time. It stays locked until you mark that prayer
 
 No reminders you can swipe away. No notifications you ignore. Real accountability built into your phone.
 
-It's a web app — no App Store needed. You open the link, click "Install," and it goes to your home screen like any other app.
+It's a web app, no App Store needed. You open the link, click "Install," and it goes to your home screen like any other app.
 
 Free. No ads. No account required. Everything stays on your device. Works even without internet after you load it once.
 
@@ -186,11 +186,11 @@ Ramadan Mubarak.
 
 ---
 
-### Facebook Post 2 — Hilal / Ramadan Tracker
+### Facebook Post 2, Hilal / Ramadan Tracker
 
 Assalamu Alaikum.
 
-For anyone who wants to finish Ramadan strong — I built a free dashboard called Hilal that tracks everything across the month in one place.
+For anyone who wants to finish Ramadan strong, I built a free dashboard called Hilal that tracks everything across the month in one place.
 
 What it tracks:
 - How many fasts you've completed (with streak)
@@ -210,13 +210,13 @@ JazakAllah Khair.
 
 ---
 
-## WhatsApp / Telegram forward messages — 2 messages
+## WhatsApp / Telegram forward messages, 2 messages
 
-### WhatsApp Message 1 — PrayerLock (short, forwardable)
+### WhatsApp Message 1, PrayerLock (short, forwardable)
 
 Salam!
 
-Sharing this free app for Ramadan — it's called PrayerLock.
+Sharing this free app for Ramadan, it's called PrayerLock.
 
 It locks your phone screen at prayer times and keeps it locked until you've prayed. Sounds strict but it actually works.
 
@@ -232,7 +232,7 @@ About 20 days of Ramadan left. Share with anyone who needs it. Ramadan Mubarak.
 
 ---
 
-### WhatsApp Message 2 — Hilal (tracking-focused, forwardable)
+### WhatsApp Message 2, Hilal (tracking-focused, forwardable)
 
 Assalamu Alaikum!
 
@@ -248,9 +248,9 @@ Only ~20 days of Ramadan left so worth trying now. Share to anyone trying to fin
 
 ---
 
-## Instagram / TikTok captions — 2 captions
+## Instagram / TikTok captions, 2 captions
 
-### Caption 1 — PrayerLock screen recording demo
+### Caption 1, PrayerLock screen recording demo
 
 built a prayer app that actually makes you stop what you're doing.
 
@@ -266,7 +266,7 @@ link in bio: prayerlock-app.surge.sh
 
 ---
 
-### Caption 2 — Hilal Ramadan dashboard demo
+### Caption 2, Hilal Ramadan dashboard demo
 
 tracking Ramadan in my Notes app wasn't working.
 
@@ -284,12 +284,12 @@ ramadan-tracker.surge.sh (link in bio)
 
 ## Distribution priority order
 
-1. r/islam post (largest English-speaking Muslim subreddit — go first)
+1. r/islam post (largest English-speaking Muslim subreddit, go first)
 2. r/MuslimLounge post (same day, different angle)
 3. WhatsApp messages (forward into family/friend group chats today)
 4. Twitter tweets (schedule across 4 days: one per day)
 5. Facebook posts (post to 3-5 local Muslim community groups and masjid groups)
-6. Instagram/TikTok (requires screen recording — do this if you have 15 min)
+6. Instagram/TikTok (requires screen recording, do this if you have 15 min)
 
 ## Human actions required
 

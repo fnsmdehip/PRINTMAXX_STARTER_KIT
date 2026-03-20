@@ -1,4 +1,4 @@
-# Twitter/X Distribution — @PRINTMAXXER
+# Twitter/X Distribution, @PRINTMAXXER
 # Date: 2026-03-09
 # Status: PENDING_REVIEW
 # Account: @PRINTMAXXER
@@ -9,7 +9,7 @@
 ## PRE-PUBLISH CHECKLIST (verified before save)
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks on all threads and standalones
 - [x] Exact numbers throughout
 - [x] Would @pipelineabuser actually post this? Yes.
@@ -158,7 +158,7 @@ roast my landing page too if you want. fair game.
 
 ## STANDALONE TWEETS (5 total)
 
-### Standalone 1 — Reply bait / lead gen
+### Standalone 1, Reply bait / lead gen
 
 drop your landing page URL.
 
@@ -168,7 +168,7 @@ no pitch. no upsell. just the score.
 
 ---
 
-### Standalone 2 — Build-in-public stat
+### Standalone 2, Build-in-public stat
 
 PrayerLock hit 2 communities in 48 hours without a single ad.
 
@@ -178,7 +178,7 @@ built in one session. surge deployed in 45 seconds. that's the whole story.
 
 ---
 
-### Standalone 3 — Tool alpha / PWA education
+### Standalone 3, Tool alpha / PWA education
 
 this PWA is 55KB and works offline.
 
@@ -188,7 +188,7 @@ solo devs are sleeping on this distribution model. it's borderline illegal how m
 
 ---
 
-### Standalone 4 — Ramadan / Muslim tech community (subtle)
+### Standalone 4, Ramadan / Muslim tech community (subtle)
 
 built Hilal tracker for Muslim devs tracking the new moon this Ramadan.
 
@@ -198,7 +198,7 @@ if you're in the Muslim tech space and want to try it, reply or DM. sending link
 
 ---
 
-### Standalone 5 — Controversial take / PWA debate
+### Standalone 5, Controversial take / PWA debate
 
 you don't need an app store.
 
@@ -218,6 +218,6 @@ Thread 2 passes: consequence-first (frustration with $50/mo cost), specific audi
 
 Standalones pass: each leads with a fact or action, no fluff intros, specific numbers on every post that has a stat, controversial take is direct claim with reasoning rather than hedged opinion.
 
-Banned word scan: zero instances of leverage, utilize, delve, comprehensive, robust, innovative, seamless, game-changer, unlock, elevate, empower, enable, foster, frictionless, journey, cutting-edge, revolutionary, streamlined.
+Banned word scan: zero instances of use, use, dig, complete, strong, novel, seamless, game-changer, get, elevate, empower, enable, foster, frictionless, path, cutting-edge, revolutionary, streamlined.
 
 Em dash scan: zero.

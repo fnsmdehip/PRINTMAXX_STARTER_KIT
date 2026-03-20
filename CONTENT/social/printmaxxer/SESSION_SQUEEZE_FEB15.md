@@ -1,10 +1,10 @@
-# Session Squeeze — Feb 15 2026
+# Session Squeeze, Feb 15 2026
 # Status: PENDING_REVIEW
 # Voice: @pipelineabuser weighted aggregate per copy-style.md
 
 ---
 
-## Tweet 1 — Compliance as Moat
+## Tweet 1, Compliance as Moat
 
 i track 21 regulations that affect my AI business. most solopreneurs track zero.
 
@@ -16,7 +16,7 @@ while your competitors get hit with $50K fines you're already compliant. complia
 
 ---
 
-## Tweet 2 — Telegram Signal Mining
+## Tweet 2, Telegram Signal Mining
 
 i built a bot that scrapes 26 public Telegram channels across 8 niches every morning.
 
@@ -28,19 +28,19 @@ scores every message 0-100 based on signal keywords. revenue signals get 90. hir
 
 ---
 
-## Tweet 3 — Regulation Countdown
+## Tweet 3, Regulation Countdown
 
 3 deadlines in the next 30 days that most AI solopreneurs don't know about:
 
 1. Ramadan app launch window closes Feb 28 (Muslim Pro makes $30-50M ARR during Ramadan)
 2. Apple ASO now factors battery consumption into search rankings (March 1)
-3. Google Core Update drops March 15 — audit your programmatic SEO pages NOW
+3. Google Core Update drops March 15, audit your programmatic SEO pages NOW
 
 i have a script that counts down all 21 regulatory deadlines daily. stops me from missing $50K/violation fines.
 
 ---
 
-## Thread — "I automated my compliance and signal monitoring. here's how." (7 tweets)
+## Thread, "I automated my compliance and signal monitoring. here's how." (7 tweets)
 
 ### 1/7
 most solopreneurs building with AI have no idea they're sitting on $50K+ in potential fines.

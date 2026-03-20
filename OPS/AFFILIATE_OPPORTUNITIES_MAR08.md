@@ -320,3 +320,20 @@ you can just become an affiliate for a brand and get paid $500 - 2k retainers pe
 
 learn marketing + AI UGC and you’ll have so many opportunities
 
+
+
+---
+
+## Pending Enhancement (ALPHA107657, Score: 30)
+
+**Source:** @pounddz (high-signal-accounts) | **URL:** https://x.com/pounddz/status/2034400037871227206
+**Added:** 2026-03-18T21:45:01-04:00
+
+Apps are paying affiliates $4 for someone signing up for a free trial
+
+you could run 10 Instagram pages with AI UGC videos like the one I attached and print 10k a month pretty easily with this 
+
+the formula is pretty simple 
+
+Find an app that solves a problem for example QUITTR
+

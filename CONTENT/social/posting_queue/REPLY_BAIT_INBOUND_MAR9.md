@@ -1,11 +1,11 @@
-# Reply Bait Tweets — Inbound Focused — 2026-03-09
+# Reply Bait Tweets, Inbound Focused, 2026-03-09
 # Status: PENDING_REVIEW
 # Strategy: Ask questions that prompt replies, driving algorithm boost + profile visits + tool discovery
-# These do NOT link to tools directly — they drive engagement which drives profile visits
+# These do NOT link to tools directly, they drive engagement which drives profile visits
 
 ---
 
-## REPLY BAIT 1 — Tool Stack (drives SaaS Stack Audit discovery)
+## REPLY BAIT 1, Tool Stack (drives SaaS Stack Audit discovery)
 
 what's your monthly tool spend as a solopreneur?
 
@@ -15,7 +15,7 @@ drop your number below. no judgment. just curious how bloated everyone's stack i
 
 ---
 
-## REPLY BAIT 2 — Cold Email (drives cold email tools discovery)
+## REPLY BAIT 2, Cold Email (drives cold email tools discovery)
 
 what's your cold email reply rate?
 
@@ -25,7 +25,7 @@ i'll tell you if it's good or if your setup is broken.
 
 ---
 
-## REPLY BAIT 3 — Side Project Revenue (drives revenue estimator discovery)
+## REPLY BAIT 3, Side Project Revenue (drives revenue estimator discovery)
 
 what's the most you've made from a side project in a single month?
 
@@ -33,7 +33,7 @@ $0 counts. most people never break $0. that's not failure, that's the starting l
 
 ---
 
-## REPLY BAIT 4 — AI Tools (drives comparison pages discovery)
+## REPLY BAIT 4, AI Tools (drives comparison pages discovery)
 
 cursor or claude code?
 
@@ -41,7 +41,7 @@ wrong answers only. (then tell me your actual pick and why)
 
 ---
 
-## REPLY BAIT 5 — Launch Anxiety (drives launch checklist discovery)
+## REPLY BAIT 5, Launch Anxiety (drives launch checklist discovery)
 
 what's the dumbest reason you delayed launching something?
 
@@ -49,7 +49,7 @@ mine: spent 3 days picking a font for a landing page that got 12 visitors.
 
 ---
 
-## REPLY BAIT 6 — Solopreneur Confession (drives tools hub discovery)
+## REPLY BAIT 6, Solopreneur Confession (drives tools hub discovery)
 
 solopreneur confession thread:
 
@@ -59,7 +59,7 @@ your turn.
 
 ---
 
-## REPLY BAIT 7 — Build in Public (drives AI revenue calculator discovery)
+## REPLY BAIT 7, Build in Public (drives AI revenue calculator discovery)
 
 building in public update:
 

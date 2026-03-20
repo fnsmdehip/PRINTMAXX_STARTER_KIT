@@ -1,4 +1,4 @@
-# Dev.to Articles + Quora Answers — Cycle 5
+# Dev.to Articles + Quora Answers, Cycle 5
 # Status: PENDING_REVIEW
 # Created: 2026-03-07
 # Distribution: dev.to, Hashnode (articles) | Quora (answers)
@@ -9,7 +9,7 @@
 ## Pre-Publish Checklist (run before posting each piece)
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless, game-changer, unlock)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless, game-changer, get)
 - [x] No "It's not just X, it's Y" constructions
 - [x] No vague attributions without links
 - [x] No promotional adjectives
@@ -50,7 +50,7 @@ here's the full technical breakdown of how it works.
 
 Google PageSpeed Insights is the obvious free option. it's good for Core Web Vitals and performance scores. it's bad for structured, scannable reporting.
 
-GTmetrix gives you better UI but charges $21-$220/month depending on monitoring volume. Ahrefs Site Audit gives you comprehensive crawling but you're paying $99/month for the whole suite.
+GTmetrix gives you better UI but charges $21-$220/month depending on monitoring volume. Ahrefs Site Audit gives you complete crawling but you're paying $99/month for the whole suite.
 
 the gap i noticed: nobody had a free tool that combined performance scoring with basic on-page SEO checks and presented it as a single health score with specific fix recommendations. so i built it.
 
@@ -111,9 +111,9 @@ browsers block cross-origin fetches by default. if you try to `fetch("https://so
 
 two solutions:
 
-**option A: allorigins.win** — a free, open-source CORS proxy. you send it a URL, it fetches the page and returns the HTML to you with the right CORS headers.
+**option A: allorigins.win**, a free, open-source CORS proxy. you send it a URL, it fetches the page and returns the HTML to you with the right CORS headers.
 
-**option B: a textarea fallback** — let the user paste their site's HTML directly. no proxy needed, no CORS issue, works 100% of the time.
+**option B: a textarea fallback**, let the user paste their site's HTML directly. no proxy needed, no CORS issue, works 100% of the time.
 
 i use both. allorigins.win for the default flow, textarea fallback if the proxy is slow or rate-limited.
 
@@ -126,7 +126,7 @@ async function fetchHTML(url) {
     if (!data.contents) throw new Error('Empty response from proxy');
     return data.contents;
   } catch (err) {
-    // surface the error to the UI — prompt manual paste fallback
+    // surface the error to the UI, prompt manual paste fallback
     throw new Error(`Could not fetch ${url}: ${err.message}`);
   }
 }
@@ -362,7 +362,7 @@ i've shipped 23 tools in the last 6 weeks. none of them run on a server i pay fo
 |------|-----|-------------|
 | FocusLock | focuslock-app.surge.sh | Focus timer with daily session tracking |
 | SleepMaxx | sleepmaxx-app.surge.sh | Sleep consistency tracker, 7-day and 30-day view |
-| WalkToUnlock | walktounlock-app.surge.sh | Step-gated app unlock, physical friction for habit change |
+| WalkToUnlock | walktounlock-app.surge.sh | Step-gated app get, physical friction for habit change |
 | HabitForge | habitforge-app.surge.sh | Multi-habit tracker with streak visualization |
 
 ### faith and community
@@ -391,12 +391,12 @@ every tool in this list follows the same architecture:
 
 ```
 tool-name/
-  index.html      — complete application shell
-  style.css       — all styles, CSS custom properties for theming
-  app.js          — all logic
-  manifest.json   — PWA metadata (for installable tools)
-  sw.js           — service worker (for offline-capable tools)
-  icons/          — 192px and 512px icons (for PWA tools)
+  index.html     , complete application shell
+  style.css      , all styles, CSS custom properties for theming
+  app.js         , all logic
+  manifest.json  , PWA metadata (for installable tools)
+  sw.js          , service worker (for offline-capable tools)
+  icons/         , 192px and 512px icons (for PWA tools)
 ```
 
 no build step. no package.json. no node_modules folder. no Webpack, no Vite, no Rollup. you open index.html in a browser and it works.
@@ -515,7 +515,7 @@ for tool in "${TOOLS[@]}"; do
     surge . "${tool}.surge.sh" --token "$SURGE_TOKEN" 2>&1 | tail -1
     cd ..
   else
-    echo "skipping $tool — folder or index.html missing"
+    echo "skipping $tool, folder or index.html missing"
   fi
 done
 
@@ -727,7 +727,7 @@ Build the service worker last. Get the app logic working first. Add installabili
 
 **Target tool:** prayerlock-app.surge.sh
 
-**Note: TIME-CRITICAL — Ramadan 2026**
+**Note: TIME-CRITICAL, Ramadan 2026**
 
 ---
 
@@ -855,7 +855,7 @@ That's the complete free stack. The paid tools (Ahrefs, SEMrush, Moz) add compet
 
 # ZERO WASTE BONUS: 3 Tweets + 1 Thread
 
-## Tweet 1 (from Article 1 — audit tool)
+## Tweet 1 (from Article 1, audit tool)
 
 ```
 built a site audit tool in 6 hours
@@ -872,7 +872,7 @@ how:
 sitescore-app.surge.sh
 ```
 
-## Tweet 2 (from Article 2 — $0 SaaS stack)
+## Tweet 2 (from Article 2, $0 SaaS stack)
 
 ```
 23 tools. $0 server cost. all live.
@@ -890,7 +890,7 @@ the tools that do: anything with accounts, cross-device sync, or email sending
 know the difference before you spin up a VPS you don't need
 ```
 
-## Tweet 3 (from Quora Answer 4 — freelance portfolio)
+## Tweet 3 (from Quora Answer 4, freelance portfolio)
 
 ```
 no portfolio? build a demo for a business that doesn't know you yet

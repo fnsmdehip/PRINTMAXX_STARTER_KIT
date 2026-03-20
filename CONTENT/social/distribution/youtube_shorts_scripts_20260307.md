@@ -1,6 +1,6 @@
-# YouTube Shorts / TikTok / Reels Scripts — Cycle 4 (2026-03-07)
+# YouTube Shorts / TikTok / Reels Scripts, Cycle 4 (2026-03-07)
 # Status: PENDING_REVIEW
-# NEW CHANNEL — Zero coverage on short-form video
+# NEW CHANNEL, Zero coverage on short-form video
 # Format: 30-60 second screen recordings with voiceover
 # Record with: QuickTime screen capture + voiceover, or Remotion for animated versions
 

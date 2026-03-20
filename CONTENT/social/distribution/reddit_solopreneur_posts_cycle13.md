@@ -1,11 +1,11 @@
-# Reddit posts — cycle 13
+# Reddit posts, cycle 13
 # Status: PENDING_REVIEW
 # Subreddits: r/SideProject, r/Entrepreneur, r/SaaS
 # Notes: Reddit rewards value-first framing. The tool is secondary to the insight. Lead with the problem or observation, let the tool surface naturally. No self-promotion energy.
 
 ---
 
-## Post 1 — r/SideProject
+## Post 1, r/SideProject
 
 **Title:**
 I audited 50 side project landing pages and 80% failed on the same 2 things
@@ -40,7 +40,7 @@ Drop your URL in the comments if you want feedback. Happy to look at a few manua
 
 ---
 
-## Post 2 — r/Entrepreneur
+## Post 2, r/Entrepreneur
 
 **Title:**
 Nobody talks about the real math behind cold email. Here's what it actually costs per closed deal.
@@ -84,7 +84,7 @@ What's your current cost-per-closed-deal on cold email? Curious what's realistic
 
 ---
 
-## Post 3 — r/SaaS
+## Post 3, r/SaaS
 
 **Title:**
 SaaS revenue projections are almost always wrong because they ignore traffic source. Here's a better model.

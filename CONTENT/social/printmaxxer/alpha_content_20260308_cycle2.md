@@ -95,7 +95,7 @@ the pattern across all 5: small bets. specific niches. actual outreach. zero cou
 
 ## Copy Style Compliance Check
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (no leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (no use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks on all standalone tweets
 - [x] Specific numbers in every tweet (dollar amounts, percentages, timeframes, volumes)
 - [x] Lowercase energy throughout

@@ -48,7 +48,7 @@ starting this week, I'm doing nothing but distribution. no new features. no new 
 - cold email 100 local businesses using demo sites
 - post on LinkedIn about the $0 tech stack
 - submit tools to AlternativeTo, SaaSHub, BetaList
-- post on IndieHackers about the journey
+- post on IndieHackers about the path
 
 **week 3: content**
 - launch this newsletter
@@ -93,7 +93,7 @@ that's it. no fluff. no "5 tips for entrepreneurs." just a builder sharing real 
 
 ---
 
-**CTA:** subscribe if you want to watch the $0-to-revenue journey in real time. no hype. no guru energy. just a builder shipping and showing receipts.
+**CTA:** subscribe if you want to watch the $0-to-revenue path in real time. no hype. no guru energy. just a builder shipping and showing receipts.
 
 ---
 

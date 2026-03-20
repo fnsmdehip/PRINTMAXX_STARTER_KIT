@@ -79,7 +79,7 @@ The sequence that worked in month 2 vs month 1 was changing email 1 from "I help
 
 Old: "I help dental practices save time with AI automation."
 
-New: "Saw your Google reviews — you've got 47 reviews with 3 people mentioning they never got a callback. That's probably $8-12K in lost appointments per month. I fix exactly this."
+New: "Saw your Google reviews, you've got 47 reviews with 3 people mentioning they never got a callback. That's probably $8-12K in lost appointments per month. I fix exactly this."
 
 Personalization at scale using Clay.com to pull the Google review data automatically. 2 hours to set up the enrichment, saves 20 minutes per prospect manually.
 
@@ -106,7 +106,7 @@ We almost spent 3 months building the wrong thing. Here's the validation process
 **The idea:** A Slack bot that auto-summarizes meeting transcripts and creates action items in your project management tool.
 
 **Day 1-2: Competitive audit**
-Found 6 existing tools (Otter.ai, Fireflies, tl;dv, etc.). Looked like a crowded market. But checked reviews on G2 and Capterra — the #1 complaint across all of them: "summaries are too long and miss the actual decisions." That's a real gap.
+Found 6 existing tools (Otter.ai, Fireflies, tl;dv, etc.). Looked like a crowded market. But checked reviews on G2 and Capterra, the #1 complaint across all of them: "summaries are too long and miss the actual decisions." That's a real gap.
 
 **Day 3-4: ICP definition**
 We wanted to build for everyone. Forced ourselves to pick ONE segment: engineering managers at Series A-B startups (50-200 employees). They have budget, they have too many meetings, they care about async communication.
@@ -154,13 +154,13 @@ I'd spent 2 years figuring out how to set up automated bookkeeping for freelance
 
 **Step 2: Build a Gumroad product in a day.**
 
-"The Zero-Cost Freelancer Bookkeeping System" — a Google Sheets template with a 15-page written guide. Made it in 8 hours on a Saturday.
+"The Zero-Cost Freelancer Bookkeeping System", a Google Sheets template with a 15-page written guide. Made it in 8 hours on a Saturday.
 
 Priced it at $17. Not $97, not $7. $17 is impulse-buy territory but still signals value.
 
 **Step 3: Soft launch in communities where you've already helped people.**
 
-Posted in 3 Facebook groups where I'd been active for 6+ months. Not "buy my thing" — posted the full system as a free post, then mentioned at the bottom: "if you want the done-for-you template and step-by-step guide, I made it into a $17 product on Gumroad."
+Posted in 3 Facebook groups where I'd been active for 6+ months. Not "buy my thing", posted the full system as a free post, then mentioned at the bottom: "if you want the done-for-you template and step-by-step guide, I made it into a $17 product on Gumroad."
 
 **Step 4: Wait 72 hours.**
 
@@ -192,7 +192,7 @@ Here's exactly what worked to get 400 active beta users.
 
 Posted in 8 subreddits with "show me what you're working on" or "feedback on my side project" culture. The trick: don't post the product. Post the problem you're solving and ask if people relate.
 
-Our post: "I've tried every habit app and they all fail me in the same way — they celebrate streaks but don't help me understand WHY I broke the streak. Anyone else?" → 340 upvotes, 82 comments, 127 DMs asking for early access.
+Our post: "I've tried every habit app and they all fail me in the same way, they celebrate streaks but don't help me understand WHY I broke the streak. Anyone else?" → 340 upvotes, 82 comments, 127 DMs asking for early access.
 
 Replied to every comment personally. Converted 60% of DMs to beta sign-ups.
 
@@ -208,7 +208,7 @@ After 3+ interactions, 40 people responded when we mentioned the beta in a DM. 2
 
 **Week 2.5: Facebook Groups**
 
-6 productivity and self-improvement groups, 1,000+ members each. Posted about our beta. NOT as an ad — as "we built this thing and want feedback from serious people." Got 89 sign-ups.
+6 productivity and self-improvement groups, 1,000+ members each. Posted about our beta. NOT as an ad, as "we built this thing and want feedback from serious people." Got 89 sign-ups.
 
 **Week 3: Small newsletter sponsorship**
 
@@ -231,10 +231,10 @@ I was spending 45 minutes per week on invoicing. Client follows up, I update spr
 Built an automated system in a weekend. Now it takes me 3 minutes. Zero monthly cost.
 
 **Stack:**
-- Google Forms (free) — client details intake
-- Google Sheets (free) — job log and status tracking
-- Google Apps Script (free) — automation glue
-- Gmail (free) — sending invoices
+- Google Forms (free), client details intake
+- Google Sheets (free), job log and status tracking
+- Google Apps Script (free), automation glue
+- Gmail (free), sending invoices
 
 **How it works:**
 
@@ -249,7 +249,7 @@ Built an automated system in a weekend. Now it takes me 3 minutes. Zero monthly 
 **The Google Apps Script that handles step 2-6 is ~80 lines of code.** I can share it if people want.
 
 **What I stopped paying for:**
-- FreshBooks ($17/mo — cancelled after 3 years)
+- FreshBooks ($17/mo, cancelled after 3 years)
 - Notion invoicing template I never actually used
 
 **Limitations:**
@@ -283,7 +283,7 @@ Started in January 2026. Here's an honest report card at 90 days.
 - Plumber: $900 setup (Google review automation) + $200/mo
 - Chiropractor: $2,400 setup (full CRM + follow-up sequences)
 - HVAC company: $1,800 setup (lead qualification bot) + $200/mo
-- Law firm: $0 (lost to "we'll think about it" — never heard back)
+- Law firm: $0 (lost to "we'll think about it", never heard back)
 
 **What works:**
 
@@ -372,7 +372,7 @@ I see a lot of posts about expensive stacks. Here's what I've been running for 1
 
 **Total: $0/month until $10K product revenue**
 
-At that point Gumroad becomes more expensive than alternatives, so switch to LemonSqueezy (same model, lower fees above $10K). Or just pay the Gumroad fee — it's still cheaper than Stripe + everything else.
+At that point Gumroad becomes more expensive than alternatives, so switch to LemonSqueezy (same model, lower fees above $10K). Or just pay the Gumroad fee, it's still cheaper than Stripe + everything else.
 
 **What I had to pay for eventually:**
 - Plausible: $9/mo (after 30-day trial). Worth it. Google Analytics is a mess.
@@ -559,7 +559,7 @@ I was helping a friend who's a realtor and watched her manually email 40 people 
 
 **Building without domain expertise:**
 
-I got it wrong in obvious ways. Open house visitors aren't leads — they're "suspects." The follow-up has to be educational, not salesy, or agents get flagged as spammers. I didn't know this. First 10 beta users told me the sequences felt like car dealership emails.
+I got it wrong in obvious ways. Open house visitors aren't leads, they're "suspects." The follow-up has to be educational, not salesy, or agents get flagged as spammers. I didn't know this. First 10 beta users told me the sequences felt like car dealership emails.
 
 Rewrote the copy from "I'd love to schedule a showing" to "Here's what I noticed about the market in your price range." Completely different.
 
@@ -693,7 +693,7 @@ They hired me for $400.
 
 **Why I'm not embarrassed about this:**
 
-I wasn't lying about my capability. I was lying about my experience. The capability was real — I just hadn't applied it yet. If you understand the theory deeply enough to explain it clearly, you can usually execute it.
+I wasn't lying about my capability. I was lying about my experience. The capability was real, I just hadn't applied it yet. If you understand the theory deeply enough to explain it clearly, you can usually execute it.
 
 **What I'd caution against:**
 
@@ -739,7 +739,7 @@ Build time: 6 hours. Annual saving: $420.
 
 At my consulting rate: 18 hours isn't worth it. But these tools run indefinitely. At year 2, ROI is very real.
 
-I don't recommend building everything. But if a tool is simple, your needs are stable, and the subscription is ongoing — build it.
+I don't recommend building everything. But if a tool is simple, your needs are stable, and the subscription is ongoing, build it.
 
 ---
 
@@ -787,7 +787,7 @@ February was the first month I covered burn completely. 5 months in the hole bef
 
 **What I'd tell someone considering this:**
 
-Have 9 months of expenses saved. 6 months is not enough. Have one client committed before you quit if possible. And price higher than feels comfortable — you can always negotiate down.
+Have 9 months of expenses saved. 6 months is not enough. Have one client committed before you quit if possible. And price higher than feels comfortable, you can always negotiate down.
 
 ---
 
@@ -871,7 +871,7 @@ The question "did I do the 1 thing?" is binary. Much easier than evaluating a ta
 
 **What I pair it with:**
 
-Time tracker (Toggl, free) — not for accountability, for data. Helps me see if my time matches my priorities.
+Time tracker (Toggl, free), not for accountability, for data. Helps me see if my time matches my priorities.
 
 ---
 
@@ -1097,16 +1097,16 @@ Spent 2 days reading every review of my habit tracking app. 400 reviews across A
 **What the reviews actually say (coded by sentiment and mention frequency):**
 
 Top positive mentions:
-1. "Simple" / "not overwhelming" — 127 mentions
-2. "Actually reminds me" (notifications work) — 89 mentions
-3. "Design is clean" — 67 mentions
-4. "Fast to open" — 54 mentions
+1. "Simple" / "not overwhelming", 127 mentions
+2. "Actually reminds me" (notifications work), 89 mentions
+3. "Design is clean", 67 mentions
+4. "Fast to open", 54 mentions
 
 Top negative mentions:
-1. "Crashes on [specific phone model]" — 43 mentions
-2. "Lost my streak data" — 31 mentions
-3. "Notifications stop working after iOS update" — 28 mentions
-4. "Can't edit past days" — 22 mentions
+1. "Crashes on [specific phone model]", 43 mentions
+2. "Lost my streak data", 31 mentions
+3. "Notifications stop working after iOS update", 28 mentions
+4. "Can't edit past days", 22 mentions
 
 **The gap:**
 
@@ -1128,7 +1128,7 @@ Read your reviews. Not your feature requests. They're different signals.
 
 ## POST 28
 **Subreddit:** r/Startup
-**Title:** The Minimum Viable Distribution test — how we validate distribution before building
+**Title:** The Minimum Viable Distribution test, how we validate distribution before building
 
 **Body:**
 
@@ -1194,7 +1194,7 @@ You will have days where you don't want to work. Work anyway. Start with the sma
 
 **Your unfair advantages are worth more than you think.**
 
-The thing you know better than most people — your old job, your niche hobby, your specific community — is more valuable than a generic "productivity app." Build for the people you actually understand.
+The thing you know better than most people, your old job, your niche hobby, your specific community, is more valuable than a generic "productivity app." Build for the people you actually understand.
 
 **You will overestimate what you can do in a month and underestimate what you can do in a year.**
 
@@ -1226,7 +1226,7 @@ Time to rank: 2-4 months per article. Monthly organic traffic now: 3,200 visits.
 
 **Layer 2: Case studies (the proof)**
 
-Every client becomes a case study. Not testimonials — full breakdowns: problem, solution, result with specific numbers. 12 published.
+Every client becomes a case study. Not testimonials, full breakdowns: problem, solution, result with specific numbers. 12 published.
 
 Prospects read case studies during consideration. When they reach out, they already trust the work.
 

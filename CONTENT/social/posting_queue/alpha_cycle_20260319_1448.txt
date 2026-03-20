@@ -1,0 +1,94 @@
+# ALPHA CYCLE CONTENT, 2026-03-19 14:48
+# Source: Research autonomy cycle (Reddit scrape + decision engine)
+# Status: READY_TO_POST
+
+---
+
+## TWEET 1, Freelance Signal
+
+I scraped 20 subreddits today and found 2 high-signal freelance posts within 4 hours of posting.
+
+Both paying $2K+/mo for full stack work.
+
+Most freelancers won't see these for days. By then the poster already picked someone.
+
+Speed is the entire game in r/forhire.
+
+---
+
+## TWEET 2, Alpha Pipeline Flex
+
+13,600 alpha entries scanned.
+337 automation scripts running.
+20 subreddits scraped every 2 hours.
+
+And the best finding today scored a 12 out of 100.
+
+That's the real game: 99% noise, 1% signal.
+Most people quit scanning after week 2.
+We're on day 44.
+
+---
+
+## TWEET 3, Decision Engine Output
+
+My decision engine just processed:
+- 20 freelance leads (2 HOT)
+- 53 ecom arb listings
+- 87 ready ops
+- 2,391 P0 launch items
+
+All from one command: `python3 decision_engine.py --cycle`
+
+The hardest part of solopreneur automation isn't building it.
+It's trusting the system when it says "nothing actionable right now."
+
+---
+
+## THREAD, Research Autonomy Architecture
+
+1/ I built a research system that runs every 2 hours with zero human input.
+
+Here's exactly how it works (and what it found today):
+
+2/ Phase 1, SCRAPE
+- Reddit: 20 subreddits via JSON API (no browser needed)
+- Twitter: bookmark + account monitoring
+- HN/PH: top stories + launches
+
+Today: 5 new entries from Reddit. Twitter needs Playwright reinstall.
+
+3/ Phase 2, SCORE
+Every entry gets scored on:
+- Actionability (can I do something with this TODAY?)
+- ROI potential (revenue signal strength)
+- Effort required (build time vs payoff)
+
+Today: all 5 scored below threshold (5-12 out of 100). Archived.
+
+4/ Phase 3, ROUTE
+High-scoring entries get routed to:
+- NEW VENTURE (score 80+, novel opportunity)
+- BOLSTER EXISTING (enhances current lane)
+- RESEARCH TASK (needs deeper analysis)
+- HIGH-VALUE QUEUE (actionable, high ROI)
+
+Today: 0 routed. All archived. That's fine, most cycles are noise.
+
+5/ Phase 4, COMPOUND
+The decision engine cross-references EVERYTHING:
+- Freelance leads from r/forhire (found 2 HOT, 18 WARM)
+- Ecom arb opportunities (53 listable products)
+- Master ops readiness (87 ops ready to launch)
+
+One command processes all of it.
+
+6/ The insight most people miss:
+
+Research automation isn't about finding gold every cycle.
+It's about NEVER MISSING gold when it appears.
+
+13,600 entries. Day 44. $0 revenue.
+But when the signal hits, the system catches it in minutes, not days.
+
+Build the net before the fish swim by.

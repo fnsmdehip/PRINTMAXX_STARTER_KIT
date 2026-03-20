@@ -1,4 +1,4 @@
-# CYCLE 5 — NEWSLETTER DRAFT
+# CYCLE 5, NEWSLETTER DRAFT
 # Generated: 2026-03-18 07:10
 # Status: PENDING_REVIEW
 # Voice: PRINTMAXXER (casual, numbers-first, no fluff)

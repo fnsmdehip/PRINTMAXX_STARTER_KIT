@@ -10,9 +10,9 @@ cycle: distribution_engine_2
 ### For SaaS Tools (PageScorer, ColdMaxx, StackMaxx)
 
 **Discord servers to join:**
-1. Indie Hackers Discord — share-your-project channel
-2. WIP (Work In Progress) community — product updates
-3. Microfounder — small SaaS products
+1. Indie Hackers Discord, share-your-project channel
+2. WIP (Work In Progress) community, product updates
+3. Microfounder, small SaaS products
 4. No Code / Low Code communities
 5. Web Dev communities (Reactiflux, The Coding Den)
 6. Claude Code / AI coding communities
@@ -28,7 +28,7 @@ cycle: distribution_engine_2
 
 hey all. been building free dev tools and wanted to share one that might be useful.
 
-PageScorer (pagescorer.surge.sh) — paste any URL, get a website audit in 10 seconds. performance, SEO, accessibility, security scores. no signup, no email gate.
+PageScorer (pagescorer.surge.sh), paste any URL, get a website audit in 10 seconds. performance, SEO, accessibility, security scores. no signup, no email gate.
 
 built it because every existing tool either costs money or requires an account. this one is free and instant.
 

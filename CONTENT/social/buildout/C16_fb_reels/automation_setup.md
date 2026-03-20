@@ -34,7 +34,7 @@ Repurpose.io connects TikTok → other platforms with automatic uploads.
    - Source: TikTok account
    - Destination: Instagram (Reels)
    - Caption: [TikTok caption] + your template additions
-   - Toggle: Remove TikTok watermark (critical — enabled by default)
+   - Toggle: Remove TikTok watermark (critical, enabled by default)
 
 4. Create three workflows total:
    - TikTok → Instagram Reels
@@ -64,10 +64,10 @@ If your time is worth >$10/hour, Repurpose.io pays for itself.
 No monthly cost. More control over per-platform optimization. Takes 15 min per video.
 
 ### Tools:
-- CapCut Desktop (free) — export without watermark
-- Meta Business Suite (free) — post to FB + IG simultaneously
-- YouTube Studio (free) — upload Shorts
-- Buffer free tier (3 channels, 10 posts each) — optional scheduling
+- CapCut Desktop (free), export without watermark
+- Meta Business Suite (free), post to FB + IG simultaneously
+- YouTube Studio (free), upload Shorts
+- Buffer free tier (3 channels, 10 posts each), optional scheduling
 
 ### Manual SOP Per Video:
 
@@ -89,7 +89,7 @@ No monthly cost. More control over per-platform optimization. Takes 15 min per v
 - Upload `CLEAN.mp4`
 - Write FB caption (copy from template, add question)
 - Toggle "Also share to Instagram"
-- Write IG caption (different from FB — add save CTA)
+- Write IG caption (different from FB, add save CTA)
 - Add hashtags in IG caption (or plan to add in first comment after post)
 - Schedule for +30 min after TikTok post time
 
@@ -135,7 +135,7 @@ Review weekly. Kill formats that consistently underperform. Double down on what 
 
 Buffer's free plan: 3 social accounts, 10 scheduled posts per account.
 
-At 7 videos/week × 4 platforms = 28 posts/week — you'll need the paid Essentials plan ($15/mo) for full automation.
+At 7 videos/week × 4 platforms = 28 posts/week, you'll need the paid Essentials plan ($15/mo) for full automation.
 
 For 3-5 videos/week: free tier works.
 
@@ -199,7 +199,7 @@ Not all platforms are equal for monetization. Here's where to focus energy:
 
 Facebook has the most accessible in-stream ads program (lower follower threshold). If you want ad revenue quickest, FB Reels plus consistent content is the path.
 
-For affiliate revenue, IG and TikTok win — link-in-bio traffic converts better on those platforms.
+For affiliate revenue, IG and TikTok win, link-in-bio traffic converts better on those platforms.
 
 ---
 

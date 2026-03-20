@@ -1,0 +1,92 @@
+# ALPHA CYCLE CONTENT, 2026-03-18 21:00
+# Generated from research cycle. Status: PENDING_REVIEW
+
+## TWEET 1, Stripe MPP Hook
+stripe just released machine payments protocol.
+
+your AI agents can now initiate, authorize, and settle payments autonomously. no human in the loop.
+
+130 HN points in hours. this changes the entire AI agent commerce stack.
+
+## TWEET 2, Stripe MPP Angle 2
+machines paying machines.
+
+stripe MPP = API-to-API payment rails. AI agents can now charge customers, pay vendors, settle invoices. autonomously.
+
+every "agentic workflow" company just got a native payment layer. the ones that integrate first win.
+
+## TWEET 3, Stripe MPP Builder Angle
+if you're building AI agents and haven't read stripe's MPP blog post yet, stop everything.
+
+machine-to-machine payments. autonomous authorization. API-native settlement.
+
+every agent framework (crew, langchain, claude code) can now have a wallet. build accordingly.
+
+## TWEET 4, $7K MRR Signal
+$0 to $7K MRR in 18 months.
+
+not from a viral launch. not from VC.
+
+from a transparent, boring micro-SaaS with a clear problem.
+
+the posts that get 50K likes are noise. the ones in r/micro_saas with real numbers are signal.
+
+## TWEET 5, Cold Email Signal
+$22k/mo service business. just cold emails and DMs.
+
+no funnel. no ads. no followers.
+
+cold outbound at 87% margins is the most underrated revenue channel in 2026. everyone wants passive income while the real money is in active outreach.
+
+## TWEET 6, HN Data Signal
+someone put the entire HackerNews archive on HuggingFace as Parquet.
+
+47 million items. updated every 5 minutes. 11.6GB.
+
+if you're building trend detection, competitor intel, or content mining tools, this is the dataset. free.
+
+## THREAD, Stripe MPP Deep Dive (7 tweets)
+
+1/ stripe just dropped the biggest infrastructure change for AI commerce since the API itself.
+
+Machine Payments Protocol (MPP). let me break down what this actually means.
+
+2/ right now, AI agents can DO things (browse, code, research, write) but they can't PAY for things.
+
+every time an agent needs to make a purchase, a human has to authorize it. MPP removes that bottleneck.
+
+3/ how it works:
+
+- API-to-API payment initiation
+- autonomous authorization (within set limits)
+- automated settlement
+- full audit trail for every machine transaction
+
+this isn't a concept. it's live on stripe's blog with documentation.
+
+4/ who wins from this:
+
+- AI agent platforms (every agent can now have a "wallet")
+- marketplace builders (agents can buy/sell on behalf of users)
+- automation companies (workflows that involve money just got 10x simpler)
+
+5/ who loses:
+
+- manual approval workflows (bottleneck removed)
+- payment middleware companies (stripe ate their lunch)
+- anyone building "AI agent payment" as a standalone product (stripe just commoditized you)
+
+6/ what I'm building on this:
+
+- agent commerce layer for app factory builds
+- autonomous subscription management (agents can upgrade/downgrade plans)
+- machine-to-machine invoice settlement
+
+if you're in the AI agent space and ignoring MPP, you're building on quicksand.
+
+7/ the pattern is always the same:
+
+infrastructure drops → builders integrate fast → first movers capture the market → everyone else plays catch-up
+
+stripe MPP is the infrastructure drop. the clock is ticking.
+

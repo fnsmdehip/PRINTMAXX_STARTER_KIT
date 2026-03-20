@@ -1,11 +1,11 @@
-# Generated Posts — 2026-03-07 Cycle 2
+# Generated Posts, 2026-03-07 Cycle 2
 # STATUS: APPROVED
 # SOURCE: ALPHA_STAGING.csv (ALPHA274-316, ALPHA16896-16941)
 # VOICE: PRINTMAXXER weighted aggregate (copy-style.md compliant)
 
 ---
 
-## POST 1 — Cold Email Intel (ALPHA278 + ALPHA280)
+## POST 1, Cold Email Intel (ALPHA278 + ALPHA280)
 **Account:** @printmaxxer / @outboundtwts
 **Platform:** X/Twitter
 
@@ -23,7 +23,7 @@ stop writing 7-email sequences and make email 1 actually good.
 
 ---
 
-## POST 2 — Subscription App Data (ALPHA16929 + ALPHA16932)
+## POST 2, Subscription App Data (ALPHA16929 + ALPHA16932)
 **Account:** @printmaxxer / @drifthour
 **Platform:** X/Twitter
 
@@ -42,7 +42,7 @@ build the conversion funnel like an AI app. build the retention like a non-AI ap
 
 ---
 
-## POST 3 — GEO Over SEO (ALPHA298 + ALPHA299 + ALPHA300)
+## POST 3, GEO Over SEO (ALPHA298 + ALPHA299 + ALPHA300)
 **Account:** @printmaxxer / @drifthour
 **Platform:** X/Twitter
 
@@ -61,7 +61,7 @@ mckinsey says $750B in consumer spending will route through AI discovery. positi
 
 ---
 
-## POST 4 — Pricing Psychology (ALPHA307 + ALPHA308)
+## POST 4, Pricing Psychology (ALPHA307 + ALPHA308)
 **Account:** @printmaxxer / @drifthour
 **Platform:** X/Twitter
 
@@ -77,7 +77,7 @@ the companies that figure this out first print money. the rest fight for scraps 
 
 ---
 
-## POST 5 — Content Repurposing Math (ALPHA271 + ALPHA269)
+## POST 5, Content Repurposing Math (ALPHA271 + ALPHA269)
 **Account:** @printmaxxer / @drifthour
 **Platform:** X/Twitter
 

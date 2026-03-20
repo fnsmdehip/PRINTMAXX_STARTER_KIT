@@ -1,4 +1,4 @@
-# Reddit Distribution Cycle 16 — New/Undercovered Assets
+# Reddit Distribution Cycle 16, New/Undercovered Assets
 # Status: PENDING_REVIEW
 # Date: 2026-03-14
 # Assets: AI Slop Detector, Productivity Stack Quiz, HabitForge, MealMaxx, WalkToUnlock, SleepMaxx/Dusk, CoreDay
@@ -8,7 +8,7 @@
 
 ## Voice QA Check (pre-publish)
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Would @pipelineabuser actually post this?
@@ -35,9 +35,9 @@ Been messing around with AI detection for about 3 months. Not the "is this GPT" 
 
 Here's what I found actually works as signal:
 
-1. Em dashes as clause connectors. Humans use commas. LLMs use — constantly.
+1. Em dashes as clause connectors. Humans use commas. LLMs use, constantly.
 2. The "it's not just X, it's Y" construction. Never seen a human write this unprompted.
-3. "Additionally," "Furthermore," "Moreover" as sentence openers. Nobody talks like this.
+3. "also," "and," "also" as sentence openers. Nobody talks like this.
 4. Significance inflation: turning "this saves time" into "this transforms workflows."
 5. The rule of three in bullet points. LLMs default to exactly 3 every single time.
 6. Hedging stacks: "might possibly perhaps somewhat." One hedge = human. Three in a row = AI.
@@ -67,7 +67,7 @@ So I started keeping a checklist of tells. After a while I turned it into a brow
 
 The patterns it flags:
 
-- Overuse of transition words as sentence openers (Additionally, Furthermore, Moreover)
+- Overuse of transition words as sentence openers (also, and, also)
 - Hollow qualifier stacks ("might possibly perhaps")
 - Em dash abuse as a substitute for actual sentence rhythm
 - Significance inflation (plain statements dressed up as revelations)
@@ -90,7 +90,7 @@ Not talking about perplexity or burstiness scores. Those fail constantly. I mean
 
 Here's my working list after reviewing hundreds of samples:
 
-The em dash as a structural crutch. Real writers use commas or just write shorter sentences. AI connects every subordinate clause with —.
+The em dash as a structural crutch. Real writers use commas or just write shorter sentences. AI connects every subordinate clause with -.
 
 Significance inflation. "This saves 30 minutes" becomes "this fundamentally transforms how teams collaborate." The actual claim gets buried under inflated framing.
 
@@ -119,7 +119,7 @@ Every AI detector I've tried has the same problem: it gives you a percentage and
 So I took a different approach. Instead of classification, I just score the text against the specific patterns that LLMs produce consistently:
 
 - Em dashes used as clause connectors (vs commas)
-- "Additionally / Furthermore / Moreover" as sentence openers
+- "also / and / also" as sentence openers
 - The rule of three in every bullet list
 - Hedging stacks (might possibly perhaps)
 - Significance inflation (small claims dressed as insights)
@@ -148,7 +148,7 @@ The 7 patterns I ended up using:
 
 Em dash frequency. LLMs use them constantly for clause connection. Humans mostly don't.
 
-Transition word openers. "Additionally," "Furthermore," "Moreover." Common in AI, almost never in natural writing.
+Transition word openers. "also," "and," "also." Common in AI, almost never in natural writing.
 
 Rule of three. LLMs default to exactly three bullet points or examples. Real writing has four, or two, or seven.
 
@@ -456,7 +456,7 @@ I went deep on sleep optimization last year. Tracked everything: bedtime, wake t
 
 After 4 months of data, 3 things showed consistent correlation with sleep quality. Everything else was noise.
 
-Consistent wake time. Not consistent bedtime. Wake time. My body's sleep pressure built more reliably when I woke at the same time regardless of when I fell asleep. This is the single highest-leverage lever.
+Consistent wake time. Not consistent bedtime. Wake time. My body's sleep pressure built more reliably when I woke at the same time regardless of when I fell asleep. This is the single highest-use lever.
 
 Total dark-to-sleep time under 20 minutes. If I was lying in bed longer than 20 minutes before falling asleep, the next night's quality dropped regardless of what I did. Getting out of bed when I couldn't sleep (counterintuitive but it works) was more effective than any supplement.
 

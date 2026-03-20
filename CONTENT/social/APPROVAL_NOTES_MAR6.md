@@ -130,7 +130,7 @@ EDITS: Merged the 6-question cold email framework from ALPHA1430 with the struct
 ## Voice Checklist (All 20 Posts)
 
 - Zero em dashes: PASS
-- Zero banned AI vocab (leverage, utilize, delve, comprehensive, robust, innovative, seamless): PASS
+- Zero banned AI vocab (use, use, dig, complete, strong, novel, seamless): PASS
 - Consequence-first hooks: PASS
 - Exact numbers where available: PASS
 - Would @pipelineabuser post this: PASS

@@ -1,4 +1,4 @@
-# CYCLE 5 — TWITTER/X POSTS
+# CYCLE 5, TWITTER/X POSTS
 # Generated: 2026-03-18 07:10
 # Status: PENDING_REVIEW
 # Voice: PRINTMAXXER (S-tier @pipelineabuser dominant)
@@ -6,7 +6,7 @@
 
 ---
 
-## POST 1 — Cold Email is Broken (2026 Edition)
+## POST 1, Cold Email is Broken (2026 Edition)
 
 cold email changed more in 2026 than the last 5 years combined. most people haven't caught up.
 
@@ -20,7 +20,7 @@ everyone is optimizing their 5th follow-up. optimize email #1. that's where 58% 
 
 ---
 
-## POST 2 — UGC Costs Just Collapsed
+## POST 2, UGC Costs Just Collapsed
 
 brands used to pay $500+ per UGC video. agencies charged $2,000.
 
@@ -34,7 +34,7 @@ the margin is insane and nobody is selling this as a service yet.
 
 ---
 
-## POST 3 — GEO is the New SEO
+## POST 3, GEO is the New SEO
 
 43% more brands got cited by ChatGPT this year than last year. McKinsey says $750B in consumer spending will flow through AI answers by 2027.
 
@@ -49,7 +49,7 @@ SEO optimizes for Google. GEO optimizes for the AI answering the question before
 
 ---
 
-## POST 4 — Pricing > Acquisition
+## POST 4, Pricing > Acquisition
 
 25-60% revenue increase from optimizing pricing alone. not new features. not more marketing. just pricing.
 
@@ -61,7 +61,7 @@ if you're still charging $9.99/mo for unlimited access, you're leaving 25-60% of
 
 ---
 
-## POST 5 — Self-Reply Funnel
+## POST 5, Self-Reply Funnel
 
 stop putting links in your bio and hoping. the algorithm barely shows bios.
 

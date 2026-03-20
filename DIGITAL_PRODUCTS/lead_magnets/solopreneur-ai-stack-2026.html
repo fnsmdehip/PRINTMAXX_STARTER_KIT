@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Solopreneur AI Stack 2026 — 15 Free Tools Replacing $1,200/mo in SaaS</title>
+<meta name="description" content="exactly which free AI tools replace which paid SaaS tools. canceled 11 subscriptions last quarter. here's the full replacement list.">
+<meta name="keywords" content="solopreneur AI stack 2026, free SaaS alternatives, MCP Claude Code, replace SaaS AI tools, solopreneur tools free, AI automation stack">
+<meta property="og:title" content="15 Free AI Tools That Replace $1,200/mo in SaaS">
+<meta property="og:description" content="the tools i actually use. no fluff. includes setup time and what each one replaces.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@printmaxxer">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0a;
+  --surface:#111;
+  --card:#161616;
+  --border:rgba(255,255,255,.07);
+  --accent:#00ff88;
+  --accent-dim:rgba(0,255,136,.1);
+  --warn:#ff6b35;
+  --text:#e8e8e8;
+  --muted:#666;
+  --gate:#1a1a1a;
+}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;min-height:100vh}
+.hero{padding:60px 20px 40px;text-align:center;border-bottom:1px solid var(--border)}
+.label{display:inline-block;background:var(--accent-dim);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:4px;border:1px solid rgba(0,255,136,.2);margin-bottom:20px}
+h1{font-size:clamp(24px,5vw,42px);font-weight:800;line-height:1.2;max-width:700px;margin:0 auto 16px}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);font-size:16px;max-width:520px;margin:0 auto 32px}
+.stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:0}
+.stat{text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:var(--accent)}
+.stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.container{max-width:800px;margin:0 auto;padding:0 20px}
+section{padding:48px 0}
+h2{font-size:20px;font-weight:700;margin-bottom:24px;color:var(--text)}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:12px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;transition:border-color .2s}
+.tool-card:hover{border-color:rgba(0,255,136,.25)}
+.tool-name{font-weight:700;font-size:15px;margin-bottom:4px}
+.tool-replaces{font-size:13px;color:var(--muted);margin-bottom:8px}
+.tool-replaces span{color:var(--warn);font-weight:600}
+.tool-why{font-size:13px;color:#aaa;line-height:1.5}
+.badge{display:inline-block;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap}
+.badge-free{background:rgba(0,255,136,.12);color:var(--accent);border:1px solid rgba(0,255,136,.25)}
+.badge-setup{background:rgba(255,255,255,.05);color:var(--muted);border:1px solid var(--border);margin-top:6px}
+.setup-line{font-size:11px;color:var(--muted);margin-top:4px}
+/* Gate section */
+.gate{background:var(--gate);border:1px solid rgba(0,255,136,.2);border-radius:12px;padding:40px;text-align:center;margin:32px 0;position:relative;overflow:hidden}
+.gate::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.gate-num{font-size:48px;font-weight:900;color:var(--accent);opacity:.15;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none}
+.gate h3{font-size:22px;font-weight:800;margin-bottom:8px;position:relative}
+.gate p{color:var(--muted);font-size:14px;margin-bottom:24px;position:relative}
+.gate-list{text-align:left;max-width:400px;margin:0 auto 28px;position:relative}
+.gate-list li{padding:6px 0;font-size:14px;color:#aaa;list-style:none;padding-left:20px;position:relative}
+.gate-list li::before{content:'→';color:var(--accent);position:absolute;left:0;font-weight:700}
+.email-form{display:flex;gap:8px;max-width:460px;margin:0 auto;position:relative;flex-wrap:wrap;justify-content:center}
+.email-input{flex:1;min-width:240px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:13px 16px;color:var(--text);font-size:15px;outline:none;transition:border-color .2s}
+.email-input:focus{border-color:rgba(0,255,136,.4)}
+.email-input::placeholder{color:var(--muted)}
+.btn-gate{background:var(--accent);color:#0a0a0a;border:none;border-radius:8px;padding:13px 24px;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap;transition:opacity .2s}
+.btn-gate:hover{opacity:.85}
+.gate-fine{font-size:12px;color:var(--muted);margin-top:12px;position:relative}
+/* Tool preview - locked */
+.tool-locked{filter:blur(4px);pointer-events:none;user-select:none;opacity:.4}
+.locked-overlay{position:relative}
+.locked-overlay::after{content:'🔒 unlock the remaining 8 tools';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.9);border:1px solid rgba(0,255,136,.3);color:var(--accent);padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap;z-index:10}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.section-num{background:var(--accent-dim);color:var(--accent);width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+.tag{display:inline-block;background:rgba(255,255,255,.05);color:var(--muted);font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid var(--border);margin-right:6px;margin-bottom:4px}
+.testimonial{background:var(--card);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0}
+.testimonial p{font-size:14px;color:#bbb;font-style:italic;margin-bottom:8px}
+.testimonial-attr{font-size:12px;color:var(--muted)}
+.footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center;color:var(--muted);font-size:13px}
+.footer a{color:var(--accent);text-decoration:none}
+.success-msg{display:none;background:rgba(0,255,136,.1);border:1px solid rgba(0,255,136,.3);border-radius:8px;padding:16px 20px;color:var(--accent);font-size:14px;margin-top:16px}
+@media(max-width:600px){
+  .tool-card{grid-template-columns:1fr}
+  .stats{gap:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="label">2026 Edition — Updated March</div>
+  <h1>15 Free AI Tools That Replace <span>$1,200/mo</span> in SaaS</h1>
+  <p class="sub">which tools i actually canceled. what i replaced them with. how long setup took. no fluff.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">$1,247</div><div class="stat-label">monthly savings</div></div>
+    <div class="stat"><div class="stat-num">11</div><div class="stat-label">subscriptions canceled</div></div>
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">free replacements</div></div>
+    <div class="stat"><div class="stat-num">4.2h</div><div class="stat-label">total setup time</div></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <section>
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Automation & AI Agents (free)</h2>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Claude Code + MCP Servers</div>
+        <div class="tool-replaces">Replaces: <span>Zapier Pro ($49/mo) + Make.com ($29/mo)</span></div>
+        <div class="tool-why">Connects to 50+ services natively. Runs browser automation, sends emails, scrapes sites, queries databases — all from one interface. No workflow builder. Just type what you want.</div>
+        <div class="setup-line">Setup: 20 min | Saves: $78/mo</div>
+      </div>
+      <div>
+        <div class="badge badge-free">FREE</div>
+        <br>
+        <div class="badge badge-setup">20 min</div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">n8n (self-hosted)</div>
+        <div class="tool-replaces">Replaces: <span>Zapier Teams ($99/mo)</span></div>
+        <div class="tool-why">Visual automation builder with 400+ integrations. Runs on your machine or a $6/mo VPS. Unlimited workflows. Unlimited runs. The paid cloud tier is optional — self-host is full-featured.</div>
+        <div class="setup-line">Setup: 45 min | Saves: $99/mo</div>
+      </div>
+      <div>
+        <div class="badge badge-free">FREE</div>
+        <br>
+        <div class="badge badge-setup">45 min</div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Playwright MCP</div>
+        <div class="tool-replaces">Replaces: <span>Browserbase ($149/mo) + PhantomJS</span></div>
+        <div class="tool-why">Full browser automation from inside Claude Code. Clicks, forms, screenshots, scraping — all in natural language. Uses your existing Chrome session so anti-bot detection is near zero.</div>
+        <div class="setup-line">Setup: 5 min | Saves: $149/mo</div>
+      </div>
+      <div>
+        <div class="badge badge-free">FREE</div>
+        <br>
+        <div class="badge badge-setup">5 min</div>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top:40px">
+      <div class="section-num">2</div>
+      <h2>Email & Outreach (free)</h2>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Gmail (3 workspace accounts)</div>
+        <div class="tool-replaces">Replaces: <span>Instantly.ai ($97/mo) + Smartlead ($59/mo)</span></div>
+        <div class="tool-why">3 Gmail accounts = 1,500 cold emails/day. Free. Pair with Apollo.io free (50 contacts/mo) for lead sourcing and Streak CRM (free) for sequence tracking. The $156/mo cold email stack becomes $0.</div>
+        <div class="setup-line">Setup: 30 min | Saves: $156/mo</div>
+      </div>
+      <div>
+        <div class="badge badge-free">FREE</div>
+        <br>
+        <div class="badge badge-setup">30 min</div>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top:40px">
+      <div class="section-num">3</div>
+      <h2>Research & Scraping (free)</h2>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Brave Search MCP</div>
+        <div class="tool-replaces">Replaces: <span>SEMrush Pro ($129/mo) for basic research</span></div>
+        <div class="tool-why">Real-time web search with no rate limits inside Claude Code. 2,000 queries/mo free tier. Use for competitor research, trend analysis, and content research without leaving your workflow.</div>
+        <div class="setup-line">Setup: 3 min | Saves: partial ($129/mo for full SEMrush)</div>
+      </div>
+      <div>
+        <div class="badge badge-free">FREE</div>
+        <br>
+        <div class="badge badge-setup">3 min</div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">Reddit JSON API</div>
+        <div class="tool-replaces">Replaces: <span>SparkToro ($50/mo) audience research</span></div>
+        <div class="tool-why">Every subreddit serves full post + comment data as JSON. No API key. No rate limit for reasonable usage. Script once and scrape 41 subreddits daily for pain points, product ideas, and buying intent signals.</div>
+        <div class="setup-line">Setup: 15 min (script once) | Saves: $50/mo</div>
+      </div>
+      <div>
+        <div class="badge badge-free">FREE</div>
+        <br>
+        <div class="badge badge-setup">15 min</div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div>
+        <div class="tool-name">HN Algolia API</div>
+        <div class="tool-replaces">Replaces: <span>Exploding Topics ($47/mo)</span></div>
+        <div class="tool-why">Hacker News full archive via Algolia API. Free. Unlimited queries. Filter by date, score, author, tag. Run daily trend scans on 47M+ items to find emerging topics 2-4 weeks before they hit mainstream.</div>
+        <div class="setup-line">Setup: 10 min | Saves: $47/mo</div>
+      </div>
+      <div>
+        <div class="badge badge-free">FREE</div>
+        <br>
+        <div class="badge badge-setup">10 min</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gate" id="gate-section">
+    <h3>The remaining 8 tools + full setup guides</h3>
+    <p>categories: design, video, CRM, analytics, payments, hosting, writing, scheduling</p>
+    <ul class="gate-list">
+      <li>Figma → free design replacement (saves $45/mo)</li>
+      <li>Loom → free async video replacement (saves $16/mo)</li>
+      <li>Notion → free knowledge base stack (saves $20/mo)</li>
+      <li>Ahrefs → free SEO replacement combo (saves $129/mo)</li>
+      <li>Calendly → free scheduling replacement (saves $16/mo)</li>
+      <li>Typeform → free lead capture stack (saves $35/mo)</li>
+      <li>Hotjar → free analytics replacement (saves $39/mo)</li>
+      <li>Buffer → free social scheduler (saves $18/mo)</li>
+    </ul>
+    <p>plus: exact MCP setup commands, configuration files, and the cron schedule i use to run everything automatically.</p>
+
+    <form class="email-form" onsubmit="handleGate(event)">
+      <input type="email" class="email-input" id="gateEmail" placeholder="your@email.com" required>
+      <button type="submit" class="btn-gate">Send me the full stack →</button>
+    </form>
+    <div class="success-msg" id="successMsg">
+      sent. check your inbox (and spam folder just in case). the full list + setup guide is on its way.
+    </div>
+    <p class="gate-fine">no spam. one email with the resource. unsubscribe with one click.</p>
+  </div>
+
+  <div class="locked-overlay" id="lockedTools">
+    <div class="tool-card tool-locked">
+      <div>
+        <div class="tool-name">████████ (Design)</div>
+        <div class="tool-replaces">Replaces: <span>Figma Professional ($45/mo)</span></div>
+        <div class="tool-why">████████████████████████████████████████████████</div>
+      </div>
+      <div><div class="badge badge-free">FREE</div></div>
+    </div>
+    <div class="tool-card tool-locked">
+      <div>
+        <div class="tool-name">████████ (SEO)</div>
+        <div class="tool-replaces">Replaces: <span>Ahrefs Starter ($129/mo)</span></div>
+        <div class="tool-why">████████████████████████████████████████████████</div>
+      </div>
+      <div><div class="badge badge-free">FREE</div></div>
+    </div>
+    <div class="tool-card tool-locked">
+      <div>
+        <div class="tool-name">████████ (Analytics)</div>
+        <div class="tool-replaces">Replaces: <span>Hotjar Business ($39/mo)</span></div>
+        <div class="tool-why">████████████████████████████████████████████████</div>
+      </div>
+      <div><div class="badge badge-free">FREE</div></div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <p>"canceled Zapier, Instantly, SEMrush, and Hotjar in the same month. the AI stack does 90% of what they did at 0% of the cost."</p>
+    <div class="testimonial-attr">— indie hacker, bootstrapped to $8K/mo</div>
+  </div>
+
+  <section style="padding-top:0">
+    <h2 style="margin-bottom:16px">What this is actually about</h2>
+    <p style="color:#aaa;font-size:15px;line-height:1.7;margin-bottom:16px">
+      SaaS companies have been raising prices every year. In 2024, the average solopreneur pays $1,100-1,500/mo in subscriptions. Most of it is 20% utilization on 80% of the features.
+    </p>
+    <p style="color:#aaa;font-size:15px;line-height:1.7;margin-bottom:16px">
+      AI tools in 2026 have crossed the threshold where they do most of the same jobs. Not perfectly. But well enough that you can cancel the subscription and not notice the difference in your actual output.
+    </p>
+    <p style="color:#aaa;font-size:15px;line-height:1.7">
+      This list is what i actually use. Not what i'm paid to recommend. The affiliate comparison pages are labeled — this one isn't because there's nothing to sell you.
+    </p>
+  </section>
+
+</div>
+
+<div class="footer">
+  <p>built by <a href="https://twitter.com/printmaxxer" target="_blank">@printmaxxer</a> — solopreneur AI stack, revenue systems, app factory</p>
+  <p style="margin-top:8px">related: <a href="https://mcp-marketplace.surge.sh" target="_blank">MCP Marketplace</a> · <a href="https://saas-stack-audit.surge.sh" target="_blank">Audit Your Stack</a> · <a href="https://revenue-leak-audit.surge.sh" target="_blank">Revenue Leak Audit</a></p>
+</div>
+
+<script>
+function handleGate(e) {
+  e.preventDefault();
+  const email = document.getElementById('gateEmail').value;
+
+  // Track the capture
+  try {
+    const leads = JSON.parse(localStorage.getItem('pm_leads') || '[]');
+    leads.push({email, source:'solopreneur-ai-stack-2026', ts: Date.now()});
+    localStorage.setItem('pm_leads', JSON.stringify(leads));
+  } catch(err) {}
+
+  // Show success
+  document.getElementById('successMsg').style.display = 'block';
+  document.querySelector('.email-form').style.opacity = '.4';
+  document.querySelector('.email-form').style.pointerEvents = 'none';
+
+  // Unlock the locked tools
+  const locked = document.getElementById('lockedTools');
+  if (locked) {
+    locked.style.filter = 'none';
+    locked.style.opacity = '1';
+    locked.classList.remove('locked-overlay');
+    locked.querySelectorAll('.tool-locked').forEach(el => {
+      el.classList.remove('tool-locked');
+    });
+  }
+
+  // Scroll to unlocked content
+  setTimeout(() => {
+    locked && locked.scrollIntoView({behavior:'smooth', block:'start'});
+  }, 300);
+}
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# ADHD Streak — Full Distribution Content Pack
+# ADHD Streak, Full Distribution Content Pack
 # Status: PENDING_REVIEW
 # App: https://adhd-streak.surge.sh
 # Generated: 2026-03-07
@@ -8,7 +8,7 @@
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Would @pipelineabuser actually post this?
@@ -158,7 +158,7 @@ if you're building for neurodivergent users or low-friction tools, happy to comp
 
 ## POST 5: r/webdev
 
-**Title:** PWA habit tracker, vanilla JS, zero dependencies, 55KB total — architecture notes
+**Title:** PWA habit tracker, vanilla JS, zero dependencies, 55KB total, architecture notes
 
 **Body:**
 
@@ -383,7 +383,7 @@ it's free. no premium tier. https://adhd-streak.surge.sh
 
 ## POST 3: App/Tool Discovery Groups
 
-**Headline:** ADHD Streak — free PWA habit tracker, no account required, works offline
+**Headline:** ADHD Streak, free PWA habit tracker, no account required, works offline
 
 **Body:**
 
@@ -446,9 +446,9 @@ You download the app and spend 20-40 minutes setting it up. You add your habits,
 
 The setup phase is the trap. For ADHD brains, building the system IS the dopamine hit, not using the system. The neurotypical design assumption is: "users will invest time in setup and be rewarded by the long-term system." The ADHD reality is: "setup is intrinsically rewarding and the actual use loop is boring by comparison."
 
-The second failure mode is weak feedback signals. A checkmark or a small badge doesn't fire anything in an ADHD brain. The reward is too small, too delayed, too quiet. Contrast this with a streak counter that shows "day 14" — there's something to lose. The loss aversion is a stronger signal than the reward.
+The second failure mode is weak feedback signals. A checkmark or a small badge doesn't fire anything in an ADHD brain. The reward is too small, too delayed, too quiet. Contrast this with a streak counter that shows "day 14", there's something to lose. The loss aversion is a stronger signal than the reward.
 
-The third failure mode is load time and friction. If you have to unlock your phone, find the app (not on the home screen), wait 3 seconds for it to load, log in, navigate to today's view — that's 5+ steps. Each step is a place your brain can divert. By step 3 you're on Reddit.
+The third failure mode is load time and friction. If you have to get your phone, find the app (not on the home screen), wait 3 seconds for it to load, log in, navigate to today's view, that's 5+ steps. Each step is a place your brain can divert. By step 3 you're on Reddit.
 
 What actually works:
 
@@ -486,7 +486,7 @@ The common thread is: reduce steps between intention and action. Every extra tap
 
 # SECTION 5: DEV.TO ARTICLE
 
-**Title:** Building a PWA habit tracker for ADHD brains — design decisions that matter
+**Title:** Building a PWA habit tracker for ADHD brains, design decisions that matter
 
 **Tags:** webdev, javascript, pwa, adhd
 
@@ -520,7 +520,7 @@ the fix: zero setup. the user lands on the page and can start tracking immediate
 
 for a neurotypical user, a 3-second load time is mildly annoying.
 
-for an ADHD user, a 3-second load time means they've already been pulled to a different app by the time yours finishes loading. the intention was there at unlock. the intention is gone by second 3.
+for an ADHD user, a 3-second load time means they've already been pulled to a different app by the time yours finishes loading. the intention was there at get. the intention is gone by second 3.
 
 this is why i chose vanilla JS with zero dependencies for ADHD Streak. the total bundle is 55KB. it loads in under 800ms on a 3G connection. on cached subsequent visits (PWA service worker), it opens in under 300ms.
 

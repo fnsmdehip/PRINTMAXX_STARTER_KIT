@@ -10,7 +10,7 @@ TWEETS (5)
 
 ---
 
-TWEET 1 (Finding 3 + 5 — local compute economics)
+TWEET 1 (Finding 3 + 5, local compute economics)
 source_finding: F3, F5
 signal: anti-subscription, local GPU ownership, $0.16/hr on RTX 4090
 
@@ -24,7 +24,7 @@ openclaw agents on local hardware at $0.16/hr vs $0.58+ on cloud. the math stopp
 
 ---
 
-TWEET 2 (Finding 1 — Claude Code going mainstream)
+TWEET 2 (Finding 1, Claude Code going mainstream)
 source_finding: F1
 signal: 1079 likes, claude code + superpowers plugin crossing into marketing mainstream
 
@@ -36,7 +36,7 @@ the gap between ppl who ship with agents and ppl who don't is compounding every 
 
 ---
 
-TWEET 3 (Finding 2 — data-driven automation vs blind bots)
+TWEET 3 (Finding 2, data-driven automation vs blind bots)
 source_finding: F2
 signal: openclaw users learning the hard way that blind automation loses
 
@@ -50,7 +50,7 @@ data first. always.
 
 ---
 
-TWEET 4 (Finding 4 — scraper maintenance pain)
+TWEET 4 (Finding 4, scraper maintenance pain)
 source_finding: F4
 signal: scraper maintenance is a full-time job, 300+ scripts in this repo
 
@@ -64,7 +64,7 @@ Apify Store solves part of it. the other part is accepting you're in an arms rac
 
 ---
 
-TWEET 5 (Finding 6 + 7 — niche app patterns)
+TWEET 5 (Finding 6 + 7, niche app patterns)
 source_finding: F6, F7
 signal: "Robinhood meets X" framing for niche apps, continual learning API
 
@@ -78,7 +78,7 @@ build the data layer. the community comes.
 
 ---
 
-THREAD (Finding 2 — data-first automation, 6 tweets + CTA)
+THREAD (Finding 2, data-first automation, 6 tweets + CTA)
 source_finding: F2 (979 likes)
 account: @PRINTMAXXER
 format: insight thread, consequence-first, no "Thread:" prefix
@@ -165,7 +165,7 @@ follow @PRINTMAXXER. building this in public.
 
 PRE-PUBLISH QA LOG:
 [x] Zero em dashes
-[x] Zero banned AI vocabulary (no leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+[x] Zero banned AI vocabulary (no use, use, dig, complete, strong, novel, seamless)
 [x] Consequence-first hooks on all 5 tweets
 [x] Exact numbers where possible (1079, 979, 810, $0.16/hr, $160, 8 months, 300+, 41 subreddits, 4 scripts)
 [x] Would @pipelineabuser actually post this? yes

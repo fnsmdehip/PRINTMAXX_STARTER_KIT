@@ -15,7 +15,7 @@ subject line: "quick question about [specific thing they built]"
 
 first line: show you actually looked at their work. not generic flattery. specific.
 
-"noticed you're using stripe but no upsell flow after checkout — that's leaving ~18% on the table"
+"noticed you're using stripe but no upsell flow after checkout, that's leaving ~18% on the table"
 
 **Tweet 3:**
 email 2 (3 days later): one sentence of value.
@@ -78,7 +78,7 @@ the apps that actually generate money:
 
 - prayer streak tracker (2,300 downloads, 4.3 stars)
 - quran progress tracker (1,800 downloads)
-- step counter with unlock mechanic (1,100 downloads)
+- step counter with get mechanic (1,100 downloads)
 
 none of them cost more than $40 to build.
 
@@ -268,7 +268,7 @@ don't call yourself a "virtual assistant."
 
 call yourself an "AI automation specialist."
 
-same work. 3x the rate. clients self-select — the ones who want AI automation pay more than the ones who want humans.
+same work. 3x the rate. clients self-select, the ones who want AI automation pay more than the ones who want humans.
 
 **Tweet 5:**
 step 3: the profile hack.
@@ -283,7 +283,7 @@ build 3 sample projects. a sample data cleaning script. a sample automation flow
 step 4: your proposal template.
 
 first line: reference something specific in their job post.
-second paragraph: exactly how you'd solve it (specifics — tools, steps, timeline)
+second paragraph: exactly how you'd solve it (specifics, tools, steps, timeline)
 third paragraph: what you've done that's similar (even if it's a sample project)
 one-line close: "ready to start today"
 
@@ -395,7 +395,7 @@ tool 4: google sheets (free)
 
 the brain of the whole operation.
 
-leads, research findings, content ideas, spending — all in one place. 8 tabs. formulas that auto-calculate ROI.
+leads, research findings, content ideas, spending, all in one place. 8 tabs. formulas that auto-calculate ROI.
 
 not glamorous. completely functional.
 
@@ -411,7 +411,7 @@ total: $39.50/month
 generates 40-60 qualified leads/week. closes 2-3 clients/month.
 
 **Tweet 7:**
-this is what people mean by leverage.
+this is what people mean by use.
 
 not a team. not investors. not luck.
 
@@ -431,36 +431,36 @@ here they are, with the data:
 **Tweet 2:**
 keyword category 1: religious + productivity hybrid
 
-"prayer tracking app" — 8,400 monthly searches, top app last updated 2022
-"daily bible reading plan" — 11,200 monthly searches, average rating 3.7
-"mosque prayer times" — 22,000 monthly searches, top app has 2.8 stars
+"prayer tracking app", 8,400 monthly searches, top app last updated 2022
+"daily bible reading plan", 11,200 monthly searches, average rating 3.7
+"mosque prayer times", 22,000 monthly searches, top app has 2.8 stars
 
 these are untapped.
 
 **Tweet 3:**
 keyword category 2: micro-habit tracking
 
-"1 minute meditation" — 6,700/month
-"daily water reminder" — 9,100/month
-"reading habit tracker" — 5,400/month
+"1 minute meditation", 6,700/month
+"daily water reminder", 9,100/month
+"reading habit tracker", 5,400/month
 
 all have weak competition. the top apps are ugly and haven't been updated in 18+ months.
 
 **Tweet 4:**
 keyword category 3: financial micro-tools
 
-"daily expense tracker simple" — 14,000/month
-"cash envelope system" — 8,200/month
-"no-spend challenge app" — 4,100/month
+"daily expense tracker simple", 14,000/month
+"cash envelope system", 8,200/month
+"no-spend challenge app", 4,100/month
 
 dave ramsey-adjacent budgeting. massive underserved audience. devout community.
 
 **Tweet 5:**
 keyword category 4: language learning adjacent
 
-"arabic reading practice" — 7,300/month
-"hindi script practice" — 5,200/month
-"korean characters practice" — 6,800/month
+"arabic reading practice", 7,300/month
+"hindi script practice", 5,200/month
+"korean characters practice", 6,800/month
 
 duolingo doesn't cover this well. diaspora communities are MASSIVE.
 
@@ -502,9 +502,9 @@ the first 30 days are painful. after that, it's passive.
 **Tweet 3:**
 the gigs that work right now:
 
-- "AI-generated social media content pack" — $45/order, 20 minutes of work
-- "convert your PDF/doc to a professional formatted report" — $35/order, 30 minutes
-- "write 5 cold emails for your specific niche" — $65/order, 45 minutes with claude
+- "AI-generated social media content pack", $45/order, 20 minutes of work
+- "convert your PDF/doc to a professional formatted report", $35/order, 30 minutes
+- "write 5 cold emails for your specific niche", $65/order, 45 minutes with claude
 
 **Tweet 4:**
 the pricing trick:
@@ -624,7 +624,7 @@ when people check out a newsletter, they look at the archive. if there's nothing
 **Tweet 3:**
 the growth channel that actually works: reddit.
 
-r/SideProject, r/Entrepreneur, r/Frugal, r/PersonalFinance — all allow genuine value posts.
+r/SideProject, r/Entrepreneur, r/Frugal, r/PersonalFinance, all allow genuine value posts.
 
 write a post that's a condensed version of your best issue. last line: "i write about this every week at [link]"
 
@@ -890,7 +890,7 @@ step 3: the lead magnet post.
 
 write a post that gives 80% of your service for free.
 
-"here's exactly how i analyze a competitor's pricing strategy — full 7-step process"
+"here's exactly how i analyze a competitor's pricing strategy, full 7-step process"
 
 at the end: "i do this professionally. if you want me to do it for your business, [link]"
 
@@ -1061,7 +1061,7 @@ optimize for replies and follows. likes are noise.
 
 ---
 
-## THREAD 18: The $10K Milestone — What Actually Changes
+## THREAD 18: The $10K Milestone, What Actually Changes
 
 **Tweet 1:**
 hit $10k/month as a solopreneur last year.
@@ -1080,7 +1080,7 @@ expected: i'd know what to scale.
 
 reality: at $10k/month you have 3-5 things working. you still don't know WHICH ONE to scale.
 
-the answer: track source of every dollar. the channel with the best margin and fastest growth rate — put everything into that.
+the answer: track source of every dollar. the channel with the best margin and fastest growth rate, put everything into that.
 
 **Tweet 4:**
 expected: i'd stop doing the things i hated.
@@ -1142,7 +1142,7 @@ CONTENT:
 - descript ($24/mo): video editing
 - beehiiv ($39/mo): newsletter
 
-worth it: all yes. buffer is the highest ROI — one platform, 6 destinations.
+worth it: all yes. buffer is the highest ROI, one platform, 6 destinations.
 
 **Tweet 4:**
 OUTREACH:

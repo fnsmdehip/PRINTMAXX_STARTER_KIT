@@ -1,4 +1,4 @@
-# Meme Account Strategy — 5 Niche Accounts
+# Meme Account Strategy, 5 Niche Accounts
 
 ---
 
@@ -41,7 +41,7 @@
 ---
 
 ## ACCOUNT 2: @aitools_memes
-**Niche:** AI/tech humor — tools, LLMs, coding, startup life
+**Niche:** AI/tech humor, tools, LLMs, coding, startup life
 **Platform:** X/Twitter + LinkedIn (LinkedIn works surprisingly well for tech humor)
 **Tone:** Technical insider, dry humor, @BLUECOW009 energy
 **Posting frequency:** 2x/day
@@ -61,7 +61,7 @@
 
 ### Account Setup
 **Bio:** "AI tools shipping > AI tools debating | memes for builders"
-**Strategy note:** Post AI news reaction memes within 2 hours of major announcements — the algo rewards recency in this niche
+**Strategy note:** Post AI news reaction memes within 2 hours of major announcements, the algo rewards recency in this niche
 
 ### Trend Monitoring Required
 - Follow: @sama, @karpathy, @gwern, @benedictevans, @LangChainAI
@@ -77,7 +77,7 @@ Tech memes attract SaaS founders. Sponsored posts worth $200-800 each at 10K fol
 **Niche:** Faith / spirituality / Ramadan / Christian devotional
 **Platform:** Instagram primary (faith content performs better on IG than X)
 **Tone:** Authentic, gentle conviction, @eptwts energy applied to spiritual topics
-**Posting frequency:** 1x/day (5am or 6am — early morning devotional scroll)
+**Posting frequency:** 1x/day (5am or 6am, early morning devotional scroll)
 
 ### Content Pillars
 1. Prayer vs phone habits
@@ -87,11 +87,11 @@ Tech memes attract SaaS founders. Sponsored posts worth $200-800 each at 10K fol
 5. Quiet discipline vs performative spirituality
 
 ### Format Rules for This Niche
-- No edgelord humor — this audience is different
+- No edgelord humor, this audience is different
 - Relatable but aspirational tone
 - Clean aesthetic (white backgrounds, calligraphy overlays, soft gradients)
-- Use "us" not "you" — community, not lecture
-- Avoid doctrinal debates — stick to universal faith themes
+- Use "us" not "you", community, not lecture
+- Avoid doctrinal debates, stick to universal faith themes
 
 ### Top Performing Formats
 - Quote card with one verse/hadith + relatable caption
@@ -106,7 +106,7 @@ Tech memes attract SaaS founders. Sponsored posts worth $200-800 each at 10K fol
 - New Year: Intention-setting content
 
 ### Cross-Sell to PrayerLock App
-Every 5th post: "track your prayer streak with PrayerLock — link in bio"
+Every 5th post: "track your prayer streak with PrayerLock, link in bio"
 This is the primary monetization play for this account (app installs).
 
 ---
@@ -134,7 +134,7 @@ The biggest engagement driver here: honesty about failing at productivity. "I sp
 - Relatable text-only tweets ("I have 8 browser tabs open for a task I'll complete in 11 minutes")
 
 ### Affiliate Opportunities
-- Notion affiliate (affiliate.notion.com — $20-50/referral)
+- Notion affiliate (affiliate.notion.com, $20-50/referral)
 - Reclaim.ai, Motion, Fantastical
 - Headspace/Calm for the wellness crossover
 
@@ -146,7 +146,7 @@ Productivity memes as Pinterest pins stay indexed for 6-18 months. Pin the same 
 ## ACCOUNT 5: @ecommeme (or integrate into a merch brand account)
 **Niche:** Ecom / dropshipping / print-on-demand / Amazon FBA
 **Platform:** TikTok primary, X secondary
-**Tone:** Educational roast — calling out gurus while providing real info
+**Tone:** Educational roast, calling out gurus while providing real info
 **Posting frequency:** 2x/day on TikTok (Shorts + caption meme)
 
 ### Content Pillars

@@ -138,3 +138,51 @@ a cute app that gives you an outfit based on the weather.
 
 [ACQUISITION] 5 micro-SaaS niches with strong demand signals right now (based on what devs are posting about [rev: $$50]
 
+
+
+---
+
+## Pending Enhancement (ALPHA107527, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rximzj/built_a_python_automation_framework_with_x11/
+**Added:** 2026-03-18T20:22:22-04:00
+
+[ACQUISITION] Built a Python automation framework with X11 control (open source)
+
+
+
+---
+
+## Pending Enhancement (ALPHA107670, Score: 24)
+
+**Source:** @godofprompt (high-signal-accounts) | **URL:** https://x.com/godofprompt/status/2034374205291257918
+**Added:** 2026-03-18T21:45:01-04:00
+
+@Perceptis_ai
+ encodes this framework directly into the product.
+
+Built by founders who came out of McKinsey, Google, Amazon, and Apple AI, it applies the same narrative logic used in the world's most demanding presentation culture to your own data.
+
+You upload your reports and
+
+
+
+---
+
+## Pending Enhancement (ALPHA107705, Score: 30)
+
+**Source:** @AntonioEscudero (high-signal-accounts) | **URL:** https://x.com/AntonioEscudero/status/2034313237949468736
+**Added:** 2026-03-18T22:23:44-04:00
+
+Day 12 of growing RankInPublic to $10k a month
+
+Domain Rating grew to 46
+
+About to reach 3k signed up users :)
+
+Updated pricing section
+
+Added abandoned checkout sessions email sequences
+
+Tomorrow marketing and more focus on conversion
+

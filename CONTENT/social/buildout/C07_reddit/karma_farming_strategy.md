@@ -1,4 +1,4 @@
-# Karma Farming Strategy — Safe, TOS-Compliant
+# Karma Farming Strategy, Safe, TOS-Compliant
 
 ## The One Rule That Governs Everything
 
@@ -18,7 +18,7 @@ Most valuable subreddits require:
 - Verified email required for some subs
 
 **Day 1 setup:**
-1. Create account with username that's neutral (not branded yet — branded accounts get flagged as promotional)
+1. Create account with username that's neutral (not branded yet, branded accounts get flagged as promotional)
 2. Add profile picture (non-stock, personal feeling)
 3. Short bio that's human, not a pitch: "building things on the internet. sharing what works."
 4. Verify email immediately
@@ -57,9 +57,9 @@ Specificity earns karma. Vagueness gets ignored.
 - 5-10 comments per day = 200+ karma in 30 days easily
 
 **High-karma comment opportunities:**
-- "Has anyone tried X?" posts — be the person who has tried X
-- "What's your setup for Y?" — share your actual setup in detail
-- Technical troubleshooting posts — solve the actual problem, don't just suggest Googling it
+- "Has anyone tried X?" posts, be the person who has tried X
+- "What's your setup for Y?", share your actual setup in detail
+- Technical troubleshooting posts, solve the actual problem, don't just suggest Googling it
 
 ---
 
@@ -67,9 +67,9 @@ Specificity earns karma. Vagueness gets ignored.
 
 **Start in forgiving subreddits:**
 
-1. **r/SideProject** — explicitly built for sharing what you're building. Lowest bar.
-2. **r/Notion** — template shares and workflow descriptions always welcome
-3. **r/passive_income** — case studies with honest numbers get upvoted even when small
+1. **r/SideProject**, explicitly built for sharing what you're building. Lowest bar.
+2. **r/Notion**, template shares and workflow descriptions always welcome
+3. **r/passive_income**, case studies with honest numbers get upvoted even when small
 
 **Post formula for early karma:**
 
@@ -81,7 +81,7 @@ Examples:
 - "Tested 5 email subject lines on the same list. Results surprised me."
 
 **Body formula:**
-1. TL;DR first (1-2 sentences — what happened, what you learned)
+1. TL;DR first (1-2 sentences, what happened, what you learned)
 2. Context (who you are, why you did this)
 3. The actual data or steps
 4. What you'd do differently
@@ -207,8 +207,8 @@ Know these patterns. Avoid all of them.
 
 ## Monitoring Tools
 
-- **Reddit Enhancement Suite** (Chrome extension) — essential for power users
-- **Later for Reddit** — scheduling posts to optimal time
-- **Redditmetis.com** — analyze your account statistics
-- **pushshift.io** — find top posts in any subreddit by upvotes (research what works)
-- **Keyword alert via IFTTT** — notify when your niche keywords are mentioned
+- **Reddit Enhancement Suite** (Chrome extension), essential for power users
+- **Later for Reddit**, scheduling posts to optimal time
+- **Redditmetis.com**, analyze your account statistics
+- **pushshift.io**, find top posts in any subreddit by upvotes (research what works)
+- **Keyword alert via IFTTT**, notify when your niche keywords are mentioned

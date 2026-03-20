@@ -983,6 +983,30 @@ function completeTimer() {
   if (state.notificationsEnabled && Notification.permission === 'granted') {
     new Notification('Prayer Complete', { body: `${minutes} minutes of prayer. ${streakText}`, icon: '🕌' });
   }
+
+  // Review timing hack: ask at value moment (after prayer, on milestone streaks)
+  // Fires only after 7+ days of use, only on streak milestones, only once per threshold
+  const REVIEW_KEY = 'pl_review_v1';
+  const reviewData = JSON.parse(localStorage.getItem(REVIEW_KEY) || '{"shown":false,"prayerCount":0,"installDate":null}');
+  if (!reviewData.installDate) {
+    reviewData.installDate = new Date().toISOString().split('T')[0];
+    localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewData));
+  }
+  reviewData.prayerCount = (reviewData.prayerCount || 0) + 1;
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewData));
+
+  if (!reviewData.shown) {
+    const daysSinceInstall = Math.floor((Date.now() - new Date(reviewData.installDate)) / 86400000);
+    const streak = state.currentStreak;
+    const MILESTONE_STREAKS = [7, 14, 30, 60, 90];
+    const isStreakMilestone = MILESTONE_STREAKS.includes(streak);
+    // Show after 7+ days + streak milestone, OR after 30 prayers regardless
+    if ((daysSinceInstall >= 7 && isStreakMilestone) || reviewData.prayerCount >= 30) {
+      reviewData.shown = true;
+      localStorage.setItem(REVIEW_KEY, JSON.stringify(reviewData));
+      setTimeout(plShowReviewPrompt, 2500); // delay 2.5s — user is still in the glow
+    }
+  }
 }
 
 function resetTimer() {
@@ -2102,6 +2126,55 @@ function duaSearch(query) {
     if(prayerCount>=3)plShowModal();
   });
 })();
+</script>
+
+<!-- REVIEW PROMPT (value-moment triggered, never on launch) -->
+<div id="pl-review-modal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);align-items:flex-end;justify-content:center;">
+  <div style="max-width:440px;width:100%;background:#1a1a2e;border-radius:24px 24px 0 0;padding:28px 24px 36px;margin:0 auto;">
+    <div style="width:44px;height:4px;background:#444;border-radius:2px;margin:0 auto 24px;"></div>
+    <div style="text-align:center;margin-bottom:20px;">
+      <div style="font-size:2.5rem;margin-bottom:12px;">🕌</div>
+      <h3 style="color:#fff;font-size:1.15rem;font-weight:700;margin:0 0 8px;">Enjoying PrayerLock?</h3>
+      <p style="color:#9ca3af;font-size:0.85rem;line-height:1.5;margin:0;">You have been building your prayer habit. Your feedback helps other Muslims find this app.</p>
+    </div>
+    <div style="display:flex;gap:12px;margin-bottom:12px;">
+      <button onclick="plReviewYes()" style="flex:1;padding:14px;background:linear-gradient(135deg,#0d9488,#0a7a70);color:#fff;font-weight:700;font-size:0.95rem;border:none;border-radius:14px;cursor:pointer;">Yes, I love it</button>
+      <button onclick="plReviewNo()" style="flex:1;padding:14px;background:rgba(255,255,255,0.06);color:#9ca3af;font-weight:600;font-size:0.95rem;border:1px solid rgba(255,255,255,0.08);border-radius:14px;cursor:pointer;">Could be better</button>
+    </div>
+    <button onclick="plReviewDismiss()" style="width:100%;padding:10px;background:none;color:#6b7280;font-size:0.8rem;border:none;cursor:pointer;">Maybe later</button>
+  </div>
+</div>
+
+<div id="pl-review-thanks" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);align-items:flex-end;justify-content:center;">
+  <div style="max-width:440px;width:100%;background:#1a1a2e;border-radius:24px 24px 0 0;padding:28px 24px 36px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:20px;">
+      <div style="font-size:2.5rem;margin-bottom:12px;">🤲</div>
+      <h3 style="color:#fff;font-size:1.1rem;font-weight:700;margin:0 0 8px;">JazakAllah Khair</h3>
+      <p style="color:#9ca3af;font-size:0.85rem;line-height:1.5;margin:0 0 20px;">A quick review takes 30 seconds and helps thousands of Muslims discover PrayerLock.</p>
+    </div>
+    <a href="https://prayerlock-web.surge.sh" target="_blank" rel="noopener" onclick="plReviewDismiss()" style="display:block;text-align:center;padding:14px;background:linear-gradient(135deg,#0d9488,#0a7a70);color:#fff;font-weight:700;font-size:0.95rem;border-radius:14px;text-decoration:none;margin-bottom:12px;">Leave a Review</a>
+    <button onclick="plReviewDismiss()" style="width:100%;padding:10px;background:none;color:#6b7280;font-size:0.8rem;border:none;cursor:pointer;">Not now</button>
+  </div>
+</div>
+
+<script>
+window.plShowReviewPrompt = function() {
+  var m = document.getElementById('pl-review-modal');
+  if (m) { m.style.display = 'flex'; }
+};
+window.plReviewYes = function() {
+  document.getElementById('pl-review-modal').style.display = 'none';
+  document.getElementById('pl-review-thanks').style.display = 'flex';
+};
+window.plReviewNo = function() {
+  document.getElementById('pl-review-modal').style.display = 'none';
+  // Open feedback mailto — capture improvement data
+  window.location.href = 'mailto:feedback@prayerlock.app?subject=PrayerLock%20Feedback&body=Hi%2C%20here%20is%20what%20I%20think%20could%20be%20better%3A%0A%0A';
+};
+window.plReviewDismiss = function() {
+  document.getElementById('pl-review-modal').style.display = 'none';
+  document.getElementById('pl-review-thanks').style.display = 'none';
+};
 </script>
 </body>
 </html>

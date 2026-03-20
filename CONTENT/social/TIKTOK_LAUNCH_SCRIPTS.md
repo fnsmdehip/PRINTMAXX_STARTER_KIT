@@ -1,4 +1,4 @@
-# TikTok Launch Scripts — "The Experiment"
+# TikTok Launch Scripts, "The Experiment"
 
 ## The Concept
 
@@ -16,8 +16,8 @@
 "I built 31 AI agents to test every money method on the internet"
 
 [Show terminal with agents running - 3 seconds]
-"Every time I see a money method on Twitter or TikTok — cold email,
-Gumroad products, niche apps, local business outreach — my AI agents
+"Every time I see a money method on Twitter or TikTok, cold email,
+Gumroad products, niche apps, local business outreach, my AI agents
 automatically test it."
 
 [Show alpha_query.py running, scrolling results - 3 seconds]
@@ -82,7 +82,7 @@ That's my job. Everything else is automated."
 
 [Step 1 - show Twitter scraper running]
 "Step 1: I scrape 133 high-signal Twitter accounts every morning.
-@pipelineabuser, @levelsio, @codyschneiderxx — anyone posting real
+@pipelineabuser, @levelsio, @codyschneiderxx, anyone posting real
 tactics with real numbers."
 
 [Step 2 - show alpha_query.py]
@@ -95,7 +95,7 @@ App idea? Goes to app_factory. Cold email tactic? Goes to outbound.
 Content format? Goes to content_compounder."
 
 [Step 4 - show content output]
-"Step 4: Agents build assets, generate content, find leads — all
+"Step 4: Agents build assets, generate content, find leads, all
 from the tactics that scored highest."
 
 [Final frame]
@@ -103,7 +103,7 @@ from the tactics that scored highest."
 The experiment continues tomorrow."
 ```
 
-## Video 4: "Unpopular Opinion" (Engagement bait — Day 5-7)
+## Video 4: "Unpopular Opinion" (Engagement bait, Day 5-7)
 
 **Format:** Talking head or green screen
 **Duration:** 15-30 seconds

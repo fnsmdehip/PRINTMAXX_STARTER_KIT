@@ -1,4 +1,4 @@
-# C18 Viral Content Repurposer — Platform Specs
+# C18 Viral Content Repurposer, Platform Specs
 # Dimensions, Character Limits, Format Requirements
 
 ## Master Spec Table
@@ -51,7 +51,7 @@
 
 **Best practices:**
 - Upload natively via TikTok app (algorithm favors native uploads)
-- No watermarks from other platforms — TikTok suppresses them
+- No watermarks from other platforms, TikTok suppresses them
 - Posted content gets a 15-minute window to pick up engagement before algorithm classifies it
 - Captions with keywords improve search discoverability
 
@@ -217,7 +217,7 @@
 **Thread format:**
 - Each tweet: 280 chars max
 - Thread numbered tweets: "1/" "2/" etc. are optional but common
-- Don't use "Thread:" — just start with the hook
+- Don't use "Thread:", just start with the hook
 
 ---
 
@@ -235,7 +235,7 @@
 - Max: 3,000 characters
 - First 140 characters visible before "see more"
 - Hook must be in first 2 lines
-- DO NOT include links in post body — LinkedIn suppresses posts with external links
+- DO NOT include links in post body, LinkedIn suppresses posts with external links
 - Post link in first comment immediately after publishing
 
 **Article (LinkedIn native):**
@@ -261,8 +261,8 @@
 - Max file size: 2 GB
 
 **Static Pin:**
-- Resolution: 1000x1500 (2:3) — standard Pin
-- Resolution: 1000x1000 (1:1) — square Pin
+- Resolution: 1000x1500 (2:3), standard Pin
+- Resolution: 1000x1000 (1:1), square Pin
 - Format: JPG or PNG
 - Max file size: 20 MB
 
@@ -298,7 +298,7 @@
 
 ## Audio-Only Platforms
 
-### Podcast (via RSS — Buzzsprout, Anchor, Podbean)
+### Podcast (via RSS, Buzzsprout, Anchor, Podbean)
 
 **Audio file:**
 - Format: MP3 (universal) or M4A

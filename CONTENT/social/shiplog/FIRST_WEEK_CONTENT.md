@@ -572,7 +572,7 @@ i'm not sure anyone else will use it. but if you walk and want something simple,
 ### Pre-publish audit (every item above)
 
 - [x] **zero em dashes.** searched the entire document. not a single one. used commas and periods instead.
-- [x] **zero banned AI vocabulary.** no "leverage," "comprehensive," "innovative," "seamless," "game-changer," "unlock," "empower," "cutting-edge," "delve," "robust," "streamlined," "furthermore," "additionally," "utilize," "journey."
+- [x] **zero banned AI vocabulary.** no "use," "complete," "novel," "seamless," "game-changer," "get," "empower," "cutting-edge," "dig," "strong," "streamlined," "and," "also," "use," "path."
 - [x] **specific numbers everywhere.** 80KB, 77KB, 54KB, 50KB, 42.7/100, 52/100, 38/100, 601 pages, 10 CDN edge locations, $0. no "good performance" or "fast loading."
 - [x] **honest about failures.** 42.7/100 quality score shared openly. $0 revenue stated repeatedly. hover states mistake, no monetization, robots.txt disaster. no sugarcoating.
 - [x] **would @levelsio post this?** numbers-first, no fluff, direct about revenue ($0), specific about stack and costs. yes.

@@ -1,4 +1,4 @@
-# Affiliate Distribution Tweets — March 8, 2026
+# Affiliate Distribution Tweets, March 8, 2026
 
 **Status:** PARTIALLY_BLOCKED (Quality Gate 2026-03-08 20:10)
 **Links:** [COMPARISON_PAGE_URL] | [BEST_TOOLS_PAGE_URL] | [INSTANTLY_LINK] | [SMARTLEAD_LINK]
@@ -23,7 +23,7 @@ people spend 2 weeks asking "instantly or smartlead?" instead of just sending em
 ### Tweet 4
 the 7 AI tools i actually pay for in 2026. not the ones i "tried once and forgot." the ones hitting my credit card every month because they print money: [BEST_TOOLS_PAGE_URL]
 
-### Tweet 5 — BLOCKED (Quality Gate: fabricated revenue claim. Actual revenue = $0. Rewrite below.)
+### Tweet 5, BLOCKED (Quality Gate: fabricated revenue claim. Actual revenue = $0. Rewrite below.)
 ~~i spend $340/mo on AI tools. they generate $12K+/mo in revenue. here's every single one and exactly how i use them: [BEST_TOOLS_PAGE_URL]~~
 
 **REWRITE:**
@@ -36,7 +36,7 @@ stop asking "what tools should i use" in replies. i made a page with every tool 
 
 ## THREAD STARTERS (2)
 
-### Thread 7 — BLOCKED (Quality Gate: ENTIRE THREAD fabricated. User has sent 0 cold emails. No domain, no mailbox, no warmup. Posting this would be fraud.)
+### Thread 7, BLOCKED (Quality Gate: ENTIRE THREAD fabricated. User has sent 0 cold emails. No domain, no mailbox, no warmup. Posting this would be fraud.)
 
 ~~**Tweet 7.1:**~~
 ~~i sent 31,000 cold emails in 90 days. here's every number, what worked, what flopped, and the exact stack that books me 15 calls/week.~~
@@ -61,7 +61,7 @@ the full tool stack and comparison i used for this: [COMPARISON_PAGE_URL]. if yo
 
 ---
 
-### Thread 8 — BLOCKED (Quality Gate: fabricated metrics. User has no active cold outbound system. "60+ calls per month" is fiction.)
+### Thread 8, BLOCKED (Quality Gate: fabricated metrics. User has no active cold outbound system. "60+ calls per month" is fiction.)
 
 ~~**Tweet 8.1:**~~
 ~~my entire cold outbound stack costs $340/mo and books 60+ calls per month. here's every tool and why it's there.~~

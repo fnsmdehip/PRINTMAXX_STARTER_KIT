@@ -2316,3 +2316,192 @@ Just start.
 
 [ACQUISITION] UPDATE: How we hit $14k in revenue with $0 MRR [rev: $$14]
 
+
+
+---
+
+## Pending Enhancement (ALPHA107524, Score: 24)
+
+**Source:** r/SideProject | **URL:** https://www.reddit.com/r/SideProject/comments/1rxjl6q/finally_generating_revenue_after_almost_2_years/
+**Added:** 2026-03-18T20:22:22-04:00
+
+[ACQUISITION] Finally generating Revenue after almost 2 years!
+
+
+
+---
+
+## Pending Enhancement (ALPHA107533, Score: 30)
+
+**Source:** r/microsaas | **URL:** https://www.reddit.com/r/microsaas/comments/1rxjh3w/the_best_microsaas_ideas_in_my_dataset_are_narrow/
+**Added:** 2026-03-18T20:22:22-04:00
+
+[ACQUISITION] The best micro-SaaS ideas in my dataset are narrow, unsexy, and tied to revenue
+
+
+
+---
+
+## Pending Enhancement (ALPHA107666, Score: 26)
+
+**Source:** @nicolascole77 (high-signal-accounts) | **URL:** https://x.com/Nicolascole77/status/1818302763790414121
+**Added:** 2026-03-18T21:45:01-04:00
+
+How many emails does it take for someone to buy?
+
+After 20 cohorts of Ship 30, 10,000+ people enrolled, & millions of dollars in revenue, we've found that number.
+
+In this Coffee with Cole, I outline our entire launch email strategy.
+
+Check it out here: 
+https://
+tapthe.link/vHh4B00qH
+
+
+
+---
+
+## Pending Enhancement (ALPHA107688, Score: 24)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/alexcooldev/status/2034373764759330940
+**Added:** 2026-03-18T22:23:44-04:00
+
+Most people quit too early.
+
+Not because they’re not talented.
+Not because the idea is bad.
+But because nothing happens… at first.
+
+0 users.
+0 revenue.
+0 validation.
+Just you… and doubt.
+
+But here’s the truth:
+The first phase is always invisible.
+You’re building skills.
+You’re
+
+
+
+---
+
+## Pending Enhancement (ALPHA107693, Score: 58)
+
+**Source:** @alexcooldev (high-signal-accounts) | **URL:** https://x.com/alexcooldev/status/2034250717838680226
+**Added:** 2026-03-18T22:23:44-04:00
+
+One of my posts just went viral today 
+
+179K views in 24 hours (and still climbing)
+
+→ +700 new users
+→ $435 revenue in a single day (from my apps)
+
+Organic distribution is still underrated. 
+
+
+
+---
+
+## Pending Enhancement (ALPHA107704, Score: 20)
+
+**Source:** @AntonioEscudero (high-signal-accounts) | **URL:** https://x.com/AntonioEscudero/status/2034327213164953808
+**Added:** 2026-03-18T22:23:44-04:00
+
+I am starting to consider raising the prices of our directory submission service. 
+
+We are getting good reviews but less conversion and revenue than some of our competitors with the same amount of traffic, even though we offer a better service for less price.
+
+I've received some
+
+
+
+---
+
+## Pending Enhancement (ALPHA107822, Score: 37)
+
+**Source:** @financialjuice (high-signal-accounts) | **URL:** https://x.com/financialjuice/status/2034361660165513526
+**Added:** 2026-03-19T01:10:47-04:00
+
+$MU
+Adjusted EPS $12.20, est. $9
+Sees Q3 adjusted EPS $18.75 to $19.55, est. $11.29
+Sees Q3 adjusted revenue $32.75B to $34.25B, est. $23.66B
+Sees Q3 adjusted gross margin about 81%, est. 72.4%
+Declared quarterly dividend of $0.15/share
+
+
+
+---
+
+## Pending Enhancement (ALPHA107829, Score: 24)
+
+**Source:** @stockMKTnewz (high-signal-accounts) | **URL:** https://x.com/StockMKTNewz/status/2034366992052814237
+**Added:** 2026-03-19T01:10:47-04:00
+
+Micron $MU just reported revenue of $23.9 Billion up from $3.8B in the same quarter in 2022
+
+
+
+---
+
+## Pending Enhancement (ALPHA107831, Score: 24)
+
+**Source:** @stockMKTnewz (high-signal-accounts) | **URL:** https://x.com/StockMKTNewz/status/2034360246605389844
+**Added:** 2026-03-19T01:10:47-04:00
+
+Micron $MU just said next quarter it expects revenue of ~$33.5 Billion above analyst expectations of $23.8B
+
+
+
+---
+
+## Pending Enhancement (ALPHA107971, Score: 24)
+
+**Source:** @unusual_whales (high-signal-accounts) | **URL:** https://x.com/unusual_whales/status/2034615118450037141
+**Added:** 2026-03-19T11:03:22-04:00
+
+Bank of America says OpenAI’s revised outlook, $283 billion in revenue and $665 billion in compute spend by 2030, could further support valuations across AI equities.
+
+
+
+---
+
+## Pending Enhancement (ALPHA108024, Score: 24)
+
+**Source:** @stockMKTnewz (high-signal-accounts) | **URL:** https://x.com/StockMKTNewz/status/2034621716077641937
+**Added:** 2026-03-19T11:03:22-04:00
+
+$UBER plans to invest up to $1.25 billion in Rivian  $RIVN as part of a deal to deploy up to 50,000 robotaxis through 2031 - CNBC
+
+
+
+---
+
+## Pending Enhancement (ALPHA108164, Score: 35)
+
+**Source:** @zephyr_z9 (high-signal-accounts) | **URL:** https://x.com/zephyr_z9/status/2034654209401127306
+**Added:** 2026-03-20T02:59:31-04:00
+
+$40k drones destroy $100 billion in revenue
+
+
+
+---
+
+## Pending Enhancement (ALPHA108372, Score: 37)
+
+**Source:** @financialjuice (high-signal-accounts) | **URL:** https://x.com/financialjuice/status/2034723384160919999
+**Added:** 2026-03-20T07:20:22-04:00
+
+$FDX FedEx Q3 Earnings
+
+Adjusted EPS $5.25, est. $4.17
+Revenue $24.0B, est. $23.49B
+Adjusted Operating Income $1.62B, est. $1.37B
+Adjusted Operating Margin 6.7%, est. 6.02%
+Federal Express Revenue $21.15B, est. $20.58B
+FedEx Freight Revenue $1.99B, est. $2.03B
+Sees FY adj EPS
+

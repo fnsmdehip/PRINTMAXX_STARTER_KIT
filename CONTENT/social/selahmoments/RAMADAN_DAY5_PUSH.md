@@ -1,4 +1,4 @@
-# @selahmoments — Ramadan Day 5 Content Push
+# @selahmoments, Ramadan Day 5 Content Push
 # Generated: 2026-03-05
 # Status: PENDING_REVIEW
 

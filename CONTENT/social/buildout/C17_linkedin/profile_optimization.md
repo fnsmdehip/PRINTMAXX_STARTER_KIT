@@ -1,4 +1,4 @@
-# LinkedIn Profile Optimization — Complete Guide
+# LinkedIn Profile Optimization, Complete Guide
 # Converts profile visitors into inbound leads
 
 ---
@@ -17,10 +17,10 @@ Every section below is optimized for one goal: moving people through this funnel
 **Formula:** [What you do] + [Who you help] + [Measurable outcome]
 
 **Bad headlines (and why):**
-- "Founder & CEO at PrintMaxx" — describes you, not value
-- "Digital Marketing Specialist" — generic, no differentiation
-- "Helping businesses grow online" — vague, no numbers
-- "Available for freelance work" — signals desperation
+- "Founder & CEO at PrintMaxx", describes you, not value
+- "Digital Marketing Specialist", generic, no differentiation
+- "Helping businesses grow online", vague, no numbers
+- "Available for freelance work", signals desperation
 
 **Good headline formula:**
 [Service] for [specific niche] | [Outcome with number] | [Social proof signal]
@@ -51,7 +51,7 @@ For AI automation:
 
 **Requirements:**
 - 400x400px minimum (800x800 ideal)
-- Professional but not stuffy — approachable wins on LinkedIn
+- Professional but not stuffy, approachable wins on LinkedIn
 - Clear face, neutral or light background
 - Smile: yes (increases connection acceptance rate ~20%)
 - Eye contact with camera
@@ -73,7 +73,7 @@ For AI automation:
 **Template:**
 
 ```
-[HOOK — one consequence-first sentence]
+[HOOK, one consequence-first sentence]
 Most [target client] are leaving [specific amount] on the table every month.
 
 [THE PROBLEM]
@@ -115,7 +115,7 @@ Here's the framework I use now:
 
 • Reddit mining: Find real buyer language in 10 subreddits before writing a single line of copy
 • Cold email first: Generate cash immediately, use that runway to build passive assets
-• Parallel compounding: Build one content channel + one passive product simultaneously — they feed each other
+• Parallel compounding: Build one content channel + one passive product simultaneously, they feed each other
 
 In 12 months using this system:
 • Built and monetized 7 digital products (templates, tools, guides)
@@ -126,7 +126,7 @@ I work best with solopreneurs who are already earning something and want to syst
 
 This isn't for people looking for overnight riches or a magic formula. There isn't one.
 
-If you want the actual playbook — documented with real numbers, real failures, and real timelines — DM me "SYSTEM" and I'll send the free breakdown.
+If you want the actual playbook, documented with real numbers, real failures, and real timelines, DM me "SYSTEM" and I'll send the free breakdown.
 ```
 
 ---
@@ -137,11 +137,11 @@ If you want the actual playbook — documented with real numbers, real failures,
 
 **Best items to feature (in order of conversion power):**
 
-1. **Case study post** — your highest-performing post with real results (screenshot the LinkedIn post itself)
-2. **Lead magnet** — free resource that collects emails (Notion template, PDF guide, calculator)
-3. **Newsletter landing page** — if you have a newsletter, link here
-4. **Best article** — 2,000+ word post that shows expertise depth
-5. **Booking link** — Calendly for discovery calls
+1. **Case study post**, your highest-performing post with real results (screenshot the LinkedIn post itself)
+2. **Lead magnet**, free resource that collects emails (Notion template, PDF guide, calculator)
+3. **Newsletter landing page**, if you have a newsletter, link here
+4. **Best article**, 2,000+ word post that shows expertise depth
+5. **Booking link**, Calendly for discovery calls
 
 **Never feature:**
 - Your company homepage (too generic)
@@ -172,7 +172,7 @@ Freelance Consultant (2024-Present)
 
 GOOD:
 ```
-Independent Consultant — Cold Email & Systems (2024-Present)
+Independent Consultant, Cold Email & Systems (2024-Present)
 • Generated $340K+ in client pipeline via targeted cold outreach (847 emails → 4 clients/month average)
 • Built and monetized 7 digital products; highest grossing template: $4,200 in first 90 days
 • Grew newsletter from 0→800 subscribers in 90 days with $0 paid acquisition
@@ -204,7 +204,7 @@ For Notion consultant:
 Turn on Creator Mode: Settings → Visibility → Creator Mode
 
 **Benefits:**
-- Adds Follow button as primary CTA (replaces Connect — better for content-first strategy)
+- Adds Follow button as primary CTA (replaces Connect, better for content-first strategy)
 - Shows your content activity at top of profile
 - Unlocks LinkedIn Live and newsletters
 - Lets you add up to 5 hashtags (topics you post about)
@@ -223,7 +223,7 @@ Pick 5 relevant to your niche. Examples:
 
 **Recommendations:**
 - Request at least 3 recommendations from past clients/colleagues
-- Template DM: "Hey [Name] — would you be open to writing a brief LinkedIn recommendation for me? Happy to return the favor. Even 2-3 sentences would be huge."
+- Template DM: "Hey [Name], would you be open to writing a brief LinkedIn recommendation for me? Happy to return the favor. Even 2-3 sentences would be huge."
 - Aim for recommendations that mention specific numbers or results
 
 ---

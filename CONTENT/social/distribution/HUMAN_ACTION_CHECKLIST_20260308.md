@@ -1,4 +1,4 @@
-# HUMAN ACTION CHECKLIST — March 8, 2026
+# HUMAN ACTION CHECKLIST, March 8, 2026
 # Distribution Engine Cycle 7
 # Every item has copy-paste content ready in day1_launch_packs_20260308.md
 
@@ -55,7 +55,7 @@
 
 ---
 
-## TIER 4: WEEK 3 — RAMADAN FINAL PUSH (45 min)
+## TIER 4: WEEK 3, RAMADAN FINAL PUSH (45 min)
 
 | # | Action | Time | Content Ready | Revenue Impact |
 |---|--------|------|---------------|----------------|

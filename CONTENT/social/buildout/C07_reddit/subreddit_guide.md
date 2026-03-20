@@ -1,8 +1,8 @@
-# Subreddit Guide — Rules, Posting Frequency, What Works
+# Subreddit Guide, Rules, Posting Frequency, What Works
 
 ## Priority Tiers
 
-### TIER 1 — High value, high traffic, manageable rules
+### TIER 1, High value, high traffic, manageable rules
 Post here first. Build karma here first.
 
 ---
@@ -20,12 +20,12 @@ Post here first. Build karma here first.
 
 **What works:**
 - Specific case studies with real numbers ("I got X results in Y time by doing Z")
-- Failure stories (paradoxically high engagement — 40% more comments than success posts)
+- Failure stories (paradoxically high engagement, 40% more comments than success posts)
 - Framework posts ("The framework I use for X")
 - Analysis posts ("Why X strategy doesn't work anymore")
 
 **What kills posts:**
-- "I just launched X, check it out" — instant remove
+- "I just launched X, check it out", instant remove
 - Vague income claims without proof
 - Promotional tone in the title
 
@@ -49,7 +49,7 @@ Post here first. Build karma here first.
 **What works:**
 - Launch posts showing real usage numbers ("I launched 3 weeks ago, 240 users, here's what I learned")
 - Technical teardowns ("How I built X in a weekend")
-- Honest failure posts ("I shut down my SaaS — here's why")
+- Honest failure posts ("I shut down my SaaS, here's why")
 
 **What kills posts:**
 - Asking for feedback on something you clearly built in an hour
@@ -65,7 +65,7 @@ Post here first. Build karma here first.
 **Domain Authority:** 85
 
 **Rules:**
-- Amazon affiliate heavy community — relevant
+- Amazon affiliate heavy community, relevant
 - Case studies welcome
 - No self-promotion of services
 - Detailed posts preferred
@@ -121,7 +121,7 @@ Post here first. Build karma here first.
 
 ---
 
-## TIER 2 — High engagement, niche audiences
+## TIER 2, High engagement, niche audiences
 
 ---
 
@@ -244,23 +244,23 @@ Post here first. Build karma here first.
 
 ---
 
-## TIER 3 — High volume, lower quality signal (use for reach, not reputation)
+## TIER 3, High volume, lower quality signal (use for reach, not reputation)
 
-- r/personalfinance (5.4M) — frugality and finance basics, huge audience
-- r/financialindependence (1.8M) — FIRE community, income-focused
-- r/smallbusiness (1.5M) — general small business, good for local biz content
-- r/Freelance (650K) — freelancer community
-- r/forhire (200K) — job board, hiring/services
-- r/socialmedia (650K) — social media strategy
+- r/personalfinance (5.4M), frugality and finance basics, huge audience
+- r/financialindependence (1.8M), FIRE community, income-focused
+- r/smallbusiness (1.5M), general small business, good for local biz content
+- r/Freelance (650K), freelancer community
+- r/forhire (200K), job board, hiring/services
+- r/socialmedia (650K), social media strategy
 
 ---
 
 ## Subreddits to AVOID
 
-- r/WorkOnline — low quality, MLM spam overruns it
-- r/beermoney — wrong audience (looking for $10/day, not business)
-- r/hwatawm — borderline spam community
-- r/slavelabour — race to bottom pricing, wrong positioning
+- r/WorkOnline, low quality, MLM spam overruns it
+- r/beermoney, wrong audience (looking for $10/day, not business)
+- r/hwatawm, borderline spam community
+- r/slavelabour, race to bottom pricing, wrong positioning
 
 ---
 
@@ -271,7 +271,7 @@ Target: r/learnprogramming, r/webdev, r/ChatGPT
 
 - 5 helpful comments per day
 - Answer specific technical questions (not "great post!")
-- Reference actual experience: "I ran into this too — what worked for me was X"
+- Reference actual experience: "I ran into this too, what worked for me was X"
 - Goal: 100 comment karma
 
 **Phase 2 (Days 31-60): Light posting**
@@ -293,11 +293,11 @@ All Tier 1 and Tier 2 subreddits unlocked
 
 ## Content Calendar Template
 
-**Monday:** r/Entrepreneur — case study or framework post
-**Tuesday:** r/ChatGPT or r/learnprogramming — technical tutorial
-**Wednesday:** r/passive_income or r/Affiliatemarketing — income report
-**Thursday:** r/SideProject — project update
-**Friday:** r/Entrepreneur — self-promotion allowed in weekly thread
+**Monday:** r/Entrepreneur, case study or framework post
+**Tuesday:** r/ChatGPT or r/learnprogramming, technical tutorial
+**Wednesday:** r/passive_income or r/Affiliatemarketing, income report
+**Thursday:** r/SideProject, project update
+**Friday:** r/Entrepreneur, self-promotion allowed in weekly thread
 **Saturday/Sunday:** Comments only (organic reach is lower for posts)
 
 ---

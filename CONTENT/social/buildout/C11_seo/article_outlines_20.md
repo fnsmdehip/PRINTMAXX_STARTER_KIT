@@ -1,4 +1,4 @@
-# C11 SEO Content Farm — 20 Article Outlines
+# C11 SEO Content Farm, 20 Article Outlines
 # Each: 1,500-2,000 words | Long-tail focus | Affiliate + ad monetization ready
 
 ---
@@ -50,29 +50,29 @@
 - H2: Why AI is the best opportunity for non-coders right now
   - Cost of starting: $0-50/mo
   - Barrier to entry dropping weekly
-- H2: Method 1 — AI content writing for small businesses
+- H2: Method 1, AI content writing for small businesses
   - Market: 33 million small businesses in US, most can't afford agencies
   - Rate: $500-1,500/month retainer
   - Tools: ChatGPT + Jasper + SurferSEO
   - How to get first client: Google Maps + cold email script
-- H2: Method 2 — Etsy AI art prints (print-on-demand)
+- H2: Method 2, Etsy AI art prints (print-on-demand)
   - Midjourney → upscale → Printful → Etsy
   - Earnings potential: $200-800/mo passive
-- H2: Method 3 — AI voiceover service
+- H2: Method 3, AI voiceover service
   - ElevenLabs + Descript for podcast/YouTube clients
   - Rates: $0.10-0.30 per word delivered
-- H2: Method 4 — AI chatbot setup for local businesses
+- H2: Method 4, AI chatbot setup for local businesses
   - Botpress or Tidio installation: $200-500 one-time
   - Recurring: $50-150/mo maintenance
-- H2: Method 5 — Faceless YouTube with AI narration
+- H2: Method 5, Faceless YouTube with AI narration
   - ElevenLabs + Pictory + stock footage
   - Channel types: finance, history, tech explainers
-- H2: Method 6 — AI-written newsletters
+- H2: Method 6, AI-written newsletters
   - Beehiiv + Claude API
   - Monetize: sponsorships ($30-50 CPM at 1K subs)
-- H2: Method 7 — Prompt packs on Gumroad
+- H2: Method 7, Prompt packs on Gumroad
   - $15-49 per pack
-  - Example: "100 ChatGPT prompts for freelancers" — $7K revenue case study
+  - Example: "100 ChatGPT prompts for freelancers", $7K revenue case study
 - CTA: Free tool comparison table (gated with email)
 
 ---
@@ -88,25 +88,25 @@
 - H2: How I tested each platform (methodology)
   - Same product, same mockup, ordered 3 items each
   - Tracked: price, quality, shipping time, customer service
-- H2: Printful — best for quality, worst for margins
+- H2: Printful, best for quality, worst for margins
   - Pricing table: t-shirt $14.95 base, mug $9.95 base
   - Pros: quality control, warehousing, global shipping
   - Cons: 20-30% more expensive than competitors
-- H2: Printify — best margins, inconsistent quality
+- H2: Printify, best margins, inconsistent quality
   - Premium plan $29/mo saves 20% on base prices
   - Multiple providers = quality roulette
   - Use when: volume > 50 orders/mo to justify premium
-- H2: Gelato — best for European customers
+- H2: Gelato, best for European customers
   - Local printing in 34 countries = faster shipping
   - Base prices competitive with Printful
-- H2: SPOD — fastest shipping in the game
+- H2: SPOD, fastest shipping in the game
   - 48-hour fulfillment average
   - Limited catalog vs competitors
-- H2: Gooten, Apliiq, CustomCat — niche use cases
+- H2: Gooten, Apliiq, CustomCat, niche use cases
   - Gooten: best for custom cut & sew
   - Apliiq: apparel with inside labels
   - CustomCat: best bulk pricing
-- H2: Amazon Merch on Demand — the wildcard
+- H2: Amazon Merch on Demand, the wildcard
   - No fees, royalties only
   - Invite-only, takes 3-6 months to get approved
   - Once in: near-zero overhead passive income
@@ -217,18 +217,18 @@
   - Cookie duration (30+ days vs 24-hour Amazon)
   - Commission rate (10%+ recurring vs one-time 3%)
   - Payout threshold (under $100 so you can actually get paid)
-- H2: SaaS affiliates — the recurring income play
+- H2: SaaS affiliates, the recurring income play
   - ConvertKit: 30% recurring, 60-day cookie
   - Beehiiv: 50% first year
   - Notion (waitlisted but exists)
   - Jasper: 30% recurring
   - ActiveCampaign: 20-30% recurring
-- H2: Digital product affiliates — high one-time commissions
+- H2: Digital product affiliates, high one-time commissions
   - Gumroad creator referral: 10% of creator's lifetime revenue
   - Whop: up to 30% per sale
   - Teachable affiliate program: 30%
   - Stan Store: 20% recurring
-- H2: Physical product affiliates — lower margin but high volume
+- H2: Physical product affiliates, lower margin but high volume
   - Amazon Associates: 1-10% (low but converts on everything)
   - Walmart Affiliate: 1-4%
   - Target Affiliate: 1-8%
@@ -267,7 +267,7 @@
   - Pattern: specific use case + save time + look professional
 - H2: The 3 price points and what to put in each
   - $7-15: single-purpose template (budget buyer)
-  - $27-47: bundle or comprehensive system (main offer)
+  - $27-47: bundle or complete system (main offer)
   - $97-197: advanced OS with tutorial video (premium)
 - H2: Where to sell Notion templates
   - Gumroad: 10% fee, best for beginners, search traffic
@@ -379,8 +379,8 @@
   - What it takes: right gig selection + review momentum
 - H2: The gig categories with highest buyer demand right now
   - AI-related services: prompt engineering, ChatGPT automation ($50-300/gig)
-  - Video editing: short-form (TikTok, Reels) — $30-150
-  - Voiceover: AI-enhanced human voices — $25-100
+  - Video editing: short-form (TikTok, Reels), $30-150
+  - Voiceover: AI-enhanced human voices, $25-100
   - Data entry/scraping: $10-50 (volume play)
   - Logo design: oversaturated, avoid unless you're exceptional
 - H2: How to write a Fiverr gig that shows up in search
@@ -388,7 +388,7 @@
   - Bad: "I will do video editing"
   - Good: "I will edit your TikTok and Reels videos for viral performance"
   - Keyword research: Fiverr search bar autocomplete method
-- H2: Gig packages — how to price for maximum revenue
+- H2: Gig packages, how to price for maximum revenue
   - Basic: $15-25 (gets you reviews)
   - Standard: $50-75 (where you make money)
   - Premium: $150-300 (where you want buyers)
@@ -402,7 +402,7 @@
   - Day 1-30: 0-5 reviews, focus on delivery quality
   - Day 31-60: 5-20 reviews, raise prices 25%
   - Day 61-90: 20+ reviews, $1K/mo becomes realistic
-- H2: Fiverr Pro — how to qualify and why it matters
+- H2: Fiverr Pro, how to qualify and why it matters
   - 3x higher search placement for Pro sellers
   - Application: portfolio + 5+ review average + English proficiency test
 - CTA: Fiverr Pro affiliate signup
@@ -421,12 +421,12 @@
   - Used each for 90+ days
   - Measured: time saved per week + revenue impact
   - Cut tools that didn't pay for themselves
-- H2: Free tier first — tools that cost nothing to start
+- H2: Free tier first, tools that cost nothing to start
   - Notion (productivity/CRM/docs)
-  - Canva (design — free tier covers 90% of needs)
-  - Beehiiv (newsletter — free to 2,500 subs)
-  - Carrd.co (landing pages — free tier available)
-  - Calendly (scheduling — free basic)
+  - Canva (design, free tier covers 90% of needs)
+  - Beehiiv (newsletter, free to 2,500 subs)
+  - Carrd.co (landing pages, free tier available)
+  - Calendly (scheduling, free basic)
 - H2: $50/month stack that covers everything
   - ConvertKit $15/mo (email up to 1K subs)
   - Canva Pro $13/mo (removes free tier limits)
@@ -434,7 +434,7 @@
   - Descript $12/mo (video/podcast editing)
   - Total: $48/mo
 - H2: AI tools that actually save time (not just hype)
-  - Claude/ChatGPT Plus: $20/mo — writing + research + code
+  - Claude/ChatGPT Plus: $20/mo, writing + research + code
   - Jasper: skip it, too expensive for what you get
   - Copy.ai: free tier covers most needs
 - H2: Automation tools that scale without hiring
@@ -544,19 +544,19 @@
   - Everything requires active work upfront
   - The spectrum: mostly passive → mostly active
   - False passive: dropshipping, Amazon FBA (more active than advertised)
-- H2: Tier 1 — Actually passive (work once, earn forever)
+- H2: Tier 1, Actually passive (work once, earn forever)
   - Digital downloads: set up Gumroad/Etsy, rank in search, money comes in
-  - Stock photos: Shutterstock/Adobe Stock — upload once, license indefinitely
+  - Stock photos: Shutterstock/Adobe Stock, upload once, license indefinitely
   - Dividend stocks: M1 Finance or Fidelity, $10K minimum for meaningful income
   - YouTube content: videos ranked in search continue earning ad revenue
-- H2: Tier 2 — Mostly passive (1-2 hours/week maintenance)
+- H2: Tier 2, Mostly passive (1-2 hours/week maintenance)
   - Affiliate blog: weekly or monthly content needed
   - Rental income: property management handles day-to-day
   - Online course: update annually, promote quarterly
 - H2: The $500/month passive income starter (under $500 to set up)
   - 10 Etsy digital products: $0 inventory, $0.20/listing, ~$50 setup
   - 1 affiliate blog: hosting $3/mo, domain $12/yr
-  - Stock photos: 50 uploads to 3 platforms — $30-100/mo once indexed
+  - Stock photos: 50 uploads to 3 platforms, $30-100/mo once indexed
 - H2: How long it realistically takes to hit $1K/month
   - Digital products: 6-12 months with consistent effort
   - Blog: 12-24 months for meaningful search traffic
@@ -580,35 +580,35 @@
 - H2: What's actually changed about making money with AI (2024 → 2025)
   - Less novelty, more specialization required
   - People hiring: specific domain experts who use AI, not generic "AI users"
-- H2: Method 1 — Write product descriptions at scale
+- H2: Method 1, Write product descriptions at scale
   - 300 descriptions in 3 hours → sell to Shopify/Etsy stores
   - Rate: $0.10-0.25 per description = $30-75 for 3 hours work
   - Scale: Upwork + Fiverr for clients
-- H2: Method 2 — Local SEO blog writing for agencies
+- H2: Method 2, Local SEO blog writing for agencies
   - Agencies resell content to local businesses at $100-300/article
   - Your price: $25-50, they keep margin
   - Volume possible: 10-15 articles/day with quality checks
-- H2: Method 3 — Email newsletter ghostwriting
+- H2: Method 3, Email newsletter ghostwriting
   - $500-1,500/month retainer for weekly newsletter
   - Typical: 45-minute intake call + 2-hour writing = 3 hours/week
   - Effective hourly: $40-125
-- H2: Method 4 — Build GPT custom assistants for businesses
+- H2: Method 4, Build GPT custom assistants for businesses
   - GPT Builder (ChatGPT Plus): no code required
   - Charge: $200-500 setup + $50-150/month maintenance
   - Market: restaurants (menu explainer), law firms (FAQ bot), ecom (sizing helper)
-- H2: Method 5 — Prompt packs and templates
+- H2: Method 5, Prompt packs and templates
   - Package: 50 prompts for specific use case, sell $15-49
   - Top sellers: "100 ChatGPT prompts for realtors", "Instagram captions pack"
   - Platform: Gumroad, Etsy, Whop
-- H2: Method 6 — AI consulting for non-tech businesses
+- H2: Method 6, AI consulting for non-tech businesses
   - Business owners don't have time to learn AI
   - Workshop: $500-1,000 for 2-hour "AI for your business" session
   - Recurring: $200-500/month to implement and maintain
-- H2: Method 7 — Code review and debugging service
+- H2: Method 7, Code review and debugging service
   - ChatGPT + GitHub Copilot makes code review faster
   - Non-coders: hire an "AI code reviewer" for $20-50/hour
   - Your pitch: "I'll find and fix bugs in your Python scripts using AI"
-- H2: Method 8 — Translate and localize content at scale
+- H2: Method 8, Translate and localize content at scale
   - DeepL + ChatGPT post-edit = 3x faster than manual
   - Rate: $0.05-0.15 per word (vs $0.20+ for pure manual)
   - Market: European SaaS companies expanding to English-speaking markets
@@ -754,24 +754,24 @@
   - Shopify Payments: not available in 30+ countries
   - Apps add up: average store spends $200-400/month on apps
   - Basic plan: $39/mo before apps
-- H2: WooCommerce — best for control and customization
+- H2: WooCommerce, best for control and customization
   - Cost: $3-15/mo hosting + free WooCommerce plugin
   - Fees: 0% transaction (Stripe/PayPal fees apply: 2.9% + $0.30)
   - When to use: you have WordPress experience, need total control
   - When to avoid: you want managed hosting and simplicity
-- H2: BigCommerce — enterprise features at mid-market price
+- H2: BigCommerce, enterprise features at mid-market price
   - $39/mo Standard, 0% transaction fees
   - Better for: multi-channel selling, large catalogs
   - Worse for: small stores, beginners
-- H2: Squarespace — best for design-first stores
+- H2: Squarespace, best for design-first stores
   - Commerce: $36/mo, no transaction fees
   - Best for: photographers, artists, boutique retail
   - Not for: dropshipping, large inventory
-- H2: Ecwid — add a store to any existing website
+- H2: Ecwid, add a store to any existing website
   - Free tier: 5 products
   - $25/mo for unlimited products
   - Best for: adding commerce to existing WordPress/Wix site
-- H2: Gumroad — digital products only, zero monthly fee
+- H2: Gumroad, digital products only, zero monthly fee
   - 10% fee on each transaction (no monthly fee)
   - Best for: ebooks, templates, software, memberships
   - Not for: physical goods

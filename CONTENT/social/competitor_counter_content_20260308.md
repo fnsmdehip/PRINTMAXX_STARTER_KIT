@@ -122,7 +122,7 @@ the apps:
 - faith apps (13 denominations - Catholic, Baptist, Orthodox, etc.)
 - FocusLock (screen time blocker)
 - SleepMaxx (sleep tracker)
-- WalkToUnlock (step counter to unlock phone)
+- WalkToUnlock (step counter to get phone)
 - ColdMaxx (cold email tool)
 - MealMaxx (meal planner)
 - PrayerLock (prayer-based phone lock)
@@ -192,7 +192,7 @@ the system works. the human is the bottleneck.
 ```
 if you want to see the full stack, agent architecture, or specific app code:
 
-follow for the updates. i'm documenting the entire $0 to first dollar journey in real time.
+follow for the updates. i'm documenting the entire $0 to first dollar path in real time.
 
 day 33. $0 revenue. 22 apps built. 33 agents running.
 

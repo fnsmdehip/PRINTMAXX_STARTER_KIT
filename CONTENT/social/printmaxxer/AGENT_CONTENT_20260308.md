@@ -1,6 +1,6 @@
-# Agent-Generated Content — 2026-03-08 23:00
+# Agent-Generated Content, 2026-03-08 23:00
 
-advice is the PRINTMAXX content flywheel in action — scan → analyze → create → distribute. Each tweet below pulls from today's actual RBI scan, pain point digest, and arb data, making them authentic signal posts rather than recycled platitudes.
+advice is the PRINTMAXX content flywheel in action, scan → analyze → create → distribute. Each tweet below pulls from today's actual RBI scan, pain point digest, and arb data, making them authentic signal posts rather than recycled platitudes.
 `─────────────────────────────────────────────────`
 
 ---

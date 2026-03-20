@@ -165,6 +165,90 @@ def _check_guardrails(request: HandoffRequest) -> str | None:
 
 
 # ---------------------------------------------------------------------------
+# GateKeeper -- action-level approval gates
+# ---------------------------------------------------------------------------
+
+GATES_FILE = Path(os.environ.get(
+    "SOVRUN_GATES_FILE", PROJECT_ROOT / "config" / "gates.json"))
+
+# Actions blocked by default unless explicitly allowed
+_DEFAULT_BLOCKED: list[str] = [
+    "delete", "send_email", "spend_money",
+    "deploy_production", "external_api_write",
+]
+
+
+class GateKeeper:
+    """Block certain action types unless explicitly approved.
+
+    Stores gate configuration in config/gates.json. Actions on the blocked
+    list are rejected by check_gate() unless removed or overridden.
+
+    Usage:
+        gk = GateKeeper()
+        gk.check_gate("read_file")        # True (allowed)
+        gk.check_gate("delete")           # False (blocked by default)
+        gk.add_gate("nuke_db")            # add custom blocked action
+        gk.remove_gate("send_email")      # unblock an action
+    """
+
+    def __init__(self, gates_file: Path | None = None) -> None:
+        self._path = gates_file or GATES_FILE
+        self._blocked: set[str] = set()
+        self._load()
+
+    def _load(self) -> None:
+        """Load gates from disk, merging with defaults."""
+        self._blocked = set(_DEFAULT_BLOCKED)
+        if self._path.exists():
+            try:
+                data = json.loads(self._path.read_text())
+                stored = data.get("blocked_actions", [])
+                if isinstance(stored, list):
+                    self._blocked = set(stored)
+            except (json.JSONDecodeError, OSError):
+                pass
+
+    def _save(self) -> None:
+        """Persist gate config to disk."""
+        _ensure_dir(self._path.parent)
+        data = {"blocked_actions": sorted(self._blocked)}
+        self._path.write_text(json.dumps(data, indent=2) + "\n")
+
+    def add_gate(self, action: str, requires_approval: bool = True) -> None:
+        """Add an action to the blocked list."""
+        if requires_approval:
+            self._blocked.add(action.lower())
+        else:
+            self._blocked.discard(action.lower())
+        self._save()
+
+    def remove_gate(self, action: str) -> None:
+        """Remove an action from the blocked list (allow it)."""
+        self._blocked.discard(action.lower())
+        self._save()
+
+    def check_gate(self, action: str) -> bool:
+        """Return True if the action is ALLOWED, False if blocked."""
+        return action.lower() not in self._blocked
+
+    def list_gates(self) -> list[str]:
+        """Return sorted list of currently blocked actions."""
+        return sorted(self._blocked)
+
+    def status(self) -> str:
+        """Formatted status string."""
+        gates = self.list_gates()
+        lines = [f"\n=== GateKeeper ({len(gates)} blocked actions) ===\n"]
+        for g in gates:
+            lines.append(f"  BLOCKED: {g}")
+        if not gates:
+            lines.append("  (no gates configured -- all actions allowed)")
+        lines.append("")
+        return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
 # HandoffRouter
 # ---------------------------------------------------------------------------
 
@@ -175,13 +259,15 @@ class HandoffRouter:
     Supports sync and async (callback) execution with timeout enforcement.
     """
 
-    def __init__(self, log_path: Path | None = None) -> None:
+    def __init__(self, log_path: Path | None = None,
+                 gate_keeper: GateKeeper | None = None) -> None:
         self._registry: dict[str, Callable[..., dict[str, Any]]] = {}
         self._lock = threading.Lock()
         self._log_path = log_path or HANDOFF_LOG
         self._trajectory = TrajectoryLogger("handoff_router")
         self._cb = CircuitBreaker(name="handoff", failure_threshold=5,
                                   recovery_timeout=120, window=600)
+        self._gate = gate_keeper or GateKeeper()
         _ensure_dir(self._log_path.parent)
 
     # -- Registry -----------------------------------------------------------
@@ -218,7 +304,7 @@ class HandoffRouter:
     def _log_handoff(self, request: HandoffRequest, result: HandoffResult) -> None:
         """Append handoff record to JSONL audit trail."""
         entry = {
-            "timestamp": _now_iso(),
+            "ts": _now_iso(),
             "source": request.source_agent,
             "target": request.target_agent,
             "task": request.task_description,
@@ -314,6 +400,18 @@ class HandoffRouter:
         if violation:
             result = HandoffResult(
                 success=False, result_data={}, error=violation,
+                source_agent=request.source_agent,
+                target_agent=request.target_agent,
+            )
+            self._log_handoff(request, result)
+            return result
+
+        # GateKeeper check -- block destructive actions unless approved
+        action = str(request.context.get("action", "")).lower()
+        if action and not self._gate.check_gate(action):
+            result = HandoffResult(
+                success=False, result_data={},
+                error=f"GATE BLOCKED: action '{action}' requires approval",
                 source_agent=request.source_agent,
                 target_agent=request.target_agent,
             )
@@ -476,7 +574,7 @@ def _show_history(limit: int = 20) -> None:
         tgt = e.get("target", "?")
         task = e.get("task", "")[:60]
         err = e.get("error", "")
-        ts = e.get("timestamp", "")[:19]
+        ts = e.get("ts", e.get("timestamp", ""))[:19]
         line = f"  [{ts}] {status:4s} {dur:6d}ms  {src} -> {tgt}  {task}"
         if err:
             line += f"  ERR: {err[:40]}"
@@ -492,9 +590,11 @@ def main() -> None:
                         help="Show registered agents")
     parser.add_argument("--history", nargs="?", const=20, type=int,
                         metavar="N", help="Show last N handoffs (default 20)")
+    parser.add_argument("--gates", action="store_true",
+                        help="Show configured action gates")
     args = parser.parse_args()
 
-    if not any([args.status, args.history is not None]):
+    if not any([args.status, args.history is not None, args.gates]):
         parser.print_help()
         return
 
@@ -504,6 +604,10 @@ def main() -> None:
 
     if args.history is not None:
         _show_history(limit=args.history)
+
+    if args.gates:
+        gk = GateKeeper()
+        print(gk.status())
 
 
 if __name__ == "__main__":

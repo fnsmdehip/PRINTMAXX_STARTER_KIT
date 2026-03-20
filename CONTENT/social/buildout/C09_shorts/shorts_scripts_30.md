@@ -1,4 +1,4 @@
-# YouTube Shorts Scripts — 30 Scripts Ready to Record/Narrate
+# YouTube Shorts Scripts, 30 Scripts Ready to Record/Narrate
 
 **Format:** Hook (0-3s) → Payoff (4-45s) → CTA (last 5s)
 **Niches:** Solopreneur/MMO, Productivity, Tech/AI, Passive Income
@@ -8,7 +8,7 @@
 
 ## BATCH 1: MONEY METHODS (Shorts 1-10)
 
-### Short 1 — "I Made $300 This Week With No Inventory"
+### Short 1, "I Made $300 This Week With No Inventory"
 **Hook (0-3s):** "I made $300 this week. no inventory. no shipping. here's how."
 **Body (4-42s):**
 "print-on-demand. I found 3 trending phrases on Reddit. uploaded them to Printify. listed on Etsy. didn't touch a single product.
@@ -22,7 +22,7 @@ you can start today for $0."
 
 ---
 
-### Short 2 — "This Cold Email Made Me $2,500"
+### Short 2, "This Cold Email Made Me $2,500"
 **Hook (0-3s):** "one cold email. $2,500. here's the exact script."
 **Body (4-42s):**
 "subject line: quick question about your website
@@ -38,7 +38,7 @@ the math: $2,500 ÷ 200 emails = $12.50 per email sent."
 
 ---
 
-### Short 3 — "The $0 App I Built in 2 Hours"
+### Short 3, "The $0 App I Built in 2 Hours"
 **Hook (0-3s):** "I built an app in 2 hours. charged $9/month. here's the stack."
 **Body (4-42s):**
 "it's a habit tracker. one screen. 3 buttons. stores data locally.
@@ -54,7 +54,7 @@ the trick: solve one problem. don't over-engineer. ship the ugliest version that
 
 ---
 
-### Short 4 — "Twitter Made Me $1,200 Last Month"
+### Short 4, "Twitter Made Me $1,200 Last Month"
 **Hook (0-3s):** "Twitter paid me $1,200 last month. here's the breakdown."
 **Body (4-42s):**
 "revenue share: $340. I get paid for impressions from subscribers watching my content.
@@ -70,7 +70,7 @@ key: post 3x daily. reply to 10 accounts bigger than you every day. never miss a
 
 ---
 
-### Short 5 — "Faceless YouTube: Month 1 Results"
+### Short 5, "Faceless YouTube: Month 1 Results"
 **Hook (0-3s):** "faceless YouTube. month 1. real numbers."
 **Body (4-42s):**
 "channel: AI tools reviews. zero face. just screen recordings + AI voiceover.
@@ -86,7 +86,7 @@ cost per month: ElevenLabs $22, CapCut free, everything else free."
 
 ---
 
-### Short 6 — "The Affiliate Product That Pays $200/Sale"
+### Short 6, "The Affiliate Product That Pays $200/Sale"
 **Hook (0-3s):** "this affiliate product pays $200 per sale. you've probably never heard of it."
 **Body (4-42s):**
 "it's a legal document template bundle. lawyers sell them for $2,000. one SaaS company offers a $200 affiliate commission for every referral.
@@ -100,7 +100,7 @@ program: LegalTemplates.net. commission: 30%. 90-day cookie."
 
 ---
 
-### Short 7 — "I Resell AI-Generated Stock Photos for $8/Photo"
+### Short 7, "I Resell AI-Generated Stock Photos for $8/Photo"
 **Hook (0-3s):** "I generate AI images and sell them for $8 each. took 4 hours to set up."
 **Body (4-42s):**
 "Midjourney generates images. I upload to Adobe Stock and Shutterstock.
@@ -116,7 +116,7 @@ the compounding play: every month I upload 100 more. by month 6 I'll have 1,000 
 
 ---
 
-### Short 8 — "Local Business SEO: $3K/Month From One Skill"
+### Short 8, "Local Business SEO: $3K/Month From One Skill"
 **Hook (0-3s):** "I charge $1,500/month per client for local SEO. here's what I actually do."
 **Body (4-42s):**
 "local SEO for small businesses is embarrassingly simple. most small business owners have no idea about any of this.
@@ -132,7 +132,7 @@ prospecting: Google '[city] [industry] site reviews' and find businesses with ze
 
 ---
 
-### Short 9 — "Reddit Traffic Hack: 40K Visits in 30 Days"
+### Short 9, "Reddit Traffic Hack: 40K Visits in 30 Days"
 **Hook (0-3s):** "40,000 website visitors from Reddit. $0 cost. here's exactly how."
 **Body (4-42s):**
 "the play: answer questions in niche subreddits. not spam. actual answers.
@@ -148,7 +148,7 @@ top subreddits: r/productivity, r/entrepreneur, r/juststart."
 
 ---
 
-### Short 10 — "The $50 Product That Funds My Whole Business"
+### Short 10, "The $50 Product That Funds My Whole Business"
 **Hook (0-3s):** "I sell a $50 Notion template. it pays all my tool subscriptions."
 **Body (4-42s):**
 "total monthly tool cost: $180 (ElevenLabs, Beehiiv, Claude Pro, Midjourney).
@@ -168,7 +168,7 @@ how I drove traffic: one YouTube Short weekly showing a feature. links to Gumroa
 
 ## BATCH 2: PRODUCTIVITY METHODS (Shorts 11-18)
 
-### Short 11 — "The 3-Hour Work Day System"
+### Short 11, "The 3-Hour Work Day System"
 **Hook (0-3s):** "I work 3 hours a day. here's the exact schedule."
 **Body (4-42s):**
 "8am-9am: deep work only. no email. no slack. build the thing.
@@ -186,7 +186,7 @@ the rule: if a task can be batched, it gets batched once per week. if it can be 
 
 ---
 
-### Short 12 — "Claude AI Replaced 4 Hours of My Work"
+### Short 12, "Claude AI Replaced 4 Hours of My Work"
 **Hook (0-3s):** "I gave Claude 4 tasks that used to take me 4 hours. it finished in 8 minutes."
 **Body (4-42s):**
 "task 1: write 5 cold email variations for a web design service. 8 minutes of manual work → 40 seconds.
@@ -204,15 +204,15 @@ the key: treat it like a contractor. give it context, a clear goal, and an examp
 
 ---
 
-### Short 13 — "Notion Setup That Runs My Entire Business"
+### Short 13, "Notion Setup That Runs My Entire Business"
 **Hook (0-3s):** "my entire solopreneur business lives in one Notion workspace. here's the structure."
 **Body (4-42s):**
 "5 databases:
-1. CRM — every lead, status, follow-up date
-2. Content Calendar — all platforms, one view
-3. Revenue Tracker — every income source by month
-4. Project Hub — all active builds with checklists
-5. Idea Vault — captures every idea, tagged by priority
+1. CRM, every lead, status, follow-up date
+2. Content Calendar, all platforms, one view
+3. Revenue Tracker, every income source by month
+4. Project Hub, all active builds with checklists
+5. Idea Vault, captures every idea, tagged by priority
 
 the power: they're all connected. a lead in CRM triggers a content idea in the Content Calendar. a project gets revenue tracked automatically.
 
@@ -223,7 +223,7 @@ template available on Gumroad for $49. link in bio."
 
 ---
 
-### Short 14 — "This Free Tool Does What $99/Mo SaaS Does"
+### Short 14, "This Free Tool Does What $99/Mo SaaS Does"
 **Hook (0-3s):** "I replaced a $99/month SaaS with a free tool. works better."
 **Body (4-42s):**
 "the $99 SaaS: social media scheduler. paid for: advanced analytics, team features, 50 connected accounts.
@@ -241,7 +241,7 @@ I do this with every SaaS I use. build a free stack first. only upgrade when you
 
 ---
 
-### Short 15 — "How I Batch 30 Days of Content in 3 Hours"
+### Short 15, "How I Batch 30 Days of Content in 3 Hours"
 **Hook (0-3s):** "3 hours every Monday. 30 days of content done. here's the system."
 **Body (4-42s):**
 "hour 1: generate. I sit down with Claude and produce 30 tweet hooks, 10 thread outlines, 4 newsletter topics, and 8 short video ideas. Claude does 90% of the drafting.
@@ -257,16 +257,16 @@ the compounding effect: at week 12 I had 300K+ impressions from 3 hours per week
 
 ---
 
-### Short 16 — "Stop Using 10 Apps. Use These 4."
+### Short 16, "Stop Using 10 Apps. Use These 4."
 **Hook (0-3s):** "I use 4 apps. they do what 10 used to do. here they are."
 **Body (4-42s):**
-"app 1: Notion ($0 free) — replaces Trello, Evernote, Airtable, and most of Google Drive.
+"app 1: Notion ($0 free), replaces Trello, Evernote, Airtable, and most of Google Drive.
 
-app 2: Claude ($20/mo) — replaces most research tools, writing tools, and half of Zapier for logic tasks.
+app 2: Claude ($20/mo), replaces most research tools, writing tools, and half of Zapier for logic tasks.
 
-app 3: Buffer ($0 free) — replaces Hootsuite, Later, and every paid scheduler I tried.
+app 3: Buffer ($0 free), replaces Hootsuite, Later, and every paid scheduler I tried.
 
-app 4: Beehiiv ($0 free) — replaces Mailchimp, ConvertKit, Substack, and newsletter analytics tools.
+app 4: Beehiiv ($0 free), replaces Mailchimp, ConvertKit, Substack, and newsletter analytics tools.
 
 total cost: $20/month. replaced tools costing: $290/month before.
 
@@ -275,7 +275,7 @@ the test: can each app do its job 80% as well as the specialist tool? yes. that'
 
 ---
 
-### Short 17 — "The 15-Minute Morning Routine That Runs My Day"
+### Short 17, "The 15-Minute Morning Routine That Runs My Day"
 **Hook (0-3s):** "15 minutes every morning. everything else runs on autopilot."
 **Body (4-42s):**
 "6:00am: open Notion dashboard. check today's 3 priority tasks. 2 minutes.
@@ -292,7 +292,7 @@ everything important gets surfaced by automations. my cron jobs run all the rese
 
 ---
 
-### Short 18 — "The $0 Tech Stack That Prints $5K/Month"
+### Short 18, "The $0 Tech Stack That Prints $5K/Month"
 **Hook (0-3s):** "my full business tech stack costs $42/month. generates $5K. here it is."
 **Body (4-42s):**
 "revenue generation tools (paid):
@@ -316,7 +316,7 @@ the lesson: you don't need $500/month in tools. you need the 2-3 tools that actu
 
 ## BATCH 3: AI TOOLS (Shorts 19-24)
 
-### Short 19 — "5 Claude Prompts That Save Me 10 Hours/Week"
+### Short 19, "5 Claude Prompts That Save Me 10 Hours/Week"
 **Hook (0-3s):** "5 Claude prompts. 10 hours saved every week. copy these."
 **Body (4-42s):**
 "prompt 1: 'You are a cold email expert. Here is my offer: [X]. Write 5 variations targeting [audience]. Keep each under 100 words. Make them conversational, not salesy.'
@@ -332,7 +332,7 @@ prompt 5: 'Research [topic]. Give me 5 counterintuitive insights with supporting
 
 ---
 
-### Short 20 — "AI Replaced My $500/Month Freelancer"
+### Short 20, "AI Replaced My $500/Month Freelancer"
 **Hook (0-3s):** "I was paying $500/month for copywriting. now I pay $20. here's how."
 **Body (4-42s):**
 "the $500/month freelancer: 4 newsletters, 20 tweets, 2 landing pages per month.
@@ -350,7 +350,7 @@ savings: $480/month. hours saved: 6/week."
 
 ---
 
-### Short 21 — "Build a Full App With 0 Code Knowledge"
+### Short 21, "Build a Full App With 0 Code Knowledge"
 **Hook (0-3s):** "I built a working app. know zero code. here's the exact process."
 **Body (4-42s):**
 "step 1: describe the app to Claude in one paragraph. be specific about what happens on each screen.
@@ -368,7 +368,7 @@ I built 7 apps this way. one generates $207/month. the whole process took me 2 h
 
 ---
 
-### Short 22 — "ElevenLabs vs Murf vs PlayHT: Real Comparison"
+### Short 22, "ElevenLabs vs Murf vs PlayHT: Real Comparison"
 **Hook (0-3s):** "I tested 3 AI voice tools for my faceless YouTube. here's the truth."
 **Body (4-42s):**
 "ElevenLabs: best voice quality. Adam voice sounds fully human. $5/month starter, 30K characters. limitation: short monthly quota. use for hero content only.
@@ -384,7 +384,7 @@ monthly cost: $34. earns back in one affiliate sale."
 
 ---
 
-### Short 23 — "Midjourney Hack: Get Consistent Style in Every Image"
+### Short 23, "Midjourney Hack: Get Consistent Style in Every Image"
 **Hook (0-3s):** "Midjourney gives inconsistent style. this one trick fixes it."
 **Body (4-42s):**
 "the problem: generate 10 images and they all look different. useless for a brand or product line.
@@ -404,7 +404,7 @@ combine with '--cref' (character reference) to keep faces consistent across imag
 
 ---
 
-### Short 24 — "The AI Research Stack That Replaces a $30K Analyst"
+### Short 24, "The AI Research Stack That Replaces a $30K Analyst"
 **Hook (0-3s):** "I replaced $30K worth of market research with $20/month. here's the stack."
 **Body (4-42s):**
 "what a $30K analyst does: monitor competitors, track trends, analyze data, write reports.
@@ -424,7 +424,7 @@ my job: read the 500-word summary every morning. make one decision. take one act
 
 ## BATCH 4: PASSIVE INCOME (Shorts 25-30)
 
-### Short 25 — "4 Income Streams. Total Setup Time: 12 Hours."
+### Short 25, "4 Income Streams. Total Setup Time: 12 Hours."
 **Hook (0-3s):** "4 passive income streams. total setup: 12 hours. monthly take: $1,800."
 **Body (4-42s):**
 "stream 1: Notion template on Gumroad. 6 hours to build. $400/month recurring.
@@ -442,7 +442,7 @@ none of these are get-rich-quick. each took 3-8 months to hit real revenue. but 
 
 ---
 
-### Short 26 — "Domain Flipping: $450 Profit in One Week"
+### Short 26, "Domain Flipping: $450 Profit in One Week"
 **Hook (0-3s):** "I bought a domain for $12. sold it for $460. one week."
 **Body (4-42s):**
 "the method: expired domain arbitrage.
@@ -460,7 +460,7 @@ math: 3,733% return. not scalable at volume, but one good flip per month covers 
 
 ---
 
-### Short 27 — "The Etsy Passive Income Formula Nobody Talks About"
+### Short 27, "The Etsy Passive Income Formula Nobody Talks About"
 **Hook (0-3s):** "I make $800/month on Etsy. I haven't touched the store in 3 months."
 **Body (4-42s):**
 "what I sell: digital downloads. PDFs. templates. instant delivery. zero fulfillment.
@@ -476,7 +476,7 @@ portfolio approach: I have 23 listings. top 8 drive 90% of revenue. the other 15
 
 ---
 
-### Short 28 — "Kindle Publishing: My 6-Month Results"
+### Short 28, "Kindle Publishing: My 6-Month Results"
 **Hook (0-3s):** "I published 8 Kindle books. here's the 6-month honest report."
 **Body (4-42s):**
 "total books: 8. all AI-assisted. average length: 60 pages.
@@ -496,7 +496,7 @@ the lesson: niche down 3 levels deeper than you think you need to."
 
 ---
 
-### Short 29 — "How I Make $200/Month While I Sleep"
+### Short 29, "How I Make $200/Month While I Sleep"
 **Hook (0-3s):** "this generates $200/month. I set it up in 4 hours. completely passive."
 **Body (4-42s):**
 "it's a simple resource page. 12 affiliate links. I built it in 4 hours with just HTML and deployed it free on Vercel.
@@ -512,7 +512,7 @@ revenue: $210-280/month. time spent: 20 minutes every 2 weeks to post on Reddit.
 
 ---
 
-### Short 30 — "The Compound Effect: What $500 Looks Like in 12 Months"
+### Short 30, "The Compound Effect: What $500 Looks Like in 12 Months"
 **Hook (0-3s):** "month 1: $500. month 12: $8,200. same amount of work. here's why."
 **Body (4-42s):**
 "month 1: digital products ($200) + affiliate ($150) + newsletter ($150) = $500.
@@ -525,4 +525,4 @@ the compound mechanics:
 month 12: products ($3,400) + affiliate ($2,200) + newsletter ($1,800) + YouTube ($800) = $8,200.
 
 the catch: months 1-4 are brutal. almost zero. most people quit in month 2."
-**CTA (43-48s):** "subscribe. I document the whole journey in real time."
+**CTA (43-48s):** "subscribe. I document the whole path in real time."

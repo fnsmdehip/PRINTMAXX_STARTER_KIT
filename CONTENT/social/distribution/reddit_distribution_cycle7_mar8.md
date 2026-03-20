@@ -9,7 +9,7 @@ notes: Every post leads with genuine value to the community. No promotional open
 
 ## Pre-Publish Checklist
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] No "It's not just X, it's Y" constructions
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
@@ -292,7 +292,7 @@ Ramadan Mubarak to you and your families.
 
 SUBREDDIT: r/Entrepreneur
 STATUS: PENDING_REVIEW
-POSTING_NOTES: Post Tuesday-Thursday 9am-12pm EST. This sub values hard lessons and specific numbers above everything. The $0 revenue frame needs to be front and center -- it's what makes this credible instead of a flex post. Avoid any language that sounds like a course pitch. Do not use the word "journey." Flair "Lessons Learned."
+POSTING_NOTES: Post Tuesday-Thursday 9am-12pm EST. This sub values hard lessons and specific numbers above everything. The $0 revenue frame needs to be front and center -- it's what makes this credible instead of a flex post. Avoid any language that sounds like a course pitch. Do not use the word "path." Flair "Lessons Learned."
 
 **Title:** Day 35. 168 deployments. $0 revenue. Here's what I'd do differently from day one.
 

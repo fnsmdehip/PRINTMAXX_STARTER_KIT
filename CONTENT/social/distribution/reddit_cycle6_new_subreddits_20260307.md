@@ -9,7 +9,7 @@ notes: All posts use FRESH angles not covered in cycles 1-5. No recycled hooks. 
 
 ## Pre-Publish Checklist
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] No "It's not just X, it's Y" constructions
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible

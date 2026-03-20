@@ -1,4 +1,4 @@
-# C14 Remotion Video Production — Setup Guide
+# C14 Remotion Video Production, Setup Guide
 
 ## What Remotion Is
 
@@ -7,7 +7,7 @@ React-based video framework. You write components. It renders them as MP4/WebM a
 **Why it matters:**
 - Generate 50 videos from one script, different text/data per video
 - 4K at 60fps is config, not a hardware question
-- Reuse React component logic — if you have a chart, it animates
+- Reuse React component logic, if you have a chart, it animates
 - Costs: ~$0.01 per video on a VPS vs $200/mo for Synthesia
 
 ---
@@ -28,7 +28,7 @@ npm install
 
 # Start preview server
 npm start
-# Opens http://localhost:3000 — live scrubbing preview
+# Opens http://localhost:3000, live scrubbing preview
 ```
 
 ---
@@ -82,7 +82,7 @@ import { Listicle } from "./compositions/Listicle";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* YouTube Shorts / TikTok — 9:16 */}
+      {/* YouTube Shorts / TikTok, 9:16 */}
       <Composition
         id="ShortClip"
         component={ShortClip}
@@ -96,7 +96,7 @@ export const RemotionRoot: React.FC = () => {
           accent: "#FF5733",
         }}
       />
-      {/* Stats reveal — 16:9 landscape */}
+      {/* Stats reveal, 16:9 landscape */}
       <Composition
         id="Stats"
         component={Stats}
@@ -125,11 +125,11 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           title: "5 tools I used to make $3K last month",
           items: [
-            { number: "01", text: "Hunter.io — found 200 leads in 2 hours" },
-            { number: "02", text: "Instantly.ai — sent 500 emails for $30" },
-            { number: "03", text: "Beehiiv — newsletter at $0 to 1K subs" },
-            { number: "04", text: "Gumroad — sold 2 templates for $600" },
-            { number: "05", text: "visualping.io — tracked 200 competitor pages" },
+            { number: "01", text: "Hunter.io, found 200 leads in 2 hours" },
+            { number: "02", text: "Instantly.ai, sent 500 emails for $30" },
+            { number: "03", text: "Beehiiv, newsletter at $0 to 1K subs" },
+            { number: "04", text: "Gumroad, sold 2 templates for $600" },
+            { number: "05", text: "visualping.io, tracked 200 competitor pages" },
           ],
         }}
       />

@@ -1,4 +1,4 @@
-# Compound Content — 2026-03-14
+# Compound Content, 2026-03-14
 Generated from: swarm brain cycle 12, cross-pollination report, CEO decisions, agent missions, disk crisis.
 Status: PENDING_REVIEW
 Voice: PRINTMAXXER (copy-style.md weighted aggregate)
@@ -7,7 +7,7 @@ Voice: PRINTMAXXER (copy-style.md weighted aggregate)
 
 ## STANDALONE TWEETS (8)
 
-### Tweet 1 — Build-in-Public Drama (Deploy Regression)
+### Tweet 1, Build-in-Public Drama (Deploy Regression)
 ```
 my autonomous agents sabotaged their own optimization yesterday.
 
@@ -18,7 +18,7 @@ result: 20,000 new entries I didn't need and 31GB of disk burned.
 the irony of building self-managing systems that can't survive their own deploy script.
 ```
 
-### Tweet 2 — Day 38 Honest Update
+### Tweet 2, Day 38 Honest Update
 ```
 day 38. $0 revenue.
 
@@ -38,7 +38,7 @@ now I need to spend 75 minutes creating accounts to actually sell something.
 38 days building. 75 minutes selling. guess which one I keep avoiding.
 ```
 
-### Tweet 3 — Consequence-First (Disk Crisis)
+### Tweet 3, Consequence-First (Disk Crisis)
 ```
 woke up to 24GB free disk. system was burning 10GB/day on scraped data nobody reads.
 
@@ -49,7 +49,7 @@ the collection is not the problem. never was. had to emergency-kill 7 agents and
 lesson: more data without more action is just a slower hard drive.
 ```
 
-### Tweet 4 — System Architecture (Cross-Pollination)
+### Tweet 4, System Architecture (Cross-Pollination)
 ```
 48 automated data pipelines connecting 25 agents.
 
@@ -62,7 +62,7 @@ the system feeds itself. reddit scrapes become alpha entries become content beco
 total wiring cost: $0. just python and cron.
 ```
 
-### Tweet 5 — Reply Bait (The 75-Minute Blocker)
+### Tweet 5, Reply Bait (The 75-Minute Blocker)
 ```
 I've spent 38 days building 310 automation scripts.
 
@@ -76,7 +76,7 @@ the thing blocking all revenue is 75 minutes of manual account creation:
 38 days of avoidance on a 75-minute task. this is peak builder brain.
 ```
 
-### Tweet 6 — Agent Effectiveness (Nerd Bait)
+### Tweet 6, Agent Effectiveness (Nerd Bait)
 ```
 I rank my AI agents by actual effectiveness. here's the latest:
 
@@ -95,7 +95,7 @@ X-tier (KILLED):
 the hardest part of autonomous systems: knowing when to stop.
 ```
 
-### Tweet 7 — Controversial Take (Collection vs Action)
+### Tweet 7, Controversial Take (Collection vs Action)
 ```
 unpopular take from someone with 40,604 pieces of business intelligence:
 
@@ -108,7 +108,7 @@ I know because my system auto-collected 20K entries in 3 days when I wasn't look
 the algorithm for getting rich: stop collecting. start listing.
 ```
 
-### Tweet 8 — Specific Tactic (Pipeline Architecture)
+### Tweet 8, Specific Tactic (Pipeline Architecture)
 ```
 the memory model that runs my 33 agents:
 
@@ -126,7 +126,7 @@ sounds primitive. runs 24/7 on a $200/mo subscription with zero downtime.
 
 ---
 
-## THREAD (7 tweets) — "My AI Agents Almost Crashed My Laptop"
+## THREAD (7 tweets), "My AI Agents Almost Crashed My Laptop"
 
 ### 1/7
 ```
@@ -205,7 +205,7 @@ day 38. $0. but the infrastructure fix is in and the system won't sabotage itsel
 
 ## REPLY BAIT (4)
 
-### Reply Bait 1 — Engagement Poll
+### Reply Bait 1, Engagement Poll
 ```
 real question for anyone building with AI agents:
 
@@ -219,7 +219,7 @@ D) all three, in that order, every week
 I'm solidly in D territory right now.
 ```
 
-### Reply Bait 2 — Hot Take
+### Reply Bait 2, Hot Take
 ```
 the biggest lie in the AI automation space:
 
@@ -230,7 +230,7 @@ nobody mentions the part where you spend 38 days building infrastructure and avo
 the agents work. the human is the bottleneck.
 ```
 
-### Reply Bait 3 — Question Hook
+### Reply Bait 3, Question Hook
 ```
 how many automation scripts is too many?
 
@@ -239,7 +239,7 @@ asking because I have 310 and $0 in revenue and I'm starting to think the number
 what's your script-to-revenue ratio?
 ```
 
-### Reply Bait 4 — Vulnerable Admission
+### Reply Bait 4, Vulnerable Admission
 ```
 I ranked my 33 AI agents by effectiveness today.
 
@@ -254,7 +254,7 @@ the productive feeling was the trap.
 
 ## ENGAGEMENT FARMING (3)
 
-### Engagement 1 — Builder vs Seller
+### Engagement 1, Builder vs Seller
 ```
 the builder-to-seller pipeline is broken in tech.
 
@@ -266,7 +266,7 @@ listing 1 product on gumroad gets you $50.
 guess which one we all gravitate toward.
 ```
 
-### Engagement 2 — Agent Operators
+### Engagement 2, Agent Operators
 ```
 2024: learn to code
 2025: learn to prompt
@@ -277,7 +277,7 @@ the solopreneur advantage isn't writing code anymore. it's managing 33 autonomou
 the new skill is knowing which agents to kill and which to double down on.
 ```
 
-### Engagement 3 — Data Obesity
+### Engagement 3, Data Obesity
 ```
 there should be a name for the condition where you collect so much data that it actively slows down your operation.
 

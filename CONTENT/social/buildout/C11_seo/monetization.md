@@ -1,4 +1,4 @@
-# C11 SEO — Monetization Strategy
+# C11 SEO, Monetization Strategy
 # Display Ads + Affiliate + Lead Gen
 
 ---
@@ -20,27 +20,27 @@ A content farm doesn't need to pick one revenue model. Layer all three:
 
 ### Networks by Traffic Tier
 
-**Under 10,000 monthly sessions — use Google AdSense**
+**Under 10,000 monthly sessions, use Google AdSense**
 - No traffic minimum
 - RPM: $3-8 (mediocre, but it's something)
 - Sign-up: google.com/adsense
 - Approval: 2-4 weeks, needs decent content volume
 
-**10,000-50,000 monthly sessions — try Ezoic**
+**10,000-50,000 monthly sessions, try Ezoic**
 - No hard minimum (accepts sites with 10K+ sessions)
 - RPM: $8-18 (2x AdSense)
 - AI-optimized ad placement
 - Free to use, they take 10% of increased revenue
 - Sign-up: ezoic.com
 
-**50,000+ monthly sessions — Mediavine (the goal)**
+**50,000+ monthly sessions, Mediavine (the goal)**
 - Minimum: 50,000 sessions/month
 - RPM: $20-45 (5-10x AdSense)
 - At 50K sessions: $1,000-2,250/mo from ads alone
 - Best for: content sites in personal finance, food, lifestyle, DIY
 - Application: mediavine.com/apply
 
-**100,000+ sessions — AdThrive (now Raptive)**
+**100,000+ sessions, AdThrive (now Raptive)**
 - Minimum: 100,000 monthly pageviews
 - RPM: $25-55
 - Premium brands, higher CPM
@@ -234,20 +234,20 @@ NO → Focus on affiliate conversion (traffic lower, intent higher)
 
 ## The 90-Day Revenue Activation Plan
 
-**Month 1 — Foundation (target: first dollar)**
+**Month 1, Foundation (target: first dollar)**
 - Publish 8-12 articles targeting KD under 25
 - Join all affiliate programs (no approval wait)
 - Set up lead magnet + email list
 - Add AdSense (approval takes 2-4 weeks, apply now)
 - Revenue target: $5-50
 
-**Month 2 — Compound (target: $100)**
+**Month 2, Compound (target: $100)**
 - Publish 8-12 more articles
 - Update Month 1 articles with more affiliate links
 - First email sequence live (5 emails, 14 days)
 - Revenue target: $50-150
 
-**Month 3 — Optimize (target: $300)**
+**Month 3, Optimize (target: $300)**
 - Analyze which articles get traffic, double down on that topic
 - A/B test affiliate link placement in top 5 articles
 - Apply for Ezoic (if over 10K sessions)

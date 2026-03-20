@@ -1,13 +1,13 @@
-# X/Twitter Engagement Strategy — @printmaxxer
+# X/Twitter Engagement Strategy, @printmaxxer
 
 ---
 
 ## The Core Framework
 
 Three levers drive X growth:
-1. **Content quality** — gives people a reason to follow
-2. **Engagement velocity** — tells the algo the content is worth pushing
-3. **Community presence** — builds discovery outside your existing audience
+1. **Content quality**, gives people a reason to follow
+2. **Engagement velocity**, tells the algo the content is worth pushing
+3. **Community presence**, builds discovery outside your existing audience
 
 Master all three simultaneously. They compound.
 
@@ -18,18 +18,18 @@ Master all three simultaneously. They compound.
 The fastest follower growth method under 5K followers.
 
 **Target profile:**
-- Accounts with 5K-50K followers (not mega accounts — your reply gets buried)
+- Accounts with 5K-50K followers (not mega accounts, your reply gets buried)
 - In the solopreneur / indie hacker / build-in-public / AI tools space
 - Active posters (3+ tweets/day)
 
 **Target accounts to reply to consistently:**
-- @levelsio — 450K followers, solopreneur god tier
-- @marc_louvion — 60K, build-in-public, SaaS
-- @codyschneiderxx — 20K, blunt cold outreach content
-- @dannypostmaa — 45K, honest product building
-- @tdinh_me — 55K, solopreneur + tech
-- @dvassallo — 90K, indie hacker OG
-- @stephsmithio — 40K, writing + products
+- @levelsio, 450K followers, solopreneur god tier
+- @marc_louvion, 60K, build-in-public, SaaS
+- @codyschneiderxx, 20K, blunt cold outreach content
+- @dannypostmaa, 45K, honest product building
+- @tdinh_me, 55K, solopreneur + tech
+- @dvassallo, 90K, indie hacker OG
+- @stephsmithio, 40K, writing + products
 
 **The reply formula:**
 - Reply within first 30 minutes of their post
@@ -89,24 +89,24 @@ Never QT just to agree. Adds nothing. Wastes the slot.
 X Communities drive targeted exposure to people already interested in your exact niche.
 
 **Priority communities for @printmaxxer:**
-1. **OpenClaw** (indie/AI builders) — 15K+ members
-2. **AI Tools Daily** — 8K members
-3. **Build In Public** — 25K members
-4. **Indie Hackers on X** — 12K members
+1. **OpenClaw** (indie/AI builders), 15K+ members
+2. **AI Tools Daily**, 8K members
+3. **Build In Public**, 25K members
+4. **Indie Hackers on X**, 12K members
 5. **Claude / Anthropic Community** (emerging)
 
 **Community posting rules:**
 - Post original content inside the community (not just reposting your main tweet)
-- Community content can be slightly less polished — authenticity over polish
+- Community content can be slightly less polished, authenticity over polish
 - Answer questions in the community feed (reply guy strategy applies here)
-- Never post pure promo — always lead with value
+- Never post pure promo, always lead with value
 
-**Posting frequency per community:** 3x/week (not daily — don't appear desperate)
+**Posting frequency per community:** 3x/week (not daily, don't appear desperate)
 
 **Content that works in communities:**
 - "I tried X, here's what happened" (with specific results)
 - "Question: does anyone else find Y works better than Z?"
-- Resource drops ("I wrote a guide on X — link in my bio")
+- Resource drops ("I wrote a guide on X, link in my bio")
 - Early beta access offers ("building this, first 10 people get free access")
 
 **Expected community benefit:**
@@ -140,7 +140,7 @@ I tested 6 channels over 90 days:
 fight me."
 
 **Topics for @printmaxxer controversial takes:**
-- "AI won't replace indie hackers — it will replace $150K/yr developers"
+- "AI won't replace indie hackers, it will replace $150K/yr developers"
 - "the indie hacker community has a cope problem" (with data)
 - "newsletter open rates are a vanity metric" (what to track instead)
 - "X Subscriptions is a dead monetization channel" (or the opposite)
@@ -179,7 +179,7 @@ X's algo evaluates your tweet's performance in the first 15 minutes. If engageme
 
 ---
 
-## Posting Calendar — Weekly Template
+## Posting Calendar, Weekly Template
 
 | Day | Content Type | Platform |
 |-----|-------------|----------|
@@ -208,7 +208,7 @@ X is the top of the funnel. DMs convert the warmest prospects.
 - Someone who tagged you in a relevant context
 
 **DM template:**
-"hey [name] — noticed you've been following the [topic] stuff closely. building something in that space? happy to share what's been working or point you to the right resources."
+"hey [name], noticed you've been following the [topic] stuff closely. building something in that space? happy to share what's been working or point you to the right resources."
 
 No pitch. No sell. Just open a conversation.
 

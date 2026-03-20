@@ -1,4 +1,4 @@
-# Thread — The 1-to-20 Content Machine
+# Thread, The 1-to-20 Content Machine
 # STATUS: PENDING_REVIEW
 # DATE: 2026-03-07
 # CYCLE: 3

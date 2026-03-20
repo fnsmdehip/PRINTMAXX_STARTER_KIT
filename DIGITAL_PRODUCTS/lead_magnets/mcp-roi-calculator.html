@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MCP ROI Calculator — How Much Is Your SaaS Stack Actually Costing You?</title>
+<meta name="description" content="Calculate your true SaaS cost vs MCP server alternatives. See exactly how much you'd save replacing Zapier, SEMrush, Buffer, Typeform, and 40+ tools with free MCP servers.">
+<meta property="og:title" content="MCP ROI Calculator — How Much Is Your SaaS Stack Actually Costing You?">
+<meta property="og:description" content="Replace $800/mo in SaaS with free MCP servers. Calculate your savings in 60 seconds.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#08080f;--card:#0f0f1a;--card2:#141428;--border:#1e1e3a;--text:#e8e8f0;--muted:#666;--accent:#7c3aed;--accent2:#a78bfa;--green:#10b981;--red:#ef4444;--yellow:#eab308}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:800px;margin:0 auto;padding:0 20px}
+.hero{text-align:center;padding:64px 20px 40px}
+.hero .tag{display:inline-block;background:rgba(124,58,237,0.2);color:var(--accent2);font-size:0.7rem;padding:4px 14px;border-radius:20px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.hero h1{font-size:2.4rem;font-weight:900;line-height:1.1;margin-bottom:14px}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);font-size:1rem;max-width:580px;margin:0 auto}
+.calc-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;margin:24px 0}
+.calc-card h2{font-size:1.1rem;font-weight:700;margin-bottom:24px;color:var(--text)}
+.tool-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);gap:16px}
+.tool-row:last-child{border-bottom:none}
+.tool-info{flex:1}
+.tool-name{font-weight:700;font-size:0.95rem}
+.tool-desc{color:var(--muted);font-size:0.78rem;margin-top:2px}
+.mcp-label{background:rgba(16,185,129,0.15);color:var(--green);font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;margin-left:8px}
+.toggle-wrap{display:flex;align-items:center;gap:10px}
+.toggle-price{color:var(--muted);font-size:0.82rem;text-align:right;min-width:56px}
+.toggle{position:relative;width:42px;height:24px;cursor:pointer}
+.toggle input{opacity:0;width:0;height:0}
+.slider{position:absolute;inset:0;background:#1e1e3a;border-radius:12px;transition:0.2s}
+.slider:before{content:'';position:absolute;width:18px;height:18px;left:3px;bottom:3px;background:#555;border-radius:50%;transition:0.2s}
+input:checked + .slider{background:rgba(124,58,237,0.4);border:1px solid var(--accent)}
+input:checked + .slider:before{transform:translateX(18px);background:var(--accent2)}
+.result-box{background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(167,139,250,0.06));border:1px solid rgba(124,58,237,0.3);border-radius:20px;padding:32px;margin:24px 0;text-align:center}
+.result-box .label{color:var(--muted);font-size:0.78rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.result-box .amount{font-size:3.5rem;font-weight:900;color:var(--green);line-height:1}
+.result-box .sub{color:var(--muted);font-size:0.88rem;margin-top:8px}
+.breakdown{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:20px}
+.break-item{background:rgba(0,0,0,0.3);border-radius:12px;padding:14px;text-align:center}
+.break-item .num{font-size:1.4rem;font-weight:800}
+.break-item .desc{color:var(--muted);font-size:0.72rem;margin-top:4px}
+.gate-section{background:var(--card);border:2px solid rgba(124,58,237,0.4);border-radius:20px;padding:32px;text-align:center;margin:24px 0}
+.gate-section h3{font-size:1.3rem;font-weight:800;margin-bottom:8px}
+.gate-section p{color:var(--muted);font-size:0.9rem;margin-bottom:20px}
+.gate-items{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;text-align:left}
+.gate-item{display:flex;align-items:flex-start;gap:8px;font-size:0.83rem;color:#bbb}
+.gate-item svg{flex-shrink:0;margin-top:2px}
+.email-form{display:flex;gap:10px;max-width:440px;margin:0 auto}
+.email-form input{flex:1;background:#0f0f1a;border:1px solid #2a2a4a;border-radius:10px;padding:12px 16px;color:var(--text);font-size:0.9rem;outline:none}
+.email-form input:focus{border-color:var(--accent)}
+.email-form input::placeholder{color:#444}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#9333ea);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-size:0.9rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity 0.2s}
+.btn-primary:hover{opacity:0.9}
+.locked-content{display:none}
+.locked-content.revealed{display:block}
+.mcp-guide{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;margin:24px 0}
+.mcp-guide h3{font-size:1.1rem;font-weight:800;margin-bottom:16px}
+.step{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.step-num{background:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:800;flex-shrink:0}
+.step-body h4{font-size:0.9rem;font-weight:700;margin-bottom:4px}
+.step-body p{color:var(--muted);font-size:0.82rem}
+.step-body code{background:#1a1a2e;padding:2px 6px;border-radius:4px;font-size:0.78rem;color:var(--accent2)}
+.tool-table{width:100%;border-collapse:collapse;margin-top:16px}
+.tool-table th{text-align:left;color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;padding:8px 12px;border-bottom:1px solid var(--border)}
+.tool-table td{padding:10px 12px;border-bottom:1px solid rgba(30,30,58,0.5);font-size:0.85rem}
+.tool-table td:last-child{color:var(--green);font-weight:700}
+.save-badge{background:rgba(16,185,129,0.15);color:var(--green);font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px}
+.bottom-cta{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:28px;text-align:center;margin:24px 0}
+.bottom-cta h3{font-size:1.1rem;font-weight:800;margin-bottom:8px}
+.bottom-cta p{color:var(--muted);font-size:0.88rem;margin-bottom:16px}
+.link-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.link-row a{padding:10px 20px;border-radius:10px;font-size:0.82rem;font-weight:700;text-decoration:none}
+.link-primary{background:var(--accent);color:#fff}
+.link-secondary{background:transparent;border:1px solid var(--border);color:var(--text)}
+@media(max-width:580px){.breakdown{grid-template-columns:1fr 1fr}.hero h1{font-size:1.8rem}.gate-items{grid-template-columns:1fr}.email-form{flex-direction:column}.result-box .amount{font-size:2.8rem}}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="hero">
+    <div class="tag">Free Calculator</div>
+    <h1>How Much Is Your<br><span>SaaS Stack Costing You?</span></h1>
+    <p>Toggle the tools you use, see your monthly spend, then see your cost after switching to free MCP server alternatives. Takes 60 seconds.</p>
+  </div>
+
+  <div class="calc-card">
+    <h2>Step 1 — Toggle the tools you currently pay for</h2>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Zapier <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">workflow automation, 1,000+ app integrations</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-zapier">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="49" data-name="Zapier" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">SEMrush <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">SEO, keyword research, backlink analysis</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-semrush">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="140" data-name="SEMrush" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Buffer / Hootsuite <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">social media scheduling and analytics</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-buffer">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="18" data-name="Buffer" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Typeform / JotForm <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">forms, surveys, lead capture</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-typeform">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="25" data-name="Typeform" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Calendly <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">meeting scheduling, calendar management</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-calendly">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="12" data-name="Calendly" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Ahrefs <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">SEO, competitor analysis, content research</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-ahrefs">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="129" data-name="Ahrefs" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Loom <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">video recording, async communication</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-loom">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="15" data-name="Loom" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Notion AI <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">docs, databases, project management</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-notion">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="16" data-name="Notion" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Hotjar <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">heatmaps, session recordings, user analytics</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-hotjar">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="39" data-name="Hotjar" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+
+    <div class="tool-row">
+      <div class="tool-info">
+        <div class="tool-name">Browserbase / Apify <span class="mcp-label">MCP available</span></div>
+        <div class="tool-desc">web scraping, browser automation, data extraction</div>
+      </div>
+      <div class="toggle-wrap">
+        <div class="toggle-price" id="price-scraping">$0/mo</div>
+        <label class="toggle"><input type="checkbox" data-price="49" data-name="Scraping" onchange="updateCalc()"><span class="slider"></span></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-box" id="result-box">
+    <div class="label">Your current monthly SaaS spend (selected tools)</div>
+    <div class="amount" id="total-cost">$0</div>
+    <div class="sub" id="result-sub">Toggle tools above to calculate your cost</div>
+    <div class="breakdown">
+      <div class="break-item">
+        <div class="num" id="tools-count">0</div>
+        <div class="desc">tools selected</div>
+      </div>
+      <div class="break-item">
+        <div class="num" id="annual-cost">$0</div>
+        <div class="desc">annual spend</div>
+      </div>
+      <div class="break-item">
+        <div class="num" style="color:var(--green)" id="mcp-savings">$0</div>
+        <div class="desc">MCP savings/yr</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gated content section -->
+  <div class="gate-section" id="gate-section">
+    <h3>Get the Full MCP Replacement Guide</h3>
+    <p>Which MCP servers replace each tool, exact setup steps, and 40+ more tools with free replacements.</p>
+    <div class="gate-items">
+      <div class="gate-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Full MCP server map (40+ tools)
+      </div>
+      <div class="gate-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Claude Code setup guide (copy-paste ready)
+      </div>
+      <div class="gate-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Which MCP servers actually work in production
+      </div>
+      <div class="gate-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Cost-to-replace breakdown per tool
+      </div>
+      <div class="gate-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        MCP servers that save $200+/mo each
+      </div>
+      <div class="gate-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Solopreneur case study: from $847 to $23/mo
+      </div>
+    </div>
+    <div class="email-form">
+      <input type="email" id="gate-email" placeholder="your@email.com" autocomplete="email">
+      <button class="btn-primary" onclick="unlockGuide()">Get the Guide</button>
+    </div>
+    <p style="color:#333;font-size:0.72rem;margin-top:10px">no spam. one email with the guide. that's it.</p>
+  </div>
+
+  <!-- Locked content (revealed after email) -->
+  <div class="locked-content" id="locked-content">
+    <div class="mcp-guide">
+      <h3>Full MCP Replacement Map — 40+ Tools</h3>
+      <table class="tool-table">
+        <thead>
+          <tr>
+            <th>SaaS Tool</th>
+            <th>Monthly Cost</th>
+            <th>MCP Alternative</th>
+            <th>MCP Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Zapier</td><td>$49-69/mo</td><td>Make + Pipedream MCP</td><td>$0 (free tier)</td></tr>
+          <tr><td>SEMrush</td><td>$140-500/mo</td><td>DataForSEO MCP + Google Search MCP</td><td>$0-8/mo</td></tr>
+          <tr><td>Ahrefs</td><td>$129-400/mo</td><td>Moz API MCP + Majestic MCP</td><td>$0-10/mo</td></tr>
+          <tr><td>Buffer</td><td>$18-99/mo</td><td>Social MCP (Claude schedules directly)</td><td>$0</td></tr>
+          <tr><td>Calendly</td><td>$12-16/mo</td><td>Cal.com MCP (open source)</td><td>$0</td></tr>
+          <tr><td>Typeform</td><td>$25-83/mo</td><td>Tally MCP + custom HTML forms</td><td>$0</td></tr>
+          <tr><td>Hotjar</td><td>$39-99/mo</td><td>PostHog MCP (open source, free tier)</td><td>$0</td></tr>
+          <tr><td>Loom</td><td>$15/mo</td><td>OBS + ffmpeg CLI (fully free)</td><td>$0</td></tr>
+          <tr><td>Notion AI</td><td>$16-20/mo</td><td>Obsidian MCP + Claude native</td><td>$0</td></tr>
+          <tr><td>Browserbase</td><td>$49-99/mo</td><td>Playwright MCP (local, free)</td><td>$0</td></tr>
+          <tr><td>Clearbit / Apollo</td><td>$99-299/mo</td><td>Hunter.io MCP + LinkedIn MCP</td><td>$0-20/mo</td></tr>
+          <tr><td>Intercom / Crisp</td><td>$39-149/mo</td><td>Chatwoot MCP (open source)</td><td>$0</td></tr>
+          <tr><td>Figma</td><td>$15-45/mo</td><td>Penpot MCP (open source)</td><td>$0</td></tr>
+          <tr><td>Webflow</td><td>$23-39/mo</td><td>Framer free tier + Vercel MCP</td><td>$0</td></tr>
+          <tr><td>Sendgrid / Mailchimp</td><td>$20-99/mo</td><td>Resend MCP (3,000 emails/mo free)</td><td>$0</td></tr>
+          <tr><td>GitHub Copilot</td><td>$10-19/mo</td><td>Claude Code MCP (included in plan)</td><td>$0</td></tr>
+          <tr><td>Grammarly</td><td>$12-30/mo</td><td>LanguageTool MCP (open source)</td><td>$0</td></tr>
+          <tr><td>Stripe Atlas</td><td>$500 one-time</td><td>Stripe MCP (standard Stripe account)</td><td>$0</td></tr>
+          <tr><td>Retool</td><td>$10-50/mo</td><td>Appsmith MCP (open source)</td><td>$0</td></tr>
+          <tr><td>Datadog</td><td>$15-30/mo</td><td>Grafana MCP + Prometheus (open source)</td><td>$0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mcp-guide">
+      <h3>How to Set Up MCP in Claude Code (5 minutes)</h3>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Install Claude Code</h4>
+          <p>Already have it? Skip. Install with: <code>npm install -g @anthropic-ai/claude-code</code></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Open your MCP config</h4>
+          <p>Create or edit <code>~/.claude/mcp.json</code> — this is where you add MCP servers</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Add your first MCP server</h4>
+          <p>Example for Playwright MCP (replaces Browserbase): <code>"playwright": {"command": "npx", "args": ["@playwright/mcp@latest"]}</code></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Restart and use</h4>
+          <p>Claude Code loads MCP servers on startup. Say "use playwright to..." and it just works. No SaaS dashboard. No API key wrangling. No per-seat pricing.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Add the MCP Marketplace to find more</h4>
+          <p>Browse 200+ MCP servers at <a href="https://mcp-marketplace.surge.sh" style="color:var(--accent2)">mcp-marketplace.surge.sh</a> — filtered by category, use case, and cost.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mcp-guide">
+      <h3>Case Study: From $847/mo to $23/mo in 6 Weeks</h3>
+      <p style="color:var(--muted);font-size:0.88rem;line-height:1.7">A solopreneur running a content agency was paying $847/mo across Zapier ($69), SEMrush ($140), Buffer ($99), Loom ($15), Typeform ($83), Hotjar ($99), Ahrefs ($129), Notion AI ($16), Calendly ($12), and Clearbit ($185).</p>
+      <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-top:12px">After switching to MCP alternatives over 6 weeks: total SaaS spend dropped to $23/mo (just Resend for transactional email). Every other tool replaced with a free MCP server or open-source equivalent. Output quality unchanged. New capability: all tools talk to each other through Claude Code with zero integration tax.</p>
+      <p style="color:var(--green);font-size:0.88rem;font-weight:700;margin-top:12px">Annual saving: $9,888. Time to ROI: 3 hours of setup.</p>
+    </div>
+
+    <div class="bottom-cta">
+      <h3>Ready to start canceling subscriptions?</h3>
+      <p>Browse the full MCP server directory and find replacements for your specific stack.</p>
+      <div class="link-row">
+        <a href="https://mcp-marketplace.surge.sh" class="link-primary">Browse MCP Marketplace</a>
+        <a href="https://mcp-tools-saas-replacements.surge.sh" class="link-secondary">See Top 15 Replacements</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function updateCalc() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  var total = 0;
+  var count = 0;
+  checkboxes.forEach(function(cb) {
+    var price = parseInt(cb.dataset.price);
+    var id = 'price-' + cb.dataset.name.toLowerCase().replace(/[^a-z]/g,'');
+    if(cb.checked) {
+      total += price;
+      count++;
+      var el = document.getElementById('price-' + cb.closest('.tool-row').querySelector('.tool-name').textContent.split(' ')[0].toLowerCase());
+      if(el) el.textContent = '$' + price + '/mo';
+    } else {
+      var el = cb.closest('.tool-row').querySelector('.toggle-price');
+      if(el) el.textContent = '$0/mo';
+    }
+  });
+  // Update prices shown
+  document.querySelectorAll('.tool-row').forEach(function(row) {
+    var cb = row.querySelector('input[type="checkbox"]');
+    var priceEl = row.querySelector('.toggle-price');
+    if(cb && priceEl) {
+      priceEl.textContent = cb.checked ? '$' + cb.dataset.price + '/mo' : '$0/mo';
+      priceEl.style.color = cb.checked ? '#ef4444' : '#666';
+    }
+  });
+  document.getElementById('total-cost').textContent = '$' + total;
+  document.getElementById('tools-count').textContent = count;
+  document.getElementById('annual-cost').textContent = '$' + (total * 12).toLocaleString();
+  document.getElementById('mcp-savings').textContent = '$' + (total * 12).toLocaleString();
+  if(total === 0) {
+    document.getElementById('result-sub').textContent = 'Toggle tools above to calculate your cost';
+  } else if(total < 100) {
+    document.getElementById('result-sub').textContent = 'Decent — but you could cut this to near zero with MCP servers';
+  } else if(total < 300) {
+    document.getElementById('result-sub').textContent = 'That\'s ' + (total * 12).toLocaleString() + '/year. MCP servers replace most of this for free.';
+  } else {
+    document.getElementById('result-sub').textContent = 'You\'re burning $' + (total * 12).toLocaleString() + '/year. MCP servers eliminate 90% of this.';
+  }
+}
+
+function unlockGuide() {
+  var email = document.getElementById('gate-email').value.trim();
+  if(!email || !email.includes('@')) {
+    document.getElementById('gate-email').style.borderColor = '#ef4444';
+    return;
+  }
+  localStorage.setItem('mcp_roi_email', email);
+  localStorage.setItem('mcp_roi_unlocked', '1');
+  document.getElementById('gate-section').style.display = 'none';
+  document.getElementById('locked-content').classList.add('revealed');
+}
+
+// Auto-unlock if already submitted
+if(localStorage.getItem('mcp_roi_unlocked')) {
+  document.getElementById('gate-section').style.display = 'none';
+  document.getElementById('locked-content').classList.add('revealed');
+}
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Competitive Intel Findings — 2026-03-08 (Cycle 15)
+# Competitive Intel Findings, 2026-03-08 (Cycle 15)
 
 ## HIGH ALERT: Focus App Competitor Trending
 

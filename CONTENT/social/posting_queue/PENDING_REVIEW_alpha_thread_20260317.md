@@ -1,4 +1,4 @@
-# AI Influencer Thread — Generated 2026-03-17 19:37
+# AI Influencer Thread, Generated 2026-03-17 19:37
 
 ## Status: PENDING_REVIEW
 
@@ -10,30 +10,30 @@ ROI Potential: HIGHEST
 
 ## Individual Tweets (3)
 
-**Tweet 1 — Voice Consistency:**
+**Tweet 1, Voice Consistency:**
 everyone copies AI influencer voices. nobody gets it right. voice cloning at 99% human parity is the thing. elevenlabs. run 5 seconds of audio through it. consistency from day 1. costs $0.35 per 1000 characters. that's why the top tier voices don't sound like robots.
 
 Tags: #AIInfluencer #TechStack
 
 ---
 
-**Tweet 2 — Visual Consistency:**
+**Tweet 2, Visual Consistency:**
 visual consistency kills uncanny valley for AI personas. same character generation method every single post. leonardo.ai. LoRA training. once it locks your character style, every image matches. audiences don't feel the bot. they feel the brand. $20/mo.
 
 Tags: #AIInfluencer #CreativeTools
 
 ---
 
-**Tweet 3 — Revenue Diversification:**
+**Tweet 3, Revenue Diversification:**
 AI influencer revenue: subs $500-2k/mo. tips $50-200/mo. PPV $20-100 per drop. custom content $100-500. merch revenue share. affiliate deals. one AI persona doesn't need 1000 subscribers anymore. 100 paying + tips + merch + deals = $2k+ monthly. tested.
 
 Tags: #AIInfluencer #Monetization
 
 ---
 
-## Thread — AI Influencer Full Stack (7-Tweet Self-Reply)
+## Thread, AI Influencer Full Stack (7-Tweet Self-Reply)
 
-**Thread Title:** AI Influencer 2026 — Full Stack from $0 to Revenue
+**Thread Title:** AI Influencer 2026, Full Stack from $0 to Revenue
 
 1. AI influencer isn't coming. it's here. every niche has 5+ AI personas now. but 95% fail. here's what actually works (tested).
 
@@ -55,7 +55,7 @@ Tags: #AIInfluencer #Monetization
 
 - [x] Follows PRINTMAXXER voice style (S-tier aggressive + A-tier brevity)
 - [x] No em dashes
-- [x] No generic AI vocabulary (comprehensive, robust, innovative, etc.)
+- [x] No generic AI vocabulary (complete, strong, novel, etc.)
 - [x] Specific numbers throughout
 - [x] Consequence-first hooks (what works, not explanation)
 - [x] Actionable steps with exact costs

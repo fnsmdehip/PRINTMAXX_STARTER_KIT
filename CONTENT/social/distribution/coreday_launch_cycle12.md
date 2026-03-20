@@ -1,4 +1,4 @@
-# CoreDay Launch Distribution — Cycle 12 (2026-03-08)
+# CoreDay Launch Distribution, Cycle 12 (2026-03-08)
 
 ## CONCEPT
 CoreDay is an anti-habit tracker. instead of tracking 47 habits, you pick 3 non-negotiables per day. complete all 3 = Win Day. that's it.
@@ -60,7 +60,7 @@ after 2 weeks: i've learned that my real non-negotiables are sleep, movement, an
 ---
 
 ### Post 3: r/SideProject (180K members)
-**Title:** built an anti-habit tracker — you can only track 3 things per day. that's the entire product.
+**Title:** built an anti-habit tracker, you can only track 3 things per day. that's the entire product.
 
 **Body:**
 CoreDay (https://coreday.surge.sh) is the opposite of most habit trackers.
@@ -133,7 +133,7 @@ if your habit tracker makes you feel worse about yourself, maybe the problem isn
 ## HACKER NEWS
 
 ### Show HN Post
-**Title:** Show HN: CoreDay — Anti-habit tracker that only lets you track 3 things per day
+**Title:** Show HN: CoreDay, Anti-habit tracker that only lets you track 3 things per day
 
 **Body:**
 CoreDay is a habit tracker built on constraint. You pick 3 non-negotiables each morning. Complete all 3 = Win Day. That's the entire system.

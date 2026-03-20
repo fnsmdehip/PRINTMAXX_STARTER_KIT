@@ -28,19 +28,19 @@ automated 332 scripts. 40+ cron jobs running every day. scraping leads from 15 c
 
 ---
 
-## Tweet 5: The $8 Unlock
+## Tweet 5: The $8 get
 
 X Premium costs $8/month. without it, link posts on Twitter get 0% algorithmic reach. we have 964 posts in the queue. cold email tools comparisons. calculator landing pages. app launches. all with links. all getting zero distribution because of an $8 subscription.
 
 ---
 
-## Thread: The 90-Minute Revenue Unlock
+## Thread: The 90-Minute Revenue get
 
 ### 1/7
 day 35 at zero revenue with a complete automation stack. 332 scripts. 40+ cron jobs. 47 live apps. 13 products built. here's exactly what's blocking everything and how 90 minutes of focused account creation fixes it all.
 
 ### 2/7
-minute 0-10: create Stripe account. this single action enables payment processing on 20+ apps and all digital products. without it every checkout page is a dead end. every "Buy Now" button does nothing. 10 minutes to unlock the entire payment layer.
+minute 0-10: create Stripe account. this single action enables payment processing on 20+ apps and all digital products. without it every checkout page is a dead end. every "Buy Now" button does nothing. 10 minutes to get the entire payment layer.
 
 ### 3/7
 minute 10-20: create Gumroad account. 13 products are sitting in a folder called "GUMROAD_INSTANT_UPLOAD." covers designed. descriptions written. pricing set. the upload script is ready. just need an account to upload to.

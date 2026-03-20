@@ -363,7 +363,7 @@ These are the accounts whose reply sections are your primary growth channel. Stu
 | @bcherny | Claude product launches, Anthropic updates | First real-world usage report. "just set up [feature] to babysit my 31 agents. checks health every 2 hours. auto-restarts dead ones." |
 | @kloss_xyz | Claude Code feature drops, /loop announcements | Specific use case. "this solves my monitoring problem. 31 agents, each gets health-checked on a 2-hour cycle." |
 | @steipete | Codex/AI editor drops | Show you're using the tools. Technical credibility. Compare to your Claude Code setup. |
-| @karpathy | AI paradigm posts, ML commentary | Bring data from your operation. "ran this pattern across 10K data points." Don't fanboy. |
+| @karpathy | AI model posts, ML commentary | Bring data from your operation. "ran this pattern across 10K data points." Don't fanboy. |
 | @mattpocockuk | TypeScript/developer content | You run ralph loops and claude code sessions. This is YOUR territory. |
 
 ### Tier 3: Sweet-Spot Accounts (10K-100K, highest ROI)
@@ -405,7 +405,7 @@ Follow all of these. Reply when their content aligns with your expertise.
 | @paulg | Startup wisdom | Only reply with founder-level insight. Don't waste replies here unless exceptional. |
 | @marcandreessen | Tech policy | AI/tech takes only. Bring builder perspective, not spectator commentary. |
 | @shpigford | Indie SaaS | Multiple products, open metrics. Study his build-in-public transparency with real dashboards. |
-| @csaborneplus | Micro-SaaS | Small wins, honest numbers. Good energy match for $0-to-first-dollar journey. |
+| @csaborneplus | Micro-SaaS | Small wins, honest numbers. Good energy match for $0-to-first-dollar path. |
 | @arlogilbert | Startup founder | Product-market fit posts. Study how he talks about finding traction. |
 | @swizec | Developer content | Technical threads that get non-technical engagement. Study his bridge format. |
 | @haborowski | Fitness/discipline | Cross-niche accountability energy. Study how discipline content performs in builder feeds. |
@@ -1048,7 +1048,7 @@ more agents won't help. more data won't help. what helps: picking ONE thing and 
 
 Tweet 5: lesson 4: documenting the $0 phase is actually the most valuable content.
 
-everyone wants to see the journey. nobody shares the "nothing is working yet" part.
+everyone wants to see the path. nobody shares the "nothing is working yet" part.
 
 that's the content moat.
 

@@ -1,4 +1,4 @@
-# Twitter Distribution Cycle 5 — Fresh Angles
+# Twitter Distribution Cycle 5, Fresh Angles
 # Account: @PRINTMAXXER
 # Date: 2026-03-07
 # Status: PENDING_REVIEW
@@ -8,7 +8,7 @@
 ## PRE-PUBLISH CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless, game-changer, unlock)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless, game-changer, get)
 - [x] No "It's not just X, it's Y" constructions
 - [x] No vague attributions without links
 - [x] No promotional adjectives

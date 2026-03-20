@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "total_connectors": 105,
+  "total_connectors": 134,
   "categories": [
     "communication",
     "data",
@@ -28,11 +28,29 @@
       "category": "communication",
       "mcp_server": "npx -y @modelcontextprotocol/server-slack",
       "mcp_available": true,
-      "setup_requires": ["SLACK_BOT_TOKEN", "SLACK_TEAM_ID"],
+      "setup_requires": [
+        "SLACK_BOT_TOKEN",
+        "SLACK_TEAM_ID"
+      ],
       "description": "Send/receive messages, manage channels, read threads, search workspace",
-      "capabilities": ["send_message", "read_channel", "create_channel", "search", "list_channels", "reply_thread"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make", "openhands"],
-      "priority": "high"
+      "capabilities": [
+        "send_message",
+        "read_channel",
+        "create_channel",
+        "search",
+        "list_channels",
+        "reply_thread"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make",
+        "openhands"
+      ],
+      "priority": "high",
+      "install_command": "@modelcontextprotocol/server-slack",
+      "install_type": "npm"
     },
     {
       "name": "discord",
@@ -40,11 +58,26 @@
       "category": "communication",
       "mcp_server": "npx -y @mcp-community/server-discord",
       "mcp_available": true,
-      "setup_requires": ["DISCORD_BOT_TOKEN"],
+      "setup_requires": [
+        "DISCORD_BOT_TOKEN"
+      ],
       "description": "Send messages, manage servers, read channels, manage roles",
-      "capabilities": ["send_message", "read_channel", "manage_server", "manage_roles", "create_channel"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make"],
-      "priority": "high"
+      "capabilities": [
+        "send_message",
+        "read_channel",
+        "manage_server",
+        "manage_roles",
+        "create_channel"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "discord-mcp",
+      "install_type": "npm"
     },
     {
       "name": "telegram",
@@ -52,11 +85,26 @@
       "category": "communication",
       "mcp_server": "npx -y @mcp-community/server-telegram",
       "mcp_available": true,
-      "setup_requires": ["TELEGRAM_BOT_TOKEN"],
+      "setup_requires": [
+        "TELEGRAM_BOT_TOKEN"
+      ],
       "description": "Send/receive messages, manage groups, inline keyboards, file sharing",
-      "capabilities": ["send_message", "read_message", "manage_group", "send_media", "inline_keyboard"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make"],
-      "priority": "high"
+      "capabilities": [
+        "send_message",
+        "read_message",
+        "manage_group",
+        "send_media",
+        "inline_keyboard"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@overpod/mcp-telegram",
+      "install_type": "npm"
     },
     {
       "name": "whatsapp",
@@ -64,10 +112,23 @@
       "category": "communication",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["WHATSAPP_BUSINESS_TOKEN", "WHATSAPP_PHONE_NUMBER_ID"],
+      "setup_requires": [
+        "WHATSAPP_BUSINESS_TOKEN",
+        "WHATSAPP_PHONE_NUMBER_ID"
+      ],
       "description": "Send/receive messages via WhatsApp Business API, templates, media",
-      "capabilities": ["send_message", "send_template", "send_media", "read_message"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make"],
+      "capabilities": [
+        "send_message",
+        "send_template",
+        "send_media",
+        "read_message"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -76,10 +137,23 @@
       "category": "communication",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASSWORD"],
+      "setup_requires": [
+        "SMTP_HOST",
+        "SMTP_PORT",
+        "SMTP_USER",
+        "SMTP_PASSWORD"
+      ],
       "description": "Send emails via any SMTP server",
-      "capabilities": ["send_email", "send_html_email", "attachments"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "send_email",
+        "send_html_email",
+        "attachments"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "high"
     },
     {
@@ -88,10 +162,24 @@
       "category": "communication",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["IMAP_HOST", "IMAP_PORT", "IMAP_USER", "IMAP_PASSWORD"],
+      "setup_requires": [
+        "IMAP_HOST",
+        "IMAP_PORT",
+        "IMAP_USER",
+        "IMAP_PASSWORD"
+      ],
       "description": "Read emails from any IMAP server, search, manage folders",
-      "capabilities": ["read_email", "search_email", "manage_folders", "mark_read"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "read_email",
+        "search_email",
+        "manage_folders",
+        "mark_read"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "high"
     },
     {
@@ -100,11 +188,27 @@
       "category": "communication",
       "mcp_server": "npx -y @anthropic/mcp-gmail",
       "mcp_available": true,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN"
+      ],
       "description": "Send/read Gmail, search, manage labels, draft emails",
-      "capabilities": ["send_email", "read_email", "search", "manage_labels", "draft"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "send_email",
+        "read_email",
+        "search",
+        "manage_labels",
+        "draft"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@anthropic/mcp-gmail",
+      "install_type": "npm"
     },
     {
       "name": "microsoft_teams",
@@ -112,10 +216,23 @@
       "category": "communication",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["MICROSOFT_CLIENT_ID", "MICROSOFT_CLIENT_SECRET", "MICROSOFT_TENANT_ID"],
+      "setup_requires": [
+        "MICROSOFT_CLIENT_ID",
+        "MICROSOFT_CLIENT_SECRET",
+        "MICROSOFT_TENANT_ID"
+      ],
       "description": "Send messages, manage teams and channels, schedule meetings",
-      "capabilities": ["send_message", "read_channel", "create_meeting", "manage_teams"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "send_message",
+        "read_channel",
+        "create_meeting",
+        "manage_teams"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -124,11 +241,28 @@
       "category": "data",
       "mcp_server": "npx -y @anthropic/mcp-google-sheets",
       "mcp_available": true,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN"
+      ],
       "description": "Read/write spreadsheets, create sheets, format cells, formulas",
-      "capabilities": ["read_sheet", "write_sheet", "create_sheet", "append_row", "format", "formulas"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "read_sheet",
+        "write_sheet",
+        "create_sheet",
+        "append_row",
+        "format",
+        "formulas"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@anthropic/mcp-google-sheets",
+      "install_type": "npm"
     },
     {
       "name": "airtable",
@@ -136,11 +270,26 @@
       "category": "data",
       "mcp_server": "npx -y @mcp-community/server-airtable",
       "mcp_available": true,
-      "setup_requires": ["AIRTABLE_API_KEY"],
+      "setup_requires": [
+        "AIRTABLE_API_KEY"
+      ],
       "description": "CRUD operations on bases, tables, records, views",
-      "capabilities": ["read_records", "create_record", "update_record", "delete_record", "list_bases", "search"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "read_records",
+        "create_record",
+        "update_record",
+        "delete_record",
+        "list_bases",
+        "search"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-airtable",
+      "install_type": "npm"
     },
     {
       "name": "notion",
@@ -148,11 +297,27 @@
       "category": "data",
       "mcp_server": "npx -y @notionhq/notion-mcp-server",
       "mcp_available": true,
-      "setup_requires": ["NOTION_API_KEY"],
+      "setup_requires": [
+        "NOTION_API_KEY"
+      ],
       "description": "Read/write pages, databases, blocks, search workspace",
-      "capabilities": ["read_page", "create_page", "update_page", "query_database", "search", "create_database"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make"],
-      "priority": "high"
+      "capabilities": [
+        "read_page",
+        "create_page",
+        "update_page",
+        "query_database",
+        "search",
+        "create_database"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@notionhq/notion-mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "postgres",
@@ -160,11 +325,24 @@
       "category": "data",
       "mcp_server": "npx -y @modelcontextprotocol/server-postgres",
       "mcp_available": true,
-      "setup_requires": ["POSTGRES_CONNECTION_STRING"],
+      "setup_requires": [
+        "POSTGRES_CONNECTION_STRING"
+      ],
       "description": "Query PostgreSQL databases, inspect schemas, read-only access",
-      "capabilities": ["query", "inspect_schema", "list_tables", "describe_table"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "query",
+        "inspect_schema",
+        "list_tables",
+        "describe_table"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@modelcontextprotocol/server-postgres",
+      "install_type": "npm"
     },
     {
       "name": "mysql",
@@ -172,10 +350,20 @@
       "category": "data",
       "mcp_server": "npx -y @mcp-community/server-mysql",
       "mcp_available": true,
-      "setup_requires": ["MYSQL_CONNECTION_STRING"],
+      "setup_requires": [
+        "MYSQL_CONNECTION_STRING"
+      ],
       "description": "Query MySQL databases, inspect schemas",
-      "capabilities": ["query", "inspect_schema", "list_tables"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "query",
+        "inspect_schema",
+        "list_tables"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -184,11 +372,22 @@
       "category": "data",
       "mcp_server": "npx -y @modelcontextprotocol/server-sqlite",
       "mcp_available": true,
-      "setup_requires": ["SQLITE_DB_PATH"],
+      "setup_requires": [
+        "SQLITE_DB_PATH"
+      ],
       "description": "Query local SQLite databases, create tables, full read-write",
-      "capabilities": ["query", "create_table", "insert", "inspect_schema"],
-      "competitors_with_this": ["n8n"],
-      "priority": "medium"
+      "capabilities": [
+        "query",
+        "create_table",
+        "insert",
+        "inspect_schema"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
+      "priority": "medium",
+      "install_command": "@modelcontextprotocol/server-sqlite",
+      "install_type": "npm"
     },
     {
       "name": "mongodb",
@@ -196,10 +395,23 @@
       "category": "data",
       "mcp_server": "npx -y @mcp-community/server-mongodb",
       "mcp_available": true,
-      "setup_requires": ["MONGODB_CONNECTION_STRING"],
+      "setup_requires": [
+        "MONGODB_CONNECTION_STRING"
+      ],
       "description": "Query MongoDB collections, inspect schemas, CRUD operations",
-      "capabilities": ["query", "insert", "update", "delete", "inspect_schema", "aggregate"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "query",
+        "insert",
+        "update",
+        "delete",
+        "inspect_schema",
+        "aggregate"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -208,10 +420,20 @@
       "category": "data",
       "mcp_server": "npx -y @mcp-community/server-redis",
       "mcp_available": true,
-      "setup_requires": ["REDIS_URL"],
+      "setup_requires": [
+        "REDIS_URL"
+      ],
       "description": "Get/set keys, manage data structures, pub/sub",
-      "capabilities": ["get", "set", "delete", "list_keys", "pub_sub"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "get",
+        "set",
+        "delete",
+        "list_keys",
+        "pub_sub"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -220,11 +442,28 @@
       "category": "data",
       "mcp_server": "npx -y @supabase/mcp-server-supabase",
       "mcp_available": true,
-      "setup_requires": ["SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY"],
+      "setup_requires": [
+        "SUPABASE_URL",
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
       "description": "Full Supabase access: database, auth, storage, edge functions, RLS-aware",
-      "capabilities": ["query", "insert", "update", "manage_auth", "storage", "edge_functions", "rls"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "query",
+        "insert",
+        "update",
+        "manage_auth",
+        "storage",
+        "edge_functions",
+        "rls"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@supabase/mcp-server-supabase",
+      "install_type": "npm"
     },
     {
       "name": "twitter",
@@ -232,11 +471,32 @@
       "category": "social",
       "mcp_server": "npx -y @mcp-community/server-twitter",
       "mcp_available": true,
-      "setup_requires": ["TWITTER_API_KEY", "TWITTER_API_SECRET", "TWITTER_ACCESS_TOKEN", "TWITTER_ACCESS_TOKEN_SECRET"],
+      "setup_requires": [
+        "TWITTER_API_KEY",
+        "TWITTER_API_SECRET",
+        "TWITTER_ACCESS_TOKEN",
+        "TWITTER_ACCESS_TOKEN_SECRET"
+      ],
       "description": "Post tweets, read timeline, search, manage followers, analytics",
-      "capabilities": ["post_tweet", "read_timeline", "search", "reply", "like", "retweet", "followers", "analytics"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make"],
-      "priority": "high"
+      "capabilities": [
+        "post_tweet",
+        "read_timeline",
+        "search",
+        "reply",
+        "like",
+        "retweet",
+        "followers",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-twitter",
+      "install_type": "npm"
     },
     {
       "name": "linkedin",
@@ -244,10 +504,22 @@
       "category": "social",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["LINKEDIN_ACCESS_TOKEN"],
+      "setup_requires": [
+        "LINKEDIN_ACCESS_TOKEN"
+      ],
       "description": "Post content, manage connections, company pages, messaging",
-      "capabilities": ["post", "read_feed", "manage_connections", "company_page", "messaging"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "post",
+        "read_feed",
+        "manage_connections",
+        "company_page",
+        "messaging"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "high"
     },
     {
@@ -256,10 +528,23 @@
       "category": "social",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["FACEBOOK_ACCESS_TOKEN", "FACEBOOK_PAGE_ID"],
+      "setup_requires": [
+        "FACEBOOK_ACCESS_TOKEN",
+        "FACEBOOK_PAGE_ID"
+      ],
       "description": "Post to pages, read feed, manage ads, messenger",
-      "capabilities": ["post", "read_feed", "manage_ads", "messenger", "page_insights"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "post",
+        "read_feed",
+        "manage_ads",
+        "messenger",
+        "page_insights"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -268,10 +553,24 @@
       "category": "social",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["INSTAGRAM_ACCESS_TOKEN", "INSTAGRAM_BUSINESS_ACCOUNT_ID"],
+      "setup_requires": [
+        "INSTAGRAM_ACCESS_TOKEN",
+        "INSTAGRAM_BUSINESS_ACCOUNT_ID"
+      ],
       "description": "Post media, read feed, stories, reels, insights",
-      "capabilities": ["post_media", "read_feed", "stories", "reels", "insights", "comments"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "post_media",
+        "read_feed",
+        "stories",
+        "reels",
+        "insights",
+        "comments"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -280,10 +579,20 @@
       "category": "social",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["TIKTOK_ACCESS_TOKEN"],
+      "setup_requires": [
+        "TIKTOK_ACCESS_TOKEN"
+      ],
       "description": "Upload videos, read analytics, manage account",
-      "capabilities": ["upload_video", "analytics", "read_comments", "manage_account"],
-      "competitors_with_this": ["zapier", "make"],
+      "capabilities": [
+        "upload_video",
+        "analytics",
+        "read_comments",
+        "manage_account"
+      ],
+      "competitors_with_this": [
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -292,11 +601,29 @@
       "category": "social",
       "mcp_server": "npx -y @mcp-community/server-reddit",
       "mcp_available": true,
-      "setup_requires": ["REDDIT_CLIENT_ID", "REDDIT_CLIENT_SECRET", "REDDIT_USERNAME", "REDDIT_PASSWORD"],
+      "setup_requires": [
+        "REDDIT_CLIENT_ID",
+        "REDDIT_CLIENT_SECRET",
+        "REDDIT_USERNAME",
+        "REDDIT_PASSWORD"
+      ],
       "description": "Read/post to subreddits, comments, search, monitor mentions",
-      "capabilities": ["read_subreddit", "post", "comment", "search", "monitor", "upvote"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "read_subreddit",
+        "post",
+        "comment",
+        "search",
+        "monitor",
+        "upvote"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-reddit",
+      "install_type": "npm"
     },
     {
       "name": "youtube",
@@ -304,10 +631,23 @@
       "category": "social",
       "mcp_server": "npx -y @mcp-community/server-youtube",
       "mcp_available": true,
-      "setup_requires": ["YOUTUBE_API_KEY"],
+      "setup_requires": [
+        "YOUTUBE_API_KEY"
+      ],
       "description": "Search videos, read comments, channel analytics, captions",
-      "capabilities": ["search", "read_comments", "channel_stats", "video_details", "captions", "playlists"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "search",
+        "read_comments",
+        "channel_stats",
+        "video_details",
+        "captions",
+        "playlists"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -316,10 +656,19 @@
       "category": "social",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["THREADS_ACCESS_TOKEN"],
+      "setup_requires": [
+        "THREADS_ACCESS_TOKEN"
+      ],
       "description": "Post to Threads, read feed, reply",
-      "capabilities": ["post", "read_feed", "reply", "insights"],
-      "competitors_with_this": ["zapier"],
+      "capabilities": [
+        "post",
+        "read_feed",
+        "reply",
+        "insights"
+      ],
+      "competitors_with_this": [
+        "zapier"
+      ],
       "priority": "low"
     },
     {
@@ -328,10 +677,21 @@
       "category": "social",
       "mcp_server": "npx -y @mcp-community/server-bluesky",
       "mcp_available": true,
-      "setup_requires": ["BLUESKY_HANDLE", "BLUESKY_APP_PASSWORD"],
+      "setup_requires": [
+        "BLUESKY_HANDLE",
+        "BLUESKY_APP_PASSWORD"
+      ],
       "description": "Post, read feed, follow, search on AT Protocol",
-      "capabilities": ["post", "read_feed", "follow", "search", "reply"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "post",
+        "read_feed",
+        "follow",
+        "search",
+        "reply"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -340,10 +700,21 @@
       "category": "social",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["PINTEREST_ACCESS_TOKEN"],
+      "setup_requires": [
+        "PINTEREST_ACCESS_TOKEN"
+      ],
       "description": "Create pins, manage boards, analytics",
-      "capabilities": ["create_pin", "manage_boards", "analytics", "search"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_pin",
+        "manage_boards",
+        "analytics",
+        "search"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -352,11 +723,29 @@
       "category": "dev",
       "mcp_server": "npx -y @modelcontextprotocol/server-github",
       "mcp_available": true,
-      "setup_requires": ["GITHUB_TOKEN"],
+      "setup_requires": [
+        "GITHUB_TOKEN"
+      ],
       "description": "Manage repos, issues, PRs, actions, releases, code search",
-      "capabilities": ["create_issue", "create_pr", "read_repo", "search_code", "manage_actions", "releases", "reviews"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make", "openhands"],
-      "priority": "high"
+      "capabilities": [
+        "create_issue",
+        "create_pr",
+        "read_repo",
+        "search_code",
+        "manage_actions",
+        "releases",
+        "reviews"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make",
+        "openhands"
+      ],
+      "priority": "high",
+      "install_command": "@modelcontextprotocol/server-github",
+      "install_type": "npm"
     },
     {
       "name": "gitlab",
@@ -364,10 +753,24 @@
       "category": "dev",
       "mcp_server": "npx -y @mcp-community/server-gitlab",
       "mcp_available": true,
-      "setup_requires": ["GITLAB_TOKEN", "GITLAB_URL"],
+      "setup_requires": [
+        "GITLAB_TOKEN",
+        "GITLAB_URL"
+      ],
       "description": "Manage repos, merge requests, issues, CI/CD pipelines",
-      "capabilities": ["create_issue", "create_mr", "read_repo", "manage_ci", "pipelines"],
-      "competitors_with_this": ["n8n", "zapier", "make", "openhands"],
+      "capabilities": [
+        "create_issue",
+        "create_mr",
+        "read_repo",
+        "manage_ci",
+        "pipelines"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make",
+        "openhands"
+      ],
       "priority": "medium"
     },
     {
@@ -376,10 +779,25 @@
       "category": "dev",
       "mcp_server": "npx -y @mcp-community/server-jira",
       "mcp_available": true,
-      "setup_requires": ["JIRA_URL", "JIRA_EMAIL", "JIRA_API_TOKEN"],
+      "setup_requires": [
+        "JIRA_URL",
+        "JIRA_EMAIL",
+        "JIRA_API_TOKEN"
+      ],
       "description": "Create/update issues, manage sprints, search, boards",
-      "capabilities": ["create_issue", "update_issue", "search", "manage_sprints", "boards", "transitions"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_issue",
+        "update_issue",
+        "search",
+        "manage_sprints",
+        "boards",
+        "transitions"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -388,11 +806,26 @@
       "category": "dev",
       "mcp_server": "npx -y @linear/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["LINEAR_API_KEY"],
+      "setup_requires": [
+        "LINEAR_API_KEY"
+      ],
       "description": "Create/update issues, manage projects, cycles, teams",
-      "capabilities": ["create_issue", "update_issue", "search", "manage_projects", "cycles", "teams"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "create_issue",
+        "update_issue",
+        "search",
+        "manage_projects",
+        "cycles",
+        "teams"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@linear/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "asana",
@@ -400,10 +833,22 @@
       "category": "dev",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["ASANA_ACCESS_TOKEN"],
+      "setup_requires": [
+        "ASANA_ACCESS_TOKEN"
+      ],
       "description": "Create/update tasks, manage projects, sections, portfolios",
-      "capabilities": ["create_task", "update_task", "manage_projects", "sections", "search"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_task",
+        "update_task",
+        "manage_projects",
+        "sections",
+        "search"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -412,10 +857,23 @@
       "category": "dev",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["TRELLO_API_KEY", "TRELLO_TOKEN"],
+      "setup_requires": [
+        "TRELLO_API_KEY",
+        "TRELLO_TOKEN"
+      ],
       "description": "Manage boards, lists, cards, checklists",
-      "capabilities": ["create_card", "move_card", "manage_boards", "lists", "checklists"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_card",
+        "move_card",
+        "manage_boards",
+        "lists",
+        "checklists"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -424,10 +882,22 @@
       "category": "dev",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["CLICKUP_API_TOKEN"],
+      "setup_requires": [
+        "CLICKUP_API_TOKEN"
+      ],
       "description": "Manage tasks, spaces, goals, time tracking",
-      "capabilities": ["create_task", "update_task", "manage_spaces", "goals", "time_tracking"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_task",
+        "update_task",
+        "manage_spaces",
+        "goals",
+        "time_tracking"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -436,11 +906,23 @@
       "category": "dev",
       "mcp_server": "npx -y @vercel/mcp",
       "mcp_available": true,
-      "setup_requires": ["VERCEL_TOKEN"],
+      "setup_requires": [
+        "VERCEL_TOKEN"
+      ],
       "description": "Manage deployments, domains, environment variables, logs",
-      "capabilities": ["deploy", "manage_domains", "env_vars", "logs", "projects"],
-      "competitors_with_this": ["n8n"],
-      "priority": "medium"
+      "capabilities": [
+        "deploy",
+        "manage_domains",
+        "env_vars",
+        "logs",
+        "projects"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
+      "priority": "medium",
+      "install_command": "@vercel/mcp",
+      "install_type": "npm"
     },
     {
       "name": "netlify",
@@ -448,10 +930,20 @@
       "category": "dev",
       "mcp_server": "npx -y @netlify/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["NETLIFY_AUTH_TOKEN"],
+      "setup_requires": [
+        "NETLIFY_AUTH_TOKEN"
+      ],
       "description": "Manage sites, deploys, forms, functions",
-      "capabilities": ["deploy", "manage_sites", "forms", "functions", "dns"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "deploy",
+        "manage_sites",
+        "forms",
+        "functions",
+        "dns"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -460,11 +952,26 @@
       "category": "commerce",
       "mcp_server": "npx -y @stripe/mcp",
       "mcp_available": true,
-      "setup_requires": ["STRIPE_SECRET_KEY"],
+      "setup_requires": [
+        "STRIPE_SECRET_KEY"
+      ],
       "description": "Manage payments, customers, subscriptions, invoices, products",
-      "capabilities": ["create_payment", "manage_customers", "subscriptions", "invoices", "products", "refunds"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "create_payment",
+        "manage_customers",
+        "subscriptions",
+        "invoices",
+        "products",
+        "refunds"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@stripe/mcp",
+      "install_type": "npm"
     },
     {
       "name": "shopify",
@@ -472,11 +979,27 @@
       "category": "commerce",
       "mcp_server": "npx -y @mcp-community/server-shopify",
       "mcp_available": true,
-      "setup_requires": ["SHOPIFY_STORE_URL", "SHOPIFY_ACCESS_TOKEN"],
+      "setup_requires": [
+        "SHOPIFY_STORE_URL",
+        "SHOPIFY_ACCESS_TOKEN"
+      ],
       "description": "Manage products, orders, customers, inventory, fulfillment",
-      "capabilities": ["manage_products", "manage_orders", "customers", "inventory", "fulfillment", "analytics"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "manage_products",
+        "manage_orders",
+        "customers",
+        "inventory",
+        "fulfillment",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-shopify",
+      "install_type": "npm"
     },
     {
       "name": "gumroad",
@@ -484,10 +1007,20 @@
       "category": "commerce",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["GUMROAD_ACCESS_TOKEN"],
+      "setup_requires": [
+        "GUMROAD_ACCESS_TOKEN"
+      ],
       "description": "Manage products, sales, subscribers, license keys",
-      "capabilities": ["list_products", "create_product", "sales", "subscribers", "license_keys"],
-      "competitors_with_this": ["zapier"],
+      "capabilities": [
+        "list_products",
+        "create_product",
+        "sales",
+        "subscribers",
+        "license_keys"
+      ],
+      "competitors_with_this": [
+        "zapier"
+      ],
       "priority": "high"
     },
     {
@@ -496,10 +1029,23 @@
       "category": "commerce",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["PAYPAL_CLIENT_ID", "PAYPAL_CLIENT_SECRET"],
+      "setup_requires": [
+        "PAYPAL_CLIENT_ID",
+        "PAYPAL_CLIENT_SECRET"
+      ],
       "description": "Manage payments, invoices, subscriptions, payouts",
-      "capabilities": ["create_payment", "invoices", "subscriptions", "payouts", "refunds"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_payment",
+        "invoices",
+        "subscriptions",
+        "payouts",
+        "refunds"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -508,10 +1054,24 @@
       "category": "commerce",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["WOOCOMMERCE_URL", "WOOCOMMERCE_CONSUMER_KEY", "WOOCOMMERCE_CONSUMER_SECRET"],
+      "setup_requires": [
+        "WOOCOMMERCE_URL",
+        "WOOCOMMERCE_CONSUMER_KEY",
+        "WOOCOMMERCE_CONSUMER_SECRET"
+      ],
       "description": "Manage products, orders, customers for WordPress stores",
-      "capabilities": ["manage_products", "manage_orders", "customers", "coupons", "reports"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_products",
+        "manage_orders",
+        "customers",
+        "coupons",
+        "reports"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -520,10 +1080,20 @@
       "category": "commerce",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["LEMONSQUEEZY_API_KEY"],
+      "setup_requires": [
+        "LEMONSQUEEZY_API_KEY"
+      ],
       "description": "Manage products, subscriptions, license keys, checkouts",
-      "capabilities": ["manage_products", "subscriptions", "license_keys", "checkouts", "analytics"],
-      "competitors_with_this": ["zapier"],
+      "capabilities": [
+        "manage_products",
+        "subscriptions",
+        "license_keys",
+        "checkouts",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "zapier"
+      ],
       "priority": "medium"
     },
     {
@@ -532,10 +1102,24 @@
       "category": "commerce",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["AMAZON_SP_CLIENT_ID", "AMAZON_SP_CLIENT_SECRET", "AMAZON_SP_REFRESH_TOKEN"],
+      "setup_requires": [
+        "AMAZON_SP_CLIENT_ID",
+        "AMAZON_SP_CLIENT_SECRET",
+        "AMAZON_SP_REFRESH_TOKEN"
+      ],
       "description": "Manage listings, orders, inventory, reports on Amazon",
-      "capabilities": ["manage_listings", "orders", "inventory", "reports", "pricing"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_listings",
+        "orders",
+        "inventory",
+        "reports",
+        "pricing"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -544,10 +1128,24 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["OPENAI_API_KEY"],
+      "setup_requires": [
+        "OPENAI_API_KEY"
+      ],
       "description": "Chat completions, embeddings, image generation, audio, assistants",
-      "capabilities": ["chat", "embeddings", "image_generation", "audio_transcription", "tts", "assistants"],
-      "competitors_with_this": ["n8n", "zapier", "hermes", "make"],
+      "capabilities": [
+        "chat",
+        "embeddings",
+        "image_generation",
+        "audio_transcription",
+        "tts",
+        "assistants"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "hermes",
+        "make"
+      ],
       "priority": "high"
     },
     {
@@ -556,10 +1154,22 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["ANTHROPIC_API_KEY"],
+      "setup_requires": [
+        "ANTHROPIC_API_KEY"
+      ],
       "description": "Claude chat completions, tool use, vision, extended thinking",
-      "capabilities": ["chat", "tool_use", "vision", "extended_thinking", "batch"],
-      "competitors_with_this": ["n8n", "hermes", "make"],
+      "capabilities": [
+        "chat",
+        "tool_use",
+        "vision",
+        "extended_thinking",
+        "batch"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "hermes",
+        "make"
+      ],
       "priority": "high"
     },
     {
@@ -568,10 +1178,22 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["GOOGLE_AI_API_KEY"],
+      "setup_requires": [
+        "GOOGLE_AI_API_KEY"
+      ],
       "description": "Gemini chat, embeddings, vision, code generation",
-      "capabilities": ["chat", "embeddings", "vision", "code_generation", "grounding"],
-      "competitors_with_this": ["n8n", "hermes", "make"],
+      "capabilities": [
+        "chat",
+        "embeddings",
+        "vision",
+        "code_generation",
+        "grounding"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "hermes",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -580,10 +1202,22 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["REPLICATE_API_TOKEN"],
+      "setup_requires": [
+        "REPLICATE_API_TOKEN"
+      ],
       "description": "Run ML models: image gen, video, audio, LLMs",
-      "capabilities": ["run_model", "image_generation", "video_generation", "audio", "predictions"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "run_model",
+        "image_generation",
+        "video_generation",
+        "audio",
+        "predictions"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -592,11 +1226,24 @@
       "category": "ai",
       "mcp_server": "npx -y @huggingface/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["HUGGINGFACE_TOKEN"],
+      "setup_requires": [
+        "HUGGINGFACE_TOKEN"
+      ],
       "description": "Run inference, manage models, datasets, spaces",
-      "capabilities": ["inference", "manage_models", "datasets", "spaces", "search_models"],
-      "competitors_with_this": ["n8n", "make"],
-      "priority": "medium"
+      "capabilities": [
+        "inference",
+        "manage_models",
+        "datasets",
+        "spaces",
+        "search_models"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "make"
+      ],
+      "priority": "medium",
+      "install_command": "@huggingface/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "elevenlabs",
@@ -604,11 +1251,23 @@
       "category": "ai",
       "mcp_server": "npx -y @elevenlabs/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["ELEVENLABS_API_KEY"],
+      "setup_requires": [
+        "ELEVENLABS_API_KEY"
+      ],
       "description": "Text-to-speech, voice cloning, audio generation",
-      "capabilities": ["text_to_speech", "voice_cloning", "sound_effects", "voices_list"],
-      "competitors_with_this": ["n8n", "zapier"],
-      "priority": "medium"
+      "capabilities": [
+        "text_to_speech",
+        "voice_cloning",
+        "sound_effects",
+        "voices_list"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier"
+      ],
+      "priority": "medium",
+      "install_command": "@elevenlabs/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "stability_ai",
@@ -616,10 +1275,20 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["STABILITY_API_KEY"],
+      "setup_requires": [
+        "STABILITY_API_KEY"
+      ],
       "description": "Image generation, upscaling, inpainting via Stable Diffusion",
-      "capabilities": ["image_generation", "upscaling", "inpainting", "image_to_image"],
-      "competitors_with_this": ["n8n", "make"],
+      "capabilities": [
+        "image_generation",
+        "upscaling",
+        "inpainting",
+        "image_to_image"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -628,10 +1297,18 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["DEEPSEEK_API_KEY"],
+      "setup_requires": [
+        "DEEPSEEK_API_KEY"
+      ],
       "description": "DeepSeek chat completions, reasoning, code generation",
-      "capabilities": ["chat", "reasoning", "code_generation"],
-      "competitors_with_this": ["make"],
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code_generation"
+      ],
+      "competitors_with_this": [
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -640,11 +1317,28 @@
       "category": "storage",
       "mcp_server": "npx -y @modelcontextprotocol/server-google-drive",
       "mcp_available": true,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN"
+      ],
       "description": "Upload/download files, manage folders, search, share",
-      "capabilities": ["upload", "download", "search", "manage_folders", "share", "permissions"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "upload",
+        "download",
+        "search",
+        "manage_folders",
+        "share",
+        "permissions"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@modelcontextprotocol/server-google-drive",
+      "install_type": "npm"
     },
     {
       "name": "dropbox",
@@ -652,10 +1346,22 @@
       "category": "storage",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["DROPBOX_ACCESS_TOKEN"],
+      "setup_requires": [
+        "DROPBOX_ACCESS_TOKEN"
+      ],
       "description": "Upload/download files, manage folders, share links",
-      "capabilities": ["upload", "download", "search", "manage_folders", "share"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "upload",
+        "download",
+        "search",
+        "manage_folders",
+        "share"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -664,11 +1370,28 @@
       "category": "storage",
       "mcp_server": "npx -y @mcp-community/server-aws-s3",
       "mcp_available": true,
-      "setup_requires": ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_REGION"],
+      "setup_requires": [
+        "AWS_ACCESS_KEY_ID",
+        "AWS_SECRET_ACCESS_KEY",
+        "AWS_REGION"
+      ],
       "description": "Upload/download objects, manage buckets, presigned URLs",
-      "capabilities": ["upload", "download", "list_buckets", "list_objects", "presigned_urls", "delete"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "upload",
+        "download",
+        "list_buckets",
+        "list_objects",
+        "presigned_urls",
+        "delete"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-aws-s3",
+      "install_type": "npm"
     },
     {
       "name": "cloudflare_r2",
@@ -676,10 +1399,22 @@
       "category": "storage",
       "mcp_server": "npx -y @cloudflare/mcp-server-cloudflare",
       "mcp_available": true,
-      "setup_requires": ["CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID"],
+      "setup_requires": [
+        "CLOUDFLARE_API_TOKEN",
+        "CLOUDFLARE_ACCOUNT_ID"
+      ],
       "description": "S3-compatible storage, Workers, KV, D1, Pages management",
-      "capabilities": ["upload", "download", "workers", "kv_store", "d1_database", "pages"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "upload",
+        "download",
+        "workers",
+        "kv_store",
+        "d1_database",
+        "pages"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -688,10 +1423,23 @@
       "category": "storage",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["MICROSOFT_CLIENT_ID", "MICROSOFT_CLIENT_SECRET"],
+      "setup_requires": [
+        "MICROSOFT_CLIENT_ID",
+        "MICROSOFT_CLIENT_SECRET"
+      ],
       "description": "Upload/download files, manage folders via Microsoft Graph",
-      "capabilities": ["upload", "download", "search", "manage_folders", "share"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "upload",
+        "download",
+        "search",
+        "manage_folders",
+        "share"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -700,10 +1448,21 @@
       "category": "storage",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["MINIO_ENDPOINT", "MINIO_ACCESS_KEY", "MINIO_SECRET_KEY"],
+      "setup_requires": [
+        "MINIO_ENDPOINT",
+        "MINIO_ACCESS_KEY",
+        "MINIO_SECRET_KEY"
+      ],
       "description": "S3-compatible self-hosted object storage",
-      "capabilities": ["upload", "download", "list_buckets", "list_objects"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "upload",
+        "download",
+        "list_buckets",
+        "list_objects"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "low"
     },
     {
@@ -712,11 +1471,26 @@
       "category": "crm",
       "mcp_server": "npx -y @hubspot/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["HUBSPOT_ACCESS_TOKEN"],
+      "setup_requires": [
+        "HUBSPOT_ACCESS_TOKEN"
+      ],
       "description": "Manage contacts, deals, companies, tickets, workflows",
-      "capabilities": ["manage_contacts", "manage_deals", "companies", "tickets", "workflows", "lists"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "manage_contacts",
+        "manage_deals",
+        "companies",
+        "tickets",
+        "workflows",
+        "lists"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@hubspot/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "salesforce",
@@ -724,11 +1498,27 @@
       "category": "crm",
       "mcp_server": "npx -y @salesforce/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["SALESFORCE_INSTANCE_URL", "SALESFORCE_ACCESS_TOKEN"],
+      "setup_requires": [
+        "SALESFORCE_INSTANCE_URL",
+        "SALESFORCE_ACCESS_TOKEN"
+      ],
       "description": "Manage leads, contacts, opportunities, accounts, reports",
-      "capabilities": ["manage_leads", "contacts", "opportunities", "accounts", "reports", "soql_query"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "manage_leads",
+        "contacts",
+        "opportunities",
+        "accounts",
+        "reports",
+        "soql_query"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@salesforce/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "pipedrive",
@@ -736,10 +1526,22 @@
       "category": "crm",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["PIPEDRIVE_API_TOKEN"],
+      "setup_requires": [
+        "PIPEDRIVE_API_TOKEN"
+      ],
       "description": "Manage deals, contacts, organizations, activities",
-      "capabilities": ["manage_deals", "contacts", "organizations", "activities", "pipelines"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_deals",
+        "contacts",
+        "organizations",
+        "activities",
+        "pipelines"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -748,10 +1550,24 @@
       "category": "crm",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["ZOHO_CLIENT_ID", "ZOHO_CLIENT_SECRET", "ZOHO_REFRESH_TOKEN"],
+      "setup_requires": [
+        "ZOHO_CLIENT_ID",
+        "ZOHO_CLIENT_SECRET",
+        "ZOHO_REFRESH_TOKEN"
+      ],
       "description": "Manage leads, contacts, deals, tasks, reports",
-      "capabilities": ["manage_leads", "contacts", "deals", "tasks", "reports"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_leads",
+        "contacts",
+        "deals",
+        "tasks",
+        "reports"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -760,10 +1576,22 @@
       "category": "marketing",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["MAILCHIMP_API_KEY"],
+      "setup_requires": [
+        "MAILCHIMP_API_KEY"
+      ],
       "description": "Manage lists, campaigns, subscribers, automations, analytics",
-      "capabilities": ["manage_lists", "create_campaign", "manage_subscribers", "automations", "analytics"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_lists",
+        "create_campaign",
+        "manage_subscribers",
+        "automations",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "high"
     },
     {
@@ -772,11 +1600,25 @@
       "category": "marketing",
       "mcp_server": "npx -y @mcp-community/server-sendgrid",
       "mcp_available": true,
-      "setup_requires": ["SENDGRID_API_KEY"],
+      "setup_requires": [
+        "SENDGRID_API_KEY"
+      ],
       "description": "Send transactional/marketing emails, manage contacts, templates",
-      "capabilities": ["send_email", "manage_contacts", "templates", "lists", "analytics"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "send_email",
+        "manage_contacts",
+        "templates",
+        "lists",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-sendgrid",
+      "install_type": "npm"
     },
     {
       "name": "resend",
@@ -784,11 +1626,22 @@
       "category": "marketing",
       "mcp_server": "npx -y @mcp-community/server-resend",
       "mcp_available": true,
-      "setup_requires": ["RESEND_API_KEY"],
+      "setup_requires": [
+        "RESEND_API_KEY"
+      ],
       "description": "Send transactional emails, manage domains, API keys",
-      "capabilities": ["send_email", "manage_domains", "api_keys", "analytics"],
-      "competitors_with_this": ["n8n"],
-      "priority": "high"
+      "capabilities": [
+        "send_email",
+        "manage_domains",
+        "api_keys",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-resend",
+      "install_type": "npm"
     },
     {
       "name": "beehiiv",
@@ -796,10 +1649,20 @@
       "category": "marketing",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["BEEHIIV_API_KEY", "BEEHIIV_PUBLICATION_ID"],
+      "setup_requires": [
+        "BEEHIIV_API_KEY",
+        "BEEHIIV_PUBLICATION_ID"
+      ],
       "description": "Manage newsletter subscribers, posts, analytics",
-      "capabilities": ["manage_subscribers", "create_post", "analytics", "segments"],
-      "competitors_with_this": ["zapier"],
+      "capabilities": [
+        "manage_subscribers",
+        "create_post",
+        "analytics",
+        "segments"
+      ],
+      "competitors_with_this": [
+        "zapier"
+      ],
       "priority": "medium"
     },
     {
@@ -808,10 +1671,22 @@
       "category": "marketing",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["CONVERTKIT_API_KEY"],
+      "setup_requires": [
+        "CONVERTKIT_API_KEY"
+      ],
       "description": "Manage subscribers, sequences, broadcasts, forms, tags",
-      "capabilities": ["manage_subscribers", "sequences", "broadcasts", "forms", "tags"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_subscribers",
+        "sequences",
+        "broadcasts",
+        "forms",
+        "tags"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -820,10 +1695,20 @@
       "category": "marketing",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["POSTMARK_SERVER_TOKEN"],
+      "setup_requires": [
+        "POSTMARK_SERVER_TOKEN"
+      ],
       "description": "Send transactional emails, manage templates, message streams",
-      "capabilities": ["send_email", "templates", "message_streams", "analytics"],
-      "competitors_with_this": ["n8n", "zapier"],
+      "capabilities": [
+        "send_email",
+        "templates",
+        "message_streams",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier"
+      ],
       "priority": "low"
     },
     {
@@ -832,10 +1717,22 @@
       "category": "marketing",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["BREVO_API_KEY"],
+      "setup_requires": [
+        "BREVO_API_KEY"
+      ],
       "description": "Email marketing, SMS, contacts, campaigns, automations",
-      "capabilities": ["send_email", "send_sms", "manage_contacts", "campaigns", "automations"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "send_email",
+        "send_sms",
+        "manage_contacts",
+        "campaigns",
+        "automations"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -844,11 +1741,23 @@
       "category": "scraping",
       "mcp_server": "npx -y @anthropic/mcp-firecrawl",
       "mcp_available": true,
-      "setup_requires": ["FIRECRAWL_API_KEY"],
+      "setup_requires": [
+        "FIRECRAWL_API_KEY"
+      ],
       "description": "Crawl websites, extract structured data, convert pages to markdown",
-      "capabilities": ["scrape_url", "crawl_site", "extract_data", "search", "map_site"],
-      "competitors_with_this": ["n8n"],
-      "priority": "high"
+      "capabilities": [
+        "scrape_url",
+        "crawl_site",
+        "extract_data",
+        "search",
+        "map_site"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
+      "priority": "high",
+      "install_command": "@anthropic/mcp-firecrawl",
+      "install_type": "npm"
     },
     {
       "name": "browserbase",
@@ -856,9 +1765,18 @@
       "category": "scraping",
       "mcp_server": "npx -y @browserbasehq/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["BROWSERBASE_API_KEY", "BROWSERBASE_PROJECT_ID"],
+      "setup_requires": [
+        "BROWSERBASE_API_KEY",
+        "BROWSERBASE_PROJECT_ID"
+      ],
       "description": "Cloud browser sessions for scraping, screenshots, automation",
-      "capabilities": ["create_session", "navigate", "screenshot", "extract", "interact"],
+      "capabilities": [
+        "create_session",
+        "navigate",
+        "screenshot",
+        "extract",
+        "interact"
+      ],
       "competitors_with_this": [],
       "priority": "medium"
     },
@@ -870,9 +1788,20 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Browser automation, screenshots, PDF generation, scraping",
-      "capabilities": ["navigate", "screenshot", "click", "type", "evaluate", "pdf"],
-      "competitors_with_this": ["n8n"],
-      "priority": "high"
+      "capabilities": [
+        "navigate",
+        "screenshot",
+        "click",
+        "type",
+        "evaluate",
+        "pdf"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
+      "priority": "high",
+      "install_command": "@modelcontextprotocol/server-puppeteer",
+      "install_type": "npm"
     },
     {
       "name": "playwright",
@@ -882,9 +1811,18 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Cross-browser automation, testing, scraping with Chromium/Firefox/WebKit",
-      "capabilities": ["navigate", "screenshot", "click", "type", "evaluate", "network_intercept"],
+      "capabilities": [
+        "navigate",
+        "screenshot",
+        "click",
+        "type",
+        "evaluate",
+        "network_intercept"
+      ],
       "competitors_with_this": [],
-      "priority": "high"
+      "priority": "high",
+      "install_command": "@playwright/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "scrapingbee",
@@ -892,10 +1830,19 @@
       "category": "scraping",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["SCRAPINGBEE_API_KEY"],
+      "setup_requires": [
+        "SCRAPINGBEE_API_KEY"
+      ],
       "description": "Web scraping API with proxy rotation, JS rendering",
-      "capabilities": ["scrape_url", "screenshot", "extract_data", "proxy_rotation"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "scrape_url",
+        "screenshot",
+        "extract_data",
+        "proxy_rotation"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "low"
     },
     {
@@ -904,10 +1851,22 @@
       "category": "scraping",
       "mcp_server": "npx -y @apify/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["APIFY_TOKEN"],
+      "setup_requires": [
+        "APIFY_TOKEN"
+      ],
       "description": "Run web scraping actors, manage datasets, storage",
-      "capabilities": ["run_actor", "manage_datasets", "storage", "webhooks", "schedules"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "run_actor",
+        "manage_datasets",
+        "storage",
+        "webhooks",
+        "schedules"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -916,11 +1875,20 @@
       "category": "search",
       "mcp_server": "npx -y @anthropic/mcp-brave-search",
       "mcp_available": true,
-      "setup_requires": ["BRAVE_SEARCH_API_KEY"],
+      "setup_requires": [
+        "BRAVE_SEARCH_API_KEY"
+      ],
       "description": "Web search, news search, local search via Brave API",
-      "capabilities": ["web_search", "news_search", "local_search", "image_search"],
+      "capabilities": [
+        "web_search",
+        "news_search",
+        "local_search",
+        "image_search"
+      ],
       "competitors_with_this": [],
-      "priority": "high"
+      "priority": "high",
+      "install_command": "@anthropic/mcp-brave-search",
+      "install_type": "npm"
     },
     {
       "name": "google_search",
@@ -928,10 +1896,20 @@
       "category": "search",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["GOOGLE_SEARCH_API_KEY", "GOOGLE_SEARCH_ENGINE_ID"],
+      "setup_requires": [
+        "GOOGLE_SEARCH_API_KEY",
+        "GOOGLE_SEARCH_ENGINE_ID"
+      ],
       "description": "Programmable Google search, image search",
-      "capabilities": ["web_search", "image_search"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "web_search",
+        "image_search"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -940,11 +1918,19 @@
       "category": "search",
       "mcp_server": "npx -y @tavily/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["TAVILY_API_KEY"],
+      "setup_requires": [
+        "TAVILY_API_KEY"
+      ],
       "description": "AI-optimized search API, extract content, research",
-      "capabilities": ["search", "extract_content", "research"],
+      "capabilities": [
+        "search",
+        "extract_content",
+        "research"
+      ],
       "competitors_with_this": [],
-      "priority": "high"
+      "priority": "high",
+      "install_command": "@tavily/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "perplexity",
@@ -952,10 +1938,18 @@
       "category": "search",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["PERPLEXITY_API_KEY"],
+      "setup_requires": [
+        "PERPLEXITY_API_KEY"
+      ],
       "description": "AI-powered search and research with citations",
-      "capabilities": ["search", "research", "citations"],
-      "competitors_with_this": ["make"],
+      "capabilities": [
+        "search",
+        "research",
+        "citations"
+      ],
+      "competitors_with_this": [
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -964,9 +1958,16 @@
       "category": "search",
       "mcp_server": "npx -y @exa/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["EXA_API_KEY"],
+      "setup_requires": [
+        "EXA_API_KEY"
+      ],
       "description": "Neural search engine, find similar content, extract text",
-      "capabilities": ["search", "find_similar", "extract_content", "auto_search"],
+      "capabilities": [
+        "search",
+        "find_similar",
+        "extract_content",
+        "auto_search"
+      ],
       "competitors_with_this": [],
       "priority": "medium"
     },
@@ -976,10 +1977,19 @@
       "category": "search",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["SERPER_API_KEY"],
+      "setup_requires": [
+        "SERPER_API_KEY"
+      ],
       "description": "Google Search results API, SERP data, news, images",
-      "capabilities": ["web_search", "news_search", "image_search", "serp_data"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "web_search",
+        "news_search",
+        "image_search",
+        "serp_data"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "low"
     },
     {
@@ -988,11 +1998,26 @@
       "category": "monitoring",
       "mcp_server": "npx -y @sentry/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["SENTRY_AUTH_TOKEN", "SENTRY_ORG"],
+      "setup_requires": [
+        "SENTRY_AUTH_TOKEN",
+        "SENTRY_ORG"
+      ],
       "description": "Error monitoring, issue tracking, performance, breadcrumbs",
-      "capabilities": ["list_issues", "get_issue", "resolve_issue", "performance", "breadcrumbs"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "list_issues",
+        "get_issue",
+        "resolve_issue",
+        "performance",
+        "breadcrumbs"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@sentry/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "pagerduty",
@@ -1000,10 +2025,21 @@
       "category": "monitoring",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["PAGERDUTY_API_KEY"],
+      "setup_requires": [
+        "PAGERDUTY_API_KEY"
+      ],
       "description": "Manage incidents, on-call schedules, escalation policies",
-      "capabilities": ["create_incident", "manage_incidents", "on_call", "escalation"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_incident",
+        "manage_incidents",
+        "on_call",
+        "escalation"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1012,10 +2048,23 @@
       "category": "monitoring",
       "mcp_server": "npx -y @datadog/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["DATADOG_API_KEY", "DATADOG_APP_KEY"],
+      "setup_requires": [
+        "DATADOG_API_KEY",
+        "DATADOG_APP_KEY"
+      ],
       "description": "Query metrics, manage monitors, dashboards, logs",
-      "capabilities": ["query_metrics", "manage_monitors", "dashboards", "logs", "events"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "query_metrics",
+        "manage_monitors",
+        "dashboards",
+        "logs",
+        "events"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1024,10 +2073,20 @@
       "category": "monitoring",
       "mcp_server": "npx -y @grafana/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["GRAFANA_URL", "GRAFANA_API_KEY"],
+      "setup_requires": [
+        "GRAFANA_URL",
+        "GRAFANA_API_KEY"
+      ],
       "description": "Query dashboards, manage alerts, data sources",
-      "capabilities": ["query_dashboards", "manage_alerts", "data_sources", "annotations"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "query_dashboards",
+        "manage_alerts",
+        "data_sources",
+        "annotations"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -1036,9 +2095,17 @@
       "category": "monitoring",
       "mcp_server": "npx -y @upstash/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["UPSTASH_EMAIL", "UPSTASH_API_KEY"],
+      "setup_requires": [
+        "UPSTASH_EMAIL",
+        "UPSTASH_API_KEY"
+      ],
       "description": "Serverless Redis, Kafka, QStash for edge-first infra",
-      "capabilities": ["redis_ops", "kafka_produce", "kafka_consume", "qstash_publish"],
+      "capabilities": [
+        "redis_ops",
+        "kafka_produce",
+        "kafka_consume",
+        "qstash_publish"
+      ],
       "competitors_with_this": [],
       "priority": "low"
     },
@@ -1048,11 +2115,27 @@
       "category": "productivity",
       "mcp_server": "npx -y @mcp-community/server-google-calendar",
       "mcp_available": true,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN"
+      ],
       "description": "Create/read events, manage calendars, check availability",
-      "capabilities": ["create_event", "list_events", "update_event", "manage_calendars", "free_busy"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "create_event",
+        "list_events",
+        "update_event",
+        "manage_calendars",
+        "free_busy"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@mcp-community/server-google-calendar",
+      "install_type": "npm"
     },
     {
       "name": "google_docs",
@@ -1060,10 +2143,23 @@
       "category": "productivity",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN"
+      ],
       "description": "Create/edit documents, read content, manage permissions",
-      "capabilities": ["create_doc", "read_doc", "edit_doc", "permissions"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_doc",
+        "read_doc",
+        "edit_doc",
+        "permissions"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1072,10 +2168,22 @@
       "category": "productivity",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN"
+      ],
       "description": "Manage task lists and tasks",
-      "capabilities": ["create_task", "list_tasks", "update_task", "manage_lists"],
-      "competitors_with_this": ["n8n", "zapier"],
+      "capabilities": [
+        "create_task",
+        "list_tasks",
+        "update_task",
+        "manage_lists"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier"
+      ],
       "priority": "low"
     },
     {
@@ -1084,10 +2192,21 @@
       "category": "productivity",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["TODOIST_API_TOKEN"],
+      "setup_requires": [
+        "TODOIST_API_TOKEN"
+      ],
       "description": "Manage tasks, projects, labels, filters",
-      "capabilities": ["create_task", "list_tasks", "manage_projects", "labels"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_task",
+        "list_tasks",
+        "manage_projects",
+        "labels"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -1096,10 +2215,20 @@
       "category": "productivity",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN"
+      ],
       "description": "Create/manage meeting rooms, schedule meetings",
-      "capabilities": ["create_meeting", "manage_rooms"],
-      "competitors_with_this": ["n8n", "zapier"],
+      "capabilities": [
+        "create_meeting",
+        "manage_rooms"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier"
+      ],
       "priority": "low"
     },
     {
@@ -1108,10 +2237,23 @@
       "category": "productivity",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["ZOOM_CLIENT_ID", "ZOOM_CLIENT_SECRET", "ZOOM_ACCOUNT_ID"],
+      "setup_requires": [
+        "ZOOM_CLIENT_ID",
+        "ZOOM_CLIENT_SECRET",
+        "ZOOM_ACCOUNT_ID"
+      ],
       "description": "Create/manage meetings, webinars, recordings",
-      "capabilities": ["create_meeting", "list_meetings", "recordings", "webinars"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_meeting",
+        "list_meetings",
+        "recordings",
+        "webinars"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1120,10 +2262,21 @@
       "category": "productivity",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["CALENDLY_ACCESS_TOKEN"],
+      "setup_requires": [
+        "CALENDLY_ACCESS_TOKEN"
+      ],
       "description": "Manage event types, scheduled events, invitees",
-      "capabilities": ["list_events", "manage_event_types", "invitees", "webhooks"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "list_events",
+        "manage_event_types",
+        "invitees",
+        "webhooks"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -1132,10 +2285,21 @@
       "category": "finance",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["PLAID_CLIENT_ID", "PLAID_SECRET"],
+      "setup_requires": [
+        "PLAID_CLIENT_ID",
+        "PLAID_SECRET"
+      ],
       "description": "Bank connections, transactions, balance, identity verification",
-      "capabilities": ["link_account", "transactions", "balance", "identity", "investments"],
-      "competitors_with_this": ["zapier"],
+      "capabilities": [
+        "link_account",
+        "transactions",
+        "balance",
+        "identity",
+        "investments"
+      ],
+      "competitors_with_this": [
+        "zapier"
+      ],
       "priority": "medium"
     },
     {
@@ -1144,10 +2308,24 @@
       "category": "finance",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["QUICKBOOKS_CLIENT_ID", "QUICKBOOKS_CLIENT_SECRET", "QUICKBOOKS_REFRESH_TOKEN"],
+      "setup_requires": [
+        "QUICKBOOKS_CLIENT_ID",
+        "QUICKBOOKS_CLIENT_SECRET",
+        "QUICKBOOKS_REFRESH_TOKEN"
+      ],
       "description": "Manage invoices, expenses, customers, reports",
-      "capabilities": ["create_invoice", "manage_expenses", "customers", "reports", "payments"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_invoice",
+        "manage_expenses",
+        "customers",
+        "reports",
+        "payments"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1156,10 +2334,20 @@
       "category": "finance",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["WISE_API_TOKEN"],
+      "setup_requires": [
+        "WISE_API_TOKEN"
+      ],
       "description": "International transfers, multi-currency accounts, rates",
-      "capabilities": ["create_transfer", "exchange_rates", "balances", "recipients"],
-      "competitors_with_this": ["n8n", "zapier"],
+      "capabilities": [
+        "create_transfer",
+        "exchange_rates",
+        "balances",
+        "recipients"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier"
+      ],
       "priority": "low"
     },
     {
@@ -1168,10 +2356,24 @@
       "category": "media",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET"],
+      "setup_requires": [
+        "CLOUDINARY_CLOUD_NAME",
+        "CLOUDINARY_API_KEY",
+        "CLOUDINARY_API_SECRET"
+      ],
       "description": "Image/video upload, transformation, optimization, delivery",
-      "capabilities": ["upload", "transform", "optimize", "generate_url", "manage_assets"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "upload",
+        "transform",
+        "optimize",
+        "generate_url",
+        "manage_assets"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1180,9 +2382,14 @@
       "category": "media",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["IMGBB_API_KEY"],
+      "setup_requires": [
+        "IMGBB_API_KEY"
+      ],
       "description": "Upload and host images, get URLs",
-      "capabilities": ["upload_image", "get_url"],
+      "capabilities": [
+        "upload_image",
+        "get_url"
+      ],
       "competitors_with_this": [],
       "priority": "low"
     },
@@ -1192,10 +2399,24 @@
       "category": "analytics",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN", "GA_PROPERTY_ID"],
+      "setup_requires": [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN",
+        "GA_PROPERTY_ID"
+      ],
       "description": "Query analytics data, manage properties, realtime data",
-      "capabilities": ["query_reports", "realtime", "manage_properties", "conversions"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "query_reports",
+        "realtime",
+        "manage_properties",
+        "conversions"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1204,10 +2425,21 @@
       "category": "analytics",
       "mcp_server": "npx -y @posthog/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["POSTHOG_API_KEY", "POSTHOG_HOST"],
+      "setup_requires": [
+        "POSTHOG_API_KEY",
+        "POSTHOG_HOST"
+      ],
       "description": "Product analytics, feature flags, session replays, experiments",
-      "capabilities": ["query_events", "feature_flags", "session_replays", "experiments", "surveys"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "query_events",
+        "feature_flags",
+        "session_replays",
+        "experiments",
+        "surveys"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -1216,10 +2448,23 @@
       "category": "analytics",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["AMPLITUDE_API_KEY", "AMPLITUDE_SECRET_KEY"],
+      "setup_requires": [
+        "AMPLITUDE_API_KEY",
+        "AMPLITUDE_SECRET_KEY"
+      ],
       "description": "Product analytics, cohorts, funnels, retention",
-      "capabilities": ["query_events", "cohorts", "funnels", "retention", "revenue"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "query_events",
+        "cohorts",
+        "funnels",
+        "retention",
+        "revenue"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -1228,10 +2473,23 @@
       "category": "analytics",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["MIXPANEL_TOKEN", "MIXPANEL_API_SECRET"],
+      "setup_requires": [
+        "MIXPANEL_TOKEN",
+        "MIXPANEL_API_SECRET"
+      ],
       "description": "Event analytics, funnels, retention, user profiles",
-      "capabilities": ["track_event", "query_events", "funnels", "retention", "profiles"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "track_event",
+        "query_events",
+        "funnels",
+        "retention",
+        "profiles"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -1240,10 +2498,24 @@
       "category": "support",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["ZENDESK_SUBDOMAIN", "ZENDESK_EMAIL", "ZENDESK_API_TOKEN"],
+      "setup_requires": [
+        "ZENDESK_SUBDOMAIN",
+        "ZENDESK_EMAIL",
+        "ZENDESK_API_TOKEN"
+      ],
       "description": "Manage tickets, users, organizations, knowledge base",
-      "capabilities": ["create_ticket", "update_ticket", "manage_users", "knowledge_base", "search"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_ticket",
+        "update_ticket",
+        "manage_users",
+        "knowledge_base",
+        "search"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1252,10 +2524,22 @@
       "category": "support",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["INTERCOM_ACCESS_TOKEN"],
+      "setup_requires": [
+        "INTERCOM_ACCESS_TOKEN"
+      ],
       "description": "Manage conversations, contacts, companies, articles",
-      "capabilities": ["manage_conversations", "contacts", "companies", "articles", "tags"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_conversations",
+        "contacts",
+        "companies",
+        "articles",
+        "tags"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1264,10 +2548,23 @@
       "category": "support",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["FRESHDESK_DOMAIN", "FRESHDESK_API_KEY"],
+      "setup_requires": [
+        "FRESHDESK_DOMAIN",
+        "FRESHDESK_API_KEY"
+      ],
       "description": "Manage tickets, contacts, agents, knowledge base",
-      "capabilities": ["create_ticket", "update_ticket", "contacts", "agents", "knowledge_base"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "create_ticket",
+        "update_ticket",
+        "contacts",
+        "agents",
+        "knowledge_base"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -1276,10 +2573,22 @@
       "category": "support",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["CRISP_TOKEN_ID", "CRISP_TOKEN_KEY", "CRISP_WEBSITE_ID"],
+      "setup_requires": [
+        "CRISP_TOKEN_ID",
+        "CRISP_TOKEN_KEY",
+        "CRISP_WEBSITE_ID"
+      ],
       "description": "Live chat, manage conversations, contacts, knowledge base",
-      "capabilities": ["send_message", "manage_conversations", "contacts", "knowledge_base"],
-      "competitors_with_this": ["n8n", "zapier"],
+      "capabilities": [
+        "send_message",
+        "manage_conversations",
+        "contacts",
+        "knowledge_base"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier"
+      ],
       "priority": "low"
     },
     {
@@ -1290,8 +2599,17 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Manage containers, images, volumes, networks",
-      "capabilities": ["list_containers", "start_stop", "manage_images", "volumes", "networks", "logs"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "list_containers",
+        "start_stop",
+        "manage_images",
+        "volumes",
+        "networks",
+        "logs"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -1300,10 +2618,21 @@
       "category": "infrastructure",
       "mcp_server": "npx -y @mcp-community/server-kubernetes",
       "mcp_available": true,
-      "setup_requires": ["KUBECONFIG"],
+      "setup_requires": [
+        "KUBECONFIG"
+      ],
       "description": "Manage pods, deployments, services, namespaces",
-      "capabilities": ["list_pods", "manage_deployments", "services", "namespaces", "logs", "exec"],
-      "competitors_with_this": ["n8n"],
+      "capabilities": [
+        "list_pods",
+        "manage_deployments",
+        "services",
+        "namespaces",
+        "logs",
+        "exec"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
       "priority": "medium"
     },
     {
@@ -1312,10 +2641,26 @@
       "category": "infrastructure",
       "mcp_server": "npx -y @aws/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_REGION"],
+      "setup_requires": [
+        "AWS_ACCESS_KEY_ID",
+        "AWS_SECRET_ACCESS_KEY",
+        "AWS_REGION"
+      ],
       "description": "Manage EC2, Lambda, CloudWatch, IAM, and other AWS services",
-      "capabilities": ["ec2", "lambda", "cloudwatch", "iam", "sqs", "sns", "dynamodb"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "ec2",
+        "lambda",
+        "cloudwatch",
+        "iam",
+        "sqs",
+        "sns",
+        "dynamodb"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1326,7 +2671,13 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Plan, apply, manage Terraform infrastructure as code",
-      "capabilities": ["plan", "apply", "state", "providers", "modules"],
+      "capabilities": [
+        "plan",
+        "apply",
+        "state",
+        "providers",
+        "modules"
+      ],
       "competitors_with_this": [],
       "priority": "low"
     },
@@ -1336,10 +2687,23 @@
       "category": "communication",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["TWILIO_ACCOUNT_SID", "TWILIO_AUTH_TOKEN"],
+      "setup_requires": [
+        "TWILIO_ACCOUNT_SID",
+        "TWILIO_AUTH_TOKEN"
+      ],
       "description": "Send SMS/MMS, make calls, manage phone numbers",
-      "capabilities": ["send_sms", "make_call", "manage_numbers", "verify", "conversations"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "send_sms",
+        "make_call",
+        "manage_numbers",
+        "verify",
+        "conversations"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1350,8 +2714,17 @@
       "mcp_available": false,
       "setup_requires": [],
       "description": "Send/receive HTTP webhooks to/from any service",
-      "capabilities": ["send_webhook", "receive_webhook", "custom_headers", "retry"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "send_webhook",
+        "receive_webhook",
+        "custom_headers",
+        "retry"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "high"
     },
     {
@@ -1362,9 +2735,23 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Make HTTP requests to any API endpoint",
-      "capabilities": ["get", "post", "put", "patch", "delete", "custom_headers", "auth"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "high"
+      "capabilities": [
+        "get",
+        "post",
+        "put",
+        "patch",
+        "delete",
+        "custom_headers",
+        "auth"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "@anthropic/mcp-fetch",
+      "install_type": "npm"
     },
     {
       "name": "figma",
@@ -1372,10 +2759,21 @@
       "category": "productivity",
       "mcp_server": "npx -y @anthropic/mcp-figma",
       "mcp_available": true,
-      "setup_requires": ["FIGMA_ACCESS_TOKEN"],
+      "setup_requires": [
+        "FIGMA_ACCESS_TOKEN"
+      ],
       "description": "Read Figma files, components, styles, export assets",
-      "capabilities": ["read_file", "list_components", "export_assets", "comments"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "read_file",
+        "list_components",
+        "export_assets",
+        "comments"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "medium"
     },
     {
@@ -1384,10 +2782,21 @@
       "category": "data",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["CODA_API_TOKEN"],
+      "setup_requires": [
+        "CODA_API_TOKEN"
+      ],
       "description": "Manage docs, tables, rows, formulas, automations",
-      "capabilities": ["manage_docs", "manage_tables", "rows", "formulas"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
+      "capabilities": [
+        "manage_docs",
+        "manage_tables",
+        "rows",
+        "formulas"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
       "priority": "low"
     },
     {
@@ -1396,11 +2805,21 @@
       "category": "ai",
       "mcp_server": "npx -y @anthropic/mcp-pinecone",
       "mcp_available": true,
-      "setup_requires": ["PINECONE_API_KEY"],
+      "setup_requires": [
+        "PINECONE_API_KEY"
+      ],
       "description": "Vector database: upsert, query, manage indexes for RAG/embeddings",
-      "capabilities": ["upsert", "query", "manage_indexes", "delete", "describe_stats"],
+      "capabilities": [
+        "upsert",
+        "query",
+        "manage_indexes",
+        "delete",
+        "describe_stats"
+      ],
       "competitors_with_this": [],
-      "priority": "high"
+      "priority": "high",
+      "install_command": "@anthropic/mcp-pinecone",
+      "install_type": "npm"
     },
     {
       "name": "weaviate",
@@ -1408,9 +2827,17 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["WEAVIATE_URL", "WEAVIATE_API_KEY"],
+      "setup_requires": [
+        "WEAVIATE_URL",
+        "WEAVIATE_API_KEY"
+      ],
       "description": "Vector database for semantic search and RAG",
-      "capabilities": ["insert", "query", "manage_schema", "hybrid_search"],
+      "capabilities": [
+        "insert",
+        "query",
+        "manage_schema",
+        "hybrid_search"
+      ],
       "competitors_with_this": [],
       "priority": "low"
     },
@@ -1420,9 +2847,17 @@
       "category": "ai",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["QDRANT_URL", "QDRANT_API_KEY"],
+      "setup_requires": [
+        "QDRANT_URL",
+        "QDRANT_API_KEY"
+      ],
       "description": "Vector similarity search engine for AI applications",
-      "capabilities": ["upsert", "query", "manage_collections", "filtering"],
+      "capabilities": [
+        "upsert",
+        "query",
+        "manage_collections",
+        "filtering"
+      ],
       "competitors_with_this": [],
       "priority": "low"
     },
@@ -1432,9 +2867,16 @@
       "category": "infrastructure",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["N8N_URL", "N8N_API_KEY"],
+      "setup_requires": [
+        "N8N_URL",
+        "N8N_API_KEY"
+      ],
       "description": "Trigger/manage n8n workflows, access 1200+ integrations via proxy",
-      "capabilities": ["trigger_workflow", "list_workflows", "manage_executions"],
+      "capabilities": [
+        "trigger_workflow",
+        "list_workflows",
+        "manage_executions"
+      ],
       "competitors_with_this": [],
       "priority": "medium"
     },
@@ -1444,11 +2886,20 @@
       "category": "infrastructure",
       "mcp_server": "npx -y @composio/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["COMPOSIO_API_KEY"],
+      "setup_requires": [
+        "COMPOSIO_API_KEY"
+      ],
       "description": "Meta-connector: 100+ tools with built-in auth, made for agents",
-      "capabilities": ["connect_tools", "manage_auth", "execute_actions", "triggers"],
+      "capabilities": [
+        "connect_tools",
+        "manage_auth",
+        "execute_actions",
+        "triggers"
+      ],
       "competitors_with_this": [],
-      "priority": "high"
+      "priority": "high",
+      "install_command": "@composio/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "pipedream",
@@ -1456,11 +2907,21 @@
       "category": "infrastructure",
       "mcp_server": "npx -y @pipedream/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["PIPEDREAM_API_KEY"],
+      "setup_requires": [
+        "PIPEDREAM_API_KEY"
+      ],
       "description": "Meta-connector: 2400+ APIs with managed auth, serverless workflows",
-      "capabilities": ["connect_apis", "manage_auth", "execute_actions", "triggers", "workflows"],
+      "capabilities": [
+        "connect_apis",
+        "manage_auth",
+        "execute_actions",
+        "triggers",
+        "workflows"
+      ],
       "competitors_with_this": [],
-      "priority": "high"
+      "priority": "high",
+      "install_command": "@pipedream/mcp-server",
+      "install_type": "npm"
     },
     {
       "name": "filesystem",
@@ -1470,9 +2931,21 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Read/write files, manage directories, search local filesystem",
-      "capabilities": ["read_file", "write_file", "list_directory", "search", "move", "delete"],
-      "competitors_with_this": ["hermes", "openhands"],
-      "priority": "high"
+      "capabilities": [
+        "read_file",
+        "write_file",
+        "list_directory",
+        "search",
+        "move",
+        "delete"
+      ],
+      "competitors_with_this": [
+        "hermes",
+        "openhands"
+      ],
+      "priority": "high",
+      "install_command": "@modelcontextprotocol/server-filesystem",
+      "install_type": "npm"
     },
     {
       "name": "memory",
@@ -1482,9 +2955,18 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Persistent memory via local knowledge graph for agent state",
-      "capabilities": ["create_entity", "create_relation", "search", "read_graph"],
-      "competitors_with_this": ["hermes"],
-      "priority": "medium"
+      "capabilities": [
+        "create_entity",
+        "create_relation",
+        "search",
+        "read_graph"
+      ],
+      "competitors_with_this": [
+        "hermes"
+      ],
+      "priority": "medium",
+      "install_command": "@modelcontextprotocol/server-memory",
+      "install_type": "npm"
     },
     {
       "name": "git",
@@ -1494,8 +2976,18 @@
       "mcp_available": true,
       "setup_requires": [],
       "description": "Git operations: log, diff, status, branch management",
-      "capabilities": ["log", "diff", "status", "branch", "commit", "clone"],
-      "competitors_with_this": ["hermes", "openhands"],
+      "capabilities": [
+        "log",
+        "diff",
+        "status",
+        "branch",
+        "commit",
+        "clone"
+      ],
+      "competitors_with_this": [
+        "hermes",
+        "openhands"
+      ],
       "priority": "medium"
     },
     {
@@ -1504,11 +2996,24 @@
       "category": "productivity",
       "mcp_server": "npx -y @anthropic/mcp-google-maps",
       "mcp_available": true,
-      "setup_requires": ["GOOGLE_MAPS_API_KEY"],
+      "setup_requires": [
+        "GOOGLE_MAPS_API_KEY"
+      ],
       "description": "Geocoding, directions, place search, distance matrix",
-      "capabilities": ["geocode", "directions", "place_search", "distance_matrix"],
-      "competitors_with_this": ["n8n", "zapier", "make"],
-      "priority": "low"
+      "capabilities": [
+        "geocode",
+        "directions",
+        "place_search",
+        "distance_matrix"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "low",
+      "install_command": "@anthropic/mcp-google-maps",
+      "install_type": "npm"
     },
     {
       "name": "xpoz",
@@ -1516,9 +3021,17 @@
       "category": "social",
       "mcp_server": "npx -y @xpoz/mcp-server",
       "mcp_available": true,
-      "setup_requires": ["XPOZ_API_KEY"],
+      "setup_requires": [
+        "XPOZ_API_KEY"
+      ],
       "description": "Unified social media data: Twitter, Instagram, TikTok, Reddit in one",
-      "capabilities": ["search_social", "read_profiles", "read_posts", "analytics", "trends"],
+      "capabilities": [
+        "search_social",
+        "read_profiles",
+        "read_posts",
+        "analytics",
+        "trends"
+      ],
       "competitors_with_this": [],
       "priority": "high"
     },
@@ -1528,11 +3041,186 @@
       "category": "social",
       "mcp_server": null,
       "mcp_available": false,
-      "setup_requires": ["AYRSHARE_API_KEY"],
+      "setup_requires": [
+        "AYRSHARE_API_KEY"
+      ],
       "description": "Post to 13+ social platforms, analytics, scheduling",
-      "capabilities": ["post", "schedule", "analytics", "manage_profiles"],
+      "capabilities": [
+        "post",
+        "schedule",
+        "analytics",
+        "manage_profiles"
+      ],
       "competitors_with_this": [],
       "priority": "medium"
+    },
+    {
+      "name": "moneyprinterturbo",
+      "display_name": "MoneyPrinterTurbo",
+      "category": "media",
+      "mcp_available": false,
+      "setup_requires": [],
+      "description": "Generate short videos from topic with AI scripts, footage, subtitles, music",
+      "capabilities": [
+        "generate_short_video",
+        "generate_tiktok",
+        "generate_youtube_short"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
+      "priority": "high",
+      "install_command": "git clone https://github.com/harry0703/MoneyPrinterTurbo.git",
+      "install_type": "git"
+    },
+    {
+      "name": "postiz",
+      "display_name": "Postiz",
+      "category": "social",
+      "mcp_available": false,
+      "setup_requires": [
+        "POSTIZ_API_KEY"
+      ],
+      "description": "Schedule posts across 30+ platforms with AI content generation",
+      "capabilities": [
+        "schedule_post",
+        "multi_platform_post",
+        "analytics"
+      ],
+      "competitors_with_this": [
+        "zapier",
+        "make"
+      ],
+      "priority": "high",
+      "install_command": "docker pull ghcr.io/gitroomhq/postiz-app",
+      "install_type": "docker"
+    },
+    {
+      "name": "crawl4ai",
+      "display_name": "Crawl4AI",
+      "category": "scraping",
+      "mcp_available": false,
+      "setup_requires": [],
+      "description": "LLM-friendly web crawler returning clean markdown",
+      "capabilities": [
+        "crawl_url",
+        "extract_markdown",
+        "batch_crawl"
+      ],
+      "competitors_with_this": [
+        "n8n"
+      ],
+      "priority": "high",
+      "install_command": "pip install crawl4ai",
+      "install_type": "pip"
+    },
+    {
+      "name": "yt-dlp",
+      "display_name": "yt-dlp",
+      "category": "media",
+      "mcp_available": false,
+      "setup_requires": [],
+      "description": "Download video/audio from 1000+ sites",
+      "capabilities": [
+        "download_video",
+        "download_audio",
+        "extract_info"
+      ],
+      "competitors_with_this": [],
+      "priority": "high",
+      "install_command": "pip install yt-dlp",
+      "install_type": "pip"
+    },
+    {
+      "name": "polar",
+      "display_name": "Polar",
+      "category": "commerce",
+      "mcp_available": false,
+      "setup_requires": [
+        "POLAR_API_KEY"
+      ],
+      "description": "Developer payment platform for SaaS, downloads, subscriptions",
+      "capabilities": [
+        "create_product",
+        "process_payment",
+        "manage_subscriptions"
+      ],
+      "competitors_with_this": [
+        "zapier"
+      ],
+      "priority": "high",
+      "install_command": "pip install polar-sdk",
+      "install_type": "pip"
+    },
+    {
+      "name": "freqtrade",
+      "display_name": "Freqtrade",
+      "category": "finance",
+      "mcp_available": false,
+      "setup_requires": [
+        "EXCHANGE_API_KEY",
+        "EXCHANGE_SECRET"
+      ],
+      "description": "Crypto trading bot with backtesting and strategy plugins",
+      "capabilities": [
+        "backtest_strategy",
+        "live_trade",
+        "paper_trade"
+      ],
+      "competitors_with_this": [],
+      "priority": "medium",
+      "install_command": "docker pull freqtradeorg/freqtrade",
+      "install_type": "docker"
+    },
+    {
+      "name": "listmonk",
+      "display_name": "listmonk",
+      "category": "marketing",
+      "mcp_available": false,
+      "setup_requires": [
+        "LISTMONK_URL",
+        "LISTMONK_USER",
+        "LISTMONK_PASS"
+      ],
+      "description": "Self-hosted newsletter manager handling millions of subscribers",
+      "capabilities": [
+        "send_newsletter",
+        "manage_subscribers",
+        "create_campaign"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier"
+      ],
+      "priority": "high",
+      "install_command": "docker pull listmonk/listmonk",
+      "install_type": "docker"
+    },
+    {
+      "name": "mautic",
+      "display_name": "Mautic",
+      "category": "marketing",
+      "mcp_available": false,
+      "setup_requires": [
+        "MAUTIC_URL",
+        "MAUTIC_CLIENT_ID",
+        "MAUTIC_SECRET"
+      ],
+      "description": "Full marketing automation with CRM, campaigns, lead scoring",
+      "capabilities": [
+        "lead_scoring",
+        "email_campaign",
+        "crm",
+        "contact_management"
+      ],
+      "competitors_with_this": [
+        "n8n",
+        "zapier",
+        "make"
+      ],
+      "priority": "medium",
+      "install_command": "docker pull mautic/mautic",
+      "install_type": "docker"
     }
   ]
 }

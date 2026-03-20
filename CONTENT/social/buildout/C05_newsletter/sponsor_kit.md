@@ -1,4 +1,4 @@
-# Sponsor Kit — Media Kit Template + Rate Card
+# Sponsor Kit, Media Kit Template + Rate Card
 
 ---
 
@@ -16,7 +16,7 @@
 - Founders building their first digital product
 - Early-stage bootstrapped SaaS operators
 
-**Audience demographics (template — update with real Beehiiv data):**
+**Audience demographics (template, update with real Beehiiv data):**
 
 | Metric | Value |
 |--------|-------|
@@ -30,7 +30,7 @@
 | Decision maker | 87% are the decision maker for business purchases |
 
 **Why this audience converts:**
-They have disposable income allocated to tools. They're actively looking for solutions to specific problems (outbound, automation, content, monetization). They have a bias toward action — they read to implement, not to learn in the abstract.
+They have disposable income allocated to tools. They're actively looking for solutions to specific problems (outbound, automation, content, monetization). They have a bias toward action, they read to implement, not to learn in the abstract.
 
 ---
 
@@ -64,7 +64,7 @@ Example:
 - Full issue: one sponsor, one topic, fully sponsored
 - Our voice. Our editorial standard. Their product as the tool.
 - 800-1,200 words of genuine use-case breakdown.
-- Our audience knows it's sponsored — we label it. But we only accept products we'd actually use.
+- Our audience knows it's sponsored, we label it. But we only accept products we'd actually use.
 
 ---
 
@@ -170,15 +170,15 @@ Use when reaching out to companies you want as sponsors:
 
 ---
 
-Subject: sponsorship inquiry — [Newsletter Name], [X] subscribers, [open rate]% opens
+Subject: sponsorship inquiry, [Newsletter Name], [X] subscribers, [open rate]% opens
 
 "Hey [Name],
 
-I run [Newsletter Name] — a weekly brief for solopreneurs. Currently at [X] subscribers with [X]% average open rate.
+I run [Newsletter Name], a weekly brief for solopreneurs. Currently at [X] subscribers with [X]% average open rate.
 
-I've been using [their product] for [timeframe] — it's helped me [specific result]. I think it would genuinely resonate with my audience.
+I've been using [their product] for [timeframe], it's helped me [specific result]. I think it would genuinely resonate with my audience.
 
-Sponsorship options start at $[X] for a primary mention in one issue. My audience is [description] — [X]% are decision-makers actively buying tools.
+Sponsorship options start at $[X] for a primary mention in one issue. My audience is [description], [X]% are decision-makers actively buying tools.
 
 Worth a quick call? Or I can send the media kit directly.
 
@@ -192,7 +192,7 @@ Worth a quick call? Or I can send the media kit directly.
 - Clay.com (outbound/enrichment)
 - Instantly.ai (cold email sending)
 - Apollo.io (lead generation)
-- Beehiiv (newsletter platform — meta/referral)
+- Beehiiv (newsletter platform, meta/referral)
 - Lemon Squeezy / Gumroad / Whop (digital products)
 
 **Tier B (mid-budget, strong fit):**
@@ -211,7 +211,7 @@ Worth a quick call? Or I can send the media kit directly.
 
 **Platform to find B2B newsletter sponsors:** Paved.com, Letterwell.com, Swapstack.co
 
-**Email to find:** Find their marketing or partnerships team on LinkedIn. Subject line: "sponsorship inquiry — newsletter" works.
+**Email to find:** Find their marketing or partnerships team on LinkedIn. Subject line: "sponsorship inquiry, newsletter" works.
 
 ---
 
@@ -220,7 +220,7 @@ Worth a quick call? Or I can send the media kit directly.
 When sending to potential sponsors:
 
 1. This file converted to PDF
-2. Beehiiv analytics screenshot (subscriber count, open rate, click rate — last 30 days)
+2. Beehiiv analytics screenshot (subscriber count, open rate, click rate, last 30 days)
 3. Example issue (link or PDF export)
 4. One testimonial from existing sponsor (after first sponsor)
 

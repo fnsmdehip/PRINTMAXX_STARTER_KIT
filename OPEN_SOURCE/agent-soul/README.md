@@ -1,12 +1,12 @@
 # sovrun
 
-the cognitive and behavioral layer for autonomous AI agent systems. 10 modules, stdlib only, extracted from a production system.
+autonomous agent OS. 20 modules across 5 layers. 1,200+ connectors via n8n bridge. 2 deps (tenacity, httpx). extracted from a production system running 33 agents 24/7.
 
 ## what this is
 
-sovrun is 10 Python modules that give your AI agents: a voice model trained on YOUR prompts, correction chain learning that mines YOUR feedback into transferable rules, soul drift scoring that catches when agents start producing slop, a bias-null protocol that filters out LLM default behaviors, closed-loop decision execution, resilience primitives (circuit breaker, file locking, retry), and session continuity across context windows.
+sovrun is 20 Python modules that give your AI agents: voice modeling trained on YOUR prompts, correction chain learning from YOUR feedback, soul drift scoring (0-10 per output against behavioral directives), bias-null filtering, DAG orchestration with parallel execution, typed agent-to-agent handoffs with guardrail scopes, procedural memory that learns from solved problems, crash recovery with deterministic replay, autonomous n8n workflow creation via API, memory import from ChatGPT/Claude/Gemini, 126 MCP connectors with auto-setup plus 1,200+ more via n8n bridge, and agent observability with HTML timeline export and cost attribution.
 
-it was extracted from a production autonomous system. the modules are the reusable core. they don't depend on any specific agent framework, LLM provider, or orchestration pattern. wire them into whatever you're building.
+extracted from a production system. works with any LLM provider. wire it into whatever you're building.
 
 ## the problem
 
@@ -21,16 +21,40 @@ sovrun solves each of these with a dedicated module.
 ```
 sovrun/
   core/
+    # --- cognition layer (learn from your behavior) ---
     voice_extractor.py     # your prompts -> voice model -> inject into any agent
     cognitive_engine.py    # correction chains -> meta-rules -> "would have prevented this"
     pattern_miner.py       # find what frustrates you, what satisfies you, what you correct
     user_sim_refiner.py    # simulate YOUR critique autonomously on any project
+
+    # --- execution layer (close the loop) ---
     loop_closer.py         # decisions -> execution -> feedback -> soul drift scoring
-    self_audit.py          # the system audits itself for slop, bloat, broken scripts
     decision_engine.py     # closed-loop decisions with CSV audit trail
-    resilience.py          # retry, file locking (fcntl), circuit breaker, loop detection
+    self_audit.py          # the system audits itself for slop, bloat, broken scripts
+
+    # --- orchestration layer (coordinate agents) ---
+    orchestration.py       # DAG-based step execution with parallel fanout + checkpointing
+    handoff.py             # typed agent-to-agent handoffs with guardrail scopes
+    durable.py             # crash recovery with deterministic replay
+
+    # --- memory layer (remember and search) ---
     conversation_logger.py # extract Claude session transcripts -> searchable JSONL
+    conversation_index.py  # FTS5 full-text search across all logged conversations
     session_briefing.py    # "what happened since last session" from git + state files
+    procedural_memory.py   # skill documents: capture, recall, consolidate learned tasks
+    memory_import.py       # import history from ChatGPT, Claude, Gemini
+
+    # --- infrastructure layer (resilience + connectivity) ---
+    resilience.py          # retry, file locking (fcntl), circuit breaker, loop detection
+    tracing.py             # agent observability: events, cost tracking, HTML timelines
+    workflow_bridge.py     # autonomous n8n workflow creation via API (1,200+ connectors)
+    mcp_bridge.py          # expose agents as MCP servers, consume external MCP tools
+    deps.py                # optional dependency upgrades with stdlib fallback
+
+  connectors/
+    registry.json          # 126 MCP tool definitions with auto-setup
+    setup.py               # auto-install MCP servers from registry
+
   templates/
     SOUL.md                # agent identity + behavioral directives template
     bias-null.md           # 5-point pre-output bias correction protocol
@@ -225,24 +249,52 @@ python3 -m sovrun.core.loop_closer --cycle
 
 # audit the system
 python3 -m sovrun.core.self_audit --audit
+
+# import history from other LLMs
+sovrun-import --chatgpt ~/exports/conversations.json
+sovrun-import --claude ~/.claude/projects
+
+# create n8n workflows from task descriptions
+sovrun-workflow --detect "when new email arrives, extract data, add to sheet"
+sovrun-workflow --build "when email, extract, add to sheet"
+
+# agent handoffs with guardrails
+sovrun-handoff --from planner --to executor --task "deploy landing page"
+
+# search conversation history (FTS5)
+sovrun-conversations --index
+sovrun-conversations --search "revenue pipeline"
+
+# agent tracing and cost tracking
+sovrun-trace --agents
+sovrun-trace --cost
 ```
 
 ## what makes this different
 
-| | sovrun | CrewAI | AutoGen | LangGraph | DSPy |
-|---|---|---|---|---|---|
-| what it is | cognitive layer (10 modules) | agent framework | conversation framework | state machine framework | prompt optimizer |
-| learns from | your corrections + prompt history | nothing | nothing | nothing | labeled examples |
-| voice modeling | extracts your style, injects into agents | none | none | none | none |
-| correction chains | mines past failures into rules | none | none | none | none |
-| soul drift | 0-10 scoring per output | none | none | none | none |
-| bias correction | 5-point pre-output filter | none | none | none | none |
-| loop closing | decisions -> execution -> feedback | none | none | none | none |
-| self-audit | catches slop in your own system | none | none | none | none |
-| resilience | circuit breaker, file locking, retry, loop detection | basic retry | basic retry | none | none |
-| session continuity | transcript extraction + session briefing | none | none | none | none |
-| user simulation | autonomous critique using your patterns | none | none | none | none |
-| dependencies | stdlib only | many | many | langchain | pytorch |
+| | sovrun | CrewAI | AutoGen | LangGraph | DSPy | OpenClaw | Hermes |
+|---|---|---|---|---|---|---|---|
+| what it is | cognitive layer (20 modules) | agent framework | conversation framework | state machine framework | prompt optimizer | robotic manipulation | multi-agent runtime |
+| learns from | your corrections + prompt history | nothing | nothing | nothing | labeled examples | sim demos | nothing |
+| voice modeling | extracts your style, injects into agents | none | none | none | none | none | none |
+| correction chains | mines past failures into rules | none | none | none | none | none | none |
+| soul drift | 0-10 scoring per output | none | none | none | none | none | none |
+| bias correction | 5-point pre-output filter | none | none | none | none | none | none |
+| loop closing | decisions -> execution -> feedback | none | none | none | none | none | none |
+| self-audit | catches slop in your own system | none | none | none | none | none | none |
+| DAG orchestration | parallel fanout, checkpointing, resume | sequential | round-robin | graph-based | none | none | none |
+| agent handoffs | typed with guardrail scopes | role-based | conversation | edge-based | none | none | basic |
+| procedural memory | skill capture, recall, consolidation | none | none | none | none | none | none |
+| crash recovery | deterministic replay from checkpoint | none | none | none | none | none | none |
+| workflow bridge | auto-creates n8n workflows (1,200+ connectors) | none | none | none | none | none | none |
+| conversation search | FTS5 index across all history | none | none | none | none | none | none |
+| memory import | ChatGPT, Claude, Gemini history | none | none | none | none | none | none |
+| MCP integration | 126 tool servers + bridge | none | none | none | none | none | none |
+| resilience | circuit breaker, file locking, retry, loop detection | basic retry | basic retry | none | none | none | none |
+| tracing | events, cost tracking, HTML timelines | none | basic | langsmith | none | none | none |
+| session continuity | transcript extraction + session briefing | none | none | none | none | none | none |
+| user simulation | autonomous critique using your patterns | none | none | none | none | none | none |
+| dependencies | 2 (tenacity, httpx) | many | many | langchain | pytorch | many | many |
 
 ## data format
 
@@ -263,10 +315,16 @@ all paths are configurable. nothing is hardcoded.
 | `SOVRUN_ROOT` | cwd | project root directory |
 | `SOVRUN_PROMPTS` | `data/prompts.jsonl` | prompt history file |
 | `SOVRUN_CONVERSATIONS` | `data/conversations.jsonl` | conversation history |
+| `SOVRUN_CONVERSATION_INDEX` | `data/conversations.db` | FTS5 search index |
 | `SOVRUN_VOICE_MODEL` | `output/voice_model.json` | voice model output |
 | `SOVRUN_SOUL_MD` | `templates/SOUL.md` | agent identity file |
 | `SOVRUN_INSTRUCTIONS` | `templates/CLAUDE.md` | system instructions |
 | `SOVRUN_TRANSCRIPT_DIRS` | `~/.claude/projects` | transcript directories (comma-separated) |
+| `SOVRUN_TRACES_DIR` | `logs/traces` | agent trace output directory |
+| `SOVRUN_LOGS_DIR` | `logs` | log output directory |
+| `SOVRUN_N8N_URL` | none | n8n instance URL for workflow bridge |
+| `SOVRUN_N8N_API_KEY` | none | n8n API key for workflow bridge |
+| `SOVRUN_SKILLS_DB` | `data/skills.db` | procedural memory SQLite database |
 
 ## production numbers
 
@@ -276,15 +334,18 @@ these are from the production system sovrun was extracted from:
 - 168 correction chains extracted
 - 6.9 average corrections per chain before resolution (target: 1)
 - 451 satisfaction signals identified
-- 0 external dependencies
+- 2 dependencies (tenacity, httpx)
+- 1,200+ connectors via n8n bridge
 
 the parent system uses sovrun's modules to power: voice injection across all agents, soul drift scoring with auto-alert at <6/10, correction chain learning that feeds meta-rules back into agent prompts, bias-null filtering on every major output, and loop closing that verifies agent decisions led to real outcomes.
 
 ## dependencies
 
-none. stdlib only. python 3.10+.
+2 required: `tenacity` (retry with exponential backoff) and `httpx` (HTTP client with connection pooling). python 3.10+.
 
 `resilience.py` uses `fcntl` for file locking which is unix/macOS only. on windows, the locking won't work but everything else will.
+
+optional: n8n (self-hosted, free) for 1,200+ workflow connectors via workflow_bridge.py.
 
 ## license
 

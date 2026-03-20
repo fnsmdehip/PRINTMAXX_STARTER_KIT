@@ -1,0 +1,102 @@
+{
+  "cycle": 81,
+  "timestamp": "2026-03-19T13:46:15.460366+00:00",
+  "scored_niches": [
+    {
+      "niche": "daily_science_curiosity_streak",
+      "community_total": 36010000,
+      "verdict": "BLUE_OCEAN",
+      "score": 36.01,
+      "priority": "P0",
+      "notes": "36M science community (r/science alone has 32.7M). Zero dedicated daily science curiosity/learning streak apps. Khan Academy covers it broadly. Massive underserved opportunity for a science habit tracker with daily experiments/facts/challenges."
+    },
+    {
+      "niche": "daily_relationship_habits_streak",
+      "community_total": 8490000,
+      "verdict": "SOFT_COMPETITION",
+      "score": 4.25,
+      "priority": "P0",
+      "notes": "8.49M relationship community. Couple, Between, Love Nudge, Gottman all have partial habit features. Gap exists: none build a full daily streak gamification system with XP/levels for both partners simultaneously."
+    },
+    {
+      "niche": "daily_conscious_parenting_streak",
+      "community_total": 7850000,
+      "verdict": "BLUE_OCEAN",
+      "score": 7.85,
+      "priority": "P0",
+      "notes": "7.85M parenting community. All apps track milestones or share photos. Zero apps gamify the daily HABIT of conscious parenting practices (reading together, limit screens, one-on-one time) with streak/XP."
+    },
+    {
+      "niche": "daily_toddler_learning_streak",
+      "community_total": 5630000,
+      "verdict": "BLUE_OCEAN",
+      "score": 5.63,
+      "priority": "P0",
+      "notes": "5.6M toddler/early childhood community. All apps are child-facing learning platforms. No app tracks and gamifies the PARENT's daily habit of doing learning activities with their toddler."
+    },
+    {
+      "niche": "daily_fiction_writing_streak",
+      "community_total": 3860000,
+      "verdict": "SOFT_COMPETITION",
+      "score": 1.93,
+      "priority": "P0",
+      "notes": "3.9M fiction writing community. Dabble, NaNoWriMo, Squibler all have partial streak/word-count mechanics. Gap: none have pure streak gamification with XP/levels/badges for daily fiction writing practice."
+    },
+    {
+      "niche": "daily_communication_skills_streak",
+      "community_total": 3480000,
+      "verdict": "BLUE_OCEAN",
+      "score": 3.48,
+      "priority": "P0",
+      "notes": "3.5M communication/self-improvement community. No dedicated daily communication skills streak app. Orai covers public speaking only. Huge gap for daily conversational skill habit gamification."
+    },
+    {
+      "niche": "daily_poetry_writing_streak",
+      "community_total": 3220000,
+      "verdict": "BLUE_OCEAN",
+      "score": 3.22,
+      "priority": "P0",
+      "notes": "3.2M poetry community. Apps are reference tools or reading apps. No app gamifies the daily WRITING of poetry with streak/XP/leveling for aspiring poets."
+    },
+    {
+      "niche": "daily_math_habit_streak",
+      "community_total": 2170000,
+      "verdict": "SOFT_COMPETITION",
+      "score": 1.08,
+      "priority": "P0",
+      "notes": "2.2M math community. Khan Academy has basic streaks but is broad education. No adult-focused, math-specific daily practice streak app with full gamification (XP, levels, problem-type tracking)."
+    },
+    {
+      "niche": "daily_family_reading_streak",
+      "community_total": 2140000,
+      "verdict": "BLUE_OCEAN",
+      "score": 2.14,
+      "priority": "P0",
+      "notes": "2.1M dedicated parenting/toddler reading community (excluding broad r/books overlap). All apps deliver content to kids. No app gamifies the daily FAMILY reading-aloud habit with streak tracking and XP."
+    },
+    {
+      "niche": "daily_worldbuilding_streak",
+      "community_total": 1760000,
+      "verdict": "BLUE_OCEAN",
+      "score": 1.76,
+      "priority": "P1",
+      "notes": "1.76M worldbuilding community. All apps are organizational/wiki tools for complex projects. No app gamifies the daily worldbuilding habit with streak tracking and progression mechanics."
+    },
+    {
+      "niche": "daily_conflict_resolution_streak",
+      "community_total": 1375000,
+      "verdict": "BLUE_OCEAN",
+      "score": 1.38,
+      "priority": "P1",
+      "notes": "1.4M conflict resolution/communication community. Therapy apps handle clinical intervention. Zero apps gamify the daily practice of conflict resolution skills with streak/XP mechanics."
+    },
+    {
+      "niche": "daily_screenwriting_streak",
+      "community_total": 1270000,
+      "verdict": "BLUE_OCEAN",
+      "score": 1.27,
+      "priority": "P1",
+      "notes": "1.3M screenwriting community. All apps are professional formatting/production tools. Zero apps gamify the daily screenwriting practice habit with streak/XP for aspiring writers."
+    }
+  ]
+}

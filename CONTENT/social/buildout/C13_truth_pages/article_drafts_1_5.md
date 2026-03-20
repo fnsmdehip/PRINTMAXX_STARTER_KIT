@@ -1,5 +1,5 @@
 # Authority Article Drafts 1-5
-# C13 Truth Pages — SEO Authority Content
+# C13 Truth Pages, SEO Authority Content
 # All articles: 2,000+ words, consequence-first hooks, PRINTMAXXER voice
 
 ---
@@ -10,7 +10,7 @@
 **Secondary keywords:** make money online for beginners, online income 2025, side hustle from scratch
 **Search volume:** 74,000/mo | KD: 68 | CPC: $1.40
 **Affiliate angle:** Beehiiv, Gumroad, Canva, Hostinger
-**Meta description:** I went from $0 to $3,200/month in 8 months with no degree, no connections, and no starting capital. Here's the exact path — method by method, with real numbers.
+**Meta description:** I went from $0 to $3,200/month in 8 months with no degree, no connections, and no starting capital. Here's the exact path, method by method, with real numbers.
 
 ---
 
@@ -22,7 +22,7 @@ No degree. No existing audience. No startup capital. $0 to start.
 
 Month 8 I cleared $3,200.
 
-Most "make money online" guides are written by people who made their money selling courses about making money. This one is different. I'll show you the actual methods ranked by time-to-first-dollar, startup cost, and ceiling — so you can pick one and start today.
+Most "make money online" guides are written by people who made their money selling courses about making money. This one is different. I'll show you the actual methods ranked by time-to-first-dollar, startup cost, and ceiling, so you can pick one and start today.
 
 ---
 
@@ -49,11 +49,11 @@ Cold email is the fastest path to real money for a beginner with no audience.
 
 The basic model: find businesses that need a service (lead gen, SEO, social media management, web design), reach out to 100+ per day, offer a trial, deliver results, charge monthly retainer.
 
-What you're actually selling isn't design or copywriting skill — you're selling time and execution. Most small businesses have the budget and the need; they just don't have time to do outreach themselves.
+What you're actually selling isn't design or copywriting skill, you're selling time and execution. Most small businesses have the budget and the need; they just don't have time to do outreach themselves.
 
 **The exact setup:**
 1. Pick one service: lead generation, local SEO, or social media posting
-2. Buy a domain from Namecheap ($12/year) — never send cold email from your main domain
+2. Buy a domain from Namecheap ($12/year), never send cold email from your main domain
 3. Set up Google Workspace on the new domain ($6/month)
 4. Configure SPF, DKIM, DMARC (30 minutes, YouTube tutorial)
 5. Warm the domain for 2 weeks using Instantly.ai's built-in warmer
@@ -77,19 +77,19 @@ What you're actually selling isn't design or copywriting skill — you're sellin
 
 Digital products are the closest thing to passive income for beginners.
 
-You create something once — a template, guide, swipe file, prompt pack, spreadsheet — and sell it repeatedly.
+You create something once, a template, guide, swipe file, prompt pack, spreadsheet, and sell it repeatedly.
 
 **Products that sell with zero audience:**
 
-1. **Notion templates** ($7-$27) — business operating system, content calendar, habit tracker, finance dashboard. Search Gumroad for "Notion template" — top sellers do $2,000-$15,000/month.
+1. **Notion templates** ($7-$27), business operating system, content calendar, habit tracker, finance dashboard. Search Gumroad for "Notion template", top sellers do $2,000-$15,000/month.
 
-2. **Prompt packs** ($9-$49) — 50 ChatGPT prompts for copywriters, 100 prompts for marketing teams, prompts for cold email. AI tools are still new enough that prompt packs sell.
+2. **Prompt packs** ($9-$49), 50 ChatGPT prompts for copywriters, 100 prompts for marketing teams, prompts for cold email. AI tools are still new enough that prompt packs sell.
 
-3. **Canva templates** ($5-$19) — Instagram post templates, pitch deck templates, resume templates. Canva has 135M users searching for design shortcuts.
+3. **Canva templates** ($5-$19), Instagram post templates, pitch deck templates, resume templates. Canva has 135M users searching for design shortcuts.
 
-4. **Swipe files** ($7-$27) — 50 cold email subject lines that got replies, 30 winning TikTok hooks, 100 landing page headlines.
+4. **Swipe files** ($7-$27), 50 cold email subject lines that got replies, 30 winning TikTok hooks, 100 landing page headlines.
 
-5. **Spreadsheet tools** ($9-$47) — budget tracker, content calendar, leads tracker, P&L template.
+5. **Spreadsheet tools** ($9-$47), budget tracker, content calendar, leads tracker, P&L template.
 
 **Traffic without an audience:**
 - Post the product to Reddit's relevant subreddits (value-first, no spam)
@@ -112,8 +112,8 @@ Content is in constant demand. Every business with a blog, email list, or social
 The fastest path isn't Upwork (saturated, race-to-bottom on price). It's direct outreach.
 
 **Step-by-step:**
-1. Pick a niche you know something about — even casually (fitness, personal finance, SaaS, e-commerce)
-2. Create 3 writing samples — post them on a free portfolio at Journo Portfolio or a simple Notion page
+1. Pick a niche you know something about, even casually (fitness, personal finance, SaaS, e-commerce)
+2. Create 3 writing samples, post them on a free portfolio at Journo Portfolio or a simple Notion page
 3. Find 50 companies in your niche with active blogs (Google "[niche] blog + "write for us"" or scrape LinkedIn)
 4. Send a 3-sentence pitch: what you write, who you've written for (or a sample), what you want to do for them
 5. Charge $100-$300/article to start
@@ -124,7 +124,7 @@ The fastest path isn't Upwork (saturated, race-to-bottom on price). It's direct 
 - LinkedIn outreach to content managers
 - Cold email to SaaS companies (they spend heavily on content SEO)
 
-**What beginners get wrong:** They pitch too broadly. "I write blogs" loses to "I write SaaS comparison articles targeting high-intent buyers — here are 3 I've done."
+**What beginners get wrong:** They pitch too broadly. "I write blogs" loses to "I write SaaS comparison articles targeting high-intent buyers, here are 3 I've done."
 
 ---
 
@@ -174,7 +174,7 @@ Faceless YouTube channels are running on AI narration, stock footage, and a simp
 
 **Production stack (under $50/month):**
 1. Script: Claude or ChatGPT (free tier works)
-2. Narration: ElevenLabs ($5/month starter plan — 30 minutes audio)
+2. Narration: ElevenLabs ($5/month starter plan, 30 minutes audio)
 3. Footage: Pexels, Pixabay (free), or Storyblocks ($15/month)
 4. Editing: CapCut (free)
 5. Thumbnails: Canva (free)
@@ -223,7 +223,7 @@ Set a 72-hour rule: within 72 hours of reading this, send your first 10 cold ema
 **Secondary keywords:** AI tools for freelancers, AI business tools, best AI productivity tools
 **Search volume:** 12,000/mo | KD: 42 | CPC: $2.10
 **Affiliate angle:** Claude, Beehiiv, Instantly.ai, Notion, Perplexity
-**Meta description:** I tested 47 AI tools over 6 months. Most are hype. These 12 actually moved the needle — with pricing, use cases, and what each one does better than its competitors.
+**Meta description:** I tested 47 AI tools over 6 months. Most are hype. These 12 actually moved the needle, with pricing, use cases, and what each one does better than its competitors.
 
 ---
 
@@ -247,28 +247,28 @@ Tools that didn't make the cut: Jasper (overhyped, Claude is better), Copy.ai (s
 
 ## Tier 1: Use every single day
 
-**1. Claude (claude.ai) — $20/month**
+**1. Claude (claude.ai), $20/month**
 Best for: long-form writing, code, analysis, research synthesis
 
-Claude's extended context window (200K tokens) means you can paste an entire research report and get a nuanced summary. The output quality on first drafts is meaningfully better than GPT-4 for writing tasks — less generic, more willing to take positions.
+Claude's extended context window (200K tokens) means you can paste an entire research report and get a nuanced summary. The output quality on first drafts is meaningfully better than GPT-4 for writing tasks, less generic, more willing to take positions.
 
 What I use it for daily: article outlines, cold email A/B variants, spreadsheet formulas, Python scripts for automation, and research synthesis from multiple sources.
 
 Competitor comparison: GPT-4 is slightly better at math and structured data. Claude is better at natural language and longer documents. For solopreneurs doing content and outreach: Claude wins.
 
-**2. Perplexity (perplexity.ai) — $20/month**
+**2. Perplexity (perplexity.ai), $20/month**
 Best for: real-time research with citations
 
 Regular AI models have training cutoffs. Perplexity searches the web in real-time and gives you cited answers. For market research, competitor analysis, and staying current on industry trends, it's replaced Google for me.
 
-Use case: "what are the top 5 cold email tools in 2025 and their pricing" — returns accurate, current results with sources you can verify.
+Use case: "what are the top 5 cold email tools in 2025 and their pricing", returns accurate, current results with sources you can verify.
 
 Free tier is usable. Pro ($20/month) adds Claude Sonnet, GPT-4, and better search quality.
 
-**3. Notion + Notion AI — $16/month**
+**3. Notion + Notion AI, $16/month**
 Best for: knowledge management, project tracking, AI-assisted writing in context
 
-Notion AI is the only AI writing tool I've found that's useful *because* it knows your existing content. You can ask it to "summarize my meeting notes from last week" or "draft a follow-up email based on this client brief" — and it has actual context.
+Notion AI is the only AI writing tool I've found that's useful *because* it knows your existing content. You can ask it to "summarize my meeting notes from last week" or "draft a follow-up email based on this client brief", and it has actual context.
 
 For solopreneurs managing clients, projects, content calendars, and research: Notion is the operating system. The AI layer makes it 2x faster.
 
@@ -276,7 +276,7 @@ For solopreneurs managing clients, projects, content calendars, and research: No
 
 ## Tier 2: Use weekly, saves significant time
 
-**4. Instantly.ai — $37/month**
+**4. Instantly.ai, $37/month**
 Best for: cold email at scale
 
 Not technically "AI" in the flashy sense, but uses AI for warmup and subject line suggestions. What it actually is: the best cold email infrastructure tool available.
@@ -286,16 +286,16 @@ Sends from unlimited email addresses (you buy cheap domains, connect them all). 
 Without Instantly: 50 emails/day max from one Gmail, 80% chance of hitting spam.
 With Instantly: 500-2,000 emails/day, 85%+ inbox rate if your copy is decent.
 
-**5. ElevenLabs — $5-22/month**
+**5. ElevenLabs, $5-22/month**
 Best for: AI voiceover for videos and podcasts
 
 The voice quality is legitimately indistinguishable from human narration in most cases. I've used it for YouTube videos, podcast intros, and product demos.
 
 At $5/month (10K characters = ~7 minutes of audio) it's free-tier usable. $22/month gets you 100K characters = ~70 minutes.
 
-The business model unlock: you can produce a 10-minute YouTube video with professional narration for $3-4 of API credits. Scales to 50 videos/month with no additional voice talent cost.
+The business model get: you can produce a 10-minute YouTube video with professional narration for $3-4 of API credits. Scales to 50 videos/month with no additional voice talent cost.
 
-**6. Midjourney — $10/month**
+**6. Midjourney, $10/month**
 Best for: marketing images, thumbnails, brand visuals
 
 Still the best image generation model for realistic and stylized marketing images. DALL-E 3 is close but Midjourney has better aesthetic control.
@@ -304,7 +304,7 @@ Use it for: thumbnail concepts, blog header images, social media graphics, produ
 
 Workflow: generate 4 variants in Midjourney, pick the best one, refine in Canva.
 
-**7. Otter.ai — $16.99/month**
+**7. Otter.ai, $16.99/month**
 Best for: meeting transcription and note-taking
 
 Auto-transcribes Zoom/Google Meet calls with 95%+ accuracy. Identifies speakers. Generates action items. Syncs with Notion.
@@ -315,7 +315,7 @@ For client calls: reduces post-meeting documentation from 30 minutes to 5 minute
 
 ## Tier 3: Situationally excellent
 
-**8. Zapier (with AI steps) — $29-99/month**
+**8. Zapier (with AI steps), $29-99/month**
 Best for: connecting tools without code
 
 Zapier now has AI steps that let you transform data mid-workflow using LLMs. Example: new Typeform lead → AI enriches with LinkedIn data → sends personalized email → logs to Notion CRM.
@@ -324,28 +324,28 @@ Complex for non-technical users to set up. But once running: saves 5-15 hours pe
 
 Alternative: Make.com (more powerful, steeper learning curve, cheaper at scale).
 
-**9. Durable.co — $12/month**
+**9. Durable.co, $12/month**
 Best for: single-page websites in 30 seconds
 
 Generates a complete business website from a 2-sentence description. Copy, images, contact form, hosted. Not good enough for serious businesses, but fine for validating ideas before investing in a real site.
 
 Use case: you want to test if there's demand for a service before building a real landing page. Spin up a Durable site, run $50 in Google ads, measure conversion rate.
 
-**10. Canva AI — included in Canva Pro, $15/month**
+**10. Canva AI, included in Canva Pro, $15/month**
 Best for: design work at scale
 
 Canva's Magic Studio (their AI suite) includes: Magic Eraser, Magic Edit, Magic Write, background removal, and Brand Kit enforcement. For non-designers producing 20+ social posts per month, it's indispensable.
 
 Magic Write is not as good as Claude for long-form. But for 1-3 sentence social captions in-context while designing: it's fast enough.
 
-**11. Browse AI — $19/month**
+**11. Browse AI, $19/month**
 Best for: scraping websites without code
 
 Train a bot to extract data from any website, then schedule it to run daily. Use cases: monitoring competitor pricing, extracting leads from directories, tracking your rankings on Clutch or G2.
 
 For competitive intelligence: train it on 10 competitor websites and get a weekly report on what changed.
 
-**12. Beehiiv — $0-42/month**
+**12. Beehiiv, $0-42/month**
 Best for: newsletter + monetization stack
 
 The best newsletter platform for solopreneurs trying to monetize. Boosts program (get paid to recommend other newsletters), ad network (earn from sponsorships at 2,500+ subscribers), and referral program are all built-in.
@@ -380,7 +380,7 @@ Free to 2,500 subscribers. Scale tier at $42/month adds custom domains, advanced
 | Beehiiv | $42 |
 | **Total** | **$218/month** |
 
-At $3K/month revenue, this stack costs 7.3% of revenue. At $10K/month, 2.2%. The leverage is real.
+At $3K/month revenue, this stack costs 7.3% of revenue. At $10K/month, 2.2%. The use is real.
 
 **Start here if budget is tight:** Claude ($20) + Beehiiv (free) + Canva (free tier). $20/month gets you 80% of the value. Add tools as revenue grows.
 
@@ -396,7 +396,7 @@ At $3K/month revenue, this stack costs 7.3% of revenue. At $10K/month, 2.2%. The
 **Secondary keywords:** cold email strategy 2025, how to cold email for freelance clients, cold outreach guide
 **Search volume:** 8,100/mo | KD: 45 | CPC: $3.20
 **Affiliate angle:** Instantly.ai, Apollo.io, Namecheap, Google Workspace
-**Meta description:** I sent 14,000 cold emails last year. 68 replies. 9 client calls. 4 paying clients at $800-$2,400/month. Here's the exact system — what works, what kills response rates, and the 6-step framework.
+**Meta description:** I sent 14,000 cold emails last year. 68 replies. 9 client calls. 4 paying clients at $800-$2,400/month. Here's the exact system, what works, what kills response rates, and the 6-step framework.
 
 ---
 
@@ -406,7 +406,7 @@ I sent 14,000 cold emails last year.
 
 68 replies. 9 client calls. 4 paying clients.
 
-That's a 0.49% reply rate — which sounds terrible until you realize those 4 clients paid $800-$2,400/month each. $8,400/month in MRR from one year of cold email.
+That's a 0.49% reply rate, which sounds terrible until you realize those 4 clients paid $800-$2,400/month each. $8,400/month in MRR from one year of cold email.
 
 Here's exactly how it works.
 
@@ -457,10 +457,10 @@ Example of a good prospect:
 - Location: US/UK (higher budgets)
 
 Where to build lists:
-- **Apollo.io** (free tier: 50 leads/month; $49/month for unlimited) — filter by title, industry, company size, location, technology used
-- **LinkedIn Sales Navigator** ($99/month) — best for senior titles
-- **Google Maps** (free) — for local businesses: restaurants, dentists, HVAC, contractors
-- **Crunchbase** (free tier) — startups that recently raised (flush with cash)
+- **Apollo.io** (free tier: 50 leads/month; $49/month for unlimited), filter by title, industry, company size, location, technology used
+- **LinkedIn Sales Navigator** ($99/month), best for senior titles
+- **Google Maps** (free), for local businesses: restaurants, dentists, HVAC, contractors
+- **Crunchbase** (free tier), startups that recently raised (flush with cash)
 
 Scrape quality signals from company websites too: are they running Google Ads? (they have budget). Do they have a bad website? (they need help). When did they last post on social media? (recent = active, old = might be struggling).
 
@@ -493,7 +493,7 @@ Subject: leads for [Company] on autopilot
 
 Hi Sarah,
 
-Noticed [Company] is running Google Ads but the landing page doesn't have a case study or social proof section — conversion rates usually drop 20-35% without that.
+Noticed [Company] is running Google Ads but the landing page doesn't have a case study or social proof section, conversion rates usually drop 20-35% without that.
 
 I set up lead gen systems for B2B SaaS companies that cut CPL by 30-45% without increasing ad spend.
 
@@ -505,11 +505,11 @@ Marcus
 ```
 
 **What to never do:**
-- Start with "My name is..." — they don't care
-- Use "I hope this email finds you well" — immediate delete
-- Ask for 30-60 minutes — too long, too much commitment
-- Attach anything in the first email — goes to spam
-- Write more than 100 words — they won't read it
+- Start with "My name is...", they don't care
+- Use "I hope this email finds you well", immediate delete
+- Ask for 30-60 minutes, too long, too much commitment
+- Attach anything in the first email, goes to spam
+- Write more than 100 words, they won't read it
 
 ### 4. Subject lines
 
@@ -522,16 +522,16 @@ Rules:
 - Lower case performs better than Title Case (looks more human)
 
 Subject lines by open rate (from my own A/B tests):
-- "[Company name] + [specific thing]" — 67% open rate
-- "quick question" — 58% open rate
-- "[Pain point] for [company type]" — 51% open rate
-- "saw your [specific thing]" — 49% open rate
-- "idea for [company name]" — 47% open rate
+- "[Company name] + [specific thing]", 67% open rate
+- "quick question", 58% open rate
+- "[Pain point] for [company type]", 51% open rate
+- "saw your [specific thing]", 49% open rate
+- "idea for [company name]", 47% open rate
 
 What kills open rates:
-- "Check out my services" — 12% open rate
-- "Proposal for [company]" — 18%
-- "Partnership opportunity" — 15%
+- "Check out my services", 12% open rate
+- "Proposal for [company]", 18%
+- "Partnership opportunity", 15%
 
 ### 5. Follow-up sequence
 
@@ -540,9 +540,9 @@ What kills open rates:
 The sequence that gets my best results:
 
 - **Day 1:** First email (the 100-word version above)
-- **Day 3:** Follow-up #1 — "Bumping this up in case it got buried. Still worth a quick chat?"
-- **Day 7:** Follow-up #2 — New angle on the value prop, 2-3 sentences
-- **Day 14:** Follow-up #3 — Soft close: "Not going to keep bugging you — just wanted to leave you with one thing: [1 specific insight relevant to their business]. Either way, hope [Company] crushes it this quarter."
+- **Day 3:** Follow-up #1, "Bumping this up in case it got buried. Still worth a quick chat?"
+- **Day 7:** Follow-up #2, New angle on the value prop, 2-3 sentences
+- **Day 14:** Follow-up #3, Soft close: "Not going to keep bugging you, just wanted to leave you with one thing: [1 specific insight relevant to their business]. Either way, hope [Company] crushes it this quarter."
 
 Most people stop at 1-2 follow-ups. 4 touchpoints is the sweet spot before diminishing returns.
 
@@ -557,9 +557,9 @@ Metrics to track per campaign:
 - Call booking rate from positive replies (target: 60%+)
 
 Tools:
-- **Instantly.ai** ($37/month) — best all-in-one: sending, tracking, auto-follow-up, unified inbox
-- **Smartlead** ($29/month) — slightly cheaper, similar features
-- **Lemlist** ($59/month) — adds image personalization; worth it for high-value outreach
+- **Instantly.ai** ($37/month), best all-in-one: sending, tracking, auto-follow-up, unified inbox
+- **Smartlead** ($29/month), slightly cheaper, similar features
+- **Lemlist** ($59/month), adds image personalization; worth it for high-value outreach
 
 ---
 
@@ -568,7 +568,7 @@ Tools:
 Not every service converts from cold email equally.
 
 **Highest conversion services:**
-1. Lead generation (you generate leads for them — easy ROI story)
+1. Lead generation (you generate leads for them, easy ROI story)
 2. Paid ads management (clear ROI metric)
 3. Website builds for local businesses (they can see the problem immediately)
 4. Email marketing setup (you already proved you can do it by reaching them)
@@ -603,7 +603,7 @@ The people who don't get results: start sending before warmup is complete (spam 
 **Secondary keywords:** how to start print on demand, print on demand passive income, best POD platforms
 **Search volume:** 22,000/mo | KD: 52 | CPC: $1.80
 **Affiliate angle:** Printify, Printful, Etsy, Canva, Merch by Amazon
-**Meta description:** Print-on-demand is one of the few online businesses you can start for $0 today and have your first sale within a week. Here's the exact setup — platforms compared, margins explained, first product live in 2 hours.
+**Meta description:** Print-on-demand is one of the few online businesses you can start for $0 today and have your first sale within a week. Here's the exact setup, platforms compared, margins explained, first product live in 2 hours.
 
 ---
 
@@ -688,11 +688,11 @@ Generic designs don't sell. Niche designs do.
 
 **How to find winning niches:**
 
-1. **eRank or Marmalead** ($9.99-$19/month) — Etsy keyword research tools. Search any term to see monthly searches and competition. Target: 1,000-10,000 monthly Etsy searches, under 50,000 competing listings.
+1. **eRank or Marmalead** ($9.99-$19/month), Etsy keyword research tools. Search any term to see monthly searches and competition. Target: 1,000-10,000 monthly Etsy searches, under 50,000 competing listings.
 
-2. **Merch Informer** ($9.99/month) — shows BSR (Best Seller Rank) on Amazon Merch. Niches where low-BSR shirts exist = proven demand.
+2. **Merch Informer** ($9.99/month), shows BSR (Best Seller Rank) on Amazon Merch. Niches where low-BSR shirts exist = proven demand.
 
-3. **Google Trends** (free) — enter niche ideas, check 5-year trend. Avoid declining niches. Target stable or growing.
+3. **Google Trends** (free), enter niche ideas, check 5-year trend. Avoid declining niches. Target stable or growing.
 
 **Proven micro-niche formula:**
 [Occupation] + [Activity or identity] + [Humor/pride]
@@ -736,7 +736,7 @@ Example: "Nurse Gift Coffee Mug, Funny Nursing School Graduation, Sarcastic Medi
 
 **Photos:** The hero image should show the product on a person or in context, not just a flat mockup. Mockups with models convert 2-3x better than plain mockups.
 
-**Price:** Start at the market rate ($24.99-$34.99 for shirts). Don't compete on price as a beginner — you can't win that game against established stores with 5,000+ reviews.
+**Price:** Start at the market rate ($24.99-$34.99 for shirts). Don't compete on price as a beginner, you can't win that game against established stores with 5,000+ reviews.
 
 ---
 
@@ -789,7 +789,7 @@ The 1,000-sale stores exist. They typically have: 500-1,000+ listings, multiple 
 **Secondary keywords:** start faceless youtube channel, faceless youtube monetization, AI narration youtube
 **Search volume:** 33,000/mo | KD: 55 | CPC: $0.95
 **Affiliate angle:** ElevenLabs, Storyblocks, CapCut, TubeBuddy
-**Meta description:** 3 faceless YouTube channels crossed $10,000/month in 2024 using AI narration and stock footage. I broke down exactly how they're built — niche, production stack, upload schedule, and the monetization math.
+**Meta description:** 3 faceless YouTube channels crossed $10,000/month in 2024 using AI narration and stock footage. I broke down exactly how they're built, niche, production stack, upload schedule, and the monetization math.
 
 ---
 
@@ -799,7 +799,7 @@ The 1,000-sale stores exist. They typically have: 500-1,000+ listings, multiple 
 
 No face. No camera. No charisma required.
 
-Here's how they did it — and the exact production stack you can copy today.
+Here's how they did it, and the exact production stack you can copy today.
 
 ---
 
@@ -809,9 +809,9 @@ YouTube monetizes by watch time, not by the creator's face.
 
 The algorithm cares about one thing: do people watch your video, or do they click away after 30 seconds?
 
-Faceless channels that tell good stories with quality narration and relevant visuals retain viewers just as well as face-cam channels. Better, in some niches — nobody needs to see a face explaining compound interest.
+Faceless channels that tell good stories with quality narration and relevant visuals retain viewers just as well as face-cam channels. Better, in some niches, nobody needs to see a face explaining compound interest.
 
-The production unlock: ElevenLabs voices are now at a quality level where most viewers can't tell it's AI. Combined with stock footage from Storyblocks and scripting from Claude, you can produce a 10-minute video for $3-8 in tool costs.
+The production get: ElevenLabs voices are now at a quality level where most viewers can't tell it's AI. Combined with stock footage from Storyblocks and scripting from Claude, you can produce a 10-minute video for $3-8 in tool costs.
 
 ---
 
@@ -833,11 +833,11 @@ Successful channels in this niche: Graham Stephan (face-cam, but the format work
 
 People love origin stories. "How Amazon went from a garage to $2 trillion." "The Enron collapse explained." "How Airbnb survived almost going broke."
 
-These require zero personal expertise — just good research and compelling narration. Most of the script can be built from Wikipedia + news articles.
+These require zero personal expertise, just good research and compelling narration. Most of the script can be built from Wikipedia + news articles.
 
 ### 3. Tech Reviews and Comparisons (CPM: $6-$12)
 
-"Best budget laptop 2025." "iPhone 16 vs Galaxy S25 — which one should you buy." "Top 5 AI tools that aren't ChatGPT."
+"Best budget laptop 2025." "iPhone 16 vs Galaxy S25, which one should you buy." "Top 5 AI tools that aren't ChatGPT."
 
 The catch: you need to show product footage (b-roll). Source it from manufacturer press kits (usually free to use with attribution) or buy a Storyblocks subscription.
 
@@ -845,13 +845,13 @@ The catch: you need to show product footage (b-roll). Source it from manufacture
 
 Lowest CPM on this list, but the simplest content to produce. Historical footage is either public domain or available via stock sites. Scripts are research + narration.
 
-The ceiling is real though — a history channel doing 5M views/month at $4 CPM earns $20K. Same views at $20 CPM (finance) = $100K.
+The ceiling is real though, a history channel doing 5M views/month at $4 CPM earns $20K. Same views at $20 CPM (finance) = $100K.
 
 ### 5. Motivational / Self-Improvement (CPM: $4-$8)
 
 "10 habits of millionaires." "Why most people stay poor." "The morning routine that changed my life."
 
-Highly competitive but still converts. Works best as a "feeder" niche — build the audience on self-improvement, monetize via affiliate links to the courses, books, and tools you reference.
+Highly competitive but still converts. Works best as a "feeder" niche, build the audience on self-improvement, monetize via affiliate links to the courses, books, and tools you reference.
 
 ---
 
@@ -949,7 +949,7 @@ Example for "How to save $10,000": Red background. White text: "SAVE $10,000". S
 
 ## The critical mistakes that kill faceless channels
 
-**1. No hook in the first 30 seconds.** YouTube measures "audience retention" — if people click away in 30 seconds, the algorithm buries your video. Open with the biggest, most specific promise or surprising fact. Not: "Hi guys, today we're going to talk about saving money." Yes: "I saved $10,000 in 6 months on a $41,000 salary. Here's every decision I made."
+**1. No hook in the first 30 seconds.** YouTube measures "audience retention", if people click away in 30 seconds, the algorithm buries your video. Open with the biggest, most specific promise or surprising fact. Not: "Hi guys, today we're going to talk about saving money." Yes: "I saved $10,000 in 6 months on a $41,000 salary. Here's every decision I made."
 
 **2. Upload frequency below 2 videos/week.** The YouTube algorithm rewards consistency. 2 videos/week for 6 months = 52 videos. Each one is another entry point for search traffic. Channels that upload once per month don't compound.
 

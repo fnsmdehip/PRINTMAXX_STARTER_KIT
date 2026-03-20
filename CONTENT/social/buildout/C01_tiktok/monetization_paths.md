@@ -1,4 +1,4 @@
-# C01 TikTok — Monetization Paths
+# C01 TikTok, Monetization Paths
 
 ## Revenue Streams by Account Type + Realistic Numbers
 
@@ -69,7 +69,7 @@
 **Products by niche account:**
 
 **@printmaxxer products:**
-- Cold email swipe file (100 templates): $27 — target conversion: 0.3% of viewers/month
+- Cold email swipe file (100 templates): $27, target conversion: 0.3% of viewers/month
 - App building blueprint: $47
 - MRR tracking spreadsheet: $17
 - Full solopreneur system: $97
@@ -86,7 +86,7 @@
 
 **Revenue calculation:**
 100,000 monthly views → 1,000 profile visits → 50 link clicks → 2 sales × $37 = $74/month
-**At 500K views:** 5 sales × $37 = $185/month — scales linearly with views
+**At 500K views:** 5 sales × $37 = $185/month, scales linearly with views
 
 **To increase conversion:**
 - Feature the product in video CTA explicitly
@@ -110,13 +110,13 @@
 
 **How to land deals before 10K followers:**
 - Reach out to brands directly (NOT via influencer marketplaces until 10K+)
-- Email their marketing department: "I have [X] followers in [specific niche]. my last 3 posts got [X] views. I want to do an organic integration for [product] — here's my rate card."
+- Email their marketing department: "I have [X] followers in [specific niche]. my last 3 posts got [X] views. I want to do an organic integration for [product], here's my rate card."
 - Target: brands that are already advertising on TikTok (look for TikTok-style ads)
 - Niche micro-influencer advantage: a 3K-follower faith/fitness account can land deals a 50K general account can't
 
 **Tools for finding brand deals:**
 - Creator Marketplace (10K+ required, TikTok's own platform)
-- Bonsai ($25/month) — contract management + invoice for creators
+- Bonsai ($25/month), contract management + invoice for creators
 - Collabstr (free search for brand campaigns)
 - Grin (enterprise, but worth checking as your account grows)
 
@@ -148,7 +148,7 @@
 
 **How to increase gifting:**
 - Acknowledge every gift by name (people gift more when recognized)
-- Set milestone goals: "at 1,000 coins we unlock the full template"
+- Set milestone goals: "at 1,000 coins we get the full template"
 - Be consistent with LIVE schedule so audience knows when to show up
 
 ---

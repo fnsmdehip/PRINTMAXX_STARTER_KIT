@@ -1,4 +1,4 @@
-# Comparison Pages Distribution — Cycle 4 (2026-03-07)
+# Comparison Pages Distribution, Cycle 4 (2026-03-07)
 # Status: PENDING_REVIEW
 # Pages deployed: focuslock-vs-opal.surge.sh, prayerlock-vs-hallow.surge.sh, printmaxx-comparisons.surge.sh
 
@@ -28,8 +28,8 @@ comparison: prayerlock-vs-hallow.surge.sh
 ```
 comparison pages are the most underrated SEO play for free tools.
 
-"focuslock vs opal" — people searching this are ready to switch.
-"prayerlock vs hallow" — people searching this want alternatives.
+"focuslock vs opal", people searching this are ready to switch.
+"prayerlock vs hallow", people searching this want alternatives.
 
 you capture intent at the decision point. then you give them the free version.
 ```
@@ -38,8 +38,8 @@ you capture intent at the decision point. then you give them the free version.
 
 ## Reddit Posts
 
-### r/productivity — FocusLock vs Opal
-**Title:** Free alternative to Opal (screen time app) — side-by-side comparison
+### r/productivity, FocusLock vs Opal
+**Title:** Free alternative to Opal (screen time app), side-by-side comparison
 
 **Body:**
 I built FocusLock as a free alternative to Opal. Made a comparison page showing the differences.
@@ -48,19 +48,19 @@ quick breakdown:
 - opal: $100/yr, native iOS only, requires account
 - focuslock: free, PWA (works on any device), no account, works offline
 
-the core features are the same — block distracting apps, set focus sessions, track screen time. focuslock just doesn't charge for it.
+the core features are the same, block distracting apps, set focus sessions, track screen time. focuslock just doesn't charge for it.
 
 comparison page: https://focuslock-vs-opal.surge.sh
 direct app: https://focuslock-app.surge.sh
 
 built this because i needed it and didn't want to pay $100/yr for basic screen time controls that should be built into every phone.
 
-interested in feedback — what features would make you switch from opal?
+interested in feedback, what features would make you switch from opal?
 
 ---
 
-### r/islam — PrayerLock vs Hallow
-**Title:** Free prayer tracking app for Muslims — comparison with paid alternatives
+### r/islam, PrayerLock vs Hallow
+**Title:** Free prayer tracking app for Muslims, comparison with paid alternatives
 
 **Body:**
 salaam everyone. with ramadan happening right now, wanted to share a free prayer tracking app i built.
@@ -82,7 +82,7 @@ direct link: https://prayerlock-app.surge.sh
 
 ---
 
-### r/SideProject — Comparison Pages SEO
+### r/SideProject, Comparison Pages SEO
 **Title:** Comparison pages are the most underrated indie hacker SEO play
 
 **Body:**
@@ -90,7 +90,7 @@ i've been building free tools (140+ sites deployed, $0 hosting) and just realize
 
 the logic:
 1. someone searches "focuslock vs opal" or "prayerlock vs hallow"
-2. they're already at the decision point — they want alternatives
+2. they're already at the decision point, they want alternatives
 3. you show them your free tool vs the paid competitor
 4. conversion intent is built into the search query
 
@@ -100,7 +100,7 @@ just deployed two comparison pages:
 
 the pages rank for "[your tool] vs [competitor]" and "[competitor] alternative" queries. zero ad spend. pure intent capture.
 
-for anyone building free tools — make comparison pages against every paid competitor. it's free, it compounds, and the people finding these pages are literally looking for what you built.
+for anyone building free tools, make comparison pages against every paid competitor. it's free, it compounds, and the people finding these pages are literally looking for what you built.
 
 ---
 
@@ -112,7 +112,7 @@ comparison pages might be the highest ROI content play for indie hackers.
 
 here's why:
 
-someone searches "focuslock vs opal" — they're already looking for alternatives. they're at the decision point. you don't need to convince them they have a problem. you just need to show them your solution is better (or free).
+someone searches "focuslock vs opal", they're already looking for alternatives. they're at the decision point. you don't need to convince them they have a problem. you just need to show them your solution is better (or free).
 
 i just deployed comparison pages for two of my free tools:
 - focuslock vs opal (screen time app, $100/yr vs free)
@@ -135,7 +135,7 @@ quick comparison:
 - opal: $100/yr subscription, iOS only, requires account creation
 - focuslock: free, works on any device (it's a PWA), no account needed, works offline
 
-core features are similar — focus sessions, app blocking, screen time tracking. the main difference is focuslock doesn't charge for it.
+core features are similar, focus sessions, app blocking, screen time tracking. the main difference is focuslock doesn't charge for it.
 
 you can see a side-by-side comparison here: focuslock-vs-opal.surge.sh
 
@@ -155,7 +155,7 @@ compared to hallow ($70/yr, christian-focused):
 - no account creation needed
 - ramadan-specific features
 
-22 days of ramadan left — you can see a comparison here: prayerlock-vs-hallow.surge.sh
+22 days of ramadan left, you can see a comparison here: prayerlock-vs-hallow.surge.sh
 
 or try it: prayerlock-app.surge.sh
 ```

@@ -1,4 +1,4 @@
-# Multi-Channel Distribution — Cycle 17
+# Multi-Channel Distribution, Cycle 17
 # Status: PENDING_REVIEW
 # Generated: 2026-03-14
 # Source Posts: Pain Point Scanner, 33-Agent System, Zero Revenue Transparency, Local Biz Audits, Cold Email Scale
@@ -13,7 +13,7 @@
 
 ---
 
-## Reddit Post 1 — r/SideProject
+## Reddit Post 1, r/SideProject
 ### Source: Pain Point Scanner (score 100/100)
 
 **Title:**
@@ -42,7 +42,7 @@ if you want to see the scoring logic happy to post it.
 
 ---
 
-## Reddit Post 2 — r/Entrepreneur
+## Reddit Post 2, r/Entrepreneur
 ### Source: Zero Revenue Transparency
 
 **Title:**
@@ -71,7 +71,7 @@ posting this because every entrepreneur i talk to in the "building phase" is act
 
 ---
 
-## Reddit Post 3 — r/SaaS
+## Reddit Post 3, r/SaaS
 ### Source: Pain Point Scanner + App Concept
 
 **Title:**
@@ -101,7 +101,7 @@ the tool that does this is about 200 lines of Python. happy to open source it if
 
 ---
 
-## Reddit Post 4 — r/Solopreneur
+## Reddit Post 4, r/Solopreneur
 ### Source: Cold Email at Scale
 
 **Title:**
@@ -139,7 +139,7 @@ the bottleneck is copy, not volume. one good first line beats 10x more volume.
 
 ---
 
-## Reddit Post 5 — r/indiehackers
+## Reddit Post 5, r/indiehackers
 ### Source: 33-Agent System (Build in Public)
 
 **Title:**
@@ -164,7 +164,7 @@ the stats after 146 cycles and 300 missions:
 
 the agents are good at finding and building. they are bad at listing and selling. that's a human problem, not an infrastructure problem.
 
-the actual bottleneck: i never set up the Gumroad account. i never scheduled the posts. i never sent the first cold email. the automation was comprehensive and completely disconnected from the market.
+the actual bottleneck: i never set up the Gumroad account. i never scheduled the posts. i never sent the first cold email. the automation was complete and completely disconnected from the market.
 
 what i'd do differently starting from zero: spend the first week listing and selling before building any automation. one sale teaches you more than 1,000 automation cycles.
 
@@ -172,7 +172,7 @@ the agents are now pointed at a different metric: not "how much did we build" bu
 
 ---
 
-## Reddit Post 6 — r/webdev
+## Reddit Post 6, r/webdev
 ### Source: Pain Point Scanner Technical Angle
 
 **Title:**
@@ -213,11 +213,11 @@ the full script is around 200 lines. if there's enough interest i'll clean it up
 
 ---
 
-## HN Post 1 — Pain Point Scanner
+## HN Post 1, Pain Point Scanner
 ### Source: Pain Point Scanner
 
 **Title:**
-Show HN: Reddit pain point scanner — hits public JSON API, scores posts 0-100, no API keys needed
+Show HN: Reddit pain point scanner, hits public JSON API, scores posts 0-100, no API keys needed
 
 **Body:**
 
@@ -225,13 +225,13 @@ I scan 41 subreddits every morning for product ideas. No authentication, no scra
 
 The scoring system works on 4 dimensions:
 
-1. Pain intensity — weighted vocabulary matching on phrases like "i wish," "i hate," "why is there no," "someone should build," "i would pay for." Intensity matters more than frequency.
+1. Pain intensity, weighted vocabulary matching on phrases like "i wish," "i hate," "why is there no," "someone should build," "i would pay for." Intensity matters more than frequency.
 
-2. Specificity — proper nouns, dollar amounts, time references, and named consequences all increase the score. "My alarm app sucks" scores lower than "I turned off my alarm in my sleep and missed a job interview."
+2. Specificity, proper nouns, dollar amounts, time references, and named consequences all increase the score. "My alarm app sucks" scores lower than "I turned off my alarm in my sleep and missed a job interview."
 
-3. Social proof — comment count is weighted 3x over upvotes because comments mean people had enough of a reaction to type something. 36 comments on a 36-upvote post is a high-engagement signal.
+3. Social proof, comment count is weighted 3x over upvotes because comments mean people had enough of a reaction to type something. 36 comments on a 36-upvote post is a high-engagement signal.
 
-4. Solution clarity — posts that name a desired solution directly score higher. "I wish someone would wake me up and charge me money if I don't get up" is a product spec, not just a complaint.
+4. Solution clarity, posts that name a desired solution directly score higher. "I wish someone would wake me up and charge me money if I don't get up" is a product spec, not just a complaint.
 
 Today's top score was 100/100: a person in r/productivity who missed a job interview because they turned off their alarm. The post asked for an accountability wake-up service. QR code in the bathroom, charge $5 to a charity you hate if you don't scan it.
 
@@ -241,7 +241,7 @@ Happy to post the full script as a GitHub gist if there's interest.
 
 ---
 
-## HN Post 2 — Infrastructure Without Distribution
+## HN Post 2, Infrastructure Without Distribution
 ### Source: 33-Agent System / Zero Revenue
 
 **Title:**
@@ -275,7 +275,7 @@ The interesting technical question is whether an autonomous system can reliably 
 
 ---
 
-## HN Post 3 — Local Biz Audit System
+## HN Post 3, Local Biz Audit System
 ### Source: Local Biz Website Audits
 
 **Title:**
@@ -297,7 +297,7 @@ The version I've seen that works best is leading with a single specific finding 
 
 ---
 
-## HN Post 4 — Cold Email Volume
+## HN Post 4, Cold Email Volume
 ### Source: Cold Email at Scale
 
 **Title:**
@@ -331,7 +331,7 @@ The script is about 150 lines. Happy to share it.
 
 ---
 
-## IH Post 1 — Build in Public: 35 Days, $0 Revenue
+## IH Post 1, Build in Public: 35 Days, $0 Revenue
 ### Source: Zero Revenue Transparency
 
 **Title:**
@@ -371,7 +371,7 @@ One sale changes everything. Not because of the money. Because it proves the loo
 
 ---
 
-## IH Post 2 — Pain Point Scanner Tool
+## IH Post 2, Pain Point Scanner Tool
 ### Source: Pain Point Scanner
 
 **Title:**
@@ -405,7 +405,7 @@ The scanner itself took me about 200 lines of Python to build and has been runni
 
 ---
 
-## IH Post 3 — Local Biz Audits Playbook
+## IH Post 3, Local Biz Audits Playbook
 ### Source: Local Biz Website Audits
 
 **Title:**
@@ -435,7 +435,7 @@ The harder part is the close, not the audit. The audit is proof you did research
 
 ---
 
-## IH Post 4 — Milestone: First Cold Email
+## IH Post 4, Milestone: First Cold Email
 ### Source: Zero Revenue Transparency + Cold Email
 
 **Title:**
@@ -467,7 +467,7 @@ if you're in the building phase and it's been more than 2 weeks, you're probably
 
 ---
 
-## LinkedIn Post 1 — 33-Agent System Professional Frame
+## LinkedIn Post 1, 33-Agent System Professional Frame
 ### Source: 33-Agent System
 
 **Title:**
@@ -503,7 +503,7 @@ The correction is simple once you name the problem. Harder before you do.
 
 ---
 
-## LinkedIn Post 2 — Local Biz Audit as a Service
+## LinkedIn Post 2, Local Biz Audit as a Service
 ### Source: Local Biz Website Audits
 
 **Title:**
@@ -540,7 +540,7 @@ The crawler takes 20 minutes to build. The emails take 2 hours to personalize. T
 
 ---
 
-## LinkedIn Post 3 — Cold Email Infrastructure
+## LinkedIn Post 3, Cold Email Infrastructure
 ### Source: Cold Email at Scale
 
 **Title:**
@@ -571,7 +571,7 @@ Tool stack: Gmail, Google Sheets, Python (smtplib + gspread), Hunter.io free tie
 
 ---
 
-## LinkedIn Post 4 — Pain Point Research Method
+## LinkedIn Post 4, Pain Point Research Method
 ### Source: Pain Point Scanner
 
 **Title:**
@@ -608,7 +608,7 @@ The insight that took me too long to internalize: the best product ideas are the
 
 ---
 
-## Dev.to Article 1 — Reddit Pain Point Scanner (Technical)
+## Dev.to Article 1, Reddit Pain Point Scanner (Technical)
 ### Source: Pain Point Scanner
 
 **Title:**
@@ -788,7 +788,7 @@ The full script with all 41 subreddits and the complete scoring functions is abo
 
 ---
 
-## Dev.to Article 2 — Gmail Cold Email Rotation Script
+## Dev.to Article 2, Gmail Cold Email Rotation Script
 ### Source: Cold Email at Scale
 
 **Title:**
@@ -916,7 +916,7 @@ The infrastructure is free. The bottleneck is time spent personalizing first lin
 
 ---
 
-## Dev.to Article 3 — Build-in-Public: Autonomous Agent Architecture
+## Dev.to Article 3, Build-in-Public: Autonomous Agent Architecture
 ### Source: 33-Agent System
 
 **Title:**
@@ -1038,7 +1038,7 @@ The obvious lesson: build the last mile first. Get 1 product listed and 1 email 
 # PRE-PUBLISH QA CHECKLIST
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (checked: no leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (checked: no use, use, dig, complete, strong, novel, seamless)
 - [x] No "It's not just X, it's Y" constructions
 - [x] No vague attributions without sources
 - [x] Sentence case headings throughout

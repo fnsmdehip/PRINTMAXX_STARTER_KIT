@@ -10,7 +10,7 @@
 Instagram's algorithm distributes Reels in waves:
 
 **Wave 1 (0-1 hour):**
-Shows to your existing followers first. If they engage (watch full video, like, comment, share, save) — algorithm expands.
+Shows to your existing followers first. If they engage (watch full video, like, comment, share, save), algorithm expands.
 - Target: 60%+ completion rate from followers
 
 **Wave 2 (1-24 hours):**
@@ -30,12 +30,12 @@ Viral expansion if waves 1-2 performed. Shows to Explore and Reels feed of broad
 
 ### Ranking Signals (ranked by weight):
 
-1. **Watch time / completion rate** — #1 signal. Get people to watch again.
-2. **DM shares** — Instagram values this most for virality
-3. **Saves** — marks your content as reference material
-4. **Comments** — especially comments with questions (shows discussion)
-5. **Likes** — least weighted but still counts
-6. **Profile visits** — strong signal of audience conversion
+1. **Watch time / completion rate**, #1 signal. Get people to watch again.
+2. **DM shares**, Instagram values this most for virality
+3. **Saves**, marks your content as reference material
+4. **Comments**, especially comments with questions (shows discussion)
+5. **Likes**, least weighted but still counts
+6. **Profile visits**, strong signal of audience conversion
 
 ### How to Optimize for Each Signal:
 
@@ -60,7 +60,7 @@ Viral expansion if waves 1-2 performed. Shows to Explore and Reels feed of broad
 **Comments:**
 - Ask a question in the caption or last slide
 - "What's your experience with X?" beats "comment below"
-- Reply to every comment in the first 60 minutes — boosts algorithmic ranking
+- Reply to every comment in the first 60 minutes, boosts algorithmic ranking
 
 ### Reels Production Specs (2026):
 - Aspect ratio: 9:16 (1080×1920 pixels)
@@ -86,16 +86,16 @@ Viral expansion if waves 1-2 performed. Shows to Explore and Reels feed of broad
 Groups of creators who agree to engage with each other's posts within the first 30 minutes of publishing. Early engagement signals to the algorithm that the content is worth promoting.
 
 **Types:**
-- DM pods (3-10 people) — manual, message each other when you post
-- Telegram pods (10-100 people) — automated notification when someone posts
-- Broadcast channel pods — one-way notification system
+- DM pods (3-10 people), manual, message each other when you post
+- Telegram pods (10-100 people), automated notification when someone posts
+- Broadcast channel pods, one-way notification system
 
 ### How to Find Pods
 
 **Option A: Build your own (recommended):**
 1. Find 5-10 creators in your niche with similar follower counts
 2. Engage authentically with their content for 2 weeks
-3. DM: "I noticed we post similar content — I'm in a small engagement pod with [X] people in [niche]. We commit to genuine engagement (watch full video + real comment) within 30 minutes of each other's posts. Want to join?"
+3. DM: "I noticed we post similar content, I'm in a small engagement pod with [X] people in [niche]. We commit to genuine engagement (watch full video + real comment) within 30 minutes of each other's posts. Want to join?"
 4. Create a Telegram group or iMessage group for notifications
 
 **Option B: Join existing pods:**
@@ -123,7 +123,7 @@ Groups of creators who agree to engage with each other's posts within the first 
 - 20+: usually degrades to generic comments, less effective
 
 ### What to Avoid:
-- Automated pod services (Telegram bots) — Instagram can detect and penalize
+- Automated pod services (Telegram bots), Instagram can detect and penalize
 - Pods with creators 10x larger than you (they get more from you than you from them)
 - Cross-niche pods (a fitness creator engaging with a B2B sales post looks fake)
 - Paying for engagement (flagged as inauthentic)
@@ -159,12 +159,12 @@ Instagram's native feature (Collaborator feature) lets two accounts co-author a 
 ### The Pitch for Collab Posts:
 
 **Direct message template:**
-"Hey [name] — I've been following your [niche] content for a while.
+"Hey [name], I've been following your [niche] content for a while.
 Your post about [specific post] was genuinely useful.
 
 I run @[account] covering [your niche angle].
 
-I have a carousel ready: [topic] — I think it'd resonate with your audience AND mine.
+I have a carousel ready: [topic], I think it'd resonate with your audience AND mine.
 
 Want to collab post it? Both accounts co-author = both get the reach.
 15-min call or just DM to confirm?
@@ -178,16 +178,16 @@ Want to collab post it? Both accounts co-author = both get the reach.
 
 ### Types of Collab Content That Work:
 
-1. **Joint carousel** — each creator contributes slides on their area of expertise
+1. **Joint carousel**, each creator contributes slides on their area of expertise
    Ex: solopreneur x cold email expert → "10 ways to get clients without paid ads"
 
-2. **Reaction Reels** — you each record your take on a topic, edited together
+2. **Reaction Reels**, you each record your take on a topic, edited together
    Ex: faith x wellness → "what happens to your body when you fast (science + faith perspective)"
 
-3. **Interview carousel** — Q&A format, one asks questions one answers
+3. **Interview carousel**, Q&A format, one asks questions one answers
    Ex: tech creator x solopreneur → "I asked 10 solopreneurs which AI tool saved them the most time"
 
-4. **Challenge posts** — both participate in the same challenge
+4. **Challenge posts**, both participate in the same challenge
    Ex: fitness x wellness → "30-day 10K steps challenge: day 30 update"
 
 ### Collab Post Posting Checklist:
@@ -247,7 +247,7 @@ Content formula (Phase 2):
 - 20% Stories
 - + 2 collabs/month
 
-Monetization unlock at 10K:
+Monetization get at 10K:
 - Affiliate links in Stories (swipe-up)
 - Digital product sales via link in bio
 - Brand deals (micro-influencer rate: $50-200/post at 10K followers)
@@ -278,7 +278,7 @@ Weekly checks:
 4. Check if any hashtags you use have been flagged/shadowbanned (search the hashtag, look for "Learn more" banner)
 
 Tools to use:
-- Metricool (free tier) — scheduling + analytics
-- Later.com (free) — visual grid planning
-- Flick ($14/mo) — hashtag analytics
-- Instagram Creator Studio — native analytics, free
+- Metricool (free tier), scheduling + analytics
+- Later.com (free), visual grid planning
+- Flick ($14/mo), hashtag analytics
+- Instagram Creator Studio, native analytics, free

@@ -1,4 +1,4 @@
-# Cross-Niche Adaptations — Cycle 3
+# Cross-Niche Adaptations, Cycle 3
 # STATUS: PENDING_REVIEW
 # DATE: 2026-03-07
 # CYCLE: 3
@@ -7,7 +7,7 @@
 
 ## FAITH NICHE (@selahmoments / ramadan content)
 
-### Post — Ramadan Content Distribution
+### Post, Ramadan Content Distribution
 
 ramadan content creators: the algorithm just changed and it's in your favor.
 
@@ -21,7 +21,7 @@ the play for the last 10 days: post one short tutorial per day. make it searchab
 
 search intent > viral intent during ramadan. people are looking for specific things. be the answer.
 
-### Post — Content Repurposing for Faith Creators
+### Post, Content Repurposing for Faith Creators
 
 you don't need to create 20 pieces of content per week for your faith community.
 
@@ -41,7 +41,7 @@ the people posting daily aren't writing daily. they're distributing weekly.
 
 ## FITNESS NICHE
 
-### Post — UGC for Fitness Products
+### Post, UGC for Fitness Products
 
 fitness brands are paying $500+ per ugc video. for a 15-second clip of someone holding a supplement.
 
@@ -53,7 +53,7 @@ if you DON'T sell a fitness product, sell this service to people who do. "I'll m
 
 the fitness ugc market is about to get repriced. be the one repricing it.
 
-### Post — Platform Shift for Fitness Creators
+### Post, Platform Shift for Fitness Creators
 
 instagram just made DM shares the top priority metric. not likes. shares.
 
@@ -69,7 +69,7 @@ pivot from "inspiration" to "send this to your gym buddy." that's the new fitnes
 
 ## ESOTERIC / DRIFTHOUR NICHE
 
-### Post — The Discovery Shift
+### Post, The Discovery Shift
 
 the way people find niche content is changing.
 
@@ -86,7 +86,7 @@ add tables, stats, and Q&A sections to your content. AI engines love structured 
 
 ## TOOLSTWTS NICHE
 
-### Post — AI-Generated UGC for SaaS
+### Post, AI-Generated UGC for SaaS
 
 if you're building a saas tool and paying for testimonial videos, stop.
 

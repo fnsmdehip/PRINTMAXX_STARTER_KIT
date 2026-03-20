@@ -1,0 +1,98 @@
+## ALPHA INTELLIGENCE CYCLE - 2026-03-19 11:05
+## Generated from today's research findings
+## Source: HN scrape + Reddit scrape + alpha_auto_processor
+
+---
+
+### TWEET 1 (viral angle - blue collar AI)
+a plumbing contractor just went viral using Claude Code to run his whole business
+
+not a developer. not a tech bro. a pipe fitter.
+
+he's generating quotes, tracking inventory, managing crew schedules - all from the terminal
+
+the "AI is only for engineers" cope is officially dead
+
+---
+
+### TWEET 2 (tool discovery - data angle)
+someone just dropped the entire HackerNews archive as a Parquet dataset on HuggingFace
+
+47 million items. every post, comment, and score since 2006
+
+free alpha mining at scale. no rate limits. no scraping needed
+
+the datasets are getting absurd
+[link: huggingface.co/datasets/open-index/hacker-news]
+
+---
+
+### TWEET 3 (competitive intel - builder angle)
+new Claude Code orchestrator just dropped: Cook CLI
+
+it does what ralph loops do - chain multiple Claude sessions together with persistent state
+
+the fact that multiple people are independently building the same pattern tells you something
+
+orchestrated AI sessions > single-shot prompting. the meta is shifting
+
+---
+
+### THREAD: What 81,000 people actually want from AI (research finding)
+
+1/ Anthropic just published what 81,000 people said they want from AI
+
+not what Twitter thinks. not what VCs are pitching. what actual humans said when asked directly
+
+here are the findings that matter for builders:
+
+2/ the gap between what people WANT and what people are BUILDING is massive
+
+everyone's building chatbots and copilots
+
+users want: task completion, not conversation
+they want the AI to DO the thing, not help them do the thing
+
+3/ this is why autonomous agents > assistants
+
+the plumbing contractor using Claude Code doesn't want a "helpful AI assistant"
+
+he wants his quotes generated, his schedule managed, his inventory tracked
+
+zero conversation. pure output.
+
+4/ the builders who win in 2026 aren't making "AI-powered" anything
+
+they're making tools that happen to use AI to eliminate steps
+
+every extra click, every "are you sure?", every "here's what I found" without acting on it - that's friction users hate
+
+5/ if you're building anything right now, read the full report
+
+then look at your product and ask: how many steps can I eliminate?
+
+the answer is probably "more than you think"
+
+source: anthropic.com/features/81k-interviews
+
+---
+
+### BONUS TWEET (design resource - utility)
+48 SVG backgrounds you can copy/paste into any landing page
+
+zero cost. instant design upgrade. no Figma needed
+
+been cycling through these on deployed sites - they actually look good
+
+svgbackgrounds.com
+
+---
+
+### BONUS TWEET (fitness MCP - niche angle)
+someone built an MCP server that connects Claude to your fitness data
+
+Apple Health, Garmin, Strava - all accessible from the terminal
+
+imagine: "Claude, analyze my last 30 days of runs and suggest a taper plan for my marathon"
+
+this is what MCP was built for. domain-specific data bridges.

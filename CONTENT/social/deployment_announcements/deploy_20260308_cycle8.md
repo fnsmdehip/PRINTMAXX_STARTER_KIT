@@ -1,11 +1,11 @@
-# Deployment Announcements — Cycle 8 (2026-03-08)
+# Deployment Announcements, Cycle 8 (2026-03-08)
 
 Status: PENDING_REVIEW
 Deployed: cursor-vs-claudecode.surge.sh | instantly-vs-lemlist.surge.sh | printmaxx-store.surge.sh (fixed)
 
 ---
 
-## POST 1 — cursor-vs-claudecode (tech/dev audience)
+## POST 1, cursor-vs-claudecode (tech/dev audience)
 
 cursor vs claude code. same price. completely different games.
 
@@ -20,7 +20,7 @@ cursor-vs-claudecode.surge.sh
 
 ---
 
-## POST 2 — instantly-vs-lemlist (cold outbound audience)
+## POST 2, instantly-vs-lemlist (cold outbound audience)
 
 instantly vs lemlist. i used both.
 
@@ -36,7 +36,7 @@ instantly-vs-lemlist.surge.sh
 
 ---
 
-## POST 3 — new comparison pages thread
+## POST 3, new comparison pages thread
 
 i'm building free comparison pages for every tool solopreneurs actually use.
 
@@ -57,7 +57,7 @@ the traffic from these feeds my actual apps.
 
 ---
 
-## POST 4 — 164 deployments milestone
+## POST 4, 164 deployments milestone
 
 164 pages live on surge.sh.
 

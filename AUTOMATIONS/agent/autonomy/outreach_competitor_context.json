@@ -1249,5 +1249,21 @@
       "last_updated": ""
     }
   ],
-  "updated_at": "2026-03-18T16:01:17.776737"
+  "lemlist_pricing_2026": {
+    "updated": "2026-03-19",
+    "email_pro": "$79/user/month (raised from ~$69 in Feb 2026)",
+    "multichannel_expert": "$109/user/month",
+    "3_person_team_cost": "$237-327/mo minimum before inbox add-ons",
+    "eas_angle": "Managed outbound at $500-2K/mo vs $237/mo DIY + labor = compelling value case for EAS",
+    "cold_email_subject": "paying $79/user for Lemlist in 2026?",
+    "prospect_target": "Lemlist users who got Feb 2026 price hike notification"
+  },
+  "faithtime_seo_threat": {
+    "updated": "2026-03-19",
+    "threat": "FaithTime.ai publishing 'best faith apps 2026' comparison articles",
+    "gap": "No comparison articles for denomination-specific queries. 'best Baptist habit tracker 2026' has zero competition.",
+    "action": "Write 13 denomination comparison pages — one per deployed app. These target zero-competition queries FaithTime cannot write.",
+    "denominations": ["Catholic", "Baptist", "Lutheran", "Methodist", "Presbyterian", "Episcopal", "Pentecostal", "Evangelical", "Anglican", "Orthodox", "Protestant", "Shia", "Sunni"]
+  },
+  "updated_at": "2026-03-19T05:11:00"
 }

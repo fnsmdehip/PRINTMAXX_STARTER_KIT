@@ -1,4 +1,4 @@
-# CONTENT Autonomy Cycle 2 — Generated Content
+# CONTENT Autonomy Cycle 2, Generated Content
 # Date: 2026-03-08 (Evening Cycle)
 # Status: PENDING_REVIEW
 # Cycle: Niche Content Farm autonomy agent (6h cycle, cycle 2)

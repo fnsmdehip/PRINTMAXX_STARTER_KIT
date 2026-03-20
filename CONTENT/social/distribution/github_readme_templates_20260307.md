@@ -1,4 +1,4 @@
-# GitHub README Templates — Open Source Developer Traffic
+# GitHub README Templates, Open Source Developer Traffic
 **Status:** PENDING_REVIEW
 **Created:** 2026-03-07
 **Account target:** @PRINTMAXXER, @toolstwts, @shiplog_
@@ -9,7 +9,7 @@
 ## Pre-publish checklist (run every time)
 
 - [x] Zero em dashes
-- [x] Zero banned AI vocabulary (leverage, utilize, delve, comprehensive, robust, innovative, seamless)
+- [x] Zero banned AI vocabulary (use, use, dig, complete, strong, novel, seamless)
 - [x] Consequence-first hooks
 - [x] Exact numbers where possible
 - [x] Would @pipelineabuser actually post this?
@@ -296,7 +296,7 @@ swap it out in `config.js` if you want to self-host the proxy.
 ## Scoring weights
 
 ```js
-// in config.js — adjust to your use case
+// in config.js, adjust to your use case
 const WEIGHTS = {
   performance: 0.35,    // heaviest weight, Google uses this for ranking
   seo: 0.30,
@@ -428,7 +428,7 @@ bash deploy.sh templates/landing-page my-site-name.surge.sh
 deploy a batch from a list:
 
 ```bash
-# sites.txt — one domain per line
+# sites.txt, one domain per line
 my-site-1.surge.sh
 my-site-2.surge.sh
 my-site-3.surge.sh

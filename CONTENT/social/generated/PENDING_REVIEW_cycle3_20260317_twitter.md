@@ -1,4 +1,4 @@
-# CONTENT BATCH — Cycle 3, March 17 2026
+# CONTENT BATCH, Cycle 3, March 17 2026
 # Status: PENDING_REVIEW
 # Generated: 2026-03-17 12:50 UTC
 # Voice: PRINTMAXXER weighted aggregate (S-tier dominant)
@@ -6,7 +6,7 @@
 
 ---
 
-## POST 1 — App Factory Blue Ocean (Reply Bait)
+## POST 1, App Factory Blue Ocean (Reply Bait)
 
 i scanned 200+ app store categories yesterday. found 2 niches with multi-million person communities and zero dedicated apps.
 
@@ -18,7 +18,7 @@ $2.99/mo. 55KB PWA. ship in a weekend. the gap is embarrassing.
 
 ---
 
-## POST 2 — Ecommerce Arb Tools (Value Tweet)
+## POST 2, Ecommerce Arb Tools (Value Tweet)
 
 everyone asks "what's the best shopify spy tool" on reddit every week. here's what actually works:
 
@@ -31,7 +31,7 @@ stop asking. start monitoring. the data is already public.
 
 ---
 
-## POST 3 — Side Project Validation (Story Tweet)
+## POST 3, Side Project Validation (Story Tweet)
 
 someone on reddit built an app for their wife's school. attendance tracking. nothing fancy.
 
@@ -41,7 +41,7 @@ the lesson nobody wants to hear: the best product ideas come from watching someo
 
 ---
 
-## POST 4 — Gov Micro-Purchases (Insider Intel)
+## POST 4, Gov Micro-Purchases (Insider Intel)
 
 the US government spends $700B annually on purchases. under $10K? no formal bidding required. just post on SAM.gov.
 
@@ -54,7 +54,7 @@ just register, find open requests, submit.
 
 ---
 
-## POST 5 — Cold Email 2026 (Hot Take)
+## POST 5, Cold Email 2026 (Hot Take)
 
 cold email in 2026: {first_name} tokens now trigger spam filters.
 
@@ -66,7 +66,7 @@ effort-based personalization killed template-based personalization. good.
 
 ---
 
-## THREAD — Blue Ocean App Niches (5 tweets)
+## THREAD, Blue Ocean App Niches (5 tweets)
 
 ### Tweet 1 (Hook)
 i spent 40 hours analyzing app store gaps. found 7 niches where multi-million person communities have zero dedicated apps. thread:
@@ -89,7 +89,7 @@ if you want the full niche analysis: follow + DM "NICHES"
 
 ---
 
-## NEWSLETTER DRAFT — "The Apps Nobody Built"
+## NEWSLETTER DRAFT, "The Apps Nobody Built"
 
 Subject: 7 app niches with millions of users and zero competition
 

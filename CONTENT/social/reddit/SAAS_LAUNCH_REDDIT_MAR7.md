@@ -1,13 +1,13 @@
 STATUS: PENDING_REVIEW
 DATE: 2026-03-07
-BATCH: SaaS tools distribution — Reddit posts
+BATCH: SaaS tools distribution, Reddit posts
 
 ---
 
 # REDDIT POST 1
 
 SUBREDDIT: r/shopify
-TITLE: Free tool to analyze any Shopify store — see their tech stack, apps, and product data
+TITLE: Free tool to analyze any Shopify store, see their tech stack, apps, and product data
 
 ---
 
@@ -27,7 +27,7 @@ Use cases:
 - Shopify developers benchmarking what apps competitors use
 - Brand owners doing competitive research before a launch
 
-It's at shopmetrics-pro.surge.sh — free, no account needed.
+It's at shopmetrics-pro.surge.sh, free, no account needed.
 
 Happy to hear what data points would make it more useful for how you use Shopify.
 
@@ -36,7 +36,7 @@ Happy to hear what data points would make it more useful for how you use Shopify
 # REDDIT POST 2
 
 SUBREDDIT: r/SideProject
-TITLE: Day 32: 140+ websites deployed, $0 revenue — here's what I actually learned about distribution
+TITLE: Day 32: 140+ websites deployed, $0 revenue, here's what I actually learned about distribution
 
 ---
 

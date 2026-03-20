@@ -13,7 +13,7 @@
 | Subreddit | Best time (EST) | Why |
 |-----------|----------------|-----|
 | r/SideProject | Tue/Thu 9-11 AM | Builders browsing before lunch |
-| r/EntrepreneurRideAlong | Mon/Wed 8-10 AM | Journey posts get traction early week |
+| r/EntrepreneurRideAlong | Mon/Wed 8-10 AM | path posts get traction early week |
 | r/juststart | Mon 10 AM | Weekly progress thread energy |
 | r/Affiliatemarketing | Wed/Fri 11 AM-1 PM | Affiliate crowd checks midday |
 | r/SaaS | Tue/Thu 10 AM | SaaS founders browse morning |
@@ -166,7 +166,7 @@ figured i'd start posting monthly updates since i see a lot of "i made $50K my f
 - start posting content daily across platforms
 - cold outreach to potential customers
 
-will post the month 2 update regardless of whether it's $0 or $500. the point is documenting the real journey.
+will post the month 2 update regardless of whether it's $0 or $500. the point is documenting the real path.
 
 anyone else in the $0 revenue stage? what's your approach?
 
@@ -255,7 +255,7 @@ the pattern i kept seeing:
 - coaching/consulting calls
 - done-for-you services
 
-**step 5: clipping army / distribution leverage**
+**step 5: clipping army / distribution use**
 - 8 out of 12 had other people distributing their content
 - some paid clippers, some had affiliate programs, some had "ambassador" programs
 - this is the scaling lever. they stop being the bottleneck.
@@ -557,7 +557,7 @@ tech stack (surprisingly cheap):
 2. skool community revenue is 55% of total. recurring revenue from community > one-time product sales every time.
 3. the low-ticket product isn't for revenue - it's a filter to find high-ticket coaching clients.
 
-the whole funnel follows the same 5-step pattern i keep seeing everywhere: free content > email list > low-ticket filter > high-ticket backend > distribution leverage.
+the whole funnel follows the same 5-step pattern i keep seeing everywhere: free content > email list > low-ticket filter > high-ticket backend > distribution use.
 
 if you want i can break down the clipping army model specifically in a follow-up post. that part alone changed how i think about content distribution.
 
@@ -1102,9 +1102,9 @@ been posting daily across reddit, twitter, and a few other platforms for 2 weeks
 - **Best content:** "I built X" with screenshots, lessons learned, honest numbers
 
 ### r/EntrepreneurRideAlong (220K members)
-- **Self-promo:** Allowed in context of journey posts
-- **Flair:** Use relevant flair (Journey, Question, Resource)
-- **Rules:** Share the journey. No pure ads. Value first.
+- **Self-promo:** Allowed in context of path posts
+- **Flair:** Use relevant flair (path, Question, Resource)
+- **Rules:** Share the path. No pure ads. Value first.
 - **Best content:** Monthly revenue reports, lessons learned, honest failures
 
 ### r/juststart (93K members)

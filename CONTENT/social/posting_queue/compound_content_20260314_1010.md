@@ -1,4 +1,4 @@
-# CONTENT COMPOUND — 2026-03-14 10:10
+# CONTENT COMPOUND, 2026-03-14 10:10
 # Source: Content Compounder Agent Cycle
 # Status: PENDING_REVIEW
 # Voice: PRINTMAXXER weighted aggregate (S-tier dominant)
@@ -309,10 +309,10 @@ here's the breakdown with exact numbers:
 ```
 the 4 that FAILED:
 
-1. paid ads — burned $2K+ with no meaningful conversion
-2. influencer partnerships — expensive, no tracking, no attribution
-3. affiliate programs — set up 5, generated <$50 total
-4. cold calling — time sink, low conversion for SaaS price point
+1. paid ads, burned $2K+ with no meaningful conversion
+2. influencer partnerships, expensive, no tracking, no attribution
+3. affiliate programs, set up 5, generated <$50 total
+4. cold calling, time sink, low conversion for SaaS price point
 
 combined these ate 60% of marketing budget with <5% of revenue.
 ```
@@ -321,11 +321,11 @@ combined these ate 60% of marketing budget with <5% of revenue.
 ```
 the 3 that WORKED:
 
-1. SEO content — 40% of revenue. wrote 30 articles targeting long-tail keywords. took 4 months to kick in but now runs on autopilot.
+1. SEO content, 40% of revenue. wrote 30 articles targeting long-tail keywords. took 4 months to kick in but now runs on autopilot.
 
-2. community engagement — 35% of revenue. answered questions on reddit, indie hackers, discord. zero cost. just time.
+2. community engagement, 35% of revenue. answered questions on reddit, indie hackers, discord. zero cost. just time.
 
-3. direct cold email — 25% of revenue. targeted 500 prospects. 12% reply rate. 3% conversion.
+3. direct cold email, 25% of revenue. targeted 500 prospects. 12% reply rate. 3% conversion.
 ```
 
 **4/5**
@@ -391,11 +391,11 @@ Type: data-driven breakdown thread
 
 ## DISTRIBUTION PLAN
 
-1. **Immediate (today):** Post SINGLE-02 (zero revenue transparency) — highest engagement potential
-2. **Today PM:** Post SINGLE-05 (anti-scale take) — counter-narrative drives comments
-3. **Tomorrow AM:** Post THREAD-01 (33-agent system) — deep build-in-public
-4. **Tomorrow PM:** Post SINGLE-06 (channel attribution) — actionable data
-5. **Day 3:** Post THREAD-02 (7 channels tested) — evergreen content
+1. **Immediate (today):** Post SINGLE-02 (zero revenue transparency), highest engagement potential
+2. **Today PM:** Post SINGLE-05 (anti-scale take), counter-narrative drives comments
+3. **Tomorrow AM:** Post THREAD-01 (33-agent system), deep build-in-public
+4. **Tomorrow PM:** Post SINGLE-06 (channel attribution), actionable data
+5. **Day 3:** Post THREAD-02 (7 channels tested), evergreen content
 6. **Ongoing:** Drip remaining singles 1-2/day
 
 **Cross-post to Reddit:** REDDIT-01 and REDDIT-02 on days 2-3 for maximum reach.

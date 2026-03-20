@@ -2642,3 +2642,183 @@ signed up for every tool. watched every tutorial. bookmarked every thread. built
 
 then i changed one
 
+
+
+---
+
+## Pending Enhancement (ALPHA107621, Score: 36)
+
+**Source:** @GlassNode (daily scraper) | **URL:** https://x.com/glassnode/status/2034277768804921370
+**Added:** 2026-03-18T21:45:01-04:00
+
+Supply Cleared, Conviction Pending
+
+Bitcoin has cleared the $59k–$72k supply cluster and entered a thinly accumulated air gap up to $82k.
+Spot CVD is recovering, ETF inflows are rebounding, and perp funding remains negative — short covering is doing the work here.
+But currently, only 60% of the supply is in profit, where prior cycles' early bounces were exhausted multiple times before a structural
+
+
+
+---
+
+## Pending Enhancement (ALPHA107608, Score: 51)
+
+**Source:** @wesocialgrowth (high-signal-accounts) | **URL:** https://x.com/wesocialgrowth/status/2034267878883762532
+**Added:** 2026-03-18T21:45:01-04:00
+
+- The Secret to Making Habits Go Viral
+- 3 Party Apps, 3 Different Paths to $500K MRR
+- Ditto Strikes Again With 26 New College Accounts
+- LarpGPT Lambo Format
+- How a Silent Product Pulled 15M Views Without Saying a Word
+- How to Trigger 7K Comments in 130K Views
+- The Gossip
+
+
+
+---
+
+## Pending Enhancement (ALPHA107703, Score: 24)
+
+**Source:** @Jahjiren (high-signal-accounts) | **URL:** https://x.com/Jahjiren/status/2034312941202276647
+**Added:** 2026-03-18T22:23:44-04:00
+
+literally a ChatGPT Wrapper with a 
+specific personality from a character
+
+i know for a fact this was made using
+the API and now they make $90k/month
+
+
+
+---
+
+## Pending Enhancement (ALPHA107709, Score: 24)
+
+**Source:** @PrajwalTomar_ (high-signal-accounts) | **URL:** https://x.com/PrajwalTomar_/status/2034276485431959753
+**Added:** 2026-03-18T22:23:44-04:00
+
+Stop paying designers $5K for scroll animations.
+
+I just built one in UNDER 15 minutes using Cursor + Opus 4.6.
+
+No designer. No agency. No waiting.
+
+Here's the exact workflow ↓
+
+
+
+---
+
+## Pending Enhancement (ALPHA107753, Score: 22)
+
+**Source:** @unknown (bookmark) | **URL:** https://x.com/unknown/status/2034314244066529581
+**Added:** 2026-03-18T22:48:03-04:00
+
+Introducing Reel Farmer
+
+Paste a YouTube URL, get TikTok/Reel with animated captions in one command. Fully local.
+
+&gt; How it works:
+
+1. yt-dlp downloads the video
+2. LLM reads the transcript and picks the most clip-worthy moments
+3. FFmpeg cuts each clip, silence removed https://t.co/h03vk9o18w
+
+
+
+---
+
+## Pending Enhancement (ALPHA107773, Score: 24)
+
+**Source:** @Argona0x (high-signal-accounts) | **URL:** https://x.com/Argona0x/status/2034347743284723897
+**Added:** 2026-03-19T01:10:47-04:00
+
+i spent 3 months and $8K building a trading bot from scratch: it made $900
+
+then claude code found an anonymous account making $414K with a simpler strategy
+
+so i deleted my bot and started copying theirs
+
+let me explain.
+
+i wrote custom API integrations, built failover systems,
+
+
+
+---
+
+## Pending Enhancement (ALPHA107791, Score: 20)
+
+**Source:** @emollick (high-signal-accounts) | **URL:** https://x.com/emollick/status/2034408188133728379
+**Added:** 2026-03-19T01:10:47-04:00
+
+Heygen’s APi documentation is a glimpse of how to write for your two audiences: humans and agents.
+
+(though I think their llms.txt file could do a lot more to get AIs “excited” to use their product in creative ways by explaining some stuff in English, rather than just tech specs)
+
+
+
+---
+
+## Pending Enhancement (ALPHA_HN_47437101, Score: 20)
+
+**Source:** HackerNews (top) | **URL:** https://blog.icml.cc/2026/03/18/on-violations-of-llm-review-policies/
+**Added:** 2026-03-19T06:42:27-04:00
+
+2% of ICML papers desk rejected because the authors used LLM in their reviews
+
+
+
+---
+
+## Pending Enhancement (ALPHA108126, Score: 30)
+
+**Source:** @maverickecom (high-signal-accounts) | **URL:** https://x.com/maverickecom/status/2034703492162474442
+**Added:** 2026-03-20T02:59:31-04:00
+
+Nobody talks about this: Kling + Claude Cowork + Veo3 = AI UGC at scale
+↳ Instead of paying $25k/month influencers, use simple workflow:
+
+• Analyze the niche
+• Study 1,000+ ads that already convert with Cruva social 1
+• Turn winners into scripts, avatars, and videos
+• Launch
+
+
+
+---
+
+## Pending Enhancement (ALPHA108327, Score: 24)
+
+**Source:** @seanb2b (high-signal-accounts) | **URL:** https://x.com/seanb2b/status/2034720379906781202
+**Added:** 2026-03-20T07:11:07-04:00
+
+Dream 100 outreach that books calls:
+
+→ Pick 100 companies you'd love to work with
+→ Research them + scrape their site 
+→ Use AI to build a deliverable specifically for them
+→ Email: "We built [deliverable] for [Company], want it?"
+
+Claude + Cloudflare + Lovable. 30 mins.
+
+
+
+---
+
+## Pending Enhancement (ALPHA108331, Score: 42)
+
+**Source:** @PrajwalTomar_ (high-signal-accounts) | **URL:** https://x.com/PrajwalTomar_/status/2034890799499063628
+**Added:** 2026-03-20T07:11:07-04:00
+
+Cursor just dropped Composer 2 and it's honestly insane.
+
+Their own coding model. 61.7% on Terminal-Bench 2.0, which beats Claude Opus 4.6 sitting at 58.0%.
+
+But here's what actually matters:
+
+$0.50 per million tokens vs Opus at $5.00. That's 10x cheaper.
+
+Sure, GPT-5.4 still
+

@@ -1,8 +1,8 @@
-# C01 TikTok Video Scripts — 30 Scripts
+# C01 TikTok Video Scripts, 30 Scripts
 
 **Format:** Hook (0-3s) → Body (3-45s) → CTA (45-60s)
 **Target:** 45-60 seconds per script
-**Voice:** @pipelineabuser weighted — consequence-first, exact numbers, no AI slop
+**Voice:** @pipelineabuser weighted, consequence-first, exact numbers, no AI slop
 
 ---
 
@@ -15,7 +15,7 @@
 "I sent 200 cold emails last week. made $2,400."
 
 **Body (3-45s):**
-"here's the breakdown. i scraped 200 local service businesses — plumbers, roofers, landscapers — using apollo.io. free tier. built a one-line offer: 'I build you a lead capture page in 48 hours for $300, pay after you see it.' no retainer, no contract, just one deliverable.
+"here's the breakdown. i scraped 200 local service businesses, plumbers, roofers, landscapers, using apollo.io. free tier. built a one-line offer: 'I build you a lead capture page in 48 hours for $300, pay after you see it.' no retainer, no contract, just one deliverable.
 
 200 emails. 14 replies. 8 calls booked. 4 clients closed. $1,200 each for two, $600 for the other two.
 
@@ -95,7 +95,7 @@ takes 30 minutes. saves you 3 months of building wrong."
 
 day 1: posted a thread on Twitter documenting the build. 'building a cold email swipe file. posting every step.' 47 followers cared.
 
-day 3: posted a free sample — 10 of the 100 email templates. 200 saves.
+day 3: posted a free sample, 10 of the 100 email templates. 200 saves.
 
 day 7: soft launch. 'the full 100-template pack is up. $27. link in bio.' 28 buyers.
 
@@ -233,7 +233,7 @@ the compounding is starting to show. none of these required more than $200 to st
 
 what I built: Claude claude-haiku-4-5 API + Python scripts. runs 24/7. processes 200+ articles per day, drafts 15 emails per morning, formats every report automatically.
 
-API cost: $47/month. the bottleneck was building the scripts — took me 3 weekends.
+API cost: $47/month. the bottleneck was building the scripts, took me 3 weekends.
 
 the thing about AI APIs: token costs are falling 80% per year. claude haiku is 4x cheaper than GPT-4 Turbo for the same quality on routine tasks.
 
@@ -293,13 +293,13 @@ the limitations: complex logic needs guidance. you have to describe what you wan
 **Body (3-45s):**
 "research stack:
 
-1. Perplexity AI ($20/month) — real-time web search with citations. ask it anything. it reads 10 sources and summarizes with links.
+1. Perplexity AI ($20/month), real-time web search with citations. ask it anything. it reads 10 sources and summarizes with links.
 
-2. Claude ($20/month) — long document analysis. drop in a 100-page PDF. ask 'what are the 3 most actionable findings.' done.
+2. Claude ($20/month), long document analysis. drop in a 100-page PDF. ask 'what are the 3 most actionable findings.' done.
 
-3. Elicit (free tier) — academic paper search. finds peer-reviewed studies on any topic, extracts key findings.
+3. Elicit (free tier), academic paper search. finds peer-reviewed studies on any topic, extracts key findings.
 
-4. Otter.ai ($17/month) — transcribes calls and meetings. AI summary and action items at the end.
+4. Otter.ai ($17/month), transcribes calls and meetings. AI summary and action items at the end.
 
 monthly cost: $57. value: 40 hours/week of labor saved.
 
@@ -361,7 +361,7 @@ takes 5 minutes to set up. affects every conversation forever."
 "I sell products I've never touched. $340 in sales this week."
 
 **Body (3-45s):**
-"AI product mockups. Midjourney generates photorealistic images of physical products — mugs, shirts, phone cases, notebooks — with your design on them.
+"AI product mockups. Midjourney generates photorealistic images of physical products, mugs, shirts, phone cases, notebooks, with your design on them.
 
 workflow: design in Canva → prompt Midjourney to place it on a product → use that as the product photo.
 
@@ -415,9 +415,9 @@ ChatGPT: gave me 2024 data with a disclaimer about knowledge cutoff.
 
 Perplexity: pulled 8 current articles, cited them all, gave me a synthesized answer with actual 2026 data.
 
-for current events, trends, competitor research, pricing — Perplexity wins every time.
+for current events, trends, competitor research, pricing, Perplexity wins every time.
 
-for long writing, complex reasoning, code — Claude wins.
+for long writing, complex reasoning, code, Claude wins.
 
 i use both. Perplexity for research first. Claude for writing and analysis second. total: $40/month. this replaced $200/month of tools and research time."
 
@@ -527,9 +527,9 @@ the science: identity-based habits stick. you're not trying to 'read Quran.' you
 "this 5-minute practice replaced 30 minutes of anxiety spiraling."
 
 **Body (3-45s):**
-"dhikr — Arabic for remembrance. repeating specific phrases as a form of mindfulness.
+"dhikr, Arabic for remembrance. repeating specific phrases as a form of mindfulness.
 
-i tried 'subhanAllah, alhamdulillah, Allahu Akbar' — 33 times each after prayer. takes 4-5 minutes.
+i tried 'subhanAllah, alhamdulillah, Allahu Akbar', 33 times each after prayer. takes 4-5 minutes.
 
 what happened: the repetition creates a focus anchor. same mechanism as secular meditation. the brain can't spiral on anxiety while repeating something rhythmically.
 

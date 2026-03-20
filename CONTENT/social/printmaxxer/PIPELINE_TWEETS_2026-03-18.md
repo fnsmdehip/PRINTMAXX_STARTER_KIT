@@ -1,4 +1,4 @@
-# Pipeline Building-in-Public Content — 2026-03-18
+# Pipeline Building-in-Public Content, 2026-03-18
 
 Generated from real pipeline metrics. @PRINTMAXXER voice.
 Status: PENDING_REVIEW
@@ -7,17 +7,17 @@ Status: PENDING_REVIEW
 
 ### Tweet 1
 ```
-analyzed 190,700 business websites last night while sleeping. 17,332 have garbage sites that need rebuilding. cold emails already drafted. this is what automation looks like.
+most people manually find leads one at a time. I downloaded 2.87 million from Overture Maps, deduped to 1.45M unique domains, and built a closed-loop pipeline that qualifies → emails → tracks automatically. 17,413 hot leads so far.
 ```
 
 ### Tweet 2
 ```
-built a system that scores websites 0-100 on design, SEO, and AI readiness. ran it against 190,700 local businesses. 9.1% scored as hot prospects. cold outreach pipeline generates emails while I sleep.
+17,413 local businesses with outdated websites identified. personalized cold emails with live demo links generated automatically. the pipeline runs at 3am. I wake up to qualified leads.
 ```
 
 ### Tweet 3
 ```
-1.45 million business domains in the queue. 190,700 analyzed so far (13.1%). 17,332 hot leads. 1,465,160 cold emails drafted. the machine runs 24/7 via cron. I just check the dashboard.
+analyzed 191,700 business websites last night while sleeping. 17,413 have garbage sites that need rebuilding. cold emails already drafted. this is what automation looks like.
 ```
 
 ## Thread (7 tweets)
@@ -72,9 +72,9 @@ qualify → email → track → repeat. no human in the loop.
 ```
 current numbers:
 
-• 190,700 websites analyzed (of 1.45M)
-• 17,332 hot leads identified
-• 1,465,160 cold emails generated
+• 191,700 websites analyzed (of 1.45M)
+• 17,413 hot leads identified
+• 1,478,381 cold emails generated
 • 16 live demo sites
 • 6 industry templates
 

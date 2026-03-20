@@ -1,12 +1,12 @@
 # App Factory Alpha Command Center
 
-Generated: 2026-03-18 18:49:21
+Generated: 2026-03-20 08:06:44
 
 ## Inputs
-- ALPHA_STAGING app candidates: 3091
+- ALPHA_STAGING app candidates: 2761
 - APP_FACTORY_METHODS candidates: 5
 - Reddit findings consumed: 6
-- Existing app specs detected: 72
+- Existing app specs detected: 51
 
 ## Hard Gates
 - No fake paywalls. Real RevenueCat or real billing path before shipping.
@@ -21,7 +21,7 @@ Generated: 2026-03-18 18:49:21
 | 2 | Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months | Streakr | 122 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 3 | Minimum Viable Day concept: 307 upvotes, viral productivity framework | Streakr | 122 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 4 | NEW BLUE OCEAN: NoFap/sobriety streak tracker. r/NoFap = 1.24M subs, 0 paid dedi | Streakr | 121 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 5 | Adapty 2026: Weekly plans = 55% of all app revenue. Weekly+trial = best LTV conf | PrayerLock / Scripture Streak AI layer | 118 | MEDIUM_HIGH | subscription with 7-day trial | paywall timing: after first value moment vs after onboarding prev |
+| 5 | Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard | NEW_BUILD | 118 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Iterate Existing Now
 | Rank | Opportunity | Target | Score | Market | Monetization | Core Test |
@@ -30,22 +30,22 @@ Generated: 2026-03-18 18:49:21
 | 2 | Habit tracker apps are printing: HabitSwipe $800 revenue, 2.5K users in 2 months | Streakr | 122 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 3 | Minimum Viable Day concept: 307 upvotes, viral productivity framework | Streakr | 122 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 | 4 | NEW BLUE OCEAN: NoFap/sobriety streak tracker. r/NoFap = 1.24M subs, 0 paid dedi | Streakr | 121 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 5 | Adapty 2026: Weekly plans = 55% of all app revenue. Weekly+trial = best LTV conf | PrayerLock / Scripture Streak AI layer | 118 | MEDIUM_HIGH | subscription with 7-day trial | paywall timing: after first value moment vs after onboarding prev |
-| 7 | running_streak: r/running = 4.19M subs. iTunes scan confirms ZERO dedicated paid | Steplock | 112 | HIGH | subscription with 7-day trial and annual-first pricing | paywall timing: after first value moment vs after onboarding prev |
-| 8 | Fitness streak app cluster: yoga (3.31M), hiit (4.72M), pushup (4.72M), plank (4 | Streakr | 112 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 9 | BLUE OCEAN APP: BEDTIME STORY STREAK — Daily Bedtime Story Reading Streak (Paren | Streakr | 109 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 6 | running_streak: r/running = 4.19M subs. iTunes scan confirms ZERO dedicated paid | Steplock | 112 | HIGH | subscription with 7-day trial and annual-first pricing | paywall timing: after first value moment vs after onboarding prev |
+| 7 | Fitness streak app cluster: yoga (3.31M), hiit (4.72M), pushup (4.72M), plank (4 | Streakr | 112 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 8 | BLUE OCEAN APP: DEEP WORK STREAK — Daily Deep Work / Focus Block Completion Stre | Vault | 109 | MEDIUM_HIGH | subscription with annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 9 | Competitor gap: Fabulous habit tracker (87K reviews, ★4.45) is the ONLY major ha | Streakr | 106 | HIGH | subscription with 7-day trial and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Build New Now
 | Rank | Opportunity | Target | Score | Market | Monetization | Core Test |
 |------|-------------|--------|-------|--------|--------------|-----------|
-| 6 | Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard | NEW_BUILD | 118 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 16 | SaaS pricing: $9/mo = ZERO conversions. Raised to $29/mo = paying customers imme | NEW_BUILD | 100 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 23 | LTD CASE STUDY #3 CANDIDATE: 89 lifetime deals at $199 each = $17,711 launch wee | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 24 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 27 | HTML interactive tools as digital products ($17 price point validated) | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 29 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 32 | Vibe-coded apps revenue: Plinq $456K/yr (Lovable). Pieter Levels flight sim $12K | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
-| 33 | Fiverr boring category arb: Top Fiverr gigs in resume/biz plan/cover letter at $ | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 5 | Free trial paywall framework: 7-day trial = 5x conversion lift (2% to 11%). Hard | NEW_BUILD | 118 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 12 | SaaS pricing: $9/mo = ZERO conversions. Raised to $29/mo = paying customers imme | NEW_BUILD | 100 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 16 | LTD CASE STUDY #3 CANDIDATE: 89 lifetime deals at $199 each = $17,711 launch wee | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 17 | ChatBase $250K MRR + PDF.ai $30K MRR. Pattern: AI wrapper on existing platforms. | NEW_BUILD | 97 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 20 | HTML interactive tools as digital products ($17 price point validated) | NEW_BUILD | 95 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 22 | LTD at $199 strategy: sold 89 lifetime deals in first push. Math: 89 x $199 = $1 | NEW_BUILD | 93 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 25 | [HN 161pts] Cook: CLI for orchestrating Claude Code. Direct competitor/complemen | NEW_BUILD | 90 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
+| 26 | Vibe-coded apps revenue: Plinq $456K/yr (Lovable). Pieter Levels flight sim $12K | NEW_BUILD | 89 | HIGH | subscription with fast time-to-value and annual anchor | paywall timing: after first value moment vs after onboarding prev |
 
 ## Spec And Test
 No items in this section.
