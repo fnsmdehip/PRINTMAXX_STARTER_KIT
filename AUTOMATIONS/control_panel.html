@@ -3348,15 +3348,18 @@ async function loadCalendar() {
         'FLEX':'var(--text-dim)'
       };
       var color = colors[day.theme] || 'var(--text-dim)';
-      var border = day.is_today ? 'border:2px solid var(--accent);' : 'border:1px solid var(--border);';
+      var border = day.is_today ? 'border:2px solid var(--accent);box-shadow:0 0 8px rgba(0,255,136,0.3);' : 'border:1px solid var(--border);';
+      var opacity = day.is_past ? 'opacity:0.35;' : '';
+      var todayLabel = day.is_today ? '<span style="font-size:0.5em;background:var(--accent);color:#000;padding:1px 4px;border-radius:3px;font-weight:700;">TODAY</span>' : '';
+      var pastLabel = day.is_past ? '<span style="font-size:0.45em;color:var(--text-dim);">done</span>' : '';
       var sc = day.scores || {};
       var engScore = sc.engagement || 0;
       var ctScore = sc.content || 0;
       var orScore = sc.outreach || 0;
       var intensity = Math.min(100, Math.round((engScore + ctScore + orScore) / 4));
-      var intensityBar = '<div style="margin-top:3px;height:2px;background:var(--border);border-radius:1px;overflow:hidden;"><div style="width:' + intensity + '%;height:100%;background:' + color + ';"></div></div>';
-      return '<div onclick="showDay(' + day.day + ')" style="' + border + 'border-radius:8px;padding:6px;cursor:pointer;background:var(--panel);min-height:72px;transition:all 0.15s;" onmouseenter="this.style.borderColor=\'var(--accent)\'" onmouseleave="this.style.borderColor=\'' + (day.is_today ? 'var(--accent)' : 'var(--border)') + '\'">' +
-        '<div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:JetBrains Mono;font-size:0.9em;font-weight:700;color:var(--text);">' + day.day + '</span><span style="font-size:0.5em;color:var(--text-dim);font-family:JetBrains Mono;">' + (day.week_phase || '').substring(0,4) + '</span></div>' +
+      var intensityBar = day.is_past ? '' : '<div style="margin-top:3px;height:2px;background:var(--border);border-radius:1px;overflow:hidden;"><div style="width:' + intensity + '%;height:100%;background:' + color + ';"></div></div>';
+      return '<div onclick="showDay(' + day.day + ')" style="' + border + opacity + 'border-radius:8px;padding:6px;cursor:pointer;background:var(--panel);min-height:72px;transition:all 0.15s;" onmouseenter="this.style.borderColor=\'var(--accent)\'" onmouseleave="this.style.borderColor=\'' + (day.is_today ? 'var(--accent)' : 'var(--border)') + '\'">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:JetBrains Mono;font-size:0.9em;font-weight:700;color:var(--text);">' + day.day + '</span>' + todayLabel + pastLabel + '<span style="font-size:0.5em;color:var(--text-dim);font-family:JetBrains Mono;">' + (day.week_phase || '').substring(0,4) + '</span></div>' +
         '<div style="font-size:0.55em;color:' + color + ';font-weight:700;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + day.theme + '</div>' +
         '<div style="font-size:0.55em;color:var(--accent);margin-top:1px;font-family:JetBrains Mono;font-weight:600;">' + day.revenue_target + '</div>' +
         intensityBar +
