@@ -1391,13 +1391,49 @@ def api_daily_feed():
     if scraper_dir.exists():
         recent = [f for f in scraper_dir.iterdir() if f.stat().st_mtime > today_ts - 86400]
         if recent:
-            feed.append({"type": "data", "icon": "ti-brand-twitter", "color": "var(--blue)", "title": f"Twitter scraper: {len(recent)} new outputs", "desc": "Alpha extracted from 133 monitored accounts", "action": "ls AUTOMATIONS/twitter_scraper_output/", "priority": "low"})
+            twitter_preview = []
+            for rf in sorted(recent, key=lambda x: x.stat().st_mtime, reverse=True)[:3]:
+                try:
+                    data = json.loads(rf.read_text())
+                    if isinstance(data, list):
+                        for item in data[:3]:
+                            text = item.get("text", item.get("content", item.get("tweet", "")))[:100]
+                            author = item.get("author", item.get("user", item.get("screen_name", "")))
+                            if text:
+                                twitter_preview.append(f"@{author}: {text}" if author else text)
+                    elif isinstance(data, dict):
+                        for k, v in list(data.items())[:3]:
+                            if isinstance(v, str):
+                                twitter_preview.append(f"{k}: {v[:80]}")
+                except Exception:
+                    twitter_preview.append(rf.name)
+                if len(twitter_preview) >= 5:
+                    break
+            feed.append({"type": "data", "icon": "ti-brand-twitter", "color": "var(--blue)", "title": f"Twitter scraper: {len(recent)} new outputs", "desc": "Alpha extracted from 133 monitored accounts", "action": "ls AUTOMATIONS/twitter_scraper_output/", "priority": "low", "preview": twitter_preview})
 
     reddit_dir = AUTOMATIONS / "reddit_scraper_output"
     if reddit_dir.exists():
         recent = [f for f in reddit_dir.iterdir() if f.stat().st_mtime > today_ts - 86400]
         if recent:
-            feed.append({"type": "data", "icon": "ti-brand-reddit", "color": "var(--warn)", "title": f"Reddit scraper: {len(recent)} new outputs", "desc": "Pain points and alpha from subreddits", "action": "ls AUTOMATIONS/reddit_scraper_output/", "priority": "low"})
+            reddit_preview = []
+            for rf in sorted(recent, key=lambda x: x.stat().st_mtime, reverse=True)[:3]:
+                try:
+                    data = json.loads(rf.read_text())
+                    if isinstance(data, list):
+                        for item in data[:3]:
+                            title = item.get("title", item.get("text", ""))[:100]
+                            sub = item.get("subreddit", "")
+                            if title:
+                                reddit_preview.append(f"r/{sub}: {title}" if sub else title)
+                    elif isinstance(data, dict):
+                        for k, v in list(data.items())[:3]:
+                            if isinstance(v, str):
+                                reddit_preview.append(v[:80])
+                except Exception:
+                    reddit_preview.append(rf.name)
+                if len(reddit_preview) >= 5:
+                    break
+            feed.append({"type": "data", "icon": "ti-brand-reddit", "color": "var(--warn)", "title": f"Reddit scraper: {len(recent)} new outputs", "desc": "Pain points and alpha from subreddits", "action": "ls AUTOMATIONS/reddit_scraper_output/", "priority": "low", "preview": reddit_preview})
 
     # 5. n8n workflow executions
     if N8N_API_KEY:
