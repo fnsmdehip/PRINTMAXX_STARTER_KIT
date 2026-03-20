@@ -1460,6 +1460,38 @@ def api_daily_feed():
     if freelance_csv.exists() and freelance_csv.stat().st_mtime > today_ts - 86400:
         feed.append({"type": "opportunity", "icon": "ti-briefcase", "color": "var(--accent)", "title": "Freelance demand scan updated", "desc": "New gigs matching our capabilities", "action": "python3 AUTOMATIONS/auto_freelance_responder.py --scan", "priority": "medium"})
 
+    # 13. KPI Executor — auto-task execution status
+    kpi_report = OPS / "KPI_EXECUTOR_REPORT.md"
+    if kpi_report.exists() and kpi_report.stat().st_mtime > today_ts - 86400:
+        try:
+            report_content = kpi_report.read_text(encoding="utf-8")
+            summary_line = ""
+            for rline in report_content.split("\n"):
+                if "| AUTO" in rline and "OK" in rline:
+                    summary_line = rline.strip()
+                    break
+            has_failures = "FAILED" in report_content and "0 FAILED" not in report_content
+            feed.append({
+                "type": "alert" if has_failures else "data",
+                "icon": "ti-player-play" if not has_failures else "ti-alert-circle",
+                "color": "var(--danger)" if has_failures else "var(--accent)",
+                "title": f"KPI Executor: {summary_line}" if summary_line else "KPI Executor ran today",
+                "desc": "Auto-executed daily KPI tasks",
+                "action": "python3 AUTOMATIONS/kpi_executor.py --status",
+                "priority": "high" if has_failures else "low",
+            })
+        except Exception:
+            pass
+    semi_queue = OPS / "SEMI_REVIEW_QUEUE.md"
+    if semi_queue.exists() and semi_queue.stat().st_mtime > today_ts - 86400:
+        try:
+            sq_content = semi_queue.read_text(encoding="utf-8")
+            semi_count = sq_content.count("**Status:** Awaiting review")
+            if semi_count > 0:
+                feed.append({"type": "action", "icon": "ti-checkbox", "color": "var(--warn)", "title": f"{semi_count} SEMI tasks awaiting review", "desc": "KPI executor queued these for human approval", "action": "python3 AUTOMATIONS/kpi_executor.py --review", "priority": "medium"})
+        except Exception:
+            pass
+
     # Sort: high priority first, then medium, then low
     priority_order = {"high": 0, "medium": 1, "low": 2}
     feed.sort(key=lambda x: priority_order.get(x.get("priority", "low"), 3))
@@ -2279,6 +2311,39 @@ def api_kpi_complete():
             roadmap.write_text(content.replace(old, new))
             return jsonify({"success": True})
     return jsonify({"success": False})
+
+
+@app.route("/api/kpi/executor-status")
+def api_kpi_executor_status():
+    """Return latest KPI executor run report and SEMI review queue status."""
+    report_file = OPS / "KPI_EXECUTOR_REPORT.md"
+    semi_file = OPS / "SEMI_REVIEW_QUEUE.md"
+    status = {
+        "last_run": None,
+        "report_exists": False,
+        "summary": None,
+        "semi_pending": 0,
+        "feed_line": "KPI Executor has not run yet today.",
+    }
+    if report_file.exists():
+        status["report_exists"] = True
+        mtime = report_file.stat().st_mtime
+        status["last_run"] = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M:%S")
+        content = report_file.read_text(encoding="utf-8")
+        for line in content.split("\n"):
+            if "| AUTO" in line and "OK" in line:
+                status["summary"] = line.strip()
+                break
+        # Build a feed-friendly summary
+        auto_line = status.get("summary", "")
+        if auto_line:
+            status["feed_line"] = f"KPI Executor ran at {status['last_run']}: {auto_line}"
+    if semi_file.exists():
+        semi_content = semi_file.read_text(encoding="utf-8")
+        status["semi_pending"] = semi_content.count("**Status:** Awaiting review")
+        if status["semi_pending"] > 0:
+            status["feed_line"] += f" | {status['semi_pending']} SEMI tasks queued for review."
+    return jsonify(status)
 
 
 # ---------------------------------------------------------------------------
