@@ -1890,7 +1890,15 @@ body {
   <!-- ====== KPI TRACKER TAB ====== -->
   <div class="tab-content" id="tab-kpi">
     <div class="glass-card" style="border:1px solid var(--accent); background:linear-gradient(135deg, rgba(0,255,136,0.05), transparent);">
-      <div class="card-title" style="font-size:1.3em;"><i class="ti ti-target-arrow"></i>Revenue KPI — Month Target: $1,000</div>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <div class="card-title" style="font-size:1.3em; margin:0;"><i class="ti ti-target-arrow"></i>KPI Tracker — <span id="kpi-mode-label">Standard</span></div>
+        <div style="display:flex; gap:4px; background:var(--panel); border-radius:8px; padding:3px; border:1px solid var(--border);">
+          <span class="kpi-tab-mode active" data-mode="standard" onclick="setKPIMode('standard')" style="font-family:'JetBrains Mono'; font-size:0.75em; padding:6px 14px; border-radius:6px; cursor:pointer; color:var(--accent); background:var(--accent-dim);">standard</span>
+          <span class="kpi-tab-mode" data-mode="beast" onclick="setKPIMode('beast')" style="font-family:'JetBrains Mono'; font-size:0.75em; padding:6px 14px; border-radius:6px; cursor:pointer; color:var(--warn);">beast 2x</span>
+          <span class="kpi-tab-mode" data-mode="modafinil" onclick="setKPIMode('modafinil')" style="font-family:'JetBrains Mono'; font-size:0.75em; padding:6px 14px; border-radius:6px; cursor:pointer; color:var(--danger);">modafinil 3x</span>
+        </div>
+      </div>
+      <div id="kpi-mode-desc" style="font-size:0.8em; color:var(--text-dim); margin-top:8px;"></div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:16px; margin-top:16px;">
         <div style="text-align:center; padding:20px; background:var(--panel); border-radius:12px; border:1px solid var(--border);">
           <div id="kpi-revenue" style="font-family:'JetBrains Mono'; font-size:2.5em; font-weight:800; color:var(--accent);">$0</div>
@@ -3186,17 +3194,18 @@ async function loadKPI() {
 var currentKPIMode = 'standard';
 function setKPIMode(mode) {
   currentKPIMode = mode;
-  document.querySelectorAll('.kpi-mode').forEach(function(el) {
+  var colors = {standard:'var(--accent-dim)', beast:'var(--warn-dim)', modafinil:'var(--danger-dim)'};
+  // Sync BOTH toggle sets (dashboard hero + KPI tab)
+  document.querySelectorAll('.kpi-mode, .kpi-tab-mode').forEach(function(el) {
     el.classList.remove('active');
     el.style.background = 'transparent';
   });
-  var active = document.querySelector('.kpi-mode[data-mode="'+mode+'"]');
-  if (active) {
-    active.classList.add('active');
-    var colors = {standard:'var(--accent-dim)', beast:'var(--warn-dim)', modafinil:'var(--danger-dim)'};
-    active.style.background = colors[mode] || 'var(--accent-dim)';
-  }
+  document.querySelectorAll('[data-mode="'+mode+'"]').forEach(function(el) {
+    el.classList.add('active');
+    el.style.background = colors[mode] || 'var(--accent-dim)';
+  });
   loadDashKPI();
+  loadKPI();
   loadCalendar();
 }
 
@@ -3237,6 +3246,12 @@ async function loadCalendar() {
     var r = await fetch(API + '/api/kpi/calendar?mode=' + currentKPIMode);
     var d = await r.json();
     document.getElementById('kpi-month-name').textContent = d.month + ' [' + (d.mode_label || 'Standard') + ']';
+    var modeLabel = document.getElementById('kpi-mode-label');
+    var modeDesc = document.getElementById('kpi-mode-desc');
+    if (modeLabel) modeLabel.textContent = d.mode_label || 'Standard';
+    if (modeDesc) modeDesc.textContent = d.mode_desc || '';
+    var goalEl = document.getElementById('kpi-goal');
+    if (goalEl) goalEl.textContent = d.goal || '$1,000';
     document.getElementById('kpi-goal').textContent = d.goal;
     var cal = document.getElementById('kpi-calendar');
     // Header row
