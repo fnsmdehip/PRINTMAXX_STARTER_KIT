@@ -100,7 +100,7 @@ def auto_approve_alpha():
                                     f"Then one sentence explaining why."
                                 )
                                 result = subprocess.run(
-                                    ["claude", "-p", prompt, "--model", "haiku"],
+                                    ["claude", "-p", prompt],
                                     capture_output=True, text=True, timeout=30
                                 )
                                 answer = result.stdout.strip()
